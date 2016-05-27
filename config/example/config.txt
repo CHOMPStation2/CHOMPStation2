@@ -16,7 +16,7 @@ ADMIN_LEGACY_SYSTEM
 BAN_LEGACY_SYSTEM
 
 ## Add a # here if you wish to use the setup where jobs have more access. This is intended for servers with low populations - where there are not enough players to fill all roles, so players need to do more than just one job. Also for servers where they don't want people to hide in their own departments.
-JOBS_HAVE_MINIMAL_ACCESS
+#JOBS_HAVE_MINIMAL_ACCESS
 
 ## Unhash this entry to have certain jobs require your account to be at least a certain number of days old to select. You can configure the exact age requirement for different jobs by editing
 ## the minimal_player_age variable in the files in folder /code/game/jobs/job/.. for the job you want to edit. Set minimal_player_age to 0 to disable age requirement for that job.
@@ -67,11 +67,11 @@ LOG_PDA
 ## log admin warning messages
 ##LOG_ADMINWARN  ## Also duplicates a bunch of other messages.
 
-## Enable/disable SQL connection (comment out to disable)
-SQL_ENABLED
+## sql switching
+# SQL_ENABLED
 
 ## disconnect players who did nothing during the set amount of minutes
-# KICK_INACTIVE 10
+KICK_INACTIVE 45
 
 ##Show mods on staffwho
 SHOW_MODS
@@ -97,18 +97,15 @@ MOD_JOB_TEMPBAN_MAX 1440
 ## default probablity is 1, increase to make that mode more likely to be picked
 ## set to 0 to disable that mode
 PROBABILITY EXTENDED 1
-PROBABILITY MALFUNCTION 1
-PROBABILITY MERCENARY 1
-PROBABILITY WIZARD 1
-PROBABILITY CHANGELING 1
-PROBABILITY CULT 1
-PROBABILITY EXTEND-A-TRAITORMONGOUS 6
-PROBABILITY LIZARD 1
-PROBABILITY INTRIGUE 1
-PROBABILITY VISITORS 1
+PROBABILITY MALFUNCTION 0
+PROBABILITY MERCENARY 0
+PROBABILITY WIZARD 0
+PROBABILITY CHANGELING 0
+PROBABILITY CULT 0
+PROBABILITY EXTEND-A-TRAITORMONGOUS 0
 
 ## Hash out to disable random events during the round.
-ALLOW_RANDOM_EVENTS
+# ALLOW_RANDOM_EVENTS
 
 ## if amount of traitors scales or not
 TRAITOR_SCALING
@@ -135,7 +132,7 @@ ALLOW_ADMIN_OOCCOLOR
 ALLOW_VOTE_RESTART
 
 ## allow players to initate a mode-change start
-ALLOW_VOTE_MODE
+# ALLOW_VOTE_MODE
 
 ## min delay (deciseconds) between voting sessions (default 10 minutes)
 VOTE_DELAY 6000
@@ -143,14 +140,14 @@ VOTE_DELAY 6000
 ## time period (deciseconds) which voting session will last (default 1 minute)
 VOTE_PERIOD 600
 
-## autovote initial delay (deciseconds) before first automatic transfer vote call (default 180 minutes)
-VOTE_AUTOTRANSFER_INITIAL 108000
+## autovote initial delay (deciseconds) before first automatic transfer vote call (default 6 hours)
+VOTE_AUTOTRANSFER_INITIAL 216000
 
 ##autovote delay (deciseconds) before sequential automatic transfer votes are called (default 60 minutes)
 VOTE_AUTOTRANSFER_INTERVAL 36000
 
 ## Time left (seconds) before round start when automatic gamemote vote is called (default 100).
-VOTE_AUTOGAMEMODE_TIMELEFT 100
+VOTE_AUTOGAMEMODE_TIMELEFT 999999 ## Set to a ridiculous number as a hacky fix to prevent gamemode vote.
 
 ## prevents dead players from voting or starting votes
 #NO_DEAD_VOTE
@@ -159,10 +156,10 @@ VOTE_AUTOGAMEMODE_TIMELEFT 100
 DEFAULT_NO_VOTE
 
 ## Allow ghosts to see antagonist through AntagHUD
-ALLOW_ANTAG_HUD
+# ALLOW_ANTAG_HUD
 
 ## If ghosts use antagHUD they are no longer allowed to join the round.
-ANTAG_HUD_RESTRICTED
+# ANTAG_HUD_RESTRICTED
 
 ## allow AI job
 ALLOW_AI
@@ -183,27 +180,32 @@ GUEST_JOBBAN
 
 ## Uncomment this to stop people connecting to your server without a registered ckey. (i.e. guest-* are all blocked from connecting)
 GUEST_BAN
+
 ## Set to jobban everyone who's key is not listed in data/whitelist.txt from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Uncomment to 1 to jobban, leave commented out to allow these positions for everyone (but see GUEST_JOBBAN above and regular jobbans)
 # USEWHITELIST
+
+## Uncomment to use the new job whitelist system. Any job with 'job_whitelisted=1' will only be available for those in jobwhitelist.txt
+# USEJOBWHITELIST
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
 #SERVER server.net:port
 
 ## set a server URL for the IRC bot to use; like SERVER, don't include the byond://
 ## Unlike SERVER, this one shouldn't break auto-reconnect
-#SERVERURL server.net:port
+SERVERURL 198.27.70.10:2303
 
 ## forum address
-# FORUMURL http://example.com
+FORUMURL http://forum.vore-station.net/
 
 ## Wiki address
-# WIKIURL http://example.com
+WIKIURL http://wiki.vore-station.net/
 
-## GitHub address
-# GITHUBURL https://github.com/example-user/example-repository
+## Chat address, VORE Station edit
+CHATURL http://chat.vore-station.net/
+
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
-# BANAPPEALS http://example.com
+BANAPPEALS http://forum.vore-station.net/viewforum.php?f=37
 
 ## In-game features
 ## spawns a spellbook which gives object-type spells instead of verb-type spells for the wizard
@@ -221,8 +223,9 @@ GUEST_BAN
 
 ## Remove the # to allow special 'Easter-egg' events on special holidays such as seasonal holidays and stuff like 'Talk Like a Pirate Day' :3 YAARRR
 ALLOW_HOLIDAYS
+
 ##Defines the ticklag for the world.  0.9 is the normal one, 0.5 is smoother.
-TICKLAG 0.9
+TICKLAG 0.6
 
 ## Defines if Tick Compensation is used.  It results in a minor slowdown of movement of all mobs, but attempts to result in a level movement speed across all ticks.  Recommended if tickrate is lowered.
 TICKCOMP 0
@@ -236,18 +239,18 @@ SOCKET_TALK 0
 ## Comment this out to disable automuting
 #AUTOMUTE_ON
 
-## How long the delay is before the Away Mission gate opens. Default is half an hour.
-GATEWAY_DELAY 18000
+## How long the delay is before the Away Mission gate opens. Default is 15 minutes.
+GATEWAY_DELAY 9000
 
 ## Remove the # to give assistants maint access.
 #ASSISTANT_MAINT
 
 ## Remove the # to make rounds which end instantly (Rev, Wizard, Malf) to continue until the shuttle is called or the station is nuked.
 ## Malf and Rev will let the shuttle be called when the antags/protags are dead.
-#CONTINUOUS_ROUNDS
+CONTINUOUS_ROUNDS
 
 ## Uncomment to restrict non-admins from using humanoid alien races
-USEALIENWHITELIST
+# USEALIENWHITELIST
 
 ## Comment this to unrestrict the number of alien players allowed in the round. The number represents the number of alien players for every human player.
 #ALIEN_PLAYER_RATIO 0.2
@@ -364,10 +367,6 @@ STARLIGHT 0
 ## Enable asteroid tunnel/cave generation. Will behave strangely if turned off with a map that expects it on.
 # GENERATE_ASTEROID
 
-
-## If you've enabled asteroid generation, you need to supply which z-levels to apply it to, in integer form, and seperated using ;
-## An example: 1;4;5
-# ASTEROID_Z_LEVELS 1;4;5
 ## Uncomment to enable organ decay outside of a body or storage item.
 #ORGANS_CAN_DECAY
 
@@ -377,5 +376,9 @@ STARLIGHT 0
 ## Uncomment to override default brain health.
 #DEFAULT_BRAIN_HEALTH 400
 
-## Default language prefix keys, separated with spaces. Only single character keys are supported. If unset, defaults to , # and - 
-# DEFAULT_LANGUAGE_PREFIXES , # -
+## Uncomment this to allow some items to survive digestion
+ITEMS_SURVIVE_DIGESTION
+
+## Uncomment this to use API provided by C4 chatrooms by Leshana to alert the chat to things like round ending.
+# JCHAT_URL http://chat.vore-station.net
+# JCHAT_API_KEY password

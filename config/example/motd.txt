@@ -1,5 +1,7 @@
-<h1>Welcome to Space Station 13!</h1>
+<!-- Most valid html will work in here, excluding images. -->
+<center><h1><font color="#a500ff">Welcome to the <b>V</b>irgo <b>O</b>rbital <b>R</b>esearch <b>E</b>stablishment</font></h1>
+<hr><br>
+<b><font color="red">You must be 18 or older to play here. No exceptions.</font></b><hr></center>
+<i>This server is running <a href="http://vore-station.net/">VOREstation's</a> modification of the <a href="http://baystation12.net/">Baystation 12</a> SS13 code.</i>
 
--<i>This server is running <a href="http://baystation12.net/">Baystation 12's</a> modification of the <a href="http://ss13.eu/">/tg/station13</a> SS13 code.</i>
-<br><br>
-<strong>Bugtracker:</strong> <a href="http://baystation12.net/forums/threads/issue-tracker-report-template.110/">for posting of bugs and issues.</a>
+<b>Code was recently updated to a 2015 version of Baystation's code. We will no longer be syncing with Bay's code, and will be producing our own code branch on Github. Please report any issues on the <a href="http://forum.vore-station.net/">VOREstation forums</a>, as the code is still not fully tested.</b>
