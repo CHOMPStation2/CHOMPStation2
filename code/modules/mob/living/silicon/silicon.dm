@@ -40,7 +40,7 @@
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src
 	for(var/datum/alarm_handler/AH in alarm_manager.all_handlers)
-		AH.unregister(src)
+		AH.unregister_alarm(src)
 	..()
 
 /mob/living/silicon/proc/init_id()
@@ -131,9 +131,6 @@
 			drowsyness = max(drowsyness,(effect/(blocked+1)))
 	updatehealth()
 	return 1*/
-
-/mob/living/silicon/attack_throat()
-	return
 
 /proc/islinked(var/mob/living/silicon/robot/bot, var/mob/living/silicon/ai/ai)
 	if(!istype(bot) || !istype(ai))

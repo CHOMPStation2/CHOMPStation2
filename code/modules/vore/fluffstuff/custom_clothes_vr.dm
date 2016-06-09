@@ -104,6 +104,17 @@
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "joannightgown"
 
+//Vorrarkul:Lucina Dakarim
+/obj/item/clothing/under/dress/fluff/lucinadress
+	name = "Elegant Purple Dress"
+	desc = "An expertly tailored dress, made out of fine fabrics. The interwoven necklace appears to be made out of gold, with three complicated symbols engraved in the front."
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "solara_dress"
+
+	icon_override = 'icons/mob/uniform.dmi'
+	item_state = "solara_dress"
+
 //For general use
 /obj/item/clothing/suit/armor/hos/fluff/brittrenchcoat
 	name = "Britania Trench Coat"
@@ -219,6 +230,17 @@
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "gogblue"
 */
+
+//wickedtemp:chakat tempest
+/obj/item/clothing/glasses/hud/health/fluff/wickedtemphud
+	name = "Purple MedHUD"
+	desc = "A standard Medical HUD, only this one is colored purple with a violet lens."
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "healthhud"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "healthhud"
 
 //For general use
 /obj/item/clothing/accessory/fluff/smilepin
@@ -404,10 +426,22 @@
 	desc = "A special helmet designed for work in a hazardous, low-pressure environment. Has radiation shielding. This one doesn't look like it was made for humans. Its been modified to include headlights."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "rig0-scree"
+	icon_state = "scree-helm"
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "rig0-scree_mob"
+	item_state = "scree-helm_mob"
+
+	light_overlay = "helmet_light_dual"
+
+	species_restricted = null
+
+	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+		..()
+		if(H.ckey != "scree")
+			H << "<span class='warning'>Your face and whoever is meant for this helmet are too different.</span>"
+			return 0
+		else
+			return 1
 
 //scree:Scree
 /obj/item/clothing/suit/space/void/engineering/fluff/screespess
@@ -415,10 +449,20 @@
 	desc = "A special suit that protects against hazardous, low pressure environments. Has radiation shielding. This one doesn't look like it was made for humans. This one was made with a special personal shielding for someone's wings."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "wingedsuit"
+	icon_state = "scree-spess"
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "wingedsuit"
+	item_state = "scree-spess_mob"
+
+	species_restricted = null
+
+	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+		..()
+		if(H.ckey != "scree")
+			H << "<span class='warning'>The gloves only have three fingers, not to mention the accomidation for extra limbs.</span>"
+			return 0
+		else
+			return 1
 
 //scree:Scree
 /obj/item/clothing/under/fluff/screesuit
@@ -430,6 +474,14 @@
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "screesuit"
+
+	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+		..()
+		if(H.ckey != "scree")
+			H << "<span class='warning'>Are you just going to tape them on or what? This isn't gonna work.</span>"
+			return 0
+		else
+			return 1
 
 //HOS Hardsuit
 /obj/item/clothing/suit/space/void/security/fluff/hos // ToDo: Rig version.
@@ -539,3 +591,94 @@
 			var/mob/living/carbon/human/H = user
 			if(H.head == src)
 				H.update_inv_head()
+
+// arokha : Aronai Kadigan
+/obj/item/clothing/head/helmet/space/fluff/aronai
+	name = "Aronai's Helmet"
+	desc = "This spacesuit helmet appears to be custom-made for someone with pointed ears and a muzzle. \
+		It is form-fitting enough that it's unlikely to fit anyone but the person it was intended for. \
+		'Aronai' is printed on the back of the helmet."
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "arohelm"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "arohelm_mob"
+
+	light_overlay = "helmet_light_dual"
+	camera_networks = list(NETWORK_MEDICAL)
+
+	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+		..()
+		if(H.ckey != "arokha")
+			H << "<span class='warning'>You try to wear the helmet, but it doesn't fit.</span>"
+			return 0
+		else
+			return 1
+
+/obj/item/clothing/suit/space/fluff/aronai
+	name = "Aronai's Spacesuit"
+	desc = "This spacesuit appears to be custom-made for someone with digitigrade legs and a tail. \
+		It is form-fitting enough that it's unlikely to fit anyone but the person it was intended for. \
+		'Aronai' is printed just above the spine on the back of the neckpiece. It has no space for an O2 tank. \
+		In fact, it's practically paper-thin. It doesn't seem to retain body heat at all."
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "arosuit"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "arosuit_mob"
+	w_class = 4 //Oh but I can.
+	allowed = list(/obj/item/device/suit_cooling_unit) //Can't fit O2 tanks
+
+	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+		..()
+		if(H.ckey != "arokha")
+			H << "<span class='warning'>You try to fit into the suit, to no avail.</span>"
+			return 0
+		else
+			return 1
+
+//Viveret:Keturah
+/obj/item/clothing/under/dress/maid/
+	name = "Maid Outfit"
+	desc = "A french maid outfit made ironically in Gaia's version of the far east."
+
+//JoanRisu:Joan Risu
+/obj/item/clothing/head/helmet/space/fluff/joan
+	name = "Joan's Combat Space Helmet"
+	desc = "A customized combat space helmet made for a certain squirrely Commissioned Officer. \
+	The top has the signature ears that are held up with a harder back covering. 'Joan' is engraved on the back.\
+	There are some indications that the helmet has seen combat."
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "joanhelm"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "joanhelm_mob"
+
+	light_overlay = "helmet_light"
+
+
+//JoanRisu:Joan Risu
+/obj/item/clothing/suit/space/fluff/joan
+	name = "Joan's Combat Spacesuit"
+	desc = "A customized combat spacesuit made for a certain squirrely Commissioned Officer, tail slot included. \
+	On the right shoulder, the United Federation's Emblem sits proudly. On the left, there are faded indications \
+	that there were different ranks painted on and off. On the collar where the suit is softer is a rectangular \
+	name-tag with the name 'Joan' on it. There are indications that the suit has seen combat."
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "joansuit"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "joansuit_mob"
+
+/obj/item/clothing/under/rank/internalaffairs/fluff/joan
+	desc = "The plain, professional attire of a Federation Law Enforcement Detective. The collar is <i>immaculately</i> starched."
+	name = "Federation Dress Shirt"
+	icon_state = "internalaffairs"
+	item_state = "ba_suit"
+	worn_state = "internalaffairs"
+	rolled_sleeves = 0
+	starting_accessories = list(/obj/item/clothing/accessory/black)

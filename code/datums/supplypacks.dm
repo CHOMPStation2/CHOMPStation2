@@ -618,6 +618,35 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 	access = access_robotics
 	group = "Engineering"
 
+/datum/supply_packs/robolimbs_basic
+	name = "Basic robolimb blueprints"
+	contains = list(
+			/obj/item/weapon/disk/limb/morpheus,
+			/obj/item/weapon/disk/limb/xion
+			)
+	cost = 15
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "Robolimb blueprints (basic)"
+	access = access_robotics
+	group = "Engineering"
+
+/datum/supply_packs/robolimbs_adv
+	name = "All robolimb blueprints"
+	contains = list(
+	/obj/item/weapon/disk/limb/bishop,
+	/obj/item/weapon/disk/limb/hesphiastos,
+	/obj/item/weapon/disk/limb/morpheus,
+	/obj/item/weapon/disk/limb/veymed,
+	/obj/item/weapon/disk/limb/wardtakahashi,
+	/obj/item/weapon/disk/limb/xion,
+	/obj/item/weapon/disk/limb/zenghu,
+			)
+	cost = 40
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "Robolimb blueprints (adv)"
+	access = access_robotics
+	group = "Engineering"
+
 /datum/supply_packs/phoron
 	name = "Phoron assembly crate"
 	contains = list(
@@ -1242,16 +1271,19 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/carpet
 	name = "Imported carpet"
-	containertype = /obj/structure/closet
+	containertype = /obj/structure/closet/crate
 	containername = "Imported carpet crate"
 	cost = 15
 	group = "Miscellaneous"
-	contains = list(/obj/item/stack/tile/carpet)
+	contains = list(
+					/obj/item/stack/tile/carpet,
+					/obj/item/stack/tile/carpet/blue
+					)
 	amount = 50
 
 /datum/supply_packs/linoleum
 	name = "Linoleum"
-	containertype = /obj/structure/closet
+	containertype = /obj/structure/closet/crate
 	containername = "Linoleum crate"
 	cost = 15
 	group = "Miscellaneous"
@@ -1799,6 +1831,35 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 	cost = 35
 	containertype = "/obj/structure/closet/crate/secure"
 	containername = "Security biohazard gear"
+	access = access_security
+	group = "Security"
+
+/datum/supply_packs/bolt_rifles_competitive
+	name = "Competitive shooting crate"
+	contains = list(
+			/obj/item/device/assembly/timer,
+			/obj/item/weapon/gun/projectile/shotgun/pump/rifle/practice = 2,
+			/obj/item/ammo_magazine/clip/a762/practice = 4,
+			/obj/item/target = 2,
+			/obj/item/target/alien = 2,
+			/obj/item/target/syndicate = 2
+			)
+	cost = 40
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "Weapons crate"
+	access = access_security
+	group = "Security"
+
+/datum/supply_packs/bolt_rifles_mosin
+	name = "Surplus militia rifles"
+	contains = list(
+			/obj/item/weapon/gun/projectile/shotgun/pump/rifle/mosin = 3,
+			/obj/item/ammo_magazine/clip/a762 = 6
+			)
+	cost = 50
+	hidden = 1
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "Weapons crate"
 	access = access_security
 	group = "Security"
 
