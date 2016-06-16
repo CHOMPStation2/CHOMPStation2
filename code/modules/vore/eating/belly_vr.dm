@@ -1,16 +1,15 @@
 //
 //	The belly object is what holds onto a mob while they're inside a predator.
 //	It takes care of altering the pred's decription, digesting the prey, relaying struggles etc.
-//	It is not, however, for printing messages about entering/exiting the belly. That is done in voretype etc.
 //
+
+// If you change what variables are on this, then you need to update the copy() proc.
 
 //
 // Parent type of all the various "belly" varieties.
 //
 /datum/belly
 	var/name								// Name of this location
-	var/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_HEAL,DM_ABSORB)	// Possible digest modes
-	var/list/transform_modes = list(DM_TRANSFORM_MALE,DM_TRANSFORM_FEMALE,DM_TRANSFORM_KEEP_GENDER,DM_TRANSFORM_CHANGE_SPECIES,DM_TRANSFORM_CHANGE_SPECIES_EGG,DM_TRANSFORM_KEEP_GENDER_EGG,DM_TRANSFORM_MALE_EGG,DM_TRANSFORM_FEMALE_EGG, DM_EGG)
 	var/inside_flavor						// Flavor text description of inside sight/sound/smells/feels.
 	var/vore_sound = 'sound/vore/gulp.ogg'	// Sound when ingesting someone
 	var/vore_verb = "ingest"				// Verb for eating with this in messages
@@ -25,10 +24,11 @@
 	var/escapetime = 600					// Deciseconds, how long to escape this belly
 
 	var/tmp/digest_mode = DM_HOLD				// Whether or not to digest. Default to not digest.
+	var/tmp/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_HEAL,DM_ABSORB)	// Possible digest modes
+	var/tmp/list/transform_modes = list(DM_TRANSFORM_MALE,DM_TRANSFORM_FEMALE,DM_TRANSFORM_KEEP_GENDER,DM_TRANSFORM_CHANGE_SPECIES,DM_TRANSFORM_CHANGE_SPECIES_EGG,DM_TRANSFORM_KEEP_GENDER_EGG,DM_TRANSFORM_MALE_EGG,DM_TRANSFORM_FEMALE_EGG, DM_EGG)
 	var/tmp/mob/living/owner					// The mob whose belly this is.
 	var/tmp/list/internal_contents = list()		// People/Things you've eaten into this belly!
 	var/tmp/is_full								// Flag for if digested remeans are present. (for disposal messages)
-	var/tmp/recent_struggle = 0					// Flag to prevent struggle emote spam
 	var/tmp/emotePend = 0						// If there's already a spawned thing counting for the next emote
 
 	// Don't forget to watch your commas at the end of each line if you change these.
@@ -82,6 +82,7 @@
 
 	//Mostly for being overridden on precreated bellies on mobs. Could be VV'd into
 	//a carbon's belly if someone really wanted. No UI for carbons to adjust this.
+	//List has indexes that are the digestion mode strings, and keys that are lists of strings.
 	var/list/emote_lists = list()
 
 // Constructor that sets the owning mob
@@ -157,7 +158,7 @@
 		prey.buckled.unbuckle_mob()
 
 	prey.forceMove(owner)
-	internal_contents += prey
+	internal_contents |= prey
 
 	if(inside_flavor)
 		prey << "<span class='notice'><B>[inside_flavor]</B></span>"
@@ -283,7 +284,7 @@
 		if(brain)
 			brain.forceMove(owner)
 			internal_contents += brain
-	
+
 	else
 		if(!_is_digestable(W))
 			W.forceMove(owner)
@@ -329,7 +330,7 @@
 //Handle a mob struggling
 // Called from /mob/living/carbon/relaymove()
 /datum/belly/proc/relay_resist(var/mob/living/R)
-	if (!(R in internal_contents) || recent_struggle)
+	if (!(R in internal_contents))
 		return  // User is not in this belly, or struggle too soon.
 
 	R.setClickCooldown(50)
@@ -350,11 +351,6 @@
 				return
 			return
 
-/* POLARISTODO - If this is made unnecessary by setClickCooldown, remove it and the var on bellies
-	recent_struggle = 1
-	spawn(30)
-		recent_struggle = 0
-*/
 	var/struggle_outer_message = pick(struggle_messages_outside)
 	var/struggle_user_message = pick(struggle_messages_inside)
 
@@ -376,3 +372,58 @@
 	var/strpick = pick(struggle_sounds)
 	var/strsound = struggle_sounds[strpick]
 	playsound(R.loc, strsound, 50, 1)
+
+// Belly copies and then returns the copy
+// Needs to be updated for any var changes
+/datum/belly/proc/copy(mob/new_owner)
+	var/datum/belly/dupe = new /datum/belly(new_owner)
+
+	//// Non-object variables
+	dupe.name = name
+	dupe.inside_flavor = inside_flavor
+	dupe.vore_sound = vore_sound
+	dupe.vore_verb = vore_verb
+	dupe.human_prey_swallow_time = human_prey_swallow_time
+	dupe.nonhuman_prey_swallow_time = nonhuman_prey_swallow_time
+	dupe.emoteTime = emoteTime
+	dupe.digest_brute = digest_brute
+	dupe.digest_burn = digest_burn
+	dupe.digest_tickrate = digest_tickrate
+	dupe.immutable = immutable
+	dupe.escapable = escapable
+	dupe.escapetime = escapetime
+
+	//// Object-holding variables
+	//struggle_messages_outside - strings
+	dupe.struggle_messages_outside.Cut()
+	for(var/I in struggle_messages_outside)
+		dupe.struggle_messages_outside += I
+
+	//struggle_messages_inside - strings
+	dupe.struggle_messages_inside.Cut()
+	for(var/I in struggle_messages_inside)
+		dupe.struggle_messages_inside += I
+
+	//digest_messages_owner - strings
+	dupe.digest_messages_owner.Cut()
+	for(var/I in digest_messages_owner)
+		dupe.digest_messages_owner += I
+
+	//digest_messages_prey - strings
+	dupe.digest_messages_prey.Cut()
+	for(var/I in digest_messages_prey)
+		dupe.digest_messages_prey += I
+
+	//examine_messages - strings
+	dupe.examine_messages.Cut()
+	for(var/I in examine_messages)
+		dupe.examine_messages += I
+
+	//emote_lists - index: digest mode, key: list of strings
+	dupe.emote_lists.Cut()
+	for(var/K in emote_lists)
+		dupe.emote_lists[K] = list()
+		for(var/I in emote_lists[K])
+			dupe.emote_lists[K] += I
+
+	return dupe
