@@ -1,28 +1,6 @@
-/obj/item/clothing/accessory/fluff/zeta_blackwell_1
-	name = "Shub-niggurath pendant"
-	desc = "It is a black pendant with what looks like a wolf head with tentacles coming out from the sides."
-	icon = 'icons/vore/custom_items_yw.dmi'
-	icon_state = "pendant_shubniggurath"
-	icon_override = 'icons/vore/custom_items_yw.dmi'
-	item_state = "pendant_shubniggurath_mob"
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
-	w_class = 2
-//End cynicaltester
-
-//valhallaviking01 items
-/obj/item/clothing/accessory/fluff/Wolf_Erikson_1
-	name = "USGN dogtags"
-	desc = "The standard issue ID for all USGN corpsmen."
-	icon = 'icons/vore/custom_items_yw.dmi'
-	icon_state = "usgn_dogtags"
-	icon_override = 'icons/vore/custom_items_yw.dmi'
-	item_state = "usgn_dogtags_mob"
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
-	w_class = 2
-//end Valhallaviking01 items
-
-
-//Manaspam
+// **********
+// Unleashed_Mana
+// **********
 /obj/item/weapon/fluff/zekewatch
 	name = "Zeke's pocketwatch"
 	desc = "Looks like it's broken... or is it?"
@@ -45,76 +23,39 @@
 		return ..()
 	return
 
-/obj/item/weapon/kitchenknife/tacknife/unathiknife/fluff/eravik_vessi1
+/obj/item/weapon/kitchenknife/tacknife/unathiknife/fluff/eravik_vessi_1
 	name = "Noctis"
 	desc = "A strange blade made of some kind of black metal. It feels... incomplete."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "eravikblade"
 
-/obj/item/weapon/reagent_containers/food/drinks/flask/fluff/david3
+/obj/item/weapon/reagent_containers/food/drinks/flask/fluff/david_3
 	name = "David's lucky bottle"
 	desc = "As long as there is something in it, nothing can go wrong."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "davidbottle"
 
-/obj/item/clothing/accessory/fluff/eviriik1
-	name = "Cursed amulet"
-	desc = "Just looking at it sends chills down your spine."
-	icon = 'icons/vore/custom_items_yw.dmi'
-	icon_state = "eviriik_pendant"
-	icon_override = 'icons/vore/custom_items_yw.dmi'
-	item_state = "eviriik_pendant_mob"
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
-	w_class = 2
-
-/obj/item/weapon/kitchen/utensil/fork/fluff/ragna1
+/obj/item/weapon/kitchen/utensil/fork/fluff/ragna_1
 	name = "Ragna's fork"
-	desc = "''FEAR RAGNA!''"
+	desc = "\"FEAR RAGNA!\""
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "ragnafork"
 	icon_override = 'icons/vore/custom_items_yw.dmi'
 	item_state = "ragnafork_mob"
 
-/obj/item/clothing/mask/fluff/lucerna1
-	name =	"Mysterious mask"
-	desc =  "Something about this isn't right..."
-	icon = 'icons/vore/custom_items_yw.dmi'
-	icon_state = "lucernamask"
-	icon_override = 'icons/vore/custom_items_yw.dmi'
-	item_state = "lucernamask_mob"
-
-/obj/item/clothing/accessory/fluff/Zeke_vincir1
-	name = "Torn scarf"
-	desc = "Such a sad display of fabric abuse. Has a single black stripe."
-	icon = 'icons/vore/custom_items_yw.dmi'
-	icon_state = "zekescarf"
-	icon_override = 'icons/vore/custom_items_yw.dmi'
-	item_state = "zekescarf_mob"
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
-	w_class = 2
-//end Manaspam
-
-//matt items
-/obj/item/weapon/kitchenknife/tacknife/unathiknife/fluff/payton_joghs
+// **********
+// Capt_matt
+// **********
+/obj/item/weapon/kitchenknife/tacknife/unathiknife/fluff/payton_joghs_1
 	name = "Payton's Knife"
 	desc = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "paytonknife"
-//end matt items
 
-//RandySavage205 items
-/obj/item/clothing/accessory/fluff/Alex_Wolf_1
-	name = "UNSC Dog Tags"
-	desc = "Feet first into hell!"
-	icon = 'icons/vore/custom_items_yw.dmi'
-	icon_state = "usgn_dogtags"
-	icon_override = 'icons/vore/custom_items_yw.dmi'
-	item_state = "usgn_dogtags_mob"
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
-	w_class = 2
-//end RandySavage205 items
-
-/obj/item/weapon/material/twohanded/spear/fluff/madoka_koto1
+// **********
+// RandySavage205
+// **********
+/obj/item/weapon/material/twohanded/spear/fluff/madoka_koto_1
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_override = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "madokaspear0"
