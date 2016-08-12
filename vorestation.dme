@@ -1897,6 +1897,7 @@
 #include "code\modules\reagents\Chemistry-Reagents_vr.dm"
 #include "code\modules\reagents\Chemistry-Recipes.dm"
 #include "code\modules\reagents\Chemistry-Recipes_vr.dm"
+#include "code\modules\reagents\kelshark.dm"
 #include "code\modules\reagents\reagent_containers.dm"
 #include "code\modules\reagents\reagent_dispenser.dm"
 #include "code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Core.dm"
