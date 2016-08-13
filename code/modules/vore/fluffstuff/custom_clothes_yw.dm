@@ -1,15 +1,37 @@
 // **********
 // Unleashed_Mana
 // **********
-/obj/item/clothing/suit/storage/toggle/labcoat/fluff/eioni_1
+/obj/item/clothing/suit/storage/labcoat/fluff/eioni_1
 	name = "Eio'ni Co. labcoat"
 	desc = "The official labcoat of the Eio'ni Corporation."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "eioni_labcoat"
-	icon_open = "eioni_labcoat_open"
-	icon_closed = "eioni_labcoat"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "eioni_labcoat_mob"
+
+	var/unbuttoned = 0
+
+	verb/toggle()
+		set name = "Toggle coat buttons"
+		set category = "Object"
+		set src in usr
+
+		if(!usr.canmove || usr.stat || usr.restrained())
+			return 0
+
+		switch(unbuttoned)
+			if(0)
+				icon_state = "[initial(icon_state)]_open"
+				item_state = "[initial(item_state)]_open"
+				unbuttoned = 1
+				usr << "You unbutton the coat."
+			if(1)
+				icon_state = "[initial(icon_state)]"
+				item_state = "[initial(item_state)]"
+				unbuttoned = 0
+				usr << "You button up the coat."
+		usr.update_inv_wear_suit()
+
 
 /obj/item/clothing/under/fluff/eioni_2
 	name = "Eio'ni Co. uniform"
@@ -19,16 +41,36 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "eioni_uniform_mob"
 
-/obj/item/clothing/suit/storage/toggle/hoodie/fluff/redax_1
+/obj/item/clothing/suit/storage/hoodie/fluff/redax_1
 	name = "Red gradient hoodie"
 	desc = "A black hoodie with a red gradient pattern."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "rgradient_hoodie"
-	icon_open = "rgradient_hoodie_open"
-	icon_closed = "rgradient_hoodie"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "rgradient_hoodie_mob"
 	/////////////////////////////TODO//////////////////////
+	var/unbuttoned = 0
+
+	verb/toggle()
+		set name = "Toggle coat buttons"
+		set category = "Object"
+		set src in usr
+
+		if(!usr.canmove || usr.stat || usr.restrained())
+			return 0
+
+		switch(unbuttoned)
+			if(0)
+				icon_state = "[initial(icon_state)]_open"
+				item_state = "[initial(item_state)]_open"
+				unbuttoned = 1
+				usr << "You unbutton the coat."
+			if(1)
+				icon_state = "[initial(icon_state)]"
+				item_state = "[initial(item_state)]"
+				unbuttoned = 0
+				usr << "You button up the coat."
+		usr.update_inv_wear_suit()
 
 /obj/item/clothing/under/fluff/redax_2
 	name = "Alarming outfit"
@@ -119,27 +161,46 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "zekesuit_mob"
 
-/obj/item/clothing/suit/storage/toggle/labcoat/fluff/zeke_vincir_3
+/obj/item/clothing/suit/storage/labcoat/fluff/zeke_vincir_3
 	name = "Black jacket"
 	desc = "A black bomber jacket. Looks a little shady."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "zekebomber"
-	icon_open = "zekebomber_open"
-	icon_closed = "zekebomber"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "zekebomber_mob"
 	body_parts_covered = UPPER_TORSO
-/*
-// Disabled for now. This mask has no sprite for being worn, as far as I can find.
-/obj/item/clothing/mask/fluff/lucerna_1
+
+	var/unbuttoned = 0
+
+	verb/toggle()
+		set name = "Toggle coat buttons"
+		set category = "Object"
+		set src in usr
+
+		if(!usr.canmove || usr.stat || usr.restrained())
+			return 0
+
+		switch(unbuttoned)
+			if(0)
+				icon_state = "[initial(icon_state)]_open"
+				item_state = "[initial(item_state)]_open"
+				unbuttoned = 1
+				usr << "You unbutton the coat."
+			if(1)
+				icon_state = "[initial(icon_state)]"
+				item_state = "[initial(item_state)]"
+				unbuttoned = 0
+				usr << "You button up the coat."
+		usr.update_inv_wear_suit()
+
+/obj/item/clothing/mask/fluff/lucerna_1 //Doesn't work for some reason
 	name =	"Mysterious mask"
 	desc =  "Something about this isn't right..."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "lucernamask"
-	item_state = "lucernamask_mob"
-	overlay_state = "" // ?????
-*/
+	item_state = "cicero_mob"
+	//overlay_state = "cicero_mob"
 
 // **********
 // Matt items

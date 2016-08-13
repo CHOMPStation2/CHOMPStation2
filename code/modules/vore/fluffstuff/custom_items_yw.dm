@@ -35,18 +35,18 @@
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "davidbottle"
 
-/obj/item/weapon/kitchen/utensil/fork/fluff/ragna_1
+/obj/item/weapon/material/kitchen/utensil/fork/fluff/ragna_1
 	name = "Ragna's fork"
 	desc = "\"FEAR RAGNA!\""
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "ragnafork"
 	icon_override = 'icons/vore/custom_items_yw.dmi'
-	item_state = "ragnafork_mob"
+	item_state_slots = list(slot_r_hand_str = "ragnafork_r", slot_l_hand_str = "ragnafork_l")
 
 // **********
 // Capt_matt
 // **********
-/obj/item/weapon/kitchenknife/tacknife/unathiknife/fluff/payton_joghs_1
+/obj/item/weapon/material/hatchet/unathiknife/fluff/payton_joghs_1
 	name = "Payton's Knife"
 	desc = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
 	icon = 'icons/vore/custom_items_yw.dmi'
