@@ -60,10 +60,13 @@
 	icon_override = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "madokaspear0"
 	base_icon = "madokaspear"
+
+	item_state_slots = list(slot_back_str = "madokaspear0_mob")
+
 	name = "Madoka's spear"
 	desc = "A 10 foot long spear, with a sturdy wooden shaft to which is attached a strange, double spiked steel blade. One is slightly larger than the other."
 	force = 14
-	w_class = 4.0
+	w_class = 5.0
 	slot_flags = SLOT_BACK
 	force_wielded = 22 // Was 13, Buffed - RR
 	throwforce = 20

@@ -197,10 +197,9 @@
 	name =	"Mysterious mask"
 	desc =  "Something about this isn't right..."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_clothes_yw_special.dmi'
 	icon_state = "lucernamask"
-	item_state = "cicero_mob"
-	//overlay_state = "cicero_mob"
+	item_state = "lucernamask"
 
 // **********
 // Matt items
