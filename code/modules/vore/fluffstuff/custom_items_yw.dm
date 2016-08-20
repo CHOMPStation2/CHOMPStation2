@@ -55,7 +55,7 @@
 // **********
 // RandySavage205
 // **********
-/obj/item/weapon/material/twohanded/spear/fluff/madoka_koto_1
+/obj/item/weapon/oldtwohanded/fluff/madoka_koto_1
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_override = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "madokaspear0"
@@ -73,6 +73,5 @@
 	throw_speed = 3
 	edge = 0
 	sharp = 1
-	unbreakable = 1
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("stabbed", "pierced", "jabbed", "torn", "gored")
