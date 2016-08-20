@@ -55,7 +55,7 @@
 // **********
 // RandySavage205
 // **********
-/obj/item/weapon/oldtwohanded/fluff/madoka_koto_1
+/obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_override = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "madokaspear0"
