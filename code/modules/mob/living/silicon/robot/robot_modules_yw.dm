@@ -9,7 +9,6 @@
 	sprites = list(
 					"Xenomorph Maid" = "xenomaid"
 					)
-	channels = list("Supply" = 1)
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/xenomaid/New(var/mob/living/silicon/robot/R)
