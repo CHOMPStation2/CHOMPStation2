@@ -1647,6 +1647,7 @@
 #include "code\modules\mob\living\silicon\robot\robot_items.dm"
 #include "code\modules\mob\living\silicon\robot\robot_modules.dm"
 #include "code\modules\mob\living\silicon\robot\robot_modules_vr.dm"
+#include "code\modules\mob\living\silicon\robot\robot_modules_yw.dm"
 #include "code\modules\mob\living\silicon\robot\robot_movement.dm"
 #include "code\modules\mob\living\silicon\robot\robot_vr.dm"
 #include "code\modules\mob\living\silicon\robot\syndicate.dm"
