@@ -461,6 +461,13 @@
 	icon_state = "tigresstail"
 	ckeys_allowed = list("hoodoo")
 
+/datum/sprite_accessory/tail/tailmaw
+	name = "tailmaw, colorable"
+	desc = ""
+	icon_state = "tailmaw"
+	color_blend_mode = ICON_MULTIPLY
+	do_colouration = 1
+
 //For all species tails. Includes haircolored tails.
 /datum/sprite_accessory/tail/special
 	name = "Blank tail. Do not select."
@@ -660,3 +667,11 @@
 /datum/sprite_accessory/tail/taur/spider
 	name = "Spider"
 	icon_state = "spider_s"
+
+/datum/sprite_accessory/tail/taur/tents
+	name = "Tentacles"
+	icon_state = "tent_s"
+
+/datum/sprite_accessory/tail/taur/feline
+	name = "Feline"
+	icon_state = "feline_s"
