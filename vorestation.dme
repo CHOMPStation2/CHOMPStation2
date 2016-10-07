@@ -2206,6 +2206,4 @@
 #include "maps\virgo-4.dmm"
 #include "maps\virgo-5.dmm"
 #include "maps\virgo-6.dmm"
-#include "maps\RandomZLevels\labyrinth.dm"
-#include "maps\RandomZLevels\labyrinth.dmm"
 // END_INCLUDE
