@@ -17,7 +17,7 @@
 	color_mult = 1
 
 	min_age = 17
-	max_age = 80
+	max_age = 110
 
 	blurb = "There are two subspecies of Sergal; Southern and Northern. Northern sergals are a highly aggressive race \
 	that lives in the plains and tundra of their homeworld. They are characterized by long, fluffy fur bodies with cold colors; \
@@ -63,7 +63,7 @@
 	color_mult = 1
 
 	min_age = 17
-	max_age = 80
+	max_age = 110
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed \
@@ -102,7 +102,7 @@
 	color_mult = 1
 
 	min_age = 17
-	max_age = 80
+	max_age = 110
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
 	in the Vilous system. Unlike sergals whom they share a star system with, their species is a very peaceful one. They possess remarkable \
@@ -139,7 +139,7 @@
 	name_language = "Siik'tajr"
 
 	min_age = 17
-	max_age = 80
+	max_age = 110
 
 	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that \
@@ -184,7 +184,7 @@
 	name_language = "Siik'tajr"
 
 	min_age = 17
-	max_age = 80
+	max_age = 110
 
 	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that is \
@@ -250,7 +250,7 @@
 	base_color = "#B43214"
 
 	min_age = 17
-	max_age = 80
+	max_age = 110
 
 /datum/species/xenohybrid
 	name = "Xenomorph Hybrid"
@@ -268,7 +268,7 @@
 	//color_mult = 1 //Since it's a black sprite, it adds instead of multiplies.
 
 	min_age = 17
-	max_age = 80
+	max_age = 110
 
 	blurb = "Xenomorphs hybrids are a mixture of xenomorph DNA and some other humanoid species. \
 	Xenomorph hyrids mostly have had had their natural aggression removed due to the gene modification process \

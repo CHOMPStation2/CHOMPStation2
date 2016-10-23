@@ -40,8 +40,8 @@
 	name_language = "Sinta'unathi"
 	health_hud_intensity = 2.5
 
-	min_age = 18
-	max_age = 60
+	min_age = 17
+	max_age = 110
 
 	blurb = "A heavily reptillian species, Unathi (or 'Sinta as they call themselves) hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, radioactive \
@@ -102,7 +102,7 @@
 	health_hud_intensity = 2.5
 
 	min_age = 17
-	max_age = 80
+	max_age = 110
 
 	blurb = "The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
 	S'randarr system. They have been brought up into the space age by the Humans and Skrell, and have been \
@@ -162,8 +162,8 @@
 	name_language = "Skrellian"
 	health_hud_intensity = 2
 
-	min_age = 19
-	max_age = 80
+	min_age = 17
+	max_age = 110
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
