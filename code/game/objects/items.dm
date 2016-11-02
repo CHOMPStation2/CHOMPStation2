@@ -1,7 +1,7 @@
 /obj/item
 	name = "item"
 	icon = 'icons/obj/items.dmi'
-	w_class = 3.0
+	w_class = ITEMSIZE_NORMAL
 
 	var/image/blood_overlay = null //this saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/abstract = 0
@@ -49,6 +49,8 @@
 	var/zoomdevicename = null //name used for message when binoculars/scope is used
 	var/zoom = 0 //1 if item is actively being used to zoom. For scoped guns and binoculars.
 
+	var/embed_chance = -1	//-1 makes it calculate embed chance, 0 won't embed, and 100 will always embed
+
 	var/icon_override = null  //Used to override hardcoded clothing dmis in human clothing proc.
 
 	//** These specify item/icon overrides for _slots_
@@ -74,6 +76,14 @@
 	// Species-specific sprite sheets for inventory sprites
 	// Works similarly to worn sprite_sheets, except the alternate sprites are used when the clothing/refit_for_species() proc is called.
 	var/list/sprite_sheets_obj = list()
+
+/obj/item/New()
+	if(embed_chance == -1)
+		if(sharp)
+			embed_chance = force/w_class
+		else
+			embed_chance = force/(w_class*3)
+	..()
 
 /obj/item/equipped()
 	..()
@@ -143,18 +153,19 @@
 
 	src.loc = T
 
+// See inventory_sizes.dm for the defines.
 /obj/item/examine(mob/user, var/distance = -1)
 	var/size
 	switch(src.w_class)
-		if(1.0)
+		if(ITEMSIZE_TINY)
 			size = "tiny"
-		if(2.0)
+		if(ITEMSIZE_SMALL)
 			size = "small"
-		if(3.0)
+		if(ITEMSIZE_NORMAL)
 			size = "normal-sized"
-		if(4.0)
+		if(ITEMSIZE_LARGE)
 			size = "bulky"
-		if(5.0)
+		if(ITEMSIZE_HUGE)
 			size = "huge"
 	return ..(user, distance, "", "It is a [size] item.")
 
@@ -320,7 +331,7 @@ var/list/global/slot_flags_enumeration = list(
 	switch(slot)
 		if(slot_l_ear, slot_r_ear)
 			var/slot_other_ear = (slot == slot_l_ear)? slot_r_ear : slot_l_ear
-			if( (w_class > 1) && !(slot_flags & SLOT_EARS) )
+			if( (w_class > ITEMSIZE_TINY) && !(slot_flags & SLOT_EARS) )
 				return 0
 			if( (slot_flags & SLOT_TWOEARS) && H.get_equipped_item(slot_other_ear) )
 				return 0
@@ -336,7 +347,7 @@ var/list/global/slot_flags_enumeration = list(
 				return 0
 			if(slot_flags & SLOT_DENYPOCKET)
 				return 0
-			if( w_class > 2 && !(slot_flags & SLOT_POCKET) )
+			if( w_class > ITEMSIZE_SMALL && !(slot_flags & SLOT_POCKET) )
 				return 0
 		if(slot_s_store)
 			if(!H.wear_suit && (slot_wear_suit in mob_equip))

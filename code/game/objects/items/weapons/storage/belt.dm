@@ -4,8 +4,8 @@
 	icon = 'icons/obj/clothing/belts.dmi'
 	icon_state = "utility"
 	storage_slots = 7
-	max_storage_space = 28 //This should ensure belts always have enough room to store whatever.
-	max_w_class = 3
+	max_storage_space = ITEMSIZE_COST_NORMAL * 7 //This should ensure belts always have enough room to store whatever.
+	max_w_class = ITEMSIZE_NORMAL
 	slot_flags = SLOT_BELT
 	attack_verb = list("whipped", "lashed", "disciplined")
 	sprite_sheets = list("Teshari" = 'icons/mob/species/seromi/belt.dmi')
@@ -40,6 +40,7 @@
 		/obj/item/weapon/wrench,
 		/obj/item/device/multitool,
 		/obj/item/device/flashlight,
+		/obj/item/weapon/cell/device,
 		/obj/item/stack/cable_coil,
 		/obj/item/device/t_scanner,
 		/obj/item/device/analyzer,
@@ -54,7 +55,6 @@
 		/obj/item/weapon/material/hatchet,
 		/obj/item/device/analyzer/plant_analyzer,
 		/obj/item/weapon/extinguisher/mini,
-		/obj/item/device/flashlight/maglight,
 		/obj/item/weapon/tape_roll,
 		/obj/item/device/integrated_electronics/wirer,
 		)
@@ -97,7 +97,6 @@
 		/obj/item/device/pda,
 		/obj/item/taperoll,
 		/obj/item/device/megaphone,
-		/obj/item/device/flashlight/pen,
 		/obj/item/clothing/mask/surgical,
 		/obj/item/clothing/head/surgery,
 		/obj/item/clothing/gloves,
@@ -105,6 +104,7 @@
 		/obj/item/clothing/glasses,
 		/obj/item/weapon/crowbar,
 		/obj/item/device/flashlight,
+		/obj/item/weapon/cell/device,
 		/obj/item/weapon/extinguisher/mini
 		)
 
@@ -117,7 +117,7 @@
 	name = "security belt"
 	desc = "Can hold security gear like handcuffs and flashes."
 	icon_state = "security"
-	max_w_class = 3
+	max_w_class = ITEMSIZE_NORMAL
 	can_hold = list(
 		/obj/item/weapon/grenade,
 		/obj/item/weapon/reagent_containers/spray/pepper,
@@ -126,6 +126,7 @@
 		/obj/item/clothing/glasses,
 		/obj/item/ammo_casing/shotgun,
 		/obj/item/ammo_magazine,
+		/obj/item/weapon/cell/device,
 		/obj/item/weapon/reagent_containers/food/snacks/donut/,
 		/obj/item/weapon/melee/baton,
 		/obj/item/weapon/gun/energy/taser,
@@ -150,11 +151,12 @@
 	desc = "A belt for holding forensics equipment."
 	icon_state = "security"
 	storage_slots = 7
-	max_w_class = 3
+	max_w_class = ITEMSIZE_NORMAL
 	can_hold = list(
 		/obj/item/device/taperecorder,
 		/obj/item/clothing/glasses,
 		/obj/item/device/flashlight,
+		/obj/item/weapon/cell/device,
 		/obj/item/weapon/reagent_containers/spray/luminol,
 		/obj/item/weapon/sample,
 		/obj/item/weapon/forensics/sample_kit/powder,
@@ -218,8 +220,8 @@
 	desc = "Can hold security gear like handcuffs and flashes, with more pouches for more storage."
 	icon_state = "swat"
 	storage_slots = 9
-	max_w_class = 3
-	max_storage_space = 28
+	max_w_class = ITEMSIZE_NORMAL
+	max_storage_space = ITEMSIZE_COST_NORMAL * 7
 
 /obj/item/weapon/storage/belt/security/tactical/bandolier
 	name = "combat belt"
@@ -231,10 +233,11 @@
 	desc = "A belt used to hold most janitorial supplies."
 	icon_state = "janitor"
 	storage_slots = 7
-	max_w_class = 3
+	max_w_class = ITEMSIZE_NORMAL
 	can_hold = list(
 		/obj/item/clothing/glasses,
 		/obj/item/device/flashlight,
+		/obj/item/weapon/cell/device,
 		/obj/item/weapon/grenade,
 		/obj/item/device/pda,
 		/obj/item/device/radio/headset,
@@ -262,6 +265,7 @@
 		/obj/item/device/gps,
 		/obj/item/device/measuring_tape,
 		/obj/item/device/flashlight,
+		/obj/item/weapon/cell/device,
 		/obj/item/weapon/pickaxe,
 		/obj/item/device/depth_scanner,
 		/obj/item/device/camera,

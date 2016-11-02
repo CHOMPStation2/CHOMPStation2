@@ -97,11 +97,10 @@
 /mob/living/simple_animal/New()
 	..()
 	verbs -= /mob/verb/observe
-	verbs += /mob/living/proc/animal_nom
 
 /mob/living/simple_animal/Login()
 	if(src && src.client)
-		// src.client.screen = list() - Causes Runtime, client.screen can't be list.
+		src.client.screen = list()
 		src.client.screen += src.client.void
 	..()
 
@@ -310,8 +309,8 @@
 			M.do_attack_animation(src)
 
 		if(I_HURT)
-			if (M.loc == src)
-				return // VOREStation Edit
+			if(M.loc == src) //VOREStation Add (prevents attacking from inside mobs)
+				return
 			adjustBruteLoss(harm_intent_damage)
 			M.visible_message("\red [M] [response_harm] \the [src]")
 			M.do_attack_animation(src)
@@ -343,7 +342,8 @@
 			O.attack(src, user, user.zone_sel.selecting)
 
 /mob/living/simple_animal/hit_with_weapon(obj/item/O, mob/living/user, var/effective_force, var/hit_zone)
-
+	if (user.loc == src) //VOREStation Edit (prevents hitting animals from inside with weapons)
+		return 1
 	visible_message("<span class='danger'>\The [src] has been attacked with \the [O] by [user].</span>")
 
 	if(O.force <= resistance)
@@ -399,6 +399,9 @@
 			adjustBruteLoss(30)
 
 /mob/living/simple_animal/adjustBruteLoss(damage)
+	health = Clamp(health - damage, 0, maxHealth)
+
+/mob/living/simple_animal/adjustFireLoss(damage)
 	health = Clamp(health - damage, 0, maxHealth)
 
 /mob/living/simple_animal/proc/SA_attackable(target_mob)
@@ -640,3 +643,15 @@
 		spawn(10)
 			if(!src.stat)
 				horde()
+
+/mob/living/simple_animal/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, var/def_zone = null)
+	shock_damage *= siemens_coeff
+	if (shock_damage < 1)
+		return 0
+
+	adjustFireLoss(shock_damage)
+	playsound(loc, "sparks", 50, 1, -1)
+
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+	s.set_up(5, 1, loc)
+	s.start()

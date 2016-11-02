@@ -586,9 +586,9 @@
 	var/electrified = 0
 
 	//Departments that the cycler can paint suits to look like.
-	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard")
+	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control")
 	//Species that the suits can be configured to fit.
-	var/list/species = list("Human","Skrell","Unathi","Tajara", "Teshari")
+	var/list/species = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid") //VORESTATION EDIT
 
 	var/target_department
 	var/target_species
@@ -628,13 +628,13 @@
 	name = "Security suit cycler"
 	model_text = "Security"
 	req_access = list(access_security)
-	departments = list("Security")
+	departments = list("Security","Crowd Control")
 
 /obj/machinery/suit_cycler/medical
 	name = "Medical suit cycler"
 	model_text = "Medical"
 	req_access = list(access_medical)
-	departments = list("Medical","Biohazard")
+	departments = list("Medical","Biohazard","Emergency Medical Response")
 
 /obj/machinery/suit_cycler/syndicate
 	name = "Nonstandard suit cycler"
@@ -751,7 +751,7 @@
 
 	//Clear the access reqs, disable the safeties, and open up all paintjobs.
 	user << "<span class='danger'>You run the sequencer across the interface, corrupting the operating protocols.</span>"
-	departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","^%###^%$")
+	departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Crowd Control","Emergency Medical Response","^%###^%$")
 	species = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid") //VORESTATION EDIT
 
 	emagged = 1
@@ -1009,6 +1009,15 @@
 				suit.name = "security voidsuit"
 				suit.icon_state = "rig-sec"
 				suit.item_state = "sec_voidsuit"
+		if("Crowd Control")
+			if(helmet)
+				helmet.name = "crowd control voidsuit helmet"
+				helmet.icon_state = "rig0-sec_riot"
+				helmet.item_state = "rig0-sec_riot"
+			if(suit)
+				suit.name = "crowd control voidsuit"
+				suit.icon_state = "rig-sec_riot"
+				suit.item_state = "sec_voidsuit_riot"
 		if("Atmos")
 			if(helmet)
 				helmet.name = "atmospherics voidsuit helmet"
@@ -1045,6 +1054,15 @@
 				suit.name = "Biohazard voidsuit"
 				suit.icon_state = "rig-medical_bio"
 				suit.item_state = "medical_voidsuit_bio"
+		if("Emergency Medical Response")
+			if(helmet)
+				helmet.name = "emergency medical response voidsuit helmet"
+				helmet.icon_state = "rig0-medical_emt"
+				helmet.item_state = "rig0-medical_emt"
+			if(suit)
+				suit.name = "emergency medical response voidsuit"
+				suit.icon_state = "rig-medical_emt"
+				suit.item_state = "medical_voidsuit_emt"
 		if("^%###^%$" || "Mercenary")
 			if(helmet)
 				helmet.name = "blood-red voidsuit helmet"
