@@ -262,3 +262,14 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
+// **********
+// General Pantsu
+// **********
+/obj/item/clothing/suit/storage/fluff/amara_faell_1
+	name = "Scorched lieutenant jacket"
+	desc = "A dark gray military jacket that has seen better days. It's burned rather badly, but even with the ammount of burn marks and holes that show the kevlar-lining underneath it still doesn't fall apart, and looks as if it won't do so for a long time. The rank-emblems are outdated military ones showing the rank of Lieutenant and there is a halfways burnt off nameplate just reading 'Faell'."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "militaryjacket_nobadge"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "militaryjacket_nobadge_mob"
+	body_parts_covered = UPPER_TORSO

@@ -53,7 +53,7 @@
 	icon_state = "paytonknife"
 
 // **********
-// RandySavage205
+// BlackAngelsAce
 // **********
 /obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1
 	icon = 'icons/vore/custom_items_yw.dmi'
