@@ -83,6 +83,36 @@ character_name: Amara Faell
 item_path: /obj/item/clothing/suit/storage/fluff/amara_faell_1
 }
 
+{
+ckey: generalpantsu
+character_name: Amara Faell
+obj/item/clothing/head/beret/fluff/amara_faell_2
+}
+
+{
+ckey: generalpantsu
+character_name: Amara Faell
+/obj/item/clothing/shoes/combat/fluff/amara_faell_3
+}
+
+{
+ckey: generalpantsu
+character_name: Amara Faell
+/obj/item/clothing/gloves/combat/fluff/amara_faell_4
+}
+
+{
+ckey: generalpantsu
+character_name: Amara Faell
+/obj/item/clothing/under/color/black/fluff/amara_faell_5
+}
+
+{
+ckey: generalpantsu
+character_name: Amara Faell
+item_path: /obj/item/weapon/flame/lighter/zippo/fluff/amara_faell_6
+}
+
 # ######## H CKEYS
 # ######## I CKEYS
 # ######## J CKEYS

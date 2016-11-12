@@ -269,7 +269,39 @@
 	name = "Scorched lieutenant jacket"
 	desc = "A dark gray military jacket that has seen better days. It's burned rather badly, but even with the ammount of burn marks and holes that show the kevlar-lining underneath it still doesn't fall apart, and looks as if it won't do so for a long time. The rank-emblems are outdated military ones showing the rank of Lieutenant and there is a halfways burnt off nameplate just reading 'Faell'."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "militaryjacket_nobadge"
+	icon_state = "lieutenantjacket"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "militaryjacket_nobadge_mob"
+	item_state = "lieutenantjacket_mob"
 	body_parts_covered = UPPER_TORSO
+
+	/obj/item/clothing/head/beret/fluff/amara_faell_2
+	name = "Mercenary beret"
+	desc = "lems are outdated military ones showing the rank of Lieutenant and there is a halfways bur"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mercenaryberet"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mercenaryberet_mob"
+
+	/obj/item/clothing/shoes/combat/fluff/amara_faell_3
+	name = "Marching boots"
+	desc = "A pair of worn, comfy boots optimized for those that need to wear them over a long period of time. They got reinforced soles and steel tips."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "marchingboots"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "marchingboots_mob"
+
+	/obj/item/clothing/gloves/combat/fluff/amara_faell_4
+	name = "Mercenary gloves"
+	desc = "Description: A pair of olive, fingerless gloves reinforced at the back of the hand and knuckles. Rarely see any use on the field as their use is limited."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tacticalgloves"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tacticalgloves_mob"
+
+	/obj/item/clothing/under/color/black/fluff/amara_faell_5
+	name = "Sleeveless sweater"
+	desc = "Description: A gray sleeveless turtleneck-sweater and a pair of damaged camo pants."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tacticalgloves"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tacticalgloves_mob"
