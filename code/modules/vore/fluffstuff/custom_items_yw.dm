@@ -75,12 +75,3 @@
 	sharp = 1
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("stabbed", "pierced", "jabbed", "torn", "gored")
-
-// **********
-// GeneralPantsu
-// **********
-/obj/item/weapon/flame/lighter/zippo/fluff/amara_faell_6
-	name = "Blood red zippo"
-	desc = "A zippo that comes in a metallic blood red case. How the flame can be lime green is an enigma in itself."
-	icon = 'icons/vore/custom_items_yw.dmi'
-	icon_state = "bloodredzippo"
