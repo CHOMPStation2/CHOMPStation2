@@ -8,3 +8,4 @@
 	desc = "Eio'ni's brand heads with mounted display."
 	icon = 'icons/mob/human_races/cyberlimbs/eioni/eioni_alt1.dmi' //Sprited by: Unleashed Mana
 	parts = list(BP_HEAD)
+	monitor_styles = standard_monitor_styles

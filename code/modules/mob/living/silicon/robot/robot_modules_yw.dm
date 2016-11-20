@@ -1,6 +1,5 @@
 /hook/startup/proc/robot_modules_yw()
 	robot_modules["XenoMaid"] = /obj/item/weapon/robot_module/xenomaid
-	robot_module_types += "Xenomorph Maid"
 	return 1
 
 

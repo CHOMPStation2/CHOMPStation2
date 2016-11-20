@@ -225,7 +225,7 @@
 			del(target)
 			var/mob/living/silicon/robot.R = user
 			R.cell.charge = R.cell.charge + 50
-	else if(istype(target,/obj/item))
+	else if(istype(target,/obj/item) || istype(target,/obj/item/weapon/reagent_containers/food))
 		if(istype(target,/obj/item/trash))
 			user.visible_message("[user] nibbles away at \the [target.name].", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
 			if(do_after (user, 50))
@@ -274,6 +274,11 @@
 			user << "<span class='notice'>You clean \the [target.name].</span>"
 			target.color = initial(target.color)
 			//target.SetOpacity(initial(target.opacity)) //Apparantly this doesn't work?
+	else if(istype(target,/turf))
+		user << "<span class='notice'>You lick \the [target.name] clean.</span>"
+		var/turf/T = get_turf(target)
+		if(T)
+			T.clean(src, user)
 	else
 		user.visible_message("[user] begins to lick \the [target.name] clean...", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
 		if(do_after (user, 50))
