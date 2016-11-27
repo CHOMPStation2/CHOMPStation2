@@ -263,13 +263,28 @@
 	w_class = 2
 
 // **********
-// General Pantsu
+// GeneralPantsu
 // **********
-/obj/item/clothing/suit/storage/fluff/amara_faell_1
+/obj/item/clothing/suit/storage/fluff/fedcoat/Amaracoat
 	name = "Scorched lieutenant jacket"
 	desc = "A dark gray military jacket that has seen better days. It's burned rather badly, but even with the ammount of burn marks and holes that show the kevlar-lining underneath it still doesn't fall apart, and looks as if it won't do so for a long time. The rank-emblems are outdated military ones showing the rank of Lieutenant and there is a halfways burnt off nameplate just reading 'Faell'."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "militaryjacket_nobadge"
+	icon_state = "ltjacket"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "militaryjacket_nobadge_mob"
-	body_parts_covered = UPPER_TORSO
+	item_state = "ltjacket_mob"
+
+/obj/item/clothing/head/beret/Amaraberet
+	name = "Mercenary beret"
+	desc = "An olive green beret with a silver emblem that consists of a shield and crossed swords. Seems to be part of some mercenary-band."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mberet"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mberet_mob"
+
+/obj/item/clothing/gloves/fluff/Amaragloves
+	name = "Mercenary gloves"
+	desc = "A pair of olive, fingerless gloves reinforced at the back of the hand and knuckles. Rarely see any use on the field as their use is limited."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tgloves"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tgloves_mob"
