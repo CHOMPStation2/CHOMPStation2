@@ -1,4 +1,5 @@
 /* 'basic' language; spoken by default.
+
 /datum/language/common
 	name = "Galactic Common"
 	desc = "The common galactic tongue."
@@ -39,9 +40,34 @@
 	"hel","ischt","far","wa","baram","iereng","tech","lach","sam","mak","lich","gen","or","ag","eck","gec","stag","onn", \
 	"bin","ket","jarl","vulf","einech","cresthz","azunein","ghzth")
 
+/datum/language/demon
+    name = "Daemon"
+    desc = "The language spoken by the demons of Infernum, it's composed of deep chanting. It's rarely spoken off of Infernum due to the volume one has to exert."
+    speech_verb = "chants"
+    ask_verb = "croons"
+    exclaim_verb = "incants"
+    colour = "cult" //No clue what to put here - Table
+    key = "-" //dunno if this is a valid key. - Table
+    flags = RESTRICTED
+    syllables = list("viepn","e","bag","docu","kar","xlaqf","raa","qwos","nen","ty","von","kytaf","xin","ty","ka","baak","hlafaifpyk","znu","agrith","na'ar","uah","plhu","six","fhler","bjel","scee","lleri",
+    "dttm","aggr","uujl","hjjifr","wwuthaav",)
 
+/datum/language/angel
+    name = "Angellic"
+    desc = "The graceful language spoken by angels, composed of quiet hymmns. Formally, Angels sing it."
+    speech_verb = "sings"
+    ask_verb = "hums"
+    exclaim_verb = "loudly sings"
+    colour = "birdsongc" //No clue what to put here - Table
+    key = "*" //dunno if this is a valid key. - Table
+    flags = RESTRICTED
+    syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
+    "mihi","wan","six","salve","tartu")
 
-
+/datum/language/demon
+	flags = 0
+/datum/language/angel
+	flags = 0
 /datum/language/unathi
 	flags = 0
 /datum/language/tajaran
