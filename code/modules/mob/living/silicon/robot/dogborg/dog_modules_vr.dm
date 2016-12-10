@@ -279,6 +279,12 @@
 		var/turf/T = get_turf(target)
 		if(T)
 			T.clean(src, user)
+			T.clean_blood()
+			if(istype(T, /turf/simulated))
+				var/turf/simulated/S = T
+				S.dirt = 0
+			var/obj/effect/decal/cleanable/C = locate() in T
+			del(C)
 	else
 		user.visible_message("[user] begins to lick \the [target.name] clean...", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
 		if(do_after (user, 50))
@@ -295,8 +301,9 @@
 	icon_state = "projgun"
 	fire_sound = 'sound/weapons/eLuger.ogg'
 	projectile_type = /obj/item/projectile/beam/disable
-	charge_cost = 1000 //High cost.
-	recharge_time = 10 //Takes ten ticks to recharge a laser, so don't waste them all!
+	charge_cost = 240 //Normal cost of a taser. It used to be 1000, but after some testing it was found that it would sap a borg's battery to quick
+	recharge_time = 1 //Takes ten ticks to recharge a laser, so don't waste them all!
+	//cell_type = null //Same cell as a taser until edits are made.
 
 /obj/item/weapon/dogborg/swordtail
 	name = "sword tail"
