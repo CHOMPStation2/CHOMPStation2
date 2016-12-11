@@ -9,4 +9,6 @@ Thumbs.db
 data/
 cfg/
 
-/maps/RandomZLevels/backup/blackmarketpackers.dmm
+code/game/gamemodes/technomancer/spells/projectile/overload.dm
+code/game/gamemodes/technomancer/spells/projectile/overload.dm
+code/modules/client/preference_setup/loadout/loadout_xeno.dm
