@@ -11,7 +11,7 @@
 	num_alternate_languages = 2
 	secondary_langs = list("Sol Common")
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
-	min_age = 17
+	min_age = 18
 	max_age = 110
 	health_hud_intensity = 1.5
 
@@ -40,7 +40,7 @@
 	name_language = "Sinta'unathi"
 	health_hud_intensity = 2.5
 
-	min_age = 17
+	min_age = 18
 	max_age = 110
 
 	blurb = "A heavily reptillian species, Unathi (or 'Sinta as they call themselves) hail from the \
@@ -101,7 +101,7 @@
 	name_language = "Siik"
 	health_hud_intensity = 2.5
 
-	min_age = 17
+	min_age = 18
 	max_age = 110
 
 	blurb = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
@@ -156,8 +156,10 @@
 	name_language = "Skrellian"
 	health_hud_intensity = 2
 
-	min_age = 17
+	min_age = 18
 	max_age = 110
+
+	darksight = 4
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
@@ -165,6 +167,14 @@
 	flesh_color = "#8CD7A3"
 	blood_color = "#1D2CBF"
 	base_color = "#006666"
+
+	cold_level_1 = 280 //Default 260 - Lower is better
+	cold_level_2 = 220 //Default 200
+	cold_level_3 = 130 //Default 120
+
+	heat_level_1 = 420 //Default 360 - Higher is better
+	heat_level_2 = 480 //Default 400
+	heat_level_3 = 1100 //Default 1000
 
 	//reagent_tag = IS_SKRELL //VOREStation Removal
 
@@ -199,7 +209,7 @@
 	name_language = "Rootspeak"
 	health_hud_intensity = 2.5
 
-	min_age = 1
+	min_age = 18
 	max_age = 300
 
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \

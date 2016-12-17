@@ -311,7 +311,7 @@
 		var/mob/living/carbon/human/H = M
 		H.update_mutations()
 
-/datum/reagent/hyperzine
+/*/datum/reagent/hyperzine
 	name = "Hyperzine"
 	id = "hyperzine"
 	description = "Hyperzine is a highly effective, long lasting, muscle stimulant."
@@ -327,7 +327,7 @@
 	if(prob(5))
 		M.emote(pick("twitch", "blink_r", "shiver"))
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
-
+*/
 /datum/reagent/ethylredoxrazine
 	name = "Ethylredoxrazine"
 	id = "ethylredoxrazine"
