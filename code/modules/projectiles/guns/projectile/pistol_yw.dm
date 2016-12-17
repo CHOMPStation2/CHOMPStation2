@@ -1,5 +1,4 @@
 /******GLOCK******/
-/*****************/
 /obj/item/weapon/gun/projectile/automatic/glock
 	name = "Glock G18"
 	desc = "A automatic handgun that uses .9mm rounds."
@@ -26,7 +25,6 @@
 
 
 /*******PPK*******/
-/*****************/
 /obj/item/weapon/gun/projectile/ppk
 	name = "PPK"
 	desc = "A handgun that uses .9mm rounds."
@@ -46,4 +44,23 @@
 	else
 		icon_state = "[initial(icon_state)]-empty"
 
-/**/
+
+/*******M2024*******/
+/obj/item/weapon/gun/projectile/m2024
+	name = "Custom M2024"
+	desc = "Customized model of old yet reliable sol .45 handgun with the name 'M2024'. Used to be popular, still appreciated for it's effectiveness."
+	icon_state = "m2024"
+	item_state = "m2024"
+	icon = 'icons/obj/gun_yw.dmi'
+	caliber = ".45"
+	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/semiauto.ogg'
+	magazine_type = /obj/item/ammo_magazine/c45m2024
+	allowed_magazines = list(/obj/item/ammo_magazine/c45m2024,/obj/item/ammo_magazine/c45m)
+
+/obj/item/weapon/gun/projectile/m2024/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]-empty"
