@@ -64,6 +64,16 @@
     syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
     "mihi","wan","six","salve","tartu")
 
+/datum/language/squirrel
+	name = "Ecureuilian"
+	desc = "The native tongue of the inhabitants of Gaia. Squirrelkin and other beastkins of Gaia can use their ears and tails in addition to speech to communitcate."
+	speech_verb = "squeaks"
+	whisper_verb = "whispers"
+	exclaim_verb = "chitters"
+	key = "9"
+	flags = RESTRICTED
+	syllables = list("sque","sqah","boo","beh","nweh","boopa","nah","wah","een","sweh")
+
 /datum/language/demon
 	flags = 0
 /datum/language/angel

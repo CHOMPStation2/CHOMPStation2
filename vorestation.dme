@@ -333,6 +333,7 @@
 #include "code\game\area\Away Mission areas.dm"
 #include "code\game\area\Space Station 13 areas.dm"
 #include "code\game\area\Space Station 13 areas_vr.dm"
+#include "code\game\area\Space Station 13 areas_yw.dm"
 #include "code\game\dna\dna2.dm"
 #include "code\game\dna\dna2_domutcheck.dm"
 #include "code\game\dna\dna2_helpers.dm"
@@ -2283,5 +2284,6 @@
 #include "maps\virgo-4.dmm"
 #include "maps\virgo-5.dmm"
 #include "maps\virgo-6.dmm"
+#include "maps\virgo-7.dmm"
 #include "maps\RandomZLevels\zoo.dm"
 // END_INCLUDE

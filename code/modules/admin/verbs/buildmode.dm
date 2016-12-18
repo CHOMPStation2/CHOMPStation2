@@ -394,8 +394,8 @@
 				user << "<span class='notice'>Ladder locations set, building ladders.</span>"
 				var/obj/structure/ladder/A = new /obj/structure/ladder(holder.buildmode.coordA)
 				var/obj/structure/ladder/B = new /obj/structure/ladder(holder.buildmode.coordB)
-				A.target = B
-				B.target = A
+				A.target_up = B
+				B.target_down = A
 				B.icon_state = "ladderup"
 				holder.buildmode.coordA = null
 				holder.buildmode.coordB = null
