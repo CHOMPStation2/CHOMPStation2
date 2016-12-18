@@ -151,3 +151,17 @@
 	containertype = /obj/structure/closet/crate
 	containername = "Beanbag shells"
 	access = null
+
+/datum/supply_packs/randomised/munitions/revolver
+	name = "Revovler Crate"
+	num_contained = 2
+	contains = list(
+			/obj/item/weapon/gun/projectile/revolver/cerberus,
+			/obj/item/weapon/gun/projectile/revolver/nova,
+			/obj/item/weapon/gun/projectile/revolver/detective,
+			/obj/item/weapon/gun/projectile/revolver/deckard
+			)
+	cost = 150
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Automatic weapon crate"
+	access = access_armory
