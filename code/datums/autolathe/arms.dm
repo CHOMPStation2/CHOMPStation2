@@ -282,6 +282,14 @@
 	path =/obj/item/ammo_magazine/a357
 	hidden = 1
 
+/datum/category_item/autolathe/arms/a357_rubber
+	name = "speedloader rubber (.357)"
+	path =/obj/item/ammo_magazine/a357/rubber
+
+/datum/category_item/autolathe/arms/a357_flash
+	name = "speedloader flash (.357)"
+	path =/obj/item/ammo_magazine/a357/flash
+
 /datum/category_item/autolathe/arms/speedloader_38
 	name = "speedloader (.38)"
 	path =/obj/item/ammo_magazine/c38
