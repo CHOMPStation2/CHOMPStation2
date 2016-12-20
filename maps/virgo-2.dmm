@@ -4953,7 +4953,7 @@
 "bRm" = (/obj/effect/floor_decal/corner/blue{dir = 9},/obj/machinery/power/apc{dir = 8; name = "west bump"; pixel_x = -24},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled,/area/bridge_hallway)
 "bRn" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/corner/blue,/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled,/area/bridge_hallway)
 "bRo" = (/obj/effect/floor_decal/corner/blue/full{dir = 4},/obj/machinery/vending/coffee,/turf/simulated/floor/tiled,/area/bridge_hallway)
-"bRp" = (/obj/structure/closet/secure_closet/captains,/turf/simulated/floor/carpet,/area/crew_quarters/captain)
+"bRp" = (/obj/structure/closet/secure_closet/captains,/obj/item/clothing/head/caphat,/turf/simulated/floor/carpet,/area/crew_quarters/captain)
 "bRq" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/turf/simulated/floor/carpet,/area/crew_quarters/captain)
 "bRr" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/turf/simulated/floor/carpet,/area/crew_quarters/captain)
 "bRs" = (/obj/structure/displaycase,/turf/simulated/floor/carpet,/area/crew_quarters/captain)
