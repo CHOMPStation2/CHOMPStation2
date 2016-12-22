@@ -290,6 +290,10 @@
 	name = "speedloader flash (.357)"
 	path =/obj/item/ammo_magazine/a357/flash
 
+/datum/category_item/autolathe/arms/a357_stun
+	name = "speedloader stun (.357)"
+	path =/obj/item/ammo_magazine/a357/stun
+
 /datum/category_item/autolathe/arms/speedloader_38
 	name = "speedloader (.38)"
 	path =/obj/item/ammo_magazine/c38

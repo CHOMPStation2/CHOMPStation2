@@ -5,3 +5,4 @@
 	icon_state = "guest"
 	item_state = "golem"
 	worn_state = "golem"
+	body_parts_covered = null
