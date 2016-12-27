@@ -87,11 +87,10 @@ datum/hSB
 					P.back.layer = 20
 					P.internal = P.back
 				if("hsbmetal")
-					var/obj/item/stack/sheet/hsb = new/obj/item/stack/sheet/metal
-					hsb.amount = 50
+					var/obj/item/stack/material/steel/fifty/hsb = new/obj/item/stack/material/steel/fifty
 					hsb.loc = usr.loc
 				if("hsbglass")
-					var/obj/item/stack/sheet/hsb = new/obj/item/stack/sheet/glass
+					var/obj/item/stack/material/glass/fifty/hsb = new/obj/item/stack/material/glass/fifty
 					hsb.amount = 50
 					hsb.loc = usr.loc
 				if("hsbairlock")
@@ -137,8 +136,6 @@ datum/hSB
 						if(istype(O, /obj/item/assembly))
 							continue
 						if(istype(O, /obj/item/device/camera))
-							continue
-						if(istype(O, /obj/item/weapon/dummy))
 							continue
 						if(istype(O, /obj/item/weapon/melee/energy/sword))
 							continue
