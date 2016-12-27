@@ -152,16 +152,52 @@
 	containername = "Beanbag shells"
 	access = null
 
-/datum/supply_packs/randomised/munitions/revolver
+/datum/supply_packs/randomised/munitions/ywrevolver
 	name = "Revovler Crate"
 	num_contained = 2
 	contains = list(
 			/obj/item/weapon/gun/projectile/revolver/cerberus,
 			/obj/item/weapon/gun/projectile/revolver/nova,
 			/obj/item/weapon/gun/projectile/revolver/detective,
-			/obj/item/weapon/gun/projectile/revolver/deckard
+			/obj/item/weapon/gun/projectile/revolver/deckard,
+		    /obj/item/weapon/gun/projectile/revolver/mateba
 			)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-	containername = "Automatic weapon crate"
+	containername = "Revolver Crate"
+	access = access_armory
+
+/datum/supply_packs/randomised/munitions/ywassault
+	name = "Assault rifle crate"
+	num_contained = 2
+	contains = list(
+			/obj/item/weapon/gun/projectile/automatic/carbine/fluff/g44,
+			/obj/item/weapon/gun/projectile/automatic/tommygun,
+			/obj/item/weapon/gun/projectile/automatic/carbine,
+			/obj/item/weapon/gun/projectile/automatic/c20r,
+			/obj/item/weapon/gun/projectile/automatic/sts35
+			)
+	cost = 250
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Assault rifle crate"
+	access = access_armory
+
+/datum/supply_packs/randomised/munitions/ywsmg
+	name = "Smg crate"
+	num_contained = 2
+	contains = list(
+			/obj/item/weapon/gun/projectile/automatic/c20r,
+			/obj/item/weapon/gun/projectile/automatic/pdw
+			)
+	cost = 100
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Smg crate"
+	access = access_armory
+
+/datum/supply_packs/munitions/munitions/ywmg
+	name = "Light machine gun crate"
+	contains = list(/obj/item/weapon/gun/projectile/automatic/l6_saw = 1)
+	cost = 500
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Light machine gun crate"
 	access = access_armory
