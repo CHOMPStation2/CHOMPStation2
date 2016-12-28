@@ -4,7 +4,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "mg42closed"
 	item_state = "mg42closed"
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE
 	force = 10
 	slot_flags = 0
 	max_shells = 75
@@ -53,7 +53,7 @@
 		return ..() //once open, behave like normal
 
 /obj/item/weapon/gun/projectile/automatic/mg42/update_icon()
-	icon_state = "mg42[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"]"
+	icon_state = "mg42[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"][cover_open && ammo_magazine && ammo_magazine.stored_ammo.len == 0 ? "0" : ""]"
 	item_state = "mg42[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"]"
 	update_held_icon()
 
