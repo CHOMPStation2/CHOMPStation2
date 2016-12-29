@@ -2,8 +2,12 @@
 	name = "MG42"
 	desc = "Entfesseln die Holle" //Unleash the hell
 	icon = 'icons/obj/gun_yw.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_guns_yw.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_guns_yw.dmi',
+		)
 	icon_state = "mg42closed"
-	item_state = "mg42closed"
+	item_state = "mg42"
 	w_class = ITEMSIZE_HUGE
 	force = 10
 	slot_flags = 0
@@ -54,7 +58,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/mg42/update_icon()
 	icon_state = "mg42[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"][cover_open && ammo_magazine && ammo_magazine.stored_ammo.len == 0 ? "0" : ""]"
-	item_state = "mg42[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"]"
+	item_state = "mg42"
 	update_held_icon()
 
 /obj/item/weapon/gun/projectile/automatic/mg42/load_ammo(var/obj/item/A, mob/user)

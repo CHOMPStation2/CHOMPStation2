@@ -87,11 +87,10 @@ datum/hSB
 					P.back.layer = 20
 					P.internal = P.back
 				if("hsbmetal")
-					var/obj/item/stack/material/steel/fifty/hsb = new/obj/item/stack/material/steel/fifty
+					var/obj/fiftyspawner/iron/hsb = new/obj/fiftyspawner/iron
 					hsb.loc = usr.loc
 				if("hsbglass")
-					var/obj/item/stack/material/glass/fifty/hsb = new/obj/item/stack/material/glass/fifty
-					hsb.amount = 50
+					var/obj/fiftyspawner/glass/hsb = new/obj/fiftyspawner/glass
 					hsb.loc = usr.loc
 				if("hsbairlock")
 					var/obj/machinery/door/hsb = new/obj/machinery/door/airlock
