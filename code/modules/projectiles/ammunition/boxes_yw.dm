@@ -57,3 +57,26 @@
 /obj/item/ammo_magazine/gl9mm/practice
 	name = "glock magazine (9mm practice)"
 	ammo_type = /obj/item/ammo_casing/c9mmp
+
+/******* MG42 ********/
+/obj/item/ammo_magazine/mg42
+	name = "drum mag (7.92x57mm Mauser)"
+	icon = 'icons/obj/gun_yw.dmi'
+	icon_state = "mg42_75rnd"
+	caliber = "mauser"
+	ammo_type = /obj/item/ammo_casing/mg42
+	max_ammo = 75
+	multiple_sprites = 0
+	w_class = ITEMSIZE_NORMAL
+	mag_type = MAGAZINE
+	origin_tech = list(TECH_COMBAT = 2)
+	matter = list(DEFAULT_WALL_MATERIAL = 10000)
+
+/obj/item/ammo_casing/mg42
+	desc = "A 7.92×57mm Mauser casing."
+	icon_state = "rifle-casing"
+	caliber = "mauser"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
+
+/obj/item/ammo_magazine/mg42/empty
+	initial_ammo = 0
