@@ -160,7 +160,8 @@
 			/obj/item/weapon/gun/projectile/revolver/nova,
 			/obj/item/weapon/gun/projectile/revolver/detective,
 			/obj/item/weapon/gun/projectile/revolver/deckard,
-		    /obj/item/weapon/gun/projectile/revolver/mateba
+		    /obj/item/weapon/gun/projectile/revolver/mateba,
+			/obj/item/weapon/gun/projectile/derringer
 			)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure

@@ -5,6 +5,7 @@
 	icon_state = "wedring_g"
 	item_state = "wedring_g"
 	var/partnername = ""
+	body_parts_covered = null
 
 /obj/item/clothing/gloves/weddingring/attack_self(mob/user)
 	partnername = copytext(sanitize(input(user, "Would you like to change the holoengraving on the ring?", "Name your betrothed", "Bae") as null|text),1,MAX_NAME_LEN)
