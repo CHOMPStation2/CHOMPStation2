@@ -103,10 +103,10 @@
 	name = "offhand"
 
 	unwield()
-		del(src)
+		qdel(src)
 
 	wield()
-		del(src)
+		qdel(src)
 
 /obj/item/weapon/oldtwohanded/offhand/update_icon()
 	return
