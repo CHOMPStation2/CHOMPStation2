@@ -35,7 +35,7 @@
 
 /obj/item/clothing/head/helmet/wolfbrigade
 	name = "Protect Gear helmet"
-	desc = "Die Wölfe haben Köpfe von Eisen"
+	desc = "Die Wölfe haben Köpfe aus Eisen"
 	icon = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_override = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_state = "wbhelmet"
@@ -44,7 +44,7 @@
 
 /obj/item/clothing/shoes/combat/wolfbrigade
 	name = "Protect Gear boots"
-	desc = "Die Wölfe können nicht rutschen"
+	desc = "Die Wölfe können nicht ausrutschen"
 	icon = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_override = 'icons/obj/clothing/wolfbrigade.dmi'
 	icon_state = "wbboots-mob"
@@ -60,7 +60,7 @@
 
 /obj/item/clothing/gloves/arm_guard/combat/wolfbrigade
 	name = "Protect Gear armguards"
-	desc = "Die Wölfe Krallen sind scharf" // 2 edgy
+	desc = "DDie Wölfe haben scharfe krallen" // 2 edgy
 
 /obj/item/clothing/under/acj/wolfbrigade //Because never OP enough when you want to adminbuse
 	name = "Kerberos uniform"

@@ -46,7 +46,7 @@
 {
 ckey: blackangelsace
 character_name: Madoka Koto
-item_path: /obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1
+item_path: /obj/item/weapon/storage/box/fluff/madoka
 }
 
 # ######## C CKEYS
@@ -80,25 +80,7 @@ item_path: /obj/item/clothing/accessory/fluff/zeta_blackwell_1
 {
 ckey: generalpantsu
 character_name: Amara Faell
-item_path: /obj/item/weapon/flame/lighter/zippo/fluff/bloodzippo
-}
-
-{
-ckey: generalpantsu
-character_name: Amara Faell
-item_path: /obj/item/clothing/suit/storage/fluff/fedcoat/Amaracoat
-}
-
-{
-ckey: generalpantsu
-character_name: Amara Faell
-item_path: /obj/item/clothing/head/beret/Amaraberet
-}
-
-{
-ckey: generalpantsu
-character_name: Amara Faell
-item_path: /obj/item/clothing/gloves/fluff/Amaragloves
+item_path: /obj/item/weapon/storage/box/fluff/amara
 }
 # ######## H CKEYS
 # ######## I CKEYS

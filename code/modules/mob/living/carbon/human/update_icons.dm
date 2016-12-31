@@ -642,7 +642,7 @@ var/global/list/damage_icon_parts = list()
 
 		var/image/standing
 		if(shoes.icon_override)
-			standing = image("icon" = shoes.icon_override, "icon_state" = "[shoes.icon_state]")
+			standing = image("icon" = shoes.icon_override, "icon_state" = shoes.item_state ? "[shoes.item_state]" : "[shoes.icon_state]")
 		else if(shoes.sprite_sheets && shoes.sprite_sheets[species.get_bodytype(src)])
 			standing = image("icon" = shoes.sprite_sheets[species.get_bodytype(src)], "icon_state" = "[shoes.icon_state]")
 		else

@@ -288,3 +288,19 @@
 	icon_state = "tgloves"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "tgloves_mob"
+
+/obj/item/clothing/under/fluff/amara_faell_4
+	name = "Sleeveless sweater"
+	desc = "A gray sleeveless turtleneck-sweater and a pair of damaged camo pants."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "stnecksuit"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "stnecksuit_mob"
+
+/obj/item/clothing/shoes/dutyboots/fluff/amara_faell_5
+	name = "Marching boots"
+	desc = "A pair of worn, comfy boots optimized for those that need to wear them over a long period of time. They got reinforced soles and steel tips."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mboots"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mboots_mob"
