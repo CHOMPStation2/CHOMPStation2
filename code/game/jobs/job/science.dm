@@ -59,7 +59,7 @@
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)
 	alt_titles = list("Xenoarcheologist", "Anomalist", "Phoron Researcher")
 
-	minimal_player_age = 14
+	minimal_player_age = 2
 
 	equip(var/mob/living/carbon/human/H)
 		if(!H)	return 0
@@ -91,7 +91,7 @@
 	minimal_access = list(access_research, access_xenobiology, access_hydroponics, access_tox_storage)
 	alt_titles = list("Xenobotanist")
 
-	minimal_player_age = 14
+	minimal_player_age = 2
 
 	equip(var/mob/living/carbon/human/H)
 		if(!H) return 0
@@ -123,7 +123,7 @@
 	minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
 	alt_titles = list("Biomechanical Engineer","Mechatronic Engineer")
 
-	minimal_player_age = 7
+	minimal_player_age = 2
 
 	equip(var/mob/living/carbon/human/H)
 		if(!H)	return 0

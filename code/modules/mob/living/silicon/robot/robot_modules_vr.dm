@@ -26,6 +26,7 @@
 	src.modules += new /obj/item/device/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/borg/sight/hud/sec(src) //Security hud to see criminals.
+	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
@@ -72,6 +73,7 @@
 	src.modules += new /obj/item/borg/sight/hud/med(src) //See who's hurt generally.
 	src.modules += new /obj/item/weapon/extinguisher/mini(src) //So they can put burning patients out.
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
+	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	//R.icon_state = "medihound"
@@ -99,6 +101,7 @@
 	src.modules += new /obj/item/borg/sight/hud/sec(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/dogborg/swordtail(src)
+	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 	R.icon 		 = 'icons/mob/62x62robot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'

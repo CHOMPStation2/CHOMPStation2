@@ -241,7 +241,7 @@ namespace midi2piano
                 {
                     output += line.Substring(0, line.Length - 1) + "\r\n";
                     line = "";
-                    if (lineCount == 50)
+                    if (lineCount == 500)
                         break;
                     lineCount++;
                 }

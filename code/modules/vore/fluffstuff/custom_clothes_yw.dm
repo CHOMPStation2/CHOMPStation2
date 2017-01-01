@@ -290,8 +290,8 @@
 	item_state = "tgloves_mob"
 
 /obj/item/clothing/under/fluff/amara_faell_4
-	name = "Sleeveless sweater"
-	desc = "A gray sleeveless turtleneck-sweater and a pair of damaged camo pants."
+	name = "Skintight bodysuit"
+	desc = "A black-red bodysuit made of some durable synthetic material. Kinda kinky."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "stnecksuit"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'

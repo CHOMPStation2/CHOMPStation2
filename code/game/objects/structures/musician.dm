@@ -16,6 +16,7 @@
 	var/help = 0
 	var/edit = 1
 	var/repeat = 0
+	var/linelimit = 50
 
 /obj/structure/device/piano/New()
 	if(prob(50))
@@ -392,9 +393,9 @@
 				if(copytext(lines[1],1,6) == "BPM: ")
 					tempo = 600 / text2num(copytext(lines[1],6))
 					lines.Cut(1,2)
-				if(lines.len > 50)
+				if(lines.len > linelimit)
 					usr << "Too many lines!"
-					lines.Cut(51)
+					lines.Cut(linelimit+1)
 				var/linenum = 1
 				for(var/l in lines)
 					if(lentext(l) > 50)
