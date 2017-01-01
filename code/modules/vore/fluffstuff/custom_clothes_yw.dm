@@ -304,3 +304,15 @@
 	icon_state = "mboots"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mboots_mob"
+
+// **********
+// Izac112
+// **********
+
+/obj/item/clothing/under/fluff/ally_1
+	name = "Skintight bodysuit"
+	desc = "A black-purple bodysuit made of some durable synthetic material fitted for a akula. Lewd."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "satsuit"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "satsuit_mob"

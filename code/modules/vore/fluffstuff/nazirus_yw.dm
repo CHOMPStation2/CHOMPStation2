@@ -33,7 +33,7 @@
 	icon = 'icons/vore/nazirus_yw.dmi'
 	icon_state = "soldieruniform"
 	icon_override = 'icons/vore/nazirus_yw.dmi'
-	item_state = "soldieruniform_mob_s"
+	item_state = "soldieruniform_mob"
 
 /obj/item/clothing/under/nazi/officer
 	name = "Officer's Feldanzug"
@@ -41,7 +41,7 @@
 	icon = 'icons/vore/nazirus_yw.dmi'
 	icon_state = "officeruniform"
 	icon_override = 'icons/vore/nazirus_yw.dmi'
-	item_state = "officeruniform_mob_s"
+	item_state = "officeruniform_mob"
 
 //suits
 
