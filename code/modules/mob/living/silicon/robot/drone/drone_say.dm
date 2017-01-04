@@ -4,6 +4,8 @@
 			if(client.prefs.muted & MUTE_IC)
 				src << "You cannot send IC messages (muted)."
 				return 0
+			if (src.client.handle_spam_prevention(message,MUTE_IC))
+				return 0
 
 		message = sanitize(message)
 
