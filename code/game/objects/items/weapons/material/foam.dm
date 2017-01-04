@@ -6,7 +6,7 @@
 	force_divisor = 0
 	unbreakable = 1
 	damtype = HALLOSS
-	force = 5
+	force = 0.01
 
 /obj/item/weapon/material/twohanded/baseballbat/foam
 	attack_verb = list("bonked","whacked")
@@ -14,7 +14,7 @@
 	force_divisor = 0
 	unbreakable = 1
 	damtype = HALLOSS
-	force = 5
+	force = 0.01
 
 /obj/item/weapon/material/sword/foam/New(var/newloc)
 	..(newloc,"foam")
@@ -28,7 +28,7 @@
 	icon_state = "spear_mask0"
 	unbreakable = 1
 	damtype = HALLOSS
-	force = 5
+	force = 0.01
 
 /obj/item/weapon/material/twohanded/spear/foam/New(var/newloc)
 	..(newloc,"foam")
@@ -42,7 +42,7 @@
 	icon_state = "fireaxe_mask0"
 	unbreakable = 1
 	damtype = HALLOSS
-	force = 5
+	force = 0.01
 
 /obj/item/weapon/material/twohanded/fireaxe/foam/New(var/newloc)
 	..(newloc,"foam")
