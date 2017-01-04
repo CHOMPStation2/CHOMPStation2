@@ -6,12 +6,12 @@
 	tail = "tail"
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
-	darksight = 8
-	slowdown = -1
+	//darksight = 8
+	//slowdown = -0.5
 	//brute_mod = 1.15
 	//burn_mod =  1.15
 	//gluttonous = 1
-	num_alternate_languages =
+	num_alternate_languages = 2
 	secondary_langs = list("Sagaru")
 	name_language = "Sagaru"
 	color_mult = 1
