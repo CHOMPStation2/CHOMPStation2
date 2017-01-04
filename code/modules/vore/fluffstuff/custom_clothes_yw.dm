@@ -296,7 +296,7 @@
 	icon_state = "stnecksuit"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "stnecksuit_mob"
-	body_parts_covered = UPPER_TORSO|LOWER_BODY|LEGS
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
 /obj/item/clothing/shoes/dutyboots/fluff/amara_faell_5
 	name = "Marching boots"
@@ -317,4 +317,4 @@
 	icon_state = "satsuit"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "satsuit_mob"
-	body_parts_covered = UPPER_TORSO|LOWER_BODY|LEGS
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
