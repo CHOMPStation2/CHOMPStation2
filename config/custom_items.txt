@@ -97,6 +97,12 @@ item_path: /obj/item/weapon/storage/backpack/messenger/sec/fluff/ivymoomoo
 }
 
 # ######## J CKEYS
+{
+ckey: johnwolf135
+character_name: Rosetta Neton
+item_path: /obj/item/clothing/under/fluff/Rosetta
+}
+
 # ######## K CKEYS
 # ######## L CKEYS
 # ######## M CKEYS
