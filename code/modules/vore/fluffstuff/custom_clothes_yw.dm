@@ -318,3 +318,14 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "satsuit_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
+
+// **********
+// Johnwolf135
+// **********
+/obj/item/clothing/under/fluff/Rosetta
+	name = "Pink medical scrubs"
+	desc = "Its like standard medical scrubs...but PINK! remind you of anyone?."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "scrubspink"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "scrubspink_mob"
