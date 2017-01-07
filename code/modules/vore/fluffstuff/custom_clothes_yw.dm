@@ -306,6 +306,17 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mboots_mob"
 
+/obj/item/clothing/accessory/collar/fluff/amara_collar
+	name = "Pet's Collar"
+	desc = "A black synthleather collar with spikey studs and a mark reading sharkie's button."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "collar_amara"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "collar_amara_mob"
+	overlay_state = "collar_amara_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
+
 // **********
 // Izac112
 // **********
@@ -322,6 +333,7 @@
 // **********
 // Johnwolf135
 // **********
+
 /obj/item/clothing/under/fluff/Rosetta
 	name = "Pink medical scrubs"
 	desc = "Its like standard medical scrubs...but PINK! remind you of anyone?."
