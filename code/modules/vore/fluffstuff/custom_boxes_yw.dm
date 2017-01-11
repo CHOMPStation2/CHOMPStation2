@@ -22,12 +22,6 @@
 
 //JohnWolf135
 
-/obj/item/weapon/storage/box/fluff/rosetta
-	name = "Rosetta's kit"
-	desc = "A kit containing Rosetta's equipment."
-	has_items = list(
-		/obj/item/clothing/under/fluff/Rosetta)
-
 /obj/item/weapon/storage/box/fluff/John
 	name = "John's kit"
 	desc = "A kit containing John's equipment."

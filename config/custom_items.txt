@@ -100,7 +100,7 @@ item_path: /obj/item/weapon/storage/backpack/messenger/sec/fluff/ivymoomoo
 {
 ckey: johnwolf135
 character_name: Rosetta Neton
-item_path: /obj/item/weapon/storage/box/fluff/rosetta
+item_path: /obj/item/clothing/under/fluff/rosetta
 }
 
 {

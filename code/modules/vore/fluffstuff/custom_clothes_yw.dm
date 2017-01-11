@@ -336,7 +336,7 @@
 // Johnwolf135
 // **********
 
-/obj/item/clothing/under/fluff/Rosetta
+/obj/item/clothing/under/fluff/rosetta
 	name = "Pink medical scrubs"
 	desc = "Its like standard medical scrubs...but PINK! remind you of anyone?."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
