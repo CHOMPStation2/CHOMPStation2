@@ -267,11 +267,13 @@
 // **********
 /obj/item/clothing/suit/storage/fluff/fedcoat/Amaracoat
 	name = "Scorched lieutenant jacket"
-	desc = "A dark gray military jacket that has seen better days. It's burned rather badly, but even with the ammount of burn marks and holes that show the kevlar-lining underneath it still doesn't fall apart, and looks as if it won't do so for a long time. The rank-emblems are outdated military ones showing the rank of Lieutenant and there is a halfways burnt off nameplate just reading 'Faell'."
+	desc = "A classic, bit too big leather bomberjacket with warm, fuzzy fur at the collar and on its insides and rolled up sleeves. It got several rather bad scorch marks that reveal there is a lining of durable but flexible material underneath it, but besides that it looks far from falling apart. There are outdated military insignias for the rank of 'Lieutenant' on each shoulder."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "ltjacket"
+	icon_state = "faellbomber"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "ltjacket_mob"
+	item_state = "faellbomber_mob"
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
 /obj/item/clothing/head/beret/Amaraberet
 	name = "Mercenary beret"
@@ -283,19 +285,19 @@
 
 /obj/item/clothing/gloves/fluff/Amaragloves
 	name = "Mercenary gloves"
-	desc = "A pair of olive, fingerless gloves reinforced at the back of the hand and knuckles. Rarely see any use on the field as their use is limited."
+	desc = "A pair of dark, tactical fingerless gloves. Their knuckles are reinforced  and they are surprisingly comfy. They also don't cause problems with trigger-guards. Alas, they rarely are used on the field anymore."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "tgloves"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "tgloves_mob"
 
 /obj/item/clothing/under/fluff/amara_faell_4
-	name = "Skintight bodysuit"
-	desc = "A black-red bodysuit made of some durable synthetic material. Kinda kinky."
+	name = "Tactical Attire"
+	desc = "A durable, tight fitting comfy black and red tanktop and a pair of just as black cargo pants that are being held in place by a belt. The beltbuckle reads 'DOG'."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "stnecksuit"
+	icon_state = "tacgear"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "stnecksuit_mob"
+	item_state = "tacgear_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
 /obj/item/clothing/shoes/dutyboots/fluff/amara_faell_5
@@ -341,3 +343,11 @@
 	icon_state = "scrubspink"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "scrubspink_mob"
+
+/obj/item/clothing/under/fluff/John
+	name = "WTBU"
+	desc = "A brand new looking tactical battle uniform but clearly old by the patch on the arm that reads 'Reaper'. The patch is faded and worn but is built onto the uniform which is weird because the rest of the uniform is very well maintained. The pants like the top are extremely taken care of the knee pads look like they've been replaced."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "johnbdu_s"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "johnbdu_mob"
