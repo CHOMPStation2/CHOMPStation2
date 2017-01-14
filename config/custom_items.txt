@@ -49,6 +49,12 @@ character_name: Madoka Koto
 item_path: /obj/item/weapon/storage/box/fluff/madoka
 }
 
+{
+ckey: blackangelsace
+character_name: Wolfgang Jaeger
+item_path: /obj/item/weapon/storage/box/fluff/mauser
+}
+
 # ######## C CKEYS
 {
 ckey: captmatt4
@@ -242,9 +248,15 @@ item_path: /obj/item/weapon/material/kitchen/utensil/fork/fluff/ragna_1
 
 # ######## V CKEYS
 {
-ckey: valhallaviking
+ckey: valhallaviking01
 character_name: Wolf Erikson
 item_path: /obj/item/clothing/accessory/fluff/wolf_erikson_1
+}
+
+{
+ckey: valhallaviking01
+character_name: Hans Jaeger
+item_path: /obj/item/weapon/storage/box/fluff/mauser
 }
 
 # ######## W CKEYS

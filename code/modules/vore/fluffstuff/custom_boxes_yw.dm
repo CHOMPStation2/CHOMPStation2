@@ -27,3 +27,15 @@
 	desc = "A kit containing John's equipment."
 	has_items = list(
 		/obj/item/clothing/under/fluff/John)
+
+// ************
+// Mauser items
+// ************
+
+/obj/item/weapon/storage/box/fluff/mauser
+	name = "Mauser's Kit"
+	desc = "A kit containing Mauser's equipment."
+	has_items = list(
+		/obj/item/clothing/under/fluff/mauserunder,
+		/obj/item/clothing/head/beret/mauserhat,
+		/obj/item/clothing/shoes/dutyboots/fluff/mauserboots)
