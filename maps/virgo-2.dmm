@@ -834,7 +834,7 @@
 "aqb" = (/obj/machinery/alarm{dir = 4; icon_state = "alarm0"; pixel_x = -22},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/dark,/area/security/evidence_storage)
 "aqc" = (/obj/structure/closet{name = "Evidence Closet"},/obj/effect/floor_decal/industrial/outline/grey,/turf/simulated/floor/tiled/dark,/area/security/evidence_storage)
 "aqd" = (/obj/machinery/alarm{dir = 4; pixel_x = -23; pixel_y = 0},/obj/machinery/requests_console{announcementConsole = 1; department = "Head of Security's Desk"; departmentType = 5; name = "Head of Security RC"; pixel_x = 0; pixel_y = 30},/obj/structure/table/woodentable,/obj/machinery/recharger{pixel_y = 4},/obj/item/weapon/reagent_containers/food/drinks/flask/barflask{pixel_x = -4; pixel_y = 8},/obj/item/device/taperecorder{pixel_y = 0},/obj/item/device/megaphone,/obj/item/device/radio/off,/turf/simulated/floor/tiled/dark,/area/crew_quarters/heads/hos)
-"aqe" = (/turf/simulated/floor/tiled/dark,/area/crew_quarters/heads/hos)
+"aqe" = (/mob/living/simple_animal/hostile/giant_spider{desc = "Best Spooder."; hostile = 0; name = "Lorenzo"},/turf/simulated/floor/tiled/dark,/area/crew_quarters/heads/hos)
 "aqf" = (/turf/simulated/floor/carpet,/area/crew_quarters/heads/hos)
 "aqg" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/carpet,/area/crew_quarters/heads/hos)
 "aqh" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 4},/turf/simulated/floor/tiled/dark,/area/crew_quarters/heads/hos)
