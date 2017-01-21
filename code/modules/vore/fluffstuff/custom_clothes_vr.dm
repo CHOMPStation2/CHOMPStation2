@@ -655,7 +655,7 @@
 	suit_type = "nano"
 	desc = "A unique suit of nano-enhanced armor designed for special use."
 	icon_state = "ninja_rig"
-	armor = list(melee = 35, bullet = 10, laser = 20, energy = 10, bomb = 20, bio = 100, rad = 30)
+	armor = list(melee = 25, bullet = 10, laser = 10, energy = 10, bomb = 20, bio = 100, rad = 30)
 	emp_protection = 40
 	slowdown = 0
 
@@ -666,10 +666,9 @@
 	req_access = list(access_cent_general)
 
 	initial_modules = list(
-		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/chem_dispenser/injector,
+		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/teleporter,
-		/obj/item/rig_module/stealth_field,
 		/obj/item/rig_module/fabricator/energy_net
 		)
 
@@ -868,10 +867,12 @@
 	body_parts_covered = HEAD|FACE|EYES
 
 //virgo113:Verin Raharra
-/obj/item/clothing/suit/storage/hazardvest/verin
+/obj/item/clothing/suit/storage/hazardvest/fluff/verin
 	name = "Green Haz-coat"
 	desc = "A well-worn green, long coat made with lightweight materials, it has a radioactive hazard icon on it's right sleeve. Smells faintly like sergal."
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 20)
 	body_parts_covered = UPPER_TORSO|ARMS
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "verin"
 	item_state = "verin_mob"
