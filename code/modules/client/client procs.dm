@@ -75,36 +75,6 @@
 	..()	//redirect to hsrc.Topic()
 
 
-/client/var/last_message_time
-/client/var/spam_alert = 0
-
-/client/proc/handle_spam_prevention(var/message, var/mute_type)
-	if(config.automute_on && !holder && src.last_message == message)
-		src.last_message_count++
-		if(src.last_message_count >= SPAM_TRIGGER_AUTOMUTE)
-			src << "\red You have exceeded the spam filter limit for identical messages. An auto-mute was applied."
-			cmd_admin_mute(src.mob, mute_type, 1)
-			return 1
-		if(src.last_message_count >= SPAM_TRIGGER_WARNING)
-			src << "\red You are nearing the spam filter limit for identical messages."
-			return 0
-	else
-		last_message = message
-		src.last_message_count = 0
-
-	if(config.automute_on && !holder && last_message_time)
-		if(world.time - last_message_time < 5)
-			spam_alert++
-			src << "\red You are nearing the spam filter limit for message."
-			if(spam_alert > 5)
-				return 1
-		else
-			spam_alert = max(0, spam_alert--)
-			return 0
-
-	last_message_time = world.time
-	return 0
-
 //This stops files larger than UPLOAD_LIMIT being sent from client to server via input(), client.Import() etc.
 /client/AllowUpload(filename, filelength)
 	if(filelength > UPLOAD_LIMIT)

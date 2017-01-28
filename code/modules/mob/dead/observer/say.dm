@@ -11,10 +11,6 @@
 		if(src.client.prefs.muted & MUTE_DEADCHAT)
 			src << "\red You cannot talk in deadchat (muted)."
 			return
-
-		if (src.client.handle_spam_prevention(message,MUTE_DEADCHAT))
-			return
-
 	. = src.say_dead(message)
 
 
@@ -34,10 +30,6 @@
 		if(src.client.prefs.muted & MUTE_DEADCHAT)
 			src << "\red You cannot emote in deadchat (muted)."
 			return
-
-		if(src.client.handle_spam_prevention(message, MUTE_DEADCHAT))
-			return
-
 	. = src.emote_dead(message)
 
 /*
