@@ -151,7 +151,7 @@
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	allowed = list(
-				/obj/item/weapon/tank/emergency_oxygen,
+				/obj/item/weapon/tank/emergency/oxygen,
 				/obj/item/device/flashlight,
 				/obj/item/weapon/gun/energy,
 				/obj/item/weapon/gun/projectile,
@@ -221,7 +221,7 @@
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	allowed = list(
-				/obj/item/weapon/tank/emergency_oxygen,
+				/obj/item/weapon/tank/emergency/oxygen,
 				/obj/item/device/flashlight,
 				/obj/item/weapon/gun/energy,
 				/obj/item/weapon/gun/projectile,
@@ -415,6 +415,7 @@
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "tasaldsuit"
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 // bwoincognito:Tasald Corlethian
 /obj/item/clothing/suit/storage/det_suit/fluff/tasald
@@ -429,6 +430,7 @@
 
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 
 // bwoincognito:Tasald Corlethian
 /obj/item/clothing/suit/storage/det_suit/fluff/tas_coat
@@ -443,6 +445,7 @@
 
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	armor = list(melee = 60, bullet = 60, laser = 60, energy = 40, bomb = 40, bio = 0, rad = 0)
 
 //Event Costumes Below
 /obj/item/clothing/head/helmet/fluff/freddy
@@ -520,7 +523,7 @@
 //End event costumes
 
 //scree:Scree
-/obj/item/clothing/head/helmet/space/void/engineering/fluff/screehelm
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat/fluff/screehelm
 	name = "Modified Tajara Helmet"
 	desc = "A special helmet designed for work in a hazardous, low-pressure environment. Has radiation shielding. This one doesn't look like it was made for humans. Its been modified to include headlights."
 
@@ -543,7 +546,7 @@
 				return 1
 
 //scree:Scree
-/obj/item/clothing/suit/space/void/engineering/fluff/screespess
+/obj/item/clothing/suit/space/void/engineering/hazmat/fluff/screespess
 	name = "Modified Winged Suit"
 	desc = "A special suit that protects against hazardous, low pressure environments. Has radiation shielding. This one doesn't look like it was made for humans. This one was made with a special personal shielding for someone's wings."
 
@@ -702,9 +705,11 @@
 	suit_type = "nano"
 	desc = "A thin collapsable spacesuit for synths from Kitsuhana Heavy Industries."
 	airtight = 1 //Not because it should be airtight but because suit coolers don't work w/o it.
+	armor = list(melee = 25, bullet = 15, laser = 15, energy = 60, bomb = 30, bio = 70, rad = 100)
+	air_type = null //No O2 tank, why would it have one?
 
 	cell_type =  /obj/item/weapon/cell/hyper
-	req_access = list(access_cent_general)
+	req_access = list(access_medical)
 
 	initial_modules = list(
 		/obj/item/rig_module/maneuvering_jets,
@@ -850,7 +855,7 @@
 		worn_state = "khi_uniform_sci"
 		armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 5)
 
-	fluff/aro //Aro fluff version
+	fluff/aronai //Aro fluff version
 		name = "KIN meditech suit"
 		desc = "Kitsuhana Industrial Navy uniform. This one has the colors of a resleeving or mnemonics engineer. It has 'Aronai' written inside the top."
 		icon_state = "khi_uniform_aro_i"
@@ -880,7 +885,7 @@
 	icon_state = "octavgentlecoat"
 	item_state = "octavgentlecoat_mob"
 	blood_overlay_type = "coat"
-	allowed = list(/obj/item/weapon/tank/emergency_oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/uv_light)
+	allowed = list(/obj/item/weapon/tank/emergency/oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/uv_light)
 
 //bwoincognito:Octavious Ward
 /obj/item/clothing/under/det/fluff/octavious
@@ -935,3 +940,43 @@
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "verin"
 	item_state = "verin_mob"
+
+/*
+Departamental Swimsuits, for general use
+*/
+
+/obj/item/clothing/under/swimsuit/fluff/
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	siemens_coefficient = 1
+
+/obj/item/clothing/under/swimsuit/fluff/engineering
+	name = "Engineering Swimsuit"
+	desc = "It's an orange high visibility swimsuit worn by engineers. It lacks radiation, or any, shielding."
+	icon_state = "swimsuit_engineering"
+	item_state = "swimsuit_engineering_mob"
+
+/obj/item/clothing/under/swimsuit/fluff/science
+	name = "Science Swimsuit"
+	desc = "It's made of a special fiber that provides no protection whatsoever, but its hydrophobic. It has markings that denote the wearer as a scientist."
+	icon_state = "swimsuit_science"
+	item_state = "swimsuit_science_mob"
+
+/obj/item/clothing/under/swimsuit/fluff/security
+	name = "Security Swimsuit"
+	desc = "It's made of a slightly sturdier material than standard swimsuits, to allow for a more robust appearance."
+	icon_state = "swimsuit_security"
+	item_state = "swimsuit_security_mob"
+
+/obj/item/clothing/under/swimsuit/fluff/medical
+	name = "Medical Swimsuit"
+	desc = "It's made of a special fiber that provides no protection whatsoever, but its elastic. It has a cross on the back denoting that the wearer is trained medical personnel."
+	icon_state = "swimsuit_medical"
+	item_state = "swimsuit_medical_mob"
+
+//Xsdew:Penelope Allen
+/obj/item/clothing/under/swimsuit/fluff/penelope
+	name = "Penelope's Swimsuit"
+	desc = "It's made of a special fiber that provides no protection whatsoever, but its elastic. This one was custom made for Penelope."
+	icon_state = "swimsuit_penelope"
+	item_state = "swimsuit_penelope_mob"

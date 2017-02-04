@@ -18,13 +18,13 @@
 								/obj/item/weapon/pickaxe/diamond,
 								/obj/item/weapon/pickaxe/diamonddrill)
 
-	var/list/prices		= list( /obj/item/weapon/pickaxe/silver = 20,
-								/obj/item/weapon/pickaxe/drill = 30,
-								/obj/item/weapon/pickaxe/jackhammer = 40,
-								/obj/item/weapon/pickaxe/gold = 50,
-								/obj/item/weapon/pickaxe/plasmacutter = 60,
-								/obj/item/weapon/pickaxe/diamond = 70,
-								/obj/item/weapon/pickaxe/diamonddrill = 80)
+	var/list/prices		= list( /obj/item/weapon/pickaxe/silver = 200,
+								/obj/item/weapon/pickaxe/drill = 240,
+								/obj/item/weapon/pickaxe/jackhammer = 300,
+								/obj/item/weapon/pickaxe/gold = 360,
+								/obj/item/weapon/pickaxe/plasmacutter = 460,
+								/obj/item/weapon/pickaxe/diamond = 500,
+								/obj/item/weapon/pickaxe/diamonddrill = 600)
 
 
 /obj/machinery/miningreward/New()
