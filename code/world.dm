@@ -112,7 +112,7 @@ var/global/datum/global_init/init = new ()
 
 	//Must be done now, otherwise ZAS zones and lighting overlays need to be recreated.
 	createRandomZlevel()
-	
+
 	processScheduler = new
 	master_controller = new /datum/controller/game_controller()
 	spawn(1)
@@ -525,14 +525,18 @@ var/world_topic_spam_protect_time = world.timeofday
 	var/s = ""
 
 	if (config && config.server_name)
-		s += "<b>[config.server_name]</b> &#8212; "
+		s += "<b><font color=\"#a06eff\">[config.server_name]</font></b> &#8212; "
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
-//	s += "[game_version]"
-	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "<a href=\"http://yawn-widerstation.proboards.com/\">" //Change this to wherever you want the hub to link to.
+	s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
+	s += " / "
+	s += "<a href=\"https://discord.gg/0uKK2Yrhgwvc4VSR\">" //Change this to wherever you want the hub to link to.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "</a>"
+
 	s += ")"
 
 	var/list/features = list()
