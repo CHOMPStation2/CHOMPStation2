@@ -190,7 +190,7 @@
 	name = "dead tunnel clown"
 	corpseuniform = /obj/item/clothing/under/rank/clown
 	corpseshoes = /obj/item/clothing/shoes/clown_shoes
-	corpsesuit = /obj/item/clothing/suit/chaplain_hoodie
+	corpsesuit = /obj/item/clothing/suit/storage/hooded/chaplain_hoodie
 	corpsegloves = /obj/item/clothing/gloves/black
 	corpsehelmet = /obj/item/clothing/head/chaplain_hood
 	corpsemask = /obj/item/clothing/mask/gas/clown_hat

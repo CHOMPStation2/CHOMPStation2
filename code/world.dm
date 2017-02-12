@@ -112,7 +112,7 @@ var/global/datum/global_init/init = new ()
 
 	//Must be done now, otherwise ZAS zones and lighting overlays need to be recreated.
 	createRandomZlevel()
-	
+
 	processScheduler = new
 	master_controller = new /datum/controller/game_controller()
 	spawn(1)
@@ -426,6 +426,57 @@ var/world_topic_spam_protect_time = world.timeofday
 			return "Database connection failed or not set up"
 
 
+	var/list/response[] = list()
+	var/list/queryparams[] = json_decode(T)
+	queryparams["addr"] = addr //Add the IP to the queryparams that are passed to the api functions
+	var/query = queryparams["query"]
+	var/auth = queryparams["auth"]
+	log_debug("API: Request Received - from:[addr], master:[master], key:[key]")
+	diary << "TOPIC: \"[T]\", from:[addr], master:[master], key:[key], auth:[auth] [log_end]"
+
+	if(!isnull(config.authedservers[addr]))
+		var/datum/shippingservers/S = config.authedservers[addr]
+		if(S.serverauth != auth)
+			log_debug("API: Request denied - Bad Auth")
+			response["statuscode"] = 401
+			response["response"] = "Bad Auth"
+			return json_encode(response)
+
+	if (!ticker) //If the game is not started most API Requests would not work because of the throtteling
+		response["statuscode"] = 500
+		response["response"] = "Game not started yet!"
+		return json_encode(response)
+
+	if (isnull(query))
+		log_debug("API - Bad Request - No query specified")
+		response["statuscode"] = 400
+		response["response"] = "Bad Request - No query specified"
+		return json_encode(response)
+
+	var/datum/topic_command/command = topic_commands[query]
+
+	//Check if that command exists
+	if (isnull(command))
+		log_debug("API: Unknown command called: [query]")
+		response["statuscode"] = 501
+		response["response"] = "Not Implemented"
+		return json_encode(response)
+
+	if(command.check_params_missing(queryparams))
+		log_debug("API: Mising Params - Status: [command.statuscode] - Response: [command.response]")
+		response["statuscode"] = command.statuscode
+		response["response"] = command.response
+		response["data"] = command.data
+		return json_encode(response)
+	else
+		command.run_command(queryparams)
+		log_debug("API: Command called: [query] - Status: [command.statuscode] - Response: [command.response]")
+		response["statuscode"] = command.statuscode
+		response["response"] = command.response
+		response["data"] = command.data
+		return json_encode(response)
+
+
 /world/Reboot(var/reason)
 	/*spawn(0)
 		world << sound(pick('sound/AI/newroundsexy.ogg','sound/misc/apcdestroyed.ogg','sound/misc/bangindonk.ogg')) // random end sounds!! - LastyBatsy
@@ -474,6 +525,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	config.load("config/game_options.txt","game_options")
 	config.loadsql("config/dbconfig.txt")
 	config.loadforumsql("config/forumdbconfig.txt")
+	config.loadshippinglist("config/shippingserverswhitelist.txt")
 
 /hook/startup/proc/loadMods()
 	world.load_mods()
@@ -525,14 +577,18 @@ var/world_topic_spam_protect_time = world.timeofday
 	var/s = ""
 
 	if (config && config.server_name)
-		s += "<b>[config.server_name]</b> &#8212; "
+		s += "<b><font color=\"#a06eff\">[config.server_name]</font></b> &#8212; "
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
-//	s += "[game_version]"
-	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "<a href=\"http://yawn-widerstation.proboards.com/\">" //Change this to wherever you want the hub to link to.
+	s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
+	s += " / "
+	s += "<a href=\"https://discord.gg/0uKK2Yrhgwvc4VSR\">" //Change this to wherever you want the hub to link to.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "</a>"
+
 	s += ")"
 
 	var/list/features = list()

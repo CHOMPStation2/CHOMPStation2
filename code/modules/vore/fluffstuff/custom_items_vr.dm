@@ -189,10 +189,10 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
 
-	from_helmet = /obj/item/clothing/head/helmet/space/void/engineering
-	from_suit = /obj/item/clothing/suit/space/void/engineering
-	to_helmet = /obj/item/clothing/head/helmet/space/void/engineering/fluff/screehelm
-	to_suit = /obj/item/clothing/suit/space/void/engineering/fluff/screespess
+	from_helmet = /obj/item/clothing/head/helmet/space/void
+	from_suit = /obj/item/clothing/suit/space/void
+	to_helmet = /obj/item/clothing/head/helmet/space/void/engineering/hazmat/fluff/screehelm
+	to_suit = /obj/item/clothing/suit/space/void/engineering/hazmat/fluff/screespess
 
 //General Use
 /obj/item/weapon/flag
@@ -327,7 +327,7 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 //arokha:Aronai Kadigan - Vials to go with mk2 hypo
 /obj/item/weapon/reagent_containers/glass/beaker/vial/vr
 	stabilize
-		name = "vial (emergency)"
+		name = "vial (1tr1in2tri2dxp)"
 		New()
 			..()
 			reagents.add_reagent("tramadol", 5)
@@ -335,20 +335,20 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 			reagents.add_reagent("tricordrazine", 10)
 			reagents.add_reagent("dexalinp", 10)
 	bashed
-		name = "vial (bashed)"
+		name = "vial (5bi1tri)"
 		New()
 			..()
 			reagents.add_reagent("bicaridine", 25)
 			reagents.add_reagent("tricordrazine", 5)
 	toasted
-		name = "vial (toasted)"
+		name = "vial (3der2kel1tri)"
 		New()
 			..()
 			reagents.add_reagent("kelotane", 10)
 			reagents.add_reagent("dermaline", 15)
 			reagents.add_reagent("tricordrazine", 5)
 	poisoned
-		name = "vial (poisoned)"
+		name = "vial (4dy1hy1tri)"
 		New()
 			..()
 			reagents.add_reagent("anti_toxin", 20)
@@ -559,3 +559,11 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 		user.set_id_info(src)
 		configured = 1
 		user << "<span class='notice'>Card settings set.</span>"
+
+//WickedTempest: Chakat Tempest
+/obj/item/weapon/reagent_containers/hypospray/vr/tempest
+	name = "Tempest's Hypospray"
+	desc = "A custom-made MKII hypospray belonging to Chakat Tempest. There's small print engraved on the handle: A medicine-cat has no time for doubt. Act now, act swiftly."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	item_state = "temphypo"
+	icon_state = "temphypo"
