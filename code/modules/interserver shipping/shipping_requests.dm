@@ -116,13 +116,13 @@
  * @return	bool	TRUE if everything goes well.
  *					FALSE if something fails.
  */
-/datum/shipping_request/proc/inbound_accepted(var/accepting_ckey, var/port)
+/datum/shipping_request/proc/inbound_accepted(var/accepting_ckey)
 	if (outbound)
 		error_msg = "inbound_accepted called on an outbound request."
 		return FALSE
 
-	var/out_data = json_encode(list("query" = "ship_reply", "auth" = config.shipping_auth, ckey = accepting_ckey ? accepting_ckey : "server", "accept" = 1))
-	var/list/data = json_decode(world.Export("byond://[origin]:[port]?[url_encode(out_data)]"))
+	var/out_data = json_encode(list("query" = "ship_reply", "auth" = config.shipping_auth, ckey = accepting_ckey ? accepting_ckey : "server", "accept" = 1 , "rid" = request_id))
+	var/list/data = json_decode(world.Export("byond://[origin]?[out_data]"))
 
 	if (!data)
 		error_msg = "inbound_accepted did not receive any data."
@@ -158,8 +158,8 @@
 		error_msg = "inbound_denied called on an outbound request."
 		return FALSE
 
-	var/out_data = json_encode(list("query" = "ship_reply", "auth" = config.shipping_auth, ckey = accepting_ckey ? accepting_ckey : "server", "accept" = 0))
-	var/list/data = json_decode(world.Export("byond://[origin]:[port]?[list2params(list(out_data))]"))
+	var/out_data = json_encode(list("query" = "ship_reply", "auth" = config.shipping_auth, ckey = accepting_ckey ? accepting_ckey : "server", "accept" = 0, "rid" = request_id))
+	var/list/data = json_decode(world.Export("byond://[origin]?[out_data]"))
 
 	if (!data)
 		error_msg = "inbound_denied did not receive any data."

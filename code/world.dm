@@ -434,6 +434,14 @@ var/world_topic_spam_protect_time = world.timeofday
 	log_debug("API: Request Received - from:[addr], master:[master], key:[key]")
 	diary << "TOPIC: \"[T]\", from:[addr], master:[master], key:[key], auth:[auth] [log_end]"
 
+	if(!isnull(config.authedservers[addr]))
+		var/datum/shippingservers/S = config.authedservers[addr]
+		if(S.serverauth != auth)
+			log_debug("API: Request denied - Bad Auth")
+			response["statuscode"] = 401
+			response["response"] = "Bad Auth"
+			return json_encode(response)
+
 	if (!ticker) //If the game is not started most API Requests would not work because of the throtteling
 		response["statuscode"] = 500
 		response["response"] = "Game not started yet!"
@@ -517,6 +525,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	config.load("config/game_options.txt","game_options")
 	config.loadsql("config/dbconfig.txt")
 	config.loadforumsql("config/forumdbconfig.txt")
+	config.loadshippinglist("config/shippingserverswhitelist.txt")
 
 /hook/startup/proc/loadMods()
 	world.load_mods()
