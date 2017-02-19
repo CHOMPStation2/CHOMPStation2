@@ -93,7 +93,7 @@ item_path: /obj/item/weapon/storage/box/fluff/amara
 {
 ckey: izac112
 character_name: Ally Faell
-item_path: /obj/item/clothing/under/fluff/ally_1
+item_path: /obj/item/weapon/storage/box/fluff/ally
 }
 
 {
