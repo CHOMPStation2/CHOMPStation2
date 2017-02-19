@@ -424,7 +424,10 @@ var/world_topic_spam_protect_time = world.timeofday
 				return "Ckey not found"
 		else
 			return "Database connection failed or not set up"
-
+	/*
+	* Aurora's shipping API System
+	* Currently used for shipping
+	*/
 
 	var/list/response[] = list()
 	var/list/queryparams[] = json_decode(T)

@@ -16,7 +16,10 @@
 								/obj/item/weapon/pickaxe/gold,
 								/obj/item/weapon/pickaxe/plasmacutter,
 								/obj/item/weapon/pickaxe/diamond,
-								/obj/item/weapon/pickaxe/diamonddrill)
+								/obj/item/weapon/pickaxe/diamonddrill,
+								/obj/vehicle/bike/,
+								/obj/vehicle/train/rover/engine,
+								/obj/vehicle/train/rover/trolley)
 
 	var/list/prices		= list( /obj/item/weapon/pickaxe/silver = 200,
 								/obj/item/weapon/pickaxe/drill = 240,
@@ -24,7 +27,10 @@
 								/obj/item/weapon/pickaxe/gold = 360,
 								/obj/item/weapon/pickaxe/plasmacutter = 460,
 								/obj/item/weapon/pickaxe/diamond = 500,
-								/obj/item/weapon/pickaxe/diamonddrill = 600)
+								/obj/item/weapon/pickaxe/diamonddrill = 600,
+								/obj/vehicle/bike/ = 3000,
+								/obj/vehicle/train/rover/engine = 6000,
+								/obj/vehicle/train/rover/trolley = 200)
 
 
 /obj/machinery/miningreward/New()
