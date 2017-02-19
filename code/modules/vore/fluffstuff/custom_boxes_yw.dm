@@ -1,4 +1,6 @@
+// ************
 //GeneralPantsu
+// ************
 
 /obj/item/weapon/storage/box/fluff/amara
 	name = "Amara's Kit"
@@ -12,15 +14,18 @@
 		/obj/item/clothing/shoes/dutyboots/fluff/amara_faell_5,
 		/obj/item/clothing/accessory/collar/fluff/amara_collar)
 
+// **************
 //The god himself
+// **************
 
 /obj/item/weapon/storage/box/fluff/madoka
 	name = "Madoka's Spear Case"
 	desc = "A case containing Madoka's equipment."
 	has_items = list(
 		/obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1)
-
+// **********
 //JohnWolf135
+// **********
 
 /obj/item/weapon/storage/box/fluff/John
 	name = "John's kit"
@@ -39,3 +44,15 @@
 		/obj/item/clothing/under/fluff/mauserunder,
 		/obj/item/clothing/head/beret/mauserhat,
 		/obj/item/clothing/shoes/dutyboots/fluff/mauserboots)
+
+// *******
+// Izac112
+// *******
+
+/obj/item/weapon/storage/box/fluff/ally
+	name = "Ally's Kit"
+	desc = "A kit containing Ally's equipment."
+	has_items = list(
+		/obj/item/clothing/under/fluff/ally_1,
+		/obj/item/clothing/under/rank/security/corp/fluff/ally_2)
+

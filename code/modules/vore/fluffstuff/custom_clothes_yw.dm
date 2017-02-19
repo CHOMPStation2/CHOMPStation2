@@ -332,6 +332,14 @@
 	item_state = "satsuit_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
+/obj/item/clothing/under/rank/security/corp/fluff/ally_2
+	name = "Security uniform"
+	desc = "A black security uniform with a tag on it that says Ally"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "allyuniform"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "allyuniform_mob"
+
 // **********
 // Johnwolf135
 // **********
