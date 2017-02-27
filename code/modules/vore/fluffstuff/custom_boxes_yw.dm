@@ -6,13 +6,15 @@
 	name = "Amara's Kit"
 	desc = "A kit containing Amara's equipment."
 	has_items = list(
-		/obj/item/clothing/suit/storage/fluff/fedcoat/Amaracoat,
-		/obj/item/clothing/head/beret/Amaraberet,
-		/obj/item/clothing/gloves/fluff/Amaragloves,
+		/obj/item/clothing/suit/storage/fluff/fedcoat/amara_jacket,
+		/obj/item/clothing/head/beret/amara_beret,
+		/obj/item/clothing/gloves/fluff/amara_gloves,
 		/obj/item/weapon/flame/lighter/zippo/fluff/bloodzippo,
-		/obj/item/clothing/under/fluff/amara_faell_4,
-		/obj/item/clothing/shoes/dutyboots/fluff/amara_faell_5,
-		/obj/item/clothing/accessory/collar/fluff/amara_collar)
+		/obj/item/clothing/under/fluff/amara_uniform,
+		/obj/item/clothing/shoes/dutyboots/fluff/amara_boots,
+		/obj/item/clothing/accessory/collar/fluff/amara_collar,
+		/obj/item/clothing/suit/storage/vest/hoscoat/amara_hos,
+		/obj/item/weapon/storage/belt/security/tactical/amara_belt)
 
 // **************
 //The god himself

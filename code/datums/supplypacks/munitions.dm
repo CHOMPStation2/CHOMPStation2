@@ -152,7 +152,7 @@
 	containername = "Beanbag shells"
 	access = null
 
-/datum/supply_packs/randomised/munitions/ywrevolver
+/datum/supply_packs/randomised/munitions/yw_revolver
 	name = "Revovler Crate"
 	num_contained = 2
 	contains = list(
@@ -168,7 +168,7 @@
 	containername = "Revolver Crate"
 	access = access_armory
 
-/datum/supply_packs/randomised/munitions/ywassault
+/datum/supply_packs/randomised/munitions/yw_assault
 	name = "Assault rifle crate"
 	num_contained = 2
 	contains = list(
@@ -183,7 +183,7 @@
 	containername = "Assault rifle crate"
 	access = access_armory
 
-/datum/supply_packs/randomised/munitions/ywsmg
+/datum/supply_packs/randomised/munitions/yw_smg
 	name = "Smg crate"
 	num_contained = 2
 	contains = list(
@@ -195,7 +195,7 @@
 	containername = "Smg crate"
 	access = access_armory
 
-/datum/supply_packs/munitions/munitions/ywmg
+/datum/supply_packs/munitions/munitions/yw_mg
 	name = "Light machine gun crate"
 	contains = list(/obj/item/weapon/gun/projectile/automatic/l6_saw = 1)
 	cost = 500

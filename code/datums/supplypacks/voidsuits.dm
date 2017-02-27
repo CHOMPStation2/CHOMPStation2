@@ -211,3 +211,11 @@
 	containertype = "/obj/structure/closet/crate/secure"
 	containername = "Frontier Mining voidsuit crate"
 	access = access_mining
+
+/datum/supply_packs/voidsuits/unathi_bs_yw
+	name = "Unathi breacher chassis"
+	contains = list(/obj/item/weapon/rig/breacher/fancy)
+	cost = 350
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Unathi breacher chassis crate"
+	access = access_armory
