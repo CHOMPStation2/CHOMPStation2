@@ -190,3 +190,27 @@
 			/obj/item/weapon/stock_parts/matter_bin,
 			/obj/item/weapon/circuitboard/pacman/super
 			)
+
+/datum/supply_packs/eng/am_shielding
+	contains = list(/obj/item/device/am_shielding_container = 3)
+	name = "Antimatter shielding three units"
+	cost = 50
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Antimatter shielding crate"
+	access = access_engine
+
+/datum/supply_packs/eng/am_container
+	contains = list(/obj/item/weapon/am_containment)
+	name = "Antimatter container"
+	cost = 25
+	containertype = /obj/structure/closet/crate/secure
+	containername = "AM container crate"
+	access = access_engine
+
+/datum/supply_packs/eng/am_controlunit
+	contains = list(/obj/machinery/power/am_control_unit)
+	name = "Antimatter control unit"
+	cost = 75
+	containertype = /obj/structure/closet/crate/secure/large
+	containername = "AM control unit crate"
+	access = access_engine
