@@ -265,7 +265,7 @@
 // **********
 // GeneralPantsu
 // **********
-/obj/item/clothing/suit/storage/fluff/fedcoat/Amaracoat
+/obj/item/clothing/suit/storage/fluff/fedcoat/amara_jacket
 	name = "Scorched lieutenant jacket"
 	desc = "A classic, bit too big leather bomberjacket with warm, fuzzy fur at the collar and on its insides and rolled up sleeves. It got several rather bad scorch marks that reveal there is a lining of durable but flexible material underneath it, but besides that it looks far from falling apart. There are outdated military insignias for the rank of 'Lieutenant' on each shoulder."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -275,7 +275,7 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
-/obj/item/clothing/head/beret/Amaraberet
+/obj/item/clothing/head/beret/amara_beret
 	name = "Mercenary beret"
 	desc = "An olive green beret with a silver emblem that consists of a shield and crossed swords. Seems to be part of some mercenary-band."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -283,7 +283,7 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mberet_mob"
 
-/obj/item/clothing/gloves/fluff/Amaragloves
+/obj/item/clothing/gloves/fluff/amara_gloves
 	name = "Mercenary gloves"
 	desc = "A pair of dark, tactical fingerless gloves. Their knuckles are reinforced  and they are surprisingly comfy. They also don't cause problems with trigger-guards. Alas, they rarely are used on the field anymore."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -291,7 +291,7 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "tgloves_mob"
 
-/obj/item/clothing/under/fluff/amara_faell_4
+/obj/item/clothing/under/fluff/amara_uniform
 	name = "Tactical Attire"
 	desc = "A durable, tight fitting comfy black and red tanktop and a pair of just as black cargo pants that are being held in place by a belt. The beltbuckle reads 'DOG'."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -300,7 +300,7 @@
 	item_state = "tacgear_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
-/obj/item/clothing/shoes/dutyboots/fluff/amara_faell_5
+/obj/item/clothing/shoes/dutyboots/fluff/amara_boots
 	name = "Marching boots"
 	desc = "A pair of worn, comfy boots optimized for those that need to wear them over a long period of time. They got reinforced soles and steel tips."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -319,6 +319,23 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
+/obj/item/clothing/suit/storage/vest/hoscoat/amara_hos
+	name = "Mercenary chest rig"
+	desc = "A high-quality heavy kevlar plate carrier with many pouches. Comes with shoulder, elbow and kneepads aswell as an emblem depicting a shield and crossed swords."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mercvest_nobadge"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_badge = "mercvest_badge"
+	icon_nobadge = "mercvest_nobadge"
+
+/obj/item/weapon/storage/belt/security/tactical/amara_belt
+	name = "Mercenary belt"
+	desc = "A sturdy military belt with a shiny buckle and a bunch of pouches."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mercenarybelt"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mercenarybelt_mob"
+
 // **********
 // Izac112
 // **********
@@ -334,11 +351,11 @@
 
 /obj/item/clothing/under/rank/security/corp/fluff/ally_2
 	name = "Security uniform"
-	desc = "A black security uniform with a tag on it that says Ally"
+	desc = "A black Dark red security uniform with a tag on it that says Ally_F"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "allyuniform"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "allyuniform_mob"
+	icon_state = "allyuniform_mob"
 
 // **********
 // Johnwolf135
