@@ -71,7 +71,7 @@
 	whisper_verb = "whispers"
 	exclaim_verb = "chitters"
 	key = "9"
-	flags = RESTRICTED
+	flags = 0
 	syllables = list("sque","sqah","boo","beh","nweh","boopa","nah","wah","een","sweh")
 
 /datum/language/demon
@@ -90,6 +90,3 @@
 	flags = 0
 /datum/language/gutter
 	flags = WHITELISTED
-/datum/language/machine
-	flags = NO_STUTTER | WHITELISTED
-

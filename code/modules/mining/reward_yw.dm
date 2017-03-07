@@ -1,6 +1,6 @@
 /obj/machinery/miningreward
-	name = "Coin reward"
-	desc = "Idk."
+	name = "Mining reward machine"
+	desc = "Feed coins, get something worth your time.. Ish..."
 	icon = 'icons/obj/machines/antimatter.dmi'
 	icon_state = "control"
 	anchored = 1
@@ -10,21 +10,30 @@
 	active_power_usage = 10
 
 	var/totalmoney = 0
-	var/list/products	= list(	/obj/item/weapon/pickaxe/silver,
+	var/list/products	= list(
+								/obj/item/device/binoculars,
+								/obj/item/weapon/pickaxe/silver,
 								/obj/item/weapon/pickaxe/drill,
 								/obj/item/weapon/pickaxe/jackhammer,
 								/obj/item/weapon/pickaxe/gold,
 								/obj/item/weapon/pickaxe/plasmacutter,
 								/obj/item/weapon/pickaxe/diamond,
-								/obj/item/weapon/pickaxe/diamonddrill)
+								/obj/item/weapon/pickaxe/diamonddrill,
+								/obj/vehicle/bike/,
+								/obj/vehicle/train/rover/engine,
+								/obj/vehicle/train/rover/trolley)
 
-	var/list/prices		= list( /obj/item/weapon/pickaxe/silver = 200,
+	var/list/prices		= list( /obj/item/device/binoculars = 200,
+								/obj/item/weapon/pickaxe/silver = 200,
 								/obj/item/weapon/pickaxe/drill = 240,
 								/obj/item/weapon/pickaxe/jackhammer = 300,
 								/obj/item/weapon/pickaxe/gold = 360,
 								/obj/item/weapon/pickaxe/plasmacutter = 460,
 								/obj/item/weapon/pickaxe/diamond = 500,
-								/obj/item/weapon/pickaxe/diamonddrill = 600)
+								/obj/item/weapon/pickaxe/diamonddrill = 600,
+								/obj/vehicle/bike/ = 1500,
+								/obj/vehicle/train/rover/engine = 3000,
+								/obj/vehicle/train/rover/trolley = 200)
 
 
 /obj/machinery/miningreward/New()

@@ -120,7 +120,7 @@
 	if(!scrambledcodes && !camera)
 		camera = new /obj/machinery/camera(src)
 		camera.c_tag = real_name
-		camera.replace_networks(list(NETWORK_EXODUS,NETWORK_ROBOTS))
+		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
 		if(wires.IsIndexCut(BORG_WIRE_CAMERA))
 			camera.status = 0
 
@@ -707,6 +707,10 @@
 		else
 			icon_state = module_sprites[icontype]
 		return
+
+	if(typing)
+		typing = FALSE
+		set_typing_indicator(1)
 
 /mob/living/silicon/robot/proc/installed_modules()
 	if(weapon_lock)

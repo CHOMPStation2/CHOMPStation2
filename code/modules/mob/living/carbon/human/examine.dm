@@ -374,6 +374,11 @@
 			if(((temp.status & ORGAN_BROKEN) && temp.brute_dam > temp.min_broken_damage) || (temp.status & ORGAN_MUTATED))
 				wound_flavor_text["[temp.name]"] += "<span class='warning'>[T.His] [temp.name] is dented and swollen!</span><br>"
 
+			if(temp.germ_level > INFECTION_LEVEL_TWO && !(temp.status & ORGAN_DEAD))
+				wound_flavor_text["[temp.name]"] += "<span class='warning'>[T.His] [temp.name] looks very infected!</span><br>"
+			else if(temp.status & ORGAN_DEAD)
+				wound_flavor_text["[temp.name]"] += "<span class='warning'>[T.His] [temp.name] looks rotten!</span><br>"
+
 			if(!wound_flavor_text["[temp.name]"] && (temp.status & ORGAN_BLEEDING))
 				is_bleeding["[temp.name]"] = "<span class='danger'>[T.His] [temp.name] is bleeding!</span><br>"
 
@@ -438,7 +443,7 @@
 	if(print_flavor_text()) msg += "[print_flavor_text()]\n"
 
 	// VOREStation Start
-	if(config.allow_Metadata && client)
+	if(ooc_notes)
 		msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>\n"
 	// VOREStation End
 	msg += "*---------*</span><br>"

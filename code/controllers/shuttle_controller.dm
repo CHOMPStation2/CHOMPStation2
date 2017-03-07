@@ -294,7 +294,7 @@ var/global/datum/shuttle_controller/shuttle_controller
 		"Fore Port Solars" = locate(/area/skipjack_station/northwest_solars),
 		"Aft Starboard Solars" = locate(/area/skipjack_station/southeast_solars),
 		"Aft Port Solars" = locate(/area/skipjack_station/southwest_solars), // Vorestation edit
-		"[station_short] Arrivals Dock" = locate(/area/skipjack_station/southwest_solars),
+		"Station Arrivals Dock" = locate(/area/skipjack_station/southwest_solars),
 		"Mining Station" = locate(/area/skipjack_station/mining)
 		)
 
@@ -397,5 +397,20 @@ var/global/datum/shuttle_controller/shuttle_controller
 	AM.move_time = 60
 	AM.warmup_time = 8
 	shuttles["AwayMission"] = AM
-
 	//VOREStation Add End - Away-mission shuttle
+	///////////////////////////////////////////////
+	//VOREStation Add - Belter Shuttle
+	shuttle = new/datum/shuttle/ferry()
+	shuttle.location = 0
+	shuttle.warmup_time = 6
+	shuttle.area_station = locate(/area/shuttle/belter/station)
+	shuttle.area_offsite = locate(/area/shuttle/belter/belt/zone1)
+	shuttle.area_transition = locate(/area/shuttle/belter/transit)
+	shuttle.docking_controller_tag = "belter_docking"
+	shuttle.dock_target_station = "belter_nodocking" //Fake tags to prevent the shuttle from opening doors.
+	shuttle.dock_target_offsite = "belter_nodocking"
+	shuttle.transit_direction = EAST
+	shuttle.move_time = 60 + rand(10,40)
+	process_shuttles += shuttle
+	shuttles["Belter"] = shuttle
+	//VOREStation Add End - Belter Shuttle
