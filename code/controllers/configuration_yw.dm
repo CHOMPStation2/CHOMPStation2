@@ -2,6 +2,8 @@
 	var/shipping_auth = "memes"
 	var/list/authedservers = list()
 
+// Example line in the config:
+// 192.168.1.1:1234 ServerName;ServerPW (The PW of that server, ask them for it)
 /datum/configuration/proc/loadshippinglist(filename)
 	var/list/Lines = file2list(filename)
 	for (var/t in Lines)
@@ -40,6 +42,7 @@
 	var/serverip
 	var/servername
 	var/serverauth
+	var/list/allowedshipids
 
 /datum/shippingservers/New(_serverip, _servername, _serverauth)
 	if(!_serverip || !_servername || !_serverauth)

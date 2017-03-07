@@ -11,42 +11,73 @@
 	products = list(/obj/item/weapon/handcuffs = 8,/obj/item/weapon/grenade/flashbang = 4,/obj/item/device/flash = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,/obj/item/weapon/storage/box/evidence = 6,
 					/obj/item/weapon/gun/energy/taser = 8,/obj/item/weapon/gun/energy/stunrevolver = 4,
-					/obj/item/weapon/reagent_containers/spray/pepper = 6,/obj/item/taperoll/police = 6)
-/*
-	var/list/log = list()
-	var/req_log_access = access_armory
+					/obj/item/weapon/reagent_containers/spray/pepper = 6,/obj/item/taperoll/police = 6,
+					/obj/item/weapon/gun/projectile/sec/flash = 4, /obj/item/ammo_magazine/c45m/flash = 8)
 
-/obj/machinery/vending/security/vend(datum/stored_item/vending_product/R, mob/user)
-	if (..())
-		if(user.GetIdCard())
-			var/obj/item/weapon/card/id/tempid = user.GetIdCard()
-			var/list/list_item = list()
-			list_item += tempid.registered_name
-			list_item += stationtime2text()
-			list_item += R.item_name
-			log[++log.len] = list_item
 
-/obj/machinery/vending/security/proc/show_log(mob/user as mob)
-	if(user.GetIdCard())
-		var/obj/item/weapon/card/id/tempid = user.GetIdCard()
-		if(req_log_access in tempid.GetAccess())
-			var/datum/browser/popup = new(user, "vending_log", "Vending Log", 700, 500)
-			var/dat = ""
-			dat += "<center><span style='font-size:24pt'><b>SecTech Vending Log</b></span></center>"
-			dat += "<center><span style='font-size:16pt'>Welcome [user.name]!</span></center><br>"
-			dat += "<span style='font-size:8pt'>Below are the recent vending logs for your vending machine.</span><br>"
-			for(var/i in log)
-				dat += json_encode(i)
-				dat += ";<br>"
-			popup.set_content(dat)
-			popup.open()
-	else
-		to_chat(user,"<span class='warning'>You do not have the required access to view the vending logs for this machine.</span>")
+/obj/machinery/vending/tool
+	products = list(/obj/item/stack/cable_coil/random = 10,/obj/item/weapon/crowbar = 5,/obj/item/weapon/weldingtool = 3,/obj/item/weapon/wirecutters = 5,
+					/obj/item/weapon/wrench = 5,/obj/item/device/analyzer = 5,/obj/item/device/t_scanner = 5,/obj/item/weapon/screwdriver = 5,
+					/obj/item/device/flashlight/glowstick = 3, /obj/item/device/flashlight/glowstick/red = 3, /obj/item/device/flashlight/glowstick/blue = 3,
+					/obj/item/device/flashlight/glowstick/orange =3, /obj/item/device/flashlight/glowstick/yellow = 3, /obj/item/weapon/reagent_containers/spray/windowsealant = 5)
 
-/obj/machinery/vending/security/verb/check_logs()
-	set name = "Check Vending Logs"
-	set category = "Object"
-	set src in oview(1)
+/obj/machinery/vending/dinnerware
+	name = "Dinnerware"
+	desc = "A kitchen and restaurant equipment vendor."
+	product_ads = "Mm, food stuffs!;Food and food accessories.;Get your plates!;You like forks?;I like forks.;Woo, utensils.;You don't really need these..."
+	icon_state = "dinnerware"
+	products = list(
+	/obj/item/weapon/tray = 8,
+	/obj/item/weapon/material/kitchen/utensil/fork = 6,
+	/obj/item/weapon/material/kitchen/utensil/knife = 6,
+	/obj/item/weapon/material/kitchen/utensil/spoon = 6,
+	/obj/item/weapon/material/knife = 3,
+	/obj/item/weapon/material/kitchen/rollingpin = 2,
+	/obj/item/weapon/reagent_containers/food/drinks/glass2/square = 8,
+	/obj/item/weapon/reagent_containers/food/drinks/glass2/shake = 8,
+	/obj/item/weapon/glass_extra/stick = 15,
+	/obj/item/weapon/glass_extra/straw = 15,
+	/obj/item/clothing/suit/chef/classic = 2,
+	/obj/item/weapon/storage/toolbox/lunchbox = 3,
+	/obj/item/weapon/storage/toolbox/lunchbox/heart = 3,
+	/obj/item/weapon/storage/toolbox/lunchbox/cat = 3,
+	/obj/item/weapon/storage/toolbox/lunchbox/nt = 3,
+	/obj/item/weapon/storage/toolbox/lunchbox/mars = 3,
+	/obj/item/weapon/storage/toolbox/lunchbox/cti = 3,
+	/obj/item/weapon/storage/toolbox/lunchbox/nymph = 3,
+	/obj/item/weapon/storage/toolbox/lunchbox/syndicate = 3,
+	/obj/item/trash/bowl = 30)
+	contraband = list(/obj/item/weapon/material/knife/butch = 2)
 
-	show_log(usr)
-*/ //Polaris ported all of this.
+//I want this not just as part of the zoo. ;v
+/obj/machinery/vending/food
+	name = "Food-O-Mat"
+	desc = "A technological marvel, supposedly able to cook or mix a large variety of food or drink."
+	icon_state = "boozeomat"
+	icon_deny = "boozeomat-deny"
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/tomatojuice = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/limejuice = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/cream = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/milk = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 8,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater = 15,
+					/obj/item/weapon/reagent_containers/food/drinks/flask/barflask = 2,
+					/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask = 2,
+					/obj/item/weapon/reagent_containers/food/drinks/ice = 9,
+					/obj/item/weapon/reagent_containers/food/drinks/tea = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/appletart = 4,
+					/obj/item/weapon/reagent_containers/food/snacks/cheeseburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/creamcheesebreadslice = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/grilledcheese = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/hotdog = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/loadedbakedpotato = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/margheritaslice = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/muffin = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/omelette = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/pastatomato = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/tofuburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/waffles = 10
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/mysterysoup = 10)
+	vend_delay = 15
