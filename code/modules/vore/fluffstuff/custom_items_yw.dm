@@ -84,3 +84,13 @@
 	desc = "A zippo that comes in a metallic blood red case. How the flame can be lime green is an enigma in itself."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "bloodredzippo"
+
+/obj/item/device/modkit_conversion/fluff/amara_hos_kit
+	name = "Amara's modkit"
+	desc = "A kit containing all the needed tools and parts to modify a Head of security armored coat. It has a red wolf painted on it."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/clothing/suit/storage/vest/hoscoat
+	to_suit = /obj/item/clothing/suit/storage/vest/hoscoat/amara_hos

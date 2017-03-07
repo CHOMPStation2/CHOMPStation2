@@ -353,9 +353,9 @@
 	name = "Security uniform"
 	desc = "A black Dark red security uniform with a tag on it that says Ally_F"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	ícon_state = "allyuniform"
+	icon_state = "allyuniform"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "allyuniform_mob"
+	item_state = "allyuniform_mob"
 
 // **********
 // Johnwolf135
