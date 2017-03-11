@@ -382,7 +382,7 @@
 		if(!istype(M))
 			return 0
 
-		if(!M.brainmob || !M.brainmob.client || !M.brainmob.ckey || M.brainmob.stat >= DEAD)
+		if(!M.brainmob || M.brainmob.stat >= DEAD) //Edited to allow empty brains into body
 			user << "<span class='danger'>That brain is not usable.</span>"
 			return SURGERY_FAILURE
 
