@@ -355,7 +355,7 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "allyuniform"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "allyuniform_mob"
+	item_state = "allyuniform_mob"
 
 // **********
 // Johnwolf135

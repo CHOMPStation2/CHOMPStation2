@@ -13,8 +13,8 @@
 		/obj/item/clothing/under/fluff/amara_uniform,
 		/obj/item/clothing/shoes/dutyboots/fluff/amara_boots,
 		/obj/item/clothing/accessory/collar/fluff/amara_collar,
-		/obj/item/clothing/suit/storage/vest/hoscoat/amara_hos,
-		/obj/item/weapon/storage/belt/security/tactical/amara_belt)
+		/obj/item/weapon/storage/belt/security/tactical/amara_belt,
+		/obj/item/device/modkit_conversion/fluff/amara_hos_kit)
 
 // **************
 //The god himself
