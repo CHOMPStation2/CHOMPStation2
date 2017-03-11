@@ -6894,7 +6894,7 @@
 "cCD" = (/turf/simulated/wall,/area/maintenance/evahallway)
 "cCE" = (/obj/machinery/door/airlock/maintenance{req_access = list(12)},/obj/machinery/door/firedoor/border_only,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor,/area/maintenance/evahallway)
 "cCF" = (/obj/machinery/door/airlock/maintenance{req_one_access = list(11,24)},/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor,/area/vacant/vacant_shop)
-"cCG" = (/obj/machinery/power/apc{dir = 8; name = "west bump"; pixel_x = -24},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/wood,/area/crew_quarters/bar)
+"cCG" = (/obj/machinery/power/apc{dir = 8; name = "west bump"; pixel_x = -24},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/obj/structure/device/piano,/turf/simulated/floor/wood,/area/crew_quarters/bar)
 "cCH" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/wood,/area/crew_quarters/bar)
 "cCI" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4},/obj/structure/cable/green{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor/wood,/area/crew_quarters/bar)
 "cCJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/wood,/area/crew_quarters/bar)
