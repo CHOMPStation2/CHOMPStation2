@@ -403,4 +403,4 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "leatherboots"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "leatherboots_mob"
+	item_state = "mboots_mob"

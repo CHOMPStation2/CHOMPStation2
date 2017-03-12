@@ -11,7 +11,7 @@
 		/obj/item/clothing/gloves/fluff/amara_gloves,
 		/obj/item/weapon/flame/lighter/zippo/fluff/bloodzippo,
 		/obj/item/clothing/under/fluff/amara_uniform,
-		/obj/item/clothing/shoes/dutyboots/fluff/amara_boots,
+		/obj/item/clothing/shoes/boots/jackboots/fluff/amara_boots,
 		/obj/item/clothing/accessory/collar/fluff/amara_collar,
 		/obj/item/weapon/storage/belt/security/tactical/amara_belt,
 		/obj/item/device/modkit_conversion/fluff/amara_hos_kit)
@@ -45,7 +45,7 @@
 	has_items = list(
 		/obj/item/clothing/under/fluff/mauserunder,
 		/obj/item/clothing/head/beret/mauserhat,
-		/obj/item/clothing/shoes/dutyboots/fluff/mauserboots)
+		/obj/item/clothing/shoes/boots/jackboots/fluff/mauserboots)
 
 // *******
 // Izac112
