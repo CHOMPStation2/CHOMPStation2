@@ -300,7 +300,7 @@
 	item_state = "tacgear_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
-/obj/item/clothing/shoes/dutyboots/fluff/amara_boots
+/obj/item/clothing/shoes/boots/jackboots/fluff/amara_boots
 	name = "Marching boots"
 	desc = "A pair of worn, comfy boots optimized for those that need to wear them over a long period of time. They got reinforced soles and steel tips."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -397,7 +397,7 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "tankcrewhat_mob"
 
-/obj/item/clothing/shoes/dutyboots/fluff/mauserboots
+/obj/item/clothing/shoes/boots/jackboots/fluff/mauserboots
 	name = "Tanker boots"
 	desc = "Pair of hig black leather boots pollished to a shine."
 	icon = 'icons/vore/custom_clothes_yw.dmi'

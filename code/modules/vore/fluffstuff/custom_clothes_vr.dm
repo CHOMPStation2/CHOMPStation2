@@ -331,9 +331,9 @@
 */
 
 //wickedtemp:chakat tempest
-/obj/item/clothing/glasses/hud/health/fluff/wickedtemphud
-	name = "Purple MedHUD"
-	desc = "A standard Medical HUD, only this one is colored purple with a violet lens."
+/obj/item/clothing/glasses/omnihud/med/fluff/wickedtemphud
+	name = "Tempest's Glasses"
+	desc = "A set of AR-M glasses, only these are colored purple with violet lenses in a custom frame, with a quote inscribed: \"A doctor sees the weakness in all of humanity\""
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "tempesthud"
@@ -719,28 +719,6 @@
 		/obj/item/rig_module/teleporter
 		)
 
-/obj/item/weapon/storage/backpack/fluff/aronai
-	name = "medical pouch"
-	desc = "A medical belt with a small pouch rather than straps and loops for equipment."
-	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "emspouch"
-	item_state = "emspouch_mob"
-
-	slot_flags = SLOT_BELT //You're a belt now. Congrats.
-	max_w_class = ITEMSIZE_SMALL		//fit only pocket sized items
-	max_storage_space = ITEMSIZE_COST_SMALL * 7 //Much smaller than a backpack
-
-	New()
-		new /obj/item/weapon/reagent_containers/hypospray/vr/fluff/aronai(src)
-		new /obj/item/weapon/reagent_containers/glass/beaker/vial/vr/stabilize(src)
-		new /obj/item/weapon/reagent_containers/glass/beaker/vial/vr/bashed(src)
-		new /obj/item/weapon/reagent_containers/glass/beaker/vial/vr/toasted(src)
-		new /obj/item/weapon/reagent_containers/glass/beaker/vial/vr/poisoned(src)
-		new /obj/item/weapon/card/id/centcom/fluff/aronai(src)
-		new /obj/item/clothing/glasses/sunglasses/omnihud(src)
-		..()
-
 //Viveret:Keturah
 /obj/item/clothing/under/dress/maid
 	name = "Maid Outfit"
@@ -807,10 +785,13 @@
 	starting_accessories = list(/obj/item/clothing/accessory/black)
 
 //Kisukegema:Kisuke `the nerd` Gema
-/obj/item/clothing/glasses/sunglasses/omnihud/kamina
+/obj/item/clothing/glasses/omnihud/kamina
 	name = "Kamina glasses"
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "kamina"
 	desc = "ROW ROW, FIGHT THE POWER."
+	flash_prot = 1 //Why not.
 
 //Kitsuhana Uniforms
 /obj/item/clothing/under/rank/khi
@@ -825,48 +806,48 @@
 	item_state = ""
 
 	cmd //Command version
-		name = "KIN command suit"
-		desc = "Kitsuhana Industrial Navy uniform. An extra-comfortable command one, at that. I guess if you DON'T want anarchy for some reason."
+		name = "KHI command suit"
+		desc = "Kitsuhana Heavy Industries uniform. An extra-comfortable command one, at that. I guess if you DON'T want anarchy for some reason."
 		icon_state = "khi_uniform_cmd_i"
 		item_state = "khi_uniform_cmd"
 		worn_state = "khi_uniform_cmd"
 		armor = list(melee = 5, bullet = 10, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 	sec //Security version
-		name = "KIN security suit"
-		desc = "Kitsuhana Industrial Navy uniform. This one has angry red security stripes. Keepin' the peace in style."
+		name = "KHI security suit"
+		desc = "Kitsuhana Heavy Industries uniform. This one has angry red security stripes. Keepin' the peace in style."
 		icon_state = "khi_uniform_sec_i"
 		item_state = "khi_uniform_sec"
 		worn_state = "khi_uniform_sec"
 		armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 	med //Medical version
-		name = "KIN medical suit"
-		desc = "Kitsuhana Industrial Navy uniform. The medical version. Why not just get a new body, anyway?"
+		name = "KHI medical suit"
+		desc = "Kitsuhana Heavy Industries uniform. The medical version. Why not just get a new body, anyway?"
 		icon_state = "khi_uniform_med_i"
 		item_state = "khi_uniform_med"
 		worn_state = "khi_uniform_med"
 		armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 50, rad = 5)
 
 	eng //Engineering version
-		name = "KIN engineering suit"
-		desc = "Kitsuhana Industrial Navy uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time."
+		name = "KHI engineering suit"
+		desc = "Kitsuhana Heavy Industries uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time."
 		icon_state = "khi_uniform_eng_i"
 		item_state = "khi_uniform_eng"
 		worn_state = "khi_uniform_eng"
 		armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
 
 	sci //Science version
-		name = "KIN science suit"
-		desc = "Kitsuhana Industrial Navy uniform. For performing science in, based on the color! Only SCIENCE can save us now."
+		name = "KHI science suit"
+		desc = "Kitsuhana Heavy Industries uniform. For performing science in, based on the color! Only SCIENCE can save us now."
 		icon_state = "khi_uniform_sci_i"
 		item_state = "khi_uniform_sci"
 		worn_state = "khi_uniform_sci"
 		armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 5)
 
 	fluff/aronai //Aro fluff version
-		name = "KIN meditech suit"
-		desc = "Kitsuhana Industrial Navy uniform. This one has the colors of a resleeving or mnemonics engineer. It has 'Aronai' written inside the top."
+		name = "KHI meditech suit"
+		desc = "Kitsuhana Heavy Industries uniform. This one has the colors of a resleeving or mnemonics engineer. It has 'Aronai' written inside the top."
 		icon_state = "khi_uniform_aro_i"
 		item_state = "khi_uniform_aro"
 		worn_state = "khi_uniform_aro"
@@ -891,7 +872,9 @@
 /obj/item/clothing/suit/storage/trench/fluff/octaviouscoat
 	name = "Thin Leather coat"
 	desc = "A finely made leather coat designed for use in laboratories and doubles for parties. Has the letters O.C.W. embroidered in sliver on the right breast pocket."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "octavgentlecoat"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "octavgentlecoat_mob"
 	blood_overlay_type = "coat"
 	allowed = list(/obj/item/weapon/tank/emergency/oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/uv_light)
@@ -902,10 +885,10 @@
 	desc = "A well made suit and tie, with a thin leather vest, while not as rugged as normal lab suits, it lets the wearer look dashing as he works. The letter's O.C.W. are embroidered on the left breast."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "octavgentlecoat"
+	icon_state = "octavgentlesuit"
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "octavgentlecoat_s"
+	item_state = "octavgentlesuit_mob" //don't forget to rename the sprite.
 
 //bwoincognito:Octavious Ward
 /obj/item/clothing/head/fedora/fluff/bowler
@@ -918,6 +901,18 @@
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "bowler_mob"
 
+//bwoincognito:Octavious Ward
+/obj/item/clothing/mask/gas/plaguedoctor/fluff/octaviousmask
+	name = "Customized Gas Mask"
+	desc = "A customized gas mask to look like an old plague doctors, with a special looking lens in the left eye that turns on when in use."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "octplaguedoctor"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "octplaguedoctor_mob"
+	item_state_slots = null
+	armor = list(melee = 0, bullet = 0, laser = 2,energy = 2, bomb = 0, bio = 90, rad = 0)
+	body_parts_covered = HEAD|FACE|EYES
+
 //jemli:Jemli
 /obj/item/clothing/head/fedora/fluff/jemli
 	name = "Cavalier Hat"
@@ -928,16 +923,6 @@
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "jemli_hat_mob"
-
-
-//bwoincognito:Octavious Ward
-/obj/item/clothing/mask/gas/plaguedoctor/fluff/octaviousmask
-	name = "Customized Gas Mask"
-	desc = "A customized gas mask to look like an old plague doctors, with a special looking lens in the left eye that turns on when in use."
-	icon_state = "octplaguedoctor"
-	item_state = "octplaguedoctor_mob"
-	armor = list(melee = 0, bullet = 0, laser = 2,energy = 2, bomb = 0, bio = 90, rad = 0)
-	body_parts_covered = HEAD|FACE|EYES
 
 //virgo113:Verin Raharra
 /obj/item/clothing/suit/storage/hazardvest/fluff/verin
@@ -992,6 +977,17 @@
 			var/mob/M = src.loc
 			M.update_inv_wear_mask()
 		usr.update_action_buttons()
+
+//Vorrarkul: Theodora Lindt
+/obj/item/clothing/suit/chococoat
+	name = "Chococoat"
+	desc = "A long coat designed to resemble Getmore Chocolate Corp's namesake chocolate bar wrapper." //A walking advertisement?
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "chococoat_on"
+	icon_state = "chococoat"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	allowed = list (/obj/item/weapon/material/knife)
 
 /*
 Departamental Swimsuits, for general use
@@ -1114,3 +1110,47 @@ Departamental Swimsuits, for general use
 	desc = "The uniform worn by medsci officers of the 2370s."
 	icon_state = "trek_voy_medsci"
 	item_state = "trek_voy_medsci"
+
+//DS9
+
+/obj/item/clothing/suit/storage/trek/ds9
+	name = "Padded Overcoat"
+	desc = "The overcoat worn by all officers of the 2380s."
+	icon_state = "trek_ds9_coat"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "trek_ds9_coat_mob"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	permeability_coefficient = 0.50
+	allowed = list(
+		/obj/item/device/flashlight, /obj/item/device/analyzer,
+		/obj/item/device/radio, /obj/item/weapon/tank/emergency/oxygen,
+		/obj/item/weapon/reagent_containers/hypospray, /obj/item/device/healthanalyzer,
+		/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,
+		/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle
+		)
+	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 20, rad = 25)
+
+/obj/item/clothing/suit/storage/trek/ds9/admiral // Only for adminuz
+	name = "Admiral Overcoat"
+	desc = "Admirality specialty coat to keep flag officers fashionable and protected."
+	icon_state = "trek_ds9_coat_adm"
+	item_state = "trek_ds9_coat_adm_mob"
+	armor = list(melee = 45, bullet = 35, laser = 35, energy = 20, bomb = 0, bio = 40, rad = 55)
+
+
+/obj/item/clothing/under/rank/trek/command/ds9
+	desc = "The uniform worn by command officers of the 2380s."
+	icon_state = "trek_command"
+	item_state = "trek_ds9_command"
+
+/obj/item/clothing/under/rank/trek/engsec/ds9
+	desc = "The uniform worn by operations officers of the 2380s."
+	icon_state = "trek_engsec"
+	item_state = "trek_ds9_engsec"
+
+/obj/item/clothing/under/rank/trek/medsci/ds9
+	desc = "The uniform undershit worn by medsci officers of the 2380s."
+	icon_state = "trek_medsci"
+	item_state = "trek_ds9_medsci"

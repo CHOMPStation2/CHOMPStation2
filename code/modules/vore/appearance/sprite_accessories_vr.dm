@@ -312,6 +312,7 @@
 	desc = ""
 	icon_state = "moth"
 	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/moth
 	name = "moth wings"
@@ -516,6 +517,7 @@
 	icon_state = "feathered"
 	show_species_tail = 1
 	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/redpanda
 	name = "red panda"
@@ -540,6 +542,7 @@
 	icon_state = "tailmaw"
 	color_blend_mode = ICON_MULTIPLY
 	do_colouration = 1
+
 
 //For all species tails. Includes haircolored tails.
 /datum/sprite_accessory/tail/special
@@ -701,6 +704,13 @@
 	icon_state = "seromitail_feathers_hc_s"
 	do_colouration = 1
 
+/datum/sprite_accessory/tail/special/vulpan
+	name = "vulpankin, colorable"
+	desc = ""
+	icon_state = "vulptail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/zenghu_taj
 	name = "Zeng-Hu Tajaran Synth tail"
 	desc = ""
@@ -754,8 +764,14 @@
 	name = "Feline"
 	icon_state = "feline_s"
 
-///Wickedtemp: Chakat Tempest
+//wickedtemp: Chakat Tempest
 /datum/sprite_accessory/tail/taur/feline/tempest
 	name = "Feline (wickedtemp)"
 	icon_state = "tempest_s"
 	ckeys_allowed = list("wickedtemp")
+
+//silencedmp5a5: Serdykov Antoz
+/datum/sprite_accessory/tail/taur/wolf/serdy
+	name = "CyberSerdy (silencedmp5a5)"
+	icon_state = "serdy_s"
+	ckeys_allowed = list("silencedmp5a5")
