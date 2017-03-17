@@ -82,6 +82,17 @@
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "joanasuna"
 
+//eekasqueak:Serkii Miishy
+/obj/item/clothing/under/skirt/fluff/serkii
+	name = "stylish blue skirt"
+	desc = "A simple black shirt tops this skirt, made of a down soft blue fabric and pleated."
+
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "serkiskirt"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "serkiskirt"
+
 //Unknown. Please check records from the forums.
 /obj/item/clothing/under/suit_jacket/female/fluff/miqote
 	name = "Miqo'te Seperates"
@@ -776,11 +787,14 @@
 				return 1
 
 /obj/item/clothing/under/rank/internalaffairs/fluff/joan
-	desc = "The plain, professional attire of a Federation Law Enforcement Detective. The collar is <i>immaculately</i> starched."
+	desc = "The plain, professional attire of a Federation Law Enforcement Detective."
 	name = "Federation Dress Shirt"
-	icon_state = "internalaffairs"
-	item_state = "ba_suit"
-	worn_state = "internalaffairs"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "joanuniform"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "joanuniform_mob"
+	worn_state = "joanuniform_mob"
 	rolled_sleeves = 0
 	starting_accessories = list(/obj/item/clothing/accessory/black)
 
