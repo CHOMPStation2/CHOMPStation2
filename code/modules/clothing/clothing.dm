@@ -51,10 +51,10 @@
 
 		if(H.species)
 			if(exclusive)
-				if(!(H.species.get_bodytype() in species_restricted))
+				if(!(H.species.get_bodytype(H) in species_restricted))	//Vorestation edit
 					wearable = 1
 			else
-				if(H.species.get_bodytype() in species_restricted)
+				if(H.species.get_bodytype(H) in species_restricted)	//Vorestation edit
 					wearable = 1
 
 			if(!wearable && !(slot in list(slot_l_store, slot_r_store, slot_s_store)))
@@ -199,10 +199,7 @@
 
 /obj/item/clothing/gloves/emp_act(severity)
 	if(cell)
-		//why is this not part of the powercell code?
-		cell.charge -= 1000 / severity
-		if (cell.charge < 0)
-			cell.charge = 0
+		cell.emp_act(severity)
 	..()
 
 // Called just before an attack_hand(), in mob/UnarmedAttack()

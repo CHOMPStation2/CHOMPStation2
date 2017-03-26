@@ -336,7 +336,26 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "omniglasses"
+	icon_state = "arohud"
+
+/obj/item/clothing/glasses/omnihud/med/fluff/aronai/verb/toggle_on()
+	set name = "Toggle AR-K HUD"
+	set category = "Object"
+	set desc = "Toggle on/off the AR-K HUD projection."
+	set src in usr
+
+	if(!ishuman(usr)) return
+
+	var/mob/living/carbon/human/H = usr
+
+	if(icon_state == initial(icon_state))
+		icon_state = "[initial(icon_state)]_on"
+		H << "<span class='notice'>You ENABLE the AR-K HUD.</span>"
+	else
+		icon_state = initial(icon_state)
+		H << "<span class='notice'>You DISABLE the AR-K HUD.</span>"
+
+	H.update_inv_glasses()
 
 //arokha:Aronai Kadigan - Fluff hypospray
 /obj/item/weapon/reagent_containers/hypospray/vr/fluff/aronai
@@ -879,60 +898,3 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 				B.internal_contents |= src
 				user.visible_message("<span class='warning'>[user] eats a telebeacon!</span>","You eat the the beacon!")
 				playsound(user, B.vore_sound, 70, 1)
-
-//Universal translator
-/obj/item/device/universal_trans
-	name = "handheld translator"
-	desc = "This handy device appears to translate the languages it hears into onscreen text for a user."
-	icon = 'icons/obj/device_alt.dmi'
-	icon_state = "atmos"
-	w_class = ITEMSIZE_SMALL
-	origin_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 3)
-	var/listening = 0
-	var/datum/language/langset
-
-/obj/item/device/universal_trans/attack_self(mob/user)
-	if(!listening) //Turning ON
-		langset = input(user,"Translate to which of your languages?","Language Selection") as null|anything in user.languages
-		if(langset)
-			listening = 1
-			listening_objects |= src
-			icon_state = "[initial(icon_state)]1"
-			user << "<span class='notice'>You enable \the [src], translating into [langset.name].</span>"
-	else //Turning OFF
-		listening = 0
-		listening_objects -= src
-		langset = null
-		icon_state = "[initial(icon_state)]"
-		user << "<span class='notice'>You disable \the [src].</span>"
-
-
-/obj/item/device/universal_trans/hear_talk(var/mob/speaker,var/message,var/vrb,var/datum/language/language)
-	if(!listening || !istype(speaker))
-		return
-
-	//Show the "I heard something" animation.
-	flick("[initial(icon_state)]2",src)
-
-	//Handheld or pocket only.
-	if(!isliving(loc))
-		return
-
-	var/mob/living/L = loc
-
-	if (language && (language.flags & NONVERBAL))
-		return //Not gonna translate sign language
-
-	//Only translate if they can't understand, otherwise pointlessly spammy
-	//I'll just assume they don't look at the screen in that case
-
-	//They don't understand the spoken language we're translating FROM
-	if(!L.say_understands(speaker,language))
-
-		//They understand the PRINTED language
-		if(L.say_understands(null,langset))
-			L << "<i><b>[src]</b> displays, </i>\"<span class='[langset.colour]'>[message]</span>\""
-
-		//They don't understand the PRINTED language
-		else
-			L << "<i><b>[src]</b> displays, </i>\"<span class='[langset.colour]'>[langset.scramble(message)]</span>\""
