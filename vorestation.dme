@@ -2440,8 +2440,7 @@
 #include "maps\RandomZLevels\listeningpost.dm"
 #include "maps\RandomZLevels\snowfield.dm"
 #include "maps\RandomZLevels\zoo.dm"
-#include "maps\virgo\virgo.dm"
-
+#include "maps\southern_cross\southern_cross_areas.dm"
 #include "maps\yw\virgo.dm"
 #include "maps\yw\virgo_defines.dm"
 #include "maps\~map_system\maps.dm"

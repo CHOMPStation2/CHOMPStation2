@@ -1,6 +1,6 @@
 #if !defined(USING_MAP_DATUM)
 
-	#include "virgo-0.dmm"
+	//#include "virgo-0.dmm"
 	#include "virgo-1.dmm"
 	#include "virgo-2.dmm"
 	#include "virgo-3.dmm"
