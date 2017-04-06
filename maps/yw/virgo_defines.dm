@@ -1,5 +1,5 @@
 
-#define Z_LEVEL_BASEMENT_YW					1
+//#define Z_LEVEL_BASEMENT_YW					1
 #define Z_LEVEL_MAIN_YW						2
 #define Z_LEVEL_CENTCOM_YW					3
 #define Z_LEVEL_TELECOMMS_YW				4
@@ -17,21 +17,21 @@
 	lobby_screens = list("title")
 
 	station_levels = list(
-		Z_LEVEL_BASEMENT_YW,
+		//Z_LEVEL_BASEMENT_YW,
 		Z_LEVEL_MAIN_YW,
 		Z_LEVEL_MINING_YW
 		)
 
 	admin_levels = list(Z_LEVEL_CENTCOM_YW)
 	contact_levels = list(
-		Z_LEVEL_BASEMENT_YW,
+		//Z_LEVEL_BASEMENT_YW,
 		Z_LEVEL_MAIN_YW,
 		Z_LEVEL_CENTCOM_YW,
 		Z_LEVEL_MINING_YW
 		)
 
 	player_levels = list(
-		Z_LEVEL_BASEMENT_YW,
+		//Z_LEVEL_BASEMENT_YW,
 		Z_LEVEL_MAIN_YW,
 		Z_LEVEL_TELECOMMS_YW,
 		Z_LEVEL_ABANDONED_ASTEROID_YW,
@@ -41,7 +41,7 @@
 
 	sealed_levels = list(Z_LEVEL_ABELT_YW)
 	empty_levels = list()
-	accessible_z_levels = list("1" = 20, "2" = 20, "4" = 20, "5" = 20, "6" = 20) // The defines can't be used here sadly.
+	accessible_z_levels = list(/*"1" = 20,*/ "2" = 25, "4" = 25, "5" = 25, "6" = 25) // The defines can't be used here sadly.
 	base_turf_by_z = list(
 		"1" = /turf/simulated/mineral/floor,
 		"2" = /turf/simulated/mineral/floor,
