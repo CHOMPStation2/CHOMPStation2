@@ -2,6 +2,8 @@
 //GeneralPantsu
 // ************
 
+//Amara Faell
+
 /obj/item/weapon/storage/box/fluff/amara
 	name = "Amara's Kit"
 	desc = "A kit containing Amara's equipment."
@@ -15,6 +17,17 @@
 		/obj/item/clothing/accessory/collar/fluff/amara_collar,
 		/obj/item/weapon/storage/belt/security/tactical/amara_belt,
 		/obj/item/device/modkit_conversion/fluff/amara_hos_kit)
+
+
+//Zara Venlee
+
+/obj/item/weapon/storage/box/fluff/zara
+	name = "Zara's Kit"
+	desc = "A kit containing Zara's equipment."
+	has_items = list(
+		/obj/item/clothing/shoes/magboots/fluff/zara_leg_enhancer,
+		/obj/item/clothing/gloves/combat/fluff/zara_arm_enhancer,
+		/obj/item/clothing/under/swimsuit/fluff/zara_uniform)
 
 // **************
 //The god himself
@@ -57,4 +70,17 @@
 	has_items = list(
 		/obj/item/clothing/under/fluff/ally_1,
 		/obj/item/clothing/under/rank/security/corp/fluff/ally_2)
+
+// *******
+// Admiral Dragon
+// *******
+
+//Tikorak Korgask
+
+/obj/item/weapon/storage/box/fluff/tikorak
+	name = "Tikorak's Kit"
+	desc = "A kit containing Tikorak's equipment."
+	has_items = list(
+		/obj/item/clothing/shoes/magboots/fluff/tikorak_magboots,
+		/obj/item/clothing/under/fluff/tikorak_uniform)
 
