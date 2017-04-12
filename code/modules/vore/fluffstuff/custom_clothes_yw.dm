@@ -472,7 +472,6 @@
 	icon_state = "arboots0"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "arboots0_mob"
-	canremove = 0
 	slowdown = 0
 	icon_base = "arboots"
 
