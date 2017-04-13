@@ -265,6 +265,9 @@
 // **********
 // GeneralPantsu
 // **********
+
+// Amara Faell
+
 /obj/item/clothing/suit/storage/fluff/fedcoat/amara_jacket
 	name = "Scorched lieutenant jacket"
 	desc = "A classic, bit too big leather bomberjacket with warm, fuzzy fur at the collar and on its insides and rolled up sleeves. It got several rather bad scorch marks that reveal there is a lining of durable but flexible material underneath it, but besides that it looks far from falling apart. There are outdated military insignias for the rank of 'Lieutenant' on each shoulder."
@@ -336,6 +339,57 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mercenarybelt_mob"
 
+//Zara Venlee
+
+/obj/item/clothing/shoes/magboots/fluff/zara_leg_enhancer
+	name = "Enhancer Boots"
+	desc = "A modified set of limb-enhancer boots made by Ward-Takahashi. They never saw use past a few prototypes such as these."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "leg_enhancer0"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "leg_enhancer0_mob"
+	canremove = 0
+	slowdown = 0
+	icon_base = "leg_enhancer"
+
+/obj/item/clothing/shoes/magboots/fluff/zara_leg_enhancer/attack_self(mob/user)
+	if(magpulse)
+		item_flags &= ~NOSLIP
+		magpulse = 0
+		set_slowdown(0)
+		force = 3
+		if(icon_base) icon_state = "[icon_base]0"
+		user << "You disable the mag-pulse traction system."
+	else
+		item_flags |= NOSLIP
+		magpulse = 1
+		set_slowdown(3)
+		force = 5
+		if(icon_base) icon_state = "[icon_base]1"
+		user << "You enable the mag-pulse traction system."
+	user.update_inv_shoes()	//so our mob-overlays update
+	user.update_action_buttons()
+
+
+/obj/item/clothing/gloves/combat/fluff/zara_arm_enhancer
+	name = "Enhancer Gauntlets"
+	desc = "A modified set of limb-enhancer gauntlets made by Ward-Takahashi. They never saw use past a few prototypes such as these."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "arm_enhancer"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "arm_enhancer_mob"
+	canremove = 0
+	body_parts_covered = HANDS|ARMS
+
+/obj/item/clothing/under/swimsuit/fluff/zara_uniform
+	name = "Thermal Underwear"
+	desc = "A sports bra and pair of compression shorts amde of a durable, stretchy material. Comfy and able to keep you warm for sure."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "thermal_underwear"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "thermal_underwear"
+
+
 // **********
 // Izac112
 // **********
@@ -355,7 +409,7 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "allyuniform"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "allyuniform_mob"
+	item_state = "allyuniform"
 
 // **********
 // Johnwolf135
@@ -404,3 +458,45 @@
 	icon_state = "leatherboots"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mboots_mob"
+
+// ************
+// Admiral Dragon
+// ************
+
+//Tikorak Korgask
+
+/obj/item/clothing/shoes/magboots/fluff/tikorak_magboots
+	name = "Enhancer Boots"
+	desc = "These are A.R. Magboots standerd issue, these boots are worn as normal shoes by athorians so when they are worn they are noteably comfy and the toe claw seems to be able to raise and lower with the foot."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "arboots0"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "arboots0_mob"
+	slowdown = 0
+	icon_base = "arboots"
+
+/obj/item/clothing/shoes/magboots/fluff/zara_leg_enhancer/attack_self(mob/user)
+	if(magpulse)
+		item_flags &= ~NOSLIP
+		magpulse = 0
+		set_slowdown(0)
+		force = 3
+		if(icon_base) icon_state = "[icon_base]0"
+		user << "You disable the mag-pulse traction system."
+	else
+		item_flags |= NOSLIP
+		magpulse = 1
+		set_slowdown(3)
+		force = 5
+		if(icon_base) icon_state = "[icon_base]1"
+		user << "You enable the mag-pulse traction system."
+	user.update_inv_shoes()	//so our mob-overlays update
+	user.update_action_buttons()
+
+/obj/item/clothing/under/fluff/tikorak_uniform
+	name = "A.R. Med/sci uniform"
+	desc = "This is a A.R. Med/Sci uniform this is given to those who work in a medical field for the A.R."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "arclothes_s"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "arclothes"
