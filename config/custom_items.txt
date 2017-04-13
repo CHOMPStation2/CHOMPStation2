@@ -42,6 +42,12 @@
 
 # ######## 0-9 CKEYS
 # ######## A CKEYS
+{
+ckey: Admiral Dragon
+character_name: Tikorak Korgask
+item_path: /obj/item/weapon/storage/box/fluff/tikorak
+}
+
 # ######## B CKEYS
 {
 ckey: blackangelsace
@@ -87,6 +93,12 @@ item_path: /obj/item/clothing/accessory/fluff/zeta_blackwell_1
 ckey: generalpantsu
 character_name: Amara Faell
 item_path: /obj/item/weapon/storage/box/fluff/amara
+}
+
+{
+ckey: generalpantsu
+character_name: Zara Venlee
+item_path: /obj/item/weapon/storage/box/fluff/zara
 }
 # ######## H CKEYS
 # ######## I CKEYS
