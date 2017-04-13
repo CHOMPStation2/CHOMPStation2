@@ -218,7 +218,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			++ind
 			if(ind > 1)
 				. += ", "
-			. += "\tSynthetic [organ_name]"
+			switch(organ_name)
+				if ("brain")
+					. += "\tPositronic [organ_name]"
+				else
+					. += "\tSynthetic [organ_name]"
 		else if(status == "digital")
 			++ind
 			if(ind > 1)
@@ -612,15 +616,23 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				organ = O_LUNGS
 			if("Brain")
 				if(pref.organ_data[BP_HEAD] != "cyborg")
-					user << "<span class='warning'>You may only select an assisted or synthetic brain if you have a full prosthetic body.</span>"
+					user << "<span class='warning'>You may only select a cybernetic or synthetic brain if you have a full prosthetic body.</span>"
 					return
 				organ = "brain"
 
-		var/list/organ_choices = list("Normal","Assisted","Mechanical")
+		var/list/organ_choices = list("Normal")
 		if(pref.organ_data[BP_TORSO] == "cyborg")
 			organ_choices -= "Normal"
 			if(organ_name == "Brain")
-				organ_choices += "Digital"
+				organ_choices += "Cybernetic"
+				organ_choices += "Positronic"
+				organ_choices += "Drone"
+			else
+				organ_choices += "Assisted"
+				organ_choices += "Mechanical"
+		else
+			organ_choices += "Assisted"
+			organ_choices += "Mechanical"
 
 		var/new_state = input(user, "What state do you wish the organ to be in?") as null|anything in organ_choices
 		if(!new_state) return
@@ -630,10 +642,15 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				pref.organ_data[organ] = null
 			if("Assisted")
 				pref.organ_data[organ] = "assisted"
-			if("Mechanical")
+			if("Cybernetic")
+				pref.organ_data[organ] = "assisted"
+			if ("Mechanical")
 				pref.organ_data[organ] = "mechanical"
-			if("Digital")
+			if("Drone")
 				pref.organ_data[organ] = "digital"
+			if("Positronic")
+				pref.organ_data[organ] = "mechanical"
+
 		return TOPIC_REFRESH
 
 	else if(href_list["disabilities"])
@@ -658,6 +675,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.rlimb_data[organ] = null
 	while(null in pref.rlimb_data)
 		pref.rlimb_data -= null
+
+	// Sanitize the name so that there aren't any numbers sticking around.
+	pref.real_name          = sanitize_name(pref.real_name, pref.species)
+	if(!pref.real_name)
+		pref.real_name      = random_name(pref.identifying_gender, pref.species)
 
 /datum/category_item/player_setup_item/general/body/proc/SetSpecies(mob/user)
 	if(!pref.species_preview || !(pref.species_preview in all_species))

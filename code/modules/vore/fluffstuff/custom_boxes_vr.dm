@@ -37,8 +37,9 @@
 		/obj/item/clothing/suit/storage/det_suit/fluff/tasald,
 		/obj/item/clothing/suit/storage/det_suit/fluff/tas_coat,
 		/obj/item/clothing/under/det/fluff/tasald,
-		/obj/item/fluff/permit/tasald_corlethian,
-		/obj/item/weapon/gun/projectile/revolver/mateba/fluff/tasald_corlethian,
+		//Commented out since expired. Uncomment if renewed.
+		///obj/item/fluff/permit/tasald_corlethian,
+		///obj/item/weapon/gun/projectile/revolver/mateba/fluff/tasald_corlethian,
 		/obj/item/weapon/implanter/loyalty)
 
 //bwoincognito:Octavious Ward
@@ -170,11 +171,9 @@
 		//Centcom stuff and permit
 		new /obj/item/weapon/card/id/centcom/fluff/aronai(src)
 		new /obj/item/fluff/permit/aronai_kadigan(src)
-		//new /obj/item/clothing/under/rank/khi/fluff/aronai(src)
 		new /obj/item/clothing/glasses/omnihud/med/fluff/aronai(src)
 		//Gun and holster
-		new /obj/item/weapon/gun/projectile/khi/pistol(src)
-		//new /obj/item/ammo_magazine/c45m/flash(src)
+		new /obj/item/weapon/gun/energy/netgun(src)
 		new /obj/item/clothing/accessory/holster/leg(src)
 
 /*
