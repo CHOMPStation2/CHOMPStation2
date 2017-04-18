@@ -388,7 +388,24 @@
 	icon_state = "thermal_underwear"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "thermal_underwear"
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
+/obj/item/clothing/head/fluff/zara_bandana
+	name = "Black and red Headband"
+	desc = "A simple black headband with two red stripes that connect  in the middle, forming some sort of ark. Slightly suspicious."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "blackandredband"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "blackandredband_mob"
+
+/obj/item/clothing/suit/storage/fluff/zara_coat
+	name = "Rugged Coat"
+	desc = "An old looking, black naval coat. It's sleeves got ripped off, some bits still hanging about, its bottom roughed up too. The epaulettes on each shoulder are a polished up gold and so are the many other golden ornaments on the coat."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "admiral_coat"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "admiral_coat_mob"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
 // **********
 // Izac112
@@ -466,7 +483,7 @@
 //Tikorak Korgask
 
 /obj/item/clothing/shoes/magboots/fluff/tikorak_magboots
-	name = "Enhancer Boots"
+	name = "A.R. Magboots"
 	desc = "These are A.R. Magboots standerd issue, these boots are worn as normal shoes by athorians so when they are worn they are noteably comfy and the toe claw seems to be able to raise and lower with the foot."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "arboots0"
@@ -500,3 +517,45 @@
 	icon_state = "arclothes_s"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "arclothes"
+
+// **********
+// BlackAngelsAce
+// **********
+
+//
+
+/obj/item/clothing/head/helmet/fluff/madoka_helm
+	name = "Madoka's helm"
+	desc = "A dark colored helmet fit for a large sergal head, it looks new but yet it has many scratches and deep scars."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sergal_helmet"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sergal_helmet"
+	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/armor/fluff/madoka_chest
+	name = "Madoka's chestpiece"
+	desc = "A dark colored chestpiece made for a large sergal, it has a few scratches all around, and a big cut over the shoulder plate."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sergal_armor"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sergal_armor"
+	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/gloves/arm_guard/fluff/madoka_arms
+	name = "Madoka's pauldron and bracers"
+	desc = "A dark colored set of pauldron and bracers fit for a large sergal, they have scratch marks."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sergal_legs"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sergal_legs"
+	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/shoes/leg_guard/fluff/madoka_legs
+	name = "Madoka's leg cuffs"
+	desc = "A armored dark colored set of and bracers fit for a large sergal, their design allows to keep a mobility but leaves exposed areas."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sergal_arms"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sergal_arms"
+	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
