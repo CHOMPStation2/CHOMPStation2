@@ -27,6 +27,8 @@
 	has_items = list(
 		/obj/item/clothing/shoes/magboots/fluff/zara_leg_enhancer,
 		/obj/item/clothing/gloves/combat/fluff/zara_arm_enhancer,
+		/obj/item/clothing/head/fluff/zara_bandana,
+		/obj/item/clothing/suit/storage/fluff/zara_coat,
 		/obj/item/clothing/under/swimsuit/fluff/zara_uniform)
 
 // **************

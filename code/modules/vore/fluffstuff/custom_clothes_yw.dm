@@ -388,7 +388,24 @@
 	icon_state = "thermal_underwear"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "thermal_underwear"
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
+/obj/item/clothing/head/fluff/zara_bandana
+	name = "Black and red Headband"
+	desc = "A simple black headband with two red stripes that connect  in the middle, forming some sort of ark. Slightly suspicious."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "blackandredband"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "blackandredband_mob"
+
+/obj/item/clothing/suit/storage/fluff/zara_coat
+	name = "Rugged Coat"
+	desc = "An old looking, black naval coat. It's sleeves got ripped off, some bits still hanging about, its bottom roughed up too. The epaulettes on each shoulder are a polished up gold and so are the many other golden ornaments on the coat."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "admiral_coat"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "admiral_coat_mob"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
 // **********
 // Izac112
