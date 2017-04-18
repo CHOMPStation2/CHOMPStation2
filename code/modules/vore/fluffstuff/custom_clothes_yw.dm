@@ -466,7 +466,7 @@
 //Tikorak Korgask
 
 /obj/item/clothing/shoes/magboots/fluff/tikorak_magboots
-	name = "Enhancer Boots"
+	name = "A.R. Magboots"
 	desc = "These are A.R. Magboots standerd issue, these boots are worn as normal shoes by athorians so when they are worn they are noteably comfy and the toe claw seems to be able to raise and lower with the foot."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "arboots0"

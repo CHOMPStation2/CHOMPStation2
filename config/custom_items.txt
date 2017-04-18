@@ -43,7 +43,7 @@
 # ######## 0-9 CKEYS
 # ######## A CKEYS
 {
-ckey: Admiral Dragon
+ckey: Admiral_Dragon
 character_name: Tikorak Korgask
 item_path: /obj/item/weapon/storage/box/fluff/tikorak
 }
