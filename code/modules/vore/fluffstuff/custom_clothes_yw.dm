@@ -517,3 +517,45 @@
 	icon_state = "arclothes_s"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "arclothes"
+
+// **********
+// BlackAngelsAce
+// **********
+
+//
+
+/obj/item/clothing/head/helmet/fluff/madoka_helm
+	name = "Madoka's helm"
+	desc = "A dark colored helmet fit for a large sergal head, it looks new but yet it has many scratches and deep scars."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sergal_helmet"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sergal_helmet"
+	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/armor/fluff/madoka_chest
+	name = "Madoka's chestpiece"
+	desc = "A dark colored chestpiece made for a large sergal, it has a few scratches all around, and a big cut over the shoulder plate."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sergal_armor"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sergal_armor"
+	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/gloves/arm_guard/fluff/madoka_arms
+	name = "Madoka's pauldron and bracers"
+	desc = "A dark colored set of pauldron and bracers fit for a large sergal, they have scratch marks."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sergal_legs"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sergal_legs"
+	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/shoes/leg_guard/fluff/madoka_legs
+	name = "Madoka's leg cuffs"
+	desc = "A armored dark colored set of and bracers fit for a large sergal, their design allows to keep a mobility but leaves exposed areas."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sergal_arms"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sergal_arms"
+	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)

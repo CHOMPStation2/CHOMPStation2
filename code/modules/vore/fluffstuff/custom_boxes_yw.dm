@@ -36,9 +36,13 @@
 // **************
 
 /obj/item/weapon/storage/box/fluff/madoka
-	name = "Madoka's Spear Case"
+	name = "Madoka's Case"
 	desc = "A case containing Madoka's equipment."
 	has_items = list(
+		/obj/item/clothing/head/helmet/fluff/madoka_helm,
+		/obj/item/clothing/suit/armor/fluff/madoka_chest,
+		/obj/item/clothing/gloves/arm_guard/fluff/madoka_arms,
+		/obj/item/clothing/shoes/leg_guard/fluff/madoka_legs,
 		/obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1)
 // **********
 //JohnWolf135
