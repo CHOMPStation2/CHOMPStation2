@@ -406,6 +406,7 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "admiral_coat_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
 // **********
 // Izac112
@@ -522,7 +523,7 @@
 // BlackAngelsAce
 // **********
 
-//
+//Madoka
 
 /obj/item/clothing/head/helmet/fluff/madoka_helm
 	name = "Madoka's helm"
@@ -546,16 +547,16 @@
 	name = "Madoka's pauldron and bracers"
 	desc = "A dark colored set of pauldron and bracers fit for a large sergal, they have scratch marks."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "sergal_legs"
+	icon_state = "sergal_arms"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "sergal_legs"
+	item_state = "sergal_arms"
 	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/shoes/leg_guard/fluff/madoka_legs
 	name = "Madoka's leg cuffs"
 	desc = "A armored dark colored set of and bracers fit for a large sergal, their design allows to keep a mobility but leaves exposed areas."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "sergal_arms"
+	icon_state = "sergal_legs"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "sergal_arms"
+	item_state = "sergal_legs"
 	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
