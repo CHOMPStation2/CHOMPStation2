@@ -86,6 +86,11 @@ character_name: Zeta Blackwell
 item_path: /obj/item/clothing/accessory/fluff/zeta_blackwell_1
 }
 # ######## D CKEYS
+{
+ckey: dawidoe
+character_name: Melissa Krutz
+item_path: /obj/item/weapon/storage/box/fluff/melissa
+}
 # ######## E CKEYS
 # ######## F CKEYS
 # ######## G CKEYS
@@ -99,6 +104,12 @@ item_path: /obj/item/weapon/storage/box/fluff/amara
 ckey: generalpantsu
 character_name: Zara Venlee
 item_path: /obj/item/weapon/storage/box/fluff/zara
+}
+
+{
+ckey: generalpantsu
+character_name: Samantha Quzix
+item_path: /obj/item/weapon/storage/box/fluff/samantha
 }
 # ######## H CKEYS
 # ######## I CKEYS

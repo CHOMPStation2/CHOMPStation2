@@ -76,9 +76,9 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("stabbed", "pierced", "jabbed", "torn", "gored")
 
-// **********
+// *************
 // GeneralPantsu
-// **********
+// *************
 /obj/item/weapon/flame/lighter/zippo/fluff/bloodzippo
 	name = "Blood red zippo"
 	desc = "A zippo that comes in a metallic blood red case. How the flame can be lime green is an enigma in itself."
@@ -94,3 +94,12 @@
 
 	from_suit = /obj/item/clothing/suit/storage/vest/hoscoat
 	to_suit = /obj/item/clothing/suit/storage/vest/hoscoat/amara_hos
+
+// *******
+// Dawidoe
+// *******
+/obj/item/weapon/flame/lighter/zippo/fluff/edgy_zippo
+	name = "Zippo"
+	desc = "A custom made zippo lighter with word 'Mel' engraved in white font on the bottom right corner. It's black, with red lines around the edges."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "melzippo"

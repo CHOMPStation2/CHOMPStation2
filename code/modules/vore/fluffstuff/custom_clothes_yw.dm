@@ -1,6 +1,6 @@
-// **********
+// **************
 // Unleashed_Mana
-// **********
+// **************
 /obj/item/clothing/suit/storage/labcoat/fluff/eioni_1
 	name = "Eio'ni Co. labcoat"
 	desc = "The official labcoat of the Eio'ni Corporation."
@@ -220,9 +220,9 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "koreihelmet_mob"
 
-// **********
+// *************
 // CynicalTester
-// **********
+// *************
 /obj/item/clothing/accessory/fluff/zeta_blackwell_1
 	name = "Shub-niggurath pendant"
 	desc = "It is a black pendant with what looks like a wolf head with tentacles coming out from the sides."
@@ -234,9 +234,9 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
-// **********
+// ****************
 // Valhallaviking01
-// **********
+// ****************
 /obj/item/clothing/accessory/fluff/wolf_erikson_1
 	name = "USGN dogtags"
 	desc = "The standard issue ID for all USGN corpsmen."
@@ -248,9 +248,9 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
-// **********
+// **************
 // RandySavage205
-// **********
+// **************
 /obj/item/clothing/accessory/fluff/alex_wolf_1
 	name = "UNSC Dog Tags"
 	desc = "Feet first into hell!"
@@ -262,9 +262,9 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
-// **********
+// *************
 // GeneralPantsu
-// **********
+// *************
 
 // Amara Faell
 
@@ -370,7 +370,6 @@
 	user.update_inv_shoes()	//so our mob-overlays update
 	user.update_action_buttons()
 
-
 /obj/item/clothing/gloves/combat/fluff/zara_arm_enhancer
 	name = "Enhancer Gauntlets"
 	desc = "A modified set of limb-enhancer gauntlets made by Ward-Takahashi. They never saw use past a few prototypes such as these."
@@ -406,10 +405,37 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "admiral_coat_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
-// **********
+//Sammantha Quzix
+
+/obj/item/clothing/under/fluff/sam_bodysuit
+	name = "Mech Pilot Bodysuit"
+	desc = "A black white and blue bodysuit made of reinforced materials. It clings tightly to its wearers body."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "pilotsuit"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "pilotsuit"
+
+/obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves
+	name = "Mech Pilot Gloves"
+	desc = "A pair of durable, thin combat gloves, perfect for someone working with exosuits."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "pilotgloves"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "pilotgloves_mob"
+
+/obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots
+	name = "Reinforced Boots"
+	desc = "A pair of tightly fitting boots, perfect for someone working with exosuits, seeing as they won't slip off fast."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "pilotboots"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "pilotboots_mob"
+
+// *******
 // Izac112
-// **********
+// *******
 
 /obj/item/clothing/under/fluff/ally_1
 	name = "Skintight bodysuit"
@@ -428,9 +454,9 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "allyuniform"
 
-// **********
+// ***********
 // Johnwolf135
-// **********
+// ***********
 
 /obj/item/clothing/under/fluff/rosetta
 	name = "Pink medical scrubs"
@@ -476,9 +502,9 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mboots_mob"
 
-// ************
+// **************
 // Admiral Dragon
-// ************
+// **************
 
 //Tikorak Korgask
 
@@ -518,11 +544,11 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "arclothes"
 
-// **********
+// **************
 // BlackAngelsAce
-// **********
+// **************
 
-//
+//Madoka
 
 /obj/item/clothing/head/helmet/fluff/madoka_helm
 	name = "Madoka's helm"
@@ -546,16 +572,30 @@
 	name = "Madoka's pauldron and bracers"
 	desc = "A dark colored set of pauldron and bracers fit for a large sergal, they have scratch marks."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "sergal_legs"
+	icon_state = "sergal_arms"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "sergal_legs"
+	item_state = "sergal_arms"
 	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/shoes/leg_guard/fluff/madoka_legs
 	name = "Madoka's leg cuffs"
 	desc = "A armored dark colored set of and bracers fit for a large sergal, their design allows to keep a mobility but leaves exposed areas."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "sergal_arms"
+	icon_state = "sergal_legs"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "sergal_arms"
+	item_state = "sergal_legs"
 	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+
+// *******
+// Dawidoe
+// *******
+
+//Melissa Krutz
+
+/obj/item/clothing/under/rank/security/fluff/melissa_uniform
+	name = "Security uniform"
+	desc = "A black Dark red security uniform with a tag on it that says Ally_F"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mel"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mel"
