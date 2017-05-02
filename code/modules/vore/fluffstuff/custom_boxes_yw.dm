@@ -31,6 +31,16 @@
 		/obj/item/clothing/suit/storage/fluff/zara_coat,
 		/obj/item/clothing/under/swimsuit/fluff/zara_uniform)
 
+//Samantha Quzix
+
+/obj/item/weapon/storage/box/fluff/samantha
+	name = "Samantha's Kit"
+	desc = "A kit containing Samantha's equipment."
+	has_items = list(
+		/obj/item/clothing/under/fluff/sam_bodysuit,
+		/obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves,
+		/obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots)
+
 // **************
 //The god himself
 // **************
@@ -77,9 +87,9 @@
 		/obj/item/clothing/under/fluff/ally_1,
 		/obj/item/clothing/under/rank/security/corp/fluff/ally_2)
 
-// *******
+// **************
 // Admiral Dragon
-// *******
+// **************
 
 //Tikorak Korgask
 
@@ -90,3 +100,13 @@
 		/obj/item/clothing/shoes/magboots/fluff/tikorak_magboots,
 		/obj/item/clothing/under/fluff/tikorak_uniform)
 
+// *******
+// Dawidoe
+// *******
+
+/obj/item/weapon/storage/box/fluff/melissa
+	name = "Melissa's kit"
+	desc = "A kit containing Melissa's equipment."
+	has_items = list(
+		/obj/item/weapon/flame/lighter/zippo/fluff/edgy_zippo,
+		/obj/item/clothing/under/rank/security/fluff/melissa_uniform)
