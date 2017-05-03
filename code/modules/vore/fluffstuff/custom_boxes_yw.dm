@@ -37,7 +37,7 @@
 	name = "Samantha's Kit"
 	desc = "A kit containing Samantha's equipment."
 	has_items = list(
-		/obj/item/clothing/under/fluff/sam_bodysuit,
+		/obj/item/clothing/under/utility/fluff/sam_bodysuit,
 		/obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves,
 		/obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots)
 
