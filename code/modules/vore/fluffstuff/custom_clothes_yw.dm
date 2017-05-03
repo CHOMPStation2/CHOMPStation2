@@ -409,7 +409,7 @@
 
 //Sammantha Quzix
 
-/obj/item/clothing/under/fluff/sam_bodysuit
+/obj/item/clothing/under/utility/fluff/sam_bodysuit
 	name = "Mech Pilot Bodysuit"
 	desc = "A black white and blue bodysuit made of reinforced materials. It clings tightly to its wearers body."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -593,8 +593,8 @@
 //Melissa Krutz
 
 /obj/item/clothing/under/rank/security/fluff/melissa_uniform
-	name = "Security uniform"
-	desc = "A black Dark red security uniform with a tag on it that says Ally_F"
+	name = "Combat Uniform"
+	desc = "A tactical jacket with, not so tactical short-skirt, combat ready and provides small amount of protection equivalent to security uniform."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "mel"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
