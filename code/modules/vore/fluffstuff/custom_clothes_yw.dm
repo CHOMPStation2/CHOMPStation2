@@ -409,7 +409,7 @@
 
 //Sammantha Quzix
 
-/obj/item/clothing/under/utility/fluff/sam_bodysuit
+/obj/item/clothing/under/color/grey/fluff/sam_bodysuit
 	name = "Mech Pilot Bodysuit"
 	desc = "A black white and blue bodysuit made of reinforced materials. It clings tightly to its wearers body."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -592,10 +592,34 @@
 
 //Melissa Krutz
 
-/obj/item/clothing/under/rank/security/fluff/melissa_uniform
+/obj/item/clothing/under/rank/security/corp/fluff/melissa_uniform
 	name = "Combat Uniform"
 	desc = "A tactical jacket with, not so tactical short-skirt, combat ready and provides small amount of protection equivalent to security uniform."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "mel"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mel"
+
+// *******
+// Deathty
+// *******
+
+//Arthur Schutz
+
+/obj/item/clothing/under/color/grey/fluff/art_uniform
+	name = "SecCom Uniform"
+	desc = "A standard issue SifGuard uniform for every military officer. Made from advanced fabrics which provide both the physical security and the fashionable security of it's wearer. They are designed with both purposes of utility work and formal work. This uniform has a couple of additional badges on the torso along with the nametag with 'A. Schutz' engraved onto it."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sifguard_fox_s"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sifguard_fox"
+
+
+/obj/item/clothing/suit/storage/vest/hoscoat/art_hos
+	name = "SecCom Jacket"
+	desc = "A SifGuard fleet command jacket often worn by higher ranking SifGuard officers. Comes with an advanced microcarbon fabric which appears like any other fine fabric from a distance along with special ballistic weave enhancements under the fabric with improved fiberglass plates by the torso regions. This specific jacket has the symbol of the Lieutenant rank on each shoulder and above it the writting 'A. Schutz'"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sifguardjacket_fox"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_badge = "sifguardjacket_fox"
+	icon_nobadge = "sifguardjacket_fox"

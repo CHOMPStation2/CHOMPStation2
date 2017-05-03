@@ -103,3 +103,17 @@
 	desc = "A custom made zippo lighter with word 'Mel' engraved in white font on the bottom right corner. It's black, with red lines around the edges."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "melzippo"
+
+// *******
+// Deathty
+// *******
+
+/obj/item/device/modkit_conversion/fluff/art_hos_kit
+	name = "Arthur's modkit"
+	desc = "A kit containing all the needed tools and parts to modify a Head of security armored coat."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/clothing/suit/storage/vest/hoscoat
+	to_suit = /obj/item/clothing/suit/storage/vest/hoscoat/art_hos

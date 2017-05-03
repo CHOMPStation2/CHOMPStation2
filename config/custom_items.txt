@@ -91,6 +91,12 @@ ckey: dawidoe
 character_name: Melissa Krutz
 item_path: /obj/item/weapon/storage/box/fluff/melissa
 }
+
+{
+ckey: deathty
+character_name: Arthur Schutz
+item_path: /obj/item/weapon/storage/box/fluff/art
+}
 # ######## E CKEYS
 # ######## F CKEYS
 # ######## G CKEYS
