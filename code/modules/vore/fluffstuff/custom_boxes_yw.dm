@@ -37,7 +37,7 @@
 	name = "Samantha's Kit"
 	desc = "A kit containing Samantha's equipment."
 	has_items = list(
-		/obj/item/clothing/under/utility/fluff/sam_bodysuit,
+		/obj/item/clothing/under/color/grey/fluff/sam_bodysuit,
 		/obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves,
 		/obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots)
 
@@ -109,4 +109,15 @@
 	desc = "A kit containing Melissa's equipment."
 	has_items = list(
 		/obj/item/weapon/flame/lighter/zippo/fluff/edgy_zippo,
-		/obj/item/clothing/under/rank/security/fluff/melissa_uniform)
+		/obj/item/clothing/under/rank/security/corp/fluff/melissa_uniform)
+
+// *******
+// Deathty
+// *******
+
+/obj/item/weapon/storage/box/fluff/art
+	name = "Arthur's kit"
+	desc = "A kit containing Arthur's equipment."
+	has_items = list(
+		/obj/item/device/modkit_conversion/fluff/art_hos_kit,
+		/obj/item/clothing/under/color/grey/fluff/art_uniform)

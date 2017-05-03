@@ -2336,6 +2336,7 @@
 #include "code\modules\vore\fluffstuff\custom_items_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_items_yw.dm"
 #include "code\modules\vore\fluffstuff\custom_mecha_vr.dm"
+#include "code\modules\vore\fluffstuff\custom_mecha_yw.dm"
 #include "code\modules\vore\fluffstuff\custom_permits_vr.dm"
 #include "code\modules\vore\fluffstuff\MadokaSpear.dm"
 #include "code\modules\vore\fluffstuff\nazirus_yw.dm"
