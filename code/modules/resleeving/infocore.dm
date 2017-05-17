@@ -10,7 +10,7 @@ var/datum/transhuman/infocore/transcore = new/datum/transhuman/infocore
 
 //Mind-backup database
 /datum/transhuman/infocore
-	var/overdue_time = 15 MINUTES
+	var/overdue_time = 5 MINUTES
 	var/process_time = 1 MINUTE
 	var/core_dumped = 0
 
