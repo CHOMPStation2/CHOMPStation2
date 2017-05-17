@@ -126,6 +126,12 @@ item_path: /obj/item/weapon/storage/box/fluff/ally
 }
 
 {
+ckey: izac112
+character_name: Raja Bastet
+item_path: /obj/item/weapon/storage/box/fluff/raja
+}
+
+{
 ckey: ivymoomoo
 character_name: Ivy Baladeva
 item_path: /obj/item/weapon/storage/backpack/messenger/sec/fluff/ivymoomoo

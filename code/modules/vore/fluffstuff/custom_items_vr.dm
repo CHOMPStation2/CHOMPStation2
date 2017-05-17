@@ -36,7 +36,6 @@
 	var/from_suit = /obj/item/clothing/suit/space/void
 	var/to_helmet = /obj/item/clothing/head/cardborg
 	var/to_suit = /obj/item/clothing/suit/cardborg
-
 	//Conversion proc
 	afterattack(obj/O, mob/user as mob)
 		var/flag

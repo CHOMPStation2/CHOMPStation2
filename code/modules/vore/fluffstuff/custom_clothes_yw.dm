@@ -433,9 +433,29 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "pilotboots_mob"
 
+/obj/item/weapon/storage/belt/utility/fluff/sam_belt
+	name = "Mech Pilot Belt"
+	desc = "A white-blue toolbelt with many slots to hold tools in, seems to be made to literally be attached onto a suit."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mechpilot"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mechpilot_mob"
+
+/obj/item/clothing/suit/storage/toggle/fluff/sam_jacket
+	name = "Mech Pilot Jacket"
+	desc = "A black jacket made of genuine leather with blue markings on each shoulder. The letters 'ERT' are stenciled onto the back in gold lettering."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mechjacket"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mechjacket_mob"
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
 // *******
 // Izac112
 // *******
+
+//Ally Faell
 
 /obj/item/clothing/under/fluff/ally_1
 	name = "Skintight bodysuit"
@@ -453,6 +473,42 @@
 	icon_state = "allyuniform"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "allyuniform"
+
+//Raja Bastet
+
+/obj/item/weapon/storage/belt/utility/fluff/raja_belt
+	name = "Mech Engineer Belt"
+	desc = "A black-golden toolbelt with many slots to hold tools in. Also comes with a blue buckle."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mechengineer"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mechengineer_mob"
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/fluff/raja_coat
+	name = "Mech Engineer Coat"
+	desc = "A black winter coat made of genuine leather, decorated with blue markings and an interior made of genuine, white fur. The letters 'ERT' are stenciled onto the back in gold lettering."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "coatmech"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "coatmech_mob"
+
+ /obj/item/clothing/suit/storage/hooded/proc/ToggleHood
+ if(!suittoggled)
+		if(ishuman(loc))
+			var/mob/living/carbon/human/H = src.loc
+			if(H.wear_suit != src)
+				H << "<span class='warning'>You must be wearing [src] to put up the hood!</span>"
+				return
+			if(H.head)
+				H << "<span class='warning'>You're already wearing something on your head!</span>"
+				return
+			else
+				suittoggled = 1
+				icon_state = "[initial(icon_state)]_t,
+				item_state = "[initial(item_state)]_t"
+				H.update_inv_wear_suit()
+	else
+		RemoveHood()
 
 // ***********
 // Johnwolf135
@@ -606,14 +662,13 @@
 
 //Arthur Schutz
 
-/obj/item/clothing/under/color/grey/fluff/art_uniform
+/obj/item/clothing/under/rank/security/corp/fluf/art_uniform
 	name = "SecCom Uniform"
 	desc = "A standard issue SifGuard uniform for every military officer. Made from advanced fabrics which provide both the physical security and the fashionable security of it's wearer. They are designed with both purposes of utility work and formal work. This uniform has a couple of additional badges on the torso along with the nametag with 'A. Schutz' engraved onto it."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "sifguard_fox_s"
+	icon_state = "sifguardfox"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "sifguard_fox"
-
+	item_state = "sifguardfox"
 
 /obj/item/clothing/suit/storage/vest/hoscoat/art_hos
 	name = "SecCom Jacket"
