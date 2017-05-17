@@ -39,7 +39,9 @@
 	has_items = list(
 		/obj/item/clothing/under/color/grey/fluff/sam_bodysuit,
 		/obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves,
-		/obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots)
+		/obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots,
+		/obj/item/clothing/suit/storage/toggle/fluff/sam_jacket,
+		/obj/item/weapon/storage/belt/utility/fluff/sam_belt)
 
 // **************
 //The god himself
@@ -54,6 +56,7 @@
 		/obj/item/clothing/gloves/arm_guard/fluff/madoka_arms,
 		/obj/item/clothing/shoes/leg_guard/fluff/madoka_legs,
 		/obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1)
+
 // **********
 //JohnWolf135
 // **********
@@ -80,12 +83,23 @@
 // Izac112
 // *******
 
+//Ally Faell
+
 /obj/item/weapon/storage/box/fluff/ally
 	name = "Ally's Kit"
 	desc = "A kit containing Ally's equipment."
 	has_items = list(
 		/obj/item/clothing/under/fluff/ally_1,
 		/obj/item/clothing/under/rank/security/corp/fluff/ally_2)
+
+//Raja Bastet
+
+/obj/item/weapon/storage/box/fluff/raja
+	name = "Ally's Kit"
+	desc = "A kit containing Ally's equipment."
+	has_items = list(
+		/obj/item/weapon/storage/belt/utility/fluff/raja_belt,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/fluff/raja_coat)
 
 // **************
 // Admiral Dragon
@@ -109,7 +123,8 @@
 	desc = "A kit containing Melissa's equipment."
 	has_items = list(
 		/obj/item/weapon/flame/lighter/zippo/fluff/edgy_zippo,
-		/obj/item/clothing/under/rank/security/corp/fluff/melissa_uniform)
+		/obj/item/clothing/under/rank/security/corp/fluff/melissa_uniform,
+		/obj/item/device/modkit_conversion/fluff/melissa_gun_kit)
 
 // *******
 // Deathty
@@ -120,4 +135,4 @@
 	desc = "A kit containing Arthur's equipment."
 	has_items = list(
 		/obj/item/device/modkit_conversion/fluff/art_hos_kit,
-		/obj/item/clothing/under/color/grey/fluff/art_uniform)
+		/obj/item/clothing/under/rank/security/corp/fluf/art_uniform)
