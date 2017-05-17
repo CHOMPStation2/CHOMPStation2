@@ -492,24 +492,6 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "coatmech_mob"
 
- /obj/item/clothing/suit/storage/hooded/proc/ToggleHood
- if(!suittoggled)
-		if(ishuman(loc))
-			var/mob/living/carbon/human/H = src.loc
-			if(H.wear_suit != src)
-				H << "<span class='warning'>You must be wearing [src] to put up the hood!</span>"
-				return
-			if(H.head)
-				H << "<span class='warning'>You're already wearing something on your head!</span>"
-				return
-			else
-				suittoggled = 1
-				icon_state = "[initial(icon_state)]_t,
-				item_state = "[initial(item_state)]_t"
-				H.update_inv_wear_suit()
-	else
-		RemoveHood()
-
 // ***********
 // Johnwolf135
 // ***********
