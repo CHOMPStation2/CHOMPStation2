@@ -64,3 +64,23 @@
 		icon_state = "[initial(icon_state)]"
 	else
 		icon_state = "[initial(icon_state)]-empty"
+
+/*******M1911 Custom fluff*******/
+/obj/item/weapon/gun/projectile/fluff/m1911
+	name = "M1911 Custom"
+	desc = "A modernized, customized M1911 pistol with a rail for attachments such as flashlight or laser sight (fooken laser sights). It's engraved, and the engraving says, 'For honorable duty.' It's original, Sol Gov firearm from Earth, not a cheap mars replica."
+	icon_state = "m1911"
+	item_state = "m1911"
+	icon = 'icons/obj/gun_yw.dmi'
+	caliber = ".45"
+	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/semiauto.ogg'
+	magazine_type = /obj/item/ammo_magazine/c45m
+	allowed_magazines = list(/obj/item/ammo_magazine/c45m)
+
+/obj/item/weapon/gun/projectile/m2024/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]-empty"

@@ -104,6 +104,16 @@
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "melzippo"
 
+/obj/item/device/modkit_conversion/fluff/melissa_gun_kit
+	name = "Melissa's modkit"
+	desc = "A kit containing all the needed tools and parts to modify a 45 Pistol."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/weapon/gun/projectile/sec/flash
+	to_suit = /obj/item/weapon/gun/projectile/fluff/m1911
+
 // *******
 // Deathty
 // *******
