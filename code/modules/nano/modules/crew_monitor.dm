@@ -20,7 +20,10 @@
 	var/turf/T = get_turf(nano_host())
 
 	data["isAI"] = isAI(user)
-	data["crewmembers"] = crew_repository.health_data(T)
+	data["map_levels"] = using_map.get_map_levels(T.z, FALSE)
+	data["crewmembers"] = list()
+	for(var/z in (data["map_levels"] | T.z))  // Always show crew from the current Z even if we can't show a map
+		data["crewmembers"] += crew_repository.health_data(z)
 
 	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
