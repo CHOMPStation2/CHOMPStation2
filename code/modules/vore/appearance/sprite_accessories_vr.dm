@@ -872,6 +872,10 @@
 	name = "Wolf (alt)"
 	icon_state = "wolf2_s"
 
+/datum/sprite_accessory/tail/taur/wolf2
+	name = "Wolf (fat)"
+	icon_state = "wolf2f_s"
+
 /datum/sprite_accessory/tail/taur/fox
 	name = "Fox"
 	icon_state = "fox_s"
@@ -879,6 +883,10 @@
 /datum/sprite_accessory/tail/taur/husky
 	name = "Husky"
 	icon_state = "husky_s"
+
+/datum/sprite_accessory/tail/taur/husky
+	name = "Husky (fat)"
+	icon_state = "huskyf_s"
 
 //wickedtemp: Chakat Tempest
 /datum/sprite_accessory/tail/taur/feline/tempest
@@ -891,3 +899,10 @@
 	name = "CyberSerdy (silencedmp5a5)"
 	icon_state = "serdy_s"
 	ckeys_allowed = list("silencedmp5a5")
+
+//liquidfirefly: Ariana Scol
+/datum/sprite_accessory/tail/taur/centipede
+	name = "Centipede (liquidfirefly)"
+	icon_state = "ariana_s"
+	ckeys_allowed = list("liquidfirefly")
+	do_colouration = 0
