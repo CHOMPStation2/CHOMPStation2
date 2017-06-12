@@ -29,7 +29,18 @@
 
 /obj/structure/trash_pile/initialize()
 	..()
-	icon_state = pick("pile1","pile2","pilechair","piletable","pilevending")
+	icon_state = pick(
+		"pile1",
+		"pile2",
+		"pilechair",
+		"piletable",
+		"pilevending",
+		"brtrashpile",
+		"microwavepile",
+		"rackpile",
+		"boxfort",
+		"trashbag",
+		"brokecomp")
 
 /obj/structure/trash_pile/attackby(obj/item/W as obj, mob/user as mob)
 	var/w_type = W.type
@@ -214,7 +225,9 @@
 			prob(4);/obj/item/device/radio_jammer,
 			prob(2);/obj/item/weapon/storage/box/syndie_kit/spy,
 			prob(2);/obj/item/weapon/grenade/anti_photon,
-			prob(1);/obj/item/weapon/cell/hyper/empty)
+			prob(1);/obj/item/weapon/cell/hyper/empty,
+			prob(1);/obj/item/weapon/disk/nifsoft/compliance,
+			prob(1);/obj/item/device/nif/bad)
 
 	var/obj/item/I = new path()
 	return I

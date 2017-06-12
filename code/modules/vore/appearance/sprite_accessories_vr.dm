@@ -872,11 +872,11 @@
 	name = "Wolf (alt)"
 	icon_state = "wolf2_s"
 
-/datum/sprite_accessory/tail/taur/wolf2
+/datum/sprite_accessory/tail/taur/wolff2
 	name = "Wolf (fat)"
 	icon_state = "wolf2f_s"
 
-/datum/sprite_accessory/tail/taur/fox
+/datum/sprite_accessory/tail/taur/fox2
 	name = "Fox"
 	icon_state = "fox_s"
 
@@ -884,7 +884,7 @@
 	name = "Husky"
 	icon_state = "husky_s"
 
-/datum/sprite_accessory/tail/taur/husky
+/datum/sprite_accessory/tail/taur/huskyf
 	name = "Husky (fat)"
 	icon_state = "huskyf_s"
 

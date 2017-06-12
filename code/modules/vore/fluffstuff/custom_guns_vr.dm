@@ -67,7 +67,7 @@
 	item_state = "haloshotgun_i"
 	item_icons = null
 
-	ammo_type = /obj/item/ammo_casing/shotgun
+	ammo_type = /obj/item/ammo_casing/a12g
 	max_shells = 12
 
 // jertheace : Jeremiah 'Ace' Acacius
@@ -75,7 +75,7 @@
 	name = "Ace's M45D Tactical Shotgun" // D-model holds half as many shells as the normal version so as not to be OP as shit. Better than shotgun, worse than combat shotgun.
 	desc = "Owned by the respected (or feared?) veteran Captain of VORE Station. Inscribed on the barrel are the words \"Speak softly, and carry a big stick.\" It has a folding stock so it can fit into bags."
 	w_class = ITEMSIZE_NORMAL // Because collapsable stock so it fits in backpacks.
-	ammo_type = /obj/item/ammo_casing/shotgun/stunshell
+	ammo_type = /obj/item/ammo_casing/a12g/stunshell
 	max_shells = 6
 
 // bwoincognito:Tasald Corlethian
@@ -146,7 +146,7 @@
 	icon_state = "jury"
 	item_state = "gun"
 	accuracy = 0 // Because I know you're not an idiot who needs to be nerfed. -Ace
-	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
+	ammo_type = /obj/item/ammo_casing/a12g/beanbag
 
 // Dhaeleena : Dhaeleena M'iar
 /obj/item/weapon/gun/projectile/revolver/mateba/fluff/dhael
@@ -166,8 +166,14 @@
 	icon_state = "model10"
 	fire_sound = 'sound/weapons/deagle.ogg'
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
-	ammo_type = /obj/item/ammo_casing/c38r //Rubber rounds.
+	ammo_type = /obj/item/ammo_casing/a38r //Rubber rounds.
 
+// LuminescentRing : Briana Moore
+/obj/item/weapon/gun/projectile/derringer/fluff/briana
+	name = "second-hand derringer"
+	desc = "It's a palm sized gun. One of the few things that won't break an angel's wrists."
+	caliber = "10mm"
+	ammo_type = /obj/item/ammo_casing/a10mm
 
 // For general use
 /obj/item/weapon/gun/projectile/automatic/stg
@@ -180,8 +186,8 @@
 	max_shells = 30
 	caliber = "kurz"
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_ILLEGAL = 6)
-	magazine_type = /obj/item/ammo_magazine/stg
-	allowed_magazines = list(/obj/item/ammo_magazine/stg)
+	magazine_type = /obj/item/ammo_magazine/mtg
+	allowed_magazines = list(/obj/item/ammo_magazine/mtg)
 	load_method = MAGAZINE
 
 /obj/item/weapon/gun/projectile/automatic/stg/update_icon(var/ignore_inhands)
@@ -238,8 +244,8 @@
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/mc9mml
-	allowed_magazines = list(/obj/item/ammo_magazine/mc9mm, /obj/item/ammo_magazine/mc9mml)
+	magazine_type = /obj/item/ammo_magazine/m9mml
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mm, /obj/item/ammo_magazine/m9mml)
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -248,7 +254,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/pdw/update_icon(var/ignore_inhands)
 	..()
-	if(istype(ammo_magazine,/obj/item/ammo_magazine/mc9mm))
+	if(istype(ammo_magazine,/obj/item/ammo_magazine/m9mm))
 		icon_state = "pdw-short"
 	else
 		icon_state = (ammo_magazine)? "pdw" : "pdw-empty"
@@ -279,8 +285,8 @@
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 	hitsound = null
 	caliber = "s762"
-	magazine_type = /obj/item/ammo_magazine/s762
-	allowed_magazines = list(/obj/item/ammo_magazine/s762)
+	magazine_type = /obj/item/ammo_magazine/m762
+	allowed_magazines = list(/obj/item/ammo_magazine/m762)
 
 /obj/item/weapon/gun/projectile/automatic/fluff/crestrose/attack_self(mob/user as mob)
 	on = !on
@@ -378,7 +384,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/carbine/fluff/g44/update_icon(var/ignore_inhands)
 	..()
-	// TODO - Fix this for spriting different size magazines	
+	// TODO - Fix this for spriting different size magazines
 	icon_state = (ammo_magazine)? "g44" : "g44-empty"
 	item_state = (ammo_magazine)? "bullpup" : "bullpup-empty"
 	if(!ignore_inhands) update_held_icon()
@@ -461,8 +467,8 @@
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "khipistol"
 	item_state = "gun" // Placeholder
-	magazine_type = /obj/item/ammo_magazine/c45m/flash //Dun wanna KILL all the people.
-	allowed_magazines = list(/obj/item/ammo_magazine/c45m)
+	magazine_type = /obj/item/ammo_magazine/m45/flash //Dun wanna KILL all the people.
+	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 	caliber = ".45"
 	handle_casings = CYCLE_CASINGS
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 5)
@@ -484,8 +490,8 @@
 	slot_flags = SLOT_BELT
 	load_method = MAGAZINE
 	handle_casings = CYCLE_CASINGS
-	magazine_type = /obj/item/ammo_magazine/mc9mml
-	allowed_magazines = list(/obj/item/ammo_magazine/mc9mm, /obj/item/ammo_magazine/mc9mml)
+	magazine_type = /obj/item/ammo_magazine/m9mml
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mm, /obj/item/ammo_magazine/m9mml)
 	dna_lock = 1
 
 	firemodes = list(
@@ -582,8 +588,8 @@
 
 	caliber = ".44"
 	ammo_type = /obj/item/ammo_casing/a44/rubber
-	magazine_type = /obj/item/ammo_magazine/a44/rubber
-	allowed_magazines = list(/obj/item/ammo_magazine/a44,/obj/item/ammo_magazine/a44/rubber)
+	magazine_type = /obj/item/ammo_magazine/m44/rubber
+	allowed_magazines = list(/obj/item/ammo_magazine/m44,/obj/item/ammo_magazine/m44/rubber)
 	load_method = MAGAZINE
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
@@ -609,8 +615,8 @@
 
 	caliber = ".32"
 	ammo_type = /obj/item/ammo_casing/a32
-	magazine_type = /obj/item/ammo_magazine/a32
-	allowed_magazines = list(/obj/item/ammo_magazine/a32)
+	magazine_type = /obj/item/ammo_magazine/m32
+	allowed_magazines = list(/obj/item/ammo_magazine/m32)
 	load_method = MAGAZINE
 	fire_delay = 0.6
 	accuracy = 1
@@ -638,8 +644,8 @@
 
 	caliber = ".32"
 	ammo_type = /obj/item/ammo_casing/a32
-	magazine_type = /obj/item/ammo_magazine/a32
-	allowed_magazines = list(/obj/item/ammo_magazine/a32)
+	magazine_type = /obj/item/ammo_magazine/m32
+	allowed_magazines = list(/obj/item/ammo_magazine/m32)
 	fire_delay = 1.2
 	load_method = MAGAZINE
 	accuracy = 2
@@ -698,9 +704,9 @@
 	slot_flags = SLOT_BELT
 
 	caliber = "9mm"
-	ammo_type = /obj/item/ammo_casing/c9mm
-	magazine_type = /obj/item/ammo_magazine/c9mm
-	allowed_magazines = list(/obj/item/ammo_magazine/c9mm)
+	ammo_type = /obj/item/ammo_casing/a9mm
+	magazine_type = /obj/item/ammo_magazine/m9mm
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 	load_method = MAGAZINE
 	multi_aim = 1
 	burst_delay = 2
@@ -865,7 +871,7 @@
 	impact_type = /obj/effect/projectile/laser_omni/impact
 
 //--------------- StG-60 ----------------
-/obj/item/ammo_magazine/stg
+/obj/item/ammo_magazine/mtg
 	name = "box mag (7.92x33mm Kurz)"
 	icon = 'icons/obj/ammo_vr.dmi'
 	icon_state = "stg_30rnd"
@@ -880,7 +886,7 @@
 	caliber = "kurz"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/ammo_magazine/stg/empty
+/obj/item/ammo_magazine/mtg/empty
 	initial_ammo = 0
 
 //------------- Battlerifle -------------
@@ -908,7 +914,7 @@
 	initial_ammo = 0
 
 //---------------- PDW ------------------
-/obj/item/ammo_magazine/mc9mml
+/obj/item/ammo_magazine/m9mml
 	name = "\improper SMG magazine (9mm)"
 	icon = 'icons/obj/ammo_vr.dmi'
 	icon_state = "smg"
@@ -916,31 +922,31 @@
 	mag_type = MAGAZINE
 	matter = list(DEFAULT_WALL_MATERIAL = 1800)
 	caliber = "9mm"
-	ammo_type = /obj/item/ammo_casing/c9mm
+	ammo_type = /obj/item/ammo_casing/a9mm
 	max_ammo = 30
 	multiple_sprites = 1
 
-/obj/item/ammo_magazine/mc9mml/empty
+/obj/item/ammo_magazine/m9mml/empty
 	initial_ammo = 0
 
-/obj/item/ammo_magazine/mc9mml/ap
+/obj/item/ammo_magazine/m9mml/ap
 	name = "\improper SMG magazine (9mm armor-piercing)"
-	ammo_type = /obj/item/ammo_casing/c9mm/ap
+	ammo_type = /obj/item/ammo_casing/a9mm/ap
 
-/obj/item/ammo_magazine/mc9mml/flash
+/obj/item/ammo_magazine/m9mml/flash
 	name = "\improper SMG magazine (9mm flash)"
-	ammo_type = /obj/item/ammo_casing/c9mmf
+	ammo_type = /obj/item/ammo_casing/a9mmf
 
-/obj/item/ammo_magazine/mc9mml/rubber
+/obj/item/ammo_magazine/m9mml/rubber
 	name = "\improper SMG magazine (9mm rubber)"
-	ammo_type = /obj/item/ammo_casing/c9mmr
+	ammo_type = /obj/item/ammo_casing/a9mmr
 
-/obj/item/ammo_magazine/mc9mml/practice
+/obj/item/ammo_magazine/m9mml/practice
 	name = "\improper SMG magazine (9mm practice)"
-	ammo_type = /obj/item/ammo_casing/c9mmp
+	ammo_type = /obj/item/ammo_casing/a9mmp
 
 //.357 special ammo
-/obj/item/ammo_magazine/a357/stun
+/obj/item/ammo_magazine/m357/stun
 	name = "speedloader (.357 stun)"
 	desc = "A speedloader for .357 revolvers."
 	icon = 'icons/obj/ammo_vr.dmi'
@@ -956,7 +962,7 @@
 	icon_state = "stun357"
 	projectile_type = /obj/item/projectile/energy/electrode/stunshot/strong
 
-/obj/item/ammo_magazine/a357/rubber
+/obj/item/ammo_magazine/m357/rubber
 	name = "speedloader (.357 rubber)"
 	desc = "A speedloader for .357 revolvers."
 	icon = 'icons/obj/ammo_vr.dmi'
@@ -972,7 +978,7 @@
 	icon_state = "rubber357"
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber/strong
 
-/obj/item/ammo_magazine/a357/flash
+/obj/item/ammo_magazine/m357/flash
 	name = "speedloader (.357 flash)"
 	desc = "A speedloader for .357 revolvers."
 	icon = 'icons/obj/ammo_vr.dmi'
@@ -994,7 +1000,7 @@
 	caliber = ".32"
 	projectile_type = /obj/item/projectile/bullet/pistol
 
-/obj/item/ammo_magazine/a32
+/obj/item/ammo_magazine/m32
 	icon_state = "a762"
 	caliber = ".32"
 	ammo_type = /obj/item/ammo_casing/a32
@@ -1015,7 +1021,7 @@
 	desc = "A .44 rubber bullet casing."
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber/strong
 
-/obj/item/ammo_magazine/a44
+/obj/item/ammo_magazine/m44
 	desc = "A magazine for .44 ammo."
 	icon = 'icons/obj/ammo_vr.dmi'
 	icon_state = "44lethal"
@@ -1025,13 +1031,13 @@
 	max_ammo = 8
 	mag_type = MAGAZINE
 
-/obj/item/ammo_magazine/a44/rubber
+/obj/item/ammo_magazine/m44/rubber
 	desc = "A magazine for .44 less-than-lethal ammo."
 	icon_state = "44rubber"
 	ammo_type = /obj/item/ammo_casing/a44/rubber
 
 //.44 speedloaders
-/obj/item/ammo_magazine/a44sl
+/obj/item/ammo_magazine/m44sl
 	name = "speedloader (.44)"
 	desc = "A speedloader for .44 revolvers."
 	icon = 'icons/obj/ammo_vr.dmi'
@@ -1043,7 +1049,7 @@
 	multiple_sprites = 1
 	mag_type = SPEEDLOADER
 
-/obj/item/ammo_magazine/a44sl/rubber
+/obj/item/ammo_magazine/m44sl/rubber
 	name = "speedloader (.44 rubber)"
 	icon_state = "r357"
 	ammo_type = /obj/item/ammo_casing/a44/rubber
