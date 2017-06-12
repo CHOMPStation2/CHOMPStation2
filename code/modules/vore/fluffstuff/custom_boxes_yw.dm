@@ -40,7 +40,7 @@
 		/obj/item/clothing/under/color/grey/fluff/sam_bodysuit,
 		/obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves,
 		/obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots,
-		/obj/item/clothing/suit/storage/toggle/fluff/sam_jacket,
+		/obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket,
 		/obj/item/weapon/storage/belt/utility/fluff/sam_belt)
 
 // **************

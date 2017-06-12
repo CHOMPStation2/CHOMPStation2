@@ -441,7 +441,7 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mechpilot_mob"
 
-/obj/item/clothing/suit/storage/toggle/fluff/sam_jacket
+/obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket
 	name = "Mech Pilot Jacket"
 	desc = "A black jacket made of genuine leather with blue markings on each shoulder. The letters 'ERT' are stenciled onto the back in gold lettering."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -490,7 +490,7 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "coatmech"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "coatmech_mob"
+	icon_state = "coatmech_mob"
 
 // ***********
 // Johnwolf135
