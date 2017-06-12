@@ -78,6 +78,13 @@
 	desc = ""
 	icon_state = "bee"
 
+/datum/sprite_accessory/ears/antennae
+	name = "antennae, colorable"
+	desc = ""
+	icon_state = "antennae"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/ears/oni_h1
 	name = "oni horns"
 	desc = ""
@@ -382,6 +389,48 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/horse
+	name = "horse tail, colorable"
+	desc = ""
+	icon_state = "horse"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/cow
+	name = "cow tail, colorable"
+	desc = ""
+	icon_state = "cow"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/fantail
+	name = "avian fantail, colorable"
+	desc = ""
+	icon_state = "fantail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/faintailwings
+	name = "avian fantail, colorable (+wings)"
+	desc = ""
+	icon_state= "fantailwings"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/wagtail
+	name = "avian wagtail, colorable"
+	desc = ""
+	icon_state = "wagtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/wagtailwings
+	name = "avian wagtail, colorable (+wings)"
+	desc = ""
+	icon_state = "wagtailwings"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/crossfox
 	name = "cross fox"
 	desc = ""
@@ -391,6 +440,11 @@
 	name = "bee thorax (+wings)"
 	desc = ""
 	icon_state = "bee"
+
+/datum/sprite_accessory/tail/beethorax
+	name = "bee thorax"
+	desc = ""
+	icon_state = "beethorax"
 
 /datum/sprite_accessory/tail/beewings
 	name = "bee wings"
@@ -463,6 +517,12 @@
 	desc = ""
 	icon_state = "molenar-kitsune"
 	ckeys_allowed = list("molenar")
+
+/datum/sprite_accessory/tail/liquidfirefly_gazer
+	name = "gazer eyestalks (Liquidfirefly)"
+	desc = ""
+	icon_state = "liquidfirefly-eyestalks"
+	ckeys_allowed = list("liquidfirefly")
 
 /datum/sprite_accessory/tail/miria_fluffdragon
 	name = "fluffdragon wings+tail (Miria Masters)"
@@ -812,6 +872,10 @@
 	name = "Wolf (alt)"
 	icon_state = "wolf2_s"
 
+/datum/sprite_accessory/tail/taur/wolf2
+	name = "Wolf (fat)"
+	icon_state = "wolf2f_s"
+
 /datum/sprite_accessory/tail/taur/fox
 	name = "Fox"
 	icon_state = "fox_s"
@@ -819,6 +883,10 @@
 /datum/sprite_accessory/tail/taur/husky
 	name = "Husky"
 	icon_state = "husky_s"
+
+/datum/sprite_accessory/tail/taur/husky
+	name = "Husky (fat)"
+	icon_state = "huskyf_s"
 
 //wickedtemp: Chakat Tempest
 /datum/sprite_accessory/tail/taur/feline/tempest
@@ -831,3 +899,10 @@
 	name = "CyberSerdy (silencedmp5a5)"
 	icon_state = "serdy_s"
 	ckeys_allowed = list("silencedmp5a5")
+
+//liquidfirefly: Ariana Scol
+/datum/sprite_accessory/tail/taur/centipede
+	name = "Centipede (liquidfirefly)"
+	icon_state = "ariana_s"
+	ckeys_allowed = list("liquidfirefly")
+	do_colouration = 0

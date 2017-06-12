@@ -22,6 +22,14 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 /mob/living/carbon/human
 	holder_type = /obj/item/weapon/holder/micro
 
+// The reverse lookup of player_sizes_list, number to name.
+/proc/player_size_name(var/size_multiplier)
+	// (This assumes list is sorted big->small)
+	for(var/N in player_sizes_list)
+		. = N // So we return the smallest if we get to the end
+		if(size_multiplier >= player_sizes_list[N])
+			return N
+
 /**
  * Scale up the size of a mob's icon by the size_multiplier.
  * NOTE: mob/living/carbon/human/update_icons() has a more complicated system and
@@ -30,6 +38,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
  *	re-evaluate.
  */
 /mob/living/update_icons()
+	. = ..()
 	ASSERT(!ishuman(src))
 	var/matrix/M = matrix()
 	M.Scale(size_multiplier)
@@ -49,15 +58,26 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
  * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
  * It can be used by anything that calls it.
  */
-/mob/living/proc/resize(var/new_size)
-	var/matrix/resize = matrix() // Defines the matrix to change the player's size
-	resize.Scale(new_size) //Change the size of the matrix
-
-	if(new_size >= RESIZE_NORMAL)
-		resize.Translate(0, -1 * (1 - new_size) * 16) //Move the player up in the tile so their feet align with the bottom
-
-	animate(src, transform = resize, time = 5) //Animate the player resizing
+/mob/living/proc/resize(var/new_size, var/animate = TRUE)
+	if(size_multiplier == new_size)
+		return 1
+	if(animate)
+		var/matrix/resize = matrix() // Defines the matrix to change the player's size
+		resize.Scale(new_size) //Change the size of the matrix
+		resize.Translate(0, 16 * (new_size - 1)) //Move the player up in the tile so their feet align with the bottom
+		animate(src, transform = resize, time = 5) //Animate the player resizing
 	size_multiplier = new_size //Change size_multiplier so that other items can interact with them
+
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE)
+	if(..()) return 1
+	var/new_y_offset = 32 * (size_multiplier - 1)
+	for(var/I in hud_list)
+		var/image/hud_overlay/HI = I
+		HI.pixel_y = new_y_offset
+
+// Optimize mannequins - never a point to animating or doing HUDs on these.
+/mob/living/carbon/human/dummy/mannequin/resize(var/new_size)
+	size_multiplier = new_size
 
 /**
  * Verb proc for a command that lets players change their size OOCly.

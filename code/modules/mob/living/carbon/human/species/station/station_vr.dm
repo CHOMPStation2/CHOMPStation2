@@ -7,13 +7,13 @@
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	darksight = 8
-	slowdown = -1
+	slowdown = -0.5
 	//brute_mod = 1.15
 	//burn_mod =  1.15
 	//gluttonous = 1
 	num_alternate_languages = 3
-	secondary_langs = list("Sagaru")
-	name_language = "Sagaru"
+	secondary_langs = list(LANGUAGE_SAGARU)
+	name_language = LANGUAGE_SAGARU
 	color_mult = 1
 
 	min_age = 18
@@ -34,7 +34,7 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#AFA59E"
-	base_color = "#333333"
+	base_color = "#777777"
 
 	reagent_tag = IS_SERGAL
 
@@ -79,10 +79,13 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#AFA59E"
-	base_color = "#333333"
+	base_color = "#777777"
 	blood_color = "#1D2CBF"
 
 	reagent_tag = IS_AKULA
+
+/datum/species/akula/can_breathe_water()
+	return TRUE // Surprise, SHERKS.
 
 /datum/species/nevrean
 	name = "Nevrean"
@@ -98,8 +101,8 @@
 	//burn_mod =  1.15
 	//gluttonous = 1
 	num_alternate_languages = 3
-	secondary_langs = list("Birdsong")
-	name_language = "Birdsong"
+	secondary_langs = list(LANGUAGE_BIRDSONG)
+	name_language = LANGUAGE_BIRDSONG
 	color_mult = 1
 
 	min_age = 18
@@ -136,8 +139,8 @@
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	num_alternate_languages = 3
-	secondary_langs = list("Siik'tajr")
-	name_language = "Siik'tajr"
+	secondary_langs = list(LANGUAGE_SIIK)
+	name_language = LANGUAGE_SIIK
 
 	min_age = 18
 	max_age = 110
@@ -180,8 +183,8 @@
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
 	num_alternate_languages = 3
-	secondary_langs = list("Siik'tajr")
-	name_language = "Siik'tajr"
+	secondary_langs = list(LANGUAGE_SIIK)
+	name_language = LANGUAGE_SIIK
 
 	min_age = 18
 	max_age = 110
@@ -223,8 +226,8 @@
 	deform = 'icons/mob/human_races/r_vulpkanin.dmi'
 //	path = /mob/living/carbon/human/vulpkanin
 //	default_language = "Sol Common"
-	secondary_langs = list("Canilunzt")
-	name_language = "Canilunzt"
+	secondary_langs = list(LANGUAGE_CANILUNZT)
+	name_language = LANGUAGE_CANILUNZT
 	primitive_form = "Wolpin"
 	tail = "vulptail"
 	tail_animation = 'icons/mob/species/vulpkanin/tail.dmi' // probably need more than just one of each, but w/e

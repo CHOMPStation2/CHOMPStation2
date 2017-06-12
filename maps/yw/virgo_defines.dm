@@ -1,12 +1,12 @@
 
 //#define Z_LEVEL_BASEMENT_YW					1
-#define Z_LEVEL_MAIN_YW						2
-#define Z_LEVEL_CENTCOM_YW					3
-#define Z_LEVEL_TELECOMMS_YW				4
-#define Z_LEVEL_ABANDONED_ASTEROID_YW		5
-#define Z_LEVEL_MINING_YW					6
-#define Z_LEVEL_EMPTY_YW					7
-#define Z_LEVEL_ABELT_YW					8
+#define Z_LEVEL_MAIN_YW						1
+#define Z_LEVEL_CENTCOM_YW					2
+#define Z_LEVEL_TELECOMMS_YW				3
+#define Z_LEVEL_ABANDONED_ASTEROID_YW		4
+#define Z_LEVEL_MINING_YW					5
+#define Z_LEVEL_EMPTY_YW					6
+#define Z_LEVEL_ABELT_YW					7
 
 /datum/map/yw
 	name = "Yawn"
