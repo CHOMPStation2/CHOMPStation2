@@ -39,11 +39,11 @@
 
 /obj/effect/overlay/aiholo/Destroy()
 	drop_prey()
-	..()
+	return ..()
 
 /mob/living/silicon/ai/verb/holo_nom()
 	set name = "Hardlight Nom"
-	set category = "Vore"
+	set category = "AI Commands"
 	set desc = "Wrap up a person in hardlight holograms."
 
 	// Wrong state

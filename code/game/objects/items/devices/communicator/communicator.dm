@@ -256,7 +256,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	if(exonet)
 		exonet.remove_address()
 		exonet = null
-	..()
+	return ..()
 
 // Proc: ui_interact()
 // Parameters: 4 (standard NanoUI arguments)
@@ -803,7 +803,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	if(exonet)
 		exonet.remove_address()
 		exonet = null
-	..()
+	return ..()
 
 // Proc: update_icon()
 // Parameters: None
