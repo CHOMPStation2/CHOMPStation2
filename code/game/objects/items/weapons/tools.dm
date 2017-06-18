@@ -434,7 +434,7 @@
 
 /obj/item/weapon/weldingtool/experimental/Destroy()
 	processing_objects -= src
-	..()
+	return ..()
 
 /obj/item/weapon/weldingtool/experimental/process()
 	..()
