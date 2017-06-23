@@ -207,7 +207,7 @@ Works together with spawning an observer, noted above.
 /*
 This is the proc mobs get to turn into a ghost. Forked from ghostize due to compatibility issues.
 */
-/*/mob/living/verb/ghost()
+/mob/living/verb/ghost()
 	set category = "OOC"
 	set name = "Ghost"
 	set desc = "Relinquish your life and enter the land of the dead."
@@ -232,7 +232,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		log_game("[key_name_admin(usr)] has ghosted.")
 		var/mob/observer/dead/ghost = ghostize(0)	//0 parameter is so we can never re-enter our body, "Charlie, you can never come baaaack~" :3
 		ghost.timeofdeath = world.time // Because the living mob won't have a time of death and we want the respawn timer to work properly.
-		announce_ghost_joinleave(ghost)*/
+		announce_ghost_joinleave(ghost)
 
 /mob/observer/dead/can_use_hands()	return 0
 /mob/observer/dead/is_active()		return 0
