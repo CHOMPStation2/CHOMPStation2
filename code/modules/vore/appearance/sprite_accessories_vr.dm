@@ -471,6 +471,13 @@
 	desc = ""
 	icon_state = "succubus-black"
 
+/datum/sprite_accessory/tail/doublekitsune
+	name = "double kitsune tail, colorable"
+	desc = ""
+	icon_state = "doublekitsune"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/succubus_color
 	name = "succubus, colorable (+wings)"
 	desc = ""
@@ -518,11 +525,19 @@
 	icon_state = "molenar-kitsune"
 	ckeys_allowed = list("molenar")
 
+/datum/sprite_accessory/tail/harpywings
+	name = "harpy wings, colorable"
+	desc = ""
+	icon_state = "harpywings"
+	do_colouration = 1
+	show_species_tail = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/liquidfirefly_gazer
 	name = "gazer eyestalks (Liquidfirefly)"
 	desc = ""
 	icon_state = "liquidfirefly-eyestalks"
-	ckeys_allowed = list("liquidfirefly")
+	ckeys_allowed = list("liquidfirefly","seiga")
 
 /datum/sprite_accessory/tail/miria_fluffdragon
 	name = "fluffdragon wings+tail (Miria Masters)"
@@ -872,11 +887,11 @@
 	name = "Wolf (alt)"
 	icon_state = "wolf2_s"
 
-/datum/sprite_accessory/tail/taur/wolf2
+/datum/sprite_accessory/tail/taur/wolff2
 	name = "Wolf (fat)"
 	icon_state = "wolf2f_s"
 
-/datum/sprite_accessory/tail/taur/fox
+/datum/sprite_accessory/tail/taur/fox2
 	name = "Fox"
 	icon_state = "fox_s"
 
@@ -884,7 +899,7 @@
 	name = "Husky"
 	icon_state = "husky_s"
 
-/datum/sprite_accessory/tail/taur/husky
+/datum/sprite_accessory/tail/taur/huskyf
 	name = "Husky (fat)"
 	icon_state = "huskyf_s"
 

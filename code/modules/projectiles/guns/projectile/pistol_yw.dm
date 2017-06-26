@@ -8,8 +8,8 @@
 	caliber = "9mm"
 	load_method = MAGAZINE
 	fire_sound = 'sound/weapons/semiauto.ogg'
-	magazine_type = /obj/item/ammo_magazine/mc9mm
-	allowed_magazines = list(/obj/item/ammo_magazine/mc9mm)
+	magazine_type = /obj/item/ammo_magazine/m9mm
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 
 	firemodes = list(
 	list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -34,8 +34,8 @@
 	caliber = "9mm"
 	load_method = MAGAZINE
 	fire_sound = 'sound/weapons/semiauto.ogg'
-	magazine_type = /obj/item/ammo_magazine/mc9mm
-	allowed_magazines = list(/obj/item/ammo_magazine/mc9mm)
+	magazine_type = /obj/item/ammo_magazine/m9mm
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 
 /obj/item/weapon/gun/projectile/ppk/update_icon()
 	..()
@@ -56,7 +56,7 @@
 	load_method = MAGAZINE
 	fire_sound = 'sound/weapons/semiauto.ogg'
 	magazine_type = /obj/item/ammo_magazine/c45m2024
-	allowed_magazines = list(/obj/item/ammo_magazine/c45m2024,/obj/item/ammo_magazine/c45m)
+	allowed_magazines = list(/obj/item/ammo_magazine/c45m2024,/obj/item/ammo_magazine/m45)
 
 /obj/item/weapon/gun/projectile/m2024/update_icon()
 	..()
@@ -75,8 +75,8 @@
 	caliber = ".45"
 	load_method = MAGAZINE
 	fire_sound = 'sound/weapons/semiauto.ogg'
-	magazine_type = /obj/item/ammo_magazine/c45m
-	allowed_magazines = list(/obj/item/ammo_magazine/c45m)
+	magazine_type = /obj/item/ammo_magazine/m45
+	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 
 /obj/item/weapon/gun/projectile/m2024/update_icon()
 	..()

@@ -278,8 +278,8 @@
 // OOC Escape code for pref-breaking or AFK preds
 //
 /mob/living/proc/escapeOOC()
-	set name = "OOC escape"
-	set category = "Vore"
+	set name = "OOC Escape"
+	set category = "OOC"
 
 	//You're in an animal!
 	if(istype(src.loc,/mob/living/simple_animal))
@@ -429,9 +429,12 @@
 
 // This is about 0.896m^3 of atmosphere
 /datum/gas_mixture/belly_air
-	volume = 1000
-	gas = list(
-		"oxygen" = 21,
-		"nitrogen" = 79)
-	temperature = 293.150
-	total_moles = 40
+    volume = 1000
+    temperature = 293.150
+    total_moles = 40
+
+/datum/gas_mixture/belly_air/New()
+    . = ..()
+    gas = list(
+        "oxygen" = 21,
+        "nitrogen" = 79)
