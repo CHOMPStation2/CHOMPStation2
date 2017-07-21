@@ -40,6 +40,20 @@ var/global/list/important_items = list(
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/weapon/disk/nuclear)
 
+var/global/list/digestion_sounds = list(
+		'sound/vore/digest1.ogg',
+		'sound/vore/digest2.ogg',
+		'sound/vore/digest3.ogg',
+		'sound/vore/digest4.ogg',
+		'sound/vore/digest5.ogg',
+		'sound/vore/digest6.ogg',
+		'sound/vore/digest7.ogg',
+		'sound/vore/digest8.ogg',
+		'sound/vore/digest9.ogg',
+		'sound/vore/digest10.ogg',
+		'sound/vore/digest11.ogg',
+		'sound/vore/digest12.ogg')
+
 var/global/list/death_sounds = list(
 		'sound/vore/death1.ogg',
 		'sound/vore/death2.ogg',
