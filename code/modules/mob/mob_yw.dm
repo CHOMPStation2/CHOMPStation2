@@ -60,6 +60,12 @@ mob/proc/getoff()
 		src.verbs -= /mob/proc/getoff
 		visible_message("<span class='notice'>[mobonback.name] gets thrown off of [src.name] by [usr.name]!</span>")
 
+mob/proc/knockedoff()
+	if(mobonback)
+		unrideback(pick(0, 1, 2, 4, 8))
+		visible_message("<span class='notice'>[mobonback.name] is knocked off of [src.name]!</span>")
+		src.verbs -= /mob/proc/getoff
+
 
 //Load the object "inside" the trolley and add an overlay of it.
 //This prevents the object from being interacted with until it has

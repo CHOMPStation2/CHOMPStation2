@@ -963,6 +963,8 @@ default behaviour is:
 		if(l_hand) unEquip(l_hand)
 		if(r_hand) unEquip(r_hand)
 		update_water() // Submerges the mob.
+		if(mobonback)
+			knockedoff()
 	else
 		density = initial(density)
 
