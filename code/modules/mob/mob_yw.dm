@@ -28,6 +28,11 @@ mob/proc/ride()
 
 	if(mobonback)
 		usr << "There is already someone occupying [src.name]'s back!"
+		return
+
+	if(usr.size_multiplier > src.size_multiplier)
+		usr << "You're too big to climb onto [src.name]!"
+		return
 
 	visible_message("<span class='notice'>[usr.name] begins climbing on [src.name]'s back.</span>")
 
