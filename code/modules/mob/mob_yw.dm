@@ -30,7 +30,9 @@ mob/proc/ride()
 		usr << "There is already someone occupying [src.name]'s back!"
 		return
 
-	if(usr.size_multiplier > src.size_multiplier)
+	var/mob/living/M = usr
+	var/mob/living/L = src
+	if(M && L && M.size_multiplier > L.size_multiplier)
 		usr << "You're too big to climb onto [src.name]!"
 		return
 
