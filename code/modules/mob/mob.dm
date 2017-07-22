@@ -1012,7 +1012,10 @@ mob/proc/yank_out_object()
 		else if(dir != facing_dir)
 			return ..(facing_dir)
 	else
-		return ..()
+		var/returnval = ..()
+		if(mobonback)
+			update_icons()
+		return returnval
 
 /mob/verb/northfaceperm()
 	set hidden = 1

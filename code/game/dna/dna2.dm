@@ -171,6 +171,9 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	if(istype(character.tail_style, taurtype))
 		character.verbs += /mob/proc/weaveWebBindings
 
+	if(istype(character.tail_style, /datum/sprite_accessory/tail/taur))
+		character.verbs += /mob/proc/ride
+
 
 	// Technically custom_species is not part of the UI, but this place avoids merge problems.
 	src.custom_species = character.custom_species
