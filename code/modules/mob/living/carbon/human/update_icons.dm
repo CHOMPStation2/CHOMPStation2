@@ -171,6 +171,23 @@ Please contact me on #coderbus IRC. ~Carn x
 		M.Translate(0, 16*(size_multiplier-1))
 		src.transform = M
 
+	if(mobonback)
+		if(mobonback.layer < layer)
+			mobonback.layer = layer + 0.1
+
+		if(dir == NORTH)
+			mobonback.pixel_x = 0
+		else if(dir == SOUTH)
+			mobonback.pixel_x = 0
+			mobonback.layer = layer - 0.1
+		else if(dir == EAST)
+			mobonback.pixel_x = -9
+		else if(dir == WEST)
+			mobonback.pixel_x = 9
+
+		mobonback.pixel_y = 9
+		overlays += mobonback
+
 var/global/list/damage_icon_parts = list()
 
 //DAMAGE OVERLAYS

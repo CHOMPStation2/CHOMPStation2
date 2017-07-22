@@ -1675,6 +1675,7 @@
 #include "code\modules\mob\mob_helpers.dm"
 #include "code\modules\mob\mob_movement.dm"
 #include "code\modules\mob\mob_transformation_simple.dm"
+#include "code\modules\mob\mob_yw.dm"
 #include "code\modules\mob\modifiers.dm"
 #include "code\modules\mob\say.dm"
 #include "code\modules\mob\say_vr.dm"
