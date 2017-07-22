@@ -1010,20 +1010,12 @@ mob/proc/yank_out_object()
 		if(!canface() || lying || buckled || restrained())
 			facing_dir = null
 		else if(dir != facing_dir)
-
-			if(mobonback)
-				if(dir == NORTH)
-					mobonback.pixel_x = 0
-				else if(dir == SOUTH)
-					mobonback.pixel_x = 0
-				else if(dir == EAST)
-					mobonback.pixel_x = -9
-				else if(dir == WEST)
-					mobonback.pixel_x = 9
-
 			return ..(facing_dir)
 	else
-		return ..()
+		var/returnval = ..()
+		if(mobonback)
+			update_icons()
+		return returnval
 
 /mob/verb/northfaceperm()
 	set hidden = 1

@@ -181,9 +181,9 @@ Please contact me on #coderbus IRC. ~Carn x
 			mobonback.pixel_x = 0
 			mobonback.layer = layer - 0.1
 		else if(dir == EAST)
-			mobonback.pixel_x = -9
+			mobonback.pixel_x = -12
 		else if(dir == WEST)
-			mobonback.pixel_x = 9
+			mobonback.pixel_x = 12
 
 		mobonback.pixel_y = 9
 		overlays += mobonback

@@ -76,9 +76,20 @@ mob/proc/rideback(var/atom/movable/C)
 	C.forceMove(src)
 	mobonback = C
 
-	C.pixel_y += 9
 	if(C.layer < layer)
 		C.layer = layer + 0.1
+
+	if(dir == NORTH)
+		C.pixel_x = 0
+	else if(dir == SOUTH)
+		C.pixel_x = 0
+		C.layer = layer - 0.1
+	else if(dir == EAST)
+		C.pixel_x = -12
+	else if(dir == WEST)
+		C.pixel_x = 12
+
+	C.pixel_y += 9
 	overlays += C
 
 	return 1
