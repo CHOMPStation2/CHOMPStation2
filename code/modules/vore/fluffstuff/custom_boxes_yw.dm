@@ -11,7 +11,7 @@
 		/obj/item/clothing/suit/storage/fluff/fedcoat/amara_jacket,
 		/obj/item/clothing/head/beret/amara_beret,
 		/obj/item/clothing/gloves/fluff/amara_gloves,
-		/obj/item/weapon/flame/lighter/zippo/fluff/bloodzippo,
+		/obj/item/weapon/flame/lighter/zippo/fluff/amara,
 		/obj/item/clothing/under/fluff/amara_uniform,
 		/obj/item/clothing/shoes/boots/jackboots/fluff/amara_boots,
 		/obj/item/clothing/accessory/collar/fluff/amara_collar,
@@ -37,7 +37,7 @@
 	name = "Samantha's Kit"
 	desc = "A kit containing Samantha's equipment."
 	has_items = list(
-		/obj/item/clothing/under/color/grey/fluff/sam_bodysuit,
+		/obj/item/clothing/under/rank/security/corp/fluff/sam_bodysuit,
 		/obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves,
 		/obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots,
 		/obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket,
@@ -95,7 +95,7 @@
 //Raja Bastet
 
 /obj/item/weapon/storage/box/fluff/raja
-	name = "Ally's Kit"
+	name = "Raja's Kit"
 	desc = "A kit containing Ally's equipment."
 	has_items = list(
 		/obj/item/weapon/storage/belt/utility/fluff/raja_belt,
@@ -122,7 +122,7 @@
 	name = "Melissa's kit"
 	desc = "A kit containing Melissa's equipment."
 	has_items = list(
-		/obj/item/weapon/flame/lighter/zippo/fluff/edgy_zippo,
+		/obj/item/weapon/flame/lighter/zippo/fluff/melissa,
 		/obj/item/clothing/under/rank/security/corp/fluff/melissa_uniform,
 		/obj/item/device/modkit_conversion/fluff/melissa_gun_kit)
 
