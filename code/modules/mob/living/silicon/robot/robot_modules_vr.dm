@@ -76,13 +76,22 @@
 	src.modules += new /obj/item/weapon/extinguisher/mini(src) //So they can put burning patients out.
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo(src)//So medi-hounds aren't nearly useless
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the chemicals when the chemist is nice
+	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
+	R.icon = 'icons/mob/widerobot_vr.dmi'
 
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the chemicals when the chemist is nice	src.modules += new /obj/item/weapon/crowbar(src)	R.icon = 'icons/mob/widerobot_vr.dmi'
+	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test	src.modules += new /obj/item/weapon/crowbar(src)'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	//R.icon_state = "medihound"
 	R.pixel_x 	 = -16
 	R.old_x  	 = -16
 	..()
+
+/obj/item/weapon/robot_module/robot/medical/surgeon/New()
+	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
+
+/obj/item/weapon/robot_module/robot/medical/crisis/New()
+	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 
 /obj/item/weapon/robot_module/ert
 	name = "Emergency Responce module"

@@ -473,7 +473,7 @@
 		return
 	if(istype(I, /obj/item/weapon/screwdriver))
 		panelopen = !panelopen
-		playsound(src.loc, 'sound/items/Screwdriver.ogg', 100, 1)
+		playsound(src, I.usesound, 100, 1)
 		user << text("<font color='blue'>You [] the unit's maintenance panel.</font>",(panelopen ? "open up" : "close"))
 		updateUsrDialog()
 		return
@@ -588,7 +588,7 @@
 	//Departments that the cycler can paint suits to look like.
 	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control")
 	//Species that the suits can be configured to fit.
-	var/list/species = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid") //VORESTATION EDIT
+	var/list/species = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid", "Xenochimera","Vasilissan") //VORESTATION EDIT
 
 	var/target_department
 	var/target_species
@@ -692,6 +692,7 @@
 	else if(istype(I,/obj/item/weapon/screwdriver))
 
 		panel_open = !panel_open
+		playsound(src, I.usesound, 50, 1)
 		user << "You [panel_open ?  "open" : "close"] the maintenance panel."
 		updateUsrDialog()
 		return
@@ -752,7 +753,7 @@
 	//Clear the access reqs, disable the safeties, and open up all paintjobs.
 	user << "<span class='danger'>You run the sequencer across the interface, corrupting the operating protocols.</span>"
 	departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Crowd Control","Emergency Medical Response","^%###^%$")
-	species = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid") //VORESTATION EDIT
+	species = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid", "Vasilissan") //VORESTATION EDIT
 
 	emagged = 1
 	safeties = 0

@@ -29,6 +29,7 @@
 		create_objects_in_loc(src, will_contain)
 
 	if(!opened)		// if closed, any item at the crate's loc is put in the contents
+		if(istype(loc, /mob/living)) return //VOREStation Edit - No collecting mob organs if spawned inside mob
 		var/obj/item/I
 		for(I in src.loc)
 			if(I.density || I.anchored || I == src) continue
@@ -218,6 +219,7 @@
 				else
 					user << "<span class='notice'>You need more welding fuel to complete this task.</span>"
 					return
+			playsound(src, WT.usesound, 50)
 			new /obj/item/stack/material/steel(src.loc)
 			for(var/mob/M in viewers(src))
 				M.show_message("<span class='notice'>\The [src] has been cut apart by [user] with \the [WT].</span>", 3, "You hear welding.", 2)
@@ -249,6 +251,7 @@
 			else
 				user << "<span class='notice'>You need more welding fuel to complete this task.</span>"
 				return
+		playsound(src, WT.usesound, 50)
 		src.welded = !src.welded
 		src.update_icon()
 		for(var/mob/M in viewers(src))
@@ -259,7 +262,8 @@
 				user.visible_message("\The [user] begins unsecuring \the [src] from the floor.", "You start unsecuring \the [src] from the floor.")
 			else
 				user.visible_message("\The [user] begins securing \the [src] to the floor.", "You start securing \the [src] to the floor.")
-			if(do_after(user, 20))
+			playsound(src, W.usesound, 50)
+			if(do_after(user, 20 * W.toolspeed))
 				if(!src) return
 				user << "<span class='notice'>You [anchored? "un" : ""]secured \the [src]!</span>"
 				anchored = !anchored

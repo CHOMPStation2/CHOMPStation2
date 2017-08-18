@@ -37,9 +37,8 @@
 		/obj/item/clothing/suit/storage/det_suit/fluff/tasald,
 		/obj/item/clothing/suit/storage/det_suit/fluff/tas_coat,
 		/obj/item/clothing/under/det/fluff/tasald,
-		//Commented out since expired. Uncomment if renewed.
-		///obj/item/fluff/permit/tasald_corlethian,
-		///obj/item/weapon/gun/projectile/revolver/mateba/fluff/tasald_corlethian,
+		/obj/item/fluff/permit/tasald_corlethian,
+		/obj/item/weapon/gun/projectile/revolver/mateba/fluff/tasald_corlethian,
 		/obj/item/weapon/implanter/loyalty)
 
 //bwoincognito:Octavious Ward
@@ -138,7 +137,7 @@
 	New()
 		..()
 		new /obj/item/clothing/head/beretg(src)
-		new /obj/item/weapon/card/id/fluff/ivyholoid(src)
+		new /obj/item/device/fluff/id_kit_ivy(src)
 		new /obj/item/weapon/storage/fancy/cigarettes/dromedaryco(src)
 		new /obj/item/weapon/storage/box/matches(src)
 		new /obj/item/weapon/reagent_containers/food/snacks/sliceable/plaincake(src)

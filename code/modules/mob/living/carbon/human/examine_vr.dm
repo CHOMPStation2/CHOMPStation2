@@ -112,7 +112,6 @@
 		return ""
 
 	var/message = ""
-
 	for (var/I in src.vore_organs)
 		var/datum/belly/B = vore_organs[I]
 		message += B.get_examine_msg()
@@ -141,3 +140,16 @@
 					return TRUE
 
 	return FALSE
+
+/mob/living/carbon/human/proc/examine_pickup_size(mob/living/carbon/human/H)
+	var/message = ""
+	if((H.get_effective_size() - src.get_effective_size()) >= 0.50)
+		message = "<font color='blue'>They are small enough that you could easily pick them up!</font>\n"
+	return message
+
+
+/mob/living/carbon/human/proc/examine_step_size(mob/living/carbon/human/H)
+	var/message = ""
+	if((H.get_effective_size() - src.get_effective_size()) >= 0.75)
+		message = "<font color='red'>They are small enough that you could easily trample them!</font>\n"
+	return message

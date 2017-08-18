@@ -158,7 +158,7 @@
 
 	if (disabilities & EPILEPSY)
 		if ((prob(1) && paralysis < 1))
-			src << "\red You have a seizure!"
+			src << "<font color='red'>You have a seizure!</font>"
 			for(var/mob/O in viewers(src, null))
 				if(O == src)
 					continue
@@ -808,6 +808,7 @@
 			var/total_phoronloss = 0
 			for(var/obj/item/I in src)
 				if(I.contaminated)
+					if(check_belly(I)) continue //VOREStation Edit
 					if(src.species && src.species.get_bodytype() != "Vox")
 						total_phoronloss += vsc.plc.CONTAMINATION_LOSS
 			if(!(status_flags & GODMODE)) adjustToxLoss(total_phoronloss)
@@ -1129,10 +1130,16 @@
 				see_invisible = SEE_INVISIBLE_LIVING
 				seer = 0
 
+		if(!seedarkness)
+			sight = species.get_vision_flags(src)
+			see_in_dark = 8
+			see_invisible = SEE_INVISIBLE_NOLIGHTING
+
 		else
 			sight = species.get_vision_flags(src)
 			see_in_dark = species.darksight
 			see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : SEE_INVISIBLE_LIVING
+
 		var/tmp/glasses_processed = 0
 		var/obj/item/weapon/rig/rig = back
 		if(istype(rig) && rig.visor)
@@ -1151,7 +1158,7 @@
 
 		if(!glasses_processed && (species.get_vision_flags(src) > 0))
 			sight |= species.get_vision_flags(src)
-		if(!seer && !glasses_processed)
+		if(!seer && !glasses_processed && seedarkness)
 			see_invisible = SEE_INVISIBLE_LIVING
 
 		if(healths)
