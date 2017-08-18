@@ -46,7 +46,6 @@
 	max_shells = 36
 	caliber = "9.5x40mm"
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
-	ammo_type = /obj/item/ammo_casing/a95mm
 	magazine_type = /obj/item/ammo_magazine/battlerifle
 	allowed_magazines = list(/obj/item/ammo_magazine/battlerifle)
 	fire_sound = 'sound/weapons/battlerifle.ogg'
@@ -81,7 +80,7 @@
 // bwoincognito:Tasald Corlethian
 /obj/item/weapon/gun/projectile/revolver/mateba/fluff/tasald_corlethian //Now that it is actually Single-Action and not hacky broken SA, I see no reason to nerf this down to .38. --Joan Risu
 	name = "Big Iron revolver"
-	desc = "A .357 revolver for veteran rangers on the planet Orta. The right side of the handle has a logo for Quarion industries, and the left is the Rangers. The primary ammo for this gun is .38 rubber. According to the CentCom Chief of Security, this revolver was more controversial than it needed to be."
+	desc = "A .357 revolver for veteran rangers on the planet Orta. The right side of the handle has a logo for Quarion industries, and the left is the Rangers. The primary ammo for this gun is .357 rubber. According to the CentCom Chief of Security, this revolver was more controversial than it needed to be."
 
 	icon = 'icons/vore/custom_guns_vr.dmi'
 	icon_state = "tasaldrevolver"
@@ -171,7 +170,7 @@
 // LuminescentRing : Briana Moore
 /obj/item/weapon/gun/projectile/derringer/fluff/briana
 	name = "second-hand derringer"
-	desc = "It's a palm sized gun. One of the few things that won't break an angel's wrists."
+	desc = "It's a palm sized gun. One of the few things that won't break an angel's wrists. Uses 10mm rounds."
 	caliber = "10mm"
 	ammo_type = /obj/item/ammo_casing/a10mm
 
@@ -353,7 +352,8 @@
 		icon_state = "tranqgun"
 	return 1
 
-//-----------------------UF-ARC----------------------------------
+// Removed because gun64_vr.dmi guns don't work.
+/*//-----------------------UF-ARC----------------------------------
 /obj/item/weapon/gun/projectile/automatic/carbine/fluff/ufarc
 	name = "UF-ARC"
 	desc = "The UF-ARC is a lightweight assault rifle manufactured by the National Armory of Gaia and sold almost exclusively to the United Federation's standing army, the Military Assault Command Operations Department (MACOs)."
@@ -415,7 +415,7 @@
 		list(mode_name="stun burst", burst=3, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/stun/weak, modifystate="g44estun", fire_sound='sound/weapons/Taser.ogg'),
 		list(mode_name="lethal", burst=1, projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="g44ekill", fire_sound='sound/weapons/Laser.ogg', charge_cost = 200),
 		list(mode_name="lethal burst", burst=3, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="g44ekill", fire_sound='sound/weapons/Laser.ogg'),
-		)
+		)*/
 
 
 // molenar:Kari Akiren
@@ -471,7 +471,6 @@
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 
 	caliber = ".44"
-	ammo_type = /obj/item/ammo_casing/a44/rubber
 	magazine_type = /obj/item/ammo_magazine/m44/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m44,/obj/item/ammo_magazine/m44/rubber)
 	load_method = MAGAZINE
@@ -498,7 +497,6 @@
 	icon_state = "giskardcivil"
 
 	caliber = ".32"
-	ammo_type = /obj/item/ammo_casing/a32
 	magazine_type = /obj/item/ammo_magazine/m32
 	allowed_magazines = list(/obj/item/ammo_magazine/m32)
 	load_method = MAGAZINE
@@ -507,7 +505,7 @@
 
 	w_class = ITEMSIZE_SMALL
 
-	fire_sound = 'sound/weapons/Gunshot_light.ogg'
+	fire_sound = 'sound/weapons/semiauto.ogg'
 
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 3)
 
@@ -527,14 +525,13 @@
 	icon_state = "olivawcivil"
 
 	caliber = ".32"
-	ammo_type = /obj/item/ammo_casing/a32
 	magazine_type = /obj/item/ammo_magazine/m32
 	allowed_magazines = list(/obj/item/ammo_magazine/m32)
 	fire_delay = 1.2
 	load_method = MAGAZINE
 	accuracy = 2
 
-	fire_sound = 'sound/weapons/Gunshot_light.ogg'
+	fire_sound = 'sound/weapons/semiauto.ogg'
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=1.2,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -553,7 +550,7 @@
 //Detective gun
 /obj/item/weapon/gun/projectile/revolver/consul
 	name = "FS REV .44 \"Consul\""
-	desc = "Are you feeling lucky, punk? Uses .44 ammo."
+	desc = "Are you feeling lucky, punk? Uses .44 rounds."
 
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "inspector"
@@ -588,7 +585,6 @@
 	slot_flags = SLOT_BELT
 
 	caliber = "9mm"
-	ammo_type = /obj/item/ammo_casing/a9mm
 	magazine_type = /obj/item/ammo_magazine/m9mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 	load_method = MAGAZINE
@@ -796,11 +792,15 @@
 	projectile_type = /obj/item/projectile/bullet/pistol
 
 /obj/item/ammo_magazine/m32
-	icon_state = "a762"
+	name = "magazine (.32)"
+	icon_state = "9x19p"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	matter = list(DEFAULT_WALL_MATERIAL = 480)
 	caliber = ".32"
 	ammo_type = /obj/item/ammo_casing/a32
-	max_ammo = 6
-	mag_type = MAGAZINE
+	max_ammo = 8
+	multiple_sprites = 1
 
 //.44
 /obj/item/ammo_casing/a44/rubber

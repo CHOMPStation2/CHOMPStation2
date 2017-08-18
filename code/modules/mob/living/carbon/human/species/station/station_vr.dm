@@ -311,6 +311,8 @@
 	mob_size = MOB_MEDIUM
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
+	push_flags = ~HEAVY //Allows them to use micro step code.
+	swap_flags = ~HEAVY
 
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
@@ -327,8 +329,3 @@
 	gluttonous = 0
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
 	min_age = 18
-
-/datum/species
-	holder_type = /obj/item/weapon/holder/micro //This allows you to pick up crew
-	min_age = 18
-

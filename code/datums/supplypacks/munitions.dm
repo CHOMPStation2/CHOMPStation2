@@ -156,7 +156,7 @@
 	contains = list(
 			/obj/item/ammo_magazine/m9mmt,
 			/obj/item/ammo_magazine/m9mmt/rubber,
-			/obj/item/ammo_magazine/m556saw
+			/obj/item/ammo_magazine/m545saw
 			)
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure
@@ -191,7 +191,6 @@
 	name = "Assault rifle crate"
 	num_contained = 2
 	contains = list(
-			/obj/item/weapon/gun/projectile/automatic/carbine/fluff/g44,
 			/obj/item/weapon/gun/projectile/automatic/tommygun,
 			/obj/item/weapon/gun/projectile/automatic/carbine,
 			/obj/item/weapon/gun/projectile/automatic/c20r,

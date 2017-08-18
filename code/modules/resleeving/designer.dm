@@ -109,6 +109,14 @@
 				temp["colorHref"] = "tail_color"
 		styles["Tail"] = temp
 
+		temp = list("styleHref" = "wing_style", "style" = "Normal")
+		if(mannequin.wing_style)
+			temp["style"] = mannequin.wing_style.name
+			if(mannequin.wing_style.do_colouration)
+				temp["color"] = MOB_HEX_COLOR(mannequin, wing)
+				temp["colorHref"] = "wing_color"
+		styles["Tail"] = temp
+
 		temp = list("styleHref" = "hair_style", "style" = mannequin.h_style)
 		if(mannequin.species && (mannequin.species.appearance_flags & HAS_HAIR_COLOR))
 			temp["color"] = MOB_HEX_COLOR(mannequin, hair)
@@ -304,9 +312,9 @@
 		return
 
 	if(href_list["size_multiplier"])
-		var/new_size = input(user, "Choose your character's size:", "Character Preference", player_size_name(active_br.sizemult)) as null|anything in player_sizes_list
-		if(new_size && (new_size in player_sizes_list))
-			active_br.sizemult = player_sizes_list[new_size]
+		var/new_size = input(user, "Choose your character's size, ranging from 25% to 200%", "Character Preference") as num|null
+		if(new_size && IsInRange(new_size,25,200))
+			active_br.sizemult = (new_size/100)
 			preview_icon = null
 		return 1
 
