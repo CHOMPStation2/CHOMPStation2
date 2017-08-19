@@ -96,7 +96,7 @@
 
 /obj/item/weapon/storage/box/fluff/raja
 	name = "Raja's Kit"
-	desc = "A kit containing Ally's equipment."
+	desc = "A kit containing Raja's equipment."
 	has_items = list(
 		/obj/item/weapon/storage/belt/utility/fluff/raja_belt,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/fluff/raja_coat)
