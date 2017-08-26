@@ -68,3 +68,43 @@
 	icon_state = "officersuit"
 	icon_override = 'icons/vore/nazirus_yw.dmi'
 	item_state = "officersuit_mob"
+
+
+//place holders (WIP)
+
+/obj/item/clothing/head/helmet/space/void/merc/nazi
+
+/obj/item/clothing/suit/space/void/merc/nazi
+
+
+/obj/item/clothing/head/helmet/space/void/merc/nazi/nazirigh
+	name = "Weltraumsoldat helm"
+	desc = "A obscure helmet that comes with the markings 'Weltraumsoldaten' on it."
+	icon = 'icons/vore/nazirus_yw.dmi'
+	icon_state = "rig0-nazih"
+	icon_override = 'icons/vore/nazirus_yw.dmi'
+	item_state = "rig0-nazih"
+
+/obj/item/clothing/suit/space/void/merc/nazi/nazirig
+	name = "Weltraumsoldat hardsuit"
+	desc = "A obscure hardsuit that comes with the markings 'Weltraumsoldaten' on it."
+	icon = 'icons/vore/nazirus_yw.dmi'
+	icon_state = "rig-nazi"
+	icon_override = 'icons/vore/nazirus_yw.dmi'
+	item_state = "rig-nazi"
+
+/obj/item/clothing/head/helmet/space/void/nazi/merc/sovrigh
+	name = "Soviet helm"
+	desc = "A obscure helmet that comes with the markings 'CMC-300 Powered Combat Suit' on it."
+	icon = 'icons/vore/nazirus_yw.dmi'
+	icon_state = "rig0-sovieth"
+	icon_override = 'icons/vore/nazirus_yw.dmi'
+	item_state = "rig0-sovieth"
+
+/obj/item/clothing/suit/space/void/merc/nazi/sovrig
+	name = "Soviet hardsuit"
+	desc = "A obscure hardsuit that comes with the markings 'CMC-300 Powered Combat Suit' on it."
+	icon = 'icons/vore/nazirus_yw.dmi'
+	icon_state = "rig-soviet"
+	icon_override = 'icons/vore/nazirus_yw.dmi'
+	item_state = "rig-soviet"
