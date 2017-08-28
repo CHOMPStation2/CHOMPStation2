@@ -8,26 +8,18 @@
 	density = 0
 	anchored = 1.0
 
-/obj/structure/catwalk/New()
-	..()
-	spawn(4)
-		if(src)
-			for(var/obj/structure/catwalk/C in get_turf(src))
-				if(C != src)
-					qdel(C)
-			update_icon()
-			redraw_nearby_catwalks()
+/obj/structure/catwalk/initialize()
+	for(var/obj/structure/catwalk/C in get_turf(src))
+		if(C != src)
+			warning("Duplicate [type] in [loc] ([x], [y], [z])")
+			qdel(C)
+	update_icon()
 
 /obj/structure/catwalk/Destroy()
-	..()
-	redraw_nearby_catwalks()
-
-/obj/structure/catwalk/proc/redraw_nearby_catwalks()
-	for(var/direction in alldirs)
-		if(locate(/obj/structure/catwalk, get_step(src, direction)))
-			var/obj/structure/catwalk/L = locate(/obj/structure/catwalk, get_step(src, direction))
-			L.update_icon() //so siding get updated properly
-
+	var/turf/location = loc
+	. = ..()
+	for(var/obj/structure/catwalk/L in orange(location, 1))
+		L.update_icon()
 
 /obj/structure/catwalk/update_icon()
 	var/connectdir = 0
@@ -81,3 +73,10 @@
 	. = ..()
 	if(isliving(usr))
 		playsound(src, pick('sound/effects/footstep/catwalk1.ogg', 'sound/effects/footstep/catwalk2.ogg', 'sound/effects/footstep/catwalk3.ogg', 'sound/effects/footstep/catwalk4.ogg', 'sound/effects/footstep/catwalk5.ogg'), 25, 1)
+
+/obj/structure/catwalk/CheckExit(atom/movable/O, turf/target)
+	if(O.checkpass(PASSGRILLE))
+		return 1
+	if(target && target.z < src.z)
+		return 0
+	return 1

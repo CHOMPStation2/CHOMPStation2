@@ -8,7 +8,7 @@ obj/machinery/recharger
 	idle_power_usage = 4
 	active_power_usage = 40000	//40 kW
 	var/obj/item/charging = null
-	var/list/allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/melee/baton, /obj/item/device/laptop, /obj/item/weapon/cell, /obj/item/device/flashlight, /obj/item/device/electronic_assembly, /obj/item/weapon/weldingtool/electric)
+	var/list/allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/melee/baton, /obj/item/device/laptop, /obj/item/weapon/cell, /obj/item/device/flashlight, /obj/item/device/electronic_assembly, /obj/item/weapon/weldingtool/electric, /obj/item/ammo_casing/nsfw_batt) //VOREStation Add - NSFW Batteries
 	var/icon_state_charged = "recharger2"
 	var/icon_state_charging = "recharger1"
 	var/icon_state_idle = "recharger0" //also when unpowered
@@ -81,7 +81,7 @@ obj/machinery/recharger
 			return
 		anchored = !anchored
 		to_chat(user, "You [anchored ? "attached" : "detached"] the recharger.")
-		playsound(loc, 'sound/items/Ratchet.ogg', 75, 1)
+		playsound(loc, G.usesound, 75, 1)
 	else if(default_deconstruction_screwdriver(user, G))
 		return
 	else if(default_deconstruction_crowbar(user, G))
@@ -184,6 +184,30 @@ obj/machinery/recharger
 					update_use_power(1)
 			else
 				icon_state = icon_state_idle
+				update_use_power(1)
+			return
+
+		//VOREStation Add - NSFW Batteries
+		if(istype(charging, /obj/item/ammo_casing/nsfw_batt))
+			var/obj/item/ammo_casing/nsfw_batt/batt = charging
+			if(batt.shots_left >= initial(batt.shots_left))
+				icon_state = icon_state_charged
+				update_use_power(1)
+			else
+				icon_state = icon_state_charging
+				batt.shots_left++
+				update_use_power(2)
+			return
+		//VOREStation Add End
+
+		if(istype(charging, /obj/item/weapon/weldingtool/electric))
+			var/obj/item/weapon/weldingtool/electric/C = charging
+			if(!C.power_supply.fully_charged())
+				icon_state = icon_state_charging
+				C.power_supply.give(active_power_usage*CELLRATE)
+				update_use_power(2)
+			else
+				icon_state = icon_state_charged
 				update_use_power(1)
 			return
 

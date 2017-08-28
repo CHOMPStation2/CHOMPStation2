@@ -258,6 +258,16 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 		item_state = "flag_advent_mob"
 
 
+//Vorrakul: Kaitlyn Fiasco
+/obj/item/toy/plushie/mouse/fluff
+	name = "Mouse Plushie"
+	desc = "A plushie of a delightful mouse! What was once considered a vile rodent is now your very best friend."
+	slot_flags = SLOT_HEAD
+	icon_state = "mouse_brown"
+	item_state = "mouse_brown_head"
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_override = 'icons/vore/custom_items_vr.dmi'
+
 //zodiacshadow: ?
 /obj/item/device/radio/headset/fluff/zodiacshadow
 	name = "Nehi's 'phones"
@@ -310,7 +320,7 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 			O.icon_state = new_icon // Changes the icon without changing the access.
 			playsound(user.loc, 'sound/items/polaroid2.ogg', 100, 1)
 			user.visible_message("<span class='warning'> [user] reprints their ID.</span>")
-			del(src)
+			qdel(src)
 		else if(O.icon_state == new_icon)
 			user << "<span class='notice'>[O] already has been reprinted.</span>"
 			return
@@ -325,9 +335,12 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	var/configured = 0
 
 	attack_self(mob/user as mob)
-		if(configured == 1) return ..()
+		if(configured)
+			return ..()
 
 		user.set_id_info(src)
+		if(user.mind && user.mind.initial_account)
+			associated_account_number = user.mind.initial_account.account_number
 		configured = 1
 		user << "<span class='notice'>Card settings set.</span>"
 
@@ -415,11 +428,12 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 
 //SilencedMP5A5:Serdykov Antoz
 /obj/item/clothing/suit/armor/vest/wolftaur/serdy //SilencedMP5A5's specialty armor suit.
-	name = "Modified wolf-taur armor vest"
+	name = "KSS-8 security armor"
 	desc = "A set of armor made from pieces of many other armors. There are two orange holobadges on it, one on the chestplate, one on the steel flank plates. The holobadges appear to be russian in origin. 'Kosmicheskaya Stantsiya-8' is printed in faded white letters on one side, along the spine. It smells strongly of dog."
 	species_restricted = null //Species restricted since all it cares about is a taur half
 	icon_override = 'icons/mob/taursuits_vr.dmi' //Needs to be this since it's 64*32
 	icon_state = "serdy_armor"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS //It's a full body suit, minus hands and feet. Arms and legs should be protected, not just the torso. Retains normal security armor values still.
 	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
 		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/wolf))
 			icon_override = 'icons/mob/taursuits_vr.dmi' //Just in case
@@ -431,14 +445,15 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 			return 0
 
 /obj/item/clothing/head/helmet/serdy //SilencedMP5A5's specialty helmet. Uncomment if/when they make their custom item app and are accepted.
-	name = "Modified helmet"
-	desc = "An old production model steel-ceramic lined helmet with a white stripe and a custom orange visor. It has ear holes, and smells of dog."
+	name = "KSS-8 security helmet"
+	desc = "desc = An old production model steel-ceramic lined helmet with a white stripe and a custom orange holographic visor. It has ear holes, and smells of dog. It's been heavily modified, and fitted with a metal mask to protect the jaw."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "serdyhelm"
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "serdyhelm_mob"
 
+/*
 //SilencedMP5A5:Serdykov Antoz
 /obj/item/device/modkit_conversion/fluff/serdykit
 	name = "Serdykov's armor modification kit"
@@ -451,6 +466,7 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	from_suit = /obj/item/clothing/suit/armor/vest/wolftaur
 	to_helmet = /obj/item/clothing/head/helmet/serdy
 	to_suit = /obj/item/clothing/suit/armor/vest/wolftaur/serdy
+*/
 
 //Lots of people are using this now.
 /obj/item/clothing/accessory/collar/khcrystal
@@ -479,7 +495,7 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	Destroy() //Waitwaitwait
 		if(state == 1)
 			process() //Nownownow
-		..() //Okfine
+		return ..() //Okfine
 
 	process()
 		check_owner()
@@ -591,21 +607,28 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 
 
 
-/obj/item/weapon/card/id/fluff/ivyholoid
-	name = "Holo-ID"
-	registered_name = "Unconfigured"
-	desc = "A thin screen that seems to show an ID card's information. It keeps flickering between the ID and being blank."
-	icon = 'icons/vore/custom_items_vr.dmi'
-	icon_state = "ivyholoid"
-	var/configured = 0
+/obj/item/device/fluff/id_kit_ivy
+	name = "Holo-ID reprinter"
+	desc = "Stick your ID in one end and it'll print a new ID out the other!"
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "labeler1"
 
-	attack_self(mob/user as mob)
-		if(configured == 1) return ..()
-
-		assignment = user.job
-		user.set_id_info(src)
-		configured = 1
-		user << "<span class='notice'>Card settings set.</span>"
+	afterattack(obj/O, mob/user as mob)
+		var/new_icon = "ivyholoid"
+		var/new_desc = "Its a thin screen showing ID information, but it seems to be flickering."
+		if(istype(O,/obj/item/weapon/card/id) && O.icon_state != new_icon)
+			//O.icon = src.icon // just in case we're using custom sprite paths with fluff items.
+			O.icon_state = new_icon // Changes the icon without changing the access.
+			O.desc = new_desc
+			playsound(user.loc, 'sound/items/polaroid2.ogg', 100, 1)
+			user.visible_message("<span class='warning'> [user] reprints their ID.</span>")
+			qdel(src)
+		else if(O.icon_state == new_icon)
+			user << "<span class='notice'>[O] already has been reprinted.</span>"
+			return
+		else
+			user << "<span class='warning'>This isn't even an ID card you idiot.</span>"
+			return
 
 //WickedTempest: Chakat Tempest
 /obj/item/weapon/reagent_containers/hypospray/vr/tempest
@@ -638,18 +661,11 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	emote_descriptor = list("squeezes milk", "tugs on Tempest's breasts, milking them")
 	self_emote_descriptor = list("squeeze")
 	random_emote = list("moos quietly")
-	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_tempest
+	verb_name = "Milk"
+	verb_desc = "Grab Tempest's nipples and milk them into a container! May cause blushing and groaning."
 
 /obj/item/weapon/implanter/reagent_generator/tempest
 	implant_type = /obj/item/weapon/implant/reagent_generator/tempest
-
-/mob/living/carbon/human/proc/use_reagent_implant_tempest()
-	set name = "Milk"
-	set desc = "Grab Tempest's nipples and milk them into a container! May cause blushing and groaning."
-	set category = "Object"
-	set src in view(1)
-
-	do_reagent_implant(usr)
 
 
 //Hottokeeki: Belle Day
@@ -662,19 +678,251 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	emote_descriptor = list("squeezes milk", "tugs on Belle's breasts/udders, milking them", "extracts milk")
 	self_emote_descriptor = list("squeeze", "extract")
 	random_emote = list("moos", "mrours", "groans softly")
-	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_belle
+	verb_name = "Milk"
+	verb_desc = "Obtain Belle's milk and put it into a container! May cause blushing and groaning, or arousal."
 
 /obj/item/weapon/implanter/reagent_generator/belle
 	implant_type = /obj/item/weapon/implant/reagent_generator/belle
 
-/mob/living/carbon/human/proc/use_reagent_implant_belle()
-	set name = "Milk"
-	set desc = "Obtain Belle's milk and put it into a container! May cause blushing and groaning, or arousal."
+//Vorrarkul: Theodora Lindt
+/obj/item/weapon/implant/reagent_generator/vorrarkul
+	generated_reagent = "chocolate_milk"
+	usable_volume = 1000
+
+	empty_message = list("Your nipples are sore from being milked!")
+	full_message = list("Your breasts are full, their sweet scent emanating from your chest!")
+	emote_descriptor = list("squeezes chocolate milk from Theodora", "tugs on Theodora's nipples, milking them", "kneads Theodora's breasts, milking them")
+	self_emote_descriptor = list("squeeze", "knead")
+	random_emote = list("moans softly", "gives an involuntary squeal")
+	verb_name = "Milk"
+	verb_desc = "Grab Theodora's breasts and extract delicious chocolate milk from them!"
+
+/obj/item/weapon/implanter/reagent_generator/vorrarkul
+	implant_type = /obj/item/weapon/implant/reagent_generator/vorrarkul
+
+//SpoopyLizz: Roiz Lizden
+//I made this! Woo!
+//implant
+//--------------------
+/obj/item/weapon/implant/reagent_generator/roiz
+	name = "egg laying implant"
+	desc = "This is an implant that allows the user to lay eggs."
+	generated_reagent = "egg"
+	usable_volume = 500
+	transfer_amount = 50
+
+	empty_message = list("Your lower belly feels smooth and empty. Sorry, we're out of eggs!", "The reduced pressure in your lower belly tells you there are no more eggs.")
+	full_message = list("Your lower belly looks swollen with irregular bumps, and it feels heavy.", "Your lower abdomen feels really heavy, making it a bit hard to walk.")
+	emote_descriptor = list("an egg right out of Roiz's lower belly!", "into Roiz' belly firmly, forcing him to lay an egg!", "Roiz really tight, who promptly lays an egg!")
+	var/verb_descriptor = list("squeezes", "pushes", "hugs")
+	var/self_verb_descriptor = list("squeeze", "push", "hug")
+	var/short_emote_descriptor = list("lays", "forces out", "pushes out")
+	self_emote_descriptor = list("lay", "force out", "push out")
+	random_emote = list("hisses softly with a blush on his face", "yelps in embarrassment", "grunts a little")
+	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_roiz
+
+/obj/item/weapon/implant/reagent_generator/roiz/implanted(mob/living/carbon/source)
+	processing_objects += src
+	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
+	source.verbs |= assigned_proc
+	return 1
+
+/obj/item/weapon/implanter/reagent_generator/roiz
+	implant_type = /obj/item/weapon/implant/reagent_generator/roiz
+
+/mob/living/carbon/human/proc/use_reagent_implant_roiz()
+	set name = "Lay Egg"
+	set desc = "Force Roiz to lay an egg by squeezing into his lower body! This makes the lizard extremely embarrassed, and it looks funny."
 	set category = "Object"
 	set src in view(1)
 
-	do_reagent_implant(usr)
+	//do_reagent_implant(usr)
+	if(!isliving(usr) || !usr.canClick())
+		return
 
+	if(usr.incapacitated() || usr.stat > CONSCIOUS)
+		return
+
+	var/obj/item/weapon/implant/reagent_generator/roiz/rimplant
+	for(var/I in src.contents)
+		if(istype(I, /obj/item/weapon/implant/reagent_generator))
+			rimplant = I
+			break
+	if (rimplant)
+		if(rimplant.reagents.total_volume <= rimplant.transfer_amount)
+			to_chat(src, "<span class='notice'>[pick(rimplant.empty_message)]</span>")
+			return
+
+		new /obj/item/weapon/reagent_containers/food/snacks/egg/roiz(get_turf(src))
+
+		var/index = rand(0,3)
+
+		if (usr != src)
+			var/emote = rimplant.emote_descriptor[index]
+			var/verb_desc = rimplant.verb_descriptor[index]
+			var/self_verb_desc = rimplant.self_verb_descriptor[index]
+			usr.visible_message("<span class='notice'>[usr] [verb_desc] [emote]</span>",
+							"<span class='notice'>You [self_verb_desc] [emote]</span>")
+		else
+			src.visible_message("<span class='notice'>[src] [pick(rimplant.short_emote_descriptor)] an egg.</span>",
+								"<span class='notice'>You [pick(rimplant.self_emote_descriptor)] an egg.</span>")
+		if(prob(15))
+			src.visible_message("<span class='notice'>[src] [pick(rimplant.random_emote)].</span>") // M-mlem.
+
+		rimplant.reagents.remove_reagent(rimplant.generated_reagent, rimplant.transfer_amount)
+
+/obj/item/weapon/implant/reagent_generator/pumila_apple
+	name = "apple laying implant"
+	desc = "This is an implant that allows the user to grow apples."
+	generated_reagent = "sugar" //This actually allows them to.
+	usable_volume = 250 //Five apples. Let's not get /too/ crazy here.
+	transfer_amount = 50
+
+	empty_message = list("Your have no apples on you.", "You have a distinct lack of apples..")
+	full_message = list("You have multiple apples on you, ready for harvest!", "There are a multitude of apples awaiting harvest on you!")
+	emote_descriptor = list("an apple right off of Pumila!", "a large apple off Pumila!")
+	var/verb_descriptor = list("grabs", "snatches", "picks")
+	var/self_verb_descriptor = list("grab", "snatch", "pick")
+	var/short_emote_descriptor = list("picks", "grabs")
+	self_emote_descriptor = list("grab", "pick", "snatch")
+	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_pumila_apple
+
+/obj/item/weapon/implant/reagent_generator/pumila_apple/implanted(mob/living/carbon/source)
+	processing_objects += src
+	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
+	source.verbs |= assigned_proc
+	return 1
+
+/obj/item/weapon/implanter/reagent_generator/pumila_apple
+	implant_type = /obj/item/weapon/implant/reagent_generator/pumila_apple
+
+/mob/living/carbon/human/proc/use_reagent_implant_pumila_apple()
+	set name = "Grab Apple"
+	set desc = "Grab an apple off of Pumila."
+	set category = "Object"
+	set src in view(1)
+
+	//do_reagent_implant(usr)
+	if(!isliving(usr) || !usr.canClick())
+		return
+
+	if(usr.incapacitated() || usr.stat > CONSCIOUS)
+		return
+
+	var/obj/item/weapon/implant/reagent_generator/roiz/rimplant
+	for(var/I in src.contents)
+		if(istype(I, /obj/item/weapon/implant/reagent_generator))
+			rimplant = I
+			break
+	if (rimplant)
+		if(rimplant.reagents.total_volume <= rimplant.transfer_amount)
+			to_chat(src, "<span class='notice'>[pick(rimplant.empty_message)]</span>")
+			return
+
+		var/datum/seed/S = plant_controller.seeds["apple"] //crosses fingers.
+		S.harvest(usr,0,0,1)
+
+		var/index = rand(0,2)
+
+		if (usr != src)
+			var/emote = rimplant.emote_descriptor[index]
+			var/verb_desc = rimplant.verb_descriptor[index]
+			var/self_verb_desc = rimplant.self_verb_descriptor[index]
+			usr.visible_message("<span class='notice'>[usr] [verb_desc] [emote]</span>",
+							"<span class='notice'>You [self_verb_desc] [emote]</span>")
+		else
+			src.visible_message("<span class='notice'>[src] [pick(rimplant.short_emote_descriptor)] an apple.</span>",
+								"<span class='notice'>You [pick(rimplant.self_emote_descriptor)] an apple.</span>")
+
+		rimplant.reagents.remove_reagent(rimplant.generated_reagent, rimplant.transfer_amount)
+/*
+/obj/item/weapon/implant/reagent_generator/pumila_nectar //Bugged. Two implants at once messes things up.
+	generated_reagent = "honey"
+	usable_volume = 5000
+
+	empty_message = list("You appear to be all out of nectar", "You feel as though you are lacking a majority of your nectar.")
+	full_message = list("You appear to be full of nectar.", "You feel as though you are full of nectar!")
+	emote_descriptor = list("squeezes nectar", "extracts nectar")
+	self_emote_descriptor = list("squeeze", "extract")
+	verb_name = "Extract Honey"
+	verb_desc = "Obtain pumila's nectar and put it into a container!"
+
+/obj/item/weapon/implanter/reagent_generator/pumila_nectar
+	implant_type = /obj/item/weapon/implant/reagent_generator/pumila_nectar
+*/
+//Egg item
+//-------------
+/obj/item/weapon/reagent_containers/food/snacks/egg/roiz
+	name = "lizard egg"
+	desc = "It's a large lizard egg."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "egg_roiz"
+	filling_color = "#FDFFD1"
+	volume = 12
+
+/obj/item/weapon/reagent_containers/food/snacks/egg/roiz/New()
+	..()
+	reagents.add_reagent("egg", 9)
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/egg/roiz/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype( W, /obj/item/weapon/pen/crayon ))
+		var/obj/item/weapon/pen/crayon/C = W
+		var/clr = C.colourName
+
+		if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
+			to_chat(user,"<span class='warning'>The egg refuses to take on this color!</span>")
+			return
+
+		to_chat(user,"<span class='notice'>You color \the [src] [clr]</span>")
+		icon_state = "egg_roiz_[clr]"
+		desc = "It's a large lizard egg. It has been colored [clr]!"
+		if (clr == "rainbow")
+			var/number = rand(1,4)
+			icon_state = icon_state + num2text(number, 0)
+	else
+		..()
+
+/obj/item/weapon/reagent_containers/food/snacks/friedegg/roiz
+	name = "fried lizard egg"
+	desc = "A large, fried lizard egg, with a touch of salt and pepper. It looks rather chewy."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "friedegg"
+	volume = 12
+
+/obj/item/weapon/reagent_containers/food/snacks/friedegg/roiz/New()
+	..()
+	reagents.add_reagent("protein", 9)
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/boiledegg/roiz
+	name = "boiled lizard egg"
+	desc = "A hard boiled lizard egg. Be careful, a lizard detective may hatch!"
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "egg_roiz"
+	volume = 12
+
+/obj/item/weapon/reagent_containers/food/snacks/boiledegg/roiz/New()
+	..()
+	reagents.add_reagent("protein", 6)
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/chocolateegg/roiz
+	name = "chocolate lizard egg"
+	desc = "Such huge, sweet, fattening food. You feel gluttonous just looking at it."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "chocolateegg_roiz"
+	filling_color = "#7D5F46"
+	nutriment_amt = 3
+	nutriment_desc = list("chocolate" = 5)
+	volume = 18
+
+/obj/item/weapon/reagent_containers/food/snacks/chocolateegg/roiz/New()
+	..()
+	reagents.add_reagent("sugar", 6)
+	reagents.add_reagent("coco", 6)
+	reagents.add_reagent("milk", 2)
+	bitesize = 2
 
 //PontifexMinimus: Lucius/Lucia Null
 /obj/item/weapon/fluff/dragor_dot
@@ -699,6 +947,53 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	name = "New Space Pioneer's Bible"
 	desc = "A New Space Pioneer's Bible. This one says it was printed in 2492. The name 'Eric Hayvers' is written on the inside of the cover, crossed out. \
 	Under it is written 'Kouri, Amina, Marine Unit 14, Fifth Echelon. Service number NTN-5528928522372'"
+
+//arokha:Amaya Rahl - Custom ID (Medical dept)
+/obj/item/weapon/card/id/fluff/amaya
+	registered_name = "CONFIGURE ME"
+	assignment = "CONFIGURE ME"
+	var/configured = 0
+	var/accessset = 0
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "amayarahlwahID"
+	desc = "A primarily blue ID with a holographic 'WAH' etched onto its back. The letters do not obscure anything important on the card. It is shiny and it feels very bumpy."
+	var/title_strings = list("Amaya Rahl's Wah-identification card", "Amaya Rahl's Wah-ID card")
+
+/obj/item/weapon/card/id/fluff/amaya/attack_self(mob/user as mob)
+	if(configured == 1)
+		return ..()
+
+	var/title
+	if(user.client.prefs.player_alt_titles[user.job])
+		title = user.client.prefs.player_alt_titles[user.job]
+	else
+		title = user.job
+	assignment = title
+	user.set_id_info(src)
+	if(user.mind && user.mind.initial_account)
+		associated_account_number = user.mind.initial_account.account_number
+	var/tempname = pick(title_strings)
+	name = tempname + " ([title])"
+	configured = 1
+	user << "<span class='notice'>Card settings set.</span>"
+
+/obj/item/weapon/card/id/fluff/amaya/attackby(obj/item/I as obj, mob/user as mob)
+	if(istype(I, /obj/item/weapon/card/id) && !accessset)
+		var/obj/item/weapon/card/id/O = I
+		src.access |= O.access
+		to_chat(user, "<span class='notice'>You copy the access from \the [I] to \the [src].</span>")
+		user.drop_from_inventory(I)
+		qdel(I)
+		accessset = 1
+	..()
+
+//verkister: Cameron Eggbert - Science goggles that ACTUALLY do nothing.
+/obj/item/clothing/glasses/science_proper
+	name = "Aesthetic Science Goggles"
+	desc = "The goggles really do nothing this time!"
+	icon_state = "purple"
+	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
+	item_flags = AIRTIGHT
 
 //The perfect adminboos device?
 /obj/item/device/perfect_tele
@@ -730,9 +1025,13 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	spk.attach(src)
 
 /obj/item/device/perfect_tele/Destroy()
+	// Must clear the beacon's backpointer or we won't GC. Someday maybe do something nicer even.
+	for(var/obj/item/device/perfect_tele_beacon/B in beacons)
+		B.tele_hand = null
 	beacons.Cut()
-	qdel(spk)
-	..()
+	qdel_null(power_source)
+	qdel_null(spk)
+	return ..()
 
 /obj/item/device/perfect_tele/update_icon()
 	if(!power_source)
@@ -853,6 +1152,11 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	//No, you can't teleport if there's no destination.
 	if(!destination)
 		to_chat(user,"<span class='warning'>\The [src] doesn't have a current valid destination set!</span>")
+		return
+
+	//No, you can't teleport if there's a jammer.
+	if(is_jammed(src) || is_jammed(destination))
+		to_chat(user,"<span class='warning'>\The [src] refuses to teleport you, due to strong interference!</span>")
 		return
 
 	//No, you can't port to or from away missions. Stupidly complicated check.
@@ -980,7 +1284,7 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 /obj/item/device/perfect_tele_beacon/Destroy()
 	tele_name = null
 	tele_hand = null
-	..()
+	return ..()
 
 /obj/item/device/perfect_tele_beacon/attack_hand(mob/user)
 	if((user.ckey != creator) && !(user.ckey in warned_users))
@@ -1010,3 +1314,41 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 				B.internal_contents |= src
 				user.visible_message("<span class='warning'>[user] eats a telebeacon!</span>","You eat the the beacon!")
 				playsound(user, B.vore_sound, 70, 1)
+
+//InterroLouis: Ruda Lizden
+/obj/item/clothing/accessory/badge/holo/detective/ruda
+    name = "Hisstective's Badge"
+    desc = "This is Ruda Lizden's personal Detective's badge. The polish is dull, as if it's simply been huffed upon and wiped against a coat. Labeled 'Hisstective.'"
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "hisstective_badge"
+    //slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/holo/detective/ruda/attack(mob/living/carbon/human/M, mob/living/user)
+    if(isliving(user))
+        user.visible_message("<span class='danger'>[user] invades [M]'s personal space, thrusting [src] into their face with an insistent huff.</span>","<span class='danger'>You invade [M]'s personal space, thrusting [src] into their face with an insistent huff.</span>")
+        user.do_attack_animation(M)
+        user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //to prevent spam
+
+/obj/item/clothing/accessory/badge/holo/detective/ruda/attack_self(mob/user as mob)
+
+    if(!stored_name)
+        user << "You huff along the front of your badge, then rub your sleeve on it to polish it up."
+        set_name(user.real_name)
+        return
+
+    if(isliving(user))
+        if(stored_name)
+            user.visible_message("<span class='notice'>[user] displays their [src.name].\nIt reads: [stored_name], [badge_string].</span>","<span class='notice'>You display your [src.name].\nIt reads: [stored_name], [badge_string].</span>")
+        else
+            user.visible_message("<span class='notice'>[user] displays their [src.name].\nIt reads: [badge_string].</span>","<span class='notice'>You display your [src.name]. It reads: [badge_string].</span>")
+
+/obj/item/weapon/card/id/fluff/xennith
+	name = "\improper Amy Lessen's Central Command ID (Xenobiology Director)"
+	desc = "This ID card identifies Dr. Amelie Lessen as the founder and director of the NanoTrasen Xenobiology Research Department, circa 2553."
+	icon_state = "centcom"
+	registered_name = "Amy Lessen"
+	assignment = "Xenobiology Director"
+	access = list(access_cent_general,access_cent_thunder,access_cent_medical,access_cent_living,access_cent_storage,access_cent_teleporter,access_research,access_xenobiology,access_maint_tunnels,access_xenoarch,access_robotics,access_tox_storage,access_tox) //Yes, this looks awful. I tried calling both central and resarch access but it didn't work.
+	age = 39
+	blood_type = "O-"
+	sex = "Female"

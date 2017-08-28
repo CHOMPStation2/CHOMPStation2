@@ -253,7 +253,10 @@
 		"Are You Feeling It",
 		"Great White Snark",
 		"No Shirt No Shoes",
-		"Callsign"
+		"Callsign",
+		"Three Ships in a Trenchcoat",
+		"Not Wearing Pants",
+		"Ridiculous Naming Convention"
 
 
 		)
@@ -280,8 +283,8 @@
 	name = "Sif Governmental Authority"
 	short_name = "SifGov"
 	desc = "SifGov is the sole governing administration for the Vir system, based in New Reykjavik, Sif.  It is a representative \
-	democratic government, and a fully recognized member of the Solar Confederate Government.  Anyone operating inside of Vir must \
-	comply with SifGov's legislation and regulations."
+	democratic government, and a fully recognized member of the Solar Central Government.  Anyone operating inside of Vir must \
+	comply with SifGov's legislation and regulations." // Vorestation Edit. Confederate -> Central
 	history = "" // Todo like the rest of them
 	work = "governing body of Sif"
 	headquarters = "New Reykjavik, Sif"
@@ -326,12 +329,12 @@
 // Military
 
 /datum/lore/organization/mil/sif_guard
-	name = "Sif Homeguard Forces" // Todo: Get better name from lorepeople.
+	name = "Sif Defense Force" // Todo: Get better name from lorepeople.
 	short_name = "SifGuard"
 	desc = ""
 	history = ""
 	work = "Sif Governmental Authority's military"
-	headquarters = "Sif" // Make this more specific later.
+	headquarters = "New Reykjavik, Sif"
 	motto = ""
 	autogenerate_destination_names = FALSE // Kinda weird if SifGuard goes to Nyx.
 

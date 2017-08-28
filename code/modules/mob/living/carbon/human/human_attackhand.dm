@@ -1,5 +1,6 @@
 /mob/living/carbon/human/proc/get_unarmed_attack(var/mob/living/carbon/human/target, var/hit_zone)
 	// VOREStation Edit - Begin
+	if(nif && nif.flag_check(NIF_C_HARDCLAWS,NIF_FLAGS_COMBAT)){return unarmed_hardclaws}
 	if(src.default_attack && src.default_attack.is_usable(src, target, hit_zone))
 		if(pulling_punches)
 			var/datum/unarmed_attack/soft_type = src.default_attack.get_sparring_variant()
@@ -23,7 +24,7 @@
 		if(H.hand)
 			temp = H.organs_by_name["l_hand"]
 		if(!temp || !temp.is_usable())
-			H << "\red You can't use your hand."
+			H << "<font color='red'>You can't use your hand.</font>"
 			return
 	H.break_cloak()
 	..()
@@ -35,7 +36,7 @@
 			if(!hit_zone)
 				H.do_attack_animation(src)
 				playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-				visible_message("\red <B>[H] reaches for [src], but misses!</B>")
+				visible_message("<font color='red'><B>[H] reaches for [src], but misses!</B></font>")
 				return 0
 
 		if(H != src && check_shields(0, null, H, H.zone_sel.selecting, H.name))
@@ -47,7 +48,7 @@
 			var/damage = rand(0, 9)
 			if(!damage)
 				playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-				visible_message("\red <B>[H] has attempted to punch [src]!</B>")
+				visible_message("<font color='red'><B>[H] has attempted to punch [src]!</B></font>")
 				return 0
 			var/obj/item/organ/external/affecting = get_organ(ran_zone(H.zone_sel.selecting))
 			var/armor_block = run_armor_check(affecting, "melee")
@@ -58,14 +59,14 @@
 
 			playsound(loc, "punch", 25, 1, -1)
 
-			visible_message("\red <B>[H] has punched [src]!</B>")
+			visible_message("<font color='red'><B>[H] has punched [src]!</B></font>")
 
 			if(armor_soak >= damage)
 				return
 
 			apply_damage(damage, HALLOSS, affecting, armor_block, armor_soak)
 			if(damage >= 9)
-				visible_message("\red <B>[H] has weakened [src]!</B>")
+				visible_message("<font color='red'><B>[H] has weakened [src]!</B></font>")
 				apply_effect(4, WEAKEN, armor_block)
 
 			return
@@ -324,7 +325,7 @@
 						return
 
 			playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-			visible_message("\red <B>[M] attempted to disarm [src]!</B>")
+			visible_message("<font color='red'> <B>[M] attempted to disarm [src]!</B></font>")
 	return
 
 /mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)

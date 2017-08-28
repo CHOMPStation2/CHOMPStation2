@@ -82,7 +82,7 @@
 		handle_medical_side_effects()
 
 		handle_heartbeat()
-
+		handle_nif() //VOREStation Add
 		if(!client)
 			species.handle_npc(src)
 
@@ -158,7 +158,7 @@
 
 	if (disabilities & EPILEPSY)
 		if ((prob(1) && paralysis < 1))
-			src << "\red You have a seizure!"
+			src << "<font color='red'>You have a seizure!</font>"
 			for(var/mob/O in viewers(src, null))
 				if(O == src)
 					continue
@@ -666,7 +666,8 @@
 		pressure_alert = -1
 	else
 		if( !(COLD_RESISTANCE in mutations))
-			take_overall_damage(brute=LOW_PRESSURE_DAMAGE, used_weapon = "Low Pressure")
+			if(!isSynthetic() || !nif || !nif.flag_check(NIF_O_PRESSURESEAL,NIF_FLAGS_OTHER)) //VOREStation Edit - NIF pressure seals
+				take_overall_damage(brute=LOW_PRESSURE_DAMAGE, used_weapon = "Low Pressure")
 			if(getOxyLoss() < 55) // 11 OxyLoss per 4 ticks when wearing internals;    unconsciousness in 16 ticks, roughly half a minute
 				adjustOxyLoss(4)  // 16 OxyLoss per 4 ticks when no internals present; unconsciousness in 13 ticks, roughly twenty seconds
 			pressure_alert = -2
@@ -703,7 +704,8 @@
 
 	// FBPs will overheat, prosthetic limbs are fine.
 	if(robobody_count)
-		bodytemperature += round(robobody_count*1.75)
+		if(!nif || !nif.flag_check(NIF_O_HEATSINKS,NIF_FLAGS_OTHER)) //VOREStation Edit - NIF heatsinks
+			bodytemperature += round(robobody_count*1.75)
 
 	var/body_temperature_difference = species.body_temperature - bodytemperature
 
@@ -806,6 +808,7 @@
 			var/total_phoronloss = 0
 			for(var/obj/item/I in src)
 				if(I.contaminated)
+					if(check_belly(I)) continue //VOREStation Edit
 					if(src.species && src.species.get_bodytype() != "Vox")
 						total_phoronloss += vsc.plc.CONTAMINATION_LOSS
 			if(!(status_flags & GODMODE)) adjustToxLoss(total_phoronloss)
@@ -1127,10 +1130,16 @@
 				see_invisible = SEE_INVISIBLE_LIVING
 				seer = 0
 
+		if(!seedarkness)
+			sight = species.get_vision_flags(src)
+			see_in_dark = 8
+			see_invisible = SEE_INVISIBLE_NOLIGHTING
+
 		else
 			sight = species.get_vision_flags(src)
 			see_in_dark = species.darksight
 			see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : SEE_INVISIBLE_LIVING
+
 		var/tmp/glasses_processed = 0
 		var/obj/item/weapon/rig/rig = back
 		if(istype(rig) && rig.visor)
@@ -1149,7 +1158,7 @@
 
 		if(!glasses_processed && (species.get_vision_flags(src) > 0))
 			sight |= species.get_vision_flags(src)
-		if(!seer && !glasses_processed)
+		if(!seer && !glasses_processed && seedarkness)
 			see_invisible = SEE_INVISIBLE_LIVING
 
 		if(healths)
@@ -1267,7 +1276,7 @@
 				var/obj/item/clothing/glasses/G = glasses
 				if(!G.prescription)
 					set_fullscreen(disabilities & NEARSIGHTED, "impaired", /obj/screen/fullscreen/impaired, 1)
-			else
+			else if (!nif || !nif.flag_check(NIF_V_CORRECTIVE,NIF_FLAGS_VISION))	//VOREStation Edit - NIF
 				set_fullscreen(disabilities & NEARSIGHTED, "impaired", /obj/screen/fullscreen/impaired, 1)
 
 		set_fullscreen(eye_blurry, "blurry", /obj/screen/fullscreen/blurry)
@@ -1282,6 +1291,7 @@
 					var/obj/item/clothing/glasses/welding/O = glasses
 					if(!O.up)
 						found_welder = 1
+				if(!found_welder && nif && nif.flag_check(NIF_V_UVFILTER,NIF_FLAGS_VISION))	found_welder = 1 //VOREStation Add - NIF
 				if(!found_welder && istype(head, /obj/item/clothing/head/welding))
 					var/obj/item/clothing/head/welding/O = head
 					if(!O.up)
@@ -1336,10 +1346,10 @@
 			var/obj/item/clothing/glasses/omnihud/S = G
 			O = S.hud
         //VOREStation Add End
-		if(istype(G, /obj/item/clothing/glasses/sunglasses/sechud))
+		else if(istype(G, /obj/item/clothing/glasses/sunglasses/sechud)) //VOREStation Edit - Added else
 			var/obj/item/clothing/glasses/sunglasses/sechud/S = G
 			O = S.hud
-		if(istype(G, /obj/item/clothing/glasses/sunglasses/medhud))
+		else if(istype(G, /obj/item/clothing/glasses/sunglasses/medhud)) //VOREStation Edit - Added else
 			var/obj/item/clothing/glasses/sunglasses/medhud/M = G
 			O = M.hud
 		if(istype(O))

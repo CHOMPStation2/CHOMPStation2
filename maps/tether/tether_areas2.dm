@@ -20,6 +20,19 @@
 /area/tether/surfacebase/outside/empty
 	name = "Outside - Empty Area"
 
+/area/tether/surfacebase/outside/wilderness
+	name = "Outside - Wilderness"
+	icon_state = "invi"
+	forced_ambience = list('sound/music/Sacred_Grove.ogg')
+
+/area/tether/surfacebase/temple
+	name = "Outside - Wilderness" // ToDo: Make a way to hide spoiler areas off the list of areas ghosts can jump to.
+	icon_state = "red"
+
+/area/tether/surfacebase/crash
+	name = "Outside - Wilderness" // ToDo: Make a way to hide spoiler areas off the list of areas ghosts can jump to.
+	icon_state = "yellow"
+
 /area/tether/surfacebase/tram
 	name = "\improper Tram Station"
 	icon_state = "dk_yellow"
@@ -146,7 +159,10 @@
 /area/engineering/lower/breakroom
 	name = "\improper Enginering Surface Break Room"
 /area/engineering/lower/corridor
-	name = "\improper Teather Lower Service Corridor"
+	name = "\improper Tether Lower Service Corridor"
+/area/engineering/lower/atmos_lockers
+	name = "\improper Engineering Atmos Locker Room"
+
 /area/gateway/prep_room
 	name = "\improper Gateway Prep Room"
 /area/crew_quarters/locker/laundry_arrival
@@ -405,3 +421,15 @@
 	name = "\improper Syndicate LC - Mining"
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/outdoors/dirt/virgo3b
+
+
+
+// Exclude some more areas from the atmos leak event so people don't get trapped when spawning.
+/datum/event/atmos_leak/setup()
+	excluded |= /area/tether/surfacebase/tram
+	excluded |= /area/tether/surfacebase/atrium_one
+	excluded |= /area/tether/surfacebase/atrium_two
+	excluded |= /area/tether/surfacebase/atrium_three
+	excluded |= /area/teleporter/departing
+	excluded |= /area/hallway/station/upper
+	..()

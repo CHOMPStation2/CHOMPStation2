@@ -13,7 +13,7 @@
 	icon = 'icons/obj/doors/rapid_pdoor.dmi'
 	icon_state = null
 	min_force = 20 //minimum amount of force needed to damage the door with a melee weapon
-
+	var/material/implicit_material
 	// Icon states for different shutter types. Simply change this instead of rewriting the update_icon proc.
 	var/icon_state_open = null
 	var/icon_state_opening = null
@@ -28,6 +28,13 @@
 	//Most blast doors are infrequently toggled and sometimes used with regular doors anyways,
 	//turning this off prevents awkward zone geometry in places like medbay lobby, for example.
 	block_air_zones = 0
+
+/obj/machinery/door/blast/initialize()
+	..()
+	implicit_material = get_material_by_name("plasteel")
+
+/obj/machinery/door/blast/get_material()
+	return implicit_material
 
 // Proc: Bumped()
 // Parameters: 1 (AM - Atom that tried to walk through this object)
@@ -46,6 +53,7 @@
 		icon_state = icon_state_closed
 	else
 		icon_state = icon_state_open
+	radiation_repository.resistance_cache.Remove(get_turf(src))
 	return
 
 // Proc: force_open()
@@ -110,25 +118,8 @@
 				usr << "<span class='notice'>[src]'s motors resist your effort.</span>"
 			return
 
-		if(istype(C, /obj/item/stack/material) && C.get_material_name() == "plasteel") // Repairing.
-			var/amt = Ceiling((maxhealth - health)/150)
-			if(!amt)
-				usr << "<span class='notice'>\The [src] is already fully repaired.</span>"
-				return
-			var/obj/item/stack/P = C
-			if(P.amount < amt)
-				usr << "<span class='warning'>You don't have enough sheets to repair this! You need at least [amt] sheets.</span>"
-				return
-			usr << "<span class='notice'>You begin repairing [src]...</span>"
-			if(do_after(usr, 30))
-				if(P.use(amt))
-					usr << "<span class='notice'>You have repaired \The [src]</span>"
-					src.repair()
-				else
-					usr << "<span class='warning'>You don't have enough sheets to repair this! You need at least [amt] sheets.</span>"
 
-
-		else if(src.density)
+		else if(src.density && (user.a_intent == I_HURT)) //If we can't pry it open and it's a weapon, let's hit it.
 			var/obj/item/weapon/W = C
 			user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 			if(W.damtype == BRUTE || W.damtype == BURN)
@@ -139,8 +130,37 @@
 					user.visible_message("<span class='danger'>\The [user] forcefully strikes \the [src] with \the [W]!</span>")
 					playsound(src.loc, hitsound, 100, 1)
 					take_damage(W.force*0.35) //it's a blast door, it should take a while. -Luke
-			return
+				return
 
+	else if(istype(C, /obj/item/stack/material) && C.get_material_name() == "plasteel") // Repairing.
+		var/amt = Ceiling((maxhealth - health)/150)
+		if(!amt)
+			usr << "<span class='notice'>\The [src] is already fully repaired.</span>"
+			return
+		var/obj/item/stack/P = C
+		if(P.amount < amt)
+			usr << "<span class='warning'>You don't have enough sheets to repair this! You need at least [amt] sheets.</span>"
+			return
+		usr << "<span class='notice'>You begin repairing [src]...</span>"
+		if(do_after(usr, 30))
+			if(P.use(amt))
+				usr << "<span class='notice'>You have repaired \The [src]</span>"
+				src.repair()
+			else
+				usr << "<span class='warning'>You don't have enough sheets to repair this! You need at least [amt] sheets.</span>"
+
+	else if(src.density && (user.a_intent == I_HURT)) //If we can't pry it open and it's not a weapon.... Eh, let's attack it anyway.
+		var/obj/item/weapon/W = C
+		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+		if(W.damtype == BRUTE || W.damtype == BURN)
+			user.do_attack_animation(src)
+			if(W.force < min_force) //No actual non-weapon item shouls have a force greater than the min_force, but let's include this just in case.
+				user.visible_message("<span class='danger'>\The [user] hits \the [src] with \the [W] with no visible effect.</span>")
+			else
+				user.visible_message("<span class='danger'>\The [user] forcefully strikes \the [src] with \the [W]!</span>")
+				playsound(src.loc, hitsound, 100, 1)
+				take_damage(W.force*0.15) //If the item isn't a weapon, let's make this take longer than usual to break it down.
+			return
 
 // Proc: open()
 // Parameters: None

@@ -87,6 +87,36 @@
 
 	var/last_shot = 0			//records the last shot fired
 
+//VOREStation Add - /tg/ icon system
+	var/charge_sections = 4
+	var/shaded_charge = FALSE
+	var/ammo_x_offset = 2
+	var/ammo_y_offset = 0
+	var/can_flashlight = FALSE
+	var/gun_light = FALSE
+	var/light_state = "flight"
+	var/light_brightness = 4
+	var/flight_x_offset = 0
+	var/flight_y_offset = 0
+
+/obj/item/weapon/gun/CtrlClick(mob/user)
+	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
+		toggle_flashlight()
+	else
+		return ..()
+
+/obj/item/weapon/gun/proc/toggle_flashlight()
+	if(gun_light)
+		set_light(0)
+		gun_light = FALSE
+	else
+		set_light(light_brightness)
+		gun_light = TRUE
+
+	playsound(src, 'sound/machines/button.ogg', 25)
+	update_icon()
+//VOREStation Add End
+
 /obj/item/weapon/gun/New()
 	..()
 	for(var/i in 1 to firemodes.len)
@@ -208,7 +238,8 @@
 	if(istype(A, /obj/item/weapon/screwdriver))
 		if(dna_lock && attached_lock && !attached_lock.controller_lock)
 			user << "<span class='notice'>You begin removing \the [attached_lock] from \the [src].</span>"
-			if(do_after(user, 25))
+			playsound(src, A.usesound, 50, 1)
+			if(do_after(user, 25 * A.toolspeed))
 				user << "<span class='notice'>You remove \the [attached_lock] from \the [src].</span>"
 				user.put_in_hands(attached_lock)
 				dna_lock = 0
@@ -333,7 +364,12 @@
 	accuracy = initial(accuracy)	//Reset the gun's accuracy
 
 	if(muzzle_flash)
-		set_light(0)
+		//VOREStation Edit - Flashlights
+		if(gun_light)
+			set_light(light_brightness)
+		else
+			set_light(0)
+		//VOREStation Edit End
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/weapon/gun/proc/Fire_userless(atom/target)
@@ -541,9 +577,9 @@
 	var/mob/living/carbon/human/M = user
 
 	mouthshoot = 1
-	M.visible_message("\red [user] sticks their gun in their mouth, ready to pull the trigger...")
+	M.visible_message("<font color='red'>[user] sticks their gun in their mouth, ready to pull the trigger...</font>")
 	if(!do_after(user, 40))
-		M.visible_message("\blue [user] decided life was worth living")
+		M.visible_message("<font color='blue'>[user] decided life was worth living</font>")
 		mouthshoot = 0
 		return
 	var/obj/item/projectile/in_chamber = consume_next_projectile()

@@ -6,6 +6,7 @@
 	#include "tether_phoronlock.dm"
 	#include "tether_areas.dm"
 	#include "tether_areas2.dm"
+	#include "tether_shuttle_defs.dm"
 	#include "tether_shuttles.dm"
 	#include "tether_telecomms.dm"
 	#include "tether_virgo3b.dm"
@@ -20,6 +21,7 @@
 	#include "tether-08-ships.dmm"
 	#include "tether-09-empty-surface.dmm"
 	#include "tether-10-empty-space.dmm"
+	#include "tether-11-wild-surface.dmm"
 
 	#define USING_MAP_DATUM /datum/map/tether
 

@@ -15,19 +15,17 @@
 	var/icon/preview_icon = null
 	// Mannequins are somewhat expensive to create, so cache it
 	var/mob/living/carbon/human/dummy/mannequin/mannequin = null
-	var/datum/transhuman/infocore/TC //Easy debugging access
 	var/obj/item/weapon/disk/body_record/disk = null
 
 /obj/machinery/computer/transhuman/designer/initialize()
 	..()
-	TC = transcore
 
 /obj/machinery/computer/transhuman/designer/Destroy()
 	active_br = null
 	preview_icon = null
 	mannequin = null
 	disk = null
-	..()
+	return ..()
 
 /obj/machinery/computer/transhuman/designer/dismantle()
 	if(disk)
@@ -63,8 +61,8 @@
 
 	if(menu == "2")
 		var/bodyrecords_list_ui[0]
-		for(var/N in TC.body_scans)
-			var/datum/transhuman/body_record/BR = TC.body_scans[N]
+		for(var/N in SStranscore.body_scans)
+			var/datum/transhuman/body_record/BR = SStranscore.body_scans[N]
 			bodyrecords_list_ui[++bodyrecords_list_ui.len] = list("name" = N, "recref" = "\ref[BR]")
 		if(bodyrecords_list_ui.len)
 			data["bodyrecords"] = bodyrecords_list_ui
@@ -110,6 +108,14 @@
 				temp["color"] = MOB_HEX_COLOR(mannequin, tail)
 				temp["colorHref"] = "tail_color"
 		styles["Tail"] = temp
+
+		temp = list("styleHref" = "wing_style", "style" = "Normal")
+		if(mannequin.wing_style)
+			temp["style"] = mannequin.wing_style.name
+			if(mannequin.wing_style.do_colouration)
+				temp["color"] = MOB_HEX_COLOR(mannequin, wing)
+				temp["colorHref"] = "wing_color"
+		styles["Wing"] = temp
 
 		temp = list("styleHref" = "hair_style", "style" = mannequin.h_style)
 		if(mannequin.species && (mannequin.species.appearance_flags & HAS_HAIR_COLOR))
@@ -241,8 +247,8 @@
 	return preview_icon
 
 /obj/machinery/computer/transhuman/designer/proc/update_preview_mob(var/mob/living/carbon/human/H)
-	ASSERT(!deleted(H))
-	ASSERT(!deleted(active_br))
+	ASSERT(!QDELETED(H))
+	ASSERT(!QDELETED(active_br))
 	//log_debug("designer.update_preview_mob([H]) active_br = \ref[active_br]")
 	//Get the DNA and generate a new mob
 	var/datum/dna2/record/R = active_br.mydna
@@ -306,9 +312,9 @@
 		return
 
 	if(href_list["size_multiplier"])
-		var/new_size = input(user, "Choose your character's size:", "Character Preference", player_size_name(active_br.sizemult)) as null|anything in player_sizes_list
-		if(new_size && (new_size in player_sizes_list))
-			active_br.sizemult = player_sizes_list[new_size]
+		var/new_size = input(user, "Choose your character's size, ranging from 25% to 200%", "Character Preference") as num|null
+		if(new_size && IsInRange(new_size,25,200))
+			active_br.sizemult = (new_size/100)
 			preview_icon = null
 		return 1
 

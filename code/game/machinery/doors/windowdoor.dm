@@ -60,7 +60,7 @@
 /obj/machinery/door/window/Destroy()
 	density = 0
 	update_nearby_tiles()
-	..()
+	return ..()
 
 /obj/machinery/door/window/Bumped(atom/movable/AM as mob|obj)
 	if (!( ismob(AM) ))
@@ -193,9 +193,9 @@
 
 	//If it's opened/emagged, crowbar can pry it out of its frame.
 	if (!density && istype(I, /obj/item/weapon/crowbar))
-		playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
+		playsound(src, I.usesound, 50, 1)
 		user.visible_message("[user] begins prying the windoor out of the frame.", "You start to pry the windoor out of the frame.")
-		if (do_after(user,40))
+		if (do_after(user,40 * I.toolspeed))
 			to_chat(user,"<span class='notice'>You pried the windoor out of the frame!</span>")
 
 			var/obj/structure/windoor_assembly/wa = new/obj/structure/windoor_assembly(src.loc)

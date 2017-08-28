@@ -89,10 +89,19 @@ BLIND     // can't see anything
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
 	toggleable = 1
 	action_button_name = "Toggle Goggles"
+	item_flags = AIRTIGHT
 
 /obj/item/clothing/glasses/science/New()
 	..()
 	overlay = global_hud.science
+
+/obj/item/clothing/glasses/goggles
+	name = "Goggles"
+	desc = "Just some plain old goggles."
+	icon_state = "plaingoggles"
+	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
+	item_flags = AIRTIGHT
+	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/night
 	name = "Night Vision Goggles"
@@ -154,6 +163,10 @@ BLIND     // can't see anything
 	action_button_name = "Toggle Goggles"
 	vision_flags = SEE_OBJS
 
+/obj/item/clothing/glasses/material/prescription
+	name = "Prescription Optical Material Scanner"
+	prescription = 1
+
 /obj/item/clothing/glasses/regular
 	name = "Prescription Glasses"
 	desc = "Made by Nerd. Co."
@@ -200,6 +213,7 @@ BLIND     // can't see anything
 	item_state_slots = list(slot_r_hand_str = "welding-g", slot_l_hand_str = "welding-g")
 	action_button_name = "Flip Welding Goggles"
 	matter = list(DEFAULT_WALL_MATERIAL = 1500, "glass" = 1000)
+	item_flags = AIRTIGHT
 	var/up = 0
 
 /obj/item/clothing/glasses/welding/attack_self()
@@ -401,7 +415,7 @@ BLIND     // can't see anything
 	emp_act(severity)
 		if(istype(src.loc, /mob/living/carbon/human))
 			var/mob/living/carbon/human/M = src.loc
-			M << "\red The Optical Thermal Scanner overloads and blinds you!"
+			M << "<font color='red'>The Optical Thermal Scanner overloads and blinds you!</font>"
 			if(M.glasses == src)
 				M.Blind(3)
 				M.eye_blurry = 5

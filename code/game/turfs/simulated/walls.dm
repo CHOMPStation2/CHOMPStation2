@@ -48,6 +48,9 @@
 	if(!radiate())
 		return PROCESS_KILL
 
+/turf/simulated/wall/proc/get_material()
+	return material
+
 /turf/simulated/wall/bullet_act(var/obj/item/projectile/Proj)
 	if(istype(Proj,/obj/item/projectile/beam))
 		burn(2500)
@@ -211,7 +214,7 @@
 			if(check_destroy_override())
 				src.ChangeTurf(destroy_floor_override_path)
 			else
-				src.ChangeTurf(/turf/space)
+				src.ChangeTurf(get_base_turf_by_area(src)) //VOREStation Edit - Use area base turf
 		if(2.0)
 			if(prob(75))
 				take_damage(rand(150, 250))
@@ -265,8 +268,7 @@
 	if(!total_radiation)
 		return
 
-	for(var/mob/living/L in range(3,src))
-		L.apply_effect(total_radiation, IRRADIATE,0)
+	radiation_repository.radiate(src, total_radiation)
 	return total_radiation
 
 /turf/simulated/wall/proc/burn(temperature)

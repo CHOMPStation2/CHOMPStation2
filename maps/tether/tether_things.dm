@@ -18,6 +18,7 @@
 	lift_size_x = 3
 	lift_size_y = 3
 	icon = 'icons/obj/turbolift_preview_3x3.dmi'
+	wall_type = null // Don't make walls
 
 	areas_to_use = list(
 		/area/turbolift/t_surface/level1,
@@ -28,6 +29,9 @@
 		/area/turbolift/t_station/level2,
 		/area/turbolift/t_station/level3
 		)
+
+/datum/turbolift
+	music = list('sound/music/elevator.ogg')  // Woo elevator music!
 
 /obj/machinery/atmospherics/unary/vent_pump/positive
 	use_power = 1
@@ -59,6 +63,80 @@
 	teleport_y = src.y
 	teleport_z = Z_LEVEL_SURFACE_LOW
 
+/obj/effect/step_trigger/teleporter/wild/New()
+	..()
+
+	//If starting on east/west edges.
+	if (src.x == 1)
+		teleport_x = world.maxx - 1
+	else if (src.x == world.maxx)
+		teleport_x = 2
+	else
+		teleport_x = src.x
+	//If starting on north/south edges.
+	if (src.y == 1)
+		teleport_y = world.maxy - 1
+	else if (src.y == world.maxy)
+		teleport_y = 2
+	else
+		teleport_y = src.y
+
+/obj/effect/step_trigger/teleporter/wild/Trigger(var/atom/movable/A)
+	..()
+	var/datum/map_z_level/z_level = get_z_level_datum(A)
+	if(!istype(z_level, /datum/map_z_level/tether/wilderness))
+		return
+	var/datum/map_z_level/tether/wilderness/wilderness = z_level
+	if(wilderness.activated)
+		return
+	if(isliving(A))
+		var/mob/living/M = A
+		if(!M.is_dead() && M.client)
+			wilderness.activate_mobs()
+			return
+	for(var/mob/living/M in A)
+		if(!istype(M))
+			continue
+		if(!M.is_dead() && M.client)
+			wilderness.activate_mobs()
+			return
+
+/obj/effect/step_trigger/teleporter/wild/from_wild
+	..()
+	teleport_z = Z_LEVEL_SURFACE_LOW
+
+/obj/effect/step_trigger/teleporter/wild/to_wild_1
+	..()
+	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_1
+
+/obj/effect/step_trigger/teleporter/wild/to_wild_2/New()
+	..()
+	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_2
+
+/obj/effect/step_trigger/teleporter/wild/to_wild_3/New()
+	..()
+	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_3
+
+/obj/effect/step_trigger/teleporter/wild/to_wild_4/New()
+	..()
+	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_4
+
+/obj/effect/step_trigger/teleporter/wild/to_wild_5/New()
+	..()
+	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_5
+
+/obj/effect/step_trigger/teleporter/wild/to_wild_6/New()
+	..()
+	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_6
+
+/obj/effect/step_trigger/teleporter/wild/to_wild_crash/New()
+	..()
+	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_CRASH
+
+/obj/effect/step_trigger/teleporter/wild/to_wild_ruins/New()
+	..()
+	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_RUINS
+
 
 // Invisible object that blocks z transfer to/from its turf and the turf above.
 /obj/effect/ceiling
@@ -86,15 +164,22 @@
 	icon = 'icons/turf/flooring/maglevs.dmi'
 	icon_state = "maglevup"
 
+	var/area/shock_area = /area/tether/surfacebase/tram
+
+/turf/simulated/floor/maglev/initialize()
+	..()
+	shock_area = locate(shock_area)
+
 // Walking on maglev tracks will shock you! Horray!
 /turf/simulated/floor/maglev/Entered(var/atom/movable/AM, var/atom/old_loc)
 	if(isliving(AM) && prob(50))
-		shock(AM)
+		track_zap(AM)
 /turf/simulated/floor/maglev/attack_hand(var/mob/user)
 	if(prob(75))
-		shock(user)
-/turf/simulated/floor/maglev/proc/shock(var/mob/user)
-	if (electrocute_mob(user, get_area(src), src))
+		track_zap(user)
+/turf/simulated/floor/maglev/proc/track_zap(var/mob/living/user)
+	if (!istype(user)) return
+	if (electrocute_mob(user, shock_area, src))
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
@@ -116,7 +201,7 @@
 
 /obj/machinery/smartfridge/chemistry/chemvator/down/Destroy()
 	attached = null
-	..()
+	return ..()
 
 /obj/machinery/smartfridge/chemistry/chemvator/down
 	name = "\improper Smart Chemavator - Lower"
@@ -296,7 +381,7 @@ var/global/list/latejoin_tram   = list()
 	desc = "Neutralizes toxins and provides a mild alangesic effect."
 	icon_state = "pill2"
 
-/obj/item/weapon/reagent_containers/pill/antitox/New()
+/obj/item/weapon/reagent_containers/pill/airlock/New()
 	..()
 	reagents.add_reagent("anti_toxin", 15)
 	reagents.add_reagent("paracetamol", 5)

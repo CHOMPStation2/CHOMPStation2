@@ -24,7 +24,7 @@
 		/mob/living/carbon/human/proc/begin_reconstitute_form,
 		/mob/living/carbon/human/proc/sonar_ping)
 
-	min_age = 17
+	min_age = 18
 	max_age = 80
 
 	blurb = "Some amalgamation of different species from across the universe,with extremely unstable DNA, making them unfit for regular cloners. \
@@ -73,7 +73,7 @@
 				H.feral = min(150-H.nutrition, H.feral+1) //Feralness increases while this hungry, capped at 50-150 depending on hunger.
 
 		// If they're hurt, chance of snapping. Not if they're straight-up KO'd though.
-		if (H.stat == CONSCIOUS && H.traumatic_shock >=36 && H.in_stasis == 0) //30 brute/burn, or 18 halloss.
+		if (H.stat == CONSCIOUS && H.traumatic_shock >=36) //30 brute/burn, or 18 halloss.
 			if (2.5*H.halloss >= H.traumatic_shock) //If the majority of their shock is due to halloss, greater chance of snapping.
 				if(prob(min(10,(0.2 * H.traumatic_shock))))
 					if(H.feral == 0)
@@ -110,6 +110,8 @@
 
 	if(H.feral > 0) //do the following if feral, otherwise no effects.
 		var/light_amount = H.getlightlevel() //how much light there is in the place
+
+		H.shock_stage = max(H.shock_stage-(H.feral/20), 0) //if they lose enough health to hit softcrit, handle_shock() will keep resetting this. Otherwise, pissed off critters will lose shock faster than they gain it.
 
 		for(var/mob/living/M in viewers(H))
 			if(M != H) // someone in view
@@ -153,35 +155,104 @@
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-///////////WIP CODE TO MAKE XENOCHIMERAS NOT DIE IN SPACE WHILE REGENNING BELOW///////////
+///////////WIP CODE TO MAKE XENOCHIMERAS NOT DIE IN SPACE WHILE REGENNING BELOW/////////// //I put WIP, but what I really meant to put was "Finished"
 //////////////////////////////////////////////////////////////////////////////////////////
 
 	var/datum/gas_mixture/environment = H.loc.return_air()
 	var/pressure2 = environment.return_pressure()
 	var/adjusted_pressure2 = H.calculate_affecting_pressure(pressure2)
 
-	if(adjusted_pressure2 <= 20 && H.in_stasis == 1) //If they're in a enviroment with no pressure and are in stasis (See: regenerating), don't kill them.
+	if(adjusted_pressure2 <= 20 && H.does_not_breathe) //If they're in a enviroment with no pressure and are not breathing (See: regenerating), don't kill them.
 		//This is just to prevent them from taking damage if they're in stasis.
 
 	else if(adjusted_pressure2 <= 20) //If they're in an enviroment with no pressure and are NOT in stasis, damage them.
 		H.take_overall_damage(brute=LOW_PRESSURE_DAMAGE, used_weapon = "Low Pressure")
 
-	if(H.bodytemperature <= 260 && H.in_stasis == 1) //If they're in stasis, don't give them them the negative cold effects
+	if(H.bodytemperature <= 260 && H.does_not_breathe) //If they're regenerating, don't give them them the negative cold effects
 		//This is just here to prevent them from getting cold effects
 
 	else if(H.bodytemperature <= 260) //If they're not in stasis and are cold. Don't really have to add in an exception to cryo cells, as the effects aren't anything /too/ horrible.
-		var/colddamage = 0
+		var/coldshock = 0
 		if(H.bodytemperature <= 260 && H.bodytemperature >= 200) //Chilly.
-			colddamage = 4 //This will begin to knock them out until they run out of oxygen and suffocate or until someone finds them.
+			coldshock = 4 //This will begin to knock them out until they run out of oxygen and suffocate or until someone finds them.
 			H.eye_blurry = 5 //Blurry vision in the cold.
 		if(H.bodytemperature <= 199 && H.bodytemperature >= 100) //Extremely cold. Even in somewhere like the server room it takes a while for bodytemp to drop this low.
-			colddamage = 8
+			coldshock = 8
 			H.eye_blurry = 5
 		if(H.bodytemperature <= 99) //Insanely cold.
-			colddamage = 20
+			coldshock = 16
 			H.eye_blurry = 5
-		if(H.paralysis) //stops weaken spam from being repeatedly taken over max halloss when already KO'd.
-			H.halloss = min(H.halloss+colddamage, H.species.total_health - 1) //if already stunned, only take them up to the point of restunning
-		else
-			H.halloss += colddamage //Harsh punishment for staying in space, and it'll take them a while to fully thaw out when they get retrieved.
+		H.shock_stage = min(H.shock_stage + coldshock, 160) //cold hurts and gives them pain messages, eventually weakening and paralysing, but doesn't damage or trigger feral.
+		return
+
+
+/////////////////////
+/////SPIDER RACE/////
+/////////////////////
+/datum/species/spider //These actually look pretty damn spooky!
+	name = "Vasilissan"
+	name_plural = "Vasilissans"
+	icobase = 'icons/mob/human_races/r_spider.dmi'
+	deform = 'icons/mob/human_races/r_def_spider.dmi'
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
+	darksight = 8		//Can see completely in the dark. They are spiders, after all. Not that any of this matters because people will be using custom race.
+	slowdown = -0.15	//Small speedboost, as they've got a bunch of legs. Or something. I dunno.
+	brute_mod = 0.8		//20% brute damage reduction
+	burn_mod =  1.15	//15% burn damage increase. They're spiders. Aerosol can+lighter = dead spiders.
+
+	num_alternate_languages = 2
+	secondary_langs = list("Sol Common")
+	color_mult = 1
+	tail = "tail" //Spider tail.
+	icobase_tail = 1
+
+	inherent_verbs = list(
+		/mob/proc/weaveWebBindings)
+
+	min_age = 18
+	max_age = 80
+
+	blurb = "Vasilissans are a tall, lanky, spider like people. \
+	Each having four eyes, an extra four, large legs sprouting from their back, and a chitinous plating on their body, and the ability to spit webs \
+	from their mandible lined mouths.  They are a recent discovery by Nanotrasen, only being discovered roughly seven years ago.  \
+	Before they were found they built great cities out of their silk, being united and subjugated in warring factions under great Star Queens  \
+	Who forced the working class to build huge, towering cities to attempt to reach the stars, which they worship as gems of great spiritual and magical significance."
+
+	hazard_low_pressure = -1 //Prevents them from dying normally in space. Special code handled below.
+	cold_level_1 = -5000     // All cold debuffs are handled below in handle_environment_special
+	cold_level_2 = -5000
+	cold_level_3 = -5000
+
+	//primitive_form = "Monkey" //I dunno. Replace this in the future.
+
+	spawn_flags = SPECIES_CAN_JOIN
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+
+	flesh_color = "#AFA59E" //Gray-ish. Not sure if this is really needed, but eh.
+	base_color 	= "#333333" //Blackish-gray
+	blood_color = "#0952EF" //Spiders have blue blood.
+
+/datum/species/spider/handle_environment_special(var/mob/living/carbon/human/H)
+	if(H.stat == 2) // If they're dead they won't need anything.
+		return
+
+	var/datum/gas_mixture/environment = H.loc.return_air()
+	var/pressure2 = environment.return_pressure()
+	var/adjusted_pressure2 = H.calculate_affecting_pressure(pressure2)
+
+	if(adjusted_pressure2 <= 20) //If they're in an enviroment with no pressure and are NOT in stasis, like a stasis bodybag, damage them.
+		H.take_overall_damage(brute=LOW_PRESSURE_DAMAGE, used_weapon = "Low Pressure")
+
+	if(H.bodytemperature <= 260) //If they're really cold, they go into stasis.
+		var/coldshock = 0
+		if(H.bodytemperature <= 260 && H.bodytemperature >= 200) //Chilly.
+			coldshock = 4 //This will begin to knock them out until they run out of oxygen and suffocate or until someone finds them.
+			H.eye_blurry = 5 //Blurry vision in the cold.
+		if(H.bodytemperature <= 199 && H.bodytemperature >= 100) //Extremely cold. Even in somewhere like the server room it takes a while for bodytemp to drop this low.
+			coldshock = 8
+			H.eye_blurry = 5
+		if(H.bodytemperature <= 99) //Insanely cold.
+			coldshock = 16
+			H.eye_blurry = 5
+		H.shock_stage = min(H.shock_stage + coldshock, 160) //cold hurts and gives them pain messages, eventually weakening and paralysing, but doesn't damage.
 		return

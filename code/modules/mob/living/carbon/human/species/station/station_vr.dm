@@ -44,6 +44,20 @@
 		"Your overheated skin itches."
 		)
 
+	has_limbs = list(
+		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
+		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/sergal),
+		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
+		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
+		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
+		BP_R_LEG =  list("path" = /obj/item/organ/external/leg/right),
+		BP_L_HAND = list("path" = /obj/item/organ/external/hand),
+		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right),
+		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
+		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
+		)
+
 /datum/species/akula
 	name = "Akula"
 	name_plural = "Akula"
@@ -133,7 +147,7 @@
 /datum/species/hi_zoxxen
 	name = "Highlander Zorren"
 	name_plural = "Zorren"
-	icobase = 'icons/mob/human_races/r_fox.dmi'
+	icobase = 'icons/mob/human_races/r_fox_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_fox.dmi'
 	tail = "tail"
 	icobase_tail = 1
@@ -152,14 +166,6 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-/* VOREStation Removal
-	cold_level_1 = 200 //Default 260
-	cold_level_2 = 140 //Default 200
-	cold_level_3 = 80 //Default 120
-	heat_level_1 = 330 //Default 360
-	heat_level_2 = 380 //Default 400
-	heat_level_3 = 800 //Default 1000
-*/
 	//primitive_form = "" //We don't have fox-monkey sprites.
 
 	spawn_flags = SPECIES_CAN_JOIN
@@ -177,7 +183,7 @@
 /datum/species/fl_zorren
 	name = "Flatland Zorren"
 	name_plural = "Zorren"
-	icobase = 'icons/mob/human_races/r_fennec.dmi'
+	icobase = 'icons/mob/human_races/r_fennec_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_fennec.dmi'
 	tail = "tail"
 	icobase_tail = 1
@@ -196,14 +202,6 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they \
 	seem to have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-/* VOREStation Removal
-	cold_level_1 = 280 //Default 260 - Lower is better
-	cold_level_2 = 220 //Default 200
-	cold_level_3 = 130 //Default 120
-	heat_level_1 = 430 //Default 360 - Higher is better
-	heat_level_2 = 500 //Default 400
-	heat_level_3 = 1100 //Default 1000
-*/
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -284,8 +282,6 @@
 	flesh_color = "#201730"
 	base_color = "#201730"
 
-	//reagent_tag = IS_SERGAL //No specific reagent tag.
-
 	heat_discomfort_strings = list(
 		"Your chitin feels extremely warm.",
 		"You feel uncomfortably warm.",
@@ -312,15 +308,14 @@
 	min_age = 18
 
 /datum/species/teshari
+	mob_size = MOB_MEDIUM
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
+	push_flags = ~HEAVY //Allows them to use micro step code.
+	swap_flags = ~HEAVY
 
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-
-/datum/species/teshari
-	mob_size = MOB_MEDIUM
-	min_age = 18
 
 /datum/species/human
 	color_mult = 1
@@ -334,8 +329,3 @@
 	gluttonous = 0
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
 	min_age = 18
-
-/datum/species
-	holder_type = /obj/item/weapon/holder/micro //This allows you to pick up crew
-	min_age = 18
-

@@ -409,13 +409,14 @@
 
 //Sammantha Quzix
 
-/obj/item/clothing/under/color/grey/fluff/sam_bodysuit
+/obj/item/clothing/under/rank/security/corp/fluff/sam_bodysuit
 	name = "Mech Pilot Bodysuit"
 	desc = "A black white and blue bodysuit made of reinforced materials. It clings tightly to its wearers body."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "pilotsuit"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "pilotsuit"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves
 	name = "Mech Pilot Gloves"
@@ -441,7 +442,7 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mechpilot_mob"
 
-/obj/item/clothing/suit/storage/toggle/fluff/sam_jacket
+/obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket
 	name = "Mech Pilot Jacket"
 	desc = "A black jacket made of genuine leather with blue markings on each shoulder. The letters 'ERT' are stenciled onto the back in gold lettering."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -490,7 +491,7 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "coatmech"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "coatmech_mob"
+	icon_state = "coatmech_mob"
 
 // ***********
 // Johnwolf135

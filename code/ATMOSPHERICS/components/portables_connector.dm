@@ -61,7 +61,7 @@
 	return null
 
 /obj/machinery/atmospherics/portables_connector/Destroy()
-	loc = null
+	. = ..()
 
 	if(connected_device)
 		connected_device.disconnect()
@@ -71,8 +71,6 @@
 		qdel(network)
 
 	node = null
-
-	..()
 
 /obj/machinery/atmospherics/portables_connector/initialize()
 	if(node) return
@@ -144,9 +142,9 @@
 		user << "<span class='warning'>You cannot unwrench \the [src], it too exerted due to internal pressure.</span>"
 		add_fingerprint(user)
 		return 1
-	playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
+	playsound(src, W.usesound, 50, 1)
 	user << "<span class='notice'>You begin to unfasten \the [src]...</span>"
-	if (do_after(user, 40))
+	if (do_after(user, 40 * W.toolspeed))
 		user.visible_message( \
 			"<span class='notice'>\The [user] unfastens \the [src].</span>", \
 			"<span class='notice'>You have unfastened \the [src].</span>", \

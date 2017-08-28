@@ -2,6 +2,7 @@
 	robot_modules["Medihound"] = /obj/item/weapon/robot_module/medihound
 	robot_modules["K9"] = /obj/item/weapon/robot_module/knine
 	robot_modules["ERT"] = /obj/item/weapon/robot_module/ert
+	robot_modules["Janihound"] = /obj/item/weapon/robot_module/scrubpup
 	return 1
 
 
@@ -73,15 +74,24 @@
 	src.modules += new /obj/item/device/dogborg/sleeper(src) //So they can nom people and heal them
 	src.modules += new /obj/item/borg/sight/hud/med(src) //See who's hurt generally.
 	src.modules += new /obj/item/weapon/extinguisher/mini(src) //So they can put burning patients out.
+	src.modules += new /obj/item/weapon/reagent_containers/borghypo(src)//So medi-hounds aren't nearly useless
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
-	src.modules += new /obj/item/weapon/crowbar(src)
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the chemicals when the chemist is nice
+	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	R.icon = 'icons/mob/widerobot_vr.dmi'
+
+	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test	src.modules += new /obj/item/weapon/crowbar(src)'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	//R.icon_state = "medihound"
 	R.pixel_x 	 = -16
 	R.old_x  	 = -16
 	..()
+
+/obj/item/weapon/robot_module/robot/medical/surgeon/New()
+	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
+
+/obj/item/weapon/robot_module/robot/medical/crisis/New()
+	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 
 /obj/item/weapon/robot_module/ert
 	name = "Emergency Responce module"
@@ -111,3 +121,28 @@
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
 	..()
+
+/obj/item/weapon/robot_module/scrubpup
+	name = "Custodial Hound module"
+	sprites = list(
+					"Custodial Hound" = "scrubpup",
+					)
+	channels = list("Service" = 1)
+	can_be_pushed = 0
+
+/obj/item/weapon/robot_module/scrubpup/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/device/lightreplacer/dogborg(src)
+	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
+	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/device/dogborg/tongue(src)
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor(src)
+	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
+	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	//R.icon_state = "scrubpup"
+	R.pixel_x 	 = -16
+	R.old_x 	 = -16
+	..()
+
+/obj/item/weapon/robot_module/scrubpup/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	var/obj/item/device/lightreplacer/LR = locate() in src.modules
+	LR.Charge(R, amount)

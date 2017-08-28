@@ -6,7 +6,7 @@
 	item_state = "table_parts"
 	w_class = ITEMSIZE_HUGE
 
-	attack_self(mob/user as mob)
+/obj/item/stolenpackage/attack_self(mob/user as mob)
 		// Another way of doing this. Commented out because the other method is better for this application.
 		/*var/spawn_chance = rand(1,100)
 		switch(spawn_chance)
@@ -42,6 +42,12 @@
 						/obj/item/mecha_parts/part/phazon_right_arm,
 						/obj/item/mecha_parts/part/phazon_right_leg,
 						/obj/item/mecha_parts/part/phazon_torso,
+						/obj/item/device/bodysnatcher,
+						/obj/item/weapon/bluespace_harpoon,
+						/obj/item/weapon/permit,
+						/obj/item/device/perfect_tele,
+						/obj/item/device/sleevemate,
+						/obj/item/weapon/disk/nifsoft/compliance,
 						/obj/item/seeds/ambrosiadeusseed,
 						/obj/item/seeds/ambrosiavulgarisseed,
 						/obj/item/seeds/libertymycelium,
@@ -79,8 +85,8 @@
 						/obj/random/contraband,
 						/obj/random/weapon/guarenteed)
 		new loot(usr.loc)
-		usr << "You unwrap the package."
-		del(src)
+		to_chat(user, "You unwrap the package.")
+		qdel(src)
 
 /obj/item/weapon/storage/fancy/cigar/havana // Putting this here 'cuz fuck it. -Spades
 	name = "\improper Havana cigar case"

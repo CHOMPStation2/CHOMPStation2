@@ -21,11 +21,6 @@
 	if(can_buckle && istype(M))
 		user_buckle_mob(M, user)
 
-//Cleanup
-/obj/Del()
-	unbuckle_mob()
-	return ..()
-
 /obj/Destroy()
 	unbuckle_mob()
 	return ..()
@@ -42,6 +37,7 @@
 	M.facing_dir = null
 	M.set_dir(buckle_dir ? buckle_dir : dir)
 	M.update_canmove()
+	M.update_floating( M.Check_Dense_Object() )
 	buckled_mob = M
 
 	post_buckle_mob(M)
@@ -53,6 +49,7 @@
 		buckled_mob.buckled = null
 		buckled_mob.anchored = initial(buckled_mob.anchored)
 		buckled_mob.update_canmove()
+		buckled_mob.update_floating( buckled_mob.Check_Dense_Object() )
 		buckled_mob = null
 
 		post_buckle_mob(.)

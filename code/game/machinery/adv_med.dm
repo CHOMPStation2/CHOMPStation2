@@ -158,7 +158,7 @@
 //Body Scan Console
 /obj/machinery/body_scanconsole
 	var/obj/machinery/bodyscanner/scanner
-	var/known_implants = list(/obj/item/weapon/implant/health, /obj/item/weapon/implant/chem, /obj/item/weapon/implant/death_alarm, /obj/item/weapon/implant/loyalty, /obj/item/weapon/implant/tracking, /obj/item/weapon/implant/language, /obj/item/weapon/implant/language/eal, /obj/item/weapon/implant/backup) //VOREStation Add - Backup Implant
+	var/known_implants = list(/obj/item/weapon/implant/health, /obj/item/weapon/implant/chem, /obj/item/weapon/implant/death_alarm, /obj/item/weapon/implant/loyalty, /obj/item/weapon/implant/tracking, /obj/item/weapon/implant/language, /obj/item/weapon/implant/language/eal, /obj/item/weapon/implant/backup, /obj/item/device/nif) //VOREStation Add - Backup Implant, NIF
 	var/delete
 	var/temphtml
 	name = "Body Scanner Console"
@@ -291,8 +291,9 @@
 			var/bloodData[0]
 			if(H.vessel)
 				var/blood_volume = round(H.vessel.get_reagent_amount("blood"))
+				var/blood_max = H.species.blood_volume
 				bloodData["volume"] = blood_volume
-				bloodData["percent"] = round(((blood_volume / 560)*100))
+				bloodData["percent"] = round(((blood_volume / blood_max)*100))
 
 			occupantData["blood"] = bloodData
 
@@ -463,7 +464,8 @@
 
 			if(occupant.vessel)
 				var/blood_volume = round(occupant.vessel.get_reagent_amount("blood"))
-				var/blood_percent =  blood_volume / 560
+				var/blood_max = occupant.species.blood_volume
+				var/blood_percent =  blood_volume / blood_max
 				blood_percent *= 100
 
 				extra_font = "<font color=[blood_volume > 448 ? "blue" : "red"]>"

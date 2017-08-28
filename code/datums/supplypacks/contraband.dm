@@ -14,7 +14,7 @@
 			)
 
 	name = "Contraband crate"
-	cost = 25
+	cost = 500
 	containertype = /obj/structure/closet/crate
 	containername = "Unlabeled crate"
 	contraband = 1
@@ -27,7 +27,7 @@
 			/obj/item/weapon/grenade/smokebomb = 4,
 			/obj/item/weapon/grenade/chem_grenade/incendiary
 			)
-	cost = 25
+	cost = 500
 	containertype = /obj/structure/closet/crate
 	containername = "Special Ops crate"
 	contraband = 1
@@ -47,9 +47,9 @@
  	name = "Surplus militia rifles"
  	contains = list(
  			/obj/item/weapon/gun/projectile/shotgun/pump/rifle/mosin = 3,
- 			/obj/item/ammo_magazine/clip/a762 = 6
+ 			/obj/item/ammo_magazine/clip/c762 = 6
  			)
- 	cost = 50
+ 	cost = 1000
  	contraband = 1
  	containertype = /obj/structure/closet/crate/secure/weapon
  	containername = "Weapons crate"

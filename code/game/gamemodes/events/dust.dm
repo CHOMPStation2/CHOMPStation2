@@ -81,7 +81,12 @@ The "dust" will damage the hull of the station causin minor hull breaches.
 				startx = (TRANSITIONEDGE+1)
 				endy = rand(TRANSITIONEDGE,world.maxy-TRANSITIONEDGE)
 				endx = world.maxx-TRANSITIONEDGE
-		var/z_level = pick(using_map.station_levels)
+		//VOREStation Edit - No space dust outside of space
+		var/list/z_levels = using_map.station_levels.Copy()
+		for(var/datum/planet/P in planet_controller.planets)
+			z_levels.Remove(P.expected_z_levels)
+		var/z_level = pick(z_levels)
+		//VOREStation Edit End
 		var/goal = locate(endx, endy, z_level)
 		src.x = startx
 		src.y = starty
@@ -89,6 +94,10 @@ The "dust" will damage the hull of the station causin minor hull breaches.
 		spawn(0)
 			walk_towards(src, goal, 1)
 		return
+
+	Destroy()
+		walk(src, 0) // Because we might have called walk_towards, we must stop the walk loop or BYOND keeps an internal reference to us forever.
+		return ..()
 
 	touch_map_edge()
 		qdel(src)

@@ -135,7 +135,8 @@ Please contact me on #coderbus IRC. ~Carn x
 #define FIRE_LAYER				27		//If you're on fire
 #define WATER_LAYER				28		//If you're submerged in water.
 #define TARGETED_LAYER			29		//BS12: Layer for the target overlay from weapon targeting system
-#define TOTAL_LAYERS			30
+#define WING_LAYER				30 //VOREStation edit. Simply move this up a number if things are added.
+#define TOTAL_LAYERS			31 //VOREStation edit. Add it to the number polaris has but +1 to accomidate the wing_layer.
 //////////////////////////////////
 
 /mob/living/carbon/human
@@ -170,6 +171,23 @@ Please contact me on #coderbus IRC. ~Carn x
 		M.Scale(size_multiplier)
 		M.Translate(0, 16*(size_multiplier-1))
 		src.transform = M
+
+	if(mobonback)
+		if(mobonback.layer < layer)
+			mobonback.layer = layer + 0.1
+
+		if(dir == NORTH)
+			mobonback.pixel_x = 0
+		else if(dir == SOUTH)
+			mobonback.pixel_x = 0
+			mobonback.layer = layer - 0.1
+		else if(dir == EAST)
+			mobonback.pixel_x = -12
+		else if(dir == WEST)
+			mobonback.pixel_x = 12
+
+		mobonback.pixel_y = 9
+		overlays += mobonback
 
 var/global/list/damage_icon_parts = list()
 
@@ -274,6 +292,9 @@ var/global/list/damage_icon_parts = list()
 
 			if(part.robotic >= ORGAN_ROBOT)
 				icon_key += "2[part.model ? "-[part.model]": ""]"
+				robolimb_count++
+				if(part.organ_tag == BP_HEAD || part.organ_tag == BP_TORSO || part.organ_tag == BP_GROIN)
+					robobody_count ++
 			else if(part.status & ORGAN_DEAD)
 				icon_key += "3"
 			else
@@ -335,6 +356,7 @@ var/global/list/damage_icon_parts = list()
 
 	//tail
 	update_tail_showing(0)
+	update_wing_showing(0) //VOREStation edit
 
 //UNDERWEAR OVERLAY
 /mob/living/carbon/human/proc/update_underwear(var/update_icons=1)
@@ -445,7 +467,7 @@ var/global/list/damage_icon_parts = list()
 //For legacy support.
 /mob/living/carbon/human/regenerate_icons()
 	..()
-	if(transforming)		return
+	if(transforming || QDELETED(src))		return
 
 	update_mutations(0)
 	update_body(0)
@@ -833,6 +855,7 @@ var/global/list/damage_icon_parts = list()
 	update_inv_w_uniform(0)
 	update_inv_shoes(0)
 	update_tail_showing(0)
+	update_wing_showing(0)//VOREStation Edit
 
 	if(update_icons)   update_icons()
 

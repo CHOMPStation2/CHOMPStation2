@@ -4,6 +4,12 @@
 
 var/global/list/ear_styles_list = list()	// Stores /datum/sprite_accessory/ears indexed by type
 var/global/list/tail_styles_list = list()	// Stores /datum/sprite_accessory/tail indexed by type
+var/global/list/wing_styles_list = list()	// Stores /datum/sprite_accessory/wing indexed by type
+var/global/list/negative_traits = list()	// Negative custom species traits, indexed by path
+var/global/list/neutral_traits = list()		// Neutral custom species traits, indexed by path
+var/global/list/positive_traits = list()	// Positive custom species traits, indexed by path
+var/global/list/traits_costs = list()		// Just path = cost list, saves time in char setup
+var/global/list/all_traits = list()			// All of 'em at once (same instances)
 
 //stores numeric player size options indexed by name
 var/global/list/player_sizes_list = list(
@@ -33,7 +39,22 @@ var/global/list/important_items = list(
 		/obj/item/clothing/shoes/magboots,
 		/obj/item/blueprints,
 		/obj/item/clothing/head/helmet/space,
-		/obj/item/weapon/disk/nuclear)
+		/obj/item/weapon/disk/nuclear,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz)
+
+var/global/list/digestion_sounds = list(
+		'sound/vore/digest1.ogg',
+		'sound/vore/digest2.ogg',
+		'sound/vore/digest3.ogg',
+		'sound/vore/digest4.ogg',
+		'sound/vore/digest5.ogg',
+		'sound/vore/digest6.ogg',
+		'sound/vore/digest7.ogg',
+		'sound/vore/digest8.ogg',
+		'sound/vore/digest9.ogg',
+		'sound/vore/digest10.ogg',
+		'sound/vore/digest11.ogg',
+		'sound/vore/digest12.ogg')
 
 var/global/list/death_sounds = list(
 		'sound/vore/death1.ogg',
@@ -106,4 +127,26 @@ var/global/list/tf_egg_types = list(
 	for(var/path in paths)
 		var/datum/sprite_accessory/tail/instance = new path()
 		tail_styles_list[path] = instance
+
+	// Custom Wings
+	paths = typesof(/datum/sprite_accessory/wing) - /datum/sprite_accessory/wing
+	for(var/path in paths)
+		var/datum/sprite_accessory/wing/instance = new path()
+		wing_styles_list[path] = instance
+
+	// Custom species traits
+	paths = typesof(/datum/trait) - /datum/trait
+	for(var/path in paths)
+		var/datum/trait/instance = new path()
+		var/cost = instance.cost
+		traits_costs[path] = cost
+		all_traits[path] = instance
+		switch(cost)
+			if(-INFINITY to -0.1)
+				negative_traits[path] = instance
+			if(0)
+				neutral_traits[path] = instance
+			if(0.1 to INFINITY)
+				positive_traits[path] = instance
+
 	return 1 // Hooks must return 1

@@ -5,7 +5,7 @@
 	icon_state = "45"
 	icon = 'icons/obj/gun_yw.dmi'
 	mag_type = MAGAZINE
-	ammo_type = /obj/item/ammo_casing/c45
+	ammo_type = /obj/item/ammo_casing/a45
 	matter = list(DEFAULT_WALL_MATERIAL = 525) //metal costs are very roughly based around 1 .45 casing = 75 metal
 	caliber = ".45"
 	max_ammo = 7
@@ -16,19 +16,19 @@
 
 /obj/item/ammo_magazine/c45m2024/rubber
 	name = "m2024 magazine (.45 rubber)"
-	ammo_type = /obj/item/ammo_casing/c45r
+	ammo_type = /obj/item/ammo_casing/a45r
 
 /obj/item/ammo_magazine/c45m2024/practice
 	name = "m2024 magazine (.45 practice)"
-	ammo_type = /obj/item/ammo_casing/c45p
+	ammo_type = /obj/item/ammo_casing/a45p
 
 /obj/item/ammo_magazine/c45m2024/flash
 	name = "m2024 magazine (.45 flash)"
-	ammo_type = /obj/item/ammo_casing/c45f
+	ammo_type = /obj/item/ammo_casing/a45f
 
 /obj/item/ammo_magazine/c45m2024/ap
 	name = "m2024 magazine (.45 AP)"
-	ammo_type = /obj/item/ammo_casing/c45ap
+	ammo_type = /obj/item/ammo_casing/a45ap
 
 
 /******** 9mm glock ********/
@@ -40,7 +40,7 @@
 	mag_type = MAGAZINE
 	matter = list(DEFAULT_WALL_MATERIAL = 480)
 	caliber = "9mm"
-	ammo_type = /obj/item/ammo_casing/c9mm
+	ammo_type = /obj/item/ammo_casing/a9mm
 	max_ammo = 17
 	multiple_sprites = 0
 
@@ -48,15 +48,15 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/gl9mm/flash
-	ammo_type = /obj/item/ammo_casing/c9mmf
+	ammo_type = /obj/item/ammo_casing/a9mmf
 
 /obj/item/ammo_magazine/gl9mm/rubber
 	name = "glock magazine (9mm rubber)"
-	ammo_type = /obj/item/ammo_casing/c9mmr
+	ammo_type = /obj/item/ammo_casing/a9mmr
 
 /obj/item/ammo_magazine/gl9mm/practice
 	name = "glock magazine (9mm practice)"
-	ammo_type = /obj/item/ammo_casing/c9mmp
+	ammo_type = /obj/item/ammo_casing/a9mmp
 
 /******* MG42 ********/
 /obj/item/ammo_magazine/mg42
