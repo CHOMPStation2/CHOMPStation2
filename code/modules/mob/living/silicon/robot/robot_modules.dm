@@ -185,7 +185,7 @@ var/global/list/robot_modules = list(
 	name = "medical robot module"
 	channels = list("Medical" = 1)
 	networks = list(NETWORK_MEDICAL)
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the surgeon ability to watch Crew monitor
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/medical/surgeon
@@ -225,6 +225,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/gripper/medical(src)
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
+	src.modules += new /obj/item/device/sleevemate(src)
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
@@ -251,6 +252,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/medical/crisis
 	name = "crisis robot module"
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the medical Crisis ability to watch Crew monitor
 	sprites = list(
 					"M-USE NanoTrasen" = "robotMedi",
 					"Cabeiri" = "eyebot-medical",
@@ -282,6 +284,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/gripper/medical(src)
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
+	src.modules += new /obj/item/device/sleevemate(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
 
