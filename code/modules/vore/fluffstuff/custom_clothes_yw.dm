@@ -605,6 +605,7 @@
 	icon_state = "sergal_armor"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "sergal_armor"
+	flags_inv = HIDETAIL|HIDETIE|HIDEHOLSTER
 	armor = list(melee = 65, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/arm_guard/fluff/madoka_arms
