@@ -60,6 +60,7 @@
 	name = "MediHound module"
 	channels = list("Medical" = 1)
 	networks = list(NETWORK_MEDICAL)
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Crew monitor anywhere!
 	can_be_pushed = 0
 	sprites = list(
 					"Medical Hound" = "medihound",
@@ -76,11 +77,13 @@
 	src.modules += new /obj/item/weapon/extinguisher/mini(src) //So they can put burning patients out.
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo(src)//So medi-hounds aren't nearly useless
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
-	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the chemicals when the chemist is nice
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
+	src.modules += new /obj/item/weapon/crowbar/cyborg(src)//Open up those pesky unpowered doors. Standard EMT equipment.
+	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test	src.modules += new /obj/item/weapon/crowbar(src)'
+	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	//R.icon_state = "medihound"
 	R.pixel_x 	 = -16
