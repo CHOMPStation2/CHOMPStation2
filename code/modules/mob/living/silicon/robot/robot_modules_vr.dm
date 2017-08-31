@@ -90,11 +90,6 @@
 	R.old_x  	 = -16
 	..()
 
-/obj/item/weapon/robot_module/robot/medical/surgeon/New()
-	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
-
-/obj/item/weapon/robot_module/robot/medical/crisis/New()
-	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 
 /obj/item/weapon/robot_module/ert
 	name = "Emergency Responce module"
