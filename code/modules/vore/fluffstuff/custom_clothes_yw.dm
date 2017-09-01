@@ -452,6 +452,27 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
+//Aien Waesmaer
+
+/obj/item/clothing/under/fluff/aien_uniform
+	name = "Fancy uniform"
+	desc = "A white silk shirt, black uniform jacket, a black skirt and a shorter, gray silk skirt over that one. The shirts top row of buttons are open and everything looks very expensive. Its all being held in place by a black leather belt with golden buckle. The uniform jacket has the crest of the Imperium Auream on its right collar."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "elvensuit"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "elvensuit_mob"
+
+/obj/item/clothing/suit/storage/fluff/aien_suit
+	name = "Heavy overcoat"
+	desc = "A charcoal-black coat made of synthleather. Its insides are lined with white fur and silk, looking over the top and very expensive. It has the crest of the Imperium Auream on the right collar."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "elvencoat"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "elvencoat_mob"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+
 // *******
 // Izac112
 // *******

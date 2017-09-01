@@ -43,6 +43,15 @@
 		/obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket,
 		/obj/item/weapon/storage/belt/utility/fluff/sam_belt)
 
+//Aien Waesmaer
+
+/obj/item/weapon/storage/box/fluff/aien
+	name = "Aien's Kit"
+	desc = "A kit containing Aien's equipment."
+	has_items = list(
+		/obj/item/clothing/under/fluff/aien_uniform,
+		/obj/item/clothing/suit/storage/fluff/aien_suit)
+
 // **************
 //The god himself
 // **************
