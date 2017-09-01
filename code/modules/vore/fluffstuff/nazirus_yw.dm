@@ -79,32 +79,32 @@
 
 /obj/item/clothing/head/helmet/space/void/merc/nazi/nazirigh
 	name = "Weltraumsoldat helm"
-	desc = "A obscure helmet that comes with the markings 'Weltraumsoldaten' on it."
+	desc = "A obscure helmet that only seems to fit a human and comes with the markings 'Weltraumsoldaten' on it."
 	icon = 'icons/vore/nazirus_yw.dmi'
 	icon_state = "rig0-nazih"
 	icon_override = 'icons/vore/nazirus_yw.dmi'
-	item_state = "rig0-nazih"
+	item_state = "rig0-nazi_mob"
 
 /obj/item/clothing/suit/space/void/merc/nazi/nazirig
 	name = "Weltraumsoldat hardsuit"
-	desc = "A obscure hardsuit that comes with the markings 'Weltraumsoldaten' on it."
+	desc = "A obscure hardsuit that only seems to fit a human and comes with the markings 'Weltraumsoldaten' on it."
 	icon = 'icons/vore/nazirus_yw.dmi'
-	icon_state = "rig-nazi"
+	icon_state = "rig-nazir"
 	icon_override = 'icons/vore/nazirus_yw.dmi'
-	item_state = "rig-nazi"
+	item_state = "rig-nazi_mob"
 
 /obj/item/clothing/head/helmet/space/void/nazi/merc/sovrigh
 	name = "Soviet helm"
-	desc = "A obscure helmet that comes with the markings 'CMC-300 Powered Combat Suit' on it."
+	desc = "A obscure helmet that only seems to fit a human and comes with the markings 'CMC-300 Powered Combat Suit' on it."
 	icon = 'icons/vore/nazirus_yw.dmi'
 	icon_state = "rig0-sovieth"
 	icon_override = 'icons/vore/nazirus_yw.dmi'
-	item_state = "rig0-sovieth"
+	item_state = "rig0-soviet_mob"
 
 /obj/item/clothing/suit/space/void/merc/nazi/sovrig
 	name = "Soviet hardsuit"
-	desc = "A obscure hardsuit that comes with the markings 'CMC-300 Powered Combat Suit' on it."
+	desc = "A obscure hardsuit that only seems to fit a human and comes with the markings 'CMC-300 Powered Combat Suit' on it."
 	icon = 'icons/vore/nazirus_yw.dmi'
-	icon_state = "rig-soviet"
+	icon_state = "rig-sovietr"
 	icon_override = 'icons/vore/nazirus_yw.dmi'
-	item_state = "rig-soviet"
+	item_state = "rig-soviet_mob"
