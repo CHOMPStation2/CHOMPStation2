@@ -138,6 +138,12 @@ item_path: /obj/item/weapon/storage/box/fluff/raja
 }
 
 {
+ckey: izac112
+character_name: Shel Nargol
+item_path: /obj/item/weapon/storage/box/fluff/shel
+}
+
+{
 ckey: ivymoomoo
 character_name: Ivy Baladeva
 item_path: /obj/item/weapon/storage/backpack/messenger/sec/fluff/ivymoomoo
