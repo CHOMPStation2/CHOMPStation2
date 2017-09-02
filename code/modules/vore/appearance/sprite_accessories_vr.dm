@@ -1060,6 +1060,22 @@
 	name = "Otie"
 	icon_state = "otie_s"*/
 
+/datum/sprite_accessory/tail/taur/wolf2
+	name = "Wolf2"
+	icon_state = "wolf2_s"
+
+/datum/sprite_accessory/tail/taur/wolf2f
+	name = "Wolf2 (fat)"
+	icon_state = "wolf2f_s"
+
+/datum/sprite_accessory/tail/taur/husky2
+	name = "Husky"
+	icon_state = "husky_s"
+
+/datum/sprite_accessory/tail/taur/husky2f
+	name = "Husky (fat)"
+	icon_state = "huskyf_s"
+
 //wickedtemp: Chakat Tempest
 /datum/sprite_accessory/tail/taur/feline/tempest
 	name = "Feline (wickedtemp)"
