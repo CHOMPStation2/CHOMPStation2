@@ -6,6 +6,7 @@
 
 /obj/item/weapon/robot_module/xenomaid
 	name = "Xenomorph Maid module"
+	channels = "Service"
 	sprites = list(
 					"Xenomorph Maid" = "xenomaid"
 					)
@@ -31,12 +32,11 @@
 	sprites = list(
 					"Blade" = "blade",
 					)
-	channels = list("Security" = 1)
+	channels = list("Supply" = 1)
 	networks = list(NETWORK_MINE)
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/blade/New(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/device/flash(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/big(src) //In case there's some kind of hostile mob.
 	src.modules += new /obj/item/device/dogborg/boop_module(src) //Boop people on the nose.
 	src.modules += new /obj/item/device/dogborg/tongue(src) //This is so they can clean up bloody evidence after it's examined, and so they can lick crew.

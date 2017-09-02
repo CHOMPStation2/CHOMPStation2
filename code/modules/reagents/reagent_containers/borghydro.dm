@@ -9,11 +9,11 @@
 	possible_transfer_amounts = null
 
 	var/mode = 1
-	var/charge_cost = 50
+	var/charge_cost = 325
 	var/charge_tick = 0
 	var/recharge_time = 5 //Time it takes for shots to recharge (in seconds)
 
-	var/list/reagent_ids = list("tricordrazine", "inaprovaline", "anti_toxin", "tramadol", "dexalin" ,"spaceacillin")
+	var/list/reagent_ids = list("tricordrazine", "inaprovaline", "bicaridine", "anti_toxin", "kelotane", "tramadol", "dexalin" ,"spaceacillin")
 	var/list/reagent_volumes = list()
 	var/list/reagent_names = list()
 
@@ -47,8 +47,11 @@
 		if(R && R.cell)
 			for(var/T in reagent_ids)
 				if(reagent_volumes[T] < volume)
-					R.cell.use(charge_cost)
-					reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
+					if(R.cell.charge - charge_cost < 800) //This is so borgs don't kill themselves with it.
+						return 0
+					else
+						R.cell.use(charge_cost)
+						reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
 	return 1
 
 /obj/item/weapon/reagent_containers/borghypo/attack(var/mob/living/M, var/mob/user)
