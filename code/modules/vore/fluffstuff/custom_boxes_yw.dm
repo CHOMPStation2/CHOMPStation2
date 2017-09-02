@@ -110,6 +110,16 @@
 		/obj/item/weapon/storage/belt/utility/fluff/raja_belt,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/fluff/raja_coat)
 
+//Shel Nargol
+
+/obj/item/weapon/storage/box/fluff/shel
+	name = "Shel's Kit"
+	desc = "A kit containing Shel's equipment."
+	has_items = list(
+		/obj/item/clothing/gloves/fluff/shel_gloves,
+		/obj/item/clothing/under/fluff/shel)
+
+
 // **************
 // Admiral Dragon
 // **************

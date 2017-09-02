@@ -34,7 +34,6 @@
 	exclaim_verb = "barks"
 	colour = "vulpkanin"
 	key = "8" //lol, no idea - Poojawa
-	flags = RESTRICTED
 	syllables = list("rur","ya","cen","rawr","bar","kuk","tek","qat","uk","wu","vuh","tah","tch","schz","auch", \
 	"ist","ein","entch","zwichs","tut","mir","wo","bis","es","vor","nic","gro","lll","enem","zandt","tzch","noch", \
 	"hel","ischt","far","wa","baram","iereng","tech","lach","sam","mak","lich","gen","or","ag","eck","gec","stag","onn", \
@@ -48,7 +47,6 @@
     exclaim_verb = "incants"
     colour = "cult" //No clue what to put here - Table
     key = "-" //dunno if this is a valid key. - Table
-    flags = RESTRICTED
     syllables = list("viepn","e","bag","docu","kar","xlaqf","raa","qwos","nen","ty","von","kytaf","xin","ty","ka","baak","hlafaifpyk","znu","agrith","na'ar","uah","plhu","six","fhler","bjel","scee","lleri",
     "dttm","aggr","uujl","hjjifr","wwuthaav",)
 
@@ -60,7 +58,6 @@
     exclaim_verb = "loudly sings"
     colour = "birdsongc" //No clue what to put here - Table
     key = "*" //dunno if this is a valid key. - Table
-    flags = RESTRICTED
     syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
     "mihi","wan","six","salve","tartu")
 

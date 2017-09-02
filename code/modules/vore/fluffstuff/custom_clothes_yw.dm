@@ -514,6 +514,24 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "coatmech_mob"
 
+//Shel Nargol
+
+/obj/item/clothing/gloves/fluff/shel_gloves
+	name = "Leather armwraps"
+	desc = "A bunch of leather and linen strips to act as some sort of gloves. The fingers are free, and the left arm is covered in the wraps completely."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "armwraps"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "armwraps"
+
+/obj/item/clothing/under/fluff/shel
+	name = "Padded pants"
+	desc = "A pair of padded linen pants reinforced with leather every here and there. Comes with a plain black belt too."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "paddedpants_s"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "paddedpants"
+
 // ***********
 // Johnwolf135
 // ***********
