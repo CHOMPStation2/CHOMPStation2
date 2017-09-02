@@ -117,6 +117,12 @@ ckey: generalpantsu
 character_name: Samantha Quzix
 item_path: /obj/item/weapon/storage/box/fluff/samantha
 }
+
+{
+ckey: generalpantsu
+character_name: Aien Waesmaer
+item_path: /obj/item/weapon/storage/box/fluff/aien
+}
 # ######## H CKEYS
 # ######## I CKEYS
 {
