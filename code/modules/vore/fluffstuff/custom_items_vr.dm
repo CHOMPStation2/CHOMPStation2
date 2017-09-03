@@ -1352,3 +1352,22 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	age = 39
 	blood_type = "O-"
 	sex = "Female"
+/obj/item/weapon/fluff/kitchi_injector
+	name = "Kitchi Monkey Injector"
+	desc = "Allows the user (Kitchi) to transform into a monkey. Single use."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "dnainjector"
+
+/obj/item/weapon/fluff/kitchi_injector/attack(mob/living/M, mob/living/user)
+
+	if(M.ckey != "Ketrai")
+		user << "<span class='warning'>Something compels you to <i>not</i> use this injector.</span>"
+		return
+
+	if(usr == M) //Is the person using it on theirself?
+		if(ishuman(M)) //If so, monkify them.
+			var/mob/living/carbon/human/H = user
+			H.monkeyize()
+			qdel(src) //One time use.
+	else //If not, do nothing.
+		to_chat(user,"<span class='warning'> You are unable to inject other people.</span>")

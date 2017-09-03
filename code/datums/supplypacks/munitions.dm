@@ -192,7 +192,6 @@
 	num_contained = 2
 	contains = list(
 			/obj/item/weapon/gun/projectile/automatic/tommygun,
-			/obj/item/weapon/gun/projectile/automatic/carbine,
 			/obj/item/weapon/gun/projectile/automatic/c20r,
 			/obj/item/weapon/gun/projectile/automatic/sts35
 			)
