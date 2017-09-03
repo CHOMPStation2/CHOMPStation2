@@ -126,3 +126,23 @@
 
 	from_suit = /obj/item/clothing/suit/storage/vest/hoscoat
 	to_suit = /obj/item/clothing/suit/storage/vest/hoscoat/art_hos
+
+// ************
+// championfire
+// ************
+
+//Anoki Windroar
+
+/obj/item/weapon/implanter/reagent_generator/roiz/anoki
+	implant_type = /obj/item/weapon/implant/reagent_generator/roiz/anoki
+
+/obj/item/weapon/implant/reagent_generator/roiz/anoki
+	name = "egg laying implant"
+	desc = "This is an implant that allows the user to lay eggs."
+	generated_reagent = "egg"
+	usable_volume = 500
+	transfer_amount = 50
+
+	empty_message = list("Your lower belly feels smooth and empty. Sorry, we're out of eggs!", "The reduced pressure in your lower belly tells you there are no more eggs.")
+	full_message = list("Your lower belly looks swollen with irregular bumps, and it feels heavy.", "Your lower abdomen feels really heavy, making it a bit hard to walk.")
+	emote_descriptor = list("an egg right out of Anoki's lower belly!", "into Anoki' belly firmly, forcing him to lay an egg!", "Anoki really tight, who promptly lays an egg!")
