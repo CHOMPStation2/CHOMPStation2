@@ -1,6 +1,6 @@
-// ************
+//*************
 //GeneralPantsu
-// ************
+//*************
 
 //Amara Faell
 
@@ -52,9 +52,9 @@
 		/obj/item/clothing/under/fluff/aien_uniform,
 		/obj/item/clothing/suit/storage/fluff/aien_suit)
 
-// **************
+//***************
 //The god himself
-// **************
+//***************
 
 /obj/item/weapon/storage/box/fluff/madoka
 	name = "Madoka's Case"
@@ -155,3 +155,13 @@
 	has_items = list(
 		/obj/item/device/modkit_conversion/fluff/art_hos_kit,
 		/obj/item/clothing/under/rank/security/corp/fluf/art_uniform)
+
+// ************
+// championfire
+// ************
+
+/obj/item/weapon/storage/box/fluff/anoki
+	name = "Anoki's kit"
+	desc = "A kit containing Anoki's equipment."
+	has_items = list(
+		/obj/item/weapon/implanter/reagent_generator/roiz/anoki)
