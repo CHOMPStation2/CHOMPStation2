@@ -2459,6 +2459,7 @@
 #include "code\modules\vore\appearance\preferences_vr.dm"
 #include "code\modules\vore\appearance\spider_taur_powers_vr.dm"
 #include "code\modules\vore\appearance\sprite_accessories_vr.dm"
+#include "code\modules\vore\appearance\sprite_accessories_yw.dm"
 #include "code\modules\vore\appearance\update_icons_vr.dm"
 #include "code\modules\vore\eating\belly_vr.dm"
 #include "code\modules\vore\eating\bellymodes_vr.dm"
