@@ -995,6 +995,30 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
 	item_flags = AIRTIGHT
 
+//verkister: Opie Eggbert - Spiffy fluff goggles
+/obj/item/clothing/glasses/spiffygogs
+	name = "Chad Goggles"
+	desc = "You can almost feel the raw power radiating off these strange specs."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "spiffygogs"
+	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
+	toggleable = 1
+	off_state = "spiffygogsup"
+
+//General use
+/obj/item/clothing/accessory/tronket
+	name = "metal necklace"
+	desc = "A shiny steel chain with a vague metallic object dangling off it."
+	w_class = ITEMSIZE_SMALL
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "tronket"
+	item_state = "tronket"
+	overlay_state = "tronket"
+	slot_flags = SLOT_TIE
+	slot = "over"
+
 //The perfect adminboos device?
 /obj/item/device/perfect_tele
 	name = "personal translocator"
@@ -1352,17 +1376,18 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 	age = 39
 	blood_type = "O-"
 	sex = "Female"
-/obj/item/weapon/fluff/kitchi_injector
-	name = "Kitchi Monkey Injector"
-	desc = "Allows the user (Kitchi) to transform into a monkey. Single use."
+
+/obj/item/weapon/fluff/injector //Injectors. Custom item used to explain wild changes in a mob's body or chemistry.
+	name = "Injector"
+	desc = "Some type of injector."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "dnainjector"
 
-/obj/item/weapon/fluff/kitchi_injector/attack(mob/living/M, mob/living/user)
+/obj/item/weapon/fluff/injector/monkey
+	name = "Lesser Form Injector"
+	desc = "Turn the user into their lesser, more primal form."
 
-	if(M.ckey != "Ketrai")
-		user << "<span class='warning'>Something compels you to <i>not</i> use this injector.</span>"
-		return
+/obj/item/weapon/fluff/injector/monkey/attack(mob/living/M, mob/living/user)
 
 	if(usr == M) //Is the person using it on theirself?
 		if(ishuman(M)) //If so, monkify them.
@@ -1370,4 +1395,4 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 			H.monkeyize()
 			qdel(src) //One time use.
 	else //If not, do nothing.
-		to_chat(user,"<span class='warning'> You are unable to inject other people.</span>")
+		to_chat(user,"<span class='warning'>You are unable to inject other people.</span>")
