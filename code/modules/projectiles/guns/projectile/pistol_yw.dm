@@ -7,7 +7,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	caliber = "9mm"
 	load_method = MAGAZINE
-	fire_sound = 'sound/weapons/semiauto.ogg'
+	fire_sound = 'sound/weapons/45pistol_vr.ogg'
 	magazine_type = /obj/item/ammo_magazine/m9mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 
@@ -33,7 +33,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	caliber = "9mm"
 	load_method = MAGAZINE
-	fire_sound = 'sound/weapons/semiauto.ogg'
+	fire_sound = 'sound/weapons/45pistol_vr.ogg'
 	magazine_type = /obj/item/ammo_magazine/m9mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 
@@ -54,7 +54,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	caliber = ".45"
 	load_method = MAGAZINE
-	fire_sound = 'sound/weapons/semiauto.ogg'
+	fire_sound = 'sound/weapons/45pistol_vr.ogg'
 	magazine_type = /obj/item/ammo_magazine/c45m2024
 	allowed_magazines = list(/obj/item/ammo_magazine/c45m2024,/obj/item/ammo_magazine/m45)
 
@@ -74,7 +74,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	caliber = ".45"
 	load_method = MAGAZINE
-	fire_sound = 'sound/weapons/semiauto.ogg'
+	fire_sound = 'sound/weapons/45pistol_vr.ogg'
 	magazine_type = /obj/item/ammo_magazine/m45
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 
