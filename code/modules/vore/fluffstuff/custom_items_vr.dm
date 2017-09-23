@@ -605,7 +605,34 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 		desc = "An elaborately made custom walking stick with a dark wooding core, a crimson red gemstone on its head and a steel cover around the bottom. you'd probably hear someone using this down the hall."
 		icon = 'icons/vore/custom_items_vr.dmi'
 
+//Stobarico - Alexis Bloise
+/obj/item/weapon/cane/wand
+    name = "Ancient wand"
+    desc = "A really old looking wand with floating parts and cyan crystals, wich seem to radiate a cyan glow. The wand has a golden plaque on the side that would say Corncobble, but it is covered by a sticker saying Bloise."
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "alexiswand"
+    item_icons = list (slot_r_hand_str = 'icons/vore/custom_items_vr.dmi', slot_l_hand_str = 'icons/vore/custom_items_vr.dmi')
+    item_state_slots = list(slot_r_hand_str = "alexiswandmob_r", slot_l_hand_str = "alexiswandmob_l")
+    flags = CONDUCT
+    force = 1.0
+    throwforce = 2.0
+    w_class = ITEMSIZE_SMALL
+    matter = list(DEFAULT_WALL_MATERIAL = 50)
+    attack_verb = list("sparkled", "whacked", "twinkled", "radiated", "dazzled", "zapped")
+    hitsound = 'sound/weapons/sparkle.ogg'
+    var/last_use = 0
+    var/cooldown = 30
 
+/obj/item/weapon/cane/wand/attack_self(mob/user)
+    if(last_use + cooldown >= world.time)
+        return
+    playsound(loc, 'sound/weapons/sparkle.ogg', 50, 1)
+    user.visible_message("<span class='warning'> [user] swings their wand.</span>")
+    var/datum/effect/effect/system/spark_spread/s = new
+    s.set_up(3, 1, src)
+    s.start()
+    last_use = world.time
+    qdel ()
 
 /obj/item/device/fluff/id_kit_ivy
 	name = "Holo-ID reprinter"
@@ -1394,6 +1421,20 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 		if(ishuman(M)) //If so, monkify them.
 			var/mob/living/carbon/human/H = user
 			H.monkeyize()
+			qdel(src) //One time use.
+	else //If not, do nothing.
+		to_chat(user,"<span class='warning'>You are unable to inject other people.</span>")
+
+/obj/item/weapon/fluff/injector/numb_bite
+	name = "Numbing Venom Injector"
+	desc = "Injects the user with a high dose of some type of chemical, causing any chemical glands they have to kick into overdrive and create the production of a numbing enzyme that is injected via bites.."
+
+/obj/item/weapon/fluff/injector/numb_bite/attack(mob/living/M, mob/living/user)
+
+	if(usr == M) //Is the person using it on theirself?
+		if(ishuman(M)) //Give them numbing bites.
+			var/mob/living/carbon/human/H = user
+			H.species.give_numbing_bite() //This was annoying, but this is the easiest way of performing it.
 			qdel(src) //One time use.
 	else //If not, do nothing.
 		to_chat(user,"<span class='warning'>You are unable to inject other people.</span>")
