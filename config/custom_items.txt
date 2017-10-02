@@ -158,7 +158,7 @@ item_path: /obj/item/weapon/storage/box/fluff/shel
 {
 ckey: izac112
 character_name: Alva Karlholm
-item_path: /obj/item/weapon/storage/box/fluff/shel
+item_path: /obj/item/weapon/storage/box/fluff/alva
 }
 
 {
@@ -331,9 +331,9 @@ item_path: /obj/item/weapon/storage/box/fluff/vanesaf
 }
 
 {
-ckey: generalpantsu
-character_name: Nika Domashev
-item_path: /obj/item/weapon/storage/box/fluff/nika
+ckey: vitorhks
+character_name: Jessica Mayer
+item_path: /obj/item/weapon/storage/box/fluff/jessica
 }
 
 # ######## W CKEYS
