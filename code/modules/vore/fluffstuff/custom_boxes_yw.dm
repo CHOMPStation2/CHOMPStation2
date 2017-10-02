@@ -126,7 +126,7 @@
 	desc = "A kit containing Shel's equipment."
 	has_items = list(
 		/obj/item/clothing/gloves/fluff/shel_gloves,
-		/obj/item/clothing/under/rank/security/corp/fluff/alva)
+		/obj/item/clothing/under/fluff/shel)
 
 //Alva Karlholm
 
