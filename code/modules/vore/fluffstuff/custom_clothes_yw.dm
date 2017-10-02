@@ -472,6 +472,25 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
+//Nika Domashev
+
+/obj/item/clothing/under/rank/security/corp/fluff/nika
+	name = "PCRC navy uniform"
+	desc = "A pair of navy digital camo pants and a navy blue shirt. The nameplate on it reads 'N. Domashev' and the rank indicated on it is Lance Corporal. There also is a belt to keep the pants in place and kneepads for protection."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "lcpl"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "lcpl"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/storage/vest/officer/fluff/nika
+	name = "Light armor vest"
+	desc = "An outdated looking armor vest with pouches on the front. Not as flexible as security gear of today, but still as protective as it and surprisingly also lighter."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "lcplvest_nobadge"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_badge = "lcplvest_badge"
+	icon_nobadge = "lcplvest_nobadge"
 
 // *******
 // Izac112
@@ -531,6 +550,25 @@
 	icon_state = "paddedpants_s"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "paddedpants"
+
+//Alva Karlholm
+
+/obj/item/clothing/under/rank/security/corp/fluff/alva
+	name = "PCRC dress uniform"
+	desc = "A black skirt along with a navy blue sweater. The nametag on the sweater reads 'A. Karlholm' and the rank indicated on it is Sergeant. It also comes with a belt who's buckle is a shiny platinum."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "sgt"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "sgt"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/storage/toggle/labcoat/fluff/alva
+	name = "PCRC labcoat"
+	desc = "A white labcoat with the logo of the Proxima Centauri Risk Control logo on the back. The sleeves are rolled back too."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "labcoat_sgt"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "labcoat_sgt"
 
 // ***********
 // Johnwolf135
@@ -701,3 +739,38 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	icon_badge = "sifguardjacket_fox"
 	icon_nobadge = "sifguardjacket_fox"
+
+// ***************
+// Vanesa FancyFin
+// ***************
+
+//Vanesa Fancyfin
+
+/obj/item/clothing/gloves/weddingring/fluff/vanesa
+
+	name = "Golden Rings"
+	desc = "A set of beautiful gold rings, worn on the fingers to show off high class at it's finest."
+
+// ***************
+// Vitorhks
+// ***************
+
+//Jessica Mayer
+
+/obj/item/clothing/under/rank/security/corp/fluff/jessica
+	name = "PCRC navy BDU"
+	desc = "A BDU with a navy blue digital camo pattern. The nametag on it reads 'J. Mayer' and the rank indications show the rank Private First class. Its sleeves are rolled back, there is a belt around the waist and there are kneepads for protection."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "pfc"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "pfc"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/storage/vest/officer/fluff/jessica
+	name = "PCRC security contractor vest"
+	desc = "A somewhat outdated, lightweight security vest with inbuilt pouches to carry security equipment. It is rather bulky, but nontheless still flexible."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "pfcvest_nobadge"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_badge = "pfcvest_badge"
+	icon_nobadge = "pfcvest_nobadge"
