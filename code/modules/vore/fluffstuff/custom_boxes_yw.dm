@@ -52,6 +52,15 @@
 		/obj/item/clothing/under/fluff/aien_uniform,
 		/obj/item/clothing/suit/storage/fluff/aien_suit)
 
+//Nika Domashev
+
+/obj/item/weapon/storage/box/fluff/nika
+	name = "Nika's Kit"
+	desc = "A kit containing Nika's equipment."
+	has_items = list(
+		/obj/item/clothing/under/rank/security/corp/fluff/nika,
+		/obj/item/device/modkit_conversion/fluff/nika_sec_kit)
+
 //***************
 //The god himself
 //***************
@@ -117,7 +126,16 @@
 	desc = "A kit containing Shel's equipment."
 	has_items = list(
 		/obj/item/clothing/gloves/fluff/shel_gloves,
-		/obj/item/clothing/under/fluff/shel)
+		/obj/item/clothing/under/rank/security/corp/fluff/alva)
+
+//Alva Karlholm
+
+/obj/item/weapon/storage/box/fluff/alva
+	name = "Alva's Kit"
+	desc = "A kit containing Alva's equipment."
+	has_items = list(
+		/obj/item/clothing/suit/storage/toggle/labcoat/fluff/alva,
+		/obj/item/clothing/under/rank/security/corp/fluff/alva)
 
 
 // **************
@@ -165,3 +183,28 @@
 	desc = "A kit containing Anoki's equipment."
 	has_items = list(
 		/obj/item/weapon/implanter/reagent_generator/roiz/anoki)
+
+// ***************
+// Vanesa FancyFin
+// ***************
+
+//Vanesa FancyFin
+
+/obj/item/weapon/storage/box/fluff/vanesaf
+	name = "Vanesa's kit"
+	desc = "A kit containing Vanesa's equipment."
+	has_items = list(
+		/obj/item/clothing/gloves/weddingring/fluff/vanesa)
+
+// ********
+// Vitorhks
+// ********
+
+//Jessica Mayer
+
+/obj/item/weapon/storage/box/fluff/jessica
+	name = "Jessica's Kit"
+	desc = "A kit containing Jessica's equipment."
+	has_items = list(
+		/obj/item/clothing/under/rank/security/corp/fluff/jessica,
+		/obj/item/device/modkit_conversion/fluff/jessica_sec_kit)

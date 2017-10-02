@@ -129,6 +129,12 @@ ckey: generalpantsu
 character_name: Aien Waesmaer
 item_path: /obj/item/weapon/storage/box/fluff/aien
 }
+
+{
+ckey: generalpantsu
+character_name: Nika Domashev
+item_path: /obj/item/weapon/storage/box/fluff/nika
+}
 # ######## H CKEYS
 # ######## I CKEYS
 {
@@ -146,6 +152,12 @@ item_path: /obj/item/weapon/storage/box/fluff/raja
 {
 ckey: izac112
 character_name: Shel Nargol
+item_path: /obj/item/weapon/storage/box/fluff/shel
+}
+
+{
+ckey: izac112
+character_name: Alva Karlholm
 item_path: /obj/item/weapon/storage/box/fluff/shel
 }
 
@@ -310,6 +322,18 @@ item_path: /obj/item/clothing/accessory/fluff/wolf_erikson_1
 ckey: valhallaviking01
 character_name: Hans Jaeger
 item_path: /obj/item/weapon/storage/box/fluff/mauser
+}
+
+{
+ckey: vanesafancyfin
+character_name: Vanesa FancyFin
+item_path: /obj/item/weapon/storage/box/fluff/vanesaf
+}
+
+{
+ckey: generalpantsu
+character_name: Nika Domashev
+item_path: /obj/item/weapon/storage/box/fluff/nika
 }
 
 # ######## W CKEYS
