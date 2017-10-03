@@ -208,11 +208,13 @@
 	desc = "A hard chitin, dont chip a tooth!"
 	icon = 'icons/obj/food_vr.dmi'
 	icon_state = "pillbugball"
+	slice_path = /obj/item/weapon/reagent_containers/food/snacks/pillbug
+	slices_num = 1
 	trash = /obj/item/weapon/reagent_containers/food/snacks/pillbug
 	nutriment_amt = 1
 	nutriment_desc = list("crunchy shell bits" = 5)
 
-/obj/item/weapon/reagent_containers/food/snacks/grub/bugball/New()
+/obj/item/weapon/reagent_containers/food/snacks/bugball/New()
 	..()
 	reagents.add_reagent("protein", 1)
 	reagents.add_reagent("carbon", 5)
