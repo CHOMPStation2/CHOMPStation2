@@ -2647,6 +2647,7 @@
 #include "maps\tether\tether_areas2.dm"
 #include "maps\tether\tether_defines.dm"
 #include "maps\tether\tether_phoronlock.dm"
+#include "maps\tether\tether_shuttle_defs.dm"
 #include "maps\tether\tether_shuttles.dm"
 #include "maps\tether\tether_telecomms.dm"
 #include "maps\tether\tether_things.dm"
