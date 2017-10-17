@@ -710,8 +710,9 @@
 	desc = "A pair of circular shaped prescription glasses. They seem fit for a avian head and will most likely make anyone wearing these look like a big nerd. It seems they are outfitted with a augmented reality module."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "aurora_glasses"
-	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "aurora_glasses_mob"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	override = 1
+	item_state = "aurora_glasses"
 
 // *******
 // Dawidoe

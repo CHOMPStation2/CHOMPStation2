@@ -61,6 +61,12 @@ character_name: Wolfgang Jaeger
 item_path: /obj/item/weapon/storage/box/fluff/mauser
 }
 
+{
+ckey: blackangelsace
+character_name: Aurora Goldtail
+item_path: /obj/item/clothing/glasses/omnihud/prescription/aurora
+}
+
 # ######## C CKEYS
 {
 ckey: captmatt4
