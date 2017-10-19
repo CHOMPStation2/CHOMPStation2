@@ -178,11 +178,22 @@
 // championfire
 // ************
 
+//Anoki Windroar
+
 /obj/item/weapon/storage/box/fluff/anoki
 	name = "Anoki's kit"
 	desc = "A kit containing Anoki's equipment."
 	has_items = list(
 		/obj/item/weapon/implanter/reagent_generator/roiz/anoki)
+
+//Ivy Kaeire
+
+/obj/item/weapon/storage/box/fluff/ivy
+	name = "Ivy's Kit"
+	desc = "A kit containing Ivy's equipment."
+	has_items = list(
+		/obj/item/clothing/under/fluff/ivy,
+		/obj/item/clothing/suit/storage/fluff/ivy)
 
 // ***************
 // Vanesa FancyFin
@@ -208,3 +219,23 @@
 	has_items = list(
 		/obj/item/clothing/under/rank/security/corp/fluff/jessica,
 		/obj/item/device/modkit_conversion/fluff/jessica_sec_kit)
+
+// *******
+//LukeVale
+// *******
+
+//Mira Rezus
+
+/obj/item/weapon/storage/box/fluff/mira
+	name = "Mira's kit"
+	desc = "A kit containing Mira's equipment."
+	has_items = list(
+		/obj/item/weapon/implanter/reagent_generator/yw/mira)
+
+//Natalya Vospit
+
+/obj/item/weapon/storage/box/fluff/natalya
+	name = "Natalya's kit"
+	desc = "A kit containing Natalya's equipment."
+	has_items = list(
+		/obj/item/weapon/implanter/reagent_generator/yw/natalya)

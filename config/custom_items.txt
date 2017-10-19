@@ -97,6 +97,12 @@ ckey: championfire
 character_name: Anoki Windroar
 item_path: /obj/item/weapon/storage/box/fluff/anoki
 }
+
+{
+ckey: championfire
+character_name: Ivy Kaeire
+item_path: /obj/item/weapon/storage/box/fluff/ivy
+}
 # ######## D CKEYS
 {
 ckey: dawidoe
@@ -188,6 +194,18 @@ item_path: /obj/item/weapon/storage/box/fluff/John
 
 # ######## K CKEYS
 # ######## L CKEYS
+{
+ckey: lukevale
+character_name: Mira Rezus
+item_path: /obj/item/weapon/storage/box/fluff/mira
+}
+
+{
+ckey: lukevale
+character_name: Natalya Vospit
+item_path: /obj/item/weapon/storage/box/fluff/natalya
+}
+
 # ######## M CKEYS
 # ######## N CKEYS
 # ######## O CKEYS

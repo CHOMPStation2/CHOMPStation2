@@ -705,14 +705,15 @@
 
 //Aurora Goldtail
 
-/obj/item/clothing/glasses/omnihud/prescription/aurora
-	name = "Round glasses"
-	desc = "A pair of circular shaped prescription glasses. They seem fit for a avian head and will most likely make anyone wearing these look like a big nerd. It seems they are outfitted with a augmented reality module."
-	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "aurora_glasses"
-	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	override = 1
-	item_state = "aurora_glasses"
+ /obj/item/clothing/glasses/omnihud/prescription/aurora
+ 	name = "Round glasses"
+ 	desc = "A pair of circular shaped prescription glasses. They seem fit for a avian head and will most likely make anyone wearing these look like a big nerd. It seems they are outfitted with a augmented reality module."
+ 	icon = 'icons/vore/custom_clothes_yw.dmi'
+ 	icon_state = "aurora_glasses"
+ 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+ 	override = 1
+ 	item_state = "aurora_glasses"
+
 
 // *******
 // Dawidoe
@@ -762,9 +763,9 @@
 	name = "Golden Rings"
 	desc = "A set of beautiful gold rings, worn on the fingers to show off high class at it's finest."
 
-// ***************
+// ********
 // Vitorhks
-// ***************
+// ********
 
 //Jessica Mayer
 
@@ -785,3 +786,92 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	icon_badge = "pfcvest_badge"
 	icon_nobadge = "pfcvest_nobadge"
+
+// ************
+// Championfire
+// ************
+
+//Ivy Kaeire
+
+/obj/item/clothing/under/fluff/ivy
+	name = "Casual Attire"
+	desc = "This set of clothing is anything but fancy. It's a simple grey shirt with black pants. The pants have small black belts around them on the pant legs."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "Ivysuit"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "Ivysuit"
+
+/obj/item/clothing/suit/storage/fluff/ivy
+	name = "Ivy's Trenchcoat"
+	desc = "A black trenchcoat with purplish pink material as the inside of the jacket. It's got some belts around the waist that are presumably used to seal the jacket, but it's never really used. It's got the name Ivy Kaeire sewn on the inside. It also has a hood."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "Ivycoat"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "Ivycoat"
+	body_parts_covered = UPPER_TORSO
+	var/hoodup = 1
+
+	verb/toggle()
+		set name = "Toggle Hood"
+		set category = "Object"
+		set src in usr
+
+		if(!usr.canmove || usr.stat || usr.restrained())
+			return 0
+
+		switch(hoodup)
+			if(0)
+				icon_state = "[initial(icon_state)]"
+				item_state = "[initial(item_state)]"
+				hoodup = 1
+				usr << "You take off the hood."
+			if(1)
+				icon_state = "[initial(icon_state)]_up"
+				item_state = "[initial(item_state)]_up"
+				hoodup= 0
+				usr << "You put on the hood."
+		usr.update_inv_wear_suit()
+
+// ********
+// lukevale
+// ********
+
+//Need sprites
+
+//Mira Rezus
+
+
+///obj/item/clothing/under/fluff/wip
+//	name = "WIP"
+//	desc = "WIP"
+//	icon = 'icons/vore/custom_clothes_yw.dmi'
+//	icon_state = "WIP"
+//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+//	item_state = "WIP"
+//
+//
+///obj/item/clothing/under/fluff/wip
+//	name = "WIP"
+//	desc = "WIP"
+//	icon = 'icons/vore/custom_clothes_yw.dmi'
+//	icon_state = "WIP"
+//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+//	item_state = "WIP"
+//
+//
+///obj/item/clothing/under/fluff/wip
+//	name = "WIP"
+//	desc = "WIP"
+//	icon = 'icons/vore/custom_clothes_yw.dmi'
+//	icon_state = "WIP"
+//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+//	item_state = "WIP"
+
+
+///obj/item/clothing/under/fluff/wip
+//	name = "WIP"
+//	desc = "WIP"
+//	icon = 'icons/vore/custom_clothes_yw.dmi'
+//	icon_state = "WIP"
+//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+//	item_state = "WIP"
