@@ -61,12 +61,6 @@ character_name: Wolfgang Jaeger
 item_path: /obj/item/weapon/storage/box/fluff/mauser
 }
 
-{
-ckey: blackangelsace
-character_name: Aurora Goldtail
-item_path: /obj/item/clothing/glasses/omnihud/prescription/aurora
-}
-
 # ######## C CKEYS
 {
 ckey: captmatt4
@@ -96,6 +90,12 @@ item_path: /obj/item/clothing/accessory/fluff/zeta_blackwell_1
 ckey: championfire
 character_name: Anoki Windroar
 item_path: /obj/item/weapon/storage/box/fluff/anoki
+}
+
+{
+ckey: championfire
+character_name: Ivy Kaeire
+item_path: /obj/item/weapon/storage/box/fluff/ivy
 }
 # ######## D CKEYS
 {
@@ -188,6 +188,18 @@ item_path: /obj/item/weapon/storage/box/fluff/John
 
 # ######## K CKEYS
 # ######## L CKEYS
+{
+ckey: lukevale
+character_name: Mira Rezus
+item_path: /obj/item/weapon/storage/box/fluff/mira
+}
+
+{
+ckey: lukevale
+character_name: Natalya Vospit
+item_path: /obj/item/weapon/storage/box/fluff/natalya
+}
+
 # ######## M CKEYS
 # ######## N CKEYS
 # ######## O CKEYS
