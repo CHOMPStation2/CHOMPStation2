@@ -32,6 +32,7 @@
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	inherent_verbs = list(/mob/living/carbon/human/proc/shred_limb)
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
@@ -378,3 +379,10 @@ datum/species/harpy
 		"You feel uncomfortably warm.",
 		"Your overheated skin itches."
 		)
+
+/datum/species/vox // Re-enables the old vox sprites.
+	icobase = 'icons/mob/human_races/r_vox_old.dmi'
+	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
+
+/obj/item/organ/external/head/vox
+	eye_icon = "vox_eyes_s_old"

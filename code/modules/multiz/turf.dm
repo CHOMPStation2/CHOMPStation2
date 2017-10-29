@@ -72,8 +72,8 @@
 * Update icon and overlays of open space to be that of the turf below, plus any visible objects on that turf.
 */
 /turf/simulated/open/update_icon()
-	overlays = list() //VOREStation Edit - Overlays are being crashy when modified.
-	update_icon_edge() //VOREStation Add - Get grass into open spaces and whatnot.
+	overlays = list() // Edit - Overlays are being crashy when modified.
+	update_icon_edge()// Add - Get grass into open spaces and whatnot.
 	var/turf/below = GetBelow(src)
 	if(below)
 		var/below_is_open = isopenspace(below)
@@ -85,13 +85,12 @@
 			bottom_turf.plane = src.plane
 			bottom_turf.color = below.color
 			underlays = list(bottom_turf)
-		// VOREStation Edit - Hack workaround to byond crash bug - Include the magic overlay holder object.
+		// Hack workaround to byond crash bug - Include the magic overlay holder object.
 		overlays += below.overlays
 		// if(below.overlay_holder)
 		// 	overlays += (below.overlays + below.overlay_holder.overlays)
 		// else
 		// 	overlays += below.overlays
-		// VOREStation Edit End
 
 		// get objects (not mobs, they are handled by /obj/zshadow)
 		var/list/o_img = list()

@@ -149,6 +149,7 @@
 	new /obj/item/clothing/suit/nun(src)
 	new /obj/item/clothing/head/nun_hood(src)
 	new /obj/item/clothing/suit/storage/hooded/chaplain_hoodie(src)
+	new /obj/item/clothing/suit/storage/hooded/chaplain_hoodie/whiteout(src)
 	new /obj/item/clothing/suit/holidaypriest(src)
 	new /obj/item/clothing/under/wedding/bride_white(src)
 	new /obj/item/weapon/storage/backpack/cultpack (src)
@@ -425,6 +426,8 @@
 	new /obj/item/weapon/storage/backpack/chemistry(src)
 	new /obj/item/weapon/storage/backpack/satchel/chem(src)
 	new /obj/item/weapon/storage/backpack/satchel/chem(src)
+	new /obj/item/weapon/storage/bag/chemistry(src)
+	new /obj/item/weapon/storage/bag/chemistry(src)
 	return
 
 
@@ -682,4 +685,5 @@
 	new /obj/item/clothing/under/gimmick/rank/captain/suit(src)
 	new /obj/item/clothing/under/gimmick/rank/captain/suit/skirt(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
+	new /obj/item/clothing/head/caphat(src)
 	return

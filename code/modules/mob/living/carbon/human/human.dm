@@ -724,8 +724,6 @@
 			var/obj/item/clothing/glasses/sunglasses/sechud/aviator/S = src.glasses
 			if(!S.on)
 				number += 1
-		else if(istype(src.glasses, /obj/item/clothing/glasses/sunglasses/medhud/aviator))
-			number += 0
 		else
 			number += 1
 	if(istype(src.glasses, /obj/item/clothing/glasses/welding))
@@ -980,6 +978,14 @@
 						H.brainmob.mind.transfer_to(src)
 						qdel(H)
 
+	// Vorestation Addition - reapply markings/appearance from prefs for player mobs
+	if(client) //just to be sure
+		client.prefs.copy_to(src)
+		if(dna)
+			dna.ResetUIFrom(src)
+			sync_organ_dna()
+	// end vorestation addition
+
 	for (var/ID in virus2)
 		var/datum/disease2/disease/V = virus2[ID]
 		V.cure(src)
@@ -1195,7 +1201,13 @@
 		fixblood()
 		species.update_attack_types() //VOREStation Edit Start Required for any trait that updates unarmed_types in setup.
 		if(species.gets_food_nutrition != 1) //Bloodsucker trait. Tacking this on here.
-			verbs |= /mob/living/carbon/human/proc/bloodsuck //VOREStation Edit End
+			verbs |= /mob/living/carbon/human/proc/bloodsuck
+		if(species.can_drain_prey == 1)
+			verbs |= /mob/living/carbon/human/proc/succubus_drain //Succubus drain trait.
+			verbs |= /mob/living/carbon/human/proc/succubus_drain_finialize
+			verbs |= /mob/living/carbon/human/proc/succubus_drain_lethal
+		if(species.hard_vore_enabled == 1) //Hardvore verb.
+			verbs |= /mob/living/carbon/human/proc/shred_limb //VOREStation Edit End
 
 	// Rebuild the HUD. If they aren't logged in then login() should reinstantiate it for them.
 	if(client && client.screen)
@@ -1205,6 +1217,8 @@
 		hud_used = new /datum/hud(src)
 
 	if(species)
+		//if(mind) //VOREStation Removal
+			//apply_traits() //VOREStation Removal
 		return 1
 	else
 		return 0
@@ -1264,7 +1278,7 @@
 		W.message = message
 		W.add_fingerprint(src)
 
-/mob/living/carbon/human/can_inject(var/mob/user, var/error_msg, var/target_zone)
+/mob/living/carbon/human/can_inject(var/mob/user, var/error_msg, var/target_zone, var/ignore_thickness = FALSE)
 	. = 1
 
 	if(!target_zone)
@@ -1284,10 +1298,10 @@
 	else
 		switch(target_zone)
 			if(BP_HEAD)
-				if(head && head.item_flags & THICKMATERIAL)
+				if(head && (head.item_flags & THICKMATERIAL) && !ignore_thickness)
 					. = 0
 			else
-				if(wear_suit && wear_suit.item_flags & THICKMATERIAL)
+				if(wear_suit && (wear_suit.item_flags & THICKMATERIAL) && !ignore_thickness)
 					. = 0
 	if(!. && error_msg && user)
 		if(!fail_msg)
@@ -1542,7 +1556,7 @@
 	return species.fire_icon_state
 
 // Called by job_controller.  Makes drones start with a permit, might be useful for other people later too.
-/mob/living/carbon/human/equip_post_job()
+/mob/living/carbon/human/equip_post_job()	//Drone Permit moved to equip_survival_gear()
 	var/braintype = get_FBP_type()
 	if(braintype == FBP_DRONE)
 		var/turf/T = get_turf(src)
