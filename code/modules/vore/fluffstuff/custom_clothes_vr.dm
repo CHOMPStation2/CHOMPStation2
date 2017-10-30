@@ -28,7 +28,7 @@
 /obj/item/clothing/head/fluff/awoo
     name = "Wolfgirl Hat"
     desc = "An odd, small hat with two strings attached to it."
-    
+
     icon_state = "awoohat"
     icon = 'icons/vore/custom_clothes_vr.dmi'
     icon_override = 'icons/vore/custom_onmob_vr.dmi'
@@ -37,7 +37,7 @@
 /obj/item/clothing/shoes/fluff/awoo
     name = "Red Sandals"
     desc = "A pair of sandals that make you want to awoo!"
-    
+
     icon_state = "awoosandals"
     icon = 'icons/vore/custom_clothes_vr.dmi'
     icon_override = 'icons/vore/custom_onmob_vr.dmi'
@@ -869,7 +869,7 @@
 	item_state = "joanuniform_mob"
 	worn_state = "joanuniform_mob"
 	rolled_sleeves = 0
-	starting_accessories = list(/obj/item/clothing/accessory/black)
+	starting_accessories = list(/obj/item/clothing/accessory/tie/black)
 
 //Kisukegema:Kisuke `the nerd` Gema
 /obj/item/clothing/glasses/omnihud/kamina
@@ -1400,6 +1400,33 @@ Departamental Swimsuits, for general use
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "alfonso_visor"
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+
+//JackNoir413: Mor Xaina
+/obj/item/clothing/under/fluff/morunder
+	name = "grey top with shorts"
+	desc = "Fashionable grey top, combined with black shorts. Fancy!"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "morunder"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "morunder_mob"
+
+//JackNoir413: Mor Xaina
+/obj/item/clothing/gloves/fluff/morsleeves
+	name = "fingerless sleeves"
+	desc = "Cute long armwarmers. Sadly, they don't cover fingers."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "morsleeves"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "morsleeves_mob"
+
+//JackNoir413: Mor Xaina
+/obj/item/clothing/shoes/fluff/morthighs
+	name = "long grey socks"
+	desc = "Striped, soft thigh-high socks with no fingers. Must be hard to wash them..."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "morthighs"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "morthighs_mob"
 
 //Jackets For General Use. Sprited by Joji.
 /obj/item/clothing/suit/storage/fluff/jacket //Not the toggle version since it uses custom toggle code to update the on-mob icon.
