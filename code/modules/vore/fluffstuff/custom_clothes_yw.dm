@@ -875,3 +875,31 @@
 //	icon_state = "WIP"
 //	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 //	item_state = "WIP"
+
+// ************
+// RadiantFlash
+// ************
+
+//Vasharr Zahirn
+
+/obj/item/clothing/accessory/fluff/vasharr_armlets
+	name = "Glistening Armlets"
+	desc = "A pair of thin golden Armlets, meant to be worn on the upper arm. These appear to have Tajaran runic script written along them."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "bangles_v"
+	item_state = "bangles_v_mob"
+	overlay_state = "bangles_v_mob"
+	slot_flags = SLOT_OCLOTHING
+	w_class = 2
+
+/obj/item/clothing/accessory/fluff/vasharr_pendant
+	name = "Zahirn pendant"
+	desc = "A golden necklace, the symbol for the Zahirn clan can be found on it's pendant."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "pendant_v"
+	item_state = "pendant_v_mob"
+	overlay_state = "pendant_v_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2

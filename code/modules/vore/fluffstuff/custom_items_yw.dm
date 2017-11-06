@@ -209,7 +209,7 @@
 /obj/item/weapon/implant/reagent_generator/yw/mira
 	name = "lactation implant"
 	desc = "This is an implant that allows the user to lactate."
-	generated_reagent = "milk"
+	generated_reagents = list("milk" = 2)
 	usable_volume = 1000
 
 	empty_message = list("Your breasts feel unusually empty.", "Your chest feels lighter - your milk supply is empty!", "Your milk reserves have run dry.", "Your grateful nipples ache as the last of your milk leaves them.")
@@ -228,7 +228,7 @@
 /obj/item/weapon/implant/reagent_generator/yw/natalya
 	name = "lactation implant"
 	desc = "This is an implant that allows the user to lactate."
-	generated_reagent = "milk"
+	generated_reagents = list("milk" = 2)
 	usable_volume = 1000
 
 	empty_message = list("Your breasts feel unusually empty.", "Your chest feels lighter - your milk supply is empty!", "Your milk reserves have run dry.", "Your grateful nipples ache as the last of your milk leaves them.")
@@ -241,3 +241,9 @@
 
 /obj/item/weapon/implanter/reagent_generator/yw/natalya
 	implant_type = /obj/item/weapon/implant/reagent_generator/yw/natalya
+
+// ************
+// championfire
+// ************
+
+//Anoki Windroar
