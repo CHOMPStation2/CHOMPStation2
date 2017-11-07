@@ -201,6 +201,14 @@
 	icon_state = "lucernamask"
 	item_state = "lucernamask"
 
+/obj/item/clothing/suit/storage/hoodie/fluff/eviriik_4
+	name = "Striped Jacket"
+	desc = "A somewhat dated looking jacket."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "striped_jacket"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "striped_jacket_mob"
+
 // **********
 // Matt items
 // **********
@@ -890,7 +898,7 @@
 	icon_state = "bangles_v"
 	item_state = "bangles_v_mob"
 	overlay_state = "bangles_v_mob"
-	slot_flags = SLOT_OCLOTHING
+	slot_flags = SLOT_GLOVES
 	w_class = 2
 
 /obj/item/clothing/accessory/fluff/vasharr_pendant
