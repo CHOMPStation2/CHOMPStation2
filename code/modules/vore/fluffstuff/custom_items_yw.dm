@@ -154,7 +154,6 @@
 /obj/item/weapon/implant/reagent_generator/roiz/anoki
 	name = "egg laying implant"
 	desc = "This is an implant that allows the user to lay eggs."
-	generated_reagent = "egg"
 	usable_volume = 500
 	transfer_amount = 50
 
@@ -209,7 +208,6 @@
 /obj/item/weapon/implant/reagent_generator/yw/mira
 	name = "lactation implant"
 	desc = "This is an implant that allows the user to lactate."
-	generated_reagent = "milk"
 	usable_volume = 1000
 
 	empty_message = list("Your breasts feel unusually empty.", "Your chest feels lighter - your milk supply is empty!", "Your milk reserves have run dry.", "Your grateful nipples ache as the last of your milk leaves them.")
@@ -228,7 +226,6 @@
 /obj/item/weapon/implant/reagent_generator/yw/natalya
 	name = "lactation implant"
 	desc = "This is an implant that allows the user to lactate."
-	generated_reagent = "milk"
 	usable_volume = 1000
 
 	empty_message = list("Your breasts feel unusually empty.", "Your chest feels lighter - your milk supply is empty!", "Your milk reserves have run dry.", "Your grateful nipples ache as the last of your milk leaves them.")

@@ -666,7 +666,8 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 
 //WickedTempest: Chakat Tempest
 /obj/item/weapon/implant/reagent_generator/tempest
-	generated_reagent = "milk"
+	generated_reagents = list("milk" = 2)
+	reagent_name = "milk"
 	usable_volume = 1000
 
 	empty_message = list("Your breasts are almost completely drained!")
@@ -683,7 +684,8 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 
 //Hottokeeki: Belle Day
 /obj/item/weapon/implant/reagent_generator/belle
-	generated_reagent = "milk"
+	generated_reagents = list("milk" = 2)
+	reagent_name = "milk"
 	usable_volume = 5000
 
 	empty_message = list("Your breasts and or udder feel almost completely drained!", "You're feeling a liittle on the empty side...")
@@ -702,7 +704,8 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 /obj/item/weapon/implant/reagent_generator/eldi
 	name = "lactation implant"
 	desc = "This is an implant that allows the user to lactate."
-	generated_reagent = "milk"
+	generated_reagents = list("milk" = 2)
+	reagent_name = "milk"
 	usable_volume = 1000
 
 	empty_message = list("Your breasts feel unusually empty.", "Your chest feels lighter - your milk supply is empty!", "Your milk reserves have run dry.", "Your grateful nipples ache as the last of your milk leaves them.")
@@ -718,7 +721,8 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 
 //Vorrarkul: Theodora Lindt
 /obj/item/weapon/implant/reagent_generator/vorrarkul
-	generated_reagent = "chocolate_milk"
+	generated_reagents = list("chocolate_milk" = 2)
+	reagent_name = "chocalate milk"
 	usable_volume = 1000
 
 	empty_message = list("Your nipples are sore from being milked!")
@@ -739,7 +743,7 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 /obj/item/weapon/implant/reagent_generator/roiz
 	name = "egg laying implant"
 	desc = "This is an implant that allows the user to lay eggs."
-	generated_reagent = "egg"
+	generated_reagents = list("egg" = 2)
 	usable_volume = 500
 	transfer_amount = 50
 
@@ -801,12 +805,12 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 		if(prob(15))
 			src.visible_message("<span class='notice'>[src] [pick(rimplant.random_emote)].</span>") // M-mlem.
 
-		rimplant.reagents.remove_reagent(rimplant.generated_reagent, rimplant.transfer_amount)
+		rimplant.reagents.remove_any(rimplant.transfer_amount)
 
 /obj/item/weapon/implant/reagent_generator/pumila_apple
 	name = "apple laying implant"
 	desc = "This is an implant that allows the user to grow apples."
-	generated_reagent = "sugar" //This actually allows them to.
+	generated_reagents = list("sugar" = 2) //This actually allows them to.
 	usable_volume = 250 //Five apples. Let's not get /too/ crazy here.
 	transfer_amount = 50
 
@@ -866,10 +870,11 @@ obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina/handle_shie
 			src.visible_message("<span class='notice'>[src] [pick(rimplant.short_emote_descriptor)] an apple.</span>",
 								"<span class='notice'>You [pick(rimplant.self_emote_descriptor)] an apple.</span>")
 
-		rimplant.reagents.remove_reagent(rimplant.generated_reagent, rimplant.transfer_amount)
+		rimplant.reagents.remove_any(rimplant.transfer_amount)
 /*
 /obj/item/weapon/implant/reagent_generator/pumila_nectar //Bugged. Two implants at once messes things up.
-	generated_reagent = "honey"
+	generated_reagents = list("honey" = 2)
+	reagent_name = "honey"
 	usable_volume = 5000
 
 	empty_message = list("You appear to be all out of nectar", "You feel as though you are lacking a majority of your nectar.")
