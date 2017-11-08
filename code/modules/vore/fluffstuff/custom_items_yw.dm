@@ -181,22 +181,22 @@
 // ConZon4
 // *******
 
-//Working just Need sprites
-
 //Dillan McGraw
 
-///obj/item/weapon/storage/cane/fluff/dillan
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_items_yw.dmi'
-//	icon_state = "browncane"
-//	item_icons = list (slot_r_hand_str = 'icons/vore/custom_items_yw.dmi', slot_l_hand_str = 'icons/vore/custom_items_yw.dmi')
-//	item_state_slots = list(slot_r_hand_str = "browncanemob_r", slot_l_hand_str = "browncanemob_l")
-//	max_storage_space = 4
-//	max_w_class = 1
+//	/obj/item/weapon/storage/fluff/cane/dillan
+//	var/max_w_class = 1
+//	var/max_storage_space = 4
 //	throwforce = 7
 //	force = 5
-
+//	name = "Polished Cane"
+//	desc = "A wooden cane, polished to a fine gleam. It appears weathered and worn down from extended use. On the handle, the name 'Dillan' can be read."
+//	icon = 'icons/vore/custom_items_yw.dmi'
+//	icon_state = "fancycane"
+//	item_icons = list(
+//		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
+//		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
+//		)
+//
 // ********
 // lukevale
 // ********
@@ -205,7 +205,7 @@
 
 //Mira Rezus
 
-/obj/item/weapon/implant/reagent_generator/yw/mira
+/obj/item/weapon/implant/reagent_generator/tempest/mira
 	name = "lactation implant"
 	desc = "This is an implant that allows the user to lactate."
 	usable_volume = 1000
@@ -218,12 +218,12 @@
 	verb_name = "Milk"
 	verb_desc = "Grab Mira's breasts and milk her, storing her fresh, warm milk in a container. This will undoubtedly turn her on."
 
-/obj/item/weapon/implanter/reagent_generator/yw/mira
-	implant_type = /obj/item/weapon/implant/reagent_generator/yw/mira
+/obj/item/weapon/implanter/reagent_generator/mira
+	implant_type = /obj/item/weapon/implant/reagent_generator/tempest/mira
 
 //Natalya Vospit
 
-/obj/item/weapon/implant/reagent_generator/yw/natalya
+/obj/item/weapon/implant/reagent_generator/tempest/natalya
 	name = "lactation implant"
 	desc = "This is an implant that allows the user to lactate."
 	usable_volume = 1000
@@ -236,5 +236,23 @@
 	verb_name = "Milk"
 	verb_desc = "Grab Natalya's breasts and milk her, storing her fresh, warm milk in a container. This will undoubtedly turn her on."
 
-/obj/item/weapon/implanter/reagent_generator/yw/natalya
-	implant_type = /obj/item/weapon/implant/reagent_generator/yw/natalya
+/obj/item/weapon/implanter/reagent_generator/natalya
+	implant_type = /obj/item/weapon/implant/reagent_generator/tempest/natalya
+
+// **************
+// VanesaFancyFin
+// **************
+
+//Ire
+
+/obj/item/weapon/bikehorn/fluff/chew_ire
+	name = "Chew toy"
+	desc = "A toy normally used by dogs to play with or chew on"
+	slot_flags = SLOT_MASK
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "chew"
+	item_state = "chew"
+	item_icons = list(
+		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
+		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
+		)

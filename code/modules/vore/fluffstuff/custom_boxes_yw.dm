@@ -230,7 +230,7 @@
 	name = "Mira's kit"
 	desc = "A kit containing Mira's equipment."
 	has_items = list(
-		/obj/item/weapon/implanter/reagent_generator/yw/mira)
+		/obj/item/weapon/implanter/reagent_generator/mira)
 
 //Natalya Vospit
 
@@ -238,4 +238,17 @@
 	name = "Natalya's kit"
 	desc = "A kit containing Natalya's equipment."
 	has_items = list(
-		/obj/item/weapon/implanter/reagent_generator/yw/natalya)
+		/obj/item/weapon/implanter/reagent_generator/natalya)
+
+// ************
+// RadiantFlash
+// ************
+
+//Vasharr Zahirn
+
+/obj/item/weapon/storage/box/fluff/vasharr
+	name = "Vasharr's Kit"
+	desc = "A kit containing Vasharr's equipment."
+	has_items = list(
+		/obj/item/clothing/accessory/fluff/vasharr_armlets,
+		/obj/item/clothing/accessory/fluff/vasharr_pendant)
