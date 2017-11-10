@@ -766,7 +766,7 @@
 
 	if(!C.anchored && !C.pulledby) //Not currently anchored, and not pulled by anyone.
 		C.anchored = 1 //This is the only way to stop the inertial_drift.
-		C.nutrition -= 25
+		C.nutrition -= 10
 		update_floating()
 		to_chat(C, "<span class='notice'>You hover in place.</span>")
 		spawn(6) //.6 seconds.
