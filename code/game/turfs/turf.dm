@@ -146,7 +146,6 @@ var/const/enterloopsanity = 100
 		if(M.lastarea.has_gravity == 0)
 			inertial_drift(M)
 		if(M.flying) //VORESTATION Edit Start. This overwrites the above is_space without touching it all that much.
-			inertial_drift(M)
 			M.make_floating(1) //VOREStation Edit End.
 		else if(!is_space())
 			M.inertia_dir = 0
