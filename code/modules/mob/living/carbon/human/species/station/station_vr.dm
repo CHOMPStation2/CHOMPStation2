@@ -384,3 +384,6 @@ datum/species/harpy
 		"You feel uncomfortably warm.",
 		"Your overheated skin itches."
 		)
+
+/datum/species/human/vatgrown
+	spawn_flags = SPECIES_IS_RESTRICTED
