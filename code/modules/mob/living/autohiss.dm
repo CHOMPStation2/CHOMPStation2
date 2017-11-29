@@ -56,6 +56,18 @@
 	autohiss_exempt = list("Siik")
 
 
+//Yawn Wider Edit.
+/datum/species/spider
+	autohiss_basic_map = list(
+			"s" = list("sz", "z", "zz")
+			"f" = list("zk")
+		)
+	autohiss_extra_map = list(
+			"th" = list("zk", "szk")
+			"r" = list("rk")
+		)
+//YW edit over.
+
 /datum/species/proc/handle_autohiss(message, datum/language/lang, mode)
 	if(!autohiss_basic_map)
 		return message
