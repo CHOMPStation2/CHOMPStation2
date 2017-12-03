@@ -59,11 +59,11 @@
 //Yawn Wider Edit.
 /datum/species/spider
 	autohiss_basic_map = list(
-			"s" = list("sz", "z", "zz")
+			"s" = list("sz", "z", "zz"),
 			"f" = list("zk")
 		)
 	autohiss_extra_map = list(
-			"th" = list("zk", "szk")
+			"th" = list("zk", "szk"),
 			"r" = list("rk")
 		)
 //YW edit over.
