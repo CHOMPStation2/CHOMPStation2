@@ -2550,6 +2550,7 @@
 #include "code\modules\turbolift\turbolift_areas.dm"
 #include "code\modules\turbolift\turbolift_console.dm"
 #include "code\modules\turbolift\turbolift_door.dm"
+#include "code\modules\turbolift\turbolift_door_vr.dm"
 #include "code\modules\turbolift\turbolift_floor.dm"
 #include "code\modules\turbolift\turbolift_map.dm"
 #include "code\modules\turbolift\turbolift_process.dm"
@@ -2735,5 +2736,7 @@
 #include "maps\tether\tether_things.dm"
 #include "maps\tether\tether_turfs.dm"
 #include "maps\tether\tether_virgo3b.dm"
+#include "maps\yw\elevator_areas.dm"
+#include "maps\yw\service_elevator_things.dm"
 #include "maps\~map_system\maps.dm"
 // END_INCLUDE
