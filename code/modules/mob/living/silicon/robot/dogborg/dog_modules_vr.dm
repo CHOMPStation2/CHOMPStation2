@@ -140,6 +140,16 @@
 	combat = 1
 	attack_verb = list("batted", "pawed", "bopped", "whapped")
 	chargecost = 500
+	
+/obj/item/weapon/shockpaddles/robot/hound/jumper
+	name = "paws of life"
+	icon = 'icons/mob/dogborg_vr.dmi'
+	icon_state = "defibpaddles0"
+	desc = "Zappy paws. For rebooting a full body prostetic."
+	combat = 1
+	attack_verb = list("batted", "pawed", "bopped", "whapped")
+	chargecost = 500
+	use_on_synthetic = 1
 
 //Tongue stuff
 /obj/item/device/dogborg/tongue
@@ -295,6 +305,9 @@
 	desc = "A device to automatically replace lights. This version is capable to produce a few replacements using your internal matter reserves."
 	max_uses = 16
 	var/cooldown = 0
+
+/obj/item/device/lightreplacer/dogborg/proc/AddUses(var/amount = 1)
+	uses = min(max(uses + amount, 0), max_uses)
 
 /obj/item/device/lightreplacer/dogborg/attack_self(mob/user)//Boo recharger fill is slow as shit and removes all the extra cyberfat gains you worked so hard for!
 	if(uses >= max_uses)

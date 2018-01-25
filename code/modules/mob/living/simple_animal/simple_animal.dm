@@ -511,7 +511,10 @@
 		stun_effect_act(0, Proj.agony)
 
 	if(!Proj.nodamage)
-		adjustBruteLoss(Proj.damage)
+		var/true_damage = Proj.damage
+		if(!Proj.SA_vulnerability || Proj.SA_vulnerability == intelligence_level)
+			true_damage += Proj.SA_bonus_damage
+		adjustBruteLoss(true_damage)
 
 	if(Proj.firer)
 		react_to_attack(Proj.firer)
@@ -1169,7 +1172,7 @@
 	//They ran away!
 	else
 		ai_log("AttackTarget() out of range!",3)
-		sleep(1) // Unfortunately this is needed to protect from ClosestDistance() sometimes not updating fast enough to prevent an infinite loop.
+		stoplag(1) // Unfortunately this is needed to protect from ClosestDistance() sometimes not updating fast enough to prevent an infinite loop.
 		handle_stance(STANCE_ATTACK)
 		return 0
 
@@ -1477,6 +1480,9 @@
 	if(intelligence_level == SA_HUMANOID && !forced)
 		return
 	set_target(new_target)
+
+/mob/living/simple_animal/is_sentient()
+	return intelligence_level != SA_PLANT && intelligence_level != SA_ROBOTIC
 
 //Commands, reactions, etc
 /mob/living/simple_animal/hear_say(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "", var/italics = 0, var/mob/speaker = null, var/sound/speech_sound, var/sound_vol)

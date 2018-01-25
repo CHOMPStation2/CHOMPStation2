@@ -91,7 +91,7 @@
 		new /obj/item/clothing/accessory/holster/hip(src)
 		new /obj/item/clothing/suit/storage/fluff/modernfedcoat(src)
 		new /obj/item/clothing/head/caphat/formal/fedcover(src)
-		new /obj/item/weapon/card/id/centcom/fluff/joanbadge(src)
+		new /obj/item/weapon/card/id/centcom/station/fluff/joanbadge(src)
 		new /obj/item/weapon/gun/energy/gun/fluff/dominator(src)
 		new /obj/item/clothing/suit/armor/det_suit(src)
 		new /obj/item/clothing/accessory/permit/gun/fluff/joanrisu(src)
@@ -116,10 +116,10 @@
 		new /obj/item/weapon/gun/energy/gun/fluff/dominator(src)
 		new /obj/item/clothing/suit/armor/det_suit(src)
 		new /obj/item/clothing/accessory/storage/black_vest(src)
-		new /obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina(src)
-		new /obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina(src)
-		new /obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina(src)
-		new /obj/item/weapon/material/hatchet/tacknife/combatknife/fluff/katarina(src)
+		new /obj/item/weapon/material/knife/tacknife/combatknife/fluff/katarina(src)
+		new /obj/item/weapon/material/knife/tacknife/combatknife/fluff/katarina(src)
+		new /obj/item/weapon/material/knife/tacknife/combatknife/fluff/katarina(src)
+		new /obj/item/weapon/material/knife/tacknife/combatknife/fluff/katarina(src)
 		new /obj/item/clothing/under/rank/internalaffairs/fluff/joan(src)
 
 //drakefrostpaw:Drake Frostpaw
@@ -172,7 +172,7 @@
 	New()
 		..() //Might look like a lot... but all small items.
 		//Centcom stuff and permit
-		new /obj/item/weapon/card/id/centcom/fluff/aronai(src)
+		new /obj/item/weapon/card/id/centcom/station/fluff/aronai(src)
 		new /obj/item/clothing/accessory/permit/gun/fluff/aronai_kadigan(src)
 		//Gun and holster
 		new /obj/item/weapon/gun/projectile/nsfw(src)
@@ -181,6 +181,9 @@
 		new /obj/item/ammo_casing/nsfw_batt/stun(src)
 		new /obj/item/ammo_casing/nsfw_batt/net(src)
 		new /obj/item/clothing/accessory/holster(src)
+
+/obj/item/weapon/storage/backpack/satchel/gen/fluff/aronai/digest_act(var/datum/belly/belly = null)
+	return FALSE //I get eaten a lot, okay
 
 //Aerowing:Sebastian Aji
 /obj/item/weapon/storage/box/fluff/sebastian_aji

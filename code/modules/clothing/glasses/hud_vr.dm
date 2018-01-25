@@ -9,15 +9,15 @@
 	var/datum/nano_module/arscreen
 	var/arscreen_path
 	var/flash_prot = 0 //0 for none, 1 for flash weapon protection, 2 for welder protection
+	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_AUGMENTED)
+	plane_slots = list(slot_glasses)
 
 /obj/item/clothing/glasses/omnihud/New()
 	..()
-	src.hud = new/obj/item/clothing/glasses/hud/omni(src)
 	if(arscreen_path)
 		arscreen = new arscreen_path(src)
 
 /obj/item/clothing/glasses/omnihud/Destroy()
-	qdel_null(hud)
 	qdel_null(arscreen)
 	. = ..()
 
@@ -27,12 +27,9 @@
 	..()
 
 /obj/item/clothing/glasses/omnihud/emp_act(var/severity)
-	var/disconnect_hud = hud
 	var/disconnect_ar = arscreen
-	hud = null
 	arscreen = null
 	spawn(20 SECONDS)
-		hud = disconnect_hud
 		arscreen = disconnect_ar
 	..()
 
@@ -75,6 +72,7 @@
 	mode = "med"
 	action_button_name = "AR Console (Crew Monitor)"
 	arscreen_path = /datum/nano_module/crew_monitor
+	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_STATUS_R,VIS_CH_BACKUP,VIS_AUGMENTED)
 
 	ar_interact(var/mob/living/carbon/human/user)
 		if(arscreen)
@@ -86,9 +84,10 @@
 	desc = "The KHI-62-S AR glasses are a design from Kitsuhana Heavy Industries. \
 	These have been upgraded with security records integration and flash protection."
 	mode = "sec"
-	flash_prot = 1 //Flash protection.
+	flash_protection = FLASH_PROTECTION_MAJOR
 	action_button_name = "AR Console (Security Alerts)"
 	arscreen_path = /datum/nano_module/alarm_monitor/security
+	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_WANTED,VIS_AUGMENTED)
 
 	ar_interact(var/mob/living/carbon/human/user)
 		if(arscreen)
@@ -100,9 +99,9 @@
 	desc = "The KHI-62-E AR glasses are a design from Kitsuhana Heavy Industries. \
 	These have been upgraded with advanced electrochromic lenses to protect your eyes during welding."
 	mode = "eng"
-	flash_prot = 2 //Welding protection.
+	flash_protection = FLASH_PROTECTION_MAJOR
 	action_button_name = "AR Console (Station Alerts)"
-	arscreen_path = /datum/nano_module/alarm_monitor
+	arscreen_path = /datum/nano_module/alarm_monitor/engineering
 
 	ar_interact(var/mob/living/carbon/human/user)
 		if(arscreen)
@@ -126,7 +125,6 @@
 	icon_state = "projector"
 	off_state = "projector-off"
 	body_parts_covered = 0
-	flash_prot = 0 //No welding protection for these.
 	toggleable = 1
 	vision_flags = SEE_TURFS //but they can spot breaches. Due to the way HUDs work, they don't provide darkvision up-close the way mesons do.
 
@@ -161,22 +159,5 @@
 	desc = "The KHI-62-B AR glasses are a design from Kitsuhana Heavy Industries. \
 	These have been upgraded with every feature the lesser models have. Now we're talkin'."
 	mode = "best"
-	flash_prot = 2 //Welding protection.
-
-/obj/item/clothing/glasses/hud/omni
-	name = "internal omni hud"
-	desc = "You shouldn't see this. This is an internal item for glasses."
-	var/obj/item/clothing/glasses/omnihud/shades = null
-
-	vision_flags = SEE_MOBS
-	see_invisible = SEE_INVISIBLE_NOLIGHTING
-
-	New()
-		..()
-		if(istype(loc,/obj/item/clothing/glasses/omnihud))
-			shades = loc
-		else
-			qdel(src)
-
-/obj/item/clothing/glasses/hud/omni/process_hud(var/mob/M)
-	process_omni_hud(M,shades.mode)
+	flash_protection = FLASH_PROTECTION_MAJOR
+	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_STATUS_R,VIS_CH_BACKUP,VIS_CH_WANTED)

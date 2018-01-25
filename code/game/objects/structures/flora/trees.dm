@@ -36,7 +36,7 @@
 			to_chat(user, "<span class='warning'>\The [W] is ineffective at harming \the [src].</span>")
 
 	hit_animation()
-	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	user.setClickCooldown(user.get_attack_speed(W))
 	user.do_attack_animation(src)
 
 // Shakes the tree slightly, more or less stolen from lockers.
@@ -198,5 +198,6 @@
 
 /obj/structure/flora/tree/sif/update_icon()
 	set_light(5, 1, "#33ccff")
-	overlays.Cut()
-	overlays.Add(image(icon = 'icons/obj/flora/deadtrees.dmi', icon_state = "[icon_state]_glow", layer = LIGHTING_LAYER + 0.1))
+	var/image/glow = image(icon = 'icons/obj/flora/deadtrees.dmi', icon_state = "[icon_state]_glow")
+	glow.plane = PLANE_LIGHTING_ABOVE
+	overlays = list(glow)

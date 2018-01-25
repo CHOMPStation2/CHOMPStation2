@@ -120,8 +120,7 @@
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = LANGUAGE_BIRDSONG
 	color_mult = 1
-	can_fly = 1
-	inherent_verbs = list(/mob/living/carbon/human/proc/shred_limb)
+	inherent_verbs = list(/mob/living/carbon/human/proc/shred_limb,/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
 	max_age = 110
@@ -339,7 +338,8 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/proc/hide,
-		/mob/living/carbon/human/proc/shred_limb
+		/mob/living/carbon/human/proc/shred_limb,
+		/mob/living/proc/toggle_pass_table
 		)
 
 /datum/species/shapeshifter/promethean
@@ -373,7 +373,7 @@ datum/species/harpy
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = null
 	color_mult = 1
-	can_fly = 1
+	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
 	max_age = 80

@@ -6,12 +6,10 @@
 // Items that ask to be called every cycle.
 var/global/datum/datacore/data_core = null
 var/global/list/all_areas                = list()
-var/global/list/machines                 = list()
+var/global/list/machines                 = list()	// TODO - Move into SSmachines
 var/global/list/processing_objects       = list()
-var/global/list/processing_power_items   = list()
+var/global/list/processing_power_items   = list()	// TODO - Move into SSmachines
 var/global/list/active_diseases          = list()
-var/global/list/med_hud_users            = list() // List of all entities using a medical HUD.
-var/global/list/sec_hud_users            = list() // List of all entities using a security HUD.
 var/global/list/hud_icon_reference       = list()
 
 
@@ -107,7 +105,7 @@ var/list/IClog     = list()
 var/list/OOClog    = list()
 var/list/adminlog  = list()
 
-var/list/powernets = list()
+var/list/powernets = list()	// TODO - Move into SSmachines
 
 var/Debug2 = 0
 var/datum/debug/debugobj
@@ -200,3 +198,7 @@ var/max_explosion_range = 14
 var/global/obj/item/device/radio/intercom/global_announcer = new /obj/item/device/radio/intercom{channels=list("Engineering")}(null)
 
 var/list/station_departments = list("Command", "Medical", "Engineering", "Science", "Security", "Cargo", "Civilian")
+
+//Icons for in-game HUD glasses. Why don't we just share these a little bit?
+var/static/icon/ingame_hud = icon('icons/mob/hud.dmi')
+var/static/icon/ingame_hud_med = icon('icons/mob/hud_med.dmi')

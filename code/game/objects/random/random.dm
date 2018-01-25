@@ -5,8 +5,6 @@
 	icon_state = "rup"
 	var/spawn_nothing_percentage = 0 // this variable determines the likelyhood that this random object will not spawn anything
 
-	var/spawned_thing //VOREStation Edit
-
 
 // creates a new object and deletes itself
 /obj/random/New()
@@ -30,13 +28,6 @@
 		A.pixel_x = pixel_x
 		A.pixel_y = pixel_y
 
-//VOREStation Edit
-	spawned_thing = A
-
-/obj/random/Destroy()
-	spawned_thing = null
-	return ..()
-//VOREStation Edit End
 
 /obj/random/single
 	name = "randomly spawned object"
@@ -148,19 +139,30 @@
 
 /obj/random/medical/item_to_spawn()
 	return pick(prob(21);/obj/random/medical/lite,
-				prob(4);/obj/item/bodybag,
-				prob(4);/obj/item/weapon/storage/pill_bottle/tramadol,
-				prob(1);/obj/item/weapon/storage/pill_bottle/spaceacillin,
+				prob(5);/obj/random/medical/pillbottle,
 				prob(1);/obj/item/weapon/storage/pill_bottle/tramadol,
-				prob(1);/obj/item/weapon/storage/pill_bottle/dermaline,
-				prob(1);/obj/item/weapon/storage/pill_bottle/dexalin_plus,
-				prob(1);/obj/item/weapon/storage/pill_bottle/bicaridine,
-				prob(6);/obj/item/weapon/reagent_containers/syringe/antitoxin,
-				prob(1);/obj/item/weapon/reagent_containers/syringe/antiviral,
-				prob(6);/obj/item/weapon/reagent_containers/syringe/inaprovaline,
+				prob(1);/obj/item/weapon/storage/pill_bottle/antitox,
+				prob(1);/obj/item/weapon/storage/pill_bottle/carbon,
+				prob(3);/obj/item/bodybag/cryobag,
+				prob(5);/obj/item/weapon/reagent_containers/syringe/antitoxin,
+				prob(3);/obj/item/weapon/reagent_containers/syringe/antiviral,
+				prob(5);/obj/item/weapon/reagent_containers/syringe/inaprovaline,
 				prob(1);/obj/item/weapon/reagent_containers/hypospray,
 				prob(1);/obj/item/weapon/storage/box/freezer,
 				prob(2);/obj/item/stack/nanopaste)
+
+/obj/random/medical/pillbottle
+	name = "Random Pill Bottle"
+	desc = "This is a random pill bottle."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "pill_canister"
+
+/obj/random/medical/pillbottle/item_to_spawn()
+	return pick(prob(1);/obj/item/weapon/storage/pill_bottle/spaceacillin,
+				prob(1);/obj/item/weapon/storage/pill_bottle/dermaline,
+				prob(1);/obj/item/weapon/storage/pill_bottle/dexalin_plus,
+				prob(1);/obj/item/weapon/storage/pill_bottle/bicaridine,
+				prob(1);/obj/item/weapon/storage/pill_bottle/iron)
 
 /obj/random/medical/lite
 	name = "Random Medicine"
@@ -176,7 +178,7 @@
 				prob(2);/obj/item/stack/medical/advanced/ointment,
 				prob(1);/obj/item/stack/medical/splint,
 				prob(4);/obj/item/device/healthanalyzer,
-				prob(1);/obj/item/bodybag/cryobag,
+				prob(1);/obj/item/bodybag,
 				prob(3);/obj/item/weapon/reagent_containers/hypospray/autoinjector,
 				prob(2);/obj/item/weapon/storage/pill_bottle/kelotane,
 				prob(2);/obj/item/weapon/storage/pill_bottle/antitox)
@@ -215,7 +217,7 @@
 				//prob(6);/obj/item/weapon/material/wirerod,
 				prob(2);/obj/item/weapon/material/butterfly/switchblade,
 				prob(2);/obj/item/weapon/material/knuckledusters,
-				prob(1);/obj/item/weapon/material/hatchet/tacknife,
+				prob(1);/obj/item/weapon/material/knife/tacknife,
 				prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 				prob(1);/obj/item/weapon/beartrap,
 				prob(1);/obj/item/weapon/handcuffs/fuzzy,
@@ -292,7 +294,7 @@
 
 /obj/random/projectile
 	name = "Random Projectile Weapon"
-	desc = "This is a random security weapon."
+	desc = "This is a random projectile weapon."
 	icon = 'icons/obj/gun.dmi'
 	icon_state = "revolver"
 
@@ -313,6 +315,8 @@
 				prob(3);/obj/item/weapon/gun/projectile/luger/brown,
 				prob(4);/obj/item/weapon/gun/projectile/sec,
 				prob(3);/obj/item/weapon/gun/projectile/sec/wood,
+				prob(4);/obj/item/weapon/gun/projectile/p92x,
+				prob(3);/obj/item/weapon/gun/projectile/p92x/brown,
 				prob(4);/obj/item/weapon/gun/projectile/pistol,
 				prob(5);/obj/item/weapon/gun/projectile/pirate,
 				prob(2);/obj/item/weapon/gun/projectile/revolver,
@@ -327,7 +331,6 @@
 				prob(2);/obj/item/weapon/gun/projectile/shotgun/pump/combat,
 				prob(4);/obj/item/weapon/gun/projectile/shotgun/pump/rifle,
 				prob(3);/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever,
-				prob(3);/obj/item/weapon/gun/projectile/shotgun/pump/rifle/mosin,
 				prob(2);/obj/item/weapon/gun/projectile/silenced)
 
 /obj/random/projectile/sec
@@ -349,13 +352,15 @@
 
 /obj/random/handgun/item_to_spawn()
 	return pick(prob(4);/obj/item/weapon/gun/projectile/sec,
-				prob(4);/obj/item/weapon/gun/projectile/luger,
+				prob(4);/obj/item/weapon/gun/projectile/p92x,
+				prob(3);/obj/item/weapon/gun/projectile/sec/wood,
+				prob(3);/obj/item/weapon/gun/projectile/p92x/brown,
+				prob(3);/obj/item/weapon/gun/projectile/colt,
+				prob(2);/obj/item/weapon/gun/projectile/luger,
 				prob(2);/obj/item/weapon/gun/energy/gun,
-				prob(2);/obj/item/weapon/gun/projectile/colt,
 				prob(2);/obj/item/weapon/gun/projectile/pistol,
 				prob(1);/obj/item/weapon/gun/energy/retro,
-				prob(1);/obj/item/weapon/gun/projectile/sec/wood,
-				prob(3);/obj/item/weapon/gun/projectile/luger/brown)
+				prob(1);/obj/item/weapon/gun/projectile/luger/brown)
 
 /obj/random/handgun/sec
 	name = "Random Security Handgun"
@@ -369,7 +374,7 @@
 
 /obj/random/ammo
 	name = "Random Ammunition"
-	desc = "This is random ammunition."
+	desc = "This is random security ammunition."
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "45-10"
 
@@ -1078,5 +1083,23 @@ var/list/multi_point_spawns
 			prob(5);list(
 				/obj/item/clothing/suit/space/void/security/riot,
 				/obj/item/clothing/head/helmet/space/void/security/riot
+			)
+		)
+
+/obj/random/multiple/voidsuit/mining
+	name = "Random Mining Voidsuit"
+	desc = "This is a random mining voidsuit."
+	icon = 'icons/obj/clothing/suits.dmi'
+	icon_state = "rig-mining"
+
+/obj/random/multiple/voidsuit/mining/item_to_spawn()
+	return pick(
+			prob(5);list(
+				/obj/item/clothing/suit/space/void/mining,
+				/obj/item/clothing/head/helmet/space/void/mining
+			),
+			prob(1);list(
+				/obj/item/clothing/suit/space/void/mining/alt,
+				/obj/item/clothing/head/helmet/space/void/mining/alt
 			)
 		)

@@ -76,25 +76,9 @@
 	else
 		teleport_y = src.y
 
-/obj/effect/step_trigger/teleporter/wild/Trigger(var/atom/movable/A)
-	..()
-	var/datum/map_z_level/z_level = get_z_level_datum(A)
-	if(!istype(z_level, /datum/map_z_level/tether/wilderness))
-		return
-	var/datum/map_z_level/tether/wilderness/wilderness = z_level
-	if(wilderness.activated)
-		return
-	if(isliving(A))
-		var/mob/living/M = A
-		if(!M.is_dead() && M.client)
-			wilderness.activate_mobs()
-			return
-	for(var/mob/living/M in A)
-		if(!istype(M))
-			continue
-		if(!M.is_dead() && M.client)
-			wilderness.activate_mobs()
-			return
+// Here we would activate the target wilderness z-level.
+// /obj/effect/step_trigger/teleporter/wild/Trigger(var/atom/movable/A)
+// 	..()
 
 /obj/effect/step_trigger/teleporter/wild/from_wild
 	..()
@@ -380,6 +364,17 @@ var/global/list/latejoin_tram   = list()
 	..()
 	reagents.add_reagent("anti_toxin", 15)
 	reagents.add_reagent("paracetamol", 5)
+
+//"Red" Armory Door
+/obj/machinery/door/airlock/multi_tile/metal/red
+	name = "Red Armory"
+	//color = ""
+
+/obj/machinery/door/airlock/multi_tile/metal/red/allowed(mob/user)
+	if(get_security_level() in list("green","blue"))
+		return FALSE
+
+	return ..(user)
 
 //
 // ### Wall Machines On Full Windows ###

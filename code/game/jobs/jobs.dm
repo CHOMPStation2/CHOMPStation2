@@ -26,7 +26,11 @@ var/const/PSYCHIATRIST		=(1<<7)
 var/const/ROBOTICIST		=(1<<8)
 var/const/XENOBIOLOGIST		=(1<<9)
 var/const/PARAMEDIC			=(1<<10)
-
+var/const/SAR 				=(1<<11) //VOREStation THEFT
+var/const/PILOT 			=(1<<12) //VOREStation THEFT
+var/const/EXPLORER 			=(1<<13) //VOREStation THEFT
+var/const/EXPLORER_T		=(1<<14) //VOREStation THEFT
+var/const/EXPLORER_M		=(1<<15) //VOREStation THEFT
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -41,11 +45,10 @@ var/const/CARGOTECH			=(1<<7)
 var/const/MINER				=(1<<8)
 var/const/LAWYER			=(1<<9)
 var/const/CHAPLAIN			=(1<<10)
-var/const/CLOWN				=(1<<11)
-var/const/MIME				=(1<<12)
-var/const/ASSISTANT			=(1<<13)
-var/const/BRIDGE			=(1<<14)
-
+var/const/ASSISTANT			=(1<<11)
+var/const/BRIDGE			=(1<<12)
+var/const/CLOWN				=(1<<13) //VOREStation Add
+var/const/MIME				=(1<<14) //VOREStation Add
 
 var/list/assistant_occupations = list(
 )
@@ -75,6 +78,7 @@ var/list/medical_positions = list(
 	"Geneticist",
 	"Psychiatrist",
 	"Chemist",
+	"Search and Rescue", // VOREStation Edit - Moved SAR from planetary -> medical
 	"Paramedic"
 )
 
@@ -84,6 +88,7 @@ var/list/science_positions = list(
 	"Scientist",
 	"Geneticist",	//Part of both medical and science
 	"Roboticist",
+	"Explorer", // VOREStation Edit - Moved Explorer from planetary -> science
 	"Xenobiologist"
 )
 
@@ -103,6 +108,7 @@ var/list/civilian_positions = list(
 	"Librarian",
 	"Lawyer",
 	"Chaplain",
+	"Pilot",  // VOREStation Edit - Moved Pilot from planetary -> civ
 	"Assistant"
 )
 
@@ -112,6 +118,13 @@ var/list/security_positions = list(
 	"Warden",
 	"Detective",
 	"Security Officer"
+)
+
+
+var/list/planet_positions = list(
+	// "Explorer", // VOREStation Edit - Moved Explorer from planetary -> science
+	// "Pilot",  // VOREStation Edit - Moved Pilot from planetary -> civ
+	// "Search and Rescue"  // VOREStation Edit - Moved SAR from planetary -> medical
 )
 
 

@@ -43,10 +43,10 @@
 	containername = "Moghes imports crate"
 	contraband = 1
 
-/datum/supply_packs/security/bolt_rifles_mosin
+/datum/supply_packs/security/bolt_rifles_militia
  	name = "Surplus militia rifles"
  	contains = list(
- 			/obj/item/weapon/gun/projectile/shotgun/pump/rifle/mosin = 3,
+ 			/obj/item/weapon/gun/projectile/shotgun/pump/rifle = 3,
  			/obj/item/ammo_magazine/clip/c762 = 6
  			)
  	cost = 1000
@@ -77,7 +77,7 @@
 					/obj/item/weapon/melee/energy/sword/ionic_rapier,
 					/obj/item/weapon/storage/box/syndie_kit/space, //doesn't matter what species you are,
 					/obj/item/device/multitool/ai_detector,
-					/obj/item/weapon/storage/toolbox/syndicate
+					/obj/item/weapon/storage/toolbox/syndicate/powertools
 					),
 			list( //the infiltrator,
 					/obj/item/device/chameleon,
@@ -88,7 +88,7 @@
 					),
 			list( //the professional,
 					/obj/item/weapon/gun/energy/ionrifle/pistol,
-					/obj/item/weapon/material/hatchet/tacknife/combatknife,
+					/obj/item/weapon/material/knife/tacknife/combatknife,
 					/obj/item/clothing/mask/balaclava
 					)
 			)
@@ -96,34 +96,3 @@
 	contraband = 1
 	containertype = /obj/structure/largecrate
 	containername = "Suspicious crate"
-
-
-/datum/supply_packs/randomised/misc/telemunitions
-	name = "Intercepted Munitions"
-	num_contained = 1
-	contains = list(
-			list( //the operator,
-					/obj/item/weapon/gun/projectile/shotgun/pump/combat,
-					/obj/item/ammo_magazine/clip/c12g/pellet,
-					/obj/item/ammo_magazine/clip/c12g
-					),
-			list( //Chemical warfare,
-					/obj/item/weapon/reagent_containers/glass/bottle/chloralhydrate,
-					/obj/item/weapon/reagent_containers/glass/bottle/cyanide
-					),
-			list( //the sapper,
-					/obj/item/weapon/storage/box/syndie_kit/demolitions,
-					/obj/item/weapon/plastique
-					),
-			list( //the infiltrator,
-					/obj/item/weapon/gun/projectile/silenced,
-					/obj/item/clothing/glasses/thermal/syndi
-					),
-			list( //the hacker,
-					/obj/item/weapon/card/emag
-					)
-			)
-	cost = 2000 //price,
-	contraband = 1
-	containertype = /obj/structure/largecrate
-	containername = "Suspicious Heavy crate"

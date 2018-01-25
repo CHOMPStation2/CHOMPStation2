@@ -12,10 +12,9 @@
 					/area/holodeck,
 					/area/supply/station,
 					/area/mine,
-					/area/turbolift, // VOREStation Edit - Its a turbolift,
-					/area/tether/surfacebase/outside, // VOREStation Edit - Outside,
-					/area/vacant // VOREStation Edit - All vacant areas!,
-					)
+					/area/vacant/vacant_shop,
+					/area/turbolift,
+					/area/submap					)
 
 	var/list/exempt_from_atmos = typesof(/area/maintenance,
 						/area/storage,
@@ -25,11 +24,6 @@
 						/area/server,
 						/area/mine,
 						/area/vacant/vacant_shop,
-						/area/engineering/atmos/intake, // VOREStation Edit - Outside,
-						/area/rnd/external, // VOREStation Edit - Outside,
-						/area/tether/surfacebase/mining_main/external, // VOREStation Edit - Outside,
-						/area/tether/surfacebase/mining_main/airlock, // VOREStation Edit - Its an airlock,
-						/area/tether/surfacebase/emergency_storage, // VOREStation Edit,
 						/area/rnd/research_storage, // This should probably be fixed,
 						/area/security/riot_control // This should probably be fixed,
 						)
@@ -39,6 +33,11 @@
 						/area/mine,
 						/area/vacant/vacant_shop
 						)
+
+	// Some maps have areas specific to the map, so include those.
+	exempt_areas += using_map.unit_test_exempt_areas.Copy()
+	exempt_from_atmos += using_map.unit_test_exempt_from_atmos.Copy()
+	exempt_from_apc += using_map.unit_test_exempt_from_apc.Copy()
 
 	for(var/area/A in world)
 		if(A.z == 1 && !(A.type in exempt_areas))

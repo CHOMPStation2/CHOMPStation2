@@ -1,6 +1,7 @@
 ///////////////////// Mob Living /////////////////////
 /mob/living
 	var/digestable = 1					// Can the mob be digested inside a belly?
+	var/allowmobvore = 1				// Will simplemobs attempt to eat the mob?
 	var/vore_selected					// Default to no vore capability.
 	var/list/vore_organs = list()		// List of vore containers inside a mob
 	var/absorbed = 0					// If a mob is absorbed into another
@@ -144,7 +145,7 @@
 			if(do_after(user,30,src))
 				user.drop_item()
 				I.loc = src
-				B.internal_contents += I
+				B.internal_contents |= I
 				src.visible_message("<span class='warning'>[src] is fed the beacon!</span>","You're fed the beacon!")
 				playsound(src, B.vore_sound, 100, 1)
 				return 1
@@ -232,6 +233,7 @@
 	var/datum/vore_preferences/P = client.prefs_vr
 
 	P.digestable = src.digestable
+	P.allowmobvore = src.allowmobvore
 	P.belly_prefs = src.vore_organs
 	P.vore_taste = src.vore_taste
 	P.nif_examine = src.nif_examine
@@ -252,6 +254,7 @@
 	var/datum/vore_preferences/P = client.prefs_vr
 
 	src.digestable = P.digestable
+	src.allowmobvore = P.allowmobvore
 	src.vore_organs = list()
 	src.vore_taste = P.vore_taste
 	src.nif_examine = P.nif_examine
@@ -268,7 +271,7 @@
 //
 // Clearly super important. Obviously.
 //
-/mob/living/proc/lick(var/mob/living/tasted in oview(1))
+/mob/living/proc/lick(var/mob/living/tasted in living_mobs(1))
 	set name = "Lick Someone"
 	set category = "IC"
 	set desc = "Lick someone nearby!"
@@ -276,12 +279,12 @@
 	if(!istype(tasted))
 		return
 
-	if(!src.canClick() || incapacitated(INCAPACITATION_ALL))
+	if(!canClick() || incapacitated(INCAPACITATION_ALL))
 		return
 
-	src.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 
-	src.visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+	visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -483,7 +486,7 @@
 			src.loc = H.loc
 			var/datum/belly/B = check_belly(H)
 			if(B)
-				B.internal_contents += src
+				B.internal_contents |= src
 			return
 		else //Being held by a human
 			src << "<font color='blue'>You start to climb out of \the [C]!</font>"
@@ -501,7 +504,7 @@
 			src.loc = H.loc
 			var/datum/belly/B = check_belly(H)
 			if(B)
-				B.internal_contents += src
+				B.internal_contents |= src
 			return
 
 	src << "<font color='blue'>You start to climb out of \the [C]!</font>"
@@ -513,7 +516,7 @@
 		if(check_belly(C)) B = check_belly(C)
 		if(check_belly(C.loc)) B = check_belly(C.loc)
 		if(B)
-			B.internal_contents += src
+			B.internal_contents |= src
 		return
 	return
 

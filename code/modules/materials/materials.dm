@@ -642,6 +642,19 @@ var/list/name_to_material
 	display_name = "elevator panelling"
 	icon_colour = "#666666"
 
+// Ditto.
+/material/alienalloy/dungeonium
+	name = "dungeonium"
+	display_name = "ultra-durable"
+	icon_base = "dungeon"
+	icon_colour = "#FFFFFF"
+
+/material/alienalloy/alium
+	name = "alium"
+	display_name = "alien"
+	icon_base = "alien"
+	icon_colour = "#FFFFFF"
+
 /material/resin
 	name = "resin"
 	icon_colour = "#35343a"
@@ -659,9 +672,9 @@ var/list/name_to_material
 
 
 /material/wood
-	name = "wood"
+	name = MAT_WOOD
 	stack_type = /obj/item/stack/material/wood
-	icon_colour = "#824B28"
+	icon_colour = "#9c5930"
 	integrity = 50
 	icon_base = "wood"
 	explosion_resistance = 2
@@ -681,16 +694,17 @@ var/list/name_to_material
 	sheet_plural_name = "planks"
 
 /material/wood/log
-	name = "log"
+	name = MAT_LOG
 	icon_base = "log"
 	stack_type = /obj/item/stack/material/log
-	sheet_singular_name = "log"
-	sheet_plural_name = "logs"
+	sheet_singular_name = null
+	sheet_plural_name = "pile"
 
 /material/wood/log/sif
-	name = "alien log"
+	name = MAT_SIFLOG
 	icon_colour = "#0099cc" // Cyan-ish
 	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_BIO = 2)
+	stack_type = /obj/item/stack/material/log/sif
 
 /material/wood/holographic
 	name = "holowood"
@@ -699,7 +713,7 @@ var/list/name_to_material
 	shard_type = SHARD_NONE
 
 /material/wood/sif
-	name = "alien wood"
+	name = MAT_SIFWOOD
 //	stack_type = /obj/item/stack/material/wood/sif
 	icon_colour = "#0099cc" // Cyan-ish
 	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_BIO = 2) // Alien wood would presumably be more interesting to the analyzer.
@@ -722,7 +736,7 @@ var/list/name_to_material
 	destruction_desc = "crumples"
 
 /material/snow
-	name = "snow"
+	name = MAT_SNOW
 	stack_type = /obj/item/stack/material/snow
 	flags = MATERIAL_BRITTLE
 	icon_base = "solid"
@@ -736,7 +750,7 @@ var/list/name_to_material
 	melting_point = T0C+1
 	destruction_desc = "crumples"
 	sheet_singular_name = "pile"
-	sheet_plural_name = "piles"
+	sheet_plural_name = "pile" //Just a bigger pile
 
 /material/cloth //todo
 	name = "cloth"

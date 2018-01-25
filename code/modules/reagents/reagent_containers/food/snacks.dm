@@ -29,7 +29,8 @@
 
 	//Placeholder for effect that trigger on eating that aren't tied to reagents.
 /obj/item/weapon/reagent_containers/food/snacks/proc/On_Consume(var/mob/M)
-	if(!usr)	return
+	if(!usr)
+		usr = M
 	if(!reagents.total_volume)
 		M.visible_message("<span class='notice'>[M] finishes eating \the [src].</span>","<span class='notice'>You finish eating \the [src].</span>")
 		usr.drop_from_inventory(src)	//so icons update :[
@@ -68,7 +69,7 @@
 					user << "<span class='warning'>\The [blocked] is in the way!</span>"
 					return
 
-			user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN) //puts a limit on how fast people can eat/drink things
+			user.setClickCooldown(user.get_attack_speed(src)) //puts a limit on how fast people can eat/drink things
 			if (fullness <= 50)
 				M << "<span class='danger'>You hungrily chew out a piece of [src] and gobble it!</span>"
 			if (fullness > 50 && fullness <= 150)
@@ -100,7 +101,7 @@
 					user.visible_message("<span class='danger'>[user] cannot force anymore of [src] down [M]'s throat.</span>")
 					return 0
 
-				user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+				user.setClickCooldown(user.get_attack_speed(src))
 				if(!do_mob(user, M)) return
 
 				M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been fed [src.name] by [user.name] ([user.ckey]) Reagents: [reagentlist(src)]</font>")
@@ -223,7 +224,7 @@
 		return
 	user.visible_message("<b>[user]</b> nibbles away at \the [src].","You nibble away at \the [src].")
 	bitecount++
-	if(reagents && user.reagents)
+	if(reagents)
 		reagents.trans_to_mob(user, bitesize, CHEM_INGEST)
 	spawn(5)
 		if(!src && !user.client)
@@ -1363,6 +1364,63 @@
 /obj/item/weapon/reagent_containers/food/snacks/fries/New()
 	..()
 	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/mashedpotato
+	name = "Mashed Potato"
+	desc = "Pillowy mounds of mashed potato."
+	icon_state = "mashedpotato"
+	trash = /obj/item/trash/plate
+	filling_color = "#EDDD00"
+	center_of_mass = list("x"=16, "y"=11)
+	nutriment_amt = 4
+	nutriment_desc = list("fluffy mashed potatoes" = 4)
+
+/obj/item/weapon/reagent_containers/food/snacks/mashedpotato/New()
+	..()
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/bangersandmash
+	name = "Bangers and Mash"
+	desc = "An English treat."
+	icon_state = "bangersandmash"
+	trash = /obj/item/trash/plate
+	filling_color = "#EDDD00"
+	center_of_mass = list("x"=16, "y"=11)
+	nutriment_amt = 4
+	nutriment_desc = list("fluffy potato" = 3, "sausage" = 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/bangersandmash/New()
+	..()
+	reagents.add_reagent("protein", 3)
+	bitesize = 4
+
+/obj/item/weapon/reagent_containers/food/snacks/cheesymash
+	name = "Cheesy Mashed Potato"
+	desc = "The only thing that could make mash better."
+	icon_state = "cheesymash"
+	trash = /obj/item/trash/plate
+	filling_color = "#EDDD00"
+	center_of_mass = list("x"=16, "y"=11)
+	nutriment_amt = 4
+	nutriment_desc = list("cheesy potato" = 4)
+
+/obj/item/weapon/reagent_containers/food/snacks/cheesymash/New()
+	..()
+	reagents.add_reagent("protein", 3)
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/blackpudding
+	name = "Black Pudding"
+	desc = "This doesn't seem like a pudding at all."
+	icon_state = "blackpudding"
+	filling_color = "#FF0000"
+	center_of_mass = list("x"=16, "y"=7)
+
+/obj/item/weapon/reagent_containers/food/snacks/blackpudding/New()
+	..()
+	reagents.add_reagent("protein", 2)
+	reagents.add_reagent("blood", 5)
+	bitesize = 3
 
 /obj/item/weapon/reagent_containers/food/snacks/soydope
 	name = "Soy Dope"
@@ -3408,7 +3466,7 @@
 
 // potato + knife = raw sticks
 /obj/item/weapon/reagent_containers/food/snacks/grown/potato/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/weapon/material/kitchen/utensil/knife))
+	if(istype(W,/obj/item/weapon/material/knife))
 		new /obj/item/weapon/reagent_containers/food/snacks/rawsticks(src)
 		user << "You cut the potato."
 		qdel(src)

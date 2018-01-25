@@ -7,7 +7,6 @@
 #define BELLIES_NAME_MAX 12
 #define BELLIES_DESC_MAX 1024
 #define FLAVOR_MAX 40
-#define NIF_EXAMINE_MAX 100
 
 /mob/living/proc/insidePanel()
 	set name = "Vore Panel"
@@ -269,23 +268,28 @@
 
 	dat += "<HR>"
 
-	//Under the last HR, save and stuff.
-	dat += "<a href='?src=\ref[src];saveprefs=1'>Save Prefs</a>"
-	dat += "<a href='?src=\ref[src];refresh=1'>Refresh</a>"
-	dat += "<a href='?src=\ref[src];setflavor=1'>Set Flavor</a>"
-	dat += "<br><a href='?src=\ref[src];togglenoisy=1'>Toggle Hunger Noises</a>"
-
 	switch(user.digestable)
 		if(1)
 			dat += "<a href='?src=\ref[src];toggledg=1'>Toggle Digestable</a>"
 		if(0)
 			dat += "<a href='?src=\ref[src];toggledg=1'><span style='color:green;'>Toggle Digestable</span></a>"
 
-	dat += "<br><a href='?src=\ref[src];toggle_nif=1'>Set NIF concealment</a>" //These two get their own, custom row.
-	dat += "<a href='?src=\ref[src];set_nif_flavor=1'>Set NIF Examine Message.</a>"
+	switch(user.allowmobvore)
+		if(1)
+			dat += "<a href='?src=\ref[src];togglemv=1'>Toggle Mob Vore</a>"
+		if(0)
+			dat += "<a href='?src=\ref[src];togglemv=1'><span style='color:green;'>Toggle Mob Vore</span></a>"
 
-	dat += "<br><a href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Drop-nom Prey Mode</a>" //These two get their own, custom row, too.
-	dat += "<a href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Drop-nom Pred Mode</a>"
+	dat += "<br><a href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Drop-nom Prey</a>" //These two get their own, custom row, too.
+	dat += "<a href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Drop-nom Pred</a>"
+	dat += "<br><a href='?src=\ref[src];setflavor=1'>Set Your Taste</a>"
+	dat += "<a href='?src=\ref[src];togglenoisy=1'>Toggle Hunger Noises</a>"
+
+	dat += "<HR>"
+
+	//Under the last HR, save and stuff.
+	dat += "<a href='?src=\ref[src];saveprefs=1'>Save Prefs</a>"
+	dat += "<a href='?src=\ref[src];refresh=1'>Refresh</a>"
 
 	//Returns the dat html to the vore_look
 	return dat
@@ -513,6 +517,7 @@
 					selected.digest_mode = selected.digest_modes[1]
 		else
 			selected.digest_mode = input("Choose Mode (currently [selected.digest_mode])") in menu_list
+			selected.items_preserved.Cut() //Re-evaltuate all items in belly on belly-mode change
 
 	if(href_list["b_desc"])
 		var/new_desc = html_encode(input(usr,"Belly Description (1024 char limit):","New Description",selected.inside_flavor) as message|null)
@@ -732,28 +737,6 @@
 		else //Returned null
 			return 0
 
-	if(href_list["toggle_nif"])
-		var/choice = alert(user, "Your nif is currently: [user.conceal_nif ? "Not able to be seen" : "Able to be seen"]", "", "Conceal NIF", "Cancel", "Show NIF")
-		switch(choice)
-			if("Cancel")
-				return 0
-			if("Conceal NIF")
-				user.conceal_nif = 1
-			if("Show NIF")
-				user.conceal_nif = 0
-
-	if(href_list["set_nif_flavor"])
-		var/new_nif_examine = html_encode(input(usr,"How people will see your NIF on examine (100ch limit):","Character Flavor",user.nif_examine) as text|null)
-
-		if(new_nif_examine)
-			new_nif_examine = readd_quotes(new_nif_examine)
-			if(length(new_nif_examine) > NIF_EXAMINE_MAX)
-				alert("Entered NIF examine text too long. [NIF_EXAMINE_MAX] character limit.","Error")
-				return 0
-			user.nif_examine = new_nif_examine
-		else //Returned null
-			return 0
-
 	if(href_list["toggle_dropnom_pred"])
 		var/choice = alert(user, "You are currently [user.can_be_drop_pred ? " able to eat prey that fall from above or that you fall onto" : "not able to eat prey that fall from above or that you fall onto."]", "", "Be Pred", "Cancel", "Don't be Pred")
 		switch(choice)
@@ -788,6 +771,21 @@
 
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.digestable = user.digestable
+
+	if(href_list["togglemv"])
+		var/choice = alert(user, "This button is for those who don't like being eaten by mobs. Don't abuse this button by toggling it back and forth in combat or whatever, or you'll make the admins cry. Mobs are currently: [user.allowmobvore ? "Allowed to eat" : "Prevented from eating"] you.", "", "Allow Mob Predation", "Cancel", "Prevent Mob Predation")
+		switch(choice)
+			if("Cancel")
+				return 0
+			if("Allow Mob Predation")
+				user.allowmobvore = 1
+			if("Prevent Mob Predation")
+				user.allowmobvore = 0
+
+		message_admins("[key_name(user)] toggled their mob vore preference to [user.allowmobvore] ([user ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[user.loc.];Y=[user.loc.y];Z=[user.loc.z]'>JMP</a>" : "null"])")
+
+		if(user.client.prefs_vr)
+			user.client.prefs_vr.allowmobvore = user.allowmobvore
 
 	if(href_list["togglenoisy"])
 		var/choice = alert(user, "Toggle audible hunger noises. Currently: [user.noisy ? "Enabled" : "Disabled"]", "", "Enable audible hunger", "Cancel", "Disable audible hunger")

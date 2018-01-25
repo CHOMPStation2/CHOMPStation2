@@ -20,14 +20,16 @@
 	if(!istype(L))
 		qdel(src)
 		return
-	..() // I'm cautious about this, but its the right thing to do.
 	owner = L
 	sync_icon(L)
 
+/mob/zshadow/Destroy()
+	owner = null
+	..() //But we don't return because the hint is wrong
+	return QDEL_HINT_QUEUE
+
 /mob/Destroy()
-	if(shadow)
-		qdel(shadow)
-		shadow = null
+	qdel_null(shadow)
 	. = ..()
 
 /mob/zshadow/examine(mob/user, distance, infix, suffix)
@@ -121,7 +123,7 @@
 /mob/zshadow/set_typing_indicator(var/state)
 	if(!typing_indicator)
 		typing_indicator = new
-		typing_indicator.icon = 'icons/mob/talk.dmi' // Looks better on the right with job icons.
+		typing_indicator.icon = 'icons/mob/talk_vr.dmi' // Looks better on the right with job icons. //VOREStation Edit - talk_vr.dmi instead of talk.dmi for right-side icons
 		typing_indicator.icon_state = "typing"
 	if(state && !typing)
 		overlays += typing_indicator

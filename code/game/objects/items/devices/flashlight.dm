@@ -141,7 +141,7 @@
 
 			user.visible_message("<span class='notice'>\The [user] directs [src] to [M]'s eyes.</span>", \
 							 	 "<span class='notice'>You direct [src] to [M]'s eyes.</span>")
-			if(H == user)	//can't look into your own eyes buster
+			if(H != user)	//can't look into your own eyes buster
 				if(M.stat == DEAD || M.blinded)	//mob is dead or fully blind
 					user << "<span class='warning'>\The [M]'s pupils do not react to the light!</span>"
 					return
@@ -163,7 +163,7 @@
 				else
 					user << "<span class='notice'>\The [M]'s pupils narrow.</span>"
 
-			user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN) //can be used offensively
+			user.setClickCooldown(user.get_attack_speed(src)) //can be used offensively
 			M.flash_eyes()
 	else
 		return ..()
@@ -290,6 +290,7 @@
 	name = "desk lamp"
 	desc = "A desk lamp with an adjustable mount."
 	icon_state = "lamp"
+	force = 10
 	brightness_on = 5
 	w_class = ITEMSIZE_LARGE
 	flags = CONDUCT
@@ -320,7 +321,7 @@
 	w_class = ITEMSIZE_SMALL
 	brightness_on = 8 // Pretty bright.
 	light_power = 3
-	light_color = "#e58775"
+	light_color = LIGHT_COLOR_FLARE
 	icon_state = "flare"
 	item_state = "flare"
 	action_button_name = null //just pull it manually, neckbeard.

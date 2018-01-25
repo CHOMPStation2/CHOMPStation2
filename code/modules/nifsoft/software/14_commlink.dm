@@ -7,6 +7,7 @@
 	cost = 500
 	wear = 0
 	p_drain = 0.01
+	other_flags = (NIF_O_COMMLINK)
 
 	install()
 		if((. = ..()))
@@ -14,15 +15,10 @@
 
 	activate()
 		if((. = ..()))
-			nif.set_flag(NIF_O_COMMLINK,NIF_FLAGS_OTHER)
 			nif.comm.initialize_exonet(nif.human)
 			nif.comm.ui_interact(nif.human,key_state = commlink_state)
 			spawn(0)
 				deactivate()
-
-	deactivate()
-		if((. = ..()))
-			nif.clear_flag(NIF_O_COMMLINK,NIF_FLAGS_OTHER)
 
 	stat_text()
 		return "Show Commlink"
@@ -42,7 +38,7 @@
 		..()
 		nif = newloc
 		nifsoft = soft
-		register_device(nif.human)
+		spawn(10) register_device(nif.human) //Need to outwait the other spawn in communicators, sigh.
 		qdel_null(camera) //Not supported on internal one.
 
 	Destroy()
