@@ -1084,3 +1084,13 @@
 	//everything after the power cell had no amounts, I improvised.  -Sayu
 	req_log_access = access_rd
 	has_logs = 1
+
+
+/obj/machinery/vending/phoronresearch2
+	name = "Toxinmate 2000"
+	desc = "All the fine parts you need in one vending machine!"
+	products = list(/obj/item/clothing/under/rank/scientist = 6,/obj/item/clothing/suit/bio_suit = 6,/obj/item/clothing/head/bio_hood = 6,
+					/obj/item/device/assembly/timer = 6,/obj/item/device/assembly/signaler = 6,
+					/obj/item/device/assembly/prox_sensor = 6,/obj/item/device/assembly/igniter = 6)
+	req_log_access = access_rd
+	has_logs = 1
