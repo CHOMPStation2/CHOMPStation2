@@ -881,3 +881,17 @@
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "lampshade"
 	w_class = ITEMSIZE_TINY
+
+/obj/machinery/light/trailblazerb
+	icon = 'icons/obj/mining.dmi'
+	icon_state = "bluetrail_light_on"
+	base_state = "bluetrail_light_on"
+	fitting = "bulb"
+	brightness_range = 3
+	brightness_power = 2
+	layer = OBJ_LAYER
+	brightness_color = "#599DFF"
+	desc = "An unmovable trailblazer"
+	light_type = /obj/item/weapon/light/bulb
+	shows_alerts = FALSE
+	var/lamp_shade = 0

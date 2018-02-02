@@ -6,6 +6,14 @@ var/list/mining_overlay_cache = list()
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock-dark"
 
+/turf/unsimulated/mineral/ice
+	name = "Ice wall"
+	desc = "Frigid Ice that seems to be stronger then most manmade structures"
+	icon = 'icons/turf/snow_new.dmi'
+	icon_state = "Icerock"
+
+
+
 /turf/simulated/mineral //wall piece
 	name = "rock"
 	icon = 'icons/turf/walls.dmi'

@@ -29,6 +29,12 @@
 	H.break_cloak()
 	..()
 
+	var/lacertusol = 0
+	for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
+		if(R.id == "lacertusol")
+			lacertusol = 1
+			break
+
 	// Should this all be in Touch()?
 	if(istype(H))
 		if(get_accuracy_penalty(H) && H != src)	//Should only trigger if they're not aiming well
@@ -46,6 +52,8 @@
 		if(istype(H.gloves, /obj/item/clothing/gloves/boxing/hologlove))
 			H.do_attack_animation(src)
 			var/damage = rand(0, 9)
+			if(lacertusol)
+				damage = rand(5, 12)
 			if(!damage)
 				playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 				visible_message("<font color='red'><B>[H] has attempted to punch [src]!</B></font>")
@@ -162,6 +170,8 @@
 				return
 
 			var/rand_damage = rand(1, 5)
+			if(lacertusol)
+				rand_damage = rand(5, 12)
 			var/block = 0
 			var/accurate = 0
 			var/hit_zone = H.zone_sel.selecting
@@ -175,6 +185,8 @@
 				if(I_HELP)
 					// We didn't see this coming, so we get the full blow
 					rand_damage = 5
+					if(lacertusol)
+						rand_damage = 12
 					accurate = 1
 				if(I_HURT, I_GRAB)
 					// We're in a fighting stance, there's a chance we block
@@ -188,6 +200,8 @@
 			if(src.grabbed_by.len || src.buckled || !src.canmove || src==H)
 				accurate = 1 // certain circumstances make it impossible for us to evade punches
 				rand_damage = 5
+				if(lacertusol)
+					rand_damage = 12
 
 			// Process evasion and blocking
 			var/miss_type = 0

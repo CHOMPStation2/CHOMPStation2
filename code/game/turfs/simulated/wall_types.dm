@@ -59,6 +59,12 @@
 /turf/simulated/wall/log_sif/New(var/newloc)
 	..(newloc, MAT_SIFLOG)
 
+/turf/unsimulated/wall/ice
+	name = "Ice wall"
+	desc = "Frigid Ice that seems to be stronger then most manmade structures"
+	icon = 'icons/turf/snow_new.dmi'
+	icon_state = "Icerock"
+
 // Shuttle Walls
 /turf/simulated/shuttle/wall
 	name = "autojoin wall"
