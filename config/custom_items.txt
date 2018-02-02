@@ -67,6 +67,18 @@ character_name: Aurora Goldtail
 item_path: /obj/item/clothing/glasses/omnihud/prescription/aurora
 }
 
+{
+ckey: blackangelsace
+character_name: Strix Hades
+item_path: /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix
+}
+
+{
+ckey: blackangelsace
+character_name: Strix Hades
+item_path: /obj/item/clothing/under/seromi/undercoat/fluff/strix
+}
+
 # ######## C CKEYS
 {
 ckey: captmatt4
@@ -102,6 +114,12 @@ item_path: /obj/item/weapon/storage/box/fluff/anoki
 ckey: championfire
 character_name: Ivy Kaeire
 item_path: /obj/item/weapon/storage/box/fluff/ivy
+}
+
+{
+ckey: championfire
+character_name: Kita
+item_path: /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
 }
 # ######## D CKEYS
 {
