@@ -11,7 +11,7 @@ var/const/ENGINEER			=(1<<6)
 var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
-
+var/const/INTERN			=(1<<15) //VOREStation Add
 
 var/const/MEDSCI			=(1<<1)
 
@@ -26,11 +26,6 @@ var/const/PSYCHIATRIST		=(1<<7)
 var/const/ROBOTICIST		=(1<<8)
 var/const/XENOBIOLOGIST		=(1<<9)
 var/const/PARAMEDIC			=(1<<10)
-var/const/SAR 				=(1<<11) //VOREStation THEFT
-var/const/PILOT 			=(1<<12) //VOREStation THEFT
-var/const/EXPLORER 			=(1<<13) //VOREStation THEFT
-var/const/EXPLORER_T		=(1<<14) //VOREStation THEFT
-var/const/EXPLORER_M		=(1<<15) //VOREStation THEFT
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -109,7 +104,8 @@ var/list/civilian_positions = list(
 	"Lawyer",
 	"Chaplain",
 	"Pilot",  // VOREStation Edit - Moved Pilot from planetary -> civ
-	"Assistant"
+	USELESS_JOB, //VOREStation Edit - Visitor not Assistant
+	"Intern" //VOREStation Edit - Intern
 )
 
 

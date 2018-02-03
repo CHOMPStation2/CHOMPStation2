@@ -23,6 +23,7 @@ var/list/global/map_templates = list()
 	it runs out. The cost of a submap should roughly corrispond with several factors such as size, loot, difficulty, desired scarcity, etc. \
 	Set to -1 to force the submap to always be made.
 	var/allow_duplicates = FALSE // If false, only one map template will be spawned by the game. Doesn't affect admins spawning then manually.
+	var/discard_prob = 0 // If non-zero, there is a chance that the map seeding algorithm will skip this template when selecting potential templates to use.
 
 	var/static/dmm_suite/maploader = new
 
@@ -102,19 +103,25 @@ var/list/global/map_templates = list()
 
 	admin_notice("<span class='danger'>Submap initializations finished.</span>", R_DEBUG)
 
-/datum/map_template/proc/load_new_z()
-	var/x = round(world.maxx/2)
-	var/y = round(world.maxy/2)
+/datum/map_template/proc/load_new_z(var/centered = FALSE, var/dont_init = FALSE)
+	var/x = 1
+	var/y = 1
 
-	var/list/bounds = maploader.load_map(file(mappath), x, y)
+	if(centered)
+		x = round((world.maxx - width)/2)
+		y = round((world.maxy - height)/2)
+
+	var/list/bounds = maploader.load_map(file(mappath), x, y, no_changeturf = TRUE)
 	if(!bounds)
 		return FALSE
 
 //	repopulate_sorted_areas()
 
 	//initialize things that are normally initialized after map load
-	initTemplateBounds(bounds)
+	if(!dont_init)
+		initTemplateBounds(bounds)
 	log_game("Z-level [name] loaded at at [x],[y],[world.maxz]")
+	on_map_loaded(world.maxz) //VOREStation Edit
 	return TRUE
 
 /datum/map_template/proc/load(turf/T, centered = FALSE, dont_init = FALSE)
@@ -196,6 +203,8 @@ var/list/global/map_templates = list()
 		if(!MT.allow_duplicates && MT.loaded > 0) // This probably won't be an issue but we might as well.
 			continue
 		if(!istype(MT, desired_map_template_type)) // Not the type wanted.
+			continue
+		if(MT.discard_prob && prob(MT.discard_prob))
 			continue
 		if(MT.cost && MT.cost < 0) // Negative costs always get spawned.
 			priority_submaps += MT
