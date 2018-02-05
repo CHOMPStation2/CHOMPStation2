@@ -713,7 +713,7 @@
 
 //Aurora Goldtail
 
- /obj/item/clothing/glasses/omnihud/prescription/aurora
+/obj/item/clothing/glasses/omnihud/prescription/aurora
  	name = "Round glasses"
  	desc = "A pair of circular shaped prescription glasses. They seem fit for a avian head and will most likely make anyone wearing these look like a big nerd. It seems they are outfitted with a augmented reality module."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -722,6 +722,25 @@
  	override = 1
  	item_state = "aurora_glasses"
 
+ //Strix Hades
+
+/obj/item/clothing/suit/storage/seromi/cloak/fluff/strix
+ 	name = "Colony Director Coat"
+ 	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+ 	icon = 'icons/vore/custom_clothes_yw.dmi'
+ 	icon_state = "tesh_cloak_cd"
+ 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+ 	override = 1
+ 	item_state = "tesh_cloak_cd"
+
+/obj/item/clothing/under/seromi/undercoat/fluff/strix
+	name = "Colony Director Undercoat"
+	desc = "A Teshari traditional garb, with a modern twist! Made of micro and nanofibres to make it light and billowy, perfect for going fast and stylishly!"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tesh_uniform_cd"
+	override = 1
+	item_state = "tesh_uniform_cd"
 
 // *******
 // Dawidoe
@@ -839,6 +858,17 @@
 				hoodup= 0
 				usr << "You put on the hood."
 		usr.update_inv_wear_suit()
+
+//Kita
+
+ /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
+ 	name = "Magical Cloak"
+ 	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
+ 	icon = 'icons/vore/custom_clothes_yw.dmi'
+ 	icon_state = "tesh_cloak_kita"
+ 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+ 	override = 1
+ 	item_state = "tesh_cloak_kita"
 
 // ********
 // lukevale

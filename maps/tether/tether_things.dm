@@ -76,45 +76,30 @@
 	else
 		teleport_y = src.y
 
-// Here we would activate the target wilderness z-level.
-// /obj/effect/step_trigger/teleporter/wild/Trigger(var/atom/movable/A)
-// 	..()
+/obj/effect/step_trigger/teleporter/planetary_fall/virgo3b/initialize()
+	planet = planet_virgo3b
 
-/obj/effect/step_trigger/teleporter/wild/from_wild
-	..()
-	teleport_z = Z_LEVEL_SURFACE_LOW
+/obj/effect/step_trigger/lost_in_space
+	var/deathmessage = "You drift off into space, floating alone in the void until your life support runs out."
 
-/obj/effect/step_trigger/teleporter/wild/to_wild_1
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_1
+/obj/effect/step_trigger/lost_in_space/Trigger(var/atom/movable/A) //replacement for shuttle dump zones because there's no empty space levels to dump to
+	if(ismob(A))
+		to_chat(A, "<span class='danger'>[deathmessage]</span>")
+	qdel(A)
 
-/obj/effect/step_trigger/teleporter/wild/to_wild_2/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_2
+/obj/effect/step_trigger/lost_in_space/bluespace
+	deathmessage = "Everything goes blue as your component particles are scattered throughout the known and unknown universe."
+	var/last_sound = 0
 
-/obj/effect/step_trigger/teleporter/wild/to_wild_3/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_3
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_4/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_4
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_5/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_5
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_6/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_6
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_crash/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_CRASH
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_ruins/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_RUINS
+/obj/effect/step_trigger/lost_in_space/bluespace/Trigger(A)
+	if(world.time - last_sound > 5 SECONDS)
+		last_sound = world.time
+		playsound(get_turf(src), 'sound/effects/supermatter.ogg', 75, 1)
+	if(ismob(A) && prob(5))//lucky day
+		var/destturf = locate(rand(5,world.maxx-5),rand(5,world.maxy-5),pick(using_map.station_levels))
+		new /datum/teleport/instant(A, destturf, 0, 1, null, null, null, 'sound/effects/phasein.ogg')
+	else
+		return ..()
 
 
 // Invisible object that blocks z transfer to/from its turf and the turf above.

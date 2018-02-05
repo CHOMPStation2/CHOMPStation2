@@ -60,11 +60,13 @@
 	return TRUE
 
 // If you need an event to occur when the shuttle jumps in short or long jump, override this.
-/datum/shuttle/proc/on_shuttle_departure()
+/datum/shuttle/proc/on_shuttle_departure(var/area/origin)
+	origin.shuttle_departed()
 	return
 
 // Similar to above, but when it finishes moving to the target.  Short jump generally makes this occur immediately after the above proc.
-/datum/shuttle/proc/on_shuttle_arrival()
+/datum/shuttle/proc/on_shuttle_arrival(var/area/destination)
+	destination.shuttle_arrived()
 	return
 
 /datum/shuttle/proc/short_jump(var/area/origin,var/area/destination)
@@ -88,13 +90,13 @@
 			make_sounds(origin, HYPERSPACE_END)
 			return	//someone cancelled the launch
 
-		on_shuttle_departure()
+		on_shuttle_departure(origin)
 
 		moving_status = SHUTTLE_INTRANSIT //shouldn't matter but just to be safe
 		move(origin, destination)
 		moving_status = SHUTTLE_IDLE
 
-		on_shuttle_arrival()
+		on_shuttle_arrival(destination)
 
 		make_sounds(destination, HYPERSPACE_END)
 
@@ -125,11 +127,12 @@
 
 		depart_time = world.time
 
-		on_shuttle_departure()
+		on_shuttle_departure(departing)
 
 		moving_status = SHUTTLE_INTRANSIT
 
 		move(departing, interim, direction)
+		interim.shuttle_arrived()
 
 		if(process_longjump(departing, destination)) //VOREStation Edit - To hook custom shuttle code in
 			return //VOREStation Edit - It handled it for us (shuttle crash or such)
@@ -147,12 +150,13 @@
 				create_warning_effect(destination)
 			sleep(5)
 
+		interim.shuttle_departed()
 		move(interim, destination, direction)
 		moving_status = SHUTTLE_IDLE
 
-		//on_shuttle_arrival()//VOREStation Edit.
+		on_shuttle_arrival(destination)
 
-		//make_sounds(destination, HYPERSPACE_END)//VOREStation Edit. See above comment.
+		make_sounds(destination, HYPERSPACE_END)
 
 /datum/shuttle/proc/dock()
 	if (!docking_controller)
@@ -256,3 +260,7 @@
 			sound_to_play = 'sound/effects/shuttles/hyperspace_end.ogg'
 	for(var/obj/machinery/door/E in A)	//dumb, I know, but playing it on the engines doesn't do it justice
 		playsound(E, sound_to_play, 50, FALSE)
+
+/datum/shuttle/proc/message_passengers(area/A, var/message)
+	for(var/mob/M in A)
+		M.show_message(message, 2)
