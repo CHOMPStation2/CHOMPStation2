@@ -188,7 +188,7 @@
 	starting_destination = /datum/shuttle_destination/excursion/tether
 
 /datum/shuttle_destination/excursion/tether
-	name = "NSB Adephagia Excursion Hangar"
+	name = "Yawn Wider Excursion Hangar"
 	my_area = /area/shuttle/excursion/tether
 
 	dock_target = "expshuttle_dock"
@@ -207,7 +207,7 @@
 
 
 /datum/shuttle_destination/excursion/outside_tether
-	name = "Nearby NSB Adephagia"
+	name = "Nearby Yawn Wider"
 	my_area = /area/shuttle/excursion/tether_nearby
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 
@@ -218,7 +218,7 @@
 
 
 /datum/shuttle_destination/excursion/docked_tether
-	name = "NSB Adephagia Docking Arm"
+	name = "Yawn Wider Docking Arm"
 	my_area = /area/shuttle/excursion/tether_dockarm
 
 	dock_target = "d1a2_dock"
