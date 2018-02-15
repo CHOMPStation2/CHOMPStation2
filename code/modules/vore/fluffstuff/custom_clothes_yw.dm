@@ -737,10 +737,13 @@
 	name = "Colony Director Undercoat"
 	desc = "A Teshari traditional garb, with a modern twist! Made of micro and nanofibres to make it light and billowy, perfect for going fast and stylishly!"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "tesh_uniform_cd"
 	override = 1
 	item_state = "tesh_uniform_cd"
+	sprite_sheets = list(
+					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
+					)
 
 // *******
 // Dawidoe
