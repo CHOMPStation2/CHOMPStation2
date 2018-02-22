@@ -15,7 +15,7 @@
 	var/vore_standing_too = 0			// Can also eat non-stunned mobs
 	var/vore_ignores_undigestable = 1	// Refuse to eat mobs who are undigestable by the prefs toggle.
 
-	var/vore_default_mode = DM_DIGEST	// Default bellymode (DM_DIGEST, DM_HOLD, DM_ABSORB)
+	var/vore_default_mode = DM_ITEMWEAK	// Default bellymode (DM_DIGEST, DM_HOLD, DM_ABSORB)
 	var/vore_digest_chance = 25			// Chance to switch to digest mode if resisted
 	var/vore_absorb_chance = 0			// Chance to switch to absorb mode if resisted
 	var/vore_escape_chance = 25			// Chance of resisting out of mob
@@ -173,6 +173,16 @@
 		"The juices pooling beneath you sizzle against your sore skin.",
 		"The churning walls slowly pulverize you into meaty nutrients.",
 		"The stomach glorps and gurgles as it tries to work you into slop.")
+	B.emote_lists[DM_ITEMWEAK] = list(
+		"The burning acids eat away at your form.",
+		"The muscular stomach flesh grinds harshly against you.",
+		"The caustic air stings your chest when you try to breathe.",
+		"The slimy guts squeeze inward to help the digestive juices soften you up.",
+		"The onslaught against your body doesn't seem to be letting up; you're food now.",
+		"The predator's body ripples and crushes against you as digestive enzymes pull you apart.",
+		"The juices pooling beneath you sizzle against your sore skin.",
+		"The churning walls slowly pulverize you into meaty nutrients.",
+		"The stomach glorps and gurgles as it tries to work you into slop.")
 	src.vore_organs[B.name] = B
 	src.vore_selected = B.name
 
@@ -188,3 +198,12 @@
 			update_icon()
 			stop_automated_movement = 0
 	..()
+
+// Checks to see if mob doesn't like this kind of turf
+/mob/living/simple_animal/avoid_turf(var/turf/turf)
+	//So we only check if the parent didn't find anything terrible
+	if((. = ..(turf)))
+		return .
+
+	if(istype(turf,/turf/unsimulated/floor/sky))
+		return TRUE //Mobs aren't that stupid, probably

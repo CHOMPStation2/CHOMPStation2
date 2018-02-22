@@ -174,6 +174,8 @@
 // The purpose of this method is to avoid duplicate code, and ensure that all necessary
 // steps are taken.
 /datum/belly/proc/nom_mob(var/mob/prey, var/mob/user)
+	if(owner.stat == DEAD)
+		return
 	if (prey.buckled)
 		prey.buckled.unbuckle_mob()
 
@@ -185,6 +187,9 @@
 
 	if(inside_flavor)
 		prey << "<span class='notice'><B>[inside_flavor]</B></span>"
+
+	for(var/obj/item/weapon/storage/S in prey)
+		S.hide_from(owner)
 
 // Get the line that should show up in Examine message if the owner of this belly
 // is examined.   By making this a proc, we not only take advantage of polymorphism,
@@ -314,6 +319,7 @@
 		var/mob/living/carbon/human/Pred = owner
 		if(ishuman(M))
 			var/mob/living/carbon/human/Prey = M
+			Prey.bloodstr.del_reagent("numbenzyme")
 			Prey.bloodstr.trans_to_holder(Pred.bloodstr, Prey.bloodstr.total_volume, 0.5, TRUE) // Copy=TRUE because we're deleted anyway
 			Prey.ingested.trans_to_holder(Pred.bloodstr, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
 			Prey.touching.trans_to_holder(Pred.bloodstr, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
@@ -364,7 +370,7 @@
 		items_preserved |= item
 	else
 		internal_contents -= item
-		owner.nutrition += (digested)
+		owner.nutrition += (5 * digested)
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
 			R.cell.charge += (50 * digested)
@@ -466,9 +472,15 @@
 			digest_mode = DM_ABSORB
 			return
 
-		else if(prob(digestchance) && digest_mode != DM_DIGEST) //Finally, let's see if it should run the digest chance.
+		else if(prob(digestchance) && digest_mode != DM_ITEMWEAK && digest_mode != DM_DIGEST) //Finally, let's see if it should run the digest chance.
 			R << "<span class='warning'>In response to your struggling, \the [name] begins to get more active...</span>"
 			owner << "<span class='warning'>You feel your [name] beginning to become active!</span>"
+			digest_mode = DM_ITEMWEAK
+			return
+
+		else if(prob(digestchance) && digest_mode == DM_ITEMWEAK) //Oh god it gets even worse if you fail twice!
+			R << "<span class='warning'>In response to your struggling, \the [name] begins to get even more active!</span>"
+			owner << "<span class='warning'>You feel your [name] beginning to become even more active!</span>"
 			digest_mode = DM_DIGEST
 			return
 		else //Nothing interesting happened.
@@ -482,9 +494,6 @@
 		return
 	internal_contents -= content
 	target.internal_contents += content
-	if(content in items_preserved)
-		items_preserved -= content
-		target.items_preserved += content
 	if(isliving(content))
 		var/mob/living/M = content
 		if(target.inside_flavor)

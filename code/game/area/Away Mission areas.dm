@@ -14,10 +14,8 @@
 	for(var/turf/unsimulated/floor/F in src)
 		valid_spawn_turfs |= F
 
-/area/awaymission/initialize()
+/area/awaymission/LateInitialize()
 	..()
-	return TRUE
-	/*sleep(180)
 	EvalValidSpawnTurfs()
 
 	if(!valid_spawn_turfs.len)
@@ -30,7 +28,7 @@
 	//Handles random flora placement for floracountmax, as defined/randomized in initialize of each individual area.
 	spawn_flora_on_turf()
 
-	world << "Away mission spawning done."*/
+	world << "Away mission spawning done."
 
 /area/awaymission/proc/spawn_mob_on_turf()
 	if(!valid_mobs.len)
