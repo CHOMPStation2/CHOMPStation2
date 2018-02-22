@@ -1,6 +1,9 @@
 {
-  "static_directories": [
-    "config",
-	"data"
-  ]
+	"static_directories": [
+		"config",
+		"data"
+	],
+	"dlls": [
+		"libmariadb.dll"
+	]
 }
