@@ -1,0 +1,6 @@
+{
+  "static_directories": [
+    "config",
+	"data"
+  ]
+}
