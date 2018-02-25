@@ -74,7 +74,6 @@
 	total_volume = 0
 	for(var/datum/reagent/R in reagent_list)
 		if(R.volume < MINIMUM_CHEMICAL_VOLUME)
-			R.on_remove(my_atom)
 			del_reagent(R.id)
 		else
 			total_volume += R.volume
@@ -261,10 +260,8 @@
 
 	for(var/datum/reagent/current in reagent_list)
 		var/amount_to_transfer = current.volume * part
-		var/should_transfer = current.on_transfer(amount_to_transfer)
-		if(should_transfer)
-			target.add_reagent(current.id, amount_to_transfer * multiplier, current.get_data(), safety = 1) // We don't react until everything is in place
-		if(!copy || should_transfer)
+		target.add_reagent(current.id, amount_to_transfer * multiplier, current.get_data(), safety = 1) // We don't react until everything is in place
+		if(!copy)
 			remove_reagent(current.id, amount_to_transfer, 1)
 
 	if(!copy)
