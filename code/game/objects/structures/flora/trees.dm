@@ -197,6 +197,41 @@
 	..()
 	icon_state = "[base_state][rand(1, 6)]"
 
+// Winter Trees
+
+/obj/structure/flora/tree/winter
+	icon = 'icons/obj/flora/wintertree.dmi'
+	icon_state = "tree"
+	base_state = "tree"
+	product = /obj/item/stack/material/log
+	product_amount = 20
+	health = 800
+	max_health = 800
+	pixel_x = -48
+	pixel_y = -16
+	shake_animation_degrees = 2
+
+/obj/structure/flora/tree/winter/New()
+	..()
+	icon_state = "[base_state][rand(1, 6)]"
+
+
+/obj/structure/flora/tree/winter1
+	icon = 'icons/obj/flora/wintertreesmall-1.dmi'
+	icon_state = "tree"
+	base_state = "tree"
+	product = /obj/item/stack/material/log
+	product_amount = 20
+	health = 800
+	max_health = 800
+	pixel_x = -48
+	pixel_y = -16
+	shake_animation_degrees = 2
+
+/obj/structure/flora/tree/winter1/New()
+	..()
+	icon_state = "[base_state][rand(1, 6)]"
+
 // Sif trees
 
 /obj/structure/flora/tree/sif
