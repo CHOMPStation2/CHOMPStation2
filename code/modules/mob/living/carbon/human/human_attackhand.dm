@@ -17,7 +17,7 @@
 			return u_attack
 	return null
 
-/mob/living/carbon/human/attack_hand(mob/living/carbon/M as mob)
+/mob/living/carbon/human/attack_hand(mob/living/M as mob)
 	var/datum/gender/TT = gender_datums[M.get_visible_gender()]
 	var/mob/living/carbon/human/H = M
 	if(istype(H))
@@ -27,7 +27,8 @@
 		if(!temp || !temp.is_usable())
 			H << "<font color='red'>You can't use your hand.</font>"
 			return
-	H.break_cloak()
+	M.break_cloak()
+
 	..()
 
 	var/lacertusol = 0
@@ -81,7 +82,8 @@
 			return
 
 	if(istype(M,/mob/living/carbon))
-		M.spread_disease_to(src, "Contact")
+		var/mob/living/carbon/C = M
+		C.spread_disease_to(src, "Contact")
 
 	switch(M.a_intent)
 		if(I_HELP)
@@ -271,7 +273,15 @@
 				return 0
 
 			var/real_damage = rand_damage
+			var/hit_dam_type = attack.damage_type
 			real_damage += attack.get_unarmed_damage(H)
+			if(H.gloves)
+				if(istype(H.gloves, /obj/item/clothing/gloves))
+					var/obj/item/clothing/gloves/G = H.gloves
+					real_damage += G.punch_force
+					hit_dam_type = G.punch_damtype
+					if(H.pulling_punches)	//SO IT IS DECREED: PULLING PUNCHES WILL PREVENT THE ACTUAL DAMAGE FROM RINGS AND KNUCKLES, BUT NOT THE ADDED PAIN
+						hit_dam_type = AGONY
 			real_damage *= damage_multiplier
 			rand_damage *= damage_multiplier
 			if(HULK in H.mutations)
@@ -285,7 +295,7 @@
 			attack.apply_effects(H, src, armour, rand_damage, hit_zone)
 
 			// Finally, apply damage to target
-			apply_damage(real_damage, (attack.deal_halloss ? HALLOSS : BRUTE), hit_zone, armour, soaked, sharp=attack.sharp, edge=attack.edge)
+			apply_damage(real_damage, hit_dam_type, hit_zone, armour, soaked, sharp=attack.sharp, edge=attack.edge)
 
 		if(I_DISARM)
 			M.attack_log += text("\[[time_stamp()]\] <font color='red'>Disarmed [src.name] ([src.ckey])</font>")
@@ -348,7 +358,7 @@
 /mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)
 	return
 
-/mob/living/carbon/human/attack_generic(var/mob/user, var/damage, var/attack_message)
+/mob/living/carbon/human/attack_generic(var/mob/user, var/damage, var/attack_message, var/armor_type = "melee", var/armor_pen = 0, var/a_sharp = 0, var/a_edge = 0)
 
 	if(!damage)
 		return
@@ -360,9 +370,9 @@
 
 	var/dam_zone = pick(organs_by_name)
 	var/obj/item/organ/external/affecting = get_organ(ran_zone(dam_zone))
-	var/armor_block = run_armor_check(affecting, "melee")
-	var/armor_soak = get_armor_soak(affecting, "melee")
-	apply_damage(damage, BRUTE, affecting, armor_block, armor_soak)
+	var/armor_block = run_armor_check(affecting, armor_type, armor_pen)
+	var/armor_soak = get_armor_soak(affecting, armor_type, armor_pen)
+	apply_damage(damage, BRUTE, affecting, armor_block, armor_soak, sharp = a_sharp, edge = a_edge)
 	updatehealth()
 	return 1
 
@@ -433,7 +443,7 @@
 		return 0
 
 	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-	
+
 	if(user == src)
 		user.visible_message("\The [user] starts applying pressure to [TU.his] [organ.name]!", "You start applying pressure to your [organ.name]!")
 	else
