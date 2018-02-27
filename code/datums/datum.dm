@@ -7,6 +7,7 @@
 	var/gc_destroyed //Time when this object was destroyed.
 	var/weakref/weakref // Holder of weakref instance pointing to this datum
 	var/is_processing = FALSE // If this datum is in an MC processing list, this will be set to its name.
+	var/datum_flags = 0
 
 #ifdef TESTING
 	var/tmp/running_find_references

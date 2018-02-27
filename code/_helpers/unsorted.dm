@@ -14,6 +14,9 @@
     locate(min(CENTER.x+(RADIUS),world.maxx), min(CENTER.y+(RADIUS),world.maxy), CENTER.z) \
   )
 
+#define QDEL_NULL(item) qdel(item); item = null
+#define QDEL_LIST(L) if(L) { for(var/I in L) qdel(I); L.Cut(); }
+
 //Inverts the colour of an HTML string
 /proc/invertHTML(HTMLstring)
 
@@ -1473,7 +1476,12 @@ var/mob/dview/dview_mob = new
 		if(337.5)
 			return "North-Northwest"
 
+//gives us the stack trace from CRASH() without ending the current proc.
+/proc/stack_trace(msg)
+	CRASH(msg)
 
+/datum/proc/stack_trace(msg)
+	CRASH(msg)
 
 
 
