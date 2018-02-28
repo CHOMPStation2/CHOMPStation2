@@ -175,6 +175,8 @@ var/datum/controller/master/Master = new()
 	to_chat(world, "<span class='boldannounce'>[msg]</span>")
 	log_world(msg)
 
+	SERVER_TOOLS_CHAT_BROADCAST("Server Initialization completed!")
+
 	if (!current_runlevel)
 		SetRunLevel(RUNLEVEL_LOBBY)
 
