@@ -17,6 +17,5 @@
 /datum/server_tools_command/readfax/Run(sender, params)
 	var/list/all_params = splittext(params, " ")
 	var/faxid = all_params[1]
-	var/faxmsg = ""
-	file("[config.fax_export_dir]/fax_[faxid].html") >> faxmsg
+	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
 	return "FAX: ```[url_encode(faxmsg)]```"
