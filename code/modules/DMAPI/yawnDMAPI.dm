@@ -5,7 +5,7 @@
 	admin_only = FALSE	//set to TRUE if this command should only be usable by registered chat admins
 
 /datum/server_tools_command/who/Run(sender, params)
-	SERVER_TOOLS_CHAT_BROADCAST("[SERVER_TOOLS_CLIENT_COUNT]")
+	return "PLAYERCOUNT: [SERVER_TOOLS_CLIENT_COUNT]"
 
 // - FAX
 /datum/server_tools_command/readfax
@@ -19,4 +19,4 @@
 	var/savefile/F = new()
 	var/faxfile = file("[config.fax_export_dir]/fax_[faxid].html")
 	var/faxmsg = F.ImportText("/",faxfile)
-	SERVER_TOOLS_RELAY_BROADCAST("FAX: [url_encode(faxmsg)]")
+	return "FAX: [url_encode(faxmsg)]"
