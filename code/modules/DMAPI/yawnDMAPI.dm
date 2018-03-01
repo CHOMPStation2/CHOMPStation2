@@ -9,7 +9,7 @@
 
 // - FAX
 /datum/server_tools_command/readfax
-	name ="readfax"
+	name = "readfax"
 	help_text = "Reads a fax with specified faxid"
 	required_parameters = 1
 	admin_only = TRUE
