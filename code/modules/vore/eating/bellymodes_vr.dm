@@ -3,7 +3,7 @@
 	if((times_fired < next_process) || !contents.len)
 		recent_sound = FALSE
 		return SSBELLIES_IGNORED
-	
+
 	if(loc != owner)
 		if(istype(owner))
 			loc = owner
@@ -39,9 +39,9 @@
 //////////////////////////// DM_DIGEST ////////////////////////////
 	else if(digest_mode == DM_DIGEST || digest_mode == DM_DIGEST_NUMB || digest_mode == DM_ITEMWEAK)
 
-		/*if(prob(50)) //Was SO OFTEN. AAAA.
+		if(prob(50)) //Was SO OFTEN. AAAA.
 			play_sound = pick(digestion_sounds)
-			
+
 		for (var/mob/living/M in contents)
 			//Pref protection!
 			if (!M.digestable || M.absorbed)
@@ -134,7 +134,7 @@
 
 		for (var/mob/living/M in contents)
 
-			/*if(prob(10)) //Less often than gurgles. People might leave this on forever.
+			if(prob(10)) //Less often than gurgles. People might leave this on forever.
 				play_sound = pick(digestion_sounds)
 
 			if(M.absorbed)
@@ -162,7 +162,7 @@
 
 		for (var/mob/living/M in contents)
 
-			/*if(prob(10)) //Less often than gurgles. People might leave this on forever.
+			if(prob(10)) //Less often than gurgles. People might leave this on forever.
 				play_sound = pick(digestion_sounds)
 
 			if(M.nutrition >= 100) //Drain them until there's no nutrients left.
@@ -216,7 +216,7 @@
 
 ///////////////////////////// DM_HEAL /////////////////////////////
 	else if(digest_mode == DM_HEAL)
-		/*if(prob(50)) //Wet heals!
+		if(prob(50)) //Wet heals!
 			play_sound = pick(digestion_sounds)
 
 		for (var/mob/living/M in contents)
