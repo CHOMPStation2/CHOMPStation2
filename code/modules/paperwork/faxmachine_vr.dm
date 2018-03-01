@@ -47,7 +47,7 @@
 			query_string += "&sentname=[url_encode(sent.name)]"
 			world.Export("[config.chat_webhook_url]?[query_string]")
 	//YW EDIT
-	SERVER_TOOLS_RELAY_BROADCAST("FAX: [url_encode(faxname)] - SENT BY: [url_encode(sender.name)] / [url_encode(sent.name)] - FAXID: [url_encode(faxid)]")
+	SERVER_TOOLS_RELAY_BROADCAST("FAX: [url_encode(faxname)] / [url_encode(sent.name)] - SENT BY: [url_encode(sender.name)] - FAXID: **[url_encode(faxid)]**")
 	//YW EDIT END
 
 //

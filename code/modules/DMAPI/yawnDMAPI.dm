@@ -15,8 +15,9 @@
 	admin_only = TRUE
 
 /datum/server_tools_command/readfax/Run(sender, params)
-	var/faxid = params[1]
+	var/list/all_params = splittext(params, " ")
+	var/faxid = all_params[1]
 	var/savefile/F = new()
 	var/faxfile = file("[config.fax_export_dir]/fax_[faxid].html")
 	var/faxmsg = F.ImportText("/",faxfile)
-	return "FAX: [url_encode(faxmsg)]"
+	return "FAX: ```[url_encode(faxmsg)]```"
