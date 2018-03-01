@@ -6,3 +6,17 @@
 
 /datum/server_tools_command/who/Run(sender, params)
 	SERVER_TOOLS_CHAT_BROADCAST("[SERVER_TOOLS_CLIENT_COUNT]")
+
+// - FAX
+/datum/server_tools_command/readfax
+	name ="readfax"
+	help_text = "Reads a fax with specified faxid"
+	required_parameters = 1
+	admin_only = TRUE
+
+/datum/server_tools_command/readfax/Run(sender, params)
+	var/faxid = params[1]
+	var/savefile/F = new()
+	var/faxfile = file("[config.fax_export_dir]/fax_[faxid].html")
+	var/faxmsg = F.ImportText("/",faxfile)
+	SERVER_TOOLS_RELAY_BROADCAST("FAX: [url_encode(faxmsg)]")

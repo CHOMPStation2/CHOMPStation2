@@ -124,5 +124,8 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 			query_string += "&admin_number_afk=[admin_number_afk]"
 			world.Export("[config.chat_webhook_url]?[query_string]")
 	// VoreStation Edit End
+	//YW EDIT START
+	SERVER_TOOLS_RELAY_BROADCAST("ADMINHELP: FROM: [key_name(src)] - MSG: html_decode(original_msg) - Heard by [admins.len-admin_number_afk] non-AFK staffmembers.")
+	//YW EDIT END
 	return
 
