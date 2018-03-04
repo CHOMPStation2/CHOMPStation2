@@ -135,6 +135,11 @@ item_path: /obj/item/weapon/storage/box/fluff/art
 }
 # ######## E CKEYS
 # ######## F CKEYS
+{
+ckey: frenziedvorcha
+character_name: Philip Smirnov
+item_path: /obj/item/weapon/storage/box/fluff/philipsmirnov
+}
 # ######## G CKEYS
 {
 ckey: generalpantsu

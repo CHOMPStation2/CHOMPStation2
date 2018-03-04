@@ -252,3 +252,15 @@
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/vasharr_armlets,
 		/obj/item/clothing/accessory/fluff/vasharr_pendant)
+
+//FrenziedVorcha
+
+/obj/item/weapon/storage/box/fluff/philipsmirnov
+	name = "Psychiatric box"
+	desc = "A kit containing various psychiatry tools"
+	has_items = list(
+	/obj/item/weapon/fluff/fidgetspinner,
+	/obj/item/weapon/fluff/fidgetspinner/red,
+	/obj/item/weapon/fluff/fidgetspinner/yellow,
+	/obj/item/weapon/fluff/squeezetoy,
+	/obj/item/weapon/fluff/dimensioncube)
