@@ -1,8 +1,7 @@
-/datum/sprite_accessory/marking/yw
+/datum/sprite_accessory/ears/onehorn
+	name = "Colorable single horn"
+	desc = ""
 	icon = 'icons/mob/human_races/markings_yw.dmi'
-
-	single_horn
-		name = "Single horn"
-		icon_state = "singlehorn"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_HEAD)
+	icon_state = "singlehorn"
+	color_blend_mode = ICON_MULTIPLY
+	do_colouration = 1
