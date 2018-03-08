@@ -5,7 +5,7 @@
 	admin_only = FALSE	//set to TRUE if this command should only be usable by registered chat admins
 
 /datum/server_tools_command/status/Run(sender, params)
-	return "```PLAYERCOUNT: [SERVER_TOOLS_CLIENT_COUNT]	ROUND DURATION: roundduration2text()```"
+	return "```PLAYERCOUNT: [SERVER_TOOLS_CLIENT_COUNT]	ROUND DURATION: [roundduration2text()]```"
 
 // - FAX
 /datum/server_tools_command/readfax
