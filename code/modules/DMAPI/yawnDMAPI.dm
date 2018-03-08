@@ -4,7 +4,7 @@
 	required_parameters = 0	//number of parameters required for this command
 	admin_only = FALSE	//set to TRUE if this command should only be usable by registered chat admins
 
-/datum/server_tools_command/who/Run(sender, params)
+/datum/server_tools_command/status/Run(sender, params)
 	return "```PLAYERCOUNT: [SERVER_TOOLS_CLIENT_COUNT]	ROUND DURATION: roundduration2text()```"
 
 // - FAX
