@@ -1,3 +1,4 @@
+/mob/living/carbon/var/loneliness_stage = 0
 /datum/species/teshari
 	name = "Teshari"
 	name_plural = "Tesharii"
@@ -13,6 +14,11 @@
 	min_age = 18
 	max_age = 45
 	health_hud_intensity = 3
+	//YW Edit: Readding loneliness
+	var/warning_cap = 150
+	var/hallucination_cap = 25
+	var/next_loneliness_time = 0
+	//YW Edit End
 
 	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
@@ -120,3 +126,48 @@
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+
+/datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
+	// If they're dead or unconcious they're a bit beyond this kind of thing.
+	if(H.stat)
+		return
+	// No point processing if we're already stressing the hell out.
+	if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
+		return
+	// Check for company.
+	for(var/mob/living/carbon/M in viewers(H))
+		if(M == H || M.stat == DEAD || M.invisibility > H.see_invisible)
+			continue
+		if(M.faction == "neutral" || M.faction == H.faction)
+			if(H.loneliness_stage > 0)
+				H.loneliness_stage -= 4
+				if(H.loneliness_stage < 0)
+					H.loneliness_stage = 0
+				if(world.time >= next_loneliness_time)
+					H << "The nearby company calms you down..."
+					next_loneliness_time = world.time+500
+			return
+	// No company? Suffer :(
+	if(H.loneliness_stage < warning_cap)
+		H.loneliness_stage += 1
+	handle_loneliness(H)
+	if(H.loneliness_stage >= warning_cap && H.hallucination < hallucination_cap)
+		H.hallucination += 2.5
+
+/datum/species/teshari/proc/handle_loneliness(var/mob/living/carbon/human/H)
+	var/ms = ""
+
+	if(H.loneliness_stage == 1)
+		ms = "You begin to feel alone..."
+	if(H.loneliness_stage >= 100)
+		ms = "[pick("You don't think you can last much longer without some visible company!", "You should go find someone!")]"
+		if(H.stuttering < hallucination_cap)
+			H.stuttering += 5
+	if(H.loneliness_stage >= warning_cap)
+		ms = "<span class='danger'>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]</span>"
+	if(world.time < next_loneliness_time)
+		return
+
+	if(ms != "")
+		H << ms
+	next_loneliness_time = world.time+500
