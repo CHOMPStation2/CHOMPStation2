@@ -147,6 +147,16 @@
 					H << "The nearby company calms you down..."
 					next_loneliness_time = world.time+500
 			return
+
+	for(var/obj/item/toy/plushie/P in range(5, H))
+		if(H.loneliness_stage > 0)
+			H.loneliness_stage -= 4
+			if(H.loneliness_stage < 0)
+				H.loneliness_stage = 0
+			if(world.time >= next_loneliness_time)
+				H << "The [P] calms you down, reminding you of people..."
+				next_loneliness_time = world.time+500
+
 	// No company? Suffer :(
 	if(H.loneliness_stage < warning_cap)
 		H.loneliness_stage += 1
