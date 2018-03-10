@@ -168,7 +168,7 @@
 	var/ms = ""
 
 	if(H.loneliness_stage == 1)
-		ms = "Well.. No one around you anymore..."
+		ms = "Well.. No one is around you anymore..."
 	if(H.loneliness_stage >= 50)
 		ms = "You begin to feel alone..."
 	if(H.loneliness_stage >= 250)
