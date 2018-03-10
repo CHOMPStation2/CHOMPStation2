@@ -16,7 +16,7 @@
 	max_age = 45
 	health_hud_intensity = 3
 	//YW Edit: Readding loneliness
-	var/warning_cap = 150
+	var/warning_cap = 300
 	var/hallucination_cap = 25
 	//YW Edit End
 
@@ -168,8 +168,10 @@
 	var/ms = ""
 
 	if(H.loneliness_stage == 1)
+		ms = "Well.. No one around you anymore..."
+	if(H.loneliness_stage >= 50)
 		ms = "You begin to feel alone..."
-	if(H.loneliness_stage >= 100)
+	if(H.loneliness_stage >= 250)
 		ms = "[pick("You don't think you can last much longer without some visible company!", "You should go find someone!")]"
 		if(H.stuttering < hallucination_cap)
 			H.stuttering += 5
