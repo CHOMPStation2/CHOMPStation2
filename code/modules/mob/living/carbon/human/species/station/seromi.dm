@@ -1,4 +1,5 @@
 /mob/living/carbon/var/loneliness_stage = 0
+/mob/living/carbon/var/next_loneliness_time = 0
 /datum/species/teshari
 	name = "Teshari"
 	name_plural = "Tesharii"
@@ -17,7 +18,6 @@
 	//YW Edit: Readding loneliness
 	var/warning_cap = 150
 	var/hallucination_cap = 25
-	var/next_loneliness_time = 0
 	//YW Edit End
 
 	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
@@ -143,9 +143,9 @@
 				H.loneliness_stage -= 4
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
-				if(world.time >= next_loneliness_time)
+				if(world.time >= H.next_loneliness_time)
 					H << "The nearby company calms you down..."
-					next_loneliness_time = world.time+500
+					H.next_loneliness_time = world.time+500
 			return
 
 	for(var/obj/item/toy/plushie/P in range(5, H))
@@ -153,9 +153,9 @@
 			H.loneliness_stage -= 4
 			if(H.loneliness_stage < 0)
 				H.loneliness_stage = 0
-			if(world.time >= next_loneliness_time)
+			if(world.time >= H.next_loneliness_time)
 				H << "The [P] calms you down, reminding you of people..."
-				next_loneliness_time = world.time+500
+				H.next_loneliness_time = world.time+500
 
 	// No company? Suffer :(
 	if(H.loneliness_stage < warning_cap)
@@ -175,9 +175,9 @@
 			H.stuttering += 5
 	if(H.loneliness_stage >= warning_cap)
 		ms = "<span class='danger'>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]</span>"
-	if(world.time < next_loneliness_time)
+	if(world.time < H.next_loneliness_time)
 		return
 
 	if(ms != "")
 		H << ms
-	next_loneliness_time = world.time+500
+	H.next_loneliness_time = world.time+500
