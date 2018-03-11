@@ -122,6 +122,7 @@
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
 	//R.icon_state = "k9"
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
@@ -180,6 +181,7 @@
 
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
 	//R.icon_state = "medihound"
 	R.pixel_x 	 = -16
 	R.old_x  	 = -16
@@ -211,6 +213,7 @@
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 	R.icon 		 = 'icons/mob/64x64robot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
 	R.default_pixel_x = -16
@@ -235,6 +238,7 @@
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
 	//R.icon_state = "scrubpup"
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
@@ -269,6 +273,7 @@
 	src.emag = new /obj/item/weapon/hand_tele(src)
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
 	//R.icon_state = "science"
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
@@ -277,3 +282,12 @@
 	R.wideborg = TRUE
 	..()
 
+/obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
+	R.pixel_x = initial(pixel_x)
+	R.pixel_y = initial(pixel_y)
+	R.icon = initial(R.icon)
+	R.dogborg = FALSE
+	R.wideborg = FALSE
+	R.ui_style_vr = FALSE
+	R.default_pixel_x = initial(pixel_x)
+	..()
