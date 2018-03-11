@@ -148,6 +148,15 @@
 					H.next_loneliness_time = world.time+500
 			return
 
+	for(var/obj/item/weapon/holder/micro/M in range(1, H))
+		if(H.loneliness_stage > 0)
+			H.loneliness_stage -= 4
+			if(H.loneliness_stage < 0)
+				H.loneliness_stage = 0
+			if(world.time >= H.next_loneliness_time)
+				H << "[M] calms you down..."
+				H.next_loneliness_time = world.time+500
+
 	for(var/obj/item/toy/plushie/P in range(5, H))
 		if(H.loneliness_stage > 0)
 			H.loneliness_stage -= 4
