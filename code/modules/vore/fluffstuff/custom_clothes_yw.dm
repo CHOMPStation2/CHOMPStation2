@@ -944,3 +944,17 @@
 	overlay_state = "pendant_v_mob"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
+	
+// ********
+// Dwaggy90
+// ********
+
+//Saur Darastrix
+
+/obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+	name = "Saur's Dufflebag"
+	desc = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Dr.Saur Darastrix' written under it."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi', slot_back_str = 'icons/vore/custom_onmob_yw.dmi')
+	icon_state = "saur_duffle"
+	
