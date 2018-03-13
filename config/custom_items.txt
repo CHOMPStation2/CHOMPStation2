@@ -133,8 +133,18 @@ ckey: deathty
 character_name: Arthur Schutz
 item_path: /obj/item/weapon/storage/box/fluff/art
 }
+{
+ckey: dwaggy90
+character_name: Saur Darastrix
+item_path: /obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+}
 # ######## E CKEYS
 # ######## F CKEYS
+{
+ckey: frenziedvorcha
+character_name: Philip Smirnov
+item_path: /obj/item/weapon/storage/box/fluff/philipsmirnov
+}
 # ######## G CKEYS
 {
 ckey: generalpantsu

@@ -184,10 +184,16 @@
 
 	P.digestable = src.digestable
 	P.allowmobvore = src.allowmobvore
-	P.belly_prefs = src.vore_organs
 	P.vore_taste = src.vore_taste
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
+
+	var/list/serialized = list()
+	for(var/belly in src.vore_organs)
+		var/obj/belly/B = belly
+		serialized += list(B.serialize()) //Can't add a list as an object to another list in Byond. Thanks.
+	
+	P.belly_prefs = serialized
 
 	return 1
 
@@ -201,37 +207,25 @@
 
 	var/datum/vore_preferences/P = client.prefs_vr
 
-	vore_organs = list()
 	digestable = P.digestable
 	allowmobvore = P.allowmobvore
 	vore_taste = P.vore_taste
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
 
-	var/force_save = FALSE
-	for(var/I in P.belly_prefs)
-		if(isbelly(I)) //Belly system 2.0
-			var/obj/belly/saved = I
-			saved.copy(src)
-		else if(istext(I)) //Belly name for old datum system
-			force_save = TRUE
-			log_debug("[src] had legacy belly [I], converting.")
-			var/datum/belly/Bp = P.belly_prefs[I]
-			var/obj/belly/new_belly = new(src)
-			Bp.copy(new_belly) //Rewritten to convert to a 2.0 belly
-
-	if(force_save)
-		save_vore_prefs()
+	vore_organs.Cut()
+	for(var/entry in P.belly_prefs)
+		list_to_object(entry,src)
 
 	return 1
 
 //
 // Release everything in every vore organ
 //
-/mob/living/proc/release_vore_contents(var/include_absorbed = TRUE)
+/mob/living/proc/release_vore_contents(var/include_absorbed = TRUE, var/silent = FALSE)
 	for(var/belly in vore_organs)
 		var/obj/belly/B = belly
-		B.release_all_contents(include_absorbed)
+		B.release_all_contents(include_absorbed, silent)
 
 //
 // Returns examine messages for bellies
@@ -420,9 +414,9 @@
 
 	// Inform Admins
 	if (pred == user)
-		msg_admin_attack("[key_name(pred)] ate [key_name(prey)]. ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+		add_attack_logs(pred,prey,"Eaten via [belly.name]")
 	else
-		msg_admin_attack("[key_name(user)] forced [key_name(pred)] to eat [key_name(prey)]. ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+		add_attack_logs(user,pred,"Forced to eat [key_name(prey)]")
 	return 1
 
 //

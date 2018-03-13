@@ -275,3 +275,81 @@
 	random_emote = list("supresses a moan", "gasps sharply", "bites her lower lip")
 	verb_name = "Milk"
 	verb_desc = "Grab Ysaline's breasts and milk her, storing her fresh, warm milk in a container. This will undoubtedly turn her on."
+
+// **************
+// Trash
+// **************
+/obj/item/weapon/fluff/fidgetspinner
+	name = "Fidget spinner"
+	desc = "A spinning stress relief toy, upsetting family, friends, and employers for 500 years."
+	w_class = 1.0
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "fidgetspinner"
+	var/basestate = "fidgetspinner"
+
+/obj/item/weapon/fluff/fidgetspinner/red
+	name = "Red fidget spinner"
+	desc = "A spinning stress relief toy, upsetting family, friends, and employers for 500 years. This one is red"
+	w_class = 1.0
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "fidgetspinnerr"
+	basestate = "fidgetspinnerr"
+
+/obj/item/weapon/fluff/fidgetspinner/yellow
+	name = "Yellow fidget spinner"
+	desc = "A spinning stress relief toy, upsetting family, friends, and employers for 500 years. This one is yellow"
+	w_class = 1.0
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "fidgetspinnery"
+	basestate = "fidgetspinnery"
+
+/obj/item/weapon/fluff/fidgetspinner/attack_self(mob/living/user)
+	if(user.r_hand == src || user.l_hand == src)
+		if(icon_state != "[basestate]-s")
+			icon_state = "[basestate]-s"
+			user.visible_message("<span class='rose'>[user] spins the [src]!</span>")
+			spawn(100)
+				icon_state = "[basestate]"
+	else
+		return ..()
+	return
+
+/obj/item/weapon/fluff/squeezetoy
+	name = "Stress relief squeeze toy"
+	desc = "A toy squeezed to relieve stress, it’s squeaker appears to be broken from over use."
+	w_class = 1.0
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "squeezetoy"
+
+/obj/item/weapon/fluff/squeezetoy/attack_self(mob/living/user)
+	if(user.r_hand == src || user.l_hand == src)
+		if(icon_state != "squeezetoy-s")
+			icon_state = "squeezetoy-s"
+			user.visible_message("<span class='rose'>[user] squeezes the [src] a few times!</span>")
+			spawn(50)
+				icon_state = "squeezetoy"
+	else
+		return ..()
+	return
+
+/obj/item/weapon/fluff/dimensioncube
+	var/folded = 1
+	name = "Infinity cube"
+	desc = "All the fun of a puzzle cube without any of the challenge, a good way to relieve stress and delude yourself into a sense of accomplishment."
+	w_class = 1.0
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "infinitycube0"
+
+/obj/item/weapon/fluff/dimensioncube/attack_self(mob/living/user)
+	if(user.r_hand == src || user.l_hand == src)
+		if(folded == 0)
+			icon_state = "infinitycube0"
+			user.visible_message("<span class='rose'>[user] folds the [src]!</span>")
+			folded = 1
+		else if(folded == 1)
+			icon_state = "infinitycube1"
+			user.visible_message("<span class='rose'>[user] unfolds the [src]!</span>")
+			folded = 0
+	else
+		return ..()
+	return

@@ -1,4 +1,4 @@
-#define VORE_SOUND_FALLOFF 0.05
+#define VORE_SOUND_FALLOFF 0.1
 
 //
 //  Belly system 2.0, now using objects instead of datums because EH at datums.
@@ -13,14 +13,13 @@
 /obj/belly
 	name = "belly"							// Name of this location
 	desc = "It's a belly! You're in it!"	// Flavor text description of inside sight/sound/smells/feels.
-	var/vore_sound = 'sound/vore/gulp.ogg'	// Sound when ingesting someone
+	var/vore_sound = "Gulp"					// Sound when ingesting someone
 	var/vore_verb = "ingest"				// Verb for eating with this in messages
 	var/human_prey_swallow_time = 100		// Time in deciseconds to swallow /mob/living/carbon/human
 	var/nonhuman_prey_swallow_time = 30		// Time in deciseconds to swallow anything else
 	var/emote_time = 60 SECONDS				// How long between stomach emotes at prey
 	var/digest_brute = 2					// Brute damage per tick in digestion mode
 	var/digest_burn = 2						// Burn damage per tick in digestion mode
-	var/digest_tickrate = 3					// Modulus this of air controller tick number to iterate gurgles on
 	var/immutable = 0						// Prevents this belly from being deleted
 	var/escapable = 0						// Belly can be resisted out of at any time
 	var/escapetime = 60 SECONDS				// Deciseconds, how long to escape this belly
@@ -45,7 +44,7 @@
 	var/tmp/list/items_preserved = list()		// Stuff that wont digest so we shouldn't process it again.
 	var/tmp/next_emote = 0						// When we're supposed to print our next emote, as a belly controller tick #
 	var/tmp/recent_sound = FALSE				// Prevent audio spam
-	
+
 	// Don't forget to watch your commas at the end of each line if you change these.
 	var/list/struggle_messages_outside = list(
 		"%pred's %belly wobbles with a squirming meal.",
@@ -100,10 +99,41 @@
 	//List has indexes that are the digestion mode strings, and keys that are lists of strings.
 	var/tmp/list/emote_lists = list()
 
-/obj/belly/initialize()
-	. = ..()
+//For serialization, keep this updated, required for bellies to save correctly.
+/obj/belly/vars_to_save()
+	return ..() + list(
+		"name",
+		"desc",
+		"vore_sound",
+		"vore_verb",
+		"human_prey_swallow_time",
+		"nonhuman_prey_swallow_time",
+		"emote_time",
+		"digest_brute",
+		"digest_burn",
+		"immutable",
+		"can_taste",
+		"escapable",
+		"escapetime",
+		"digestchance",
+		"absorbchance",
+		"escapechance",
+		"transferchance",
+		"transferlocation",
+		"bulge_size",
+		"shrink_grow_size",
+		"struggle_messages_outside",
+		"struggle_messages_inside",
+		"digest_messages_owner",
+		"digest_messages_prey",
+		"examine_messages",
+		"emote_lists"
+		)
+
+/obj/belly/New(var/newloc)
+	..(newloc)
 	//If not, we're probably just in a prefs list or something.
-	if(isliving(loc))
+	if(isliving(newloc))
 		owner = loc
 		owner.vore_organs |= src
 		SSbellies.belly_list += src
@@ -122,12 +152,14 @@
 
 	//Generic entered message
 	to_chat(owner,"<span class='notice'>[thing] slides into your [lowertext(name)].</span>")
-	
+
 	//Sound w/ antispam flag setting
 	if(vore_sound && !recent_sound)
-		playsound(src, vore_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
-		recent_sound = TRUE
-	
+		var/soundfile = vore_sounds[vore_sound]
+		if(soundfile)
+			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+			recent_sound = TRUE
+
 	//Messages if it's a mob
 	if(isliving(thing))
 		var/mob/living/M = thing
@@ -136,47 +168,58 @@
 		var/taste
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
-	
+
 // Release all contents of this belly into the owning mob's location.
 // If that location is another mob, contents are transferred into whichever of its bellies the owning mob is in.
 // Returns the number of mobs so released.
-/obj/belly/proc/release_all_contents(var/include_absorbed = FALSE)
-	var/atom/destination = drop_location()
+/obj/belly/proc/release_all_contents(var/include_absorbed = FALSE, var/silent = FALSE)
+	
+	//Don't bother if we don't have contents
+	if(!contents.len)
+		return 0
+	
+	//Find where we should drop things into (certainly not the owner)
 	var/count = 0
+	
+	//Iterate over contents and move them all
 	for(var/thing in contents)
 		var/atom/movable/AM = thing
 		if(isliving(AM))
 			var/mob/living/L = AM
 			if(L.absorbed && !include_absorbed)
 				continue
-			L.absorbed = FALSE
-
-		AM.forceMove(destination)  // Move the belly contents into the same location as belly's owner.
-		count++
+		count += release_specific_contents(AM, silent = TRUE)
+	
+	//Clean up our own business
 	items_preserved.Cut()
-	owner.visible_message("<font color='green'><b>[owner] expels everything from their [lowertext(name)]!</b></font>")
-	owner.update_icons()
-	if(release_sound)
-		playsound(src, 'sound/effects/splat.ogg', vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+	if(isanimal(owner))
+		owner.update_icons()
+	
+	//Print notifications/sound if necessary
+	if(!silent)
+		owner.visible_message("<font color='green'><b>[owner] expels everything from their [lowertext(name)]!</b></font>")	
+		if(release_sound)
+			playsound(src, 'sound/effects/splat.ogg', vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+	
 	return count
 
 // Release a specific atom from the contents of this belly into the owning mob's location.
 // If that location is another mob, the atom is transferred into whichever of its bellies the owning mob is in.
 // Returns the number of atoms so released.
-/obj/belly/proc/release_specific_contents(var/atom/movable/M)
+/obj/belly/proc/release_specific_contents(var/atom/movable/M, var/silent = FALSE)
 	if (!(M in contents))
 		return 0 // They weren't in this belly anyway
 
-	M.forceMove(drop_location())  // Move the belly contents into the same location as belly's owner.
+	//Place them into our drop_location
+	M.forceMove(drop_location())
 	items_preserved -= M
-	if(release_sound)
-		playsound(src, 'sound/effects/splat.ogg', vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
-
+	
+	//Special treatment for absorbed prey
 	if(istype(M,/mob/living))
 		var/mob/living/ML = M
 		var/mob/living/OW = owner
 		if(ML.absorbed)
-			ML.absorbed = 0
+			ML.absorbed = FALSE
 			if(ishuman(M) && ishuman(OW))
 				var/mob/living/carbon/human/Prey = M
 				var/mob/living/carbon/human/Pred = OW
@@ -186,8 +229,16 @@
 						absorbed_count++
 				Pred.bloodstr.trans_to(Prey, Pred.reagents.total_volume / absorbed_count)
 
-	owner.visible_message("<font color='green'><b>[owner] expels [M] from their [lowertext(name)]!</b></font>")
-	owner.update_icons()
+	//Clean up our own business
+	if(isanimal(owner))
+		owner.update_icons()
+	
+	//Print notifications/sound if necessary
+	if(!silent)
+		owner.visible_message("<font color='green'><b>[owner] expels [M] from their [lowertext(name)]!</b></font>")
+		if(release_sound)
+			playsound(src, 'sound/effects/splat.ogg', vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+	
 	return 1
 
 // Actually perform the mechanics of devouring the tasty prey.
@@ -295,13 +346,7 @@
 
 	// If digested prey is also a pred... anyone inside their bellies gets moved up.
 	if(is_vore_predator(M))
-		for(var/belly in M.vore_organs)
-			var/obj/belly/B = belly
-			for(var/thing in B)
-				var/atom/movable/AM = thing
-				AM.forceMove(owner.loc)
-				if(isliving(AM))
-					to_chat(AM,"As [M] melts away around you, you find yourself in [owner]'s [lowertext(name)]")
+		M.release_vore_contents(include_absorbed = TRUE, silent = TRUE)
 
 	//Drop all items into the belly.
 	if(config.items_survive_digestion)
@@ -317,7 +362,6 @@
 				var/obj/item/thingy = M.get_equipped_item(slot = slot)
 				if(thingy)
 					M.unEquip(thingy,force = TRUE)
-					thingy.forceMove(src)
 
 	//Reagent transfer
 	if(ishuman(owner))
@@ -386,12 +430,16 @@
 /obj/belly/drop_location()
 	//Should be the case 99.99% of the time
 	if(owner)
-		return owner.loc
+		return owner.drop_location()
 	//Sketchy fallback for safety, put them somewhere safe.
 	else
 		log_debug("[src] (\ref[src]) doesn't have an owner, and dropped someone at a latespawn point!")
 		var/fallback = pick(latejoin)
 		return get_turf(fallback)
+
+//Yes, it's ""safe"" to drop items here
+/obj/belly/AllowDrop()
+	return TRUE
 
 //Handle a mob struggling
 // Called from /mob/living/carbon/relaymove()
@@ -503,8 +551,10 @@
 	if(!(content in src) || !istype(target))
 		return
 	content.forceMove(target)
-	if(!silent)
-		playsound(src, target.vore_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises)
+	if(!silent && target.vore_sound && !recent_sound)
+		var/soundfile = vore_sounds[target.vore_sound]
+		if(soundfile)
+			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises)
 	owner.updateVRPanel()
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
@@ -524,7 +574,6 @@
 	dupe.emote_time = emote_time
 	dupe.digest_brute = digest_brute
 	dupe.digest_burn = digest_burn
-	dupe.digest_tickrate = digest_tickrate
 	dupe.immutable = immutable
 	dupe.can_taste = can_taste
 	dupe.escapable = escapable
