@@ -264,3 +264,27 @@
 	/obj/item/weapon/fluff/fidgetspinner/yellow,
 	/obj/item/weapon/fluff/squeezetoy,
 	/obj/item/weapon/fluff/dimensioncube)
+
+// ******
+// Dushka
+// ******
+
+//Saroth
+
+/obj/item/weapon/storage/box/fluff/saroth
+	name = "Saroth's box"
+	desc = "A kit containing Saroth's equipment."
+	has_items = list(
+	/obj/item/clothing/suit/storage/seromi/cloak/fluff/Saroth)
+
+// ********
+// Benl8561
+// ********
+
+//M.I.S.S.Y
+
+/obj/item/weapon/storage/box/fluff/missy
+	name = "M.I.S.S.Y's box"
+	desc = "A kit containing M.I.S.S.Y's equipment."
+	has_items = list(
+	/obj/item/clothing/under/fluff/missy_skirt)
