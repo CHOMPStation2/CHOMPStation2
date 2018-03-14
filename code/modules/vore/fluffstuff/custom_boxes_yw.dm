@@ -240,6 +240,14 @@
 	has_items = list(
 		/obj/item/weapon/implanter/reagent_generator/natalya)
 
+//Lena Shaw
+
+/obj/item/weapon/storage/box/fluff/lena
+	name = "Lena's kit"
+	desc = "A kit containing Lena's equipment."
+	has_items = list(
+		/obj/item/clothing/accessory/fluff/lena_collar)
+
 // ************
 // RadiantFlash
 // ************
@@ -288,3 +296,11 @@
 	desc = "A kit containing M.I.S.S.Y's equipment."
 	has_items = list(
 	/obj/item/clothing/under/fluff/missy_skirt)
+
+//Quanah Hastings
+
+/obj/item/weapon/storage/box/fluff/quanah
+	name = "Quanah's kit"
+	desc = "A kit containing Quanah's equipment."
+	has_items = list(
+		/obj/item/clothing/accessory/fluff/quanah_collar)
