@@ -1847,7 +1847,7 @@
 	name = "Roy Rogers"
 	id = "roy_rogers"
 	result = "roy_rogers"
-	required_reagents = list("gingerale" = 4, "lemon_lime" = 2, "grenadine" = 1)
+	required_reagents = list("cola" = 4, "grenadine" = 1)
 	result_amount = 7
 
 /datum/chemical_reaction/drinks/collinsmix
