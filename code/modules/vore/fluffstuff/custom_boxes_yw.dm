@@ -248,6 +248,14 @@
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/lena_collar)
 
+//Eryn Wolfe
+
+/obj/item/weapon/storage/box/fluff/eryn
+	name = "Eryn's kit"
+	desc = "A kit containing Eryn's equipment."
+	has_items = list(
+		/obj/item/weapon/fluff/chemset)
+
 // ************
 // RadiantFlash
 // ************
