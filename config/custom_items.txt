@@ -262,6 +262,12 @@ ckey: lukevale
 character_name: Lena Shaw
 item_path: /obj/item/weapon/storage/box/fluff/lena
 }
+
+{
+ckey: lukevale
+character_name: Eryn Wolfe
+item_path: /obj/item/weapon/storage/box/fluff/eryn
+}
 # ######## M CKEYS
 # ######## N CKEYS
 # ######## O CKEYS
