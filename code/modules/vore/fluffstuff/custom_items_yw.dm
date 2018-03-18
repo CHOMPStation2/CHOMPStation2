@@ -239,6 +239,13 @@
 /obj/item/weapon/implanter/reagent_generator/natalya
 	implant_type = /obj/item/weapon/implant/reagent_generator/tempest/natalya
 
+/obj/item/weapon/fluff/chemset
+	name = "Eryn's chemistry set"
+	desc = "A small box with a open compartment, some buttons, a disk drive, and flashing lights. On the back is a small metal plaque with the name 'Eryn Wofle' on it."
+	w_class = 1.0
+	icon = 'icons/vore/custom_items_yw.dmi'
+icon_state = "chemset"
+
 // **************
 // VanesaFancyFin
 // **************
