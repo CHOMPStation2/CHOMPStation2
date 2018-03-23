@@ -319,7 +319,7 @@
 
 //Maxie Drake
 
-/obj/item/weapon.storage/box/fluff/maxie
+/obj/item/weapon/storage/box/fluff/maxie
 	name = "Maxie's box"
 	desc = "a kit containing Maxie's equipment."
 	has_items = list(
