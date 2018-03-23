@@ -1013,3 +1013,16 @@
 	overlay_state = "W_collar_S_mob"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
+
+//Maxie Drake
+
+/obj/item/clothing/accessory/fluff/maxie_collar
+	name = "Pink Wide Band Collar."
+	desc = "A wide banded collar, made of a black band of fabric, with a pink band overlapping it over the center. On it is a small bit of circuitry that's out of the way. Inside the collar the name 'Maxie Drake' is stitched in it."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "maxie_collar_icon"
+	item_state = "maxie_collar_mob"
+	overlay_state = "maxie_collar_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
