@@ -270,7 +270,7 @@ item_path: /obj/item/weapon/storage/box/fluff/eryn
 }
 # ######## M CKEYS
 {
-ckey: MaxieFoxie
+ckey: maxieFoxie
 character_name: Maxie Drake
 item_path: /obj/item/weapon.storage/box/fluff/maxie
 }
