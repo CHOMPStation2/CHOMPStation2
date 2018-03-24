@@ -47,13 +47,13 @@
 	autohiss_extra_map = list(
 			"x" = list("ks", "kss", "ksss")
 		)
-	autohiss_exempt = list("Sinta'unathi")
+	autohiss_exempt = list(LANGUAGE_UNATHI)
 
 /datum/species/tajaran
 	autohiss_basic_map = list(
 			"r" = list("rr", "rrr", "rrrr")
 		)
-	autohiss_exempt = list("Siik")
+	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI)
 
 
 //Yawn Wider Edit.
