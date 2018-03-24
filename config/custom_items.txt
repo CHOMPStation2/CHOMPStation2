@@ -270,7 +270,7 @@ item_path: /obj/item/weapon/storage/box/fluff/eryn
 }
 # ######## M CKEYS
 {
-ckey: maxiefoxie
+ckey: MaxieFoxie
 character_name: Maxie Drake
 item_path: /obj/item/weapon.storage/box/fluff/maxie
 }
@@ -278,6 +278,12 @@ item_path: /obj/item/weapon.storage/box/fluff/maxie
 # ######## N CKEYS
 # ######## O CKEYS
 # ######## P CKEYS
+{
+ckey: paintitred
+character_name: Noel Walsh
+item_path: /obj/item/weapon/storage/box/fluff/noel
+}
+
 # ######## Q CKEYS
 # ######## R CKEYS
 {
