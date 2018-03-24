@@ -18,4 +18,4 @@
 	var/list/all_params = splittext(params, " ")
 	var/faxid = all_params[1]
 	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
-	return "FAX: ```[sanitize(faxmsg)]```"
+	return "FAX: ```[strip_html_properly(faxmsg)]```"
