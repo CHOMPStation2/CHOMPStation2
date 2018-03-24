@@ -324,3 +324,15 @@
 	desc = "a kit containing Maxie's equipment."
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/maxie_collar)
+
+// ********
+// Paint It Red
+// ********
+
+//Noel Walsh
+
+/obj/item/weapon/storage/box/fluff/noel
+	name = "Noel's box"
+	desc = "a kit containing Maxie's equipment."
+	has_items = list (
+		/obj/item/clothing/glasses/hud/health/aviator/prescription/fluff/noel_glasses)
