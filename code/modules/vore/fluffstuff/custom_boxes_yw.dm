@@ -312,3 +312,15 @@
 	desc = "A kit containing Quanah's equipment."
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/quanah_collar)
+
+// ********
+// MaxieFoxie
+// ********
+
+//Maxie Drake
+
+/obj/item/weapon/storage/box/fluff/maxie
+	name = "Maxie's box"
+	desc = "a kit containing Maxie's equipment."
+	has_items = list(
+		/obj/item/clothing/accessory/fluff/maxie_collar)

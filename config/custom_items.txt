@@ -269,6 +269,12 @@ character_name: Eryn Wolfe
 item_path: /obj/item/weapon/storage/box/fluff/eryn
 }
 # ######## M CKEYS
+{
+ckey: maxiefoxie
+character_name: Maxie Drake
+item_path: /obj/item/weapon.storage/box/fluff/maxie
+}
+
 # ######## N CKEYS
 # ######## O CKEYS
 # ######## P CKEYS
