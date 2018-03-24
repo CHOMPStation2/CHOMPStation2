@@ -877,46 +877,6 @@
 // lukevale
 // ********
 
-//Need sprites
-
-//Mira Rezus
-
-
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-//
-//
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-//
-//
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-
-
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-
 //Lena Shaw
 
 /obj/item/clothing/accessory/fluff/lena_collar
