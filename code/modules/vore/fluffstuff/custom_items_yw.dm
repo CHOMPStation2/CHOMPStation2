@@ -265,7 +265,7 @@
 		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
 		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
 		)
-	
+		
 // **************
 // Belsima
 // **************
