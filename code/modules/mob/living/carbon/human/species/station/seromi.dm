@@ -1,7 +1,7 @@
 /mob/living/carbon/var/loneliness_stage = 0
 /mob/living/carbon/var/next_loneliness_time = 0
 /datum/species/teshari
-	name = "Teshari"
+	name = SPECIES_TESHARI
 	name_plural = "Tesharii"
 	blurb = "A race of feathered raptors who developed alongside the Skrell, inhabiting \
 	the polar tundral regions outside of Skrell territory. Extremely fragile, they developed \
@@ -29,7 +29,7 @@
 	flesh_color = "#5F7BB0"
 	base_color = "#001144"
 	tail = "seromitail"
-	tail_hair = "feathers"
+	//tail_hair = "feathers" //TESHARI TEMPORARY REMOVAL
 	reagent_tag = IS_TESHARI
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
@@ -128,50 +128,51 @@
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
 /datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
-	// If they're dead or unconcious they're a bit beyond this kind of thing.
-	if(H.stat)
-		return
-	// No point processing if we're already stressing the hell out.
-	if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
-		return
-	// Check for company.
-	for(var/mob/living/carbon/M in viewers(H))
-		if(M == H || M.stat == DEAD || M.invisibility > H.see_invisible)
-			continue
-		if(M.faction == "neutral" || M.faction == H.faction)
+	spawn(0)
+		// If they're dead or unconcious they're a bit beyond this kind of thing.
+		if(H.stat)
+			return
+		// No point processing if we're already stressing the hell out.
+		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
+			return
+		// Check for company.
+		for(var/mob/living/carbon/M in viewers(H))
+			if(M == H || M.stat == DEAD || M.invisibility > H.see_invisible)
+				continue
+			if(M.faction == "neutral" || M.faction == H.faction)
+				if(H.loneliness_stage > 0)
+					H.loneliness_stage -= 4
+					if(H.loneliness_stage < 0)
+						H.loneliness_stage = 0
+					if(world.time >= H.next_loneliness_time)
+						H << "The nearby company calms you down..."
+						H.next_loneliness_time = world.time+500
+				return
+
+		for(var/obj/item/weapon/holder/micro/M in range(1, H))
 			if(H.loneliness_stage > 0)
 				H.loneliness_stage -= 4
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
-					H << "The nearby company calms you down..."
+					H << "[M] calms you down..."
 					H.next_loneliness_time = world.time+500
-			return
 
-	for(var/obj/item/weapon/holder/micro/M in range(1, H))
-		if(H.loneliness_stage > 0)
-			H.loneliness_stage -= 4
-			if(H.loneliness_stage < 0)
-				H.loneliness_stage = 0
-			if(world.time >= H.next_loneliness_time)
-				H << "[M] calms you down..."
-				H.next_loneliness_time = world.time+500
+		for(var/obj/item/toy/plushie/P in range(5, H))
+			if(H.loneliness_stage > 0)
+				H.loneliness_stage -= 4
+				if(H.loneliness_stage < 0)
+					H.loneliness_stage = 0
+				if(world.time >= H.next_loneliness_time)
+					H << "The [P] calms you down, reminding you of people..."
+					H.next_loneliness_time = world.time+500
 
-	for(var/obj/item/toy/plushie/P in range(5, H))
-		if(H.loneliness_stage > 0)
-			H.loneliness_stage -= 4
-			if(H.loneliness_stage < 0)
-				H.loneliness_stage = 0
-			if(world.time >= H.next_loneliness_time)
-				H << "The [P] calms you down, reminding you of people..."
-				H.next_loneliness_time = world.time+500
-
-	// No company? Suffer :(
-	if(H.loneliness_stage < warning_cap)
-		H.loneliness_stage += 1
-	handle_loneliness(H)
-	if(H.loneliness_stage >= warning_cap && H.hallucination < hallucination_cap)
-		H.hallucination += 2.5
+		// No company? Suffer :(
+		if(H.loneliness_stage < warning_cap)
+			H.loneliness_stage += 1
+		handle_loneliness(H)
+		if(H.loneliness_stage >= warning_cap && H.hallucination < hallucination_cap)
+			H.hallucination += 2.5
 
 /datum/species/teshari/proc/handle_loneliness(var/mob/living/carbon/human/H)
 	var/ms = ""

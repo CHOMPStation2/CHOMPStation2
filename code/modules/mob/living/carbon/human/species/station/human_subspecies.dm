@@ -29,7 +29,7 @@
 	burn_mod =  1.1
 
 /datum/species/human/vatgrown
-	name = "Vatborn"
+	name = SPECIES_HUMAN_VATBORN
 	name_plural = "Vatborn"
 	blurb = "With cloning on the forefront of human scientific advancement, cheap mass production \
 	of bodies is a very real and rather ethically grey industry. Vat-grown or Vatborn humans tend to be \

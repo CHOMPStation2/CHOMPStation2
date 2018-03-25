@@ -79,6 +79,17 @@ character_name: Strix Hades
 item_path: /obj/item/clothing/under/seromi/undercoat/fluff/strix
 }
 
+{
+ckey: benl8561
+character_name: M.I.S.S.Y
+item_path: /obj/item/weapon/storage/box/fluff/missy
+}
+
+{
+ckey: benl8561
+character_name: Quanah Hastings
+item_path: /obj/item/weapon/storage/box/fluff/quanah
+}
 # ######## C CKEYS
 {
 ckey: captmatt4
@@ -137,6 +148,12 @@ item_path: /obj/item/weapon/storage/box/fluff/art
 ckey: dwaggy90
 character_name: Saur Darastrix
 item_path: /obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+}
+
+{
+ckey: dushka
+character_name: Saroth
+item_path: /obj/item/weapon/storage/box/fluff/saroth
 }
 # ######## E CKEYS
 # ######## F CKEYS
@@ -240,7 +257,24 @@ character_name: Natalya Vospit
 item_path: /obj/item/weapon/storage/box/fluff/natalya
 }
 
+{
+ckey: lukevale
+character_name: Lena Shaw
+item_path: /obj/item/weapon/storage/box/fluff/lena
+}
+
+{
+ckey: lukevale
+character_name: Eryn Wolfe
+item_path: /obj/item/weapon/storage/box/fluff/eryn
+}
 # ######## M CKEYS
+{
+ckey: maxiefoxie
+character_name: Maxie Drake
+item_path: /obj/item/weapon.storage/box/fluff/maxie
+}
+
 # ######## N CKEYS
 # ######## O CKEYS
 # ######## P CKEYS

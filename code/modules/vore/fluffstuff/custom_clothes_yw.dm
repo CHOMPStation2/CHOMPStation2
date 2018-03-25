@@ -877,45 +877,18 @@
 // lukevale
 // ********
 
-//Need sprites
+//Lena Shaw
 
-//Mira Rezus
-
-
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-//
-//
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-//
-//
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-
-
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
+/obj/item/clothing/accessory/fluff/lena_collar
+	name = "Ruby Embedded Collar."
+	desc = "A gold and platinum collar, with a embedded ruby gem. On the back is a engraving. 'The only one for me, Quanah Hastings', encompassing the engraving is a heart."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "W_Collar_R"
+	item_state = "W_Collar_R"
+	overlay_state = "W_collar_R_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
 
 // ************
 // RadiantFlash
@@ -944,7 +917,7 @@
 	overlay_state = "pendant_v_mob"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
-	
+
 // ********
 // Dwaggy90
 // ********
@@ -957,4 +930,59 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi', slot_back_str = 'icons/vore/custom_onmob_yw.dmi')
 	icon_state = "saur_duffle"
-	
+
+// ******
+// Dushka
+// ******
+
+//Saroth
+
+/obj/item/clothing/suit/storage/seromi/cloak/fluff/Saroth
+ 	name = "Research Director cloak"
+ 	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside. This one bears the colors of the science department with additional trimming to designate it as the research director's. It has 'operty of Saroth' sewed in on the inside at the neck. The pockets seem slightly bigger on the inside than they appear on the outside."
+ 	icon = 'icons/vore/custom_clothes_yw.dmi'
+ 	icon_state = "tesh_cloak_saroth"
+ 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+ 	override = 1
+ 	item_state = "tesh_cloak_saroth"
+
+// ******
+// Benl8561
+// ******
+
+//M.I.S.S.Y
+
+/obj/item/clothing/under/fluff/missy_skirt
+	name = "Blue Micro Skirt"
+	desc = "Its a rather odd skirt it really does not cover much! Might as well not even have the thing on at this point. there is a tag on the back with writing on it. 'PROPERTY OF M.I.S.S.Y :3' just barely fitting on it."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "micro_skirt"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "micro_skirt"
+	body_parts_covered = null
+
+//Quanah Hastings
+
+/obj/item/clothing/accessory/fluff/quanah_collar
+	name = "Sapphire Embedded Collar."
+	desc = "A gold and silver collar, with a embedded sapphire gem. On the back is a engraving. 'Forever loved, Lena Hastings', encompassing the engraving is a heart."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "W_collar_S"
+	item_state = "W_collar_S_mob"
+	overlay_state = "W_collar_S_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
+
+//Maxie Drake
+
+/obj/item/clothing/accessory/fluff/maxie_collar
+	name = "Pink Wide Band Collar."
+	desc = "A wide banded collar, made of a black band of fabric, with a pink band overlapping it over the center. On it is a small bit of circuitry that's out of the way. Inside the collar the name 'Maxie Drake' is stitched in it."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "maxie_collar_icon"
+	item_state = "maxie_collar_mob"
+	overlay_state = "maxie_collar_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
