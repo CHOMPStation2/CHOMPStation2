@@ -265,12 +265,12 @@
 		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
 		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
 		)
-
+	
 // **************
 // Belsima
 // **************
 
-//I'm going to fix this code later.
+//I'm going to fix this code later. 
 
 /obj/item/weapon/implant/reagent_generator/belle/ysaline
 	name = "lactation implant"
