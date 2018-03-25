@@ -45,7 +45,7 @@
 	var/obj/item/organ/internal/nano/refactory/refactory
 	var/datum/modifier/healing
 
-	player_msg = "In this form, you can move a little faster, your health will regenerate as long as you have metal in you, and you can ventcrawl!"
+	player_msg = "In this form, you can move a little faster, your health will regenerate as long as you have metal in you!"
 
 //Constructor allows passing the human to sync damages
 /mob/living/simple_animal/protean_blob/New(var/newloc, var/mob/living/carbon/human/H)
@@ -55,7 +55,7 @@
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
 		verbs |= /mob/living/simple_animal/protean_blob/proc/revert_form
-		verbs |= /mob/living/proc/ventcrawl
+		//verbs |= /mob/living/proc/ventcrawl YAWN Edit: Too OP
 		verbs |= /mob/living/proc/hide
 	else
 		update_icon()
@@ -91,7 +91,7 @@
 	if(health < maxHealth*0.5)
 		to_chat(src,"<span class='warning'>You're too injured for that! Regenerate using steel first.</span>")
 		return
-	
+
 	if(humanform)
 		humanform.nano_outofblob(src)
 	else
@@ -252,7 +252,7 @@
 
 	//Message
 	blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
-	
+
 	//Duration of the to_puddle iconstate that the blob starts with
 	sleep(13)
 	blob.update_icon() //Will remove the collapse anim
@@ -276,7 +276,7 @@
 	if(pulledby)
 		pulledby.stop_pulling()
 	stop_pulling()
-	
+
 	//Stop healing if we are
 	if(blob.healing)
 		blob.healing.expire()
@@ -286,7 +286,7 @@
 
 	//Message
 	blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
-	
+
 	//Duration of above animation
 	sleep(8)
 
@@ -307,7 +307,7 @@
 		var/obj/belly/B = belly
 		B.forceMove(src)
 		B.owner = src
-	
+
 	//Get rid of friend blob
 	qdel(blob)
 
