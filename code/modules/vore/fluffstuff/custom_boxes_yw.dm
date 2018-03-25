@@ -335,4 +335,6 @@
 	name = "Noel's box"
 	desc = "a kit containing Maxie's equipment."
 	has_items = list (
-		/obj/item/clothing/glasses/hud/health/aviator/prescription/fluff/noel_glasses)
+		/obj/item/clothing/glasses/hud/health/aviator/prescription/fluff/noel_glasses,
+		/obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie,
+		/obj/item/clothing/ears/earings/fluff/noel_earings)

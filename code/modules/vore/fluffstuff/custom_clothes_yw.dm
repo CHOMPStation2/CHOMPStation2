@@ -877,46 +877,6 @@
 // lukevale
 // ********
 
-//Need sprites
-
-//Mira Rezus
-
-
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-//
-//
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-//
-//
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-
-
-///obj/item/clothing/under/fluff/wip
-//	name = "WIP"
-//	desc = "WIP"
-//	icon = 'icons/vore/custom_clothes_yw.dmi'
-//	icon_state = "WIP"
-//	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-//	item_state = "WIP"
-
 //Lena Shaw
 
 /obj/item/clothing/accessory/fluff/lena_collar
@@ -1014,11 +974,15 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
+// ******
+// MaxieFoxie
+// ******
+
 //Maxie Drake
 
 /obj/item/clothing/accessory/fluff/maxie_collar
 	name = "Pink Wide Band Collar."
-	desc = "A wide banded collar, made of a black band of fabric, with a pink band overlapping it over the center. On it is a small bit of circuitry that's out of the way. Inside the collar the name 'Maxie Drake' is stitched in it."
+	desc = "A wide banded collar, made of a black band of fabric, with a pink band overlaping it over the center. On it is a small bit of curcitry that's out of the way. Inside the collar the name 'Maxie Drake' is stiched in it."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "maxie_collar_icon"
@@ -1026,3 +990,61 @@
 	overlay_state = "maxie_collar_mob"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
+
+// ******
+// Paint It Red
+// ******
+
+//Noel Walsh
+
+/obj/item/clothing/glasses/hud/health/aviator/prescription/fluff/noel_glasses
+	name = "Noel's AR glasses"
+	desc = "Noel's custom glasses, the initial's NW are written on the inside of the left ear frame, the frames are black and don't reach all the way around."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "noel_glasses"
+	off_state = "noel_glasses_off"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	override = 1
+	item_state = "noel_glasses"
+
+/obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie
+    name = "Noel's casual hoodie"
+    desc = "A blue faded black trimmed hoodie, it looks very simple and warm, there are the initials N.W. on the tag inside"
+    icon = 'icons/vore/custom_clothes_yw.dmi'
+    icon_state = "noel_hoodie"
+    // "noel_hoodie_open" will be the open state
+    icon_override = 'icons/vore/custom_onmob_yw.dmi'
+    //override = 1 //What is this? VS does not have this
+    item_state = null
+
+/obj/item/clothing/ears/earings/fluff/noel_earings
+	name = "Teardrop Earrings"
+	desc = "A pair of simple earrings with diamonds set into a metal plate, they hang down from the ear by a small hook."
+	var/ring_on = 0
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "noel_earings"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	override = 1
+	item_state = "noel_earings"
+
+/obj/item/clothing/ears/earings/fluff/noel_earings/verb/toggle_rings()
+	set name = "Toggle right earring"
+	set category = "Object"
+	set src in usr
+	if(!istype(usr, /mob/living)) return
+	if(usr.stat) return
+
+	var/base_icon = "noel_earings"
+
+	if(ring_on)
+		icon_state = "[base_icon]"
+		item_state = "[base_icon]"
+		ring_on = 0
+		usr << "<span class='notice'>You remove the right earring.</span>"
+	else
+		icon_state = "[base_icon]_on"
+		item_state = "[base_icon]_on"
+		ring_on = 1
+		usr << "<span class='notice'>You put on the right earring.</span>"
+
+	update_clothing_icon()
