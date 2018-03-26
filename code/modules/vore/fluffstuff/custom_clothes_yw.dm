@@ -1024,8 +1024,6 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "noel_earings"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	override = 1
-	item_state = "noel_earings"
 
 /obj/item/clothing/ears/earings/fluff/noel_earings/verb/toggle_rings()
 	set name = "Toggle right earring"
@@ -1038,12 +1036,10 @@
 
 	if(ring_on)
 		icon_state = "[base_icon]"
-		item_state = "[base_icon]"
 		ring_on = 0
 		usr << "<span class='notice'>You remove the right earring.</span>"
 	else
 		icon_state = "[base_icon]_on"
-		item_state = "[base_icon]_on"
 		ring_on = 1
 		usr << "<span class='notice'>You put on the right earring.</span>"
 
