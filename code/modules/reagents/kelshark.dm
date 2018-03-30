@@ -19,11 +19,11 @@ datum
 					switch(data["count"])
 						if(1 to 30)
 							if(prob(9)) M.emote("me",1,"blushes")
-							if(prob(9)) M << "\red You feel so needy.."
+							if(prob(9)) M << "<span class='warning'>You feel so needy..</span>"
 						if (30 to INFINITY)
 							if(prob(3)) M.emote("me",1,"blushes")
 							if(prob(5)) M.say("!moans out lewdly!")
-							if(prob(9)) M << "\red You can't help but want to touch yourself then and now!"
+							if(prob(9)) M << "<span class='warning'>You can't help but want to touch yourself then and now!</span>"
 					data["count"]++
 				holder.remove_reagent(src.id, 0.2)
 				//..()

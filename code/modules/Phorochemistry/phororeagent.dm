@@ -138,7 +138,7 @@ var/induromol_code = rand(1, 50)
 						protection.explanation_text = "<font color='#e3209b'>Protect [love_name] at all costs</font>"
 						M.mind.objectives.Add(protection)
 						var/obj_count = 1
-						M << "\blue Your current objectives:"
+						M << "<span class='notice'>Your current objectives:</span>"
 						for(var/datum/objective/objective in M.mind.objectives)
 							M << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
 							obj_count++
@@ -189,7 +189,7 @@ var/induromol_code = rand(1, 50)
 				if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
 					M.mind.objectives.Remove(O)
 					var/obj_count = 1
-					M << "\blue Your current objectives:"
+					M << "<span class='notice'>Your current objectives:</span>"
 					for(var/datum/objective/objective in M.mind.objectives)
 						M << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
 						obj_count++
@@ -204,7 +204,7 @@ var/induromol_code = rand(1, 50)
 			if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
 				M.mind.objectives.Remove(O)
 				var/obj_count = 1
-				M << "\blue Your current objectives:"
+				M << "<span class='notice'>Your current objectives:</span>"
 				for(var/datum/objective/objective in M.mind.objectives)
 					M << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
 					obj_count++
@@ -221,19 +221,19 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/nasty/touch_mob(var/mob/M, var/volume)
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		H << "\red You are so repulsed by the liquid splashed on you that you feel like puking"
+		H << "<span class='warning'>You are so repulsed by the liquid splashed on you that you feel like puking</span>"
 	//	H.vomit() not fast enough
 		src = null
 		spawn(0)
 			if(!H.lastpuke)
 				H.lastpuke = 1
-				H << "<spawn class='warning'>You feel nauseous..."
+				H << "<span class='warning'>You feel nauseous...</span>"
 				spawn(10)	//1 second until second warning
-					H << "<spawn class='warning'>You feel like you are about to throw up!"
+					H << "<span class='warning'>You feel like you are about to throw up!</span>"
 					spawn(20)	//and you have 2 more to escape
 						H.Stun(8)
 
-						H.visible_message("<spawn class='warning'>[H] throws up!","<spawn class='warning'>You throw up!")
+						H.visible_message("<span class='warning'>[H] throws up!</span>","<span class='warning'>You throw up!</span>")
 						playsound(H.loc, 'sound/effects/splat.ogg', 50, 1)
 
 						var/turf/location = H.loc
@@ -264,20 +264,20 @@ var/induromol_code = rand(1, 50)
 	src = null
 	for(var/mob/living/carbon/human/H in viewers(T, 7))
 		if(H == immune)
-			H << "\blue You are absolutely disgusted, but you hold your stomach contents in."
+			H << "<span class='notice'>You are absolutely disgusted, but you hold your stomach contents in.</span>"
 			continue
-		H << "\red You are so disgusted by what looks like spilled vomit you might throw up!"
+		H << "<span class='warning'>You are so disgusted by what looks like spilled vomit you might throw up!</span>"
 	//	H.vomit() not fast enough
 		spawn(0)
 			if(!H.lastpuke)
 				H.lastpuke = 1
-				H << "<spawn class='warning'>You feel nauseous..."
+				H << "<span class='warning'>You feel nauseous...</span>"
 				spawn(50)	//5 seconds until second warning
-					H << "<spawn class='warning'>You feel like you are about to throw up!"
+					H << "<span class='warning'>You feel like you are about to throw up!</span>"
 					spawn(50)	//and you have 5 more for mad dash to the bucket
 						H.Stun(5)
 
-						H.visible_message("<spawn class='warning'>[H] throws up!","<spawn class='warning'>You throw up!")
+						H.visible_message("<span class='warning'>[H] throws up!</span>","<span class='warning'>You throw up!</span>")
 						playsound(H.loc, 'sound/effects/splat.ogg', 50, 1)
 
 						var/turf/location = H.loc
@@ -292,7 +292,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/nasty/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
 	for(var/mob/living/carbon/human/H in viewers(T, 7))
-		H << "\red There is something about the reagent from the telepad you find absolutely repulsive."
+		H << "<span class='warning'>There is something about the reagent from the telepad you find absolutely repulsive.</span>"
 		H.vomit()
 	return ..()
 
@@ -311,7 +311,7 @@ var/induromol_code = rand(1, 50)
 	if(istype(A, /mob/living))
 		var/mob/living/M = A
 		M.universal_understand = 0
-		M << "\red You no longer feel attuned to the spoken word."
+		M << "<span class='warning'>You no longer feel attuned to the spoken word.</span>"
 
 /datum/reagent/phororeagent/babelizine/on_mob_death(var/mob/M)
 	holder.remove_reagent(src.id, src.volume)
@@ -336,7 +336,7 @@ var/induromol_code = rand(1, 50)
 			bone.status &= ~ORGAN_BROKEN
 		//	bone.perma_injury = 0 Not sure what Polaris equivalent is or why this was necessary
 			H.visible_message(
-			"\blue You hear a loud crack as [H.name]'s [bone.name] appears to heal miraculously.")
+			"<span class='notice'>You hear a loud crack as [H.name]'s [bone.name] appears to heal miraculously.</span>")
 			holder.remove_reagent(src.id, 12)
 	..()
 
@@ -404,13 +404,13 @@ var/induromol_code = rand(1, 50)
 	if(istype(M, /mob/living/silicon))
 		var/mob/living/silicon/S = M
 		S.take_organ_damage(0, volume/2, emp = 1)
-		S << "\red Some of your systems report damage as a result of the liquid."
+		S << "<span class='notice'>Some of your systems report damage as a result of the liquid.</span>"
 	else
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
 			if(H.isSynthetic())
 				H.take_overall_damage(0, volume/2)
-				H << "\red Some of your systems report damage as a result of the liquid."
+				H << "<span class='notice'>Some of your systems report damage as a result of the liquid.</span>"
 //implementation also in power.dm and electrical_field.dm
 
 /datum/reagent/phororeagent/mortemol
@@ -434,7 +434,7 @@ var/induromol_code = rand(1, 50)
 					C.reagents.add_reagent(id, volume, data)
 					C.rejuvenate()
 					C.rejuvenate() //I like C.rejuvenate()
-					C.visible_message("\red[C] seems to wake from the dead!")
+					C.visible_message("<span class='notice'>[C] seems to wake from the dead!</span>")
 				else
 					C.reagents.add_reagent(id, volume)
 
@@ -449,7 +449,7 @@ var/induromol_code = rand(1, 50)
 	if(data[1])
 		if(istype(A, /mob))
 			var/mob/M = A
-			M << "\red You feel the last traces of chemicals leave your body as you return to death once more..."
+			M << "<span class='notice'>You feel the last traces of chemicals leave your body as you return to death once more...</span>"
 			M.death(0)
 		//Reagent giveth, and reagent taketh away
 
@@ -462,7 +462,7 @@ var/induromol_code = rand(1, 50)
 			data[1] = 1
 			C.rejuvenate()
 			C.rejuvenate() //Necessary to call twice in testing
-			C.visible_message("\red[C] seems to wake from the dead!")
+			C.visible_message("<span class='notice'>[C] seems to wake from the dead!</span>")
 
 /datum/reagent/phororeagent/tegoxane
 	id = "tegoxane"
@@ -494,14 +494,14 @@ var/induromol_code = rand(1, 50)
 		H.f_style = "Shaved"
 
 	if(!M.digitalcamo)
-		M << "\blue Your skin starts to feel strange"
+		M << "<span class='notice'>Your skin starts to feel strange</span>"
 	M.digitalcamo = 1
 	return ..()
 
 /datum/reagent/phororeagent/tegoxane/on_remove(var/atom/A)
 	if(istype(A, /mob))
 		var/mob/M = A
-		M << "\red Your skin feels normal again"
+		M << "<span class='notice'>Your skin feels normal again</span>"
 		M.digitalcamo = 0
 		M.icon = saved_icon
 		if(istype(M, /mob/living/carbon/human))
@@ -540,7 +540,7 @@ var/induromol_code = rand(1, 50)
 			if(ishuman(M))
 				var/mob/living/carbon/human/H = M
 
-				H.visible_message("<spawn class='warning'>[H] throws up!","<spawn class='warning'>You throw up!")
+				H.visible_message("<span class='warning'>[H] throws up!</span>","<span class='warning'>You throw up!</span>")
 				playsound(H.loc, 'sound/effects/splat.ogg', 50, 1)
 
 				var/turf/location = H.loc
@@ -574,7 +574,7 @@ var/induromol_code = rand(1, 50)
 				if(eyes.status & ORGAN_ROBOT)
 					return ..()
 
-			M << "\blue You blink and your eyes quickly adapt to enhanced function."
+			M << "<span class='notice'>You blink and your eyes quickly adapt to enhanced function.</span>"
 			M.client.view = 10
 	return ..()
 
@@ -590,7 +590,7 @@ var/induromol_code = rand(1, 50)
 
 		if(M.client)
 			M.client.view = 7
-			M << "\red After a few blinks, you realize the Oculusosone has worn off."
+			M << "<span class='notice'>After a few blinks, you realize the Oculusosone has worn off.</span>"
 	return ..()
 
 
@@ -603,7 +603,7 @@ var/induromol_code = rand(1, 50)
 //doesn't do anything, I just like people trying to procure a corpse to test it -DrBrock
 /datum/reagent/phororeagent/destitutionecam/touch_mob(var/mob/M, var/volume)
 	if(M.stat == 2)
-		usr << "\red Absolutely nothing happens. You feel disappointed."
+		usr << "<span class='notice'>Absolutely nothing happens. You feel disappointed.</span>"
 	return ..()
 
 /datum/reagent/phororeagent/sapoformator
@@ -632,7 +632,7 @@ var/induromol_code = rand(1, 50)
 
 	src = null
 	if(volume >= 25)
-		usr << "\blue The solution begins to fizzle."
+		usr << "<span class='notice'>The solution begins to fizzle.</span>"
 		playsound(T, 'sound/effects/bamf.ogg', 50, 1)
 		var/datum/reagents/cleaner = new()
 		cleaner.my_atom = T
@@ -666,7 +666,7 @@ var/induromol_code = rand(1, 50)
 				volume -= 20
 
 	else
-		usr << "\red The solution does not appear to have enough mass to react."
+		usr << "<span class='notice'>The solution does not appear to have enough mass to react.</span>"
 
 /datum/reagent/phororeagent/rad_x
 	id = "rad_x"
@@ -692,7 +692,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/caloran/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(volume >= 2)
 		if(burn == -1)
-			M << "\red You feel your skin painfully harden."
+			M << "<span class='notice'>You feel your skin painfully harden.</span>"
 			M.take_overall_damage(20, 0)
 			burn = M.getFireLoss()
 		else
@@ -705,7 +705,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/caloran/on_remove(var/atom/A)
 	if(istype(A, /mob))
 		var/mob/M = A
-		M << "\red Your skin returns to normal, no longer desensitized to extreme heat."
+		M << "<span class='notice'>Your skin returns to normal, no longer desensitized to extreme heat.</span>"
 	return ..()
 
 /datum/reagent/phororeagent/the_stuff
@@ -718,7 +718,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/the_stuff/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(!init)
-		M << "\red You start tripping balls."
+		M << "<span class='warning'>You start tripping balls.</span>"
 		init = 1
 	var/drugs = list("space_drugs", "serotrotium", "psilocybin", "nuka_cola", "atomicbomb", "hippiesdelight")
 	for(var/drug in drugs)
@@ -734,7 +734,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/frioline/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(M.bodytemperature > 310)
-		M << "\blue You suddenly feel very cold."
+		M << "<span class='notice'>You suddenly feel very cold.</span>"
 	M.bodytemperature = max(165, M.bodytemperature - 30)
 	return ..()
 
@@ -766,15 +766,15 @@ var/induromol_code = rand(1, 50)
 		var/mob/living/L = M
 		var/burned = L.getFireLoss() > 0
 		if(burned)
-			L << "\blue In a strange sensation, you feel some burns stop hurting."
+			L << "<span class='notice'>In a strange sensation, you feel some burns stop hurting.</span>"
 			L.heal_organ_damage(0, min(15, volume / 4))
 
 		if (mFingerprints in L.mutations)
 			if(!burned)
-				L << "\red Another application of the substance does nothing weird to your hands."
+				L << "<span class='warning'>Another application of the substance does nothing weird to your hands.</span>"
 		else
 			L.mutations.Add(mFingerprints)
-			L << "\blue Your fingers feel strange after the substance splashes on your hands."
+			L << "<span class='notice'>Your fingers feel strange after the substance splashes on your hands.</span>"
 	return ..()
 
 /datum/reagent/phororeagent/energized_phoron
@@ -888,10 +888,10 @@ var/induromol_code = rand(1, 50)
 	if(world.time - initial_time >= 30) //three second startup lag
 		if(!metabolism)
 			metabolism = 1
-			M << "\blue You begin to feel transcendental."
+			M << "<span class='notice'>You begin to feel transcendental.</span>"
 
 		if(M.z > 5 || M.z == 2 || M.z < 1) //no centcomm teleport, also not dealing with other unknown sectors
-			M << "\red You feel the bluespace leave your body on this sector, nothing happens."
+			M << "<span class='warning'>You feel the bluespace leave your body on this sector, nothing happens.</span>"
 			src = null
 			return
 
@@ -970,7 +970,7 @@ var/induromol_code = rand(1, 50)
 		if(istype(L, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = L
 			if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
-				H <<"\red <b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b>"
+				H <<"<span class='warning'><b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b></span>"
 				H.death(0)
 		else if(!istype(L, /mob/living/silicon))
 			L.death(0)
@@ -982,7 +982,7 @@ var/induromol_code = rand(1, 50)
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
 		if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
-			H <<"\red <b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b>"
+			H <<"<span class='warning'><b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b></span>"
 			H.death(0)
 	else if(!istype(M, /mob/living/silicon))
 		M.death(0)
@@ -1005,7 +1005,7 @@ var/induromol_code = rand(1, 50)
 				var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 				if(!(eyes.status & ORGAN_ROBOT))
 					eyes.take_damage(50)
-					H << "\red <b>The gas stings your eyes like you have never felt before!</b>"
+					H << "<span class='warning'><b>The gas stings your eyes like you have never felt before!</b></span>"
 		else if(!istype(L, /mob/living/silicon))
 			L.eye_blind = 500
 
@@ -1020,7 +1020,7 @@ var/induromol_code = rand(1, 50)
 			var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 			if(!(eyes.status & ORGAN_ROBOT))
 				eyes.take_damage(50)
-				H << "\red <b>The gas stings your eyes like you have never felt before!</b>"
+				H << "<span class='warning'><b>The gas stings your eyes like you have never felt before!</b></span>"
 	else if(!istype(M, /mob/living/silicon))
 		M.eye_blind = 500
 	src = null*/
