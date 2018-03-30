@@ -1044,3 +1044,10 @@
 		usr << "<span class='notice'>You put on the right earring.</span>"
 
 	update_clothing_icon()
+
+/obj/item/clothing/under/fluff/noel_uniform
+	name = "noel's uniform"
+	desc = "A sweater with a skirt attached to it. Under the skirt is a set of shorts that cling to the body, showing a bulge very well if there is one."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "noel_uniform"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
