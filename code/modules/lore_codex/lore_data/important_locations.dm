@@ -2,6 +2,7 @@
 	name = "Important Locations"
 	data = "There are several locations of interest that you may come across when visiting the system Vir."
 	children = list(
+		/datum/lore/codex/page/vir,
 		/datum/lore/codex/page/radiance_energy_chain,
 		/datum/lore/codex/page/firnir,
 		/datum/lore/codex/page/tyr,

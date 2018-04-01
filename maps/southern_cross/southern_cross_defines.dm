@@ -16,12 +16,12 @@
 	full_name = "Southern Cross"
 	path = "southern_cross"
 
-	lobby_icon = 'icons/misc/title_vr.dmi'
-	lobby_screens = list("title") // New lobby screen if possible.
+	lobby_icon = 'icons/misc/title.dmi'
+	lobby_screens = list("mockingjay00") // New lobby screen if possible.
 
 	zlevel_datum_type = /datum/map_z_level/southern_cross
 
-	station_name  = "Yawn Wider Station"
+	station_name  = "NLS Southern Cross"
 	station_short = "Southern Cross"
 	dock_name     = "NCS Northern Star" // Now we're the centcom!
 	boss_name     = "Central Command"
