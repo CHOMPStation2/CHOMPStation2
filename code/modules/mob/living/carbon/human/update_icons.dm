@@ -167,7 +167,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			mobonback.pixel_x = 12
 
 		mobonback.pixel_y = 9
-		overlays += mobonback
+		add_overlay(mobonback)
 
 	animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
