@@ -268,9 +268,16 @@ ckey: lukevale
 character_name: Eryn Wolfe
 item_path: /obj/item/weapon/storage/box/fluff/eryn
 }
+
+{
+ckey: lukevale
+character_name: Mitsuko Jiao
+item_path: /obj/item/weapon/storage/box/fluff/jiao
+}
+
 # ######## M CKEYS
 {
-ckey: maxiefoxie
+ckey: MaxieFoxie
 character_name: Maxie Drake
 item_path: /obj/item/weapon.storage/box/fluff/maxie
 }
