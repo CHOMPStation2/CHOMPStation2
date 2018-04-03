@@ -864,7 +864,7 @@
 
 //Kita
 
- /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
+/obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
  	name = "Magical Cloak"
  	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
