@@ -19,6 +19,7 @@
 	var/absorbing_prey = 0 				// Determines if the person is using the succubus drain or not. See station_special_abilities_vr.
 	var/drain_finalized = 0				// Determines if the succubus drain will be KO'd/absorbed. Can be toggled on at any time.
 	var/fuzzy = 1						// Preference toggle for sharp/fuzzy icon.
+	var/tail_alt = 0					// Tail layer toggle.
 	var/can_be_drop_prey = 0
 	var/can_be_drop_pred = 1	//Mobs are pred by default.
 
@@ -414,7 +415,11 @@
 	user.visible_message(attempt_msg)
 
 	// Now give the prey time to escape... return if they did
-	var/swallow_time = delay || istype(prey, /mob/living/carbon/human) ? belly.human_prey_swallow_time : belly.nonhuman_prey_swallow_time
+	var/swallow_time
+	if(delay)
+		swallow_time = delay
+	else
+		swallow_time = istype(prey, /mob/living/carbon/human) ? belly.human_prey_swallow_time : belly.nonhuman_prey_swallow_time
 
 	//Timer and progress bar
 	if(!do_after(user, swallow_time, prey))
