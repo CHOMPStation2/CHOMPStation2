@@ -256,6 +256,23 @@
 	has_items = list(
 		/obj/item/weapon/fluff/chemset)
 
+//Mitsuko Jiao
+
+/obj/item/weapon/storage/box/fluff/jiao
+	name = "Mitsuko's kit"
+	desc = "A kit containing Mituko's equipment"
+	has_items = list(
+		/obj/item/clothing/suit/storage/toggle/labcoat/fluff/jiao_labcoat,
+		/obj/item/clothing/glasses/hud/health/aviator/fluff/jiao_glasses,
+		/obj/item/clothing/under/rank/medical/fluff/jiao_uniform,
+		/obj/item/clothing/head/beret/fluff/jiao_beret,
+		/obj/item/clothing/shoes/boots/jackboots/fluff/jiao_boots,
+		/obj/item/weapon/storage/belt/medical/fluff/jiao_belt,
+		/obj/item/clothing/gloves/sterile/fluff/jiao_gloves,
+		/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a,
+		/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/b,
+		/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c)
+
 // ************
 // RadiantFlash
 // ************
