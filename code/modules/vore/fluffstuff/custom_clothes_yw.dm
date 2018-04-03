@@ -890,6 +890,66 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
+//Mitsuko Jiao
+
+/obj/item/clothing/suit/storage/toggle/labcoat/fluff/jiao_labcoat
+	name = "Fluffy elongated labcoat"
+	desc = "A white labcoat that seems to have been extended down to cover the legs as well, around the cuffs and bottom is a lay of fluff."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_labcoat"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/glasses/hud/health/aviator/fluff/jiao_glasses
+	name = "Mitsuko's AR glasses"
+	desc = "A set of metal frame glasses that seem to be modified to fit easier on a elongated snout. On the glasses is a set of low perspiration lenses with a thin overlay for medical hub to be turned on."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_glasses"
+	off_state = "jiao_glasses_off"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	override = 1
+	item_state = "jiao_glasses"
+	species_restricted = list("Akula")
+
+/obj/item/clothing/under/rank/medical/fluff/jiao_uniform
+	name = "A Kanghu Navy Force medical doctor uniform"
+	desc = "A slandered issue Kanghu Navy Force medical doctor uniform, it has a a white base with blue ocean camo overlaying the shoulders, waist, and back, with deep blue accents, and light blue highlights. The uniform is loose fitting, and has a set of buttons running up the middle to take it on and off. This one seems to have the shoulder straps vacant of any epaulettes."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_uniform"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "jiao_uniform"
+	rolled_sleeves = -1
+
+/obj/item/clothing/head/beret/fluff/jiao_beret
+	name = "A Kanghu Navy Beret"
+	desc = "This camo beret has a white flash signifying the person as medical personnel, however, there is no rank or insignia on the flash, and it is left blank."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_beret"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/shoes/boots/jackboots/fluff/jiao_boots
+	name = "Modified Navy Boots"
+	desc = "This is a set of boots from the Kanghu navy, as denoted by the seal in the sole of the boot, that has been modified to fit not human feet."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_boots"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/weapon/storage/belt/medical/fluff/jiao_belt
+	name = "Navy medical belt"
+	desc = "A customized medical belt to sport the navy colors of the Kanghu force."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_belt"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/gloves/sterile/fluff/jiao_gloves
+	name = "Padded Sterile Gloves"
+	desc = "These light gray latex gloves have a blue, thick pad on the back of the hand, and on the back of the fingers, designed to survive all the life toughest that a field medic would face."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_gloves"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	force = 2
+	punch_force = 2
+
+
 // ************
 // RadiantFlash
 // ************
