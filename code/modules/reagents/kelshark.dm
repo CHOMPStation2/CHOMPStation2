@@ -54,8 +54,6 @@ datum
 		drug_strength = drug_strength * 0.6
 	M.make_dizzy(drug_strength)
 	M.Confuse(drug_strength * 14)
-	M.adjustOxyLoss(25 * removed)
-	M.sleeping += 1
 
 
 /obj/item/weapon/reagent_containers/pill/benzilate
