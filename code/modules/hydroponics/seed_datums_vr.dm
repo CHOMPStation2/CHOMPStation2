@@ -48,7 +48,7 @@
 	seed_name = "Gardenia"
 	display_name = "Gardenia Produce"
 	kitchen_tag = "gardenia"
-	chems = list("nutriment" = list(1), "phenethylamine" = list(1,12))
+	chems = list("nutriment" = list(1), "phenethylamine" = list(12,24))
 
 /datum/seed/lustflower/New()
 	..()
