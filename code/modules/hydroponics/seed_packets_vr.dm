@@ -3,6 +3,3 @@
 
 /obj/item/seeds/megashroom
 	seed_type = "megam"
-
-/obj/item/seeds/lustflower
-	seed_type = "gardenia"
