@@ -1087,11 +1087,11 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 			if(volume <= 10)
 				return
 			for(var/mob/M in viewers(7, T))
-				M << "\green You hear sizzling as the solution begins to eat away the [T.name]."
+				M << "<font color="green">You hear sizzling as the solution begins to eat away the [T.name].</font>"
 			sleep(30)
 			if(volume >= 50)
 				for(var/mob/M in viewers(7, T))
-					M << "\green The acid melts through the [T.name]!"
+					M << "<font color="green">The acid melts through the [T.name]!</font>"
 
 				if(istype(T, /turf/simulated/wall))
 					for(var/obj/O in T.contents) //Shamelessly stolen from walls.dm
@@ -1106,7 +1106,7 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 				//del(src)
 			else
 				for(var/mob/M in viewers(7, T))
-					M << "\green The sizzling stops leaving the floor intact."
+					M << "<font color="green">The sizzling stops leaving the floor intact.</font>"
 		return
 
 	reaction_obj(var/obj/O, var/volume)
@@ -1115,15 +1115,15 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 			if(volume <= 10)
 				return
 			for(var/mob/M in viewers(7, O))
-				M << "\green You hear sizzling as the solution begins to eat away the [O.name]."
+				M << "<font color="green">You hear sizzling as the solution begins to eat away the [O.name].</font>"
 			sleep(30)
 			if(volume >= 50)
 				for(var/mob/M in viewers(7, O))
-					M << "\green The acid melts through the [O.name]!"
+					M << "<font color="green">The acid melts through the [O.name]!</font>"
 				del(O)
 			else
 				for(var/mob/M in viewers(7, O))
-					M << "\green The sizzling stops leaving the floor intact."
+					M << "<font color="green">The sizzling stops leaving the floor intact.</font>"
 		else
 			return ..()
 
