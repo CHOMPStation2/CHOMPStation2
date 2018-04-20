@@ -15,7 +15,8 @@
 	var/vore_standing_too = 0			// Can also eat non-stunned mobs
 	var/vore_ignores_undigestable = 1	// Refuse to eat mobs who are undigestable by the prefs toggle.
 
-	var/vore_default_mode = DM_ITEMWEAK	// Default bellymode (DM_DIGEST, DM_HOLD, DM_ABSORB)
+	var/vore_default_mode = DM_DIGEST	// Default bellymode (DM_DIGEST, DM_HOLD, DM_ABSORB)
+	var/vore_default_flags = DM_FLAG_ITEMWEAK // Itemweak by default
 	var/vore_digest_chance = 25			// Chance to switch to digest mode if resisted
 	var/vore_absorb_chance = 0			// Chance to switch to absorb mode if resisted
 	var/vore_escape_chance = 25			// Chance of resisting out of mob
@@ -44,21 +45,21 @@
 		var/obj/belly/B = belly
 		for(var/mob/living/M in B)
 			new_fullness += M.size_multiplier
-		new_fullness = round(new_fullness, 1) // Because intervals of 0.25 are going to make sprite artists cry.
+	new_fullness = round(new_fullness, 1) // Because intervals of 0.25 are going to make sprite artists cry.
 	vore_fullness = min(vore_capacity, new_fullness)
 
-/mob/living/simple_animal/update_icon()
-	. = ..() // Call sideways "parent" to decide state
-	if(vore_active)
-		update_fullness()
-		if(!vore_fullness)
-			return
-		else if(icon_state == icon_living && (vore_icons & SA_ICON_LIVING))
-			icon_state = "[icon_state]-[vore_fullness]"
-		else if(icon_state == icon_dead && (vore_icons & SA_ICON_DEAD))
-			icon_state = "[icon_state]-[vore_fullness]"
-		else if(icon_state == icon_rest && (vore_icons & SA_ICON_REST))
-			icon_state = "[icon_state]-[vore_fullness]"
+/mob/living/simple_animal/proc/update_vore_icon()
+	if(!vore_active)
+		return 0
+	update_fullness()
+	if(!vore_fullness)
+		return 0
+	else if((stat == CONSCIOUS) && (!icon_rest || !resting || !incapacitated(INCAPACITATION_DISABLED)) && (vore_icons & SA_ICON_LIVING))
+		return "[icon_living]-[vore_fullness]"
+	else if(stat >= DEAD && (vore_icons & SA_ICON_DEAD))
+		return "[icon_dead]-[vore_fullness]"
+	else if(((stat == UNCONSCIOUS) || resting || incapacitated(INCAPACITATION_DISABLED) ) && icon_rest && (vore_icons & SA_ICON_REST))
+		return "[icon_rest]-[vore_fullness]"
 
 /mob/living/simple_animal/proc/will_eat(var/mob/living/M)
 	if(client) //You do this yourself, dick!
@@ -147,6 +148,7 @@
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode
+	B.mode_flags = vore_default_flags
 	B.escapable = vore_escape_chance > 0
 	B.escapechance = vore_escape_chance
 	B.digestchance = vore_digest_chance
@@ -165,16 +167,6 @@
 		"The sound of bodily movements drown out everything for a moment.",
 		"The predator's movements gently force you into a different position.")
 	B.emote_lists[DM_DIGEST] = list(
-		"The burning acids eat away at your form.",
-		"The muscular stomach flesh grinds harshly against you.",
-		"The caustic air stings your chest when you try to breathe.",
-		"The slimy guts squeeze inward to help the digestive juices soften you up.",
-		"The onslaught against your body doesn't seem to be letting up; you're food now.",
-		"The predator's body ripples and crushes against you as digestive enzymes pull you apart.",
-		"The juices pooling beneath you sizzle against your sore skin.",
-		"The churning walls slowly pulverize you into meaty nutrients.",
-		"The stomach glorps and gurgles as it tries to work you into slop.")
-	B.emote_lists[DM_ITEMWEAK] = list(
 		"The burning acids eat away at your form.",
 		"The muscular stomach flesh grinds harshly against you.",
 		"The caustic air stings your chest when you try to breathe.",

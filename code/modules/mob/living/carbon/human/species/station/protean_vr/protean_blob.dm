@@ -47,6 +47,8 @@
 
 	player_msg = "In this form, you can move a little faster, your health will regenerate as long as you have metal in you!"
 
+	can_buckle = TRUE //Blobsurfing
+
 //Constructor allows passing the human to sync damages
 /mob/living/simple_animal/protean_blob/New(var/newloc, var/mob/living/carbon/human/H)
 	..()
@@ -54,7 +56,6 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		verbs |= /mob/living/proc/nano_set_size
 		//verbs |= /mob/living/proc/ventcrawl YAWN Edit: Too OP
 		verbs |= /mob/living/proc/hide
 	else
@@ -184,6 +185,8 @@
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && vore_selected)
+					if(target.buckled)
+						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
@@ -212,6 +215,9 @@
 /mob/living/carbon/human/proc/nano_intoblob()
 	if(buckled)
 		buckled.unbuckle_mob()
+	if(LAZYLEN(buckled_mobs))
+		for(var/buckledmob in buckled_mobs)
+			unbuckle_mob(buckledmob, force = TRUE)
 	if(pulledby)
 		pulledby.stop_pulling()
 	stop_pulling()
@@ -256,6 +262,9 @@
 		return
 	if(buckled)
 		buckled.unbuckle_mob()
+	if(LAZYLEN(buckled_mobs))
+		for(var/buckledmob in buckled_mobs)
+			unbuckle_mob(buckledmob, force = TRUE)
 	if(pulledby)
 		pulledby.stop_pulling()
 	stop_pulling()

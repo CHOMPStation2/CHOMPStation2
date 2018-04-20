@@ -1,4 +1,5 @@
 #define DAM_SCALE_FACTOR 0.01
+#define METAL_PER_TICK 150
 /datum/species/protean
 	name =             "Protean"
 	name_plural =      "Proteans"
@@ -58,6 +59,8 @@
 	siemens_coefficient =   3 //Very bad zappy times
 	rarity_value =          5
 
+	darksight = 3 // Equivalent to the minor trait
+
 	has_organ = list(
 		O_BRAIN = /obj/item/organ/internal/mmi_holder/posibrain/nano,
 		O_ORCH = /obj/item/organ/internal/nano/orchestrator,
@@ -86,12 +89,16 @@
 		/mob/living/carbon/human/proc/nano_partswap,
 		/mob/living/carbon/human/proc/nano_metalnom,
 		/mob/living/carbon/human/proc/nano_blobform,
-		/mob/living/proc/nano_set_size,
+		/mob/living/carbon/human/proc/nano_set_size,
 		/mob/living/carbon/human/proc/nano_change_fitting, //These verbs are displayed normally,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair_colors,
 		/mob/living/carbon/human/proc/shapeshifter_select_colour,
-		/mob/living/carbon/human/proc/shapeshifter_select_eye_colour
+		/mob/living/carbon/human/proc/shapeshifter_select_eye_colour,
+		/mob/living/carbon/human/proc/shapeshifter_select_gender,
+		/mob/living/carbon/human/proc/shapeshifter_select_wings,
+		/mob/living/carbon/human/proc/shapeshifter_select_tail,
+		/mob/living/carbon/human/proc/shapeshifter_select_ears
 		)
 
 	var/global/list/abilities = list()
@@ -167,15 +174,15 @@
 	if(refactory && !(refactory.status & ORGAN_DEAD))
 		
 		//MHydrogen adds speeeeeed
-		if(refactory.get_stored_material("mhydrogen") >= 100)
+		if(refactory.get_stored_material("mhydrogen") >= METAL_PER_TICK)
 			H.add_modifier(/datum/modifier/protean/mhydrogen, origin = refactory)
 
 		//Plasteel adds brute armor
-		if(refactory.get_stored_material("plasteel") >= 100)
+		if(refactory.get_stored_material("plasteel") >= METAL_PER_TICK)
 			H.add_modifier(/datum/modifier/protean/plasteel, origin = refactory)
 
 		//Diamond adds burn armor
-		if(refactory.get_stored_material("diamond") >= 100)
+		if(refactory.get_stored_material("diamond") >= METAL_PER_TICK)
 			H.add_modifier(/datum/modifier/protean/diamond, origin = refactory)
 
 	return ..()
@@ -204,7 +211,7 @@
 // Various modifiers
 /datum/modifier/protean
 	stacks = MODIFIER_STACK_FORBID
-	var/material_use = 100
+	var/material_use = METAL_PER_TICK
 	var/material_name = DEFAULT_WALL_MATERIAL
 
 /datum/modifier/protean/on_applied()
@@ -217,7 +224,7 @@
 	if(holder.temporary_form)
 		to_chat(holder.temporary_form,on_expired_text)
 
-/datum/modifier/protean/tick()
+/datum/modifier/protean/check_if_valid()
 	//No origin set
 	if(!istype(origin))
 		expire()
@@ -238,7 +245,6 @@
 	on_created_text = "<span class='notice'>You feel yourself accelerate, the metallic hydrogen increasing your speed temporarily.</span>"
 	on_expired_text = "<span class='notice'>Your refactory finishes consuming the metallic hydrogen, and you return to normal speed.</span>"
 
-	material_use = 100
 	material_name = "mhydrogen"
 
 	slowdown = -1
@@ -250,7 +256,6 @@
 	on_created_text = "<span class='notice'>You feel yourself become nearly impervious to physical attacks as plasteel nanites are made.</span>"
 	on_expired_text = "<span class='notice'>Your refactory finishes consuming the plasteel, and you return to your normal nanites.</span>"
 	
-	material_use = 100
 	material_name = "plasteel"
 
 	incoming_brute_damage_percent = 0.5
@@ -262,7 +267,6 @@
 	on_created_text = "<span class='notice'>You feel yourself become more reflective, able to resist heat and fire better for a time.</span>"
 	on_expired_text = "<span class='notice'>Your refactory finishes consuming the diamond, and you return to your normal nanites.</span>"
 	
-	material_use = 100
 	material_name = "diamond"
 
 	incoming_fire_damage_percent = 0.2
@@ -274,7 +278,6 @@
 	on_created_text = "<span class='notice'>You feel new nanites being produced from your stockpile of steel, healing you slowly.</span>"
 	on_expired_text = "<span class='notice'>Your steel supply has either run out, or is no longer needed, and your healing stops.</span>"
 	
-	material_use = 100
 	material_name = "steel"
 
 /datum/modifier/protean/steel/tick()
@@ -304,3 +307,4 @@
 		desc += "\nVALID THROUGH END OF: [time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+544)]\nREGISTRANT: [new_name]"
 
 #undef DAM_SCALE_FACTOR
+#undef METAL_PER_TICK

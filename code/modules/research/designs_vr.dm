@@ -1,11 +1,3 @@
-/datum/design/excavationdrill
-	name = "Excavation Drill"
-	desc = "Advanced archaeological drill combining ultrasonic excitation and bluespace manipulation to provide extreme precision. The silver tip is adjustable from 1 to 30 cm."
-	id = "excavationdrill"
-	req_tech = list(TECH_MATERIAL = 4, TECH_POWER = 3, TECH_ENGINEERING = 3, TECH_BLUESPACE = 3) //They were never used before. Now they'll be used. Hopefully.
-	build_type = PROTOLATHE
-	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 1000, "silver" = 1000)
-	build_path = /obj/item/weapon/pickaxe/excavationdrill
 /* Make language great again
 /datum/design/item/implant/language
 	name = "Language implant"
@@ -180,6 +172,13 @@
 	req_tech = list(TECH_PHORON = 3, TECH_DATA = 2, TECH_MAGNET = 2)
 	build_path = /obj/item/weapon/circuitboard/bomb_tester
 	sort_string = "HABAG"
+
+/datum/design/circuit/quantum_pad
+	name = "Quantum Pad"
+	id = "quantum_pad"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_POWER = 4, TECH_BLUESPACE = 4)
+	build_path = /obj/item/weapon/circuitboard/quantumpad
+	sort_string = "HABAH"
 
 ////// RIGSuit Stuff
 /*
