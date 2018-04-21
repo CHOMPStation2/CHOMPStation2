@@ -153,23 +153,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		M.Translate(0, 16*(desired_scale-1))
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
-	if(mobonback)
-		if(mobonback.layer < layer)
-			mobonback.layer = layer + 0.1
-
-		if(dir == NORTH)
-			mobonback.pixel_x = 0
-		else if(dir == SOUTH)
-			mobonback.pixel_x = 0
-			mobonback.layer = layer - 0.1
-		else if(dir == EAST)
-			mobonback.pixel_x = -12
-		else if(dir == WEST)
-			mobonback.pixel_x = 12
-
-		mobonback.pixel_y = 9
-		add_overlay(mobonback)
-
 	animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
 	

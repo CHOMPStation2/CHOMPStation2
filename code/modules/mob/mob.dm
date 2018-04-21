@@ -1040,8 +1040,6 @@ mob/proc/yank_out_object()
 			return ..(facing_dir)
 	else
 		var/returnval = ..()
-		if(mobonback)
-			update_icons()
 		return returnval
 
 /mob/verb/northfaceperm()
