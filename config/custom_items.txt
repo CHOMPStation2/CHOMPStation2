@@ -320,7 +320,7 @@ item_path: /obj/item/clothing/accessory/medal/silver/valor
 }
 
 {
-ckey :sempt
+ckey: sempt
 character_name: Kayla Endsley
 item_path: /obj/item/clothing/under/rank/roboticist
 }
