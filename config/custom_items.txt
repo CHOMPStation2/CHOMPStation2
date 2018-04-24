@@ -318,6 +318,13 @@ ckey: shaper
 character_name: Natene
 item_path: /obj/item/clothing/accessory/medal/silver/valor
 }
+
+{
+ckey: sempt
+character_name: Kayla Endsley
+item_path: /obj/item/clothing/under/rank/roboticist/skirt
+}
+
 # ######## T CKEYS
 # ######## U CKEYS
 {
