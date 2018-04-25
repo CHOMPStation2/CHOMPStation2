@@ -85,16 +85,25 @@
 	slot_flags = SLOT_MASK
 	body_parts_covered = FACE|EYES
 	sprite_sheets = list(
-		"Teshari"		= 'icons/mob/species/seromi/masks_vr.dmi',
-		"Vox" 			= 'icons/mob/species/vox/masks.dmi',
-		"Tajara" 		= 'icons/mob/species/tajaran/mask_vr.dmi',
-		"Unathi" 		= 'icons/mob/species/unathi/mask_vr.dmi',
-		"Sergal" 		= 'icons/mob/species/sergal/mask_vr.dmi',
-		"Nevrean" 		= 'icons/mob/species/nevrean/mask_vr.dmi',
-		"Fox" 			= 'icons/mob/species/fox/mask_vr.dmi',
-		"Fennec" 		= 'icons/mob/species/fennec/mask_vr.dmi',
-		"Akula" 		= 'icons/mob/species/akula/mask_vr.dmi',
-		"Vulpkanin" 	= 'icons/mob/species/vulpkanin/mask.dmi',
-		"Xenochimera"	= 'icons/mob/species/tajaran/mask_vr.dmi'
+		SPECIES_TESHARI		= 'icons/mob/species/seromi/masks_vr.dmi',
+		SPECIES_VOX 		= 'icons/mob/species/vox/masks.dmi',
+		SPECIES_TAJ 		= 'icons/mob/species/tajaran/mask_vr.dmi',
+		SPECIES_UNATHI 		= 'icons/mob/species/unathi/mask_vr.dmi',
+		SPECIES_SERGAL 		= 'icons/mob/species/sergal/mask_vr.dmi',
+		SPECIES_NEVREAN 	= 'icons/mob/species/nevrean/mask_vr.dmi',
+		SPECIES_ZORREN_HIGH	= 'icons/mob/species/fox/mask_vr.dmi',
+		SPECIES_ZORREN_FLAT = 'icons/mob/species/fennec/mask_vr.dmi',
+		SPECIES_AKULA 		= 'icons/mob/species/akula/mask_vr.dmi',
+		SPECIES_VULPKANIN 	= 'icons/mob/species/vulpkanin/mask.dmi',
+		SPECIES_XENOCHIMERA	= 'icons/mob/species/tajaran/mask_vr.dmi'
 		)
 //"Spider" 		= 'icons/mob/species/spider/mask_vr.dmi' Add this later when they have custom mask sprites and everything.
+
+// Taur suits need to be shifted so its centered on their taur half.
+// TODO - Instead of just assuming this junk, shift some of the data onto the taur tail datum.
+/obj/item/clothing/suit/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0)
+	var/image/standing = ..()
+	if(icon_override && icon_override == 'icons/mob/taursuits_vr.dmi')
+		standing.pixel_x = -16
+		standing.layer = BODY_LAYER + 15 // 15 is above tail layer, so will not be covered by taurbody.
+	return standing

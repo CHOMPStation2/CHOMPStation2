@@ -40,7 +40,7 @@
 	var/load_offset_y = 0		//pixel_y offset for item overlay
 	var/mob_offset_y = 0		//pixel_y offset for mob overlay
 
-	var/datum/riding/riding_datum = null
+	//var/datum/riding/riding_datum = null //VOREStation Edit - Moved to movables.
 
 //-------------------------------------------
 // Standard procs
@@ -303,7 +303,7 @@
 	usr << "<span class='notice'>You install [C] in [src].</span>"
 
 /obj/vehicle/proc/remove_cell(var/mob/living/carbon/human/H)
-	if(mechanical)
+	if(!mechanical)
 		return
 	if(!cell)
 		return

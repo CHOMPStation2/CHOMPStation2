@@ -5,7 +5,8 @@
 	icon = 'icons/effects/effects.dmi'	//We have an ultra-complex update icons that overlays everything, don't load some stupid random male human
 	icon_state = "nothing"
 
-	var/list/hud_list[TOTAL_HUDS]
+	has_huds = TRUE 					//We do have HUDs (like health, wanted, status, not inventory slots)
+
 	var/embedded_flag					//To check if we've need to roll for damage on movement while an item is imbedded in us.
 	var/obj/item/weapon/rig/wearing_rig // This is very not good, but it's much much better than calling get_rig() every update_canmove() call.
 	var/last_push_time					//For human_attackhand.dm, keeps track of the last use of disarm
@@ -16,7 +17,6 @@
 	var/last_spit = 0 					//Timestamp.
 
 	var/can_defib = 1					//Horrible damage (like beheadings) will prevent defibbing organics.
-	var/hiding = 0						// If the mob is hiding or not. Makes them appear under tables and the like.
 	var/active_regen = FALSE //Used for the regenerate proc in human_powers.dm
 	var/active_regen_delay = 300
 
@@ -40,9 +40,8 @@
 
 	nutrition = rand(200,400)
 
-	make_hud_overlays()
-
 	human_mob_list |= src
+
 	..()
 
 	hide_underwear.Cut()
@@ -53,19 +52,11 @@
 		dna.ready_dna(src)
 		dna.real_name = real_name
 		sync_organ_dna()
-	make_blood()
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
 	for(var/organ in organs)
 		qdel(organ)
-
-	LAZYCLEARLIST(list_layers)
-	list_layers = null //Be free!
-	LAZYCLEARLIST(list_body)
-	list_body = null
-	LAZYCLEARLIST(list_huds)
-	list_huds = null
 	qdel_null(nif)	//VOREStation Add
 	qdel_null_list(vore_organs) //VOREStation Add
 	return ..()
@@ -104,6 +95,8 @@
 				stat("Chemical Storage", mind.changeling.chem_charges)
 				stat("Genetic Damage Time", mind.changeling.geneticdamage)
 				stat("Re-Adaptations", "[mind.changeling.readapts]/[mind.changeling.max_readapts]")
+	if(species)
+		species.Stat(src)
 
 /mob/living/carbon/human/ex_act(severity)
 	if(!blinded)
@@ -406,12 +399,9 @@
 
 			var/modified = 0
 			var/perpname = "wot"
-			if(wear_id)
-				var/obj/item/weapon/card/id/I = wear_id.GetID()
-				if(I)
-					perpname = I.registered_name
-				else
-					perpname = name
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
 				perpname = name
 
@@ -445,14 +435,11 @@
 			var/perpname = "wot"
 			var/read = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.security)
@@ -475,14 +462,11 @@
 			var/perpname = "wot"
 			var/read = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.security)
@@ -503,14 +487,11 @@
 	if (href_list["secrecordadd"])
 		if(hasHUD(usr,"security"))
 			var/perpname = "wot"
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.security)
@@ -534,14 +515,11 @@
 			var/perpname = "wot"
 			var/modified = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
@@ -573,14 +551,11 @@
 			var/perpname = "wot"
 			var/read = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.medical)
@@ -604,14 +579,11 @@
 			var/perpname = "wot"
 			var/read = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.medical)
@@ -632,14 +604,11 @@
 	if (href_list["medrecordadd"])
 		if(hasHUD(usr,"medical"))
 			var/perpname = "wot"
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.medical)
@@ -1034,7 +1003,7 @@
 		if(!blood_DNA[M.dna.unique_enzymes])
 			blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
 	hand_blood_color = blood_color
-	src.update_inv_gloves()	//handles bloody hands overlays and updating
+	update_bloodied()
 	verbs += /mob/living/carbon/human/proc/bloody_doodle
 	return 1 //we applied blood to the item
 
@@ -1044,14 +1013,30 @@
 	return md5(dna.uni_identity)
 
 /mob/living/carbon/human/clean_blood(var/washshoes)
-	.=..()
+	. = ..()
+
 	gunshot_residue = null
-	if(washshoes && !shoes && istype(feet_blood_DNA, /list) && feet_blood_DNA.len)
-		feet_blood_color = null
-		feet_blood_DNA.Cut()
+
+	//Always do hands (or whatever's on our hands)
+	if(gloves)
+		gloves.clean_blood()
+		update_inv_gloves()
+		gloves.germ_level = 0
+	else
+		bloody_hands = 0
+		germ_level = 0
+
+	//Sometimes do shoes if asked (or feet if no shoes)
+	if(washshoes && shoes)
+		shoes.clean_blood()
+		update_inv_shoes()
+		shoes.germ_level = 0
+	else if(washshoes && (feet_blood_color || LAZYLEN(feet_blood_DNA)))
+		LAZYCLEARLIST(feet_blood_DNA)
 		feet_blood_DNA = null
-		update_inv_shoes(1)
-		return 1
+		feet_blood_color = null
+
+	update_bloodied()
 
 /mob/living/carbon/human/get_visible_implants(var/class = 0)
 
@@ -1128,7 +1113,7 @@
 
 	if(!dna)
 		if(!new_species)
-			new_species = "Human"
+			new_species = SPECIES_HUMAN
 	else
 		if(!new_species)
 			new_species = dna.species
@@ -1137,7 +1122,7 @@
 
 	// No more invisible screaming wheelchairs because of set_species() typos.
 	if(!all_species[new_species])
-		new_species = "Human"
+		new_species = SPECIES_HUMAN
 
 	if(species)
 
@@ -1175,7 +1160,7 @@
 	if(!(gender in species.genders))
 		gender = species.genders[1]
 
-	icon_state = lowertext(species.name)
+	//icon_state = lowertext(species.name) //Necessary?
 
 	species.create_organs(src)
 
@@ -1185,6 +1170,7 @@
 
 	spawn(0)
 		if(regen_icons) regenerate_icons()
+		make_blood()
 		if(vessel.total_volume < species.blood_volume)
 			vessel.maximum_volume = species.blood_volume
 			vessel.add_reagent("blood", species.blood_volume - vessel.total_volume)
@@ -1200,6 +1186,9 @@
 		if(hud_used)
 			qdel(hud_used)
 		hud_used = new /datum/hud(src)
+
+	//A slew of bits that may be affected by our species change
+	regenerate_icons()
 
 	if(species)
 		//if(mind) //VOREStation Removal
@@ -1277,9 +1266,12 @@
 	if(!affecting)
 		. = 0
 		fail_msg = "They are missing that limb."
-	else if (affecting.robotic >= ORGAN_ROBOT)
+	else if (affecting.robotic == ORGAN_ROBOT)
 		. = 0
 		fail_msg = "That limb is robotic."
+	else if (affecting.robotic >= ORGAN_LIFELIKE)
+		. = 0
+		fail_msg = "Your needle refuses to penetrate more than a short distance..."
 	else
 		switch(target_zone)
 			if(BP_HEAD)
@@ -1563,19 +1555,15 @@
 		var/turf/T = get_turf(src)
 		var/obj/item/clothing/accessory/permit/drone/permit = new(T)
 		permit.set_name(real_name)
-		equip_to_slot_or_del(permit, slot_in_backpack)
+		equip_to_appropriate_slot(permit) // If for some reason it can't find room, it'll still be on the floor.
 
-/mob/living/carbon/human/proc/update_icon_special(var/mutable_appearance/ma, var/update_icons = TRUE) //For things such as teshari hiding and whatnot.
-	if(hiding) // Hiding? Carry on.
-		if(stat == DEAD || paralysis || weakened || stunned) //stunned/knocked down by something that isn't the rest verb? Note: This was tried with INCAPACITATION_STUNNED, but that refused to work.
-			hiding = FALSE //No hiding for you. Mob layer should be updated naturally, but it actually doesn't.
+/mob/living/carbon/human/proc/update_icon_special() //For things such as teshari hiding and whatnot.
+	if(status_flags & HIDING) // Hiding? Carry on.
+		if(stat == DEAD || paralysis || weakened || stunned || restrained()) //stunned/knocked down by something that isn't the rest verb? Note: This was tried with INCAPACITATION_STUNNED, but that refused to work.
+			reset_plane_and_layer()
+			status_flags &= ~HIDING
 		else
-			ma.layer = HIDING_LAYER
-
-	//Can put special species icon update proc calls here, if any are ever invented.
-
-	if(update_icons)
-		update_icons()
+			layer = HIDING_LAYER
 
 /mob/living/carbon/human/proc/get_display_species()
 	//Shows species in tooltip
@@ -1603,12 +1591,9 @@
 	if(hasHUD(user,"security"))
 		//Try to find their name
 		var/perpname
-		if(wear_id)
-			var/obj/item/weapon/card/id/I = wear_id.GetID()
-			if(I)
-				perpname = I.registered_name
-			else
-				perpname = name
+		var/obj/item/weapon/card/id/I = GetIdCard()
+		if(I)
+			perpname = I.registered_name
 		else
 			perpname = name
 		//Try to find their record

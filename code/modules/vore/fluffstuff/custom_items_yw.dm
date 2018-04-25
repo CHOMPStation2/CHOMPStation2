@@ -239,6 +239,65 @@
 /obj/item/weapon/implanter/reagent_generator/natalya
 	implant_type = /obj/item/weapon/implant/reagent_generator/tempest/natalya
 
+//Eryn Wolfe
+
+/obj/item/weapon/fluff/chemset
+	name = "Eryn's chemistry set"
+	desc = "A small box with a open compartment, some buttons, a disk drive, and flashing lights. On the back is a small metal plaque with the name 'Eryn Wofle' on it."
+	w_class = 1.0
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "chemset"
+
+//Mitsuko Jiao
+
+/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a
+	name = "Mitsuko's modkit Mk1"
+	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/device/healthanalyzer
+	to_suit = /obj/item/device/healthanalyzer/fluff/jiao_health
+
+/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/b
+	name = "Mitsuko's modkit Mk2"
+	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/device/healthanalyzer/improved
+	to_suit = /obj/item/device/healthanalyzer/improved/fluff/jiao_health
+
+/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c
+	name = "Mitsuko's modkit Mk3"
+	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/device/healthanalyzer/advanced
+	to_suit = /obj/item/device/healthanalyzer/advanced/fluff/jiao_health
+
+/obj/item/device/healthanalyzer/fluff/jiao_health
+	name = "Kanghu medical scanner MK1"
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a basic unit."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "scanner_mk1"
+
+/obj/item/device/healthanalyzer/improved/fluff/jiao_health
+	name = "Kanghu medical scanner MK2"
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a improved unit."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "scanner_mk2"
+
+/obj/item/device/healthanalyzer/advanced/fluff/jiao_health
+	name = "Kanghu medical scanner MK3"
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a advanced unit."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "scanner_mk3"
+
 // **************
 // VanesaFancyFin
 // **************
@@ -256,12 +315,12 @@
 		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
 		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
 		)
-		
+
 // **************
 // Belsima
 // **************
 
-//I'm going to fix this code later. 
+//I'm going to fix this code later.
 
 /obj/item/weapon/implant/reagent_generator/belle/ysaline
 	name = "lactation implant"

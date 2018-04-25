@@ -248,6 +248,31 @@
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/lena_collar)
 
+//Eryn Wolfe
+
+/obj/item/weapon/storage/box/fluff/eryn
+	name = "Eryn's kit"
+	desc = "A kit containing Eryn's equipment."
+	has_items = list(
+		/obj/item/weapon/fluff/chemset)
+
+//Mitsuko Jiao
+
+/obj/item/weapon/storage/box/fluff/jiao
+	name = "Mitsuko's kit"
+	desc = "A kit containing Mituko's equipment"
+	has_items = list(
+		/obj/item/clothing/suit/storage/toggle/labcoat/fluff/jiao_labcoat,
+		/obj/item/clothing/glasses/hud/health/aviator/fluff/jiao_glasses,
+		/obj/item/clothing/under/rank/medical/fluff/jiao_uniform,
+		/obj/item/clothing/head/beret/fluff/jiao_beret,
+		/obj/item/clothing/shoes/boots/jackboots/fluff/jiao_boots,
+		/obj/item/weapon/storage/belt/medical/fluff/jiao_belt,
+		/obj/item/clothing/gloves/sterile/fluff/jiao_gloves,
+		/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a,
+		/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/b,
+		/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c)
+
 // ************
 // RadiantFlash
 // ************
@@ -304,3 +329,30 @@
 	desc = "A kit containing Quanah's equipment."
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/quanah_collar)
+
+// ********
+// MaxieFoxie
+// ********
+
+//Maxie Drake
+
+/obj/item/weapon/storage/box/fluff/maxie
+	name = "Maxie's box"
+	desc = "a kit containing Maxie's equipment."
+	has_items = list(
+		/obj/item/clothing/accessory/fluff/maxie_collar)
+
+// ********
+// Paint It Red
+// ********
+
+//Noel Walsh
+
+/obj/item/weapon/storage/box/fluff/noel
+	name = "Noel's box"
+	desc = "a kit containing Maxie's equipment."
+	has_items = list (
+		/obj/item/clothing/glasses/hud/health/aviator/prescription/fluff/noel_glasses,
+		/obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie,
+		/obj/item/clothing/ears/earings/fluff/noel_earings,
+		/obj/item/clothing/under/fluff/noel_uniform)

@@ -18,7 +18,7 @@
 
 	var/dat = picker_holder.gen_ui(src)
 
-	picker_holder.popup = new(src, "insidePanel","Inside!", 400, 600, picker_holder)
+	picker_holder.popup = new(src, "insidePanel","Inside!", 450, 700, picker_holder)
 	picker_holder.popup.set_content(dat)
 	picker_holder.popup.open()
 	src.openpanel = 1
@@ -31,7 +31,7 @@
 
 		var/dat = picker_holder.gen_ui(src)
 
-		picker_holder.popup = new(src, "insidePanel","Inside!", 400, 600, picker_holder)
+		picker_holder.popup = new(src, "insidePanel","Inside!", 450, 700, picker_holder)
 		picker_holder.popup.set_content(dat)
 		picker_holder.popup.open()
 
@@ -56,7 +56,7 @@
 
 /datum/vore_look/proc/gen_ui(var/mob/living/user)
 	var/dat
-	
+
 	var/atom/userloc = user.loc
 	if (isbelly(userloc))
 		var/obj/belly/inside_belly = userloc
@@ -110,46 +110,44 @@
 				spanstyle = ""
 			if(DM_DIGEST)
 				spanstyle = "color:red;"
-			if(DM_ITEMWEAK)
-				spanstyle = "color:red;"
-			if(DM_STRIPDIGEST)
-				spanstyle = "color:red;"
-			if(DM_HEAL)
-				spanstyle = "color:green;"
 			if(DM_ABSORB)
 				spanstyle = "color:purple;"
 			if(DM_DRAIN)
 				spanstyle = "color:purple;"
+			if(DM_HEAL)
+				spanstyle = "color:green;"
 			if(DM_SHRINK)
 				spanstyle = "color:purple;"
 			if(DM_GROW)
 				spanstyle = "color:purple;"
 			if(DM_SIZE_STEAL)
 				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_MALE)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_HAIR_AND_EYES)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_FEMALE)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_KEEP_GENDER)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR_EGG)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_REPLICA)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_REPLICA_EGG)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_KEEP_GENDER_EGG)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_MALE_EGG)
-				spanstyle = "color:purple;"
-			if(DM_TRANSFORM_FEMALE_EGG)
-				spanstyle = "color:purple;"
-			if(DM_EGG)
-				spanstyle = "color:purple;"
+			if(DM_TRANSFORM)
+				switch(B.tf_mode)
+					if(DM_TRANSFORM_MALE)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_HAIR_AND_EYES)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_FEMALE)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_KEEP_GENDER)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR_EGG)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_REPLICA)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_REPLICA_EGG)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_KEEP_GENDER_EGG)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_MALE_EGG)
+						spanstyle = "color:purple;"
+					if(DM_TRANSFORM_FEMALE_EGG)
+						spanstyle = "color:purple;"
+					if(DM_EGG)
+						spanstyle = "color:purple;"
 
 		dat += "<span style='[spanstyle]'> ([B.contents.len])</span></a></li>"
 
@@ -193,7 +191,19 @@
 
 		//Digest Mode Button
 		dat += "<br><a href='?src=\ref[src];b_mode=\ref[selected]'>Belly Mode:</a>"
-		dat += " [selected.digest_mode]"
+		var/mode = selected.digest_mode
+		dat += " [mode == DM_TRANSFORM ? selected.tf_mode : mode]"
+
+		//Mode addons button
+		dat += "<br><a href='?src=\ref[src];b_addons=\ref[selected]'>Mode Addons:</a>"
+		var/list/flag_list = list()
+		for(var/flag_name in selected.mode_flag_list)
+			if(selected.mode_flags & selected.mode_flag_list[flag_name])
+				flag_list += flag_name
+		if(flag_list.len)
+			dat += " [english_list(flag_list)]"
+		else
+			dat += " None"
 
 		//Belly verb
 		dat += "<br><a href='?src=\ref[src];b_verb=\ref[selected]'>Vore Verb:</a>"
@@ -288,6 +298,7 @@
 	//Under the last HR, save and stuff.
 	dat += "<a href='?src=\ref[src];saveprefs=1'>Save Prefs</a>"
 	dat += "<a href='?src=\ref[src];refresh=1'>Refresh</a>"
+	dat += "<a href='?src=\ref[src];applyprefs=1'>Reload Slot Prefs</a>"
 
 	//Returns the dat html to the vore_look
 	return dat
@@ -410,7 +421,7 @@
 					var/obj/belly/choice = input("Move all where?","Select Belly") as null|anything in user.vore_organs
 					if(!choice)
 						return 0
-								
+
 					for(var/atom/movable/tgt in selected)
 						to_chat(tgt,"<span class='warning'>You're squished from [user]'s [lowertext(selected)] to their [lowertext(choice.name)]!</span>")
 						selected.transfer_contents(tgt, choice, 1)
@@ -496,15 +507,31 @@
 		selected.name = new_name
 
 	if(href_list["b_mode"])
-		var/list/menu_list = selected.digest_modes
+		var/list/menu_list = selected.digest_modes.Copy()
 		if(istype(usr,/mob/living/carbon/human))
-			menu_list += selected.transform_modes
+			menu_list += DM_TRANSFORM
 
 		var/new_mode = input("Choose Mode (currently [selected.digest_mode])") as null|anything in menu_list
 		if(!new_mode)
 			return 0
+		
+		if(new_mode == DM_TRANSFORM) //Snowflek submenu
+			var/list/tf_list = selected.transform_modes
+			var/new_tf_mode = input("Choose TF Mode (currently [selected.tf_mode])") as null|anything in tf_list
+			if(!new_tf_mode)
+				return 0
+			selected.tf_mode = new_tf_mode
+		
 		selected.digest_mode = new_mode
 		selected.items_preserved.Cut() //Re-evaltuate all items in belly on belly-mode change
+
+	if(href_list["b_addons"])
+		var/list/menu_list = selected.mode_flag_list.Copy()
+		var/toggle_addon = input("Toggle Addon") as null|anything in menu_list
+		if(!toggle_addon)
+			return 0
+		selected.mode_flags ^= selected.mode_flag_list[toggle_addon]
+		selected.items_preserved.Cut() //Re-evaltuate all items in belly on addon toggle
 
 	if(href_list["b_desc"])
 		var/new_desc = html_encode(input(usr,"Belly Description ([BELLIES_DESC_MAX] char limit):","New Description",selected.desc) as message|null)
@@ -602,7 +629,7 @@
 			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_bulge)
 			selected.bulge_size = (new_bulge/100)
-	
+
 	if(href_list["b_grow_shrink"])
 		var/new_grow = input(user, "Choose the size that prey will be grown/shrunk to, ranging from 25% to 200%", "Set Growth Shrink Size.", selected.shrink_grow_size) as num|null
 		if (new_grow == null)
@@ -679,7 +706,7 @@
 		var/alert = alert("Are you sure you want to delete your [lowertext(selected.name)]?","Confirmation","Delete","Cancel")
 		if(!alert == "Delete")
 			return 0
-		
+
 		var/failure_msg = ""
 
 		var/dest_for //Check to see if it's the destination of another vore organ.
@@ -696,7 +723,7 @@
 			failure_msg += "This belly is marked as undeletable. "
 		if(user.vore_organs.len == 1)
 			failure_msg += "You must have at least one belly. "
-		
+
 		if(failure_msg)
 			alert(user,failure_msg,"Error!")
 			return 0
@@ -711,11 +738,20 @@
 		else
 			to_chat(user,"<span class='notice'>Virgo-specific preferences saved!</span>")
 
+	if(href_list["applyprefs"])
+		var/alert = alert("Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation","Reload","Cancel")
+		if(!alert == "Reload")
+			return 0
+		if(!user.apply_vore_prefs())
+			alert("ERROR: Virgo-specific preferences failed to apply!","Error")
+		else
+			to_chat(user,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
+
 	if(href_list["setflavor"])
 		var/new_flavor = html_encode(input(usr,"What your character tastes like (40ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",user.vore_taste) as text|null)
 		if(!new_flavor)
 			return 0
-		
+
 		new_flavor = readd_quotes(new_flavor)
 		if(length(new_flavor) > FLAVOR_MAX)
 			alert("Entered flavor/taste text too long. [FLAVOR_MAX] character limit.","Error!")

@@ -549,7 +549,7 @@
 /datum/reagent/corophizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	M.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_SUPER)
-	
+
 	//Based roughly on Levofloxacin's rather severe side-effects
 	if(prob(20))
 		M.Confuse(5)
@@ -561,7 +561,7 @@
 		M.hallucination = max(M.hallucination, 10)
 	
 	//One of the levofloxacin side effects is 'spontaneous tendon rupture', which I'll immitate here. 1:1000 chance, so, pretty darn rare.
-	if(ishuman(M) && rand(1,1000) == 1)
+	if(ishuman(M) && rand(1,10000) == 1)
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/external/eo = pick(H.organs) //Misleading variable name, 'organs' is only external organs
 		eo.fracture()

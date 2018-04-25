@@ -43,8 +43,8 @@
 	containername = "Moghes imports crate"
 	contraband = 1
 
-/datum/supply_packs/security/bolt_rifles_militia
- 	name = "Surplus militia rifles"
+/datum/supply_packs/munitions/bolt_rifles_militia
+ 	name = "Weapon - Surplus militia rifles"
  	contains = list(
  			/obj/item/weapon/gun/projectile/shotgun/pump/rifle = 3,
  			/obj/item/ammo_magazine/clip/c762 = 6
@@ -52,7 +52,7 @@
  	cost = 1000
  	contraband = 1
  	containertype = /obj/structure/closet/crate/secure/weapon
- 	containername = "Weapons crate"
+ 	containername = "Ballistic weapons crate"
 
 /datum/supply_packs/randomised/misc/telecrate
 	name = "Confiscated equipment"

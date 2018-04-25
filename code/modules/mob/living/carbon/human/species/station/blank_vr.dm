@@ -7,7 +7,7 @@
 	var/trashcan = 0 //It's always sunny in the wrestling ring.
 
 /datum/species/custom
-	name = "Custom Species"
+	name = SPECIES_CUSTOM
 	name_plural = "Custom"
 	var/base_species = "Human"
 
@@ -87,7 +87,6 @@
 
 	//Set up a mob
 	H.species = new_copy
-	H.icon_state = lowertext(new_copy.get_bodytype())
 
 	if(new_copy.holder_type)
 		H.holder_type = new_copy.holder_type

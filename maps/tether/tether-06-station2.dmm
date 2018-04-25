@@ -137,7 +137,7 @@
 /area/security/brig/visitation)
 "as" = (
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Warden's Office"
+	c_tag = "SEC - Brig Visitation"
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/visitation)
@@ -506,7 +506,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/window/brigdoor/southleft{
-	tag = "icon-leftsecure (NORTH)";
 	name = "Cell 3";
 	icon_state = "leftsecure";
 	dir = 1;
@@ -558,8 +557,7 @@
 	icon_state = "leftsecure";
 	id = "Cell 4";
 	name = "Cell 4";
-	req_access = list(2);
-	tag = "icon-leftsecure (NORTH)"
+	req_access = list(2)
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -834,7 +832,9 @@
 /area/security/brig)
 "bo" = (
 /obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/security/brig)
 "bp" = (
@@ -989,10 +989,6 @@
 	pixel_x = -22;
 	pixel_y = 0
 	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/security/brig)
-"bJ" = (
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/security/brig)
 "bK" = (
@@ -1413,7 +1409,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Warden's Office"
+	c_tag = "SEC - Brig Central"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/security/brig)
@@ -1432,21 +1428,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/security/brig)
-"cw" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/security/brig)
 "cx" = (
@@ -2220,7 +2201,6 @@
 	name = "Prisoner's Locker"
 	},
 /obj/item/clothing/suit/storage/apron,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/security/brig)
 "dQ" = (
@@ -2541,31 +2521,6 @@
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating,
-/area/security/brig)
-"ev" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id = "security_lockdown";
-	name = "Security Blast Doors";
-	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/security/brig)
@@ -2992,7 +2947,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
@@ -3026,7 +2980,6 @@
 /area/security/prison)
 "fa" = (
 /obj/structure/stairs{
-	tag = "icon-default (WEST)";
 	icon_state = "";
 	dir = 8
 	},
@@ -3313,10 +3266,6 @@
 "fF" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
@@ -3333,9 +3282,6 @@
 "fG" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -3358,9 +3304,6 @@
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 9
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/camera/network/security{
 	dir = 1
 	},
@@ -3378,10 +3321,6 @@
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "fI" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
 	},
@@ -3571,7 +3510,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass_security{
 	name = "Security Processing";
 	req_access = list(1)
@@ -3795,7 +3733,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/yellow/bordercorner{
-	tag = "icon-bordercolorcorner (NORTH)";
 	icon_state = "bordercolorcorner";
 	dir = 1
 	},
@@ -3860,7 +3797,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
@@ -4111,7 +4047,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
@@ -4318,7 +4253,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
 "hw" = (
@@ -4472,7 +4406,6 @@
 /area/engineering/locker_room)
 "hM" = (
 /obj/effect/floor_decal/corner_steel_grid{
-	tag = "icon-steel_grid (EAST)";
 	icon_state = "steel_grid";
 	dir = 4
 	},
@@ -4606,9 +4539,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/disposalpipe/junction,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
@@ -8516,8 +8452,7 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
 	icon_state = "extinguisher_closed";
-	pixel_y = -32;
-	tag = "icon-extinguisher_closed (NORTH)"
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/starboard)
@@ -8938,6 +8873,7 @@
 /area/ai_monitored/storage/eva)
 "pa" = (
 /obj/machinery/door/airlock/glass_command{
+	id_tag = "evadoors";
 	name = "E.V.A.";
 	req_one_access = list(18)
 	},
@@ -8958,6 +8894,7 @@
 /area/ai_monitored/storage/eva)
 "pc" = (
 /obj/machinery/door/airlock/glass_command{
+	id_tag = "evadoors";
 	name = "E.V.A.";
 	req_one_access = list(18)
 	},
@@ -9112,6 +9049,7 @@
 "pn" = (
 /obj/structure/bed/padded,
 /obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Containment One";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -10013,7 +9951,6 @@
 /area/medical/virology)
 "qI" = (
 /obj/machinery/door/window/westright{
-	tag = "icon-right (NORTH)";
 	name = "Virology Isolation Room One";
 	icon_state = "right";
 	dir = 1;
@@ -10028,8 +9965,7 @@
 	dir = 1;
 	icon_state = "right";
 	name = "Virology Isolation Room Two";
-	req_access = list(39);
-	tag = "icon-right (NORTH)"
+	req_access = list(39)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -10191,7 +10127,6 @@
 /area/vacant/vacant_restaurant_upper)
 "rb" = (
 /obj/structure/disposalpipe/broken{
-	tag = "icon-pipe-b (EAST)";
 	icon_state = "pipe-b";
 	dir = 4
 	},
@@ -10795,8 +10730,7 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
 	icon_state = "extinguisher_closed";
-	pixel_y = -32;
-	tag = "icon-extinguisher_closed (NORTH)"
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/port)
@@ -11290,8 +11224,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1;
-	icon_state = "map";
-	tag = "icon-manifold-f (NORTH)"
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_monitored/storage/eva)
@@ -11630,8 +11563,7 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
-	icon_state = "intact";
-	tag = "icon-intact-f (NORTHEAST)"
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_monitored/storage/eva)
@@ -11952,8 +11884,7 @@
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
-	icon_state = "map";
-	tag = "icon-manifold-f (EAST)"
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_monitored/storage/eva)
@@ -12222,8 +12153,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
-	icon_state = "intact";
-	tag = "icon-intact-f (NORTHEAST)"
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
@@ -12716,7 +12646,7 @@
 	dir = 2
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Examination Room"
+	c_tag = "MED - Morgue North"
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -12759,8 +12689,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 6;
-	icon_state = "intact";
-	tag = "icon-intact (SOUTHEAST)"
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virologyaccess)
@@ -13566,8 +13495,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9;
-	icon_state = "intact";
-	tag = "icon-intact (NORTHEAST)"
+	icon_state = "intact"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13738,8 +13666,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10;
-	icon_state = "intact";
-	tag = "icon-intact-f (SOUTHWEST)"
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled,
 /area/medical/biostorage)
@@ -13950,8 +13877,7 @@
 "xv" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
-	icon_state = "map";
-	tag = "icon-manifold-f (EAST)"
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled,
 /area/medical/biostorage)
@@ -14060,8 +13986,7 @@
 /obj/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9;
-	icon_state = "intact";
-	tag = "icon-intact (NORTHEAST)"
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/medical/virologyaccess)
@@ -14120,6 +14045,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/network/command{
+	c_tag = "Command Meeting Room West";
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -14470,8 +14396,8 @@
 /area/bridge/meeting_room)
 "ys" = (
 /obj/machinery/camera/network/command{
-	dir = 9;
-	c_tag = "Gateway Access"
+	c_tag = "Head of Personnel Office";
+	dir = 9
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -14487,8 +14413,7 @@
 "yu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9;
-	icon_state = "intact";
-	tag = "icon-intact-f (NORTHWEST)"
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled,
 /area/medical/biostorage)
@@ -15155,7 +15080,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass/hidden{
-	tag = "icon-door_open";
 	icon_state = "door_open";
 	dir = 2
 	},
@@ -15529,8 +15453,7 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
 	icon_state = "extinguisher_closed";
-	pixel_y = -32;
-	tag = "icon-extinguisher_closed (NORTH)"
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/escape/medical_escape_pod_hallway)
@@ -15607,8 +15530,7 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5;
-	icon_state = "intact";
-	tag = "icon-intact (NORTHEAST)"
+	icon_state = "intact"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -16464,8 +16386,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5;
-	icon_state = "intact";
-	tag = "icon-intact (NORTHEAST)"
+	icon_state = "intact"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
@@ -16720,7 +16641,7 @@
 "BD" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Surgery Hallway";
+	c_tag = "MED - Break Room West";
 	dir = 4
 	},
 /obj/machinery/washing_machine,
@@ -16780,7 +16701,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Virology Quarantine Airlock";
+	c_tag = "MED - Break Room East";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -17340,7 +17261,7 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Surgery Hallway";
+	c_tag = "MED - Break Room Southwest";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -17546,6 +17467,83 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/crew_quarters/medbreak)
+"Ev" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/mineral/vacuum,
+/area/mine/explored/upper_level)
+"Ew" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/security/prison)
+"Fo" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/security/prison)
+"FD" = (
+/obj/structure/bed/padded,
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Containment Two";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
+"IK" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/security/prison)
+"IO" = (
+/obj/structure/disposaloutlet{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/airless,
+/area/space)
+"Mq" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/airless,
+/area/space)
+"RT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/mineral/vacuum,
+/area/mine/explored/upper_level)
+"SI" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/mineral/vacuum,
+/area/mine/explored/upper_level)
+"TA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/security/brig)
 
 (1,1,1) = {"
 aa
@@ -23302,27 +23300,27 @@ ab
 ab
 ab
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ae
-ah
-aG
-aZ
+Ev
+SI
+SI
+SI
+SI
+SI
+SI
+SI
+SI
+IK
+Ew
+Fo
+TA
 bo
-bJ
-bJ
-cw
-bJ
-bJ
+bK
+bK
+cp
+bK
+bK
 dP
-ev
+ew
 eY
 fF
 ae
@@ -23420,11 +23418,11 @@ aa
 aa
 ab
 ab
-ab
-ab
-ab
-ac
-ac
+IO
+Mq
+Mq
+SI
+RT
 ac
 ac
 ac
@@ -25781,7 +25779,7 @@ mY
 nO
 os
 oW
-pn
+FD
 pV
 qH
 ru

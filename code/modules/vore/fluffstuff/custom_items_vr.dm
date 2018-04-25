@@ -330,68 +330,6 @@
 	configured = 1
 	to_chat(user, "<span class='notice'>Card settings set.</span>")
 
-//arokha:Aronai Kadigan - Bloo glasses
-/obj/item/clothing/glasses/omnihud/med/fluff/aronai
-	name = "AR-K glasses"
-	desc = "The KHI-63-K AR glasses are KHI's normal AR shades for people who don't want implanted AR. \
-	These seem pretty fully featured in terms of medical software."
-	mode = "med"
-	flash_prot = 2
-
-	icon = 'icons/vore/custom_items_vr.dmi'
-	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "arohud"
-
-/obj/item/clothing/glasses/omnihud/med/fluff/aronai/verb/toggle_on()
-	set name = "Toggle AR-K HUD"
-	set category = "Object"
-	set desc = "Toggle on/off the AR-K HUD projection."
-	set src in usr
-
-	if(!ishuman(usr)) return
-
-	var/mob/living/carbon/human/H = usr
-
-	if(icon_state == initial(icon_state))
-		icon_state = "[initial(icon_state)]_on"
-		to_chat(H, "<span class='notice'>You ENABLE the AR-K HUD.</span>")
-	else
-		icon_state = initial(icon_state)
-		to_chat(H, "<span class='notice'>You DISABLE the AR-K HUD.</span>")
-
-	H.update_inv_glasses()
-
-//arokha:Aronai Kadigan - Fluff hypospray
-/obj/item/weapon/reagent_containers/hypospray/vial/fluff/aronai
-	name = "worn hypospray"
-	desc = "This hypospray seems a bit well-used. The blue band indicates it's from the CentCom medical division. There's an 'A' scratched into the bottom."
-	icon = 'icons/vore/custom_items_vr.dmi'
-	icon_state = "aro_hypo"
-
-/obj/item/weapon/reagent_containers/hypospray/vial/fluff/aronai/New()
-	..()
-	loaded_vial.name = "[initial(loaded_vial.name)] (tricord)"
-	loaded_vial.desc = "30 Tricordrazine"
-	reagents.add_reagent("tricordrazine", 30)
-
-//arokha:Aronai Kadigan - Vials to go with mk2 hypo
-/obj/item/weapon/reagent_containers/glass/beaker/vial/fluff/aro_st
-	name = "vial (stabilize)"
-	desc = "10 Tricordrazine, 10 Dexalin Plus, 5 Tramadol, 5 Inaprovaline"
-	prefill = list("tricordrazine"=10,"dexalinp"=10,"tramadol"=5,"inaprovaline"=5)
-/obj/item/weapon/reagent_containers/glass/beaker/vial/fluff/aro_bt
-	name = "vial (brute)"
-	desc = "25 Bicaridine, 5 Tricordrazine"
-	prefill = list("bicaridine"=25,"tricordrazine"=5)
-/obj/item/weapon/reagent_containers/glass/beaker/vial/fluff/aro_bu
-	name = "vial (burn)"
-	desc = "10 Kelotane, 15 Dermaline, 5 Tricordrazine"
-	prefill = list("kelotane"=10,"dermaline"=15,"tricordrazine"=5)
-/obj/item/weapon/reagent_containers/glass/beaker/vial/fluff/aro_tx
-	name = "vial (toxins)"
-	desc = "25 Dylovene, 2 Hyronalin, 3 Tricordrazine"
-	prefill = list("anti_toxin"=25,"hyronalin"=2,"tricordrazine"=3)
-
 //Swat43:Fortune Bloise
 /obj/item/weapon/storage/backpack/satchel/fluff/swat43bag
 	name = "Coloured Satchel"
@@ -1509,24 +1447,27 @@
 
 	//Destination beacon vore checking
 	var/atom/real_dest = dT
-	var/televored = FALSE //UR GONNA GET VORED
 
 	var/atom/real_loc = destination.loc
 	if(isbelly(real_loc))
 		real_dest = real_loc
-		televored = TRUE
 	if(isliving(real_loc))
 		var/mob/living/L = real_loc
 		if(L.vore_selected)
 			real_dest = L.vore_selected
-			televored = TRUE
 		else if(L.vore_organs.len)
 			real_dest = pick(L.vore_organs)
+
+	//Confirm televore
+	var/televored = FALSE
+	if(isbelly(real_dest))
+		var/obj/belly/B = real_dest
+		if(!target.can_be_drop_prey && B.owner != user)
+			to_chat(target,"<span class='warning'>\The [src] narrowly avoids teleporting you right into \a [lowertext(real_dest.name)]!</span>")
+			real_dest = dT //Nevermind!
+		else
 			televored = TRUE
-			
-	//Televore fluff stuff
-	if(televored)
-		to_chat(target,"<span class='warning'>\The [src] teleports you right into \a [lowertext(real_dest.name)]!</span>")
+			to_chat(target,"<span class='warning'>\The [src] teleports you right into \a [lowertext(real_dest.name)]!</span>")
 
 	//Phase-out effect
 	phase_out(target,get_turf(target))
@@ -1557,7 +1498,7 @@
 		ready = 1
 		update_icon()
 
-	logged_events["[world.time]"] = "[user] teleported [target] to [real_dest] [televored ? "(Belly: [lowertext(real_loc.name)])" : null]"
+	logged_events["[world.time]"] = "[user] teleported [target] to [real_dest] [televored ? "(Belly: [lowertext(real_dest.name)])" : null]"
 
 /obj/item/device/perfect_tele/proc/phase_out(var/mob/M,var/turf/T)
 
@@ -1959,7 +1900,7 @@
 		user.visible_message(pick("<span class='danger'>\The [user] is slitting \his stomach open with \the [src]! It looks like [tempgender] trying to commit seppuku.</span>",\
 			"<span class='danger'>\The [user] is falling on \the [src]! It looks like [tempgender] trying to commit suicide.</span>"))
 		return (BRUTELOSS|FIRELOSS)
- 
+
 /obj/item/weapon/melee/fluffstuff/awoosword
 	name = "Wolfgirl Sword Replica"
 	desc = "A replica of a large, scimitar-like sword with a dull edge. Ceremonial... until it isn't."
@@ -2003,3 +1944,15 @@
 	..()
 	attack_verb = list("bapped", "thwapped", "bonked", "whacked")
 	icon_state = initial(icon_state)
+
+//SilencedMP5A5 - Serdykov Antoz
+/obj/item/device/modkit_conversion/hasd
+	name = "HASD EVA modification kit"
+	desc = "A kit containing all the needed tools and parts to modify a suit and helmet into something a HASD unit can use for EVA operations."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_helmet = /obj/item/clothing/head/helmet/space/void/security
+	from_suit = /obj/item/clothing/suit/space/void/security/taur
+	to_helmet = /obj/item/clothing/head/helmet/space/void/security/hasd
+	to_suit = /obj/item/clothing/suit/space/void/security/hasd

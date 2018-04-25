@@ -76,8 +76,7 @@
 "am" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8;
-	icon_state = "map";
-	tag = "icon-manifold-f (WEST)"
+	icon_state = "map"
 	},
 /obj/machinery/meter{
 	frequency = 1443;
@@ -121,7 +120,7 @@
 "ap" = (
 /obj/structure/table/steel,
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Vault";
+	c_tag = "SEC - Red Armory West";
 	dir = 4
 	},
 /obj/item/weapon/storage/box/shotgunshells{
@@ -206,7 +205,7 @@
 /obj/structure/table/steel,
 /obj/item/weapon/gun/energy/ionrifle,
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Security EVA";
+	c_tag = "SEC - Red Armory East";
 	dir = 9
 	},
 /turf/simulated/floor/reinforced,
@@ -322,7 +321,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
 	icon_state = "map";
-	tag = "icon-manifold-f (EAST)"
+	
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -506,7 +505,9 @@
 	icon_state = "bordercolor";
 	dir = 1
 	},
-/obj/machinery/camera/network/security,
+/obj/machinery/camera/network/security{
+	c_tag = "Green Armory North"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armory/green)
 "aW" = (
@@ -585,8 +586,7 @@
 "ba" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
-	icon_state = "map";
-	tag = "icon-manifold-f (EAST)"
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/station/sec_upper)
@@ -1070,6 +1070,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9;
+	pixel_y = 0
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/station/sec_upper)
 "bV" = (
@@ -1376,7 +1380,9 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/obj/machinery/camera/network/security,
+/obj/machinery/camera/network/security{
+	c_tag = "Green Armory East"
+	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
@@ -1663,7 +1669,7 @@
 "cT" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Head of Security's Office";
+	c_tag = "Red Armory Access";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -2885,8 +2891,7 @@
 	dir = 4;
 	icon_state = "secintercom";
 	pixel_x = 24;
-	pixel_y = 0;
-	tag = "icon-secintercom (EAST)"
+	pixel_y = 0
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
@@ -2957,8 +2962,7 @@
 	dir = 8;
 	icon_state = "secintercom";
 	pixel_x = -24;
-	pixel_y = 0;
-	tag = "icon-secintercom (WEST)"
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -4161,7 +4165,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
-	tag = "icon-bordercolorcorner (NORTH)";
 	icon_state = "bordercolorcorner";
 	dir = 1
 	},
@@ -5255,8 +5258,7 @@
 /obj/item/device/radio/intercom/department/security{
 	dir = 1;
 	icon_state = "secintercom";
-	pixel_y = 24;
-	tag = "icon-secintercom (NORTH)"
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/security/briefing_room)
@@ -7301,8 +7303,7 @@
 /obj/item/device/radio/intercom/department/security{
 	dir = 2;
 	icon_state = "secintercom";
-	pixel_y = -24;
-	tag = "icon-secintercom (NORTH)"
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
@@ -8292,8 +8293,7 @@
 /obj/item/device/radio/intercom/department/security{
 	dir = 2;
 	icon_state = "secintercom";
-	pixel_y = -24;
-	tag = "icon-secintercom (NORTH)"
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/security/briefing_room)
@@ -9089,8 +9089,7 @@
 /obj/effect/floor_decal/borderfloor/corner2{
 	dir = 10;
 	icon_state = "borderfloorcorner2";
-	pixel_x = 0;
-	tag = "icon-borderfloorcorner2 (SOUTHWEST)"
+	pixel_x = 0
 	},
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 10
@@ -9748,7 +9747,7 @@
 /area/mine/explored/upper_level)
 "qx" = (
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Vault Exterior";
+	c_tag = "SEC - Vault Exterior North";
 	dir = 1
 	},
 /turf/simulated/mineral/floor/vacuum,
@@ -10804,8 +10803,7 @@
 /obj/item/device/radio/intercom/department/security{
 	dir = 2;
 	icon_state = "secintercom";
-	pixel_y = -24;
-	tag = "icon-secintercom (NORTH)"
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
@@ -11605,8 +11603,8 @@
 	pixel_x = -27
 	},
 /obj/machinery/camera/network/cargo{
-	dir = 5;
-	c_tag = "CRG - Mining Airlock"
+	c_tag = "CRG - Cargo Office South";
+	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
@@ -11695,8 +11693,7 @@
 /obj/effect/floor_decal/borderfloor/corner2{
 	dir = 10;
 	icon_state = "borderfloorcorner2";
-	pixel_x = 0;
-	tag = "icon-borderfloorcorner2 (SOUTHWEST)"
+	pixel_x = 0
 	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner2{
 	dir = 10
@@ -12308,7 +12305,7 @@
 /area/quartermaster/office)
 "up" = (
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Vault Exterior";
+	c_tag = "SEC - Vault Exterior West";
 	dir = 8
 	},
 /turf/space,
@@ -12430,7 +12427,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/danger{
-	tag = "icon-danger (WEST)";
 	icon_state = "danger";
 	dir = 8
 	},
@@ -13681,8 +13677,7 @@
 /obj/structure/sign/directions/security{
 	dir = 1;
 	icon_state = "direction_sec";
-	pixel_y = 8;
-	tag = "icon-direction_sec (WEST)"
+	pixel_y = 8
 	},
 /turf/simulated/wall,
 /area/teleporter/departing)
@@ -13722,8 +13717,7 @@
 /obj/structure/sign/directions/security{
 	dir = 1;
 	icon_state = "direction_sec";
-	pixel_y = 8;
-	tag = "icon-direction_sec (WEST)"
+	pixel_y = 8
 	},
 /obj/structure/sign/directions/cargo{
 	dir = 4;
@@ -14684,11 +14678,6 @@
 /obj/structure/bed/psych,
 /turf/simulated/floor/carpet/blue,
 /area/medical/psych)
-"yo" = (
-/obj/item/weapon/clipboard,
-/obj/structure/table/woodentable,
-/turf/simulated/floor/carpet/blue,
-/area/medical/psych)
 "yp" = (
 /turf/simulated/floor/carpet/blue,
 /area/medical/psych)
@@ -14857,7 +14846,7 @@
 /area/quartermaster/storage)
 "yK" = (
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Vault Exterior";
+	c_tag = "SEC - Vault Exterior South";
 	dir = 2
 	},
 /turf/simulated/mineral/floor/vacuum,
@@ -15229,8 +15218,8 @@
 	tag_door = "cargo_bay_door"
 	},
 /obj/machinery/camera/network/cargo{
-	dir = 9;
-	c_tag = "CRG - Mining Airlock"
+	c_tag = "CRG - Cargo Bay East";
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -15590,6 +15579,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/item/device/flashlight/lamp/green{
+	dir = 2;
+	pixel_x = -5;
+	pixel_y = 4
+	},
 /turf/simulated/floor/carpet/blue,
 /area/medical/psych)
 "Ae" = (
@@ -15732,11 +15726,10 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/camera/network/cargo{
-	dir = 9;
-	c_tag = "CRG - Mining Airlock"
+	c_tag = "CRG - Cargo Warehouse";
+	dir = 9
 	},
 /obj/effect/decal/cleanable/cobweb{
-	tag = "icon-cobweb2";
 	icon_state = "cobweb2"
 	},
 /turf/simulated/floor/tiled,
@@ -15973,7 +15966,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Virology Quarantine Airlock";
+	c_tag = "MED - Break Room East";
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -15982,8 +15975,7 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
 	icon_state = "extinguisher_closed";
-	pixel_x = 30;
-	tag = "icon-extinguisher_closed (WEST)"
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -16136,8 +16128,7 @@
 /obj/machinery/conveyor{
 	dir = 10;
 	icon_state = "conveyor0";
-	id = "QMLoad";
-	tag = "icon-conveyor0 (SOUTHWEST)"
+	id = "QMLoad"
 	},
 /turf/simulated/floor,
 /area/quartermaster/storage)
@@ -17474,21 +17465,13 @@
 /turf/simulated/floor,
 /area/quartermaster/storage)
 "Df" = (
-/obj/structure/table/glass,
-/obj/item/device/flashlight/pen{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/device/flashlight/pen{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 9
 	},
+/obj/machinery/organ_printer/flesh,
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
 "Dg" = (
@@ -17537,15 +17520,14 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/structure/table/glass,
+/obj/item/device/flashlight/pen{
+	pixel_x = -3;
+	pixel_y = -3
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 28
+/obj/item/device/flashlight/pen{
+	pixel_x = 3;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
@@ -18000,8 +17982,7 @@
 "DV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
-	icon_state = "intact";
-	tag = "icon-intact-f (NORTHEAST)"
+	icon_state = "intact"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -18014,11 +17995,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
@@ -18133,8 +18109,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10;
-	icon_state = "intact";
-	tag = "icon-intact-f (SOUTHWEST)"
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -18384,16 +18359,16 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
 "EB" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
@@ -18556,8 +18531,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
-	icon_state = "intact";
-	tag = "icon-intact-f (NORTHEAST)"
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -19117,6 +19091,12 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
 "FK" = (
@@ -19388,8 +19368,7 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
 	icon_state = "extinguisher_closed";
-	pixel_x = 30;
-	tag = "icon-extinguisher_closed (WEST)"
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -20861,7 +20840,6 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/glass/hidden{
-	tag = "icon-door_open";
 	icon_state = "door_open";
 	dir = 2
 	},
@@ -22116,7 +22094,7 @@
 	},
 /obj/machinery/disposal,
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Surgery Hallway";
+	c_tag = "MED - Break Room West";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -22828,6 +22806,11 @@
 /obj/effect/landmark/map_data/virgo3b,
 /turf/space,
 /area/space)
+"LV" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/clipboard,
+/turf/simulated/floor/carpet/blue,
+/area/medical/psych)
 "Nw" = (
 /obj/structure/table/standard,
 /obj/item/device/healthanalyzer,
@@ -22877,10 +22860,22 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
+"St" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/wood,
+/area/medical/psych)
 "Uc" = (
 /obj/effect/floor_decal/industrial/loading,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
+"ZX" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/resleeving)
 
 (1,1,1) = {"
 aa
@@ -27228,7 +27223,7 @@ CE
 Dj
 DW
 EB
-Fc
+ZX
 FJ
 Ge
 GC
@@ -30268,7 +30263,7 @@ uV
 sx
 vK
 uX
-ym
+LV
 zk
 zZ
 ua
@@ -30512,7 +30507,7 @@ uX
 vV
 uX
 uX
-yo
+ym
 zl
 Aa
 ua
@@ -30996,7 +30991,7 @@ rD
 ss
 td
 ua
-va
+vb
 vW
 vW
 vW
@@ -31118,7 +31113,7 @@ rE
 st
 te
 ua
-vb
+St
 vX
 wP
 xG

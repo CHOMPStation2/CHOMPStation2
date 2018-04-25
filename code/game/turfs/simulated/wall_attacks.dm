@@ -57,12 +57,19 @@
 			source.thermal_conductivity = initial(source.thermal_conductivity)
 
 /turf/simulated/wall/proc/fail_smash(var/mob/user)
-	user << "<span class='danger'>You smash against the wall!</span>"
+	to_chat(user, "<span class='danger'>You smash against the wall!</span>")
+	if(isanimal(user))
+		var/mob/living/simple_animal/S = user
+		playsound(src, S.attack_sound, 75, 1)
+	user.do_attack_animation(src)
 	take_damage(rand(25,75))
 
 /turf/simulated/wall/proc/success_smash(var/mob/user)
-	user << "<span class='danger'>You smash through the wall!</span>"
+	to_chat(user, "<span class='danger'>You smash through the wall!</span>")
 	user.do_attack_animation(src)
+	if(isanimal(user))
+		var/mob/living/simple_animal/S = user
+		playsound(src, S.attack_sound, 75, 1)
 	spawn(1)
 		dismantle_wall(1)
 
@@ -355,7 +362,7 @@
 
 	if(istype(W,/obj/item/frame))
 		var/obj/item/frame/F = W
-		F.try_build(src)
+		F.try_build(src, user)
 		return
 
 	else if(!istype(W,/obj/item/weapon/rcd) && !istype(W, /obj/item/weapon/reagent_containers))
