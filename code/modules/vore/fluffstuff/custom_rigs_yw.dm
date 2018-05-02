@@ -4,6 +4,7 @@
     icon = 'icons/vore/rig_yw/rigs_module.dmi'
     icon_state = "sheririg"
     icon_override = 'icons/vore/rig_yw/rigs_module_onmob.dmi'
+    preserve_item = 0
 
     chest_type = /obj/item/clothing/suit/space/rig/fluff/sheri
     helm_type =  /obj/item/clothing/head/helmet/space/rig/hazmat/fluff/sheri
@@ -13,6 +14,9 @@
 /obj/item/clothing/suit/space/rig/fluff/sheri
     icon = 'icons/vore/rigs_taur_yw.dmi'
     icon_override = 'icons/vore/rigs_taur_yw.dmi'
+    body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+    flags_inv = HIDEGLOVES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER|HIDESHOES
+    species_restricted = null //Species restricted since all it cares about is a taur half
 
 /obj/item/clothing/suit/space/rig/fluff/sheri
 	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
@@ -20,6 +24,12 @@
 		pixel_x = -16
 		update_icon()
 		return 1
+
+/obj/item/clothing/suit/space/rig/fluff/sheri
+    make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0)
+        var/image/result = ..()
+        result.pixel_x = -16
+        return result
 
 /obj/item/clothing/head/helmet/space/rig/hazmat/fluff/sheri
     icon = 'icons/vore/rig_yw/rigs_head.dmi'
@@ -43,6 +53,7 @@
     icon = 'icons/vore/rig_yw/rigs_module.dmi'
     icon_state = "saurrig"
     icon_override = 'icons/vore/rig_yw/rigs_module_onmob.dmi'
+    preserve_item = 0
 
     chest_type = /obj/item/clothing/suit/space/rig/fluff/saur
     helm_type =  /obj/item/clothing/head/helmet/space/rig/medical/fluff/saur
