@@ -79,8 +79,8 @@
 /obj/item/toy/bosunwhistle/fluff/strix
 	name = "bosun's whistle"
 	desc = "A genuine Admiral Krush Bosun's Whistle, for the aspiring ship's captain! Suitable for ages 8 and up, do not swallow."
-	icon = 'icons/obj/toy.dmi'
-	icon_state = "bosunwhistle"
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "strixwhistle"
 	var/cooldown = 0
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS | SLOT_HOLSTER
