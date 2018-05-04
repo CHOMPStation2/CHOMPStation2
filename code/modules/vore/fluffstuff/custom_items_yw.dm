@@ -77,8 +77,8 @@
 	attack_verb = list("stabbed", "pierced", "jabbed", "torn", "gored")
 
 /obj/item/toy/bosunwhistle/fluff/strix
-	name = "bosun's whistle"
-	desc = "A genuine Admiral Krush Bosun's Whistle, for the aspiring ship's captain! Suitable for ages 8 and up, do not swallow."
+	name = "Authentic Bosun's Whistle"
+	desc = "A authentic boatswain's call that appears to be silver plated! The noise it makes is ungodly loud and high pitch.. Why would a person with four extra-sensitive ears ever own such a thing!?"
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "strixwhistle"
 	var/cooldown = 0
