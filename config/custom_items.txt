@@ -80,6 +80,12 @@ item_path: /obj/item/clothing/under/seromi/undercoat/fluff/strix
 }
 
 {
+ckey: blackangelsace
+character_name: Strix Hades
+item_path: /obj/item/toy/bosunwhistle/fluff/strix
+}
+
+{
 ckey: benl8561
 character_name: M.I.S.S.Y
 item_path: /obj/item/weapon/storage/box/fluff/missy

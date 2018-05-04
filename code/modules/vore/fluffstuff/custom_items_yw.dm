@@ -76,6 +76,21 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("stabbed", "pierced", "jabbed", "torn", "gored")
 
+/obj/item/toy/bosunwhistle/fluff/strix
+	name = "bosun's whistle"
+	desc = "A genuine Admiral Krush Bosun's Whistle, for the aspiring ship's captain! Suitable for ages 8 and up, do not swallow."
+	icon = 'icons/obj/toy.dmi'
+	icon_state = "bosunwhistle"
+	var/cooldown = 0
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_EARS | SLOT_HOLSTER
+
+/obj/item/toy/bosunwhistle/fluff/strix/attack_self(mob/user as mob)
+	if(cooldown < world.time - 15)
+		user << "<span class='notice'>You blow on [src], creating an ear-splitting noise!</span>"
+		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
+		cooldown = world.time
+
 // *************
 // GeneralPantsu
 // *************
