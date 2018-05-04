@@ -78,10 +78,9 @@
 
 /obj/item/toy/bosunwhistle/fluff/strix
 	name = "Authentic Bosun's Whistle"
-	desc = "A authentic boatswain's call that appears to be silver plated! The noise it makes is ungodly loud and high pitch.. Why would a person with four extra-sensitive ears ever own such a thing!?"
+	desc = "A authentic boatswain's call that appears to be silver plated! The noise it makes is ungodly loud and high pitched.. Why would a person with four extra-sensitive ears ever own such a thing!?"
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "strixwhistle"
-	var/cooldown = 0
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS | SLOT_HOLSTER
 

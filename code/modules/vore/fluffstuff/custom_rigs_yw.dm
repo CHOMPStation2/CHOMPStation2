@@ -29,7 +29,7 @@
     make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0)
         var/image/result = ..()
         result.pixel_x = -16
-        standing.layer = BODY_LAYER + 15
+        result.layer = BODY_LAYER + 15
         return result
 
 /obj/item/clothing/head/helmet/space/rig/hazmat/fluff/sheri
