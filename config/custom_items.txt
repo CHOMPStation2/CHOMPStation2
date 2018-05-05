@@ -163,6 +163,11 @@ character_name: Saroth
 item_path: /obj/item/weapon/storage/box/fluff/saroth
 }
 # ######## E CKEYS
+{
+ckey: esperkin
+character_name: Sheri Calen
+item_path: /obj/item/weapon/rig/hazmat/fluff/sheri
+}
 # ######## F CKEYS
 {
 ckey: frenziedvorcha
@@ -478,6 +483,8 @@ ckey: vitorhks
 character_name: Jessica Mayer
 item_path: /obj/item/weapon/storage/box/fluff/jessica
 }
+
+
 
 # ######## W CKEYS
 # ######## X CKEYS
