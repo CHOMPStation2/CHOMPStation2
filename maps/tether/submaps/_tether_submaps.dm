@@ -35,13 +35,13 @@
 
 /datum/map_z_level/tether_lateload/underdark
 	name = "Underdark"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 
 /datum/map_template/tether_lateload/tether_underdark/on_map_loaded(z)
 	. = ..()
+	seed_submaps(list(z), 100, /area/mine/unexplored/underdark, /datum/map_template/underdark)
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, z, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, z, 64, 64)         // Create the mining ore distribution map.
-	seed_submaps(list(z), 100, /area/mine/unexplored/underdark, /datum/map_template/underdark)
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
