@@ -139,7 +139,9 @@
 		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
 			return
 		// Check for company.
-		for(var/mob/living/carbon/M in viewers(H))
+		for(var/mob/living/M in viewers(H))
+			if(!istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot))
+				continue
 			if(M == H || M.stat == DEAD || M.invisibility > H.see_invisible)
 				continue
 			if(M.faction == "neutral" || M.faction == H.faction)
@@ -151,6 +153,8 @@
 						H << "The nearby company calms you down..."
 						H.next_loneliness_time = world.time+500
 				return
+
+
 
 		for(var/obj/item/weapon/holder/micro/M in range(1, H))
 			if(H.loneliness_stage > 0)
