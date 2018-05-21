@@ -564,6 +564,13 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	of self-replicating nanotechnology. Basically just a high-endurance NIF."
 	durability = 1000
 
+/obj/item/device/nif/authenticbio
+	name = "\improper Bioadaptive Kitsuhana NIF"
+	desc = "An actual Kitsuhana working surface, in a box. From a society slightly less afraid \
+	of self-replicating nanotechnology. Basically just a high-endurance NIF."
+	durability = 1000
+	bioadap = TRUE
+
 /obj/item/device/nif/bioadap
 	name = "bioadaptive NIF"
 	desc = "A NIF that goes out of it's way to accomidate strange body types. \

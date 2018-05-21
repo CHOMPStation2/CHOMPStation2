@@ -330,6 +330,12 @@ character_name: Alex Wolf
 item_path: /obj/item/clothing/accessory/fluff/alex_wolf_1
 }
 
+{
+ckey: roguenoob
+character_name: Basir Fahim
+item_path: /obj/item/clothing/gloves/ring/fluff/basir
+}
+
 # ######## S CKEYS
 {
 ckey: shaper
