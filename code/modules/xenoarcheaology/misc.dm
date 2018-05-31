@@ -38,6 +38,18 @@
 	P.overlays = list("paper_stamped_rd")
 	src.contents += P
 
+/obj/structure/noticeboard/medical
+	notices = 5
+	icon_state = "nboard01"
+
+/obj/structure/noticeboard/medical/New()
+	var/obj/item/weapon/paper/P = new()
+	P.name = "Staff Notice: Patient rooms"
+	P.info = "<br>No matter how many times I've said this, it doesn't seem to stick, so I'm leaving this reminder: Screwing patients in the patient rooms is a serious breach of proffessionality and your code of ethics. Take it to the dorms."
+	P.stamped = list(/obj/item/weapon/stamp/cmo)
+	P.overlays = list("paper_stamped_cmo")
+	src.contents += P
+
 /obj/structure/bookcase/manuals/xenoarchaeology
 	name = "Xenoarchaeology Manuals bookcase"
 

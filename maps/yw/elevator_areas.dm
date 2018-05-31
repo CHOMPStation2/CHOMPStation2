@@ -42,14 +42,26 @@
 	lift_announce_str = "Arriving at Surface Level."
 
 /area/turbolift/lumber_floor_basement
-	name = "basement (level1)"
+	name = "basement (sublevel 1)"
 	lift_floor_label = "Basement 1"
 	lift_floor_name = "Atmos, Maintenance, Civilian Departments,"
 	lift_announce_str = "Arriving at Basement Level 1."
 
 /area/turbolift/lumber_floor_underground_mine
-	name = "basement (level2)"
+	name = "basement (sublevel 2)"
 	lift_floor_label = "Basement 2"
 	lift_floor_name = "Mine, Toxins research"
 	lift_announce_str = "Arriving at Basement Level 2."
 	base_turf = /turf/simulated/floor
+
+/area/turbolift/lumber_floor_medical
+	name = "Medbay (level 1)"
+	lift_floor_label = "Medbay"
+	lift_floor_name = "Lobby, Surgery, Primary Treatment, Psychology"
+	lift_announce_str = "Arriving at Medbay Proper."
+
+/area/turbolift/lumber_floor_medibasement
+	name = "Medbay (sublevel 1)"
+	lift_floor_label = "Medbasement"
+	lift_floor_name = "Virology, Chemistry, EVA, Break room, Storage"
+	lift_announce_str = "Arriving at Medical Annex."
