@@ -299,6 +299,7 @@
 	name = "Custodial Hound module"
 	sprites = list(
 					"Custodial Hound" = "scrubpup",
+					"Custodial Doggo" = "J9"
 					)
 	channels = list("Service" = 1)
 	can_be_pushed = 0
