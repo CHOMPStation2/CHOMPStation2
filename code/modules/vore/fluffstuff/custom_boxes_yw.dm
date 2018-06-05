@@ -174,6 +174,17 @@
 		/obj/item/device/modkit_conversion/fluff/art_hos_kit,
 		/obj/item/clothing/under/rank/security/corp/fluf/art_uniform)
 
+// *******
+// Dwaggy090
+// *******
+/obj/item/weapon/storage/box/fluff/saur
+	name = "Saur's kit"
+	desc = "A kit containing Saur's equipment."
+	has_items = list(
+		/obj/item/weapon/rig/medical/equipped/fluff/saur,
+		/obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+		)
+
 // ************
 // championfire
 // ************

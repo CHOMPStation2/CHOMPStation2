@@ -506,9 +506,9 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		moblist.Add(M)
 	for(var/mob/living/simple_animal/M in sortmob)
 		moblist.Add(M)
-//	for(var/mob/living/silicon/hivebot/M in world)
+//	for(var/mob/living/silicon/hivebot/M in sortmob)
 //		mob_list.Add(M)
-//	for(var/mob/living/silicon/hive_mainframe/M in world)
+//	for(var/mob/living/silicon/hive_mainframe/M in sortmob)
 //		mob_list.Add(M)
 	return moblist
 
@@ -675,7 +675,7 @@ proc/GaussRandRound(var/sigma,var/roundto)
 //Returns: all the areas in the world
 /proc/return_areas()
 	var/list/area/areas = list()
-	for(var/area/A in world)
+	for(var/area/A in all_areas)
 		areas += A
 	return areas
 
@@ -693,7 +693,7 @@ proc/GaussRandRound(var/sigma,var/roundto)
 		areatype = areatemp.type
 
 	var/list/areas = new/list()
-	for(var/area/N in world)
+	for(var/area/N in all_areas)
 		if(istype(N, areatype)) areas += N
 	return areas
 
@@ -707,7 +707,7 @@ proc/GaussRandRound(var/sigma,var/roundto)
 		areatype = areatemp.type
 
 	var/list/turfs = new/list()
-	for(var/area/N in world)
+	for(var/area/N in all_areas)
 		if(istype(N, areatype))
 			for(var/turf/T in N) turfs += T
 	return turfs
@@ -722,7 +722,7 @@ proc/GaussRandRound(var/sigma,var/roundto)
 		areatype = areatemp.type
 
 	var/list/atoms = new/list()
-	for(var/area/N in world)
+	for(var/area/N in all_areas)
 		if(istype(N, areatype))
 			for(var/atom/A in N)
 				atoms += A
@@ -1478,6 +1478,24 @@ var/mob/dview/dview_mob = new
 	CRASH(msg)
 
 
+//This is used to force compiletime errors if you incorrectly supply variable names. Crafty!
+#define NAMEOF(datum, X) (#X || ##datum.##X)
+
+//Creates a callback with the specific purpose of setting a variable
+#define VARSET_CALLBACK(datum, var, var_value) CALLBACK(GLOBAL_PROC, /proc/___callbackvarset, weakref(##datum), NAMEOF(##datum, ##var), ##var_value)
+
+//Helper for the above
+/proc/___callbackvarset(list_or_datum, var_name, var_value)
+	if(isweakref(list_or_datum))
+		var/weakref/wr = list_or_datum
+		list_or_datum = wr.resolve()
+	if(!list_or_datum)
+		return
+	if(length(list_or_datum))
+		list_or_datum[var_name] = var_value
+		return
+	var/datum/D = list_or_datum
+	D.vars[var_name] = var_value
 
 
 

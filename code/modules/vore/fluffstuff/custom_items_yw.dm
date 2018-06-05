@@ -76,6 +76,20 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("stabbed", "pierced", "jabbed", "torn", "gored")
 
+/obj/item/toy/bosunwhistle/fluff/strix
+	name = "Authentic Bosun's Whistle"
+	desc = "A authentic boatswain's call that appears to be silver plated! The noise it makes is ungodly loud and high pitched.. Why would a person with four extra-sensitive ears ever own such a thing!?"
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "strixwhistle"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_EARS | SLOT_HOLSTER
+
+/obj/item/toy/bosunwhistle/fluff/strix/attack_self(mob/user as mob)
+	if(cooldown < world.time - 15)
+		user << "<span class='notice'>You blow on [src], creating an ear-splitting noise!</span>"
+		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
+		cooldown = world.time
+
 // *************
 // GeneralPantsu
 // *************

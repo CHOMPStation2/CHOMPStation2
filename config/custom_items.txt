@@ -80,6 +80,12 @@ item_path: /obj/item/clothing/under/seromi/undercoat/fluff/strix
 }
 
 {
+ckey: blackangelsace
+character_name: Strix Hades
+item_path: /obj/item/toy/bosunwhistle/fluff/strix
+}
+
+{
 ckey: benl8561
 character_name: M.I.S.S.Y
 item_path: /obj/item/weapon/storage/box/fluff/missy
@@ -144,10 +150,11 @@ ckey: deathty
 character_name: Arthur Schutz
 item_path: /obj/item/weapon/storage/box/fluff/art
 }
+
 {
 ckey: dwaggy90
 character_name: Saur Darastrix
-item_path: /obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+item_path: /obj/item/weapon/storage/box/fluff/saur
 }
 
 {
@@ -156,6 +163,11 @@ character_name: Saroth
 item_path: /obj/item/weapon/storage/box/fluff/saroth
 }
 # ######## E CKEYS
+{
+ckey: esperkin
+character_name: Sheri Calen
+item_path: /obj/item/device/modkit_conversion/fluff/sheri_rig_kit
+}
 # ######## F CKEYS
 {
 ckey: frenziedvorcha
@@ -216,6 +228,12 @@ item_path: /obj/item/weapon/storage/box/fluff/shel
 ckey: izac112
 character_name: Alva Karlholm
 item_path: /obj/item/weapon/storage/box/fluff/alva
+}
+
+{
+ckey: interrolouis
+character_name: Kai Highlands
+/obj/item/borg/upgrade/modkit/chassis_mod/kai
 }
 
 {
@@ -310,6 +328,12 @@ item_path: /obj/item/weapon/storage/box/fluff/vasharr
 ckey: randysavage205
 character_name: Alex Wolf
 item_path: /obj/item/clothing/accessory/fluff/alex_wolf_1
+}
+
+{
+ckey: roguenoob
+character_name: Basir Fahim
+item_path: /obj/item/clothing/gloves/ring/fluff/basir
 }
 
 # ######## S CKEYS
@@ -471,6 +495,8 @@ ckey: vitorhks
 character_name: Jessica Mayer
 item_path: /obj/item/weapon/storage/box/fluff/jessica
 }
+
+
 
 # ######## W CKEYS
 # ######## X CKEYS

@@ -756,6 +756,7 @@
 /mob/living/simple_animal/death(gibbed, deathmessage = "dies!")
 	density = 0 //We don't block even if we did before
 	walk(src, 0) //We stop any background-processing walks
+	resting = 0 //We can rest in peace later.
 
 	if(faction_friends.len)
 		faction_friends -= src
@@ -1226,7 +1227,7 @@
 	if(astarpathing) ForgetPath()
 	ai_log("GoHome()",1)
 	var/close_enough = 2
-	var/look_in = 250
+	var/look_in = 50
 	if(GetPath(home_turf,close_enough,look_in))
 		stop_automated_movement = 1
 		spawn(1)

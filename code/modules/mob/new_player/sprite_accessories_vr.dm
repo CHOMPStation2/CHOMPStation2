@@ -928,3 +928,45 @@
 		icon_state = "teshi_sf"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_HAND,BP_R_HAND,BP_TORSO)
+		
+	spirit_lights
+		name = "Ward - Spirit FBP Lights"
+		icon_state = "lights"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_HEAD)
+		
+	spirit_lights_body
+		name = "Ward - Spirit FBP Lights (body)"
+		icon_state = "lights"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO)
+
+	spirit_panels_head
+		name = "Ward - Spirit FBP Lights (head)"
+		icon_state = "lights"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+		
+	spirit_panels
+		name = "Ward - Spirit FBP Panels"
+		icon_state = "panels"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO,BP_HEAD)
+		
+	spirit_panels_body
+		name = "Ward - Spirit FBP Panels (body)"
+		icon_state = "panels"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
+
+	spirit_panels_head
+		name = "Ward - Spirit FBP Panels (head)"
+		icon_state = "panels"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+
+	heterochromia
+		name = "Heterochromia"
+		icon_state = "heterochromia"
+		body_parts = list(BP_HEAD)
+		species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_ZORREN_FLAT, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE) //This lets all races use the default hairstyles.

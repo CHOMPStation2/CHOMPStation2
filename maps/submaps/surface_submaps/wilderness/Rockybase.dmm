@@ -50,7 +50,7 @@
 /turf/simulated/floor,
 /area/submap/Rockybase)
 "an" = (
-/obj/machinery/porta_turret/stationary,
+/obj/machinery/porta_turret/poi,
 /turf/simulated/floor,
 /area/submap/Rockybase)
 "ao" = (
@@ -195,7 +195,6 @@
 /obj/structure/table/standard,
 /obj/item/device/laptop,
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (NORTHWEST)";
 	icon_state = "bordercolor";
 	dir = 9
 	},
@@ -204,7 +203,6 @@
 "aP" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (NORTH)";
 	icon_state = "bordercolor";
 	dir = 1
 	},
@@ -214,7 +212,6 @@
 /obj/structure/table/rack,
 /obj/item/weapon/gun/projectile/pistol,
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (NORTH)";
 	icon_state = "bordercolor";
 	dir = 1
 	},
@@ -224,7 +221,6 @@
 /obj/structure/table/rack,
 /obj/item/weapon/gun/energy/gun/taser,
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (NORTH)";
 	icon_state = "bordercolor";
 	dir = 1
 	},
@@ -235,7 +231,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (NORTH)";
 	icon_state = "bordercolor";
 	dir = 1
 	},
@@ -244,7 +239,6 @@
 "aT" = (
 /obj/machinery/vending/coffee,
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (NORTHEAST)";
 	icon_state = "bordercolor";
 	dir = 5
 	},
@@ -262,7 +256,6 @@
 "aW" = (
 /obj/machinery/vending/hydronutrients,
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (NORTHWEST)";
 	icon_state = "bordercolor";
 	dir = 9
 	},
@@ -271,7 +264,6 @@
 "aX" = (
 /obj/structure/closet/crate/hydroponics,
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (NORTHEAST)";
 	icon_state = "bordercolor";
 	dir = 5
 	},
@@ -325,7 +317,6 @@
 	name = "Note"
 	},
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (WEST)";
 	icon_state = "bordercolor";
 	dir = 8
 	},
@@ -346,7 +337,6 @@
 "bg" = (
 /obj/machinery/vending/security,
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (EAST)";
 	icon_state = "bordercolor";
 	dir = 4
 	},
@@ -361,7 +351,6 @@
 /area/submap/Rockybase)
 "bi" = (
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (WEST)";
 	icon_state = "bordercolor";
 	dir = 8
 	},
@@ -375,7 +364,6 @@
 	pixel_y = 0
 	},
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (EAST)";
 	icon_state = "bordercolor";
 	dir = 4
 	},
@@ -427,7 +415,6 @@
 /obj/structure/table/standard,
 /obj/item/weapon/paper_bin,
 /obj/effect/floor_decal/corner/red/border{
-	tag = "icon-bordercolor (SOUTHWEST)";
 	icon_state = "bordercolor";
 	dir = 10
 	},
@@ -470,7 +457,6 @@
 "by" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (EAST)";
 	icon_state = "bordercolor";
 	dir = 4
 	},
@@ -482,7 +468,6 @@
 /area/submap/Rockybase)
 "bA" = (
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (WEST)";
 	icon_state = "bordercolor";
 	dir = 8
 	},
@@ -499,7 +484,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (EAST)";
 	icon_state = "bordercolor";
 	dir = 4
 	},
@@ -1029,7 +1013,6 @@
 "dj" = (
 /obj/item/mecha_parts/part/gygax_right_leg,
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (EAST)";
 	icon_state = "bordercolor";
 	dir = 4
 	},
@@ -1078,7 +1061,6 @@
 "dq" = (
 /obj/structure/closet/secure_closet/hydroponics,
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (EAST)";
 	icon_state = "bordercolor";
 	dir = 4
 	},
@@ -1143,7 +1125,6 @@
 "dC" = (
 /obj/machinery/vending/hydroseeds,
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (SOUTHWEST)";
 	icon_state = "bordercolor";
 	dir = 10
 	},
@@ -1152,7 +1133,6 @@
 "dD" = (
 /obj/structure/closet/crate/secure/hydrosec,
 /obj/effect/floor_decal/corner/lime/border{
-	tag = "icon-bordercolor (SOUTHEAST)";
 	icon_state = "bordercolor";
 	dir = 6
 	},

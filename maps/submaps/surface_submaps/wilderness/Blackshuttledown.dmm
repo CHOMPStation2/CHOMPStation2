@@ -25,35 +25,27 @@
 /turf/template_noop,
 /area/submap/Blackshuttledown)
 "ah" = (
-/mob/living/simple_animal/hostile/syndicate/ranged{
-	desc = "Dosen't look friendly in the slightest.";
-	name = "Unknown Individual";
-	say_got_target = list("Looks like trouble!","Contact!","We've got company!","Perimeter Breached!!");
-	speak = list("One day the'll fix that damn engine..","Next time, We're hidding on the tropical beach planet.","Wish I had better equipment...","I knew I should have been a line chef...","Fuckin' helmet keeps fogging up.","Hate this blocky ass ship.")
-	},
+/mob/living/simple_animal/hostile/syndicate/ranged/poi,
 /turf/template_noop,
 /area/submap/Blackshuttledown)
 "ai" = (
 /turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark6";
-	name = "Unknown Shuttle";
-	tag = "icon-dark6"
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "aj" = (
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
-	name = "Unknown Shuttle";
-	tag = "icon-dark0"
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "ak" = (
 /turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark10";
-	name = "Unknown Shuttle";
-	tag = "icon-dark10"
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "al" = (
@@ -63,8 +55,7 @@
 	},
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
-	name = "Unknown Shuttle";
-	tag = "icon-dark0"
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "am" = (
@@ -111,7 +102,6 @@
 /area/submap/Blackshuttledown)
 "aq" = (
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (NORTHWEST)";
 	icon_state = "bordercolor";
 	dir = 9
 	},
@@ -120,7 +110,6 @@
 "ar" = (
 /obj/machinery/gibber,
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (NORTH)";
 	icon_state = "bordercolor";
 	dir = 1
 	},
@@ -131,7 +120,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (NORTH)";
 	icon_state = "bordercolor";
 	dir = 1
 	},
@@ -142,7 +130,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (NORTH)";
 	icon_state = "bordercolor";
 	dir = 1
 	},
@@ -151,7 +138,6 @@
 "au" = (
 /obj/machinery/body_scanconsole,
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (NORTHEAST)";
 	icon_state = "bordercolor";
 	dir = 5
 	},
@@ -161,8 +147,7 @@
 /turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark5";
-	name = "Unknown Shuttle";
-	tag = "icon-dark5"
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "aw" = (
@@ -192,7 +177,6 @@
 /area/submap/Blackshuttledown)
 "aB" = (
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (WEST)";
 	icon_state = "bordercolor";
 	dir = 8
 	},
@@ -212,7 +196,6 @@
 "aF" = (
 /obj/machinery/organ_printer/flesh,
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (NORTHEAST)";
 	icon_state = "bordercolor";
 	dir = 5
 	},
@@ -222,16 +205,14 @@
 /turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark9";
-	name = "Unknown Shuttle";
-	tag = "icon-dark9"
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "aH" = (
 /turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark6";
-	name = "Unknown Shuttle";
-	tag = "icon-dark6"
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "aI" = (
@@ -271,12 +252,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "aO" = (
-/mob/living/simple_animal/hostile/syndicate/ranged{
-	desc = "Dosen't look friendly in the slightest.";
-	name = "Unknown Individual";
-	say_got_target = list("Looks like trouble!","Contact!","We've got company!","Perimeter Breached!!");
-	speak = list("One day the'll fix that damn engine..","Next time, We're hidding on the tropical beach planet.","Wish I had better equipment...","I knew I should have been a line chef...","Fuckin' helmet keeps fogging up.","Hate this blocky ass ship.")
-	},
+/mob/living/simple_animal/hostile/syndicate/melee/poi,
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "aP" = (
@@ -286,7 +262,6 @@
 	pixel_x = 0
 	},
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (EAST)";
 	icon_state = "bordercolor";
 	dir = 4
 	},
@@ -299,6 +274,7 @@
 /area/submap/Blackshuttledown)
 "aR" = (
 /obj/structure/table/steel,
+/obj/item/weapon/grenade/smokebomb,
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
 "aS" = (
@@ -324,7 +300,6 @@
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/surgery,
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (SOUTHWEST)";
 	icon_state = "bordercolor";
 	dir = 10
 	},
@@ -358,7 +333,6 @@
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/masks,
 /obj/effect/floor_decal/corner/green/border{
-	tag = "icon-bordercolor (SOUTHEAST)";
 	icon_state = "bordercolor";
 	dir = 6
 	},
@@ -397,8 +371,7 @@
 /turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark10";
-	name = "Unknown Shuttle";
-	tag = "icon-dark10"
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "bg" = (
@@ -439,12 +412,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bn" = (
-/mob/living/simple_animal/hostile/syndicate/ranged{
-	desc = "Dosen't look friendly in the slightest.";
-	name = "Unknown Individual";
-	say_got_target = list("Looks like trouble!","Contact!","We've got company!","Perimeter Breached!!");
-	speak = list("One day the'll fix that damn engine..","Next time, We're hidding on the tropical beach planet.","Wish I had better equipment...","I knew I should have been a line chef...","Fuckin' helmet keeps fogging up.","Hate this blocky ass ship.")
-	},
+/mob/living/simple_animal/hostile/syndicate/ranged/poi,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bo" = (
@@ -582,12 +550,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bI" = (
-/mob/living/simple_animal/hostile/syndicate/ranged{
-	desc = "Dosen't look friendly in the slightest.";
-	name = "Unknown Individual";
-	say_got_target = list("Looks like trouble!","Contact!","We've got company!","Perimeter Breached!!");
-	speak = list("One day the'll fix that damn engine..","Next time, We're hidding on the tropical beach planet.","Wish I had better equipment...","I knew I should have been a line chef...","Fuckin' helmet keeps fogging up.","Hate this blocky ass ship.")
-	},
+/mob/living/simple_animal/hostile/syndicate/melee/poi,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bJ" = (
@@ -601,12 +564,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/syndicate/ranged{
-	desc = "Dosen't look friendly in the slightest.";
-	name = "Unknown Individual";
-	say_got_target = list("Looks like trouble!","Contact!","We've got company!","Perimeter Breached!!");
-	speak = list("One day the'll fix that damn engine..","Next time, We're hidding on the tropical beach planet.","Wish I had better equipment...","I knew I should have been a line chef...","Fuckin' helmet keeps fogging up.","Hate this blocky ass ship.")
-	},
+/mob/living/simple_animal/hostile/syndicate/ranged/laser/poi,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bL" = (
@@ -673,6 +631,10 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"bV" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
 "bW" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -779,6 +741,7 @@
 /area/submap/Blackshuttledown)
 "cl" = (
 /obj/structure/table/woodentable,
+/obj/random/projectile,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "cm" = (
@@ -788,36 +751,39 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "cn" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"co" = (
 /obj/structure/bed,
 /obj/item/weapon/bedsheet,
 /obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
-"co" = (
-/turf/template_noop,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark5";
-	name = "Unknown Shuttle";
-	tag = "icon-dark5"
-	},
-/area/submap/Blackshuttledown)
 "cp" = (
 /turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
-	icon_state = "dark9";
-	name = "Unknown Shuttle";
-	tag = "icon-dark9"
+	icon_state = "dark5";
+	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
-"iC" = (
-/obj/structure/table/steel,
-/obj/item/weapon/grenade/smokebomb,
-/turf/simulated/floor/tiled/steel_grid,
+"cq" = (
+/turf/template_noop,
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark9";
+	name = "Unknown Shuttle"
+	},
 /area/submap/Blackshuttledown)
-"yI" = (
-/obj/structure/table/woodentable,
-/obj/random/projectile,
+"EI" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/mob/living/simple_animal/hostile/syndicate/melee/poi,
 /turf/simulated/floor/tiled/steel,
+/area/submap/Blackshuttledown)
+"SN" = (
+/mob/living/simple_animal/hostile/syndicate/ranged/laser/poi,
+/turf/template_noop,
 /area/submap/Blackshuttledown)
 
 (1,1,1) = {"
@@ -1143,7 +1109,7 @@ av
 aH
 aj
 aj
-co
+cp
 ab
 ab
 ab
@@ -1277,7 +1243,7 @@ aj
 aj
 ax
 aJ
-iC
+aR
 aj
 aL
 bl
@@ -1286,12 +1252,12 @@ bl
 bl
 aT
 aj
-aR
+bV
 cc
 ch
 aj
 aj
-cp
+cq
 ab
 ab
 ae
@@ -1399,7 +1365,7 @@ bM
 az
 bW
 aS
-bK
+EI
 ck
 aj
 ag
@@ -1439,7 +1405,7 @@ aT
 aj
 aj
 aj
-ah
+SN
 ab
 ag
 ab
@@ -1531,7 +1497,7 @@ af
 ab
 ag
 ab
-ah
+SN
 aj
 aj
 aj
@@ -1622,7 +1588,7 @@ aj
 bl
 bl
 bl
-yI
+cl
 aj
 ab
 ab
@@ -1696,7 +1662,7 @@ aj
 bl
 bl
 bl
-cl
+cn
 aj
 ab
 af
@@ -1733,9 +1699,9 @@ aj
 bl
 bY
 bY
-cn
-aj
 co
+aj
+cp
 ab
 ab
 ad
@@ -1920,7 +1886,7 @@ ab
 bf
 al
 al
-cp
+cq
 ad
 ad
 ad
