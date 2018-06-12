@@ -40,7 +40,7 @@
 	icon = 'icons/mob/suits_yw.dmi'
 	icon_state = "brigphysician-vest"
 	icon_override = 'icons/mob/suits_yw.dmi'
-	iteam_state = "brigphysician-vest_s"
+	item_state = "brigphysician-vest_s"
 	armor = list(melee = 15, bullet = 10, laser = 10, energy = 10, bomb = 10, bio = 50, rad = 15)
 
 /obj/item/clothing/suit/storage/hazardvest/yw/Paramedic
@@ -49,5 +49,5 @@
 	icon = 'icons/mob/suits_yw.dmi'
 	icon_state = "paramedic-vest"
 	icon_override = 'icons/mob/suits_yw.dmi'
-	iteam_state = "paramedic-vest_us"
+	item_state = "paramedic-vest_us"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 15, bio = 50, rad = 50)

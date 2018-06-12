@@ -1,6 +1,7 @@
 /obj/structure/closet/secure_closet/blueshield
 	name = "blueshield's locker"
 	req_access = list(access_teleporter)
+	icon = 'icons/obj/closet_yw.dmi'
 	icon_state = "bssecure1"
 	icon_closed = "bssecure"
 	icon_locked = "bssecure1"
@@ -22,8 +23,9 @@
 		/obj/item/clothing/head/beret/centcom/officer,
 		/obj/item/clothing/head/helmet/dermal,
 		/obj/item/clothing/under/yw/blueshield,
-//		/obj/item/clothing/suit/armor/vest/blueshield(src),
-//		/obj/item/clothing/suit/storage/blueshield(src),
+		/obj/item/clothing/under/yw/blueshield2,
+		/obj/item/clothing/suit/armor/yw/blueshield,
+		/obj/item/clothing/suit/armor/yw/blueshieldcoat,
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/accessory/holster/leg,
 		/obj/item/clothing/shoes/boots/jackboots,
