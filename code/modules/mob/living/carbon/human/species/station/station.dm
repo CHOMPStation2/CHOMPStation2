@@ -82,7 +82,7 @@
 */
 	body_temperature = T20C
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#34AF10"
@@ -193,7 +193,7 @@
 */
 	primitive_form = SPECIES_MONKEY_TAJ
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#AFA59E"
@@ -256,7 +256,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
 
 	flesh_color = "#8CD7A3"
@@ -375,7 +375,7 @@
 	body_temperature = T0C + 15		//make the plant people have a bit lower body temperature, why not
 
 	flags = NO_SCAN | IS_PLANT | NO_PAIN | NO_SLIP | NO_MINOR_CUT
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 
 	blood_color = "#004400"
 	flesh_color = "#907E4A"
