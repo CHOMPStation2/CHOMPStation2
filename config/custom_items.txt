@@ -166,7 +166,7 @@ item_path: /obj/item/weapon/storage/box/fluff/saroth
 {
 ckey: esperkin
 character_name: Sheri Calen
-item_path: /obj/item/weapon/rig/hazmat/fluff/sheri
+item_path: /obj/item/device/modkit_conversion/fluff/sheri_rig_kit
 }
 # ######## F CKEYS
 {

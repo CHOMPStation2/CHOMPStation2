@@ -1,3 +1,13 @@
+/obj/item/device/modkit_conversion/fluff/sheri_rig_kit
+    name = "Sheri's modkit"
+    desc = "A kit containing all the needed tools and parts to modify a Research Director rig suit. It has a snake painted on it."
+
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "modkit"
+
+    from_suit = /obj/item/weapon/rig/hazmat
+    to_suit = /obj/item/weapon/rig/hazmat/fluff/sheri
+
 /obj/item/weapon/rig/hazmat/fluff/sheri
     name = "AHS-VPR Control Module"
     desc = "This is the control module for a prototype hazardous environment suit, designed to protect the wearer from radiation, pressure, and hostile aliens alike. This particular suit was designed to fit a naga, and is labeled as the model 'Viper'. A small tag on it marks it as belonging to a 'Sheri Calen'"

@@ -13,7 +13,7 @@
 	name_language = LANGUAGE_SCHECHI
 	species_language = LANGUAGE_SCHECHI
 	min_age = 18
-	max_age = 45
+	max_age = 100
 
 	economic_modifier = 10
 
@@ -61,7 +61,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL

@@ -58,5 +58,5 @@
 	name = "phoronics telepad"
 	id = "phoronics_telepad"
 	req_tech = list("bluespace" = 2, "materials" = 3)
-	materials = list("$metal" = 1000)
+	materials = list(DEFAULT_WALL_MATERIAL = 1000)
 	build_path = /obj/item/weapon/phoronics_telepad
