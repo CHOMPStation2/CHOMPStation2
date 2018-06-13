@@ -2,11 +2,12 @@
 	title = "Blueshield"
 	flag = BLUESHIELD //this may be used later.
 	department = "Command"
-	department_flag = CIVILIAN
+	department_flag = ENGSEC
+	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Colony Director" //Reports directly to CD
-	selection_color = "#ddddff"
+	selection_color = "#006cb3"
 	req_admin_notify = 1
 	head_position = 1
 	minimum_character_age = 25
@@ -18,6 +19,6 @@
 			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
 			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
 			            access_hop, access_RC_announce, access_keycard_auth, access_gateway, )
-	minimal_access = list(access_forensics_lockers, access_sec_doors, access_medical, access_construction, access_engine, access_maint_tunnels, access_research,
-			            access_RC_announce, access_keycard_auth, access_heads)
+	minimal_access = list(access_forensics_lockers, access_sec_doors, access_medical, access_construction, access_engine, access_maint_tunnels, access_research, access_RC_announce, access_keycard_auth, access_heads)
+
 	outfit_type = /decl/hierarchy/outfit/job/blueshield

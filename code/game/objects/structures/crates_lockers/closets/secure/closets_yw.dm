@@ -17,7 +17,7 @@
 		/obj/item/weapon/grenade/flashbang,
 		/obj/item/device/flash,
 		/obj/item/weapon/handcuffs,
-		/obj/item/weapon/melee/baton,
+		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/clothing/glasses/sunglasses/medhud,
 		/obj/item/clothing/head/beret/centcom/officer,
