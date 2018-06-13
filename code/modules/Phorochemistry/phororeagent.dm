@@ -17,6 +17,7 @@ var/induromol_code = rand(1, 50)
 			return "WARNING: Gaseous reaction detected! Repeating reaction inadvisable."
 		return message
 
+/*		Genetics is removed now.
 /datum/reagent/phororeagent/extreme_mutagen //this one should work fine, but genetics may still be a little messed up
 	id = "mutagen_x"
 	name = "Extreme Mutagen"
@@ -50,7 +51,7 @@ var/induromol_code = rand(1, 50)
 		M.adjustToxLoss(damage)
 		M.reagents.add_reagent("toxin", src.volume / 4) //add toxin damage over time
 		holder.remove_reagent(src.id, src.volume) //instant use
-
+*/
 /datum/reagent/phororeagent/bicordrazine
 	id = "bicordrazine"
 	name = "Bicordrazine"
@@ -1146,35 +1147,4 @@ nocturnol //Should give night vision, does not seem to work using this method of
 				var/mob/M = A
 				M.see_in_dark = 2
 		return ..()
-
-mutandisol //Phoronics version of genetics changing one person's characteristics to another person's, as of yet unfinished
-	id = "mutandisol"
-	name = "Mutandisol"
-	description = "If reacted with humanoid blood, could cause rapid genetic change in living organisms"
-	color = "#51FF00"
-
-primed_mutandisol //ensure this doesn't get added to list of makeable reagents
-	id = "primed_mutandisol"
-	name = "Primed Mutandisol"
-	description = "Highly volatile substance capable of rapid genetic change"
-	color = "#005C06"
-
-datum/chemical_reaction/mutandisol_blood
-	name = "Primed Mutandisol"
-	id = "mutandisol_blood"
-	result = "primed_mutandisol"
-	result_amount = 1
-	required_reagents = list("mutandisol" = 1, "blood" = 1)
-
-	on_reaction(var/datum/reagents/holder, var/created_volume)
-		return
-
-/datum/chemical_reaction/primed_mutandisol_mutandisol
-	name = "Primed Mutandisol 2"
-	id = "primed_mutandisol_mutandisol"
-	result = "primed_mutandisol"
-	result_amount = 2
-	required_reagents = list("primed_mutandisol" = 1, "mutandisol" = 1)
-	//ensures any amount of blood will be sufficient to react
-	//could probably put this in mutandisol_blood reaction on_reaction proc
 */
