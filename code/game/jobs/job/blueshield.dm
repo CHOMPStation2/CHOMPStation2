@@ -1,5 +1,5 @@
 /datum/job/blueshield
-	title = "Blueshield"
+	title = "Blueshield Guard"
 	flag = BLUESHIELD //this may be used later.
 	department = "Command"
 	department_flag = ENGSEC
