@@ -31,5 +31,6 @@
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless,
 		/obj/item/weapon/gun/projectile/shotgun/pump,
-		/obj/item/weapon/storage/box/beanbags
+		/obj/item/weapon/storage/box/beanbags,
+		/obj/item/weapon/storage/box/shotgunshells
 		)
