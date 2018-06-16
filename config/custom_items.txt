@@ -205,6 +205,11 @@ character_name: Nika Domashev
 item_path: /obj/item/weapon/storage/box/fluff/nika
 }
 # ######## H CKEYS
+{
+ckey: harpsong
+character_name: Harpsong
+item_path: /obj/item/clothing/suit/armor/vest/harpsong
+}
 # ######## I CKEYS
 {
 ckey: izac112
