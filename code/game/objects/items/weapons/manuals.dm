@@ -243,19 +243,21 @@
 				<ol>
 				<li>Go to engine gas storage to the south of the engine room and fetch two Canisters of Nitrogen. and two canisters of Phoron.</li>
 				<li>Secure the Phoron canister to the port that pumps into the Cold (Green/Cyan) loop, and the Nitrogen canister into the Hot(Yellow/Red) loop. long story short, The reactor doesn't like Phoron.</li>
-				<li><b>DO NOT OPEN THE VALVE ON THE GAS CANISTERS, OR SPACE GOD WILL HATE YOU.</b> Turn both pumps on to maximum input, Swap the canisters for full ones when necesary. Each loop only needs 2 canisters of gas.</li>
+				<li><b>DO NOT OPEN THE VALVE ON THE GAS CANISTERS, OR SPACE GOD WILL HATE YOU.</b> Turn both pumps on to maximum input, Swap the canisters for full ones when necessary. Each loop only needs 2 canisters of gas.</li>
 				<li>Turn on the pump just to the West of the Pump Station and set it to maximum pressure.</li>
 				<li>Now Coolant is flowing, lets actually start the reactor.</li>
-				<li>Go into the Engine Monitoring room and open the Reactor Shroud, and close the Monitoring room Blast Doors.</li>
+				<li>Go into the Engine Monitoring room and close the Monitoring room Blast Doors.</li>
 				<li>Get the PACMAN from hard storage and Secure it in the Engine SMES room, and load it with Phoron.</li>
-				<li>Enable max input and output on the engine SMES and shut off the input off on the Station SMES. This is to make sure the gyrotron gets as much power as it can during start up.</li>
+				<li>Go into the Reactor Control room and open the reactor shroud.</li>
+				<li>Enable max input and output on the engine SMES and shut off the input off on the Station SMES. This is to make sure the Gyrotron gets as much power as it can during start up.</li>
 				<li>Turn the PACMAN on, setting it to power 4/5.</li>
-				<li>Go into the reactor Control Room (East of the reactor) and take the stack of Deuterium off the table, and click it on the compressor twice, this should make two Deuterium Fuel rods. You can ignore the Tritium.</li>
-				<li>In the Control room go to the Core Control console, Access the field, and set its strength/size to 600. This will give you a field of about 7x7 tile. Note the field size, A bigger field can EMP machinery or doors around it, a smaller field may allow Gyrotron shots to miss, and punch holes in the back wall.</li>
-				<li>In the Control room go to the Gyrotron Control console and turn the gyrotrons on, delay 3 power 3.</li>
+				<li>Go into the reactor Control Room (East of the reactor) and take the stack of Deuterium off the table, and click it on the compressor twice, this should make two Deuterium Fuel rods. Ignore the Tritium.</li>
+				<li>In the Control room go to the Core Control console, Access the field, and set its strength/size to 600. This will give you a field of about 7x7 tiles. Make note of the field size, A bigger field can EMP machinery or doors around it, a smaller field may allow Gyrotron shots to miss, and punch holes in the back wall.</li>
+				<li>In the Control room go to the Gyrotron Control console and turn the Gyrotrons on, delay 3 power 3.</li>
 				<li>In the Control room go to the Fuel Injector console and start injecting fuel.</li>
 				<li>Go back to the Core Control Console, and now wait for the temperature to spike from 296 Kelvin up to 3,000 to 10,000 Kelvin. When the temperature spikes it means you have achieved fusion</li>
 				<li>Now turn the Gyrotrons off, You can turn off one of the two fuel injectors as well if you wish to conserve fuel.</li>
+				<li>Now close the Reactor Shroud and the Control Room Shroud.</li>
 				<li>You should be producing power now, a lot of it. Now go turn on the Station SMES and turn off the PACMAN before it explodes.</li>
 				</ol>
 				<br>
