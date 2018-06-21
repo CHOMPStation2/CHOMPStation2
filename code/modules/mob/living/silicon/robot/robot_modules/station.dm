@@ -611,7 +611,8 @@ var/global/list/robot_modules = list(
 					"Bro" = "Brobot",
 					"Rich" = "maximillion",
 					"Drone - Service" = "drone-service",
-					"Drone - Hydro" = "drone-hydro"
+					"Drone - Hydro" = "drone-hydro",
+					"Bovtender" = "bovtender-base"
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
