@@ -312,7 +312,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	..()
 	if(timeLeft > 0 && (stat & NOPOWER))
 		aborting = 1
-
+/*
 //Buildable computers stuff
 /obj/item/weapon/circuitboard/phoronics
 	name = T_BOARD("phorochemputer")
@@ -324,4 +324,4 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	id = "phorochemputer"
 	req_tech = list("programming" = 3, "bluespace" = 2)
 	build_path = /obj/item/weapon/circuitboard/phoronics
-
+*/

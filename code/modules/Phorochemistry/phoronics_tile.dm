@@ -28,10 +28,10 @@
 	flags = CONDUCT
 	max_amount = 1
 	origin_tech = "magnets=3"
-
+/*
 datum/design/item/phoronics_tile
 	name = "electromagnetic floor tile"
 	id = "phoronics_tile"
 	req_tech = list("magnets" = 3, "materials" = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 1000)
-	build_path = /obj/item/stack/tile/phoronics
+	build_path = /obj/item/stack/tile/phoronics */
