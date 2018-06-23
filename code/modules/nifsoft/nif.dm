@@ -26,7 +26,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 	var/durability = 100					// Durability remaining
 	var/bioadap = FALSE						// If it'll work in fancy species
-	var/savetofile = TRUE
+	var/savetofile = TRUE					/*Start True so that Transcore saves any NIF that's newly installed with the correct scans or implant.
+											DO NOT CHANGE durability WITHOUT SETTING THIS TO TRUE. */
 
 	var/tmp/power_usage = 0						// Nifsoft adds to this
 	var/tmp/mob/living/carbon/human/human		// Our owner!

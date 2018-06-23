@@ -130,7 +130,7 @@ SUBSYSTEM_DEF(transcore)
 		MR.one_time = one_time
 
 		//Pass a 0 to not change NIF status (because the elseif is checking for null)
-		if(nif && nif.savetofile)
+		if(nif && nif.savetofile) //This is to allow Transcore to skip over saving NIFs that have already been saved.
 			MR.nif_path = nif.type
 			MR.nif_durability = nif.durability
 			var/list/nifsofts = list()
