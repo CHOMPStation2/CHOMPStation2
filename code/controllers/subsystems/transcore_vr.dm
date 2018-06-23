@@ -55,7 +55,7 @@ SUBSYSTEM_DEF(transcore)
 
 		if(H == imp.imp_in && H.mind && H.stat < DEAD)
 			SStranscore.m_backup(H.mind,H.nif)
-			persist_nif_data(H)
+			//persist_nif_data(H) YW TODO : remove this once NIF saving isn't bullshit.
 
 		if(MC_TICK_CHECK)
 			return
