@@ -1241,7 +1241,7 @@
 	item_state = "tronket"
 	overlay_state = "tronket"
 	slot_flags = SLOT_TIE
-	slot = "over"
+	slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/flops
 	name = "drop straps"
@@ -1252,7 +1252,7 @@
 	item_state = "flops"
 	overlay_state = "flops"
 	slot_flags = SLOT_TIE
-	slot = "over"
+	slot = ACCESSORY_SLOT_DECOR
 
 //The perfect adminboos device?
 /obj/item/device/perfect_tele
