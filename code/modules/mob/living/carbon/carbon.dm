@@ -46,7 +46,7 @@
 		// Moving around increases germ_level faster
 		if(germ_level < GERM_LEVEL_MOVE_CAP && prob(8))
 			germ_level++
-
+/* VOREStation Removal - Needless duplicate feature
 /mob/living/carbon/relaymove(var/mob/living/user, direction)
 	if((user in src.stomach_contents) && istype(user))
 		if(user.last_special <= world.time)
@@ -72,7 +72,7 @@
 						A.loc = loc
 						stomach_contents.Remove(A)
 					src.gib()
-
+*/
 /mob/living/carbon/gib()
 	for(var/mob/M in src)
 		if(M in src.stomach_contents)
@@ -266,6 +266,10 @@
 
 /mob/living/carbon/proc/eyecheck()
 	return 0
+
+/mob/living/carbon/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /obj/screen/fullscreen/flash)
+	if(eyecheck() < intensity || override_blindness_check)
+		return ..()
 
 // ++++ROCKDTBEN++++ MOB PROCS -- Ask me before touching.
 // Stop! ... Hammertime! ~Carn

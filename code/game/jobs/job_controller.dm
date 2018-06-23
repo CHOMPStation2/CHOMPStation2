@@ -413,7 +413,8 @@ var/global/datum/controller/occupations/job_master
 			job.equip_backpack(H)
 //			job.equip_survival(H)
 			job.apply_fingerprints(H)
-			H.equip_post_job()
+			if(job.title != "Cyborg" && job.title != "AI")
+				H.equip_post_job()
 
 			//If some custom items could not be equipped before, try again now.
 			for(var/thing in custom_equip_leftovers)
@@ -431,6 +432,7 @@ var/global/datum/controller/occupations/job_master
 			H << "Your job is [rank] and the game just can't handle it! Please report this bug to an administrator."
 
 		H.job = rank
+		log_game("JOINED [key_name(H)] as \"[rank]\"")
 
 		// If they're head, give them the account info for their department
 		if(H.mind && job.head_position)

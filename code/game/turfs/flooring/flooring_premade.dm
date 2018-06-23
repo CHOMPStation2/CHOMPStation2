@@ -1,6 +1,6 @@
 /turf/simulated/floor/carpet
 	name = "carpet"
-	icon = 'icons/turf/flooring/carpet_vr.dmi'
+	icon = 'icons/turf/flooring/carpet.dmi'
 	icon_state = "carpet"
 	initial_flooring = /decl/flooring/carpet
 
@@ -68,11 +68,25 @@
 	icon_state = "wood"
 	initial_flooring = /decl/flooring/wood
 
+/turf/simulated/floor/wood/broken
+	icon_state = "wood_broken0" // This gets changed when spawned.
+
+/turf/simulated/floor/wood/broken/initialize()
+	break_tile()
+	return ..()
+
 /turf/simulated/floor/wood/sif
 	name = "alien wooden floor"
 	icon = 'icons/turf/flooring/wood.dmi'
 	icon_state = "sifwood"
 	initial_flooring = /decl/flooring/wood/sif
+
+/turf/simulated/floor/wood/sif/broken
+	icon_state = "sifwood_broken0" // This gets changed when spawned.
+
+/turf/simulated/floor/wood/sif/broken/initialize()
+	break_tile()
+	return ..()
 
 /turf/simulated/floor/grass
 	name = "grass patch"

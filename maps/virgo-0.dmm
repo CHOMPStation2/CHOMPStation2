@@ -139,7 +139,7 @@
 "cI" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/white,/area/maintenance/blueserg)
 "cJ" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/obj/structure/closet/firecloset/full,/turf/simulated/floor,/area/maintenance/lowfloor1)
 "cK" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 4},/obj/effect/decal/remains/mouse,/turf/simulated/floor,/area/maintenance/lowfloor1)
-"cL" = (/obj/structure/closet{desc = "It's a basic storage unit. Full of materials."; name = "Blue Sergal's material closet"},/obj/fiftyspawner/marble,/obj/fiftyspawner/wood,/obj/fiftyspawner/bluecarpet,/obj/fiftyspawner/carpet,/obj/fiftyspawner/floor,/obj/fiftyspawner/glass,/obj/fiftyspawner/iron,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plasteel,/obj/fiftyspawner/steel,/turf/simulated/floor/wood,/area/maintenance/blueserg)
+"cL" = (/obj/structure/closet{desc = "It's a basic storage unit. Full of materials."; name = "Blue Sergal's material closet"},/obj/fiftyspawner/marble,/obj/fiftyspawner/wood,/obj/fiftyspawner/carpet,/obj/fiftyspawner/floor,/obj/fiftyspawner/glass,/obj/fiftyspawner/iron,/obj/fiftyspawner/plastic,/obj/fiftyspawner/plasteel,/obj/fiftyspawner/steel,/turf/simulated/floor/wood,/area/maintenance/blueserg)
 "cM" = (/obj/machinery/atmospherics/pipe/simple/hidden/black,/mob/living/bot/medbot,/turf/simulated/floor/wood,/area/maintenance/blueserg)
 "cN" = (/obj/structure/table/woodentable,/obj/item/weapon/grenade/chem_grenade/cleaner,/obj/item/weapon/grenade/chem_grenade/cleaner,/obj/item/weapon/grenade/chem_grenade/cleaner,/obj/item/weapon/grenade/chem_grenade/cleaner,/obj/item/weapon/grenade/chem_grenade/cleaner,/obj/item/weapon/grenade/chem_grenade/cleaner,/obj/item/weapon/grenade/chem_grenade/cleaner,/turf/simulated/floor/wood,/area/maintenance/blueserg)
 "cO" = (/obj/machinery/light,/turf/simulated/floor/wood,/area/maintenance/blueserg)
@@ -230,7 +230,7 @@
 "ev" = (/obj/structure/bed/chair/comfy/teal,/turf/simulated/floor/wood,/area/maintenance/blueserg)
 "ew" = (/obj/structure/table/gamblingtable,/turf/simulated/floor/wood,/area/maintenance/blueserg)
 "ex" = (/obj/structure/table/gamblingtable,/obj/item/weapon/deck/cards,/turf/simulated/floor/wood,/area/maintenance/blueserg)
-"ey" = (/obj/machinery/media/jukebox/vore,/turf/simulated/floor/wood,/area/maintenance/blueserg)
+"ey" = (/obj/machinery/media/jukebox,/turf/simulated/floor/wood,/area/maintenance/blueserg)
 "ez" = (/obj/item/weapon/circuitboard/mecha/honker/peripherals,/turf/simulated/floor,/area/maintenance/lowfloor3)
 "eA" = (/obj/item/weapon/circuitboard/mecha/honker/main,/turf/simulated/floor,/area/maintenance/lowfloor3)
 "eB" = (/obj/item/weapon/circuitboard/mecha/honker/targeting,/turf/simulated/floor,/area/maintenance/lowfloor3)
@@ -270,7 +270,7 @@
 "fj" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 6},/obj/effect/decal/cleanable/cobweb2{tag = "icon-cobweb1"; icon_state = "cobweb1"},/turf/simulated/floor,/area/maintenance/lowfloor1)
 "fk" = (/obj/random/junk,/turf/simulated/floor,/area/maintenance/lowfloor2)
 "fl" = (/obj/structure/closet/coffin,/turf/simulated/floor,/area/maintenance/lowfloor2)
-"fm" = (/obj/item/weapon/material/scythe,/turf/simulated/floor,/area/maintenance/lowfloor3)
+"fm" = (/obj/item/weapon/material,/turf/simulated/floor,/area/maintenance/lowfloor3)
 "fn" = (/obj/effect/decal/remains/mouse,/turf/simulated/floor,/area/maintenance/lowfloor1)
 "fo" = (/obj/machinery/atmospherics/pipe/manifold/visible/black{dir = 8},/turf/simulated/floor,/area/maintenance/lowfloor2)
 "fp" = (/obj/machinery/atmospherics/pipe/simple/visible/black{dir = 4},/turf/simulated/floor,/area/maintenance/lowfloor2)
@@ -594,4 +594,3 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
-

@@ -242,7 +242,7 @@
 	if(legcuffed)
 		dat += "<BR><A href='?src=\ref[src];item=[slot_legcuffed]'>Legcuffed</A>"
 
-	if(suit && suit.accessories.len)
+	if(suit && LAZYLEN(suit.accessories))
 		dat += "<BR><A href='?src=\ref[src];item=tie'>Remove accessory</A>"
 	dat += "<BR><A href='?src=\ref[src];item=splints'>Remove splints</A>"
 	dat += "<BR><A href='?src=\ref[src];item=pockets'>Empty pockets</A>"
@@ -399,12 +399,9 @@
 
 			var/modified = 0
 			var/perpname = "wot"
-			if(wear_id)
-				var/obj/item/weapon/card/id/I = wear_id.GetID()
-				if(I)
-					perpname = I.registered_name
-				else
-					perpname = name
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
 				perpname = name
 
@@ -438,14 +435,11 @@
 			var/perpname = "wot"
 			var/read = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.security)
@@ -468,14 +462,11 @@
 			var/perpname = "wot"
 			var/read = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.security)
@@ -496,14 +487,11 @@
 	if (href_list["secrecordadd"])
 		if(hasHUD(usr,"security"))
 			var/perpname = "wot"
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.security)
@@ -527,14 +515,11 @@
 			var/perpname = "wot"
 			var/modified = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
@@ -566,14 +551,11 @@
 			var/perpname = "wot"
 			var/read = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.medical)
@@ -597,14 +579,11 @@
 			var/perpname = "wot"
 			var/read = 0
 
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.medical)
@@ -625,14 +604,11 @@
 	if (href_list["medrecordadd"])
 		if(hasHUD(usr,"medical"))
 			var/perpname = "wot"
-			if(wear_id)
-				if(istype(wear_id,/obj/item/weapon/card/id))
-					perpname = wear_id:registered_name
-				else if(istype(wear_id,/obj/item/device/pda))
-					var/obj/item/device/pda/tempPda = wear_id
-					perpname = tempPda.owner
+			var/obj/item/weapon/card/id/I = GetIdCard()
+			if(I)
+				perpname = I.registered_name
 			else
-				perpname = src.name
+				perpname = name
 			for (var/datum/data/record/E in data_core.general)
 				if (E.fields["name"] == perpname)
 					for (var/datum/data/record/R in data_core.medical)
@@ -691,13 +667,20 @@
 		I = internal_organs_by_name[O_EYES]
 		if(I.is_broken())
 			return FLASH_PROTECTION_MAJOR
-	else // They can't be flashed if they don't have eyes.
+	else if(!species.dispersed_eyes) // They can't be flashed if they don't have eyes, or widespread sensing surfaces.
 		return FLASH_PROTECTION_MAJOR
 
 	var/number = get_equipment_flash_protection()
-	number = I.get_total_protection(number)
-	I.additional_flash_effects(number)
+	if(I)
+		number = I.get_total_protection(number)
+		I.additional_flash_effects(number)
 	return number
+
+/mob/living/carbon/human/flash_eyes(var/intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /obj/screen/fullscreen/flash)
+	if(internal_organs_by_name[O_EYES]) // Eyes are fucked, not a 'weak point'.
+		var/obj/item/organ/internal/eyes/I = internal_organs_by_name[O_EYES]
+		I.additional_flash_effects(intensity)
+	return ..()
 
 #define add_clothing_protection(A)	\
 	var/obj/item/clothing/C = A; \
@@ -877,7 +860,7 @@
 		src.verbs -= /mob/living/carbon/human/proc/remotesay
 		return
 	var/list/creatures = list()
-	for(var/mob/living/carbon/h in world)
+	for(var/mob/living/carbon/h in mob_list)
 		creatures += h
 	var/mob/target = input("Who do you want to project your mind to ?") as null|anything in creatures
 	if (isnull(target))
@@ -890,7 +873,7 @@
 		target.show_message("<font color='blue'> You hear a voice that seems to echo around the room: [say]</font>")
 	usr.show_message("<font color='blue'> You project your mind into [target.real_name]: [say]</font>")
 	log_say("(TPATH to [key_name(target)]) [say]",src)
-	for(var/mob/observer/dead/G in world)
+	for(var/mob/observer/dead/G in mob_list)
 		G.show_message("<i>Telepathic message from <b>[src]</b> to <b>[target]</b>: [say]</i>")
 
 /mob/living/carbon/human/proc/remoteobserve()
@@ -915,7 +898,7 @@
 
 	var/list/mob/creatures = list()
 
-	for(var/mob/living/carbon/h in world)
+	for(var/mob/living/carbon/h in mob_list)
 		var/turf/temp_turf = get_turf(h)
 		if((temp_turf.z != 1 && temp_turf.z != 5) || h.stat!=CONSCIOUS) //Not on mining or the station. Or dead
 			continue
@@ -954,7 +937,7 @@
 	restore_all_organs()       // Reapply robotics/amputated status from preferences.
 
 	if(!client || !key) //Don't boot out anyone already in the mob.
-		for (var/obj/item/organ/internal/brain/H in world)
+		for (var/obj/item/organ/internal/brain/H in all_brain_organs)
 			if(H.brainmob)
 				if(H.brainmob.real_name == src.real_name)
 					if(H.brainmob.mind)
@@ -1184,7 +1167,7 @@
 	if(!(gender in species.genders))
 		gender = species.genders[1]
 
-	icon_state = lowertext(species.name)
+	//icon_state = lowertext(species.name) //Necessary?
 
 	species.create_organs(src)
 
@@ -1573,7 +1556,7 @@
 	return species.fire_icon_state
 
 // Called by job_controller.  Makes drones start with a permit, might be useful for other people later too.
-/mob/living/carbon/human/equip_post_job()	//Drone Permit moved to equip_survival_gear()
+/mob/living/carbon/human/equip_post_job()
 	var/braintype = get_FBP_type()
 	if(braintype == FBP_DRONE)
 		var/turf/T = get_turf(src)
@@ -1583,8 +1566,9 @@
 
 /mob/living/carbon/human/proc/update_icon_special() //For things such as teshari hiding and whatnot.
 	if(status_flags & HIDING) // Hiding? Carry on.
-		if(stat == DEAD || paralysis || weakened || stunned) //stunned/knocked down by something that isn't the rest verb? Note: This was tried with INCAPACITATION_STUNNED, but that refused to work.
-			status_flags &= ~HIDING //No hiding for you. Mob layer should be updated naturally, but it actually isn't.
+		if(stat == DEAD || paralysis || weakened || stunned || restrained()) //stunned/knocked down by something that isn't the rest verb? Note: This was tried with INCAPACITATION_STUNNED, but that refused to work.
+			reset_plane_and_layer()
+			status_flags &= ~HIDING
 		else
 			layer = HIDING_LAYER
 
@@ -1614,12 +1598,9 @@
 	if(hasHUD(user,"security"))
 		//Try to find their name
 		var/perpname
-		if(wear_id)
-			var/obj/item/weapon/card/id/I = wear_id.GetID()
-			if(I)
-				perpname = I.registered_name
-			else
-				perpname = name
+		var/obj/item/weapon/card/id/I = GetIdCard()
+		if(I)
+			perpname = I.registered_name
 		else
 			perpname = name
 		//Try to find their record

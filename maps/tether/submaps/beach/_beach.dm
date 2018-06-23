@@ -13,7 +13,7 @@
 
 //The other destination is landed on the surface
 /datum/shuttle_destination/excursion/beach
-	name = "Coastal Area"
+	name = "Remote Coastal Area"
 	my_area = /area/shuttle/excursion/away_beach
 	preferred_interim_area = /area/shuttle/excursion/sand_moving
 	skip_me = TRUE
@@ -95,7 +95,7 @@
 	prob_fall = 25 //Chance goes down by this much each time it spawns one (not defining and prob_spawn 100 means they spawn as soon as one dies)
 	guard = 40 //They'll stay within this range (not defining this disables them staying nearby and they will wander the map (and through step teleports))
 	mobs_to_pick_from = list(
-		/mob/living/simple_animal/snake = 3, //Snakes are 3x more likely to spawn than,
+		/mob/living/simple_animal/hostile/giant_snake = 3, //Snakes are 3x more likely to spawn than,
 		/mob/living/simple_animal/hostile/frog = 1 //these frogs are, with these values
 	)
 
@@ -157,7 +157,7 @@
 	dynamic_lighting = 0
 
 /area/tether_away/beach
-	name = "\improper Desert Planet Beach"
+	name = "\improper Away Mission - Virgo 4 Beach"
 	icon_state = "away"
 	base_turf = /turf/simulated/floor/beach/sand //This is what the ground turns into if destroyed/bombed/etc
 	//Not going to do sunlight simulations here like virgo3b

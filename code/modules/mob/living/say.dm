@@ -265,13 +265,13 @@ proc/get_radio_key_from_channel(var/channel)
 
 	//Handle nonverbal and sign languages here
 	if (speaking)
-		if (speaking.flags & NONVERBAL)
-			if (prob(30))
-				src.custom_emote(1, "[pick(speaking.signlang_verb)].")
-
 		if (speaking.flags & SIGNLANG)
 			log_say("(SIGN) [message]", src)
 			return say_signlang(message, pick(speaking.signlang_verb), speaking)
+
+		if (speaking.flags & NONVERBAL)
+			if (prob(30))
+				src.custom_emote(1, "[pick(speaking.signlang_verb)].")
 
 	//These will contain the main receivers of the message
 	var/list/listening = list()
@@ -307,7 +307,6 @@ proc/get_radio_key_from_channel(var/channel)
 	var/speech_type = speech_bubble_appearance()
 	var/image/speech_bubble = image('icons/mob/talk_vr.dmi',src,"[speech_type][speech_bubble_test]") //VOREStation Edit - talk_vr.dmi instead of talk.dmi for right-side icons
 	images_to_clients[speech_bubble] = list()
-
 
 	// Attempt Multi-Z Talking
 	var/mob/above = src.shadow
@@ -375,8 +374,19 @@ proc/get_radio_key_from_channel(var/channel)
 	return 1
 
 /mob/living/proc/say_signlang(var/message, var/verb="gestures", var/datum/language/language)
-	for (var/mob/O in viewers(src, null))
-		O.hear_signlang(message, verb, language, src)
+	var/turf/T = get_turf(src)
+	//We're in something, gesture to people inside the same thing
+	if(loc != T)
+		for(var/mob/M in loc)
+			M.hear_signlang(message, verb, language, src)
+
+	//We're on a turf, gesture to visible as if we were a normal language
+	else
+		var/list/potentials = get_mobs_and_objs_in_view_fast(T, world.view)
+		var/list/mobs = potentials["mobs"]
+		for(var/hearer in mobs)
+			var/mob/M = hearer
+			M.hear_signlang(message, verb, language, src)
 	return 1
 
 /obj/effect/speech_bubble

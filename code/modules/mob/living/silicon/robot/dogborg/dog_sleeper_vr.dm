@@ -18,10 +18,19 @@
 	var/UI_open = FALSE
 	var/compactor = FALSE
 	var/analyzer = FALSE
+	var/decompiler = FALSE
 	var/datum/research/techonly/files //Analyzerbelly var.
 	var/synced = FALSE
 	var/startdrain = 500
 	var/max_item_count = 1
+	var/gulpsound = 'sound/vore/gulp.ogg'
+	var/datum/matter_synth/metal = null
+	var/datum/matter_synth/glass = null
+	var/datum/matter_synth/wood = null
+	var/datum/matter_synth/plastic = null
+	var/datum/matter_synth/water = null
+	var/digest_brute = 2
+	var/digest_burn = 3
 
 /obj/item/device/dogborg/sleeper/New()
 	..()
@@ -55,7 +64,7 @@
 			if(do_after(user, 30, target) && length(contents) < max_item_count)
 				target.forceMove(src)
 				user.visible_message("<span class='warning'>[hound.name]'s internal analyzer groans lightly as [target.name] slips inside.</span>", "<span class='notice'>Your internal analyzer groans lightly as [target] slips inside.</span>")
-				playsound(hound, 'sound/vore/gulp.ogg', 30, 1)
+				playsound(hound, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(istype(target,/obj/item))
 					var/obj/item/tech_item = target
 					for(var/T in tech_item.origin_tech)
@@ -79,7 +88,7 @@
 				trashman.reset_view(src)
 				processing_objects |= src
 				user.visible_message("<span class='warning'>[hound.name]'s internal analyzer groans lightly as [trashman] slips inside.</span>", "<span class='notice'>Your internal analyzer groans lightly as [trashman] slips inside.</span>")
-				playsound(hound, 'sound/vore/gulp.ogg', 80, 1)
+				playsound(hound, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				update_patient()
 				if(UI_open == TRUE)
 					sleeperUI(usr)
@@ -96,7 +105,7 @@
 			if(do_after(user, 30, target) && length(contents) < max_item_count)
 				target.forceMove(src)
 				user.visible_message("<span class='warning'>[hound.name]'s garbage processor groans lightly as [target.name] slips inside.</span>", "<span class='notice'>Your garbage compactor groans lightly as [target] slips inside.</span>")
-				playsound(hound, 'sound/vore/gulp.ogg', 30, 1)
+				playsound(hound, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				update_patient()
 				if(UI_open == TRUE)
 					sleeperUI(usr)
@@ -109,7 +118,7 @@
 				trashmouse.forceMove(src)
 				trashmouse.reset_view(src)
 				user.visible_message("<span class='warning'>[hound.name]'s garbage processor groans lightly as [trashmouse] slips inside.</span>", "<span class='notice'>Your garbage compactor groans lightly as [trashmouse] slips inside.</span>")
-				playsound(hound, 'sound/vore/gulp.ogg', 30, 1)
+				playsound(hound, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				update_patient()
 				if(UI_open == TRUE)
 					sleeperUI(usr)
@@ -129,7 +138,7 @@
 				trashman.reset_view(src)
 				processing_objects |= src
 				user.visible_message("<span class='warning'>[hound.name]'s garbage processor groans lightly as [trashman] slips inside.</span>", "<span class='notice'>Your garbage compactor groans lightly as [trashman] slips inside.</span>")
-				playsound(hound, 'sound/vore/gulp.ogg', 80, 1)
+				playsound(hound, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				update_patient()
 				if(UI_open == TRUE)
 					sleeperUI(usr)
@@ -157,7 +166,7 @@
 				processing_objects |= src
 				user.visible_message("<span class='warning'>[hound.name]'s medical pod lights up as [H.name] slips inside into their [src.name].</span>", "<span class='notice'>Your medical pod lights up as [H] slips into your [src]. Life support functions engaged.</span>")
 				message_admins("[key_name(hound)] has eaten [key_name(patient)] as a dogborg. ([hound ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
-				playsound(hound, 'sound/vore/gulp.ogg', 80, 1)
+				playsound(hound, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(UI_open == TRUE)
 					sleeperUI(usr)
 
@@ -462,9 +471,22 @@
 
 	//Belly is entirely empty
 	if(!length(contents))
+		var/finisher = pick(
+			'sound/vore/death1.ogg',
+			'sound/vore/death2.ogg',
+			'sound/vore/death3.ogg',
+			'sound/vore/death4.ogg',
+			'sound/vore/death5.ogg',
+			'sound/vore/death6.ogg',
+			'sound/vore/death7.ogg',
+			'sound/vore/death8.ogg',
+			'sound/vore/death9.ogg',
+			'sound/vore/death10.ogg')
+		playsound(hound, finisher, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 		to_chat(hound, "<span class='notice'>Your [src.name] is now clean. Ending self-cleaning cycle.</span>")
 		cleaning = 0
 		update_patient()
+		playsound(hound, 'sound/machines/ding.ogg', vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 		return
 
 	if(prob(20))
@@ -481,10 +503,7 @@
 			'sound/vore/digest10.ogg',
 			'sound/vore/digest11.ogg',
 			'sound/vore/digest12.ogg')
-		for(var/mob/outhearer in range(1,hound))
-			outhearer << sound(churnsound)
-		for(var/mob/inhearer in contents)
-			inhearer << sound(churnsound)
+		playsound(hound, churnsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 	//If the timing is right, and there are items to be touched
 	if(air_master.current_cycle%3==1 && length(touchable_items))
 
@@ -493,13 +512,19 @@
 			if((T.status_flags & GODMODE) || !T.digestable)
 				items_preserved += T
 			else
-				T.adjustBruteLoss(2)
-				T.adjustFireLoss(3)
-				drain(-100) //20*total loss as with voreorgan stats.
+				var/old_brute = T.getBruteLoss()
+				var/old_burn = T.getFireLoss()
+				T.adjustBruteLoss(digest_brute)
+				T.adjustFireLoss(digest_burn)
+				var/actual_brute = T.getBruteLoss() - old_brute
+				var/actual_burn = T.getFireLoss() - old_burn
+				var/damage_gain = actual_brute + actual_burn
+				drain(-25 * damage_gain) //25*total loss as with voreorgan stats.
 				update_patient()
 
 		//Pick a random item to deal with (if there are any)
 		var/atom/target = pick(touchable_items)
+		var/volume = 0
 
 		//Handle the target being a mob
 		if(isliving(target))
@@ -523,9 +548,7 @@
 					'sound/vore/death8.ogg',
 					'sound/vore/death9.ogg',
 					'sound/vore/death10.ogg')
-				for(var/mob/hearer in range(1,src.hound))
-					hearer << deathsound
-				T << deathsound
+				playsound(hound, deathsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 				if(is_vore_predator(T))
 					for(var/belly in T.vore_organs)
 						var/obj/belly/B = belly
@@ -543,7 +566,14 @@
 							items_preserved += brain
 					else
 						T.drop_from_inventory(I, src)
-				T.Del()
+				if(ishuman(T))
+					var/mob/living/carbon/human/Prey = T
+					volume = (Prey.bloodstr.total_volume + Prey.ingested.total_volume + Prey.touching.total_volume + Prey.weight) * Prey.size_multiplier
+					water.add_charge(volume)
+				if(T.reagents)
+					volume = T.reagents.total_volume
+					water.add_charge(volume)
+				qdel(T)
 				update_patient()
 				if(UI_open == TRUE)
 					sleeperUI(hound)
@@ -552,26 +582,45 @@
 		else
 			var/obj/item/T = target
 			if(istype(T))
-				if(analyzer == TRUE)
-					var/obj/item/tech_item = T
-					for(var/tech in tech_item.origin_tech)
-						files.UpdateTech(tech, tech_item.origin_tech[tech])
-						synced = FALSE
+				if(T.reagents)
+					volume = T.reagents.total_volume
 				var/digested = T.digest_act(item_storage = src)
 				if(!digested)
 					items_preserved |= T
 				else
-					drain(-50 * digested)
+					if(analyzer && digested)
+						var/obj/item/tech_item = T
+						for(var/tech in tech_item.origin_tech)
+							files.UpdateTech(tech, tech_item.origin_tech[tech])
+							synced = FALSE
+						drain(-50 * digested)
+					if(volume)
+						water.add_charge(volume)
+					if(!analyzer && compactor && T.matter)
+						for(var/material in T.matter)
+							var/total_material = T.matter[material]
+							if(istype(T,/obj/item/stack))
+								var/obj/item/stack/stack = T
+								total_material *= stack.get_amount()
+							if(material == DEFAULT_WALL_MATERIAL)
+								metal.add_charge(total_material)
+							if(material == "glass")
+								glass.add_charge(total_material)
+							if(decompiler)
+								if(material == "plastic")
+									plastic.add_charge(total_material)
+								if(material == "wood")
+									wood.add_charge(total_material)
+					else
+						drain(-50 * digested)
 			else if(istype(target,/obj/effect/decal/remains))
 				qdel(target)
 				drain(-100)
 			else
 				items_preserved |= target
-
 			if(UI_open == TRUE)
 				update_patient()
 				sleeperUI(hound)
-
 		return
 
 /obj/item/device/dogborg/sleeper/process()
@@ -616,3 +665,10 @@
 	max_item_count = 1
 	startdrain = 100
 	analyzer = TRUE
+
+/obj/item/device/dogborg/sleeper/compactor/decompiler
+	name = "Matter Decompiler"
+	desc = "A mounted matter decompiling unit with fuel processor."
+	icon_state = "decompiler"
+	max_item_count = 10
+	decompiler = TRUE

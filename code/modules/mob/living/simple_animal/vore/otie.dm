@@ -46,6 +46,9 @@
 	pixel_x = -16
 	pixel_y = 0
 
+	var/glowyeyes = FALSE
+	var/image/eye_layer = null
+	var/eyetype
 	var/mob/living/carbon/human/friend
 	var/tamed = 0
 	var/tame_chance = 50 //It's a fiddy-fiddy default you may get a buddy pal or you may get mauled and ate. Win-win!
@@ -56,7 +59,7 @@
 	vore_active = 1
 	vore_capacity = 1
 	vore_pounce_chance = 20
-	vore_icons = SA_ICON_LIVING
+	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
 /mob/living/simple_animal/otie/feral //gets the pet2tame feature. starts out hostile tho so get gamblin'
 	name = "mutated feral otie"
@@ -78,6 +81,8 @@
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
+	glowyeyes = TRUE
+	eyetype = "photie"
 
 /mob/living/simple_animal/otie/friendly //gets the pet2tame feature and doesn't kill you right away
 	name = "otie"
@@ -109,6 +114,8 @@
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
+	glowyeyes = TRUE
+	eyetype = "photie"
 
 /mob/living/simple_animal/otie/security //tame by default unless you're a marked crimester. can be befriended to follow with pets tho.
 	name = "guard otie"
@@ -121,6 +128,8 @@
 	maxHealth = 200 //armored or something
 	health = 200
 	tamed = 1
+	glowyeyes = TRUE
+	eyetype = "sotie"
 	loot_list = list(/obj/item/clothing/glasses/sunglasses/sechud,/obj/item/clothing/suit/armor/vest/alt)
 	vore_pounce_chance = 60 // Good boys don't do too much police brutality.
 
@@ -144,6 +153,8 @@
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
+	glowyeyes = TRUE
+	eyetype = "sotie"
 
 /mob/living/simple_animal/otie/PunchTarget()
 	if(istype(target_mob,/mob/living/simple_animal/mouse))
@@ -197,6 +208,8 @@
 /mob/living/simple_animal/otie/security/feed_grabbed_to_self(var/mob/living/user, var/mob/living/prey) // Make the gut start out safe for bellybrigging.
 	if(ishuman(prey))
 		vore_selected.digest_mode = DM_HOLD
+		if(check_threat(prey) >= 4)
+			global_announcer.autosay("[src] has detained suspect <b>[target_name(prey)]</b> in <b>[get_area(src)]</b>.", "SmartCollar oversight", "Security")
 	if(istype(prey,/mob/living/simple_animal/mouse))
 		vore_selected.digest_mode = DM_DIGEST
 	. = ..()
@@ -224,9 +237,9 @@
 		try_say_list(say_got_target)
 		target_mob = M
 		last_target_time = world.time
-		return M
 		if(check_threat(M) >= 4)
-			global_announcer.autosay("[src] is attempting to 'detain' suspect <b>[target_name(M)]</b> in <b>[get_area(src)]</b>.", "[src]", "Security")
+			global_announcer.autosay("[src] is attempting to detain suspect <b>[target_name(M)]</b> in <b>[get_area(src)]</b>.", "SmartCollar oversight", "Security")
+		return M
 	else if(investigates)
 		spawn(1)
 			WanderTowards(seen)
@@ -313,8 +326,27 @@
 		else
 			..()
 
+/mob/living/simple_animal/otie/proc/add_eyes()
+	if(!eye_layer)
+		eye_layer = image(icon, "[eyetype]-eyes")
+		eye_layer.plane = PLANE_LIGHTING_ABOVE
+	add_overlay(eye_layer)
+
+/mob/living/simple_animal/otie/proc/remove_eyes()
+	cut_overlay(eye_layer)
+
+/mob/living/simple_animal/otie/New()
+	if(glowyeyes)
+		add_eyes()
+	..()
+
+/mob/living/simple_animal/otie/update_icon()
+	. = ..()
+	remove_eyes()
+	if(glowyeyes && stat == CONSCIOUS && !resting)
+		add_eyes()
+
 /mob/living/simple_animal/otie/death(gibbed, deathmessage = "dies!")
+	.=..()
 	resting = 0
 	icon_state = icon_dead
-	update_icon()
-	..()

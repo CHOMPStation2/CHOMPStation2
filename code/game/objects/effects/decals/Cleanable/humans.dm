@@ -10,7 +10,7 @@ var/global/list/image/splatter_cache=list()
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2
+	plane = BLOOD_PLANE
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "mfloor1"
 	random_icon_states = list("mfloor1", "mfloor2", "mfloor3", "mfloor4", "mfloor5", "mfloor6", "mfloor7")
@@ -179,7 +179,6 @@ var/global/list/image/splatter_cache=list()
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "gibbl5"
 	random_icon_states = list("gib1", "gib2", "gib3", "gib5", "gib6")
@@ -236,7 +235,6 @@ var/global/list/image/splatter_cache=list()
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "mucus"
 	random_icon_states = list("mucus")
@@ -250,6 +248,6 @@ var/global/list/image/splatter_cache=list()
 
 //This version should be used for admin spawns and pre-mapped virus vectors (e.g. in PoIs), this version does not dry
 /obj/effect/decal/cleanable/mucus/mapped/New()
-	...()
+	..()
 	virus2 = new /datum/disease2/disease
 	virus2.makerandom()

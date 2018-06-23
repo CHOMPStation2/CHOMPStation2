@@ -44,7 +44,7 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 	desc = "... Blitzkrieg?"
 	icon = 'icons/mecha/NaziMech.dmi'
 	icon_state = "pzrwreck"
-	layer = 4 // so it overlaps other people
+	plane = MOB_PLANE
 	pixel_x = -16
 	anchored = 1 // It's fucking huge. You aren't moving it.
 

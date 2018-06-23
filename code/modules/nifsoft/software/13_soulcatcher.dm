@@ -89,7 +89,7 @@
 				var/mob/living/carbon/brain/caught_soul/CS = brainmob
 				to_chat(CS,"<b>\[\icon[nif.big_icon]NIF\]</b> <b>[sender_name]</b> speaks, \"[message]\"")
 
-		log_nsay(message,nif.human.real_name,src)
+		log_nsay(message,nif.human.real_name,sender)
 
 	proc/emote_into(var/message, var/mob/living/sender, var/mob/eyeobj)
 		var/sender_name = eyeobj ? eyeobj.name : sender.name
@@ -105,7 +105,7 @@
 				var/mob/living/carbon/brain/caught_soul/CS = brainmob
 				to_chat(CS,"<b>\[\icon[nif.big_icon]NIF\]</b> <b>[sender_name]</b> [message]")
 
-		log_nme(message,nif.human.real_name,src)
+		log_nme(message,nif.human.real_name,sender)
 
 	proc/show_settings(var/mob/living/carbon/human/H)
 		set waitfor = FALSE
@@ -230,6 +230,7 @@
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			brainmob.dna = H.dna
+			brainmob.ooc_notes = H.ooc_notes
 			brainmob.timeofhostdeath = H.timeofdeath
 			SStranscore.m_backup(brainmob.mind,0) //It does ONE, so medical will hear about it.
 
@@ -356,12 +357,10 @@
 		return ..(direction)
 
 /mob/living/carbon/brain/caught_soul/say(var/message)
-	if(parent_mob) return ..()
 	if(silent) return FALSE
 	soulcatcher.say_into(message,src,eyeobj)
 
 /mob/living/carbon/brain/caught_soul/emote(var/act,var/m_type=1,var/message = null)
-	if(parent_mob) return ..()
 	if(silent) return FALSE
 	if (act == "me")
 		if(silent)

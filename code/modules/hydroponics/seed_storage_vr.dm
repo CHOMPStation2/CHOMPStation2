@@ -86,4 +86,5 @@
 		/obj/item/seeds/wheatseed = 3,
 		/obj/item/seeds/whitebeetseed = 3,
 		/obj/item/seeds/shrinkshroom = 3,
-		/obj/item/seeds/megashroom = 3)
+		/obj/item/seeds/megashroom = 3,
+		/obj/item/seeds/lustflower = 2)

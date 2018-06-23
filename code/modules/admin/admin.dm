@@ -7,6 +7,7 @@ var/global/floorIsLava = 0
 /proc/message_admins(var/msg)
 	msg = "<span class=\"log_message\"><span class=\"prefix\">ADMIN LOG:</span> <span class=\"message\">[msg]</span></span>"
 	//log_adminwarn(msg) //log_and_message_admins is for this
+
 	for(var/client/C in admins)
 		if((R_ADMIN|R_MOD) & C.holder.rights)
 			C << msg
@@ -50,6 +51,11 @@ proc/admin_notice(var/message, var/rights)
 		body += " <B>Hasn't Entered Game</B> "
 	else
 		body += " \[<A href='?src=\ref[src];revive=\ref[M]'>Heal</A>\] "
+
+	if(M.client)
+		body += "<br><b>First connection:</b> [M.client.player_age] days ago"
+		body += "<br><b>BYOND account created:</b> [M.client.account_join_date]"
+		body += "<br><b>BYOND account age (days):</b> [M.client.account_age]"
 
 	body += {"
 		<br><br>\[
@@ -1263,7 +1269,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 			usr << "<b>AI [key_name(S, usr)]'s laws:</b>"
 		else if(isrobot(S))
 			var/mob/living/silicon/robot/R = S
-			usr << "<b>CYBORG [key_name(S, usr)] [R.connected_ai?"(Slaved to: [R.connected_ai])":"(Independant)"]: laws:</b>"
+			usr << "<b>CYBORG [key_name(S, usr)] [R.connected_ai?"(Slaved to: [R.connected_ai])":"(Independent)"]: laws:</b>"
 		else if (ispAI(S))
 			usr << "<b>pAI [key_name(S, usr)]'s laws:</b>"
 		else

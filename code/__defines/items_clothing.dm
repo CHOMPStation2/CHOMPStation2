@@ -22,19 +22,23 @@
 #define SLOT_TIE        0x4000
 #define SLOT_HOLSTER	0x8000 //16th bit - higher than this will overflow
 
-#define ACCESSORY_SLOT_UTILITY  "Utility"
-#define ACCESSORY_SLOT_ARMBAND  "Armband"
-#define ACCESSORY_SLOT_RANK     "Rank"
-#define ACCESSORY_SLOT_DEPT		"Department"
-#define ACCESSORY_SLOT_DECOR    "Decor"
-#define ACCESSORY_SLOT_MEDAL    "Medal"
-#define ACCESSORY_SLOT_INSIGNIA "Insignia"
-#define ACCESSORY_SLOT_ARMOR_C  "Chest armor"
-#define ACCESSORY_SLOT_ARMOR_A  "Arm armor"
-#define ACCESSORY_SLOT_ARMOR_L  "Leg armor"
-#define ACCESSORY_SLOT_ARMOR_S  "Armor storage"
-#define ACCESSORY_SLOT_ARMOR_M  "Misc armor"
-#define ACCESSORY_SLOT_HELM_C	"Helmet cover"
+#define ACCESSORY_SLOT_UTILITY	0x1
+#define ACCESSORY_SLOT_WEAPON	0x2
+#define ACCESSORY_SLOT_ARMBAND  0x4
+#define ACCESSORY_SLOT_DECOR    0x8
+#define ACCESSORY_SLOT_MEDAL    0x20
+#define ACCESSORY_SLOT_TIE		0x40
+#define ACCESSORY_SLOT_INSIGNIA 0x80
+#define ACCESSORY_SLOT_OVER		0x100
+//Should these really be 'accessory' accessories
+#define ACCESSORY_SLOT_ARMOR_C  0x200
+#define ACCESSORY_SLOT_ARMOR_A  0x400
+#define ACCESSORY_SLOT_ARMOR_L  0x800
+#define ACCESSORY_SLOT_ARMOR_S  0x1000
+#define ACCESSORY_SLOT_ARMOR_M  0x2000
+#define ACCESSORY_SLOT_HELM_C	0x4000
+
+#define ACCESSORY_SLOT_TORSO 	(ACCESSORY_SLOT_UTILITY|ACCESSORY_SLOT_WEAPON)
 
 // Flags bitmasks. - Used in /atom/var/flags
 #define NOBLUDGEON         0x1    // When an item has this it produces no "X has been hit by Y with Z" message with the default handler.
@@ -88,17 +92,17 @@
 #define slot_back        3
 #define slot_belt        4
 #define slot_wear_id     5
-#define slot_l_store     6
-#define slot_r_store     7 //Some things may reference this, try to keep it here
+#define slot_s_store     6
+#define slot_l_store     7
+#define slot_r_store     8 //Some things may reference this, try to keep it here
 //Shown when inventory unhidden
-#define slot_glasses     8
-#define slot_wear_mask   9
-#define slot_gloves      10
-#define slot_head        11
-#define slot_shoes       12
-#define slot_wear_suit   13
-#define slot_w_uniform   14
-#define slot_s_store     15
+#define slot_glasses     9
+#define slot_wear_mask   10
+#define slot_gloves      11
+#define slot_head        12
+#define slot_shoes       13
+#define slot_wear_suit   14
+#define slot_w_uniform   15
 #define slot_l_ear       16
 #define slot_r_ear       17
 //Secret slots

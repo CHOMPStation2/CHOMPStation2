@@ -1,11 +1,3 @@
-/datum/design/excavationdrill
-	name = "Excavation Drill"
-	desc = "Advanced archaeological drill combining ultrasonic excitation and bluespace manipulation to provide extreme precision. The silver tip is adjustable from 1 to 30 cm."
-	id = "excavationdrill"
-	req_tech = list(TECH_MATERIAL = 4, TECH_POWER = 3, TECH_ENGINEERING = 3, TECH_BLUESPACE = 3) //They were never used before. Now they'll be used. Hopefully.
-	build_type = PROTOLATHE
-	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 1000, "silver" = 1000)
-	build_path = /obj/item/weapon/pickaxe/excavationdrill
 /* Make language great again
 /datum/design/item/implant/language
 	name = "Language implant"
@@ -180,6 +172,68 @@
 	req_tech = list(TECH_PHORON = 3, TECH_DATA = 2, TECH_MAGNET = 2)
 	build_path = /obj/item/weapon/circuitboard/bomb_tester
 	sort_string = "HABAG"
+
+/datum/design/circuit/quantum_pad
+	name = "Quantum Pad"
+	id = "quantum_pad"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_POWER = 4, TECH_BLUESPACE = 4)
+	build_path = /obj/item/weapon/circuitboard/quantumpad
+	sort_string = "HABAH"
+
+//////Micro mech stuff
+/datum/design/circuit/mecha/gopher_main
+	name = "'Gopher' central control"
+	id = "gopher_main"
+	build_path = /obj/item/weapon/circuitboard/mecha/gopher/main
+	sort_string = "NAAEA"
+
+/datum/design/circuit/mecha/gopher_peri
+	name = "'Gopher' peripherals control"
+	id = "gopher_peri"
+	build_path = /obj/item/weapon/circuitboard/mecha/gopher/peripherals
+	sort_string = "NAAEB"
+
+/datum/design/circuit/mecha/polecat_main
+	name = "'Polecat' central control"
+	id = "polecat_main"
+	req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/weapon/circuitboard/mecha/polecat/main
+	sort_string = "NAAFA"
+
+/datum/design/circuit/mecha/polecat_peri
+	name = "'Polecat' peripherals control"
+	id = "polecat_peri"
+	req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/weapon/circuitboard/mecha/polecat/peripherals
+	sort_string = "NAAFB"
+
+/datum/design/circuit/mecha/polecat_targ
+	name = "'Polecat' weapon control and targeting"
+	id = "polecat_targ"
+	req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
+	build_path = /obj/item/weapon/circuitboard/mecha/polecat/targeting
+	sort_string = "NAAFC"
+
+/datum/design/circuit/mecha/weasel_main
+	name = "'Weasel' central control"
+	id = "weasel_main"
+	req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/weapon/circuitboard/mecha/weasel/main
+	sort_string = "NAAGA"
+
+/datum/design/circuit/mecha/weasel_peri
+	name = "'Weasel' peripherals control"
+	id = "weasel_peri"
+	req_tech = list(TECH_DATA = 4)
+	build_path = /obj/item/weapon/circuitboard/mecha/weasel/peripherals
+	sort_string = "NAAGB"
+
+/datum/design/circuit/mecha/weasel_targ
+	name = "'Weasel' weapon control and targeting"
+	id = "weasel_targ"
+	req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
+	build_path = /obj/item/weapon/circuitboard/mecha/weasel/targeting
+	sort_string = "NAAGC"
 
 ////// RIGSuit Stuff
 /*

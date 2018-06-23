@@ -76,6 +76,20 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("stabbed", "pierced", "jabbed", "torn", "gored")
 
+/obj/item/toy/bosunwhistle/fluff/strix
+	name = "Authentic Bosun's Whistle"
+	desc = "A authentic boatswain's call that appears to be silver plated! The noise it makes is ungodly loud and high pitched.. Why would a person with four extra-sensitive ears ever own such a thing!?"
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "strixwhistle"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_EARS | SLOT_HOLSTER
+
+/obj/item/toy/bosunwhistle/fluff/strix/attack_self(mob/user as mob)
+	if(cooldown < world.time - 15)
+		user << "<span class='notice'>You blow on [src], creating an ear-splitting noise!</span>"
+		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
+		cooldown = world.time
+
 // *************
 // GeneralPantsu
 // *************
@@ -248,6 +262,56 @@
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "chemset"
 
+//Mitsuko Jiao
+
+/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a
+	name = "Mitsuko's modkit Mk1"
+	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/device/healthanalyzer
+	to_suit = /obj/item/device/healthanalyzer/fluff/jiao_health
+
+/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/b
+	name = "Mitsuko's modkit Mk2"
+	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/device/healthanalyzer/improved
+	to_suit = /obj/item/device/healthanalyzer/improved/fluff/jiao_health
+
+/obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c
+	name = "Mitsuko's modkit Mk3"
+	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/device/healthanalyzer/advanced
+	to_suit = /obj/item/device/healthanalyzer/advanced/fluff/jiao_health
+
+/obj/item/device/healthanalyzer/fluff/jiao_health
+	name = "Kanghu medical scanner MK1"
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a basic unit."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "scanner_mk1"
+
+/obj/item/device/healthanalyzer/improved/fluff/jiao_health
+	name = "Kanghu medical scanner MK2"
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a improved unit."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "scanner_mk2"
+
+/obj/item/device/healthanalyzer/advanced/fluff/jiao_health
+	name = "Kanghu medical scanner MK3"
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a advanced unit."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "scanner_mk3"
+
 // **************
 // VanesaFancyFin
 // **************
@@ -265,12 +329,12 @@
 		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
 		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
 		)
-		
+
 // **************
 // Belsima
 // **************
 
-//I'm going to fix this code later. 
+//I'm going to fix this code later.
 
 /obj/item/weapon/implant/reagent_generator/belle/ysaline
 	name = "lactation implant"

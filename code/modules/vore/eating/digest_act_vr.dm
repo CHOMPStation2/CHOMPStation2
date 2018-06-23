@@ -49,9 +49,9 @@
 	. = ..()
 
 /obj/item/weapon/card/id/digest_act(var/atom/movable/item_storage = null)
-	desc = "A partially digested card that has seen better days.  Much of it's data has been destroyed."
+	desc = "A partially digested card that has seen better days. The damage appears to be only cosmetic, but the access codes need to be reprogrammed at the HoP office."
 	icon = 'icons/obj/card_vr.dmi'
-	icon_state = "digested"
+	icon_state = "[initial(icon_state)]_digested"
 	access = list() // No access
 	return FALSE
 
@@ -82,7 +82,7 @@
 /obj/item/weapon/storage/digest_act(var/atom/movable/item_storage = null)
 	for(var/obj/item/I in contents)
 		I.screen_loc = null
-	
+
 	. = ..()
 
 /////////////

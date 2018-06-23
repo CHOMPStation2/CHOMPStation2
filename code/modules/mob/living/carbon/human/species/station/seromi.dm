@@ -13,7 +13,10 @@
 	name_language = LANGUAGE_SCHECHI
 	species_language = LANGUAGE_SCHECHI
 	min_age = 18
-	max_age = 45
+	max_age = 100
+
+	economic_modifier = 10
+
 	health_hud_intensity = 3
 	//YW Edit: Readding loneliness
 	var/warning_cap = 300
@@ -58,7 +61,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
@@ -120,7 +123,7 @@
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/sonar_ping,
-		/mob/living/carbon/human/proc/hide_humanoid
+		/mob/living/proc/hide
 		)
 
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
@@ -136,7 +139,9 @@
 		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
 			return
 		// Check for company.
-		for(var/mob/living/carbon/M in viewers(H))
+		for(var/mob/living/M in viewers(H))
+			if(!istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot))
+				continue
 			if(M == H || M.stat == DEAD || M.invisibility > H.see_invisible)
 				continue
 			if(M.faction == "neutral" || M.faction == H.faction)
@@ -148,6 +153,8 @@
 						H << "The nearby company calms you down..."
 						H.next_loneliness_time = world.time+500
 				return
+
+
 
 		for(var/obj/item/weapon/holder/micro/M in range(1, H))
 			if(H.loneliness_stage > 0)

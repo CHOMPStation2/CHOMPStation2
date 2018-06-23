@@ -219,7 +219,7 @@ proc/cmd_admin_mute(mob/M as mob, mute_type, automute = 0)
 
 	var/show_log = alert(src, "Show ion message?", "Message", "Yes", "No")
 	if(show_log == "Yes")
-		command_announcement.Announce("Ion storm detected near the station. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
+		command_announcement.Announce("Ion storm detected near \the [station_name()]. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
 
 	IonStorm(0)
 	feedback_add_details("admin_verb","ION") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -425,6 +425,10 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	//For logging later
 	var/admin = key_name_admin(src)
 	var/player_key = picked_client.key
+	//VOREStation Add - Needed for persistence
+	var/picked_ckey = picked_client.ckey
+	var/picked_slot = picked_client.prefs.default_slot
+	//VOREStation Add End
 
 	var/mob/living/carbon/human/new_character
 	var/spawnloc
@@ -470,6 +474,12 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			if(antag_data)
 				antag_data.add_antagonist(new_character.mind)
 				antag_data.place_mob(new_character)
+
+	//VOREStation Add - Required for persistence
+	if(new_character.mind)
+		new_character.mind.loaded_from_ckey = picked_ckey
+		new_character.mind.loaded_from_slot = picked_slot
+	//VOREStation Add End
 
 	//If desired, apply equipment.
 	if(equipment)
@@ -522,7 +532,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	var/show_log = alert(src, "Show ion message?", "Message", "Yes", "No")
 	if(show_log == "Yes")
-		command_announcement.Announce("Ion storm detected near the station. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
+		command_announcement.Announce("Ion storm detected near the [station_name()]. Please check all AI-controlled equipment for errors.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
 	feedback_add_details("admin_verb","IONC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_rejuvenate(mob/living/M as mob in mob_list)
@@ -704,7 +714,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	switch(alert("How would you like to ban someone today?", "Manual Ban", "Key List", "Enter Manually", "Cancel"))
 		if("Key List")
 			var/list/keys = list()
-			for(var/mob/M in world)
+			for(var/mob/M in player_list)
 				keys += M.client
 			var/selection = input("Please, select a player!", "Admin Jumping", null, null) as null|anything in keys
 			if(!selection)

@@ -39,7 +39,9 @@
 /area/submap/Drugd)
 "k" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/pill/happy,
+/obj/item/weapon/reagent_containers/pill/happy{
+	name = "pill"
+	},
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "l" = (
@@ -66,19 +68,22 @@
 /area/submap/Drugd)
 "r" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/pill/methylphenidate,
+/obj/item/weapon/reagent_containers/pill/methylphenidate{
+	name = "pill"
+	},
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "s" = (
 /obj/structure/bed/chair/comfy/beige{
-	tag = "icon-armchair_preview (NORTH)";
 	icon_state = "armchair_preview";
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "t" = (
-/obj/item/weapon/reagent_containers/pill/citalopram,
+/obj/item/weapon/reagent_containers/pill/citalopram{
+	name = "pill"
+	},
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "u" = (
@@ -102,7 +107,9 @@
 /area/submap/Drugd)
 "y" = (
 /obj/structure/bed/chair/comfy/beige,
-/obj/item/weapon/reagent_containers/pill/citalopram,
+/obj/item/weapon/reagent_containers/pill/citalopram{
+	name = "pill"
+	},
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "z" = (
@@ -110,8 +117,12 @@
 /turf/simulated/floor,
 /area/submap/Drugd)
 "A" = (
-/obj/item/weapon/reagent_containers/pill/citalopram,
-/obj/item/weapon/reagent_containers/pill/citalopram,
+/obj/item/weapon/reagent_containers/pill/citalopram{
+	name = "pill"
+	},
+/obj/item/weapon/reagent_containers/pill/citalopram{
+	name = "pill"
+	},
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "B" = (
@@ -143,12 +154,16 @@
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "G" = (
-/obj/item/weapon/reagent_containers/pill/zoom,
+/obj/item/weapon/reagent_containers/pill/zoom{
+	name = "pill"
+	},
 /obj/random/trash,
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "H" = (
-/obj/item/weapon/reagent_containers/pill/zoom,
+/obj/item/weapon/reagent_containers/pill/zoom{
+	name = "pill"
+	},
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 "I" = (
@@ -179,37 +194,39 @@
 /turf/simulated/floor/tiled,
 /area/submap/Drugd)
 "O" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/pill/tramadol,
-/turf/simulated/floor/carpet,
-/area/submap/Drugd)
-"P" = (
-/mob/living/simple_animal/hostile/hivebot/range/guard,
-/turf/simulated/floor,
-/area/submap/Drugd)
-"Q" = (
-/obj/structure/girder,
-/turf/simulated/floor,
-/area/submap/Drugd)
-"R" = (
-/obj/item/weapon/material/shard,
-/turf/simulated/floor,
-/area/submap/Drugd)
-"S" = (
-/obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
-/turf/simulated/floor/carpet,
-/area/submap/Drugd)
-"T" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/syringe/drugs,
-/turf/simulated/floor/carpet,
-/area/submap/Drugd)
-"U" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/pill/zoom,
 /obj/item/weapon/reagent_containers/pill/zoom,
 /turf/simulated/floor,
+/area/submap/Drugd)
+"P" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/pill/tramadol{
+	name = "pill"
+	},
+/turf/simulated/floor/carpet,
+/area/submap/Drugd)
+"Q" = (
+/mob/living/simple_animal/hostile/hivebot/range/guard,
+/turf/simulated/floor,
+/area/submap/Drugd)
+"R" = (
+/obj/structure/girder,
+/turf/simulated/floor,
+/area/submap/Drugd)
+"S" = (
+/obj/item/weapon/material/shard,
+/turf/simulated/floor,
+/area/submap/Drugd)
+"T" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/carpet,
+/area/submap/Drugd)
+"U" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/syringe/drugs,
+/turf/simulated/floor/carpet,
 /area/submap/Drugd)
 
 (1,1,1) = {"
@@ -421,7 +438,7 @@ B
 J
 N
 l
-Q
+R
 d
 c
 c
@@ -447,7 +464,7 @@ d
 C
 K
 l
-P
+Q
 l
 d
 c
@@ -475,7 +492,7 @@ D
 g
 l
 l
-R
+S
 d
 c
 c
@@ -500,7 +517,7 @@ c
 d
 E
 L
-U
+O
 l
 l
 d
@@ -689,9 +706,9 @@ w
 o
 G
 d
-O
+P
 o
-S
+T
 d
 c
 c
@@ -718,7 +735,7 @@ H
 d
 w
 o
-T
+U
 d
 c
 c

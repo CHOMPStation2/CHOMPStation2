@@ -111,6 +111,13 @@
 		src.loc = null
 	return ..()
 
+// Check if target is reasonable for us to operate on.
+/obj/item/proc/check_allowed_items(atom/target, not_inside, target_self)
+	if(((src in target) && !target_self) || ((!istype(target.loc, /turf)) && (!istype(target, /turf)) && (not_inside)))
+		return FALSE
+	else
+		return TRUE
+
 /obj/item/proc/update_twohanding()
 	update_held_icon()
 
@@ -211,6 +218,8 @@
 		if(!temp)
 			user << "<span class='notice'>You try to use your hand, but realize it is no longer attached!</span>"
 			return
+
+	var/old_loc = src.loc
 	src.pickup(user)
 	if (istype(src.loc, /obj/item/weapon/storage))
 		var/obj/item/weapon/storage/S = src.loc
@@ -223,7 +232,11 @@
 	else
 		if(isliving(src.loc))
 			return
-	user.put_in_active_hand(src)
+	if(user.put_in_active_hand(src))
+		if(isturf(old_loc))
+			var/obj/effect/temporary_effect/item_pickup_ghost/ghost = new(old_loc)
+			ghost.assumeform(src)
+			ghost.animate_towards(user)
 	return
 
 /obj/item/attack_ai(mob/user as mob)
@@ -677,6 +690,10 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 // Check if an object should ignite others, like a lit lighter or candle.
 /obj/item/proc/is_hot()
 	return FALSE
+
+// Called when you swap hands away from the item
+/obj/item/proc/in_inactive_hand(mob/user)
+	return
 
 // My best guess as to why this is here would be that it does so little. Still, keep it under all the procs, for sanity's sake.
 /obj/item/device

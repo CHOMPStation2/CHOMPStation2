@@ -80,6 +80,12 @@ item_path: /obj/item/clothing/under/seromi/undercoat/fluff/strix
 }
 
 {
+ckey: blackangelsace
+character_name: Strix Hades
+item_path: /obj/item/toy/bosunwhistle/fluff/strix
+}
+
+{
 ckey: benl8561
 character_name: M.I.S.S.Y
 item_path: /obj/item/weapon/storage/box/fluff/missy
@@ -144,10 +150,11 @@ ckey: deathty
 character_name: Arthur Schutz
 item_path: /obj/item/weapon/storage/box/fluff/art
 }
+
 {
 ckey: dwaggy90
 character_name: Saur Darastrix
-item_path: /obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+item_path: /obj/item/weapon/storage/box/fluff/saur
 }
 
 {
@@ -156,6 +163,11 @@ character_name: Saroth
 item_path: /obj/item/weapon/storage/box/fluff/saroth
 }
 # ######## E CKEYS
+{
+ckey: esperkin
+character_name: Sheri Calen
+item_path: /obj/item/device/modkit_conversion/fluff/sheri_rig_kit
+}
 # ######## F CKEYS
 {
 ckey: frenziedvorcha
@@ -193,6 +205,11 @@ character_name: Nika Domashev
 item_path: /obj/item/weapon/storage/box/fluff/nika
 }
 # ######## H CKEYS
+{
+ckey: harpsong
+character_name: Harpsong
+item_path: /obj/item/clothing/suit/armor/vest/harpsong
+}
 # ######## I CKEYS
 {
 ckey: izac112
@@ -216,6 +233,12 @@ item_path: /obj/item/weapon/storage/box/fluff/shel
 ckey: izac112
 character_name: Alva Karlholm
 item_path: /obj/item/weapon/storage/box/fluff/alva
+}
+
+{
+ckey: interrolouis
+character_name: Kai Highlands
+/obj/item/borg/upgrade/modkit/chassis_mod/kai
 }
 
 {
@@ -268,6 +291,13 @@ ckey: lukevale
 character_name: Eryn Wolfe
 item_path: /obj/item/weapon/storage/box/fluff/eryn
 }
+
+{
+ckey: lukevale
+character_name: Mitsuko Jiao
+item_path: /obj/item/weapon/storage/box/fluff/jiao
+}
+
 # ######## M CKEYS
 {
 ckey: maxiefoxie
@@ -275,9 +305,22 @@ character_name: Maxie Drake
 item_path: /obj/item/weapon.storage/box/fluff/maxie
 }
 
+{
+ckey: mr_signmeup
+character_name: Reshskakskakss Seekiseekis
+item_path: /obj/item/clothing/suit/security/navyhos
+req_titles: Head of Security
+}
+
 # ######## N CKEYS
 # ######## O CKEYS
 # ######## P CKEYS
+{
+ckey: paintitred
+character_name: Noel Walsh
+item_path: /obj/item/weapon/storage/box/fluff/noel
+}
+
 # ######## Q CKEYS
 # ######## R CKEYS
 {
@@ -292,7 +335,25 @@ character_name: Alex Wolf
 item_path: /obj/item/clothing/accessory/fluff/alex_wolf_1
 }
 
+{
+ckey: roguenoob
+character_name: Basir Fahim
+item_path: /obj/item/clothing/gloves/ring/fluff/basir
+}
+
 # ######## S CKEYS
+{
+ckey: shaper
+character_name: Natene
+item_path: /obj/item/clothing/accessory/medal/silver/valor
+}
+
+{
+ckey: sempt
+character_name: Kayla Endsley
+item_path: /obj/item/clothing/under/rank/roboticist/skirt
+}
+
 # ######## T CKEYS
 # ######## U CKEYS
 {
@@ -439,6 +500,8 @@ ckey: vitorhks
 character_name: Jessica Mayer
 item_path: /obj/item/weapon/storage/box/fluff/jessica
 }
+
+
 
 # ######## W CKEYS
 # ######## X CKEYS

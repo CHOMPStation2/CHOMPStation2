@@ -97,6 +97,7 @@ Class Procs:
 	name = "machinery"
 	icon = 'icons/obj/stationobjs.dmi'
 	w_class = ITEMSIZE_NO_CONTAINER
+	layer = UNDER_JUNK_LAYER
 
 	var/stat = 0
 	var/emagged = 0
@@ -123,10 +124,12 @@ Class Procs:
 
 /obj/machinery/initialize()
 	. = ..()
+	global.machines += src
 	START_MACHINE_PROCESSING(src)
 
 /obj/machinery/Destroy()
 	STOP_MACHINE_PROCESSING(src)
+	global.machines -= src
 	if(component_parts)
 		for(var/atom/A in component_parts)
 			if(A.loc == src) // If the components are inside the machine, delete them.

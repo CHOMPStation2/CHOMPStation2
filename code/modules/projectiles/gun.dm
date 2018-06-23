@@ -58,6 +58,7 @@
 	var/move_delay = 1
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/fire_sound_text = "gunshot"
+	var/fire_anim = null
 	var/recoil = 0		//screen shake
 	var/silenced = 0
 	var/muzzle_flash = 3
@@ -171,6 +172,10 @@
 		return 0
 	if(!user.IsAdvancedToolUser())
 		return 0
+	if(isanimal(user))
+		var/mob/living/simple_animal/S = user
+		if(!S.IsHumanoidToolUser(src))
+			return 0
 
 	var/mob/living/M = user
 	if(dna_lock && attached_lock.stored_dna)
@@ -492,7 +497,7 @@
 		if(!(target && target.loc))
 			target = targloc
 			//pointblank = 0
-	
+
 	var/target_for_log
 	if(ismob(target))
 		target_for_log = target
@@ -533,6 +538,9 @@
 
 //called after successfully firing
 /obj/item/weapon/gun/proc/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
+	if(fire_anim)
+		flick(fire_anim, src)
+
 	if(silenced)
 		if(reflex)
 			user.visible_message(
@@ -740,7 +748,7 @@
 		recoil = initial(recoil)
 
 /obj/item/weapon/gun/examine(mob/user)
-	..()
+	. = ..()
 	if(firemodes.len > 1)
 		var/datum/firemode/current_mode = firemodes[sel_mode]
 		to_chat(user, "The fire selector is set to [current_mode.name].")

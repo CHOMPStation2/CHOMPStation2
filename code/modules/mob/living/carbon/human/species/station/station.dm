@@ -14,6 +14,9 @@
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	min_age = 18
 	max_age = 130
+
+	economic_modifier = 10
+
 	health_hud_intensity = 1.5
 
 	spawn_flags = SPECIES_CAN_JOIN
@@ -52,6 +55,8 @@
 	min_age = 32
 	max_age = 260
 
+	economic_modifier = 10
+
 	blurb = "A heavily reptillian species, Unathi hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \
 	planet, they mostly hold ideals of honesty, virtue, proficiency and bravery above all \
@@ -77,7 +82,7 @@
 */
 	body_temperature = T20C
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#34AF10"
@@ -155,6 +160,8 @@
 	min_age = 18
 	max_age = 110
 
+	economic_modifier = 10
+
 	blurb = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
 	While reaching to the stars independently from outside influences, the humans engaged them in peaceful trade contact \
 	and have accelerated the fledgling culture into the interstellar age. Their history is full of war and highly fractious \
@@ -186,7 +193,7 @@
 */
 	primitive_form = SPECIES_MONKEY_TAJ
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#AFA59E"
@@ -239,6 +246,8 @@
 	min_age = 19
 	max_age = 130
 
+	economic_modifier = 10
+
 	darksight = 4
 	flash_mod = 1.2
 	chemOD_mod = 0.9
@@ -247,7 +256,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
 
 	flesh_color = "#8CD7A3"
@@ -314,6 +323,8 @@
 	min_age = 18
 	max_age = 300
 
+	economic_modifier = 10
+
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \
 	there is no effective upper limit to the number that can fuse in gestalt, and reports exist	of the Epsilon Ursae \
@@ -364,7 +375,7 @@
 	body_temperature = T0C + 15		//make the plant people have a bit lower body temperature, why not
 
 	flags = NO_SCAN | IS_PLANT | NO_PAIN | NO_SLIP | NO_MINOR_CUT
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 
 	blood_color = "#004400"
 	flesh_color = "#907E4A"
@@ -407,3 +418,33 @@
 			qdel(D)
 
 	H.visible_message("<span class='danger'>\The [H] splits apart with a wet slithering noise!</span>")
+
+/datum/species/diona/handle_environment_special(var/mob/living/carbon/human/H)
+	if(H.inStasisNow())
+		return
+
+	var/obj/item/organ/internal/diona/node/light_organ = locate() in H.internal_organs
+
+	if(light_organ && !light_organ.is_broken())
+		var/light_amount = 0 //how much light there is in the place, affects receiving nutrition and healing
+		if(isturf(H.loc)) //else, there's considered to be no light
+			var/turf/T = H.loc
+			light_amount = T.get_lumcount() * 10
+		H.nutrition += light_amount
+		H.shock_stage -= light_amount
+
+		if(H.nutrition > 450)
+			H.nutrition = 450
+		if(light_amount >= 3) //if there's enough light, heal
+			H.adjustBruteLoss(-(round(light_amount/2)))
+			H.adjustFireLoss(-(round(light_amount/2)))
+			H.adjustToxLoss(-(light_amount))
+			H.adjustOxyLoss(-(light_amount))
+			//TODO: heal wounds, heal broken limbs.
+
+	else if(H.nutrition < 200)
+		H.take_overall_damage(2,0)
+
+		//traumatic_shock is updated every tick, incrementing that is pointless - shock_stage is the counter.
+		//Not that it matters much for diona, who have NO_PAIN.
+		H.shock_stage++

@@ -11,6 +11,8 @@ var/global/list/positive_traits = list()	// Positive custom species traits, inde
 var/global/list/traits_costs = list()		// Just path = cost list, saves time in char setup
 var/global/list/all_traits = list()			// All of 'em at once (same instances)
 
+var/global/list/custom_species_bases = list() // Species that can be used for a Custom Species icon base
+
 //stores numeric player size options indexed by name
 var/global/list/player_sizes_list = list(
 		"Macro" 	= RESIZE_HUGE,
@@ -159,6 +161,215 @@ var/global/list/edible_trash = list(/obj/item/trash,
 				/obj/item/device/mmi/digital/posibrain,
 				/obj/item/device/aicard)
 
+var/global/list/cont_flavors = list(
+				"Generic" = cont_flavors_generic,
+				"Acrid" = cont_flavors_acrid,
+				"Dirty" = cont_flavors_dirty,
+				"Musky" = cont_flavors_musky,
+				"Smelly" = cont_flavors_smelly,
+				"Wet" = cont_flavors_wet)
+
+var/global/list/cont_flavors_generic = list("acrid",
+				"bedraggled",
+				"begrimed",
+				"churned",
+				"contaminated",
+				"cruddy",
+				"damp",
+				"digested",
+				"dirty",
+				"disgusting",
+				"drenched",
+				"drippy",
+				"filthy",
+				"foul",
+				"funky",
+				"gloppy",
+				"gooey",
+				"grimy",
+				"gross",
+				"gruesome",
+				"gunky",
+				"icky",
+				"juicy",
+				"messy",
+				"mucky",
+				"mushy",
+				"nasty",
+				"noxious",
+				"oozing",
+				"pungent",
+				"putrescent",
+				"putrid",
+				"repulsive",
+				"saucy",
+				"slimy",
+				"sloppy",
+				"sloshed",
+				"sludgy",
+				"smeary",
+				"smelly",
+				"smudgy",
+				"smutty",
+				"soaked",
+				"soggy",
+				"soiled",
+				"sopping",
+				"squashy",
+				"squishy",
+				"stained",
+				"sticky",
+				"stinky",
+				"tainted",
+				"tarnished",
+				"unclean",
+				"unsanitary",
+				"unsavory",
+				"yucky")
+
+var/global/list/cont_flavors_wet = list("damp",
+				"drenched",
+				"drippy",
+				"gloppy",
+				"gooey",
+				"juicy",
+				"oozing",
+				"slimy",
+				"slobbery",
+				"sloppy",
+				"sloshed",
+				"sloughy",
+				"sludgy",
+				"slushy",
+				"soaked",
+				"soggy",
+				"sopping",
+				"squashy",
+				"squishy",
+				"sticky")
+
+var/global/list/cont_flavors_smelly = list("disgusting",
+				"filthy",
+				"foul",
+				"funky",
+				"gross",
+				"icky",
+				"malodorous",
+				"nasty",
+				"niffy",
+				"noxious",
+				"pungent",
+				"putrescent",
+				"putrid",
+				"rancid",
+				"reeking",
+				"repulsive",
+				"smelly",
+				"stenchy",
+				"stinky",
+				"unsavory",
+				"whiffy",
+				"yucky")
+
+var/global/list/cont_flavors_acrid = list("acrid",
+				"caustic",
+				"churned",
+				"chymous",
+				"digested",
+				"discolored",
+				"disgusting",
+				"drippy",
+				"foul",
+				"gloppy",
+				"gooey",
+				"grimy",
+				"gross",
+				"gruesome",
+				"icky",
+				"mucky",
+				"mushy",
+				"nasty",
+				"noxious",
+				"oozing",
+				"pungent",
+				"putrescent",
+				"putrid",
+				"repulsive",
+				"saucy",
+				"slimy",
+				"sloppy",
+				"sloshed",
+				"sludgy",
+				"slushy",
+				"smelly",
+				"smudgy",
+				"soupy",
+				"squashy",
+				"squishy",
+				"stained",
+				"sticky",
+				"tainted",
+				"unsavory",
+				"yucky")
+
+var/global/list/cont_flavors_dirty = list("bedraggled",
+				"begrimed",
+				"besmirched",
+				"blemished",
+				"contaminated",
+				"cruddy",
+				"dirty",
+				"discolored",
+				"filthy",
+				"gloppy",
+				"gooey",
+				"grimy",
+				"gross",
+				"grubby",
+				"gruesome",
+				"gunky",
+				"messy",
+				"mucky",
+				"mushy",
+				"nasty",
+				"saucy",
+				"slimy",
+				"sloppy",
+				"sludgy",
+				"smeary",
+				"smudgy",
+				"smutty",
+				"soiled",
+				"stained",
+				"sticky",
+				"tainted",
+				"tarnished",
+				"unclean",
+				"unsanitary",
+				"unsavory")
+
+var/global/list/cont_flavors_musky = list("drenched",
+				"drippy",
+				"funky",
+				"gooey",
+				"juicy",
+				"messy",
+				"musky",
+				"nasty",
+				"raunchy",
+				"saucy",
+				"slimy",
+				"sloppy",
+				"slushy",
+				"smeary",
+				"smelly",
+				"smutty",
+				"soggy",
+				"squashy",
+				"squishy",
+				"sticky",
+				"tainted")
+
 /hook/startup/proc/init_vore_datum_ref_lists()
 	var/paths
 
@@ -184,6 +395,8 @@ var/global/list/edible_trash = list(/obj/item/trash,
 	paths = typesof(/datum/trait) - /datum/trait
 	for(var/path in paths)
 		var/datum/trait/instance = new path()
+		if(!instance.name)
+			continue //A prototype or something
 		var/cost = instance.cost
 		traits_costs[path] = cost
 		all_traits[path] = instance
@@ -194,5 +407,15 @@ var/global/list/edible_trash = list(/obj/item/trash,
 				neutral_traits[path] = instance
 			if(0.1 to INFINITY)
 				positive_traits[path] = instance
+
+	// Custom species icon bases
+	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN) //Just ones that won't work well.
+	for(var/species_name in playable_species)
+		if(species_name in blacklisted_icons)
+			continue
+		var/datum/species/S = all_species[species_name]
+		if(S.spawn_flags & SPECIES_IS_WHITELISTED)
+			continue
+		custom_species_bases += species_name
 
 	return 1 // Hooks must return 1

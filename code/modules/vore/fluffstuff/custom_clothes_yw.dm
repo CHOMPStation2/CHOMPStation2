@@ -726,7 +726,7 @@
 
 /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix
  	name = "Colony Director Coat"
- 	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+ 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cd"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
@@ -735,7 +735,7 @@
 
 /obj/item/clothing/under/seromi/undercoat/fluff/strix
 	name = "Colony Director Undercoat"
-	desc = "A Teshari traditional garb, with a modern twist! Made of micro and nanofibres to make it light and billowy, perfect for going fast and stylishly!"
+	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "tesh_uniform_cd"
@@ -864,7 +864,7 @@
 
 //Kita
 
- /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
+/obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
  	name = "Magical Cloak"
  	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -889,6 +889,66 @@
 	overlay_state = "W_collar_R_mob"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
+
+//Mitsuko Jiao
+
+/obj/item/clothing/suit/storage/toggle/labcoat/fluff/jiao_labcoat
+	name = "Fluffy elongated labcoat"
+	desc = "A white labcoat that seems to have been extended down to cover the legs as well, around the cuffs and bottom is a lay of fluff."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_labcoat"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/glasses/hud/health/aviator/fluff/jiao_glasses
+	name = "Mitsuko's AR glasses"
+	desc = "A set of metal frame glasses that seem to be modified to fit easier on a elongated snout. On the glasses is a set of low perspiration lenses with a thin overlay for medical hub to be turned on."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_glasses"
+	off_state = "jiao_glasses_off"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	override = 1
+	item_state = "jiao_glasses"
+	species_restricted = list("Akula")
+
+/obj/item/clothing/under/rank/medical/fluff/jiao_uniform
+	name = "A Kanghu Navy Force medical doctor uniform"
+	desc = "A slandered issue Kanghu Navy Force medical doctor uniform, it has a a white base with blue ocean camo overlaying the shoulders, waist, and back, with deep blue accents, and light blue highlights. The uniform is loose fitting, and has a set of buttons running up the middle to take it on and off. This one seems to have the shoulder straps vacant of any epaulettes."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_uniform"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "jiao_uniform"
+	rolled_sleeves = -1
+
+/obj/item/clothing/head/beret/fluff/jiao_beret
+	name = "A Kanghu Navy Beret"
+	desc = "This camo beret has a white flash signifying the person as medical personnel, however, there is no rank or insignia on the flash, and it is left blank."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_beret"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/shoes/boots/jackboots/fluff/jiao_boots
+	name = "Modified Navy Boots"
+	desc = "This is a set of boots from the Kanghu navy, as denoted by the seal in the sole of the boot, that has been modified to fit not human feet."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_boots"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/weapon/storage/belt/medical/fluff/jiao_belt
+	name = "Navy medical belt"
+	desc = "A customized medical belt to sport the navy colors of the Kanghu force."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_belt"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/gloves/sterile/fluff/jiao_gloves
+	name = "Padded Sterile Gloves"
+	desc = "These light gray latex gloves have a blue, thick pad on the back of the hand, and on the back of the fingers, designed to survive all the life toughest that a field medic would face."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jiao_gloves"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	force = 2
+	punch_force = 2
+
 
 // ************
 // RadiantFlash
@@ -974,6 +1034,10 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
+// ******
+// MaxieFoxie
+// ******
+
 //Maxie Drake
 
 /obj/item/clothing/accessory/fluff/maxie_collar
@@ -986,3 +1050,107 @@
 	overlay_state = "maxie_collar_mob"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
+
+// ******
+// Paint It Red
+// ******
+
+//Noel Walsh
+
+/obj/item/clothing/glasses/hud/health/aviator/prescription/fluff/noel_glasses
+	name = "Noel's AR glasses"
+	desc = "Noel's custom glasses, the initial's NW are written on the inside of the left ear frame, the frames are black and don't reach all the way around."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "noel_glasses"
+	off_state = "noel_glasses_off"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	override = 1
+	item_state = "noel_glasses"
+
+/obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie
+    name = "Noel's casual hoodie"
+    desc = "A blue faded black trimmed hoodie, it looks very simple and warm, there are the initials N.W. on the tag inside"
+    icon = 'icons/vore/custom_clothes_yw.dmi'
+    icon_state = "noel_hoodie"
+    // "noel_hoodie_open" will be the open state
+    icon_override = 'icons/vore/custom_onmob_yw.dmi'
+    //override = 1 //What is this? VS does not have this
+    item_state = null
+
+/obj/item/clothing/ears/earings/fluff/noel_earings
+	name = "Teardrop Earrings"
+	desc = "A pair of simple earrings with diamonds set into a metal plate, they hang down from the ear by a small hook."
+	var/ring_on = 0
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "noel_earings"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/ears/earings/fluff/noel_earings/verb/toggle_rings()
+	set name = "Toggle right earring"
+	set category = "Object"
+	set src in usr
+	if(!istype(usr, /mob/living)) return
+	if(usr.stat) return
+
+	var/base_icon = "noel_earings"
+
+	if(ring_on)
+		icon_state = "[base_icon]"
+		ring_on = 0
+		usr << "<span class='notice'>You remove the right earring.</span>"
+	else
+		icon_state = "[base_icon]_on"
+		ring_on = 1
+		usr << "<span class='notice'>You put on the right earring.</span>"
+
+	update_clothing_icon()
+
+/obj/item/clothing/under/fluff/noel_uniform
+	name = "noel's uniform"
+	desc = "A sweater with a skirt attached to it. Under the skirt is a set of shorts that cling to the body, showing a bulge very well if there is one."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "noel_uniform"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+// ******
+// Roguenoob
+// ******
+
+//Basir Fahim
+
+/obj/item/clothing/gloves/ring/fluff/basir
+	name = "Sundancer Engagement Ring"
+	desc = "This ring is stylized to have an ornate sun, with a sample of phoron swirling around inside. Keep away from Fire! Inscribed along the band is a sentence in Siik; \"Always yours, my little frost-fire. With love. -Sheri\""
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "plasma_ring"
+
+// ******
+// Harpsong
+// ******
+
+//Harpsong
+
+/obj/item/clothing/suit/armor/vest/harpsong
+	name = "Kentauri Uniform (Tac)"
+	desc = "A typical Kentauri uniform worn by those in Command, Tactical and Security disciplines. It is crafted specifically to fit the typically overweight body of the average Kentauri, and its colours match up with those of station security."
+	species_restricted = null //Species restricted since all it cares about is a taur half
+	icon = 'icons/vore/rigs_taur_yw.dmi'
+	icon_override = 'icons/vore/rigs_taur_yw.dmi'
+	icon_state = "kentauri_uniform"
+	item_state = "kentauri_uniform"
+
+/obj/item/clothing/suit/armor/vest/harpsong
+	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+		if(..())
+			if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/horse/big))
+				return ..()
+			else
+				to_chat(H,"<span class='warning'>You need to have a kentauri half to wear this.</span>")
+				return 0
+
+/obj/item/clothing/suit/armor/vest/harpsong
+    make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0)
+        var/image/result = ..()
+        result.pixel_x = -16
+        result.layer = BODY_LAYER + 15
+        return result

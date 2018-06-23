@@ -11,6 +11,7 @@ var/const/ENGINEER			=(1<<6)
 var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
+var/const/BLUESHIELD		=(1<<13) //YW addition
 var/const/INTERN			=(1<<15) //VOREStation Add
 
 var/const/MEDSCI			=(1<<1)
@@ -56,14 +57,15 @@ var/list/command_positions = list(
 	"Chief Engineer",
 	"Research Director",
 	"Chief Medical Officer",
-	"Command Secretary"
+	"Command Secretary",
+	"Blueshield Guard"
 )
 
 
 var/list/engineering_positions = list(
 	"Chief Engineer",
 	"Station Engineer",
-	"Atmospheric Technician",
+	"Atmospheric Technician"
 )
 
 
@@ -80,6 +82,7 @@ var/list/medical_positions = list(
 
 var/list/science_positions = list(
 	"Research Director",
+	"Pathfinder", // VOREStation Edit - Added Pathfinder
 	"Scientist",
 	"Geneticist",	//Part of both medical and science
 	"Roboticist",

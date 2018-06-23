@@ -4,14 +4,13 @@
 	name = "\improper SmartFridge"
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "smartfridge"
-	layer = 2.9
 	density = 1
 	anchored = 1
 	use_power = 1
 	idle_power_usage = 5
 	active_power_usage = 100
 	flags = NOREACT
-	var/global/max_n_of_items = 999 // Sorry but the BYOND infinite loop detector doesn't look things over 1000.
+	var/max_n_of_items = 999 // Sorry but the BYOND infinite loop detector doesn't look things over 1000. //VOREStation Edit - Non-global
 	var/icon_on = "smartfridge"
 	var/icon_off = "smartfridge-off"
 	var/icon_panel = "smartfridge-panel"

@@ -118,6 +118,8 @@
 		// the ui does not exist, so we'll create a new() one
         // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
 		ui = new(user, src, ui_key, "communicator.tmpl", "Communicator", 475, 700, state = key_state)
+		// add templates for screens in common with communicator.
+		ui.add_template("atmosphericScan", "atmospheric_scan.tmpl")
 		// when the ui is first opened this is the data it will use
 		ui.set_initial_data(data)
 		// open the new ui window
@@ -185,7 +187,7 @@
 		if(text)
 			exonet.send_message(their_address, "text", text)
 			im_list += list(list("address" = exonet.address, "to_address" = their_address, "im" = text))
-			log_pda("(COMM: [src]) sent \"[text]\" to [exonet.get_atom_from_address(their_address)]",usr)
+			log_pda("(COMM: [src]) sent \"[text]\" to [exonet.get_atom_from_address(their_address)]", usr)
 			for(var/mob/M in player_list)
 				if(M.stat == DEAD && M.is_preference_enabled(/datum/client_preference/ghost_ears))
 					if(istype(M, /mob/new_player) || M.forbid_seeing_deadchat)

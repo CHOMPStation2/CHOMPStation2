@@ -45,7 +45,9 @@
 	var/obj/item/organ/internal/nano/refactory/refactory
 	var/datum/modifier/healing
 
-	player_msg = "In this form, you can move a little faster, your health will regenerate as long as you have metal in you, and you can ventcrawl!"
+	player_msg = "In this form, you can move a little faster, your health will regenerate as long as you have metal in you!"
+
+	can_buckle = TRUE //Blobsurfing
 
 //Constructor allows passing the human to sync damages
 /mob/living/simple_animal/protean_blob/New(var/newloc, var/mob/living/carbon/human/H)
@@ -54,8 +56,7 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		verbs |= /mob/living/simple_animal/protean_blob/proc/revert_form
-		verbs |= /mob/living/proc/ventcrawl
+		//verbs |= /mob/living/proc/ventcrawl YAWN Edit: Too OP
 		verbs |= /mob/living/proc/hide
 	else
 		update_icon()
@@ -74,29 +75,8 @@
 
 /mob/living/simple_animal/protean_blob/Stat()
 	..()
-	if(statpanel("Status"))
-		stat(null, "- -- --- Protean Stats --- -- -")
-		stat(null, "Condition: [health]/[maxHealth]")
-		if(refactory)
-			var/max = refactory.max_storage
-			for(var/material in refactory.materials)
-				var/amount = refactory.get_stored_material(material)
-				stat(null, "[capitalize(material)]: [amount]/[max]")
-
-/mob/living/simple_animal/protean_blob/proc/revert_form()
-	set name = "Ref - Humanoid"
-	set desc = "Regain your humanoid form."
-	set category = "Abilities"
-
-	if(health < maxHealth*0.5)
-		to_chat(src,"<span class='warning'>You're too injured for that! Regenerate using steel first.</span>")
-		return
-	
 	if(humanform)
-		humanform.nano_outofblob(src)
-	else
-		to_chat(src,"<span class='warning'>Something's gone terribly wrong and we can't find your human body. Admin-help this.</span>")
-		return
+		humanform.species.Stat(humanform)
 
 /mob/living/simple_animal/protean_blob/update_icon()
 	if(humanform)
@@ -205,6 +185,8 @@
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && vore_selected)
+					if(target.buckled)
+						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
@@ -233,6 +215,9 @@
 /mob/living/carbon/human/proc/nano_intoblob()
 	if(buckled)
 		buckled.unbuckle_mob()
+	if(LAZYLEN(buckled_mobs))
+		for(var/buckledmob in buckled_mobs)
+			unbuckle_mob(buckledmob, force = TRUE)
 	if(pulledby)
 		pulledby.stop_pulling()
 	stop_pulling()
@@ -243,6 +228,10 @@
 	//Create our new blob
 	var/mob/living/simple_animal/protean_blob/blob = new(creation_spot,src)
 
+	//Size update
+	blob.transform = matrix()*size_multiplier
+	blob.size_multiplier = size_multiplier
+
 	//Put our owner in it (don't transfer var/mind)
 	blob.ckey = ckey
 	temporary_form = blob
@@ -252,7 +241,7 @@
 
 	//Message
 	blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
-	
+
 	//Duration of the to_puddle iconstate that the blob starts with
 	sleep(13)
 	blob.update_icon() //Will remove the collapse anim
@@ -273,10 +262,13 @@
 		return
 	if(buckled)
 		buckled.unbuckle_mob()
+	if(LAZYLEN(buckled_mobs))
+		for(var/buckledmob in buckled_mobs)
+			unbuckle_mob(buckledmob, force = TRUE)
 	if(pulledby)
 		pulledby.stop_pulling()
 	stop_pulling()
-	
+
 	//Stop healing if we are
 	if(blob.healing)
 		blob.healing.expire()
@@ -286,12 +278,16 @@
 
 	//Message
 	blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
-	
+
 	//Duration of above animation
 	sleep(8)
 
 	//Record where they should go
 	var/atom/reform_spot = blob.drop_location()
+
+	//Size update
+	transform = matrix()*blob.size_multiplier
+	size_multiplier = blob.size_multiplier
 
 	//Move them back where the blob was
 	forceMove(reform_spot)
@@ -307,7 +303,7 @@
 		var/obj/belly/B = belly
 		B.forceMove(src)
 		B.owner = src
-	
+
 	//Get rid of friend blob
 	qdel(blob)
 
