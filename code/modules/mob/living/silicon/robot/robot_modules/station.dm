@@ -702,7 +702,8 @@ var/global/list/robot_modules = list(
 					"Basic" = "Miner_old",
 					"Advanced Droid" = "droid-miner",
 					"Treadhead" = "Miner",
-					"Drone" = "drone-miner"
+					"Drone" = "drone-miner",
+					"Mole" = "moleminer"
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()
