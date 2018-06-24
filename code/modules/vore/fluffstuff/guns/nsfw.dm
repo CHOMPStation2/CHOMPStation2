@@ -359,6 +359,7 @@
 	..()
 	new /obj/item/weapon/gun/projectile/nsfw(src)
 	new /obj/item/ammo_magazine/nsfw_mag(src)
+	new /obj/item/ammo_magazine/nsfw_mag(src)
 	new /obj/item/ammo_casing/nsfw_batt/lethal(src)
 	new /obj/item/ammo_casing/nsfw_batt/lethal(src)
 	new /obj/item/ammo_casing/nsfw_batt/stun(src)
