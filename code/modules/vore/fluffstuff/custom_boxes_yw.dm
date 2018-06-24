@@ -367,3 +367,17 @@
 		/obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie,
 		/obj/item/clothing/ears/earings/fluff/noel_earings,
 		/obj/item/clothing/under/fluff/noel_uniform)
+
+// ********
+// SASOperative
+// ********
+
+//Joseph Skinner
+/obj/item/weapon/storage/box/fluff/skinner
+	name = "Joseph's box"
+	desc = "a kit containing Joseph's equipment."
+	has_items = list (
+		/obj/item/clothing/mask/gas/fluff/skinner,
+		/obj/item/device/modkit_conversion/fluff/skinner/a,
+		/obj/item/device/modkit_conversion/fluff/skinner/b,
+		/obj/item/device/modkit_conversion/fluff/skinner/c)
