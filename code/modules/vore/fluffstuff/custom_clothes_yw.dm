@@ -1154,3 +1154,41 @@
         result.pixel_x = -16
         result.layer = BODY_LAYER + 15
         return result
+
+// *****
+// SASOperative
+// *****
+
+//Joseph Skinner
+
+/obj/item/clothing/under/rank/security/fluff/skinner
+	name = "Red Camo Fatigues"
+	desc = "A set of fatigues which seem to be have kevlar sown in at places to help protect from some blunt trauma."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "skinner_under"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "skinner_under"
+
+/obj/item/clothing/suit/armor/vest/fluff/skinner
+	name = "Heavy Tactical Armor"
+	desc = "A set of tactical armor with red markings and a extra layer of protection along the legs and arms. It has a red cross with a skull near the upper chest."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "skinner_heavy"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "skinner_heavy"
+
+/obj/item/clothing/head/helmet/fluff/skinner
+	name = "Tactical Helmet"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	desc = "A helmet with a red line going straight down the middle to accompany its matching set or armor."
+	icon_state = "skinner_helm"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "skinner_helm"
+
+/obj/item/clothing/mask/gas/fluff/skinner
+	name =	"Tinted Gasmask"
+	desc =  "A gasmask with red tinted lenses installed to hide the users eyes. Or to try and instill fear, it seems to have some form of Inhaler system installed, the wearer seems to breathe much heavier in this mask than others."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "skinnermask"
+	item_state = "skinnermask"
