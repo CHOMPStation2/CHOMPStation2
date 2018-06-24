@@ -26,6 +26,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 	var/durability = 100					// Durability remaining
 	var/bioadap = FALSE						// If it'll work in fancy species
+	var/savetofile = TRUE					/*Start True so that Transcore saves any NIF that's newly installed with the correct scans or implant.
+											DO NOT CHANGE durability WITHOUT SETTING THIS TO TRUE. */
 
 	var/tmp/power_usage = 0						// Nifsoft adds to this
 	var/tmp/mob/living/carbon/human/human		// Our owner!
@@ -33,7 +35,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	var/tmp/list/nifsofts_life = list()			// Ones that want to be talked to on life()
 	var/owner									// Owner character name
 	var/examine_msg								//Message shown on examine.
-	
+
 	var/tmp/vision_flags = 0		// Flags implants set for faster lookups
 	var/tmp/health_flags = 0
 	var/tmp/combat_flags = 0
@@ -72,9 +74,9 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	//Put loaded data here if we loaded any
 	save_data = islist(load_data) ? load_data.Copy() : list()
 	var/saved_examine_msg = save_data["examine_msg"]
-	
+
 	//If it's an empty string, they want it blank. If null, it's never been saved, give default.
-	if(isnull(saved_examine_msg)) 
+	if(isnull(saved_examine_msg))
 		saved_examine_msg = "There's a certain spark to their eyes."
 	examine_msg = saved_examine_msg
 
@@ -96,6 +98,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	//If given wear (like when spawned) then done
 	if(wear)
 		durability = wear
+		savetofile = TRUE
 		wear(0) //Just make it update.
 
 	//Draw me yo.
@@ -114,7 +117,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	var/obj/item/organ/brain = H.internal_organs_by_name[O_BRAIN]
 	if(istype(brain))
 		should_be_in = brain.parent_organ
-	
+
 	if(istype(H) && !H.nif && H.species && (loc == H.get_organ(should_be_in)))
 		if(!bioadap && (H.species.flags & NO_SCAN)) //NO_SCAN is the default 'too complicated' flag
 			return FALSE
@@ -135,7 +138,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		var/obj/item/organ/brain = H.internal_organs_by_name[O_BRAIN]
 		if(istype(brain))
 			should_be_in = brain.parent_organ
-		
+
 		parent = H.get_organ(should_be_in)
 		//Ok, nevermind then!
 		if(!istype(parent))
@@ -186,6 +189,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /obj/item/device/nif/proc/wear(var/wear = 0)
 	wear *= (rand(85,115) / 100) //Apparently rand() only takes integers.
 	durability -= wear
+	savetofile = TRUE
 
 	if(durability <= 0)
 		notify("Danger! General system insta#^!($",TRUE)
@@ -222,6 +226,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			playsound(user, 'sound/items/Screwdriver.ogg', 50, 1)
 			open = FALSE
 			durability = initial(durability)
+			savetofile = TRUE
 			stat = NIF_PREINSTALL
 			update_icon()
 
