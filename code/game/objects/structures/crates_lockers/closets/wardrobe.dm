@@ -103,6 +103,20 @@
 		/obj/item/weapon/storage/fancy/candle_box = 2,
 		/obj/item/weapon/deck/tarot)
 
+/obj/structure/closet/wardrobe/monastary
+	name = "Monastary wardrobe"
+	desc = "It's a storage unit for approved religious attire."
+	icon_state = "black"
+	icon_closed = "black"
+
+	starts_with = list(
+		/obj/item/clothing/suit/unathi/mantle = 2,
+		/obj/item/clothing/suit/unathi/robe = 2,
+		/obj/item/clothing/shoes/sandal = 2,
+		/obj/item/clothing/shoes/footwraps = 2,
+		/obj/item/clothing/shoes/boots/winter = 2,
+		/obj/item/clothing/suit/storage/hooded/wintercoat = 2)
+
 
 /obj/structure/closet/wardrobe/green
 	name = "green wardrobe"
@@ -188,7 +202,7 @@
 	name = "white wardrobe"
 	icon_state = "white"
 	icon_closed = "white"
-	
+
 	starts_with = list(
 		/obj/item/clothing/under/color/white = 3,
 		/obj/item/clothing/shoes/white = 3,
@@ -254,7 +268,7 @@
 		starts_with += /obj/item/weapon/storage/backpack/dufflebag/sci
 	else
 		starts_with += /obj/item/weapon/storage/backpack/satchel/tox
-	
+
 	return ..()
 
 
@@ -340,12 +354,12 @@
 	name = "grey wardrobe"
 	icon_state = "grey"
 	icon_closed = "grey"
-	
+
 	starts_with = list(
 		/obj/item/clothing/under/color/grey = 3,
 		/obj/item/clothing/shoes/black = 3,
 		/obj/item/clothing/head/soft/grey = 3)
-		
+
 
 /obj/structure/closet/wardrobe/mixed
 	name = "mixed wardrobe"

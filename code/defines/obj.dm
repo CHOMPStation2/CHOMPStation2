@@ -209,6 +209,18 @@ var/global/list/PDA_Manifest = list()
 	icon_state = "wilderness1"
 	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point."
 
+/obj/structure/showcase/yw/chaplain
+	name = "Strange Bronze Machinery"
+	icon = 'icons/obj/clockwork_objects.dmi'
+	icon_state = "mania_motor"
+	desc = "A strange device made of bronze. It has an unknown purpose."
+
+/obj/structure/showcase/yw/chaplain2
+	name = "Strange Bronze Machinery"
+	icon = 'icons/obj/clockwork_objects.dmi'
+	icon_state = "obelisk"
+	desc = "A strange device made of bronze. It has an unknown purpose."
+
 /obj/item/mouse_drag_pointer = MOUSE_ACTIVE_POINTER
 
 /obj/item/weapon/beach_ball

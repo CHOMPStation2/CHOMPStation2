@@ -88,6 +88,13 @@
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "Icerock"
 
+/turf/unsimulated/wall/bronze
+	name = "Bronze wall"
+	desc = "A huge chunk of warm metal. The clanging of machinery emanates from within."
+	icon = 'icons/obj/clockwork_objects.dmi'
+	icon_state = "clockwork_wall"
+
+
 // Shuttle Walls
 /turf/simulated/shuttle/wall
 	name = "autojoin wall"
@@ -251,3 +258,6 @@
 		var/image/I = image(icon = src.icon, icon_state = "o_[icon_state]")
 		I.color = stripe_color
 		add_overlay(I)
+
+
+
