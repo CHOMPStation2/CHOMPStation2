@@ -4,6 +4,7 @@
 //
 
 /datum/controller/subsystem/mapping/proc/pickEngine(pickedEngine)
+	/var/name = "Null"
 	if(!engine_loader_pickable)
 		to_world_log("Ignoring player picked engine")
 		return // Either this map doesn't use this engine loader or doesn't need one at all.

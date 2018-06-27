@@ -1,5 +1,7 @@
 //player pickble engine marker.
-//Hopefully to be accompanied by submaps for Radients map.
+//Holds all objects related to player chosen engine. - gozulio.
+//TODO: Submaps in engine_index.dm
+
 /obj/effect/landmark/engine_loader_pickable
 	name = "Player Picked Engine Loader"
 	var/clean_turfs // A list of lists, where each list is (x, )
@@ -29,3 +31,101 @@
 					++deleted_atoms
 					qdel(AM)
 	admin_notice("<span class='danger'>Annihilated [deleted_atoms] objects.</span>", R_DEBUG)
+
+/obj/machinery/computer/pickengine
+	name = "Engine Selector."
+	desc = "A Terminal for selecting what engine nanodrones will assemble for the station."
+	icon = 'icons/obj/computer.dmi' //Barrowed from supply computer.
+	icon_keyboard = "tech_key"
+	icon_screen = "supply"
+	light_color = "#b88b2e"
+	req_access = list(access_engine)
+	var/lifetime = 750 //lifetime in seconds.
+	var/destroy = 0 //killmepls
+	var/building = 0
+
+/obj/machinery/computer/pickengine/New()
+	message_admins("Engine select console placed at [src.x] [src.y] [src.z]")
+	..()
+
+/obj/machinery/computer/pickengine/attack_ai(var/mob/user as mob)
+	user << "<span class='warning'>The netwrk data sent by this machine is encripted!</span>"
+	return
+
+/obj/machinery/computer/pickengine/attack_hand(var/mob/user as mob)
+
+	if(!allowed(user))
+		user << "<span class='warning'>Access Denied.</span>"
+		return
+
+	if(..())
+		return
+
+	add_fingerprint(user)
+	user.set_machine(src)
+	var/dat
+
+	dat += "Engine Select console<BR>"
+	dat += "Please select an engine for construction.<BR>"
+
+	dat += "<A href='?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
+	dat += "<A href='?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
+	dat += "<A href='?src=\ref[src];RUSTEngine=1'>Build R-UST</A><BR>"
+
+	dat += "<A href='?src=\ref[user];mach_close=computer'>Close</A>"
+	user << browse(dat, "window=computer;size=575x450")
+	onclose(user, "computer")
+	return
+
+/obj/machinery/computer/pickengine/Topic(href, href_list)
+	if(..())
+		return 1
+
+	if( isturf(loc) && (in_range(src, usr) || istype(usr, /mob/living/silicon)) )
+		usr.set_machine(src)
+
+	if(href_list["RUSTEngine"])
+		if(!building)
+			building = 1
+			usr << browse(null, "window=computer")
+			usr.unset_machine()
+			SSmapping.pickEngine("R-UST Engine")
+			destroy = 1
+
+	if(href_list["TESLA"])
+		if(!building)
+			building = 1
+			usr << browse(null, "window=computer")
+			usr.unset_machine()
+			SSmapping.pickEngine("Edison's Bane")
+			destroy = 1
+
+	if(href_list["SM"])
+		if(!building)
+			building = 1
+			usr << browse(null, "window=computer")
+			usr.unset_machine()
+			SSmapping.pickEngine("Supermatter Engine")
+			destroy = 1
+
+	if(href_list["close"])
+		usr << browse(null, "window=computer")
+		usr.unset_machine()
+
+	add_fingerprint(usr)
+	updateUsrDialog()
+	return
+
+/obj/machinery/computer/pickengine/process()
+
+	--lifetime
+
+	if(lifetime <= 0)
+		building = 1
+		SSmapping.pickEngine(config.engine_map)
+		destroy = 1
+
+	if(destroy)
+		src.Destroy()
+
+	sleep(20)
