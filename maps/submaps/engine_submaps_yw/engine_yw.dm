@@ -1,6 +1,6 @@
 //player pickble engine marker.
 //Holds all objects related to player chosen engine. - gozulio.
-//TODO: Submaps in engine_index.dm
+//Engine submaps get declared in engine_yw_index.dm
 
 /obj/effect/landmark/engine_loader_pickable
 	name = "Player Picked Engine Loader"
@@ -40,7 +40,7 @@
 	icon_screen = "supply"
 	light_color = "#b88b2e"
 	req_access = list(access_engine)
-	var/lifetime = 750 //lifetime in seconds.
+	var/lifetime = 750 //lifetime * 10.
 	var/destroy = 0 //killmepls
 	var/building = 0
 
@@ -84,29 +84,26 @@
 	if( isturf(loc) && (in_range(src, usr) || istype(usr, /mob/living/silicon)) )
 		usr.set_machine(src)
 
-	if(href_list["RUSTEngine"])
-		if(!building)
-			building = 1
-			usr << browse(null, "window=computer")
-			usr.unset_machine()
-			SSmapping.pickEngine("R-UST Engine")
-			destroy = 1
+	if(href_list["RUSTEngine"] && !building)
+		building = 1
+		usr << browse(null, "window=computer")
+		usr.unset_machine()
+		SSmapping.pickEngine("R-UST Engine")
+		destroy = 1
 
-	if(href_list["TESLA"])
-		if(!building)
-			building = 1
-			usr << browse(null, "window=computer")
-			usr.unset_machine()
-			SSmapping.pickEngine("Edison's Bane")
-			destroy = 1
+	if(href_list["TESLA"] && !building)
+		building = 1
+		usr << browse(null, "window=computer")
+		usr.unset_machine()
+		SSmapping.pickEngine("Edison's Bane")
+		destroy = 1
 
-	if(href_list["SM"])
-		if(!building)
-			building = 1
-			usr << browse(null, "window=computer")
-			usr.unset_machine()
-			SSmapping.pickEngine("Supermatter Engine")
-			destroy = 1
+	if(href_list["SM"] && !building)
+		building = 1
+		usr << browse(null, "window=computer")
+		usr.unset_machine()
+		SSmapping.pickEngine("Supermatter Engine")
+		destroy = 1
 
 	if(href_list["close"])
 		usr << browse(null, "window=computer")
@@ -128,4 +125,4 @@
 	if(destroy)
 		src.Destroy()
 
-	sleep(20)
+	sleep(10)
