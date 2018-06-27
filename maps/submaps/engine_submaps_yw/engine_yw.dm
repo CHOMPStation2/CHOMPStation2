@@ -39,7 +39,7 @@
 	icon_keyboard = "tech_key"
 	icon_screen = "supply"
 	light_color = "#b88b2e"
-	req_access = list(access_engine)
+	req_one_access = list(access_engine, access_heads)
 	var/lifetime = 750 //lifetime * 10.
 	var/destroy = 0 //killmepls
 	var/building = 0
