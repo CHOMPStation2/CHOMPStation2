@@ -17,6 +17,11 @@
 
 /obj/machinery/computer/gyrotron_control/interact(var/mob/user)
 
+	if(stat & (BROKEN|NOPOWER))
+		user.unset_machine()
+		user << browse(null, "window=gyrotron_controller_[id_tag]")
+		return
+
 	if(!id_tag)
 		to_chat(user, "<span class='warning'>This console has not been assigned an ident tag. Please contact your system administrator or conduct a manual update with a standard multitool.</span>")
 		return
@@ -96,3 +101,19 @@
 		if(new_ident && user.Adjacent(src))
 			id_tag = new_ident
 		return
+
+/obj/machinery/computer/gyrotron_control/update_icon()
+	if(stat & (BROKEN))
+		icon = 'icons/obj/computer.dmi'
+		icon_state = "broken"
+		set_light(0)
+
+	if(stat & (NOPOWER))
+		icon = 'icons/obj/computer.dmi'
+		icon_state = "computer"
+		set_light(0)
+
+	if(!stat & (BROKEN|NOPOWER))
+		icon = initial(icon)
+		icon_state = initial(icon_state)
+		set_light(light_range_on, light_power_on)

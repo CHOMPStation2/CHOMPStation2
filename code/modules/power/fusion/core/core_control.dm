@@ -27,6 +27,11 @@
 
 /obj/machinery/computer/fusion_core_control/interact(mob/user)
 
+	if(stat & (BROKEN|NOPOWER))
+		user.unset_machine()
+		user << browse(null, "window=fusion_control")
+		return
+
 	if(!cur_viewed_device || !check_core_status(cur_viewed_device))
 		cur_viewed_device = null
 
@@ -173,3 +178,19 @@
 	if(C.idle_power_usage > C.avail())
 		return
 	. = 1
+
+/obj/machinery/computer/fusion_core_control/update_icon()
+	if(stat & (BROKEN))
+		icon = 'icons/obj/computer.dmi'
+		icon_state = "broken"
+		set_light(0)
+
+	if(stat & (NOPOWER))
+		icon = 'icons/obj/computer.dmi'
+		icon_state = "computer"
+		set_light(0)
+
+	if(!stat & (BROKEN|NOPOWER))
+		icon = initial(icon)
+		icon_state = initial(icon_state)
+		set_light(light_range_on, light_power_on)
