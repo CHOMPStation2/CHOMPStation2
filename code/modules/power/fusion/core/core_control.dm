@@ -3,21 +3,20 @@
 	icon = 'icons/obj/machines/power/fusion.dmi'
 	icon_state = "core_control"
 	light_color = COLOR_ORANGE
-
+	circuit = /obj/item/weapon/circuitboard/fusion_core_control
 	var/id_tag
 	var/scan_range = 25
 	var/list/connected_devices = list()
 	var/obj/machinery/power/fusion_core/cur_viewed_device
 
 /obj/machinery/computer/fusion_core_control/attackby(var/obj/item/thing, var/mob/user)
+	..()
 	if(ismultitool(thing))
 		var/new_ident = input("Enter a new ident tag.", "Core Control", id_tag) as null|text
 		if(new_ident && user.Adjacent(src))
 			id_tag = new_ident
 			cur_viewed_device = null
 		return
-	else
-		return ..()
 
 /obj/machinery/computer/fusion_core_control/attack_ai(mob/user)
 	attack_hand(user)

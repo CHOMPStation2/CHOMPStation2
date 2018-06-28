@@ -2453,7 +2453,6 @@
 #include "code\modules\power\fusion\fusion_reactions.dm"
 #include "code\modules\power\fusion\fusion_reagents.dm"
 #include "code\modules\power\fusion\magpower.dm"
-#include "code\modules\power\fusion\rust_patch_yw.dm"
 #include "code\modules\power\fusion\core\_core.dm"
 #include "code\modules\power\fusion\core\core_control.dm"
 #include "code\modules\power\fusion\core\core_field.dm"
