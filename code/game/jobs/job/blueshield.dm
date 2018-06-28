@@ -12,6 +12,7 @@
 	head_position = 1
 	minimum_character_age = 25
 	ideal_character_age = 32 		//Experienced, but physically in their prime
+	minimal_player_age = 3
 	economic_modifier = 8
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
 			            access_medical, access_engine, access_change_ids, access_eva, access_heads, access_teleporter,
