@@ -33,5 +33,6 @@
 		/obj/item/weapon/gun/projectile/shotgun/pump,
 		/obj/item/weapon/storage/box/beanbags,
 		/obj/item/weapon/storage/box/shotgunshells,
-		/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos
+		/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos,
+		/obj/item/weapon/gun/energy/x01
 		)
