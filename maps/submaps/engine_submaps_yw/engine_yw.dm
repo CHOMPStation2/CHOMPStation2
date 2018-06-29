@@ -39,7 +39,7 @@
 		for(var/turf/T in turfs_to_clean) //now deal with those pesky mobs.
 			for(var/mob/living/LH in T)
 				if(istype(LH, /mob/living))
-					to_chat(LH, "<span class='danger'>It fels like you're being torn apart!</span>")
+					to_chat(LH, "<span class='danger'>It feels like you're being torn apart!</span>")
 					LH.apply_effect(20, AGONY, 0, 0)
 					LH.visible_message("<span class='danger'>[LH.name] is ripped apart by something you can't see!</span>")
 					LH.gib() //Murder them horribly!
