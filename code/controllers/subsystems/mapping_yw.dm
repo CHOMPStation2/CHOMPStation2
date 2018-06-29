@@ -27,6 +27,7 @@
 			if(istype(MT))
 				engine_types += MT
 		chosen_type = pick(engine_types)
+	global_announcer.autosay("Engineering has selected [chosen_type.name] as todays engine.", "Engine Constructor")
 	to_world_log("Chose Engine Map: [chosen_type.name]")
 	admin_notice("<span class='danger'>Chose Engine Map: [chosen_type.name]</span>", R_DEBUG)
 
