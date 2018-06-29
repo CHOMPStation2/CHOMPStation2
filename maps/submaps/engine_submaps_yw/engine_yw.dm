@@ -66,7 +66,7 @@
 	..()
 
 /obj/machinery/computer/pickengine/attack_ai(var/mob/user as mob)
-	user << "<span class='warning'>The netwrk data sent by this machine is encripted!</span>"
+	user << "<span class='warning'>The network data sent by this machine is encrypted!</span>"
 	return
 
 /obj/machinery/computer/pickengine/attack_hand(var/mob/user as mob)
