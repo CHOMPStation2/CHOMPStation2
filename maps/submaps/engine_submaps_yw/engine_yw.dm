@@ -57,7 +57,7 @@
 	icon_screen = "supply"
 	light_color = "#b88b2e"
 	req_one_access = list(access_engine, access_heads)
-	var/lifetime = 750 //lifetime * 10.
+	var/lifetime = 900 //lifetime decreases every seconds, hopefully. see process()
 	var/destroy = 0 //killmepls
 	var/building = 0
 
@@ -82,9 +82,10 @@
 	user.set_machine(src)
 	var/dat
 
-	dat += "Engine Select console<BR>"
+	dat += "<B>Engine Select console</B><BR>"
 	dat += "Please select an engine for construction.<BR><HR>"
-	dat += "WARNING: Selecting an engine will deploy nanobots to construct it. These nanobots will attempt to disassemble anything in their way.<BR>"
+	dat += "Engine autoselect in [time2text(src.lifetime * 10, "mm:ss")].<BR>"
+	dat += "WARNING: Selecting an engine will deploy nanobots to construct it. These nanobots will attempt to disassemble anything in their way, including curious engineers!.<BR>"
 
 	dat += "<A href='?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
 	dat += "<A href='?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
@@ -103,31 +104,13 @@
 		usr.set_machine(src)
 
 	if(href_list["RUSTEngine"] && !building)
-		building = 1
-		usr << browse(null, "window=computer")
-		usr.unset_machine()
-		global_announcer.autosay("Engine selected: You have 30 seconds to clear the engine Room!", "Engine Constructor", "Engineering")
-		spawn(300)
-			SSmapping.pickEngine("R-UST Engine")
-		destroy = 1
+		setEngineType("R-UST Engine")
 
 	if(href_list["TESLA"] && !building)
-		building = 1
-		usr << browse(null, "window=computer")
-		usr.unset_machine()
-		global_announcer.autosay("Engine selected: You have 30 seconds to clear the engine Room!", "Engine Constructor", "Engineering")
-		spawn(300)
-			SSmapping.pickEngine("Edison's Bane")
-		destroy = 1
+		setEngineType("Edison's Bane")
 
 	if(href_list["SM"] && !building)
-		building = 1
-		usr << browse(null, "window=computer")
-		usr.unset_machine()
-		global_announcer.autosay("Engine selected: You have 30 seconds to clear the engine Room!", "Engine Constructor", "Engineering")
-		spawn(300)
-			SSmapping.pickEngine("Supermatter Engine")
-		destroy = 1
+		setEngineType("Supermatter Engine")
 
 	if(href_list["close"])
 		usr << browse(null, "window=computer")
@@ -137,17 +120,20 @@
 	updateUsrDialog()
 	return
 
+/obj/machinery/computer/pickengine/proc/setEngineType(engine)
+	building = 1
+	usr << browse(null, "window=computer")
+	usr.unset_machine()
+	global_announcer.autosay("Engine selected: You have 30 seconds to clear the engine Room!", "Engine Constructor", "Engineering")
+	spawn(300)
+		SSmapping.pickEngine(engine)
+	destroy = 1
+
 /obj/machinery/computer/pickengine/process()
-
 	--lifetime
-
-	if(lifetime <= 0)
-		if(!building) //We timed out while building, but we're allready building so it's okay!
-			building = 1
-			SSmapping.pickEngine(config.engine_map)
-			destroy = 1
+	if(lifetime <= 0 && !building) //We timed out while building, but we're allready building so it's okay!
+		setEngineType(pick(config.engine_map))
 
 	if(destroy)
 		qdel(src)
-
-	sleep(10)
+	sleep(10 * world.tick_lag) // should sleep for roughly one second before trying again.
