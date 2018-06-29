@@ -1,5 +1,5 @@
 /obj/item/weapon/gun/projectile/revolvershotgun
-	name = "jackhammer, probably"
+	name = "Jackhammer"
 	desc = "Uses 12g rounds."
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "shotgun-mag"
