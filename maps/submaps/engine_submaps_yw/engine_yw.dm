@@ -22,19 +22,36 @@
 
 /obj/effect/landmark/engine_loader_pickable/proc/annihilate_bounds()
 	var/deleted_atoms = 0
+	var/killed_mobs = 0
 	admin_notice("<span class='danger'>Annihilating objects in engine loading locatation.</span>", R_DEBUG)
 	var/list/turfs_to_clean = get_turfs_to_clean()
 	if(turfs_to_clean.len)
-		for(var/x in 1 to 2) // Requires two passes to get everything.
+		for(var/x in 1 to 2) // Delete things that shouldn't be players.
 			for(var/turf/T in turfs_to_clean)
 				for(var/atom/movable/AM in T)
-					++deleted_atoms
-					qdel(AM)
+					if(!istype(AM, /mob/living) && !istype(AM, /mob/observer))
+						if(istype(AM, /mob)) // a mob we don't know what to do with got in somehow.
+							message_admins("a mob of type [AM.type] was in the build area and got deleted.", R_DEBUG)
+							++killed_mobs
+						qdel(AM)
+						++deleted_atoms
+
+		for(var/turf/T in turfs_to_clean) //now deal with those pesky mobs.
+			for(var/mob/living/LH in T)
+				if(istype(LH, /mob/living))
+					to_chat(LH, "<span class='danger'>It fels like you're being torn apart!</span>")
+					LH.apply_effect(20, AGONY, 0, 0)
+					LH.visible_message("<span class='danger'>[LH.name] is ripped apart by something you can't see!</span>")
+					LH.gib() //Murder them horribly!
+					message_admins("[key_name(LH, LH.client)] was just killed by the engine loader!", R_DEBUG)
+					++killed_mobs
+
 	admin_notice("<span class='danger'>Annihilated [deleted_atoms] objects.</span>", R_DEBUG)
+	admin_notice("<span class='danger'>Annihilated [killed_mobs] Living Mobs</span>", R_DEBUG)
 
 /obj/machinery/computer/pickengine
 	name = "Engine Selector."
-	desc = "A Terminal for selecting what engine nanodrones will assemble for the station."
+	desc = "A Terminal for selecting what engine will be assembled for the station."
 	icon = 'icons/obj/computer.dmi' //Barrowed from supply computer.
 	icon_keyboard = "tech_key"
 	icon_screen = "supply"
@@ -66,7 +83,8 @@
 	var/dat
 
 	dat += "Engine Select console<BR>"
-	dat += "Please select an engine for construction.<BR>"
+	dat += "Please select an engine for construction.<BR><HR>"
+	dat += "WARNING: Selecting an engine will deploy nanobots to construct it. These nanobots will attempt to disassemble anything in their way.<BR>"
 
 	dat += "<A href='?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
 	dat += "<A href='?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
@@ -88,21 +106,27 @@
 		building = 1
 		usr << browse(null, "window=computer")
 		usr.unset_machine()
-		SSmapping.pickEngine("R-UST Engine")
+		global_announcer.autosay("Engine selected: You have 30 seconds to clear the engine Room!", "Engine Constructor", "Engineering")
+		spawn(300)
+			SSmapping.pickEngine("R-UST Engine")
 		destroy = 1
 
 	if(href_list["TESLA"] && !building)
 		building = 1
 		usr << browse(null, "window=computer")
 		usr.unset_machine()
-		SSmapping.pickEngine("Edison's Bane")
+		global_announcer.autosay("Engine selected: You have 30 seconds to clear the engine Room!", "Engine Constructor", "Engineering")
+		spawn(300)
+			SSmapping.pickEngine("Edison's Bane")
 		destroy = 1
 
 	if(href_list["SM"] && !building)
 		building = 1
 		usr << browse(null, "window=computer")
 		usr.unset_machine()
-		SSmapping.pickEngine("Supermatter Engine")
+		global_announcer.autosay("Engine selected: You have 30 seconds to clear the engine Room!", "Engine Constructor", "Engineering")
+		spawn(300)
+			SSmapping.pickEngine("Supermatter Engine")
 		destroy = 1
 
 	if(href_list["close"])
@@ -118,11 +142,12 @@
 	--lifetime
 
 	if(lifetime <= 0)
-		building = 1
-		SSmapping.pickEngine(config.engine_map)
-		destroy = 1
+		if(!building) //We timed out while building, but we're allready building so it's okay!
+			building = 1
+			SSmapping.pickEngine(config.engine_map)
+			destroy = 1
 
 	if(destroy)
-		src.Destroy()
+		qdel(src)
 
 	sleep(10)
