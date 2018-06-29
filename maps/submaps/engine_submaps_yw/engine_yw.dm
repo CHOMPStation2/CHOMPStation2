@@ -66,8 +66,11 @@
 	..()
 
 /obj/machinery/computer/pickengine/attack_ai(var/mob/user as mob)
-	user << "<span class='warning'>The network data sent by this machine is encrypted!</span>"
-	return
+	if(istype(user, /mob/living/silicon/robot))
+		return attack_hand(user)
+	else
+		user << "<span class='warning'>The network data sent by this machine is encrypted!</span>"
+		return
 
 /obj/machinery/computer/pickengine/attack_hand(var/mob/user as mob)
 
@@ -104,13 +107,13 @@
 		usr.set_machine(src)
 
 	if(href_list["RUSTEngine"] && !building)
-		setEngineType("R-UST Engine")
+		setEngineType("R-UST Engine", usr)
 
 	if(href_list["TESLA"] && !building)
-		setEngineType("Edison's Bane")
+		setEngineType("Edison's Bane", usr)
 
 	if(href_list["SM"] && !building)
-		setEngineType("Supermatter Engine")
+		setEngineType("Supermatter Engine", usr)
 
 	if(href_list["close"])
 		usr << browse(null, "window=computer")
@@ -120,10 +123,11 @@
 	updateUsrDialog()
 	return
 
-/obj/machinery/computer/pickengine/proc/setEngineType(engine)
+/obj/machinery/computer/pickengine/proc/setEngineType(engine, var/mob/usr)
 	building = 1
-	usr << browse(null, "window=computer")
-	usr.unset_machine()
+	if(usr)
+		usr << browse(null, "window=computer")
+		usr.unset_machine()
 	global_announcer.autosay("Engine selected: You have 30 seconds to clear the engine Room!", "Engine Constructor", "Engineering")
 	spawn(300)
 		SSmapping.pickEngine(engine)
@@ -131,7 +135,7 @@
 
 /obj/machinery/computer/pickengine/process()
 	--lifetime
-	if(lifetime <= 0 && !building) //We timed out while building, but we're allready building so it's okay!
+	if(lifetime <= 0 && !building) //we time out? if we're already building then don't pick randomly!
 		setEngineType(pick(config.engine_map))
 
 	if(destroy)
