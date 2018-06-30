@@ -1114,7 +1114,7 @@
 
 // ******
 // Roguenoob
-// ******`
+// ******
 
 //Basir Fahim
 
@@ -1123,3 +1123,72 @@
 	desc = "This ring is stylized to have an ornate sun, with a sample of phoron swirling around inside. Keep away from Fire! Inscribed along the band is a sentence in Siik; \"Always yours, my little frost-fire. With love. -Sheri\""
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "plasma_ring"
+
+// ******
+// Harpsong
+// ******
+
+//Harpsong
+
+/obj/item/clothing/suit/armor/vest/harpsong
+	name = "Kentauri Uniform (Tac)"
+	desc = "A typical Kentauri uniform worn by those in Command, Tactical and Security disciplines. It is crafted specifically to fit the typically overweight body of the average Kentauri, and its colours match up with those of station security."
+	species_restricted = null //Species restricted since all it cares about is a taur half
+	icon = 'icons/vore/rigs_taur_yw.dmi'
+	icon_override = 'icons/vore/rigs_taur_yw.dmi'
+	icon_state = "kentauri_uniform"
+	item_state = "kentauri_uniform"
+
+/obj/item/clothing/suit/armor/vest/harpsong
+	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+		if(..())
+			if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/horse/big))
+				return ..()
+			else
+				to_chat(H,"<span class='warning'>You need to have a kentauri half to wear this.</span>")
+				return 0
+
+/obj/item/clothing/suit/armor/vest/harpsong
+    make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0)
+        var/image/result = ..()
+        result.pixel_x = -16
+        result.layer = BODY_LAYER + 15
+        return result
+
+// *****
+// SASOperative
+// *****
+
+//Joseph Skinner
+
+/obj/item/clothing/under/rank/security/fluff/skinner
+	name = "Red Camo Fatigues"
+	desc = "A set of fatigues which seem to be have kevlar sown in at places to help protect from some blunt trauma."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "skinner_under"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "skinner_under"
+
+/obj/item/clothing/suit/armor/vest/fluff/skinner
+	name = "Heavy Tactical Armor"
+	desc = "A set of tactical armor with red markings and a extra layer of protection along the legs and arms. It has a red cross with a skull near the upper chest."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "skinner_heavy"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "skinner_heavy"
+
+/obj/item/clothing/head/helmet/fluff/skinner
+	name = "Tactical Helmet"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	desc = "A helmet with a red line going straight down the middle to accompany its matching set or armor."
+	icon_state = "skinner_helm"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "skinner_helm"
+
+/obj/item/clothing/mask/gas/fluff/skinner
+	name =	"Tinted Gasmask"
+	desc =  "A gasmask with red tinted lenses installed to hide the users eyes. Or to try and instill fear, it seems to have some form of Inhaler system installed, the wearer seems to breathe much heavier in this mask than others."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "skinnermask"
+	item_state = "skinnermask"

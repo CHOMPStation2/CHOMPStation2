@@ -426,3 +426,37 @@
 	else
 		return ..()
 	return
+
+// **************
+// SASOperative
+// **************
+
+/obj/item/device/modkit_conversion/fluff/skinner/a
+	name = "Joseph's modkit Mk1"
+	desc = "A kit containing all the needed tools and parts to modify a security jumpsuit."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/clothing/under/rank/security
+	to_suit = /obj/item/clothing/under/rank/security/fluff/skinner
+
+/obj/item/device/modkit_conversion/fluff/skinner/b
+	name = "Joseph's modkit Mk2"
+	desc = "A kit containing all the needed tools and parts to modify a security armor."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/clothing/suit/armor/vest
+	to_suit = /obj/item/clothing/suit/armor/vest/fluff/skinner
+
+/obj/item/device/modkit_conversion/fluff/skinner/c
+	name = "Joseph's modkit Mk3"
+	desc = "A kit containing all the needed tools and parts to modify a security helmet."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/clothing/head/helmet
+	to_suit = /obj/item/clothing/head/helmet/fluff/skinner

@@ -87,7 +87,7 @@
 	src.density = 1
 	update_nearby_tiles()
 	src.update_icon()
-	src.set_opacity(initial(opacity))
+	src.set_opacity(1) // Used to be src.set_opacity(initial(opacity)) Why?
 	sleep(15)
 	src.operating = 0
 
