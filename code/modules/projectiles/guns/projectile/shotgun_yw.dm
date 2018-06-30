@@ -1,8 +1,8 @@
 /obj/item/weapon/gun/projectile/revolvershotgun
 	name = "Jackhammer"
 	desc = "Uses 12g rounds."
-	icon = 'icons/obj/gun_vr.dmi'
-	icon_state = "shotgun-mag"
+	icon = 'icons/obj/gun_yw.dmi'
+	icon_state = "revolvshot"
 	item_state = null
 	w_class = ITEMSIZE_LARGE
 	force = 10
@@ -18,9 +18,9 @@
 /obj/item/weapon/gun/projectile/revolvershotgun/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "shotgun-mag"
+		icon_state = "revolvshot"
 	else
-		icon_state = "shotgun-empty"
+		icon_state = "revolvshot-empty"
 	return
 
 
@@ -28,12 +28,12 @@
 	name = "drum magazine (12 gauge slug)"
 	desc = "A magazine for a revolver shotgun."
 	icon = 'icons/obj/ammo_yw.dmi'
-	icon_state = "12g"
+	icon_state = "c12g"
 	mag_type = MAGAZINE
 	caliber = "12g"
 	matter = list(DEFAULT_WALL_MATERIAL = 13000) //did the math. now fixed the exploityness of this thing. Have fun!
 	ammo_type = /obj/item/ammo_casing/a12g
-	max_ammo = 8
+	max_ammo = 10
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/m12gdrumjack/beanbag
