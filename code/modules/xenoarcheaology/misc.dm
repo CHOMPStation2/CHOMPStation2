@@ -39,7 +39,7 @@
 	src.contents += P
 
 /obj/structure/noticeboard/medical
-	notices = 5
+	notices = 1
 	icon_state = "nboard01"
 
 /obj/structure/noticeboard/medical/New()
@@ -48,6 +48,21 @@
 	P.info = "<br>No matter how many times I've said this, it doesn't seem to stick, so I'm leaving this reminder: Screwing patients in the patient rooms is a serious breach of proffessionality and your code of ethics. Take it to the dorms."
 	P.stamped = list(/obj/item/weapon/stamp/cmo)
 	P.overlays = list("paper_stamped_cmo")
+	src.contents += P
+
+/obj/structure/noticeboard/library
+	notices = 2
+	icon_state = "nboard02"
+
+/obj/structure/noticeboard/library/New()
+	var/obj/item/weapon/paper/P = new()
+	P.name = "Library Warning: coffee stains"
+	P.info = "<br>I seem to tell you guys this daily, but please, stop bringing coffee to carpeted areas. It's hard enough to get the stains off wood,let alone carpet."
+	src.contents += P
+
+	P = new()
+	P.name = "Library Warning: loud noises"
+	P.info = "Ssshh!<br>People are trying to read in the library, stop bringing the jukebox over there!"
 	src.contents += P
 
 /obj/structure/bookcase/manuals/xenoarchaeology
