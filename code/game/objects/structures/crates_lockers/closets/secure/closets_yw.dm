@@ -16,6 +16,7 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/weapon/grenade/flashbang,
 		/obj/item/device/flash,
+		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/weapon/handcuffs,
 		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/clothing/glasses/sunglasses,
@@ -30,9 +31,6 @@
 		/obj/item/clothing/accessory/holster/leg,
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless,
-		/obj/item/weapon/gun/projectile/shotgun/pump,
-		/obj/item/weapon/storage/box/beanbags,
-		/obj/item/weapon/storage/box/shotgunshells,
-		/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos,
-		/obj/item/weapon/gun/energy/x01
+		/obj/item/gunbox/blueshield,
+		/obj/item/gunbox/blueshield/secondary
 		)
