@@ -334,7 +334,7 @@
 
 //YW EDIT
 /obj/item/weapon/gun/projectile/automatic/p90/blueshield
-	magazine_type = /obj/item/ammo_magazine/m9mm/rubber //Because a 50 round AP mag isn't really what we want for our defender.
+	magazine_type = /obj/item/ammo_magazine/m9mmt/rubber //Because a 50 round AP mag isn't really what we want for our defender.
 
 /obj/item/weapon/gun/projectile/automatic/p90/update_icon()
 	icon_state = "p90smg-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 6) : "empty"]"
