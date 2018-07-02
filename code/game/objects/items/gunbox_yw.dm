@@ -7,7 +7,7 @@
 /obj/item/gunbox/blueshield/attack_self(mob/living/user)
 	var/list/options = list()
 	options["Jackhammer Revolver Shotgun (12 Gauge)"] = list(/obj/item/weapon/gun/projectile/revolvershotgun, /obj/item/ammo_magazine/m12gdrumjack, /obj/item/ammo_magazine/m12gdrumjack, /obj/item/ammo_magazine/m12gdrumjack/beanbag)
-	options["P90 SMG (Top-Mount 9mm)"] = list(/obj/item/weapon/gun/projectile/automatic/p90/blueshield, /obj/item/ammo_magazine/m9mmt/rubber, /obj/item/ammo_magazine/m9mmt/, /obj/item/ammo_magazine/m9mmt/)
+	options["WT550 Machine Pistol (9mm)"] = list(/obj/item/weapon/gun/projectile/automatic/wt550, /obj/item/ammo_magazine/m9mmt/rubber, /obj/item/ammo_magazine/m9mmt, /obj/item/ammo_magazine/m9mmt)
 	options["X01 Energy Gun (Weapon Cell)"] = list(/obj/item/weapon/gun/energy/x01, /obj/item/weapon/cell/device/weapon, /obj/item/weapon/cell/device/weapon)
 	var/choice = input(user,"Would you prefer a Jackhammer shotgun, a P90 SMG or an X01 Energy Gun?") as null|anything in options
 	if(src && choice)
