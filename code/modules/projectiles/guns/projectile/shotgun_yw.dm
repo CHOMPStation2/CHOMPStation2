@@ -33,7 +33,7 @@
 	caliber = "12g"
 	matter = list(DEFAULT_WALL_MATERIAL = 13000) //did the math. now fixed the exploityness of this thing. Have fun!
 	ammo_type = /obj/item/ammo_casing/a12g
-	max_ammo = 10
+	max_ammo = 4
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/m12gdrumjack/beanbag
