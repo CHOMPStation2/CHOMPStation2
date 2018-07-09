@@ -36,3 +36,5 @@
 	//CHECK_TICK //Don't let anything else happen for now
 	// Actually load it
 	chosen_type.load(T)
+	sleep(10)
+	engine_loader_pickable.lateload_init()
