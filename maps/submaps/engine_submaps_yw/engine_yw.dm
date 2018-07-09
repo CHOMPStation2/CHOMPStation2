@@ -47,7 +47,19 @@
 					++killed_mobs
 
 	admin_notice("<span class='danger'>Annihilated [deleted_atoms] objects.</span>", R_DEBUG)
-	admin_notice("<span class='danger'>Annihilated [killed_mobs] Living Mobs</span>", R_DEBUG)
+	admin_notice("<span class='danger'>Annihilated [killed_mobs] Living Mobs.</span>", R_DEBUG)
+
+/obj/effect/landmark/engine_loader_pickable/proc/lateload_init()
+	var/init_machines = 0
+	var/list/turfs_to_init = get_turfs_to_clean()
+
+	if(turfs_to_init.len)
+		for(var/turf/T in turfs_to_init)
+			for(var/obj/machinery/atmospherics/AM in T)
+				++init_machines
+				AM.atmos_init()
+
+	admin_notice("<span class='danger'>Initialised [init_machines] Atmos machines.</span>", R_DEBUG)
 
 /obj/machinery/computer/pickengine
 	name = "Engine Selector."
@@ -140,4 +152,4 @@
 
 	if(destroy)
 		qdel(src)
-	sleep(10 * world.tick_lag) // should sleep for roughly one second before trying again.
+	sleep(1 SECOND) // should sleep for roughly one second before trying again.
