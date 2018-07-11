@@ -99,7 +99,7 @@
 
 	dat += "<B>Engine Select console</B><BR>"
 	dat += "Please select an engine for construction.<BR><HR>"
-	dat += "Engine autoselect in [time2text(src.lifetime * 10, "mm:ss")].<BR>"
+	dat += "Engine autoselect in [time2text(src.lifetime SECONDS, "mm:ss")].<BR>"
 	dat += "WARNING: Selecting an engine will deploy nanobots to construct it. These nanobots will attempt to disassemble anything in their way, including curious engineers!.<BR>"
 
 	dat += "<A href='?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
