@@ -20,6 +20,7 @@
 		for(var/list/coords in clean_turfs)
 			. += block(locate(coords[1], coords[2], src.z), locate(coords[3], coords[4], src.z))
 
+//Repurposed the Vores random engine select to handle mobs and observers more carefully.
 /obj/effect/landmark/engine_loader_pickable/proc/annihilate_bounds()
 	var/deleted_atoms = 0
 	var/killed_mobs = 0
@@ -36,7 +37,7 @@
 						qdel(AM)
 						++deleted_atoms
 
-		for(var/turf/T in turfs_to_clean) //now deal with those pesky mobs.
+		for(var/turf/T in turfs_to_clean) //now deal with those pesky players.
 			for(var/mob/living/LH in T)
 				if(istype(LH, /mob/living))
 					to_chat(LH, "<span class='danger'>It feels like you're being torn apart!</span>")
@@ -49,8 +50,10 @@
 	admin_notice("<span class='danger'>Annihilated [deleted_atoms] objects.</span>", R_DEBUG)
 	admin_notice("<span class='danger'>Annihilated [killed_mobs] Living Mobs.</span>", R_DEBUG)
 
+//Basically, initialise all of the Atmos machines, as if we just wrenched them down.
 /obj/effect/landmark/engine_loader_pickable/proc/lateload_init()
 	var/init_machines = 0
+	var/init_nodes = 0
 	var/list/turfs_to_init = get_turfs_to_clean()
 
 	if(turfs_to_init.len)
@@ -58,8 +61,24 @@
 			for(var/obj/machinery/atmospherics/AM in T)
 				++init_machines
 				AM.atmos_init()
+			for(var/obj/machinery/atmospherics/binary/AM in T)
+				if(AM.node1)
+					AM.node1.atmos_init()
+					++init_nodes
+				if(AM.node2)
+					AM.node2.atmos_init()
+					++init_nodes
 
-	admin_notice("<span class='danger'>Initialised [init_machines] Atmos machines.</span>", R_DEBUG)
+		for(var/turf/T in turfs_to_init)
+			for(var/obj/machinery/atmospherics/AM in T)
+				AM.build_network()
+			for(var/obj/machinery/atmospherics/binary/AM in T)
+				if(AM.node1)
+					AM.node1.build_network()
+				if(AM.node2)
+					AM.node2.build_network()
+
+	admin_notice("<span class='danger'>Initialised [init_machines] Atmos machines and [init_nodes] Atmos network nodes..</span>", R_DEBUG)
 
 /obj/machinery/computer/pickengine
 	name = "Engine Selector."
@@ -69,7 +88,7 @@
 	icon_screen = "supply"
 	light_color = "#b88b2e"
 	req_one_access = list(access_engine, access_heads)
-	var/lifetime = 900 //lifetime decreases every seconds, hopefully. see process()
+	var/lifetime = 900 //lifetime decreases every second, hopefully. see process()
 	var/destroy = 0 //killmepls
 	var/building = 0
 
@@ -135,6 +154,7 @@
 	updateUsrDialog()
 	return
 
+//Take the engine tpe we're building, warn engineering, and pass it to the engine loader.
 /obj/machinery/computer/pickengine/proc/setEngineType(engine, var/mob/usr)
 	building = 1
 	if(usr)
@@ -145,11 +165,12 @@
 		SSmapping.pickEngine(engine)
 	destroy = 1
 
+//check every second and make sure we havent been alive to long..
+//if we have been alive to long, and aren't building anything, pick an engine to build at random.
 /obj/machinery/computer/pickengine/process()
 	--lifetime
-	if(lifetime <= 0 && !building) //we time out? if we're already building then don't pick randomly!
+	if(lifetime <= 0 && !building)
 		setEngineType(pick(config.engine_map))
-
 	if(destroy)
 		qdel(src)
-	sleep(1 SECOND) // should sleep for roughly one second before trying again.
+	sleep(1 SECOND)
