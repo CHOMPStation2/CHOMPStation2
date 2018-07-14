@@ -344,7 +344,7 @@
 //Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
 		for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
 			if(R.id == "fulguracin")
-				M << "\blue Your hairs stand up, but you resist the shock for the most part"
+				M << "<span class='notice'>Your hairs stand up, but you resist the shock for the most part</span>"
 				return 0 //no shock for you
 
 	//Checks again. If we are still here subject will be shocked, trigger standard 20 tick warning

@@ -252,7 +252,7 @@
 				<li>Enable max input and output on the engine SMES and shut off the input off on the Station SMES. This is to make sure the Gyrotron gets as much power as it can during start up.</li>
 				<li>Turn the PACMAN on, setting it to power 4/5.</li>
 				<li>Go into the reactor Control Room (East of the reactor) and take the stack of Deuterium off the table, and click it on the compressor twice, this should make two Deuterium Fuel rods. Ignore the Tritium.</li>
-				<li>In the Control room go to the Core Control console, Access the field, and set its strength/size to 600. This will give you a field of about 7x7 tiles. Make note of the field size, A bigger field can EMP machinery or doors around it, a smaller field may allow Gyrotron shots to miss, and punch holes in the back wall.</li>
+				<li>In the Control room go to the Core Control console, Access the field, and set its strength/size to 600, then bring the field on-line. This will give you a field of about 7x7 tiles. Make note of the field size, A bigger field can EMP machinery or doors around it, a smaller field may allow Gyrotron shots to miss, and punch holes in the back wall.</li>
 				<li>In the Control room go to the Gyrotron Control console and turn the Gyrotrons on, delay 3 power 3.</li>
 				<li>In the Control room go to the Fuel Injector console and start injecting fuel.</li>
 				<li>Go back to the Core Control Console, and now wait for the temperature to spike from 296 Kelvin up to 3,000 to 10,000 Kelvin. When the temperature spikes it means you have achieved fusion</li>
