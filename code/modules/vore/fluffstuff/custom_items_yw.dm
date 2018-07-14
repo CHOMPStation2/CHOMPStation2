@@ -460,3 +460,11 @@
 
 	from_suit = /obj/item/clothing/head/helmet
 	to_suit = /obj/item/clothing/head/helmet/fluff/skinner
+
+// **************
+// DeepIndigo
+// **************
+
+/obj/item/weapon/storage/bible/fluff/amina
+	name = "New Space Pioneer's Bible"
+	desc = "This one says it was printed in 2492. The name \"Eric Hayvers\" is written on the inside of the cover, crossed out. Under it is written \"Kouri, Amina, Marine Unit 14, Fifth Echelon. Service number NTN-5528928522372\""
