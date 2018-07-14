@@ -9,7 +9,7 @@
 	options["Jackhammer Revolver Shotgun (12 Gauge)"] = list(/obj/item/weapon/gun/projectile/revolvershotgun, /obj/item/ammo_magazine/m12gdrumjack, /obj/item/ammo_magazine/m12gdrumjack, /obj/item/ammo_magazine/m12gdrumjack/beanbag)
 	options["WT550 Machine Pistol (9mm)"] = list(/obj/item/weapon/gun/projectile/automatic/wt550, /obj/item/ammo_magazine/m9mmt/rubber, /obj/item/ammo_magazine/m9mmt, /obj/item/ammo_magazine/m9mmt)
 	options["X01 Energy Gun (Weapon Cell)"] = list(/obj/item/weapon/gun/energy/x01, /obj/item/weapon/cell/device/weapon, /obj/item/weapon/cell/device/weapon)
-	var/choice = input(user,"Would you prefer a Jackhammer shotgun, a P90 SMG or an X01 Energy Gun?") as null|anything in options
+	var/choice = input(user,"Would you prefer a Jackhammer shotgun, a WT550 Machine Pistol, or an X01 Energy Gun?") as null|anything in options
 	if(src && choice)
 		var/list/things_to_spawn = options[choice]
 		for(var/new_type in things_to_spawn) // Spawn all the things, the gun and the ammo.
