@@ -96,7 +96,7 @@
 	syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
 	"mihi","wan","six","salve","tartu")
 	machine_understands = FALSE
-
+/* (YWEdit)
 /datum/language/tajsign
 	name = LANGUAGE_SIIK_TAJR
 	desc = "A type of sign language mostly based on tail movements that was used during the Tajaran rebellion."
@@ -116,4 +116,4 @@
 /datum/language/seromi
 	flags = 0
 /datum/language/gutter
-	machine_understands = FALSE
+	machine_understands = FALSE */

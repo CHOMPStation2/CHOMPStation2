@@ -1006,6 +1006,34 @@
  	override = 1
  	item_state = "tesh_cloak_saroth"
 
+/obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
+    name = "plain cloak"
+    desc = "A plain cloak to be worn for warmth or comfort. Looks cozy."
+    icon = 'icons/vore/custom_clothes_yw.dmi'
+    icon_state = "jaree_cloak"
+    icon_override = 'icons/vore/custom_onmob_yw.dmi'
+    item_state = "jaree_cloak"
+    override = 1
+
+/obj/item/clothing/head/ushanka/alt/fluff/Jaree
+    name = "ushanka"
+    desc = "Perfect for winter in Siberia, da?"
+    icon_state = "ushanka2down"
+    icon = 'icons/vore/custom_clothes_yw.dmi'
+    icon_override = 'icons/vore/custom_onmob_yw.dmi'
+    item_state = "ushanka2down"
+    flags_inv = HIDEEARS
+
+/obj/item/clothing/head/ushanka/alt/fluff/Jaree/attack_self(mob/user as mob)
+    if(src.icon_state == "ushanka2down")
+        src.icon_state = "ushanka2up"
+        src.item_state = "ushanka2up"
+        user << "You raise the ear flaps on the ushanka."
+    else
+        src.icon_state = "ushanka2down"
+        src.item_state = "ushanka2down"
+        user << "You lower the ear flaps on the ushanka."
+
 // ******
 // Benl8561
 // ******
