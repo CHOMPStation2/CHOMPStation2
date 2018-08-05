@@ -589,6 +589,12 @@ var/list/floor_decals = list()
 	name = "plaque"
 	icon_state = "plaque"
 
+/obj/effect/floor_decal/plaque/yw
+	name = "Commerative Plaque"
+	icon = 'icons/obj/structures_yw32x32.dmi'
+	icon_state = "plaque"
+	desc = "A plaque commerating the building efforts of the sleepiest outpost in the sector, Yawn Wider."
+
 /obj/effect/floor_decal/carpet
 	name = "carpet"
 	icon = 'icons/turf/flooring/carpet.dmi'
@@ -1162,3 +1168,9 @@ var/list/floor_decals = list()
 /obj/effect/floor_decal/grass_edge/corner
 	name = "grass edge"
 	icon_state = "grass_edge_corner"
+
+/obj/effect/floor_decal/plaque/yw
+	name = "Commerative Plaque"
+	icon = 'icons/obj/structures_yw32x32.dmi'
+	icon_state = "plaque"
+	desc = "A plaque commerating the building efforts of the sleepiest outpost in the sector, Yawn Wider."

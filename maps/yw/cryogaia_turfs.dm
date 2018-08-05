@@ -5,7 +5,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/open)
 /turf/simulated/open/virgo3b/New()
 	..()
 	if(outdoors)
-		outdoor_turfs.Add(src)
+		SSplanets.addTurf(src)
 
 VIRGO3B_TURF_CREATE(/turf/simulated/floor)
 

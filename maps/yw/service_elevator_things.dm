@@ -12,7 +12,6 @@
 		/area/turbolift/lumber_floor_underground_mine,
 		/area/turbolift/lumber_floor_basement,
 		/area/turbolift/lumber_floor_main_level,
-		/area/turbolift/lumber_floor_dorms
 		)
 /obj/turbolift_map_holder/lumber/medevator
 	icon = 'icons/obj/turbolift_preview_3x3.dmi'

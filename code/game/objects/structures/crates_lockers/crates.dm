@@ -345,6 +345,13 @@
 	starts_with = list(
 		/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 4)
 
+/obj/structure/closet/crate/freezer/meat //Fpr use in the escape shuttle
+	name = "Bonfire storage"
+	desc = "A crate of emergency rations."
+
+	starts_with = list(
+		/obj/item/weapon/reagent_containers/food/snacks/meat = 6)
+
 
 /obj/structure/closet/crate/bin
 	name = "large bin"
