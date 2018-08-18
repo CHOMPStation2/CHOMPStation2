@@ -25,7 +25,7 @@
 "aay" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/tiled/monotile,/area/tether/station/excursion_dock)
 "aaz" = (/obj/machinery/power/terminal{dir = 4},/obj/structure/cable/yellow{d2 = 2; icon_state = "0-2"},/obj/machinery/camera/network/engineering,/turf/simulated/floor,/area/engineering/engine_smes)
 "aaA" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 8},/obj/structure/cable/yellow{d2 = 2; icon_state = "0-2"},/turf/simulated/floor,/area/engineering/engine_smes)
-"aaB" = (/obj/effect/landmark/engine_loader_pickable,/obj/effect/landmark/engine_loader,/turf/space,/area/space)
+"aaB" = (/obj/effect/landmark/engine_loader_pickable{clean_turfs = list(list(20,93,30,118),list(31,94,35,96),list(29,97,43,118),list(44,113,46,118))},/turf/space,/area/space)
 "aaC" = (/obj/machinery/power/grid_checker,/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/structure/cable{icon_state = "0-4"; d2 = 4},/turf/simulated/floor,/area/engineering/engine_smes)
 "aaD" = (/turf/simulated/shuttle/floor/black,/area/shuttle/excursion/tether)
 "aaE" = (/turf/simulated/floor/reinforced,/obj/structure/shuttle/engine/propulsion,/turf/simulated/shuttle/plating/airless/carry,/area/shuttle/excursion/tether)
