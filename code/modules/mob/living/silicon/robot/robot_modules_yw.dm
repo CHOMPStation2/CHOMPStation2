@@ -21,7 +21,7 @@
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("lube", 250)
 	src.emag.name = "Lube spray"
-	R.icon 		 = 'icons/mob/robots_yw.dmi'
+	R.icon 		 = 'icons/mob/robots_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	..()
 
@@ -58,8 +58,8 @@
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
 	..()
-	
-	
+
+
 /obj/item/weapon/robot_module/surgeryhound
 	name = "SurgeryHound module"
 	channels = list("medical" = 1)
