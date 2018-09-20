@@ -161,7 +161,7 @@ var/list/mining_overlay_cache = list()
 
 			if(excav_overlay)
 				add_overlay(excav_overlay)
-	
+
 	//We are a sand floor
 	else
 		name = "sand"
@@ -175,11 +175,11 @@ var/list/mining_overlay_cache = list()
 		for(var/direction in cardinal)
 			if(istype(get_step(src, direction), /turf/space) && !istype(get_step(src, direction), /turf/space/cracked_asteroid))
 				add_overlay(get_cached_border("asteroid_edge",direction,icon,"asteroid_edges", 0))
-			
+
 			//Or any time
 			else
-				var/turf/simulated/mineral/M = get_step(src, direction)
-				if(istype(M) && M.density)
+				var/turf/T = get_step(src, direction)
+				if(istype(T) && T.density)
 					add_overlay(get_cached_border("rock_side",direction,'icons/turf/walls.dmi',"rock_side"))
 
 		if(overlay_detail)

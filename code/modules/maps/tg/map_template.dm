@@ -140,7 +140,7 @@ var/list/global/map_templates = list()
 
 /datum/map_template/proc/annihilate_bounds(turf/origin, centered = FALSE)
 	var/deleted_atoms = 0
-	admin_notice("<span class='danger'>Annihilating objects in submap loading locatation.</span>", R_DEBUG)
+	admin_notice("<span class='danger'>Annihilating objects in submap loading location.</span>", R_DEBUG)
 	var/list/turfs_to_clean = get_affected_turfs(origin, centered)
 	if(turfs_to_clean.len)
 		for(var/turf/T in turfs_to_clean)

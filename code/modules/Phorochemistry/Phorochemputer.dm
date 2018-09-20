@@ -318,10 +318,10 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	name = T_BOARD("phorochemputer")
 	build_path = /obj/machinery/computer/phoronics
 	origin_tech = "programming=2;bluespace=2"
-
+/*
 /datum/design/circuit/phoronics
 	name = "phorochemputer"
 	id = "phorochemputer"
 	req_tech = list("programming" = 3, "bluespace" = 2)
 	build_path = /obj/item/weapon/circuitboard/phoronics
-
+*/

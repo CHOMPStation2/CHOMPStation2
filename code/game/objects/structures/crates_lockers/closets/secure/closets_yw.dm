@@ -16,8 +16,9 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/weapon/grenade/flashbang,
 		/obj/item/device/flash,
+		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/weapon/handcuffs,
-		/obj/item/weapon/melee/baton,
+		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/clothing/glasses/sunglasses/medhud,
 		/obj/item/clothing/head/beret/centcom/officer,
@@ -30,4 +31,6 @@
 		/obj/item/clothing/accessory/holster/leg,
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless,
-		/obj/item/weapon/gun/energy/x01)
+		/obj/item/gunbox/blueshield,
+		/obj/item/gunbox/blueshield/secondary
+		)

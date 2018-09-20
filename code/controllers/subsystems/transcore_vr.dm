@@ -45,12 +45,18 @@ SUBSYSTEM_DEF(transcore)
 		current_run.len--
 
 		//Remove if not in a human anymore.
-		if(!imp || !ishuman(imp.loc))
+		if(!imp || !isorgan(imp.loc))
 			implants -= imp
 			continue
 
-		//We're in a human, at least.
-		var/mob/living/carbon/human/H = imp.loc
+		//We're in an organ, at least.
+		var/obj/item/organ/external/EO = imp.loc
+		var/mob/living/carbon/human/H = EO.owner
+		if(!H)
+			implants -= imp
+			continue
+
+		//In a human	
 		BITSET(H.hud_updateflag, BACKUP_HUD)
 
 		if(H == imp.imp_in && H.mind && H.stat < DEAD)
@@ -130,7 +136,7 @@ SUBSYSTEM_DEF(transcore)
 		MR.one_time = one_time
 
 		//Pass a 0 to not change NIF status (because the elseif is checking for null)
-		if(nif)
+		if(nif && nif.savetofile) //This is to allow Transcore to skip over saving NIFs that have already been saved.
 			MR.nif_path = nif.type
 			MR.nif_durability = nif.durability
 			var/list/nifsofts = list()
@@ -140,6 +146,7 @@ SUBSYSTEM_DEF(transcore)
 					nifsofts += nifsoft.type
 			MR.nif_software = nifsofts
 			MR.nif_savedata = nif.save_data.Copy()
+			nif.savetofile = FALSE
 		else if(isnull(nif)) //Didn't pass anything, so no NIF
 			MR.nif_path = null
 			MR.nif_durability = null

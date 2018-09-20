@@ -162,6 +162,24 @@ ckey: dushka
 character_name: Saroth
 item_path: /obj/item/weapon/storage/box/fluff/saroth
 }
+
+{
+ckey: dushka
+character_name: Jaree-Kur
+item_path: /obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
+}
+
+{
+ckey: dushka
+character_name: Jaree-Kur
+item_path: /obj/item/clothing/head/ushanka/alt/fluff/Jaree
+}
+
+{
+ckey: deepindigo
+character_name: Amina Dae-Kouri
+item_path: /obj/item/weapon/storage/bible/fluff/amina
+}
 # ######## E CKEYS
 {
 ckey: esperkin
@@ -205,6 +223,11 @@ character_name: Nika Domashev
 item_path: /obj/item/weapon/storage/box/fluff/nika
 }
 # ######## H CKEYS
+{
+ckey: harpsong
+character_name: Harpsong
+item_path: /obj/item/clothing/suit/armor/vest/harpsong
+}
 # ######## I CKEYS
 {
 ckey: izac112
@@ -347,6 +370,12 @@ item_path: /obj/item/clothing/accessory/medal/silver/valor
 ckey: sempt
 character_name: Kayla Endsley
 item_path: /obj/item/clothing/under/rank/roboticist/skirt
+}
+
+{
+ckey: SASoperative
+character_name: Joseph Skinner
+item_path: /obj/item/weapon/storage/box/fluff/skinner
 }
 
 # ######## T CKEYS

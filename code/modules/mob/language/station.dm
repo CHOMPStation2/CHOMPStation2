@@ -30,7 +30,7 @@
 	exclaim_verb = "roars"
 	colour = "soghun"
 	key = "o"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	space_chance = 40
 	syllables = list(
 		"za", "az", "ze", "ez", "zi", "iz", "zo", "oz", "zu", "uz", "zs", "sz",
@@ -57,11 +57,19 @@
 	exclaim_verb = "yowls"
 	colour = "tajaran"
 	key = "j"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	syllables = list("mrr","rr","tajr","kir","raj","kii","mir","kra","ahk","nal","vah","khaz","jri","ran","darr",
 	"mi","jri","dynh","manq","rhe","zar","rrhaz","kal","chur","eech","thaa","dra","jurl","mah","sanu","dra","ii'r",
 	"ka","aasi","far","wa","baq","ara","qara","zir","saam","mak","hrar","nja","rir","khan","jun","dar","rik","kah",
 	"hal","ket","jurl","mah","tul","cresh","azu","ragh","mro","mra","mrro","mrra")
+
+/datum/language/tajaran/get_random_name(var/gender)
+	var/new_name = ..(gender,1)
+	if(prob(50))
+		new_name += " [pick(list("Hadii","Kaytam","Nazkiin","Zhan-Khazan","Hharar","Njarir'Akhan","Faaira'Nrezi","Rhezar","Mi'dynh","Rrhazkal","Bayan","Al'Manq","Mi'jri","Chur'eech","Sanu'dra","Ii'rka"))]"
+	else
+		new_name += " [..(gender,1)]"
+	return new_name
 
 /datum/language/tajaranakhani
 	name = LANGUAGE_AKHANI
@@ -71,20 +79,33 @@
 	exclaim_verb = "wails"
 	colour = "akhani"
 	key = "h"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	syllables = list("mrr","rr","marr","tar","ahk","ket","hal","kah","dra","nal","kra","vah","dar","hrar", "eh",
 	"ara","ka","zar","mah","ner","zir","mur","hai","raz","ni","ri","nar","njar","jir","ri","ahn","kha","sir",
 	"kar","yar","kzar","rha","hrar","err","fer","rir","rar","yarr","arr","ii'r","jar","kur","ran","rii","ii",
 	"nai","ou","kah","oa","ama","uuk","bel","chi","ayt","kay","kas","akor","tam","yir","enai")
 
-/datum/language/tajaran/get_random_name(var/gender)
+/datum/language/tajsign
+	name = LANGUAGE_ALAI
+	desc = "A standardized Tajaran sign language that was developed in Zarraya and gradually adopted by other nations, incorporating \
+			hand gestures and movements of the ears and tail."
+	signlang_verb = list("gestures with their hands", "gestures with their ears and tail", "gestures with their ears, tail and hands")
+	colour = "tajaran"
+	key = "l"
+	flags = WHITELISTED | SIGNLANG | NO_STUTTER | NONVERBAL
 
-	var/new_name = ..(gender,1)
-	if(prob(50))
-		new_name += " [pick(list("Hadii","Kaytam","Nazkiin","Zhan-Khazan","Hharar","Njarir'Akhan","Faaira'Nrezi","Rhezar","Mi'dynh","Rrhazkal","Bayan","Al'Manq","Mi'jri","Chur'eech","Sanu'dra","Ii'rka"))]"
-	else
-		new_name += " [..(gender,1)]"
-	return new_name
+/datum/language/tajsign/can_speak_special(var/mob/speaker)	// TODO: If ever we make external organs assist languages, convert this over to the new format
+	var/list/allowed_species = list(SPECIES_TAJ, SPECIES_TESHARI)	// Need a tail and ears and such to use this.
+	if(iscarbon(speaker))
+		var/obj/item/organ/external/hand/hands = locate() in speaker //you can't sign without hands
+		if(!hands)
+			return FALSE
+		if(ishuman(speaker))
+			var/mob/living/carbon/human/H = speaker
+			if(H.species.get_bodytype(H) in allowed_species)
+				return TRUE
+
+	return FALSE
 
 /datum/language/skrell
 	name = LANGUAGE_SKRELLIAN
@@ -96,7 +117,7 @@
 	colour = "skrell"
 	key = "k"
 	space_chance = 30
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix")
 
 /datum/language/skrellfar
@@ -109,10 +130,14 @@
 	colour = "skrellfar"
 	key = "p"
 	space_chance = 30
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix", "...", "oo", "q", "nq", "x", "xq", "ll", "...", "...", "...") //should sound like there's holes in it
 
-
+/datum/language/skrell/get_random_name(var/gender)
+	var/list/first_names = file2list('config/names/first_name_skrell.txt')
+	var/list/last_names = file2list('config/names/last_name_skrell.txt')
+	return "[pick(first_names)] [pick(last_names)]"
+ 
 /datum/language/human
 	name = LANGUAGE_SOL_COMMON
 	desc = "A bastardized hybrid of many languages, including Chinese, English, French, and more; it is the common language of the Sol system."
@@ -120,7 +145,7 @@
 	whisper_verb = "whispers"
 	colour = "solcom"
 	key = "1"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	//syllables are at the bottom of the file
 
 /datum/language/human/get_spoken_verb(var/msg_end)
@@ -152,11 +177,6 @@
 	syllables = list("beep","beep","beep","beep","beep","boop","boop","boop","bop","bop","dee","dee","doo","doo","hiss","hss","buzz","buzz","bzz","ksssh","keey","wurr","wahh","tzzz","shh","shk")
 	space_chance = 10
 
-/datum/language/machine/can_speak_special(var/mob/speaker)
-	var/obj/item/weapon/implant/language/eal/beep = locate() in speaker
-	return ((beep && beep.implanted) || speaker.isSynthetic() || isvoice(speaker))
-	//thank you sweet zuhayr
-
 /datum/language/machine/get_random_name()
 	if(prob(70))
 		return "[pick(list("PBU","HIU","SINA","ARMA","OSI"))]-[rand(100, 999)]"
@@ -171,7 +191,7 @@
 	exclaim_verb = "trills"
 	colour = "alien"
 	key = "v"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	space_chance = 50
 	syllables = list(
 			"ca", "ra", "ma", "sa", "na", "ta", "la", "sha", "scha", "a", "a",

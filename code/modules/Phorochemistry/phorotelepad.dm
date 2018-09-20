@@ -54,9 +54,9 @@
 		T.anchored = 0
 		del(src)
 
-/datum/design/item/phoronics_telepad
+/*/datum/design/item/phoronics_telepad
 	name = "phoronics telepad"
 	id = "phoronics_telepad"
 	req_tech = list("bluespace" = 2, "materials" = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 1000)
-	build_path = /obj/item/weapon/phoronics_telepad
+	build_path = /obj/item/weapon/phoronics_telepad */

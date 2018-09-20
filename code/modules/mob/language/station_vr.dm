@@ -39,6 +39,7 @@
 	"hel","ischt","far","wa","baram","iereng","tech","lach","sam","mak","lich","gen","or","ag","eck","gec","stag","onn", \
 	"bin","ket","jarl","vulf","einech","cresthz","azunein","ghzth")
 
+/*
 /datum/language/demon
     name = "Daemon"
     desc = "The language spoken by the demons of Infernum, it's composed of deep chanting. It's rarely spoken off of Infernum due to the volume one has to exert."
@@ -60,6 +61,7 @@
     key = "*" //dunno if this is a valid key. - Table
     syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
     "mihi","wan","six","salve","tartu")
+(YWEdit) Why define all this twice? */
 
 /datum/language/squirrel
 	name = LANGUAGE_ECUREUILIAN
@@ -94,7 +96,14 @@
 	syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
 	"mihi","wan","six","salve","tartu")
 	machine_understands = FALSE
-
+/* (YWEdit)
+/datum/language/tajsign
+	name = LANGUAGE_SIIK_TAJR
+	desc = "A type of sign language mostly based on tail movements that was used during the Tajaran rebellion."
+	signlang_verb = list("uses their tail to convey", "gestures with their tail", "gestures with their tail elaborately")
+	colour = "tajaran"
+	key = "l"
+	flags = SIGNLANG | NO_STUTTER | NONVERBAL // | WHITELISTED (YWEdit)
 
 /datum/language/unathi
 	flags = 0
@@ -107,5 +116,4 @@
 /datum/language/seromi
 	flags = 0
 /datum/language/gutter
-	flags = WHITELISTED
-	machine_understands = FALSE
+	machine_understands = FALSE */

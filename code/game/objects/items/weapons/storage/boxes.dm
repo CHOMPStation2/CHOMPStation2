@@ -135,7 +135,7 @@
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/beanbag = 8)
 
-/obj/item/weapon/storage/box/beanbags/large/New()
+/obj/item/weapon/storage/box/beanbags/large
 	starts_with = list(/obj/item/ammo_casing/a12g/beanbag = 16)
 
 /obj/item/weapon/storage/box/shotgunammo

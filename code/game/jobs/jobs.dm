@@ -11,8 +11,8 @@ var/const/ENGINEER			=(1<<6)
 var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
+var/const/BLUESHIELD		=(1<<13) //YW addition
 var/const/INTERN			=(1<<15) //VOREStation Add
-var/const/BLUESHIELD		=(1<<1) //YW addition
 
 var/const/MEDSCI			=(1<<1)
 
@@ -58,14 +58,14 @@ var/list/command_positions = list(
 	"Research Director",
 	"Chief Medical Officer",
 	"Command Secretary",
-	"Blueshield",
+	"Blueshield Guard"
 )
 
 
 var/list/engineering_positions = list(
 	"Chief Engineer",
 	"Station Engineer",
-	"Atmospheric Technician",
+	"Atmospheric Technician"
 )
 
 
