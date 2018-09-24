@@ -1,8 +1,6 @@
 /obj/item/clothing/under/vox
 	has_sensor = 0
 	species_restricted = list(SPECIES_VOX)
-	valid_accessory_slots = "vox"
-	restricted_accessory_slots = "vox"
 	phoronproof = 1
 
 /obj/item/clothing/under/vox/vox_casual
@@ -23,7 +21,7 @@
 	name = "alien mesh"
 	desc = "An alien mesh. Seems to be made up mostly of pockets and writhing flesh."
 	icon_state = "webbing-vox"
-	slot = "vox"
+	slot = ACCESSORY_SLOT_UTILITY
 
 	slots = 3
 
