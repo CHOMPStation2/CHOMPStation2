@@ -123,7 +123,7 @@
 
 	dat += "<A href='?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
 	dat += "<A href='?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
-	dat += "<A href='?src=\ref[src];SINGULO=1'>Build Singularity Engine</A><BR>"
+	//dat += "<A href='?src=\ref[src];SINGULO=1'>Build Singularity Engine</A><BR>" //Not enabled because of stability issues.
 	dat += "<A href='?src=\ref[src];RUSTEngine=1'>Build R-UST</A><BR>"
 	dat += "<BR><A href='?src=\ref[src];RANDOM=1'>Build Random Engine</A><BR>"
 
