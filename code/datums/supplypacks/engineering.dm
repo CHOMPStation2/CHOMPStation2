@@ -291,7 +291,8 @@
 	containername = "Tritium crate"
 	containertype = /obj/structure/closet/crate/engineering
 	contains = list(/obj/fiftyspawner/tritium)
-/datum/supply_packs/eng/am_shielding
+
+/datum/supply_pack/eng/am_shielding
 	contains = list(/obj/item/device/am_shielding_container = 3)
 	name = "Antimatter shielding three units"
 	cost = 50
@@ -299,7 +300,7 @@
 	containername = "Antimatter shielding crate"
 	access = access_engine
 
-/datum/supply_packs/eng/am_container
+/datum/supply_pack/eng/am_container
 	contains = list(/obj/item/weapon/am_containment)
 	name = "Antimatter container"
 	cost = 25
@@ -307,7 +308,7 @@
 	containername = "AM container crate"
 	access = access_engine
 
-/datum/supply_packs/eng/am_controlunit
+/datum/supply_pack/eng/am_controlunit
 	contains = list(/obj/machinery/power/am_control_unit)
 	name = "Antimatter control unit"
 	cost = 75

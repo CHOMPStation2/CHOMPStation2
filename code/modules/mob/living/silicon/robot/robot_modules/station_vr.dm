@@ -153,7 +153,7 @@
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
-	src.modules += new /obj/item/weapon/crowbar(src)
+	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth()
@@ -278,7 +278,7 @@
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/dogborg/swordtail(src)
-	src.modules += new /obj/item/weapon/crowbar(src)
+	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 

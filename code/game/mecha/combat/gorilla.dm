@@ -87,8 +87,6 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon(src)
 	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon/weak(src) //Saves energy, I suppose. Anti-infantry.
-	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive(src)
 	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)

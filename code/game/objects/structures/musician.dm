@@ -303,7 +303,6 @@
 	icon_state = "piano"
 	anchored = 1
 	density = 1
-	var/datum/song/song
 
 /obj/structure/device/piano/minimoog
 	name = "space minimoog"

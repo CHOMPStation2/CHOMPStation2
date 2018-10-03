@@ -54,7 +54,7 @@
  	containertype = /obj/structure/closet/crate/secure/weapon
  	containername = "Ballistic weapons crate"
 
-/datum/supply_packs/randomised/misc/telecrate
+/datum/supply_pack/randomised/misc/telecrate
 	name = "Confiscated equipment"
 	num_contained = 1
 	contains = list(
