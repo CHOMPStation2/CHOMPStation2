@@ -4,7 +4,7 @@
 */
 
 
-/datum/supply_packs/randomised/contraband
+/datum/supply_pack/randomised/contraband
 	num_contained = 5
 	contains = list(
 			/obj/item/seeds/bloodtomatoseed,
@@ -20,7 +20,7 @@
 	contraband = 1
 	group = "Supplies"
 
-/datum/supply_packs/security/specialops
+/datum/supply_pack/security/specialops
 	name = "Special Ops supplies"
 	contains = list(
 			/obj/item/weapon/storage/box/emps,
@@ -32,7 +32,7 @@
 	containername = "Special Ops crate"
 	contraband = 1
 
-/datum/supply_packs/supply/moghes
+/datum/supply_pack/supply/moghes
 	name = "Moghes imports"
 	contains = list(
 			/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew = 2,
@@ -43,7 +43,7 @@
 	containername = "Moghes imports crate"
 	contraband = 1
 
-/datum/supply_packs/munitions/bolt_rifles_militia
+/datum/supply_pack/munitions/bolt_rifles_militia
  	name = "Weapon - Surplus militia rifles"
  	contains = list(
  			/obj/item/weapon/gun/projectile/shotgun/pump/rifle = 3,
