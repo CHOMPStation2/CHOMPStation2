@@ -300,7 +300,7 @@ item_path: /obj/item/weapon/storage/box/fluff/natalya
 
 {
 ckey: lukevale
-character_name: Lena Shaw
+character_name: Lena Hastings
 item_path: /obj/item/weapon/storage/box/fluff/lena
 }
 
