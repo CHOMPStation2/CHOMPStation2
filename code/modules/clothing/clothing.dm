@@ -231,7 +231,7 @@
 	return 0 // return 1 to cancel attack_hand()
 
 /*/obj/item/clothing/gloves/attackby(obj/item/weapon/W, mob/user)
-	if(istype(W, /obj/item/weapon/wirecutters) || istype(W, /obj/item/weapon/scalpel))
+	if(W.is_wirecutter() || istype(W, /obj/item/weapon/scalpel))
 		if (clipped)
 			user << "<span class='notice'>The [src] have already been clipped!</span>"
 			update_icon()
@@ -637,6 +637,7 @@
 	var/worn_state = null
 	valid_accessory_slots = (\
 		ACCESSORY_SLOT_UTILITY\
+		|ACCESSORY_SLOT_HOLSTER\
 		|ACCESSORY_SLOT_WEAPON\
 		|ACCESSORY_SLOT_ARMBAND\
 		|ACCESSORY_SLOT_DECOR\
@@ -645,6 +646,7 @@
 		|ACCESSORY_SLOT_OVER)
 	restricted_accessory_slots = (\
 		ACCESSORY_SLOT_UTILITY\
+		|ACCESSORY_SLOT_HOLSTER\
 		|ACCESSORY_SLOT_WEAPON\
 		|ACCESSORY_SLOT_ARMBAND\
 		|ACCESSORY_SLOT_TIE\

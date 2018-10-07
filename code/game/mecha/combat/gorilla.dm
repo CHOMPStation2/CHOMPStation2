@@ -57,7 +57,8 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 	pixel_x = -16
 	step_in = 10
 	health = 5000
-	opacity = 0 // Because there's big tall legs to look through. Also it looks fucky if this is set to 1...
+	maxhealth = 5000
+	opacity = 0 // Because there's big tall legs to look through. Also it looks fucky if this is set to 1.
 	deflect_chance = 50
 	damage_absorption = list("brute"=0.1,"fire"=0.7,"bullet"=0.1,"laser"=0.6,"energy"=0.7,"bomb"=0.7) //values show how much damage will pass through, not how much will be absorbed.
 	max_temperature = 25000
@@ -72,20 +73,27 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 	add_req_access = 0
 	internal_damage_threshold = 25
 	force = 60
-	max_equip = 4
-	New()
-		..()
-		var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay(src)
-		ME.attach(src)
-		ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon(src)
-		ME.attach(src)
-		ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive(src)
-		ME.attach(src)
-		ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/mg42(src)
-		ME.attach(src)
-		src.smoke_system.set_up(3, 0, src)
-		src.smoke_system.attach(src)
-		return
+	max_equip = 5
+//This will (Should) never be in the hands of players. If it is, the one who inflicted this monster upon the server can edit these vars to not be insane.
+	max_hull_equip = 5
+	max_weapon_equip = 5
+	max_utility_equip = 5
+	max_universal_equip = 5
+	max_special_equip = 2
+
+/obj/mecha/combat/gorilla/New()
+	..()
+	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay(src) // This thing basically cannot function without an external power supply.
+	ME.attach(src)
+	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon(src)
+	ME.attach(src)
+	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive(src)
+	ME.attach(src)
+	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)
+	ME.attach(src)
+	src.smoke_system.set_up(3, 0, src)
+	src.smoke_system.attach(src)
+	return
 
 /obj/mecha/combat/gorilla/mechstep(direction)
 	var/result = step(src,direction)

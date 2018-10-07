@@ -21,7 +21,7 @@
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("lube", 250)
 	src.emag.name = "Lube spray"
-	R.icon 		 = 'icons/mob/robots_yw.dmi'
+	R.icon 		 = 'icons/mob/robots_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	..()
 
@@ -43,14 +43,14 @@
 	src.modules += new /obj/item/device/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	src.modules += new /obj/item/borg/sight/material(src)
-	src.modules += new /obj/item/weapon/wrench(src)
-	src.modules += new /obj/item/weapon/screwdriver(src)
+	src.modules += new /obj/item/weapon/tool/wrench(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver(src)
 	src.modules += new /obj/item/weapon/storage/bag/ore(src)
 	src.modules += new /obj/item/weapon/pickaxe/borgdrill(src)
 	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
 	src.modules += new /obj/item/weapon/gripper/miner(src)
 	src.modules += new /obj/item/weapon/mining_scanner(src)
-	src.modules += new /obj/item/weapon/crowbar(src)
+	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
@@ -58,8 +58,8 @@
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
 	..()
-	
-	
+
+
 /obj/item/weapon/robot_module/surgeryhound
 	name = "SurgeryHound module"
 	channels = list("medical" = 1)

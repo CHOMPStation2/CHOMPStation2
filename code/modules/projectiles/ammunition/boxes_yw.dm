@@ -16,19 +16,19 @@
 
 /obj/item/ammo_magazine/c45m2024/rubber
 	name = "m2024 magazine (.45 rubber)"
-	ammo_type = /obj/item/ammo_casing/a45r
+	ammo_type = /obj/item/ammo_casing/a45/rubber
 
 /obj/item/ammo_magazine/c45m2024/practice
 	name = "m2024 magazine (.45 practice)"
-	ammo_type = /obj/item/ammo_casing/a45p
+	ammo_type = /obj/item/ammo_casing/a45/practice
 
 /obj/item/ammo_magazine/c45m2024/flash
 	name = "m2024 magazine (.45 flash)"
-	ammo_type = /obj/item/ammo_casing/a45f
+	ammo_type = /obj/item/ammo_casing/a45/flash
 
 /obj/item/ammo_magazine/c45m2024/ap
 	name = "m2024 magazine (.45 AP)"
-	ammo_type = /obj/item/ammo_casing/a45ap
+	ammo_type = /obj/item/ammo_casing/a45/ap
 
 
 /******** 9mm glock ********/
@@ -48,15 +48,15 @@
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/gl9mm/flash
-	ammo_type = /obj/item/ammo_casing/a9mmf
+	ammo_type = /obj/item/ammo_casing/a9mm/flash
 
 /obj/item/ammo_magazine/gl9mm/rubber
 	name = "glock magazine (9mm rubber)"
-	ammo_type = /obj/item/ammo_casing/a9mmr
+	ammo_type = /obj/item/ammo_casing/a9mm/rubber
 
 /obj/item/ammo_magazine/gl9mm/practice
 	name = "glock magazine (9mm practice)"
-	ammo_type = /obj/item/ammo_casing/a9mmp
+	ammo_type = /obj/item/ammo_casing/a9mm/practice
 
 /******* MG42 ********/
 /obj/item/ammo_magazine/mg42

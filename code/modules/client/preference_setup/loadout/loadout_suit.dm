@@ -247,14 +247,14 @@ datum/gear/suit/duster
 	allowed_roles = list("Cargo Technician","Quartermaster")
 
 /datum/gear/suit/roles/poncho/cloak/mining
-	display_name = "cloak, cargo"
+	display_name = "cloak, mining"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/mining
 	allowed_roles = list("Quartermaster","Shaft Miner")
 
 /datum/gear/suit/roles/poncho/cloak/security
 	display_name = "cloak, security"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/security
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer")
+	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Blueshield Guard")
 
 /datum/gear/suit/roles/poncho/cloak/service
 	display_name = "cloak, service"
@@ -334,7 +334,7 @@ datum/gear/suit/duster
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard")
 
 /datum/gear/suit/wintercoat/medical
 	display_name = "winter coat, medical"
@@ -470,12 +470,12 @@ datum/gear/suit/duster
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
 	path = /obj/item/clothing/suit/storage/snowsuit/command
-	allowed_roles = list("Colony Director","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary")
+	allowed_roles = list("Colony Director","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard")
 
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
 	path = /obj/item/clothing/suit/storage/snowsuit/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard")
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"

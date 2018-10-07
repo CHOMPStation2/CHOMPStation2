@@ -63,55 +63,64 @@
 
 /obj/item/weapon/robot_module/robot/medical/surgeon //VOREStation sprites
 	vr_sprites = list(
-						"Acheron" = "mechoid-Medical"
+						"Acheron" = "mechoid-Medical",
+						"Shellguard Noble" = "Noble-MED"
 					 )
 
 /obj/item/weapon/robot_module/robot/medical/crisis //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-med",
-						"Acheron" = "mechoid-Medical"
+						"Acheron" = "mechoid-Medical",
+						"Shellguard Noble" = "Noble-MED"
 					 )
 
 /obj/item/weapon/robot_module/robot/clerical/butler //VOREStation sprites
 	vr_sprites = list(
 						"Handy - Service" = "handy-service",
 						"Handy - Hydro" = "handy-hydro",
-						"Acheron" = "mechoid-Service"
+						"Acheron" = "mechoid-Service",
+						"Shellguard Noble" = "Noble-SRV"
 					 )
 
 /obj/item/weapon/robot_module/robot/clerical/general //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-clerk",
-						"Acheron" = "mechoid-Service"
+						"Acheron" = "mechoid-Service",
+						"Shellguard Noble" = "Noble-SRV"
 					 )
 
 /obj/item/weapon/robot_module/robot/janitor //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-janitor",
-						"Acheron" = "mechoid-Janitor"
+						"Acheron" = "mechoid-Janitor",
+						"Shellguard Noble" = "Noble-CLN"
 					 )
 
 /obj/item/weapon/robot_module/robot/security/general //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-sec",
-						"Acheron" = "mechoid-Security"
+						"Acheron" = "mechoid-Security",
+						"Shellguard Noble" = "Noble-SEC"
 					 )
 
 /obj/item/weapon/robot_module/robot/miner //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-miner",
-						"Acheron" = "mechoid-Miner"
+						"Acheron" = "mechoid-Miner",
+						"Shellguard Noble" = "Noble-DIG"
 					 )
 
 /obj/item/weapon/robot_module/robot/standard //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-standard",
-						"Acheron" = "mechoid-Standard"
+						"Acheron" = "mechoid-Standard",
+						"Shellguard Noble" = "Noble-STD"
 					 )
 
 /obj/item/weapon/robot_module/robot/engineering/general //VOREStation sprites
 	vr_sprites = list(
-						"Acheron" = "mechoid-Engineering"
+						"Acheron" = "mechoid-Engineering",
+						"Shellguard Noble" = "Noble-ENG"
 					 )
 
 /obj/item/weapon/robot_module/robot/research //VOREStation sprites
@@ -144,13 +153,13 @@
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
-	src.modules += new /obj/item/weapon/crowbar(src)
+	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth()
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 1000
+	water.max_energy = 500
 	water.energy = 0
 	R.water_res = water
 	synths += water
@@ -172,6 +181,7 @@
 	R.dogborg = TRUE
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
 	..()
 
@@ -211,7 +221,6 @@
 	src.modules += new /obj/item/device/dogborg/boop_module(src) //Boop the crew.
 	src.modules += new /obj/item/device/healthanalyzer(src) // See who's hurt specificially.
 	src.modules += new /obj/item/borg/sight/hud/med(src) //See who's hurt generally.
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo(src)//So medi-hounds aren't nearly useless
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
@@ -221,10 +230,14 @@
 	var/datum/matter_synth/water = new /datum/matter_synth()
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 1000
+	water.max_energy = 500
 	water.energy = 0
 	R.water_res = water
 	synths += water
+
+	var/obj/item/weapon/reagent_containers/borghypo/hound/H = new /obj/item/weapon/reagent_containers/borghypo/hound(src)
+	H.water = water
+	src.modules += H
 
 	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
 	T.water = water
@@ -245,6 +258,7 @@
 	R.dogborg = TRUE
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
 	..()
 
@@ -264,14 +278,14 @@
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/dogborg/swordtail(src)
-	src.modules += new /obj/item/weapon/crowbar(src)
+	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth()
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 1000
+	water.max_energy = 500
 	water.energy = 0
 	R.water_res = water
 	synths += water
@@ -293,6 +307,7 @@
 	R.dogborg = TRUE
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
 	..()
 
@@ -315,17 +330,17 @@
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
 	metal.name = "Steel reserves"
 	metal.recharge_rate = 0
-	metal.max_energy = 100000
+	metal.max_energy = 50000
 	metal.energy = 0
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass()
 	glass.name = "Glass reserves"
 	glass.recharge_rate = 0
-	glass.max_energy = 100000
+	glass.max_energy = 50000
 	glass.energy = 0
 	var/datum/matter_synth/water = new /datum/matter_synth()
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 1000
+	water.max_energy = 500
 	water.energy = 0
 	R.water_res = water
 
@@ -374,6 +389,7 @@
 	R.dogborg = TRUE
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
 	..()
 
@@ -390,7 +406,7 @@
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/weapon/gripper/research(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
 	src.modules += new /obj/item/weapon/storage/part_replacer(src)
 	src.emag = new /obj/item/weapon/hand_tele(src)
@@ -398,7 +414,7 @@
 	var/datum/matter_synth/water = new /datum/matter_synth()
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 1000
+	water.max_energy = 500
 	water.energy = 0
 	R.water_res = water
 	synths += water
@@ -420,6 +436,7 @@
 	R.dogborg = TRUE
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
 	..()
 
@@ -436,14 +453,14 @@
 /obj/item/weapon/robot_module/robot/engiedog/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/wirecutters/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/device/t_scanner(src)
 	src.modules += new /obj/item/taperoll/engineering(src)
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
-	src.modules += new /obj/item/device/geiger(src)
+	src.modules += new /obj/item/weapon/pickaxe(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
@@ -452,27 +469,27 @@
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
 	metal.name = "Steel reserves"
 	metal.recharge_rate = 50
-	metal.max_energy = 100000
+	metal.max_energy = 50000
 	metal.energy = 5000
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass()
 	glass.name = "Glass reserves"
 	glass.recharge_rate = 50
-	glass.max_energy = 100000
+	glass.max_energy = 50000
 	glass.energy = 5000
 	var/datum/matter_synth/wood = new /datum/matter_synth/wood()
 	wood.name = "Wood reserves"
 	wood.recharge_rate = 50
-	wood.max_energy = 100000
+	wood.max_energy = 50000
 	wood.energy = 5000
 	var/datum/matter_synth/plastic = new /datum/matter_synth/plastic()
 	plastic.name = "Plastic reserves"
 	plastic.recharge_rate = 50
-	plastic.max_energy = 100000
+	plastic.max_energy = 50000
 	plastic.energy = 5000
 	var/datum/matter_synth/water = new /datum/matter_synth()
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 1000
+	water.max_energy = 500
 	water.energy = 0
 	R.water_res = water
 
@@ -497,6 +514,7 @@
 	MD.glass = glass
 	MD.wood = wood
 	MD.plastic = plastic
+	MD.water = water
 	src.modules += MD
 
 	var/obj/item/stack/material/cyborg/steel/M = new (src)
@@ -544,6 +562,7 @@
 	R.dogborg = TRUE
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
 	..()
 
@@ -557,5 +576,6 @@
 	R.default_pixel_x = initial(pixel_x)
 	R.scrubbing = FALSE
 	R.verbs -= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs -= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs -= /mob/living/proc/shred_limb
 	..()
