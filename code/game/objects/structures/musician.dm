@@ -2,7 +2,7 @@
 
 #define MUSICIAN_HEARCHECK_MINDELAY 4
 #define INSTRUMENT_MAX_LINE_LENGTH 300
-#define INSTRUMENT_MAX_LINE_NUMBER 50
+#define INSTRUMENT_MAX_LINE_NUMBER 400
 
 /datum/song
 	var/name = "Untitled"
@@ -41,7 +41,7 @@
 	var/help = 0
 	var/edit = 1
 	var/repeat = 0
-	var/linelimit = 50
+	var/linelimit = INSTRUMENT_MAX_LINE_NUMBER
 
 // note is a number from 1-7 for A-G
 // acc is either "b", "n", or "#"
