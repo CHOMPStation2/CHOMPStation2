@@ -88,7 +88,7 @@
 			data["error"] = 1
 			data["error_msg"] = "u wot m8"
 
-	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		ui = new(user, src, ui_key, "server_shipping.tmpl", src.name, 400, 500)
 		ui.set_initial_data(data)

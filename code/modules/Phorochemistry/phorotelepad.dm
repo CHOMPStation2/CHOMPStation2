@@ -28,14 +28,14 @@
 	if(istype(W, /obj/item/weapon/reagent_containers))
 		user.drop_item()
 		W.loc = src.loc
-	else if(istype(W, /obj/item/weapon/wrench))
+	else if(istype(W, /obj/item/weapon/tool/wrench))
 		var/word = "tighten"
 		src.anchored = !src.anchored
 		if(!src.anchored)
 			word = "undo"
 		user << "You [word] the telepad anchor bolts."
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
-	else if(istype(W, /obj/item/weapon/screwdriver) && !src.anchored)
+	else if(istype(W, /obj/item/weapon/tool/screwdriver) && !src.anchored)
 		user << "You fold the telepad."
 		new /obj/item/weapon/phoronics_telepad(src.loc)
 		del(src)
