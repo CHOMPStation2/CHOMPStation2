@@ -158,7 +158,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
-
+	
 	min_age = 18
 	max_age = 110
 
