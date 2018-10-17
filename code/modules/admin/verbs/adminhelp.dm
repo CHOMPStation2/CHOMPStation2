@@ -185,6 +185,12 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		if(admin_number_present <= 0)
 			to_chat(C, "<span class='notice'>No active admins are online, your adminhelp was sent to the admin irc.</span>")
 	send2adminchat() //VOREStation Add
+	//YW EDIT START
+	var/list/adm = get_admin_counts()
+	var/list/activemins = adm["present"]
+	var activeMins = activemins.len
+	SERVER_TOOLS_RELAY_BROADCAST("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.")
+	//YW EDIT END
 	GLOB.ahelp_tickets.active_tickets += src
 
 /datum/admin_help/Destroy()
