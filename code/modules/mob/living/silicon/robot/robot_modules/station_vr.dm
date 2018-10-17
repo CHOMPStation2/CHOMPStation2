@@ -153,7 +153,7 @@
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
-	src.modules += new /obj/item/weapon/crowbar(src)
+	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth()
@@ -221,7 +221,6 @@
 	src.modules += new /obj/item/device/dogborg/boop_module(src) //Boop the crew.
 	src.modules += new /obj/item/device/healthanalyzer(src) // See who's hurt specificially.
 	src.modules += new /obj/item/borg/sight/hud/med(src) //See who's hurt generally.
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo(src)//So medi-hounds aren't nearly useless
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src) //In case the chemist is nice!
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)//For holding the chemicals when the chemist is nice
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
@@ -279,7 +278,7 @@
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun(src)
 	src.modules += new /obj/item/weapon/dogborg/swordtail(src)
-	src.modules += new /obj/item/weapon/crowbar(src)
+	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 
@@ -407,7 +406,7 @@
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/weapon/gripper/research(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
 	src.modules += new /obj/item/weapon/storage/part_replacer(src)
 	src.emag = new /obj/item/weapon/hand_tele(src)
@@ -454,9 +453,9 @@
 /obj/item/weapon/robot_module/robot/engiedog/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/wirecutters/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/device/t_scanner(src)
 	src.modules += new /obj/item/taperoll/engineering(src)

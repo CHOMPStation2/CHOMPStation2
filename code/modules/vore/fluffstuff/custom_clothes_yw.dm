@@ -880,7 +880,7 @@
 //Lena Shaw
 
 /obj/item/clothing/accessory/fluff/lena_collar
-	name = "Ruby Embedded Collar."
+	name = "Ruby Embedded Collar"
 	desc = "A gold and platinum collar, with a embedded ruby gem. On the back is a engraving. 'The only one for me, Quanah Hastings', encompassing the engraving is a heart."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
@@ -1052,7 +1052,7 @@
 //Quanah Hastings
 
 /obj/item/clothing/accessory/fluff/quanah_collar
-	name = "Sapphire Embedded Collar."
+	name = "Sapphire Embedded Collar"
 	desc = "A gold and silver collar, with a embedded sapphire gem. On the back is a engraving. 'Forever loved, Lena Hastings', encompassing the engraving is a heart."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
