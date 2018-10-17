@@ -1,7 +1,7 @@
 "aa" = (/turf/template_noop,/area/template_noop)
 "ab" = (/turf/space,/area/space)
 "ac" = (/obj/item/weapon/book/manual/rust_engine,/turf/template_noop,/area/template_noop)
-"ad" = (/obj/machinery/computer/general_air_control/supermatter_core{dir = 1; frequency = 1438; input_tag = "cooling_in"; name = "Engine Cooling Control"; output_tag = "cooling_out"; pressure_setting = 100; sensors = list("engine_sensor" = "Engine Core"); throwpass = 1},/turf/template_noop,/area/template_noop)
+"ad" = (/obj/machinery/atmospherics/unary/outlet_injector{frequency = 1323; id = "rust_injector"; unacidable = 1; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
 "ae" = (/obj/structure/grille,/obj/structure/window/phoronreinforced/full{icon_state = "phoronrwindow"; dir = 4},/obj/structure/window/phoronreinforced/full{icon_state = "phoronrwindow"; dir = 8},/obj/structure/window/phoronreinforced/full{icon_state = "phoronrwindow"; dir = 2},/obj/structure/window/phoronreinforced/full{icon_state = "phoronrwindow"; dir = 1},/obj/machinery/door/blast/radproof{dir = 1; id = "EngineShroud"},/obj/structure/window/phoronreinforced/full{icon_state = "phoronwindow0"},/turf/simulated/floor,/area/engineering/engine_room)
 "af" = (/obj/machinery/light{dir = 1},/turf/simulated/floor,/area/engineering/engine_room)
 "ag" = (/obj/structure/cable/cyan{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/door/airlock/hatch{icon_state = "door_locked"; id_tag = "engine_access_hatch"; locked = 1; name = "Fusion Core Access"; req_access = list(11)},/obj/machinery/door/blast/radproof{dir = 1; id = "EngineShroud"},/turf/simulated/floor,/area/engineering/engine_room)
@@ -13,7 +13,7 @@
 "am" = (/obj/structure/sign/securearea{desc = "A warning sign which reads 'RADIOACTIVE AREA'"; icon_state = "radiation"; name = "RADIOACTIVE AREA"; pixel_x = 0; pixel_y = 0},/turf/simulated/wall/r_wall,/area/engineering/engine_room)
 "an" = (/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
 "ao" = (/obj/structure/grille,/obj/structure/window/phoronreinforced/full{icon_state = "phoronrwindow"; dir = 4},/obj/structure/window/phoronreinforced/full{icon_state = "phoronrwindow"; dir = 8},/obj/structure/window/phoronreinforced/full{icon_state = "phoronrwindow"; dir = 1},/obj/machinery/door/blast/radproof{dir = 1; id = "EngineShroud"},/obj/structure/window/phoronreinforced/full{icon_state = "phoronwindow0"},/turf/simulated/floor,/area/engineering/engine_room)
-"ap" = (/turf/space,/area/engineering/engine_smes)
+"ap" = (/obj/machinery/air_sensor{frequency = 1323; id_tag = "engine_sensor"; output = 63},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
 "aq" = (/turf/simulated/floor,/area/engineering/engine_room)
 "ar" = (/obj/structure/grille,/obj/structure/window/reinforced/full,/obj/machinery/door/firedoor/glass,/obj/machinery/door/blast/radproof/open{dir = 4; id = "ControlRMS"; name = "Control Room Shroud"},/obj/structure/window/phoronreinforced/full{icon_state = "phoronrwindow"; dir = 1},/turf/simulated/floor,/area/engineering/engine_room)
 "as" = (/obj/structure/table/reinforced,/obj/fiftyspawner/deuterium,/turf/simulated/floor,/area/engineering/engine_room)
@@ -41,17 +41,16 @@
 "aO" = (/obj/machinery/atmospherics/pipe/simple/heat_exchanging{dir = 5},/turf/space,/area/space)
 "aP" = (/obj/machinery/power/fusion_core/mapped{id_tag = "engine"},/obj/structure/cable/cyan,/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
 "aQ" = (/obj/structure/cable/cyan{d2 = 2; icon_state = "0-2"},/obj/machinery/power/apc{dir = 4; name = "east bump"; pixel_x = 28},/obj/machinery/camera/network/engine{dir = 8},/turf/simulated/floor,/area/engineering/engine_room)
-"aR" = (/obj/machinery/atmospherics/unary/outlet_injector{unacidable = 1; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
-"aS" = (/obj/machinery/air_sensor{frequency = 1438; id_tag = "engine_sensor"; output = 63},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
-"aT" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{pump_direction = 0; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
+"aR" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{frequency = 1323; id_tag = "rust_extractor"; pump_direction = 0; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
+"aS" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 4; frequency = 1323; id = "rust_injector"; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
+"aT" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 8; frequency = 1323; id = "rust_injector"; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
 "aU" = (/obj/machinery/camera/network/engine,/obj/machinery/button/remote/airlock{id = "engine_access_hatch"; name = "Door Bolt Control"; pixel_x = -4; pixel_y = 28; req_access = list(10); specialfunctions = 4},/turf/simulated/floor,/area/engineering/engine_room)
 "aV" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor,/area/engineering/engine_room)
-"aW" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 4; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
+"aW" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 4; frequency = 1323; id_tag = "rust_extractor"; pump_direction = 0; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
 "aX" = (/obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
-"aY" = (/obj/machinery/atmospherics/unary/outlet_injector{dir = 8; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
-"aZ" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 4; pump_direction = 0; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
+"aY" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 8; frequency = 1323; id_tag = "rust_extractor"; pump_direction = 0; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
+"aZ" = (/obj/machinery/computer/general_air_control/supermatter_core{dir = 1; frequency = 1323; input_tag = "rust_injector"; name = "Engine Cooling Control"; output_tag = "rust_extractor"; pressure_setting = 100; sensors = list("engine_sensor" = "Engine Core"); throwpass = 1},/turf/template_noop,/area/template_noop)
 "ba" = (/obj/machinery/atmospherics/pipe/manifold4w/visible/red,/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
-"bb" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 8; pump_direction = 0; use_power = 1},/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
 "bc" = (/turf/simulated/wall/r_wall,/area/template_noop)
 "bd" = (/obj/machinery/atmospherics/pipe/simple/visible/yellow,/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
 "be" = (/obj/machinery/atmospherics/pipe/simple/visible/red,/turf/simulated/floor/reinforced/airless,/area/engineering/engine_room)
@@ -201,18 +200,18 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaabababababababababababababababababababababababababababaaaa
 aaabababababababababababababababababababababababababababaaaa
 aaaiaiaiaiaiajaiaiaiakakakakalakakakakakakakakakakamababaaaa
-aaaiababababajapababakanananananananaeaUafaqasatauakababaaaa
+aaaiababababajabababakanananananananaeaUafaqasatauakababaaaa
 aaaiabavawawaxawawayakanananazaAaAaAagaCaDaqaqaqaqakababaaaa
 aaajajaFaGaxaxaxaxaHakanananaIanananaoaJaKaqaqaqaqakababaaaa
 aaaiabaNaOawaxawawayakanananaPanananbgaJaKaqaqaqaqakababaaaa
-aaaiajaFaGaxaxaxaxaHakanaRanaSanaTanbgaJaKaqaqaqaqakababaaaa
-aaaiabaNaOawaxawawayakaWaXaYanaZbabbbgaqaKakaraBaEbcbcbcaaaa
+aaaiajaFaGaxaxaxaxaHakanadanapanaRanbgaJaKaqaqaqaqakababaaaa
+aaaiabaNaOawaxawawayakaSaXaTanaWbaaYbgaqaKakaraBaEbcbcbcaaaa
 aaaiajaFaGaxaxaxaxaHakanbdanananbeanbhaqaKaMbfaqbubcaaaaaaaa
 aaaiabaNaOawaxawawayakbzbAbBbBbBbJbXcdaqaKaMaLaqaQbcaaaaaaaa
 aaaiajaFaGaxaxaxaxaHakdxbpbjbqbjbrdyakaqbmdCbiaCbnboaaaaaaaa
 aaaiabaNaOawaxawawayakdwdDdEdFdEdGdHdAaCbsaMahaqbtboaaaaaaaa
 aaaiajaFaGaxaxaxaxaHakaVbpbqbqbqbrbqaqaqdNakdIdIdJbcbcbcaaaa
-aaaiabaNaOawaxawawayakdBbkaqaqaqbvbwbwbwbwbxaqaqbydKacadaaaa
+aaaiabaNaOawaxawawayakdBbkaqaqaqbvbwbwbwbwbxaqaqbydKacaZaaaa
 aaajajaFaGaxaxaxaxaHakbCbDbEbFbFbFbFbFbFbFbGbFbHbIdLaaaaaaaa
 aaajajaFbKaxaxaxaxbLbMbNbObObPbQbRbRbSbTbUbVblbkbWdLaadMaaaa
 aaaiabaNavawaxawawbYbZcacbcccccbaqaqdzcecfcgchbkcidLaaaaaaaa
