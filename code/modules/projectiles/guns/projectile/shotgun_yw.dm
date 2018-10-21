@@ -9,7 +9,7 @@
 	caliber = "12g"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_ILLEGAL = 2)
 	slot_flags = SLOT_BACK|SLOT_BELT|SLOT_HOLSTER
-	handle_casings = CYCLE_CASINGS
+	handle_casings = EJECT_CASINGS
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m12gdrumjack/beanbag
 	allowed_magazines = list(/obj/item/ammo_magazine/m12gdrumjack)
