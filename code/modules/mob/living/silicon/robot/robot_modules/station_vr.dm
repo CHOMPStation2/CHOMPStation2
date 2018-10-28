@@ -156,11 +156,9 @@
 	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
-	var/datum/matter_synth/water = new /datum/matter_synth()
+	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 500
-	water.energy = 0
 	R.water_res = water
 	synths += water
 
@@ -227,11 +225,9 @@
 	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 
-	var/datum/matter_synth/water = new /datum/matter_synth()
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 500
-	water.energy = 0
 	R.water_res = water
 	synths += water
 
@@ -282,11 +278,9 @@
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
 	src.emag     = new /obj/item/weapon/gun/energy/laser/mounted(src)
 
-	var/datum/matter_synth/water = new /datum/matter_synth()
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 500
-	water.energy = 0
 	R.water_res = water
 	synths += water
 
@@ -337,11 +331,9 @@
 	glass.recharge_rate = 0
 	glass.max_energy = 50000
 	glass.energy = 0
-	var/datum/matter_synth/water = new /datum/matter_synth()
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 500
-	water.energy = 0
 	R.water_res = water
 
 	synths += metal
@@ -411,11 +403,9 @@
 	src.modules += new /obj/item/weapon/storage/part_replacer(src)
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
-	var/datum/matter_synth/water = new /datum/matter_synth()
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 500
-	water.energy = 0
 	R.water_res = water
 	synths += water
 
@@ -486,11 +476,9 @@
 	plastic.recharge_rate = 50
 	plastic.max_energy = 50000
 	plastic.energy = 5000
-	var/datum/matter_synth/water = new /datum/matter_synth()
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
-	water.max_energy = 500
-	water.energy = 0
 	R.water_res = water
 
 	var/datum/matter_synth/wire = new /datum/matter_synth/wire()

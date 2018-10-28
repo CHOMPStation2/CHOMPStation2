@@ -509,7 +509,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	set name = "Show Ticket List"
 	set category = "Admin"
 
-	if(!check_rights(R_ADMIN, TRUE))
+	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG, TRUE))
 		return
 
 	var/browse_to

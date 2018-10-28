@@ -27,6 +27,10 @@
 #include "SupplyDrop2.dmm"
 #include "RationCache.dmm"
 #include "Oldhouse.dmm"
+#include "house1_arealess.dmm"
+#include "Peninsula.dmm"
+#include "Rocky2.dmm"
+#include "Shakden.dmm"
 #endif
 
 
