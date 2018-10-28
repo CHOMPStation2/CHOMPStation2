@@ -27,6 +27,7 @@
 #include "Drugden.dmm"
 #include "Musk.dmm"
 #include "Manor1.dmm"
+#include "Cragzone1.dmm"
 
 #endif
 
