@@ -155,7 +155,7 @@
 	return 1
 
 /obj/item/clothing/accessory/stethoscope/attack(mob/living/carbon/human/M, mob/living/user)
-	if(isliving(user))
+	if(ishuman(M) && isliving(user))
 		//Vorestation edit start
 		var/message_holder	//Holds pervy message
 		var/message_holder2	//Hods the nutrition related message.
