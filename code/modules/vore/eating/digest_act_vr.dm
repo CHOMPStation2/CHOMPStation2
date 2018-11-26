@@ -58,6 +58,8 @@
 	return FALSE
 /obj/item/device/perfect_tele_beacon/digest_act(var/atom/movable/item_storage = null)
 	return FALSE //Sorta important to not digest your own beacons.
+/obj/item/organ/internal/brain/slime/digest_act(var/atom/movable/item_storage = null)
+	return FALSE //so prometheans can be recovered
 
 /////////////
 // Some special treatment
@@ -65,8 +67,8 @@
 //PDAs need to lose their ID to not take it with them, so we can get a digested ID
 /obj/item/device/pda/digest_act(var/atom/movable/item_storage = null)
 	if(id)
-		id = null
-
+		if(istype(item_storage,/obj/item/device/dogborg/sleeper) || (!isnull(digest_stage) && digest_stage <= 0))
+			id = null
 	. = ..()
 
 /obj/item/weapon/card/id/digest_act(var/atom/movable/item_storage = null)
