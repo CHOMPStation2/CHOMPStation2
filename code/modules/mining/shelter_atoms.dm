@@ -51,12 +51,12 @@
 		var/turf/above_location = GetAbove(deploy_location)
 		if(above_location && status == SHELTER_DEPLOY_ALLOWED)
 			status = template.check_deploy(above_location)
-		
+
 		switch(status)
 			//Not allowed due to /area technical reasons
 			if(SHELTER_DEPLOY_BAD_AREA)
 				src.loc.visible_message("<span class='warning'>\The [src] will not function in this area.</span>")
-			
+
 			//Anchored objects or no space
 			if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS)
 				var/width = template.width
@@ -179,7 +179,7 @@
 	pixel_y = -32
 
 /obj/item/device/gps/computer/attackby(obj/item/I, mob/living/user)
-	if(istype(I, /obj/item/weapon/wrench))
+	if(I.is_wrench())
 		user.visible_message("<span class='warning'>[user] disassembles [src].</span>",
 			"<span class='notice'>You start to disassemble [src]...</span>", "You hear clanking and banging noises.")
 		if(do_after(user,4 SECONDS,src))
@@ -209,25 +209,13 @@
 	light_power = 1.2
 	light_color = "#DDFFD3"
 	pixel_y = -4
-	max_n_of_items = 10
-	var/empty = FALSE
+	max_n_of_items = 100
 
-/obj/machinery/smartfridge/survival_pod/initialize(mapload)
+/obj/machinery/smartfridge/survival_pod/initialize()
 	. = ..()
-	if(empty)
-		return
-	for(var/i in 1 to 5)
-		var/obj/item/weapon/reagent_containers/food/snacks/liquidfood/W = new(src)
-		stock(W)
-	for(var/i in 1 to 2)
-		var/obj/item/device/fbp_backup_cell/W = new(src)
-		stock(W)
-	if(prob(50))
-		var/obj/item/weapon/storage/pill_bottle/dice/D = new(src)
-		stock(D)
-	else
-		var/obj/item/device/violin/V = new(src)
-		stock(V)
+	for(var/obj/item/O in loc)
+		if(accept_check(O))
+			stock(O)
 
 /obj/machinery/smartfridge/survival_pod/accept_check(obj/item/O)
 	return isitem(O)
@@ -235,7 +223,6 @@
 /obj/machinery/smartfridge/survival_pod/empty
 	name = "dusty survival pod storage"
 	desc = "A heated storage unit. This one's seen better days."
-	empty = TRUE
 
 //Fans
 /obj/structure/fans
@@ -258,7 +245,7 @@
 	qdel(src)
 
 /obj/structure/fans/attackby(obj/item/I, mob/living/user)
-	if(istype(I, /obj/item/weapon/wrench))
+	if(I.is_wrench())
 		user.visible_message("<span class='warning'>[user] disassembles [src].</span>",
 			"<span class='notice'>You start to disassemble [src]...</span>", "You hear clanking and banging noises.")
 		if(do_after(user,4 SECONDS,src))

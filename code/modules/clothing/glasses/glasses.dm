@@ -61,6 +61,7 @@ BLIND     // can't see anything
 			to_chat(usr, "You activate the optical matrix on the [src].")
 		user.update_action_buttons()
 		user.recalculate_vis()
+	..()
 
 /obj/item/clothing/glasses/meson
 	name = "optical meson scanner"
@@ -146,7 +147,7 @@ BLIND     // can't see anything
 /obj/item/clothing/glasses/night/vox
 	name = "Alien Optics"
 	species_restricted = list("Vox")
-	phoronproof = 1
+	flags = PHORONGUARD
 
 /obj/item/clothing/glasses/night/New()
 	..()

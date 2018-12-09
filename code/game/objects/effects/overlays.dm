@@ -99,3 +99,8 @@
 	icon_state = "snowwall"
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
+
+/obj/effect/overlay/holographic
+	mouse_opacity = FALSE
+	anchored = TRUE
+	plane = ABOVE_PLANE

@@ -10,6 +10,7 @@
 	path = /obj/item/clothing/under/blazer/skirt
 
 /datum/gear/uniform/cheongsam
+	description = "Various color variations of an old earth dress style. They are pretty close fitting around the waist."
 	display_name = "cheongsam selection"
 
 /datum/gear/uniform/cheongsam/New()
@@ -21,6 +22,7 @@
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cheongasms))
 
 /datum/gear/uniform/croptop
+	description = "Light shirts which shows the midsection of the wearer."
 	display_name = "croptop selection"
 
 /datum/gear/uniform/croptop/New()
@@ -154,7 +156,7 @@
 /datum/gear/uniform/job_skirt/security
 	display_name = "skirt, security"
 	path = /obj/item/clothing/under/rank/security/skirt
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard")
 
 /datum/gear/uniform/job_skirt/head_of_security
 	display_name = "skirt, hos"
@@ -281,7 +283,7 @@
 /datum/gear/uniform/corpsecsuit
 	display_name = "uniform, corporate (Security)"
 	path = /obj/item/clothing/under/rank/security/corp
-	allowed_roles = list("Security Officer","Head of Security","Warden")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
 
 /datum/gear/uniform/corpwarsuit
 	display_name = "uniform, corporate (Warden)"
@@ -307,7 +309,7 @@
 /datum/gear/uniform/navysecsuit
 	display_name = "uniform, navy blue (Security)"
 	path = /obj/item/clothing/under/rank/security/navyblue
-	allowed_roles = list("Security Officer","Head of Security","Warden")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
 
 /datum/gear/uniform/navywarsuit
 	display_name = "uniform, navy blue (Warden)"
@@ -408,7 +410,7 @@
 	display_name = "uniform, PCRC (Security)"
 	path = /obj/item/clothing/under/pcrc
 	cost = 2
-	allowed_roles = list("Security Officer","Head of Security","Warden")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
 
 /datum/gear/uniform/brandsuit/grayson
 	display_name = "outfit, grayson"
@@ -457,3 +459,7 @@
 /datum/gear/uniform/westernbustle
 	display_name = "western bustle"
 	path = /obj/item/clothing/under/dress/westernbustle
+
+/datum/gear/uniform/circuitry
+	display_name = "jumpsuit, circuitry (empty)"
+	path = /obj/item/clothing/under/circuitry

@@ -7146,6 +7146,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 4
 	},
+/obj/machinery/camera/network/civilian,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "oT" = (
@@ -11624,7 +11625,7 @@
 /area/engineering/atmos/hallway)
 "wl" = (
 /obj/structure/table/glass,
-/obj/item/weapon/wrench,
+/obj/item/weapon/tool/wrench,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "wm" = (
@@ -13433,7 +13434,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/cell_charger,
-/obj/item/weapon/wrench,
+/obj/item/weapon/tool/wrench,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
@@ -16015,7 +16016,7 @@
 /obj/machinery/turretid/stun{
 	ailock = 1;
 	check_synth = 1;
-	control_area = /area/tcommsat;
+	control_area = /area/tcomsat;
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "Telecoms Foyer turret control";
 	pixel_x = 29;

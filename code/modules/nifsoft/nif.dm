@@ -107,8 +107,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 //Destructor cleans up references
 /obj/item/device/nif/Destroy()
 	human = null
-	qdel_null_list(nifsofts)
-	qdel_null(comm)
+	QDEL_NULL_LIST(nifsofts)
+	QDEL_NULL(comm)
 	nifsofts_life.Cut()
 	return ..()
 
@@ -157,11 +157,11 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /obj/item/device/nif/proc/unimplant(var/mob/living/carbon/human/H)
 	var/datum/nifsoft/soulcatcher/SC = imp_check(NIF_SOULCATCHER)
 	if(SC) //Clean up stored people, this is dirty but the easiest way.
-		qdel_null_list(SC.brainmobs)
+		QDEL_NULL_LIST(SC.brainmobs)
 		SC.brainmobs = list()
 	stat = NIF_PREINSTALL
 	vis_update()
-	H.verbs |= /mob/living/carbon/human/proc/set_nif_examine
+	H.verbs -= /mob/living/carbon/human/proc/set_nif_examine
 	H.nif = null
 	human = null
 	install_done = null
@@ -192,14 +192,16 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	savetofile = TRUE
 
 	if(durability <= 0)
-		notify("Danger! General system insta#^!($",TRUE)
-		to_chat(human,"<span class='danger'>Your NIF vision overlays disappear and your head suddenly seems very quiet...</span>")
 		stat = NIF_TEMPFAIL
 		update_icon()
-
+		
+		if(human)
+			notify("Danger! General system insta#^!($",TRUE)
+			to_chat(human,"<span class='danger'>Your NIF vision overlays disappear and your head suddenly seems very quiet...</span>")
+		
 //Attackby proc, for maintenance
 /obj/item/device/nif/attackby(obj/item/weapon/W, mob/user as mob)
-	if(open == 0 && istype(W,/obj/item/weapon/screwdriver))
+	if(open == 0 && W.is_screwdriver())
 		if(do_after(user, 4 SECONDS, src) && open == 0)
 			user.visible_message("[user] unscrews and pries open \the [src].","<span class='notice'>You unscrew and pry open \the [src].</span>")
 			playsound(user, 'sound/items/Screwdriver.ogg', 50, 1)
@@ -220,7 +222,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			user.visible_message("[user] resets several circuits in \the [src].","<span class='notice'>You find and repair any faulty circuits in \the [src].</span>")
 			open = 3
 			update_icon()
-	else if(open == 3 && istype(W,/obj/item/weapon/screwdriver))
+	else if(open == 3 && W.is_screwdriver())
 		if(do_after(user, 3 SECONDS, src) && open == 3)
 			user.visible_message("[user] closes up \the [src].","<span class='notice'>You re-seal \the [src] for use once more.</span>")
 			playsound(user, 'sound/items/Screwdriver.ogg', 50, 1)

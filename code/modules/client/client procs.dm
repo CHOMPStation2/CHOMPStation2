@@ -57,7 +57,7 @@
 		if(mute_irc)
 			usr << "<span class='warning'You cannot use this as your client has been muted from sending messages to the admins on IRC</span>"
 			return
-		cmd_admin_irc_pm(href_list["irc_msg"])
+		send2adminirc(href_list["irc_msg"])
 		return
 
 
@@ -112,6 +112,8 @@
 	clients += src
 	directory[ckey] = src
 
+	GLOB.ahelp_tickets.ClientLogin(src)
+
 	//Admin Authorisation
 	holder = admin_datums[ckey]
 	if(holder)
@@ -151,7 +153,7 @@
 	log_client_to_db()
 
 	send_resources()
-	nanomanager.send_resources(src)
+	GLOB.nanomanager.send_resources(src)
 
 	if(!void)
 		void = new()
@@ -179,6 +181,7 @@
 	if(holder)
 		holder.owner = null
 		admins -= src
+	GLOB.ahelp_tickets.ClientLogout(src)
 	directory -= ckey
 	clients -= src
 	return ..()
@@ -329,6 +332,7 @@
 		'html/images/sglogo.png',
 		'html/images/talisman.png',
 		'html/images/paper_bg.png',
+		'html/images/no_image32.png',
 		'icons/pda_icons/pda_atmos.png',
 		'icons/pda_icons/pda_back.png',
 		'icons/pda_icons/pda_bell.png',

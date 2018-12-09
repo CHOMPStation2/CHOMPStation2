@@ -186,7 +186,7 @@
 /datum/gear/shoes/boots/winter/security
 	display_name = "security winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard")
 
 /datum/gear/shoes/boots/winter/science
 	display_name = "science winter boots"
@@ -227,3 +227,7 @@
 	display_name = "hydroponics winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/hydro
 	allowed_roles = list("Botanist", "Xenobiologist")
+
+/datum/gear/shoes/circuitry
+	display_name = "boots, circuitry (empty)"
+	path = /obj/item/clothing/shoes/circuitry

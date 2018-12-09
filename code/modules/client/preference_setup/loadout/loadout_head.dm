@@ -19,7 +19,7 @@
 /datum/gear/head/beret/bsec
 	display_name = "beret, navy (officer)"
 	path = /obj/item/clothing/head/beret/sec/navy/officer
-	allowed_roles = list("Security Officer","Head of Security","Warden")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
 
 /datum/gear/head/beret/bsec_warden
 	display_name = "beret, navy (warden)"
@@ -34,7 +34,7 @@
 /datum/gear/head/beret/csec
 	display_name = "beret, corporate (officer)"
 	path = /obj/item/clothing/head/beret/sec/corporate/officer
-	allowed_roles = list("Security Officer","Head of Security","Warden")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
 
 /datum/gear/head/beret/csec_warden
 	display_name = "beret, corporate (warden)"
@@ -57,7 +57,7 @@
 /datum/gear/head/beret/sec
 	display_name = "beret, red (security)"
 	path = /obj/item/clothing/head/beret/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
 
 /datum/gear/head/cap
 	display_name = "cap, black"
@@ -78,7 +78,7 @@
 /datum/gear/head/cap/corp
 	display_name = "cap, corporate (Security)"
 	path = /obj/item/clothing/head/soft/sec/corp
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard")
 
 /datum/gear/head/cap/green
 	display_name = "cap, green"
@@ -107,7 +107,7 @@
 /datum/gear/head/cap/sec
 	display_name = "cap, security (Security)"
 	path = /obj/item/clothing/head/soft/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard")
 
 /datum/gear/head/cap/yellow
 	display_name = "cap, yellow"
@@ -353,22 +353,21 @@
 		sols[initial(sol.name)] = sol
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(sols))*/ // Vorestation removal.
 
-/datum/gear/head/surgical/black
-	display_name = "surgical cap, black"
-	path = /obj/item/clothing/head/surgery/black
+/datum/gear/head/surgery
+	display_name = "surgical cap selection"
+	description = "Choose from a number of rings of different caps."
+	path = /obj/item/clothing/head/surgery
 
-/datum/gear/head/surgical/blue
-	display_name = "surgical cap, blue"
-	path = /obj/item/clothing/head/surgery/blue
+/datum/gear/head/surgery/New()
+	..()
+	var/cap_type = list()
+	cap_type["Purple cap"] = /obj/item/clothing/head/surgery/purple
+	cap_type["Blue cap"] = /obj/item/clothing/head/surgery/blue
+	cap_type["Green cap"] = /obj/item/clothing/head/surgery/green
+	cap_type["Black cap"] = /obj/item/clothing/head/surgery/black
+	cap_type["Navy cap"] = /obj/item/clothing/head/surgery/navyblue
+	gear_tweaks += new/datum/gear_tweak/path(cap_type)
 
-/datum/gear/head/surgical/green
-	display_name = "surgical cap, green"
-	path = /obj/item/clothing/head/surgery/green
-
-/datum/gear/head/surgical/navyblue
-	display_name = "surgical cap, navy blue"
-	path = /obj/item/clothing/head/surgery/navyblue
-
-/datum/gear/head/surgical/purple
-	display_name = "surgical cap, purple"
-	path = /obj/item/clothing/head/surgery/purple
+/datum/gear/head/circuitry
+	display_name = "headwear, circuitry (empty)"
+	path = /obj/item/clothing/head/circuitry
