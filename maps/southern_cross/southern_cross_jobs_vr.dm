@@ -3,19 +3,6 @@ var/const/PILOT 			=(1<<15)
 var/const/EXPLORER 			=(1<<12)
 var/const/PATHFINDER 		=(1<<13)
 
-var/const/access_pilot = 67
-var/const/access_explorer = 43
-
-/datum/access/pilot
-	id = access_pilot
-	desc = "Pilot"
-	region = ACCESS_REGION_SUPPLY
-
-/datum/access/explorer
-	id = access_explorer
-	desc = "Explorer"
-	region = ACCESS_REGION_GENERAL
-
 /obj/item/weapon/card/id/medical/sar
 	assignment = "Field Medic"
 	rank = "Field Medic"
@@ -65,7 +52,8 @@ var/const/access_explorer = 43
 	selection_color = "#AD6BAD"
 	idtype = /obj/item/weapon/card/id/explorer/head/pathfinder
 	economic_modifier = 7
-	
+	minimal_player_age = 7
+
 	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway)
 	minimal_access = list(access_eva, access_pilot, access_explorer, access_research, access_gateway)
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
