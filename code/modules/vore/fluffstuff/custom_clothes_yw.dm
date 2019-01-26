@@ -877,6 +877,108 @@
 // lukevale
 // ********
 
+//For use in jackets with hoods. Doesn't have any sprites assigned but feel free to use it ~ Luke
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned
+	name = "labcoat"
+	desc = "A suit that protects against minor chemical spills."
+	icon_state = "labcoat"
+	item_state_slots = list(slot_r_hand_str = "labcoat", slot_l_hand_str = "labcoat")
+	blood_overlay_type = "coat"
+	body_parts_covered = UPPER_TORSO|ARMS
+	flags_inv = HIDEHOLSTER
+	allowed = list(/obj/item/device/analyzer,/obj/item/stack/medical,/obj/item/weapon/dnainjector,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,/obj/item/weapon/reagent_containers/hypospray,/obj/item/device/healthanalyzer,/obj/item/device/flashlight/pen,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle,/obj/item/weapon/paper)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+	var/obj/item/clothing/head/hood
+	var/hoodtype = null //so the chaplain hoodie or other hoodies can override this
+	var/suittoggled = 0
+	var/hooded = 0
+	action_button_name = "Toggle Hood"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/New()
+	MakeHood()
+	..()
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/Destroy()
+	qdel(hood)
+	return ..()
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/proc/MakeHood()
+	if(!hood)
+		var/obj/item/clothing/head/hood/hoodiebuttoned/W = new hoodtype(src)
+		hood = W
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/ui_action_click()
+	ToggleHood()
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/equipped(mob/user, slot)
+	if(slot != slot_wear_suit)
+		RemoveHood()
+	..()
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/proc/RemoveHood()
+	suittoggled = 0
+	hood.canremove = TRUE // This shouldn't matter anyways but just incase.
+	if(ishuman(hood.loc))
+		var/mob/living/carbon/H = hood.loc
+		H.unEquip(hood, 1)
+		H.update_inv_wear_suit()
+	hood.forceMove(src)
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/dropped()
+	RemoveHood()
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/proc/ToggleHood()
+	if(!suittoggled)
+		if(ishuman(loc))
+			var/mob/living/carbon/human/H = src.loc
+			if(H.wear_suit != src)
+				to_chat(H, "<span class='warning'>You must be wearing [src] to put up the hood!</span>")
+				return
+			if(H.head)
+				to_chat(H, "<span class='warning'>You're already wearing something on your head!</span>")
+				return
+			else
+				H.equip_to_slot_if_possible(hood,slot_head,0,0,1)
+				suittoggled = 1
+				hood.canremove = FALSE
+				H.update_inv_wear_suit()
+	else
+		RemoveHood()
+
+/obj/item/clothing/head/hood/hoodiebuttoned
+	name = "winter hood"
+	desc = "A hood attached to a heavy winter jacket."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "generic_hood"
+	body_parts_covered = HEAD
+	cold_protection = HEAD
+	flags_inv = HIDEEARS | BLOCKHAIR
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+
+
+
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/example
+	name = "example"
+	desc = "an example version."
+	icon_state = "jiao_labcoat"
+
+	hoodtype = /obj/item/clothing/head/hood/hoodiebuttoned/example
+
+/obj/item/clothing/head/hood/hoodiebuttoned/example
+	name = "example hood"
+	desc = "An example hood."
+	icon_state = "skinner_helm"
+
+//end of hoodiebuttoned
+
 //Lena Shaw
 
 /obj/item/clothing/accessory/fluff/lena_collar

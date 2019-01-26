@@ -175,8 +175,8 @@ var/global/list/robot_modules = list(
 					"XI-ALP" = "heavyStandard",
 					"Basic" = "robot_old",
 					"Android" = "droid",
-					"Drone" = "drone-standard",
-					"Insekt" = "insekt-Default"
+					"Drone" = "drone-standard"
+//					"Insekt" = "insekt-Default"
 					)
 
 
@@ -209,8 +209,8 @@ var/global/list/robot_modules = list(
 					"Advanced Droid" = "droid-medical",
 					"Needles" = "medicalrobot",
 					"Drone" = "drone-surgery",
-					"Handy" = "handy-med",
-					"Insekt" = "insekt-Med"
+					"Handy" = "handy-med"
+//					"Insekt" = "insekt-Med"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -282,8 +282,8 @@ var/global/list/robot_modules = list(
 					"Advanced Droid" = "droid-medical",
 					"Needles" = "medicalrobot",
 					"Drone - Medical" = "drone-medical",
-					"Drone - Chemistry" = "drone-chemistry",
-					"Insekt" = "insekt-Med"
+					"Drone - Chemistry" = "drone-chemistry"
+//					"Insekt" = "insekt-Med"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -420,13 +420,14 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/device/analyzer(src)
 	src.modules += new /obj/item/taperoll/engineering(src)
 	src.modules += new /obj/item/weapon/gripper(src)
+	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
 	src.emag = new /obj/item/weapon/melee/baton/robot/arm(src)
 	src.modules += new /obj/item/device/geiger(src)
-	src.modules += new /obj/item/weapon/rcd/borg(src)
+	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)
 	src.modules += new /obj/item/weapon/pickaxe/plasmacutter(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 
@@ -511,8 +512,8 @@ var/global/list/robot_modules = list(
 					"XI-ALP" = "heavySec",
 					"Basic" = "secborg",
 					"Black Knight" = "securityrobot",
-					"Drone" = "drone-sec",
-					"Insekt" = "insekt-Sec"
+					"Drone" = "drone-sec"
+//					"Insekt" = "insekt-Sec"
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -727,14 +728,15 @@ var/global/list/robot_modules = list(
 					"WTOperator" = "sleekscience",
 					"Droid" = "droid-science",
 					"Drone" = "drone-science",
-					"Handy" = "handy-science",
-					"Insekt" = "insekt-Sci"
+					"Handy" = "handy-science"
+//					"Insekt" = "insekt-Sci"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()
 	..()
 	src.modules += new /obj/item/weapon/portable_destructive_analyzer(src)
 	src.modules += new /obj/item/weapon/gripper/research(src)
+	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
@@ -787,8 +789,8 @@ var/global/list/robot_modules = list(
 	hide_on_manifest = 1
 	sprites = list(
 					"Haruka" = "marinaCB",
-					"Combat Android" = "droid-combat",
-					"Insekt" = "insekt-Combat"
+					"Combat Android" = "droid-combat"
+//					"Insekt" = "insekt-Combat"
 					)
 
 /obj/item/weapon/robot_module/robot/security/combat/New()
@@ -895,7 +897,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/drone/construction/New()
 	..()
-	src.modules += new /obj/item/weapon/rcd/borg(src)
+	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg/lesser(src)
 
 /obj/item/weapon/robot_module/drone/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/device/lightreplacer/LR = locate() in src.modules
