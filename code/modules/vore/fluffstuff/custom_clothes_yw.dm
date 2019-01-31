@@ -1335,8 +1335,10 @@
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "kettek_collar_default"
 	item_state = "kettek_collar"
+	overlay_state = "kettek_collar"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
 
-// We need additional procs to make this item work
 /obj/item/accessory/fluff/kettek_collar/New()
 	..()
 	verbs |= /obj/item/accessory/fluff/kettek_collar/proc/change_color
