@@ -1335,7 +1335,6 @@
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "kettek_collar_default"
 	item_state = "kettek_collar"
-	overlay_state = "kettek_collar"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
