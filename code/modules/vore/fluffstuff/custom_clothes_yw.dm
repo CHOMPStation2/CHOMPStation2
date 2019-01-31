@@ -1339,7 +1339,7 @@
 // We need additional procs to make this item work
 /obj/item/accessory/fluff/kettek_collar/New()
 	..()
-	verbs |- /obj/item/accessory/fluff/kettek_collar/proc/change_color
+	verbs |= /obj/item/accessory/fluff/kettek_collar/proc/change_color
 	color = "#"+get_random_colour()
 	update_icon()
 

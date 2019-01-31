@@ -10,7 +10,7 @@
 # character_name: Jane Doe
 # item_path: /obj/item/toy/plushie
 # item_name: ugly plush toy
-# item_icon: flagmask     
+# item_icon: flagmask
 # item_defsc: It's truly hideous.
 # req_titles: Assistant, Security Officer
 # req_access: 1
@@ -317,6 +317,12 @@ item_path: /obj/item/weapon/storage/box/fluff/jiao
 }
 
 # ######## M CKEYS
+{
+ckey: masmc
+character_name: Kettek Ollarch
+item_path: /obj/item/weapon/storage/box/fluff/kettek
+}
+
 {
 ckey: maxiefoxie
 character_name: Maxie Drake
