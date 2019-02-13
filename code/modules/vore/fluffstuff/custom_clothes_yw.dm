@@ -1322,3 +1322,48 @@
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "skinnermask"
 	item_state = "skinnermask"
+
+// *****
+// MASMC
+// *****
+
+// Kettek Ollarch
+/obj/item/accessory/fluff/kettek_collar
+	name = "Kettek's Collar"
+	desc = "A colour-changing collar. The collar itself changes colour, and has a gold tag on it that says \"Kettek Ollarch\" in small black lettering. Stiched on the inside is the same name, seemingly in case the tag falls off."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "kettek_collar_default"
+	item_state = "kettek_collar"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
+
+/obj/item/accessory/fluff/kettek_collar/New()
+	..()
+	verbs |= /obj/item/accessory/fluff/kettek_collar/proc/change_color
+	color = "#"+get_random_colour()
+	update_icon()
+
+/obj/item/accessory/fluff/kettek_collar/proc/change_color()
+	set name = "Change collar colour"
+	set category = "Object"
+	set desc = "Chane the colour of the collar."
+	set src in usr
+
+	if(usr.stat || usr.incapacitated())
+		return
+
+	var/new_color = input(usr, "Pick a new colour", "Collar Colour", color) as color|null
+
+	if(new_color && (new_color != color))
+		color = new_color
+
+/obj/item/accessory/fluff/kettek_collar/emp_act()
+	var/original_state = icon_state
+	icon_state = "kettek_collar_emp"
+	update_icon()
+
+	spawn(200)
+		if(src)
+			icon_state = original_state
+			update_icon()
