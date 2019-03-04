@@ -11,16 +11,13 @@
 	full_name = "NCS Northern Star"
 	path = "northern_star"
 
-	//lobby_icon = 'icons/misc/title.dmi'
-	//lobby_screens = list("mockingjay00")
-
-	lobby_icon = 'icons/misc/title_vr.dmi'
-	lobby_screens = list("tether")
+	lobby_icon = 'icons/misc/title.dmi'
+	lobby_screens = list("mockingjay00")
 
 	zlevel_datum_type = /datum/map_z_level/northern_star
 
-	station_name  = "Yawn Station"
-	station_short = "Yawn Station"
+	station_name  = "NCS Northern Star"
+	station_short = "Northern Star"
 	dock_name     = "Vir Interstellar Spaceport"
 	boss_name     = "Central Command"
 	boss_short    = "CentCom"
