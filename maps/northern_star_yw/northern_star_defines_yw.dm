@@ -15,7 +15,7 @@
 //	lobby_screens = list("mockingjay00")
 
 	lobby_icon = 'icons/misc/title_vr.dmi'
-	lobby_screens = list("tether")
+	lobby_screens = list("title")
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 	zlevel_datum_type = /datum/map_z_level/northern_star
@@ -58,6 +58,12 @@
 							)
 
 	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Elevator")
+
+	unit_test_exempt_areas = list(
+	)
+
+	unit_test_exempt_from_atmos = list(
+	)
 
 
 /datum/map/northern_star/perform_map_generation()
@@ -152,3 +158,5 @@
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"
 	area_path = /area/quartermaster/storage
+
+
