@@ -27,7 +27,6 @@
 	#include "items/clothing/sc_under.dm"
 	#include "items/clothing/sc_accessory.dm"
 	#include "job/outfits.dm"
-	#include "job/outfits_vr.dm"
 	#include "structures/closets/engineering.dm"
 	#include "structures/closets/medical.dm"
 	#include "structures/closets/misc.dm"
