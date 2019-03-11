@@ -6,8 +6,6 @@ var/const/PATHFINDER 		=(1<<13)
 var/const/PILOT 			=(1<<15)
 
 
-var/const/access_pilot = 67
-var/const/access_explorer = 43
 
 /datum/access/pilot
 	id = access_pilot
