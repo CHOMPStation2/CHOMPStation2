@@ -1,11 +1,11 @@
 // Pilots
 
 var/const/SAR 				=(1<<11)
-var/const/EXPLORER 			=(1<<12)
-var/const/PATHFINDER 		=(1<<13)
-var/const/PILOT 			=(1<<15)
+var/const/PILOT 			=(1<<13)
+var/const/EXPLORER 			=(1<<14)
 
-
+var/const/access_pilot = 67
+var/const/access_explorer = 43
 
 /datum/access/pilot
 	id = access_pilot
@@ -33,21 +33,6 @@ var/const/PILOT 			=(1<<15)
 	assignment = "Explorer"
 	rank = "Explorer"
 	job_access_type = /datum/job/explorer
-
-/obj/item/weapon/card/id/explorer/head/pathfinder
-	assignment = "Pathfinder"
-	rank = "Pathfinder"
-	job_access_type = /datum/job/pathfinder
-
-/obj/item/weapon/card/id/explorer/explorer
-	assignment = "Explorer"
-	rank = "Explorer"
-	job_access_type = /datum/job/explorer
-
-/obj/item/weapon/card/id/explorer/pilot
-	assignment = "Pilot"
-	rank = "Pilot"
-	job_access_type = /datum/job/pilot
 
 //SC Jobs
 
@@ -82,24 +67,6 @@ var/const/PILOT 			=(1<<15)
 /datum/job/captain/get_access()
 	return get_all_station_access()
 */
-
-/datum/job/pathfinder
-	title = "Pathfinder"
-	flag = PATHFINDER
-	department = "Science"
-	department_flag = MEDSCI
-	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the research director"
-	selection_color = "#AD6BAD"
-	idtype = /obj/item/weapon/card/id/explorer/head/pathfinder
-	economic_modifier = 7
-	minimal_player_age = 7
-
-	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway)
-	minimal_access = list(access_eva, access_pilot, access_explorer, access_research, access_gateway)
-	outfit_type = /decl/hierarchy/outfit/job/pathfinder
 
 /datum/job/pilot
 	title = "Pilot"
