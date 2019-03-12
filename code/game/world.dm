@@ -1,11 +1,11 @@
 /world/New()
-	SERVER_TOOLS_ON_NEW
-	return ..()
+	..()
+	TgsNew()
 
-/world/Reboot(var/reason)
-	SERVER_TOOLS_ON_REBOOT
-	return ..(reason)
+/world/Reboot()
+	TgsReboot()
+	..()
 
-/world/Topic(T, addr, master, key)
-	SERVER_TOOLS_ON_TOPIC
-	return ..(T, addr, master, key)
+/world/Topic()
+	TGS_TOPIC
+	..()
