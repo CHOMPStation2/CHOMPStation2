@@ -60,7 +60,8 @@ var/list/gamemode_cache = list()
 	var/humans_need_surnames = 0
 	var/allow_random_events = 0			// enables random events mid-round when set to 1
 	var/allow_ai = 1					// allow ai job
-	var/allow_ai_drones = 0					// allow ai controlled drones
+	var/allow_ai_shells = FALSE			// allow AIs to enter and leave special borg shells at will, and for those shells to be buildable.
+	var/give_free_ai_shell = FALSE		// allows a specific spawner object to instantiate a premade AI Shell
 	var/hostedby = null
 	var/respawn = 1
 	var/guest_jobban = 1
@@ -112,8 +113,14 @@ var/list/gamemode_cache = list()
 
 	//Alert level description
 	var/alert_desc_green = "All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced."
-	var/alert_desc_blue_upto = "The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted."
-	var/alert_desc_blue_downto = "The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed."
+	var/alert_desc_yellow_upto = "A minor security emergency has developed. Security personnel are to report to their supervisor for orders and may have weapons visible on their person. Privacy laws are still enforced."
+	var/alert_desc_yellow_downto = "Code yellow procedures are now in effect. Security personnel are to report to their supervisor for orders and may have weapons visible on their person. Privacy laws are still enforced."
+	var/alert_desc_violet_upto = "A major medical emergency has developed. Medical personnel are required to report to their supervisor for orders, and non-medical personnel are required to obey all relevant instructions from medical staff."
+	var/alert_desc_violet_downto = "Code violet procedures are now in effect; Medical personnel are required to report to their supervisor for orders, and non-medical personnel are required to obey relevant instructions from medical staff."
+	var/alert_desc_orange_upto = "A major engineering emergency has developed. Engineering personnel are required to report to their supervisor for orders, and non-engineering personnel are required to evacuate any affected areas and obey relevant instructions from engineering staff."
+	var/alert_desc_orange_downto = "Code orange procedures are now in effect; Engineering personnel are required to report to their supervisor for orders, and non-engineering personnel are required to evacuate any affected areas and obey relevant instructions from engineering staff."
+	var/alert_desc_blue_upto = "A major security emergency has developed. Security personnel are to report to their supervisor for orders, are permitted to search staff and facilities, and may have weapons visible on their person."
+	var/alert_desc_blue_downto = "Code blue procedures are now in effect. Security personnel are to report to their supervisor for orders, are permitted to search staff and facilities, and may have weapons visible on their person."
 	var/alert_desc_red_upto = "There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised."
 	var/alert_desc_red_downto = "The self-destruct mechanism has been deactivated, there is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised."
 	var/alert_desc_delta = "The station's self-destruct mechanism has been engaged. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill."
@@ -130,6 +137,7 @@ var/list/gamemode_cache = list()
 	var/organ_regeneration_multiplier = 1
 	var/organs_decay
 	var/default_brain_health = 400
+	var/allow_headgibs = FALSE
 
 	//Paincrit knocks someone down once they hit 60 shock_stage, so by default make it so that close to 100 additional damage needs to be dealt,
 	//so that it's similar to HALLOSS. Lowered it a bit since hitting paincrit takes much longer to wear off than a halloss stun.
@@ -220,13 +228,15 @@ var/list/gamemode_cache = list()
 
 	var/aggressive_changelog = 0
 
-	var/list/language_prefixes = list(",","#","-")//Default language prefixes
+	var/list/language_prefixes = list(",","#")//Default language prefixes
 
 	var/show_human_death_message = 1
 
 	var/radiation_decay_rate = 1 //How much radiation is reduced by each tick
 	var/radiation_resistance_multiplier = 8.5 //VOREstation edit
 	var/radiation_lower_limit = 0.35 //If the radiation level for a turf would be below this, ignore it.
+
+	var/random_submap_orientation = FALSE // If true, submaps loaded automatically can be rotated.
 
 /datum/configuration/New()
 	var/list/L = typesof(/datum/game_mode) - /datum/game_mode
@@ -401,8 +411,11 @@ var/list/gamemode_cache = list()
 				if ("allow_ai")
 					config.allow_ai = 1
 
-				if ("allow_ai_drones")
-					config.allow_ai_drones = 1
+				if ("allow_ai_shells")
+					config.allow_ai_shells = TRUE
+
+				if("give_free_ai_shell")
+					config.give_free_ai_shell = TRUE
 
 //				if ("authentication")
 //					config.enable_authentication = 1
@@ -748,6 +761,9 @@ var/list/gamemode_cache = list()
 				if ("paranoia_logging")
 					config.paranoia_logging = 1
 
+				if("random_submap_orientation")
+					config.random_submap_orientation = 1
+
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
 
@@ -787,6 +803,8 @@ var/list/gamemode_cache = list()
 					config.bones_can_break = value
 				if("limbs_can_break")
 					config.limbs_can_break = value
+				if("allow_headgibs")
+					config.allow_headgibs = TRUE
 
 				if("run_speed")
 					config.run_speed = value

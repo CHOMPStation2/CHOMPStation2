@@ -121,7 +121,7 @@
 
 	return ..()
 
-/obj/item/weapon/card/id/initialize()
+/obj/item/weapon/card/id/Initialize()
 	. = ..()
 	var/datum/job/J = job_master.GetJob(rank)
 	if(J)
@@ -169,7 +169,7 @@
 	item_state = "tdgreen"
 	assignment = "Synthetic"
 
-/obj/item/weapon/card/id/synthetic/initialize()
+/obj/item/weapon/card/id/synthetic/Initialize()
 	. = ..()
 	access = get_all_station_access() + access_synth
 
@@ -180,11 +180,11 @@
 	registered_name = "Central Command"
 	assignment = "General"
 
-/obj/item/weapon/card/id/centcom/initialize()
+/obj/item/weapon/card/id/centcom/Initialize()
 	. = ..()
 	access = get_all_centcom_access()
 
-/obj/item/weapon/card/id/centcom/station/initialize()
+/obj/item/weapon/card/id/centcom/station/Initialize()
 	. = ..()
 	access |= get_all_station_access()
 
@@ -193,7 +193,7 @@
 	assignment = "Emergency Response Team"
 	icon_state = "centcom"
 
-/obj/item/weapon/card/id/centcom/ERT/initialize()
+/obj/item/weapon/card/id/centcom/ERT/Initialize()
 	. = ..()
 	access |= get_all_station_access()
 
