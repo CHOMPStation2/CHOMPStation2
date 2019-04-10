@@ -9,7 +9,7 @@
 /datum/unarmed_attack/bite/sharp/numbing/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 
-	attack_damage = Clamp(attack_damage, 1, 5)
+	attack_damage = CLAMP(attack_damage, 1, 5)
 	if(target == user)
 		user.visible_message("<span class='danger'>[user] sinks their fangs in to themself in the [affecting.name]!</span>")
 		to_chat(target, "<font color='red'><b>You feel a wave of numbness as you sink your fangs in to yourself.</b></font>")

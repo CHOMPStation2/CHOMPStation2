@@ -60,64 +60,6 @@ var/list/topic_commands_names = list()
 		return errorcount
 	return 0
 
-
-/datum/topic_command/send_adminmsg
-	name = "send_adminmsg"
-	description = "Sends a adminmessage to a player"
-	params = list(
-		"ckey" = list("name"="ckey","desc"="The target of the adminmessage","req"=1,"type"="str"),
-		"msg" = list("name"="msg","desc"="The message that should be sent","req"=1,"type"="str"),
-		"senderkey" = list("name"="senderkey","desc"="Unique id of the person that sent the adminmessage","req"=1,"type"="senderkey"),
-		"rank" = list("name"="rank","desc"="The rank that should be displayed - Defaults to admin if none specified","req"=0,"type"="str")
-		)
-
-/datum/topic_command/send_adminmsg/run_command(queryparams)
-	/*
-		We got an adminmsg from IRC bot lets split the API
-		expected output:
-			1. ckey = ckey of person the message is to
-			2. msg = contents of message, parems2list requires
-			3. rank = Rank that should be displayed
-			4. senderkey = the ircnick that send the message.
-	*/
-
-	var/client/C
-	var/req_ckey = ckey(queryparams["ckey"])
-
-	for(var/client/K in clients)
-		if(K.ckey == req_ckey)
-			C = K
-			break
-	if(!C)
-		statuscode = 404
-		response = "No client with that name on server"
-		data = null
-		return 1
-
-	var/rank = queryparams["rank"]
-	if(!rank)
-		rank = "Admin"
-
-	var/message =	"<font color='red'>[rank] PM from <b><a href='?discord_msg=[queryparams["senderkey"]]'>[queryparams["senderkey"]]</a></b>: [queryparams["msg"]]</font>"
-	var/amessage =	"<font color='blue'>[rank] PM from <a href='?discord_msg=[queryparams["senderkey"]]'>[queryparams["senderkey"]]</a> to <b>[key_name(C)]</b> : [queryparams["msg"]]</font>"
-
-	C.received_discord_pm = world.time
-	C.discord_admin = queryparams["senderkey"]
-
-	C << 'sound/effects/adminhelp.ogg'
-	C << message
-
-	for(var/client/A in admins)
-		if(A != C)
-			A << amessage
-
-
-	statuscode = 200
-	response = "Admin Message sent"
-	data = null
-	return 1
-
-
 /client
 	var/received_discord_pm
 	var/discord_admin

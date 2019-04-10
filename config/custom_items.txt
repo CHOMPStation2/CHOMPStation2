@@ -284,6 +284,12 @@ character_name: John Wolf
 item_path: /obj/item/weapon/storage/box/fluff/John
 }
 
+{
+ckey: jwguy
+character_name: Koyo Akimomi
+item_path: /obj/item/weapon/storage/box/fluff/koyoakimomi
+}
+
 # ######## K CKEYS
 # ######## L CKEYS
 {
@@ -333,7 +339,7 @@ item_path: /obj/item/weapon.storage/box/fluff/maxie
 ckey: mr_signmeup
 character_name: Reshskakskakss Seekiseekis
 item_path: /obj/item/clothing/suit/security/navyhos
-req_titles: Head of Security
+req_access: 58
 }
 
 # ######## N CKEYS
