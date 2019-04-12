@@ -102,5 +102,7 @@
 	flags = 0
 /datum/language/seromi
 	flags = 0
+/datum/language/zaddat
+	flags = 0
 /datum/language/gutter
 	machine_understands = FALSE

@@ -10,7 +10,7 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 	icon_state = "mecha_grenadelnchr"
 	equip_cooldown = 55 // 5.5 seconds
 	projectile = /obj/item/projectile/bullet/cannon
-	fire_sound = 'sound/weapons/cannon.ogg'
+	fire_sound = 'sound/weapons/Gunshot_cannon.ogg'
 	projectiles = 1
 	projectile_energy_cost = 1000
 	salvageable = 0 // We don't want players ripping this off a dead mech.

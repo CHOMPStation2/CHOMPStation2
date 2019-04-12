@@ -6,7 +6,6 @@
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "pounce"
 	desc = "Routine to allow pouncing"
-	flags = CONDUCT
 	throwforce = 0 //This shouldn't be thrown in the first place.
 	w_class = ITEMSIZE_NORMAL
 

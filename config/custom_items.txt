@@ -10,7 +10,7 @@
 # character_name: Jane Doe
 # item_path: /obj/item/toy/plushie
 # item_name: ugly plush toy
-# item_icon: flagmask     
+# item_icon: flagmask
 # item_defsc: It's truly hideous.
 # req_titles: Assistant, Security Officer
 # req_access: 1
@@ -284,6 +284,12 @@ character_name: John Wolf
 item_path: /obj/item/weapon/storage/box/fluff/John
 }
 
+{
+ckey: jwguy
+character_name: Koyo Akimomi
+item_path: /obj/item/weapon/storage/box/fluff/koyoakimomi
+}
+
 # ######## K CKEYS
 # ######## L CKEYS
 {
@@ -318,6 +324,12 @@ item_path: /obj/item/weapon/storage/box/fluff/jiao
 
 # ######## M CKEYS
 {
+ckey: masmc
+character_name: Kettek Ollarch
+item_path: /obj/item/weapon/storage/box/fluff/kettek
+}
+
+{
 ckey: maxiefoxie
 character_name: Maxie Drake
 item_path: /obj/item/weapon.storage/box/fluff/maxie
@@ -327,7 +339,7 @@ item_path: /obj/item/weapon.storage/box/fluff/maxie
 ckey: mr_signmeup
 character_name: Reshskakskakss Seekiseekis
 item_path: /obj/item/clothing/suit/security/navyhos
-req_titles: Head of Security
+req_access: 58
 }
 
 # ######## N CKEYS

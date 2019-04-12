@@ -25,7 +25,6 @@
 	throwforce = 1.0
 	throw_speed = 5
 	throw_range = 20
-	flags = CONDUCT
 	max_amount = 1
 	origin_tech = "magnets=3"
 /*
