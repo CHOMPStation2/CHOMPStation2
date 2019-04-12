@@ -23,7 +23,7 @@
 			break
 	return selected
 
-#define CLONE_BIOMASS 60
+#define CLONE_BIOMASS 30 //VOREstation Edit
 
 /obj/machinery/clonepod
 	name = "cloning pod"
@@ -243,7 +243,6 @@
 		else
 			locked = 0
 			to_chat(user, "System unlocked.")
-
 	else if(istype(W,/obj/item/weapon/reagent_containers/glass))
 		if(LAZYLEN(containers) >= container_limit)
 			to_chat(user, "<span class='warning'>\The [src] has too many containers loaded!</span>")
@@ -253,7 +252,6 @@
 			user.drop_item()
 			W.forceMove(src)
 		return
-
 	else if(istype(W, /obj/item/weapon/wrench))
 		if(locked && (anchored || occupant))
 			to_chat(user, "<span class='warning'>Can not do that while [src] is in use.</span>")

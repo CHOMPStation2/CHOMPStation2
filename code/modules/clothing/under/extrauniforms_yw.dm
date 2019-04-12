@@ -67,7 +67,7 @@
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
 
 
- /obj/item/clothing/under/yw/robotics //fancy blueshield suit,
+/obj/item/clothing/under/yw/robotics //fancy blueshield suit,
 	name = "A cybernetic uniform"
 	desc = "A roboticist uniform with glowing trim, and some sort of machine port on the back."
 	icon = 'icons/mob/uniform_yw.dmi'

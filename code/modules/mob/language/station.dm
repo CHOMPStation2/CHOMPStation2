@@ -30,7 +30,7 @@
 	exclaim_verb = "roars"
 	colour = "soghun"
 	key = "o"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	space_chance = 40
 	syllables = list(
 		"za", "az", "ze", "ez", "zi", "iz", "zo", "oz", "zu", "uz", "zs", "sz",
@@ -57,7 +57,7 @@
 	exclaim_verb = "yowls"
 	colour = "tajaran"
 	key = "j"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	syllables = list("mrr","rr","tajr","kir","raj","kii","mir","kra","ahk","nal","vah","khaz","jri","ran","darr",
 	"mi","jri","dynh","manq","rhe","zar","rrhaz","kal","chur","eech","thaa","dra","jurl","mah","sanu","dra","ii'r",
 	"ka","aasi","far","wa","baq","ara","qara","zir","saam","mak","hrar","nja","rir","khan","jun","dar","rik","kah",
@@ -71,7 +71,7 @@
 	exclaim_verb = "wails"
 	colour = "akhani"
 	key = "h"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	syllables = list("mrr","rr","marr","tar","ahk","ket","hal","kah","dra","nal","kra","vah","dar","hrar", "eh",
 	"ara","ka","zar","mah","ner","zir","mur","hai","raz","ni","ri","nar","njar","jir","ri","ahn","kha","sir",
 	"kar","yar","kzar","rha","hrar","err","fer","rir","rar","yarr","arr","ii'r","jar","kur","ran","rii","ii",
@@ -86,6 +86,15 @@
 		new_name += " [..(gender,1)]"
 	return new_name
 
+/datum/language/tajsign
+	name = LANGUAGE_ALAI
+	desc = "A standardized Tajaran sign language that was developed in Zarraya and gradually adopted by other nations, incorporating \
+			hand gestures and movements of the ears and tail."
+	signlang_verb = list("gestures with their hands", "gestures with their ears and tail", "gestures with their ears, tail and hands")
+	colour = "tajaran"
+	key = "l"
+	flags = WHITELISTED | SIGNLANG | NO_STUTTER | NONVERBAL
+
 /datum/language/skrell
 	name = LANGUAGE_SKRELLIAN
 	desc = "A set of warbles and hums, the language itself a complex mesh of both melodic and rhythmic components, exceptionally capable of conveying intent and emotion of the speaker."
@@ -96,7 +105,7 @@
 	colour = "skrell"
 	key = "k"
 	space_chance = 30
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix")
 
 /datum/language/skrellfar
@@ -109,7 +118,7 @@
 	colour = "skrellfar"
 	key = "p"
 	space_chance = 30
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix", "...", "oo", "q", "nq", "x", "xq", "ll", "...", "...", "...") //should sound like there's holes in it
 
 
@@ -120,7 +129,7 @@
 	whisper_verb = "whispers"
 	colour = "solcom"
 	key = "1"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	//syllables are at the bottom of the file
 
 /datum/language/human/get_spoken_verb(var/msg_end)
@@ -171,7 +180,7 @@
 	exclaim_verb = "trills"
 	colour = "alien"
 	key = "v"
-	flags = WHITELISTED
+//	flags = WHITELISTED (YWEdit)
 	space_chance = 50
 	syllables = list(
 			"ca", "ra", "ma", "sa", "na", "ta", "la", "sha", "scha", "a", "a",

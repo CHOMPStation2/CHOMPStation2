@@ -8,6 +8,7 @@ SUBSYSTEM_DEF(mapping)
 	flags = SS_NO_FIRE
 
 	var/obj/effect/landmark/engine_loader/engine_loader
+	var/obj/effect/landmark/engine_loader_pickable/engine_loader_pickable
 
 	var/list/shelter_templates = list()
 
