@@ -28,7 +28,7 @@
 
 
 
-/area/turbolift/lumber_floor_dorms
+/area/turbolift/lumber_floor_dorms //Not implemented at this time, a sort of apartments area for custom rooms for crew.
 	name = "apartments (top level)"
 	lift_floor_label = "Apartments"
 	lift_floor_name = "Apartments"
@@ -43,13 +43,13 @@
 
 /area/turbolift/lumber_floor_basement
 	name = "basement (sublevel 1)"
-	lift_floor_label = "Basement 1"
+	lift_floor_label = "Sublevel 1"
 	lift_floor_name = "Atmos, Maintenance, Civilian Departments,"
 	lift_announce_str = "Arriving at Basement Level 1."
 
 /area/turbolift/lumber_floor_underground_mine
 	name = "basement (sublevel 2)"
-	lift_floor_label = "Basement 2"
+	lift_floor_label = "Sublevel 2"
 	lift_floor_name = "Mine, Toxins research"
 	lift_announce_str = "Arriving at Basement Level 2."
 	base_turf = /turf/simulated/floor

@@ -2069,6 +2069,14 @@ area/space/atmosalert()
 	name = "\improper Xenobiology Lab"
 	icon_state = "xeno_lab"
 
+/area/rnd/xenobiology/hallway
+	name = "\improper Xenobiology hallway"
+	icon_state = "xeno_lab"
+
+/area/rnd/xenobiology/storage
+	name = "\improper Xenobiology storage"
+	icon_state = "xeno_lab"
+
 /area/rnd/xenobiology/xenoflora_storage
 	name = "\improper Xenoflora Storage"
 	icon_state = "xeno_f_store"
@@ -2100,6 +2108,7 @@ area/space/atmosalert()
 /area/toxins/server
 	name = "\improper Server Room"
 	icon_state = "server"
+
 
 //Storage
 

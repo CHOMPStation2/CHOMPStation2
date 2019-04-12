@@ -234,12 +234,20 @@
 	name = "\improper Research Outpost Gas Mixing"
 	icon_state = "toxmix"
 
+/area/rnd/outpost/hallway
+	name = "\improper Toxins Hallway"
+	icon_state = "toxmix"
+
 /area/rnd/outpost/heating
 	name = "\improper Research Outpost Gas Heating"
 	icon_state = "toxmix"
 
 /area/rnd/outpost/testing
 	name = "\improper Research Outpost Testing"
+	icon_state = "toxtest"
+
+/area/rnd/outpost/launch
+	name = "\improper Research Toxins Launch Room"
 	icon_state = "toxtest"
 
 /area/maintenance/substation/outpost

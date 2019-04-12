@@ -22682,7 +22682,7 @@
 /turf/simulated/floor/plating,
 /area/medical/ward)
 "KS" = (
-/obj/effect/landmark/map_data/virgo3b,
+/mob/living/simple_animal/hostile/dino/virgo3b,
 /turf/space,
 /area/space)
 "Lc" = (

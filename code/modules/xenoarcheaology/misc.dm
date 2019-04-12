@@ -50,6 +50,30 @@
 	P.overlays = list("paper_stamped_cmo")
 	src.contents += P
 
+/obj/structure/noticeboard/toxins
+	notices = 1
+	icon_state = "nboard01"
+
+/obj/structure/noticeboard/toxins/New()
+	var/obj/item/weapon/paper/P = new()
+	P.name = "Staff Notice: Toxins Mixing"
+	P.info = "<br>Toxins Mixing is currently shut down for the time being, due to damage requiring parts from off station to fix. Please do not use at this time, or risk setting the entire outpost on fire."
+	P.stamped = list(/obj/item/weapon/stamp/rd)
+	P.overlays = list("paper_stamped_rd")
+	src.contents += P
+
+/obj/structure/noticeboard/nanite
+	notices = 1
+	icon_state = "nboard01"
+
+/obj/structure/noticeboard/toxins/New()
+	var/obj/item/weapon/paper/P = new()
+	P.name = "Staff Notice: Nanite Laboratory"
+	P.info = "<br>The Nanite Laboratory is nearly complete. We're simply awaiting specialized machinery and equipment from central. The lab is currently shut down. Please do not use at this time."
+	P.stamped = list(/obj/item/weapon/stamp/rd)
+	P.overlays = list("paper_stamped_rd")
+	src.contents += P
+
 /obj/structure/noticeboard/library
 	notices = 2
 	icon_state = "nboard02"
