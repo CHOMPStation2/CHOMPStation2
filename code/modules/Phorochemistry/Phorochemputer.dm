@@ -52,7 +52,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	else
 		data["phoron"] = 0
 
-	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		ui = new(user, src, ui_key, "phorochem.tmpl", "Phorochemputer", 480, 400)
 		ui.set_initial_data(data)
@@ -106,7 +106,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 							source = tile
 		if(source)
 			message = "Electromagnetic tile located at: [source.x], [source.y]"
-			GLOB.nanomanager.update_uis(src)
+			SSnanoui.update_uis(src)
 			source_pad = null
 			dest_pad = null
 			spawn(10)
@@ -232,7 +232,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	timeLeft *= 2 //half seconds to make escape impossible from electrical fields
 	timeLeftMax = timeLeft
 
-	GLOB.nanomanager.update_uis(src) //update progress bar with new timeLeftMax
+	SSnanoui.update_uis(src) //update progress bar with new timeLeftMax
 
 	var/obj/effect/electrical_field/small/field
 	var/obj/effect/electrical_field/big/field2
