@@ -10,12 +10,12 @@
 	icon_state = "welder"
 
 /obj/random/tool/item_to_spawn()
-	return pick(/obj/item/weapon/screwdriver,
-				/obj/item/weapon/wirecutters,
+	return pick(/obj/item/weapon/tool/screwdriver,
+				/obj/item/weapon/tool/wirecutters,
 				/obj/item/weapon/weldingtool,
 				/obj/item/weapon/weldingtool/largetank,
-				/obj/item/weapon/crowbar,
-				/obj/item/weapon/wrench,
+				/obj/item/weapon/tool/crowbar,
+				/obj/item/weapon/tool/wrench,
 				/obj/item/device/flashlight,
 				/obj/item/device/multitool)
 
@@ -26,8 +26,8 @@
 
 /obj/random/tool/powermaint/item_to_spawn()
 	return pick(prob(320);/obj/random/tool,
-				prob(1);/obj/item/weapon/screwdriver/power,
-				prob(1);/obj/item/weapon/wirecutters/power,
+				prob(1);/obj/item/weapon/tool/screwdriver/power,
+				prob(1);/obj/item/weapon/tool/wirecutters/power,
 				prob(15);/obj/item/weapon/weldingtool/electric,
 				prob(5);/obj/item/weapon/weldingtool/experimental)
 
@@ -37,8 +37,8 @@
 	icon_state = "jaws_pry"
 
 /obj/random/tool/power/item_to_spawn()
-	return pick(/obj/item/weapon/screwdriver/power,
-				/obj/item/weapon/wirecutters/power,
+	return pick(/obj/item/weapon/tool/screwdriver/power,
+				/obj/item/weapon/tool/wirecutters/power,
 				/obj/item/weapon/weldingtool/electric,
 				/obj/item/weapon/weldingtool/experimental)
 
@@ -49,11 +49,11 @@
 	icon_state = "welder"
 
 /obj/random/tool/alien/item_to_spawn()
-	return pick(/obj/item/weapon/screwdriver/alien,
-				/obj/item/weapon/wirecutters/alien,
+	return pick(/obj/item/weapon/tool/screwdriver/alien,
+				/obj/item/weapon/tool/wirecutters/alien,
 				/obj/item/weapon/weldingtool/alien,
-				/obj/item/weapon/crowbar/alien,
-				/obj/item/weapon/wrench/alien,
+				/obj/item/weapon/tool/crowbar/alien,
+				/obj/item/weapon/tool/wrench/alien,
 				/obj/item/stack/cable_coil/alien,
 				/obj/item/device/multitool/alien)
 
@@ -293,6 +293,23 @@
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/patron)
 
+/obj/random/meat
+	name = "random meat"
+	desc = "This is a random slab of meat."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "meat"
+
+/obj/random/meat/item_to_spawn()
+	return pick(prob(60);/obj/item/weapon/reagent_containers/food/snacks/meat,
+				prob(20);/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat,
+				prob(10);/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
+				prob(5);/obj/item/weapon/reagent_containers/food/snacks/bearmeat,
+				prob(1);/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
+				prob(1);/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+				prob(1);/obj/item/weapon/reagent_containers/food/snacks/meat/monkey,
+				prob(1);/obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
+				prob(1);/obj/item/weapon/reagent_containers/food/snacks/xenomeat)
+
 /obj/random/material //Random materials for building stuff
 	name = "random material"
 	desc = "This is a random material."
@@ -488,3 +505,18 @@
 				/obj/item/toy/prize/mauler,
 				/obj/item/toy/prize/odysseus,
 				/obj/item/toy/prize/phazon)
+
+/obj/random/mouseremains
+	name = "random mouseremains"
+	desc = "For use with mouse spawners."
+	icon = 'icons/obj/assemblies/new_assemblies.dmi'
+	icon_state = "mousetrap"
+
+/obj/random/mouseremains/item_to_spawn()
+	return pick(/obj/item/device/assembly/mousetrap,
+				/obj/item/device/assembly/mousetrap/armed,
+				/obj/effect/decal/cleanable/spiderling_remains,
+				/obj/effect/decal/cleanable/ash,
+				/obj/item/weapon/cigbutt,
+				/obj/item/weapon/cigbutt/cigarbutt,
+				/obj/effect/decal/remains/mouse)

@@ -34,9 +34,11 @@
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
 			return
-		if(vote && vote.mode)
-			src << "<span class='danger'>OOC is not allowed during voting.</span>"
+		//VOREStation Add - No talking during voting
+		if(SSvote && SSvote.mode)
+			to_chat(src,"<span class='danger'>OOC is not allowed during voting.</span>")
 			return
+		//VOREStation Add End
 
 	log_ooc(msg, src)
 
@@ -55,7 +57,7 @@
 		if(holder.rights & R_ADMIN)
 			ooc_style = "admin"
 
-	for(var/client/target in clients)
+	for(var/client/target in GLOB.clients)
 		if(target.is_preference_enabled(/datum/client_preference/show_ooc))
 			if(target.is_key_ignored(key)) // If we're ignored by this person, then do nothing.
 				continue
@@ -122,7 +124,7 @@
 	var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,0)
 	var/list/m_viewers = in_range["mobs"]
 
-	var/list/receivers = list() // Clients, not mobs.
+	var/list/receivers = list() //Clients, not mobs.
 	var/list/r_receivers = list()
 
 	var/display_name = key

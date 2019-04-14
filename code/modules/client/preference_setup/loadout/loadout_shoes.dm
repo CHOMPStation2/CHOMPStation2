@@ -186,12 +186,11 @@
 /datum/gear/shoes/boots/winter/security
 	display_name = "security winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard")
 
 /datum/gear/shoes/boots/winter/science
 	display_name = "science winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/science
-	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist")
 
 /datum/gear/shoes/boots/winter/command
 	display_name = "colony director's winter boots"
@@ -201,29 +200,27 @@
 /datum/gear/shoes/boots/winter/engineering
 	display_name = "engineering winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/engineering
-	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Station Engineer")
 
 /datum/gear/shoes/boots/winter/atmos
 	display_name = "atmospherics winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/atmos
-	allowed_roles = list("Chief Engineer", "Atmospheric Technician")
 
 /datum/gear/shoes/boots/winter/medical
 	display_name = "medical winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist")
 
 /datum/gear/shoes/boots/winter/mining
 	display_name = "mining winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/mining
-	allowed_roles = list("Shaft Miner")
 
 /datum/gear/shoes/boots/winter/supply
 	display_name = "supply winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/supply
-	allowed_roles = list("Quartermaster","Cargo Technician")
 
 /datum/gear/shoes/boots/winter/hydro
 	display_name = "hydroponics winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/hydro
-	allowed_roles = list("Botanist", "Xenobiologist")
+
+/datum/gear/shoes/circuitry
+	display_name = "boots, circuitry (empty)"
+	path = /obj/item/clothing/shoes/circuitry

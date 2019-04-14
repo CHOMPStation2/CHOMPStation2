@@ -309,6 +309,7 @@
 	t = replacetext(t, "\[/h2\]", "</H2>")
 	t = replacetext(t, "\[h3\]", "<H3>")
 	t = replacetext(t, "\[/h3\]", "</H3>")
+	t = replacetext(t, "\[tab\]", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
 
 	if(!iscrayon)
 		t = replacetext(t, "\[*\]", "<li>")
@@ -635,3 +636,8 @@
 /obj/item/weapon/paper/shieldgen
 	name = "Memo:Station Bubble Shield Generator."
 	info = "<B>Hello Engineers</B><BR>\n<BR>\nYou might be wondering what happened to the shield generator.<BR>\nWell, Long story short, a bottle of vodka, and one 'enlightened' scientist later,<BR>\n It's particularly non-existing. We don't have time to replace it this shift, so grab a spare from your Secure storage. Good luck! -Interim Construction Specialist Tahls"
+
+
+/obj/item/weapon/paper/manifest
+	name = "supply manifest"
+	var/is_copy = 1

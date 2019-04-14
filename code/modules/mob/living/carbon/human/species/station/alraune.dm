@@ -3,7 +3,6 @@
 	name_plural = "Alraunes"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 	num_alternate_languages = 2
-	language = LANGUAGE_ROOTLOCAL
 	slowdown = 1 //slow, they're plants. Not as slow as full diona.
 	total_health = 100 //standard
 	brute_mod = 1 //nothing special
@@ -14,6 +13,8 @@
 	min_age = 18
 	max_age = 250
 	health_hud_intensity = 1.5
+	base_species = SPECIES_ALRAUNE
+	selects_bodytype = TRUE
 
 	body_temperature = T20C
 	breath_type = "carbon_dioxide"
@@ -40,7 +41,7 @@
 	breath_heat_level_2 = 450
 	breath_heat_level_3 = 800 //lower incineration threshold though
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED // whitelist only while WIP
+	spawn_flags = SPECIES_CAN_JOIN
 	flags = NO_SCAN | IS_PLANT | NO_MINOR_CUT
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
@@ -48,7 +49,8 @@
 		/mob/living/carbon/human/proc/succubus_drain,
 		/mob/living/carbon/human/proc/succubus_drain_finalize,
 		/mob/living/carbon/human/proc/succubus_drain_lethal,
-		/mob/living/carbon/human/proc/bloodsuck) //Give them the voremodes related to wrapping people in vines and sapping their fluids
+		/mob/living/carbon/human/proc/bloodsuck,
+		/mob/living/carbon/human/proc/alraune_fruit_select) //Give them the voremodes related to wrapping people in vines and sapping their fluids
 
 	color_mult = 1
 	icobase = 'icons/mob/human_races/r_human_vr.dmi'
@@ -86,6 +88,7 @@
 		O_KIDNEYS =  /obj/item/organ/internal/kidneys/alraune,
 		O_BRAIN =    /obj/item/organ/internal/brain/alraune,
 		O_EYES =     /obj/item/organ/internal/eyes/alraune,
+		A_FRUIT =    /obj/item/organ/internal/fruitgland,
 		)
 
 /datum/species/alraune/can_breathe_water()
@@ -108,7 +111,7 @@
 	var/fullysealed = FALSE //if they're wearing a fully sealed suit, their internals take priority.
 	var/environmentalair = FALSE //if no sealed suit, internals take priority in low pressure environements
 
-	if(H.wear_suit && (H.wear_suit.item_flags & STOPPRESSUREDAMAGE) && H.head && (H.head.item_flags & STOPPRESSUREDAMAGE))
+	if(H.wear_suit && (H.wear_suit.min_pressure_protection = 0) && H.head && (H.head.min_pressure_protection = 0))
 		fullysealed = TRUE
 	else // find out if local gas mixture is enough to override use of internals
 		var/datum/gas_mixture/environment = H.loc.return_air()
@@ -204,7 +207,7 @@
 
 	var/co2buff = 0
 	if(inhaling)
-		co2buff = (Clamp(inhale_pp, 0, minimum_breath_pressure))/minimum_breath_pressure //returns a value between 0 and 1.
+		co2buff = (CLAMP(inhale_pp, 0, minimum_breath_pressure))/minimum_breath_pressure //returns a value between 0 and 1.
 
 	var/light_amount = fullysealed ? H.getlightlevel() : H.getlightlevel()/5 // if they're covered, they're not going to get much light on them.
 
@@ -219,7 +222,7 @@
 	if(toxins_pp > safe_toxins_max)
 		var/ratio = (poison/safe_toxins_max) * 10
 		if(H.reagents)
-			H.reagents.add_reagent("toxin", Clamp(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
+			H.reagents.add_reagent("toxin", CLAMP(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
 			breath.adjust_gas(poison_type, -poison/6, update = 0) //update after
 		H.phoron_alert = max(H.phoron_alert, 1)
 	else
@@ -332,5 +335,164 @@
 /obj/item/organ/internal/liver/alraune
 	icon = 'icons/mob/species/alraune/organs.dmi'
 	icon_state = "phytoextractor"
-	name = "phytoextractor"
+	name = "enzoretector"
 	desc = "A bulbous gourd-like structure."
+
+//Begin fruit gland and its code.
+/obj/item/organ/internal/fruitgland //Amazing name, I know.
+	icon = 'icons/mob/species/alraune/organs.dmi'
+	icon_state = "phytoextractor"
+	name = "fruit gland"
+	desc = "A bulbous gourd-like structure."
+	organ_tag = A_FRUIT
+	var/generated_reagents = list("sugar" = 2) //This actually allows them. This could be anything, but sugar seems most fitting.
+	var/usable_volume = 250 //Five fruit.
+	var/transfer_amount = 50
+	var/empty_message = list("Your have no fruit on you.", "You have a distinct lack of fruit..")
+	var/full_message = list("You have a multitude of fruit that is ready for harvest!", "You have fruit that is ready to be picked!")
+	var/emote_descriptor = list("fruit right off of the Alraune!", "a fruit from the Alraune!")
+	var/verb_descriptor = list("grabs", "snatches", "picks")
+	var/self_verb_descriptor = list("grab", "snatch", "pick")
+	var/short_emote_descriptor = list("picks", "grabs")
+	var/self_emote_descriptor = list("grab", "pick", "snatch")
+	var/fruit_type = "apple"
+	var/mob/organ_owner = null
+	var/gen_cost = 0.5
+
+/obj/item/organ/internal/fruitgland/New()
+	..()
+	create_reagents(usable_volume)
+
+
+/obj/item/organ/internal/fruitgland/process()
+	if(!owner) return
+	var/obj/item/organ/external/parent = owner.get_organ(parent_organ)
+	var/before_gen
+	if(parent && generated_reagents && organ_owner) //Is it in the chest/an organ, has reagents, and is 'activated'
+		before_gen = reagents.total_volume
+		if(reagents.total_volume < reagents.maximum_volume)
+			if(organ_owner.nutrition >= gen_cost)
+				do_generation()
+
+	if(reagents)
+		if(reagents.total_volume == reagents.maximum_volume * 0.05)
+			to_chat(organ_owner, "<span class='notice'>[pick(empty_message)]</span>")
+		else if(reagents.total_volume == reagents.maximum_volume && before_gen < reagents.maximum_volume)
+			to_chat(organ_owner, "<span class='warning'>[pick(full_message)]</span>")
+
+/obj/item/organ/internal/fruitgland/proc/do_generation()
+	organ_owner.nutrition -= gen_cost
+	for(var/reagent in generated_reagents)
+		reagents.add_reagent(reagent, generated_reagents[reagent])
+
+
+/mob/living/carbon/human/proc/alraune_fruit_select() //So if someone doesn't want fruit/vegetables, they don't have to select one.
+	set name = "Select fruit"
+	set desc = "Select what fruit/vegetable you wish to grow."
+	set category = "Object"
+	var/obj/item/organ/internal/fruitgland/fruit_gland
+	for(var/F in contents)
+		if(istype(F, /obj/item/organ/internal/fruitgland))
+			fruit_gland = F
+			break
+
+	if(fruit_gland)
+		var/selection = input(src, "Choose your character's fruit type. Choosing nothing will result in a default of apples.", "Fruit Type", fruit_gland.fruit_type) as null|anything in acceptable_fruit_types
+		if(selection)
+			fruit_gland.fruit_type = selection
+		verbs |= /mob/living/carbon/human/proc/alraune_fruit_pick
+		verbs -= /mob/living/carbon/human/proc/alraune_fruit_select
+		fruit_gland.organ_owner = src
+		fruit_gland.emote_descriptor = list("fruit right off of [fruit_gland.organ_owner]!", "a fruit from [fruit_gland.organ_owner]!")
+
+	else
+		to_chat(src, "<span class='notice'>You lack the organ required to produce fruit.</span>")
+		return
+
+/mob/living/carbon/human/proc/alraune_fruit_pick()
+	set name = "Pick Fruit"
+	set desc = "Pick fruit off of [src]."
+	set category = "Object"
+	set src in view(1)
+
+	//do_reagent_implant(usr)
+	if(!isliving(usr) || !usr.canClick())
+		return
+
+	if(usr.incapacitated() || usr.stat > CONSCIOUS)
+		return
+
+	var/obj/item/organ/internal/fruitgland/fruit_gland
+	for(var/I in contents)
+		if(istype(I, /obj/item/organ/internal/fruitgland))
+			fruit_gland = I
+			break
+	if (fruit_gland) //Do they have the gland?
+		if(fruit_gland.reagents.total_volume < fruit_gland.transfer_amount)
+			to_chat(src, "<span class='notice'>[pick(fruit_gland.empty_message)]</span>")
+			return
+
+		var/datum/seed/S = plant_controller.seeds["[fruit_gland.fruit_type]"]
+		S.harvest(usr,0,0,1)
+
+		var/index = rand(0,2)
+
+		if (usr != src)
+			var/emote = fruit_gland.emote_descriptor[index]
+			var/verb_desc = fruit_gland.verb_descriptor[index]
+			var/self_verb_desc = fruit_gland.self_verb_descriptor[index]
+			usr.visible_message("<span class='notice'>[usr] [verb_desc] [emote]</span>",
+							"<span class='notice'>You [self_verb_desc] [emote]</span>")
+		else
+			visible_message("<span class='notice'>[src] [pick(fruit_gland.short_emote_descriptor)] a fruit.</span>",
+								"<span class='notice'>You [pick(fruit_gland.self_emote_descriptor)] a fruit.</span>")
+
+		fruit_gland.reagents.remove_any(fruit_gland.transfer_amount)
+
+//End of fruit gland code.
+
+/datum/species/alraune/proc/produceCopy(var/datum/species/to_copy,var/list/traits,var/mob/living/carbon/human/H)
+	ASSERT(to_copy)
+	ASSERT(istype(H))
+
+	if(ispath(to_copy))
+		to_copy = "[initial(to_copy.name)]"
+	if(istext(to_copy))
+		to_copy = all_species[to_copy]
+
+	var/datum/species/alraune/new_copy = new()
+
+	//Initials so it works with a simple path passed, or an instance
+	new_copy.base_species = to_copy.name
+	new_copy.icobase = to_copy.icobase
+	new_copy.deform = to_copy.deform
+	new_copy.tail = to_copy.tail
+	new_copy.tail_animation = to_copy.tail_animation
+	new_copy.icobase_tail = to_copy.icobase_tail
+	new_copy.color_mult = to_copy.color_mult
+	new_copy.primitive_form = to_copy.primitive_form
+	new_copy.appearance_flags = to_copy.appearance_flags
+	new_copy.flesh_color = to_copy.flesh_color
+	new_copy.base_color = to_copy.base_color
+	new_copy.blood_mask = to_copy.blood_mask
+	new_copy.damage_mask = to_copy.damage_mask
+	new_copy.damage_overlays = to_copy.damage_overlays
+
+	//Set up a mob
+	H.species = new_copy
+	H.icon_state = lowertext(new_copy.get_bodytype())
+
+	if(new_copy.holder_type)
+		H.holder_type = new_copy.holder_type
+
+	if(H.dna)
+		H.dna.ready_dna(H)
+
+	return new_copy
+
+/datum/species/alraune/get_bodytype()
+	return base_species
+
+/datum/species/alraune/get_race_key()
+	var/datum/species/real = all_species[base_species]
+	return real.race_key

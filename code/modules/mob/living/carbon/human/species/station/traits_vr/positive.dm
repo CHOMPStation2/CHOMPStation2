@@ -58,13 +58,13 @@
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark."
 	cost = 1
-	var_changes = list("darksight" = 3)
+	var_changes = list("darksight" = 3, "flash_mod" = 2.0)
 
 /datum/trait/darksight_plus
 	name = "Darksight (Major)"
 	desc = "Allows you to see in the dark for the whole screen."
 	cost = 2
-	var_changes = list("darksight" = 7)
+	var_changes = list("darksight" = 7, "flash_mod" = 3.0)
 
 /datum/trait/melee_attack
 	name = "Sharp Melee"
@@ -122,8 +122,8 @@
 
 /datum/trait/winged_flight
 	name = "Winged Flight"
-	desc = "Allows you to fly by using your wings."
-	cost = 2 //Some in game value.
+	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
+	cost = 1
 
 /datum/trait/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -135,3 +135,12 @@
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 1
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
+
+/datum/trait/antiseptic_saliva
+	name = "Antiseptic Saliva"
+	desc = "Your saliva has especially strong antiseptic properties that can be used to heal small wounds."
+	cost = 1
+
+/datum/trait/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.verbs |= /mob/living/carbon/human/proc/lick_wounds 

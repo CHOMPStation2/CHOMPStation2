@@ -113,7 +113,6 @@
 	throwforce = 15.0
 	throw_speed = 5
 	throw_range = 20
-	flags = CONDUCT
 	no_variants = FALSE
 
 /obj/item/stack/tile/floor/red
@@ -198,3 +197,9 @@
 	throw_range = 20
 	flags = 0
 	no_variants = FALSE
+
+/obj/item/stack/tile/roofing
+	name = "roofing"
+	singular_name = "roofing"
+	desc = "A section of roofing material. You can use it to repair the ceiling, or expand it."
+	icon_state = "techtile_grid"

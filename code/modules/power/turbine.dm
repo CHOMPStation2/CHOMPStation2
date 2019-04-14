@@ -85,7 +85,7 @@
 #define COMPFRICTION 5e5
 #define COMPSTARTERLOAD 2800
 
-/obj/machinery/compressor/initialize()
+/obj/machinery/compressor/Initialize()
 	. = ..()
 	default_apply_parts()
 	gas_contained = new()
@@ -95,10 +95,8 @@
 		stat |= BROKEN
 
 // When anchored, don't let air past us.
-/obj/machinery/compressor/CanPass(atom/movable/mover, turf/target, height=1.5, air_group = 0)
-	if(!height || air_group)
-		return !anchored
-	return !density
+/obj/machinery/compressor/CanZASPass(turf/T, is_zone)
+	return anchored ? ATMOS_PASS_NO : ATMOS_PASS_YES
 
 /obj/machinery/compressor/proc/locate_machinery()
 	if(turbine)
@@ -124,14 +122,14 @@
 		return
 	if(default_deconstruction_crowbar(user, W))
 		return
-	if(ismultitool(W))
+	if(istype(W, /obj/item/device/multitool))
 		var/new_ident = input("Enter a new ident tag.", name, comp_id) as null|text
 		if(new_ident && user.Adjacent(src))
 			comp_id = new_ident
 		return
 	return ..()
 
-/obj/machinery/compressor/default_unfasten_wrench(var/mob/user, var/obj/item/weapon/wrench/W, var/time = 20)
+/obj/machinery/compressor/default_unfasten_wrench(var/mob/user, var/obj/item/weapon/W, var/time = 20)
 	if((. = ..()))
 		turbine = null
 		if(anchored)
@@ -194,7 +192,7 @@
 #define TURBGENQ 100000
 #define TURBGENG 0.8
 
-/obj/machinery/power/turbine/initialize()
+/obj/machinery/power/turbine/Initialize()
 	. = ..()
 	default_apply_parts()
 	// The outlet is pointed at the direction of the turbine component
@@ -229,7 +227,7 @@
 		return
 	return ..()
 
-/obj/machinery/power/turbine/default_unfasten_wrench(var/mob/user, var/obj/item/weapon/wrench/W, var/time = 20)
+/obj/machinery/power/turbine/default_unfasten_wrench(var/mob/user, var/obj/item/weapon/W, var/time = 20)
 	if((. = ..()))
 		compressor = null
 		if(anchored)
@@ -318,7 +316,7 @@
 // Turbine Computer
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/obj/machinery/computer/turbine_computer/initialize()
+/obj/machinery/computer/turbine_computer/Initialize()
 	. = ..()
 	return INITIALIZE_HINT_LATELOAD
 
@@ -337,7 +335,7 @@
 			doors += P
 
 /obj/machinery/computer/turbine_computer/attackby(obj/item/W, mob/user)
-	if(ismultitool(W))
+	if(istype(W, /obj/item/device/multitool))
 		var/new_ident = input("Enter a new ident tag.", name, id) as null|text
 		if(new_ident && user.Adjacent(src))
 			id = new_ident
@@ -365,7 +363,7 @@
 		data["temp"] = compressor.gas_contained.temperature
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
         // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm

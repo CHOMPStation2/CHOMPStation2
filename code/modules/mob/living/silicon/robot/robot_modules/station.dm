@@ -19,11 +19,10 @@ var/global/list/robot_modules = list(
 	icon_state = "std_module"
 	w_class = ITEMSIZE_NO_CONTAINER
 	item_state = "std_mod"
-	flags = CONDUCT
 	var/hide_on_manifest = 0
 	var/channels = list()
 	var/networks = list()
-	var/languages = list(LANGUAGE_SOL_COMMON = 1, LANGUAGE_TRADEBAND = 1, LANGUAGE_UNATHI = 0, LANGUAGE_SIIK = 0, LANGUAGE_AKHANI = 0, LANGUAGE_SKRELLIAN = 0, LANGUAGE_GUTTER = 0, LANGUAGE_SCHECHI = 0, LANGUAGE_SIGN = 0, LANGUAGE_TERMINUS = 1)
+	var/languages = list(LANGUAGE_SOL_COMMON = 1, LANGUAGE_TRADEBAND = 1, LANGUAGE_UNATHI = 0, LANGUAGE_SIIK = 0, LANGUAGE_AKHANI = 0, LANGUAGE_SKRELLIAN = 0, LANGUAGE_GUTTER = 0, LANGUAGE_SCHECHI = 0, LANGUAGE_SIGN = 0, LANGUAGE_TERMINUS = 1, LANGUAGE_ZADDAT = 0)
 	var/sprites = list()
 	var/can_be_pushed = 1
 	var/no_slip = 0
@@ -155,8 +154,8 @@ var/global/list/robot_modules = list(
 // Cyborgs (non-drones), default loadout. This will be given to every module.
 /obj/item/weapon/robot_module/robot/New()
 	..()
-	src.modules += new /obj/item/device/flash(src)
-	src.modules += new /obj/item/weapon/crowbar/cyborg(src)
+	src.modules += new /obj/item/device/flash/robot(src)
+	src.modules += new /obj/item/weapon/tool/crowbar/cyborg(src)
 	src.modules += new /obj/item/weapon/extinguisher(src)
 	src.modules += new /obj/item/device/gps/robot(src)
 	vr_new() // Vorestation Edit: For modules in robot_modules_vr.dm
@@ -166,7 +165,6 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"M-USE NanoTrasen" = "robot",
 					"Cabeiri" = "eyebot-standard",
-					"CUPCAKE" = "Noble-STD",
 					"Haruka" = "marinaSD",
 					"Usagi" = "tallflower",
 					"Telemachus" = "toiletbot",
@@ -177,12 +175,14 @@ var/global/list/robot_modules = list(
 					"Basic" = "robot_old",
 					"Android" = "droid",
 					"Drone" = "drone-standard"
+//					"Insekt" = "insekt-Default"
 					)
+
 
 /obj/item/weapon/robot_module/robot/standard/New()
 	..()
 	src.modules += new /obj/item/weapon/melee/baton/loaded(src)
-	src.modules += new /obj/item/weapon/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/device/healthanalyzer(src)
 	src.emag = new /obj/item/weapon/melee/energy/sword(src)
 
@@ -198,7 +198,6 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"M-USE NanoTrasen" = "robotMedi",
 					"Cabeiri" = "eyebot-medical",
-					"CUPCAKE" = "Noble-MED",
 					"Haruka" = "marinaMD",
 					"Minako" = "arachne",
 					"Usagi" = "tallwhite",
@@ -210,12 +209,14 @@ var/global/list/robot_modules = list(
 					"Needles" = "medicalrobot",
 					"Drone" = "drone-surgery",
 					"Handy" = "handy-med"
+//					"Insekt" = "insekt-Med"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
 	..()
 	src.modules += new /obj/item/device/healthanalyzer(src)
 	src.modules += new /obj/item/weapon/reagent_containers/borghypo/surgeon(src)
+	src.modules += new /obj/item/weapon/autopsy_scanner(src)
 	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/retractor/cyborg(src)
@@ -270,7 +271,6 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"M-USE NanoTrasen" = "robotMedi",
 					"Cabeiri" = "eyebot-medical",
-					"CUPCAKE" = "Noble-MED",
 					"Haruka" = "marinaMD",
 					"Minako" = "arachne",
 					"Usagi" = "tallwhite",
@@ -282,6 +282,7 @@ var/global/list/robot_modules = list(
 					"Needles" = "medicalrobot",
 					"Drone - Medical" = "drone-medical",
 					"Drone - Chemistry" = "drone-chemistry"
+//					"Insekt" = "insekt-Med"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -344,7 +345,6 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"M-USE NanoTrasen" = "robotEngi",
 					"Cabeiri" = "eyebot-engineering",
-					"CUPCAKE" = "Noble-ENG",
 					"Haruka" = "marinaENG",
 					"Usagi" = "tallyellow",
 					"Telemachus" = "toiletbotengineering",
@@ -370,8 +370,8 @@ var/global/list/robot_modules = list(
 	..()
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/weapon/rcd/borg(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
 	src.modules += new /obj/item/weapon/pickaxe/plasmacutter(src)
 	src.modules += new /obj/item/device/pipe_painter(src)
@@ -411,21 +411,22 @@ var/global/list/robot_modules = list(
 	..()
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/wirecutters/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/device/t_scanner(src)
 	src.modules += new /obj/item/device/analyzer(src)
 	src.modules += new /obj/item/taperoll/engineering(src)
 	src.modules += new /obj/item/weapon/gripper(src)
+	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
 	src.emag = new /obj/item/weapon/melee/baton/robot/arm(src)
 	src.modules += new /obj/item/device/geiger(src)
-	src.modules += new /obj/item/weapon/rcd/borg(src)
+	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)
 	src.modules += new /obj/item/weapon/pickaxe/plasmacutter(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 
@@ -502,7 +503,6 @@ var/global/list/robot_modules = list(
 					"Cabeiri" = "eyebot-security",
 					"Cerberus" = "bloodhound",
 					"Cerberus - Treaded" = "treadhound",
-					"CUPCAKE" = "Noble-SEC",
 					"Haruka" = "marinaSC",
 					"Usagi" = "tallred",
 					"Telemachus" = "toiletbotsecurity",
@@ -512,6 +512,7 @@ var/global/list/robot_modules = list(
 					"Basic" = "secborg",
 					"Black Knight" = "securityrobot",
 					"Drone" = "drone-sec"
+//					"Insekt" = "insekt-Sec"
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -546,7 +547,6 @@ var/global/list/robot_modules = list(
 					"M-USE NanoTrasen" = "robotJani",
 					"Arachne" = "crawler",
 					"Cabeiri" = "eyebot-janitor",
-					"CUPCAKE" = "Noble-CLN",
 					"Haruka" = "marinaJN",
 					"Telemachus" = "toiletbotjanitor",
 					"WTOperator" = "sleekjanitor",
@@ -590,14 +590,14 @@ var/global/list/robot_modules = list(
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_EAL		= 1,
 					LANGUAGE_TERMINUS	= 1,
-					LANGUAGE_SIGN		= 0
+					LANGUAGE_SIGN		= 0,
+					LANGUAGE_ZADDAT		= 1,
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/butler
 	sprites = list(
 					"M-USE NanoTrasen" = "robotServ",
 					"Cabeiri" = "eyebot-standard",
-					"CUPCAKE" = "Noble-SRV",
 					"Haruka" = "marinaSV",
 					"Michiru" = "maidbot",
 					"Usagi" = "tallgreen",
@@ -653,7 +653,6 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"M-USE NanoTrasen" = "robotCler",
 					"Cabeiri" = "eyebot-standard",
-					"CUPCAKE" = "Noble-SRV",
 					"Haruka" = "marinaSV",
 					"Usagi" = "tallgreen",
 					"Telemachus" = "toiletbot",
@@ -693,7 +692,6 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"NM-USE NanoTrasen" = "robotMine",
 					"Cabeiri" = "eyebot-miner",
-					"CUPCAKE" = "Noble-DIG",
 					"Haruka" = "marinaMN",
 					"Telemachus" = "toiletbotminer",
 					"WTOperator" = "sleekminer",
@@ -709,8 +707,8 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/miner/New()
 	..()
 	src.modules += new /obj/item/borg/sight/material(src)
-	src.modules += new /obj/item/weapon/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
 	src.modules += new /obj/item/weapon/storage/bag/ore(src)
 	src.modules += new /obj/item/weapon/pickaxe/borgdrill(src)
 	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
@@ -731,21 +729,23 @@ var/global/list/robot_modules = list(
 					"Droid" = "droid-science",
 					"Drone" = "drone-science",
 					"Handy" = "handy-science"
+//					"Insekt" = "insekt-Sci"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()
 	..()
 	src.modules += new /obj/item/weapon/portable_destructive_analyzer(src)
 	src.modules += new /obj/item/weapon/gripper/research(src)
+	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 	src.modules += new /obj/item/device/robotanalyzer(src)
 	src.modules += new /obj/item/weapon/card/robot(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/wirecutters/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
 	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
@@ -790,6 +790,7 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"Haruka" = "marinaCB",
 					"Combat Android" = "droid-combat"
+//					"Insekt" = "insekt-Combat"
 					)
 
 /obj/item/weapon/robot_module/robot/security/combat/New()
@@ -815,10 +816,10 @@ var/global/list/robot_modules = list(
 	..()
 	src.modules += new /obj/item/borg/sight/meson(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
-	src.modules += new /obj/item/weapon/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/crowbar/cyborg(src)
-	src.modules += new /obj/item/weapon/wirecutters/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/crowbar/cyborg(src)
+	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
 	src.modules += new /obj/item/weapon/gripper(src)
@@ -896,7 +897,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/drone/construction/New()
 	..()
-	src.modules += new /obj/item/weapon/rcd/borg(src)
+	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg/lesser(src)
 
 /obj/item/weapon/robot_module/drone/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/device/lightreplacer/LR = locate() in src.modules

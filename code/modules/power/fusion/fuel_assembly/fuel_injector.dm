@@ -18,7 +18,7 @@ var/list/fuel_injectors = list()
 	var/injecting = 0
 	var/obj/item/weapon/fuel_assembly/cur_assembly
 
-/obj/machinery/fusion_fuel_injector/initialize()
+/obj/machinery/fusion_fuel_injector/Initialize()
 	. = ..()
 	fuel_injectors += src
 	default_apply_parts()
@@ -42,7 +42,7 @@ var/list/fuel_injectors = list()
 
 /obj/machinery/fusion_fuel_injector/attackby(obj/item/W, mob/user)
 
-	if(ismultitool(W))
+	if(istype(W, /obj/item/device/multitool))
 		var/new_ident = input("Enter a new ident tag.", "Fuel Injector", id_tag) as null|text
 		if(new_ident && user.Adjacent(src))
 			id_tag = new_ident
@@ -68,7 +68,7 @@ var/list/fuel_injectors = list()
 		cur_assembly = W
 		return
 
-	if(iswrench(W) || isscrewdriver(W) || iscrowbar(W) || istype(W, /obj/item/weapon/storage/part_replacer))
+	if(W.is_wrench() || W.is_screwdriver() || W.is_crowbar() || istype(W, /obj/item/weapon/storage/part_replacer))
 		if(injecting)
 			to_chat(user, "<span class='warning'>Shut \the [src] off first!</span>")
 			return
@@ -134,22 +134,22 @@ var/list/fuel_injectors = list()
 	else
 		StopInjecting()
 
-/obj/machinery/fusion_fuel_injector/verb/rotate_clock()
+/obj/machinery/fusion_fuel_injector/verb/rotate_clockwise()
 	set category = "Object"
-	set name = "Rotate Generator (Clockwise)"
+	set name = "Rotate Generator Clockwise"
 	set src in view(1)
 
 	if (usr.incapacitated() || usr.restrained()  || anchored)
 		return
 
-	src.dir = turn(src.dir, -90)
+	src.set_dir(turn(src.dir, 270))
 
-/obj/machinery/fusion_fuel_injector/verb/rotate_anticlock()
+/obj/machinery/fusion_fuel_injector/verb/rotate_counterclockwise()
 	set category = "Object"
-	set name = "Rotate Generator (Counter-clockwise)"
+	set name = "Rotate Generator Counterclockwise"
 	set src in view(1)
 
 	if (usr.incapacitated() || usr.restrained()  || anchored)
 		return
 
-	src.dir = turn(src.dir, 90)
+	src.set_dir(turn(src.dir, 90))

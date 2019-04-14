@@ -110,7 +110,7 @@ var/global/list/limb_icon_cache = list()
 			res.add_overlay(facial_s)
 
 	//Head hair
-	if(owner.h_style && !(owner.head && (owner.head.flags_inv & BLOCKHEADHAIR)))
+	if(owner.h_style)
 		var/style = owner.h_style
 		var/datum/sprite_accessory/hair/hair_style = hair_styles_list[style]
 		if(owner.head && (owner.head.flags_inv & BLOCKHEADHAIR))
@@ -179,14 +179,14 @@ var/global/list/limb_icon_cache = list()
 	if(model)
 		icon_cache_key += "_model_[model]"
 		apply_colouration(mob_icon)
-		// VOREStation edit to enable markings on synths
-		for(var/M in markings)
-			var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
-			var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
-			mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) // VOREStation edit
-			overlays |= mark_s //So when it's not on your body, it has icons
-			mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
-			icon_cache_key += "[M][markings[M]["color"]]"
+		if(owner && owner.synth_markings)
+			for(var/M in markings)
+				var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
+				var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
+				mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) // VOREStation edit
+				add_overlay(mark_s) //So when it's not on your body, it has icons
+				mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
+				icon_cache_key += "[M][markings[M]["color"]]"
 
 		if(body_hair && islist(h_col) && h_col.len >= 3)
 			var/cache_key = "[body_hair]-[icon_name]-[h_col[1]][h_col[2]][h_col[3]]"
@@ -289,5 +289,5 @@ var/list/robot_hud_colours = list("#CFCFCF","#AFAFAF","#8F8F8F","#6F6F6F","#4F4F
 		dam_state = min_dam_state
 	// Apply colour and return product.
 	var/list/hud_colours = (robotic < ORGAN_ROBOT) ? flesh_hud_colours : robot_hud_colours
-	hud_damage_image.color = hud_colours[max(1,min(ceil(dam_state*hud_colours.len),hud_colours.len))]
+	hud_damage_image.color = hud_colours[max(1,min(CEILING(dam_state*hud_colours.len, 1),hud_colours.len))]
 	return hud_damage_image

@@ -553,4 +553,4 @@
 	icon_state = "laptop"
 	icon_keyboard = "laptop_key"
 	icon_screen = "medlaptop"
-	throwpass = 1 //VOREStation Edit - Really???
+	density = 0

@@ -231,7 +231,7 @@
 	return 0 // return 1 to cancel attack_hand()
 
 /*/obj/item/clothing/gloves/attackby(obj/item/weapon/W, mob/user)
-	if(istype(W, /obj/item/weapon/wirecutters) || istype(W, /obj/item/weapon/scalpel))
+	if(W.is_wirecutter() || istype(W, /obj/item/weapon/scalpel))
 		if (clipped)
 			user << "<span class='notice'>The [src] have already been clipped!</span>"
 			update_icon()
@@ -306,6 +306,7 @@
 	glove_level = 1
 	fingerprint_chance = 100
 	punch_force = 2
+	body_parts_covered = 0
 
 ///////////////////////////////////////////////////////////////////////
 //Head
@@ -473,6 +474,7 @@
 
 	var/water_speed = 0		//Speed boost/decrease in water, lower/negative values mean more speed
 	var/snow_speed = 0		//Speed boost/decrease on snow, lower/negative values mean more speed
+	var/rock_climbing = FALSE // If true, allows climbing cliffs with clickdrag.
 
 	var/step_volume_mod = 1	//How quiet or loud footsteps in this shoe are
 
@@ -637,6 +639,7 @@
 	var/worn_state = null
 	valid_accessory_slots = (\
 		ACCESSORY_SLOT_UTILITY\
+		|ACCESSORY_SLOT_HOLSTER\
 		|ACCESSORY_SLOT_WEAPON\
 		|ACCESSORY_SLOT_ARMBAND\
 		|ACCESSORY_SLOT_DECOR\
@@ -645,6 +648,7 @@
 		|ACCESSORY_SLOT_OVER)
 	restricted_accessory_slots = (\
 		ACCESSORY_SLOT_UTILITY\
+		|ACCESSORY_SLOT_HOLSTER\
 		|ACCESSORY_SLOT_WEAPON\
 		|ACCESSORY_SLOT_ARMBAND\
 		|ACCESSORY_SLOT_TIE\

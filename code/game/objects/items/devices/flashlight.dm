@@ -4,7 +4,6 @@
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "flashlight"
 	w_class = ITEMSIZE_SMALL
-	flags = CONDUCT
 	slot_flags = SLOT_BELT
 	matter = list(DEFAULT_WALL_MATERIAL = 50,"glass" = 20)
 	action_button_name = "Toggle Flashlight"
@@ -19,14 +18,13 @@
 	var/power_usage
 	var/power_use = 1
 
-/obj/item/device/flashlight/initialize()
+/obj/item/device/flashlight/Initialize()
 	. = ..()
 	update_icon()
 
 /obj/item/device/flashlight/New()
 	if(power_use)
-		processing_objects |= src
-
+		START_PROCESSING(SSobj, src)
 		if(cell_type)
 			cell = new cell_type(src)
 			brightness_levels = list("low" = 0.25, "medium" = 0.5, "high" = 1)
@@ -38,7 +36,7 @@
 
 /obj/item/device/flashlight/Destroy()
 	if(power_use)
-		processing_objects -= src
+		STOP_PROCESSING(SSobj, src)
 	return ..()
 
 /obj/item/device/flashlight/get_cell()
@@ -68,6 +66,7 @@
 					cell.charge = 0
 					visible_message("<span class='warning'>\The [src] flickers before going dull.</span>")
 					set_light(0)
+					playsound(src.loc, 'sound/effects/sparks3.ogg', 10, 1, -3) //Small cue that your light went dull in your pocket.
 					on = 0
 					update_icon()
 
@@ -180,6 +179,7 @@
 			user.put_in_hands(cell)
 			cell = null
 			user << "<span class='notice'>You remove the cell from the [src].</span>"
+			playsound(src, 'sound/machines/button.ogg', 30, 1, 0)
 			on = 0
 			update_icon()
 			return
@@ -228,6 +228,7 @@
 					W.loc = src
 					cell = W
 					user << "<span class='notice'>You install a cell in \the [src].</span>"
+					playsound(src, 'sound/machines/button.ogg', 30, 1, 0)
 					update_icon()
 				else
 					user << "<span class='notice'>\The [src] already has a cell.</span>"
@@ -242,7 +243,6 @@
 	desc = "A pen-sized light, used by medical staff."
 	icon_state = "penlight"
 	item_state = "pen"
-	flags = CONDUCT
 	slot_flags = SLOT_EARS
 	brightness_on = 2
 	w_class = ITEMSIZE_TINY
@@ -274,7 +274,6 @@
 	icon_state = "maglight"
 	flashlight_colour = LIGHT_COLOR_FLUORESCENT_FLASHLIGHT
 	force = 10
-	flags = CONDUCT
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_SMALL
 	attack_verb = list ("smacked", "thwacked", "thunked")
@@ -286,7 +285,6 @@
 	desc = "A miniature lamp, that might be used by small robots."
 	icon_state = "penlight"
 	item_state = null
-	flags = CONDUCT
 	brightness_on = 2
 	w_class = ITEMSIZE_TINY
 	power_use = 0
@@ -299,7 +297,6 @@
 	force = 10
 	brightness_on = 5
 	w_class = ITEMSIZE_LARGE
-	flags = CONDUCT
 	power_use = 0
 	on = 1
 
@@ -349,7 +346,7 @@
 		turn_off()
 		if(!fuel)
 			src.icon_state = "[initial(icon_state)]-empty"
-		processing_objects -= src
+		STOP_PROCESSING(SSobj, src)
 
 /obj/item/device/flashlight/flare/proc/turn_off()
 	on = 0
@@ -372,14 +369,14 @@
 		user.visible_message("<span class='notice'>[user] activates the flare.</span>", "<span class='notice'>You pull the cord on the flare, activating it!</span>")
 		src.force = on_damage
 		src.damtype = "fire"
-		processing_objects += src
+		START_PROCESSING(SSobj, src)
 
 /obj/item/device/flashlight/flare/proc/ignite() //Used for flare launchers.
 	on = !on
 	update_icon()
 	force = on_damage
 	damtype = "fire"
-	processing_objects += src
+	START_PROCESSING(SSobj, src)
 	return 1
 
 //Glowsticks
@@ -406,7 +403,7 @@
 		turn_off()
 		if(!fuel)
 			src.icon_state = "[initial(icon_state)]-empty"
-		processing_objects -= src
+		STOP_PROCESSING(SSobj, src)
 
 /obj/item/device/flashlight/glowstick/proc/turn_off()
 	on = 0
@@ -423,7 +420,7 @@
 	. = ..()
 	if(.)
 		user.visible_message("<span class='notice'>[user] cracks and shakes the glowstick.</span>", "<span class='notice'>You crack and shake the glowstick, turning it on!</span>")
-		processing_objects += src
+		START_PROCESSING(SSobj, src)
 
 /obj/item/device/flashlight/glowstick/red
 	name = "red glowstick"

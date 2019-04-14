@@ -3,7 +3,6 @@
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "jaws"
 	desc = "The jaws of the law."
-	flags = CONDUCT
 	force = 10
 	throwforce = 0
 	hitsound = 'sound/weapons/bite.ogg'
@@ -15,7 +14,6 @@
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "smalljaws"
 	desc = "The jaws of a small dog."
-	flags = CONDUCT
 	force = 5
 	throwforce = 0
 	hitsound = 'sound/weapons/bite.ogg'
@@ -32,7 +30,6 @@
 			icon = 'icons/mob/dogborg_vr.dmi'
 			icon_state = "jaws"
 			desc = "The jaws of the law."
-			flags = CONDUCT
 			force = 10
 			throwforce = 0
 			hitsound = 'sound/weapons/bite.ogg'
@@ -43,7 +40,6 @@
 			icon = 'icons/mob/dogborg_vr.dmi'
 			icon_state = "smalljaws"
 			desc = "The jaws of a small dog."
-			flags = CONDUCT
 			force = 5
 			throwforce = 0
 			hitsound = 'sound/weapons/bite.ogg'
@@ -57,7 +53,6 @@
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "nose"
 	desc = "The BOOP module, a simple reagent and atmosphere sniffer."
-	flags = CONDUCT
 	force = 0
 	throwforce = 0
 	attack_verb = list("nuzzled", "nosed", "booped")
@@ -142,14 +137,26 @@
 	chargecost = 500
 
 /obj/item/weapon/shockpaddles/robot/hound/jumper
-	name = "paws of life"
-	icon = 'icons/mob/dogborg_vr.dmi'
-	icon_state = "defibpaddles0"
+	name = "jumper paws"
 	desc = "Zappy paws. For rebooting a full body prostetic."
-	combat = 1
-	attack_verb = list("batted", "pawed", "bopped", "whapped")
-	chargecost = 500
 	use_on_synthetic = 1
+
+/obj/item/weapon/reagent_containers/borghypo/hound
+	name = "MediHound hypospray"
+	desc = "An advanced chemical synthesizer and injection system utilizing carrier's reserves, designed for heavy-duty medical equipment."
+	charge_cost = 10
+	var/datum/matter_synth/water = null
+
+/obj/item/weapon/reagent_containers/borghypo/hound/process() //Recharges in smaller steps and uses the water reserves as well.
+	if(isrobot(loc))
+		var/mob/living/silicon/robot/R = loc
+		if(R && R.cell)
+			for(var/T in reagent_ids)
+				if(reagent_volumes[T] < volume && water.energy >= charge_cost)
+					R.cell.use(charge_cost)
+					water.use_charge(charge_cost)
+					reagent_volumes[T] = min(reagent_volumes[T] + 1, volume)
+	return 1
 
 //Tongue stuff
 /obj/item/device/dogborg/tongue
@@ -164,6 +171,14 @@
 /obj/item/device/dogborg/tongue/New()
 	..()
 	flags |= NOBLUDGEON //No more attack messages
+
+/obj/item/device/dogborg/tongue/examine(user)
+	if(!..(user, 1))
+		return
+	if(water.energy)
+		user <<"<span class='notice'>[src] is wet. Just like it should be.</span>"
+	if(water.energy < 5)
+		user <<"<span class='notice'>[src] is dry.</span>"
 
 /obj/item/device/dogborg/tongue/attack_self(mob/user)
 	var/mob/living/silicon/robot.R = user
@@ -188,7 +203,14 @@
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(user.client && (target in user.client.screen))
 		to_chat(user, "<span class='warning'>You need to take \the [target.name] off before cleaning it!</span>")
-	else if(istype(target,/obj/effect/decal/cleanable) && water.energy >= 5)
+	if(istype(target, /obj/structure/sink) || istype(target, /obj/structure/toilet)) //Dog vibes.
+		user.visible_message("[user] begins to lap up water from [target.name].", "<span class='notice'>You begin to lap up water from [target.name].</span>")
+		if(do_after (user, 50))
+			water.add_charge(50)
+	else if(water.energy < 5)
+		to_chat(user, "<span class='notice'>Your mouth feels dry. You should drink up some water .</span>")
+		return
+	else if(istype(target,/obj/effect/decal/cleanable))
 		user.visible_message("[user] begins to lick off \the [target.name].", "<span class='notice'>You begin to lick off \the [target.name]...</span>")
 		if(do_after (user, 50))
 			to_chat(user, "<span class='notice'>You finish licking off \the [target.name].</span>")
@@ -196,7 +218,7 @@
 			qdel(target)
 			var/mob/living/silicon/robot.R = user
 			R.cell.charge += 50
-	else if(istype(target,/obj/item) && water.energy >= 5)
+	else if(istype(target,/obj/item))
 		if(istype(target,/obj/item/trash))
 			user.visible_message("[user] nibbles away at \the [target.name].", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
 			if(do_after (user, 50))
@@ -247,25 +269,14 @@
 								"<span class='userdanger'>[user] has shocked you with its tongue! You can feel the betrayal.</span>")
 			playsound(loc, 'sound/weapons/Egloves.ogg', 50, 1, -1)
 			R.cell.charge -= 666
-		else if(water.energy >= 5)
+		else
 			user.visible_message("<span class='notice'>\the [user] affectionally licks all over \the [target]'s face!</span>", "<span class='notice'>You affectionally lick all over \the [target]'s face!</span>")
 			playsound(src.loc, 'sound/effects/attackblob.ogg', 50, 1)
 			water.use_charge(5)
 			var/mob/living/carbon/human/H = target
 			if(H.species.lightweight == 1)
 				H.Weaken(3)
-			return
-	else if(istype(target, /obj/structure/window) && water.energy >= 1)
-		user.visible_message("[user] begins to lick \the [target.name] clean...", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
-		if(do_after (user, 50))
-			to_chat(user, "<span class='notice'>You clean \the [target.name].</span>")
-			water.use_charge(5)
-			target.color = initial(target.color)
-	else if(istype(target, /obj/structure/sink) || istype(target, /obj/structure/toilet)) //Dog vibes.
-		user.visible_message("[user] begins to lap up water from [target.name].", "<span class='notice'>You begin to lap up water from [target.name].</span>")
-		if(do_after (user, 50))
-			water.add_charge(100)
-	else if(water.energy >= 5)
+	else
 		user.visible_message("[user] begins to lick \the [target.name] clean...", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
 		if(do_after (user, 50))
 			to_chat(user, "<span class='notice'>You clean \the [target.name].</span>")
@@ -316,7 +327,6 @@
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "swordtail"
 	desc = "A glowing pink dagger normally attached to the end of a cyborg's tail. It appears to be extremely sharp."
-	flags = CONDUCT
 	force = 20 //Takes 5 hits to 100-0
 	sharp = 1
 	edge = 1

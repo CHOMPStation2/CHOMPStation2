@@ -592,7 +592,7 @@
 		if("Dead Mobs")
 			usr << jointext(dead_mob_list,",")
 		if("Clients")
-			usr << jointext(clients,",")
+			usr << jointext(GLOB.clients,",")
 
 /client/proc/cmd_debug_using_map()
 	set category = "Debug"
@@ -641,6 +641,7 @@
 	var/datum/weather/new_weather = input(usr, "What weather do you want to change to?", "Change Weather") as null|anything in planet.weather_holder.allowed_weather_types
 	if(new_weather)
 		planet.weather_holder.change_weather(new_weather)
+		planet.weather_holder.rebuild_forecast()
 		var/log = "[key_name(src)] changed [planet.name]'s weather to [new_weather]."
 		message_admins(log)
 		log_admin(log)

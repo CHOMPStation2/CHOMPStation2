@@ -381,3 +381,14 @@
 		/obj/item/device/modkit_conversion/fluff/skinner/a,
 		/obj/item/device/modkit_conversion/fluff/skinner/b,
 		/obj/item/device/modkit_conversion/fluff/skinner/c)
+
+// ********
+// MASMC
+// ********
+
+// Kettek Ollarch
+/obj/item/weapon/storage/box/fluff/kettek
+	name = "Kettek's box"
+	desc = "a kit containing Kettek's equipment."
+	has_items = list (
+		/obj/item/accessory/fluff/kettek_collar)

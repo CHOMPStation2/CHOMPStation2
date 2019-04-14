@@ -12,6 +12,7 @@
 	starts_with = list(
 		/obj/item/clothing/under/rank/security = 3,
 		/obj/item/clothing/under/rank/security2 = 3,
+		/obj/item/clothing/under/rank/security/turtleneck = 3,
 		/obj/item/clothing/under/rank/security/skirt = 2,
 		/obj/item/clothing/shoes/boots/jackboots = 3,
 		/obj/item/clothing/head/soft/sec = 3,
@@ -22,7 +23,7 @@
 		/obj/item/clothing/accessory/armband = 3,
 		/obj/item/clothing/accessory/holster/waist = 3)
 
-/obj/structure/closet/wardrobe/red/initialize()
+/obj/structure/closet/wardrobe/red/Initialize()
 	if(prob(50))
 		starts_with += /obj/item/weapon/storage/backpack/security
 	else
@@ -101,6 +102,9 @@
 		/obj/item/clothing/under/wedding/bride_white,
 		/obj/item/weapon/storage/backpack/cultpack,
 		/obj/item/weapon/storage/fancy/candle_box = 2,
+		/obj/item/weapon/storage/fancy/whitecandle_box,
+		/obj/item/weapon/storage/fancy/blackcandle_box,
+		/obj/item/godfig = 2,
 		/obj/item/weapon/deck/tarot)
 
 /obj/structure/closet/wardrobe/monastary
@@ -189,6 +193,7 @@
 	starts_with = list(
 		/obj/item/clothing/under/rank/engineer = 3,
 		/obj/item/clothing/under/rank/engineer/skirt = 3,
+		/obj/item/clothing/under/rank/engineer/turtleneck = 3,
 		/obj/item/clothing/shoes/orange = 3,
 		/obj/item/clothing/head/hardhat = 3,
 		/obj/item/clothing/head/beret/engineering = 3,
@@ -229,6 +234,7 @@
 	starts_with = list(
 		/obj/item/clothing/under/rank/scientist = 3,
 		/obj/item/clothing/under/rank/scientist/skirt = 2,
+		/obj/item/clothing/under/rank/scientist/turtleneck = 3,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 3,
 		/obj/item/clothing/shoes/white = 3,
 		/obj/item/clothing/shoes/slippers = 3,
@@ -237,7 +243,7 @@
 		/obj/item/weapon/storage/backpack/toxins,
 		/obj/item/weapon/storage/backpack/satchel/tox)
 
-/obj/structure/closet/wardrobe/science_white/initialize()
+/obj/structure/closet/wardrobe/science_white/Initialize()
 	if(prob(50))
 		starts_with += /obj/item/weapon/storage/backpack/dufflebag/sci
 	else
@@ -263,7 +269,7 @@
 		/obj/item/weapon/storage/backpack/toxins,
 		/obj/item/weapon/storage/backpack/satchel/tox)
 
-/obj/structure/closet/wardrobe/robotics_black/initialize()
+/obj/structure/closet/wardrobe/robotics_black/Initialize()
 	if(prob(50))
 		starts_with += /obj/item/weapon/storage/backpack/dufflebag/sci
 	else
@@ -324,6 +330,7 @@
 	starts_with = list(
 		/obj/item/clothing/under/rank/medical = 2,
 		/obj/item/clothing/under/rank/medical/skirt = 2,
+		/obj/item/clothing/under/rank/medical/turtleneck = 2,
 		/obj/item/clothing/under/rank/medical/scrubs,
 		/obj/item/clothing/under/rank/medical/scrubs/green,
 		/obj/item/clothing/under/rank/medical/scrubs/purple,
@@ -415,7 +422,7 @@
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/under/pants/camo)
 
-/obj/structure/closet/wardrobe/tactical/initialize()
+/obj/structure/closet/wardrobe/tactical/Initialize()
 	if(prob(25))
 		starts_with += /obj/item/weapon/storage/belt/security/tactical/bandolier
 	else

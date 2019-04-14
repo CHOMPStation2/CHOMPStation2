@@ -1,5 +1,4 @@
 /* 'basic' language; spoken by default.
-
 /datum/language/common
 	name = "Galactic Common"
 	desc = "The common galactic tongue."
@@ -33,35 +32,11 @@
 	ask_verb = "rurs"
 	exclaim_verb = "barks"
 	colour = "vulpkanin"
-	key = "8" //lol, no idea - Poojawa
+	key = "8"
 	syllables = list("rur","ya","cen","rawr","bar","kuk","tek","qat","uk","wu","vuh","tah","tch","schz","auch", \
 	"ist","ein","entch","zwichs","tut","mir","wo","bis","es","vor","nic","gro","lll","enem","zandt","tzch","noch", \
 	"hel","ischt","far","wa","baram","iereng","tech","lach","sam","mak","lich","gen","or","ag","eck","gec","stag","onn", \
 	"bin","ket","jarl","vulf","einech","cresthz","azunein","ghzth")
-
-/*
-/datum/language/demon
-    name = "Daemon"
-    desc = "The language spoken by the demons of Infernum, it's composed of deep chanting. It's rarely spoken off of Infernum due to the volume one has to exert."
-    speech_verb = "chants"
-    ask_verb = "croons"
-    exclaim_verb = "incants"
-    colour = "cult" //No clue what to put here - Table
-    key = "-" //dunno if this is a valid key. - Table
-    syllables = list("viepn","e","bag","docu","kar","xlaqf","raa","qwos","nen","ty","von","kytaf","xin","ty","ka","baak","hlafaifpyk","znu","agrith","na'ar","uah","plhu","six","fhler","bjel","scee","lleri",
-    "dttm","aggr","uujl","hjjifr","wwuthaav",)
-
-/datum/language/angel
-    name = "Angellic"
-    desc = "The graceful language spoken by angels, composed of quiet hymmns. Formally, Angels sing it."
-    speech_verb = "sings"
-    ask_verb = "hums"
-    exclaim_verb = "loudly sings"
-    colour = "birdsongc" //No clue what to put here - Table
-    key = "*" //dunno if this is a valid key. - Table
-    syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
-    "mihi","wan","six","salve","tartu")
-(YWEdit) Why define all this twice? */
 
 /datum/language/squirrel
 	name = LANGUAGE_ECUREUILIAN
@@ -70,7 +45,7 @@
 	whisper_verb = "whispers"
 	exclaim_verb = "chitters"
 	key = "9"
-	flags = 0
+
 	syllables = list("sque","sqah","boo","beh","nweh","boopa","nah","wah","een","sweh")
 
 /datum/language/demon
@@ -96,7 +71,7 @@
 	syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
 	"mihi","wan","six","salve","tartu")
 	machine_understands = FALSE
-/* (YWEdit)
+
 /datum/language/tajsign
 	name = LANGUAGE_SIIK_TAJR
 	desc = "A type of sign language mostly based on tail movements that was used during the Tajaran rebellion."
@@ -104,6 +79,18 @@
 	colour = "tajaran"
 	key = "l"
 	flags = SIGNLANG | NO_STUTTER | NONVERBAL // | WHITELISTED (YWEdit)
+	
+/datum/language/bug
+    name = LANGUAGE_VESPINAE
+    desc = "A jarring and clicky language developed and used by Vasilissans, it is designed for use with mouthparts and as a result has become a common language for various arthropod species."
+    speech_verb = "clicks"
+    ask_verb = "chitters"
+    exclaim_verb = "rasps"
+    colour = "bug"
+    key = "x"
+    syllables = list("vaur","uyek","uyit","avek","sc'theth","k'ztak","teth","wre'ge","lii","dra'","zo'","ra'","kax'","zz","vh","ik","ak",
+    "uhk","zir","sc'orth","sc'er","thc'yek","th'zirk","th'esk","k'ayek","ka'mil","sc'","ik'yir","yol","kig","k'zit","'","'","zrk","krg","isk'yet","na'k",
+    "sc'azz","th'sc","nil","n'ahk","sc'yeth","aur'sk","iy'it","azzg","a'","i'","o'","u'","a","i","o","u","zz","kr","ak","nrk","tzzk","bz","xic'","k'lax'","histh")
 
 /datum/language/unathi
 	flags = 0
@@ -115,5 +102,7 @@
 	flags = 0
 /datum/language/seromi
 	flags = 0
+/datum/language/zaddat
+	flags = 0
 /datum/language/gutter
-	machine_understands = FALSE */
+	machine_understands = FALSE

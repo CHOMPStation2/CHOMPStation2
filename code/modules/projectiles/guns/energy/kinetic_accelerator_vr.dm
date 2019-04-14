@@ -30,7 +30,7 @@
 				to_chat(user, "<span class='notice'>There is a [M.name] mod installed, using <b>[M.cost]%</b> capacity.</span>")
 
 /obj/item/weapon/gun/energy/kinetic_accelerator/attackby(obj/item/A, mob/user)
-	if(istype(A, /obj/item/weapon/crowbar))
+	if(istype(A, /obj/item/weapon/tool/crowbar))
 		if(modkits.len)
 			to_chat(user, "<span class='notice'>You pry the modifications out.</span>")
 			playsound(loc, A.usesound, 100, 1)
@@ -100,7 +100,7 @@
 	damage = 32
 	damage_type = BRUTE
 	check_armour = "bomb"
-	kill_count = 3 // Our "range" var is named "kill_count". Yes it is.
+	range = 3 // Our "range" var is named "kill_count". Yes it is.
 
 	var/pressure_decrease = 0.25
 	var/turf_aoe = FALSE
@@ -109,11 +109,11 @@
 
 // /obj/item/projectile/kinetic/pod
 // 	kill_count = 4
-// 
+//
 // /obj/item/projectile/kinetic/pod/regular
 // 	damage = 50
 // 	pressure_decrease = 0.5
-// 
+//
 // /obj/item/projectile/kinetic/pod/enhanced
 // 	turf_aoe = TRUE
 // 	mob_aoe = TRUE
@@ -219,7 +219,7 @@
 	cost = 24 //so you can fit four plus a tracer cosmetic
 
 /obj/item/borg/upgrade/modkit/range/modify_projectile(obj/item/projectile/kinetic/K)
-	K.kill_count += modifier
+	K.range += modifier
 
 
 //Damage

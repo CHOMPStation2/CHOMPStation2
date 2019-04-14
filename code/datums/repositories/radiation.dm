@@ -86,7 +86,7 @@ var/global/repository/radiation/radiation_repository = new()
 	add_source(S)
 
 // Sets the radiation in a range to a constant value.
-/repository/radiation/proc/flat_radiate(source, power, range, var/respect_maint = FALSE)
+/repository/radiation/proc/flat_radiate(source, power, range, var/respect_maint = TRUE)	//VOREStation edit; Respect shielded areas by default please.
 	if(!(source && power && range))
 		return
 	var/datum/radiation_source/S = new()
@@ -98,7 +98,7 @@ var/global/repository/radiation/radiation_repository = new()
 	add_source(S)
 
 // Irradiates a full Z-level. Hacky way of doing it, but not too expensive.
-/repository/radiation/proc/z_radiate(var/atom/source, power, var/respect_maint = FALSE)
+/repository/radiation/proc/z_radiate(var/atom/source, power, var/respect_maint = TRUE)	//VOREStation edit; Respect shielded areas by default please.
 	if(!(power && source))
 		return
 	var/turf/epicentre = locate(round(world.maxx / 2), round(world.maxy / 2), source.z)
@@ -122,7 +122,7 @@ var/global/repository/radiation/radiation_repository = new()
 
 /turf/simulated/wall/calc_rad_resistance()
 	radiation_repository.resistance_cache[src] = (length(contents) + 1)
-	cached_rad_resistance = (density ? material.weight : 0)
+	cached_rad_resistance = (density ? material.weight + material.radiation_resistance : 0)
 
 /obj
 	var/rad_resistance = 0  // Allow overriding rad resistance

@@ -8,7 +8,6 @@
 	icon = 'icons/obj/autopsy_scanner.dmi'
 	icon_state = ""
 	item_state = "autopsy_scanner"
-	flags = CONDUCT
 	w_class = ITEMSIZE_SMALL
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
 	var/list/datum/autopsy_data_scanner/wdata = list()
@@ -167,21 +166,24 @@
 	if(!istype(M))
 		return 0
 
+	if (user.a_intent == I_HELP)
+		return ..()
+
 	if(target_name != M.name)
 		target_name = M.name
 		src.wdata = list()
 		src.chemtraces = list()
 		src.timeofdeath = null
-		user << "<span class='notice'>A new patient has been registered. Purging data for previous patient.</span>"
+		to_chat(user, "<span class='notice'>A new patient has been registered. Purging data for previous patient.</span>")
 
 	src.timeofdeath = M.timeofdeath
 
 	var/obj/item/organ/external/S = M.get_organ(user.zone_sel.selecting)
 	if(!S)
-		usr << "<span class='warning'>You can't scan this body part.</span>"
+		to_chat(user, "<span class='warning'>You can't scan this body part.</span>")
 		return
 	if(!S.open)
-		usr << "<span class='warning'>You have to cut [S] open first!</span>"
+		to_chat(user, "<span class='warning'>You have to cut [S] open first!</span>")
 		return
 	M.visible_message("<span class='notice'>\The [user] scans the wounds on [M]'s [S.name] with [src]</span>")
 

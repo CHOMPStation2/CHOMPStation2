@@ -4,7 +4,6 @@
 	icon = 'icons/obj/items.dmi'
 	name = "Coin"
 	icon_state = "coin"
-	flags = CONDUCT
 	force = 0.0
 	throwforce = 0.0
 	w_class = ITEMSIZE_TINY
@@ -57,7 +56,7 @@
 		else
 			user << "<span class='notice'>This cable coil appears to be empty.</span>"
 		return
-	else if(istype(W,/obj/item/weapon/wirecutters))
+	else if(W.is_wirecutter())
 		if(!string_attached)
 			..()
 			return

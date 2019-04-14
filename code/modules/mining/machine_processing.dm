@@ -11,11 +11,12 @@
 	density = TRUE
 	anchored = TRUE
 
-	var/obj/item/weapon/card/id/inserted_id // VOREStation Edit - Inserted Id card
+	var/obj/item/weapon/card/id/inserted_id	// Inserted ID card, for points
+
 	var/obj/machinery/mineral/processing_unit/machine = null
 	var/show_all_ores = FALSE
 
-/obj/machinery/mineral/processing_unit_console/initialize()
+/obj/machinery/mineral/processing_unit_console/Initialize()
 	. = ..()
 	src.machine = locate(/obj/machinery/mineral/processing_unit) in range(5, src)
 	if (machine)
@@ -24,13 +25,17 @@
 		log_debug("Ore processing machine console at [src.x], [src.y], [src.z] could not find its machine!")
 		qdel(src)
 
-// VOREStation Add Start
 /obj/machinery/mineral/processing_unit_console/Destroy()
 	if(inserted_id)
 		inserted_id.forceMove(loc) //Prevents deconstructing from deleting whatever ID was inside it.
 	. = ..()
 
-/obj/machinery/mineral/processing_unit_console/attackby(var/obj/item/I, var/mob/user)	
+/obj/machinery/mineral/processing_unit_console/attack_hand(mob/user)
+	if(..())
+		return
+	interact(user)
+
+/obj/machinery/mineral/processing_unit_console/attackby(var/obj/item/I, var/mob/user)
 	if(istype(I, /obj/item/weapon/card/id))
 		if(!powered())
 			return
@@ -40,12 +45,6 @@
 			interact(user)
 		return
 	..()
-// VOREStation Add End
-
-/obj/machinery/mineral/processing_unit_console/attack_hand(mob/user)
-	if(..())
-		return
-	interact(user)
 
 /obj/machinery/mineral/processing_unit_console/interact(mob/user)
 	if(..())
@@ -58,14 +57,13 @@
 	user.set_machine(src)
 
 	var/dat = "<h1>Ore processor console</h1>"
-	// VOREStation Add Start
+
 	dat += "Current unclaimed points: [machine.points]<br>"
 	if(istype(inserted_id))
 		dat += "You have [inserted_id.mining_points] mining points collected. <A href='?src=\ref[src];choice=eject'>Eject ID.</A><br>"
 		dat += "<A href='?src=\ref[src];choice=claim'>Claim points.</A><br>"
 	else
 		dat += "No ID inserted.  <A href='?src=\ref[src];choice=insert'>Insert ID.</A><br>"
-	// VOREStation Add End
 
 	dat += "<hr><table>"
 
@@ -123,7 +121,6 @@
 
 		show_all_ores = !show_all_ores
 
-	// VOREStation Add Start
 	if(href_list["choice"])
 		if(istype(inserted_id))
 			if(href_list["choice"] == "eject")
@@ -138,13 +135,11 @@
 		else if(href_list["choice"] == "insert")
 			var/obj/item/weapon/card/id/I = usr.get_active_hand()
 			if(istype(I))
-				if(!usr.drop_item())
-					return 1
+				usr.drop_item()
 				I.forceMove(src)
 				inserted_id = I
 			else
 				to_chat(usr, "<span class='warning'>No valid ID.</span>")
-	// VOREStation Add End
 
 	src.updateUsrDialog()
 	return
@@ -167,20 +162,19 @@
 	var/list/ores_stored[0]
 	var/static/list/alloy_data
 	var/active = FALSE
-	// VOREStation Add Start
+
 	var/points = 0
 	var/static/list/ore_values = list(
 		"sand" = 1,
 		"hematite" = 1,
 		"carbon" = 1,
-		"phoron" = 15, 
-		"silver" = 16, 
-		"gold" = 18, 
+		"phoron" = 15,
+		"silver" = 16,
+		"gold" = 18,
 		"uranium" = 30,
 		"diamond" = 50,
 		"platinum" = 40,
 		"mhydrogen" = 40)
-	// VOREStation Add End
 
 /obj/machinery/mineral/processing_unit/New()
 	..()
@@ -198,7 +192,7 @@
 			ores_processing[OD.name] = 0
 			ores_stored[OD.name] = 0
 
-/obj/machinery/mineral/processing_unit/initialize()
+/obj/machinery/mineral/processing_unit/Initialize()
 	. = ..()
 	// TODO - Eschew input/output machinery and just use dirs ~Leshana
 	//Locate our output and input machinery.
@@ -211,8 +205,12 @@
 	return
 
 /obj/machinery/mineral/processing_unit/process()
-	if(!src.output || !src.input) return
-	if(panel_open || !powered()) return // VOREStation Edit - Don't work when unpowered
+
+	if (!src.output || !src.input)
+		return
+
+	if(panel_open || !powered())
+		return
 
 	var/list/tick_alloys = list()
 
@@ -222,8 +220,7 @@
 		if(!O) break
 		if(!isnull(ores_stored[O.material]))
 			ores_stored[O.material]++
-			points += ore_values[O.material] // VOREStation Edit - Give Points!
-
+			points += ore_values[O.material] // Give Points!
 		qdel(O)
 
 	if(!active)
@@ -276,7 +273,7 @@
 
 			else if(ores_processing[metal] == PROCESS_COMPRESS && O.compresses_to) //Compressing.
 
-				var/can_make = Clamp(ores_stored[metal],0,sheets_per_tick-sheets)
+				var/can_make = CLAMP(ores_stored[metal],0,sheets_per_tick-sheets)
 				if(can_make%2>0) can_make--
 
 				var/material/M = get_material_by_name(O.compresses_to)
@@ -291,7 +288,7 @@
 
 			else if(ores_processing[metal] == PROCESS_SMELT && O.smelts_to) //Smelting.
 
-				var/can_make = Clamp(ores_stored[metal],0,sheets_per_tick-sheets)
+				var/can_make = CLAMP(ores_stored[metal],0,sheets_per_tick-sheets)
 
 				var/material/M = get_material_by_name(O.smelts_to)
 				if(!istype(M) || !can_make || ores_stored[metal] < 1)

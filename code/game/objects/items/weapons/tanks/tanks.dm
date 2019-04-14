@@ -15,7 +15,6 @@ var/list/global/tank_gauge_cache = list()
 	var/last_gauge_pressure
 	var/gauge_cap = 6
 
-	flags = CONDUCT
 	slot_flags = SLOT_BACK
 	w_class = ITEMSIZE_NORMAL
 
@@ -42,14 +41,14 @@ var/list/global/tank_gauge_cache = list()
 	description_info = "These tanks are utilised to store any of the various types of gaseous substances. \
 	They can be attached to various portable atmospheric devices to be filled or emptied. <br>\
 	<br>\
-	Each tank is fitted with an emergency relief valve. This relief valve will open if the tank is pressurised to over ~3000kPa or heated to over 173ºC. \
+	Each tank is fitted with an emergency relief valve. This relief valve will open if the tank is pressurised to over ~3000kPa or heated to over 173ï¿½C. \
 	The valve itself will close after expending most or all of the contents into the air.<br>\
 	<br>\
 	Filling a tank such that experiences ~4000kPa of pressure will cause the tank to rupture, spilling out its contents and destroying the tank. \
 	Tanks filled over ~5000kPa will rupture rather violently, exploding with significant force."
 
-	description_antag = "Each tank may be incited to burn by attaching wires and an igniter assembly, though the igniter can only be used once and the mixture only burn if the igniter pushes a flammable gas mixture above the minimum burn temperature (126ºC). \
-	Wired and assembled tanks may be disarmed with a set of wirecutters. Any exploding or rupturing tank will generate shrapnel, assuming their relief valves have been welded beforehand. Even if not, they can be incited to expel hot gas on ignition if pushed above 173ºC. \
+	description_antag = "Each tank may be incited to burn by attaching wires and an igniter assembly, though the igniter can only be used once and the mixture only burn if the igniter pushes a flammable gas mixture above the minimum burn temperature (126ï¿½C). \
+	Wired and assembled tanks may be disarmed with a set of wirecutters. Any exploding or rupturing tank will generate shrapnel, assuming their relief valves have been welded beforehand. Even if not, they can be incited to expel hot gas on ignition if pushed above 173ï¿½C. \
 	Relatively easy to make, the single tank bomb requries no tank transfer valve, and is still a fairly formidable weapon that can be manufactured from any tank."
 
 /obj/item/weapon/tank/proc/init_proxy()
@@ -58,22 +57,22 @@ var/list/global/tank_gauge_cache = list()
 	src.proxyassembly = proxy
 
 
-/obj/item/weapon/tank/New()
+/obj/item/weapon/tank/Initialize()
 	..()
 
 	src.init_proxy()
 	src.air_contents = new /datum/gas_mixture()
 	src.air_contents.volume = volume //liters
 	src.air_contents.temperature = T20C
-	processing_objects.Add(src)
+	START_PROCESSING(SSobj, src)
 	update_gauge()
 	return
 
 /obj/item/weapon/tank/Destroy()
-	qdel_null(air_contents)
+	QDEL_NULL(air_contents)
 
-	processing_objects.Remove(src)
-	qdel_null(src.proxyassembly)
+	STOP_PROCESSING(SSobj, src)
+	QDEL_NULL(src.proxyassembly)
 
 	if(istype(loc, /obj/item/device/transfer_valve))
 		var/obj/item/device/transfer_valve/TTV = loc
@@ -130,7 +129,7 @@ var/list/global/tank_gauge_cache = list()
 			to_chat(user, "<span class='notice'>You attach the wires to the tank.</span>")
 			src.add_bomb_overlay()
 
-	if(istype(W, /obj/item/weapon/wirecutters))
+	if(W.is_wirecutter())
 		if(wired && src.proxyassembly.assembly)
 
 			to_chat(user, "<span class='notice'>You carefully begin clipping the wires that attach to the tank.</span>")
@@ -264,7 +263,7 @@ var/list/global/tank_gauge_cache = list()
 					data["maskConnected"] = 1
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		// the ui does not exist, so we'll create a new() one
         // for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
@@ -464,7 +463,7 @@ var/list/global/tank_gauge_cache = list()
 			if(!T)
 				return
 			T.assume_air(air_contents)
-			playsound(get_turf(src), 'sound/weapons/shotgun.ogg', 20, 1)
+			playsound(get_turf(src), 'sound/weapons/Gunshot_shotgun.ogg', 20, 1)
 			visible_message("\icon[src] <span class='danger'>\The [src] flies apart!</span>", "<span class='warning'>You hear a bang!</span>")
 			T.hotspot_expose(air_contents.temperature, 70, 1)
 
@@ -503,7 +502,7 @@ var/list/global/tank_gauge_cache = list()
 
 			var/release_ratio = 0.002
 			if(tank_pressure)
-				release_ratio = Clamp(0.002, sqrt(max(tank_pressure-env_pressure,0)/tank_pressure),1)
+				release_ratio = CLAMP(0.002, sqrt(max(tank_pressure-env_pressure,0)/tank_pressure),1)
 
 			var/datum/gas_mixture/leaked_gas = air_contents.remove_ratio(release_ratio)
 			//dynamic air release based on ambient pressure
@@ -674,32 +673,3 @@ var/list/global/tank_gauge_cache = list()
 /obj/item/device/tankassemblyproxy/HasProximity(atom/movable/AM as mob|obj)
 	if(src.assembly)
 		src.assembly.HasProximity(AM)
-
-
-/obj/item/projectile/bullet/pellet/fragment/tank
-	name = "metal fragment"
-	damage = 9  //Big chunks flying off.
-	range_step = 2 //controls damage falloff with distance. projectiles lose a "pellet" each time they travel this distance. Can be a non-integer.
-
-	base_spread = 0 //causes it to be treated as a shrapnel explosion instead of cone
-	spread_step = 20
-
-	armor_penetration = 20
-
-	silenced = 1
-	no_attack_log = 1
-	muzzle_type = null
-	pellets = 3
-
-/obj/item/projectile/bullet/pellet/fragment/tank/small
-	name = "small metal fragment"
-	damage = 6
-	armor_penetration = 5
-	pellets = 5
-
-/obj/item/projectile/bullet/pellet/fragment/tank/big
-	name = "large metal fragment"
-	damage = 17
-	armor_penetration = 10
-	range_step = 5 //controls damage falloff with distance. projectiles lose a "pellet" each time they travel this distance. Can be a non-integer.
-	pellets = 1

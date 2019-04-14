@@ -37,14 +37,26 @@
 		//Handle stray items
 		if(isitem(A) && !did_an_item)
 			var/obj/item/I = A
-			if(mode_flags & DM_FLAG_ITEMWEAK)
-				I.gurgle_contaminate(src, cont_flavor)
+			if(contaminates || istype(I,/obj/item/weapon/card/id))
+				I.gurgle_contaminate(src, contamination_flavor, contamination_color)
+			if(item_digest_mode == IM_HOLD)
 				items_preserved |= I
+			else if(item_digest_mode == IM_DIGEST_FOOD)
+				if(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I,/obj/item/organ))
+					digest_item(I)
+				else
+					items_preserved |= I
+				if(prob(25)) //Less often than with normal digestion
+					play_sound = pick(digestion_sounds)
+			else if(item_digest_mode == IM_DIGEST)
+				if(I.digest_stage && I.digest_stage > 0)
+					digest_item(I)
+				else
+					digest_item(I)
+					did_an_item = TRUE
 				to_update = TRUE
-			else
-				digest_item(I)
-			to_update = TRUE
-			did_an_item = TRUE
+				if(prob(25)) //Less often than with normal digestion
+					play_sound = pick(digestion_sounds)
 
 		//Handle eaten mobs
 		else if(isliving(A))
@@ -69,13 +81,26 @@
 						var/obj/item/I = H.get_equipped_item(slot = slot)
 						if(I)
 							H.unEquip(I,force = TRUE)
-							if(mode_flags & DM_FLAG_ITEMWEAK)
-								I.gurgle_contaminate(contents, cont_flavor)
+							if(contaminates || istype(I,/obj/item/weapon/card/id))
+								I.gurgle_contaminate(contents, contamination_flavor, contamination_color)
+							if(item_digest_mode == IM_HOLD)
 								items_preserved |= I
-							else
+							else if(item_digest_mode == IM_DIGEST_FOOD)
+								if(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I,/obj/item/organ))
+									digest_item(I)
+								else
+									items_preserved |= I
+								if(prob(25)) //Less often than with normal digestion
+									play_sound = pick(digestion_sounds)
+							else if(item_digest_mode == IM_DIGEST)
 								digest_item(I)
+								if(prob(25)) //Less often than with normal digestion
+									play_sound = pick(digestion_sounds)
 							to_update = TRUE
 							break
+		//get rid of things like blood drops and gibs that end up in there
+		else if(istype(A,/obj/effect/decal/cleanable/))
+			qdel(A)
 
 ///////////////////////////// DM_HOLD /////////////////////////////
 	if(digest_mode == DM_HOLD)
@@ -253,8 +278,11 @@
 				continue
 
 			if(owner.nutrition > 90 && (M.health < M.maxHealth))
-				M.adjustBruteLoss(-5)
-				M.adjustFireLoss(-5)
+				M.adjustBruteLoss(-2.5)
+				M.adjustFireLoss(-2.5)
+				M.adjustToxLoss(-5)
+				M.adjustOxyLoss(-5)
+				M.adjustCloneLoss(-1.25)
 				owner.nutrition -= 2
 				if(M.nutrition <= 400)
 					M.nutrition += 1

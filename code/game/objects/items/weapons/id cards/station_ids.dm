@@ -8,7 +8,6 @@
 		SPECIES_TESHARI = 'icons/mob/species/seromi/id.dmi'
 		)
 
-	var/mining_points = 0 // VOREStation Edit - For redeeming at mining equipment lockers
 	var/access = list()
 	var/registered_name = "Unknown" // The name registered_name on the card
 	slot_flags = SLOT_ID | SLOT_EARS
@@ -30,6 +29,8 @@
 	var/assignment = null	//can be alt title or the actual job
 	var/rank = null			//actual job
 	var/dorm = 0			// determines if this ID has claimed a dorm already
+
+	var/mining_points = 0	// For redeeming at mining equipment vendors
 
 /obj/item/weapon/card/id/examine(mob/user)
 	set src in oview(1)
@@ -120,7 +121,7 @@
 
 	return ..()
 
-/obj/item/weapon/card/id/initialize()
+/obj/item/weapon/card/id/Initialize()
 	. = ..()
 	var/datum/job/J = job_master.GetJob(rank)
 	if(J)
@@ -168,7 +169,7 @@
 	item_state = "tdgreen"
 	assignment = "Synthetic"
 
-/obj/item/weapon/card/id/synthetic/initialize()
+/obj/item/weapon/card/id/synthetic/Initialize()
 	. = ..()
 	access = get_all_station_access() + access_synth
 
@@ -179,11 +180,11 @@
 	registered_name = "Central Command"
 	assignment = "General"
 
-/obj/item/weapon/card/id/centcom/initialize()
+/obj/item/weapon/card/id/centcom/Initialize()
 	. = ..()
 	access = get_all_centcom_access()
 
-/obj/item/weapon/card/id/centcom/station/initialize()
+/obj/item/weapon/card/id/centcom/station/Initialize()
 	. = ..()
 	access |= get_all_station_access()
 
@@ -192,7 +193,7 @@
 	assignment = "Emergency Response Team"
 	icon_state = "centcom"
 
-/obj/item/weapon/card/id/centcom/ERT/initialize()
+/obj/item/weapon/card/id/centcom/ERT/Initialize()
 	. = ..()
 	access |= get_all_station_access()
 

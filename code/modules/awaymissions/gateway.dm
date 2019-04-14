@@ -8,7 +8,7 @@
 	var/active = 0
 
 
-/obj/machinery/gateway/initialize()
+/obj/machinery/gateway/Initialize()
 	update_icon()
 	if(dir == SOUTH)
 		density = 0
@@ -34,22 +34,22 @@
 	var/wait = 0				//this just grabs world.time at world start
 	var/obj/machinery/gateway/centeraway/awaygate = null
 
-/obj/machinery/gateway/centerstation/initialize()
+/obj/machinery/gateway/centerstation/Initialize()
 	update_icon()
 	wait = world.time + config.gateway_delay	//+ thirty minutes default
 	awaygate = locate(/obj/machinery/gateway/centeraway)
 	. = ..()
+	density = 1 //VOREStation Add
 
 /obj/machinery/gateway/centerstation/update_icon()
 	if(active)
 		icon_state = "oncenter"
 		return
 	icon_state = "offcenter"
-
+/* VOREStation Removal - Doesn't do anything
 /obj/machinery/gateway/centerstation/New()
 	density = 1
-
-
+*/ //VOREStation Removal End
 
 obj/machinery/gateway/centerstation/process()
 	if(stat & (NOPOWER))
@@ -90,7 +90,7 @@ obj/machinery/gateway/centerstation/process()
 	if(world.time < wait)
 		user << "<span class='notice'>Error: Warpspace triangulation in progress. Estimated time to completion: [round(((wait - world.time) / 10) / 60)] minutes.</span>"
 		return
-	if(!awaygate.calibrated && LAZYLEN(awaydestinations))
+	if(!awaygate.calibrated && !LAZYLEN(awaydestinations)) //VOREStation Edit
 		user << "<span class='notice'>Error: Destination gate uncalibrated. Gateway unsafe to use without far-end calibration update.</span>"
 		return
 
@@ -164,7 +164,7 @@ obj/machinery/gateway/centerstation/process()
 	var/obj/machinery/gateway/centeraway/stationgate = null
 
 
-/obj/machinery/gateway/centeraway/initialize()
+/obj/machinery/gateway/centeraway/Initialize()
 	update_icon()
 	stationgate = locate(/obj/machinery/gateway/centerstation)
 	. = ..()

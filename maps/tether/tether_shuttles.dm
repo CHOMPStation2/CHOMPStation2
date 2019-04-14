@@ -63,6 +63,7 @@
 //
 // The backup tether shuttle uses experimental engines and can degrade and/or crash!
 //
+/* //Disabling the crash mechanics per request
 /datum/shuttle/ferry/tether_backup
 	crash_message = "Tether shuttle distress signal received. Shuttle location is approximately 200 meters from tether base."
 	category = /datum/shuttle/ferry/tether_backup // So shuttle_controller.dm doesn't try and instantiate this type as an acutal mapped in shuttle.
@@ -166,7 +167,7 @@
 	wear = 20
 	update_icon()
 	return 1
-
+*/
 ////////////////////////////////////////
 //////// Excursion Shuttle /////////////
 ////////////////////////////////////////
@@ -174,7 +175,7 @@
 	name = "shuttle control console"
 	shuttle_tag = "Excursion Shuttle"
 	req_access = list()
-	req_one_access = list(access_heads,access_explorer,access_pilot)
+	req_one_access = list(access_pilot)
 	var/wait_time = 45 MINUTES
 
 /obj/machinery/computer/shuttle_control/web/excursion/ui_interact()
@@ -190,7 +191,7 @@
 	current_area = /area/shuttle/excursion/tether
 	docking_controller_tag = "expshuttle_docker"
 	web_master_type = /datum/shuttle_web_master/excursion
-	var/abduct_chance = 0.5 //Prob
+	var/abduct_chance = 0 //Prob
 
 /datum/shuttle/web_shuttle/excursion/long_jump(var/area/departing, var/area/destination, var/area/interim, var/travel_time, var/direction)
 	if(prob(abduct_chance))

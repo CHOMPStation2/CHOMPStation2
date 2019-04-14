@@ -34,6 +34,7 @@
 #define LANGUAGE_SOL_COMMON "Sol Common"
 #define LANGUAGE_UNATHI "Sinta'unathi"
 #define LANGUAGE_SIIK "Siik"
+#define LANGUAGE_SIIK_TAJR "Siik Tajr"
 #define LANGUAGE_SKRELLIAN "Common Skrellian"
 #define LANGUAGE_TRADEBAND "Tradeband"
 #define LANGUAGE_GUTTER "Gutter"
@@ -51,6 +52,8 @@
 #define LANGUAGE_EVENT1 "Occursus"
 #define LANGUAGE_AKHANI "Akhani"
 #define LANGUAGE_ALAI "Alai"
+#define LANGUAGE_ZADDAT "Vedahq"
+#define LANGUAGE_GIBBERISH "Babel"
 
 // Language flags.
 #define WHITELISTED  1   // Language is available if the speaker is whitelisted.

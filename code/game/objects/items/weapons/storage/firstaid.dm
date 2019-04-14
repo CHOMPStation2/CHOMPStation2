@@ -17,7 +17,7 @@
 	max_storage_space = ITEMSIZE_COST_SMALL * 7 // 14
 //	var/list/icon_variety // VOREStation edit
 
-/obj/item/weapon/storage/firstaid/initialize()
+/obj/item/weapon/storage/firstaid/Initialize()
 	. = ..()
 //	if(icon_variety) // VOREStation edit
 //		icon_state = pick(icon_variety)
@@ -133,8 +133,9 @@
 		/obj/item/weapon/surgical/bonegel,
 		/obj/item/weapon/surgical/FixOVein,
 		/obj/item/stack/medical/advanced/bruise_pack,
-		/obj/item/stack/nanopaste
-		// /obj/item/device/healthanalyzer/advanced //VOREStation Removal
+		/obj/item/stack/nanopaste,
+		///obj/item/device/healthanalyzer/advanced, //VOREStation Removal,
+		/obj/item/weapon/autopsy_scanner
 		)
 
 	starts_with = list(
@@ -148,7 +149,8 @@
 		/obj/item/weapon/surgical/bonegel,
 		/obj/item/weapon/surgical/FixOVein,
 		/obj/item/stack/medical/advanced/bruise_pack,
-		///obj/item/device/healthanalyzer/advanced //VOREStation Removal
+		///obj/item/device/healthanalyzer/advanced, //VOREStation Removal,
+		/obj/item/weapon/autopsy_scanner
 		)
 
 /obj/item/weapon/storage/firstaid/clotting

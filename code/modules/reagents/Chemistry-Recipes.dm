@@ -96,7 +96,7 @@
 
 	return progress
 
-/datum/chemical_reaction/proc/process(var/datum/reagents/holder)
+/datum/chemical_reaction/process(var/datum/reagents/holder)
 	//determine how far the reaction can proceed
 	var/list/reaction_limits = list()
 	for(var/reactant in required_reagents)
@@ -299,6 +299,42 @@
 	inhibitors = list("clonexadone" = 1) // Messes with cryox
 	result_amount = 2
 
+/datum/chemical_reaction/respirodaxon
+	name = "Respirodaxon"
+	id = "respirodaxon"
+	result = "respirodaxon"
+	required_reagents = list("dexalinp" = 2, "biomass" = 2, "phoron" = 1)
+	catalysts = list("phoron" = 5)
+	inhibitors = list("dexalin" = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/gastirodaxon
+	name = "Gastirodaxon"
+	id = "gastirodaxon"
+	result = "gastirodaxon"
+	required_reagents = list("carthatoline" = 1, "biomass" = 2, "tungsten" = 2)
+	catalysts = list("phoron" = 5)
+	inhibitors = list("lithium" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/hepanephrodaxon
+	name = "Hepanephrodaxon"
+	id = "hepanephrodaxon"
+	result = "hepanephrodaxon"
+	required_reagents = list("carthatoline" = 2, "biomass" = 2, "lithium" = 1)
+	catalysts = list("phoron" = 5)
+	inhibitors = list("tungsten" = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/cordradaxon
+	name = "Cordradaxon"
+	id = "cordradaxon"
+	result = "cordradaxon"
+	required_reagents = list("potassium_chlorophoride" = 1, "biomass" = 2, "bicaridine" = 2)
+	catalysts = list("phoron" = 5)
+	inhibitors = list("clonexadone" = 1)
+	result_amount = 2
+
 /datum/chemical_reaction/virus_food
 	name = "Virus Food"
 	id = "virusfood"
@@ -422,6 +458,14 @@
 	id = "corophizine"
 	result = "corophizine"
 	required_reagents = list("spaceacillin" = 1, "carbon" = 1, "phoron" = 0.1)
+	catalysts = list("phoron" = 5)
+	result_amount = 2
+
+/datum/chemical_reaction/immunosuprizine
+	name = "Immunosuprizine"
+	id = "immunosuprizine"
+	result = "immunosuprizine"
+	required_reagents = list("corophizine" = 1, "tungsten" = 1, "sacid" = 1)
 	catalysts = list("phoron" = 5)
 	result_amount = 2
 
@@ -1848,7 +1892,7 @@
 	name = "Roy Rogers"
 	id = "roy_rogers"
 	result = "roy_rogers"
-	required_reagents = list("cola" = 4, "grenadine" = 1)
+	required_reagents = list("shirley_temple" = 5, "lemon_lime" = 2)
 	result_amount = 7
 
 /datum/chemical_reaction/drinks/collinsmix
@@ -2074,7 +2118,7 @@
 	name = "Screaming Viking"
 	id = "screamingviking"
 	result = "screamingviking"
-	required_reagents = list("vodka" = 1, "vermouth" = 1, "limejuice" = 1, "rum" = 1, "gin" = 1, "tonic" = 1)
+	required_reagents = list("martini" = 2, "vodkatonic" = 2, "limejuice" = 1, "rum" = 1)
 	result_amount = 6
 
 /datum/chemical_reaction/drinks/vilelemon
@@ -2210,6 +2254,98 @@
 	required_reagents = list("icecoffee" = 1, "whiskey" = 1, "mint" = 1)
 	result_amount = 3
 
+/datum/chemical_reaction/drinks/godsake
+	name = "Gods Sake"
+	id = "godsake"
+	result = "godsake"
+	required_reagents = list("sake" = 2, "holywater" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/godka //Why you would put this in your body, I don't know.
+	name = "Godka"
+	id = "godka"
+	result = "godka"
+	required_reagents = list("vodka" = 1, "holywater" = 1, "ethanol" = 1, "carthatoline" = 1)
+	catalysts = list("enzyme" = 5, "holywater" = 5)
+	result_amount = 1
+
+/datum/chemical_reaction/drinks/holywine
+	name = "Angel Ichor"
+	id = "holywine"
+	result = "holywine"
+	required_reagents = list("grapejuice" = 5, "gold" = 5)
+	catalysts = list("holywater" = 5)
+	result_amount = 10
+
+/datum/chemical_reaction/drinks/holy_mary
+	name = "Holy Mary"
+	id = "holymary"
+	result = "holymary"
+	required_reagents = list("vodka" = 2, "holywine" = 3, "limejuice" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/angelskiss
+	name = "Angels Kiss"
+	id = "angelskiss"
+	result = "angelskiss"
+	required_reagents = list("holywine" = 1, "kahlua" = 1, "rum" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/angelswrath
+	name = "Angels Wrath"
+	id = "angelswrath"
+	result = "angelswrath"
+	required_reagents = list("rum" = 3, "spacemountainwind" = 1, "holywine" = 1, "dr_gibb" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/ichor_mead
+	name = "Ichor Mead"
+	id = "ichor_mead"
+	result = "ichor_mead"
+	required_reagents = list("holywine" = 1, "mead" = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/drinks/oilslick
+	name = "Oil Slick"
+	id = "oilslick"
+	result = "oilslick"
+	required_reagents = list("cornoil" = 2, "honey" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/eggnog
+	name = "Eggnog"
+	id = "eggnog"
+	result = "eggnog"
+	required_reagents = list("milk" = 5, "cream" = 5, "sugar" = 5, "egg" = 3)
+	result_amount = 15
+
+/datum/chemical_reaction/drinks/nuclearwaste_radium
+	name = "Nuclear Waste"
+	id = "nuclearwasterad"
+	result = "nuclearwaste"
+	required_reagents = list("oilslick" = 1, "radium" = 1, "limejuice" = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/drinks/nuclearwaste_uranium
+	name = "Nuclear Waste"
+	id = "nuclearwasteuran"
+	result = "nuclearwaste"
+	required_reagents = list("oilslick" = 2, "uranium" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/sodaoil
+	name = "Soda Oil"
+	id = "sodaoil"
+	result = "sodaoil"
+	required_reagents = list("cornoil" = 4, "sodawater" = 1, "carbon" = 1, "tricordrazine" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/fusionnaire
+	name = "Fusionnaire"
+	id = "fusionnaire"
+	result = "fusionnaire"
+	required_reagents = list("lemonjuice" = 3, "vodka" = 2, "schnapps_pep" = 1, "schnapps_lem" = 1, "rum" = 1, "ice" = 1)
+	result_amount = 9
 
 //R-UST Port
 /datum/chemical_reaction/hyrdophoron
@@ -2246,6 +2382,14 @@
 	result = "qerr_quem"
 	required_reagents = list("nicotine" = 1, "carbon" = 1, "sugar" = 2)
 	result_amount = 4
+
+/datum/chemical_reaction/malish_qualem
+	name = "Malish-Qualem"
+	id = "malish-qualem"
+	result = "malish-qualem"
+	required_reagents = list("immunosuprizine" = 1, "qerr_quem" = 1, "inaprovaline" = 1)
+	catalysts = list("phoron" = 5)
+	result_amount = 2
 
 // Biomass, for cloning and bioprinters
 /datum/chemical_reaction/biomass

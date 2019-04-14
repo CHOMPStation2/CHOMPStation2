@@ -45,7 +45,7 @@
 		/obj/item/weapon/storage/box/holobadge/hos,
 		/obj/item/clothing/accessory/badge/holo/hos,
 		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/crowbar/red,
+		/obj/item/weapon/tool/crowbar/red,
 		/obj/item/weapon/storage/box/flashbangs,
 		/obj/item/device/flash,
 		/obj/item/weapon/melee/baton/loaded,
@@ -97,7 +97,7 @@
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless)
 
-/obj/structure/closet/secure_closet/nanotrasen_security/initialize()
+/obj/structure/closet/secure_closet/nanotrasen_security/Initialize()
 	if(prob(25))
 		starts_with += /obj/item/weapon/storage/backpack/security
 	else
@@ -135,7 +135,7 @@
 		/obj/item/weapon/storage/box/holobadge/hos,
 		/obj/item/clothing/accessory/badge/holo/hos,
 		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/crowbar/red,
+		/obj/item/weapon/tool/crowbar/red,
 		/obj/item/weapon/storage/box/flashbangs,
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/device/flash,
@@ -151,7 +151,7 @@
 		/obj/item/clothing/shoes/boots/jackboots/toeless,
 		/obj/item/clothing/under/nanotrasen/security/commander)
 
-/obj/structure/closet/secure_closet/nanotrasen_commander/initialize()
+/obj/structure/closet/secure_closet/nanotrasen_commander/Initialize()
 	if(prob(25))
 		starts_with += /obj/item/weapon/storage/backpack/security
 	else
@@ -197,7 +197,7 @@
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless)
 
-/obj/structure/closet/secure_closet/nanotrasen_warden/initialize()
+/obj/structure/closet/secure_closet/nanotrasen_warden/Initialize()
 	if(prob(25))
 		new /obj/item/weapon/storage/backpack/security(src)
 	else

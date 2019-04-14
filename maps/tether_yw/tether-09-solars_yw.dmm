@@ -936,8 +936,7 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
@@ -1318,7 +1317,7 @@
 	},
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
-/obj/item/weapon/wirecutters,
+/obj/item/weapon/tool/wirecutters,
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/testing)
 "cS" = (
@@ -1763,7 +1762,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/item/weapon/screwdriver,
+/obj/item/weapon/tool/screwdriver,
 /obj/item/device/assembly_holder/timer_igniter,
 /obj/machinery/camera/network/research_outpost{
 	dir = 4
@@ -1893,8 +1892,7 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -2896,14 +2894,14 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/wrench{
+/obj/item/weapon/tool/wrench{
 	pixel_x = 2;
 	pixel_y = 2
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/item/weapon/wrench{
+/obj/item/weapon/tool/wrench{
 	pixel_x = -2;
 	pixel_y = -2
 	},
@@ -3445,7 +3443,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/table/standard,
-/obj/item/weapon/wrench,
+/obj/item/weapon/tool/wrench,
 /obj/machinery/camera/network/research_outpost{
 	dir = 8
 	},
@@ -3462,7 +3460,7 @@
 	pixel_y = 24;
 	req_access = list()
 	},
-/obj/item/weapon/wrench,
+/obj/item/weapon/tool/wrench,
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/heating)
 "gB" = (
@@ -4409,8 +4407,7 @@
 /obj/machinery/portable_atmospherics/canister/sleeping_agent,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -4438,8 +4435,7 @@
 /obj/machinery/portable_atmospherics/canister/sleeping_agent,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/door/window/eastleft,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -4600,8 +4596,7 @@
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -4620,8 +4615,7 @@
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/door/window/eastleft,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -4686,8 +4680,7 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
@@ -4781,8 +4774,7 @@
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -4795,8 +4787,7 @@
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/door/window/eastleft,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -4834,8 +4825,7 @@
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -4848,8 +4838,7 @@
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/door/window/eastleft,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -4874,8 +4863,7 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -4888,8 +4876,7 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/door/window/eastleft,
 /obj/effect/floor_decal/rust,
@@ -4928,8 +4915,7 @@
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -4942,8 +4928,7 @@
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/conveyor{
 	dir = 4;
@@ -4969,8 +4954,7 @@
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/door/window/eastleft,
 /obj/effect/floor_decal/rust,

@@ -38,7 +38,6 @@
 		)
 	icon_state = "detective"
 	item_state = "gun"
-	flags =  CONDUCT
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	matter = list(DEFAULT_WALL_MATERIAL = 2000)
 	w_class = ITEMSIZE_NORMAL
@@ -56,7 +55,7 @@
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
 	var/burst_delay = 2	//delay between shots, if firing in bursts
 	var/move_delay = 1
-	var/fire_sound = 'sound/weapons/Gunshot.ogg'
+	var/fire_sound = null // This is handled by projectile.dm's fire_sound var now, but you can override the projectile's fire_sound with this one if you want to.
 	var/fire_sound_text = "gunshot"
 	var/fire_anim = null
 	var/recoil = 0		//screen shake
@@ -173,7 +172,7 @@
 	if(!user.IsAdvancedToolUser())
 		return 0
 	if(isanimal(user))
-		var/mob/living/simple_animal/S = user
+		var/mob/living/simple_mob/S = user
 		if(!S.IsHumanoidToolUser(src))
 			return 0
 
@@ -181,11 +180,11 @@
 	if(dna_lock && attached_lock.stored_dna)
 		if(!authorized_user(user))
 			if(attached_lock.safety_level == 0)
-				M << "<span class='danger'>\The [src] buzzes in dissapoint and displays an invalid DNA symbol.</span>"
+				to_chat(M, "<span class='danger'>\The [src] buzzes in dissapoint and displays an invalid DNA symbol.</span>")
 				return 0
 			if(!attached_lock.exploding)
 				if(attached_lock.safety_level == 1)
-					M << "<span class='danger'>\The [src] hisses in dissapointment.</span>"
+					to_chat(M, "<span class='danger'>\The [src] hisses in dissapointment.</span>")
 					visible_message("<span class='game say'><span class='name'>\The [src]</span> announces, \"Self-destruct occurring in ten seconds.\"</span>", "<span class='game say'><span class='name'>\The [src]</span> announces, \"Self-destruct occurring in ten seconds.\"</span>")
 					spawn(100)
 						explosion(src, 0, 0, 3, 4)
@@ -194,7 +193,7 @@
 						qdel(src)
 					return 0
 	if(HULK in M.mutations)
-		M << "<span class='danger'>Your fingers are much too large for the trigger guard!</span>"
+		to_chat(M, "<span class='danger'>Your fingers are much too large for the trigger guard!</span>")
 		return 0
 	if((CLUMSY in M.mutations) && prob(40)) //Clumsy handling
 		var/obj/P = consume_next_projectile()
@@ -227,7 +226,7 @@
 		return
 
 	if(user && user.a_intent == I_HELP && user.is_preference_enabled(/datum/client_preference/safefiring)) //regardless of what happens, refuse to shoot if help intent is on
-		user << "<span class='warning'>You refrain from firing your [src] as your intent is set to help.</span>"
+		to_chat(user, "<span class='warning'>You refrain from firing your [src] as your intent is set to help.</span>")
 		return
 
 	else
@@ -267,9 +266,9 @@
 /obj/item/weapon/gun/attackby(var/obj/item/A as obj, mob/user as mob)
 	if(istype(A, /obj/item/dnalockingchip))
 		if(dna_lock)
-			user << "<span class='notice'>\The [src] already has a [attached_lock].</span>"
+			to_chat(user, "<span class='notice'>\The [src] already has a [attached_lock].</span>")
 			return
-		user << "<span class='notice'>You insert \the [A] into \the [src].</span>"
+		to_chat(user, "<span class='notice'>You insert \the [A] into \the [src].</span>")
 		user.drop_item()
 		A.loc = src
 		attached_lock = A
@@ -279,12 +278,12 @@
 		verbs += /obj/item/weapon/gun/verb/allow_dna
 		return
 
-	if(istype(A, /obj/item/weapon/screwdriver))
+	if(A.is_screwdriver())
 		if(dna_lock && attached_lock && !attached_lock.controller_lock)
-			user << "<span class='notice'>You begin removing \the [attached_lock] from \the [src].</span>"
+			to_chat(user, "<span class='notice'>You begin removing \the [attached_lock] from \the [src].</span>")
 			playsound(src, A.usesound, 50, 1)
 			if(do_after(user, 25 * A.toolspeed))
-				user << "<span class='notice'>You remove \the [attached_lock] from \the [src].</span>"
+				to_chat(user, "<span class='notice'>You remove \the [attached_lock] from \the [src].</span>")
 				user.put_in_hands(attached_lock)
 				dna_lock = 0
 				attached_lock = null
@@ -292,12 +291,12 @@
 				verbs -= /obj/item/weapon/gun/verb/give_dna
 				verbs -= /obj/item/weapon/gun/verb/allow_dna
 		else
-			user << "<span class='warning'>\The [src] is not accepting modifications at this time.</span>"
+			to_chat(user, "<span class='warning'>\The [src] is not accepting modifications at this time.</span>")
 	..()
 
 /obj/item/weapon/gun/emag_act(var/remaining_charges, var/mob/user)
 	if(dna_lock && attached_lock.controller_lock)
-		user << "<span class='notice'>You short circuit the internal locking mechanisms of \the [src]!</span>"
+		to_chat(user, "<span class='notice'>You short circuit the internal locking mechanisms of \the [src]!</span>")
 		attached_lock.controller_dna = null
 		attached_lock.controller_lock = 0
 		attached_lock.stored_dna = list()
@@ -348,7 +347,7 @@
 
 	if(world.time < next_fire_time)
 		if (world.time % 3) //to prevent spam
-			user << "<span class='warning'>[src] is not ready to fire again!</span>"
+			to_chat(user, "<span class='warning'>[src] is not ready to fire again!</span>")
 		return
 
 	var/shoot_time = (burst - 1)* burst_delay
@@ -407,9 +406,11 @@
 
 		last_shot = world.time
 
-/*	// Commented out for quality control and testing.
+/*
+	// Commented out for quality control and testing.
 	shooting = 0
 */
+
 	// We do this down here, so we don't get the message if we fire an empty gun.
 	if(user.item_is_in_hands(src) && user.hands_are_full())
 		if(one_handed_penalty >= 20)
@@ -468,14 +469,12 @@
 			P.shot_from = src.name
 			P.silenced = silenced
 
-			P.launch(target)
+			P.old_style_target(target)
+			P.fire()
 
 			last_shot = world.time
 
-			if(silenced)
-				playsound(src, fire_sound, 10, 1)
-			else
-				playsound(src, fire_sound, 50, 1)
+			play_fire_sound()
 
 			if(muzzle_flash)
 				set_light(muzzle_flash)
@@ -514,8 +513,6 @@
 	if(muzzle_flash)
 		set_light(0)
 
-
-
 //obtains the next projectile to fire
 /obj/item/weapon/gun/proc/consume_next_projectile()
 	return null
@@ -526,7 +523,8 @@
 		return 2
 	//just assume we can shoot through glass and stuff. No big deal, the player can just choose to not target someone
 	//on the other side of a window if it makes a difference. Or if they run behind a window, too bad.
-	return check_trajectory(target, user)
+	if(check_trajectory(target, user))
+		return 1 // Magic numbers are fun.
 
 //called if there was no projectile to shoot
 /obj/item/weapon/gun/proc/handle_click_empty(mob/user)
@@ -542,18 +540,20 @@
 		flick(fire_anim, src)
 
 	if(silenced)
-		if(reflex)
-			user.visible_message(
-				"<span class='reflex_shoot'><b>\The [user] fires \the [src][pointblank ? " point blank at \the [target]":""] by reflex!</b></span>",
-				"<span class='reflex_shoot'>You fire \the [src] by reflex!</span>",
-				"You hear a [fire_sound_text]!"
+		to_chat(user, "<span class='warning'>You fire \the [src][pointblank ? " point blank at \the [target]":""][reflex ? " by reflex":""]</span>")
+		for(var/mob/living/L in oview(2,user))
+			if(L.stat)
+				continue
+			if(L.blinded)
+				to_chat(L, "You hear a [fire_sound_text]!")
+				continue
+			to_chat(L, 	"<span class='danger'>\The [user] fires \the [src][pointblank ? " point blank at \the [target]":""][reflex ? " by reflex":""]!</span>")
+	else
+		user.visible_message(
+			"<span class='danger'>\The [user] fires \the [src][pointblank ? " point blank at \the [target]":""][reflex ? " by reflex":""]!</span>",
+			"<span class='warning'>You fire \the [src][pointblank ? " point blank at \the [target]":""][reflex ? " by reflex":""]!</span>",
+			"You hear a [fire_sound_text]!"
 			)
-		else
-			user.visible_message(
-				"<span class='danger'>\The [user] fires \the [src][pointblank ? " point blank at \the [target]":""]!</span>",
-				"<span class='warning'>You fire \the [src]!</span>",
-				"You hear a [fire_sound_text]!"
-				)
 
 	if(muzzle_flash)
 		set_light(muzzle_flash)
@@ -587,7 +587,6 @@
 			shake_camera(user, recoil+1, recoil)
 	update_icon()
 
-
 /obj/item/weapon/gun/proc/process_point_blank(obj/projectile, mob/user, atom/target)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
@@ -619,20 +618,14 @@
 
 	if(one_handed_penalty)
 		if(!held_twohanded)
-			acc_mod += -ceil(one_handed_penalty/2)
+			acc_mod += -CEILING(one_handed_penalty/2, 1)
 			disp_mod += one_handed_penalty*0.5 //dispersion per point of two-handedness
 
 	//Accuracy modifiers
 	P.accuracy = accuracy + acc_mod
 	P.dispersion = disp_mod
 
-	// Certain statuses make it harder to aim, blindness especially.  Same chances as melee, however guns accuracy uses multiples of 15.
-	if(user.eye_blind)
-		P.accuracy -= 75
-	if(user.eye_blurry)
-		P.accuracy -= 30
-	if(user.confused)
-		P.accuracy -= 45
+	P.accuracy -= user.get_accuracy_penalty()
 
 	//accuracy bonus from aiming
 	if (aim_targets && (target in aim_targets))
@@ -652,33 +645,31 @@
 /obj/item/weapon/gun/proc/process_projectile(obj/projectile, mob/user, atom/target, var/target_zone, var/params=null)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
-		return 0 //default behaviour only applies to true projectiles
-
-	if(params)
-		P.set_clickpoint(params)
+		return FALSE //default behaviour only applies to true projectiles
 
 	//shooting while in shock
-	var/x_offset = 0
-	var/y_offset = 0
+	var/forcespread
 	if(istype(user, /mob/living/carbon))
 		var/mob/living/carbon/mob = user
 		if(mob.shock_stage > 120)
-			y_offset = rand(-2,2)
-			x_offset = rand(-2,2)
+			forcespread = rand(50, 50)
 		else if(mob.shock_stage > 70)
-			y_offset = rand(-1,1)
-			x_offset = rand(-1,1)
-
-	var/launched = !P.launch_from_gun(target, user, src, target_zone, x_offset, y_offset)
+			forcespread = rand(-25, 25)
+	var/launched = !P.launch_from_gun(target, target_zone, user, params, null, forcespread, src)
 
 	if(launched)
 		play_fire_sound(user, P)
 
 	return launched
 
-
 /obj/item/weapon/gun/proc/play_fire_sound(var/mob/user, var/obj/item/projectile/P)
-	var/shot_sound = (istype(P) && P.fire_sound)? P.fire_sound : fire_sound
+	var/shot_sound = fire_sound
+
+	if(!shot_sound && istype(P) && P.fire_sound) // If the gun didn't have a fire_sound, but the projectile exists, and has a sound...
+		shot_sound = P.fire_sound
+	if(!shot_sound) // If there's still no sound...
+		return
+
 	if(silenced)
 		playsound(user, shot_sound, 10, 1)
 	else
@@ -701,11 +692,7 @@
 	var/obj/item/projectile/in_chamber = consume_next_projectile()
 	if (istype(in_chamber))
 		user.visible_message("<span class = 'warning'>[user] pulls the trigger.</span>")
-		var/shot_sound = in_chamber.fire_sound? in_chamber.fire_sound : fire_sound
-		if(silenced)
-			playsound(user, shot_sound, 10, 1)
-		else
-			playsound(user, shot_sound, 50, 1)
+		play_fire_sound()
 		if(istype(in_chamber, /obj/item/projectile/beam/lastertag))
 			user.show_message("<span class = 'warning'>You feel rather silly, trying to commit suicide with a toy.</span>")
 			mouthshoot = 0
@@ -717,7 +704,7 @@
 			user.apply_damage(in_chamber.damage*2.5, in_chamber.damage_type, "head", used_weapon = "Point blank shot in the mouth with \a [in_chamber]", sharp=1)
 			user.death()
 		else
-			user << "<span class = 'notice'>Ow...</span>"
+			to_chat(user, "<span class = 'notice'>Ow...</span>")
 			user.apply_effect(110,AGONY,0)
 		qdel(in_chamber)
 		mouthshoot = 0

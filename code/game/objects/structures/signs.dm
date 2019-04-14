@@ -22,9 +22,9 @@
 	return
 
 /obj/structure/sign/attackby(obj/item/tool as obj, mob/user as mob)	//deconstruction
-	if(istype(tool, /obj/item/weapon/screwdriver) && !istype(src, /obj/structure/sign/double))
+	if(tool.is_screwdriver() && !istype(src, /obj/structure/sign/double))
 		playsound(src, tool.usesound, 50, 1)
-		user << "You unfasten the sign with your [tool]."
+		to_chat(user, "You unfasten the sign with your [tool].")
 		var/obj/item/sign/S = new(src.loc)
 		S.name = name
 		S.desc = desc
@@ -43,7 +43,7 @@
 	var/sign_state = ""
 
 /obj/item/sign/attackby(obj/item/tool as obj, mob/user as mob)	//construction
-	if(istype(tool, /obj/item/weapon/screwdriver) && isturf(user.loc))
+	if(tool.is_screwdriver() && isturf(user.loc))
 		var/direction = input("In which direction?", "Select direction.") in list("North", "East", "South", "West", "Cancel")
 		if(direction == "Cancel") return
 		var/obj/structure/sign/S = new(user.loc)
@@ -60,7 +60,7 @@
 		S.name = name
 		S.desc = desc
 		S.icon_state = sign_state
-		user << "You fasten \the [S] with your [tool]."
+		to_chat(user, "You fasten \the [S] with your [tool].")
 		qdel(src)
 	else ..()
 
@@ -238,6 +238,18 @@
 /obj/structure/sign/warning/emergence
 	name = "\improper EMERGENT INTELLIGENCE DETAILS"
 	icon_state = "rogueai"
+
+/obj/structure/sign/warning/falling
+	name = "\improper FALL HAZARD"
+	icon_state = "falling"
+
+/obj/structure/sign/warning/lava
+	name = "\improper MOLTEN SURFACE"
+	icon_state = "lava"
+
+/obj/structure/sign/warning/acid
+	name = "\improper ACIDIC SURFACE"
+	icon_state = "acid"
 
 /obj/structure/sign/redcross
 	name = "medbay"

@@ -13,7 +13,6 @@
 	var/playsleepseconds = 0.0
 	var/obj/item/device/tape/mytape = /obj/item/device/tape/random
 	var/canprint = 1
-	flags = CONDUCT
 	slot_flags = SLOT_BELT
 	throwforce = 2
 	throw_speed = 4
@@ -414,7 +413,7 @@
 
 
 /obj/item/device/tape/attackby(obj/item/I, mob/user, params)
-	if(ruined && istype(I, /obj/item/weapon/screwdriver))
+	if(ruined && I.is_screwdriver())
 		to_chat(user, "<span class='notice'>You start winding the tape back in...</span>")
 		playsound(src, I.usesound, 50, 1)
 		if(do_after(user, 120 * I.toolspeed, target = src))

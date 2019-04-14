@@ -86,7 +86,7 @@ for reference:
 			return //hitting things with the wrong type of stack usually doesn't produce messages, and probably doesn't need to.
 		if(health < maxhealth)
 			if(D.get_amount() < 1)
-				user << "<span class='warning'>You need one sheet of [material.display_name] to repair \the [src].</span>"
+				to_chat(user, "<span class='warning'>You need one sheet of [material.display_name] to repair \the [src].</span>")
 				return
 			visible_message("<span class='notice'>[user] begins to repair \the [src].</span>")
 			if(do_after(user,20) && health < maxhealth)
@@ -128,13 +128,10 @@ for reference:
 				dismantle()
 			return
 
-/obj/structure/barricade/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)//So bullets will fly over and stuff.
-	if(air_group || (height==0))
-		return 1
+/obj/structure/barricade/CanPass(atom/movable/mover, turf/target)//So bullets will fly over and stuff.
 	if(istype(mover) && mover.checkpass(PASSTABLE))
-		return 1
-	else
-		return 0
+		return TRUE
+	return FALSE
 
 //Actual Deployable machinery stuff
 /obj/machinery/deployable
@@ -168,10 +165,10 @@ for reference:
 				anchored = !anchored
 				icon_state = "barrier[locked]"
 				if((locked == 1.0) && (emagged < 2.0))
-					user << "Barrier lock toggled on."
+					to_chat(user, "Barrier lock toggled on.")
 					return
 				else if((locked == 0.0) && (emagged < 2.0))
-					user << "Barrier lock toggled off."
+					to_chat(user, "Barrier lock toggled off.")
 					return
 			else
 				var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
@@ -180,7 +177,7 @@ for reference:
 				visible_message("<span class='warning'>BZZzZZzZZzZT</span>")
 				return
 		return
-	else if(istype(W, /obj/item/weapon/wrench))
+	else if(W.is_wrench())
 		if(health < maxhealth)
 			health = maxhealth
 			emagged = 0
@@ -223,13 +220,10 @@ for reference:
 		anchored = !anchored
 		icon_state = "barrier[locked]"
 
-/obj/machinery/deployable/barrier/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)//So bullets will fly over and stuff.
-	if(air_group || (height==0))
-		return 1
+/obj/machinery/deployable/barrier/CanPass(atom/movable/mover, turf/target)//So bullets will fly over and stuff.
 	if(istype(mover) && mover.checkpass(PASSTABLE))
-		return 1
-	else
-		return 0
+		return TRUE
+	return FALSE
 
 /obj/machinery/deployable/barrier/proc/explode()
 
@@ -252,7 +246,7 @@ for reference:
 		emagged = 1
 		req_access.Cut()
 		req_one_access.Cut()
-		user << "You break the ID authentication lock on \the [src]."
+		to_chat(user, "You break the ID authentication lock on \the [src].")
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(2, 1, src)
 		s.start()
@@ -260,7 +254,7 @@ for reference:
 		return 1
 	else if(emagged == 1)
 		emagged = 2
-		user << "You short out the anchoring mechanism on \the [src]."
+		to_chat(user, "You short out the anchoring mechanism on \the [src].")
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(2, 1, src)
 		s.start()

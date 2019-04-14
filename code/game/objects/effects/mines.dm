@@ -10,6 +10,7 @@
 	var/mineitemtype = /obj/item/weapon/mine
 	var/panel_open = 0
 	var/datum/wires/mines/wires = null
+	register_as_dangerous_object = TRUE
 
 /obj/effect/mine/New()
 	icon_state = "uglyminearmed"
@@ -47,13 +48,13 @@
 			explode(M)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
-	if(isscrewdriver(W))
+	if(W.is_screwdriver())
 		panel_open = !panel_open
 		user.visible_message("<span class='warning'>[user] very carefully screws the mine's panel [panel_open ? "open" : "closed"].</span>",
 		"<span class='notice'>You very carefully screw the mine's panel [panel_open ? "open" : "closed"].</span>")
 		playsound(src.loc, W.usesound, 50, 1)
 
-	else if((iswirecutter(W) || ismultitool(W)) && panel_open)
+	else if((W.is_wirecutter() || istype(W, /obj/item/device/multitool)) && panel_open)
 		interact(user)
 	else
 		..()
@@ -272,3 +273,9 @@
 	name = "incendiary mine"
 	desc = "A small explosive mine with a fire symbol on the side."
 	minetype = /obj/effect/mine/incendiary
+
+// This tells AI mobs to not be dumb and step on mines willingly.
+/obj/item/weapon/mine/is_safe_to_step(mob/living/L)
+	if(!L.hovering)
+		return FALSE
+	return ..()
