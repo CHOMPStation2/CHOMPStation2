@@ -22,7 +22,7 @@
 	desc = "The dominant language of the Sergal homeworld, Vilous. It consists of aggressive low-pitched hissing and throaty growling."
 	speech_verb = "snarls"
 	colour = "sergal"
-	key = "e"
+	key = "t"
 	syllables = list ("grr", "gah", "woof", "arf", "arra", "rah", "wor", "sarg")
 
 /datum/language/vulpkanin
@@ -67,7 +67,7 @@
 	ask_verb = "hums"
 	exclaim_verb = "loudly sings"
 	colour = "enochian" //So fancy
-	key = "a"
+	key = "i"
 	syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
 	"mihi","wan","six","salve","tartu")
 	machine_understands = FALSE
@@ -106,3 +106,11 @@
 	flags = 0
 /datum/language/gutter
 	machine_understands = FALSE
+/datum/language/human/monkey
+	flags = RESTRICTED
+/datum/language/skrell/monkey
+	flags = RESTRICTED
+/datum/language/unathi/monkey
+	flags = RESTRICTED
+/datum/language/tajaran/monkey
+	flags = RESTRICTED
