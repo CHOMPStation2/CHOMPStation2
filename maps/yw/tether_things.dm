@@ -35,7 +35,7 @@
 
 
 
-/obj/effect/step_trigger/teleporter/planetary_fall/borealis1/initialize()
+/obj/effect/step_trigger/teleporter/planetary_fall/borealis1/Initialize()
 	planet = planet_borealis1
 	. = ..()
 
@@ -90,7 +90,7 @@
 
 	var/area/shock_area = /area/tether/surfacebase/tram
 
-/turf/simulated/floor/maglev/initialize()
+/turf/simulated/floor/maglev/Initialize()
 	. = ..()
 	shock_area = locate(shock_area)
 
@@ -130,7 +130,7 @@
 /obj/machinery/smartfridge/chemistry/chemvator/down
 	name = "\improper Smart Chemavator - Lower"
 
-/obj/machinery/smartfridge/chemistry/chemvator/down/initialize()
+/obj/machinery/smartfridge/chemistry/chemvator/down/Initialize()
 	. = ..()
 	var/obj/machinery/smartfridge/chemistry/chemvator/above = locate(/obj/machinery/smartfridge/chemistry/chemvator,get_zstep(src,UP))
 	if(istype(above))
@@ -252,22 +252,22 @@ var/global/list/latejoin_tram   = list()
 	"Beach" 			= new/datum/holodeck_program(/area/houseboat/holodeck/beach),
 	"Desert" 			= new/datum/holodeck_program(/area/houseboat/holodeck/desert,
 													list(
-														'sound/effects/wind/wind_2_1.ogg',
-											 			'sound/effects/wind/wind_2_2.ogg',
-											 			'sound/effects/wind/wind_3_1.ogg',
-											 			'sound/effects/wind/wind_4_1.ogg',
-											 			'sound/effects/wind/wind_4_2.ogg',
-											 			'sound/effects/wind/wind_5_1.ogg'
+														'sound/effects/weather/wind/wind_2_1.ogg',
+											 			'sound/effects/weather/wind/wind_2_2.ogg',
+											 			'sound/effects/weather/wind/wind_3_1.ogg',
+											 			'sound/effects/weather/wind/wind_4_1.ogg',
+											 			'sound/effects/weather/wind/wind_4_2.ogg',
+											 			'sound/effects/weather/wind/wind_5_1.ogg'
 												 		)
 		 											),
 	"Snowfield" 		= new/datum/holodeck_program(/area/houseboat/holodeck/snow,
 													list(
-														'sound/effects/wind/wind_2_1.ogg',
-											 			'sound/effects/wind/wind_2_2.ogg',
-											 			'sound/effects/wind/wind_3_1.ogg',
-											 			'sound/effects/wind/wind_4_1.ogg',
-											 			'sound/effects/wind/wind_4_2.ogg',
-											 			'sound/effects/wind/wind_5_1.ogg'
+														'sound/effects/weather/wind/wind_2_1.ogg',
+											 			'sound/effects/weather/wind/wind_2_2.ogg',
+											 			'sound/effects/weather/wind/wind_3_1.ogg',
+											 			'sound/effects/weather/wind/wind_4_1.ogg',
+											 			'sound/effects/weather/wind/wind_4_2.ogg',
+											 			'sound/effects/weather/wind/wind_5_1.ogg'
 												 		)
 		 											),
 	"Space" 			= new/datum/holodeck_program(/area/houseboat/holodeck/space,
@@ -341,10 +341,10 @@ var/global/list/latejoin_tram   = list()
 	prob_fall = 50
 	guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_animal/hostile/jelly = 3,
-		/mob/living/simple_animal/hostile/giant_spider/hunter = 1,
-		/mob/living/simple_animal/hostile/giant_spider/phorogenic = 1,
-		/mob/living/simple_animal/hostile/giant_spider/lurker = 1,
+		/mob/living/simple_mob/animal/space/jelly = 3,
+		/mob/living/simple_mob/animal/giant_spider/hunter = 1,
+		/mob/living/simple_mob/animal/giant_spider/phorogenic = 1,
+		/mob/living/simple_mob/animal/giant_spider/lurker = 1,
 	)
 
 /obj/tether_away_spawner/underdark_hard
@@ -355,9 +355,9 @@ var/global/list/latejoin_tram   = list()
 	prob_fall = 50
 	guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_animal/hostile/corrupthound = 1,
-		/mob/living/simple_animal/hostile/rat = 1,
-		/mob/living/simple_animal/hostile/mimic = 1
+		/mob/living/simple_mob/vore/aggressive/corrupthound = 1,
+		/mob/living/simple_mob/vore/aggressive/rat = 1,
+		/mob/living/simple_mob/animal/space/mimic = 1
 	)
 
 /obj/tether_away_spawner/underdark_boss
@@ -368,7 +368,7 @@ var/global/list/latejoin_tram   = list()
 	prob_fall = 100
 	guard = 70
 	mobs_to_pick_from = list(
-		/mob/living/simple_animal/hostile/dragon = 1
+		/mob/living/simple_mob/vore/aggressive/dragon = 1
 	)
 
 // Used at centcomm for the elevator

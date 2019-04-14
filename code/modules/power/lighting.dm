@@ -902,7 +902,7 @@
 
 
 /obj/machinery/light/trailblazer
-	icon = 'icons/obj/mining.dmi'
+	icon = 'icons/obj/mining_yw.dmi'
 	icon_state = "redtrail_light_on"
 	base_state = "redtrail_light_on"
 	fitting = "bulb"
@@ -916,7 +916,7 @@
 	var/lamp_shade = 0
 
 /obj/machinery/light/trailblazerb
-	icon = 'icons/obj/mining.dmi'
+	icon = 'icons/obj/mining_yw.dmi'
 	icon_state = "bluetrail_light_on"
 	base_state = "bluetrail_light_on"
 	fitting = "bulb"

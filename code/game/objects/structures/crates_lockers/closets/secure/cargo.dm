@@ -123,7 +123,7 @@
 		/obj/item/clothing/shoes/boots/winter/mining,
 		/obj/item/stack/marker_beacon/thirty)
 
-/obj/structure/closet/lumber/initialize()
+/obj/structure/closet/lumber/Initialize()
 	if(prob(50))
 		starts_with += /obj/item/weapon/storage/backpack/industrial
 	else
