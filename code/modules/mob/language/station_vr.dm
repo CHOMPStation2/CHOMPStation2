@@ -22,7 +22,7 @@
 	desc = "The dominant language of the Sergal homeworld, Vilous. It consists of aggressive low-pitched hissing and throaty growling."
 	speech_verb = "snarls"
 	colour = "sergal"
-	key = "z"
+	key = "e"
 	syllables = list ("grr", "gah", "woof", "arf", "arra", "rah", "wor", "sarg")
 
 /datum/language/vulpkanin
@@ -79,7 +79,7 @@
 	colour = "tajaran"
 	key = "l"
 	flags = SIGNLANG | NO_STUTTER | NONVERBAL // | WHITELISTED (YWEdit)
-	
+
 /datum/language/bug
     name = LANGUAGE_VESPINAE
     desc = "A jarring and clicky language developed and used by Vasilissans, it is designed for use with mouthparts and as a result has become a common language for various arthropod species."
