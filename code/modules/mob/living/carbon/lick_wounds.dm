@@ -1,4 +1,4 @@
-/mob/living/carbon/human/proc/lick_wounds(var/mob/living/carbon/M) //YWedit, origionally, living/carbon/M in living_mobs(1), However, living_mobs does not include src as possible target.
+/mob/living/carbon/human/proc/lick_wounds(var/mob/living/carbon/M) //YWedit, originally, living/carbon/M in living_mobs(1), However, living_mobs does not include src as possible target.
 	set name = "Lick Wounds"
 	set category = "Abilities"
 	set desc = "Disinfect and heal small wounds with your saliva."
