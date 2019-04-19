@@ -1,5 +1,5 @@
 //Atmosphere properties
-#define CRYOGAIA_ONE_ATMOSPHERE	82.4 //kPa
+#define CRYOGAIA_ONE_ATMOSPHERE	100 //kPa
 #define CRYOGAIA_AVG_TEMP	215 //kelvin
 
 #define CRYOGAIA_PER_N2		0.16 //percent
@@ -22,10 +22,21 @@
 #define CRYOGAIA_TURF_CREATE_UN(x)	x/cryogaia/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP
 
 //Normal YW map defs
-#define Z_LEVEL_CRYOGAIA_MAIN				1
-#define Z_LEVEL_CRYOGAIA_LOWER				2
-#define Z_LEVEL_CRYOGAIA_MINE				3
-#define Z_LEVEL_CENTCOM						4
+// for some god damn reason, the defines aren't registring properly. force setting z's further down because this is causing me so much grief. -RadiantFlash
+#define Z_LEVEL_CRYOGAIA_LOWER		1
+#define Z_LEVEL_CRYOGAIA_MAIN		2
+#define Z_LEVEL_CRYOGAIA_MINE		3
+#define Z_LEVEL_CENTCOM				4
+#define Z_LEVEL_ALIENSHIP			5
+#define Z_LEVEL_BEACH				6
+#define Z_LEVEL_BEACH_CAVE			7
+#define Z_LEVEL_AEROSTAT			8
+#define Z_LEVEL_AEROSTAT_SURFACE	9
+#define Z_LEVEL_DEBRISFIELD			10
+
+
+#define Z_LEVEL_BOTTOM_LEVEL			Z_LEVEL_CRYOGAIA_LOWER
+#define Z_LEVEL_TOP_LEVEL				Z_LEVEL_CRYOGAIA_MAIN
 
 /datum/map/cryogaia
 	name = "Cryogaia"
@@ -53,7 +64,7 @@
 	boss_short    = "CentCom"
 	company_name  = "NanoTrasen"
 	company_short = "NT"
-	starsys_name  = "Beta Aquarii"
+	starsys_name  = "Borealis Majoris"
 
 	shuttle_docked_message = "The scheduled Shuttle to %dock_name% has arrived. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Shuttle has left the Outpost. Estimate %ETA% until the tram arrives at %dock_name%."
@@ -83,7 +94,7 @@
 							NETWORK_INTERROGATION
 							)
 
-	allowed_spawns = list("Tram Station","Gateway","Cryogenic Storage","Cyborg Storage")
+	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage")
 	spawnpoint_died = /datum/spawnpoint/tram
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo
@@ -115,7 +126,7 @@
 
 	lateload_single_pick = null //Nothing right now.
 
-/datum/map/tether/perform_map_generation()
+/datum/map/cryogaia/perform_map_generation()
 
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, 64, 64)         // Create the mining ore distribution map.
@@ -123,18 +134,18 @@
 	return 1
 
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
-/datum/map/tether/get_map_levels(var/srcz, var/long_range = TRUE)
+/datum/map/cryogaia/get_map_levels(var/srcz, var/long_range = TRUE)
 	if (long_range && (srcz in map_levels))
 		return map_levels
 	else if (srcz == Z_LEVEL_CENTCOM)
 		return list() // Nothing on transit!
-	else if (srcz >= Z_LEVEL_CRYOGAIA_MAIN && srcz <= Z_LEVEL_CRYOGAIA_MINE)
+	else if (srcz >= Z_LEVEL_BOTTOM_LEVEL && srcz <= Z_LEVEL_TOP_LEVEL)
 		return list(
 			Z_LEVEL_CRYOGAIA_MAIN,
-			Z_LEVEL_CRYOGAIA_LOWER,
-			Z_LEVEL_CRYOGAIA_MINE)
+			Z_LEVEL_CRYOGAIA_LOWER)
 	else
 		return ..()
+
 
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
 
@@ -144,27 +155,27 @@
 /*	holomap_legend_x = 220
 	holomap_legend_y = 160 */
 
-/datum/map_z_level/tether/cryogaia/main
-	z = Z_LEVEL_CRYOGAIA_MAIN
-	name = "Surface level"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
-	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
-/*	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
-	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0 */
+
 
 /datum/map_z_level/cryogaia/lower
-	z = Z_LEVEL_CRYOGAIA_LOWER
 	name = "Subfloor"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
+/datum/map_z_level/cryogaia/main
+	name = "Surface level"
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/open
+/*	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
+	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0 */
 
 /datum/map_z_level/cryogaia/mining
-	z = Z_LEVEL_CRYOGAIA_MINE
 	name = "Subterranian depths"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
 
-
+/datum/map_z_level/cryogaia/centcom
+	name = "Central Command"
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 /*
 /datum/map_z_level/tether/wilderness
 	name = "Wilderness"

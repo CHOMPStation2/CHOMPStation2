@@ -439,11 +439,11 @@
 /area/shuttle/tether/crash1
 	name = "\improper Crash Site 1"
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/outdoors/dirt/cryogaia
+	base_turf = /turf/simulated/floor/snow
 /area/shuttle/tether/crash2
 	name = "\improper Crash Site 2"
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/outdoors/dirt/cryogaia
+	base_turf = /turf/simulated/floor/snow
 
 // Exploration Shuttle stuff //
 /area/tether/station/excursion_dock
@@ -520,11 +520,11 @@
 /area/shuttle/antag_ground/solars
 	name = "\improper Syndicate LC - Solars"
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/outdoors/dirt/cryogaia
+	base_turf = /turf/simulated/floor/snow
 /area/shuttle/antag_ground/mining
 	name = "\improper Syndicate LC - Mining"
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/outdoors/dirt/cryogaia
+	base_turf = /turf/simulated/floor/snow
 
 
 

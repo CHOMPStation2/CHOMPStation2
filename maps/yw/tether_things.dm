@@ -5,7 +5,7 @@
 
 //Special map objects
 /obj/effect/landmark/map_data/borealis1
-    height = 7
+    height = 2
 
 /obj/turbolift_map_holder/tether
 	name = "Tether Climber"

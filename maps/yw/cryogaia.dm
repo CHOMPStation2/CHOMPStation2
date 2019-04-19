@@ -8,21 +8,15 @@
 	#include "tether_phoronlock.dm"
 	#include "tether_shuttle_defs.dm"
 	#include "tether_shuttles.dm"
-	#include "centcom.dmm"
+	#include "cryogaia-04-centcom.dmm"
 	#include "cryogaia_telecomms.dm"
 	#include "cryogaia_borealismajoris.dm"
 	#include "elevator_areas.dm"
 	#include "service_elevator_things.dm"
-	#include "cryogaia.dmm"
-	#include "cryogaia_lowerlevel.dmm"
-	#include "cryogaia_mining.dmm"
+	#include "cryogaia-01-lower_level.dmm"
+	#include "cryogaia-02-main_level.dmm"
+	#include "cryogaia-03-mining.dmm"
 
 	#include "submaps/_tether_submaps.dm"
 
-	#define USING_MAP_DATUM /datum/map/tether
-
-#elif !defined(MAP_OVERRIDE)
-
-	#warn A map has already been included, ignoring Tether
-
-#endif
+	#define USING_MAP_DATUM /datum/map/cryogaia
