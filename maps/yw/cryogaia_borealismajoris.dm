@@ -10,7 +10,9 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	the Phoron is very desirable by many corporations, including NanoTrasen."
 	current_time = new /datum/time/borealis1()
 	expected_z_levels = list(
+						Z_LEVEL_CRYOGAIA_LOWER,
 						Z_LEVEL_CRYOGAIA_MAIN,
+						Z_LEVEL_CRYOGAIA_MINE,
 						)
 //	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis1
 
@@ -68,12 +70,12 @@ var/datum/planet/borealis1/planet_borealis1 = null
 			high_color = "#FFFFFF"
 			min = 0.70
 
-	var/lerp_weight = (abs(min - sun_position)) * 4
+	var/interpolate_weight = (abs(min - sun_position)) * 4
 	var/weather_light_modifier = 1
 	if(weather_holder && weather_holder.current_weather)
 		weather_light_modifier = weather_holder.current_weather.light_modifier
 
-	var/new_brightness = (Interpolate(low_brightness, high_brightness, weight = lerp_weight) ) * weather_light_modifier
+	var/new_brightness = (LERP(low_brightness, high_brightness, interpolate_weight) ) * weather_light_modifier
 
 	var/new_color = null
 	if(weather_holder && weather_holder.current_weather && weather_holder.current_weather.light_color)
@@ -89,9 +91,9 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		var/high_g = high_color_list[2]
 		var/high_b = high_color_list[3]
 
-		var/new_r = Interpolate(low_r, high_r, weight = lerp_weight)
-		var/new_g = Interpolate(low_g, high_g, weight = lerp_weight)
-		var/new_b = Interpolate(low_b, high_b, weight = lerp_weight)
+		var/new_r = LERP(low_r, high_r, interpolate_weight)
+		var/new_g = LERP(low_g, high_g, interpolate_weight)
+		var/new_b = LERP(low_b, high_b, interpolate_weight)
 
 		new_color = rgb(new_r, new_g, new_b)
 
@@ -110,7 +112,10 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_RAIN		= new /datum/weather/borealis1/rain(),
 		WEATHER_STORM		= new /datum/weather/borealis1/storm(),
 		WEATHER_HAIL		= new /datum/weather/borealis1/hail(),
-		WEATHER_BLOOD_MOON	= new /datum/weather/borealis1/blood_moon()
+		WEATHER_BLOOD_MOON	= new /datum/weather/borealis1/blood_moon(),
+		WEATHER_EMBERFALL	= new /datum/weather/borealis1/emberfall(),
+		WEATHER_ASH_STORM	= new /datum/weather/borealis1/ash_storm(),
+		WEATHER_FALLOUT		= new /datum/weather/borealis1/fallout()
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 30,
@@ -134,6 +139,13 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_CLEAR = 50,
 		WEATHER_OVERCAST = 50
 		)
+	transition_messages = list(
+		"The sky clears up.",
+		"The sky is visible.",
+		"The weather is calm."
+		)
+	sky_visible = TRUE
+	observed_message = "The sky is clear."
 
 /datum/weather/borealis1/overcast
 	name = "overcast"
@@ -145,6 +157,12 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_SNOW = 10,
 		WEATHER_RAIN = 5,
 		WEATHER_HAIL = 5
+		)
+	observed_message = "It is overcast, all you can see are clouds."
+	transition_messages = list(
+		"All you can see above are clouds.",
+		"Clouds cut off your view of the sky.",
+		"It's very cloudy."
 		)
 
 /datum/weather/borealis1/light_snow
@@ -158,6 +176,11 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_LIGHT_SNOW = 40,
 		WEATHER_SNOW = 35,
 		WEATHER_HAIL = 5
+		)
+	observed_message = "It is snowing lightly."
+	transition_messages = list(
+		"Small snowflakes begin to fall from above.",
+		"It begins to snow lightly.",
 		)
 
 /datum/weather/borealis1/snow
@@ -174,6 +197,13 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_HAIL = 5,
 		WEATHER_OVERCAST = 5
 		)
+	observed_message = "It is snowing."
+	transition_messages = list(
+		"It's starting to snow.",
+		"The air feels much colder as snowflakes fall from above."
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
+	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
 /datum/weather/borealis1/snow/process_effects()
 	..()
@@ -198,6 +228,14 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_HAIL = 10,
 		WEATHER_OVERCAST = 5
 		)
+	observed_message = "A blizzard blows snow everywhere."
+	transition_messages = list(
+		"Strong winds howl around you as a blizzard appears.",
+		"It starts snowing heavily, and it feels extremly cold now."
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
+	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
+
 
 /datum/weather/borealis1/blizzard/process_effects()
 	..()
@@ -222,6 +260,10 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_STORM = 10,
 		WEATHER_HAIL = 5
 		)
+	observed_message = "It is raining."
+	transition_messages = list(
+		"The sky is dark, and rain falls down upon you."
+	)
 
 /datum/weather/borealis1/rain/process_effects()
 	..()
@@ -254,6 +296,17 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	icon_state = "storm"
 	light_modifier = 0.3
 	flight_failure_modifier = 10
+	effect_message = "<span class='warning'>Rain falls on you, drenching you in water.</span>"
+
+	var/next_lightning_strike = 0 // world.time when lightning will strike.
+	var/min_lightning_cooldown = 5 SECONDS
+	var/max_lightning_cooldown = 1 MINUTE
+	observed_message = "An intense storm pours down over the region."
+	transition_messages = list(
+		"You feel intense winds hit you as the weather takes a turn for the worst.",
+		"Loud thunder is heard in the distance.",
+		"A bright flash heralds the approach of a storm."
+	)
 
 
 	transition_chances = list(
@@ -263,6 +316,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_OVERCAST = 5
 		)
 
+
 /datum/weather/borealis1/storm/process_effects()
 	..()
 	for(var/mob/living/L in living_mob_list)
@@ -271,22 +325,53 @@ var/datum/planet/borealis1/planet_borealis1 = null
 			if(!T.outdoors)
 				continue // They're indoors, so no need to rain on them.
 
-			// If they have an open umbrella, it'll get stolen by the wind
+			// Lazy wind code
+			if(prob(10))
+				if(istype(L.get_active_hand(), /obj/item/weapon/melee/umbrella))
+					var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+					if(U.open)
+						to_chat(L, "<span class='danger'>You struggle to keep hold of your umbrella!</span>")
+						L.Stun(20)	// This is not nearly as long as it seems
+						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)	// Closest sound I've got to "Umbrella in the wind"
+				else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
+					var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
+					if(U.open)
+						to_chat(L, "<span class='danger'>A gust of wind yanks the umbrella from your hand!</span>")
+						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)
+						L.drop_from_inventory(U)
+						U.toggle_umbrella()
+						U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
+
+			// If they have an open umbrella, it'll guard from rain
 			if(istype(L.get_active_hand(), /obj/item/weapon/melee/umbrella))
 				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
 				if(U.open)
-					to_chat(L, "<span class='warning'>A gust of wind yanks the umbrella from your hand!</span>")
-					L.drop_from_inventory(U)
-					U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
+					if(show_message)
+						to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
+					continue
 			else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
 				var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
 				if(U.open)
-					to_chat(L, "<span class='warning'>A gust of wind yanks the umbrella from your hand!</span>")
-					L.drop_from_inventory(U)
-					U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
+					if(show_message)
+						to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
+					continue
+
 
 			L.water_act(2)
-			to_chat(L, "<span class='warning'>Rain falls on you, drenching you in water.</span>")
+			if(show_message)
+				to_chat(L, effect_message)
+
+
+	handle_lightning()
+
+// This gets called to do lightning periodically.
+// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
+/datum/weather/borealis1/storm/proc/handle_lightning()
+	if(world.time < next_lightning_strike)
+		return // It's too soon to strike again.
+	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
+	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
+	lightning_strike(T)
 
 /datum/weather/borealis1/hail
 	name = "hail"
@@ -303,6 +388,12 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_HAIL = 10,
 		WEATHER_OVERCAST = 5
 		)
+	observed_message = "Ice is falling from the sky."
+	transition_messages = list(
+		"Ice begins to fall from the sky.",
+		"It begins to hail.",
+		"An intense chill is felt, and chunks of ice start to fall from the sky, towards you."
+	)
 
 /datum/weather/borealis1/hail/process_effects()
 	..()
@@ -349,3 +440,111 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	transition_chances = list(
 		WEATHER_BLOODMOON = 100
 		)
+	observed_message = "Everything is red. Something really ominous is going on."
+	transition_messages = list(
+		"The sky turns blood red!"
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/wind
+	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+
+
+// Ash and embers fall forever, such as from a volcano or something.
+/datum/weather/borealis1/emberfall
+	name = "emberfall"
+	icon_state = "ashfall_light"
+	light_modifier = 0.7
+	light_color = "#880000"
+	temp_high = 293.15	// 20c
+	temp_low = 283.15	// 10c
+	flight_failure_modifier = 20
+	transition_chances = list(
+		WEATHER_EMBERFALL = 100
+		)
+	observed_message = "Soot, ash, and embers float down from above."
+	transition_messages = list(
+		"Gentle embers waft down around you like grotesque snow."
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/wind
+	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+
+// Like the above but a lot more harmful.
+/datum/weather/borealis1/ash_storm
+	name = "ash storm"
+	icon_state = "ashfall_heavy"
+	light_modifier = 0.1
+	light_color = "#FF0000"
+	temp_high = 323.15	// 50c
+	temp_low = 313.15	// 40c
+	flight_failure_modifier = 50
+	transition_chances = list(
+		WEATHER_ASH_STORM = 100
+		)
+	observed_message = "All that can be seen is black smoldering ash."
+	transition_messages = list(
+		"Smoldering clouds of scorching ash billow down around you!"
+	)
+	// Lets recycle.
+	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
+	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
+
+/datum/weather/borealis1/ash_storm/process_effects()
+	..()
+	for(var/thing in living_mob_list)
+		var/mob/living/L = thing
+		if(L.z in holder.our_planet.expected_z_levels)
+			var/turf/T = get_turf(L)
+			if(!T.outdoors)
+				continue // They're indoors, so no need to burn them with ash.
+
+			L.inflict_heat_damage(rand(1, 3))
+
+
+// Totally radical.
+/datum/weather/borealis1/fallout
+	name = "fallout"
+	icon_state = "fallout"
+	light_modifier = 0.7
+	light_color = "#CCFFCC"
+	flight_failure_modifier = 30
+	transition_chances = list(
+		WEATHER_FALLOUT = 100
+		)
+	observed_message = "Radioactive soot and ash rains down from the heavens."
+	transition_messages = list(
+		"Radioactive soot and ash start to float down around you, contaminating whatever they touch."
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/wind
+	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+
+	// How much radiation a mob gets while on an outside tile.
+	var/direct_rad_low = RAD_LEVEL_LOW
+	var/direct_rad_high = RAD_LEVEL_MODERATE
+
+	// How much radiation is bursted onto a random tile near a mob.
+	var/fallout_rad_low = RAD_LEVEL_HIGH
+	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
+
+/datum/weather/borealis1/fallout/process_effects()
+	..()
+	for(var/thing in living_mob_list)
+		var/mob/living/L = thing
+		if(L.z in holder.our_planet.expected_z_levels)
+			irradiate_nearby_turf(L)
+			var/turf/T = get_turf(L)
+			if(!T.outdoors)
+				continue // They're indoors, so no need to irradiate them with fallout.
+
+			L.rad_act(rand(direct_rad_low, direct_rad_high))
+
+// This makes random tiles near people radioactive for awhile.
+// Tiles far away from people are left alone, for performance.
+/datum/weather/borealis1/fallout/proc/irradiate_nearby_turf(mob/living/L)
+	if(!istype(L))
+		return
+	var/list/turfs = RANGE_TURFS(world.view, L)
+	var/turf/T = pick(turfs) // We get one try per tick.
+	if(!istype(T))
+		return
+	if(T.outdoors)
+		radiation_repository.radiate(T, rand(fallout_rad_low, fallout_rad_high))
+

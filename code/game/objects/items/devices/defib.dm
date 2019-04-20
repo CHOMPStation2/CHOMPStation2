@@ -496,12 +496,12 @@
 	apply_brain_damage(M, deadtime)
 
 /obj/item/weapon/shockpaddles/proc/apply_brain_damage(mob/living/carbon/human/H, var/deadtime)
-    if(deadtime < DEFIB_TIME_LOSS) return
+	if(deadtime < DEFIB_TIME_LOSS) return
 
-    if(!H.should_have_organ(O_BRAIN)) return //no brain
+	if(!H.should_have_organ(O_BRAIN)) return //no brain
 
-    var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[O_BRAIN]
-    if(!brain) return //no brain
+	var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[O_BRAIN]
+	if(!brain) return //no brain
 
 	var/brain_damage = CLAMP((deadtime - DEFIB_TIME_LOSS)/(DEFIB_TIME_LIMIT - DEFIB_TIME_LOSS)*brain.max_damage, H.getBrainLoss(), brain.max_damage)
 	H.setBrainLoss(brain_damage)

@@ -117,3 +117,19 @@
 /area/quartermaster/disposals
 	name = "\improper Cargo - Disposals"
 	icon_state = "quart"
+
+
+/area/security/perma
+	name = "\improper Prison"
+	icon_state = "security"
+
+/area/security/perma/bathroom
+	name = "\improper Prison Bathroom"
+	icon_state = "security"
+
+/area/security/perma/control
+	name = "\improper Prison Guard Station"
+	icon_state = "security"
+
+/area/security/perma/court
+	name = "\improper Prison Basketball Court"

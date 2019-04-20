@@ -14,16 +14,17 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor)
 /turf/simulated/floor/cryogaia_indoors/update_graphic(list/graphic_add = null, list/graphic_remove = null)
 	return 0
 
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/reinforced)
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/steel_dirty)
-
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/dirt)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow/snow2)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow/gravsnow)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow/plating)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow/plating/drift)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
-/turf/simulated/floor/outdoors/grass/sif
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/cryogaia)
+/turf/simulated/floor/outdoors/grass/cryogaia
 	turf_layers = list(
-		/turf/simulated/floor/outdoors/rocks/cryogaia,
-		/turf/simulated/floor/outdoors/dirt/cryogaia
+		/turf/simulated/floor/snow,
+		/turf/simulated/floor/tiled/cryogaia,
 		)
 
 
@@ -180,7 +181,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/sky/virgo3b
 	color = "#FFBBBB"
 
-/turf/simulated/sky/virgo3b/initialize()
+/turf/simulated/sky/virgo3b/Initialize()
 	SSplanets.addTurf(src)
 	set_light(2, 2, "#FFBBBB")
 
