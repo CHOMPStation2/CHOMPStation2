@@ -225,6 +225,7 @@
 	},
 /obj/machinery/power/smes/buildable{
 	charge = 0;
+	output_attempt = 0;
 	RCon_tag = "Substation - MedSec"
 	},
 /turf/simulated/floor,
@@ -5038,6 +5039,10 @@
 "lc" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/lower/rnd)
+"ld" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/drone_fabrication)
 "le" = (
 /obj/structure/railing{
 	dir = 4
@@ -5575,6 +5580,7 @@
 "mg" = (
 /obj/machinery/power/smes/buildable{
 	charge = 0;
+	output_attempt = 0;
 	RCon_tag = "Substation - Research"
 	},
 /obj/structure/cable/green,
@@ -5647,6 +5653,22 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/atrium_two)
+"mo" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/public_garden_two)
 "mp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -12252,13 +12274,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/drone_fabrication)
-"AO" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/landmark{
-	name = "JoinLateCyborg"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/engineering/drone_fabrication)
 "AZ" = (
 /obj/structure/catwalk,
 /obj/machinery/firealarm{
@@ -13246,6 +13261,7 @@
 "EI" = (
 /obj/machinery/power/smes/buildable{
 	charge = 100000;
+	output_attempt = 0;
 	RCon_tag = "Substation - Telecomms"
 	},
 /obj/structure/cable/green{
@@ -17425,22 +17441,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/rnd/research_storage)
-"SS" = (
-/obj/structure/table/standard{
-	name = "plastic table frame"
-	},
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = -24
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/public_garden_two)
 "SV" = (
 /obj/structure/bed/chair,
 /obj/effect/floor_decal/rust,
@@ -23890,7 +23890,7 @@ ac
 Kt
 Kt
 MX
-SS
+mo
 Kt
 Kt
 ac
@@ -28630,7 +28630,7 @@ Xm
 zk
 zR
 As
-AO
+ld
 Bd
 Tn
 BK
