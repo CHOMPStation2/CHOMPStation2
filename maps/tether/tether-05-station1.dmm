@@ -1352,6 +1352,7 @@
 /obj/machinery/power/smes/buildable{
 	charge = 0;
 	output_attempt = 0;
+	outputting = 0;
 	RCon_tag = "Substation - Engineering"
 	},
 /obj/structure/cable/green{
@@ -5897,18 +5898,11 @@
 /area/gateway)
 "akI" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 4
+	dir = 8
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "PubPrepFront";
-	name = "Gateway Shutter";
-	pixel_x = 24;
-	pixel_y = -23;
-	req_access = list(62)
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/gateway/prep_room)
 "akJ" = (
@@ -6014,6 +6008,23 @@
 /turf/simulated/floor,
 /area/engineering/storage)
 "akU" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "PubPrepFront";
+	name = "Gateway Shutter";
+	pixel_x = 24;
+	pixel_y = -23;
+	req_access = list(62)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/turf/simulated/floor/tiled,
+/area/gateway/prep_room)
+"akV" = (
 /obj/machinery/button/remote/blast_door{
 	id = "PubPrepFront";
 	name = "Gateway Shutter";
@@ -6027,20 +6038,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/station/atrium)
-"akV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/atrium)
@@ -6531,6 +6530,37 @@
 "alT" = (
 /turf/simulated/wall,
 /area/storage/emergency_storage/emergency4)
+"alU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/station/atrium)
+"alV" = (
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1380;
+	master_tag = "tether_dock";
+	name = "interior access button";
+	pixel_x = -28;
+	pixel_y = 26;
+	req_one_access = list(13)
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4;
+	icon_state = "map"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/station/dock_two)
 "alW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/steeldecal/steel_decals_central6{
@@ -12335,6 +12365,7 @@
 /obj/machinery/power/smes/buildable{
 	charge = 0;
 	output_attempt = 0;
+	outputting = 0;
 	RCon_tag = "Substation - Civilian"
 	},
 /obj/structure/cable/green{
@@ -20328,6 +20359,7 @@
 /obj/machinery/power/smes/buildable{
 	charge = 0;
 	output_attempt = 0;
+	outputting = 0;
 	RCon_tag = "Substation - Command"
 	},
 /obj/structure/cable/green{
@@ -21452,25 +21484,6 @@
 	tag_interior_door = "d2a1_dock_inner"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/tether/station/dock_two)
-"bPA" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "tether_dock";
-	name = "interior access button";
-	pixel_x = 28;
-	pixel_y = 26;
-	req_one_access = list(13)
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	icon_state = "map"
-	},
-/turf/simulated/floor/tiled,
 /area/tether/station/dock_two)
 "bPD" = (
 /obj/structure/grille,
@@ -30654,7 +30667,7 @@ aDJ
 aDJ
 aDJ
 aGa
-bPA
+alV
 bPN
 aJa
 aFZ
@@ -35007,9 +35020,9 @@ ajR
 adO
 ajT
 ajW
-ajE
+akI
 akN
-akU
+akV
 ajk
 afC
 aju
@@ -35149,9 +35162,9 @@ ajJ
 ajN
 aki
 akB
-akI
+akU
 akP
-akV
+alU
 akQ
 afC
 aAL
