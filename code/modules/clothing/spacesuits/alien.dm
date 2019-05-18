@@ -214,7 +214,7 @@
 /obj/item/clothing/suit/space/vox/civ
 	name = "vox assistant pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers."
-	icon = 'icons/mob/suit_yw.dmi'
+	icon = 'icons/obj/clothing/suits_yw.dmi'
 	icon_state = "vox-civ-assistant"
 	item_state = "vox-pressure-normal"
 	allowed = list(/obj/item/weapon/tank,/obj/item/weapon/pen,/obj/item/device/flashlight/pen)
@@ -223,7 +223,7 @@
 
 /obj/item/clothing/head/helmet/space/vox/civ
 	name = "vox assistant pressure helmet"
-	icon = 'icons/mob/head_yw.dmi'
+	icon = 'icons/obj/clothing/hats_yw.dmi'
 	icon_state = "vox-civ-assistant"
 	item_state = "vox-pressure-normal"
 	desc = "A very alien-looking helmet for vox crewmembers."
