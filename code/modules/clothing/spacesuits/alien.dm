@@ -216,7 +216,6 @@
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers."
 	icon = 'icons/obj/clothing/suits_yw.dmi'
 	icon_state = "vox-civ-assistant"
-	item_state = "vox-pressure-normal"
 	allowed = list(/obj/item/weapon/tank,/obj/item/weapon/pen,/obj/item/device/flashlight/pen)
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 100, rad = 25)
 	pressure_resistance = 5 * ONE_ATMOSPHERE
@@ -225,9 +224,8 @@
 	name = "vox assistant pressure helmet"
 	icon = 'icons/obj/clothing/hats_yw.dmi'
 	icon_state = "vox-civ-assistant"
-	item_state = "vox-pressure-normal"
 	desc = "A very alien-looking helmet for vox crewmembers."
-	flags_inv = (HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 100, rad = 25)
 	pressure_resistance = 5 * ONE_ATMOSPHERE
@@ -310,7 +308,6 @@
 	name = "vox engineer pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one comes with more radiation protection."
 	icon_state = "vox-civ-engineer"
-	item_state = "vox-pressure-engineer"
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 100, rad = 50)
 	allowed = list(/obj/item/device/flashlight, /obj/item/weapon/tank, /obj/item/device/t_scanner, /obj/item/weapon/rcd, /obj/item/weapon/tool)
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
@@ -319,7 +316,6 @@
 /obj/item/clothing/head/helmet/space/vox/civ/engineer
 	name = "vox engineer pressure helmet"
 	icon_state = "vox-civ-engineer"
-	item_state = "vox-pressure-engineer"
 	desc = "A very alien-looking helmet for vox crewmembers. This one comes with more radiation protection."
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 100, rad = 50)
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
@@ -358,13 +354,11 @@
 	name = "vox science pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one is for SCIENCE!"
 	icon_state = "vox-civ-science"
-	item_state = "vox-pressure-science"
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 10, bio = 100, rad = 25)
 
 /obj/item/clothing/head/helmet/space/vox/civ/science
 	name = "vox science pressure helmet"
 	icon_state = "vox-civ-science"
-	item_state = "vox-pressure-science"
 	desc = "A very alien-looking helmet for vox crewmembers. This one is for SCIENCE!"
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 10, bio = 100, rad = 25)
 
@@ -395,14 +389,12 @@
 	name = "vox medical pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one is for medical personnel."
 	icon_state = "vox-civ-medical"
-	item_state = "vox-pressure-medical"
 	allowed = list(/obj/item/weapon/tank,/obj/item/device/flashlight,/obj/item/weapon/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical)
 	pressure_resistance = 40 * ONE_ATMOSPHERE
 
 /obj/item/clothing/head/helmet/space/vox/civ/medical
 	name = "vox medical pressure helmet"
 	icon_state = "vox-civ-medical"
-	item_state = "vox-pressure-medical"
 	desc = "A very alien-looking helmet for Nanotrasen-hired Vox. This one is for medical personnel."
 	pressure_resistance = 40 * ONE_ATMOSPHERE
 
@@ -463,7 +455,6 @@
 	name = "vox security pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one is for security aligned vox."
 	icon_state = "vox-civ-security"
-	item_state = "vox-pressure-security"
 	armor = list(melee = 60, bullet = 10, laser = 30, energy = 5, bomb = 45, bio = 100, rad = 10)
 	allowed = list(/obj/item/weapon/tank,/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
 	pressure_resistance = 40 * ONE_ATMOSPHERE
@@ -471,7 +462,6 @@
 /obj/item/clothing/head/helmet/space/vox/civ/security
 	name = "vox security pressure helmet"
 	icon_state = "vox-civ-security"
-	item_state = "vox-pressure-security"
 	desc = "A very alien-looking helmet for Nanotrasen-hired Vox. This one is for security aligned vox."
 	pressure_resistance = 40 * ONE_ATMOSPHERE
 	flash_protection = FLASH_PROTECTION_MAJOR
