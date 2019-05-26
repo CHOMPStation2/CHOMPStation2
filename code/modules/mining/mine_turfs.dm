@@ -56,7 +56,8 @@ var/list/mining_overlay_cache = list()
 		"silicates" = /obj/item/weapon/ore/glass,
 		"carbon" = /obj/item/weapon/ore/coal,
 		"verdantium" = /obj/item/weapon/ore/verdantium,
-		"marble" = /obj/item/weapon/ore/marble
+		"marble" = /obj/item/weapon/ore/marble,
+		"lead" = /obj/item/weapon/ore/lead
 	)
 
 	has_resources = 1
@@ -613,7 +614,7 @@ var/list/mining_overlay_cache = list()
 				new /obj/item/stack/material/uranium(src, rand(5,25))
 
 /turf/simulated/mineral/proc/make_ore(var/rare_ore)
-	if(mineral || ignore_mapgen) //VOREStation Edit - Makes sense, doesn't it?
+	if(mineral || ignore_mapgen || ignore_oregen) //VOREStation Edit - Makes sense, doesn't it?
 		return
 
 	var/mineral_name
