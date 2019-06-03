@@ -84,7 +84,8 @@
 					/obj/item/weapon/storage/box/syndie_kit/chameleon,
 					/obj/item/device/encryptionkey/syndicate,
 					/obj/item/weapon/card/id/syndicate,
-					/obj/item/clothing/mask/gas/voice
+					/obj/item/clothing/mask/gas/voice,
+					/obj/item/weapon/makeover
 					),
 			list( //the professional,
 					/obj/item/weapon/gun/energy/ionrifle/pistol,
