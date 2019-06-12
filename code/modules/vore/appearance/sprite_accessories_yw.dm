@@ -75,3 +75,4 @@
 	icon_state = "ninekitsune"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "ninekitsune-tips"
