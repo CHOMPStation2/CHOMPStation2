@@ -27,6 +27,7 @@
 	icon_state = "triplekitsune"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "triplekitsune_tips"
 
 /datum/sprite_accessory/tail/lizard_tail_smooth
 	icon = 'icons/mob/vore/tails_yw.dmi'
