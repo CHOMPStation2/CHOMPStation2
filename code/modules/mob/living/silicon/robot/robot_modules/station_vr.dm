@@ -181,6 +181,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/knine/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
@@ -256,6 +257,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/ert
@@ -303,6 +305,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/scrubpup
@@ -383,6 +386,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/science
@@ -428,6 +432,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/engiedog
@@ -554,6 +559,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
@@ -568,4 +574,5 @@
 	R.verbs -= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs -= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs -= /mob/living/proc/shred_limb
+	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()

@@ -21,6 +21,7 @@
 		new /datum/data/mining_equipment("Soap",						/obj/item/weapon/soap/nanotrasen,									200),
 		new /datum/data/mining_equipment("Laser Pointer",				/obj/item/device/laser_pointer,										900),
 		new /datum/data/mining_equipment("Plush Toy",					/obj/random/plushie,												300),
+		new /datum/data/mining_equipment("GPS Device",					/obj/item/device/gps/mining,										100),
 		// TODO new /datum/data/mining_equipment("Advanced Scanner",	/obj/item/device/t_scanner/adv_mining_scanner,						800),
 		new /datum/data/mining_equipment("Fulton Beacon",				/obj/item/fulton_core,												500),
 		new /datum/data/mining_equipment("Shelter Capsule",				/obj/item/device/survivalcapsule,									500),
@@ -55,7 +56,8 @@
 		new /datum/data/mining_equipment("KA AoE Damage",				/obj/item/borg/upgrade/modkit/aoe/mobs,								2000),
 		new /datum/data/mining_equipment("KA Holster",				/obj/item/clothing/accessory/holster/waist/kinetic_accelerator,			350),
 		new /datum/data/mining_equipment("Fishing Net",					/obj/item/weapon/material/fishing_net,								500),
-		new /datum/data/mining_equipment("Titanium Fishing Rod",		/obj/item/weapon/material/fishing_rod/modern,						1000)
+		new /datum/data/mining_equipment("Titanium Fishing Rod",		/obj/item/weapon/material/fishing_rod/modern,						1000),
+		new /datum/data/mining_equipment("Durasteel Fishing Rod",		/obj/item/weapon/material/fishing_rod/modern/strong,				7500)
 		)
 	//VOREStation Edit End
 
