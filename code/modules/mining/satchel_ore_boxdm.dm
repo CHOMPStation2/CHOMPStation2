@@ -24,7 +24,10 @@
 			return
 		S.hide_from(usr)
 		for(var/obj/item/weapon/ore/O in S.contents)
-			S.remove_from_storage(O, src) //This will move the item to this item's contents
+			if (O.name != "strange rock")
+				S.remove_from_storage(O, src) //This will move the item to this item's contents
+			else
+				to_chat(user,"<span class='notice'>The [O] bounces out of the [src]!</span>")
 		to_chat(user,"<span class='notice'>You empty the satchel into the [src].</span>")
 
 	update_ore_count()
