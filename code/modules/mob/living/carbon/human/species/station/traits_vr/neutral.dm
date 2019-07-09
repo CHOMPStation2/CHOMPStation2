@@ -46,7 +46,7 @@
 		),
 	autohiss_exempt = list("Sinta'unathi"))
 
-	excludes = list(/datum/trait/autohiss_tajaran)
+	excludes = list(/datum/trait/autohiss_tajaran, /datum/traits/autohiss_vassilian)
 
 /datum/trait/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -57,7 +57,24 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/autohiss_unathi)
+	excludes = list(/datum/trait/autohiss_unathi, /datum/traits/autohiss_vassilian)
+
+// YW addition
+/datum/traits/autohiss_vassilian
+	name = "Autohiss (Vassilian)"
+	desc = "You buzz your S's, F's, Th's, and R's."
+	cost = 0
+	var_changes = list(
+	autohiss_basic_map = list(
+        "s" = list("sz", "z", "zz"),
+        "f" = list("zk")
+		),
+	autohiss_extra_map = list(
+		"th" = list("zk", "szk"),
+        "r" = list("rk")
+	),
+	autohiss_exempt = list("Vespinae"))
+	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_unathi)
 
 /datum/trait/bloodsucker
 	name = "Bloodsucker"
@@ -83,7 +100,7 @@
 /datum/trait/hard_vore
 	name = "Brutal Predation"
 	desc = "Allows you to tear off limbs & tear out internal organs."
-	cost = 0 //I would make this cost a point, since it has some in game value, but there are easier, less damaging ways to perform the same functions.
+	cost = 0
 
 /datum/trait/hard_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -94,6 +111,8 @@
 	desc = "Allows you to dispose of some garbage on the go instead of having to look for a bin or littering like an animal."
 	cost = 0
 	var_changes = list("trashcan" = 1)
+
+// TODO: trait for eating wearable objects and tools.
 
 /datum/trait/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)

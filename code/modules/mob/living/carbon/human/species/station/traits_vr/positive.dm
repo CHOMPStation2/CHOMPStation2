@@ -1,13 +1,13 @@
 /datum/trait/speed_fast
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
-	cost = 3
+	cost = 2
 	var_changes = list("slowdown" = -0.5)
 
 /datum/trait/speed_fast_plus
 	name = "Major Haste"
 	desc = "Allows you to move MUCH faster on average than baseline."
-	cost = 5
+	cost = 4
 	var_changes = list("slowdown" = -1.0)
 
 /datum/trait/hardy
@@ -42,29 +42,45 @@
 		..(S,H)
 		H.setMaxHealth(S.total_health)
 
+/datum/trait/endurance_extremely_high
+	name = "Extremely High Endurance"
+	desc = "Increases your maximum total hitpoints to 175"
+	cost = 5
+	var_changes = list("total_health" = 175)
+
+	apply(var/datum/species/S,var/mob/living/carbon/human/H)
+		..(S,H)
+		H.setMaxHealth(S.total_health)
+
 /datum/trait/nonconductive
 	name = "Non-Conductive"
-	desc = "Decreases your susceptibility to electric shocks by a 25% amount."
+	desc = "Decreases your susceptibility to electric shocks by 25%."
 	cost = 2 //This effects tasers!
 	var_changes = list("siemens_coefficient" = 0.75)
 
 /datum/trait/nonconductive_plus
 	name = "Major Non-Conductive"
-	desc = "Decreases your susceptibility to electric shocks by a 50% amount."
+	desc = "Decreases your susceptibility to electric shocks by 50%."
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5)
+
+/datum/trait/nonconductive_robust
+	name = "Robustly Non-Conductive"
+	desc = "Decreases your susceptibility to electric shocks by 75%."
+	cost = 5 //Let us not forget this effects tasers!
+	var_changes = list("siemens_coefficient" = 0.25)
 
 /datum/trait/darksight
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark."
 	cost = 1
-	var_changes = list("darksight" = 3, "flash_mod" = 2.0)
+	var_changes = list("darksight" = 3, "flash_mod" = 1.5)
 
 /datum/trait/darksight_plus
 	name = "Darksight (Major)"
-	desc = "Allows you to see in the dark for the whole screen."
+	desc = "Allows you to see in the dark for almost the whole screen."
 	cost = 2
-	var_changes = list("darksight" = 7, "flash_mod" = 3.0)
+	var_changes = list("darksight" = 6, "flash_mod" = 2.0)
 
 /datum/trait/melee_attack
 	name = "Sharp Melee"
@@ -80,45 +96,45 @@
 
 /datum/trait/minor_brute_resist
 	name = "Minor Brute Resist"
-	desc = "Adds 15% resistance to brute damage sources."
+	desc = "Adds 10% resistance to brute damage sources."
 	cost = 1
-	var_changes = list("brute_mod" = 0.85)
+	var_changes = list("brute_mod" = 0.9)
 
 /datum/trait/brute_resist
 	name = "Brute Resist"
-	desc = "Adds 25% resistance to brute damage sources."
+	desc = "Adds 20% resistance to brute damage sources."
 	cost = 2
-	var_changes = list("brute_mod" = 0.75)
+	var_changes = list("brute_mod" = 0.8)
 
 /datum/trait/brute_resist_plus
 	name = "Major Brute Resist"
-	desc = "Adds 50% resistance to brute damage sources."
+	desc = "Adds 40% resistance to brute damage sources."
 	cost = 3
-	var_changes = list("brute_mod" = 0.5)
+	var_changes = list("brute_mod" = 0.6)
 
 /datum/trait/minor_burn_resist
 	name = "Minor Burn Resist"
-	desc = "Adds 15% resistance to burn damage sources."
+	desc = "Adds 10% resistance to burn damage sources."
 	cost = 1
-	var_changes = list("burn_mod" = 0.85)
+	var_changes = list("burn_mod" = 0.9)
 
 /datum/trait/burn_resist
 	name = "Burn Resist"
-	desc = "Adds 25% resistance to burn damage sources."
+	desc = "Adds 20% resistance to burn damage sources."
 	cost = 2
-	var_changes = list("burn_mod" = 0.75)
+	var_changes = list("burn_mod" = 0.8)
 
 /datum/trait/burn_resist_plus
 	name = "Major Burn Resist"
-	desc = "Adds 50% resistance to burn damage sources."
+	desc = "Adds 40% resistance to burn damage sources."
 	cost = 3
-	var_changes = list("burn_mod" = 0.5)
+	var_changes = list("burn_mod" = 0.6)
 
 /datum/trait/photoresistant
-	name = "Photoresistant"
-	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 50%"
+	name = "Photoresistance"
+	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 30%"
 	cost = 1
-	var_changes = list("flash_mod" = 0.5)
+	var_changes = list("flash_mod" = 0.7)
 
 /datum/trait/winged_flight
 	name = "Winged Flight"
