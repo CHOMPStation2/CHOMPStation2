@@ -46,9 +46,8 @@
 		),
 	autohiss_exempt = list("Sinta'unathi"))
 
-	excludes = list(/datum/trait/autohiss_tajaran, /datum/traits/autohiss_vassilian)
+	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_vassilian)
 
-// YW addition
 /datum/trait/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
 	desc = "You roll your R's."
@@ -58,8 +57,9 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/autohiss_unathi, /datum/traits/autohiss_vassilian)
+	excludes = list(/datum/trait/autohiss_unathi, /datum/trait/autohiss_vassilian)
 
+// YW addition
 /datum/trait/autohiss_vassilian
 	name = "Autohiss (Vassilian)"
 	desc = "You buzz your S's, F's, Th's, and R's."
