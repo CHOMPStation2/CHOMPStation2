@@ -112,8 +112,6 @@
 	cost = 0
 	var_changes = list("trashcan" = 1)
 
-// TODO: trait for eating wearable objects and tools.
-
 /datum/trait/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/eat_trash
