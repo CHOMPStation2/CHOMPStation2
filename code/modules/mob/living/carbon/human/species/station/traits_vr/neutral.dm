@@ -60,7 +60,7 @@
 	excludes = list(/datum/trait/autohiss_unathi, /datum/traits/autohiss_vassilian)
 
 // YW addition
-/datum/traits/autohiss_vassilian
+/datum/trait/autohiss_vassilian
 	name = "Autohiss (Vassilian)"
 	desc = "You buzz your S's, F's, Th's, and R's."
 	cost = 0
