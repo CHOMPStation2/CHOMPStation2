@@ -765,7 +765,7 @@
 
 //Arthur Schutz
 
-/obj/item/clothing/under/rank/security/corp/fluf/art_uniform
+/obj/item/clothing/under/rank/security/corp/fluff/art_uniform
 	name = "SecCom Uniform"
 	desc = "A standard issue SifGuard uniform for every military officer. Made from advanced fabrics which provide both the physical security and the fashionable security of it's wearer. They are designed with both purposes of utility work and formal work. This uniform has a couple of additional badges on the torso along with the nametag with 'A. Schutz' engraved onto it."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
