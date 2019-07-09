@@ -45,7 +45,7 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list("Sinta'unathi"))
-	excludes = list(/datum/trait/autohiss_tajaran, /datum/traits/autohiss_vassilian)
+	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_vassilian)
 
 /datum/trait/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -56,25 +56,25 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/autohiss_unathi, /datum/traits/autohiss_vassilian)
+	excludes = list(/datum/trait/autohiss_unathi, /datum/trait/autohiss_vassilian)
 
 // YW addition
-// TODO FIX ME
-// /datum/trait/autohiss_vassilian
-// 	name = "Autohiss (Vassilian)"
-// 	desc = "You buzz your S's, F's, Th's, and R's."
-// 	cost = 0
-// 	var_changes = list(
-// 	autohiss_basic_map = list(
-//         "s" = list("sz", "z", "zz"),
-//         "f" = list("zk")
-// 		),
-// 	autohiss_extra_map = list(
-// 		"th" = list("zk", "szk"),
-//         "r" = list("rk")
-// 	),
-// 	autohiss_exempt = list("Vespinae"))
-// 	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_unathi)
+/datum/trait/autohiss_vassilian
+	name = "Autohiss (Vassilian)"
+	desc = "You buzz your S's, F's, Th's, and R's."
+	cost = 0
+	var_changes = list(
+	autohiss_basic_map = list(
+        "s" = list("sz", "z", "zz"),
+        "f" = list("zk")
+		),
+	autohiss_extra_map = list(
+		"th" = list("zk", "szk"),
+        "r" = list("rk")
+	),
+	autohiss_exempt = list("Vespinae"))
+	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_unathi)
+// YW Addition end
 
 /datum/trait/bloodsucker
 	name = "Bloodsucker"
