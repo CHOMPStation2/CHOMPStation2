@@ -45,7 +45,6 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list("Sinta'unathi"))
-
 	excludes = list(/datum/trait/autohiss_tajaran, /datum/traits/autohiss_vassilian)
 
 /datum/trait/autohiss_tajaran
