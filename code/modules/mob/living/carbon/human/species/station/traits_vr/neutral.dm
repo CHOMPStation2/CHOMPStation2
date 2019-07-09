@@ -59,6 +59,7 @@
 	excludes = list(/datum/trait/autohiss_unathi, /datum/traits/autohiss_vassilian)
 
 // YW addition
+/** // TODO FIX ME
 /datum/trait/autohiss_vassilian
 	name = "Autohiss (Vassilian)"
 	desc = "You buzz your S's, F's, Th's, and R's."
@@ -74,6 +75,7 @@
 	),
 	autohiss_exempt = list("Vespinae"))
 	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_unathi)
+**/
 
 /datum/trait/bloodsucker
 	name = "Bloodsucker"
