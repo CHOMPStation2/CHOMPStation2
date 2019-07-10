@@ -342,6 +342,12 @@ item_path: /obj/item/clothing/suit/security/navyhos
 req_access: 58
 }
 
+{
+ckey: mr_signmeup
+character_name: Daniel Fisher
+item_path: /obj/item/clothing/accessory/medal/conduct
+}
+
 # ######## N CKEYS
 # ######## O CKEYS
 # ######## P CKEYS

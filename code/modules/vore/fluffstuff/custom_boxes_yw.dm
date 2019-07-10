@@ -172,7 +172,7 @@
 	desc = "A kit containing Arthur's equipment."
 	has_items = list(
 		/obj/item/device/modkit_conversion/fluff/art_hos_kit,
-		/obj/item/clothing/under/rank/security/corp/fluf/art_uniform)
+		/obj/item/clothing/under/rank/security/corp/fluff/art_uniform)
 
 // *******
 // Dwaggy090

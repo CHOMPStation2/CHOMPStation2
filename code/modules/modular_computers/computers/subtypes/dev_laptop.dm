@@ -28,10 +28,8 @@
 	//VOREStation Addition Begin
 	var/supported = FALSE
 	for(var/obj/structure/table/S in loc)
-		if(istype(S, /obj/structure/table/bench) || istype(S, /obj/structure/table/rack))
-			continue
 		supported = TRUE
-	if(!supported)
+	if(!supported && !anchored)
 		to_chat(usr, "You will need a better supporting surface before opening \the [src]!")
 		return
 	//VOREStation Addition End

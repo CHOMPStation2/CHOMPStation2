@@ -12,8 +12,11 @@
 
 /obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/weapon/ore))
-		user.remove_from_mob(W)
-		src.contents += W
+		if (W.name != "strange rock")
+			user.remove_from_mob(W)
+			src.contents += W
+		else
+			to_chat(user,"<span class='notice'>The [W] bounces out of the [src]!</span>")
 
 	else if (istype(W, /obj/item/weapon/storage))
 		var/obj/item/weapon/storage/S = W
@@ -21,8 +24,11 @@
 			return
 		S.hide_from(usr)
 		for(var/obj/item/weapon/ore/O in S.contents)
-			S.remove_from_storage(O, src) //This will move the item to this item's contents
-		to_chat(user,"<span class='notice'>You empty the satchel into the box.</span>")
+			if (O.name != "strange rock")
+				S.remove_from_storage(O, src) //This will move the item to this item's contents
+			else
+				to_chat(user,"<span class='notice'>The [O] bounces out of the [src]!</span>")
+		to_chat(user,"<span class='notice'>You empty the satchel into the [src].</span>")
 
 	update_ore_count()
 
@@ -33,7 +39,6 @@
 	stored_ore = list()
 
 	for(var/obj/item/weapon/ore/O in contents)
-
 		if(stored_ore[O.name])
 			stored_ore[O.name]++
 		else

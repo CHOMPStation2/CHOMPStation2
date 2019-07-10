@@ -181,6 +181,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/knine/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
@@ -256,6 +257,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/ert
@@ -303,6 +305,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/scrubpup
@@ -383,6 +386,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/science
@@ -428,6 +432,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/engiedog
@@ -453,29 +458,31 @@
 	src.modules += new /obj/item/weapon/pickaxe(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/weapon/gripper(src)
+	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 
 	//Painfully slow charger regen but high capacity. Also starts with low amount.
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
 	metal.name = "Steel reserves"
-	metal.recharge_rate = 50
+	metal.recharge_rate = 100
 	metal.max_energy = 50000
-	metal.energy = 5000
+	metal.energy = 10000
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass()
 	glass.name = "Glass reserves"
-	glass.recharge_rate = 50
+	glass.recharge_rate = 100
 	glass.max_energy = 50000
-	glass.energy = 5000
+	glass.energy = 10000
 	var/datum/matter_synth/wood = new /datum/matter_synth/wood()
 	wood.name = "Wood reserves"
-	wood.recharge_rate = 50
+	wood.recharge_rate = 100
 	wood.max_energy = 50000
-	wood.energy = 5000
+	wood.energy = 10000
 	var/datum/matter_synth/plastic = new /datum/matter_synth/plastic()
 	plastic.name = "Plastic reserves"
-	plastic.recharge_rate = 50
+	plastic.recharge_rate = 100
 	plastic.max_energy = 50000
-	plastic.energy = 5000
+	plastic.energy = 10000
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
@@ -552,6 +559,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
@@ -566,4 +574,5 @@
 	R.verbs -= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs -= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs -= /mob/living/proc/shred_limb
+	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()

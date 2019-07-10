@@ -33,5 +33,5 @@ delete-after: True
 # Also, all entries are changed into a single [] after a master changelog generation. Just remove the brackets when you add new entries.
 # Please surround your changes in  double quotes ("), as certain characters otherwise screws up compiling. The quotes will not show up in the changelog.
 changes: 
-  - tweak: "Removed access to departmental networks on camera modular computer program for average people."
-  - rscadd: "Added access to full network on camera modular computer program for heads."
+  - rscadd: "Broken components now have matter worth of 1000 steel units (half a sheet)."
+  - tweak: "Components dropped from loot piles will now use random proper sprite instead of default placeholder."
