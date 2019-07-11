@@ -7,7 +7,7 @@
 /datum/trait/speed_fast_plus
 	name = "Major Haste"
 	desc = "Allows you to move MUCH faster on average than baseline."
-	cost = 4
+	cost = 5
 	var_changes = list("slowdown" = -1.0)
 
 /datum/trait/hardy
@@ -45,7 +45,7 @@
 /datum/trait/endurance_extremely_high
 	name = "Extremely High Endurance"
 	desc = "Increases your maximum total hitpoints to 175"
-	cost = 5
+	cost = 4
 	var_changes = list("total_health" = 175)
 
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -67,20 +67,20 @@
 /datum/trait/nonconductive_robust
 	name = "Robustly Non-Conductive"
 	desc = "Decreases your susceptibility to electric shocks by 75%."
-	cost = 5 //Let us not forget this effects tasers!
+	cost = 4 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.25)
 
 /datum/trait/darksight
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark."
 	cost = 1
-	var_changes = list("darksight" = 3, "flash_mod" = 1.5)
+	var_changes = list("darksight" = 3)
 
 /datum/trait/darksight_plus
 	name = "Darksight (Major)"
 	desc = "Allows you to see in the dark for almost the whole screen."
 	cost = 2
-	var_changes = list("darksight" = 6, "flash_mod" = 2.0)
+	var_changes = list("darksight" = 6)
 
 /datum/trait/melee_attack
 	name = "Sharp Melee"
@@ -132,9 +132,15 @@
 
 /datum/trait/photoresistant
 	name = "Photoresistance"
-	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 30%"
+	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%"
 	cost = 1
-	var_changes = list("flash_mod" = 0.7)
+	var_changes = list("flash_mod" = 0.75)
+
+/datum/trait/photoresistant_plus
+	name = "Major Photoresistance"
+	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 50%"
+	cost = 2
+	var_changes = list("flash_mod" = 0.5)
 
 /datum/trait/winged_flight
 	name = "Winged Flight"
@@ -159,4 +165,25 @@
 
 /datum/trait/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/lick_wounds 
+	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
+
+// YW Addition
+/datum/trait/bloodsucker_plus
+	name = "Evolved Bloodsucker"
+	desc = "Makes you able to gain nutrition by draining blood as well as eating food. To compensate, you get fangs that can be used to drain blood from prey."
+	cost = 1
+	var_changes = list("gets_food_nutrition" = 0.5) // Hopefully this works???
+	excludes = list(/datum/trait/bloodsucker)
+
+/datum/trait/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
+
+/datum/trait/sonar
+	name="Perceptive Hearing"
+	desc = "You can hear slight vibrations in the air very easily, if you focus."
+	cost = 1
+/datum/trait/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/sonar_ping
+// YW Addition End
