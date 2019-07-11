@@ -152,11 +152,3 @@
 	..(S,H)
 	H.verbs |= /mob/living/proc/glow_toggle
 	H.verbs |= /mob/living/proc/glow_color
-
-// YW Addition
-/datum/trait/daredevil
-	name = "Daredevil"
-	desc = "You will automatically vault tables and railings, even if it isn't in your best interest. Geronimo!"
-	cost = 0
-	var_changes = list("flags" = PASSTABLE)
-// YW Addition end

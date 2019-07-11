@@ -1,7 +1,7 @@
 /datum/trait/speed_fast
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
-	cost = 2
+	cost = 3
 	var_changes = list("slowdown" = -0.5)
 
 /datum/trait/speed_fast_plus
@@ -186,4 +186,10 @@
 /datum/trait/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
-// YW Addition End
+
+/datum/trait/daredevil
+	name = "Daredevil"
+	desc = "You will automatically vault tables and railings, even if it isn't in your best interest. Geronimo!"
+	cost = 1
+	var_changes = list("flags" = PASSTABLE)
+// YW Addition end
