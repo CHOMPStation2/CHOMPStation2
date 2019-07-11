@@ -185,5 +185,5 @@
 	cost = 1
 /datum/trait/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
-	H.verbs |= /mob/living/proc/sonar_ping
+	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
 // YW Addition End
