@@ -1088,10 +1088,37 @@
 
 /obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
 	name = "Saur's Dufflebag"
-	desc = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Dr.Saur Darastrix' written under it."
+	desc = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Saur Darastrix' written under it."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi', slot_back_str = 'icons/vore/custom_onmob_yw.dmi')
 	icon_state = "saur_duffle"
+	slowdown = 0.2
+	
+//PCarrier, currently using the sprites and path for the navy version. will be changed with icon overrides once i have a hold of them. Here's to Izacs sanity.
+/obj/item/clothing/suit/armor/pcarrier/navy/fluff/saur_pccarrier
+	name = "Saur's Plate Carrier"
+	desc = "A mostly black and purple striped armour carrier, geared up and ready to go. It looks well maintained, either its not seen much action yet, or any damage done is meticulously repaired, Several small blood splatters that have dried on the inside of it seem to suggest the latter. this carrier has been modified to have holes in the back for wings to slot through."
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armguards/navy/fluff/saur_arm, /obj/item/clothing/accessory/armor/legguards/navy/fluff/saur_leg, /obj/item/clothing/accessory/armor/armorplate/tactical/fluff/saur_plate, /obj/item/clothing/accessory/storage/pouches/navy/fluff/saur, /obj/item/clothing/accessory/armor/tag/pcrc/fluff/saur)
+	
+/obj/item/clothing/accessory/armor/armguards/navy/fluff/saur_arm
+	name = "Saur's Armguards"
+	desc = "Armguards for a Plate Carrier, this set is black and purple, and has a tag on the underside with the name 'Saur Darastrix' on them."
+
+/obj/item/clothing/accessory/armor/legguards/navy/fluff/saur_leg
+	name = "Saur's Legguards"
+	desc = "A pair of Leg guards for a plate carrier set. These are black and purple. They have a name tag on the back of them with the name 'Saur Darastrix' on"
+
+/obj/item/clothing/accessory/armor/armorplate/tactical/fluff/saur_plate
+	name = "Saur's Plate"
+	desc = "A standard tactical plate for a carrier, with a tag on the top of it with the name 'Saur Darastrix' on. There is also a group picture attached to the back of the plate, what looks to be Saur Darastrix standing with two Tajaran's and a Naga."
+
+/obj/item/clothing/accessory/storage/pouches/navy/fluff/saur
+	name = "Saur's PCpouches"
+	desc = "Standard pouches for a Plate Carrier. Black and purple in colour, checking the inside of a pocket would reveal a name tag with 'Saur Darastrix' Written on it."
+
+/obj/item/clothing/accessory/armor/tag/pcrc/fluff/saur
+	name = "BlueShield PCRC tag"
+	desc = "A tag for a Plate Carrier, with the title 'Blueshield' written across it. Under that in small is written PCRC."
 
 // ******
 // Dushka
