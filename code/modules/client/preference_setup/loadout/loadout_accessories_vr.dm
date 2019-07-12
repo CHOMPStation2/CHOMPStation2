@@ -37,15 +37,15 @@
 
 /datum/gear/accessory/holster
 	display_name = "holster selection (Security, CD, HoP, Exploration)"
-	allowed_roles = list("Colony Director", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Explorer","Pathfinder")
+	allowed_roles = list("Colony Director", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Explorer","Pathfinder", "Blueshield Guard")
 
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown"
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Pathfinder","Shaft Miner")
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Pathfinder","Shaft Miner", "Blueshield Guard")
 
 /datum/gear/accessory/black_vest
 	display_name = "webbing, black"
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Pathfinder","Shaft Miner")
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Pathfinder","Shaft Miner", "Blueshield Guard")
 
 /datum/gear/accessory/white_vest
 	display_name = "webbing, white (Medical)"
@@ -53,11 +53,11 @@
 
 /datum/gear/accessory/brown_drop_pouches
 	display_name = "drop pouches, brown"
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Pathfinder","Shaft Miner")
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Pathfinder","Shaft Miner", "Blueshield Guard")
 
 /datum/gear/accessory/black_drop_pouches
 	display_name = "drop pouches, black"
-	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Pathfinder","Shaft Miner")
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Pathfinder","Shaft Miner", "Blueshield Guard")
 
 /datum/gear/accessory/white_drop_pouches
 	display_name = "drop pouches, white (Medical)"
