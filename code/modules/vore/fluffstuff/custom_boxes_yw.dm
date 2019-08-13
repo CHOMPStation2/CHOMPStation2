@@ -276,7 +276,8 @@
 	desc = "A kit containing Vasharr's equipment."
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/vasharr_armlets,
-		/obj/item/clothing/accessory/fluff/vasharr_pendant)
+		/obj/item/clothing/accessory/fluff/vasharr_pendant,
+		/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr)
 
 //FrenziedVorcha
 

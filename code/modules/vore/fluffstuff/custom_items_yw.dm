@@ -142,20 +142,6 @@
 	from_suit = /obj/item/weapon/gun/projectile/sec/flash
 	to_suit = /obj/item/weapon/gun/projectile/fluff/m1911
 
-// *******
-// Deathty
-// *******
-
-/obj/item/device/modkit_conversion/fluff/art_hos_kit
-	name = "Arthur's modkit"
-	desc = "A kit containing all the needed tools and parts to modify a Head of security armored coat."
-
-	icon = 'icons/vore/custom_items_vr.dmi'
-	icon_state = "modkit"
-
-	from_suit = /obj/item/clothing/suit/storage/vest/hoscoat
-	to_suit = /obj/item/clothing/suit/storage/vest/hoscoat/art_hos
-
 // ************
 // championfire
 // ************
