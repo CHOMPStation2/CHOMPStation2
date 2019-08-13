@@ -43,15 +43,6 @@
 		/obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket,
 		/obj/item/weapon/storage/belt/utility/fluff/sam_belt)
 
-//Aien Waesmaer
-
-/obj/item/weapon/storage/box/fluff/aien
-	name = "Aien's Kit"
-	desc = "A kit containing Aien's equipment."
-	has_items = list(
-		/obj/item/clothing/under/fluff/aien_uniform,
-		/obj/item/clothing/suit/storage/fluff/aien_suit)
-
 //Nika Domashev
 
 /obj/item/weapon/storage/box/fluff/nika
@@ -162,17 +153,6 @@
 		/obj/item/weapon/flame/lighter/zippo/fluff/melissa,
 		/obj/item/clothing/under/rank/security/corp/fluff/melissa_uniform,
 		/obj/item/device/modkit_conversion/fluff/melissa_gun_kit)
-
-// *******
-// Deathty
-// *******
-
-/obj/item/weapon/storage/box/fluff/art
-	name = "Arthur's kit"
-	desc = "A kit containing Arthur's equipment."
-	has_items = list(
-		/obj/item/device/modkit_conversion/fluff/art_hos_kit,
-		/obj/item/clothing/under/rank/security/corp/fluff/art_uniform)
 
 // *******
 // Dwaggy90
