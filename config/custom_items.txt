@@ -146,12 +146,6 @@ item_path: /obj/item/weapon/storage/box/fluff/melissa
 }
 
 {
-ckey: deathty
-character_name: Arthur Schutz
-item_path: /obj/item/weapon/storage/box/fluff/art
-}
-
-{
 ckey: dwaggy90
 character_name: Saur Darastrix
 item_path: /obj/item/weapon/storage/box/fluff/saur
@@ -209,12 +203,6 @@ item_path: /obj/item/weapon/storage/box/fluff/zara
 ckey: generalpantsu
 character_name: Samantha Quzix
 item_path: /obj/item/weapon/storage/box/fluff/samantha
-}
-
-{
-ckey: generalpantsu
-character_name: Aien Waesmaer
-item_path: /obj/item/weapon/storage/box/fluff/aien
 }
 
 {
