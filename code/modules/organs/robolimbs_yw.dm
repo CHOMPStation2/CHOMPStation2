@@ -22,7 +22,7 @@
 
 /datum/robolimb/dsi_cyberdoe
 	company = "Aphrodite - Cyberdoe"
-	desc = "This limb feels soft and fluffy, realistic in design and squish. By Aprhodite Ltd."
+	desc = "This limb feels soft and fluffy, realistic in design and squish. By Aphrodite Ltd."
 	icon = 'icons/mob/human_races/cyberlimbs/aphrodite/andy_taj.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1
