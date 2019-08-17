@@ -20,7 +20,7 @@
 	desc = "Hperformance brand prosthetic limbs."
 	icon = 'icons/mob/human_races/cyberlimbs/Hperformance/hperformance_main.dmi' //Sprited by: Generalpantsu
 
-/datum/robolimb/dsi_cyberdoe
+/datum/robolimb/aphrodite_cyberdoe
 	company = "Aphrodite - Cyberdoe"
 	desc = "This limb feels soft and fluffy, realistic in design and squish. By Aphrodite Ltd."
 	icon = 'icons/mob/human_races/cyberlimbs/aphrodite/andy_taj.dmi'
@@ -31,7 +31,7 @@
 	suggested_species = "Tajara"
 	whitelisted_to = list("dameonowen")
 
-/datum/robolimb/dsi_cyberdragon
+/datum/robolimb/aphrodite_cyberdragon
 	company = "Aphrodite - Cyberdragon"
 	desc = "This limb feels smooth and scalie, realistic in design and squish. By Aphrodite Ltd."
 	icon = 'icons/mob/human_races/cyberlimbs/aphrodite/andy_liz.dmi'
