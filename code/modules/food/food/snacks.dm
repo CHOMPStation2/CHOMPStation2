@@ -754,7 +754,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/fishfingers/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 4)
-	reagents.add_reagent("carpotoxin", 3)
 	bitesize = 3
 
 /obj/item/weapon/reagent_containers/food/snacks/zestfish
@@ -988,7 +987,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/fishburger/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 6)
-	reagents.add_reagent("carpotoxin", 3)
 	bitesize = 3
 
 /obj/item/weapon/reagent_containers/food/snacks/tofuburger
@@ -1327,7 +1325,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/cubancarp/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 3)
-	reagents.add_reagent("carpotoxin", 3)
 	reagents.add_reagent("capsaicin", 3)
 	bitesize = 3
 
@@ -1988,7 +1985,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/fishandchips/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 3)
-	reagents.add_reagent("carpotoxin", 3)
 	bitesize = 3
 
 /obj/item/weapon/reagent_containers/food/snacks/sandwich
@@ -3808,7 +3804,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/sashimi
 	name = "carp sashimi"
-	desc = "Expertly prepared. Still toxic."
+	desc = "Expertly prepared. Hopefully toxin got removed though."
 	filling_color = "#FFDEFE"
 	icon_state = "sashimi"
 	nutriment_amt = 6
@@ -3816,7 +3812,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/sashimi/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 2)
-	reagents.add_reagent("carpotoxin", 2)
 	bitesize = 3
 
 /obj/item/weapon/reagent_containers/food/snacks/benedict
@@ -4148,3 +4143,26 @@
 	. = ..()
 	reagents.add_reagent("fishbait", 40)
 	bitesize = 5
+
+/obj/item/weapon/reagent_containers/food/snacks/siffruit
+	name = "pulsing fruit"
+	desc = "A blue-ish sac encased in a tough black shell."
+	icon = 'icons/obj/flora/foraging.dmi'
+	icon_state = "siffruit"
+	nutriment_amt = 2
+	nutriment_desc = list("tart" = 1)
+	w_class = ITEMSIZE_TINY
+
+/obj/item/weapon/reagent_containers/food/snacks/siffruit/Initialize()
+	. = ..()
+	reagents.add_reagent("sifsap", 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/siffruit/afterattack(obj/O as obj, mob/user as mob, proximity)
+	if(istype(O,/obj/machinery/microwave))
+		return ..()
+	if(!(proximity && O.is_open_container()))
+		return
+	to_chat(user, "<span class='notice'>You tear \the [src]'s sac open, pouring it into \the [O].</span>")
+	reagents.trans_to(O, reagents.total_volume)
+	user.drop_from_inventory(src)
+	qdel(src)
