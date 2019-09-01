@@ -7,7 +7,11 @@
 	return 1
 
 var/list/shell_module_types = list(
-	"Standard", "Service", "Clerical"
+	"Standard", "Engineering", "Surgeon",  "Crisis",
+	"Miner", "Janitor", "Service", "Clerical", "Security",
+	"Medihound", "K9", "Janihound"
+)
+
 )
 
 var/global/list/acceptable_fruit_types= list(
