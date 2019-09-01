@@ -8,8 +8,8 @@
 
 var/list/shell_module_types = list(
 	"Standard", "Engineering", "Surgeon",  "Crisis",
-	"Miner", "Janitor", "Service", "Clerical", "Security",
-	"Medihound", "K9", "Janihound"
+	"Miner", "Janitor", "Service", "Clerical",
+	"Medihound", "Janihound"
 )
 
 )
