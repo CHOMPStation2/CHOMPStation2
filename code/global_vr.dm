@@ -12,8 +12,6 @@ var/list/shell_module_types = list(
 	"Medihound", "Janihound"
 )
 
-)
-
 var/global/list/acceptable_fruit_types= list(
 											"ambrosia",
 											"apple",
