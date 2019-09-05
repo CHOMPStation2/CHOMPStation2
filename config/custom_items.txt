@@ -140,6 +140,11 @@ item_path: /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
 }
 # ######## D CKEYS
 {
+ckey: dameonowen
+character_name: Dameon Owen
+item_path: /obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious
+}
+{
 ckey: dawidoe
 character_name: Melissa Krutz
 item_path: /obj/item/weapon/storage/box/fluff/melissa
