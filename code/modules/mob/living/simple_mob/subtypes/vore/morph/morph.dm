@@ -12,7 +12,7 @@
 	movement_cooldown = 1
 	status_flags = CANPUSH
 	pass_flags = PASSTABLE
-	mob_bump_flag = 0
+	mob_bump_flag = SLIME
 
 	min_oxy = 0
 	max_oxy = 0
@@ -29,6 +29,10 @@
 	melee_damage_lower = 20
 	melee_damage_upper = 20
 	see_in_dark = 8
+
+	response_help = "touches"
+	response_disarm = "pushes"
+	response_harm = "hits"
 	attacktext = "glomps"
 	attack_sound = 'sound/effects/blobattack.ogg'
 
@@ -155,6 +159,12 @@
 	if(morphed && !ismob(form))
 		return
 	return ..()
+
+/mob/living/simple_mob/vore/hostile/morph/update_icon()
+	if(morphed)
+		return
+	return ..()
+
 
 /mob/living/simple_mob/vore/hostile/morph/update_icons()
 	if(morphed)
