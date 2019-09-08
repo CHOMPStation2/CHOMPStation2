@@ -454,3 +454,21 @@
 /obj/item/weapon/storage/bible/fluff/amina
 	name = "New Space Pioneer's Bible"
 	desc = "This one says it was printed in 2492. The name \"Eric Hayvers\" is written on the inside of the cover, crossed out. Under it is written \"Kouri, Amina, Marine Unit 14, Fifth Echelon. Service number NTN-5528928522372\""
+
+// **************
+// DameonOwen
+// **************
+
+/obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious
+	name = "a mysterious cookie"
+	desc = "DAS A BIG COOKIE!!!"
+	bitesize = 100
+
+/obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious/Initialize()
+	. = ..()
+
+/obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious/attack(mob/living/M as mob, mob/user as mob, def_zone)
+	. = ..()
+	if (M == user)
+		M.resize(3)
+		M.drop_from_inventory(src)
