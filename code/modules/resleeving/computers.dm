@@ -1,6 +1,6 @@
 /obj/machinery/computer/transhuman/resleeving
 	name = "resleeving control console"
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/khi,
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
 	icon_keyboard = "med_key"
 	icon_screen = "dna"
