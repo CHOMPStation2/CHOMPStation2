@@ -1,7 +1,7 @@
 // -------------- NSFW -------------
 /obj/item/weapon/gun/projectile/nsfw //this one can load both medical and security cells! for ERT/admin use.
 	name = "cell-loaded revolver"
-	desc = "Variety is the spice of life! This weapon is a hybrid of the KHI-102b 'Nanotech Selectable-Fire Weapon' and the Vey-Med ML-3 'Medigun', dubbed the 'NSFW-ML3M'. \
+	desc = "Variety is the spice of life! This weapon is a hybrid of the HI-102b 'Nanotech Selectable-Fire Weapon' and the Vey-Med ML-3 'Medigun', dubbed the 'NSFW-ML3M'. \
 	It can fire both harmful and healing cells with an internal nanite fabricator and energy weapon cell loader. Up to three combinations of \
 	energy beams can be configured at once. Ammo not included."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus,
@@ -154,7 +154,7 @@
 
 /obj/item/weapon/gun/projectile/nsfw/medical
 	name = "\improper ML-3 \'Medigun\'"
-	desc = "The ML-3 'Medigun', or ML3M for short, is a powerful cell-based ranged healing device based on the KHI-102b NSFW. \
+	desc = "The ML-3 'Medigun', or ML3M for short, is a powerful cell-based ranged healing device based on the HI-102b NSFW. \
 	It uses an internal nanite fabricator, powered and controlled by discrete cells, to deliver a variety of effects at range. Up to three combinations of \
 	healing beams can be configured at once. Ammo not included."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med)
@@ -167,7 +167,7 @@
 
 /obj/item/weapon/gun/projectile/nsfw/medical/cmo
 	name = "\improper Advanced ML-3 \'Medigun\'"
-	desc = "This is a variation on the ML-3 'Medigun', a powerful cell-based ranged healing device based on the KHI-102b NSFW. \
+	desc = "This is a variation on the ML-3 'Medigun', a powerful cell-based ranged healing device based on the HI-102b NSFW. \
 	It has an extended sight for increased accuracy, and is capable of holding large magazines. Ammo not included."
 
 	icon_state = "ml3m_cmo"
@@ -387,7 +387,7 @@
 	..()
 
 /obj/item/weapon/storage/secure/briefcase/nsfw_pack
-	name = "\improper KHI-102b \'NSFW\' gun kit"
+	name = "\improper HI-102b \'NSFW\' gun kit"
 	desc = "A storage case for a multi-purpose handgun. Variety hour!"
 	w_class = ITEMSIZE_NORMAL
 	max_w_class = ITEMSIZE_NORMAL
@@ -400,7 +400,7 @@
 		new path(src)
 
 /obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos
-	name = "\improper KHI-102b \'NSFW\' gun kit"
+	name = "\improper HI-102b \'NSFW\' gun kit"
 	desc = "A storage case for a multi-purpose handgun. Variety hour!"
 	w_class = ITEMSIZE_NORMAL
 	max_w_class = ITEMSIZE_NORMAL
