@@ -15,9 +15,9 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 //Nanotech Implant Foundation
 /obj/item/device/nif
 	name = "nanite implant framework"
-	desc = "A somewhat diminished knockoff of a Kitsuhana nano working surface, in a box. Can print new \
+	desc = "The product of a collaboration between NanoTrasen and Bishop Cybernetics. Can print new \
 	implants inside living hosts on the fly based on software uploads. Must be surgically \
-	implanted in the head to work. May eventually wear out and break."
+	implanted in the head to work. Will eventually require maintanence."
 
 	icon = 'icons/obj/device_alt.dmi'
 	icon_state = "nif_0"
@@ -562,19 +562,17 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 // Alternate NIFs
 /obj/item/device/nif/bad
 	name = "bootleg NIF"
-	desc = "A copy of a copy of a copy of a copy of... this can't be any good, right? Surely?"
+	desc = "When NanoTrasen tried to replicate the NIF tech by themselves, this is what they made. You probably shouldn't allow this inside you."
 	durability = 10
 
 /obj/item/device/nif/authentic
-	name = "\improper Kitsuhana NIF"
-	desc = "An actual Kitsuhana working surface, in a box. From a society slightly less afraid \
-	of self-replicating nanotechnology. Basically just a high-endurance NIF."
+	name = "Authentic NIF"
+	desc = "A much more expensive, advanced prototype of the NIF technology. Not usually found in the frontier."
 	durability = 1000
 
 /obj/item/device/nif/authenticbio
-	name = "\improper Bioadaptive Kitsuhana NIF"
-	desc = "An actual Kitsuhana working surface, in a box. From a society slightly less afraid \
-	of self-replicating nanotechnology. Basically just a high-endurance NIF."
+	name = "Bioadaptive Authentic NIF"
+	desc = "The cutting-edge of NIF technology, this is the strongest, most reliable, and most adaptive framework developed to date. Extremely expensive to produce."
 	durability = 1000
 	bioadap = TRUE
 

@@ -17,7 +17,7 @@
 <b>Implant Specifications:</b><BR>
 <b>Name:</b> [using_map.company_name] Employee Backup Implant<BR>
 <b>Life:</b> ~8 hours.<BR>
-<b>Important Notes:</b> Implant is life-limited due to VM licensing restrictions. Dissolves into harmless biomaterial after around ~8 hours, the typical work shift.<BR>
+<b>Important Notes:</b> Due to the sensitive nature of the implant, it is programmed to dissolve into harmless bio-material after 24 hours, to prevent unforseen issues with poorly maintained implants<BR>
 <HR>
 <b>Implant Details:</b><BR>
 <b>Function:</b> Contains a small swarm of nanobots that perform neuron scanning to create mind-backups.<BR>
