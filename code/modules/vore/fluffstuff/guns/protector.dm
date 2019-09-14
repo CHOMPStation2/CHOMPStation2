@@ -1,7 +1,7 @@
 // -------------- Protector -------------
 /obj/item/weapon/gun/energy/protector
 	name = "small energy gun"
-	desc = "The HI-98a 'Protector' is the first firearm custom-designed for Nanotrasen by KHI. It features a powerful stun mode, and \
+	desc = "The HI-98a 'Protector' is the first firearm custom-designed for Nanotrasen by Hephaestus Industris. It features a powerful stun mode, and \
 	an alert-level-locked lethal mode, only usable on code blue and higher. It also features an integrated flashlight!"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
 
