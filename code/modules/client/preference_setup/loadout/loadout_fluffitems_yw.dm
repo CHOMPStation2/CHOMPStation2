@@ -140,6 +140,12 @@
 	character_name = list("Eliana Noya")
 
 //Korei Laskor
+/datum/gear/fluff/korei_laskor_1
+	path = /obj/item/clothing/head/helmet/fluff/korei_laskor_1
+	display_name = "Shaped Helmet"
+	description = "A normal security helmet missing the goggles and fitted for a unathi skull specifically. It appears to have something written sinta'unathi written on the front."
+	ckeywhitelist = list("captmatt4")
+	character_name = list("Korei Laskor")
 
 //  D CKEYS
 
