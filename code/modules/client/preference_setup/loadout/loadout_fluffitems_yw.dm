@@ -147,6 +147,38 @@
 	ckeywhitelist = list("captmatt4")
 	character_name = list("Korei Laskor")
 
+//championfire
+//Anoki Windroar
+/datum/gear/fluff/anoki_implant
+	path = /obj/item/weapon/implanter/reagent_generator/roiz/anoki
+	display_name = "Egg laying implanter"
+	description = "This is an implant that allows the user to lay eggs."
+	ckeywhitelist = list("championfire")
+	character_name = list("Anoki Windroar")
+
+//Ivy Kaeire
+/datum/gear/fluff/ivy_under
+	path = /obj/item/clothing/under/fluff/ivy
+	display_name = "Casual Attire"
+	description = "This set of clothing is anything but fancy. It's a simple grey shirt with black pants. The pants have small black belts around them on the pant legs."
+	ckeywhitelist = list("championfire")
+	character_name = list("Ivy Kaeire")
+
+/datum/gear/fluff/ivy_under
+	path = /obj/item/clothing/suit/storage/fluff/ivy
+	display_name = "Ivy's Trenchcoat"
+	description = "A black trenchcoat with purplish pink material as the inside of the jacket. It's got some belts around the waist that are presumably used to seal the jacket, but it's never really used. It's got the name Ivy Kaeire sewn on the inside. It also has a hood."
+	ckeywhitelist = list("championfire")
+	character_name = list("Ivy Kaeire")
+
+//Kita
+/datum/gear/fluff/kita_under
+	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
+	display_name = "Magical Cloak"
+	description = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
+	ckeywhitelist = list("championfire")
+	character_name = list("Kita")
+
 //  D CKEYS
 
 //  E CKEYS
