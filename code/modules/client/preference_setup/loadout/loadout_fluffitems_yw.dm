@@ -181,6 +181,15 @@
 
 //  D CKEYS
 
+//dameonowen
+//Dameon Owen
+/datum/gear/fluff/dameon_1
+	path = /obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious
+	display_name = "A mysterious cookie"
+	description = "DAS A BIG COOKIE!!!"
+	ckeywhitelist = list("dameonowen")
+	character_name = list("Dameon Owen")
+
 //  E CKEYS
 
 //  F CKEYS
