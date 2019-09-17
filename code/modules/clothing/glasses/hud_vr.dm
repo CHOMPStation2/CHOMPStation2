@@ -80,7 +80,7 @@
 
 /obj/item/clothing/glasses/omnihud/sec
 	name = "\improper AR-S glasses"
-	desc = "The KHI-62-S AR glasses are a design from Kitsuhana Heavy Industries. \
+	desc = "The NT-62-S AR glasses are a design of the Augmented Reality glasses that NanoTrasen produces. \
 	These have been upgraded with security records integration and flash protection."
 	mode = "sec"
 	flash_protection = FLASH_PROTECTION_MAJOR
