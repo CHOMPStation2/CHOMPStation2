@@ -272,6 +272,16 @@
 
 //  E CKEYS
 
+//esperkin
+//Sheri Calen
+/datum/gear/fluff/sheri_rig_kit
+	path = /obj/item/device/modkit_conversion/fluff/sheri_rig_kit
+	display_name = "Sheri's modkit"
+	description = "A kit containing all the needed tools and parts to modify a Research Director rig suit. It has a snake painted on it."
+	ckeywhitelist = list("esperkin")
+	character_name = list("Sheri Calen")
+	allowed_roles = list("Research Director")
+
 //  F CKEYS
 
 //  G CKEYS
