@@ -226,7 +226,7 @@
 	has_items = list(
 		/obj/item/weapon/implanter/reagent_generator/mira)
 
-//Natalya Vospit
+//Natalya Vospit / Defunct
 
 /obj/item/weapon/storage/box/fluff/natalya
 	name = "Natalya's kit"
@@ -242,7 +242,7 @@
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/lena_collar)
 
-//Eryn Wolfe
+//Eryn Wolfe / Defunct
 
 /obj/item/weapon/storage/box/fluff/eryn
 	name = "Eryn's kit"

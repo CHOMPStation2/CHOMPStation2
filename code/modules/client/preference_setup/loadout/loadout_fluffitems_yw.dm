@@ -504,7 +504,7 @@
 	character_name = list("Alva Karlholm")
 
 //Nymsea Vyn
-/datum/gear/fluff/
+/datum/gear/fluff/nymsea_alex
 	path = /obj/item/clothing/accessory/fluff/alex_wolf_1
 	display_name = "Alex's UNSC Dog Tags"
 	description = "Feet first into hell!"
@@ -516,6 +516,95 @@
 //  K CKEYS
 
 //  L CKEYS
+
+//lukevale
+//Mira Rezus
+/datum/gear/fluff/mira_1
+	path = /obj/item/weapon/implanter/reagent_generator/mira
+	display_name = "Mira's implanter"
+	description = ""
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mira Rezus")
+
+//Lena Hastings
+/datum/gear/fluff/lena_collar
+	path = /obj/item/clothing/accessory/fluff/lena_collar
+	display_name = "Ruby Embedded Collar"
+	description = "A gold and platinum collar, with a embedded ruby gem. On the back is a engraving. 'The only one for me, Quanah Hastings', encompassing the engraving is a heart."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Lena Hastings")
+
+//Mitsuko Jiao
+/datum/gear/fluff/jiao_labcoat
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/fluff/jiao_labcoat
+	display_name = "Fluffy elongated labcoat"
+	description = "A white labcoat that seems to have been extended down to cover the legs as well, around the cuffs and bottom is a lay of fluff."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+
+/datum/gear/fluff/jiao_glasses
+	path = /obj/item/clothing/glasses/hud/health/aviator/fluff/jiao_glasses
+	display_name = "Mitsuko's AR glasses"
+	description = "A set of metal frame glasses that seem to be modified to fit easier on a elongated snout. On the glasses is a set of low perspiration lenses with a thin overlay for medical hub to be turned on."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+	allowed_roles = list("Medical Doctor", "Chief Medical Officer")
+
+/datum/gear/fluff/jiao_uniform
+	path = /obj/item/clothing/under/rank/medical/fluff/jiao_uniform
+	display_name = "A Kanghu Navy Force medical doctor uniform"
+	description = "A slandered issue Kanghu Navy Force medical doctor uniform, it has a a white base with blue ocean camo overlaying the shoulders, waist, and back, with deep blue accents, and light blue highlights. The uniform is loose fitting, and has a set of buttons running up the middle to take it on and off. This one seems to have the shoulder straps vacant of any epaulettes."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+	
+/datum/gear/fluff/jiao_beret
+	path = /obj/item/clothing/head/beret/fluff/jiao_beret
+	display_name = "A Kanghu Navy Beret"
+	description = "This camo beret has a white flash signifying the person as medical personnel, however, there is no rank or insignia on the flash, and it is left blank."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+
+/datum/gear/fluff/jiao_boots
+	path = /obj/item/clothing/shoes/boots/jackboots/fluff/jiao_boots
+	display_name = "Modified Navy Boots"
+	description = "This is a set of boots from the Kanghu navy, as denoted by the seal in the sole of the boot, that has been modified to fit not human feet."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+	
+/datum/gear/fluff/jiao_belt
+	path = /obj/item/weapon/storage/belt/medical/fluff/jiao_belt
+	display_name = "Navy medical belt"
+	description = "A customized medical belt to sport the navy colors of the Kanghu force."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+
+/datum/gear/fluff/jiao_gloves
+	path = /obj/item/clothing/gloves/sterile/fluff/jiao_gloves
+	display_name = "Padded Sterile Gloves"
+	description = "These light gray latex gloves have a blue, thick pad on the back of the hand, and on the back of the fingers, designed to survive all the life toughest that a field medic would face."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+	
+/datum/gear/fluff/jiao_anynlizer_kit_a
+	path = /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a
+	display_name = "Mitsuko's modkit Mk1"
+	description = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+
+/datum/gear/fluff/jiao_anynlizer_kit_b
+	path = /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/b
+	display_name = "Mitsuko's modkit Mk2"
+	description = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
+	
+/datum/gear/fluff/jiao_anynlizer_kit_c
+	path = /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c
+	display_name = "Mitsuko's modkit Mk3"
+	description = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+	ckeywhitelist = list("lukevale")
+	character_name = list("Mitsuko Jiao")
 
 //  M CKEYS
 
