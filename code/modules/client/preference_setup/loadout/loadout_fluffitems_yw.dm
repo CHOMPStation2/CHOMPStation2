@@ -103,6 +103,15 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
+//benl8561
+//M.I.S.S.Y
+/datum/gear/fluff/missy_skirt
+	path = /obj/item/clothing/under/fluff/missy_skirt
+	display_name = "Blue Micro Skirt"
+	description = "Its a rather odd skirt it really does not cover much! Might as well not even have the thing on at this point. there is a tag on the back with writing on it. 'PROPERTY OF M.I.S.S.Y :3' just barely fitting on it."
+	ckeywhitelist = list("benl8561")
+	character_name = list("M.I.S.S.Y")
+
 //  C CKEYS
 
 //  D CKEYS
