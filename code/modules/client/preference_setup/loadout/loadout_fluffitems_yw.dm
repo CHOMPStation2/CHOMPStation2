@@ -286,6 +286,75 @@
 
 //  G CKEYS
 
+//generalpantsu
+//Amara Faell
+/datum/gear/fluff/amara_jacket
+	path = /obj/item/clothing/suit/storage/fluff/fedcoat/amara_jacket
+	display_name = "Scorched lieutenant jacket"
+	description = "A classic, bit too big leather bomberjacket with warm, fuzzy fur at the collar and on its insides and rolled up sleeves. It got several rather bad scorch marks that reveal there is a lining of durable but flexible material underneath it, but besides that it looks far from falling apart. There are outdated military insignias for the rank of 'Lieutenant' on each shoulder."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+
+/datum/gear/fluff/amara_beret
+	path = /obj/item/clothing/head/beret/amara_beret
+	display_name = "Mercenary beret"
+	description = "An olive green beret with a silver emblem that consists of a shield and crossed swords. Seems to be part of some mercenary-band."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+
+/datum/gear/fluff/amara_gloves
+	path = /obj/item/clothing/gloves/fluff/amara_gloves
+	display_name = "Mercenary gloves"
+	description = "A pair of dark, tactical fingerless gloves. Their knuckles are reinforced  and they are surprisingly comfy. They also don't cause problems with trigger-guards. Alas, they rarely are used on the field anymore."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+
+/datum/gear/fluff/amara_uniform
+	path = /obj/item/clothing/under/fluff/amara_uniform
+	display_name = "Tactical Attire"
+	description = "A durable, tight fitting comfy black and red tanktop and a pair of just as black cargo pants that are being held in place by a belt. The beltbuckle reads 'DOG'."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+	
+
+/datum/gear/fluff/amara_boots
+	path = /obj/item/clothing/shoes/boots/jackboots/fluff/amara_boots
+	display_name = "Marching boots"
+	description = "A pair of worn, comfy boots optimized for those that need to wear them over a long period of time. They got reinforced soles and steel tips."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+	
+/datum/gear/fluff/amara_collar
+	path = /obj/item/clothing/accessory/collar/fluff/amara_collar
+	display_name = "Pet's Collar"
+	description = "A black synthleather collar with spikey studs and a mark reading sharkie's button."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+
+/datum/gear/fluff/amara_zippo
+	path = /obj/item/weapon/flame/lighter/zippo/fluff/amara
+	display_name = "Amara's Zippo"
+	description = "A zippo that comes in a metallic blood red case. How the flame can be lime green is an enigma in itself."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+
+/datum/gear/fluff/amara_hos_kit
+	path = /obj/item/device/modkit_conversion/fluff/amara_hos_kit
+	display_name = "Amara's modkit"
+	description = "A kit containing all the needed tools and parts to modify a Head of security armored coat. It has a red wolf painted on it."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+	allowed_roles = list("Head of Security")
+
+/datum/gear/fluff/amara_belt
+	path = /obj/item/weapon/storage/belt/security/tactical/amara_belt
+	display_name = "Mercenary belt"
+	description = "A sturdy military belt with a shiny buckle and a bunch of pouches."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
+	allowed_roles = list("Security Officer", "Head of Security", "Blueshield Guard")
+	
+
 //  H CKEYS
 
 //  I CKEYS
