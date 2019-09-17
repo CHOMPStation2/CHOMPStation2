@@ -355,12 +355,40 @@
 	allowed_roles = list("Security Officer", "Head of Security", "Blueshield Guard")
 
 //Zara Venlee
-/datum/gear/fluff/zara
-	path = 
-	display_name = ""
-	description = ""
+/datum/gear/fluff/zara_leg_enhancer
+	path = /obj/item/clothing/shoes/magboots/fluff/zara_leg_enhancer
+	display_name = "Enhancer Boots"
+	description = "A modified set of limb-enhancer boots made by Ward-Takahashi. They never saw use past a few prototypes such as these."
 	ckeywhitelist = list("generalpantsu")
-	character_name = list("Amara Faell")
+	character_name = list("Zara Venlee")
+
+/datum/gear/fluff/zara_arm_enhancer
+	path = /obj/item/clothing/gloves/combat/fluff/zara_arm_enhancer
+	display_name = "Enhancer Gauntlets"
+	description = "A modified set of limb-enhancer gauntlets made by Ward-Takahashi. They never saw use past a few prototypes such as these."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Zara Venlee")
+
+/datum/gear/fluff/zara_uniform
+	path = /obj/item/clothing/under/swimsuit/fluff/zara_uniform
+	display_name = "Thermal Underwear"
+	description = "A sports bra and pair of compression shorts amde of a durable, stretchy material. Comfy and able to keep you warm for sure."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Zara Venlee")
+
+/datum/gear/fluff/zara_bandana
+	path = /obj/item/clothing/head/fluff/zara_bandana
+	display_name = "Black and red Headband"
+	description = "A simple black headband with two red stripes that connect  in the middle, forming some sort of ark. Slightly suspicious."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Zara Venlee")
+
+/datum/gear/fluff/zara_coat
+	path = /obj/item/clothing/suit/storage/fluff/zara_coat
+	display_name = "Rugged Coat"
+	description = "An old looking, black naval coat. It's sleeves got ripped off, some bits still hanging about, its bottom roughed up too. The epaulettes on each shoulder are a polished up gold and so are the many other golden ornaments on the coat."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Zara Venlee")
 
 //  H CKEYS
 
