@@ -132,7 +132,7 @@
 
 
 // **************
-// Admiral Dragon - Defunct
+// Admiral Dragon / Defunct
 // **************
 
 //Tikorak Korgask
