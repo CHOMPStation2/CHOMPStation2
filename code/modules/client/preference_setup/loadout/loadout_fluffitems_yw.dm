@@ -112,6 +112,14 @@
 	ckeywhitelist = list("benl8561")
 	character_name = list("M.I.S.S.Y")
 
+//Quanah Hastings
+/datum/gear/fluff/quanah_collar
+	path = /obj/item/clothing/accessory/fluff/quanah_collar
+	display_name = "Sapphire Embedded Collar"
+	description = "A gold and silver collar, with a embedded sapphire gem. On the back is a engraving. 'Forever loved, Lena Hastings', encompassing the engraving is a heart."
+	ckeywhitelist = list("benl8561")
+	character_name = list("Quanah Hastings")
+
 //  C CKEYS
 
 //  D CKEYS
