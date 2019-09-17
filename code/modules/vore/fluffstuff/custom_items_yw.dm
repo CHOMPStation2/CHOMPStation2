@@ -46,6 +46,7 @@
 // *********
 // Capt_matt
 // *********
+//Payton Joghs
 /obj/item/weapon/material/hatchet/unathiknife/fluff/payton_joghs_1
 	name = "Payton's Knife"
 	desc = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."

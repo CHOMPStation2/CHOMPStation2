@@ -122,6 +122,18 @@
 
 //  C CKEYS
 
+//captmatt4
+//Payton Joghs
+/datum/gear/fluff/payton_joghs_1
+	path = /obj/item/weapon/material/hatchet/unathiknife/fluff/payton_joghs_1
+	display_name = "Payton's Knife"
+	description = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
+	ckeywhitelist = list("captmatt4")
+	character_name = list("Payton Joghs")
+//Eliana Noya
+
+//Korei Laskor
+
 //  D CKEYS
 
 //  E CKEYS
