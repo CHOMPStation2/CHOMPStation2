@@ -190,6 +190,30 @@
 	ckeywhitelist = list("dameonowen")
 	character_name = list("Dameon Owen")
 
+//dawidoe
+//Melissa Krutz
+/datum/gear/fluff/melissa_uniform
+	path = /obj/item/clothing/under/rank/security/corp/fluff/melissa_uniform
+	display_name = "Combat Uniform"
+	description = "A tactical jacket with, not so tactical short-skirt, combat ready and provides small amount of protection equivalent to security uniform."
+	ckeywhitelist = list("dawidoe")
+	character_name = list("Melissa Krutz")
+
+/datum/gear/fluff/melissa_1
+	path = /obj/item/weapon/flame/lighter/zippo/fluff/melissa
+	display_name = "Zippo"
+	description = "A custom made zippo lighter with word 'Mel' engraved in white font on the bottom right corner. It's black, with red lines around the edges."
+	ckeywhitelist = list("dawidoe")
+	character_name = list("Melissa Krutz")
+
+/datum/gear/fluff/melissa_gun_kit
+	path = /obj/item/device/modkit_conversion/fluff/melissa_gun_kit
+	display_name = "Melissa's modkit"
+	description = "A kit containing all the needed tools and parts to modify a 45 Pistol."
+	ckeywhitelist = list("dawidoe")
+	character_name = list("Melissa Krutz")
+	allowed_roles = list("Security Officer")
+	
 //  E CKEYS
 
 //  F CKEYS
