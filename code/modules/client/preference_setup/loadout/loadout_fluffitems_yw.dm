@@ -130,7 +130,14 @@
 	description = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
 	ckeywhitelist = list("captmatt4")
 	character_name = list("Payton Joghs")
+	
 //Eliana Noya
+/datum/gear/fluff/eliana_noya_1
+	path = /obj/item/clothing/under/fluff/eliana_noya_1
+	display_name = "Hard worn skirt"
+	description = "It appears to have a regular suit, though instead of pants, it has a skirt."
+	ckeywhitelist = list("captmatt4")
+	character_name = list("Eliana Noya")
 
 //Korei Laskor
 
