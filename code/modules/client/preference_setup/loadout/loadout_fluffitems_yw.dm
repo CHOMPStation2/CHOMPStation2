@@ -249,14 +249,14 @@
 //Jaree-Kur
 /datum/gear/fluff/Jaree_cloak
 	path = /obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
-	display_name = "plain cloak"
+	display_name = "Plain cloak"
 	description = "A plain cloak to be worn for warmth or comfort. Looks cozy."
 	ckeywhitelist = list("dushka")
 	character_name = list("Jaree-Kur")
 
 /datum/gear/fluff/Jaree_ushanka
 	path = /obj/item/clothing/head/ushanka/alt/fluff/Jaree
-	display_name = "ushanka"
+	display_name = "Ushanka"
 	description = "Perfect for winter in Siberia, da?"
 	ckeywhitelist = list("dushka")
 	character_name = list("Jaree-Kur")
