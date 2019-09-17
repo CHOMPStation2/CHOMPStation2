@@ -390,6 +390,42 @@
 	ckeywhitelist = list("generalpantsu")
 	character_name = list("Zara Venlee")
 
+//Samantha Quzix
+/datum/gear/fluff/sam_bodysuit
+	path = /obj/item/clothing/under/rank/security/corp/fluff/sam_bodysuit
+	display_name = "Mech Pilot Bodysuit"
+	description = "A black white and blue bodysuit made of reinforced materials. It clings tightly to its wearers body."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Samantha Quzix")
+
+/datum/gear/fluff/sam_gloves
+	path = /obj/item/clothing/gloves/sterile/latex/fluff/sam_gloves
+	display_name = "Mech Pilot Gloves"
+	description = "A pair of durable, thin combat gloves, perfect for someone working with exosuits."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Samantha Quzix")
+
+/datum/gear/fluff/sam_boots
+	path = /obj/item/clothing/shoes/boots/jackboots/fluff/sam_boots
+	display_name = "Reinforced Boots"
+	description = "A pair of tightly fitting boots, perfect for someone working with exosuits, seeing as they won't slip off fast."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Samantha Quzix")
+
+/datum/gear/fluff/sam_belt
+	path = /obj/item/weapon/storage/belt/utility/fluff/sam_belt
+	display_name = "Mech Pilot Belt"
+	description = "A white-blue toolbelt with many slots to hold tools in, seems to be made to literally be attached onto a suit."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Samantha Quzix")
+
+/datum/gear/fluff/sam_jacket
+	path = /obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket
+	display_name = "Mech Pilot Jacket"
+	description = "A black jacket made of genuine leather with blue markings on each shoulder. The letters 'ERT' are stenciled onto the back in gold lettering."
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Samantha Quzix")
+
 //  H CKEYS
 
 //  I CKEYS
