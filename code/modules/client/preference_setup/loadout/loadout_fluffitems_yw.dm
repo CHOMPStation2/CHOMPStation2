@@ -440,6 +440,77 @@
 
 //  I CKEYS
 
+//izac112
+//Ally Faell
+/datum/gear/fluff/ally_1
+	path = /obj/item/clothing/under/fluff/ally_1
+	display_name = "Skintight bodysuit"
+	description = "A black-purple bodysuit made of some durable synthetic material fitted for a akula. Lewd."
+	ckeywhitelist = list("izac112")
+	character_name = list("Ally Faell")
+
+/datum/gear/fluff/ally_2
+	path = /obj/item/clothing/under/rank/security/corp/fluff/ally_2
+	display_name = "Security uniform"
+	description = "A black Dark red security uniform with a tag on it that says Ally_F"
+	ckeywhitelist = list("izac112")
+	character_name = list("Ally Faell")
+	allowed_roles = list("Security Officer", "Warden")
+
+//Raja Bastet
+/datum/gear/fluff/raja_belt
+	path = /obj/item/weapon/storage/belt/utility/fluff/raja_belt
+	display_name = "Mech Engineer Belt"
+	description = "A black-golden toolbelt with many slots to hold tools in. Also comes with a blue buckle."
+	ckeywhitelist = list("izac112")
+	character_name = list("Raja Bastet")
+	allowed_roles = list("Station Engineer", "Chief Engineer")
+
+/datum/gear/fluff/raja_coat
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/fluff/raja_coat
+	display_name = "Mech Engineer Coat"
+	description = "A black winter coat made of genuine leather, decorated with blue markings and an interior made of genuine, white fur. The letters 'ERT' are stenciled onto the back in gold lettering."
+	ckeywhitelist = list("izac112")
+	character_name = list("Raja Bastet")
+
+//Shel Nargol
+/datum/gear/fluff/shel_gloves
+	path = /obj/item/clothing/gloves/fluff/shel_gloves
+	display_name = "Leather armwraps"
+	description = "A bunch of leather and linen strips to act as some sort of gloves. The fingers are free, and the left arm is covered in the wraps completely."
+	ckeywhitelist = list("izac112")
+	character_name = list("Shel Nargol")
+
+/datum/gear/fluff/shel_under
+	path = /obj/item/clothing/under/fluff/shel
+	display_name = "Padded pants"
+	description = "A pair of padded linen pants reinforced with leather every here and there. Comes with a plain black belt too."
+	ckeywhitelist = list("izac112")
+	character_name = list("Shel Nargol")
+
+//Alva Karlholm
+/datum/gear/fluff/alva_under
+	path = /obj/item/clothing/under/rank/security/corp/fluff/alva
+	display_name = "PCRC dress uniform"
+	description = "A black skirt along with a navy blue sweater. The nametag on the sweater reads 'A. Karlholm' and the rank indicated on it is Sergeant. It also comes with a belt who's buckle is a shiny platinum."
+	ckeywhitelist = list("izac112")
+	character_name = list("Alva Karlholm")
+
+/datum/gear/fluff/alva_coat
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/fluff/alva
+	display_name = "PCRC labcoat"
+	description = "A white labcoat with the logo of the Proxima Centauri Risk Control logo on the back. The sleeves are rolled back too."
+	ckeywhitelist = list("izac112")
+	character_name = list("Alva Karlholm")
+
+//Nymsea Vyn
+/datum/gear/fluff/
+	path = /obj/item/clothing/accessory/fluff/alex_wolf_1
+	display_name = "Alex's UNSC Dog Tags"
+	description = "Feet first into hell!"
+	ckeywhitelist = list("izac112")
+	character_name = list("Nymsea Vyn")
+
 //  J CKEYS
 
 //  K CKEYS
