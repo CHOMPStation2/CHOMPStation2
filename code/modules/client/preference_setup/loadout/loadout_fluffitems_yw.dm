@@ -51,6 +51,27 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Madoka Koto")
 
+//Wolfgang Jaeger
+/datum/gear/fluff/wolfgang_jaeger_mauserunder
+	path = /obj/item/clothing/head/beret/mauserhat
+	display_name = "Mauser tank crew uniform"
+	description = "The standard uniform of the mauser tank division."
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Wolfgang Jaeger")
+
+/datum/gear/fluff/wolfgang_jaeger_mauserhat
+	path = /obj/item/clothing/head/beret/mauserhat
+	display_name = "Crew cap"
+	description = "A floppy hat bearing the mauser logo."
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Wolfgang Jaeger")
+
+/datum/gear/fluff/wolfgang_jaeger_mauserboots
+	path = /obj/item/clothing/shoes/boots/jackboots/fluff/mauserboots
+	display_name = "Tanker boots"
+	description = "Pair of hig black leather boots pollished to a shine."
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Wolfgang Jaeger")
 
 //  C CKEYS
 
