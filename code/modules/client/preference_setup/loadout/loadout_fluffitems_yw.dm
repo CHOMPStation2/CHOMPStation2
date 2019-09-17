@@ -238,6 +238,28 @@
 	description = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Saur Darastrix' written under it."
 	ckeywhitelist = list("dwaggy90")
 	character_name = list("Saur Darastrix")
+//dushka
+//Saroth
+/datum/gear/fluff/Saroth_cloak
+	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/Saroth
+	display_name = "Research Director cloak"
+	description = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside. This one bears the colors of the science department with additional trimming to designate it as the research director's. It has 'operty of Saroth' sewed in on the inside at the neck. The pockets seem slightly bigger on the inside than they appear on the outside."
+	ckeywhitelist = list("dushka")
+	character_name = list("Saroth")
+//Jaree-Kur
+/datum/gear/fluff/Jaree_cloak
+	path = /obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
+	display_name = "plain cloak"
+	description = "A plain cloak to be worn for warmth or comfort. Looks cozy."
+	ckeywhitelist = list("dushka")
+	character_name = list("Jaree-Kur")
+
+/datum/gear/fluff/Jaree_ushanka
+	path = /obj/item/clothing/head/ushanka/alt/fluff/Jaree
+	display_name = "ushanka"
+	description = "Perfect for winter in Siberia, da?"
+	ckeywhitelist = list("dushka")
+	character_name = list("Jaree-Kur")
 
 //  E CKEYS
 
