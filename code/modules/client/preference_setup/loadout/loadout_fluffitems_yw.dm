@@ -73,6 +73,15 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Wolfgang Jaeger")
 
+//Aurora Goldtail
+/datum/gear/fluff/aurora_omnihud
+	path = /obj/item/clothing/glasses/omnihud/prescription/aurora
+	display_name = "Round glasses"
+	description = "A pair of circular shaped prescription glasses. They seem fit for a avian head and will most likely make anyone wearing these look like a big nerd. It seems they are outfitted with a augmented reality module."
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Aurora Goldtail")
+
+
 //  C CKEYS
 
 //  D CKEYS
