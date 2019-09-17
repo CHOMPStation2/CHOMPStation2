@@ -428,6 +428,16 @@
 
 //  H CKEYS
 
+//harpsong
+//Harpsong
+/datum/gear/fluff/harpsong_1
+	path = /obj/item/clothing/suit/armor/vest/harpsong
+	display_name = "Kentauri Uniform (Tac)"
+	description = "A typical Kentauri uniform worn by those in Command, Tactical and Security disciplines. It is crafted specifically to fit the typically overweight body of the average Kentauri, and its colours match up with those of station security."
+	ckeywhitelist = list("harpsong")
+	character_name = list("Harpsong")
+	allowed_roles = list("Security Officer")
+
 //  I CKEYS
 
 //  J CKEYS
