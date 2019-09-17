@@ -261,6 +261,15 @@
 	ckeywhitelist = list("dushka")
 	character_name = list("Jaree-Kur")
 
+//deepindigo
+//Amina Dae-Kouri
+/datum/gear/fluff/amina_1
+	path = /obj/item/weapon/storage/bible/fluff/amina
+	display_name = "New Space Pioneer's Bible"
+	description = "This one says it was printed in 2492. The name \"Eric Hayvers\" is written on the inside of the cover, crossed out. Under it is written \"Kouri, Amina, Marine Unit 14, Fifth Echelon. Service number NTN-5528928522372\""
+	ckeywhitelist = list("deepindigo")
+	character_name = list("Amina Dae-Kouri")
+
 //  E CKEYS
 
 //  F CKEYS
