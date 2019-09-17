@@ -213,7 +213,32 @@
 	ckeywhitelist = list("dawidoe")
 	character_name = list("Melissa Krutz")
 	allowed_roles = list("Security Officer")
-	
+
+//dwaggy90
+//Saur Darastrix
+/datum/gear/fluff/saur_rig
+	path = /obj/item/weapon/rig/medical/equipped/fluff/saur
+	display_name = "AMR-DRGN"
+	description = "This seems to be a highly customized Medical RIG suit, coloured black and purple, and with an added extendable plating to include a pair of wings and a tail comfortably within the suits protection. There's a nametag on the chest piece, and on the control module itself, with the name 'Saur Darastrix' on it."
+	ckeywhitelist = list("dwaggy90")
+	character_name = list("Saur Darastrix")
+	allowed_roles = list("Chief Medical Officer")
+
+/datum/gear/fluff/saur_pccarrier
+	path = /obj/item/clothing/suit/armor/pcarrier/navy/fluff/saur_pccarrier
+	display_name = "Saur's Plate Carrier"
+	description = "A mostly black and purple striped armour carrier, geared up and ready to go. It looks well maintained, either its not seen much action yet, or any damage done is meticulously repaired, Several small blood splatters that have dried on the inside of it seem to suggest the latter. this carrier has been modified to have holes in the back for wings to slot through."
+	ckeywhitelist = list("dwaggy90")
+	character_name = list("Saur Darastrix")
+	allowed_roles = list("Blueshield Guard")
+
+/datum/gear/fluff/saur_dufflebag
+	path = /obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+	display_name = "Saur's Dufflebag"
+	description = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Saur Darastrix' written under it."
+	ckeywhitelist = list("dwaggy90")
+	character_name = list("Saur Darastrix")
+
 //  E CKEYS
 
 //  F CKEYS
