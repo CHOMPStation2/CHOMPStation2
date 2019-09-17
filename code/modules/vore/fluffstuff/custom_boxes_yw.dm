@@ -45,7 +45,7 @@
 		/obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket,
 		/obj/item/weapon/storage/belt/utility/fluff/sam_belt)
 
-//Nika Domashev
+//Nika Domashev / Defunct
 
 /obj/item/weapon/storage/box/fluff/nika
 	name = "Nika's Kit"
@@ -69,7 +69,7 @@
 		/obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1)
 
 // **********
-//JohnWolf135
+//JohnWolf135 / Defunct
 // **********
 
 /obj/item/weapon/storage/box/fluff/John
@@ -132,7 +132,7 @@
 
 
 // **************
-// Admiral Dragon
+// Admiral Dragon - Defunct
 // **************
 
 //Tikorak Korgask
@@ -282,7 +282,7 @@
 		/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr,
 		/obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr)
 
-//FrenziedVorcha
+//FrenziedVorcha / Defcunt
 
 /obj/item/weapon/storage/box/fluff/philipsmirnov
 	name = "Psychiatric box"
@@ -327,7 +327,7 @@
 		/obj/item/clothing/accessory/fluff/quanah_collar)
 
 // ********
-// MaxieFoxie
+// MaxieFoxie / Defunct
 // ********
 
 //Maxie Drake
@@ -354,7 +354,7 @@
 		/obj/item/clothing/under/fluff/noel_uniform)
 
 // ********
-// SASOperative
+// SASOperative / Defunct
 // ********
 
 //Joseph Skinner

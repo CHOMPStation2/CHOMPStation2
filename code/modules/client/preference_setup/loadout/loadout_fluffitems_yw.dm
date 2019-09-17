@@ -353,7 +353,14 @@
 	ckeywhitelist = list("generalpantsu")
 	character_name = list("Amara Faell")
 	allowed_roles = list("Security Officer", "Head of Security", "Blueshield Guard")
-	
+
+//Zara Venlee
+/datum/gear/fluff/zara
+	path = 
+	display_name = ""
+	description = ""
+	ckeywhitelist = list("generalpantsu")
+	character_name = list("Amara Faell")
 
 //  H CKEYS
 
