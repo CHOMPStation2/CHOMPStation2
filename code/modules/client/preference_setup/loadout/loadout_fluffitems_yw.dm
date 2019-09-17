@@ -81,6 +81,27 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Aurora Goldtail")
 
+//Strix Hades
+/datum/gear/fluff/strix_coat
+	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix
+	display_name = "Colony Director Coat"
+	description = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Strix Hades")
+
+/datum/gear/fluff/strix_under
+	path = /obj/item/clothing/under/seromi/undercoat/fluff/strix
+	display_name = "Colony Director Undercoat"
+	description = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Strix Hades")
+
+/datum/gear/fluff/strix_bosun
+	path = /obj/item/toy/bosunwhistle/fluff/strix
+	display_name = "Authentic Bosun's Whistle"
+	description = "A authentic boatswain's call that appears to be silver plated! The noise it makes is ungodly loud and high pitched.. Why would a person with four extra-sensitive ears ever own such a thing!?"
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Strix Hades")
 
 //  C CKEYS
 
