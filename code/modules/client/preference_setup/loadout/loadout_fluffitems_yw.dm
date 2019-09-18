@@ -623,6 +623,36 @@
 
 //  P CKEYS
 
+//paintitred
+//Noel Walsh
+/datum/gear/fluff/noel_glasses
+	path = /obj/item/clothing/glasses/hud/health/aviator/prescription/fluff/noel_glasses
+	display_name = "Noel's AR glasses"
+	description = "Noel's custom glasses, the initial's NW are written on the inside of the left ear frame, the frames are black and don't reach all the way around."
+	ckeywhitelist = list("paintitred")
+	character_name = list("Noel Walsh")
+
+/datum/gear/fluff/noel_hoodie
+	path = /obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie
+	display_name = "Noel's casual hoodie"
+	description = "A blue faded black trimmed hoodie, it looks very simple and warm, there are the initials N.W. on the tag inside"
+	ckeywhitelist = list("paintitred")
+	character_name = list("Noel Walsh")
+
+/datum/gear/fluff/noel_earings
+	path = /obj/item/clothing/ears/earings/fluff/noel_earings
+	display_name = "Teardrop Earrings"
+	description = "A pair of simple earrings with diamonds set into a metal plate, they hang down from the ear by a small hook."
+	ckeywhitelist = list("paintitred")
+	character_name = list("Noel Walsh")
+
+/datum/gear/fluff/noel_uniform
+	path = /obj/item/clothing/under/fluff/noel_uniform
+	display_name = "Noel's uniform"
+	description = "A sweater with a skirt attached to it. Under the skirt is a set of shorts that cling to the body, showing a bulge very well if there is one."
+	ckeywhitelist = list("paintitred")
+	character_name = list("Noel Walsh")
+
 //  Q CKEYS
 
 //  R CKEYS
