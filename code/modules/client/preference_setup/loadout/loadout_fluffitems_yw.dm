@@ -657,6 +657,36 @@
 
 //  R CKEYS
 
+//radiantflash
+//Vasharr Zahirn
+/datum/gear/fluff/vasharr_armlets
+	path = /obj/item/clothing/accessory/fluff/vasharr_armlets
+	display_name = "Glistening Armlets"
+	description = "A pair of thin golden Armlets, meant to be worn on the upper arm. These appear to have Tajaran runic script written along them."
+	ckeywhitelist = list("radiantflash")
+	character_name = list("Vasharr Zahirn")
+
+/datum/gear/fluff/vasharr_pendant
+	path = /obj/item/clothing/accessory/fluff/vasharr_pendant
+	display_name = "Zahirn pendant"
+	description = "A golden necklace, the symbol for the Zahirn clan can be found on it's pendant."
+	ckeywhitelist = list("radiantflash")
+	character_name = list("Vasharr Zahirn")
+
+/datum/gear/fluff/vasharr_under
+	path = /obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr
+	display_name = "Cartographer Engineering Command Uniform"
+	description = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
+	ckeywhitelist = list("radiantflash")
+	character_name = list("Vasharr Zahirn")
+
+/datum/gear/fluff/vasharr_coat
+	path = /obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr
+	display_name = "Cartographer Engineering Command Jacket"
+	description = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
+	ckeywhitelist = list("radiantflash")
+	character_name = list("Vasharr Zahirn")
+
 //  S CKEYS
 
 //  T CKEYS
