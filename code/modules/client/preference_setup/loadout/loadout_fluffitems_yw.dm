@@ -687,15 +687,6 @@
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
 
-//randysavage205
-//Alex Wolf
-/datum/gear/fluff/alex_1
-	path = /obj/item/clothing/accessory/fluff/alex_wolf_1
-	display_name = "UNSC Dog Tags"
-	description = "Feet first into hell!"
-	ckeywhitelist = list("randysavage205")
-	character_name = list("Alex Wolf")
-
 //roguenoob
 //Basir Fahim
 /datum/gear/fluff/basir_1
@@ -706,6 +697,15 @@
 	character_name = list("Basir Fahim")
 
 //  S CKEYS
+
+//snakewitharocketlauncher
+//Alex Wolf
+/datum/gear/fluff/alex_1
+	path = /obj/item/clothing/accessory/fluff/alex_wolf_1
+	display_name = "UNSC Dog Tags"
+	description = "Feet first into hell!"
+	ckeywhitelist = list("snakewitharocketlauncher")
+	character_name = list("Alex Wolf")
 
 //  T CKEYS
 
