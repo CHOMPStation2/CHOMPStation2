@@ -713,6 +713,37 @@
 
 //  V CKEYS
 
+//valhallaviking01
+//Wolf Erikson
+/datum/gear/fluff/wolf_erikson_1
+	path = /obj/item/clothing/accessory/fluff/wolf_erikson_1
+	display_name = "USGN dogtags"
+	description = "The standard issue ID for all USGN corpsmen."
+	ckeywhitelist = list("valhallaviking01")
+	character_name = list("Wolf Erikson")
+
+//Hans Jaeger
+/datum/gear/fluff/hans_jaeger_mauserunder
+	path = /obj/item/clothing/head/beret/mauserhat
+	display_name = "Mauser tank crew uniform"
+	description = "The standard uniform of the mauser tank division."
+	ckeywhitelist = list("valhallaviking01")
+	character_name = list("Hans Jaeger")
+
+/datum/gear/fluff/hans_jaeger_mauserhat
+	path = /obj/item/clothing/head/beret/mauserhat
+	display_name = "Crew cap"
+	description = "A floppy hat bearing the mauser logo."
+	ckeywhitelist = list("valhallaviking01")
+	character_name = list("Hans Jaeger")
+
+/datum/gear/fluff/hans_jaeger_mauserboots
+	path = /obj/item/clothing/shoes/boots/jackboots/fluff/mauserboots
+	display_name = "Tanker boots"
+	description = "Pair of hig black leather boots pollished to a shine."
+	ckeywhitelist = list("valhallaviking01")
+	character_name = list("Hans Jaeger")
+
 //  W CKEYS
 
 //  X CKEYS
