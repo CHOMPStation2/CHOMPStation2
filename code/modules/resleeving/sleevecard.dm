@@ -3,7 +3,9 @@
 
 /obj/item/device/sleevecard
 	name = "sleevecard"
-	desc = "This KHI-upgraded pAI module has enough capacity to run a whole mind of human-level intelligence."
+	desc = "This Vey-Med-upgraded pAI module has enough capacity to run a whole mind of human-level intelligence."
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
+						/datum/category_item/catalogue/technology/resleeving)
 
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pai"

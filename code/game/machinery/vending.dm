@@ -169,7 +169,7 @@
 			vend(currently_vending, usr)
 			return
 		else if(handled)
-			GLOB.nanomanager.update_uis(src)
+			SSnanoui.update_uis(src)
 			return // don't smack that machine with your 2 thalers
 
 	if(I || istype(W, /obj/item/weapon/spacecash))
@@ -183,7 +183,7 @@
 		if(panel_open)
 			overlays += image(icon, "[initial(icon_state)]-panel")
 
-		GLOB.nanomanager.update_uis(src)  // Speaker switch is on the main UI, not wires UI
+		SSnanoui.update_uis(src)  // Speaker switch is on the main UI, not wires UI
 		return
 	else if(istype(W, /obj/item/device/multitool) || W.is_wirecutter())
 		if(panel_open)
@@ -195,7 +195,7 @@
 		coin = W
 		categories |= CAT_COIN
 		to_chat(user, "<span class='notice'>You insert \the [W] into \the [src].</span>")
-		GLOB.nanomanager.update_uis(src)
+		SSnanoui.update_uis(src)
 		return
 	else if(W.is_wrench())
 		playsound(src, W.usesound, 100, 1)
@@ -399,7 +399,7 @@
 	else
 		data["panel"] = 0
 
-	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
 		ui = new(user, src, ui_key, "vending_machine.tmpl", name, 440, 600)
 		ui.set_initial_data(data)
@@ -459,7 +459,7 @@
 			shut_up = !shut_up
 
 		add_fingerprint(usr)
-		GLOB.nanomanager.update_uis(src)
+		SSnanoui.update_uis(src)
 
 /obj/machinery/vending/proc/vend(datum/stored_item/vending_product/R, mob/user)
 	if((!allowed(usr)) && !emagged && scan_id)	//For SECURE VENDING MACHINES YEAH
@@ -470,7 +470,7 @@
 	vend_ready = 0 //One thing at a time!!
 	status_message = "Vending..."
 	status_error = 0
-	GLOB.nanomanager.update_uis(src)
+	SSnanoui.update_uis(src)
 
 	if(R.category & CAT_COIN)
 		if(!coin)
@@ -512,7 +512,7 @@
 		status_error = 0
 		vend_ready = 1
 		currently_vending = null
-		GLOB.nanomanager.update_uis(src)
+		SSnanoui.update_uis(src)
 
 	return 1
 
@@ -568,7 +568,7 @@
 	if(has_logs)
 		do_logging(R, user)
 
-	GLOB.nanomanager.update_uis(src)
+	SSnanoui.update_uis(src)
 
 /obj/machinery/vending/process()
 	if(stat & (BROKEN|NOPOWER))
@@ -706,6 +706,7 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/wine = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer = 15,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cider = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/tomatojuice = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/limejuice = 5,
@@ -797,19 +798,17 @@
 					/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar = 8,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 8,
 					/obj/item/weapon/reagent_containers/pill/diet = 8,
-					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //VOREStation Removal, YW Readdition,
 					/obj/item/weapon/towel/random = 8)
-
 	prices = list(/obj/item/weapon/reagent_containers/food/drinks/smallmilk = 3,
 					/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk = 3,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake = 40, //VOREStation Edit,
+					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake = 40,	//VOREStation Edit,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 5,
 					/obj/item/weapon/reagent_containers/pill/diet = 25,
-					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,
+					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //VOREStation Removal, YW Readdition,
 					/obj/item/weapon/towel/random = 40)
-
 	contraband = list(/obj/item/weapon/reagent_containers/syringe/steroid = 4)
 
 /obj/machinery/vending/cart
@@ -1150,3 +1149,21 @@
 					/obj/item/toy/plushie/carp = 50,
 					/obj/item/toy/plushie/deer = 50,
 					/obj/item/toy/plushie/tabby_cat = 50)
+
+/obj/machinery/vending/fishing
+	name = "Loot Trawler"
+	desc = "A special vendor for fishing equipment."
+	product_ads = "Tired of trawling across the ocean floor? Get our loot!;Chum and rods.;Don't get baited into fishing without us!;Baby is your star-sign pisces? We'd make a perfect match.;Do not fear, plenty to catch around here.;Don't get reeled in helplessly, get your own rod today!"
+	icon_state = "fishvendor"
+	products = list(/obj/item/weapon/material/fishing_rod/modern/cheap = 6,
+					/obj/item/weapon/storage/box/wormcan = 4,
+					/obj/item/weapon/storage/box/wormcan/sickly = 10,
+					/obj/item/weapon/material/fishing_net = 2,
+					/obj/item/stack/cable_coil/random = 6)
+	prices = list(/obj/item/weapon/material/fishing_rod/modern/cheap = 50,
+					/obj/item/weapon/storage/box/wormcan = 12,
+					/obj/item/weapon/storage/box/wormcan/sickly = 6,
+					/obj/item/weapon/material/fishing_net = 40,
+					/obj/item/stack/cable_coil/random = 4)
+	premium = list(/obj/item/weapon/storage/box/wormcan/deluxe = 1)
+	contraband = list(/obj/item/weapon/storage/box/wormcan/deluxe = 1)

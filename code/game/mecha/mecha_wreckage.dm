@@ -107,6 +107,10 @@
 	name = "Medgax wreckage"
 	icon_state = "medgax-broken"
 
+/obj/effect/decal/mecha_wreckage/gygax/serenity
+	name = "Serenity wreckage"
+	icon_state = "medgax-broken"
+
 /obj/effect/decal/mecha_wreckage/marauder
 	name = "Marauder wreckage"
 	icon_state = "marauder-broken"
@@ -212,3 +216,16 @@
 /obj/effect/decal/mecha_wreckage/hoverpod
 	name = "Hover pod wreckage"
 	icon_state = "engineering_pod-broken"
+
+/obj/effect/decal/mecha_wreckage/janus
+	name = "Janus wreckage"
+	icon_state = "janus-broken"
+	description_info = "Due to the incredibly intricate design of this exosuit, it is impossible to salvage components from it."
+
+/obj/effect/decal/mecha_wreckage/shuttlecraft
+	name = "Shuttlecraft wreckage"
+	desc = "Remains of some unfortunate shuttlecraft. Completely unrepairable."
+	icon = 'icons/mecha/mecha64x64.dmi'
+	icon_state = "shuttle_standard-broken"
+	bound_width = 64
+	bound_height = 64

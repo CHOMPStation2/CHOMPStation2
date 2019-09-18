@@ -259,11 +259,16 @@
 	if(module)
 		return
 	var/list/modules = list()
-	modules.Add(robot_module_types)
-	if(crisis || security_level == SEC_LEVEL_RED || crisis_override) // VOREStation Edit
-		to_chat(src, "<font color='red'>Crisis mode active. Combat module available.</font>")
-		modules+="Combat"
-		modules+="ERT" //VOREStation Edit
+	//VOREStatation Edit Start: shell restrictions
+	if(shell)
+		modules.Add(shell_module_types)
+	else
+		modules.Add(robot_module_types)
+		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
+			to_chat(src, "<font color='red'>Crisis mode active. Combat module available.</font>")
+			modules+="Combat"
+			modules+="ERT"
+	//VOREStatation Edit End: shell restrictions
 	modtype = input("Please, select a module!", "Robot module", null, null) as null|anything in modules
 
 	if(module)
@@ -628,7 +633,7 @@
 		else
 			to_chat(user, "Unable to locate a radio.")
 
-	else if (istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda)||istype(W, /obj/item/weapon/card/robot))			// trying to unlock the interface with an ID card
+	else if (W.GetID())			// trying to unlock the interface with an ID card
 		if(emagged)//still allow them to open the cover
 			to_chat(user, "The interface seems slightly damaged")
 		if(opened)
@@ -722,17 +727,18 @@
 			return 1
 	return 0
 
-/mob/living/silicon/robot/proc/check_access(obj/item/weapon/card/id/I)
+/mob/living/silicon/robot/proc/check_access(obj/item/I)
 	if(!istype(req_access, /list)) //something's very wrong
 		return 1
 
 	var/list/L = req_access
 	if(!L.len) //no requirements
 		return 1
-	if(!I || !istype(I, /obj/item/weapon/card/id) || !I.access) //not ID or no access
+	if(!I) //nothing to check with..?
 		return 0
+	var/access_found = I.GetAccess()
 	for(var/req in req_access)
-		if(req in I.access) //have one of the required accesses
+		if(req in access_found) //have one of the required accesses
 			return 1
 	return 0
 
@@ -1002,7 +1008,7 @@
 	if(icontype == "Custom")
 		icon = CUSTOM_ITEM_SYNTH
 	else // This is to fix an issue where someone with a custom borg sprite chooses a non-custom sprite and turns invisible.
-		icon = 'icons/mob/robots.dmi'
+		vr_sprite_check() //VOREStation Edit
 	icon_state = module_sprites[icontype]
 	updateicon()
 

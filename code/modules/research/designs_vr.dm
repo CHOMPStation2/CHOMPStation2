@@ -117,6 +117,15 @@
 	build_path = /obj/item/device/nifrepairer
 	sort_string = "HABBE" //Changed String from HABBD to HABBE
 
+/datum/design/item/medical/protohypospray
+	name = "prototype hypospray"
+	desc = "This prototype hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to patients."
+	id = "protohypospray"
+	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 3, TECH_POWER = 2, TECH_BIO = 4, TECH_ILLEGAL = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 1500, "silver" = 2000, "gold" = 1500, "uranium" = 1000)
+	build_path = /obj/item/weapon/reagent_containers/hypospray/science
+	sort_string = "MBBAH"
+
 // Resleeving Circuitboards
 
 /datum/design/circuit/transhuman_clonepod
@@ -316,3 +325,52 @@
 	id = "rigmod_orescanner"
 	build_path = /obj/item/rig_module/device/orescanner
 	sort_string = "HCAAI"
+
+/datum/design/item/rig_module/sprinter
+	name = "rig module - sprinter"
+	id = "rigmod_sprinter"
+	build_path = /obj/item/rig_module/sprinter
+	sort_string = "HCAAJ"
+
+/datum/design/item/rig_module/rescue_pharm
+	name = "rig module - rescue pharm"
+	id = "rigmod_rescue_pharm"
+	build_path = /obj/item/rig_module/rescue_pharm
+	sort_string = "HCAAK"
+
+/datum/design/item/rig_module/lasercannon
+	name = "rig module - laser cannon"
+	id = "rigmod_lasercannon"
+	build_path = /obj/item/rig_module/mounted
+	materials = list(DEFAULT_WALL_MATERIAL = 6000, "glass" = 6000, "silver" = 4000, "uranium" = 2000, "diamond" = 2000)
+	sort_string = "HCAAL"
+
+/datum/design/item/rig_module/egun
+	name = "rig module - egun"
+	id = "rigmod_egun"
+	build_path = /obj/item/rig_module/mounted/egun
+	materials = list(DEFAULT_WALL_MATERIAL = 6000, "glass" = 6000, "silver" = 4000, "uranium" = 2000, "diamond" = 1000)
+	sort_string = "HCAAM"
+
+/datum/design/item/rig_module/taser
+	name = "rig module - taser"
+	id = "rigmod_taser"
+	build_path = /obj/item/rig_module/mounted/taser
+	sort_string = "HCAAN"
+
+/datum/design/item/rig_module/rcd
+	name = "rig module - rcd"
+	id = "rigmod_rcd"
+	build_path = /obj/item/rig_module/device/rcd
+	materials = list(DEFAULT_WALL_MATERIAL = 6000, "glass" = 6000, "silver" = 4000, "uranium" = 2000, "diamond" = 2000)
+	sort_string = "HCAAO"
+
+//Prosfab stuff for borgs and such
+
+/datum/design/item/robot_upgrade/sizeshift
+	name = "Size Alteration Module"
+	desc = "Used to allow robot to freely alter their size."
+	id = "borg_sizeshift_module"
+	req_tech = list(TECH_BLUESPACE = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 4000)
+	build_path = /obj/item/borg/upgrade/sizeshift

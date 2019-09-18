@@ -6,36 +6,40 @@ var/list/organ_cache = list()
 	germ_level = 0
 
 	// Strings.
-	var/organ_tag = "organ"           // Unique identifier.
-	var/parent_organ = BP_TORSO       // Organ holding this object.
+	var/organ_tag = "organ"				// Unique identifier.
+	var/parent_organ = BP_TORSO			// Organ holding this object.
 
 	// Status tracking.
-	var/status = 0                    // Various status flags
-	var/vital                         // Lose a vital limb, die immediately.
-	var/damage = 0                    // Current damage to the organ
+	var/status = 0						// Various status flags
+	var/vital							// Lose a vital limb, die immediately.
+	var/damage = 0						// Current damage to the organ
 	var/robotic = 0
 
 	// Reference data.
-	var/mob/living/carbon/human/owner // Current mob owning the organ.
-	var/list/transplant_data          // Transplant match data.
-	var/list/autopsy_data = list()    // Trauma data for forensics.
-	var/list/trace_chemicals = list() // Traces of chemicals in the organ.
-	var/datum/dna/dna                 // Original DNA.
-	var/datum/species/species         // Original species.
+	var/mob/living/carbon/human/owner	// Current mob owning the organ.
+	var/list/transplant_data			// Transplant match data.
+	var/list/autopsy_data = list()		// Trauma data for forensics.
+	var/list/trace_chemicals = list()	// Traces of chemicals in the organ.
+	var/datum/dna/dna					// Original DNA.
+	var/datum/species/species			// Original species.
 
 	// Damage vars.
-	var/min_bruised_damage = 10       // Damage before considered bruised
-	var/min_broken_damage = 30        // Damage before becoming broken
-	var/max_damage                    // Damage cap
-	var/can_reject = 1                // Can this organ reject?
-	var/rejecting                     // Is this organ already being rejected?
-	var/preserved = 0                 // If this is 1, prevents organ decay.
+	var/min_bruised_damage = 10			// Damage before considered bruised
+	var/min_broken_damage = 30			// Damage before becoming broken
+	var/max_damage						// Damage cap
+	var/can_reject = 1					// Can this organ reject?
+	var/rejecting						// Is this organ already being rejected?
+	var/decays = TRUE					// Can this organ decay at all?
+	var/preserved = 0					// If this is 1, prevents organ decay.
 
 	// Language vars. Putting them here in case we decide to do something crazy with sign-or-other-nonverbal languages.
 	var/list/will_assist_languages = list()
 	var/list/datum/language/assists_languages = list()
 
-	var/list/organ_verbs	// Verbs added by the organ when present in the body.
+	// Organ verb vars.
+	var/list/organ_verbs		// Verbs added by the organ when present in the body.
+	var/list/target_parent_classes = list()	// Is the parent supposed to be organic, robotic, assisted?
+	var/forgiving_class = TRUE	// Will the organ give its verbs when it isn't a perfect match? I.E., assisted in organic, synthetic in organic.
 
 /obj/item/organ/Destroy()
 
@@ -74,6 +78,7 @@ var/list/organ_cache = list()
 					if(E.internal_organs == null)
 						E.internal_organs = list()
 					E.internal_organs |= src
+					H.internal_organs_by_name[organ_tag] = src
 			if(dna)
 				if(!blood_DNA)
 					blood_DNA = list()
@@ -135,7 +140,7 @@ var/list/organ_cache = list()
 		if(B && prob(40))
 			reagents.remove_reagent("blood",0.1)
 			blood_splatter(src,B,1)
-		if(config.organs_decay) damage += rand(1,3)
+		if(config.organs_decay && decays) damage += rand(1,3)
 		if(damage >= max_damage)
 			damage = max_damage
 		adjust_germ_level(rand(2,6))
@@ -288,7 +293,7 @@ var/list/organ_cache = list()
 	W.time_inflicted = world.time
 
 //Note: external organs have their own version of this proc
-/obj/item/organ/proc/take_damage(amount, var/silent=0)
+/obj/item/organ/take_damage(amount, var/silent=0)
 	if(src.robotic >= ORGAN_ROBOT)
 		src.damage = between(0, src.damage + (amount * 0.8), max_damage)
 	else
@@ -440,12 +445,12 @@ var/list/organ_cache = list()
 		all_organs |= owner.internal_organs
 
 		for(var/obj/item/organ/O in all_organs)
-			if(!(O.status & ORGAN_DEAD) && O.organ_verbs)
+			if(!(O.status & ORGAN_DEAD) && O.organ_verbs && O.check_verb_compatability())
 				for(var/verb_type in O.organ_verbs)
 					if(verb_type in organ_verbs)
 						save_verbs |= verb_type
 
-	if(!removed && organ_verbs)
+	if(!removed && organ_verbs && check_verb_compatability())
 		for(var/verb_path in organ_verbs)
 			owner.verbs |= verb_path
 	else if(organ_verbs)
@@ -456,3 +461,32 @@ var/list/organ_cache = list()
 
 /obj/item/organ/proc/handle_organ_proc_special()	// Called when processed.
 	return
+
+/obj/item/organ/proc/check_verb_compatability()		// Used for determining if an organ should give or remove its verbs. I.E., FBP part in a human, no verbs. If true, keep or add.
+	if(owner)
+		if(ishuman(owner))
+			var/mob/living/carbon/human/H = owner
+			var/obj/item/organ/O = H.get_organ(parent_organ)
+			if(forgiving_class)
+				if(O.robotic <= ORGAN_ASSISTED && robotic <= ORGAN_LIFELIKE)	// Parent is organic or assisted, we are at most synthetic.
+					return TRUE
+
+				if(O.robotic >= ORGAN_ROBOT && robotic >= ORGAN_ASSISTED)		// Parent is synthetic, and we are biosynthetic at least.
+					return TRUE
+
+			if(!target_parent_classes || !target_parent_classes.len)	// Default checks, if we're not looking for a Specific type.
+
+				if(O.robotic == robotic)	// Same thing, we're fine.
+					return TRUE
+
+				if(O.robotic < ORGAN_ROBOT && robotic < ORGAN_ROBOT)
+					return TRUE
+
+				if(O.robotic > ORGAN_ASSISTED && robotic > ORGAN_ASSISTED)
+					return TRUE
+
+			else
+				if(O.robotic in target_parent_classes)
+					return TRUE
+
+	return FALSE

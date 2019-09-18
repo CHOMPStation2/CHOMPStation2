@@ -106,6 +106,8 @@ datum/gear/suit/duster
 	..()
 	var/list/hazards = list()
 	for(var/hazard_style in typesof(/obj/item/clothing/suit/storage/hazardvest))
+		if(hazard_style in typesof(/obj/item/clothing/suit/storage/hazardvest/fluff))	//VOREStation addition
+			continue																	//VOREStation addition
 		var/obj/item/clothing/suit/storage/hazardvest/hazardvest = hazard_style
 		hazards[initial(hazardvest.name)] = hazardvest
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(hazards))
@@ -273,6 +275,14 @@ datum/gear/suit/duster
 /datum/gear/suit/roles/poncho/cloak/medical
 	display_name = "cloak, medical"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/medical
+
+/datum/gear/suit/roles/poncho/cloak/custom //A colorable cloak
+	display_name = "cloak (colorable)"
+	path = /obj/item/clothing/accessory/poncho/roles/cloak/custom
+
+/datum/gear/suit/roles/poncho/cloak/custom/New()
+	..()
+	gear_tweaks = list(gear_tweak_free_color_choice)
 
 /datum/gear/suit/unathi_robe
 	display_name = "roughspun robe"
@@ -486,3 +496,11 @@ datum/gear/suit/duster
 	display_name = "snowsuit, supply"
 	path = /obj/item/clothing/suit/storage/snowsuit/cargo
 	allowed_roles = list("Quartermaster","Shaft Miner","Cargo Technician","Head of Personnel")
+
+/datum/gear/suit/miscellaneous/cardigan
+	display_name = "cardigan"
+	path = /obj/item/clothing/suit/storage/toggle/cardigan
+
+/datum/gear/suit/miscellaneous/cardigan/New()
+	..()
+	gear_tweaks = list(gear_tweak_free_color_choice)

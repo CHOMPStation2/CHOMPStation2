@@ -2,6 +2,7 @@
 	name = "Fluffy"
 	desc = "It's a pink Diyaab! It seems to be very tame and quiet."
 	tt_desc = "S Choeros hirtus"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/diyaab)
 
 	icon_state = "fluffy"
 	icon_living = "fluffy"
@@ -13,10 +14,12 @@
 	health = 20
 
 	movement_cooldown = 5
+	makes_dirt = 0
 
 	see_in_dark = 5
 	mob_size = MOB_TINY
 	makes_dirt = FALSE	// No more dirt
+	mob_bump_flag = 0
 
 	response_help  = "scritches"
 	response_disarm = "bops"
@@ -36,3 +39,12 @@
 	speak = list("Squee","Arf arf","Awoo","Squeak")
 	emote_hear = list("howls","squeals","squeaks", "barks")
 	emote_see = list("puffs its fur out", "shakes its fur", "stares directly at you")
+
+/mob/living/simple_mob/animal/sif/fluffy/silky
+	name = "Silky"
+	desc = "It's a blue Diyaab! It seems to be very tame and quiet."
+
+	icon_state = "diyaab"
+	icon_living = "diyaab"
+	icon_dead = "diyaab_dead"
+	icon = 'icons/jungle.dmi'

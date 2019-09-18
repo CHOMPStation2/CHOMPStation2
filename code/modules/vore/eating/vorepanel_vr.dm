@@ -298,11 +298,23 @@
 		if(0)
 			dat += "<a href='?src=\ref[src];toggledg=1'><span style='color:green;'>Toggle Digestable</span></a>"
 
+	switch(user.digest_leave_remains)
+		if(1)
+			dat += "<a href='?src=\ref[src];toggledlm=1'><span style='color:red;'>Toggle Leaving Remains</span></a>"
+		if(0)
+			dat += "<a href='?src=\ref[src];toggledlm=1'>Toggle Leaving Remains</a>"
+
 	switch(user.allowmobvore)
 		if(1)
-			dat += "<a href='?src=\ref[src];togglemv=1'>Toggle Mob Vore</a>"
+			dat += "<br><a href='?src=\ref[src];togglemv=1'>Toggle Mob Vore</a>"
 		if(0)
-			dat += "<a href='?src=\ref[src];togglemv=1'><span style='color:green;'>Toggle Mob Vore</span></a>"
+			dat += "<br><a href='?src=\ref[src];togglemv=1'><span style='color:green;'>Toggle Mob Vore</span></a>"
+
+	switch(user.permit_healbelly)
+		if(1)
+			dat += "<a href='?src=\ref[src];togglehealbelly=1'>Toggle Healbelly Permission</a>"
+		if(0)
+			dat += "<a href='?src=\ref[src];togglehealbelly=1'><span style='color:red;'>Toggle Healbelly Permission</span></a>"
 
 	dat += "<br><a href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Drop-nom Prey</a>" //These two get their own, custom row, too.
 	dat += "<a href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Drop-nom Pred</a>"
@@ -748,7 +760,7 @@
 
 	if(href_list["b_del"])
 		var/alert = alert("Are you sure you want to delete your [lowertext(selected.name)]?","Confirmation","Delete","Cancel")
-		if(!alert == "Delete")
+		if(!(alert == "Delete"))
 			return 0
 
 		var/failure_msg = ""
@@ -837,6 +849,19 @@
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.digestable = user.digestable
 
+	if(href_list["toggledlm"])
+		var/choice = alert(user, "This button allows preds to have your remains be left in their belly after you are digested. This will only happen if pred sets their belly to do so. Remains consist of skeletal parts. Currently you are [user.digest_leave_remains? "" : "not"] leaving remains.", "", "Allow Post-digestion Remains", "Cancel", "Disallow Post-digestion Remains")
+		switch(choice)
+			if("Cancel")
+				return 0
+			if("Allow Post-digestion Remains")
+				user.digest_leave_remains = TRUE
+			if("Disallow Post-digestion Remains")
+				user.digest_leave_remains = FALSE
+
+		if(user.client.prefs_vr)
+			user.client.prefs_vr.digest_leave_remains = user.digest_leave_remains
+
 	if(href_list["togglemv"])
 		var/choice = alert(user, "This button is for those who don't like being eaten by mobs. Messages admins when changed, so don't try to use it for mechanical benefit. Set it once and save it. Mobs are currently: [user.allowmobvore ? "Allowed to eat" : "Prevented from eating"] you.", "", "Allow Mob Predation", "Cancel", "Prevent Mob Predation")
 		switch(choice)
@@ -851,6 +876,19 @@
 
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.allowmobvore = user.allowmobvore
+
+	if(href_list["togglehealbelly"])
+		var/choice = alert(user, "This button is for those who don't like healbelly used on them as a mechanic. It does not affect anything, but is displayed under mechanical prefs for ease of quick checks. You are currently: [user.allowmobvore ? "Okay" : "Not Okay"] with players using healbelly on you.", "", "Allow Healing Belly", "Cancel", "Disallow Healing Belly")
+		switch(choice)
+			if("Cancel")
+				return 0
+			if("Allow Healing Belly")
+				user.permit_healbelly = TRUE
+			if("Disallow Healing Belly")
+				user.permit_healbelly = FALSE
+
+		if(user.client.prefs_vr)
+			user.client.prefs_vr.permit_healbelly = user.permit_healbelly
 
 	if(href_list["togglenoisy"])
 		var/choice = alert(user, "Toggle audible hunger noises. Currently: [user.noisy ? "Enabled" : "Disabled"]", "", "Enable audible hunger", "Cancel", "Disable audible hunger")

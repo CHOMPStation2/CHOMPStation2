@@ -20,18 +20,38 @@
 	excludes = list(/datum/trait/metabolism_up, /datum/trait/metabolism_down)
 
 /datum/trait/cold_discomfort
-	name = "Hot-Blooded"
+	name = "Hot-Preference"
 	desc = "You are too hot at the standard 20C. 18C is more suitable. Rolling down your jumpsuit or being unclothed helps."
 	cost = 0
 	var_changes = list("heat_discomfort_level" = T0C+19)
-	excludes = list(/datum/trait/hot_discomfort)
+	excludes = list(/datum/trait/hot_discomfort, /datum/trait/cold_blood)
+
+// YW Addition
+/*
+/datum/trait/cryogenic
+	name = "Cryogenic Metabolism"
+	desc = "Your body requires near cryogenic temperatures to operate. Extremely intricate arrangements are needed for you to remain indoors. The outdoors is comfortable for you, however. WARNING: You will spawn in an atmosphere that is VERY hostile to you with no protective equipment!"
+	cost = 0
+	var_changes = list("heat_discomfort_level" = T0C)
+	excludes = list(/datum/trait/cold_discomfort,/datum/trait/hot_discomfort,/datum/trait/cold_blood)
+*/
+// YW Addition End
 
 /datum/trait/hot_discomfort
-	name = "Cold-Blooded"
+	name = "Cold-Preference"
 	desc = "You are too cold at the standard 20C. 22C is more suitable. Wearing clothing that covers your legs and torso helps."
 	cost = 0
 	var_changes = list("cold_discomfort_level" = T0C+21)
-	excludes = list(/datum/trait/cold_discomfort)
+	excludes = list(/datum/trait/cold_discomfort, /datum/trait/cold_blood)
+
+// YW Addition
+/datum/trait/cold_blood
+	name = "Cold Blooded"
+	desc = "Your body relies on the outside temperature to keep warm. Wearing warm clothing such as jackets is commonplace for you."
+	cost = 0
+	var_changes = list("cold_discomfort_level" = T0C+24)
+	excludes = list(/datum/trait/hot_discomfort, /datum/trait/cold_discomfort)
+// YW Addition End
 
 /datum/trait/autohiss_unathi
 	name = "Autohiss (Unathi)"
@@ -45,8 +65,7 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list("Sinta'unathi"))
-
-	excludes = list(/datum/trait/autohiss_tajaran)
+	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_vassilian)
 
 /datum/trait/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -57,13 +76,32 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/autohiss_unathi)
+	excludes = list(/datum/trait/autohiss_unathi, /datum/trait/autohiss_vassilian)
+
+// YW addition
+/datum/trait/autohiss_vassilian
+	name = "Autohiss (Vassilian)"
+	desc = "You buzz your S's, F's, Th's, and R's."
+	cost = 0
+	var_changes = list(
+	autohiss_basic_map = list(
+        "s" = list("sz", "z", "zz"),
+        "f" = list("zk")
+		),
+	autohiss_extra_map = list(
+		"th" = list("zk", "szk"),
+        "r" = list("rk")
+	),
+	autohiss_exempt = list("Vespinae"))
+	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_unathi)
+// YW Addition end
 
 /datum/trait/bloodsucker
-	name = "Bloodsucker"
-	desc = "Makes you unable to gain nutrition from anything but blood. To compenstate, you get fangs that can be used to drain blood from prey."
+	name = "Minor Bloodsucker"
+	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 0
 	var_changes = list("gets_food_nutrition" = 0) //The verb is given in human.dm
+	excludes = list(/datum/trait/bloodsucker_plus)
 
 /datum/trait/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -83,7 +121,7 @@
 /datum/trait/hard_vore
 	name = "Brutal Predation"
 	desc = "Allows you to tear off limbs & tear out internal organs."
-	cost = 0 //I would make this cost a point, since it has some in game value, but there are easier, less damaging ways to perform the same functions.
+	cost = 0
 
 /datum/trait/hard_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -109,6 +147,7 @@
 	name = "Glowing Body"
 	desc = "Your body glows about as much as a PDA light! Settable color and toggle in Abilities tab ingame."
 	cost = 0
+
 /datum/trait/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/glow_toggle

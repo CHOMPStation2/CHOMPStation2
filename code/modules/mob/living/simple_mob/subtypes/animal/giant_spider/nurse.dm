@@ -51,6 +51,9 @@
 	var/egg_type = /obj/effect/spider/eggcluster/small
 	var/web_type = /obj/effect/spider/stickyweb/dark
 
+/datum/ai_holder/simple_mob/melee/nurse_spider
+	mauling = TRUE		// The nurse puts mobs into webs by attacking, so it needs to attack in crit
+	handle_corpse = TRUE	// Lets the nurse wrap dead things
 
 /mob/living/simple_mob/animal/giant_spider/nurse/inject_poison(mob/living/L, target_zone)
 	..() // Inject the stoxin here.
@@ -136,6 +139,8 @@
 	// Todo: Put this code on the cocoon object itself?
 	if(large_cocoon)
 		C.icon_state = pick("cocoon_large1","cocoon_large2","cocoon_large3")
+
+	ai_holder.target = null
 
 	return TRUE
 
@@ -241,7 +246,7 @@
 			. += O
 
 // Select an obj if no mobs are around.
-/datum/ai_holder/melee/nurse_spider/pick_target(list/targets)
+/datum/ai_holder/simple_mob/melee/nurse_spider/pick_target(list/targets)
 	var/mobs_only = locate(/mob/living) in targets // If a mob is in the list of targets, then ignore objects.
 	if(mobs_only)
 		for(var/A in targets)
