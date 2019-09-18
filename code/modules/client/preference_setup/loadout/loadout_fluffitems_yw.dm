@@ -222,7 +222,7 @@
 	description = "This seems to be a highly customized Medical RIG suit, coloured black and purple, and with an added extendable plating to include a pair of wings and a tail comfortably within the suits protection. There's a nametag on the chest piece, and on the control module itself, with the name 'Saur Darastrix' on it."
 	ckeywhitelist = list("dwaggy90")
 	character_name = list("Saur Darastrix")
-	allowed_roles = list("Chief Medical Officer")
+	allowed_roles = list("Chief Medical Officer", "Paramedic")
 
 /datum/gear/fluff/saur_pccarrier
 	path = /obj/item/clothing/suit/armor/pcarrier/navy/fluff/saur_pccarrier
@@ -687,15 +687,6 @@
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
 
-//randysavage205
-//Alex Wolf
-/datum/gear/fluff/alex_1
-	path = /obj/item/clothing/accessory/fluff/alex_wolf_1
-	display_name = "UNSC Dog Tags"
-	description = "Feet first into hell!"
-	ckeywhitelist = list("randysavage205")
-	character_name = list("Alex Wolf")
-
 //roguenoob
 //Basir Fahim
 /datum/gear/fluff/basir_1
@@ -706,6 +697,15 @@
 	character_name = list("Basir Fahim")
 
 //  S CKEYS
+
+//snakewitharocketlauncher
+//Alex Wolf
+/datum/gear/fluff/alex_1
+	path = /obj/item/clothing/accessory/fluff/alex_wolf_1
+	display_name = "UNSC Dog Tags"
+	description = "Feet first into hell!"
+	ckeywhitelist = list("snakewitharocketlauncher")
+	character_name = list("Alex Wolf")
 
 //  T CKEYS
 
