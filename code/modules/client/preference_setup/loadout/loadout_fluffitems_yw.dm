@@ -608,6 +608,15 @@
 
 //  M CKEYS
 
+//masmc
+//Kettek Ollarch
+/datum/gear/fluff/kettek_collar
+	path = /obj/item/accessory/fluff/kettek_collar
+	display_name = "Kettek's Collar"
+	description = "A colour-changing collar. The collar itself changes colour, and has a gold tag on it that says \"Kettek Ollarch\" in small black lettering. Stiched on the inside is the same name, seemingly in case the tag falls off."
+	ckeywhitelist = list("masmc")
+	character_name = list("Kettek Ollarch")
+
 //  N CKEYS
 
 //  O CKEYS
