@@ -744,6 +744,32 @@
 	ckeywhitelist = list("valhallaviking01")
 	character_name = list("Hans Jaeger")
 
+//vanesafancyfin
+//Vanesa FancyFin
+/datum/gear/fluff/vanesa_1
+	path = /obj/item/clothing/gloves/weddingring/fluff/vanesa
+	display_name = "Golden Rings"
+	description = "A set of beautiful gold rings, worn on the fingers to show off high class at it's finest."
+	ckeywhitelist = list("vanesafancyfin")
+	character_name = list("Vanesa FancyFin")
+
+//vitorhks
+//Jessica Mayer
+/datum/gear/fluff/jessica_under
+	path = /obj/item/clothing/under/rank/security/corp/fluff/jessica
+	display_name = "PCRC navy BDU"
+	description = "A BDU with a navy blue digital camo pattern. The nametag on it reads 'J. Mayer' and the rank indications show the rank Private First class. Its sleeves are rolled back, there is a belt around the waist and there are kneepads for protection."
+	ckeywhitelist = list("vitorhks")
+	character_name = list("Jessica Mayer")
+
+/datum/gear/fluff/jessica_vest
+	path = /obj/item/clothing/suit/storage/vest/officer/fluff/jessica
+	display_name = "PCRC security contractor vest"
+	description = "A somewhat outdated, lightweight security vest with inbuilt pouches to carry security equipment. It is rather bulky, but nontheless still flexible."
+	ckeywhitelist = list("vitorhks")
+	character_name = list("Jessica Mayer")
+	allowed_roles = list("Security Officer", "Warden")
+
 //  W CKEYS
 
 //  X CKEYS
