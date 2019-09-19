@@ -402,7 +402,12 @@
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts.  This one has a greatly upgraded storage capacity"
 	icon_state = "RPED"
 	w_class = ITEMSIZE_HUGE
-	can_hold = list(/obj/item/weapon/stock_parts)
+	//YAWN Changes
+	can_hold = list( 
+	/obj/item/weapon/cell,
+	/obj/item/weapon/stock_parts,
+	/obj/item/weapon/reagent_containers/glass/beaker)
+	//End of YAWN Changes
 	storage_slots = 200
 	use_to_pickup = 1
 	allow_quick_gather = 1
