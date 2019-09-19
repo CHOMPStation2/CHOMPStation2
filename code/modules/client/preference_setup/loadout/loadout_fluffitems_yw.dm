@@ -53,7 +53,7 @@
 
 //Wolfgang Jaeger
 /datum/gear/fluff/wolfgang_jaeger_mauserunder
-	path = /obj/item/clothing/head/beret/mauserhat
+	path = /obj/item/clothing/under/fluff/mauserunder
 	display_name = "Mauser tank crew uniform.."
 	description = "The standard uniform of the mauser tank division.."
 	ckeywhitelist = list("blackangelsace")
@@ -724,7 +724,7 @@
 
 //Hans Jaeger
 /datum/gear/fluff/hans_jaeger_mauserunder
-	path = /obj/item/clothing/head/beret/mauserhat
+	path = /obj/item/clothing/under/fluff/mauserunder
 	display_name = "Mauser tank crew uniform"
 	description = "The standard uniform of the mauser tank division."
 	ckeywhitelist = list("valhallaviking01")
