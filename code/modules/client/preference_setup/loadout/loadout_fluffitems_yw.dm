@@ -1,7 +1,7 @@
 /*
 /datum/gear/fluff/testhorn
 	path = /obj/item/weapon/bikehorn
-	display_name = "Airhorn - Example Item"
+	display_name = "Airhorn - Example Item" //Don't use the same as another item
 	description = "An example item that you probably shouldn't see!"
 	ckeywhitelist = list("broman2000")
 	allowed_roles = list("Station Engineer")	//Don't include this if the item is not role restricted
@@ -53,23 +53,23 @@
 
 //Wolfgang Jaeger
 /datum/gear/fluff/wolfgang_jaeger_mauserunder
-	path = /obj/item/clothing/head/beret/mauserhat
-	display_name = "Mauser tank crew uniform"
-	description = "The standard uniform of the mauser tank division."
+	path = /obj/item/clothing/under/fluff/mauserunder
+	display_name = "Mauser tank crew uniform.."
+	description = "The standard uniform of the mauser tank division.."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Wolfgang Jaeger")
 
 /datum/gear/fluff/wolfgang_jaeger_mauserhat
 	path = /obj/item/clothing/head/beret/mauserhat
-	display_name = "Crew cap"
-	description = "A floppy hat bearing the mauser logo."
+	display_name = "Crew cap.."
+	description = "A floppy hat bearing the mauser logo.."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Wolfgang Jaeger")
 
 /datum/gear/fluff/wolfgang_jaeger_mauserboots
 	path = /obj/item/clothing/shoes/boots/jackboots/fluff/mauserboots
-	display_name = "Tanker boots"
-	description = "Pair of hig black leather boots pollished to a shine."
+	display_name = "Tanker boots.."
+	description = "Pair of hig black leather boots pollished to a shine.."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Wolfgang Jaeger")
 
@@ -222,7 +222,7 @@
 	description = "This seems to be a highly customized Medical RIG suit, coloured black and purple, and with an added extendable plating to include a pair of wings and a tail comfortably within the suits protection. There's a nametag on the chest piece, and on the control module itself, with the name 'Saur Darastrix' on it."
 	ckeywhitelist = list("dwaggy90")
 	character_name = list("Saur Darastrix")
-	allowed_roles = list("Chief Medical Officer")
+	allowed_roles = list("Chief Medical Officer", "Paramedic")
 
 /datum/gear/fluff/saur_pccarrier
 	path = /obj/item/clothing/suit/armor/pcarrier/navy/fluff/saur_pccarrier
@@ -687,15 +687,6 @@
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
 
-//randysavage205
-//Alex Wolf
-/datum/gear/fluff/alex_1
-	path = /obj/item/clothing/accessory/fluff/alex_wolf_1
-	display_name = "UNSC Dog Tags"
-	description = "Feet first into hell!"
-	ckeywhitelist = list("randysavage205")
-	character_name = list("Alex Wolf")
-
 //roguenoob
 //Basir Fahim
 /datum/gear/fluff/basir_1
@@ -706,6 +697,15 @@
 	character_name = list("Basir Fahim")
 
 //  S CKEYS
+
+//snakewitharocketlauncher
+//Alex Wolf
+/datum/gear/fluff/alex_1
+	path = /obj/item/clothing/accessory/fluff/alex_wolf_1
+	display_name = "UNSC Dog Tags"
+	description = "Feet first into hell!"
+	ckeywhitelist = list("snakewitharocketlauncher")
+	character_name = list("Alex Wolf")
 
 //  T CKEYS
 
@@ -724,7 +724,7 @@
 
 //Hans Jaeger
 /datum/gear/fluff/hans_jaeger_mauserunder
-	path = /obj/item/clothing/head/beret/mauserhat
+	path = /obj/item/clothing/under/fluff/mauserunder
 	display_name = "Mauser tank crew uniform"
 	description = "The standard uniform of the mauser tank division."
 	ckeywhitelist = list("valhallaviking01")
