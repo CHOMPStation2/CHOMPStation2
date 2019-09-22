@@ -1359,3 +1359,46 @@
 		if(src)
 			icon_state = original_state
 			update_icon()
+
+//GENERAL STUFF (Common - No specific ckey)
+
+/obj/item/clothing/suit/storage/fluff/techpriestrobes
+	name = "TechPriest Armor"
+	desc = "TechPriest Armor."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_bodyrobes_onmob"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_bodyrobes_onmob"
+	body_parts_covered = UPPER_TORSO | LOWER_TORSO
+
+/obj/item/clothing/under/fluff/techpriestunder
+	name = "TechPriest Under"
+	desc = "Janky af"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_bodyrobes"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_bodyrobes_onmob"
+
+/obj/item/clothing/head/helmet/fluff/techpriesthead
+	name = "TechPriest Head"
+	desc = "Literally a head"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_hat_onmob"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_hat_onmob"
+
+/obj/item/clothing/shoes/boots/jackboots/fluff/techpriestboots
+	name = "TechPriest boots"
+	desc = "Boots"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_boots_onmob"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_boots_onmob"
+
+/obj/item/clothing/gloves/fluff/techpriestgloves
+	name = "TechPriest gloves"
+	desc = "Gloves"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_gloves_onmob"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_gloves_onmob"
