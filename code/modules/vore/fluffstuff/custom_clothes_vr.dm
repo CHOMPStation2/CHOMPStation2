@@ -804,7 +804,7 @@
 		var/mob/living/carbon/human/H = user
 		if(H.head == src)
 			H.update_inv_head()
-
+/*
 /obj/item/weapon/rig/light/hacker/fluff/aronai
 	name = "KHI-99-AAR suit module"
 	suit_type = "nano"
@@ -821,6 +821,8 @@
 		/obj/item/rig_module/teleporter
 		)
 
+No. With a teleporter? Just *no*. - Hawk, YW
+*/
 //Viveret:Keturah
 /obj/item/clothing/under/dress/maid
 	name = "Maid Outfit"

@@ -3669,10 +3669,15 @@
 /area/hallway/station/upper)
 "fR" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Security Lobby"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central1{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monofloor{
+	dir = 8
+	},
 /area/security/lobby)
 "fS" = (
 /obj/effect/floor_decal/borderfloor{
@@ -5904,26 +5909,24 @@
 /turf/simulated/floor/tiled,
 /area/security/hallwayaux)
 "jm" = (
-/obj/effect/floor_decal/borderfloor{
+/obj/effect/floor_decal/corner/lightgrey{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/lightgrey{
+	dir = 6
+	},
+/obj/structure/sign/poster{
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals7,
-/obj/effect/floor_decal/steeldecal/steel_decals7{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 4
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 8
 	},
 /obj/item/device/radio/intercom{
-	dir = 1;
-	pixel_y = 24;
-	req_access = list()
-	},
-/obj/effect/floor_decal/corner/red/bordercorner2{
-	dir = 4
+	dir = 8;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/upper)
@@ -15927,20 +15930,24 @@
 /turf/simulated/wall,
 /area/maintenance/station/elevator)
 "yA" = (
-/obj/effect/floor_decal/corner/lightgrey{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/lightgrey{
-	dir = 6
-	},
-/obj/structure/sign/poster{
-	pixel_x = -32
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals6{
+/obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals6{
-	dir = 8
+/obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/bordercorner2{
+	dir = 4
+	},
+/obj/machinery/computer/guestpass{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/upper)
@@ -16099,6 +16106,18 @@
 /area/medical/reception)
 "yL" = (
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/steeldecal/steel_decals_central1{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monofloor{
+	dir = 4
+	},
+/area/security/lobby)
+"yM" = (
+/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Medbay Lobby"
 	},
@@ -16110,25 +16129,11 @@
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
 	},
-/turf/simulated/floor/tiled/monofloor{
+/obj/effect/floor_decal/steeldecal/steel_decals_central1{
 	dir = 8
 	},
-/area/medical/reception)
-"yM" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "medbayquar";
-	name = "Medbay Emergency Lockdown Shutters";
-	opacity = 0
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monofloor{
-	dir = 4
+	dir = 8
 	},
 /area/medical/reception)
 "yN" = (
@@ -16526,11 +16531,24 @@
 /area/security/lobby)
 "zr" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Security Lobby"
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown Shutters";
+	opacity = 0
 	},
-/turf/simulated/floor/tiled,
-/area/security/lobby)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/steeldecal/steel_decals_central1{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monofloor{
+	dir = 4
+	},
+/area/medical/reception)
 "zs" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/medical{
@@ -23600,6 +23618,7 @@
 /obj/item/clothing/glasses/hud/health,
 /obj/item/device/defib_kit/compact/combat/loaded,
 /obj/item/weapon/cmo_disk_holder,
+/obj/item/weapon/storage/secure/briefcase/ml3m_pack_cmo,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
 	},
@@ -37313,7 +37332,7 @@ wp
 wn
 xL
 yw
-zr
+fR
 hZ
 mX
 pS
@@ -37455,7 +37474,7 @@ wq
 wV
 xM
 yx
-fR
+yL
 jf
 nc
 qQ
@@ -37598,10 +37617,10 @@ uP
 uP
 uP
 zt
-jm
+yA
 nf
 Ch
-yL
+yM
 AC
 Cl
 Cl
@@ -37743,7 +37762,7 @@ yz
 jr
 ng
 rq
-yM
+zr
 AD
 Cm
 Cm
@@ -38164,7 +38183,7 @@ vO
 wu
 wX
 sp
-yA
+jm
 zv
 Aq
 Aw
