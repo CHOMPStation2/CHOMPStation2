@@ -703,7 +703,7 @@
 							"if told you I'd have to kill you",
 							"... wait, why am I even telling you this? Just let me pass",
 							"stop asking questions")
-/* Space foxes: deleted. Keeping them commented for historical reasons.
+/* Space foxes: deleted. Keeping them commented for historical reasons. -YW
 /datum/lore/organization/gov/kitsuhana
 	name = "Kitsuhana Heavy Industries"
 	short_name = "Kitsuhana"

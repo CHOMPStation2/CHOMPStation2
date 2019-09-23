@@ -1,7 +1,7 @@
 // The Gun //
 /obj/item/weapon/gun/projectile/cell_loaded/medical
 	name = "cell-loaded medigun"
-	desc = "The ML-3 'Medigun', or ML3M for short, is a powerful cell-based ranged healing device based on the KHI-102b NSFW. \
+	desc = "The ML-3 'Medigun', or ML3 for short, is a powerful cell-based ranged healing device based on the HI-102b NSCW. \
 	It uses an internal nanite fabricator, powered and controlled by discrete cells, to deliver a variety of effects at range. Up to six combinations of \
 	healing beams can be configured at once, depending on cartridge used. Ammo not included."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med)
@@ -15,7 +15,7 @@
 
 /obj/item/weapon/gun/projectile/cell_loaded/medical/cmo
 	name = "advanced cell-loaded medigun"
-	desc = "This is a variation on the ML-3 'Medigun', a powerful cell-based ranged healing device based on the KHI-102b NSFW. \
+	desc = "This is a variation on the ML-3 'Medigun', a powerful cell-based ranged healing device based on the HI-102b NSCW. \
 	It has an extended sight for increased accuracy, and much more comfortable grip. Ammo not included."
 
 	icon_state = "ml3m_cmo"
@@ -24,7 +24,7 @@
 // The Magazine //
 /obj/item/ammo_magazine/cell_mag/medical //medical
 	name = "nanite magazine"
-	desc = "A nanite fabrication magazine for the \'ML-3/M\'"
+	desc = "A nanite fabrication magazine for the \'ML-3\'"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med)
 	description_info = "This magazine holds self-charging nanite fabricators to power the ML-3 'Medigun'. Up to three can be loaded at once, and each provides four shots of their respective healing type. Loading multiple of the same type will provide additional shots of that type. The batteries can be recharged in a normal recharger."
 	ammo_type = /obj/item/ammo_casing/microbattery/medical
@@ -33,7 +33,7 @@
 
 /obj/item/ammo_magazine/cell_mag/medical/advanced
 	name = "advanced nanite magazine"
-	desc = "A nanite discharge cell for the \'ML-3/M\'. This one is a more advanced version which can hold six individual nanite discharge cells."
+	desc = "A nanite discharge cell for the \'ML-3\'. This one is a more advanced version which can hold six individual nanite discharge cells."
 	max_ammo = 6
 	x_offset = 3
 	icon_state = "ml3m_mag_extended"

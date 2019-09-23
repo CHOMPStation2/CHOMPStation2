@@ -1,36 +1,36 @@
 // The Casing //
 /obj/item/ammo_casing/microbattery/combat
-	name = "\'NSFW\' microbattery - UNKNOWN"
+	name = "\'NSCW\' microbattery - UNKNOWN"
 	desc = "A miniature battery for an energy weapon."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/khi)
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 1, TECH_MAGNETS = 2)
 
 /obj/item/ammo_casing/microbattery/combat/lethal
-	name = "\'NSFW\' microbattery - LETHAL"
+	name = "\'NSCW\' microbattery - LETHAL"
 	type_color = "#bf3d3d"
 	type_name = "<span style='color:#bf3d3d;font-weight:bold;'>LETHAL</span>"
 	projectile_type = /obj/item/projectile/beam
 
 /obj/item/ammo_casing/microbattery/combat/stun
-	name = "\'NSFW\' microbattery - STUN"
+	name = "\'NSCW\' microbattery - STUN"
 	type_color = "#0f81bc"
 	type_name = "<span style='color:#0f81bc;font-weight:bold;'>STUN</span>"
 	projectile_type = /obj/item/projectile/beam/stun/blue
 
 /obj/item/ammo_casing/microbattery/combat/net
-	name = "\'NSFW\' microbattery - NET"
+	name = "\'NSCW\' microbattery - NET"
 	type_color = "#43f136"
 	type_name = "<span style='color:#43d136;font-weight:bold;'>NET</span>"
 	projectile_type = /obj/item/projectile/beam/energy_net
 
 /obj/item/ammo_casing/microbattery/combat/xray
-	name = "\'NSFW\' microbattery - XRAY"
+	name = "\'NSCW\' microbattery - XRAY"
 	type_color = "#32c025"
 	type_name = "<span style='color:#32c025;font-weight:bold;'>XRAY</span>"
 	projectile_type = /obj/item/projectile/beam/xray
 
 /obj/item/ammo_casing/microbattery/combat/shotstun
-	name = "\'NSFW\' microbattery - SCATTERSTUN"
+	name = "\'NSCW\' microbattery - SCATTERSTUN"
 	type_color = "#88ffff"
 	type_name = "<span style='color:#88ffff;font-weight:bold;'>SCATTERSTUN</span>"
 	projectile_type = /obj/item/projectile/bullet/pellet/e_shot_stun
@@ -48,13 +48,13 @@
 	check_armour = "melee"
 
 /obj/item/ammo_casing/microbattery/combat/ion
-	name = "\'NSFW\' microbattery - ION"
+	name = "\'NSCW\' microbattery - ION"
 	type_color = "#d084d6"
 	type_name = "<span style='color:#d084d6;font-weight:bold;'>ION</span>"
 	projectile_type = /obj/item/projectile/ion/small
 
 /obj/item/ammo_casing/microbattery/combat/stripper
-	name = "\'NSFW\' microbattery - STRIPPER"
+	name = "\'NSCW\' microbattery - STRIPPER"
 	type_color = "#fc8d0f"
 	type_name = "<span style='color:#fc8d0f;font-weight:bold;'>STRIPPER</span>"
 	projectile_type = /obj/item/projectile/bullet/stripper
@@ -84,7 +84,7 @@
 	..()
 
 /obj/item/ammo_casing/microbattery/combat/final
-	name = "\'NSFW\' microbattery - FINAL OPTION"
+	name = "\'NSCW\' microbattery - FINAL OPTION"
 	type_color = "#fcfc0f"
 	type_name = "<span style='color:#000000;font-weight:bold;'>FINAL OPTION</span>" //Doesn't look good in yellow in chat
 	projectile_type = /obj/item/projectile/beam/final_option
