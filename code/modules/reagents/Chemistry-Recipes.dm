@@ -34,6 +34,7 @@
 	var/reaction_sound = 'sound/effects/bubbles.ogg'
 
 	var/log_is_important = 0 // If this reaction should be considered important for logging. Important recipes message admins when mixed, non-important ones just log to file.
+
 /datum/chemical_reaction/proc/can_happen(var/datum/reagents/holder)
 	//check that all the required reagents are present
 	if(!holder.has_all_reagents(required_reagents))
@@ -500,6 +501,15 @@
 	required_reagents = list("carpotoxin" = 5, "stoxin" = 5, "copper" = 5)
 	result_amount = 2
 
+/datum/chemical_reaction/carpotoxin
+	name = "Carpotoxin"
+	id = "carpotoxin"
+	result = "carpotoxin"
+	required_reagents = list("spidertoxin" = 2, "biomass" = 1, "sifsap" = 2)
+	catalysts = list("sifsap" = 10)
+	inhibitors = list("radium" = 1)
+	result_amount = 2
+
 /datum/chemical_reaction/mindbreaker
 	name = "Mindbreaker Toxin"
 	id = "mindbreaker"
@@ -737,9 +747,12 @@
 		var/mob/living/L = holder.my_atom
 		if(L.stat != DEAD)
 			e.amount *= 0.5
+	//VOREStation Add Start
 	else
 		holder.clear_reagents() //No more powergaming by creating a tiny amount of this
+	//VORESTation Add End
 	e.start()
+	//holder.clear_reagents() //VOREStation Removal
 	return
 
 /datum/chemical_reaction/flash_powder
@@ -784,8 +797,10 @@
 	// 100 created volume = 4 heavy range & 7 light range. A few tiles smaller than traitor EMP grandes.
 	// 200 created volume = 8 heavy range & 14 light range. 4 tiles larger than traitor EMP grenades.
 	empulse(location, round(created_volume / 24), round(created_volume / 20), round(created_volume / 18), round(created_volume / 14), 1)
+	//VOREStation Edit Start
 	if(!isliving(holder.my_atom)) //No more powergaming by creating a tiny amount of this
 		holder.clear_reagents()
+	//VOREStation Edit End
 	return
 
 /datum/chemical_reaction/nitroglycerin
@@ -804,10 +819,13 @@
 		var/mob/living/L = holder.my_atom
 		if(L.stat!=DEAD)
 			e.amount *= 0.5
+	//VOREStation Add Start
 	else
 		holder.clear_reagents() //No more powergaming by creating a tiny amount of this
+	//VOREStation Add End
 	e.start()
 
+	//holder.clear_reagents() //VOREStation Removal
 	return
 
 /datum/chemical_reaction/napalm
@@ -840,8 +858,10 @@
 	playsound(location, 'sound/effects/smoke.ogg', 50, 1, -3)
 	spawn(0)
 		S.start()
+	//VOREStation Edit Start
 	if(!isliving(holder.my_atom)) //No more powergaming by creating a tiny amount of this
 		holder.clear_reagents()
+	//VOREStation Edit End
 	return
 
 /datum/chemical_reaction/foam
@@ -861,8 +881,10 @@
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 0)
 	s.start()
+	//VOREStation Edit Start
 	if(!isliving(holder.my_atom)) //No more powergaming by creating a tiny amount of this
 		holder.clear_reagents()
+	//VOREStation Edit End
 	return
 
 /datum/chemical_reaction/metalfoam
@@ -1178,6 +1200,20 @@
 		new /obj/item/weapon/reagent_containers/food/snacks/chocolatebar(location)
 	return
 
+/datum/chemical_reaction/drinks/coffee
+	name = "Coffee"
+	id = "coffee"
+	result = "coffee"
+	required_reagents = list("water" = 5, "coffeepowder" = 1)
+	result_amount = 5
+
+/datum/chemical_reaction/drinks/tea
+	name = "Black tea"
+	id = "tea"
+	result = "tea"
+	required_reagents = list("water" = 5, "teapowder" = 1)
+	result_amount = 5
+
 /datum/chemical_reaction/drinks/hot_coco
 	name = "Hot Coco"
 	id = "hot_coco"
@@ -1192,6 +1228,34 @@
 	required_reagents = list("soymilk" = 4, "sacid" = 1)
 	result_amount = 5
 
+/datum/chemical_reaction/drinks/grapejuice
+	name = "Grape Juice"
+	id = "grapejuice"
+	result = "grapejuice"
+	required_reagents = list("water" = 3, "instantgrape" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/orangejuice
+	name = "Orange Juice"
+	id = "orangejuice"
+	result = "orangejuice"
+	required_reagents = list("water" = 3, "instantorange" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/watermelonjuice
+	name = "Watermelon Juice"
+	id = "watermelonjuice"
+	result = "watermelonjuice"
+	required_reagents = list("water" = 3, "instantwatermelon" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/applejuice
+	name = "Apple Juice"
+	id = "applejuice"
+	result = "applejuice"
+	required_reagents = list("water" = 3, "instantapple" = 1)
+	result_amount = 3
+
 /datum/chemical_reaction/food/ketchup
 	name = "Ketchup"
 	id = "ketchup"
@@ -1203,7 +1267,7 @@
 	name = "Peanut Butter"
 	id = "peanutbutter"
 	result = "peanutbutter"
-	required_reagents = list("peanutoil" = 2, "sugar" = 1, "salt" = 1)
+	required_reagents = list("peanutoil" = 2, "sugar" = 1, "sodiumchloride" = 1)
 	catalysts = list("enzyme" = 5)
 	result_amount = 3
 
@@ -1211,7 +1275,7 @@
 	name = "mayonnaise"
 	id = "mayo"
 	result = "mayo"
-	required_reagents = list("egg" = 9, "cornoil" = 5, "lemonjuice" = 5, "salt" = 1)
+	required_reagents = list("egg" = 9, "cornoil" = 5, "lemonjuice" = 5, "sodiumchloride" = 1)
 	result_amount = 15
 
 /datum/chemical_reaction/food/cheesewheel
@@ -2501,7 +2565,7 @@
 	id = "biomass"
 	result = "biomass"
 	required_reagents = list("protein" = 1, "sugar" = 1, "phoron" = 1)
-	result_amount = 6	// Roughly 120u per phoron sheet //VOREStation Edit
+	result_amount = 1	// Roughly 20u per phoron sheet
 
 // Neutralization.
 
@@ -2510,4 +2574,20 @@
 	id = "neurotoxic_protein_neutral"
 	result = "protein"
 	required_reagents = list("anti_toxin" = 1, "neurotoxic_protein" = 2)
+	result_amount = 2
+
+/datum/chemical_reaction/neutralize_carpotoxin
+	name = "Neutralize Carpotoxin"
+	id = "carpotoxin_neutral"
+	result = "protein"
+	required_reagents = list("radium" = 1, "carpotoxin" = 1, "sifsap" = 1)
+	catalysts = list("sifsap" = 10)
+	result_amount = 2
+
+/datum/chemical_reaction/neutralize_spidertoxin
+	name = "Neutralize Spidertoxin"
+	id = "spidertoxin_neutral"
+	result = "protein"
+	required_reagents = list("radium" = 1, "spidertoxin" = 1, "sifsap" = 1)
+	catalysts = list("sifsap" = 10)
 	result_amount = 2

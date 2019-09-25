@@ -1,7 +1,6 @@
 /obj/item/clothing/glasses/omnihud
 	name = "\improper AR glasses"
-	desc = "The KHI-62 AR Glasses are a design from Kitsuhana Heavy Industries. These are a cheap export version \
-	for Nanotrasen. Probably not as complete as KHI could make them, but more readily available for NT."
+	desc = "The NT-62 AR Glasses are augmented reality glasses designed and exported by NanoTrasen."
 	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 3)
 	var/obj/item/clothing/glasses/hud/omni/hud = null
 	var/mode = "civ"
@@ -67,7 +66,7 @@
 
 /obj/item/clothing/glasses/omnihud/med
 	name = "\improper AR-M glasses"
-	desc = "The KHI-62-M AR glasses are a design from Kitsuhana Heavy Industries. \
+	desc = "The NT-62-M AR glasses are a design of the Augmented Reality glasses that NanoTrasen produces. \
 	These have been upgraded with medical records access and virus database integration."
 	mode = "med"
 	action_button_name = "AR Console (Crew Monitor)"
@@ -81,7 +80,7 @@
 
 /obj/item/clothing/glasses/omnihud/sec
 	name = "\improper AR-S glasses"
-	desc = "The KHI-62-S AR glasses are a design from Kitsuhana Heavy Industries. \
+	desc = "The NT-62-S AR glasses are a design of the Augmented Reality glasses that NanoTrasen produces. \
 	These have been upgraded with security records integration and flash protection."
 	mode = "sec"
 	flash_protection = FLASH_PROTECTION_MAJOR
@@ -96,7 +95,7 @@
 
 /obj/item/clothing/glasses/omnihud/eng
 	name = "\improper AR-E glasses"
-	desc = "The KHI-62-E AR glasses are a design from Kitsuhana Heavy Industries. \
+	desc = "The NT-62-E AR glasses are a design of the Augmented Reality glasses that NanoTrasen produces. \
 	These have been upgraded with advanced electrochromic lenses to protect your eyes during welding."
 	mode = "eng"
 	flash_protection = FLASH_PROTECTION_MAJOR
@@ -110,8 +109,8 @@
 
 /obj/item/clothing/glasses/omnihud/rnd
 	name = "\improper AR-R glasses"
-	desc = "The KHI-62-R AR glasses are a design from Kitsuhana Heavy Industries. \
-	These have been ... modified ... to fit into a different frame."
+	desc = "The NT-62-R AR glasses are a design of the Augmented Reality glasses that NanoTrasen produces.\
+	These have been ... modified ... to.... well. They're purple."
 	mode = "sci"
 	icon = 'icons/obj/clothing/glasses.dmi'
 	icon_override = null
@@ -156,8 +155,8 @@
 
 /obj/item/clothing/glasses/omnihud/all
 	name = "\improper AR-B glasses"
-	desc = "The KHI-62-B AR glasses are a design from Kitsuhana Heavy Industries. \
-	These have been upgraded with every feature the lesser models have. Now we're talkin'."
+	desc = "The NT-62-B AR glasses are a design of the Augmented Reality glasses that NanoTrasen produces. \
+	These have been upgraded with every feature the lesser models have."
 	mode = "best"
 	flash_protection = FLASH_PROTECTION_MAJOR
 	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_STATUS_R,VIS_CH_BACKUP,VIS_CH_WANTED)

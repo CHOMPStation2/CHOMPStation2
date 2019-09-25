@@ -255,8 +255,7 @@ GLOBAL_LIST_EMPTY(solars_list)
 						qdel(A)
 				else
 					new /obj/machinery/power/solar(get_turf(src), src)
-					for(var/obj/item/solar_assembly/A in loc)
-						qdel(A)
+				qdel(src)
 			else
 				to_chat(user, "<span class='warning'>You need two sheets of glass to put them into a solar panel.</span>")
 				return

@@ -29,6 +29,7 @@
 	gender = PLURAL
 	icon = 'icons/obj/items.dmi'
 	icon_state = "soap"
+	flags = NOCONDUCT
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_HOLSTER
 	throwforce = 0
@@ -395,13 +396,18 @@
 	display_contents_with_number = 1
 	max_w_class = ITEMSIZE_NORMAL
 	max_storage_space = 100
-	
+
 /obj/item/weapon/storage/part_replacer/adv
 	name = "advanced rapid part exchange device"
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts.  This one has a greatly upgraded storage capacity"
 	icon_state = "RPED"
 	w_class = ITEMSIZE_HUGE
-	can_hold = list(/obj/item/weapon/stock_parts)
+	//YAWN Changes
+	can_hold = list( 
+	/obj/item/weapon/cell,
+	/obj/item/weapon/stock_parts,
+	/obj/item/weapon/reagent_containers/glass/beaker)
+	//End of YAWN Changes
 	storage_slots = 200
 	use_to_pickup = 1
 	allow_quick_gather = 1

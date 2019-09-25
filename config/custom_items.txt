@@ -1,4 +1,8 @@
 ##
+# --------------
+# Legacy/Defunct
+# --------------
+#
 # Custom items go here. They are modifications of existing paths; look at the example for details.
 # Item will spawn if the target has one of the req_titles and if their on-spawn ID has the required access level.
 # req_access is going to be a shit to maintain since the config file can't grab constants and has to use integers, use it minimally.
@@ -140,15 +144,14 @@ item_path: /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
 }
 # ######## D CKEYS
 {
+ckey: dameonowen
+character_name: Dameon Owen
+item_path: /obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious
+}
+{
 ckey: dawidoe
 character_name: Melissa Krutz
 item_path: /obj/item/weapon/storage/box/fluff/melissa
-}
-
-{
-ckey: deathty
-character_name: Arthur Schutz
-item_path: /obj/item/weapon/storage/box/fluff/art
 }
 
 {
@@ -209,12 +212,6 @@ item_path: /obj/item/weapon/storage/box/fluff/zara
 ckey: generalpantsu
 character_name: Samantha Quzix
 item_path: /obj/item/weapon/storage/box/fluff/samantha
-}
-
-{
-ckey: generalpantsu
-character_name: Aien Waesmaer
-item_path: /obj/item/weapon/storage/box/fluff/aien
 }
 
 {

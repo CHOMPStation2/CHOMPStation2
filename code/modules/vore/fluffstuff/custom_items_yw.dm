@@ -46,6 +46,7 @@
 // *********
 // Capt_matt
 // *********
+//Payton Joghs
 /obj/item/weapon/material/hatchet/unathiknife/fluff/payton_joghs_1
 	name = "Payton's Knife"
 	desc = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
@@ -141,20 +142,6 @@
 
 	from_suit = /obj/item/weapon/gun/projectile/sec/flash
 	to_suit = /obj/item/weapon/gun/projectile/fluff/m1911
-
-// *******
-// Deathty
-// *******
-
-/obj/item/device/modkit_conversion/fluff/art_hos_kit
-	name = "Arthur's modkit"
-	desc = "A kit containing all the needed tools and parts to modify a Head of security armored coat."
-
-	icon = 'icons/vore/custom_items_vr.dmi'
-	icon_state = "modkit"
-
-	from_suit = /obj/item/clothing/suit/storage/vest/hoscoat
-	to_suit = /obj/item/clothing/suit/storage/vest/hoscoat/art_hos
 
 // ************
 // championfire
@@ -468,3 +455,21 @@
 /obj/item/weapon/storage/bible/fluff/amina
 	name = "New Space Pioneer's Bible"
 	desc = "This one says it was printed in 2492. The name \"Eric Hayvers\" is written on the inside of the cover, crossed out. Under it is written \"Kouri, Amina, Marine Unit 14, Fifth Echelon. Service number NTN-5528928522372\""
+
+// **************
+// DameonOwen
+// **************
+
+/obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious
+	name = "a mysterious cookie"
+	desc = "DAS A BIG COOKIE!!!"
+	bitesize = 100
+
+/obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious/Initialize()
+	. = ..()
+
+/obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious/attack(mob/living/M as mob, mob/user as mob, def_zone)
+	. = ..()
+	if (M == user)
+		M.resize(3)
+		M.drop_from_inventory(src)
