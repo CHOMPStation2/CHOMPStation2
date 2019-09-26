@@ -740,8 +740,8 @@
 			else
 				message = "makes a light spitting noise, a poor attempt at a whistle."
 
-		if ("help")
-			src << "blink, blink_r, blush, bow-(none)/mob, burp, chirp, choke, chuckle, clap, collapse, cough, cross, cry, custom, deathgasp, drool, eyebrow, fastsway/qwag, \  //Adds YAWN EMOTES - Cross/Chirp
+		if ("help")  //Adds YAWN EMOTES - Cross/Chirp
+			src << "blink, blink_r, blush, bow-(none)/mob, burp, chirp, choke, chuckle, clap, collapse, cough, cross, cry, custom, deathgasp, drool, eyebrow, fastsway/qwag, \
 					frown, gasp, giggle, glare-(none)/mob, grin, groan, grumble, handshake, hug-(none)/mob, laugh, look-(none)/mob, moan, mumble, nod, pale, point-atom, \
 					raise, salute, scream, sneeze, shake, shiver, shrug, sigh, signal-#1-10, slap-(none)/mob, smile, sneeze, sniff, snore, stare-(none)/mob, stopsway/swag, sway/wag, swish, tremble, twitch, \
 					twitch_v, vomit, whimper, wink, yawn. Synthetics: beep, buzz, yes, no, rcough, rsneeze, ping"
