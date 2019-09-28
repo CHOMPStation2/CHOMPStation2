@@ -15,7 +15,7 @@
 	energy weapon that allows the user to mix and match their own fire modes. Up to two combinations of \
 	energy beams can be configured at once. Ammo not included."
 
-	description_info = "This gun is an energy weapon that uses interchangable microbatteries in a magazine. Each battery is a different beam type, and up to three can be loaded in the magazine. Each battery usually provides four discharges of that beam type, and multiple from the same type may be loaded to increase the number of shots for that type."
+	description_info = "This gun is an energy weapon that uses interchangeable microbatteries in a magazine. Each battery is a different beam type, and up to three can be loaded in the magazine. Each battery usually provides four discharges of that beam type, and multiple from the same type may be loaded to increase the number of shots for that type."
 	description_antag = ""
 	allowed_magazines = list(/obj/item/ammo_magazine/cell_mag/combat/prototype)
 
@@ -66,6 +66,8 @@
 	..()
 	new /obj/item/weapon/gun/projectile/cell_loaded/combat(src)
 	new /obj/item/ammo_magazine/cell_mag/combat(src)
+	new /obj/item/ammo_magazine/cell_mag/combat(src)
+	new /obj/item/ammo_casing/microbattery/combat/lethal(src)
 	new /obj/item/ammo_casing/microbattery/combat/lethal(src)
 	new /obj/item/ammo_casing/microbattery/combat/lethal(src)
 	new /obj/item/ammo_casing/microbattery/combat/stun(src)
