@@ -91,6 +91,15 @@
 		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
 		cooldown = world.time
 
+/obj/item/device/radio/headset/fluff/strix
+	name = "Strix\'s headset"
+	desc = "A headset that seems custom made for a avali skull shape, the sounds coming from it are very quiet."
+	icon_state = "strix_headset"
+	icon = 'icons/vore/custom_items_yw.dmi'
+	item_state = "strix_headset"
+	sprite_sheets = list(SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi')
+
+
 // *************
 // GeneralPantsu
 // *************
