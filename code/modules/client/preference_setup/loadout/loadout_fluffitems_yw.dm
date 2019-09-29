@@ -105,7 +105,7 @@
 
 /datum/gear/fluff/strix_headset
 	path = /obj/item/device/radio/headset/fluff/strix
-	display_name = "Stix\'s headset"
+	display_name = "Strix\'s headset"
 	description = "A headset that seems custom made for a avali skull shape, the sounds coming from it are very quiet."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
