@@ -127,6 +127,22 @@
 	ckeywhitelist = list("benl8561")
 	character_name = list("Quanah Hastings")
 
+//Baybell
+//Takira
+/datum/gear/fluff/takira_suit
+	path = /obj/item/clothing/suit/storage/fluff/takirasuit
+	display_name = "Old Vox Armor"
+	description = "The rusted and rather useless remains of a Vox Raider suit... Is this thing even safe to wear?"
+	ckeywhitelist = list("baybell")
+	character_name = list("Takira")
+
+/datum/gear/fluff/takira_mask
+	path = /obj/item/clothing/mask/gas/fluff/takiramask
+	display_name = "Old Vox Mask"
+	description = "Half-broken or completely broken? At least its breathing tubes work."
+	ckeywhitelist = list("baybell")
+	character_name = list("Takira")
+
 //  C CKEYS
 
 //captmatt4
