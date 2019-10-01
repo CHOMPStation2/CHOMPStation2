@@ -162,7 +162,7 @@
 		item_state_slots = list(slot_r_hand_str = "goz_whitecane", slot_l_hand_str = "goz_whitecane")
 		w_class = ITEMSIZE_NORMAL
 		force = 5
-		attack_verb = list("smacked", "struck", "craked", "beaten", "tripped")
+		attack_verb = list("smacked", "struck", "craked", "beaten")
 	else
 		user.visible_message("<span class='notice'>\The [user] collapses the white cane.</span>",\
 		"<span class='notice'>You collapse the white cane.</span>",\
@@ -181,17 +181,14 @@
 	playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
 	add_fingerprint(user)
 
-	if(blood_overlay && blood_DNA && (blood_DNA.len >= 1)) //updates blood overlay, if any
-		overlays.Cut()//this might delete other item overlays as well but eeeeeeeh
-
-		var/icon/I = new /icon(src.icon, src.icon_state)
-		I.Blend(new /icon('icons/effects/blood.dmi', rgb(255,255,255)),ICON_ADD)
-		I.Blend(new /icon('icons/effects/blood.dmi', "itemblood"),ICON_MULTIPLY)
-		blood_overlay = I
-
-		overlays += blood_overlay
-
 	return
+
+/obj/item/weapon/melee/goz_whitecane/attack(mob/M as mob, mob/user as mob)
+	if(user.a_intent == I_HELP)
+		user.visible_message("<span class='notice'>\The [user] has lightly tapped [M] on the ankle with their white cane!</span>")
+		return
+	else
+		..()
 
 // *******
 // Dawidoe
