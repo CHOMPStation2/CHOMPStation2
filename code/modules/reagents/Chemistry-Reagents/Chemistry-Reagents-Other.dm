@@ -539,7 +539,7 @@
 	reagent_state = LIQUID
 	color = "#62764E"
 
-//YAWN ADDITION. Paper!
+//YW Edit Start
 /datum/reagent/nutriment/paper //Paper is made from cellulose. You can eat it. It doesn't fill you up very much at all.
 	name = "Paper"
 	id = "paper"
@@ -548,3 +548,4 @@
 	reagent_state = SOLID
 	color = "e6e6e6" //not quite white
 	nutriment_factor = 2 // 5 times worse than nutriment
+//YW Edit End

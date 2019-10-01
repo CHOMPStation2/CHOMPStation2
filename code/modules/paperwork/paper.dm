@@ -207,23 +207,23 @@
 			"<span class='notice'> [user] holds up a paper and shows it to [M]. </span>")
 		M.examinate(src)
 
-	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping
+	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping and paper eating
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(H == user)
-				if(icon_state == "scrap" && H.check_has_mouth()) //START OF YAWN CHANGES
+				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
 					user << "<span class='warning'>You begin to stuff \the [src] into your mouth!</span>"
 					if(do_after(user, 30))
 						user << "<span class='warning'>You stuff \the [src] into your mouth!</span>"
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
-						qdel(src) //End of yawn changes
+						qdel(src)
 				else
 					user << "<span class='notice'>You wipe off the lipstick with [src].</span>"
 					H.lip_style = null
 					H.update_icons_body()
 			else
-				if(icon_state == "scrap" && H.check_has_mouth())//start of yawn changes
+				if(icon_state == "scrap" && H.check_has_mouth())
 					user.visible_message("<span class='warning'>[user] begins to stuff \the [src] into [H]'s mouth!</span>", \
 										 "<span class='warning'>You begin to stuff \the [src] into [H]'s mouth!</span>",)
 					if(do_after(user, 30, H))
@@ -231,15 +231,15 @@
 											 "<span class='warning'>You stuff \the [src] into [H]'s mouth!</span>")
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
-						qdel(src) //end of yawn changed
+						qdel(src)
 				else
 					user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
 								 	 "<span class='notice'>You begin to wipe off [H]'s lipstick.</span>")
-					if(do_after(user, 10) && do_after(H, 10, 5, 0))	//user needs to keep their active hand, H does not.
+					if(do_after(user, 10, H))
 						user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
 										 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
 						H.lip_style = null
-						H.update_icons_body()
+						H.update_icons_body() //YW Edit End
 
 /obj/item/weapon/paper/proc/addtofield(var/id, var/text, var/links = 0)
 	var/locid = 0
