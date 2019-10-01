@@ -139,7 +139,7 @@
 
 //Glitterpaws
 /obj/item/weapon/melee/goz_whitecane
-	name = "white cane"
+	name = "White Cane"
 	desc = "A telescoping white cane. They are commonly used by the blind or visually impaired as a mobility tool or as a courtesy to others."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "goz_whitecane_0"
