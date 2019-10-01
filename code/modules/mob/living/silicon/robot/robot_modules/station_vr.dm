@@ -244,6 +244,8 @@
 	B.water = water
 	src.modules += B
 
+// - YW Edit
+
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)
 	medicine.name = "Medical supply reserves"
 	synths += medicine
@@ -264,6 +266,7 @@
 	src.modules += P
 	src.modules += S
 
+// End YW Edit
 
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 
