@@ -1360,6 +1360,32 @@
 			icon_state = original_state
 			update_icon()
 
+
+// *****
+// BAYBELL
+// *****
+
+//Takira
+
+/obj/item/clothing/suit/storage/fluff/takirasuit
+	name = "Old Vox Armor"
+	desc = "The rusted and rather useless remains of a Vox Raider suit... Is this thing even safe to wear?"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "takira_suit"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "takira_suit"
+	body_parts_covered = UPPER_TORSO | LOWER_TORSO
+
+
+/obj/item/clothing/mask/gas/fluff/takiramask
+	name =	"Old Vox Mask"
+	desc =  "Half-broken or completely broken? At least its breathing tubes work."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "takira_helmet"
+	item_state = "takira_helmet"
+
+
 //GENERAL STUFF (Common - No specific ckey)
 
 /obj/item/clothing/suit/storage/fluff/techpriestrobes
@@ -1402,3 +1428,4 @@
 	icon_state = "tp_gloves_onmob"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "tp_gloves_onmob"
+

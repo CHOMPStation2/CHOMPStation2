@@ -91,6 +91,15 @@
 		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
 		cooldown = world.time
 
+/obj/item/device/radio/headset/fluff/strix
+	name = "Strix\'s headset"
+	desc = "A headset that seems custom made for a avali skull shape, the sounds coming from it are very quiet."
+	icon_state = "strix_headset"
+	icon = 'icons/vore/custom_items_yw.dmi'
+	item_state = "strix_headset"
+	sprite_sheets = list(SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi')
+
+
 // *************
 // GeneralPantsu
 // *************
@@ -123,6 +132,63 @@
 
 	from_suit = /obj/item/clothing/suit/storage/vest/officer
 	to_suit = /obj/item/clothing/suit/storage/vest/officer/fluff/nika
+
+// *******
+// Gozulio
+// *******
+
+//Glitterpaws
+/obj/item/weapon/melee/goz_whitecane
+	name = "White Cane"
+	desc = "A telescoping white cane. They are commonly used by the blind or visually impaired as a mobility tool or as a courtesy to others."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "goz_whitecane_0"
+	item_icons = list(
+		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
+		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
+	)
+	slot_flags = SLOT_BELT
+	w_class = ITEMSIZE_SMALL
+	force = 3
+	var/on = 0
+
+/obj/item/weapon/melee/goz_whitecane/attack_self(mob/user as mob)
+	on = !on
+	if(on)
+		user.visible_message("<span class='notice'>\The [user] extends the white cane.</span>",\
+		"<span class='warning'>You extend the white cane.</span>",\
+		"You hear an ominous click.")
+		icon_state = "goz_whitecane_1"
+		item_state_slots = list(slot_r_hand_str = "goz_whitecane", slot_l_hand_str = "goz_whitecane")
+		w_class = ITEMSIZE_NORMAL
+		force = 5
+		attack_verb = list("smacked", "struck", "craked", "beaten")
+	else
+		user.visible_message("<span class='notice'>\The [user] collapses the white cane.</span>",\
+		"<span class='notice'>You collapse the white cane.</span>",\
+		"You hear a click.")
+		icon_state = "goz_whitecane_0"
+		item_state_slots = list(slot_r_hand_str = null, slot_l_hand_str = null)
+		w_class = ITEMSIZE_SMALL
+		force = 3
+		attack_verb = list("hit", "poked")
+
+	if(istype(user,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = user
+		H.update_inv_l_hand()
+		H.update_inv_r_hand()
+
+	playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
+	add_fingerprint(user)
+
+	return
+
+/obj/item/weapon/melee/goz_whitecane/attack(mob/M as mob, mob/user as mob)
+	if(user.a_intent == I_HELP)
+		user.visible_message("<span class='notice'>\The [user] has lightly tapped [M] on the ankle with their white cane!</span>")
+		return
+	else
+		..()
 
 // *******
 // Dawidoe
