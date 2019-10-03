@@ -25,6 +25,10 @@
 		if ("nme")
 			nme()
 			return TRUE
+		if("chirp") //Yawn Addtion
+			message = "chirps!"
+			playsound(src.loc, 'sound/misc/nymphchirp.ogg', 50, 0)
+			m_type = 2 //End of Yawn Addtion
 		if ("flip")
 			var/danger = 1 //Base 1% chance to break something.
 			var/list/involved_parts = list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)

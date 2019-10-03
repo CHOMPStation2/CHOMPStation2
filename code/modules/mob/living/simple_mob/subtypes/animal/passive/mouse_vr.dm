@@ -1,5 +1,5 @@
 /mob/living/simple_mob/animal/passive/mouse
-	nutrition = 0	//To prevent draining maint mice for infinite food. Low nutrition has no mechanical effect on simplemobs, so wont hurt mice themselves.
+	nutrition = 20	//To prevent draining maint mice for infinite food. Low nutrition has no mechanical effect on simplemobs, so wont hurt mice themselves.
 
 	no_vore = 1 //Mice can't eat others due to the amount of bugs caused by it.
 	vore_taste = "cheese"
@@ -12,6 +12,8 @@
 /mob/living/simple_mob/animal/passive/mouse/attack_hand(mob/living/hander)
 	if(hander.a_intent == I_HELP) //if lime intent
 		get_scooped(hander) //get scooped
+	else
+		..()
 
 /obj/item/weapon/holder/mouse/attack_self(var/mob/U)
 	for(var/mob/living/simple_mob/M in src.contents)

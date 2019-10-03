@@ -170,6 +170,8 @@
 	name = "\improper Civilian West Substation"
 /area/maintenance/substation/exploration
 	name = "\improper Exploration Substation"
+/area/maintenance/tether_midpoint
+	name = "\improper Tether Midpoint Maint"
 
 
 /area/tether/surfacebase/medical
@@ -180,23 +182,90 @@
 	name = "\improper Surface Triage"
 /area/tether/surfacebase/medical/first_aid_west
 	name = "\improper First Aid West"
+/area/tether/surfacebase/medical/chemistry
+	name = "\improper Surface Chemistry"
+	lightswitch = 0
+/area/tether/surfacebase/medical/resleeving
+	name = "\improper Surface Resleeving"
+	lightswitch = 0
+/area/tether/surfacebase/medical/surgery
+	name = "\improper Surface Surgery"
+	lightswitch = 0
+/area/tether/surfacebase/medical/patient_a
+	name = "\improper Surface Patient Room A"
+	lightswitch = 0
+/area/tether/surfacebase/medical/patient_b
+	name = "\improper Surface Patient Room B"
+	lightswitch = 0
+/area/tether/surfacebase/medical/patient_c
+	name = "\improper Surface Patient Room C"
+	lightswitch = 0
+/area/tether/surfacebase/medical/lowerhall
+	name = "\improper Surface Medical Lower Hall"
+/area/tether/surfacebase/medical/storage
+	name = "\improper Surface Medical Storage"
+	lightswitch = 0
+/area/tether/surfacebase/medical/paramed
+	name = "\improper Surface Paramedic Closet"
+	lightswitch = 0
+/area/tether/surfacebase/medical/breakroom
+	name = "\improper Surface Medical Break Room"
+	lightswitch = 0
+/area/tether/surfacebase/medical/maints
+	name = "\improper Mining Upper Maintenance"
 
 
 /area/tether/surfacebase/security
 	icon_state = "security"
 /area/tether/surfacebase/security/breakroom
 	name = "\improper Surface Security Break Room"
+	lightswitch = 0
+	sound_env = MEDIUM_SOFTFLOOR
 /area/tether/surfacebase/security/lobby
 	name = "\improper Surface Security Lobby"
 /area/tether/surfacebase/security/common
 	name = "\improper Surface Security Room"
 /area/tether/surfacebase/security/armory
-	name = "\improper Surface Armory"
+	name = "\improper Surface Equipment Storage"
+	lightswitch = 0
 /area/tether/surfacebase/security/checkpoint
 	name = "\improper Surface Checkpoint Office"
 /area/tether/surfacebase/security/hallway
 	name = "\improper Surface Checkpoint Hallway"
-
+/area/tether/surfacebase/security/warden
+	name = "\improper Surface Security Warden's Office"
+	lightswitch = 0
+/area/tether/surfacebase/security/lowerhallway
+	name = "\improper Surface Security Lower Hallway"
+/area/tether/surfacebase/security/evidence
+	name = "\improper Surface Security Evidence Storage"
+	lightswitch = 0
+/area/tether/surfacebase/security/brig
+	name = "\improper Surface Security Brig"
+	lightswitch = 0
+/area/tether/surfacebase/security/solitary
+	name = "\improper Surface Security Solitary Confinement"
+	lightswitch = 0
+	sound_env =PADDED_CELL
+/area/tether/surfacebase/security/gasstorage
+	name = "\improper Surface Security Gas Storage"
+	lightswitch = 0
+/area/tether/surfacebase/security/interrogation
+	name = "\improper Surface Security Interrogation"
+	lightswitch = 0
+	sound_env = SMALL_ENCLOSED
+/area/tether/surfacebase/security/processing
+	name = "\improper Surface Security Processing"
+	lightswitch = 0
+/area/tether/surfacebase/security/lobby
+	name = "\improper Surface Security Lobby"
+/area/tether/surfacebase/security/frontdesk
+	name = "\improper Surface Security Front Desk"
+	lightswitch = 0
+/area/tether/surfacebase/security/upperhall
+	name = "\improper Surface Security Upper Hallway"
+/area/maintenance/lower/security
+	name = "\improper Surface Security Maintenance"
 
 /area/engineering/atmos/processing
 	name = "Atmospherics Processing"
@@ -258,7 +327,7 @@
 /area/maintenance/lower/trash_pit
 	name = "\improper Trash Pit"
 /area/maintenance/lower/solars
-	name = "\improper Solars maintenanceance"
+	name = "\improper Solars Maintenance"
 /area/maintenance/lower/mining_eva
 	name = "\improper Mining EVA Maintenance"
 /area/maintenance/lower/public_garden_maintenence
@@ -290,6 +359,9 @@
 /area/rnd/chemistry_lab
 	name = "\improper Research Chemistry Lab"
 	icon_state = "research"
+/area/rnd/miscellaneous_lab
+	name = "\improper Research Miscellaneous Lab"
+	icon_state = "research"
 /area/rnd/staircase/secondfloor
 	name = "\improper Research Staircase Second Floor"
 	icon_state = "research"
@@ -314,6 +386,10 @@
 //TFF 28/8/19 - cleanup of areas placement
 /area/rnd/outpost
 	name = "\improper Research Outpost Hallway"
+	icon_state = "research"
+
+/area/rnd/outpost/breakroom
+	name = "\improper Research Outpost Breakroom"
 	icon_state = "research"
 
 /area/rnd/outpost/airlock
@@ -360,11 +436,56 @@
 /area/rnd/outpost/anomaly_lab/testing
 	name = "\improper Anomaly Lab Testing Chamber"
 	icon_state = "research"
+/area/rnd/outpost/anomaly_lab/airlock
+	name = "\improper Anomaly Lab Testing Chamber Airlock"
+	icon_state = "research"
 /area/rnd/outpost/anomaly_lab/storage
 	name = "\improper Anomaly Storage"
 	icon_state = "research"
 /area/rnd/outpost/xenoarch_storage
 	name = "\improper Research Outpost Xenoarch Storage"
+	icon_state = "research"
+
+
+// Xenobiology Outpost Areas
+/area/rnd/outpost/xenobiology/outpost_north_airlock
+	name = "\improper Xenbiology Northern Airlock"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_south_airlock
+	name = "\improper Xenbiology Southern Airlock"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_hallway
+	name = "\improper Xenbiology Access Corridor"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_breakroom
+	name = "\improper Xenbiology Breakroom"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_office
+	name = "\improper Xenbiology Main Office"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_autopsy
+	name = "\improper Xenbiology Alien Autopsy Room"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_decon
+	name = "\improper Xenbiology Decontamination and Showers"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_first_aid
+	name = "\improper Xenbiology First Aid"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_slimepens
+	name = "\improper Xenbiology Slime and Xenos Containment"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_main
+	name = "\improper Xenbiology Main Outpost"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_storage
+	name = "\improper Xenbiology Equipment Storage"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_stairs
+	name = "\improper Xenbiology Stairwell"
+	icon_state = "research"
+/area/rnd/outpost/xenobiology/outpost_substation
+	name = "\improper Xenbiology SMES Substation"
 	icon_state = "research"
 
 // Misc
@@ -627,6 +748,12 @@
 /area/hallway/station/docks
 	name = "\improper Docks Hallway"
 
+/area/bridge/secondary
+	name = "\improper Secondary Command Office"
+
+/area/bridge/secondary/meeting_room
+	name = "\improper Secondary Command Meeting Room"
+
 /area/maintenance/station
 	icon_state = "fsmaint"
 /area/maintenance/station/bridge
@@ -654,6 +781,12 @@
 	sound_env = SEWER_PIPE
 /area/maintenance/station/exploration
 	name = "\improper Exploration Maintenance"
+/area/maintenance/abandonedlibrary
+	name = "\improper Abandoned Library"
+	icon_state = "library"
+/area/maintenance/abandonedlibraryconference
+	name = "\improper Abandoned Library Conference"
+	icon_state = "library"
 
 /area/shuttle/tether/crash1
 	name = "\improper Crash Site 1"
@@ -732,6 +865,9 @@
 	dynamic_lighting = FALSE
 
 	requires_power = FALSE
+
+/area/tether/midpoint
+	name = "\improper Tether Midpoint"
 
 //////////////////////////////////
 
@@ -890,6 +1026,15 @@
 	name = "Small Cruiser Shuttle - Station"
 	icon_state = "blue2"
 
+
+/area/shuttle/specialops/centcom
+	name = "Special Operations Shuttle - Centcom"
+	icon_state = "shuttlered"
+	base_turf = /turf/unsimulated/floor/shuttle_ceiling
+
+/area/shuttle/specialops/tether
+	name = "Special Operations Shuttle - Tether"
+	icon_state = "shuttlered"
 
 // Tether Map has this shuttle
 /area/shuttle/tether/surface

@@ -1,4 +1,8 @@
 ##
+# --------------
+# Legacy/Defunct
+# --------------
+#
 # Custom items go here. They are modifications of existing paths; look at the example for details.
 # Item will spawn if the target has one of the req_titles and if their on-spawn ID has the required access level.
 # req_access is going to be a shit to maintain since the config file can't grab constants and has to use integers, use it minimally.
@@ -83,6 +87,12 @@ item_path: /obj/item/clothing/under/seromi/undercoat/fluff/strix
 ckey: blackangelsace
 character_name: Strix Hades
 item_path: /obj/item/toy/bosunwhistle/fluff/strix
+}
+
+{
+ckey: blackangelsace
+character_name: Strix Hades
+item_path: /obj/item/device/radio/headset/fluff/strix
 }
 
 {
