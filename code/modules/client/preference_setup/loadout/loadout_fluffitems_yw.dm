@@ -451,20 +451,12 @@
 
 //Gozulio
 //Glitterpaws
-/datum/gear/fluff/goz_whitecane_j
+
+/datum/gear/fluff/goz_whitecane
 	path = /obj/item/weapon/melee/goz_whitecane
 	display_name = "Telescopic White Cane"
 	description = "A telescoping white cane. They are commonly used by the blind or visually impaired as a mobility tool or as a courtesy to others."
 	ckeywhitelist = list("gozulio")
-	character_name = list("Jessie Glitterpaws")
-
-/datum/gear/fluff/goz_whitecane_e
-	path = /obj/item/weapon/melee/goz_whitecane
-	display_name = "Telescopic White Cane"
-	description = "A telescoping white cane. They are commonly used by the blind or visually impaired as a mobility tool or as a courtesy to others."
-	ckeywhitelist = list("gozulio")
-	character_name = list("Eira Glitterpaws")
-
 
 //  H CKEYS
 
