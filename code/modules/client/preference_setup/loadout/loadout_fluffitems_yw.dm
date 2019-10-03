@@ -5,7 +5,7 @@
 	description = "An example item that you probably shouldn't see!"
 	ckeywhitelist = list("broman2000")
 	allowed_roles = list("Station Engineer")	//Don't include this if the item is not role restricted
-	character_name = list("shitfacemcgee")	//Same applies here but for names
+	character_name = list("shitfacemcgee")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 */
 
 //  0-9 CKEYS
@@ -451,20 +451,13 @@
 
 //Gozulio
 //Glitterpaws
-/datum/gear/fluff/goz_whitecane_j
+
+/datum/gear/fluff/goz_whitecane
 	path = /obj/item/weapon/melee/goz_whitecane
-	display_name = "Telescopic White Cane"
+	display_name = "Telescopic White Cane."
 	description = "A telescoping white cane. They are commonly used by the blind or visually impaired as a mobility tool or as a courtesy to others."
 	ckeywhitelist = list("gozulio")
-	character_name = list("Jessie Glitterpaws")
-
-/datum/gear/fluff/goz_whitecane_e
-	path = /obj/item/weapon/melee/goz_whitecane
-	display_name = "Telescopic White Cane"
-	description = "A telescoping white cane. They are commonly used by the blind or visually impaired as a mobility tool or as a courtesy to others."
-	ckeywhitelist = list("gozulio")
-	character_name = list("Eira Glitterpaws")
-
+	character_name = null
 
 //  H CKEYS
 
