@@ -343,8 +343,7 @@ var/global/list/latejoin_tram   = list()
 	guard = 20
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/vore/aggressive/corrupthound = 1,
-		/mob/living/simple_mob/vore/aggressive/rat = 1,
-		/mob/living/simple_mob/animal/space/mimic = 1
+		/mob/living/simple_mob/vore/aggressive/rat = 1
 	)
 
 /obj/cryogaia_away_spawner/underdark_boss
