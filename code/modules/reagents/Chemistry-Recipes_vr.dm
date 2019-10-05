@@ -320,7 +320,7 @@
 		var/mob_path = /mob/living/simple_mob
 		var/blocked = list(
 			/mob/living/simple_mob/hostile/mimic,
-			/mob/living/simple_mob/hostile/alien/queen,
+			/mob/living/simple_mob/animal/space/alien/queen,
 			/mob/living/simple_mob/shadekin
 			)//exclusion list for things you don't want the reaction to create.
 		var/list/voremobs = typesof(mob_path) - mob_path - blocked // list of possible hostile mobs
@@ -341,3 +341,9 @@
 				for(var/j = 1, j <= rand(1, 3), j++)
 					step(C, pick(NORTH,SOUTH,EAST,WEST))
 */
+
+/datum/chemical_reaction/food/syntiflesh
+	required_reagents = list("blood" = 5, "clonexadone" = 1)
+
+/datum/chemical_reaction/biomass
+	result_amount = 6	// Roughly 120u per phoron sheet

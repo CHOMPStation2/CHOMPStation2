@@ -460,26 +460,6 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
-//Aien Waesmaer
-
-/obj/item/clothing/under/fluff/aien_uniform
-	name = "Fancy uniform"
-	desc = "A white silk shirt, black uniform jacket, a black skirt and a shorter, gray silk skirt over that one. The shirts top row of buttons are open and everything looks very expensive. Its all being held in place by a black leather belt with golden buckle. The uniform jacket has the crest of the Imperium Auream on its right collar."
-	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "elvensuit"
-	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "elvensuit_mob"
-
-/obj/item/clothing/suit/storage/fluff/aien_suit
-	name = "Heavy overcoat"
-	desc = "A charcoal-black coat made of synthleather. Its insides are lined with white fur and silk, looking over the top and very expensive. It has the crest of the Imperium Auream on the right collar."
-	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "elvencoat"
-	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "elvencoat_mob"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
-	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
-
 //Nika Domashev
 
 /obj/item/clothing/under/rank/security/corp/fluff/nika
@@ -758,29 +738,6 @@
 	icon_state = "mel"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "mel"
-
-// *******
-// Deathty
-// *******
-
-//Arthur Schutz
-
-/obj/item/clothing/under/rank/security/corp/fluf/art_uniform
-	name = "SecCom Uniform"
-	desc = "A standard issue SifGuard uniform for every military officer. Made from advanced fabrics which provide both the physical security and the fashionable security of it's wearer. They are designed with both purposes of utility work and formal work. This uniform has a couple of additional badges on the torso along with the nametag with 'A. Schutz' engraved onto it."
-	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "sifguardfox"
-	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "sifguardfox"
-
-/obj/item/clothing/suit/storage/vest/hoscoat/art_hos
-	name = "SecCom Jacket"
-	desc = "A SifGuard fleet command jacket often worn by higher ranking SifGuard officers. Comes with an advanced microcarbon fabric which appears like any other fine fabric from a distance along with special ballistic weave enhancements under the fabric with improved fiberglass plates by the torso regions. This specific jacket has the symbol of the Lieutenant rank on each shoulder and above it the writting 'A. Schutz'"
-	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "sifguardjacket_fox"
-	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	icon_badge = "sifguardjacket_fox"
-	icon_nobadge = "sifguardjacket_fox"
 
 // ***************
 // Vanesa FancyFin
@@ -1080,6 +1037,14 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
+/obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr
+	name = "Cartographer Engineering Command Uniform"
+	desc = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
+
+/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr
+	name = "Cartographer Engineering Command Jacket"
+	desc = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
+
 // ********
 // Dwaggy90
 // ********
@@ -1088,10 +1053,37 @@
 
 /obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
 	name = "Saur's Dufflebag"
-	desc = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Dr.Saur Darastrix' written under it."
+	desc = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Saur Darastrix' written under it."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi', slot_back_str = 'icons/vore/custom_onmob_yw.dmi')
 	icon_state = "saur_duffle"
+	slowdown = 0
+
+//PCarrier, currently using the sprites and path for the navy version. will be changed with icon overrides once i have a hold of them. Here's to Izacs sanity.
+/obj/item/clothing/suit/armor/pcarrier/navy/fluff/saur_pccarrier
+	name = "Saur's Plate Carrier"
+	desc = "A mostly black and purple striped armour carrier, geared up and ready to go. It looks well maintained, either its not seen much action yet, or any damage done is meticulously repaired, Several small blood splatters that have dried on the inside of it seem to suggest the latter. this carrier has been modified to have holes in the back for wings to slot through."
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armguards/navy/fluff/saur_arm, /obj/item/clothing/accessory/armor/legguards/navy/fluff/saur_leg, /obj/item/clothing/accessory/armor/armorplate/tactical/fluff/saur_plate, /obj/item/clothing/accessory/storage/pouches/navy/fluff/saur, /obj/item/clothing/accessory/armor/tag/pcrc/fluff/saur)
+
+/obj/item/clothing/accessory/armor/armguards/navy/fluff/saur_arm
+	name = "Saur's Armguards"
+	desc = "Armguards for a Plate Carrier, this set is black and purple, and has a tag on the underside with the name 'Saur Darastrix' on them."
+
+/obj/item/clothing/accessory/armor/legguards/navy/fluff/saur_leg
+	name = "Saur's Legguards"
+	desc = "A pair of Leg guards for a plate carrier set. These are black and purple. They have a name tag on the back of them with the name 'Saur Darastrix' on"
+
+/obj/item/clothing/accessory/armor/armorplate/tactical/fluff/saur_plate
+	name = "Saur's Plate"
+	desc = "A standard tactical plate for a carrier, with a tag on the top of it with the name 'Saur Darastrix' on. There is also a group picture attached to the back of the plate, what looks to be Saur Darastrix standing with two Tajaran's and a Naga."
+
+/obj/item/clothing/accessory/storage/pouches/navy/fluff/saur
+	name = "Saur's PCpouches"
+	desc = "Standard pouches for a Plate Carrier. Black and purple in colour, checking the inside of a pocket would reveal a name tag with 'Saur Darastrix' Written on it."
+
+/obj/item/clothing/accessory/armor/tag/pcrc/fluff/saur
+	name = "BlueShield PCRC tag"
+	desc = "A tag for a Plate Carrier, with the title 'Blueshield' written across it. Under that in small is written PCRC."
 
 // ******
 // Dushka
@@ -1367,3 +1359,73 @@
 		if(src)
 			icon_state = original_state
 			update_icon()
+
+
+// *****
+// BAYBELL
+// *****
+
+//Takira
+
+/obj/item/clothing/suit/storage/fluff/takirasuit
+	name = "Old Vox Armor"
+	desc = "The rusted and rather useless remains of a Vox Raider suit... Is this thing even safe to wear?"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "takira_suit"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "takira_suit"
+	body_parts_covered = UPPER_TORSO | LOWER_TORSO
+
+
+/obj/item/clothing/mask/gas/fluff/takiramask
+	name =	"Old Vox Mask"
+	desc =  "Half-broken or completely broken? At least its breathing tubes work."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "takira_helmet"
+	item_state = "takira_helmet"
+
+
+//GENERAL STUFF (Common - No specific ckey)
+
+/obj/item/clothing/suit/storage/fluff/techpriestrobes
+	name = "TechPriest Armor"
+	desc = "TechPriest Armor."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_bodyrobes_onmob"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_bodyrobes_onmob"
+	body_parts_covered = UPPER_TORSO | LOWER_TORSO
+
+/obj/item/clothing/under/fluff/techpriestunder
+	name = "TechPriest Under"
+	desc = "Janky af"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_bodyrobes"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_bodyrobes_onmob"
+
+/obj/item/clothing/head/helmet/fluff/techpriesthead
+	name = "TechPriest Head"
+	desc = "Literally a head"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_hat_onmob"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_hat_onmob"
+
+/obj/item/clothing/shoes/boots/jackboots/fluff/techpriestboots
+	name = "TechPriest boots"
+	desc = "Boots"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_boots_onmob"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_boots_onmob"
+
+/obj/item/clothing/gloves/fluff/techpriestgloves
+	name = "TechPriest gloves"
+	desc = "Gloves"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tp_gloves_onmob"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tp_gloves_onmob"
+

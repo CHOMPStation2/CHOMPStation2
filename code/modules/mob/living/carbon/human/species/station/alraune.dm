@@ -17,7 +17,7 @@
 	selects_bodytype = TRUE
 
 	body_temperature = T20C
-	breath_type = "carbon_dioxide"
+	breath_type = "oxygen"
 	poison_type = "phoron"
 	exhale_type = "oxygen"
 
@@ -67,6 +67,7 @@
 	\
 	However, after their discovery by the angels of Sanctum, many alraunes succumbed to their curiosity, and took the offer\
 	to learn of the world and venture out, whether it's to Sanctum, or elsewhere in the galaxy."
+	catalogue_data = list(/datum/category_item/catalogue/fauna/alraune)
 
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
@@ -169,7 +170,7 @@
 	var/failed_inhale = 0
 	var/failed_exhale = 0
 
-	inhaling = breath.gas[breath_type]
+	inhaling = breath.gas["carbon_dioxide"]
 	poison = breath.gas[poison_type]
 	exhaling = breath.gas[exhale_type]
 
@@ -193,7 +194,7 @@
 		H.oxygen_alert = 0
 
 	inhaled_gas_used = inhaling/6
-	breath.adjust_gas(breath_type, -inhaled_gas_used, update = 0) //update afterwards
+	breath.adjust_gas("carbon_dioxide", -inhaled_gas_used, update = 0) //update afterwards
 	breath.adjust_gas_temp(exhale_type, inhaled_gas_used, H.bodytemperature, update = 0) //update afterwards
 
 	//Now we handle CO2.

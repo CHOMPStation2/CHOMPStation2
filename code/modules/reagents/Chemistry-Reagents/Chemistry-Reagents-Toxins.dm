@@ -9,7 +9,9 @@
 	reagent_state = LIQUID
 	color = "#CF3600"
 	metabolism = REM * 0.25 // 0.05 by default. Hopefully enough to get some help, or die horribly, whatever floats your boat
+	filtered_organs = list(O_LIVER, O_KIDNEYS)
 	var/strength = 4 // How much damage it deals per unit
+	var/skin_danger = 0.2 // The multiplier for how effective the toxin is when making skin contact.
 
 /datum/reagent/toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(strength && alien != IS_DIONA)
@@ -21,6 +23,9 @@
 			else
 				M.heal_organ_damage((10/strength) * removed, (10/strength) * removed) //Doses of toxins below 10 units, and 10 strength, are capable of providing useful compounds for repair.
 		M.adjustToxLoss(strength * removed)
+
+/datum/reagent/toxin/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+	affect_blood(M, alien, removed * 0.2)
 
 /datum/reagent/toxin/plasticide
 	name = "Plasticide"
@@ -48,6 +53,26 @@
 	reagent_state = LIQUID
 	color = "#003333"
 	strength = 10
+
+/datum/reagent/toxin/neurotoxic_protein
+	name = "toxic protein"
+	id = "neurotoxic_protein"
+	description = "A weak neurotoxic chemical commonly found in Sivian fish meat."
+	taste_description = "fish"
+	reagent_state = LIQUID
+	color = "#005555"
+	strength = 8
+	skin_danger = 0.4
+
+/datum/reagent/toxin/neurotoxic_protein/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	if(alien != IS_DIONA)
+		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space))
+			step(M, pick(cardinal))
+		if(prob(5))
+			M.emote(pick("twitch", "drool", "moan"))
+		if(prob(20))
+			M.adjustBrainLoss(0.1)
 
 //R-UST port
 // Produced during deuterium synthesis. Super poisonous, SUPER flammable (doesn't need oxygen to burn).
@@ -101,6 +126,7 @@
 	color = "#9D14DB"
 	strength = 30
 	touch_met = 5
+	skin_danger = 1
 
 /datum/reagent/toxin/phoron/touch_mob(var/mob/living/L, var/amount)
 	if(istype(L))
@@ -253,6 +279,7 @@
 	color = "#669900"
 	metabolism = REM
 	strength = 3
+	mrate_static = TRUE
 
 /datum/reagent/toxin/zombiepowder/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -324,6 +351,36 @@
 /datum/reagent/toxin/plantbgone/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		M.adjustToxLoss(50 * removed)
+
+/datum/reagent/toxin/sifslurry
+	name = "Sivian Sap"
+	id = "sifsap"
+	description = "A natural slurry comprised of fluorescent bacteria native to Sif, in the Vir system."
+	taste_description = "sour"
+	reagent_state = LIQUID
+	color = "#C6E2FF"
+	strength = 2
+	overdose = 20
+
+/datum/reagent/toxin/sifslurry/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA) // Symbiotic bacteria.
+		M.nutrition += strength * removed
+		return
+	else
+		M.add_modifier(/datum/modifier/slow_pulse, 30 SECONDS)
+	..()
+
+/datum/reagent/toxin/sifslurry/overdose(var/mob/living/carbon/M, var/alien, var/removed) // Overdose effect.
+	if(alien == IS_DIONA)
+		return
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		overdose_mod *= H.species.chemOD_mod
+	M.apply_effect(2 * removed,IRRADIATE, 0, 0)
+	M.apply_effect(5 * removed,DROWSY, 0, 0)
+
+/datum/reagent/toxin/sifslurry/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	affect_blood(M, alien, removed * 0.7)
 
 /datum/reagent/acid/polyacid
 	name = "Polytrinic acid"

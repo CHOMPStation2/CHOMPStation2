@@ -180,7 +180,8 @@
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/shred_limb
+//	R.verbs |= /mob/living/proc/shred_limb - YW Edit
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/knine/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
@@ -243,6 +244,30 @@
 	B.water = water
 	src.modules += B
 
+// - YW Edit
+
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)
+	medicine.name = "Medical supply reserves"
+	synths += medicine
+
+	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
+	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
+	var/obj/item/stack/medical/splint/S = new /obj/item/stack/medical/splint(src)
+	O.uses_charge = 1
+	O.charge_costs = list(1000)
+	O.synths = list(medicine)
+	P.uses_charge = 1
+	P.charge_costs = list(1000)
+	P.synths = list(medicine)
+	S.uses_charge = 1
+	S.charge_costs = list(1000)
+	S.synths = list(medicine)
+	src.modules += O
+	src.modules += P
+	src.modules += S
+
+// End YW Edit
+
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
@@ -255,7 +280,8 @@
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/shred_limb
+//	R.verbs |= /mob/living/proc/shred_limb - YW Edit
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/ert
@@ -302,7 +328,8 @@
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/shred_limb
+//	R.verbs |= /mob/living/proc/shred_limb - YW Edit
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/scrubpup
@@ -372,7 +399,7 @@
 	G.recipes += new/datum/stack_recipe("glass sheet", /obj/item/stack/material/glass, 1, 1, 20)
 	src.modules += G
 
-	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_yw.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -382,7 +409,8 @@
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/shred_limb
+//	R.verbs |= /mob/living/proc/shred_limb - YW Edit
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/science
@@ -427,7 +455,8 @@
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/shred_limb
+//	R.verbs |= /mob/living/proc/shred_limb - YW Edit
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/robot/engiedog
@@ -453,29 +482,31 @@
 	src.modules += new /obj/item/weapon/pickaxe(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/weapon/gripper(src)
+	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 
 	//Painfully slow charger regen but high capacity. Also starts with low amount.
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
 	metal.name = "Steel reserves"
-	metal.recharge_rate = 50
+	metal.recharge_rate = 100
 	metal.max_energy = 50000
-	metal.energy = 5000
+	metal.energy = 10000
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass()
 	glass.name = "Glass reserves"
-	glass.recharge_rate = 50
+	glass.recharge_rate = 100
 	glass.max_energy = 50000
-	glass.energy = 5000
+	glass.energy = 10000
 	var/datum/matter_synth/wood = new /datum/matter_synth/wood()
 	wood.name = "Wood reserves"
-	wood.recharge_rate = 50
+	wood.recharge_rate = 100
 	wood.max_energy = 50000
-	wood.energy = 5000
+	wood.energy = 10000
 	var/datum/matter_synth/plastic = new /datum/matter_synth/plastic()
 	plastic.name = "Plastic reserves"
-	plastic.recharge_rate = 50
+	plastic.recharge_rate = 100
 	plastic.max_energy = 50000
-	plastic.energy = 5000
+	plastic.energy = 10000
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
@@ -551,7 +582,8 @@
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/shred_limb
+//	R.verbs |= /mob/living/proc/shred_limb - YW Edit
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
 /obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
@@ -565,5 +597,6 @@
 	R.scrubbing = FALSE
 	R.verbs -= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs -= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs -= /mob/living/proc/shred_limb
+//	R.verbs -= /mob/living/proc/shred_limb - YW Edit
+	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()

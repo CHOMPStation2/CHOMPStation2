@@ -21,6 +21,20 @@
 	containertype = /obj/structure/closet/crate/engineering
 	containername = "Superconducting Magnetic Coil crate"
 
+/datum/supply_pack/eng/smescoil/super_capacity
+	name = "Superconducting Capacitance Coil"
+	contains = list(/obj/item/weapon/smes_coil/super_capacity)
+	cost = 90
+	containertype = /obj/structure/closet/crate/engineering
+	containername = "Superconducting Capacitance Coil crate"
+
+/datum/supply_pack/eng/smescoil/super_io
+	name = "Superconducting Transmission Coil"
+	contains = list(/obj/item/weapon/smes_coil/super_io)
+	cost = 90
+	containertype = /obj/structure/closet/crate/engineering
+	containername = "Superconducting Transmission Coil crate"
+
 /datum/supply_pack/eng/shield_capacitor
 	name = "Shield Capacitor"
 	contains = list(/obj/machinery/shield_capacitor)
@@ -291,27 +305,3 @@
 	containername = "Tritium crate"
 	containertype = /obj/structure/closet/crate/engineering
 	contains = list(/obj/fiftyspawner/tritium)
-
-/datum/supply_pack/eng/am_shielding
-	contains = list(/obj/item/device/am_shielding_container = 3)
-	name = "Antimatter shielding three units"
-	cost = 50
-	containertype = /obj/structure/closet/crate/secure
-	containername = "Antimatter shielding crate"
-	access = access_engine
-
-/datum/supply_pack/eng/am_container
-	contains = list(/obj/item/weapon/am_containment)
-	name = "Antimatter container"
-	cost = 25
-	containertype = /obj/structure/closet/crate/secure
-	containername = "AM container crate"
-	access = access_engine
-
-/datum/supply_pack/eng/am_controlunit
-	contains = list(/obj/machinery/power/am_control_unit)
-	name = "Antimatter control unit"
-	cost = 75
-	containertype = /obj/structure/closet/crate/secure/large
-	containername = "AM control unit crate"
-	access = access_engine

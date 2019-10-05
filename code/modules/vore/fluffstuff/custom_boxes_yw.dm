@@ -1,3 +1,5 @@
+//Legacy/Defunct for now at least or in special cases
+
 //*************
 //GeneralPantsu
 //*************
@@ -43,16 +45,7 @@
 		/obj/item/clothing/suit/storage/fluff/fedcoat/sam_jacket,
 		/obj/item/weapon/storage/belt/utility/fluff/sam_belt)
 
-//Aien Waesmaer
-
-/obj/item/weapon/storage/box/fluff/aien
-	name = "Aien's Kit"
-	desc = "A kit containing Aien's equipment."
-	has_items = list(
-		/obj/item/clothing/under/fluff/aien_uniform,
-		/obj/item/clothing/suit/storage/fluff/aien_suit)
-
-//Nika Domashev
+//Nika Domashev / Defunct
 
 /obj/item/weapon/storage/box/fluff/nika
 	name = "Nika's Kit"
@@ -76,7 +69,7 @@
 		/obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1)
 
 // **********
-//JohnWolf135
+//JohnWolf135 / Defunct
 // **********
 
 /obj/item/weapon/storage/box/fluff/John
@@ -139,7 +132,7 @@
 
 
 // **************
-// Admiral Dragon
+// Admiral Dragon / Defunct
 // **************
 
 //Tikorak Korgask
@@ -164,25 +157,15 @@
 		/obj/item/device/modkit_conversion/fluff/melissa_gun_kit)
 
 // *******
-// Deathty
-// *******
-
-/obj/item/weapon/storage/box/fluff/art
-	name = "Arthur's kit"
-	desc = "A kit containing Arthur's equipment."
-	has_items = list(
-		/obj/item/device/modkit_conversion/fluff/art_hos_kit,
-		/obj/item/clothing/under/rank/security/corp/fluf/art_uniform)
-
-// *******
-// Dwaggy090
+// Dwaggy90
 // *******
 /obj/item/weapon/storage/box/fluff/saur
 	name = "Saur's kit"
 	desc = "A kit containing Saur's equipment."
 	has_items = list(
 		/obj/item/weapon/rig/medical/equipped/fluff/saur,
-		/obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+		/obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag,
+		/obj/item/clothing/suit/armor/pcarrier/navy/fluff/saur_pccarrier
 		)
 
 // ************
@@ -243,7 +226,7 @@
 	has_items = list(
 		/obj/item/weapon/implanter/reagent_generator/mira)
 
-//Natalya Vospit
+//Natalya Vospit / Defunct
 
 /obj/item/weapon/storage/box/fluff/natalya
 	name = "Natalya's kit"
@@ -259,7 +242,7 @@
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/lena_collar)
 
-//Eryn Wolfe
+//Eryn Wolfe / Defunct
 
 /obj/item/weapon/storage/box/fluff/eryn
 	name = "Eryn's kit"
@@ -295,9 +278,11 @@
 	desc = "A kit containing Vasharr's equipment."
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/vasharr_armlets,
-		/obj/item/clothing/accessory/fluff/vasharr_pendant)
+		/obj/item/clothing/accessory/fluff/vasharr_pendant,
+		/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr,
+		/obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr)
 
-//FrenziedVorcha
+//FrenziedVorcha / Defcunt
 
 /obj/item/weapon/storage/box/fluff/philipsmirnov
 	name = "Psychiatric box"
@@ -342,7 +327,7 @@
 		/obj/item/clothing/accessory/fluff/quanah_collar)
 
 // ********
-// MaxieFoxie
+// MaxieFoxie / Defunct
 // ********
 
 //Maxie Drake
@@ -369,7 +354,7 @@
 		/obj/item/clothing/under/fluff/noel_uniform)
 
 // ********
-// SASOperative
+// SASOperative / Defunct
 // ********
 
 //Joseph Skinner
