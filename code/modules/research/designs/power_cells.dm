@@ -86,7 +86,7 @@
 	name = "omni"
 	req_tech = list(TECH_POWER = 8, TECH_MATERIAL = 7, TECH_ARCANE = 2, TECH_PHORON = 4, TECH_PRECURSOR = 2)
 	build_type = PROTOLATHE
-	id = "weapon"
+	id = "omni"
 	materials = list(DEFAULT_WALL_MATERIAL = 1700, "glass" = 550, MAT_DURASTEEL = 230, MAT_MORPHIUM = 320, MAT_METALHYDROGEN = 600, MAT_URANIUM = 60, MAT_VERDANTIUM = 150, MAT_PHORON = 900)
 	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
 	category = "Misc"
