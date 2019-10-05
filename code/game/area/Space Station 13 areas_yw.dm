@@ -133,3 +133,20 @@
 
 /area/security/perma/court
 	name = "\improper Prison Basketball Court"
+
+/area/security/airlock
+	name = "\improper Security Airlock"
+	icon_state = "security"
+
+/area/security/outpost
+	name = "\improper Security outpost"
+	icon_state = "security"
+
+/area/security/labor
+	name = "Labor camp access"
+	icon_state = "security"
+/area/medical/medbaymain
+	name = "\improper Medbay Primary Hallway"
+	icon_state = "medbay"
+	music = 'sound/ambience/signal.ogg'
+

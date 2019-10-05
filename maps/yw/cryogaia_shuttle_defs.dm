@@ -94,6 +94,8 @@
 	if(awaym_dest && awaym_dest.contents.len) // Otherwise this is an empty imaginary area
 		destinations["Unknown Location [rand(1000,9999)]"] = awaym_dest
 
+/*Old Tether shuttles below.
+
 //////////////////////////////////////////////////////////////
 // Tether Shuttle
 /datum/shuttle/ferry/tether_backup/goodluckmcgee
@@ -140,9 +142,10 @@
 	)
 	docking_controller_tag = "antag_ground_shuttle"
 	destination_dock_targets = list("Home Base" = "antag_ground_dock")
-
+*/
 //////////////////////////////////////////////////////////////
 // Mercenary Shuttle
+// Look into fitting this on the Main map- RadiantFlash
 /datum/shuttle/multi_shuttle/mercenary
 	name = "Mercenary"
 	warmup_time = 8
@@ -193,7 +196,7 @@
 	move_time = move_time + rand(10, 40)
 	..()
 */
-
+/* Likely not going to be in use atm -Radiantflash
 //////////////////////////////////////////////////////////////
 // CC Lewdship shuttle
 /datum/shuttle/ferry/cruiser_shuttle
@@ -205,3 +208,5 @@
 	docking_controller_tag = "cruiser_shuttle"
 	dock_target_station = "d1a1_dock"
 	dock_target_offsite = "cruiser_shuttle_bay"
+
+	*/

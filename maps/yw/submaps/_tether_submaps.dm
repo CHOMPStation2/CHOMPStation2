@@ -3,41 +3,41 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-/datum/map_template/tether_lateload/tether_misc
+/datum/map_template/cryogaia_lateload/cryogaia_misc
 	name = "Tether - Misc"
 	desc = "Misc areas, like some transit areas, holodecks, merc area."
 	mappath = 'tether_misc.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/ships
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/ships
 
-/datum/map_z_level/tether_lateload/misc
+/datum/map_z_level/cryogaia_lateload/misc
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
 
-/datum/map_template/tether_lateload/tether_ships
+/datum/map_template/cryogaia_lateload/cryogaia_ships
 	name = "Tether - Ships"
 	desc = "Ship transit map and whatnot."
 	mappath = 'tether_ships.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/ships
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/ships
 
-/datum/map_z_level/tether_lateload/ships
+/datum/map_z_level/cryogaia_lateload/ships
 	name = "Ships"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
 
 #include "underdark_pois/_templates.dm"
-/datum/map_template/tether_lateload/tether_underdark
+/datum/map_template/cryogaia_lateload/cryogaia_underdark
 	name = "Tether - Underdark"
 	desc = "Mining, but harder."
 	mappath = 'tether_underdark.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/underdark
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/underdark
 
-/datum/map_z_level/tether_lateload/underdark
+/datum/map_z_level/cryogaia_lateload/underdark
 	name = "Underdark"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 
-/datum/map_template/tether_lateload/tether_underdark/on_map_loaded(z)
+/datum/map_template/cryogaia_lateload/cryogaia_underdark/on_map_loaded(z)
 	. = ..()
 	seed_submaps(list(z), 100, /area/mine/unexplored/underdark, /datum/map_template/underdark)
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, z, world.maxx, world.maxy) // Create the mining Z-level.
@@ -54,22 +54,22 @@
 #endif
 
 #include "beach/_beach.dm"
-/datum/map_template/tether_lateload/away_beach
+/datum/map_template/cryogaia_lateload/away_beach
 	name = "Desert Planet - Z1 Beach"
 	desc = "The beach away mission."
 	mappath = 'beach/beach.dmm'
-	associated_map_datum = /datum/map_z_level/tether_lateload/away_beach
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_beach
 
-/datum/map_z_level/tether_lateload/away_beach
+/datum/map_z_level/cryogaia_lateload/away_beach
 	name = "Away Mission - Desert Beach"
 
-/datum/map_template/tether_lateload/away_beach_cave
+/datum/map_template/cryogaia_lateload/away_beach_cave
 	name = "Desert Planet - Z2 Cave"
 	desc = "The beach away mission's cave."
 	mappath = 'beach/cave.dmm'
-	associated_map_datum = /datum/map_z_level/tether_lateload/away_beach_cave
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_beach_cave
 
-/datum/map_z_level/tether_lateload/away_beach_cave
+/datum/map_z_level/cryogaia_lateload/away_beach_cave
 	name = "Away Mission - Desert Cave"
 
 /obj/effect/step_trigger/zlevel_fall/beach
@@ -77,33 +77,33 @@
 
 
 #include "alienship/_alienship.dm"
-/datum/map_template/tether_lateload/away_alienship
+/datum/map_template/cryogaia_lateload/away_alienship
 	name = "Alien Ship - Z1 Ship"
 	desc = "The alien ship away mission."
 	mappath = 'alienship/alienship.dmm'
-	associated_map_datum = /datum/map_z_level/tether_lateload/away_alienship
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_alienship
 
-/datum/map_z_level/tether_lateload/away_alienship
+/datum/map_z_level/cryogaia_lateload/away_alienship
 	name = "Away Mission - Alien Ship"
 
 
 #include "aerostat/_aerostat.dm"
-/datum/map_template/tether_lateload/away_aerostat
+/datum/map_template/cryogaia_lateload/away_aerostat
 	name = "Remmi Aerostat - Z1 Aerostat"
 	desc = "The Virgo 2 Aerostat away mission."
 	mappath = 'aerostat/aerostat.dmm'
-	associated_map_datum = /datum/map_z_level/tether_lateload/away_aerostat
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_aerostat
 
-/datum/map_z_level/tether_lateload/away_aerostat
+/datum/map_z_level/cryogaia_lateload/away_aerostat
 	name = "Away Mission - Aerostat"
 
-/datum/map_template/tether_lateload/away_aerostat_surface
+/datum/map_template/cryogaia_lateload/away_aerostat_surface
 	name = "Remmi Aerostat - Z2 Surface"
 	desc = "The surface from the Virgo 2 Aerostat."
 	mappath = 'aerostat/surface.dmm'
-	associated_map_datum = /datum/map_z_level/tether_lateload/away_aerostat_surface
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_aerostat_surface
 
-/datum/map_z_level/tether_lateload/away_aerostat_surface
+/datum/map_z_level/cryogaia_lateload/away_aerostat_surface
 	name = "Away Mission - Aerostat Surface"
 
 
@@ -114,36 +114,36 @@
 #endif
 
 #include "admin_use/fun.dm"
-/datum/map_template/tether_lateload/fun/spa
+/datum/map_template/cryogaia_lateload/fun/spa
 	name = "Space Spa"
 	desc = "A pleasant spa located in a spaceship."
 	mappath = 'admin_use/spa.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/fun/spa
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/fun/spa
 
-/datum/map_z_level/tether_lateload/fun/spa
+/datum/map_z_level/cryogaia_lateload/fun/spa
 	name = "Spa"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for Tether lateload maps
-/datum/map_template/tether_lateload
+/datum/map_template/cryogaia_lateload
 	allow_duplicates = FALSE
 	var/associated_map_datum
 
-/datum/map_template/tether_lateload/on_map_loaded(z)
+/datum/map_template/cryogaia_lateload/on_map_loaded(z)
 	if(!associated_map_datum || !ispath(associated_map_datum))
 		log_game("Extra z-level [src] has no associated map datum")
 		return
 
 	new associated_map_datum(using_map, z)
 
-/datum/map_z_level/tether_lateload
+/datum/map_z_level/cryogaia_lateload
 	z = 0
 	flags = MAP_LEVEL_SEALED
 
-/datum/map_z_level/tether_lateload/New(var/datum/map/map, mapZ)
+/datum/map_z_level/cryogaia_lateload/New(var/datum/map/map, mapZ)
 	if(mapZ && !z)
 		z = mapZ
 	return ..(map)
@@ -192,7 +192,7 @@
 		L.fall_impact(T, 42, 90, FALSE, TRUE)	//You will not be defibbed from this.
 
 /////////////////////////////
-/obj/tether_away_spawner
+/obj/cryogaia_away_spawner
 	name = "RENAME ME, JERK"
 	desc = "Spawns the mobs!"
 	icon = 'icons/mob/screen1.dmi'
@@ -219,7 +219,7 @@
 	var/mob/living/simple_mob/my_mob
 	var/depleted = FALSE
 
-/obj/tether_away_spawner/Initialize()
+/obj/cryogaia_away_spawner/Initialize()
 	. = ..()
 
 	if(!LAZYLEN(mobs_to_pick_from))
@@ -228,7 +228,7 @@
 		return INITIALIZE_HINT_QDEL
 	START_PROCESSING(SSobj, src)
 
-/obj/tether_away_spawner/process()
+/obj/cryogaia_away_spawner/process()
 	if(my_mob && my_mob.stat != DEAD)
 		return //No need
 
@@ -273,7 +273,8 @@
 
 //Shadekin spawner. Could have them show up on any mission, so it's here.
 //Make sure to put them away from others, so they don't get demolished by rude mobs.
-/obj/tether_away_spawner/shadekin
+// No. Just no. -RadiantFlash
+/*/obj/tether_away_spawner/shadekin
 	name = "Shadekin Spawner"
 	icon = 'icons/mob/vore_shadekin.dmi'
 	icon_state = "spawner"
@@ -284,4 +285,4 @@
 	guard = 10 //Don't wander too far, to stay alive.
 	mobs_to_pick_from = list(
 		// /mob/living/simple_mob/shadekin //VORESTATION AI TEMPORARY REMOVAL
-	)
+	) */

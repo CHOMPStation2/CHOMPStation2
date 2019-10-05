@@ -56,7 +56,7 @@
 	initialized = TRUE
 	return INITIALIZE_HINT_QDEL
 
-/obj/tether_away_spawner/aerostat_inside
+/obj/cryogaia_away_spawner/aerostat_inside
 	name = "Aerostat Indoors Spawner"
 	faction = "aerostat_inside"
 	atmos_comp = TRUE
@@ -70,7 +70,7 @@
 		/mob/living/simple_mob/vore/aggressive/corrupthound = 1
 	)
 
-/obj/tether_away_spawner/aerostat_surface
+/obj/cryogaia_away_spawner/aerostat_surface
 	name = "Aerostat Surface Spawner"
 	faction = "aerostat_surface"
 	atmos_comp = TRUE

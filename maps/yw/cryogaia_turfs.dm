@@ -52,6 +52,9 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/cryogaia)
 	oxygen = 0
 	nitrogen = 0
 	temperature	= TCMB
+/turf/simulated/floor/shuttle/black
+	icon = 'icons/turf/shuttle_white.dmi'
+	icon_state = "floor_black"
 
 CRYOGAIA_TURF_CREATE(/turf/simulated/mineral)
 CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
