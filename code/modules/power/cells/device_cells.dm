@@ -64,3 +64,16 @@
 
 /obj/item/weapon/cell/device/weapon/recharge/alien/update_icon()
 	return // No overlays please.
+
+//YAWN Addtion
+/obj/item/weapon/cell/device/weapon/recharge/alien/omni
+	name = "omni weapon power cell"
+	desc = "A mix bettewn alien technology and phoron tech. Seems to fit in almost any cell slot..."
+	charge_amount = 90 // 5%.
+	maxcharge = 1800
+	charge_delay = 500 // Every 50 seconds.
+	origin_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4, TECH_PHORON = 3)
+
+/obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty/Initialize()
+	. = ..()
+	charge = 0

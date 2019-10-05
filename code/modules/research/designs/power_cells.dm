@@ -52,6 +52,17 @@
 	category = "Misc"
 	sort_string = "BAAAD"
 
+//Yawn adding
+/datum/design/item/powercell/ultra
+	name = "ultra-capacity"
+	id = "ultra_cell"
+	req_tech = list(TECH_POWER = 6, TECH_MATERIAL = 5, TECH_ARCANE = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 400, "gold" = 150, "silver" = 150, "glass" = 70, MAT_URANIUM = 300, MAT_VERDANTIUM = 250, MAT_DURASTEEL = 520)
+	build_path = /obj/item/weapon/cell/ultra
+	category = "Misc"
+	sort_string = "BAAAE"
+//End of Yawn add
+
 /datum/design/item/powercell/device
 	name = "device"
 	build_type = PROTOLATHE
@@ -69,3 +80,15 @@
 	build_path = /obj/item/weapon/cell/device/weapon
 	category = "Misc"
 	sort_string = "BAABB"
+
+//Yawn add
+/datum/design/item/powercell/omni
+	name = "omni"
+	req_tech = list(TECH_POWER = 8, TECH_MATERIAL = 7, TECH_ARCANE = 2, TECH_PHORON = 4, TECH_PRECURSOR = 2)
+	build_type = PROTOLATHE
+	id = "weapon"
+	materials = list(DEFAULT_WALL_MATERIAL = 1700, "glass" = 550, MAT_DURASTEEL = 230, MAT_MORPHIUM = 320, MAT_METALHYDROGEN = 600, MAT_URANIUM = 60, MAT_VERDANTIUM = 150, MAT_PHORON = 900)
+	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
+	category = "Misc"
+	sort_string = "BAABC"
+//End of Yawn add

@@ -58,6 +58,19 @@
 	..()
 	charge = 0
 
+//Yawn Add
+/obj/item/weapon/cell/ultra
+	name = "ultra-capacity power cell"
+	origin_tech = list(TECH_POWER = 7)
+	icon_state = "upcell"
+	maxcharge = 40000
+	matter = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 80)
+
+/obj/item/weapon/cell/hyper/empty/New()
+	..()
+	charge = 0
+//End of Yawn changes
+
 /obj/item/weapon/cell/infinite
 	name = "infinite-capacity power cell!"
 	icon_state = "icell"
