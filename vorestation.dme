@@ -3180,6 +3180,5 @@
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\yw\cryogaia.dm"
-#include "maps\yw\scratchmap.dmm"
 #include "maps\~map_system\maps.dm"
 // END_INCLUDE

@@ -1,3 +1,6 @@
+//PORTERD OVER FROM TETHER.
+//Note: Clear out all the things we won't ever be using from this file at some point.
+
 /obj/structure/window/reinforced/polarized/full
 	dir = SOUTHWEST
 	icon_state = "fwindow"
@@ -5,25 +8,8 @@
 
 //Special map objects
 /obj/effect/landmark/map_data/borealis1
-    height = 2
+    height = 4 //Height marker. Provides the map with knowledge of how many z levels connecting below.
 
-/obj/turbolift_map_holder/tether
-	name = "Tether Climber"
-	depth = 7
-	lift_size_x = 3
-	lift_size_y = 3
-	icon = 'icons/obj/turbolift_preview_3x3.dmi'
-	wall_type = null // Don't make walls
-
-	areas_to_use = list(
-		/area/turbolift/t_surface/level1,
-		/area/turbolift/t_surface/level2,
-		/area/turbolift/t_surface/level3,
-		/area/turbolift/tether/transit,
-		/area/turbolift/t_station/level1,
-		/area/turbolift/t_station/level2,
-		/area/turbolift/t_station/level3
-		)
 
 /datum/turbolift
 	music = list('sound/music/elevator.ogg')  // Woo elevator music!
@@ -80,7 +66,7 @@
 //
 // TRAM STATION
 //
-
+//Not in use but...Might be useful in an away mission at some point. -RadiantFlash
 // The tram's electrified maglev tracks
 /turf/simulated/floor/maglev
 	name = "maglev track"
@@ -88,7 +74,7 @@
 	icon = 'icons/turf/flooring/maglevs.dmi'
 	icon_state = "maglevup"
 
-	var/area/shock_area = /area/tether/surfacebase/tram
+	var/area/shock_area = /area/cryogaia/tram
 
 /turf/simulated/floor/maglev/Initialize()
 	. = ..()
@@ -107,6 +93,7 @@
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
+
 
 // Tram air scrubbers for keeping arrivals clean - they work even with no area power
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram
@@ -333,7 +320,7 @@ var/global/list/latejoin_tram   = list()
 		new /obj/item/weapon/gun/energy/frontier/locked/holdout(src)
 
 // Underdark mob spawners
-/obj/tether_away_spawner/underdark_normal
+/obj/cryogaia_away_spawner/underdark_normal
 	name = "Underdark Normal Spawner"
 	faction = "underdark"
 	atmos_comp = TRUE
@@ -347,7 +334,7 @@ var/global/list/latejoin_tram   = list()
 		/mob/living/simple_mob/animal/giant_spider/lurker = 1,
 	)
 
-/obj/tether_away_spawner/underdark_hard
+/obj/cryogaia_away_spawner/underdark_hard
 	name = "Underdark Hard Spawner"
 	faction = "underdark"
 	atmos_comp = TRUE
@@ -360,7 +347,7 @@ var/global/list/latejoin_tram   = list()
 		/mob/living/simple_mob/animal/space/mimic = 1
 	)
 
-/obj/tether_away_spawner/underdark_boss
+/obj/cryogaia_away_spawner/underdark_boss
 	name = "Underdark Boss Spawner"
 	faction = "underdark"
 	atmos_comp = TRUE
