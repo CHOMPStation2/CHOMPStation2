@@ -12,11 +12,11 @@
 	charge_amount = 5
 	matter = list("metal" = 350, "glass" = 50)
 	preserve_item = 1
-
-/obj/item/weapon/cell/device/weapon
-	name = "weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry."
-	icon_state = "wcell"
+//Yawn changes
+/obj/item/weapon/cell/device/weapon //Aka adv
+	name = "advance device power cell"
+	desc = "A small power upgraded cell designed to power handheld devices."
+	icon_state = "acell"
 	maxcharge = 2400
 	charge_amount = 20
 
@@ -24,6 +24,31 @@
 	. = ..()
 	charge = 0
 	update_icon()
+
+/obj/item/weapon/cell/device/super
+	name = "super device power cell"
+	desc = "A small power upgraded cell designed to power handheld devices."
+	icon_state = "uscell"
+	maxcharge = 3600
+	charge_amount = 20
+
+/obj/item/weapon/cell/device/super/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+
+/obj/item/weapon/cell/device/hyper
+	name = "hyper device power cell"
+	desc = "A small power upgraded cell designed to hold much more power for handheld devices."
+	icon_state = "wcell"
+	maxcharge = 4800
+	charge_amount = 20
+
+/obj/item/weapon/cell/device/hyper/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+//End of Yawn changes
 
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
