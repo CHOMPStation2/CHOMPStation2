@@ -57,7 +57,7 @@
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/submap/virgo2/BoomBase)
 "ao" = (
-/mob/living/simple_animal/hostile/jelly,
+/mob/living/simple_mob/animal/space/jelly,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/submap/virgo2/BoomBase)
 "ap" = (
@@ -96,7 +96,7 @@
 /area/submap/virgo2/BoomBase)
 "ax" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/jelly,
+/mob/living/simple_mob/animal/space/jelly,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/submap/virgo2/BoomBase)
 "ay" = (
@@ -174,6 +174,10 @@
 "ba" = (
 /obj/item/stack/rods,
 /turf/simulated/wall/virgo2,
+/area/submap/virgo2/BoomBase)
+"yT" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg,
+/turf/simulated/floor/plating/virgo2,
 /area/submap/virgo2/BoomBase)
 
 (1,1,1) = {"
@@ -321,7 +325,7 @@ ax
 ay
 az
 an
-ae
+yT
 aD
 ae
 aB

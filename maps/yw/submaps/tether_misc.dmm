@@ -1,83 +1,83 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "burst_l"
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry{
 	dir = 1
 	},
 /area/supply/dock)
 "ab" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion,
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry{
 	dir = 1
 	},
 /area/supply/dock)
 "ac" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "burst_r"
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry{
 	dir = 1
 	},
 /area/supply/dock)
 "ad" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_r";
 	dir = 4
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/trade/centcom)
 "ae" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/trade/centcom)
 "af" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_l";
 	dir = 4
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/trade/centcom)
 "ag" = (
-/turf/space,
 /obj/machinery/power/emitter/gyrotron/anchored{
 	desc = "It is a heavy duty pulse laser emitter.";
 	dir = 8;
 	icon_state = "emitter-off";
 	name = "pulse laser"
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/syndicate_station/start)
 "ah" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_r";
 	dir = 4
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/syndicate_station/start)
 "ai" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/syndicate_station/start)
 "aj" = (
-/turf/space,
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_l";
 	dir = 4
 	},
+/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/syndicate_station/start)
 "ak" = (
@@ -1805,8 +1805,7 @@
 /obj/item/weapon/surgical/retractor,
 /obj/item/stack/nanopaste,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/shuttle/floor,
 /area/syndicate_station/start)
@@ -1834,8 +1833,7 @@
 /area/syndicate_station/start)
 "eH" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/shuttle/floor,
 /area/syndicate_station/start)
@@ -2519,8 +2517,7 @@
 "gH" = (
 /obj/machinery/iv_drip,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/shuttle/floor,
 /area/syndicate_station/start)
@@ -2559,8 +2556,7 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -2682,8 +2678,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -3207,8 +3202,7 @@
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -3775,7 +3769,7 @@
 	base_turf = /turf/unsimulated/floor/techfloor_grid
 	})
 "js" = (
-/obj/item/weapon/screwdriver,
+/obj/item/weapon/tool/screwdriver,
 /obj/effect/spawner/newbomb/timer/syndicate,
 /obj/structure/table/reinforced,
 /turf/simulated/shuttle/floor{
@@ -3894,7 +3888,7 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/trade/centcom)
 "jG" = (
-/obj/vehicle/train/cargo/engine,
+/obj/vehicle/train/engine,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1";
@@ -3993,7 +3987,7 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/trade/centcom)
 "jU" = (
-/obj/vehicle/train/cargo/trolley,
+/obj/vehicle/train/trolley,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "jV" = (
@@ -4277,7 +4271,7 @@
 	name = "Beruang";
 	pixel_x = 32
 	},
-/mob/living/simple_animal/corgi/tamaskan/spice,
+/mob/living/simple_mob/animal/passive/dog/tamaskan/Spice,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/trade/centcom)
 "kz" = (
@@ -4344,7 +4338,7 @@
 	icon_state = "warning";
 	dir = 1
 	},
-/obj/structure/closet/crate/secure/loot,
+/obj/structure/closet/crate/secure,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "kI" = (
@@ -4460,7 +4454,7 @@
 /area/shuttle/trade/centcom)
 "kV" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/closet/crate/secure/loot,
+/obj/structure/closet/crate/secure,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "kW" = (
@@ -5006,7 +5000,7 @@
 /area/shuttle/trade/centcom)
 "lW" = (
 /obj/structure/table/woodentable,
-/obj/item/device/laptop,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard,
 /turf/simulated/floor/carpet,
 /area/shuttle/trade/centcom)
 "lX" = (
@@ -5138,7 +5132,7 @@
 /area/shuttle/trade/centcom)
 "mh" = (
 /obj/structure/table/glass,
-/obj/machinery/computer3/wall_comp/telescreen/entertainment{
+/obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -35
 	},
 /turf/simulated/shuttle/floor/black,
@@ -5646,7 +5640,7 @@
 	},
 /area/wizard_station)
 "nm" = (
-/mob/living/simple_animal/mouse/gray{
+/mob/living/simple_mob/animal/passive/mouse/gray{
 	desc = "He looks kingly.";
 	name = "Arthur"
 	},
@@ -6561,12 +6555,10 @@
 /area/antag/antag_base)
 "pn" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+006
+	dir = 2
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -6585,8 +6577,7 @@
 /area/antag/antag_base)
 "po" = (
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+006
+	dir = 2
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -6605,15 +6596,13 @@
 /area/antag/antag_base)
 "pp" = (
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+006
+	dir = 2
 	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -6862,8 +6851,7 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+006
+	dir = 2
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -8083,11 +8071,11 @@
 /area/antag/antag_base)
 "rJ" = (
 /obj/structure/table/rack,
-/obj/item/weapon/crowbar/red,
-/obj/item/weapon/crowbar/red,
-/obj/item/weapon/crowbar/red,
-/obj/item/weapon/crowbar/red,
-/obj/item/weapon/crowbar/red,
+/obj/item/weapon/tool/crowbar/red,
+/obj/item/weapon/tool/crowbar/red,
+/obj/item/weapon/tool/crowbar/red,
+/obj/item/weapon/tool/crowbar/red,
+/obj/item/weapon/tool/crowbar/red,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
@@ -8881,7 +8869,7 @@
 	},
 /area/antag/antag_base)
 "sM" = (
-/mob/living/simple_animal/fox/syndicate{
+/mob/living/simple_mob/animal/passive/fox/syndicate{
 	name = "Rick"
 	},
 /turf/unsimulated/floor{
@@ -9158,7 +9146,7 @@
 /obj/item/device/defib_kit,
 /obj/structure/table/standard,
 /obj/machinery/recharger,
-/obj/item/weapon/screwdriver,
+/obj/item/weapon/tool/screwdriver,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -9478,7 +9466,7 @@
 	},
 /area/antag/antag_base)
 "tT" = (
-/obj/item/weapon/screwdriver,
+/obj/item/weapon/tool/screwdriver,
 /obj/item/weapon/storage/box/beakers,
 /obj/item/stack/material/phoron,
 /obj/item/stack/material/phoron,
@@ -9992,6 +9980,36 @@
 	icon_state = "floor_red"
 	},
 /area/syndicate_station/start)
+"zo" = (
+/obj/effect/step_trigger/lost_in_space/tram,
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"AL" = (
+/obj/effect/step_trigger/lost_in_space/tram,
+/turf/unsimulated/floor/maglev{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"KZ" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 8
+	},
+/obj/effect/step_trigger/lost_in_space/tram,
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"SC" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 4
+	},
+/obj/effect/step_trigger/lost_in_space/tram,
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 
 (1,1,1) = {"
 ap
@@ -11094,7 +11112,7 @@ hm
 hv
 hm
 hm
-hm
+KZ
 mu
 ap
 mv
@@ -11236,7 +11254,7 @@ hn
 hn
 hn
 hn
-hn
+zo
 gX
 ap
 mv
@@ -11378,7 +11396,7 @@ ho
 ho
 ho
 ho
-ho
+AL
 gX
 ap
 mv
@@ -11520,7 +11538,7 @@ hn
 hn
 hn
 hn
-hn
+zo
 gX
 ap
 mv
@@ -11662,7 +11680,7 @@ hn
 hn
 hn
 hn
-hn
+zo
 gX
 ap
 mv
@@ -11804,7 +11822,7 @@ hn
 hn
 hn
 hn
-hn
+zo
 gX
 ap
 mv
@@ -11946,7 +11964,7 @@ hn
 hn
 hn
 hn
-hn
+zo
 gX
 ap
 mv
@@ -12088,7 +12106,7 @@ ho
 ho
 ho
 ho
-ho
+AL
 gX
 ap
 mv
@@ -12230,7 +12248,7 @@ hn
 hn
 hn
 hn
-hn
+zo
 gX
 ap
 mv
@@ -12372,7 +12390,7 @@ hp
 hp
 hI
 hp
-hp
+SC
 gX
 ap
 mv

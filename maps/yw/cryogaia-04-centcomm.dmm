@@ -8705,12 +8705,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/syndicate_station/start)
-"sS" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "sT" = (
 /obj/structure/table/rack,
 /obj/machinery/recharger/wallcharger{
@@ -80459,7 +80453,7 @@ pQ
 rT
 af
 af
-sS
+nv
 tp
 tJ
 uf

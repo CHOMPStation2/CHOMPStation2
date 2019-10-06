@@ -1,26 +1,3 @@
-//Atmosphere properties
-#define CRYOGAIA_ONE_ATMOSPHERE	100 //kPa
-#define CRYOGAIA_AVG_TEMP	215 //kelvin
-
-#define CRYOGAIA_PER_N2		0.16 //percent
-#define CRYOGAIA_PER_O2		0.72
-#define CRYOGAIA_PER_N2O	0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
-#define CRYOGAIA_PER_CO2	0.12
-#define CRYOGAIA_PER_PHORON	0.00
-
-//Math only beyond this point
-#define CRYOGAIA_MOL_PER_TURF	(CRYOGAIA_ONE_ATMOSPHERE*CELL_VOLUME/(CRYOGAIA_AVG_TEMP*R_IDEAL_GAS_EQUATION))
-#define CRYOGAIA_MOL_N2			(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_N2)
-#define CRYOGAIA_MOL_O2			(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_O2)
-#define CRYOGAIA_MOL_N2O		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_N2O)
-#define CRYOGAIA_MOL_CO2		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_CO2)
-#define CRYOGAIA_MOL_PHORON		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_PHORON)
-
-//Turfmakers
-#define CRYOGAIA_SET_ATMOS	nitrogen=CRYOGAIA_MOL_N2;oxygen=CRYOGAIA_MOL_O2;carbon_dioxide=CRYOGAIA_MOL_CO2;phoron=CRYOGAIA_MOL_PHORON;temperature=CRYOGAIA_AVG_TEMP
-#define CRYOGAIA_TURF_CREATE(x)	x/cryogaiab/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP;x/cryogaia/outdoors=TRUE;x/cryogaia/update_graphic(list/graphic_add = null, list/graphic_remove = null) return 0
-#define CRYOGAIA_TURF_CREATE_UN(x)	x/cryogaia/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP
-
 //Normal YW map defs
 // for some god damn reason, the defines aren't registring properly. This is causing me an unbelievable amount of grief. -RadiantFlash
 #define Z_LEVEL_CRYOGAIA_MINE		1
@@ -29,10 +6,17 @@
 #define Z_LEVEL_CRYOGAIA_CENTCOM	4
 //#define Z_LEVEL_ALIENSHIP			5
 //#define Z_LEVEL_BEACH				6
-//#define Z_LEVEL_BEACH_CAVE			7
+//#define Z_LEVEL_BEACH_CAVE		7
 //#define Z_LEVEL_AEROSTAT			8
 //#define Z_LEVEL_AEROSTAT_SURFACE	9
-//#define Z_LEVEL_DEBRISFIELD			10
+//#define Z_LEVEL_DEBRISFIELD		10
+
+//Camera networks
+#define NETWORK_CRYOGAIA "Cryogaia"
+#define NETWORK_TCOMMS "Telecommunications" //Using different from Polaris one for better name
+#define NETWORK_OUTSIDE "Outside"
+#define NETWORK_EXPLORATION "Exploration"
+#define NETWORK_XENOBIO "Xenobiology"
 
 /datum/map/cryogaia
 	name = "Cryogaia"
@@ -40,6 +24,28 @@
 	path = "cryogaia"
 
 	zlevel_datum_type = /datum/map_z_level/cryogaia
+
+	//Math only beyond this point
+	#define CRYOGAIA_MOL_PER_TURF	(CRYOGAIA_ONE_ATMOSPHERE*CELL_VOLUME/(CRYOGAIA_AVG_TEMP*R_IDEAL_GAS_EQUATION))
+	#define CRYOGAIA_MOL_N2			(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_N2)
+	#define CRYOGAIA_MOL_O2			(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_O2)
+	#define CRYOGAIA_MOL_N2O		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_N2O)
+	#define CRYOGAIA_MOL_CO2		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_CO2)
+	#define CRYOGAIA_MOL_PHORON		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_PHORON)
+
+	//Turfmakers
+	#define CRYOGAIA_SET_ATMOS	nitrogen=CRYOGAIA_MOL_N2;oxygen=CRYOGAIA_MOL_O2;carbon_dioxide=CRYOGAIA_MOL_CO2;phoron=CRYOGAIA_MOL_PHORON;temperature=CRYOGAIA_AVG_TEMP
+	#define CRYOGAIA_TURF_CREATE(x)	x/cryogaiab/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP;x/cryogaia/outdoors=TRUE;x/cryogaia/update_graphic(list/graphic_add = null, list/graphic_remove = null) return 0
+	#define CRYOGAIA_TURF_CREATE_UN(x)	x/cryogaia/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP
+
+	//Atmosphere properties
+	#define CRYOGAIA_ONE_ATMOSPHERE	100 //kPa
+	#define CRYOGAIA_AVG_TEMP	215 //kelvin
+	#define CRYOGAIA_PER_N2		0.16 //percent
+	#define CRYOGAIA_PER_O2		0.72
+	#define CRYOGAIA_PER_N2O	0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
+	#define CRYOGAIA_PER_CO2	0.12
+	#define CRYOGAIA_PER_PHORON	0.00
 
 	lobby_icon = 'icons/misc/title_yw2.dmi'
 	lobby_screens = list("cryogaia")
@@ -73,22 +79,36 @@
 
 	station_networks = list(
 							NETWORK_CARGO,
+							NETWORK_CIRCUITS,
 							NETWORK_CIVILIAN,
 							NETWORK_COMMAND,
+							NETWORK_CRYOGAIA,
 							NETWORK_ENGINE,
 							NETWORK_ENGINEERING,
-							NETWORK_ENGINEERING_OUTPOST,
-							NETWORK_DEFAULT,
+							NETWORK_EXPLORATION,
+							//NETWORK_DEFAULT,  //Is this even used for anything? Robots show up here, but they show up in ROBOTS network too,
 							NETWORK_MEDICAL,
 							NETWORK_MINE,
-							NETWORK_NORTHERN_STAR,
+							NETWORK_OUTSIDE,
 							NETWORK_RESEARCH,
 							NETWORK_RESEARCH_OUTPOST,
 							NETWORK_ROBOTS,
 							NETWORK_PRISON,
 							NETWORK_SECURITY,
-							NETWORK_INTERROGATION
+							NETWORK_INTERROGATION,
+							NETWORK_TCOMMS
 							)
+	secondary_networks = list(
+							NETWORK_ERT,
+							NETWORK_MERCENARY,
+							NETWORK_THUNDER,
+							NETWORK_COMMUNICATORS,
+							NETWORK_ALARM_ATMOS,
+							NETWORK_ALARM_POWER,
+							NETWORK_ALARM_FIRE
+							)
+
+	bot_patrolling = FALSE
 
 	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage")
 	spawnpoint_died = /datum/spawnpoint/tram
@@ -103,21 +123,24 @@
 		/area/crew_quarters/sleep/Dorm_3/holo,
 		/area/crew_quarters/sleep/Dorm_5/holo,
 		/area/crew_quarters/sleep/Dorm_7/holo)
-	unit_test_exempt_from_atmos = list( //I honestly don't know what the others of these effect, I likely won't touch anything further till I figure out.
-										//disabled entire list as there really isn't a reason to have areas exempt from atmos.
-		//area/engineering/atmos/intake,
-//		/area/rnd/external, //  Outside,
-//		/area/tether/surfacebase/mining_main/external, // Outside,
-//		/area/tether/surfacebase/mining_main/airlock, //  Its an airlock,
-//		/area/tether/surfacebase/emergency_storage/rnd,
-//		/area/tether/surfacebase/emergency_storage/atrium,
-)
-
+	unit_test_exempt_from_atmos = list(
+		/area/engineering/atmos/intake
+		)
+/*
 	lateload_z_levels = list(
-		list("Tether - Misc","Tether - Ships","Tether - Underdark"), //Stock Tether lateload maps. Disabled due to tether being phased out.
-	//	list("Alien Ship - Z1 Ship"),
-	//	list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
-	//	list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface")
+		list("Tether - Misc","Tether - Ships","Tether - Underdark","Tether - Plains"), //Stock Tether lateload maps
+		list("Alien Ship - Z1 Ship"),
+		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
+		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
+		list("Debris Field - Z1 Space")
+		)
+*/
+	ai_shell_restricted = TRUE
+	ai_shell_allowed_levels = list(
+		Z_LEVEL_CRYOGAIA_MINE,
+		Z_LEVEL_CRYOGAIA_LOWER,
+		Z_LEVEL_CRYOGAIA_MAIN,
+		Z_LEVEL_CRYOGAIA_CENTCOM
 		)
 
 	lateload_single_pick = null //Nothing right now.
@@ -128,6 +151,13 @@
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, 64, 64)         // Create the mining ore distribution map.
 
 	return 1
+
+/datum/planet/borealis1
+	expected_z_levels = list(
+		Z_LEVEL_CRYOGAIA_MINE,
+		Z_LEVEL_CRYOGAIA_LOWER,
+		Z_LEVEL_CRYOGAIA_MAIN
+	)
 
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/cryogaia/get_map_levels(var/srcz, var/long_range = TRUE)
@@ -184,7 +214,7 @@
 	if(activated && isemptylist(frozen_mobs))
 		return
 	activated = 1
-	for(var/mob/living/simple_animal/M in frozen_mobs)
+	for(var/mob/living/simple_mob/M in frozen_mobs)
 		M.life_disabled = 0
 		frozen_mobs -= M
 	frozen_mobs.Cut()
@@ -213,4 +243,3 @@
 /datum/map_z_level/tether/wilderness/wild_ruins
 	z = Z_LEVEL_SURFACE_WILDERNESS_RUINS
 */
-
