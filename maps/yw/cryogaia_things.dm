@@ -8,7 +8,7 @@
 
 //Special map objects
 /obj/effect/landmark/map_data/borealis1
-    height = 4 //Height marker. Provides the map with knowledge of how many z levels connecting below.
+    height = 3 //Height marker. Provides the map with knowledge of how many z levels connecting below.
 
 
 /datum/turbolift

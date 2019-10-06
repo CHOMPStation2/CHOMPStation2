@@ -27,12 +27,12 @@
 #define Z_LEVEL_CRYOGAIA_LOWER		2
 #define Z_LEVEL_CRYOGAIA_MAIN		3
 #define Z_LEVEL_CRYOGAIA_CENTCOM	4
-#define Z_LEVEL_ALIENSHIP			15
-#define Z_LEVEL_BEACH				16
-#define Z_LEVEL_BEACH_CAVE			17
-#define Z_LEVEL_AEROSTAT			18
-#define Z_LEVEL_AEROSTAT_SURFACE	19
-#define Z_LEVEL_DEBRISFIELD			20
+#define Z_LEVEL_ALIENSHIP			5
+#define Z_LEVEL_BEACH				6
+#define Z_LEVEL_BEACH_CAVE			7
+#define Z_LEVEL_AEROSTAT			8
+#define Z_LEVEL_AEROSTAT_SURFACE	9
+#define Z_LEVEL_DEBRISFIELD			10
 
 /datum/map/cryogaia
 	name = "Cryogaia"

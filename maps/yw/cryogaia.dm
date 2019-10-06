@@ -1,9 +1,4 @@
 #if !defined(USING_MAP_DATUM)
-	#include "cryogaia-1.dmm" //mining
-	#include "cryogaia-2.dmm" //lowerlevel
-	#include "cryogaia-3.dmm" //main level
-	#include "cryogaia-4.dmm" //centcom
-
 	#include "cryogaia_defines.dm"
 	#include "cryogaia_turfs.dm"
 	#include "cryogaia_things.dm"
@@ -15,6 +10,12 @@
 	#include "cryogaia_borealismajoris.dm"
 	#include "elevator_areas.dm"
 	#include "service_elevator_things.dm"
+
+	#include "cryogaia-01-mining.dmm" //mining
+	#include "cryogaia-02-maintenance.dmm" //lowerlevel
+	#include "cryogaia-03-main.dmm" //main level
+	#include "cryogaia-04-centcomm.dmm" //centcom
+
 	#include "submaps/_tether_submaps.dm"
 
 	#define USING_MAP_DATUM /datum/map/cryogaia
