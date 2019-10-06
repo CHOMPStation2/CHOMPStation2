@@ -196,6 +196,9 @@
 #define O_VOICE    "voicebox"
 #define O_STANDARD list(O_EYES, O_HEART, O_LUNGS, O_BRAIN, O_LIVER, O_KIDNEYS, O_APPENDIX, O_VOICE)
 
+// Augments
+#define O_AUG_TSHADE "integrated thermolensing implant"
+
 // Non-Standard organs
 #define O_MOUTH    "mouth"
 #define O_CELL     "cell"
@@ -207,13 +210,17 @@
 #define O_GBLADDER "gas bladder"
 #define O_POLYP    "polyp segment"
 #define O_ANCHOR   "anchoring ligament"
+#define O_REGBRUTE "pneumoregenitor"
+#define O_REGBURN  "thermoregenitor"
+#define O_REGOXY   "respiroregenitor"
+#define O_REGTOX   "toxoregenitor"
 #define O_ACID     "acid gland"
 #define O_EGG      "egg sac"
 #define O_RESIN    "resin spinner"
 #define O_AREJECT  "immune hub"
 #define O_VENTC    "morphoplastic node"
 #define O_VRLINK   "virtual node"
-#define O_ALL list(O_STANDARD, O_MOUTH, O_CELL, O_PLASMA, O_HIVE, O_NUTRIENT, O_STRATA, O_RESPONSE, O_GBLADDER, O_POLYP, O_ANCHOR, O_ACID, O_EGG, O_RESIN, O_AREJECT, O_VENTC, O_VRLINK)
+#define O_ALL list(O_STANDARD, O_MOUTH, O_CELL, O_PLASMA, O_HIVE, O_NUTRIENT, O_STRATA, O_RESPONSE, O_GBLADDER, O_POLYP, O_ANCHOR, O_REGBRUTE, O_REGBURN, O_REGOXY, O_REGTOX, O_ACID, O_EGG, O_RESIN, O_AREJECT, O_VENTC, O_VRLINK)
 
 // External organs, aka limbs
 #define BP_L_FOOT "l_foot"

@@ -20,7 +20,8 @@
 //Pathfinder's Subspace Radio
 /obj/item/device/subspaceradio
 	name = "subspace radio"
-	desc = "A powerful new radio recently gifted to Nanotrasen from KHI, this communications device has the ability to send and recieve transmissions from anywhere."
+	desc = "A powerful new radio recently gifted to Nanotrasen from Xion Manufacturing Group, this communications device has the ability to send and recieve transmissions from anywhere."
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/xion)
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_override = 'icons/mob/back_vr.dmi'
 	icon_state = "radiopack"
@@ -55,14 +56,14 @@
 		..()
 
 /obj/item/device/subspaceradio/MouseDrop()
-    if(ismob(loc))
-        if(!CanMouseDrop(src))
-            return
-        var/mob/M = loc
-        if(!M.unEquip(src))
-            return
-        add_fingerprint(usr)
-        M.put_in_any_hand_if_possible(src)
+	if(ismob(loc))
+		if(!CanMouseDrop(src))
+			return
+		var/mob/M = loc
+		if(!M.unEquip(src))
+			return
+		add_fingerprint(usr)
+		M.put_in_any_hand_if_possible(src)
 
 /obj/item/device/subspaceradio/attackby(obj/item/weapon/W, mob/user, params)
 	if(W == handset)
@@ -98,7 +99,7 @@
 
 	if((slot_flags & SLOT_BACK) && M.get_equipped_item(slot_back) == src)
 		return 1
-	if((slot_flags & SLOT_BELT) && M.get_equipped_item(slot_belt) == src)
+	if((slot_flags & SLOT_BACK) && M.get_equipped_item(slot_s_store) == src)
 		return 1
 
 	return 0
@@ -113,7 +114,7 @@
 	if(ismob(handset.loc))
 		var/mob/M = handset.loc
 		if(M.drop_from_inventory(handset, src))
-			to_chat(user, "<span class='notice'>\The [handset] snap back into the main unit.</span>")
+			to_chat(user, "<span class='notice'>\The [handset] snaps back into the main unit.</span>")
 	else
 		handset.forceMove(src)
 

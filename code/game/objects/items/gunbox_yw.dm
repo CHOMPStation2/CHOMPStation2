@@ -26,10 +26,10 @@
 
 /obj/item/gunbox/blueshield/secondary/attack_self(mob/living/user)
 	var/list/options = list()
-//	options["NSFW Variable Pistol(Microbattery)"] = list(/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos) It's broken, and I can't fix it because the snowflake keeps metastasizing.
+	options["NSCW Variable Pistol(Microbattery)"] = list(/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos)
 	options["E-Gun (Weapon Cell)"] = list(/obj/item/weapon/gun/energy/gun, /obj/item/weapon/cell/device/weapon, /obj/item/weapon/cell/device/weapon)
 	options["Consul Revolver (.44)"] = list(/obj/item/weapon/gun/projectile/revolver/consul, /obj/item/ammo_magazine/s44, /obj/item/ammo_magazine/s44, /obj/item/ammo_magazine/s44/rubber)
-	var/choice = input(user,"Would you prefer an e-gun or a revolver?") as null|anything in options
+	var/choice = input(user,"Would you prefer an NSCW, e-gun or a revolver?") as null|anything in options
 	if(src && choice)
 		var/list/things_to_spawn = options[choice]
 		for(var/new_type in things_to_spawn) // Spawn all the things, the gun and the ammo.

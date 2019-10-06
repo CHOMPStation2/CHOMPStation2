@@ -150,7 +150,7 @@
 	icon_state = "pda-joan"
 
 //Vorrarkul:Lucina Dakarim
-/obj/item/device/pda/heads/cmo/lucinapda
+/obj/item/device/pda/heads/cmo/fluff/lucinapda
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "pda-lucina"
 
@@ -456,7 +456,7 @@
 		sleep(30)
 		visible_message("<span class='warning'>The [name] shatters into dust!</span>")
 		if(owner_c)
-			to_chat(owner_c, "<span class='notice'>The HAVENS system is notified of your demise via \the [name].</span>")
+			to_chat(owner_c, "<span class='notice'>A signal is sent notifying of your demise by \the [name].</span>")
 		update_state(3)
 		name = "broken [initial(name)]"
 		desc = "This seems like a necklace, but the actual pendant is missing."
@@ -467,37 +467,30 @@
 	update_icon()
 
 /obj/item/weapon/paper/khcrystal_manual
-	name = "KH-LC91-1 manual"
-	info = {"<h4>KH-LC91-1 Life Crystal</h4>
+	name = "NT-LC91-1 manual"
+	info = {"<h4>NT-LC91-1 Life Crystal</h4>
 	<h5>Usage</h5>
 	<ol>
-		<li>Hold new crystal in hand.</li>
-		<li>Make fist with that hand.</li>
-		<li>Wait 1 second.</li>
+		<li>Hold unlinked crystal in hand.</li>
+		<li>Make fist around the crystal, squeezing down gently.</li>
+		<li>Hold for one second. If performed correctly, the crystal will glow blue.</li>
 	</ol>
 	<br />
 	<h5>Purpose</h5>
-	<p>The Kitsuhana Life Crystal is a small device typically worn around the neck for the purpose of reporting your status to the HAVENS (Kitsuhana's High-AVailability ENgram Storage) system, so that appropriate measures can be taken in the case of your body's demise. The whole device is housed inside a pleasing-to-the-eye elongated diamond.</p>
-	<p>Upon your body's desmise, the crystal will send a transmission to HAVENS. Depending on your membership level, the appropriate actions can be taken to ensure that you are back up and enjoying existence as soon as possible.</p>
+	<p>The NanoTrasen Life Crystal is a small device typically worn around the neck for the purpose of reporting your status to the off-world mind and body backup systems, so that appropriate measures can be taken in the case of your body's demise. The whole device is housed inside a pleasing-to-the-eye elongated quartz crystal.</p>
+	<p>Upon your body's desmise, the crystal will send a transmission to the location specified in your employee file.</p>
 
-	<p>Nanotrasen has negotiated a <i>FREE</i> Star membership for you in the HAVENS system, though an upgrade can be obtained depending on your citizenship and reputation level.</p>
-
-	As a reminder, the membership levels in HAVENS are:
-	<ul>
-		<li><b>HAVENS Star:</b> Upon reciving a signal from a transmitter indicating body demise, HAVENS will attempt to contact the owner for 48 hours, before starting the process of resleeving the owner into a new body they selected when registering their HAVENS membership.</li>
-		<li><b>HAVENS Nebula:</b> After the contact period from the Star service has expired, an agent will be alotted a HAVENS spacecraft, and will attempt to locate your remains, and any belongings you had, for up to one week. If possible, any more recent memory recordings or mindstates will be recovered before your resleeving. (Great for explorers! Don't miss out on anything you discovered!)</li>
-		<li><b>HAVENS Galaxy:</b> Upon reciving the signal from the Star service, a HAVENS High-Threat Response Team will be alotted a HAVENS FTL-capable Interdictor-class spacecraft and dispatched to your last known position to locate and recover your remains, plus any belongings. You will be resleeved on-site to continue where you left off.</li>
-	</ul>
+	<p>While NanoTrasen distributes these devices to their employees for free, they do not provide revival services with the crystals. It is the employee's responsibility to either negotiate a service with NanoTrasen or from other companies that provide the service. </p>
 	<br />
 	<h5>Technical</h5>
-	<p>The Life Crystal is a small 5cm long diamond containing four main components which are visible inside the translucent gem.</p>
+	<p>The Life Crystal is a small 5cm long quartz containing four main components which are visible inside the translucent gem.</p>
 
 	From tip to top, they are:
 	<ol>
-		<li><b>Qubit Bucket:</b> This small cube contains 200 bits worth of quantum-entangled bits for transmitting to HAVENS. QE transmission technologies cannot be jammed or interfered with, and are effectively instant over any distance.
+		<li><b>Qubit Bucket:</b> This small cube contains 200 bits worth of quantum-entangled bits for transmitting to the individual service. QE transmission technologies cannot be jammed or interfered with, and are effectively instant over any distance.
 		<li><b>Antimatter Bottle:</b> This tiny antimatter vessel is required to power the transmitter for the time it takes to transmit the signal to HAVENS. The inside of the crystal is thick enough to block any alpha or beta particles emitted when this antimatter contacts matter, however the crystal will be destroyed when activated.
 		<li><b>Decay Reactor:</b> This long-term microreactor will last for around one month and provide sufficient power to power all but the transmitter. This power is required for containing the antimatter bottle.
-		<li><b>Sensor Suite:</b> The sensor that tracks the owner's life-state, such that it can be transmitted back to HAVENS when necessary.
+		<li><b>Sensor Suite:</b> The sensor that tracks the owner's life-state, such that it can be transmitted when necessary.
 	</ol>
 	<p>The diamond itself is coated in a layer of graphene, to give it a pleasant rainbow finish. This also serves as a conductor that, if broken, will discharge the antimatter bottle immediately as it is unsafe to do so any point after the crystal is broken via physical means.</p>
 	<br />
@@ -509,7 +502,7 @@
 	name = "life crystal case"
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "khlifebox"
-	desc = "This case can only hold the KH-LC91-1 and a manual."
+	desc = "This case can only hold the NT-LC91-1 and a manual."
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	storage_slots = 2
 	can_hold = list(/obj/item/weapon/paper/khcrystal_manual, /obj/item/clothing/accessory/collar/khcrystal)
@@ -1243,7 +1236,8 @@
 	w_class = ITEMSIZE_SMALL
 	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_ILLEGAL = 7)
 
-	var/obj/item/weapon/cell/device/weapon/power_source
+	var/cell_type = /obj/item/weapon/cell/device/weapon
+	var/obj/item/weapon/cell/power_source
 	var/charge_cost = 800 // cell/device/weapon has 2400
 
 	var/list/beacons = list()
@@ -1258,7 +1252,10 @@
 /obj/item/device/perfect_tele/New()
 	..()
 	flags |= NOBLUDGEON
-	power_source = new (src)
+	if(cell_type)
+		power_source = new cell_type(src)
+	else
+		power_source = new /obj/item/weapon/cell/device(src)
 	spk = new(src)
 	spk.set_up(5, 0, src)
 	spk.attach(src)
@@ -1275,7 +1272,7 @@
 /obj/item/device/perfect_tele/update_icon()
 	if(!power_source)
 		icon_state = "[initial(icon_state)]_o"
-	else if(ready && power_source.check_charge(charge_cost))
+	else if(ready && (power_source.check_charge(charge_cost) || power_source.fully_charged()))
 		icon_state = "[initial(icon_state)]"
 	else
 		icon_state = "[initial(icon_state)]_w"
@@ -1337,7 +1334,7 @@
 			return
 
 /obj/item/device/perfect_tele/attackby(obj/W, mob/user)
-	if(istype(W,/obj/item/weapon/cell/device/weapon) && !power_source)
+	if(istype(W,cell_type) && !power_source)
 		power_source = W
 		power_source.update_icon() //Why doesn't a cell do this already? :|
 		user.unEquip(power_source)
@@ -1366,7 +1363,7 @@
 		return FALSE
 
 	//Check for charge
-	if(!power_source.check_charge(charge_cost))
+	if((!power_source.check_charge(charge_cost)) && (!power_source.fully_charged()))
 		to_chat(user,"<span class='warning'>\The [src] does not have enough power left!</span>")
 		return FALSE
 
@@ -1397,10 +1394,13 @@
 	//No, you can't port to or from away missions. Stupidly complicated check.
 	var/turf/uT = get_turf(user)
 	var/turf/dT = get_turf(destination)
+	var/list/dat = list()
+	dat["z_level_detection"] = using_map.get_map_levels(uT.z)
+
 	if(!uT || !dT)
 		return FALSE
 
-	if( (uT.z != dT.z) && ( (uT.z > max_default_z_level() ) || (dT.z > max_default_z_level()) ) )
+	if( (uT.z != dT.z) && (!(dT.z in dat["z_level_detection"])) )
 		to_chat(user,"<span class='warning'>\The [src] can't teleport you that far!</span>")
 		return FALSE
 
@@ -1561,14 +1561,59 @@
 	desc = "A more limited translocator with a single beacon, useful for some things, like setting the mining department on fire accidentally. Legal for use in the pursuit of NanoTrasen interests, namely mining and exploration."
 	icon_state = "minitrans"
 	beacons_left = 1 //Just one
-	charge_cost = 2400 //One per
+	cell_type = /obj/item/weapon/cell/device
+	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5)
 
+/*
 /obj/item/device/perfect_tele/one_beacon/teleport_checks(mob/living/target,mob/living/user)
 	var/turf/T = get_turf(destination)
 	if(T && user.z != T.z)
 		to_chat(user,"<span class='warning'>\The [src] is too far away from the beacon. Try getting closer first!</span>")
 		return FALSE
 	return ..()
+*/
+
+/obj/item/device/perfect_tele/admin
+	name = "alien translocator"
+	desc = "This strange device allows one to teleport people and objects across large distances."
+
+	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
+	charge_cost = 400
+	beacons_left = 6
+	failure_chance = 0 //Percent
+
+/obj/item/device/perfect_tele/admin/teleport_checks(mob/living/target,mob/living/user)
+	//Uhhuh, need that power source
+	if(!power_source)
+		to_chat(user,"<span class='warning'>\The [src] has no power source!</span>")
+		return FALSE
+
+	//Check for charge
+	if((!power_source.check_charge(charge_cost)) && (!power_source.fully_charged()))
+		to_chat(user,"<span class='warning'>\The [src] does not have enough power left!</span>")
+		return FALSE
+
+	//Only mob/living need apply.
+	if(!istype(user) || !istype(target))
+		return FALSE
+
+	//No, you can't teleport buckled people.
+	if(target.buckled)
+		to_chat(user,"<span class='warning'>The target appears to be attached to something...</span>")
+		return FALSE
+
+	//No, you can't teleport if it's not ready yet.
+	if(!ready)
+		to_chat(user,"<span class='warning'>\The [src] is still recharging!</span>")
+		return FALSE
+
+	//No, you can't teleport if there's no destination.
+	if(!destination)
+		to_chat(user,"<span class='warning'>\The [src] doesn't have a current valid destination set!</span>")
+		return FALSE
+
+	//Seems okay to me!
+	return TRUE
 
 //InterroLouis: Ruda Lizden
 /obj/item/clothing/accessory/badge/holo/detective/ruda
@@ -1998,3 +2043,31 @@
 	desc = "A gold-trimmed MKII hypospray. The name 'Kenzie Houser' is engraved on the side."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "kenziehypo"
+
+//Semaun - Viktor Solothurn
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/viktor
+	name = "flask of expensive alcohol"
+	desc = "A standard vacuum-flask filled with good and expensive drink."
+
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/viktor/Initialize()
+	..()
+	reagents.add_reagent("pwine", 60)
+
+//RadiantAurora: Tiemli Kroto
+/obj/item/clothing/glasses/welding/tiemgogs
+   name = "custom-fitted welding goggles"
+   desc = "A pair of thick, custom-fitted goggles with LEDs above the lenses. Ruggedly engraved below the lenses is the name 'Tiemli Kroto'."
+
+   icon = 'icons/vore/custom_items_vr.dmi'
+   icon_state = "tiemgogs"
+
+   icon_override = 'icons/vore/custom_clothes_vr.dmi'
+   icon_state = "tiemgogs"
+
+/obj/item/clothing/glasses/welding/tiemgogs/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+   if(..())
+      if(H.ckey != "radiantaurora")
+         to_chat(H, "<span class='warning'>These don't look like they were made to fit you...</span>")
+         return 0
+      else
+         return 1

@@ -43,7 +43,7 @@ the artifact triggers the rage.
 /datum/modifier/berserk
 	name = "berserk"
 	desc = "You are filled with an overwhelming rage."
-	client_color = "#FF0000" // Make everything red!
+	client_color = "#FF5555" // Make everything red!
 	mob_overlay_state = "berserk"
 
 	on_created_text = "<span class='critical'>You feel an intense and overwhelming rage overtake you as you go berserk!</span>"
@@ -56,7 +56,8 @@ the artifact triggers the rage.
 	outgoing_melee_damage_percent = 1.5		// 50% more damage from melee.
 	max_health_percent = 1.5				// More health as a buffer, however the holder might fall into crit after this expires if they're mortally wounded.
 	disable_duration_percent = 0.25			// Disables only last 25% as long.
-	icon_scale_percent = 1.2				// Look scarier.
+	icon_scale_x_percent = 1.2				// Look scarier.
+	icon_scale_y_percent = 1.2
 	pain_immunity = TRUE					// Avoid falling over from shock (at least until it expires).
 
 	// The less good stuff.
@@ -268,3 +269,53 @@ the artifact triggers the rage.
 	if(L.get_poison_protection() >= 1)
 		return FALSE
 	return TRUE
+
+/datum/modifier/poisoned/paralysis
+	desc = "You have poison inside of you. It will cause harm over a long span of time if not cured, and may cause temporary paralysis."
+	on_created_text = "<span class='warning'>You feel incredibly weak...</span>"
+	damage_per_tick = 0.75
+
+/datum/modifier/poisoned/paralysis/tick()
+	..()
+	if(prob(5))
+		holder.Paralyse(3)
+
+/datum/modifier/poisoned/paralysis/on_applied()
+	..()
+	holder.Paralyse(4)
+
+// Pulse modifier.
+/datum/modifier/false_pulse
+	name = "false pulse"
+	desc = "Your blood flows, despite all other factors."
+
+	on_created_text = "<span class='notice'>You feel alive.</span>"
+	on_expired_text = "<span class='notice'>You feel.. different.</span>"
+	stacks = MODIFIER_STACK_EXTEND
+
+	pulse_set_level = PULSE_NORM
+
+/datum/modifier/slow_pulse
+	name = "slow pulse"
+	desc = "Your blood flows slower."
+
+	on_created_text = "<span class='notice'>You feel sluggish.</span>"
+	on_expired_text = "<span class='notice'>You feel energized.</span>"
+	stacks = MODIFIER_STACK_EXTEND
+
+	bleeding_rate_percent = 0.8
+
+	pulse_set_level = PULSE_SLOW
+
+// Temperature Normalizer.
+/datum/modifier/homeothermic
+	name = "temperature resistance"
+	desc = "Your body normalizes to room temperature."
+
+	on_created_text = "<span class='notice'>You feel comfortable.</span>"
+	on_expired_text = "<span class='notice'>You feel.. still probably comfortable.</span>"
+	stacks = MODIFIER_STACK_EXTEND
+
+/datum/modifier/homeothermic/tick()
+	..()
+	holder.bodytemperature = round((holder.bodytemperature + T20C) / 2)

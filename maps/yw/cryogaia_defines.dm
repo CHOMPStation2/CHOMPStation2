@@ -22,21 +22,17 @@
 #define CRYOGAIA_TURF_CREATE_UN(x)	x/cryogaia/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP
 
 //Normal YW map defs
-// for some god damn reason, the defines aren't registring properly. force setting z's further down because this is causing me so much grief. -RadiantFlash
-#define Z_LEVEL_CRYOGAIA_LOWER		1
-#define Z_LEVEL_CRYOGAIA_MAIN		2
-#define Z_LEVEL_CRYOGAIA_MINE		3
-#define Z_LEVEL_CENTCOM				4
+// for some god damn reason, the defines aren't registring properly. This is causing me an unbelievable amount of grief. -RadiantFlash
+#define Z_LEVEL_CRYOGAIA_MINE		1
+#define Z_LEVEL_CRYOGAIA_LOWER		2
+#define Z_LEVEL_CRYOGAIA_MAIN		3
+#define Z_LEVEL_CRYOGAIA_CENTCOM	4
 #define Z_LEVEL_ALIENSHIP			5
 #define Z_LEVEL_BEACH				6
 #define Z_LEVEL_BEACH_CAVE			7
 #define Z_LEVEL_AEROSTAT			8
 #define Z_LEVEL_AEROSTAT_SURFACE	9
 #define Z_LEVEL_DEBRISFIELD			10
-
-
-#define Z_LEVEL_BOTTOM_LEVEL			Z_LEVEL_CRYOGAIA_LOWER
-#define Z_LEVEL_TOP_LEVEL				Z_LEVEL_CRYOGAIA_MAIN
 
 /datum/map/cryogaia
 	name = "Cryogaia"
@@ -99,26 +95,26 @@
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo
 
-	meteor_strike_areas = list(/area/tether/surfacebase/outside/outside3)
+	meteor_strike_areas = list(/area/borealis1/outdoors/grounds,
+		/area/borealis1/outdoors/exterior)
 
 	unit_test_exempt_areas = list(
-		/area/tether/surfacebase/outside/outside1,
-		/area/vacant/vacant_site,
-		/area/vacant/vacant_site/east,
 		/area/crew_quarters/sleep/Dorm_1/holo,
 		/area/crew_quarters/sleep/Dorm_3/holo,
 		/area/crew_quarters/sleep/Dorm_5/holo,
 		/area/crew_quarters/sleep/Dorm_7/holo)
 	unit_test_exempt_from_atmos = list( //I honestly don't know what the others of these effect, I likely won't touch anything further till I figure out.
-		//area/engineering/atmos/intake, // Outside,-Not in use anymore, disabled. -Radiantflash
-		/area/rnd/external, //  Outside,
-		/area/tether/surfacebase/mining_main/external, // Outside,
-		/area/tether/surfacebase/mining_main/airlock, //  Its an airlock,
-		/area/tether/surfacebase/emergency_storage/rnd,
-		/area/tether/surfacebase/emergency_storage/atrium)
+										//disabled entire list as there really isn't a reason to have areas exempt from atmos.
+		//area/engineering/atmos/intake,
+//		/area/rnd/external, //  Outside,
+//		/area/tether/surfacebase/mining_main/external, // Outside,
+//		/area/tether/surfacebase/mining_main/airlock, //  Its an airlock,
+//		/area/tether/surfacebase/emergency_storage/rnd,
+//		/area/tether/surfacebase/emergency_storage/atrium,
+)
 
 	lateload_z_levels = list(
-	//	list("Tether - Misc","Tether - Ships","Tether - Underdark"), //Stock Tether lateload maps. Disabled due to tether being phased out.
+		list("Tether - Misc","Tether - Ships","Tether - Underdark"), //Stock Tether lateload maps. Disabled due to tether being phased out.
 		list("Alien Ship - Z1 Ship"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface")
@@ -128,7 +124,7 @@
 
 /datum/map/cryogaia/perform_map_generation()
 
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
+//	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, 64, 64)         // Create the mining ore distribution map.
 
 	return 1
@@ -137,12 +133,14 @@
 /datum/map/cryogaia/get_map_levels(var/srcz, var/long_range = TRUE)
 	if (long_range && (srcz in map_levels))
 		return map_levels
-	else if (srcz == Z_LEVEL_CENTCOM)
+	else if (srcz == Z_LEVEL_CRYOGAIA_CENTCOM)
 		return list() // Nothing on transit!
-	else if (srcz >= Z_LEVEL_BOTTOM_LEVEL && srcz <= Z_LEVEL_TOP_LEVEL)
+	else if (srcz >= Z_LEVEL_CRYOGAIA_MINE && srcz <= Z_LEVEL_CRYOGAIA_MAIN)
 		return list(
 			Z_LEVEL_CRYOGAIA_MAIN,
-			Z_LEVEL_CRYOGAIA_LOWER)
+			Z_LEVEL_CRYOGAIA_LOWER,
+			Z_LEVEL_CRYOGAIA_MINE,
+			)
 	else
 		return ..()
 
@@ -150,30 +148,29 @@
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
 
 // We have a bunch of stuff common to the station z levels
-/datum/map_z_level/cryogaia
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES
-/*	holomap_legend_x = 220
-	holomap_legend_y = 160 */
 
-
+/datum/map_z_level/cryogaia/mining
+	z = Z_LEVEL_CRYOGAIA_MINE
+	name = "Subterranian depths"
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
 
 /datum/map_z_level/cryogaia/lower
 	name = "Subfloor"
+	z = Z_LEVEL_CRYOGAIA_LOWER
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
+
 /datum/map_z_level/cryogaia/main
+	z = Z_LEVEL_CRYOGAIA_MAIN
 	name = "Surface level"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/open
 /*	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0 */
 
-/datum/map_z_level/cryogaia/mining
-	name = "Subterranian depths"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
-	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
-
 /datum/map_z_level/cryogaia/centcom
+	z = Z_LEVEL_CRYOGAIA_CENTCOM
 	name = "Central Command"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 /*

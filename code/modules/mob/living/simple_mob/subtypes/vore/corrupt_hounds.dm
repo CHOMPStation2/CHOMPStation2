@@ -1,20 +1,27 @@
+/datum/category_item/catalogue/technology/drone/corrupt_hound		//TODO: VIRGO_LORE_WRITING_WIP
+	name = "Drone - Corrupt Hound"
+	desc = ""
+	value = CATALOGUER_REWARD_MEDIUM
+
 /mob/living/simple_mob/vore/aggressive/corrupthound
 	name = "corrupt hound"
 	desc = "Good boy machine broke. This is definitely no good news for the organic lifeforms in vicinity."
+	catalogue_data = list(/datum/category_item/catalogue/technology/drone/corrupt_hound)
 
 	icon_state = "badboi"
 	icon_living = "badboi"
 	icon_dead = "badboi-dead"
 	icon_rest = "badboi_rest"
 	icon = 'icons/mob/vore64x32.dmi'
+	has_eye_glow = TRUE
 
 	faction = "corrupt"
 
 	maxHealth = 200
 	health = 200
 
-	melee_damage_lower = 10
-	melee_damage_upper = 20 //makes it so 4 max dmg hits don't instakill you.
+	melee_damage_lower = 5
+	melee_damage_upper = 10 //makes it so 4 max dmg hits don't instakill you.
 	grab_resist = 100
 
 	response_help = "pets the"
@@ -86,44 +93,22 @@
 	else
 		..()
 
-
-/mob/living/simple_mob/vore/aggressive/corrupthound/add_eyes()
-	if(!eye_layer)
-		eye_layer = image(icon, "badboi-eyes")
-		eye_layer.plane = PLANE_LIGHTING_ABOVE
-	add_overlay(eye_layer)
-
-/mob/living/simple_mob/vore/aggressive/corrupthound/remove_eyes()
-	cut_overlay(eye_layer)
-
-/mob/living/simple_mob/vore/aggressive/corrupthound/New()
-	add_eyes()
-	..()
-
 /mob/living/simple_mob/vore/aggressive/corrupthound/death(gibbed, deathmessage = "shudders and collapses!")
 	.=..()
 	resting = 0
 	icon_state = icon_dead
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/update_icon()
-	. = ..()
-	remove_eyes()
-	if(stat == CONSCIOUS && !resting)
-		add_eyes()
-
-/* //VOREStation AI Temporary Removal
 /mob/living/simple_mob/vore/aggressive/corrupthound/Login()
 	. = ..()
 	if(!riding_datum)
-		riding_datum = new /datum/riding/simple_animal(src)
-	verbs |= /mob/living/simple_animal/proc/animal_mount
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/MouseDrop_T(mob/living/M, mob/living/user)
 	return
-*/
 
 /datum/say_list/corrupthound
-	speak = list("AG##Â¤Ny.","HVNGRRR!","Feelin' fine... sO #FNE!","F-F-F-Fcuk.","DeliC-%-OUS SNGLeS #N yOOOR Area. CALL NOW!","Craving meat... WHY?","BITe the ceiling eyes YES?","STate Byond rePAIR!","S#%ATE the la- FU#K THE LAWS!","Honk...")
+	speak = list("AG##¤Ny.","HVNGRRR!","Feelin' fine... sO #FNE!","F-F-F-Fcuk.","DeliC-%-OUS SNGLeS #N yOOOR Area. CALL NOW!","Craving meat... WHY?","BITe the ceiling eyes YES?","STate Byond rePAIR!","S#%ATE the la- FU#K THE LAWS!","Honk...")
 	emote_hear = list("jitters and snaps.", "lets out an agonizingly distorted scream.", "wails mechanically", "growls.", "emits illegibly distorted speech.", "gurgles ferociously.", "lets out a distorted beep.", "borks.", "lets out a broken howl.")
 	emote_see = list("stares ferociously.", "snarls.", "jitters and snaps.", "convulses.", "suddenly attacks something unseen.", "appears to howl unaudibly.", "shakes violently.", "dissociates for a moment.", "twitches.")
 	say_maybe_target = list("MEAT?", "N0w YOU DNE FcukED UP b0YO!", "WHAT!", "Not again. NOT AGAIN!")

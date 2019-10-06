@@ -22,6 +22,7 @@
 	var/drain_finalized = 0				// Determines if the succubus drain will be KO'd/absorbed. Can be toggled on at any time.
 	var/fuzzy = 1						// Preference toggle for sharp/fuzzy icon.
 	var/tail_alt = 0					// Tail layer toggle.
+	var/permit_healbelly = TRUE
 	var/can_be_drop_prey = 0
 	var/can_be_drop_pred = 1			// Mobs are pred by default.
 
@@ -199,6 +200,7 @@
 	P.digest_leave_remains = src.digest_leave_remains
 	P.allowmobvore = src.allowmobvore
 	P.vore_taste = src.vore_taste
+	P.permit_healbelly = src.permit_healbelly
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
 
@@ -225,6 +227,7 @@
 	digest_leave_remains = P.digest_leave_remains
 	allowmobvore = P.allowmobvore
 	vore_taste = P.vore_taste
+	permit_healbelly = P.permit_healbelly
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
 
@@ -334,6 +337,7 @@
 			return
 		//Actual escaping
 		absorbed = 0	//Make sure we're not absorbed
+		muffled = 0		//Removes Muffling
 		forceMove(get_turf(src)) //Just move me up to the turf, let's not cascade through bellies, there's been a problem, let's just leave.
 		for(var/mob/living/simple_mob/SA in range(10))
 			SA.prey_excludes[src] = world.time
@@ -435,7 +439,8 @@
 
 	// Actually shove prey into the belly.
 	belly.nom_mob(prey, user)
-	user.update_icons()
+	if(!ishuman(user))
+		user.update_icons()
 
 	// Flavor handling
 	if(belly.can_taste && prey.get_taste_message(FALSE))
@@ -600,6 +605,8 @@
 		I.forceMove(vore_selected)
 		updateVRPanel()
 
+		log_admin("VORE: [src] used Eat Trash to swallow [I].")
+
 		if(istype(I,/obj/item/device/flashlight/flare) || istype(I,/obj/item/weapon/flame/match) || istype(I,/obj/item/weapon/storage/box/matches))
 			to_chat(src, "<span class='notice'>You can taste the flavor of spicy cardboard.</span>")
 		else if(istype(I,/obj/item/device/flashlight/glowstick))
@@ -641,6 +648,10 @@
 				to_chat(src, "<span class='notice'>You can taste the flavor of garbage and leftovers. Delicious?</span>")
 			else
 				to_chat(src, "<span class='notice'>You can taste the flavor of gluttonous waste of food.</span>")
+		//TFF 10/7/19 - Add custom flavour for collars for trash can trait.
+		else if (istype(I,/obj/item/clothing/accessory/collar))
+			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
+			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
 		return
@@ -667,9 +678,15 @@
 	if(!user)
 		CRASH("display_voreprefs() was called without an associated user.")
 	var/dispvoreprefs = "<b>[src]'s vore preferences</b><br><br><br>"
+	if(client && client.prefs)
+		if("CHAT_OOC" in client.prefs.preferences_disabled)
+			dispvoreprefs += "<font color='red'><b>OOC DISABLED</b></font><br>"
+		if("CHAT_LOOC" in client.prefs.preferences_disabled)
+			dispvoreprefs += "<font color='red'><b>LOOC DISABLED</b></font><br>"
 	dispvoreprefs += "<b>Digestable:</b> [digestable ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Mob Vore:</b> [allowmobvore ? "Enabled" : "Disabled"]<br>"
+	dispvoreprefs += "<b>Healbelly permission:</b> [permit_healbelly ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Drop-nom prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Drop-nom pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name];size=200x300;can_resize=0;can_minimize=0")

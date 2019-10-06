@@ -74,8 +74,8 @@
 //In our case, it initializes the ores and random submaps in the beach's cave, then deletes itself
 /obj/away_mission_init/beachcave/Initialize()
 	// Cave submaps are first.
-	seed_submaps(list(z), 50, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(z), 50, /area/tether_away/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
+	seed_submaps(list(z), 50, /area/cryogaia_away/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(z), 50, /area/cryogaia_away/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 
 	// Now for the tunnels.
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, z, world.maxx, world.maxy)
@@ -87,7 +87,7 @@
 // Two mob spawners that are placed on the map that spawn some mobs!
 // They keep track of their mob, and when it's dead, spawn another (only if nobody is looking)
 // Note that if your map has step teleports, mobs may wander through them accidentally and not know how to get back
-/obj/tether_away_spawner/beach_outside
+/obj/cryogaia_away_spawner/beach_outside
 	name = "Beach Outside Spawner" //Just a name
 	faction = "beach_out" //Sets all the mobs to this faction so they don't infight
 	atmos_comp = TRUE //Sets up their atmos tolerances to work in this setting, even if they don't normally (20% up/down tolerance for each gas, and heat)
@@ -98,7 +98,7 @@
 		/mob/living/simple_mob/animal/passive/snake
 	)
 
-/obj/tether_away_spawner/beach_outside_friendly
+/obj/cryogaia_away_spawner/beach_outside_friendly
 	name = "Fennec Spawner"
 	faction = "fennec"
 	atmos_comp = TRUE
@@ -109,7 +109,7 @@
 		/mob/living/simple_mob/vore/fennec
 	)
 
-/obj/tether_away_spawner/beach_cave
+/obj/cryogaia_away_spawner/beach_cave
 	name = "Beach Cave Spawner"
 	faction = "beach_cave"
 	atmos_comp = TRUE
@@ -157,7 +157,7 @@
 	name = "\improper Excursion Shuttle - Beach"
 	dynamic_lighting = 0
 
-/area/tether_away/beach
+/area/cryogaia_away/beach
 	name = "\improper Away Mission - Virgo 4 Beach"
 	icon_state = "away"
 	base_turf = /turf/simulated/floor/beach/sand //This is what the ground turns into if destroyed/bombed/etc
@@ -165,43 +165,43 @@
 	//So we just make the whole beach fullbright all the time
 	dynamic_lighting = 0
 
-/area/tether_away/beach/powershed
+/area/cryogaia_away/beach/powershed
 	name = "\improper Away Mission - Virgo 4 Coast PS"
 	icon_state = "blue2"
 	base_turf = /turf/simulated/floor/beach/sand
 
-/area/tether_away/beach/coast
+/area/cryogaia_away/beach/coast
 	name = "\improper Away Mission - Virgo 4 Coast"
 	icon_state = "blue2"
 	base_turf = /turf/simulated/floor/beach/coastline
 
-/area/tether_away/beach/water
+/area/cryogaia_away/beach/water
 	name = "\improper Away Mission - Virgo 4 Water"
 	icon_state = "bluenew"
 	base_turf = /turf/simulated/floor/beach/coastwater
 
-/area/tether_away/beach/jungle
+/area/cryogaia_away/beach/jungle
 	name = "\improper Away Mission - Virgo 4 Desert"
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/beach/sand/desert
 
 //Some areas for the cave, which are referenced by our init object to seed submaps and ores
-/area/tether_away/cave
+/area/cryogaia_away/cave
 	flags = RAD_SHIELDED
 	ambience = list('sound/ambience/ambimine.ogg', 'sound/ambience/song_game.ogg')
 
-/area/tether_away/cave/explored/normal
+/area/cryogaia_away/cave/explored/normal
 	name = "\improper Away Mission - Virgo 4 Cave (E)"
 	icon_state = "explored"
 
-/area/tether_away/cave/unexplored/normal
+/area/cryogaia_away/cave/unexplored/normal
 	name = "\improper Away Mission - Virgo 4 Cave (UE)"
 	icon_state = "unexplored"
 
-/area/tether_away/cave/explored/deep
+/area/cryogaia_away/cave/explored/deep
 	name = "\improper Away Mission - Virgo 4 Cave Deep (E)"
 	icon_state = "explored_deep"
 
-/area/tether_away/cave/unexplored/deep
+/area/cryogaia_away/cave/unexplored/deep
 	name = "\improper Away Mission - Virgo 4 Cave Deep (UE)"
 	icon_state = "unexplored_deep"
