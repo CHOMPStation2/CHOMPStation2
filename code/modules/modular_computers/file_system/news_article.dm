@@ -22,3 +22,19 @@
 	filename = "SPACE Magazine vol. 1"
 	server_file_path = 'news_articles/space_magazine_1.html'
 */
+
+
+//YAWN ADDS - All from discord
+/datum/computer_file/data/news_article/archives/vol_gwa_one
+	filename = "Galaxy Wide Archives"
+	server_file_path = 'news_articles/galaxy_wide_archived_1.html'
+	archived = 1
+
+/datum/computer_file/data/news_article/archives/vol_tss_one
+	filename = "The Sleepy Sergal Archives vol. 1"
+	server_file_path = 'news_articles/the_sleepy_sergal_archived_1.html'
+	archived = 1
+
+/datum/computer_file/data/news_article/tss/vol_one
+	filename = "The Sleepy Sergal Archived vol. 1"
+	server_file_path = 'news_articles/the_sleepy_sergal_1.html'
