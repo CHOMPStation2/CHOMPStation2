@@ -320,6 +320,7 @@ var/global/list/latejoin_tram   = list()
 		new /obj/item/weapon/gun/energy/frontier/locked/holdout(src)
 
 // Underdark mob spawners
+/*
 /obj/cryogaia_away_spawner/underdark_normal
 	name = "Underdark Normal Spawner"
 	faction = "underdark"
@@ -356,7 +357,7 @@ var/global/list/latejoin_tram   = list()
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/vore/aggressive/dragon = 1
 	)
-
+*/
 // Used at centcomm for the elevator
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram

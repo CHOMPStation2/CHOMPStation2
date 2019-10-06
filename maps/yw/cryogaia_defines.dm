@@ -27,12 +27,12 @@
 #define Z_LEVEL_CRYOGAIA_LOWER		2
 #define Z_LEVEL_CRYOGAIA_MAIN		3
 #define Z_LEVEL_CRYOGAIA_CENTCOM	4
-#define Z_LEVEL_ALIENSHIP			5
-#define Z_LEVEL_BEACH				6
-#define Z_LEVEL_BEACH_CAVE			7
-#define Z_LEVEL_AEROSTAT			8
-#define Z_LEVEL_AEROSTAT_SURFACE	9
-#define Z_LEVEL_DEBRISFIELD			10
+//#define Z_LEVEL_ALIENSHIP			5
+//#define Z_LEVEL_BEACH				6
+//#define Z_LEVEL_BEACH_CAVE			7
+//#define Z_LEVEL_AEROSTAT			8
+//#define Z_LEVEL_AEROSTAT_SURFACE	9
+//#define Z_LEVEL_DEBRISFIELD			10
 
 /datum/map/cryogaia
 	name = "Cryogaia"
@@ -115,9 +115,9 @@
 
 	lateload_z_levels = list(
 		list("Tether - Misc","Tether - Ships","Tether - Underdark"), //Stock Tether lateload maps. Disabled due to tether being phased out.
-		list("Alien Ship - Z1 Ship"),
-		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
-		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface")
+	//	list("Alien Ship - Z1 Ship"),
+	//	list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
+	//	list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface")
 		)
 
 	lateload_single_pick = null //Nothing right now.

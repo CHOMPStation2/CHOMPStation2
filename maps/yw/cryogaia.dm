@@ -16,7 +16,7 @@
 	#include "cryogaia-03-main.dmm" //main level
 	#include "cryogaia-04-centcomm.dmm" //centcom
 
-	#include "submaps/_tether_submaps.dm"
+//	#include "submaps/_tether_submaps.dm"
 
 	#define USING_MAP_DATUM /datum/map/cryogaia
 
