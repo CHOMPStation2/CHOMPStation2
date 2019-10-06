@@ -17,6 +17,6 @@
 	#include "cryogaia-02-main_level.dmm"
 	#include "cryogaia-03-mining.dmm"
 
-	#include "submaps/_tether_submaps.dm"
+//	#include "submaps/_tether_submaps.dm"
 
 	#define USING_MAP_DATUM /datum/map/cryogaia
