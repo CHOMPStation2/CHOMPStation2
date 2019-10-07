@@ -14,13 +14,60 @@
 	name = "\improper Unknown Area AU" //Nobody will know what this means if they see it, anyway.
 	requires_power = 1
 	dynamic_lighting = 1
+	power_equip = FALSE
+	power_environ = FALSE
+	power_light = FALSE
 /area/submap/admin_upload/pow
 	name = "\improper Unknown Area AU+P"
 	requires_power = 0
 /area/submap/admin_upload/lit
 	name = "\improper Unknown Area AU+L"
+	requires_power = 1
 	dynamic_lighting = 0
+	power_equip = FALSE
+	power_environ = FALSE
+	power_light = FALSE
 /area/submap/admin_upload/powlit
 	name = "\improper Unknown Area AU+PL"
 	requires_power = 0
 	dynamic_lighting = 0
+
+/area/submap/AU2
+	name = "\improper Unknown Area A"
+	requires_power = 1
+	dynamic_lighting = 1
+	power_equip = FALSE
+	power_environ = FALSE
+	power_light = FALSE
+
+/area/submap/AU3
+	name = "\improper Unknown Area B"
+	requires_power = 1
+	dynamic_lighting = 1
+	power_equip = FALSE
+	power_environ = FALSE
+	power_light = FALSE
+
+/area/submap/AU4
+	name = "\improper Unknown Area C"
+	requires_power = 1
+	dynamic_lighting = 1
+	power_equip = FALSE
+	power_environ = FALSE
+	power_light = FALSE
+
+/area/submap/AU5
+	name = "\improper Unknown Area D"
+	requires_power = 1
+	dynamic_lighting = 1
+	power_equip = FALSE
+	power_environ = FALSE
+	power_light = FALSE
+
+/area/submap/AU6
+	name = "\improper Unknown Area E"
+	requires_power = 1
+	dynamic_lighting = 1
+	power_equip = FALSE
+	power_environ = FALSE
+	power_light = FALSE

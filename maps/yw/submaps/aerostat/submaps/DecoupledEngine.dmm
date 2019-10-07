@@ -521,6 +521,10 @@
 /obj/tether_away_spawner/aerostat_surface,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DecoupledEngine)
+"nA" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg,
+/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/area/submap/virgo2/DecoupledEngine)
 
 (1,1,1) = {"
 aa
@@ -981,7 +985,7 @@ ab
 ab
 ag
 ad
-ad
+nA
 ad
 ad
 aj

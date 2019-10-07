@@ -94,7 +94,6 @@
 		s.set_up(5, 1, src)
 		s.start()
 
-
 // Tram air scrubbers for keeping arrivals clean - they work even with no area power
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram
 	name = "\improper Tram Air Scrubber"
@@ -130,8 +129,9 @@
 // Tram departure cryo doors that turn into ordinary airlock doors at round end
 /obj/machinery/cryopod/robot/door/tram
 	name = "\improper Tram Station"
-	icon = 'icons/obj/doors/Doorext.dmi'
+	icon = 'icons/obj/doors/Doorextglass.dmi'
 	icon_state = "door_closed"
+	can_atmos_pass = ATMOS_PASS_NO
 	base_icon_state = "door_closed"
 	occupied_icon_state = "door_locked"
 	desc = "The tram station you might've came in from.  You could leave the base easily using this."
@@ -149,7 +149,7 @@
 		time_till_despawn = 0
 		..()
 		var/turf/T = get_turf(src)
-		var/obj/machinery/door/airlock/external/door = new(T)
+		var/obj/machinery/door/airlock/glass_external/door = new(T)
 		door.req_access = null
 		door.req_one_access = null
 		qdel(src)
@@ -164,7 +164,8 @@
 
 	var/choice = alert("Do you want to depart via the tram? Your character will leave the round.","Departure","Yes","No")
 	if(user && Adjacent(user) && choice == "Yes")
-		user.ghostize()
+		var/mob/observer/dead/newghost = user.ghostize()
+		newghost.timeofdeath = world.time
 		despawn_occupant(user)
 
 // Tram arrival point landmarks and datum

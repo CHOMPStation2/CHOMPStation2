@@ -17979,7 +17979,6 @@
 /obj/effect/floor_decal/corner_oldtile/purple/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee,
 /turf/simulated/floor/tiled/white,
 /area/rnd/rdoffice)
 "aKG" = (
@@ -26589,12 +26588,12 @@
 /area/shuttle/excursion/cryogaia)
 "bbv" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/smes,
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
+/obj/machinery/power/smes/buildable/power_shuttle,
 /turf/simulated/floor/reinforced,
 /area/shuttle/excursion/cryogaia)
 "bbw" = (
@@ -46423,7 +46422,7 @@
 /turf/snow,
 /area/borealis1/outdoors/exterior/lake)
 "bPq" = (
-/mob/living/simple_mob/hostile/shantak,
+/mob/living/simple_mob/animal/sif/shantak,
 /turf/snow,
 /area/borealis1/outdoors/exterior)
 "bPr" = (
@@ -46895,7 +46894,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/chapel/monastery/brew)
 "bQx" = (
-/obj/structure/reagent_dispensers/winevat,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -46924,7 +46922,6 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/recreation)
 "bQC" = (
-/obj/structure/reagent_dispensers/winevat,
 /obj/structure/window/reinforced{
 	dir = 2;
 	health = 1e+006
@@ -46933,7 +46930,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/chapel/monastery/brew)
 "bQD" = (
-/obj/structure/reagent_dispensers/winevat,
 /obj/structure/window/reinforced{
 	dir = 4
 	},

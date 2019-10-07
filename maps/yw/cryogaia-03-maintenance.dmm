@@ -8729,11 +8729,6 @@
 /obj/item/weapon/oldtwohanded/spear,
 /turf/simulated/floor,
 /area/chapel/chapel_morgue)
-"atE" = (
-/obj/effect/decal/cleanable/blood/drip,
-/obj/item/weapon/chainsaw,
-/turf/simulated/floor/tiled/white,
-/area/maintenance/maintroom1)
 "atF" = (
 /obj/structure/barricade,
 /obj/effect/decal/cleanable/blood/drip,
@@ -92796,7 +92791,7 @@ adJ
 bmM
 bmN
 att
-atE
+aCO
 atG
 aEY
 aFb

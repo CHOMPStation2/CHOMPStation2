@@ -133,8 +133,7 @@
 	icon_state = "fwindow"
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/houseboat)
@@ -332,8 +331,8 @@
 	icon = 'icons/obj/stairs.dmi';
 	invisibility = 0;
 	name = "stairs";
-	teleport_x = 79;
-	teleport_y = 86;
+	teleport_x = 99;
+	teleport_y = 104;
 	teleport_z = 12
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -810,8 +809,8 @@
 	invisibility = 0;
 	name = "stairs";
 	pixel_y = -32;
-	teleport_x = 108;
-	teleport_y = 82;
+	teleport_x = 128;
+	teleport_y = 100;
 	teleport_z = 12
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -829,8 +828,8 @@
 	invisibility = 0;
 	name = "stairs";
 	pixel_y = -32;
-	teleport_x = 109;
-	teleport_y = 82;
+	teleport_x = 129;
+	teleport_y = 100;
 	teleport_z = 12
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -962,8 +961,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -999,8 +997,8 @@
 	icon = 'icons/obj/stairs.dmi';
 	invisibility = 0;
 	name = "stairs";
-	teleport_x = 106;
-	teleport_y = 104;
+	teleport_x = 126;
+	teleport_y = 122;
 	teleport_z = 12
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1292,8 +1290,8 @@
 	invisibility = 0;
 	name = "stairs";
 	pixel_y = 0;
-	teleport_x = 82;
-	teleport_y = 91;
+	teleport_x = 102;
+	teleport_y = 109;
 	teleport_z = 12
 	},
 /turf/simulated/floor/tiled/steel,
@@ -1304,8 +1302,8 @@
 	invisibility = 0;
 	name = "stairs";
 	pixel_y = 0;
-	teleport_x = 81;
-	teleport_y = 91;
+	teleport_x = 101;
+	teleport_y = 109;
 	teleport_z = 12
 	},
 /turf/simulated/floor/tiled/steel,
@@ -1577,7 +1575,7 @@
 /area/houseboat)
 "ec" = (
 /obj/structure/table/woodentable,
-/obj/item/device/laptop,
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
 /turf/simulated/floor/wood,
 /area/houseboat)
 "ed" = (
@@ -1804,15 +1802,6 @@
 	},
 /turf/unsimulated/wall,
 /area/space)
-"eJ" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
-	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
-	},
-/turf/space/sandyscroll,
-/area/space)
 "eK" = (
 /obj/structure/catwalk,
 /obj/machinery/vending/tool,
@@ -1861,26 +1850,6 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/holofloor/desert,
 /area/houseboat/holodeck/desert)
-"eT" = (
-/obj/effect/step_trigger/teleporter/planetary_fall/virgo3b,
-/turf/space/sandyscroll,
-/area/space)
-"eU" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
-	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
-	},
-/turf/space/sandyscroll,
-/area/space)
-"eV" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/turf/unsimulated/wall,
-/area/space)
 "eW" = (
 /obj/structure/railing{
 	icon_state = "railing0";
@@ -2645,15 +2614,6 @@
 "hf" = (
 /turf/space/transit/east,
 /area/shuttle/large_escape_pod1/transit)
-"hg" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
-	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
-	},
-/turf/space/bluespace,
-/area/space)
 "hh" = (
 /obj/effect/floor_decal/transit/orange{
 	dir = 8
@@ -2689,19 +2649,6 @@
 "hk" = (
 /turf/simulated/sky/virgo3b/south,
 /area/shuttle/tether/transit)
-"hl" = (
-/obj/effect/step_trigger/teleporter/planetary_fall/virgo3b,
-/turf/space/bluespace,
-/area/space)
-"hm" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
-	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
-	},
-/turf/space/bluespace,
-/area/space)
 "hn" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -2780,15 +2727,6 @@
 	icon_state = "rock"
 	},
 /area/space)
-"hy" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
-	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
-	},
-/turf/space/transit/south,
-/area/space)
 "hz" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -2799,47 +2737,12 @@
 	},
 /turf/space/transit/south,
 /area/space)
-"hA" = (
-/obj/effect/step_trigger/teleporter/planetary_fall/virgo3b,
-/turf/space/transit/south,
-/area/space)
-"hB" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
-	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
-	},
-/turf/space/transit/south,
-/area/space)
-"hC" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
-	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
-	},
-/turf/space,
-/area/space)
 "hD" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
 	direction = 2;
 	name = "thrower_throwdown";
 	stopper = 0;
-	tiles = 0
-	},
-/turf/space,
-/area/space)
-"hE" = (
-/obj/effect/step_trigger/teleporter/planetary_fall/virgo3b,
-/turf/space,
-/area/space)
-"hF" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
-	name = "thrower_escapeshuttletop(right)";
 	tiles = 0
 	},
 /turf/space,
@@ -3527,12 +3430,12 @@ gU
 gU
 gU
 gU
-gU
-gU
-gU
-gU
-gU
-gU
+eO
+eO
+eO
+eO
+eO
+eO
 gU
 gU
 dQ
@@ -3551,12 +3454,12 @@ et
 et
 et
 et
-et
-et
-et
-et
-et
-et
+hj
+hj
+hj
+hj
+hj
+hj
 et
 et
 et
@@ -3577,12 +3480,12 @@ hp
 hp
 hp
 hp
-hp
-hp
-hp
-hp
-hp
-hp
+hz
+hz
+hz
+hz
+hz
+hz
 hp
 hp
 hp
@@ -3659,23 +3562,23 @@ gU
 gU
 gU
 gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+hd
+hd
+hd
+hd
+eO
+eO
 gU
 dQ
 aa
@@ -3685,22 +3588,22 @@ et
 et
 et
 et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
+hj
+hj
+hj
+hj
+hj
+hj
+hj
+hj
+hj
+hj
+hj
+fg
+fg
+fg
+fg
+hj
 et
 et
 gV
@@ -3711,23 +3614,23 @@ hp
 hp
 hp
 hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hq
+hq
+hq
+hq
+hz
+hz
 hp
 ht
 aa
@@ -3801,23 +3704,23 @@ gU
 gU
 gU
 gU
-gU
-gU
-gU
-gU
-gU
-gU
 eO
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
 eO
-eO
-eO
-eO
-eO
-eO
-eO
-eO
-gU
-gU
 gU
 dQ
 aa
@@ -3827,22 +3730,22 @@ et
 et
 et
 et
-et
-et
-et
-et
-et
-et
 hj
-hj
-hj
-hj
-hj
-hj
-hj
-hj
-hj
-et
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
 et
 et
 gV
@@ -3853,23 +3756,23 @@ hp
 hp
 hp
 hp
-hp
-hp
-hp
-hp
-hp
-hp
 hz
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
 hz
-hz
-hz
-hz
-hz
-hz
-hz
-hz
-hp
-hp
 hp
 ht
 aa
@@ -3942,14 +3845,8 @@ gU
 gU
 gU
 gU
-gU
 eO
 eO
-eO
-eO
-eO
-eO
-eJ
 hd
 hd
 hd
@@ -3957,9 +3854,15 @@ hd
 hd
 hd
 hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
 eO
-gU
-gU
 gU
 dQ
 aa
@@ -3968,14 +3871,8 @@ et
 et
 et
 et
-et
 hj
 hj
-hj
-hj
-hj
-hj
-hg
 fg
 fg
 fg
@@ -3983,8 +3880,14 @@ fg
 fg
 fg
 fg
-hj
-et
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
 et
 et
 gV
@@ -3994,14 +3897,8 @@ hp
 hp
 hp
 hp
-hp
 hz
 hz
-hz
-hz
-hz
-hz
-hy
 hq
 hq
 hq
@@ -4009,9 +3906,15 @@ hq
 hq
 hq
 hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
 hz
-hp
-hp
 hp
 ht
 aa
@@ -4084,8 +3987,10 @@ gU
 gU
 gU
 gU
-eU
-eJ
+eO
+hd
+hd
+hd
 hd
 hd
 hd
@@ -4101,8 +4006,6 @@ hd
 hd
 eO
 gU
-gU
-gU
 dQ
 aa
 gV
@@ -4110,23 +4013,23 @@ et
 et
 et
 et
-hg
-hg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
 hj
-et
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
 et
 et
 gV
@@ -4137,7 +4040,9 @@ hp
 hp
 hp
 hz
-hy
+hq
+hq
+hq
 hq
 hq
 hq
@@ -4152,8 +4057,6 @@ hq
 hq
 hq
 hz
-hp
-hp
 hp
 ht
 aa
@@ -4225,7 +4128,7 @@ dQ
 gU
 gU
 gU
-gU
+eO
 eO
 hd
 hd
@@ -4241,9 +4144,9 @@ hd
 hd
 hd
 hd
+hd
 eO
-gU
-gU
+eO
 gU
 dQ
 aa
@@ -4251,7 +4154,7 @@ gV
 et
 et
 et
-et
+hj
 hj
 fg
 fg
@@ -4267,8 +4170,8 @@ fg
 fg
 fg
 fg
+fg
 hj
-et
 et
 et
 gV
@@ -4277,7 +4180,7 @@ ht
 hp
 hp
 hp
-hp
+hz
 hz
 hq
 hq
@@ -4293,9 +4196,9 @@ hq
 hq
 hq
 hq
+hq
 hz
-hp
-hp
+hz
 hp
 ht
 aa
@@ -4367,8 +4270,10 @@ dQ
 gU
 gU
 gU
-gU
-eJ
+eO
+hd
+hd
+hd
 hd
 hd
 hd
@@ -4384,8 +4289,6 @@ hd
 hd
 eO
 eO
-gU
-gU
 gU
 dQ
 dJ
@@ -4393,8 +4296,10 @@ gV
 et
 et
 et
-et
-hg
+hj
+fg
+fg
+fg
 fg
 fg
 fg
@@ -4409,8 +4314,6 @@ fg
 fg
 fg
 hj
-hj
-et
 et
 et
 gV
@@ -4419,8 +4322,10 @@ ht
 hp
 hp
 hp
-hp
-hy
+hz
+hq
+hq
+hq
 hq
 hq
 hq
@@ -4436,8 +4341,6 @@ hq
 hq
 hz
 hz
-hp
-hp
 hp
 ht
 aa
@@ -4509,8 +4412,11 @@ dQ
 gU
 gU
 gU
-gU
-eJ
+eO
+hd
+hd
+hd
+hd
 hd
 hd
 hd
@@ -4524,9 +4430,6 @@ hd
 hd
 hd
 eO
-eO
-gU
-gU
 gU
 gU
 dQ
@@ -4535,8 +4438,11 @@ gV
 et
 et
 et
-et
-hg
+hj
+fg
+fg
+fg
+fg
 fg
 fg
 fg
@@ -4550,9 +4456,6 @@ fg
 fg
 fg
 hj
-hj
-et
-et
 et
 et
 gV
@@ -4561,8 +4464,11 @@ ht
 hp
 hp
 hp
-hp
-hy
+hz
+hq
+hq
+hq
+hq
 hq
 hq
 hq
@@ -4576,9 +4482,6 @@ hq
 hq
 hq
 hz
-hz
-hp
-hp
 hp
 hp
 ht
@@ -4651,8 +4554,11 @@ dQ
 gU
 gU
 gU
-gU
-eT
+eO
+hd
+hd
+hd
+hd
 hd
 hd
 hd
@@ -4666,9 +4572,6 @@ hd
 hd
 hd
 eO
-eO
-gU
-gU
 gU
 gU
 dQ
@@ -4677,8 +4580,11 @@ gV
 et
 et
 et
-et
-hl
+hj
+fg
+fg
+fg
+fg
 fg
 fg
 fg
@@ -4692,9 +4598,6 @@ fg
 fg
 fg
 hj
-hj
-et
-et
 et
 et
 gV
@@ -4703,8 +4606,11 @@ ht
 hp
 hp
 hp
-hp
-hA
+hz
+hq
+hq
+hq
+hq
 hq
 hq
 hq
@@ -4718,9 +4624,6 @@ hq
 hq
 hq
 hz
-hz
-hp
-hp
 hp
 hp
 ht
@@ -4793,8 +4696,10 @@ dQ
 gU
 gU
 gU
-gU
-eU
+eO
+hd
+hd
+hd
 hd
 hd
 hd
@@ -4811,16 +4716,16 @@ hd
 eO
 gU
 gU
-gU
-gU
 dQ
 aa
 gV
 et
 et
 et
-et
-hm
+hj
+fg
+fg
+fg
 fg
 fg
 fg
@@ -4837,16 +4742,16 @@ fg
 hj
 et
 et
-et
-et
 gV
 dJ
 ht
 hp
 hp
 hp
-hp
-hB
+hz
+hq
+hq
+hq
 hq
 hq
 hq
@@ -4861,8 +4766,6 @@ hq
 hq
 hq
 hz
-hp
-hp
 hp
 hp
 ht
@@ -4935,8 +4838,10 @@ dQ
 gU
 gU
 gU
-gU
-eU
+eO
+hd
+hd
+hd
 hd
 hd
 hd
@@ -4952,8 +4857,6 @@ hd
 hd
 eO
 eO
-gU
-gU
 gU
 dQ
 aa
@@ -4961,8 +4864,10 @@ gV
 et
 et
 et
-et
-hm
+hj
+fg
+fg
+fg
 fg
 fg
 fg
@@ -4977,8 +4882,6 @@ fg
 fg
 fg
 hj
-hj
-et
 et
 et
 gV
@@ -4987,8 +4890,10 @@ ht
 hp
 hp
 hp
-hp
-hB
+hz
+hq
+hq
+hq
 hq
 hq
 hq
@@ -5004,8 +4909,6 @@ hq
 hq
 hz
 hz
-hp
-hp
 hp
 ht
 aa
@@ -5077,8 +4980,9 @@ dQ
 gU
 gU
 gU
-gU
-eU
+eO
+eO
+hd
 hd
 hd
 hd
@@ -5094,8 +4998,7 @@ hd
 hd
 hd
 eO
-gU
-gU
+eO
 gU
 dQ
 aa
@@ -5103,8 +5006,9 @@ gV
 et
 et
 et
-et
-hm
+hj
+hj
+fg
 fg
 fg
 fg
@@ -5122,15 +5026,15 @@ fg
 hj
 et
 et
-et
 gV
 dJ
 ht
 hp
 hp
 hp
-hp
-hB
+hz
+hz
+hq
 hq
 hq
 hq
@@ -5146,8 +5050,7 @@ hq
 hq
 hq
 hz
-hp
-hp
+hz
 hp
 ht
 aa
@@ -5220,8 +5123,10 @@ gU
 gU
 gU
 gU
-eU
-eU
+eO
+hd
+hd
+hd
 hd
 hd
 hd
@@ -5237,8 +5142,6 @@ hd
 hd
 eO
 gU
-gU
-gU
 dQ
 aa
 gV
@@ -5246,23 +5149,23 @@ et
 et
 et
 et
-hg
-hm
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
 hj
-et
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
 et
 et
 gV
@@ -5272,8 +5175,10 @@ hp
 hp
 hp
 hp
-hB
-hB
+hz
+hq
+hq
+hq
 hq
 hq
 hq
@@ -5288,8 +5193,6 @@ hq
 hq
 hq
 hz
-hp
-hp
 hp
 ht
 aa
@@ -5362,14 +5265,8 @@ gU
 gU
 gU
 gU
-gU
 eO
 eO
-eO
-eO
-eO
-eO
-eU
 hd
 hd
 hd
@@ -5377,9 +5274,15 @@ hd
 hd
 hd
 hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
 eO
-gU
-gU
 gU
 dQ
 aa
@@ -5388,14 +5291,8 @@ et
 et
 et
 et
-et
 hj
 hj
-hj
-hj
-hj
-hj
-hm
 fg
 fg
 fg
@@ -5403,8 +5300,14 @@ fg
 fg
 fg
 fg
-hj
-et
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
 et
 et
 gV
@@ -5414,14 +5317,8 @@ hp
 hp
 hp
 hp
-hp
 hz
 hz
-hz
-hz
-hz
-hz
-hB
 hq
 hq
 hq
@@ -5429,9 +5326,15 @@ hq
 hq
 hq
 hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
 hz
-hp
-hp
 hp
 ht
 aa
@@ -5505,23 +5408,23 @@ gU
 gU
 gU
 gU
-gU
-gU
-gU
-gU
-gU
-gU
 eO
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
+hd
 eO
-eO
-eO
-eO
-eO
-eO
-eO
-eO
-gU
-gU
 gU
 dQ
 aa
@@ -5531,22 +5434,22 @@ et
 et
 et
 et
-et
-et
-et
-et
-et
-et
 hj
-hj
-hj
-hj
-hj
-hj
-hj
-hj
-hj
-et
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
+fg
 et
 et
 gV
@@ -5557,23 +5460,23 @@ hp
 hp
 hp
 hp
-hp
-hp
-hp
-hp
-hp
-hp
 hz
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
+hq
 hz
-hz
-hz
-hz
-hz
-hz
-hz
-hz
-hp
-hp
 hp
 ht
 aa
@@ -5647,23 +5550,23 @@ gU
 gU
 gU
 gU
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+hd
+hd
 gU
 gU
 gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
+hd
+hd
+eO
+eO
 gU
 dQ
 aa
@@ -5673,22 +5576,22 @@ et
 et
 et
 et
+hj
+hj
+hj
+hj
+hj
+hj
+hj
+hj
+fg
+fg
 et
 et
 et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
-et
+fg
+fg
+hj
 et
 et
 gV
@@ -5699,23 +5602,23 @@ hp
 hp
 hp
 hp
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hq
+hq
 hp
 hp
 hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
+hq
+hq
+hz
+hz
 hp
 ht
 aa
@@ -5796,15 +5699,15 @@ gU
 gU
 gU
 gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
-gU
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+eO
+eO
 gU
 gU
 dQ
@@ -5822,13 +5725,13 @@ et
 et
 et
 et
-et
-et
-et
-et
-et
-et
-et
+hj
+hj
+hj
+hj
+hj
+hj
+hj
 et
 et
 et
@@ -5848,15 +5751,15 @@ hp
 hp
 hp
 hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
-hp
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hz
+hz
 hp
 hp
 ht
@@ -6961,12 +6864,12 @@ hc
 hc
 hc
 hc
-hc
-hc
-hc
-hc
-hc
-hc
+ho
+ho
+ho
+ho
+ho
+ho
 hc
 hc
 gO
@@ -6987,12 +6890,12 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+hD
+hD
+hD
+hD
+hD
+hD
 aa
 aa
 hu
@@ -7093,23 +6996,23 @@ hc
 hc
 hc
 hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+gP
+gP
+gP
+gP
+ho
+ho
 hc
 gO
 dJ
@@ -7119,23 +7022,23 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+he
+he
+he
+he
+hD
+hD
 aa
 hu
 aa
@@ -7235,23 +7138,23 @@ hc
 hc
 hc
 hc
-hc
-hc
-hc
-hc
-hc
-hc
 ho
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
 ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-hc
-hc
 hc
 gO
 dJ
@@ -7261,23 +7164,23 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
 hD
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
 hD
-hD
-hD
-hD
-hD
-hD
-hD
-hD
-aa
-aa
 aa
 hu
 aa
@@ -7376,14 +7279,8 @@ hc
 hc
 hc
 hc
-hc
 ho
 ho
-ho
-ho
-ho
-ho
-hn
 gP
 gP
 gP
@@ -7391,9 +7288,15 @@ gP
 gP
 gP
 gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
 ho
-hc
-hc
 hc
 gO
 dJ
@@ -7402,14 +7305,8 @@ aa
 aa
 aa
 aa
-aa
 hD
 hD
-hD
-hD
-hD
-hD
-hC
 he
 he
 he
@@ -7417,9 +7314,15 @@ he
 he
 he
 he
+he
+he
+he
+he
+he
+he
+he
+he
 hD
-aa
-aa
 aa
 hu
 aa
@@ -7518,8 +7421,10 @@ hc
 hc
 hc
 hc
-hr
-hn
+ho
+gP
+gP
+gP
 gP
 gP
 gP
@@ -7535,8 +7440,6 @@ gP
 gP
 ho
 hc
-hc
-hc
 gO
 dJ
 hu
@@ -7545,7 +7448,9 @@ aa
 aa
 aa
 hD
-hC
+he
+he
+he
 he
 he
 he
@@ -7560,8 +7465,6 @@ he
 he
 he
 hD
-aa
-aa
 aa
 hu
 aa
@@ -7659,7 +7562,7 @@ gO
 hc
 hc
 hc
-hc
+ho
 ho
 gP
 gP
@@ -7675,9 +7578,9 @@ gP
 gP
 gP
 gP
+gP
 ho
-hc
-hc
+ho
 hc
 gO
 dJ
@@ -7685,7 +7588,7 @@ hu
 aa
 aa
 aa
-aa
+hD
 hD
 he
 he
@@ -7701,9 +7604,9 @@ he
 he
 he
 he
+he
 hD
-aa
-aa
+hD
 aa
 hu
 aa
@@ -7801,8 +7704,10 @@ gO
 hc
 hc
 hc
-hc
-hn
+ho
+gP
+gP
+gP
 gP
 gP
 gP
@@ -7818,8 +7723,6 @@ gP
 gP
 ho
 ho
-hc
-hc
 hc
 gO
 dJ
@@ -7827,8 +7730,10 @@ hu
 aa
 aa
 aa
-aa
-hC
+hD
+he
+he
+he
 he
 he
 he
@@ -7844,8 +7749,6 @@ he
 he
 hD
 hD
-aa
-aa
 aa
 hu
 aa
@@ -7943,8 +7846,11 @@ gO
 hc
 hc
 hc
-hc
-hn
+ho
+gP
+gP
+gP
+gP
 gP
 gP
 gP
@@ -7958,9 +7864,6 @@ gP
 gP
 gP
 ho
-ho
-hc
-hc
 hc
 hc
 gO
@@ -7969,8 +7872,11 @@ hu
 aa
 aa
 aa
-aa
-hC
+hD
+he
+he
+he
+he
 he
 he
 he
@@ -7984,9 +7890,6 @@ he
 he
 he
 hD
-hD
-aa
-aa
 aa
 aa
 hu
@@ -8085,8 +7988,11 @@ gO
 hc
 hc
 hc
-hc
-gO
+ho
+gP
+gP
+gP
+gP
 gP
 gP
 gP
@@ -8100,9 +8006,6 @@ gP
 gP
 gP
 ho
-ho
-hc
-hc
 hc
 hc
 gO
@@ -8111,8 +8014,11 @@ hu
 aa
 aa
 aa
-aa
-hE
+hD
+he
+he
+he
+he
 he
 he
 he
@@ -8126,9 +8032,6 @@ he
 he
 he
 hD
-hD
-aa
-aa
 aa
 aa
 hu
@@ -8227,8 +8130,10 @@ gO
 hc
 hc
 hc
-hc
-hr
+ho
+gP
+gP
+gP
 gP
 gP
 gP
@@ -8245,16 +8150,16 @@ gP
 ho
 hc
 hc
-hc
-hc
 gO
 dJ
 hu
 aa
 aa
 aa
-aa
-hF
+hD
+he
+he
+he
 he
 he
 he
@@ -8269,8 +8174,6 @@ he
 he
 he
 hD
-aa
-aa
 aa
 aa
 hu
@@ -8369,8 +8272,10 @@ gO
 hc
 hc
 hc
-hc
-hr
+ho
+gP
+gP
+gP
 gP
 gP
 gP
@@ -8386,8 +8291,6 @@ gP
 gP
 ho
 ho
-hc
-hc
 hc
 gO
 dJ
@@ -8395,8 +8298,10 @@ hu
 aa
 aa
 aa
-aa
-hF
+hD
+he
+he
+he
 he
 he
 he
@@ -8412,8 +8317,6 @@ he
 he
 hD
 hD
-aa
-aa
 aa
 hu
 aa
@@ -8511,8 +8414,9 @@ gO
 hc
 hc
 hc
-hc
-hr
+ho
+ho
+gP
 gP
 gP
 gP
@@ -8528,8 +8432,7 @@ gP
 gP
 gP
 ho
-hc
-hc
+ho
 hc
 gO
 dJ
@@ -8537,8 +8440,9 @@ hu
 aa
 aa
 aa
-aa
-hF
+hD
+hD
+he
 he
 he
 he
@@ -8554,8 +8458,7 @@ he
 he
 he
 hD
-aa
-aa
+hD
 aa
 hu
 aa
@@ -8654,8 +8557,10 @@ hc
 hc
 hc
 hc
-hr
-hr
+ho
+gP
+gP
+gP
 gP
 gP
 gP
@@ -8671,8 +8576,6 @@ gP
 gP
 ho
 hc
-hc
-hc
 gO
 dJ
 hu
@@ -8681,7 +8584,9 @@ aa
 aa
 aa
 hD
-hF
+he
+he
+he
 he
 he
 he
@@ -8696,8 +8601,6 @@ he
 he
 he
 hD
-aa
-aa
 aa
 hu
 aa
@@ -8796,14 +8699,8 @@ hc
 hc
 hc
 hc
-hc
 ho
 ho
-ho
-ho
-ho
-ho
-hr
 gP
 gP
 gP
@@ -8811,9 +8708,15 @@ gP
 gP
 gP
 gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
 ho
-hc
-hc
 hc
 gO
 dJ
@@ -8822,14 +8725,8 @@ aa
 aa
 aa
 aa
-aa
 hD
 hD
-hD
-hD
-hD
-hD
-hF
 he
 he
 he
@@ -8837,9 +8734,15 @@ he
 he
 he
 he
+he
+he
+he
+he
+he
+he
+he
+he
 hD
-aa
-aa
 aa
 hu
 aa
@@ -8939,23 +8842,23 @@ hc
 hc
 hc
 hc
-hc
-hc
-hc
-hc
-hc
-hc
 ho
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
+gP
 ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-hc
-hc
 hc
 gO
 dJ
@@ -8965,23 +8868,23 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
 hD
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
+he
 hD
-hD
-hD
-hD
-hD
-hD
-hD
-hD
-aa
-aa
 aa
 hu
 aa
@@ -9081,23 +8984,23 @@ hc
 hc
 hc
 hc
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+gP
+gP
 hc
 hc
 hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
+gP
+gP
+ho
+ho
 hc
 gO
 dJ
@@ -9107,23 +9010,23 @@ aa
 aa
 aa
 aa
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+he
+he
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+he
+he
+hD
+hD
 aa
 hu
 aa
@@ -9230,15 +9133,15 @@ hc
 hc
 hc
 hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-hc
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
 hc
 hc
 gO
@@ -9256,15 +9159,15 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
+hD
 aa
 aa
 hu
@@ -19971,23 +19874,23 @@ aa
 aa
 aa
 ey
-eV
-eV
-eV
-eV
-eV
+gL
+gL
+gL
+gL
+gL
 ey
-eV
-eV
-eV
-eV
-eV
+gL
+gL
+gL
+gL
+gL
 ey
-eV
-eV
-eV
-eV
-eV
+gL
+gL
+gL
+gL
+gL
 ey
 aa
 aa

@@ -9,11 +9,12 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	amounts of both carbon dioxide and nitrogen. Originally being a lumber colony, recent findings show copious amounts of Phoron deep under the surface, \
 	the Phoron is very desirable by many corporations, including NanoTrasen."
 	current_time = new /datum/time/borealis1()
-	expected_z_levels = list(
+// YW - See the Defines for this, so that it can be edited there if needed.
+/*	expected_z_levels = list(
 						Z_LEVEL_CRYOGAIA_LOWER,
 						Z_LEVEL_CRYOGAIA_MAIN,
 						Z_LEVEL_CRYOGAIA_MINE,
-						)
+						)*/
 //	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis1
 
 /datum/planet/borealis1/New()
