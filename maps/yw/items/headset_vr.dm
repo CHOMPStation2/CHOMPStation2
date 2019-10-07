@@ -1,3 +1,5 @@
+//Original Source: Southern Cross
+
 /obj/item/device/radio/headset/pilot
 	desc = "A headset used by pilots, has access to the explorer channel."
 

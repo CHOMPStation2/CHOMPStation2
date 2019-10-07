@@ -1,3 +1,5 @@
+//Original Source: Southern Cross
+
 //Pilot
 
 /obj/item/clothing/under/rank/pilot1

@@ -1,3 +1,5 @@
+//Original Source: Southern Cross
+
 /obj/item/device/radio/headset/pilot
 	name = "pilot's headset"
 	desc = "A headset used by pilots, has access to supply and explorer channels."

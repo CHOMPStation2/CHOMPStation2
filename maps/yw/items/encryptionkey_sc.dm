@@ -1,3 +1,5 @@
+//Original Source: Southern Cross
+
 /obj/item/device/encryptionkey/pilot
 	name = "pilot's encryption key"
 	icon_state = "com_cypherkey"

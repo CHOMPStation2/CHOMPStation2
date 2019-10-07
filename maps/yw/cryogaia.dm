@@ -12,10 +12,10 @@
 	#include "elevator_areas.dm"
 	#include "service_elevator_things.dm"
 
-	#include "cryogaia-01-mining.dmm" //mining
-	#include "cryogaia-02-maintenance.dmm" //lowerlevel
-	#include "cryogaia-03-main.dmm" //main level
-	#include "cryogaia-04-centcomm.dmm" //centcom
+	#include "cryogaia-01-centcomm.dmm" //centcom
+	#include "cryogaia-02-mining.dmm" //mining
+	#include "cryogaia-03-maintenance.dmm" //lowerlevel
+	#include "cryogaia-04-main.dmm" //main level
 
 //	#include "submaps/_tether_submaps.dm"
 

@@ -1,9 +1,9 @@
 //Normal YW map defs
 // for some god damn reason, the defines aren't registring properly. This is causing me an unbelievable amount of grief. -RadiantFlash
-#define Z_LEVEL_CRYOGAIA_MINE		1
-#define Z_LEVEL_CRYOGAIA_LOWER		2
-#define Z_LEVEL_CRYOGAIA_MAIN		3
-#define Z_LEVEL_CRYOGAIA_CENTCOM	4
+#define Z_LEVEL_CRYOGAIA_CENTCOM	1
+#define Z_LEVEL_CRYOGAIA_MINE		2
+#define Z_LEVEL_CRYOGAIA_LOWER		3
+#define Z_LEVEL_CRYOGAIA_MAIN		4
 //#define Z_LEVEL_ALIENSHIP			5
 //#define Z_LEVEL_BEACH				6
 //#define Z_LEVEL_BEACH_CAVE		7
@@ -167,9 +167,9 @@
 		return list() // Nothing on transit!
 	else if (srcz >= Z_LEVEL_CRYOGAIA_MINE && srcz <= Z_LEVEL_CRYOGAIA_MAIN)
 		return list(
-			Z_LEVEL_CRYOGAIA_MAIN,
-			Z_LEVEL_CRYOGAIA_LOWER,
 			Z_LEVEL_CRYOGAIA_MINE,
+			Z_LEVEL_CRYOGAIA_LOWER,
+			Z_LEVEL_CRYOGAIA_MAIN,
 			)
 	else
 		return ..()

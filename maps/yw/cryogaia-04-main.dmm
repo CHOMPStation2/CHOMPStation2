@@ -46422,7 +46422,7 @@
 /turf/snow,
 /area/borealis1/outdoors/exterior/lake)
 "bPq" = (
-/mob/living/simple_mob/hostile/shantak,
+/mob/living/simple_mob/animal/sif/shantak,
 /turf/snow,
 /area/borealis1/outdoors/exterior)
 "bPr" = (
