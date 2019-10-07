@@ -21,7 +21,7 @@
 /datum/map/cryogaia
 	name = "Cryogaia"
 	full_name = "NSB Cryogaia"
-	path = "cryogaia"
+	path = "yw"
 
 	zlevel_datum_type = /datum/map_z_level/cryogaia
 
