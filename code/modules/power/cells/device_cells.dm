@@ -14,8 +14,8 @@
 	preserve_item = 1
 //Yawn changes
 /obj/item/weapon/cell/device/weapon //Aka adv
-	name = "advance device power cell"
-	desc = "A small power upgraded cell designed to power handheld devices."
+	name = "advanced device power cell"
+	desc = "A small upgraded power cell designed to power handheld devices."
 	icon_state = "acell"
 	maxcharge = 2400
 	charge_amount = 20
@@ -27,7 +27,7 @@
 
 /obj/item/weapon/cell/device/super
 	name = "super device power cell"
-	desc = "A small power upgraded cell designed to power handheld devices."
+	desc = "A small upgraded power cell designed to power handheld devices."
 	icon_state = "uscell"
 	maxcharge = 3600
 	charge_amount = 20
@@ -39,7 +39,7 @@
 
 /obj/item/weapon/cell/device/hyper
 	name = "hyper device power cell"
-	desc = "A small power upgraded cell designed to hold much more power for handheld devices."
+	desc = "A small upgraded power cell designed to hold much more power for handheld devices."
 	icon_state = "wcell"
 	maxcharge = 4800
 	charge_amount = 20
@@ -96,7 +96,7 @@
 	desc = "A mix bettewn alien technology and phoron tech. Seems to fit in almost any cell slot..."
 	charge_amount = 90 // 5%.
 	maxcharge = 1800
-	charge_delay = 500 // Every 50 seconds.
+	charge_delay = 50 SECONDS
 	origin_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4, TECH_PHORON = 3)
 
 /obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty/Initialize()
