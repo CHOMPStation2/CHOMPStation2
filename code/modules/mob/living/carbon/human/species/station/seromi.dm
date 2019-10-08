@@ -173,14 +173,14 @@
 					H << "[M] calms you down..."
 					H.next_loneliness_time = world.time+500
 
-		for(var/obj/item/toy/plushie/P in range(5, H))
+		/*for(var/obj/item/toy/plushie/P in range(5, H))
 			if(H.loneliness_stage > 0)
 				H.loneliness_stage -= 4
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
 					H << "The [P] calms you down, reminding you of people..."
-					H.next_loneliness_time = world.time+500
+					H.next_loneliness_time = world.time+500*/
 
 		// No company? Suffer :(
 		if(H.loneliness_stage < warning_cap)

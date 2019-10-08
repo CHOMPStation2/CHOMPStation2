@@ -21,7 +21,7 @@
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("lube", 250)
 	src.emag.name = "Lube spray"
-	R.icon 		 = 'icons/mob/robots_vr.dmi'
+	R.icon 		 = 'icons/mob/robots_yw.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	..()
 

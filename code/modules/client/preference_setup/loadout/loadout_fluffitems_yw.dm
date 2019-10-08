@@ -5,13 +5,13 @@
 	description = "An example item that you probably shouldn't see!"
 	ckeywhitelist = list("broman2000")
 	allowed_roles = list("Station Engineer")	//Don't include this if the item is not role restricted
-	character_name = list("shitfacemcgee")	//Same applies here but for names
+	character_name = list("shitfacemcgee")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 */
 
 //  0-9 CKEYS
-	
+
 //  A CKEYS
-	
+
 //  B CKEYS
 
 //blackangelsace
@@ -36,7 +36,7 @@
 	description = "A dark colored set of pauldron and bracers fit for a large sergal, they have scratch marks."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Madoka Koto")
-	
+
 /datum/gear/fluff/madoka_legs
 	path = /obj/item/clothing/shoes/leg_guard/fluff/madoka_legs
 	display_name = "Madoka's leg cuffs"
@@ -103,6 +103,13 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
+/datum/gear/fluff/strix_headset
+	path = /obj/item/device/radio/headset/fluff/strix
+	display_name = "Strix\'s headset"
+	description = "A headset that seems custom made for a avali skull shape, the sounds coming from it are very quiet."
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Strix Hades")
+
 //benl8561
 //M.I.S.S.Y
 /datum/gear/fluff/missy_skirt
@@ -120,6 +127,22 @@
 	ckeywhitelist = list("benl8561")
 	character_name = list("Quanah Hastings")
 
+//Baybell
+//Takira
+/datum/gear/fluff/takira_suit
+	path = /obj/item/clothing/suit/storage/fluff/takirasuit
+	display_name = "Old Vox Armor"
+	description = "The rusted and rather useless remains of a Vox Raider suit... Is this thing even safe to wear?"
+	ckeywhitelist = list("baybell")
+	character_name = list("Takira")
+
+/datum/gear/fluff/takira_mask
+	path = /obj/item/clothing/mask/gas/fluff/takiramask
+	display_name = "Old Vox Mask"
+	description = "Half-broken or completely broken? At least its breathing tubes work."
+	ckeywhitelist = list("baybell")
+	character_name = list("Takira")
+
 //  C CKEYS
 
 //captmatt4
@@ -130,7 +153,7 @@
 	description = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
 	ckeywhitelist = list("captmatt4")
 	character_name = list("Payton Joghs")
-	
+
 //Eliana Noya
 /datum/gear/fluff/eliana_noya_1
 	path = /obj/item/clothing/under/fluff/eliana_noya_1
@@ -315,7 +338,7 @@
 	description = "A durable, tight fitting comfy black and red tanktop and a pair of just as black cargo pants that are being held in place by a belt. The beltbuckle reads 'DOG'."
 	ckeywhitelist = list("generalpantsu")
 	character_name = list("Amara Faell")
-	
+
 
 /datum/gear/fluff/amara_boots
 	path = /obj/item/clothing/shoes/boots/jackboots/fluff/amara_boots
@@ -323,7 +346,7 @@
 	description = "A pair of worn, comfy boots optimized for those that need to wear them over a long period of time. They got reinforced soles and steel tips."
 	ckeywhitelist = list("generalpantsu")
 	character_name = list("Amara Faell")
-	
+
 /datum/gear/fluff/amara_collar
 	path = /obj/item/clothing/accessory/collar/fluff/amara_collar
 	display_name = "Pet's Collar"
@@ -425,6 +448,16 @@
 	description = "A black jacket made of genuine leather with blue markings on each shoulder. The letters 'ERT' are stenciled onto the back in gold lettering."
 	ckeywhitelist = list("generalpantsu")
 	character_name = list("Samantha Quzix")
+
+//Gozulio
+//Glitterpaws
+
+/datum/gear/fluff/goz_whitecane
+	path = /obj/item/weapon/melee/goz_whitecane
+	display_name = "Telescopic White Cane."
+	description = "A telescoping white cane. They are commonly used by the blind or visually impaired as a mobility tool or as a courtesy to others."
+	ckeywhitelist = list("gozulio")
+	character_name = null
 
 //  H CKEYS
 
@@ -556,7 +589,7 @@
 	description = "A slandered issue Kanghu Navy Force medical doctor uniform, it has a a white base with blue ocean camo overlaying the shoulders, waist, and back, with deep blue accents, and light blue highlights. The uniform is loose fitting, and has a set of buttons running up the middle to take it on and off. This one seems to have the shoulder straps vacant of any epaulettes."
 	ckeywhitelist = list("lukevale")
 	character_name = list("Mitsuko Jiao")
-	
+
 /datum/gear/fluff/jiao_beret
 	path = /obj/item/clothing/head/beret/fluff/jiao_beret
 	display_name = "A Kanghu Navy Beret"
@@ -570,7 +603,7 @@
 	description = "This is a set of boots from the Kanghu navy, as denoted by the seal in the sole of the boot, that has been modified to fit not human feet."
 	ckeywhitelist = list("lukevale")
 	character_name = list("Mitsuko Jiao")
-	
+
 /datum/gear/fluff/jiao_belt
 	path = /obj/item/weapon/storage/belt/medical/fluff/jiao_belt
 	display_name = "Navy medical belt"
@@ -584,7 +617,7 @@
 	description = "These light gray latex gloves have a blue, thick pad on the back of the hand, and on the back of the fingers, designed to survive all the life toughest that a field medic would face."
 	ckeywhitelist = list("lukevale")
 	character_name = list("Mitsuko Jiao")
-	
+
 /datum/gear/fluff/jiao_anynlizer_kit_a
 	path = /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a
 	display_name = "Mitsuko's modkit Mk1"
@@ -598,7 +631,7 @@
 	description = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
 	ckeywhitelist = list("lukevale")
 	character_name = list("Mitsuko Jiao")
-	
+
 /datum/gear/fluff/jiao_anynlizer_kit_c
 	path = /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c
 	display_name = "Mitsuko's modkit Mk3"
