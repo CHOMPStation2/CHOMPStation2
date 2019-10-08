@@ -84,7 +84,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	economic_modifier = 7
 
 	access = list(access_heads, access_keycard_auth, access_RC_announce, access_medical, access_security) //YAWN EDIT
-	minimal_access = list(access_heads, access_keycard_auth)//YAWN EDIT
+	minimal_access = list(access_heads, access_keycard_auth, access_RC_announce, access_medical, access_security)//YAWN EDIT
 
 	outfit_type = /decl/hierarchy/outfit/job/secretary
 
