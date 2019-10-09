@@ -62,7 +62,7 @@
 	sort_string = "BAABA"
 
 //Yawn changes
-/datum/design/item/powercell/advance
+/datum/design/item/powercell/advance-device
 	name = "advance"
 	build_type = PROTOLATHE
 	id = "advance-device"
@@ -71,7 +71,7 @@
 	category = "Misc"
 	sort_string = "BAABB"
 
-/datum/design/item/powercell/super
+/datum/design/item/powercell/super-device
 	name = "super"
 	id = "super_device"
 	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2)
@@ -80,7 +80,7 @@
 	category = "Misc"
 	sort_string = "BAABC"
 
-/datum/design/item/powercell/hyper
+/datum/design/item/powercell/hyper-device
 	name = "hyper"
 	id = "hyper_device"
 	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
@@ -89,7 +89,7 @@
 	category = "Misc"
 	sort_string = "BAABD"
 
-/datum/design/item/powercell/omni
+/datum/design/item/powercell/omni-device
 	name = "omni"
 	req_tech = list(TECH_POWER = 8, TECH_MATERIAL = 7, TECH_ARCANE = 2, TECH_PHORON = 4, TECH_PRECURSOR = 2)
 	build_type = PROTOLATHE
