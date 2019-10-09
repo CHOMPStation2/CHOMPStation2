@@ -62,16 +62,16 @@
 	sort_string = "BAABA"
 
 //Yawn changes
-/datum/design/item/powercell/advance-device
+/datum/design/item/powercell/advance_device
 	name = "advance"
 	build_type = PROTOLATHE
-	id = "advance-device"
+	id = "advance_device"
 	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 50)
 	build_path = /obj/item/weapon/cell/device/weapon
 	category = "Misc"
 	sort_string = "BAABB"
 
-/datum/design/item/powercell/super-device
+/datum/design/item/powercell/super_device
 	name = "super"
 	id = "super_device"
 	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2)
@@ -80,7 +80,7 @@
 	category = "Misc"
 	sort_string = "BAABC"
 
-/datum/design/item/powercell/hyper-device
+/datum/design/item/powercell/hype_device
 	name = "hyper"
 	id = "hyper_device"
 	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
@@ -89,7 +89,7 @@
 	category = "Misc"
 	sort_string = "BAABD"
 
-/datum/design/item/powercell/omni-device
+/datum/design/item/powercell/omni_device
 	name = "omni"
 	req_tech = list(TECH_POWER = 8, TECH_MATERIAL = 7, TECH_ARCANE = 2, TECH_PHORON = 4, TECH_PRECURSOR = 2)
 	build_type = PROTOLATHE
