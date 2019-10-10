@@ -725,6 +725,27 @@
 					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
 					)
 
+/obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
+ 	name = "Central Command Cloak"
+ 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+ 	icon = 'icons/vore/custom_clothes_yw.dmi'
+ 	icon_state = "tesh_cloak_cco"
+ 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+ 	override = 1
+ 	item_state = "tesh_cloak_cco"
+
+/obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
+	name = "Central Command Undercoat"
+	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "tesh_uniform_cco"
+	override = 1
+	item_state = "tesh_uniform_cco"
+	sprite_sheets = list(
+					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
+					)
+
 // *******
 // Dawidoe
 // *******
