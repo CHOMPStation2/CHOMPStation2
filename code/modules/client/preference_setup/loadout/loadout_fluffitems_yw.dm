@@ -110,6 +110,20 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
+/datum/gear/fluff/strix_coat_cco
+	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
+	display_name = "Central Command Coat"
+	description = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Strix Hades")
+
+/datum/gear/fluff/strix_under_cco
+	path = /obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
+	display_name = "Central Command Undercoat"
+	description = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Strix Hades")
+
 //benl8561
 //M.I.S.S.Y
 /datum/gear/fluff/missy_skirt
