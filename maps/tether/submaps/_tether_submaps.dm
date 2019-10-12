@@ -3,12 +3,13 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-/datum/map_template/tether_lateload/tether_misc
+#include "tether_misc.dmm"
+/*/datum/map_template/tether_lateload/tether_misc
 	name = "Tether - Misc"
 	desc = "Misc areas, like some transit areas, holodecks, merc area."
 	mappath = 'tether_misc.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/ships
+	associated_map_datum = /datum/map_z_level/tether_lateload/ships*/
 
 /datum/map_z_level/tether_lateload/misc
 	name = "Misc"
