@@ -19,6 +19,7 @@
 	icon_state = "acell"
 	maxcharge = 2400
 	charge_amount = 20
+	origin_tech = list(TECH_POWER = 2)
 
 /obj/item/weapon/cell/device/weapon/empty/Initialize()
 	. = ..()
@@ -31,6 +32,7 @@
 	icon_state = "uscell"
 	maxcharge = 3600
 	charge_amount = 20
+	origin_tech = list(TECH_POWER = 3)
 
 /obj/item/weapon/cell/device/super/empty/Initialize()
 	. = ..()
@@ -43,6 +45,7 @@
 	icon_state = "wcell"
 	maxcharge = 4800
 	charge_amount = 20
+	origin_tech = list(TECH_POWER = 4)
 
 /obj/item/weapon/cell/device/hyper/empty/Initialize()
 	. = ..()
