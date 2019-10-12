@@ -63,7 +63,7 @@
 
 //Yawn changes
 /datum/design/item/powercell/advance_device
-	name = "advance"
+	name = "device, advanced"
 	build_type = PROTOLATHE
 	id = "advance_device"
 	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 50)
@@ -72,7 +72,7 @@
 	sort_string = "BAABB"
 
 /datum/design/item/powercell/super_device
-	name = "super"
+	name = "device, super"
 	id = "super_device"
 	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2)
 	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 70, "gold" = 50, "silver" = 20,)
@@ -81,7 +81,7 @@
 	sort_string = "BAABC"
 
 /datum/design/item/powercell/hype_device
-	name = "hyper"
+	name = "device, hyper"
 	id = "hyper_device"
 	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
 	materials = list(DEFAULT_WALL_MATERIAL = 1400, "glass" = 1400, "gold" = 150, "silver" = 150)
@@ -90,7 +90,7 @@
 	sort_string = "BAABD"
 
 /datum/design/item/powercell/omni_device
-	name = "omni"
+	name = "device, omni"
 	req_tech = list(TECH_POWER = 8, TECH_MATERIAL = 7, TECH_ARCANE = 2, TECH_PHORON = 4, TECH_PRECURSOR = 2)
 	build_type = PROTOLATHE
 	id = "omni-device"
