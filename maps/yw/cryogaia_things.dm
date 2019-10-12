@@ -363,7 +363,9 @@ var/global/list/latejoin_tram   = list()
 			if(!istype(P.weather_holder.current_weather, /datum/weather/borealis1/blizzard) && prob(25))
 				cut_overlays()
 				frozen = 0
-		sleep(15 SECONDS)
+
+		var/random = rand(2,7)
+		sleep((random + 13) SECONDS)
 
 /obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
 	. = ..()
