@@ -364,8 +364,8 @@ var/global/list/latejoin_tram   = list()
 				cut_overlays()
 				frozen = 0
 
-		var/random = rand(2,7)
-		sleep((random + 13) SECONDS)
+	var/random = rand(2,7)
+	sleep((random + 13) SECONDS)
 
 /obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
 	. = ..()
