@@ -3,12 +3,13 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-/datum/map_template/tether_lateload/tether_misc
+#include "tether_misc.dmm" //YW Addition, forces map to be compiled
+/*/datum/map_template/tether_lateload/tether_misc //YW Edit, commented out this lateload
 	name = "Tether - Misc"
 	desc = "Misc areas, like some transit areas, holodecks, merc area."
 	mappath = 'tether_misc.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/ships
+	associated_map_datum = /datum/map_z_level/tether_lateload/ships*/
 
 /datum/map_z_level/tether_lateload/misc
 	name = "Misc"
