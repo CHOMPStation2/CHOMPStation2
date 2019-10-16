@@ -309,6 +309,76 @@ var/global/list/latejoin_tram   = list()
 
 	return ..(user)
 
+//Freezable Airlock Door
+/obj/machinery/door/airlock/glass_external/freezable
+	var/frozen = 0
+
+/obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I as obj, mob/user as mob)
+	if(frozen)
+		var/canthaw = 0
+		var/skip = 0
+		//the welding tool is a special snowflake.
+		if(istype(I, /obj/item/weapon/weldingtool))
+			var/obj/item/weapon/weldingtool/welder = I
+			if(welder.remove_fuel(0,user))
+				to_chat(user, "<span class='notice'>You start to melt the ice off \the [src]</span>")
+				playsound(src, welder.usesound, 50, 1)
+				if(do_after(user, 3 SECONDS && welder && welder.isOn()))
+					to_chat(user, "<span class='notice'>You melt the ice off \the [src]</span>")
+					frozen = 0
+					cut_overlays()
+					return
+
+		 //do we have something we can de-ice the door with?
+		if(istype(I, /obj/item/weapon))
+			to_chat(user, "<span class='notice'>You start to chip at the ice covering \the [src]</span>")
+		
+		//is there a special case for the item we're holding?
+		if(I.is_crowbar() && !skip)
+			if(do_after(user, 5 SECONDS))
+				canthaw = 1
+				skip = 1
+		//if there's no special case, do it slowly.
+		if(!skip)
+			if(do_after(user, 10 SECONDS))
+				canthaw = 1
+
+		if(canthaw) //Actually de-ice the door if we can.
+			frozen = 0
+			cut_overlays()
+			return
+		//if we can't de-ice the door tell them what's wrong.
+		to_chat(user, "<span class='notice'>\the [src] is frozen shut!</span>")
+		return
+	..()
+
+/obj/machinery/door/airlock/glass_external/freezable/process()
+	for(var/datum/planet/borealis1/P in SSplanets.planets)
+		if(!frozen)
+			if(istype(P.weather_holder.current_weather, /datum/weather/borealis1/blizzard) && prob(25))
+				cut_overlays()
+				frozen = 1
+				add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
+		else
+			if(!istype(P.weather_holder.current_weather, /datum/weather/borealis1/blizzard) && prob(25))
+				cut_overlays()
+				frozen = 0
+
+	var/random = rand(2,7)
+	sleep((random + 13) SECONDS)
+
+/obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
+	. = ..()
+	if(frozen)
+		to_chat(user, "it's frozen shut!")
+
+/obj/machinery/door/airlock/glass_external/freezable/open(var/forced = 0)
+	//Frozen airlocks can't open.
+	if(frozen)
+		return
+	..()
+//end of freezable airlock stuff.
+
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
 	req_one_access = list(access_explorer,access_brig)
