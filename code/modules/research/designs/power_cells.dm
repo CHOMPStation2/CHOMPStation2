@@ -61,11 +61,41 @@
 	category = "Misc"
 	sort_string = "BAABA"
 
-/datum/design/item/powercell/weapon
-	name = "weapon"
+//Yawn changes
+/datum/design/item/powercell/advance_device
+	name = "device, advanced"
 	build_type = PROTOLATHE
-	id = "weapon"
+	id = "advance_device"
 	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 50)
 	build_path = /obj/item/weapon/cell/device/weapon
 	category = "Misc"
 	sort_string = "BAABB"
+
+/datum/design/item/powercell/super_device
+	name = "device, super"
+	id = "super_device"
+	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 70, "gold" = 50, "silver" = 20,)
+	build_path = /obj/item/weapon/cell/device/super
+	category = "Misc"
+	sort_string = "BAABC"
+
+/datum/design/item/powercell/hype_device
+	name = "device, hyper"
+	id = "hyper_device"
+	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 1400, "glass" = 1400, "gold" = 150, "silver" = 150)
+	build_path = /obj/item/weapon/cell/device/hyper
+	category = "Misc"
+	sort_string = "BAABD"
+
+/datum/design/item/powercell/omni_device
+	name = "device, omni"
+	req_tech = list(TECH_POWER = 8, TECH_MATERIAL = 7, TECH_ARCANE = 2, TECH_PHORON = 4, TECH_PRECURSOR = 2)
+	build_type = PROTOLATHE
+	id = "omni-device"
+	materials = list(DEFAULT_WALL_MATERIAL = 1700, "glass" = 550, MAT_DURASTEEL = 230, MAT_MORPHIUM = 320, MAT_METALHYDROGEN = 600, MAT_URANIUM = 60, MAT_VERDANTIUM = 150, MAT_PHORON = 900)
+	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
+	category = "Misc"
+	sort_string = "BAABE"
+//End of Yawn add
