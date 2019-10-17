@@ -90,6 +90,14 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 1000, "silver" = 1500, "gold" = 2000, "uranium" = 1250, "diamond" = 750, "phoron" = 500, "plastic" = 1000, "osmium" = 500)
 	build_path = /obj/item/device/healthanalyzer/phasic
 	sort_string = "KBAAD"
+
+/datum/design/item/medical/large_bodybag
+	desc = "A massive body bag made with bluespace tech."
+	id = "large_bodybag"
+	req_tech = list( TECH_ENGINEERING = 3, TECH_BIO = 5, TECH_BLUESPACE = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 3500, "glass" = 500, "phoron" = 4000, "plastic" = 18000) //2 phoron and 9 plastic sheets.
+	build_path = /obj/item/bodybag/large
+	sort_string = "KCAAB" //To be under the roller bed
 //End of YAWN changes
 
 /datum/design/item/medical/advanced_roller
