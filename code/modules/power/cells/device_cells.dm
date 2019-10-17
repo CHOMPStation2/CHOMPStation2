@@ -13,17 +13,46 @@
 	matter = list("metal" = 350, "glass" = 50)
 	preserve_item = 1
 
-/obj/item/weapon/cell/device/weapon
-	name = "weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry."
-	icon_state = "wcell"
+//Yawn changes
+/obj/item/weapon/cell/device/weapon //Aka adv
+	name = "advanced device power cell"
+	desc = "A small upgraded power cell designed to power handheld devices."
+	icon_state = "acell"
 	maxcharge = 2400
 	charge_amount = 20
+	origin_tech = list(TECH_POWER = 2)
 
 /obj/item/weapon/cell/device/weapon/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
+
+/obj/item/weapon/cell/device/super
+	name = "super device power cell"
+	desc = "A small upgraded power cell designed to power handheld devices."
+	icon_state = "uscell"
+	maxcharge = 3600
+	charge_amount = 20
+	origin_tech = list(TECH_POWER = 3)
+
+/obj/item/weapon/cell/device/super/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+
+/obj/item/weapon/cell/device/hyper
+	name = "hyper device power cell"
+	desc = "A small upgraded power cell designed to hold much more power for handheld devices."
+	icon_state = "wcell"
+	maxcharge = 4800
+	charge_amount = 20
+	origin_tech = list(TECH_POWER = 4)
+
+/obj/item/weapon/cell/device/hyper/empty/Initialize()
+	. = ..()
+	charge = 0
+	update_icon()
+//End of Yawn changes
 
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
@@ -64,3 +93,16 @@
 
 /obj/item/weapon/cell/device/weapon/recharge/alien/update_icon()
 	return // No overlays please.
+
+//YAWN Addtion
+/obj/item/weapon/cell/device/weapon/recharge/alien/omni
+	name = "omni weapon power cell"
+	desc = "A mix between alien technology and phoron tech. Seems to fit in almost any cell slot..."
+	charge_amount = 90 // 5%.
+	maxcharge = 1800
+	charge_delay = 50 SECONDS
+	origin_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4, TECH_PHORON = 3)
+
+/obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty/Initialize()
+	. = ..()
+	charge = 0
