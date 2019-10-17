@@ -10,6 +10,7 @@
 	icon_state = "pdoor1"
 	maxhealth = 600
 	rad_resistance = 100
+	id = "EngineShroud"
 
 /obj/machinery/door/blast/radproof/open
 	icon_state = "pdoor0"
@@ -24,3 +25,8 @@
 /obj/machinery/door/blast/radproof/force_close()
 	src.rad_resistance = 100
 	..()
+
+/obj/machinery/button/remote/blast_door/radproof
+	name = "Reactor Shroud Control"
+	desc = "It the reactor shroud remotely."
+	id = "EngineShroud"
