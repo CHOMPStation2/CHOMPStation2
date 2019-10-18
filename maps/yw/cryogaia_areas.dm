@@ -1,7 +1,16 @@
 //Outpost area
 /area/borealis1
 	icon = 'icons/turf/areas_vr.dmi'
-
+/area/borealis1/elevator/medbasement
+	name = "Elevator shaft - Lower Medical"
+/area/borealis1/elevator/medbay
+	name = "Elevator shaft - Upper Medical"
+/area/borealis1/elevator/dorms
+	name = "Elevator shaft - Dorms"
+/area/borealis1/elevator/scicargo
+	name = "Elevator shaft - Sci-Cargo"
+/area/borealis1/elevator/scimining
+	name = "Elevator shaft - Sci-Mining"
 /area/borealis1/outdoors
 	name = "Outside - Surface"
 	icon_state = "outside1"
