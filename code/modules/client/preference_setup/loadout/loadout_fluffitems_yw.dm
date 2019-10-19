@@ -225,7 +225,7 @@
 	display_name = "A mysterious cookie"
 	description = "DAS A BIG COOKIE!!!"
 	ckeywhitelist = list("dameonowen")
-	character_name = list("Dameon Owen")
+	character_name = list("Dameon Owen", "Amber Owen")
 
 //dawidoe
 //Melissa Krutz
