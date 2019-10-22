@@ -539,3 +539,4 @@
 	if (M == user)
 		M.resize(3)
 		M.drop_from_inventory(src)
+		qdel(src)
