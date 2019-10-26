@@ -540,3 +540,15 @@
 		M.resize(3)
 		M.drop_from_inventory(src)
 		qdel(src)
+
+
+// **************
+// NESgamer190
+// **************
+
+//Lucy Price
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/lucyprice
+	name = "Cryostasis Thermos"
+	desc = " A thermos that has been designed to look something akin to a mix between a cryostasis beaker and a thermos.  Does NOT keep the drinks cold, surprisingly enough."
+	icon_state = "cryothermos"
+	icon = 'icons/vore/custom_items_yw.dmi'
