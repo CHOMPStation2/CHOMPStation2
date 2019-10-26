@@ -42,6 +42,29 @@
 	storage_capacity = (MOB_MEDIUM * 2) - 1
 	var/contains_body = 0
 
+//Yawn add
+/obj/item/bodybag/large
+	name = "mass grave body bag"
+	desc = "A large folded bag designed for the storage and transportation of cadavers."
+	icon = 'icons/obj/bodybag.dmi'
+	icon_state = "bluebodybag_folded"
+	w_class = ITEMSIZE_LARGE
+
+	attack_self(mob/user)
+		var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
+		R.add_fingerprint(user)
+		qdel(src)
+
+/obj/structure/closet/body_bag/large
+	name = "mass grave body bag"
+	desc = "A massive body bag that holds as much as it does do to bluespace lining on its zipper. Shockingly compact for its storage."
+	icon_state = "bluebodybag_closed"
+	icon_closed = "bluebodybag_closed"
+	icon_opened = "bluebodybag_open"
+	storage_capacity = (MOB_MEDIUM * 12) - 1 //Holds 12 bodys
+	item_path = /obj/item/bodybag/large
+//End of Yawn add
+
 /obj/structure/closet/body_bag/attackby(var/obj/item/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/weapon/pen))
 		var/t = input(user, "What would you like the label to be?", text("[]", src.name), null)  as text
