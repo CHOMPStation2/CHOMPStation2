@@ -315,52 +315,52 @@ var/global/list/latejoin_tram   = list()
 
 /obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I as obj, mob/user as mob)
 	if(frozen)
-		var/canthaw = 0
-		var/skip = 0
 		//the welding tool is a special snowflake.
 		if(istype(I, /obj/item/weapon/weldingtool))
 			var/obj/item/weapon/weldingtool/welder = I
-			if(welder.remove_fuel(0,user))
+			if(welder.remove_fuel(0,user) && welder && welder.isOn())
 				to_chat(user, "<span class='notice'>You start to melt the ice off \the [src]</span>")
 				playsound(src, welder.usesound, 50, 1)
-				if(do_after(user, 3 SECONDS && welder && welder.isOn()))
-					to_chat(user, "<span class='notice'>You melt the ice off \the [src]</span>")
+				if(do_after(user, 5 SECONDS))
+					to_chat(user, "<span class='notice'>You finish melting the ice off \the [src]</span>")
 					frozen = 0
 					cut_overlays()
 					return
 
 		 //do we have something we can de-ice the door with?
-		if(istype(I, /obj/item/weapon))
-			to_chat(user, "<span class='notice'>You start to chip at the ice covering \the [src]</span>")
-		
-		//is there a special case for the item we're holding?
-		if(I.is_crowbar() && !skip)
-			if(do_after(user, 5 SECONDS))
-				canthaw = 1
-				skip = 1
-		//if there's no special case, do it slowly.
-		if(!skip)
-			if(do_after(user, 10 SECONDS))
-				canthaw = 1
-
-		if(canthaw) //Actually de-ice the door if we can.
-			frozen = 0
-			cut_overlays()
+		if(istype(I, /obj/item/weapon/ice_pick))
+			handleRemoveIce(I, user, 3)
 			return
+
+		if(I.is_crowbar())
+			handleRemoveIce(I, user, 5)
+			return
+
+		if(istype(I, /obj/item/weapon))
+			handleRemoveIce(I, user)
+			return
+
 		//if we can't de-ice the door tell them what's wrong.
 		to_chat(user, "<span class='notice'>\the [src] is frozen shut!</span>")
 		return
 	..()
 
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/weapon/W as obj, mob/user as mob, var/time = 10 as num)
+	to_chat(user, "<span class='notice'>You start to chip at the ice covering \the [src]</span>")
+	if(do_after(user, time SECONDS))
+		frozen = 0
+		cut_overlays()
+		to_chat(user, "<span class='notice'>You finish chipping the ice off \the [src]</span>")
+
 /obj/machinery/door/airlock/glass_external/freezable/process()
 	for(var/datum/planet/borealis1/P in SSplanets.planets)
-		if(!frozen)
-			if(istype(P.weather_holder.current_weather, /datum/weather/borealis1/blizzard) && prob(25))
+		if(istype(P.weather_holder.current_weather, /datum/weather/borealis1/blizzard) && prob(25))
+			if(!frozen && density)
 				cut_overlays()
 				frozen = 1
 				add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
 		else
-			if(!istype(P.weather_holder.current_weather, /datum/weather/borealis1/blizzard) && prob(25))
+			if(prob(50))
 				cut_overlays()
 				frozen = 0
 
@@ -377,7 +377,24 @@ var/global/list/latejoin_tram   = list()
 	if(frozen)
 		return
 	..()
+
+/obj/machinery/door/airlock/glass_external/freezable/close(var/forced = 0)
+	//Frozen airlocks can't shut either. (Though they shouldn't be able to freeze open)
+	if(frozen)
+		return
+	..()
 //end of freezable airlock stuff.
+
+//Ice pick, mountain axe, or ice axe.
+/obj/item/weapon/ice_pick
+	name = "ice pick"
+	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "spickaxe"
+	item_state = "spickaxe"
+	force = 5
+	throwforce = 0
+//end of Ice Pick
 
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
