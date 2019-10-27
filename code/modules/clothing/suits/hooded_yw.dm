@@ -2,7 +2,7 @@
 	name = "snowsuit"
 	desc = "A suit made to keep you nice and toasty on cold winter days. Or at least alive."
 	icon = 'icons/obj/clothing/suits_yw.dmi'
-	icon_override = "snowsuit"
+	icon_state = "snowsuit"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
 	item_state_slots = list(slot_r_hand_str = "coatwinter", slot_l_hand_str = "coatwinter")

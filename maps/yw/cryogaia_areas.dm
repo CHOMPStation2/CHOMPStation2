@@ -36,6 +36,11 @@
 
 /area/borealis1/outdoors/grounds/power
 	name = "\The Exterior Powerline"
+
+/area/borealis1/outdoors/grounds/solars
+	name = "\The solar array"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "panelsA"
 //crew quarters-dorms
 /area/crew_quarters/showers
 	name = "\improper Unisex Showers"
