@@ -1,7 +1,16 @@
 //Outpost area
 /area/borealis1
 	icon = 'icons/turf/areas_vr.dmi'
-
+/area/borealis1/elevator/medbasement
+	name = "Elevator shaft - Lower Medical"
+/area/borealis1/elevator/medbay
+	name = "Elevator shaft - Upper Medical"
+/area/borealis1/elevator/dorms
+	name = "Elevator shaft - Dorms"
+/area/borealis1/elevator/scicargo
+	name = "Elevator shaft - Sci-Cargo"
+/area/borealis1/elevator/scimining
+	name = "Elevator shaft - Sci-Mining"
 /area/borealis1/outdoors
 	name = "Outside - Surface"
 	icon_state = "outside1"
@@ -27,6 +36,11 @@
 
 /area/borealis1/outdoors/grounds/power
 	name = "\The Exterior Powerline"
+
+/area/borealis1/outdoors/grounds/solars
+	name = "\The solar array"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "panelsA"
 //crew quarters-dorms
 /area/crew_quarters/showers
 	name = "\improper Unisex Showers"

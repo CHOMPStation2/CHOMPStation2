@@ -1,4 +1,5 @@
 /*any items must be put under /obj/item/clothing/under/yw as a base path for icons to work, if put in uniforms_yw/uniform_yw and suits_yw/suit_yw.*/
+//I use this for any away mission uniforms,job uniforms or character loadout gear I add for everyone to use. Not exactly custom items for people, so this is a good spot. -RadiantFlash
 /obj/item/clothing/under/yw
 
 /obj/item/clothing/under/yw/blueshield //fancy blueshield suit,
@@ -75,3 +76,138 @@
 	icon_override = 'icons/mob/uniform_yw.dmi'
 	item_state = "Robotics2"
 
+//Explorers uniforms Start
+/obj/item/clothing/under/explorer/utility
+	name = "\improper Explorer uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has silver trim."
+	icon = 'icons/obj/clothing/uniforms_yw.dmi'
+	icon_state = "blackutility_crew"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 10)
+
+/obj/item/clothing/under/explorer/utility/supply
+	name = "\improper explorer supply uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has silver trim and brown blazes."
+	icon_state = "blackutility_sup"
+
+/obj/item/clothing/under/explorer/utility/command
+	name = "\improper explorer command uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has silver trim."
+	icon_state = "blackutility_com"
+
+/obj/item/clothing/under/explorer/utility/medical
+	name = "\improper explorer medical uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has silver trim and blue blazes."
+	icon_state = "blackutility_med"
+
+/obj/item/clothing/under/explorer/utility/command/medical
+	name = "\improper explorer medical command uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. his one has gold trim and blue blazes."
+	icon_state = "blackutility_medcom"
+
+/obj/item/clothing/under/explorer/utility/security
+	name = "\improper explorer security uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has silver trim and red blazes."
+	icon_state = "blackutility_sec"
+
+/obj/item/clothing/under/explorer/utility/command/security
+	name = "\improper explorer security command uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has gold trim and red blazes."
+	icon_state = "blackutility_seccom"
+
+/obj/item/clothing/under/explorer/utility/engineering
+	name = "\improper explorer engineering uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has silver trim and organge blazes."
+	icon_state = "blackutility_eng"
+
+/obj/item/clothing/under/explorer/utility/command/engineering
+	name = "\improper explorer engineering command uniform"
+	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has gold trim and organge blazes."
+	icon_state = "blackutility_engcom"
+//Explorer uniforms end
+
+//Away mission uniforms begin
+/obj/item/clothing/under/away/patrol
+	name = "\improper nanotrasen fleet uniform"
+	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material."
+	icon = 'icons/obj/clothing/uniforms_yw.dmi'
+	icon_state = "navyutility"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+	armor = list(melee = 10, bullet = 10, laser = 10,energy = 5, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/under/away/patrol/medical
+	name = "\improper nanotrasen fleet medical uniform"
+	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material. This one has blue blazes."
+	icon_state = "navyutility_med"
+	worn_state = "navyutility_med"
+
+/obj/item/clothing/under/away/patrol/security
+	name = "\improper nanotrasen fleet security uniform"
+	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material. This one has red blazes."
+	icon_state = "navyutility_sec"
+	worn_state = "navyutility_sec"
+
+/obj/item/clothing/under/away/patrol/engineering
+	name = "\improper nanotrasen fleet engineering uniform"
+	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material. This one has orange blazes."
+	icon_state = "navyutility_eng"
+	worn_state = "navyutility_eng"
+
+/obj/item/clothing/under/away/patrol/command
+	name = "\improper nanotrasen fleet command uniform"
+	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material. This one has gold blazes."
+	icon_state = "navyutility_com"
+	worn_state = "navyutility_com"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+
+/obj/item/clothing/under/away/patrol/supply
+	name = "\improper nanotrasen fleet supply uniform"
+	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material. This one has brown blazes"
+	icon_state = "navyutility_sup"
+	worn_state = "navyutility_sup"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+
+
+/obj/item/clothing/under/away/daedalus
+	name = "\improper daedalus uniform"
+	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
+	icon = 'icons/obj/clothing/uniforms_yw.dmi'
+	icon_state = "greyutility"
+	worn_state = "greyutility"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+	armor = list(melee = 10, bullet = 10, laser = 10,energy = 5, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/under/away/daedalus/engineering
+	name = "\improper daedalus engineering uniform"
+	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
+	icon_state = "greyutility_eng"
+	worn_state = "greyutility_eng"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+
+/obj/item/clothing/under/away/daedalus/security
+	name = "\improper daedalus security uniform"
+	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
+	icon_state = "greyutility_sec"
+	worn_state = "greyutility_sec"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+
+/obj/item/clothing/under/away/daedalus/command
+	name = "\improper daedalus security uniform"
+	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
+	icon_state = "greyutility_com"
+	worn_state = "greyutility_com"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+
+/obj/item/clothing/under/away/daedalus/medical
+	name = "\improper daedalus medical uniform"
+	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
+	icon_state = "greyutility_med"
+	worn_state = "greyutility_med"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+
+/obj/item/clothing/under/away/daedalus/supply
+	name = "\improper daedalus supply uniform"
+	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
+	icon_state = "greyutility_sup"
+	worn_state = "greyutility_sup"
+	icon_override = 'icons/mob/uniform_yw.dmi'
