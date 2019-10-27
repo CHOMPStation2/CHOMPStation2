@@ -132,6 +132,9 @@
 	name = "\improper Mining Bathroom"
 /area/tether/surfacebase/mining_main/lobby
 	name = "\improper Mining Lobby"
+/area/tether/surfacebase/mining_main/surfacecargo
+	name = "\improper Surface Cargo Office"
+	lightswitch = 0
 
 // Mining Underdark
 /area/mine/unexplored/underdark
@@ -214,6 +217,10 @@
 /area/tether/surfacebase/medical/maints
 	name = "\improper Mining Upper Maintenance"
 
+/area/tether/surfacebase/library/study
+	name = "\improper Library Private Study"
+	lightswitch = 0
+	icon_state = "library"
 
 /area/tether/surfacebase/security
 	icon_state = "security"
@@ -544,6 +551,10 @@
 /area/tether/station/dock_two
 	name = "\improper Dock Two"
 	icon_state = "dk_yellow"
+
+/area/tether/station/burial
+	name = "\improper Burial"
+	icon_state = "chapel_morgue"
 
 /area/crew_quarters/showers
 	name = "\improper Unisex Showers"

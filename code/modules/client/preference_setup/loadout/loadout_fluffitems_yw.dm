@@ -159,6 +159,15 @@
 
 //  C CKEYS
 
+//cheekycrenando
+
+/datum/gear/fluff/srususovietuniform
+	path = /obj/item/clothing/under/soviet
+	display_name = "Soviet Uniform"
+	description = "Standard issue soviet dress uniform"
+	ckeywhitelist = list("cheekycrenando ")
+	character_name = list("Srusu Rskuzu")
+
 //captmatt4
 //Payton Joghs
 /datum/gear/fluff/payton_joghs_1
@@ -167,6 +176,14 @@
 	description = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
 	ckeywhitelist = list("captmatt4")
 	character_name = list("Payton Joghs")
+
+//Kaenin Qerrlar
+/datum/gear/fluff/kaenin_qerrlar_1
+	path = /obj/item/clothing/accessory/medal/silver/fluff/kaeninmedal
+	display_name = "Kaenin Qerrlar's medal of valor"
+	description = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Kaenin Qerrlar, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Qerrlar piloted a combat exosuit to combat a hostile lifeform until it simply ran out of power, after this, he continued on foot.\" It is adorned with a purple ribbon."
+	ckeywhitelist = list("captmatt4")
+	character_name = list("Kaenin Qerrlar")
 
 //Eliana Noya
 /datum/gear/fluff/eliana_noya_1
@@ -225,7 +242,7 @@
 	display_name = "A mysterious cookie"
 	description = "DAS A BIG COOKIE!!!"
 	ckeywhitelist = list("dameonowen")
-	character_name = list("Dameon Owen")
+	character_name = list("Dameon Owen", "Amber Owen")
 
 //dawidoe
 //Melissa Krutz
@@ -665,6 +682,13 @@
 	character_name = list("Kettek Ollarch")
 
 //  N CKEYS
+//NESgamer190
+/datum/gear/fluff/lucy_flask
+	path = /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/lucyprice
+	display_name = "Cryostasis Thermos"
+	description = "A thermos that has been designed to look something akin to a mix between a cryostasis beaker and a thermos.  Does NOT keep the drinks cold, surprisingly enough.."
+	ckeywhitelist = list("nesgamer190")
+	character_name = list("Lucy Price")
 
 //  O CKEYS
 
@@ -703,6 +727,14 @@
 //  Q CKEYS
 
 //  R CKEYS
+
+//risingstarflash
+/datum/gear/fluff/stellar_collar
+	path = /obj/item/clothing/accessory/collar/fluff/stellar_collar
+	display_name = "Heart Collar"
+	description = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Stellar and Reyna close together, paws locked and facing the picture slightly sideways with beaming smiles."
+	ckeywhitelist = list("risingstarslash")
+	character_name = list("Stellar Wolf")
 
 //radiantflash
 //Vasharr Zahirn
@@ -744,7 +776,6 @@
 	character_name = list("Basir Fahim")
 
 //  S CKEYS
-
 //snakewitharocketlauncher
 //Alex Wolf
 /datum/gear/fluff/alex_1

@@ -228,6 +228,16 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "koreihelmet_mob"
 
+/obj/item/clothing/accessory/medal/silver/fluff/kaeninmedal
+	name = "Kaenin Qerrlar\'s medal of valor"
+	desc = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Kaenin Qerrlar, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Qerrlar piloted a combat exosuit to combat a hostile lifeform until it simply ran out of power, after this, he continued on foot.\" It is adorned with a purple ribbon."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "valormedal"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "valormedal_mob"
+	overlay_state = "valormedal_mob"
+
+
 // *************
 // CynicalTester
 // *************
@@ -1450,3 +1460,29 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "tp_gloves_onmob"
 
+// ******
+// RisingStarSlash
+// ******
+//Stellar Wolf
+/obj/item/clothing/accessory/collar/fluff/stellar_collar
+	name = "Heart Collar"
+	desc = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Stellar and Reyna close together, paws locked and facing the picture slightly sideways with beaming smiles."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "stellarcollar"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "stellarcollar_mob"
+	overlay_state = "stellarcollar_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
+
+// ******
+// CheekyCrenando
+// ******
+//Srusu Rskuzu
+/obj/item/clothing/under/fluff/srususoviet
+	name = "Soviet Uniform"
+	desc = "A standard issue Soviet Dress uniform"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "srusuuniform"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "srusuuniform"
