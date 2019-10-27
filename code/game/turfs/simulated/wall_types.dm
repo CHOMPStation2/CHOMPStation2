@@ -234,6 +234,18 @@
 	icon_state = "void-hc"
 	hard_corner = 1
 
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/blue
+	name = "hardcorner wall"
+	icon_state = "void-hc"
+	hard_corner = 1
+	stripe_color = "#0000FF"
+
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/lightblue
+	name = "hardcorner wall"
+	icon_state = "void-hc"
+	hard_corner = 1
+	stripe_color = "#33ccff"
+
 /turf/simulated/shuttle/wall/voidcraft/no_join
 	name = "nojoin wall"
 	icon_state = "void-nj"
@@ -244,6 +256,12 @@
 
 /turf/simulated/shuttle/wall/voidcraft/blue
 	stripe_color = "#0000FF"
+
+/turf/simulated/shuttle/wall/voidcraft/lightblue
+	stripe_color = "#33ccff"
+
+/turf/simulated/shuttle/wall/voidcraft/orange
+	stripe_color = "#cc3300"
 
 /turf/simulated/shuttle/wall/voidcraft/green
 	stripe_color = "#00FF00"
