@@ -387,32 +387,28 @@
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
 	outdoors = TRUE
-	movement_cost = 8
 	var/list/crossed_dirs = list()
 
 /turf/simulated/floor/snow/snow2
 	name = "snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snownew"
-	movement_cost = 4
+	initial_flooring = /decl/flooring/snow
 
 /turf/simulated/floor/snow/gravsnow
 	name = "snow"
 	icon_state = "gravsnow"
 	initial_flooring = /decl/flooring/snow/gravsnow
-	movement_cost = 0
 
 /turf/simulated/floor/snow/plating
 	name = "snowy playing"
 	icon_state = "snowyplating"
 	initial_flooring = /decl/flooring/snow/plating
-	movement_cost = 0
 
 /turf/simulated/floor/snow/plating/drift
 	name = "snowy plating"
 	icon_state = "snowyplayingdrift"
 	initial_flooring = /decl/flooring/snow/plating/drift
-	movement_cost = 0
 
 #define FOOTSTEP_SPRITE_AMT 2
 

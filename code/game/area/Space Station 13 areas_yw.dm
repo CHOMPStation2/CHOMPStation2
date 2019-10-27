@@ -37,14 +37,6 @@
 	name = "Blue Sergal"
 	icon_state = "amaint"
 
-/area/maintenance/blueserg/dorms
-	name = "Blue Sergal"
-	icon_state = "amaint"
-
-/area/maintenance/blueserg/misc
-	name = "Blue Sergal"
-	icon_state = "amaint"
-
 /area/rnd/outpost/toxinsworkshop
 	name = "\improper Research Outpost Toxins Workshop"
 	icon_state = "toxtest"

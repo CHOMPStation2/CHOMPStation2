@@ -40,7 +40,7 @@
 
 	//Atmosphere properties
 	#define CRYOGAIA_ONE_ATMOSPHERE	100 //kPa
-	#define CRYOGAIA_AVG_TEMP	293.2 //kelvin
+	#define CRYOGAIA_AVG_TEMP	215 //kelvin
 	#define CRYOGAIA_PER_N2		0.16 //percent
 	#define CRYOGAIA_PER_O2		0.72
 	#define CRYOGAIA_PER_N2O	0.00 //Currently no capacity to 'start' a turf with this. See turf.dm

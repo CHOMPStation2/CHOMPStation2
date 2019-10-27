@@ -262,7 +262,6 @@
 	item_state = "helm_explorer"
 	item_state_slots = list(slot_r_hand_str = "syndicate-helm-black", slot_l_hand_str = "syndicate-helm-black")
 	armor = list(melee = 40, bullet = 15, laser = 25,energy = 35, bomb = 30, bio = 100, rad = 70)
-	camera_networks = list(NETWORK_EXPLORATION)
 	light_overlay = "helmet_light_dual" //explorer_light
 
 /obj/item/clothing/suit/space/void/exploration

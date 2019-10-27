@@ -332,7 +332,7 @@ var/global/list/latejoin_tram   = list()
 		 //do we have something we can de-ice the door with?
 		if(istype(I, /obj/item/weapon))
 			to_chat(user, "<span class='notice'>You start to chip at the ice covering \the [src]</span>")
-
+		
 		//is there a special case for the item we're holding?
 		if(I.is_crowbar() && !skip)
 			if(do_after(user, 5 SECONDS))
@@ -433,34 +433,6 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram
 
-
-
-
-
-
-
-
-
-
-
-
-//Dance pole
-/obj/structure/dancepole
-	name = "dance pole"
-	desc = "Engineered for your entertainment"
-	icon = 'icons/obj/objects_vr.dmi'
-	icon_state = "dancepole"
-	density = 0
-	anchored = 1
-
-/obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.is_wrench())
-		anchored = !anchored
-		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
-		if(anchored)
-			to_chat(user, "<font color='blue'>You secure \the [src].</font>")
-		else
-			to_chat(user, "<font color='blue'>You unsecure \the [src].</font>")
 //
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
@@ -517,61 +489,3 @@ var/global/list/latejoin_tram   = list()
 	layer = ABOVE_WINDOW_LAYER
 /obj/structure/noticeboard
 	layer = ABOVE_WINDOW_LAYER
-
-
-// Icy crystals.
-/datum/category_item/catalogue/material/trail_blazer
-	name = "Ice Colony Equipment - Trailblazer"
-	desc = "This is a glowing stick embedded int he ground with a light on top, commonly used in snowy installations \
-	and in tundra conditions."
-	value = CATALOGUER_REWARD_EASY
-
-/obj/machinery/trailblazer
-	name = "trail blazer"
-	desc = "A glowing stick- light."
-	icon = 'icons/obj/mining_yw.dmi'
-	icon_state = "redtrail_light_on"
-	density = TRUE
-	anchored = TRUE
-	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
-
-obj/machinery/trailblazer/Initialize()
-	randomize_color()
-	return ..()
-
-/obj/machinery/trailblazer/proc/randomize_color()
-	if(prob(30))
-		icon_state = "redtrail_light_on"
-		set_light(2, 2, "#FF0000")
-	else
-		set_light(2, 2, "#33CC33")
-
-/obj/machinery/trailblazer/red
-	name = "trail blazer"
-	desc = "A glowing stick- light.This one is glowing red."
-	icon = 'icons/obj/mining_yw.dmi'
-	icon_state = "redtrail_light_on"
-
-/obj/machinery/trailblazer/red/randomize_color()
-	if(prob(30))
-		icon_state = "redtrail_light_on"
-	set_light(2, 2, "#FF0000")
-
-/obj/machinery/trailblazer/blue
-	name = "trail blazer"
-	desc = "A glowing stick- light. This one is glowing blue."
-	icon = 'icons/obj/mining_yw.dmi'
-	icon_state = "bluetrail_light_on"
-//	set_light(3, 3, "#C4FFFF")
-
-/obj/machinery/trailblazer/blue/randomize_color()
-	if(prob(30))
-		icon_state = "bluetrail_light_on"
-	set_light(2, 2, "#C4FFFF")
-
-/obj/machinery/computer/security/exploration
-	name = "head mounted camera monitor"
-	desc = "Used to access the built-in cameras in helmets."
-	icon_state = "syndicam"
-	network = list(NETWORK_EXPLORATION)
-	circuit = null
