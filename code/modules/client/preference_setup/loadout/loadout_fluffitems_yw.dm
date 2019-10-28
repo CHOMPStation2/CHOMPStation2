@@ -165,7 +165,7 @@
 	path = /obj/item/clothing/under/soviet
 	display_name = "Soviet Uniform"
 	description = "Standard issue soviet dress uniform"
-	ckeywhitelist = list("cheekycrenando ")
+	ckeywhitelist = list("cheekycrenando")
 	character_name = list("Srusu Rskuzu")
 
 //captmatt4
