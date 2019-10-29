@@ -492,6 +492,15 @@
 
 //  H CKEYS
 
+//hagawaga
+//Lana Xavier
+/datum/gear/fluff/hagawaga_romanarmor
+	path = /obj/item/clothing/under/fluff/romanarmor
+	display_name = "Roman Legionary Armor"
+	description = "Basically looks like what you would expect a segmented plated armor from the early Roman Empire to look like."
+	ckeywhitelist = list("hagawaga")
+	character_name = list("Lana Xavier")
+
 //harpsong
 //Harpsong
 /datum/gear/fluff/harpsong_1
@@ -680,6 +689,29 @@
 	description = "A colour-changing collar. The collar itself changes colour, and has a gold tag on it that says \"Kettek Ollarch\" in small black lettering. Stiched on the inside is the same name, seemingly in case the tag falls off."
 	ckeywhitelist = list("masmc")
 	character_name = list("Kettek Ollarch")
+
+//Moca_The_Porg1
+//Mocha
+/datum/gear/fluff/mochaexploreruniform
+	path = /obj/item/clothing/under/fluff/mocha_uniform
+	display_name = "Winterized Explorer Jumpsuit"
+	description = "A Greenish-white uniform for operating in hazardous environments. This one is suited for colder environments."
+	ckeywhitelist = list("Moca_The_Porg1")
+	character_name = list("Mocha")
+
+/datum/gear/fluff/mochaexplorersuit
+	path = /obj/item/clothing/vest/fluff/mocha_suit
+	display_name = "Winterized Explorer Suit"
+	description = "An armoured suit for exploring harsh environments. This one seems more suited for winter."
+	ckeywhitelist = list("Moca_The_Porg1")
+	character_name = list("Mocha")
+
+/datum/gear/fluff/mochaexplorerhood
+	path = /obj/item/clothing/head/hood/mocha_hood
+	display_name = "Winterized Explorer Hood"
+	description = "An armoured hood for exploring harsh environments. This one seems fluffier."
+	ckeywhitelist = list("Moca_The_Porg1")
+	character_name = list("Mocha")
 
 //  N CKEYS
 //NESgamer190
