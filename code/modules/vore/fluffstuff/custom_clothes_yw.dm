@@ -1511,7 +1511,7 @@
 	icon_override = "icons/vore/custom_clothes_yw.dmi"
 	item_state = "mocha_uniform"
 
-/obj/item/clothing/vest/fluff/mocha_suit
+/obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
 	name = "Winterized Explorer Suit"
 	desc = "An armoured suit for exploring harsh environments. This one seems more suited for winter."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -1523,6 +1523,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	hoodtype = /obj/item/clothing/head/hood/mocha_hood
 	siemens_coefficient = 0.9
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35) // Inferior to sec vests in bullet/laser but better for environmental protection.
 	allowed = list(
@@ -1543,3 +1544,7 @@
 	icon_state = "mocha_hood"
 	icon_override = "icons/vore/custom_clothes_yw.dmi"
 	item_state = "mocha_hood_s"
+	flags = THICKMATERIAL
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.9
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)

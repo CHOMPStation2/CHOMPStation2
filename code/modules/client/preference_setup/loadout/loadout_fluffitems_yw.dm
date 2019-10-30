@@ -698,20 +698,15 @@
 	description = "A Greenish-white uniform for operating in hazardous environments. This one is suited for colder environments."
 	ckeywhitelist = list("Moca_The_Porg1")
 	character_name = list("Mocha")
+	allowed_roles = list("Explorer", "Pathfinder")
 
-/datum/gear/fluff/mochaexplorersuit
-	path = /obj/item/clothing/vest/fluff/mocha_suit
-	display_name = "Winterized Explorer Suit"
-	description = "An armoured suit for exploring harsh environments. This one seems more suited for winter."
+/datum/gear/fluff/mocha_suit_kit
+	path = /obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
+	display_name = "Mocha's modkit"
+	description = "A kit containing all the needed tools and parts to modify a Explorer Suit"
 	ckeywhitelist = list("Moca_The_Porg1")
 	character_name = list("Mocha")
-
-/datum/gear/fluff/mochaexplorerhood
-	path = /obj/item/clothing/head/hood/mocha_hood
-	display_name = "Winterized Explorer Hood"
-	description = "An armoured hood for exploring harsh environments. This one seems fluffier."
-	ckeywhitelist = list("Moca_The_Porg1")
-	character_name = list("Mocha")
+	allowed_roles = list("Explorer", "Pathfinder")
 
 //  N CKEYS
 //NESgamer190
