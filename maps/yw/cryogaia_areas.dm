@@ -36,6 +36,8 @@
 
 /area/borealis1/outdoors/grounds/power
 	name = "\The Exterior Powerline"
+/area/borealis1/outdoors/grounds/traderpad
+	name = "\improper Cryogaia Commerce Pad"
 
 /area/borealis1/outdoors/grounds/solars
 	name = "\The solar array"
@@ -174,7 +176,7 @@
 
 // Exploration Shuttle stuff //
 /area/cryogaia/station/excursion_dock
-	name = "\improper Excursion Shuttle Dock"
+	name = "\improper Exploration Vessel Dock"
 
 /area/cryogaia/station/explorer_prep
 	name = "\improper Explorer Prep Room"
@@ -186,37 +188,37 @@
 	name = "\improper Pathfinder's Office"
 
 /area/shuttle/excursion
-	name = "\improper Excursion Shuttle"
+	name = "\improper Exploration Vessel"
 	icon_state = "shuttle2"
 	base_turf = /turf/space
 
 /area/shuttle/excursion/cryogaia
-	name = "\improper Excursion Shuttle - dock"
+	name = "\improper Exploration Vessel - dock"
 	base_turf = /turf/simulated/floor/reinforced
 
 /area/shuttle/excursion/cryogaia_nearby
-	name = "\improper Excursion Shuttle - Dock Near"
+	name = "\improper Exploration Vessel - Dock Near"
 
 /area/shuttle/excursion/cryogaia_dockarm			// Likely won't be in use, might move it to an emergency docking zone outside the colony? Or perhaps a space dock nearby. -RF
-	name = "\improper Excursion Shuttle - Docking Arm"
+	name = "\improper Exploration Vessel - Docking Arm"
 
 /area/shuttle/excursion/space
-	name = "\improper Excursion Shuttle - Space"
+	name = "\improper Exploration Vessel - Space"
 
 /area/shuttle/excursion/space_moving
-	name = "\improper Excursion Shuttle - Space Moving"
+	name = "\improper Exploration Vessel - Space Moving"
 	base_turf = /turf/space/transit/north
 
 /area/shuttle/excursion/bluespace
-	name = "\improper Excursion Shuttle - Bluespace"
+	name = "\improper Exploration Vessel - Bluespace"
 	base_turf = /turf/space/bluespace
 
 /area/shuttle/excursion/sand_moving
-	name = "\improper Excursion Shuttle - Sand Transit"
+	name = "\improper Exploration Vessel - Sand Transit"
 	base_turf = /turf/space/sandyscroll
 
 /area/shuttle/excursion/borealis1_sky
-	name = "\improper Excursion Shuttle - Borealis Majoris 1 Sky"
+	name = "\improper Exploration Vessel - Borealis Majoris 1 Sky"
 	base_turf = /turf/simulated/sky
 
 //antag stuff

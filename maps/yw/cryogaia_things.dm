@@ -387,12 +387,12 @@ var/global/list/latejoin_tram   = list()
 
 //Ice pick, mountain axe, or ice axe.
 /obj/item/weapon/ice_pick
-	name = "ice pick"
+	name = "ice axe"
 	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
-	icon = 'icons/obj/items.dmi'
-	icon_state = "spickaxe"
-	item_state = "spickaxe"
-	force = 5
+	icon = 'icons/obj/items_yw.dmi'
+	icon_state = "icepick"
+	item_state = "icepick"
+	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
 	throwforce = 0
 //end of Ice Pick
 
@@ -569,12 +569,21 @@ obj/machinery/trailblazer/Initialize()
 	desc = "A glowing stick- light. This one is glowing blue."
 	icon = 'icons/obj/mining_yw.dmi'
 	icon_state = "bluetrail_light_on"
-//	set_light(3, 3, "#C4FFFF")
 
 /obj/machinery/trailblazer/blue/randomize_color()
 	if(prob(30))
 		icon_state = "bluetrail_light_on"
 	set_light(2, 2, "#C4FFFF")
+
+/obj/machinery/trailblazer/yellow
+	name = "trail blazer"
+	desc = "A glowing stick- light. This one is glowing blue."
+	icon_state = "yellowtrail_light_on"
+
+/obj/machinery/trailblazer/yellow/randomize_color()
+	if(prob(30))
+		icon_state = "yellowtrail_light_on"
+	set_light(2, 2, "#ffea00")
 
 /obj/machinery/computer/security/exploration
 	name = "head mounted camera monitor"
