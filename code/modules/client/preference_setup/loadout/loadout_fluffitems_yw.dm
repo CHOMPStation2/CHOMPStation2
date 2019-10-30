@@ -160,9 +160,9 @@
 //  C CKEYS
 
 //cheekycrenando
-
+//Srusu Rskuzu
 /datum/gear/fluff/srususovietuniform
-	path = /obj/item/clothing/under/soviet
+	path = /obj/item/clothing/under/fluff/srususoviet
 	display_name = "Soviet Uniform"
 	description = "Standard issue soviet dress uniform"
 	ckeywhitelist = list("cheekycrenando")
