@@ -160,9 +160,9 @@
 //  C CKEYS
 
 //cheekycrenando
-
+//Srusu Rskuzu
 /datum/gear/fluff/srususovietuniform
-	path = /obj/item/clothing/under/soviet
+	path = /obj/item/clothing/under/fluff/srususoviet
 	display_name = "Soviet Uniform"
 	description = "Standard issue soviet dress uniform"
 	ckeywhitelist = list("cheekycrenando")
@@ -492,6 +492,15 @@
 
 //  H CKEYS
 
+//hagawaga
+//Lana Xavier
+/datum/gear/fluff/hagawaga_romanarmor
+	path = /obj/item/clothing/under/fluff/romanarmor
+	display_name = "Roman Legionary Armor"
+	description = "Basically looks like what you would expect a segmented plated armor from the early Roman Empire to look like."
+	ckeywhitelist = list("hagawaga")
+	character_name = list("Lana Xavier")
+
 //harpsong
 //Harpsong
 /datum/gear/fluff/harpsong_1
@@ -680,6 +689,24 @@
 	description = "A colour-changing collar. The collar itself changes colour, and has a gold tag on it that says \"Kettek Ollarch\" in small black lettering. Stiched on the inside is the same name, seemingly in case the tag falls off."
 	ckeywhitelist = list("masmc")
 	character_name = list("Kettek Ollarch")
+
+//Moca_The_Porg1
+//Mocha
+/datum/gear/fluff/mochaexploreruniform
+	path = /obj/item/clothing/under/fluff/mocha_uniform
+	display_name = "Winterized Explorer Jumpsuit"
+	description = "A Greenish-white uniform for operating in hazardous environments. This one is suited for colder environments."
+	ckeywhitelist = list("Moca_The_Porg1")
+	character_name = list("Mocha")
+	allowed_roles = list("Explorer", "Pathfinder")
+
+/datum/gear/fluff/mocha_suit_kit
+	path = /obj/item/device/modkit_conversion/fluff/mocha_suit_kit
+	display_name = "Mocha's modkit"
+	description = "A kit containing all the needed tools and parts to modify a Explorer Suit"
+	ckeywhitelist = list("Moca_The_Porg1")
+	character_name = list("Mocha")
+	allowed_roles = list("Explorer", "Pathfinder")
 
 //  N CKEYS
 //NESgamer190
