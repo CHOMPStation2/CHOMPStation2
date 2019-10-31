@@ -701,7 +701,7 @@
 	allowed_roles = list("Explorer", "Pathfinder")
 
 /datum/gear/fluff/mocha_suit_kit
-	path = /obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
+	path = /obj/item/device/modkit_conversion/fluff/mocha_suit_kit
 	display_name = "Mocha's modkit"
 	description = "A kit containing all the needed tools and parts to modify a Explorer Suit"
 	ckeywhitelist = list("Moca_The_Porg1")
