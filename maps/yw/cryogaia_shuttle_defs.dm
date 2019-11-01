@@ -147,35 +147,68 @@
 //////////////////////////////////////////////////////////////
 // Mercenary Shuttle
 // Look into fitting this on the Main map- RadiantFlash
+// Mercenary
 /datum/shuttle/multi_shuttle/mercenary
 	name = "Mercenary"
-	warmup_time = 8
-	move_time = 60
+	warmup_time = 0
 	origin = /area/syndicate_station/start
-	//interim = /area/syndicate_station/transit // Disabled until this even exists.
-	start_location = "Mercenary base"
+	interim = /area/syndicate_station/transit
+	can_cloak = TRUE
+	cloaked = TRUE
+	start_location = "Mercenary Base"
 	destinations = list(
-		//"Northwest of the station" = /area/syndicate_station/northwest,
-		//"North of the station" = /area/syndicate_station/north,
-		//"Northeast of the station" = /area/syndicate_station/northeast,
-		//"(Land) Southwest of Tether" = /area/syndicate_station/southwest,
-		//"South of the station" = /area/syndicate_station/south,
-		//"Southeast of the station" = /area/syndicate_station/southeast,
-		//"Telecomms Satellite" = /area/syndicate_station/commssat,
-		"(Land) Solar farm west of Tether" = /area/syndicate_station/mining,
-		"Tether spaceport" = /area/syndicate_station/arrivals_dock
+		"Northwest of the station" = /area/syndicate_station/northwest,
+		"North of the station" = /area/syndicate_station/north,
+		"Northeast of the station" = /area/syndicate_station/northeast,
+		"Southwest of the station" = /area/syndicate_station/southwest,
+		"South of the station" = /area/syndicate_station/south,
+		"Southeast of the station" = /area/syndicate_station/southeast,
 		)
 	docking_controller_tag = "merc_shuttle"
 	destination_dock_targets = list(
-		"Mercenary base" = "merc_base",
-		"Tether spaceport" = "nuke_shuttle_dock_airlock",
+		"Mercenary Base" = "merc_base",
+		"Arrivals dock" = "nuke_shuttle_dock_airlock",
 		)
 	announcer = "Automated Traffic Control"
 
 /datum/shuttle/multi_shuttle/mercenary/New()
-	arrival_message = "Attention. An unregistered vessel is approaching Virgo-3B."
-	departure_message = "Attention. A unregistered vessel is now leaving Virgo-3B."
+	arrival_message = "Attention.  A vessel is approaching the colony."
+	departure_message = "Attention.  A vessel is now leaving from the colony."
 	..()
+
+
+// Heist
+/datum/shuttle/multi_shuttle/skipjack
+	name = "Skipjack"
+	warmup_time = 0
+	origin = /area/skipjack_station/start
+	interim = /area/skipjack_station/transit
+	can_cloak = TRUE
+	cloaked = TRUE
+	destinations = list(
+		"Northeastern Wilderness" = /area/skipjack_station/northeast_solars,
+		"Northwestern Wilderness" = /area/skipjack_station/northwest_solars,
+		"Southeasten Wilderness Valley" = /area/skipjack_station/southeast_solars,
+		"Southwestern Wilderness" = /area/skipjack_station/southwest_solars,
+		)
+	announcer = "Automated Traffic Control"
+
+/datum/shuttle/multi_shuttle/skipjack/New()
+	arrival_message = "Attention.  Unidentified object approaching the colony."
+	departure_message = "Attention.  Unidentified object exiting local space.  Unidentified object expected to escape Borealis gravity well with current velocity."
+	..()
+
+/datum/shuttle/ferry/multidock/specops/ert
+	name = "Special Operations"
+	location = 0
+	warmup_time = 10
+	area_offsite = /area/shuttle/specops/station	//centcom is the home station, the Exodus is offsite
+	area_station = /area/shuttle/specops/centcom
+	docking_controller_tag = "specops_shuttle_port"
+	docking_controller_tag_station = "specops_shuttle_port"
+	docking_controller_tag_offsite = "specops_shuttle_fore"
+	dock_target_station = "specops_centcom_dock"
+	dock_target_offsite = "specops_dock_airlock"
 
 //////////////////////////////////////////////////////////////
 // RogueMiner "Belter: Shuttle

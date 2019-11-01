@@ -185,7 +185,7 @@
 	. = ..()
 
 /datum/shuttle/web_shuttle/excursion
-	name = "Excursion Shuttle"
+	name = "Prototype Exploration Vessel"
 	warmup_time = 0
 	current_area = /area/shuttle/excursion/cryogaia
 	docking_controller_tag = "expshuttle_docker"
