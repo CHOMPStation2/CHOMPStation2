@@ -130,7 +130,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		)
 
 /datum/weather/borealis1
-	name = "beta aquarii base"
+	name = "borealis1 base"
 	temp_high = 233.15 // -40c
 	temp_low =  228.15 // -70c
 

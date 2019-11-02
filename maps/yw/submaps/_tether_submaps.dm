@@ -3,25 +3,25 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-/datum/map_template/tether_lateload/tether_misc
+/datum/map_template/cryogaia_lateload/cryogaia_misc
 	name = "Tether - Misc"
 	desc = "Misc areas, like some transit areas, holodecks, merc area."
 	mappath = 'tether_misc.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/ships
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/ships
 
-/datum/map_z_level/tether_lateload/misc
+/datum/map_z_level/cryogaia_lateload/misc
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
 
-/datum/map_template/tether_lateload/tether_ships
+/datum/map_template/cryogaia_lateload/tether_ships
 	name = "Tether - Ships"
 	desc = "Ship transit map and whatnot."
 	mappath = 'tether_ships.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/ships
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/ships
 
-/datum/map_z_level/tether_lateload/ships
+/datum/map_z_level/cryogaia_lateload/ships
 	name = "Ships"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
 
@@ -47,13 +47,13 @@
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_UNDERDARK, 64, 64)         // Create the mining ore distribution map.
 
 
-/datum/map_template/tether_lateload/tether_plains
-	name = "Tether - Plains"
-	desc = "The Virgo 3B away mission."
-	mappath = 'tether_plains.dmm'
-	associated_map_datum = /datum/map_z_level/tether_lateload/tether_plains
+/datum/map_template/tether_lateload/borealis_plains
+	name = "Snow plains"
+	desc = "The Borealis away mission."
+	mappath = 'borealis_plains.dmm'
+	associated_map_datum = /datum/map_z_level/borealis_plains
 
-/datum/map_z_level/tether_lateload/tether_plains
+/datum/map_z_level/tether_lateload/borealis_plains
 	name = "Away Mission - Plains"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 	base_turf = /turf/simulated/mineral/floor/virgo3b

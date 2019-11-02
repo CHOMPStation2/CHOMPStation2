@@ -4,12 +4,16 @@
 #define Z_LEVEL_CRYOGAIA_MINE		2
 #define Z_LEVEL_CRYOGAIA_LOWER		3
 #define Z_LEVEL_CRYOGAIA_MAIN		4
-//#define Z_LEVEL_ALIENSHIP			5
-//#define Z_LEVEL_BEACH				6
-//#define Z_LEVEL_BEACH_CAVE		7
-//#define Z_LEVEL_AEROSTAT			8
-//#define Z_LEVEL_AEROSTAT_SURFACE	9
-//#define Z_LEVEL_DEBRISFIELD		10
+#define Z_LEVEL_ALIENSHIP			5
+#define Z_LEVEL_BEACH				6
+#define Z_LEVEL_BEACH_CAVE		7
+#define Z_LEVEL_AEROSTAT			8
+#define Z_LEVEL_AEROSTAT_SURFACE	9
+#define Z_LEVEL_DEBRISFIELD		10
+#define Z_LEVEL_MISC						11
+#define Z_LEVEL_SHIPS						12
+#define Z_LEVEL_UNDERDARK					13
+#define Z_LEVEL_PLAINS						14
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -147,7 +151,7 @@
 
 /datum/map/cryogaia/perform_map_generation()
 
-//	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, 64, 64)         // Create the mining ore distribution map.
 
 	return 1
