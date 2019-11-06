@@ -696,7 +696,7 @@
 	path = /obj/item/clothing/under/fluff/mocha_uniform
 	display_name = "Winterized Explorer Jumpsuit"
 	description = "A Greenish-white uniform for operating in hazardous environments. This one is suited for colder environments."
-	ckeywhitelist = list("moca_the_porg1")
+	ckeywhitelist = list("mocatheporg1")
 	character_name = list("Mocha")
 	allowed_roles = list("Explorer", "Pathfinder")
 
@@ -704,7 +704,7 @@
 	path = /obj/item/device/modkit_conversion/fluff/mocha_suit_kit
 	display_name = "Mocha's modkit"
 	description = "A kit containing all the needed tools and parts to modify a Explorer Suit"
-	ckeywhitelist = list("moca_the_porg1")
+	ckeywhitelist = list("mocatheporg1")
 	character_name = list("Mocha")
 	allowed_roles = list("Explorer", "Pathfinder")
 
