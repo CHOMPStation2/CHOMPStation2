@@ -1478,7 +1478,7 @@
 // ******
 // CheekyCrenando
 // ******
-//Srusu Rskuzu
+//Srusu Rskuzu-Ahslru
 /obj/item/clothing/under/fluff/srususoviet
 	name = "Soviet Uniform"
 	desc = "A standard issue Soviet Dress uniform"
