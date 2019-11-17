@@ -30,7 +30,7 @@ mob/proc/weaveWeb()
 		spawn(30) //3 seconds to form
 		new /obj/effect/spider/stickyweb(src.loc)
 	else
-		src << "You do not have enough nutrition to create webbing!"
+		to_chat(src, "You do not have enough nutrition to create webbing!")
 */
 
 /mob/proc/weaveWebBindings()
@@ -43,4 +43,4 @@ mob/proc/weaveWeb()
 			var/obj/item/clothing/suit/straight_jacket/web_bindings/bindings = new() //This sprite is amazing, I must say.
 			src.put_in_hands(bindings)
 	else
-		src << "You do not have enough nutrition to create webbing!" //CK~
+		to_chat(src, "You do not have enough nutrition to create webbing!") //CK~
