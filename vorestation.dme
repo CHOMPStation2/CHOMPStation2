@@ -990,6 +990,7 @@
 #include "code\game\objects\items\robobag.dm"
 #include "code\game\objects\items\shooting_range.dm"
 #include "code\game\objects\items\toys.dm"
+#include "code\game\objects\items\toys_yw.dm"
 #include "code\game\objects\items\trash.dm"
 #include "code\game\objects\items\trash_vr.dm"
 #include "code\game\objects\items\devices\advnifrepair.dm"
