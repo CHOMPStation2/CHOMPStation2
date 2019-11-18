@@ -552,3 +552,18 @@
 	desc = " A thermos that has been designed to look something akin to a mix between a cryostasis beaker and a thermos.  Does NOT keep the drinks cold, surprisingly enough."
 	icon_state = "cryothermos"
 	icon = 'icons/vore/custom_items_yw.dmi'
+
+// **************
+// Moca_The_Porg1
+// **************
+
+//Mocha
+/obj/item/device/modkit_conversion/fluff/mocha_suit_kit
+	name = "Mocha's modkit"
+	desc = "A kit containing all the needed tools and parts to modify a Explorer Suit"
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/clothing/suit/storage/hooded/explorer
+	to_suit = /obj/item/clothing/suit/storage/hooded/fluff/mocha_suit

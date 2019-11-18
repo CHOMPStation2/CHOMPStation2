@@ -1478,7 +1478,7 @@
 // ******
 // CheekyCrenando
 // ******
-//Srusu Rskuzu
+//Srusu Rskuzu-Ahslru
 /obj/item/clothing/under/fluff/srususoviet
 	name = "Soviet Uniform"
 	desc = "A standard issue Soviet Dress uniform"
@@ -1486,3 +1486,65 @@
 	icon_state = "srusuuniform"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "srusuuniform"
+
+// ******
+// Hagawaga
+// ******
+//Lana Xavier
+/obj/item/clothing/under/fluff/romanarmor
+	name = "Roman Legionary Armor"
+	desc = "Basically looks like what you would expect a segmented plated armor from the early Roman Empire to look like."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "hagawaga_romanarmor"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "hagawaga_romanarmor"
+
+// ******
+// Moca_The_Porg1
+// ******
+//Mocha
+/obj/item/clothing/under/fluff/mocha_uniform
+	name = "Winterized Explorer Jumpsuit"
+	desc = "A Greenish-white uniform for operating in hazardous environments. This one is suited for colder environments."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mocha_uniform"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "mocha_uniform"
+
+/obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
+	name = "Winterized Explorer Suit"
+	desc = "An armoured suit for exploring harsh environments. This one seems more suited for winter."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mocha_suit"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "mocha_suit_s"
+	slot_flags = SLOT_OCLOTHING
+	flags = THICKMATERIAL
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	hoodtype = /obj/item/clothing/head/hood/mocha_hood
+	siemens_coefficient = 0.9
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35) // Inferior to sec vests in bullet/laser but better for environmental protection.
+	allowed = list(
+		/obj/item/device/flashlight,
+		/obj/item/weapon/gun,
+		/obj/item/ammo_magazine,
+		/obj/item/weapon/melee,
+		/obj/item/weapon/material/knife,
+		/obj/item/weapon/tank,
+		/obj/item/device/radio,
+		/obj/item/weapon/pickaxe
+		)
+
+/obj/item/clothing/head/hood/mocha_hood
+	name = "Winterized Explorer Hood"
+	desc = "An armoured hood for exploring harsh environments. This one seems fluffier."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mocha_hood"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "mocha_hood_s"
+	flags = THICKMATERIAL
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.9
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
