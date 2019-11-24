@@ -315,6 +315,12 @@ var/global/list/latejoin_tram   = list()
 	var/freezing = 0 //see process().
 
 /obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I as obj, mob/user as mob)
+	//Time it takes in "seconds" to de-ice a door with the given tool
+	var/welderTime = 5 //Welder
+	var/icePickTime = 3 //Ice Pick
+	var/crowbarTime = 5 //Crowbar
+	var/genericToolTime = 10 //Any tool that doesn't have a special case.
+
 	if(frozen)
 		//the welding tool is a special snowflake.
 		if(istype(I, /obj/item/weapon/weldingtool))
@@ -322,23 +328,22 @@ var/global/list/latejoin_tram   = list()
 			if(welder.remove_fuel(0,user) && welder && welder.isOn())
 				to_chat(user, "<span class='notice'>You start to melt the ice off \the [src]</span>")
 				playsound(src, welder.usesound, 50, 1)
-				if(do_after(user, 5 SECONDS))
+				if(do_after(user, welderTime SECONDS))
 					to_chat(user, "<span class='notice'>You finish melting the ice off \the [src]</span>")
-					frozen = 0
-					cut_overlays()
+					unFreeze()
 					return
 
 		 //do we have something we can de-ice the door with?
 		if(istype(I, /obj/item/weapon/ice_pick))
-			handleRemoveIce(I, user, 3)
+			handleRemoveIce(I, user, icePickTime)
 			return
 
 		if(I.is_crowbar())
-			handleRemoveIce(I, user, 5)
+			handleRemoveIce(I, user, crowbarTime)
 			return
 
 		if(istype(I, /obj/item/weapon))
-			handleRemoveIce(I, user)
+			handleRemoveIce(I, user, genericToolTime)
 			return
 
 		//if we can't de-ice the door tell them what's wrong.
@@ -349,24 +354,31 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/weapon/W as obj, mob/user as mob, var/time = 10 as num)
 	to_chat(user, "<span class='notice'>You start to chip at the ice covering \the [src]</span>")
 	if(do_after(user, time SECONDS))
-		frozen = 0
-		cut_overlays()
+		unFreeze()
 		to_chat(user, "<span class='notice'>You finish chipping the ice off \the [src]</span>")
 
-/obj/machinery/door/airlock/glass_external/freezable/proc/handleFreeze()
+/obj/machinery/door/airlock/glass_external/freezable/proc/unFreeze()
+	frozen = 0
+	cut_overlays()
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/proc/freeze()
+	cut_overlays()
+	frozen = 1
+	add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleFreezeUnfreeze()
 	freezing = 1 //don't do the thing i'm already doing.
 	var/random = rand(2,7)
 
 	for(var/datum/planet/borealis2/P in SSplanets.planets)
 		if(istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
 			if(!frozen && density && prob(25))
-				cut_overlays()
-				frozen = 1
-				add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
+				freeze()
 		else if(!istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
 			if(frozen && prob(50))
-				cut_overlays()
-				frozen = 0
+				unFreeze()
 
 	sleep((random + 13) SECONDS)
 	freezing = 0
@@ -375,7 +387,7 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/door/airlock/glass_external/freezable/process()
 	if(!freezing)  //don't do the thing if i'm already doing it.
 		spawn(0)
-			handleFreeze()
+			handleFreezeUnfreeze()
 	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
@@ -387,13 +399,21 @@ var/global/list/latejoin_tram   = list()
 	//Frozen airlocks can't open.
 	if(frozen && !forced)
 		return
-	..()
+	else if(frozen && forced)
+		unFreeze()
+		return ..()
+	else
+		..()
 
 /obj/machinery/door/airlock/glass_external/freezable/close(var/forced = 0)
 	//Frozen airlocks can't shut either. (Though they shouldn't be able to freeze open)
 	if(frozen && !forced)
 		return
-	..()
+	else if(frozen && forced)
+		unFreeze()
+		return ..()
+	else
+		..()
 //end of freezable airlock stuff.
 
 //Ice pick, mountain axe, or ice axe.
