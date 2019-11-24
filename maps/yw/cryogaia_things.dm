@@ -312,6 +312,7 @@ var/global/list/latejoin_tram   = list()
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
 	var/frozen = 0
+	var/freezing = 0 //see process().
 
 /obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I as obj, mob/user as mob)
 	if(frozen)
@@ -352,20 +353,30 @@ var/global/list/latejoin_tram   = list()
 		cut_overlays()
 		to_chat(user, "<span class='notice'>You finish chipping the ice off \the [src]</span>")
 
-/obj/machinery/door/airlock/glass_external/freezable/process()
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleFreeze()
+	freezing = 1 //don't do the thing i'm already doing.
+	var/random = rand(2,7)
+
 	for(var/datum/planet/borealis2/P in SSplanets.planets)
-		if(istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard) && prob(25))
-			if(!frozen && density)
+		if(istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
+			if(!frozen && density && prob(25))
 				cut_overlays()
 				frozen = 1
 				add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
-		else
-			if(prob(50))
+		else if(!istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
+			if(frozen && prob(50))
 				cut_overlays()
 				frozen = 0
 
-	var/random = rand(2,7)
 	sleep((random + 13) SECONDS)
+	freezing = 0
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/process()
+	if(!freezing)  //don't do the thing if i'm already doing it.
+		spawn(0)
+			handleFreeze()
+	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
 	. = ..()
@@ -374,13 +385,13 @@ var/global/list/latejoin_tram   = list()
 
 /obj/machinery/door/airlock/glass_external/freezable/open(var/forced = 0)
 	//Frozen airlocks can't open.
-	if(frozen)
+	if(frozen && !forced)
 		return
 	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/close(var/forced = 0)
 	//Frozen airlocks can't shut either. (Though they shouldn't be able to freeze open)
-	if(frozen)
+	if(frozen && !forced)
 		return
 	..()
 //end of freezable airlock stuff.
