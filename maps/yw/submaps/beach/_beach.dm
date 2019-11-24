@@ -1,8 +1,8 @@
 // -- Datums -- //
 
 //We're including two new shuttle destinations. One is in orbit of our 'desert planet'
-/datum/shuttle_destination/excursion/virgo4orbit //Must be a unique path
-	name = "Virgo 4 Orbit" //The name of the destination
+/datum/shuttle_destination/excursion/borealis1orbit //Must be a unique path
+	name = "Borealis 1 Orbit" //The name of the destination
 	my_area = /area/shuttle/excursion/space //The area the shuttle goes when it's settled at this destination
 	preferred_interim_area = /area/shuttle/excursion/space_moving //The area the shuttle goes while it's moving there
 	skip_me = TRUE //Must be TRUE on all away-mission destinations for reasons
@@ -19,7 +19,7 @@
 	skip_me = TRUE
 
 	routes_to_make = list(
-		/datum/shuttle_destination/excursion/virgo4orbit = 30 SECONDS //This is the above one
+		/datum/shuttle_destination/excursion/borealis1orbit = 30 SECONDS //This is the above one
 	)
 
 //This is a special subtype of the thing that generates ores on a map
@@ -64,7 +64,7 @@
 	name = "shuttle connector - beach"
 	shuttle_name = "Excursion Shuttle"
 	//This list needs to be in the correct order, and start with the one that connects to the rest of the shuttle 'network'
-	destinations = list(/datum/shuttle_destination/excursion/virgo4orbit, /datum/shuttle_destination/excursion/beach)
+	destinations = list(/datum/shuttle_destination/excursion/borealis1orbit, /datum/shuttle_destination/excursion/beach)
 
 //This object simply performs any map setup that needs to happen on our map if it loads.
 //As with the above, you do need to place this object on the map somewhere.
@@ -87,7 +87,7 @@
 // Two mob spawners that are placed on the map that spawn some mobs!
 // They keep track of their mob, and when it's dead, spawn another (only if nobody is looking)
 // Note that if your map has step teleports, mobs may wander through them accidentally and not know how to get back
-/obj/tether_away_spawner/beach_outside
+/obj/cryogaia_away_spawner/beach_outside
 	name = "Beach Outside Spawner" //Just a name
 	faction = "beach_out" //Sets all the mobs to this faction so they don't infight
 	atmos_comp = TRUE //Sets up their atmos tolerances to work in this setting, even if they don't normally (20% up/down tolerance for each gas, and heat)
@@ -98,7 +98,7 @@
 		/mob/living/simple_mob/animal/passive/snake
 	)
 
-/obj/tether_away_spawner/beach_outside_friendly
+/obj/cryogaia_away_spawner/beach_outside_friendly
 	name = "Fennec Spawner"
 	faction = "fennec"
 	atmos_comp = TRUE
@@ -109,7 +109,7 @@
 		/mob/living/simple_mob/vore/fennec
 	)
 
-/obj/tether_away_spawner/beach_cave
+/obj/cryogaia_away_spawner/beach_cave
 	name = "Beach Cave Spawner"
 	faction = "beach_cave"
 	atmos_comp = TRUE
@@ -159,7 +159,7 @@
 	dynamic_lighting = 0
 
 /area/tether_away/beach
-	name = "\improper Away Mission - Virgo 4 Beach"
+	name = "\improper Away Mission - Borealis 1a Beach"
 	icon_state = "away"
 	base_turf = /turf/simulated/floor/beach/sand //This is what the ground turns into if destroyed/bombed/etc
 	//Not going to do sunlight simulations here like virgo3b
@@ -168,22 +168,22 @@
 	requires_power = 0
 
 /area/tether_away/beach/powershed
-	name = "\improper Away Mission - Virgo 4 Coast PS"
+	name = "\improper Away Mission - Borealis 1a Coast PS"
 	icon_state = "blue2"
 	base_turf = /turf/simulated/floor/beach/sand
 
 /area/tether_away/beach/coast
-	name = "\improper Away Mission - Virgo 4 Coast"
+	name = "\improper Away Mission - Borealis 1a Coast"
 	icon_state = "blue2"
 	base_turf = /turf/simulated/floor/beach/coastline
 
 /area/tether_away/beach/water
-	name = "\improper Away Mission - Virgo 4 Water"
+	name = "\improper Away Mission - Borealis 1a Water"
 	icon_state = "bluenew"
 	base_turf = /turf/simulated/floor/beach/coastwater
 
 /area/tether_away/beach/jungle
-	name = "\improper Away Mission - Virgo 4 Desert"
+	name = "\improper Away Mission - Borealis 1a Desert"
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/beach/sand/desert
 
@@ -194,17 +194,17 @@
 	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/cave
 
 /area/tether_away/cave/explored/normal
-	name = "\improper Away Mission - Virgo 4 Cave (E)"
+	name = "\improper Away Mission - Borealis 1a Cave (E)"
 	icon_state = "explored"
 
 /area/tether_away/cave/unexplored/normal
-	name = "\improper Away Mission - Virgo 4 Cave (UE)"
+	name = "\improper Away Mission - Borealis 1a Cave (UE)"
 	icon_state = "unexplored"
 
 /area/tether_away/cave/explored/deep
-	name = "\improper Away Mission - Virgo 4 Cave Deep (E)"
+	name = "\improper Away Mission - Borealis 1a Cave Deep (E)"
 	icon_state = "explored_deep"
 
 /area/tether_away/cave/unexplored/deep
-	name = "\improper Away Mission - Virgo 4 Cave Deep (UE)"
+	name = "\improper Away Mission - Borealis 1a Cave Deep (UE)"
 	icon_state = "unexplored_deep"

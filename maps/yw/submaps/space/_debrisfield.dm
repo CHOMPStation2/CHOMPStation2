@@ -7,7 +7,7 @@
 	skip_me = TRUE
 
 	routes_to_make = list(
-		/datum/shuttle_destination/excursion/virgo3b_orbit = 30 SECONDS
+		/datum/shuttle_destination/excursion/borealis2_orbit = 30 SECONDS
 	)
 
 // -- Objs -- //

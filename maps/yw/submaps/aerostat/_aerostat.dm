@@ -56,7 +56,7 @@
 	initialized = TRUE
 	return INITIALIZE_HINT_QDEL
 
-/obj/tether_away_spawner/aerostat_inside
+/obj/cryogaia_away_spawner/aerostat_inside
 	name = "Aerostat Indoors Spawner"
 	faction = "aerostat_inside"
 	atmos_comp = TRUE
@@ -70,7 +70,7 @@
 		/mob/living/simple_mob/vore/aggressive/corrupthound = 1
 	)
 
-/obj/tether_away_spawner/aerostat_surface
+/obj/cryogaia_away_spawner/aerostat_surface
 	name = "Aerostat Surface Spawner"
 	faction = "aerostat_surface"
 	atmos_comp = TRUE
@@ -124,7 +124,7 @@
 #define VIRGO2_TURF_CREATE(x)	x/virgo2/nitrogen=VIRGO2_MOL_N2;x/virgo2/oxygen=VIRGO2_MOL_O2;x/virgo2/carbon_dioxide=VIRGO2_MOL_CO2;x/virgo2/phoron=VIRGO2_MOL_PHORON;x/virgo2/temperature=VIRGO2_AVG_TEMP;x/virgo2/color="#eacd7c"
 
 /turf/unsimulated/floor/sky/virgo2_sky
-	name = "virgo 2 atmosphere"
+	name = "virgo 2me  atmosphere"
 	desc = "Be careful where you step!"
 	color = "#eacd7c"
 	VIRGO2_SET_ATMOS
@@ -179,28 +179,28 @@ VIRGO2_TURF_CREATE(/turf/simulated/mineral/floor/ignore_mapgen)
 	base_turf = /turf/simulated/floor/plating/virgo2
 
 //The aerostat itself
-/area/tether_away/aerostat
+/area/cryogaia_away/aerostat
 	name = "\improper Away Mission - Aerostat Outside"
 	icon_state = "away"
 	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
 	requires_power = FALSE
 	dynamic_lighting = FALSE
 
-/area/tether_away/aerostat/inside
+/area/cryogaia_away/aerostat/inside
 	name = "\improper Away Mission - Aerostat Inside"
 	icon_state = "crew_quarters"
 	base_turf = /turf/simulated/floor/plating/virgo2
 	dynamic_lighting = TRUE
 
-/area/tether_away/aerostat/surface
+/area/cryogaia_away/aerostat/surface
 	flags = RAD_SHIELDED
 	ambience = list('sound/ambience/ambimine.ogg', 'sound/ambience/song_game.ogg')
 	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/virgo2
 
-/area/tether_away/aerostat/surface/explored
+/area/cryogaia_away/aerostat/surface/explored
 	name = "Away Mission - Aerostat Surface (E)"
 	icon_state = "explored"
 
-/area/tether_away/aerostat/surface/unexplored
+/area/cryogaia_away/aerostat/surface/unexplored
 	name = "Away Mission - Aerostat Surface (UE)"
 	icon_state = "unexplored"

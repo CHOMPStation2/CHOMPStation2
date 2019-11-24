@@ -7,7 +7,7 @@
 	maxhealth = 80
 
 //Special map objects
-/obj/effect/landmark/map_data/borealis1
+/obj/effect/landmark/map_data/borealis2
     height = 3 //Height marker. Provides the map with knowledge of how many z levels connecting below.
 
 
@@ -21,8 +21,8 @@
 
 
 
-/obj/effect/step_trigger/teleporter/planetary_fall/borealis1/Initialize()
-	planet = planet_borealis1
+/obj/effect/step_trigger/teleporter/planetary_fall/borealis2/Initialize()
+	planet = planet_borealis2
 	. = ..()
 
 /obj/effect/step_trigger/lost_in_space
@@ -353,8 +353,8 @@ var/global/list/latejoin_tram   = list()
 		to_chat(user, "<span class='notice'>You finish chipping the ice off \the [src]</span>")
 
 /obj/machinery/door/airlock/glass_external/freezable/process()
-	for(var/datum/planet/borealis1/P in SSplanets.planets)
-		if(istype(P.weather_holder.current_weather, /datum/weather/borealis1/blizzard) && prob(25))
+	for(var/datum/planet/borealis2/P in SSplanets.planets)
+		if(istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard) && prob(25))
 			if(!frozen && density)
 				cut_overlays()
 				frozen = 1
@@ -387,14 +387,15 @@ var/global/list/latejoin_tram   = list()
 
 //Ice pick, mountain axe, or ice axe.
 /obj/item/weapon/ice_pick
-	name = "ice pick"
+	name = "ice axe"
 	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
-	icon = 'icons/obj/items.dmi'
-	icon_state = "spickaxe"
-	item_state = "spickaxe"
-	force = 5
+	icon = 'icons/obj/items_yw.dmi'
+	icon_state = "icepick"
+	item_state = "icepick"
+	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
 	throwforce = 0
 //end of Ice Pick
+
 
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
@@ -450,6 +451,23 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram
 
+//Dance pole
+/obj/structure/dancepole
+	name = "dance pole"
+	desc = "Engineered for your entertainment"
+	icon = 'icons/obj/objects_vr.dmi'
+	icon_state = "dancepole"
+	density = 0
+	anchored = 1
+
+/obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	if(O.is_wrench())
+		anchored = !anchored
+		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
+		if(anchored)
+			to_chat(user, "<font color='blue'>You secure \the [src].</font>")
+		else
+			to_chat(user, "<font color='blue'>You unsecure \the [src].</font>")
 //
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
@@ -506,3 +524,83 @@ var/global/list/latejoin_tram   = list()
 	layer = ABOVE_WINDOW_LAYER
 /obj/structure/noticeboard
 	layer = ABOVE_WINDOW_LAYER
+
+
+// Icy crystals.
+/datum/category_item/catalogue/material/trail_blazer
+	name = "Ice Colony Equipment - Trailblazer"
+	desc = "This is a glowing stick embedded int he ground with a light on top, commonly used in snowy installations \
+	and in tundra conditions."
+	value = CATALOGUER_REWARD_EASY
+
+/obj/machinery/trailblazer
+	name = "trail blazer"
+	desc = "A glowing stick- light."
+	icon = 'icons/obj/mining_yw.dmi'
+	icon_state = "redtrail_light_on"
+	density = TRUE
+	anchored = TRUE
+	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
+
+obj/machinery/trailblazer/Initialize()
+	randomize_color()
+	return ..()
+
+/obj/machinery/trailblazer/proc/randomize_color()
+	if(prob(30))
+		icon_state = "redtrail_light_on"
+		set_light(2, 2, "#FF0000")
+	else
+		set_light(2, 2, "#33CC33")
+
+/obj/machinery/trailblazer/red
+	name = "trail blazer"
+	desc = "A glowing stick- light.This one is glowing red."
+	icon = 'icons/obj/mining_yw.dmi'
+	icon_state = "redtrail_light_on"
+
+/obj/machinery/trailblazer/red/randomize_color()
+	if(prob(30))
+		icon_state = "redtrail_light_on"
+	set_light(2, 2, "#FF0000")
+
+/obj/machinery/trailblazer/blue
+	name = "trail blazer"
+	desc = "A glowing stick- light. This one is glowing blue."
+	icon = 'icons/obj/mining_yw.dmi'
+	icon_state = "bluetrail_light_on"
+
+/obj/machinery/trailblazer/blue/randomize_color()
+	if(prob(30))
+		icon_state = "bluetrail_light_on"
+	set_light(2, 2, "#C4FFFF")
+
+/obj/machinery/trailblazer/yellow
+	name = "trail blazer"
+	desc = "A glowing stick- light. This one is glowing blue."
+	icon_state = "yellowtrail_light_on"
+
+/obj/machinery/trailblazer/yellow/randomize_color()
+	if(prob(30))
+		icon_state = "yellowtrail_light_on"
+	set_light(2, 2, "#ffea00")
+
+/obj/machinery/computer/security/exploration
+	name = "head mounted camera monitor"
+	desc = "Used to access the built-in cameras in helmets."
+	icon_state = "syndicam"
+	network = list(NETWORK_EXPLORATION)
+	circuit = null
+
+//Suit Storage Units
+
+/obj/machinery/suit_cycler/exploration
+	name = "Explorer suit cycler"
+	model_text = "Exploration"
+	req_one_access = list(access_pilot,access_explorer)
+
+/obj/machinery/suit_cycler/pilot
+	name = "Pilot suit cycler"
+	model_text = "Pilot"
+	req_access = null
+	req_one_access = list(access_pilot,access_explorer)

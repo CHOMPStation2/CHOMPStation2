@@ -1,22 +1,22 @@
-/obj/tether_away_spawner/debrisfield
+/obj/cryogaia_away_spawner/debrisfield
 	atmos_comp = FALSE
 	prob_spawn = 100
 	prob_fall = 15
 
-/obj/tether_away_spawner/debrisfield/carp
+/obj/cryogaia_away_spawner/debrisfield/carp
 	name = "debris field carp spawner"
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/animal/space/carp = 3,
 		/mob/living/simple_mob/animal/space/carp/large = 1
 	)
 
-/obj/tether_away_spawner/debrisfield/carp/hard
+/obj/cryogaia_away_spawner/debrisfield/carp/hard
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/animal/space/carp/large = 2,
 		/mob/living/simple_mob/animal/space/carp/large/huge = 1
 	)
 
-/obj/tether_away_spawner/debrisfield/derelict
+/obj/cryogaia_away_spawner/debrisfield/derelict
 	name = "debris field derelict random mob spawner"
 	faction = "derelict"
 	mobs_to_pick_from = list(
@@ -25,14 +25,14 @@
 		/mob/living/simple_mob/mechanical/combat_drone = 1
 	)
 
-/obj/tether_away_spawner/debrisfield/derelict/corrupt_maint_swarm
+/obj/cryogaia_away_spawner/debrisfield/derelict/corrupt_maint_swarm
 	name = "debris field derelict maint swarm"
 	faction = "derelict"
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/mechanical/corrupt_maint_drone = 4
 	)
 
-/obj/tether_away_spawner/debrisfield/derelict/mech_wizard
+/obj/cryogaia_away_spawner/debrisfield/derelict/mech_wizard
 	name = "debris field derelict wizard lol"
 	faction = "derelict"
 	mobs_to_pick_from = list(
