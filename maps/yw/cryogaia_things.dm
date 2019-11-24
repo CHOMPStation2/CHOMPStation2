@@ -313,15 +313,23 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/door/airlock/glass_external/freezable
 	var/frozen = 0
 	var/freezing = 0 //see process().
+	var/deiceTools[0]
+
+/obj/machinery/door/airlock/glass_external/freezable/New()
+	//The obj path of the tool we want to be able to de-ice a door.
+	//Followed by the time in seconds it takes to de-ice the door with said tool
+	deiceTools[/obj/item/weapon/ice_pick] = 3 //Ice Pick
+	deiceTools[/obj/item/weapon/tool/crowbar] = 5 //Crowbar
+	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I as obj, mob/user as mob)
-	//Time it takes in "seconds" to de-ice a door with the given tool
+	//Special cases for tools that need more then just a type check.
 	var/welderTime = 5 //Welder
-	var/icePickTime = 3 //Ice Pick
-	var/crowbarTime = 5 //Crowbar
 	var/genericToolTime = 10 //Any tool that doesn't have a special case.
 
 	if(frozen)
+		var/IType = I.type
+
 		//the welding tool is a special snowflake.
 		if(istype(I, /obj/item/weapon/weldingtool))
 			var/obj/item/weapon/weldingtool/welder = I
@@ -333,13 +341,9 @@ var/global/list/latejoin_tram   = list()
 					unFreeze()
 					return
 
-		 //do we have something we can de-ice the door with?
-		if(istype(I, /obj/item/weapon/ice_pick))
-			handleRemoveIce(I, user, icePickTime)
-			return
-
-		if(I.is_crowbar())
-			handleRemoveIce(I, user, crowbarTime)
+		for (IType in deiceTools)
+			var/It = deiceTools[IType]
+			handleRemoveIce(I, user, It)
 			return
 
 		if(istype(I, /obj/item/weapon))
