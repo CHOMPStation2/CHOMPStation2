@@ -1,28 +1,30 @@
-var/datum/planet/borealis1/planet_borealis1 = null
+//What the actual fuck is the point of this file? THeres an exact copy in the planetary file path for weather code.
+// All commented out vs and datums are also placed in code/modules/planet/borealismajoris
+//var/datum/planet/borealis2/planet_borealis2 = null
 //Dev note: This entire file handles weather and planetary effects. File name subject to change pending planet name finalization.
-/datum/time/borealis1
+/datum/time/borealis2
 	seconds_in_day = 3 HOURS
 
-/datum/planet/borealis1
-	name = "Borealis 1"
+/datum/planet/borealis2
+	name = "Borealis 2"
 	desc = "A Icey-frozen tundra, this planet has an atmosphere mainly comprised of frigid oxygen, with trace \
 	amounts of both carbon dioxide and nitrogen. Originally being a lumber colony, recent findings show copious amounts of Phoron deep under the surface, \
 	the Phoron is very desirable by many corporations, including NanoTrasen."
-	current_time = new /datum/time/borealis1()
+	current_time = new /datum/time/borealis2()
 // YW - See the Defines for this, so that it can be edited there if needed.
 /*	expected_z_levels = list(
 						Z_LEVEL_CRYOGAIA_LOWER,
 						Z_LEVEL_CRYOGAIA_MAIN,
 						Z_LEVEL_CRYOGAIA_MINE,
 						)*/
-//	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis1
+//	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2
 
-/datum/planet/borealis1/New()
+/datum/planet/borealis2/New()
 	..()
-	planet_borealis1 = src
-	weather_holder = new /datum/weather_holder/borealis1(src)
+	planet_borealis2 = src
+	weather_holder = new /datum/weather_holder/borealis2(src)
 
-/datum/planet/borealis1/update_sun()
+/datum/planet/borealis2/update_sun()
 	..()
 	var/datum/time/time = current_time
 	var/length_of_day = time.seconds_in_day / 10 / 60 / 60
@@ -102,21 +104,21 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		update_sun_deferred(2, new_brightness, new_color)
 
 
-/datum/weather_holder/borealis1
+/datum/weather_holder/borealis2
 	temperature = T0C
 	allowed_weather_types = list(
-		WEATHER_CLEAR		= new /datum/weather/borealis1/clear(),
-		WEATHER_OVERCAST	= new /datum/weather/borealis1/overcast(),
-		WEATHER_LIGHT_SNOW	= new /datum/weather/borealis1/light_snow(),
-		WEATHER_SNOW		= new /datum/weather/borealis1/snow(),
-		WEATHER_BLIZZARD	= new /datum/weather/borealis1/blizzard(),
-		WEATHER_RAIN		= new /datum/weather/borealis1/rain(),
-		WEATHER_STORM		= new /datum/weather/borealis1/storm(),
-		WEATHER_HAIL		= new /datum/weather/borealis1/hail(),
-		WEATHER_BLOOD_MOON	= new /datum/weather/borealis1/blood_moon(),
-		WEATHER_EMBERFALL	= new /datum/weather/borealis1/emberfall(),
-		WEATHER_ASH_STORM	= new /datum/weather/borealis1/ash_storm(),
-		WEATHER_FALLOUT		= new /datum/weather/borealis1/fallout()
+		WEATHER_CLEAR		= new /datum/weather/borealis2/clear(),
+		WEATHER_OVERCAST	= new /datum/weather/borealis2/overcast(),
+		WEATHER_LIGHT_SNOW	= new /datum/weather/borealis2/light_snow(),
+		WEATHER_SNOW		= new /datum/weather/borealis2/snow(),
+		WEATHER_BLIZZARD	= new /datum/weather/borealis2/blizzard(),
+		WEATHER_RAIN		= new /datum/weather/borealis2/rain(),
+		WEATHER_STORM		= new /datum/weather/borealis2/storm(),
+		WEATHER_HAIL		= new /datum/weather/borealis2/hail(),
+		WEATHER_BLOOD_MOON	= new /datum/weather/borealis2/blood_moon(),
+		WEATHER_EMBERFALL	= new /datum/weather/borealis2/emberfall(),
+		WEATHER_ASH_STORM	= new /datum/weather/borealis2/ash_storm(),
+		WEATHER_FALLOUT		= new /datum/weather/borealis2/fallout()
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 30,
@@ -129,12 +131,12 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		WEATHER_HAIL		= 2.5
 		)
 
-/datum/weather/borealis1
-	name = "borealis1 base"
+/datum/weather/borealis2
+	name = "borealis2 base"
 	temp_high = 233.15 // -40c
 	temp_low =  228.15 // -70c
 
-/datum/weather/borealis1/clear
+/datum/weather/borealis2/clear
 	name = "clear"
 	transition_chances = list(
 		WEATHER_CLEAR = 50,
@@ -148,7 +150,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	sky_visible = TRUE
 	observed_message = "The sky is clear."
 
-/datum/weather/borealis1/overcast
+/datum/weather/borealis2/overcast
 	name = "overcast"
 	light_modifier = 0.8
 	transition_chances = list(
@@ -166,7 +168,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		"It's very cloudy."
 		)
 
-/datum/weather/borealis1/light_snow
+/datum/weather/borealis2/light_snow
 	name = "light snow"
 	icon_state = "snowfall_light"
 	temp_high = 230
@@ -184,7 +186,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		"It begins to snow lightly.",
 		)
 
-/datum/weather/borealis1/snow
+/datum/weather/borealis2/snow
 	name = "moderate snow"
 	icon_state = "snowfall_med"
 	temp_high = 220
@@ -206,7 +208,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
-/datum/weather/borealis1/snow/process_effects()
+/datum/weather/borealis2/snow/process_effects()
 	..()
 	for(var/turf/simulated/floor/outdoors/snow/S in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
 		if(S.z in holder.our_planet.expected_z_levels)
@@ -216,7 +218,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 					if(istype(T, /turf/simulated/floor/outdoors) && prob(33))
 						T.chill()
 
-/datum/weather/borealis1/blizzard
+/datum/weather/borealis2/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy"
 	temp_high = 200
@@ -238,7 +240,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 
 
-/datum/weather/borealis1/blizzard/process_effects()
+/datum/weather/borealis2/blizzard/process_effects()
 	..()
 	for(var/turf/simulated/floor/outdoors/snow/S in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
 		if(S.z in holder.our_planet.expected_z_levels)
@@ -248,7 +250,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 					if(istype(T, /turf/simulated/floor/outdoors) && prob(50))
 						T.chill()
 
-/datum/weather/borealis1/rain
+/datum/weather/borealis2/rain
 	name = "rain"
 	icon_state = "rain"
 	light_modifier = 0.5
@@ -266,7 +268,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		"The sky is dark, and rain falls down upon you."
 	)
 
-/datum/weather/borealis1/rain/process_effects()
+/datum/weather/borealis2/rain/process_effects()
 	..()
 	for(var/mob/living/L in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
@@ -292,16 +294,16 @@ var/datum/planet/borealis1/planet_borealis1 = null
 			if(show_message)
 				to_chat(L, effect_message)
 
-/datum/weather/borealis1/storm
+/datum/weather/borealis2/storm
 	name = "storm"
 	icon_state = "storm"
 	light_modifier = 0.3
 	flight_failure_modifier = 10
 	effect_message = "<span class='warning'>Rain falls on you, drenching you in water.</span>"
 
-	var/next_lightning_strike = 0 // world.time when lightning will strike.
-	var/min_lightning_cooldown = 5 SECONDS
-	var/max_lightning_cooldown = 1 MINUTE
+//	var/next_lightning_strike = 0 // world.time when lightning will strike.
+//	var/min_lightning_cooldown = 5 SECONDS
+//	var/max_lightning_cooldown = 1 MINUTE
 	observed_message = "An intense storm pours down over the region."
 	transition_messages = list(
 		"You feel intense winds hit you as the weather takes a turn for the worst.",
@@ -318,7 +320,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		)
 
 
-/datum/weather/borealis1/storm/process_effects()
+/datum/weather/borealis2/storm/process_effects()
 	..()
 	for(var/mob/living/L in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
@@ -367,14 +369,14 @@ var/datum/planet/borealis1/planet_borealis1 = null
 
 // This gets called to do lightning periodically.
 // There is a seperate function to do the actual lightning strike, so that badmins can play with it.
-/datum/weather/borealis1/storm/proc/handle_lightning()
+/* /datum/weather/borealis2/storm/proc/handle_lightning()
 	if(world.time < next_lightning_strike)
 		return // It's too soon to strike again.
 	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
 	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
 	lightning_strike(T)
-
-/datum/weather/borealis1/hail
+*/
+/datum/weather/borealis2/hail
 	name = "hail"
 	icon_state = "hail"
 	light_modifier = 0.3
@@ -396,7 +398,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		"An intense chill is felt, and chunks of ice start to fall from the sky, towards you."
 	)
 
-/datum/weather/borealis1/hail/process_effects()
+/datum/weather/borealis2/hail/process_effects()
 	..()
 	for(var/mob/living/carbon/human/H in living_mob_list)
 		if(H.z in holder.our_planet.expected_z_levels)
@@ -433,7 +435,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 			if(show_message)
 				to_chat(H, effect_message)
 
-/datum/weather/borealis1/blood_moon
+/datum/weather/borealis2/blood_moon
 	name = "blood moon"
 	light_modifier = 0.5
 	light_color = "#FF0000"
@@ -450,7 +452,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 
 
 // Ash and embers fall forever, such as from a volcano or something.
-/datum/weather/borealis1/emberfall
+/datum/weather/borealis2/emberfall
 	name = "emberfall"
 	icon_state = "ashfall_light"
 	light_modifier = 0.7
@@ -469,7 +471,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 
 // Like the above but a lot more harmful.
-/datum/weather/borealis1/ash_storm
+/datum/weather/borealis2/ash_storm
 	name = "ash storm"
 	icon_state = "ashfall_heavy"
 	light_modifier = 0.1
@@ -488,7 +490,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 
-/datum/weather/borealis1/ash_storm/process_effects()
+/datum/weather/borealis2/ash_storm/process_effects()
 	..()
 	for(var/thing in living_mob_list)
 		var/mob/living/L = thing
@@ -501,7 +503,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 
 
 // Totally radical.
-/datum/weather/borealis1/fallout
+/datum/weather/borealis2/fallout
 	name = "fallout"
 	icon_state = "fallout"
 	light_modifier = 0.7
@@ -518,14 +520,14 @@ var/datum/planet/borealis1/planet_borealis1 = null
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 
 	// How much radiation a mob gets while on an outside tile.
-	var/direct_rad_low = RAD_LEVEL_LOW
-	var/direct_rad_high = RAD_LEVEL_MODERATE
+//	var/direct_rad_low = RAD_LEVEL_LOW
+//	var/direct_rad_high = RAD_LEVEL_MODERATE
 
 	// How much radiation is bursted onto a random tile near a mob.
-	var/fallout_rad_low = RAD_LEVEL_HIGH
-	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
+//	var/fallout_rad_low = RAD_LEVEL_HIGH
+//	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
 
-/datum/weather/borealis1/fallout/process_effects()
+/datum/weather/borealis2/fallout/process_effects()
 	..()
 	for(var/thing in living_mob_list)
 		var/mob/living/L = thing
@@ -539,7 +541,7 @@ var/datum/planet/borealis1/planet_borealis1 = null
 
 // This makes random tiles near people radioactive for awhile.
 // Tiles far away from people are left alone, for performance.
-/datum/weather/borealis1/fallout/proc/irradiate_nearby_turf(mob/living/L)
+/*/datum/weather/borealis2/fallout/proc/irradiate_nearby_turf(mob/living/L)
 	if(!istype(L))
 		return
 	var/list/turfs = RANGE_TURFS(world.view, L)
@@ -548,4 +550,4 @@ var/datum/planet/borealis1/planet_borealis1 = null
 		return
 	if(T.outdoors)
 		radiation_repository.radiate(T, rand(fallout_rad_low, fallout_rad_high))
-
+*/

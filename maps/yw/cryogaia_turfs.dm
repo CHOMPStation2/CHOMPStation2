@@ -21,13 +21,14 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/plating/snow/plating)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/plating/snow/plating/drift)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/cryogaia)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 /turf/simulated/floor/outdoors/grass/cryogaia
 	turf_layers = list(
 		/turf/simulated/floor/snow,
 		/turf/simulated/floor/tiled/cryogaia,
 		)
-
-
+/turf/simulated/floor/tiled/old_tile/gray/cryogaia
+	CRYOGAIA_SET_ATMOS
 
 // Overriding these for the sake of submaps that use them on other planets.
 // This means that mining on tether base and space is oxygen-generating, but solars and mining should use the virgo3b subtype
@@ -181,29 +182,37 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 
 //Sky stuff!
 // A simple turf to fake the appearance of flying.
-/turf/simulated/sky/virgo3b
-	color = "#FFBBBB"
+/turf/simulated/sky/borealis2
+	color = "#E0FFFF"
 
-/turf/simulated/sky/virgo3b/Initialize()
+/turf/simulated/sky/borealis2/Initialize()
 	SSplanets.addTurf(src)
-	set_light(2, 2, "#FFBBBB")
+	set_light(2, 2, "#E0FFFF")
 
-/turf/simulated/sky/virgo3b/north
+/turf/simulated/sky/borealis2/north
 	dir = NORTH
-/turf/simulated/sky/virgo3b/south
+/turf/simulated/sky/borealis2/south
 	dir = SOUTH
-/turf/simulated/sky/virgo3b/east
+/turf/simulated/sky/borealis2/east
 	dir = EAST
-/turf/simulated/sky/virgo3b/west
+/turf/simulated/sky/borealis2/west
 	dir = WEST
 
-/turf/simulated/sky/virgo3b/moving
+/turf/simulated/sky/borealis2/moving
 	icon_state = "sky_fast"
-/turf/simulated/sky/virgo3b/moving/north
+/turf/simulated/sky/borealis2/moving/north
 	dir = NORTH
-/turf/simulated/sky/virgo3b/moving/south
+/turf/simulated/sky/borealis2/moving/south
 	dir = SOUTH
-/turf/simulated/sky/virgo3b/moving/east
+/turf/simulated/sky/borealis2/moving/east
 	dir = EAST
-/turf/simulated/sky/virgo3b/moving/west
+/turf/simulated/sky/borealis2/moving/west
 	dir = WEST
+
+/turf/space/snowscroll
+	name = "snow transit"
+	icon = 'icons/turf/transit_yw.dmi'
+	icon_state = "snow_ns"
+/turf/space/snowscroll/New()
+	..()
+	icon_state = "snow_ns"

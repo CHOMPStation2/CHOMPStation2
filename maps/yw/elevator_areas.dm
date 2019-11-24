@@ -62,6 +62,6 @@
 
 /area/turbolift/lumber_floor_medibasement
 	name = "Medbay (sublevel 1)"
-	lift_floor_label = "Medbasement"
+	lift_floor_label = "Medical Annex"
 	lift_floor_name = "Virology, Chemistry, EVA, Break room, Storage"
 	lift_announce_str = "Arriving at Medical Annex."

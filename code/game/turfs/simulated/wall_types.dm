@@ -246,6 +246,12 @@
 	hard_corner = 1
 	stripe_color = "#33ccff"
 
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/green
+	name = "hardcorner wall"
+	icon_state = "void-hc"
+	hard_corner = 1
+	stripe_color = "#00FF00"
+
 /turf/simulated/shuttle/wall/voidcraft/no_join
 	name = "nojoin wall"
 	icon_state = "void-nj"

@@ -23,7 +23,7 @@
 /turf/unsimulated/wall/planetary/normal,
 /area/tether_away/cave/explored/normal)
 "r" = (
-/obj/tether_away_spawner/beach_cave,
+/obj/cryogaia_away_spawner/beach_cave,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/tether_away/cave/explored/normal)
 

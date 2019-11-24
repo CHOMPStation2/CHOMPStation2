@@ -43,8 +43,8 @@
 	#define CRYOGAIA_TURF_CREATE_UN(x)	x/cryogaia/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP
 
 	//Atmosphere properties
-	#define CRYOGAIA_ONE_ATMOSPHERE	100 //kPa
-	#define CRYOGAIA_AVG_TEMP	293.2 //kelvin
+	#define CRYOGAIA_ONE_ATMOSPHERE	101.13 //kPa
+	#define CRYOGAIA_AVG_TEMP	233.15 //kelvin
 	#define CRYOGAIA_PER_N2		0.16 //percent
 	#define CRYOGAIA_PER_O2		0.72
 	#define CRYOGAIA_PER_N2O	0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
@@ -119,8 +119,8 @@
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo
 
-	meteor_strike_areas = list(/area/borealis1/outdoors/grounds,
-		/area/borealis1/outdoors/exterior)
+	meteor_strike_areas = list(/area/borealis2/outdoors/grounds,
+		/area/borealis2/outdoors/exterior)
 
 	unit_test_exempt_areas = list(
 		/area/crew_quarters/sleep/Dorm_1/holo,
@@ -156,7 +156,7 @@
 
 	return 1
 
-/datum/planet/borealis1
+/datum/planet/borealis2
 	expected_z_levels = list(
 		Z_LEVEL_CRYOGAIA_MINE,
 		Z_LEVEL_CRYOGAIA_LOWER,

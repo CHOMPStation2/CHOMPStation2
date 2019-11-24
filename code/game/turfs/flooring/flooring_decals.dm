@@ -1174,3 +1174,18 @@ var/list/floor_decals = list()
 	icon = 'icons/obj/structures_yw32x32.dmi'
 	icon_state = "plaque"
 	desc = "A plaque commerating the building efforts of the sleepiest outpost in the sector, Yawn Wider."
+
+/obj/effect/floor_decal/snow
+	name = "snow"
+	icon = 'icons/turf/overlays.dmi'
+	icon_state = "snow"
+/obj/effect/floor_decal/snow/floor
+	icon_state = "snowfloor"
+/obj/effect/floor_decal/snow/floor/edges
+	icon_state = "snow_edges"
+/obj/effect/floor_decal/snow/floor/edges2
+	icon_state = "snow_edges2"
+/obj/effect/floor_decal/snow/floor/edges3
+	icon_state = "gravsnow_edges"
+/obj/effect/floor_decal/snow/floor/surround
+	icon_state = "snow_surround"
