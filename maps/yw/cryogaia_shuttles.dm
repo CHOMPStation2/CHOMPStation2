@@ -185,15 +185,15 @@
 	. = ..()
 
 /datum/shuttle/web_shuttle/excursion
-	name = "Prototype Exploration Vessel"
+	name = "Excursion Shuttle"
 	warmup_time = 0
 	current_area = /area/shuttle/excursion/cryogaia
 	docking_controller_tag = "expshuttle_docker"
 	web_master_type = /datum/shuttle_web_master/excursion
-	var/abduct_chance = 0.5 //Prob
+	var/abduct_chance = 0 //Prob
 
 /datum/shuttle/web_shuttle/excursion/long_jump(var/area/departing, var/area/destination, var/area/interim, var/travel_time, var/direction)
-/*	if(prob(abduct_chance))
+	if(prob(abduct_chance))
 		abduct_chance = 0
 		var/list/occupants = list()
 		for(var/mob/living/L in departing)
@@ -208,7 +208,7 @@
 		var/datum/shuttle_destination/ASD = WS.web_master.get_destination_by_type(/datum/shuttle_destination/excursion/alienship)
 		WS.web_master.future_destination = ASD
 		. = ..(departing,ASD.my_area,interim,travel_time,direction)
-	else*/
+	else
 		. = ..()
 
 /datum/shuttle_web_master/excursion
