@@ -15,7 +15,8 @@
 	icon = 'icons/obj/clothing/web.dmi'
 	icon_state = "web_bindings"
 	icon_override = 'icons/mob/vore/web.dmi'
-	item_state = "web_bindings_mob"
+	item_state = "web_bindings"
+	override = 1
 
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
