@@ -1,6 +1,7 @@
 #if !defined(USING_MAP_DATUM)
 
 	#include "cryogaia_defines.dm"
+	#include "cryogaia_jobs.dm"
 	#include "cryogaia_turfs.dm"
 	#include "cryogaia_things.dm"
 	#include "tether_phoronlock.dm"
@@ -17,7 +18,7 @@
 	#include "cryogaia-03-maintenance.dmm" //lowerlevel
 	#include "cryogaia-04-main.dmm" //main level
 
-//	#include "submaps/_tether_submaps.dm"
+	#include "submaps/_cryogaia_submaps.dm"
 
 	#define USING_MAP_DATUM /datum/map/cryogaia
 

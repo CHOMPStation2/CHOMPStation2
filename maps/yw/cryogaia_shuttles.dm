@@ -175,7 +175,7 @@
 	shuttle_tag = "Excursion Shuttle"
 	req_access = list()
 	req_one_access = list(access_heads,access_explorer,access_pilot)
-	var/wait_time = 45 MINUTES
+	var/wait_time = 1 MINUTES
 
 /obj/machinery/computer/shuttle_control/web/excursion/ui_interact()
 	if(world.time < wait_time)
@@ -185,7 +185,7 @@
 	. = ..()
 
 /datum/shuttle/web_shuttle/excursion
-	name = "Excursion Shuttle"
+	name = "Prototype Exploration Vessel"
 	warmup_time = 0
 	current_area = /area/shuttle/excursion/cryogaia
 	docking_controller_tag = "expshuttle_docker"
@@ -235,45 +235,37 @@
 
 
 /datum/shuttle_destination/excursion/outside_cryogaia
-	name = "Nearby Yawn Wider"
+	name = "Nearby Cryogaia"
 	my_area = /area/shuttle/excursion/cryogaia_nearby
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 
 	routes_to_make = list(
-//		/datum/shuttle_destination/excursion/docked_cryogaia = 0,
-		/datum/shuttle_destination/excursion/borealis1_orbit = 30 SECONDS
+//		/datum/shuttle_destination/excursion/_cryogaia = 0,
+		/datum/shuttle_destination/excursion/borealis2_orbit = 30 SECONDS
 	)
 
 
-/datum/shuttle_destination/excursion/docked_cryogaia
-	name = "Yawn Wider Docking Arm"
-	my_area = /area/shuttle/excursion/cryogaia_dockarm
-
-	dock_target = "d1a2_dock"
-	radio_announce = 1
-	announcer = "Excursion Shuttle"
-
-/datum/shuttle_destination/excursion/docked_cryogaia/get_arrival_message()
-	return "Attention, [master.my_shuttle.visible_name] has arrived at Docking Arm One."
-
-/datum/shuttle_destination/excursion/docked_cryogaia/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed from Docking Arm One."
+/datum/shuttle_destination/excursion/cryogaia_wilderness
+	name = "Borealis"
+	my_area = /area/shuttle/excursion/cryogaia_wilderness
 
 
-/datum/shuttle_destination/excursion/borealis1_orbit
-	name = "Borealis Majoris 1 Orbit"
+
+
+/datum/shuttle_destination/excursion/borealis2_orbit
+	name = "Borealis Majoris 2 Orbit"
 	my_area = /area/shuttle/excursion/space
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 
 	routes_to_make = list(
-		/datum/shuttle_destination/excursion/borealis1_sky = 30 SECONDS,
+		/datum/shuttle_destination/excursion/borealis2_sky = 30 SECONDS,
 		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS
 	)
 
 
-/datum/shuttle_destination/excursion/borealis1_sky
-	name = "Skies of Borealis Majoris 1"
-	my_area = /area/shuttle/excursion/borealis1_sky
+/datum/shuttle_destination/excursion/borealis2_sky
+	name = "Skies of Borealis Majoris 2"
+	my_area = /area/shuttle/excursion/borealis2_sky
 
 ////////// Distant Destinations
 /datum/shuttle_destination/excursion/bluespace

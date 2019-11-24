@@ -4,12 +4,16 @@
 #define Z_LEVEL_CRYOGAIA_MINE		2
 #define Z_LEVEL_CRYOGAIA_LOWER		3
 #define Z_LEVEL_CRYOGAIA_MAIN		4
-//#define Z_LEVEL_ALIENSHIP			5
-//#define Z_LEVEL_BEACH				6
-//#define Z_LEVEL_BEACH_CAVE		7
-//#define Z_LEVEL_AEROSTAT			8
-//#define Z_LEVEL_AEROSTAT_SURFACE	9
-//#define Z_LEVEL_DEBRISFIELD		10
+#define Z_LEVEL_ALIENSHIP			5
+#define Z_LEVEL_BEACH				6
+#define Z_LEVEL_BEACH_CAVE		7
+#define Z_LEVEL_AEROSTAT			8
+#define Z_LEVEL_AEROSTAT_SURFACE	9
+#define Z_LEVEL_DEBRISFIELD		10
+#define Z_LEVEL_MISC						11
+#define Z_LEVEL_SHIPS						12
+#define Z_LEVEL_UNDERDARK					13
+#define Z_LEVEL_PLAINS						14
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -39,8 +43,8 @@
 	#define CRYOGAIA_TURF_CREATE_UN(x)	x/cryogaia/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP
 
 	//Atmosphere properties
-	#define CRYOGAIA_ONE_ATMOSPHERE	100 //kPa
-	#define CRYOGAIA_AVG_TEMP	293.2 //kelvin
+	#define CRYOGAIA_ONE_ATMOSPHERE	101.13 //kPa
+	#define CRYOGAIA_AVG_TEMP	233.15 //kelvin
 	#define CRYOGAIA_PER_N2		0.16 //percent
 	#define CRYOGAIA_PER_O2		0.72
 	#define CRYOGAIA_PER_N2O	0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
@@ -115,8 +119,8 @@
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo
 
-	meteor_strike_areas = list(/area/borealis1/outdoors/grounds,
-		/area/borealis1/outdoors/exterior)
+	meteor_strike_areas = list(/area/borealis2/outdoors/grounds,
+		/area/borealis2/outdoors/exterior)
 
 	unit_test_exempt_areas = list(
 		/area/crew_quarters/sleep/Dorm_1/holo,
@@ -147,12 +151,12 @@
 
 /datum/map/cryogaia/perform_map_generation()
 
-//	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, 64, 64)         // Create the mining ore distribution map.
 
 	return 1
 
-/datum/planet/borealis1
+/datum/planet/borealis2
 	expected_z_levels = list(
 		Z_LEVEL_CRYOGAIA_MINE,
 		Z_LEVEL_CRYOGAIA_LOWER,

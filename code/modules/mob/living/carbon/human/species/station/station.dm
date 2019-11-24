@@ -15,6 +15,14 @@
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
+	cold_level_1 = 286.15 //Default 260 - Lower is better
+	cold_level_2 = 220 //Default 200
+	cold_level_3 = 130 //Default 120
+
+	heat_level_1 = 311 //Default 360 - Higher is better
+	heat_level_2 = 319 //Default 400
+	heat_level_3 = 1100 //Default 1000
+
 	min_age = 18
 	max_age = 130
 

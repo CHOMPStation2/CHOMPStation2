@@ -1,43 +1,45 @@
 //Outpost area
-/area/borealis1
+/area/borealis2
 	icon = 'icons/turf/areas_vr.dmi'
-/area/borealis1/elevator/medbasement
+/area/borealis2/elevator/medbasement
 	name = "Elevator shaft - Lower Medical"
-/area/borealis1/elevator/medbay
+/area/borealis2/elevator/medbay
 	name = "Elevator shaft - Upper Medical"
-/area/borealis1/elevator/dorms
+/area/borealis2/elevator/dorms
 	name = "Elevator shaft - Dorms"
-/area/borealis1/elevator/scicargo
+/area/borealis2/elevator/scicargo
 	name = "Elevator shaft - Sci-Cargo"
-/area/borealis1/elevator/scimining
+/area/borealis2/elevator/scimining
 	name = "Elevator shaft - Sci-Mining"
-/area/borealis1/outdoors
+/area/borealis2/outdoors
 	name = "Outside - Surface"
 	icon_state = "outside1"
 	sound_env = MOUNTAINS
 
-/area/borealis1/outdoors/grounds
+/area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
 
-/area/borealis1/outdoors/exterior
+/area/borealis2/outdoors/exterior
 	name = "The wilderness"
 
-/area/borealis1/outdoors/exterior/lake
+/area/borealis2/outdoors/exterior/lake
 	name = "The Ice Lake"
 
-/area/borealis1/outdoors/exterior/explore1
+/area/borealis2/outdoors/exterior/explore1
 	name = "Abandoned building"
 
-/area/borealis1/outdoors/exterior/explore2
+/area/borealis2/outdoors/exterior/explore2
 	name = "Unexplored Area"
 
-/area/borealis1/outdoors/exterior/explore3
+/area/borealis2/outdoors/exterior/explore3
 	name = "Unexplored Caves"
 
-/area/borealis1/outdoors/grounds/power
+/area/borealis2/outdoors/grounds/power
 	name = "\The Exterior Powerline"
+/area/borealis2/outdoors/grounds/traderpad
+	name = "\improper Cryogaia Commerce Pad"
 
-/area/borealis1/outdoors/grounds/solars
+/area/borealis2/outdoors/grounds/solars
 	name = "\The solar array"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "panelsA"
@@ -174,7 +176,7 @@
 
 // Exploration Shuttle stuff //
 /area/cryogaia/station/excursion_dock
-	name = "\improper Excursion Shuttle Dock"
+	name = "\improper Exploration Vessel Dock"
 
 /area/cryogaia/station/explorer_prep
 	name = "\improper Explorer Prep Room"
@@ -186,38 +188,48 @@
 	name = "\improper Pathfinder's Office"
 
 /area/shuttle/excursion
-	name = "\improper Excursion Shuttle"
+	name = "\improper Exploration Vessel"
 	icon_state = "shuttle2"
 	base_turf = /turf/space
 
 /area/shuttle/excursion/cryogaia
-	name = "\improper Excursion Shuttle - dock"
+	name = "\improper Exploration Vessel - dock"
 	base_turf = /turf/simulated/floor/reinforced
 
 /area/shuttle/excursion/cryogaia_nearby
-	name = "\improper Excursion Shuttle - Dock Near"
+	name = "\improper Exploration Vessel - Dock Near"
 
-/area/shuttle/excursion/cryogaia_dockarm			// Likely won't be in use, might move it to an emergency docking zone outside the colony? Or perhaps a space dock nearby. -RF
-	name = "\improper Excursion Shuttle - Docking Arm"
+/area/shuttle/excursion/cryogaia_wilderness			// Now made to be murderiously difficult. -RF
+	name = "\improper Exploration Vessel - Hostile Wilderness"
 
 /area/shuttle/excursion/space
-	name = "\improper Excursion Shuttle - Space"
+	name = "\improper Exploration Vessel - Space"
 
 /area/shuttle/excursion/space_moving
-	name = "\improper Excursion Shuttle - Space Moving"
+	name = "\improper Exploration Vessel - Space Moving"
 	base_turf = /turf/space/transit/north
 
 /area/shuttle/excursion/bluespace
-	name = "\improper Excursion Shuttle - Bluespace"
+	name = "\improper Exploration Vessel - Bluespace"
 	base_turf = /turf/space/bluespace
 
 /area/shuttle/excursion/sand_moving
-	name = "\improper Excursion Shuttle - Sand Transit"
+	name = "\improper Exploration Vessel - Sand Transit"
 	base_turf = /turf/space/sandyscroll
 
-/area/shuttle/excursion/borealis1_sky
-	name = "\improper Excursion Shuttle - Borealis Majoris 1 Sky"
+/area/shuttle/excursion/borealis2_sky
+	name = "\improper Exploration Vessel - Borealis Majoris  Sky"
 	base_turf = /turf/simulated/sky
+
+//Exploration area locations.
+
+// Exploration area - Plains
+/area/cryogaia/outpost/exploration_plains
+	name = "\improper Plains Exploration Zone"
+	icon_state = "green"
+/area/cryogaia/outpost/exploration_shed
+	name = "\improper Plains Entrance Shed"
+/area/cryogaia_away/cave/unexplored/normal
 
 //antag stuff
 /area/antag/antag_base
@@ -290,6 +302,10 @@
 	icon_state = "brig"
 /area/security/auxiliarrystation
 	name = "\improper Security Auxiliary Station"
+	icon_state = "security"
+
+/area/security/sorting
+	name = "\improper Security disposals processing"
 	icon_state = "security"
 
 /area/maintenance/security
