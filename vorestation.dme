@@ -3388,6 +3388,7 @@
 #include "maps\yw\structures\closets\security.dm"
 #include "maps\yw\submaps\_cryogaia_submaps.dm"
 #include "maps\yw\submaps\cryogaia_ships.dmm"
+#include "maps\yw\submaps\plains.dmm"
 #include "maps\yw\submaps\aerostat\_aerostat.dm"
 #include "maps\yw\submaps\beach\_beach.dm"
 #include "maps\yw\submaps\space\_debrisfield.dm"
