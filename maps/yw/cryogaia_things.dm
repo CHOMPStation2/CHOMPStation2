@@ -316,19 +316,28 @@ var/global/list/latejoin_tram   = list()
 	var/deiceTools[0]
 
 /obj/machinery/door/airlock/glass_external/freezable/New()
-	//The obj path of the tool we want to be able to de-ice a door.
-	//Followed by the time in seconds it takes to de-ice the door with said tool
+	//Associate objects with the number of seconds it would take to de-ice a door.
+	//Most items are either more or less effecient at it.
+	//For items with very specific cases (like welders using fuel, or needing to be on) see attackby().
 	deiceTools[/obj/item/weapon/ice_pick] = 3 //Ice Pick
 	deiceTools[/obj/item/weapon/tool/crowbar] = 5 //Crowbar
+	deiceTools[/obj/item/weapon/pen] = 30 //Pen
+	deiceTools[/obj/item/weapon/card] = 35 //Cards. (Mostly ID cards)
+
+	//Generic weapon items. Tools are better then weapons.
+	//This is for preventing "Sierra" syndrome that could result from needing very specific objects.
+	deiceTools[/obj/item/weapon/tool] = 10
+	deiceTools[/obj/item/weapon] = 12
 	..()
 
-/obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I as obj, mob/user as mob)
+/obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I, mob/user as mob)
 	//Special cases for tools that need more then just a type check.
 	var/welderTime = 5 //Welder
-	var/genericToolTime = 10 //Any tool that doesn't have a special case.
+
+	//debug
+	//message_admins("[user] has used \the [I] of type [I.type] on [src]", R_DEBUG)
 
 	if(frozen)
-		var/IType = I.type
 
 		//the welding tool is a special snowflake.
 		if(istype(I, /obj/item/weapon/weldingtool))
@@ -341,23 +350,26 @@ var/global/list/latejoin_tram   = list()
 					unFreeze()
 					return
 
-		for (IType in deiceTools)
-			var/It = deiceTools[IType]
-			handleRemoveIce(I, user, It)
+		if(istype(I, /obj/item/weapon/pen/crayon))
+			to_chat(user, "<span class='notice'>You try to use \the [I] to clear the ice, but it crumbles away!</span>")
+			qdel(I)
 			return
 
-		if(istype(I, /obj/item/weapon))
-			handleRemoveIce(I, user, genericToolTime)
-			return
+		//Most items will be checked in this for loop using the list in New().
+		//Code for objects with specific checks (Like the welder) should be inserted above.
+		for(var/IT in deiceTools)
+			if(istype(I, IT))
+				handleRemoveIce(I, user, deiceTools[IT])
+				return
 
 		//if we can't de-ice the door tell them what's wrong.
 		to_chat(user, "<span class='notice'>\the [src] is frozen shut!</span>")
 		return
 	..()
 
-/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/weapon/W as obj, mob/user as mob, var/time = 10 as num)
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/weapon/W as obj, mob/user as mob, var/time = 15 as num)
 	to_chat(user, "<span class='notice'>You start to chip at the ice covering \the [src]</span>")
-	if(do_after(user, time SECONDS))
+	if(do_after(user, text2num(time SECONDS)))
 		unFreeze()
 		to_chat(user, "<span class='notice'>You finish chipping the ice off \the [src]</span>")
 
