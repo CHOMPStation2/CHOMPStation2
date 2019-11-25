@@ -209,10 +209,12 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/sky/borealis2/moving/west
 	dir = WEST
 
-/turf/space/snowscroll
+/turf/simulated/sky/snowscroll
 	name = "snow transit"
 	icon = 'icons/turf/transit_yw.dmi'
 	icon_state = "snow_ns"
-/turf/space/snowscroll/New()
-	..()
-	icon_state = "snow_ns"
+
+
+/turf/simulated/sky/snowscroll/Initialize()
+	SSplanets.addTurf(src)
+	set_light(2, 2, "#E0FFFF")

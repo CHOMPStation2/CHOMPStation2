@@ -240,8 +240,8 @@
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 
 	routes_to_make = list(
-//		/datum/shuttle_destination/excursion/_cryogaia = 0,
-		/datum/shuttle_destination/excursion/borealis2_orbit = 30 SECONDS
+		/datum/shuttle_destination/excursion/borealis2_sky = 30 SECONDS,
+		/datum/shuttle_destination/excursion/borealis2_orbit = 30 SECONDS,
 	)
 
 
@@ -258,8 +258,8 @@
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 
 	routes_to_make = list(
-		/datum/shuttle_destination/excursion/borealis2_sky = 30 SECONDS,
-		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS
+		/datum/shuttle_destination/excursion/debrisfield = 30 SECONDS,
+		/datum/shuttle_destination/excursion/bluespace = 0,
 	)
 
 
@@ -267,8 +267,18 @@
 	name = "Skies of Borealis Majoris 2"
 	my_area = /area/shuttle/excursion/borealis2_sky
 
+/*	routes_to_make = list(
+		/datum/shuttle_destination/excursion/cryogaia_wilderness = 30 SECONDS,
+	)
+*/
+
 ////////// Distant Destinations
 /datum/shuttle_destination/excursion/bluespace
 	name = "Bluespace Jump"
 	my_area = /area/shuttle/excursion/bluespace
 	preferred_interim_area = /area/shuttle/excursion/space_moving
+
+	routes_to_make = list(
+		/datum/shuttle_destination/excursion/borealis1orbit = 0,
+		/datum/shuttle_destination/excursion/borealis4orbit = 0,
+	)

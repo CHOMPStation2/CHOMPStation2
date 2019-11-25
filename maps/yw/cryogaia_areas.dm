@@ -190,6 +190,7 @@
 /area/shuttle/excursion
 	name = "\improper Exploration Vessel"
 	icon_state = "shuttle2"
+	requires_power = 1
 	base_turf = /turf/space
 
 /area/shuttle/excursion/cryogaia
