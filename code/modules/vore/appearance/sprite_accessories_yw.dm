@@ -118,3 +118,12 @@
     icon_state = "raccoon_tail"
     do_colouration = 0
     color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/striped_tail
+    icon = "icons/mob/vore/tails_yw.dmi"
+    name = "Striped tail, colorable"
+    desc = ""
+    icon_state = "stripedtail_colorable"
+    do_colouration = 1
+    color_blend_mode = ICON_MULTIPLY
+    extra_overlay = "stripedtail_colorable_w"
