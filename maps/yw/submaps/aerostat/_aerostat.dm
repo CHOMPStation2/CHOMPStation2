@@ -2,7 +2,7 @@
 
 // -- Datums -- //
 
-/datum/shuttle_destination/excursion/virgo2orbit
+/datum/shuttle_destination/excursion/borealis4orbit
 	name = "Virgo 2 Orbit"
 	my_area = /area/shuttle/excursion/space
 	preferred_interim_area = /area/shuttle/excursion/space_moving
@@ -10,7 +10,7 @@
 
 	routes_to_make = list(
 		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS,
-		/datum/shuttle_destination/excursion/virgo2orbit = 30 SECONDS
+		/datum/shuttle_destination/excursion/aerostat = 30 SECONDS
 	)
 
 /datum/shuttle_destination/excursion/aerostat
@@ -20,7 +20,7 @@
 	skip_me = TRUE
 
 	routes_to_make = list(
-		/datum/shuttle_destination/excursion/virgo2orbit = 30 SECONDS
+		/datum/shuttle_destination/excursion/borealis4orbit = 30 SECONDS,
 	)
 
 /datum/shuttle/ferry/aerostat
@@ -46,7 +46,7 @@
 /obj/shuttle_connector/aerostat
 	name = "shuttle connector - aerostat"
 	shuttle_name = "Excursion Shuttle"
-	destinations = list(/datum/shuttle_destination/excursion/virgo2orbit, /datum/shuttle_destination/excursion/aerostat)
+	destinations = list(/datum/shuttle_destination/excursion/borealis4orbit, /datum/shuttle_destination/excursion/aerostat)
 
 /obj/away_mission_init/aerostat/Initialize()
 	/*seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 50, /area/tether_away/aerostat/surface/unexplored, /datum/map_template/virgo2)
