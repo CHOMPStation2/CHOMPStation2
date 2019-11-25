@@ -252,8 +252,8 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		var/mob/living/L = thing
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
-			if(!T.outdoors)
-				continue // They're indoors, so no need to burn them with ash.
+			if(!T.outdoors || istype(L, /mob/living/simple_mob))
+				continue // They're indoors, so no need to burn them with ash. And let's not pelter the simple_mobs either.
 
 			L.inflict_heat_damage(rand(1, 1))
 
