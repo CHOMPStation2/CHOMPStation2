@@ -312,60 +312,99 @@ var/global/list/latejoin_tram   = list()
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
 	var/frozen = 0
+	var/freezing = 0 //see process().
+	var/deiceTools[0]
 
-/obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I as obj, mob/user as mob)
+/obj/machinery/door/airlock/glass_external/freezable/New()
+	//Associate objects with the number of seconds it would take to de-ice a door.
+	//Most items are either more or less effecient at it.
+	//For items with very specific cases (like welders using fuel, or needing to be on) see attackby().
+	deiceTools[/obj/item/weapon/ice_pick] = 3 //Ice Pick
+	deiceTools[/obj/item/weapon/tool/crowbar] = 5 //Crowbar
+	deiceTools[/obj/item/weapon/pen] = 30 //Pen
+	deiceTools[/obj/item/weapon/card] = 35 //Cards. (Mostly ID cards)
+
+	//Generic weapon items. Tools are better then weapons.
+	//This is for preventing "Sierra" syndrome that could result from needing very specific objects.
+	deiceTools[/obj/item/weapon/tool] = 10
+	deiceTools[/obj/item/weapon] = 12
+	..()
+
+/obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I, mob/user as mob)
+	//Special cases for tools that need more then just a type check.
+	var/welderTime = 5 //Welder
+
+	//debug
+	//message_admins("[user] has used \the [I] of type [I.type] on [src]", R_DEBUG)
+
 	if(frozen)
+
 		//the welding tool is a special snowflake.
 		if(istype(I, /obj/item/weapon/weldingtool))
 			var/obj/item/weapon/weldingtool/welder = I
 			if(welder.remove_fuel(0,user) && welder && welder.isOn())
 				to_chat(user, "<span class='notice'>You start to melt the ice off \the [src]</span>")
 				playsound(src, welder.usesound, 50, 1)
-				if(do_after(user, 5 SECONDS))
+				if(do_after(user, welderTime SECONDS))
 					to_chat(user, "<span class='notice'>You finish melting the ice off \the [src]</span>")
-					frozen = 0
-					cut_overlays()
+					unFreeze()
 					return
 
-		 //do we have something we can de-ice the door with?
-		if(istype(I, /obj/item/weapon/ice_pick))
-			handleRemoveIce(I, user, 3)
+		if(istype(I, /obj/item/weapon/pen/crayon))
+			to_chat(user, "<span class='notice'>You try to use \the [I] to clear the ice, but it crumbles away!</span>")
+			qdel(I)
 			return
 
-		if(I.is_crowbar())
-			handleRemoveIce(I, user, 5)
-			return
-
-		if(istype(I, /obj/item/weapon))
-			handleRemoveIce(I, user)
-			return
+		//Most items will be checked in this for loop using the list in New().
+		//Code for objects with specific checks (Like the welder) should be inserted above.
+		for(var/IT in deiceTools)
+			if(istype(I, IT))
+				handleRemoveIce(I, user, deiceTools[IT])
+				return
 
 		//if we can't de-ice the door tell them what's wrong.
 		to_chat(user, "<span class='notice'>\the [src] is frozen shut!</span>")
 		return
 	..()
 
-/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/weapon/W as obj, mob/user as mob, var/time = 10 as num)
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/weapon/W as obj, mob/user as mob, var/time = 15 as num)
 	to_chat(user, "<span class='notice'>You start to chip at the ice covering \the [src]</span>")
-	if(do_after(user, time SECONDS))
-		frozen = 0
-		cut_overlays()
+	if(do_after(user, text2num(time SECONDS)))
+		unFreeze()
 		to_chat(user, "<span class='notice'>You finish chipping the ice off \the [src]</span>")
 
-/obj/machinery/door/airlock/glass_external/freezable/process()
-	for(var/datum/planet/borealis2/P in SSplanets.planets)
-		if(istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard) && prob(25))
-			if(!frozen && density)
-				cut_overlays()
-				frozen = 1
-				add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
-		else
-			if(prob(50))
-				cut_overlays()
-				frozen = 0
+/obj/machinery/door/airlock/glass_external/freezable/proc/unFreeze()
+	frozen = 0
+	cut_overlays()
+	return
 
+/obj/machinery/door/airlock/glass_external/freezable/proc/freeze()
+	cut_overlays()
+	frozen = 1
+	add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleFreezeUnfreeze()
+	freezing = 1 //don't do the thing i'm already doing.
 	var/random = rand(2,7)
+
+	for(var/datum/planet/borealis2/P in SSplanets.planets)
+		if(istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
+			if(!frozen && density && prob(25))
+				freeze()
+		else if(!istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
+			if(frozen && prob(50))
+				unFreeze()
+
 	sleep((random + 13) SECONDS)
+	freezing = 0
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/process()
+	if(!freezing)  //don't do the thing if i'm already doing it.
+		spawn(0)
+			handleFreezeUnfreeze()
+	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
 	. = ..()
@@ -374,15 +413,23 @@ var/global/list/latejoin_tram   = list()
 
 /obj/machinery/door/airlock/glass_external/freezable/open(var/forced = 0)
 	//Frozen airlocks can't open.
-	if(frozen)
+	if(frozen && !forced)
 		return
-	..()
+	else if(frozen && forced)
+		unFreeze()
+		return ..()
+	else
+		..()
 
 /obj/machinery/door/airlock/glass_external/freezable/close(var/forced = 0)
 	//Frozen airlocks can't shut either. (Though they shouldn't be able to freeze open)
-	if(frozen)
+	if(frozen && !forced)
 		return
-	..()
+	else if(frozen && forced)
+		unFreeze()
+		return ..()
+	else
+		..()
 //end of freezable airlock stuff.
 
 //Ice pick, mountain axe, or ice axe.
