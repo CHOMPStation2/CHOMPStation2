@@ -39,7 +39,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	apply_restrictions = TRUE
-	species_allowed = list(SPECIES_SHADEKIN)
+	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_YW)
 
 // Ears avaliable to anyone
 
@@ -692,7 +692,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	apply_restrictions = TRUE
-	species_allowed = list(SPECIES_SHADEKIN)
+	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_YW)
 
 // Everyone tails
 
