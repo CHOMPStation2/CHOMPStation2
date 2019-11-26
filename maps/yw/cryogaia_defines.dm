@@ -130,7 +130,7 @@
 	unit_test_exempt_from_atmos = list(
 		/area/engineering/atmos/intake
 		)
-/*
+
 	lateload_z_levels = list(
 		list("Tether - Misc","Tether - Ships","Tether - Underdark","Tether - Plains"), //Stock Tether lateload maps
 		list("Alien Ship - Z1 Ship"),
@@ -138,7 +138,7 @@
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space")
 		)
-*/
+
 	ai_shell_restricted = TRUE
 	ai_shell_allowed_levels = list(
 		Z_LEVEL_CRYOGAIA_MINE,
