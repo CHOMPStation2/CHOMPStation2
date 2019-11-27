@@ -10,7 +10,6 @@
 #define Z_LEVEL_AEROSTAT			8
 #define Z_LEVEL_AEROSTAT_SURFACE	9
 #define Z_LEVEL_DEBRISFIELD		10
-#define Z_LEVEL_MISC						11
 #define Z_LEVEL_SHIPS						12
 #define Z_LEVEL_UNDERDARK					13
 #define Z_LEVEL_PLAINS						14
@@ -132,7 +131,7 @@
 		)
 
 	lateload_z_levels = list(
-		list("Tether - Misc","Tether - Ships","Tether - Underdark","Tether - Plains"), //Stock Tether lateload maps
+		list("Tether - Ships"/*",Tether - Plains"*/), //Stock Tether lateload maps
 		list("Alien Ship - Z1 Ship"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),

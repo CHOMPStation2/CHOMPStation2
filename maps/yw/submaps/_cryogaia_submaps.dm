@@ -3,17 +3,6 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-/datum/map_template/cryogaia_lateload/cryogaia_misc
-	name = "Tether - Misc"
-	desc = "Misc areas, like some transit areas, holodecks, merc area."
-	mappath = 'cryogaia_misc.dmm'
-
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/ships
-
-/datum/map_z_level/cryogaia_lateload/misc
-	name = "Misc"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
-
 /datum/map_template/cryogaia_lateload/cryogaia_ships
 	name = "Tether - Ships"
 	desc = "Ship transit map and whatnot."
@@ -24,30 +13,8 @@
 /datum/map_z_level/cryogaia_lateload/ships
 	name = "Ships"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
-/*
-#include "underdark_pois/_templates.dm" //Disabling under dark until Deepcore is fixed
-#include "underdark_pois/underdark_things.dm"
-/datum/map_template/tether_lateload/tether_underdark
-	name = "Tether - Underdark"
-	desc = "Mining, but harder."
-	mappath = 'tether_underdark.dmm'
 
-	associated_map_datum = /datum/map_z_level/tether_lateload/underdark
-
-/datum/map_z_level/tether_lateload/underdark
-	name = "Underdark"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
-	base_turf = /turf/simulated/mineral/floor/virgo3b
-	z = Z_LEVEL_UNDERDARK
-
-/datum/map_template/tether_lateload/tether_underdark/on_map_loaded(z)
-	. = ..()
-	seed_submaps(list(Z_LEVEL_UNDERDARK), 100, /area/mine/unexplored/underdark, /datum/map_template/underdark)
-	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_UNDERDARK, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_UNDERDARK, 64, 64)         // Create the mining ore distribution map.
-*/
-
-/datum/map_template/cryogaia_lateload/cryogaia_plains
+/*/datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
 	mappath = 'cryogaia_plains.dmm'
@@ -61,7 +28,7 @@
 
 /datum/map_template/cryogaia_lateload/cryogaia_plains/on_map_loaded(z)
 	. = ..()
-	seed_submaps(list(Z_LEVEL_PLAINS), 120, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
+	seed_submaps(list(Z_LEVEL_PLAINS), 120, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)*/
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
