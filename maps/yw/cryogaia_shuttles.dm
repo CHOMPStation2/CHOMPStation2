@@ -218,7 +218,6 @@
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 
 	routes_to_make = list(
-		/datum/shuttle_destination/excursion/debrisfield = 30 SECONDS,
 		/datum/shuttle_destination/excursion/bluespace = 0,
 	)
 
