@@ -57,7 +57,7 @@
 	},
 /area/submap/virgo2/MHR)
 "l" = (
-/obj/tether_away_spawner/aerostat_surface,
+/obj/cryogaia_away_spawner/aerostat_surface,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2{
 	outdoors = 0
 	},
@@ -70,7 +70,7 @@
 /area/submap/virgo2/MHR)
 "n" = (
 /obj/effect/decal/cleanable/spiderling_remains,
-/obj/tether_away_spawner/aerostat_surface,
+/obj/cryogaia_away_spawner/aerostat_surface,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2{
 	outdoors = 0
 	},
