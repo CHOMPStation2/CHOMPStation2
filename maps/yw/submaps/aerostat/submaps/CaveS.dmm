@@ -18,7 +18,7 @@
 /turf/template_noop,
 /area/submap/virgo2/CaveS)
 "f" = (
-/obj/tether_away_spawner/aerostat_surface,
+/obj/cryogaia_away_spawner/aerostat_surface,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/CaveS)
 "g" = (
@@ -40,7 +40,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/CaveS)
 "k" = (
-/obj/tether_away_spawner/aerostat_surface,
+/obj/cryogaia_away_spawner/aerostat_surface,
 /turf/simulated/floor,
 /area/submap/virgo2/CaveS)
 "l" = (

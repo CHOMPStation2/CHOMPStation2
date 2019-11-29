@@ -9,14 +9,14 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/Epod3)
 "d" = (
-/obj/tether_away_spawner/aerostat_surface,
+/obj/cryogaia_away_spawner/aerostat_surface,
 /turf/template_noop,
 /area/submap/Epod3)
 "e" = (
 /turf/simulated/shuttle/wall,
 /area/submap/Epod3)
 "f" = (
-/obj/tether_away_spawner/aerostat_surface,
+/obj/cryogaia_away_spawner/aerostat_surface,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/Epod3)
 "g" = (
