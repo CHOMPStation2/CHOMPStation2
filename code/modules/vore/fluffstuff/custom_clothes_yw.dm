@@ -1548,3 +1548,17 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.9
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
+
+// ******
+// Lawst
+// ******
+//Domine Brisillidine
+
+/obj/item/clothing/accessory/medal/silver/fluff/kaeninmedal
+	name = "Domine Brisillidine\'s medal of valor"
+	desc = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Domine Brisillidine, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. .\" It is adorned with a purple ribbon."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "valormedal1"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "valormedal1_mob"
+	overlay_state = "valormedal1_mob"
