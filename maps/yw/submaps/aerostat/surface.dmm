@@ -4,14 +4,12 @@
 "i" = (/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/cryogaia_away/aerostat/surface/explored)
 "n" = (/obj/structure/railing{icon_state = "railing0"; dir = 1},/obj/structure/metal_edge,/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/cryogaia_away/aerostat/surface/explored)
 "q" = (/turf/simulated/mineral/virgo2,/area/cryogaia_away/aerostat/surface/explored)
-"s" = (/obj/structure/stairs/east,/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/cryogaia_away/aerostat/surface/explored)
 "A" = (/obj/structure/railing{icon_state = "railing0"; dir = 8},/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/cryogaia_away/aerostat/surface/explored)
 "F" = (/turf/simulated/mineral/virgo2,/area/cryogaia_away/aerostat/surface/unexplored)
 "I" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/techfloor/virgo2,/area/cryogaia_away/aerostat/surface/explored)
 "Q" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/techfloor/virgo2,/area/shuttle/aerostat/landed)
 "V" = (/obj/structure/railing,/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/cryogaia_away/aerostat/surface/explored)
 "X" = (/obj/structure/railing{icon_state = "railing0"; dir = 4},/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/cryogaia_away/aerostat/surface/explored)
-"Z" = (/obj/structure/stairs/west,/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/cryogaia_away/aerostat/surface/explored)
 
 (1,1,1) = {"
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -81,8 +79,8 @@ bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiiXIIIIQQQQQIIIIAiiii
 bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiXIIIIQQQQQIIIIAiiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
 bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiiXIIIIQQQQQIIIIAIIiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
 bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiiiXIIIIQQQQQIIIIAiIiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
-bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiiiisIIIIQQQQQIIIIZiiiiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
-bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiiiisIIIIQQQQQIIIIZiiiiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
+bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiiiiiIIIIQQQQQIIIIiiiiiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
+bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiiiiiIIIIQQQQQIIIIiiiiiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
 bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiiiIiXIIIIQQQQQIIIIAiiiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
 bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiIiXIIIIQQQQQIIIIAiiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
 bqFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFiiiIIiXIIIIQQQQQIIIIAiiiiFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFqb
