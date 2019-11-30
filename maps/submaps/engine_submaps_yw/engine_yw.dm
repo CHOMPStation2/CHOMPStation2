@@ -119,12 +119,12 @@
 
 	dat += "<B>Engine Select console</B><BR>"
 	dat += "Please select an engine for construction.<BR><HR>"
-	dat += "Engine autoselect in [time2text(src.lifetime SECONDS, "mm:ss")].<BR>"
+//	dat += "Engine autoselect in [time2text(src.lifetime SECONDS, "mm:ss")].<BR>"
 	dat += "WARNING: Selecting an engine will deploy nanobots to construct it. These nanobots will attempt to disassemble anything in their way, including curious engineers!.<BR>"
 
 	dat += "<A href='?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
 	dat += "<A href='?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
-	//dat += "<A href='?src=\ref[src];SINGULO=1'>Build Singularity Engine</A><BR>" //Not enabled because of stability issues.
+//	dat += "<A href='?src=\ref[src];SINGULO=1'>Build Singularity Engine</A><BR>" //Not enabled because of stability issues.
 	dat += "<A href='?src=\ref[src];RUSTEngine=1'>Build R-UST</A><BR>"
 	dat += "<BR><A href='?src=\ref[src];RANDOM=1'>Build Random Engine</A><BR>"
 
@@ -177,9 +177,9 @@
 //check every second and make sure we havent been alive to long..
 //if we have been alive to long, and aren't building anything, pick an engine to build at random.
 /obj/machinery/computer/pickengine/process()
-	--lifetime
-	if(lifetime <= 0 && !building)
-		setEngineType(pick(config.engine_map))
+//	--lifetime
+//	if(lifetime <= 0 && !building)
+//		setEngineType(pick(config.engine_map))
 	if(destroy)
 		qdel(src)
 	sleep(1 SECOND)

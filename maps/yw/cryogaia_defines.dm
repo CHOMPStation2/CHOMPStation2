@@ -4,16 +4,15 @@
 #define Z_LEVEL_CRYOGAIA_MINE		2
 #define Z_LEVEL_CRYOGAIA_LOWER		3
 #define Z_LEVEL_CRYOGAIA_MAIN		4
-#define Z_LEVEL_ALIENSHIP			5
-#define Z_LEVEL_BEACH				6
-#define Z_LEVEL_BEACH_CAVE		7
-#define Z_LEVEL_AEROSTAT			8
-#define Z_LEVEL_AEROSTAT_SURFACE	9
-#define Z_LEVEL_DEBRISFIELD		10
-#define Z_LEVEL_MISC						11
-#define Z_LEVEL_SHIPS						12
-#define Z_LEVEL_UNDERDARK					13
-#define Z_LEVEL_PLAINS						14
+#define Z_LEVEL_SHIPS				5
+#define Z_LEVEL_ALIENSHIP			6
+#define Z_LEVEL_BEACH				7
+#define Z_LEVEL_BEACH_CAVE		8
+#define Z_LEVEL_AEROSTAT			9
+#define Z_LEVEL_AEROSTAT_SURFACE	10
+#define Z_LEVEL_DEBRISFIELD		11
+#define Z_LEVEL_UNDERDARK					12
+#define Z_LEVEL_PLAINS						13
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -132,7 +131,7 @@
 		)
 
 	lateload_z_levels = list(
-		list("Tether - Misc","Tether - Ships","Tether - Underdark","Tether - Plains"), //Stock Tether lateload maps
+		list("Tether - Ships"/*",Tether - Plains"*/), //Stock Tether lateload maps
 		list("Alien Ship - Z1 Ship"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
@@ -175,8 +174,16 @@
 			Z_LEVEL_CRYOGAIA_LOWER,
 			Z_LEVEL_CRYOGAIA_MAIN,
 			)
+	else if(srcz >= Z_LEVEL_BEACH && srcz <= Z_LEVEL_BEACH_CAVE) //Zs 16-17
+		return list(
+			Z_LEVEL_BEACH,
+			Z_LEVEL_BEACH_CAVE)
+	else if(srcz >= Z_LEVEL_AEROSTAT && srcz <= Z_LEVEL_AEROSTAT_SURFACE) //Zs 18-19
+		return list(
+			Z_LEVEL_AEROSTAT,
+			Z_LEVEL_AEROSTAT_SURFACE)
 	else
-		return ..()
+		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
 
 
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))

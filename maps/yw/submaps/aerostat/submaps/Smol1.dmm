@@ -9,7 +9,7 @@
 /turf/template_noop,
 /area/submap/virgo2/Small1)
 "d" = (
-/obj/tether_away_spawner/aerostat_surface,
+/obj/cryogaia_away_spawner/aerostat_surface,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/Small1)
 

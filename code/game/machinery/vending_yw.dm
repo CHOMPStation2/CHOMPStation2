@@ -1,6 +1,11 @@
+/obj/machinery/vending/cigarette/New()
+	products += list(/obj/item/weapon/storage/fancy/cigarettes/yw/mauser = 5)
+	prices += list(/obj/item/weapon/storage/fancy/cigarettes/yw/mauser = 18)
+	..()
+
 /obj/machinery/vending/food/prison //Fluff vendor for the lewd houseboat.
 	name = "Prison Nutriment Vendor"
-	desc = "Do you think Joan cooks? Of course not. Lazy squirrel!"
+	desc = "Delicious, probably not."
 	icon_state = "boozeomat"
 	icon_deny = "boozeomat-deny"
 	products = list(/obj/item/weapon/tray = 6,
