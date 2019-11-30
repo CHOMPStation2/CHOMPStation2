@@ -33,7 +33,7 @@
 	flesh_color = "#5F7BB0"
 	base_color = "#001144"
 	tail = "seromitail"
-	//tail_hair = "feathers" //TESHARI TEMPORARY REMOVAL
+	//tail_hair = "feathers" //VORESTATION TESHARI TEMPORARY REMOVAL
 	reagent_tag = IS_TESHARI
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
@@ -115,7 +115,9 @@
 		O_LIVER =    /obj/item/organ/internal/liver,
 		O_KIDNEYS =  /obj/item/organ/internal/kidneys,
 		O_BRAIN =    /obj/item/organ/internal/brain,
-		O_EYES =     /obj/item/organ/internal/eyes
+		O_EYES =     /obj/item/organ/internal/eyes,
+		O_STOMACH =		/obj/item/organ/internal/stomach,
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	unarmed_types = list(
@@ -173,6 +175,15 @@
 					H << "[M] calms you down..."
 					H.next_loneliness_time = world.time+500
 
+		for(var/obj/effect/overlay/aiholo/A in range(5, H))
+			if(H.loneliness_stage > 0)
+				H.loneliness_stage -= 4
+				if(H.loneliness_stage < 0)
+					H.loneliness_stage = 0
+				if(world.time >= H.next_loneliness_time)
+					H << "[A] calms you down..."
+					H.next_loneliness_time = world.time+500
+					
 		/*for(var/obj/item/toy/plushie/P in range(5, H))
 			if(H.loneliness_stage > 0)
 				H.loneliness_stage -= 4

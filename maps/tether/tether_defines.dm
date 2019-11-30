@@ -19,6 +19,7 @@
 #define Z_LEVEL_AEROSTAT					18
 #define Z_LEVEL_AEROSTAT_SURFACE			19
 #define Z_LEVEL_DEBRISFIELD					20
+#define Z_LEVEL_GATEWAY						21
 
 //Camera networks
 #define NETWORK_TETHER "Tether"
@@ -121,11 +122,19 @@
 		/area/tether/surfacebase/emergency_storage/atrium)
 
 	lateload_z_levels = list(
-		list("Tether - Misc","Tether - Ships","Tether - Underdark","Tether - Plains"), //Stock Tether lateload maps
+		list("Tether - Ships","Tether - Underdark","Tether - Plains"), //Stock Tether lateload maps //YW Edit - removed Tether - Misc
 		list("Alien Ship - Z1 Ship"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space")
+		)
+
+	lateload_single_pick = list(
+		//list("Snow Outpost"),		// Unplayable mapgen,
+		//list("Zoo"),				// Too big. way, way too big
+		list("Carp Farm"),
+		list("Snow Field"),
+		list("Listening Post")
 		)
 
 	ai_shell_restricted = TRUE

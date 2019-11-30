@@ -21,6 +21,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 "d" = (
@@ -49,23 +52,15 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/tether/elevator)
 "g" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/door/airlock/maintenance/engi,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/tether_midpoint)
+/area/tether/midpoint)
 "h" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -92,6 +87,7 @@
 	},
 /obj/structure/disposalpipe/down,
 /obj/effect/ceiling,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/open,
 /area/maintenance/tether_midpoint)
 "j" = (
@@ -214,7 +210,10 @@
 	icon_state = "1-2";
 	pixel_y = 0
 	},
-/turf/simulated/floor/plating,
+/obj/structure/lattice,
+/obj/structure/disposalpipe/down,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/open,
 /area/maintenance/tether_midpoint)
 "u" = (
 /obj/effect/step_trigger/teleporter/planetary_fall/virgo3b,
@@ -229,15 +228,19 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/tether/midpoint)
 "w" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/tether/midpoint)
 "x" = (
@@ -271,10 +274,17 @@
 	pixel_x = -24
 	},
 /obj/structure/cable,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 "A" = (
 /obj/effect/ceiling,
+/obj/structure/disposalpipe/up{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 "B" = (
@@ -313,19 +323,34 @@
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 "H" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/engi,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/tether/midpoint)
+/area/maintenance/tether_midpoint)
 "I" = (
 /obj/structure/closet,
 /obj/random/plushie,
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
+"J" = (
+/obj/structure/table/woodentable,
+/obj/machinery/camera/network/civilian,
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
 "K" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -341,16 +366,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/midpoint)
-"N" = (
+"M" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
+/area/tether/midpoint)
+"N" = (
+/obj/structure/table/woodentable,
+/obj/machinery/camera/network/civilian{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
 /area/tether/midpoint)
 "O" = (
 /obj/structure/cable{
@@ -10177,7 +10208,7 @@ u
 u
 u
 b
-g
+H
 d
 d
 f
@@ -10601,7 +10632,7 @@ u
 u
 u
 u
-H
+g
 k
 q
 q
@@ -10612,7 +10643,7 @@ F
 q
 E
 p
-H
+g
 u
 u
 u
@@ -10743,7 +10774,7 @@ u
 u
 u
 u
-H
+g
 U
 q
 q
@@ -10754,7 +10785,7 @@ R
 q
 q
 U
-H
+g
 u
 u
 u
@@ -10885,8 +10916,8 @@ u
 u
 u
 u
-H
-n
+g
+J
 q
 q
 F
@@ -10895,8 +10926,8 @@ F
 F
 q
 q
-n
-H
+N
+g
 u
 u
 u
@@ -11027,7 +11058,7 @@ u
 u
 u
 u
-H
+g
 L
 q
 q
@@ -11038,7 +11069,7 @@ q
 q
 q
 L
-H
+g
 u
 u
 u
@@ -11170,17 +11201,17 @@ u
 u
 u
 v
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
 w
+w
+w
+w
+w
+w
+w
+w
+w
+w
+M
 u
 u
 u

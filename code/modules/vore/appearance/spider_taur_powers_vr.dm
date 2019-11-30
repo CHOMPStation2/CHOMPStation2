@@ -15,7 +15,8 @@
 	icon = 'icons/obj/clothing/web.dmi'
 	icon_state = "web_bindings"
 	icon_override = 'icons/mob/vore/web.dmi'
-	item_state = "web_bindings_mob"
+	item_state = "web_bindings"
+	override = 1
 
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
@@ -30,7 +31,7 @@ mob/proc/weaveWeb()
 		spawn(30) //3 seconds to form
 		new /obj/effect/spider/stickyweb(src.loc)
 	else
-		src << "You do not have enough nutrition to create webbing!"
+		to_chat(src, "You do not have enough nutrition to create webbing!")
 */
 
 /mob/proc/weaveWebBindings()
@@ -43,4 +44,4 @@ mob/proc/weaveWeb()
 			var/obj/item/clothing/suit/straight_jacket/web_bindings/bindings = new() //This sprite is amazing, I must say.
 			src.put_in_hands(bindings)
 	else
-		src << "You do not have enough nutrition to create webbing!" //CK~
+		to_chat(src, "You do not have enough nutrition to create webbing!") //CK~

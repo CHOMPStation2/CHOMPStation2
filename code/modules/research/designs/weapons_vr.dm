@@ -146,14 +146,15 @@
 	build_path = /obj/item/ammo_casing/microbattery/combat/xray
 	sort_string = "MAVCF"
 
-/datum/design/item/nsfw_cell/stripper
+// Who the fuck thought this was a good idea? -RadiantFlash
+/*/datum/design/item/nsfw_cell/stripper
 	name = "STRIPPER"
 	id = "nsfw_cell_stripper"
 	req_tech = list(TECH_MATERIAL = 7, TECH_BIO = 4, TECH_POWER = 4, TECH_COMBAT = 4, TECH_ILLEGAL = 5)
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "uranium" = 2000, "phoron" = 2000, "diamond" = 500)
 	build_path = /obj/item/ammo_casing/microbattery/combat/stripper
 	sort_string = "MAVCG"
-
+*/
 /*
 /datum/design/item/nsfw_cell/final
 	name = "FINAL OPTION"
