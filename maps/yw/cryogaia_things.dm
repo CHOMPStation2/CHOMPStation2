@@ -651,3 +651,15 @@ obj/machinery/trailblazer/Initialize()
 	model_text = "Pilot"
 	req_access = null
 	req_one_access = list(access_pilot,access_explorer)
+
+/obj/effect/step_trigger/teleporter/from_plains/New()
+	..()
+	teleport_x = world.maxx - 1
+	teleport_y = src.y
+	teleport_z = Z_LEVEL_CRYOGAIA_MAIN
+
+/obj/effect/step_trigger/teleporter/to_plains/New()
+	..()
+	teleport_x = 2
+	teleport_y = src.y
+	teleport_z = Z_LEVEL_PLAINS

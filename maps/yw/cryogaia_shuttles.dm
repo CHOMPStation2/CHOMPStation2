@@ -236,8 +236,3 @@
 	name = "Bluespace Jump"
 	my_area = /area/shuttle/excursion/bluespace
 	preferred_interim_area = /area/shuttle/excursion/space_moving
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/borealis1orbit = 0,
-		/datum/shuttle_destination/excursion/borealis4orbit = 0,
-	)
