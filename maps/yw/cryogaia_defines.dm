@@ -1,18 +1,18 @@
 //Normal YW map defs
-// for some god damn reason, the defines aren't registring properly. This is causing me an unbelievable amount of grief. -RadiantFlash
 #define Z_LEVEL_CRYOGAIA_CENTCOM	1
 #define Z_LEVEL_CRYOGAIA_MINE		2
-#define Z_LEVEL_CRYOGAIA_LOWER		3
-#define Z_LEVEL_CRYOGAIA_MAIN		4
-#define Z_LEVEL_SHIPS				5
-#define Z_LEVEL_ALIENSHIP			6
-#define Z_LEVEL_BEACH				7
-#define Z_LEVEL_BEACH_CAVE		8
-#define Z_LEVEL_AEROSTAT			9
-#define Z_LEVEL_AEROSTAT_SURFACE	10
-#define Z_LEVEL_DEBRISFIELD		11
-#define Z_LEVEL_UNDERDARK					12
-#define Z_LEVEL_PLAINS						13
+#define Z_LEVEL_CRYOGAIA_TRANSIT	3 //added due to explosions jumping from mine leve to lower.
+#define Z_LEVEL_CRYOGAIA_LOWER		4
+#define Z_LEVEL_CRYOGAIA_MAIN		5
+#define Z_LEVEL_SHIPS				6
+#define Z_LEVEL_ALIENSHIP			7
+#define Z_LEVEL_BEACH				8
+#define Z_LEVEL_BEACH_CAVE			9
+#define Z_LEVEL_AEROSTAT			10
+#define Z_LEVEL_AEROSTAT_SURFACE	11
+#define Z_LEVEL_DEBRISFIELD			12
+#define Z_LEVEL_UNDERDARK			13
+#define Z_LEVEL_PLAINS				14
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -195,6 +195,11 @@
 	name = "Subterranian depths"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
+
+/datum/map_z_level/cryogaia/transit
+	z = Z_LEVEL_CRYOGAIA_TRANSIT
+	name = "Transit"
+	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
 /datum/map_z_level/cryogaia/lower
 	name = "Subfloor"
