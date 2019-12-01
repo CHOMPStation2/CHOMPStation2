@@ -15,9 +15,8 @@
 
 	#include "cryogaia-01-centcomm.dmm" //centcom
 	#include "cryogaia-02-mining.dmm" //mining
-	#include "cryogaia-03-transit.dmm" //transit level
-	#include "cryogaia-04-maintenance.dmm" //lowerlevel
-	#include "cryogaia-05-main.dmm" //main level
+	#include "cryogaia-03-maintenance.dmm" //lowerlevel
+	#include "cryogaia-04-main.dmm" //main level
 
 	#include "submaps/_cryogaia_submaps.dm"
 

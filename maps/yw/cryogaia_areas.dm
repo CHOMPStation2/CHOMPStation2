@@ -11,8 +11,6 @@
 	name = "Elevator shaft - Sci-Cargo"
 /area/borealis2/elevator/scimining
 	name = "Elevator shaft - Sci-Mining"
-/area/borealis2/elevator/sciminingtransit
-	name = "Elevator shaft - Depth tranist"
 /area/borealis2/outdoors
 	name = "Outside - Surface"
 	icon_state = "outside1"
