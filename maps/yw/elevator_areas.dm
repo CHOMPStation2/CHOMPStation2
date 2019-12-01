@@ -47,12 +47,20 @@
 	lift_floor_name = "Atmos, Maintenance, Civilian Departments,"
 	lift_announce_str = "Arriving at Basement Level 1."
 
+/area/turbolift/lumber_floor_underground_transit
+	name = "basement (sublevel transit)"
+	lift_floor_label = "Sublevel Transit"
+	lift_floor_name = "Transit"
+	lift_announce_str = "Arriving at Basement Level Transit."
+	base_turf = /turf/simulated/floor
+
 /area/turbolift/lumber_floor_underground_mine
 	name = "basement (sublevel 2)"
 	lift_floor_label = "Sublevel 2"
 	lift_floor_name = "Mine, Toxins research"
 	lift_announce_str = "Arriving at Basement Level 2."
 	base_turf = /turf/simulated/floor
+
 
 /area/turbolift/lumber_floor_medical
 	name = "Medbay (level 1)"
