@@ -46,7 +46,7 @@
 /obj/shuttle_connector/aerostat
 	name = "shuttle connector - aerostat"
 	shuttle_name = "Excursion Shuttle"
-	destinations = list(/datum/shuttle_destination/excursion/borealis4orbit)
+	destinations = list(/datum/shuttle_destination/excursion/borealis4orbit, /datum/shuttle_destination/excursion/aerostat)
 
 /obj/away_mission_init/aerostat/Initialize()
 	/*seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 50, /area/tether_away/aerostat/surface/unexplored, /datum/map_template/virgo2)

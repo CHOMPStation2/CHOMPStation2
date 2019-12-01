@@ -205,9 +205,9 @@
 	)
 
 
-/datum/shuttle_destination/excursion/cryogaia_wilderness
+/*/datum/shuttle_destination/excursion/cryogaia_wilderness
 	name = "Borealis"
-	my_area = /area/shuttle/excursion/cryogaia_wilderness
+	my_area = /area/shuttle/excursion/cryogaia_wilderness*/
 
 
 

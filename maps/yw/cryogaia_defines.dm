@@ -200,7 +200,7 @@
 	name = "Subfloor"
 	z = Z_LEVEL_CRYOGAIA_LOWER
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
-	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
+	base_turf = /turf/simulated/open // /turf/simulated/floor/outdoors/rocks/cryogaia
 
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN
