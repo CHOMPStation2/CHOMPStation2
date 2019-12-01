@@ -1,0 +1,1 @@
+#define SPECIES_SHADEKIN_YW			"GeneShadekin"
