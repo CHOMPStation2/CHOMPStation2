@@ -14,9 +14,9 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor)
 /turf/simulated/floor/cryogaia_indoors/update_graphic(list/graphic_add = null, list/graphic_remove = null)
 	return 0
 
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow)
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow/snow2)
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow/gravsnow)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/snow2)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/gravsnow)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/plating/snow/plating)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/plating/snow/plating/drift)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
