@@ -3,7 +3,7 @@
 	desc = "A massive custom made Thermal regulator or CTR for short, intended to keep heat loss when going in our outside to a minimum, they are hardwired to tweentie celsius"
 	icon = 'icons/obj/machines/thermoregulator_vr.dmi'
 	icon_state = "lasergen"
-	density = 1
+	density = 0
 	anchored = 0
 
 	use_power = 0 //is powered directly from cables
