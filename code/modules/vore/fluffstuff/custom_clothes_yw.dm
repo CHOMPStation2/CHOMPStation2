@@ -1554,7 +1554,7 @@
 // ******
 //Domine Brisillidine
 
-/obj/item/clothing/accessory/medal/silver/fluff/medalvalorl
+/obj/item/clothing/accessory/medal/silver/fluff/dominemedal
 	name = "Domine Brisillidine's medal of valor"
 	desc = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Domine Brisillidine, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Domine lead the volunteer team in to the combat zone and assisted with arming and coordinating them against the hostile forces.\" It is adorned with a purple ribbon."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
