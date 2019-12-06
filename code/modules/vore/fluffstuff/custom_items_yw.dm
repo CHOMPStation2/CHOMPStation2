@@ -567,3 +567,4 @@
 
 	from_suit = /obj/item/clothing/suit/storage/hooded/explorer
 	to_suit = /obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
+
