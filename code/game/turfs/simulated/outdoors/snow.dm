@@ -1,4 +1,4 @@
-/turf/simulated/floor/outdoors/snow
+/* /turf/simulated/floor/outdoors/snow
 	name = "snow"
 	icon_state = "snow"
 	edge_blending_priority = 6
@@ -9,9 +9,9 @@
 		/turf/simulated/floor/outdoors/dirt
 		)
 	var/list/crossed_dirs = list()
+*/
 
-
-/turf/simulated/floor/outdoors/snow/Entered(atom/A)
+/turf/simulated/floor/outdoors/snow/snow/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		if(L.hovering) // Flying things shouldn't make footprints.
@@ -21,12 +21,12 @@
 		update_icon()
 	. = ..()
 
-/turf/simulated/floor/outdoors/snow/update_icon()
+/turf/simulated/floor/outdoors/snow/snow/update_icon()
 	..()
 	for(var/d in crossed_dirs)
 		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
 
-/turf/simulated/floor/outdoors/snow/attackby(var/obj/item/W, var/mob/user)
+/turf/simulated/floor/outdoors/snow/snow/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W, /obj/item/weapon/shovel))
 		to_chat(user, "<span class='notice'>You begin to remove \the [src] with your [W].</span>")
 		if(do_after(user, 4 SECONDS * W.toolspeed))
@@ -38,7 +38,7 @@
 	else
 		..()
 
-/turf/simulated/floor/outdoors/snow/attack_hand(mob/user as mob)
+/turf/simulated/floor/outdoors/snow/snow/attack_hand(mob/user as mob)
 	visible_message("[user] starts scooping up some snow.", "You start scooping up some snow.")
 	if(do_after(user, 1 SECOND))
 		var/obj/S = new /obj/item/stack/material/snow(user.loc)

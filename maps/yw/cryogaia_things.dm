@@ -663,3 +663,27 @@ obj/machinery/trailblazer/Initialize()
 	teleport_x = 2
 	teleport_y = src.y
 	teleport_z = Z_LEVEL_PLAINS
+
+/obj/cryogaia_away_spawner/wilds
+	name = "wilds Spawner"
+	faction = "shadekin"
+	prob_spawn = 100
+	prob_fall = 40
+	//guard = 10 //Don't wander too far, to stay alive.
+	mobs_to_pick_from = list(
+		/mob/living/simple_mob/animal/sif/shantak = 3,
+		/mob/living/simple_mob/animal/space/goose = 1,
+		/mob/living/simple_mob/animal/giant_spider/frost = 5,
+		/mob/living/simple_mob/animal/sif/kururak = 3,
+		/mob/living/simple_mob/animal/sif/frostfly = 1
+	)
+
+/obj/cryogaia_away_spawner/cryogaia
+	name = "wilds Spawner"
+	faction = "shadekin"
+	prob_spawn = 100
+	prob_fall = 40
+	//guard = 10 //Don't wander too far, to stay alive.
+	mobs_to_pick_from = list(
+		/mob/living/simple_mob/animal/passive/gaslamp/snow = 3,
+		)
