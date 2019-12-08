@@ -756,6 +756,35 @@
 					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
 					)
 
+//Plague Boye
+/obj/item/clothing/suit/storage/trench/fluff/kelplaguecoat
+	name = "Dark Leather coat"
+	desc = "A finely made dark leather coat."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplaguecoat"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kelplaguecoat_mob"
+	blood_overlay_type = "coat"
+
+/obj/item/clothing/under/fluff/kelplagueuniform
+	name = "Dark vest"
+	desc = "A fancy looking leather suit made of dark cloths. Edgy."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplagueuniform"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kelplagueuniform_mob"
+
+/obj/item/clothing/mask/gas/plaguedoctor/fluff/kelplaguemask
+	name = "Customized Gas Mask"
+	desc = "A dark leather gas mask with rivets instead of stiches holding the two halves together."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplaguedoctor"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "kelplaguedoctor_mob"
+	item_state_slots = null
+	armor = list(melee = 0, bullet = 0, laser = 2,energy = 2, bomb = 0, bio = 90, rad = 0)
+	body_parts_covered = HEAD|FACE|EYES
+
 // *******
 // Dawidoe
 // *******
