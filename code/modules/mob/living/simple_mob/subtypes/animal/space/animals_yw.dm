@@ -164,5 +164,6 @@
 	body_color = "brown"
 	icon = 'icons/mob/animal_yw.dmi'
 	icon_state = "mouse_miner"
+	item_state = "mouse_miner"
 	name = "Cooper"
 	desc = "A lonely miner's best friend."
