@@ -46,6 +46,13 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 	nitrogen = MOLES_N2STANDARD
 	temperature	= T20C
 
+/turf/simulated/floor/indoorrocks //Not outdoor rocks to prevent weather fuckery
+	name = "rocks"
+	desc = "Hard as a rock."
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "rock"
+	edge_blending_priority = 1
+
 /turf/simulated/mineral/vacuum
 	oxygen = 0
 	nitrogen = 0

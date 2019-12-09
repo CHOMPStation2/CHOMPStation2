@@ -375,13 +375,18 @@ var/global/list/latejoin_tram   = list()
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/unFreeze()
 	frozen = 0
-	cut_overlays()
+	update_icon()
 	return
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/freeze()
-	cut_overlays()
 	frozen = 1
-	add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
+	update_icon()
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/update_icon()
+	..()
+	if(frozen)
+		overlays += image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock")
 	return
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleFreezeUnfreeze()
