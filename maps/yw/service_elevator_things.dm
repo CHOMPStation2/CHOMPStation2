@@ -1,6 +1,6 @@
 /obj/turbolift_map_holder/lumber
 	icon = 'icons/obj/turbolift_preview_5x5.dmi'
-	depth = 3
+	depth = 4
 	lift_size_x = 4
 	lift_size_y = 4
 
@@ -10,6 +10,7 @@
 
 	areas_to_use = list(
 		/area/turbolift/lumber_floor_underground_mine,
+		/area/turbolift/lumber_floor_underground_transit,
 		/area/turbolift/lumber_floor_basement,
 		/area/turbolift/lumber_floor_main_level,
 		)

@@ -14,7 +14,7 @@
 	name = "Ships"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
 
-/*/datum/map_template/cryogaia_lateload/cryogaia_plains
+/datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
 	mappath = 'cryogaia_plains.dmm'
@@ -28,7 +28,7 @@
 
 /datum/map_template/cryogaia_lateload/cryogaia_plains/on_map_loaded(z)
 	. = ..()
-	seed_submaps(list(Z_LEVEL_PLAINS), 120, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)*/
+	seed_submaps(list(Z_LEVEL_PLAINS), 120, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions

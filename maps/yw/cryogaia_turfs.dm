@@ -14,17 +14,18 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor)
 /turf/simulated/floor/cryogaia_indoors/update_graphic(list/graphic_add = null, list/graphic_remove = null)
 	return 0
 
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow)
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow/snow2)
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/snow/gravsnow)
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/plating/snow/plating)
-CRYOGAIA_TURF_CREATE(/turf/simulated/floor/plating/snow/plating/drift)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/snow)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/snow/snow2)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/gravsnow)
+
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/plating)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/plating/drift)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/cryogaia)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 /turf/simulated/floor/outdoors/grass/cryogaia
 	turf_layers = list(
-		/turf/simulated/floor/snow,
+		/turf/simulated/floor/outdoors/snow,
 		/turf/simulated/floor/tiled/cryogaia,
 		)
 /turf/simulated/floor/tiled/old_tile/gray/cryogaia
@@ -44,6 +45,13 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 	oxygen = MOLES_O2STANDARD
 	nitrogen = MOLES_N2STANDARD
 	temperature	= T20C
+
+/turf/simulated/floor/indoorrocks //Not outdoor rocks to prevent weather fuckery
+	name = "rocks"
+	desc = "Hard as a rock."
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "rock"
+	edge_blending_priority = 1
 
 /turf/simulated/mineral/vacuum
 	oxygen = 0

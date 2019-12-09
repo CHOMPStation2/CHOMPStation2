@@ -1,18 +1,18 @@
 //Normal YW map defs
-// for some god damn reason, the defines aren't registring properly. This is causing me an unbelievable amount of grief. -RadiantFlash
 #define Z_LEVEL_CRYOGAIA_CENTCOM	1
 #define Z_LEVEL_CRYOGAIA_MINE		2
-#define Z_LEVEL_CRYOGAIA_LOWER		3
-#define Z_LEVEL_CRYOGAIA_MAIN		4
-#define Z_LEVEL_SHIPS				5
-#define Z_LEVEL_ALIENSHIP			6
-#define Z_LEVEL_BEACH				7
-#define Z_LEVEL_BEACH_CAVE		8
-#define Z_LEVEL_AEROSTAT			9
-#define Z_LEVEL_AEROSTAT_SURFACE	10
-#define Z_LEVEL_DEBRISFIELD		11
-#define Z_LEVEL_UNDERDARK					12
-#define Z_LEVEL_PLAINS						13
+#define Z_LEVEL_CRYOGAIA_TRANSIT	3 //added due to explosions jumping from mine leve to lower.
+#define Z_LEVEL_CRYOGAIA_LOWER		4
+#define Z_LEVEL_CRYOGAIA_MAIN		5
+#define Z_LEVEL_SHIPS				6
+#define Z_LEVEL_ALIENSHIP			7
+#define Z_LEVEL_BEACH				8
+#define Z_LEVEL_BEACH_CAVE			9
+#define Z_LEVEL_AEROSTAT			10
+#define Z_LEVEL_AEROSTAT_SURFACE	11
+#define Z_LEVEL_DEBRISFIELD			12
+#define Z_LEVEL_UNDERDARK			13
+#define Z_LEVEL_PLAINS				14
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -27,28 +27,6 @@
 	path = "cryogaia"
 
 	zlevel_datum_type = /datum/map_z_level/cryogaia
-
-	//Math only beyond this point
-	#define CRYOGAIA_MOL_PER_TURF	(CRYOGAIA_ONE_ATMOSPHERE*CELL_VOLUME/(CRYOGAIA_AVG_TEMP*R_IDEAL_GAS_EQUATION))
-	#define CRYOGAIA_MOL_N2			(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_N2)
-	#define CRYOGAIA_MOL_O2			(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_O2)
-	#define CRYOGAIA_MOL_N2O		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_N2O)
-	#define CRYOGAIA_MOL_CO2		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_CO2)
-	#define CRYOGAIA_MOL_PHORON		(CRYOGAIA_MOL_PER_TURF * CRYOGAIA_PER_PHORON)
-
-	//Turfmakers
-	#define CRYOGAIA_SET_ATMOS	nitrogen=CRYOGAIA_MOL_N2;oxygen=CRYOGAIA_MOL_O2;carbon_dioxide=CRYOGAIA_MOL_CO2;phoron=CRYOGAIA_MOL_PHORON;temperature=CRYOGAIA_AVG_TEMP
-	#define CRYOGAIA_TURF_CREATE(x)	x/cryogaiab/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP;x/cryogaia/outdoors=TRUE;x/cryogaia/update_graphic(list/graphic_add = null, list/graphic_remove = null) return 0
-	#define CRYOGAIA_TURF_CREATE_UN(x)	x/cryogaia/nitrogen=CRYOGAIA_MOL_N2;x/cryogaia/oxygen=CRYOGAIA_MOL_O2;x/cryogaia/carbon_dioxide=CRYOGAIA_MOL_CO2;x/cryogaia/phoron=CRYOGAIA_MOL_PHORON;x/cryogaia/temperature=CRYOGAIA_AVG_TEMP
-
-	//Atmosphere properties
-	#define CRYOGAIA_ONE_ATMOSPHERE	101.13 //kPa
-	#define CRYOGAIA_AVG_TEMP	233.15 //kelvin
-	#define CRYOGAIA_PER_N2		0.16 //percent
-	#define CRYOGAIA_PER_O2		0.72
-	#define CRYOGAIA_PER_N2O	0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
-	#define CRYOGAIA_PER_CO2	0.12
-	#define CRYOGAIA_PER_PHORON	0.00
 
 	lobby_icon = 'icons/misc/title_yw2.dmi'
 	lobby_screens = list("cryogaia")
@@ -194,13 +172,18 @@
 	z = Z_LEVEL_CRYOGAIA_MINE
 	name = "Subterranian depths"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
-	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
+	base_turf = /turf/simulated/floor/indoorrocks
+
+/datum/map_z_level/cryogaia/transit
+	z = Z_LEVEL_CRYOGAIA_TRANSIT
+	name = "Transit"
+	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
 /datum/map_z_level/cryogaia/lower
 	name = "Subfloor"
 	z = Z_LEVEL_CRYOGAIA_LOWER
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
-	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
+	base_turf = /turf/simulated/open // /turf/simulated/floor/outdoors/rocks/cryogaia
 
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN

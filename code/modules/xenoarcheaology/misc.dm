@@ -66,7 +66,7 @@
 	notices = 1
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/toxins/New()
+/obj/structure/noticeboard/nanite/New()
 	var/obj/item/weapon/paper/P = new()
 	P.name = "Staff Notice: Nanite Laboratory"
 	P.info = "<br>The Nanite Laboratory is nearly complete. We're simply awaiting specialized machinery and equipment from central. The lab is currently shut down. Please do not use at this time."

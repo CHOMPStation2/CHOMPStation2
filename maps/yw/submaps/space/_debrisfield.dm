@@ -15,7 +15,7 @@
 /obj/shuttle_connector/debrisfield
 	name = "shuttle connector - debrisfield"
 	shuttle_name = "Excursion Shuttle"
-	destinations = list(/datum/shuttle_destination/excursion/debrisfield, /datum/shuttle_destination/excursion/borealis2_orbit)
+	destinations = list(/datum/shuttle_destination/excursion/debrisfield)
 
 /obj/effect/step_trigger/teleporter/debrisfield_loop/north/New()
 	..()

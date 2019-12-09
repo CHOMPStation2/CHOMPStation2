@@ -15,7 +15,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 						Z_LEVEL_CRYOGAIA_MAIN,
 						Z_LEVEL_CRYOGAIA_MINE,
 						)*/
-//	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2
+	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2
 
 /datum/planet/borealis2/New()
 	..()

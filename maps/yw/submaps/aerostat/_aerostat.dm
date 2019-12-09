@@ -3,14 +3,14 @@
 // -- Datums -- //
 
 /datum/shuttle_destination/excursion/borealis4orbit
-	name = "Virgo 2 Orbit"
+	name = "Borealis 4 Orbit"
 	my_area = /area/shuttle/excursion/space
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 	skip_me = TRUE
 
 	routes_to_make = list(
 		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS,
-		/datum/shuttle_destination/excursion/aerostat = 30 SECONDS
+		/datum/shuttle_destination/excursion/aerostat = 30 SECONDS,
 	)
 
 /datum/shuttle_destination/excursion/aerostat
