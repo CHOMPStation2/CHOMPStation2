@@ -556,7 +556,7 @@ var/induromol_code = rand(1, 50)
 				M.reagents.remove_reagent(R.id, R.volume)
 
 			M.reagents.remove_reagent(src.id, src.volume)
-
+/////////////////////////////////////////////////////////////////////
 
 /datum/reagent/phororeagent/oculusosone
 	id = "oculusosone"
@@ -579,7 +579,7 @@ var/induromol_code = rand(1, 50)
 			M.client.view = 10
 	return ..()
 
-/datum/reagent/phororeagent/oculusosone/on_remove(var/atom/A)
+/datum/reagent/phororeagent/oculusosone/on_remove(var/atom/A) //Either this is not getting called, or some such.Not being removed on leave.
 	if(istype(A, /mob))
 		var/mob/M = A
 		if(ishuman(M))
@@ -593,7 +593,7 @@ var/induromol_code = rand(1, 50)
 			M.client.view = 7
 			M << "<span class='notice'>After a few blinks, you realize the Oculusosone has worn off.</span>"
 	return ..()
-
+//////////////////////////////////////////////////////////////////////////////////
 
 /datum/reagent/phororeagent/destitutionecam
 	id = "destitutionecam"
