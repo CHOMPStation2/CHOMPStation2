@@ -124,6 +124,13 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
+/datum/gear/fluff/kel_plague_box
+	path = /obj/item/weapon/storage/box/fluff/kelplague
+	display_name = "Plague Outfit Box"
+	description = "Yes"
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Nicodemus Jarvis")
+
 //benl8561
 //M.I.S.S.Y
 /datum/gear/fluff/missy_skirt
@@ -589,6 +596,15 @@
 //  K CKEYS
 
 //  L CKEYS
+
+//lawst
+//Domine Brisillidine
+/datum/gear/fluff/medalvalor1
+	path = /obj/item/clothing/accessory/medal/silver/fluff/dominemedal
+	display_name = "Domine Brisillidine's medal of valor"
+	description = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Domine Brisillidine, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Domine lead the volunteer team in to the combat zone and assisted with arming and coordinating them against the hostile forces.\" It is adorned with a purple ribbon."
+	ckeywhitelist = list("lawst")
+	character_name = list("Domine Brisillidine")
 
 //lukevale
 //Mira Rezus
