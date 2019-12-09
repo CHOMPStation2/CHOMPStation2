@@ -2019,7 +2019,7 @@
 "aMQ" = (/obj/effect/floor_decal/chapel,/obj/item/weapon/stool/padded,/turf/simulated/floor/tiled/dark,/area/chapel/main)
 "aMR" = (/obj/item/device/radio/intercom{broadcasting = 1; dir = 4; listening = 1; name = "Common Channel"; pixel_x = 21; pixel_y = 0},/turf/simulated/floor/tiled/dark,/area/chapel/main)
 "aMS" = (/obj/structure/symbol/clock,/turf/simulated/wall{can_open = 1},/area/chapel/main)
-"aMT" = (/obj/machinery/door/blast/regular{id = "clock"; tag = "clockwork"},/turf/simulated/floor/carpet,/area/chapel/office)
+"aMT" = (/obj/machinery/door/blast/regular{id = "clock"},/turf/simulated/floor/carpet,/area/chapel/office)
 "aMU" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled/dark,/area/chapel/main)
 "aMV" = (/obj/structure/cable/green{d1 = 2; d2 = 4; icon_state = "2-4"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/turf/simulated/floor/lino,/area/chapel/office)
 "aMW" = (/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/lino,/area/chapel/office)
