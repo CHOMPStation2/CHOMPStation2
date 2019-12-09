@@ -172,7 +172,7 @@
 	z = Z_LEVEL_CRYOGAIA_MINE
 	name = "Subterranian depths"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
-	base_turf = /turf/simulated/floor/outdoors/rocks/cryogaia
+	base_turf = /turf/simulated/floor/indoorrocks
 
 /datum/map_z_level/cryogaia/transit
 	z = Z_LEVEL_CRYOGAIA_TRANSIT
