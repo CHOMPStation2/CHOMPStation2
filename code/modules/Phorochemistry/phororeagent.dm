@@ -213,6 +213,10 @@ var/induromol_code = rand(1, 50)
 				M << "<BR>"
 				break
 
+/obj/item/weapon/reagent_containers/glass/beaker/lovepotion
+	name = "beaker (amorapotio)"
+	prefill = list("amorapotio" = 60)
+
 /datum/reagent/phororeagent/nasty
 	id = "nasty"
 	name = "Nasty"

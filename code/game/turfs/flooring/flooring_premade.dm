@@ -407,7 +407,7 @@
 	movement_cost = 0
 
 /turf/simulated/floor/outdoors/snow/plating
-	name = "snowy playing"
+	name = "snowy plating"
 	icon_state = "snowyplating"
 	initial_flooring = /decl/flooring/snow/plating
 	movement_cost = 0
