@@ -3,6 +3,7 @@
 	#include "cryogaia_defines.dm"
 	#include "cryogaia_turfs.dm"
 	#include "cryogaia_jobs.dm"
+	#include "job/outfits.dm"
 	#include "cryogaia_things.dm"
 	#include "tether_phoronlock.dm"
 	#include "cryogaia_areas.dm"
