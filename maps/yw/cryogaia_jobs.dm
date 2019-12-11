@@ -28,7 +28,7 @@ var/const/SAR 				=(1<<14)
 	rank = "Explorer"
 	job_access_type = /datum/job/explorer
 
-/obj/item/weapon/card/id/explorer/head/
+/obj/item/weapon/card/id/explorer/head
 	name = "identification card"
 	desc = "A card which represents discovery of the unknown."
 	icon_state = "cyanGold"
