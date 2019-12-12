@@ -371,7 +371,7 @@ obj/structure/reagent_dispensers/beerkeg/vat
 	amount_per_transfer_from_this = 10
 	anchored = 1
 
-/obj/structure/reagent_dispensers/winevat/New()
+/obj/structure/reagent_dispensers/winevat/Initialize()
 	..()
 	reagents.add_reagent("wine",1000)
 
