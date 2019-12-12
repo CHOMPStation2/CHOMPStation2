@@ -108,6 +108,8 @@
 		/area/engineering/atmos/intake
 		)
 
+	unit_test_z_levels = list(2,4,5)
+
 	lateload_z_levels = list(
 		list("Tether - Ships"/*",Tether - Plains"*/), //Stock Tether lateload maps
 		list("Alien Ship - Z1 Ship"),
