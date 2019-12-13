@@ -134,7 +134,8 @@
 		/area/borealis2/outdoors/exterior/explore1,
 		/area/security/airlock,
 		/area/borealis2/elevator/medbay,
-		/area/storage/auxillary
+		/area/storage/auxillary,
+		/area/tcommsat/powercontrol
 		)
 	unit_test_exempt_from_atmos = list(
 		/area/engineering/atmos/intake
