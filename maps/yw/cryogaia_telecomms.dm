@@ -5,14 +5,17 @@
 // Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
 /obj/machinery/telecomms/relay/preset/cryogaia/basement_1
 	id = "Base Relay 1"
+	listening_level = Z_LEVEL_CRYOGAIA_LOWER
 	autolinkers = list("l_relay")
 
 /obj/machinery/telecomms/relay/preset/cryogaia/basement_2
 	id = "Mining Relay"
+	listening_level = Z_LEVEL_CRYOGAIA_MINE
 	autolinkers = list("m_relay")
 
 /obj/machinery/telecomms/relay/preset/cryogaia/main
 	id = "Main Complex Relay"
+	listening_level =Z_LEVEL_CRYOGAIA_MAIN
 	autolinkers = list("s_relay")
 
 
