@@ -1,32 +1,35 @@
 //Simulated
-VIRGO3B_TURF_CREATE(/turf/simulated/open)
-/turf/simulated/open/virgo3b
+CRYOGAIA_TURF_CREATE(/turf/simulated/open)
+/turf/simulated/open/cryogaia
 	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
-/turf/simulated/open/virgo3b/New()
+/turf/simulated/open/cryogaia/New()
 	..()
 	if(outdoors)
-		outdoor_turfs.Add(src)
+		SSplanets.addTurf(src)
 
-VIRGO3B_TURF_CREATE(/turf/simulated/floor)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor)
 
-/turf/simulated/floor/virgo3b_indoors
-	VIRGO3B_SET_ATMOS
-/turf/simulated/floor/virgo3b_indoors/update_graphic(list/graphic_add = null, list/graphic_remove = null)
+/turf/simulated/floor/cryogaia_indoors
+	CRYOGAIA_SET_ATMOS
+/turf/simulated/floor/cryogaia_indoors/update_graphic(list/graphic_add = null, list/graphic_remove = null)
 	return 0
 
-VIRGO3B_TURF_CREATE(/turf/simulated/floor/reinforced)
-VIRGO3B_TURF_CREATE(/turf/simulated/floor/tiled/steel_dirty)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/snow)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/snow/snow2)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/gravsnow)
 
-VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/dirt)
-VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
-VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
-/turf/simulated/floor/outdoors/grass/sif
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/plating)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/plating/drift)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/cryogaia)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
+/turf/simulated/floor/outdoors/grass/cryogaia
 	turf_layers = list(
-		/turf/simulated/floor/outdoors/rocks/virgo3b,
-		/turf/simulated/floor/outdoors/dirt/virgo3b
+		/turf/simulated/floor/outdoors/snow,
+		/turf/simulated/floor/tiled/cryogaia,
 		)
-
-
+/turf/simulated/floor/tiled/old_tile/gray/cryogaia
+	CRYOGAIA_SET_ATMOS
 
 // Overriding these for the sake of submaps that use them on other planets.
 // This means that mining on tether base and space is oxygen-generating, but solars and mining should use the virgo3b subtype
@@ -43,6 +46,13 @@ VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
 	nitrogen = MOLES_N2STANDARD
 	temperature	= T20C
 
+/turf/simulated/floor/indoorrocks //Not outdoor rocks to prevent weather fuckery
+	name = "rocks"
+	desc = "Hard as a rock."
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "rock"
+	edge_blending_priority = 1
+
 /turf/simulated/mineral/vacuum
 	oxygen = 0
 	nitrogen = 0
@@ -51,11 +61,14 @@ VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
 	oxygen = 0
 	nitrogen = 0
 	temperature	= TCMB
+/turf/simulated/floor/shuttle/black
+	icon = 'icons/turf/shuttle_white.dmi'
+	icon_state = "floor_black"
 
-VIRGO3B_TURF_CREATE(/turf/simulated/mineral)
-VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
+CRYOGAIA_TURF_CREATE(/turf/simulated/mineral)
+CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 	//This proc is responsible for ore generation on surface turfs
-/turf/simulated/mineral/virgo3b/make_ore(var/rare_ore)
+/turf/simulated/mineral/cryogaia/make_ore(var/rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name
@@ -83,7 +96,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 		UpdateMineral()
 	update_icon()
 
-/turf/simulated/mineral/virgo3b/rich/make_ore(var/rare_ore)
+/turf/simulated/mineral/cryogaia/rich/make_ore(var/rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name
@@ -111,13 +124,13 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 	update_icon()
 
 //Unsimulated
-/turf/unsimulated/wall/planetary/virgo3b
+/turf/unsimulated/wall/planetary/cryogaia
 	name = "facility wall"
 	desc = "An eight-meter tall carbyne wall. For when the wildlife on your planet is mostly militant megacorps."
 	alpha = 0xFF
-	VIRGO3B_SET_ATMOS
+	CRYOGAIA_SET_ATMOS
 
-/turf/unsimulated/mineral/virgo3b
+/turf/unsimulated/mineral/cryogaia
 	blocks_air = TRUE
 
 /turf/unsimulated/floor/steel
@@ -133,3 +146,85 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 
 // Some turfs to make floors look better in centcom tram station.
 
+/turf/unsimulated/floor/techfloor_grid
+	name = "floor"
+	icon = 'icons/turf/flooring/techfloor_vr.dmi'
+	icon_state = "techfloor_grid"
+
+/turf/unsimulated/floor/maglev
+	name = "maglev track"
+	desc = "Magnetic levitation tram tracks. Caution! Electrified!"
+	icon = 'icons/turf/flooring/maglevs.dmi'
+	icon_state = "maglevup"
+
+/turf/unsimulated/wall/transit
+	icon = 'icons/turf/transit_vr.dmi'
+
+/turf/unsimulated/floor/transit
+	icon = 'icons/turf/transit_vr.dmi'
+
+/obj/effect/floor_decal/transit/orange
+	icon = 'icons/turf/transit_vr.dmi'
+	icon_state = "transit_techfloororange_edges"
+
+/obj/effect/transit/light
+	icon = 'icons/turf/transit_128.dmi'
+	icon_state = "tube1-2"
+
+// Bluespace jump turf!
+/turf/space/bluespace
+	name = "bluespace"
+	icon = 'icons/turf/space_vr.dmi'
+	icon_state = "bluespace"
+/turf/space/bluespace/Initialize()
+	..()
+	icon = 'icons/turf/space_vr.dmi'
+	icon_state = "bluespace"
+
+// Desert jump turf!
+/turf/space/sandyscroll
+	name = "sand transit"
+	icon = 'icons/turf/transit_vr.dmi'
+	icon_state = "desert_ns"
+/turf/space/sandyscroll/New()
+	..()
+	icon_state = "desert_ns"
+
+//Sky stuff!
+// A simple turf to fake the appearance of flying.
+/turf/simulated/sky/borealis2
+	color = "#E0FFFF"
+
+/turf/simulated/sky/borealis2/Initialize()
+	SSplanets.addTurf(src)
+	set_light(2, 2, "#E0FFFF")
+
+/turf/simulated/sky/borealis2/north
+	dir = NORTH
+/turf/simulated/sky/borealis2/south
+	dir = SOUTH
+/turf/simulated/sky/borealis2/east
+	dir = EAST
+/turf/simulated/sky/borealis2/west
+	dir = WEST
+
+/turf/simulated/sky/borealis2/moving
+	icon_state = "sky_fast"
+/turf/simulated/sky/borealis2/moving/north
+	dir = NORTH
+/turf/simulated/sky/borealis2/moving/south
+	dir = SOUTH
+/turf/simulated/sky/borealis2/moving/east
+	dir = EAST
+/turf/simulated/sky/borealis2/moving/west
+	dir = WEST
+
+/turf/simulated/sky/snowscroll
+	name = "snow transit"
+	icon = 'icons/turf/transit_yw.dmi'
+	icon_state = "snow_ns"
+
+
+/turf/simulated/sky/snowscroll/Initialize()
+	SSplanets.addTurf(src)
+	set_light(2, 2, "#E0FFFF")

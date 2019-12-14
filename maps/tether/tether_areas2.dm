@@ -358,6 +358,9 @@
 /area/rnd/external
 	name = "\improper Research External Access"
 	icon_state = "research"
+/area/rnd/hallwayupper
+	name = "\improper Research Primary Hallway"
+	icon_state = "research"
 /area/rnd/hallway
 	name = "\improper Research Lower Hallway"
 	icon_state = "research"

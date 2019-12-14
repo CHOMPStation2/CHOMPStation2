@@ -1,6 +1,7 @@
 ///START OF GAUSS WEAPONRY -Radiantflash ///
 /obj/item/weapon/gun/energy/soapenergy/gauss
 	name = "gauss pistol"
+	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "gausspistol"
 	item_state = "gauss"
 	desc = "An older model of the experimental Gauss weapon series. As it is unable to pass through glass, it was phased out during the mars-sol conflict due to the invention of laser carbines.Nevertheless, it still packs a punch and is easy to maintain, making it a favorite amongst sol privateers."
@@ -17,6 +18,7 @@
 
 /obj/item/weapon/gun/energy/soapenergy/gaussrifle
 	name = "gauss rifle"
+	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "gaussrifle"
 	item_state = "gaussrifle"
 	desc = "An older model of the experimental Gauss weapon series. As it is unable to pass through glass, it was phased out during the mars-sol conflict due to the invention of laser carbines.Nevertheless, it still packs a punch and is easy to maintain, making it a favorite amongst sol privateers."

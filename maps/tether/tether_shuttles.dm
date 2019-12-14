@@ -241,12 +241,12 @@
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 
 	routes_to_make = list(
-		/datum/shuttle_destination/excursion/docked_tether = 0,
+		//datum/shuttle_destination/excursion/docked_tether = 0,
 		/datum/shuttle_destination/excursion/virgo3b_orbit = 30 SECONDS
 	)
 
 
-/datum/shuttle_destination/excursion/docked_tether
+/*/datum/shuttle_destination/excursion/docked_tether
 	name = "Yawn Wider Docking Arm"
 	my_area = /area/shuttle/excursion/tether_dockarm
 
@@ -258,11 +258,11 @@
 	return "Attention, [master.my_shuttle.visible_name] has arrived at Docking Arm One."
 
 /datum/shuttle_destination/excursion/docked_tether/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed from Docking Arm One."
+	return "Attention, [master.my_shuttle.visible_name] has departed from Docking Arm One." */
 
 
 /datum/shuttle_destination/excursion/virgo3b_orbit
-	name = "Virgo 3B Orbit"
+	name = "Borealis 1 Orbit"
 	my_area = /area/shuttle/excursion/space
 	preferred_interim_area = /area/shuttle/excursion/space_moving
 

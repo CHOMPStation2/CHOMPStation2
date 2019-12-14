@@ -35,7 +35,10 @@
 /area/outpost/abandoned
 	name = "Abandoned Outpost"
 	icon_state = "dark"
-
+//lower level hallway
+/area/outpost/hall
+	name = "Lower Level Hall"
+	icon_state = "dark"
 // Main mining outpost
 /area/outpost/mining_main
 	icon_state = "outpost_mine_main"
@@ -185,6 +188,9 @@
 /area/outpost/research/eva
 	name = "Research Outpost EVA"
 
+/area/outpost/research/atmosia
+	name = "Research Outpost Atmospherics"
+
 /area/outpost/research/analysis
 	name = "Research Outpost Sample Analysis"
 
@@ -246,6 +252,10 @@
 /area/outpost/research/toxins_misc_lab
 	name = "\improper Research Outpost Toxins Miscellaneous Research"
 	icon_state = "toxmisc"
+
+/area/outpost/research/mixing
+	name = "\improper Research Outpost Toxins Mixing Room"
+	icon_state = "toxmix"
 
 /area/outpost/research/mixing
 	name = "\improper Research Outpost Toxins Mixing Room"

@@ -303,6 +303,12 @@
 		/obj/item/weapon/tracker_electronics,
 		/obj/item/weapon/paper/solar)
 
+/obj/structure/closet/crate/cooper
+	name = "Cooper's Stache"
+
+	starts_with = list(
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge = 6,
+		/obj/item/stack/material/gold = 1)
 /obj/structure/closet/crate/freezer
 	name = "freezer"
 	desc = "A freezer."
@@ -347,6 +353,13 @@
 
 	starts_with = list(
 		/obj/random/mre = 6)
+
+/obj/structure/closet/crate/freezer/meat //Fpr use in the escape shuttle
+	name = "Bonfire storage"
+	desc = "A crate of emergency rations."
+
+	starts_with = list(
+		/obj/item/weapon/reagent_containers/food/snacks/meat = 6)
 
 
 /obj/structure/closet/crate/bin
