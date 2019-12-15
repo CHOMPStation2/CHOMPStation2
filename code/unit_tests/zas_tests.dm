@@ -94,9 +94,10 @@
 // 	name = "ZAS: Mining Shuttle (Station)"
 // 	area_path = /area/shuttle/mining/station
 
-/datum/unit_test/zas_area_test/cargo_maint
-	name = "ZAS: Cargo Maintenance"
-	area_path = /area/maintenance/cargo
+// YW Edit - We do not have this zone anymore - Cryogaia
+// /datum/unit_test/zas_area_test/cargo_maint
+//	name = "ZAS: Cargo Maintenance"
+//	area_path = /area/maintenance/cargo
 
 // VOREStation Edit - We don't have this anymore - Tether
 // /datum/unit_test/zas_area_test/eng_shuttle
@@ -114,7 +115,7 @@
 /datum/unit_test/zas_area_test/mining_area
 	name = "ZAS: Mining Area (Vacuum)"
 	area_path = /area/mine/explored
-	expectation = UT_VACUUM
+	expectation = UT_NORMAL //YW Edit: Mining area is normal and not a vaccuum - Cryogaia
 
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"
