@@ -16,7 +16,7 @@
 
 	attacktext = list("mauled")
 
-	faction = "deathclaw"
+	faction = "awaymission" //makes away mobs fuckin' be on the same side.
 
 	maxHealth = 200
 	health = 200
@@ -62,3 +62,13 @@
 /datum/ai_holder/simple_mob/melee/deathclaw
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
+
+//yw edit
+/mob/living/simple_mob/vore/aggressive/deathclaw/den
+
+	maxHealth = 400
+	health = 400
+	see_in_dark = 8
+	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart! This one seems angrier then most."
+	melee_damage_lower = 10
+	melee_damage_upper = 40
