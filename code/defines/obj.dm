@@ -210,10 +210,15 @@ var/global/list/PDA_Manifest = list()
 	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point."
 
 /obj/structure/showcase/sign/nt //yw edit
-	name = "Welcome: Mining Installation 04"
+	name = "Welcome: Nanotrasen"
 	icon = 'icons/obj/structures_yw.dmi'
 	icon_state = "NT_sign"
 	desc = "This appears to be a sign welcoming Nanotrasen presonnel. It also says that NanoTrasen is the best coporation around."
+/obj/structure/showcase/sign/hephaestus //yw edit
+	name = "Hephaestus Whiskey Station"
+	icon = 'icons/obj/structures_yw.dmi'
+	icon_state = "Hephaestus_sign"
+	desc = "This appears to be a sign welcoming Hephaestus Industry personnel. It seems rather old and partly rusted."
 
 /obj/structure/showcase/yw/chaplain //yw edit
 	name = "Strange Bronze Machinery"
