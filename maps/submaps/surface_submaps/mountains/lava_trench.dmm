@@ -37,7 +37,6 @@
 "aK" = (/obj/structure/railing{icon_state = "railing0"; dir = 8},/obj/effect/step_trigger/teleporter/offset/west,/turf/simulated/floor/lava,/area/submap/lava_trench)
 "aL" = (/obj/structure/cliff/automatic{icon_state = "cliffbuilder"; dir = 4},/turf/simulated/floor/outdoors/rocks/caves,/area/submap/lava_trench)
 "aM" = (/obj/machinery/light/small/flicker{icon_state = "bulb1"; dir = 4},/turf/simulated/floor/outdoors/rocks/caves,/area/submap/lava_trench)
-"aN" = (/obj/machinery/door/airlock/hatch{normalspeed = 0; safe = 0},/obj/effect/map_effect/interval/effect_emitter/sparks,/turf/simulated/floor/tiled/old_tile,/area/submap/lava_trench/outpost)
 "aO" = (/turf/simulated/wall/rshull,/area/submap/lava_trench/outpost)
 "aP" = (/obj/machinery/door/airlock/hatch{normalspeed = 0; safe = 0},/obj/effect/map_effect/interval/effect_emitter/sparks,/turf/simulated/floor/tiled/old_tile,/area/submap/lava_trench/outpost)
 "aQ" = (/turf/simulated/floor/tiled/old_tile,/area/submap/lava_trench/outpost)
@@ -127,7 +126,7 @@ aBaBaVaWafafafafafafafafaFaUaUaUaUaUbcawaxayaFaUaUaGauauauauauaubbafafafafafafaf
 aBaBaBalafafafafafafafafafafafafafafafafbwafafafbfbgbhbibibibibibjbfbfafafbaafafafafarafaBaBaBaB
 beaBaBalafafafafbwbwbwbwbwafafafafafafafbwbwbwbwbkbkblblblblblblblbkbkafafafafafafafbmafaBaBaBaB
 beaBaBalafafafafbwbxbEbYbwbwbwbwbwbwbwbwbwbwbwafafafaAbDbDbDbDbDavapafafafafafafafafarafaBaBaBaB
-beaBaBalafafafafbwbZcacrbwbwbwcqbUaJaOaNaOcocpcsafaqaAauauauauauaubbafafafafafafafafaTafaBaBaBaB
+beaBaBalafafafafbwbZcacrbwbwbwcqbUaJaOaPaOcocpcsafaqaAauauauauauaubbafafafafafafafafaTafaBaBaBaB
 beaBaBalafafafafbwbwbwbwbwbwaJaOaOaOaObOaOaOaOaOafafaFaGauauafauaubbafafaqbpafafafafaLafaBaBaBaB
 beaBaBaVbnbnaWafafbwbwbwbwbwaOaOaSbSaOaPaObdboaOaOafafaAauauauauauavapafafafafafafafaLaBaBaBaBaB
 beaBaBaBaBaBalafafafafafafafaOaRbraQbqaQbycjbtbCaOafafaAauauauauauauavapafafafbaafafaLaBaBbeaBaB
