@@ -7,7 +7,7 @@
 			/obj/item/device/instrument/xylophone = 1,
 			/obj/item/device/instrument/accordion = 1,
 			/obj/item/device/instrument/saxophone = 1,
-			/obj/item/device/instrument/glockenspiel = 1
+			/obj/item/device/instrument/glockenspiel = 1,
 			/obj/item/device/instrument/harmonica = 1,
 			/obj/item/device/instrument/trombone = 1,
 			)
