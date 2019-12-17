@@ -209,19 +209,30 @@ var/global/list/PDA_Manifest = list()
 	icon_state = "wilderness1"
 	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point."
 
-/obj/structure/showcase/yw/chaplain
+/obj/structure/showcase/sign/nt //yw edit
+	name = "Welcome: Nanotrasen"
+	icon = 'icons/obj/structures_yw.dmi'
+	icon_state = "NT_sign"
+	desc = "This appears to be a sign welcoming Nanotrasen presonnel. It also says that NanoTrasen is the best coporation around."
+/obj/structure/showcase/sign/hephaestus //yw edit
+	name = "Hephaestus Whiskey Station"
+	icon = 'icons/obj/structures_yw.dmi'
+	icon_state = "Hephaestus_sign"
+	desc = "This appears to be a sign welcoming Hephaestus Industry personnel. It seems rather old and partly rusted."
+
+/obj/structure/showcase/yw/chaplain //yw edit
 	name = "Strange Bronze Machinery"
 	icon = 'icons/obj/clockwork_objects.dmi'
 	icon_state = "mania_motor"
 	desc = "A strange device made of bronze. It has an unknown purpose."
 
-/obj/structure/showcase/yw/chaplain2
+/obj/structure/showcase/yw/chaplain2 //yw edit
 	name = "Strange Bronze Machinery"
 	icon = 'icons/obj/clockwork_objects.dmi'
 	icon_state = "obelisk"
 	desc = "A strange device made of bronze. It has an unknown purpose."
 
-/obj/structure/showcase/yw/plaque
+/obj/structure/showcase/yw/plaque //yw edit
 	name = "Commerative Plaque"
 	icon = 'icons/obj/structures_yw32x32.dmi'
 	icon_state = "plaque"
