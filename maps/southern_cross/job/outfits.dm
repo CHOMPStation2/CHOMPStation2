@@ -24,6 +24,8 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	for(var/obj/item/clothing/accessory/permit/gun/planetside/permit in H.back.contents)
 		permit.set_name(H.real_name)
 
+//CHOMPStation Removal Start TFF 20/12/19
+/*
 /decl/hierarchy/outfit/job/explorer2/technician
 	name = OUTFIT_JOB_NAME("Explorer Technician")
 	belt = /obj/item/weapon/storage/belt/utility/full
@@ -35,7 +37,8 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	l_hand = /obj/item/weapon/storage/firstaid/regular
 	pda_slot = slot_l_store
 	id_pda_assignment = "Explorer Medic"
-
+*/
+//CHOMPStation Removal End
 /decl/hierarchy/outfit/job/pilot
 	name = OUTFIT_JOB_NAME("Pilot")
 	shoes = /obj/item/clothing/shoes/black
