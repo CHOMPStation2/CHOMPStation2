@@ -1,7 +1,7 @@
-var/const/PATHFINDER 		=(1<<11)
-var/const/EXPLORER 			=(1<<12)
-var/const/PILOT 			=(1<<13)
-var/const/SAR 				=(1<<14)
+var/const/PATHFINDER 		=(1<<12)
+//var/const/EXPLORER 			=(1<<12)
+//var/const/PILOT 			=(1<<13)
+//var/const/SAR 				=(1<<14)
 
 /obj/item/weapon/card/id/medical/sar
 	assignment = "Field Medic"

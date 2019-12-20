@@ -4,6 +4,7 @@
 
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
+	#include "southern_cross_jobs.dm"
 	#include "southern_cross_jobs_vr.dm"
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_presets.dm"
