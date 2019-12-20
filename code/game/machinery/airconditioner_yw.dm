@@ -1,13 +1,13 @@
 /obj/machinery/power/thermoregulator/cryogaia
 	name = "Custom Thermal Regulator"
-	desc = "A massive custom made Thermal regulator or CTR for short, intended to keep heat loss when going in our outside to a minimum, they are hardwired to tweentie celsius"
+	desc = "A massive custom made Thermal regulator or CTR for short, intended to keep heat loss when going in our outside to a minimum, they are hardwired to twenty celsius"
 	icon = 'icons/obj/machines/wallthermal.dmi'
 	icon_state = "lasergen"
 	density = 0
 	anchored = 1
-//Consider making this powered by the room at some point.
+	//Consider making this powered by the room at some point.
 	use_power = 0 //is powered directly from cables
-	active_power_usage = 25 KILOWATTS  //Medium Power
+	active_power_usage = 25 KILOWATTS  //Low Power
 	idle_power_usage = 250
 
 	circuit = null
