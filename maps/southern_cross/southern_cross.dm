@@ -4,11 +4,12 @@
 
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
-	#include "southern_cross_jobs.dm"
 	#include "southern_cross_jobs_vr.dm"
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_presets.dm"
 	#include "southern_cross_shuttles.dm"
+
+	#include "access_datums_vr.dm"
 
 	#include "shuttles/crew_shuttles.dm"
 	#include "shuttles/heist.dm"
