@@ -9,8 +9,6 @@
 	#include "southern_cross_presets.dm"
 	#include "southern_cross_shuttles.dm"
 
-	#include "access_datums_vr.dm"
-
 	#include "shuttles/crew_shuttles.dm"
 	#include "shuttles/heist.dm"
 	#include "shuttles/merc.dm"
