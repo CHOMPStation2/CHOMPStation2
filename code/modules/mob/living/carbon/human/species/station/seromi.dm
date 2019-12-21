@@ -145,6 +145,9 @@
 		// If they're dead or unconcious they're a bit beyond this kind of thing.
 		if(H.stat)
 			return
+		// Vored? Not gonna get frightened.
+		if(ishuman(H.loc)
+			return
 		// No point processing if we're already stressing the hell out.
 		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
 			return
