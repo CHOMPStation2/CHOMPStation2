@@ -23,6 +23,7 @@
 	var/base_state = "bedrock"
 	block_tele = TRUE
 
+
 /turf/simulated/wall/solidrock/update_icon()
 	for(var/direction in cardinal)
 		var/turf/T = get_step(src,direction)

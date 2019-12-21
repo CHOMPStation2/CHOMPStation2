@@ -148,6 +148,11 @@
 		// No point processing if we're already stressing the hell out.
 		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
 			return
+		// Vored? Not gonna get frightened.
+		if(ishuman(H.loc))
+			if(H.loneliness_stage > 0)
+				H.loneliness_stage -= 4
+			return
 		// Check for company.
 		for(var/mob/living/M in viewers(H))
 			if(!istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot))

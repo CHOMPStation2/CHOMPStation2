@@ -129,7 +129,7 @@
 
 /obj/machinery/vending/fitness/New()
 	products += list(/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 8)
-	prices += list(/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 10)
+	prices += list(/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 5)
 	..()
 
 /obj/machinery/vending/blood
@@ -1023,7 +1023,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/snowsuit = 5,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -1110,7 +1110,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 200,
 					/obj/item/clothing/suit/storage/flannel/red = 200,
 					/obj/item/clothing/suit/unathi/robe = 100,
-					/obj/item/clothing/suit/storage/snowsuit = 200,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 200,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 200,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 200,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 200,

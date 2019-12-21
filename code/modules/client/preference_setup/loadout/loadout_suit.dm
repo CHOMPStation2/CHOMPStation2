@@ -465,36 +465,36 @@ datum/gear/suit/duster
 
 /datum/gear/suit/snowsuit
 	display_name = "snowsuit"
-	path = /obj/item/clothing/suit/storage/snowsuit
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit
 
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
-	path = /obj/item/clothing/suit/storage/snowsuit/command
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command
 	allowed_roles = list("Colony Director","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard")
 
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
-	path = /obj/item/clothing/suit/storage/snowsuit/security
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security
 	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard")
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"
-	path = /obj/item/clothing/suit/storage/snowsuit/medical
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Search and Rescue")
 
 /datum/gear/suit/snowsuit/science
 	display_name = "snowsuit, science"
-	path = /obj/item/clothing/suit/storage/snowsuit/science
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/science
 	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist")
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "snowsuit, engineering"
-	path = /obj/item/clothing/suit/storage/snowsuit/engineering
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering
 	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Station Engineer")
 
 /datum/gear/suit/snowsuit/cargo
 	display_name = "snowsuit, supply"
-	path = /obj/item/clothing/suit/storage/snowsuit/cargo
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/cargo
 	allowed_roles = list("Quartermaster","Shaft Miner","Cargo Technician","Head of Personnel")
 
 /datum/gear/suit/miscellaneous/cardigan
