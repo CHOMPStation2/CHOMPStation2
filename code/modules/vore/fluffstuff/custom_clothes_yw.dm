@@ -780,7 +780,7 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "kelplaguedoctor"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	item_state = "kelplaguedoctor_mob"
+	item_state = "kelplaguedoctor"
 	item_state_slots = null
 	armor = list(melee = 0, bullet = 0, laser = 2,energy = 2, bomb = 0, bio = 90, rad = 0)
 	body_parts_covered = HEAD|FACE|EYES
