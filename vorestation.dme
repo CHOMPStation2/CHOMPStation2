@@ -3442,6 +3442,8 @@
 #include "maps\yw\items\clothing\sc_accessory.dm"
 #include "maps\yw\items\clothing\sc_suit.dm"
 #include "maps\yw\items\clothing\sc_under.dm"
+#include "maps\yw\residential\_residential.dm"
+#include "maps\yw\residential\residential.dmm"
 #include "maps\yw\structures\closets\engineering.dm"
 #include "maps\yw\structures\closets\medical.dm"
 #include "maps\yw\structures\closets\misc.dm"
