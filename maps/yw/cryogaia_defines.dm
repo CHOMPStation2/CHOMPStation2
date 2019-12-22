@@ -138,7 +138,7 @@
 		/area/tcommsat/powercontrol
 		)
 	unit_test_exempt_from_atmos = list(
-		/area/engineering/atmos/intake
+//		/area/engineering/atmos/intake
 		)
 
 	unit_test_z_levels = list(2,4,5)
