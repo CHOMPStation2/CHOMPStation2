@@ -90,6 +90,9 @@ var/global/list/engineering_networks = list(
 /obj/machinery/camera/network/research
 	network = list(NETWORK_RESEARCH)
 
+/obj/machinery/camera/network/exploration //yw edit
+	network = list(NETWORK_EXPLORATION)
+
 /obj/machinery/camera/network/research_outpost
 	network = list(NETWORK_RESEARCH_OUTPOST)
 

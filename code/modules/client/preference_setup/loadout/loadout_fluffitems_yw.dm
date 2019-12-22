@@ -796,14 +796,14 @@
 	character_name = list("Vasharr Zahirn")
 
 /datum/gear/fluff/vasharr_under
-	path = /obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr
+	path = /obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr
 	display_name = "Cartographer Engineering Command Uniform"
 	description = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
 
 /datum/gear/fluff/vasharr_coat
-	path = /obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr
+	path = /obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr
 	display_name = "Cartographer Engineering Command Jacket"
 	description = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
 	ckeywhitelist = list("radiantflash")
