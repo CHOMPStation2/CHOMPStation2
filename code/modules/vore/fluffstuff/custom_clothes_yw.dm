@@ -1097,11 +1097,11 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
-/obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr
+/obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr
 	name = "Cartographer Engineering Command Uniform"
 	desc = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
 
-/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr
+/obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr
 	name = "Cartographer Engineering Command Jacket"
 	desc = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
 
