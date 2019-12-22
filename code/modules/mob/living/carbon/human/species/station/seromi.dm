@@ -149,7 +149,7 @@
 		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
 			return
 		// Vored? Not gonna get frightened.
-		if(ishuman(H.loc))
+		if(isbelly(H.loc))
 			if(H.loneliness_stage > 0)
 				H.loneliness_stage -= 4
 			return
