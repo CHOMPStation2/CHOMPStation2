@@ -606,8 +606,7 @@
 	..()
 
 
-//YW changes: Servicehound start
-
+//YW changes - Addition of Servicehound start
 /obj/item/weapon/robot_module/robot/servicehound
 	name = "service-hound module"
 	sprites = list(
@@ -679,7 +678,8 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-//YW changes: Servicehound end
+//YW changes - Addition of Servicehound end
+
 
 /obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
 	R.pixel_x = initial(pixel_x)
