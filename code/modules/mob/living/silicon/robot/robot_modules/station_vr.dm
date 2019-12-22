@@ -43,7 +43,7 @@
 	robot_modules["Janihound"] = /obj/item/weapon/robot_module/robot/scrubpup
 	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
 	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
-	robot_modules["Servicehound"] = /obj/item/weapon/robot_module/robot/servicehound
+	robot_modules["Servicehound"] = /obj/item/weapon/robot_module/robot/servicehound //YW changes
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -481,7 +481,7 @@
 	sprites = list(
 					"Pupdozer" = "pupdozer",
 					"Borgi" = "borgi-eng",
-					"V2 Engidog" = "thottbot"
+					"V2 Engidog" = "thottbot" //YW changes
 					)
 	channels = list("Engineering" = 1)
 	networks = list(NETWORK_ENGINEERING)
@@ -605,7 +605,7 @@
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-
+//YW changes - Addition of Servicehound start
 /obj/item/weapon/robot_module/robot/servicehound
 	name = "service-hound module"
 	sprites = list(
@@ -676,6 +676,8 @@
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
+	
+//YW changes - Addition of Servicehound end
 
 /obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
 	R.pixel_x = initial(pixel_x)
