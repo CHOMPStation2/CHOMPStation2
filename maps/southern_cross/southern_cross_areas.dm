@@ -1589,6 +1589,17 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/shuttle/cryo/transit
 	icon_state = "shuttle"
 
+// Fishing
+
+/area/surface/outpost/fishing
+	name = "\improper Fishing Outpost"
+	icon_state = "recreation_area"
+
+/area/surface/outpost/fishing/smes
+	name = "\improper Fishing SMES Maintenance"
+	icon_state = "substation"
+
+
 // Misc
 
 /area/wreck/ufoship
