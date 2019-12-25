@@ -237,11 +237,11 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 			holidays.Add(p)
 			holiday_blurbs.Add("[Holiday[p]]")
 		var/holidays_string = english_list(holidays, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "" )
-		world << "<font color='blue'>and...</font>"
+		world << "<font color='#6F6FE2'>and...</font>"
 		world << "<h4>Happy [holidays_string] Everybody!</h4>"
 		if(holiday_blurbs.len != 0)
 			for(var/blurb in holiday_blurbs)
-				world << "<div align='center'><font color='blue'>[blurb]</font></div>"
+				world << "<div align='center'><font color='#6F6FE2'>[blurb]</font></div>"
 		switch(Holiday)			//special holidays
 			if("Easter")
 				//do easter stuff
