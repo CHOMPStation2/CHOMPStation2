@@ -375,7 +375,7 @@
 //	wikilink="https://www.yawn.ocry.com/Skrell"
 
 /datum/species/zaddat
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN CHOMPstation edit: disabled pending staff discussion
 	min_age = 18
 	gluttonous = 0
 	descriptors = list()
@@ -546,7 +546,7 @@ datum/species/harpy
 	heat_level_3 = 1150
 
 	flags =  NO_SCAN
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled maybe forever
 
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
 
