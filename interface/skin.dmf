@@ -1112,7 +1112,7 @@ window "mainwindow"
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "CHOMPStation"
 		is-maximized = true
-		icon = 'icons\\virgoicon.png'
+		icon = 'icons\\ss13_64.png'
 		macro = "macro"
 		menu = "menu"
 	elem "hotkey_toggle"
