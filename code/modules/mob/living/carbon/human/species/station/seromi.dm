@@ -1,5 +1,7 @@
-/mob/living/carbon/var/loneliness_stage = 0
-/mob/living/carbon/var/next_loneliness_time = 0
+//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
+///mob/living/carbon/var/loneliness_stage = 0
+///mob/living/carbon/var/next_loneliness_time = 0
+//CHOMPStation Removal End
 /datum/species/teshari
 	name = SPECIES_TESHARI
 	name_plural = "Tesharii"
@@ -13,16 +15,21 @@
 	secondary_langs = list(LANGUAGE_SCHECHI, LANGUAGE_SKRELLIAN)
 	name_language = LANGUAGE_SCHECHI
 	species_language = LANGUAGE_SCHECHI
+
 	min_age = 18
 	max_age = 100
 
 	economic_modifier = 10
 
 	health_hud_intensity = 3
+	//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
+/*
 	//YW Edit: Readding loneliness
 	var/warning_cap = 300
 	var/hallucination_cap = 25
 	//YW Edit End
+*/
+	//CHOMPStation Removal End
 
 	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
@@ -140,6 +147,8 @@
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
+//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
+/*
 /datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
 	spawn(0)
 		// If they're dead or unconcious they're a bit beyond this kind of thing.
@@ -183,7 +192,7 @@
 				if(world.time >= H.next_loneliness_time)
 					H << "[A] calms you down..."
 					H.next_loneliness_time = world.time+500
-					
+
 		/*for(var/obj/item/toy/plushie/P in range(5, H))
 			if(H.loneliness_stage > 0)
 				H.loneliness_stage -= 4
@@ -219,3 +228,5 @@
 	if(ms != "")
 		H << ms
 	H.next_loneliness_time = world.time+500
+*/
+//CHOMPStation Removal End
