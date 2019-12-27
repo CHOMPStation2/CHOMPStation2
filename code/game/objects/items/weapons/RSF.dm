@@ -64,25 +64,29 @@ RSF
 
 /obj/item/weapon/rsf/attack_self(mob/user as mob)
 	playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
-	if (mode == 1)
+	if(mode == 1)
 		mode = 2
 		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Container'.</span>")
 		return
-	if (mode == 2)
+	if(mode == 2)
 		mode = 3
-		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Paper'</span>")
+		to_chat(user,"Changed dispensing mode to 'Metamorphic Glass: Pint'") //YW Changes begin
 		return
-	if (mode == 3)
+	if(mode == 3)
 		mode = 4
-		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Pen'</span>")
+		to_chat(user,"Changed dispensing mode to 'Paper'")
 		return
-	if (mode == 4)
+	if(mode == 4)
 		mode = 5
-		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Dice Pack'</span>")
+		to_chat(user,"Changed dispensing mode to 'Pen'")
 		return
-	if (mode == 5)
+	if(mode == 5)
+		mode = 6
+		to_chat(user,"Changed dispensing mode to 'Dice Pack'")
+		return
+	if(mode == 6)
 		mode = 1
-		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Cigarette'</span>")
+		to_chat(user,"Changed dispensing mode to 'Cigarette'") // YW Changes end
 		return
 
 /obj/item/weapon/rsf/afterattack(atom/A, mob/user as mob, proximity)
@@ -112,12 +116,15 @@ RSF
 			product = new glasstype()
 			used_energy = 50
 		if(3)
+			product = new /obj/item/weapon/reagent_containers/food/drinks/metaglass()	//YW Changes begin
+			used_energy = 50
+		if(4)
 			product = new /obj/item/weapon/paper()
 			used_energy = 10
-		if(4)
+		if(5)
 			product = new /obj/item/weapon/pen()
 			used_energy = 50
-		if(5)
+		if(6) 																			//YW Changes end
 			product = new /obj/item/weapon/storage/pill_bottle/dice()
 			used_energy = 200
 
