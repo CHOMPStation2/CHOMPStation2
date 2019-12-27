@@ -217,6 +217,10 @@
 	icon_state = "emergencystorage"
 	sound_env = SMALL_ENCLOSED
 
+/area/surface/outpost/research/xenoresearch/first_aid //CHOMPstation edit
+	name = "\improper Xenoresearch First-Aid Station"
+	icon_state = "medbay2"
+
 /area/surface/outpost/research/xenoresearch/restroom
 	name = "\improper Xenoresearch Restroom"
 	icon_state = "research_restroom"
@@ -612,22 +616,22 @@
 /area/hangar/one
 	name = "\improper Hangar One"
 
-/area/hangar/onecontrol
-	name = "\improper Hangar One Control Room"
+/area/hangar/lockerroomone
+	name = "\improper Exploration Locker Room One"
 	icon_state = "hangarcontrol"
 
 /area/hangar/two
 	name = "\improper Hangar Two"
 
-/area/hangar/twocontrol
-	name = "\improper Hangar Two Control Room"
+/area/hangar/lockerroomtwo
+	name = "\improper Exploration Locker Room Two"
 	icon_state = "hangarcontrol"
 
 /area/hangar/three
 	name = "\improper Hangar Three"
 
-/area/hangar/threecontrol
-	name = "\improper Hangar Three Control Room"
+/area/hangar/lockerroomthree
+	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
 
 /area/security/checkpoint3
@@ -1589,7 +1593,7 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/shuttle/cryo/transit
 	icon_state = "shuttle"
 
-// Fishing
+// Fishing CHOMPstation edit
 
 /area/surface/outpost/fishing
 	name = "\improper Fishing Outpost"
@@ -1598,7 +1602,6 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/surface/outpost/fishing/smes
 	name = "\improper Fishing SMES Maintenance"
 	icon_state = "substation"
-
 
 // Misc
 
