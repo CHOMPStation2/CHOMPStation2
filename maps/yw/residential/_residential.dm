@@ -1,7 +1,7 @@
 // -- Datums -- //
 
 /datum/shuttle/ferry/residential
-	name = "Residential Ferry"
+	name = "Residential Shuttle"
 	location = 1 // At offsite
 	warmup_time = 5
 	move_time = 5
