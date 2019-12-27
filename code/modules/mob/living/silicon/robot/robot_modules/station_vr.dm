@@ -488,7 +488,7 @@
 	var/obj/item/stack/cable_coil/cyborg/C = new /obj/item/stack/cable_coil/cyborg(src)
 	C.synths = list(wire)
 	src.modules += C
-	/YW changes end, wires and nanopaste
+	//YW changes end, wires and nanopaste
 
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
@@ -561,10 +561,10 @@
 	plastic.max_energy = 50000
 	plastic.energy = 10000
 	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel()
-	plasteel.name = "Plasteel reserves"//YW changes, adding plasteel synthesizer
+	plasteel.name = "Plasteel reserves"//YW changes start, adding plasteel synthesizer
 	plasteel.recharge_rate = 100
 	plasteel.max_energy = 20000
-	plasteel.energy = 10000
+	plasteel.energy = 10000//YW changes end, adding plasteel synthesizer
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
@@ -593,7 +593,6 @@
 	MD.wood = wood
 	MD.plastic = plastic
 	MD.water = water
-	MD.plasteel = plasteel//YW changes, adding plasteel features
 	src.modules += MD
 
 	var/obj/item/stack/material/cyborg/steel/M = new (src)
