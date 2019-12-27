@@ -711,7 +711,7 @@
 				playsound(src.loc, 'sound/effects/clang1.ogg', 10, 1)
 				visible_message("<span class='warning'>[H] taps [src].</span>")
 				return
-
+	//YW changes end, borg petting
 	if(opened && !wiresexposed && (!istype(user, /mob/living/silicon)))
 		var/datum/robot_component/cell_component = components["power cell"]
 		if(cell)
