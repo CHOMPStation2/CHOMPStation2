@@ -698,6 +698,7 @@
 #include "code\game\jobs\job\assistant.dm"
 #include "code\game\jobs\job\assistant_vr.dm"
 #include "code\game\jobs\job\blueshield.dm"
+#include "code\game\jobs\job\blueshield_ch.dm"
 #include "code\game\jobs\job\captain.dm"
 #include "code\game\jobs\job\captain_vr.dm"
 #include "code\game\jobs\job\civilian.dm"
