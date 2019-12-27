@@ -33,6 +33,23 @@
 	icon_state = "amaint"
 	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
 
+
+/area/maintenance/mining
+	name = "Mining Maintence"
+	icon_state = "amaint"
+
+/area/maintenance/shelter
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
+/area/maintenance/shelter2
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
+/area/maintenance/shelter3
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
 /area/maintenance/blueserg
 	name = "Blue Sergal"
 	icon_state = "amaint"
