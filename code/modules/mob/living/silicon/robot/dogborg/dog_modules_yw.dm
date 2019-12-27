@@ -24,3 +24,27 @@
 		user.loc = target.loc
 		return
 	return
+
+/mob/living/silicon/robot/proc/reskin_booze()
+	set name = "Change Drink Color"
+	set category = "Robot Commands"
+	set desc = "Choose the color of drink displayed inside you."
+
+	var/mob/M = usr
+	var/list/options = list()
+	options["Beer"] = "Beer Buddy"
+	options["Curacao"] = "Brilliant Blue"
+	options["Coffee"] = "Caffine Dispenser"
+	options["Space Mountain Wind"] = "Gamer Juice Maker"
+	options["Whiskey Soda"] = "Liqour Licker"
+	options["Grape Soda"] = "The Grapist"
+	options["Demon's Blood"] = "Vampire's Aid"
+	options["Slav Vodka"] = "Vodka Komrade"
+	var/choice = input(M,"Choose your drink!") in options
+	if(src && choice && !M.stat && in_range(M,src))
+		icontype = options[choice]
+		var/active_sound = 'sound/effects/bubbles.ogg'
+		playsound(src.loc, "[active_sound]", 100, 0, 4)
+		M << "Your Tank now displays [choice]. Drink up and enjoy!"
+		updateicon()
+		return 1
