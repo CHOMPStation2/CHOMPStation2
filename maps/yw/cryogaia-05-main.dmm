@@ -5791,7 +5791,7 @@
 "chs" = (/obj/structure/window/reinforced{dir = 8; health = 1e+006},/obj/structure/closet,/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/turf/simulated/floor/tiled,/area/security/checkpoint)
 "cht" = (/obj/machinery/button/remote/blast_door{id = "escapesec"; name = "Emergency Lockdown"; pixel_x = -30},/obj/structure/closet/secure_closet/security,/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4},/turf/simulated/floor/tiled,/area/security/checkpoint)
 "chu" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/turf/simulated/floor/tiled,/area/security/checkpoint)
-"chv" = (/obj/structure/cable{dir = 4; icon_state = "2-8"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled,/area/security/checkpoint)
+"chv" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable{icon_state = "2-4"},/turf/simulated/floor/tiled,/area/security/checkpoint)
 "chw" = (/obj/structure/cable{icon_state = "0-8"},/obj/machinery/power/apc{dir = 2; name = "south bump"; pixel_y = -32},/turf/simulated/floor/tiled,/area/security/checkpoint)
 "chx" = (/obj/machinery/atmospherics/pipe/simple/hidden/universal,/turf/simulated/floor/tiled,/area/security/checkpoint)
 "chy" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled,/area/security/checkpoint)

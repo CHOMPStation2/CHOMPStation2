@@ -3,8 +3,8 @@
 /datum/shuttle/ferry/residential
 	name = "Residential Shuttle"
 	location = 1 // At offsite
-	warmup_time = 5
-	move_time = 5
+	warmup_time = 30
+	move_time = 270
 	area_station = /area/shuttle/residential/main
 	area_offsite = /area/shuttle/residential/residential
 	area_transition = /area/shuttle/residential/transition
