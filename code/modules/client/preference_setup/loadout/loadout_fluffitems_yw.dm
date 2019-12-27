@@ -124,6 +124,7 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
+//Plague Doctor Boye
 /datum/gear/fluff/kel_plague_box
 	path = /obj/item/weapon/storage/box/fluff/kelplague
 	display_name = "Plague Outfit Box"
