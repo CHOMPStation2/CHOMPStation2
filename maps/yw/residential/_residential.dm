@@ -53,6 +53,9 @@
 /area/residential/lobby
 	name = "\improper Residential - Residential Lobby"
 
+/area/residential/medbay
+	name = "\improper Residential - Residential Medbay"
+
 /area/residential/room1
 	name = "\improper Residential - Room 1"
 	icon_state = "room1"
