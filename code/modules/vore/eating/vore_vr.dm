@@ -171,15 +171,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		return FALSE
 
 	//Write it out
-/*Not needed on Chomp's server cuz Linux. We have to use rust-g, but it's just not compatable with us.
-#ifdef RUST_G
-	call(RUST_G, "file_write")(json_to_file, path)
-#else*/
-	// Fall back to using old format if we are not using rust-g //Chomp is using rust-g, but the above is not compatable. So I am making sure this following part runs by default.
 	if(fexists(path))
 		fdel(path) //Byond only supports APPENDING to files, not replacing.
 	text2file(json_to_file, path)
-//#endif //This endif is commented out because it's not needed for Chomp.
 	if(!fexists(path))
 		log_debug("Saving: [path] failed file write")
 		return FALSE
