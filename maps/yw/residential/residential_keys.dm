@@ -121,7 +121,7 @@
 	display_name = "RS1 keys"
 	description = "residential"
 	ckeywhitelist = list("dushka")
-	character_name = list("Jaree-Kur")
+	character_name = list("Skraw'laar")
 
 /datum/gear/fluff/res_key_rs2
 	path = /obj/item/weapon/card/id/residential/rs2
