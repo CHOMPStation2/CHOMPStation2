@@ -2655,6 +2655,7 @@
 #include "code\modules\mob\new_player\preferences_setup_vr.dm"
 #include "code\modules\mob\new_player\skill.dm"
 #include "code\modules\mob\new_player\sprite_accessories.dm"
+#include "code\modules\mob\new_player\sprite_accessories_ch.dm"
 #include "code\modules\mob\new_player\sprite_accessories_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_yw.dm"
 #include "code\modules\modular_computers\laptop_vendor.dm"
