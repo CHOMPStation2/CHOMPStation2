@@ -432,9 +432,22 @@
 
 	if(additional_chems)
 
-		var/list/banned_chems = list(
+		var/list/banned_chems = list( //expanding this list on request - Skits
 			"adminordrazine",
-			"nutriment"
+			"nutriment",
+			"spideregg",
+			"bloodburn",
+			"eden_snake",
+			"aphrodisiac",
+			"change_drug",
+			"change_drug_male",
+			"change_drug_female",
+			"change_drug_intersex",
+			"macrocillin",
+			"microcillin",
+			"normalcillin",
+			"fakesynxchem",
+			"clownsynxchem"
 			)
 
 		for(var/x=1;x<=additional_chems;x++)
