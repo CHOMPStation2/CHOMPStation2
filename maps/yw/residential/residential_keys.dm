@@ -92,8 +92,8 @@
 	path = /obj/item/weapon/card/id/residential/s5
 	display_name = "S5 keys"
 	description = "residential"
-	ckeywhitelist = list("joezill")
-	character_name = list("Arcana Valinar")
+	ckeywhitelist = list("joezill", "sinoxatori")
+	character_name = list("Ciri Vulture", "Kasali Vulture")
 
 /datum/gear/fluff/res_key_s6
 	path = /obj/item/weapon/card/id/residential/s6
