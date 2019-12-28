@@ -114,7 +114,7 @@
 	display_name = "RM2 keys"
 	description = "residential"
 	ckeywhitelist = list("ashvor", "sleepyretard")
-	character_name = list("Sawyer Collins", "Vaneschka Penkina")
+	character_name = list("Sawyer Collins", "Vanechka Penkina")
 
 /datum/gear/fluff/res_key_rs1
 	path = /obj/item/weapon/card/id/residential/rs1
