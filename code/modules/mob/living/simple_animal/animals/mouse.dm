@@ -123,6 +123,12 @@
 	body_color = "brown"
 	icon_state = "mouse_brown"
 
+/mob/living/simple_animal/mouse/mining
+	body_color = "brown"
+	icon_state = "mouse_miner"
+	name = "Cooper"
+	desc = "A lonely miner's best friend."
+
 //TOM IS ALIVE! SQUEEEEEEEE~K :)
 /mob/living/simple_mob/mouse/brown/Tom
 	name = "Tom"

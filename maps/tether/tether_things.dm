@@ -232,6 +232,7 @@
 	on_store_visible_message_2 = "to the colony"
 	time_till_despawn = 10 SECONDS
 	spawnpoint_type = /datum/spawnpoint/tram
+
 /obj/machinery/cryopod/robot/door/tram/process()
 	if(emergency_shuttle.online() || emergency_shuttle.returned())
 		// Transform into a door!  But first despawn anyone inside
@@ -316,6 +317,10 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/computer/HolodeckControl/holodorm/seven
 	name = "dorm seven holodeck control"
 	projection_area = /area/crew_quarters/sleep/Dorm_7/holo
+
+/obj/machinery/computer/HolodeckControl/holodorm/warship
+	name = "warship holodeck control"
+	projection_area = /area/mothership/holodeck/holo
 
 // Small Ship Holodeck
 /obj/machinery/computer/HolodeckControl/houseboat

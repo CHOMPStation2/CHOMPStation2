@@ -52,6 +52,7 @@
 			icon_state = "guest_invalid"
 			expiration_time = world.time
 			expired = 1
+			return
 	return ..()
 
 /obj/item/weapon/card/id/guest/Initialize()

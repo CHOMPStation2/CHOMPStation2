@@ -1,0 +1,31 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/template_noop,/area/submap/virgo2/SnowR1)
+"c" = (/turf/simulated/mineral/ignore_mapgen/virgo2,/area/submap/virgo2/SnowR1)
+"d" = (/obj/structure/loot_pile/maint/trash,/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/submap/virgo2/SnowR1)
+"e" = (/obj/structure/closet/crate/trashcart,/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/submap/virgo2/SnowR1)
+"f" = (/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/submap/virgo2/SnowR1)
+"g" = (/obj/random/trash,/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/submap/virgo2/SnowR1)
+"h" = (/obj/cryogaia_away_spawner/aerostat_surface,/turf/simulated/mineral/floor/ignore_mapgen/virgo2,/area/submap/virgo2/SnowR1)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaa
+abbbbbbbbbbbbbbbbbba
+abbbbbbccccccbbbbbba
+abbbbbccccccccbbbbba
+abbbbbcccccccccbbbba
+abbbbcccdefggcccbbba
+abbcccccgffffcccbbba
+abbcccccfffffffffffa
+abbccffffffffffffffa
+abbcffffffffffffhffa
+abbffffffhfffffffffa
+abfffffffffffffffffa
+abfffhfffffffffffffa
+abfffffffffcccccbbba
+abffffffccccccccbbba
+abffccccccccccccbbba
+abfbbbcccccccbcbbbba
+abbbbbbbbbbbbbbbbbba
+abbbbbbbbbbbbbbbbbba
+aaaaaaaaaaaaaaaaaaaa
+"}

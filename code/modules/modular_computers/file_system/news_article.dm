@@ -35,6 +35,6 @@
 	server_file_path = 'news_articles/the_sleepy_sergal_archived_1.html'
 	archived = 1
 
-/datum/computer_file/data/news_article/tss/vol_one
-	filename = "The Sleepy Sergal Archived vol. 1"
-	server_file_path = 'news_articles/the_sleepy_sergal_1.html'
+/datum/computer_file/data/news_article/tss/vol_two
+	filename = "The Sleepy Sergal vol. 2"
+	server_file_path = 'news_articles/the_sleepy_sergal_2.html'

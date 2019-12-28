@@ -124,6 +124,14 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
+//Plague Doctor Boye
+/datum/gear/fluff/kel_plague_box
+	path = /obj/item/weapon/storage/box/fluff/kelplague
+	display_name = "Plague Outfit Box"
+	description = "Yes"
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Nicodemus Jarvis")
+
 //benl8561
 //M.I.S.S.Y
 /datum/gear/fluff/missy_skirt
@@ -159,6 +167,15 @@
 
 //  C CKEYS
 
+//cheekycrenando
+//Srusu Rskuzu-Ahslru
+/datum/gear/fluff/srususovietuniform
+	path = /obj/item/clothing/under/fluff/srususoviet
+	display_name = "Soviet Uniform"
+	description = "Standard issue soviet dress uniform"
+	ckeywhitelist = list("cheekycrenando")
+	character_name = list("Srusu Rskuzu-Ahslru")
+
 //captmatt4
 //Payton Joghs
 /datum/gear/fluff/payton_joghs_1
@@ -167,6 +184,14 @@
 	description = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
 	ckeywhitelist = list("captmatt4")
 	character_name = list("Payton Joghs")
+
+//Kaenin Qerrlar
+/datum/gear/fluff/kaenin_qerrlar_1
+	path = /obj/item/clothing/accessory/medal/silver/fluff/kaeninmedal
+	display_name = "Kaenin Qerrlar's medal of valor"
+	description = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Kaenin Qerrlar, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Qerrlar piloted a combat exosuit to combat a hostile lifeform until it simply ran out of power, after this, he continued on foot.\" It is adorned with a purple ribbon."
+	ckeywhitelist = list("captmatt4")
+	character_name = list("Kaenin Qerrlar")
 
 //Eliana Noya
 /datum/gear/fluff/eliana_noya_1
@@ -475,6 +500,15 @@
 
 //  H CKEYS
 
+//hagawaga
+//Lana Xavier
+/datum/gear/fluff/hagawaga_romanarmor
+	path = /obj/item/clothing/under/fluff/romanarmor
+	display_name = "Roman Legionary Armor"
+	description = "Basically looks like what you would expect a segmented plated armor from the early Roman Empire to look like."
+	ckeywhitelist = list("hagawaga")
+	character_name = list("Lana Xavier")
+
 //harpsong
 //Harpsong
 /datum/gear/fluff/harpsong_1
@@ -563,6 +597,15 @@
 //  K CKEYS
 
 //  L CKEYS
+
+//lawst
+//Domine Brisillidine
+/datum/gear/fluff/medalvalor1
+	path = /obj/item/clothing/accessory/medal/silver/fluff/dominemedal
+	display_name = "Domine Brisillidine's medal of valor"
+	description = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Domine Brisillidine, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Domine lead the volunteer team in to the combat zone and assisted with arming and coordinating them against the hostile forces.\" It is adorned with a purple ribbon."
+	ckeywhitelist = list("lawst")
+	character_name = list("Domine Brisillidine")
 
 //lukevale
 //Mira Rezus
@@ -664,7 +707,32 @@
 	ckeywhitelist = list("masmc")
 	character_name = list("Kettek Ollarch")
 
+//Moca_The_Porg1
+//Mocha
+/datum/gear/fluff/mocha_jumpsuit
+	path = /obj/item/clothing/under/fluff/mocha_uniform
+	display_name = "Winterized Explorer Jumpsuit"
+	description = "A Greenish-white uniform for operating in hazardous environments. This one is suited for colder environments."
+	ckeywhitelist = list("mocatheporg1")
+	character_name = list("Mocha")
+	allowed_roles = list("Explorer", "Pathfinder")
+
+/datum/gear/fluff/mocha_suit_kit
+	path = /obj/item/device/modkit_conversion/fluff/mocha_suit_kit
+	display_name = "Mocha's modkit"
+	description = "A kit containing all the needed tools and parts to modify a Explorer Suit"
+	ckeywhitelist = list("mocatheporg1")
+	character_name = list("Mocha")
+	allowed_roles = list("Explorer", "Pathfinder")
+
 //  N CKEYS
+//NESgamer190
+/datum/gear/fluff/lucy_flask
+	path = /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/lucyprice
+	display_name = "Cryostasis Thermos"
+	description = "A thermos that has been designed to look something akin to a mix between a cryostasis beaker and a thermos.  Does NOT keep the drinks cold, surprisingly enough.."
+	ckeywhitelist = list("nesgamer190")
+	character_name = list("Lucy Price")
 
 //  O CKEYS
 
@@ -704,6 +772,14 @@
 
 //  R CKEYS
 
+//risingstarflash
+/datum/gear/fluff/stellar_collar
+	path = /obj/item/clothing/accessory/collar/fluff/stellar_collar
+	display_name = "Heart Collar"
+	description = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Stellar and Reyna close together, paws locked and facing the picture slightly sideways with beaming smiles."
+	ckeywhitelist = list("risingstarslash")
+	character_name = list("Stellar Wolf")
+
 //radiantflash
 //Vasharr Zahirn
 /datum/gear/fluff/vasharr_armlets
@@ -721,14 +797,14 @@
 	character_name = list("Vasharr Zahirn")
 
 /datum/gear/fluff/vasharr_under
-	path = /obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr
+	path = /obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr
 	display_name = "Cartographer Engineering Command Uniform"
 	description = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
 
 /datum/gear/fluff/vasharr_coat
-	path = /obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr
+	path = /obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr
 	display_name = "Cartographer Engineering Command Jacket"
 	description = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
 	ckeywhitelist = list("radiantflash")
@@ -744,7 +820,6 @@
 	character_name = list("Basir Fahim")
 
 //  S CKEYS
-
 //snakewitharocketlauncher
 //Alex Wolf
 /datum/gear/fluff/alex_1

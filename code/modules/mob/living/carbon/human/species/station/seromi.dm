@@ -33,7 +33,7 @@
 	flesh_color = "#5F7BB0"
 	base_color = "#001144"
 	tail = "seromitail"
-	//tail_hair = "feathers" //TESHARI TEMPORARY REMOVAL
+	//tail_hair = "feathers" //VORESTATION TESHARI TEMPORARY REMOVAL
 	reagent_tag = IS_TESHARI
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
@@ -147,6 +147,11 @@
 			return
 		// No point processing if we're already stressing the hell out.
 		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
+			return
+		// Vored? Not gonna get frightened.
+		if(isbelly(H.loc))
+			if(H.loneliness_stage > 0)
+				H.loneliness_stage -= 4
 			return
 		// Check for company.
 		for(var/mob/living/M in viewers(H))
