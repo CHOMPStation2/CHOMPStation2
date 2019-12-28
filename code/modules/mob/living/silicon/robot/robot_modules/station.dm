@@ -360,7 +360,7 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-engineer",
 					"Treadwell" = "treadwell",
 					"Handy" = "handy-engineer",
-					"Servitor" = "servitor"
+					"Servitor" = "servitor" //YW Addition to add new Servitor Sprite
 					)
 
 /obj/item/weapon/robot_module/robot/engineering/construction
