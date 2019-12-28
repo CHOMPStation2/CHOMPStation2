@@ -46,6 +46,7 @@ var/global/list/robot_modules = list(
 	add_languages(R)
 	add_subsystems(R)
 	apply_status_flags(R)
+	handle_shell(R)
 
 	if(R.radio)
 		if(R.shell)
@@ -153,6 +154,19 @@ var/global/list/robot_modules = list(
 	if(!can_be_pushed)
 		R.status_flags |= CANPUSH
 
+/obj/item/weapon/robot_module/proc/handle_shell(var/mob/living/silicon/robot/R)
+	if(R.braintype == BORG_BRAINTYPE_AI_SHELL)
+		channels = list(
+			"Medical" = 1,
+			"Engineering" = 1,
+			"Security" = 1,
+			"Service" = 1,
+			"Supply" = 1,
+			"Science" = 1,
+			"Command" = 1,
+			"Explorer" = 1
+			)
+
 // Cyborgs (non-drones), default loadout. This will be given to every module.
 /obj/item/weapon/robot_module/robot/New()
 	..()
@@ -177,7 +191,8 @@ var/global/list/robot_modules = list(
 					"Basic" = "robot_old",
 					"Android" = "droid",
 					"Drone" = "drone-standard",
-					"Insekt" = "insekt-Default"
+					"Insekt" = "insekt-Default",
+					"Usagi-II" = "tall2standard"
 					)
 
 
@@ -211,7 +226,8 @@ var/global/list/robot_modules = list(
 					"Needles" = "medicalrobot",
 					"Drone" = "drone-surgery",
 					"Handy" = "handy-med",
-					"Insekt" = "insekt-Med"
+					"Insekt" = "insekt-Med",
+					"Usagi-II" = "tall2medical"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -284,7 +300,8 @@ var/global/list/robot_modules = list(
 					"Needles" = "medicalrobot",
 					"Drone - Medical" = "drone-medical",
 					"Drone - Chemistry" = "drone-chemistry",
-					"Insekt" = "insekt-Med"
+					"Insekt" = "insekt-Med",
+					"Usagi-II" = "tall2medical"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -360,6 +377,7 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-engineer",
 					"Treadwell" = "treadwell",
 					"Handy" = "handy-engineer",
+					"Usagi-II" = "tall2engineer",
 					"Servitor" = "servitor" //YW Addition to add new Servitor Sprite
 					)
 
@@ -519,7 +537,8 @@ var/global/list/robot_modules = list(
 					"Basic" = "secborg",
 					"Black Knight" = "securityrobot",
 					"Drone" = "drone-sec",
-					"Insekt" = "insekt-Sec"
+					"Insekt" = "insekt-Sec",
+					"Usagi-II" = "tall2security"
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -562,7 +581,8 @@ var/global/list/robot_modules = list(
 					"Basic" = "JanBot2",
 					"Mopbot"  = "janitorrobot",
 					"Mop Gear Rex" = "mopgearrex",
-					"Drone" = "drone-janitor"
+					"Drone" = "drone-janitor",
+					"Usagi-II" = "tall2janitor"
 					)
 
 /obj/item/weapon/robot_module/robot/janitor/New()
@@ -584,7 +604,10 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/clerical
 	name = "service robot module"
-	channels = list("Service" = 1)
+	channels = list(
+		"Service" = 1,
+		"Command" = 1
+		)
 	languages = list(
 					LANGUAGE_SOL_COMMON	= 1,
 					LANGUAGE_UNATHI		= 1,
@@ -620,7 +643,7 @@ var/global/list/robot_modules = list(
 					"Rich" = "maximillion",
 					"Drone - Service" = "drone-service",
 					"Drone - Hydro" = "drone-hydro",
-					"Bovtender" = "bovtender-base"
+					"Usagi-II" = "tall2service"
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
@@ -672,7 +695,8 @@ var/global/list/robot_modules = list(
 					"Bro" = "Brobot",
 					"Rich" = "maximillion",
 					"Default" = "Service2",
-					"Drone" = "drone-blu"
+					"Drone" = "drone-blu",
+					"Usagi-II" = "tall2service"
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
@@ -709,7 +733,7 @@ var/global/list/robot_modules = list(
 					"Advanced Droid" = "droid-miner",
 					"Treadhead" = "Miner",
 					"Drone" = "drone-miner",
-					"Mole" = "moleminer"
+					"Usagi-II" = "tall2miner"
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()
@@ -737,7 +761,8 @@ var/global/list/robot_modules = list(
 					"Droid" = "droid-science",
 					"Drone" = "drone-science",
 					"Handy" = "handy-science",
-					"Insekt" = "insekt-Sci"
+					"Insekt" = "insekt-Sci",
+					"Usagi-II" = "tall2peace"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()
