@@ -153,6 +153,10 @@
 			if(H.loneliness_stage > 0)
 				H.loneliness_stage -= 4
 			return
+		if(istype(H.loc, /obj/item/weapon/holder))
+			if(H.loneliness_stage > 0)
+				H.loneliness_stage -= 4
+			return
 		// Check for company.
 		for(var/mob/living/M in viewers(H))
 			if(!istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot))
