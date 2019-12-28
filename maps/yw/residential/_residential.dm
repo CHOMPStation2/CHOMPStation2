@@ -35,6 +35,7 @@
 
 /area/residential
 	icon = 'icons/turf/areas_yw.dmi'
+	flags = RAD_SHIELDED
 
 /area/residential/docking_lobby
 	name = "\improper Residential - Docking Lobby"
