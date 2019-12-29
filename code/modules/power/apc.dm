@@ -535,7 +535,7 @@
 
 	else if (istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))			// trying to unlock the interface with an ID card
 		togglelock()
-		
+
 	else if (istype(W, /obj/item/stack/cable_coil) && !terminal && opened && has_electronics!=2)
 		var/turf/T = loc
 		if(istype(T) && !T.is_plating())
@@ -670,25 +670,6 @@
 			to_chat(user,"<span class='notice'>The [src.name] looks too sturdy to bash open with \the [W.name].</span>")
 
 // attack with hand - remove cell (if cover open) or interact with the APC
-/obj/machinery/power/apc/verb/togglelock(mob/user as mob) //YW Changes begin
-	if(emagged)
-		to_chat(user,"The panel is unresponsive.")
-	else if(opened)
-		to_chat(user,"You must close the cover to swipe an ID card.")
-	else if(wiresexposed)
-		to_chat(user,"You must close the wire panel.")
-	else if(stat & (BROKEN|MAINT))
-		to_chat(user,"Nothing happens.")
-	else if(hacker)
-		to_chat(user,"<span class='warning'>Access denied.</span>")
-	else
-		if(src.allowed(usr) && !isWireCut(APC_WIRE_IDSCAN))
-			locked = !locked
-			to_chat(user,"You [ locked ? "lock" : "unlock"] the APC interface.")
-			update_icon()
-		else
-			to_chat(user,"<span class='warning'>Access denied.</span>")
-
 /obj/machinery/power/apc/verb/togglelock(mob/user as mob)
 	if(emagged)
 		to_chat(user,"The panel is unresponsive.")
