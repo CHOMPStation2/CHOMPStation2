@@ -390,6 +390,12 @@
 	outdoors = TRUE
 	movement_cost = 8
 	var/list/crossed_dirs = list()
+	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
+		'sound/effects/footstep/snow1.ogg',
+		'sound/effects/footstep/snow2.ogg',
+		'sound/effects/footstep/snow3.ogg',
+		'sound/effects/footstep/snow4.ogg',
+		'sound/effects/footstep/snow5.ogg'))
 
 /turf/simulated/floor/outdoors/snow/snow
 	name = "snow"
@@ -419,7 +425,7 @@
 	movement_cost = 0
 
 #define FOOTSTEP_SPRITE_AMT 2
-
+/* YW Edit: Disabled until we fix the dang mobs triggering this. I'm lookin' at you kel.
 /turf/snow/Entered(atom/A)
     if(isliving(A))
         var/mdir = "[A.dir]"
@@ -439,5 +445,5 @@
 
         for(var/i in 1 to amt)
             add_overlay(image(icon, "footprint[i]", text2num(d)))
-
+*/
 //**** Here ends snow ****
