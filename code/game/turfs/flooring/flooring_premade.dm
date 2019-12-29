@@ -425,9 +425,8 @@
 	movement_cost = 0
 
 #define FOOTSTEP_SPRITE_AMT 2
-/* YW Edit: Disabled until we fix the dang mobs triggering this. I'm lookin' at you kel.
 /turf/snow/Entered(atom/A)
-    if(isliving(A))
+    if(isliving(A) && !istype(A, /mob/living/simple_mob))
         var/mdir = "[A.dir]"
         if(crossed_dirs[mdir])
             crossed_dirs[mdir] = min(crossed_dirs[mdir] + 1, FOOTSTEP_SPRITE_AMT)
@@ -445,5 +444,4 @@
 
         for(var/i in 1 to amt)
             add_overlay(image(icon, "footprint[i]", text2num(d)))
-*/
-//**** Here ends snow ****
+
