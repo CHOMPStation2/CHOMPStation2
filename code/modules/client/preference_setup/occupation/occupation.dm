@@ -85,8 +85,12 @@
 		var/rank = job.title
 		lastJob = job
 		if(jobban_isbanned(user, rank))
-			. += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
-			continue
+			if(config.usewhitelist && !check_whitelist(user))
+				. += "<del>[rank]</del></td><td><b> \[WHITELISTED]</b></td></tr>"
+				continue
+			else
+				. += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
+				continue
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
 			. += "<del>[rank]</del></td><td> \[IN [(available_in_days)] DAYS]</td></tr>"

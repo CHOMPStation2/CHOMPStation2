@@ -1,7 +1,8 @@
 var/list/job_whitelist = list()
 
 /hook/startup/proc/loadJobWhitelist()
-	load_jobwhitelist()
+	if(config.use_jobwhitelist)
+		load_jobwhitelist()
 	return 1
 
 /proc/load_jobwhitelist()
@@ -12,6 +13,8 @@ var/list/job_whitelist = list()
 		job_whitelist = splittext(text, "\n")
 
 /proc/is_job_whitelisted(mob/M, var/rank)
+	if(!config.use_jobwhitelist)
+		return 1
 	var/datum/job/job = job_master.GetJob(rank)
 	if(!job.whitelist_only)
 		return 1
@@ -27,5 +30,3 @@ var/list/job_whitelist = list()
 				return 1
 			if(findtext(s,"[M.ckey] - All"))
 				return 1
-	return 0
-
