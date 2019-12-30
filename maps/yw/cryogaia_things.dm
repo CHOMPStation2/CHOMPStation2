@@ -314,6 +314,7 @@ var/global/list/latejoin_tram   = list()
 	var/frozen = 0
 	var/freezing = 0 //see process().
 	var/deiceTools[0]
+	var/nextWeatherCheck
 
 /obj/machinery/door/airlock/glass_external/freezable/New()
 	//Associate objects with the number of seconds it would take to de-ice a door.
@@ -390,8 +391,6 @@ var/global/list/latejoin_tram   = list()
 	return
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleFreezeUnfreeze()
-	freezing = 1 //don't do the thing i'm already doing.
-	var/random = rand(2,7)
 
 	for(var/datum/planet/borealis2/P in SSplanets.planets)
 		if(istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
@@ -400,15 +399,15 @@ var/global/list/latejoin_tram   = list()
 		else if(!istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
 			if(frozen && prob(50))
 				unFreeze()
-
-	sleep((random + 13) SECONDS)
-	freezing = 0
 	return
 
 /obj/machinery/door/airlock/glass_external/freezable/process()
-	if(!freezing)  //don't do the thing if i'm already doing it.
-		spawn(0)
-			handleFreezeUnfreeze()
+	if(world.time >= nextWeatherCheck && !freezing)	
+		freezing = 1
+		var/random = rand(2,7)
+		nextWeatherCheck = (world.time + ((random + 13) SECONDS))
+		handleFreezeUnfreeze()
+		freezing = 0
 	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
