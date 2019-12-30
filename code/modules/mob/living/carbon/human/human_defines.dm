@@ -99,6 +99,7 @@
 	mob_swap_flags = ~HEAVY
 
 	var/identifying_gender // In case the human identifies as another gender than it's biological
+	var/gender_change_cooldown = 0 // A cooldown for gender and gender indentify changing procs to make it easy to avoid spam of gender change
 
 	var/list/descriptors	// For comparative examine code
 
