@@ -5534,7 +5534,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
 "alw" = (
-/obj/effect/floor_decal/rust,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -9062,7 +9061,8 @@
 "asb" = (
 /obj/machinery/door/airlock/command{
 	name = "Teleport Access";
-	req_access = list(17)
+	req_access = newlist();
+	req_one_access = list(17)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2";
