@@ -59,6 +59,8 @@ var/global/datum/controller/occupations/job_master
 				return 0
 			if(!job.player_old_enough(player.client))
 				return 0
+			if(!check_whitelist(player)) // Yeah no, no more hardcoded whitelisting. Ree. - Jon. //CHOMPStation code.
+				return 0
 			if(!is_job_whitelisted(player, rank)) //VOREStation Code
 				return 0
 
