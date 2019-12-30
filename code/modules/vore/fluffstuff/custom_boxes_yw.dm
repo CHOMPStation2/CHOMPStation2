@@ -55,7 +55,7 @@
 		/obj/item/device/modkit_conversion/fluff/nika_sec_kit)
 
 //***************
-//The god himself
+//blackangelsace
 //***************
 
 /obj/item/weapon/storage/box/fluff/madoka
@@ -67,6 +67,18 @@
 		/obj/item/clothing/gloves/arm_guard/fluff/madoka_arms,
 		/obj/item/clothing/shoes/leg_guard/fluff/madoka_legs,
 		/obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1)
+
+/obj/item/weapon/storage/box/fluff/kelplague
+	name = "Fancy Plague Doctor Kit"
+	desc = "Fancy boye stuff."
+	has_items = list(
+		/obj/item/clothing/head/plaguedoctorhat,
+		/obj/item/clothing/suit/storage/trench/fluff/kelplaguecoat,
+		/obj/item/clothing/under/fluff/kelplagueuniform,
+		/obj/item/clothing/shoes/dress,
+		/obj/item/clothing/mask/gas/plaguedoctor/fluff/kelplaguemask,
+		/obj/item/clothing/gloves/black
+		)
 
 // **********
 //JohnWolf135 / Defunct
@@ -279,8 +291,8 @@
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/vasharr_armlets,
 		/obj/item/clothing/accessory/fluff/vasharr_pendant,
-		/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr,
-		/obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr)
+		/obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr,
+		/obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr)
 
 //FrenziedVorcha / Defcunt
 

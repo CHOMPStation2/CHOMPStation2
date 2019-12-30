@@ -804,6 +804,7 @@ obj/item/clothing/suit/kamishimo
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
+/* // Replaced by hooded snowsuits
 
 /obj/item/clothing/suit/storage/snowsuit
 	name = "snowsuit"
@@ -840,3 +841,4 @@ obj/item/clothing/suit/kamishimo
 /obj/item/clothing/suit/storage/snowsuit/science
 	name = "science snowsuit"
 	icon_state = "snowsuit_science"
+*/

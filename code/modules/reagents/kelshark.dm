@@ -61,9 +61,10 @@ datum
 	desc = "You probably shouldn't swallow this."
 	icon_state = "pill2"
 
-/obj/item/weapon/reagent_containers/pill/benzilate/New()
-	..()
+/obj/item/weapon/reagent_containers/pill/benzilate/Initialize()
+	. = ..()
 	reagents.add_reagent("benzilate", 50)
+	color = reagents.get_color()
 
 
 /obj/item/weapon/reagent_containers/pill/phenethylamine
@@ -71,9 +72,10 @@ datum
 	desc = "Smells like... lilacs?"
 	icon_state = "pill5"
 
-/obj/item/weapon/reagent_containers/pill/phenethylamine/New()
-	..()
+/obj/item/weapon/reagent_containers/pill/phenethylamine/Initialize()
+	. = ..()
 	reagents.add_reagent("phenethylamine", 50)
+	color = reagents.get_color()
 
 
 // PILLS THAT WE PROBABLY SHOULDN'T HAVE AAAAAAAAAA. The below is only so they can be included through mapping or "spawn " command. -Carl

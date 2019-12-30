@@ -13,13 +13,15 @@
 	icon_living = "deathclaw"
 	icon_state = "deathclaw"
 	icon = 'icons/mob/vore64x64.dmi'
+	vis_height = 64
 
 	attacktext = list("mauled")
 
-	faction = "deathclaw"
+	faction = "awaymission" //makes away mobs fuckin' be on the same side.
 
 	maxHealth = 200
 	health = 200
+	see_in_dark = 8
 
 	melee_damage_lower = 5
 	melee_damage_upper = 30
@@ -48,17 +50,26 @@
 	vore_pounce_chance = 0 // Beat them into crit before eating.
 	vore_icons = SA_ICON_LIVING
 
-/* //VOREStation AI Temporary Removal
-/mob/living/simple_animal/hostile/deathclaw/Login()
+/mob/living/simple_mob/vore/aggressive/deathclaw/Login()
 	. = ..()
 	if(!riding_datum)
-		riding_datum = new /datum/riding/simple_animal(src)
-	verbs |= /mob/living/simple_animal/proc/animal_mount
+		riding_datum = new /datum/riding/simple_mob(src)
+	verbs |= /mob/living/simple_mob/proc/animal_mount
+	movement_cooldown = 0
 
-/mob/living/simple_animal/hostile/deathclaw/MouseDrop_T(mob/living/M, mob/living/user)
+/mob/living/simple_mob/vore/aggressive/deathclaw/MouseDrop_T(mob/living/M, mob/living/user)
 	return
-*/
 
 /datum/ai_holder/simple_mob/melee/deathclaw
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
+
+//yw edit
+/mob/living/simple_mob/vore/aggressive/deathclaw/den
+
+	maxHealth = 400
+	health = 400
+	see_in_dark = 8
+	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart! This one seems angrier then most."
+	melee_damage_lower = 10
+	melee_damage_upper = 40

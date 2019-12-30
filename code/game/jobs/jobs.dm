@@ -58,7 +58,7 @@ var/list/command_positions = list(
 	"Research Director",
 	"Chief Medical Officer",
 	"Command Secretary",
-	"Blueshield Guard"
+	"Blueshield Guard" // YW Edit
 )
 
 

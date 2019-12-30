@@ -756,6 +756,35 @@
 					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
 					)
 
+//Plague Boye
+/obj/item/clothing/suit/storage/trench/fluff/kelplaguecoat
+	name = "Dark Leather coat"
+	desc = "A finely made dark leather coat."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplaguecoat"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kelplaguecoat_mob"
+	blood_overlay_type = "coat"
+
+/obj/item/clothing/under/fluff/kelplagueuniform
+	name = "Dark vest"
+	desc = "A fancy looking leather suit made of dark cloths. Edgy."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplagueuniform"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kelplagueuniform_mob"
+
+/obj/item/clothing/mask/gas/plaguedoctor/fluff/kelplaguemask
+	name = "Customized Gas Mask"
+	desc = "A dark leather gas mask with rivets instead of stiches holding the two halves together."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplaguedoctor"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "kelplaguedoctor"
+	item_state_slots = null
+	armor = list(melee = 0, bullet = 0, laser = 2,energy = 2, bomb = 0, bio = 90, rad = 0)
+	body_parts_covered = HEAD|FACE|EYES
+
 // *******
 // Dawidoe
 // *******
@@ -1068,11 +1097,11 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
-/obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr
+/obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr
 	name = "Cartographer Engineering Command Uniform"
 	desc = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
 
-/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr
+/obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr
 	name = "Cartographer Engineering Command Jacket"
 	desc = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
 
@@ -1548,3 +1577,17 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.9
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
+
+// ******
+// Lawst
+// ******
+//Domine Brisillidine
+
+/obj/item/clothing/accessory/medal/silver/fluff/dominemedal
+	name = "Domine Brisillidine's medal of valor"
+	desc = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Domine Brisillidine, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Domine lead the volunteer team in to the combat zone and assisted with arming and coordinating them against the hostile forces.\" It is adorned with a purple ribbon."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "valormedal1"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "valormedal1_mob"
+	overlay_state = "valormedal1_mob"

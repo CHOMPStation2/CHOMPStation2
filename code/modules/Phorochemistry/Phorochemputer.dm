@@ -2,8 +2,10 @@ var/global/datum/phororeactions/phororeactions
 var/global/list/discovered_phororeagents //list of all phororeagents discovered so far
 
 /obj/machinery/computer/phoronics
-	icon_keyboard = "rd_key_off"
-	icon_screen = "phoronics_screen"
+	icon = 'icons/obj/computer3.dmi'
+	icon_state = "frame-rnd"
+	icon_keyboard = "kb9"
+	icon_screen = "powerold"
 	circuit = /obj/item/weapon/circuitboard/phoronics
 //	var/turf/simulated/floor/phoronics/source
 	var/turf/simulated/floor/source

@@ -382,38 +382,51 @@
 /turf/simulated/floor/tiled/external
 
 //**** Here lives snow ****
-/turf/simulated/floor/snow
+
+/turf/simulated/floor/outdoors/snow
 	name = "snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
 	outdoors = TRUE
+	movement_cost = 8
 	var/list/crossed_dirs = list()
+	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
+		'sound/effects/footstep/snow1.ogg',
+		'sound/effects/footstep/snow2.ogg',
+		'sound/effects/footstep/snow3.ogg',
+		'sound/effects/footstep/snow4.ogg',
+		'sound/effects/footstep/snow5.ogg'))
 
-/turf/simulated/floor/snow/snow2
+/turf/simulated/floor/outdoors/snow/snow
 	name = "snow"
-	icon = 'icons/turf/snow_new.dmi'
-	icon_state = "snownew"
-	initial_flooring = /decl/flooring/snow
+	icon_state = "snow"
 
-/turf/simulated/floor/snow/gravsnow
+/turf/simulated/floor/outdoors/snow/snow/snow2
+	name = "snow"
+	icon_state = "snownew"
+	movement_cost = 4
+
+/turf/simulated/floor/outdoors/snow/gravsnow
 	name = "snow"
 	icon_state = "gravsnow"
 	initial_flooring = /decl/flooring/snow/gravsnow
+	movement_cost = 0
 
-/turf/simulated/floor/snow/plating
-	name = "snowy playing"
+/turf/simulated/floor/outdoors/snow/plating
+	name = "snowy plating"
 	icon_state = "snowyplating"
 	initial_flooring = /decl/flooring/snow/plating
+	movement_cost = 0
 
-/turf/simulated/floor/snow/plating/drift
+/turf/simulated/floor/outdoors/snow/plating/drift
 	name = "snowy plating"
 	icon_state = "snowyplayingdrift"
 	initial_flooring = /decl/flooring/snow/plating/drift
+	movement_cost = 0
 
 #define FOOTSTEP_SPRITE_AMT 2
-
 /turf/snow/Entered(atom/A)
-    if(isliving(A))
+    if(isliving(A) && !istype(A, /mob/living/simple_mob))
         var/mdir = "[A.dir]"
         if(crossed_dirs[mdir])
             crossed_dirs[mdir] = min(crossed_dirs[mdir] + 1, FOOTSTEP_SPRITE_AMT)
@@ -432,4 +445,3 @@
         for(var/i in 1 to amt)
             add_overlay(image(icon, "footprint[i]", text2num(d)))
 
-//**** Here ends snow ****

@@ -124,6 +124,14 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
+//Plague Doctor Boye
+/datum/gear/fluff/kel_plague_box
+	path = /obj/item/weapon/storage/box/fluff/kelplague
+	display_name = "Plague Outfit Box"
+	description = "Yes"
+	ckeywhitelist = list("blackangelsace")
+	character_name = list("Nicodemus Jarvis")
+
 //benl8561
 //M.I.S.S.Y
 /datum/gear/fluff/missy_skirt
@@ -590,6 +598,15 @@
 
 //  L CKEYS
 
+//lawst
+//Domine Brisillidine
+/datum/gear/fluff/medalvalor1
+	path = /obj/item/clothing/accessory/medal/silver/fluff/dominemedal
+	display_name = "Domine Brisillidine's medal of valor"
+	description = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Domine Brisillidine, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Domine lead the volunteer team in to the combat zone and assisted with arming and coordinating them against the hostile forces.\" It is adorned with a purple ribbon."
+	ckeywhitelist = list("lawst")
+	character_name = list("Domine Brisillidine")
+
 //lukevale
 //Mira Rezus
 /datum/gear/fluff/mira_1
@@ -780,14 +797,14 @@
 	character_name = list("Vasharr Zahirn")
 
 /datum/gear/fluff/vasharr_under
-	path = /obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr
+	path = /obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr
 	display_name = "Cartographer Engineering Command Uniform"
 	description = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
 
 /datum/gear/fluff/vasharr_coat
-	path = /obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr
+	path = /obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr
 	display_name = "Cartographer Engineering Command Jacket"
 	description = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
 	ckeywhitelist = list("radiantflash")
