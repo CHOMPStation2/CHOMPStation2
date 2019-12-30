@@ -130,9 +130,23 @@ var/list/nonhuman_positions = list(
 	"pAI"
 )
 
+var/list/whitelisted_positions = list(
+	"Colony Director",
+	"Head of Personnel",
+	"Head of Security",
+	"Chief Engineer",
+	"Research Director",
+	"Chief Medical Officer",
+	"Command Secretary",
+	"Warden",
+	"AI",
+	"Cyborg",
+	"pAI"
+)
+
 
 /proc/guest_jobbans(var/job)
-	return ((job in command_positions) || (job in nonhuman_positions) || (job in security_positions))
+	return ((job in whitelisted_positions))
 
 /proc/get_job_datums()
 	var/list/occupations = list()
