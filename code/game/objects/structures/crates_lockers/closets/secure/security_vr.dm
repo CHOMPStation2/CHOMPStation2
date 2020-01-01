@@ -49,7 +49,7 @@
 		/obj/item/weapon/storage/box/flashbangs,
 		/obj/item/device/flash,
 		/obj/item/weapon/melee/baton/loaded,
-		//CHOMPStation Edit TFF 28/12/19 - re-add NSFW gun. C'mon, YW, why did you remove it?
+		//CHOMPStation Edit TFF 28/12/19 - re-add NSFW gun. C'mon, YW, why did you remove it?,
 		/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos,
 		/obj/item/weapon/gun/energy/x01,
 		/obj/item/weapon/cell/device/weapon,
