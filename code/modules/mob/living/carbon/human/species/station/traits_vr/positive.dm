@@ -3,13 +3,13 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 3
 	var_changes = list("slowdown" = -0.5)
-
+/*
 /datum/trait/speed_fast_plus
 	name = "Major Haste"
 	desc = "Allows you to move MUCH faster on average than baseline."
 	cost = 5
 	var_changes = list("slowdown" = -1.0)
-
+*/
 /datum/trait/hardy
 	name = "Hardy"
 	desc = "Allows you to carry heavy equipment with less slowdown."
@@ -31,7 +31,7 @@
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
-
+/*
 /datum/trait/endurance_very_high
 	name = "Very High Endurance"
 	desc = "Increases your maximum total hitpoints to 150"
@@ -51,7 +51,7 @@
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
-
+*/
 /datum/trait/nonconductive
 	name = "Non-Conductive"
 	desc = "Decreases your susceptibility to electric shocks by 25%."
@@ -63,13 +63,13 @@
 	desc = "Decreases your susceptibility to electric shocks by 50%."
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5)
-
+/*
 /datum/trait/nonconductive_robust
 	name = "Robustly Non-Conductive"
 	desc = "Decreases your susceptibility to electric shocks by 75%."
 	cost = 4 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.25)
-
+*/
 /datum/trait/darksight
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark."
@@ -105,13 +105,13 @@
 	desc = "Adds 20% resistance to brute damage sources."
 	cost = 2
 	var_changes = list("brute_mod" = 0.8)
-
+/*
 /datum/trait/brute_resist_plus
 	name = "Major Brute Resist"
 	desc = "Adds 40% resistance to brute damage sources."
 	cost = 3
 	var_changes = list("brute_mod" = 0.6)
-
+*/
 /datum/trait/minor_burn_resist
 	name = "Minor Burn Resist"
 	desc = "Adds 10% resistance to burn damage sources."
@@ -123,13 +123,13 @@
 	desc = "Adds 20% resistance to burn damage sources."
 	cost = 2
 	var_changes = list("burn_mod" = 0.8)
-
+/*
 /datum/trait/burn_resist_plus
 	name = "Major Burn Resist"
 	desc = "Adds 40% resistance to burn damage sources."
 	cost = 3
 	var_changes = list("burn_mod" = 0.6)
-
+*/
 /datum/trait/photoresistant
 	name = "Photoresistance"
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%"
@@ -157,12 +157,12 @@
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 1
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
-
+/*
 /datum/trait/antiseptic_saliva
 	name = "Antiseptic Saliva"
 	desc = "Your saliva has especially strong antiseptic properties that can be used to heal small wounds."
 	cost = 1
-
+*/
 /datum/trait/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
