@@ -2786,6 +2786,7 @@
 #include "code\modules\organs\internal\kidneys.dm"
 #include "code\modules\organs\internal\liver.dm"
 #include "code\modules\organs\internal\lungs.dm"
+#include "code\modules\organs\internal\lungs_ch.dm"
 #include "code\modules\organs\internal\organ_internal.dm"
 #include "code\modules\organs\internal\spleen.dm"
 #include "code\modules\organs\internal\stomach.dm"
