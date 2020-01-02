@@ -4,15 +4,16 @@
 #define Z_LEVEL_CRYOGAIA_TRANSIT	3 //added due to explosions jumping from mine leve to lower.
 #define Z_LEVEL_CRYOGAIA_LOWER		4
 #define Z_LEVEL_CRYOGAIA_MAIN		5
-#define Z_LEVEL_SHIPS				6
-#define Z_LEVEL_ALIENSHIP			7
-#define Z_LEVEL_BEACH				8
-#define Z_LEVEL_BEACH_CAVE			9
-#define Z_LEVEL_AEROSTAT			10
-#define Z_LEVEL_AEROSTAT_SURFACE	11
-#define Z_LEVEL_DEBRISFIELD			12
-#define Z_LEVEL_UNDERDARK			13
-#define Z_LEVEL_PLAINS				14
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		6
+#define Z_LEVEL_SHIPS				7
+#define Z_LEVEL_ALIENSHIP			8
+#define Z_LEVEL_BEACH				9
+#define Z_LEVEL_BEACH_CAVE			10
+#define Z_LEVEL_AEROSTAT			11
+#define Z_LEVEL_AEROSTAT_SURFACE	12
+#define Z_LEVEL_DEBRISFIELD			13
+#define Z_LEVEL_UNDERDARK			14
+#define Z_LEVEL_PLAINS				15
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -138,7 +139,7 @@
 		/area/tcommsat/powercontrol
 		)
 	unit_test_exempt_from_atmos = list(
-		/area/engineering/atmos/intake
+//		/area/engineering/atmos/intake
 		)
 
 	unit_test_z_levels = list(2,4,5)
@@ -188,6 +189,9 @@
 			Z_LEVEL_CRYOGAIA_LOWER,
 			Z_LEVEL_CRYOGAIA_MAIN,
 			)
+
+	else if (srcz == Z_LEVEL_CRYOGAIA_RESIDENTIAL)
+		return list(Z_LEVEL_CRYOGAIA_RESIDENTIAL)
 	else if(srcz >= Z_LEVEL_BEACH && srcz <= Z_LEVEL_BEACH_CAVE) //Zs 16-17
 		return list(
 			Z_LEVEL_BEACH,
@@ -233,6 +237,11 @@
 	z = Z_LEVEL_CRYOGAIA_CENTCOM
 	name = "Central Command"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
+
+/datum/map_z_level/cryogaia/residential
+	z = Z_LEVEL_CRYOGAIA_RESIDENTIAL
+	name = "Residential"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_CONSOLES
 /*
 /datum/map_z_level/tether/wilderness
 	name = "Wilderness"
