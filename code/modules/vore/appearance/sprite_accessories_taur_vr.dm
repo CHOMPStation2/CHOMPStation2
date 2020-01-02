@@ -550,3 +550,25 @@
 
 	msg_owner_grab_fail = "You step down onto %prey with one of your vines, forcing them onto the ground!"
 	msg_prey_grab_fail = "%owner steps down onto you with one of their vines, squishing you and forcing you onto the ground!"
+	
+//Mack Fix 1/1/2020
+/datum/sprite_accessory/tail/taur/horse/big
+	name = "Kentauri (Taur)"
+	icon_state = "kentauri_s"
+	extra_overlay = "kentauri_markings"
+
+/datum/sprite_accessory/tail/taur/wolf/husky
+	name = "Husky (Taur)"
+	icon_state = "husky_s"
+
+/datum/sprite_accessory/tail/taur/wolf/huskyfat
+	name = "Fat Husky (Taur)"
+	icon_state = "huskyf_s"
+
+/datum/sprite_accessory/tail/taur/wolf/wolf_2
+	name = "WolfTG (Taur)"
+	icon_state = "wolf2_s"
+
+/datum/sprite_accessory/tail/taur/wolf/wolf_2fat
+	name = "Fat Wolf (Taur)"
+	icon_state = "wolf2f_s"
