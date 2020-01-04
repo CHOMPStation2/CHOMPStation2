@@ -2906,6 +2906,7 @@
 #include "code\modules\power\fractal_reactor.dm"
 #include "code\modules\power\generator.dm"
 #include "code\modules\power\generator_type2.dm"
+#include "code\modules\power\generator_yw.dm"
 #include "code\modules\power\gravitygenerator.dm"
 #include "code\modules\power\grid_checker.dm"
 #include "code\modules\power\lighting.dm"
