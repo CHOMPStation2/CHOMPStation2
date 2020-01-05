@@ -816,9 +816,3 @@
 	name = "I.C.V."
 	desc = "The charred name of a cargo ship of some description."
 	icon_state = "poi_engine2"
-
-/obj/structure/sign/coffee
-	name = "\improper Cafe-Library"
-	desc = "A sign advertising the library cafe hybrid."
-	icon = 'icons/obj/coffee.dmi'
-	icon_state = "coffee_sign"
