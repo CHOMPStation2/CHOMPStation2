@@ -7,7 +7,7 @@
 	skip_me = TRUE
 
 	routes_to_make = list(
-		/datum/shuttle_destination/excursion/borealis2_orbit = 30 SECONDS
+		/datum/shuttle_destination/excursion/borealis2_orbit = 30 SECONDS //Need this to connect to correct place.
 	)
 
 // -- Objs -- //
@@ -15,29 +15,29 @@
 /obj/shuttle_connector/debrisfield
 	name = "shuttle connector - debrisfield"
 	shuttle_name = "Excursion Shuttle"
-	destinations = list(/datum/shuttle_destination/excursion/debrisfield)
+	destinations = list(/datum/shuttle_destination/excursion/borealis2_orbit, /datum/shuttle_destination/excursion/debrisfield)
 
 /obj/effect/step_trigger/teleporter/debrisfield_loop/north/New()
 	..()
 	teleport_x = x
-	teleport_y = 2
+	teleport_y = world.maxy + 68
 	teleport_z = z
 
 /obj/effect/step_trigger/teleporter/debrisfield_loop/south/New()
 	..()
 	teleport_x = x
-	teleport_y = world.maxy - 1
+	teleport_y = world.maxy - 45
 	teleport_z = z
 
 /obj/effect/step_trigger/teleporter/debrisfield_loop/west/New()
 	..()
-	teleport_x = world.maxx - 1
+	teleport_x = world.maxx - 45
 	teleport_y = y
 	teleport_z = z
 
 /obj/effect/step_trigger/teleporter/debrisfield_loop/east/New()
 	..()
-	teleport_x = 2
+	teleport_x = world.maxx + 68
 	teleport_y = y
 	teleport_z = z
 

@@ -6,6 +6,7 @@ var/list/mining_overlay_cache = list()
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock-dark"
 	density = 1
+	opacity = 1
 
 /turf/unsimulated/mineral/ice
 	name = "Ice wall"

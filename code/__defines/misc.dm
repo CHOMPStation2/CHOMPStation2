@@ -344,7 +344,7 @@ var/global/list/##LIST_NAME = list();\
 #define RCD_VALUE_DELAY		"delay"
 #define RCD_VALUE_COST		"cost"
 
-#define RCD_SHEETS_PER_MATTER_UNIT	4	// Each physical material sheet is worth four matter units.
+#define RCD_SHEETS_PER_MATTER_UNIT	3	// Each physical material sheet is worth four matter units. ///YW EDIT 4->3 *Buffing RCDs Hopefully.*
 #define RCD_MAX_CAPACITY			30 * RCD_SHEETS_PER_MATTER_UNIT
 
 // Radiation 'levels'. Used for the geiger counter, for visuals and sound. They are in different files so this goes here.
@@ -353,9 +353,7 @@ var/global/list/##LIST_NAME = list();\
 #define RAD_LEVEL_HIGH 25
 #define RAD_LEVEL_VERY_HIGH 75
 
-// Calculation modes for effective radiation
-#define RAD_RESIST_CALC_DIV 0 // Each turf absorbs some fraction of the working radiation level
-#define RAD_RESIST_CALC_SUB 1 // Each turf absorbs a fixed amount of radiation
+#define RADIATION_THRESHOLD_CUTOFF 0.1	// Radiation will not affect a tile when below this value.
 
 //https://secure.byond.com/docs/ref/info.html#/atom/var/mouse_opacity
 #define MOUSE_OPACITY_TRANSPARENT 0
