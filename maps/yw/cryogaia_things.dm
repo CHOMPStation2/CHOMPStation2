@@ -21,7 +21,7 @@
 
 
 
-/obj/effect/step_trigger/teleporter/planetary_fall/borealis2/Initialize()
+/obj/effect/step_trigger/teleporter/planetary_fall/borealis2/find_planet()
 	planet = planet_borealis2
 	. = ..()
 
@@ -311,6 +311,7 @@ var/global/list/latejoin_tram   = list()
 
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
+	maxhealth = 600
 	var/frozen = 0
 	var/freezing = 0 //see process().
 	var/deiceTools[0]
@@ -400,9 +401,8 @@ var/global/list/latejoin_tram   = list()
 			if(frozen && prob(50))
 				unFreeze()
 	return
-
 /obj/machinery/door/airlock/glass_external/freezable/process()
-	if(world.time >= nextWeatherCheck && !freezing)	
+	if(world.time >= nextWeatherCheck && !freezing)  //don't do the thing if i'm already doing it.
 		freezing = 1
 		var/random = rand(2,7)
 		nextWeatherCheck = (world.time + ((random + 13) SECONDS))
