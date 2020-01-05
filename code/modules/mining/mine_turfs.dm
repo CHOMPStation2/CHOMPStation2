@@ -6,7 +6,7 @@ var/list/mining_overlay_cache = list()
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock-dark"
 	density = 1
-	opacity = 1
+	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
 
 /turf/unsimulated/mineral/ice
 	name = "Ice wall"

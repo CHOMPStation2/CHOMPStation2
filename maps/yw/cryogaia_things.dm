@@ -400,7 +400,7 @@ var/global/list/latejoin_tram   = list()
 		else if(!istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
 			if(frozen && prob(50))
 				unFreeze()
-
+	return
 /obj/machinery/door/airlock/glass_external/freezable/process()
 	if(world.time >= nextWeatherCheck && !freezing)  //don't do the thing if i'm already doing it.
 		freezing = 1
