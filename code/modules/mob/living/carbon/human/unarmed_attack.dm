@@ -75,7 +75,7 @@ var/global/list/sparring_attack_cache = list()
 						target.set_dir(reverse_dir[target.dir])
 					target.apply_effect(attack_damage * 0.4, WEAKEN, armour)
 			if(BP_GROIN)
-				target.visible_message("<span class='warning'>[target] looks like [TT.he] [TT.is] in pain!</span>", "<span class='warning'>"Oh god that hurt!"</span>") // Chompstation edit
+				target.visible_message("<span class='warning'>[target] looks like [TT.he] [TT.is] in pain!</span>", "<span class='warning'>Oh god that hurt!</span>") // Chompstation edit
 				target.apply_effects(stutter = attack_damage * 2, agony = attack_damage* 3, blocked = armour)
 			if("l_leg", "l_foot", "r_leg", "r_foot")
 				if(!target.lying)
