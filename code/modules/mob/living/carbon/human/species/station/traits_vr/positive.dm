@@ -3,6 +3,7 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 3
 	var_changes = list("slowdown" = -0.5)
+//CHOMPStation Removal Start
 /*
 /datum/trait/speed_fast_plus
 	name = "Major Haste"
@@ -10,6 +11,7 @@
 	cost = 5
 	var_changes = list("slowdown" = -1.0)
 */
+//CHOMPStation Removal End
 /datum/trait/hardy
 	name = "Hardy"
 	desc = "Allows you to carry heavy equipment with less slowdown."
@@ -31,6 +33,7 @@
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
+//CHOMPStation Removal Start
 /*
 /datum/trait/endurance_very_high
 	name = "Very High Endurance"
@@ -52,6 +55,7 @@
 		..(S,H)
 		H.setMaxHealth(S.total_health)
 */
+//CHOMPStation Removal End
 /datum/trait/nonconductive
 	name = "Non-Conductive"
 	desc = "Decreases your susceptibility to electric shocks by 25%."
@@ -63,6 +67,7 @@
 	desc = "Decreases your susceptibility to electric shocks by 50%."
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5)
+//CHOMPStation Removal Start
 /*
 /datum/trait/nonconductive_robust
 	name = "Robustly Non-Conductive"
@@ -70,6 +75,7 @@
 	cost = 4 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.25)
 */
+//CHOMPStation Removal End
 /datum/trait/darksight
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark."
@@ -105,6 +111,7 @@
 	desc = "Adds 20% resistance to brute damage sources."
 	cost = 2
 	var_changes = list("brute_mod" = 0.8)
+//CHOMPStation Removal Start
 /*
 /datum/trait/brute_resist_plus
 	name = "Major Brute Resist"
@@ -112,6 +119,7 @@
 	cost = 3
 	var_changes = list("brute_mod" = 0.6)
 */
+//CHOMPStation Removal End
 /datum/trait/minor_burn_resist
 	name = "Minor Burn Resist"
 	desc = "Adds 10% resistance to burn damage sources."
@@ -123,6 +131,7 @@
 	desc = "Adds 20% resistance to burn damage sources."
 	cost = 2
 	var_changes = list("burn_mod" = 0.8)
+//CHOMPStation Removal Start
 /*
 /datum/trait/burn_resist_plus
 	name = "Major Burn Resist"
@@ -130,6 +139,7 @@
 	cost = 3
 	var_changes = list("burn_mod" = 0.6)
 */
+//CHOMPStation Removal End
 /datum/trait/photoresistant
 	name = "Photoresistance"
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%"
@@ -157,6 +167,7 @@
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 1
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
+//CHOMPStation Removal Start
 /*
 /datum/trait/antiseptic_saliva
 	name = "Antiseptic Saliva"
@@ -167,6 +178,7 @@
 	..()
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
 */
+//CHOMPStation Removal End
 // YW Addition
 /datum/trait/bloodsucker_plus
 	name = "Evolved Bloodsucker"
@@ -175,7 +187,7 @@
 	var_changes = list("gets_food_nutrition" = 0.5) // Hopefully this works???
 	excludes = list(/datum/trait/bloodsucker)
 
-/datum/trait/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
 
