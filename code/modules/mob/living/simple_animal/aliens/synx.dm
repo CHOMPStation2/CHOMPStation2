@@ -4,7 +4,7 @@
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. Plain, white, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration."
 	tt_desc = "synxus pergulus"
 
-	 //Synx species belongs to ChimeraSynx , Base sprites by: SpitefulCrow
+	 //Synx species belongs to ChimeraSynx , Base sprites made by: SpitefulCrow
 	icon = 'icons/mob/synx.dmi'//giving synxes their own DMI file!
 	icon_state = "synx_living"
 	icon_living = "synx_living"
@@ -24,6 +24,7 @@
 	var/forcefeedchance = 20
 
 	faction = "Synx"
+	
 	intelligence_level = SA_ANIMAL
 
 	maxHealth = 150
@@ -146,27 +147,6 @@
 	speak += "Who is there?"
 	speak += "What is that thing?!"
 
-/* This literally is just the normal proc, why does this exist wh
-mob/living/simple_mob/synx/PunchTarget()
-	if(!Adjacent(target_mob))
-		return
-	custom_emote(1, pick( list("slashes at [target_mob]", "bites [target_mob]") ) )
-
-	var/damage = rand(melee_damage_lower, melee_damage_upper)
-
-	if(ishuman(target_mob))
-		var/mob/living/carbon/human/H = target_mob
-		var/dam_zone = pick(BP_TORSO, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG)
-		var/obj/item/organ/external/affecting = H.get_organ(ran_zone(dam_zone))
-		H.apply_damage(damage, BRUTE, affecting, H.run_armor_check(affecting, "melee"), H.get_armor_soak(affecting, "melee"), sharp=1, edge=1)
-		return H
-	else if(isliving(target_mob))
-		var/mob/living/L = target_mob
-		L.adjustBruteLoss(damage)
-		return L
-	else
-		..()
-*/
 //////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SPECIAL ITEMS/REAGENTS !!!! ////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
@@ -300,17 +280,20 @@ mob/living/simple_mob/synx/PunchTarget()
 //////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// PASSIVE POWERS!!!! /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
+
 /mob/living/simple_mob/retaliate/synx/DoPunch(var/atom/A)
 	. = ..()
 	if(.) // If we succeeded in hitting.
 		if(isliving(A))
 			var/mob/living/L = A
+			/*
 			if(prob(forcefeedchance))//Forcefeeding code
 				L.Weaken(5)
 				stop_automated_movement = 1
 				src.feed_self_to_grabbed(src,L)
 				update_icon()
 				stop_automated_movement = 0
+			*/
 			if(L.reagents)
 				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
 				if(L.can_inject(src, null, target_zone))
@@ -318,6 +301,7 @@ mob/living/simple_mob/synx/PunchTarget()
 					if(prob(poison_chance))
 						to_chat(L, "<span class='warning'>You feel a strange substance on you.</span>")
 						L.reagents.add_reagent(poison_type, poison_per_bite)
+
 
 /mob/living/simple_mob/retaliate/synx/hear_say(message,verb,language,fakename,isItalics,var/mob/living/speaker)
 	. = ..()
@@ -670,74 +654,6 @@ mob/living/simple_mob/synx/PunchTarget()
 ////////////////////////////////////////////////////////////////////////////
 //////////////////////////NOT A SYNX///////but looks kinda like one/////////
 ////////////////////////////////////////////////////////////////////////////
-//So we got base synxes pretty much done, how about some special variants
-/mob/living/simple_mob/retaliate/synx/pet/weepinggamblers
-	name = "Synx?"
-	desc = "A cold blooded, genderless, parasitic eel? Is it crying?"
-	tt_desc = "Synxus?"
-	forcefeedchance = 99 //You have a stomach? yeah they go in.
-	poison_per_bite = 0 //no poison
-	
-	hostile = 1
-	
-	faction = "synx?"
-	melee_damage_lower = 1
-	melee_damage_upper = 1
-	environment_smash = 1
-	destroy_surroundings = 1
+//SCP-939
+//sprites to be made.
 
-/mob/living/simple_mob/retaliate/synx/pet/weepinggamblers/New()
-	..()
-	faction = rand(1,5)
-	switch(faction)
-		if(1 , 2)
-			voices |= "Unidentifiable Weeping"
-			name = "Weeper"
-			melee_damage_upper = 4
-		if(3)
-			voices |= "Radio Static"
-			name = "Whistler"
-			melee_damage_upper = 20
-		if(4 , 5)
-			voices |= "Unidentifiable Wailing"
-			name= "Wailer"
-			melee_damage_upper = 10
-	speak |= "No one"
-	
-	voices -= "Garbled voice"
-	voices -= "Unidentifiable Voice"
-	speak -= "Who is there?"
-	speak -= "What is that thing?!"
-
-/mob/living/simple_mob/retaliate/synx/pet/weepinggamblers/MoveToTarget()
-	var/mob/living/speaker
-	if(target_mob)
-		speaker = target_mob
-		speak |= speaker.GetVoice()
-	..()
-
-/mob/living/simple_mob/retaliate/synx/pet/weepinggamblers/Life()
-	..()
-	if(prob(1) && faction <= 5)
-		handlemutations(rand(1,5))
-
-/mob/living/simple_mob/retaliate/synx/pet/weepinggamblers/proc/handlemutations(faction)
-	switch(faction)
-		if(1 , 2 , 11 , 12)
-			voices = "Unidentifiable Weeping"
-			name = "Weeper"
-			melee_damage_upper = 4
-		if(3 , 13) 
-			voices = "Radio Static"
-			name = "Whistler"
-			melee_damage_upper = 20
-		if(4 , 5 , 14 , 15) 
-			voices = "Unidentifiable Wailing"
-			name= "Wailer"
-			melee_damage_upper = 10
-		if(6 to 10 , 16 to 20)
-			voices = "Breathing"
-			name= "Silent"
-		else return
-
-//WEEPING END
