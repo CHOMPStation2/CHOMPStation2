@@ -175,7 +175,7 @@
 	var_changes = list("gets_food_nutrition" = 0.5) // Hopefully this works???
 	excludes = list(/datum/trait/bloodsucker)
 
-/datum/trait/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
 
