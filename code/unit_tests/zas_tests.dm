@@ -93,12 +93,10 @@
 // /datum/unit_test/zas_area_test/mining_shuttle_at_station
 // 	name = "ZAS: Mining Shuttle (Station)"
 // 	area_path = /area/shuttle/mining/station
-
 // YW Edit - We do not have this zone anymore - Cryogaia
 // /datum/unit_test/zas_area_test/cargo_maint
 //	name = "ZAS: Cargo Maintenance"
 //	area_path = /area/maintenance/cargo
-
 // VOREStation Edit - We don't have this anymore - Tether
 // /datum/unit_test/zas_area_test/eng_shuttle
 // 	name = "ZAS: Construction Site Shuttle (Station)"
