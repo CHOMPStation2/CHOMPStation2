@@ -184,26 +184,25 @@
 	icon_state = "wolf_s"
 	suit_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
-/datum/sprite_accessory/tail/taur/fatwolf
-	name = "Fat Wolf (Taur)"
-	icon_state = "fatwolf_s"
-
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c
 	name = "Wolf dual-color (Taur)"
 	icon_state = "wolf_s"
 	extra_overlay = "wolf_markings"
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
-/datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
-	name = "Fat Wolf dual-color (Taur)"
-	icon_state = "fatwolf_s"
-	extra_overlay = "fatwolf_markings"
-
 /datum/sprite_accessory/tail/taur/wolf/synthwolf
 	name = "SynthWolf dual-color (Taur)"
 	icon_state = "synthwolf_s"
 	extra_overlay = "synthwolf_markings"
+
+//TFF 22/11/19 - CHOMPStation port of fat taur sprites
+/datum/sprite_accessory/tail/taur/wolf/fatwolf
+	name = "Fat Wolf (Taur)"
+	icon_state = "fatwolf_s"
+
+/datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
+	name = "Fat Wolf dual-color (Taur)"
+	icon_state = "fatwolf_s"
+	extra_overlay = "fatwolf_markings"
 
 /datum/sprite_accessory/tail/taur/naga
 	name = "Naga (Taur)"
