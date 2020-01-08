@@ -114,7 +114,7 @@
 		"NAS Zeus orbiting Virgo-Prime",
 		"NIB Posideon in Alpha Centauri",
 		"NTB An-Nur on Virgo-Prime",
-		"the colony at Virgo-3B",
+		"the ruins of Virgo-3B", //YW EDIT
 		"the NanoTrasen phoron refinery in Vilous",
 		"a dockyard orbiting Virgo-Prime",
 		"an asteroid orbiting Virgo 3",
@@ -464,6 +464,7 @@
 						"the SolGov embassy in Vilous"
 						)// autogen will add a lot of other places as well.
 
+/* YW EDIT START, We're not on Virgo anymore
 /datum/lore/organization/gov/virgov // Overrides Polaris stuff
 	name = "Virgo-Erigone Governmental Authority"
 	short_name = ""
@@ -494,7 +495,7 @@
 						"an asteroid orbiting Virgo 3",
 						"a telecommunications satellite near Virgo-3B",
 						"a telecommunications satellite near Virgo-Prime"
-						)
+*///YW Edit End
 
 /* // Waiting for lore to be updated.
 /datum/lore/organization/gov/federation
