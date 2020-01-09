@@ -2477,6 +2477,7 @@
 #include "code\modules\mob\living\silicon\robot\subtypes\syndicate.dm"
 #include "code\modules\mob\living\simple_animal\corpse.dm"
 #include "code\modules\mob\living\simple_animal\corpse_vr.dm"
+#include "code\modules\mob\living\simple_animal\aliens\synx.dm"
 #include "code\modules\mob\living\simple_mob\appearance.dm"
 #include "code\modules\mob\living\simple_mob\combat.dm"
 #include "code\modules\mob\living\simple_mob\defense.dm"
