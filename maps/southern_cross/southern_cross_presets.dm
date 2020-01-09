@@ -3,6 +3,7 @@ var/const/NETWORK_SECOND_DECK  = "Second Deck"
 var/const/NETWORK_FIRST_DECK   = "First Deck"
 var/const/NETWORK_SUPPLY       = "Supply"
 var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
+var/const/NETWORK_EXPLORATION  = "Exploration Outpost" //CHOMPedit: Exploration outpost cameras
 
 //
 // Cameras
@@ -23,6 +24,9 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 
 /obj/machinery/camera/network/supply
 	network = list(NETWORK_SUPPLY)
+
+/obj/machinery/camera/network/exploration //CHOMPedit: Exploration outpost cameras
+	network = list(NETWORK_EXPLORATION)
 
 // ### Preset machines  ###
 
@@ -64,16 +68,20 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 	listening_level = Z_LEVEL_TRANSIT
 	autolinkers = list("tns_relay")
 
+/obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration outpost
+	listening_level = Z_LEVEL_MISC
+	autolinkers = list("exp_relay")
+
 // #### Telecomms ####
 /obj/machinery/telecomms/hub/preset/southerncross
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub",
-		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "explorer",
+		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "explorer", "exp_relay",
 		"c_relay", "m_relay", "r_relay",
 		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused",
 		"hb_relay", "receiverA", "broadcasterA"
-	)
+	) //CHOMPedit: Adds "exp_relay"
 
 /obj/machinery/telecomms/receiver/preset_right/southerncross
 	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, EXP_FREQ)

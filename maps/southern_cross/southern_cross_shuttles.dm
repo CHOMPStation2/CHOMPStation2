@@ -306,4 +306,19 @@
 
 // Heist shuttle
 
+// CHOMPedit: Exploration outpost shuttle
+/obj/machinery/computer/shuttle_control/exploration
+	name = "shuttle control console"
+	shuttle_tag = "Exploration"
+
+/datum/shuttle/ferry/exploration
+	name = "Exploration"
+	warmup_time = 10
+	area_offsite = /area/shuttle/expoutpost/site
+	area_station = /area/shuttle/expoutpost/station
+	docking_controller_tag = "exp_shuttle"
+	dock_target_station = null //Not in space, external dock not needed
+	dock_target_offsite = null
+
+
 
