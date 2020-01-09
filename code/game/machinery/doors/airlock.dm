@@ -260,7 +260,7 @@
 	req_one_access = list(access_maint_tunnels)
 	open_sound_powered = 'sound/machines/hatchopen.ogg' //CHOMPEdit
 	close_sound_powered = 'sound/machines/hatchclose.ogg' //CHOMPEdit
-	open_sound_unpowered = 'sound/machines/hatchforced.ogg'
+	open_sound_unpowered = 'sound/machines/hatchforced.ogg'//CHOMPEdit
 
 /obj/machinery/door/airlock/maintenance_hatch
 	name = "Maintenance Hatch"
