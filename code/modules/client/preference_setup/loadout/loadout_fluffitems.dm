@@ -1,5 +1,4 @@
-/datum/gear
-	fluff
+/datum/gear/fluff
 		path = /obj/item
 		sort_category = "Fluff Items"
 		display_name = "If this item can be chosen or seen, ping a coder immediately!"
