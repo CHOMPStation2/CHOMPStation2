@@ -3132,6 +3132,7 @@
 #include "code\modules\research\designs\xenobio_toys.dm"
 #include "code\modules\research\designs\circuits\ai_modules.dm"
 #include "code\modules\research\designs\circuits\circuits.dm"
+#include "code\modules\research\designs\circuits\circuits_ch.dm"
 #include "code\modules\research\designs\circuits\circuits_vr.dm"
 #include "code\modules\resleeving\circuitboards.dm"
 #include "code\modules\resleeving\computers.dm"
