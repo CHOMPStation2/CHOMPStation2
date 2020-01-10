@@ -11,6 +11,7 @@
 	var/wall_type =  /turf/simulated/wall/elevator
 	var/floor_type = /turf/simulated/floor/tiled/dark
 	var/door_type =  /obj/machinery/door/airlock/lift
+	var/firedoor_type = /obj/machinery/door/firedoor/glass //CHOMP Edit for adding a firedoor to the exterior door
 
 	var/list/areas_to_use = list()
 
@@ -179,12 +180,15 @@
 							qdel(thing)
 				if(checking.type == floor_type) // Don't build over empty space on lower levels.
 					var/obj/machinery/door/airlock/lift/newdoor = new door_type(checking)
+					var/obj/machinery/door/firedoor/glass/firedoor = new firedoor_type(checking) //CHOMP Addition for fire doors
 					if(internal)
 						lift.doors += newdoor
 						newdoor.lift = cfloor
 					else
 						cfloor.doors += newdoor
 						newdoor.floor = cfloor
+						cfloor.doors += firedoor //CHOMP Addition for fire doors
+						firedoor.glass = cfloor //CHOMP Addition for fire doors
 
 		// Place exterior control panel.
 		var/turf/placing = locate(ext_panel_x, ext_panel_y, cz)
