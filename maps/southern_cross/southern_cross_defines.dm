@@ -10,6 +10,8 @@
 #define Z_LEVEL_CENTCOM					8
 #define Z_LEVEL_TRANSIT					9
 #define Z_LEVEL_SURFACE_WILD			10
+#define Z_LEVEL_AEROSTAT				11 // Chompstation Edit - Add Aerostat - Rykka
+#define Z_LEVEL_AEROSTAT_SURFACE		12 // Chompstation Edit - Add Aerostat - Rykka
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -83,6 +85,9 @@
 
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
+lateload_z_levels = list(
+	list("Remmi Aerostat - Z1 Aerostat", "Remmi Aerostat - Z2 Surface")
+)
 
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
@@ -103,6 +108,10 @@
 			Z_LEVEL_SURFACE,
 			Z_LEVEL_SURFACE_MINE,
 			Z_LEVEL_SURFACE_WILD)
+	else if(srcz >= Z_LEVEL_AEROSTAT && srcz <= Z_LEVEL_AEROSTAT_SURFACE) //Zs 18-19
+		return list(
+			Z_LEVEL_AEROSTAT,
+			Z_LEVEL_AEROSTAT_SURFACE)
 	else
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
 

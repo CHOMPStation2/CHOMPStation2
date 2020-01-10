@@ -44,6 +44,8 @@
 	#include "southern_cross-7.dmm"
 	#include "southern_cross-8.dmm"
 
+	#include "submaps/southern_cross_submaps.dm"
+
 	#define USING_MAP_DATUM /datum/map/southern_cross
 
 	// todo: map.dmm-s here
