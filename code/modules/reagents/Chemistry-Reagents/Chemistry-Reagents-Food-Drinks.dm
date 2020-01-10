@@ -1726,7 +1726,7 @@
 	id = "slimeslammer"
 	description = "A viscous, but savory, ooze."
 	taste_description = "peanuts`n`slime"
-	nutriment_factor = 20
+	nutriment_factor = 20 //CS Edit
 	color = "#93604D"
 	water_based = FALSE
 
