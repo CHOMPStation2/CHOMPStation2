@@ -308,7 +308,7 @@
 
 // CHOMPedit: Exploration outpost shuttle
 /obj/machinery/computer/shuttle_control/exploration
-	name = "shuttle control console"
+	name = "exploration shuttle control console"
 	shuttle_tag = "Exploration"
 
 /datum/shuttle/ferry/exploration
@@ -317,8 +317,8 @@
 	area_offsite = /area/shuttle/expoutpost/site
 	area_station = /area/shuttle/expoutpost/station
 	docking_controller_tag = "exp_shuttle"
-	dock_target_station = null //Not in space, external dock not needed
-	dock_target_offsite = null
+	dock_target_station = "exp_shuttle_station"
+	dock_target_offsite = "exp_shuttle_outpost"
 
 
 

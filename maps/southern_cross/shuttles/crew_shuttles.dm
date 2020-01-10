@@ -308,7 +308,7 @@
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle3/sif_orbit = 25,
+		/datum/shuttle_destination/shuttle3/sif_orbit = 10 SECONDS
 	)
 
 /datum/shuttle_destination/shuttle3/root/get_arrival_message()
@@ -333,7 +333,7 @@
 	preferred_interim_area = /area/shuttle/shuttle3/transit
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle3/stationhangar3 = 0
+		/datum/shuttle_destination/shuttle3/stationhangar3 = 2 SECONDS
 	)
 
 /datum/shuttle_destination/shuttle3/stationhanger3
