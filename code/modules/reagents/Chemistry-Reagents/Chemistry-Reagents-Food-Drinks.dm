@@ -1190,7 +1190,7 @@
 	id = "grapesoda"
 	description = "Grapes made into a fine drank."
 	taste_description = "grape soda"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#421C52"
 	adj_drowsy = -3
 
@@ -1218,7 +1218,7 @@
 	id = "lemonade"
 	description = "Oh the nostalgia..."
 	taste_description = "lemonade"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#FFFF00"
 	adj_temp = -5
 
@@ -1231,7 +1231,7 @@
 	id = "melonade"
 	description = "Oh the.. nostalgia?"
 	taste_description = "watermelon"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#FFB3BB"
 	adj_temp = -5
 
@@ -1244,7 +1244,7 @@
 	id = "appleade"
 	description = "Applejuice, improved."
 	taste_description = "apples"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#FFD1B3"
 	adj_temp = -5
 
@@ -1257,7 +1257,7 @@
 	id = "pineappleade"
 	description = "Spineapple, juiced up."
 	taste_description = "sweet`n`sour pineapples"
-	nutriment_factor = 5
+	nutriment_factor = 5 //CS Edit
 	color = "#FFFF00"
 	adj_temp = -5
 
@@ -1270,7 +1270,7 @@
 	id = "kiraspecial"
 	description = "Long live the guy who everyone had mistaken for a girl. Baka!"
 	taste_description = "fruity sweetness"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#CCCC99"
 	adj_temp = -5
 
@@ -1283,7 +1283,7 @@
 	id = "brownstar"
 	description = "It's not what it sounds like..."
 	taste_description = "orange and cola soda"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#9F3400"
 	adj_temp = -2
 
@@ -1377,7 +1377,7 @@
 	id = "rewriter"
 	description = "The secret of the sanctuary of the Libarian..."
 	taste_description = "citrus and coffee"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#485000"
 	adj_temp = -5
 
@@ -1393,7 +1393,7 @@
 	id = "nuka_cola"
 	description = "Cola, cola never changes."
 	taste_description = "cola"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#100800"
 	adj_temp = -5
 	adj_sleepy = -2
@@ -1426,7 +1426,7 @@
 	id = "cola"
 	description = "A refreshing beverage."
 	taste_description = "cola"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	reagent_state = LIQUID
 	color = "#100800"
 	adj_drowsy = -3
@@ -1441,7 +1441,7 @@
 	id = "spacemountainwind"
 	description = "Blows right through you like a space wind."
 	taste_description = "sweet citrus soda"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#102000"
 	adj_drowsy = -7
 	adj_sleepy = -1
@@ -1456,7 +1456,7 @@
 	id = "dr_gibb"
 	description = "A delicious blend of 42 different flavors"
 	taste_description = "cherry soda"
-	nutriment_factor = 3
+	nutriment_factor = 3 //CS Edit
 	color = "#102000"
 	adj_drowsy = -6
 	adj_temp = -5
@@ -1469,7 +1469,7 @@
 	id = "space_up"
 	description = "Tastes like a hull breach in your mouth."
 	taste_description = "citrus soda"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#202800"
 	adj_temp = -8
 
@@ -1482,7 +1482,7 @@
 	id = "lemon_lime"
 	description = "A tangy substance made of 0.5% natural citrus!"
 	taste_description = "tangy lime and lemon soda"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#878F00"
 	adj_temp = -8
 
@@ -1495,7 +1495,7 @@
 	id = "gingerale"
 	description = "The original."
 	taste_description = "somewhat tangy ginger ale"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#edcf8f"
 	adj_temp = -8
 
@@ -1520,7 +1520,7 @@
 	id = "roy_rogers"
 	description = "I'm a cowboy, on a steel horse I ride."
 	taste_description = "cola and fruit"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#4F1811"
 	adj_temp = -8
 
@@ -1533,7 +1533,7 @@
 	id = "collins_mix"
 	description = "Best hope it isn't a hoax."
 	taste_description = "gin and lemonade"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#D7D0B3"
 	adj_temp = -8
 
@@ -1546,7 +1546,7 @@
 	id = "arnold_palmer"
 	description = "Tastes just like the old man."
 	taste_description = "lemon and sweet tea"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#AF5517"
 	adj_temp = -8
 
@@ -1669,7 +1669,7 @@
 	id = "dreamcream"
 	description = "A smoothy, silky mix of honey and dairy."
 	taste_description = "sweet, soothing dairy"
-	nutriment_factor = 5
+	nutriment_factor = 5 //CS Edit
 	color = "#fcfcc9" // rgb(252, 252, 201)
 
 	glass_name = "Dream Cream"
@@ -1680,7 +1680,7 @@
 	id = "vilelemon"
 	description = "A fizzy, sour lemonade mix."
 	taste_description = "fizzy, sour lemon"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#c6c603" // rgb(198, 198, 3)
 
 	glass_name = "Vile Lemon"
@@ -1692,7 +1692,7 @@
 	id = "entdraught"
 	description = "A natural, earthy combination of all things peaceful."
 	taste_description = "fresh rain and sweet memories"
-	nutriment_factor = 5
+	nutriment_factor = 5 //CS Edit
 	color = "#3a6617" // rgb(58, 102, 23)
 
 	glass_name = "Ent's Draught"
@@ -1713,7 +1713,7 @@
 	id = "oilslick"
 	description = "A viscous, but sweet, ooze."
 	taste_description = "honey"
-	nutriment_factor = 15
+	nutriment_factor = 15 //CS Edit
 	color = "#FDF5E6" // rgb(253,245,230)
 	water_based = FALSE
 
@@ -1749,7 +1749,7 @@
 	id = "nuclearwaste"
 	description = "A viscous, glowing slurry."
 	taste_description = "sour honey drops"
-	nutriment_factor = 15
+	nutriment_factor = 15 //CS Edit
 	color = "#7FFF00" // rgb(127,255,0)
 	water_based = FALSE
 
@@ -1775,7 +1775,7 @@
 	id = "sodaoil"
 	description = "A thick, bubbling soda."
 	taste_description = "chewy water"
-	nutriment_factor = 10
+	nutriment_factor = 10 //CS Edit
 	color = "#F0FFF0" // rgb(245,255,250)
 	water_based = FALSE
 
@@ -1862,7 +1862,7 @@
 	id = "fauxfizz"
 	description = "One sip and you're in the bahamas... maybe."
 	taste_description = "slightly tropical"
-	nutriment_factor = 4
+	nutriment_factor = 4 //CS Edit
 	color = "#69375C"
 
 	glass_name = "tropical fizz"
@@ -2418,7 +2418,7 @@
 	id = "cubalibre"
 	description = "Rum, mixed with cola. Viva la revolucion."
 	taste_description = "cola"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#3E1B00"
 	strength = 30
 
@@ -2431,7 +2431,7 @@
 	description = "This thing makes the hair on the back of your neck stand up."
 	taste_description = "sweet tasting iron"
 	taste_mult = 1.5
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#820000"
 	strength = 15
 
@@ -2804,7 +2804,7 @@
 	id = "snowwhite"
 	description = "A cold refreshment"
 	taste_description = "refreshing cold"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#FFFFFF"
 	strength = 30
 
@@ -2816,7 +2816,7 @@
 	id = "suidream"
 	description = "Comprised of: White soda, blue curacao, melon liquor."
 	taste_description = "fruit"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#00A86B"
 	strength = 100
 
@@ -2912,7 +2912,7 @@
 	id = "whiskeycola"
 	description = "Whiskey, mixed with cola. Surprisingly refreshing."
 	taste_description = "cola with an alcoholic undertone"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#3E1B00"
 	strength = 25
 
@@ -2925,7 +2925,7 @@
 	id = "whiskeysoda"
 	description = "Ultimate refreshment."
 	taste_description = "carbonated whiskey"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#EAB300"
 	strength = 15
 
@@ -3085,7 +3085,7 @@
 	id = "xanaducannon"
 	description = "Common in the entertainment districts of Titan."
 	taste_description = "sweet alcohol"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#614126"
 	strength = 50
 
@@ -3097,7 +3097,7 @@
 	id = "debugger"
 	description = "From Shelf. Not for human consumption."
 	taste_description = "oily bitterness"
-	nutriment_factor = 10
+	nutriment_factor = 10 //CS Edit
 	color = "#d3d3d3"
 	strength = 32
 
@@ -3109,7 +3109,7 @@
 	id = "spacersbrew"
 	description = "Ethanol and orange soda. A common emergency drink on frontier colonies."
 	taste_description = "bitter oranges"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#ffc04c"
 	strength = 43
 
@@ -3204,7 +3204,7 @@
 	id = "rotgut"
 	description = "A heinous combination of clashing flavors."
 	taste_description = "plague and coldsweats"
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#3a6617" // rgb(58, 102, 23)
 	strength = 10
 
@@ -3475,7 +3475,7 @@
 	description = "This thing makes the hair on the back of your neck stand up."
 	taste_description = "sweet victory and sour iron"
 	taste_mult = 1.5
-	nutriment_factor = 1.5
+	nutriment_factor = 1.5 //CS Edit
 	color = "#F3C906"
 	strength = 30
 
