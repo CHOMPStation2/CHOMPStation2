@@ -242,6 +242,13 @@
 	name = "Naga dual-color (Taur)"
 	icon_state = "naga_s"
 	extra_overlay = "naga_markings"
+	
+//chomp fat naga
+/datum/sprite_accessory/tail/taur/naga/fatnaga
+	name = "Fat Naga (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "fatnaga_s"
+	extra_overlay = "fatnaga_markings"
 
 /datum/sprite_accessory/tail/taur/horse
 	name = "Horse (Taur)"
