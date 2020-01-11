@@ -1231,7 +1231,7 @@
 	id = "melonade"
 	description = "Oh the.. nostalgia?"
 	taste_description = "watermelon"
-	nutriment_factor = 1.5 //CS Edit
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#FFB3BB"
 	adj_temp = -5
 
