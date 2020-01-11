@@ -69,9 +69,11 @@ What Borgs are available is sadly handled in the above file in the proc
 
 	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
 
+	/* Remembered this causes the dogs to catch on fire lol.
 	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
 	L.lit = 1
 	src.modules += L
+	*/
 
 	var/datum/matter_synth/water = new /datum/matter_synth()
 	water.name = "Water reserves"
