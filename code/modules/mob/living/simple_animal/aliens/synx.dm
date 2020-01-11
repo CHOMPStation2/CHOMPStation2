@@ -650,7 +650,7 @@
 	name = "This is synxes"
 
 /obj/random/mob/synx/item_to_spawn()
-	pick(prob(70);/mob/living/simple_mob/retaliate/synx/pet/greed,
+	return pick(prob(70);/mob/living/simple_mob/retaliate/synx/pet/greed,
 		prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,
 		prob(20);/mob/living/simple_mob/retaliate/synx/pet/holo,)
 
