@@ -128,4 +128,50 @@ What Borgs are available is sadly handled in the above file in the proc
 	volume = 120
 	possible_transfer_amounts = list(1 ,5, 10, 20, 30)
 	
-	
+//Resking proc for boozos
+
+/mob/living/silicon/robot/proc/reskin_booze()
+	set name = "Change Drink Color"
+	set category = "Robot Commands"
+	set desc = "Choose the color of drink displayed inside you."
+
+	var/mob/M = usr
+	var/list/options = list()
+	options["Beer"] = "Beer Buddy"
+	options["Curacao"] = "Brilliant Blue"
+	options["Coffee"] = "Caffine Dispenser"
+	options["Space Mountain Wind"] = "Gamer Juice Maker"
+	options["Whiskey Soda"] = "Liqour Licker"
+	options["Grape Soda"] = "The Grapist"
+	options["Demon's Blood"] = "Vampire's Aid"
+	options["Slav Vodka"] = "Vodka Komrade"
+	var/choice = input(M,"Choose your drink!") in options
+	if(src && choice && !M.stat && in_range(M,src))
+		icontype = options[choice]
+		var/active_sound = 'sound/effects/bubbles.ogg'
+		playsound(src.loc, "[active_sound]", 100, 0, 4)
+		M << "Your Tank now displays [choice]. Drink up and enjoy!"
+		updateicon()
+		return 1
+
+//SLEEPER "Brewer"
+/obj/item/device/dogborg/sleeper/compactor/brewer //Boozehound gut.
+	name = "Brew Belly"
+	desc = "A mounted drunk tank unit with fuel processor."
+	icon_state = "brewer"
+	injection_chems = list("vodka","beer","gin") //Injected alcohol is 3 times as strong
+	max_item_count = 1
+
+/obj/item/device/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem)
+	if(patient && patient.reagents)
+		if(chem in injection_chems + "inaprovaline")
+			if(hound.cell.charge < 200) //This is so borgs don't kill themselves with it.
+				to_chat(hound, "<span class='notice'>You don't have enough power to synthesize fluids.</span>")
+				return
+			else if(patient.reagents.get_reagent_amount(chem) + 10 >= 50) //Preventing people from accidentally killing themselves by trying to inject too many chemicals!
+				to_chat(hound, "<span class='notice'>Your stomach is currently too full of fluids to secrete more fluids of this kind.</span>")
+			else if(patient.reagents.get_reagent_amount(chem) + 10 <= 50) //No overdoses for you
+				patient.reagents.add_reagent(chem, inject_amount)
+				drain(100) //-100 charge per injection
+			var/units = round(patient.reagents.get_reagent_amount(chem))
+			to_chat(hound, "<span class='notice'>Injecting [units] unit\s of [chemical_reagents_list[chem]] into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
