@@ -2,6 +2,7 @@
 	robot_module_types += "Medihound"
 	robot_module_types += "K9"
 	robot_module_types += "Janihound"
+	robot_module_types += "BoozeHound" //CHOMP edit.
 	robot_module_types += "Sci-borg"
 	robot_module_types += "Pupdozer"
 	return 1
