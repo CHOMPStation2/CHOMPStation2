@@ -668,7 +668,7 @@
 	speak_chance = 0 // If the mob's saylist is empty, nothing will happen.
 	wander = TRUE
 	base_wander_delay = 3
-	autopilot = FALSE //As the ghost in this shell you only control the voices.
+	autopilot = TRUE //As the ghost in this shell you only control the voices.
 	wander_when_pulled = TRUE
 	outmatched_threshold = 100 //pussy
 	flee_when_outmatched = TRUE
