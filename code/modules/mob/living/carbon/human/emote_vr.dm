@@ -23,10 +23,10 @@
 		if ("mlem")
 			message = "mlems [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] tongue up over [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] nose. Mlem."
 			m_type = 1
-		if ("awoo")
+		if ("howl") // YW edit begins
 			m_type = 2
-			message = "lets out an awoo."
-			playsound(loc, 'sound/voice/awoo.ogg', 50, 1, -1)
+			message = "lets out an howl."
+			playsound(loc, 'sound/voice/howl.ogg', 50, 1, -1) // YW edit ends
 		if ("nya")
 			message = "lets out a nya."
 			m_type = 2
@@ -80,7 +80,7 @@
 				message = "does a flip!"
 				m_type = 1
 		if ("vhelp") //Help for Virgo-specific emotes.
-			to_chat(src, "vwag, vflap, mlem, awoo, nya, peep, chirp, weh, merp, bark, hiss, squeak, nsay, nme, flip")
+			to_chat(src, "vwag, vflap, mlem, howl, nya, peep, chirp, weh, merp, bark, hiss, squeak, nsay, nme, flip")
 
 	if (message)
 		custom_emote(m_type,message)
