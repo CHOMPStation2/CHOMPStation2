@@ -61,7 +61,7 @@
 	name = "glowberries"
 	seed_name = "glowberry"
 	display_name = "glowberry bush"
-	kitchen_tag = "glowberries"
+	kitchen_tag = "glowberries" //CHOMP Addition
 	mutants = null
 	chems = list("nutriment" = list(1,10), "uranium" = list(3,5))
 
@@ -207,7 +207,7 @@
 	name = "bluespacetomato"
 	seed_name = "bluespace tomato"
 	display_name = "bluespace tomato plant"
-	kitchen_tag = "bluespacetomato"
+	kitchen_tag = "bluespacetomato" //CHOMP Addition
 	mutants = null
 	chems = list("nutriment" = list(1,20), "singulo" = list(10,5))
 
@@ -408,7 +408,7 @@
 	name = "libertycap"
 	seed_name = "liberty cap"
 	display_name = "liberty cap mushrooms"
-	kitchen_tag = "libertycap"
+	kitchen_tag = "libertycap" //CHOMP Addition
 	mutants = null
 	chems = list("nutriment" = list(1), "stoxin" = list(3,3), "space_drugs" = list(1,25))
 
@@ -443,7 +443,7 @@
 	name = "destroyingangel"
 	seed_name = "destroying angel"
 	display_name = "destroying angel mushrooms"
-	kitchen_tag = "destroyingangel"
+	kitchen_tag = "destroyingangel" //CHOMP Addition
 	mutants = null
 	chems = list("nutriment" = list(1,50), "amatoxin" = list(13,3), "psilocybin" = list(1,25))
 
@@ -477,7 +477,7 @@
 	name = "glowshroom"
 	seed_name = "glowshroom"
 	display_name = "glowshrooms"
-	kitchen_tag = "glowshrooms"
+	kitchen_tag = "glowshrooms" //CHOMP Addition
 	mutants = null
 	chems = list("radium" = list(1,20))
 
@@ -498,7 +498,7 @@
 	name = "plastic"
 	seed_name = "plastellium"
 	display_name = "plastellium"
-	kitchen_tag = "plastellium"
+	kitchen_tag = "plastellium" //CHOMP Addition
 	mutants = null
 	chems = list("plasticide" = list(1,10))
 
