@@ -125,7 +125,7 @@
 	name = "An unfinished cake"
 	desc = "A single layer of tasty delicious cake goodness, but it feels very incomplete..."
 
-	icon = 'icons/obj/64x64.dmi'
+	icon = 'icons/obj/64x64_ch.dmi'
 	icon_state = "thecake_onelayer"
 	pixel_x = -16
 
@@ -403,7 +403,7 @@
 	name = "An unfinished cake"
 	desc = "A single layer of tasty delicious cake goodness, but it feels very incomplete..."
 
-	icon = 'icons/obj/64x64.dmi'
+	icon = 'icons/obj/64x64_ch.dmi'
 	icon_state = "chaoscake_unfinished-1"
 	pixel_x = -16
 
