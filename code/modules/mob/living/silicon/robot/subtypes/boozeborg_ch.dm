@@ -1,0 +1,129 @@
+//Attempted unify style implementation of boozeborgs. To lower peoples needed code diving to both understand this module and make new ones.
+//Dropping my usual _unify for _ch this time. Commenting it here for github search.
+
+// code/modules/mob/living/silicon/robot/robot_modules/station_vr.dm //tag so it shows up in gitsearch
+
+/*
+What Borgs are available is sadly handled in the above file in the proc
+
+/hook/startup/proc/robot_modules_vr()
+	robot_modules["Medihound"] = /obj/item/weapon/robot_module/robot/medihound
+	robot_modules["K9"] = /obj/item/weapon/robot_module/robot/knine
+	robot_modules["ERT"] = /obj/item/weapon/robot_module/robot/ert
+	robot_modules["Janihound"] = /obj/item/weapon/robot_module/robot/scrubpup
+	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
+	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
+	return 1
+*/
+
+/obj/item/weapon/robot_module/robot/booze
+	name = "BoozeHound robot module"
+	channels = list("Service" = 1)
+	languages = list(
+					LANGUAGE_SOL_COMMON	= 1,
+					LANGUAGE_UNATHI		= 1,
+					LANGUAGE_SIIK		= 1,
+					LANGUAGE_AKHANI		= 1,
+					LANGUAGE_SKRELLIAN	= 1,
+					LANGUAGE_SKRELLIANFAR = 0,
+					LANGUAGE_ROOTLOCAL	= 0,
+					LANGUAGE_TRADEBAND	= 1,
+					LANGUAGE_GUTTER		= 0,
+					LANGUAGE_SCHECHI	= 1,
+					LANGUAGE_EAL		= 1,
+					LANGUAGE_TERMINUS	= 1,
+					LANGUAGE_SIGN		= 0
+					)
+
+/obj/item/weapon/robot_module/robot/booze
+	sprites = list(
+				"Beer Buddy" = "boozeborg",
+				"Brilliant Blue" = "boozeborg(blue)",
+				"Caffine Dispenser" = "boozeborg(coffee)",
+				"Gamer Juice Maker" = "boozeborg(green)",
+				"Liqour Licker" = "boozeborg(orange)",
+				"The Grapist" = "boozeborg(purple)",
+				"Vampire's Aid" = "boozeborg(red)",
+				"Vodka Komrade" = "boozeborg(vodka)"
+				)
+/obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/weapon/gripper/service(src)
+	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
+	//src.modules += new /obj/item/weapon/material/minihoe(src)
+	//src.modules += new /obj/item/device/analyzer/plant_analyzer(src)
+	//src.modules += new /obj/item/weapon/storage/bag/plants(src)
+	//src.modules += new /obj/item/weapon/robot_harvester(src)
+	src.modules += new /obj/item/weapon/material/knife(src)
+	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
+	src.modules += new /obj/item/device/multitool(src) //to freeze trays
+	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
+	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src)
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the ALCOHOL
+	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
+	R.verbs += /mob/living/silicon/robot/proc/reskin_booze
+
+	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
+	M.stored_matter = 30
+	src.modules += M
+
+	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
+
+	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
+	L.lit = 1
+	src.modules += L
+
+	var/datum/matter_synth/water = new /datum/matter_synth()
+	water.name = "Water reserves"
+	water.recharge_rate = 0.1 // Recharging water for plants - hehe drooly borg
+	water.max_energy = 1000
+	water.energy = 0
+	R.water_res = water
+	synths += water
+
+	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	T.water = water
+	src.modules += T
+
+
+	src.modules += new /obj/item/weapon/tray/robotray(src)
+	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service/booze(src)
+	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
+
+	var/datum/reagents/N = new/datum/reagents(50)
+	src.emag.reagents = N
+	N.my_atom = src.emag
+	N.add_reagent("beer2", 50)
+	src.emag.name = "Mickey Finn's Special Brew"
+
+	R.can_buckle = 1
+	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
+	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
+	R.pixel_x 	 = -16
+	R.old_x 	 = -16
+	R.default_pixel_x = -16
+	R.dogborg = TRUE
+	R.wideborg = TRUE
+	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	..()
+
+/obj/item/weapon/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
+	E.reagents.add_reagent("enzyme", 2 * amount)
+	if(src.emag)
+		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
+		B.reagents.add_reagent("beer2", 2 * amount)
+
+//BORGHYPO
+/obj/item/weapon/reagent_containers/borghypo/service/booze
+	name = "cyborg drink synthesizer"
+	desc = "A portable drink dispencer."
+	icon = 'icons/obj/drinks.dmi'
+	icon_state = "shaker"
+	charge_cost = 20
+	recharge_time = 3
+	volume = 120
+	possible_transfer_amounts = list(1 ,5, 10, 20, 30)
+	
+	
