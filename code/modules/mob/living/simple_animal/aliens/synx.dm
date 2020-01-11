@@ -657,6 +657,11 @@
 ////////////////////////////////////////////////////////////////////////////
 //////////////////////////NOT A SYNX///////but looks kinda like one/////////
 ////////////////////////////////////////////////////////////////////////////
+/*
+Content relating to the SCP Foundation, including the SCP Foundation logo, is licensed under 
+Creative Commons Sharealike 3.0 and all concepts originate from http://www.scp-wiki.net and its authors.
+This includes the sprites of the below Mob which are based upon SCP 939 and sprited by Riviera (not added yet)
+*/
 //SCP-939
 //sprites to be made.
 /datum/ai_holder/simple_mob/scp
