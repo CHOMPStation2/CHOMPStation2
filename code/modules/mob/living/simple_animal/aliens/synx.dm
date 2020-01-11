@@ -650,9 +650,9 @@
 	name = "This is synxes"
 
 /obj/random/mob/synx/item_to_spawn()
-	return pick(prob(70);/mob/living/simple_mob/retaliate/synx/pet/greed,
-		prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,
-		prob(20);/mob/living/simple_mob/retaliate/synx/pet/holo,)
+	return pick(prob(666);/mob/living/simple_mob/retaliate/synx/pet/greed,
+		//prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,//He's crew so let's remove this
+		prob(333);/mob/living/simple_mob/retaliate/synx/pet/holo,)
 
 ////////////////////////////////////////////////////////////////////////////
 //////////////////////////NOT A SYNX///////but looks kinda like one/////////
