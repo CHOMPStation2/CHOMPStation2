@@ -541,6 +541,7 @@
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/device/geiger(src)
+	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW changes
 	//YW changes end
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 
