@@ -167,16 +167,6 @@
 	name = "Dormitory Maintenance"
 	icon_state = "amaint"
 
-/area/maintenance/fish
-	name = "Civilian Maintenance"
-	icon_state = "pmaint"
-
-/area/crew_quarters/kitchen/lower
-	name = "Lower Kitchen"
-
-/area/crew_quarters/kitchen/fish_farm
-	name = "\improper Fish Farm"
-	icon_state = "red"
 /area/mine/explored/underdark
 	name = "\improper Mining Underdark"
 	base_turf = /turf/simulated/mineral/floor

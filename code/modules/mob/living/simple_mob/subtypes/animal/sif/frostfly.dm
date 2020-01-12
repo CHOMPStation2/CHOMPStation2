@@ -29,8 +29,6 @@
 	icon_rest = "firefly_dead"
 	icon = 'icons/mob/animal.dmi'
 	has_eye_glow = TRUE
-	heat_resist = -0.50
-	cold_resist = 0.75
 
 	maxHealth = 65
 	health = 65

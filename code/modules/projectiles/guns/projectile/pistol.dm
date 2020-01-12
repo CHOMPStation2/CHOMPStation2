@@ -23,7 +23,7 @@
 			icon_state = "[initial(icon_state)]-e"
 
 /obj/item/weapon/gun/projectile/colt/detective
-	desc = "A Martian recreation of a Colt M1911. Uses .45 rounds."
+	desc = "A Martian recreation of an old pistol. Uses .45 rounds."
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 
 /obj/item/weapon/gun/projectile/colt/detective/verb/rename_gun()

@@ -126,29 +126,6 @@
 	else
 		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
 
-
-/obj/machinery/smartfridge/plantvator
-	name = "\improper Smart plantavator - Upper"
-	desc = "A refrigerated storage unit for Food and plant storage. Now sporting a fancy system of pulleys to lift bottles up and down."
-	var/obj/machinery/smartfridge/plantvator/attached
-
-/obj/machinery/smartfridge/plantvator/down/Destroy()
-	attached = null
-	return ..()
-
-/obj/machinery/smartfridge/plantvator/down
-	name = "\improper Smart Plantavator - Lower"
-
-/obj/machinery/smartfridge/plantvator/down/Initialize()
-	. = ..()
-	var/obj/machinery/smartfridge/plantvator/above = locate(/obj/machinery/smartfridge/plantvator,get_zstep(src,UP))
-	if(istype(above))
-		above.attached = src
-		attached = above
-		item_records = attached.item_records
-	else
-		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
-
 // Tram departure cryo doors that turn into ordinary airlock doors at round end
 /obj/machinery/cryopod/robot/door/tram
 	name = "\improper Tram Station"
