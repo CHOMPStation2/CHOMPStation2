@@ -127,7 +127,7 @@ What Borgs are available is sadly handled in the above file in the proc
 	recharge_time = 3
 	volume = 120
 	possible_transfer_amounts = list(1 ,5, 10, 20, 30)
-	
+
 //Resking proc for boozos
 
 /mob/living/silicon/robot/proc/reskin_booze()
@@ -174,4 +174,4 @@ What Borgs are available is sadly handled in the above file in the proc
 				patient.reagents.add_reagent(chem, inject_amount)
 				drain(100) //-100 charge per injection
 			var/units = round(patient.reagents.get_reagent_amount(chem))
-			to_chat(hound, "<span class='notice'>Injecting [units] unit\s of [chemical_reagents_list[chem]] into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
+			to_chat(hound, "<span class='notice'>Injecting [units] unit\s into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
