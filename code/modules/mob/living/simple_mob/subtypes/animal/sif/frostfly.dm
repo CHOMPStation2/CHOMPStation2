@@ -35,7 +35,7 @@
 	maxHealth = 65
 	health = 65
 	minbodytemp = 175
- 	pass_flags = PASSTABLE
+	pass_flags = PASSTABLE
 
 	var/energy = 100
 	var/max_energy = 100
