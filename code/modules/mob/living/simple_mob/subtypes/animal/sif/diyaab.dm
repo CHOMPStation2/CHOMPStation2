@@ -28,7 +28,7 @@
 
 	maxHealth = 25
 	health = 25
-
+ 	minbodytemp = 175
 	movement_cooldown = 0
 
 	melee_damage_lower = 2
