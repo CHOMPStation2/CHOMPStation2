@@ -154,8 +154,8 @@
 	icon_state = "setup_drone"
 	desc = "It's a case, for building mobile electronics with."
 	w_class = ITEMSIZE_NORMAL
-	max_components = IC_COMPONENTS_BASE * 1.5 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
-	max_complexity = IC_COMPLEXITY_BASE * 1.5 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
+	max_components = IC_COMPONENTS_BASE * 3 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
+	max_complexity = IC_COMPLEXITY_BASE * 3 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
 	can_anchor = FALSE
 
 /obj/item/device/electronic_assembly/drone/can_move()
