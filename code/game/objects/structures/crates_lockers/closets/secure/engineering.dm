@@ -140,7 +140,7 @@
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos,
 		/obj/item/clothing/shoes/boots/winter/atmos,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
-		/obj/item/weapon/pipe_dispenser)//YW Addition
+		/obj/item/weapon/pipe_dispenser)//YW Addition)
 
 /obj/structure/closet/secure_closet/atmos_personal/Initialize()
 	if(prob(50))
