@@ -30,7 +30,7 @@
 
 	maxHealth = 125
 	health = 125
- 	minbodytemp = 175
+
 	movement_cooldown = 0.5 SECONDS
 	heat_resist = -0.50
 	cold_resist = 0.75
