@@ -811,13 +811,12 @@
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask = 1,
 					/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 5,
-					/obj/item/weapon/reagent_containers/pill/diet = 25,
-					//obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //YW Re-added, Price was still disabled.
+					/obj/item/weapon/reagent_containers/pill/diet = 25)
+				/*	/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //YW Re-added, Price was still disabled.
 					/obj/item/weapon/towel/random = 20)
 	//VOREStation Edit End
-
 	contraband = list(/obj/item/weapon/reagent_containers/syringe/steroid = 4)
-
+*/
 /obj/machinery/vending/cart
 	name = "PTech"
 	desc = "Cartridges for PDAs."
