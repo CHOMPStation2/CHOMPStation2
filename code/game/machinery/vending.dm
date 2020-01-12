@@ -769,7 +769,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/sosjerky = 2,/obj/item/weapon/reagent_containers/food/snacks/no_raisin = 1,/obj/item/weapon/reagent_containers/food/snacks/spacetwinkie = 1,
 					/obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers = 1, /obj/item/weapon/reagent_containers/food/snacks/tastybread = 2, /obj/item/weapon/reagent_containers/food/snacks/skrellsnacks = 2)
 	//VOREStation Edit End
-
+					
 /obj/machinery/vending/cola
 	name = "Robust Softdrinks"
 	desc = "A softdrink vendor provided by Robust Industries, LLC."
@@ -811,12 +811,13 @@
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask = 1,
 					/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 5,
-					/obj/item/weapon/reagent_containers/pill/diet = 25)
-				/*	/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //YW Re-added, Price was still disabled.
+					/obj/item/weapon/reagent_containers/pill/diet = 25,
+					///obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,
 					/obj/item/weapon/towel/random = 20)
 	//VOREStation Edit End
+
 	contraband = list(/obj/item/weapon/reagent_containers/syringe/steroid = 4)
-*/
+
 /obj/machinery/vending/cart
 	name = "PTech"
 	desc = "Cartridges for PDAs."
@@ -918,7 +919,8 @@
 	icon_state = "sec"
 	icon_deny = "sec-deny"
 	req_access = list(access_security)
-	products = list(/obj/item/weapon/handcuffs = 8,/obj/item/weapon/grenade/flashbang = 4,/obj/item/device/flash = 5,/obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,/obj/item/weapon/storage/box/evidence = 6,/obj/item/weapon/gun/projectile/sec = 3)
+	products = list(/obj/item/weapon/handcuffs = 8,/obj/item/weapon/grenade/flashbang = 4,/obj/item/device/flash = 5,
+					/obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,/obj/item/weapon/storage/box/evidence = 6)
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,/obj/item/weapon/storage/box/donut = 2)
 	req_log_access = access_armory
 	has_logs = 1
