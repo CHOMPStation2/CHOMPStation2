@@ -154,3 +154,9 @@ GLOBAL_VAR_INIT(chicken_count, 0)	// How mant chickens DO we have?
 	speak = list("Cherp.","Cherp?","Chirrup.","Cheep!")
 	emote_hear = list("cheeps")
 	emote_see = list("pecks at the ground","flaps its tiny wings")
+
+
+/mob/living/simple_mob/animal/passive/chicken/clucky
+	name = "Commander Clucky"
+	real_name = "Commander Clucky"
+	desc = "It's Commander Clucky!"
