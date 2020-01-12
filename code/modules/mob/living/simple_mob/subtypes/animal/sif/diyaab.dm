@@ -28,7 +28,7 @@
 
 	maxHealth = 25
 	health = 25
-	minbodytemp = 175
+	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	movement_cooldown = 0
 
 	melee_damage_lower = 2

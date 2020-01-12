@@ -34,7 +34,7 @@
 
 	maxHealth = 65
 	health = 65
-	minbodytemp = 175
+	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	pass_flags = PASSTABLE
 
 	var/energy = 100
