@@ -274,7 +274,8 @@
 		/obj/item/weapon/tool/screwdriver,
 		/obj/item/device/multitool,
 		/obj/item/device/integrated_electronics/wirer, //CHOMP Edit
-		/obj/item/device/integrated_electronics/debugger //CHOMP Edit
+		/obj/item/device/integrated_electronics/debugger, //CHOMP Edit
+		/obj/item/device/integrated_electronics/detailer //CHOMP Edit
 		)
 	cant_hold = list(/obj/item/weapon/tool/screwdriver/power)
 
