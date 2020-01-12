@@ -103,6 +103,9 @@
 	name = "camera assembly"
 	path =/obj/item/weapon/camera_assembly
 
+//YW Addition Start
 /datum/category_item/autolathe/engineering/rpd
 	name = "rapid piping device"
 	path =/obj/item/weapon/pipe_dispenser
+//YW Addtion End	
+
