@@ -33,8 +33,9 @@
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,
 		/obj/item/clothing/shoes/boots/winter/engineering,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
-		/obj/item/weapon/reagent_containers/spray/windowsealant) //VOREStation Add
-
+		/obj/item/weapon/reagent_containers/spray/windowsealant, //VOREStation Add
+		/obj/item/weapon/pipe_dispenser) //YW Add
+		
 /obj/structure/closet/secure_closet/engineering_chief/Initialize()
 	if(prob(50))
 		starts_with += /obj/item/weapon/storage/backpack/industrial
