@@ -9,7 +9,7 @@
 	desc = "A device used to rapidly pipe things."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "rpd"
-	flags = CONDUCT | NOBLUDGEON
+	flags = NOBLUDGEON
 	force = 10
 	throwforce = 10
 	throw_speed = 1
