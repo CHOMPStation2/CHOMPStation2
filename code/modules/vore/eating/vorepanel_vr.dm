@@ -874,20 +874,22 @@
 		selected = user.vore_organs[1]
 		user.vore_selected = user.vore_organs[1]
 
+	//CHOMPStation Edit Start TFF 13/1/20 - Chomp-Specific Panel Save
 	if(href_list["saveprefs"])
 		if(!user.save_vore_prefs())
-			alert("ERROR: Virgo-specific preferences failed to save!","Error")
+			alert("ERROR: ChompStation-specific preferences failed to save!","Error")
 		else
-			to_chat(user,"<span class='notice'>Virgo-specific preferences saved!</span>")
+			to_chat(user,"<span class='notice'>ChompStation-specific preferences saved!</span>")
 
 	if(href_list["applyprefs"])
 		var/alert = alert("Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation","Reload","Cancel")
 		if(!alert == "Reload")
 			return FALSE
 		if(!user.apply_vore_prefs())
-			alert("ERROR: Virgo-specific preferences failed to apply!","Error")
+			alert("ERROR: ChompStation-specific preferences failed to apply!","Error")
 		else
-			to_chat(user,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
+			to_chat(user,"<span class='notice'>ChompStation-specific preferences applied from active slot!</span>")
+	//CHOMPStation Edit End
 
 	if(href_list["setflavor"])
 		var/new_flavor = html_encode(input(usr,"What your character tastes like (40ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",user.vore_taste) as text|null)
