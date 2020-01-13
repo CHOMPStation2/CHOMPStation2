@@ -273,9 +273,7 @@
 		/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/tool/screwdriver,
 		/obj/item/device/multitool,
-		/obj/item/device/integrated_electronics/wirer, //CHOMP Edit
-		/obj/item/device/integrated_electronics/debugger, //CHOMP Edit
-		/obj/item/device/integrated_electronics/detailer //CHOMP Edit
+		/obj/item/device/integrated_electronics/wirer, /obj/item/device/integrated_electronics/debugger, /obj/item/device/integrated_electronics/detailer //CHOMP Edit. And had to put all of them on one line because 
 		)
 	cant_hold = list(/obj/item/weapon/tool/screwdriver/power)
 
