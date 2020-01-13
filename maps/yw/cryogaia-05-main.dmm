@@ -6959,14 +6959,32 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/bodyscanner,
+/obj/structure/closet/secure_closet/medical_wall{
+	name = "O- Blood Locker";
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/obj/machinery/iv_drip,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/weapon/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
 "aob" = (
-/obj/machinery/body_scanconsole,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
+/obj/structure/table/glass,
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/device/defib_kit/loaded,
+/obj/item/device/defib_kit/loaded,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
 "aoc" = (
@@ -7786,12 +7804,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/spray/cleaner{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/device/defib_kit/loaded,
+/obj/machinery/smartfridge/chemistry/chemvator,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
 "apC" = (
@@ -8232,7 +8245,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/smartfridge/chemistry/chemvator,
+/obj/machinery/bodyscanner,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
 "aql" = (
@@ -8605,8 +8618,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "aqS" = (
-/obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
@@ -9335,15 +9346,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
 "asb" = (
-/obj/machinery/iv_drip,
-/obj/structure/closet/secure_closet/medical_wall{
-	name = "O- Blood Locker";
-	pixel_x = 0;
-	pixel_y = -32
-	},
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
@@ -13271,6 +13273,8 @@
 /obj/effect/floor_decal/corner/pink{
 	dir = 4
 	},
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery_hallway)
 "azi" = (
@@ -14893,7 +14897,7 @@
 	opacity = 0
 	},
 /obj/structure/window/reinforced/polarized/full{
-	id = "surgeryobs2"
+	id = "surgeryobs"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery)
@@ -34238,20 +34242,28 @@
 /area/security/detectives_office)
 "blQ" = (
 /obj/machinery/computer/security/wooden_tv,
+/obj/machinery/button/windowtint{
+	id = "detectivetint";
+	pixel_x = 0;
+	pixel_y = 26
+	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
 "blR" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp/green,
 /obj/structure/window/reinforced/polarized{
-	dir = 4
+	dir = 4;
+	id = "detectivetint"
 	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
 "blS" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor,
-/obj/structure/window/reinforced/polarized/full,
+/obj/structure/window/reinforced/polarized/full{
+	id = "detectivetint"
+	},
 /turf/simulated/floor/plating,
 /area/security/detectives_office)
 "blT" = (
@@ -35102,7 +35114,8 @@
 	pixel_y = 2
 	},
 /obj/structure/window/reinforced/polarized{
-	dir = 4
+	dir = 4;
+	id = "detectivetint"
 	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
@@ -35708,7 +35721,8 @@
 /obj/item/weapon/pen,
 /obj/item/clothing/glasses/sunglasses,
 /obj/structure/window/reinforced/polarized{
-	dir = 4
+	dir = 4;
+	id = "detectivetint"
 	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
@@ -56138,14 +56152,6 @@
 /obj/machinery/mass_driver{
 	id = "enginecore"
 	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the brig foyer.";
-	id = "medbayfoyer";
-	name = "Medbay Foyer Doors";
-	pixel_x = 26;
-	pixel_y = -6;
-	req_access = list()
-	},
 /turf/simulated/floor/greengrid/nitrogen,
 /area/engineering/engine_room)
 "bZn" = (
@@ -56530,27 +56536,11 @@
 /area/engineering/engine_room)
 "bZY" = (
 /obj/effect/floor_decal/industrial/warning/cee,
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the brig foyer.";
-	id = "medbayfoyer";
-	name = "Medbay Foyer Doors";
-	pixel_x = 26;
-	pixel_y = -6;
-	req_access = list()
-	},
 /turf/simulated/floor/reinforced/nitrogen{
 	nitrogen = 82.1472
 	},
 /area/engineering/engine_room)
 "bZZ" = (
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the brig foyer.";
-	id = "medbayfoyer";
-	name = "Medbay Foyer Doors";
-	pixel_x = 26;
-	pixel_y = -6;
-	req_access = list()
-	},
 /turf/simulated/floor/greengrid/nitrogen,
 /area/engineering/engine_room)
 "caa" = (
@@ -60213,17 +60203,13 @@
 /obj/structure/sign/directions/science,
 /turf/simulated/wall,
 /area/storage/primary)
-"gHq" = (
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the brig foyer.";
-	id = "medbayfoyer";
-	name = "Medbay Foyer Doors";
-	pixel_x = 26;
-	pixel_y = -6;
-	req_access = list()
+"ikW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/turf/simulated/wall/r_lead,
-/area/borealis2/outdoors/grounds)
+/obj/machinery/body_scanconsole,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbaymain)
 "nKF" = (
 /obj/structure/sign/directions/security{
 	icon_state = "direction_sec";
@@ -60231,21 +60217,6 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"oso" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 8
-	},
-/obj/effect/overlay/snow/floor,
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the brig foyer.";
-	id = "medbayfoyer";
-	name = "Medbay Foyer Doors";
-	pixel_x = 26;
-	pixel_y = -6;
-	req_access = list()
-	},
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
 "oRX" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -60260,17 +60231,6 @@
 /obj/structure/sign/directions/security,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"qts" = (
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the brig foyer.";
-	id = "medbayfoyer";
-	name = "Medbay Foyer Doors";
-	pixel_x = 26;
-	pixel_y = -6;
-	req_access = list()
-	},
-/turf/simulated/wall/r_wall,
-/area/engineering/engine_room)
 "tbF" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -90907,8 +90867,8 @@ bQL
 bSi
 bTz
 bTz
-bRa
-bRa
+bTz
+bVh
 bRa
 bRa
 bVt
@@ -92676,9 +92636,9 @@ bXj
 bYn
 bZl
 bZY
-qts
-gHq
-oso
+bPE
+bPM
+cbo
 cbo
 cbo
 cbo
@@ -94610,7 +94570,7 @@ anh
 anX
 aoO
 apx
-aql
+ikW
 arf
 asa
 asW
