@@ -192,7 +192,8 @@ var/global/list/robot_modules = list(
 					"Android" = "droid",
 					"Drone" = "drone-standard",
 					"Insekt" = "insekt-Default",
-					"Usagi-II" = "tall2standard"
+					"Usagi-II" = "tall2standard",
+					"Pyralis" = "Glitterfly-Standard"
 					)
 
 
@@ -227,7 +228,8 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-surgery",
 					"Handy" = "handy-med",
 					"Insekt" = "insekt-Med",
-					"Usagi-II" = "tall2medical"
+					"Usagi-II" = "tall2medical",
+					"Pyralis" = "Glitterfly-Surgeon"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -301,7 +303,8 @@ var/global/list/robot_modules = list(
 					"Drone - Medical" = "drone-medical",
 					"Drone - Chemistry" = "drone-chemistry",
 					"Insekt" = "insekt-Med",
-					"Usagi-II" = "tall2medical"
+					"Usagi-II" = "tall2medical",
+					"Pyralis" = "Glitterfly-Crisis"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -378,6 +381,7 @@ var/global/list/robot_modules = list(
 					"Treadwell" = "treadwell",
 					"Handy" = "handy-engineer",
 					"Usagi-II" = "tall2engineer",
+					"Pyralis" = "Glitterfly-Engineering",
 					"Servitor" = "servitor" //YW Addition to add new Servitor Sprite
 					)
 
@@ -399,6 +403,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 	src.modules += new /obj/item/device/geiger(src)
+	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW Addition
 
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
 	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel()
@@ -538,7 +543,8 @@ var/global/list/robot_modules = list(
 					"Black Knight" = "securityrobot",
 					"Drone" = "drone-sec",
 					"Insekt" = "insekt-Sec",
-					"Usagi-II" = "tall2security"
+					"Usagi-II" = "tall2security",
+					"Pyralis" = "Glitterfly-Security"
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -582,7 +588,8 @@ var/global/list/robot_modules = list(
 					"Mopbot"  = "janitorrobot",
 					"Mop Gear Rex" = "mopgearrex",
 					"Drone" = "drone-janitor",
-					"Usagi-II" = "tall2janitor"
+					"Usagi-II" = "tall2janitor",
+					"Pyralis" = "Glitterfly-Janitor"
 					)
 
 /obj/item/weapon/robot_module/robot/janitor/New()
@@ -643,7 +650,8 @@ var/global/list/robot_modules = list(
 					"Rich" = "maximillion",
 					"Drone - Service" = "drone-service",
 					"Drone - Hydro" = "drone-hydro",
-					"Usagi-II" = "tall2service"
+					"Usagi-II" = "tall2service",
+					"Pyralis" = "Glitterfly-Service"
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
@@ -696,7 +704,8 @@ var/global/list/robot_modules = list(
 					"Rich" = "maximillion",
 					"Default" = "Service2",
 					"Drone" = "drone-blu",
-					"Usagi-II" = "tall2service"
+					"Usagi-II" = "tall2service",
+					"Pyralis" = "Glitterfly-Clerical"
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
@@ -733,7 +742,8 @@ var/global/list/robot_modules = list(
 					"Advanced Droid" = "droid-miner",
 					"Treadhead" = "Miner",
 					"Drone" = "drone-miner",
-					"Usagi-II" = "tall2miner"
+					"Usagi-II" = "tall2miner",
+					"Pyralis" = "Glitterfly-Miner"
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()
@@ -762,7 +772,8 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-science",
 					"Handy" = "handy-science",
 					"Insekt" = "insekt-Sci",
-					"Usagi-II" = "tall2peace"
+					"Usagi-II" = "tall2peace",
+					"Pyralis" = "Glitterfly-Research"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()
