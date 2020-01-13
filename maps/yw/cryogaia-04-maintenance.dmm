@@ -6997,23 +6997,29 @@
 /turf/simulated/floor/plating,
 /area/medical/chemistry)
 "apM" = (
-/obj/structure/closet/secure_closet/medical1,
-/obj/item/weapon/storage/box/pillbottles,
-/turf/simulated/floor/tiled/white,
-/area/medical/chemistry)
-"apN" = (
-/obj/structure/closet/secure_closet/chemical,
-/obj/item/weapon/storage/box/pillbottles,
-/obj/item/weapon/storage/box/pillbottles,
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/box/beakers,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
 /obj/effect/floor_decal/corner/beige{
-	dir = 5
+	icon_state = "corner_white_full";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
-"apO" = (
+"apN" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
 /obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/full,
+/turf/simulated/floor/tiled/white,
+/area/medical/chemistry)
+"apO" = (
 /obj/structure/sign/periodic{
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -7029,8 +7035,6 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/medical/morgue)
 "apQ" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
 /obj/item/device/radio/intercom{
 	desc = "Talk... listen through this.";
 	dir = 1;
@@ -7042,6 +7046,12 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet/chemical,
+/obj/item/weapon/storage/box/pillbottles,
+/obj/item/weapon/storage/box/pillbottles,
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "apR" = (
@@ -7050,6 +7060,13 @@
 /obj/item/clothing/glasses/science,
 /obj/item/clothing/glasses/science,
 /obj/item/clothing/glasses/science,
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "apS" = (
@@ -7061,11 +7078,17 @@
 	pixel_x = 0;
 	pixel_y = 36
 	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "apT" = (
 /obj/machinery/chemical_dispenser/full,
 /obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/beige/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "apU" = (
@@ -7526,6 +7549,12 @@
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
 	},
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Chemist"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "aqV" = (
@@ -7537,15 +7566,6 @@
 /area/medical/chemistry)
 "aqX" = (
 /obj/machinery/chem_master,
-/turf/simulated/floor/tiled/white,
-/area/medical/chemistry)
-"aqY" = (
-/obj/structure/bed/chair/office/light{
-	dir = 4
-	},
-/obj/effect/landmark/start{
-	name = "Chemist"
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "aqZ" = (
@@ -7571,6 +7591,9 @@
 	dir = 4;
 	icon_state = "tube1";
 	pixel_y = 0
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -8544,10 +8567,14 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
 "asN" = (
-/obj/machinery/smartfridge/chemistry/chemvator/down,
+/obj/machinery/door/firedoor,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/medical/chemistry)
 "asO" = (
+/obj/structure/closet/secure_closet/medical1,
+/obj/item/weapon/storage/box/pillbottles,
 /obj/effect/floor_decal/corner/beige/full,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -8589,6 +8616,10 @@
 /obj/machinery/reagentgrinder,
 /obj/effect/floor_decal/corner/beige{
 	dir = 10
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medbay Chemistry";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -14793,14 +14824,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/starboard)
 "aFR" = (
-/obj/machinery/chemical_dispenser/full,
-/obj/structure/table/reinforced,
-/obj/machinery/camera/network/medbay{
-	c_tag = "Medbay Chemistry"
-	},
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
+/obj/machinery/smartfridge/chemistry/chemvator/down,
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -40091,6 +40117,18 @@
 	},
 /turf/simulated/wall,
 /area/crew_quarters/longue_area)
+"fKh" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/crew_quarters/medical_restroom)
+"gTr" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/chemistry)
 "mbM" = (
 /obj/structure/table/glass,
 /obj/structure/cable/green{
@@ -71650,7 +71688,7 @@ asC
 atD
 aux
 aux
-avu
+fKh
 axr
 aux
 aux
@@ -75424,7 +75462,7 @@ any
 aol
 aoX
 apN
-aqV
+aqX
 arT
 asP
 aoX
@@ -75928,7 +75966,7 @@ age
 afF
 aoX
 aFR
-aqX
+aqV
 arV
 asR
 aoX
@@ -76180,7 +76218,7 @@ age
 afG
 aoX
 apQ
-aqY
+aqV
 arV
 asS
 aoX
@@ -76937,7 +76975,7 @@ alk
 aoX
 apT
 arb
-aqV
+gTr
 aFx
 aoX
 auJ
