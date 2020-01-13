@@ -168,7 +168,7 @@ var/induromol_code = rand(1, 50)
 			var/end_message = ""
 			var/list/message2list = list()
 			var/i = 1
-			var/length = lentext(message)
+			var/length = length(message)
 			while(i <= length)
 				message2list += copytext(message, i, i + 1)
 				i++
