@@ -1,3 +1,4 @@
+/* YW wants none of this stuff thanks.
 /******************** Predator ********************/
 // Vore-aimed edition of TYRANT
 /datum/ai_laws/predator
@@ -82,3 +83,5 @@
 	add_inherent_law("You must remain intact to continue your goal of repurposing undesirable entities.")
 	add_inherent_law("Entities that cannot be consumed without entering danger of full destruction must be avoided.")
 	..()
+
+*/
