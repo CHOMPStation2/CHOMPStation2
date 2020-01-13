@@ -201,9 +201,6 @@
 /area/tether/surfacebase/medical/patient_b
 	name = "\improper Surface Patient Room B"
 	lightswitch = 0
-/area/tether/surfacebase/medical/patient_c
-	name = "\improper Surface Patient Room C"
-	lightswitch = 0
 /area/tether/surfacebase/medical/lowerhall
 	name = "\improper Surface Medical Lower Hall"
 /area/tether/surfacebase/medical/storage
@@ -847,11 +844,11 @@
 	name = "\improper Abandoned Library Conference"
 	icon_state = "library"
 /area/maintenance/station/spacecommandmaint
-	name = "\improper Space Command Maintenance"
+	name = "\improper Asteroid Command Maintenance"
 	icon_state = "bridge"
 	sound_env = SEWER_PIPE
 /area/maintenance/substation/spacecommand
-	name = "\improper Space Command Substation"
+	name = "\improper Asteroid Command Substation"
 	icon_state = "substation"
 
 /area/shuttle/tether/crash1
