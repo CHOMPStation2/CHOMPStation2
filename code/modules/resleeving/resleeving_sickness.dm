@@ -8,7 +8,7 @@
 
 	//YW Edit incoming_brute_damage_percent = 1.1			// 10% more brute damage YW Edit
 	//YW Edit incoming_fire_damage_percent = 1.1			// 10% more burn damage
-	//YW Edit incoming_hal_damage_percent = 1.5				// 50% more incoming agony.
+	//YW Edit incoming_hal_damage_percent = 1.5			// 50% more incoming agony.
 	//YW Edit outgoing_melee_damage_percent = 0.5			// 50% less melee damage.
 	disable_duration_percent = 2	 			// 100% longer stuns.
 	evasion = -40								// 40% easier to hit.
