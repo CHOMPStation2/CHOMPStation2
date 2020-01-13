@@ -585,7 +585,7 @@
 	occupant.confused = max(occupant.confused, confuse_amount)									// Apply immedeate effects
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
 	if(!(occupant.mind.vore_death))
-		occupant.add_modifier(/datum/modifier/faux_resleeving_sickness, sickness_duration/3)	// And more longterm, though purely visual ones
+		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)	// YW Edit 
 	else
 		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)			// Much more serious if it wasn't a death by vore though
 	occupant.mind.vore_death = FALSE		// Reset our death type. Just in case
