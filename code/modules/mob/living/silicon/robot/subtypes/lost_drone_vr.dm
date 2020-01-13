@@ -41,7 +41,7 @@
 		prob(15);"corrupted",
 		prob(10);"bad")
 
-/*	var/vore_law = prob(60)		// 3/5 chance of having vore-related laws --- No. YW.
+	var/vore_law = prob(0)		// 3/5 chance of having vore-related laws --- 0/5. YW.
 
 	if(vore_law)
 		switch(law_class)
@@ -94,7 +94,7 @@
 						return new /datum/ai_laws/predator()
 					if(2)
 						return new /datum/ai_laws/consuming_eradicator()
-	else */
+	else
 		switch(law_class)
 			if("good") // Fairly tame and probably won't murder you.
 				var/rng = rand(1, 5)
