@@ -107,6 +107,20 @@
 		/obj/item/godfig = 2,
 		/obj/item/weapon/deck/tarot)
 
+/obj/structure/closet/wardrobe/monastary
+	name = "Monastary wardrobe"
+	desc = "It's a storage unit for approved religious attire."
+	icon_state = "black"
+	icon_closed = "black"
+
+	starts_with = list(
+		/obj/item/clothing/suit/unathi/mantle = 2,
+		/obj/item/clothing/suit/unathi/robe = 2,
+		/obj/item/clothing/shoes/sandal = 2,
+		/obj/item/clothing/shoes/footwraps = 2,
+		/obj/item/clothing/shoes/boots/winter = 2,
+		/obj/item/clothing/suit/storage/hooded/wintercoat = 2)
+
 
 /obj/structure/closet/wardrobe/green
 	name = "green wardrobe"

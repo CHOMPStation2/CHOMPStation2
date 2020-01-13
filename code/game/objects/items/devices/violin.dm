@@ -34,8 +34,20 @@
 	song.interact(user)
 
 /obj/item/device/instrument/violin
-	name = "space violin"
-	desc = "A wooden musical instrument with four strings and a bow. \"The devil went down to space, he was looking for an assistant to grief.\""
+	name = "violin"
+	desc = "A wooden musical instrument with four strings and a bow. A true classic."
 	icon_state = "violin"
 	attack_verb = list("smashed")
 	instrumentId = "violin"
+	item_state = "violin"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_instruments.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_instruments.dmi',
+		)
+
+/obj/item/device/instrument/violin/gold
+	name = "golden violin"
+	desc = "A wooden musical instrument with four strings and a bow. \"The devil went down to space, he was looking for an assistant to grief.\""
+	icon = 'icons/obj/musician_yw.dmi'
+	icon_state = "golden_violin"
+	attack_verb = list("smashed")

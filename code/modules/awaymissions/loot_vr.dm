@@ -383,6 +383,10 @@
 	desc = "It looks like an unfolded square box from the top with a cross on it."
 	icon_state = "gu"
 
+/obj/structure/symbol/clock
+	desc = "It looks like some sort of gear."
+	icon_state = "gu"
+
 /obj/structure/symbol/lo
 	desc = "It looks like the letter 'Y' with an underline."
 	icon_state = "lo"

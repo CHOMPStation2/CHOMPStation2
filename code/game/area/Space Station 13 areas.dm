@@ -292,7 +292,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "shuttlered"
 
 /area/shuttle/trade/station
-	name = "\improper Trade Shuttle"
+	name = "\improper Cryogaia Commerce Pad"
 	icon_state = "shuttlered"
 
 /area/shuttle/thunderdome
@@ -502,27 +502,27 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "yellow"
 
 /area/syndicate_station/southwest
-	name = "\improper south-west of SS13"
+	name = "\improper wilderness cave"
 	icon_state = "southwest"
 
 /area/syndicate_station/northwest
-	name = "\improper north-west of SS13"
+	name = "\improper wilderness forest"
 	icon_state = "northwest"
 
 /area/syndicate_station/northeast
-	name = "\improper north-east of SS13"
+	name = "\improper wilderness forest"
 	icon_state = "northeast"
 
 /area/syndicate_station/southeast
-	name = "\improper south-east of SS13"
+	name = "\improper wilderness caves"
 	icon_state = "southeast"
 
 /area/syndicate_station/north
-	name = "\improper north of SS13"
+	name = "\improper outpost grounds"
 	icon_state = "north"
 
 /area/syndicate_station/south
-	name = "\improper south of SS13"
+	name = "\improper the wilderness"
 	icon_state = "south"
 
 /area/syndicate_station/commssat
@@ -568,19 +568,19 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "shuttle"
 
 /area/skipjack_station/southwest_solars
-	name = "\improper aft port solars"
+	name = "\The wilderness"
 	icon_state = "southwest"
 
 /area/skipjack_station/northwest_solars
-	name = "\improper fore port solars"
+	name = "\improper The wilderness"
 	icon_state = "northwest"
 
 /area/skipjack_station/northeast_solars
-	name = "\improper fore starboard solars"
+	name = "\improper The wilderness"
 	icon_state = "northeast"
 
 /area/skipjack_station/southeast_solars
-	name = "\improper aft starboard solars"
+	name = "\improper wilderness caves"
 	icon_state = "southeast"
 
 /area/skipjack_station/mining
@@ -2095,6 +2095,14 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Xenobiology Lab"
 	icon_state = "xeno_lab"
 
+/area/rnd/xenobiology/hallway
+	name = "\improper Xenobiology hallway"
+	icon_state = "xeno_lab"
+
+/area/rnd/xenobiology/storage
+	name = "\improper Xenobiology storage"
+	icon_state = "xeno_lab"
+
 /area/rnd/xenobiology/xenoflora_storage
 	name = "\improper Xenoflora Storage"
 	icon_state = "xeno_f_store"
@@ -2126,6 +2134,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/toxins/server
 	name = "\improper Server Room"
 	icon_state = "server"
+
 
 //Storage
 

@@ -872,31 +872,3 @@ var/global/list/light_type_cache = list()
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "lampshade"
 	w_class = ITEMSIZE_TINY
-
-
-
-/obj/machinery/light/trailblazer
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "redtrail_light_on"
-	base_state = "redtrail_light_on"
-	brightness_range = 3
-	brightness_power = 2
-	layer = OBJ_LAYER
-	brightness_color = "#FF0000"
-	desc = "An unmovable trailblazer. This ones red."
-	light_type = /obj/item/weapon/light/bulb
-	shows_alerts = FALSE
-	var/lamp_shade = 0
-
-/obj/machinery/light/trailblazerb
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "bluetrail_light_on"
-	base_state = "bluetrail_light_on"
-	brightness_range = 3
-	brightness_power = 2
-	layer = OBJ_LAYER
-	brightness_color = "#599DFF"
-	desc = "An unmovable trailblazer. This ones blue."
-	light_type = /obj/item/weapon/light/bulb
-	shows_alerts = FALSE
-	var/lamp_shade = 0
