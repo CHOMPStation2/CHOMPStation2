@@ -41,6 +41,7 @@
 	robot_modules["K9"] = /obj/item/weapon/robot_module/robot/knine
 	robot_modules["ERT"] = /obj/item/weapon/robot_module/robot/ert
 	robot_modules["Janihound"] = /obj/item/weapon/robot_module/robot/scrubpup
+	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //Chompaddition
 	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
 	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
 	return 1

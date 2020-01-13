@@ -41,7 +41,8 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/New(var/mob/living/silicon/robot/R)
 	..()
 	R.module = src
-
+	R.can_buckle = 1 //Chomp Addition; Makes all borgs rideable.
+	
 	add_camera_networks(R)
 	add_languages(R)
 	add_subsystems(R)
