@@ -40117,12 +40117,6 @@
 	},
 /turf/simulated/wall,
 /area/crew_quarters/longue_area)
-"fKh" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/crew_quarters/medical_restroom)
 "gTr" = (
 /obj/effect/floor_decal/corner/beige{
 	dir = 6
@@ -71688,7 +71682,7 @@ asC
 atD
 aux
 aux
-fKh
+avu
 axr
 aux
 aux
