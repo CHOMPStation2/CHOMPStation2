@@ -60210,6 +60210,24 @@
 /obj/machinery/body_scanconsole,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
+"mBp" = (
+/obj/structure/table/marble,
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "kitchen";
+	layer = 3.1;
+	name = "Kitchen Shutters"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/bar)
 "nKF" = (
 /obj/structure/sign/directions/security{
 	icon_state = "direction_sec";
@@ -96617,7 +96635,7 @@ aPz
 aPz
 aQG
 aQF
-aRE
+mBp
 aSV
 aTU
 aUT
