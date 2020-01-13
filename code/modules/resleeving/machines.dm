@@ -434,7 +434,7 @@
 	blur_amount = (48 - manip_rating * 8)
 
 	var/total_rating = manip_rating + scan_rating
-	sickness_duration = (45 - (total_rating-4)*1.875) MINUTES		// 45 minutes default, 30 minutes with max non-anomaly upgrades, 15 minutes with max anomaly ones
+	sickness_duration = (25 - (total_rating-4)*1.875) MINUTES		// YW Edit, 25 minutes default, 15 minutes with max non-anomaly upgrades, 7,5 minutes with max anomaly ones
 
 /obj/machinery/transhuman/resleever/attack_hand(mob/user as mob)
 	user.set_machine(src)
@@ -585,7 +585,7 @@
 	occupant.confused = max(occupant.confused, confuse_amount)									// Apply immedeate effects
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
 	if(!(occupant.mind.vore_death))
-		occupant.add_modifier(/datum/modifier/faux_resleeving_sickness, sickness_duration/3)	// And more longterm, though purely visual ones
+		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)	// YW Edit 
 	else
 		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)			// Much more serious if it wasn't a death by vore though
 	occupant.mind.vore_death = FALSE		// Reset our death type. Just in case
