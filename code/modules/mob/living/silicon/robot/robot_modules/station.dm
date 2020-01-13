@@ -381,7 +381,7 @@ var/global/list/robot_modules = list(
 					"Treadwell" = "treadwell",
 					"Handy" = "handy-engineer",
 					"Usagi-II" = "tall2engineer",
-					"Pyralis" = "Glitterfly-Engineering"
+					"Pyralis" = "Glitterfly-Engineering",
 					"Servitor" = "servitor" //YW Addition to add new Servitor Sprite
 					)
 
