@@ -85,9 +85,15 @@
 		H.add_modifier(modifier_type)
 
 	//Apply damage
-	H.adjustCloneLoss(H.getMaxHealth()*1.5)
+	H.adjustCloneLoss((H.getMaxHealth() - config.health_threshold_dead)*-0.75) //CHOMPStation revert sleeving sickness change
 	H.Paralyse(4)
 	H.updatehealth()
+
+	//Grower specific mutations //CHOMPStation revert sleeving sickness change. Adding this code block back.
+	if(heal_level < 60)
+	randmutb(H)
+	H.dna.UpdateSE()
+	H.dna.UpdateUI()
 
 	//Update appearance, remake icons
 	H.UpdateAppearance()
@@ -128,10 +134,10 @@
 			connected_message("Clone Rejected: Deceased.")
 			return
 
-		else if(occupant.getCloneLoss() > 0)
+		else if(occupant.health < heal_level && occupant.getCloneLoss() > 0) //CHOMPStation reverting sleeving sickness
 
 			 //Slowly get that clone healed and finished.
-			occupant.adjustCloneLoss(-3 * heal_rate)
+			occupant.adjustCloneLoss(-2 * heal_rate) //CHOMPStation reverting sleeving sickness
 
 			//Premature clones may have brain damage.
 			occupant.adjustBrainLoss(-(CEILING((0.5*heal_rate), 1)))
@@ -146,7 +152,7 @@
 			use_power(7500) //This might need tweaking.
 			return
 
-		else if(((occupant.health == occupant.maxHealth)) && (!eject_wait))
+		else if(((occupant.health >= heal_level) || (occupant.health == occupant.maxHealth)) && (!eject_wait)) //CHOMPStation reverting sleeving sickness
 			playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
 			audible_message("\The [src] signals that the growing process is complete.")
 			connected_message("Growing Process Complete.")
@@ -403,7 +409,7 @@
 	anchored = 1
 	var/blur_amount
 	var/confuse_amount
-	var/sickness_duration
+//CHOMPStation EDIT yeet resleeving sickness.	var/sickness_duration
 
 	var/mob/living/carbon/human/occupant = null
 	var/connected = null
@@ -433,8 +439,8 @@
 		manip_rating += M.rating
 	blur_amount = (48 - manip_rating * 8)
 
-	var/total_rating = manip_rating + scan_rating
-	sickness_duration = (25 - (total_rating-4)*1.875) MINUTES		// YW Edit, 25 minutes default, 15 minutes with max non-anomaly upgrades, 7,5 minutes with max anomaly ones
+//CHOMPStation EDIT yeet resleeving sickness.	var/total_rating = manip_rating + scan_rating
+//CHOMPStation EDIT yeet resleeving sickness.	sickness_duration = (25 - (total_rating-4)*1.875) MINUTES		// YW Edit, 25 minutes default, 15 minutes with max non-anomaly upgrades, 7,5 minutes with max anomaly ones
 
 /obj/machinery/transhuman/resleever/attack_hand(mob/user as mob)
 	user.set_machine(src)
@@ -584,11 +590,13 @@
 
 	occupant.confused = max(occupant.confused, confuse_amount)									// Apply immedeate effects
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
+/*CHOMPStation removal begin
 	if(!(occupant.mind.vore_death))
 		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)	// YW Edit 
 	else
 		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)			// Much more serious if it wasn't a death by vore though
 	occupant.mind.vore_death = FALSE		// Reset our death type. Just in case
+/*CHOMPStation removal end
 
 	if(occupant.mind && occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
 		log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)
