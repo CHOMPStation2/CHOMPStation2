@@ -51,6 +51,8 @@
 	attack_verb = list("struck", "hit", "bashed")
 	zoomdevicename = "scope"
 
+	var/recoil_mode = 1 //0 = no micro recoil, 1 = regular, anything higher than 1 is a multiplier //CHOMP Addition
+
 	var/automatic = 0
 	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
@@ -441,12 +443,12 @@
 		//VOREStation Edit End
 
 	//CHOMPEDIT: Recoil knockdown for micros
-	if(iscarbon(user) && !istype(src,/obj/item/weapon/gun/energy/sizegun))
+	if(recoil_mode &&iscarbon(user) && !istype(src,/obj/item/weapon/gun/energy/sizegun))
 		var/mob/living/carbon/nerd = user
 		var/mysize = nerd.size_multiplier
 		if(mysize <= 0.5)
-			nerd.Weaken(1)
-			nerd.adjustBruteLoss(5-mysize*4)
+			nerd.Weaken(1*recoil_mode)
+			nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
 	//CHOMPEDIT: Knockdown code end
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
