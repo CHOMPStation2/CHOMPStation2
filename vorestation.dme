@@ -2383,6 +2383,7 @@
 #include "code\modules\mob\living\carbon\human\species\station\protean_vr\protean_species.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\negative.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\neutral.dm"
+#include "code\modules\mob\living\carbon\human\species\station\traits_vr\neutral_ch.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\positive.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\trait.dm"
 #include "code\modules\mob\living\carbon\human\species\virtual_reality\avatar.dm"
