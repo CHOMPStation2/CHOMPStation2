@@ -393,8 +393,8 @@
 	//M.death(1) // "Stop it he's already dead..." Basically redundant and the reason behind screaming mouse carcasses.
 	if(M.ckey)
 		message_admins("[key_name(owner)] has digested [key_name(M)] in their [lowertext(name)] ([owner ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[owner.x];Y=[owner.y];Z=[owner.z]'>JMP</a>" : "null"])")
-		if(M.mind)
-			M.mind.vore_death = TRUE
+//CHOMPStation removal, part of Resleeving Sickness		if(M.mind)
+//CHOMPStation removal, part of Resleeving Sickness			M.mind.vore_death = TRUE
 
 	// If digested prey is also a pred... anyone inside their bellies gets moved up.
 	if(is_vore_predator(M))
