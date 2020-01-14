@@ -1,12 +1,11 @@
 //
 // VOREStation extensions to unit test framework.
 //
-
+//CHOMPStation Edit 14/1/20 TFF - Bugger you, runtimes. Forces test mobs to spawn at these coords for unit checks.
 /datum/unit_test
 	var/static/default_mobloc = locate(133,122,2)
 
 /datum/unit_test/proc/create_test_mob(var/turf/mobloc = null, var/mobtype = /mob/living/carbon/human, var/with_mind = FALSE)
-	world.log << "creating test mob"
 	if(isnull(mobloc))
 		if(!default_mobloc)
 			for(var/turf/simulated/floor/tiled/T in world)
@@ -20,9 +19,6 @@
 		return 0
 
 	var/mob/living/carbon/human/H = new mobtype(mobloc)
-	world.log << "Mobloc X,Y,Z: [mobloc.x], [mobloc.y], [mobloc.z]"
-	world.log << "Mobloc air: [mobloc.air]"
-	world.log << "SSair: [SSair.state], [SSair.times_fired]"
 
 	if(with_mind)
 		H.mind_initialize("TestKey[rand(0,10000)]")

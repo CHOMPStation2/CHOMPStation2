@@ -68,8 +68,6 @@ Class Procs:
 	ASSERT(!air_master.has_valid_zone(T))
 #endif
 
-	if(!istype(T))
-		return
 	var/datum/gas_mixture/turf_air = T.return_air()
 	add_tile_air(turf_air)
 	T.zone = src
