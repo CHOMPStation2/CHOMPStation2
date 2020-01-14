@@ -34,6 +34,7 @@
 	desc = "Absolutely gigantic, this creature is horror itself."
 	tt_desc = "X Brachypelma phorus tyrannus"
 	icon = 'icons/mob/64x64.dmi'
+	vis_height = 64
 	icon_state = "spider_queen"
 	icon_living = "spider_queen"
 	icon_dead = "spider_queen_dead"
@@ -49,3 +50,9 @@
 	pixel_y = -16
 	old_x = -16
 	old_y = -16
+
+/mob/living/simple_mob/animal/giant_spider/webslinger/event // YW CHANGE
+	ai_holder_type = /datum/ai_holder/simple_mob/event
+
+/mob/living/simple_mob/animal/giant_spider/nurse/queen/event // YW CHANGE
+	ai_holder_type = /datum/ai_holder/simple_mob/event

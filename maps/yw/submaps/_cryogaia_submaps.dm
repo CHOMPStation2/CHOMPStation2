@@ -36,7 +36,7 @@
 #include "beach/beach.dmm"
 #include "beach/cave.dmm"
 #include "alienship/alienship.dmm"
-#include "aerostat/aerostat.dmm"
+//#include "aerostat/aerostat.dmm"
 #include "aerostat/surface.dmm"
 #include "space/debrisfield.dmm"
 #endif
