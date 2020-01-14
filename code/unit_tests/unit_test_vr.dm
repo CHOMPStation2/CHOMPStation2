@@ -6,6 +6,7 @@
 	var/static/default_mobloc = null
 
 /datum/unit_test/proc/create_test_mob(var/turf/mobloc = null, var/mobtype = /mob/living/carbon/human, var/with_mind = FALSE)
+	world.log << "creating test mob"
 	if(isnull(mobloc))
 		if(!default_mobloc)
 			for(var/turf/simulated/floor/tiled/T in world)
