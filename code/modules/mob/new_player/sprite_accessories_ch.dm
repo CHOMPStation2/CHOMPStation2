@@ -88,6 +88,12 @@
 		icon_state = "rook-l"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
+		
+	grointojaw
+		name = "Groin to mouth marking"
+		icon_state = "grointojaw"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_TORSO, BP_HEAD, BP_GROIN)
 
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
