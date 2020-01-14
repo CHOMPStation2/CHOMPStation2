@@ -41,7 +41,7 @@
 				F.forceMove(get_turf(src))
 				F.set_AI_busy(0)
 		else
-			if (!slave&&prob(chance))
+			if (!M.client&&!slave&&prob(chance))
 				slave = M
 				if(animal)
 					slave.faction = master.faction
