@@ -346,6 +346,22 @@
 
 //  F CKEYS
 
+//Foxicide
+//Kaith
+/datum/gear/fluff/kaith_knife
+	path = /obj/item/weapon/kitchenknife/tacknife/unathiknife/fluff/kaith
+	display_name = "Trusty Survival Knife"
+	description = "An old looking knife with an outdated wooden handle. Still looks robust, though."
+	ckeywhitelist = list("foxicide")
+	character_name = list("Kaith")
+
+/datum/gear/fluff/kaith_bag
+	path = /obj/item/weapon/storage/backpack/fluff/kaith
+	display_name = "Light Duffel bag"
+	description = "A compact duffel bag, meant for long hikes."
+	ckeywhitelist = list("foxicide")
+	character_name = list("Kaith")
+
 //  G CKEYS
 
 //generalpantsu
