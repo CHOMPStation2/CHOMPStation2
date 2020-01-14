@@ -596,7 +596,7 @@
 	else
 		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)			// Much more serious if it wasn't a death by vore though
 	occupant.mind.vore_death = FALSE		// Reset our death type. Just in case
-/*CHOMPStation removal end
+*/ //CHOMPStation removal end
 
 	if(occupant.mind && occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
 		log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)
