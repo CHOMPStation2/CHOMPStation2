@@ -65,12 +65,12 @@
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
 
-//yw edit
+//YW Addition
 /mob/living/simple_mob/vore/aggressive/deathclaw/den
 
 	maxHealth = 400
 	health = 400
 	see_in_dark = 8
-	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart! This one seems angrier then most."
+	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart! This one seems angrier than most."
 	melee_damage_lower = 10
 	melee_damage_upper = 40
