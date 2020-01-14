@@ -15,6 +15,8 @@
 		query_string += "&admin_number_afk=[afkmins.len]"
 		world.Export("[config.chat_webhook_url]?[query_string]")
 
+
+/* //CHOMPStation Addition 14/1/20 Ksc - Committing this out to be replaced with a improved request spice.
 /client/verb/adminspice()
 	set category = "Admin"
 	set name = "Request Spice"
@@ -36,3 +38,37 @@
 	usr.verbs -= /client/verb/adminspice
 	spawn(6000)
 		usr.verbs += /client/verb/adminspice	// 10 minute cool-down for spice request
+*/
+
+/mob/verb/Spice(msg as text) //CHOMPStation Addition 14/1/20 Ksc - The improved request spice command.
+	set category = "Admin"
+	set name = "Request Spice"
+	set desc = "Request for admins to challange your shift"
+
+	if(say_disabled)	//This is here to try to identify lag problems
+		usr << "<font color='red'>Speech is currently admin-disabled.</font>"
+		return
+
+	msg = sanitize(msg)
+	if(!msg)	return
+
+	if(usr.client)
+		if(msg)
+			client.handle_spam_prevention(MUTE_PRAY)
+			if(usr.client.prefs.muted & MUTE_PRAY)
+				usr << "<font color='red'> No spice for you (muted).</font>"
+				return
+
+	var/image/cross = image('icons/obj/food.dmi',"enchiladas")
+	msg = "<font color='blue'>\icon[cross] <b><font color=#AD5AAD>SPICE: </font>[key_name(src, 1)] (<A HREF='?_src_=holder;adminmoreinfo=\ref[src]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=\ref[src]'>PP</A>) (<A HREF='?_src_=vars;Vars=\ref[src]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=\ref[src]'>SM</A>) ([admin_jump_link(src, src)]) (<A HREF='?_src_=holder;secretsadmin=check_antagonist'>CA</A>) (<A HREF='?_src_=holder;adminspawncookie=\ref[src]'>SC</a>) (<A HREF='?_src_=holder;adminsmite=\ref[src]'>SMITE</a>):</b> [msg]</font>"
+
+	for(var/client/C in admins)
+		if(R_ADMIN & C.holder.rights)
+			if(C.is_preference_enabled(/datum/client_preference/admin/show_chat_prayers))
+				C << msg
+				C << 'sound/effects/ding.ogg'
+	usr << "Be wary of the cookie."
+
+	feedback_add_details("admin_verb","spicech")	//If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	//log_admin("HELP: [key_name(src)]: [msg]")
+
