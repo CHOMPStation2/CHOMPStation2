@@ -138,6 +138,7 @@ var/list/admin_verbs_fun = list(
 	/client/proc/roll_dices,
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
+	/datum/admins/proc/quick_nif,	//CHOMPStation Addition 13/1/20 TFF - Allow spawning NIFs into players,
 	/client/proc/smite_vr, //VOREStation Add,
 	/client/proc/smite,
 	/client/proc/admin_lightning_strike
@@ -220,6 +221,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/callproc,
 	/client/proc/callproc_datum,
 	/client/proc/debug_process,			//VOREStation Add,
+	/datum/admins/proc/quick_nif,	//CHOMPStation Addition 13/1/20 TFF - Allow spawning NIFs into players,
 	/client/proc/SDQL2_query,
 	/client/proc/Jump,
 	/client/proc/debug_rogueminer,
@@ -353,6 +355,7 @@ var/list/admin_verbs_mod = list(
 	/client/proc/cmd_admin_direct_narrate,
 	/client/proc/allow_character_respawn,   // Allows a ghost to respawn ,
 	/datum/admins/proc/sendFax,
+	/datum/admins/proc/quick_nif,	//CHOMPStation Addition 13/1/20 TFF - Allow spawning NIFs into players,
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
@@ -361,6 +364,7 @@ var/list/admin_verbs_mod = list(
 //VOREStation Edit Start - Highly Modified List
 var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_admin_say,			//admin-only ooc chat,
+	/datum/admins/proc/quick_nif,	//CHOMPStation Addition 13/1/20 TFF - Allow spawning NIFs into players,
 	/client/proc/cmd_mod_say,
 	/client/proc/cmd_event_say
 )
