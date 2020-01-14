@@ -20,9 +20,9 @@
 		return 0
 
 	var/mob/living/carbon/human/H = new mobtype(mobloc)
-	world.log << "Mobloc X,Y,Z: " + mobloc.x + "," + mobloc.y + "," + mobloc.z
-	world.log << "Mobloc air: " + mobloc.air
-	world.log << "SSair: " + SSair.state + "," + SSair.times_fired
+	world.log << "Mobloc X,Y,Z: [mobloc.x], [mobloc.y], [mobloc.z]"
+	world.log << "Mobloc air: [mobloc.air]"
+	world.log << "SSair: [SSair.state], [SSair.times_fired]"
 
 	if(with_mind)
 		H.mind_initialize("TestKey[rand(0,10000)]")
