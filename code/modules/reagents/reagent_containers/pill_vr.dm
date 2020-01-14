@@ -124,3 +124,13 @@
 	..()
 	reagents.add_reagent("healing_nanites", 30)
 	color = reagents.get_color()
+
+/obj/item/weapon/reagent_containers/pill/sleevingcure
+	name = "Vey-Med Resleeving Booster pill"
+	desc = "A rare medication provided by Vey-Med that helps counteract negative side effects of using resleeving machinery. Numb tongue before swallowing."
+	icon_state = "pill3"
+
+/obj/item/weapon/reagent_containers/pill/sleevingcure/Initialize()
+	..()
+	reagents.add_reagent("sleevingcure", 1)
+	color = reagents.get_color()

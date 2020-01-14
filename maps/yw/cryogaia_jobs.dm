@@ -9,7 +9,6 @@ var/const/SAR 				=(1<<14)
 	icon_state = "cyan"
 	primary_color = rgb(47,189,189)
 	secondary_color = rgb(127,223,223)
-	job_access_type = /datum/job/sar
 
 /obj/item/weapon/card/id/explorer
 	name = "identification card"
@@ -21,12 +20,10 @@ var/const/SAR 				=(1<<14)
 /obj/item/weapon/card/id/explorer/pilot
 	assignment = "Pilot"
 	rank = "Pilot"
-	job_access_type = /datum/job/pilot
 
 /obj/item/weapon/card/id/explorer/explorer
 	assignment = "Explorer"
 	rank = "Explorer"
-	job_access_type = /datum/job/explorer
 
 /obj/item/weapon/card/id/explorer/head
 	name = "identification card"
@@ -38,7 +35,6 @@ var/const/SAR 				=(1<<14)
 /obj/item/weapon/card/id/explorer/head/pathfinder
 	assignment = "Pathfinder"
 	rank = "Pathfinder"
-	job_access_type = /datum/job/pathfinder
 
 /datum/job/pathfinder
 	title = "Pathfinder"
@@ -51,10 +47,8 @@ var/const/SAR 				=(1<<14)
 	spawn_positions = 1
 	supervisors = "the research director"
 	selection_color = "#d6d05c"
-	idtype = /obj/item/weapon/card/id/explorer/head/pathfinder
 	economic_modifier = 7
 	minimal_player_age = 7
-
 	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway)
 	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway)
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
@@ -69,7 +63,6 @@ var/const/SAR 				=(1<<14)
 	spawn_positions = 2
 	supervisors = "the pathfinder and the head of personnel"
 	selection_color = "#999440"
-	idtype = /obj/item/weapon/card/id/explorer/pilot
 	economic_modifier = 5
 	minimal_player_age = 3
 	access = list(access_pilot)
@@ -82,11 +75,10 @@ var/const/SAR 				=(1<<14)
 	department = "Exploration"
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "the pathfinder and the research director"
 	selection_color = "#999440"
-	idtype = /obj/item/weapon/card/id/explorer/explorer
 	economic_modifier = 6
 	access = list(access_explorer, access_research)
 	minimal_access = list(access_explorer, access_research)
@@ -102,7 +94,6 @@ var/const/SAR 				=(1<<14)
 	spawn_positions = 2
 	supervisors = "the pathfinder and the chief medical officer"
 	selection_color = "#999440"
-	idtype = /obj/item/weapon/card/id/medical/sar
 	economic_modifier = 6
 	minimal_player_age = 3
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_eva, access_maint_tunnels, access_external_airlocks, access_pilot)

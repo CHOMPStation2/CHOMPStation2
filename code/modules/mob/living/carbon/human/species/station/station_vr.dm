@@ -399,7 +399,7 @@
 //	wikilink="https://www.yawn.ocry.com/Diona"
 
 /datum/species/teshari
-	mob_size = MOB_MEDIUM
+	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
 	spawn_flags = SPECIES_CAN_JOIN
 	icobase = 'icons/mob/human_races/r_seromi_vr.dmi'
 	deform = 'icons/mob/human_races/r_seromi_vr.dmi'

@@ -4,15 +4,16 @@
 #define Z_LEVEL_CRYOGAIA_TRANSIT	3 //added due to explosions jumping from mine leve to lower.
 #define Z_LEVEL_CRYOGAIA_LOWER		4
 #define Z_LEVEL_CRYOGAIA_MAIN		5
-#define Z_LEVEL_SHIPS				6
-#define Z_LEVEL_ALIENSHIP			7
-#define Z_LEVEL_BEACH				8
-#define Z_LEVEL_BEACH_CAVE			9
-#define Z_LEVEL_AEROSTAT			10
-#define Z_LEVEL_AEROSTAT_SURFACE	11
-#define Z_LEVEL_DEBRISFIELD			12
-#define Z_LEVEL_UNDERDARK			13
-#define Z_LEVEL_PLAINS				14
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		6
+#define Z_LEVEL_SHIPS				7
+#define Z_LEVEL_ALIENSHIP			8
+#define Z_LEVEL_BEACH				9
+#define Z_LEVEL_BEACH_CAVE			10
+#define Z_LEVEL_AEROSTAT			11
+#define Z_LEVEL_AEROSTAT_SURFACE	12
+#define Z_LEVEL_DEBRISFIELD			13
+#define Z_LEVEL_UNDERDARK			14
+#define Z_LEVEL_PLAINS				15
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -42,7 +43,7 @@
 
 	station_name  = "Cryogaia Outpost"
 	station_short = "Yawn Wider"
-	dock_name     = "NAS Midgard"
+	dock_name     = "NCS Serenity"
 	boss_name     = "Central Command"
 	boss_short    = "CentCom"
 	company_name  = "NanoTrasen"
@@ -50,8 +51,8 @@
 	starsys_name  = "Borealis Majoris"
 
 	shuttle_docked_message = "The scheduled Shuttle to %dock_name% has arrived. It will depart in approximately %ETD%."
-	shuttle_leaving_dock = "The Shuttle has left the Outpost. Estimate %ETA% until the tram arrives at %dock_name%."
-	shuttle_called_message = "A scheduled crew transfer to %dock_name% is occuring. The tram will be arriving shortly. Those departing should proceed to the shuttle docking station within %ETA%."
+	shuttle_leaving_dock = "The Shuttle has left the Outpost. Estimate %ETA% until the shuttle arrives at %dock_name%."
+	shuttle_called_message = "A scheduled crew transfer to %dock_name% is occuring. The shuttle will be arriving shortly. Those departing should proceed to the shuttle docking station within %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
 	emergency_shuttle_docked_message = "The evacuation shuttle has arrived at the shuttle docking station. You have approximately %ETD% to board the shuttle."
 	emergency_shuttle_leaving_dock = "The emergency shuttle has left the station. Estimate %ETA% until the shuttle arrives at %dock_name%."
@@ -135,10 +136,11 @@
 		/area/security/airlock,
 		/area/borealis2/elevator/medbay,
 		/area/storage/auxillary,
+		/area/vacant/vacant_site/locker,
 		/area/tcommsat/powercontrol
 		)
 	unit_test_exempt_from_atmos = list(
-		/area/engineering/atmos/intake
+//		/area/engineering/atmos/intake
 		)
 
 	unit_test_z_levels = list(2,4,5)
@@ -188,6 +190,9 @@
 			Z_LEVEL_CRYOGAIA_LOWER,
 			Z_LEVEL_CRYOGAIA_MAIN,
 			)
+
+	else if (srcz == Z_LEVEL_CRYOGAIA_RESIDENTIAL)
+		return list(Z_LEVEL_CRYOGAIA_RESIDENTIAL)
 	else if(srcz >= Z_LEVEL_BEACH && srcz <= Z_LEVEL_BEACH_CAVE) //Zs 16-17
 		return list(
 			Z_LEVEL_BEACH,
@@ -233,6 +238,11 @@
 	z = Z_LEVEL_CRYOGAIA_CENTCOM
 	name = "Central Command"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
+
+/datum/map_z_level/cryogaia/residential
+	z = Z_LEVEL_CRYOGAIA_RESIDENTIAL
+	name = "Residential"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_CONSOLES
 /*
 /datum/map_z_level/tether/wilderness
 	name = "Wilderness"

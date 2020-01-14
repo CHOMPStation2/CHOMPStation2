@@ -50,6 +50,13 @@
 /obj/item/device/dogborg/sleeper/Exit(atom/movable/O)
 	return 0
 
+/obj/item/device/dogborg/sleeper/return_air()
+	return return_air_for_internal_lifeform()
+
+/obj/item/device/dogborg/sleeper/return_air_for_internal_lifeform()
+	var/datum/gas_mixture/belly_air/air = new(1000)
+	return air
+
 /obj/item/device/dogborg/sleeper/afterattack(var/atom/movable/target, mob/living/silicon/user, proximity)
 	hound = loc
 	if(!istype(target))
@@ -682,3 +689,10 @@
 	icon_state = "decompiler"
 	max_item_count = 20
 	delivery = TRUE
+
+/obj/item/device/dogborg/sleeper/compactor/brewer //Boozehound gut. //YW Changes
+	name = "Brew Belly"
+	desc = "A mounted drunk tank unit with fuel processor."
+	icon_state = "brewer"
+	injection_chems = null
+	max_item_count = 1

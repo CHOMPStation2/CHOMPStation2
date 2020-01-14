@@ -390,6 +390,12 @@
 	outdoors = TRUE
 	movement_cost = 8
 	var/list/crossed_dirs = list()
+	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
+		'sound/effects/footstep/snow1.ogg',
+		'sound/effects/footstep/snow2.ogg',
+		'sound/effects/footstep/snow3.ogg',
+		'sound/effects/footstep/snow4.ogg',
+		'sound/effects/footstep/snow5.ogg'))
 
 /turf/simulated/floor/outdoors/snow/snow
 	name = "snow"
@@ -419,9 +425,8 @@
 	movement_cost = 0
 
 #define FOOTSTEP_SPRITE_AMT 2
-
 /turf/snow/Entered(atom/A)
-    if(isliving(A))
+    if(isliving(A) && !istype(A, /mob/living/simple_mob))
         var/mdir = "[A.dir]"
         if(crossed_dirs[mdir])
             crossed_dirs[mdir] = min(crossed_dirs[mdir] + 1, FOOTSTEP_SPRITE_AMT)
@@ -440,4 +445,3 @@
         for(var/i in 1 to amt)
             add_overlay(image(icon, "footprint[i]", text2num(d)))
 
-//**** Here ends snow ****
