@@ -603,7 +603,7 @@ var/global/list/latejoin_tram   = list()
 // Icy crystals.
 /datum/category_item/catalogue/material/trail_blazer
 	name = "Ice Colony Equipment - Trailblazer"
-	desc = "This is a glowing stick embedded int he ground with a light on top, commonly used in snowy installations \
+	desc = "This is a glowing stick embedded in the ground with a light on top, commonly used in snowy installations \
 	and in tundra conditions."
 	value = CATALOGUER_REWARD_EASY
 
