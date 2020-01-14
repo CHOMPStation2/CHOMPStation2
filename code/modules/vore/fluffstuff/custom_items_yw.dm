@@ -568,3 +568,11 @@
 	from_suit = /obj/item/clothing/suit/storage/hooded/explorer
 	to_suit = /obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
 
+// *************
+// Foxicide
+// *************
+/obj/item/weapon/kitchenknife/tacknife/unathiknife/fluff/kaith
+	name = "Trusty Survival Knife"
+	desc = "An old looking knife with an outdated wooden handle. Still looks robust, though."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "kaithknife"

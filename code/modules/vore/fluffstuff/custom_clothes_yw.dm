@@ -1591,3 +1591,12 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "valormedal1_mob"
 	overlay_state = "valormedal1_mob"
+
+// ******
+// Foxicide
+// ******
+/obj/item/weapon/storage/backpack/fluff/kaith
+	name = "Light Duffel bag"
+	desc = "A compact duffel bag, meant for long hikes."
+	icon = 'icons/obj/clothing/backpack.dmi'
+	icon_state = "duffle"
