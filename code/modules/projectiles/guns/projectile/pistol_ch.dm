@@ -17,7 +17,7 @@
 	damage = 1
 
 /obj/item/projectile/bullet/pistol/mouse/on_hit(var/mob/living/carbon/human/target)
-	new /obj/random/mob/mouse(src.loc)
+	new /obj/random/mob/mouse(target.loc)
 
 /obj/item/ammo_magazine/m9mm/compact
 	name = "compact mausgazine (1mouse)"
