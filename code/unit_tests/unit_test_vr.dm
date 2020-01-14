@@ -3,7 +3,7 @@
 //
 
 /datum/unit_test
-	var/static/default_mobloc = null
+	var/static/default_mobloc = locate(133,122,2)
 
 /datum/unit_test/proc/create_test_mob(var/turf/mobloc = null, var/mobtype = /mob/living/carbon/human, var/with_mind = FALSE)
 	world.log << "creating test mob"
