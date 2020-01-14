@@ -7,8 +7,15 @@
 	thrown_force_divisor = 0.75 // 15 with weight 20 (steel)
 	throw_speed = 10
 	throw_range = 15
-	sharp = 1
-	edge =  1
+	sharp = 0
+	edge =  0
+	var/master = 0
+	var/slave = 0
+
+/obj/item/weapon/material/ppball/pickup(mob/user)
+	..()
+	if(!master)
+		master = user
 
 /obj/item/weapon/material/ppball/New()
 	..()
@@ -17,17 +24,37 @@
 
 /obj/item/weapon/material/ppball/throw_impact(atom/hit_atom)
 	..()
+	var/chance = 0
 	var/full = 0
 	for(var/mob/M in src)
 		full++
 	if(istype(hit_atom,/mob/living/simple_mob))
+		if (istype(hit_atom,/mob/living/simple_mob/animal)
+			chance = 75
+		else 
+			chance = 20
 		var/mob/living/simple_mob/M = hit_atom
 		if(full)
 			for(var/mob/F in src)
 				F.forceMove(get_turf(src))
 		else
-			M.forceMove(src)
+			if (!slave&&prob(chance))
+				slave = M
+				slave.forceMove(src)
+			else
+				if(prob(chance*2))
+					qdel(src)
 	else
 		if(full)
 			for(var/mob/F in src)
 				F.forceMove(get_turf(src))
+
+/obj/item/weapon/material/ppball/attack_self(mob/user)
+	if (user == master)
+		var/full = 0
+		for(var/mob/M in src)
+			full++
+		if(!full)
+			slave.forceMove(src)
+		else
+			slave.forceMove(user)
