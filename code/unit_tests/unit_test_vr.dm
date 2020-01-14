@@ -6,6 +6,9 @@
 	var/static/default_mobloc = null
 
 /datum/unit_test/proc/create_test_mob(var/turf/mobloc = null, var/mobtype = /mob/living/carbon/human, var/with_mind = FALSE)
+	world.log << "------ c_t_m called ([mobloc],[mobtype],[with_mind]) ------"
+	world.log << "SSair: [SSair.state], [SSair.last_fire]"
+	world.log << "-------------------"
 	if(isnull(mobloc))
 		if(!default_mobloc)
 			for(var/turf/simulated/floor/tiled/T in world)
