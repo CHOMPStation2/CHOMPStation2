@@ -77,7 +77,8 @@
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(8 * removed * chem_effective, 0)
-
+		
+/*CHOMPStation removal begin
 /datum/reagent/sleevingcure
 	name = "Vey-Med Resleeving Booster"
 	id = "sleevingcure"
@@ -92,3 +93,4 @@
 /datum/reagent/sleevingcure/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.remove_a_modifier_of_type(/datum/modifier/resleeving_sickness)
 	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
+*/ //CHOMPStation removal end
