@@ -23,20 +23,21 @@
 	var/msg
 	var/rng = rand(1,5)
 	//VOREStation Edit Start TFF 16/12/19 - Sif -> Virgo 3b
+	//YW EDIT 1/13/2020 - Virgo3b -> Cryogaia
 	switch(rng)
 		if(1)
-			msg = "A combat drone wing operating in close orbit above Virgo 3b has failed to return from a anti-piracy sweep.  If any are sighted, \
+			msg = "A Prototype combat drone wing operating in close orbit above Borealis 1 has failed to return from a anti-piracy sweep.  If any have survived re-entry. \
 			approach with caution."
 		if(2)
-			msg = "Contact has been lost with a combat drone wing in Virgo 3b orbit.  If any are sighted in the area, approach with \
+			msg = "Contact has been lost with a combat drone wing in Borealis 1 orbit.  If any survived re-entry, approach with \
 			caution."
 		if(3)
-			msg = "Unidentified hackers have targeted a combat drone wing deployed around Virgo 3b. If any are sighted in the area, approach with caution."
+			msg = "Unidentified hackers have targeted a combat drone wing deployed around Borealis 1. If any are sighted in the area, approach with caution."
 		if(4)
-			msg = "A passing derelict ship's drone defense systems have just activated. If any are sighted in the area, use caution."
+			msg = "A passing derelict ship's drone defense systems have just activated. If any have survived re-entry into the atmosphere, use caution."
 		if(5)
-			msg = "We're detecting a swarm of small objects approaching your station.  Most likely a bunch of drones.  Please exercise caution if you see any."
-	//VOREStation Edit End
+			msg = "We're detecting a swarm of small objects approaching your outpost.  Most likely a bunch of drones.  Please exercise caution if you see any."
+	//VOREStation Edit End - YW EDIT END
 	command_announcement.Announce(msg, "Rogue drone alert")
 
 /datum/event/rogue_drone/end()
