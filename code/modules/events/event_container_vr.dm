@@ -97,9 +97,10 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Atmos Leak",			/datum/event/atmos_leak, 		30,		list(ASSIGNMENT_ENGINEER = 25), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Strike",		/datum/event/meteor_strike,		10,		list(ASSIGNMENT_ENGINEER = 15), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",			/datum/event/spacevine, 		20,		list(ASSIGNMENT_ENGINEER = 7), 1),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Carp Migration",		/datum/event/carp_migration,	10,		list(ASSIGNMENT_SECURITY = 5), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Migration",	/datum/event/spider_migration,	10,		list(ASSIGNMENT_SECURITY = 5), 1), //YW shifted to spider migration
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,0,	list(ASSIGNMENT_ANY = 5), 1),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",				/datum/event/blob, 				10,	list(ASSIGNMENT_ENGINEER = 60), 3), //YW Enabled
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",				/datum/event/blob, 				10,		list(ASSIGNMENT_ENGINEER = 60), 3), //YW Enabled
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Virus Outbreak", 		/datum/event/viral_infection, 	0,		list(ASSIGNMENT_MEDICAL = 30), 2),  //yw addition (Trial run)
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Wave",			/datum/event/meteor_wave,		30,		list(ASSIGNMENT_ENGINEER = 15),	1),
