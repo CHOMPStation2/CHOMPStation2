@@ -1,3 +1,4 @@
+//CHOMPStation this code has been disabled in the .dme.
 /datum/modifier/resleeving_sickness
 	name = "resleeving sickness"
 	desc = "You feel rather weak and unfocused, having been sleeved not so long ago."
@@ -22,3 +23,4 @@
 
 	on_created_text = "<span class='warning'>You feel slightly weak and unfocused.</span>"
 	on_expired_text = "<span class='notice'>You feel your strength and focus return to you.</span>"
+	
