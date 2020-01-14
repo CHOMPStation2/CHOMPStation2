@@ -110,4 +110,4 @@
 	playsound(M.loc, 'sound/items/hooh.ogg', 50, 1, -1)
 	if(prob(5))
 		to_chat(M, "<span class='warning'>You feel like you've been gnomed...</span>")
-*/ Yawnstation edit end.
+ Yawnstation edit end. */
