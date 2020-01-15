@@ -19,7 +19,7 @@
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
 	excludes = list(/datum/trait/metabolism_up, /datum/trait/metabolism_down)
 
-/datum/trait/hot-blood
+/datum/trait/hot_blood
 	name = "Hot-Blooded"
 	desc = "You are too hot at the standard 20C. 18C is more suitable. Rolling down your jumpsuit or being unclothed helps."
 	cost = 0
@@ -42,7 +42,7 @@
 	desc = "You are too cold at the standard 20C. 22C is more suitable. Wearing clothing that covers your legs and torso helps."
 	cost = 0
 	var_changes = list("cold_discomfort_level" = T0C+21)
-	excludes = list(/datum/trait/hot-blood, /datum/trait/extreme_cold_blood)
+	excludes = list(/datum/trait/hot_blood, /datum/trait/extreme_cold_blood)
 
 // YW Addition
 /datum/trait/extreme_cold_blood
@@ -50,7 +50,7 @@
 	desc = "You are too cold at the standard 20C. 24C is more suitable. Wearing clothing that covers your legs and torso helps."
 	cost = 0
 	var_changes = list("cold_discomfort_level" = T0C+24)
-	excludes = list(/datum/trait/hot-blood, /datum/trait/cold_blood)
+	excludes = list(/datum/trait/hot_blood, /datum/trait/cold_blood)
 // YW Addition End
 
 /datum/trait/autohiss_unathi
