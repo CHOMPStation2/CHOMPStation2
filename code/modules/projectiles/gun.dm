@@ -237,8 +237,11 @@
 		return
 
 	else
-		Fire(A, user, params) //Otherwise, fire normally.
-		return
+		if(A.can_trigger_gun(user))
+			Fire(A, user, params) //Otherwise, fire normally.
+			return
+		else
+			return
 
 /*	//Commented out for quality control and testing
 	if(automatic == 1)//Are we are going to be using automatic shooting
