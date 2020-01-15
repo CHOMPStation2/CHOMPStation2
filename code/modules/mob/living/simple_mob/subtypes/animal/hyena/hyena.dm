@@ -12,9 +12,9 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	<br><br>\
 	It is primarily a hunter but may also scavenge, with the capacity to eat and digest skin, bone and other animal waste. \
 	The spotted hyena displays greater plasticity in its hunting and foraging behaviour than other similar carnivores; \
-    it hunts alone, in small parties of 2–5 individuals or in large groups. \
-    During a hunt, spotted hyenas often run through ungulate herds in order to select an individual to attack. \ 
-    Once selected, their prey is chased over a long distance, often several kilometres, at speeds of up to 60 km/h."
+	it hunts alone, in small parties of 2–5 individuals or in large groups. \
+	During a hunt, spotted hyenas often run through ungulate herds in order to select an individual to attack. \
+	Once selected, their prey is chased over a long distance, often several kilometres, at speeds of up to 60 km/h."
 	value = CATALOGUER_REWARD_MEDIUM
 
 // Start Defining the mob here
@@ -47,7 +47,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
     melee_damage_upper = 8 // not as high damage, but faster bites. nomnomnom <3
     attack_sharp = 1
     attack_edge = 1
-    base_attack_cooldown = 0.5 SECOND
+    base_attack_cooldown = 0.5
     attack_text = list("bit", "nipped", "chomped", "clawed", "scratched", "lewded")
     attack_sound = 'sound/weapons/bite.ogg' // placeholder till I find a better bite
 
