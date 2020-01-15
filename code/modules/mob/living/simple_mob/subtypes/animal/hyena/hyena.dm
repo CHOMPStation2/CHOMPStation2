@@ -29,7 +29,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
     icon_dead = "hyena_dead"
     has_eye_glow = FALSE // Change this to true for fun spooky eye glow in darkness. <3
     minbodytemp = 175 // Make hyenas able to survive freezing cold. Someone criticize me later uwu
-    faction = 'yeen' // gon fight any other mobs. grr
+    faction = "yeen" // gon fight any other mobs. grr
     maxHealth = 125 // not as tanky as a spider for obvious reasons, but not a pushover.
     health = 125
     pass_flags = PASSTABLE
@@ -48,7 +48,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
     attack_sharp = 1
     attack_edge = 1
     base_attack_cooldown = 0.5
-    attack_text = list("bit", "nipped", "chomped", "clawed", "scratched", "lewded")
+    attacktext = list("bit", "nipped", "chomped", "clawed", "scratched", "lewded")
     attack_sound = 'sound/weapons/bite.ogg' // placeholder till I find a better bite
 
     ai_holder_type = /datum/ai_holder/simple_mob/melee/pack_mob // Define here what type of enemy hyena is.
@@ -58,7 +58,9 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
     speak_emote = list("yaps")
 
-    says_list_type = datum/say_list/hyena
+    say_list_type = datum/say_list/hyena
+
+	var/obj/item/clothing/head/hat = null // The hat the yeen is wearing when initialized, var will update with the chosen hat.
 
 // Silly stuff. HATS! Give your yeen a hat today <3
 /mob/living/simple_mob/animal/hyena/verb/remove_hat()
