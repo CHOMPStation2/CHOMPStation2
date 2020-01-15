@@ -46,8 +46,8 @@
 
 // YW Addition
 /datum/trait/cold_blood
-	name = "Cold Blooded"
-	desc = "Your body relies on the outside temperature to keep warm. Wearing warm clothing such as jackets is commonplace for you."
+	name = "Extreme Cold Preference"
+	desc = "You are too cold at the standard 20C. 24C is more suitable. Wearing clothing that covers your legs and torso helps."
 	cost = 0
 	var_changes = list("cold_discomfort_level" = T0C+24)
 	excludes = list(/datum/trait/hot_discomfort, /datum/trait/cold_discomfort)
