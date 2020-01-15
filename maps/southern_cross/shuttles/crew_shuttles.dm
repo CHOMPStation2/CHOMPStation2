@@ -308,7 +308,7 @@
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle3/sif_orbit = 10 SECONDS
+		/datum/shuttle_destination/shuttle3/sif_orbit = 5 SECONDS
 	)
 
 /datum/shuttle_destination/shuttle3/root/get_arrival_message()
@@ -333,10 +333,10 @@
 	preferred_interim_area = /area/shuttle/shuttle3/transit
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle3/stationhangar3 = 2 SECONDS
+		/datum/shuttle_destination/shuttle3/stationhangar3 = 0 SECONDS
 	)
 
-/datum/shuttle_destination/shuttle3/stationhanger3
+/datum/shuttle_destination/shuttle3/stationhangar3
 	name = "Southern Cross Hangar Three"
 	my_area = /area/shuttle/shuttle3/stationhangar3
 	preferred_interim_area = /area/shuttle/shuttle3/transit
@@ -348,7 +348,7 @@
 /datum/shuttle_destination/shuttle3/stationhangar3/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Three."
 
-/datum/shuttle_destination/shuttle3/get_departure_message()
+/datum/shuttle_destination/shuttle3/stationhangar3/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Three."
 
 /datum/shuttle_destination/shuttle3/sky

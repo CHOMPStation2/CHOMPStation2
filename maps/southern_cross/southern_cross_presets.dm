@@ -3,7 +3,7 @@ var/const/NETWORK_SECOND_DECK  = "Second Deck"
 var/const/NETWORK_FIRST_DECK   = "First Deck"
 var/const/NETWORK_SUPPLY       = "Supply"
 var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
-var/const/NETWORK_EXPLORATION  = "Exploration Outpost" //CHOMPedit: Exploration outpost cameras
+var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outpost cameras
 
 //
 // Cameras
@@ -25,8 +25,8 @@ var/const/NETWORK_EXPLORATION  = "Exploration Outpost" //CHOMPedit: Exploration 
 /obj/machinery/camera/network/supply
 	network = list(NETWORK_SUPPLY)
 
-/obj/machinery/camera/network/exploration //CHOMPedit: Exploration outpost cameras
-	network = list(NETWORK_EXPLORATION)
+/obj/machinery/camera/network/carrier //CHOMPedit: Exploration carrier cameras
+	network = list(NETWORK_CARRIER)
 
 // ### Preset machines  ###
 
@@ -68,7 +68,7 @@ var/const/NETWORK_EXPLORATION  = "Exploration Outpost" //CHOMPedit: Exploration 
 	listening_level = Z_LEVEL_TRANSIT
 	autolinkers = list("tns_relay")
 
-/obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration outpost
+/obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration carrier
 	listening_level = Z_LEVEL_MISC
 	autolinkers = list("exp_relay")
 
