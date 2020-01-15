@@ -118,6 +118,8 @@
 	H.verbs |= /mob/living/carbon/human/proc/succubus_drain_finalize
 	H.verbs |= /mob/living/carbon/human/proc/succubus_drain_lethal
 
+
+
 /datum/trait/hard_vore
 	name = "Brutal Predation"
 	desc = "Allows you to tear off limbs & tear out internal organs."
@@ -152,3 +154,9 @@
 	..(S,H)
 	H.verbs |= /mob/living/proc/glow_toggle
 	H.verbs |= /mob/living/proc/glow_color
+
+
+
+
+
+
