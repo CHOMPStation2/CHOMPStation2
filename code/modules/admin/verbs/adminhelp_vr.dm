@@ -46,7 +46,7 @@
 	set desc = "Request for admins to challange your shift"
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		usr << "<font color='red'>Speech is currently admin-disabled.</font>"
+		to_chat (usr, "<font color='red'>Speech is currently admin-disabled.</font>")
 		return
 
 	msg = sanitize(msg)
@@ -56,7 +56,7 @@
 		if(msg)
 			client.handle_spam_prevention(MUTE_PRAY)
 			if(usr.client.prefs.muted & MUTE_PRAY)
-				usr << "<font color='red'> No spice for you (muted).</font>"
+				to_chat (usr, "<font color='red'> No spice for you. (muted).</font>")
 				return
 
 	var/image/cross = image('icons/obj/food.dmi',"enchiladas")
@@ -67,7 +67,7 @@
 			if(C.is_preference_enabled(/datum/client_preference/admin/show_chat_prayers))
 				C << msg
 				C << 'sound/effects/ding.ogg'
-	usr << "Be wary of the cookie."
+	to_chat (usr, "Be wary of the cookie.")
 
 	feedback_add_details("admin_verb","spicech")	//If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	//log_admin("HELP: [key_name(src)]: [msg]")
