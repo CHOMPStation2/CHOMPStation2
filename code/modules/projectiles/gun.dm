@@ -237,7 +237,7 @@
 		return
 
 	else
-		if(A.can_trigger_gun(user))
+		if(user.get_active_hand().can_trigger_gun(user))
 			Fire(A, user, params) //Otherwise, fire normally.
 			return
 		else
