@@ -786,7 +786,7 @@
 	if(!handle_pins(user))
 		return FALSE
 
-/obj/item/gun/proc/handle_pins(mob/user)
+/obj/item/weapon/gun/proc/handle_pins(mob/user)
 	if(pin)
 		if(pin.pin_auth(user) || pin.emagged)
 			return TRUE
