@@ -5,7 +5,7 @@
 /obj/item/firing_pin
 	name = "electronic firing pin"
 	desc = "A small authentication device, to be inserted into a firearm receiver to allow operation."
-	icon = 'tbd'
+	icon = 'icons/obj/device.dmi'
 	icon_state = "firing_pin"
 	item_state = "pen"
 	attack_verb = list("poked")
@@ -13,12 +13,12 @@
 	var/selfdestruct = 0	// Explode when user check is failed.
 	var/force_replace = 0	// Can forcefully replace other pins.
 	var/pin_removeable = 0	// Can be replaced by any pin.
-	var/obj/item/weapon/gun
+	var/obj/item/weapon/gun/gun
 	var/emagged = 0
 
 /obj/item/firing_pin/New(newloc)
 	..()
-	if(istype(target, /obj/item/weapon/gun))
+	if(istype(newloc, /obj/item/weapon/gun))
 		gun = newloc
 
 /obj/item/firing_pin/afterattack(atom/target, mob/user, adjacent, params)
@@ -33,13 +33,13 @@
 				user.put_in_hands(old_pin)
 			else
 				old_pin.forceMove(G.drop_location())
-			old_ppin.gun_remove(user)
+			old_pin.gun_remove(user)
 		
-		if(!G.pin)
-			gun_insert(user, G)
-			to_chat(user, "<span class='notice'>You insert [src] into [G].</span>")
-		else
-			to_chat(user, "<span class='notice'>This firearm already has a firing pin installed.</span>")
+			if(!G.pin)
+				gun_insert(user, G)
+				to_chat(user, "<span class='notice'>You insert [src] into [G].</span>")
+			else
+				to_chat(user, "<span class='notice'>This firearm already has a firing pin installed.</span>")
 		
 /obj/item/firing_pin/emag_act(var/remaining_charges, var/mob/user)
 	if(emagged)
@@ -47,7 +47,7 @@
 	emagged = !emagged
 	to_chat(user, "<span class='notice'>You override the authentication mechanism.</span>")
 
-/obj/item/firing_pin/proc/gun_insert(mob/living/user, obj/item/gun/G)
+/obj/item/firing_pin/proc/gun_insert(mob/living/user, obj/item/weapon/gun/G)
 	gun = G
 	forceMove(gun)
 	gun.pin = src
@@ -63,7 +63,7 @@
 
 /obj/item/firing_pin/proc/auth_fail(mob/living/user)
 	if(user)
-		user.show_message(fail_message, MSG_VISUAL)
+		user.show_message(fail_message, 2)
 	if(selfdestruct)
 		if(user)
 			user.show_message("<span class='danger'>SELF-DESTRUCTING...</span>")
@@ -89,14 +89,17 @@
 	fail_message = "<span class='warning'>TEST RANGE CHECK FAILED.</span>"
 	pin_removeable = TRUE
 
-/obj/item/firing_ppin/test_range/pin_auth(mob/living/user)
+/obj/item/firing_pin/test_range/pin_auth(mob/living/user)
 	if(!istype(user))
 		return FALSE
 	for(var/obj/machinery/magnetic_controller/M in range(user, 3))
 		return TRUE
 	return FALSE
 
-
+/**********************************************************************/
+/* Temporarily removed, as I have no clue how med systems work! -Gear */
+/**********************************************************************/
+/*
 // Implant pin, checks for implant
 /obj/item/firing_pin/implant
 	name = "implant-keyed firing pin"
@@ -118,7 +121,7 @@ obj/item/firing_pin/implant/pin_auth(mob/living/user)
 	desc = "This Security firing pin authorizes the weapon for only loyalty-implanted users."
 	icon_state = "firing_pin_loyalty"
 	req_implant = /obj/item/weapon/implant/loyalty
-
+*/
 
 // Honk pin, clown's joke item.
 // Can replace other pins. Replace a pin in cap's laser for extra fun!
@@ -176,21 +179,21 @@ obj/item/firing_pin/implant/pin_auth(mob/living/user)
 */
 
 
-// Explorer firing pin
-// Usage restricted to off station Z-level
-/obj/item/firing_pin/explorer
-	name = "outback firing pin"
-	desc = "A firing pin used by the australian defense force, retrofit to prevent weapon discharge on the station."
-	icon_state = "firing_pin_explorer"
-	fail_message = "<span class='warning'>CANNOT FIRE WHILE ON STATION, MATE!</span>"
+// // Explorer firing pin
+// // Usage restricted to off station Z-level
+// /obj/item/firing_pin/explorer
+// 	name = "outback firing pin"
+// 	desc = "A firing pin used by the australian defense force, retrofit to prevent weapon discharge on the station."
+// 	icon_state = "firing_pin_explorer"
+// 	fail_message = "<span class='warning'>CANNOT FIRE WHILE ON STATION, MATE!</span>"
 
-// Checks that the user isn't on station Z-level
-/obj/item/firing_pin/explorer/pin_auth(mob/living/user)
-	var/turf/station_check = get_turf(user)
-	if(!station_check||is_station_level(station_check.z))
-		to_chat(user, "<span class='warning'>You cannot use your weapon while on the station!</span>")
-		return FALSE
-	return TRUE
+// // Checks that the user isn't on station Z-level
+// /obj/item/firing_pin/explorer/pin_auth(mob/living/user)
+// 	var/turf/station_check = get_turf(user)
+// 	if(!station_check||is_station_level(station_check.z))
+// 		to_chat(user, "<span class='warning'>You cannot use your weapon while on the station!</span>")
+// 		return FALSE
+// 	return TRUE
 
 
 // Laser tag pins
