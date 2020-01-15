@@ -19,46 +19,46 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
 // Start Defining the mob here
 /mob/living/simple_mob/animal/hyena 
-    name = "Hyena"
-    desc = "Yeen! Its fur is a dusty yellow-brown color with black spots, and it has rounded ears... and SHARP TEETH! You inexplicably want to pet it, though."
-    tt_desc = "Crocuta crocuta"
-    catalogue_data = list(/datum/category_item/catalogue/fauna/hyena)
+	name = "Hyena"
+	desc = "Yeen! Its fur is a dusty yellow-brown color with black spots, and it has rounded ears... and SHARP TEETH! You inexplicably want to pet it, though."
+	tt_desc = "Crocuta crocuta"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/hyena)
 
-    icon_state = "hyena"
-    icon_living = "hyena"
-    icon_dead = "hyena_dead"
-    has_eye_glow = FALSE // Change this to true for fun spooky eye glow in darkness. <3
-    minbodytemp = 175 // Make hyenas able to survive freezing cold. Someone criticize me later uwu
-    faction = "yeen" // gon fight any other mobs. grr
-    maxHealth = 125 // not as tanky as a spider for obvious reasons, but not a pushover.
-    health = 125
-    pass_flags = PASSTABLE
-    movement_cooldown = 0.25 // Yeen go fast
-    // movement_sound = null - TODO: find good animal pawb sounds
-    poison_resist = 0.1
+	icon_state = "hyena"
+	icon_living = "hyena"
+	icon_dead = "hyena_dead"
+	has_eye_glow = FALSE // Change this to true for fun spooky eye glow in darkness. <3
+	minbodytemp = 175 // Make hyenas able to survive freezing cold. Someone criticize me later uwu
+	faction = "yeen" // gon fight any other mobs. grr
+	maxHealth = 125 // not as tanky as a spider for obvious reasons, but not a pushover.
+	health = 125
+	pass_flags = PASSTABLE
+	movement_cooldown = 0.25 // Yeen go fast
+	// movement_sound = null - TODO: find good animal pawb sounds
+	poison_resist = 0.1
 
-    see_in_dark = 25 // Hyenas are nocturnal, they should be able to see anything in the dark. <3
+	see_in_dark = 25 // Hyenas are nocturnal, they should be able to see anything in the dark. <3
 
-    response_help = "rubrubs"
-    response_disarm = "boops aside"
-    response_harm = "smacks"
+	response_help = "rubrubs"
+	response_disarm = "boops aside"
+	response_harm = "smacks"
 
-    melee_damage_lower = 12 // hyenas go for the legs/lower bits
-    melee_damage_upper = 8 // not as high damage, but faster bites. nomnomnom <3
-    attack_sharp = 1
-    attack_edge = 1
-    base_attack_cooldown = 0.5
-    attacktext = list("bit", "nipped", "chomped", "clawed", "scratched", "lewded")
-    attack_sound = 'sound/weapons/bite.ogg' // placeholder till I find a better bite
+	melee_damage_lower = 12 // hyenas go for the legs/lower bits
+	melee_damage_upper = 8 // not as high damage, but faster bites. nomnomnom <3
+	attack_sharp = 1
+	attack_edge = 1
+	base_attack_cooldown = 0.5
+	attacktext = list("bit", "nipped", "chomped", "clawed", "scratched", "lewded")
+	attack_sound = 'sound/weapons/bite.ogg' // placeholder till I find a better bite
 
-    ai_holder_type = /datum/ai_holder/simple_mob/melee/pack_mob // Define here what type of enemy hyena is.
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/pack_mob // Define here what type of enemy hyena is.
 
-    heat_damage_per_tick = 20
-    cold_damage_per_tick = 20
+	heat_damage_per_tick = 20
+	cold_damage_per_tick = 20
 
-    speak_emote = list("yaps")
+	speak_emote = list("yaps")
 
-    say_list_type = datum/say_list/hyena
+	say_list_type = datum/say_list/hyena
 
 	var/obj/item/clothing/head/hat = null // The hat the yeen is wearing when initialized, var will update with the chosen hat.
 
@@ -146,13 +146,13 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
 // Start Defining the mob here
 /mob/living/simple_mob/animal/hyena/Nyria 
-    name = "Nyria"
-    desc = "Yeen! This one seems familiar. Its fur is a dark, dusty reddish-brown color with black spots, and it has rounded ears... and SHARP TEETH! You inexplicably want to pet it, though."
-    tt_desc = "Crocuta crocuta"
+	name = "Nyria"
+	desc = "Yeen! This one seems familiar. Its fur is a dark, dusty reddish-brown color with black spots, and it has rounded ears... and SHARP TEETH! You inexplicably want to pet it, though."
+	tt_desc = "Crocuta crocuta"
 
-    icon_state = "hyena_nyria"
-    icon_living = "hyena_nyria"
-    icon_dead = "hyena_nyria_dead"
+	icon_state = "hyena_nyria"
+	icon_living = "hyena_nyria"
+	icon_dead = "hyena_nyria_dead"
 
-    maxHealth = 225 // tuff yeen. <3
-    health = 225 // tuff yeen. <3
+	maxHealth = 225 // tuff yeen. <3
+	health = 225 // tuff yeen. <3
