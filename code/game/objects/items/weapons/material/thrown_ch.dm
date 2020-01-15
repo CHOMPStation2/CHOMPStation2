@@ -5,17 +5,17 @@
 	icon_state = "star"
 	force_divisor = 0.1 // 6 with hardness 60 (steel)
 	thrown_force_divisor = 0.75 // 15 with weight 20 (steel)
-	throw_speed = 10
-	throw_range = 15
+	throw_speed = 2
+	throw_range = 7
 	sharp = 0
 	edge =  0
-	var/master = 0
-	var/slave = 0
+	var/capsulemaster = 0 //Temporary term = capsulemaste
+	var/capsuleslave = 0 //Temporary term = capsuleslav
 
 /obj/item/weapon/material/ppball/pickup(mob/user)
 	..()
-	if(!master)
-		master = user
+	if(!capsulemaster)
+		capsulemaster = user
 
 /obj/item/weapon/material/ppball/New()
 	..()
@@ -30,7 +30,7 @@
 	for(var/mob/M in src)
 		full++
 	if(istype(hit_atom,/mob/living/simple_mob))
-		if (istype(hit_atom,/mob/living/simple_mob/animal)
+		if (istype(hit_atom,/mob/living/simple_mob/animal) )
 			chance = 75
 			animal = 1
 		else 
@@ -38,32 +38,37 @@
 		var/mob/living/simple_mob/M = hit_atom
 		if(full)
 			for(var/mob/F in src)
-				F.forceMove(get_turf(src))
-				F.set_AI_busy(0)
+				var/mob/living/simple_mob/capsuleslav = F
+				capsuleslav.forceMove(get_turf(src))
+				capsuleslav.set_AI_busy(0)
 		else
-			if (!M.client&&!slave&&prob(chance))
-				slave = M
+			if (!M.client&&!capsuleslave&&prob(chance))
+				capsuleslave = M
+				var/mob/living/simple_mob/capsuleslav = M
+				var/mob/living/carbon/capsulemaste = capsulemaster
 				if(animal)
-					slave.faction = master.faction
-				slave.forceMove(src)
-				slave.set_AI_busy(1)
+					capsuleslav.faction = capsulemaste.faction
+				capsuleslav.forceMove(src)
+				capsuleslav.set_AI_busy(1)
 			else
 				if(prob(chance*2))
 					qdel(src)
 	else
 		if(full)
 			for(var/mob/F in src)
-				F.forceMove(get_turf(src))
-				F.set_AI_busy(0)
+				var/mob/living/simple_mob/capsuleslav = F
+				capsuleslav.forceMove(get_turf(src))
+				capsuleslav.set_AI_busy(0)
 
 /obj/item/weapon/material/ppball/attack_self(mob/user)
-	if (user == master)
+	if (user == capsulemaster && capsuleslave)
+		var/mob/living/simple_mob/capsuleslav = capsuleslave
 		var/full = 0
 		for(var/mob/M in src)
 			full++
 		if(!full)
-			slave.set_AI_busy(1)
-			slave.forceMove(src)
+			capsuleslav.set_AI_busy(1)
+			capsuleslav.forceMove(src)
 		else
-			slave.forceMove(get_turf(user))
-			slave.set_AI_busy(0)
+			capsuleslav.forceMove(get_turf(user))
+			capsuleslav.set_AI_busy(0)
