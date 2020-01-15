@@ -19,12 +19,12 @@
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
 	excludes = list(/datum/trait/metabolism_up, /datum/trait/metabolism_down)
 
-/datum/trait/cold_discomfort
-	name = "Hot-Preference"
+/datum/trait/hot_blood
+	name = "Hot-Blooded"
 	desc = "You are too hot at the standard 20C. 18C is more suitable. Rolling down your jumpsuit or being unclothed helps."
 	cost = 0
 	var_changes = list("heat_discomfort_level" = T0C+19)
-	excludes = list(/datum/trait/hot_discomfort, /datum/trait/cold_blood)
+	excludes = list(/datum/trait/cold_blooded, /datum/trait/extreme_cold_blood)
 
 // YW Addition
 /*
@@ -33,24 +33,24 @@
 	desc = "Your body requires near cryogenic temperatures to operate. Extremely intricate arrangements are needed for you to remain indoors. The outdoors is comfortable for you, however. WARNING: You will spawn in an atmosphere that is VERY hostile to you with no protective equipment!"
 	cost = 0
 	var_changes = list("heat_discomfort_level" = T0C)
-	excludes = list(/datum/trait/cold_discomfort,/datum/trait/hot_discomfort,/datum/trait/cold_blood)
+	excludes = list(/datum/trait/hot_blooded,/datum/trait/cold_blooded,/datum/trait/extreme_cold_blood)
 */
 // YW Addition End
 
-/datum/trait/hot_discomfort
-	name = "Cold-Preference"
+/datum/trait/cold_blood
+	name = "Cold-Blooded"
 	desc = "You are too cold at the standard 20C. 22C is more suitable. Wearing clothing that covers your legs and torso helps."
 	cost = 0
 	var_changes = list("cold_discomfort_level" = T0C+21)
-	excludes = list(/datum/trait/cold_discomfort, /datum/trait/cold_blood)
+	excludes = list(/datum/trait/hot_blooded, /datum/trait/cold_blood)
 
 // YW Addition
-/datum/trait/cold_blood
-	name = "Cold Blooded"
+/datum/trait/extreme_cold_blood
+	name = "Extremely Cold Blooded"
 	desc = "Your body relies on the outside temperature to keep warm. Wearing warm clothing such as jackets is commonplace for you."
 	cost = 0
 	var_changes = list("cold_discomfort_level" = T0C+24)
-	excludes = list(/datum/trait/hot_discomfort, /datum/trait/cold_discomfort)
+	excludes = list(/datum/trait/hot_blooded, /datum/trait/cold_blooded)
 // YW Addition End
 
 /datum/trait/autohiss_unathi
