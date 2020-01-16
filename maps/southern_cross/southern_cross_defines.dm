@@ -61,11 +61,12 @@
 							NETWORK_MINE,
 							NETWORK_RESEARCH,
 							NETWORK_RESEARCH_OUTPOST,
+							NETWORK_CARRIER,
 							NETWORK_ROBOTS,
 							NETWORK_PRISON,
 							NETWORK_SECURITY,
 							NETWORK_TELECOM
-							)
+							) //CHOMPedit: add "NETWORK_CARRIER" for exploration outpost cams
 	// Camera networks that exist, but don't show on regular camera monitors.
 	secondary_networks = list(
 							NETWORK_ERT,
