@@ -30,6 +30,7 @@
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "cult"
 
+/turf/simulated/wall/r_wall
 /turf/simulated/wall/iron/New(var/newloc)
 	..(newloc,"iron")
 /turf/simulated/wall/uranium/New(var/newloc)
@@ -70,9 +71,10 @@
 /turf/simulated/wall/titanium/New(var/newloc)
 	..(newloc,"titanium")
 
-/turf/simulated/wall/durasteel/New(var/newloc)
+/turf/simulated/wall/durasteel/blueserg/New(var/newloc)
 	..(newloc,"durasteel", "durasteel")
-
+/turf/simulated/wall/durasteel/blueserg/attackby(obj/item/I, mob/user)
+	return
 /turf/simulated/wall/wood/New(var/newloc)
 	..(newloc, MAT_WOOD)
 

@@ -650,14 +650,46 @@
 	name = "This is synxes"
 
 /obj/random/mob/synx/item_to_spawn()
-	if(Holiday == "April Fool's Day") //WE WISH YOU A MERRY CLOWNMAS
-		return /mob/living/simple_mob/retaliate/synx/pet/clown
-	else return pick(prob(70);/mob/living/simple_mob/retaliate/synx/pet/greed,
-		prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,
-		prob(20);/mob/living/simple_mob/retaliate/synx/pet/holo,)
+	return pick(prob(666);/mob/living/simple_mob/retaliate/synx/pet/greed,
+		//prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,//He's crew so let's remove this
+		prob(333);/mob/living/simple_mob/retaliate/synx/pet/holo,)
 
 ////////////////////////////////////////////////////////////////////////////
 //////////////////////////NOT A SYNX///////but looks kinda like one/////////
 ////////////////////////////////////////////////////////////////////////////
+/*
+Content relating to the SCP Foundation, including the SCP Foundation logo, is licensed under 
+Creative Commons Sharealike 3.0 and all concepts originate from http://www.scp-wiki.net and its authors.
+This includes the sprites of the below Mob which are based upon SCP 939 and sprited by Riviera (not added yet)
+*/
 //SCP-939
 //sprites to be made.
+/datum/ai_holder/simple_mob/scp
+	hostile = TRUE // The majority of simplemobs are hostile.
+	retaliate = TRUE	// The majority of simplemobs will fight back.
+	cooperative = TRUE
+	returns_home = FALSE
+	can_flee = TRUE
+	speak_chance = 0 // If the mob's saylist is empty, nothing will happen.
+	wander = TRUE
+	base_wander_delay = 3
+	autopilot = TRUE //As the ghost in this shell you only control the voices.
+	wander_when_pulled = TRUE
+	outmatched_threshold = 100 //pussy
+	flee_when_outmatched = TRUE
+	call_distance = 100
+	mauling = FALSE
+	vision_range = 10 //no kiting, they have ears.
+	use_astar = TRUE //Clever boy!
+	threaten = TRUE
+
+/mob/living/simple_mob/retaliate/synx/scp
+	name = "Unknown"
+	desc = "It's a red canine looking creature."
+	tt_desc = "Unknown Alien Lifeform"
+	ai_holder_type = /datum/ai_holder/simple_mob/scp
+	say_list_type = /datum/say_list/malf_drone
+
+	//icon_state = "scp_living"
+	//icon_living = "scp_living"
+	//icon_dead = "scp_dead"

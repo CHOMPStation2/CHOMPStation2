@@ -175,7 +175,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		message_admins("<font color='blue'>Ticket [TicketHref("#[id]")] created</font>")
 	else
 		MessageNoRecipient(parsed_message)
-
+		send2adminchat() //VOREStation Add
 		//show it to the person adminhelping too
 		to_chat(C, "<span class='adminnotice'>PM to-<b>Admins</b>: [name]</span>")
 
