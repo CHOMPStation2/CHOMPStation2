@@ -36,11 +36,12 @@
 		//SECURITY//
 		////////////
 	// comment out the line below when debugging locally to enable the options & messages menu
-	control_freak = CONTROL_FREAK_ALL
+	//control_freak = 1
 
 	var/received_irc_pm = -99999
 	var/irc_admin			//IRC admin that spoke with them last.
 	var/mute_irc = 0
+	var/ip_reputation = 0 //Do we think they're using a proxy/vpn? Only if IP Reputation checking is enabled in config.
 
 
 		////////////////////////////////////
