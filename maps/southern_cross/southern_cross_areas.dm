@@ -1661,7 +1661,7 @@ area/crew_quarters/heads/sc/hop/quarters
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced/airless
 
-//CHOMPedit: Exploration outpost areas
+//CHOMPedit: Exploration Carrier areas
 
 /area/expoutpost
 	name = "\improper Exploration Carrier"
