@@ -114,6 +114,8 @@ mob/living/carbon/proc/charmed() //TODO
 
 
 //egglaying
+var/eggs = 0
+
 
 /mob/living/proc/mobegglaying()
 	set name = "Egg laying"
