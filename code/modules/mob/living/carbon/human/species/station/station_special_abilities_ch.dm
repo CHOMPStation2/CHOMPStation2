@@ -121,40 +121,50 @@ mob/living/carbon/proc/charmed() //TODO
 	set category = "Abilities"
 
 	var/mob/living/carbon/human/C = src
-	var layeggs = 0
-	var eggs = 0
 
-	if(C.incapacitated(INCAPACITATION_ALL))
-		to_chat(src, "You cannot lay eggs in this state!")
-		return
-	if(C.nutrition < 200)
-		to_chat(src, "You lack the Nutrition to lay eggs")
+	if(last_special > world.time)
 		return
 
-	layeggs++
+	var/choice = input(src, "What do you want to do?") as null|anything in list("Make a Egg", "lay your Eggs")
+	last_special = world.time + 600
 
-	if(C.nutrition < 200)
-		eggs++
+	if(!choice)
+		return
 
+	if(do_after(src, 300)) //Thrirty seconds.
+		if(choice == "Make a Egg")
+			src.show_message("<span class='warning'>You feel your belly bulging a bit, you made an egg!</span>")
+			C.nutrition -=150
+			eggs += 1
+			return 0
+		else if(choice == "Make a Egg" && eggs > 5)
+			src.show_message("<span class='warning'>Your Belly is full of Eggs you cant have more!!</span>")
+			return 0
+		else if(choice == "lay your Eggs" && eggs > 0)
+			src.visible_message("<font color='white'><b>[src] freezes and vissibly tries to squat down</b></font>")
 
-	else if(C.nutrition > 200 && C.nutrition < 600)
-		eggs = 2
+			while(eggs > 0)
+				src.show_message("<span class='warning'>You lay a egg!</span>")
+				eggs--
+				var/obj/item/weapon/reagent_containers/food/snacks/egg/E = new(get_turf(src))
+				E.pixel_x = rand(-6,6)
+				E.pixel_y = rand(-6,6)
+			return
+		else
+			src.visible_message("<span class='warning'>you dont have any eggs!</span>")
+			return //Should never happen
 
-
-	else if(C.nutrition >600 && C.nutrition < 800)
-		eggs = 3
-
-
+/*
 	if(layeggs == 1)
 		src.visible_message("<font color='white'><b>[src] freezes and vissibly tries to squat down</b></font>")
 
 	while(eggs > 0)
-		src.show_message("<span class='warning'>You lay a egg!</span>")
+		src.show_message("<span class='warning'>You lay you egg!</span>")
 		eggs--
-		C.nutrition -= 100
 		var/obj/item/weapon/reagent_containers/food/snacks/egg/E = new(get_turf(src))
 		E.pixel_x = rand(-6,6)
 		E.pixel_y = rand(-6,6)
 	layeggs--
 
 	return
+*/

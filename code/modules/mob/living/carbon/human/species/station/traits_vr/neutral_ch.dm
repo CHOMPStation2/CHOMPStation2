@@ -7,7 +7,6 @@
 	..(S,H)
 	H.verbs |= /mob/living/proc/mobegglaying
 
-
 /datum/trait/succubus_bite
 	name = "Succubus Bite"
 	desc = "Allows you to inject your prey with poison, much like a venemous snake."
