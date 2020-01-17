@@ -59,7 +59,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	vore_pounce_chance = 35
 	vore_pounce_maxhealth = 90
 	vore_standing_too = 1 // nomf people while they're standing, yus.
-	swallowsound = 'sound/vore/sunesound/pred/insertion_01'
+	swallowsound = 'sound/vore/sunesound/pred/insertion_01.ogg'
 
 	vore_default_mode = DM_HOLD // yeengut takes a sec to kick in :3
 	vore_digest_chance = 95 // you move, yeengut is gonna kick in~
@@ -86,6 +86,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
 /mob/living/simple_mob/init_vore() // Shenanigans to make the internal loop play inside belly until PR for adding fleshy sounds is added upstrem
 	..()
+	var/obj/belly/B = vore_selected
 	B.wet_loop = 1
 
 // Silly stuff. HATS! Give your yeen a hat today <3
