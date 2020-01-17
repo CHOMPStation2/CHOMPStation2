@@ -52,6 +52,27 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	attacktext = list("bit", "nipped", "chomped", "clawed", "scratched", "lewded")
 	attack_sound = 'sound/weapons/bite.ogg' // placeholder till I find a better bite
 
+	vore_active = 1 // nom settings. <3
+	vore_capacity = 3 // yeens can eat something like 85% of their weight in meat. nom~
+	vore_bump_chance = 25
+	vore_bump_emote = "nomfs!"
+	vore_pounce_chance = 35
+	vore_pounce_maxhealth = 90
+	vore_standing_too = 1 // nomf people while they're standing, yus.
+	swallowsound = 'sound/vore/sunesound/pred/insertion_01'
+
+	vore_default_mode = DM_HOLD // yeengut takes a sec to kick in :3
+	vore_digest_chance = 95 // you move, yeengut is gonna kick in~
+	vore_escape_chance = 8 // 8% chance to escape a hot, slimy, kneading gut. Why would you want to leave~?
+
+	vore_stomach_name = "gut"
+	vore_stomach_flavor = "Hot, slimy, and kneading constantly around you, as the hyena's heartbeat thuds away above. All you can see are pink, slimy walls, \
+	kneading all over your entire form, and what looks like digestive acids pooling along the bottom of it's gut. \
+	You can hear cackling laughter and yaps, as well as the lurid sloshing of the hyena's belly as you're rocked around. Best not squirm, since it's belly isn't digesting you... yet."
+
+	vore_default_contamination_flavor = "Acrid"
+	vore_default_contamination_color = "yellow"
+
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/pack_mob // Define here what type of enemy hyena is.
 
 	heat_damage_per_tick = 20
@@ -62,6 +83,10 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	say_list_type = /datum/say_list/hyena
 
 	var/obj/item/clothing/head/hat = null // The hat the yeen is wearing when initialized, var will update with the chosen hat.
+
+/mob/living/simple_mob/init_vore() // Shenanigans to make the internal loop play inside belly until PR for adding fleshy sounds is added upstrem
+	..()
+	B.wet_loop = 1
 
 // Silly stuff. HATS! Give your yeen a hat today <3
 /mob/living/simple_mob/animal/hyena/verb/remove_hat()
@@ -157,3 +182,5 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
 	maxHealth = 225 // tuff yeen. <3
 	health = 225 // tuff yeen. <3
+
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/pack_mob/nyria // Define here what type of enemy hyena is. Nyria is non-hostile.
