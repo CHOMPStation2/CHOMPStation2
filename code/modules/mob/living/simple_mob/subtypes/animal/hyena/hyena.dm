@@ -24,9 +24,10 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	tt_desc = "Crocuta crocuta"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/hyena)
 
-	icon_state = "hyena"
-	icon_living = "hyena"
-	icon_dead = "hyena_dead"
+	icon = 'icons/mob/animals48x32_ch.dmi'
+	icon_state = "yeen"
+	icon_living = "yeen"
+	icon_dead = "yeen_dead"
 	has_eye_glow = FALSE // Change this to true for fun spooky eye glow in darkness. <3
 	minbodytemp = 175 // Make hyenas able to survive freezing cold. Someone criticize me later uwu
 	faction = "yeen" // gon fight any other mobs. grr
