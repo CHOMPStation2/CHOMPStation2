@@ -306,4 +306,19 @@
 
 // Heist shuttle
 
+// CHOMPedit: Exploration carrier shuttle
+/obj/machinery/computer/shuttle_control/exploration
+	name = "Exploration Sling Control Console"
+	shuttle_tag = "Exploration"
+
+/datum/shuttle/ferry/exploration
+	name = "Exploration"
+	warmup_time = 10
+	area_offsite = /area/shuttle/expoutpost/site
+	area_station = /area/shuttle/expoutpost/station
+	docking_controller_tag = "exp_sling"
+	dock_target_station = "exp_sling_station"
+	dock_target_offsite = "exp_sling_outpost"
+
+
 
