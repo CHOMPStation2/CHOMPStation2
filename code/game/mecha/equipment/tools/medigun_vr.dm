@@ -2,6 +2,7 @@
 	equip_cooldown = 6
 	name = "\improper BL-3 \"Phoenix\" directed restoration system"
 	desc = "The BL-3 'Phoenix' is a portable medical system used to treat external injuries from afar."
+	icon = 'icons/mecha/mecha_equipment_vr.dmi'
 	icon_state = "mecha_medbeam"
 	energy_drain = 1000
 	projectile = /obj/item/projectile/beam/medigun
