@@ -34,7 +34,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	maxHealth = 125 // not as tanky as a spider for obvious reasons, but not a pushover.
 	health = 125
 	pass_flags = PASSTABLE
-	movement_cooldown = 0.25 // Yeen go fast
+	movement_cooldown = 0 // Yeen go fast - nah, yeen still slower. gottagofast.
 	// movement_sound = null - TODO: find good animal pawb sounds
 	poison_resist = 0.1
 
@@ -45,10 +45,10 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	response_harm = "smacks"
 
 	melee_damage_lower = 12 // hyenas go for the legs/lower bits
-	melee_damage_upper = 8 // not as high damage, but faster bites. nomnomnom <3
+	melee_damage_upper = 6 // not as high damage, but faster bites. nomnomnom <3
 	attack_sharp = 1
 	attack_edge = 1
-	base_attack_cooldown = 0.5
+	base_attack_cooldown = 2
 	attacktext = list("bit", "nipped", "chomped", "clawed", "scratched", "lewded")
 	attack_sound = 'sound/weapons/bite.ogg' // placeholder till I find a better bite
 
@@ -151,9 +151,9 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	desc = "Yeen! This one seems familiar. Its fur is a dark, dusty reddish-brown color with black spots, and it has rounded ears... and SHARP TEETH! You inexplicably want to pet it, though."
 	tt_desc = "Crocuta crocuta"
 
-	icon_state = "hyena_nyria"
-	icon_living = "hyena_nyria"
-	icon_dead = "hyena_nyria_dead"
+	icon_state = "nyria_yeen"
+	icon_living = "nyria_yeen"
+	icon_dead = "nyria_yeen_dead"
 
 	maxHealth = 225 // tuff yeen. <3
 	health = 225 // tuff yeen. <3
