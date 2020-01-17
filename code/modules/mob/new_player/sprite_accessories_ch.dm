@@ -88,7 +88,7 @@
 		icon_state = "rook-l"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
-		
+
 	grointojaw
 		name = "Groin to mouth marking"
 		icon_state = "grointojaw"
@@ -103,3 +103,12 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	species_allowed = list(SPECIES_AKULA)
+
+//TFF 16/1/20 - Cotton hair backport
+/datum/sprite_accessory/hair/ch
+	cotton
+		name = "Cotton"
+		icon_state = "hair_cotton"
+		icon_add = 'icons/mob/human_face_ch_add.dmi'
+		icon = 'icons/mob/human_face_ch.dmi'
+
