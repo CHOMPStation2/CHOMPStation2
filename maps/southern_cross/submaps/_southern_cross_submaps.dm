@@ -50,6 +50,9 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "1"
 
+/obj/effect/step_trigger/zlevel_fall/beach
+	var/static/target_z
+
 /obj/effect/step_trigger/zlevel_fall //Don't ever use this, only use subtypes.Define a new var/static/target_z on each
 	affect_ghosts = 1
 
