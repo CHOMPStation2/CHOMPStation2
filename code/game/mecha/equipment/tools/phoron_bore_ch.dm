@@ -3,8 +3,8 @@
 	auto_rearm = 1
 	equip_cooldown = 15 // half of drill
 	name = "\improper PB-23 \"Phobos\" Phoron Bore"
-	desc = "A large, mecha-mounted Phoron bore. It makes use a specialized compressed phoron crystal. The bolt it fires travels for 6 tiles before disapaiting, breaking rocks and extracting minerals."
-	icon = 'icons/mecha/mecha_equipment_vr.dmi'
+	desc = "A design for a large, mecha-mounted Phoron bore, stolen driectly from Grayson Manufactories Ltd. and reproducted by NT. It makes use a specialized compressed phoron crystal. The bolt it fires travels for 6 tiles before dissapaiting, breaking rocks and extracting minerals."
+	icon = 'icons/mecha/mecha_equipment_ch.dmi'
 	icon_state = "mecha_pbore"
 	energy_drain = 200
 	projectile = /obj/item/projectile/bullet/magnetic/bore
