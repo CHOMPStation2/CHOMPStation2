@@ -13,6 +13,7 @@
 	icon_living = "deathclaw"
 	icon_state = "deathclaw"
 	icon = 'icons/mob/vore64x64.dmi'
+	vis_height = 64
 
 	attacktext = list("mauled")
 
@@ -54,6 +55,7 @@
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
 	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
 	movement_cooldown = 0
 
 /mob/living/simple_mob/vore/aggressive/deathclaw/MouseDrop_T(mob/living/M, mob/living/user)
@@ -63,12 +65,12 @@
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
 
-//yw edit
+//YW Addition
 /mob/living/simple_mob/vore/aggressive/deathclaw/den
 
 	maxHealth = 400
 	health = 400
 	see_in_dark = 8
-	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart! This one seems angrier then most."
+	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart! This one seems angrier than most."
 	melee_damage_lower = 10
 	melee_damage_upper = 40

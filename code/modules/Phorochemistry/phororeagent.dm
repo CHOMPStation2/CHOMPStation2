@@ -198,7 +198,6 @@ var/induromol_code = rand(1, 50)
 							obj_count++
 
 						M << "<BR>"
-						break
 
 /datum/reagent/phororeagent/love_potion/on_mob_death(var/mob/M)
 	//update objectives

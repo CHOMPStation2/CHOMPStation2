@@ -795,6 +795,12 @@
 	description = "A golden necklace, the symbol for the Zahirn clan can be found on it's pendant."
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
+/datum/gear/fluff/vasharr_coffee
+	path = /obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee
+	display_name = "Bluespace Coffee"
+	description = "Dreamt up in a strange feverish dream, this coffee cup seems to have been heavily modified with a variety of unlikely parts and wires, and never seems to run out of coffee. Truly the differance between madmen and genius is success."
+	ckeywhitelist = list("radiantflash")
+	character_name = list("Vasharr Zahirn")
 
 /datum/gear/fluff/vasharr_under
 	path = /obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr
