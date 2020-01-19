@@ -34,6 +34,14 @@
 /obj/structure/bonfire/permanent/sifwood/New(newloc, material_name)
 	..(newloc, MAT_SIFWOOD)
 
+/obj/structure/bonfire/examine(mob/user)
+	var/X = get_fuel_amount()
+	user << "The fire has [X] burning logs in it."
+	if(grill)
+		user << "The [src] has a crude grill plate over it."
+	if(stake)
+		user << "The [src] has a makeshift stake plate over it, perfect for witches and space templars."
+
 /obj/structure/bonfire/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/stack/rods) && !can_buckle && !grill)
 		var/obj/item/stack/rods/R = W
