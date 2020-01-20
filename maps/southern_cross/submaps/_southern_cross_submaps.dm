@@ -22,7 +22,7 @@
 
 /datum/map_template/sc_lateload/sc_belt_miner/on_map_loaded(z) // code needed to run ore generation
 	. = ..()
-	seed_submaps(list(Z_LEVEL_BELT), 500, /area/mine/unexplored/belt_miner, /datum/map_template/asteroid_belt) // Give this Z-level 5x normal points for POI generation.
+	seed_submaps(list(Z_LEVEL_BELT), 300, /area/mine/unexplored/belt_miner, /datum/map_template/asteroid_belt) // Give this Z-level 3x normal points for POI generation.
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BELT, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_BELT, 64, 64)         // Create the mining ore distribution map.
 
