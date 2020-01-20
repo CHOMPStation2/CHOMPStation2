@@ -348,17 +348,17 @@
 
 //Foxicide
 //Kaith
-/datum/gear/fluff/kaith_knife
-	path = /obj/item/weapon/kitchenknife/tacknife/unathiknife/fluff/kaith
-	display_name = "Trusty Survival Knife"
-	description = "An old looking knife with an outdated wooden handle. Still looks robust, though."
+/datum/gear/fluff/kaith_modkit
+	path = /obj/item/device/modkit_conversion/fluff/kaith_knife_kit
+	display_name = "Kaith's modkit"
+	description = "A kit containing all the needed tools and parts to modify a survival knife"
 	ckeywhitelist = list("foxicide")
 	character_name = list("Kaith")
 
 /datum/gear/fluff/kaith_bag
 	path = /obj/item/weapon/storage/backpack/fluff/kaith
-	display_name = "Light Duffel bag"
-	description = "A compact duffel bag, meant for long hikes."
+	display_name = "Light duffle bag"
+	description = "A compact duffle bag, meant for long hikes."
 	ckeywhitelist = list("foxicide")
 	character_name = list("Kaith")
 

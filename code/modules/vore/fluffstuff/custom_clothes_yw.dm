@@ -1596,7 +1596,7 @@
 // Foxicide
 // ******
 /obj/item/weapon/storage/backpack/fluff/kaith
-	name = "Light Duffel bag"
-	desc = "A compact duffel bag, meant for long hikes."
+	name = "Light duffle bag"
+	desc = "A compact duffle bag, meant for long hikes."
 	icon = 'icons/obj/clothing/backpack.dmi'
 	icon_state = "duffle"
