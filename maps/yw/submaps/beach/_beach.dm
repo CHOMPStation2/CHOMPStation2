@@ -167,10 +167,11 @@
 	dynamic_lighting = 0
 	requires_power = 0
 
-/area/tether_away/beach/powershed
-	name = "\improper Away Mission - Borealis 1a Coast PS"
+/area/tether_away/beach/outpost //yw EDIT
+	name = "\improper Away Mission - Borealis 1a Outpost"
 	icon_state = "blue2"
 	base_turf = /turf/simulated/floor/beach/sand
+	dynamic_lighting = 1
 
 /area/tether_away/beach/coast
 	name = "\improper Away Mission - Borealis 1a Coast"
@@ -183,7 +184,7 @@
 	base_turf = /turf/simulated/floor/beach/coastwater
 
 /area/tether_away/beach/jungle
-	name = "\improper Away Mission - Borealis 1a Desert"
+	name = "\improper Away Mission - Borealis 1a Desert" //yw EDIT
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/beach/sand/desert
 

@@ -6,6 +6,7 @@ var/list/mining_overlay_cache = list()
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock-dark"
 	density = 1
+	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
 
 /turf/unsimulated/mineral/ice
 	name = "Ice wall"
@@ -565,6 +566,8 @@ turf/simulated/mineral/floor/light_corner
 		//if the turf has already been excavated, some of it's ore has been removed
 		for (var/i = 1 to mineral.result_amount - mined_ore)
 			DropMineral()
+
+	GLOB.rocks_drilled_roundstat++
 
 	//destroyed artifacts have weird, unpleasant effects
 	//make sure to destroy them before changing the turf though

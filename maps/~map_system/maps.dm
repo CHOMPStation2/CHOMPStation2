@@ -59,6 +59,7 @@ var/list/all_maps = list()
 	var/list/holomap_legend_x = list()
 	var/list/holomap_legend_y = list()
 	var/list/meteor_strike_areas	// VOREStation Edit - Areas meteor strikes may choose to hit.
+	var/list/drop_pod_allowed_z		// VOREStation Edit - Which z-levels to target with droppods?
 	var/ai_shell_restricted = FALSE			//VOREStation Addition - are there z-levels restricted?
 	var/ai_shell_allowed_levels = list()	//VOREStation Addition - which z-levels ARE we allowed to visit?
 
@@ -93,8 +94,10 @@ var/list/all_maps = list()
 	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/cryo 	// Used if you end the round on the station.
 	// VOREStation Edit End
 
-	var/lobby_icon = 'icons/misc/title.dmi' // The icon which contains the lobby image(s)
+	//CHOMPStation Edit Start TFF 24/12/19 - Chompers welcome screen message
+	var/lobby_icon = 'icons/misc/title_ch.dmi' // The icon which contains the lobby image(s)
 	var/list/lobby_screens = list("mockingjay00")                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
+	//CHOMPStation Edit End
 
 	var/default_law_type = /datum/ai_laws/nanotrasen // The default lawset use by synth units, if not overriden by their laws var.
 

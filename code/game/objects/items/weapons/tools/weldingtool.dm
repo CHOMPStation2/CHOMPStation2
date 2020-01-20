@@ -145,7 +145,7 @@
 			message_admins("[key_name_admin(user)] triggered a fueltank explosion with a welding tool.")
 			log_game("[key_name(user)] triggered a fueltank explosion with a welding tool.")
 			//Yawn edit: removed weldertank booms
-			to_chat(user, "<span class='danger'>You begin welding on the fueltank and with a moment of lucidity you realize, you are gaypwnd.</span>")
+			to_chat(user, "<span class='danger'>You begin welding on the fueltank and with a moment of lucidity you realize... you are doomed.</span>") //CHOMP Edit: changed yawn edit to just say you are doomed
 			//End yawn edit
 			return
 	if (src.welding)

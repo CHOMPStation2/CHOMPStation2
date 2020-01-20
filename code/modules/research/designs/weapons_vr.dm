@@ -74,6 +74,7 @@
 	sort_string = "MAAUC"
 
 // NSFW gun and cells
+/*
 /datum/design/item/weapon/cell_based/AssembleDesignName()
 	..()
 	name = "Cell-based weapon prototype ([item_name])"
@@ -145,6 +146,8 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "silver" = 1000, "gold" = 1000, "uranium" = 1000, "phoron" = 1000)
 	build_path = /obj/item/ammo_casing/microbattery/combat/xray
 	sort_string = "MAVCF"
+*/
+
 
 // Who the fuck thought this was a good idea? -RadiantFlash
 /*/datum/design/item/nsfw_cell/stripper
@@ -154,7 +157,9 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "uranium" = 2000, "phoron" = 2000, "diamond" = 500)
 	build_path = /obj/item/ammo_casing/microbattery/combat/stripper
 	sort_string = "MAVCG"
-*/
+
+None of these for now, too. -DHA */
+
 /*
 /datum/design/item/nsfw_cell/final
 	name = "FINAL OPTION"

@@ -174,7 +174,12 @@
 				assailant.visible_message("<span class='warning'>[assailant] covers [affecting]'s eyes!</span>")
 			if(affecting.eye_blind < 3)
 				affecting.Blind(3)
-
+		//TFF 8/1/20 CHOMPStation Addition Start - Re-add sitting on one's head.
+		if(BP_HEAD)
+			if(force_down)
+				if(announce)
+					assailant.visible_message("<span class='warning'>[assailant] sits on [target]'s head!</span>")
+		//CHOMPStation Addition End
 /obj/item/weapon/grab/attack_self()
 	return s_click(hud)
 

@@ -30,7 +30,9 @@
 	build_path = /obj/item/weapon/reagent_containers/hypospray/science
 	sort_string = "KCAVB"
 
+
 // ML-3M medigun and cells
+/*
 /datum/design/item/medical/cell_based/AssembleDesignName()
 	..()
 	name = "Cell-based medical prototype ([item_name])"
@@ -242,3 +244,5 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 2000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/normalsize
 	sort_string = "KVCOC"
+
+Don't even think about it -DHA */

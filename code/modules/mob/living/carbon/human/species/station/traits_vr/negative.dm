@@ -41,7 +41,7 @@
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
-
+/*
 // YW Addition
 /datum/trait/endurance_glass
 	name = "Glass Endurance"
@@ -53,7 +53,7 @@
 		..(S,H)
 		H.setMaxHealth(S.total_health)
 // YW Addition End
-
+*/
 /datum/trait/minor_brute_weak
 	name = "Minor Brute Weakness"
 	desc = "Increases damage from brute damage sources by 10%"
@@ -101,13 +101,13 @@
 	desc = "Increases your susceptibility to electric shocks by 50%"
 	cost = -3
 	var_changes = list("siemens_coefficient" = 1.5) //This makes you significantly weaker to tasers.
-
+/*
 /datum/trait/conductive_extreme
 	name = "Extremely Conductive"
 	desc = "Increases your susceptibility to electric shocks by 100%"
 	cost = -4
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
-
+*/
 /datum/trait/hollow
 	name = "Hollow Bones/Aluminum Alloy"
 	desc = "Your bones and robot limbs are much easier to break."

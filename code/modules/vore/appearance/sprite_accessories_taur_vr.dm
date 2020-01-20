@@ -124,6 +124,7 @@
 	color_blend_mode = ICON_MULTIPLY  // The sprites for taurs are designed for ICON_MULTIPLY
 
 	var/icon/suit_sprites = null //File for suit sprites, if any.
+	var/icon/under_sprites = null
 
 	var/can_ride = 1			//whether we're real rideable taur or just in that category
 
@@ -182,28 +183,30 @@
 /datum/sprite_accessory/tail/taur/wolf
 	name = "Wolf (Taur)"
 	icon_state = "wolf_s"
+	under_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
 	suit_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
-
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
-/datum/sprite_accessory/tail/taur/fatwolf
-	name = "Fat Wolf (Taur)"
-	icon_state = "fatwolf_s"
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c
 	name = "Wolf dual-color (Taur)"
 	icon_state = "wolf_s"
 	extra_overlay = "wolf_markings"
-
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
-/datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
-	name = "Fat Wolf dual-color (Taur)"
-	icon_state = "fatwolf_s"
-	extra_overlay = "fatwolf_markings"
-
+	
+//MTosh 08/01/2020 - CHOMPstation Moved Synth Wolf up under wolf dual-color, and Fat Wolf below Synth Wolf, to better group original vorestation wolf taurs/differentiate from Chompstation Fat Taurs
 /datum/sprite_accessory/tail/taur/wolf/synthwolf
 	name = "SynthWolf dual-color (Taur)"
 	icon_state = "synthwolf_s"
 	extra_overlay = "synthwolf_markings"
+
+//TFF 22/11/19 - CHOMPStation port of fat taur sprites
+//Mtosh 08/01/2020 - CHOMPStation changed datum tree from "tail/taur/fatwolf" to "tail/taur/wolf/fatwolf" in order to fix bug involving taur duty vest.
+/datum/sprite_accessory/tail/taur/wolf/fatwolf
+	name = "Fat Wolf (Taur)"
+	icon_state = "fatwolf_s"
+
+/datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
+	name = "Fat Wolf dual-color (Taur)"
+	icon_state = "fatwolf_s"
+	extra_overlay = "fatwolf_markings"
 
 /datum/sprite_accessory/tail/taur/naga
 	name = "Naga (Taur)"
@@ -245,6 +248,7 @@
 /datum/sprite_accessory/tail/taur/horse
 	name = "Horse (Taur)"
 	icon_state = "horse_s"
+	under_sprites = 'icons/mob/taursuits_horse_vr.dmi'
 	suit_sprites = 'icons/mob/taursuits_horse_vr.dmi'
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
@@ -325,6 +329,7 @@
 /datum/sprite_accessory/tail/taur/spider
 	name = "Spider (Taur)"
 	icon_state = "spider_s"
+	suit_sprites = 'icons/mob/taursuits_spider_vr.dmi'
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their leg!"
@@ -370,6 +375,7 @@
 /datum/sprite_accessory/tail/taur/feline
 	name = "Feline (Taur)"
 	icon_state = "feline_s"
+	suit_sprites = 'icons/mob/taursuits_feline_vr.dmi'
 
 //TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/fatfeline
@@ -436,6 +442,7 @@
 	name = "Drake (Taur)"
 	icon_state = "drake_s"
 	extra_overlay = "drake_markings"
+	suit_sprites = 'icons/mob/taursuits_drake_vr.dmi'
 
 /datum/sprite_accessory/tail/taur/otie
 	name = "Otie (Taur)"

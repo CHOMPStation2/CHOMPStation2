@@ -217,6 +217,10 @@
 	icon_state = "emergencystorage"
 	sound_env = SMALL_ENCLOSED
 
+/area/surface/outpost/research/xenoresearch/first_aid //CHOMPstation edit
+	name = "\improper Xenoresearch First-Aid Station"
+	icon_state = "medbay2"
+
 /area/surface/outpost/research/xenoresearch/restroom
 	name = "\improper Xenoresearch Restroom"
 	icon_state = "research_restroom"
@@ -612,22 +616,22 @@
 /area/hangar/one
 	name = "\improper Hangar One"
 
-/area/hangar/onecontrol
-	name = "\improper Hangar One Control Room"
+/area/hangar/lockerroomone
+	name = "\improper Exploration Locker Room One"
 	icon_state = "hangarcontrol"
 
 /area/hangar/two
 	name = "\improper Hangar Two"
 
-/area/hangar/twocontrol
-	name = "\improper Hangar Two Control Room"
+/area/hangar/lockerroomtwo
+	name = "\improper Exploration Locker Room Two"
 	icon_state = "hangarcontrol"
 
 /area/hangar/three
 	name = "\improper Hangar Three"
 
-/area/hangar/threecontrol
-	name = "\improper Hangar Three Control Room"
+/area/hangar/lockerroomthree
+	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
 
 /area/security/checkpoint3
@@ -1588,6 +1592,203 @@ area/crew_quarters/heads/sc/hop/quarters
 
 /area/shuttle/cryo/transit
 	icon_state = "shuttle"
+
+// Fishing CHOMPstation edit
+
+/area/surface/outpost/fishing
+	name = "\improper Fishing Outpost"
+	icon_state = "recreation_area"
+
+/area/surface/outpost/fishing/smes
+	name = "\improper Fishing SMES Maintenance"
+	icon_state = "substation"
+
+//Shuttle 3 CHOMPedit
+
+/area/shuttle/shuttle3
+	name = "\improper Hangar Deck"
+	icon_state = "yellow"
+	requires_power = 0
+	dynamic_lighting = 1
+	flags = RAD_SHIELDED
+
+/area/shuttle/shuttle3/start
+	name = "\improper Expedition Hangar One"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/reinforced
+
+/area/shuttle/shuttle3/seconddeck
+	name = "south of second deck"
+	icon_state = "south"
+
+/area/shuttle/shuttle3/stationhangar3
+	name = "\improper Hangar Three"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/reinforced
+
+/area/shuttle/shuttle3/mining
+	name = "wilderness site"
+	icon_state = "shuttlered"
+
+/area/shuttle/shuttle3/transit
+	name = "transit"
+	icon_state = "shuttlered"
+	base_turf = /turf/space/transit/north
+
+/area/shuttle/shuttle3/orbit
+	name = "in orbit of Sif"
+	icon_state = "shuttlegrn"
+	base_turf = /turf/space
+
+/area/shuttle/shuttle3/sky
+	name = "hovering over skies of sif"
+	icon_state = "shuttlegrn"
+	base_turf = /turf/simulated/sky
+
+/area/shuttle/shuttle3/sky_transit
+	name = "in flight over sif"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/sky/moving
+
+//CHOMPedit: Exploration outpost ferry shuttle
+
+/area/shuttle/expoutpost/site
+	name = "\improper Exploration Elevator"
+	icon_state = "shuttle2"
+
+/area/shuttle/expoutpost/station
+	name = "\improper Exploration Elevator"
+	icon_state = "shuttle2"
+	base_turf = /turf/simulated/floor/reinforced/airless
+
+//CHOMPedit: Exploration Carrier areas
+
+/area/expoutpost
+	name = "\improper Exploration Carrier"
+	icon_state = "purple"
+
+/area/expoutpost/shuttle
+	name = "\improper Exploration Carrier shuttle"
+
+/area/expoutpost/stationshuttle
+	name = "\improper Station Shuttle to Exploration Carrier"
+
+/area/expoutpost/debriefing
+	name = "\improper Exploration Carrier Debriefing"
+	ambience = AMBIENCE_EXPOUTPOST
+
+/area/expoutpost/prep
+	name = "\improper Exploration Carrier Prep Room"
+
+/area/expoutpost/prep/recovery
+	name = "\improper Exploration Carrier Recovery"
+	icon_state = "exam_room"
+
+/area/expoutpost/pathfinder
+	name = "\improper Exploration Carrier Pathfinder Office"
+
+/area/expoutpost/hallwayaftport
+	name = "\improper Exploration Carrier Aft Port Hallway"
+
+/area/expoutpost/bathroom
+	name = "\improper Exploration Carrier Bathroom"
+
+/area/expoutpost/aftdock
+	name = "\improper Exploration Carrier Backup Shuttle Docks"
+
+/area/expoutpost/hangerhall
+	name = "\improper Exploration Carrier Hangar Hallway"
+
+/area/expoutpost/hangarone
+	name = "\improper Exploration Carrier Hangar One"
+	icon_state = "hangar"
+
+/area/expoutpost/hangartwo
+	name = "\improper Exploration Carrier Hangar Two"
+	icon_state = "hangar"
+
+/area/expoutpost/hangarthree
+	name = "\improper Exploration Carrier Hangar Three"
+	icon_state = "hangar"
+
+/area/expoutpost/hangarfour
+	name = "\improper Exploration Carrier Hangar Four"
+	icon_state = "hangar"
+
+/area/expoutpost/hangarfive
+	name = "\improper Exploration Carrier Hangar Five"
+	icon_state = "hangar"
+
+/area/expoutpost/hangarsix
+	name = "\improper Exploration Carrier Hangar Six"
+	icon_state = "hangar"
+
+/area/expoutpost/hangaroneprep
+	name = "\improper Exploration Carrier Hangar One Prep"
+
+/area/expoutpost/nukestorage //Yes this is a joke
+	name = "\improper Exploration Carrier Secure Storage"
+	icon_state = "nuke_storage"
+
+/area/expoutpost/displayroom
+	name = "\improper Exploration Carrier Display Room"
+
+/area/solar/expstarboardsolar
+	name = "\improper Exploration Carrier Starbound Solars"
+	icon_state = "panelsS"
+
+/area/solar/expportsolar
+	name = "\improper Exploration Carrier Port Solars"
+	icon_state = "panelsP"
+
+/area/maintenance/solars/expstarboardsolar
+	name = "\improper Exploration Carrier Starbound Solar Control"
+	icon_state = "SolarcontrolS"
+
+/area/maintenance/solars/expportsolar
+	name = "\improper Exploration Carrier Port Solar Control"
+	icon_state = "SolarcontrolP"
+
+/area/maintenance/expoutpost/atmospherics
+	name = "\improper Exploration Carrier Atmospherics"
+	icon_state = "smaint"
+
+/area/maintenance/expoutpost/portmaint
+	name = "\improper Exploration Carrier Port Maintenance"
+	icon_state = "pmaint"
+
+/area/maintenance/expoutpost/telecomms
+	name = "\improper Exploration Carrier Telecomms"
+	icon_state = "pmaint"
+
+/area/maintenance/expoutpost/innerstarboardmaint
+	name = "\improper Exploration Starboard Carrier Maintenance"
+	icon_state = "smaint"
+
+/area/maintenance/expoutpost/outerstarboardmaint
+	name = "\improper Exploration Starboard Carrier Maintenance"
+	icon_state = "smaint"
+
+/area/maintenance/expoutpost/outerportmaint
+	name = "\improper Exploration Carrier Port Maintenance"
+	icon_state = "pmaint"
+
+/area/maintenance/expoutpost/innerportmaint
+	name = "\improper Exploration Carrier Port Maintenance"
+	icon_state = "pmaint"
+
+//CHOMPedit: Exploration backup shuttle. For now this is a placeholder for future expedition content.
+
+/area/shuttle/shuttlebackup
+	name = "\improper Hangar Deck"
+	icon_state = "yellow"
+	requires_power = 0
+	dynamic_lighting = 1
+	flags = RAD_SHIELDED
+
+/area/shuttle/shuttlebackup/start
+	name = "\improper Expedition Backup Shuttle Docks"
+	icon_state = "shuttlered"
 
 // Misc
 

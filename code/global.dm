@@ -26,6 +26,8 @@ var/diary				= null
 var/error_log			= null
 var/debug_log			= null
 var/href_logfile		= null
+//CHOMPStation Removal Start TFF 24/12/19 - Blep. Remove extra stuff. Where do these even come in?
+/*
 var/station_name		= "Yawn Wider Station"
 var/const/station_orig	= "Yawn Wider Station" //station_name can't be const due to event prefix/suffix
 var/const/station_short	= "V.O.R.E."
@@ -36,7 +38,9 @@ var/const/company_name	= "NanoTrasen"
 var/const/company_short	= "NT"
 var/const/star_name		= "Virgo-Erigone"
 var/const/starsys_name	= "Virgo-Erigone"
-var/const/game_version	= "VOREStation"
+*/
+//CHOMPStation Removal End
+var/const/game_version	= "CHOMPStation"	//CHOMPStation Edit TFF 24/12/19 - Chompers
 var/changelog_hash		= ""
 var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544)
 var/round_progressing = 1
