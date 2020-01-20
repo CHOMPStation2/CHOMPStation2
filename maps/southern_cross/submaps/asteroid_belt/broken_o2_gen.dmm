@@ -19,7 +19,7 @@
 "s" = (/obj/machinery/crystal/ice,/turf/simulated/mineral/floor/vacuum,/area/mine/explored/belt_miner)
 "t" = (/obj/machinery/gravity_generator,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 "u" = (/obj/machinery/particle_smasher,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
-"v" = (/obj/tether_away_spawner/asteroid_drone_swarm,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
+"v" = (/obj/sc_away_spawner/asteroid_drone_swarm,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 
 (1,1,1) = {"
 bbbbbbbbbbbbb

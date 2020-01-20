@@ -1,6 +1,9 @@
 // This causes submap maps to get 'checked' and compiled, when undergoing a unit test.
 // This is so Travis can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 
+///////////////////////////////////////////////////////////////////////////////
+// Primary Load - these are areas that will ALWAYS be in play.
+
 // Rykka adds Belt Mining
 
 #include "asteroid_belt/_templates.dm"
@@ -17,14 +20,42 @@
 	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
 	z = Z_LEVEL_BELT
 
-/datum/map_template/sc_lateload/sc_belt_miner/on_map_loaded(z)
+/datum/map_template/sc_lateload/sc_belt_miner/on_map_loaded(z) // code needed to run ore generation
 	. = ..()
 	seed_submaps(list(Z_LEVEL_BELT), 100, /area/mine/unexplored/belt_miner, /datum/map_template/asteroid_belt)
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BELT, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_BELT, 64, 64)         // Create the mining ore distribution map.
 
+//////////////////////////////////////////////////////////////////////////////
+/// Away Missions
+/// If you're reading this and want to add a new away mission, reference /tether/submaps/_tether_submaps.dm or existing away missions for how to set it up.
+
+/*
+#if AWAY_MISSION_TEST
+#include "beach/beach.dmm"
+#include "beach/cave.dmm"
+#include "alienship/alienship.dmm"
+#include "aerostat/aerostat.dmm"
+#include "aerostat/surface.dmm"
+#include "space/debrisfield.dmm"
+#endif
+*/
+
+// Commented out until we either port or replace away missions, but this is the framework for loading each away mission.
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Gateway submaps go here // Commented out until we get Gateway missions working.
+/*
+/datum/map_template/tether_lateload/gateway
+	name = "Gateway Submap"
+	desc = "Please do not use this."
+	mappath = null
+	associated_map_datum = null
+	*/
+
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps
+
 /datum/map_template/sc_lateload
 	allow_duplicates = FALSE
 	var/associated_map_datum
@@ -92,7 +123,17 @@
 		L.fall_impact(T, 42, 90, FALSE, TRUE)	//You will not be defibbed from this.
 
 
-/////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+// Add objects that will be used in ALL away missions. Keep area specific stuff separate.
+
+/obj/structure/old_roboprinter
+	name = "old drone fabricator"
+	desc = "Built like a tank, still working after so many years."
+	icon = 'icons/obj/machines/drone_fab.dmi'
+	icon_state = "drone_fab_idle"
+	anchored = TRUE
+	density = TRUE
+
 /obj/sc_away_spawner
 	name = "RENAME ME, JERK"
 	desc = "Spawns the mobs!"
