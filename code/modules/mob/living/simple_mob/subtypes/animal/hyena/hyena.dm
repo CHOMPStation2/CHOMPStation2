@@ -84,11 +84,6 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
 	var/obj/item/clothing/head/hat = null // The hat the yeen is wearing when initialized, var will update with the chosen hat.
 
-/mob/living/simple_mob/init_vore() // Shenanigans to make the internal loop play inside belly until PR for adding fleshy sounds is added upstrem
-	..()
-	var/obj/belly/B = vore_selected
-	B.wet_loop = 1
-
 // Silly stuff. HATS! Give your yeen a hat today <3
 /mob/living/simple_mob/animal/hyena/verb/remove_hat()
 	set name = "Remove Hat"
