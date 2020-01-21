@@ -103,6 +103,8 @@
 	var/flight_x_offset = 0
 	var/flight_y_offset = 0
 
+	var/obj/item/firing_pin/pin = /obj/item/firing_pin // YWStation add - Standard firing pin for most guns
+
 /obj/item/weapon/gun/CtrlClick(mob/user)
 	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
 		toggle_flashlight()
@@ -123,6 +125,11 @@
 
 /obj/item/weapon/gun/New()
 	..()
+	// YWStation Add
+	if(pin)
+		pin = new pin(src)
+	// YWStation Add End
+
 	for(var/i in 1 to firemodes.len)
 		firemodes[i] = new /datum/firemode(src, firemodes[i])
 
@@ -230,8 +237,11 @@
 		return
 
 	else
-		Fire(A, user, params) //Otherwise, fire normally.
-		return
+		if(user.get_active_hand().can_trigger_gun(user))
+			Fire(A, user, params) //Otherwise, fire normally.
+			return
+		else
+			return
 
 /*	//Commented out for quality control and testing
 	if(automatic == 1)//Are we are going to be using automatic shooting
@@ -253,6 +263,10 @@
 
 /obj/item/weapon/gun/attack(atom/A, mob/living/user, def_zone)
 	if (A == user && user.zone_sel.selecting == O_MOUTH && !mouthshoot)
+		if(istype(user))
+			var/mob/living/L = user
+			if(!can_trigger_gun(L))
+				return
 		handle_suicide(user)
 	else if(user.a_intent == I_HURT) //point blank shooting
 		if(user && user.client && user.aiming && user.aiming.active && user.aiming.aiming_at != A && A != user)
@@ -736,9 +750,18 @@
 
 /obj/item/weapon/gun/examine(mob/user)
 	. = ..()
+// YWStation Add
+	var/msg = ""
+	if(pin)
+		msg += "It has \a [pin] installed.\n"
+		msg += "<span class='info'>[pin] looks like it could be removed with some <b>tools</b>.</span>\n"
+	else
+		msg += "It doesn't have a <b>firing pin</b> installed, and won't fire.\n"
 	if(firemodes.len > 1)
 		var/datum/firemode/current_mode = firemodes[sel_mode]
-		to_chat(user, "The fire selector is set to [current_mode.name].")
+		msg += "The fire selector is set to [current_mode.name]."
+	to_chat(user, msg)
+// YWStation Add End
 
 /obj/item/weapon/gun/proc/switch_firemodes(mob/user)
 	if(firemodes.len <= 1)
@@ -755,3 +778,23 @@
 
 /obj/item/weapon/gun/attack_self(mob/user)
 	switch_firemodes(user)
+
+// YWStation Add
+
+/obj/item/weapon/gun/proc/can_trigger_gun(mob/user)
+	. = ..()
+	if(!handle_pins(user))
+		return FALSE
+
+/obj/item/weapon/gun/proc/handle_pins(mob/user)
+	if(pin)
+		if(pin.pin_auth(user) || pin.emagged)
+			return TRUE
+		else
+			pin.auth_fail(user)
+			return FALSE
+	else
+		to_chat(user, "<span class='warning'>[src]'s trigger is locked. This weapon doesn't have a firing pin installed!</span>")
+		return FALSE
+
+// YWStation Add End
