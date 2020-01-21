@@ -5,7 +5,7 @@
 	icon_state = "scarab_militia"
 	initial_icon = "scarab_militia"
 	step_in = 2 // Four legs means FAST AS FUCK BOI
-	dir_in = 1 //Facing North.
+	step_energy_drain = 5 //Half of normal step drain. Faster mech, more movement.
 	opacity = 0
 	health = 250
 	maxhealth = 250
