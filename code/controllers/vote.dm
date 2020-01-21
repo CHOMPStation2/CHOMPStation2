@@ -44,10 +44,12 @@ SUBSYSTEM_DEF(vote)
 		players_are_in_round = TRUE
 		break
 
+//CHOMPStation Edit Start TFF 21/1/20 - Revert removal of auto-transfer for no transfer if people aren't in the round.
 	if(!players_are_in_round)
-		log_debug("The crew transfer shuttle would have been called at vote time due to no players being present.") //YW Edit
-//		init_shift_change(null, 1)  //YW Edit
+		log_debug("The crew transfer shuttle was automatically called at vote time due to no players being present.")
+		init_shift_change(null, 1)
 		return
+//CHOMPStation Edit End
 
 	initiate_vote(VOTE_CREW_TRANSFER, "the server", 1)
 	log_debug("The server has called a crew transfer vote.")
