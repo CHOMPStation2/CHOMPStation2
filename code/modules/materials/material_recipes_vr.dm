@@ -12,7 +12,3 @@
 /material/durasteel/generate_recipes()
 	. = ..()
 	recipes += new/datum/stack_recipe("durasteel fishing rod", /obj/item/weapon/material/fishing_rod/modern/strong, 2)
-
-/material/wood/generate_recipes()
-	. = ..()
-	recipes += new/datum/stack_recipe("wooden buckler", /obj/item/weapon/shield/riot/buckler, 20, time = 40)

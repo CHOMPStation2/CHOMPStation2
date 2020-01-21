@@ -2195,6 +2195,7 @@
 #include "code\modules\maps\tg\reader.dm"
 #include "code\modules\materials\fifty_spawner_mats.dm"
 #include "code\modules\materials\material_recipes.dm"
+#include "code\modules\materials\material_recipes_ch.dm"
 #include "code\modules\materials\material_recipes_vr.dm"
 #include "code\modules\materials\material_sheets.dm"
 #include "code\modules\materials\material_synth.dm"
