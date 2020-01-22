@@ -281,3 +281,6 @@
 
 	glass_name = "Slime"
 	glass_desc = "Slime thats safe to drink (relatively)"
+
+/datum/reagent/drink/soda
+	ingest_met = REM * 5 //Makes it so soda metabolizes faster, since without this increase, the nutrients it currently gives does nothing. Also, metabolises faster then normal nutrients due to being soda.

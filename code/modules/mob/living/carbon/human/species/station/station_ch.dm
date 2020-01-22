@@ -27,3 +27,15 @@
 
 //datum/species/protean
 //	spawn_flags = SPECIES_IS_RESTRICTED
+
+//TFF 20/1/20 - More whitelisted species listed here. Unable to force overrides to be enabled here.
+/*
+/datum/species/xenochimera
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+
+/datum/species/diona
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+
+/datum/species/vox
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+*/

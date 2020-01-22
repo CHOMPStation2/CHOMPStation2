@@ -10,6 +10,7 @@
 #define Z_LEVEL_CENTCOM					8
 #define Z_LEVEL_TRANSIT					9
 #define Z_LEVEL_SURFACE_WILD			10
+#define Z_LEVEL_BELT					11
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -85,6 +86,20 @@
 
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
+	// Framework for porting Tether's lateload Z-Level system
+	lateload_z_levels = list(
+			list("Mining Asteroid Belt"), //Stock lateload maps
+			)
+
+	lateload_single_pick = list(
+		//list("Snow Outpost"),		// Unplayable mapgen,
+		//list("Zoo"),				// Too big. way, way too big
+		list("Carp Farm"),
+		list("Snow Field"),
+		list("Listening Post")
+		)
+
+	lateload_single_pick = null
 
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
