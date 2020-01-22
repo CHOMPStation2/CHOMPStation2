@@ -1,6 +1,7 @@
 /obj/item/weapon/pickaxe/heavydutydrill //AEIOU project
 	name = "heavy duty drill"
-	desc = "Vroom vroom."
+	desc = "Vroom vroom. A heavy fossil-fuel powered drill. This thing is way rugged but unreliable without upgrades."
+	description_info = "You can get upgrades from R&D and cargo. You need a screwdriver and crowbar to work things around."
 	icon = 'icons/obj/HeavyDutyDrill.dmi'
 	icon_state = "thdd0"
 	item_state = "chainsaw0"
@@ -18,13 +19,14 @@
 	var/enginefailed = 0	//Is the engine currently stuck. If 1, it needs to be cleared.
 	var/fuel_consumed = 0	//placeholder. This is used for fuel consumption calculations.
 
-	var/obj/item/drillparts/drillbit/drill_bit = null	//The actual drill in contact with the surface.
-	var/obj/item/drillparts/drillengine/engine = null		//This is the engine that powers the drill. Better engines are faster.
 	var/obj/item/drillparts/drillairfilters/airfilter = null 	//This will determine the engine fuel efficiency.
+	var/obj/item/drillparts/drillbit/drill_bit = null			//The actual drill in contact with the surface.
+	var/obj/item/drillparts/drillengine/engine = null			//This is the engine that powers the drill. Better engines are faster.
+	
 
 	var/fuel_efficiency = 1	//This is the var which determines how much you consume fuel.
-	var/jam_chance = 2		//This is determined by the engine level.
-	var/active_digspeed = 0	//Determined by the drill bit
+	var/active_digspeed = 1	//Determined by the drill bit
+	var/jam_chance = 1		//This is determined by the engine level.
 
 /obj/item/weapon/pickaxe/heavydutydrill/New()
 	var/datum/reagents/R = new/datum/reagents(max_fuel)
@@ -52,16 +54,15 @@
 	if(on)
 		return
 	var/missing_part = 0	//Ugly placeholder.
+	if(!airfilter)
+		to_chat(user, "There is no filters to run the drill.")
+		missing_part = 1
 	if(!drill_bit)
 		to_chat(user, "There is no drill tip.")
 		missing_part = 1
 	if(!engine)
 		to_chat(user, "There is no engine to run the drill.")
 		missing_part = 1
-	if(!airfilter)
-		to_chat(user, "There is no filters to run the drill.")
-		missing_part = 1
-
 	if(missing_part)
 		to_chat(user, "The drill can't function in it's current state.")
 		missing_part = 0
@@ -69,6 +70,10 @@
 
 	if(enginefailed)
 		unjam(user)
+		return
+
+	if(open)
+		to_chat(user, "Don't run equipement with the panels open!")
 		return
 
 	visible_message("You start pulling the string on \the [src].", "[usr] starts pulling the string on \the [src].")
@@ -204,18 +209,19 @@
 			return
 		if(open && istype(W, /obj/item/weapon/tool/crowbar))
 			if(drill_bit || airfilter || engine)
-				var/choice = input("What component would you like to remove?") as null|anything in list(drill_bit,airfilter,engine)
+			if(airfilter || drill_bit || engine)
+				var/choice = input("What component would you like to remove?") as null|anything in list(airfilter,drill_bit,engine)
 				if(!choice)
 					return
-				if(choice == drill_bit)
-					to_chat(usr, "You pop \the [drill_bit] out of \the [src]'s storage compartment.")
-					usr.put_in_hands(drill_bit)
-					src.drill_bit = null
-					update_stats()
-				else if(choice == airfilter)
-					to_chat(usr, "You pop \the [airfilter] out of \the [src]'s storage compartment.")
+				if(choice == airfilter)
+					to_chat(usr, "You pop \the [airfilter] out of \the [src]'s housing.")
 					usr.put_in_hands(airfilter)
 					src.airfilter = null
+					update_stats()
+				else if(choice == drill_bit)
+					to_chat(usr, "You pop \the [drill_bit] out of \the [src]'s head.")
+					usr.put_in_hands(drill_bit)
+					src.drill_bit = null
 					update_stats()
 				else if(choice == engine)
 					to_chat(usr, "You detatch \the [engine] from \the [src]'s engine mount.")
@@ -236,27 +242,9 @@
 
 
 /obj/item/weapon/pickaxe/heavydutydrill/proc/update_stats() //This is supposed to update the values after you put things in and out.
-
+	fuel_efficiency = airfilter.aspiration
 	active_digspeed = drill_bit.sharpness
 	jam_chance = engine.reliability
-	fuel_efficiency = airfilter.aspiration
-
-	//progress += CPU.max_idle_programs
-
-/*	
-	for(var/obj/item/drillparts/X in drill_bit)
-		//active_digspeed = X.sharpness
-		//active_digspeed = min(active_digspeed, X.sharpness)
-		//mat_cost = initial(mat_cost) % (2*manipulator.rating)
-		//active_digspeed = (power_cost*0.15) * X.sharpness
-		active_digspeed = (drill_bit.sharpness)
-		to_chat(usr, "Drillbitdebug")
-	for(var/obj/item/drillparts/X in engine)
-		jam_chance = X.reliability
-		to_chat(usr, "Drillbitdebug2")
-	for(var/obj/item/drillparts/X in airfilter)
-		fuel_efficiency = X.aspiration
-		to_chat(usr, "Drillbitdebug3")*/
 
 /obj/item/weapon/pickaxe/heavydutydrill/proc/enginefail()//This is the process for a jammed engine. You need to activate it in hand to solve the issue.
 	force = inactive_force

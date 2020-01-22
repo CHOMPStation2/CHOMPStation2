@@ -2,7 +2,7 @@
 	name = "Spare drills"
 	contains = list(
 				/obj/item/weapon/pickaxe/heavydutydrill = 3)
-	cost = 50
+	cost = 40
 	containertype = "/obj/structure/closet/crate"
 	containername = "Spare drills crate"
 
@@ -13,7 +13,7 @@
 			/obj/item/drillparts/drillbit = 2,
 			/obj/item/drillparts/drillengine = 2)
 
-	cost = 100
+	cost = 40
 	containertype = "/obj/structure/closet/crate"
 	containername = "Spare drill parts crate"
 
@@ -24,6 +24,6 @@
 			/obj/item/drillparts/drillbit/advanced = 2,
 			/obj/item/drillparts/drillengine/advanced = 2)
 
-	cost = 320 //Random value honestly.
+	cost = 160 //Random value honestly.
 	containertype = "/obj/structure/closet/crate"
 	containername = "Advanced spare drill parts crate"
