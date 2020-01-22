@@ -281,6 +281,16 @@
 	to_chat(viewers(user), "<span class='danger'>[user] is lying down and pulling \the [src] into [TU.him], it looks like [TU.he] [TU.is] trying to commit suicide!</span>")
 	return(BRUTELOSS)
 
+/obj/item/weapon/pickaxe/heavydutydrill/light
+	name = "lighter heavy duty drill"
+	desc = "Vroom vroom. A heavy fossil-fuel powered drill. This one is made out of lighter, stronger material. Easier to carry and holds more fuel."
+	icon_state = "lght_hdd0"
+	item_state = "chainsaw0"
+	matter = list(DEFAULT_WALL_MATERIAL = 3750,"plastic" = 1250)
+	slowdown = 0
+	max_fuel = 750
+
+
 //////////////////////////////////////////////////////////////////////
 //																	//
 //																	//

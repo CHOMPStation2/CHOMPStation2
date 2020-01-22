@@ -24,6 +24,14 @@
 			/obj/item/drillparts/drillbit/advanced = 2,
 			/obj/item/drillparts/drillengine/advanced = 2)
 
-	cost = 160 //Random value honestly.
+	cost = 130 //Random value honestly.
 	containertype = "/obj/structure/closet/crate"
 	containername = "Advanced spare drill parts crate"
+
+/datum/supply_pack/supply/lghtdrill 
+	name = "Lighter Heavy-duty Drills "
+	contains = list(
+				/obj/item/weapon/pickaxe/heavydutydrill/light = 2)
+	cost = 190
+	containertype = "/obj/structure/closet/crate"
+	containername = "Spare drills crate"
