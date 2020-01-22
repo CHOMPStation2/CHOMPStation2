@@ -7,6 +7,7 @@
 "g" = (/obj/random/unidentified_medicine/combat_medicine,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 "h" = (/obj/sc_away_spawner/asteroid_drone_swarm,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 "i" = (/mob/living/simple_mob/animal/giant_spider/frost/space,/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/mine/explored/belt_miner)
+"j" = (/obj/structure/ghost_pod/manual/lost_drone/dogborg,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 
 (1,1,1) = {"
 aaaaaaaabaabaaaaaaaa
@@ -23,7 +24,7 @@ abbbbbbbbbbabbbbcfca
 aabbbbbbbbbabbbbcfca
 aabbcccbbbbaabbbccca
 abbbcffbbbbbbbbbbbba
-abbbcfcbbbbbbbbbbbba
+abbbcjcbbbbbbbbbbbba
 aabbcccbbbcccccfccca
 aabbbbbbbbcefhfffffa
 aaabbbbbbbcefhfffffa

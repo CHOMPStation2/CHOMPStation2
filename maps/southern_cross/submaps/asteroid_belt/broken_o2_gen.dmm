@@ -15,7 +15,6 @@
 "o" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 9},/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 "p" = (/obj/machinery/atmospherics/pipe/simple/visible{icon_state = "intact"; dir = 6},/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 "q" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
-"r" = (/obj/machinery/auto_cloner,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 "s" = (/obj/machinery/crystal/ice,/turf/simulated/mineral/floor/ignore_mapgen/vacuum,/area/mine/explored/belt_miner)
 "t" = (/obj/machinery/gravity_generator,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
 "u" = (/obj/machinery/particle_smasher,/turf/simulated/floor/airless,/area/mine/explored/belt_miner)
@@ -26,7 +25,7 @@ bbbbbbbbbbbbb
 beavataaajakb
 beavaaaaalalb
 baaaaadaalalb
-braaaaaaamnob
+baaaaaaaamnob
 bpqqaqqqqqoab
 biavaaaaavaub
 bbbcbbfbbcbbb
