@@ -43,7 +43,7 @@
 	var/poison_per_bite = 5 //grubs cause a shock when they bite someone
 	var/poison_type = "shockchem"
 	var/poison_chance = 50
-	var/emp_chance = 20 // Beware synths
+	var/shock_chance = 20 // Beware synths
 
 	// solar moths are not affected by atmos
 	min_oxy = 0
