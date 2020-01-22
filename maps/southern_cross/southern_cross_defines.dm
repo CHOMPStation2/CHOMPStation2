@@ -47,6 +47,7 @@
 	// Networks that will show up as options in the camera monitor program
 	station_networks = list(
 							NETWORK_CARGO,
+							NETWORK_CARRIER,	//CHOMPedit: add "NETWORK_CARRIER" for exploration outpost cams,
 							NETWORK_CIRCUITS,
 							NETWORK_CIVILIAN,
 							NETWORK_COMMAND,
@@ -61,12 +62,12 @@
 							NETWORK_MINE,
 							NETWORK_RESEARCH,
 							NETWORK_RESEARCH_OUTPOST,
-							NETWORK_CARRIER,
 							NETWORK_ROBOTS,
 							NETWORK_PRISON,
 							NETWORK_SECURITY,
-							NETWORK_TELECOM
-							) //CHOMPedit: add "NETWORK_CARRIER" for exploration outpost cams
+							NETWORK_TELECOM,
+							NETWORK_XENOBIO,	//CHOMPStation Edit 17/1/20 TFF - Xenobio network addition,
+							)
 	// Camera networks that exist, but don't show on regular camera monitors.
 	secondary_networks = list(
 							NETWORK_ERT,

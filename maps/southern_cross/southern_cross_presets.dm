@@ -4,7 +4,7 @@ var/const/NETWORK_FIRST_DECK   = "First Deck"
 var/const/NETWORK_SUPPLY       = "Supply"
 var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outpost cameras
-
+var/const/NETWORK_XENOBIO = "Xenobiology"	//CHOMPStation Edit 17/1/20 TFF - Xenobio network addition
 //
 // Cameras
 //
@@ -28,6 +28,8 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 /obj/machinery/camera/network/carrier //CHOMPedit: Exploration carrier cameras
 	network = list(NETWORK_CARRIER)
 
+/obj/machinery/camera/network/research/xenobio	//CHOMPStation Edit 17/1/20 TFF - Xenobio network addition
+	network = list(NETWORK_XENOBIO)
 // ### Preset machines  ###
 
 
