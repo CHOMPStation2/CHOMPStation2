@@ -4,7 +4,7 @@
 	turning ordinary rooms into infernos, and causing malfunctions across the station. Approach with caution."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/subtypes/vore/solarmoth
+/mob/living/simple_mob/vore/solarmoth
 	name = "solarmoth"
 	desc = "A majestic sparkling solarmoth. Also a slight engineering hazard."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/solarmoth)
@@ -94,7 +94,7 @@
 		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
-/mob/living/simple_mob/subtypes/vore/solarmoth/Life()
+/mob/living/simple_mob/vore/solarmoth/Life()
 	. = ..()
 	if(icon_state != icon_dead) //I mean on death() Life() should disable but i guess doesnt hurt to make sure -shark
 		var/datum/gas_mixture/env = loc.return_air() //Gets all the information on the local air.
@@ -120,31 +120,31 @@
 	//Since I'm changing hyper mode to be variable we need to store old power
 	original_temp = heating_power //We remember our old goal, for use in non perpetual heating level increase
 
-/mob/living/simple_mob/subtypes/vore/solarmoth/proc/explode()
+/mob/living/simple_mob/vore/solarmoth/proc/explode()
 	src.anchored = 0
 	set_light(0)
 	if(empulse(src, emp_heavy, emp_med, emp_light, emp_long))
 		qdel(src)
 	return
 
-/mob/living/simple_mob/subtypes/vore/solarmoth/death()
+/mob/living/simple_mob/vore/solarmoth/death()
 	explode()
 	..()
 	
-/mob/living/simple_mob/subtypes/vore/solarmoth/gib() //This baby will explode no matter what you do to it.
+/mob/living/simple_mob/vore/solarmoth/gib() //This baby will explode no matter what you do to it.
 	explode()
 	..()
 	
 
 
-/mob/living/simple_mob/subtypes/vore/solarmoth/handle_light()
+/mob/living/simple_mob/vore/solarmoth/handle_light()
 	. = ..()
 	if(. == 0 && !is_dead())
 		set_light(9.5, 1, mycolour) //9.5 makes the brightness range super huge.
 		return 1
 
 
-/mob/living/simple_mob/subtypes/vore/solarmoth //active noms
+/mob/living/simple_mob/vore/solarmoth //active noms
 	vore_bump_chance = 50
 	vore_bump_emote = "applies minimal effort to try and slurp up"
 	vore_active = 1
@@ -152,7 +152,7 @@
 	vore_pounce_chance = 0 //moths only eat incapacitated targets. It's too lazy burning you to a crisp to try to pounce you
 	vore_default_mode = DM_DIGEST
 
-/mob/living/simple_mob/subtypes/vore/solarmoth/lunarmoth
+/mob/living/simple_mob/vore/solarmoth/lunarmoth
 	name = "lunarmoth"
 	desc = "A majestic sparkling lunarmoth. Also a slight engineering hazard."
 	
@@ -165,7 +165,7 @@
 	//light
 	mycolour = COLOR_WHITE
 
-/mob/living/simple_mob/subtypes/vore/solarmoth/lunarmoth/proc/chilltheglass() //Why does a coldfusion moth do this? science -shark
+/mob/living/simple_mob/vore/solarmoth/lunarmoth/proc/chilltheglass() //Why does a coldfusion moth do this? science -shark
 	nospampls = 1
 	if(prob(25))
 		for(var/obj/machinery/light/light in range(5, src))
@@ -185,7 +185,7 @@
 	spawn(100)
 		nospampls = 0
 
-/mob/living/simple_mob/subtypes/vore/solarmoth/lunarmoth/Life()
+/mob/living/simple_mob/vore/solarmoth/lunarmoth/Life()
 	..()
 	if(!nospampls)
 		chilltheglass() //shatter and broken calls for glass and lights. Also some special thing.
