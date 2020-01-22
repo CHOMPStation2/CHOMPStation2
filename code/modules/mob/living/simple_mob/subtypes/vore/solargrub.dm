@@ -55,6 +55,7 @@ var/global/list/moth_amount = 0
 	var/datum/powernet/PN            // Our powernet
 	var/obj/structure/cable/attached        // the attached cable
 	var/shock_chance = 10 // Beware
+	var/powerdraw = 100000 // previous value 150000
 
 /datum/say_list/solargrub
 	emote_see = list("squelches", "squishes")
@@ -77,7 +78,7 @@ var/global/list/moth_amount = 0
 				sparks.start()
 			anchored = 1
 			PN = attached.powernet
-			PN.draw_power(100000) // previous value 150000
+			PN.draw_power(powerdraw) // previous value 150000
 			charge = charge + (powerdraw/1000) //This adds raw powerdraw to charge(Charge is in Ks as in 1 = 1000)
 			var/apc_drain_rate = 750 //Going to see if grubs are better as a minimal bother. previous value : 4000
 			for(var/obj/machinery/power/terminal/T in PN.nodes)
@@ -98,6 +99,11 @@ var/global/list/moth_amount = 0
 			prey_excludes.Cut()
 			moth_amount++
 			death_star()
+
+/mob/living/simple_mob/vore/solargrub/proc/death_star()
+	visible_message("<span class='warning'>\The [src]'s shell rips open and evolves!</span>")
+	new adult_form(get_turf(src))
+	qdel(src)
 
 /mob/living/simple_mob/vore/solargrub //active noms
 	vore_bump_chance = 50
@@ -147,8 +153,3 @@ var/global/list/moth_amount = 0
 	holder.anchored = 0
 	holder.set_AI_busy(FALSE)
 	..()
-
-/mob/living/simple_mob/subtypes/vore/solargrub/proc/death_star()
-	visible_message("<span class='warning'>\The [src]'s shell rips open and evolves!</span>")
-	new adult_form(get_turf(src))
-	qdel(src)

@@ -8,7 +8,7 @@
 	name = "solarmoth"
 	desc = "A majestic sparkling solarmoth. Also a slight engineering hazard."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/solarmoth)
-	icon = 'icons/mob/vore.dmi' //all of these are placeholders
+	icon = 'icons/mob/solarmoth.dmi' //all of these are placeholders
 	icon_state = "solarmoth"
 	icon_living = "solarmoth"
 	icon_dead = "solarmoth-dead"
@@ -69,32 +69,30 @@
 /datum/say_list/solarmoth
 	emote_see = list("flutters")
 	
-/mob/living/simple_mob/subtypes/vore/solarmoth/PunchTarget()
-	//this does not require us to hit the target therefore its before we check it -shark
-	if(target_mob&& prob(emp_chance))
-		target_mob.emp_act(4) //The weakest strength of EMP
-		visible_message("<span class='danger'>The moth releases a powerful shock!</span>")
-	
-	
-	. = ..()
-	if(.) // Let's first check IF we even hit someone before injecting -shark
-		if(isliving(.))
-			var/mob/living/L = .
+/mob/living/simple_mob/vore/solarmoth/apply_melee_effects(var/atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		if(prob(shock_chance))
+			A.emp_act(4) //The weakest strength of EMP
+			playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
+			L.Weaken(4)
+			L.Stun(4)
+			L.stuttering = max(L.stuttering, 4)
+			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+			s.set_up(5, 1, L)
+			s.start()
+			visible_message("<span class='danger'>The moth releases a powerful shock!</span>")
+		else
 			if(L.reagents)
-				if(prob(poison_chance))
-					L << "<span class='warning'>You feel a shock rushing through your veins.</span>"
-					L.reagents.add_reagent(poison_type, poison_per_bite)
+				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
+				if(L.can_inject(src, null, target_zone))
+					inject_poison(L, target_zone)
 
-/* Why did we even have PunchTarget() defined twice, why does byond allow this, wot. -shark
-/mob/living/simple_mob/subtypes/vore/solarmoth/PunchTarget()
-	. = ..()
-	if(isliving(.))
-		var/mob/living/L = .
-		if(L.reagents)
-			if(prob(poison_chance))
-				L << "<span class='warning'>You feel a shock rushing through your veins.</span>"
-				L.reagents.add_reagent(poison_type, poison_per_bite)
-*/
+// Does actual poison injection, after all checks passed.
+/mob/living/simple_mob/vore/solarmoth/proc/inject_poison(mob/living/L, target_zone)
+	if(prob(poison_chance))
+		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
+		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/subtypes/vore/solarmoth/Life()
 	. = ..()
