@@ -29,7 +29,7 @@ var/global/list/moth_amount = 0
 
 	var/charge = null // CHOMPEDIT The amount of power we sucked off, in K as in THOUSANDS.
 	var/can_evolve = 1 // CHOMPEDIT VAR to decide whether this subspecies is allowed to become a queen
-	var/list/adult_forms = list(/mob/living/simple_mob/vore/solarmoth = 70, /mob/living/simple_mob/vore/solarmoth/lunarmoth=30)  // CHOMPEDIT VAR that decides what mob the queen form is. ex /mob/living/simple_mob/subtypes/vore/solarmoth
+	var/adult_form = pickweight(/mob/living/simple_mob/vore/solarmoth = 70, /mob/living/simple_mob/vore/solarmoth/lunarmoth=30)  // CHOMPEDIT VAR that decides what mob the queen form is. ex /mob/living/simple_mob/subtypes/vore/solarmoth
 
 	faction = "grubs"
 	maxHealth = 50 //grubs can take a lot of harm
@@ -102,7 +102,7 @@ var/global/list/moth_amount = 0
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
 	visible_message("<span class='warning'>\The [src]'s shell rips open and evolves!</span>")
-	new pickweight(adult_forms)(get_turf(src))
+	new adult_form(get_turf(src))
 	qdel(src)
 
 /mob/living/simple_mob/vore/solargrub //active noms
