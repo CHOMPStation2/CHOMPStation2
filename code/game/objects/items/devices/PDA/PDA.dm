@@ -34,7 +34,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	var/tnote[0]  //Current Texts
 	var/last_text //No text spamming
 	var/last_honk //Also no honk spamming that's bad too
-	var/ttone = "beep" //The PDA ringtone!
+	var/ringtone = "beep" //The PDA ringtone!
 	var/newstone = "beep, beep" //The news ringtone!
 	var/lock_code = "" // Lockcode to unlock uplink
 	var/honkamt = 0 //How many honks left when infected with honk.exe
@@ -107,25 +107,25 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/janitor
 	default_cartridge = /obj/item/weapon/cartridge/janitor
 	icon_state = "pda-j"
-	ttone = "slip"
+	ringtone = "slip"
 
 /obj/item/device/pda/science
 	default_cartridge = /obj/item/weapon/cartridge/signal/science
 	icon_state = "pda-tox"
-	ttone = "boom"
+	ringtone = "boom"
 
 /obj/item/device/pda/clown
 	default_cartridge = /obj/item/weapon/cartridge/clown
 	icon_state = "pda-clown"
 	desc = "A portable microcomputer by Thinktronic Systems, LTD. The surface is coated with polytetrafluoroethylene and banana drippings."
-	ttone = "honk"
+	ringtone = "honk"
 
 /obj/item/device/pda/mime
 	default_cartridge = /obj/item/weapon/cartridge/mime
 	icon_state = "pda-mime"
 	message_silent = 1
 	news_silent = 1
-	ttone = "silence"
+	ringtone = "silence"
 	newstone = "silence"
 
 /obj/item/device/pda/heads
@@ -187,12 +187,12 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/chaplain
 	default_cartridge = /obj/item/weapon/cartridge/service
 	icon_state = "pda-holy"
-	ttone = "holy"
+	ringtone = "holy"
 
 /obj/item/device/pda/lawyer
 	default_cartridge = /obj/item/weapon/cartridge/lawyer
 	icon_state = "pda-lawyer"
-	ttone = "..."
+	ringtone = "..."
 
 /obj/item/device/pda/botanist
 	default_cartridge = /obj/item/weapon/cartridge/service
@@ -239,7 +239,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 // Special AI/pAI PDAs that cannot explode.
 /obj/item/device/pda/ai
 	icon_state = "NONE"
-	ttone = "data"
+	ringtone = "data"
 	newstone = "news"
 	detonate = 0
 
@@ -318,14 +318,14 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 
 /obj/item/device/pda/ai/pai
-	ttone = "assist"
+	ringtone = "assist"
 
 
 // Used for the PDA multicaster, which mirrors messages sent to it to a specific department,
 /obj/item/device/pda/multicaster
 	ownjob = "Relay"
 	icon_state = "NONE"
-	ttone = "data"
+	ringtone = "data"
 	detonate = 0
 	news_silent = 1
 	var/list/cartridges_to_send_to = list()
@@ -794,25 +794,20 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				mode=2
 
 		if("Ringtone")
-			var/t = input(U, "Please enter new ringtone", name, ttone) as text
-			if (in_range(src, U) && loc == U)
-				if (t)
-					if(src.hidden_uplink && hidden_uplink.check_trigger(U, lowertext(t), lowertext(lock_code)))
-						to_chat(U, "The PDA softly beeps.")
-						ui.close()
-					else
-						t = sanitize(t, 20)
-						ttone = t
+			var/t = input(U, "Please enter a new ringtone.", name, ringtone) as text //Start of YW EDIT
+			if (in_range(src, U) && loc == U && t)
+				if(src.hidden_uplink && hidden_uplink.check_trigger(U, lowertext(t), lowertext(lock_code)))
+					to_chat(U, "The PDA softly beeps.")
+					ui.close()
+				else
+					ringtone = sanitize(t, 20) //End of YW EDIT
 			else
 				ui.close()
 				return 0
 		if("Newstone")
 			var/t = input(U, "Please enter new news tone", name, newstone) as text
-			if (in_range(src, U) && loc == U)
-				if (t)
-					t = sanitize(t, 20)
-					newstone = t
-			else
+			if (in_range(src, U) && loc == U && t)
+				newstone = sanitize(t, 20)
 				ui.close()
 				return 0
 		if("Message")
@@ -858,7 +853,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 						U.show_message("<span class='notice'>Virus sent!</span>", 1)
 						P.message_silent = 1
 						P.news_silent = 1
-						P.ttone = "silence"
+						P.ringtone = "silence"
 						P.newstone = "silence"
 				else
 					to_chat(U, "PDA not found.")
@@ -1145,7 +1140,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/proc/new_message(var/sending_unit, var/sender, var/sender_job, var/message, var/reply = 1)
 	var/reception_message = "\icon[src] <b>Message from [sender] ([sender_job]), </b>\"[message]\" ([reply ? "<a href='byond://?src=\ref[src];choice=Message;notap=[istype(loc, /mob/living/silicon)];skiprefresh=1;target=\ref[sending_unit]'>Reply</a>" : "Unable to Reply"])"
-	new_info(message_silent, ttone, reception_message)
+	new_info(message_silent, ringtone, reception_message)
 
 	log_pda("(PDA: [sending_unit]) sent \"[message]\" to [name]", usr)
 	new_message = 1
