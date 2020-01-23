@@ -127,7 +127,7 @@ datum/preferences
 	var/communicator_visibility = 0
 
 	// Default ringtone for character; if blank, use job default. YW EDIT
-	var/ringtone = null
+	var/ttone = null
 
 	var/datum/category_collection/player_setup_collection/player_setup
 	var/datum/browser/panel
