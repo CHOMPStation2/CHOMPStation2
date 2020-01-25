@@ -16,7 +16,7 @@
 
 /datum/event/radiation_storm/tick()
 	if(activeFor == enterBelt)
-		command_announcement.Announce("The outpost has entered the radiation flare. Please remain in a sheltered area until the radiation flare has past.", "Anomaly Alert")
+		command_announcement.Announce("The outpost has entered the radiation flare. Please remain in a sheltered area until the radiation flare has passed.", "Anomaly Alert")
 		radiate()
 
 	if(activeFor >= enterBelt && activeFor <= leaveBelt)

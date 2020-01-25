@@ -26,7 +26,7 @@
 	//YW EDIT 1/13/2020 - Virgo3b -> Cryogaia
 	switch(rng)
 		if(1)
-			msg = "A Prototype combat drone wing operating in close orbit above Borealis 1 has failed to return from a anti-piracy sweep.  If any have survived re-entry. \
+			msg = "A prototype combat drone wing operating in close orbit above Borealis 1 has failed to return from a anti-piracy sweep.  If any have survived re-entry. \
 			approach with caution."
 		if(2)
 			msg = "Contact has been lost with a combat drone wing in Borealis 1 orbit.  If any survived re-entry, approach with \
