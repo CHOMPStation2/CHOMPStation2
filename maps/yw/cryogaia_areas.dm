@@ -18,6 +18,10 @@
 	icon_state = "outside1"
 	sound_env = MOUNTAINS
 
+/area/crew_quarters/meeting
+	name = "\improper Public Conference"
+	icon_state = "courtroom"
+
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
 
