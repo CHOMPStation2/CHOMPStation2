@@ -365,6 +365,12 @@
 /area/medical/pyschwarde
 	name = "\improper Psychiatric lockup"
 	icon_state = "medbay2"
+/area/medical/triage
+	name = "\improper Medbay Triage"
+	icon_state = "medbay4"
+/area/medical/scanning
+	name = "Medical Diagnostics Center"
+	icon_state = "medbay"
 
 
 //Science outpost

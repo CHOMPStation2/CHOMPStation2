@@ -332,6 +332,16 @@ var/global/list/latejoin_tram   = list()
 
 	return ..(user)
 
+/obj/machinery/door/airlock/highsecurity/red
+	name = "Bridge Holdout Armory"
+	desc =  "Only to be opened on Code red or greater."
+
+/obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
+	if(get_security_level() in list("green","blue"))
+		return FALSE
+
+	return ..(user)
+
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
 	maxhealth = 600
