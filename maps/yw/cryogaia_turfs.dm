@@ -21,6 +21,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/gravsnow)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/plating)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/snow/plating/drift)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/plating/snow/plating)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/cryogaia)
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 /turf/simulated/floor/outdoors/grass/cryogaia

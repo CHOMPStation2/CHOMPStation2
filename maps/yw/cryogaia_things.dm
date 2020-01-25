@@ -332,6 +332,16 @@ var/global/list/latejoin_tram   = list()
 
 	return ..(user)
 
+/obj/machinery/door/airlock/highsecurity/red
+	name = "Bridge Holdout Armory"
+	desc =  "Only to be opened on Code red or greater."
+
+/obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
+	if(get_security_level() in list("green","blue"))
+		return FALSE
+
+	return ..(user)
+
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
 	maxhealth = 600
@@ -603,7 +613,7 @@ var/global/list/latejoin_tram   = list()
 // Icy crystals.
 /datum/category_item/catalogue/material/trail_blazer
 	name = "Ice Colony Equipment - Trailblazer"
-	desc = "This is a glowing stick embedded int he ground with a light on top, commonly used in snowy installations \
+	desc = "This is a glowing stick embedded in the ground with a light on top, commonly used in snowy installations \
 	and in tundra conditions."
 	value = CATALOGUER_REWARD_EASY
 
