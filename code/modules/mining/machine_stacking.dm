@@ -131,6 +131,7 @@
 			stack_storage[sheet] -= stack_amt
 			S.update_icon()
 
-	console.updateUsrDialog()
+	if(console)
+		console.updateUsrDialog()
 	return
 
