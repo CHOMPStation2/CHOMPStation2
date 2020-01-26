@@ -138,6 +138,9 @@
 		/area/storage/auxillary,
 		/area/vacant/vacant_site/locker,
 		/area/tcommsat/powercontrol
+		/area/constructionsite/medical
+	name = "\improper Construction Site Medbay"
+	icon_state = "medbay"
 		)
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
