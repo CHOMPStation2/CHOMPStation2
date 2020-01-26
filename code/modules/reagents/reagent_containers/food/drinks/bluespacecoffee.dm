@@ -5,7 +5,7 @@
 	icon_state = "bluespace_coffee"
 	center_of_mass = list("x"=15, "y"=10)
 	volume = 50
-	New()
+	Initialize()
 		..()
 		reagents.add_reagent("coffee", 50)
 

@@ -18,6 +18,10 @@
 	icon_state = "outside1"
 	sound_env = MOUNTAINS
 
+/area/crew_quarters/meeting
+	name = "\improper Public Conference"
+	icon_state = "courtroom"
+
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
 
@@ -365,6 +369,12 @@
 /area/medical/pyschwarde
 	name = "\improper Psychiatric lockup"
 	icon_state = "medbay2"
+/area/medical/triage
+	name = "\improper Medbay Triage"
+	icon_state = "medbay4"
+/area/medical/scanning
+	name = "Medical Diagnostics Center"
+	icon_state = "medbay"
 
 
 //Science outpost

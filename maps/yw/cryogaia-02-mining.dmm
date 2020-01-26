@@ -1940,7 +1940,7 @@
 "Lp" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 8},/obj/structure/cable/blue{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/wood,/area/outpost/mining_main/break_room)
 "Lq" = (/obj/structure/table/standard,/obj/machinery/microwave{pixel_y = 6},/turf/simulated/floor/tiled/dark,/area/outpost/mining_main/break_room)
 "Lr" = (/obj/structure/table/standard,/obj/item/bodybag/cryobag,/obj/effect/floor_decal/corner/paleblue/full{dir = 8},/obj/machinery/status_display{layer = 4; pixel_x = 0; pixel_y = 32},/turf/simulated/floor/tiled/white,/area/outpost/mining_main/medbay)
-"Ls" = (/obj/structure/table/standard,/obj/item/roller{pixel_x = 2; pixel_y = 3},/obj/item/roller,/obj/machinery/alarm{frequency = 1441; pixel_y = 22},/turf/simulated/floor/tiled/white,/area/outpost/mining_main/medbay)
+"Ls" = (/obj/structure/table/standard,/obj/item/roller{pixel_x = 2; pixel_y = 3},/obj/item/roller,/obj/machinery/alarm{frequency = 1441; pixel_y = 22},/obj/item/device/radio/phone/medbay,/turf/simulated/floor/tiled/white,/area/outpost/mining_main/medbay)
 "Lt" = (/obj/machinery/sleeper{dir = 8},/turf/simulated/floor/tiled/white,/area/outpost/mining_main/medbay)
 "Lu" = (/obj/machinery/sleep_console,/turf/simulated/floor/tiled/white,/area/outpost/mining_main/medbay)
 "Lv" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/obj/machinery/camera/network/mining{c_tag = "OPM - Mining Hallway Mid"; dir = 4},/turf/simulated/floor/tiled,/area/outpost/mining_main/south_hall)
