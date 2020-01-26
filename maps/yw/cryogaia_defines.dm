@@ -137,8 +137,8 @@
 		/area/borealis2/elevator/medbay,
 		/area/storage/auxillary,
 		/area/vacant/vacant_site/locker,
-		/area/tcommsat/powercontrol
-		)
+		/area/tcommsat/powercontrol,
+		/area/constructionsite/medical)
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)
