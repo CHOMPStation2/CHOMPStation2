@@ -30,6 +30,7 @@
 		new /datum/data/mining_equipment("Injector (L) - Glucose",/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,	50),
 		new /datum/data/mining_equipment("Injector (L) - Panacea",/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/purity,	50),
 		new /datum/data/mining_equipment("Injector (L) - Trauma",/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/brute,	50),
+		new /datum/data/mining_equipment("Injector (L) - Clotting",/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,	80),
 		new /datum/data/mining_equipment("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,	50),
 		new /datum/data/mining_equipment("Digital Tablet - Advanced",	/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,	100),
 		new /datum/data/mining_equipment("Nanopaste Tube",				/obj/item/stack/nanopaste,											100),
@@ -49,7 +50,7 @@
 		new /datum/data/mining_equipment("Durasteel Fishing Rod",		/obj/item/weapon/material/fishing_rod/modern/strong,				750),
 		new /datum/data/mining_equipment("Bar Shelter Capsule",		/obj/item/device/survivalcapsule/luxurybar,							1000)
 		)
-		//VOREStation Edit End
+		//VOREStation Edit End //CHOMPedit: Adds "Injector (L) - Clotting" to the list
 
 /obj/machinery/mineral/equipment_vendor/survey/interact(mob/user)
 	user.set_machine(src)
