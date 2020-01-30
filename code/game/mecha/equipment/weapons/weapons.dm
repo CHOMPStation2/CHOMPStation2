@@ -58,8 +58,8 @@
 	var/target_for_log
 	if(ismob(target))
 		target_for_log = target
-	else
-		target_for_log = "[target.name]"
+//	else
+//		target_for_log = "[target.name]" //CHOMPedit, fixes mecha weapon lock on mob kill. Not sure why this works. Hope this doesn't cause issues later.
 
 	add_attack_logs(chassis.occupant,target_for_log,"Fired exosuit weapon [src.name] (MANUAL)")
 
