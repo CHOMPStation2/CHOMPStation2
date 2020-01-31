@@ -979,6 +979,11 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/crew_quarters/heads/sc/bs
 	name = "\improper Command - Secretary Quarters"
 
+//CHOMPStation Addition TFF 22/1/20 - Sauna
+/area/crew_quarters/sauna
+	name = "\improper Sauna"
+	icon_state = "pool"
+
 /area/hallway/primary/thirddeck/central
 	name = "\improper Third Deck Port Hallway"
 	icon_state = "hallC"
