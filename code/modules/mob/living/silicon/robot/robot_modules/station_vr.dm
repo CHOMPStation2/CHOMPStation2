@@ -713,10 +713,6 @@
 	src.modules += B
 */
 
-	var/obj/item/stack/material/cyborg/plasteel/PS = new (src)
-	PS.synths = list(plasteel)
-	src.modules += PS
-
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
