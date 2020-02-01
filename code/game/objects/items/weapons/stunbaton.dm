@@ -178,7 +178,7 @@
 		var/mob/living/carbon/human/H = target
 		affecting = H.get_organ(hit_zone)
 
-	if( user.a_intent == I_GRAB || user.a_intent == I_HURT ) // YW Edit
+	if(user.a_intent == I_GRAB || user.a_intent == I_HURT) // YW Edit
 		. = ..()
 		//whacking someone causes a much poorer electrical contact than deliberately prodding them.
 		agony *= 0.5
