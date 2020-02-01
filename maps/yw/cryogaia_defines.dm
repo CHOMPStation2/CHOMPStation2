@@ -33,13 +33,10 @@
 	lobby_screens = list("cryogaia")
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
-/*	holomap_smoosh = list(list(
-		Z_LEVEL_SURFACE_LOW,
-		Z_LEVEL_SURFACE_MID,
-		Z_LEVEL_SURFACE_HIGH,
-		Z_LEVEL_SPACE_LOW,
-		Z_LEVEL_SPACE_MID,
-		Z_LEVEL_SPACE_HIGH)) */
+	holomap_smoosh = list(list(
+		Z_LEVEL_CRYOGAIA_MINE,
+		Z_LEVEL_CRYOGAIA_LOWER,
+		Z_LEVEL_CRYOGAIA_MAIN)) 
 
 	station_name  = "Cryogaia Outpost"
 	station_short = "Yawn Wider"
@@ -137,8 +134,8 @@
 		/area/borealis2/elevator/medbay,
 		/area/storage/auxillary,
 		/area/vacant/vacant_site/locker,
-		/area/tcommsat/powercontrol
-		)
+		/area/tcommsat/powercontrol,
+		/area/constructionsite/medical)
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)
@@ -206,6 +203,10 @@
 
 
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
+#define CRYOGAIA_MAP_SIZE 150 // Width and height of compiled in Southern Cross z levels.
+#define CRYOGAIA_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
+#define CRYOGAIA_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*CRYOGAIA_MAP_SIZE) - CRYOGAIA_HOLOMAP_CENTER_GUTTER) / 2) // 100
+#define CRYOGAIA_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*CRYOGAIA_MAP_SIZE)) / 2) // 60
 
 // We have a bunch of stuff common to the station z levels
 
@@ -214,25 +215,36 @@
 	name = "Subterranian depths"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/indoorrocks
+	holomap_legend_x = 220
+	holomap_legend_y = 160
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*0
 
 /datum/map_z_level/cryogaia/transit
 	z = Z_LEVEL_CRYOGAIA_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
+
 /datum/map_z_level/cryogaia/lower
 	name = "Subfloor"
 	z = Z_LEVEL_CRYOGAIA_LOWER
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/open // /turf/simulated/floor/outdoors/rocks/cryogaia
+	holomap_legend_x = 220
+	holomap_legend_y = 160
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*1
 
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN
 	name = "Surface level"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/open
-/*	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
-	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0 */
+	holomap_legend_x = 220
+	holomap_legend_y = 160
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*2
 
 /datum/map_z_level/cryogaia/centcom
 	z = Z_LEVEL_CRYOGAIA_CENTCOM

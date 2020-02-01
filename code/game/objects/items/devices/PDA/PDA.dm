@@ -802,25 +802,20 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				mode=2
 
 		if("Ringtone")
-			var/t = input(U, "Please enter new ringtone", name, ttone) as text
-			if (in_range(src, U) && loc == U)
-				if (t)
-					if(src.hidden_uplink && hidden_uplink.check_trigger(U, lowertext(t), lowertext(lock_code)))
-						to_chat(U, "The PDA softly beeps.")
-						ui.close()
-					else
-						t = sanitize(t, 20)
-						ttone = t
+			var/t = input(U, "Please enter a new ringtone.", name, ttone) as text //Start of YW EDIT
+			if (in_range(src, U) && loc == U && t)
+				if(src.hidden_uplink && hidden_uplink.check_trigger(U, lowertext(t), lowertext(lock_code)))
+					to_chat(U, "The PDA softly beeps.")
+					ui.close()
+				else
+					ttone = sanitize(t, 20) //End of YW EDIT
 			else
 				ui.close()
 				return 0
 		if("Newstone")
 			var/t = input(U, "Please enter new news tone", name, newstone) as text
-			if (in_range(src, U) && loc == U)
-				if (t)
-					t = sanitize(t, 20)
-					newstone = t
-			else
+			if (in_range(src, U) && loc == U && t)
+				newstone = sanitize(t, 20)
 				ui.close()
 				return 0
 		if("Message")
