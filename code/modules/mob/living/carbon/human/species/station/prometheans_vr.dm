@@ -3,6 +3,7 @@
 	max_age = 80
 	push_flags = ~HEAVY
 	swap_flags = ~HEAVY
+	//water_damage_mod = 0		YW Edit
 	gluttonous = 0
 	valid_transform_species = list(
 		"Human", "Unathi", "Tajara", "Skrell",
