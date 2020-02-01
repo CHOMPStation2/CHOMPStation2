@@ -68,6 +68,14 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if(..(user, 1))
 		to_chat(user, "The time [stationtime2text()] is displayed in the corner of the screen.")
 
+/obj/item/device/pda/CtrlClick()
+	if(issilicon(usr))
+		return
+	
+	if(can_use(usr))
+		remove_pen()
+		return
+	..()
 
 /obj/item/device/pda/AltClick()
 	if(issilicon(usr))
@@ -1038,6 +1046,19 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			id.loc = get_turf(src)
 		id = null
 
+/obj/item/device/pda/proc/remove_pen()
+	var/obj/item/weapon/pen/O = locate() in src
+	if(O)
+		if(istype(loc, /mob))
+			var/mob/M = loc
+			if(M.get_active_hand() == null)
+				M.put_in_hands(O)
+				to_chat(usr, "<span class='notice'>You remove \the [O] from \the [src].</span>")
+				return
+		O.loc = get_turf(src)
+	else
+		to_chat(usr, "<span class='notice'>This PDA does not have a pen in it.</span>")
+
 /obj/item/device/pda/proc/create_message(var/mob/living/U = usr, var/obj/item/device/pda/P, var/tap = 1)
 	if(tap)
 		U.visible_message("<span class='notice'>\The [U] taps on their PDA's screen.</span>")
@@ -1198,17 +1219,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		return
 
 	if ( can_use(usr) )
-		var/obj/item/weapon/pen/O = locate() in src
-		if(O)
-			if (istype(loc, /mob))
-				var/mob/M = loc
-				if(M.get_active_hand() == null)
-					M.put_in_hands(O)
-					to_chat(usr, "<span class='notice'>You remove \the [O] from \the [src].</span>")
-					return
-			O.loc = get_turf(src)
-		else
-			to_chat(usr, "<span class='notice'>This PDA does not have a pen in it.</span>")
+		remove_pen()
 	else
 		to_chat(usr, "<span class='notice'>You cannot do this while restrained.</span>")
 

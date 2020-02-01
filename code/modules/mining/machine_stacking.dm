@@ -130,7 +130,7 @@
 			S.amount = stack_amt
 			stack_storage[sheet] -= stack_amt
 			S.update_icon()
-
+	
 	if(console)
 		console.updateUsrDialog()
 	return
