@@ -163,3 +163,15 @@
 // Step trigger to fall down to planet Sif
 /obj/effect/step_trigger/teleporter/planetary_fall/sif/find_planet()
 	planet = planet_sif
+
+//CHOMPedit: Attempt to make Sif snow work properly, it was broken by YW edits.
+/turf/simulated/floor/outdoors/snow/sif/planetuse
+	name = "snow"
+	icon_state = "snow"
+	edge_blending_priority = 6
+	movement_cost = 2
+	initial_flooring = /decl/flooring/snow
+	turf_layers = list(
+		/turf/simulated/floor/outdoors/rocks,
+		/turf/simulated/floor/outdoors/dirt
+		)
