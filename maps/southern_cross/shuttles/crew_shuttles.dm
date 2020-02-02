@@ -98,13 +98,13 @@
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle1/outside_SC = 0,
 	)
-/*
+/*//Chompstation Removal
 /datum/shuttle_destination/shuttle1/root/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar One."
 
 /datum/shuttle_destination/shuttle1/root/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar One."
-*/
+*///Chompstation Removal
 /datum/shuttle_destination/shuttle2/root
 	name = "Southern Cross Hangar Two"
 	my_area = /area/shuttle/shuttle2/start
@@ -117,13 +117,13 @@
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle2/outside_SC = 0,
 	)
-/*
+/*//Chompstation Removal
 /datum/shuttle_destination/shuttle2/root/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Two."
 
 /datum/shuttle_destination/shuttle2/root/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Two."
-*/
+*///Chompstation Removal
 
 /datum/shuttle_destination/shuttle1/outside_SC
 	name = "Outside of NLS Southern Cross"
@@ -226,13 +226,13 @@
 	dock_target = "surface_dock_1"
 	radio_announce = 1
 	announcer = "Outpost Automated ATC"
-/*
+/*//Chompstation Removal
 /datum/shuttle_destination/shuttle1/main_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Main Outpost."
 
 /datum/shuttle_destination/shuttle1/main_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Main Outpost."
-*/
+*///Chompstation Removal
 /datum/shuttle_destination/shuttle2/main_base
 	name = "Main Outpost"
 	my_area = /area/shuttle/shuttle2/planet
@@ -241,13 +241,13 @@
 	dock_target = "surface_dock_2"
 	radio_announce = 1
 	announcer = "Outpost Automated ATC"
-/*
+/*//Chompstation Removal
 /datum/shuttle_destination/shuttle2/main_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Main Outpost."
 
 /datum/shuttle_destination/shuttle2/main_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Main Outpost."
-*/
+*///Chompstation Removal
 
 /datum/shuttle_destination/shuttle1/mining_base
 	name = "Wilderness Landing Site"
