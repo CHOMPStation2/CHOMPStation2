@@ -58,4 +58,8 @@
 
 	var/global/obj/screen/click_catcher/void
 
+<<<<<<< HEAD
 	control_freak = CONTROL_FREAK_ALL | CONTROL_FREAK_SKIN | CONTROL_FREAK_MACROS //CHOMPedit KSC 1/30/20 - This enables Admins to use Macros and change use custom skins. add Ksc 1/30/20 - This enables Players to use Macros and change use custom skins.
+=======
+	control_freak = CONTROL_FREAK_ALL | CONTROL_FREAK_SKIN | CONTROL_FREAK_MACROS //CH add Ksc 1/30/20 - This enables Players to use Macros and change use custom skins.
+>>>>>>> MacroFix
