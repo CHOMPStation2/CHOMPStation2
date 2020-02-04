@@ -372,11 +372,7 @@ var/list/admin_verbs_event_manager = list(
 
 /client/proc/add_admin_verbs()
 	if(holder)
-<<<<<<< HEAD
 		control_freak = CONTROL_FREAK_ALL | CONTROL_FREAK_SKIN | CONTROL_FREAK_MACROS  //CHOMPedit KSC 1/30/20 - This enables Admins to use Macros and change use custom skins.
-=======
-		control_freak = CONTROL_FREAK_ALL | CONTROL_FREAK_SKIN | CONTROL_FREAK_MACROS  ////CM add Ksc 1/30/20 - This enables Admins to use Macros and change use custom skins.
->>>>>>> MacroFix
 		verbs += admin_verbs_default
 		if(holder.rights & R_BUILDMODE)		verbs += /client/proc/togglebuildmodeself
 		if(holder.rights & R_ADMIN)			verbs += admin_verbs_admin
