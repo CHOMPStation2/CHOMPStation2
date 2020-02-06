@@ -11,6 +11,7 @@
 #define Z_LEVEL_TRANSIT					9
 #define Z_LEVEL_SURFACE_WILD			10
 #define Z_LEVEL_BELT					11
+#define Z_LEVEL_GATEWAY					12
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -92,12 +93,9 @@
 			)
 
 	lateload_single_pick = list(
-		//list("Snow Outpost"),		// Unplayable mapgen,
-		//list("Zoo"),				// Too big. way, way too big
 		list("Carp Farm"),
-		list("Snow Field"),
-		list("Listening Post")
-		)
+		list("Snow Field")
+		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
 	lateload_single_pick = null
 

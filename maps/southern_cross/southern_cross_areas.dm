@@ -1730,6 +1730,14 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Exploration Carrier Secure Storage"
 	icon_state = "nuke_storage"
 
+/area/expoutpost/teleporter
+	name = "\improper Exploration Carrier Teleporter"
+	icon_state = "teleporter"
+
+/area/expoutpost/gateway
+	name = "\improper Exploration Carrier Gateway"
+	icon_state = "teleporter"
+
 /area/expoutpost/displayroom
 	name = "\improper Exploration Carrier Display Room"
 
