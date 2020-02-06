@@ -6,5 +6,5 @@
 /obj/item/weapon/circuitboard/security/xenobio
 	name = T_BOARD("xenobiology camera monitor")
 	build_path = /obj/machinery/computer/security/xenobio
-	network = list(NETWORK_XENOBIO)
+	network = list("Xenobiology")
 	req_access = list()

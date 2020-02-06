@@ -32,22 +32,6 @@ var/const/NETWORK_XENOBIO = "Xenobiology"	//CHOMPStation Edit 17/1/20 TFF - Xeno
 	network = list(NETWORK_XENOBIO)
 // ### Preset machines  ###
 
-//CHOMPStation Edit Start 6/2/20 TFF - Add to presets rather than having camera_ch or computer_ch. Hopefully fixes Travis' screeching.
-/obj/item/weapon/circuitboard/security/xenobio
-	name = T_BOARD("xenobiology camera monitor")
-	build_path = /obj/machinery/computer/security/xenobio
-	network = list(NETWORK_XENOBIO)
-	req_access = list()
-
-/obj/machinery/computer/security/xenobio
-	name = "xenobiology camera monitor"
-	desc = "Used to access the xenobiology cell cameras."
-	icon_keyboard = "mining_key"
-	icon_screen = "mining"
-	network = list(NETWORK_XENOBIO)
-	circuit = /obj/item/weapon/circuitboard/security/xenobio
-	light_color = "#F9BBFC"
-//CHOMPStation Edit End
 
 // #### Relays ####
 // Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
