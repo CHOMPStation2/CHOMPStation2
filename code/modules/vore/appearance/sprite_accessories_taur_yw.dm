@@ -18,7 +18,7 @@
 	icon_state = "wolf2_s"
 
 /datum/sprite_accessory/tail/taur/wolf/husky/wolf_2fat
-	name = "Fat Wolf (Taur)"
+	name = "Fat WolfTG (Taur)"
 	icon_state = "wolf2f_s"
 
 /datum/sprite_accessory/tail/taur/long_lizard
