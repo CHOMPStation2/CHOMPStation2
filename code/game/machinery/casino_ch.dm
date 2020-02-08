@@ -95,7 +95,7 @@
 		if(paid)
 			return
 		if(handled)
-			/*nanomanager.update_uis(src)*/ //not currently functioning on this code, fix in future - Jack
+			SSnanoui.update_uis(src)
 			return // don't smack that machine with your 2 chips
 
 /obj/machinery/slot_machine/proc/insert_chip(var/obj/item/weapon/spacecasinocash/cashmoney, mob/user)
@@ -293,14 +293,14 @@
 		"water", "ice", "coffee", "cream", "tea", "icetea", "cola", "spacemountainwind", "dr_gibb", "space_up", "tonic",
 		"sodawater", "lemon_lime", "sugar", "orangejuice", "limejuice", "watermelonjuice", "thirteenloko", "grapesoda",
 		"coffee", "cafe_latte", "soy_latte", "hot_coco", "milk", "cream", "tea", "ice", "orangejuice", "lemonjuice",
-		"limejuice", "berryjuice", "mint", "matcha_latte", "lemon_lime", "sugar", "orangejuice", "limejuice", "sodawater",
+		"limejuice", "berryjuice", "mint", "lemon_lime", "sugar", "orangejuice", "limejuice", "sodawater",
 		"tonic", "beer", "kahlua", "whiskey", "wine", "vodka", "gin", "rum", "tequilla", "vermouth", "cognac",
 		"ale", "mead", "bitters", "champagne", "singulo", "doctorsdelight", "nothing", "banana", "honey", "egg",
 		"coco", "cherryjelly", "carrot", "apple", "tomato", "nutbutter", "soymilk", "grenadine", "gingerale", "royrogers",
 		"patron", "goldschlager", "gelatin", "melonliquor", "bluecuracao", "thirteenloko", "deadrum", "sake", "acidspit",
 		"amasec", "beepsky_smash", "atomicbomb", "nuka_cola", "threemileisland", "manhattan_proj", "psilocybin", "moonshine",
 		"specialwhiskey", "unathiliquor", "winebrandy", "snaps"
-		)
+		) // Re-add matcha latte once its in code, probably add more stuff to list as well
 
 /obj/machinery/chemical_dispenser/deluxe/full
 	spawn_cartridges = list(
@@ -367,14 +367,14 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/carrot,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/apple,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tomato,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/nutbutter,
+			/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/nutbutter,*/ //Not ported yet - Jack
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/soymilk,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/grenadine,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/gingerale,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/royrogers,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/patron,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/goldschlager,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,
+			/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,*/ //Not ported yet - Jack
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/melonliquor,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/bluecuracao,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/thirteenloko,
@@ -434,7 +434,7 @@
 	C.loc = src
 	cartridges[C.label] = C
 	cartridges = sortAssoc(cartridges)
-	/*nanomanager.update_uis(src)*/ //not currently functioning on this code, fix in future - Jack
+	SSnanoui.update_uis(src)
 
 /obj/machinery/chemical_dispenser/deluxe/attackby(obj/item/weapon/W, mob/user)
 	if(W.is_wrench())
@@ -480,7 +480,7 @@
 		user.drop_from_inventory(RC)
 		RC.loc = src
 		user << "<span class='notice'>You set \the [RC] on \the [src].</span>"
-		/*nanomanager.update_uis(src)*/ //not currently functioning on this code, fix in future - Jack // update all UIs attached to src
+		SSnanoui.update_uis(src)
 
 	else
 		return ..()
@@ -523,7 +523,7 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing = 10,
-					/*/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps = 10,*/ //Snaps not ported yet - Jack
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 50,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer = 50,
@@ -770,7 +770,7 @@
 				</ul>
 				Accessories
 				<ul>
-					<li>The monocoole 500</li>
+					<li>The monocoole 1000</li>
 					<li>chameleon black tie 300</li>
 				</ul>
 				Masks and hats - EVERYTHING IS 50 except chameleon!
