@@ -31,6 +31,14 @@
 	build_path = /obj/item/weapon/tool/crowbar/power
 	sort_string = "NAAAC"
 
+/datum/design/item/tool/rpd
+	name = "Rapid Piping Device (RPD)"
+	desc = "A device used to rapidly pipe things."
+	id = "RPD"
+	req_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2, TECH_BLUESPACE = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 300, "silver" = 100, "diamond" = 500)
+	build_path = /obj/item/weapon/pipe_dispenser
+	sort_string = "NAAAB"
 // Other devices
 
 /datum/design/item/engineering/AssembleDesignName()
