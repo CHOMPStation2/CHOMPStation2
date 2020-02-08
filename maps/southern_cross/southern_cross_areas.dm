@@ -1653,11 +1653,11 @@ area/crew_quarters/heads/sc/hop/quarters
 //CHOMPedit: Exploration outpost ferry shuttle
 
 /area/shuttle/expoutpost/site
-	name = "\improper Exploration Elevator"
+	name = "\improper Exploration Sling"
 	icon_state = "shuttle2"
 
 /area/shuttle/expoutpost/station
-	name = "\improper Exploration Elevator"
+	name = "\improper Exploration Sling"
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced/airless
 
