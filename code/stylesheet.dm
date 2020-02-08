@@ -109,7 +109,7 @@ h1.alert, h2.alert		{color: #000000;}
 .say_quote				{font-family: Georgia, Verdana, sans-serif;}
 .terminus				{font-family: "Times New Roman", Times, serif, sans-serif}
 .interface				{color: #330033;}
-.psionic                {color: #993399;}
+.psionic                {color: #993399;}    /*YWedit*/
 
 BIG IMG.icon 			{width: 32px; height: 32px;}
 
