@@ -43,6 +43,7 @@
 	#include "southern_cross-6.dmm"
 	#include "southern_cross-7.dmm"
 	#include "southern_cross-8.dmm"
+	#include "southern_cross-10.dmm"
 
 	#include "submaps/_southern_cross_submaps.dm"
 
