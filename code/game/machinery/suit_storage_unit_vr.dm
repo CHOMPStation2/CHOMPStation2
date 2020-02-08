@@ -16,7 +16,7 @@
 		SPECIES_XENOHYBRID,
 		SPECIES_ZORREN_FLAT,
 		SPECIES_ZORREN_HIGH,
-		SPECIES_GREY_YW //ywedit
+		SPECIES_GREY_YW /*ywedit*/
 	)
 
 // Old Exploration is too WIP to use right now

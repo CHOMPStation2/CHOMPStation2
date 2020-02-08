@@ -117,5 +117,5 @@
 		SPECIES_TESHARI = 'icons/mob/species/seromi/eyes.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/eyes.dmi',
 		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/eyes.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'//ywedit
+		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
 		)

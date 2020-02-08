@@ -115,7 +115,7 @@
 		SPECIES_VULPKANIN 	= 'icons/mob/species/vulpkanin/mask.dmi',
 		SPECIES_XENOCHIMERA	= 'icons/mob/species/tajaran/mask_vr.dmi',
 		SPECIES_WEREBEAST	= 'icons/mob/species/werebeast/masks.dmi',
-		SPECIES_GREY_YW     = 'icons/mob/species/grey/mask.dmi'//ywedit
+		SPECIES_GREY_YW     = 'icons/mob/species/grey/mask.dmi'/*ywedit*/
 		)
 //"Spider" 		= 'icons/mob/species/spider/mask_vr.dmi' Add this later when they have custom mask sprites and everything.
 
@@ -162,7 +162,7 @@
 		SPECIES_TESHARI = 'icons/mob/species/seromi/uniform.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi',
 		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/uniform.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/uniform.dmi'//ywedit
+		SPECIES_GREY_YW = 'icons/mob/species/grey/uniform.dmi'/*ywedit*/
 		)
 
 //TFF 5/8/19 - define numbers and specifics for suit sensor settings

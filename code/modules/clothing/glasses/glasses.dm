@@ -32,7 +32,7 @@ BLIND     // can't see anything
 		"Teshari" = 'icons/mob/species/seromi/eyes.dmi',
 		"Vox" = 'icons/mob/species/vox/eyes.dmi',
 		"Sergal" = 'icons/mob/species/sergal/eyes_yw.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'//ywedit
+		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
 		)
 
 /obj/item/clothing/glasses/update_clothing_icon()
