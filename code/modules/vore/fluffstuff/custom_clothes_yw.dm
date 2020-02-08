@@ -1578,6 +1578,14 @@
 	siemens_coefficient = 0.9
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
 
+/obj/item/clothing/accessory/poncho/cloak/fluff/mocha
+	name = "Warden Cloak"
+	desc = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mocha_cloak"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "mocha_cloak_s"
+
 // ******
 // Lawst
 // ******

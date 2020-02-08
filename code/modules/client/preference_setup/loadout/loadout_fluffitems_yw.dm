@@ -741,6 +741,14 @@
 	character_name = list("Mocha")
 	allowed_roles = list("Explorer", "Pathfinder")
 
+/datum/gear/fluff/mocha_cloak
+	path = /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
+	display_name = "Warden Cloak"
+	description = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
+	ckeywhitelist = list("mocatheporg1")
+	character_name = list("Mocha")
+	allowed_roles = list("Warden")
+
 //  N CKEYS
 //NESgamer190
 /datum/gear/fluff/lucy_flask
