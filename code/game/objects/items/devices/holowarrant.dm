@@ -39,13 +39,15 @@
 /obj/item/device/holowarrant/attackby(obj/item/weapon/W, mob/user)
 	if(active)
 		var/obj/item/weapon/card/id/I = W.GetIdCard()
-		if(I)
+		if(access_hos in I.access)
 			var/choice = alert(user, "Would you like to authorize this warrant?","Warrant authorization","Yes","No")
 			if(choice == "Yes")
 				active.fields["auth"] = "[I.registered_name] - [I.assignment ? I.assignment : "(Unknown)"]"
 			user.visible_message("<span class='notice'>You swipe \the [I] through the [src].</span>", \
 					"<span class='notice'>[user] swipes \the [I] through the [src].</span>")
 			return 1
+		to_chat(user, "<span class='warning'>You don't have the access to do this!")
+		return 1
 	..()
 
 //hit other people with it
@@ -84,7 +86,7 @@
 	if(active.fields["arrestsearch"] ==  "search")
 		var/output= {"
 		<HTML><HEAD><TITLE>Search Warrant: [active.fields["namewarrant"]]</TITLE></HEAD>
-		<BODY bgcolor='#FFFFFF'><center>in the jurisdiction of the</br>
+		<BODY bgcolor='#FFFFFF'><center>In the jurisdiction of the</br>
 		[using_map.boss_name] in [using_map.station_name]</br>
 		</br>
 		<b>SEARCH WARRANT</b></center></br>
@@ -108,3 +110,12 @@
 		</BODY></HTML>
 		"}
 		show_browser(user, output, "window=Search warrant for [active.fields["namewarrant"]]")
+
+/obj/item/weapon/storage/box/holowarrants
+	name = "holowarrant devices"
+	desc = "A box of holowarrant diplays for security use."
+
+/obj/item/weapon/storage/box/holowarrants/New() 
+	..()
+	for(var/i = 0 to 3)
+		new /obj/item/device/holowarrant(src)
