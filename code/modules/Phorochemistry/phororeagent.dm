@@ -677,9 +677,10 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/rad_x
 	id = "rad_x"
 	name = "Rad-X"
-	description = "Metabolizes only when absorbing radiation damage"
+	description = "Metabolizes slowly until absorbing radiation damage"
 	color = "#64110B"
-	metabolism = 0
+	metabolism = 0.15
+	overdose = 45
 
 /datum/reagent/phororeagent/rad_x/on_mob_life(var/mob/living/M as mob, var/alien)
 	var/metabolize = max(M.radiation - 25, 0)
