@@ -31,7 +31,7 @@
 	build_path = /obj/item/weapon/tool/crowbar/power
 	sort_string = "NAAAC"
 
-/datum/design/item/tool/rpd
+/datum/design/item/tool/rpd // YW addition begins
 	name = "Rapid Piping Device (RPD)"
 	desc = "A device used to rapidly pipe things."
 	id = "RPD"
