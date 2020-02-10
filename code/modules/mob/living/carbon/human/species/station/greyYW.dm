@@ -15,6 +15,7 @@
 	brute_mod = 1.25
 	flash_mod = 1.15
 	darksight = 5
+	reagent_tag = IS_GREY
 
 
 
