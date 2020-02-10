@@ -45,6 +45,9 @@
 /area/borealis2/outdoors/grounds/traderpad
 	name = "\improper Cryogaia Commerce Pad"
 
+/area/borealis2/outdoors/grounds/entrance
+	name = "\improper Cryogaia Compound Gate"
+
 /area/borealis2/outdoors/grounds/solars
 	name = "\The solar array"
 	icon = 'icons/turf/areas.dmi'
