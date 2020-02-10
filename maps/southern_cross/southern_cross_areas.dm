@@ -1653,11 +1653,11 @@ area/crew_quarters/heads/sc/hop/quarters
 //CHOMPedit: Exploration outpost ferry shuttle
 
 /area/shuttle/expoutpost/site
-	name = "\improper Exploration Elevator"
+	name = "\improper Exploration Sling"
 	icon_state = "shuttle2"
 
 /area/shuttle/expoutpost/station
-	name = "\improper Exploration Elevator"
+	name = "\improper Exploration Sling"
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced/airless
 
@@ -1729,6 +1729,14 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/expoutpost/nukestorage //Yes this is a joke
 	name = "\improper Exploration Carrier Secure Storage"
 	icon_state = "nuke_storage"
+
+/area/expoutpost/teleporter
+	name = "\improper Exploration Carrier Teleporter"
+	icon_state = "teleporter"
+
+/area/expoutpost/gateway
+	name = "\improper Exploration Carrier Gateway"
+	icon_state = "teleporter"
 
 /area/expoutpost/displayroom
 	name = "\improper Exploration Carrier Display Room"

@@ -44,14 +44,31 @@
 // Commented out until we either port or replace away missions, but this is the framework for loading each away mission.
 
 //////////////////////////////////////////////////////////////////////////////////////
-// Gateway submaps go here // Commented out until we get Gateway missions working.
-/*
-/datum/map_template/tether_lateload/gateway
+// Gateway submaps go here
+/datum/map_template/sc_lateload/gateway
 	name = "Gateway Submap"
 	desc = "Please do not use this."
 	mappath = null
 	associated_map_datum = null
-	*/
+
+/datum/map_z_level/sc_lateload/gateway_destination
+	name = "Gateway Destination"
+	z = Z_LEVEL_GATEWAY
+
+#include "gateway/snowfield.dm"
+/datum/map_template/sc_lateload/gateway/snowfield
+	name = "Snow Field"
+	desc = "An old base in middle of snowy wasteland"
+	mappath = 'gateway/snowfield.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+#include "gateway/carpfarm.dm"
+/datum/map_template/sc_lateload/gateway/carpfarm
+	name = "Carp Farm"
+	desc = "Asteroid base surrounded by carp"
+	mappath = 'gateway/carpfarm.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps
