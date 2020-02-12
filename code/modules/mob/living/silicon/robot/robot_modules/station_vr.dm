@@ -152,7 +152,8 @@
 					"K9 hound" = "k9",
 					"K9 Alternative (Static)" = "k92",
 					"Secborg model V-2" = "secborg",
-					"Borgi" = "borgi-sec"
+					"Borgi" = "borgi-sec",
+					"Secborg model V-3" = "SecVale" //CHOMPEdit
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
@@ -228,7 +229,8 @@
 					"Medical Hound" = "medihound",
 					"Dark Medical Hound (Static)" = "medihounddark",
 					"Mediborg model V-2" = "vale",
-					"Borgi" = "borgi-medi"
+					"Borgi" = "borgi-medi",
+					"Mediborg model V-3" = "vale2" //CHOMPEdit
 					)
 
 /obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
@@ -241,6 +243,7 @@
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
+	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
