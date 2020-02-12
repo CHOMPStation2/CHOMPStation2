@@ -230,7 +230,7 @@
 					"Dark Medical Hound (Static)" = "medihounddark",
 					"Mediborg model V-2" = "vale",
 					"Borgi" = "borgi-medi",
-					"Mediborg model V-3" = "vale2"
+					"Mediborg model V-3" = "vale2" //CHOMPEdit
 					)
 
 /obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
