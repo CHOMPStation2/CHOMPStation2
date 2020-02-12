@@ -55,13 +55,8 @@
 		projectiles = projectiles_per_shot
 //	set_ready_state(0)
 
-	var/target_for_log
-	if(ismob(target))
-		target_for_log = target
-	else
-		target_for_log = "[target.name]"
-
-	add_attack_logs(chassis.occupant,target_for_log,"Fired exosuit weapon [src.name] (MANUAL)")
+//CHOMPedit, redundant code removed. Fixes weapon lock on mob kill.
+	add_attack_logs(chassis.occupant,target, "Fired exosuit weapon [src.name] (MANUAL)")
 
 	do_after_cooldown()
 
