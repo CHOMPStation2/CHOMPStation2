@@ -153,7 +153,7 @@
 					"K9 Alternative (Static)" = "k92",
 					"Secborg model V-2" = "secborg",
 					"Borgi" = "borgi-sec",
-					"Secborg model V-3" = "SecVale"
+					"Secborg model V-3" = "SecVale" //CHOMPEdit
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
