@@ -117,27 +117,80 @@ var/induromol_code = rand(1, 50)
 	var/love_name
 
 /datum/reagent/phororeagent/love_potion/on_mob_life(var/mob/living/M as mob, var/alien)
-	if(ishuman(M))
-		if(!love_name)
-			var/dist = 100
-			for(var/mob/living/carbon/human/H in view(M))
-				if(H == M)
-					continue
-				var/distTo = sqrt(((M.x - H.x) ** 2) + ((M.y - H.y) ** 2))
-				if(distTo < dist)
-					dist = distTo
-					love_name = H.name
+	if(!istype(holder, /datum/reagents/metabolism/bloodstream))
+		if(ishuman(M))
+			if(!love_name)
+				var/dist = 100
+				for(var/mob/living/carbon/human/H in view(M))
+					if(H == M)
+						continue
+					var/distTo = sqrt(((M.x - H.x) ** 2) + ((M.y - H.y) ** 2))
+					if(distTo < dist)
+						dist = distTo
+						love_name = H.name
 
-			if(love_name)
-				M << "<font color='#e3209b'>You see [love_name]...</font>"
-				spawn(0)
-					sleep(10)
-					M << "<font color='#e3209b'>They are beautiful</font>"
+				if(love_name)
+					M << "<font color='#e3209b'>You see [love_name]...</font>"
+					spawn(0)
+						sleep(10)
+						M << "<font color='#e3209b'>They are beautiful</font>"
 
-					if(M.mind) //give protect objective
-						var/datum/objective/protection = new/datum/objective()
-						protection.explanation_text = "<font color='#e3209b'>Protect [love_name] at all costs</font>"
-						M.mind.objectives.Add(protection)
+						if(M.mind) //give protect objective
+							var/datum/objective/protection = new/datum/objective()
+							protection.explanation_text = "<font color='#e3209b'>Protect [love_name] at all costs</font>"
+							M.mind.objectives.Add(protection)
+							var/obj_count = 1
+							M << "<span class='notice'>Your current objectives:</span>"
+							for(var/datum/objective/objective in M.mind.objectives)
+								M << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
+								obj_count++
+
+							M << "<BR>"
+			else
+				if(prob(5))
+					if(prob(98))
+						var/list/love_messages = list("You feel strong affection towards [love_name]",
+						"You can't stop thinking about [love_name]", "[love_name] is love, [love_name] is life",
+						"[love_name] seems irresistable", "You cannot fathom life without [love_name]",
+						"[love_name] seems to be the essence of perfection",
+						"[love_name] can never be allowed to leave your side")
+
+						M << "<font color='#e3209b'>[pick(love_messages)]</font>"
+
+					else
+						M << "<font color='#e3209b'>You begin to build a trouser tent</font>"
+	return ..()
+
+/datum/reagent/phororeagent/love_potion/on_remove(var/atom/A)
+	if(!istype(holder, /datum/reagents/metabolism/bloodstream))
+		if(istype(A, /mob/living))
+			var/mob/living/M = A
+			if(M.mind)
+				var/message = "Your mind feels a lot more focused"
+				var/end_message = ""
+				var/list/message2list = list()
+				var/i = 1
+				var/length = lentext(message)
+				while(i <= length)
+					message2list += copytext(message, i, i + 1)
+					i++
+				var/col_perc = 1 / length
+				var/col_inc = 0
+				var/red = 0
+				var/green = 0
+				var/blue = 0
+				for(var/char in message2list) //fade from pink to black text
+					red = (227 * (1 - col_inc))
+					green = (32 * (1 - col_inc))
+					blue = (155 * (1 - col_inc))
+					end_message += "<font color = '[rgb(red, green, blue)]'>[char]</font>"
+					col_inc += col_perc
+
+				M << end_message
+
+				for(var/datum/objective/O in M.mind.objectives)
+					if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
+						M.mind.objectives.Remove(O)
 						var/obj_count = 1
 						M << "<span class='notice'>Your current objectives:</span>"
 						for(var/datum/objective/objective in M.mind.objectives)
@@ -145,58 +198,6 @@ var/induromol_code = rand(1, 50)
 							obj_count++
 
 						M << "<BR>"
-		else
-			if(prob(5))
-				if(prob(98))
-					var/list/love_messages = list("You feel strong affection towards [love_name]",
-					"You can't stop thinking about [love_name]", "[love_name] is love, [love_name] is life",
-					"[love_name] seems irresistable", "You cannot fathom life without [love_name]",
-					"[love_name] seems to be the essence of perfection",
-					"[love_name] can never be allowed to leave your side")
-
-					M << "<font color='#e3209b'>[pick(love_messages)]</font>"
-
-				else
-					M << "<font color='#e3209b'>You begin to build a trouser tent</font>"
-	return ..()
-
-/datum/reagent/phororeagent/love_potion/on_remove(var/atom/A)
-	if(istype(A, /mob/living))
-		var/mob/living/M = A
-		if(M.mind)
-			var/message = "Your mind feels a lot more focused"
-			var/end_message = ""
-			var/list/message2list = list()
-			var/i = 1
-			var/length = length(message)
-			while(i <= length)
-				message2list += copytext(message, i, i + 1)
-				i++
-			var/col_perc = 1 / length
-			var/col_inc = 0
-			var/red = 0
-			var/green = 0
-			var/blue = 0
-			for(var/char in message2list) //fade from pink to black text
-				red = (227 * (1 - col_inc))
-				green = (32 * (1 - col_inc))
-				blue = (155 * (1 - col_inc))
-				end_message += "<font color = '[rgb(red, green, blue)]'>[char]</font>"
-				col_inc += col_perc
-
-			M << end_message
-
-			for(var/datum/objective/O in M.mind.objectives)
-				if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
-					M.mind.objectives.Remove(O)
-					var/obj_count = 1
-					M << "<span class='notice'>Your current objectives:</span>"
-					for(var/datum/objective/objective in M.mind.objectives)
-						M << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
-						obj_count++
-
-					M << "<BR>"
-					break
 
 /datum/reagent/phororeagent/love_potion/on_mob_death(var/mob/M)
 	//update objectives
@@ -676,9 +677,10 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/rad_x
 	id = "rad_x"
 	name = "Rad-X"
-	description = "Metabolizes only when absorbing radiation damage"
+	description = "Metabolizes slowly until absorbing radiation damage"
 	color = "#64110B"
-	metabolism = 0
+	metabolism = 0.15
+	overdose = 45
 
 /datum/reagent/phororeagent/rad_x/on_mob_life(var/mob/living/M as mob, var/alien)
 	var/metabolize = max(M.radiation - 25, 0)

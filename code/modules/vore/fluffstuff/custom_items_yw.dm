@@ -568,3 +568,23 @@
 	from_suit = /obj/item/clothing/suit/storage/hooded/explorer
 	to_suit = /obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
 
+// *************
+// Foxicide
+// *************
+/obj/item/weapon/material/knife/tacknife/survival/fluff/kaith
+	name = "Trusty Survival Knife"
+	desc = "An old looking knife with an outdated wooden handle. Still looks robust, though."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "kaithknife"
+	named_from_material = 0
+
+/obj/item/device/modkit_conversion/fluff/kaith_knife_kit
+	name = "Kaith's modkit"
+	desc = "A kit containing all the needed tools and parts to modify a survival knife"
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "modkit"
+
+	from_suit = /obj/item/weapon/material/knife/tacknife/survival
+	to_suit = /obj/item/weapon/material/knife/tacknife/survival/fluff/kaith
+

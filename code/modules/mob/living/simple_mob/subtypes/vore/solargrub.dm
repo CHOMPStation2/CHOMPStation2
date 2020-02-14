@@ -62,6 +62,10 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 /datum/say_list/solargrub
 	emote_see = list("squelches", "squishes")
 
+/mob/living/simple_mob/vore/solargrub/New()
+	existing_solargrubs += src
+	..()
+
 /mob/living/simple_mob/vore/solargrub/Life()
 	. = ..()
 	if(!.) return
@@ -146,6 +150,10 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 /mob/living/simple_mob/vore/solargrub/death()
 	src.anchored = 0
 	set_light(0)
+	..()
+
+/mob/living/simple_mob/vore/solargrub/Destroy()
+	existing_solargrubs -= src
 	..()
 
 /mob/living/simple_mob/vore/solargrub/handle_light()
