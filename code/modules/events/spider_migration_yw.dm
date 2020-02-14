@@ -11,9 +11,9 @@
 /datum/event/spider_migration/announce()
 	var/announcement = ""
 	if(severity == EVENT_LEVEL_MAJOR)
-		announcement = "Massive breach of [station_name()] walls detected. Unknown biological entities has been detected near within perimeter. Heavily armed Security Patrol required."
+		announcement = "Massive migration of unknown biological entities has been detected near [station_name()], please stand-by." //CHOMPStation Edit: Restore original message.
 	else
-		announcement = "Unknown biological [spawned_spider.len == 1 ? "entity has" : "entities have"] bypassed [station_name()]'s perimeter walls, Security Patrol."
+		announcement = "Unknown biological [spawned_spider.len == 1 ? "entity has" : "entities have"] been detected near [station_name()], please stand-by." //CHOMPStation Edit: Restore original message.
 	command_announcement.Announce(announcement, "Lifesign Alert")
 
 /datum/event/spider_migration/start()
