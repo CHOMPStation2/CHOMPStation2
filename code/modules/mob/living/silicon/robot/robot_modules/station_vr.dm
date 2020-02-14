@@ -774,6 +774,7 @@
 					LANGUAGE_SIGN		= 0
 					)
 
+
 /obj/item/weapon/robot_module/robot/booze
 	sprites = list(
 				"Beer Buddy" = "boozeborg",
@@ -787,7 +788,6 @@
 				)
 
 /obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
-	..()
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
 	//src.modules += new /obj/item/weapon/material/minihoe(src)
