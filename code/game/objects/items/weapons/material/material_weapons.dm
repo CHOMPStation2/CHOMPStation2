@@ -26,6 +26,7 @@
 	var/default_material = DEFAULT_WALL_MATERIAL
 	var/material/material
 	var/drops_debris = 1
+	var/named_from_material = 1 //YW EDIT, Does it prepend the material's name to it's name?
 
 /obj/item/weapon/material/New(var/newloc, var/material_key)
 	..(newloc)
@@ -65,7 +66,8 @@
 	if(!material)
 		qdel(src)
 	else
-		name = "[material.display_name] [initial(name)]"
+		if(named_from_material) //YW EDIT
+			name = "[material.display_name] [initial(name)]"
 		health = round(material.integrity/10)
 		if(applies_material_colour)
 			color = material.icon_colour

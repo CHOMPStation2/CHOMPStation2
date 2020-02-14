@@ -116,6 +116,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 // It is August 22nd, 2012... This TODO has already been here for months.. I wonder how long it'll last before someone does something about it. // Nov 2019. Nope.
 /obj/machinery/librarycomp
 	name = "Check-In/Out Computer"
+	desc = "Print books from the archives! (You aren't quite sure how they're printed by it, though.)"
 	icon = 'icons/obj/library.dmi'
 	icon_state = "computer"
 	anchored = 1
@@ -228,7 +229,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 			dat += "<h3>External Archive</h3>" //VOREStation Edit
 			establish_old_db_connection()
 
-			dat += "<h3><font color=red>Warning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.</font></h3>"
+//			dat += "<h3><font color=red>Warning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.</font></h3>"	//VOREStation Removal TFF 29/1/20 - Redundant warning, we're not removing our library entries.
 
 			if(!dbcon_old.IsConnected())
 				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
@@ -521,6 +522,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
  */
 /obj/machinery/bookbinder
 	name = "Book Binder"
+	desc = "Bundles up a stack of inserted paper into a convenient book format."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "binder"
 	anchored = 1

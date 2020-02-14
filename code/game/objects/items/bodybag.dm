@@ -57,7 +57,7 @@
 
 /obj/structure/closet/body_bag/large
 	name = "mass grave body bag"
-	desc = "A massive body bag that holds as much as it does do to bluespace lining on its zipper. Shockingly compact for its storage."
+	desc = "A massive body bag that holds as much as it does due to bluespace lining on its zipper. Shockingly compact for its storage."
 	icon_state = "bluebodybag_closed"
 	icon_closed = "bluebodybag_closed"
 	icon_opened = "bluebodybag_open"

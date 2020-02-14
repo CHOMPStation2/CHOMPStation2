@@ -96,8 +96,8 @@ var/const/SAR 				=(1<<14)
 	selection_color = "#999440"
 	economic_modifier = 6
 	minimal_player_age = 3
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_eva, access_maint_tunnels, access_external_airlocks, access_pilot)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_pilot)
+	access = list(access_medical, access_medical_equip, access_eva, access_maint_tunnels, access_external_airlocks)		//nerfs SAR access. Why the fuck do they have access to surgery and chemistry? They're not doctors, their medics.
+	minimal_access = list(access_medical, access_medical_equip, access_eva) //nerfs SAR access. Why the fuck do they have access to surgery and chemistry? They're not doctors, their medics.
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
 
 /datum/job/offduty_exploration
