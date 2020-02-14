@@ -210,13 +210,13 @@
 	character_name = list("Korei Laskor")
 
 //championfire
-//Anoki Windroar
+//Yuki Windroar
 /datum/gear/fluff/anoki_implant
-	path = /obj/item/weapon/implanter/reagent_generator/roiz/anoki
+	path = /obj/item/weapon/implanter/reagent_generator/roiz/yuki
 	display_name = "Egg laying implanter"
 	description = "This is an implant that allows the user to lay eggs."
 	ckeywhitelist = list("championfire")
-	character_name = list("Anoki Windroar")
+	character_name = list("Yuki Windroar")
 
 //Ivy Kaeire
 /datum/gear/fluff/ivy_under
