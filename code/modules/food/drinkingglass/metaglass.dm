@@ -657,5 +657,6 @@ Drinks Data
 /datum/reagent/drink/arnold_palmer
 	glass_icon_state = "arnoldpalmer"
 	glass_center_of_mass = list("x"=16, "y"=8)
+
 /datum/reagent/ethanol/mojito
 	glass_icon_state = "mojito"
