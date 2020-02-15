@@ -63,7 +63,7 @@
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
 	holder_type = /obj/item/weapon/holder/human
-	short_sighted = 1
+//	short_sighted = 1 CHOMPEdit: We're fine without near-sightedness for now.
 	gluttonous = 1
 	blood_volume = 400
 	hunger_factor = 0.2
@@ -237,11 +237,12 @@
 	if(ms != "")
 		H << ms
 	H.next_loneliness_time = world.time+500
-*/
-//CHOMPStation Removal End
+
 
 /datum/species/teshari/get_vision_flags(var/mob/living/carbon/human/H)
 	if(!(H.sdisabilities & DEAF) && !H.ear_deaf)
 		return SEE_SELF|SEE_MOBS
 	else
 		return SEE_SELF
+*/
+//CHOMPStation Removal End
