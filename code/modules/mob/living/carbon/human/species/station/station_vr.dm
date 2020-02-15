@@ -515,7 +515,7 @@ datum/species/harpy
 	heat_level_3 = 1150
 
 	flags =  NO_SCAN
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags = SPECIES_CAN_JOIN //YW Edit: Removed whitelist
 
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
 
