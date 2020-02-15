@@ -232,7 +232,7 @@
 				/obj/item/weapon/handcuffs,
 //				/obj/item/device/detective_scanner,
 				/obj/item/device/taperecorder)
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: Changed armor values to match security armor vest.
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 	var/unbuttoned = 0
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/verb/toggle()
@@ -262,21 +262,21 @@
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. Wearing this may make you feel all scientific."
 	icon_state = "fedblue"
 	item_state = "fedblue"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
 	name = "Federation Uniform Jacket (Yellow)"
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it.Wearing it may make you feel like checking a warp core, whatever that is."
 	icon_state = "fedeng"
 	item_state = "fedeng"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 10, bomb = 0, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 10, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedcapt
 	name = "Federation Uniform Jacket (Command)"
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. You feel like a commanding officer of Starfleet."
 	icon_state = "fedcapt"
 	item_state = "fedcapt"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat
 	name = "Modern Federation Uniform Jacket (Command)"
@@ -302,7 +302,7 @@
 				/obj/item/weapon/handcuffs,
 //				/obj/item/device/detective_scanner,
 				/obj/item/device/taperecorder)
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 	//Variants
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedblue
@@ -310,21 +310,21 @@
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. Wearing this makes you feel like a scientist or a pilot."
 	icon_state = "fedmodernblue"
 	item_state = "fedmodernblue"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedeng
 	name = "Modern Federation Uniform Jacket (Yellow)"
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. You feel like you can handle any type of technical engineering problems."
 	icon_state = "fedmoderneng"
 	item_state = "fedmoderneng"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 10, bomb = 0, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 00, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedsec
 	name = "Modern Federation Uniform Jacket (Red)"
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. This uniform makes you want to protect and serve as an officer."
 	icon_state = "fedmodernsec"
 	item_state = "fedmodernsec"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/head/caphat/formal/fedcover
 	name = "Federation Officer's Cap"
