@@ -8,11 +8,12 @@
 		SPECIES_SERGAL			= 'icons/mob/species/sergal/helmet_vr.dmi',
 		SPECIES_ZORREN_FLAT		= 'icons/mob/species/fennec/helmet_vr.dmi',
 		SPECIES_ZORREN_HIGH 	= 'icons/mob/species/fox/helmet_vr.dmi',
-		SPECIES_VULPKANI 		= 'icons/mob/species/vulpkanin/helmet.dmi',
+		SPECIES_VULPKANIN 		= 'icons/mob/species/vulpkanin/helmet.dmi',
 		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/helmet.dmi',
 		SPECIES_XENOHYBRID		= 'icons/mob/species/unathi/helmet.dmi',
 		SPECIES_VOX 			= 'icons/mob/species/vox/head.dmi',
-		SPECIES_TESHARI = 'icons/mob/species/seromi/head.dmi'
+		SPECIES_TESHARI         = 'icons/mob/species/seromi/head.dmi',
+		SPECIES_GREY_YW         = 'icons/mob/species/grey/helmet.dmi' /*ywedit*/
 		)
 
 
