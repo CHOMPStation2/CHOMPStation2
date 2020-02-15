@@ -18,7 +18,8 @@
 		"Highlander Zorren" 	= 'icons/mob/species/fox/helmet_vr.dmi',
 		"Vulpkanin"				= 'icons/mob/species/vulpkanin/helmet.dmi',
 		"Promethean"			= 'icons/mob/species/skrell/helmet.dmi',
-		"Xenomorph Hybrid"		= 'icons/mob/species/unathi/helmet.dmi'
+		"Xenomorph Hybrid"		= 'icons/mob/species/unathi/helmet.dmi',
+		"Grey"                  = 'icons/mob/species/grey/helmet.dmi' /*ywedit*/
 		)
 
 	sprite_sheets_obj = list(
