@@ -1,8 +1,8 @@
 // Inherits from /book/ so it can fit on bookshelves.
 /obj/item/weapon/book/codex // Vorestation Edits throughout this object.
-	name = "The Traveler's Guide to Human Space: Borealis Edition"
+	name = "The Traveler's Guide to Human Space: Borealis Edition" //YW Edit
 	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to the Borealis system, human or not. It also \
-	has the words 'Don't Panic' in small, friendly letters on the cover."
+	has the words 'Don't Panic' in small, friendly letters on the cover." //YW Edit
 	icon_state = "codex"
 	unique = TRUE
 	var/datum/codex_tree/tree = null
@@ -19,9 +19,9 @@
 	tree.display(user)
 
 /obj/item/weapon/book/codex/lore/vir // Vorestation Edits throughout this object.
-	name = "The Traveler's Guide to Human Space: Borealis Edition"
+	name = "The Traveler's Guide to Human Space: Borealis Edition" //YW Edit
 	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to the Borealis system, human or not. It also \
-	has the words 'Don't Panic' in small, friendly letters on the cover."
+	has the words 'Don't Panic' in small, friendly letters on the cover." //YW Edit
 	icon_state = "codex"
 	root_type = /datum/lore/codex/category/main_virgo_lore
 	libcategory = "Reference"
@@ -35,7 +35,7 @@
 
 /obj/item/weapon/book/codex/lore/news
 	name = "Daedalus Pocket Newscaster"
-	desc = "A regularly-updating compendium of articles on current events. Essential for new arrivals in the Borealis system and anyone interested in politics."
+	desc = "A regularly-updating compendium of articles on current events. Essential for new arrivals in the Borealis system and anyone interested in politics." //YW Edit
 	icon_state = "newscodex"
 	w_class = ITEMSIZE_SMALL
 	root_type = /datum/lore/codex/category/main_news
