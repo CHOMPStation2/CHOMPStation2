@@ -1809,6 +1809,9 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Wreck"
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
+
+//Temp Removal TFF 15/2/20
+/*
 // CHOMP-Edit: This is the Belt Mining addition
 // Belt Mining Areas
 /area/mine/unexplored/belt_miner
@@ -1858,3 +1861,4 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/shuttle/beltferry/transit // Transit Area - the in-between.
 	name = "Belter M2.0 Transit"
 	icon_state = "shuttle2"
+*/
