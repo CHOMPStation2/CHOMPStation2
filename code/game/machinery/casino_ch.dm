@@ -335,7 +335,6 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lemon,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lime,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/berry,
-			/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/matcha_latte,*/ //Not ported yet either - Jack
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lemon_lime,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/orange,
@@ -367,14 +366,12 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/carrot,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/apple,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tomato,
-			/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/nutbutter,*/ //Not ported yet - Jack
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/soymilk,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/grenadine,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/gingerale,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/royrogers,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/patron,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/goldschlager,
-			/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,*/ //Not ported yet - Jack
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/melonliquor,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/bluecuracao,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/thirteenloko,
@@ -394,6 +391,10 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/winebrandy,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/snaps
 		)
+		
+		/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/matcha_latte,*/ //Not ported yet either - Jack
+		/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/nutbutter,*/ //Not ported yet - Jack
+		/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,*/ //Not ported yet - Jack
 
 /obj/machinery/chemical_dispenser/deluxe/New()
 	..()
@@ -500,7 +501,6 @@
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/mug = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/wine = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/metaglass = 25,
-					/*/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 25,*/ //Metapint glass not ported yet - Jack
 					/obj/item/weapon/glass_extra/stick = 50,
 					/obj/item/weapon/glass_extra/straw = 50,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/gin = 10,
@@ -543,7 +543,10 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/cream = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/ice = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/flask/barflask = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask = 10)
+					/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask = 10
+					)
+					
+/*/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 25,*/ //Metapint glass not ported yet - Jack
 
 	contraband = list()
 	vend_delay = 15
