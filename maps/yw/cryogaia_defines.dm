@@ -36,7 +36,7 @@
 	holomap_smoosh = list(list(
 		Z_LEVEL_CRYOGAIA_MINE,
 		Z_LEVEL_CRYOGAIA_LOWER,
-		Z_LEVEL_CRYOGAIA_MAIN)) 
+		Z_LEVEL_CRYOGAIA_MAIN))
 
 	station_name  = "Cryogaia Outpost"
 	station_short = "Yawn Wider"
@@ -135,7 +135,8 @@
 		/area/storage/auxillary,
 		/area/vacant/vacant_site/locker,
 		/area/tcommsat/powercontrol,
-		/area/constructionsite/medical)
+		/area/constructionsite/medical,
+		/area/borealis2/outdoors/grounds/entrance)
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)

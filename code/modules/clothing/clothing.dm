@@ -458,7 +458,7 @@
 		SPECIES_VOX = 'icons/mob/species/vox/masks.dmi',
 		SPECIES_TAJ = 'icons/mob/species/tajaran/mask.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/mask.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/mask.dmi')
+		SPECIES_GREY_YW = 'icons/mob/species/grey/mask.dmi'/*ywedit*/)
 
 	var/voicechange = 0
 	var/list/say_messages
@@ -665,7 +665,7 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/mob/species/seromi/uniform.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/uniform.dmi'
+		SPECIES_GREY_YW = 'icons/mob/species/grey/uniform.dmi'/*YWedit*/
 		)
 
 	//convenience var for defining the icon state for the overlay used when the clothing is worn.

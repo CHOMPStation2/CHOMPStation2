@@ -213,12 +213,12 @@
 // championfire
 // ************
 
-//Anoki Windroar
+//Yuki Windroar
 
-/obj/item/weapon/implanter/reagent_generator/roiz/anoki
-	implant_type = /obj/item/weapon/implant/reagent_generator/roiz/anoki
+/obj/item/weapon/implanter/reagent_generator/roiz/yuki
+	implant_type = /obj/item/weapon/implant/reagent_generator/roiz/yuki
 
-/obj/item/weapon/implant/reagent_generator/roiz/anoki
+/obj/item/weapon/implant/reagent_generator/roiz/yuki
 	name = "egg laying implant"
 	desc = "This is an implant that allows the user to lay eggs."
 	usable_volume = 500
@@ -226,7 +226,7 @@
 
 	empty_message = list("Your lower belly feels smooth and empty. Sorry, we're out of eggs!", "The reduced pressure in your lower belly tells you there are no more eggs.")
 	full_message = list("Your lower belly looks swollen with irregular bumps, and it feels heavy.", "Your lower abdomen feels really heavy, making it a bit hard to walk.")
-	emote_descriptor = list("an egg right out of Anoki's lower belly!", "into Anoki' belly firmly, forcing him to lay an egg!", "Anoki really tight, who promptly lays an egg!")
+	emote_descriptor = list("an egg right out of Yuki's lower belly!", "into Yuki's belly firmly, forcing him to lay an egg!", "Yuki really tight, who promptly lays an egg!")
 
 // ********
 // Vitorhks
