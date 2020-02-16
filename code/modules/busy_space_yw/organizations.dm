@@ -162,9 +162,14 @@
 			"NCS Northern Star in Vir",
 			"NLS Southern Cross in Vir",
 			"NAS Vir Central Command",
-			"a dockyard orbiting Sif",
-			"an asteroid orbiting Kara",
-			"an asteroid orbiting Rota",
+			"NAB Smythside Central Headquarters in Sol",
+			"NAS Zeus orbiting Virgo-Prime",
+			"NIB Posideon in Alpha Centauri",
+			"NTB An-Nur on Virgo-Prime",
+			"the ruins of Virgo-3B", //YW EDIT
+			"the NanoTrasen phoron refinery in Vilous",
+			"a dockyard orbiting Virgo-Prime",
+			"an asteroid orbiting Virgo 3",
 			"Vir Interstellar Spaceport"
 			)
 
