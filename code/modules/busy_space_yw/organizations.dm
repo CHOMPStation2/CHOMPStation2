@@ -78,7 +78,7 @@
 		//existing systems, pruned for duplicates, includes systems that contain suspected or confirmed exoplanets
 		var/list/systems = list(
 			"Sol", "Alpha Centauri", "Sirius", "Vega", "Tau Ceti", "Altair", "Zhu Que", "Oasis", "Vir", "Gavel", "Ganesha", "Saint Columbia", "Altair", "Sidhe", "New Ohio", "Parvati", "Mahi-Mahi", "Nyx", "New Seoul", "Kess-Gendar", "Raphael", "Phact", "El", "Eutopia", "Qerr'valis", "Harr'Qak", "Qerrna-Lakirr", "Rarkajar", "Vazzend", "Thoth", "Jahan's Post", "Kauq'xum", "Silk", "New Singapore", "Stove", "Viola", "Love", "Isavau's Gamble", "deep space", "Epsilon Eridani", "Fomalhaut", "Mu Arae", "Pollux", "Wolf 359", "Ross 128", "Gliese 1061", "Luyten's Star", "Teegarden's Star", "Kapteyn", "Wolf 1061", "Aldebaran", "Proxima Centauri", "Kepler-90", "HD 10180", "HR 8832", "TRAPPIST-1", "55 Cancri", "Gliese 876", "Upsilon Andromidae", "Mu Arae", "WASP-47", "82 G. Eridani", "Rho Coronae Borealis", "Pi Mensae", "Beta Pictoris", "Gamma Librae", "Gliese 667 C", "Kapteyn", "LHS 1140", "New Ohio", "Samsara", "Vounna", "Relan")
-		var/list/owners = list("a government", "a civilian", "a corporate", "a private", "an independent", "a mercenary", "a military", "a contracted")
+		var/list/owners = list("a government", "a civilian", "a corporate", "a private", "an independent", "a mercenary", "a military")
 		var/list/purpose = list("an exploration", "a trade", "a research", "a survey", "a military", "a mercenary", "a corporate", "a civilian", "an independent")
 
 		//unique or special locations
