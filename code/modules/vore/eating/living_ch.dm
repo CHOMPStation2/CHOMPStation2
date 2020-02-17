@@ -130,7 +130,7 @@
 			for(var/obj/item/weapon/reagent_containers/rc in view(user.loc,1))
 				choices += rc
 			var/obj/item/weapon/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
-			RTB.reagents.vore_trans_to_con(T, 1, 1, 0)
+			RTB.reagents.vore_trans_to_con(T, transfer_amount, 1, 0)
 
 			if(TG == user)
 				user.visible_message("<span class='notice'>[user] fills the [T] with [RTB.reagent_name] from their [RTB].</span>")

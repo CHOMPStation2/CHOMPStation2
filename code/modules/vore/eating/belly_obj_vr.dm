@@ -166,6 +166,7 @@
 		"liquid_fullness4_messages",
 		"liquid_fullness5_messages",
 		"reagent_name",
+		"reagent_chosen",
 		"gen_cost",
 		"gen_amount",
 		"gen_time",
@@ -715,6 +716,7 @@
 	dupe.liquid_fullness4_messages = liquid_fullness4_messages
 	dupe.liquid_fullness5_messages = liquid_fullness5_messages
 	dupe.reagent_name = reagent_name
+	dupe.reagent_chosen = reagent_chosen
 	dupe.gen_cost = gen_cost
 	dupe.gen_amount = gen_amount
 	dupe.gen_time = gen_time
