@@ -859,6 +859,25 @@
 	ckeywhitelist = list("snakewitharocketlauncher")
 	character_name = list("Alex Wolf")
 
+//splintergp
+//Aroozee Daarvoleast-Clark
+/datum/gear/fluff/aroozee_cloak
+	path = /obj/item/clothing/accessory/poncho/cloak/fluff/aroozee
+	display_name = "Aroozee Cloak"
+	description = "A cloak made especially for a vasilissan, it smells of perfume."
+	ckeywhitelist = list("splintergp")
+	character_name = list("Aroozee Daarvoleast-Clark")
+
+/datum/gear/fluff/aroozee_cloak_hos
+	path = /obj/item/clothing/accessory/poncho/cloak/fluff/aroozeehos
+	display_name = "Aroozee HOS Cloak"
+	description = "A cloak denoting the rank of head of security, it's made especially for a vasilissan and smells of perfume."
+	ckeywhitelist = list("splintergp")
+	character_name = list("Aroozee Daarvoleast-Clark")
+	allowed_roles = list("Head of Security")
+
+
+
 //  T CKEYS
 
 //  U CKEYS
