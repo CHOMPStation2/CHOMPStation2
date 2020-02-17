@@ -544,9 +544,7 @@
 					/obj/item/weapon/reagent_containers/food/drinks/ice = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/flask/barflask = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask = 10
-					)
-					
-/*/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 25,*/ //Metapint glass not ported yet - Jack
+					)					
 
 	contraband = list()
 	vend_delay = 15
@@ -555,6 +553,7 @@
 	req_log_access = access_bar
 	has_logs = 1
 
+	/*/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 25,*/ //Metapint glass not ported yet - Jack
 
 /obj/machinery/vending/deluxe_dinner
 	name = "Deluxe Dining Distributor"
