@@ -10,7 +10,7 @@
 	var/duration	// Song length in deciseconds
 	var/secret		// Show up in regular playlist or secret playlist?
 	var/lobby		// Be one of the choices for lobby music?
-	var/casino		// Music for casino jukebox
+	var/casino		// CHOMP Music for casino jukebox  - Jack
 
 /datum/track/New(var/url, var/title, var/duration, var/artist = "", var/secret = 0, var/lobby = 0)
 	src.url = url
@@ -19,7 +19,7 @@
 	src.duration = duration
 	src.secret = secret
 	src.lobby = lobby
-	src.casino = casino
+	src.casino = casino	// CHOMP Music for casino jukebox
 
 /datum/track/proc/display()
 	var str = "\"[title]\""
@@ -58,7 +58,7 @@ var/global/list/all_lobby_tracks = list()
 		if(istext(entry["artist"]))
 			T.artist = entry["artist"]
 		T.secret = entry["secret"] ? 1 : 0
-		T.casino = entry["casino"] ? 1 : 0 //CHOMP Casino music - Jack
+		T.casino = entry["casino"] ? 1 : 0 //CHOMP Casino music
 		T.lobby = entry["lobby"] ? 1 : 0
 		all_jukebox_tracks += T
 		if(T.lobby)
