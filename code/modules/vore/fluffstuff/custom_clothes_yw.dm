@@ -1608,3 +1608,33 @@
 	desc = "A compact duffle bag, meant for long hikes."
 	icon = 'icons/obj/clothing/backpack.dmi'
 	icon_state = "duffle"
+
+
+// ******
+// SplinterGP
+// ******
+
+/obj/item/clothing/accessory/poncho/cloak/fluff/aroozee
+	name = "Aroozee Cloak"
+	desc = "A cloak made especially for a vasilissan, it smells of perfume."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_cloak"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_cloak_mob"
+	flags_inv = HIDETAIL
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/accessory/poncho/cloak/fluff/aroozeehos
+	name = "Aroozee Head of Security Cloak"
+	desc = "A cloak denoting the rank of head of security, it's made especially for a vasilissan and smells of perfume."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_cloak_hos"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_cloak_hos_mob"
+	flags_inv = HIDETAIL
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+
+
