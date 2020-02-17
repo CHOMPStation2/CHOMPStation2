@@ -45,7 +45,7 @@
 	boss_short    = "CentCom"
 	company_name  = "NanoTrasen"
 	company_short = "NT"
-	starsys_name  = "Borealis Majoris"
+	starsys_name  = "Borealis"
 
 	shuttle_docked_message = "The scheduled Shuttle to %dock_name% has arrived. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Shuttle has left the Outpost. Estimate %ETA% until the shuttle arrives at %dock_name%."
