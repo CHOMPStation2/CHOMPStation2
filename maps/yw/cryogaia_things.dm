@@ -476,6 +476,7 @@ var/global/list/latejoin_tram   = list()
 	icon = 'icons/obj/items_yw.dmi'
 	icon_state = "icepick"
 	item_state = "icepick"
+	matter = list(DEFAULT_WALL_MATERIAL = 12000) //Same as a knife
 	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
 	throwforce = 0
 //end of Ice Pick
