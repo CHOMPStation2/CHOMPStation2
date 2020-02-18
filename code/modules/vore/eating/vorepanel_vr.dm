@@ -306,7 +306,7 @@
 			dat += " [selected.digestchance]%"
 			dat += "<HR>"
 
-		//CHOMP belly reagent container
+		//CHOMP belly reagent container start
 		dat += "<br><a href='?src=\ref[src];b_liquidcontainer=\ref[selected]'>Belly liquids ([selected.reagentbellymode ? "On" : "Off"])</a>"
 		if(selected.reagentbellymode)
 			dat += "<a href='?src=\ref[src];show_liq=\ref[selected]'>[show_liquids ? "Hide" : "Show"]</a>"
@@ -375,7 +375,7 @@
 					dat += "<a style='background:#173d15;' href='?src=\ref[src];toggle_liq_giv=1'>Toggle Giving (Currently: ON)</a>"
 				if(FALSE)
 					dat += "<a style='background:#990000;' href='?src=\ref[src];toggle_liq_giv=1'>Toggle Giving (Currently: OFF)</a>"
-
+		//CHOMP belly reagent container end
 			dat += "<HR>"
 
 		//Delete button
@@ -1104,7 +1104,7 @@
 			if("Disable audible hunger")
 				user.noisy = FALSE
 
-	//CHOMP - liquid bellies
+	//CHOMP belly reagent container start
 
 	if(href_list["show_liq"])
 		show_liquids = !show_liquids
@@ -1248,7 +1248,8 @@
 				user.give_reagents = TRUE
 			if("Prevent Giving")
 				user.give_reagents = FALSE
-
+				
+	//CHOMP belly reagent container end
 
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.give_reagents = user.give_reagents
