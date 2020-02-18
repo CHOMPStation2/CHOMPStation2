@@ -34,8 +34,7 @@ SUBSYSTEM_DEF(bellies)
 		if(QDELETED(B))
 			belly_list -= B
 		else
-			//CHOMP reagent belly stuff, here to jam it into subsystems and avoid too much cpu usage WIP not working :c - Jack
-			B.HandleBellyReagents()
+			B.HandleBellyReagents()	//CHOMP reagent belly stuff, here to jam it into subsystems and avoid too much cpu usage
 			if(B.process_belly(times_fired,wait) == SSBELLIES_IGNORED)
 				ignored_bellies++
 
