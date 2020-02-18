@@ -160,6 +160,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(isnull(belly_prefs))
 		belly_prefs = list()
 
+	//CHOMP reagent belly
 	if(isnull(receive_reagents))
 		receive_reagents = FALSE
 	if(isnull(give_reagents))
