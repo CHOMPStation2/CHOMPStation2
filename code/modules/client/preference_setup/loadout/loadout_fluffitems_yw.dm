@@ -849,6 +849,15 @@
 	ckeywhitelist = list("roguenoob")
 	character_name = list("Basir Fahim")
 
+//rouwren
+//Rin Deimos
+/datum/gear/fluff/rin_deimos_1
+	path = /obj/item/clothing/accessory/medal/fluff/rindeimos
+	display_name = "Broken Life Crystal"
+	description = "The broken life crystal doesn't do anything, except remind you of loss."
+	ckeywhitelist = list("rouwren")
+	character_name = list("Rin Deimos")
+
 //  S CKEYS
 //snakewitharocketlauncher
 //Alex Wolf

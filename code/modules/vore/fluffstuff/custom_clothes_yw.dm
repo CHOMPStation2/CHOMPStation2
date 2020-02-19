@@ -1638,3 +1638,15 @@
 
 
 
+// *****
+// Rouwren
+// *****
+
+/obj/item/clothing/accessory/medal/fluff/rindeimos
+	name = "Broken Life Crystal"
+	desc = "The broken life crystal doesn't do anything, except remind you of loss."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "khlife3"
+	icon_override = 'icons/vore/custom_items_vr.dmi'
+	item_state = "khlife_overlay"
+	overlay_state = "khlife_overlay"
