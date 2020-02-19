@@ -191,9 +191,17 @@
 				if(compensation > 0)
 					if(isrobot(owner))
 						var/mob/living/silicon/robot/R = owner
-						R.cell.charge += 25*compensation
+						if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+							R.cell.charge += 15*compensation
+							GenerateBellyReagents_digested()
+						else
+							R.cell.charge += 25*compensation
 					else
-						owner.nutrition += (nutrition_percent / 100)*4.5*compensation
+						if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+							owner.nutrition += (nutrition_percent / 100)*3.0*compensation
+							GenerateBellyReagents_digested()
+						else
+							owner.nutrition += (nutrition_percent / 100)*4.5*compensation
 				to_update = TRUE
 
 				continue
@@ -210,10 +218,20 @@
 			var/offset = (1 + ((M.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 			var/difference = owner.size_multiplier / M.size_multiplier
 			if(isrobot(owner))
-				var/mob/living/silicon/robot/R = owner
-				R.cell.charge += 25*damage_gain
+				if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+					var/mob/living/silicon/robot/R = owner
+					R.cell.charge += 20*damage_gain
+					GenerateBellyReagents_digesting()
+				else
+					var/mob/living/silicon/robot/R = owner
+					R.cell.charge += 25*damage_gain
 			if(offset) // If any different than default weight, multiply the % of offset.
-				owner.nutrition += offset*((nutrition_percent / 100)*4.5*(damage_gain)/difference) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
+				if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+					owner.nutrition += offset*((nutrition_percent / 100)*4.5/(gen_cost*1.25)*(damage_gain)/difference)//Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
+					digest_nutri_gain = offset*((nutrition_percent / 100)*0.5/(gen_cost*1.25)*(damage_gain)/difference) //for transfering nutrition value over to GenerateBellyReagents_digesting()
+					GenerateBellyReagents_digesting()
+				else
+					owner.nutrition += offset*((nutrition_percent / 100)*4.5*(damage_gain)/difference)//4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
 			else
 				owner.nutrition += (nutrition_percent / 100)*4.5*(damage_gain)/difference
 
@@ -237,9 +255,15 @@
 				if(M.nutrition >= 100) //Drain them until there's no nutrients left. Slowly "absorb" them.
 					var/oldnutrition = (M.nutrition * 0.05)
 					M.nutrition = (M.nutrition * 0.95)
-					owner.nutrition += oldnutrition
+					if(reagent_mode_flags & DM_FLAG_REAGENTSABSORB && reagents.total_volume < reagents.maximum_volume) //CHOMP absorption reagent production
+						owner.nutrition += oldnutrition * 0.75 //keeping the price static, due to how much nutrition can flunctuate
+						GenerateBellyReagents_absorbing()
+					else
+						owner.nutrition += oldnutrition
 				else if(M.nutrition < 100) //When they're finally drained.
 					absorb_living(M)
+					if(reagent_mode_flags & DM_FLAG_REAGENTSABSORB && reagents.total_volume < reagents.maximum_volume) //CHOMP absorption reagent production
+						GenerateBellyReagents_absorbed() //A bonus for pred, I know for a fact prey is usually at zero nutrition when absorption finally happens
 					to_update = TRUE
 
 //////////////////////////// DM_UNABSORB ////////////////////////////
@@ -269,7 +293,11 @@
 			if(M.nutrition >= 100) //Drain them until there's no nutrients left.
 				var/oldnutrition = (M.nutrition * 0.05)
 				M.nutrition = (M.nutrition * 0.95)
-				owner.nutrition += oldnutrition
+				if(reagent_mode_flags & DM_FLAG_REAGENTSDRAIN && reagents.total_volume < reagents.maximum_volume)   //CHOMP draining reagent production
+					owner.nutrition += oldnutrition * 0.75 //keeping the price static, due to how much nutrition can flunctuate
+					GenerateBellyReagents_absorbing() //Dont need unique proc so far
+				else
+					owner.nutrition += oldnutrition
 
 //////////////////////////// DM_SHRINK ////////////////////////////
 	else if(digest_mode == DM_SHRINK)
@@ -372,6 +400,7 @@
 				else
 					M.playsound_local(owner.loc, play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
 				 //these are all external sound triggers now, so it's ok.
+
 	if(to_update)
 		for(var/mob/living/M in contents)
 			if(M.client)
