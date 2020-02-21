@@ -2,7 +2,7 @@
 //Gauss beam for gaussguns -RadiantFlash//
 /obj/item/projectile/energy/gauss
 	name = "gauss bolt"
-	icon = 'icons/obj/projectiles.dmi' //CHOMPEdit: Removed '_yw' from the path to use regular projectiles .dmi. It already has a gauss icon in it. The _yw file had 4 dir icon but projectiles only work with 1 static dir. 
+	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "gauss"
 	damage = 35
 	stun = 0
@@ -14,7 +14,7 @@
 
 /obj/item/projectile/energy/gaussweak.
 	name = "gauss bolt"
-	icon = 'icons/obj/projectiles.dmi' //CHOMPEdit: Removed '_yw' from the path to use regular projectiles .dmi.
+	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "gauss"
 	damage = 25
 	stun = 0
@@ -26,7 +26,7 @@
 
 /obj/item/projectile/energy/gaussrifle
 	name = "gauss bolt"
-	icon = 'icons/obj/projectiles.dmi' //CHOMPEdit: Removed '_yw' from the path to use regular projectiles .dmi.
+	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "gauss"
 	damage = 60
 	stun = 2
