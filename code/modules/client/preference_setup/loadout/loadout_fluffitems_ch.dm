@@ -6,7 +6,7 @@
 	ckeywhitelist = list("nadyr")
 	character_name = list("Taaa")
 	path = /obj/item/clothing/accessory/medal/conduct
-	display_name = "Taaa's Medal"
+	display_name = "Taaa's Medal of Conduct"
 	description = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award on offer. It is often awarded by a captain to a member of their crew."
 
 /datum/gear/fluff/medalofconductdraycu
@@ -49,7 +49,7 @@
 	ckeywhitelist = list("nadyr")
 	character_name = list("Taaa")
 	path = /obj/item/clothing/accessory/medal/silver/valor
-	display_name = "Taaa's Medal"
+	display_name = "Taaa's Medal of Valor"
 	description = "A silver medal awarded for acts of exceptional valor."
 
 //////////////////GOLD HEROISM
@@ -57,7 +57,7 @@
 	ckeywhitelist = list("nadyr")
 	character_name = list("Taaa")
 	path = /obj/item/clothing/accessory/medal/gold/heroism
-	display_name = "Taaa's Medal"
+	display_name = "Taaa's Medal of Exceptional Heroism"
 	description = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
 
 /datum/gear/fluff/medalofgoldheroismerikthedog
