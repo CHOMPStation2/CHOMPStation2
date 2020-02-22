@@ -30,13 +30,47 @@
 	id = "eden_snake"
 	result = "eden_snake"
 	required_reagents = list("eden" = 1, "ethanol" = 1)
+	
+///SAP RECIPES//////
 
+/datum/chemical_reaction/myelamine_sap //This is the clotting agent used by clotting packs.
+	name = "Myelamine"
+	id = "myelamine"
+	result = "myelamine"
+	required_reagents = list("bicaridine" = 1, "iron" = 2, "kelotane" = 1, "bluesap" = 1)
+	result_amount = 1
 
-/datum/chemical_reaction/tea/matcha_latte
-	id = "matcha_latte"
-	result = "matcha_latte"
-	required_reagents = list ("matchapowder" = 1, "milk" = 5)
-	result_amount = 5
+/datum/chemical_reaction/hannoa
+	name = "Hannoa"
+	id = "hannoa"
+	result = "hannoa"
+	required_reagents = list("purplesap" = 1, "iron" = 2, "kelotane" = 1, "carbon" = 1)
+	result_amount = 1
+
+/datum/chemical_reaction/bullvalene
+	name = "Bullvalene"
+	id = "bullvalene"
+	result = "bullvalene"
+	required_reagents = list("dermaline" = 1, "orangesap" = 1, "Copper" = 1)
+	result_amount = 1
+
+/datum/chemical_reaction/nutrient
+	name = "Nutriment"
+	id = "nutriment"
+	result = "nutriment"
+	required_reagents = list("purplesap" = 1, "orangesap" = 1, "bluesap" = 1)
+	result_amount = 3
+	
+/////SERAZINE RECIPES//////
+
+/datum/chemical_reaction/alizine
+	name = "Alizine"
+	id = "alizine"
+	result = "alizine"
+	required_reagents = list("bicaridine" = 1, "serazine" = 1, "tungsten" = 1)
+	result_amount = 3
+	
+/////GENDER CHANGE RECIPES/////
 
 /datum/chemical_reaction/change_drug/male
 	name = "Elixer of Change"
@@ -62,6 +96,61 @@
 ////////////////////////////////////////////////
 /////////DRINKS////////////////////////////////
 //////////////////////////////////////////////
+
+/datum/chemical_reaction/drinks/minttea
+	name = "Mint Tea"
+	id = "minttea"
+	result = "minttea"
+	required_reagents = list("tea" = 5, "mint" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/lemontea
+	name = "Lemon Tea"
+	id = "lemontea"
+	result = "lemontea"
+	required_reagents = list("tea" = 5, "lemonjuice" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/limetea
+	name = "Lime Tea"
+	id = "limetea"
+	result = "limetea"
+	required_reagents = list("tea" = 5, "limejuice" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/orangetea
+	name = "Orange Tea"
+	id = "orangetea"
+	result = "orangetea"
+	required_reagents = list("tea" = 5, "orangejuice" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/berrytea
+	name = "Berry Tea"
+	id = "berrytea"
+	result = "berrytea"
+	required_reagents = list("tea" = 5, "berryjuice" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/cherrytea
+	name = "Cherry Tea"
+	id = "cherrytea"
+	result = "cherrytea"
+	required_reagents = list("tea" = 5, "cherryjelly" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/watermelontea
+	name = "Watermelon Tea"
+	id = "watermelontea"
+	result = "watermelontea"
+	required_reagents = list("tea" = 5, "watermelonjuice" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/tea/matcha_latte
+	id = "matcha_latte"
+	result = "matcha_latte"
+	required_reagents = list ("matchapowder" = 1, "milk" = 5)
+	result_amount = 5
 
 /datum/chemical_reaction/freshtea/green
 	id = "freshteagreen"

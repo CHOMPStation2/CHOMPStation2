@@ -188,6 +188,110 @@
 	M.adjustBruteLoss(1)
 	M.adjustToxLoss(1)
 
+///SAP REAGENTS////
+//This is all a direct port from aeiou.
+
+/datum/reagent/hannoa
+	name = "Hannoa"
+	id = "hannoa"
+	description = "A powerful clotting agent that treats brute damage very quickly but takes a long time to be metabolised. Overdoses easily, reacts badly with other chemicals."
+	taste_description = "paint"
+	reagent_state = LIQUID
+	color = "#163851"
+	overdose = 8
+	scannable = 1
+	metabolism = 0.03
+
+/datum/reagent/hannoa/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	if(ishuman(M))
+		var/wound_heal = 1.5 * removed
+		var/mob/living/carbon/human/H = M
+		for(var/obj/item/organ/external/O in H.bad_external_organs)
+			for(var/datum/wound/W in O.wounds)
+				if(W.bleeding())
+					W.damage = max(W.damage - wound_heal, 0)
+					if(W.damage <= 0)
+						O.wounds -= W
+		M.take_organ_damage(3 * removed, 0)
+		if(M.losebreath < 15)
+			M.AdjustLosebreath(1)
+		H.custom_pain("It feels as if your veins are fusing shut!",60)
+
+/datum/reagent/hannoa/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //Sleepy if not overdosing.
+	..()
+	var/effective_dose = dose
+	if(effective_dose < 2)
+		if(effective_dose == metabolism * 2 || prob(5))
+			M.emote("yawn")
+		else if(effective_dose < 5)
+			M.eye_blurry = max(M.eye_blurry, 10)
+		else if(effective_dose < 20)
+			if(prob(50))
+				M.Weaken(2)
+			M.drowsyness = max(M.drowsyness, 20)
+	else
+		M.sleeping = max(M.sleeping, 20)
+
+
+/datum/reagent/bullvalene //This is for the third sap. It converts Brute Oxy and burn into slightly less toxins.
+	name = "bullvalene"
+	id = "bullvalene"
+	description = "witty pending description. Converts brute and burn into toxin. Or at least is supposed to."
+	taste_description = "sulfur"
+	reagent_state = LIQUID
+	color = "#163851"
+	overdose = 8 //This many units starts killing you.
+	scannable = 1 // Mechs can scan this ye
+	metabolism = 0.03 //Slow metabolism. This value was plucked out of nowhere. Can be changed.
+
+/datum/reagent/bullvalene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_SLIME || alien == IS_DIONA)
+		return
+	if(M.getBruteLoss() || M.getFireLoss() || M.getOxyLoss())
+		M.adjustOxyLoss(-1)
+		M.adjustFireLoss(-1)
+		M.adjustBruteLoss(-1)
+		M.adjustToxLoss(0.8)
+
+/////SERAZINE REAGENTS///////
+
+/datum/reagent/serazine
+	name = "Serazine"
+	id = "serazine"
+	description = "A sweet tasting flower extract, it has very mild anti toxic properties, help with hallucinations and drowsyness, and can be used to make potent drugs."
+	taste_description = "sweet nectar"
+	reagent_state = LIQUID
+	color = "#df9898"
+	scannable = 1
+
+/datum/reagent/serazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/chem_effective = 1
+	if(alien != IS_DIONA)
+		M.drowsyness = max(0, M.drowsyness - 3 * removed * chem_effective)
+		M.hallucination = max(0, M.hallucination - 6 * removed * chem_effective)
+		M.adjustToxLoss(-2 * removed * chem_effective)
+
+/datum/reagent/alizene
+	name = "Alizene"
+	id = "alizene"
+	description = "A derivative from bicaridine enhanced by serazine to more effectively mend flesh, but is ineffective against internal hemorrhage."
+	taste_description = "bittersweet"
+	taste_mult = 3
+	reagent_state = LIQUID
+	color = "#b37979"
+	overdose = REAGENTS_OVERDOSE
+	scannable = 1
+
+/datum/reagent/alizene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/chem_effective = 1
+	if(alien == IS_SLIME)
+		chem_effective = 0.75
+	if(alien != IS_DIONA)
+		M.heal_organ_damage(12 * removed * chem_effective, 0)
+
+///GENDER CHANGE REAGENTS////
+
 /datum/reagent/change_drug //base chemical
 	name = "Elixer of Change" //always the same name
 	id = "change_drug"
@@ -239,6 +343,112 @@
 ////////////////////////////////////////////////
 /////////DRINKS////////////////////////////////
 //////////////////////////////////////////////
+
+/datum/reagent/drink/tea/minttea
+	name = "Mint Tea"
+	id = "minttea"
+	description = "A tasty mixture of mint and tea. It's apparently good for you!"
+	color = "#A8442C"
+	taste_description = "black tea with tones of mint"
+
+	glass_name = "mint tea"
+	glass_desc = "A tasty mixture of mint and tea. It's apparently good for you!"
+
+	cup_name = "cup of mint tea"
+	cup_desc = "A tasty mixture of mint and tea. It's apparently good for you!"
+
+/datum/reagent/drink/tea/lemontea
+	name = "Lemon Tea"
+	id = "lemontea"
+	description = "A tasty mixture of lemon and tea. It's apparently good for you!"
+	color = "#FC6A00"
+	taste_description = "black tea with tones of lemon"
+
+	glass_name = "lemon tea"
+	glass_desc = "A tasty mixture of lemon and tea. It's apparently good for you!"
+
+	cup_name = "cup of lemon tea"
+	cup_desc = "A tasty mixture of lemon and tea. It's apparently good for you!"
+
+/datum/reagent/drink/tea/limetea
+	name = "Lime Tea"
+	id = "limetea"
+	description = "A tasty mixture of lime and tea. It's apparently good for you!"
+	color = "#DE4300"
+	taste_description = "black tea with tones of lime"
+
+	glass_name = "lime tea"
+	glass_desc = "A tasty mixture of lime and tea. It's apparently good for you!"
+
+	cup_name = "cup of berry tea"
+	cup_desc = "A tasty mixture of lime and tea. It's apparently good for you!"
+
+/datum/reagent/drink/tea/orangetea
+	name = "Orange Tea"
+	id = "orangetea"
+	description = "A tasty mixture of orange and tea. It's apparently good for you!"
+	color = "#FB4F06"
+	taste_description = "black tea with tones of orange"
+
+	glass_name = "orange tea"
+	glass_desc = "A tasty mixture of orange and tea. It's apparently good for you!"
+
+	cup_name = "cup of orange tea"
+	cup_desc = "A tasty mixture of orange and tea. It's apparently good for you!"
+
+/datum/reagent/drink/tea/berrytea
+	name = "Berry Tea"
+	id = "berrytea"
+	description = "A tasty mixture of berries and tea. It's apparently good for you!"
+	color = "#A60735"
+	taste_description = "black tea with tones of berries"
+
+	glass_name = "berry tea"
+	glass_desc = "A tasty mixture of berries and tea. It's apparently good for you!"
+
+	cup_name = "cup of berry tea"
+	cup_desc = "A tasty mixture of berries and tea. It's apparently good for you!"
+
+/datum/reagent/drink/tea/cherrytea
+	name = "Cherry Tea"
+	id = "cherrytea"
+	description = "A tasty mixture of cherries and tea. It's apparently good for you!"
+	color = "#c15962"
+	taste_description = "black tea with lots of cherries"
+
+	glass_name = "cherry tea"
+	glass_desc = "A tasty mixture of cherries and tea. It's apparently good for you!"
+
+	cup_name = "cup of cherry tea"
+	cup_desc = "A tasty mixture of cherries and tea. It's apparently good for you!"
+
+/datum/reagent/drink/tea/watermelontea
+	name = "Watermelon Tea"
+	id = "watermelontea"
+	description = "A tasty mixture of watermelon and tea. It's apparently good for you!"
+	color = "#9f2c2c"
+	taste_description = "black tea with sweet watermelon for flavouring"
+
+	glass_name = "watermelon tea"
+	glass_desc = "A tasty mixture of watermelon and tea. It's apparently good for you!"
+
+	cup_name = "cup of watermelon tea"
+	cup_desc = "A tasty mixture of watermelon and tea. It's apparently good for you!"
+
+/datum/reagent/drink/tea/matcha_latte //Putting this as tea to inherit tea variables. Should not have the same toxloss as matcha so it can be placed in a dispenser without breaking balance.
+	name = "Matcha latte"
+	id = "matcha_latte"
+	description = "A nice and tasty beverage to enjoy while studying."
+	taste_description = "creamy, vegetal sweetness"
+	color = "#b1c48c"
+	adj_temp = 5
+
+	glass_name = "matcha latte"
+	glass_desc = "A nice and refreshing beverage while you are studying."
+
+	cup_icon_state = "cup_latte"
+	cup_name = "cup of matcha latte"
+	cup_desc = "A nice and refreshing beverage while you are studying."
 
 /datum/reagent/drink/tea/dyloteane
 	name = "The Anti-Irish"
@@ -337,7 +547,7 @@
 	M.adjustToxLoss(-0.5 * removed)
 
 /datum/reagent/ethanol/coffee/jackbrew
-	name = "Jack's brew"
+	name = "\improper Jack's brew"
 	id = "jackbrew"
 	description = "Irish coffee, and hyperzine. A common mix for panicked drinkers, EMTS, Paramedics, and CMOs alone on the job."
 	taste_description = "wishing you could give up on the day"
@@ -655,3 +865,29 @@
 
 	glass_name = "horchata"
 	glass_desc = "A sweet and cold rice milk beverage."
+
+//////SAP IN UNREFINED FORM////
+
+/datum/reagent/toxin/bluesap //This is the first sap. Blue one.
+	name = "Blue Sap"
+	id = "bluesap"
+	description = "Glowing blue liquid."
+	reagent_state = LIQUID
+	color = "#91f9ff" // rgb(145, 249, 255)
+	metabolism = 0.01
+	strength = 10//Don't drink it
+	mrate_static = TRUE
+
+/datum/reagent/purplesap
+	name = "Purple sap"
+	id = "purplesap"
+	description = "Purple liquid. It is very sticky and smells of ammonia."
+	color = "#7a48a0"
+	taste_description = "Ammonia"
+
+/datum/reagent/orangesap
+	name = "Orange sap"
+	id = "orangesap"
+	description = "Orange liquid. It wobbles around a bit like jelly."
+	color = "#e0962f"
+	taste_description = "Ammonia"
