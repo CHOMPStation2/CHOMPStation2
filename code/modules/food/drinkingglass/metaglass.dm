@@ -18,6 +18,13 @@
 /obj/item/weapon/reagent_containers/food/drinks/metaglass/on_reagent_change()
 	if (reagents.reagent_list.len > 0)
 		var/datum/reagent/R = reagents.get_master_reagent()
+		
+		//CHOMPedit start of dynamic sprite source - Jack
+		if(R.glass_icon_source == null)
+			icon = initial(icon)
+		else
+			icon = R.glass_icon_source
+		//CHOMPedit end of dynamic sprite source - Jack
 
 		if(R.glass_icon_state)
 			icon_state = R.glass_icon_state
@@ -63,6 +70,7 @@ Drinks Data
 /datum/reagent
 	var/glass_icon_state = null
 	var/glass_center_of_mass = null
+	var/glass_icon_source = null //CHOMP A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
 
 /datum/reagent/adminordrazine
 	glass_icon_state = "golden_cup"
@@ -610,10 +618,6 @@ Drinks Data
 	glass_icon_state = "chrysanthemum"
 	glass_center_of_mass = list("x"=16, "y"=8)
 
-/datum/reagent/ethanol/cloverclub
-	glass_icon_state = "cloverclub"
-	glass_center_of_mass = list("x"=16, "y"=8)
-
 /datum/reagent/ethanol/coldfront
 	glass_icon_state = "coldfront"
 	glass_center_of_mass = list("x"=16, "y"=8)
@@ -660,3 +664,93 @@ Drinks Data
 
 /datum/reagent/ethanol/mojito
 	glass_icon_state = "mojito"
+
+//////////////////CHOMP//////////////////////////
+
+/datum/reagent/ethanol/cloverclub
+	glass_icon_state = "cloverclub"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+	glass_center_of_mass = list("x"=16, "y"=8)
+
+/datum/reagent/ethanol/spiderdrink
+	glass_icon_state = "glassofspiders"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/drink/bubbleteawatermelon
+	glass_icon_state = "bubbleteawatermelonglass"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+	glass_center_of_mass = list("x"=16, "y"=9)
+
+/datum/reagent/drink/bubbleteastrawberry
+	glass_icon_state = "bubbleteastrawberryglass"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+	glass_center_of_mass = list("x"=16, "y"=9)
+
+/datum/reagent/drink/bubbleteacherry
+	glass_icon_state = "bubbleteacherryglass"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+	glass_center_of_mass = list("x"=16, "y"=9)
+
+/datum/reagent/drink/bubbleteacoffee
+	glass_icon_state = "bubbleteacoffeeglass"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+	glass_center_of_mass = list("x"=16, "y"=9)
+
+/datum/reagent/drink/bubbleteabanana
+	glass_icon_state = "bubbleteabananaglass"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+	glass_center_of_mass = list("x"=16, "y"=9)
+
+/datum/reagent/drink/horchata
+	glass_icon_state = "horchata"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+	glass_center_of_mass = list("x"=16, "y"=7)
+
+/datum/reagent/toxin/bluetrain
+	glass_icon_state = "bluetrain"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+	glass_center_of_mass = list("x"=16, "y"=8)
+
+/datum/reagent/drink/lovepotion
+	glass_icon_state = "lovepotion"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/drink/lowpower
+	glass_icon_state = "lowpower"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/ethanol/coffee/jackbrew
+	glass_icon_state = "jackbrew"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/ethanol/bookwyrm
+	glass_icon_state = "bookwyrm"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/drink/highpower
+	glass_icon_state = "highpower"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/ethanol/flapper
+	glass_icon_state = "flapper"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/toxin/oilslide
+	glass_icon_state = "oilslide"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/ethanol/sitonmyface
+	glass_icon_state = "sitonmyface"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/ethanol/hachi
+	glass_icon_state = "hachi"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/ethanol/mojito
+	glass_icon_state = "mojito"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'
+
+/datum/reagent/slimedrink
+	glass_icon_state = "slimedrink"
+	glass_icon_source = 'icons/obj/drinks_ch.dmi'

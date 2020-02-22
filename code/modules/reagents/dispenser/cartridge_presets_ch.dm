@@ -13,7 +13,7 @@
 	carrot		spawn_reagent = "carrotjuice"
 	apple		spawn_reagent = "applejuice"
 	tomato		spawn_reagent = "tomatojuice"
-	/*nutbutter	spawn_reagent = "nutbutter"*/ //Not imported yet - Jack
+	peanutbutter	spawn_reagent = "peanutbutter"
 	soymilk		spawn_reagent = "soymilk"
 	grenadine	spawn_reagent = "grenadine"
 	gingerale	spawn_reagent = "gingerale"
