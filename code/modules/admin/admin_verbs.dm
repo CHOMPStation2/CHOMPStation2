@@ -185,7 +185,8 @@ var/list/admin_verbs_server = list(
 	/client/proc/modify_server_news,
 	/client/proc/recipe_dump,
 	/client/proc/panicbunker,
-	/client/proc/paranoia_logging
+	/client/proc/paranoia_logging,
+	/client/proc/ip_reputation
 	)
 
 var/list/admin_verbs_debug = list(
@@ -372,7 +373,7 @@ var/list/admin_verbs_event_manager = list(
 
 /client/proc/add_admin_verbs()
 	if(holder)
-		control_freak = CONTROL_FREAK_ALL | CONTROL_FREAK_SKIN | CONTROL_FREAK_MACROS  //CHOMPedit KSC 1/30/20 - This enables Admins to use Macros and change use custom skins.
+		control_freak = 0 //CHOMPedit KSC 1/30/20 - This enables all clienside options for Admins
 		verbs += admin_verbs_default
 		if(holder.rights & R_BUILDMODE)		verbs += /client/proc/togglebuildmodeself
 		if(holder.rights & R_ADMIN)			verbs += admin_verbs_admin

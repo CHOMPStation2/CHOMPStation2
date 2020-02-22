@@ -43,6 +43,7 @@
 	#include "southern_cross-6.dmm"
 	#include "southern_cross-7.dmm"
 	#include "southern_cross-8.dmm"
+	/*#include "southern_cross-casino.dmm"*/ //By default is disabled and loaded in during round for casino events - Jack
 
 	#include "submaps/_southern_cross_submaps.dm"
 

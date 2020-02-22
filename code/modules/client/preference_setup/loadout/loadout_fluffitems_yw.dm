@@ -346,6 +346,22 @@
 
 //  F CKEYS
 
+//Foxicide
+//Kaith
+/datum/gear/fluff/kaith_modkit
+	path = /obj/item/device/modkit_conversion/fluff/kaith_knife_kit
+	display_name = "Kaith's modkit"
+	description = "A kit containing all the needed tools and parts to modify a survival knife"
+	ckeywhitelist = list("foxicide")
+	character_name = list("Kaith")
+
+/datum/gear/fluff/kaith_bag
+	path = /obj/item/weapon/storage/backpack/fluff/kaith
+	display_name = "Light duffle bag"
+	description = "A compact duffle bag, meant for long hikes."
+	ckeywhitelist = list("foxicide")
+	character_name = list("Kaith")
+
 //  G CKEYS
 
 //generalpantsu
@@ -724,6 +740,14 @@
 	ckeywhitelist = list("mocatheporg1")
 	character_name = list("Mocha")
 	allowed_roles = list("Explorer", "Pathfinder")
+
+/datum/gear/fluff/mocha_cloak
+	path = /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
+	display_name = "Warden Cloak"
+	description = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
+	ckeywhitelist = list("mocatheporg1")
+	character_name = list("Mocha")
+	allowed_roles = list("Warden")
 
 //  N CKEYS
 //NESgamer190

@@ -42,6 +42,7 @@
 	if(M.no_vore) //If the mob isn't supposed to have a stomach, let's not give it an insidepanel so it can make one for itself, or a stomach.
 		return TRUE
 	M.verbs += /mob/living/proc/insidePanel
+	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
@@ -229,6 +230,12 @@
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
 
+
+	//CHOMP reagent belly
+	P.receive_reagents = src.receive_reagents
+	P.give_reagents = src.give_reagents
+
+
 	var/list/serialized = list()
 	for(var/belly in src.vore_organs)
 		var/obj/belly/B = belly
@@ -258,6 +265,12 @@
 	permit_healbelly = P.permit_healbelly
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
+
+
+	//CHOMP reagents belly
+	receive_reagents = P.receive_reagents
+	give_reagents = P.give_reagents
+
 
 	release_vore_contents(silent = TRUE)
 	vore_organs.Cut()

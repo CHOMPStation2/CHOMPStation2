@@ -33,7 +33,7 @@
 	desc = "Your body requires near cryogenic temperatures to operate. Extremely intricate arrangements are needed for you to remain indoors. The outdoors is comfortable for you, however. WARNING: You will spawn in an atmosphere that is VERY hostile to you with no protective equipment!"
 	cost = 0
 	var_changes = list("heat_discomfort_level" = T0C)
-	excludes = list(/datum/trait/cold_discomfort,/datum/trait/hot_discomfort,/datum/trait/cold_blood)
+	excludes = list(/datum/trait/hot_blood,/datum/trait/cold_blood,/datum/trait/extreme_cold_blood)
 */
 // YW Addition End
 

@@ -107,6 +107,11 @@
 	name = "Bockscar"
 	real_name = "Bockscar"
 
+/mob/living/simple_mob/animal/passive/dog/corgi/puppy/wiggle //yw addition
+	name = "Mister Wiggles"
+	real_name = "Mister Wiggles"
+	desc = "An emotional support corgi! He gets along with everyone, even Runtime."
+
 //IAN! SQUEEEEEEEEE~
 /mob/living/simple_mob/animal/passive/dog/corgi/Ian
 	name = "Ian"
