@@ -36,7 +36,7 @@ Unsure where to begin contributing to Yawn-Wider? You can start by looking throu
 
 Any code submissions that do not meet our coding standards are likely to be rejected, or at the very least, have a maintainer request changes on your PR. Save time and follow these standards from the start.
 
-* If it is something like a bugfix that Polaris would want (the codebase we use), code it in their code and make the PR to them. We regularly update from them. They would want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
+* If it is something like a bugfix that VoreStation or Polaris would want (the codebases we use), code it in their code and make the PR to them. We regularly update from them. They would want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
 * Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation). All PRs with edits to stock .DMI files might be rejected.
 * When changing any code in any stock Polaris .DM file, you must mark your changes:
     * For single-line changes: //Yawn-Wider Edit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
