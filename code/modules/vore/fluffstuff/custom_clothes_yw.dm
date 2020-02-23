@@ -1492,10 +1492,10 @@
 // ******
 // RisingStarSlash
 // ******
-//Stellar Wolf
+//Monika Wolfe
 /obj/item/clothing/accessory/collar/fluff/stellar_collar
 	name = "Heart Collar"
-	desc = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Stellar and Reyna close together, paws locked and facing the picture slightly sideways with beaming smiles."
+	desc = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Monika and Isha close together, paws locked and facing the picture slightly sideways with beaming smiles."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "stellarcollar"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
