@@ -1,8 +1,8 @@
-# Contributing to VOREStation
+# Contributing to Yawn-Wider
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to VOREStation, which is hosted in the [VOREStation Org](https://github.com/VOREStation) on GitHub.
+The following is a set of guidelines for contributing to Yawn-Wider, which is hosted in the [Yawn-Wider](https://github.com/Yawn-Wider/YWPolarisVore) on GitHub.
 These are just guidelines, not rules, use your best judgment and feel free to propose changes to this document in a pull request.
 
 #### Table Of Contents
@@ -12,7 +12,7 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 [How Can I Contribute?](#how-can-i-contribute)
   * [Your First Code Contribution](#your-first-code-contribution)
-  * [VOREStation Coding Standards](#vorestation-coding-standards)
+  * [Yawn-Wider Coding Standards](#Yawn-Wider-coding-standards)
   * [Pull Requests](#pull-requests)
   * [Git Commit Messages](#git-commit-messages)
 
@@ -30,20 +30,20 @@ By participating, you are expected to uphold this code.
 
 ### Your First Code Contribution
 
-Unsure where to begin contributing to VOREStation? You can start by looking through the issues tab.
+Unsure where to begin contributing to Yawn-Wider? You can start by looking through the issues tab.
 
-### VOREStation Coding Standards
+### Yawn-Wider Coding Standards
 
 Any code submissions that do not meet our coding standards are likely to be rejected, or at the very least, have a maintainer request changes on your PR. Save time and follow these standards from the start.
 
 * If it is something like a bugfix that Polaris would want (the codebase we use), code it in their code and make the PR to them. We regularly update from them. They would want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
-* Never edit stock Polaris .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris). All PRs with edits to stock .DMI files will be rejected.
+* Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation). All PRs with edits to stock .DMI files might be rejected.
 * When changing any code in any stock Polaris .DM file, you must mark your changes:
-    * For single-line changes: //VOREStation Edit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
-    * For multi-line additions: //VOREStation Edit - "Explanation" and then at the bottom of your changes, //VOREStation Edit End
-    * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* VOREStation Removal - "Reason"
+    * For single-line changes: //Yawn-Wider Edit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
+    * For multi-line additions: //Yawn-Wider Edit - "Explanation" and then at the bottom of your changes, //Yawn-Wider Edit End
+    * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* Yawn-Wider Removal - "Reason"
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
-* Any new files should have "_vr" at the end. For example, "life_vr.dm". Just make them in the same location as the file they are related to.
+* Any new files should have "_yw" at the end. For example, "life_yw.dm". Just make them in the same location as the file they are related to.
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details.
 
 The `attempt_vr()` proc has been added for your convienence. It allows a many-line change to become a single-line change in the existing Polaris files, preserving mergeability and allowing better code separation while preventing your new code from causing runtimes that stop the original code from running. If you are wanting to inject new procedures into an existing proc, called `update_atoms()` for example, you would create `update_atoms_vr()` in a nearby `_vr.dm` file, and then call to it from a single line in the original `update_atoms()` with `attempt_vr()`.
@@ -72,7 +72,7 @@ Then in our `handle_grabs_vr()` proc, if we want to avoid performing the stock g
 * Use the GitHub magic words "Fixed/Fixes/Fix, Resolved/Resolves/Resolve, Closed/Closes/Close", as in, "Closes #1928", as this will automatically close that issue when the PR is merged if it is a fix for that issue.
 
 ## Licensing
-VOREStation is licensed under the GNU Affero General Public License version 3, which can be found in full in LICENSE-AGPL3.txt.
+Yawn-Wider is licensed under the GNU Affero General Public License version 3, which can be found in full in LICENSE-AGPL3.txt.
 
 Commits with a git authorship date prior to `1420675200 +0000` (2015/01/08 00:00) are licensed under the GNU General Public License version 3, which can be found in full in LICENSE-GPL3.txt.
 
