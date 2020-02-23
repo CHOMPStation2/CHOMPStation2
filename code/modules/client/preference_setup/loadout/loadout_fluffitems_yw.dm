@@ -801,7 +801,7 @@
 	display_name = "Heart Collar"
 	description = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Stellar and Reyna close together, paws locked and facing the picture slightly sideways with beaming smiles."
 	ckeywhitelist = list("risingstarslash")
-	character_name = list("Stellar Wolf")
+	character_name = list("Monika Wolfe")
 
 //radiantflash
 //Vasharr Zahirn
