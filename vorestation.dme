@@ -2013,6 +2013,7 @@
 #include "code\modules\food\drinkingglass\glass_boxes.dm"
 #include "code\modules\food\drinkingglass\glass_types.dm"
 #include "code\modules\food\drinkingglass\metaglass.dm"
+#include "code\modules\food\drinkingglass\metaglass_ch.dm"
 #include "code\modules\food\drinkingglass\shaker.dm"
 #include "code\modules\food\food\cans.dm"
 #include "code\modules\food\food\condiment.dm"
