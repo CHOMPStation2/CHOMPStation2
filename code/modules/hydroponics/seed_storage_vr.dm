@@ -36,6 +36,7 @@
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
+		/obj/item/seeds/teaseed = 3, //CHOMPEDIT
 		/obj/item/seeds/tobaccoseed = 3,
 		/obj/item/seeds/tomatoseed = 3,
 		/obj/item/seeds/towermycelium = 3,
@@ -93,6 +94,7 @@
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
+		/obj/item/seeds/teaseed = 3, //CHOMPEDIT
 		/obj/item/seeds/tobaccoseed = 3,
 		/obj/item/seeds/tomatoseed = 3,
 		/obj/item/seeds/towermycelium = 3,
