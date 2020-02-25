@@ -62,6 +62,7 @@
 		"Teshari" = 'icons/mob/species/seromi/suit.dmi'
 		)
 
+//ywedit start. replaces a else by a return, so it don't changes  if not teshari to ties.dmi
 /obj/item/clothing/accessory/poncho/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
 	..()
 	var/mob/living/carbon/human/H = loc
@@ -70,12 +71,11 @@
 			icon_override = 'icons/mob/species/seromi/suit.dmi'
 		return
 		update_clothing_icon()
+//ywedit end
 
 /obj/item/clothing/accessory/poncho/dropped() //Resets the override to prevent the wrong .dmi from being used because equipped only triggers when wearing ponchos as suits.
-	var/mob/living/carbon/human/H = loc
-	if(H.species.name == "Teshari")
-		icon_override = null
-	return
+	icon_override = null
+
 
 /obj/item/clothing/accessory/poncho/green
 	name = "green poncho"
