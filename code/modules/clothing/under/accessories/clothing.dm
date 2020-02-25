@@ -68,12 +68,14 @@
 	if(istype(H) && H.wear_suit == src)
 		if(H.species.name == "Teshari")
 			icon_override = 'icons/mob/species/seromi/suit.dmi'
-		else
-			icon_override = 'icons/mob/ties.dmi'
+		return
 		update_clothing_icon()
 
 /obj/item/clothing/accessory/poncho/dropped() //Resets the override to prevent the wrong .dmi from being used because equipped only triggers when wearing ponchos as suits.
-	icon_override = null
+	var/mob/living/carbon/human/H = loc
+	if(H.species.name == "Teshari")
+		icon_override = null
+	return
 
 /obj/item/clothing/accessory/poncho/green
 	name = "green poncho"
