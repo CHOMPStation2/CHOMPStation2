@@ -4,7 +4,17 @@
 	icobase = 'icons/mob/human_races/r_grey.dmi'
 	deform = 'icons/mob/human_races/r_def_grey.dmi'
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch)
-	blurb = "Insert Grey Lore."
+
+	blurb = "Greys are a species of aliens that are more weak than humans physically, but possesses\
+	the ability to talk telephatically with themselves and other species, Due to this, Grey have no\
+	naming scheme or language, having names only to make easier communication with other species.\
+	<br>\The Grey have unknown origin even to themselves, scientists believes they came from\
+	another galaxy, greys have chosen mauna-b to act as their home planet due to high amount of grey\
+	residing in there."
+
+	wikilink = "https://www.yawn.ocry.com/index.php?title=Grey"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/grey)
+
 	num_alternate_languages = 3
 	species_language = LANGUAGE_PSIONIC
 	secondary_langs = list(LANGUAGE_PSIONIC)
@@ -37,7 +47,7 @@
 		O_BRAIN =		/obj/item/organ/internal/brain,
 		O_APPENDIX = 	/obj/item/organ/internal/appendix,
 		O_SPLEEN = 		/obj/item/organ/internal/spleen,
-		O_EYES =		/obj/item/organ/internal/eyes/grey,
+		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
@@ -61,3 +71,6 @@
 /datum/species/grey/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.fire_stacks < 0 && H.get_water_protection() <= 0.5)	// If over half your body is soaked, you're melting.
 		H.adjustFireLoss(max(0,(3 - (3 * H.get_water_protection()))))	// Tripled because 0.5 is miniscule, and fire_stacks are capped in both directions.
+
+/mob/living/carbon/human/grey/New(var/new_loc) //makes grey spawnable
+	..(new_loc, SPECIES_GREY_YW)
