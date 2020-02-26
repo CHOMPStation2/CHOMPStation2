@@ -819,8 +819,6 @@
 					<li>Bosun's whistle</li>
 					<li>Golden cup</li>
 					<li>Havana cigar case</li>
-					<li>Cute witch</li>
-					<li>Gladiator</li>
 				</ul>
 				Booze - ALL BOOZE IS 50
 				<ul>
@@ -900,3 +898,222 @@
 		src.attack_hand(user)
 		qdel(I)
 
+
+/////////////CASINO PRIZE DISPENSER////////////////////////
+
+/obj/machinery/casino_prize_dispenser //WIP sprites and variables and prize lists
+	name = "Casino Prize Exchanger"
+	desc = "Exchange your chips to obtain wonderful prizes! Hoepfully you'll get to keep some of them for a while."
+	icon = 'icons/obj/casino_ch.dmi'
+	icon_state ="casino_atm"
+	anchored = 1
+
+	var/icon_vend //Icon_state when vending
+	var/icon_deny //Icon_state when denying access
+
+	// Vending-related
+	var/active = 1 //No sales pitches if off!
+	var/vend_ready = 1 //Are we ready to vend?? Is it time??
+	var/vend_delay = 10 //How long does it take to vend?
+	var/categories = CAT_NORMAL // Bitmask of cats we're currently showing
+	var/datum/stored_item/vending_product/currently_vending = null // What we're requesting payment for right now
+	var/status_message = "" // Status screen messages like "insufficient funds", displayed in NanoUI
+	var/status_error = 0 // Set to 1 if status_message is an error
+
+	var/list/weapons	= list() // For each, use the following pattern:
+	var/list/gear		= list() // list(/type/path = amount,/type/path2 = amount2)
+	var/list/clothing 	= list() // No specified amount = only one in stock
+	var/list/misc 		= list()
+	var/list/drinks 	= list()
+	var/list/prices     = list() // Prices for each item, list(/type/path = price), items not in the list don't have a price.
+
+	// List of vending_product items available.
+	var/list/product_records = list()
+
+	// Stuff relating vocalizations
+	var/list/slogan_list = list()
+	var/shut_up = 1 //Stop spouting those godawful pitches!
+	var/vend_reply //Thank you for shopping!
+	var/last_reply = 0
+	var/last_slogan = 0 //When did we last pitch?
+	var/slogan_delay = 6000 //How long until we can pitch again?
+
+	var/list/log = list()
+	var/req_log_access = access_cargo //default access for checking logs is cargo
+	var/has_logs = 0 //defaults to 0, set to anything else for vendor to have logs
+
+
+	/*
+		var/list/all_products = list(
+		list("Melee weapons, guns and 'guns'", CAT_WEAPONS),
+		list("Gear and accessories", CAT_GEAR),
+		list("Costumes and masks", CAT_CLOTHING),
+		list("Toys and miscellaneous", CAT_MISC),
+		list("Booze", CAT_DRINKS))
+	*/
+
+/obj/machinery/casino_prize_dispenser/Initialize()
+	build_inventory()
+
+/obj/machinery/casino_prize_dispenser/proc/build_inventory() //WIP
+	var/list/all_products = list(
+		list(weapons, CAT_WEAPONS),
+		list(gear, CAT_GEAR),
+		list(clothing, CAT_CLOTHING),
+		list(misc, CAT_MISC),
+		list(drinks, CAT_DRINKS))
+
+	for(var/current_list in all_products)
+		var/category = current_list[2]
+
+		for(var/entry in current_list[1])
+			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
+
+			product.price = (entry in prices) ? prices[entry] : 0
+			product.category = category
+
+/obj/machinery/casino_prize_dispenser/Destroy()
+	for(var/datum/stored_item/vending_product/R in product_records)
+		qdel(R)
+	product_records = null
+	return ..()
+
+/obj/machinery/casino_prize_dispenser/attackby(obj/item/weapon/W as obj, mob/user as mob)
+
+	if(currently_vending)
+		var/paid = 0
+		var/handled = 0
+
+		if(istype(W, /obj/item/weapon/spacecasinocash))
+			var/obj/item/weapon/spacecasinocash/C = W
+			paid = pay_with_chips(C, user)
+			handled = 1
+
+		if(paid)
+			vend(currently_vending, usr)
+			return
+		else if(handled)
+			SSnanoui.update_uis(src)
+			return // don't smack that machine with your 2 chips
+
+	if(istype(W, /obj/item/weapon/spacecasinocash))
+		attack_hand(user)
+		return
+	..()
+
+/obj/machinery/casino_prize_dispenser/attack_hand(mob/user as mob)
+	if(stat & (BROKEN|NOPOWER))
+		return
+
+	ui_interact(user)
+
+/obj/machinery/casino_prize_dispenser/proc/pay_with_chips(var/obj/item/weapon/spacecasinocash/cashmoney, mob/user)
+	if(currently_vending.price > cashmoney.worth)
+
+		// This is not a status display message, since it's something the character
+		// themselves is meant to see BEFORE putting the money in
+		to_chat(usr, "\icon[cashmoney] <span class='warning'>That is not enough chips.</span>")
+		return 0
+
+	if(istype(cashmoney, /obj/item/weapon/spacecasinocash))
+
+		visible_message("<span class='info'>\The [usr] inserts some chips into \the [src].</span>")
+		cashmoney.worth -= currently_vending.price
+
+		if(cashmoney.worth <= 0)
+			usr.drop_from_inventory(cashmoney)
+			qdel(cashmoney)
+		else
+			cashmoney.update_icon()
+
+	return 1
+
+/obj/machinery/casino_prize_dispenser/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+	user.set_machine(src)
+
+	var/list/data = list()
+	if(currently_vending)
+		data["mode"] = 1
+		data["product"] = currently_vending.item_name
+		data["price"] = currently_vending.price
+		data["message_err"] = 0
+		data["message"] = status_message
+		data["message_err"] = status_error
+	else
+		data["mode"] = 0
+		var/list/listed_products = list()
+
+		for(var/key = 1 to product_records.len)
+			var/datum/stored_item/vending_product/I = product_records[key]
+
+			if(!(I.category & categories))
+				continue
+
+			listed_products.Add(list(list(
+				"key" = key,
+				"name" = I.item_name,
+				"price" = I.price,
+				"color" = I.display_color)))
+
+		data["products"] = listed_products
+
+	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
+	if(!ui)
+		ui = new(user, src, ui_key, "casino_prize_dispenser_ch.tmpl", name, 440, 600)
+		ui.set_initial_data(data)
+		ui.open()
+
+/obj/machinery/casino_prize_dispenser/Topic(href, href_list)
+	if(stat & (BROKEN|NOPOWER))
+		return
+	if(usr.stat || usr.restrained())
+		return
+
+	if((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf)))) //WIP check the vending_product
+		if((href_list["vend"]) && (vend_ready) && (!currently_vending))
+			var/key = text2num(href_list["vend"])
+			var/datum/stored_item/vending_product/R = product_records[key]
+
+			// This should not happen unless the request from NanoUI was bad
+			if(!(R.category & categories))
+				return
+
+			if(R.price <= 0)
+				vend(R, usr)
+			else
+				currently_vending = R
+				status_message = "Please insert chips to pay for the prize!"
+				status_error = 0
+
+		else if(href_list["cancelpurchase"])
+			currently_vending = null
+
+		SSnanoui.update_uis(src)
+
+/obj/machinery/casino_prize_dispenser/proc/vend(datum/stored_item/vending_product/R, mob/user) //WIP
+	vend_ready = 0 //One thing at a time!!
+	status_message = "Vending..."
+	status_error = 0
+	SSnanoui.update_uis(src)
+
+	if(icon_vend) //Show the vending animation if needed
+		flick(icon_vend,src)
+	spawn(vend_delay)
+		R.get_product(get_turf(src))
+		if(has_logs)
+			do_logging(R, user, 1)
+
+		playsound(src, 'sound/items/vending.ogg', 50, 1, 1)
+
+		status_message = ""
+		status_error = 0
+		vend_ready = 1
+		currently_vending = null
+		SSnanoui.update_uis(src)
+
+	return 1
+
+/obj/machinery/casino_prize_dispenser/proc/do_logging(datum/stored_item/vending_product/R, mob/user, var/vending = 0) //WIP?
+	var/prize_log = "[user.ckey] playing as [user.name] bought a INSERT PORODUCT HERE."
+	log[++log.len] = prize_log
+	//Currently doesnt have in game way to show, to ensure theres no chance of players ckeys exposed - Jack

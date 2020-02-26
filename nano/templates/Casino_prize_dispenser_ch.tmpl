@@ -1,0 +1,42 @@
+<!-- 
+	Interface for vending machines 
+	See: code/game/machinery/vending.dm
+-->
+
+{{if data.mode == 0}} <!-- Listing -->
+<h2>Items available</h2>
+<div class='item'>
+	{{for data.products}}
+	<div class='item'>
+			<div style='float'>
+				{{if value.price > 0}}
+					{{:helper.link('Buy (' + value.price + ')', 'cart', { "vend" : value.key }}}
+				{{else}}
+					{{:helper.link('Vend', 'circle-arrow-s', { "vend" : value.key }}}
+				{{/if}}
+			</div>
+		<div class='itemContent'>
+		{{if value.color}}<span style='color:{{:value.color}}'>{{:value.name}}</span>
+		{{else}}{{:value.name}}
+		</div>
+	</div>
+	{{empty}}
+	No items available!
+	{{/for}}
+</div>
+{{/if}}
+{{else data.mode == 1}} <!-- Payment screen -->
+<h2>Item selected</h2>
+<div class='item'>
+	<div class='item'>
+		<div class='itemLabel'>Item selected:</div> <div class='itemContent'>{{:data.product}}</div>
+		<div class='itemLabel'>Charge:</div> <div class='itemContent'>{{:data.price}}</div>
+	</div>
+	<div class='statusDisplay' style='overflow: auto;'>
+		{{if data.message_err}} <span class='uiIcon16 icon-alert' ></span>{{/if}} {{:data.message}}
+	</div>
+	<div class='item'>
+		{{:helper.link('Cancel', 'arrowreturn-1-w', {'cancelpurchase' : 1})}}
+	</div>
+</div>
+{{/if}}
