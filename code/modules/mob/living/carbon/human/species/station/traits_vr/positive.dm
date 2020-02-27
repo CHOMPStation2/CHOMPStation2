@@ -130,6 +130,26 @@
 	cost = 3
 	var_changes = list("burn_mod" = 0.6)
 
+//YW ADDITIONS START
+/datum/trait/alcohol_tolerance_basic
+	name = "Liver of Iron"
+	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr!"
+	cost = 1
+	var_changes = list("alcohol_tolerance" = 0.75)
+	
+/datum/trait/alcohol_tolerance_advanced
+	name = "Liver of Steel"
+	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers!"
+	cost = 2
+	var_changes = list("alcohol_tolerance" = 0.5)
+
+/datum/trait/alcohol_immunity
+	name = "Liver of Durasteel"
+	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed."
+	cost = 3
+	var_changes = list("alcohol_tolerance" = 0.25)
+//YW ADDITIONS END
+
 /datum/trait/photoresistant
 	name = "Photoresistance"
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%"
