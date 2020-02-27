@@ -90,7 +90,7 @@
 	var/flash_burn =    0									// how much damage to take from being flashed if light hypersensitive
 	var/sound_mod =     1									// Stun from sounds, I.E. flashbangs.
 	var/chemOD_mod =	1									// Damage modifier for overdose
-	var/alcohol_tolerance = 1								// Strength multiplier for ethanol-derived reagents
+	var/alcohol_tolerance = 1								// YW ADDITION: Strength multiplier for ethanol-derived reagents
 	var/vision_flags = SEE_SELF								// Same flags as glasses.
 
 	// Death vars.
