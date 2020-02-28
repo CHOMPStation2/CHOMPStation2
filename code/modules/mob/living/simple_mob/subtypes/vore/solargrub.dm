@@ -30,7 +30,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	// CHOMPEDIT Start, Rykka waz here. *pawstamp*
 	var/charge = null // CHOMPEDIT The amount of power we sucked off, in K as in THOUSANDS.
 	var/can_evolve = 1 // CHOMPEDIT VAR to decide whether this subspecies is allowed to become a queen
-	var/adult_forms = list(/mob/living/simple_mob/vore/solarmoth = 60, /mob/living/simple_mob/vore/solarmoth/lunarmoth = 40)  // CHOMPEDIT VAR that decides what mob the queen form is. ex /mob/living/simple_mob/subtypes/vore/solarmoth
+	var/adult_forms = "/mob/living/simple_mob/vore/solarmoth" // CHOMPEDIT VAR that decides what mob the queen form is. ex /mob/living/simple_mob/subtypes/vore/solarmoth
 	// CHOMPEDIT End, Rykka waz here. *pawstamp*
 
 	faction = "grubs"
