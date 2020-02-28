@@ -91,16 +91,10 @@
 	var_changes = list("burn_mod" = 1.4)
 
 //YW ADDITIONS START
-/datum/trait/alcohol_intolerance_basic
-	name = "Liver of Lilies"
-	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard."
-	cost = -1
-	var_changes = list("alcohol_tolerance" = 2)
-	
 /datum/trait/alcohol_intolerance_advanced
 	name = "Liver of Air"
 	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard."
-	cost = -2
+	cost = -1
 	var_changes = list("alcohol_tolerance" = 3)
 //YW ADDITIONS END
 
