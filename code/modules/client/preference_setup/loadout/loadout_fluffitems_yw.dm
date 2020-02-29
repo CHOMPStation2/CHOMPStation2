@@ -241,6 +241,15 @@
 	ckeywhitelist = list("championfire")
 	character_name = list("Kita")
 
+//codavanistok
+//Coda Vanistok // (Yes, I'm aware they're the same. Yes, this is correct.)
+/datum/gear/fluff/coda_implant
+	path = /obj/item/weapon/implanter/fluff/coda
+	display_name = "Locked size implant"
+	description = "It seems to be locked to two settings."
+	ckeywhitelist = list("codavanistok")
+	character_name = list("Coda Vanistok")
+
 //  D CKEYS
 
 //dameonowen
