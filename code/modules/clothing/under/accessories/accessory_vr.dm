@@ -8,7 +8,7 @@
 	icon_override = 'icons/obj/clothing/collars_vr.dmi'
 	var/writtenon = 0
 
-//ywedit start. replaces a else by a return, so it don't changes  if not teshari to ties.dmi
+//ywedit start. forces different sprite sheet on equip
 /obj/item/clothing/accessory/collar/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
 	..()
 	var/mob/living/carbon/human/H = loc
