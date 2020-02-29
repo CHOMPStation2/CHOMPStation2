@@ -6,7 +6,7 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	icon = 'icons/obj/clothing/collars_vr.dmi'
 	icon_override = 'icons/obj/clothing/collars_vr.dmi'
-	var/icon_previous_override
+	var/icon_previous_override //yw addition
 	var/writtenon = 0
 
 //ywedit start. forces different sprite sheet on equip
