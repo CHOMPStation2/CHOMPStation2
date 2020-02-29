@@ -732,7 +732,7 @@
 	override = 1
 	item_state = "tesh_uniform_cd"
 	sprite_sheets = list(
-					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
+					SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
 					)
 
 /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
