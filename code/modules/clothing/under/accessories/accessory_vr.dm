@@ -6,18 +6,24 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	icon = 'icons/obj/clothing/collars_vr.dmi'
 	icon_override = 'icons/obj/clothing/collars_vr.dmi'
+	var/icon_previous_override
 	var/writtenon = 0
 
 //ywedit start. replaces a else by a return, so it don't changes  if not teshari to ties.dmi
+/obj/item/clothing/accessory/collar/New()
+	..()
+	icon_previous_override = icon_override
+
 /obj/item/clothing/accessory/collar/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
 	..()
 	var/mob/living/carbon/human/H = loc
 	if(istype(H) && H.wear_suit == src)
 		if(H.species.name == SPECIES_TESHARI)
 			icon_override = 'icons/obj/clothing/collars_seromi_yw.dmi'
-		else
-			icon_override = 'icons/obj/clothing/collars_vr.dmi'
 		update_clothing_icon()
+
+/obj/item/clothing/accessory/collar/dropped()
+	icon_override = icon_previous_override
 //ywedit end
 
 /obj/item/clothing/accessory/collar/silver
