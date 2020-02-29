@@ -9,7 +9,7 @@
 	var/icon_previous_override
 	var/writtenon = 0
 
-//ywedit start. replaces a else by a return, so it don't changes  if not teshari to ties.dmi
+//ywedit start. forces different sprite sheet on equip
 /obj/item/clothing/accessory/collar/New()
 	..()
 	icon_previous_override = icon_override
