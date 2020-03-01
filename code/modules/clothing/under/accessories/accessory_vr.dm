@@ -16,11 +16,24 @@
 
 /obj/item/clothing/accessory/collar/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
 	..()
+	setUniqueSpeciesSprite()
+
+/obj/item/clothing/accessory/collar/proc/setUniqueSpeciesSprite()
 	var/mob/living/carbon/human/H = loc
-	if(istype(H) && H.wear_suit == src)
+	if(!istype(H))
+		if(istype(has_suit) && ishuman(has_suit.loc))
+			H = has_suit.loc
+	if(istype(H))
 		if(H.species.name == SPECIES_TESHARI)
 			icon_override = 'icons/obj/clothing/collars_seromi_yw.dmi'
 		update_clothing_icon()
+
+/obj/item/clothing/accessory/collar/on_attached(var/obj/item/clothing/S, var/mob/user)
+	if(!istype(S))
+		return
+	has_suit = S
+	setUniqueSpeciesSprite()
+	..(S, user)
 
 /obj/item/clothing/accessory/collar/dropped()
 	icon_override = icon_previous_override
