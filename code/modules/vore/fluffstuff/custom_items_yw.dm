@@ -635,8 +635,7 @@
 	
 	if(src.stat == DEAD)
 		return
-	var/choice = alert(src, "What would you like your size to be changed to?", "Size modification implant") in list("Normal", "Cancel", "Large")
-	switch(choice)
+	switch(alert(src, "What would you like your size to be changed to?", "Size modification implant", "Normal", "Cancel", "Large"))
 		if("Normal")
 			src.resize(1)
 		if("Large")
