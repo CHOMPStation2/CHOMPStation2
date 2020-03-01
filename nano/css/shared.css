@@ -673,8 +673,9 @@ th.Silicon {
     color: red;
 }
 
+/* YW EDIT: green -> lime */
 .toxin {
-    color: green;
+    color: lime;
 }
 
 .oxyloss {
