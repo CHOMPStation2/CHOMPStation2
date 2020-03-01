@@ -612,7 +612,8 @@
 
 /obj/item/weapon/implant/fluff/coda/post_implant(mob/source)
 	..()
-	source.verbs |= new /mob/living/carbon/human/verb/coda_implant_resize(source)
+	var/mob/living/H = source
+	H.verbs += /obj/item/weapon/implant/fluff/coda/proc/coda_implant_resize
 	implanted_in = source
 	START_PROCESSING(SSobj, src)
 
@@ -627,16 +628,15 @@
 		icon_state = "implant_melted"
 		malfunction = MALFUNCTION_PERMANENT
 
-/mob/living/carbon/human/verb/coda_implant_resize()
+/obj/item/weapon/implant/fluff/coda/proc/coda_implant_resize(var/mob/living/carbon/human/H)
 	set name = "Resize (Implant)"
 	set desc = "Change your size between two different preset options."
 	set category = "IC"
-	set src = usr
-	
-	if(src.stat == DEAD)
+
+	if(H.stat == DEAD)
 		return
-	switch(alert(src, "What would you like your size to be changed to?", "Size modification implant", "Normal", "Cancel", "Large"))
+	switch(alert(H, "What would you like your size to be changed to?", "Size modification implant", "Normal", "Cancel", "Large"))
 		if("Normal")
-			src.resize(1)
+			H.resize(1)
 		if("Large")
-			src.resize(1.22)
+			H.resize(1.22)
