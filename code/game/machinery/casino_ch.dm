@@ -900,7 +900,7 @@
 
 
 /////////////CASINO PRIZE DISPENSER////////////////////////
-
+/*
 /obj/machinery/casino_prize_dispenser //WIP sprites and variables and prize lists
 	name = "Casino Prize Exchanger"
 	desc = "Exchange your chips to obtain wonderful prizes! Hoepfully you'll get to keep some of them for a while."
@@ -920,12 +920,26 @@
 	var/status_message = "" // Status screen messages like "insufficient funds", displayed in NanoUI
 	var/status_error = 0 // Set to 1 if status_message is an error
 
-	var/list/weapons	= list() // For each, use the following pattern:
-	var/list/gear		= list() // list(/type/path = amount,/type/path2 = amount2)
-	var/list/clothing 	= list() // No specified amount = only one in stock
-	var/list/misc 		= list()
-	var/list/drinks 	= list()
+	var/list/list_weapons	= list()
+	var/list/list_gear		= list()
+	var/list/list_clothing 	= list()
+	var/list/list_misc 		= list()
+	var/list/list_drinks 	= list()
 	var/list/prices     = list() // Prices for each item, list(/type/path = price), items not in the list don't have a price.
+
+	var/category_weapons	 = 1	//For listing categories, if false then prizes of this categories cant be obtained nor bought for post-shift enjoyment
+	var/category_gear		 = 1
+	var/category_clothing	 = 1
+	var/category_misc		 = 1
+	var/category_drinks		 = 1
+
+	var/list/product_categories = list(
+		list_weapons,
+		category_gear,
+		category_clothing,
+		category_misc,
+		category_drinks
+		)
 
 	// List of vending_product items available.
 	var/list/product_records = list()
@@ -941,7 +955,7 @@
 	var/list/log = list()
 	var/req_log_access = access_cargo //default access for checking logs is cargo
 	var/has_logs = 0 //defaults to 0, set to anything else for vendor to have logs
-
+*/
 
 	/*
 		var/list/all_products = list(
@@ -952,16 +966,12 @@
 		list("Booze", CAT_DRINKS))
 	*/
 
+/*
 /obj/machinery/casino_prize_dispenser/Initialize()
 	build_inventory()
 
 /obj/machinery/casino_prize_dispenser/proc/build_inventory() //WIP
-	var/list/all_products = list(
-		list(weapons, CAT_WEAPONS),
-		list(gear, CAT_GEAR),
-		list(clothing, CAT_CLOTHING),
-		list(misc, CAT_MISC),
-		list(drinks, CAT_DRINKS))
+
 
 	for(var/current_list in all_products)
 		var/category = current_list[2]
@@ -971,7 +981,8 @@
 
 			product.price = (entry in prices) ? prices[entry] : 0
 			product.category = category
-
+*/
+/*
 /obj/machinery/casino_prize_dispenser/Destroy()
 	for(var/datum/stored_item/vending_product/R in product_records)
 		qdel(R)
@@ -1056,6 +1067,7 @@
 				"color" = I.display_color)))
 
 		data["products"] = listed_products
+		data["categories"] = all_products
 
 	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
@@ -1117,3 +1129,48 @@
 	var/prize_log = "[user.ckey] playing as [user.name] bought a INSERT PORODUCT HERE."
 	log[++log.len] = prize_log
 	//Currently doesnt have in game way to show, to ensure theres no chance of players ckeys exposed - Jack
+*/
+/*
+<!--
+	Interface for vending machines
+	See: code/game/machinery/vending.dm
+-->
+
+{{if data.mode == 0}} <!-- Listing -->
+<h2>Items available</h2>
+<div class='item'>
+	{{for data.products}}
+	<div class='item'>
+			<div style='float'>
+				{{if value.price > 0}}
+					{{:helper.link('Buy (' + value.price + ')', 'cart', { "vend" : value.key }}}
+				{{else}}
+					{{:helper.link('Vend', 'circle-arrow-s', { "vend" : value.key }}}
+				{{/if}}
+			</div>
+		<div class='itemContent'>
+		{{if value.color}}<span style='color:{{:value.color}}'>{{:value.name}}</span>
+		{{else}}{{:value.name}}
+		</div>
+	</div>
+	{{empty}}
+	No items available!
+	{{/for}}
+</div>
+{{/if}}
+{{else data.mode == 1}} <!-- Payment screen -->
+<h2>Item selected</h2>
+<div class='item'>
+	<div class='item'>
+		<div class='itemLabel'>Item selected:</div> <div class='itemContent'>{{:data.product}}</div>
+		<div class='itemLabel'>Charge:</div> <div class='itemContent'>{{:data.price}}</div>
+	</div>
+	<div class='statusDisplay' style='overflow: auto;'>
+		{{if data.message_err}} <span class='uiIcon16 icon-alert' ></span>{{/if}} {{:data.message}}
+	</div>
+	<div class='item'>
+		{{:helper.link('Cancel', 'arrowreturn-1-w', {'cancelpurchase' : 1})}}
+	</div>
+</div>
+{{/if}}
+*/
