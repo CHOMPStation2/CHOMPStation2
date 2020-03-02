@@ -3521,6 +3521,7 @@
 #include "maps\yw\items\encryptionkey_vr.dm"
 #include "maps\yw\items\headset_sc.dm"
 #include "maps\yw\items\headset_vr.dm"
+#include "maps\yw\items\icepick.dm"
 #include "maps\yw\items\clothing\sc_accessory.dm"
 #include "maps\yw\items\clothing\sc_suit.dm"
 #include "maps\yw\items\clothing\sc_under.dm"
