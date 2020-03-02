@@ -27,6 +27,18 @@
 	excludes = list(/datum/trait/cold_blood, /datum/trait/extreme_cold_blood)
 
 // YW Addition
+/datum/trait/alcohol_intolerance_basic
+	name = "Liver of Lilies"
+	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard."
+	cost = 0
+	var_changes = list("alcohol_tolerance" = 2)
+
+/datum/trait/alcohol_tolerance_basic
+	name = "Liver of Iron"
+	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr!"
+	cost = 0
+	var_changes = list("alcohol_tolerance" = 0.75)
+
 /*
 /datum/trait/cryogenic
 	name = "Cryogenic Metabolism"

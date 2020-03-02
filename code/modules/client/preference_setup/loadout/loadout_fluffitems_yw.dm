@@ -241,6 +241,15 @@
 	ckeywhitelist = list("championfire")
 	character_name = list("Kita")
 
+//codavanistok
+//Coda Vanistok // (Yes, I'm aware they're the same. Yes, this is correct.)
+/datum/gear/fluff/coda_implant
+	path = /obj/item/weapon/implanter/fluff/coda
+	display_name = "Locked size implant"
+	description = "It seems to be locked to two settings."
+	ckeywhitelist = list("codavanistok")
+	character_name = list("Coda Vanistok")
+
 //  D CKEYS
 
 //dameonowen
@@ -801,7 +810,7 @@
 	display_name = "Heart Collar"
 	description = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Stellar and Reyna close together, paws locked and facing the picture slightly sideways with beaming smiles."
 	ckeywhitelist = list("risingstarslash")
-	character_name = list("Stellar Wolf")
+	character_name = list("Monika Wolfe")
 
 //radiantflash
 //Vasharr Zahirn

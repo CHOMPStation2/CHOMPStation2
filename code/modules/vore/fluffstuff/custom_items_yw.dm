@@ -588,3 +588,55 @@
 	from_suit = /obj/item/weapon/material/knife/tacknife/survival
 	to_suit = /obj/item/weapon/material/knife/tacknife/survival/fluff/kaith
 
+// *************
+// Coda_Vanistok
+// *************
+/obj/item/weapon/implanter/fluff/coda
+	imp = new /obj/item/weapon/implant/fluff/coda
+	icon_state = "implanter1_1"
+
+/obj/item/weapon/implanter/fluff/coda/remove_implant() //No way to remove this implant.
+	to_chat(usr, "<span class='notice'>It seems \the [imp] can't be removed from \the [src].</span>")
+	return
+
+/obj/item/weapon/implanter/fluff/coda/attack()
+	..()
+	if(!imp) //After injection, the implanter poofs.
+		to_chat(usr, "<span class='notice'>\The [src] disentegrates after you use it!</span>")
+		qdel(src)
+
+/obj/item/weapon/implant/fluff/coda
+	name = "locked size-modification implant"
+	desc = "This is an implant that allows the user to change their size. It appears to be locked to two settings."
+	var/mob/living/implanted_in = null
+
+/obj/item/weapon/implant/fluff/coda/post_implant(mob/source)
+	..()
+	source.verbs |= new /mob/living/carbon/human/verb/coda_implant_resize(source)
+	implanted_in = source
+	START_PROCESSING(SSobj, src)
+
+/obj/item/weapon/implant/fluff/coda/process()
+	if(implanted_in && (src.imp_in != implanted_in)) //If the implant is removed.
+		implanted_in.setBrainLoss(200)
+		visible_message("<span class='notice'>\The [src] shorts and sparks during removal, frying itself!</span>")
+		playsound(src.loc, "sparks", 50, 1)
+		STOP_PROCESSING(SSobj, src)
+		name = "melted implant"
+		desc = "Charred circuit in melted plastic case. Wonder what that used to be..."
+		icon_state = "implant_melted"
+		malfunction = MALFUNCTION_PERMANENT
+
+/mob/living/carbon/human/verb/coda_implant_resize()
+	set name = "Resize (Implant)"
+	set desc = "Change your size between two different preset options."
+	set category = "IC"
+	set src = usr
+	
+	if(src.stat == DEAD)
+		return
+	switch(alert(src, "What would you like your size to be changed to?", "Size modification implant", "Normal", "Cancel", "Large"))
+		if("Normal")
+			src.resize(1)
+		if("Large")
+			src.resize(1.22)
