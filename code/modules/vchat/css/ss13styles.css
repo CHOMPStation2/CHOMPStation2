@@ -1,6 +1,15 @@
 /* VChat Styles */
+body.inverted {
+	background-color: #111111;
+}
+
+#topmenu {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
 #contentbox {
-	margin-top: 3rem; /* Make room for the fixed top menu */
+	margin-top: 3.3rem; /* Make room for the fixed top menu */
 	overflow-wrap: break-word;
 	word-wrap: break-word; /* IE, blah */
 }
@@ -18,21 +27,12 @@
 	font-size: 10px;
 }
 
-#app > .menu {
-        overflow-x: auto;
-        overflow-y: hidden;
-}
-
 .item {
 	cursor: pointer;
 }
 
 .icon-left-open-outline:hover, .icon-right-open-outline:hover, .icon-cancel-circled-outline:hover {
 	color: red;
-}
-
-body.inverted {
-	background-color: #111111;
 }
 
 .blinkwarn {
@@ -56,6 +56,7 @@ body.inverted {
 #messagebox.vc_info .vc_info 				{ display: block; }
 #messagebox.vc_deadchat .vc_deadchat  		{ display: block; }
 #messagebox.vc_globalooc .vc_globalooc 		{ display: block; }
+#messagebox.vc_looc .vc_looc 				{ display: block; }
 #messagebox.vc_adminpm .vc_adminpm 			{ display: block; }
 #messagebox.vc_adminchat .vc_adminchat 		{ display: block; }
 #messagebox.vc_modchat .vc_modchat 			{ display: block; }
@@ -70,6 +71,7 @@ body.inverted {
 #messagebox h1, #messagebox h2, #messagebox h3, #messagebox h4, #messagebox h5, #messagebox h6	{color: #0000ff; font-family: Georgia, Verdana, sans-serif;}
 
 #messagebox em						{font-style: normal; font-weight: bold;}
+#messagebox a 						{text-decoration: underline;}
 
 .motd					{color: #638500;font-family: Verdana, sans-serif;}
 .motd h1, .motd h2, .motd h3, .motd h4, .motd h5, .motd h6
@@ -87,7 +89,7 @@ body.inverted {
 
 .ooc .everyone			{color: #002eb8;}
 .inverted .ooc .everyone {color: #004ed8;} /* Dark mode */
-.ooc .looc				{color: #3A9696;}
+.looc				    {color: #3A9696;}
 .ooc .elevated			{color: #2e78d9;}
 .ooc .moderator			{color: #184880;}
 .ooc .developer			{color: #1b521f;}
@@ -169,7 +171,7 @@ h1.alert, h2.alert		{color: #000000;}
 .soghun					{color: #228B22;}
 .solcom					{color: #22228B;}
 .changeling				{color: #800080;}
-.sergal					{color: #0077FF; font-family: "Comic Sans MS";}
+.sergal					{color: #0077FF;}
 .birdsongc				{color: #CC9900;}
 .vulpkanin				{color: #B97A57;}
 .enochian				{color: #848A33; letter-spacing:-1pt; word-spacing:4pt; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
