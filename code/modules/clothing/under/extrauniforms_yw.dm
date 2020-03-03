@@ -211,3 +211,43 @@
 	icon_state = "greyutility_sup"
 	worn_state = "greyutility_sup"
 	icon_override = 'icons/mob/uniform_yw.dmi'
+
+
+/obj/item/clothing/under/yw/victsuit/victdress
+	name = "black victorian dress"
+	desc = "A victorian style dress, fancy!"
+	icon_state = "victorianblackdress"
+	item_state = "victorianblackdress"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+/obj/item/clothing/under/yw/victsuit/victdress/red
+	name = "red victorian dress"
+	icon_state = "victorianreddress"
+	item_state = "victorianreddress"
+
+/obj/item/clothing/under/yw/victsuit
+	name = "black victorian suit"
+	desc = "A victorian style suit, fancy!"
+	icon = 'icons/mob/uniform_yw.dmi'
+	icon_state = "victorianvest"
+	item_state = "victorianvest"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+/obj/item/clothing/under/yw/victsuit/redblk
+	name = "red and black victorian suit"
+	icon_state = "victorianblred"
+	item_state = "victorianblred"
+
+/obj/item/clothing/under/yw/victsuit/red
+	name = "red victorian suit"
+	icon_state = "victorianredvest"
+	item_state = "victorianredvest"
+
+/obj/item/clothing/under/yw/victsuit/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
+	if(body_type == SPECIES_GREY_YW)
+		if(!inhands)
+			return 'icons/mob/species/grey/uniform.dmi'
+
+	else
+		return ..()
