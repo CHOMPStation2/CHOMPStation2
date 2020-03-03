@@ -17,5 +17,5 @@
 
 /datum/gear/uniform/redvictdress
 	description = "A victorian style dress, fancy!"
-	display_name = "Victorian dress, Red"
-	/obj/item/clothing/under/yw/victsuit/victdress/red
+	display_name = "Victorian Dress, Red"
+	path = /obj/item/clothing/under/yw/victsuit/victdress/red
