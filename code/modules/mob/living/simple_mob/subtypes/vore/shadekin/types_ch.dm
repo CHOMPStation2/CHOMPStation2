@@ -149,7 +149,7 @@
 	You'll probably be safe in here. Probably."
 	player_msg = "You are Anno, you are energetic and playful"
 	
-/mob/living/simple_animal/shadekin/blue/roti
+/mob/living/simple_mob/shadekin/blue/roti
 	name ="Roti"
 	desc = "Roti is a shadekin with blue eyes, is chubby since he has eaten others before hand. He enjoys chocolate, the taste of it, the smell of it, he just wants anything sweet and chocolately to be in his belly. So be careful around him this is also a way to summon him by laying around chocolate and calling him out."
 	icon_state = "roti"
@@ -162,7 +162,7 @@
 	player_msg = "You are Roti, a curious shadekin that wishes to learn from the station and eventually speak with them."
 
 //kcin2001's soft shadekin
-/mob/living/simple_animal/shadekin/green/soft
+/mob/living/simple_mob/shadekin/green/soft
 	name = "Softpatch"
 	desc = "A green eyed brown shadekin, looks fluffy and a bit chubby around the middle underneath his well worn cloak \
 	He seems curious but ready to flee"
