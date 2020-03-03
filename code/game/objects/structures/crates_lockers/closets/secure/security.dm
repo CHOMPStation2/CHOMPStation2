@@ -39,7 +39,6 @@
 		/obj/item/device/radio/headset/heads/hop,
 		/obj/item/device/radio/headset/heads/hop/alt,
 		/obj/item/weapon/storage/box/ids = 2,
-		// /obj/item/weapon/gun/energy/gun, //YW Edit
 		/obj/item/weapon/gun/energy/gun/martin, //VOREStation Add,
 		/obj/item/weapon/storage/box/commandkeys, //VOREStation Add,
 		/obj/item/weapon/storage/box/servicekeys, //VOREStation Add,
