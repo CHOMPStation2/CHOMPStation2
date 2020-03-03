@@ -8,11 +8,11 @@
 	name = "confetti"
 	icon = 'icons/effects/effects_ch.dmi'
 	icon_state = "confetti"
-	opacity = 1
+	opacity = 0
 	anchored = 0.0
 	mouse_opacity = 0
 	var/amount = 6.0
-	var/time_to_live = 100
+	var/time_to_live = 500
 
 /obj/effect/effect/confetti/New()
 	..()
@@ -20,6 +20,7 @@
 		spawn (time_to_live)
 			if(!QDELETED(src))
 				qdel(src)
+				//make confetti on ground cleanable decal to spawn
 
 /datum/effect/effect/system/confetti_spread
 	var/total_confetti = 0 // To stop it being spammed and lagging!

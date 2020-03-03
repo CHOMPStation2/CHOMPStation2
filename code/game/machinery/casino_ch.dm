@@ -82,6 +82,9 @@
 	var/symbol2 = null
 	var/symbol3 = null
 
+	var/datum/effect/effect/system/confetti_spread
+	var/confetti_strength = 8
+
 /obj/machinery/slot_machine/attackby(obj/item/weapon/W as obj, mob/user as mob)
 
 	var/handled = 0
@@ -155,7 +158,8 @@
 	var/output //Output variable to send out in chat after the large if statement.
 	var/winnings = 0 //How much money will be given if any.
 	var/platinumwin = 0 // If you win the platinum chip or not
-	var/delaytime = 5 SECONDS // Put this somewhere else I'm just proving a point >:C
+	var/celebrate = 0
+	var/delaytime = 5 SECONDS
 
 
 	spawn(delaytime)
@@ -188,14 +192,17 @@
 		if (symbol1 == "seven" && symbol2 == "seven" && symbol3 == "seven")
 			output = "<span class='notice'>Three sevens! The slot machine deposits a 500 credit chip!</span>"
 			winnings = 500
+			celebrate = 1
 
 		if (symbol1 == "diamond" && symbol2 == "diamond" && symbol3 == "diamond")
 			output = "<span class='notice'>Three diamonds! The slot machine deposits a 1000 credit chip!</span>"
 			winnings = 1000
+			celebrate = 1
 
 		if (symbol1 == "platinum coin" && symbol2 == "platinum coin" && symbol3 == "platinum coin")
 			output = "<span class='notice'>Three platinum coins! The slot machine deposits a platinum chip!</span>"
 			platinumwin = TRUE;
+			celebrate = 1
 
 		icon_state = initial(icon_state) // Set it back to the original iconstate.
 
@@ -217,7 +224,15 @@
 				spawn_casinochips(winnings, src.loc)
 				icon_state = "slotmachine"
 
-		busy = FALSE //Set busy to false, we're done here fam.
+		if(celebrate) // Happy celebrations!
+			src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
+			src.confetti_spread.attach(src) //If somehow people start dragging slot machine
+			spawn(0)
+				for(var/i = 1 to confetti_strength)
+					src.confetti_spread.start()
+					sleep(10)
+
+		busy = FALSE
 
 
 /obj/structure/wheel_of_fortune
