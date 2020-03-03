@@ -63,21 +63,6 @@
 	eye_state = "BLUE EYES"
 	eye_icon_state = "e_rakshasa"
 
-//thanks john
-/mob/living/simple_mob/shadekin/blue/niko
-	name = "Niko"
-	desc = "They appear to be a Neko of some sort, containing Glowing yellow eyes and cattitude."
-	icon_state = "niko"
-	eye_desc = "yellow eyes"
-	vore_stomach_flavor = "Look, if you had one shot, one opportunity. To seize everything you ever wanted. One moment. Would you capture it or just let it slip?"
-	player_msg = "You are NOT a cat, your objective is to... wait this is the wrong game."
-	glow_range = 5
-	glow_toggle = 1
-	luminosity = 5
-	energy_adminbuse = TRUE
-	eye_state = 0
-	attacktext = list("clawed")
-
 /mob/living/simple_mob/shadekin/blue/luna
 	name = "Luna"
 	desc = "She appears to be a fuzzy critter of some sort. Her eyes shimmer a dark blue, glancing around curiously."
