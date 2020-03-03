@@ -184,7 +184,7 @@
 	playsound(my_kin.loc, 'sound/rakshasa/No.ogg', 100, 1)
 /////////////////////////////////////////////////////////////////
 /obj/effect/rakshasa_ability/emergesound
-	ability_name = "Heavy Breating"
+	ability_name = "Heavy Breathing"
 	desc = "Do the emrge sound without actually emerging."
 	icon_state = ""
 	cost = 0
