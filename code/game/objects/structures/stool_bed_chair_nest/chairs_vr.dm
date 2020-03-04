@@ -1,6 +1,7 @@
 /obj/structure/bed/chair/sofa
 	name = "sofa"
 	desc = "A padded, comfy sofa. Great for lazing on."
+	icon = 'icons/obj/furniture_ch.dmi' //CHOMPEDIT: Improving on the sofas by making them visually change with padding
 	base_icon = "sofamiddle"
 
 /obj/structure/bed/chair/sofa/left
