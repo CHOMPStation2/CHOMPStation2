@@ -208,7 +208,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "Internal Organs: <a href='?src=\ref[src];organs=1'>Adjust</a><br>"
 	//YW Edit ADD
 	if(pref.species == "Grey")
-		. += "<b>Speak Wingdings: <a href='?src=\ref[src];wingdings=1'><b>[pref.wingdings ? "Yes" : "No"]</b></a><br>"
+		. += "Speak Wingdings: <a href='?src=\ref[src];wingdings=1'><b>[pref.wingdings ? "Yes" : "No"]</b></a><br>"
 	//YW Edit End
 
 	//display limbs below
