@@ -11,6 +11,8 @@
 		/datum/lore/codex/page/nevrean,
 		/datum/lore/codex/page/sergal,
 		/datum/lore/codex/page/vulpkanin,
+		/datum/lore/codex/page/vox,
+		/datum/lore/codex/page/grey,
 		/datum/lore/codex/page/zorren,
 		/datum/lore/codex/category/teshari,
 		/datum/lore/codex/category/positronic
@@ -56,7 +58,7 @@
 /datum/lore/codex/page/tajaran
 	name = "Tajaran"
 	keywords = list("Tajara")
-	data = "The Tajara are a race of humanoid mammalian aliens from Meralar, the fourth planet of the Rarkajar star system. Thickly furred and protected \
+	data = "The Tajaran are a race of humanoid mammalian aliens from Meralar, the fourth planet of the Rarkajar star system. Thickly furred and protected \
 	from cold, they thrive on their subarctic planet, where the only terran temperate areas spread across the equator and tropical belt. \
 	With their own share of bloody wars and great technological advances, the Tajaran are a proud kind. They fiercely believe they belong \
 	among the stars and consider themselves a rightful interstellar nation, even if the humans helped them to actually achieve superluminal \
@@ -71,12 +73,12 @@
 	creature. They were discovered by the [quick_link("Skrell")] in 2294CE, not on a planet, but in open space between three stars, a figurative hell that made it \
 	difficult to discover, much less contact them.\
 	<br><br>\
-	Dionaea spread by seeds and are asexual, no gender. When grown into their small 'nymph' state, they are known to eat large amounts of dead plant \
+	Dionaea spread by seeds and are asexual, with no gender. When grown into their small 'nymph' state, they are known to eat large amounts of dead plant \
 	matter and fertilize plants while they learn from those around them, and as they grow further, they merge into larger and larger forms. It is not \
 	unheard of for Skrell explorers to be traveling in a ship composed of habitat modules and engines of Skrell design and the body formed by their \
 	Diona allies to warble across the cosmos.\
 	<br><br>\
-	Introduced by the Skrell, and quite slow and peaceful, the Diona share good relations with the other species."
+	Introduced by the Skrell, and quite slow and peaceful, the Diona share good relations with all other species, even the elusive Vox."
 
 /datum/lore/codex/page/akula/add_content()
 	name = "Akula"
@@ -87,9 +89,9 @@
 	the Akula were also the first sentient life that the Skrell had ever encountered beside themselves, and thus the two species became swift allies \
 	over the next few hundred years.\
 	<br><br>\
-	With the help of Skrellean technology, the Akula had their genome modified to be capable of surviving in open air for long periods of time. \
+	With the help of Skrellian technology, the Akula had their genome modified to be capable of surviving in open air for long periods of time. \
 	However, Akula even today still require a high humidity environment to avoid drying out after a few days, which would make life on an arid world like \
-	[quick_link("Virgo-Prime")] nearly impossible if it were not for Skrellean technology to aid them."
+	Virgo-Prime nearly impossible if it were not for Skrellian technology to aid them."
 
 /datum/lore/codex/page/nevrean/add_content()
 	name = "Nevrean"
@@ -126,6 +128,40 @@
 	and utilitarianism dominates their lifestyles to the degree it can cause conflict with more rigorous and strict \
 	authorities. They speak a guttural language known as 'Canilunzt' which has a heavy emphasis on utilizing tail \
 	positioning and ear twitches to communicate intent."
+
+/datum/lore/codex/page/vox/add_content()
+	name = "Vox"
+	keywords += list("Vox")
+	data = "Almost nothing is known about the Vox by the galaxy at large, and the Vox would prefer it remain that way \
+	for as long as possible. What little is known has largely been pieced together from spacer's tales and security \
+	after-action reports from encounters with the elusive raptor-like creatures. If the TSCs have any exciting data \
+	from biopsy or autopsy examinations on Vox or Vox remains, they're not sharing them with everyone else. \
+	<br><br>\
+	Vox are an infrequent sight in civilized space, as the species is highly insular. The only individuals typically \
+	seen leaving the relative safety and isolation of their kin are those who have been cast out for committing some \
+	crime against other Vox, and these outcasts sometimes seek employment within the peripheries of civilized space \
+	in an effort to simply survive; without a means of acquiring fresh phoron for respiration, a lone vox is liable \
+	to suffocate within a matter of weeks at most.\
+	<br><br>\
+	The marginally more common type of vox one will encounter are the marauders. These opportunistic vox prey on poorly \
+	guarded civilian shipping and facilities, either to steal precious items or the phoron they're holding. After all \
+	as far as the Vox are concerned, only Vox matter, and only Vox matters matter."
+
+/datum/lore/codex/page/grey/add_content()
+	name = "Grey"
+	keywords += list("Grey","Greys")
+	data = "The Greys are a relatively new addition to the galactic stage, having only truly made their presence known \
+	over the course of the past few decades. This, combined with their appearance and seemingly engineered biology \
+	has lead to a number of conspiracy theories and wild ideas about their true origins, with one of the most common \
+	proposing that they are extragalactic refugees who have somehow crossed the great divide between their galaxy \
+	and our own to hide from some greater threat. \
+	<br><br>\
+	Theorizing aside, they're perhaps best known for their natural \'telepathic\' abilities, their violent reaction to water \
+	(owing to their salt-heavy biology their cells rapidly undergo cytolysis when exposed to water, which can easily be fatal) \
+	and their apparent knack for research and development. The TSCs have been quick to court the favor of those that leave the \
+	Grey \'homeworld\' of Mauna-b, offering them almost uncharacteristically generous employment packages within administrative \
+	and research departments at facilities across civilized space. For their part the Grey seem to be integrating well, despite \
+	occasional difficulties with the lower levels of oxygen present outside of their favored ships and habitats."
 
 /datum/lore/codex/page/zorren/add_content()
 	name = "Zorren"
