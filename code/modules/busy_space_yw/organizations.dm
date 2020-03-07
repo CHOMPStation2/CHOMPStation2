@@ -10,6 +10,15 @@
 	var/motto = ""				// A motto/jingle/whatever, if they have one.  Currently unused.
 
 	var/list/ship_prefixes = list()	//Some might have more than one! Like NanoTrasen. Value is the mission they perform, e.g. ("ABC" = "mission desc")
+	var/complex_tasks = FALSE	//enables complex task generation
+	var/list/task_types = list(	//special purpose addition for certain groups, but generally unused
+			"logistics",
+			"patrol",
+			"training",
+			"peacekeeping",
+			"escort",
+			"search and rescue"
+			)
 	var/list/flight_types = list(		//operations and flights - we can override this if we want to remove the military-sounding ones or add our own
 			"flight",
 			"mission",
@@ -58,7 +67,20 @@
 			"Defender",
 			"Ranger",
 			"River",
-			"Jubilee"
+			"Jubilee",
+			"Gumdrop",
+			"Spider",
+			"Columbia",
+			"Eagle",
+			"Intrepid",
+			"Odyssey",
+			"Aquarius",
+			"Kitty Hawk",
+			"Antares",
+			"Falcon",
+			"Casper",
+			"Orion",
+			"Challenger"
 			)
 	var/list/destination_names = list()	//Names of static holdings that the organization's ships visit regularly.
 
@@ -73,16 +95,255 @@
 		var/i = rand(15, 30) //significantly increased from original values due to the greater length of rounds on YW
 
 		//known planets and exoplanets, plus fictional ones
-		var/list/planets = list("Earth", "Luna", "Mars", "Titan", "Europa", "Sif", "Kara", "Rota", "Root", "Toledo, New Ohio", "Meralar", "Adhomai", "Arion", "Arkas", "Orbitar", "Galileo", "Brahe", "Janssen", "Harriot", "Aegir", "Amateru", "Dagon", "Meztli", "Hypatia", "Dulcinea", "Rocinante", "Sancho", "Thestias", "Saffar", "Samh", "Majriti", "Draugr", "Binma", "Kishar", "Anshar", "Nisp", "Elysium", "Sophia, El", "New Kyoto", "Angessa's Pearl", "Oasis", "Saint Columbia", "Love")
+		var/list/planets = list(
+			/* real planets */
+			"Earth",
+			"Luna",
+			"Mars",
+			"Titan",
+			"Europa",
+			/* named exoplanets */
+			"Spe",
+			"Arion",
+			"Arkas",
+			"Orbitar",
+			"Dimidium",
+			"Galileo",
+			"Brahe",
+			"Lipperhey",
+			"Janssen",
+			"Harriot",
+			"Aegir",
+			"Amateru",
+			"Dagon",
+			"Meztli",
+			"Smertrios",
+			"Hypatia",
+			"Quijote",
+			"Dulcinea",
+			"Rocinante",
+			"Sancho",
+			"Thestias",
+			"Saffar",
+			"Samh",
+			"Majriti",
+			"Fortitudo",
+			"Draugr",
+			"Arber",
+			"Tassili",
+			"Madriu",
+			"Naqaya",
+			"Bocaprins",
+			"Yanyan",
+			"Sissi",
+			"Tondra",
+			"Eburonia",
+			"Drukyul",
+			"Yvaga",
+			"Naron",
+			"Guarani",
+			"Mastika",
+			"Bendida",
+			"Nakanbe",
+			"Awasis",
+			"Caleuche",
+			"Wangshu",
+			"Melquiades",
+			"Pipitea",
+			"Ditso",
+			"Asye",
+			"Veles",
+			"Finlay",
+			"Onasilos",
+			"Makropolus",
+			"Surt",
+			"Boinayel",
+			"Eyeke",
+			"Cayahuanca",
+			"Hamarik",
+			"Abol",
+			"Hiisi",
+			"Belisama",
+			"Mintome",
+			"Neri",
+			"Toge",
+			"Iolaus",
+			"Koyopa",
+			"Independance",
+			"Ixbalanque",
+			"Magor",
+			"Fold",
+			"Santamasa",
+			"Noifasui",
+			"Kavian",
+			"Babylonia",
+			"Bran",
+			"Alef",
+			"Lete",
+			"Chura",
+			"Wadirum",
+			"Buru",
+			"Umbaasaa",
+			"Vytis",
+			"Peitruss",
+			"Trimobe",
+			"Baiduri",
+			"Ggantija",
+			"Cuptor",
+			"Xolotl",
+			"Isli",
+			"Hairu",
+			"Bagan",
+			"Laligurans",
+			"Kereru",
+			"Equiano",
+			"Albmi",
+			"Perwana",
+			"Pollera",
+			"Tumearandu",
+			"Sumajmajta",
+			"Haik",
+			"Leklsullun",
+			"Pirx",
+			"Viriato",
+			"Aumatex",
+			"Negoiu",
+			"Teberda",
+			"Dopere",
+			"Vlasina",
+			"Viculus",
+			"Kralomoc",
+			"Iztok",
+			"Krotoa",
+			"Halla",
+			"Riosar",
+			"Samagiya",
+			"Isagel",
+			"Eiger",
+			"Ugarit",
+			"Sazum",
+			"Maeping",
+			"Agouto",
+			"Ramajay",
+			"Khomsa",
+			"Gokturk",
+			"Barajeel",
+			"Cruinlagh",
+			"Mulchatria",
+			"Ibirapita",
+			"Madalitso",
+			/* fictional planets */
+			"Sif",
+			"Kara",
+			"Rota",
+			"Root",
+			"Toledo, New Ohio",
+			"Meralar",
+			"Adhomai",
+			"Binma",
+			"Kishar",
+			"Anshar",
+			"Nisp",
+			"Elysium",
+			"Sophia, El",
+			"New Kyoto",
+			"Angessa's Pearl, Exalt's Light",
+			"Oasis",
+			"Love"
+			)
 
 		//existing systems, pruned for duplicates, includes systems that contain suspected or confirmed exoplanets
 		var/list/systems = list(
-			"Sol", "Alpha Centauri", "Sirius", "Vega", "Tau Ceti", "Altair", "Zhu Que", "Oasis", "Vir", "Gavel", "Ganesha", "Saint Columbia", "Altair", "Sidhe", "New Ohio", "Parvati", "Mahi-Mahi", "Nyx", "New Seoul", "Kess-Gendar", "Raphael", "Phact", "El", "Eutopia", "Qerr'valis", "Harr'Qak", "Qerrna-Lakirr", "Rarkajar", "Vazzend", "Thoth", "Jahan's Post", "Kauq'xum", "Silk", "New Singapore", "Stove", "Viola", "Love", "Isavau's Gamble", "deep space", "Epsilon Eridani", "Fomalhaut", "Mu Arae", "Pollux", "Wolf 359", "Ross 128", "Gliese 1061", "Luyten's Star", "Teegarden's Star", "Kapteyn", "Wolf 1061", "Aldebaran", "Proxima Centauri", "Kepler-90", "HD 10180", "HR 8832", "TRAPPIST-1", "55 Cancri", "Gliese 876", "Upsilon Andromidae", "Mu Arae", "WASP-47", "82 G. Eridani", "Rho Coronae Borealis", "Pi Mensae", "Beta Pictoris", "Gamma Librae", "Gliese 667 C", "Kapteyn", "LHS 1140", "New Ohio", "Samsara", "Vounna", "Relan")
+			/* real solar systems */
+			"Sol",
+			"Alpha Centauri",
+			"Sirius",
+			"Vega",
+			"Tau Ceti",
+			"Altair",
+			"Epsilon Eridani",
+			"Fomalhaut",
+			"Mu Arae",
+			"Pollux",
+			"Wolf 359",
+			"Ross 128",
+			"Gliese 1061",
+			"Luyten's Star",
+			"Teegarden's Star",
+			"Kapteyn",
+			"Wolf 1061",
+			"Aldebaran",
+			"Proxima Centauri",
+			"Kepler-90",
+			"HD 10180",
+			"HR 8832",
+			"TRAPPIST-1",
+			"55 Cancri",
+			"Gliese 876",
+			"Upsilon Andromidae",
+			"Mu Arae",
+			"WASP-47",
+			"82 G. Eridani",
+			"Rho Coronae Borealis",
+			"Pi Mensae",
+			"Beta Pictoris",
+			"Gamma Librae",
+			"Gliese 667 C",
+			"LHS 1140",
+			"Phact",			
+			/* fictional systems from Polaris and other sources*/
+			"Zhu Que",
+			"Oasis",
+			"Vir",
+			"Gavel",
+			"Ganesha",
+			"Sidhe",
+			"New Ohio",
+			"Parvati",
+			"Mahi-Mahi",
+			"Nyx",
+			"New Seoul",
+			"Kess-Gendar",
+			"Raphael",
+			"El",
+			"Eutopia",
+			/* skrell */
+			"Qerr'valis",
+			"Harr'Qak",
+			"Qerrna-Lakirr",
+			"Kauq'xum",
+			/* tajaran */
+			"Rarkajar",
+			"Arrakthiir",
+			"Mesomori",
+			/* other */
+			"Vazzend",
+			"Thoth",
+			"Jahan's Post",
+			"Silk",
+			"New Singapore",
+			"Stove",
+			"Viola",
+			"Love",
+			"Isavau's Gamble",
+			"Samsara",
+			"Vounna",
+			"Relan",
+			"Whythe",
+			"Exalt's Light",
+			/* generic territories */
+			"deep space",
+			"USG Territory",
+			"Independent Space",
+			"Almach Territory",
+			"Skrell Territories",
+			"Hegemony Space"
+			)
 		var/list/owners = list("a government", "a civilian", "a corporate", "a private", "an independent", "a mercenary", "a military")
 		var/list/purpose = list("an exploration", "a trade", "a research", "a survey", "a military", "a mercenary", "a corporate", "a civilian", "an independent")
 
 		//unique or special locations
-		var/list/unique = list("the Jovian subcluster","Isavau International Spaceport","Terminus Station","Casini's Reach","the Shelf flotilla","the Ue'Orsi flotilla","|Heaven| Orbital Complex, Alpha Centauri")
+		var/list/unique = list("the Jovian subcluster","Isavau International Spaceport","Terminus Station","Casini's Reach","the Shelf flotilla","the Ue'Orsi flotilla","|Heaven| Orbital Complex, Alpha Centauri","the |Saint Columbia| Complex")
 
 		var/list/orbitals = list("[pick(owners)] shipyard","[pick(owners)] dockyard","[pick(owners)] station","[pick(owners)] vessel","a habitat","[pick(owners)] refinery","[pick(owners)] research facility","an industrial platform","[pick(owners)] installation")
 		var/list/surface = list("a colony","a settlement","a trade outpost","[pick(owners)] supply depot","a fuel depot","[pick(owners)] installation","[pick(owners)] research facility")
@@ -197,7 +458,7 @@
 	headquarters = "Luna, Sol"
 	motto = ""
 
-	ship_prefixes = list("HIV" = "a general operations", "HTV" = "a freight", "HLV" = "a munitions resupply", "HDV" = "an asset protection", "HDV" = "a preemptive deployment")
+	ship_prefixes = list("HCV" = "a general operations", "HTV" = "a freight", "HLV" = "a munitions resupply", "HDV" = "an asset protection", "HDV" = "a preemptive deployment")
 	//War God Theme, updated
 	ship_names = list(
 			"Anhur",
@@ -289,7 +550,7 @@
 	acronym = "VM"
 	desc = "Vey-Med is one of the newer TSCs on the block and is notable for being largely owned and operated by Skrell. \
 	Despite the suspicion and prejudice leveled at them for their alien origin, Vey-Med has obtained market dominance in \
-	the sale of medical equipment-- from surgical tools to large medical devices to the Oddyseus trauma response mecha \
+	the sale of medical equipment-- from surgical tools to large medical devices to the Odysseus trauma response mecha \
 	and everything in between. Their equipment tends to be top-of-the-line, most obviously shown by their incredibly \
 	human-like FBP designs. Vey's rise to stardom came from their introduction of resurrective cloning, although in \
 	recent years they've been forced to diversify as their patents expired and NanoTrasen-made medications became \
@@ -335,8 +596,8 @@
 	short_name = "Zeng-Hu "
 	acronym = "ZH"
 	desc = "Zeng-Hu is an old TSC, based in the Sol system. Until the discovery of Phoron, Zeng-Hu maintained a stranglehold \
-	on the market for medications, and many household names are patentted by Zeng-Hu-- Bicaridyne, Dylovene, Tricordrizine, \
-	and Dexalin all came from a Zeng-Hu medical laboratory. Zeng-Hu's fortunes have been in decline as Nanotrasen's near monopoly \
+	on the market for medications, and many household names are patentted by Zeng-Hu-- Bicaridine, Dylovene, Tricordrazine, \
+	and Dexalin all came from Zeng-Hu medical laboratories. Zeng-Hu's fortunes have been in decline as Nanotrasen's near monopoly \
 	on phoron research cuts into their R&D and Vey-Med's superior medical equipment effectively decimated their own equipment \
 	interests. The three-way rivalry between these companies for dominance in the medical field is well-known and a matter of \
 	constant economic speculation. \
@@ -467,12 +728,12 @@
 	name = "Bishop Cybernetics"
 	short_name = "Bishop "
 	acronym = "BC"
-	desc = "Bishop's focus is on high-class, stylish cybernetics. A favorite among transhumanists (and a bête noire for \
+	desc = "Bishop's focus is on high-class, stylish cybernetics. A favorite among transhumanists (and an easy target for \
 	bioconservatives), Bishop manufactures not only prostheses but also brain augmentation, synthetic organ replacements, \
 	and odds and ends like implanted wrist-watches. Their business model tends towards smaller, boutique operations, giving \
 	it a reputation for high price and luxury, with Bishop cyberware often rivalling Vey-Med's for cost. Bishop's reputation \
 	for catering towards the interests of human augmentation enthusiasts instead of positronics have earned it ire from the \
-	Positronic Rights Group and puts it in ideological (but not economic) comptetition with Morpheus Cyberkinetics. \
+	Positronic Rights Group and puts it in ideological (but not economic) competition with Morpheus Cyberkinetics. \
 	<br><br> \
 	Each vessel in Bishop's sleek and stylish fleet is intended to advertise the corporate style, and bears the name of a famous mechanical engineer."
 	history = ""
@@ -973,7 +1234,7 @@
 	acronym = "SFI"
 	desc = "Founded in 2437 by Astara Junea, StarFlight Incorporated is now one of the biggest passenger liner businesses in human-occupied space and has even begun breaking into alien markets -  all despite a rocky start, and several high-profile ship disappearances and shipjackings. With space traffic at an all-time high, it's a depressing reality that SFI's incidents are just a tiny drop in the bucket compared to everything else going on. \
 	<br><br> \
-	SFI's fleet is, somewhat endearingly, named after various species of bird, though the designation <i>Pigeon</i> was removed from the lineup after a particularly unusual chain of events involving a business liner."
+	SFI's fleet is, somewhat endearingly, named after various species of bird, though the designation <i>Pigeon</i> was removed from the lineup after a particularly unusual chain of events involving a business liner. For reasons that have continued to remain unclear since the company's foundation, SFI vessels are permitted to use the same high-level identifier pattern as governmental vessels."
 	history = ""
 	work = "luxury, business, and economy passenger flights"
 	headquarters = "Spin Aerostat, Jupiter"
@@ -1027,7 +1288,213 @@
 			"an arctic retreat"
 			)
 
-/datum/lore/organization/tsc/independent
+/datum/lore/organization/tsc/oculum
+	name = "Oculum Broadcasting Network"
+	short_name = "Oculus "
+	acronym = "OBN"
+	desc = "Oculum owns approximately 30% of Sol-wide news networks, including microblogging aggregate sites, network and comedy news, and even old-fashioned newspapers. Staunchly apolitical, they specialize in delivering the most popular news available- which means telling people what they already want to hear. Oculum is a specialist in branding, and most people don't know that the reactionary Daedalus Dispatch newsletter and the radically transhuman Liquid Steel webcrawler are controlled by the same organization."
+	history = ""
+	work = "news media"
+	headquarters = ""
+	motto = "News from all across the spectrum"
+	
+	ship_prefixes = list("OBV" = "an investigation", "OBV" = "a distribution", "OBV" = "a journalism", "OBV" = "a general operations")
+	destination_names = list(
+			"Oculus HQ"
+			)
+
+/datum/lore/organization/tsc/centauriprovisions
+	name = "Centauri Provisions"
+	short_name = "Centauri "
+	acronym = "ACP"
+	desc = "Headquartered in Alpha Centauri, Centauri Provisions made a name in the snack-food industry primarily by being the first to focus on colonial holdings. The various brands of Centauri snackfoods are now household names, from SkrellSnaks to Space Mountain Wind to the ubiquitous and edible Bread Tube. Their staying power is legendary, and many spacers have grown up on a mix of their cheap crap and protein shakes."
+	history = ""
+	work = "catering, food, drinks"
+	headquarters = "Alpha Centauri"
+	motto = "The largest brands of food and drink - most of them are Centauri."
+	
+	ship_prefixes = list("CPTV" = "a transport", "CPCV" = "a catering", "CPRV" = "a resupply", "CPV" = "a general operations")
+	destination_names = list(
+			"Centauri Provisions HQ",
+			"a Centauri Provisions depot",
+			"a Centauri Provisions warehouse"
+			)
+
+/datum/lore/organization/tsc/einstein
+	name = "Einstein Engines"
+	short_name = "Einstein "
+	acronym = "EEN"
+	desc = "Einstein is an old company that has survived through rampant respecialization. In the age of phoron-powered exotic engines and ubiquitous solar power, Einstein makes its living through the sale of engine designs for power sources it has no access to and emergency fission or hydrocarbon power supplies. Accusations of corporate espionage against research-heavy corporations like NanoTrasen and its chief rival Focal Point are probably unfounded."
+	history = ""
+	work = "catering, food, drinks"
+	headquarters = ""
+	motto = "Engine designs, emergency generators, and old memories"
+	
+	ship_prefixes = list("EETV" = "a transport", "EERV" = "a research", "EEV" = "a general operations")
+	destination_names = list(
+			"Einstein HQ"
+			)
+
+/datum/lore/organization/tsc/wulf
+	name = "Wulf Aeronautics"
+	short_name = "Wulf Aero "
+	acronym = "WUFA"
+	desc = "Wulf Aeronautics is the chief producer of transport and hauling spacecraft. A favorite contractor of the USG and USDF, Wulf manufactures most of their diplomatic and logistics craft, and does a brisk business with most other TSCs. The quiet reliance of the economy on their craft has kept them out of the spotlight and uninvolved in other corporations' back-room dealings."
+	history = ""
+	work = "starship construction"
+	headquarters = ""
+	motto = "We build it - you fly it"
+	
+	ship_prefixes = list("WATV" = "a transport", "WARV" = "a repair", "WAV" = "a general operations")
+	destination_names = list(
+			"Wulf Aeronautics HQ",
+			"a Wulf Aeronautics supply depot",
+			"a Wulf Aeronautics Shipyard"
+			)
+
+/datum/lore/organization/tsc/gilthari
+	name = "Gilthari Exports"
+	short_name = "Gilthari "
+	acronym = "GEX"
+	desc = "Gilthari is Sol's premier supplier of luxury goods, specializing in extracting money from the rich and successful. Their largest holdings are in gambling, but they maintain subsidiaries in everything from VR equipment to luxury watches. Their holdings in mass media are a smaller but still important part of their empire. Gilthari is known for treating its positronic employees very well, sparking a number of conspiracy theories. The gorgeous FBP model that Gilthari provides them is a symbol of the corporation's wealth and reach ludicrous prices when available on the black market, with legal ownership of the chassis limited, by contract, to employees."
+	history = ""
+	work = "luxury goods"
+	headquarters = ""
+	motto = ""
+	
+	ship_prefixes = list("GETV" = "a transport", "GECV" = "a luxury catering", "GEV" = "a general operations")
+	//precious stones
+	ship_names = list(
+			"Afghanite",
+			"Agate",
+			"Alexandrite",
+			"Amazonite",
+			"Amber",
+			"Amethyst",
+			"Ametrine",
+			"Andalusite",
+			"Aquamarine",
+			"Azurite",
+			"Benitoite",
+			"Beryl",
+			"Carnelian",
+			"Chalcedony",
+			"Chrysoberyl",
+			"Chrysoprase",
+			"Citrine",
+			"Coral",
+			"Danburite",
+			"Diamond",
+			"Emerald",
+			"Fluorite",
+			"Garnet",
+			"Heliodor",
+			"Iolite",
+			"Jade",
+			"Jasper",
+			"Lapis Lazuli",
+			"Malachite",
+			"Moldavite",
+			"Moonstone",
+			"Obsidian",
+			"Onyx",
+			"Orthoclase",
+			"Pearl",
+			"Peridot",
+			"Quartz",
+			"Ruby",
+			"Sapphire",
+			"Scapolite",
+			"Selenite",
+			"Serpentine",
+			"Sphalerite",
+			"Sphene",
+			"Spinel",
+			"Sunstone",
+			"Tanzanite",
+			"Topaz",
+			"Tourmaline",
+			"Turquoise",
+			"Zircon"
+			)
+	destination_names = list(
+			"Gilthari HQ",
+			"a GE supply depot",
+			"a GE warehouse",
+			"a GE-owned luxury resort"
+			)
+
+/datum/lore/organization/tsc/coyotecorp
+	name = "Coyote Salvage Corp."
+	short_name = "Coyote "
+	acronym = "CSC"
+	desc = "The threat of Kessler Syndrome ever looms in this age of spaceflight, and it's only thanks to the dedication and hard work of unionized salvage groups like the Coyote Salvage Corporation that the spacelanes are kept clear and free of wrecks and debris. Painted in that distinctive industrial yellow, their fleets of roaming scrappers are contracted throughout civilized space and the frontier alike to clean up space debris. Some may look down on them for handling what would be seen as garbage and discarded scraps, but as far as the CSC is concerned everything would grind to a halt (or more accurately, rapidly expand in a cloud of red-hot scrap metal) without their tender care and watchful eyes.\
+	<br><br> \
+	Many spacers turn to join the ranks of the Salvage Corps when times are lean, or when they need a quick buck. The work is dangerous and the hours are long, but the benefits are generous and you're paid by what you salvage so if you've an eye for appraising scrap you can turn a good profit. For those who dedicate their lives to the work, they can become kings of the scrapheap and live like royalty. \
+	<br><br> \
+	CSC Contractors are no strangers to conflict either, often having to deal with claimjumpers and illegal salvage operations - or worse, the vox."
+	history = ""
+	work = "salvage and shipbreaking"
+	headquarters = "N/A"
+	motto = "one man's trash is another man's treasure"
+	
+	ship_prefixes = list("CSV" = "a salvage", "CRV" = "a recovery", "CTV" = "a transport", "CSV" = "a shipbreaking", "CHV" = "a towing")
+	//mostly-original, maybe some references, and more than a few puns
+	ship_names = list(
+			"Road Hog",
+			"Mine, Not Yours",
+			"Legal Salvage",
+			"Barely Legal",
+			"One Man's Trash",
+			"Held Together By Tape And Dreams",
+			"Ventilated Vagrant",
+			"Half A Wing And A Prayer",
+			"Scrap King",
+			"Make Or Break",
+			"Lead Into Gold",
+			"Under New Management",
+			"Pride of Centauri",
+			"Long Haul",
+			"Argonaut",
+			"Desert Nomad",
+			"Non-Prophet Organization",
+			"Rest In Pieces",
+			"Sweep Dreams",
+			"Home Sweep Home",
+			"Atomic Broom",
+			"Ship Broken",
+			"Rarely Sober",
+			"Barely Coherent",
+			"Piece Of Mind",
+			"War And Pieces",
+			"Bits 'n' Bobs",
+			"Home Wrecker",
+			"T-Wrecks",
+			"Dust Bunny",
+			"No Gears No Glory",
+			"Three Drinks In",
+			"The Almighty Janitor",
+			"Wreckless Endangerment",
+			"Scarab"
+			)
+	//remove a couple types, add the more down-to-earth 'job' to reflect some personality
+	flight_types = list(
+			"job",
+			"op",
+			"operation",
+			"assignment",
+			"contract"
+			)
+	destination_names = list (
+			"a frontier scrapyard",
+			"a trashbelt",
+			"a local salvage yard",
+			"a nearby system"
+			)
+
+// Other
+
+/datum/lore/organization/other/independent
 	name = "Independent Pilots Association"
 	short_name = "" //using the same whitespace hack as USDF
 	acronym = "IPA"
@@ -1051,20 +1518,19 @@
 	destination_names = list() //we have no hqs or facilities of our own
 	//ship names: blank, because we use the universal list
 
-// Other
-
 //SPACE LAW
 /datum/lore/organization/other/sysdef
 	name = "System Defense Force"
 	short_name = "" //whitespace hack again
 	acronym = "SDF"
-	desc = "Localized militias are used to secure systems throughout inhabited space, but are especially common on the frontier. By levying and maintaining these local militia forces, governments can use their fleets for more important matters. System Defense Forces tend to be fairly poorly trained and modestly equipped compared to genuine military fleets, but are more than capable of contending with small-time pirates and can generally stall greater threats long enough for reinforcements to arrive. They're also typically responsible for most search-and-rescue operations in their system.\
+	desc = "Localized militias are used to secure systems throughout inhabited space, but are especially common on the frontier; by levying and maintaining these militia forces, larger governments can use their primary fleets (like the USG's USDF) for more important matters and smaller ones can give travellers in their space some peace of mind given the ever-present threat of pirates and vox marauders whilst also helping cut down on smuggling (narcotic substances remain as popular in this century as they have throughout the last few millennia). System Defense Forces tend to be fairly poorly trained and modestly equipped compared to genuine military fleets, but are more than capable of contending with equally ramshackle pirate vessels and can generally stall greater threats long enough for reinforcements to arrive. They're also typically responsible for most search-and-rescue operations in their system.\
 	<br><br>\
-	SDF ships are traditionally named after various forms of melee weapon; as their founding members tend to be veterans of other SDF services which used this system, this tradition has slowly propagated.\
+	SDF ships are traditionally named after various forms of historical weaponry; as their founding members tend to be veterans of other SDF services which used this system, this tradition has slowly propagated.\
 	<br><br>\
 	Common SDF ship designations include;<br>\
 	SDF = System Defense Fleet<br>\
 	SDV/SDB = System Defense Vessel/Boat<br>\
+	SAR = Search And Rescue (Emergency Services)<br>\
 	SDT = System Defense Tender (Mobile Refuel & Resupply)<br>\
 	SDJ = Prisoner Transport"
 	history = ""
@@ -1072,9 +1538,9 @@
 	headquarters = ""
 	motto = "Serve, Protect, Survive"
 	sysdef = TRUE //we're the space law, we don't impersonate people and stuff
-	autogenerate_destination_names = FALSE
+	autogenerate_destination_names = FALSE //don't add extra destinations to our pool, or else we leave the system which makes no sense
 
-	ship_prefixes = list ("SDB" = "a patrol", "SDF" = "a patrol", "SDV" = "a patrol", "SDB" = "an escort", "SDF" = "an escort", "SDV" = "an escort", "SAR" = "a search and rescue", "SDT" = "a logistics", "SDT" = "a resupply", "SDJ" = "a prisoner transport") //b = boat, f = fleet, v = vessel, t = tender
+	ship_prefixes = list ("SDB" = "a patrol", "SDF" = "a patrol", "SDV" = "a patrol", "SDB" = "an escort", "SDF" = "an escort", "SDV" = "an escort", "SAR" = "a search and rescue", "SDT" = "a logistics", "SDT" = "a resupply", "SDJ" = "a prisoner transport") //b = boat, f = fleet (generic), v = vessel, t = tender
 	//ship names: weapons
 	ship_names = list(
 			"Sword",
@@ -1108,10 +1574,12 @@
 			"Truncheon",
 			"Hammer",
 			"Arbalest",
+			"Ballista",
 			"Catapult",
 			"Trebuchet",
 			"Longbow",
 			"Pike",
+			"Javelin",
 			"Glaive",
 			"Halberd",
 			"Scythe",
@@ -1144,8 +1612,11 @@
 			"Waypoint Chi",
 			"Waypoint Psi",
 			"Waypoint Omega",
+			"System Defense Control",
 			"an SDF correctional facility",
 			"an SDF processing center",
+			"an SDF supply depot",
+			"an SDF Rapid Response Hub",
 			"an SDF outpost"
 			)
 
@@ -1154,12 +1625,16 @@
 	name = "Smugglers"
 	short_name = "" //whitespace hack again
 	acronym = "ISC"
-	desc = "Illegal smuggling operations are rife on the frontier, as independent pilots attempt to sneak all manner of illegal goods past system authorities."
+	desc = "Where there's a market, there need to be merchants, and where there are buyers, there need to be suppliers. Most of all, wherever there's governments, there'll be somebody trying to control what people are and aren't allowed to do with their bodies. For those seeking goods deemed illegal (for good reasons or otherwise) they need to turn to smugglers and the fine art of sneaking things past the authorities.\
+	<br><br>\
+	The most common goods smuggled throughout space are narcotics, firearms, and occasionally slaves; whilst firearm ownership laws vary from location to location, most governments also take fairly hard stances on hard drugs, and slavery is consistently outlawed and punished viciously throughout the vast majority of civilized space.\
+	<br><br>\
+	Still, contrary to many conceptions, not all smuggling is nefarious. Entertainment media within human territories loves to paint romantic images of heroic smugglers sneaking aid supplies to refugees or even helping oppressed minorities escape the grasp of xenophobic regimes."
 	history = ""
 	work = ""
 	headquarters = ""
-	motto = "PROFIT!"
-	lawful = FALSE //if it wasn't obvious, these guys are actually criminals
+	motto = ""
+	lawful = FALSE //if it wasn't obvious, these guys are usually criminals
 	hostile = FALSE //but they're not aggressive ones
 	sysdef = FALSE
 	autogenerate_destination_names = TRUE //the events we get called for don't fire a destination, but we need entries to avoid runtimes.
@@ -1327,7 +1802,11 @@
 	name = "Pirates"
 	short_name = "" //whitespace hack again
 	acronym = "IPG"
-	desc = "Arr matey!"
+	desc = "Where there's prey, predators are sure to follow. In space, the prey are civilian merchants, and the predators are opportunistic pirates. This is about where the analogy breaks down, but the basic concept remains the same; civilian ships are usually full of valuable goods or important people, which can be sold on black markets or ransomed back for a healthy sum. Pirates seek to seize the assets of others to get rich, rather than make an honest thaler themselves.\
+	<br><br>\
+	In contrast to the colorful Ue-Katish and sneaky Vox, common pirates tend to be rough, practical, and brutally efficient in their work. System Defense units practice rapid response drills, and in most systems it's only a matter of minutes before The Law arrives unless the pirate is able to isolate their target and prevent them from sending a distress signal.\
+	<br><br>\
+	Complicating matters is the infrequent use of privateers by various minor colonial governments, mercenaries turning to piracy during hard times, and illegal salvage operations."
 	history = ""
 	work = ""
 	headquarters = ""
@@ -1336,7 +1815,7 @@
 	hostile = TRUE
 	autogenerate_destination_names = TRUE //the events we get called for don't fire a destination, but we need entries to avoid runtimes.
 
-	ship_prefixes = list ("known pirate" = "a piracy", "suspected pirate" = "a piracy", "rogue privateer" = "a piracy", "Cartel enforcer" = "a piracy", "known outlaw" = "a piracy", "bandit" = "a piracy", "roving corsair" = "a piracy") //as assigned by control, second part shouldn't even come up
+	ship_prefixes = list ("known pirate" = "a piracy", "suspected pirate" = "a piracy", "rogue privateer" = "a piracy", "Cartel enforcer" = "a piracy", "known outlaw" = "a piracy", "bandit" = "a piracy", "roving corsair" = "a piracy", "illegal salvager" = "an illegal salvage", "rogue mercenary" = "a mercenary") //as assigned by control, second part shouldn't even come up
 	ship_names = list(
 			"Morally Bankrupt",
 			"Bucket of Bolts",
@@ -1493,12 +1972,47 @@
 	destination_names = list(
 			)
 	*/
+	
+/datum/lore/organization/other/uekatish
+	name = "Ue-Katish Pirates"
+	short_name = ""
+	acronym = "UEK"
+	desc = "Contrasting with the Qerr-Glia is a vibrant community of Ue-Katish pirates, who live in cargo flotillas on the edge of Skrellian space (especially on the Human-Skrell border). Ue-Katish ships have no caste system even for the truecaste Skrell and aliens who live there, although they are regimented by rank and role in the ship's functioning. Ue-Katish ships are floating black markets where everything is available for the right price, including some of the galaxy's most well-connected information brokers and most skilled guns-for-hire. The Ue-Katish present the greatest Skrellian counterculture and feature heavily in romanticized human media, although at their hearts they are still bandits and criminals, and the black markets are filled with goods plundered from human and Skrellian trade ships. Many of the Ue-Katish ships themselves bear the scars of the battle that brought them under the pirate flag.\
+	<br><br> \
+	Ue-Katish pirate culture is somewhat similar to many human countercultures, gleefully reclaiming slurs and subverting expectations for the sheer shock value. Nonetheless, Ue-Katish are still Skrell, and still organize in neat hierarchies under each ship's Captain. The Captain's word is absolute, and unlike the Qerr-Katish they lack any sort of anti-corruption institutions."
+	history = ""
+	work = ""
+	motto = ""
+	lawful = FALSE
+	hostile = TRUE
+	autogenerate_destination_names = TRUE
+	
+	ship_prefixes = list("Ue-Katish pirate" = "a raiding", "Ue-Katish bandit" = "a raiding", "Ue-Katish raider" = "a raiding", "Ue-Katish enforcer" = "an enforcement")
+	ship_names = list(
+			"Keqxuer'xeu's Prize",
+			"Xaeker'qux' Bounty",
+			"Teq'ker'qerr's Mercy",
+			"Ke'teq's Thunder",
+			"Xumxerr's Compass",
+			"Xue'qux' Greed",
+			"Xaexuer's Slave",
+			"Xue'taq's Dagger",
+			"Teqxae's Madness",
+			"Taeqtaq'kea's Pride",
+			"Keqxae'xeu's Saber",
+			"Xueaeq's Disgrace",
+			"Xum'taq'qux' Star",
+			"Ke'xae'xe's Scream",
+			"Keq'keax' Blade"
+			)
 
 /datum/lore/organization/other/marauders
-	name = "Marauders"
+	name = "Vox Marauders"
 	short_name = "" //whitespace hack again
 	acronym = "VOX"
-	desc = "Hand over shinies dustlung, yaya!"
+	desc = "Whilst rarely as directly threatening as 'common' pirates, the phoron-breathing vox nevertheless pose a constant nuisance for shipping; as far as vox are concerned, only vox and vox matters matter, and everyone else is a 'treeless dustlung'. Unlike sometimes over-confident pirates, the vox rarely engage in open combat, preferring to steal and raid through stealth rather than brute force. Vox raiders will only commit to an attack if they're confident that they can quickly overwhelm and subdue their victims, then swiftly get away in the event that any alarms are tripped or reinforcements are called for.\
+	<br><br>\
+	As Vox ship names are generally impossible for the vast majority of other species to pronounce, System Defense tends to tag marauders with a designation based on the ancient NATO Phonetic Alphabet."
 	history = "Unknown"
 	work = "Looting and raiding"
 	headquarters = "Nowhere"
@@ -1507,7 +2021,7 @@
 	hostile = TRUE
 	autogenerate_destination_names = TRUE //the events we get called for don't fire a destination, but we need *some* entries to avoid runtimes.
 
-	ship_prefixes = list ("vox marauder" = "a marauding", "vox raider" = "a raiding", "vox ravager" = "a raiding", "vox corsair" = "a raiding") //as assigned by control, second part shouldn't even come up
+	ship_prefixes = list("vox marauder" = "a marauding", "vox raider" = "a raiding", "vox ravager" = "a raiding", "vox corsair" = "a raiding") //as assigned by control, second part shouldn't even come up
 	//blank out our shipnames for redesignation
 	ship_names = list(
 			)
@@ -1659,122 +2173,69 @@
 			"a classified location"
 			)
 			// autogen will add a lot of other places as well.
+			
+/datum/lore/organization/gov/almachi
+	name = "Almach Association"
+	short_name = "Almachi "
+	acronym = "ALM"
+	desc = "The Almach Association, or Almach, is a Mercurial governmental entity with major population centers in Shelf, Angessa's Pearl, Vounna, and Relan, and extending throughout the nearby region.\
+	<br><br> \
+	Almach is primarily a military union designed to protect the constituent systems from an attack by SolGov, although some argue that it gives large constituents an unacceptable level of influence over their neighbors. Almach also conducts shared trade and diplomacy missions, but differs from a confederacy by its lack of legislative powers. All contributions to the Association are voluntary. Most constituent systems are organized as direct democracies, although it also counts workers' unions, republics and even theocracies among its members.\
+	<br><br> \
+	Almach's military forces are given broad autonomy to respond to unfolding situations as they will, with a heavily decentralized strategic model unique to the Mercurial government."
+	history = ""
+	work = ""
+	headquarters = "Shelf, Angessa's Pearl, Vounna, and Relan"
+	motto = ""
+	autogenerate_destination_names = TRUE
 
-/* Space foxes: deleted. Keeping them commented for historical reasons. -YW
-/datum/lore/organization/gov/kitsuhana
-	name = "Kitsuhana Heavy Industries"
-	short_name = "Kitsuhana"
-	desc = "A large post-scarcity amalgamation of races, Kitsuhana is no longer a company but rather a loose association of 'members' \
-			who only share the KHI name and their ideals in common. Kitsuhana accepts interviews to join their ranks, and though they have no \
-			formal structure with regards to government or law, the concept of 'consent' drives most of the large decision making. Kitsuhanans \
-			pride themselves on their ability to avoid consequence, essentially preferring to live care-free lives. Their post-scarcity allows \
-			them to rebuild, regrow, and replenish almost any lost asset or resource nearly instantly. It leads to many of the Kitsuhana \
-			'members' treating everything with frivolity and lends them a care-free demeanor."
-	history = "Originally a heavy industrial equipment and space mining company. During a forced evacuation of their homeworld, \
-			they were they only organization with enough ship capacity to relocate any significant portion of the population, starting with \
-			their own employees. After the resulting slowship travel to nearby starsystems, most of the population decided to keep the moniker \
-			of the company name. Over the years, Kitsuhana developed into a post-scarcity anarchy where virtually nothing has consequences and \
-			Kitsuhana 'members' can live their lives as they see fit, often in isolation."
-	work = "utopian anarchy"
-	headquarters = "Kitsuhana Prime"
-	motto = "Do what you want. We know we will."
-
-	//Culture ship names!
-	ship_prefixes = list("KHI" = "personal") //Everybody's out for themselves, yanno.
-	ship_names = list("Nervous Energy",
-						"Prosthetic Conscience",
-						"Revisionist",
-						"Trade Surplus",
-						"Flexible Demeanour",
-						"Just Read The Instructions",
-						"Limiting Factor",
-						"Cargo Cult",
-						"Gunboat Diplomat",
-						"A Ship With A View",
-						"Cantankerous",
-						"I Thought He Was With You",
-						"Never Talk To Strangers",
-						"Sacrificial Victim",
-						"Unwitting Accomplice",
-						"Bad For Business",
-						"Just Testing",
-						"Size Isn't Everything",
-						"Yawning Angel",
-						"Liveware Problem",
-						"Very Little Gravitas Indeed",
-						"Zero Gravitas",
-						"Gravitas Free Zone",
-						"Absolutely No You-Know-What")
-	destination_names = list("Kitsuhana Prime",
-						"Kitsuhana Beta",
-						"Kitsuhana Gamma",
-						"the Kitsuhana Forge",
-						"a Kitsuhanan's home",
-						"a Kitsuhana ringworld in Pleis Ceti V",
-						"a Kitsuhana ringworld in Lund VI",
-						"a Kitsuhana ringworld in Dais IX",
-						"a Kitsuhana ringworld in Leibert II-b")
-*/
+	ship_prefixes = list("ALM-A" = "an administrative", "ALM-T" = "a transportation", "ALM-D" = "a diplomatic", "ALM-F" = "a freight", "ALM-J" = "a prisoner transfer")
+	//TODO: better ship names
+	/*
+	ship_names = list(
+			"",
+			)
+	*/
+	destination_names = list(
+			"an Association member colony",
+			"the Xia subcluster",
+			"the Matigab subcluster",
+			"the Zegev subcluster",
+			"|Prometheus| Station, Vounna",
+			"an Association embassy",
+			"a classified location"
+			)
 
 /* setup for tajaran + other xeno groups, but allakai never came forth with useful resources for me. leaving my framework in place for later updating.
-/datum/lore/organization/gov/tajara_rakar
-	name = "Rakar Empire"
-	short_name = "Rakar "
-	acronym = "RKE"
-	desc = ""
+/datum/lore/organization/gov/alarjir_iniye
+	name = "Alarjir Iniye"
+	short_name = "Coalition "
+	acronym = "ALI"
+	desc = "The Alarjir Iniye, or Pearlshield Coalition, is a tenuous alliance of several tajaran nations and other groups who seek to solidify their people's hold on the few territories they presently hold. Whilst externally fairly well-organzed, the Coalition is internally a hotbed of intrigue and competition."
 	history = ""
 	work = ""
-	headquarters = ""
+	headquarters = "Rarkajar"
 	motto = ""
 	autogenerate_destination_names = FALSE //big list of own holdings to come
 
-	ship_prefixes = list("RKE-D" = "a diplomatic", "RKE-M" = "a peacekeeping")
+	ship_prefixes = list("ALI-A" = "an administrative", "ALI-D" = "a diplomatic", "ALI-M" = "a peacekeeping", "ALI-F" = "a transportation", "ALI-J" = "a prisoner transfer", "ALI-R" = "a research")
 	//TODO: better ship names
 	ship_names = list(
 			"",
 			)
 	destination_names = list(
-			"",
-			)
-
-/datum/lore/organization/gov/tajara_selem
-	name = "Selem Hegemony"
-	short_name = "Selem "
-	acronym = "TSH"
-	desc = ""
-	history = ""
-	work = ""
-	headquarters = ""
-	motto = ""
-	autogenerate_destination_names = FALSE //big list of own holdings to come
-
-	ship_prefixes = list("TSH-D" = "a diplomatic", "TSH-M" = "a peacekeeping")
-	//TODO: better ship names
-	ship_names = list(
-			"",
-			)
-	destination_names = list(
-			"",
-			)
-
-/datum/lore/organization/gov/tajara_najrir
-	name = "Najrir Republic"
-	short_name = "Republic "
-	acronym = "TNR"
-	desc = ""
-	history = ""
-	work = ""
-	headquarters = ""
-	motto = ""
-	autogenerate_destination_names = FALSE //big list of own holdings to come
-
-	ship_prefixes = list("TNR-D" = "a diplomatic", "TNR-M" = "a peacekeeping")
-	//TODO: better ship names
-	ship_names = list(
-			"",
-			)
-	destination_names = list(
-			"",
+			"Rarkajar, Meralar",
+			"a Coalition outpost in Meralar",
+			"a Coalition shipyard",
+			"a Coalition supply depot",
+			"a Coalition embassy",
+			"a Coalition research base",
+			"Alar-Selna, Arrakthiir",
+			"a minor colony in Arrakthiir",
+			"a Coalition outpost in Arrakthiir",
+			"a tajaran colony in Mesomori",			
+			"a Coalition outpost in Mesomori",
+			"a mining base in Mesomori"
 			)
 
 /datum/lore/organization/gov/unathi
@@ -1788,13 +2249,20 @@
 	motto = ""
 	autogenerate_destination_names = FALSE //big list of own holdings to come
 
-	ship_prefixes = list("MGH-D" = "a diplomatic", "MGH-U" = "a Unity-mandated", "MGH-M" = "a peacekeeping")
+	ship_prefixes = list("MGH-D" = "a diplomatic", "MGH-U" = "a Unity-mandated", "MGH-M" = "a peacekeeping", "MGH-F" = "a transportation", "MGH-J" = "a prisoner transfer", "MGH-R" = "a Redemptionist")
 	//TODO: better ship names
 	ship_names = list(
 			"",
 			)
 	destination_names = list(
-			"",
+			"Moghes, Uueoa-Esa",
+			"Kharet, Uueoa-Esa",
+			"a gas-mining facility over Yeora",
+			"a mining outpost in the Yoos belt",
+			"a Hegemony resuply depot",
+			"a Hegemony shipyard",
+			"a Hegemony embassy",
+			"a Hegemony outpost near Abel's Rest"
 			)
 */
 
@@ -1855,10 +2323,17 @@
 	history = ""
 	work = "peacekeeping and piracy suppression"
 	headquarters = "Paris, Earth"
-	motto = "Si Vis Pacem Para Bellum"
+	motto = "Si Vis Pacem Para Bellum" //if you wish for peace, prepare for war
 	autogenerate_destination_names = TRUE
 
 	ship_prefixes = list ("USDF" = "a logistical", "USDF" = "a training", "USDF" = "a patrol", "USDF" = "a piracy suppression", "USDF" = "a peacekeeping", "USDF" = "a relief", "USDF" = "an escort", "USDF" = "a search and rescue", "USDF" = "a classified")
+	flight_types = list(
+			"mission",
+			"operation",
+			"exercise",
+			"assignment",
+			"deployment"
+			)
 	ship_names = list(
 			"Aphrodite",
 			"Apollo",
@@ -1929,9 +2404,62 @@
 			)
 	destination_names = list(
 			"USDF HQ",
-			"a USDF staging facility on the edge of SolGov territory",
-			"a USDF resupply depot",
+			"a USDF staging facility on the edge of USG territory",
+			"a USDF supply depot",
+			"a USDF rally point",
+			"a USDF forward base",
+			"a USDF repair facility",
 			"a USDF shipyard in Sol",
+			"a classified location"
+			)
+
+/datum/lore/organization/mil/almachivanguard
+	name = "Almach Revolutionary Vanguard"
+	short_name = "Vanguard "
+	acronym = "ARV"
+	desc = "The Association Fleet is a metaphorical knife to be aimed at SolGov at all times. Contributed to and commanded by constituent interests, the elements of the Fleet vary wildly in composition, construction, and doctrine. Generally, the Association has adopted more unconventional tactics in their standing doctrine than the USDF, a necessity given the minescule size of their fleet and population compared to the latter. While sometimes deployed to protect trade convoys from the heavy Vox presence in the uninhabited region between the Rim and the outer Skrell colonies, the Fleet's primary purpose is discouraging a direct attack from any who might covet the Association's holdings."
+	history = ""
+	work = "Almach Association Security"
+	headquarters = "Classified"
+	motto = ""
+	autogenerate_destination_names = TRUE
+	complex_tasks = TRUE
+
+	ship_prefixes = list("AFV" = "a formalist", "ATV" = "a telops", "AAV" = "an ascendancy")
+	flight_types = list(
+			"mission",
+			"operation",
+			"exercise",
+			"assignment",
+			"deployment"
+			)
+	ship_names = list(
+			"Bulwark of the Free",
+			"Dawnstar",
+			"Fiery Justice",
+			"Freedom",
+			"Gauntlet",
+			"Hero of the Revolution",
+			"Liberty",
+			"Memory of the Fallen",
+			"People's Fist",
+			"Pride of Liberty",
+			"Star of Tiamat",
+			"Torch of Freedom",
+			"Vanguard's Defiance",
+			"Transhumanist",
+			"Beacon of Progress"
+			)
+	destination_names = list(
+			"a Vanguard resupply hub",
+			"a Vanguard staging facility on the edge of Association territory",
+			"an Association colony in need of assistance",
+			"a Vanguard supply depot",
+			"a Vanguard taskforce",
+			"a Vanguard rally point",
+			"a Vanguard forward base",
+			"a Vanguard vac-dock",
+			"a Vanguard repair facility",
 			"a classified location"
 			)
 
@@ -2078,9 +2606,9 @@
 	name = "Stealth Assault Enterprises"
 	short_name = ""
 	acronym = "SAARE"
-	desc = "SAARE have consistently the worst reputation of any TSC. This is because they are a paramilitary group specializing in deniability and secrecy. Although publically they work in asset recovery, they have a substantiated reputation for info-theft and piracy that has lead to them butting heads with the law on more than one occasion. Nonetheless, they are an invaluable part of the Solar economy, and other TSCs and small colonial governments keep them in business.\
+	desc = "SAARE consistently have the worst reputation of any paramilitary group. This is because they specialize in deniability and secrecy. Although publically they work in asset recovery, they have a substantiated reputation for info-theft and piracy that has lead to them butting heads with the law on more than one occasion. Nonetheless, they are an invaluable part of the Solar economy, and other TSCs and small colonial governments keep them in business.\
 	<br><br>\
-	For the purposes of plausible deniability, SAARE designates their ships using a series of rotating identifiers that tend to only be used for a single operation."
+	For the purposes of plausible deniability, SAARE designates their ships using a series of rotating identifiers, with ships on a specific operation or in a particular area all using the same initial designation (<i>e.g.</i> 'Sledgehammer') and having a different numerical identifier, with the most important ships involved bearing a unique additional codename (such as 'Actual' for Command \& Control ships). As ships are shuffled in and out of operating areas, it can be difficult to pin down exactly which ship in SAARE's fleet was responsible for which act. SAARE's misdirection is multilayered, including elements such as extensive use of repainting, false IFFs, bribes, forged documents, intimidation, camouflage, and all manner of other underhanded tactics."
 	history = ""
 	work = "mercenary contractors"
 	headquarters = ""
@@ -2145,7 +2673,12 @@
 			"Maverick",
 			"Nighthawk",
 			"Redshift",
-			"Challenger"
+			"Challenger",
+			"Starlight",
+			"Sunray",
+			"Ironside",
+			"Holdfast",
+			"Foxhound"
 			)
 	var/list/numbersone = list(
 			"Zero",
@@ -2172,8 +2705,8 @@
 			"Niner"
 			)
 	while(i)
-		ship_names.Add("[pick(letters)] [pick(numbersone)]-[pick(numberstwo)]")
+		ship_names.Add("[pick(letters)] [pick(40;"Actual","[pick(numbersone)]-[pick(numberstwo)]")]")
 		i--
 
-	//ex: "Phalanx One-Niner", "Kodiak Seven-Four", "Tomahawk Two-Zero"
+	//ex: "Phalanx One-Niner", "Sledgehammer Actual" (CO/VIP), "Kodiak Seven-Four", "Tomahawk Two-Zero"
 	//probably a more elegant (read: fancier) way to do the second part but fuck it, this works just fine
