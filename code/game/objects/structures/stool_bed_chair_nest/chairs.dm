@@ -93,7 +93,9 @@
 // Leaving this in for the sake of compilation.
 /obj/structure/bed/chair/comfy
 	desc = "It's a chair. It looks comfy."
-	icon_state = "comfychair_preview"
+	icon = 'icons/obj/furniture_ch.dmi'	//CHOMPEDIT START: Making the premade chairs not have the basic chair visible, sometime make the constructed ones work as well
+	icon_state = "comfychair"
+	base_icon = "comfychair"			//CHOMPEDIT END
 
 /obj/structure/bed/chair/comfy/brown/New(var/newloc,var/newmaterial)
 	..(newloc,"steel","leather")

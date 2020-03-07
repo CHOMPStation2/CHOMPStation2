@@ -17,6 +17,11 @@
 	w_class = ITEMSIZE_NORMAL
 	max_amount = 60
 
+	var/material/material						//CHOMPEDIT: Start, To make tiles have material variables
+	var/default_type = DEFAULT_WALL_MATERIAL
+	var/perunit = SHEET_MATERIAL_AMOUNT
+	var/apply_colour							//CHOMPEDIT: End
+
 /obj/item/stack/tile/New()
 	..()
 	pixel_x = rand(-7, 7)
@@ -66,9 +71,9 @@
 	stacktype = /obj/item/stack/tile/wood
 	build_type = /obj/item/stack/tile/wood
 
+
+//CHOMPEDIT: Moving carpets to tile_types_ch to give them proper names, descriptions and material variables
 /*
- * Carpets
- */
 /obj/item/stack/tile/carpet
 	name = "carpet"
 	singular_name = "carpet"
@@ -102,6 +107,7 @@
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/oracarpet
 	icon_state = "tile-carpet"
+ */
 
 /obj/item/stack/tile/floor
 	name = "floor tile"

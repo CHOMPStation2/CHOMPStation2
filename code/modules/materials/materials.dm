@@ -1011,6 +1011,8 @@ var/list/name_to_material
 	protectiveness = 3 // 13%
 	conductive = 0
 
+//CHOMPEDIT: Moved to materials_ch and changed to allow for material var
+/*
 /material/carpet
 	name = "carpet"
 	display_name = "comfy"
@@ -1023,6 +1025,7 @@ var/list/name_to_material
 	sheet_plural_name = "tiles"
 	protectiveness = 1 // 4%
 	conductive = 0
+*/
 
 /material/cotton
 	name = "cotton"

@@ -75,6 +75,9 @@
 				secret_tracks |= T
 			else
 				tracks |= T
+			if(T.casino) //CHOMPEDIT: preventing casion tracks from being added to other jukeboxes
+				tracks -= T
+
 	else if(!LAZYLEN(tracks)) //We don't even have default tracks
 		stat |= BROKEN // No tracks configured this round!
 

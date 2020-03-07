@@ -30,7 +30,7 @@ var/global/list/stool_cache = list() //haha stool
 	update_icon()
 
 /obj/item/weapon/stool/padded/New(var/newloc, var/new_material)
-	..(newloc, "steel", "carpet")
+	..(newloc,"steel",MAT_CARPET) //CHOMPEDIT: New tile material system
 
 /obj/item/weapon/stool/update_icon()
 	// Prep icon.
@@ -121,9 +121,11 @@ var/global/list/stool_cache = list() //haha stool
 			user.drop_from_inventory(C)
 			qdel(C)
 			return
-		var/padding_type //This is awful but it needs to be like this until tiles are given a material var.
-		if(istype(W,/obj/item/stack/tile/carpet))
-			padding_type = "carpet"
+		var/padding_type
+		if(istype(W,/obj/item/stack/tile/carpet)) //CHOMPEDIT: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future
+			var/obj/item/stack/tile/carpet/M = W
+			if(M.material && (M.material.flags & MATERIAL_PADDING))
+				padding_type = "[M.material.name]"
 		else if(istype(W,/obj/item/stack/material))
 			var/obj/item/stack/material/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))
