@@ -142,8 +142,8 @@
 		message_data[1] = ""
 		. = 1
 
-	else if(istype(wear_mask, /obj/item/clothing/mask))
-		var/obj/item/clothing/mask/M = wear_mask
+	else if(istype(wear_mask, /obj/item/clothing/mask/muzzle)) //YWedit start, fixes masks removing speech problems.
+		var/obj/item/clothing/mask/muzzle/M = wear_mask // YWedit End.
 		if(M.voicechange)
 			message_data[1] = pick(M.say_messages)
 			message_data[2] = pick(M.say_verbs)
