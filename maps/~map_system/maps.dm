@@ -76,6 +76,7 @@ var/list/all_maps = list()
 	var/company_name  = "BadMan"
 	var/company_short = "BM"
 	var/starsys_name  = "Dull Star"
+	var/shuttle_name  = "NAS |Faraday|" // YW ADDITION: default name included
 
 	var/shuttle_docked_message
 	var/shuttle_leaving_dock
