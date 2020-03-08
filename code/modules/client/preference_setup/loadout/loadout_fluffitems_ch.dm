@@ -7,7 +7,7 @@
 	character_name = list("Ash Williams")
 	description = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award on offer. It is often awarded by a captain to a member of their crew."
 	path = /obj/item/clothing/accessory/medal/conduct
-	display_name = "Ash Williams's Medal"
+	display_name = "Ash Williams' Medal"
 
 /datum/gear/fluff/durgitmedal
 	ckeywhitelist = list("blackmajor")
@@ -70,14 +70,14 @@
 	ckeywhitelist = list("dhdb")
 	character_name = list("Marshall Winter")
 	path = /obj/item/clothing/accessory/medal/silver/valor
-	display_name = "Uboiezb's Medal"
+	display_name = "Marshall Winter's Medal"
 	description = "A silver medal awarded for acts of exceptional valor."
 
 /datum/gear/fluff/maticamedal
 	ckeywhitelist = list("somememeguy")
 	character_name = list("Matica")
 	path = /obj/item/clothing/accessory/medal/silver/valor
-	display_name = "Uboiezb's Medal"
+	display_name = "Matica's Medal"
 	description = "A silver medal awarded for acts of exceptional valor."
 
 /datum/gear/fluff/taaamedalvalor
