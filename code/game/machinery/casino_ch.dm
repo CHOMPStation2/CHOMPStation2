@@ -915,78 +915,66 @@
 
 
 /////////////CASINO PRIZE DISPENSER////////////////////////
-/*
+
 /obj/machinery/casino_prize_dispenser //WIP sprites and variables and prize lists
 	name = "Casino Prize Exchanger"
 	desc = "Exchange your chips to obtain wonderful prizes! Hoepfully you'll get to keep some of them for a while."
 	icon = 'icons/obj/casino_ch.dmi'
-	icon_state ="casino_atm"
+	icon_state ="casino_prize_dispenser"
+	var/icon_vend ="casino_prize_dispenser-prize"
 	anchored = 1
-
-	var/icon_vend //Icon_state when vending
-	var/icon_deny //Icon_state when denying access
 
 	// Vending-related
 	var/active = 1 //No sales pitches if off!
 	var/vend_ready = 1 //Are we ready to vend?? Is it time??
-	var/vend_delay = 10 //How long does it take to vend?
-	var/categories = CAT_NORMAL // Bitmask of cats we're currently showing
+	var/vend_delay = 40 //How long does it take to vend?
 	var/datum/stored_item/vending_product/currently_vending = null // What we're requesting payment for right now
+	var/category_selection = null
+	var/currently_selecting = null //Which category of prizes is currently displayed
+	var/prize_payout_mode = null	//Is the currently selected prize being given or just logged?
 	var/status_message = "" // Status screen messages like "insufficient funds", displayed in NanoUI
 	var/status_error = 0 // Set to 1 if status_message is an error
+
 
 	var/list/list_weapons	= list()
 	var/list/list_gear		= list()
 	var/list/list_clothing 	= list()
 	var/list/list_misc 		= list()
 	var/list/list_drinks 	= list()
-	var/list/prices     = list() // Prices for each item, list(/type/path = price), items not in the list don't have a price.
+	var/list/prices    		= list() // Prices for each item, list(/type/path = price), items not in the list don't have a price.
 
 	var/category_weapons	 = 1	//For listing categories, if false then prizes of this categories cant be obtained nor bought for post-shift enjoyment
-	var/category_gear		 = 1
-	var/category_clothing	 = 1
+	var/category_gear		 = 1	//If 1 prizes will be only logged
+	var/category_clothing	 = 1	//If 2 prizes will both be logged and spawned
 	var/category_misc		 = 1
 	var/category_drinks		 = 1
 
-	var/list/product_categories = list(
-		list_weapons,
-		category_gear,
-		category_clothing,
-		category_misc,
-		category_drinks
+	list_weapons = list(
+		)
+
+	list_drinks = list(
+		)
+
+	prices = list(
 		)
 
 	// List of vending_product items available.
 	var/list/product_records = list()
 
-	// Stuff relating vocalizations
-	var/list/slogan_list = list()
-	var/shut_up = 1 //Stop spouting those godawful pitches!
-	var/vend_reply //Thank you for shopping!
-	var/last_reply = 0
-	var/last_slogan = 0 //When did we last pitch?
-	var/slogan_delay = 6000 //How long until we can pitch again?
-
 	var/list/log = list()
 	var/req_log_access = access_cargo //default access for checking logs is cargo
 	var/has_logs = 0 //defaults to 0, set to anything else for vendor to have logs
-*/
 
-	/*
-		var/list/all_products = list(
-		list("Melee weapons, guns and 'guns'", CAT_WEAPONS),
-		list("Gear and accessories", CAT_GEAR),
-		list("Costumes and masks", CAT_CLOTHING),
-		list("Toys and miscellaneous", CAT_MISC),
-		list("Booze", CAT_DRINKS))
-	*/
-
-/*
 /obj/machinery/casino_prize_dispenser/Initialize()
 	build_inventory()
 
 /obj/machinery/casino_prize_dispenser/proc/build_inventory() //WIP
-
+	var/list/all_products = list(
+		list(list_weapons, "cat_weapons"),
+		list(list_gear, "cat_gear"),
+		list(list_clothing, "cat_clothing"),
+		list(list_misc, "cat_misc"),
+		list(list_drinks, "cat_drinks"))
 
 	for(var/current_list in all_products)
 		var/category = current_list[2]
@@ -996,8 +984,8 @@
 
 			product.price = (entry in prices) ? prices[entry] : 0
 			product.category = category
-*/
-/*
+			product_records.Add(product)
+
 /obj/machinery/casino_prize_dispenser/Destroy()
 	for(var/datum/stored_item/vending_product/R in product_records)
 		qdel(R)
@@ -1058,21 +1046,24 @@
 	user.set_machine(src)
 
 	var/list/data = list()
+
 	if(currently_vending)
-		data["mode"] = 1
+		data["mode"] = 2
 		data["product"] = currently_vending.item_name
 		data["price"] = currently_vending.price
 		data["message_err"] = 0
 		data["message"] = status_message
 		data["message_err"] = status_error
-	else
-		data["mode"] = 0
-		var/list/listed_products = list()
+
+	else if(currently_selecting)
+		data["mode"] = 1
+		var/list/listed_products = null
+		listed_products = list()
 
 		for(var/key = 1 to product_records.len)
 			var/datum/stored_item/vending_product/I = product_records[key]
 
-			if(!(I.category & categories))
+			if(I.category == currently_selecting)
 				continue
 
 			listed_products.Add(list(list(
@@ -1080,9 +1071,17 @@
 				"name" = I.item_name,
 				"price" = I.price,
 				"color" = I.display_color)))
-
 		data["products"] = listed_products
-		data["categories"] = all_products
+
+	else
+		data["mode"] = 0
+
+		data["category_weapons"] 	= category_weapons
+		data["category_gear"] 		= category_gear
+		data["category_clothing"] 	= category_clothing
+		data["category_misc"] 		= category_misc
+		data["category_drinks"] 	= category_drinks
+
 
 	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
@@ -1097,13 +1096,31 @@
 		return
 
 	if((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf)))) //WIP check the vending_product
+		if((href_list["Select"]) && (vend_ready) && (!currently_vending))
+			switch(href_list["Select"])
+				if("selected_weapons")
+					currently_selecting = "cat_weapons"
+					prize_payout_mode = category_weapons
+				if("selected_gear")
+					currently_selecting = "cat_gear"
+					prize_payout_mode = category_gear
+				if("selected_clothing")
+					currently_selecting = "cat_clothing"
+					prize_payout_mode = category_clothing
+				if("selected_misc")
+					currently_selecting = "cat_misc"
+					prize_payout_mode = category_misc
+				if("selected_drinks")
+					currently_selecting = "cat_drinks"
+					prize_payout_mode = category_drinks
+				else
+					currently_selecting = null
+					prize_payout_mode = null
+
 		if((href_list["vend"]) && (vend_ready) && (!currently_vending))
 			var/key = text2num(href_list["vend"])
 			var/datum/stored_item/vending_product/R = product_records[key]
-
-			// This should not happen unless the request from NanoUI was bad
-			if(!(R.category & categories))
-				return
+			currently_selecting = null
 
 			if(R.price <= 0)
 				vend(R, usr)
@@ -1115,6 +1132,7 @@
 		else if(href_list["cancelpurchase"])
 			currently_vending = null
 
+
 		SSnanoui.update_uis(src)
 
 /obj/machinery/casino_prize_dispenser/proc/vend(datum/stored_item/vending_product/R, mob/user) //WIP
@@ -1125,12 +1143,19 @@
 
 	if(icon_vend) //Show the vending animation if needed
 		flick(icon_vend,src)
-	spawn(vend_delay)
-		R.get_product(get_turf(src))
-		if(has_logs)
-			do_logging(R, user, 1)
+		flick(icon_vend,src)
+		flick(icon_vend,src)
+		flick(icon_vend,src)
+		flick(icon_vend,src)
 
-		playsound(src, 'sound/items/vending.ogg', 50, 1, 1)
+	spawn(vend_delay)
+		if(prize_payout_mode == 2)
+			new R.item_path(src.loc)
+			playsound(src, 'sound/items/vending.ogg', 50, 1, 1)
+
+		status_message = "Thank you for your purchase, your prize has been logged!"
+		to_chat(user,status_message)
+		do_logging(R.item_path, user)
 
 		status_message = ""
 		status_error = 0
@@ -1140,52 +1165,7 @@
 
 	return 1
 
-/obj/machinery/casino_prize_dispenser/proc/do_logging(datum/stored_item/vending_product/R, mob/user, var/vending = 0) //WIP?
-	var/prize_log = "[user.ckey] playing as [user.name] bought a INSERT PORODUCT HERE."
+/obj/machinery/casino_prize_dispenser/proc/do_logging(item, mob/user)
+	var/prize_log = "[user.ckey] playing as [user.name] bought a [item]."
 	log[++log.len] = prize_log
 	//Currently doesnt have in game way to show, to ensure theres no chance of players ckeys exposed - Jack
-*/
-/*
-<!--
-	Interface for vending machines
-	See: code/game/machinery/vending.dm
--->
-
-{{if data.mode == 0}} <!-- Listing -->
-<h2>Items available</h2>
-<div class='item'>
-	{{for data.products}}
-	<div class='item'>
-			<div style='float'>
-				{{if value.price > 0}}
-					{{:helper.link('Buy (' + value.price + ')', 'cart', { "vend" : value.key }}}
-				{{else}}
-					{{:helper.link('Vend', 'circle-arrow-s', { "vend" : value.key }}}
-				{{/if}}
-			</div>
-		<div class='itemContent'>
-		{{if value.color}}<span style='color:{{:value.color}}'>{{:value.name}}</span>
-		{{else}}{{:value.name}}
-		</div>
-	</div>
-	{{empty}}
-	No items available!
-	{{/for}}
-</div>
-{{/if}}
-{{else data.mode == 1}} <!-- Payment screen -->
-<h2>Item selected</h2>
-<div class='item'>
-	<div class='item'>
-		<div class='itemLabel'>Item selected:</div> <div class='itemContent'>{{:data.product}}</div>
-		<div class='itemLabel'>Charge:</div> <div class='itemContent'>{{:data.price}}</div>
-	</div>
-	<div class='statusDisplay' style='overflow: auto;'>
-		{{if data.message_err}} <span class='uiIcon16 icon-alert' ></span>{{/if}} {{:data.message}}
-	</div>
-	<div class='item'>
-		{{:helper.link('Cancel', 'arrowreturn-1-w', {'cancelpurchase' : 1})}}
-	</div>
-</div>
-{{/if}}
-*/
