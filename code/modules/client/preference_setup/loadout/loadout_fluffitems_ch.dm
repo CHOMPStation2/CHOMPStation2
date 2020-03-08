@@ -37,7 +37,7 @@
 	path = /obj/item/clothing/accessory/medal/conduct
 	display_name = "Sym Leikill's Medal"
 
-/datum/gear/fluff/taamedalconduct
+/datum/gear/fluff/taaamedalconduct
 	ckeywhitelist = list("nadyr")
 	character_name = list("Taaa")
 	path = /obj/item/clothing/accessory/medal/conduct
