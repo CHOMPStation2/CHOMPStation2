@@ -71,7 +71,7 @@
 
 //YW change start
 /obj/item/clothing/accessory/holster/attack_hand(mob/user as mob)
-	if (user.a_intent == "harm" && has_suit && (slot & ACCESSORY_SLOT_HOLSTER ))	//if we are part of a suit
+	if (user.a_intent == I_HURT && has_suit && (slot & ACCESSORY_SLOT_HOLSTER ))	//if we are part of a suit
 		if (holstered)
 			unholster(user)
 		return
