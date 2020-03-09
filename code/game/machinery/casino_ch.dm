@@ -762,7 +762,7 @@
 
 				Melee weapons
 				<ul>
-					<li>scepter 1000</li>
+					<li>scepter 500</li>
 					<li>chain of command	200</li>
 				</ul>
 				Guns and 'guns' ((disclaimer, giving out guns will mean you get a weapons license as well with the shifts you have it, abusing these weapons will quickly get them removed!))
