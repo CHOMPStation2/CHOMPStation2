@@ -125,7 +125,7 @@ var/list/flooring_types
 	build_type = /obj/item/stack/tile/carpet/blucarpet
 
 /decl/flooring/carpet/turcarpet
-	name = "turquoise carpet"	//CHOMPEDIT: changing name to turquoise
+	name = "turquoise carpet"	//CHOMPstation edit: changing name to turquoise
 	icon_base = "turcarpet"
 	build_type = /obj/item/stack/tile/carpet/turcarpet
 

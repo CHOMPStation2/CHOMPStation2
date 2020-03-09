@@ -1011,7 +1011,7 @@ var/list/name_to_material
 	protectiveness = 3 // 13%
 	conductive = 0
 
-//CHOMPEDIT: Moved to materials_ch and changed to allow for material var
+//CHOMPstation Removal Start: Moved to materials_ch and changed to allow for material var
 /*
 /material/carpet
 	name = "carpet"
@@ -1026,6 +1026,7 @@ var/list/name_to_material
 	protectiveness = 1 // 4%
 	conductive = 0
 */
+//CHOMPstation Removal End
 
 /material/cotton
 	name = "cotton"

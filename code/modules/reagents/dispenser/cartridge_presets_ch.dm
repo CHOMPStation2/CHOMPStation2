@@ -14,6 +14,7 @@
 	applejuice		spawn_reagent = "applejuice"
 	tomatojuice		spawn_reagent = "tomatojuice"
 	peanutbutter	spawn_reagent = "peanutbutter"
+	matcha_latte	spawn_reagent = "matcha_latte"
 	soymilk		spawn_reagent = "soymilk"
 	grenadine	spawn_reagent = "grenadine"
 	gingerale	spawn_reagent = "gingerale"

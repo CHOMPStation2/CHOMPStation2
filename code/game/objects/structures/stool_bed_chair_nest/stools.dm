@@ -30,7 +30,7 @@ var/global/list/stool_cache = list() //haha stool
 	update_icon()
 
 /obj/item/weapon/stool/padded/New(var/newloc, var/new_material)
-	..(newloc,"steel",MAT_CARPET) //CHOMPEDIT: New tile material system
+	..(newloc,"steel",MAT_CARPET) //CHOMPstation edit: New tile material system
 
 /obj/item/weapon/stool/update_icon()
 	// Prep icon.
@@ -122,10 +122,12 @@ var/global/list/stool_cache = list() //haha stool
 			qdel(C)
 			return
 		var/padding_type
-		if(istype(W,/obj/item/stack/tile/carpet)) //CHOMPEDIT: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future
+		 //CHOMPstation Start: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
+		if(istype(W,/obj/item/stack/tile/carpet))
 			var/obj/item/stack/tile/carpet/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))
 				padding_type = "[M.material.name]"
+		//CHOMPstation END
 		else if(istype(W,/obj/item/stack/material))
 			var/obj/item/stack/material/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))

@@ -314,7 +314,7 @@
 		"coco", "cherryjelly", "carrotjuice", "applejuice", "tomatojuice", "peanutbutter", "soymilk", "grenadine", "gingerale", "roy_rogers",
 		"patron", "goldschlager", "gelatin", "melonliquor", "bluecuracao", "thirteenloko", "deadrum", "sake", "acidspit",
 		"amasec", "beepskysmash", "atomicbomb", "nuka_cola", "threemileisland", "manhattan_proj", "psilocybin", "moonshine",
-		"specialwhiskey", "unathiliquor", "winebrandy", "matcha_latte" "snaps"
+		"specialwhiskey", "unathiliquor", "winebrandy", "matcha_latte", "snaps"
 		)
 
 /obj/machinery/chemical_dispenser/deluxe/full
