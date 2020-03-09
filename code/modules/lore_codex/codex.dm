@@ -6,7 +6,7 @@
 	icon_state = "codex"
 	unique = TRUE
 	var/datum/codex_tree/tree = null
-	var/root_type = /datum/lore/codex/category/main_virgo_lore	//Runtimes on codex_tree.dm, line 18 with a null here
+	var/root_type = /datum/lore/codex/category/main_borealis_lore	//YW EDIT
 
 /obj/item/weapon/book/codex/Initialize()
 	tree = new(src, root_type)
@@ -23,7 +23,7 @@
 	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to the Borealis system, human or not. It also \
 	has the words 'Don't Panic' in small, friendly letters on the cover." //YW Edit
 	icon_state = "codex"
-	root_type = /datum/lore/codex/category/main_virgo_lore
+	root_type = /datum/lore/codex/category/main_borealis_lore	//YW EDIT
 	libcategory = "Reference"
 
 /obj/item/weapon/book/codex/lore/robutt
