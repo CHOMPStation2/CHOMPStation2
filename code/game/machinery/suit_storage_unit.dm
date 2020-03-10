@@ -1304,7 +1304,6 @@
 			if(helmet)
 				helmet.name = "pilot voidsuit helmet"
 				helmet.desc = "An atmos resistant helmet for space and planet exploration."
-				helmet.desc = "An atmos resistant helmet for space and planet exploration."
 				helmet.icon_state = "rig0_pilot"
 				helmet.item_state = "pilot_helm"
 				helmet.max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
