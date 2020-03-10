@@ -4,6 +4,6 @@
 	icon_state = "snapsbottle"
 	center_of_mass = list("x"=17, "y"=3)
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps/New()
-	..()
+/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps/Initialize()
+	. = ..()
 	reagents.add_reagent("snaps", 100)

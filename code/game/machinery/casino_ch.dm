@@ -82,6 +82,9 @@
 	var/symbol2 = null
 	var/symbol3 = null
 
+	var/datum/effect/effect/system/confetti_spread
+	var/confetti_strength = 8
+
 /obj/machinery/slot_machine/attackby(obj/item/weapon/W as obj, mob/user as mob)
 
 	var/handled = 0
@@ -155,7 +158,8 @@
 	var/output //Output variable to send out in chat after the large if statement.
 	var/winnings = 0 //How much money will be given if any.
 	var/platinumwin = 0 // If you win the platinum chip or not
-	var/delaytime = 5 SECONDS // Put this somewhere else I'm just proving a point >:C
+	var/celebrate = 0
+	var/delaytime = 5 SECONDS
 
 
 	spawn(delaytime)
@@ -188,14 +192,17 @@
 		if (symbol1 == "seven" && symbol2 == "seven" && symbol3 == "seven")
 			output = "<span class='notice'>Three sevens! The slot machine deposits a 500 credit chip!</span>"
 			winnings = 500
+			celebrate = 1
 
 		if (symbol1 == "diamond" && symbol2 == "diamond" && symbol3 == "diamond")
 			output = "<span class='notice'>Three diamonds! The slot machine deposits a 1000 credit chip!</span>"
 			winnings = 1000
+			celebrate = 1
 
 		if (symbol1 == "platinum coin" && symbol2 == "platinum coin" && symbol3 == "platinum coin")
 			output = "<span class='notice'>Three platinum coins! The slot machine deposits a platinum chip!</span>"
 			platinumwin = TRUE;
+			celebrate = 1
 
 		icon_state = initial(icon_state) // Set it back to the original iconstate.
 
@@ -217,7 +224,15 @@
 				spawn_casinochips(winnings, src.loc)
 				icon_state = "slotmachine"
 
-		busy = FALSE //Set busy to false, we're done here fam.
+		if(celebrate) // Happy celebrations!
+			src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
+			src.confetti_spread.attach(src) //If somehow people start dragging slot machine
+			spawn(0)
+				for(var/i = 1 to confetti_strength)
+					src.confetti_spread.start()
+					sleep(10)
+
+		busy = FALSE
 
 
 /obj/structure/wheel_of_fortune
@@ -296,11 +311,11 @@
 		"limejuice", "berryjuice", "mint", "lemon_lime", "sugar", "orangejuice", "limejuice", "sodawater",
 		"tonic", "beer", "kahlua", "whiskey", "wine", "vodka", "gin", "rum", "tequilla", "vermouth", "cognac",
 		"ale", "mead", "bitters", "champagne", "singulo", "doctorsdelight", "nothing", "banana", "honey", "egg",
-		"coco", "cherryjelly", "carrot", "apple", "tomato", "nutbutter", "soymilk", "grenadine", "gingerale", "royrogers",
+		"coco", "cherryjelly", "carrotjuice", "applejuice", "tomatojuice", "peanutbutter", "soymilk", "grenadine", "gingerale", "roy_rogers",
 		"patron", "goldschlager", "gelatin", "melonliquor", "bluecuracao", "thirteenloko", "deadrum", "sake", "acidspit",
-		"amasec", "beepsky_smash", "atomicbomb", "nuka_cola", "threemileisland", "manhattan_proj", "psilocybin", "moonshine",
-		"specialwhiskey", "unathiliquor", "winebrandy", "snaps"
-		) // Re-add matcha latte once its in code, probably add more stuff to list as well
+		"amasec", "beepskysmash", "atomicbomb", "nuka_cola", "threemileisland", "manhattan_proj", "psilocybin", "moonshine",
+		"specialwhiskey", "unathiliquor", "winebrandy", "matcha_latte", "snaps"
+		)
 
 /obj/machinery/chemical_dispenser/deluxe/full
 	spawn_cartridges = list(
@@ -363,13 +378,16 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/egg,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/coco,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/cherryjelly,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/carrot,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/apple,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tomato,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/carrotjuice,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/applejuice,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tomatojuice,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/soymilk,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/peanutbutter,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/matcha_latte,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/grenadine,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/gingerale,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/royrogers,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/roy_rogers,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/patron,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/goldschlager,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/melonliquor,
@@ -379,7 +397,7 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sake,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/acidspit,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/amasec,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/beepsky_smash,
+			/obj/item/weapon/reagent_containers/chem_disp_cartridge/beepskysmash,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/atomicbomb,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/nuka_cola,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/threemileisland,
@@ -391,10 +409,6 @@
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/winebrandy,
 			/obj/item/weapon/reagent_containers/chem_disp_cartridge/snaps
 			)
-
-/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/matcha_latte,*/ //Not ported yet either - Jack
-/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/nutbutter,*/ //Not ported yet - Jack
-/*/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,*/ //Not ported yet - Jack
 
 /obj/machinery/chemical_dispenser/deluxe/New()
 	..()
@@ -748,7 +762,7 @@
 
 				Melee weapons
 				<ul>
-					<li>scepter 1000</li>
+					<li>scepter 500</li>
 					<li>chain of command	200</li>
 				</ul>
 				Guns and 'guns' ((disclaimer, giving out guns will mean you get a weapons license as well with the shifts you have it, abusing these weapons will quickly get them removed!))
@@ -819,8 +833,6 @@
 					<li>Bosun's whistle</li>
 					<li>Golden cup</li>
 					<li>Havana cigar case</li>
-					<li>Cute witch</li>
-					<li>Gladiator</li>
 				</ul>
 				Booze - ALL BOOZE IS 50
 				<ul>
@@ -900,3 +912,259 @@
 		src.attack_hand(user)
 		qdel(I)
 
+
+/////////////CASINO PRIZE DISPENSER////////////////////////
+
+/obj/machinery/casino_prize_dispenser //WIP sprites and variables and prize lists
+	name = "Casino Prize Exchanger"
+	desc = "Exchange your chips to obtain wonderful prizes! Hoepfully you'll get to keep some of them for a while."
+	icon = 'icons/obj/casino_ch.dmi'
+	icon_state ="casino_prize_dispenser"
+	var/icon_vend ="casino_prize_dispenser-prize"
+	anchored = 1
+
+	// Vending-related
+	var/active = 1 //No sales pitches if off!
+	var/vend_ready = 1 //Are we ready to vend?? Is it time??
+	var/vend_delay = 40 //How long does it take to vend?
+	var/datum/stored_item/vending_product/currently_vending = null // What we're requesting payment for right now
+	var/category_selection = null
+	var/currently_selecting = null //Which category of prizes is currently displayed
+	var/prize_payout_mode = null	//Is the currently selected prize being given or just logged?
+	var/status_message = "" // Status screen messages like "insufficient funds", displayed in NanoUI
+	var/status_error = 0 // Set to 1 if status_message is an error
+
+
+	var/list/list_weapons	= list()
+	var/list/list_gear		= list()
+	var/list/list_clothing 	= list()
+	var/list/list_misc 		= list()
+	var/list/list_drinks 	= list()
+	var/list/prices    		= list() // Prices for each item, list(/type/path = price), items not in the list don't have a price.
+
+	var/category_weapons	 = 1	//For listing categories, if false then prizes of this categories cant be obtained nor bought for post-shift enjoyment
+	var/category_gear		 = 1	//If 1 prizes will be only logged
+	var/category_clothing	 = 1	//If 2 prizes will both be logged and spawned
+	var/category_misc		 = 1
+	var/category_drinks		 = 1
+
+	list_weapons = list(
+		)
+
+	list_drinks = list(
+		)
+
+	prices = list(
+		)
+
+	// List of vending_product items available.
+	var/list/product_records = list()
+
+	var/list/log = list()
+	var/req_log_access = access_cargo //default access for checking logs is cargo
+	var/has_logs = 0 //defaults to 0, set to anything else for vendor to have logs
+
+/obj/machinery/casino_prize_dispenser/Initialize()
+	build_inventory()
+
+/obj/machinery/casino_prize_dispenser/proc/build_inventory() //WIP
+	var/list/all_products = list(
+		list(list_weapons, "cat_weapons"),
+		list(list_gear, "cat_gear"),
+		list(list_clothing, "cat_clothing"),
+		list(list_misc, "cat_misc"),
+		list(list_drinks, "cat_drinks"))
+
+	for(var/current_list in all_products)
+		var/category = current_list[2]
+
+		for(var/entry in current_list[1])
+			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
+
+			product.price = (entry in prices) ? prices[entry] : 0
+			product.category = category
+			product_records.Add(product)
+
+/obj/machinery/casino_prize_dispenser/Destroy()
+	for(var/datum/stored_item/vending_product/R in product_records)
+		qdel(R)
+	product_records = null
+	return ..()
+
+/obj/machinery/casino_prize_dispenser/attackby(obj/item/weapon/W as obj, mob/user as mob)
+
+	if(currently_vending)
+		var/paid = 0
+		var/handled = 0
+
+		if(istype(W, /obj/item/weapon/spacecasinocash))
+			var/obj/item/weapon/spacecasinocash/C = W
+			paid = pay_with_chips(C, user)
+			handled = 1
+
+		if(paid)
+			vend(currently_vending, usr)
+			return
+		else if(handled)
+			SSnanoui.update_uis(src)
+			return // don't smack that machine with your 2 chips
+
+	if(istype(W, /obj/item/weapon/spacecasinocash))
+		attack_hand(user)
+		return
+	..()
+
+/obj/machinery/casino_prize_dispenser/attack_hand(mob/user as mob)
+	if(stat & (BROKEN|NOPOWER))
+		return
+
+	ui_interact(user)
+
+/obj/machinery/casino_prize_dispenser/proc/pay_with_chips(var/obj/item/weapon/spacecasinocash/cashmoney, mob/user)
+	if(currently_vending.price > cashmoney.worth)
+
+		// This is not a status display message, since it's something the character
+		// themselves is meant to see BEFORE putting the money in
+		to_chat(usr, "\icon[cashmoney] <span class='warning'>That is not enough chips.</span>")
+		return 0
+
+	if(istype(cashmoney, /obj/item/weapon/spacecasinocash))
+
+		visible_message("<span class='info'>\The [usr] inserts some chips into \the [src].</span>")
+		cashmoney.worth -= currently_vending.price
+
+		if(cashmoney.worth <= 0)
+			usr.drop_from_inventory(cashmoney)
+			qdel(cashmoney)
+		else
+			cashmoney.update_icon()
+
+	return 1
+
+/obj/machinery/casino_prize_dispenser/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+	user.set_machine(src)
+
+	var/list/data = list()
+
+	if(currently_vending)
+		data["mode"] = 2
+		data["product"] = currently_vending.item_name
+		data["price"] = currently_vending.price
+		data["message_err"] = 0
+		data["message"] = status_message
+		data["message_err"] = status_error
+
+	else if(currently_selecting)
+		data["mode"] = 1
+		var/list/listed_products = null
+		listed_products = list()
+
+		for(var/key = 1 to product_records.len)
+			var/datum/stored_item/vending_product/I = product_records[key]
+
+			if(I.category == currently_selecting)
+				continue
+
+			listed_products.Add(list(list(
+				"key" = key,
+				"name" = I.item_name,
+				"price" = I.price,
+				"color" = I.display_color)))
+		data["products"] = listed_products
+
+	else
+		data["mode"] = 0
+
+		data["category_weapons"] 	= category_weapons
+		data["category_gear"] 		= category_gear
+		data["category_clothing"] 	= category_clothing
+		data["category_misc"] 		= category_misc
+		data["category_drinks"] 	= category_drinks
+
+
+	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
+	if(!ui)
+		ui = new(user, src, ui_key, "casino_prize_dispenser_ch.tmpl", name, 440, 600)
+		ui.set_initial_data(data)
+		ui.open()
+
+/obj/machinery/casino_prize_dispenser/Topic(href, href_list)
+	if(stat & (BROKEN|NOPOWER))
+		return
+	if(usr.stat || usr.restrained())
+		return
+
+	if((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf)))) //WIP check the vending_product
+		if((href_list["Select"]) && (vend_ready) && (!currently_vending))
+			switch(href_list["Select"])
+				if("selected_weapons")
+					currently_selecting = "cat_weapons"
+					prize_payout_mode = category_weapons
+				if("selected_gear")
+					currently_selecting = "cat_gear"
+					prize_payout_mode = category_gear
+				if("selected_clothing")
+					currently_selecting = "cat_clothing"
+					prize_payout_mode = category_clothing
+				if("selected_misc")
+					currently_selecting = "cat_misc"
+					prize_payout_mode = category_misc
+				if("selected_drinks")
+					currently_selecting = "cat_drinks"
+					prize_payout_mode = category_drinks
+				else
+					currently_selecting = null
+					prize_payout_mode = null
+
+		if((href_list["vend"]) && (vend_ready) && (!currently_vending))
+			var/key = text2num(href_list["vend"])
+			var/datum/stored_item/vending_product/R = product_records[key]
+			currently_selecting = null
+
+			if(R.price <= 0)
+				vend(R, usr)
+			else
+				currently_vending = R
+				status_message = "Please insert chips to pay for the prize!"
+				status_error = 0
+
+		else if(href_list["cancelpurchase"])
+			currently_vending = null
+
+
+		SSnanoui.update_uis(src)
+
+/obj/machinery/casino_prize_dispenser/proc/vend(datum/stored_item/vending_product/R, mob/user) //WIP
+	vend_ready = 0 //One thing at a time!!
+	status_message = "Vending..."
+	status_error = 0
+	SSnanoui.update_uis(src)
+
+	if(icon_vend) //Show the vending animation if needed
+		flick(icon_vend,src)
+		flick(icon_vend,src)
+		flick(icon_vend,src)
+		flick(icon_vend,src)
+		flick(icon_vend,src)
+
+	spawn(vend_delay)
+		if(prize_payout_mode == 2)
+			new R.item_path(src.loc)
+			playsound(src, 'sound/items/vending.ogg', 50, 1, 1)
+
+		status_message = "Thank you for your purchase, your prize has been logged!"
+		to_chat(user,status_message)
+		do_logging(R.item_path, user)
+
+		status_message = ""
+		status_error = 0
+		vend_ready = 1
+		currently_vending = null
+		SSnanoui.update_uis(src)
+
+	return 1
+
+/obj/machinery/casino_prize_dispenser/proc/do_logging(item, mob/user)
+	var/prize_log = "[user.ckey] playing as [user.name] bought a [item]."
+	log[++log.len] = prize_log
+	//Currently doesnt have in game way to show, to ensure theres no chance of players ckeys exposed - Jack

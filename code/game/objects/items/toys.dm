@@ -385,13 +385,12 @@
 	icon_state = "sunflower"
 	item_state = "sunflower"
 	var/empty = 0
+	var/max_reagent = 10
 	slot_flags = SLOT_HOLSTER
 
-/obj/item/toy/waterflower/New()
-	var/datum/reagents/R = new/datum/reagents(10)
-	reagents = R
-	R.my_atom = src
-	R.add_reagent("water", 10)
+/obj/item/toy/waterflower/Initialize()	//CHOMPEDIT: fixing broken code
+	create_reagents(max_reagent)
+	reagents.add_reagent("water", max_reagent)
 
 /obj/item/toy/waterflower/attack(mob/living/carbon/human/M as mob, mob/user as mob)
 	return
