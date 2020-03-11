@@ -1653,11 +1653,11 @@ area/crew_quarters/heads/sc/hop/quarters
 //CHOMPedit: Exploration outpost ferry shuttle
 
 /area/shuttle/expoutpost/site
-	name = "\improper Exploration Elevator"
+	name = "\improper Exploration Sling"
 	icon_state = "shuttle2"
 
 /area/shuttle/expoutpost/station
-	name = "\improper Exploration Elevator"
+	name = "\improper Exploration Sling"
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced/airless
 
@@ -1730,6 +1730,14 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Exploration Carrier Secure Storage"
 	icon_state = "nuke_storage"
 
+/area/expoutpost/teleporter
+	name = "\improper Exploration Carrier Teleporter"
+	icon_state = "teleporter"
+
+/area/expoutpost/gateway
+	name = "\improper Exploration Carrier Gateway"
+	icon_state = "teleporter"
+
 /area/expoutpost/displayroom
 	name = "\improper Exploration Carrier Display Room"
 
@@ -1801,6 +1809,9 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Wreck"
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
+
+//Temp Removal TFF 15/2/20
+/*
 // CHOMP-Edit: This is the Belt Mining addition
 // Belt Mining Areas
 /area/mine/unexplored/belt_miner
@@ -1850,3 +1861,4 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/shuttle/beltferry/transit // Transit Area - the in-between.
 	name = "Belter M2.0 Transit"
 	icon_state = "shuttle2"
+*/

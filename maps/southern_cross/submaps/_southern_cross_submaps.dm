@@ -4,6 +4,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Primary Load - these are areas that will ALWAYS be in play.
 
+//Temp Removal TFF 15/2/20
+/*
 // Rykka adds Belt Mining
 
 #include "asteroid_belt/_templates.dm"
@@ -26,6 +28,7 @@
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BELT, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_BELT, 64, 64)         // Create the mining ore distribution map.
 
+*/
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 /// If you're reading this and want to add a new away mission, reference /tether/submaps/_tether_submaps.dm or existing away missions for how to set it up.
@@ -44,14 +47,31 @@
 // Commented out until we either port or replace away missions, but this is the framework for loading each away mission.
 
 //////////////////////////////////////////////////////////////////////////////////////
-// Gateway submaps go here // Commented out until we get Gateway missions working.
-/*
-/datum/map_template/tether_lateload/gateway
+// Gateway submaps go here
+/datum/map_template/sc_lateload/gateway
 	name = "Gateway Submap"
 	desc = "Please do not use this."
 	mappath = null
 	associated_map_datum = null
-	*/
+
+/datum/map_z_level/sc_lateload/gateway_destination
+	name = "Gateway Destination"
+	z = Z_LEVEL_GATEWAY
+
+#include "gateway/snowfield.dm"
+/datum/map_template/sc_lateload/gateway/snowfield
+	name = "Snow Field"
+	desc = "An old base in middle of snowy wasteland"
+	mappath = 'gateway/snowfield.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+#include "gateway/carpfarm.dm"
+/datum/map_template/sc_lateload/gateway/carpfarm
+	name = "Carp Farm"
+	desc = "Asteroid base surrounded by carp"
+	mappath = 'gateway/carpfarm.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps

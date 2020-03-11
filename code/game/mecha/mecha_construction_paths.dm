@@ -829,7 +829,7 @@
 				holder.icon_state = "gygax19-s"
 			else
 				user.visible_message("[user] pries the external armor layer from [holder].", "You pry the external armor layer from [holder].")
-				var/obj/item/stack/material/plasteel/MS = new /obj/item/stack/material/plasteel(get_turf(holder)) //CHOMPedit, Fixes serenity giving Gygax Armor Plates for the reverse action...
+				var/obj/item/stack/material/plasteel/MS = new /obj/item/stack/material/plasteel(get_turf(holder)) // Fixes serenity giving Gygax Armor Plates for the reverse action...
 				MS.amount = 5
 				holder.icon_state = "gygax17"
 		if(1)
