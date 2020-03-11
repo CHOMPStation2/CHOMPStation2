@@ -918,8 +918,9 @@
 	desc = "Exchange your chips to obtain wonderful prizes! Hoepfully you'll get to keep some of them for a while."
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state ="casino_prize_dispenser"
-	var/icon_vend ="casino_prize_dispenser-prize"
+	var/icon_vend ="casino_prize_dispenser-vend"
 	anchored = 1
+	opacity = 0
 
 	// Vending-related
 	var/active = 1 //No sales pitches if off!
@@ -1431,10 +1432,6 @@
 	SSnanoui.update_uis(src)
 
 	if(icon_vend) //Show the vending animation if needed
-		flick(icon_vend,src)
-		flick(icon_vend,src)
-		flick(icon_vend,src)
-		flick(icon_vend,src)
 		flick(icon_vend,src)
 
 	spawn(vend_delay)
