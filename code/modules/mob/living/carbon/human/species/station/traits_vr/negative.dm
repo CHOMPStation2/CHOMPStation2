@@ -91,6 +91,12 @@
 	var_changes = list("burn_mod" = 1.4)
 
 //YW ADDITIONS START
+/datum/trait/chem_intolerance
+	name = "Chem Intolerance"
+	desc = "Your immune system reacts violently to the buildup of chemicals within your systems. Overdoses occur at half the usual threshold, and you suffer twice as much damage from them. On the plus side, healing chems are 25% more effective."
+	cost = -1
+	var_changes = list("chemOD_threshold" = 0.5, "chemOD_mod" = 2, "chem_strength" = 1.25)
+
 /datum/trait/alcohol_intolerance_advanced
 	name = "Liver of Air"
 	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard."

@@ -89,6 +89,8 @@
 	var/flash_mod =     1									// Stun from blindness modifier.
 	var/flash_burn =    0									// how much damage to take from being flashed if light hypersensitive
 	var/sound_mod =     1									// Stun from sounds, I.E. flashbangs.
+	var/chem_strength = 1							// YW ADDITION: Multiplier to healing chem effectiveness (higher = stronger)
+	var/chemOD_threshold =  1							// YW ADDITION: Multiplier to OD threshold, before you start to take OD damage
 	var/chemOD_mod =	1									// Damage modifier for overdose
 	var/alcohol_tolerance = 1								// YW ADDITION: Strength multiplier for ethanol-derived reagents
 	var/vision_flags = SEE_SELF								// Same flags as glasses.

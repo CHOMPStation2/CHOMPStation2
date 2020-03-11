@@ -72,7 +72,7 @@
 	scannable = 1
 
 /datum/reagent/vermicetol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1
+	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)

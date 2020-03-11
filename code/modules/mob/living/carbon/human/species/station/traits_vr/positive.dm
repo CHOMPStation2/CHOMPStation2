@@ -131,7 +131,12 @@
 	var_changes = list("burn_mod" = 0.6)
 
 //YW ADDITIONS START
-	
+/datum/trait/chem_tolerance
+	name = "Chem Tolerance"
+	desc = "Due to a quirk of your biochemistry or years of substance abuse, your threshold for overdosing on many substances is increased by 50%. Most chemicals are only half as effective, though."
+	cost = 2
+	var_changes = list("chemOD_threshold" = 1.5, "chem_strength" = 0.5)
+
 /datum/trait/alcohol_tolerance_advanced
 	name = "Liver of Steel"
 	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers!"
