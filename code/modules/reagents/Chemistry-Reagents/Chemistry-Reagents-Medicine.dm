@@ -51,7 +51,7 @@
 	scannable = 1
 
 /datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -88,7 +88,7 @@
 	can_overdose_touch = TRUE
 
 /datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -96,7 +96,7 @@
 		M.adjustToxLoss(2 * removed)
 
 /datum/reagent/bicaridine/topical/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -132,7 +132,7 @@
 	scannable = 1
 
 /datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.5
 		M.adjustBruteLoss(2 * removed) //Mends burns, but has negative effects with a Promethean's skeletal structure.
@@ -151,7 +151,7 @@
 	scannable = 1
 
 /datum/reagent/dermaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -171,7 +171,7 @@
 	can_overdose_touch = TRUE
 
 /datum/reagent/dermaline/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -179,7 +179,7 @@
 		M.adjustToxLoss(2 * removed)
 
 /datum/reagent/dermaline/topical/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -195,7 +195,7 @@
 	scannable = 1
 
 /datum/reagent/dylovene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.66
 		if(dose >= 15)
@@ -294,7 +294,7 @@
 
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 		if(alien == IS_SLIME)
 			chem_effective = 0.5
 		M.adjustOxyLoss(-3 * removed * chem_effective)
@@ -317,7 +317,7 @@
 
 /datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 		if(alien == IS_SLIME)
 			chem_effective = 0.5
 		M.adjustOxyLoss(-2 * removed * chem_effective)
@@ -354,7 +354,7 @@
 
 /datum/reagent/cryoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170)
-		var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 		if(alien == IS_SLIME)
 			chem_effective = 0.25
 			to_chat(M, "<span class='danger'>It's cold. Something causes your cellular mass to harden occasionally, resulting in vibration.</span>")
@@ -379,7 +379,7 @@
 
 /datum/reagent/clonexadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170)
-		var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 		if(alien == IS_SLIME)
 			if(prob(10))
 				to_chat(M, "<span class='danger'>It's so cold. Something causes your cellular mass to harden sporadically, resulting in seizure-like twitching.</span>")
@@ -413,7 +413,7 @@
 
 /datum/reagent/necroxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170 || (M.stat == DEAD && M.has_modifier_of_type(/datum/modifier/bloodpump_corpse)))
-		var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 		if(alien == IS_SLIME)
 			if(prob(10))
 				to_chat(M, "<span class='danger'>It's so cold. Something causes your cellular mass to harden sporadically, resulting in seizure-like twitching.</span>")
@@ -441,7 +441,7 @@
 	mrate_static = TRUE
 
 /datum/reagent/paracetamol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	M.add_chemical_effect(CE_PAINKILLER, 25 * chem_effective)
@@ -465,7 +465,7 @@
 	mrate_static = TRUE
 
 /datum/reagent/tramadol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.8
 		M.add_chemical_effect(CE_SLOWDOWN, 1)
@@ -488,7 +488,7 @@
 	mrate_static = TRUE
 
 /datum/reagent/oxycodone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 		M.stuttering = min(50, max(0, M.stuttering + 5)) //If you can't feel yourself, and your main mode of speech is resonation, there's a problem.
@@ -515,7 +515,7 @@
 	scannable = 1
 
 /datum/reagent/synaptizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_DIONA)
 		return
 	if(alien == IS_SLIME)
@@ -568,7 +568,7 @@
 /datum/reagent/alkysine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	var/chem_effective = 1 * M.species.chem_strength //YW EDIT
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.25
 		if(M.brainloss >= 10)
@@ -692,7 +692,7 @@
 	scannable = 1
 
 /datum/reagent/respirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/repair_strength = 1 * M.species.chem_strength //YW EDIT
+	var/repair_strength = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -723,7 +723,7 @@
 	scannable = 1
 
 /datum/reagent/gastirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/repair_strength = 1 * M.species.chem_strength //YW EDIT
+	var/repair_strength = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -754,7 +754,7 @@
 	scannable = 1
 
 /datum/reagent/hepanephrodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/repair_strength = 1 * M.species.chem_strength //YW EDIT
+	var/repair_strength = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		repair_strength = 0.4
 	if(ishuman(M))
@@ -787,7 +787,7 @@
 	scannable = 1
 
 /datum/reagent/cordradaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/repair_strength = 1 * M.species.chem_strength //YW EDIT
+	var/repair_strength = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -814,7 +814,7 @@
 	scannable = 1
 
 /datum/reagent/immunosuprizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/strength_mod = 1 * M.species.chem_strength //YW EDIT
+	var/strength_mod = 1 * M.species.chem_strength_heal //YW EDIT
 
 	if(alien == IS_DIONA)	// It's a tree.
 		strength_mod = 0.25
@@ -871,7 +871,7 @@
 	scannable = 1
 
 /datum/reagent/skrellimmuno/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/strength_mod = 0.5 * M.species.chem_strength //YW EDIT
+	var/strength_mod = 0.5 * M.species.chem_strength_heal //YW EDIT
 
 	if(alien == IS_SKRELL)
 		strength_mod = 1
