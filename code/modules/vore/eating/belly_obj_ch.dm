@@ -1,12 +1,9 @@
-#define VORE_SOUND_FALLOFF 0.1
-#define VORE_SOUND_RANGE 3
-
 //CHOMP vore additions, currently only consists of reagent stuff - Jack
 
 /obj/belly
 	//CHOMP - liquid bellies
 	var/reagentbellymode = FALSE			// Belly has abilities to make liquids from digested/absorbed/drained prey and/or nutrition
-	var/reagent_mode_flags = 0				
+	var/reagent_mode_flags = 0
 
 	var/tmp/static/list/reagent_mode_flag_list= list(
 		"Produce Liquids" = DM_FLAG_REAGENTSNUTRI,
@@ -18,12 +15,13 @@
 	var/nutri_reagent_gen = FALSE					//if belly produces reagent over time using nutrition, needs to be optimized to use subsystem - Jack
 	var/list/generated_reagents = list("water" = 1) //Any number of reagents, the associated value is how many units are generated per process()
 	var/reagent_name = "water" 						//What is shown when reagents are removed, doesn't need to be an actual reagent
-	var/gen_cost = 1 								//amount of nutrient taken from the host everytime nutrition is used to make reagents
-	var/gen_amount = 1								//Does not actually influence amount produced, but is used as a way to tell the system how much total reagent it has to take into account when filling a belly
+	var/gen_cost = 0.1 								//amount of nutrient taken from the host everytime nutrition is used to make reagents
+	var/gen_amount = 0.1								//Does not actually influence amount produced, but is used as a way to tell the system how much total reagent it has to take into account when filling a belly
 
 	var/gen_interval = 0							//Interval in seconds for generating fluids, once it reaches the value of gen_time one cycle of reagents generation will occur
-	var/gen_time = 30								//Time it takes in seconds to produce one cycle of reagents
-
+	var/gen_time = 3								//Time it takes in seconds to produce one cycle of reagents, technically add 1 second to it for the tick where the fluid is produced
+	var/gen_time_display = "1 hour"					//The displayed time it takes from a belly to go from 0 to 100
+	var/custom_max_volume = 100						//Variable for people to limit amount of liquid they can receive/produce in a belly
 	var/digest_nutri_gain = 0						//variable to store temporary nutrition gain from digestion and allow a seperate proc to ease up on the wall of code
 
 	var/liquid_fullness1_messages = FALSE
@@ -55,15 +53,15 @@
 
 	var/list/emote_descriptor = list("tranfers something") //In format of [x] [emote_descriptor] into [container]
 	var/list/self_emote_descriptor = list("transfer") //In format of You [self_emote_descriptor] some [generated_reagent] into [container]
-	var/list/random_emote = list() //An emote the person with the implant may be forced to perform after a prob check, such as [X] meows. //Potential future settings to have custom messages set by player when someone extracts fluids from them - Jack
 	*/
-	
+
 	var/tmp/reagent_chosen = "Water"				// variable for switch to figure out what to set variables when a certain reagent is selected
 	var/tmp/static/list/reagent_choices = list(		// List of reagents people can chose, maybe one day expand so it covers criterias like dogborgs who can make meds, booze, etc - Jack
 	"Water",
 	"Milk",
 	"Cream",
-	"Honey"
+	"Honey",
+	"Cherry Jelly"
 	)
 
 
@@ -71,7 +69,7 @@
 ///////////////////// NUTRITION REAGENT PRODUCTION /////////////////
 
 /obj/belly/proc/HandleBellyReagents()
-	if(reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < reagents.maximum_volume)
+	if(reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume)
 		if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
 			GenerateBellyReagents()
 			gen_interval = 0
@@ -86,38 +84,38 @@
 //////////////////////////// REAGENT_DIGEST ////////////////////////
 
 /obj/belly/proc/GenerateBellyReagents_digesting()	//The rate isnt based on selected reagent, due to the fact that the price of the reagent is already paid by nutrient not gained.
-	if(reagents.total_volume + (digest_nutri_gain * gen_amount) <= reagents.maximum_volume) //By default a reagent with an amount of 1 should result in pred getting 100 units from a full health prey
+	if(reagents.total_volume + (digest_nutri_gain * gen_amount) <= custom_max_volume) //By default a reagent with an amount of 1 should result in pred getting 100 units from a full health prey
 		for(var/reagent in generated_reagents)
 			reagents.add_reagent(reagent, generated_reagents[reagent] * digest_nutri_gain)
 	else
 		for(var/reagent in generated_reagents)
-			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (reagents.maximum_volume - reagents.total_volume))
+			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (custom_max_volume - reagents.total_volume))
 
 /obj/belly/proc/GenerateBellyReagents_digested()
-	if(reagents.total_volume <= reagents.maximum_volume - 25 * gen_amount)
+	if(reagents.total_volume <= custom_max_volume - 25 * gen_amount)
 		for(var/reagent in generated_reagents)
 			reagents.add_reagent(reagent, generated_reagents[reagent] * 25)
 	else
 		for(var/reagent in generated_reagents)
-			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (reagents.maximum_volume - reagents.total_volume))
+			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (custom_max_volume - reagents.total_volume))
 
 //////////////////////////// REAGENT_ABSORB ////////////////////////
 
 /obj/belly/proc/GenerateBellyReagents_absorbing()
-	if(reagents.total_volume <= reagents.maximum_volume - 1.5 * gen_amount) //Going for 1.5 amount of reagent per cycle, can be adjusted in future if need adjustments
+	if(reagents.total_volume <= custom_max_volume - 1.5 * gen_amount) //Going for 1.5 amount of reagent per cycle, can be adjusted in future if need adjustments
 		for(var/reagent in generated_reagents)
 			reagents.add_reagent(reagent, generated_reagents[reagent] * 1.5)
 	else
 		for(var/reagent in generated_reagents)
-			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (reagents.maximum_volume - reagents.total_volume))
+			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (custom_max_volume - reagents.total_volume))
 
 /obj/belly/proc/GenerateBellyReagents_absorbed()
-	if(reagents.total_volume <= reagents.maximum_volume - 25 * gen_amount) //Going for 25 amount of reagent for absorbing the prey, can be adjusted in future if need adjustments
+	if(reagents.total_volume <= custom_max_volume - 25 * gen_amount) //Going for 25 amount of reagent for absorbing the prey, can be adjusted in future if need adjustments
 		for(var/reagent in generated_reagents)
 			reagents.add_reagent(reagent, generated_reagents[reagent] * 10)
 	else
 		for(var/reagent in generated_reagents)
-			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (reagents.maximum_volume - reagents.total_volume))
+			reagents.add_reagent(reagent, generated_reagents[reagent] / gen_amount * (custom_max_volume - reagents.total_volume))
 
 //////////////////////////// REAGENT_DRAIN ///////////////////////// //Currently not needed, maybe later a specific proc for drain needs to be made - Jack
 
@@ -130,25 +128,30 @@
 /obj/belly/proc/ReagentSwitch()
 	switch(reagent_chosen)
 		if("Water")
-			generated_reagents = list("water" = 1)
+			generated_reagents = list("water" = 0.1)
 			reagent_name = "water"
-			gen_amount = 1
-			gen_cost = 1
+			gen_amount = 0.1
+			gen_cost = 0.1
 		if("Milk")
-			generated_reagents = list("milk" = 1)
+			generated_reagents = list("milk" = 0.1)
 			reagent_name = "milk"
-			gen_amount = 1
-			gen_cost = 1.5
+			gen_amount = 0.1
+			gen_cost = 0.15
 		if("Cream")
-			generated_reagents = list("cream" = 1)
+			generated_reagents = list("cream" = 0.1)
 			reagent_name = "cream"
-			gen_amount = 1
-			gen_cost = 1.5
+			gen_amount = 0.1
+			gen_cost = 0.15
 		if("Honey")
-			generated_reagents = list("honey" = 1)
+			generated_reagents = list("honey" = 0.1)
 			reagent_name = "honey"
-			gen_amount = 1
-			gen_cost = 1.5
+			gen_amount = 0.1
+			gen_cost = 0.15
+		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
+			generated_reagents = list("cherryjelly" = 0.1)
+			reagent_name = "cherry jelly"
+			gen_amount = 0.1
+			gen_cost = 0.15
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
 

@@ -170,6 +170,8 @@
 		"gen_cost",
 		"gen_amount",
 		"gen_time",
+		"gen_time_display",
+		"custom_max_volume",
 		"generated_reagents",
 		"fullness1_messages",
 		"fullness2_messages",
@@ -719,8 +721,9 @@
 	dupe.reagent_chosen = reagent_chosen
 	dupe.gen_cost = gen_cost
 	dupe.gen_amount = gen_amount
-	dupe.gen_time = gen_time	//CHOMP end of variables from CHOMP
-
+	dupe.gen_time = gen_time
+	dupe.gen_time_display = gen_time_display
+	dupe.custom_max_volume = custom_max_volume	//CHOMP end of variables from CHOMP
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings
@@ -753,31 +756,31 @@
 	dupe.generated_reagents.Cut()
 	for(var/I in generated_reagents)
 		dupe.generated_reagents += I
-	
+
 	// CHOMP fullness messages stage 1
 	//fullness1_messages - strings
 	dupe.fullness1_messages.Cut()
 	for(var/I in fullness1_messages)
 		dupe.fullness1_messages += I
-	
+
 	// CHOMP fullness messages stage 2
 	//fullness2_messages - strings
 	dupe.fullness2_messages.Cut()
 	for(var/I in fullness2_messages)
 		dupe.fullness2_messages += I
-	
+
 	// CHOMP fullness messages stage 3
 	//fullness3_messages - strings
 	dupe.fullness3_messages.Cut()
 	for(var/I in fullness3_messages)
 		dupe.fullness3_messages += I
-	
+
 	// CHOMP fullness messages stage 4
 	//fullness4_messages - strings
 	dupe.fullness4_messages.Cut()
 	for(var/I in fullness4_messages)
 		dupe.fullness4_messages += I
-	
+
 	// CHOMP fullness messages stage 5
 	//generated_reagents - strings
 	dupe.fullness5_messages.Cut()

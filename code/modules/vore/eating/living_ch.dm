@@ -39,12 +39,12 @@
 
 	var/mob/living/user = usr
 
-	var/mob/living/TG = input("Choose who is transfered from") as null| mob in view(user.loc,1)
+	var/mob/living/TG = input("Choose who to transfer from") as null| mob in view(user.loc,1)
 	if(!TG)
 		return FALSE
 
 
-	var/obj/belly/RTB = input("Choose which organ to transfer from") as null|anything in TG.vore_organs //First they choose the belly to transfer from.
+	var/obj/belly/RTB = input("Choose which vore belly to transfer from") as null|anything in TG.vore_organs //First they choose the belly to transfer from.
 	if(!RTB)
 		return FALSE
 	if(TG.give_reagents == FALSE && user != TG) //User isnt forced to allow giving in prefs if they are the one doing it
@@ -55,10 +55,10 @@
 	if(!transfer_amount)
 		return FALSE
 
-	switch(input(user,"Choose what to transfer to","Select Target") in list("Organs", "Stomachs", "Containers", "Cancel"))
+	switch(input(user,"Choose what to transfer to","Select Target") in list("Vore belly", "Stomach", "Container", "Cancel"))
 		if("Cancel")
 			return FALSE
-		if("Organs")
+		if("Vore belly")
 			var/mob/living/TR = input(user,"Choose who to transfer to","Select Target") as null|mob in view(user.loc,1)
 			if(!TR)  return FALSE
 
@@ -75,8 +75,10 @@
 
 				if(TG != user)
 					user.visible_message("<span class='notice'>[user] fills their [TB] with [RTB.reagent_name] from [TG]'s [RTB].</span>")
+					add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
 				else
 					user.visible_message("<span class='notice'>[user] fills their [TB] with [RTB.reagent_name] from their [RTB].</span>")
+
 
 			else if(TR.receive_reagents == FALSE)
 				to_chat(user, "<span class='warning'>This person's prefs dont allow that!</span>")
@@ -101,7 +103,7 @@
 				add_attack_logs(user,TR,"Transfered reagents from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
 
 
-		if("Stomachs")
+		if("Stomach")
 			var/mob/living/TR = input(user,"Choose who to transfer to","Select Target") as null|mob in view(user.loc,1)
 			if(!TR)  return
 
@@ -123,16 +125,20 @@
 				else
 					user.visible_message("<span class='notice'>[user] fills [TR]'s stomach with [RTB.reagent_name] from [TG]'s [RTB].</span>")
 
-				add_attack_logs(user,TR,"Transfered reagents from [TG]'s [RTB] to [TR]'s Stomach")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
+				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
 
-		if("Containers")
+		if("Container")
 			var/list/choices = list()
 			for(var/obj/item/weapon/reagent_containers/rc in view(user.loc,1))
 				choices += rc
 			var/obj/item/weapon/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
+			if(!T)
+			 return FALSE
 			RTB.reagents.vore_trans_to_con(T, transfer_amount, 1, 0)
 
 			if(TG == user)
 				user.visible_message("<span class='notice'>[user] fills the [T] with [RTB.reagent_name] from their [RTB].</span>")
 			else
 				user.visible_message("<span class='notice'>[user] fills the [T] with [RTB.reagent_name] from [TG]'s [RTB].</span>")
+
+			add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to a [T]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
