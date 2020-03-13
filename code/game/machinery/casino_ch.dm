@@ -986,7 +986,6 @@
 		/obj/item/clothing/mask/dolphin,
 		/obj/item/clothing/mask/demon,
 		/obj/item/clothing/under/chameleon,
-
 		/obj/item/clothing/suit/storage/hooded/ian_costume,
 		/obj/item/clothing/suit/storage/hooded/carp_costume,
 		/obj/item/weapon/storage/box/casino/costume_whitebunny,
@@ -1042,7 +1041,6 @@
 		/obj/item/weapon/gun/energy/alien = 1000,
 		/obj/item/weapon/gun/energy/floragun = 250,
 		/obj/item/weapon/gun/energy/netgun = 500,
-
 		/obj/item/weapon/weldingtool/experimental = 500,
 		/obj/item/weapon/storage/belt/utility/alien = 500,
 		/obj/item/clothing/suit/armor/alien = 750,
@@ -1051,7 +1049,6 @@
 		/obj/item/weapon/reagent_containers/spray/chemsprayer = 250,
 		/obj/item/weapon/reagent_containers/glass/beaker/bluespace = 200,
 		/obj/item/weapon/reagent_containers/glass/beaker/noreact = 200,
-
 		/obj/item/clothing/head/soft/purple/wah = 50,
 		/obj/item/clothing/mask/shark = 50,
 		/obj/item/clothing/mask/pig = 50,
@@ -1062,7 +1059,6 @@
 		/obj/item/clothing/mask/dolphin = 50,
 		/obj/item/clothing/mask/demon = 50,
 		/obj/item/clothing/under/chameleon = 250,
-
 		/obj/item/clothing/suit/storage/hooded/ian_costume = 50,
 		/obj/item/clothing/suit/storage/hooded/carp_costume = 50,
 		/obj/item/weapon/storage/box/casino/costume_whitebunny = 100,
@@ -1078,7 +1074,6 @@
 		/obj/item/weapon/storage/box/casino/costume_imperiummonk = 100,
 		/obj/item/weapon/storage/box/casino/costume_plaguedoctor = 100,
 		/obj/item/weapon/storage/box/casino/costume_cutewitch = 100,
-
 		/obj/item/toy/sword = 50,
 		/obj/item/toy/waterflower = 50,
 		/obj/item/toy/stickhorse = 50,
@@ -1092,7 +1087,6 @@
 		/obj/item/weapon/storage/fancy/cigar/havana = 50,
 		/obj/item/weapon/storage/wallet/casino = 50,
 		/obj/item/weapon/deck/cards/casino = 50,
-
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew = 50,
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine = 50,
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/patron = 50,
