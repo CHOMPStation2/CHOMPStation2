@@ -9,7 +9,7 @@
 			/obj/item/clothing/accessory/poncho/roles/cloak/blueshield = 1,
 			/obj/item/clothing/accessory/holster/leg = 1
 			)
-	cost = 50
+	cost = 80
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Blueshield equipment"
 	access = access_heads
