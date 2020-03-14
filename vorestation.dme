@@ -401,6 +401,7 @@
 #include "code\datums\supplypacks\medical_vr.dm"
 #include "code\datums\supplypacks\misc.dm"
 #include "code\datums\supplypacks\misc_vr.dm"
+#include "code\datums\supplypacks\misc_yw.dm"
 #include "code\datums\supplypacks\munitions.dm"
 #include "code\datums\supplypacks\munitions_vr.dm"
 #include "code\datums\supplypacks\recreation.dm"
