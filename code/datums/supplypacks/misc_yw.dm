@@ -20,7 +20,7 @@
 			/obj/item/gunbox/blueshield = 1,
 			/obj/item/gunbox/blueshield/secondary = 1
 			)
-	cost = 50
+	cost = 100
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Blueshield armaments"
 	access = access_heads
