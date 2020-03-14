@@ -104,10 +104,8 @@
 			M.nutrition += (alt_nutriment_factor * removed)
 
 
-/* Yawnstation edit start - Removes gnome sounds on ingestion.
 /datum/reagent/nutriment/magicdust/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	playsound(M.loc, 'sound/items/hooh.ogg', 50, 1, -1)
 	if(prob(5))
 		to_chat(M, "<span class='warning'>You feel like you've been gnomed...</span>")
- Yawnstation edit end. */

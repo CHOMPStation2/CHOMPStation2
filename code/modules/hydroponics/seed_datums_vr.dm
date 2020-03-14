@@ -41,4 +41,4 @@
 	set_trait(TRAIT_PRODUCT_COLOUR,"#DADA00")
 
 /datum/seed/gnomes
-//	harvest_sound = 'sound/items/hooh.ogg' // Yawnstation edit - comments out gnome sounds.
+	harvest_sound = 'sound/items/hooh.ogg'
