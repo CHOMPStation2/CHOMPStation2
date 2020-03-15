@@ -160,6 +160,7 @@
 		"is_wet",
 		"wet_loop",
 		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
+		"reagentbellymode",
 		"liquid_fullness1_messages",
 		"liquid_fullness2_messages",
 		"liquid_fullness3_messages",
@@ -167,12 +168,16 @@
 		"liquid_fullness5_messages",
 		"reagent_name",
 		"reagent_chosen",
+		"reagentid",
+		"reagentcolor",
 		"gen_cost",
 		"gen_amount",
 		"gen_time",
 		"gen_time_display",
+		"reagent_transfer_verb",
 		"custom_max_volume",
 		"generated_reagents",
+		"vorefootsteps_sounds",
 		"fullness1_messages",
 		"fullness2_messages",
 		"fullness3_messages",
@@ -712,6 +717,8 @@
 	dupe.is_wet = is_wet
 	dupe.wet_loop = wet_loop
 	dupe.reagent_mode_flags = reagent_mode_flags	//CHOMP start of variables from CHOMP
+	dupe.reagentbellymode = reagentbellymode
+	dupe.vorefootsteps_sounds = vorefootsteps_sounds
 	dupe.liquid_fullness1_messages = liquid_fullness1_messages
 	dupe.liquid_fullness2_messages = liquid_fullness2_messages
 	dupe.liquid_fullness3_messages = liquid_fullness3_messages
@@ -719,10 +726,13 @@
 	dupe.liquid_fullness5_messages = liquid_fullness5_messages
 	dupe.reagent_name = reagent_name
 	dupe.reagent_chosen = reagent_chosen
+	dupe.reagentid = reagentid
+	dupe.reagentcolor = reagentcolor
 	dupe.gen_cost = gen_cost
 	dupe.gen_amount = gen_amount
 	dupe.gen_time = gen_time
 	dupe.gen_time_display = gen_time_display
+	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume	//CHOMP end of variables from CHOMP
 
 	//// Object-holding variables
