@@ -58,6 +58,7 @@
 /obj/item/clothing/suit/storage/tailcoat
 	name = "victorian tailcoat"
 	desc = "A fancy victorian tailcoat."
+	icon = 'icons/mob/suit_yw.dmi'
 	icon_state = "tailcoat"
 	icon_override = 'icons/mob/suit_yw.dmi'
 	item_state = "tailcoat"
@@ -65,6 +66,7 @@
 /obj/item/clothing/suit/storage/victcoat
 	name = "ladies black victorian coat"
 	desc = "A fancy victorian coat."
+	icon = 'icons/mob/suit_yw.dmi'
 	icon_state = "ladiesvictoriancoat"
 	icon_override = 'icons/mob/suit_yw.dmi'
 	item_state = "ladiesvictoriancoat"
