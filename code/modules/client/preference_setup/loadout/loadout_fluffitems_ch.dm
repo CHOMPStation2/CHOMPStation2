@@ -319,7 +319,7 @@
 	ckeywhitelist = list("thefurryfeline")
 	character_name = list("Samantha Janice Softfur")
 	path = /obj/item/device/nif/authentic
-
+	display_name = "Sam's Authentic NIF"
 /datum/gear/fluff/thefurryfeline_casino2
 	ckeywhitelist = list("thefurryfeline")
 	character_name = list("Samantha Janice Softfur")
