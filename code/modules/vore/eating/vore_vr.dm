@@ -185,6 +185,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
 			"belly_prefs"			= belly_prefs,
+			"receive_reagents"		= receive_reagents,
+			"give_reagents"			= give_reagents,
 		)
 
 	//List to JSON

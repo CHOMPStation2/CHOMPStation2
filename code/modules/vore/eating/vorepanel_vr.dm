@@ -332,13 +332,23 @@
 			else
 				dat += " None"
 
+			//Custom reagent name
+			dat += "<br><a href='?src=\ref[src];reagent_name=\ref[selected]'>Liquid Name:</a>"
+			dat += " '[selected.reagent_name]' "
+
+			//Custom verb for transfer
+			dat += "<br><a href='?src=\ref[src];reagent_transfer_verb=\ref[selected]'>Liquid Transfer Verb:</a>"
+			dat += " '[selected.reagent_transfer_verb]' "
 
 			//Special <br> here to add a gap
 			dat += "<br style='line-height:5px;'>"
 
-			//Rate of production of reagents from nutrition, goes from 10 to 100 seconds
-			dat += "<br><a href='?src=\ref[src];reagent_nutri_rate=\ref[selected]'>Liquid Production Rate:</a>"
-			dat += " [selected.gen_time] seconds"
+			dat += "<br><a href='?src=\ref[src];reagent_nutri_rate=\ref[selected]'>Liquid Production Time:</a>"
+			dat += " [selected.gen_time_display] "
+
+			//Custom amount that a specific belly can be filled with
+			dat += "<br><a href='?src=\ref[src];reagent_custom_vol=\ref[selected]'>Custom Belly Capacity:</a>"
+			dat += " [selected.custom_max_volume] "
 
 			//Shows how full stomach is of reagents
 			dat += "<br> Capacity [selected.reagents.total_volume] / [selected.reagents.maximum_volume]"
@@ -361,6 +371,9 @@
 				dat += "<br><a href='?src=\ref[src];b_liq_msgs5=\ref[selected]'>81-100% Fullness Messages</a>"
 				dat += "<a href='?src=\ref[src];b_liq_msgs5_toggle=\ref[selected]'>[selected.liquid_fullness5_messages ? "On" : "Off"]</a>"
 
+			//Toggle for the belly able to produce sloshing sounds
+			dat += "<br><a href='?src=\ref[src];reagent_sloshing=\ref[selected]'>Belly Fullness Sounds ([selected.vorefootsteps_sounds ? "On" : "Off"])</a>"
+
 			//Special <br> here to add a gap
 			dat += "<br style='line-height:5px;'>"
 			dat += "<a style='background:#990000;' href='?src=\ref[src];b_purge_liq=\ref[selected]'>Purge liquids from belly</a>"
@@ -375,6 +388,7 @@
 					dat += "<a style='background:#173d15;' href='?src=\ref[src];toggle_liq_giv=1'>Toggle Giving (Currently: ON)</a>"
 				if(FALSE)
 					dat += "<a style='background:#990000;' href='?src=\ref[src];toggle_liq_giv=1'>Toggle Giving (Currently: OFF)</a>"
+
 		//CHOMP belly reagent container end
 			dat += "<HR>"
 
@@ -1146,7 +1160,7 @@
 		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-		var/new_message = input(user,"These are sent to people who examine you when this belly is 0 to 20% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full2")) as message
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 21 to 40% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full2")) as message
 		if(new_message)
 			selected.set_reagent_messages(new_message,"full2")
 
@@ -1154,7 +1168,7 @@
 		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-		var/new_message = input(user,"These are sent to people who examine you when this belly is 0 to 20% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full3")) as message
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 41 to 60% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full3")) as message
 		if(new_message)
 			selected.set_reagent_messages(new_message,"full3")
 
@@ -1162,7 +1176,7 @@
 		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-		var/new_message = input(user,"These are sent to people who examine you when this belly is 0 to 20% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full4")) as message
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 61 to 80% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full4")) as message
 		if(new_message)
 			selected.set_reagent_messages(new_message,"full4")
 
@@ -1170,7 +1184,7 @@
 		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-		var/new_message = input(user,"These are sent to people who examine you when this belly is 0 to 20% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full5")) as message
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 81 to 100% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full5")) as message
 		if(new_message)
 			selected.set_reagent_messages(new_message,"full5")
 
@@ -1204,7 +1218,6 @@
 
 	if(href_list["reagent_choices"])
 		var/list/menu_list = selected.reagent_choices.Copy() //Useful if we want to make certain races, synths, borgs, and other things result in additional reagents to produce - Jack
-
 		var/new_reagent = input("Choose Reagent (currently [selected.reagent_chosen])") as null|anything in menu_list
 		if(!new_reagent)
 			return FALSE
@@ -1212,12 +1225,61 @@
 		selected.reagent_chosen = new_reagent
 		selected.ReagentSwitch() // For changing variables when a new reagent is chosen
 
+	if(href_list["reagent_name"])
+		var/new_name = html_encode(input(usr,"New name for liquid shown when transfering and dumping on floor (The actual liquid's name is still the same):","New Name") as text|null)
+
+		if(length(new_name) > BELLIES_NAME_MAX || length(new_name) < BELLIES_NAME_MIN)
+			alert("Entered name length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
+			return FALSE
+
+		selected.reagent_name = new_name
+
+	if(href_list["reagent_transfer_verb"])
+		var/new_verb = html_encode(input(usr,"New verb when liquid is transfered from this belly (infinitive tense, e.g. pump or inject):","New Verb") as text|null)
+
+		if(length(new_verb) > BELLIES_NAME_MAX || length(new_verb) < BELLIES_NAME_MIN)
+			alert("Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
+			return FALSE
+
+		selected.reagent_transfer_verb = new_verb
+
 	if(href_list["reagent_nutri_rate"])
-		var/new_reagent_rate = input(user, "Choose the time it takes to produce more liquid from nutrition. Ranges from 10 to 100 seconds.", "Set Liquid Production Rate.", selected.gen_time) as num|null
-		if(new_reagent_rate == null)
+		selected.gen_time_display = input(user, "Choose the time it takes to fill the belly from empty state using nutrition.", "Set Liquid Production Time.")  in list("15 minutes","30 minutes","1 hour","3 hours","6 hours","12 hours","24 hours")|null
+		switch(selected.gen_time_display)
+			if("15 minutes")
+				selected.gen_time = 0
+			if("30 minutes")
+				selected.gen_time = 1
+			if("1 hour")
+				selected.gen_time = 3
+			if("3 hours")
+				selected.gen_time = 11
+			if("6 hours")
+				selected.gen_time = 23
+			if("12 hours")
+				selected.gen_time = 47
+			if("24 hours")
+				selected.gen_time = 95
+			if(null)
+				return
+
+	if(href_list["reagent_custom_vol"])
+		var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 0 to 100.", "Set Custom Belly Capacity.", selected.custom_max_volume) as num|null
+		if(new_custom_vol == null)
 			return
-		var/new_new_reagent_rate = CLAMP(new_reagent_rate, 10, 100)
-		selected.gen_time = new_new_reagent_rate
+		var/new_new_custom_vol = CLAMP(new_custom_vol, 10, 100)
+		selected.custom_max_volume = new_new_custom_vol
+
+	if(href_list["reagent_sloshing"])
+		if(selected.vorefootsteps_sounds == FALSE)
+			selected.vorefootsteps_sounds = TRUE
+			to_chat(usr,"<span class='warning'>Your [lowertext(selected.name)] can now make sounds when you walk around depending on how full you are.</span>")
+		else if(selected.vorefootsteps_sounds == TRUE)
+			selected.vorefootsteps_sounds = FALSE
+			to_chat(usr,"<span class='warning'>Your [lowertext(selected.name)] wont make any liquid sounds no matter how full it is.</span>")
+		else
+			alert("Something went wrong. Your stomach wont make liquid sounds. Press the button enable them again and tell a dev.","Error") //If they somehow have a varable that's not 0 or 1
+			selected.vorefootsteps_sounds = FALSE
 
 	if(href_list["b_purge_liq"])
 		var/alert = alert("Are you sure you want to delete the liquids in your [lowertext(selected.name)]?","Confirmation","Delete","Cancel")
@@ -1248,7 +1310,7 @@
 				user.give_reagents = TRUE
 			if("Prevent Giving")
 				user.give_reagents = FALSE
-				
+
 	//CHOMP belly reagent container end
 
 		if(user.client.prefs_vr)

@@ -42,6 +42,7 @@
 	if(floortype)
 		set_flooring(get_flooring_data(floortype))
 	else
+		vorefootstep_sounds = base_vorefootstep_sounds //CHOMPstation edit
 		footstep_sounds = base_footstep_sounds
 	if(can_dirty && can_start_dirty)
 		if(prob(dirty_prob))
@@ -51,6 +52,7 @@
 /turf/simulated/floor/proc/set_flooring(var/decl/flooring/newflooring)
 	make_plating(defer_icon_update = 1)
 	flooring = newflooring
+	vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
 	footstep_sounds = newflooring.footstep_sounds
 	// VOREStation Edit - We are plating switching to flooring, swap out old_decals for decals
 	var/tmp/list/overfloor_decals = old_decals
@@ -76,6 +78,7 @@
 	desc = base_desc
 	icon = base_icon
 	icon_state = base_icon_state
+	vorefootstep_sounds = base_vorefootstep_sounds	 //CHOMPstation edit
 	footstep_sounds = base_footstep_sounds
 
 	if(flooring)

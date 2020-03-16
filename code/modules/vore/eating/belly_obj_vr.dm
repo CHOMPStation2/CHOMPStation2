@@ -160,6 +160,7 @@
 		"is_wet",
 		"wet_loop",
 		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
+		"reagentbellymode",
 		"liquid_fullness1_messages",
 		"liquid_fullness2_messages",
 		"liquid_fullness3_messages",
@@ -167,10 +168,16 @@
 		"liquid_fullness5_messages",
 		"reagent_name",
 		"reagent_chosen",
+		"reagentid",
+		"reagentcolor",
 		"gen_cost",
 		"gen_amount",
 		"gen_time",
+		"gen_time_display",
+		"reagent_transfer_verb",
+		"custom_max_volume",
 		"generated_reagents",
+		"vorefootsteps_sounds",
 		"fullness1_messages",
 		"fullness2_messages",
 		"fullness3_messages",
@@ -710,6 +717,8 @@
 	dupe.is_wet = is_wet
 	dupe.wet_loop = wet_loop
 	dupe.reagent_mode_flags = reagent_mode_flags	//CHOMP start of variables from CHOMP
+	dupe.reagentbellymode = reagentbellymode
+	dupe.vorefootsteps_sounds = vorefootsteps_sounds
 	dupe.liquid_fullness1_messages = liquid_fullness1_messages
 	dupe.liquid_fullness2_messages = liquid_fullness2_messages
 	dupe.liquid_fullness3_messages = liquid_fullness3_messages
@@ -717,10 +726,14 @@
 	dupe.liquid_fullness5_messages = liquid_fullness5_messages
 	dupe.reagent_name = reagent_name
 	dupe.reagent_chosen = reagent_chosen
+	dupe.reagentid = reagentid
+	dupe.reagentcolor = reagentcolor
 	dupe.gen_cost = gen_cost
 	dupe.gen_amount = gen_amount
-	dupe.gen_time = gen_time	//CHOMP end of variables from CHOMP
-
+	dupe.gen_time = gen_time
+	dupe.gen_time_display = gen_time_display
+	dupe.reagent_transfer_verb = reagent_transfer_verb
+	dupe.custom_max_volume = custom_max_volume	//CHOMP end of variables from CHOMP
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings
@@ -753,31 +766,31 @@
 	dupe.generated_reagents.Cut()
 	for(var/I in generated_reagents)
 		dupe.generated_reagents += I
-	
+
 	// CHOMP fullness messages stage 1
 	//fullness1_messages - strings
 	dupe.fullness1_messages.Cut()
 	for(var/I in fullness1_messages)
 		dupe.fullness1_messages += I
-	
+
 	// CHOMP fullness messages stage 2
 	//fullness2_messages - strings
 	dupe.fullness2_messages.Cut()
 	for(var/I in fullness2_messages)
 		dupe.fullness2_messages += I
-	
+
 	// CHOMP fullness messages stage 3
 	//fullness3_messages - strings
 	dupe.fullness3_messages.Cut()
 	for(var/I in fullness3_messages)
 		dupe.fullness3_messages += I
-	
+
 	// CHOMP fullness messages stage 4
 	//fullness4_messages - strings
 	dupe.fullness4_messages.Cut()
 	for(var/I in fullness4_messages)
 		dupe.fullness4_messages += I
-	
+
 	// CHOMP fullness messages stage 5
 	//generated_reagents - strings
 	dupe.fullness5_messages.Cut()
