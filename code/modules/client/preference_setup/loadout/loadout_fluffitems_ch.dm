@@ -173,6 +173,7 @@
 	ckeywhitelist = list("thefurryfeline")
 	character_name = list("Samantha Janice Softfur")
 	path = /obj/item/clothing/accessory/medal/gold/heroism
+	path = /obj/item/weapon/casino_platinum_chip
 	display_name = "Samantha Janice Softfur's Medal"
 	description = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
 
