@@ -21,3 +21,8 @@
 	minimal_access = list(access_forensics_lockers, access_sec_doors, access_medical, access_maint_tunnels, access_RC_announce, access_keycard_auth, access_heads, access_blueshield)
 
 	outfit_type = /decl/hierarchy/outfit/job/blueshield
+
+/datum/job/blueshield/equip(var/mob/living/carbon/human/H)
+	. = ..()
+	if(.)
+		H.implant_loyalty(src)
