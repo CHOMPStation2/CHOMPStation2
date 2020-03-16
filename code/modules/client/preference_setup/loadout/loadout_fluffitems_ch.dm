@@ -187,3 +187,139 @@
 //Y
 
 //Z
+
+//////////////CASINO
+/datum/gear/fluff/draycu/casino1
+	ckeywhitelist = list("draycu")
+	character_name = list("Vuhbar Groor")
+	path = /obj/item/weapon/storage/wallet/casino
+
+/datum/gear/fluff/yellowcloak/casino1
+	ckeywhitelist = list("yellowcloak")
+	character_name = list("Saren Dair")
+	path = /obj/item/device/nif/authentic
+
+/datum/gear/fluff/iron15/casino1
+	ckeywhitelist = list("iron15")
+	character_name = list("Jane Corrund")
+	path = /obj/item/weapon/scepter
+
+/datum/gear/fluff/iron15/casino2
+	path = /obj/item/clothing/under/sexybunny_white/sexybunny_black
+	ckeywhitelist = list("iron15")
+	character_name = list("Jane Corrund")
+
+/datum/gear/fluff/iron15/casino3
+	path = /obj/item/clothing/under/sexybunny_white 
+	ckeywhitelist = list("iron15")
+	character_name = list("Jane Corrund")
+
+/datum/gear/fluff/iron15/casino4
+	path = /obj/item/clothing/head/collectable/rabbitears 
+	ckeywhitelist = list("iron15")
+	character_name = list("Jane Corrund")
+
+/datum/gear/fluff/lazycouchman/casino1
+	ckeywhitelist = list("lazycouchman")
+	character_name = list("Luke")
+	path = /obj/item/weapon/storage/wallet/casino 
+
+/datum/gear/fluff/feathy/casino1
+	ckeywhitelist = list("feathy")
+	character_name = list("Peeptweet")
+	path = /obj/item/weapon/storage/wallet/casino 
+
+/datum/gear/fluff/feathy/casino2
+	path = /obj/item/clothing/glasses/monocoole
+	ckeywhitelist = list("feathy")
+	character_name = list("Peeptweet")
+
+/datum/gear/fluff/feathy/casino3
+	path = /obj/item/clothing/suit/armor/alien 
+	ckeywhitelist = list("feathy")
+	character_name = list("Peeptweet")
+
+/datum/gear/fluff/christykitsune/casino1
+	ckeywhitelist = list("christykitsune")
+	character_name = list("Christy")
+	path = /obj/item/weapon/storage/belt/utility/alien 
+
+/datum/gear/fluff/christykitsune/casino2
+	path = /obj/item/weapon/casino_platinum_chip
+	ckeywhitelist = list("christykitsune")
+	character_name = list("Christy")
+
+/datum/gear/fluff/nadyr/casino1
+	ckeywhitelist = list("nadyr")
+	character_name = list("Taaa")
+	path = /obj/item/weapon/storage/wallet/casino
+
+/datum/gear/fluff/nadyr/casino2
+	path = /obj/item/clothing/suit/armor/alien
+	ckeywhitelist = list("nadyr")
+	character_name = list("Taaa")
+
+/datum/gear/fluff/nadyr/casino3
+	path = /obj/item/weapon/casino_platinum_chip
+	ckeywhitelist = list("nadyr")
+	character_name = list("Taaa")
+
+/datum/gear/fluff/nadyr/casino4
+	path = /obj/item/weapon/storage/fancy/cigar/havana
+	ckeywhitelist = list("nadyr")
+	character_name = list("Taaa")
+
+/datum/gear/fluff/snekluvver/casino1
+	ckeywhitelist = list("snekluvver")
+	character_name = list("Sophia Velburg")
+	path = /obj/item/weapon/gun/energy/sizegun 
+
+/datum/gear/fluff/unit714/casino1
+	ckeywhitelist = list("unit714")
+	character_name = list("Foster Sergei")
+	path = /obj/item/clothing/head/plaguedoctorhat 
+
+/datum/gear/fluff/unit714/casino2
+	path = /obj/item/clothing/suit/bio_suit/plaguedoctorsuit 
+	ckeywhitelist = list("unit714")
+	character_name = list("Foster Sergei")
+
+/datum/gear/fluff/unit714/casino3
+	path = /obj/item/clothing/mask/gas/plaguedoctor 
+	ckeywhitelist = list("unit714")
+	character_name = list("Foster Sergei")
+
+/datum/gear/fluff/unit714/casino4
+	path = /obj/item/clothing/mask/chameleon
+	ckeywhitelist = list("unit714")
+	character_name = list("Foster Sergei")
+
+/datum/gear/fluff/unit714/casino5
+	path = /obj/item/device/nif/authentic
+	ckeywhitelist = list("unit714")
+	character_name = list("Foster Sergei")
+
+/datum/gear/fluff/unit714/casino6
+	path = /obj/item/clothing/suit/armor/alien 
+	ckeywhitelist = list("unit714")
+	character_name = list("Foster Sergei")
+
+/datum/gear/fluff/arandomalien/casino1
+	ckeywhitelist = list("arandomalien")
+	character_name = list("Rocco")
+	path = /obj/item/weapon/storage/wallet/casino
+
+/datum/gear/fluff/thefurryfeline/casino1
+	ckeywhitelist = list("thefurryfeline")
+	character_name = list("Samantha Janice Softfur")
+	path = /obj/item/device/nif/authentic
+
+/datum/gear/fluff/thefurryfeline/casino2
+	ckeywhitelist = list("thefurryfeline")
+	character_name = list("Samantha Janice Softfur")
+	path = /obj/item/weapon/casino_platinum_chip
+
+/datum/gear/fluff/sk1tz/casino1
+	ckeywhitelist = list("sk1tz")
+	character_name = list("Iekin Crane")
+	path = /obj/item/clothing/suit/armor/alien
