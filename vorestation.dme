@@ -412,6 +412,7 @@
 #include "code\datums\supplypacks\science.dm"
 #include "code\datums\supplypacks\security.dm"
 #include "code\datums\supplypacks\security_vr.dm"
+#include "code\datums\supplypacks\security_yw.dm"
 #include "code\datums\supplypacks\supply.dm"
 #include "code\datums\supplypacks\supply_vr.dm"
 #include "code\datums\supplypacks\supplypacks.dm"
