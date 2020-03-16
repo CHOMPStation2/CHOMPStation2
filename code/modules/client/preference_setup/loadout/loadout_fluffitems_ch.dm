@@ -324,3 +324,4 @@
 	ckeywhitelist = list("thefurryfeline")
 	character_name = list("Samantha Janice Softfur")
 	path = /obj/item/weapon/casino_platinum_chip
+	display_name = "Sam's Platinum Chip"
