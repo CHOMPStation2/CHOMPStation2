@@ -3447,6 +3447,7 @@
 #include "code\modules\vore\eating\vorehooks_vr.dm"
 #include "code\modules\vore\eating\vorepanel_ch.dm"
 #include "code\modules\vore\eating\vorepanel_vr.dm"
+#include "code\modules\vore\fluffstuff\custom_boxes_ch.dm"
 #include "code\modules\vore\fluffstuff\custom_boxes_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_boxes_yw.dm"
 #include "code\modules\vore\fluffstuff\custom_clothes_ch.dm"
