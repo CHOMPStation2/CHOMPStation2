@@ -12,7 +12,7 @@
 	cost = 80
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Blueshield equipment"
-	access = access_heads
+	access = access_blueshield
 	
 /datum/supply_pack/misc/blueshieldweapons
 	name = "Blueshield Weapon Kits"
@@ -23,4 +23,4 @@
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Blueshield armaments"
-	access = access_heads
+	access = access_blueshield
