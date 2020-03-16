@@ -310,16 +310,6 @@
 	character_name = list("Rocco")
 	path = /obj/item/weapon/storage/wallet/casino
 
-/datum/gear/fluff/thefurryfeline/casino1
-	ckeywhitelist = list("thefurryfeline")
-	character_name = list("Samantha Janice Softfur")
-	path = /obj/item/device/nif/authentic
-
-/datum/gear/fluff/thefurryfeline/casino2
-	ckeywhitelist = list("thefurryfeline")
-	character_name = list("Samantha Janice Softfur")
-	path = /obj/item/weapon/casino_platinum_chip
-
 /datum/gear/fluff/sk1tz/casino1
 	ckeywhitelist = list("sk1tz")
 	character_name = list("Iekin Crane")
