@@ -169,12 +169,13 @@
 	description = "A silver medal awarded for acts of exceptional valor."
 
 //T
-/datum/gear/fluff/thefurryfeline/medal1
+/datum/gear/fluff/thefurryfeline_medal1
 	ckeywhitelist = list("thefurryfeline")
 	character_name = list("Samantha Janice Softfur")
-	path = list("/obj/item/clothing/accessory/medal/gold/heroism, /obj/item/weapon/casino_platinum_chip")
+	path = /obj/item/clothing/accessory/medal/gold/heroism
 	display_name = "Samantha Janice Softfur's Medal"
 	description = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
+	
 
 //U
 
@@ -313,3 +314,13 @@
 	ckeywhitelist = list("sk1tz")
 	character_name = list("Iekin Crane")
 	path = /obj/item/clothing/suit/armor/alien
+	
+/datum/gear/fluff/thefurryfeline_casino1
+	ckeywhitelist = list("thefurryfeline")
+	character_name = list("Samantha Janice Softfur")
+	path = /obj/item/device/nif/authentic
+
+/datum/gear/fluff/thefurryfeline_casino2
+	ckeywhitelist = list("thefurryfeline")
+	character_name = list("Samantha Janice Softfur")
+	path = /obj/item/weapon/casino_platinum_chip
