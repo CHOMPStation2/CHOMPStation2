@@ -298,15 +298,7 @@
 	region = ACCESS_REGION_SUPPLY
 
 // /var/const/free_access_id = 51
-
-//YW ADDITION START
-//allows blueshield to have special access independent of other access levels
-/var/const/access_blueshield = 52
-/datum/access/blueshield
-	id = access_blueshield
-	desc = "Blueshield Special Access"
-	region = ACCESS_REGION_COMMAND
-//YW ADDITION END
+// /var/const/free_access_id = 52
 
 /var/const/access_heads_vault = 53
 /datum/access/heads_vault
