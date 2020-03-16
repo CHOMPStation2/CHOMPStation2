@@ -763,31 +763,27 @@
 				Melee weapons
 				<ul>
 					<li>scepter 500</li>
-					<li>chain of command	200</li>
+					<li>chain of command	250</li>
 				</ul>
 				Guns and 'guns' ((disclaimer, giving out guns will mean you get a weapons license as well with the shifts you have it, abusing these weapons will quickly get them removed!))
 				<ul>
 					<li>sizegun 100</li>
 					<li>advanced anti particle rifle 500</li>
-					<li>anti particle cannon 750</li>
 					<li>temperature gun 250</li>
-					<li>alien pistol 500</li>
+					<li>alien pistol 1000</li>
 					<li>floral somatoray 250</li>
-					<li>frontier phaser 500</li>
+					<li>net gun 500</li>
 				</ul>
 				Gear
 				<ul>
 					<li>experimental welder 500</li>
-					<li>alien belt 500</li>
+					<li>alien belt 750</li>
 					<li>alien enhancement vest 750</li>
+					<li>The monocoole 1000</li>
+					<li>chameleon black tie 250</li>
 					<li>cryostasis beaker 200</li>
 					<li>bluespace beaker 200</li>
 					<li>chem sprayer 250</li>
-				</ul>
-				Accessories
-				<ul>
-					<li>The monocoole 1000</li>
-					<li>chameleon black tie 300</li>
 				</ul>
 				Masks and hats - EVERYTHING IS 50 except chameleon!
 				<ul>
@@ -800,18 +796,18 @@
 					<li>Fake moustache</li>
 					<li>Dolphin mask</li>
 					<li>Demon mask</li>
-					<li>Chameleon gas mask 300</li>
+					<li>Chameleon gas mask 250</li>
 				</ul>
-				Costumes - All costumes are 150!
+				Costumes - All costumes are 100 except the hoodies which are 50!
 				<ul>
 					<li>Black bunny girl outfit (black suit and rabbit ears)</li>
 					<li>White bunny girl outfit (white suit and rabbit ears)</li>
-					<li>Corgi (corgi suit + corgi hood)</li>
+					<li>Corgi hoodie</li>
 					<li>Sexy clown</li>
 					<li>nyan girl</li>
 					<li>Wizard</li>
 					<li>Chicken</li>
-					<li>Carp (carp suit + carp head)</li>
+					<li>Carp hoodie</li>
 					<li>Sexy mime</li>
 					<li>Pirate</li>
 					<li>Commie</li>
@@ -833,6 +829,8 @@
 					<li>Bosun's whistle</li>
 					<li>Golden cup</li>
 					<li>Havana cigar case</li>
+					<li>Casino wallet (to keep after shift)</li>
+					<li>Casino card deck (to keep after shift)</li>
 				</ul>
 				Booze - ALL BOOZE IS 50
 				<ul>
@@ -920,8 +918,9 @@
 	desc = "Exchange your chips to obtain wonderful prizes! Hoepfully you'll get to keep some of them for a while."
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state ="casino_prize_dispenser"
-	var/icon_vend ="casino_prize_dispenser-prize"
+	var/icon_vend ="casino_prize_dispenser-vend"
 	anchored = 1
+	opacity = 0
 
 	// Vending-related
 	var/active = 1 //No sales pitches if off!
@@ -934,13 +933,19 @@
 	var/status_message = "" // Status screen messages like "insufficient funds", displayed in NanoUI
 	var/status_error = 0 // Set to 1 if status_message is an error
 
-
 	var/list/list_weapons	= list()
 	var/list/list_gear		= list()
 	var/list/list_clothing 	= list()
 	var/list/list_misc 		= list()
 	var/list/list_drinks 	= list()
 	var/list/prices    		= list() // Prices for each item, list(/type/path = price), items not in the list don't have a price.
+
+	// List of vending_product items available.
+	var/list/weapons_product_records	 = list()
+	var/list/gear_product_records		 = list()
+	var/list/clothing_product_records	 = list()
+	var/list/misc_product_records		 = list()
+	var/list/drinks_product_records		 = list()
 
 	var/category_weapons	 = 1	//For listing categories, if false then prizes of this categories cant be obtained nor bought for post-shift enjoyment
 	var/category_gear		 = 1	//If 1 prizes will be only logged
@@ -949,16 +954,150 @@
 	var/category_drinks		 = 1
 
 	list_weapons = list(
+		/obj/item/weapon/scepter,
+		/obj/item/weapon/melee/chainofcommand,
+		/obj/item/weapon/gun/energy/sizegun,
+		/obj/item/weapon/gun/energy/particle/advanced,
+		/obj/item/weapon/gun/energy/temperature,
+		/obj/item/weapon/gun/energy/alien,
+		/obj/item/weapon/gun/energy/floragun,
+		/obj/item/weapon/gun/energy/netgun
+		)
+
+	list_gear = list(
+		/obj/item/weapon/weldingtool/experimental,
+		/obj/item/weapon/storage/belt/utility/alien,
+		/obj/item/clothing/suit/armor/alien,
+		/obj/item/clothing/glasses/monocoole,
+		/obj/item/clothing/accessory/chameleon,
+		/obj/item/weapon/reagent_containers/spray/chemsprayer,
+		/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+		/obj/item/weapon/reagent_containers/glass/beaker/noreact
+		)
+
+	list_clothing = list(
+		/obj/item/clothing/head/soft/purple/wah,
+		/obj/item/clothing/mask/shark,
+		/obj/item/clothing/mask/pig,
+		/obj/item/clothing/mask/luchador,
+		/obj/item/clothing/mask/horsehead,
+		/obj/item/clothing/mask/goblin,
+		/obj/item/clothing/mask/fakemoustache,
+		/obj/item/clothing/mask/dolphin,
+		/obj/item/clothing/mask/demon,
+		/obj/item/clothing/under/chameleon,
+		/obj/item/clothing/suit/storage/hooded/ian_costume,
+		/obj/item/clothing/suit/storage/hooded/carp_costume,
+		/obj/item/weapon/storage/box/casino/costume_whitebunny,
+		/obj/item/weapon/storage/box/casino/costume_blackbunny,
+		/obj/item/weapon/storage/box/casino/costume_sexymime,
+		/obj/item/weapon/storage/box/casino/costume_sexyclown,
+		/obj/item/weapon/storage/box/casino/costume_nyangirl,
+		/obj/item/weapon/storage/box/casino/costume_wizard,
+		/obj/item/weapon/storage/box/casino/costume_chicken,
+		/obj/item/weapon/storage/box/casino/costume_gladiator,
+		/obj/item/weapon/storage/box/casino/costume_pirate,
+		/obj/item/weapon/storage/box/casino/costume_commie,
+		/obj/item/weapon/storage/box/casino/costume_imperiummonk,
+		/obj/item/weapon/storage/box/casino/costume_plaguedoctor,
+		/obj/item/weapon/storage/box/casino/costume_cutewitch
+		)
+
+	list_misc = list(
+		/obj/item/toy/sword,
+		/obj/item/toy/waterflower,
+		/obj/item/toy/stickhorse,
+		/obj/item/toy/katana,
+		/obj/item/toy/eight_ball/conch,
+		/obj/item/toy/eight_ball,
+		/obj/item/weapon/material/sword/foam,
+		/obj/item/weapon/storage/box/casino/foamcrossbow,
+		/obj/item/toy/bosunwhistle,
+		/obj/item/weapon/reagent_containers/food/drinks/golden_cup,
+		/obj/item/weapon/storage/fancy/cigar/havana,
+		/obj/item/weapon/storage/wallet/casino,
+		/obj/item/weapon/deck/cards/casino
 		)
 
 	list_drinks = list(
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/patron,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps
 		)
+
 
 	prices = list(
+		/obj/item/weapon/scepter = 500,
+		/obj/item/weapon/melee/chainofcommand = 250,
+		/obj/item/weapon/gun/energy/sizegun = 100,
+		/obj/item/weapon/gun/energy/particle/advanced = 500,
+		/obj/item/weapon/gun/energy/temperature = 250,
+		/obj/item/weapon/gun/energy/alien = 1000,
+		/obj/item/weapon/gun/energy/floragun = 250,
+		/obj/item/weapon/gun/energy/netgun = 500,
+		/obj/item/weapon/weldingtool/experimental = 500,
+		/obj/item/weapon/storage/belt/utility/alien = 500,
+		/obj/item/clothing/suit/armor/alien = 750,
+		/obj/item/clothing/glasses/monocoole = 1000,
+		/obj/item/clothing/accessory/chameleon = 250,
+		/obj/item/weapon/reagent_containers/spray/chemsprayer = 250,
+		/obj/item/weapon/reagent_containers/glass/beaker/bluespace = 200,
+		/obj/item/weapon/reagent_containers/glass/beaker/noreact = 200,
+		/obj/item/clothing/head/soft/purple/wah = 50,
+		/obj/item/clothing/mask/shark = 50,
+		/obj/item/clothing/mask/pig = 50,
+		/obj/item/clothing/mask/luchador = 50,
+		/obj/item/clothing/mask/horsehead = 50,
+		/obj/item/clothing/mask/goblin = 50,
+		/obj/item/clothing/mask/fakemoustache = 50,
+		/obj/item/clothing/mask/dolphin = 50,
+		/obj/item/clothing/mask/demon = 50,
+		/obj/item/clothing/under/chameleon = 250,
+		/obj/item/clothing/suit/storage/hooded/ian_costume = 50,
+		/obj/item/clothing/suit/storage/hooded/carp_costume = 50,
+		/obj/item/weapon/storage/box/casino/costume_whitebunny = 100,
+		/obj/item/weapon/storage/box/casino/costume_blackbunny = 100,
+		/obj/item/weapon/storage/box/casino/costume_sexymime = 100,
+		/obj/item/weapon/storage/box/casino/costume_sexyclown = 100,
+		/obj/item/weapon/storage/box/casino/costume_nyangirl = 100,
+		/obj/item/weapon/storage/box/casino/costume_wizard = 100,
+		/obj/item/weapon/storage/box/casino/costume_chicken = 100,
+		/obj/item/weapon/storage/box/casino/costume_gladiator = 100,
+		/obj/item/weapon/storage/box/casino/costume_pirate = 100,
+		/obj/item/weapon/storage/box/casino/costume_commie = 100,
+		/obj/item/weapon/storage/box/casino/costume_imperiummonk = 100,
+		/obj/item/weapon/storage/box/casino/costume_plaguedoctor = 100,
+		/obj/item/weapon/storage/box/casino/costume_cutewitch = 100,
+		/obj/item/toy/sword = 50,
+		/obj/item/toy/waterflower = 50,
+		/obj/item/toy/stickhorse = 50,
+		/obj/item/toy/katana = 50,
+		/obj/item/toy/eight_ball/conch = 50,
+		/obj/item/toy/eight_ball = 50,
+		/obj/item/weapon/material/sword/foam = 50,
+		/obj/item/weapon/storage/box/casino/foamcrossbow = 50,
+		/obj/item/toy/bosunwhistle = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/golden_cup = 50,
+		/obj/item/weapon/storage/fancy/cigar/havana = 50,
+		/obj/item/weapon/storage/wallet/casino = 50,
+		/obj/item/weapon/deck/cards/casino = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/patron = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps = 50
 		)
 
-	// List of vending_product items available.
-	var/list/product_records = list()
 
 	var/list/log = list()
 	var/req_log_access = access_cargo //default access for checking logs is cargo
@@ -967,15 +1106,10 @@
 /obj/machinery/casino_prize_dispenser/Initialize()
 	build_inventory()
 
-/obj/machinery/casino_prize_dispenser/proc/build_inventory() //WIP
-	var/list/all_products = list(
-		list(list_weapons, "cat_weapons"),
-		list(list_gear, "cat_gear"),
-		list(list_clothing, "cat_clothing"),
-		list(list_misc, "cat_misc"),
-		list(list_drinks, "cat_drinks"))
-
-	for(var/current_list in all_products)
+/obj/machinery/casino_prize_dispenser/proc/build_inventory() //Awkward yeah
+	var/list/weapons_products = list(
+		list(list_weapons, "cat_weapons"))
+	for(var/current_list in weapons_products)
 		var/category = current_list[2]
 
 		for(var/entry in current_list[1])
@@ -983,12 +1117,76 @@
 
 			product.price = (entry in prices) ? prices[entry] : 0
 			product.category = category
-			product_records.Add(product)
+			weapons_product_records.Add(product)
+
+	var/list/gear_products = list(
+		list(list_gear, "cat_gear"))
+	for(var/current_list in gear_products)
+		var/category = current_list[2]
+
+		for(var/entry in current_list[1])
+			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
+
+			product.price = (entry in prices) ? prices[entry] : 0
+			product.category = category
+			gear_product_records.Add(product)
+
+	var/list/clothing_products = list(
+		list(list_clothing, "cat_clothing"))
+	for(var/current_list in clothing_products)
+		var/category = current_list[2]
+
+		for(var/entry in current_list[1])
+			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
+
+			product.price = (entry in prices) ? prices[entry] : 0
+			product.category = category
+			clothing_product_records.Add(product)
+
+	var/list/misc_products = list(
+		list(list_misc, "cat_misc"))
+	for(var/current_list in misc_products)
+		var/category = current_list[2]
+
+		for(var/entry in current_list[1])
+			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
+
+			product.price = (entry in prices) ? prices[entry] : 0
+			product.category = category
+			misc_product_records.Add(product)
+
+	var/list/drinks_products = list(
+		list(list_drinks, "cat_drinks"))
+	for(var/current_list in drinks_products)
+		var/category = current_list[2]
+
+		for(var/entry in current_list[1])
+			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
+
+			product.price = (entry in prices) ? prices[entry] : 0
+			product.category = category
+			drinks_product_records.Add(product)
 
 /obj/machinery/casino_prize_dispenser/Destroy()
-	for(var/datum/stored_item/vending_product/R in product_records)
+	for(var/datum/stored_item/vending_product/R in weapons_product_records)
 		qdel(R)
-	product_records = null
+	weapons_product_records = null
+
+	for(var/datum/stored_item/vending_product/R in gear_product_records)
+		qdel(R)
+	gear_product_records = null
+
+	for(var/datum/stored_item/vending_product/R in clothing_product_records)
+		qdel(R)
+	clothing_product_records = null
+
+	for(var/datum/stored_item/vending_product/R in misc_product_records)
+		qdel(R)
+	misc_product_records = null
+
+	for(var/datum/stored_item/vending_product/R in drinks_product_records)
+		qdel(R)
+	drinks_product_records = null
 	return ..()
 
 /obj/machinery/casino_prize_dispenser/attackby(obj/item/weapon/W as obj, mob/user as mob)
@@ -1059,17 +1257,55 @@
 		var/list/listed_products = null
 		listed_products = list()
 
-		for(var/key = 1 to product_records.len)
-			var/datum/stored_item/vending_product/I = product_records[key]
+		switch(currently_selecting)
+			if("cat_weapons")
+				for(var/key = 1 to weapons_product_records.len)
+					var/datum/stored_item/vending_product/I = weapons_product_records[key]
 
-			if(I.category == currently_selecting)
-				continue
+					listed_products.Add(list(list(
+						"key" = key,
+						"name" = I.item_name,
+						"price" = I.price,
+						"color" = I.display_color)))
+			if("cat_gear")
+				for(var/key = 1 to gear_product_records.len)
+					var/datum/stored_item/vending_product/I = gear_product_records[key]
 
-			listed_products.Add(list(list(
-				"key" = key,
-				"name" = I.item_name,
-				"price" = I.price,
-				"color" = I.display_color)))
+					listed_products.Add(list(list(
+						"key" = key,
+						"name" = I.item_name,
+						"price" = I.price,
+						"color" = I.display_color)))
+			if("cat_clothing")
+				for(var/key = 1 to clothing_product_records.len)
+					var/datum/stored_item/vending_product/I = clothing_product_records[key]
+
+					listed_products.Add(list(list(
+						"key" = key,
+						"name" = I.item_name,
+						"price" = I.price,
+						"color" = I.display_color)))
+			if("cat_misc")
+				for(var/key = 1 to misc_product_records.len)
+					var/datum/stored_item/vending_product/I = misc_product_records[key]
+
+					listed_products.Add(list(list(
+						"key" = key,
+						"name" = I.item_name,
+						"price" = I.price,
+						"color" = I.display_color)))
+			if("cat_drinks")
+				for(var/key = 1 to drinks_product_records.len)
+					var/datum/stored_item/vending_product/I = drinks_product_records[key]
+
+					listed_products.Add(list(list(
+						"key" = key,
+						"name" = I.item_name,
+						"price" = I.price,
+						"color" = I.display_color)))
+			else
+				return
+
 		data["products"] = listed_products
 
 	else
@@ -1118,15 +1354,64 @@
 
 		if((href_list["vend"]) && (vend_ready) && (!currently_vending))
 			var/key = text2num(href_list["vend"])
-			var/datum/stored_item/vending_product/R = product_records[key]
-			currently_selecting = null
 
-			if(R.price <= 0)
-				vend(R, usr)
-			else
-				currently_vending = R
-				status_message = "Please insert chips to pay for the prize!"
-				status_error = 0
+			switch(currently_selecting)
+				if("cat_weapons")
+					var/datum/stored_item/vending_product/R = weapons_product_records[key]
+					currently_selecting = null
+
+					if(R.price <= 0)
+						vend(R, usr)
+					else
+						currently_vending = R
+						status_message = "Please insert chips to pay for the prize!"
+						status_error = 0
+
+				if("cat_gear")
+					var/datum/stored_item/vending_product/R = gear_product_records[key]
+					currently_selecting = null
+
+					if(R.price <= 0)
+						vend(R, usr)
+					else
+						currently_vending = R
+						status_message = "Please insert chips to pay for the prize!"
+						status_error = 0
+
+				if("cat_clothing")
+					var/datum/stored_item/vending_product/R = clothing_product_records[key]
+					currently_selecting = null
+
+					if(R.price <= 0)
+						vend(R, usr)
+					else
+						currently_vending = R
+						status_message = "Please insert chips to pay for the prize!"
+						status_error = 0
+
+				if("cat_misc")
+					var/datum/stored_item/vending_product/R = misc_product_records[key]
+					currently_selecting = null
+
+					if(R.price <= 0)
+						vend(R, usr)
+					else
+						currently_vending = R
+						status_message = "Please insert chips to pay for the prize!"
+						status_error = 0
+
+				if("cat_drinks")
+					var/datum/stored_item/vending_product/R = drinks_product_records[key]
+					currently_selecting = null
+
+					if(R.price <= 0)
+						vend(R, usr)
+					else
+						currently_vending = R
+						status_message = "Please insert chips to pay for the prize!"
+						status_error = 0
+				else
+					return
 
 		else if(href_list["cancelpurchase"])
 			currently_vending = null
@@ -1141,10 +1426,6 @@
 	SSnanoui.update_uis(src)
 
 	if(icon_vend) //Show the vending animation if needed
-		flick(icon_vend,src)
-		flick(icon_vend,src)
-		flick(icon_vend,src)
-		flick(icon_vend,src)
 		flick(icon_vend,src)
 
 	spawn(vend_delay)
