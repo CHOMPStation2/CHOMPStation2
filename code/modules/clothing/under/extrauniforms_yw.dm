@@ -19,6 +19,22 @@
 	item_state = "blueshield2"
 	armor = list(melee = 15, bullet = 10, laser = 10,energy = 5, bomb = 15, bio = 0, rad = 0)
 
+/obj/item/clothing/accessory/storage/webbing/combatpilot //redefined to change the name and keep it loaded in the event the sc files are disabled in future
+	name = "combat pilot harness"
+	desc = "Sturdy mess of black synthcotton belts and buckles."
+	icon_state = "pilot_webbing2"
+	sprite_sheets = list(
+			"Teshari" = 'icons/mob/species/seromi/ties.dmi'
+			)
+
+/obj/item/clothing/under/rank/khi/sec/pilot //yes, we're inheriting from the khi version; that one has full rolldown sprites
+	name = "security pilot uniform"
+	desc = "A lightweight uniform intended for vehicle and powersuit operators, designed to allow free movement and maximum comfort in hot, cramped cockpits. Comes prefitted with a harness and webbing for gear."
+	armor = list(melee = 0, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 0)
+	//we probably won't get hit by melee attacks as a pilot, but logically you'd want protection against anything that might penetrate the armor
+	starting_accessories = list(/obj/item/clothing/accessory/storage/webbing/combatpilot)
+	//come prefitted with some snappy extra webbing
+
 /obj/item/clothing/under/yw/rank/security/formal
 	name = "security suit"
 	desc = "A formal security suit for officers complete with nanotrasen belt buckle."

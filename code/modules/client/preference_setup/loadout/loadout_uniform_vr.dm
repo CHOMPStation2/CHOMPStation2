@@ -16,7 +16,7 @@
 /datum/gear/uniform/job_khi/sec
 	display_name = "khi uniform, sec"
 	path = /obj/item/clothing/under/rank/khi/sec
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard","Security Pilot")
 
 /datum/gear/uniform/job_khi/med
 	display_name = "khi uniform, med"
@@ -37,7 +37,7 @@
 /datum/gear/suit/job_fed/sec
 	display_name = "fed uniform, sec"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard","Security Pilot")
 
 /datum/gear/suit/job_fed/medsci
 	display_name = "fed uniform, med/sci"
@@ -64,7 +64,7 @@
 /datum/gear/uniform/job_trek/eng/tos
 	display_name = "TOS uniform, eng/sec"
 	path = /obj/item/clothing/under/rank/trek/engsec
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard","Security Pilot")
 
 //TNG
 /datum/gear/uniform/job_trek/cmd/tng
@@ -80,7 +80,7 @@
 /datum/gear/uniform/job_trek/eng/tng
 	display_name = "TNG uniform, eng/sec"
 	path = /obj/item/clothing/under/rank/trek/engsec/next
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard","Security Pilot")
 
 //VOY
 /datum/gear/uniform/job_trek/cmd/voy
@@ -96,7 +96,7 @@
 /datum/gear/uniform/job_trek/eng/voy
 	display_name = "VOY uniform, eng/sec"
 	path = /obj/item/clothing/under/rank/trek/engsec/voy
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard","Security Pilot")
 
 //DS9
 
@@ -106,7 +106,7 @@
 	allowed_roles = list("Head of Security","Colony Director","Head of Personnel","Chief Engineer","Research Director",
 						"Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist",
 						"Scientist","Roboticist","Xenobiologist","Atmospheric Technician",
-						"Station Engineer","Warden","Detective","Security Officer", "Pathfinder", "Explorer", "Field Medic", "Blueshield Guard")
+						"Station Engineer","Warden","Detective","Security Officer", "Pathfinder", "Explorer", "Field Medic", "Blueshield Guard","Security Pilot")
 
 
 /datum/gear/uniform/job_trek/cmd/ds9
@@ -122,7 +122,7 @@
 /datum/gear/uniform/job_trek/eng/ds9
 	display_name = "DS9 uniform, eng/sec"
 	path = /obj/item/clothing/under/rank/trek/engsec/ds9
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard","Security Pilot")
 
 
 //ENT
@@ -139,7 +139,7 @@
 /datum/gear/uniform/job_trek/eng/ent
 	display_name = "ENT uniform, eng/sec"
 	path = /obj/item/clothing/under/rank/trek/engsec/ent
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer","Warden","Detective","Security Officer","Head of Security","Blueshield Guard","Security Pilot")
 /*
 Swimsuits
 */
