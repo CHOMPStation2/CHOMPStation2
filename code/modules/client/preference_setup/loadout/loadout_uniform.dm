@@ -158,7 +158,7 @@
 /datum/gear/uniform/job_skirt/security
 	display_name = "skirt, security"
 	path = /obj/item/clothing/under/rank/security/skirt
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/job_skirt/head_of_security
 	display_name = "skirt, hos"
@@ -173,7 +173,7 @@
 /datum/gear/uniform/job_turtle/security
 	display_name = "turtleneck, security"
 	path = /obj/item/clothing/under/rank/security/turtleneck
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Security Pilot")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer", "Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/job_turtle/engineering
 	display_name = "turtleneck, engineering"
@@ -307,7 +307,7 @@
 /datum/gear/uniform/corpsecsuit
 	display_name = "uniform, corporate (Security)"
 	path = /obj/item/clothing/under/rank/security/corp
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/corpwarsuit
 	display_name = "uniform, corporate (Warden)"
@@ -333,7 +333,7 @@
 /datum/gear/uniform/navysecsuit
 	display_name = "uniform, navy blue (Security)"
 	path = /obj/item/clothing/under/rank/security/navyblue
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/navywarsuit
 	display_name = "uniform, navy blue (Warden)"
@@ -432,7 +432,7 @@
 /datum/gear/uniform/pcrc
 	display_name = "uniform, PCRC (Security)"
 	path = /obj/item/clothing/under/pcrc
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/brandsuit/grayson
 	display_name = "outfit, grayson"

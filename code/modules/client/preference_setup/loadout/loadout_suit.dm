@@ -257,7 +257,7 @@ datum/gear/suit/duster
 /datum/gear/suit/roles/poncho/cloak/security
 	display_name = "cloak, security"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/security
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/suit/roles/poncho/cloak/service
 	display_name = "cloak, service"
@@ -340,7 +340,7 @@ datum/gear/suit/duster
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/suit/wintercoat/medical
 	display_name = "winter coat, medical"
@@ -473,7 +473,7 @@ datum/gear/suit/duster
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command
-	allowed_roles = list("Colony Director","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard")
+	allowed_roles = list("Colony Director","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard") //YW ADDITIONS
 
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"

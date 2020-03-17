@@ -36,7 +36,7 @@
 /datum/gear/eyes/security
 	display_name = "Security HUD (Security)"
 	path = /obj/item/clothing/glasses/hud/security
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/eyes/security/prescriptionsec
 	display_name = "Security HUD, prescription (Security)"
@@ -108,7 +108,7 @@
 /datum/gear/eyes/sun
 	display_name = "Sunglasses (Security/Command)"
 	path = /obj/item/clothing/glasses/sunglasses
-	allowed_roles = list("Security Officer","Head of Security","Warden","Colony Director","Head of Personnel","Quartermaster","Internal Affairs Agent","Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Colony Director","Head of Personnel","Quartermaster","Internal Affairs Agent","Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/eyes/sun/shades
 	display_name = "Sunglasses, fat (Security/Command)"

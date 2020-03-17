@@ -19,7 +19,7 @@
 /datum/gear/head/beret/bsec
 	display_name = "beret, navy (officer)"
 	path = /obj/item/clothing/head/beret/sec/navy/officer
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/beret/bsec_warden
 	display_name = "beret, navy (warden)"
@@ -34,7 +34,7 @@
 /datum/gear/head/beret/csec
 	display_name = "beret, corporate (officer)"
 	path = /obj/item/clothing/head/beret/sec/corporate/officer
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/beret/csec_warden
 	display_name = "beret, corporate (warden)"
@@ -57,7 +57,7 @@
 /datum/gear/head/beret/sec
 	display_name = "beret, red (security)"
 	path = /obj/item/clothing/head/beret/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/cap
 	display_name = "cap, black"
@@ -78,7 +78,7 @@
 /datum/gear/head/cap/corp
 	display_name = "cap, corporate (Security)"
 	path = /obj/item/clothing/head/soft/sec/corp
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/cap/green
 	display_name = "cap, green"
@@ -107,7 +107,7 @@
 /datum/gear/head/cap/sec
 	display_name = "cap, security (Security)"
 	path = /obj/item/clothing/head/soft/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/cap/yellow
 	display_name = "cap, yellow"
