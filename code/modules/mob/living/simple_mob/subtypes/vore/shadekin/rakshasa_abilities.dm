@@ -140,6 +140,22 @@
 		var/sound = pick(goo_sounds)
 		playsound(my_kin.loc, sound, 100, 1)
 /////////////////////////////////////////////////////////////////
+/obj/effect/rakshasa_ability/phase_shift4
+	ability_name = "Stealth Shift"
+	desc = "Stealthy. No light effects, no goo."
+	icon_state = "tech_passwall"
+	cost = 100
+	shift_mode = SHIFTED_OR_NOT
+	ab_sound = 'sound/effects/stealthoff.ogg'
+/obj/effect/rakshasa_ability/phase_shift4/do_ability()
+	if(!..())
+		return
+	my_kin.stealth_shift()
+	if(my_kin.ability_flags & AB_PHASE_SHIFTED)
+		cost = 0 //Shifting back is free (but harmful in light)
+	else
+		cost = initial(cost)
+/////////////////////////////////////////////////////////////////
 /obj/effect/rakshasa_ability/drip_oil
 	ability_name = "Goo Drip"
 	desc = "Drip some goo."
@@ -185,7 +201,7 @@
 /////////////////////////////////////////////////////////////////
 /obj/effect/rakshasa_ability/emergesound
 	ability_name = "Heavy Breathing"
-	desc = "Do the emrge sound without actually emerging."
+	desc = "Heavy Breathing."
 	icon_state = ""
 	cost = 0
 	shift_mode = SHIFTED_OR_NOT
@@ -193,7 +209,45 @@
 /obj/effect/rakshasa_ability/emergesound/do_ability()
 	if(!..())
 		return
-	playsound(my_kin.loc, 'sound/rakshasa/Emerge0.ogg', 100, 1)
+	playsound(my_kin.loc, 'sound/rakshasa/Breath1.ogg', 100, 1)
+/////////////////////////////////////////////////////////////////
+/obj/effect/rakshasa_ability/trapsound
+	ability_name = "Raspy Breathing"
+	desc = "Raspy Breathing."
+	icon_state = ""
+	cost = 0
+	shift_mode = SHIFTED_OR_NOT
+	ab_sound = 'sound/effects/stealthoff.ogg'
+/obj/effect/rakshasa_ability/trapsound/do_ability()
+	if(!..())
+		return
+	var/goo_sounds = list (
+			'sound/rakshasa/Breath2.ogg'
+			)
+	var/sound = pick(goo_sounds)
+	playsound(my_kin.loc, sound, 100, 1)
+/////////////////////////////////////////////////////////////////
+/obj/effect/rakshasa_ability/dripsound
+	ability_name = "Goop Drip Sound"
+	desc = "Do the drip sound without actually dripping."
+	icon_state = ""
+	cost = 0
+	shift_mode = SHIFTED_OR_NOT
+	ab_sound = 'sound/effects/stealthoff.ogg'
+/obj/effect/rakshasa_ability/dripsound/do_ability()
+	if(!..())
+		return
+	var/goo_sounds = list (
+			'sound/rakshasa/Decay1.ogg',
+			'sound/rakshasa/Decay2.ogg',
+			'sound/rakshasa/Decay3.ogg',
+			'sound/rakshasa/Corrosion1.ogg',
+			'sound/rakshasa/Corrosion2.ogg',
+			'sound/rakshasa/Corrosion3.ogg'
+			)
+	var/sound = pick(goo_sounds)
+	playsound(my_kin.loc, sound, 100, 1)
+
 /////////////////////////////////////////////////////////////////
 /obj/effect/rakshasa_ability/trap
 	ability_name = "Lay Trap"
@@ -213,3 +267,80 @@
 	var/sound = pick(goo_sounds)
 	playsound(my_kin.loc, sound, 100, 1)
 	new /obj/structure/gootrap (my_kin.loc)
+
+////////////////////////////////////////////////////////////////
+//Extra phaseshift with no lights flickering. For flavor. Basically just deleted the part that flickers the lights.
+/mob/living/simple_mob/shadekin/proc/stealth_shift()
+	var/turf/T = get_turf(src)
+	if(!T.CanPass(src,T) || loc != T)
+		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		return FALSE
+
+	forceMove(T)
+	var/original_canmove = canmove
+	SetStunned(0)
+	SetWeakened(0)
+	if(buckled)
+		buckled.unbuckle_mob()
+	if(pulledby)
+		pulledby.stop_pulling()
+	stop_pulling()
+	canmove = FALSE
+
+	//Shifting in
+	if(ability_flags & AB_PHASE_SHIFTED)
+		ability_flags &= ~AB_PHASE_SHIFTED
+		name = real_name
+		for(var/belly in vore_organs)
+			var/obj/belly/B = belly
+			B.escapable = initial(B.escapable)
+
+		overlays.Cut()
+		alpha = initial(alpha)
+		invisibility = initial(invisibility)
+		see_invisible = initial(see_invisible)
+		incorporeal_move = initial(incorporeal_move)
+		density = initial(density)
+		force_max_speed = initial(force_max_speed)
+
+		//Cosmetics mostly
+		flick("tp_in",src)
+		custom_emote(1,"phases in!")
+		sleep(5) //The duration of the TP animation
+		canmove = original_canmove
+
+		//Potential phase-in vore
+		if(can_be_drop_pred) //Toggleable in vore panel
+			var/list/potentials = living_mobs(0)
+			if(potentials.len)
+				var/mob/living/target = pick(potentials)
+				if(istype(target) && vore_selected)
+					target.forceMove(vore_selected)
+					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+
+		// Do this after the potential vore, so we get the belly
+		update_icon()
+
+//Shifting out
+	else
+		ability_flags |= AB_PHASE_SHIFTED
+		custom_emote(1,"phases out!")
+		real_name = name
+		name = "Something"
+
+		for(var/belly in vore_organs)
+			var/obj/belly/B = belly
+			B.escapable = FALSE
+
+		overlays.Cut()
+		flick("tp_out",src)
+		sleep(5)
+		invisibility = INVISIBILITY_LEVEL_TWO
+		see_invisible = INVISIBILITY_LEVEL_TWO
+		update_icon()
+		alpha = 127
+
+		canmove = original_canmove
+		incorporeal_move = TRUE
+		density = FALSE
+		force_max_speed = TRUE

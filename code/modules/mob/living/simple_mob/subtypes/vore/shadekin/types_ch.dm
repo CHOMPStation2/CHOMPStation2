@@ -63,6 +63,21 @@
 	eye_state = "BLUE EYES"
 	eye_icon_state = "e_rakshasa"
 
+//thanks john
+/mob/living/simple_mob/shadekin/blue/niko
+	name = "Niko"
+	desc = "They appear to be a Neko of some sort, containing Glowing yellow eyes and cattitude."
+	icon_state = "niko"
+	eye_desc = "yellow eyes"
+	vore_stomach_flavor = "Look, if you had one shot, one opportunity. To seize everything you ever wanted. One moment. Would you capture it or just let it slip?"
+	player_msg = "You are NOT a cat, your objective is to... wait this is the wrong game."
+	glow_range = 5
+	glow_toggle = 1
+	luminosity = 5
+	energy_adminbuse = TRUE
+	eye_state = 0
+	attacktext = list("clawed")
+
 /mob/living/simple_mob/shadekin/blue/luna
 	name = "Luna"
 	desc = "She appears to be a fuzzy critter of some sort. Her eyes shimmer a dark blue, glancing around curiously."
@@ -133,25 +148,3 @@
 	The gut seemed somewhat inviting with the warmth and softness, yet there was an ominous feeling to it with all the noises it made.\
 	You'll probably be safe in here. Probably."
 	player_msg = "You are Anno, you are energetic and playful"
-	
-/mob/living/simple_mob/shadekin/blue/roti
-	name ="Roti"
-	desc = "Roti is a shadekin with blue eyes, is chubby since he has eaten others before hand. He enjoys chocolate, the taste of it, the smell of it, he just wants anything sweet and chocolately to be in his belly. So be careful around him this is also a way to summon him by laying around chocolate and calling him out."
-	icon_state = "roti"
-	eye_desc = "blue eyes"
-	vore_stomach_flavor = "You stare into Roti's maw as he moves it towards your head, putting it in and tasting your sweet delicious chocolately flavor. \
-	Wet saliva covers your head as he pushes you inward, gulping down your head and shoulders into his pulsating throat. It pulses and eases you downward towards your destination \
-	cramming your torso into his maw and taking wet SCHLURP, GLUK, to get it down and up to your waist. Roti continues to taste you all over wanting that succulent flavor \
-	to himself. Another loud wet swallow and down goes your waist into his hungry maw, lifting up the legs high into the sky while allowing gravity and his gulps \
-	to send you packing away into his chubby gut that now expands to fit you inside of the wet chamber. At least you were safe for now that is."
-	player_msg = "You are Roti, a curious shadekin that wishes to learn from the station and eventually speak with them."
-
-//kcin2001's soft shadekin
-/mob/living/simple_mob/shadekin/green/soft
-	name = "Softpatch"
-	desc = "A green eyed brown shadekin, looks fluffy and a bit chubby around the middle underneath his well worn cloak \
-	He seems curious but ready to flee"
-	icon_state = "soft"
-	eye_desc = "soft green eyes"
-//	vore_stomach_flavor = ""
-	player_msg = "You are Softpatch, you like things that are soft and are curious about the beings in realspace"
