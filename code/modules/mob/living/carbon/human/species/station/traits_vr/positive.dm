@@ -131,11 +131,11 @@
 	var_changes = list("burn_mod" = 0.6)
 
 //YW ADDITIONS START
-/datum/trait/chem_tolerance
-	name = "Chem Tolerance"
-	desc = "Due to a quirk of your biochemistry or years of substance abuse, your threshold for overdosing on many substances is increased by 50%. Most chemicals are only half as effective, though."
+/datum/trait/improved_biocompat
+	name = "Improved Biocompatibility"
+	desc = "Your body has been custom-engineered or is naturally more receptive to modern-day healing chemicals without being vulnerable to the 'bad stuff'. You gain 20% increased effects from most substances, with no other drawbacks. Remember to note this down in your medical records!"
 	cost = 2
-	var_changes = list("chemOD_threshold" = 1.5, "chem_strength" = 0.5)
+	var_changes = list("chem_strength_heal" = 1.2)
 
 /datum/trait/alcohol_tolerance_advanced
 	name = "Liver of Steel"

@@ -91,11 +91,17 @@
 	var_changes = list("burn_mod" = 1.4)
 
 //YW ADDITIONS START
-/datum/trait/chem_intolerance
-	name = "Chem Intolerance"
-	desc = "Your immune system reacts violently to the buildup of chemicals within your systems. Overdoses occur at half the usual threshold, and you suffer twice as much damage from them. On the plus side, healing chems are 25% more effective."
+/datum/trait/reduced_biocompat
+	name = "Reduced Biocompatibility"
+	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records!"
 	cost = -1
-	var_changes = list("chemOD_threshold" = 0.5, "chemOD_mod" = 2, "chem_strength" = 1.25)
+	var_changes = list("chem_strength_heal" = 0.8)
+
+/datum/trait/bad_filtration
+	name = "Bad Filtration"
+	desc = "Due to some quirk of biology or engineering, you just can't resist the harmful effects of toxins as well as most. You suffer 25% more harm from poisonous and toxic substances. Remember to note this down in your medical records!"
+	cost = -1
+	var_changes = list("chem_strength_tox" = 1.25)
 
 /datum/trait/alcohol_intolerance_advanced
 	name = "Liver of Air"
