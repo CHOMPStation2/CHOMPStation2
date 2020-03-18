@@ -11,12 +11,3 @@
 	desc = ""
 	has_items = list(
 		/obj/item/clothing/accessory/medal/silver/valor)
-		
-//Taaa
-/obj/item/weapon/storage/box/fluff/Taaa
-	name = ""
-	desc = ""
-	has_items = list(
-		/obj/item/clothing/accessory/medal/silver/valor,
-		/obj/item/clothing/accessory/medal/conduct,
-		/obj/item/clothing/accessory/medal/gold/heroism)
