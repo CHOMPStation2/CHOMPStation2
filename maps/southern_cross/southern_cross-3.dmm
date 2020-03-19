@@ -37,6 +37,7 @@
 "aK" = (/turf/simulated/floor/water/shoreline{icon_state = "shoreline"; dir = 10},/area/surface/outside/ocean)
 "aL" = (/turf/simulated/floor/water/shoreline,/area/surface/outside/ocean)
 "aM" = (/turf/unsimulated/wall/planetary/sif,/area/surface/outside/ocean)
+
 "aN" = (/obj/machinery/button/remote/blast_door{id = "garage1"; name = "Garage Shutter Control"; pixel_x = 22; pixel_y = 0; req_one_access = list(48,43)},/turf/simulated/floor/outdoors/dirt/sif/planetuse,/area/surface/outpost/main/airlock/right_two)
 "aO" = (/obj/structure/fence/corner{icon_state = "corner"; dir = 9},/turf/simulated/floor/outdoors/dirt/sif/planetuse,/area/surface/outside/plains/outpost)
 "aP" = (/obj/structure/fence{icon_state = "straight"; dir = 8},/turf/simulated/floor/outdoors/dirt/sif/planetuse,/area/surface/outside/plains/outpost)

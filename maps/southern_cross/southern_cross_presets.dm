@@ -72,13 +72,21 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 	listening_level = Z_LEVEL_MISC
 	autolinkers = list("exp_relay")
 
+//Temp Removal TFF 15/2/20
+/*
+/obj/machinery/telecomms/relay/preset/belt_outpost // CHOMPedit: Tcomms relay for Belt Outpost
+	id = "Belt Mining Relay"
+	listening_level = Z_LEVEL_BELT
+	autolinkers = list("belt_relay")
+*/
+
 // #### Telecomms ####
 /obj/machinery/telecomms/hub/preset/southerncross
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub",
 		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "explorer", "exp_relay",
-		"c_relay", "m_relay", "r_relay",
+		"c_relay", "m_relay", "r_relay", //"belt_relay", // Chompstation edit - adds belt outpost to relays.	Temp Removal of Belt Relay TFF 15/2/20,
 		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused",
 		"hb_relay", "receiverA", "broadcasterA"
 	) //CHOMPedit: Adds "exp_relay"

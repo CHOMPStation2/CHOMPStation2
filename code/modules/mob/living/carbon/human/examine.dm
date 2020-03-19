@@ -291,6 +291,7 @@
 
 	msg += attempt_vr(src,"examine_weight",args) //VOREStation Code
 	msg += attempt_vr(src,"examine_nutrition",args) //VOREStation Code
+	msg += attempt_vr(src,"examine_reagent_bellies",args) //CHOMP reagent bellies
 	msg += attempt_vr(src,"examine_bellies",args) //VOREStation Code
 	msg += attempt_vr(src,"examine_pickup_size",args) //VOREStation Code
 	msg += attempt_vr(src,"examine_step_size",args) //VOREStation Code

@@ -18,6 +18,10 @@
 	icon_state = "outside1"
 	sound_env = MOUNTAINS
 
+/area/crew_quarters/meeting
+	name = "\improper Public Conference"
+	icon_state = "courtroom"
+
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
 
@@ -40,6 +44,9 @@
 	name = "\The Exterior Powerline"
 /area/borealis2/outdoors/grounds/traderpad
 	name = "\improper Cryogaia Commerce Pad"
+
+/area/borealis2/outdoors/grounds/entrance
+	name = "\improper Cryogaia Compound Gate"
 
 /area/borealis2/outdoors/grounds/solars
 	name = "\The solar array"
@@ -365,6 +372,12 @@
 /area/medical/pyschwarde
 	name = "\improper Psychiatric lockup"
 	icon_state = "medbay2"
+/area/medical/triage
+	name = "\improper Medbay Triage"
+	icon_state = "medbay4"
+/area/medical/scanning
+	name = "Medical Diagnostics Center"
+	icon_state = "medbay"
 
 
 //Science outpost

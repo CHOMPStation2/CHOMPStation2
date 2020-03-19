@@ -108,13 +108,13 @@
 	icon_state = "bluenew"
 
 /area/surface/outside/river/faxalven
-	name = "Fax‰lven River"
+	name = "Fax√§lven River"
 
 /area/surface/outside/river/indalsalven
-	name = "Indals‰lven River"
+	name = "Indals√§lven River"
 
 /area/surface/outside/river/svartan
-	name = "SvartÂn River"
+	name = "Svart√•n River"
 
 /area/surface/outside/lake/romsele
 	name = "Romsele Lake"
@@ -1816,11 +1816,11 @@ area/crew_quarters/heads/sc/hop/quarters
 //CHOMPedit: Exploration outpost ferry shuttle
 
 /area/shuttle/expoutpost/site
-	name = "\improper Exploration Elevator"
+	name = "\improper Exploration Sling"
 	icon_state = "shuttle2"
 
 /area/shuttle/expoutpost/station
-	name = "\improper Exploration Elevator"
+	name = "\improper Exploration Sling"
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced/airless
 
@@ -1893,6 +1893,14 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Exploration Carrier Secure Storage"
 	icon_state = "nuke_storage"
 
+/area/expoutpost/teleporter
+	name = "\improper Exploration Carrier Teleporter"
+	icon_state = "teleporter"
+
+/area/expoutpost/gateway
+	name = "\improper Exploration Carrier Gateway"
+	icon_state = "teleporter"
+
 /area/expoutpost/displayroom
 	name = "\improper Exploration Carrier Display Room"
 
@@ -1964,3 +1972,56 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Wreck"
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
+
+//Temp Removal TFF 15/2/20
+/*
+// CHOMP-Edit: This is the Belt Mining addition
+// Belt Mining Areas
+/area/mine/unexplored/belt_miner
+	name = "\improper Belt Mining"
+	base_turf = /turf/space
+/area/mine/explored/belt_miner
+	name = "\improper Belt Mining"
+	base_turf = /turf/space
+
+// Belt Mining outpost areas
+/area/outpost/mining_main/passage
+	name = "\improper Mining Outpost Passage"
+/area/outpost/mining_main/hangar
+	name = "\improper Mining Outpost Belt Miner Hangar"
+/area/outpost/mining_main/belt_outpost // Master area for "Belt Outpost", all sub-areas follow this one's preset
+	name = "\improper Belt Mining Outpost"
+	sound_env = ASTEROID
+	forced_ambience = list('sound/ambience/ruins/ruins1.ogg')
+	lightswitch = 0
+/area/outpost/mining_main/belt_outpost/airlock
+	name = "\improper Belt Mining Airlock"
+/area/outpost/mining_main/belt_outpost/dorms
+	name = "\improper Belt Mining Dorms"
+	forced_ambience = list('sound/ambience/generic/generic1.ogg')
+/area/outpost/mining_main/belt_outpost/substation
+	name = "\improper Belt Mining Substation"
+	ambience = list('sound/ambience/engineering/engineering1.ogg')
+/area/outpost/mining_main/belt_outpost/atmos
+	name = "\improper Belt Mining Atmos"
+	ambience = list('sound/ambience/ambiatm1.ogg')
+/area/outpost/mining_main/belt_outpost/solars
+	name = "\improper Belt Mining Solars"
+/area/outpost/mining_main/belt_outpost/tank_storage
+	name = "\improper Belt Mining Tank Holding and Console Access"
+
+// Belter 2.0 Areas!
+/area/shuttle/beltferry/station
+	name = "Belter M2.0 Landed"
+	icon_state = "shuttle2"
+	base_turf = /turf/simulated/floor/reinforced
+
+/area/shuttle/beltferry/belt // This is our "dock" area for the Belter M2.0
+	name = "Belter M2.0 Holding Position"
+	icon_state = "shuttle2"
+	base_turf = /turf/space
+
+/area/shuttle/beltferry/transit // Transit Area - the in-between.
+	name = "Belter M2.0 Transit"
+	icon_state = "shuttle2"
+*/

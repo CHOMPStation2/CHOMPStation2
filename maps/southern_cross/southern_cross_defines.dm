@@ -10,6 +10,9 @@
 #define Z_LEVEL_CENTCOM					8
 #define Z_LEVEL_TRANSIT					9
 #define Z_LEVEL_SURFACE_WILD			10
+//Comment out Z_LEVEL_BELT temporarily - TFF 15/2/20
+//#define Z_LEVEL_BELT					11
+#define Z_LEVEL_GATEWAY					11
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -18,6 +21,7 @@
 
 	lobby_icon = 'icons/misc/title_ch.dmi'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
 	lobby_screens = list("mockingjay00") //CHOMPStation Edit TFF 24/12/19 - CHOMPStation image
+	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'	//CHOMPStation Edit 25/1/20 TFF - Job icons for off-duty/exploration
 
 	holomap_smoosh = list(list(
 		Z_LEVEL_STATION_ONE,
@@ -84,6 +88,20 @@
 
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
+	//CHOMPStation Addition Start - Prior addition for Belt Miner system. TFF - Commenting out 15/2/20
+	/*
+	// Framework for porting Tether's lateload Z-Level system
+	lateload_z_levels = list(
+			list("Mining Asteroid Belt"), //Stock lateload maps
+			)
+	*/
+	//CHOMPStation Addition End
+	lateload_single_pick = list(
+		list("Carp Farm"),
+		list("Snow Field")
+		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
+
+	lateload_single_pick = null
 
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)

@@ -55,6 +55,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
 
+
+	//CHOMP reagent belly
+	var/receive_reagents = FALSE
+	var/give_reagents = FALSE
+
+
 	//Mechanically required
 	var/path
 	var/slot
@@ -126,6 +132,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	can_be_drop_pred = json_from_file["can_be_drop_pred"]
 	belly_prefs = json_from_file["belly_prefs"]
 
+
+	//CHOMP reagent belly
+	receive_reagents = json_from_file["receive_reagents"]
+	give_reagents = json_from_file["give_reagents"]
+
+
 	//Quick sanitize
 	if(isnull(digestable))
 		digestable = TRUE
@@ -148,6 +160,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(isnull(belly_prefs))
 		belly_prefs = list()
 
+	//CHOMP reagent belly
+	if(isnull(receive_reagents))
+		receive_reagents = FALSE
+	if(isnull(give_reagents))
+		give_reagents = FALSE
+
 	return TRUE
 
 /datum/vore_preferences/proc/save_vore()
@@ -167,6 +185,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
 			"belly_prefs"			= belly_prefs,
+			"receive_reagents"		= receive_reagents,
+			"give_reagents"			= give_reagents,
 		)
 
 	//List to JSON

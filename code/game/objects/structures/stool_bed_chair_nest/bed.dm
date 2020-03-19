@@ -102,13 +102,17 @@
 			user.drop_from_inventory(C)
 			qdel(C)
 			return
-		var/padding_type //This is awful but it needs to be like this until tiles are given a material var.
+		var/padding_type  	
+		//CHOMPEDIT START: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
 		if(istype(W,/obj/item/stack/tile/carpet))
-			padding_type = "carpet"
+			var/obj/item/stack/tile/carpet/M = W
+			if(M.material && (M.material.flags & MATERIAL_PADDING))
+				padding_type = "[M.material.name]"					
+		//CHOMPEDIT END	
 		else if(istype(W,/obj/item/stack/material))
 			var/obj/item/stack/material/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))
-				padding_type = "[M.material.name]"
+				padding_type = "[M.material.name]"		
 		if(!padding_type)
 			to_chat(user, "You cannot pad \the [src] with that.")
 			return

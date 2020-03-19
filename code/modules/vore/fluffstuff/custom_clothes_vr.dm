@@ -232,7 +232,7 @@
 				/obj/item/weapon/handcuffs,
 //				/obj/item/device/detective_scanner,
 				/obj/item/device/taperecorder)
-	armor = list(melee = 50, bullet = 15, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 	var/unbuttoned = 0
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/verb/toggle()
@@ -262,21 +262,21 @@
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. Wearing this may make you feel all scientific."
 	icon_state = "fedblue"
 	item_state = "fedblue"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
 	name = "Federation Uniform Jacket (Yellow)"
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it.Wearing it may make you feel like checking a warp core, whatever that is."
 	icon_state = "fedeng"
 	item_state = "fedeng"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 10, bomb = 0, bio = 30, rad = 35)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 10, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedcapt
 	name = "Federation Uniform Jacket (Command)"
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. You feel like a commanding officer of Starfleet."
 	icon_state = "fedcapt"
 	item_state = "fedcapt"
-	armor = list(melee = 50, bullet = 5, laser = 15,energy = 10, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat
 	name = "Modern Federation Uniform Jacket (Command)"
@@ -302,7 +302,7 @@
 				/obj/item/weapon/handcuffs,
 //				/obj/item/device/detective_scanner,
 				/obj/item/device/taperecorder)
-	armor = list(melee = 50, bullet = 15, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 	//Variants
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedblue
@@ -310,21 +310,21 @@
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. Wearing this makes you feel like a scientist or a pilot."
 	icon_state = "fedmodernblue"
 	item_state = "fedmodernblue"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedeng
 	name = "Modern Federation Uniform Jacket (Yellow)"
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. You feel like you can handle any type of technical engineering problems."
 	icon_state = "fedmoderneng"
 	item_state = "fedmoderneng"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 10, bomb = 0, bio = 30, rad = 35)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 00, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedsec
 	name = "Modern Federation Uniform Jacket (Red)"
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. This uniform makes you want to protect and serve as an officer."
 	icon_state = "fedmodernsec"
 	item_state = "fedmodernsec"
-	armor = list(melee = 50, bullet = 5, laser = 15,energy = 10, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 /obj/item/clothing/head/caphat/formal/fedcover
 	name = "Federation Officer's Cap"
@@ -1187,12 +1187,12 @@ Departamental Swimsuits, for general use
 	item_state = "trek_command"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // Considering only staff heads get to pick it
 
-/obj/item/clothing/under/rank/trek/engsec
+/obj/item/clothing/under/rank/trek/eng //CHOMPEdit: Engineering only 
 	name = "Operations Uniform"
 	desc = "The uniform worn by operations officers of the mid 2260s. You feel strangely vulnerable just seeing this..."
 	icon_state = "trek_engsec"
 	item_state = "trek_engsec"
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot.
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot. //CHOMPEdit: I'll tell you what, the armor values are NOT shared. Removed melee bonus.
 
 /obj/item/clothing/under/rank/trek/medsci
 	name = "MedSci Uniform"
@@ -1208,7 +1208,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_next_command"
 	item_state = "trek_next_command"
 
-/obj/item/clothing/under/rank/trek/engsec/next
+/obj/item/clothing/under/rank/trek/eng/next //CHOMPEdit: Engineering only
 	desc = "The uniform worn by operation officers. This one's from the mid 2360s."
 	icon_state = "trek_next_engsec"
 	item_state = "trek_next_engsec"
@@ -1224,7 +1224,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_ent_command"
 	item_state = "trek_ent_command"
 
-/obj/item/clothing/under/rank/trek/engsec/ent
+/obj/item/clothing/under/rank/trek/eng/ent //CHOMPEdit: Engineering only
 	desc = "The uniform worn by operations officers of the 2140s."
 	icon_state = "trek_ent_engsec"
 	item_state = "trek_ent_engsec"
@@ -1240,7 +1240,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_voy_command"
 	item_state = "trek_voy_command"
 
-/obj/item/clothing/under/rank/trek/engsec/voy
+/obj/item/clothing/under/rank/trek/eng/voy //CHOMPEdit: Engineering only
 	desc = "The uniform worn by operations officers of the 2370s."
 	icon_state = "trek_voy_engsec"
 	item_state = "trek_voy_engsec"
@@ -1269,7 +1269,7 @@ Departamental Swimsuits, for general use
 		/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,
 		/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle
 		)
-	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 20, rad = 25)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: Removed extra armor since any schmuck can take this and spontaneously have an edge.
 
 /obj/item/clothing/suit/storage/trek/ds9/admiral // Only for adminuz
 	name = "Admiral Overcoat"
@@ -1284,7 +1284,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_command"
 	item_state = "trek_ds9_command"
 
-/obj/item/clothing/under/rank/trek/engsec/ds9
+/obj/item/clothing/under/rank/trek/eng/ds9 //CHOMPEdit: Engineering only
 	desc = "The uniform worn by operations officers of the 2380s."
 	icon_state = "trek_engsec"
 	item_state = "trek_ds9_engsec"

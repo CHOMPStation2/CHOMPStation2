@@ -320,5 +320,28 @@
 	dock_target_station = "exp_sling_station"
 	dock_target_offsite = "exp_sling_outpost"
 
+//Temp Removal TFF 15/2/20
+/*
+// CHOMPedit: Mining Belter Shuttle
+// Belter Mark 2.0, for short-haul trips!
+/datum/shuttle/ferry/beltferry
+	name = "Belter M2.0"
+	location = 0
+	warmup_time = 6
+	move_time = 60
+	area_station = /area/shuttle/beltferry/station
+	area_offsite = /area/shuttle/beltferry/belt
+	area_transition = /area/shuttle/beltferry/transit
+	docking_controller_tag = "beltferry"
+	dock_target_station = "beltferry_station" //Fake tags to prevent the shuttle from opening doors.
+	dock_target_offsite = "beltferry_beltpost"
 
+/datum/shuttle/ferry/beltferry/New()
+	move_time = move_time + rand(10, 40)
+	..()
 
+/obj/machinery/computer/shuttle_control/beltferry
+	name = "belter control console"
+	shuttle_tag = "Belter M2.0"
+	req_one_access = list(access_mining, access_xenoarch)
+*/

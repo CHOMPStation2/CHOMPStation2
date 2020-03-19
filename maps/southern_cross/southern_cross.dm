@@ -8,6 +8,7 @@
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_presets.dm"
 	#include "southern_cross_shuttles.dm"
+	#include "southern_cross_shuttles_ch.dm" //CHOMP shuttles
 
 	#include "shuttles/crew_shuttles.dm"
 	#include "shuttles/heist.dm"
@@ -43,6 +44,9 @@
 	#include "southern_cross-6.dmm"
 	#include "southern_cross-7.dmm"
 	#include "southern_cross-8.dmm"
+	#include "southern_cross-casino.dmm" //CHOMP By default is enabled cause shuttle wont connect with docks if loaded mid round - Jack
+
+	#include "submaps/_southern_cross_submaps.dm"
 
 	#define USING_MAP_DATUM /datum/map/southern_cross
 

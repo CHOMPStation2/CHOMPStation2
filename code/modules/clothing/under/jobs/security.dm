@@ -68,7 +68,8 @@
 	item_state_slots = list(slot_r_hand_str = "green", slot_l_hand_str = "green")
 	armor = list(melee = 10, bullet = 5, laser = 5,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
-	rolled_sleeves = -1
+	rolled_sleeves = 0 //CHOMPEdit
+	rolled_down = 0 //CHOMPEdit
 
 /*
  * Detective

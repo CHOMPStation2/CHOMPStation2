@@ -164,22 +164,15 @@
 
 /obj/item/clothing/accessory/stethoscope/attack(mob/living/carbon/human/M, mob/living/user)
 	if(ishuman(M) && isliving(user))
-		//Vorestation edit start
-		var/message_holder	//Holds pervy message
-		var/message_holder2	//Hods the nutrition related message.
-		var/beat_size = ""	//Small prey = quiet
-		for(var/belly in M.vore_organs) //Pervy edit.
-			var/obj/belly/B = belly
-			for(var/mob/living/carbon/human/H in B)
-				if(H.size_multiplier < 0.5)
-					beat_size = pick("quiet ", "hushed " ,"low " ,"hushed ")
-				message_holder = pick("You can hear disparate heartbeats as well.", "You can hear a different [beat_size]heartbeat too.", "It sounds like there is more than one heartbeat." ,"You can pick up a [beat_size]heatbeat along with everything else.")
-		if(M.nutrition > 900)	//dead
-			message_holder2 = pick("Your listening is troubled by the occasional deep groan of their body.", "There is some moderate bubbling in the background.", "They seem to have a healthy metabolism as well.")
-		//Vorestation edit end
-
 		if(user.a_intent == I_HELP)
 			var/body_part = parse_zone(user.zone_sel.selecting)
+
+			//Chomp Edit start
+			var/message_holder	//Holds pervy message
+			var/message_holder2	//Hods the nutrition related message.
+			var/beat_size = ""	//Small prey = quiet
+			//Chomp Edit end
+
 			if(body_part)
 				var/their = "their"
 				switch(M.gender)
@@ -198,6 +191,18 @@
 				else
 					switch(body_part)
 						if(BP_TORSO)
+							//Chompstation edit start
+							for(var/belly in M.vore_organs) //Pervy edit.
+								var/obj/belly/B = belly
+								for(var/mob/living/carbon/human/H in B)
+									if(H.size_multiplier < 0.5)
+										beat_size = pick("quiet ", "hushed " ,"low " ,"hushed ")
+									message_holder = pick("You can hear disparate heartbeats as well.", "You can hear a different [beat_size]heartbeat too.", "It sounds like there is more than one heartbeat." ,"You can pick up a [beat_size]heatbeat along with everything else.")
+							if(M.nutrition > 900)	//dead
+								message_holder2 = pick("Your listening is troubled by the occasional deep groan of their body.", "There is some moderate bubbling in the background.", "They seem to have a healthy metabolism as well.")
+							//Chompstation edit end
+
+
 							sound_strength = "hear"
 							sound = "no heartbeat"
 							if(heartbeat)
@@ -221,7 +226,7 @@
 								sound_strength = "hear a weak"
 								sound = "pulse"
 
-				user.visible_message("[user] places [src] against [M]'s [body_part] and listens attentively.", "You place [src] against [their] [body_part]. You [sound_strength] [sound]. [message_holder][message_holder2]") //Vorestation edit. ([message holder] & [message_holder2])
+				user.visible_message("[user] places [src] against [M]'s [body_part] and listens attentively.", "You place [src] against [their] [body_part]. You [sound_strength] [sound]. [message_holder] [message_holder2]") //Chomp edit. ([message holder] & [message_holder2])
 				return
 
 	return ..(M,user)
