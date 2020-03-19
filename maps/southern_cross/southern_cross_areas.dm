@@ -304,8 +304,8 @@
 	name = "\improper Main Outpost Laundry Room"
 
 /area/surface/outpost/main/landing
-	name = "\improper Main Outpost Landing Zone"
-	icon_state = "yellow"
+	name = "\improper Main Outpost Shuttle Landing"
+	icon_state = "hangar"
 
 /area/surface/outpost/main/gen_room
 	name = "\improper Main Outpost SMES"
@@ -338,6 +338,7 @@
 
 /area/surface/outpost/main/gym
 	name = "\improper Main Outpost Gym"
+	icon_state = "fitness"
 
 /area/surface/outpost/main/garage
 	name = "\improper Main Outpost Garage"
@@ -347,8 +348,9 @@
 	name = "\improper Main Outpost Crew Quarters"
 	sound_env = MEDIUM_SOFTFLOOR
 
-/area/surface/outpost/main/telecomms
+/area/surface/outpost/main/tcomm
 	name = "\improper Main Outpost Telecommunications"
+	icon_state = "tcomsatcham"
 	music = "signal"
 
 /area/surface/outpost/main/teleporter
@@ -430,30 +432,31 @@
 /area/surface/outpost/main/airlock
 	name = "\improper Main Outpost Airlock"
 	icon_state = "red"
+	ambience = AMBIENCE_SIF
 
-/area/surface/outpost/main/airlock/one
-	name = "\improper Main Outpost Airlock One"
+/area/surface/outpost/main/airlock/left_one
+	name = "\improper Outpost Left Wing Airlock One"
 
-/area/surface/outpost/main/airlock/two
-	name = "\improper Main Outpost Airlock Two"
+/area/surface/outpost/main/airlock/left_two
+	name = "\improper Outpost Left Wing Airlock Two"
 
-/area/surface/outpost/main/airlock/three
-	name = "\improper Main Outpost Airlock Three"
+/area/surface/outpost/main/airlock/left_three
+	name = "\improper Outpost Left Wing Airlock Three"
 
-/area/surface/outpost/main/airlock/four
-	name = "\improper Main Outpost Airlock Four"
+/area/surface/outpost/main/airlock/right_one
+	name = "\improper Outpost Right Wing Airlock One"
 
-/area/surface/outpost/main/airlock/five
-	name = "\improper Main Outpost Airlock Five"
+/area/surface/outpost/main/airlock/right_two
+	name = "\improper Outpost Right Wing Airlock Two"
 
-/area/surface/outpost/main/airlock/six
-	name = "\improper Main Outpost Airlock Six"
+/area/surface/outpost/main/airlock/right_three
+	name = "\improper Outpost Right Wing Airlock Three"
 
-/area/surface/outpost/main/airlock/seven
-	name = "\improper Main Outpost Airlock Seven"
+/area/surface/outpost/main/airlock/landing_north
+	name = "\improper Main Outpost North Airlock"
 
-/area/surface/outpost/main/airlock/eight
-	name = "\improper Main Outpost Airlock Eight"
+/area/surface/outpost/main/airlock/landing_south
+	name = "\improper Main Outpost South Airlock"
 
 /area/surface/outpost/main/construction_area
 	name = "\improper Main Outpost Construction Area"
