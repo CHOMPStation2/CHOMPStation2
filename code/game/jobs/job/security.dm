@@ -25,6 +25,13 @@
 	outfit_type = /decl/hierarchy/outfit/job/security/hos
 	alt_titles = list("Security Commander", "Chief of Security")
 
+//YW ADDITION START: LOYALTY IMPLANT FOR HOS
+/datum/job/hos/equip(var/mob/living/carbon/human/H)
+	. = ..()
+	if(.)
+		H.implant_loyalty(src)
+//YW ADDITION END
+
 /datum/job/warden
 	title = "Warden"
 	flag = WARDEN
