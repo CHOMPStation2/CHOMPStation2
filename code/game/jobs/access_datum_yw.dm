@@ -1,7 +1,7 @@
 /var/const/access_secpilot = 51
 /datum/access/secpilot
 	id = access_secpilot
-	desc = "Security Flight Control"
+	desc = "Security Vehicle Bay"
 	region = ACCESS_REGION_SECURITY
 
 /var/const/access_blueshield = 52
