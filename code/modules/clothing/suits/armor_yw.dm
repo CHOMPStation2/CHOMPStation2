@@ -75,5 +75,5 @@
 	icon = 'icons/mob/suit_yw.dmi'
 	icon_state = "paramedic-vest"
 	icon_override = 'icons/mob/suit_yw.dmi'
-	item_state = "paramedic-vest_us"
+	item_state = "paramedic-vest_s"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 15, bio = 50, rad = 50)
