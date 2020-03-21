@@ -41,7 +41,7 @@ GLOBAL_VAR_INIT(mech_destroyed_roundstat, 0)
 	if(GLOB.disposals_flush_shift_roundstat > 40)
 		valid_stats_list.Add("The disposal system flushed a whole [GLOB.disposals_flush_shift_roundstat] times for this shift. We should really invest in waste treatement.")
 	if(GLOB.rocks_drilled_roundstat > 80)
-		valid_stats_list.Add("Our strong miners pulverized a whole [GLOB.rocks_drilled_roundstat] into piles of pathetic rubble.")
+		valid_stats_list.Add("Our strong miners pulverized a whole [GLOB.rocks_drilled_roundstat] rock into piles of pathetic rubble.")
 	if(GLOB.mech_destroyed_roundstat > 1)
 		valid_stats_list.Add("How did you guys manage to break a mech? Those are expensive!")
 	
