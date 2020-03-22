@@ -2,3 +2,5 @@
 /obj/machinery/door/firedoor/multi_tile/glass
 	icon = 'icons/obj/doors/DoorHazardGlass2x1.dmi'
 	width = 2
+	open_sound = 'sound/machines/firewide1o.ogg'
+	close_sound = 'sound/machines/firewide1c.ogg'
