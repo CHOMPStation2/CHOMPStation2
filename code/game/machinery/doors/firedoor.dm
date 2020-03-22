@@ -506,6 +506,8 @@
 /obj/machinery/door/firedoor/multi_tile
 	icon = 'icons/obj/doors/DoorHazard2x1.dmi'
 	width = 2
+	open_sound = 'sound/machines/firewide1o.ogg'
+	close_sound = 'sound/machines/firewide1c.ogg'
 
 /obj/machinery/door/firedoor/glass
 	name = "\improper Emergency Glass Shutter"
