@@ -133,7 +133,7 @@
 	The gut seemed somewhat inviting with the warmth and softness, yet there was an ominous feeling to it with all the noises it made.\
 	You'll probably be safe in here. Probably."
 	player_msg = "You are Anno, you are energetic and playful"
-	
+
 /mob/living/simple_mob/shadekin/blue/roti
 	name ="Roti"
 	desc = "Roti is a shadekin with blue eyes, is chubby since he has eaten others before hand. He enjoys chocolate, the taste of it, the smell of it, he just wants anything sweet and chocolately to be in his belly. So be careful around him this is also a way to summon him by laying around chocolate and calling him out."
