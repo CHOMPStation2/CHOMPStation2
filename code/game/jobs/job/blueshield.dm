@@ -17,7 +17,12 @@
 	access = list(access_security, access_sec_doors, access_brig,
 			            access_medical, access_eva, access_heads, access_teleporter,
 			            access_maint_tunnels, access_morgue,
-			            access_crematorium, access_research, access_hop, access_RC_announce, access_keycard_auth, access_gateway)
-	minimal_access = list(access_forensics_lockers, access_sec_doors, access_medical, access_maint_tunnels, access_RC_announce, access_keycard_auth, access_heads)
+			            access_crematorium, access_research, access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_blueshield)
+	minimal_access = list(access_forensics_lockers, access_sec_doors, access_medical, access_maint_tunnels, access_RC_announce, access_keycard_auth, access_heads, access_blueshield)
 
 	outfit_type = /decl/hierarchy/outfit/job/blueshield
+
+/datum/job/blueshield/equip(var/mob/living/carbon/human/H)
+	. = ..()
+	if(.)
+		H.implant_loyalty(src)
