@@ -430,9 +430,9 @@
 	switch(animation)
 		if("opening")
 			flick("door_opening", src)
-			playsound(src, open_sound, 37, 1)
+			playsound(src, open_sound, 37, 1) //CHOMPEdit var
 		if("closing")
-			playsound(src, close_sound, 37, 1)
+			playsound(src, close_sound, 37, 1) //CHOMPEdit var
 			flick("door_closing", src)
 	return
 
