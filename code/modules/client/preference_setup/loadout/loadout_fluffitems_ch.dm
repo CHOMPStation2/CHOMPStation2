@@ -154,20 +154,6 @@
 	display_name = "Kiri's Medal"
 	description = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
 
-/datum/gear/fluff/somememeguy/medal1
-	ckeywhitelist = list("somememeguy")
-	character_name = list("Matica")
-	path = /obj/item/clothing/accessory/medal/silver/valor
-	display_name = "Matica's Medal"
-	description = "A silver medal awarded for acts of exceptional valor."
-
-/datum/gear/fluff/somememeguy/medal2
-	ckeywhitelist = list("somememeguy")
-	character_name = list("Uboiezb")
-	path = /obj/item/clothing/accessory/medal/silver/valor
-	display_name = "Uboiezb's Medal"
-	description = "A silver medal awarded for acts of exceptional valor."
-
 //T
 /datum/gear/fluff/thefurryfeline/medal1
 	ckeywhitelist = list("thefurryfeline")
