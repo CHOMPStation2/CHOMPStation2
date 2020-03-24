@@ -62,8 +62,24 @@
 
 /obj/item/projectile/scatter/shotgun
 	name = "Shotgun scatter projectile"
+	spread_submunition_damage = FALSE
 	submunition_spread_max = 60
 	submunition_spread_min = 50
 	submunitions = list(
-		/obj/item/projectile/bullet/pellet/shotgun/flak = 6
+		/obj/item/projectile/bullet/shotgun/scatterprojectile = 6
 		)
+/obj/item/projectile/bullet/shotgun/scatterprojectile
+	name = "pellet"
+	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
+	damage = 13
+
+/obj/item/weapon/storage/box/scattershot
+	name = "box of shotgun scatter shells"
+	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	icon = 'icons/obj/ammo_yw.dmi'
+	icon_state = "scattershot_box"
+	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
+	starts_with = list(/obj/item/ammo_casing/a12g/scatter = 8)
+
+/obj/item/weapon/storage/box/scattershot/large
+	starts_with = list(/obj/item/ammo_casing/a12g/scatter = 16)
