@@ -51,3 +51,19 @@
 /obj/item/ammo_magazine/m12gdrumjack/empty
 	name = "drum magazine (12 gauge)"
 	initial_ammo = 0
+
+//scattering shots, old buckshot
+/obj/item/ammo_casing/a12g/scatter
+	name = "scatter shell"
+	desc = "A 12 gauge scattering shell"
+	icon = 'icons/obj/ammo_yw.dmi'
+	icon_state = "scattershell"
+	projectile_type = /obj/item/projectile/scatter/shotgun
+
+/obj/item/projectile/scatter/shotgun
+	name = "Shotgun scatter projectile"
+	submunition_spread_max = 60
+	submunition_spread_min = 50
+	submunitions = list(
+		/obj/item/projectile/bullet/pellet/shotgun/flak = 6
+		)
