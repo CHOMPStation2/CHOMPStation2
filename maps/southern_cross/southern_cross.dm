@@ -36,11 +36,10 @@
 	#include "structures/closets/security.dm"
 	#include "turfs/outdoors.dm"
 
-	//CHOMPStation Edit Start TFF 25/3/20 - Station level map z-levels separated into 3 distinct files to work with MapDiffBot
+	//CHOMPStation Edit Start TFF 25/3/20 - Station level map z-levels separated into 3 distinct files to work with MapDiffBot. All other files renamed accordingly.
 	#include "southern_cross-1.dmm"
 	#include "southern_cross-2.dmm"
 	#include "southern_cross-3.dmm"
-	//CHOMPStation Edit End
 	#include "southern_cross-4.dmm"
 	#include "southern_cross-5.dmm"
 	#include "southern_cross-6.dmm"
@@ -48,6 +47,7 @@
 	#include "southern_cross-8.dmm"
 	#include "southern_cross-9.dmm"
 	#include "southern_cross-10.dmm"
+	//CHOMPStation Edit End
 	#include "southern_cross-casino.dmm" //CHOMP By default is enabled cause shuttle wont connect with docks if loaded mid round - Jack
 
 	#include "submaps/_southern_cross_submaps.dm"
