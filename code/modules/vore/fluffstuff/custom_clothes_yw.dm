@@ -1637,6 +1637,16 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
+/obj/item/clothing/accessory/collar/fluff/aroozee_valhollide_ring
+	name = "Aroozee valhollide ring"
+	desc = "A long, loose chain lace of silver, holding a special ring of a perfect, crystalline definition. <br>It's touch is perpetually that of deep ice-cold, no matter how long you hold it.<br> Staring at it, you feel quiet, your mind calm, your thoughts very still."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_valhollide_ring"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_valhollide_ring_mob"
+	overlay_state = "aroozee_valhollide_ring_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
 
 
 // *****
