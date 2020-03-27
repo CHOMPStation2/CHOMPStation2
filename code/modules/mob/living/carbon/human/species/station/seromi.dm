@@ -169,10 +169,9 @@
 					if(H.loneliness_stage < 0)
 						H.loneliness_stage = 0
 					if(world.time >= H.next_loneliness_time)
-						H << "The nearby company calms you down..."
+						to_chat(H, "The nearby company calms you down...")
 						H.next_loneliness_time = world.time+500
 				return
-
 
 
 		for(var/obj/item/weapon/holder/micro/M in range(1, H))
@@ -181,7 +180,7 @@
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
-					H << "[M] calms you down..."
+					to_chat(H, "[M] calms you down...")
 					H.next_loneliness_time = world.time+500
 
 		for(var/obj/effect/overlay/aiholo/A in range(5, H))
@@ -190,7 +189,7 @@
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
-					H << "[A] calms you down..."
+					to_chat(H, "[A] calms you down...")
 					H.next_loneliness_time = world.time+500
 					
 		/*for(var/obj/item/toy/plushie/P in range(5, H))
@@ -199,7 +198,7 @@
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
-					H << "The [P] calms you down, reminding you of people..."
+					to_chat(H, "The [P] calms you down, reminding you of people...")
 					H.next_loneliness_time = world.time+500*/
 
 		// No company? Suffer :(
@@ -221,12 +220,12 @@
 		if(H.stuttering < hallucination_cap)
 			H.stuttering += 5
 	if(H.loneliness_stage >= warning_cap)
-		ms = "<span class='danger'>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]</span>"
+		ms = "<span class='danger'><b>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]</b></span>"
 	if(world.time < H.next_loneliness_time)
 		return
 
 	if(ms != "")
-		H << ms
+		to_chat(H, ms)
 	H.next_loneliness_time = world.time+500
 
 /datum/species/teshari/get_vision_flags(var/mob/living/carbon/human/H)
