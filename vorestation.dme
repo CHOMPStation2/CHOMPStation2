@@ -303,6 +303,7 @@
 #include "code\datums\weakref.dm"
 #include "code\datums\autolathe\arms.dm"
 #include "code\datums\autolathe\arms_vr.dm"
+#include "code\datums\autolathe\arms_yw.dm"
 #include "code\datums\autolathe\autolathe.dm"
 #include "code\datums\autolathe\devices.dm"
 #include "code\datums\autolathe\devices_vr.dm"
