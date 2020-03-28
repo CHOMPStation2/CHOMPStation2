@@ -27,21 +27,15 @@
 	excludes = list(/datum/trait/cold_blood, /datum/trait/extreme_cold_blood)
 
 // YW Addition
-/datum/trait/sensitive_biochemistry
-	name = "Sensitive Biochemistry"
-	desc = "Your body is very sensitive to almost all chemicals introduced into it. The effects of beneficial chems are 20% stronger, but harmful ones are 20% stronger too. To make matters worse, you OD at half the standard thresholds, and when you do, you take 25% more damage. Tread carefully, and remember to note this down in your medical records!"
-	cost = 0
-	var_changes = list ("chem_strength_heal" = 1.2, "chem_strength_tox" = 1.2, "chemOD_threshold" = 0.5, "chemOD_mod" = 1.25)
-
 /datum/trait/alcohol_intolerance_basic
 	name = "Liver of Lilies"
-	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard."
+	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = 0
 	var_changes = list("alcohol_tolerance" = 2)
 
 /datum/trait/alcohol_tolerance_basic
 	name = "Liver of Iron"
-	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr!"
+	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr! You may wish to note this down in your medical records."
 	cost = 0
 	var_changes = list("alcohol_tolerance" = 0.75)
 

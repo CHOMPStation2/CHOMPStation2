@@ -97,15 +97,15 @@
 	cost = -1
 	var_changes = list("chem_strength_heal" = 0.8)
 
-/datum/trait/bad_filtration
-	name = "Bad Filtration"
-	desc = "Due to some quirk of biology or engineering, you just can't resist the harmful effects of toxins as well as most. You suffer 25% more harm from poisonous and toxic substances. Remember to note this down in your medical records!"
+/datum/trait/sensitive_biochem
+	name = "Sensitive Biochemistry"
+	desc = "Your biochemistry is a little delicate, rendering you more susceptible to both deadly toxins and the more subtle ones. You'll probably want to list this in your medical records, and perhaps in your exploitable info as well."
 	cost = -1
 	var_changes = list("chem_strength_tox" = 1.25)
 
 /datum/trait/alcohol_intolerance_advanced
 	name = "Liver of Air"
-	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard."
+	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = -1
 	var_changes = list("alcohol_tolerance" = 3)
 //YW ADDITIONS END
