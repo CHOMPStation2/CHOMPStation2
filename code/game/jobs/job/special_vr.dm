@@ -21,6 +21,13 @@
 	get_access()
 		return get_all_accesses().Copy()
 
+//YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
+/datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
+	. = ..()
+	if(.)
+		H.implant_loyalty(src)
+//YW UNCOMMENTING END
+
 /*/datum/job/centcom_visitor //For Pleasure // You mean for admin abuse... -Ace
 	title = "CentCom Visitor"
 	department = "Civilian"

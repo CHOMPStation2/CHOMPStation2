@@ -163,6 +163,8 @@
 
 	lateload_single_pick = null //Nothing right now.
 
+	planet_datums_to_make = list(/datum/planet/borealis2)
+
 /datum/map/cryogaia/perform_map_generation()
 
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
