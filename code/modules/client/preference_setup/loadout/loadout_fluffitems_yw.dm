@@ -893,6 +893,12 @@
 	character_name = list("Aroozee Daarvoleast-Clark")
 	allowed_roles = list("Head of Security")
 
+/datum/gear/fluff/aroozee_valhollide_ring
+	path = /obj/item/clothing/accessory/collar/fluff/aroozee_valhollide_ring
+	display_name = "Aroozee valhollide ring"
+	description = "A ring made of valhollide."
+	ckeywhitelist = list("splintergp")
+	character_name = list("Aroozee Daarvoleast-Clark")
 
 
 //  T CKEYS
