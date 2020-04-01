@@ -36,24 +36,35 @@
 	var/from_suit = /obj/item/clothing/suit/space/void
 	var/to_helmet = /obj/item/clothing/head/cardborg
 	var/to_suit = /obj/item/clothing/suit/cardborg
+	
 	//Conversion proc
 /obj/item/device/modkit_conversion/afterattack(obj/O, mob/user as mob)
-	var/flag
+	var/cost
 	var/to_type
-	if(istype(O,from_helmet))
-		flag = 1
+	//we have to check that it's not the original type first, because otherwise it'll convert wrong because the subtype still counts as the basetype
+	//changing an item back to its base type refunds the parts cost
+	if(istype(O,to_helmet))
+		cost = -1
+		to_type = from_helmet
+	else if(istype(O,to_suit))
+		cost = -2
+		to_type = from_suit
+	else if(istype(O,from_helmet))
+		cost = 1
 		to_type = to_helmet
 	else if(istype(O,from_suit))
-		flag = 2
+		cost = 2
 		to_type = to_suit
 	else
 		return
-	if(!(parts & flag))
+	if(cost > parts)
 		to_chat(user, "<span class='warning'>This kit has no parts for this modification left.</span>")
 		return
+	/* disable this check, or else you can't convert back sometimes. left in for reversion.
 	if(istype(O,to_type))
 		to_chat(user, "<span class='notice'>[O] is already modified.</span>")
 		return
+	*/
 	if(!isturf(O.loc))
 		to_chat(user, "<span class='warning'>[O] must be safely placed on the ground for modification.</span>")
 		return
@@ -61,9 +72,11 @@
 	var/N = new to_type(O.loc)
 	user.visible_message("<span class='warning'>[user] opens \the [src] and modifies \the [O] into \the [N].</span>","<span class='warning'>You open \the [src] and modify \the [O] into \the [N].</span>")
 	qdel(O)
-	parts &= ~flag
+	parts -= cost
+	/* disable this part too, so it can be used to change items back even if empty
 	if(!parts)
 		qdel(src)
+	*/
 
 //JoanRisu:Joan Risu
 /obj/item/weapon/flame/lighter/zippo/fluff/joan
