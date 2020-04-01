@@ -191,13 +191,13 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 		//SDF scan event: hard outcome
 		if("policeshipflee")
 			var/uhoh = pick("No can do chief, we got places to be.","Sorry but we've got places to be.","Not happening.","Ah fuck, who ratted us out this time?!","You'll never take me alive!","Hey, I have a cloaking device! You can't see me!","I'm going to need to ask for a refund on that stealth drive...","I'm afraid I can't do that, |[shipname]|.","Ah hell.","Fuck!","This isn't the ship you're looking for.","Well. This is awkward.","Uh oh.","I surrender!")
-			msg("Unknown [pick("ship","vessel","starship")], this is [combined_first_name], identify yourself and submit to a full inspection. You are in violation of system regulations.","[secondprefix] [secondshipname]")
+			msg("Unknown [pick("ship","vessel","starship")], this is [combined_second_name], identify yourself and submit to a full inspection. You are in violation of system regulations.","[secondprefix] [secondshipname]")
 			sleep(5 SECONDS)
 			msg("[uhoh]","[shipname]")
 			sleep(5 SECONDS)
-			msg("[using_map.starsys_name] Defense Control, this is [combined_first_name], we have a situation here, please advise.","[secondprefix] [secondshipname]")
+			msg("[using_map.starsys_name] Defense Control, this is [combined_second_name], we have a situation here, please advise.","[secondprefix] [secondshipname]")
 			sleep(5 SECONDS)
-			msg("Defense Control copies, [combined_first_name], reinforcements are en route. Switch further communications to encrypted band [sdfchannel].","[using_map.starsys_name] Defense Control")
+			msg("Defense Control copies, [combined_second_name], reinforcements are en route. Switch further communications to encrypted band [sdfchannel].","[using_map.starsys_name] Defense Control")
 		//SDF scan event: engage primary in combat! very rare since it needs a pirate/vox + SDF roll
 		if("policeshipcombat")
 			var/battlestatus = pick("requesting reinforcements.","we need backup! Now!","holding steady.","we're holding our own for now.","we have them on the run.","they're trying to make a run for it!","we have them right where we want them.","we're badly outgunned!","we have them outgunned.","we're outnumbered here!","we have them outnumbered.","this'll be a cakewalk.",10;"notify their next of kin.")
