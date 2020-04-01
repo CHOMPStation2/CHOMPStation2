@@ -114,6 +114,7 @@
 /obj/item/device/modkit_conversion/fluff/amara_hos_kit
 	name = "Amara's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Head of security armored coat. It has a red wolf painted on it."
+	owner_ckey = "generalpantsu"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -126,6 +127,7 @@
 /obj/item/device/modkit_conversion/fluff/nika_sec_kit
 	name = "Nika's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Officer Armor Vest."
+	owner_ckey = "generalpantsu"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -237,6 +239,7 @@
 /obj/item/device/modkit_conversion/fluff/jessica_sec_kit
 	name = "Jessica's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Officer Armor Vest."
+	owner_ckey = "vitorhks"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -320,6 +323,7 @@
 /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a
 	name = "Mitsuko's modkit Mk1"
 	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+	owner_ckey = "lukevale"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -330,6 +334,7 @@
 /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/b
 	name = "Mitsuko's modkit Mk2"
 	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+	owner_ckey = "lukevale"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -340,6 +345,7 @@
 /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c
 	name = "Mitsuko's modkit Mk3"
 	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
+	owner_ckey = "lukevale"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -355,13 +361,13 @@
 
 /obj/item/device/healthanalyzer/improved/fluff/jiao_health
 	name = "Kanghu medical scanner MK2"
-	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a improved unit."
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is an improved unit."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "scanner_mk2"
 
 /obj/item/device/healthanalyzer/advanced/fluff/jiao_health
 	name = "Kanghu medical scanner MK3"
-	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a advanced unit."
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is an advanced unit."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "scanner_mk3"
 
@@ -484,6 +490,7 @@
 // SASOperative
 // **************
 
+// These seem to have been deprecated from loadouts? -KK
 /obj/item/device/modkit_conversion/fluff/skinner/a
 	name = "Joseph's modkit Mk1"
 	desc = "A kit containing all the needed tools and parts to modify a security jumpsuit."
@@ -561,6 +568,7 @@
 /obj/item/device/modkit_conversion/fluff/mocha_suit_kit
 	name = "Mocha's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Explorer Suit"
+	owner_ckey = "mocatheporgi"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -581,6 +589,7 @@
 /obj/item/device/modkit_conversion/fluff/kaith_knife_kit
 	name = "Kaith's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a survival knife"
+	owner_ckey = "foxicide"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"

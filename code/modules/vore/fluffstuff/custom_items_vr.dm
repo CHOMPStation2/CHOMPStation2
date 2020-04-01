@@ -26,6 +26,7 @@
 */
 
 //For general use
+//EXTENSIVELY MODIFIED
 /obj/item/device/modkit_conversion
 	name = "modification kit"
 	desc = "A kit containing all the needed tools and parts to modify a suit and helmet."
@@ -36,11 +37,13 @@
 	var/from_suit = /obj/item/clothing/suit/space/void
 	var/to_helmet = /obj/item/clothing/head/cardborg
 	var/to_suit = /obj/item/clothing/suit/cardborg
+	var/owner_ckey = null //YW ADD
 	
 	//Conversion proc
 /obj/item/device/modkit_conversion/afterattack(obj/O, mob/user as mob)
 	var/cost
 	var/to_type
+	var/keycheck
 	//we have to check that it's not the original type first, because otherwise it'll convert wrong because the subtype still counts as the basetype
 	//changing an item back to its base type refunds the parts cost
 	if(istype(O,to_helmet))
@@ -52,19 +55,29 @@
 	else if(istype(O,from_helmet))
 		cost = 1
 		to_type = to_helmet
+		keycheck = TRUE
 	else if(istype(O,from_suit))
 		cost = 2
 		to_type = to_suit
+		keycheck = TRUE
 	else
+		to_chat(user, "<span class='notice'>This kit doesn't seem to have any tools or parts for the item you're trying to use it on.</span>") //new error message
 		return
 	if(cost > parts)
-		to_chat(user, "<span class='warning'>This kit has no parts for this modification left.</span>")
+		to_chat(user, "<span class='notice'>This kit doesn't have enough parts left. You can recover parts by using the kit on an already-modified item.</span>")
 		return
 	/* disable this check, or else you can't convert back sometimes. left in for reversion.
 	if(istype(O,to_type))
 		to_chat(user, "<span class='notice'>[O] is already modified.</span>")
 		return
 	*/
+	if(!istype(O,/obj/item/weapon/rig/) && O.contents.len) //check if we're loaded/modified, in the event of gun/suit kits, to avoid qdeling stuff like badges, armbands, or suit helmets. skips rigs for now though.
+		to_chat(user, "<span class='warning'>You should probably remove any attached items or loaded ammunition before trying to modify that!</span>")
+		return
+	if(keycheck && owner_ckey) //check if we're supposed to care
+		if(user.ckey != owner_ckey) //ERROR: UNAUTHORIZED USER
+			to_chat(user, "<span class='warning'>You probably shouldn't mess with all these strange tools and parts...</span>") //give them a slightly fluffy explanation as to why it didn't work
+			return
 	if(!isturf(O.loc))
 		to_chat(user, "<span class='warning'>[O] must be safely placed on the ground for modification.</span>")
 		return
