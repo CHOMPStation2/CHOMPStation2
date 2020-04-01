@@ -291,6 +291,13 @@
 	reagent_state = LIQUID
 	color = "#8040FF"
 	scannable = 1
+	//YW ADDITIONS START
+	overdose = REAGENTS_OVERDOSE * 4 //120 overdose
+/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.druggy = max(M.druggy, 5)
+	M.Confuse(5)
+	//YW ADDITIONS END
 
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
