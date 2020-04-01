@@ -42,10 +42,11 @@
 	..()
 
 	var/lacertusol = 0
-	for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
-		if(R.id == "lacertusol")
-			lacertusol = 1
-			break
+	if(istype(M,/mob/living/carbon))
+		for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
+			if(R.id == "lacertusol")
+				lacertusol = 1
+				break
 
 	// Should this all be in Touch()?
 	if(istype(H))
