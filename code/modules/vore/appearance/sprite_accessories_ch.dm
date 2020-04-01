@@ -26,3 +26,12 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "snaketail_stripes"
+
+//WINGS
+
+/datum/sprite_accessory/wing/snagc
+	name = "xenomorph backplate, colorable"
+	desc = ""
+	icon = 'icons/mob/vore/wings_ch.dmi'
+	icon_state = "csnag-backplate"
+	do_colouration = 1
