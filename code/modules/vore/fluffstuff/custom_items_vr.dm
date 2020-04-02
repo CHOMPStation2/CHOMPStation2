@@ -75,7 +75,7 @@
 		cost = to_suit_cost
 		to_type = from_suit
 	else if(!can_revert && (istype(O,to_helmet) || istype (O,to_suit)))
-		to_chat(user, "<span class='notice'>This kit doesn't seem to have the tools necessary to revert changes to modified items.</spam?")
+		to_chat(user, "<span class='notice'>This kit doesn't seem to have the tools necessary to revert changes to modified items.</span>")
 		return
 	else if(istype(O,from_helmet))
 		cost = from_helmet_cost
