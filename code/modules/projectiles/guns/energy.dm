@@ -10,7 +10,6 @@
 	var/accept_cell_type = /obj/item/weapon/cell/device
 	var/cell_type = /obj/item/weapon/cell/device/weapon
 	projectile_type = /obj/item/projectile/beam/practice
-	var/starts_loaded = 1	//YW ADD: similar to the change to ballistics, guns can now spawn empty
 
 	var/modifystate
 	var/charge_meter = 1	//if set, the icon state will be chosen based on the current charge
@@ -31,7 +30,7 @@
 		power_supply = new /obj/item/weapon/cell/device/weapon(src)
 		START_PROCESSING(SSobj, src)
 	else
-		if(starts_loaded)
+		if(cell_type)
 			power_supply = new cell_type(src)
 		else
 			power_supply = null

@@ -28,13 +28,12 @@
 	var/allowed_magazines		//determines list of which magazines will fit in the gun
 	var/auto_eject = 0			//if the magazine should automatically eject itself when empty.
 	var/auto_eject_sound = null
-	var/starts_loaded = 1		//YW ADD: can now define if a gun starts loaded or not on a per-gun basis, should be less intrusive than changing every gun's ammo/mag types!
 	//TODO generalize ammo icon states for guns
 	//var/magazine_states = 0
 	//var/list/icon_keys = list()		//keys
 	//var/list/ammo_states = list()	//values
 
-/obj/item/weapon/gun/projectile/New(loc) //YW EDIT: moved starts_loaded to a general gun property
+/obj/item/weapon/gun/projectile/New(loc, var/starts_loaded = 1)
 	..()
 	if(starts_loaded)
 		if(ispath(ammo_type) && (load_method & (SINGLE_CASING|SPEEDLOADER)))

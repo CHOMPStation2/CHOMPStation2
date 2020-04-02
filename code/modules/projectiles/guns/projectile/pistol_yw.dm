@@ -74,7 +74,6 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	caliber = ".45"
 	load_method = MAGAZINE
-	starts_loaded = 0
 	fire_sound = 'sound/weapons/45pistol_vr.ogg'
 	magazine_type = /obj/item/ammo_magazine/m45
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
