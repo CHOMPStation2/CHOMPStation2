@@ -47,7 +47,6 @@
 	var/owner_ckey = null		//ckey of the kit owner as a string
 	var/skip_contents = FALSE	//can we skip the contents check? we generally shouldn't, but this is necessary for rigs/etc.
 	var/transfer_contents = FALSE	//should we transfer the contents across before deleting? we generally shouldn't, but it might be needed
-	var/purge_contents = FALSE	//should we delete existing contents even if we skip the contents check?
 	var/can_revert = TRUE		//can we revert items, or is it a one-way trip?
 	var/delete_on_empty = FALSE	//do we self-delete when emptied?
 	
@@ -59,11 +58,10 @@
 	//we have to check that it's not the original type first, because otherwise it'll convert wrong because the subtype still counts as the basetype
 	//changing an item back to its base type refunds the parts cost
 	//order of checks has been reshuffled to work better
-	/*
-	if(O.breaches.len) //check if we're a damaged voidsuit. doesn't work right now, keeps returning "undefined var" during compile. -KK
-		to_chat(user, "<span class='notice'>You should probably repair that before you start tinkering with it.</span>")
-		return
-	*/
+	if(istype(O,/obj/item/clothing/suit/space/void/)) //check if we're a voidsuit, and if we're damaged
+		if(O:breaches.len)
+			to_chat(user, "<span class='notice'>You should probably repair that before you start tinkering with it.</span>")
+			return
 	if(isturf(O)) //silently fail if you click on a turf. shouldn't work anyway because turfs aren't objects but if I don't do this it spits runtimes. 
 		return
 	if(O.blood_DNA || O.contaminated) //check if we're bloody or gooey, so modkits can't be used to hide crimes easily.
@@ -114,19 +112,22 @@
 	N.fingerprintslast = O.fingerprintslast
 	N.suit_fibers = O.suit_fibers
 	
-	//also messy, but wipe/transfer contents if we skip the contents check
-	/* //disabled for now - keeps returning "undefined var" for everything but contents on compile. why here? why are prints and fibers ok, but not the ammo/etc.? -KK
-	if(skip_contents && transfer_contents)
+	//also messy and I really don't like using the lax checks here but fuck it, it doesn't runtime with the istypes in place
+	if(skip_contents && transfer_contents) //skip and transfer
 		N.contents = O.contents
-		N.magazine_type = O.magazine_type
-		N.ammo_magazine = O.ammo_magazine
-		N.cell_type = O.cell_type
-	else if(skip_contents && purge_contents)
+		if(istype(N,/obj/item/weapon/gun/projectile/))
+			N:magazine_type = O:magazine_type
+			N:ammo_magazine = O:ammo_magazine
+		if(istype(N,/obj/item/weapon/gun/energy/))
+			N:cell_type = O:cell_type
+	else	//nuke it all
 		N.contents = list()
-		N.magazine_type = null
-		N.ammo_magazine = null
-		N.cell_type = null
-	*/
+		if(istype(N,/obj/item/weapon/gun/projectile/))
+			N:magazine_type = null
+			N:ammo_magazine = null
+		if(istype(N,/obj/item/weapon/gun/energy/))
+			N:cell_type = null
+	
 	qdel(O)
 	parts -= cost
 	if(!parts && delete_on_empty)
