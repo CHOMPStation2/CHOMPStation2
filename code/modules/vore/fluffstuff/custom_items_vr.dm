@@ -47,6 +47,7 @@
 	var/owner_ckey = null		//ckey of the kit owner as a string
 	var/skip_contents = FALSE	//can we skip the contents check? we generally shouldn't, but this is necessary for rigs/etc.
 	var/transfer_contents = FALSE	//should we transfer the contents across before deleting? we generally shouldn't, but it might be needed
+	var/purge_contents = FALSE	//should we delete existing contents even if we skip the contents check?
 	var/can_revert = TRUE		//can we revert items, or is it a one-way trip?
 	var/delete_on_empty = FALSE	//do we self-delete when emptied?
 	
@@ -91,7 +92,7 @@
 	if(!isturf(O.loc))
 		to_chat(user, "<span class='warning'>You need to put \the [O] on the ground, a table, or other worksurface before modifying it.</span>")
 		return
-	if(!skip_contents && O.contents.len) //check if we're loaded/modified, in the event of gun/suit kits, to avoid qdeling stuff like badges, armbands, or suit helmets
+	if(!skip_contents && O.contents.len) //check if we're loaded/modified, in the event of gun/suit kits, to avoid purging stuff like badges, armbands, or suit helmets
 		to_chat(user, "<span class='warning'>You should probably remove any attached items or loaded ammunition before trying to modify that!</span>")
 		return
 	if(cost > parts)
@@ -113,14 +114,14 @@
 	N.fingerprintslast = O.fingerprintslast
 	N.suit_fibers = O.suit_fibers
 	
-	//also messy, but wipe/transfer contents
+	//also messy, but wipe/transfer contents if we skip the contents check
 	/* //disabled for now - keeps returning "undefined var" for everything but contents on compile. why here? why are prints and fibers ok, but not the ammo/etc.? -KK
-	if(!skip_contents && transfer_contents)
+	if(skip_contents && transfer_contents)
 		N.contents = O.contents
 		N.magazine_type = O.magazine_type
 		N.ammo_magazine = O.ammo_magazine
 		N.cell_type = O.cell_type
-	else if(!skip_contents && !transfer_contents)
+	else if(skip_contents && purge_contents)
 		N.contents = list()
 		N.magazine_type = null
 		N.ammo_magazine = null
