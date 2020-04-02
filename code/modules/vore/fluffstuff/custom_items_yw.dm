@@ -204,6 +204,7 @@
 /obj/item/device/modkit_conversion/fluff/melissa_gun_kit
 	name = "Melissa's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a 45 Pistol."
+	owner_ckey = "dawidoe"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -569,6 +570,7 @@
 	name = "Mocha's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Explorer Suit"
 	owner_ckey = "mocatheporgi"
+	skip_contents = 1 	//the hood is parts of the contents so we need to skip it
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"

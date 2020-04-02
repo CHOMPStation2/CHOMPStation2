@@ -26,7 +26,7 @@
 */
 
 //For general use
-//EXTENSIVELY MODIFIED
+//YW EDITS START: EXTENSIVELY MODIFIED -KK
 /obj/item/device/modkit_conversion
 	name = "modification kit"
 	desc = "A kit containing all the needed tools and parts to modify a suit and helmet."
@@ -37,7 +37,18 @@
 	var/from_suit = /obj/item/clothing/suit/space/void
 	var/to_helmet = /obj/item/clothing/head/cardborg
 	var/to_suit = /obj/item/clothing/suit/cardborg
-	var/owner_ckey = null //YW ADD
+	
+	//conversion costs. refunds parts by default.
+	var/from_helmet_cost = 1
+	var/from_suit_cost = 2
+	var/to_helmet_cost = -1
+	var/to_suit_cost = -2
+	
+	var/owner_ckey = null		//ckey of the kit owner as a string
+	var/skip_contents = FALSE	//can we skip the contents check? we generally shouldn't, but this is necessary for rigs/etc.
+	var/transfer_contents = FALSE	//should we transfer the contents across before deleting? we generally shouldn't, but it might be needed
+	var/can_revert = TRUE		//can we revert items, or is it a one-way trip?
+	var/delete_on_empty = FALSE	//do we self-delete when emptied?
 	
 	//Conversion proc
 /obj/item/device/modkit_conversion/afterattack(obj/O, mob/user as mob)
@@ -46,50 +57,80 @@
 	var/keycheck
 	//we have to check that it's not the original type first, because otherwise it'll convert wrong because the subtype still counts as the basetype
 	//changing an item back to its base type refunds the parts cost
-	if(istype(O,to_helmet))
-		cost = -1
+	//order of checks has been reshuffled to work better
+	/*
+	if(O.breaches.len) //check if we're a damaged voidsuit. doesn't work right now, keeps returning "undefined var" during compile. -KK
+		to_chat(user, "<span class='notice'>You should probably repair that before you start tinkering with it.</span>")
+		return
+	*/
+	if(isturf(O)) //silently fail if you click on a turf. shouldn't work anyway because turfs aren't objects but if I don't do this it spits runtimes. 
+		return
+	if(O.blood_DNA || O.contaminated) //check if we're bloody or gooey, so modkits can't be used to hide crimes easily.
+		to_chat(user, "<span class='notice'>You should probably clean that up before you start tinkering with it.</span>")
+		return
+	if(istype(O,to_helmet) && can_revert)
+		cost = to_helmet_cost
 		to_type = from_helmet
-	else if(istype(O,to_suit))
-		cost = -2
+	else if(istype(O,to_suit) && can_revert)
+		cost = to_suit_cost
 		to_type = from_suit
+	else if(!can_revert && (istype(O,to_helmet) || istype (O,to_suit)))
+		to_chat(user, "<span class='notice'>This kit doesn't seem to have the tools necessary to revert changes to modified items.</spam?")
+		return
 	else if(istype(O,from_helmet))
-		cost = 1
+		cost = from_helmet_cost
 		to_type = to_helmet
 		keycheck = TRUE
 	else if(istype(O,from_suit))
-		cost = 2
+		cost = from_suit_cost
 		to_type = to_suit
 		keycheck = TRUE
 	else
-		to_chat(user, "<span class='notice'>This kit doesn't seem to have any tools or parts for the item you're trying to use it on.</span>") //new error message
+		to_chat(user, "<span class='notice'>This kit doesn't seem to have any tools or parts for whatever you're trying to use it on.</span>") //new error message
+		return
+	if(!isturf(O.loc))
+		to_chat(user, "<span class='warning'>You need to put \the [O] on the ground, a table, or other worksurface before modifying it.</span>")
+		return
+	if(!skip_contents && O.contents.len) //check if we're loaded/modified, in the event of gun/suit kits, to avoid qdeling stuff like badges, armbands, or suit helmets
+		to_chat(user, "<span class='warning'>You should probably remove any attached items or loaded ammunition before trying to modify that!</span>")
 		return
 	if(cost > parts)
-		to_chat(user, "<span class='notice'>This kit doesn't have enough parts left. You can recover parts by using the kit on an already-modified item.</span>")
-		return
-	/* disable this check, or else you can't convert back sometimes. left in for reversion.
-	if(istype(O,to_type))
-		to_chat(user, "<span class='notice'>[O] is already modified.</span>")
-		return
-	*/
-	if(!istype(O,/obj/item/weapon/rig/) && O.contents.len) //check if we're loaded/modified, in the event of gun/suit kits, to avoid qdeling stuff like badges, armbands, or suit helmets. skips rigs for now though.
-		to_chat(user, "<span class='warning'>You should probably remove any attached items or loaded ammunition before trying to modify that!</span>")
+		to_chat(user, "<span class='notice'>This kit doesn't have enough parts left.</span>")
+		if(can_revert && ((to_helmet_cost || to_suit_cost) < 0))
+			to_chat(user, "<span class='notice'> You can recover parts by using the kit on an already-modified item.</span>")
 		return
 	if(keycheck && owner_ckey) //check if we're supposed to care
 		if(user.ckey != owner_ckey) //ERROR: UNAUTHORIZED USER
 			to_chat(user, "<span class='warning'>You probably shouldn't mess with all these strange tools and parts...</span>") //give them a slightly fluffy explanation as to why it didn't work
 			return
-	if(!isturf(O.loc))
-		to_chat(user, "<span class='warning'>[O] must be safely placed on the ground for modification.</span>")
-		return
 	playsound(user.loc, 'sound/items/Screwdriver.ogg', 100, 1)
-	var/N = new to_type(O.loc)
-	user.visible_message("<span class='warning'>[user] opens \the [src] and modifies \the [O] into \the [N].</span>","<span class='warning'>You open \the [src] and modify \the [O] into \the [N].</span>")
+	var/obj/N = new to_type(O.loc)
+	user.visible_message("<span class='notice'>[user] opens \the [src] and modifies \the [O] into \the [N].</span>","<span class='warning'>You open \the [src] and modify \the [O] into \the [N].</span>")
+	
+	//messy, but transfer prints and fibers to avoid forensics abuse, same as the bloody/gooey check above
+	N.fingerprints = O.fingerprints
+	N.fingerprintshidden = O.fingerprintshidden
+	N.fingerprintslast = O.fingerprintslast
+	N.suit_fibers = O.suit_fibers
+	
+	//also messy, but wipe/transfer contents
+	/* //disabled for now - keeps returning "undefined var" for everything but contents on compile. why here? why are prints and fibers ok, but not the ammo/etc.? -KK
+	if(!skip_contents && transfer_contents)
+		N.contents = O.contents
+		N.magazine_type = O.magazine_type
+		N.ammo_magazine = O.ammo_magazine
+		N.cell_type = O.cell_type
+	else if(!skip_contents && !transfer_contents)
+		N.contents = list()
+		N.magazine_type = null
+		N.ammo_magazine = null
+		N.cell_type = null
+	*/
 	qdel(O)
 	parts -= cost
-	/* disable this part too, so it can be used to change items back even if empty
-	if(!parts)
+	if(!parts && delete_on_empty)
 		qdel(src)
-	*/
+//YW EDITS END
 
 //JoanRisu:Joan Risu
 /obj/item/weapon/flame/lighter/zippo/fluff/joan

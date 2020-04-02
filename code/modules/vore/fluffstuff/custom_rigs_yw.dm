@@ -2,6 +2,7 @@
     name = "Sheri's modkit"
     desc = "A kit containing all the needed tools and parts to modify a Research Director rig suit. It has a snake painted on it."
     owner_ckey = "esperkin"
+    skip_contents = 1
 
     icon = 'icons/vore/custom_items_vr.dmi'
     icon_state = "modkit"
