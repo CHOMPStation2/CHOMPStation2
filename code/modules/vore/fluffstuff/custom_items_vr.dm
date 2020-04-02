@@ -47,6 +47,7 @@
 	var/owner_ckey = null		//ckey of the kit owner as a string
 	var/skip_contents = FALSE	//can we skip the contents check? we generally shouldn't, but this is necessary for rigs/etc.
 	var/transfer_contents = FALSE	//should we transfer the contents across before deleting? we generally shouldn't, but it might be needed
+	var/can_repair = FALSE		//can we be used to repair damaged voidsuits when converting them?
 	var/can_revert = TRUE		//can we revert items, or is it a one-way trip?
 	var/delete_on_empty = FALSE	//do we self-delete when emptied?
 	
@@ -58,14 +59,14 @@
 	//we have to check that it's not the original type first, because otherwise it'll convert wrong because the subtype still counts as the basetype
 	//changing an item back to its base type refunds the parts cost
 	//order of checks has been reshuffled to work better
-	if(istype(O,/obj/item/clothing/suit/space/void/)) //check if we're a voidsuit, and if we're damaged
-		if(O:breaches.len)
-			to_chat(user, "<span class='notice'>You should probably repair that before you start tinkering with it.</span>")
+	if(istype(O,/obj/item/clothing/suit/space/void/) && !can_repair) //check if we're a voidsuit and if we're allowed to repair
+		if(O:breaches.len)	//this has to be underneath the istype or it'll spit a runtime if used on non-voidsuits
+			to_chat(user, "<span class='warning'>You should probably repair that before you start tinkering with it.</span>")
 			return
 	if(isturf(O)) //silently fail if you click on a turf. shouldn't work anyway because turfs aren't objects but if I don't do this it spits runtimes. 
 		return
 	if(O.blood_DNA || O.contaminated) //check if we're bloody or gooey, so modkits can't be used to hide crimes easily.
-		to_chat(user, "<span class='notice'>You should probably clean that up before you start tinkering with it.</span>")
+		to_chat(user, "<span class='warning'>You should probably clean that up before you start tinkering with it.</span>")
 		return
 	if(istype(O,to_helmet) && can_revert)
 		cost = to_helmet_cost
@@ -74,7 +75,7 @@
 		cost = to_suit_cost
 		to_type = from_suit
 	else if(!can_revert && (istype(O,to_helmet) || istype (O,to_suit)))
-		to_chat(user, "<span class='notice'>This kit doesn't seem to have the tools necessary to revert changes to modified items.</span>")
+		to_chat(user, "<span class='warning'>This kit doesn't seem to have the tools necessary to revert changes to modified items.</span>")
 		return
 	else if(istype(O,from_helmet))
 		cost = from_helmet_cost
@@ -94,7 +95,7 @@
 		to_chat(user, "<span class='warning'>You should probably remove any attached items or loaded ammunition before trying to modify that!</span>")
 		return
 	if(cost > parts)
-		to_chat(user, "<span class='notice'>This kit doesn't have enough parts left.</span>")
+		to_chat(user, "<span class='warning'>This kit doesn't have enough parts left.</span>")
 		if(can_revert && ((to_helmet_cost || to_suit_cost) < 0))
 			to_chat(user, "<span class='notice'> You can recover parts by using the kit on an already-modified item.</span>")
 		return
@@ -104,7 +105,7 @@
 			return
 	playsound(user.loc, 'sound/items/Screwdriver.ogg', 100, 1)
 	var/obj/N = new to_type(O.loc)
-	user.visible_message("<span class='notice'>[user] opens \the [src] and modifies \the [O] into \the [N].</span>","<span class='warning'>You open \the [src] and modify \the [O] into \the [N].</span>")
+	user.visible_message("<span class='notice'>[user] opens \the [src] and modifies \the [O] into \the [N].</span>","<span class='notice'>You open \the [src] and modify \the [O] into \the [N].</span>")
 	
 	//messy, but transfer prints and fibers to avoid forensics abuse, same as the bloody/gooey check above
 	N.fingerprints = O.fingerprints
@@ -112,7 +113,7 @@
 	N.fingerprintslast = O.fingerprintslast
 	N.suit_fibers = O.suit_fibers
 	
-	//also messy and I really don't like using the lax checks here but fuck it, it doesn't runtime with the istypes in place
+	//also messy and I really don't like using the lookdown checks here but fuck it, it works. the istypes are essential though, or else it runtimes and won't get to the qdel for the source item, allowing item duping.
 	if(skip_contents && transfer_contents) //skip and transfer
 		N.contents = O.contents
 		if(istype(N,/obj/item/weapon/gun/projectile/))
@@ -120,12 +121,13 @@
 			N:ammo_magazine = O:ammo_magazine
 		if(istype(N,/obj/item/weapon/gun/energy/))
 			N:cell_type = O:cell_type
-	else	//nuke it all
-		N.contents = list()
+	else	//nuke any ammo it'd normally spawn with, if it's a gun. we have to do this per-gun, not globally, or it breaks hoods a little bit and suit storage a lot.
 		if(istype(N,/obj/item/weapon/gun/projectile/))
+			N:contents = list()
 			N:magazine_type = null
 			N:ammo_magazine = null
 		if(istype(N,/obj/item/weapon/gun/energy/))
+			N:contents = list()
 			N:cell_type = null
 	
 	qdel(O)
