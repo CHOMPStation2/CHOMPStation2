@@ -569,7 +569,7 @@
 /obj/item/device/modkit_conversion/fluff/mocha_suit_kit
 	name = "Mocha's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Explorer Suit"
-	owner_ckey = "mocatheporgi"
+	owner_ckey = "mocatheporg1"
 	skip_contents = 1 	//the hood is parts of the contents so we need to skip it
 
 	icon = 'icons/vore/custom_items_vr.dmi'
