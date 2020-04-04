@@ -25,7 +25,7 @@
 	desc = "A metallic musical instrument with strings, made for all your shredding needs."
 	icon = 'icons/obj/musician_yw.dmi'
 	icon_state = "eguitar"
-	item_state = "violin"
+	item_state = "eguitar"
 	attack_verb = list("smashed")
 	instrumentId = "eguitar"
 	instrumentExt = "ogg"

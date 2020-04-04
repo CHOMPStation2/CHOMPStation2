@@ -469,18 +469,6 @@ var/global/list/latejoin_tram   = list()
 		..()
 //end of freezable airlock stuff.
 
-//Ice pick, mountain axe, or ice axe.
-/obj/item/weapon/ice_pick
-	name = "ice axe"
-	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
-	icon = 'icons/obj/items_yw.dmi'
-	icon_state = "icepick"
-	item_state = "icepick"
-	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
-	throwforce = 0
-//end of Ice Pick
-
-
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
 	req_one_access = list(access_explorer,access_brig)

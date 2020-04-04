@@ -45,12 +45,13 @@
 	boss_short    = "CentCom"
 	company_name  = "NanoTrasen"
 	company_short = "NT"
-	starsys_name  = "Borealis Majoris"
+	starsys_name  = "Borealis"
 
 	shuttle_docked_message = "The scheduled Shuttle to %dock_name% has arrived. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Shuttle has left the Outpost. Estimate %ETA% until the shuttle arrives at %dock_name%."
 	shuttle_called_message = "A scheduled crew transfer to %dock_name% is occuring. The shuttle will be arriving shortly. Those departing should proceed to the shuttle docking station within %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
+	shuttle_name = "NAS |Faraday|"
 	emergency_shuttle_docked_message = "The evacuation shuttle has arrived at the shuttle docking station. You have approximately %ETD% to board the shuttle."
 	emergency_shuttle_leaving_dock = "The emergency shuttle has left the station. Estimate %ETA% until the shuttle arrives at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule shuttle has been called. It will arrive at the shuttle docking station in approximately %ETA%."
@@ -161,6 +162,8 @@
 		)
 
 	lateload_single_pick = null //Nothing right now.
+
+	planet_datums_to_make = list(/datum/planet/borealis2)
 
 /datum/map/cryogaia/perform_map_generation()
 

@@ -5,7 +5,17 @@
 
 	var/msg = sanitize(input("Message:", "Project mind") as text|null)
 	if(msg)
+		var/mob/living/carbon/human/H = M
 		log_say("(GreyTP to [key_name(M)]) [msg]", src)
-		M << "<font color='purple'>you hear a voice echo across the room in your head... <i>[msg]</i></font>"
-		to_chat(src, "<font color='purple'>You said: \"[msg]\" to [M]</font>")
+		if(ishuman(M))
+			if(H.species.name == src.species.name)
+				to_chat(M, "<font color='purple'>you hear [src.name]'s voice: <i>[msg]</i></font>")
+				to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
+			else
+				to_chat(M, "<font color='purple'>you hear a voice echo in your head... <i>[msg]</i></font>")
+				to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
+		else
+			to_chat(M, "<font color='purple'>you hear a voice echo in your head... <i>[msg]</i></font>")
+			to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
+
 	return

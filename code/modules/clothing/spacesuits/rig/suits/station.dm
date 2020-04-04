@@ -205,6 +205,10 @@
 	siemens_coefficient= 0.75
 
 	helm_type = /obj/item/clothing/head/helmet/space/rig/hazmat
+	//ywadd start
+	glove_type = /obj/item/clothing/gloves/gauntlets/rig/hazmat
+	boot_type = /obj/item/clothing/shoes/magboots/rig/hazmat
+	//ywadd end
 
 	allowed = list(
 		/obj/item/device/flashlight,
@@ -226,6 +230,15 @@
 
 	req_access = list()
 	req_one_access = list()
+
+//ywadd start
+/obj/item/clothing/gloves/gauntlets/rig/hazmat
+	icon_override = 'icons/vore/rig_yw/rigs_gauntlets_onmob.dmi'
+
+/obj/item/clothing/shoes/magboots/rig/hazmat
+	icon = 'icons/vore/rig_yw/rigs_shoes.dmi'
+	icon_override = 'icons/vore/rig_yw/rigs_shoes_onmob.dmi'
+//ywadd end
 
 /obj/item/weapon/rig/hazmat/equipped
 
