@@ -137,7 +137,8 @@
 		/area/vacant/vacant_site/locker,
 		/area/tcommsat/powercontrol,
 		/area/constructionsite/medical,
-		/area/borealis2/outdoors/grounds/entrance)
+		/area/borealis2/outdoors/grounds/entrance,
+		/area/security/vacantoffice)
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)
