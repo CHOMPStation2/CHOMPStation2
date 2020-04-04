@@ -335,6 +335,7 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/door/airlock/highsecurity/red
 	name = "Bridge Holdout Armory"
 	desc =  "Only to be opened on Code red or greater."
+	req_one_access = list(access_heads)
 
 /obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
 	if(get_security_level() in list("green","blue"))

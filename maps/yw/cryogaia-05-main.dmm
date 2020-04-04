@@ -24470,7 +24470,8 @@
 /area/security/breakroom)
 "aUx" = (
 /obj/machinery/door/airlock/highsecurity/red{
-	name = "Red Tactical Armory"
+	name = "Red Tactical Armory";
+	req_one_access = list(2)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "intact-scrubbers";
@@ -62849,17 +62850,7 @@
 /obj/structure/sign/directions/engineering,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"qfY" = (
-/obj/structure/sign/directions/security,
-/turf/simulated/wall/r_wall,
-/area/hallway/primary/central_one)
-"tbF" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/sign/directions/engineering,
-/turf/simulated/floor/plating,
-/area/hallway/primary/central_one)
-"xoA" = (
+"pxX" = (
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -62885,6 +62876,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/hallway)
+"qfY" = (
+/obj/structure/sign/directions/security,
+/turf/simulated/wall/r_wall,
+/area/hallway/primary/central_one)
+"tbF" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/sign/directions/engineering,
+/turf/simulated/floor/plating,
+/area/hallway/primary/central_one)
 "ylY" = (
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engine Gas Storage"
@@ -93969,7 +93970,7 @@ aPm
 aPm
 aIR
 bal
-xoA
+pxX
 aPk
 aSy
 aUA
