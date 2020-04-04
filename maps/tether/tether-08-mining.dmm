@@ -12,8 +12,12 @@
 /turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/shuttle/tether/crash2)
 "ae" = (
-/turf/simulated/floor/outdoors/grass/sif/virgo3b,
-/area/shuttle/antag_ground/mining)
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/phoronlock{
+	frequency = 1379;
+	scrub_id = "mining_outpost_airlock_scrubber"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/outpost/mining_main/airlock)
 "af" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
@@ -634,13 +638,23 @@
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "bt" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/phoronlock{
-	frequency = 1379;
-	scrub_id = "mining_outpost_airlock_scrubber";
-	scrubbing_gas = list("phoron")
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/outpost/mining_main/airlock)
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner2{
+	dir = 8
+	},
+/obj/machinery/vending/cola{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/break_room)
 "bu" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -822,6 +836,32 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/break_room)
+"bM" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/brown/border,
+/obj/machinery/vending/coffee{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/break_room)
+"bN" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 6
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner2{
+	dir = 6
+	},
+/obj/machinery/vending/snack{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/outpost/mining_main/break_room)
 "bW" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
@@ -939,22 +979,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/break_room)
-"kB" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/brown/border{
-	dir = 10
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/brown/bordercorner2{
-	dir = 8
-	},
-/obj/machinery/vending/cola,
-/turf/simulated/floor/tiled,
-/area/outpost/mining_main/break_room)
 "qx" = (
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
@@ -1059,6 +1083,15 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/outpost/mining_main/airlock)
+"Ck" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/mine/explored;
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/virgo3b;
+	landmark_tag = "tether_mine_nw";
+	name = "Tether Mine (NW)"
+	},
+/turf/simulated/floor/outdoors/grass/sif/virgo3b,
+/area/mine/explored)
 "Cx" = (
 /turf/simulated/mineral/floor/virgo3b{
 	color = "#AAAAAA"
@@ -1082,12 +1115,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/maintenance)
-"DV" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/brown/border,
-/obj/machinery/vending/coffee,
-/turf/simulated/floor/tiled,
-/area/outpost/mining_main/break_room)
 "DX" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -1297,22 +1324,6 @@
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/recharger,
-/turf/simulated/floor/tiled,
-/area/outpost/mining_main/break_room)
-"US" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/brown/border{
-	dir = 6
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/brown/bordercorner2{
-	dir = 6
-	},
-/obj/machinery/vending/snack,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/break_room)
 "VG" = (
@@ -2978,7 +2989,7 @@ aa
 ab
 ab
 ab
-ab
+Ck
 ab
 ab
 ab
@@ -4423,9 +4434,9 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 ab
 ab
 ab
@@ -4565,10 +4576,10 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -4707,9 +4718,9 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 ac
 ac
 ac
@@ -4849,9 +4860,9 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 ac
 ac
 ac
@@ -4945,7 +4956,7 @@ bv
 ZV
 ty
 Fn
-kB
+bt
 az
 ab
 aF
@@ -4991,9 +5002,9 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 ac
 ac
 ac
@@ -5087,7 +5098,7 @@ bg
 Uk
 Uk
 by
-DV
+bM
 az
 ab
 aF
@@ -5128,14 +5139,14 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -5229,7 +5240,7 @@ hW
 bK
 bL
 by
-US
+bN
 az
 ab
 aF
@@ -5270,14 +5281,14 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -5412,10 +5423,10 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -5511,9 +5522,9 @@ ab
 ab
 ab
 Px
-bt
+ae
 VG
-bt
+ae
 Px
 ab
 aF
@@ -5551,12 +5562,12 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -5653,9 +5664,9 @@ ab
 ab
 ab
 Px
-bt
+ae
 DX
-bt
+ae
 Px
 ab
 aF
@@ -5693,11 +5704,11 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -5832,14 +5843,14 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -5974,12 +5985,12 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -6115,12 +6126,12 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -6257,12 +6268,12 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -6399,10 +6410,10 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
 ac
 ac
 ac
@@ -6541,9 +6552,9 @@ ab
 ab
 ab
 ab
-ac
-ac
-ac
+ab
+ab
+ab
 ac
 ac
 ac
@@ -6684,8 +6695,8 @@ ab
 ab
 ab
 ab
-ac
-ac
+ab
+ab
 ac
 ac
 ac
@@ -6826,8 +6837,8 @@ ab
 ab
 ab
 ab
-ac
-ac
+ab
+ab
 ac
 ac
 ac
@@ -6968,8 +6979,8 @@ ab
 ab
 ab
 ab
-ac
-ac
+ab
+ab
 ac
 ac
 ac
@@ -18091,16 +18102,16 @@ ab
 ab
 ab
 ab
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -18233,16 +18244,16 @@ ab
 ab
 ab
 ab
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -18375,16 +18386,16 @@ ab
 ab
 ab
 ab
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -18517,16 +18528,16 @@ ab
 ab
 ab
 ab
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -18659,16 +18670,16 @@ ab
 ab
 ab
 ab
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
