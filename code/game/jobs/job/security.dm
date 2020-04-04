@@ -32,6 +32,13 @@
 						perform the duties of absent Security roles, such as distributing gear from the Armory."
 	alt_titles = list("Security Commander" = /datum/alt_title/sec_commander, "Chief of Security" = /datum/alt_title/sec_chief)
 
+// Head of Security Alt Titles
+/datum/alt_title/sec_commander
+	title = "Security Commander"
+
+/datum/alt_title/sec_chief
+	title = "Chief of Security"
+
 //YW ADDITION START: LOYALTY IMPLANT FOR HOS
 /datum/job/hos/equip(var/mob/living/carbon/human/H)
 	. = ..()

@@ -23,11 +23,12 @@
 		/datum/shuttle_destination/excursion/borealis4orbit = 30 SECONDS,
 	)
 
-/datum/shuttle/ferry/aerostat
+/datum/shuttle/autodock/ferry/aerostat
 	name = "Aerostat Ferry"
+	shuttle_area = /area/shuttle/aerostat
 	warmup_time = 10	//want some warmup time so people can cancel.
-	area_station = /area/shuttle/aerostat/docked
-	area_offsite = /area/shuttle/aerostat/landed
+	landmark_station = "aerostat_east"
+	landmark_offsite = "aerostat_surface"
 
 /datum/random_map/noise/ore/virgo2
 	descriptor = "virgo 2 ore distribution map"
