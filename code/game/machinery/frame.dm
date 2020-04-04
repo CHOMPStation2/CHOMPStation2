@@ -186,6 +186,13 @@
 	x_offset = 24
 	y_offset = 24
 
+/datum/frame/frame_types/geiger //yw edit start
+	name = "Geiger Counter"
+	frame_class = FRAME_CLASS_ALARM
+	frame_size = 2
+	frame_style = FRAME_STYLE_WALL
+	x_offset = 28
+	y_offset = 28 //yw edit ends
 //////////////////////////////
 // Frame Object (Structure)
 //////////////////////////////
