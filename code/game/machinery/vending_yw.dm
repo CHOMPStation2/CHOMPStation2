@@ -3,10 +3,10 @@
 	prices += list(/obj/item/weapon/storage/fancy/cigarettes/yw/mauser = 18)
 	..()
 
-/obj/machinery/vending/food/prison //Fluff vendor for the lewd houseboat.
+/obj/machinery/vending/food/prison
 	name = "Prison Nutriment Vendor"
 	desc = "Delicious, probably not."
-	icon_state = "boozeomat"
+	icon_state = "fridge_dark"
 	products = list(/obj/item/weapon/tray = 6,
 					/obj/item/weapon/material/kitchen/utensil/fork = 6,
 					/obj/item/weapon/material/knife/plastic = 6,
