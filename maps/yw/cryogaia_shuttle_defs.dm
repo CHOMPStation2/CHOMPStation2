@@ -23,7 +23,7 @@
 //////////////////////////////////////////////////////////////
 // Escape shuttle
 /datum/shuttle/autodock/ferry/emergency/escape
-	name = "NAS Faraday"
+	name = "Escape"
 	location = FERRY_LOCATION_OFFSITE // At offsite
 	warmup_time = 10
 	docking_controller_tag = "escape_shuttle"
@@ -37,6 +37,8 @@
 	name = "NSC Serenity"
 	landmark_tag = "escape_centcom"
 	docking_controller = "centcom_dock"
+	base_area = /area/space
+	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/premade/escape/transit
 	name = "Space"
@@ -62,6 +64,8 @@
 /obj/effect/shuttle_landmark/premade/supply/centcom
 	name = "NSC Serenity"
 	landmark_tag = "supply_centcom"
+	base_area = /area/space
+	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/premade/supply/station
 	name = "NSB Cryogaia"
@@ -110,7 +114,7 @@
 	destination_tags = list(
 		"mercenary_base",
 		"mercenary_station_se",
-		"skipjack_station_sw",
+		"mercenary_station_sw",
 		"mercenary_station_n",
 		"mercenary_station_s"
 	)
@@ -205,6 +209,8 @@
 	name = "NSC Serenity"
 	landmark_tag = "specops_cc"
 	docking_controller = "specops_centcom_dock"
+	base_area = /area/space
+	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/premade/specops/station
 	name = "NSB Cryogaia"

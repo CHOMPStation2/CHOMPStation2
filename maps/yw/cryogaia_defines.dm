@@ -264,7 +264,7 @@
 
 
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
-#define CRYOGAIA_MAP_SIZE 150 // Width and height of compiled in Southern Cross z levels.
+#define CRYOGAIA_MAP_SIZE 250 // Width and height of compiled in Southern Cross z levels.
 #define CRYOGAIA_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
 #define CRYOGAIA_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*CRYOGAIA_MAP_SIZE) - CRYOGAIA_HOLOMAP_CENTER_GUTTER) / 2) // 100
 #define CRYOGAIA_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*CRYOGAIA_MAP_SIZE)) / 2) // 60

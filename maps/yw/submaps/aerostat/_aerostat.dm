@@ -11,6 +11,7 @@
 	name = "Aerostat Ferry"
 	shuttle_area = /area/shuttle/aerostat
 	warmup_time = 10	//want some warmup time so people can cancel.
+	location = FERRY_LOCATION_STATION
 	landmark_station = "aerostat_west"
 	landmark_offsite = "aerostat_surface"
 

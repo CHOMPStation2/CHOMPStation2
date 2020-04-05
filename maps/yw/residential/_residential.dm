@@ -2,14 +2,23 @@
 
 /datum/shuttle/autodock/ferry/residential
 	name = "Residential Shuttle"
-	location = FERRY_LOCATION_OFFSITE
+	location = FERRY_LOCATION_STATION
 	shuttle_area = /area/shuttle/residential
 	docking_controller_tag = "residential_shuttle"
 	landmark_offsite = "residential_residential"
 	landmark_station = "residential_station"
 	landmark_transition = "residential_transit"
-	warmup_time = 3 SECONDS
-	move_time = 27 SECONDS
+	warmup_time = 3 SECONDS //30 seconds actually (SECONDS is multiplying it by 10)
+	move_time = 27 SECONDS //270 seconds actually (SECONDS is multiplying it by 10)
+	var/announcer = "Automated Traffic Control"
+
+
+/datum/shuttle/autodock/ferry/residential/perform_shuttle_move()
+	..()
+	if (current_location == landmark_station)
+		command_announcement.Announce("The Residential Shuttle has docked at your facility.", announcer)
+	if (current_location == landmark_offsite)
+		command_announcement.Announce("The Residential Shuttle has docked at [using_map.dock_name].", announcer)
 
 /obj/effect/shuttle_landmark/premade/residential/residences
 	name = "NCS Serenity Residential"
@@ -26,6 +35,9 @@
 	name = "NSB Cryogaia"
 	landmark_tag = "residential_station"
 	docking_controller = "residential_shuttle_station"
+	base_turf = /turf/simulated/floor/outdoors/snow/plating/cryogaia
+	base_area = /area/borealis2/outdoors/grounds
+	special_dock_targets = list("Residential Shuttle" = "residential_shuttle_docking_left")
 
 
 // -- Objs -- //
