@@ -40,9 +40,9 @@
 /obj/item/weapon/pipe_dispenser/proc/SetupPipes()
 	if(!first_atmos)
 		first_atmos = atmos_pipe_recipes[atmos_pipe_recipes[1]][1]
+		recipe = first_atmos
 	if(!first_disposal)
 		first_disposal = disposal_pipe_recipes[disposal_pipe_recipes[1]][1]
-	recipe = first_atmos
 
 /obj/item/weapon/pipe_dispenser/Destroy()
 	qdel(spark_system)
