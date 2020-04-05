@@ -3624,8 +3624,6 @@
 #include "maps\southern_cross\items\clothing\sc_accessory.dm"
 #include "maps\southern_cross\items\clothing\sc_suit.dm"
 #include "maps\southern_cross\items\clothing\sc_under.dm"
-#include "maps\southern_cross\job\outfits.dm"
-#include "maps\southern_cross\job\outfits_vr.dm"
 #include "maps\southern_cross\loadout\loadout_head.dm"
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
