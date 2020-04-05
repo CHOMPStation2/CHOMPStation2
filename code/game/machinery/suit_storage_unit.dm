@@ -586,7 +586,7 @@
 	var/electrified = 0
 
 	//Departments that the cycler can paint suits to look like.
-	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control","Exploration","Pilot Blue","Pilot") //VORESTATION EDIT
+	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control")
 	//Species that the suits can be configured to fit.
 	var/list/species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ, SPECIES_TESHARI, "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid", "Xenochimera","Vasilissan", "Rapala", /*yawngreyedit*/SPECIES_GREY_YW) //VORESTATION EDIT
 
@@ -1201,6 +1201,31 @@
 				suit.item_state = "rig-pilot2"
 				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuitTG"
 				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuitTG"
+		//VOREStation Addition Start
+		if("Director")
+			if(helmet)
+				helmet.name = "director voidsuit helmet"
+				helmet.icon_state = "capvoid"
+				helmet.item_state = "capvoid"
+			if(suit)
+				suit.name = "director voidsuit"
+				suit.icon_state = "capsuit_void"
+				suit.item_state = "capsuit_void"
+				suit.item_state_slots[slot_r_hand_str] = "wiz_voidsuit"
+				suit.item_state_slots[slot_l_hand_str] = "wiz_voidsuit"
+		if("Prototype")
+			if(helmet)
+				helmet.name = "prototype voidsuit helmet"
+				helmet.icon_state = "hosproto"
+				helmet.item_state = "hosproto"
+			if(suit)
+				suit.name = "prototype voidsuit"
+				suit.icon_state = "hosproto_void"
+				suit.item_state = "hosproto_void"
+				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuitTG"
+				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuitTG"
+		//VOREStation Addition End
+		
 
 
 	if(helmet) helmet.name = "refitted [helmet.name]"

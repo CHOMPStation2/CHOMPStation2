@@ -3,11 +3,10 @@
 	prices += list(/obj/item/weapon/storage/fancy/cigarettes/yw/mauser = 18)
 	..()
 
-/obj/machinery/vending/food/prison //Fluff vendor for the lewd houseboat.
+/obj/machinery/vending/food/prison
 	name = "Prison Nutriment Vendor"
 	desc = "Delicious, probably not."
-	icon_state = "boozeomat"
-	icon_deny = "boozeomat-deny"
+	icon_state = "fridge_dark"
 	products = list(/obj/item/weapon/tray = 6,
 					/obj/item/weapon/material/kitchen/utensil/fork = 6,
 					/obj/item/weapon/material/knife/plastic = 6,
@@ -27,7 +26,6 @@
 	desc = "A security equipment vendor."
 	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
 	icon_state = "sec"
-	icon_deny = "sec-deny"
 	req_access = list(access_security)
 	products = list(/obj/item/weapon/handcuffs = 8,/obj/item/weapon/grenade/flashbang = 4,/obj/item/device/flash = 5,
 					/obj/item/weapon/reagent_containers/food/snacks/donut/normal = 12,/obj/item/weapon/storage/box/evidence = 6)

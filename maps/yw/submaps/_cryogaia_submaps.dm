@@ -3,17 +3,6 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-/datum/map_template/cryogaia_lateload/cryogaia_ships
-	name = "Tether - Ships"
-	desc = "Ship transit map and whatnot."
-	mappath = 'cryogaia_ships.dmm'
-
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/ships
-
-/datum/map_z_level/cryogaia_lateload/ships
-	name = "Ships"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
-
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
@@ -108,7 +97,7 @@
 	. = ..()
 	seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 120, /area/cryogaia_away/aerostat/surface/unexplored, /datum/map_template/virgo2)
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_AEROSTAT_SURFACE, world.maxx - 4, world.maxy - 4)
-	new /datum/random_map/noise/ore/virgo2(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)
+	new /datum/random_map/noise/ore/bor4(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)
 
 /datum/map_z_level/cryogaia_lateload/away_aerostat_surface
 	name = "Away Mission - Aerostat Surface"
