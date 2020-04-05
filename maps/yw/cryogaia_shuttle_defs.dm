@@ -132,7 +132,7 @@
 
 /obj/effect/shuttle_landmark/premade/mercenary/station_sw
 	name = "NSB Cryogaia (SW)"
-	landmark_tag = "skipjack_station_sw"
+	landmark_tag = "mercenary_station_sw"
 
 /obj/effect/shuttle_landmark/premade/mercenary/station_n
 	name = "NSB Cryogaia (N)"
@@ -210,3 +210,4 @@
 	name = "NSB Cryogaia"
 	landmark_tag = "specops_station"
 	docking_controller = "specops_dock_airlock"
+	special_dock_targets = list("Special Operations" = "specops_shuttle_fore")

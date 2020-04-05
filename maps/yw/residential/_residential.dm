@@ -3,6 +3,7 @@
 /datum/shuttle/autodock/ferry/residential
 	name = "Residential Shuttle"
 	location = FERRY_LOCATION_OFFSITE
+	shuttle_area = /area/shuttle/residential
 	docking_controller_tag = "residential_shuttle"
 	landmark_offsite = "residential_residential"
 	landmark_station = "residential_station"
@@ -26,18 +27,18 @@
 	landmark_tag = "residential_station"
 	docking_controller = "residential_shuttle_station"
 
-	
+
 // -- Objs -- //
 
 /obj/machinery/computer/shuttle_control/residential_shuttle
 	name = "residential ferry control console"
-	shuttle_tag = "Residential Shuttle 1"
+	shuttle_tag = "Residential Shuttle"
 
 
 // -- Areas -- //
 
 /area/shuttle/residential
-	name = "\improper Residential Shuttle 1"
+	name = "\improper Residential Shuttle"
 	base_turf = /turf/simulated/floor/outdoors/snow/plating/cryogaia
 
 /area/residential
