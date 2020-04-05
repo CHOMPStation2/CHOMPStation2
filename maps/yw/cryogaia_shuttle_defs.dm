@@ -55,7 +55,7 @@
 	name = "Supply"
 	location = FERRY_LOCATION_OFFSITE
 	warmup_time = 10
-	shuttle_area = /area/supply
+	shuttle_area = /area/shuttle/supply
 	landmark_offsite = "supply_centcom"
 	landmark_station = "supply_station"
 	docking_controller_tag = "supply_shuttle"
