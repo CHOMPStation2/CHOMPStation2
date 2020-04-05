@@ -35,12 +35,14 @@
 	src.spark_system = new /datum/effect/effect/system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+	tool = new /obj/item/weapon/tool/wrench/cyborg(src) // RPDs have wrenches inside of them, so that they can wrench down spawned pipes without being used as superior wrenches themselves.
+
+/obj/item/weapon/pipe_dispenser/proc/SetupPipes()
 	if(!first_atmos)
 		first_atmos = atmos_pipe_recipes[atmos_pipe_recipes[1]][1]
 	if(!first_disposal)
 		first_disposal = disposal_pipe_recipes[disposal_pipe_recipes[1]][1]
 	recipe = first_atmos
-	tool = new /obj/item/weapon/tool/wrench/cyborg(src) // RPDs have wrenches inside of them, so that they can wrench down spawned pipes without being used as superior wrenches themselves.
 
 /obj/item/weapon/pipe_dispenser/Destroy()
 	qdel(spark_system)
@@ -58,6 +60,7 @@
 	src.interact(user)
 
 /obj/item/weapon/pipe_dispenser/interact(mob/user)
+	SetupPipes()
 	var/list/lines = list()
 	if(mode >= ATMOS_MODE)
 		lines += "<div class=\"block\"><h3>Direction:</h3><div class=\"item\">"
@@ -169,6 +172,7 @@
 	popup.open()
 
 /obj/item/weapon/pipe_dispenser/Topic(href,href_list)
+	SetupPipes()
 	if(..())
 		return
 	if(!usr.canmove || usr.stat || usr.restrained() || !in_range(loc, usr))
