@@ -1,37 +1,44 @@
-// -- Datums -- //
+// -- Shuttle -- //
 
-/datum/shuttle/ferry/residential
+/datum/shuttle/autodock/ferry/residential
 	name = "Residential Shuttle"
-	location = 1 // At offsite
-	warmup_time = 30
-	move_time = 270
-	area_station = /area/shuttle/residential/main
-	area_offsite = /area/shuttle/residential/residential
-	area_transition = /area/shuttle/residential/transition
+	location = FERRY_LOCATION_OFFSITE
 	docking_controller_tag = "residential_shuttle"
-	dock_target_station = "residential_shuttle_station"
-	dock_target_offsite = "residential_shuttle_offsite"
+	landmark_offsite = "residential_residential"
+	landmark_station = "residential_station"
+	landmark_transition = "residential_transit"
+	warmup_time = 3 SECONDS
+	move_time = 27 SECONDS
 
+/obj/effect/shuttle_landmark/premade/residential/residences
+	name = "NCS Serenity Residential"
+	landmark_tag = "residential_residential"
+	docking_controller = "residential_shuttle_offsite"
+	base_turf = /turf/space
+	base_area = /area/space
+
+/obj/effect/shuttle_landmark/premade/residential/transit
+	name = "Space"
+	landmark_tag = "residential_transit"
+
+/obj/effect/shuttle_landmark/premade/residential/station
+	name = "NSB Cryogaia"
+	landmark_tag = "residential_station"
+	docking_controller = "residential_shuttle_station"
+
+	
 // -- Objs -- //
 
 /obj/machinery/computer/shuttle_control/residential_shuttle
 	name = "residential ferry control console"
-	shuttle_tag = "Residential Shuttle"
+	shuttle_tag = "Residential Shuttle 1"
 
 
 // -- Areas -- //
 
-/area/shuttle/residential/main
-	name = "\improper Residential Shuttle - Station"
+/area/shuttle/residential
+	name = "\improper Residential Shuttle 1"
 	base_turf = /turf/simulated/floor/outdoors/snow/plating/cryogaia
-
-/area/shuttle/residential/residential
-	name = "\improper Residential Shuttle - Residential"
-	base_turf = /turf/space
-
-/area/shuttle/residential/transition
-	name = "\improper Residential Shuttle - Transition"
-	base_turf = /turf/space
 
 /area/residential
 	icon = 'icons/turf/areas_yw.dmi'

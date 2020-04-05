@@ -1,41 +1,48 @@
 #include "submaps/virgo2.dm"
 
-// -- Datums -- //
-
-/datum/shuttle_destination/excursion/borealis4orbit
-	name = "Borealis 4 Orbit"
-	my_area = /area/shuttle/excursion/space
-	preferred_interim_area = /area/shuttle/excursion/space_moving
-	skip_me = TRUE
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS,
-		/datum/shuttle_destination/excursion/aerostat = 30 SECONDS,
-	)
-
-/datum/shuttle_destination/excursion/aerostat
-	name = "Remmi Aerostat"
-	my_area = /area/shuttle/excursion/away_aerostat
-	preferred_interim_area = /area/shuttle/excursion/space_moving
-	skip_me = TRUE
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/borealis4orbit = 30 SECONDS,
-	)
+/obj/effect/overmap/visitable/sector/borealis4
+	name = "Borealis 4"
+	desc = "Includes the Remmi Aerostat and associated ground mining complexes."
+	icon_state = "globe"
+	color = "#dfff3f" //Bright yellow
+	initial_generic_waypoints = list("aerostat_west","aerostat_east","aerostat_south","aerostat_northwest","aerostat_northeast")
 
 /datum/shuttle/autodock/ferry/aerostat
 	name = "Aerostat Ferry"
 	shuttle_area = /area/shuttle/aerostat
 	warmup_time = 10	//want some warmup time so people can cancel.
-	landmark_station = "aerostat_east"
+	landmark_station = "aerostat_west"
 	landmark_offsite = "aerostat_surface"
 
-/datum/random_map/noise/ore/virgo2
-	descriptor = "virgo 2 ore distribution map"
+
+/obj/effect/shuttle_landmark/premade/aerostat/aerostat_west
+	name = "Aerostat (West Dock)"
+	landmark_tag = "aerostat_west"
+	base_turf = /turf/unsimulated/floor/sky/bor4_sky //Starts with a shuttle on top of it, so nice to remind it.
+	base_area = /area/cryogaia_away/aerostat
+/obj/effect/shuttle_landmark/premade/aerostat/aerostat_east
+	name = "Aerostat (East Dock)"
+	landmark_tag = "aerostat_east"
+/obj/effect/shuttle_landmark/premade/aerostat/aerostat_south
+	name = "Aerostat (South Dock)"
+	landmark_tag = "aerostat_south"
+/obj/effect/shuttle_landmark/premade/aerostat/aerostat_northwest
+	name = "Aerostat (Northwest Dock)"
+	landmark_tag = "aerostat_northwest"
+/obj/effect/shuttle_landmark/premade/aerostat/aerostat_northeast
+	name = "Aerostat (Northeast Dock)"
+	landmark_tag = "aerostat_northeast"
+/obj/effect/shuttle_landmark/premade/aerostat_surface
+	name = "Borealis 4 Surface"
+	landmark_tag = "aerostat_surface"
+
+
+/datum/random_map/noise/ore/bor4
+	descriptor = "borealis 4 ore distribution map"
 	deep_val = 0.2
 	rare_val = 0.1
 
-/datum/random_map/noise/ore/virgo2/check_map_sanity()
+/datum/random_map/noise/ore/BOR4/check_map_sanity()
 	return 1 //Totally random, but probably beneficial.
 
 // -- Objs -- //
@@ -44,15 +51,10 @@
 	name = "aerostat ferry control console"
 	shuttle_tag = "Aerostat Ferry"
 
-/obj/shuttle_connector/aerostat
-	name = "shuttle connector - aerostat"
-	shuttle_name = "Excursion Shuttle"
-	destinations = list(/datum/shuttle_destination/excursion/borealis4orbit, /datum/shuttle_destination/excursion/aerostat)
-
 /obj/away_mission_init/aerostat/Initialize()
-	/*seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 50, /area/tether_away/aerostat/surface/unexplored, /datum/map_template/virgo2)
+	/*seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 50, /area/tether_away/aerostat/surface/unexplored, /datum/map_template/BOR4)
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, world.maxx, world.maxy)
-	new /datum/random_map/noise/ore/virgo2(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)*/
+	new /datum/random_map/noise/ore/BOR4(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)*/
 
 	initialized = TRUE
 	return INITIALIZE_HINT_QDEL
@@ -103,53 +105,53 @@
 // -- Turfs -- //
 
 //Atmosphere properties
-#define VIRGO2_ONE_ATMOSPHERE	312.1 //kPa
-#define VIRGO2_AVG_TEMP			612 //kelvin
+#define BOR4_ONE_ATMOSPHERE	312.1 //kPa
+#define BOR4_AVG_TEMP			612 //kelvin
 
-#define VIRGO2_PER_N2		0.10 //percent
-#define VIRGO2_PER_O2		0.03
-#define VIRGO2_PER_N2O		0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
-#define VIRGO2_PER_CO2		0.87
-#define VIRGO2_PER_PHORON	0.00
+#define BOR4_PER_N2		0.10 //percent
+#define BOR4_PER_O2		0.03
+#define BOR4_PER_N2O		0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
+#define BOR4_PER_CO2		0.87
+#define BOR4_PER_PHORON	0.00
 
 //Math only beyond this point
-#define VIRGO2_MOL_PER_TURF		(VIRGO2_ONE_ATMOSPHERE*CELL_VOLUME/(VIRGO2_AVG_TEMP*R_IDEAL_GAS_EQUATION))
-#define VIRGO2_MOL_N2			(VIRGO2_MOL_PER_TURF * VIRGO2_PER_N2)
-#define VIRGO2_MOL_O2			(VIRGO2_MOL_PER_TURF * VIRGO2_PER_O2)
-#define VIRGO2_MOL_N2O			(VIRGO2_MOL_PER_TURF * VIRGO2_PER_N2O)
-#define VIRGO2_MOL_CO2			(VIRGO2_MOL_PER_TURF * VIRGO2_PER_CO2)
-#define VIRGO2_MOL_PHORON		(VIRGO2_MOL_PER_TURF * VIRGO2_PER_PHORON)
+#define BOR4_MOL_PER_TURF		(BOR4_ONE_ATMOSPHERE*CELL_VOLUME/(BOR4_AVG_TEMP*R_IDEAL_GAS_EQUATION))
+#define BOR4_MOL_N2				(BOR4_MOL_PER_TURF * BOR4_PER_N2)
+#define BOR4_MOL_O2				(BOR4_MOL_PER_TURF * BOR4_PER_O2)
+#define BOR4_MOL_N2O			(BOR4_MOL_PER_TURF * BOR4_PER_N2O)
+#define BOR4_MOL_CO2			(BOR4_MOL_PER_TURF * BOR4_PER_CO2)
+#define BOR4_MOL_PHORON			(BOR4_MOL_PER_TURF * BOR4_PER_PHORON)
 
 //Turfmakers
-#define VIRGO2_SET_ATMOS	nitrogen=VIRGO2_MOL_N2;oxygen=VIRGO2_MOL_O2;carbon_dioxide=VIRGO2_MOL_CO2;phoron=VIRGO2_MOL_PHORON;temperature=VIRGO2_AVG_TEMP
-#define VIRGO2_TURF_CREATE(x)	x/virgo2/nitrogen=VIRGO2_MOL_N2;x/virgo2/oxygen=VIRGO2_MOL_O2;x/virgo2/carbon_dioxide=VIRGO2_MOL_CO2;x/virgo2/phoron=VIRGO2_MOL_PHORON;x/virgo2/temperature=VIRGO2_AVG_TEMP;x/virgo2/color="#eacd7c"
+#define BOR4_SET_ATMOS	nitrogen=BOR4_MOL_N2;oxygen=BOR4_MOL_O2;carbon_dioxide=BOR4_MOL_CO2;phoron=BOR4_MOL_PHORON;temperature=BOR4_AVG_TEMP
+#define BOR4_TURF_CREATE(x)	x/bor4/nitrogen=BOR4_MOL_N2;x/bor4/oxygen=BOR4_MOL_O2;x/bor4/carbon_dioxide=BOR4_MOL_CO2;x/bor4/phoron=BOR4_MOL_PHORON;x/bor4/temperature=BOR4_AVG_TEMP;x/bor4/color="#eacd7c"
 
-/turf/unsimulated/floor/sky/virgo2_sky
-	name = "virgo 2me  atmosphere"
+/turf/unsimulated/floor/sky/bor4_sky
+	name = "borealis 4 atmosphere"
 	desc = "Be careful where you step!"
 	color = "#eacd7c"
-	VIRGO2_SET_ATMOS
+	BOR4_SET_ATMOS
 
-/turf/unsimulated/floor/sky/virgo2_sky/Initialize()
+/turf/unsimulated/floor/sky/bor4_sky/Initialize()
 	skyfall_levels = list(z+1)
 	. = ..()
 
-/turf/simulated/shuttle/wall/voidcraft/green/virgo2
-	VIRGO2_SET_ATMOS
+/turf/simulated/shuttle/wall/voidcraft/green/bor4
+	BOR4_SET_ATMOS
 	color = "#eacd7c"
 
-/turf/simulated/shuttle/wall/voidcraft/green/virgo2/nocol
+/turf/simulated/shuttle/wall/voidcraft/green/bor4/nocol
 	color = null
 
-VIRGO2_TURF_CREATE(/turf/unsimulated/wall/planetary)
+BOR4_TURF_CREATE(/turf/unsimulated/wall/planetary)
 
-VIRGO2_TURF_CREATE(/turf/simulated/wall)
-VIRGO2_TURF_CREATE(/turf/simulated/floor/plating)
-VIRGO2_TURF_CREATE(/turf/simulated/floor/bluegrid)
-VIRGO2_TURF_CREATE(/turf/simulated/floor/tiled/techfloor)
+BOR4_TURF_CREATE(/turf/simulated/wall)
+BOR4_TURF_CREATE(/turf/simulated/floor/plating)
+BOR4_TURF_CREATE(/turf/simulated/floor/bluegrid)
+BOR4_TURF_CREATE(/turf/simulated/floor/tiled/techfloor)
 
-VIRGO2_TURF_CREATE(/turf/simulated/mineral)
-/turf/simulated/mineral/virgo2/make_ore()
+BOR4_TURF_CREATE(/turf/simulated/mineral)
+/turf/simulated/mineral/bor4/make_ore()
 	if(mineral)
 		return
 
@@ -160,43 +162,34 @@ VIRGO2_TURF_CREATE(/turf/simulated/mineral)
 		UpdateMineral()
 	update_icon()
 
-VIRGO2_TURF_CREATE(/turf/simulated/mineral/ignore_mapgen)
-VIRGO2_TURF_CREATE(/turf/simulated/mineral/floor)
-VIRGO2_TURF_CREATE(/turf/simulated/mineral/floor/ignore_mapgen)
+BOR4_TURF_CREATE(/turf/simulated/mineral/ignore_mapgen)
+BOR4_TURF_CREATE(/turf/simulated/mineral/floor)
+BOR4_TURF_CREATE(/turf/simulated/mineral/floor/ignore_mapgen)
 
 // -- Areas -- //
-
-/area/shuttle/excursion/away_aerostat
-	name = "\improper Excursion Shuttle - Aerostat"
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
-
 // The aerostat shuttle
-/area/shuttle/aerostat/docked
-	name = "\improper Aerostat Shuttle - Dock"
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
-
-/area/shuttle/aerostat/landed
-	name = "\improper Aerostat Shuttle - Surface"
-	base_turf = /turf/simulated/floor/plating/virgo2
+/area/shuttle/aerostat
+	name = "\improper Aerostat Shuttle"
+	base_turf = /turf/unsimulated/floor/sky/bor4_sky
 
 //The aerostat itself
 /area/cryogaia_away/aerostat
 	name = "\improper Away Mission - Aerostat Outside"
 	icon_state = "away"
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
+	base_turf = /turf/unsimulated/floor/sky/bor4_sky
 	requires_power = FALSE
 	dynamic_lighting = FALSE
 
 /area/cryogaia_away/aerostat/inside
 	name = "\improper Away Mission - Aerostat Inside"
 	icon_state = "crew_quarters"
-	base_turf = /turf/simulated/floor/plating/virgo2
+	base_turf = /turf/simulated/floor/plating/bor4
 	dynamic_lighting = TRUE
 
 /area/cryogaia_away/aerostat/surface
 	flags = RAD_SHIELDED
 	ambience = list('sound/ambience/ambimine.ogg', 'sound/ambience/song_game.ogg')
-	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/virgo2
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/bor4
 
 /area/cryogaia_away/aerostat/surface/explored
 	name = "Away Mission - Aerostat Surface (E)"

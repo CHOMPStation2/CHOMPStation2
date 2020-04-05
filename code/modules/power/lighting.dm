@@ -234,16 +234,6 @@ var/global/list/light_type_cache = list()
 	var/current_alert = null	// Which alert are we showing right now?
 	//VOREStation Edit End
 
-	var/obj/item/weapon/cell/emergency_light/cell
-	var/start_with_cell = TRUE	// if true, this fixture generates a very weak cell at roundstart
-
-	var/emergency_mode = FALSE	// if true, the light is in emergency mode
-	var/no_emergency = FALSE	// if true, this light cannot ever have an emergency mode
-	var/bulb_emergency_brightness_mul = 0.25	// multiplier for this light's base brightness in emergency power mode
-	var/bulb_emergency_colour = "#FF3232"	// determines the colour of the light while it's in emergency mode
-	var/bulb_emergency_pow_mul = 0.75	// the multiplier for determining the light's power in emergency mode
-	var/bulb_emergency_pow_min = 0.5	// the minimum value for the light's power in emergency mode
-
 	var/auto_flicker = FALSE // If true, will constantly flicker, so long as someone is around to see it (otherwise its a waste of CPU).
 
 	var/obj/item/weapon/cell/emergency_light/cell
