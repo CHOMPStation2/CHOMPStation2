@@ -79,7 +79,7 @@
 
 /datum/unit_test/zas_area_test/supply_centcomm
 	name = "ZAS: Supply Shuttle"
-	area_path = /area/shuttle/supply
+	area_path = /area/supply //yw edit: path changed
 
 /datum/unit_test/zas_area_test/emergency_shuttle
 	name = "ZAS: Emergency Shuttle"
