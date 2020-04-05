@@ -1,19 +1,19 @@
 //Normal YW map defs
-#define Z_LEVEL_CRYOGAIA_CENTCOM	1
-#define Z_LEVEL_CRYOGAIA_MINE		2
-#define Z_LEVEL_CRYOGAIA_TRANSIT	3 //added due to explosions jumping from mine leve to lower.
-#define Z_LEVEL_CRYOGAIA_LOWER		4
-#define Z_LEVEL_CRYOGAIA_MAIN		5
-#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		6
-#define Z_LEVEL_SHIPS				7
-#define Z_LEVEL_ALIENSHIP			8
-#define Z_LEVEL_BEACH				9
-#define Z_LEVEL_BEACH_CAVE			10
-#define Z_LEVEL_AEROSTAT			11
-#define Z_LEVEL_AEROSTAT_SURFACE	12
-#define Z_LEVEL_DEBRISFIELD			13
-#define Z_LEVEL_UNDERDARK			14
-#define Z_LEVEL_PLAINS				15
+#define Z_LEVEL_CRYOGAIA_CENTCOM		1
+#define Z_LEVEL_CRYOGAIA_MINE			2
+#define Z_LEVEL_CRYOGAIA_TRANSIT		3 //added due to explosions jumping from mine leve to lower.
+#define Z_LEVEL_CRYOGAIA_LOWER			4
+#define Z_LEVEL_CRYOGAIA_MAIN			5
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	6
+#define Z_LEVEL_SHIPS					7
+#define Z_LEVEL_ALIENSHIP				8
+#define Z_LEVEL_BEACH					9
+#define Z_LEVEL_BEACH_CAVE				10
+#define Z_LEVEL_AEROSTAT				11
+#define Z_LEVEL_AEROSTAT_SURFACE		12
+#define Z_LEVEL_DEBRISFIELD				13
+#define Z_LEVEL_UNDERDARK				14
+#define Z_LEVEL_PLAINS					15
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -29,6 +29,12 @@
 
 	zlevel_datum_type = /datum/map_z_level/cryogaia
 
+	use_overmap = TRUE
+	overmap_z = Z_LEVEL_CRYOGAIA_CENTCOM
+	overmap_size = 20
+	overmap_event_areas = 10
+
+	usable_email_tlds = list("cryogaia.nt")
 	lobby_icon = 'icons/misc/title_yw2.dmi'
 	lobby_screens = list("cryogaia")
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
@@ -137,7 +143,8 @@
 		/area/vacant/vacant_site/locker,
 		/area/tcommsat/powercontrol,
 		/area/constructionsite/medical,
-		/area/borealis2/outdoors/grounds/entrance)
+		/area/borealis2/outdoors/grounds/entrance,
+		/area/security/vacantoffice)
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)
@@ -145,8 +152,7 @@
 	unit_test_z_levels = list(2,4,5)
 
 	lateload_z_levels = list(
-		list("Tether - Ships"/*",Tether - Plains"*/), //Stock Tether lateload maps
-		list("Alien Ship - Z1 Ship"),
+		//list("Alien Ship - Z1 Ship"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space")
@@ -206,8 +212,59 @@
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
 
 
+// Overmap represetation of cryogaia
+/obj/effect/overmap/visitable/sector/cryogaia
+	name = "Borealis Majoris"
+	desc = "Home to coldness, and your workplace."
+	base = TRUE
+	icon_state = "globe"
+	color = "#00AAFF"
+	initial_generic_waypoints = list(
+		"cryogaia_excursion_hangar"
+	)
+	//Despite not being in the multi-z complex, these levels are part of the overmap sector
+	extra_z_levels = null //None at the moment. Plains would be added here.
+
+/obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = FALSE)
+
+/obj/effect/overmap/visitable/sector/cryogaia/Uncrossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = TRUE)
+
+/obj/effect/overmap/visitable/sector/cryogaia/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
+	//For landables, we need to see if their shuttle is cloaked
+	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
+		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
+		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
+		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			atc.msg(message)
+
+	//For ships, it's safe to assume they're big enough to not be sneaky
+	else if(istype(AM, /obj/effect/overmap/visitable/ship))
+		atc.msg(message)
+
+/obj/effect/overmap/visitable/sector/cryogaia/get_space_zlevels()
+	return list() //None!
+
+/obj/effect/overmap/visitable/sector/virgo3b/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
+	//For landables, we need to see if their shuttle is cloaked
+	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
+		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
+		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
+		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			atc.msg(message)
+
+	//For ships, it's safe to assume they're big enough to not be sneaky
+	else if(istype(AM, /obj/effect/overmap/visitable/ship))
+		atc.msg(message)
+
+
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
-#define CRYOGAIA_MAP_SIZE 150 // Width and height of compiled in Southern Cross z levels.
+#define CRYOGAIA_MAP_SIZE 250 // Width and height of compiled in Southern Cross z levels.
 #define CRYOGAIA_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
 #define CRYOGAIA_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*CRYOGAIA_MAP_SIZE) - CRYOGAIA_HOLOMAP_CENTER_GUTTER) / 2) // 100
 #define CRYOGAIA_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*CRYOGAIA_MAP_SIZE)) / 2) // 60
@@ -221,8 +278,8 @@
 	base_turf = /turf/simulated/floor/indoorrocks
 	holomap_legend_x = 220
 	holomap_legend_y = 160
-	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
-	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*0
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*0
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y
 
 /datum/map_z_level/cryogaia/transit
 	z = Z_LEVEL_CRYOGAIA_TRANSIT
@@ -237,7 +294,7 @@
 	base_turf = /turf/simulated/open // /turf/simulated/floor/outdoors/rocks/cryogaia
 	holomap_legend_x = 220
 	holomap_legend_y = 160
-	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
 	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*1
 
 /datum/map_z_level/cryogaia/main
@@ -248,7 +305,7 @@
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
-	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*2
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y
 
 /datum/map_z_level/cryogaia/centcom
 	z = Z_LEVEL_CRYOGAIA_CENTCOM

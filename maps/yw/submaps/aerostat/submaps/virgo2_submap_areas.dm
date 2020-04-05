@@ -2,7 +2,7 @@
 	name = "Submap Area"
 	icon_state = "submap"
 	dynamic_lighting = FALSE
-	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/virgo2
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/bor4
 
 /area/submap/virgo2/spider1
 	name = "spider nest"

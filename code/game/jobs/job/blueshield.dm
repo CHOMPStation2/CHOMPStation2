@@ -1,7 +1,7 @@
 /datum/job/blueshield
 	title = "Blueshield Guard"
 	flag = BLUESHIELD //this may be used later.
-	department = "Command"
+	departments = list(DEPARTMENT_COMMAND)
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
@@ -9,7 +9,6 @@
 	supervisors = "the Colony Director" //Reports directly to CD
 	selection_color = "#006cb3"
 	req_admin_notify = 1
-	head_position = 1
 	minimum_character_age = 25
 	ideal_character_age = 32 		//Experienced, but physically in their prime
 	minimal_player_age = 3
@@ -21,6 +20,7 @@
 	minimal_access = list(access_forensics_lockers, access_sec_doors, access_medical, access_maint_tunnels, access_RC_announce, access_keycard_auth, access_heads, access_blueshield)
 
 	outfit_type = /decl/hierarchy/outfit/job/blueshield
+	job_description = "Placeholder desc: General rules is to not get involved with security matters, your job is only to keep command personnel alive."
 
 /datum/job/blueshield/equip(var/mob/living/carbon/human/H)
 	. = ..()

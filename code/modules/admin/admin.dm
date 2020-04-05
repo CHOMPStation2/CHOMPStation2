@@ -75,6 +75,7 @@ proc/admin_notice(var/message, var/rights)
 
 	if(M.client)
 		body += "| <A HREF='?src=\ref[src];sendtoprison=\ref[M]'>Prison</A> | "
+		body += "\ <A HREF='?src=\ref[src];sendbacktolobby=\ref[M]'>Send back to Lobby</A> | "
 		var/muted = M.client.prefs.muted
 		body += {"<br><b>Mute: </b>
 			\[<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_IC]'><font color='[(muted & MUTE_IC)?"red":"blue"]'>IC</font></a> |
@@ -90,7 +91,7 @@ proc/admin_notice(var/message, var/rights)
 		<A href='?src=\ref[src];getmob=\ref[M]'>Get</A> |
 		<A href='?src=\ref[src];sendmob=\ref[M]'>Send To</A>
 		<br><br>
-		[check_rights(R_ADMIN|R_MOD,0) ? "<A href='?src=\ref[src];traitor=\ref[M]'>Traitor panel</A> | " : "" ]
+		[check_rights(R_ADMIN|R_MOD|R_EVENT,0) ? "<A href='?src=\ref[src];traitor=\ref[M]'>Traitor panel</A> | " : "" ]
 		<A href='?src=\ref[src];narrateto=\ref[M]'>Narrate to</A> |
 		<A href='?src=\ref[src];subtlemessage=\ref[M]'>Subtle message</A>
 	"}
@@ -127,6 +128,8 @@ proc/admin_notice(var/message, var/rights)
 				body += "<A href='?src=\ref[src];makeanimal=\ref[M]'>Re-Animalize</A> | "
 			else
 				body += "<A href='?src=\ref[src];makeanimal=\ref[M]'>Animalize</A> | "
+
+			body += "<A href='?src=\ref[src];respawn=\ref[M.client]'>Respawn</A> | "
 
 			// DNA2 - Admin Hax
 			if(M.dna && iscarbon(M))
@@ -1373,7 +1376,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 		return //Extra sanity check to make sure only observers are shoved into things
 
 	//Same as assume-direct-control perm requirements.
-	if (!check_rights(R_VAREDIT,0) || !check_rights(R_ADMIN|R_DEBUG,0))
+	if (!check_rights(R_VAREDIT,0) || !check_rights(R_ADMIN|R_DEBUG|R_EVENT,0))
 		return 0
 	if (!frommob.ckey)
 		return 0
@@ -1426,7 +1429,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	if (!istype(src,/datum/admins))
 		src = usr.client.holder
-	if (!istype(src,/datum/admins) || !check_rights(R_ADMIN))
+	if (!istype(src,/datum/admins) || !check_rights(R_ADMIN|R_EVENT|R_FUN))
 		to_chat(usr, "Error: you are not an admin!")
 		return
 
@@ -1444,7 +1447,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	var/msg
 
-	if(check_rights(R_ADMIN|R_MOD))
+	if(check_rights(R_ADMIN|R_MOD|R_EVENT))
 		if (H.paralysis == 0)
 			H.paralysis = 8000
 			msg = "has paralyzed [key_name(H)]."
@@ -1462,7 +1465,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set popup_menu = FALSE //VOREStation Edit - Declutter.
 	var/crystals
 
-	if(check_rights(R_ADMIN))
+	if(check_rights(R_ADMIN|R_EVENT))
 		crystals = input("Amount of telecrystals for [H.ckey], currently [H.mind.tcrystals].", crystals) as null|num
 		if (!isnull(crystals))
 			H.mind.tcrystals = crystals
@@ -1478,7 +1481,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set popup_menu = FALSE //VOREStation Edit - Declutter.
 	var/crystals
 
-	if(check_rights(R_ADMIN))
+	if(check_rights(R_ADMIN|R_EVENT))
 		crystals = input("Amount of telecrystals to give to [H.ckey], currently [H.mind.tcrystals].", crystals) as null|num
 		if (!isnull(crystals))
 			H.mind.tcrystals += crystals
@@ -1561,12 +1564,12 @@ datum/admins/var/obj/item/weapon/paper/admin/faxreply // var to hold fax replies
 		if(P.sender) // sent as a reply
 			log_admin("[key_name(src.owner)] replied to a fax message from [key_name(P.sender)]")
 			for(var/client/C in admins)
-				if((R_ADMIN | R_MOD) & C.holder.rights)
+				if((R_ADMIN | R_MOD | R_EVENT) & C.holder.rights)
 					to_chat(C, "<span class='log_message'><span class='prefix'>FAX LOG:</span>[key_name_admin(src.owner)] replied to a fax message from [key_name_admin(P.sender)] (<a href='?_src_=holder;AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>")
 		else
 			log_admin("[key_name(src.owner)] has sent a fax message to [destination.department]")
 			for(var/client/C in admins)
-				if((R_ADMIN | R_MOD) & C.holder.rights)
+				if((R_ADMIN | R_MOD | R_EVENT) & C.holder.rights)
 					to_chat(C, "<span class='log_message'><span class='prefix'>FAX LOG:</span>[key_name_admin(src.owner)] has sent a fax message to [destination.department] (<a href='?_src_=holder;AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>")
 
 	else

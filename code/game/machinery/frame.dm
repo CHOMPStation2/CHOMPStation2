@@ -33,10 +33,12 @@
 
 /datum/frame/frame_types/computer
 	name = "Computer"
+	icon_override = 'icons/obj/stock_parts_vr.dmi' //VOREStation Edit
 	frame_class = FRAME_CLASS_COMPUTER
 
 /datum/frame/frame_types/machine
 	name = "Machine"
+	icon_override = 'icons/obj/stock_parts_vr.dmi' //VOREStation Edit
 	frame_class = FRAME_CLASS_MACHINE
 
 /datum/frame/frame_types/conveyor
@@ -156,6 +158,7 @@
 
 /datum/frame/frame_types/air_alarm
 	name = "Air Alarm"
+	icon_override = 'icons/obj/monitors_vr.dmi' //VOREStation Edit - Matching frame.
 	frame_class = FRAME_CLASS_ALARM
 	frame_size = 2
 	frame_style = FRAME_STYLE_WALL
@@ -186,6 +189,13 @@
 	x_offset = 24
 	y_offset = 24
 
+/datum/frame/frame_types/geiger //yw edit start
+	name = "Geiger Counter"
+	frame_class = FRAME_CLASS_ALARM
+	frame_size = 2
+	frame_style = FRAME_STYLE_WALL
+	x_offset = 28
+	y_offset = 28 //yw edit ends
 //////////////////////////////
 // Frame Object (Structure)
 //////////////////////////////
