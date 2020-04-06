@@ -3,13 +3,13 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/turf/simulated/wall/virgo2,
+/turf/simulated/wall/bor4,
 /area/submap/virgo2/Shack1)
 "c" = (
 /turf/template_noop,
 /area/submap/virgo2/Shack1)
 "d" = (
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/Shack1)
 "e" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -44,6 +44,12 @@
 /turf/simulated/floor/holofloor/wood{
 	icon_state = "wood_broken5"
 	},
+/area/submap/virgo2/Shack1)
+"l" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/multiple/voidsuit,
+/obj/structure/salvageable/personal,
+/turf/simulated/floor/wood,
 /area/submap/virgo2/Shack1)
 "m" = (
 /obj/machinery/door/airlock/external,
@@ -86,9 +92,9 @@
 /turf/simulated/floor/wood,
 /area/submap/virgo2/Shack1)
 "v" = (
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/template_noop)
-"K" = (
+"O" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/multiple/voidsuit,
 /turf/simulated/floor/wood,
@@ -157,7 +163,7 @@ a
 (6,1,1) = {"
 a
 b
-K
+l
 h
 i
 i
@@ -169,7 +175,7 @@ a
 (7,1,1) = {"
 a
 b
-K
+O
 k
 i
 i

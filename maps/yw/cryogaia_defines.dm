@@ -12,6 +12,7 @@
 #define Z_LEVEL_DEBRISFIELD				11
 #define Z_LEVEL_UNDERDARK				12
 #define Z_LEVEL_PLAINS					13
+#define Z_LEVEL_GATEWAY					14
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
