@@ -64,18 +64,6 @@
 	var/static/target_z
 
 
-#include "alienship/_alienship.dm"
-/datum/map_template/cryogaia_lateload/away_alienship
-	name = "Alien Ship - Z1 Ship"
-	desc = "The alien ship away mission."
-	mappath = 'alienship/alienship.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_alienship
-
-/datum/map_z_level/cryogaia_lateload/away_alienship
-	name = "Away Mission - Alien Ship"
-	z = Z_LEVEL_ALIENSHIP
-
-
 #include "aerostat/_aerostat.dm"
 /datum/map_template/cryogaia_lateload/away_aerostat
 	name = "Remmi Aerostat - Z1 Aerostat"

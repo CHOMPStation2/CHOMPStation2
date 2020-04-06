@@ -5,15 +5,13 @@
 #define Z_LEVEL_CRYOGAIA_LOWER			4
 #define Z_LEVEL_CRYOGAIA_MAIN			5
 #define Z_LEVEL_CRYOGAIA_RESIDENTIAL	6
-#define Z_LEVEL_SHIPS					7
-#define Z_LEVEL_ALIENSHIP				8
-#define Z_LEVEL_BEACH					9
-#define Z_LEVEL_BEACH_CAVE				10
-#define Z_LEVEL_AEROSTAT				11
-#define Z_LEVEL_AEROSTAT_SURFACE		12
-#define Z_LEVEL_DEBRISFIELD				13
-#define Z_LEVEL_UNDERDARK				14
-#define Z_LEVEL_PLAINS					15
+#define Z_LEVEL_BEACH					7
+#define Z_LEVEL_BEACH_CAVE				8
+#define Z_LEVEL_AEROSTAT				9
+#define Z_LEVEL_AEROSTAT_SURFACE		10
+#define Z_LEVEL_DEBRISFIELD				11
+#define Z_LEVEL_UNDERDARK				12
+#define Z_LEVEL_PLAINS					13
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
