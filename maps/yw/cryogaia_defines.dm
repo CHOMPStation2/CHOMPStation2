@@ -5,15 +5,14 @@
 #define Z_LEVEL_CRYOGAIA_LOWER			4
 #define Z_LEVEL_CRYOGAIA_MAIN			5
 #define Z_LEVEL_CRYOGAIA_RESIDENTIAL	6
-#define Z_LEVEL_SHIPS					7
-#define Z_LEVEL_ALIENSHIP				8
-#define Z_LEVEL_BEACH					9
-#define Z_LEVEL_BEACH_CAVE				10
-#define Z_LEVEL_AEROSTAT				11
-#define Z_LEVEL_AEROSTAT_SURFACE		12
-#define Z_LEVEL_DEBRISFIELD				13
-#define Z_LEVEL_UNDERDARK				14
-#define Z_LEVEL_PLAINS					15
+#define Z_LEVEL_BEACH					7
+#define Z_LEVEL_BEACH_CAVE				8
+#define Z_LEVEL_AEROSTAT				9
+#define Z_LEVEL_AEROSTAT_SURFACE		10
+#define Z_LEVEL_DEBRISFIELD				11
+#define Z_LEVEL_UNDERDARK				12
+#define Z_LEVEL_PLAINS					13
+#define Z_LEVEL_GATEWAY					14
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -278,8 +277,8 @@
 	base_turf = /turf/simulated/floor/indoorrocks
 	holomap_legend_x = 220
 	holomap_legend_y = 160
-	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*0
-	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*1
 
 /datum/map_z_level/cryogaia/transit
 	z = Z_LEVEL_CRYOGAIA_TRANSIT
@@ -295,7 +294,7 @@
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
-	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*1
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*0
 
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN
