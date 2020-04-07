@@ -3,7 +3,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-#include "tether_misc.dmm" //YW Addition, forces map to be compiled
+//#include "tether_misc.dmm" //YW Addition, forces map to be compiled
 /*/datum/map_template/tether_lateload/tether_misc //YW Edit, commented out this lateload
 	name = "Tether - Misc"
 	desc = "Misc areas, like some transit areas, holodecks, merc area."
