@@ -52,14 +52,6 @@
 	name = "aerostat ferry control console"
 	shuttle_tag = "Aerostat Ferry"
 
-/obj/away_mission_init/aerostat/Initialize()
-	/*seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 50, /area/tether_away/aerostat/surface/unexplored, /datum/map_template/BOR4)
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, world.maxx, world.maxy)
-	new /datum/random_map/noise/ore/BOR4(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)*/
-
-	initialized = TRUE
-	return INITIALIZE_HINT_QDEL
-
 /obj/cryogaia_away_spawner/aerostat_inside
 	name = "Aerostat Indoors Spawner"
 	faction = "aerostat_inside"

@@ -277,8 +277,8 @@
 	base_turf = /turf/simulated/floor/indoorrocks
 	holomap_legend_x = 220
 	holomap_legend_y = 160
-	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*0
-	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*1
 
 /datum/map_z_level/cryogaia/transit
 	z = Z_LEVEL_CRYOGAIA_TRANSIT
@@ -294,7 +294,7 @@
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
-	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*1
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*0
 
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN
