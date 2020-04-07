@@ -10,6 +10,10 @@
 
 // -- Objs -- //
 
+/obj/effect/shuttle_landmark/premade/debrisfield/center
+	name = "Debris field"
+	landmark_tag = "tether_excursion_debrisfield"
+
 
 /obj/effect/step_trigger/teleporter/debrisfield_loop/north/New()
 	..()

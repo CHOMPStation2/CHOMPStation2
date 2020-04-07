@@ -176,7 +176,7 @@
 "dt" = (/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/bor4,/area/cryogaia_away/aerostat)
 "du" = (/obj/structure/cable/yellow{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/bor4,/area/cryogaia_away/aerostat)
 "dv" = (/obj/effect/floor_decal/industrial/warning/dust{dir = 4},/obj/structure/cable/yellow{d1 = 2; d2 = 8; icon_state = "2-8"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/bor4,/area/cryogaia_away/aerostat)
-"dw" = (/obj/effect/shuttle_landmark/premade/aerostat/aerostat_west,/turf/unsimulated/floor/sky/bor4_sky,/area/cryogaia_away/aerostat)
+"dw" = (/obj/effect/shuttle_landmark/premade/aerostat/aerostat_east,/turf/unsimulated/floor/sky/bor4_sky,/area/cryogaia_away/aerostat)
 "dx" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/effect/floor_decal/industrial/warning/dust{dir = 8},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/bor4,/area/cryogaia_away/aerostat)
 "dy" = (/obj/structure/cable/heavyduty{icon_state = "1-2"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/bor4,/area/cryogaia_away/aerostat/inside)
 "dz" = (/obj/structure/cable/yellow{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/cable/yellow{d1 = 1; d2 = 4; icon_state = "1-4"},/obj/effect/floor_decal/rust,/turf/simulated/floor/plating/bor4,/area/cryogaia_away/aerostat)
