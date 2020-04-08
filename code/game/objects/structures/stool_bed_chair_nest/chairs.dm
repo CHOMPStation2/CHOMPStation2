@@ -9,11 +9,9 @@
 	buckle_lying = 0 //force people to sit up in chairs when buckled
 	var/propelled = 0 // Check for fire-extinguisher-driven chairs
 
-/obj/structure/bed/chair/New()
-	..() //Todo make metal/stone chairs display as thrones
-	spawn(3)	//sorry. i don't think there's a better way to do this.
-		update_layer()
-	return
+/obj/structure/bed/chair/Initialize()
+	. = ..()
+	update_layer()
 
 /obj/structure/bed/chair/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	..()
@@ -47,13 +45,12 @@
 		var/cache_key = "[base_icon]-armrest-[padding_material ? padding_material.name : "no_material"]"
 		if(isnull(stool_cache[cache_key]))
 			var/image/I = image(icon, "[base_icon]_armrest")
-			I.layer = MOB_LAYER + 0.1
 			I.plane = MOB_PLANE
+			I.layer = ABOVE_MOB_LAYER
 			if(padding_material)
 				I.color = padding_material.icon_colour
-			 stool_cache[cache_key] = I
-		overlays |= stool_cache[cache_key]
-
+			stool_cache[cache_key] = I
+		add_overlay(stool_cache[cache_key])
 
 /obj/structure/bed/chair/proc/update_layer()
 	if(src.dir == NORTH)
@@ -145,6 +142,7 @@
 
 /obj/structure/bed/chair/office/Move()
 	..()
+	playsound(src, 'sound/effects/roll.ogg', 100, 1)
 	if(has_buckled_mobs())
 		for(var/A in buckled_mobs)
 			var/mob/living/occupant = A

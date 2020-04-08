@@ -1602,7 +1602,7 @@
 "EP" = (/obj/machinery/atmospherics/portables_connector{dir = 8},/obj/machinery/portable_atmospherics/canister/empty/nitrogen,/turf/simulated/floor/plating,/area/outpost/research/atmosia)
 "EQ" = (/obj/structure/window/reinforced{dir = 4; health = 1e+006},/obj/structure/window/reinforced,/turf/simulated/mineral/floor/ignore_mapgen/cave,/area/mine/explored)
 "ER" = (/turf/simulated/wall,/area/outpost/research/eva)
-"ES" = (/obj/machinery/door/airlock/glass_research{name = "Expedition Prep"; req_access = list(65)},/obj/machinery/door/firedoor/glass,/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled,/area/outpost/research/eva)
+"ES" = (/obj/machinery/door/airlock/glass_research{name = "Expedition Prep"; req_access = list(65)},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/tiled,/area/outpost/research/eva)
 "ET" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable/blue{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/structure/disposalpipe/segment,/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/tiled/steel,/area/outpost/research/eva)
 "EU" = (/obj/structure/cable/blue{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor/plating,/area/outpost/research/power)
 "EV" = (/obj/structure/cable/blue{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/plating,/area/outpost/research/power)

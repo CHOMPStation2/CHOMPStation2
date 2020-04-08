@@ -304,7 +304,6 @@ var/global/list/latejoin_tram   = list()
 	name = "Airlock NanoMed"
 	desc = "Wall-mounted Medical Equipment dispenser. This limited-use version dispenses antitoxins with mild painkillers for surface EVAs."
 	icon_state = "wallmed"
-	icon_deny = "wallmed-deny"
 	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
 	products = list(/obj/item/weapon/reagent_containers/pill/airlock = 10,/obj/item/device/healthanalyzer = 1)
 	contraband = list(/obj/item/weapon/reagent_containers/pill/tox = 2)
@@ -335,6 +334,7 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/door/airlock/highsecurity/red
 	name = "Bridge Holdout Armory"
 	desc =  "Only to be opened on Code red or greater."
+	req_one_access = list(access_heads)
 
 /obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
 	if(get_security_level() in list("green","blue"))

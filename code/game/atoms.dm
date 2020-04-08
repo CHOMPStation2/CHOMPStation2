@@ -41,8 +41,7 @@
 		_preloader.load(src)
 
 	// Pass our arguments to InitAtom so they can be passed to initialize(), but replace 1st with if-we're-during-mapload.
-	var/do_initialize = SSatoms && SSatoms.initialized // Workaround our non-ideal initialization order: SSatoms may not exist yet.
-	//var/do_initialize = SSatoms.initialized
+	var/do_initialize = SSatoms.initialized
 	if(do_initialize > INITIALIZATION_INSSATOMS)
 		args[1] = (do_initialize == INITIALIZATION_INNEW_MAPLOAD)
 		if(SSatoms.InitAtom(src, args))
@@ -517,6 +516,9 @@
 	var/area/A = get_area(T)
 	if(A && A.has_gravity())
 		return TRUE
+	return FALSE
+
+/atom/proc/is_incorporeal()
 	return FALSE
 
 /atom/proc/drop_location()

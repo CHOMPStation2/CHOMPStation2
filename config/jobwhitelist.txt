@@ -1,5 +1,3 @@
 # Job whitelist in format ckey - jobname
 # Like arokha - clown
-thegreatcoward - clown
-rallard123 - clown
-michaelc156 - clown
+
