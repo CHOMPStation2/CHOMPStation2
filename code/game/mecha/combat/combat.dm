@@ -1,284 +1,233 @@
-/obj/mecha/combat
-	force = 30
-	var/melee_cooldown = 10
-	var/melee_can_hit = 1
-	//var/list/destroyable_obj = list(/obj/mecha, /obj/structure/window, /obj/structure/grille, /turf/simulated/wall, /obj/structure/girder)
-	internal_damage_threshold = 50
-	maint_access = 0
-	//add_req_access = 0
-	//operation_req_access = list(access_hos)
-	damage_absorption = list("brute"=0.7,"fire"=1,"bullet"=0.7,"laser"=0.85,"energy"=1,"bomb"=0.8)
-	var/am = "d3c2fbcadca903a41161ccc9df9cf948"
-
-	max_hull_equip = 2
-	max_weapon_equip = 2
-	max_utility_equip = 1
-	max_universal_equip = 1
-	max_special_equip = 1
-	cargo_capacity = 1
-
 /*
-/obj/mecha/combat/range_action(target as obj|mob|turf)
-	if(internal_damage&MECHA_INT_CONTROL_LOST)
-		target = pick(view(3,target))
-	if(selected_weapon)
-		selected_weapon.fire(target)
-	return
+All of the weapons and projectiles that go with this mech are deliberately kept here in gorilla.dm because
+they are never intended for use by any other mech. Ever. This shit is more overpowered than a clown with a
+HONK Blaster and a pulse cannon protected by projectile armor and powered by a bananium infinite power cell.
 */
 
-/obj/mecha/combat/melee_action(atom/T)
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon
+	name = "8.8cm KwK 47"
+	desc = "Do to enemy mechs what the King Tiger did to Allied tanks with 88 milimeters of armor-piercing German steel!"
+	icon_state = "mecha_grenadelnchr"
+	equip_cooldown = 55 // 5.5 seconds
+	projectile = /obj/item/projectile/bullet/cannon
+	fire_sound = 'sound/weapons/Gunshot_cannon.ogg'
+	projectiles = 1
+	projectile_energy_cost = 1000
+	salvageable = 0 // We don't want players ripping this off a dead mech.
+
+/obj/item/projectile/bullet/cannon
+	name ="armor-piercing shell"
+	icon = 'icons/obj/grenade_yw.dmi'
+	icon_state = "shell"
+	damage = 1000 // In order to 1-hit any other mech and royally fuck anyone unfortunate enough to get in the way.
+
+	on_hit(var/atom/target, var/blocked = 0)
+		explosion(target, 0, 0, 2, 4)
+		return 1
+
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/mg42
+	name = "Maschinengewehr 60"
+	icon_state = "mecha_scatter" // placeholder
+	equip_cooldown = 10
+	projectile = /obj/item/projectile/bullet/rifle/a762
+	fire_sound = 'sound/weapons/mg42.ogg'
+	projectiles = 1000
+	projectiles_per_shot = 3
+	deviation = 0.3
+	projectile_energy_cost = 20
+	fire_cooldown = 1
+	salvageable = 0 // We don't want players ripping this off a dead mech.
+
+
+/obj/effect/decal/mecha_wreckage/gorilla
+	name = "Gorilla wreckage"
+	desc = "... Blitzkrieg?"
+	icon = 'icons/mecha/AxisMech.dmi'
+	icon_state = "pzrwreck"
+	plane = MOB_PLANE
+	pixel_x = -16
+	anchored = 1 // It's fucking huge. You aren't moving it.
+
+/obj/mecha/combat/gorilla
+	desc = "<b><font color='red'>BLITZKRIEEEEEEEG!</font></b>"
+	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A"
+	icon = 'icons/mecha/AxisMech.dmi'
+	icon_state = "pzrmech"
+	initial_icon = "pzrmech"
+	pixel_x = -16
+	step_in = 10
+	health = 5000
+	maxhealth = 5000
+	opacity = 0 // Because there's big tall legs to look through. Also it looks fucky if this is set to 1.
+	deflect_chance = 50
+	damage_absorption = list("brute"=0.1,"fire"=0.7,"bullet"=0.1,"laser"=0.6,"energy"=0.7,"bomb"=0.7) //values show how much damage will pass through, not how much will be absorbed.
+	max_temperature = 25000
+	infra_luminosity = 3
+	add_req_access = 0
+	var/zoom = 0
+	var/smoke = 5
+	var/smoke_ready = 1
+	var/smoke_cooldown = 100
+	var/datum/effect/effect/system/smoke_spread/smoke_system = new
+	wreckage = /obj/effect/decal/mecha_wreckage/gorilla
+	add_req_access = 0
+	internal_damage_threshold = 25
+	force = 60
+	max_equip = 5
+//This will (Should) never be in the hands of players. If it is, the one who inflicted this monster upon the server can edit these vars to not be insane.
+	max_hull_equip = 5
+	max_weapon_equip = 5
+	max_utility_equip = 5
+	max_universal_equip = 5
+	max_special_equip = 2
+
+/obj/mecha/combat/gorilla/Initialize()
+	..()
+	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay(src) // This thing basically cannot function without an external power supply.
+	ME.attach(src)
+	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon(src)
+	ME.attach(src)
+	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive(src)
+	ME.attach(src)
+	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)
+	ME.attach(src)
+	src.smoke_system.set_up(3, 0, src)
+	src.smoke_system.attach(src)
+	return
+
+/obj/mecha/combat/gorilla/mechstep(direction)
+	var/result = step(src,direction)
+	var/stepsound = rand(1,2)
+	if(result)
+		switch(stepsound)
+			if(1)
+				playsound(src,'sound/mecha/bigmech_lstep.ogg',40,1)
+			if(2)
+				playsound(src,'sound/mecha/bigmech_rstep.ogg',40,1)
+	return result
+
+/obj/mecha/combat/gorilla/mechturn(direction)
+	dir = direction
+	var/turnsound = rand(1,2)
+	switch(turnsound)
+		if(1)
+			playsound(src,'sound/mecha/bigmech_lturn.ogg',40,1)
+		if(2)
+			playsound(src,'sound/mecha/bigmech_rturn.ogg',40,1)
+	return 1
+
+/obj/mecha/combat/gorilla/mechturn(direction)
+	dir = direction
+	var/turnsound = rand(1,2)
+	switch(turnsound)
+		if(1)
+			playsound(src,'sound/mecha/bigmech_lturn.ogg',40,1)
+		if(2)
+			playsound(src,'sound/mecha/bigmech_rturn.ogg',40,1)
+	return 1
+
+/obj/mecha/combat/gorilla/relaymove(mob/user,direction)
+	if(user != src.occupant) //While not "realistic", this piece is player friendly.
+		user.loc = get_turf(src)
+		user << "You climb out from [src]"
+		return 0
+	if(!can_move)
+		return 0
+	if(zoom)
+		if(world.time - last_message > 20)
+			src.occupant_message("Unable to move while in zoom mode.")
+			last_message = world.time
+		return 0
+	if(connected_port)
+		if(world.time - last_message > 20)
+			src.occupant_message("Unable to move while connected to the air system port")
+			last_message = world.time
+		return 0
+	if(state || !has_charge(step_energy_drain))
+		return 0
+	var/tmp_step_in = step_in
+	var/tmp_step_energy_drain = step_energy_drain
+	var/move_result = 0
 	if(internal_damage&MECHA_INT_CONTROL_LOST)
-		T = safepick(oview(1,src))
-	if(!melee_can_hit)
-		return
-	if(istype(T, /mob/living))
-		var/mob/living/M = T
-		if(src.occupant.a_intent == I_HURT || istype(src.occupant, /mob/living/carbon/brain)) //Brains cannot change intents; Exo-piloting brains lack any form of physical feedback for control, limiting the ability to 'play nice'.
-			playsound(src, 'sound/weapons/heavysmash.ogg', 50, 1)
-			if(damtype == "brute")
-				step_away(M,src,15)
-			/*
-			if(M.stat>1)
-				M.gib()
-				melee_can_hit = 0
-				if(do_after(melee_cooldown))
-					melee_can_hit = 1
-				return
-			*/
-			if(ishuman(T))
-				var/mob/living/carbon/human/H = T
-	//			if (M.health <= 0) return
-
-				var/obj/item/organ/external/temp = H.get_organ(pick(BP_TORSO, BP_TORSO, BP_TORSO, BP_HEAD))
-				if(temp)
-					var/update = 0
-					switch(damtype)
-						if("brute")
-							H.Paralyse(1)
-							update |= temp.take_damage(rand(force/2, force), 0)
-						if("fire")
-							update |= temp.take_damage(0, rand(force/2, force))
-						if("tox")
-							if(H.reagents)
-								if(H.reagents.get_reagent_amount("carpotoxin") + force < force*2)
-									H.reagents.add_reagent("carpotoxin", force)
-								if(H.reagents.get_reagent_amount("cryptobiolin") + force < force*2)
-									H.reagents.add_reagent("cryptobiolin", force)
-						if("halloss")
-							H.stun_effect_act(1, force / 2, BP_TORSO, src)
-						else
-							return
-					if(update)	H.UpdateDamageIcon()
-				H.updatehealth()
-
-			else
-				switch(damtype)
-					if("brute")
-						M.Paralyse(1)
-						M.take_overall_damage(rand(force/2, force))
-					if("fire")
-						M.take_overall_damage(0, rand(force/2, force))
-					if("tox")
-						if(M.reagents)
-							if(M.reagents.get_reagent_amount("carpotoxin") + force < force*2)
-								M.reagents.add_reagent("carpotoxin", force)
-							if(M.reagents.get_reagent_amount("cryptobiolin") + force < force*2)
-								M.reagents.add_reagent("cryptobiolin", force)
-					else
-						return
-				M.updatehealth()
-			src.occupant_message("You hit [T].")
-			src.visible_message("<font color='red'><b>[src.name] hits [T].</b></font>")
-		else
-			step_away(M,src)
-			src.occupant_message("You push [T] out of the way.")
-			src.visible_message("[src] pushes [T] out of the way.")
-
-		melee_can_hit = 0
-		if(do_after(melee_cooldown))
-			melee_can_hit = 1
-		return
-
+		move_result = mechsteprand()
+	else if(src.dir!=direction)
+		move_result = mechturn(direction)
 	else
-		if(istype(T, /obj/machinery/disposal)) // Stops mechs from climbing into disposals
-			return
-		if(src.occupant.a_intent == I_HURT || istype(src.occupant, /mob/living/carbon/brain)) // Don't smash unless we mean it
-			if(damtype == "brute")
-				src.occupant_message("You hit [T].")
-				src.visible_message("<font color='red'><b>[src.name] hits [T]</b></font>")
-				playsound(src, 'sound/weapons/heavysmash.ogg', 50, 1)
-
-				if(istype(T, /obj/structure/girder))
-					T:take_damage(force * 3) //Girders have 200 health by default. Steel, non-reinforced walls take four punches, girders take (with this value-mod) two, girders took five without.
-				else
-					T:take_damage(force)
-
-				melee_can_hit = 0
-
-				if(do_after(melee_cooldown))
-					melee_can_hit = 1
-	return
-
-/*
-/obj/mecha/combat/proc/mega_shake(target)
-	if(!istype(target, /obj) && !istype(target, /mob)) return
-	if(istype(target, /mob))
-		var/mob/M = target
-		M.make_dizzy(3)
-		M.adjustBruteLoss(1)
-		M.updatehealth()
-		for (var/mob/V in viewers(src))
-			V.show_message("[src.name] shakes [M] like a rag doll.")
-	return
-*/
-
-/*
-	if(energy>0 && can_move)
-		if(step(src,direction))
-			can_move = 0
-			spawn(step_in) can_move = 1
-			if(overload)
-				energy = energy-2
-				health--
-			else
-				energy--
-			return 1
-
+		move_result	= mechstep(direction)
+	if(move_result)
+		if(istype(src.loc, /turf/space))
+			if(!src.check_for_support())
+				src.pr_inertial_movement.start(list(src,direction))
+		can_move = 0
+		spawn(tmp_step_in) can_move = 1
+		use_power(tmp_step_energy_drain)
+		return 1
 	return 0
-*/
-/*
-/obj/mecha/combat/hear_talk(mob/M as mob, text)
-	..()
-	if(am && M==occupant)
-		if(findtext(text,""))
-			sam()
-	return
 
-/obj/mecha/combat/proc/sam()
-	if(am)
-		var/window = {"<html>
-							<head>
-							<style>
-							body {background:#000;color: #00ff00;font-family:"Courier",monospace;font-size:12px;}
-							#target {word-wrap: break-word;width:100%;padding-right:2px;}
-							#form {display:none;padding:0;margin:0;}
-							#input {background:#000;color: #00ff00;font-family:"Courier",monospace;border:none;padding:0;margin:0;width:90%;font-size:12px;}
-							</style>
-							<script type="text/javascript">
-							var text = "SGNL RCVD\\nTAG ANL :: STTS ACCPTD \\nINITSOC{buff:{128,0,NIL};p:'-zxf';stddev;inenc:'bin';outenc:'plain'}\\nSOD ->\\n0010101100101011001000000101010001101000011010010111001100100000011011010110000101100011011010000110100101101110011001010010000001101001011100110010000001100100011010010111001101100011011010000110000101110010011001110110010101100100001000000110100101101110011101000110111100100000011110010110111101110101011100100010000001100011011000010111001001100101001000000010101100101011000011010000101000101011001010110010000001000110011010010110011101101000011101000010000001110111011010010111010001101000001000000111010001101000011010010111001100100000011011010110000101100011011010000110100101101110011001010010110000100000011000010110111001100100001000000110011101110101011000010111001001100100001000000110100101110100001000000110011001110010011011110110110100100000011101000110100001100101001000000111001101101000011000010110110101100101001000000110111101100110001000000110010001100101011001100110010101100001011101000010000000101011001010110000110100001010001010110010101100100000010100110110010101110010011101100110010100100000011101000110100001101001011100110010000001101101011000010110001101101000011010010110111001100101001011000010000001100001011100110010000001111001011011110111010100100000011101110110111101110101011011000110010000100000011010000110000101110110011001010010000001100110011010010110011101101000011101000010000001101001011101000010000001100110011011110111001000100000011110010110111101110101001000000010101100101011\\n<- EOD\\nSOCFLUSH\\n";
-							var target_id = "target";
-							var form_id = "form";
-							var input_id = "input";
-							var delay=5;
-							var currentChar=0;
-							var inter;
-							var cur_el;
-							var maiden_el;
-
-							function type()
-							{
-							  maiden_el = cur_el = document.getElementById(target_id);
-							  if(cur_el && typeof(cur_el)!='undefined'){
-									inter = setInterval(function(){appendText(cur_el)},delay);
-							  }
-							}
-
-							function appendText(el){
-								if(currentChar>text.length){
-									maiden_el.style.border = 'none';
-									clearInterval(inter);
-									var form = document.getElementById(form_id);
-									var input = document.getElementById(input_id);
-									if((form && typeof(form)!='undefined') && (input && typeof(input)!='undefined')){
-										form.style.display = 'block';
-										input.focus();
-									}
-									return;
-								}
-								var tchar = text.substr(currentChar, 1);
-								if(tchar=='\\n'){
-									el = cur_el = document.createElement('div');
-									maiden_el.appendChild(cur_el);
-									currentChar++;
-									return;
-								}
-								if(!el.firstChild){
-									var tNode=document.createTextNode(tchar);
-									el.appendChild(tNode);
-								}
-								else {
-									el.firstChild.nodeValue = el.firstChild.nodeValue+tchar
-								}
-								currentChar++;
-							}
-
-							function addSubmitEvent(form, input) {
-							    input.onkeydown = function(e) {
-							        e = e || window.event;
-							        if (e.keyCode == 13) {
-							            form.submit();
-							            return false;
-							        }
-							    };
-							}
-
-							window.onload = function(){
-								var form = document.getElementById(form_id);
-								var input = document.getElementById(input_id);
-								if((!form || typeof(form)=='undefined') || (!input || typeof(input)=='undefined')){
-									return false;
-								}
-								addSubmitEvent(form,input);
-								type();
-							}
-							</script>
-							</head>
-							<body>
-							<div id="wrapper"><div id="target"></div>
-							<form id="form" name="form" action="byond://" method="get">
-							<label for="input">&gt;</label><input name="saminput" type="text" id="input" value="" />
-							<input type=\"hidden\" name=\"src\" value=\"\ref[src]\">
-							</form>
-							</div>
-							</body>
-							</html>
-						  "}
-		occupant << browse(window, "window=sam;size=800x600;")
-		onclose(occupant, "sam", src)
-	return
-*/
-/obj/mecha/combat/moved_inside(var/mob/living/carbon/human/H as mob)
-	if(..())
-		if(H.client)
-			H.client.mouse_pointer_icon = file("icons/mecha/mecha_mouse.dmi")
-		return 1
-	else
-		return 0
-
-/obj/mecha/combat/mmi_moved_inside(var/obj/item/device/mmi/mmi_as_oc as obj,mob/user as mob)
-	if(..())
-		if(occupant.client)
-			occupant.client.mouse_pointer_icon = file("icons/mecha/mecha_mouse.dmi")
-		return 1
-	else
-		return 0
-
-/obj/mecha/combat/go_out()
-	if(src.occupant && src.occupant.client)
-		src.occupant.client.mouse_pointer_icon = initial(src.occupant.client.mouse_pointer_icon)
-	..()
-	return
-
-/obj/mecha/combat/Topic(href,href_list)
-	..()
-	var/datum/topic_input/top_filter = new (href,href_list)
-	if(top_filter.get("close"))
-		am = null
+/obj/mecha/combat/gorilla/verb/smoke()
+	set category = "Exosuit Interface"
+	set name = "Smoke"
+	set src = usr.loc
+	set popup_menu = 0
+	if(usr!=src.occupant)
 		return
-	/*
-	if(top_filter.get("saminput"))
-		if(md5(top_filter.get("saminput")) == am)
-			occupant_message("From the lies of the Antipath, Circuit preserve us.")
-		am = null
+	if(smoke_ready && smoke>0)
+		src.smoke_system.start()
+		smoke--
+		smoke_ready = 0
+		spawn(smoke_cooldown)
+			smoke_ready = 1
 	return
-	*/
+
+/obj/mecha/combat/gorilla/verb/zoom()
+	set category = "Exosuit Interface"
+	set name = "Zoom"
+	set src = usr.loc
+	set popup_menu = 0
+	if(usr!=src.occupant)
+		return
+	if(src.occupant.client)
+		src.zoom = !src.zoom
+		src.log_message("Toggled zoom mode.")
+		src.occupant_message("<font color='[src.zoom?"blue":"red"]'>Zoom mode [zoom?"en":"dis"]abled.</font>")
+		if(zoom)
+			src.occupant.client.view = 12
+			src.occupant << sound('sound/mecha/imag_enh.ogg',volume=50)
+		else
+			src.occupant.client.view = world.view//world.view - default mob view size
+	return
+
+
+/obj/mecha/combat/gorilla/go_out()
+	if(src.occupant && src.occupant.client)
+		src.occupant.client.view = world.view
+		src.zoom = 0
+	..()
+	return
+
+
+/obj/mecha/combat/gorilla/get_stats_part()
+	var/output = ..()
+	output += {"<b>Smoke:</b> [smoke]"}
+	return output
+
+
+/obj/mecha/combat/gorilla/get_commands()
+	var/output = {"<div class='wr'>
+						<div class='header'>Special</div>
+						<div class='links'>
+						<a href='?src=\ref[src];toggle_zoom=1'>Toggle zoom mode</a><br>
+						<a href='?src=\ref[src];smoke=1'>Smoke</a>
+						</div>
+						</div>
+						"}
+	output += ..()
+	return output
+
+/obj/mecha/combat/gorilla/Topic(href, href_list)
+	..()
+	if (href_list["smoke"])
+		src.smoke()
+	if (href_list["toggle_zoom"])
+		src.zoom()
+	return
