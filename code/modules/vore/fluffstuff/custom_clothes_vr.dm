@@ -197,7 +197,7 @@
 	item_state = "brittrenchcoat"
 
 //For general use
-/obj/item/clothing/suit/storage/vest/hoscoat/nazi_greatcoat
+/obj/item/clothing/suit/storage/vest/hoscoat/axis_greatcoat
 	name = "Greatcoat"
 	desc = "Perfect attire for kicking down the doors of suspected dissidents; this coat gives off an imposing look, while offering a luxuriously plush fur liner."
 
