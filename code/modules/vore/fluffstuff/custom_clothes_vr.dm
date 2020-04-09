@@ -232,7 +232,7 @@
 				/obj/item/weapon/handcuffs,
 //				/obj/item/device/detective_scanner,
 				/obj/item/device/taperecorder)
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
+	armor = list(melee = 50, bullet = 15, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)
 	var/unbuttoned = 0
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/verb/toggle()
@@ -262,21 +262,21 @@
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. Wearing this may make you feel all scientific."
 	icon_state = "fedblue"
 	item_state = "fedblue"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
 	name = "Federation Uniform Jacket (Yellow)"
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it.Wearing it may make you feel like checking a warp core, whatever that is."
 	icon_state = "fedeng"
 	item_state = "fedeng"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 10, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 10, bomb = 0, bio = 30, rad = 35)
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedcapt
 	name = "Federation Uniform Jacket (Command)"
 	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. You feel like a commanding officer of Starfleet."
 	icon_state = "fedcapt"
 	item_state = "fedcapt"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
+	armor = list(melee = 50, bullet = 5, laser = 15,energy = 10, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat
 	name = "Modern Federation Uniform Jacket (Command)"
@@ -302,7 +302,7 @@
 				/obj/item/weapon/handcuffs,
 //				/obj/item/device/detective_scanner,
 				/obj/item/device/taperecorder)
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
+	armor = list(melee = 50, bullet = 15, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)
 
 	//Variants
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedblue
@@ -310,21 +310,21 @@
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. Wearing this makes you feel like a scientist or a pilot."
 	icon_state = "fedmodernblue"
 	item_state = "fedmodernblue"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedeng
 	name = "Modern Federation Uniform Jacket (Yellow)"
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. You feel like you can handle any type of technical engineering problems."
 	icon_state = "fedmoderneng"
 	item_state = "fedmoderneng"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 00, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 10, bomb = 0, bio = 30, rad = 35)
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedsec
 	name = "Modern Federation Uniform Jacket (Red)"
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. This uniform makes you want to protect and serve as an officer."
 	icon_state = "fedmodernsec"
 	item_state = "fedmodernsec"
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
+	armor = list(melee = 50, bullet = 5, laser = 15,energy = 10, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/head/caphat/formal/fedcover
 	name = "Federation Officer's Cap"
@@ -1187,12 +1187,12 @@ Departamental Swimsuits, for general use
 	item_state = "trek_command"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // Considering only staff heads get to pick it
 
-/obj/item/clothing/under/rank/trek/eng //CHOMPEdit: Engineering only 
+/obj/item/clothing/under/rank/trek/engsec
 	name = "Operations Uniform"
 	desc = "The uniform worn by operations officers of the mid 2260s. You feel strangely vulnerable just seeing this..."
 	icon_state = "trek_engsec"
 	item_state = "trek_engsec"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot. //CHOMPEdit: I'll tell you what, the armor values are NOT shared. Removed melee bonus.
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot.
 
 /obj/item/clothing/under/rank/trek/medsci
 	name = "MedSci Uniform"
@@ -1208,7 +1208,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_next_command"
 	item_state = "trek_next_command"
 
-/obj/item/clothing/under/rank/trek/eng/next //CHOMPEdit: Engineering only
+/obj/item/clothing/under/rank/trek/engsec/next
 	desc = "The uniform worn by operation officers. This one's from the mid 2360s."
 	icon_state = "trek_next_engsec"
 	item_state = "trek_next_engsec"
@@ -1224,7 +1224,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_ent_command"
 	item_state = "trek_ent_command"
 
-/obj/item/clothing/under/rank/trek/eng/ent //CHOMPEdit: Engineering only
+/obj/item/clothing/under/rank/trek/engsec/ent
 	desc = "The uniform worn by operations officers of the 2140s."
 	icon_state = "trek_ent_engsec"
 	item_state = "trek_ent_engsec"
@@ -1240,7 +1240,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_voy_command"
 	item_state = "trek_voy_command"
 
-/obj/item/clothing/under/rank/trek/eng/voy //CHOMPEdit: Engineering only
+/obj/item/clothing/under/rank/trek/engsec/voy
 	desc = "The uniform worn by operations officers of the 2370s."
 	icon_state = "trek_voy_engsec"
 	item_state = "trek_voy_engsec"
@@ -1269,7 +1269,7 @@ Departamental Swimsuits, for general use
 		/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,
 		/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle
 		)
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: Removed extra armor since any schmuck can take this and spontaneously have an edge.
+	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 20, rad = 25)
 
 /obj/item/clothing/suit/storage/trek/ds9/admiral // Only for adminuz
 	name = "Admiral Overcoat"
@@ -1284,7 +1284,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_command"
 	item_state = "trek_ds9_command"
 
-/obj/item/clothing/under/rank/trek/eng/ds9 //CHOMPEdit: Engineering only
+/obj/item/clothing/under/rank/trek/engsec/ds9
 	desc = "The uniform worn by operations officers of the 2380s."
 	icon_state = "trek_engsec"
 	item_state = "trek_ds9_engsec"
@@ -1752,7 +1752,7 @@ Departamental Swimsuits, for general use
 	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
 		if(..())
 			if(H.ckey != "silencedmp5a5")
-				H << "<span class='warning'>...The faceplate is clearly not made for your anatomy, thus, does not fit.</span>"
+				to_chat(H, "<span class='warning'>...The faceplate is clearly not made for your anatomy, thus, does not fit.</span>")
 				return 0
 			else
 				return 1
@@ -1771,7 +1771,7 @@ Departamental Swimsuits, for general use
 		if(..() && istype(H) && H.ckey == "silencedmp5a5")
 			return 1
 		else
-			to_chat(H,"<span class='warning'>This suit is not designed for you.</span>")
+			to_chat(H, "<span class='warning'>This suit is not designed for you.</span>")
 			return 0
 
 //Zigfe:Zaoozaoo Xrimxuqmqixzix
@@ -1902,17 +1902,56 @@ Departamental Swimsuits, for general use
 	return FALSE	//Indigestible
 
 //Bacon12366:Elly Brown
-/obj/item/clothing/accessory/sweater/fluff/star
-	name = "Star Sweater"
-	desc = "It's a black long sweater with a big blue star at the chest area. It was made to show person's left shoulder."
+/obj/item/clothing/suit/storage/star
+	name = "Star hoodie"
+	desc = "It's a black long hoodie with a big blue star at the chest area. It's made of pretty soft material."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "star_sweater"
+	icon_state = "star_hoodie"
 
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "star_sweater"
+	item_state = "star_hoodie"
 
-	slot_flags = SLOT_OCLOTHING | SLOT_TIE
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
-	w_class = ITEMSIZE_NORMAL
-	slot = ACCESSORY_SLOT_OVER
+//KillerDragn:Excess
+/obj/item/clothing/accessory/collar/pink/fluff/warning
+	name = "Warning Collar (AGGRESSIVE)"
+	desc = "A bright red warning collar with white text - \"AGGRESSIVE\"."
+
+//KillerDragn:Excess
+/obj/item/clothing/under/fluff/excess
+	name = "XS-21E Labeled Latex Clothing"
+	desc = "A latex navy blue tube-top and matching compression shorts, with a bright yellow stripe down the side. \"XS-21E\" is written on the thigh. \"Warning\" is written in yellow by the stripe on the top."
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "latex_clothes"
+	item_icons = list()
+	default_worn_icon = 'icons/vore/custom_clothes_vr.dmi'
+	color = COLOR_NAVY
+	sprite_sheets = null
+
+//SweetBlueSylveon:Pip Shyner
+/obj/item/clothing/accessory/poncho/roles/cloak/hop/fluff/pip
+	name = "Pip's Cloak"
+	desc = "A brightly colored cloak, similar in pattern to the CRO's cloak. It's colored White, Pink, and Blue, with Gold buttons."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "pipcloak"
+	item_state = "pipcloak_mob"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+
+/obj/item/clothing/accessory/poncho/roles/cloak/hop/fluff/pip/equipped()		//Because otherwise it gets reset every time
+	..()
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	
+//CappyCat:Cappy Fuzzlyfeathers
+/obj/item/clothing/accessory/watch
+	name = "silver pocket watch"
+	desc = "A fancy silver-plated digital pocket watch. Looks expensive."
+	icon = 'icons/obj/deadringer.dmi'
+	icon_state = "deadringer"
+	w_class = ITEMSIZE_SMALL
+	slot_flags = SLOT_ID | SLOT_BELT | SLOT_TIE
+	
+//Pimientopyro:Zaku Fyodorovna
+/obj/item/clothing/suit/varsity/green/sweater_vest
+	name = "green sweater vest"
+	desc = "A green argyle sweater vest with a white undershirt, a must for long winter nights and looking like a dork."
