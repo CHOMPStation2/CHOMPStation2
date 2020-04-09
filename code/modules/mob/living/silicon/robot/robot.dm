@@ -259,7 +259,7 @@
 	if(module)
 		return
 	var/list/modules = list()
-/*	//VOREStatation Edit Start: shell restrictions
+/*	//VOREStatation Edit Start: shell restrictions //CHOMPstaton Edit remove resstritions
 	if(shell)
 		modules.Add(shell_module_types)
 	else
