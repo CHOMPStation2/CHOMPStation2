@@ -168,6 +168,13 @@
 
 	lateload_single_pick = null //Nothing right now.
 
+	lateload_single_pick = list( //Gateway missions
+		list("Snow Outpost"),
+		list("Carp Farm"),
+		list("Snow Field"),
+		list("Listening Post")
+		)
+
 	planet_datums_to_make = list(/datum/planet/borealis2)
 
 /datum/map/cryogaia/perform_map_generation()
