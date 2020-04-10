@@ -90,3 +90,9 @@
 	name = "AI RC"
 	department = "AI"
 	departmentType = RC_ASSIST|RC_INFO
+
+/obj/machinery/requests_console/preset/hop //yw edit
+	name = "Head of personnel RC"
+	department = "Head of Personnel's Desk"
+	departmentType = RC_ASSIST|RC_INFO
+	announcementConsole = 1

@@ -1,3 +1,9 @@
+/obj/effect/overmap/visitable/sector/tether_gateway/snowfield
+	initial_generic_waypoints = list("tether_excursion_snowfield")
+	true_name = "Snowy Field"
+	true_desc = "Scans indicate this planetoid has a very cold atmosphere and almost perpetual snow."
+
+
 // -- Areas -- //
 
 /area/awaymission/snowfield

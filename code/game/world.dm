@@ -154,15 +154,15 @@ var/world_topic_spam_protect_time = world.timeofday
 	else if(T == "manifest")
 		var/list/positions = list()
 		var/list/set_names = list(
-				"heads" = command_positions,
-				"sec" = security_positions,
-				"eng" = engineering_positions,
-				"med" = medical_positions,
-				"sci" = science_positions,
-				"car" = cargo_positions,
-				"pla" = planet_positions, //VOREStation Edit,
-				"civ" = civilian_positions,
-				"bot" = nonhuman_positions
+				"heads" = SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND),
+				"sec" = SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY),
+				"eng" = SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING),
+				"med" = SSjob.get_job_titles_in_department(DEPARTMENT_MEDICAL),
+				"sci" = SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH),
+				"car" = SSjob.get_job_titles_in_department(DEPARTMENT_CARGO),
+				"pla" = SSjob.get_job_titles_in_department(DEPARTMENT_PLANET), //VOREStation Add,
+				"civ" = SSjob.get_job_titles_in_department(DEPARTMENT_CIVILIAN),
+				"bot" = SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)
 			)
 
 		for(var/datum/data/record/t in data_core.general)
@@ -645,6 +645,20 @@ proc/establish_old_db_connection()
 /world/proc/increment_max_z()
 	maxz++
 	max_z_changed()
+
+// Call this to change world.fps, don't modify it directly.
+/world/proc/change_fps(new_value = 20)
+	if(new_value <= 0)
+		CRASH("change_fps() called with [new_value] new_value.")
+	if(fps == new_value)
+		return //No change required.
+
+	fps = new_value
+	on_tickrate_change()
+
+// Called whenver world.tick_lag or world.fps are changed.
+/world/proc/on_tickrate_change()
+	SStimer?.reset_buckets() 
 
 #undef FAILED_DB_CONNECTION_CUTOFF
 /world/New()
