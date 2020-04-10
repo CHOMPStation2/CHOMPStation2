@@ -16,13 +16,15 @@
 	#include "residential/_residential.dm"
 	#include "residential/residential_keys.dm"
 
-	#include "cryogaia-01-centcomm.dmm" //centcom
-	#include "cryogaia-02-mining.dmm" //mining
-	#include "cryogaia-03-transit.dmm" //transit level
-	#include "cryogaia-04-maintenance.dmm" //lowerlevel
-	#include "cryogaia-05-main.dmm" //main level
+	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions
+		#include "cryogaia-01-centcomm.dmm" //centcom
+		#include "cryogaia-02-mining.dmm" //mining
+		#include "cryogaia-03-transit.dmm" //transit level
+		#include "cryogaia-04-maintenance.dmm" //lowerlevel
+		#include "cryogaia-05-main.dmm" //main level
 
-	#include "residential/residential.dmm" //residential level
+		#include "residential/residential.dmm" //residential level
+	#endif
 
 	#include "submaps/_cryogaia_submaps.dm"
 
