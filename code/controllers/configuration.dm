@@ -31,6 +31,7 @@ var/list/gamemode_cache = list()
 	var/allow_admin_jump = 1			// allows admin jumping
 	var/allow_admin_spawning = 1		// allows admin item spawning
 	var/allow_admin_rev = 1				// allows admin revives
+	var/pregame_time = 180				// pregame time in seconds
 	var/vote_delay = 6000				// minimum time between voting sessions (deciseconds, 10 minute default)
 	var/vote_period = 600				// length of voting period (deciseconds, default 1 minute)
 	var/vote_autotransfer_initial = 108000 // Length of time before the first autotransfer vote is called
@@ -264,6 +265,10 @@ var/list/gamemode_cache = list()
 	var/sqlite_feedback_cooldown = 0 // How long one must wait, in days, to submit another feedback form. Used to help prevent spam, especially with privacy active. 0 = No limit.
 	var/sqlite_feedback_min_age = 0 // Used to block new people from giving feedback. This metric is very bad but it can help slow down spammers.
 
+	// disables the annoying "You have already logged in this round, disconnect or be banned" popup for multikeying, because it annoys the shit out of me when testing.
+	var/disable_cid_warn_popup = FALSE
+
+
 /datum/configuration/New()
 	var/list/L = typesof(/datum/game_mode) - /datum/game_mode
 	for (var/T in L)
@@ -420,6 +425,9 @@ var/list/gamemode_cache = list()
 
 				if ("default_no_vote")
 					config.vote_no_default = 1
+
+				if ("pregame_time")
+					config.pregame_time = text2num(value)
 
 				if ("vote_delay")
 					config.vote_delay = text2num(value)
@@ -873,7 +881,8 @@ var/list/gamemode_cache = list()
 				if("sqlite_feedback_cooldown")
 					config.sqlite_feedback_cooldown = text2num(value)
 
-
+				if("disable_cid_warn_popup")
+					config.disable_cid_warn_popup = TRUE
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")

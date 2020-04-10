@@ -1,26 +1,13 @@
-// -- Datums -- //
+/obj/effect/overmap/visitable/sector/borealis1
+	name = "Borealis 1"
+	desc = "Home to sand and rocks."
+	icon_state = "globe"
+	color = "#ffd300" //Sandy
+	initial_generic_waypoints = list("borealis1_landing")
 
-//We're including two new shuttle destinations. One is in orbit of our 'desert planet'
-/datum/shuttle_destination/excursion/borealis1orbit //Must be a unique path
-	name = "Borealis 1 Orbit" //The name of the destination
-	my_area = /area/shuttle/excursion/space //The area the shuttle goes when it's settled at this destination
-	preferred_interim_area = /area/shuttle/excursion/space_moving //The area the shuttle goes while it's moving there
-	skip_me = TRUE //Must be TRUE on all away-mission destinations for reasons
-
-	routes_to_make = list( //These are routes the shuttle connects to,
-		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS //This is a normal destination that's part of Tether
-	)
-
-//The other destination is landed on the surface
-/datum/shuttle_destination/excursion/beach
-	name = "Remote Coastal Area"
-	my_area = /area/shuttle/excursion/away_beach
-	preferred_interim_area = /area/shuttle/excursion/sand_moving
-	skip_me = TRUE
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/borealis1orbit = 30 SECONDS //This is the above one
-	)
+/obj/effect/shuttle_landmark/premade/borealis1_landing
+	name = "Borealis 1 Landing Pad"
+	landmark_tag = "borealis1_landing"
 
 //This is a special subtype of the thing that generates ores on a map
 //It will generate more rich ores because of the lower numbers than the normal one
@@ -57,32 +44,6 @@
 		return 1
 
 // -- Objs -- //
-
-//This is a special type of object which will build our shuttle paths, only if this map loads
-//You do need to place this object on the map somewhere.
-/obj/shuttle_connector/beach
-	name = "shuttle connector - beach"
-	shuttle_name = "Excursion Shuttle"
-	//This list needs to be in the correct order, and start with the one that connects to the rest of the shuttle 'network'
-	destinations = list(/datum/shuttle_destination/excursion/borealis1orbit, /datum/shuttle_destination/excursion/beach)
-
-//This object simply performs any map setup that needs to happen on our map if it loads.
-//As with the above, you do need to place this object on the map somewhere.
-/obj/away_mission_init/beachcave
-	name = "away mission initializer - beachcave"
-
-//In our case, it initializes the ores and random submaps in the beach's cave, then deletes itself
-/obj/away_mission_init/beachcave/Initialize()
-	// Cave submaps are first.
-	/*seed_submaps(list(z), 50, /area/tether_away/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(z), 50, /area/tether_away/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
-
-	// Now for the tunnels.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_BEACH_CAVE, world.maxx, world.maxy)
-	new /datum/random_map/noise/ore/beachmine(null, 1, 1, Z_LEVEL_BEACH_CAVE, 64, 64)*/
-
-	initialized = TRUE
-	return INITIALIZE_HINT_QDEL
 
 // Two mob spawners that are placed on the map that spawn some mobs!
 // They keep track of their mob, and when it's dead, spawn another (only if nobody is looking)

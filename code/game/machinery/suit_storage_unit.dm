@@ -586,7 +586,7 @@
 	var/electrified = 0
 
 	//Departments that the cycler can paint suits to look like.
-	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control","Exploration","Pilot Blue","Pilot") //VORESTATION EDIT
+	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control")
 	//Species that the suits can be configured to fit.
 	var/list/species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ, SPECIES_TESHARI, "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid", "Xenochimera","Vasilissan", "Rapala", /*yawngreyedit*/SPECIES_GREY_YW) //VORESTATION EDIT
 
@@ -994,18 +994,12 @@
 				helmet.name = "engineering voidsuit helmet"
 				helmet.icon_state = "rig0-engineering"
 				helmet.item_state = "rig0-engineering"
-				helmet.max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
-				helmet.armor = list(melee = 40, bullet = 5, laser = 20, energy = 5, bomb = 35, bio = 100, rad = 80)
-				helmet.desc = "A special helmet designed for work in a hazardous, low-pressure environment. Has radiation shielding."
 			if(suit)
 				suit.name = "engineering voidsuit"
 				suit.icon_state = "rig-engineering"
 				suit.item_state = "rig-engineering"
 				suit.item_state_slots[slot_r_hand_str] = "eng_voidsuit"
 				suit.item_state_slots[slot_l_hand_str] = "eng_voidsuit"
-				suit.max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
-				suit.armor = list(melee = 40, bullet = 5, laser = 20, energy = 5, bomb = 35, bio = 100, rad = 80)
-				suit.desc = "A special suit that protects against hazardous, low pressure environments. Has radiation shielding."
 		if("Mining")
 			if(helmet)
 				helmet.name = "mining voidsuit helmet"
@@ -1022,16 +1016,12 @@
 				helmet.name = "medical voidsuit helmet"
 				helmet.icon_state = "rig0-medical"
 				helmet.item_state = "rig0-medical"
-				helmet.armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 25, bio = 100, rad = 50)
-				helmet.desc = "A special helmet that protects against hazardous, low pressure environments. Has minor radiation shielding."
 			if(suit)
 				suit.name = "medical voidsuit"
 				suit.icon_state = "rig-medical"
 				suit.item_state = "rig-medical"
 				suit.item_state_slots[slot_r_hand_str] = "medical_voidsuit"
 				suit.item_state_slots[slot_l_hand_str] = "medical_voidsuit"
-				suit.armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 25, bio = 100, rad = 50)
-				suit.desc = "A special suit that protects against hazardous, low pressure environments. Has minor radiation shielding."
 		if("Security")
 			if(helmet)
 				helmet.name = "security voidsuit helmet"
@@ -1059,82 +1049,56 @@
 				helmet.name = "atmospherics voidsuit helmet"
 				helmet.icon_state = "rig0-atmos"
 				helmet.item_state = "rig0-atmos"
-				helmet.max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
-				helmet.armor = list(melee = 40, bullet = 5, laser = 20, energy = 5, bomb = 35, bio = 100, rad = 50)
-				helmet.desc = "A special helmet designed for work in a hazardous, low pressure environments. Has improved thermal protection and minor radiation shielding."
 			if(suit)
 				suit.name = "atmospherics voidsuit"
 				suit.icon_state = "rig-atmos"
 				suit.item_state = "rig-atmos"
 				suit.item_state_slots[slot_r_hand_str] = "atmos_voidsuit"
 				suit.item_state_slots[slot_l_hand_str] = "atmos_voidsuit"
-				suit.max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
-				suit.armor = list(melee = 40, bullet = 5, laser = 20, energy = 5, bomb = 35, bio = 100, rad = 50)
-				suit.desc = "A special suit that protects against hazardous, low pressure environments. Has improved thermal protection and minor radiation shielding."
 		if("HAZMAT")
 			if(helmet)
 				helmet.name = "HAZMAT voidsuit helmet"
 				helmet.icon_state = "rig0-engineering_rad"
 				helmet.item_state = "rig0-engineering_rad"
-				helmet.max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
-				helmet.armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 50, bio = 100, rad = 100)
-				helmet.desc = "A engineering helmet designed for work in a low-pressure environment. Extra radiation shielding appears to have been installed at the price of comfort."
 			if(suit)
 				suit.name = "HAZMAT voidsuit"
 				suit.icon_state = "rig-engineering_rad"
 				suit.item_state = "rig-engineering_rad"
 				suit.item_state_slots[slot_r_hand_str] = "eng_voidsuit_rad"
 				suit.item_state_slots[slot_l_hand_str] = "eng_voidsuit_rad"
-				suit.max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
-				suit.armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 50, bio = 100, rad = 100)
-				suit.desc = "A engineering voidsuit that protects against hazardous, low pressure environments. Has enhanced radiation shielding compared to regular engineering voidsuits."
 		if("Construction")
 			if(helmet)
 				helmet.name = "Construction voidsuit helmet"
 				helmet.icon_state = "rig0-engineering_con"
 				helmet.item_state = "rig0-engineering_con"
-				helmet.max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
-				helmet.armor = list(melee = 40, bullet = 5, laser = 20, energy = 5, bomb = 35, bio = 100, rad = 80)
-				helmet.desc = "A special helmet designed for work in a hazardous, low-pressure environment. Has radiation shielding."
 			if(suit)
 				suit.name = "Construction voidsuit"
 				suit.icon_state = "rig-engineering_con"
 				suit.item_state = "rig-engineering_con"
 				suit.item_state_slots[slot_r_hand_str] = "eng_voidsuit_con"
 				suit.item_state_slots[slot_l_hand_str] = "eng_voidsuit_con"
-				suit.max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
-				suit.armor = list(melee = 40, bullet = 5, laser = 20, energy = 5, bomb = 35, bio = 100, rad = 80)
-				suit.desc = "A special suit designed for work in a hazardous, low-pressure environment. Has radiation shielding."
 		if("Biohazard")
 			if(helmet)
 				helmet.name = "Biohazard voidsuit helmet"
 				helmet.icon_state = "rig0-medical_bio"
 				helmet.item_state = "rig0-medical_bio"
-				helmet.armor = list(melee = 45, bullet = 5, laser = 20, energy = 5, bomb = 15, bio = 100, rad = 75)
-				helmet.desc = "A special helmet that protects against hazardous environments. Has minor radiation shielding."
 			if(suit)
 				suit.name = "Biohazard voidsuit"
 				suit.icon_state = "rig-medical_bio"
 				suit.item_state = "rig-medical_bio"
 				suit.item_state_slots[slot_r_hand_str] = "medical_voidsuit_bio"
 				suit.item_state_slots[slot_l_hand_str] = "medical_voidsuit_bio"
-				suit.armor = list(melee = 45, bullet = 5, laser = 20, energy = 5, bomb = 15, bio = 100, rad = 75)
-				suit.desc = "A special suit that protects against hazardous, environments. It feels heavier than the standard suit with extra protection around the joints."
 		if("Emergency Medical Response")
 			if(helmet)
 				helmet.name = "emergency medical response voidsuit helmet"
 				helmet.icon_state = "rig0-medical_emt"
 				helmet.item_state = "rig0-medical_emt"
-				helmet.armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 25, bio = 100, rad = 50)
-				helmet.desc = "A special helmet that protects against hazardous, low pressure environments. Has minor radiation shielding."
 			if(suit)
 				suit.name = "emergency medical response voidsuit"
 				suit.icon_state = "rig-medical_emt"
 				suit.item_state = "rig-medical_emt"
 				suit.item_state_slots[slot_r_hand_str] = "medical_voidsuit_emt"
 				suit.item_state_slots[slot_l_hand_str] = "medical_voidsuit_emt"
-				suit.armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 25, bio = 100, rad = 50)
-				suit.desc = "A special suit that protects against hazardous, low pressure environments. Has minor radiation shielding."
 		if("^%###^%$" || "Mercenary")
 			if(helmet)
 				helmet.name = "blood-red voidsuit helmet"
@@ -1201,6 +1165,31 @@
 				suit.item_state = "rig-pilot2"
 				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuitTG"
 				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuitTG"
+		//VOREStation Addition Start
+		if("Director")
+			if(helmet)
+				helmet.name = "director voidsuit helmet"
+				helmet.icon_state = "capvoid"
+				helmet.item_state = "capvoid"
+			if(suit)
+				suit.name = "director voidsuit"
+				suit.icon_state = "capsuit_void"
+				suit.item_state = "capsuit_void"
+				suit.item_state_slots[slot_r_hand_str] = "wiz_voidsuit"
+				suit.item_state_slots[slot_l_hand_str] = "wiz_voidsuit"
+		if("Prototype")
+			if(helmet)
+				helmet.name = "prototype voidsuit helmet"
+				helmet.icon_state = "hosproto"
+				helmet.item_state = "hosproto"
+			if(suit)
+				suit.name = "prototype voidsuit"
+				suit.icon_state = "hosproto_void"
+				suit.item_state = "hosproto_void"
+				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuitTG"
+				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuitTG"
+		//VOREStation Addition End
+		
 
 
 	if(helmet) helmet.name = "refitted [helmet.name]"

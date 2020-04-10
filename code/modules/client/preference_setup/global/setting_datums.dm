@@ -98,6 +98,12 @@ var/list/_client_preferences_by_type
 	key = "DIGEST_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
+
+/datum/client_preference/emote_noises
+	description = "Emote Noises" //MERP
+	key = "EMOTE_NOISES"
+	enabled_description = "Noisy"
+	disabled_description = "Silent"
 //VOREStation Add End
 /datum/client_preference/weather_sounds
 	description ="Weather sounds"
@@ -140,6 +146,12 @@ var/list/_client_preferences_by_type
 	key = "SOUND_AIRPUMP"
 	enabled_description = "Audible"
 	disabled_description = "Silent"
+
+/datum/client_preference/drop_sounds
+	description = "Dropped Item Sounds"
+	key = "SOUND_DROPPED"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
 
 /datum/client_preference/mob_tooltips
 	description ="Mob tooltips"
@@ -240,7 +252,7 @@ var/list/_client_preferences_by_type
 * Staff Preferences *
 ********************/
 /datum/client_preference/admin/may_toggle(var/mob/preference_mob)
-	return check_rights(R_ADMIN, 0, preference_mob)
+	return check_rights(R_ADMIN|R_EVENT, 0, preference_mob)
 
 /datum/client_preference/mod/may_toggle(var/mob/preference_mob)
 	return check_rights(R_MOD|R_ADMIN, 0, preference_mob)

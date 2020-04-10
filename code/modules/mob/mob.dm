@@ -231,6 +231,10 @@
 	if((is_blind(src) || usr.stat) && !isobserver(src))
 		to_chat(src, "<span class='notice'>Something is there but you can't see it.</span>")
 		return 1
+	
+	//Could be gone by the time they finally pick something
+	if(!A)
+		return 1
 
 	face_atom(A)
 	A.examine(src)
@@ -419,7 +423,7 @@
 	set category = "OOC"
 	var/is_admin = 0
 
-	if(client.holder && (client.holder.rights & R_ADMIN))
+	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
 		is_admin = 1
 	else if(stat != DEAD || istype(src, /mob/new_player))
 		to_chat(usr, "<font color='blue'>You must be observing to use this!</font>")
@@ -1007,6 +1011,11 @@ mob/proc/yank_out_object()
 /mob/proc/updateicon()
 	return
 
+// Please always use this proc, never just set the var directly.
+/mob/proc/set_stat(var/new_stat)
+	. = (stat != new_stat)
+	stat = new_stat
+
 /mob/verb/face_direction()
 
 	set name = "Face Direction"
@@ -1063,6 +1072,13 @@ mob/proc/yank_out_object()
 
 /mob/proc/setEarDamage()
 	return
+
+// Set client view distance (size of client's screen). Returns TRUE if anything changed.
+/mob/proc/set_viewsize(var/new_view = world.view)
+	if (client && new_view != client.view)
+		client.view = new_view
+		return TRUE
+	return FALSE
 
 //Throwing stuff
 
@@ -1191,3 +1207,25 @@ mob/proc/yank_out_object()
 /mob/onTransitZ(old_z, new_z)
 	..()
 	update_client_z(new_z)
+
+/mob/cloak()
+	. = ..()
+	if(client && cloaked_selfimage)
+		client.images += cloaked_selfimage
+
+/mob/uncloak()
+	if(client && cloaked_selfimage)
+		client.images -= cloaked_selfimage
+	return ..()
+
+/mob/get_cloaked_selfimage()
+	var/icon/selficon = getCompoundIcon(src)
+	selficon.MapColors(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White
+	var/image/selfimage = image(selficon)
+	selfimage.color = "#0000FF"
+	selfimage.alpha = 100
+	selfimage.layer = initial(layer)
+	selfimage.plane = initial(plane)
+	selfimage.loc = src
+
+	return selfimage
