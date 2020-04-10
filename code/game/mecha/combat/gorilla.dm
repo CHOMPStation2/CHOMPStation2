@@ -42,7 +42,7 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 /obj/effect/decal/mecha_wreckage/gorilla
 	name = "Gorilla wreckage"
 	desc = "... Blitzkrieg?"
-	icon = 'icons/mecha/NaziMech.dmi'
+	icon = 'icons/mecha/AxisMech.dmi'
 	icon_state = "pzrwreck"
 	plane = MOB_PLANE
 	pixel_x = -16
@@ -51,7 +51,7 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 /obj/mecha/combat/gorilla
 	desc = "<b><font color='red'>BLITZKRIEEEEEEEG!</font></b>"
 	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A"
-	icon = 'icons/mecha/NaziMech.dmi'
+	icon = 'icons/mecha/AxisMech.dmi'
 	icon_state = "pzrmech"
 	initial_icon = "pzrmech"
 	pixel_x = -16
