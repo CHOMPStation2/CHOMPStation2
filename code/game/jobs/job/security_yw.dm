@@ -17,7 +17,7 @@
 /datum/job/security/pilot
 	title = "Security Pilot"
 	flag = SECPILOT
-	department = "Security"
+	departments = list(DEPARTMENT_SECURITY)
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 2
