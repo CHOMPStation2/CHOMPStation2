@@ -29,4 +29,10 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks, access_secpilot)
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/pilot
-//	alt_titles = list("Mech Operator","Rover Pilot")
+
+	job_description = "Tasked with flying, operating, and sometimes even maintaining small spacecraft and personal exosuits such as the Durand or Gygax, \
+						Security Pilots are responsible for transporting criminals to more permanent holding facilities, and patrolling \
+						for potential threats to their workplace. They may also be expected to step in to standard Security duties if \
+						there's a shortage of regular officers."
+
+//	alt_titles = list("Mech Operator" = /datum/alt_title/sec_mech_operator)
