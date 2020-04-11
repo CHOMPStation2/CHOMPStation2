@@ -1106,23 +1106,27 @@ window "mainwindow"
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #23272a
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "CHOMPStation"
+		title = "CHOMPStation" // CHOMP Edit
 		is-maximized = true
-		icon = 'icons\\ss13_64.png'
+		icon = 'icons\ss13_64.png' // CHOMP Edit
 		macro = "macro"
 		menu = "menu"
+	elem "asset_cache_browser"
+		type = BROWSER
+		pos = 0,0
+		size = 200x200
+		anchor1 = none
+		anchor2 = none
+		is-visible = false
+		saved-params = ""
 	elem "hotkey_toggle"
 		type = BUTTON
 		pos = 560,420
 		size = 80x20
 		anchor1 = 100,100
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #23272a
 		saved-params = ""
 		text = "Hotkey Toggle"
 		command = ".winset \"mainwindow.macro!=macro ? mainwindow.macro=macro hotkey_toggle.is-checked=false input.focus=true : mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true\""
@@ -1133,8 +1137,6 @@ window "mainwindow"
 		size = 634x416
 		anchor1 = 0,0
 		anchor2 = 100,100
-		text-color = #e2ebf1
-		background-color = #23272a
 		saved-params = "splitter"
 		right = "rpane"
 		is-vert = true
@@ -1144,8 +1146,7 @@ window "mainwindow"
 		size = 517x20
 		anchor1 = 0,100
 		anchor2 = 100,100
-		text-color = #e2ebf1
-		background-color = #23272a
+		background-color = #d3b5b5
 		is-default = true
 		border = sunken
 		saved-params = "command"
@@ -1155,8 +1156,6 @@ window "mainwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #23272a
 		saved-params = "is-checked"
 		text = "Chat"
 		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
@@ -1178,8 +1177,6 @@ window "mapwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #23272a
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1208,7 +1205,7 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #23272a
+		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1216,19 +1213,46 @@ window "outputwindow"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-	elem "output"
+		outer-size = 654x494
+	elem "chatloadlabel"
+		type = LABEL
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		font-family = "sans-serif"
+		font-size = 24
+		font-style = "bold"
+		text-color = #ffffff
+		background-color = #222222
+		is-visible = true
+		saved-params = ""
+		text = "Chat is loading.\nIf nothing happens after 20s,\nuse OOC > \"Reload VChat\"."
+	elem "htmloutput"
+		type = BROWSER
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = none
+		is-visible = false
+		saved-params = ""
+		auto-format = false
+	elem "oldoutput"
 		type = OUTPUT
 		pos = 0,0
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #23272a
+		background-color = none
+		text-color = #000000
+		background-color = #ffffff
+		is-visible = false
 		is-default = true
-		saved-params = "max-lines"
-		link-color = #7575ff
-		visited-color = #ff75ff
-		style = ".system {color:#23272A;}"
+		style = ".system {color:#FF0000;}"
 		max-lines = 0
+		saved-params = ""
+		enable-http-images = true
 
 window "rpane"
 	elem "rpane"
@@ -1237,7 +1261,6 @@ window "rpane"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #23272a
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
 	elem "rpanewindow"
@@ -1246,7 +1269,6 @@ window "rpane"
 		size = 640x499
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #23272a
 		saved-params = "splitter"
 		right = "outputwindow"
 		is-vert = false
@@ -1256,8 +1278,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		saved-params = "is-checked"
 		text = "GitHub"
 		command = "github"
@@ -1268,8 +1288,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		saved-params = "is-checked"
 		text = "Map"
 		command = "map"
@@ -1280,8 +1298,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		saved-params = "is-checked"
 		text = "Rules"
 		command = "rules"
@@ -1292,8 +1308,6 @@ window "rpane"
 		size = 67x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		saved-params = "is-checked"
 		text = "Changelog"
 		command = "Changelog"
@@ -1304,8 +1318,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		saved-params = "is-checked"
 		text = "Forum"
 		command = "forum"
@@ -1316,8 +1328,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
@@ -1328,8 +1338,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Text"
@@ -1343,8 +1351,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Browser"
@@ -1357,8 +1363,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
-		text-color = #e2ebf1
-		background-color = #2c2f33
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Info"
@@ -1371,7 +1375,6 @@ window "rpane"
 		size = 1x1
 		anchor1 = none
 		anchor2 = none
-		background-color = #23272a
 		is-visible = false
 		saved-params = ""
 
@@ -1382,7 +1385,6 @@ window "browserwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #23272a
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Browser"
 		is-pane = true
@@ -1392,7 +1394,7 @@ window "browserwindow"
 		size = 640x499
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #23272a
+		background-color = #ffffff
 		is-default = true
 		saved-params = ""
 		on-show = ".winset\"rpane.infob.is-visible=true?rpane.infob.pos=130,0;rpane.textb.is-visible=true;rpane.browseb.is-visible=true;rpane.browseb.is-checked=true;rpane.rpanewindow.pos=0,30;rpane.rpanewindow.size=0x0;rpane.rpanewindow.left=browserwindow\""
@@ -1405,7 +1407,6 @@ window "infowindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = #23272a
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Info"
 		is-pane = true
@@ -1415,13 +1416,9 @@ window "infowindow"
 		size = 638x477
 		anchor1 = 0,0
 		anchor2 = 100,100
-		text-color = #e2ebf1
-		background-color = #23272a
 		is-default = true
 		saved-params = ""
-		highlight-color = #23272a
-		tab-text-color = #e2ebf1
-		tab-background-color = #23272a
+		highlight-color = #00aa00
 		on-show = ".winset\"rpane.infob.is-visible=true;rpane.browseb.is-visible=true?rpane.infob.pos=130,0:rpane.infob.pos=65,0 rpane.textb.is-visible=true rpane.infob.is-checked=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=infowindow\""
 		on-hide = ".winset\"rpane.infob.is-visible=false;rpane.browseb.is-visible=true?rpane.browseb.is-checked=true rpane.rpanewindow.left=browserwindow:rpane.textb.is-visible=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=\""
 

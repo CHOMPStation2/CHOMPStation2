@@ -58,17 +58,19 @@
 
 /turf/simulated/floor/holofloor/space
 	icon = 'icons/turf/space.dmi'
+	plane = SPACE_PLANE
 	name = "\proper space"
-	icon_state = "0"
+	icon_state = "white"
+
+/turf/simulated/floor/holofloor/space/update_icon()
+	. = ..()
+	add_overlay(SSskybox.dust_cache["[((x + y) ^ ~(x * y) + z) % 25]"])
 
 /turf/simulated/floor/holofloor/reinforced
 	icon = 'icons/turf/flooring/tiles.dmi'
 	initial_flooring = /decl/flooring/reinforced
 	name = "reinforced holofloor"
 	icon_state = "reinforced"
-
-/turf/simulated/floor/holofloor/space/New()
-	icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 
 /turf/simulated/floor/holofloor/beach
 	desc = "Uncomfortably gritty for a hologram."
@@ -255,7 +257,7 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 //VOREStation Add
 /obj/structure/bed/holobed/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(W.is_wrench())
-		user << ("<span class='notice'>It's a holochair, you can't dismantle it!</span>")
+		to_chat(user, "<span class='notice'>It's a holochair, you can't dismantle it!</span>")
 	return
 //VOREStation Add End
 /obj/item/weapon/holo
@@ -345,6 +347,7 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 	name = "basketball"
 	desc = "Here's your chance, do your dance at the Space Jam."
 	w_class = ITEMSIZE_LARGE //Stops people from hiding it in their bags/pockets
+	drop_sound = 'sound/items/drop/basketball.ogg'
 
 /obj/structure/holohoop
 	name = "basketball hoop"
@@ -395,7 +398,7 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 	var/eventstarted = 0
 
 	anchored = 1.0
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 6
 	power_channel = ENVIRON

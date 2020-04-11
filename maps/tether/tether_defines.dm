@@ -8,18 +8,19 @@
 #define Z_LEVEL_SPACE_HIGH					7
 #define Z_LEVEL_SURFACE_MINE				8
 #define Z_LEVEL_SOLARS						9
-#define Z_LEVEL_CENTCOM						10
-#define Z_LEVEL_MISC						11
-#define Z_LEVEL_SHIPS						12
-#define Z_LEVEL_UNDERDARK					13
-#define Z_LEVEL_PLAINS						14
-#define Z_LEVEL_ALIENSHIP					15
-#define Z_LEVEL_BEACH						16
-#define Z_LEVEL_BEACH_CAVE					17
-#define Z_LEVEL_AEROSTAT					18
-#define Z_LEVEL_AEROSTAT_SURFACE			19
-#define Z_LEVEL_DEBRISFIELD					20
-#define Z_LEVEL_GATEWAY						21
+#define Z_LEVEL_MISC						10
+#define Z_LEVEL_UNDERDARK					11
+#define Z_LEVEL_PLAINS						12
+#define Z_LEVEL_ROGUEMINE_1					13
+#define Z_LEVEL_ROGUEMINE_2					14
+#define Z_LEVEL_ROGUEMINE_3					15
+#define Z_LEVEL_ROGUEMINE_4					16
+#define Z_LEVEL_BEACH						17
+#define Z_LEVEL_BEACH_CAVE					18
+#define Z_LEVEL_AEROSTAT					19
+#define Z_LEVEL_AEROSTAT_SURFACE			20
+#define Z_LEVEL_DEBRISFIELD					21
+#define Z_LEVEL_GATEWAY						22
 
 //Camera networks
 #define NETWORK_TETHER "Tether"
@@ -33,10 +34,16 @@
 	full_name = "NSB Adephagia"
 	path = "tether"
 
+	use_overmap = TRUE
+	overmap_z = Z_LEVEL_MISC
+	overmap_size = 35
+	overmap_event_areas = 34
+	usable_email_tlds = list("virgo.nt")
+
 	zlevel_datum_type = /datum/map_z_level/tether
 
 	lobby_icon = 'icons/misc/title_vr.dmi'
-	lobby_screens = list("tether")
+	lobby_screens = list("tether2_night")
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 	holomap_smoosh = list(list(
@@ -102,8 +109,8 @@
 	spawnpoint_stayed = /datum/spawnpoint/cryo
 
 	meteor_strike_areas = list(/area/tether/surfacebase/outside/outside3)
-	drop_pod_allowed_z = list(Z_LEVEL_SURFACE_HIGH)
 
+	default_skybox = /datum/skybox_settings/tether
 
 	unit_test_exempt_areas = list(
 		/area/tether/surfacebase/outside/outside1,
@@ -114,8 +121,8 @@
 		/area/crew_quarters/sleep/Dorm_3/holo,
 		/area/crew_quarters/sleep/Dorm_5/holo,
 		/area/crew_quarters/sleep/Dorm_7/holo,
-		/area/rnd/miscellaneous_lab)	//TFF 31/8/19 - exempt new construction site from unit tests
-	//TFF 11/12/19 - Minor refactor, makes mice spawn only in Atmos.
+		/area/rnd/miscellaneous_lab)
+
 	unit_test_exempt_from_atmos = list(
 		/area/engineering/atmos_intake, // Outside,
 		/area/rnd/external, //  Outside,
@@ -125,16 +132,15 @@
 		/area/tether/surfacebase/emergency_storage/atrium)
 
 	lateload_z_levels = list(
-		list("Tether - Ships","Tether - Underdark","Tether - Plains"), //Stock Tether lateload maps //YW Edit - removed Tether - Misc
-		list("Alien Ship - Z1 Ship"),
+		list("Tether - Misc","Tether - Underdark","Tether - Plains"), //Stock Tether lateload maps
+		list("Asteroid Belt 1","Asteroid Belt 2","Asteroid Belt 3","Asteroid Belt 4"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space")
 		)
 
 	lateload_single_pick = list(
-		//list("Snow Outpost"),		// Unplayable mapgen,
-		//list("Zoo"),				// Too big. way, way too big
+		list("Snow Outpost"),
 		list("Carp Farm"),
 		list("Snow Field"),
 		list("Listening Post")
@@ -151,13 +157,20 @@
 		Z_LEVEL_SPACE_HIGH,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SOLARS,
-		Z_LEVEL_CENTCOM,
 		Z_LEVEL_MISC,
-		Z_LEVEL_SHIPS,
 		Z_LEVEL_BEACH
 		)
 
+	belter_docked_z = 		list(Z_LEVEL_SPACE_HIGH)
+	belter_transit_z =	 	list(Z_LEVEL_MISC)
+	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
+						 		 Z_LEVEL_ROGUEMINE_2,
+						 	 	 Z_LEVEL_ROGUEMINE_3,
+								 Z_LEVEL_ROGUEMINE_4)
+
 	lateload_single_pick = null //Nothing right now.
+
+	planet_datums_to_make = list(/datum/planet/virgo3b)
 
 /datum/map/tether/perform_map_generation()
 
@@ -168,6 +181,10 @@
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SOLARS, 64, 64)         // Create the mining ore distribution map.
 
 	return 1
+
+/datum/skybox_settings/tether
+	icon_state = "space5"
+	use_stars = FALSE
 
 /datum/planet/virgo3b
 	expected_z_levels = list(
@@ -183,7 +200,7 @@
 /datum/map/tether/get_map_levels(var/srcz, var/long_range = TRUE)
 	if (long_range && (srcz in map_levels))
 		return map_levels
-	else if (srcz == Z_LEVEL_MISC || srcz == Z_LEVEL_SHIPS) //technical levels
+	else if (srcz == Z_LEVEL_MISC) //technical levels
 		return list() // Nothing on these z-levels- sensors won't show, and GPSes won't see each other.
 	else if (srcz >= Z_LEVEL_SURFACE_LOW && srcz <= Z_LEVEL_SOLARS) //Zs 1-3, 5-9, Z4 will return same list, but is not included into it
 		return list(
@@ -194,17 +211,72 @@
 			Z_LEVEL_SPACE_MID,
 			Z_LEVEL_SPACE_HIGH,
 			Z_LEVEL_SURFACE_MINE,
-			Z_LEVEL_SOLARS)
-	else if(srcz >= Z_LEVEL_BEACH && srcz <= Z_LEVEL_BEACH_CAVE) //Zs 16-17
+			Z_LEVEL_SOLARS,
+			Z_LEVEL_PLAINS)
+	else if(srcz >= Z_LEVEL_BEACH && srcz <= Z_LEVEL_BEACH_CAVE)
 		return list(
 			Z_LEVEL_BEACH,
 			Z_LEVEL_BEACH_CAVE)
-	else if(srcz >= Z_LEVEL_AEROSTAT && srcz <= Z_LEVEL_AEROSTAT_SURFACE) //Zs 18-19
+	else if(srcz >= Z_LEVEL_AEROSTAT && srcz <= Z_LEVEL_AEROSTAT_SURFACE)
 		return list(
 			Z_LEVEL_AEROSTAT,
 			Z_LEVEL_AEROSTAT_SURFACE)
 	else
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
+
+// Overmap represetation of tether
+/obj/effect/overmap/visitable/sector/virgo3b
+	name = "Virgo 3B"
+	desc = "Full of phoron, and home to the NSB Adephagia, where you can dock and refuel your craft."
+	base = 1
+	icon_state = "globe"
+	color = "#d35b5b"
+	initial_generic_waypoints = list(
+		"tether_dockarm_d1a1", //Bottom left,
+		"tether_dockarm_d1a2", //Top left,
+		"tether_dockarm_d1a3", //Left on inside,
+		"tether_dockarm_d2a1", //Bottom right,
+		"tether_dockarm_d2a2", //Top right,
+		"tether_dockarm_d1l", //End of left arm,
+		"tether_dockarm_d2l", //End of right arm,
+		"tether_space_SE", //station1, bottom right of space,
+		"tether_space_NE", //station1, top right of space,
+		"tether_space_SW", //station3, bottom left of space,
+		"tether_excursion_hangar", //Excursion shuttle hangar,
+		"tether_medivac_dock", //Medical shuttle dock,
+		"tourbus_dock" //Surface large hangar
+		)
+	//Despite not being in the multi-z complex, these levels are part of the overmap sector
+	extra_z_levels = list(
+		Z_LEVEL_SURFACE_MINE,
+		Z_LEVEL_SOLARS,
+		Z_LEVEL_PLAINS,
+		Z_LEVEL_UNDERDARK
+	)
+
+/obj/effect/overmap/visitable/sector/virgo3b/Crossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = FALSE)
+
+/obj/effect/overmap/visitable/sector/virgo3b/Uncrossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = TRUE)
+
+/obj/effect/overmap/visitable/sector/virgo3b/get_space_zlevels()
+	return list(Z_LEVEL_SPACE_LOW, Z_LEVEL_SPACE_MID, Z_LEVEL_SPACE_HIGH)
+
+/obj/effect/overmap/visitable/sector/virgo3b/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
+	//For landables, we need to see if their shuttle is cloaked
+	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
+		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
+		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
+		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			atc.msg(message)
+
+	//For ships, it's safe to assume they're big enough to not be sneaky
+	else if(istype(AM, /obj/effect/overmap/visitable/ship))
+		atc.msg(message)
 
 // For making the 6-in-1 holomap, we calculate some offsets
 #define TETHER_MAP_SIZE 140 // Width and height of compiled in tether z levels.
@@ -274,62 +346,11 @@
 /datum/map_z_level/tether/mine
 	z = Z_LEVEL_SURFACE_MINE
 	name = "Mining Outpost"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
 
 /datum/map_z_level/tether/solars
 	z = Z_LEVEL_SOLARS
 	name = "Solar Field"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
-
-/datum/map_z_level/tether/colony
-	z = Z_LEVEL_CENTCOM
-	name = "Colony"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
-
-/datum/map_z_level/tether/misc
-	z = Z_LEVEL_MISC
-	name = "Misc"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_XENOARCH_EXEMPT
-
-/*
-/datum/map_z_level/tether/wilderness
-	name = "Wilderness"
-	flags = MAP_LEVEL_PLAYER
-	var/activated = 0
-	var/list/frozen_mobs = list()
-
-/datum/map_z_level/tether/wilderness/proc/activate_mobs()
-	if(activated && isemptylist(frozen_mobs))
-		return
-	activated = 1
-	for(var/mob/living/simple_mob/M in frozen_mobs)
-		M.life_disabled = 0
-		frozen_mobs -= M
-	frozen_mobs.Cut()
-
-/datum/map_z_level/tether/wilderness/wild_1
-	z = Z_LEVEL_SURFACE_WILDERNESS_1
-
-/datum/map_z_level/tether/wilderness/wild_2
-	z = Z_LEVEL_SURFACE_WILDERNESS_2
-
-/datum/map_z_level/tether/wilderness/wild_3
-	z = Z_LEVEL_SURFACE_WILDERNESS_3
-
-/datum/map_z_level/tether/wilderness/wild_4
-	z = Z_LEVEL_SURFACE_WILDERNESS_4
-
-/datum/map_z_level/tether/wilderness/wild_5
-	z = Z_LEVEL_SURFACE_WILDERNESS_5
-
-/datum/map_z_level/tether/wilderness/wild_6
-	z = Z_LEVEL_SURFACE_WILDERNESS_6
-
-/datum/map_z_level/tether/wilderness/wild_crash
-	z = Z_LEVEL_SURFACE_WILDERNESS_CRASH
-
-/datum/map_z_level/tether/wilderness/wild_ruins
-	z = Z_LEVEL_SURFACE_WILDERNESS_RUINS
-*/

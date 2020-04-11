@@ -166,6 +166,7 @@
 /area/security/outpost
 	name = "\improper Security outpost"
 	icon_state = "security"
+	flags = RAD_SHIELDED
 
 /area/security/labor
 	name = "Labor camp access"
@@ -175,3 +176,6 @@
 	icon_state = "medbay"
 	music = 'sound/ambience/signal.ogg'
 
+/area/security/shuttledock
+	name = "\improper Security Interceptor Dock"
+	icon_state = "security"

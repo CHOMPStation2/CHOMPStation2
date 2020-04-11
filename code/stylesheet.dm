@@ -16,10 +16,10 @@ em						{font-style: normal;font-weight: bold;}
 
 /* OOC */
 .ooc					{font-weight: bold;}
+.looc					{color: #3A9696;}
 .ooc img.text_tag		{width: 32px; height: 10px;}
 
-.ooc .everyone			{color: #0544ff;}
-.ooc .looc				{color: #4DA0A0;}
+.ooc .everyone			{color: #002eb8;}
 .ooc .elevated			{color: #2e78d9;}
 .ooc .moderator			{color: #587AA3;}
 .ooc .developer			{color: #48744B;}
@@ -63,8 +63,9 @@ em						{font-style: normal;font-weight: bold;}
 /* Miscellaneous */
 .name					{font-weight: bold;}
 .say					{}
-.alert					{color: #FF3232;}
-h1.alert, h2.alert		{color: #e2ebf1;}
+.alert					{color: #ff0000;}
+h1.alert, h2.alert		{color: #000000;}
+.ghostalert				{color: #5c00e6;	font-style: italic; font-weight: bold;}
 
 .emote					{font-style: italic;}
 

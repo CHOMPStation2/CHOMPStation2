@@ -27,6 +27,18 @@
 	excludes = list(/datum/trait/cold_blood, /datum/trait/extreme_cold_blood)
 
 // YW Addition
+/datum/trait/alcohol_intolerance_basic
+	name = "Liver of Lilies"
+	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard."
+	cost = 0
+	var_changes = list("alcohol_tolerance" = 2)
+
+/datum/trait/alcohol_tolerance_basic
+	name = "Liver of Iron"
+	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr!"
+	cost = 0
+	var_changes = list("alcohol_tolerance" = 0.75)
+
 /*
 /datum/trait/cryogenic
 	name = "Cryogenic Metabolism"
@@ -138,6 +150,16 @@
 /datum/trait/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/eat_trash
+
+/datum/trait/gem_eater
+	name = "Expensive Taste"
+	desc = "There's nothing that sates the appetite better than precious gems, exotic or rare minerals and you have damn fine taste. Anything else is beneath you."
+	cost = 0
+	var_changes = list("gets_food_nutrition" = 0, "eat_ore" = 1) //The verb is given in human.dm
+
+/datum/trait/gem_eater/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/eat_ore
 
 /datum/trait/glowing_eyes
 	name = "Glowing Eyes"

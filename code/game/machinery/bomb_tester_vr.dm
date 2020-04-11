@@ -210,7 +210,7 @@
 
 /obj/machinery/bomb_tester/proc/start_simulating()
 	simulating = 1
-	update_use_power(2)
+	update_use_power(USE_POWER_ACTIVE)
 	simulation_started = world.time
 	update_icon()
 	switch(sim_mode)
@@ -301,6 +301,8 @@
 	simulation_results = "<center><h1><b>Tank Transfer Valve Mixture Test</b></h1></center>"
 	simulation_results += "<hr>"
 
+	simulation_results += "<br>Initial gas tank status (primary slot):<br>[format_gas_for_results(tank1.air_contents)]"
+	simulation_results += "<br>Initial gas tank status (secondary slot):<br>[format_gas_for_results(tank2.air_contents)]"
 	simulation_results += "<br>Initial gas mixture status:<br>[format_gas_for_results(faketank)]"
 
 	var/intervals = 0
@@ -350,7 +352,7 @@
 
 /obj/machinery/bomb_tester/proc/simulation_finish(cancelled = 0)
 	simulating = 0
-	update_use_power(1)
+	update_use_power(USE_POWER_IDLE)
 	update_icon()
 	if(test_canister && test_canister.anchored && !test_canister.connected_port)
 		test_canister.anchored = 0

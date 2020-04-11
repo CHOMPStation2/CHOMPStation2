@@ -19,8 +19,8 @@
 		return
 
 	// Transfer over the AI.
-	transfer << "You have been transferred into a stationary terminal. Sadly, there is no remote access from here."
-	user << "<span class='notice'>Transfer successful:</span> [transfer.name] placed within stationary terminal."
+	to_chat(transfer, "You have been transferred into a stationary terminal. Sadly, there is no remote access from here.")
+	to_chat(user, "<span class='notice'>Transfer successful:</span> [transfer.name] placed within stationary terminal.")
 
 	transfer.loc = src
 	transfer.cancel_camera()
@@ -37,7 +37,7 @@
 	if(istype(I, /obj/item/device/aicard))
 
 		if(stat & (NOPOWER|BROKEN))
-			user << "This terminal isn't functioning right now."
+			to_chat(user, "This terminal isn't functioning right now.")
 			return
 
 		var/obj/item/device/aicard/card = I
@@ -46,7 +46,7 @@
 
 		if(istype(comp_ai))
 			if(active)
-				user << "<span class='danger'>ERROR:</span> Reconstruction in progress."
+				to_chat(user, "<span class='danger'>ERROR:</span> Reconstruction in progress.")
 				return
 			card.grab_ai(comp_ai, user)
 			if(!(locate(/mob/living/silicon/ai) in src)) occupant = null
@@ -110,7 +110,7 @@
 			src.occupant.adjustBruteLoss(-1)
 			src.occupant.updatehealth()
 			if (src.occupant.health >= 0 && src.occupant.stat == DEAD)
-				src.occupant.stat = CONSCIOUS
+				src.occupant.set_stat(CONSCIOUS)
 				src.occupant.lying = 0
 				dead_mob_list -= src.occupant
 				living_mob_list += src.occupant
@@ -135,8 +135,8 @@
 
 	if(occupant)
 		if(occupant.stat)
-			overlays += image(icon, "ai-fixer-404", overlay_layer)
+			add_overlay("ai-fixer-404")
 		else
-			overlays += image(icon, "ai-fixer-full", overlay_layer)
+			add_overlay("ai-fixer-full")
 	else
-		overlays += image(icon, "ai-fixer-empty", overlay_layer)
+		add_overlay("ai-fixer-empty")

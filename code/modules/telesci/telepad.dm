@@ -5,7 +5,7 @@
 	icon = 'icons/obj/telescience.dmi'
 	icon_state = "pad-idle"
 	anchored = 1
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	circuit = /obj/item/weapon/circuitboard/telesci_pad
 	idle_power_usage = 200
 	active_power_usage = 5000
@@ -41,7 +41,7 @@
 		if(istype(W, /obj/item/device/multitool))
 			var/obj/item/device/multitool/M = W
 			M.connectable = src
-			user << "<span class='caution'>You save the data in the [M.name]'s buffer.</span>"
+			to_chat(user, "<span class='caution'>You save the data in the [M.name]'s buffer.</span>")
 			return 1
 
 	return ..()

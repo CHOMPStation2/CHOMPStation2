@@ -53,3 +53,25 @@
 	name = "\improper Explorer command jacket"
 	desc = "A exploration jacket belonging to the Explorer's association. It has gold buttons and gold trim."
 	icon_state = "blackservice_com"
+
+
+/obj/item/clothing/suit/storage/tailcoat
+	name = "victorian tailcoat"
+	desc = "A fancy victorian tailcoat."
+	icon = 'icons/mob/suit_yw.dmi'
+	icon_state = "tailcoat"
+	icon_override = 'icons/mob/suit_yw.dmi'
+	item_state = "tailcoat_s"
+
+/obj/item/clothing/suit/storage/victcoat
+	name = "ladies black victorian coat"
+	desc = "A fancy victorian coat."
+	icon = 'icons/mob/suit_yw.dmi'
+	icon_state = "ladiesvictoriancoat"
+	icon_override = 'icons/mob/suit_yw.dmi'
+	item_state = "ladiesvictoriancoat_s"
+
+/obj/item/clothing/suit/storage/victcoat/red
+	name = "ladies red victorian coat"
+	icon_state = "ladiesredvictoriancoat"
+	item_state = "ladiesredvictoriancoat_s"

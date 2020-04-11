@@ -5,7 +5,7 @@
 	name = "body design console"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
-	icon = 'icons/obj/computer_vr.dmi'
+	icon = 'icons/obj/computer.dmi'
 	icon_keyboard = "med_key"
 	icon_screen = "explosive"
 	light_color = "#315ab4"
@@ -371,8 +371,8 @@
 	desc = "It has a small label: \n\
 	\"Portable Body Record Storage Disk. \n\
 	Insert into resleeving control console\""
-	icon = 'icons/obj/cloning.dmi'
-	icon_state = "datadisk2"
+	icon = 'icons/obj/discs_vr.dmi'
+	icon_state = "data-green"
 	item_state = "card-id"
 	w_class = ITEMSIZE_SMALL
 	var/datum/transhuman/body_record/stored = null

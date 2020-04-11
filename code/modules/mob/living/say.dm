@@ -8,6 +8,7 @@ var/list/department_radio_keys = list(
 	  ":n" = "Science",		".n" = "Science",
 	  ":m" = "Medical",		".m" = "Medical",
 	  ":e" = "Engineering", ".e" = "Engineering",
+	  ":k" = "Response Team",	".k" = "Response Team",	//TFF 11/3/20 - Add Response Team to channels usable rather than resorting to :H or such.,
 	  ":s" = "Security",	".s" = "Security",
 	  ":w" = "whisper",		".w" = "whisper",
 	  ":t" = "Mercenary",	".t" = "Mercenary",
@@ -25,6 +26,7 @@ var/list/department_radio_keys = list(
 	  ":N" = "Science",		".N" = "Science",
 	  ":M" = "Medical",		".M" = "Medical",
 	  ":E" = "Engineering",	".E" = "Engineering",
+	  ":k" = "Response Team",	".k" = "Response Team",	//TFF 11/3/20 - Add Response Team to channels usable rather than resorting to :H or such.,
 	  ":S" = "Security",	".S" = "Security",
 	  ":W" = "whisper",		".W" = "whisper",
 	  ":T" = "Mercenary",	".T" = "Mercenary",
@@ -113,6 +115,11 @@ proc/get_radio_key_from_channel(var/channel)
 		whispering = 1
 		. = 1
 	//VOREStation Edit End
+	//YW Edit start
+	if(wingdings)
+		message = span("wingdings",(message))
+		. = 1
+	//YW Edit End
 
 	message_data[1] = message
 	message_data[2] = verb

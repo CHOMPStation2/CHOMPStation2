@@ -17,8 +17,8 @@
 	accuracy_dispersion	= 20					// 20% less precise.
 
 /datum/modifier/faux_resleeving_sickness
-	name = "resleeving sickness"
-	desc = "You feel somewhat weak and unfocused, having been sleeved not so long ago."
+	name = "resleeving sickness (vore)"
+	desc = "You feel somewhat weak and unfocused, having been sleeved not so long ago. (OOC: No real penalty for vore-related deaths)"
 	stacks = MODIFIER_STACK_EXTEND
 
 	on_created_text = "<span class='warning'>You feel slightly weak and unfocused.</span>"

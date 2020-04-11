@@ -90,6 +90,14 @@
 	cost = -3
 	var_changes = list("burn_mod" = 1.4)
 
+//YW ADDITIONS START
+/datum/trait/alcohol_intolerance_advanced
+	name = "Liver of Air"
+	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard."
+	cost = -1
+	var_changes = list("alcohol_tolerance" = 3)
+//YW ADDITIONS END
+
 /datum/trait/conductive
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 25%"

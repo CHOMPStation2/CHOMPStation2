@@ -24,9 +24,12 @@
 	desc = "It's just an ordinary box."
 	icon_state = "box"
 	item_state = "syringe_kit"
+	center_of_mass = list("x" = 13,"y" = 10)
 	var/foldable = /obj/item/stack/material/cardboard	// BubbleWrap - if set, can be folded (when empty) into a sheet of cardboard
 	max_w_class = ITEMSIZE_SMALL
 	max_storage_space = INVENTORY_BOX_SPACE
+	use_sound = 'sound/items/storage/box.ogg'
+	drop_sound = 'sound/items/drop/box.ogg'
 
 // BubbleWrap - A box can be folded up to make card
 /obj/item/weapon/storage/box/attack_self(mob/user as mob)
@@ -48,7 +51,8 @@
 	if ( !found )	// User is too far away
 		return
 	// Now make the cardboard
-	user << "<span class='notice'>You fold [src] flat.</span>"
+	to_chat(user, "<span class='notice'>You fold [src] flat.</span>")
+	playsound(src.loc, 'sound/items/storage/boxfold.ogg', 30, 1)
 	new foldable(get_turf(src))
 	qdel(src)
 
@@ -404,12 +408,13 @@
 	can_hold = list(/obj/item/weapon/flame/match)
 	starts_with = list(/obj/item/weapon/flame/match = 10)
 
-/obj/item/weapon/storage/box/matches/attackby(obj/item/weapon/flame/match/W as obj, mob/user as mob)
+/obj/item/weapon/storage/box/matches/attackby(var/obj/item/weapon/flame/match/W, var/mob/user)
 	if(istype(W) && !W.lit && !W.burnt)
-		W.lit = 1
-		W.damtype = "burn"
-		W.icon_state = "match_lit"
-		START_PROCESSING(SSobj, W)
+		if(prob(25))
+			W.light(user)
+			user.visible_message("<span class='notice'>[user] manages to light the match on the matchbox.</span>")
+		else
+			playsound(src, 'sound/items/cigs_lighters/matchstick_hit.ogg', 25, 0, -1)
 	W.update_icon()
 	return
 

@@ -12,13 +12,13 @@
 		switch(spawn_chance)
 			if(0 to 49)
 				new /obj/random/gun/guarenteed(usr.loc)
-				usr << "You got a thing!"
+				to_chat(usr, "You got a thing!")
 			if(50 to 99)
 				new /obj/item/weapon/bikehorn/rubberducky(usr.loc)
 				new /obj/item/weapon/bikehorn(usr.loc)
-				usr << "You got two things!"
+				to_chat(usr, "You got two things!")
 			if(100)
-				usr << "The box contained nothing!"
+				to_chat(usr, "The box contained nothing!")
 				return
 		*/
 		var/loot = pick(/obj/effect/landmark/costume,
@@ -99,3 +99,13 @@
 	storage_slots = 7
 	can_hold = list(/obj/item/clothing/mask/smokable/cigarette/cigar/havana)
 	icon_type = "cigar"
+
+/obj/item/weapon/miscdisc
+	name = "wah thing"
+	desc = "wahwahwah wahwahwa"
+	icon_state = "wahdisc"
+	icon = 'icons/obj/contraband_vr.dmi'
+	w_class = ITEMSIZE_NORMAL
+
+/obj/item/weapon/miscdisc/attack_self(mob/living/user as mob)
+	to_chat(user, "LORE.")

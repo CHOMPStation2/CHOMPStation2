@@ -197,7 +197,7 @@ var/list/ai_verbs_default = list(
 		if(i != common_radio.channels.len)
 			radio_text += ", "
 
-	src << radio_text
+	to_chat(src,radio_text)
 
 	// Vorestation Edit: Meta Info for AI's. Mostly used for Holograms
 	if (client)
@@ -297,7 +297,7 @@ var/list/ai_verbs_default = list(
 /obj/machinery/ai_powersupply
 	name="Power Supply"
 	active_power_usage=50000 // Station AIs use significant amounts of power. This, when combined with charged SMES should mean AI lasts for 1hr without external power.
-	use_power = 2
+	use_power = USE_POWER_ACTIVE
 	power_channel = EQUIP
 	var/mob/living/silicon/ai/powered_ai = null
 	invisibility = 100
@@ -325,14 +325,14 @@ var/list/ai_verbs_default = list(
 		qdel(src)
 		return
 	if(powered_ai.APU_power)
-		use_power = 0
+		update_use_power(USE_POWER_OFF)
 		return
 	if(!powered_ai.anchored)
 		loc = powered_ai.loc
-		use_power = 0
+		update_use_power(USE_POWER_OFF)
 		use_power(50000) // Less optimalised but only called if AI is unwrenched. This prevents usage of wrenching as method to keep AI operational without power. Intellicard is for that.
 	if(powered_ai.anchored)
-		use_power = 2
+		update_use_power(USE_POWER_ACTIVE)
 
 /mob/living/silicon/ai/proc/pick_icon()
 	set category = "AI Settings"
@@ -416,13 +416,13 @@ var/list/ai_verbs_default = list(
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
 	if(emergency_message_cooldown)
-		usr << "<span class='warning'>Arrays recycling. Please stand by.</span>"
+		to_chat(usr, "<span class='warning'>Arrays recycling. Please stand by.</span>")
 		return
 	var/input = sanitize(input(usr, "Please choose a message to transmit to [using_map.boss_short] via quantum entanglement.  Please be aware that this process is very expensive, and abuse will lead to... termination.  Transmission does not guarantee a response. There is a 30 second delay before you may send another message, be clear, full and concise.", "To abort, send an empty message.", ""))
 	if(!input)
 		return
 	CentCom_announce(input, usr)
-	usr << "<span class='notice'>Message transmitted.</span>"
+	to_chat(usr, "<span class='notice'>Message transmitted.</span>")
 	log_game("[key_name(usr)] has made an IA [using_map.boss_short] announcement: [input]")
 	emergency_message_cooldown = 1
 	spawn(300)
@@ -775,7 +775,7 @@ var/list/ai_verbs_default = list(
 		var/obj/effect/overlay/aiholo/hologram = holo.masters[src]
 		walk(hologram, 0)
 	//VOREStation Add End
-	usr << "Your hologram will [hologram_follow ? "follow" : "no longer follow"] you now."
+	to_chat(usr, "Your hologram will [hologram_follow ? "follow" : "no longer follow"] you now.")
 
 
 /mob/living/silicon/ai/proc/check_unable(var/flags = 0, var/feedback = 1)

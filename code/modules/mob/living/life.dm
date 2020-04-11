@@ -99,11 +99,11 @@
 	updatehealth()
 	if(stat != DEAD)
 		if(paralysis)
-			stat = UNCONSCIOUS
+			set_stat(UNCONSCIOUS)
 		else if (status_flags & FAKEDEATH)
-			stat = UNCONSCIOUS
+			set_stat(UNCONSCIOUS)
 		else
-			stat = CONSCIOUS
+			set_stat(CONSCIOUS)
 		return 1
 
 /mob/living/proc/handle_statuses()
@@ -243,5 +243,5 @@
 	var/distance = abs(current-adjust_to)		//Used for how long to animate for
 	if(distance < 0.01) return					//We're already all set
 
-	//world << "[src] in B:[round(brightness,0.1)] C:[round(current,0.1)] A2:[round(adjust_to,0.1)] D:[round(distance,0.01)] T:[round(distance*10 SECONDS,0.1)]"
+	//to_world("[src] in B:[round(brightness,0.1)] C:[round(current,0.1)] A2:[round(adjust_to,0.1)] D:[round(distance,0.01)] T:[round(distance*10 SECONDS,0.1)]")
 	animate(dsoverlay, alpha = (adjust_to*255), time = (distance*10 SECONDS))
