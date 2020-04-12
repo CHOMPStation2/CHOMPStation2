@@ -745,6 +745,7 @@
 			to_chat(src,"<span class='warning'>Looks like you lost your chance...</span>")
 			return
 
+//		T.add_modifier(/datum/modifier/gory_devourment, 10 SECONDS) //CHOMPEdit - Don't need this because we don't do resleeving sickness.
 
 		//Removing an internal organ
 		if(T_int && T_int.damage >= 25) //Internal organ and it's been severely damaged
