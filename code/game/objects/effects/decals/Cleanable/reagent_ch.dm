@@ -38,7 +38,6 @@
 	world << "[name], [dryname]. [desc] and [drydesc]."
 
 	update_icon()
-	drytime = world.time + DRYING_TIME * (amount+1)
 	START_PROCESSING(SSobj, src)
 
 /obj/effect/decal/cleanable/blood/reagent/update_icon()
