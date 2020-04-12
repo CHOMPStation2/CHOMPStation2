@@ -189,7 +189,6 @@
 	if(isliving(loc))
 		owner = loc
 		owner.vore_organs |= src
-		SSbellies.belly_list += src
 		START_PROCESSING(SSbellies, src)
 	
 	create_reagents(100)	//CHOMP So we can have some liquids in bellies
