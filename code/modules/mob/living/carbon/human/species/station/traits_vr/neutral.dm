@@ -29,13 +29,13 @@
 // YW Addition
 /datum/trait/alcohol_intolerance_basic
 	name = "Liver of Lilies"
-	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard."
+	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = 0
 	var_changes = list("alcohol_tolerance" = 2)
 
 /datum/trait/alcohol_tolerance_basic
 	name = "Liver of Iron"
-	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr!"
+	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr! You may wish to note this down in your medical records."
 	cost = 0
 	var_changes = list("alcohol_tolerance" = 0.75)
 
