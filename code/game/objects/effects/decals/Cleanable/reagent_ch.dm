@@ -14,7 +14,6 @@
 	var/custombasecolor = null
 
 /obj/effect/decal/cleanable/blood/reagent/New(var/spill_name, var/spill_color, var/spill_reagentid, var/new_amount, var/ckey_user, var/ckey_spawn)
-	/*..()*/
 	switch(spill_reagentid)	//To ensure that if people spill some liquids, it wont cause issues with spawning, like spilling blood. Also allow for spilling of certain things to
 		if("blood")
 			return
@@ -35,8 +34,6 @@
 	custombasedesc = "It's a puddle of [spill_name]"
 	custombasecolor = spill_color
 
-	world << "[name], [dryname]. [desc] and [drydesc]."
-
 	update_icon()
 	START_PROCESSING(SSobj, src)
 
@@ -46,6 +43,6 @@
 	color = custombasecolor
 	name = custombasename
 	desc = custombasedesc
-	
-/obj/effect/decal/cleanable/blood/Crossed(mob/living/carbon/human/perp)
+
+/obj/effect/decal/cleanable/blood/reagent/Crossed(mob/living/carbon/human/perp)
 	//Nothing, we dont wanna spread our mess all over, at least not until people want that
