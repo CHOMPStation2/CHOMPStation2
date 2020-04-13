@@ -8,9 +8,9 @@
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_presets.dm"
 	#include "southern_cross_shuttles.dm"
-//	#include "southern_cross_shuttles_ch.dm" //CHOMP shuttles //Commented out while we, CHOMP, figure out how to use the new shuttle system
-
+	#include "southern_cross_shuttles_ch.dm"
 	#include "shuttles/crew_shuttles.dm"
+	#include "shuttles/crew_shuttles_ch.dm"
 	#include "shuttles/heist.dm"
 	#include "shuttles/merc.dm"
 	#include "shuttles/ninja.dm"
