@@ -53,7 +53,7 @@
 	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
-	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_yw.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16

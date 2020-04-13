@@ -12,7 +12,7 @@
 #include "Smol1.dmm"
 #include "Mudpit.dmm"
 #include "Snowrock1.dmm"
-#include "Boombase.dmm"
+//#include "Boombase.dmm" YW edit remove boombase
 #include "Blackshuttledown.dmm"
 #include "Blueshuttledown.dmm"
 #include "Lab1.dmm"
@@ -165,11 +165,11 @@
 	template_group = "Sif Free Radio"
 	cost = 10
 
-/datum/map_template/surface/wilderness/deep/Boombase
+/*/datum/map_template/surface/wilderness/deep/Boombase //YW Edit remove boombase
 	name = "Boombase"
 	desc = "What happens when you don't follow SOP."
 	mappath = 'maps/submaps/surface_submaps/wilderness/Boombase.dmm'
-	cost = 5
+	cost = 5*/
 
 /datum/map_template/surface/wilderness/deep/BSD
 	name = "Black Shuttle Down"
