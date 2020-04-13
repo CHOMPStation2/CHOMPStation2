@@ -2,7 +2,7 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to Yawn-Wider, which is hosted in the [Chomp Station](https://github.com/CHOMPStation2/CHOMPStation2) on GitHub.
+The following is a set of guidelines for contributing to Chomp Station, which is hosted in the [Chomp Station](https://github.com/CHOMPStation2/CHOMPStation2) on GitHub.
 These are just guidelines, not rules, use your best judgment and feel free to propose changes to this document in a pull request.
 
 #### Table Of Contents
@@ -37,11 +37,11 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 Any code submissions that do not meet our coding standards are likely to be rejected, or at the very least, have a maintainer request changes on your PR. Save time and follow these standards from the start.
 
 * If it is something like a bugfix that Yawn-Wider or VoreStation or Polaris would want (the codebases we use), code it in their code and make the PR to them. We regularly update from them. They would want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
-* Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation) (https://github.com/Yawn-Wider/YWPolarisVore). All PRs with edits to stock .DMI files might be rejected.
+* Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation) (https://github.com/\-Wider/YWPolarisVore). All PRs with edits to stock .DMI files might be rejected.
 * When changing any code in any stock Polaris .DM file, you must mark your changes:
     * For single-line changes: //CHOMPEdit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
-    * For multi-line additions: //CHOMPEdit - "Explanation" and then at the bottom of your changes, //Yawn-Wider Edit End
-    * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* Yawn-Wider Removal - "Reason"
+    * For multi-line additions: //CHOMPEdit - "Explanation" and then at the bottom of your changes, //CHOMPEdit End
+    * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* CHOMP Removal - "Reason"
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
 * Any new files should have "_ch" at the end. For example, "life_ch.dm". Just make them in the same location as the file they are related to.
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details.
