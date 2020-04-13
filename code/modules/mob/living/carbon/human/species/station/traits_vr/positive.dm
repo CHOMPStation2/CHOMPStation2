@@ -131,16 +131,21 @@
 	var_changes = list("burn_mod" = 0.6)
 
 //YW ADDITIONS START
-	
+/datum/trait/improved_biocompat
+	name = "Improved Biocompatibility"
+	desc = "Your body is naturally (or artificially) more receptive to healing chemicals without being vulnerable to the 'bad stuff'. You heal more efficiently from most chemicals, with no other drawbacks. Remember to note this down in your medical records!"
+	cost = 2
+	var_changes = list("chem_strength_heal" = 1.2)
+
 /datum/trait/alcohol_tolerance_advanced
 	name = "Liver of Steel"
-	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers!"
+	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers! You may wish to note this down in your medical records."
 	cost = 1
 	var_changes = list("alcohol_tolerance" = 0.5)
 
 /datum/trait/alcohol_immunity
 	name = "Liver of Durasteel"
-	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed."
+	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed. You may wish to note this down in your medical records."
 	cost = 2
 	var_changes = list("alcohol_tolerance" = 0.25)
 //YW ADDITIONS END
