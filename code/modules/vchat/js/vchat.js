@@ -26,7 +26,7 @@
 var vchat_opts = {
 	msBeforeDropped: 30000, //No ping for this long, and the server must be gone
 	cookiePrefix: "vst-", //If you're another server, you can change this if you want.
-	alwaysShow: ["vc_looc", "vc_system"], //Categories to always display on every tab
+	alwaysShow: ["vc_adminpm", "vc_system"], //Categories to always display on every tab. YW Edit: removes vc_looc adds: vc_adminpm
 	vchatTabsVer: 1.0 //Version of vchat tabs save 'file'
 };
 
