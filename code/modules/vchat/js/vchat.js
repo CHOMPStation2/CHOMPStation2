@@ -198,7 +198,7 @@ function start_vue() {
 					becomes: "vc_adminpm",
 					pretty: "Admin PMs",
 					tooltip: "Messages to/from admins ('adminhelps')",
-					required: false,
+					required: true, //YW Edit
 					admin: false
 				},
 				{
@@ -230,7 +230,7 @@ function start_vue() {
 					becomes: "vc_looc",
 					pretty: "Local OOC",
 					tooltip: "Local OOC messages, always enabled",
-					required: true
+					required: false //YW Edit
 				},
 				{
 					matches: ".boldannounce",
