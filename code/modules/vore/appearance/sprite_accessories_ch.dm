@@ -7,7 +7,6 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-
 //TAILS
 /datum/sprite_accessory/tail/alien_slug
 	name = "Alien slug tail"
@@ -35,3 +34,11 @@
 	icon = 'icons/mob/vore/wings_ch.dmi'
 	icon_state = "csnag-backplate"
 	do_colouration = 1
+
+/datum/sprite_accessory/wing/snail //We should some day make a variable to make some wings not be able to fly
+	name = "Snail shell"
+	desc = ""
+	icon = 'icons/mob/vore/wings_ch.dmi'
+	icon_state = "snail_shell"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
