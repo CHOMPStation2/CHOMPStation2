@@ -197,8 +197,8 @@ function start_vue() {
 					matches: ".pm",
 					becomes: "vc_adminpm",
 					pretty: "Admin PMs",
-					tooltip: "Messages to/from admins ('adminhelps')",
-					required: false,
+					tooltip: "Messages to/from admins ('adminhelps'), always enabled",
+					required: true, //YW Edit
 					admin: false
 				},
 				{
@@ -229,8 +229,8 @@ function start_vue() {
 					matches: ".ooc.looc, .ooc .looc", //Dumb game
 					becomes: "vc_looc",
 					pretty: "Local OOC",
-					tooltip: "Local OOC messages, always enabled",
-					required: true
+					tooltip: "Local OOC messages",
+					required: false //YW Edit
 				},
 				{
 					matches: ".boldannounce",
