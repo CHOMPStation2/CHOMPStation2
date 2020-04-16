@@ -242,6 +242,7 @@
 	pixel_y = -30
 	},
 /obj/machinery/light,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/bridge)
 "aH" = (
@@ -308,6 +309,7 @@
 	pixel_x = 28
 	},
 /obj/machinery/light,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/bridge)
 "aR" = (
@@ -1946,6 +1948,7 @@
 	icon_state = "bordercolor";
 	dir = 8
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)
 "eD" = (
@@ -2005,6 +2008,9 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},
+/obj/structure/table/rack,
+/obj/item/weapon/rig/pmc/security/grey/equipped,
+/obj/item/weapon/rig/pmc/security/grey/equipped,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/sec)
 "eL" = (
@@ -2047,6 +2053,7 @@
 	icon_state = "tube1";
 	dir = 8
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/corridor)
 "eO" = (
@@ -2063,12 +2070,12 @@
 /obj/random/handgun/sec,
 /obj/random/handgun/sec,
 /obj/structure/table/rack,
-/obj/random/multiple/gun/projectile/shotgun,
-/obj/random/multiple/gun/projectile/shotgun,
 /obj/machinery/light{
 	icon_state = "tube1";
 	dir = 8
 	},
+/obj/item/weapon/gun/projectile/shotgun/pump/combat,
+/obj/item/weapon/gun/projectile/shotgun/pump/combat,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/sec)
 "eQ" = (
@@ -2146,10 +2153,9 @@
 /obj/item/ammo_magazine/m45/flash,
 /obj/item/ammo_magazine/m45/flash,
 /obj/item/ammo_magazine/m45/flash,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/sec)
 "eX" = (
@@ -2483,13 +2489,6 @@
 /obj/structure/curtain/open/privacy,
 /turf/simulated/floor/tiled/white,
 /area/ship/adminships/medbay)
-"fC" = (
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "warning";
-	dir = 9
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/adminships/engine_bay)
 "fD" = (
 /obj/item/weapon/storage/firstaid/surgery,
 /obj/structure/table/borosilicate,
@@ -2572,11 +2571,11 @@
 /turf/space,
 /area/space)
 "fP" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/structure/handrail{
+	dir = 4
 	},
-/turf/simulated/floor/reinforced,
-/area/ship/adminships/engine_bay)
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/adminshuttle)
 "fQ" = (
 /obj/effect/shuttle_landmark/premade/adminship/stern,
 /turf/space,
@@ -2640,122 +2639,73 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/adminships/medbay)
 "fY" = (
-/obj/structure/shuttle/window,
-/turf/simulated/shuttle/wall/dark/no_join,
-/area/shuttle/adminshuttle)
-"fZ" = (
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "warning";
+/obj/structure/closet/walllocker/emerglocker/west,
+/obj/structure/handrail{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/adminships/engine_bay)
-"ga" = (
-/obj/machinery/computer/shuttle_control/explore/adminshuttle,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/adminshuttle)
 "gb" = (
 /turf/simulated/shuttle/wall/dark,
 /area/shuttle/adminshuttle)
-"gc" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 1
-	},
-/obj/structure/closet/walllocker/emerglocker/west,
-/obj/effect/shuttle_landmark/shuttle_initializer/adminshuttle,
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/adminshuttle)
 "gd" = (
-/obj/machinery/door/airlock/external{
-	name = "S3";
-	req_access = list(8009)
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/airlock_sensor/airlock_interior{
+	pixel_y = -30
 	},
-/obj/effect/map_helper/airlock/door/simple,
-/turf/simulated/floor/reinforced,
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/adminshuttle)
 "ge" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "adminshuttle_docker";
-	pixel_x = -30;
-	tag = ""
-	},
-/turf/simulated/floor/carpet/bcarpet,
+/obj/machinery/atmospherics/pipe/simple/hidden/blue,
+/turf/simulated/shuttle/wall/dark/no_join,
 /area/shuttle/adminshuttle)
 "gf" = (
-/turf/simulated/floor/carpet/bcarpet,
-/area/shuttle/adminshuttle)
-"gg" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
-	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
-/turf/simulated/floor/carpet/bcarpet,
+/obj/machinery/door/airlock/external/glass,
+/obj/effect/map_helper/airlock/door/int_door,
+/turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/adminshuttle)
 "gh" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/microwave,
-/turf/simulated/floor/carpet/bcarpet,
-/area/shuttle/adminshuttle)
-"gi" = (
-/obj/item/weapon/bedsheet/blue,
-/obj/structure/bed/padded,
-/turf/simulated/floor/carpet/bcarpet,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1331;
+	id_tag = "trade2_vent"
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/adminshuttle)
 "gj" = (
-/obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/strix,
-/obj/item/clothing/under/seromi/undercoat/fluff/strix,
-/turf/simulated/floor/carpet/bcarpet,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/airlock_sensor{
+	pixel_x = 30
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "admin_shuttle_rear";
+	pixel_y = 30
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/adminshuttle)
 "gk" = (
 /turf/simulated/shuttle/wall/dark/no_join,
 /area/shuttle/adminshuttle)
 "gl" = (
 /obj/structure/shuttle/engine/heater,
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+/obj/structure/window/phoronreinforced{
+	icon_state = "phoronrwindow";
+	dir = 1
 	},
-/turf/simulated/shuttle/plating,
+/obj/structure/window/phoronreinforced,
+/obj/structure/window/phoronreinforced/full,
+/turf/simulated/floor/plating,
 /area/shuttle/adminshuttle)
-"gm" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/adminships/engine_bay)
 "gn" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/plating,
 /area/shuttle/adminshuttle)
-"go" = (
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/shuttle/wall/dark/no_join,
-/area/shuttle/adminshuttle)
-"gp" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/turf/simulated/floor/reinforced,
-/area/ship/adminships/engine_bay)
 "gq" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -2980,6 +2930,95 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)
+"hJ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/external,
+/area/shuttle/adminshuttle)
+"il" = (
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/adminshuttle)
+"ix" = (
+/obj/machinery/door/airlock/external/glass,
+/obj/effect/map_helper/airlock/door/simple,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/adminshuttle)
+"nb" = (
+/obj/effect/shuttle_landmark/shuttle_initializer/adminshuttle,
+/obj/structure/bed/chair/shuttle{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/adminshuttle)
+"np" = (
+/obj/effect/floor_decal/corner/blue/border{
+	icon_state = "bordercolor";
+	dir = 1
+	},
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/adminships/engine_bay)
+"qs" = (
+/obj/effect/floor_decal/corner/red/border{
+	icon_state = "bordercolor";
+	dir = 1
+	},
+/obj/structure/closet/emcloset,
+/obj/item/weapon/tank/jetpack/carbondioxide,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/adminships/engine_bay)
+"wY" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/adminshuttle)
+"xd" = (
+/obj/machinery/door/airlock/external/glass,
+/obj/effect/map_helper/airlock/door/ext_door,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/adminshuttle)
+"HX" = (
+/obj/machinery/computer/shuttle_control/explore/adminshuttle,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/adminshuttle)
+"NN" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "adminshuttle_docker";
+	pixel_x = -30;
+	tag = ""
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/adminshuttle)
+"TA" = (
+/obj/structure/shuttle/window,
+/obj/structure/grille,
+/turf/simulated/shuttle/floor/voidcraft/external,
+/area/shuttle/adminshuttle)
+"UC" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/external,
+/area/shuttle/adminshuttle)
+"XN" = (
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle,
+/turf/simulated/shuttle/wall/dark/no_join,
+/area/shuttle/adminshuttle)
+"ZK" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/adminshuttle)
 
 (1,1,1) = {"
 aa
@@ -31520,7 +31559,7 @@ fo
 fw
 fo
 dq
-eG
+qs
 bL
 dC
 dL
@@ -31772,7 +31811,7 @@ fp
 fq
 fo
 dq
-eG
+qs
 ee
 ei
 ej
@@ -32532,16 +32571,16 @@ eH
 ef
 dF
 bX
-cb
-cb
-cb
-fC
-ca
-ca
+gb
+gb
+gb
+gb
+gb
+gb
 gb
 gb
 gk
-gm
+cb
 ch
 ck
 bL
@@ -32784,12 +32823,12 @@ bM
 dG
 dI
 bX
-cb
-cb
-cb
+TA
+UC
+NN
 fP
 fY
-gb
+wY
 ge
 gh
 gl
@@ -33036,16 +33075,16 @@ ed
 dH
 eh
 bX
-cb
-cb
-cb
-fY
-ga
-gc
+TA
+HX
+nb
+il
+il
+il
 gf
-gi
-gk
-go
+il
+xd
+cb
 ch
 cm
 bN
@@ -33288,13 +33327,13 @@ bO
 eg
 gz
 bX
-cb
-cb
-cb
-fP
-fY
+TA
+hJ
+il
+il
+ZK
 gd
-gg
+gk
 gj
 gl
 gn
@@ -33540,16 +33579,16 @@ eI
 bL
 dF
 bX
-cb
-cb
-cb
-fZ
-cc
-cc
 gb
 gb
-gk
-gp
+ix
+ix
+gb
+gb
+gb
+gb
+XN
+cb
 ch
 ck
 bL
@@ -34040,7 +34079,7 @@ fr
 fy
 fD
 eF
-eJ
+np
 bL
 dJ
 bZ
@@ -34292,7 +34331,7 @@ fs
 fz
 fE
 eF
-eJ
+np
 bL
 dD
 bL
