@@ -201,7 +201,6 @@
 			temp_search = href_list["to_search"]
 		if(!temp_search)
 			return
-		to_chat(world, (href_list["to_search"]))
 		matching_designs.Cut()
 
 		for(var/datum/design/item/autolathe/D in files.known_designs)
