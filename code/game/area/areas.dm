@@ -30,6 +30,7 @@
 	var/used_environ = 0
 
 	var/has_gravity = 1
+	var/secret_name = FALSE // This tells certain things that display areas' names that they shouldn't display this area's name.
 	var/obj/machinery/power/apc/apc = null
 	var/no_air = null
 //	var/list/lights				// list of all lights on this area
@@ -39,14 +40,7 @@
 	var/list/forced_ambience = null
 	var/sound_env = STANDARD_STATION
 	var/turf/base_turf //The base turf type of the area, which can be used to override the z-level's base turf
-	var/global/global_uid = 0
-	var/uid
-
-/area/New()
-	uid = ++global_uid
-	all_areas += src //Replace with /area in world? Byond optimizes X in world loops.
-	
-	..()
+	var/forbid_events = FALSE // If true, random events will not start inside this area.
 
 /area/Initialize()
 	. = ..()
@@ -76,7 +70,7 @@
 	// NOTE: There probably won't be any atoms in these turfs, but just in case we should call these procs.
 	A.contents.Add(T)
 	if(old_area)
-		// Handle dynamic lighting update if 
+		// Handle dynamic lighting update if
 		if(T.dynamic_lighting && old_area.dynamic_lighting != A.dynamic_lighting)
 			if(A.dynamic_lighting)
 				T.lighting_build_overlay()
@@ -365,6 +359,8 @@ var/list/mob/living/forced_ambiance_list = new
 			temp_airlock.prison_open()
 		for(var/obj/machinery/door/window/temp_windoor in src)
 			temp_windoor.open()
+		for(var/obj/machinery/door/blast/temp_blast in src)
+			temp_blast.open()
 
 /area/has_gravity()
 	return has_gravity
@@ -397,7 +393,7 @@ var/list/mob/living/forced_ambiance_list = new
 var/list/teleportlocs = list()
 
 /hook/startup/proc/setupTeleportLocs()
-	for(var/area/AR in all_areas)
+	for(var/area/AR in world)
 		if(istype(AR, /area/shuttle) || istype(AR, /area/syndicate_station) || istype(AR, /area/wizard_station)) continue
 		if(teleportlocs.Find(AR.name)) continue
 		var/turf/picked = pick(get_area_turfs(AR.type))
@@ -412,7 +408,7 @@ var/list/teleportlocs = list()
 var/list/ghostteleportlocs = list()
 
 /hook/startup/proc/setupGhostTeleportLocs()
-	for(var/area/AR in all_areas)
+	for(var/area/AR in world)
 		if(ghostteleportlocs.Find(AR.name)) continue
 		if(istype(AR, /area/aisat) || istype(AR, /area/derelict) || istype(AR, /area/tdome) || istype(AR, /area/shuttle/specops/centcom))
 			ghostteleportlocs += AR.name
@@ -425,3 +421,8 @@ var/list/ghostteleportlocs = list()
 	ghostteleportlocs = sortAssoc(ghostteleportlocs)
 
 	return 1
+
+/area/proc/get_name()
+	if(secret_name)
+		return "Unknown Area"
+	return name

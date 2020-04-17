@@ -60,11 +60,8 @@
 	//Must be done now, otherwise ZAS zones and lighting overlays need to be recreated.
 	//createRandomZlevel()	//VOREStation Removal: Deprecated
 
-	processScheduler = new
 	master_controller = new /datum/controller/game_controller()
 
-	processScheduler.deferSetupFor(/datum/controller/process/ticker)
-	processScheduler.setup()
 	Master.Initialize(10, FALSE)
 
 	spawn(1)
@@ -181,6 +178,17 @@ var/world_topic_spam_protect_time = world.timeofday
 				if(!positions["misc"])
 					positions["misc"] = list()
 				positions["misc"][name] = rank
+		
+		for(var/datum/data/record/t in data_core.hidden_general)
+			var/name = t.fields["name"]
+			var/rank = t.fields["rank"]
+			var/real_rank = make_list_rank(t.fields["real_rank"])
+			
+			var/datum/job/J = SSjob.get_job(real_rank)
+			if(J?.offmap_spawn)
+				if(!positions["off"])
+					positions["off"] = list()
+				positions["off"][name] = rank
 
 		// Synthetics don't have actual records, so we will pull them from here.
 		for(var/mob/living/silicon/ai/ai in mob_list)
@@ -396,7 +404,6 @@ var/world_topic_spam_protect_time = world.timeofday
 		else
 			to_world("<span class='boldannounce'>Rebooting world immediately due to host request</span>")
 	else
-		processScheduler.stop()
 		Master.Shutdown()	//run SS shutdowns
 		for(var/client/C in GLOB.clients)
 			if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
@@ -658,7 +665,7 @@ proc/establish_old_db_connection()
 
 // Called whenver world.tick_lag or world.fps are changed.
 /world/proc/on_tickrate_change()
-	SStimer?.reset_buckets() 
+	SStimer?.reset_buckets()
 
 #undef FAILED_DB_CONNECTION_CUTOFF
 /world/New()
