@@ -146,6 +146,18 @@
 
 var/list/shoreline_icon_cache = list()
 
+/turf/simulated/floor/water/beach
+	name = "beach shoreline"
+	desc = "The waves look calm and inviting."
+	icon_state = "beach"
+	depth = 0
+
+/turf/simulated/floor/water/beach/update_icon()
+	return
+
+/turf/simulated/floor/water/beach/corner
+	icon_state = "beachcorner"
+
 /turf/simulated/floor/water/shoreline
 	name = "shoreline"
 	desc = "The waves look calm and inviting."
@@ -181,7 +193,7 @@ var/list/shoreline_icon_cache = list()
 
 /turf/simulated/floor/water/contaminated
 	desc = "This water smells pretty acrid."
-	var poisonlevel = 10
+	var/poisonlevel = 10
 
 turf/simulated/floor/water/contaminated/Entered(atom/movable/AM, atom/oldloc)
 	..()
