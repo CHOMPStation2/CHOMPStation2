@@ -132,22 +132,6 @@
 	anchored = 1.0
 	var/spawnable = null
 
-/obj/effect/gateway/Bumped(mob/M as mob|obj)
-	spawn(0)
-		return
-	return
-
-/obj/effect/gateway/Crossed(AM as mob|obj)
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = AM
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
-	spawn(0)
-		return
-	return
-
 /obj/effect/gateway/active
 	light_range=5
 	light_color="#ff0000"
@@ -169,19 +153,18 @@
 /obj/effect/gateway/active/cult/cultify()
 	return
 
-/obj/effect/gateway/active/New()
-	spawn(rand(30,60) SECONDS)
+/obj/effect/gateway/active/Initialize()
+	addtimer(CALLBACK(src, .proc/spawn_and_qdel), rand(30, 60) SECONDS)
+
+/obj/effect/gateway/active/proc/spawn_and_qdel()
+	if(LAZYLEN(spawnable))
 		var/t = pick(spawnable)
-		new t(src.loc)
-		qdel(src)
+		new t(get_turf(src))
+	qdel(src)
 
 /obj/effect/gateway/active/Crossed(var/atom/A)
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = A
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+	if(A.is_incorporeal())
+		return
 	if(!istype(A, /mob/living))
 		return
 

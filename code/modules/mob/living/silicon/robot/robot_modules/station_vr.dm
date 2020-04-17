@@ -419,7 +419,7 @@
 	G.recipes += new/datum/stack_recipe("glass sheet", /obj/item/stack/material/glass, 1, 1, 20)
 	src.modules += G
 
-	R.icon 		 = 'icons/mob/widerobot_yw.dmi'
+	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //YW edit - using yw icon files
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -655,10 +655,7 @@
 /obj/item/weapon/robot_module/robot/servicehound
 	name = "service-hound module"
 	sprites = list(
-					"Blackhound" = "k50",
-					"Pinkhound" = "k69",
-					"ServicehoundV2" = "serve2",
-					"ServicehoundV2 Darkmode" = "servedark",
+					"Pinkhound" = "k69"
 					)
 	channels = list("Service" = 1)
 	can_be_pushed = 0
@@ -710,7 +707,7 @@
 	src.modules += B
 */
 
-	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //YW edit - using yw icon files
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16

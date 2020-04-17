@@ -46,7 +46,6 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 	. = ..()
 
 	owner = C
-	update_vis()
 
 /datum/chatOutput/Destroy()
 	owner = null
@@ -78,14 +77,24 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 		become_broken()
 		return FALSE
 
+	if(!owner.is_preference_enabled(/datum/client_preference/vchat_enable))
+		become_broken()
+		return FALSE
+
+	//Could be loaded from a previous round, are you still there?
+	if(winget(owner,"outputwindow.htmloutput","is-visible") == "true") //Winget returns strings
+		send_event(event = list("evttype" = "availability"))
+		sleep(3 SECONDS)
+
 	if(!owner) // In case the client vanishes before winexists returns
 		qdel(src)
 		return FALSE
 
-	if(!resources_sent)
-		send_resources()
-
-	load()
+	if(!loaded)
+		update_vis()
+		if(!resources_sent)
+			send_resources()
+		load()
 
 	return TRUE
 
@@ -96,7 +105,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 		return
 
 	owner << browse(file2text("code/modules/vchat/html/vchat.html"), "window=htmloutput")
-	
+
 	//Check back later
 	spawn(15 SECONDS)
 		if(!src)
@@ -113,12 +122,12 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 	loaded = TRUE
 	broken = FALSE
 	owner.chatOutputLoadedAt = world.time
-	
-	//update_vis() //It does it's own winsets
 
+	//update_vis() //It does it's own winsets
+	ping_cycle()
 	send_playerinfo()
 	load_database()
-	
+
 //Perform DB shenanigans
 /datum/chatOutput/proc/load_database()
 	set waitfor = FALSE
@@ -135,12 +144,16 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 /datum/chatOutput/proc/become_broken()
 	broken = TRUE
 	loaded = FALSE
-	
+
+	if(!owner)
+		qdel(src)
+		return
+
 	update_vis()
-	
+
 	spawn()
 		alert(owner,"VChat didn't load after some time. Switching to use oldchat as a fallback. Try using 'Reload VChat' verb in OOC verbs, or reconnecting to try again.")
-	
+
 //Provide the JS with who we are
 /datum/chatOutput/proc/send_playerinfo()
 	if(!owner)
@@ -163,9 +176,23 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 /datum/chatOutput/proc/send_event(var/event, var/client/C = owner)
 	C << output(jsEncode(event), "htmloutput:get_event")
 
+//Looping sleeping proc that just pings the client and dies when we die
+/datum/chatOutput/proc/ping_cycle()
+	set waitfor = FALSE
+	while(!QDELING(src))
+		if(!owner)
+			qdel(src)
+			return
+		send_event(event = keep_alive())
+		sleep(20 SECONDS) //Make sure this makes sense with what the js client is expecting
+
 //Just produces a message for using in keepalives from the server to the client
-/datum/chatOutput/proc/keepalive()
-	return list("evttype" = "keepalive_server")
+/datum/chatOutput/proc/keep_alive()
+	return list("evttype" = "keepalive")
+
+//A response to a latency check from the client
+/datum/chatOutput/proc/latency_check()
+	return list("evttype" = "pong")
 
 //Redirected from client/Topic when the user clicks a link that pertains directly to the chat (when src == "chat")
 /datum/chatOutput/Topic(var/href, var/list/href_list)
@@ -197,8 +224,8 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 			CRASH("Tried to send a message to [owner.ckey] chatOutput before it was ready!")
 		if("done_loading")
 			data = done_loading(arglist(params))
-		if("keepalive_client")
-			data = keepalive(arglist(params))
+		if("ping")
+			data = latency_check(arglist(params))
 		if("ident")
 			data = bancheck(arglist(params))
 		if("unloading")
@@ -319,7 +346,7 @@ var/to_chat_src
 			if(C.chatOutput.broken)
 				DIRECT_OUTPUT(C, original_message)
 				return
-			
+
 			// // Client still loading, put their messages in a queue - Actually don't, logged already in database.
 			// if(!C.chatOutput.loaded && C.chatOutput.message_queue && islist(C.chatOutput.message_queue))
 			// 	C.chatOutput.message_queue[++C.chatOutput.message_queue.len] = list("time" = time, "message" = message)

@@ -2588,10 +2588,21 @@
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "hJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/light/small,
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "residential_shuttle_offsite";
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/residential/docking_lobby)
 "hK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -2651,8 +2662,9 @@
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "hR" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/residential/residential)
+/obj/effect/shuttle_landmark/premade/residential/residences,
+/turf/space,
+/area/space)
 "hS" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
@@ -2732,44 +2744,42 @@
 	icon_state = "0-2";
 	d2 = 2
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "ie" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/mech_sensor{
+	dir = 8;
+	frequency = 1379;
+	id_tag = "residential_dock_north_mech";
+	pixel_y = -19
+	},
+/obj/machinery/door/airlock/glass_external,
+/obj/effect/map_helper/airlock/door/ext_door,
+/turf/simulated/floor/tiled/dark,
+/area/residential/docking_lobby)
+"if" = (
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
-/area/residential/docking_lobby)
-"if" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "intact-supply";
-	dir = 5
-	},
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "ig" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/mech_sensor{
+	dir = 8;
+	frequency = 1379;
+	id_tag = "residential_dock_north_mech";
+	pixel_y = -19
 	},
+/obj/machinery/door/airlock/glass_external,
+/obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/residential/docking_lobby)
 "ih" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3069,15 +3079,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
-"iD" = (
-/obj/machinery/computer/shuttle_control/residential_shuttle,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"iE" = (
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/structure/table/standard,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
 "iF" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -3108,23 +3109,6 @@
 	},
 /turf/simulated/floor/lino,
 /area/residential/mansion)
-"iK" = (
-/obj/structure/closet/walllocker/emerglocker/west,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"iL" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"iM" = (
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"iN" = (
-/obj/structure/closet/walllocker/emerglocker/east,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
 "iO" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -3186,38 +3170,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
-"iU" = (
-/obj/structure/shuttle/window,
-/obj/structure/grille,
-/turf/simulated/shuttle/plating,
-/area/shuttle/residential/residential)
 "iV" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	id_tag = "residential_shuttle";
-	pixel_x = 30;
-	pixel_y = -30;
-	tag_door = "residential_shuttle_airlock"
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
-/obj/structure/closet/emcloset,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"iW" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "residential_shuttle_airlock";
-	locked = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	icon_state = "intact";
-	dir = 4
-	},
-/turf/simulated/shuttle/plating,
-/area/shuttle/residential/residential)
-"iX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/computer/shuttle_control/residential_shuttle{
-	dir = 4
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
@@ -3251,31 +3209,35 @@
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "ja" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "intact-supply";
-	dir = 5
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "jb" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/mech_sensor{
-	dir = 8;
-	frequency = 1379;
-	id_tag = "residential_dock_north_mech";
-	pixel_y = -19
+/obj/machinery/airlock_sensor{
+	pixel_y = -28
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	icon_state = "intact"
+	frequency = 1380;
+	id_tag = "specops_dock_pump"
 	},
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "residential_dock_north_inner";
-	locked = 1
-	},
-/turf/simulated/floor/tiled/dark,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/turf/simulated/floor/tiled/techmaint,
 /area/residential/docking_lobby)
 "jc" = (
 /obj/structure/closet/crate,
@@ -3288,52 +3250,28 @@
 /turf/simulated/floor/lino,
 /area/residential/room3)
 "jd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "je" = (
-/obj/machinery/light/small,
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
 	},
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "warning";
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1379;
-	id_tag = "residential_dock_north_airpump"
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	id_tag = "residential_shuttle_offsite";
-	pixel_y = 30;
-	tag_airlock_mech_sensor = "residential_dock_north_mech";
-	tag_airpump = "residential_dock_north_airpump";
-	tag_chamber_sensor = "residential_dock_north_sensor";
-	tag_exterior_door = "residential_dock_north_outer";
-	tag_interior_door = "residential_dock_north_inner"
-	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "jf" = (
-/obj/machinery/airlock_sensor{
-	frequency = 1379;
-	id_tag = "residential_dock_north_sensor";
-	pixel_x = 0;
-	pixel_y = -25
-	},
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/warning{
+/obj/machinery/computer/shuttle_control/residential_shuttle{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "jg" = (
 /obj/structure/bed/chair{
@@ -3392,29 +3330,6 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
-"jr" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4;
-	icon_state = "shuttle_chair"
-	},
-/obj/machinery/light{
-	icon_state = "tube1";
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"js" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 8;
-	icon_state = "shuttle_chair"
-	},
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
 "jt" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -3588,36 +3503,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/room5)
-"jS" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4;
-	icon_state = "shuttle_chair"
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"jT" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 8;
-	icon_state = "shuttle_chair"
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"jU" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/mech_sensor{
-	dir = 8;
-	frequency = 1379;
-	id_tag = "residential_dock_north_mech";
-	pixel_y = -19
-	},
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "residential_dock_north_outer";
-	locked = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/residential/docking_lobby)
 "jV" = (
 /obj/structure/toilet{
 	dir = 4
@@ -4073,20 +3958,6 @@
 /obj/structure/mopbucket,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
-"kP" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 1
-	},
-/obj/structure/closet/walllocker/emerglocker/west,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
-"kQ" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 1
-	},
-/obj/structure/closet/walllocker/emerglocker/east,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/residential/residential)
 "kR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4184,13 +4055,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
-"li" = (
-/obj/structure/shuttle/engine/heater,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/shuttle/plating/airless,
-/area/shuttle/residential/residential)
 "lj" = (
 /turf/simulated/floor/holofloor/tiled,
 /area/residential/docking_lobby)
@@ -4318,10 +4182,6 @@
 /obj/item/weapon/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
-"lE" = (
-/obj/structure/shuttle/engine/propulsion,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/residential/residential)
 "lF" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -4596,10 +4456,6 @@
 /obj/structure/closet/cabinet,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
-"mf" = (
-/turf/space,
-/turf/space/transit/north,
-/area/shuttle/residential/transition)
 "mg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
@@ -6829,9 +6685,6 @@
 "rX" = (
 /turf/unsimulated/wall,
 /area/space)
-"rY" = (
-/turf/space,
-/area/shuttle/residential/transition)
 "rZ" = (
 /turf/space,
 /turf/space/transit/north,
@@ -6916,22 +6769,6 @@
 /obj/machinery/light/flamp/noshade,
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
-"si" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/residential/docking_lobby)
-"sj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/residential/docking_lobby)
 "sk" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -6977,6 +6814,10 @@
 /obj/machinery/light,
 /turf/simulated/floor/wood,
 /area/residential/room1)
+"sq" = (
+/obj/effect/shuttle_landmark/premade/residential/transit,
+/turf/space,
+/area/space)
 
 (1,1,1) = {"
 aa
@@ -20449,16 +20290,16 @@ aa
 aa
 aa
 aa
-hj
-hj
-sn
-sn
-sn
-sn
-hj
-hj
-hj
-hj
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20701,16 +20542,16 @@ aa
 aa
 aa
 aa
-hj
-hy
-si
-iG
-iG
-iG
-iX
-sj
-ja
-hj
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20953,16 +20794,16 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hy
-hy
-hy
-hy
-hy
-jd
-hj
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21205,16 +21046,16 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hj
-hj
-sn
-sn
-iO
-jb
-jt
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21457,16 +21298,16 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hj
 aa
 aa
 aa
-iP
-je
-ju
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21709,16 +21550,16 @@ aa
 aa
 aa
 aa
-sn
-hx
-hJ
-sn
 aa
 aa
 aa
-iQ
-jf
-ju
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21961,16 +21802,16 @@ aa
 aa
 aa
 aa
-sn
-hy
-hJ
-sn
 aa
 aa
 aa
-iR
-jU
-jv
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -22213,21 +22054,21 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hj
 aa
 aa
-hR
-hR
-iW
-hR
-hR
-iU
-hR
-hR
-hR
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -22465,21 +22306,21 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hj
+aa
+aa
 aa
 hR
-hR
-iK
-iM
-jr
-jS
-iM
-kP
-li
-lE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -22717,21 +22558,21 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hj
-hR
-hR
-iD
-iL
-iM
-iM
-iM
-iM
-iL
-li
-lE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -22969,21 +22810,21 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hj
-hR
-hR
-iE
-iM
-iM
-iM
-iM
-iM
-iL
-li
-lE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -23221,21 +23062,21 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hj
 aa
-hR
-hR
-iN
-iV
-js
-jT
-iM
-kQ
-li
-lE
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -23473,21 +23314,21 @@ aa
 aa
 aa
 aa
-sn
-hy
-hJ
-sn
 aa
 aa
-hR
-hR
-iU
-hR
-hR
-hR
-hR
-hR
-hR
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -23725,11 +23566,11 @@ aa
 aa
 aa
 aa
-sn
-hx
-hJ
-sn
 aa
+aa
+iO
+ie
+jt
 aa
 aa
 aa
@@ -23977,11 +23818,11 @@ aa
 aa
 aa
 aa
-hj
-hy
+aa
+aa
+iP
 hJ
-hj
-hj
+ju
 aa
 aa
 aa
@@ -24229,11 +24070,11 @@ aa
 aa
 aa
 aa
-hj
-hy
-hJ
-hy
-hj
+aa
+aa
+iQ
+jb
+ju
 aa
 aa
 aa
@@ -24481,11 +24322,11 @@ aa
 aa
 aa
 aa
+aa
 hj
-hy
-hJ
-hy
-hj
+iR
+ig
+jv
 hj
 hj
 hj
@@ -24733,15 +24574,15 @@ aa
 aa
 aa
 aa
-hj
+aa
 hj
 id
-ie
-ie
+ja
 if
+iV
 hy
 hy
-hy
+jf
 jw
 hy
 hy
@@ -24988,9 +24829,9 @@ aa
 aa
 hj
 hx
-hy
-hy
-ig
+jd
+iG
+je
 hy
 hy
 hy
@@ -65173,16 +65014,16 @@ rZ
 rZ
 sa
 sa
-mf
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-sa
+rZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 rZ
 rZ
 rZ
@@ -65424,17 +65265,17 @@ rZ
 rZ
 sa
 sa
-mf
-mf
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-sa
+rZ
+rZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 rZ
 rZ
 rZ
@@ -65675,18 +65516,18 @@ sb
 rZ
 rZ
 sa
-mf
-mf
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-sa
+rZ
+rZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 rZ
 rZ
 rZ
@@ -65927,18 +65768,18 @@ sb
 rZ
 rZ
 sa
-mf
-mf
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-sa
+rZ
+rZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 rZ
 rZ
 rZ
@@ -66180,17 +66021,17 @@ rZ
 rZ
 sa
 sa
-mf
-mf
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-sa
+rZ
+rZ
+aa
+aa
+sq
+aa
+aa
+aa
+aa
+aa
+aa
 rZ
 rZ
 rZ
@@ -66433,16 +66274,16 @@ rZ
 rZ
 sa
 sa
-mf
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-rY
-sa
+rZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 rZ
 rZ
 rZ

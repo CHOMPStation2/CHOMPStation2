@@ -3,17 +3,6 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-/datum/map_template/cryogaia_lateload/cryogaia_ships
-	name = "Tether - Ships"
-	desc = "Ship transit map and whatnot."
-	mappath = 'cryogaia_ships.dmm'
-
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/ships
-
-/datum/map_z_level/cryogaia_lateload/ships
-	name = "Ships"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
-
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
@@ -36,7 +25,7 @@
 #include "beach/beach.dmm"
 #include "beach/cave.dmm"
 #include "alienship/alienship.dmm"
-//#include "aerostat/aerostat.dmm"
+#include "aerostat/aerostat.dmm"
 #include "aerostat/surface.dmm"
 #include "space/debrisfield.dmm"
 #endif
@@ -74,18 +63,15 @@
 /obj/effect/step_trigger/zlevel_fall/beach
 	var/static/target_z
 
-
 #include "alienship/_alienship.dm"
 /datum/map_template/cryogaia_lateload/away_alienship
 	name = "Alien Ship - Z1 Ship"
 	desc = "The alien ship away mission."
 	mappath = 'alienship/alienship.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_alienship
+	associated_map_datum = /datum/map_z_level/tether_lateload/away_alienship
 
-/datum/map_z_level/cryogaia_lateload/away_alienship
+/datum/map_z_level/tether_lateload/away_alienship
 	name = "Away Mission - Alien Ship"
-	z = Z_LEVEL_ALIENSHIP
-
 
 #include "aerostat/_aerostat.dm"
 /datum/map_template/cryogaia_lateload/away_aerostat
@@ -108,7 +94,7 @@
 	. = ..()
 	seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 120, /area/cryogaia_away/aerostat/surface/unexplored, /datum/map_template/virgo2)
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_AEROSTAT_SURFACE, world.maxx - 4, world.maxy - 4)
-	new /datum/random_map/noise/ore/virgo2(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)
+	new /datum/random_map/noise/ore/bor4(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)
 
 /datum/map_z_level/cryogaia_lateload/away_aerostat_surface
 	name = "Away Mission - Aerostat Surface"
@@ -311,3 +297,67 @@
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/shadekin
 	)
+
+#include "admin_ships/adminship.dm"
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Gateway submaps go here
+
+/obj/effect/overmap/visitable/sector/cryogaia_gateway
+	name = "Unknown"
+	desc = "Approach and perform a scan to obtain further information."
+	icon_state = "object" //or "globe" for planetary stuff
+	known = FALSE
+	//initial_generic_waypoints = list("don't forget waypoints!")
+	var/true_name = "The scanned name goes here"
+	var/true_desc = "The scanned desc goes here"
+
+/obj/effect/overmap/visitable/sector/cryogaia_gateway/get_scan_data(mob/user)
+	name = true_name
+	desc = true_desc
+	return ..()
+
+/datum/map_template/cryogaia_lateload/gateway
+	name = "Gateway Submap"
+	desc = "Please do not use this."
+	mappath = null
+	associated_map_datum = null
+
+/datum/map_z_level/cryogaia_lateload/gateway_destination
+	name = "Gateway Destination"
+	z = Z_LEVEL_GATEWAY
+
+#include "gateway/snow_outpost.dm"
+/datum/map_template/cryogaia_lateload/gateway/snow_outpost
+	name = "Snow Outpost"
+	desc = "Big snowy area with various outposts."
+	mappath = 'gateway/snow_outpost.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+#include "gateway/zoo.dm"
+/datum/map_template/cryogaia_lateload/gateway/zoo
+	name = "Zoo"
+	desc = "Gigantic space zoo"
+	mappath = 'gateway/zoo.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+#include "gateway/carpfarm.dm"
+/datum/map_template/cryogaia_lateload/gateway/carpfarm
+	name = "Carp Farm"
+	desc = "Asteroid base surrounded by carp"
+	mappath = 'gateway/carpfarm.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+#include "gateway/snowfield.dm"
+/datum/map_template/cryogaia_lateload/gateway/snowfield
+	name = "Snow Field"
+	desc = "An old base in middle of snowy wasteland"
+	mappath = 'gateway/snowfield.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+#include "gateway/listeningpost.dm"
+/datum/map_template/cryogaia_lateload/gateway/listeningpost
+	name = "Listening Post"
+	desc = "Asteroid-bound mercenary listening post"
+	mappath = 'gateway/listeningpost.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination

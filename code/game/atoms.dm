@@ -41,8 +41,7 @@
 		_preloader.load(src)
 
 	// Pass our arguments to InitAtom so they can be passed to initialize(), but replace 1st with if-we're-during-mapload.
-	var/do_initialize = SSatoms && SSatoms.initialized // Workaround our non-ideal initialization order: SSatoms may not exist yet.
-	//var/do_initialize = SSatoms.initialized
+	var/do_initialize = SSatoms.initialized
 	if(do_initialize > INITIALIZATION_INSSATOMS)
 		args[1] = (do_initialize == INITIALIZATION_INNEW_MAPLOAD)
 		if(SSatoms.InitAtom(src, args))
@@ -186,6 +185,12 @@
 	to_chat(user, "[bicon(src)] That's [f_name] [suffix]")
 	to_chat(user,desc)
 
+	if(user.client?.examine_text_mode == EXAMINE_MODE_INCLUDE_USAGE)
+		to_chat(user, description_info)
+
+	if(user.client?.examine_text_mode == EXAMINE_MODE_SWITCH_TO_PANEL)
+		user.client.statpanel = "Examine" // Switch to stat panel
+
 	return distance == -1 || (get_dist(src, user) <= distance)
 
 // called by mobs when e.g. having the atom as their machine, pulledby, loc (AKA mob being inside the atom) or buckled var set.
@@ -197,6 +202,20 @@
 /atom/proc/set_dir(new_dir)
 	. = new_dir != dir
 	dir = new_dir
+
+// Called to set the atom's density and used to add behavior to density changes.
+/atom/proc/set_density(var/new_density)
+	if(density == new_density)
+		return FALSE
+	density = !!new_density // Sanitize to be strictly 0 or 1
+	return TRUE
+
+// Called to set the atom's invisibility and usd to add behavior to invisibility changes.
+/atom/proc/set_invisibility(var/new_invisibility)
+	if(invisibility == new_invisibility)
+		return FALSE
+	invisibility = new_invisibility
+	return TRUE
 
 /atom/proc/ex_act()
 	return
@@ -517,6 +536,9 @@
 	var/area/A = get_area(T)
 	if(A && A.has_gravity())
 		return TRUE
+	return FALSE
+
+/atom/proc/is_incorporeal()
 	return FALSE
 
 /atom/proc/drop_location()

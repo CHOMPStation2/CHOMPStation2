@@ -45,3 +45,7 @@
 /datum/event/morph_spawn/announce()
 	if(prob(announceProb))
 		command_announcement.Announce("Unknown entitity detected boarding [station_name()]. Exercise extra caution.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+
+//YW Addition: Adding named landmark for events
+/obj/effect/landmark/event_spawn/morphspawn
+	name = "morphspawn"

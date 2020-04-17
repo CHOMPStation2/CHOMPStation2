@@ -254,6 +254,21 @@
 
 	feedback_add_details("admin_verb","TAirPumpNoise")
 
+/client/verb/toggle_drop_sounds()
+	set name = "Toggle Dropped Item Sounds"
+	set category = "Preferences"
+	set desc = "Toggles sounds when items are dropped or thrown."
+
+	var/pref_path = /datum/client_preference/drop_sounds
+
+	toggle_preference(pref_path)
+
+	to_chat(src, "You will [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] hear sounds when items are dropped or thrown.")
+
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	feedback_add_details("admin_verb", "TDropSounds")
+
 /client/verb/toggle_safe_firing()
 	set name = "Toggle Gun Firing Intent Requirement"
 	set category = "Preferences"
@@ -292,6 +307,39 @@
 	to_chat(src, "You will now [(is_preference_enabled(/datum/client_preference/instrument_toggle)) ? "hear" : "not hear"] instruments being played.")
 
 	feedback_add_details("admin_verb","THInstm") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/verb/toggle_vchat()
+	set name = "Toggle VChat"
+	set category = "Preferences"
+	set desc = "Enable/Disable VChat. Reloading VChat and/or reconnecting required to affect changes."
+
+	var/pref_path = /datum/client_preference/vchat_enable
+	toggle_preference(pref_path)
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	to_chat(src, "You have toggled VChat [is_preference_enabled(pref_path) ? "on" : "off"]. \
+		You will have to reload VChat and/or reconnect to the server for these changes to take place. \
+		VChat message persistence is not guaranteed if you change this again before the start of the next round.")
+
+
+// Not attached to a pref datum because those are strict binary toggles
+/client/verb/toggle_examine_mode()
+	set name = "Toggle Examine Mode"
+	set category = "Preferences"
+	set desc = "Control the additional behaviour of examining things"
+
+	examine_text_mode++
+	examine_text_mode %= EXAMINE_MODE_MAX // This cycles through them because if you're already specifically being routed to the examine panel, you probably don't need to have the extra text printed to chat
+	switch(examine_text_mode)				// ... And I only wanted to add one verb
+		if(EXAMINE_MODE_DEFAULT)
+			to_chat(src, "Examining things will only output the base examine text, and you will not be redirected to the examine panel automatically.")
+
+		if(EXAMINE_MODE_INCLUDE_USAGE)
+			to_chat(src, "Examining things will also print any extra usage information normally included in the examine panel to the chat.")
+
+		if(EXAMINE_MODE_SWITCH_TO_PANEL)
+			to_chat(src, "Examining things will direct you to the examine panel, where you can view extended information about the thing.")
+
 
 //Toggles for Staff
 //Developers

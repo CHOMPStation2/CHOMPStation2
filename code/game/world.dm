@@ -60,11 +60,8 @@
 	//Must be done now, otherwise ZAS zones and lighting overlays need to be recreated.
 	//createRandomZlevel()	//VOREStation Removal: Deprecated
 
-	processScheduler = new
 	master_controller = new /datum/controller/game_controller()
 
-	processScheduler.deferSetupFor(/datum/controller/process/ticker)
-	processScheduler.setup()
 	Master.Initialize(10, FALSE)
 
 	spawn(1)
@@ -154,15 +151,15 @@ var/world_topic_spam_protect_time = world.timeofday
 	else if(T == "manifest")
 		var/list/positions = list()
 		var/list/set_names = list(
-				"heads" = command_positions,
-				"sec" = security_positions,
-				"eng" = engineering_positions,
-				"med" = medical_positions,
-				"sci" = science_positions,
-				"car" = cargo_positions,
-				"pla" = planet_positions, //VOREStation Edit,
-				"civ" = civilian_positions,
-				"bot" = nonhuman_positions
+				"heads" = SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND),
+				"sec" = SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY),
+				"eng" = SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING),
+				"med" = SSjob.get_job_titles_in_department(DEPARTMENT_MEDICAL),
+				"sci" = SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH),
+				"car" = SSjob.get_job_titles_in_department(DEPARTMENT_CARGO),
+				"pla" = SSjob.get_job_titles_in_department(DEPARTMENT_PLANET), //VOREStation Add,
+				"civ" = SSjob.get_job_titles_in_department(DEPARTMENT_CIVILIAN),
+				"bot" = SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)
 			)
 
 		for(var/datum/data/record/t in data_core.general)
@@ -181,6 +178,17 @@ var/world_topic_spam_protect_time = world.timeofday
 				if(!positions["misc"])
 					positions["misc"] = list()
 				positions["misc"][name] = rank
+		
+		for(var/datum/data/record/t in data_core.hidden_general)
+			var/name = t.fields["name"]
+			var/rank = t.fields["rank"]
+			var/real_rank = make_list_rank(t.fields["real_rank"])
+			
+			var/datum/job/J = SSjob.get_job(real_rank)
+			if(J?.offmap_spawn)
+				if(!positions["off"])
+					positions["off"] = list()
+				positions["off"][name] = rank
 
 		// Synthetics don't have actual records, so we will pull them from here.
 		for(var/mob/living/silicon/ai/ai in mob_list)
@@ -396,7 +404,6 @@ var/world_topic_spam_protect_time = world.timeofday
 		else
 			to_world("<span class='boldannounce'>Rebooting world immediately due to host request</span>")
 	else
-		processScheduler.stop()
 		Master.Shutdown()	//run SS shutdowns
 		for(var/client/C in GLOB.clients)
 			if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
@@ -645,6 +652,20 @@ proc/establish_old_db_connection()
 /world/proc/increment_max_z()
 	maxz++
 	max_z_changed()
+
+// Call this to change world.fps, don't modify it directly.
+/world/proc/change_fps(new_value = 20)
+	if(new_value <= 0)
+		CRASH("change_fps() called with [new_value] new_value.")
+	if(fps == new_value)
+		return //No change required.
+
+	fps = new_value
+	on_tickrate_change()
+
+// Called whenver world.tick_lag or world.fps are changed.
+/world/proc/on_tickrate_change()
+	SStimer?.reset_buckets()
 
 #undef FAILED_DB_CONNECTION_CUTOFF
 /world/New()

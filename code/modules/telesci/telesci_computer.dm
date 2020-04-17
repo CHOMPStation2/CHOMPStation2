@@ -28,6 +28,7 @@
 	var/powerCoefficient = 12.5
 	var/list/crystals = list()
 	var/obj/item/device/gps/inserted_gps
+	var/overmap_range = 3
 
 /obj/machinery/computer/telescience/Destroy()
 	eject()
@@ -105,9 +106,8 @@
 		if(telepad.panel_open)
 			data["tempMsg"] = "Telepad undergoing physical maintenance operations."
 
-		data["sectorOptions"] = list()
-		for(var/z in using_map.player_levels)
-			data["sectorOptions"] += z
+		//We'll base our options on connected z's or overmap
+		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range)
 
 		if(last_tele_data)
 			data["lastTeleData"] = list()

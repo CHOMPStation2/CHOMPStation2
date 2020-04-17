@@ -9,6 +9,10 @@
 /mob/living/Initialize()
 	if(ai_holder_type)
 		ai_holder = new ai_holder_type(src)
+		if(istype(src, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = src
+			H.hud_used = new /datum/hud(H)
+			H.instantiate_hud(H.hud_used)
 	return ..()
 
 /mob/living/Destroy()
@@ -103,15 +107,11 @@
 
 // 'Tactical' processes such as moving a step, meleeing an enemy, firing a projectile, and other fairly cheap actions that need to happen quickly.
 /datum/ai_holder/proc/handle_tactics()
-	if(busy)
-		return
 	handle_special_tactic()
 	handle_stance_tactical()
 
 // 'Strategical' processes that are more expensive on the CPU and so don't get run as often as the above proc, such as A* pathfinding or robust targeting.
 /datum/ai_holder/proc/handle_strategicals()
-	if(busy)
-		return
 	handle_special_strategical()
 	handle_stance_strategical()
 
@@ -224,7 +224,7 @@
 /datum/ai_holder/proc/handle_stance_strategical()
 	ai_log("++++++++++ Slow Process Beginning ++++++++++", AI_LOG_TRACE)
 	ai_log("handle_stance_strategical() : Called.", AI_LOG_TRACE)
-	
+
 	//We got left around for some reason. Goodbye cruel world.
 	if(!holder)
 		qdel(src)

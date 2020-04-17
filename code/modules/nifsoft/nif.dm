@@ -146,6 +146,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		forceMove(parent)
 		parent.implants += src
 		spawn(0) //Let the character finish spawning yo.
+			if(!H) //Or letting them get deleted
+				return
 			if(H.mind)
 				owner = H.mind.name
 			implant(H)
@@ -580,7 +582,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	name = "bioadaptive NIF"
 	desc = "A NIF that goes out of it's way to accomidate strange body types. \
 	Will function in species where it normally wouldn't."
-	durability = 25
+	durability = 75
 	bioadap = TRUE
 
 ////////////////////////////////

@@ -7,51 +7,43 @@
 	desc = "Nutritious! Probably."
 	flags = NOCONDUCT
 	slot_flags = SLOT_HOLSTER
+	drop_sound = 'sound/items/drop/herb.ogg'
 
 	var/plantname
 	var/datum/seed/seed
 	var/potency = -1
 
-/obj/item/weapon/reagent_containers/food/snacks/grown/Initialize(newloc,planttype)
 
-	..()
+/obj/item/weapon/reagent_containers/food/snacks/grown/Initialize(var/mapload, var/planttype)
+	. = ..()
+	
 	if(!dried_type)
 		dried_type = type
-	src.pixel_x = rand(-5.0, 5)
-	src.pixel_y = rand(-5.0, 5)
+	
+	pixel_x = rand(-5.0, 5)
+	pixel_y = rand(-5.0, 5)
 
-	// Fill the object up with the appropriate reagents.
 	if(planttype)
 		plantname = planttype
 
-/obj/item/weapon/reagent_containers/food/snacks/grown/Initialize()
-	..()
-	spawn()
-		if(!plantname)
-			return
+	if(!plantname)
+		log_debug("Plantname not provided and and [src] requires it at [x],[y],[z]")
+		return INITIALIZE_HINT_QDEL
 
-		if(!plant_controller)
-			sleep(250) // ugly hack, should mean roundstart plants are fine.
-		if(!plant_controller)
-			to_world("<span class='danger'>Plant controller does not exist and [src] requires it. Aborting.</span>")
-			qdel(src)
-			return
+	seed = plant_controller.seeds[plantname]
 
-		seed = plant_controller.seeds[plantname]
+	if(!seed)
+		log_debug("Plant name '[plantname]' does not exist and [src] requires it at [x],[y],[z]")
+		return INITIALIZE_HINT_QDEL
 
-		if(!seed)
-			return
+	name = "[seed.seed_name]"
+	trash = seed.get_trash_type()
 
-		name = "[seed.seed_name]"
-		trash = seed.get_trash_type()
+	update_icon()
 
-		update_icon()
+	potency = seed.get_trait(TRAIT_POTENCY)
 
-		if(!seed.chems)
-			return
-
-		potency = seed.get_trait(TRAIT_POTENCY)
-
+	if(seed.chems)
 		for(var/rid in seed.chems)
 			var/list/reagent_data = seed.chems[rid]
 			if(reagent_data && reagent_data.len)
@@ -157,12 +149,8 @@
 	overlays |= plant_icon
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/Crossed(var/mob/living/M)
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = M
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+	if(M.is_incorporeal())
+		return
 	if(seed && seed.get_trait(TRAIT_JUICY) == 2)
 		if(istype(M))
 
@@ -365,6 +353,7 @@ var/list/fruit_icon_cache = list()
 
 	name = "[S.seed_name] slice"
 	desc = "A slice of \a [S.seed_name]. Tasty, probably."
+	drop_sound = 'sound/items/drop/herb.ogg'
 
 	var/rind_colour = S.get_trait(TRAIT_PRODUCT_COLOUR)
 	var/flesh_colour = S.get_trait(TRAIT_FLESH_COLOUR)

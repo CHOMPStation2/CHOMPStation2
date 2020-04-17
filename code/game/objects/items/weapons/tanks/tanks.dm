@@ -10,6 +10,7 @@ var/list/global/tank_gauge_cache = list()
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/mob/species/seromi/back.dmi'
 		)
+	drop_sound = 'sound/items/drop/gascan.ogg'
 
 	var/gauge_icon = "indicator_tank"
 	var/last_gauge_pressure
@@ -77,7 +78,6 @@ var/list/global/tank_gauge_cache = list()
 	if(istype(loc, /obj/item/device/transfer_valve))
 		var/obj/item/device/transfer_valve/TTV = loc
 		TTV.remove_tank(src)
-		qdel(TTV)
 
 	. = ..()
 
@@ -327,6 +327,9 @@ var/list/global/tank_gauge_cache = list()
 
 /obj/item/weapon/tank/remove_air(amount)
 	return air_contents.remove(amount)
+
+/obj/item/weapon/tank/proc/remove_air_by_flag(flag, amount)
+	return air_contents.remove_by_flag(flag, amount)
 
 /obj/item/weapon/tank/return_air()
 	return air_contents

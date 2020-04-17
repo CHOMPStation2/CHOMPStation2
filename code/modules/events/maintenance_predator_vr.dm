@@ -72,3 +72,7 @@
 /datum/event/maintenance_predator/announce()
 	if(prob(announceProb))
 		command_announcement.Announce("Unexpected biosignature detected in the maintenance tunnels of [station_name()].", "Lifesign Alert")
+
+//YW Addition: Adding named landmark for events
+/obj/effect/landmark/event_spawn/maintpred
+	name = "maint_pred"

@@ -100,6 +100,13 @@ var/list/all_maps = list()
 	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/cryo 	// Used if you end the round on the station.
 	// VOREStation Edit End
 
+	var/use_overmap = 0          // If overmap should be used (including overmap space travel override)
+	var/overmap_size = 20		 // Dimensions of overmap zlevel if overmap is used.
+	var/overmap_z = 0		     // If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
+	var/overmap_event_areas = 0  // How many event "clouds" will be generated
+
+	var/datum/skybox_settings/default_skybox // What skybox do we use if a zlevel doesn't have a custom one? Provide a type.
+
 	var/lobby_icon = 'icons/misc/title.dmi' // The icon which contains the lobby image(s)
 	var/list/lobby_screens = list("mockingjay00")                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
 
@@ -124,23 +131,16 @@ var/list/all_maps = list()
 		map_levels = station_levels.Copy()
 	if(!allowed_jobs || !allowed_jobs.len)
 		allowed_jobs = subtypesof(/datum/job)
+	if(default_skybox) //Type was specified
+		default_skybox = new default_skybox()
+	else
+		default_skybox = new()
 
 /datum/map/proc/setup_map()
 	return
 
 /datum/map/proc/perform_map_generation()
 	return
-
-// Used to apply various post-compile procedural effects to the map.
-/datum/map/proc/refresh_mining_turfs()
-
-	set background = 1
-	set waitfor = 0
-
-	// Update all turfs to ensure everything looks good post-generation. Yes,
-	// it's brute-forcey, but frankly the alternative is a mine turf rewrite.
-	for(var/turf/simulated/mineral/M in turfs) // Ugh.
-		M.update_icon()
 
 /datum/map/proc/get_network_access(var/network)
 	return 0
@@ -160,20 +160,70 @@ var/list/all_maps = list()
 		empty_levels = list(world.maxz)
 	return pick(empty_levels)
 
-// Get the list of zlevels that a computer on srcz can see maps of (for power/crew monitor, cameras, etc)
-// The long_range parameter expands the coverage.  Default is to return map_levels for long range otherwise just srcz.
-// zLevels outside station_levels will return an empty list.
-/datum/map/proc/get_map_levels(var/srcz, var/long_range = TRUE)
-	if (long_range && (srcz in map_levels))
-		return map_levels
-	else if (srcz in station_levels)
-		return list(srcz)
+// Get a list of 'nearby' or 'connected' zlevels.
+// You should at least return a list with the given z if nothing else.
+/datum/map/proc/get_map_levels(var/srcz, var/long_range = FALSE, var/om_range = -1)
+	//Overmap behavior
+	if(use_overmap)
+		//Get what sector we're in
+		var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
+		if(!istype(O))
+			//Anything in multiz then (or just themselves)
+			return GetConnectedZlevels(srcz)
+
+		//Just the sector we're in
+		if(om_range == -1)
+			return O.map_z.Copy()
+
+		//Otherwise every sector we're on top of
+		var/list/connections = list()
+		var/turf/T = get_turf(O)
+		var/turfrange = long_range ? max(0, om_range) : om_range
+		for(var/obj/effect/overmap/visitable/V in range(turfrange, T))
+			connections += V.map_z // Adding list to list adds contents
+		return connections
+
+	//Traditional behavior
 	else
-		return list()
+		//If long range, and they're at least in contact levels, return contact levels.
+		if (long_range && (srcz in contact_levels))
+			return contact_levels.Copy()
+		//If in station levels, return station levels
+		else if (srcz in station_levels)
+			return station_levels.Copy()
+		//Anything in multiz then (or just themselves)
+		else
+			return GetConnectedZlevels(srcz)
 
 /datum/map/proc/get_zlevel_name(var/index)
 	var/datum/map_z_level/Z = zlevels["[index]"]
-	return Z.name
+	return Z?.name
+
+// Access check is of the type requires one. These have been carefully selected to avoid allowing the janitor to see channels he shouldn't
+// This list needs to be purged but people insist on adding more cruft to the radio.
+/datum/map/proc/default_internal_channels()
+	return list(
+		num2text(PUB_FREQ)   = list(),
+		num2text(AI_FREQ)    = list(access_synth),
+		num2text(ENT_FREQ)   = list(),
+		num2text(ERT_FREQ)   = list(access_cent_specops),
+		num2text(COMM_FREQ)  = list(access_heads),
+		num2text(ENG_FREQ)   = list(access_engine_equip, access_atmospherics),
+		num2text(MED_FREQ)   = list(access_medical_equip),
+		num2text(MED_I_FREQ) = list(access_medical_equip),
+		num2text(SEC_FREQ)   = list(access_security),
+		num2text(SEC_I_FREQ) = list(access_security),
+		num2text(SCI_FREQ)   = list(access_tox,access_robotics,access_xenobiology),
+		num2text(SUP_FREQ)   = list(access_cargo),
+		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
+	)
+
+/datum/map/proc/get_skybox_datum(z)
+	var/datum/map_z_level/picked = zlevels["[z]"]
+	if(picked?.custom_skybox)
+		return picked.custom_skybox
+
+	return default_skybox
 
 // Another way to setup the map datum that can be convenient.  Just declare all your zlevels as subtypes of a common
 // subtype of /datum/map_z_level and set zlevel_datum_type on /datum/map to have the lists auto-initialized.
@@ -191,6 +241,9 @@ var/list/all_maps = list()
 	var/holomap_offset_y = -1	// Number of pixels to offset the map up (for centering) for this z
 	var/holomap_legend_x = 96	// x position of the holomap legend for this z
 	var/holomap_legend_y = 96	// y position of the holomap legend for this z
+
+// Skybox
+	var/datum/skybox_settings/custom_skybox  // Can override skybox type here for this z
 
 // Default constructor applies itself to the parent map datum
 /datum/map_z_level/New(var/datum/map/map)
@@ -223,6 +276,8 @@ var/list/all_maps = list()
 	LIST_NUMERIC_SET(map.holomap_offset_y, z, holomap_offset_y)
 	LIST_NUMERIC_SET(map.holomap_legend_x, z, holomap_legend_x)
 	LIST_NUMERIC_SET(map.holomap_legend_y, z, holomap_legend_y)
+	if(custom_skybox)
+		custom_skybox = new custom_skybox()
 
 /datum/map_z_level/Destroy(var/force)
 	crash_with("Attempt to delete a map_z_level instance [log_info_line(src)]")
@@ -231,22 +286,3 @@ var/list/all_maps = list()
 	if (using_map.zlevels["[z]"] == src)
 		using_map.zlevels -= "[z]"
 	return ..()
-
-// Access check is of the type requires one. These have been carefully selected to avoid allowing the janitor to see channels he shouldn't
-// This list needs to be purged but people insist on adding more cruft to the radio.
-/datum/map/proc/default_internal_channels()
-	return list(
-		num2text(PUB_FREQ)   = list(),
-		num2text(AI_FREQ)    = list(access_synth),
-		num2text(ENT_FREQ)   = list(),
-		num2text(ERT_FREQ)   = list(access_cent_specops),
-		num2text(COMM_FREQ)  = list(access_heads),
-		num2text(ENG_FREQ)   = list(access_engine_equip, access_atmospherics),
-		num2text(MED_FREQ)   = list(access_medical_equip),
-		num2text(MED_I_FREQ) = list(access_medical_equip),
-		num2text(SEC_FREQ)   = list(access_security),
-		num2text(SEC_I_FREQ) = list(access_security),
-		num2text(SCI_FREQ)   = list(access_tox,access_robotics,access_xenobiology),
-		num2text(SUP_FREQ)   = list(access_cargo),
-		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
-	)

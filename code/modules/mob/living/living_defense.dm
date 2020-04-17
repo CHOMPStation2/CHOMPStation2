@@ -129,7 +129,6 @@
 	//Stun Beams
 	if(P.taser_effect)
 		stun_effect_act(0, P.agony, def_zone, P)
-		to_chat(src, "<font color='red'>You have been hit by [P]!</font>")
 		if(!P.nodamage)
 			apply_damage(P.damage, P.damage_type, def_zone, absorb, soaked, 0, P, sharp=proj_sharp, edge=proj_edge)
 		qdel(P)
@@ -168,6 +167,15 @@
 
 /mob/living/emp_act(severity)
 	var/list/L = src.get_contents()
+
+	if(LAZYLEN(modifiers))
+		for(var/datum/modifier/M in modifiers)
+			if(!isnull(M.emp_modifier))
+				severity = CLAMP(severity + M.emp_modifier, 1, 5)
+
+	if(severity == 5)	// Effectively nullified.
+		return
+
 	for(var/obj/O in L)
 		O.emp_act(severity)
 	..()
@@ -206,6 +214,9 @@
 	//Armor
 	var/soaked = get_armor_soak(def_zone, armor_check, armor_pen)
 	var/absorb = run_armor_check(def_zone, armor_check, armor_pen)
+
+	if(ai_holder)
+		ai_holder.react_to_attack(B)
 
 	apply_damage(damage, damage_type, def_zone, absorb, soaked)
 
@@ -363,6 +374,9 @@
 		fire_stacks = 0
 		handle_light()
 		update_fire()
+
+	if(has_modifier_of_type(/datum/modifier/fire))
+		remove_modifiers_of_type(/datum/modifier/fire)
 
 /mob/living/proc/update_fire()
 	return

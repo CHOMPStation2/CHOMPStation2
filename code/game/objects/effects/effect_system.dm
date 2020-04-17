@@ -185,12 +185,8 @@ steam.start() -- spawns the effect
 				qdel(src)
 
 /obj/effect/effect/smoke/Crossed(mob/living/carbon/M as mob )
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = M
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+	if(M.is_incorporeal())
+		return
 	..()
 	if(istype(M))
 		affect(M)
@@ -241,6 +237,15 @@ steam.start() -- spawns the effect
 		L.adjustOxyLoss(1)
 		if(prob(25))
 			L.emote("cough")
+
+/obj/effect/effect/smoke/bad/noxious
+	opacity = 0
+
+/obj/effect/effect/smoke/bad/noxious/affect(var/mob/living/L)
+	if (!..())
+		return 0
+	if(L.needs_to_breathe())
+		L.adjustToxLoss(1)
 
 /* Not feasile until a later date
 /obj/effect/effect/smoke/bad/Crossed(atom/movable/M as mob|obj)
@@ -372,6 +377,9 @@ steam.start() -- spawns the effect
 
 /datum/effect/effect/system/smoke_spread/bad
 	smoke_type = /obj/effect/effect/smoke/bad
+
+/datum/effect/effect/system/smoke_spread/noxious
+	smoke_type = /obj/effect/effect/smoke/bad/noxious
 
 /datum/effect/effect/system/smoke_spread/fire
 	smoke_type = /obj/effect/effect/smoke/elemental/fire

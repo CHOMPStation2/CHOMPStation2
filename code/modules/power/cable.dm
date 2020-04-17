@@ -515,6 +515,7 @@ obj/structure/cable/proc/cableColor(var/colorC)
 	item_state = "coil"
 	attack_verb = list("whipped", "lashed", "disciplined", "flogged")
 	stacktype = /obj/item/stack/cable_coil
+	drop_sound = 'sound/items/drop/accessory.ogg'
 
 /obj/item/stack/cable_coil/cyborg
 	name = "cable coil synthesizer"
@@ -583,7 +584,7 @@ obj/structure/cable/proc/cableColor(var/colorC)
 		name = "cable piece"
 	else
 		icon_state = "coil"
-		name = "cable coil"
+		name = initial(name)
 
 /obj/item/stack/cable_coil/proc/set_cable_color(var/selected_color, var/user)
 	if(!selected_color)

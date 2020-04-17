@@ -57,7 +57,6 @@
 	for(var/organ in organs)
 		qdel(organ)
 	QDEL_NULL(nif)	//VOREStation Add
-	QDEL_LIST_NULL(vore_organs) //VOREStation Add
 	return ..()
 
 /mob/living/carbon/human/Stat()
@@ -100,6 +99,15 @@
 /mob/living/carbon/human/ex_act(severity)
 	if(!blinded)
 		flash_eyes()
+
+	for(var/datum/modifier/M in modifiers)
+		if(!isnull(M.explosion_modifier))
+			severity = CLAMP(severity + M.explosion_modifier, 1, 4)
+
+	severity = round(severity)
+
+	if(severity > 3)
+		return
 
 	var/shielded = 0
 	var/b_loss = null
@@ -243,12 +251,8 @@
 // this handles mulebots and vehicles
 // and now mobs on fire
 /mob/living/carbon/human/Crossed(var/atom/movable/AM)
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = AM
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+	if(AM.is_incorporeal())
+		return
 	if(istype(AM, /mob/living/bot/mulebot))
 		var/mob/living/bot/mulebot/MB = AM
 		MB.runOver(src)

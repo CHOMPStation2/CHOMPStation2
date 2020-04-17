@@ -6,7 +6,7 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 	var/delay_min = 30 MINUTES			//How long between ATC traffic, min. Increased to 30 for YW due to round length.
 	var/delay_max = 60 MINUTES			//How long between ATC traffic, max. Increased to 60 for YW due to round length.
 	var/backoff_delay = 5 MINUTES			//How long to back off if we can't talk and want to.  Default is 5 mins.
-	var/next_message				//When the next message should happen in world.time
+	var/next_message = 30 MINUTES				//When the next message should happen in world.time - Making it default to min value
 	var/force_chatter_type				//Force a specific type of messages
 
 	var/squelched = 0				//If ATC is squelched currently

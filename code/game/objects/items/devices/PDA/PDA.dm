@@ -48,6 +48,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	var/list/conversations = list()    // For keeping up with who we have PDA messsages from.
 	var/new_message = 0			//To remove hackish overlay check
 	var/new_news = 0
+	var/touch_silent = 0 //If 1, no beeps on interacting.
 
 	var/active_feed				// The selected feed
 	var/list/warrant			// The warrant as we last knew it
@@ -63,6 +64,8 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	var/ownrank = null // this one is rank, never alt title
 
 	var/obj/item/device/paicard/pai = null	// A slot for a personal AI device
+
+	var/spam_proof = FALSE // If true, it can't be spammed by random events.
 
 /obj/item/device/pda/examine(mob/user)
 	if(..(user, 1))
@@ -87,6 +90,11 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		else
 			to_chat(usr, "<span class='notice'>This PDA does not have an ID in it.</span>")
 
+//Bloop when using:
+/obj/item/device/pda/CouldUseTopic(var/mob/user)
+	..()
+	if(iscarbon(user) && !touch_silent)
+		playsound(src, 'sound/machines/pda_click.ogg', 20)
 
 /obj/item/device/pda/medical
 	default_cartridge = /obj/item/weapon/cartridge/medical
@@ -328,6 +336,8 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/ai/pai
 	ttone = "assist"
 
+/obj/item/device/pda/ai/shell
+	spam_proof = TRUE // Since empty shells get a functional PDA.
 
 // Used for the PDA multicaster, which mirrors messages sent to it to a specific department,
 /obj/item/device/pda/multicaster
@@ -336,6 +346,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	ttone = "data"
 	detonate = 0
 	news_silent = 1
+	spam_proof = TRUE // Spam messages don't actually work and its difficult to disable these.
 	var/list/cartridges_to_send_to = list()
 
 // This is what actually mirrors the message,
@@ -499,6 +510,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	data["note"] = note					// current pda notes
 	data["message_silent"] = message_silent					// does the pda make noise when it receives a message?
 	data["news_silent"] = news_silent					// does the pda make noise when it receives news?
+	data["touch_silent"] = touch_silent					// does the pda make noise when it receives news?
 	data["toff"] = toff					// is the messenger function turned off?
 	data["active_conversation"] = active_conversation	// Which conversation are we following right now?
 
@@ -768,6 +780,8 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				scanmode = 0
 			else if((!isnull(cartridge)) && (cartridge.access_atmos))
 				scanmode = 5
+		if("Toggle Beeping")
+			touch_silent = !touch_silent
 
 //MESSENGER/NOTE FUNCTIONS===================================
 
@@ -1044,6 +1058,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			var/mob/M = loc
 			M.put_in_hands(id)
 			to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
+			playsound(loc, 'sound/machines/id_swipe.ogg', 100, 1)
 		else
 			id.loc = get_turf(src)
 		id = null
@@ -1180,6 +1195,15 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	log_pda("(PDA: [sending_unit]) sent \"[message]\" to [name]",usr)
 	new_message = 1
 
+/obj/item/device/pda/proc/spam_message(sender, message)
+	var/reception_message = "\icon[src] <b>Message from [sender] (Unknown / spam?), </b>\"[message]\" (Unable to Reply)"
+	new_info(message_silent, ttone, reception_message)
+
+	if(prob(50)) // Give the AI an increased chance to intercept the message
+		for(var/mob/living/silicon/ai/ai in mob_list)
+			if(ai.aiPDA != src)
+				ai.show_message("<i>Intercepted message from <b>[sender]</b></i> (Unknown / spam?) <i>to <b>[owner]</b>: [message]</i>")
+
 /obj/item/device/pda/verb/verb_reset_pda()
 	set category = "Object"
 	set name = "Reset PDA"
@@ -1250,6 +1274,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if (cartridge.radio)
 		cartridge.radio.hostpda = null
 	to_chat(usr, "<span class='notice'>You remove \the [cartridge] from the [name].</span>")
+	playsound(loc, 'sound/machines/id_swipe.ogg', 100, 1)
 	cartridge = null
 
 /obj/item/device/pda/proc/id_check(mob/user as mob, choice as num)//To check for IDs; 1 for in-pda use, 2 for out of pda use.
@@ -1463,13 +1488,9 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	QDEL_NULL(src.pai)
 	return ..()
 
-/obj/item/device/pda/clown/Crossed(AM as mob|obj) //Clown PDA is slippery.
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = AM
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+/obj/item/device/pda/clown/Crossed(atom/movable/AM as mob|obj) //Clown PDA is slippery.
+	if(AM.is_incorporeal())
+		return
 	if (istype(AM, /mob/living))
 		var/mob/living/M = AM
 

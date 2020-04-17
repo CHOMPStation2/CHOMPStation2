@@ -35,8 +35,8 @@
 /turf/simulated/flesh/attackby()
 	return
 
-/turf/simulated/flesh/New()
-	..()
+/turf/simulated/flesh/Initialize(mapload)
+	. = ..()
 	update_icon(1)
 
 var/list/flesh_overlay_cache = list()
@@ -60,3 +60,14 @@ var/list/flesh_overlay_cache = list()
 			if(istype(get_step(src, direction), /turf/simulated/flesh))
 				var/turf/simulated/flesh/F = get_step(src, direction)
 				F.update_icon()
+
+/turf/simulated/shuttle/wall/flock
+	icon = 'icons/goonstation/featherzone.dmi'
+	icon_state = "flockwall0"
+	base_state = "flockwall"
+	hard_corner = 1 //They're all HC
+	true_name = "wall"
+
+/turf/simulated/shuttle/wall/flock/Initialize()
+	. = ..()
+	set_light(3,3,"#26c5a9")
