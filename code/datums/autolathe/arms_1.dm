@@ -166,6 +166,34 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 750)
 	hidden = 1
 
+/////// SMG Mags
+
+/datum/design/item/autolathe/arms/smg_9mm
+	name = "top-mounted SMG magazine (9mm)"
+	id = "smg_9mm"
+	build_path = /obj/item/ammo_magazine/m9mmt
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/smg_9mmr
+	name = "top-mounted SMG magazine (9mm rubber)"
+	id = "smg_9mmr"
+	build_path = /obj/item/ammo_magazine/m9mmt/rubber
+	materials = list(DEFAULT_WALL_MATERIAL = 380)
+
+/datum/design/item/autolathe/arms/smg_9mmp
+	name = "top-mounted SMG magazine (9mm practice)"
+	id = "smg_9mmp"
+	build_path = /obj/item/ammo_magazine/m9mmt/practice
+	materials = list(DEFAULT_WALL_MATERIAL = 380)
+
+/datum/design/item/autolathe/arms/smg_9mmf
+	name = "top-mounted SMG magazine (9mm flash)"
+	id = "smg_9mmf"
+	build_path = /obj/item/ammo_magazine/m9mmt/flash
+	materials = list(DEFAULT_WALL_MATERIAL = 380)
+
+
 /////// 10mm
 
 /datum/design/item/autolathe/arms/smg_10mm
