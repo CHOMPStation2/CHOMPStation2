@@ -88,6 +88,13 @@
 	build_path = /obj/item/ammo_magazine/m45/flash
 	materials = list(DEFAULT_WALL_MATERIAL = 656)
 
+/datum/design/item/autolathe/arms/pistol_45uzi
+	name = "uzi magazine (.45)"
+	id = "pistol_45uzi"
+	build_path = /obj/item/ammo_magazine/m45uzi
+	materials = list(DEFAULT_WALL_MATERIAL = 656)
+	hidden = 1
+
 /datum/design/item/autolathe/arms/tommymag
 	name = "Tommy Gun magazine (.45)"
 	id = "tommymag"
@@ -131,6 +138,33 @@
 	id = "pistol_9mm_flash"
 	build_path = /obj/item/ammo_magazine/m9mm/flash
 	materials = list(DEFAULT_WALL_MATERIAL = 750)
+
+/datum/design/item/autolathe/arms/pistol_9mm_compact
+	name = "compact pistol magazine (9mm)"
+	id = "pistol_9mm_compact"
+	build_path = /obj/item/ammo_magazine/m9mm/compact
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/pistol_9mmr_compact
+	name = "compact pistol magazine (9mm rubber)"
+	id = "pistol_9mm_compact_rubber"
+	build_path = /obj/item/ammo_magazine/m9mm/compact/rubber
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+/datum/design/item/autolathe/arms/pistol_9mmp_compact
+	name = "compact pistol magazine (9mm)"
+	id = "pistol_9mm_compact_practice"
+	build_path = /obj/item/ammo_magazine/m9mm/compact/practice
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/pistol_9mmf_compact
+	name = "compact pistol magazine (9mm)"
+	id = "pistol_9mm_compact_flash"
+	build_path = /obj/item/ammo_magazine/m9mm/compact/flash
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
 
 /////// 10mm
 
