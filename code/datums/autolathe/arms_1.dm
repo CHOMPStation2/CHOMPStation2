@@ -252,6 +252,14 @@
 	id = "shotgun_speedloader_pellet"
 	build_path = /obj/item/ammo_magazine/clip/c12g/pellet
 	materials = list(DEFAULT_WALL_MATERIAL = 1337)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/shotgun_clip_slug
+	name = "2-round 12g speedloader (slug)"
+	id = "shotgun_speedloader_slug"
+	build_path = /obj/item/ammo_magazine/clip/c12g
+	materials = list(DEFAULT_WALL_MATERIAL = 1337)
+	hidden = 1
 
 
 ///////////////////////////////
