@@ -820,6 +820,7 @@
 #include "code\game\machinery\status_display_ai.dm"
 #include "code\game\machinery\suit_storage_unit.dm"
 #include "code\game\machinery\suit_storage_unit_vr.dm"
+#include "code\game\machinery\suit_storage_unit_yw.dm"
 #include "code\game\machinery\supply_display.dm"
 #include "code\game\machinery\supplybeacon.dm"
 #include "code\game\machinery\syndicatebeacon.dm"
