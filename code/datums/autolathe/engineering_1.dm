@@ -68,7 +68,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)
 
 /datum/design/item/autolathe/engineering/photocopier
-	name = "photocopíer electronics"
+	name = "photocopÃ­er electronics"
 	id = "photocopier_electronics"
 	build_path = /obj/item/weapon/circuitboard/photocopier
 	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)
@@ -118,7 +118,7 @@
 /datum/design/item/autolathe/engineering/spring
 	name = "spring"
 	id = "spring"
-	build_path = /obj/item/weapon/stock_parts/gear
+	build_path = /obj/item/weapon/stock_parts/spring
 	materials = list(DEFAULT_WALL_MATERIAL = 50)
 
 /datum/design/item/autolathe/engineering/rcd_ammo
@@ -135,6 +135,6 @@
 
 /datum/design/item/autolathe/engineering/camera_assembly
 	name = "camera assembly"
-	id = "camera"
-	build_path = /obj/item/weapon/rcd
+	id = "camera_assembly"
+	build_path = /obj/item/weapon/camera_assembly
 	materials = list(DEFAULT_WALL_MATERIAL = 875, "glass" = 375)
