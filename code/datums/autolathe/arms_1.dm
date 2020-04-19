@@ -50,7 +50,7 @@
 
 /datum/design/item/autolathe/arms/stunshell
 	name = "ammunition (stun cartridge, shotgun)"
-	id = "stunshell"
+	id = "shotgun_stunshell"
 	build_path = /obj/item/ammo_casing/a12g/stunshell
 	time = 10
 	materials = list(DEFAULT_WALL_MATERIAL = 450, "glass" = 900)
@@ -129,7 +129,7 @@
 
 /datum/design/item/autolathe/arms/pistol_9mmp
 	name = "pistol magazine (9mm practice)"
-	id = "pistol_9mm_rubber"
+	id = "pistol_9mm_practice"
 	build_path = /obj/item/ammo_magazine/m9mm/practice
 	materials = list(DEFAULT_WALL_MATERIAL = 750)
 
