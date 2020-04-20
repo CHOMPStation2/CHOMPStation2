@@ -28,7 +28,7 @@
 	lifespan, but due to their lust for violence, only a handful have ever survived beyond the age of 80, such as the infamous and \
 	legendary General Rain Silves who is claimed to have lived to 5000."
 
-	wikilink="https://www.yawn.ocry.com/Sergal"
+	wikilink="https://yawn.izac.live/Sergal"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
 
@@ -92,7 +92,7 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-	wikilink="https://www.yawn.ocry.com/Akula"
+	wikilink="https://yawn.izac.live/Akula"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
@@ -136,7 +136,7 @@
 	over and over again. Consequently, they struggle to make copies of same things. Both genders have a voice that echoes a lot. Their natural \
 	tone oscillates between tenor and soprano. They are excessively noisy when they quarrel in their native language."
 
-	wikilink="https://www.yawn.ocry.com/Nevrean"
+	wikilink="https://yawn.izac.live/Nevrean"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
@@ -178,7 +178,7 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-	wikilink="https://www.yawn.ocry.com/Zorren"
+	wikilink="https://yawn.izac.live/Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 
@@ -223,7 +223,7 @@
 	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
     which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
-	wikilink="https://www.yawn.ocry.com/Vulpkanin"
+	wikilink="https://yawn.izac.live/Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
@@ -248,7 +248,7 @@
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
 	descriptors = list()
-	wikilink="https://www.yawn.ocry.com/Unathi"
+	wikilink="https://yawn.izac.live/Unathi"
 
 /datum/species/tajaran
 	spawn_flags = SPECIES_CAN_JOIN
@@ -260,7 +260,7 @@
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
 	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
-	wikilink="https://www.yawn.ocry.com/Tajaran"
+	wikilink="https://yawn.izac.live/Tajaran"
 	agility = 90
 
 /datum/species/skrell
@@ -271,14 +271,14 @@
 	min_age = 18
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
-	wikilink="https://www.yawn.ocry.com/Skrell"
+	wikilink="https://yawn.izac.live/Skrell"
 
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
 	gluttonous = 0
 	descriptors = list()
-	wikilink="https://www.yawn.ocry.com/Zaddat"
+	wikilink="https://yawn.izac.live/Zaddat"
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
@@ -291,7 +291,7 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
-	wikilink="https://www.yawn.ocry.com/Diona"
+	wikilink="https://yawn.izac.live/Diona"
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
@@ -305,7 +305,7 @@
 	swap_flags = ~HEAVY
 	gluttonous = 0
 	descriptors = list()
-	wikilink="https://www.yawn.ocry.com/Teshari"
+	wikilink="https://yawn.izac.live/Teshari"
 	agility = 90
 
 	inherent_verbs = list(
@@ -317,7 +317,7 @@
 
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-	wikilink="https://www.yawn.ocry.com/Promethean"
+	wikilink="https://yawn.izac.live/Promethean"
 
 /datum/species/human
 	color_mult = 1
@@ -326,7 +326,7 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 	min_age = 18
 	base_color = "#EECEB3"
-	wikilink="https://www.yawn.ocry.com/Human"
+	wikilink="https://yawn.izac.live/Human"
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -341,7 +341,7 @@
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
-	wikilink="https://www.yawn.ocry.com/Vox"
+	wikilink="https://yawn.izac.live/Vox"
 
 datum/species/harpy
 	name = SPECIES_RAPALA
@@ -367,7 +367,7 @@ datum/species/harpy
 	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
-	wikilink="https://www.yawn.ocry.com/Rapala"
+	wikilink="https://yawn.izac.live/Rapala"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/rapala)
 
