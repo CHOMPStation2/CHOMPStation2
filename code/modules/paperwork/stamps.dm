@@ -1,7 +1,7 @@
 /obj/item/weapon/stamp
 	name = "rubber stamp"
 	desc = "A rubber stamp for stamping important documents."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/bureaucracy_yw.dmi' //YWedit reverts to use old stamp icons
 	icon_state = "stamp-qm"
 	item_state = "stamp"
 	throwforce = 0
