@@ -17,7 +17,7 @@
 /obj/item/weapon/cell/device/weapon //Aka adv
 	name = "advanced device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "acell"
+	icon_state = "wcell"
 	maxcharge = 2400
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 2)
@@ -30,7 +30,7 @@
 /obj/item/weapon/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "uscell"
+	icon_state = "wcell" //TODO: Different sprite
 	maxcharge = 3600
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 3)
@@ -43,7 +43,7 @@
 /obj/item/weapon/cell/device/hyper
 	name = "hyper device power cell"
 	desc = "A small upgraded power cell designed to hold much more power for handheld devices."
-	icon_state = "wcell"
+	icon_state = "wcell" //TODO: Different sprite
 	maxcharge = 4800
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
