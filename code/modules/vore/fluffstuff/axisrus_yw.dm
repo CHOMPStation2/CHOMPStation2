@@ -1,7 +1,7 @@
 //head
 
 /obj/item/clothing/head/axiscap
-	name = "Feldmütze"
+	name = "FeldmÃ¼tze"
 	desc = "Despite being designed for use in an armoured vehicle, this cap sports a remarkable lack of armor of any sort. Mind your Kopf."
 	icon = 'icons/vore/axisrus_yw.dmi'
 	icon_state = "panzercap"
@@ -9,7 +9,7 @@
 	item_state = "panzercap_mob"
 
 /obj/item/clothing/head/axiscap/officer
-	name = "Einheitsfeldmütze"
+	name = "EinheitsfeldmÃ¼tze"
 	desc = "A great leader has many things. Honor, conviction, determination, a nerve of steel. And above all, a hat of the utmost quality."
 	icon = 'icons/vore/axisrus_yw.dmi'
 	icon_state = "officercap"

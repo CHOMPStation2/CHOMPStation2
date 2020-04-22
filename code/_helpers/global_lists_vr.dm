@@ -426,8 +426,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_XENO_QUEEN,
 				SPECIES_SHADOW,
 				SPECIES_GOLEM,					//Some special species that may or may not be ever used in event too,
-				SPECIES_SHADEKIN, //Shadefluffers just poof away
-				SPECIES_SHADEKIN_YW)			 //YW edits
+				SPECIES_SHADEKIN) //Shadefluffers just poof away
 
 /var/global/list/existing_solargrubs = list()
 
@@ -471,12 +470,15 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 
 	// Custom species icon bases
 	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN) //Just ones that won't work well.
+	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID) //Include these anyway
 	for(var/species_name in GLOB.playable_species)
 		if(species_name in blacklisted_icons)
 			continue
 		var/datum/species/S = GLOB.all_species[species_name]
 		if(S.spawn_flags & SPECIES_IS_WHITELISTED)
 			continue
+		custom_species_bases += species_name
+	for(var/species_name in whitelisted_icons)
 		custom_species_bases += species_name
 
 	return 1 // Hooks must return 1

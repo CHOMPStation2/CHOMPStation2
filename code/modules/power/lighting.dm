@@ -75,12 +75,14 @@ var/global/list/light_type_cache = list()
 		to_chat(user, "<span class='danger'>This casing doesn't support power cells for backup power.</span>")
 
 /obj/machinery/light_construct/attack_hand(mob/user)
+	. = ..()
+	if(.) 
+		return . // obj/machinery/attack_hand returns 1 if user can't use the machine
 	if(cell)
 		user.visible_message("[user] removes [cell] from [src]!","<span class='notice'>You remove [cell].</span>")
 		user.put_in_hands(cell)
 		cell.update_icon()
 		cell = null
-		add_fingerprint(user)
 
 /obj/machinery/light_construct/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
@@ -101,6 +103,7 @@ var/global/list/light_type_cache = list()
 			cell = W
 			add_fingerprint(user)
 		return
+
 	if (W.is_wrench())
 		if (src.stage == 1)
 			playsound(src, W.usesound, 75, 1)
@@ -209,7 +212,7 @@ var/global/list/light_type_cache = list()
 	anchored = 1
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
-	use_power = 2
+	use_power = USE_POWER_ACTIVE
 	idle_power_usage = 2
 	active_power_usage = 10
 	power_channel = LIGHT //Lights are calc'd via area so they dont need to be in the machine list
@@ -231,6 +234,8 @@ var/global/list/light_type_cache = list()
 	var/current_alert = null	// Which alert are we showing right now?
 	//VOREStation Edit End
 
+	var/auto_flicker = FALSE // If true, will constantly flicker, so long as someone is around to see it (otherwise its a waste of CPU).
+
 	var/obj/item/weapon/cell/emergency_light/cell
 	var/start_with_cell = TRUE	// if true, this fixture generates a very weak cell at roundstart
 
@@ -240,8 +245,6 @@ var/global/list/light_type_cache = list()
 	var/bulb_emergency_colour = "#FF3232"	// determines the colour of the light while it's in emergency mode
 	var/bulb_emergency_pow_mul = 0.75	// the multiplier for determining the light's power in emergency mode
 	var/bulb_emergency_pow_min = 0.5	// the minimum value for the light's power in emergency mode
-
-	var/auto_flicker = FALSE // If true, will constantly flicker, so long as someone is around to see it (otherwise its a waste of CPU).
 
 /obj/machinery/light/flicker
 	auto_flicker = TRUE
@@ -279,11 +282,14 @@ var/global/list/light_type_cache = list()
 
 /obj/machinery/light/flamp/New(atom/newloc, obj/machinery/light_construct/construct = null)
 	..(newloc, construct)
-	if(start_with_cell && !no_emergency)
-		cell = new/obj/item/weapon/cell/emergency_light(src)
 	if(construct)
+		start_with_cell = FALSE
 		lamp_shade = 0
 		update_icon()
+	else	
+		if(start_with_cell && !no_emergency)
+			cell = new/obj/item/weapon/cell/emergency_light(src)
+	
 
 /obj/machinery/light/flamp/flicker
 	auto_flicker = TRUE
@@ -322,6 +328,8 @@ var/global/list/light_type_cache = list()
 		construct.transfer_fingerprints_to(src)
 		set_dir(construct.dir)
 	else
+		if(start_with_cell && !no_emergency)
+			cell = new/obj/item/weapon/cell/emergency_light(src)
 		var/obj/item/weapon/light/L = get_light_type_instance(light_type)
 		update_from_bulb(L)
 		if(prob(L.broken_chance))
@@ -429,14 +437,14 @@ var/global/list/light_type_cache = list()
 					on = 0
 					set_light(0)
 			else
-				use_power = 2
+				update_use_power(USE_POWER_ACTIVE)
 				set_light(brightness_range, brightness_power, brightness_color)
 	else if(has_emergency_power(LIGHT_EMERGENCY_POWER_USE) && !turned_off())
 		use_power = 1
 		emergency_mode = TRUE
 		START_PROCESSING(SSobj, src)
 	else
-		use_power = 2
+		update_use_power(USE_POWER_IDLE)
 		set_light(0)
 		update_icon()
 
@@ -674,12 +682,15 @@ var/global/list/light_type_cache = list()
 		flickering = 0
 
 // ai attack - turn on/off emergency lighting for a specific fixture
-
 /obj/machinery/light/attack_ai(mob/user)
 	no_emergency = !no_emergency
 	to_chat(user, "<span class='notice'>Emergency lights for this fixture have been [no_emergency ? "disabled" : "enabled"].</span>")
 	update(FALSE)
 	return
+
+// ai alt click - Make light flicker.  Very important for atmosphere.  
+/obj/machinery/light/AIAltClick(mob/user)
+	flicker(1)
 
 /obj/machinery/light/flamp/attack_ai(mob/user)
 	attack_hand()

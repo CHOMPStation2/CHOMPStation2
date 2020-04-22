@@ -8,6 +8,7 @@
 	w_class = ITEMSIZE_HUGE // So it can't fit in a backpack.
 	force = 10
 	slot_flags = SLOT_BACK
+	action_button_name = "Use Scope"
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	caliber = "14.5mm"
 	recoil = 5 //extra kickback
@@ -18,6 +19,7 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 	accuracy = -75
 	scoped_accuracy = 75
+	ignore_visor_zoom_restriction = TRUE	// Ignore the restriction on vision modifiers when using this gun's scope.
 //	one_handed_penalty = 90
 	var/bolt_open = 0
 
@@ -32,21 +34,21 @@
 	bolt_open = !bolt_open
 	if(bolt_open)
 		if(chambered)
-			user << "<span class='notice'>You work the bolt open, ejecting [chambered]!</span>"
+			to_chat(user, "<span class='notice'>You work the bolt open, ejecting [chambered]!</span>")
 			chambered.loc = get_turf(src)
 			loaded -= chambered
 			chambered = null
 		else
-			user << "<span class='notice'>You work the bolt open.</span>"
+			to_chat(user, "<span class='notice'>You work the bolt open.</span>")
 	else
-		user << "<span class='notice'>You work the bolt closed.</span>"
+		to_chat(user, "<span class='notice'>You work the bolt closed.</span>")
 		bolt_open = 0
 	add_fingerprint(user)
 	update_icon()
 
 /obj/item/weapon/gun/projectile/heavysniper/special_check(mob/user)
 	if(bolt_open)
-		user << "<span class='warning'>You can't fire [src] while the bolt is open!</span>"
+		to_chat(user, "<span class='warning'>You can't fire [src] while the bolt is open!</span>")
 		return 0
 	return ..()
 
@@ -59,6 +61,9 @@
 	if(!bolt_open)
 		return
 	..()
+
+/obj/item/weapon/gun/projectile/heavysniper/ui_action_click()
+	scope()
 
 /obj/item/weapon/gun/projectile/heavysniper/verb/scope()
 	set category = "Object"
@@ -77,6 +82,7 @@
 	w_class = ITEMSIZE_HUGE // So it can't fit in a backpack.
 	force = 10
 	slot_flags = SLOT_BACK // Needs a sprite.
+	action_button_name = "Use Scope"
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	caliber = "7.62mm"
 	load_method = MAGAZINE
@@ -94,6 +100,9 @@
 		icon_state = "SVD"
 	else
 		icon_state = "SVD-empty"
+
+/obj/item/weapon/gun/projectile/SVD/ui_action_click()
+	scope()
 
 /obj/item/weapon/gun/projectile/SVD/verb/scope()
 	set category = "Object"

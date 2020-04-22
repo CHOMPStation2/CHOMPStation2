@@ -1,11 +1,11 @@
 /datum/gm_action/nanotrasen_budget_allocation
 	name = "supply point to cargo budget"
 	enabled = TRUE
-	departments = list(ROLE_CARGO)
+	departments = list(DEPARTMENT_CARGO)
 	chaotic = 0
 	reusable = TRUE
 
-	var/datum/controller/supply/SC
+	var/datum/controller/subsystem/supply/SC
 	var/running = FALSE
 	var/last_run
 
@@ -13,7 +13,7 @@
 
 /datum/gm_action/nanotrasen_budget_allocation/New()
 	..()
-	SC = supply_controller
+	SC = SSsupply
 
 /datum/gm_action/nanotrasen_budget_allocation/set_up()
 	running = TRUE
@@ -22,8 +22,8 @@
 /datum/gm_action/nanotrasen_budget_allocation/get_weight()
 	. = round(SC.points / 15)
 
-	var/cargo = metric.count_people_in_department(ROLE_CARGO)
-	var/personnel = metric.count_people_in_department(ROLE_EVERYONE)
+	var/cargo = metric.count_people_in_department(DEPARTMENT_CARGO)
+	var/personnel = metric.count_people_in_department(DEPARTMENT_EVERYONE)
 	if(cargo)
 		. = round(SC.points / (10 + personnel)) + cargo * 10
 

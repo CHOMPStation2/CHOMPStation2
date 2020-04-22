@@ -140,6 +140,22 @@
 	var_changes = list("burn_mod" = 0.6)
 */
 //CHOMPStation Removal End
+
+//YW ADDITIONS START
+	
+/datum/trait/alcohol_tolerance_advanced
+	name = "Liver of Steel"
+	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers!"
+	cost = 1
+	var_changes = list("alcohol_tolerance" = 0.5)
+
+/datum/trait/alcohol_immunity
+	name = "Liver of Durasteel"
+	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed."
+	cost = 2
+	var_changes = list("alcohol_tolerance" = 0.25)
+//YW ADDITIONS END
+
 /datum/trait/photoresistant
 	name = "Photoresistance"
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%"
@@ -179,6 +195,13 @@
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
 */
 //CHOMPStation Removal End
+
+/datum/trait/traceur
+	name = "Traceur"
+	desc = "You're capable of parkour and can *flip over low objects (most of the time)."
+	cost = 2
+	var_changes = list("agility" = 90)
+
 // YW Addition
 /datum/trait/bloodsucker_plus
 	name = "Evolved Bloodsucker"
