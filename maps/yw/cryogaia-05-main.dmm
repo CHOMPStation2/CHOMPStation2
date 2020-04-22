@@ -7705,7 +7705,9 @@
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
 	},
-/obj/machinery/door/airlock/maintenance/medical,
+/obj/machinery/door/airlock/maintenance/medical{
+	req_one_access = list(5,52,64)
+	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -29674,6 +29676,10 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
 /turf/simulated/floor/plating,
 /area/security/brig)
 "bde" = (
@@ -30069,8 +30075,6 @@
 	hacked = 1;
 	name = "unlocked autolathe"
 	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "bdJ" = (
@@ -63087,6 +63091,10 @@
 /obj/structure/sign/directions/security,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
+"cLZ" = (
+/obj/machinery/suit_cycler/medical,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "dDd" = (
 /obj/structure/sign/directions/science,
 /turf/simulated/wall/r_wall,
@@ -63098,6 +63106,13 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/substation/civilian)
+"ety" = (
+/obj/machinery/door/window/brigdoor/northright{
+	req_access = list();
+	req_one_access = list(5)
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "eQA" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -63108,23 +63123,51 @@
 /obj/structure/sign/directions/science,
 /turf/simulated/wall,
 /area/storage/primary)
-"gAR" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+"gOn" = (
+/obj/structure/table/standard,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/turf/simulated/floor/tiled/dark,
+/area/security/armoury)
 "gQF" = (
 /obj/machinery/suit_cycler/captain,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
-"gTH" = (
-/obj/machinery/door/window/brigdoor/northright{
-	req_access = list();
-	req_one_access = list(5)
+"hRF" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/shutters{
+	dir = 8;
+	id = "secpilotoffice";
+	layer = 3.1;
+	name = "Office Shutters"
 	},
+/turf/simulated/floor/plating,
+/area/security/airlock)
+"iGb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/cryogaia/station/explorer_prep)
+"kOa" = (
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/shoes/magboots,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/oxygen,
+/obj/item/clothing/suit/space/void/medical,
+/obj/item/clothing/head/helmet/space/void/medical,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "lAq" = (
@@ -63139,19 +63182,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
-"mbK" = (
-/obj/structure/table/rack/shelf,
-/obj/item/clothing/shoes/magboots,
-/obj/item/device/suit_cooling_unit,
-/obj/item/weapon/tank/oxygen,
-/obj/item/clothing/suit/space/void/medical,
-/obj/item/clothing/head/helmet/space/void/medical,
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/explorer_prep)
 "mjD" = (
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
+"mjH" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "mBp" = (
 /obj/structure/table/marble,
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -63170,22 +63211,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/bar)
-"mGu" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating,
-/area/cryogaia/station/explorer_prep)
 "nKF" = (
 /obj/structure/sign/directions/security{
 	icon_state = "direction_sec";
@@ -63193,13 +63218,12 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"nLF" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
+"ovS" = (
+/obj/machinery/door/airlock/glass_external/freezable{
+	req_access = list(48)
 	},
-/obj/effect/floor_decal/snow/floor/edges,
-/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
-/area/borealis2/outdoors/grounds)
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "oRX" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -63240,10 +63264,6 @@
 /obj/structure/sign/directions/security,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"rFU" = (
-/obj/machinery/suit_cycler/medical,
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/explorer_prep)
 "sdy" = (
 /obj/structure/table/rack,
 /obj/machinery/door/window/brigdoor/northright{
@@ -63272,14 +63292,27 @@
 /obj/structure/sign/directions/engineering,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
+"tdL" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "secpilotoffice";
+	name = "Office Shutters";
+	pixel_x = -26;
+	pixel_y = 0;
+	req_access = list(67)
+	},
+/turf/simulated/floor/plating,
+/area/security/vacantoffice)
 "ugG" = (
 /obj/effect/shuttle_landmark/automatic,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
-"vIg" = (
-/obj/machinery/door/airlock/glass_external/freezable{
-	req_access = list(48)
+"wLk" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/grounds/traderpad)
 "ylY" = (
@@ -78773,7 +78806,7 @@ aag
 aag
 aag
 bLF
-gAR
+wLk
 bLF
 bLF
 aag
@@ -79024,7 +79057,7 @@ aag
 aag
 aag
 aaY
-vIg
+ovS
 clb
 clc
 bLF
@@ -79275,7 +79308,7 @@ aag
 aag
 aag
 aag
-nLF
+mjH
 bLF
 bLF
 bLF
@@ -79527,7 +79560,7 @@ aag
 aag
 aag
 aag
-nLF
+mjH
 aag
 bLF
 bMZ
@@ -79779,7 +79812,7 @@ aag
 bsy
 aag
 aag
-nLF
+mjH
 aag
 bLF
 bNa
@@ -90569,10 +90602,10 @@ akb
 akb
 aHf
 aIK
-aIK
-aIK
-aIK
-aIK
+hRF
+hRF
+hRF
+hRF
 aIK
 aIK
 aOh
@@ -90825,7 +90858,7 @@ aJL
 aJL
 aJL
 aJL
-aJL
+tdL
 aKt
 aOi
 aOw
@@ -93370,7 +93403,7 @@ bpi
 bpi
 bpi
 bpj
-aHV
+gOn
 aHV
 aHV
 bqs
@@ -116591,8 +116624,8 @@ cbA
 bYV
 ccF
 ccW
-rFU
-mGu
+cLZ
+iGb
 aag
 abp
 aag
@@ -116842,9 +116875,9 @@ caV
 cbB
 cce
 ccF
-gTH
-mbK
-mGu
+ety
+kOa
+iGb
 aag
 aag
 aag
@@ -117095,8 +117128,8 @@ cbC
 ccf
 ccG
 ccW
-mbK
-mGu
+kOa
+iGb
 aag
 aag
 cat
