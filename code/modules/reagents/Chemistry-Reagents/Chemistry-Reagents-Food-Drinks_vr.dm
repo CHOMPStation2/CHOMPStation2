@@ -92,7 +92,7 @@
 			H.feral -= removed * 3 // should calm them down quick, provided they're actually in a state to STAY calm.
 			if (H.feral <=0) //check if they're unferalled
 				H.feral = 0
-				H << "<span class='info'>Your mind starts to clear, soothed into a state of clarity as your senses return.</span>"
+				to_chat(H, "<span class='info'>Your mind starts to clear, soothed into a state of clarity as your senses return.</span>")
 				log_and_message_admins("is no longer feral.", H)
 
 /datum/reagent/ethanol/monstertamer/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -104,10 +104,8 @@
 			M.nutrition += (alt_nutriment_factor * removed)
 
 
-/* Yawnstation edit start - Removes gnome sounds on ingestion.
 /datum/reagent/nutriment/magicdust/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	playsound(M.loc, 'sound/items/hooh.ogg', 50, 1, -1)
 	if(prob(5))
 		to_chat(M, "<span class='warning'>You feel like you've been gnomed...</span>")
- Yawnstation edit end. */

@@ -28,6 +28,7 @@
 	var/powerCoefficient = 12.5
 	var/list/crystals = list()
 	var/obj/item/device/gps/inserted_gps
+	var/overmap_range = 3
 
 /obj/machinery/computer/telescience/Destroy()
 	eject()
@@ -38,7 +39,7 @@
 
 /obj/machinery/computer/telescience/examine(mob/user)
 	..()
-	user << "There are [crystals.len ? crystals.len : "no"] bluespace crystal\s in the crystal slots."
+	to_chat(user, "There are [crystals.len ? crystals.len : "no"] bluespace crystal\s in the crystal slots.")
 
 /obj/machinery/computer/telescience/Initialize()
 	. = ..()
@@ -49,7 +50,7 @@
 /obj/machinery/computer/telescience/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/ore/bluespace_crystal))
 		if(crystals.len >= max_crystals)
-			user << "<span class='warning'>There are not enough crystal slots.</span>"
+			to_chat(user, "<span class='warning'>There are not enough crystal slots.</span>")
 			return
 		if(!user.unEquip(W))
 			return
@@ -68,7 +69,7 @@
 		if(M.connectable && istype(M.connectable, /obj/machinery/telepad))
 			telepad = M.connectable
 			M.connectable = null
-			user << "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>"
+			to_chat(user, "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>")
 	else
 		return ..()
 
@@ -106,8 +107,17 @@
 			data["tempMsg"] = "Telepad undergoing physical maintenance operations."
 
 		data["sectorOptions"] = list()
-		for(var/z in using_map.player_levels)
-			data["sectorOptions"] += z
+		//We'll base our options on overmap range
+		if(using_map.use_overmap)
+			data["sectorOptions"] += z //Definitely at least our own even if we're not in an overmap sector.
+			var/obj/effect/overmap/visitable/my_sector = map_sectors["[z]"]
+			if(my_sector)
+				for(var/obj/effect/overmap/visitable/S in range(get_turf(my_sector), overmap_range))
+					data["sectorOptions"] |= S.map_z
+		//We'll base our options on player_levels
+		else
+			for(var/z in using_map.player_levels)
+				data["sectorOptions"] += z
 
 		if(last_tele_data)
 			data["lastTeleData"] = list()

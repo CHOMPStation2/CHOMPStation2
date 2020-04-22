@@ -3,8 +3,6 @@
 // Handle footstep sounds
 /mob/living/carbon/human/handle_vorefootstep(var/m_intent, var/turf/T)
 
-	if(shadekin_phasing_check())
-		return
 	if(!config.vorefootstep_volume || !T.vorefootstep_sounds || !T.vorefootstep_sounds.len || !vore_footstep_volume)
 		return
 	// Future Upgrades - Multi species support

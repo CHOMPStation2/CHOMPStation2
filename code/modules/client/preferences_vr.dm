@@ -2,6 +2,7 @@
 datum/preferences
 	var/show_in_directory = 1	//TFF 5/8/19 - show in Character Directory
 	var/sensorpref = 5			//TFF 5/8/19 - set character's suit sensor level
+	var/wingdings = 1 //YW Add
 
 //Why weren't these in game toggles already?
 /client/verb/toggle_eating_noises()

@@ -505,7 +505,6 @@
 	desc = "A top of the line and experimental drink vendor, it uses bluespace technology for storage!"
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state = "deluxe_boozeomat"
-	icon_deny = "deluxe_boozeomat_deny"
 	products = list(/obj/item/weapon/reagent_containers/food/drinks/glass2/square = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/rocks = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/shake = 25,
@@ -574,7 +573,6 @@
 	desc = "A top of the line and experimental food vendor, it uses bluespace technology for storage!"
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state = "deluxe_dining"
-	icon_deny = "deluxe_dining_deny"
 	products = list(/obj/item/weapon/tray = 8,
 		/obj/item/weapon/material/kitchen/utensil/fork = 15,
 		/obj/item/weapon/material/knife/plastic = 15,

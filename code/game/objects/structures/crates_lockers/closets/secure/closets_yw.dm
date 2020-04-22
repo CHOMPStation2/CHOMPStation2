@@ -1,6 +1,6 @@
 /obj/structure/closet/secure_closet/blueshield
 	name = "blueshield's locker"
-	req_access = list(access_teleporter)
+	req_access = list(access_blueshield)
 	icon = 'icons/obj/closet_yw.dmi'
 	icon_state = "bssecure1"
 	icon_closed = "bssecure"
