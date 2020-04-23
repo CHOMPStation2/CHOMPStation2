@@ -7705,7 +7705,9 @@
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
 	},
-/obj/machinery/door/airlock/maintenance/medical,
+/obj/machinery/door/airlock/maintenance/medical{
+	req_one_access = list(5,52,64)
+	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11165,7 +11167,8 @@
 /obj/machinery/door/airlock/glass_external/public{
 	frequency = 1379;
 	id_tag = "SecurityPost_Exit_Interior";
-	locked = 1
+	locked = 1;
+	req_one_access = list(1,52)
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -11177,7 +11180,7 @@
 	master_tag = "SecurityPost_Exit";
 	pixel_x = 6;
 	pixel_y = -26;
-	req_one_access = list(1)
+	req_one_access = list(1,52)
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/outpost)
@@ -11215,12 +11218,13 @@
 	master_tag = "SecurityPost_Exit";
 	pixel_x = 6;
 	pixel_y = -26;
-	req_one_access = list(1)
+	req_one_access = newlist()
 	},
 /obj/machinery/door/airlock/glass_external/freezable{
 	frequency = 1379;
 	id_tag = "SecurityPost_Exit_Exterior";
-	locked = 1
+	locked = 1;
+	req_one_access = newlist()
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/security/outpost)
@@ -11791,6 +11795,7 @@
 	name = "Security Post Exit Controller";
 	pixel_x = 6;
 	pixel_y = -26;
+	req_one_access = list(1,52);
 	tag_exterior_door = "SecurityPost_Exit_Exterior";
 	tag_interior_door = "SecurityPost_Exit_Interior"
 	},
@@ -23491,11 +23496,10 @@
 	id_tag = "Security_exit_exterior";
 	locked = 1
 	},
-/obj/machinery/access_button{
+/obj/machinery/access_button/airlock_exterior{
 	master_tag = "Security_exit_control";
-	pixel_x = -6;
-	pixel_y = -25;
-	req_one_access = list(1)
+	pixel_x = 7;
+	pixel_y = 25
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/security/airlock)
@@ -26513,13 +26517,14 @@
 /obj/machinery/door/airlock/glass_external/public{
 	frequency = 1379;
 	id_tag = "Security_exit_interior";
-	locked = 1
+	locked = 1;
+	req_one_access = list(1,52)
 	},
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "Security_exit_control";
 	pixel_x = -6;
 	pixel_y = -25;
-	req_one_access = list(1)
+	req_one_access = list(1,52)
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -29349,15 +29354,6 @@
 /obj/item/ammo_magazine/m762,
 /turf/simulated/floor/tiled/red,
 /area/security/tactical)
-"bcH" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/flasher/portable,
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/turf/simulated/floor/tiled/red,
-/area/security/armoury)
 "bcI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/flasher/portable,
@@ -29679,6 +29675,10 @@
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
 	},
 /turf/simulated/floor/plating,
 /area/security/brig)
@@ -30075,8 +30075,6 @@
 	hacked = 1;
 	name = "unlocked autolathe"
 	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "bdJ" = (
@@ -31257,10 +31255,10 @@
 	req_access = list(5)
 	},
 /obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/void/medical,
 /obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/void/medical,
 /obj/item/weapon/tank/oxygen,
+/obj/item/clothing/suit/space/void/medical/emt,
+/obj/item/clothing/head/helmet/space/void/medical/emt,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
 "bfJ" = (
@@ -34024,6 +34022,7 @@
 	name = "Security Exit Controller";
 	pixel_x = -5;
 	pixel_y = -25;
+	req_one_access = list(1,52);
 	tag_exterior_door = "Security_exit_exterior";
 	tag_interior_door = "Security_exit_interior"
 	},
@@ -41320,6 +41319,7 @@
 	name = "Engineering Port Exit Controller";
 	pixel_x = -6;
 	pixel_y = 25;
+	req_one_access = list(10,24,52);
 	tag_exterior_door = "Engineering_exit_exterior";
 	tag_interior_door = "Engineering_exit_interior"
 	},
@@ -42128,7 +42128,7 @@
 	master_tag = "Engineering_exit_control";
 	pixel_x = -6;
 	pixel_y = -25;
-	req_one_access = list(11,24)
+	req_one_access = newlist()
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/engineering/hallway)
@@ -42184,7 +42184,7 @@
 	master_tag = "Engineering_exit_control";
 	pixel_x = -6;
 	pixel_y = -25;
-	req_one_access = list(11,24)
+	req_one_access = list(10,24,52)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
@@ -45595,6 +45595,9 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/miningwing)
 "bFe" = (
@@ -46630,7 +46633,8 @@
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "Mining_exit_control";
 	pixel_x = 7;
-	pixel_y = 25
+	pixel_y = 25;
+	req_one_access = list(48,52)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -46664,12 +46668,13 @@
 	frequency = 1379;
 	id_tag = "Mining_exit_exterior";
 	locked = 1;
-	req_access = list(48)
+	req_one_access = newlist()
 	},
 /obj/machinery/access_button/airlock_exterior{
 	master_tag = "Mining_exit_control";
 	pixel_x = 7;
-	pixel_y = 25
+	pixel_y = 25;
+	req_one_access = newlist()
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/quartermaster/miningwing)
@@ -46689,6 +46694,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/explorer_meeting)
 "bGA" = (
@@ -47503,6 +47509,7 @@
 	name = "Mining Exit Controller";
 	pixel_x = 25;
 	pixel_y = -25;
+	req_one_access = list(48,52);
 	tag_exterior_door = "Mining_exit_exterior";
 	tag_interior_door = "Mining_exit_interior"
 	},
@@ -47524,6 +47531,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/quartermaster/miningwing)
 "bHW" = (
@@ -48504,26 +48512,18 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "bJr" = (
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/explorer,
 /obj/effect/floor_decal/steeldecal/steel_decals9,
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner_oldtile/purple{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner_oldtile/purple{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner_oldtile/purple{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "bJs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -49410,6 +49410,7 @@
 	name = "Engineering Starboard Exit Controller";
 	pixel_x = 25;
 	pixel_y = -25;
+	req_one_access = list(10,24,52);
 	tag_exterior_door = "eng_starboard_exterior";
 	tag_interior_door = "eng_starboard_interior"
 	},
@@ -50136,7 +50137,8 @@
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "eng_starboard_airlock";
 	pixel_x = 25;
-	pixel_y = -5
+	pixel_y = -5;
+	req_one_access = list(10,24,52)
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_airlock)
@@ -51300,6 +51302,9 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
 	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bOo" = (
@@ -51314,10 +51319,7 @@
 	},
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/void/atmos,
-/obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/atmos,
-/obj/item/clothing/mask/breath,
 /obj/item/clothing/head/helmet/space/void/atmos,
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -51325,6 +51327,10 @@
 	},
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
@@ -51338,13 +51344,6 @@
 	name = "Atmospherics Hardsuits";
 	req_access = list(24)
 	},
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/void/atmos,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/void/atmos,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/void/atmos,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -51355,6 +51354,10 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
 	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/atmos,
+/obj/item/clothing/head/helmet/space/void/atmos,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bOq" = (
@@ -52379,6 +52382,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/excursion_dock)
 "bQs" = (
@@ -53303,39 +53307,35 @@
 "bSd" = (
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/void/engineering,
 /obj/structure/table/rack{
 	dir = 8;
 	layer = 2.6
 	},
-/obj/item/clothing/suit/space/void/engineering,
 /obj/machinery/door/window/northleft{
 	name = "Engineering Hardsuits";
 	req_access = list(11)
 	},
-/obj/item/clothing/head/helmet/space/void/engineering,
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
 	},
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/corner/yellow/full,
+/obj/item/clothing/suit/space/void/engineering/hazmat,
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bSe" = (
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/void/engineering,
 /obj/structure/table/rack{
 	dir = 8;
 	layer = 2.6
 	},
-/obj/item/clothing/suit/space/void/engineering,
 /obj/machinery/door/window/northright{
 	name = "Engineering Hardsuits";
 	req_access = list(11)
 	},
-/obj/item/clothing/head/helmet/space/void/engineering,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -53343,6 +53343,8 @@
 /obj/effect/floor_decal/corner/yellow{
 	dir = 10
 	},
+/obj/item/clothing/suit/space/void/engineering/construction,
+/obj/item/clothing/head/helmet/space/void/engineering/construction,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bSf" = (
@@ -56232,8 +56234,12 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "bXK" = (
@@ -56242,12 +56248,6 @@
 	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -57306,20 +57306,18 @@
 /turf/simulated/floor/tiled,
 /area/teleporter)
 "bZI" = (
-/obj/effect/floor_decal/steeldecal/steel_decals9,
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/monotile,
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/explorer,
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "bZJ" = (
 /obj/machinery/photocopier,
@@ -57329,7 +57327,12 @@
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/monotile,
+/obj/structure/closet/secure_closet/explorer,
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "bZL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -58918,52 +58921,30 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
 "ccE" = (
-/obj/structure/closet/secure_closet/explorer,
-/obj/effect/floor_decal/steeldecal/steel_decals9,
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 8
-	},
-/obj/effect/floor_decal/corner_oldtile/purple{
-	dir = 1
 	},
 /obj/effect/floor_decal/corner_oldtile/purple,
-/turf/simulated/floor/tiled/monotile,
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "ccF" = (
-/obj/structure/closet/secure_closet/explorer,
-/obj/effect/floor_decal/steeldecal/steel_decals9,
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner_oldtile/purple,
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/monotile,
+/obj/effect/floor_decal/corner_oldtile/purple,
+/turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "ccG" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
-/obj/machinery/disposal,
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/cryogaia/station/explorer_prep)
@@ -58975,6 +58956,10 @@
 	},
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 8
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -58992,6 +58977,12 @@
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 8
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "ccK" = (
@@ -59002,6 +58993,9 @@
 	},
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
@@ -59126,19 +59120,11 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
 "ccW" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 4
+	dir = 1;
+	health = 1e+006
 	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "ccX" = (
 /obj/machinery/door/window/brigdoor/northright{
@@ -59248,10 +59234,9 @@
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/tank/oxygen,
 /obj/item/device/suit_cooling_unit,
-/obj/item/clothing/head/helmet/space/void/pilot,
 /obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/void/pilot,
-/obj/item/clothing/head/helmet/space/void/pilot,
+/obj/item/clothing/suit/space/void/pilot/alt,
+/obj/item/clothing/head/helmet/space/void/pilot/alt,
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "cdm" = (
@@ -63000,18 +62985,23 @@
 "clb" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/heavyduty{
-	icon_state = "2-8"
+	d2 = 8;
+	icon_state = "0-8"
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
+/obj/structure/cable{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "clc" = (
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
 	pixel_x = 28
 	},
-/obj/structure/cable/heavyduty,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
+/obj/structure/cable,
+/turf/simulated/floor/plating,
 /area/borealis2/outdoors/grounds/traderpad)
 "cld" = (
 /turf/simulated/floor/tiled,
@@ -63101,6 +63091,10 @@
 /obj/structure/sign/directions/security,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
+"cLZ" = (
+/obj/machinery/suit_cycler/medical,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "dDd" = (
 /obj/structure/sign/directions/science,
 /turf/simulated/wall/r_wall,
@@ -63112,6 +63106,13 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/substation/civilian)
+"ety" = (
+/obj/machinery/door/window/brigdoor/northright{
+	req_access = list();
+	req_one_access = list(5)
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "eQA" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -63122,10 +63123,53 @@
 /obj/structure/sign/directions/science,
 /turf/simulated/wall,
 /area/storage/primary)
+"gOn" = (
+/obj/structure/table/standard,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/turf/simulated/floor/tiled/dark,
+/area/security/armoury)
 "gQF" = (
 /obj/machinery/suit_cycler/captain,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
+"hRF" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/shutters{
+	dir = 8;
+	id = "secpilotoffice";
+	layer = 3.1;
+	name = "Office Shutters"
+	},
+/turf/simulated/floor/plating,
+/area/security/airlock)
+"iGb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/cryogaia/station/explorer_prep)
+"kOa" = (
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/shoes/magboots,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/oxygen,
+/obj/item/clothing/suit/space/void/medical,
+/obj/item/clothing/head/helmet/space/void/medical,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "lAq" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -63142,6 +63186,13 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
+"mjH" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "mBp" = (
 /obj/structure/table/marble,
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -63167,6 +63218,12 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
+"ovS" = (
+/obj/machinery/door/airlock/glass_external/freezable{
+	req_access = list(48)
+	},
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "oRX" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -63235,10 +63292,29 @@
 /obj/structure/sign/directions/engineering,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
+"tdL" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "secpilotoffice";
+	name = "Office Shutters";
+	pixel_x = -26;
+	pixel_y = 0;
+	req_access = list(67)
+	},
+/turf/simulated/floor/plating,
+/area/security/vacantoffice)
 "ugG" = (
 /obj/effect/shuttle_landmark/automatic,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
+"wLk" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "ylY" = (
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engine Gas Storage"
@@ -78729,10 +78805,10 @@ aag
 aag
 aag
 aag
-aag
-bNw
-aag
-aag
+bLF
+wLk
+bLF
+bLF
 aag
 aag
 aag
@@ -78980,11 +79056,11 @@ aag
 aag
 aag
 aag
-aag
-aag
+aaY
+ovS
 clb
 clc
-aag
+bLF
 aag
 aag
 aag
@@ -79232,8 +79308,8 @@ aag
 aag
 aag
 aag
-aag
-aag
+mjH
+bLF
 bLF
 bLF
 bLF
@@ -79484,7 +79560,7 @@ aag
 aag
 aag
 aag
-aag
+mjH
 aag
 bLF
 bMZ
@@ -79736,7 +79812,7 @@ aag
 bsy
 aag
 aag
-aag
+mjH
 aag
 bLF
 bNa
@@ -79988,7 +80064,7 @@ aHb
 aHb
 aHb
 aHb
-aHb
+buX
 aHb
 bLG
 bNb
@@ -90526,10 +90602,10 @@ akb
 akb
 aHf
 aIK
-aIK
-aIK
-aIK
-aIK
+hRF
+hRF
+hRF
+hRF
 aIK
 aIK
 aOh
@@ -90782,7 +90858,7 @@ aJL
 aJL
 aJL
 aJL
-aJL
+tdL
 aKt
 aOi
 aOw
@@ -91564,8 +91640,8 @@ aHV
 aHV
 aHV
 aHV
-bhx
-bhx
+aHV
+aHV
 bro
 bsz
 btU
@@ -93327,7 +93403,7 @@ bpi
 bpi
 bpi
 bpj
-aHV
+gOn
 aHV
 aHV
 bqs
@@ -93579,8 +93655,8 @@ aHV
 aUs
 aLV
 bot
-bcH
-bcH
+bcI
+bcI
 aHV
 bru
 bsG
@@ -116296,8 +116372,8 @@ cau
 cau
 ccE
 bYT
-aag
-aag
+bYT
+bYT
 aag
 aag
 aag
@@ -116548,8 +116624,8 @@ cbA
 bYV
 ccF
 ccW
-aag
-aag
+cLZ
+iGb
 aag
 abp
 aag
@@ -116799,9 +116875,9 @@ caV
 cbB
 cce
 ccF
-ccW
-aag
-aag
+ety
+kOa
+iGb
 aag
 aag
 aag
@@ -117052,8 +117128,8 @@ cbC
 ccf
 ccG
 ccW
-aag
-aag
+kOa
+iGb
 aag
 aag
 cat

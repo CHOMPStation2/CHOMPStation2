@@ -42,8 +42,11 @@
 
 /area/borealis2/outdoors/grounds/power
 	name = "\The Exterior Powerline"
+
 /area/borealis2/outdoors/grounds/traderpad
 	name = "\improper Cryogaia Commerce Pad"
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "landingpad"
 
 /area/borealis2/outdoors/grounds/entrance
 	name = "\improper Cryogaia Compound Gate"
