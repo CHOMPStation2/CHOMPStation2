@@ -171,7 +171,7 @@
 	icon_state = "tele0"
 	dir = 4
 	var/accurate = 0
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 2000
 	circuit = /obj/item/weapon/circuitboard/teleporter_hub
@@ -209,6 +209,14 @@
 			O.show_message("<span class='warning'>Failure: Cannot authenticate locked on coordinates. Please reinstate coordinate matrix.</span>")
 		return
 	if(istype(M, /atom/movable))
+		//VOREStation Addition Start: Prevent taurriding abuse
+		if(istype(M, /mob/living))
+			var/mob/living/L = M
+			if(LAZYLEN(L.buckled_mobs))
+				var/datum/riding/R = L.riding_datum
+				for(var/rider in L.buckled_mobs)
+					R.force_dismount(rider)
+		//VOREStation Addition End: Prevent taurriding abuse
 		if(prob(5) && !accurate) //oh dear a problem, put em in deep space
 			do_teleport(M, locate(rand((2*TRANSITIONEDGE), world.maxx - (2*TRANSITIONEDGE)), rand((2*TRANSITIONEDGE), world.maxy - (2*TRANSITIONEDGE)), 3), 2)
 		else
@@ -238,7 +246,7 @@
 	if(istype(M, /mob/living))
 		var/mob/living/MM = M
 		if(MM.check_contents_for(/obj/item/weapon/disk/nuclear))
-			MM << "<span class='warning'>Something you are carrying seems to be unable to pass through the portal. Better drop it if you want to go through.</span>"
+			to_chat(MM, "<span class='warning'>Something you are carrying seems to be unable to pass through the portal. Better drop it if you want to go through.</span>")
 			return
 	var/disky = 0
 	for (var/atom/O in M.contents) //I'm pretty sure this accounts for the maximum amount of container in container stacking. --NeoFite
@@ -265,7 +273,7 @@
 	if(istype(M, /mob/living))
 		var/mob/living/MM = M
 		if(MM.check_contents_for(/obj/item/weapon/storage/backpack/holding))
-			MM << "<span class='warning'>The Bluespace interface on your Bag of Holding interferes with the teleport!</span>"
+			to_chat(MM, "<span class='warning'>The Bluespace interface on your Bag of Holding interferes with the teleport!</span>")
 			precision = rand(1,100)
 	if(istype(M, /obj/item/weapon/storage/backpack/holding))
 		precision = rand(1,100)
@@ -319,7 +327,7 @@
 	dir = 4
 	var/active = 0
 	var/engaged = 0
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 2000
 	circuit = /obj/item/weapon/circuitboard/teleporter_station
@@ -356,8 +364,8 @@
 	if(com)
 		com.icon_state = "tele1"
 		use_power(5000)
-		update_use_power(2)
-		com.update_use_power(2)
+		update_use_power(USE_POWER_ACTIVE)
+		com.update_use_power(USE_POWER_ACTIVE)
 		for(var/mob/O in hearers(src, null))
 			O.show_message("<span class='notice'>Teleporter engaged!</span>", 2)
 	add_fingerprint(usr)
@@ -371,8 +379,8 @@
 	if(com)
 		com.icon_state = "tele0"
 		com.accurate = 0
-		com.update_use_power(1)
-		update_use_power(1)
+		com.update_use_power(USE_POWER_IDLE)
+		update_use_power(USE_POWER_IDLE)
 		for(var/mob/O in hearers(src, null))
 			O.show_message("<span class='notice'>Teleporter disengaged!</span>", 2)
 	add_fingerprint(usr)

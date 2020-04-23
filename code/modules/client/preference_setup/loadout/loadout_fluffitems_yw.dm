@@ -241,6 +241,15 @@
 	ckeywhitelist = list("championfire")
 	character_name = list("Kita")
 
+//codavanistok
+//Coda Vanistok // (Yes, I'm aware they're the same. Yes, this is correct.)
+/datum/gear/fluff/coda_implant
+	path = /obj/item/weapon/implanter/fluff/coda
+	display_name = "Locked size implant"
+	description = "It seems to be locked to two settings."
+	ckeywhitelist = list("codavanistok")
+	character_name = list("Coda Vanistok")
+
 //  D CKEYS
 
 //dameonowen
@@ -742,12 +751,11 @@
 	allowed_roles = list("Explorer", "Pathfinder")
 
 /datum/gear/fluff/mocha_cloak
-	path = /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
-	display_name = "Warden Cloak"
-	description = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
-	ckeywhitelist = list("mocatheporg1")
-	character_name = list("Mocha")
-	allowed_roles = list("Warden")
+    path = /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
+    display_name = "Elaborate Cloak"
+    description = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
+    ckeywhitelist = list("mocatheporg1")
+    character_name = list("Mocha")
 
 //  N CKEYS
 //NESgamer190
@@ -802,7 +810,7 @@
 	display_name = "Heart Collar"
 	description = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Stellar and Reyna close together, paws locked and facing the picture slightly sideways with beaming smiles."
 	ckeywhitelist = list("risingstarslash")
-	character_name = list("Stellar Wolf")
+	character_name = list("Monika Wolfe")
 
 //radiantflash
 //Vasharr Zahirn
@@ -849,6 +857,15 @@
 	ckeywhitelist = list("roguenoob")
 	character_name = list("Basir Fahim")
 
+//rouwren
+//Rin Deimos
+/datum/gear/fluff/rin_deimos_1
+	path = /obj/item/clothing/accessory/medal/fluff/rindeimos
+	display_name = "Broken Life Crystal"
+	description = "The broken life crystal doesn't do anything, except remind you of loss."
+	ckeywhitelist = list("rouwren")
+	character_name = list("Rin Deimos")
+
 //  S CKEYS
 //snakewitharocketlauncher
 //Alex Wolf
@@ -876,6 +893,12 @@
 	character_name = list("Aroozee Daarvoleast-Clark")
 	allowed_roles = list("Head of Security")
 
+/datum/gear/fluff/aroozee_valhollide_ring
+	path = /obj/item/clothing/accessory/collar/fluff/aroozee_valhollide_ring
+	display_name = "Aroozee valhollide ring"
+	description = "A ring made of valhollide."
+	ckeywhitelist = list("splintergp")
+	character_name = list("Aroozee Daarvoleast-Clark")
 
 
 //  T CKEYS

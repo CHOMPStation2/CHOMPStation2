@@ -9,7 +9,7 @@
 	power_channel = ENVIRON
 	var/frequency = 0
 	var/id
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 15
 
 /obj/machinery/meter/Initialize()
@@ -67,7 +67,7 @@
 
 		var/datum/signal/signal = new
 		signal.source = src
-		signal.transmission_method = 1
+		signal.transmission_method = TRANSMISSION_RADIO
 		signal.data = list(
 			"tag" = id,
 			"device" = "AM",
@@ -94,7 +94,7 @@
 	else
 		t += "The connect error light is blinking."
 
-	user << t
+	to_chat(user,t)
 
 /obj/machinery/meter/Click()
 

@@ -28,7 +28,7 @@
 	lifespan, but due to their lust for violence, only a handful have ever survived beyond the age of 80, such as the infamous and \
 	legendary General Rain Silves who is claimed to have lived to 5000."
 
-	wikilink="https://www.yawn.ocry.com/Sergal"
+	wikilink="https://yawn.izac.live/Sergal"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
 
@@ -92,7 +92,7 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-	wikilink="https://www.yawn.ocry.com/Akula"
+	wikilink="https://yawn.izac.live/Akula"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
@@ -136,7 +136,7 @@
 	over and over again. Consequently, they struggle to make copies of same things. Both genders have a voice that echoes a lot. Their natural \
 	tone oscillates between tenor and soprano. They are excessively noisy when they quarrel in their native language."
 
-	wikilink="https://www.yawn.ocry.com/Nevrean"
+	wikilink="https://yawn.izac.live/Nevrean"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
@@ -178,10 +178,9 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-	wikilink="https://www.yawn.ocry.com/Zorren"
+	wikilink="https://yawn.izac.live/Zorren"
 
-	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren,
-						/datum/category_item/catalogue/fauna/highzorren)
+	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 
 	//primitive_form = "" //We don't have fox-monkey sprites.
 
@@ -198,52 +197,6 @@
 		"Your overheated skin itches."
 		)
 	inherent_verbs = list(/mob/living/proc/shred_limb)
-
-/datum/species/fl_zorren
-	name = SPECIES_ZORREN_FLAT
-	name_plural = "Zorren"
-	icobase = 'icons/mob/human_races/r_fennec_vr.dmi'
-	deform = 'icons/mob/human_races/r_def_fennec.dmi'
-	tail = "tail"
-	icobase_tail = 1
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
-	num_alternate_languages = 3
-	secondary_langs = list(LANGUAGE_TERMINUS)
-	name_language = LANGUAGE_TERMINUS
-	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
-
-	min_age = 18
-	max_age = 110
-
-	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
-	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that is \
-	where most of their settlements are located. The Flatland Zorren are somewhat tribal and shamanistic as they have only recently started to be \
-	hired by the Trans-Stellar Corporations. The other variety of Zorren are known as Highland Zorren as they frequently settle in hilly and/or \
-	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
-	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they \
-	seem to have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-	wikilink="https://www.yawn.ocry.com/Zorren"
-
-	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren,
-						/datum/category_item/catalogue/fauna/flatzorren)
-
-	//primitive_form = "" //We don't have fennec-monkey sprites.
-	spawn_flags = SPECIES_CAN_JOIN
-	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-
-	flesh_color = "#AFA59E"
-	base_color = "#333333"
-	blood_color = "#240bc4"
-	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/shred_limb)
-
-	heat_discomfort_strings = list(
-		"Your fur prickles in the heat.",
-		"You feel uncomfortably warm.",
-		"Your overheated skin itches."
-		)
-
 
 /datum/species/vulpkanin
 	name = SPECIES_VULPKANIN
@@ -270,7 +223,7 @@
 	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
     which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
-	wikilink="https://www.yawn.ocry.com/Vulpkanin"
+	wikilink="https://yawn.izac.live/Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
@@ -285,45 +238,6 @@
 	min_age = 18
 	max_age = 110
 
-/datum/species/xenohybrid
-	name = SPECIES_XENOHYBRID
-	name_plural = "Xenomorphs"
-	icobase = 'icons/mob/human_races/r_xenomorph.dmi'
-	deform = 'icons/mob/human_races/r_def_xenomorph.dmi'
-	tail = "tail"
-	icobase_tail = 1
-	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
-	darksight = 4 //Better hunters in the dark.
-	hunger_factor = 0.1 //In exchange, they get hungry a tad faster.
-	num_alternate_languages = 3
-
-	min_age = 18
-	max_age = 110
-
-	blurb = "Xenomorphs hybrids are a mixture of xenomorph DNA and some other humanoid species. \
-	Xenomorph hyrids mostly have had had their natural aggression removed due to the gene modification process \
-	although there are some exceptions, such as when they are harmed. Most xenomorph hybrids are female, due to their natural xenomorph genes, \
-	but there are multiple exceptions. All xenomorph hybrids have had their ability to lay eggs containing facehuggers \
-	removed if they had the ability to, although hybrids that previously contained this ability is extremely rare."
-	catalogue_data = list(/datum/category_item/catalogue/fauna/xenohybrid)
-	wikilink="https://www.yawn.ocry.com/Xenomorph-Hybrid"
-
-	//primitive_form = "" //None for these guys
-
-	spawn_flags = SPECIES_CAN_JOIN
-	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-
-	blood_color = "#12ff12"
-	flesh_color = "#201730"
-	base_color = "#201730"
-
-	heat_discomfort_strings = list(
-		"Your chitin feels extremely warm.",
-		"You feel uncomfortably warm.",
-		"Your chitin feels hot."
-		)
-	inherent_verbs = list(/mob/living/proc/shred_limb)
-
 /datum/species/unathi
 	spawn_flags = SPECIES_CAN_JOIN //Species_can_join is the only spawn flag all the races get, so that none of them will be whitelist only if whitelist is enabled.
 	icobase = 'icons/mob/human_races/r_lizard_vr.dmi'
@@ -334,7 +248,7 @@
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
 	descriptors = list()
-	wikilink="https://www.yawn.ocry.com/Unathi"
+	wikilink="https://yawn.izac.live/Unathi"
 
 /datum/species/tajaran
 	spawn_flags = SPECIES_CAN_JOIN
@@ -346,7 +260,8 @@
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
 	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
-	wikilink="https://www.yawn.ocry.com/Tajaran"
+	wikilink="https://yawn.izac.live/Tajaran"
+	agility = 90
 
 /datum/species/skrell
 	spawn_flags = SPECIES_CAN_JOIN
@@ -356,14 +271,14 @@
 	min_age = 18
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
-	wikilink="https://www.yawn.ocry.com/Skrell"
+	wikilink="https://yawn.izac.live/Skrell"
 
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
 	gluttonous = 0
 	descriptors = list()
-	wikilink="https://www.yawn.ocry.com/Zaddat"
+	wikilink="https://yawn.izac.live/Zaddat"
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
@@ -376,7 +291,7 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
-	wikilink="https://www.yawn.ocry.com/Diona"
+	wikilink="https://yawn.izac.live/Diona"
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
@@ -390,7 +305,8 @@
 	swap_flags = ~HEAVY
 	gluttonous = 0
 	descriptors = list()
-	wikilink="https://www.yawn.ocry.com/Teshari"
+	wikilink="https://yawn.izac.live/Teshari"
+	agility = 90
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/sonar_ping,
@@ -401,7 +317,7 @@
 
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-	wikilink="https://www.yawn.ocry.com/Promethean"
+	wikilink="https://yawn.izac.live/Promethean"
 
 /datum/species/human
 	color_mult = 1
@@ -410,7 +326,7 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 	min_age = 18
 	base_color = "#EECEB3"
-	wikilink="https://www.yawn.ocry.com/Human"
+	wikilink="https://yawn.izac.live/Human"
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -425,7 +341,7 @@
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
-	wikilink="https://www.yawn.ocry.com/Vox"
+	wikilink="https://yawn.izac.live/Vox"
 
 datum/species/harpy
 	name = SPECIES_RAPALA
@@ -451,7 +367,7 @@ datum/species/harpy
 	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
-	wikilink="https://www.yawn.ocry.com/Rapala"
+	wikilink="https://yawn.izac.live/Rapala"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/rapala)
 
@@ -575,3 +491,75 @@ datum/species/harpy
 
 /datum/species/shadekin/can_breathe_water()
 	return TRUE	//they dont quite breathe
+
+//These species are not really species but are just there for custom species selection
+
+/datum/species/fl_zorren
+	name = SPECIES_FENNEC
+	name_plural = "Fennec"
+	icobase = 'icons/mob/human_races/r_fennec_vr.dmi'
+	deform = 'icons/mob/human_races/r_def_fennec.dmi'
+	tail = "tail"
+	icobase_tail = 1
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
+	num_alternate_languages = 3
+	secondary_langs = list(LANGUAGE_TERMINUS)
+	name_language = LANGUAGE_TERMINUS
+	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
+
+	min_age = 18
+	max_age = 80
+
+	//primitive_form = "" //We don't have fennec-monkey sprites.
+	spawn_flags = SPECIES_IS_RESTRICTED
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+
+	flesh_color = "#AFA59E"
+	base_color = "#333333"
+	blood_color = "#240bc4"
+	color_mult = 1
+	inherent_verbs = list(/mob/living/proc/shred_limb)
+
+	heat_discomfort_strings = list(
+		"Your fur prickles in the heat.",
+		"You feel uncomfortably warm.",
+		"Your overheated skin itches."
+		)
+
+/datum/species/xenohybrid
+	name = SPECIES_XENOHYBRID
+	name_plural = "Xenomorphs"
+	icobase = 'icons/mob/human_races/r_xenomorph.dmi'
+	deform = 'icons/mob/human_races/r_def_xenomorph.dmi'
+	tail = "tail"
+	icobase_tail = 1
+	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
+	darksight = 4 //Better hunters in the dark.
+	hunger_factor = 0.1 //In exchange, they get hungry a tad faster.
+	num_alternate_languages = 2
+
+	min_age = 18
+	max_age = 80
+
+	blurb = "Xenomorphs hybrids are a mixture of xenomorph DNA and some other humanoid species. \
+	Xenomorph hyrids mostly have had had their natural aggression removed due to the gene modification process \
+	although there are some exceptions, such as when they are harmed. Most xenomorph hybrids are female, due to their natural xenomorph genes, \
+	but there are multiple exceptions. All xenomorph hybrids have had their ability to lay eggs containing facehuggers \
+	removed if they had the ability to, although hybrids that previously contained this ability is extremely rare."
+	// No wiki page for xenohybrids at present
+
+	//primitive_form = "" //None for these guys
+
+	spawn_flags = SPECIES_IS_RESTRICTED
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+
+	blood_color = "#12ff12"
+	flesh_color = "#201730"
+	base_color = "#201730"
+
+	heat_discomfort_strings = list(
+		"Your chitin feels extremely warm.",
+		"You feel uncomfortably warm.",
+		"Your chitin feels hot."
+		)
+	inherent_verbs = list(/mob/living/proc/shred_limb)

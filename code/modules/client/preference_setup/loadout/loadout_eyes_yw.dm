@@ -9,7 +9,7 @@
 	allowed_roles = list("Station Engineer","Chief Engineer","Atmospheric Technician")
 
 /datum/gear/eyes/arglasses/med
-	display_name = "AR-M glasses (Med, S&R)"
+	display_name = "AR-M glasses (Med, SAR)"
 	path = /obj/item/clothing/glasses/omnihud/med
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Search and Rescue")
 

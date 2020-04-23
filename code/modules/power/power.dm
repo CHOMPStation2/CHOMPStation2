@@ -11,7 +11,7 @@
 	icon = 'icons/obj/power.dmi'
 	anchored = 1.0
 	var/datum/powernet/powernet = null
-	use_power = 0
+	use_power = USE_POWER_OFF
 	idle_power_usage = 0
 	active_power_usage = 0
 
@@ -246,7 +246,7 @@
 
 //remove the old powernet and replace it with a new one throughout the network.
 /proc/propagate_network(var/obj/O, var/datum/powernet/PN)
-	//world.log << "propagating new network"
+	//to_world_log("propagating new network")
 	var/list/worklist = list()
 	var/list/found_machines = list()
 	var/index = 1

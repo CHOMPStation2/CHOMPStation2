@@ -43,11 +43,14 @@
 	data["current_camera"] = current_camera ? current_camera.nano_structure() : null
 	data["current_network"] = current_network
 	data["networks"] = network ? network : list()
+	
+	var/map_levels = using_map.get_map_levels(src.z, TRUE)
+	data["map_levels"] = map_levels
+	
 	if(current_network)
-		data["cameras"] = camera_repository.cameras_in_network(current_network)
+		data["cameras"] = camera_repository.cameras_in_network(current_network, map_levels)
 	if(current_camera)
 		switch_to_camera(user, current_camera)
-	data["map_levels"] = using_map.get_map_levels(src.z)
 
 	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
@@ -91,9 +94,6 @@
 		. = ..()
 
 /obj/machinery/computer/security/attack_hand(var/mob/user as mob)
-	if (using_map && !(src.z in using_map.contact_levels))
-		user << "<span class='danger'>Unable to establish a connection:</span> You're too far away from the station!"
-		return
 	if(stat & (NOPOWER|BROKEN))	return
 
 	if(!isAI(user))
@@ -170,7 +170,7 @@
 	src.current_camera = C
 	if(current_camera)
 		current_camera.camera_computers_using_this.Add(src)
-		use_power = 2
+		update_use_power(USE_POWER_ACTIVE)
 		var/mob/living/L = current_camera.loc
 		if(istype(L))
 			L.tracking_initiated()
@@ -182,7 +182,7 @@
 		if(istype(L))
 			L.tracking_cancelled()
 	current_camera = null
-	use_power = 1
+	use_power = USE_POWER_IDLE
 
 //Camera control: mouse.
 /atom/DblClick()

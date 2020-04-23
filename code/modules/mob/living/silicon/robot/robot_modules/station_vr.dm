@@ -419,7 +419,7 @@
 	G.recipes += new/datum/stack_recipe("glass sheet", /obj/item/stack/material/glass, 1, 1, 20)
 	src.modules += G
 
-	R.icon 		 = 'icons/mob/widerobot_yw.dmi'
+	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //YW edit - using yw icon files
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -449,16 +449,16 @@
 	src.modules += new /obj/item/weapon/gripper/research(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
-	src.modules += new /obj/item/weapon/storage/part_replacer(src)
-	src.modules += new /obj/item/weapon/card/robot(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
-	src.modules += new /obj/item/device/robotanalyzer(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/device/multitool(src)
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
+	src.modules += new /obj/item/weapon/storage/part_replacer(src)
+	src.modules += new /obj/item/device/robotanalyzer(src)
+	src.modules += new /obj/item/weapon/card/robot(src)
+	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
+	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -526,20 +526,17 @@
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/device/t_scanner(src)
 	src.modules += new /obj/item/device/analyzer(src)
+	src.modules += new /obj/item/device/geiger(src)
 	src.modules += new /obj/item/taperoll/engineering(src)
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
-	src.modules += new /obj/item/device/pipe_painter(src)
-	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 	src.modules += new /obj/item/weapon/pickaxe(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/weapon/gripper(src)
 	src.modules += new /obj/item/weapon/gripper/circuit(src)
-	src.modules += new /obj/item/device/analyzer(src)
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
-	src.modules += new /obj/item/device/geiger(src)
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
 
@@ -658,10 +655,7 @@
 /obj/item/weapon/robot_module/robot/servicehound
 	name = "service-hound module"
 	sprites = list(
-					"Blackhound" = "k50",
-					"Pinkhound" = "k69",
-					"ServicehoundV2" = "serve2",
-					"ServicehoundV2 Darkmode" = "servedark",
+					"Pinkhound" = "k69"
 					)
 	channels = list("Service" = 1)
 	can_be_pushed = 0
@@ -713,7 +707,7 @@
 	src.modules += B
 */
 
-	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //YW edit - using yw icon files
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16

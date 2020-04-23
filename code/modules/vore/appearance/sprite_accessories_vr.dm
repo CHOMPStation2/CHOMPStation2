@@ -406,6 +406,12 @@
 	color_blend_mode = ICON_MULTIPLY
 	do_colouration = 1
 
+/datum/sprite_accessory/ears/large_dragon
+	name = "Large dragon horns"
+	desc = ""
+	icon_state = "big_liz"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 // Special snowflake ears go below here.
 
@@ -493,6 +499,51 @@
     icon_state = "frosted_tips"
     ckeys_allowed = list("tucker0666")
 
+/datum/sprite_accessory/ears/sylv_pip
+    name = "sylveon ears and ribbons (Pip Shyner)"
+    desc = ""
+    icon_state = "pipears"
+    ckeys_allowed = list("phoaly")
+
+/datum/sprite_accessory/ears/elf_caprine_colorable
+	name = "Caprine horns with pointy ears, colorable"
+	desc = ""
+	icon_state = "elfs"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "caprahorns"
+
+/datum/sprite_accessory/ears/elf_oni_colorable
+	name = "oni horns with pointy ears, colorable"
+	desc = ""
+	icon_state = "elfs"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "oni-h1_c"
+
+/datum/sprite_accessory/ears/elf_demon_colorable
+	name = "Demon horns with pointy ears, colorable"
+	desc = ""
+	icon_state = "elfs"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "demon-horns1_c"
+
+/datum/sprite_accessory/ears/elf_demon_outwards_colorable
+	name = "Demon horns with pointy ears, outwards, colourable"
+	desc = ""
+	icon_state = "elfs"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "demon-horns2"
+
+/datum/sprite_accessory/ears/elf_dragon_colorable
+	name = "Dragon horns with pointy ears, colourable"
+	desc = ""
+	icon_state = "elfs"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "dragon-horns"
 /*
 ////////////////////////////
 /  =--------------------=  /
@@ -660,6 +711,31 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/wing/sepulchre_c_yw
+	name = "demon wings (colorable)"
+	desc = ""
+	icon_state = "sepulchre_wingsc"
+	do_colouration = 1
+
+/datum/sprite_accessory/wing/cyberdragon
+	name = "Cyber dragon wing (colorable)"
+	desc = ""
+	icon_state = "cyberdragon_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/wing/cyberdragon_red
+	name = "Cyber dragon wing (red)"
+	desc = ""
+	icon_state = "cyberdragon_red_s"
+	do_colouration = 0
+
+/datum/sprite_accessory/wing/cyberdoe
+	name = "Cyber doe wing"
+	desc = ""
+	icon_state = "cyberdoe_s"
+	do_colouration = 0
+
 /*
 ////////////////////////////
 /  =--------------------=  /
@@ -684,15 +760,6 @@
 	var/clip_mask_state = null //Icon state to generate clip mask. Clip mask is used to 'clip' off the lower part of clothing such as jumpsuits & full suits.
 
 // Species-unique tails
-
-/datum/sprite_accessory/tail/shadekin_short
-	name = "Shadekin Short Tail, colorable"
-	desc = ""
-	icon_state = "shadekin-short"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	apply_restrictions = TRUE
-	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW)//YW edits
 
 // Everyone tails
 
@@ -1589,9 +1656,34 @@
 	extra_overlay_w = "buggofatfirefly_vass_markings"
 
 /datum/sprite_accessory/tail/tail_smooth
-	name = "Smooth Lizard Tail, Colorable"
+	name = "Smooth Lizard Tail, colorable"
 	desc = ""
 	icon_state = "tail_smooth"
 	ani_state = "tail_smooth_w"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/triplekitsune_colorable
+	name = "Kitsune 3 tails, colorable"
+	desc = ""
+	icon_state = "triplekitsune"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "triplekitsune_tips"
+
+/datum/sprite_accessory/tail/ninekitsune_colorable
+	name = "Kitsune 9 tails, colorable"
+	desc = ""
+	icon_state = "ninekitsune"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "ninekitsune-tips"
+
+/datum/sprite_accessory/tail/shadekin_short
+	name = "Shadekin Short Tail, colorable"
+	desc = ""
+	icon_state = "shadekin-short"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	//apply_restrictions = TRUE
+	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)

@@ -1,246 +1,219 @@
 //////////////////////////////////////////////////////////////
-// Escape shuttle and pods
-/datum/shuttle/ferry/emergency/escape
+// Arrivals shuttle
+/datum/shuttle/autodock/ferry/arrivals/cryogaia
+	name = "Arrivals"
+	location = FERRY_LOCATION_OFFSITE
+	shuttle_area = /area/shuttle/arrival/pre_game
+	landmark_offsite = "arrivals_offsite"
+	landmark_station = "arrivals_station"
+	docking_controller_tag = "arrivals_shuttle"
+
+/obj/effect/shuttle_landmark/premade/arrivals/arrivals_offsite
+	name = "Transit to Station"
+	landmark_tag = "arrivals_offsite"
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/premade/arrivals/arrivals_station
+	name = "NSB Cryogaia"
+	landmark_tag = "arrivals_station"
+	docking_controller = "arrivals_dock"
+
+
+//////////////////////////////////////////////////////////////
+// Escape shuttle
+/datum/shuttle/autodock/ferry/emergency/escape
 	name = "Escape"
-	location = 1 // At offsite
+	location = FERRY_LOCATION_OFFSITE // At offsite
 	warmup_time = 10
-	area_offsite = /area/shuttle/escape/centcom
-	area_station = /area/shuttle/escape/station
-	area_transition = /area/shuttle/escape/transit
 	docking_controller_tag = "escape_shuttle"
-	dock_target_station = "escape_dock"
-	dock_target_offsite = "centcom_dock"
+	shuttle_area = /area/shuttle/escape
+	landmark_offsite = "escape_centcom"
+	landmark_station = "escape_station"
+	landmark_transition = "escape_transit"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
-//////////////////////////////////////////////////////////////
-/datum/shuttle/ferry/escape_pod/large_escape_pod1
-	name = "Large Escape Pod 1"
-	location = 0
-	warmup_time = 0
-	area_station = /area/shuttle/large_escape_pod1/station
-	area_offsite = /area/shuttle/large_escape_pod1/centcom
-	area_transition = /area/shuttle/large_escape_pod1/transit
-	docking_controller_tag = "large_escape_pod_1"
-	dock_target_station = "large_escape_pod_1_berth"
-	dock_target_offsite = "large_escape_pod_1_recovery"
-	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
+/obj/effect/shuttle_landmark/premade/escape/centcom
+	name = "NSC Serenity"
+	landmark_tag = "escape_centcom"
+	docking_controller = "centcom_dock"
+	base_area = /area/space
+	base_turf = /turf/space
 
-//////////////////////////////////////////////////////////////
-/* Removed for the time being
-/datum/shuttle/ferry/escape_pod/large_escape_pod2
-	name = "Large Escape Pod 2"
-	location = 0
-	warmup_time = 0
-	area_station = /area/shuttle/large_escape_pod2/station
-	area_offsite = /area/shuttle/large_escape_pod2/centcom
-	area_transition = /area/shuttle/large_escape_pod2/transit
-	docking_controller_tag = "large_escape_pod_2"
-	dock_target_station = "large_escape_pod_2_berth"
-	dock_target_offsite = "large_escape_pod_2_recovery"
-	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
-*/
+/obj/effect/shuttle_landmark/premade/escape/transit
+	name = "Space"
+	landmark_tag = "escape_transit"
+
+/obj/effect/shuttle_landmark/premade/escape/station
+	name = "NSB Cryogaia"
+	landmark_tag = "escape_station"
+	docking_controller = "escape_dock"
+
 //////////////////////////////////////////////////////////////
 // Supply shuttle
-/datum/shuttle/ferry/supply/cargo
+/datum/shuttle/autodock/ferry/supply/cargo
 	name = "Supply"
-	location = 1
+	location = FERRY_LOCATION_OFFSITE
 	warmup_time = 10
-	area_offsite = /area/supply/dock
-	area_station = /area/supply/station
+	shuttle_area = /area/shuttle/supply
+	landmark_offsite = "supply_centcom"
+	landmark_station = "supply_station"
 	docking_controller_tag = "supply_shuttle"
-	dock_target_station = "cargo_bay"
 	flags = SHUTTLE_FLAGS_PROCESS|SHUTTLE_FLAGS_SUPPLY
+
+/obj/effect/shuttle_landmark/premade/supply/centcom
+	name = "NSC Serenity"
+	landmark_tag = "supply_centcom"
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/premade/supply/station
+	name = "NSB Cryogaia"
+	landmark_tag = "supply_station"
+	docking_controller = "cargo_bay"
 
 //////////////////////////////////////////////////////////////
 // Trade Ship
-/datum/shuttle/ferry/trade
+/datum/shuttle/autodock/ferry/trade
 	name = "Trade"
-	location = 1
+	location = FERRY_LOCATION_OFFSITE
 	warmup_time = 10	//want some warmup time so people can cancel.
-	area_offsite = /area/shuttle/trade/centcom
-	area_station = /area/shuttle/trade/station
+	shuttle_area = /area/shuttle/trade
+	landmark_offsite = "trade_away"
+	landmark_station = "trade_station"
 	docking_controller_tag = "trade_shuttle"
-	dock_target_station = "trade_shuttle_dock_airlock"
-	dock_target_offsite = "trade_shuttle_bay"
 
-//////////////////////////////////////////////////////////////
-// Away Mission Shuttle
-// TODO - Not implemented yet on new map
-/*
-/datum/shuttle/multi_shuttle/awaymission
-	name = "AwayMission"
-	legit = TRUE
-	warmup_time = 8
-	move_time = 60
-	origin = /area/shuttle/awaymission/home
-	interim = /area/shuttle/awaymission/warp
-	start_location = "NSB Adephagia (AM)"
-	destinations = list(
-		"Old Engineering Base (AM)" = /area/shuttle/awaymission/oldengbase
-	)
-	docking_controller_tag = "awaymission_shuttle"
-	destination_dock_targets = list(
-		"NSB Adephagia (AM)" = "d1a2_dock_airlock"
-	)
-	announcer = "Automated Traffic Control"
-	//These seem backwards because they are written from the perspective of the merc and vox ships
-	departure_message = "Attention. The away mission vessel is approaching the colony."
-	arrival_message = "Attention. The away mission vessel is now leaving from the colony."
+/obj/effect/shuttle_landmark/premade/trade/away
+	name = "Deep Space"
+	landmark_tag = "trade_away"
+	docking_controller = "trade_shuttle_bay"
+	base_area = /area/space
+	base_turf = /turf/space
 
+/obj/effect/shuttle_landmark/premade/trade/station
+	name = "NSB Cryogaia"
+	landmark_tag = "trade_station"
+	docking_controller = "trade_shuttle_dock_airlock"
 
-/datum/shuttle/multi_shuttle/awaymission/New()
-	..()
-	var/area/awaym_dest = locate(/area/shuttle/awaymission/away)
-	if(awaym_dest && awaym_dest.contents.len) // Otherwise this is an empty imaginary area
-		destinations["Unknown Location [rand(1000,9999)]"] = awaym_dest
-*/
-
-/*Old Tether shuttles below.
-
-//////////////////////////////////////////////////////////////
-// Tether Shuttle
-/datum/shuttle/ferry/tether_backup/goodluckmcgee
-	name = "Tether Backup"
-	location = 1 // At offsite
-	warmup_time = 5
-	move_time = 45
-	area_offsite = /area/shuttle/tether/surface
-	area_station = /area/shuttle/tether/station
-	area_transition = /area/shuttle/tether/transit
-	crash_areas = list(/area/shuttle/tether/crash1, /area/shuttle/tether/crash2)
-	docking_controller_tag = "tether_shuttle"
-	dock_target_station = "tether_dock_airlock"
-	dock_target_offsite = "tether_pad_airlock"
-
-//////////////////////////////////////////////////////////////
-// Antag Space "Proto Shuttle" Shuttle
-/datum/shuttle/multi_shuttle/protoshuttle
-	name = "Proto"
-	warmup_time = 8
-	move_time = 60
-	origin = /area/shuttle/antag_space/base
-	interim = /area/shuttle/antag_space/transit
-	start_location = "Home Base"
-	destinations = list(
-		"Nearby" = /area/shuttle/antag_space/north,
-		"Docks" =  /area/shuttle/antag_space/docks
-	)
-	docking_controller_tag = "antag_space_shuttle"
-	destination_dock_targets = list("Home Base" = "antag_space_dock")
-
-//////////////////////////////////////////////////////////////
-// Antag Surface "Land Crawler" Shuttle
-/datum/shuttle/multi_shuttle/landcrawler
-	name = "Land Crawler"
-	warmup_time = 8
-	move_time = 60
-	origin = /area/shuttle/antag_ground/base
-	interim = /area/shuttle/antag_ground/transit
-	start_location = "Home Base"
-	destinations = list(
-		"Solar Array" = /area/shuttle/antag_ground/solars,
-		"Mining Outpost" =  /area/shuttle/antag_ground/mining
-	)
-	docking_controller_tag = "antag_ground_shuttle"
-	destination_dock_targets = list("Home Base" = "antag_ground_dock")
-*/
 //////////////////////////////////////////////////////////////
 // Mercenary Shuttle
 // Look into fitting this on the Main map- RadiantFlash
-// Mercenary
-/datum/shuttle/multi_shuttle/mercenary
+/datum/shuttle/autodock/multi/mercenary
 	name = "Mercenary"
 	warmup_time = 0
-	origin = /area/syndicate_station/start
-	interim = /area/syndicate_station/transit
+	shuttle_area = /area/shuttle/mercenary
+	current_location = "mercenary_base"
+	landmark_transition = "mercenary_transit"
 	can_cloak = TRUE
 	cloaked = TRUE
-	start_location = "Mercenary Base"
-	destinations = list(
-		"Northwest of the station" = /area/syndicate_station/northwest,
-		"North of the station" = /area/syndicate_station/north,
-		"Northeast of the station" = /area/syndicate_station/northeast,
-		"Southwest of the station" = /area/syndicate_station/southwest,
-		"South of the station" = /area/syndicate_station/south,
-		"Southeast of the station" = /area/syndicate_station/southeast,
-		)
 	docking_controller_tag = "merc_shuttle"
-	destination_dock_targets = list(
-		"Mercenary Base" = "merc_base",
-		"Arrivals dock" = "nuke_shuttle_dock_airlock",
-		)
 	announcer = "Automated Traffic Control"
-
-/datum/shuttle/multi_shuttle/mercenary/New()
 	arrival_message = "Attention.  A vessel is approaching the colony."
 	departure_message = "Attention.  A vessel is now leaving from the colony."
-	..()
 
+	destination_tags = list(
+		"mercenary_base",
+		"mercenary_station_se",
+		"mercenary_station_sw",
+		"mercenary_station_n",
+		"mercenary_station_s"
+	)
 
-// Heist
-/datum/shuttle/multi_shuttle/skipjack
+/obj/effect/shuttle_landmark/premade/mercenary/base
+	name = "Home Base"
+	landmark_tag = "mercenary_base"
+	docking_controller = "merc_base"
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/premade/mercenary/transit
+	name = "Deep Space"
+	landmark_tag = "mercenary_transit"
+
+/obj/effect/shuttle_landmark/premade/mercenary/station_se
+	name = "NSB Cryogaia (SE)"
+	landmark_tag = "mercenary_station_se"
+
+/obj/effect/shuttle_landmark/premade/mercenary/station_sw
+	name = "NSB Cryogaia (SW)"
+	landmark_tag = "mercenary_station_sw"
+
+/obj/effect/shuttle_landmark/premade/mercenary/station_n
+	name = "NSB Cryogaia (N)"
+	landmark_tag = "mercenary_station_n"
+
+/obj/effect/shuttle_landmark/premade/mercenary/station_s
+	name = "NSB Cryogaia (S)"
+	landmark_tag = "mercenary_station_s"
+
+//////////////////////////////////////////////////////////////
+// Skipjack
+/datum/shuttle/autodock/multi/skipjack
 	name = "Skipjack"
 	warmup_time = 0
-	origin = /area/skipjack_station/start
-	interim = /area/skipjack_station/transit
+	shuttle_area = /area/shuttle/skipjack
+	current_location = "skipjack_base"
+	landmark_transition = "skipjack_transit"
 	can_cloak = TRUE
 	cloaked = TRUE
-	destinations = list(
-		"Northeastern Wilderness" = /area/skipjack_station/northeast_solars,
-		"Northwestern Wilderness" = /area/skipjack_station/northwest_solars,
-		"Southeasten Wilderness Valley" = /area/skipjack_station/southeast_solars,
-		"Southwestern Wilderness" = /area/skipjack_station/southwest_solars,
-		)
 	announcer = "Automated Traffic Control"
-
-/datum/shuttle/multi_shuttle/skipjack/New()
 	arrival_message = "Attention.  Unidentified object approaching the colony."
 	departure_message = "Attention.  Unidentified object exiting local space.  Unidentified object expected to escape Borealis gravity well with current velocity."
-	..()
 
-/datum/shuttle/ferry/multidock/specops/ert
+	destination_tags = list(
+		"skipjack_base",
+		"skipjack_station_ne",
+		"skipjack_station_nw",
+		"skipjack_station_se",
+		"skipjack_station_sw"
+	)
+
+/obj/effect/shuttle_landmark/premade/skipjack/base
+	name = "Home Base"
+	landmark_tag = "skipjack_base"
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/premade/skipjack/transit
+	name = "Deep Space"
+	landmark_tag = "skipjack_transit"
+
+/obj/effect/shuttle_landmark/premade/skipjack/station_ne
+	name = "NSB Cryogaia (NE)"
+	landmark_tag = "skipjack_station_ne"
+
+/obj/effect/shuttle_landmark/premade/skipjack/station_nw
+	name = "NSB Cryogaia (NW)"
+	landmark_tag = "skipjack_station_nw"
+
+/obj/effect/shuttle_landmark/premade/skipjack/station_se
+	name = "NSB Cryogaia (SE)"
+	landmark_tag = "skipjack_station_se"
+
+/obj/effect/shuttle_landmark/premade/skipjack/station_sw
+	name = "NSB Cryogaia (SW)"
+	landmark_tag = "skipjack_station_sw"
+
+//////////////////////////////////////////////////////////////
+// ERT Shuttle
+/datum/shuttle/autodock/ferry/specialops
 	name = "Special Operations"
-	location = 0
+	location = FERRY_LOCATION_STATION
 	warmup_time = 10
-	area_offsite = /area/shuttle/specops/station	//centcom is the home station, the Exodus is offsite
-	area_station = /area/shuttle/specops/centcom
+	shuttle_area = /area/shuttle/specops
+	landmark_station = "specops_cc"
+	landmark_offsite = "specops_station"
 	docking_controller_tag = "specops_shuttle_port"
-	docking_controller_tag_station = "specops_shuttle_port"
-	docking_controller_tag_offsite = "specops_shuttle_fore"
-	dock_target_station = "specops_centcom_dock"
-	dock_target_offsite = "specops_dock_airlock"
 
-//////////////////////////////////////////////////////////////
-// RogueMiner "Belter: Shuttle
-// TODO - Not implemented yet on new map
-/*
-/datum/shuttle/ferry/belter
-	name = "Belter"
-	location = 0
-	warmup_time = 6
-	move_time = 60
-	area_station = /area/shuttle/belter/station
-	area_offsite = /area/shuttle/belter/belt/zone1
-	area_transition = /area/shuttle/belter/transit
-	docking_controller_tag = "belter_docking"
-	dock_target_station = "belter_nodocking" //Fake tags to prevent the shuttle from opening doors.
-	dock_target_offsite = "belter_nodocking"
+/obj/effect/shuttle_landmark/premade/specops/centcom
+	name = "NSC Serenity"
+	landmark_tag = "specops_cc"
+	docking_controller = "specops_centcom_dock"
+	base_area = /area/space
+	base_turf = /turf/space
 
-/datum/shuttle/ferry/belter/New()
-	move_time = move_time + rand(10, 40)
-	..()
-*/
-/* Likely not going to be in use atm -Radiantflash
-//////////////////////////////////////////////////////////////
-// CC Lewdship shuttle
-/datum/shuttle/ferry/cruiser_shuttle
-	name = "Cruiser Shuttle"
-	location = 1
-	warmup_time = 10	//want some warmup time so people can cancel.
-	area_offsite = /area/shuttle/cruiser/cruiser
-	area_station = /area/shuttle/cruiser/station
-	docking_controller_tag = "cruiser_shuttle"
-	dock_target_station = "d1a1_dock"
-	dock_target_offsite = "cruiser_shuttle_bay"
-
-	*/
+/obj/effect/shuttle_landmark/premade/specops/station
+	name = "NSB Cryogaia"
+	landmark_tag = "specops_station"
+	docking_controller = "specops_dock_airlock"
+	special_dock_targets = list("Special Operations" = "specops_shuttle_fore")

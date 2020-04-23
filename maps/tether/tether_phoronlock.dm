@@ -27,7 +27,7 @@ obj/machinery/airlock_sensor/phoron/process()
 
 		if(abs(pressure - previousPressure) > 0.1 || previousPressure == null || abs(phoron - previousPhoron) > 0.1 || previousPhoron == null)
 			var/datum/signal/signal = new
-			signal.transmission_method = 1 //radio signal
+			signal.transmission_method = TRANSMISSION_RADIO //radio signal
 			signal.data["tag"] = id_tag
 			signal.data["timestamp"] = world.time
 			signal.data["pressure"] = num2text(pressure)
@@ -81,7 +81,7 @@ obj/machinery/airlock_sensor/phoron/airlock_exterior
 	if(!radio_connection)
 		return 0
 	var/datum/signal/signal = new
-	signal.transmission_method = 1 //radio signal
+	signal.transmission_method = TRANSMISSION_RADIO
 	signal.source = src
 	signal.data = list(
 		"tag" = scrub_id,
@@ -146,11 +146,8 @@ obj/machinery/airlock_sensor/phoron/airlock_exterior
 		ui.set_auto_update(1)
 
 /obj/machinery/embedded_controller/radio/airlock/phoron/Topic(href, href_list)
-	if(..())
+	if((. = ..()))
 		return
-
-	usr.set_machine(src)
-	src.add_fingerprint(usr)
 
 	var/clean = 0
 	switch(href_list["command"])	//anti-HTML-hacking checks

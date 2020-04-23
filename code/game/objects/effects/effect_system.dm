@@ -185,12 +185,8 @@ steam.start() -- spawns the effect
 				qdel(src)
 
 /obj/effect/effect/smoke/Crossed(mob/living/carbon/M as mob )
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = M
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+	if(M.is_incorporeal())
+		return
 	..()
 	if(istype(M))
 		affect(M)
@@ -242,6 +238,15 @@ steam.start() -- spawns the effect
 		if(prob(25))
 			L.emote("cough")
 
+/obj/effect/effect/smoke/bad/noxious
+	opacity = 0
+
+/obj/effect/effect/smoke/bad/noxious/affect(var/mob/living/L)
+	if (!..())
+		return 0
+	if(L.needs_to_breathe())
+		L.adjustToxLoss(1)
+
 /* Not feasile until a later date
 /obj/effect/effect/smoke/bad/Crossed(atom/movable/M as mob|obj)
 	..()
@@ -251,7 +256,7 @@ steam.start() -- spawns the effect
 			B.damage = (B.damage/2)
 			projectiles += B
 			destroyed_event.register(B, src, /obj/effect/effect/smoke/bad/proc/on_projectile_delete)
-		world << "Damage is: [B.damage]"
+		to_world("Damage is: [B.damage]")
 	return 1
 
 /obj/effect/effect/smoke/bad/proc/on_projectile_delete(obj/item/projectile/beam/proj)
@@ -372,6 +377,9 @@ steam.start() -- spawns the effect
 
 /datum/effect/effect/system/smoke_spread/bad
 	smoke_type = /obj/effect/effect/smoke/bad
+
+/datum/effect/effect/system/smoke_spread/noxious
+	smoke_type = /obj/effect/effect/smoke/bad/noxious
 
 /datum/effect/effect/system/smoke_spread/fire
 	smoke_type = /obj/effect/effect/smoke/elemental/fire
@@ -511,10 +519,10 @@ steam.start() -- spawns the effect
 			s.start()
 
 			for(var/mob/M in viewers(5, location))
-				M << "<span class='warning'>The solution violently explodes.</span>"
+				to_chat(M, "<span class='warning'>The solution violently explodes.</span>")
 			for(var/mob/M in viewers(1, location))
 				if (prob (50 * amount))
-					M << "<span class='warning'>The explosion knocks you down.</span>"
+					to_chat(M, "<span class='warning'>The explosion knocks you down.</span>")
 					M.Weaken(rand(1,5))
 			return
 		else
@@ -537,7 +545,7 @@ steam.start() -- spawns the effect
 				flash = (amount/4) * flashing_factor
 
 			for(var/mob/M in viewers(8, location))
-				M << "<span class='warning'>The solution violently explodes.</span>"
+				to_chat(M, "<span class='warning'>The solution violently explodes.</span>")
 
 			explosion(
 				location,
