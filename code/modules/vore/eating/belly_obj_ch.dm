@@ -142,14 +142,14 @@
 			generated_reagents = list("milk" = 1)
 			reagent_name = "milk"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "milk"
 			reagentcolor = "#DFDFDF"
 		if("Cream")
 			generated_reagents = list("cream" = 1)
 			reagent_name = "cream"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "cream"
 			reagentcolor = "#DFD7AF"
 		if("Honey")
@@ -163,7 +163,7 @@
 			generated_reagents = list("cherryjelly" = 1)
 			reagent_name = "cherry jelly"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "cherryjelly"
 			reagentcolor = "#801E28"
 
