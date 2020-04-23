@@ -1,6 +1,6 @@
 
 /obj/structure/bed/chair/comfy			// Making the premade chairs not have the basic chair visible, sometime make the constructed ones work as well
-	icon = 'icons/obj/furniture_ch.dmi'	
+	icon = 'icons/obj/furniture_ch.dmi'
 	icon_state = "comfychair"
 	base_icon = "comfychair"
 
@@ -24,14 +24,14 @@
 	icon_state = "sofacornerOLD"
 	base_icon = "sofacornerOLD"
 
-/obj/structure/bed/chair/sofa/sif_ora/New(var/newloc,var/newmaterial)
+/obj/structure/bed/chair/sofa/sif_ora/Initialize(var/newloc,var/newmaterial)
 	..(newloc,MAT_SIFWOOD,MAT_CARPET_ORANGE)
 
-/obj/structure/bed/chair/sofa/left/sif_ora/New(var/newloc,var/newmaterial)
+/obj/structure/bed/chair/sofa/left/sif_ora/Initialize(var/newloc,var/newmaterial)
 	..(newloc,MAT_SIFWOOD,MAT_CARPET_ORANGE)
 
-/obj/structure/bed/chair/sofa/right/sif_ora/New(var/newloc,var/newmaterial)
+/obj/structure/bed/chair/sofa/right/sif_ora/Initialize(var/newloc,var/newmaterial)
 	..(newloc,MAT_SIFWOOD,MAT_CARPET_ORANGE)
 
-/obj/structure/bed/chair/sofa/corner/sif_ora/New(var/newloc,var/newmaterial)
+/obj/structure/bed/chair/sofa/corner/sif_ora/Initialize(var/newloc,var/newmaterial)
 	..(newloc,MAT_SIFWOOD,MAT_CARPET_ORANGE)
