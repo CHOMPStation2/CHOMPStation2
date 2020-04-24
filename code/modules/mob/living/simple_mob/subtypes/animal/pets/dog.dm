@@ -99,13 +99,18 @@
 //pupplies cannot wear anything.
 /mob/living/simple_mob/animal/passive/dog/corgi/puppy/Topic(href, href_list)
 	if(href_list["remove_inv"] || href_list["add_inv"])
-		usr << "<font color='red'>You can't fit this on [src]</font>"
+		to_chat(usr, "<font color='red'>You can't fit this on [src]</font>")
 		return
 	..()
 
 /mob/living/simple_mob/animal/passive/dog/corgi/puppy/Bockscar
 	name = "Bockscar"
 	real_name = "Bockscar"
+
+/mob/living/simple_mob/animal/passive/dog/corgi/puppy/wiggle //yw addition
+	name = "Mister Wiggles"
+	real_name = "Mister Wiggles"
+	desc = "An emotional support corgi! He gets along with everyone, even Runtime."
 
 //IAN! SQUEEEEEEEEE~
 /mob/living/simple_mob/animal/passive/dog/corgi/Ian

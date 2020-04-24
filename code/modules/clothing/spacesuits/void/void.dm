@@ -13,7 +13,7 @@
 //	flags_inv = HIDEEARS|BLOCKHAIR
 
 	//Species-specific stuff.
-	species_restricted = list("Human", "Promethean")
+	species_restricted = list(SPECIES_HUMAN, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA) //VOREStation Edit
 	sprite_sheets_refit = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/helmet.dmi',
 		SPECIES_TAJ = 'icons/mob/species/tajaran/helmet.dmi',
@@ -36,13 +36,13 @@
 	desc = "A high-tech dark red space suit. Used for AI satellite maintenance."
 	slowdown = 1
 	armor = list(melee = 40, bullet = 5, laser = 20,energy = 5, bomb = 35, bio = 100, rad = 20)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit)
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/backpack)
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	min_pressure_protection = 0 * ONE_ATMOSPHERE
 	max_pressure_protection = 10 * ONE_ATMOSPHERE
 
-	species_restricted = list("Human", SPECIES_SKRELL, "Promethean")
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_NEVREAN, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA) //VOREStation Edit
 	sprite_sheets_refit = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/suit.dmi',
 		SPECIES_TAJ = 'icons/mob/species/tajaran/suit.dmi',

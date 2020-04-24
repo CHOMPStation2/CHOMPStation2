@@ -175,12 +175,12 @@
 			S.visible_message("<span class='warning'>[S]'s flesh sizzles where the water touches it!</span>", "<span class='danger'>Your flesh burns in the water!</span>")
 
 		// Then extinguish people on fire.
-		var/needed = L.fire_stacks * 5
+		var/needed = max(0,L.fire_stacks) * 5
 		if(amount > needed)
 			L.ExtinguishMob()
-		L.adjust_fire_stacks(-(amount / 5))
+		L.water_act(amount / 25) // Div by 25, as water_act multiplies it by 5 in order to calculate firestack modification.
 		remove_self(needed)
-/*  //VOREStation Edit Start. Stops slimes from dying from water. Fixes fuel affect_ingest, too.
+  //YWedit start, readds promethean damage that was removed by vorestation.
 /datum/reagent/water/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME)
 		M.adjustToxLoss(6 * removed)
@@ -194,10 +194,10 @@
 		..()
 
 /datum/reagent/water/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_SLIME)
+	if(alien == IS_SLIME && prob(10))
 		M.visible_message("<span class='warning'>[M]'s flesh sizzles where the water touches it!</span>", "<span class='danger'>Your flesh burns in the water!</span>")
 	..()
-*/  //VOREStation Edit End.
+  //VOREStation Edit End,
 
 /datum/reagent/fuel
 	name = "Welding fuel"

@@ -101,7 +101,7 @@
 	if(action.length)
 		spawn(action.length)
 			action.end()
-	next_action = world.time + rand(15 MINUTES, 30 MINUTES)
+	next_action = world.time + rand(5 MINUTES, 20 MINUTES)
 	last_department_used = action.departments[1]
 
 
@@ -138,7 +138,7 @@
 	for(var/datum/gm_action/action in available_actions)
 		if(!action.enabled)
 			continue
-		if(ROLE_EVERYONE in action.departments)
+		if(DEPARTMENT_EVERYONE in action.departments)
 			best_actions.Add(action)
 			log_debug("[action.name] is being considered because it involves everyone.")
 

@@ -100,7 +100,7 @@ var/list/flooring_types
 	icon_base = "snowyplayingdrift"
 
 /decl/flooring/carpet
-	name = "carpet"
+	name = "red carpet"	//CHOMPEDIT renamed to red carpet
 	desc = "Imported and comfy."
 	icon = 'icons/turf/flooring/carpet.dmi'
 	icon_base = "carpet"
@@ -125,7 +125,7 @@ var/list/flooring_types
 	build_type = /obj/item/stack/tile/carpet/blucarpet
 
 /decl/flooring/carpet/turcarpet
-	name = "tur carpet"
+	name = "turquoise carpet"	//CHOMPstation edit: changing name to turquoise
 	icon_base = "turcarpet"
 	build_type = /obj/item/stack/tile/carpet/turcarpet
 
@@ -173,7 +173,7 @@ var/list/flooring_types
 
 /decl/flooring/tiling/tech
 	desc = "Scuffed from the passage of countless greyshirts."
-	icon = 'icons/turf/flooring/techfloor_vr.dmi'
+	icon = 'icons/turf/flooring/techfloor.dmi'
 	icon_base = "techfloor_gray"
 	build_type = /obj/item/stack/tile/floor/techgrey
 	can_paint = null

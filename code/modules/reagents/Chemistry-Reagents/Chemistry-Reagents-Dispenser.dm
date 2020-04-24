@@ -94,7 +94,7 @@
 
 /datum/reagent/ethanol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //This used to do just toxin. That's boring. Let's make this FUN.
 	if(issmall(M)) removed *= 2
-	var/strength_mod = 3 //Alcohol is 3x stronger when injected into the veins.
+	var/strength_mod = 3 //YW EDIT: multiply by inherent tolerance first, I don't want to strip out the following block yet
 	if(alien == IS_SKRELL)
 		strength_mod *= 5
 	if(alien == IS_TAJARA)
@@ -105,7 +105,7 @@
 		strength_mod = 0
 	if(alien == IS_SLIME)
 		strength_mod *= 2 // VOREStation Edit - M.adjustToxLoss(removed)
-	
+
 	M.add_chemical_effect(CE_ALCOHOL, 1)
 	var/effective_dose = dose * strength_mod * (1 + volume/60) //drinking a LOT will make you go down faster
 
@@ -139,7 +139,7 @@
 /datum/reagent/ethanol/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(issmall(M)) removed *= 2
 	M.nutrition += nutriment_factor * removed
-	var/strength_mod = 1
+	var/strength_mod = 1 * M.species.alcohol_tolerance //YW EDIT: multiply by inherent tolerance first, I don't want to strip out the following block yet
 	if(alien == IS_SKRELL)
 		strength_mod *= 5
 	if(alien == IS_TAJARA)
@@ -184,17 +184,17 @@
 	if(istype(O, /obj/item/weapon/paper))
 		var/obj/item/weapon/paper/paperaffected = O
 		paperaffected.clearpaper()
-		usr << "The solution dissolves the ink on the paper."
+		to_chat(usr, "The solution dissolves the ink on the paper.")
 		return
 	if(istype(O, /obj/item/weapon/book))
 		if(volume < 5)
 			return
 		if(istype(O, /obj/item/weapon/book/tome))
-			usr << "<span class='notice'>The solution does nothing. Whatever this is, it isn't normal ink.</span>"
+			to_chat(usr, "<span class='notice'>The solution does nothing. Whatever this is, it isn't normal ink.</span>")
 			return
 		var/obj/item/weapon/book/affectedbook = O
 		affectedbook.dat = null
-		usr << "<span class='notice'>The solution dissolves the ink on the book.</span>"
+		to_chat(usr, "<span class='notice'>The solution dissolves the ink on the book.</span>")
 	return
 
 /datum/reagent/fluorine
@@ -344,19 +344,23 @@
 	var/meltdose = 10 // How much is needed to melt
 
 /datum/reagent/acid/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_GREY) //ywedit
+		return
 	if(issmall(M)) removed *= 2
 	M.take_organ_damage(0, removed * power * 2)
 
 /datum/reagent/acid/affect_touch(var/mob/living/carbon/M, var/alien, var/removed) // This is the most interesting
+	if(alien == IS_GREY) //ywedit
+		return
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.head)
 			if(H.head.unacidable)
-				H << "<span class='danger'>Your [H.head] protects you from the acid.</span>"
+				to_chat(H, "<span class='danger'>Your [H.head] protects you from the acid.</span>")
 				remove_self(volume)
 				return
 			else if(removed > meltdose)
-				H << "<span class='danger'>Your [H.head] melts away!</span>"
+				to_chat(H, "<span class='danger'>Your [H.head] melts away!</span>")
 				qdel(H.head)
 				H.update_inv_head(1)
 				H.update_hair(1)
@@ -366,11 +370,11 @@
 
 		if(H.wear_mask)
 			if(H.wear_mask.unacidable)
-				H << "<span class='danger'>Your [H.wear_mask] protects you from the acid.</span>"
+				to_chat(H, "<span class='danger'>Your [H.wear_mask] protects you from the acid.</span>")
 				remove_self(volume)
 				return
 			else if(removed > meltdose)
-				H << "<span class='danger'>Your [H.wear_mask] melts away!</span>"
+				to_chat(H, "<span class='danger'>Your [H.wear_mask] melts away!</span>")
 				qdel(H.wear_mask)
 				H.update_inv_wear_mask(1)
 				H.update_hair(1)
@@ -380,10 +384,10 @@
 
 		if(H.glasses)
 			if(H.glasses.unacidable)
-				H << "<span class='danger'>Your [H.glasses] partially protect you from the acid!</span>"
+				to_chat(H, "<span class='danger'>Your [H.glasses] partially protect you from the acid!</span>")
 				removed /= 2
 			else if(removed > meltdose)
-				H << "<span class='danger'>Your [H.glasses] melt away!</span>"
+				to_chat(H, "<span class='danger'>Your [H.glasses] melt away!</span>")
 				qdel(H.glasses)
 				H.update_inv_glasses(1)
 				removed -= meltdose / 2
@@ -414,7 +418,7 @@
 		var/obj/effect/decal/cleanable/molten_item/I = new/obj/effect/decal/cleanable/molten_item(O.loc)
 		I.desc = "Looks like this was \an [O] some time ago."
 		for(var/mob/M in viewers(5, O))
-			M << "<span class='warning'>\The [O] melts.</span>"
+			to_chat(M, "<span class='warning'>\The [O] melts.</span>")
 		qdel(O)
 		remove_self(meltdose) // 10 units of acid will not melt EVERYTHING on the tile
 

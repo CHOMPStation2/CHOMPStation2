@@ -53,6 +53,7 @@
 	lift_floor_name = "Transit"
 	lift_announce_str = "Arriving at Basement Level Transit."
 	base_turf = /turf/simulated/floor
+	delay_time = 7 SECONDS // to symbolize the depth of transit.
 
 /area/turbolift/lumber_floor_underground_mine
 	name = "basement (sublevel 2)"

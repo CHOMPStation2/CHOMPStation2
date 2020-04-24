@@ -181,8 +181,8 @@
 	if(back)
 		if(istype(back,/obj/item/weapon/tank/jetpack))
 			thrust = back
-		else if(istype(back,/obj/item/weapon/rig))
-			var/obj/item/weapon/rig/rig = back
+		else if(istype(get_rig(),/obj/item/weapon/rig))
+			var/obj/item/weapon/rig/rig = get_rig()
 			for(var/obj/item/rig_module/maneuvering_jets/module in rig.installed_modules)
 				thrust = module.jets
 				break
@@ -224,10 +224,8 @@
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
-	//VOREStation Edit begin: SHADEKIN
-	if(shadekin_phasing_check())
+	if(is_incorporeal())
 		return
-	//VOREStation Edit end: SHADEKIN
 	if(!config.footstep_volume || !T.footstep_sounds || !T.footstep_sounds.len)
 		return
 	// Future Upgrades - Multi species support
@@ -241,10 +239,12 @@
 
 	// Play every 20 steps while walking, for the sneak
 	if(m_intent == "walk" && step_count++ % 20 != 0)
+		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
 		return
 
 	// Play every other step while running
 	if(m_intent == "run" && step_count++ % 2 != 0)
+		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
 		return
 
 	var/volume = config.footstep_volume

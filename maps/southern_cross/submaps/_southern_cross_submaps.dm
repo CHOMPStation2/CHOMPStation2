@@ -4,6 +4,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Primary Load - these are areas that will ALWAYS be in play.
 
+//Temp Removal TFF 15/2/20
+/*
 // Rykka adds Belt Mining
 
 #include "asteroid_belt/_templates.dm"
@@ -26,6 +28,7 @@
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BELT, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_BELT, 64, 64)         // Create the mining ore distribution map.
 
+*/
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 /// If you're reading this and want to add a new away mission, reference /tether/submaps/_tether_submaps.dm or existing away missions for how to set it up.

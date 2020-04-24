@@ -18,6 +18,10 @@
 	icon_state = "outside1"
 	sound_env = MOUNTAINS
 
+/area/crew_quarters/meeting
+	name = "\improper Public Conference"
+	icon_state = "courtroom"
+
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
 
@@ -40,6 +44,9 @@
 	name = "\The Exterior Powerline"
 /area/borealis2/outdoors/grounds/traderpad
 	name = "\improper Cryogaia Commerce Pad"
+
+/area/borealis2/outdoors/grounds/entrance
+	name = "\improper Cryogaia Compound Gate"
 
 /area/borealis2/outdoors/grounds/solars
 	name = "\The solar array"
@@ -205,34 +212,12 @@
 	requires_power = 1
 	base_turf = /turf/space
 
-/area/shuttle/excursion/cryogaia
-	name = "\improper Exploration Vessel - dock"
-	base_turf = /turf/simulated/floor/reinforced
+// Bad guys!!
+/area/shuttle/mercenary
+	name = "\improper Mercenary Vessel"
 
-/area/shuttle/excursion/cryogaia_nearby
-	name = "\improper Exploration Vessel - Dock Near"
-
-/area/shuttle/excursion/cryogaia_wilderness			// Now made to be murderiously difficult. -RF
-	name = "\improper Exploration Vessel - Hostile Wilderness"
-
-/area/shuttle/excursion/space
-	name = "\improper Exploration Vessel - Space"
-
-/area/shuttle/excursion/space_moving
-	name = "\improper Exploration Vessel - Space Moving"
-	base_turf = /turf/space/transit/north
-
-/area/shuttle/excursion/bluespace
-	name = "\improper Exploration Vessel - Bluespace"
-	base_turf = /turf/space/bluespace
-
-/area/shuttle/excursion/sand_moving
-	name = "\improper Exploration Vessel - Sand Transit"
-	base_turf = /turf/space/sandyscroll
-
-/area/shuttle/excursion/borealis2_sky
-	name = "\improper Exploration Vessel - Borealis Majoris  Sky"
-	base_turf = /turf/simulated/sky
+/area/shuttle/skipjack
+	name = "\improper Vox Vessel"
 
 //Exploration area locations.
 
@@ -249,34 +234,6 @@
 	name = "\improper Syndicate Outpost"
 	requires_power = 0
 	dynamic_lighting = 0
-
-/area/shuttle/antag_space/base
-	name = "\improper Syndicate PS - Base"
-	icon_state = "shuttle2"
-/area/shuttle/antag_space/transit
-	name = "\improper Syndicate PS - Transit"
-	icon_state = "shuttle2"
-/area/shuttle/antag_space/north
-	name = "\improper Syndicate PS - Nearby"
-	icon_state = "shuttle2"
-/area/shuttle/antag_space/docks
-	name = "\improper Syndicate PS - Docks"
-	icon_state = "shuttle2"
-
-/area/shuttle/antag_ground/base
-	name = "\improper Syndicate LC - Base"
-	icon_state = "shuttle2"
-/area/shuttle/antag_ground/transit
-	name = "\improper Syndicate LC - Transit"
-	icon_state = "shuttle2"
-/area/shuttle/antag_ground/solars
-	name = "\improper Syndicate LC - Solars"
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/mineral/floor
-/area/shuttle/antag_ground/mining
-	name = "\improper Syndicate LC - Mining"
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/mineral/floor
 
 // Security stuff
 
@@ -365,6 +322,12 @@
 /area/medical/pyschwarde
 	name = "\improper Psychiatric lockup"
 	icon_state = "medbay2"
+/area/medical/triage
+	name = "\improper Medbay Triage"
+	icon_state = "medbay4"
+/area/medical/scanning
+	name = "Medical Diagnostics Center"
+	icon_state = "medbay"
 
 
 //Science outpost

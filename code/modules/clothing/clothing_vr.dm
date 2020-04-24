@@ -26,7 +26,7 @@
 			recent_squish = 0
 		for(var/mob/living/M in contents)
 			var/emote = pick(inside_emotes)
-			M << emote
+			to_chat(M,emote)
 	return
 */
 
@@ -37,21 +37,21 @@
 		for(var/mob/M in src)
 			full++
 		if(full >= 2)
-			to_chat(user,"<span class='warning'>You can't fit anyone else into \the [src]!</span>")
+			to_chat(user, "<span class='warning'>You can't fit anyone else into \the [src]!</span>")
 		else
 			var/obj/item/weapon/holder/micro/holder = I
 			if(holder.held_mob && holder.held_mob in holder)
-				to_chat(holder.held_mob,"<span class='warning'>[user] stuffs you into \the [src]!</span>")
+				to_chat(holder.held_mob, "<span class='warning'>[user] stuffs you into \the [src]!</span>")
 				holder.held_mob.forceMove(src)
-				to_chat(user,"<span class='notice'>You stuff \the [holder.held_mob] into \the [src]!</span>")
+				to_chat(user, "<span class='notice'>You stuff \the [holder.held_mob] into \the [src]!</span>")
 	else
 		..()
 
 /obj/item/clothing/shoes/attack_self(var/mob/user)
 	for(var/mob/M in src)
 		M.forceMove(get_turf(user))
-		to_chat(M,"<span class='warning'>[user] shakes you out of \the [src]!</span>")
-		to_chat(user,"<span class='notice'>You shake [M] out of \the [src]!</span>")
+		to_chat(M, "<span class='warning'>[user] shakes you out of \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You shake [M] out of \the [src]!</span>")
 
 	..()
 
@@ -79,14 +79,14 @@
 	if(ishuman(src.loc))
 		var/mob/living/carbon/human/H = src.loc
 		if(H.shoes == src)
-			H << "<font color='red'>[user]'s tiny body presses against you in \the [src], squirming!</font>"
-			user << "<font color='red'>Your body presses out against [H]'s form! Well, what little you can get to!</font>"
+			to_chat(H, "<font color='red'>[user]'s tiny body presses against you in \the [src], squirming!</font>")
+			to_chat(user, "<font color='red'>Your body presses out against [H]'s form! Well, what little you can get to!</font>")
 		else
-			H << "<font color='red'>[user]'s form shifts around in the \the [src], squirming!</font>"
-			user << "<font color='red'>You move around inside the [src], to no avail.</font>"
+			to_chat(H, "<font color='red'>[user]'s form shifts around in the \the [src], squirming!</font>")
+			to_chat(user, "<font color='red'>You move around inside the [src], to no avail.</font>")
 	else
 		src.visible_message("<font color='red'>\The [src] moves a little!</font>")
-		user << "<font color='red'>You throw yourself against the inside of \the [src]!</font>"
+		to_chat(user, "<font color='red'>You throw yourself against the inside of \the [src]!</font>")
 
 //Mask
 /obj/item/clothing/mask
@@ -114,7 +114,8 @@
 		SPECIES_AKULA 		= 'icons/mob/species/akula/mask_vr.dmi',
 		SPECIES_VULPKANIN 	= 'icons/mob/species/vulpkanin/mask.dmi',
 		SPECIES_XENOCHIMERA	= 'icons/mob/species/tajaran/mask_vr.dmi',
-		SPECIES_WEREBEAST	= 'icons/mob/species/werebeast/masks.dmi'
+		SPECIES_WEREBEAST	= 'icons/mob/species/werebeast/masks.dmi',
+		SPECIES_GREY_YW     = 'icons/mob/species/grey/mask.dmi'/*ywedit*/
 		)
 //"Spider" 		= 'icons/mob/species/spider/mask_vr.dmi' Add this later when they have custom mask sprites and everything.
 
@@ -160,7 +161,9 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/mob/species/seromi/uniform.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/uniform.dmi')
+		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/uniform.dmi',
+		SPECIES_GREY_YW = 'icons/mob/species/grey/uniform.dmi'/*ywedit*/
+		)
 
 //TFF 5/8/19 - define numbers and specifics for suit sensor settings
 /obj/item/clothing/under/New(var/mob/living/carbon/human/H)

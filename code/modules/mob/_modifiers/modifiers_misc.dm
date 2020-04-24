@@ -112,16 +112,18 @@ the artifact triggers the rage.
 			var/mob/living/carbon/human/H = holder
 			H.shock_stage = last_shock_stage
 
-/datum/modifier/berserk/can_apply(var/mob/living/L)
+/datum/modifier/berserk/can_apply(var/mob/living/L, var/suppress_failure = FALSE)
 	if(L.stat)
-		to_chat(L, "<span class='warning'>You can't be unconscious or dead to berserk.</span>")
+		if(!suppress_failure)
+			to_chat(L, "<span class='warning'>You can't be unconscious or dead to berserk.</span>")
 		return FALSE // It would be weird to see a dead body get angry all of a sudden.
 
 	if(!L.is_sentient())
 		return FALSE // Drones don't feel anything.
 
 	if(L.has_modifier_of_type(/datum/modifier/berserk_exhaustion))
-		to_chat(L, "<span class='warning'>You recently berserked, and cannot do so again while exhausted.</span>")
+		if(!suppress_failure)
+			to_chat(L, "<span class='warning'>You recently berserked, and cannot do so again while exhausted.</span>")
 		return FALSE // On cooldown.
 
 	if(L.isSynthetic())
@@ -135,7 +137,8 @@ the artifact triggers the rage.
 			return FALSE // Happy trees aren't affected by blood rages.
 
 	if(L.nutrition < nutrition_cost)
-		to_chat(L, "<span class='warning'>You are too hungry to berserk.</span>")
+		if(!suppress_failure)
+			to_chat(L, "<span class='warning'>You are too hungry to berserk.</span>")
 		return FALSE // Too hungry to enrage.
 
 	return ..()
@@ -223,28 +226,6 @@ the artifact triggers the rage.
 	bleeding_rate_percent = 1.20	// 20% more bleeding.
 
 	accuracy_dispersion = 2			// A combination of fear and immense pain or damage reults in a twitching firing arm. Flee.
-
-
-
-// Ignition, but confined to the modifier system.
-// This makes it more predictable and thus, easier to balance.
-/datum/modifier/fire
-	name = "on fire"
-	desc = "You are on fire! You will be harmed until the fire goes out or you extinguish it with water."
-	mob_overlay_state = "on_fire"
-
-	on_created_text = "<span class='danger'>You combust into flames!</span>"
-	on_expired_text = "<span class='warning'>The fire starts to fade.</span>"
-	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
-	var/damage_per_tick = 5
-
-/datum/modifier/fire/intense
-	mob_overlay_state = "on_fire_intense"
-	damage_per_tick = 10
-
-/datum/modifier/fire/tick()
-	holder.inflict_heat_damage(damage_per_tick)
-
 
 // Applied when near something very cold.
 // Reduces mobility, attack speed.

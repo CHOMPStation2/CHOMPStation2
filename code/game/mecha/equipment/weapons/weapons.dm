@@ -55,13 +55,8 @@
 		projectiles = projectiles_per_shot
 //	set_ready_state(0)
 
-	var/target_for_log
-	if(ismob(target))
-		target_for_log = target
-//	else
-//		target_for_log = "[target.name]" //CHOMPedit, fixes mecha weapon lock on mob kill. Not sure why this works. Hope this doesn't cause issues later.
-
-	add_attack_logs(chassis.occupant,target_for_log,"Fired exosuit weapon [src.name] (MANUAL)")
+//CHOMPedit, redundant code removed. Fixes weapon lock on mob kill.
+	add_attack_logs(chassis.occupant,target, "Fired exosuit weapon [src.name] (MANUAL)")
 
 	do_after_cooldown()
 
@@ -72,7 +67,7 @@
 		var/obj/item/projectile/P = A
 		P.dispersion = deviation
 		process_accuracy(P, chassis.occupant, target)
-		P.launch_projectile_from_turf(target, chassis.occupant.zone_sel.selecting, chassis.occupant, params)
+		P.launch_projectile_from_turf(target, chassis.get_pilot_zone_sel(), chassis.occupant, params)
 	else if(istype(A, /atom/movable))
 		var/atom/movable/AM = A
 		AM.throw_at(target, 7, 1, chassis)

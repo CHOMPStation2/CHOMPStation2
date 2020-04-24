@@ -26,6 +26,7 @@
 	var/default_material = DEFAULT_WALL_MATERIAL
 	var/material/material
 	var/drops_debris = 1
+	var/named_from_material = 1 //YW EDIT, Does it prepend the material's name to it's name?
 
 /obj/item/weapon/material/New(var/newloc, var/material_key)
 	..(newloc)
@@ -58,14 +59,15 @@
 		force = round(force*dulled_divisor)
 	throwforce = round(material.get_blunt_damage()*thrown_force_divisor)
 	//spawn(1)
-	//	world << "[src] has force [force] and throwforce [throwforce] when made from default material [material.name]"
+	//	to_world("[src] has force [force] and throwforce [throwforce] when made from default material [material.name]")
 
 /obj/item/weapon/material/proc/set_material(var/new_material)
 	material = get_material_by_name(new_material)
 	if(!material)
 		qdel(src)
 	else
-		name = "[material.display_name] [initial(name)]"
+		if(named_from_material) //YW EDIT
+			name = "[material.display_name] [initial(name)]"
 		health = round(material.integrity/10)
 		if(applies_material_colour)
 			color = material.icon_colour

@@ -92,7 +92,7 @@
 
 /obj/machinery/computer/security/attack_hand(var/mob/user as mob)
 	if (using_map && !(src.z in using_map.contact_levels))
-		user << "<span class='danger'>Unable to establish a connection:</span> You're too far away from the station!"
+		to_chat(user, "<span class='danger'>Unable to establish a connection:</span> You're too far away from the station!")
 		return
 	if(stat & (NOPOWER|BROKEN))	return
 
@@ -170,7 +170,7 @@
 	src.current_camera = C
 	if(current_camera)
 		current_camera.camera_computers_using_this.Add(src)
-		use_power = 2
+		update_use_power(USE_POWER_ACTIVE)
 		var/mob/living/L = current_camera.loc
 		if(istype(L))
 			L.tracking_initiated()
@@ -182,7 +182,7 @@
 		if(istype(L))
 			L.tracking_cancelled()
 	current_camera = null
-	use_power = 1
+	use_power = USE_POWER_IDLE
 
 //Camera control: mouse.
 /atom/DblClick()
@@ -244,7 +244,7 @@
 
 /obj/machinery/computer/security/wooden_tv
 	name = "security camera monitor"
-	desc = "An old TV hooked into the stations camera network."
+	desc = "An old TV hooked into the station's camera network."
 	icon_state = "television"
 	icon_keyboard = null
 	icon_screen = "detective_tv"
@@ -254,7 +254,7 @@
 
 /obj/machinery/computer/security/mining
 	name = "outpost camera monitor"
-	desc = "Used to access the various cameras on the outpost."
+	desc = "Used to watch over mining operations."
 	icon_keyboard = "mining_key"
 	icon_screen = "mining"
 	network = list("Mining Outpost")

@@ -304,7 +304,6 @@ var/global/list/latejoin_tram   = list()
 	name = "Airlock NanoMed"
 	desc = "Wall-mounted Medical Equipment dispenser. This limited-use version dispenses antitoxins with mild painkillers for surface EVAs."
 	icon_state = "wallmed"
-	icon_deny = "wallmed-deny"
 	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
 	products = list(/obj/item/weapon/reagent_containers/pill/airlock = 10,/obj/item/device/healthanalyzer = 1)
 	contraband = list(/obj/item/weapon/reagent_containers/pill/tox = 2)
@@ -327,6 +326,17 @@ var/global/list/latejoin_tram   = list()
 	//color = ""
 
 /obj/machinery/door/airlock/multi_tile/metal/red/allowed(mob/user)
+	if(get_security_level() in list("green","blue"))
+		return FALSE
+
+	return ..(user)
+
+/obj/machinery/door/airlock/highsecurity/red
+	name = "Bridge Holdout Armory"
+	desc =  "Only to be opened on Code red or greater."
+	req_one_access = list(access_heads)
+
+/obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
 	if(get_security_level() in list("green","blue"))
 		return FALSE
 
@@ -458,18 +468,6 @@ var/global/list/latejoin_tram   = list()
 	else
 		..()
 //end of freezable airlock stuff.
-
-//Ice pick, mountain axe, or ice axe.
-/obj/item/weapon/ice_pick
-	name = "ice axe"
-	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
-	icon = 'icons/obj/items_yw.dmi'
-	icon_state = "icepick"
-	item_state = "icepick"
-	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
-	throwforce = 0
-//end of Ice Pick
-
 
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
@@ -603,7 +601,7 @@ var/global/list/latejoin_tram   = list()
 // Icy crystals.
 /datum/category_item/catalogue/material/trail_blazer
 	name = "Ice Colony Equipment - Trailblazer"
-	desc = "This is a glowing stick embedded int he ground with a light on top, commonly used in snowy installations \
+	desc = "This is a glowing stick embedded in the ground with a light on top, commonly used in snowy installations \
 	and in tundra conditions."
 	value = CATALOGUER_REWARD_EASY
 

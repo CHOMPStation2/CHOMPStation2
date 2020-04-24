@@ -6,12 +6,13 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 
 /obj/machinery/photocopier/faxmachine
 	name = "fax machine"
+	desc = "Sent papers and pictures far away! Or to your co-worker's office a few doors down."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "fax"
 	insert_anim = "faxsend"
 	req_one_access = list(access_lawyer, access_heads, access_armory, access_qm)
 
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 30
 	active_power_usage = 200
 	circuit = /obj/item/weapon/circuitboard/fax
@@ -235,8 +236,8 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	msg += "Receiving '[sent.name]' via secure connection ... <a href='?_src_=holder;AdminFaxView=\ref[sent]'>view message</a></span>"
 
 	for(var/client/C in admins)
-		if(check_rights((R_ADMIN|R_MOD),0,C))
-			C << msg
+		if(check_rights((R_ADMIN|R_MOD|R_EVENT),0,C))
+			to_chat(C,msg)
 			C << 'sound/effects/printer.ogg'
 
 	// VoreStation Edit Start

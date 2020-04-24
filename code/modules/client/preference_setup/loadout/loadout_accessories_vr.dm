@@ -74,7 +74,7 @@
 	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic", "Field Medic")
 
 /datum/gear/accessory/khcrystal
-	display_name = "KH Life Crystal"
+	display_name = "Life Crystal"
 	path = /obj/item/weapon/storage/box/khcrystal
 	description = "A small necklace device that will notify an offsite cloning facility should you expire after activating it."
 

@@ -55,6 +55,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
 
+
+	//CHOMP reagent belly
+	var/receive_reagents = FALSE
+	var/give_reagents = FALSE
+
+
 	//Mechanically required
 	var/path
 	var/slot
@@ -70,7 +76,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //
 //	Check if an object is capable of eating things, based on vore_organs
 //
-/proc/is_vore_predator(var/mob/living/O)
+/proc/is_vore_predator(mob/living/O)
 	if(istype(O,/mob/living))
 		if(O.vore_organs.len > 0)
 			return TRUE
@@ -87,8 +93,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //
 // Save/Load Vore Preferences
 //
-/datum/vore_preferences/proc/load_path(ckey,slot,filename="character",ext="json")
-	if(!ckey || !slot)	return
+/datum/vore_preferences/proc/load_path(ckey, slot, filename="character", ext="json")
+	if(!ckey || !slot)
+		return
 	path = "data/player_saves/[copytext(ckey,1,2)]/[ckey]/vore/[filename][slot].[ext]"
 
 
@@ -102,7 +109,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 
 	load_path(client_ckey,slot)
 
-	if(!path) return FALSE //Path couldn't be set?
+	if(!path)
+		return FALSE //Path couldn't be set?
 	if(!fexists(path)) //Never saved before
 		save_vore() //Make the file first
 		return TRUE
@@ -126,6 +134,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	can_be_drop_pred = json_from_file["can_be_drop_pred"]
 	belly_prefs = json_from_file["belly_prefs"]
 
+
+	//CHOMP reagent belly
+	receive_reagents = json_from_file["receive_reagents"]
+	give_reagents = json_from_file["give_reagents"]
+
+
 	//Quick sanitize
 	if(isnull(digestable))
 		digestable = TRUE
@@ -148,10 +162,17 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(isnull(belly_prefs))
 		belly_prefs = list()
 
+	//CHOMP reagent belly
+	if(isnull(receive_reagents))
+		receive_reagents = FALSE
+	if(isnull(give_reagents))
+		give_reagents = FALSE
+
 	return TRUE
 
 /datum/vore_preferences/proc/save_vore()
-	if(!path)				return FALSE
+	if(!path)
+		return FALSE
 
 	var/version = VORE_VERSION	//For "good times" use in the future
 	var/list/settings_list = list(
@@ -167,6 +188,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
 			"belly_prefs"			= belly_prefs,
+			"receive_reagents"		= receive_reagents,
+			"give_reagents"			= give_reagents,
 		)
 
 	//List to JSON

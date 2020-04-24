@@ -39,8 +39,7 @@ var/const/SAR 				=(1<<14)
 /datum/job/pathfinder
 	title = "Pathfinder"
 	flag = PATHFINDER
-	department = "Exploration"
-	head_position = 1
+	departments = list(DEPARTMENT_PLANET)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 1
@@ -56,7 +55,7 @@ var/const/SAR 				=(1<<14)
 /datum/job/pilot
 	title = "Pilot"
 	flag = PILOT
-	department = "Exploration"
+	departments = list(DEPARTMENT_PLANET)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
@@ -72,7 +71,7 @@ var/const/SAR 				=(1<<14)
 /datum/job/explorer
 	title = "Explorer"
 	flag = EXPLORER
-	department = "Exploration"
+	departments = list(DEPARTMENT_PLANET)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 3
@@ -87,7 +86,7 @@ var/const/SAR 				=(1<<14)
 /datum/job/sar
 	title = "Field Medic"
 	flag = SAR
-	department = "Exploration"
+	departments = list(DEPARTMENT_PLANET)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
@@ -96,8 +95,8 @@ var/const/SAR 				=(1<<14)
 	selection_color = "#999440"
 	economic_modifier = 6
 	minimal_player_age = 3
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_eva, access_maint_tunnels, access_external_airlocks, access_pilot)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_pilot)
+	access = list(access_medical, access_medical_equip, access_eva, access_maint_tunnels, access_external_airlocks)		//nerfs SAR access. Why the fuck do they have access to surgery and chemistry? They're not doctors, their medics.
+	minimal_access = list(access_medical, access_medical_equip, access_eva) //nerfs SAR access. Why the fuck do they have access to surgery and chemistry? They're not doctors, their medics.
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
 
 /datum/job/offduty_exploration
@@ -106,7 +105,7 @@ var/const/SAR 				=(1<<14)
 	timeoff_factor = -1
 	total_positions = -1
 	faction = "Station"
-	department = "Exploration"
+	departments = list(DEPARTMENT_PLANET)
 	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#999440"
 	access = list(access_maint_tunnels, access_external_airlocks)

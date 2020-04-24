@@ -38,7 +38,7 @@
 	var/hatch_open = 0
 
 	power_channel = ENVIRON
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
 
 	var/list/tile_info[4]
@@ -49,14 +49,17 @@
 		"hot",
 		"cold"
 	)
+	var/open_sound = 'sound/machines/firelockopen.ogg' //CHOMPEdit firedoor sound variable.
+	var/close_sound = 'sound/machines/firelockclose.ogg' //CHOMPEdit firedoor sound variable.
 
-/obj/machinery/door/firedoor/New()
+/obj/machinery/door/firedoor/Initialize()
 	. = ..()
+	//Delete ourselves if we find extra mapped in firedoors
 	for(var/obj/machinery/door/firedoor/F in loc)
 		if(F != src)
-			spawn(1)
-				qdel(src)
-			return .
+			log_debug("Duplicate firedoors at [x],[y],[z]")
+			return INITIALIZE_HINT_QDEL
+	
 	var/area/A = get_area(src)
 	ASSERT(istype(A))
 
@@ -428,9 +431,9 @@
 	switch(animation)
 		if("opening")
 			flick("door_opening", src)
-			playsound(src, 'sound/machines/firelockopen.ogg', 37, 1)
+			playsound(src, open_sound, 37, 1) //CHOMPEdit var
 		if("closing")
-			playsound(src, 'sound/machines/firelockclose.ogg', 37, 1)
+			playsound(src, close_sound, 37, 1) //CHOMPEdit var
 			flick("door_closing", src)
 	return
 
@@ -504,6 +507,8 @@
 /obj/machinery/door/firedoor/multi_tile
 	icon = 'icons/obj/doors/DoorHazard2x1.dmi'
 	width = 2
+	open_sound = 'sound/machines/firewide1o.ogg' //CHOMPEdit
+	close_sound = 'sound/machines/firewide1c.ogg' //CHOMPEdit
 
 /obj/machinery/door/firedoor/glass
 	name = "\improper Emergency Glass Shutter"

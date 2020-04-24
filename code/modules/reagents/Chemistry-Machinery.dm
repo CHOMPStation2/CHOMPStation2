@@ -10,11 +10,13 @@
 
 /obj/machinery/chem_master
 	name = "ChemMaster 3000"
+	desc = "Used to seperate and package chemicals in to patches, pills, or bottles. Warranty void if used to create Space Drugs."
 	density = 1
 	anchored = 1
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "mixer0"
-	use_power = 1
+	circuit = /obj/item/weapon/circuitboard/chem_master
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 20
 	var/beaker = null
 	var/obj/item/weapon/storage/pill_bottle/loaded_pill_bottle = null
@@ -71,6 +73,10 @@
 		to_chat(user, "You add \the [loaded_pill_bottle] into the dispenser slot.")
 
 	else if(default_unfasten_wrench(user, B, 20))
+		return
+	if(default_deconstruction_screwdriver(user, B))
+		return
+	if(default_deconstruction_crowbar(user, B))
 		return
 
 	return
@@ -322,11 +328,12 @@
 /obj/machinery/reagentgrinder
 
 	name = "All-In-One Grinder"
+	desc = "Grinds stuff into itty bitty bits."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "juicer1"
 	density = 0
 	anchored = 0
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
 	active_power_usage = 100
 	circuit = /obj/item/weapon/circuitboard/grinder

@@ -33,7 +33,7 @@
 		name = "Mongoose Cat Belly Marking"
 		icon_state = "test"
 		body_parts = list(BP_TORSO)
-		species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_ZORREN_FLAT, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE) //This lets all races use the default hairstyles.
+		species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE) //This lets all races use the default hairstyles.
 
 	head_paint_front
 		name = "Head Paint Front"
@@ -106,9 +106,13 @@
 
 //TFF 16/1/20 - Cotton hair backport
 /datum/sprite_accessory/hair/ch
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
 	cotton
 		name = "Cotton"
 		icon_state = "hair_cotton"
-		icon_add = 'icons/mob/human_face_ch_add.dmi'
-		icon = 'icons/mob/human_face_ch.dmi'
 
+
+	unshavenreversemohawk
+		name = "Mohawk Reverse Unshaven"
+		icon_state = "hair_unshaven_reversemohawk"

@@ -89,3 +89,46 @@
 /obj/item/weapon/reagent_containers/food/snacks/garlicbread/New()
 	..()
 	bitesize = 4
+
+/obj/item/weapon/reagent_containers/food/snacks/steamtealeaf
+	name = "Steamed tea leaf"
+	desc = "A freshly picked tea leaf steamed to inhibit oxidation. Needs rolling."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "tealeafsteam"
+	nutriment_amt = 0
+	nutriment_desc = list("nothing" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/steamtealeaf/New()
+	..()
+	bitesize = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/steamtealeaf/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/weapon/material/kitchen/rollingpin))
+		new /obj/item/weapon/reagent_containers/food/snacks/steamrolltealeaf(src)
+		user << "You roll the steamed tea leaf."
+		qdel(src)
+
+/obj/item/weapon/reagent_containers/food/snacks/steamrolltealeaf
+	name = "Rolled steamed tea leaf"
+	desc = "A steamed tea leaf ready for drying."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "tealeafsteamroll"
+	nutriment_amt = 0
+	nutriment_desc = list("nothing" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/steamrolltealeaf/New()
+	..()
+	bitesize = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/greentealeaf
+	name = "Green tea leaf"
+	desc = "Green tea! Just grind and mix with hot water."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "greentealeaf"
+	nutriment_amt = 0
+	nutriment_desc = list("nothing" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/greentealeaf/New()
+	..()
+	reagents.add_reagent("tealeavesgreen", 6)
+	bitesize = 1

@@ -253,7 +253,7 @@
 			if(3)
 				if(diff==FORWARD)
 					user.visible_message("[user] installs external reinforced armor layer to [holder].", "You install external reinforced armor layer to [holder].")
-					qdel(used_atom)//CHOMPedit. Fixes polecat not useing it's armor plates up.
+					qdel(used_atom)//CHOMPedit upstream port. Fixes polecat not useing it's armor plates up.
 					holder.icon_state = "polecat18"
 				else
 					user.visible_message("[user] cuts internal armor layer from [holder].", "You cut the internal armor layer from [holder].")
@@ -263,8 +263,8 @@
 					user.visible_message("[user] secures external armor layer.", "You secure external reinforced armor layer.")
 					holder.icon_state = "polecat19"
 				else
-					user.visible_message("[user] pries external armor layer from [holder].", "You prie external armor layer from [holder].")
-					new /obj/item/mecha_parts/micro/part/polecat_armour(get_turf(holder))//CHOMPedit, actually gives you the polecat's armored plates back instead of plasteel.
+					user.visible_message("[user] pries external armor layer from [holder].", "You pry the external armor layer from [holder].") // Rykka does smol grammar fix.
+					new /obj/item/mecha_parts/micro/part/polecat_armour(get_turf(holder))// Actually gives you the polecat's armored plates back instead of plasteel.
 					holder.icon_state = "polecat17"
 			if(1)
 				if(diff==FORWARD)

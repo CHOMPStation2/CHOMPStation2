@@ -102,6 +102,13 @@ CIRCUITS BELOW
 	build_path = /obj/item/weapon/circuitboard/clonescanner
 	sort_string = "FAGAG"
 
+/datum/design/circuit/chem_master
+	name = "ChemMaster 3000"
+	id = "chemmaster"
+	req_tech = list(TECH_DATA = 3, TECH_MAGNET = 2)
+	build_path = /obj/item/weapon/circuitboard/chem_master
+	sort_string = "FAGAH"
+
 /datum/design/circuit/crewconsole
 	name = "crew monitoring console"
 	id = "crewconsole"
@@ -607,6 +614,26 @@ CIRCUITS BELOW
 	build_path = /obj/item/weapon/circuitboard/aicore
 	sort_string = "XAAAA"
 
+/datum/design/circuit/microwave/advanced
+	name = "deluxe microwave"
+	id = "deluxe microwave"
+	req_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 5, TECH_BLUESPACE = 4)
+	build_path = /obj/item/weapon/circuitboard/microwave/advanced
+	sort_string = "MAAAC"
+
+/datum/design/circuit/pointdefense
+	name = "point defense battery"
+	id = "pointdefense"
+	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 3, TECH_COMBAT = 4)
+	build_path = /obj/item/weapon/circuitboard/pointdefense
+	sort_string = "OAABA"
+
+/datum/design/circuit/pointdefense_control
+	name = "deluxe microwave"
+	id = "pointdefense_control"
+	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_COMBAT = 2)
+	build_path = /obj/item/weapon/circuitboard/pointdefense_control
+	sort_string = "OAABB"
 
 /* I have no idea how this was even running before, but it doesn't seem to be necessary.
 ///////////////////////////////////

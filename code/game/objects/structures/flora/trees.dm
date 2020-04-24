@@ -154,6 +154,12 @@
 /obj/structure/flora/tree/pine/choose_icon_state()
 	return "[base_state]_[rand(1, 3)]"
 
+//CHOMPStation Addition Start 15/2/20 TFF - Holodeck variation trees, drop no wood.
+/obj/structure/flora/tree/pine/holo
+	product = null
+	product_amount = 0
+//CHOMPStation Addition End
+
 
 /obj/structure/flora/tree/pine/xmas
 	name = "xmas tree"
@@ -214,6 +220,12 @@
 
 /obj/structure/flora/tree/dead/choose_icon_state()
 	return "[base_state]_[rand(1, 6)]"
+
+//CHOMPStation Addition Start 15/2/20 TFF - Holodeck variation trees, drop no wood.
+/obj/structure/flora/tree/dead/holo
+	product = null
+	product_amount = 0
+//CHOMPStation Addition End
 
 // Small jungle trees
 

@@ -68,3 +68,15 @@
 		/obj/item/weapon/reagent_containers/food/snacks/slice/bread
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/garlicbread
+	
+/datum/recipe/steamtealeaf
+	reagents = list("water" = 5)
+	fruit = list("tea" = 1)
+
+	result = /obj/item/weapon/reagent_containers/food/snacks/steamtealeaf
+
+/datum/recipe/greentealeaf //TODO: Figure out how to make this recipe with a drying rack.
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/steamrolltealeaf
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/greentealeaf
