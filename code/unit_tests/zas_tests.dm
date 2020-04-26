@@ -79,11 +79,11 @@
 
 /datum/unit_test/zas_area_test/supply_centcomm
 	name = "ZAS: Supply Shuttle"
-	area_path = /area/supply //yw edit: path changed
+	area_path = /area/shuttle/supply //yw edit: path changed	//CHOMPStation Edit TFF 23/4/20 - Fix Travis
 
 /datum/unit_test/zas_area_test/emergency_shuttle
 	name = "ZAS: Emergency Shuttle"
-	area_path = /area/shuttle/escape
+	area_path = /area/shuttle/escape/centcom	//CHOMPStation Edit TFF 23/4/20 - Fix Travis
 
 /datum/unit_test/zas_area_test/ai_chamber
 	name = "ZAS: AI Chamber"
