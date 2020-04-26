@@ -102,6 +102,8 @@
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
 	lateload_single_pick = null
+	
+	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
