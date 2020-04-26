@@ -14,3 +14,10 @@
 	cost = 100
 	containertype = /obj/structure/closet/crate
 	containername = "Instrument crate"
+
+/datum/supply_pack/recreation/piano
+	name = "Grand* Piano"
+	contains = list()
+	cost = 150
+	containertype = /obj/structure/largecrate/piano
+	containername = "Piano Crate"
