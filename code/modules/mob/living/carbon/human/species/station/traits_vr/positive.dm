@@ -212,10 +212,4 @@
 /datum/trait/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
-
-/datum/trait/daredevil
-	name = "Daredevil"
-	desc = "You will automatically vault tables and railings, even if it isn't in your best interest. Geronimo!"
-	cost = 1
-	var_changes = list("flags" = PASSTABLE)
 // YW Addition end
