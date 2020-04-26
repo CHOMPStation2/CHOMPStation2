@@ -6,6 +6,7 @@
 //
 
 /obj/item/clothing/head/helmet/space/void
+	species_restricted = list(SPECIES_HUMAN, SPECIES_NEVREAN, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
 	sprite_sheets = list(
 		SPECIES_TAJ 				= 'icons/mob/species/tajaran/helmet.dmi',
 		SPECIES_SKRELL 				= 'icons/mob/species/skrell/helmet.dmi',
@@ -19,7 +20,6 @@
 		SPECIES_FENNEC				= 'icons/mob/species/vulpkanin/helmet.dmi',
 		SPECIES_GREY_YW				= 'icons/mob/species/grey/helmet.dmi' /*ywedit*/
 		)
-
 	sprite_sheets_obj = list(
 		SPECIES_TAJ 			= 'icons/obj/clothing/species/tajaran/hats.dmi', // Copied from void.dm
 		SPECIES_SKRELL			= 'icons/obj/clothing/species/skrell/hats.dmi',  // Copied from void.dm
@@ -34,6 +34,7 @@
 		)
 
 /obj/item/clothing/suit/space/void
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_NEVREAN, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
 	sprite_sheets = list(
 		SPECIES_TAJ 				= 'icons/mob/species/tajaran/suit.dmi',
 		SPECIES_SKRELL 				= 'icons/mob/species/skrell/suit.dmi',
@@ -46,9 +47,6 @@
 		SPECIES_ZORREN_HIGH				= 'icons/mob/species/vulpkanin/suit.dmi',
 		SPECIES_FENNEC				= 'icons/mob/species/vulpkanin/suit.dmi'
 		)
-
-
-
 	sprite_sheets_obj = list(
 		SPECIES_TAJ			= 'icons/obj/clothing/species/tajaran/suits.dmi', // Copied from void.dm
 		SPECIES_SKRELL			= 'icons/obj/clothing/species/skrell/suits.dmi',  // Copied from void.dm
