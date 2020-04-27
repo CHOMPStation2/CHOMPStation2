@@ -69,7 +69,7 @@
 
 
 
-/obj/item/clothing/suit/space/rig
+/obj/item/clothing/suit/space/rig/ch
 	sprite_sheets = list(
 		SPECIES_HUMAN			= 'icons/mob/suit_ch.dmi',
 		SPECIES_TAJ 			= 'icons/mob/species/tajaran/suit_ch.dmi',
