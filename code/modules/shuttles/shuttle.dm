@@ -239,10 +239,10 @@
 		log_shuttle("Shuttle [src] aborting attempt_move() because current_location=[current_location] refuses.")
 		return FALSE
 
-	log_shuttle("[src] moving to [destination]. Areas are [english_list(shuttle_area)]")
+//	log_shuttle("[src] moving to [destination]. Areas are [english_list(shuttle_area)]") //CHOMPEdit: Disable debug messages indicating that it's working properly, only leaving improper ones.
 	var/list/translation = list()
 	for(var/area/A in shuttle_area)
-		log_shuttle("Translating [A]")
+//		log_shuttle("Translating [A]") //CHOMPEdit: Disable debug messages indicating that it's working.
 		translation += get_turf_translation(get_turf(current_location), get_turf(destination), A.contents)
 	var/old_location = current_location
 
@@ -252,11 +252,11 @@
 
 	// Actually do it! (This never fails)
 	perform_shuttle_move(destination, translation)
-	
+
 	// Observer pattern post-move
 	destination.shuttle_arrived(src)
 	GLOB.shuttle_moved_event.raise_event(src, old_location, destination)
-	
+
 	return TRUE
 
 
@@ -264,7 +264,7 @@
 //A note to anyone overriding move in a subtype. perform_shuttle_move() must absolutely not, under any circumstances, fail to move the shuttle.
 //If you want to conditionally cancel shuttle launches, that logic must go in short_jump() or long_jump()
 /datum/shuttle/proc/perform_shuttle_move(var/obj/effect/shuttle_landmark/destination, var/list/turf_translation)
-	log_shuttle("perform_shuttle_move() current=[current_location] destination=[destination]")
+//	log_shuttle("perform_shuttle_move() current=[current_location] destination=[destination]") //CHOMPEdit: Disable debug messages indicating that it's working.
 	//to_world("move_shuttle() called for [name] leaving [origin] en route to [destination].")
 
 	//to_world("area_coming_from: [origin]")
