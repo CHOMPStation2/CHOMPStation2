@@ -1246,22 +1246,22 @@
 		selected.reagent_transfer_verb = new_verb
 
 	if(href_list["reagent_nutri_rate"])
-		selected.gen_time_display = input(user, "Choose the time it takes to fill the belly from empty state using nutrition.", "Set Liquid Production Time.")  in list("15 minutes","30 minutes","1 hour","3 hours","6 hours","12 hours","24 hours")|null
+		selected.gen_time_display = input(user, "Choose the time it takes to fill the belly from empty state using nutrition.", "Set Liquid Production Time.")  in list("10 minutes","30 minutes","1 hour","3 hours","6 hours","12 hours","24 hours")|null
 		switch(selected.gen_time_display)
-			if("15 minutes")
+			if("10 minutes")
 				selected.gen_time = 0
 			if("30 minutes")
-				selected.gen_time = 1
+				selected.gen_time = 2
 			if("1 hour")
-				selected.gen_time = 3
+				selected.gen_time = 5
 			if("3 hours")
-				selected.gen_time = 11
+				selected.gen_time = 17
 			if("6 hours")
-				selected.gen_time = 23
+				selected.gen_time = 29
 			if("12 hours")
-				selected.gen_time = 47
+				selected.gen_time = 59
 			if("24 hours")
-				selected.gen_time = 95
+				selected.gen_time = 119
 			if(null)
 				return
 
