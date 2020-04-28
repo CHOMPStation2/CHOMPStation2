@@ -17,8 +17,9 @@
 	desc = "Hot, steamy, moist meat bread wrapped in a corn leaf to retain moisture and flavor."
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "tamales"
+	trash = /obj/item/trash/plate
 	nutriment_amt = 9
-	nutriment_desc = list("moist bread" = 5, "beefy" = 4, "tangy and savory vegetables" = 3)
+	nutriment_desc = list("doughy bread" = 5, "beefy" = 4, "tangy and savory vegetables" = 3)
 
 /obj/item/weapon/reagent_containers/food/snacks/tamales/New()
 	..()
@@ -54,19 +55,20 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/pandenata
 	name = "Pan de nata"
-	desc = "Large spongy and soft biscuits that taste creamy and sweet, a treat like this would be perfect on a lazy day."
+	desc = "A large spongy and soft biscuits that taste creamy and sweet, a treat like this would be perfect on a lazy day."
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "pandenata"
+	trash = /obj/item/trash/plate
 	nutriment_amt = 5
-	nutriment_desc = list("sweet creamy bread" = 3)
+	nutriment_desc = list("creamy" = 3, "sweet bread" = 3)
 
 /obj/item/weapon/reagent_containers/food/snacks/pandenata/New()
 	..()
-	bitesize = 4
+	bitesize = 3
 
 /obj/item/weapon/reagent_containers/food/snacks/tocino
 	name = "Tocino"
-	desc = "A form of bacon made from cuts of pork that has cured in wine, sugar and salt for a while, best served on a hot skillet so remains warm and tasty til the last bite."
+	desc = "A form of bacon made from cuts of pork that has cured in wine, sugar and salt, best served on a hot skillet so it remains hot and tasty til the last bite."
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "tocino"
 	trash = /obj/item/trash/plate
@@ -90,6 +92,7 @@
 	..()
 	bitesize = 4
 
+<<<<<<< Updated upstream
 /obj/item/weapon/reagent_containers/food/snacks/steamtealeaf
 	name = "Steamed tea leaf"
 	desc = "A freshly picked tea leaf steamed to inhibit oxidation. Needs rolling."
@@ -132,3 +135,51 @@
 	..()
 	reagents.add_reagent("tealeavesgreen", 6)
 	bitesize = 1
+=======
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/bigbeanburrito
+	name = "Big Bean Burrito"
+	desc = "The BBB. An engorged burrito filled to the brim of what makes Mexico. Beans, cheese and meat that ooze by how stuffed it is"
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "bigbeanburrito"
+	nutriment_amt = 15
+	nutriment_desc = list("tortilla" = 2, "meat" = 3, "bean" = 5, "cheese" = 3, "Mexico" = 7)
+
+/obj/item/weapon/reagent_containers/food/snacks/bigbeanburrito/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 12)
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 6
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito
+	name = "Supremo burrito"
+	desc = "The one and only burrito that can rule them all. This monster of a burrito is large enough to hide someone inside, unless it already has someone inside."
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "supremoburrito"
+	nutriment_amt = 75
+	nutriment_desc = list("tortilla" = 2, "meat" = 4, "bean" = 7, "cheese" = 4, "chili" = 1, "Mexico" = 7)
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 50)
+	reagents.add_reagent("nutriment", 55)
+	reagents.add_reagent("capsaicin", 3)
+	bitesize = 15
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/meatbread/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 20)
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/slice/meatbread
+	name = "meatbread slice"
+	desc = "A slice of delicious meatbread."
+	icon_state = "meatbreadslice"
+	trash = /obj/item/trash/plate
+	filling_color = "#FF7575"
+	bitesize = 2
+	center_of_mass = list("x"=16, "y"=16)
+	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/meatbread
+
+/obj/item/weapon/reagent_containers/food/snacks/slice/meatbread/filled
+	filled = TRUE
+>>>>>>> Stashed changes
