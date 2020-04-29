@@ -8,7 +8,7 @@
 	nutriment_amt = 3
 	nutriment_desc = list("sour cabbage" = 3)
 
-/obj/item/weapon/reagent_containers/food/snacks/sauerkraut/New()
+/obj/item/weapon/reagent_containers/food/snacks/sauerkraut/Initialize()
 	..()
 	bitesize = 3
 
@@ -21,7 +21,7 @@
 	nutriment_amt = 9
 	nutriment_desc = list("doughy bread" = 5, "beefy" = 4, "tangy and savory vegetables" = 3)
 
-/obj/item/weapon/reagent_containers/food/snacks/tamales/New()
+/obj/item/weapon/reagent_containers/food/snacks/tamales/Initialize()
 	..()
 	reagents.add_reagent("protein", 5)
 	bitesize = 6
@@ -35,7 +35,7 @@
 	nutriment_amt = 6
 	nutriment_desc = list("sour cabbage" = 4, "sausage" = 3, "mildly sweet vegetables" = 3)
 
-/obj/item/weapon/reagent_containers/food/snacks/bigos/New()
+/obj/item/weapon/reagent_containers/food/snacks/bigos/Initialize()
 	..()
 	reagents.add_reagent("protein", 4)
 	reagents.add_reagent("water", 3)
@@ -49,7 +49,7 @@
 	nutriment_amt = 5
 	nutriment_desc = list("sweet bread" = 3, "strawberry" = 2)
 
-/obj/item/weapon/reagent_containers/food/snacks/concha/New()
+/obj/item/weapon/reagent_containers/food/snacks/concha/Initialize()
 	..()
 	bitesize = 3
 
@@ -62,7 +62,7 @@
 	nutriment_amt = 5
 	nutriment_desc = list("creamy" = 3, "sweet bread" = 3)
 
-/obj/item/weapon/reagent_containers/food/snacks/pandenata/New()
+/obj/item/weapon/reagent_containers/food/snacks/pandenata/Initialize()
 	..()
 	bitesize = 3
 
@@ -75,7 +75,7 @@
 	nutriment_amt = 8
 	nutriment_desc = list("crispy sweet meat" = 3, "savory sauce" = 2, "salty" = 2)
 
-/obj/item/weapon/reagent_containers/food/snacks/tocino/New()
+/obj/item/weapon/reagent_containers/food/snacks/tocino/Initialize()
 	..()
 	reagents.add_reagent("protein", 5)
 	bitesize = 5
@@ -88,11 +88,70 @@
 	nutriment_amt = 5
 	nutriment_desc = list("onions and melted cheese" = 2, "bread and seasonings" = 2)
 
-/obj/item/weapon/reagent_containers/food/snacks/garlicbread/New()
+/obj/item/weapon/reagent_containers/food/snacks/garlicbread/Initialize()
 	..()
 	bitesize = 4
 
-<<<<<<< Updated upstream
+/obj/item/weapon/reagent_containers/food/snacks/plumpburger
+	name = "Plump Burger"
+	desc = "Did they switch a meat patty with a plump mushroom on this burger?, lets hope it's as tasty as a normal burger"
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "plumpburger"
+	nutriment_amt = 5
+	nutriment_desc = list("crispy sweet mushroom" = 3, "earthy" = 2, "salty" = 2)
+
+/obj/item/weapon/reagent_containers/food/snacks/plumpburger/Initialize()
+	..()
+	reagents.add_reagent("protein", 5)
+	bitesize = 5
+
+
+
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito
+	name = "Big Bean Burrito"
+	desc = "The BBB. An engorged burrito filled to the brim of what makes Mexico. Beans, cheese and meat that ooze by how stuffed it is"
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "bigbeanburrito"
+	nutriment_amt = 15
+	nutriment_desc = list("tortilla" = 2, "meat" = 3, "bean" = 5, "cheese" = 3, "Mexico" = 7)
+
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 12)
+	reagents.add_reagent("nutriment", 15)
+	bitesize = 6
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito
+	name = "Supremo burrito"
+	desc = "The one and only burrito that can rule them all. This monster of a burrito is large enough to hide someone inside, unless it already has someone inside."
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "supremoburrito"
+	slice_path = /obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled
+	slices_num = 5
+	nutriment_desc = list("tortilla" = 2, "meat" = 4, "bean" = 7, "cheese" = 4, "chili" = 1, "Mexico" = 7)
+	nutriment_amt = 75
+
+
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 50)
+	reagents.add_reagent("nutriment", 55)
+	reagents.add_reagent("capsaicin", 3)
+	bitesize = 15
+
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled
+	name = "Big Bean Burrito"
+	desc = "The BBB. An engorged burrito filled to the brim of what makes Mexico. Beans, cheese and meat that ooze by how stuffed it is"
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "bigbeanburrito"
+	bitesize = 15
+	whole_path = /obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito
+
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled/filled
+	filled = TRUE
+
+
+/*	Tea
 /obj/item/weapon/reagent_containers/food/snacks/steamtealeaf
 	name = "Steamed tea leaf"
 	desc = "A freshly picked tea leaf steamed to inhibit oxidation. Needs rolling."
@@ -101,7 +160,7 @@
 	nutriment_amt = 0
 	nutriment_desc = list("nothing" = 1)
 
-/obj/item/weapon/reagent_containers/food/snacks/steamtealeaf/New()
+/obj/item/weapon/reagent_containers/food/snacks/steamtealeaf/Initialize()
 	..()
 	bitesize = 1
 
@@ -119,7 +178,7 @@
 	nutriment_amt = 0
 	nutriment_desc = list("nothing" = 1)
 
-/obj/item/weapon/reagent_containers/food/snacks/steamrolltealeaf/New()
+/obj/item/weapon/reagent_containers/food/snacks/steamrolltealeaf/Initialize()
 	..()
 	bitesize = 1
 
@@ -131,55 +190,8 @@
 	nutriment_amt = 0
 	nutriment_desc = list("nothing" = 1)
 
-/obj/item/weapon/reagent_containers/food/snacks/greentealeaf/New()
+/obj/item/weapon/reagent_containers/food/snacks/greentealeaf/Initialize()
 	..()
 	reagents.add_reagent("tealeavesgreen", 6)
 	bitesize = 1
-=======
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/bigbeanburrito
-	name = "Big Bean Burrito"
-	desc = "The BBB. An engorged burrito filled to the brim of what makes Mexico. Beans, cheese and meat that ooze by how stuffed it is"
-	icon = 'icons/obj/food_ch.dmi'
-	icon_state = "bigbeanburrito"
-	nutriment_amt = 15
-	nutriment_desc = list("tortilla" = 2, "meat" = 3, "bean" = 5, "cheese" = 3, "Mexico" = 7)
-
-/obj/item/weapon/reagent_containers/food/snacks/bigbeanburrito/Initialize()
-	. = ..()
-	reagents.add_reagent("protein", 12)
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 6
-
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito
-	name = "Supremo burrito"
-	desc = "The one and only burrito that can rule them all. This monster of a burrito is large enough to hide someone inside, unless it already has someone inside."
-	icon = 'icons/obj/food_ch.dmi'
-	icon_state = "supremoburrito"
-	nutriment_amt = 75
-	nutriment_desc = list("tortilla" = 2, "meat" = 4, "bean" = 7, "cheese" = 4, "chili" = 1, "Mexico" = 7)
-
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito/Initialize()
-	. = ..()
-	reagents.add_reagent("protein", 50)
-	reagents.add_reagent("nutriment", 55)
-	reagents.add_reagent("capsaicin", 3)
-	bitesize = 15
-
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/meatbread/Initialize()
-	. = ..()
-	reagents.add_reagent("protein", 20)
-	bitesize = 2
-
-/obj/item/weapon/reagent_containers/food/snacks/slice/meatbread
-	name = "meatbread slice"
-	desc = "A slice of delicious meatbread."
-	icon_state = "meatbreadslice"
-	trash = /obj/item/trash/plate
-	filling_color = "#FF7575"
-	bitesize = 2
-	center_of_mass = list("x"=16, "y"=16)
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/meatbread
-
-/obj/item/weapon/reagent_containers/food/snacks/slice/meatbread/filled
-	filled = TRUE
->>>>>>> Stashed changes
+*/
