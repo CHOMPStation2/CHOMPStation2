@@ -86,9 +86,6 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito
 
-/*
-<<<<<<< Updated upstream
-
 /datum/recipe/steamtealeaf
 	reagents = list("water" = 5)
 	fruit = list("tea" = 1)
@@ -100,8 +97,3 @@
 		/obj/item/weapon/reagent_containers/food/snacks/steamrolltealeaf
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/greentealeaf
-=======
-
-
->>>>>>> Stashed changes
-*/

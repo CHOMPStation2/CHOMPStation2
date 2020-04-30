@@ -129,7 +129,7 @@
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled
 	slices_num = 5
 	nutriment_desc = list("tortilla" = 2, "meat" = 4, "bean" = 7, "cheese" = 4, "chili" = 1, "Mexico" = 7)
-	nutriment_amt = 75
+	nutriment_amt = 50
 
 
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito/Initialize()
@@ -137,21 +137,19 @@
 	reagents.add_reagent("protein", 50)
 	reagents.add_reagent("nutriment", 55)
 	reagents.add_reagent("capsaicin", 3)
-	bitesize = 15
+	bitesize = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito
 	name = "Big Bean Burrito"
 	desc = "The BBB. An engorged burrito filled to the brim of what makes Mexico. Beans, cheese and meat that ooze by how stuffed it is"
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "bigbeanburrito"
-	bitesize = 15
+	bitesize = 3
 	whole_path = /obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled/filled
+/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled
 	filled = TRUE
 
-
-/*	Tea
 /obj/item/weapon/reagent_containers/food/snacks/steamtealeaf
 	name = "Steamed tea leaf"
 	desc = "A freshly picked tea leaf steamed to inhibit oxidation. Needs rolling."
@@ -194,4 +192,3 @@
 	..()
 	reagents.add_reagent("tealeavesgreen", 6)
 	bitesize = 1
-*/
