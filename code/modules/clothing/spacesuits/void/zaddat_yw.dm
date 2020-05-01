@@ -12,7 +12,7 @@
 	desc = "A Shroud helmet designed for good visibility in low-light environments."
 	icon_state = "zaddat_engie"
 	item_state = "zaddat_engie"
-	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
 
 /obj/item/clothing/suit/space/void/zaddat/security
 	name = "\improper Security Knight's Shroud"
