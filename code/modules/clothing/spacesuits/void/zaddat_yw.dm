@@ -17,7 +17,7 @@
 /obj/item/clothing/suit/space/void/zaddat/security
 	name = "\improper Security Knight's Shroud"
 	desc = "This distinctive steel-plated Shroud was popularized by the Noble Guild."
-	armor = list(melee = 30, bullet = 20, laser = 20,energy = 10, bomb = 10, bio = 100, rad = 50)
+	armor = list(melee = 30, bullet = 20, laser = 20,energy = 10, bomb = 10, bio = 100, rad = 30)
 	icon_state = "zaddat_knight"
 	item_state = "zaddat_knight"
 	helmet = new/obj/item/clothing/head/helmet/space/void/zaddat/security
