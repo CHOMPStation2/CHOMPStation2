@@ -33,7 +33,7 @@
 
 
 
-/obj/item/clothing/suit/space/void/zaddat/security/custom_suit()
+/obj/item/clothing/suit/space/void/zaddat/security/custom_suit() //so it cant turn into looks that dont makes sense and keep security name in it
 	set name = "Customize Shroud"
 	set category = "Object"
 	set desc = "Pick an appearence for your Shroud."
