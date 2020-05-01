@@ -1789,7 +1789,7 @@
 #include "code\modules\client\preference_setup\loadout\loadout_vr.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_xeno.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_xeno_vr.dm"
-#include "code\modules\client\preference_setup\loadout\xeno_yw.dm"
+#include "code\modules\client\preference_setup\loadout\loadout_xeno_yw.dm"
 #include "code\modules\client\preference_setup\occupation\occupation.dm"
 #include "code\modules\client\preference_setup\skills\skills.dm"
 #include "code\modules\client\preference_setup\vore\01_ears.dm"
