@@ -43,3 +43,9 @@
 	build_path = /obj/item/device/radio/electropack
 	materials = list(DEFAULT_WALL_MATERIAL = 12500, "glass" = 3125)
 	hidden = 1
+
+/datum/design/item/autolathe/devices/timer
+	name = "timer"
+	id = "timer"
+	build_path = /obj/item/device/assembly/timer
+	materials = list(DEFAULT_WALL_MATERIAL = 1000, "glass" = 250)
