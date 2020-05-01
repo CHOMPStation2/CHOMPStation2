@@ -327,6 +327,13 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 625)
 	hidden = 1
 
+/datum/design/item/autolathe/arms/tacknife
+	name = "tactical knife"
+	id = "tacknife"
+	build_path = /obj/item/weapon/material/knife/tacknife
+	materials = list(DEFAULT_WALL_MATERIAL = 625)
+	hidden = 1
+
 /datum/design/item/autolathe/arms/flamethrower
 	name = "flamethrower"
 	id = "flamethrower"
