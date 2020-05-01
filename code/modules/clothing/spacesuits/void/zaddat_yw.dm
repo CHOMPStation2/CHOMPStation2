@@ -1,7 +1,7 @@
 /obj/item/clothing/suit/space/void/zaddat/engineer
 	name = "\improper Engineer's Guild Shroud"
 	desc = "This rugged Shroud was created by the Xozi Engineering Guild."
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
 	icon_state = "zaddat_engie"
 	item_state = "zaddat_engie"
 	helmet = new/obj/item/clothing/head/helmet/space/void/zaddat/engineer
