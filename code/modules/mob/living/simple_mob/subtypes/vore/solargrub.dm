@@ -109,8 +109,13 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
 	visible_message("<span class='warning'>\The [src]'s shell rips open and evolves!</span>")
+
+/*
+//Commenting this bit out. It's unncecessary, especially since we only use one form.
 	var/chosen_form = pickweight(adult_forms)
 	new chosen_form(get_turf(src))
+*/
+	new adult_forms(get_turf(src)) //Added this line to spawn the only form because the above is commented out.
 	qdel(src)
 // CHOMPEDIT End, Rykka waz here. *pawstamp*
 
