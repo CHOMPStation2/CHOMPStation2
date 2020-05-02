@@ -55,10 +55,10 @@ var/const/SAR 				=(1<<14)
 	minimal_player_age = 7
 	pto_type = PTO_EXPLORATION
 
-	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway)
-	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway)
+	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway, access_pathfinder)
+	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway, access_pathfinder)
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
-	job_description = "	The Pathfinder's job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
+	job_description = "The Pathfinder's job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
 
 /datum/job/pilot
 	title = "Pilot"
@@ -111,10 +111,10 @@ var/const/SAR 				=(1<<14)
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
 
-	access = list(access_medical, access_medical_equip, access_eva, access_maint_tunnels, access_external_airlocks)		//nerfs SAR access. Why the fuck do they have access to surgery and chemistry? They're not doctors, their medics.
-	minimal_access = list(access_medical, access_medical_equip, access_eva) //nerfs SAR access. Why the fuck do they have access to surgery and chemistry? They're not doctors, their medics.
+	access = list(access_medical, access_medical_equip, access_eva, access_maint_tunnels, access_external_airlocks, access_sar, access_chemistry) //restoring chemistry access. FMs need it to mix meds, and they're basically just glorified EMTs - who also have chemistry access.
+	minimal_access = list(access_medical, access_medical_equip, access_eva, access_sar)
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
-	job_description = "A Field medic works as the field doctor of expedition teams."
+	job_description = "A Field Medic works as the field doctor of expedition teams."
 
 /datum/job/offduty_exploration
 	title = "Off-duty Explorer"
