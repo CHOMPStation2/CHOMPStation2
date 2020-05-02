@@ -16,6 +16,7 @@
 #include "code\_map_tests.dm"
 #include "code\_unit_tests.dm"
 #include "code\global.dm"
+#include "code\global_ch.dm"
 #include "code\global_init.dm"
 #include "code\global_vr.dm"
 #include "code\global_yw.dm"
