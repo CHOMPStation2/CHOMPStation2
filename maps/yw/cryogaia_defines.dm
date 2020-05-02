@@ -177,15 +177,6 @@
 
 	planet_datums_to_make = list(/datum/planet/borealis2)
 
-//Extra cameras that make use of the new outside area
-/obj/machinery/camera/auto_network/outside
-	name = "external security camera"
-	network = list(NETWORK_OUTSIDE)
-
-/obj/machinery/camera/auto_network/motion/outside
-	name = "external motion camera"
-	network = list(NETWORK_OUTSIDE)
-
 /datum/map/cryogaia/perform_map_generation()
 
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_CRYOGAIA_MINE, world.maxx, world.maxy) // Create the mining Z-level.
