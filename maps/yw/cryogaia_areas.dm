@@ -215,6 +215,12 @@
 	requires_power = 1
 	base_turf = /turf/space
 
+/area/shuttle/security
+	name = "\improper Security Interceptor"
+	icon_state = "shuttle2"
+	requires_power = 1
+	base_turf = /turf/space
+
 // Bad guys!!
 /area/shuttle/mercenary
 	name = "\improper Mercenary Vessel"
@@ -275,6 +281,14 @@
 	icon_state = "brig"
 /area/security/auxiliarrystation
 	name = "\improper Security Auxiliary Station"
+	icon_state = "security"
+
+/area/security/pilotroom
+	name = "\improper Security Pilot Ready Room"
+	icon_state = "red2"
+
+/area/security/hangar
+	name = "\improper Security Interceptor Hangar"
 	icon_state = "security"
 
 /area/security/sorting
