@@ -7,7 +7,7 @@
 	robot_module_types += "Servicehound" //YW changes
 	robot_module_types += "BoozeHound" //YW changes
 	return 1
-/*
+/* //ChompStation Removal
 var/list/shell_module_types = list(
 	"Standard", "Engineering", "Surgeon",  "Crisis",
 	"Miner", "Janitor", "Service", "Clerical",
