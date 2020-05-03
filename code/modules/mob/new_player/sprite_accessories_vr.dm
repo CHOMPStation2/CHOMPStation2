@@ -458,7 +458,7 @@
 		species_allowed = list(SPECIES_XENOHYBRID)
 		gender = NEUTER
 
-	xeno_head_hunter_color //editing code instead of the sprite because its easier to track
+	xeno_head_hunter_color //ChompstationEdit editing code instead of the sprite because its easier to track
 		name = "Hunter dome"
 		icon = 'icons/mob/human_face_ch.dmi'
 		icon_add = 'icons/mob/human_face_ch_add.dmi'
