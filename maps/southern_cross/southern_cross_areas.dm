@@ -751,15 +751,12 @@
 	name = "\improper First Deck Fore Auxiliary Dock"
 	icon_state = "docking_hallway"
 
+//CHOMPStation Edit Start TFF 4/5/20 - One of these ain't the same thing, bruh. Escape Pod 1, Escape Pod 2, Research Access Hallway.
 /area/hallway/secondary/escape/firstdeck/ep_port
 	name = "\improper Large Escape Pod 2 Port"
 	icon_state = "escape_pod"
 
-/area/hallway/secondary/escape/firstdeck/ep_starboard1
-	name = "\improper First Deck Research Access Hallway"
-	icon_state = "escape_pod"
-
-/area/hallway/secondary/escape/firstdeck/ep_starboard2
+/area/hallway/secondary/escape/firstdeck/ep_starboard
 	name = "\improper Large Escape Pod 2 Starboard"
 	icon_state = "escape_pod"
 
@@ -770,6 +767,11 @@
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard
 	name = "\improper Escape Pods Aft Starboard"
 	icon_state = "escape_pod"
+
+/area/hallway/secondary/firstdeck/research_access
+	name = "\improper First Deck Research Access Hallway"
+	icon_state = "hallS"
+//CHOMPStation Edit End
 
 /area/hangar
 	name = "\improper First Deck Hangar"
