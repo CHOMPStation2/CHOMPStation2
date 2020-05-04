@@ -458,10 +458,10 @@
 		species_allowed = list(SPECIES_XENOHYBRID)
 		gender = NEUTER
 
-	xeno_head_hunter_color
+	xeno_head_hunter_color //ChompstationEdit editing code instead of the sprite because its easier to track
 		name = "Hunter dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
+		icon = 'icons/mob/human_face_ch.dmi'
+		icon_add = 'icons/mob/human_face_ch_add.dmi'
 		icon_state = "cxeno_hunter"
 		species_allowed = list(SPECIES_XENOHYBRID)
 		gender = NEUTER
