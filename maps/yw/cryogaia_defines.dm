@@ -226,7 +226,8 @@
 	icon_state = "globe"
 	color = "#00AAFF"
 	initial_generic_waypoints = list(
-		"cryogaia_excursion_hangar"
+		"cryogaia_excursion_hangar",
+		"cryogaia_security_hangar"
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = null //None at the moment. Plains would be added here.
