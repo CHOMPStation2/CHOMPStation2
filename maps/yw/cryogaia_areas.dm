@@ -42,6 +42,8 @@
 
 /area/borealis2/outdoors/grounds/power
 	name = "\The Exterior Powerline"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "yellow"
 
 /area/borealis2/outdoors/grounds/traderpad
 	name = "\improper Cryogaia Commerce Pad"
