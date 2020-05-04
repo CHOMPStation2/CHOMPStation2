@@ -142,7 +142,7 @@
 /datum/design/item/autolathe/general/spraybottle
 	name = "empty spray bottle"
 	id = "spraybottle"
-	build_path = /obj/item/stack/rods
+	build_path = /obj/item/weapon/reagent_containers/spray
 	materials = list(DEFAULT_WALL_MATERIAL = 375, "glass" = 375)
 
 /datum/design/item/autolathe/general/knife

@@ -39,7 +39,7 @@
 	var/temp_search
 	var/selected_category
 	var/screen = 1
-	var/list/categories = list("Arms and Ammunition", "Devices", "Engineering", "General", "Security", "Medical", "Tools")
+	var/list/categories = list("Arms and Ammunition", "Devices", "Engineering", "General", "Medical", "Tools")
 
 	var/datum/wires/autolathe/wires = null
 
@@ -102,7 +102,7 @@
 			var/list/designs = list()
 			data["designs"] = designs
 			for(var/datum/design/item/autolathe/D in files.known_designs)
-				if(D.hidden && !hacked || selected_category != D.category)
+				if(!D.build_path || D.hidden && !hacked || selected_category != D.category)
 					continue
 				var/list/design = list()
 				designs[++designs.len] = design

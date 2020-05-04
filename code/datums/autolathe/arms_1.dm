@@ -202,11 +202,6 @@
 	build_path = /obj/item/ammo_magazine/m10mm
 	materials = list(DEFAULT_WALL_MATERIAL = 1875)
 
-/datum/design/item/autolathe/arms/pistol_44
-	name = "pistol magazine (.44)"
-	id = "pistol_44"
-	build_path = /obj/item/ammo_magazine/m44
-	materials = list(DEFAULT_WALL_MATERIAL = 1575)
 
 /////// 5.45mm
 /datum/design/item/autolathe/arms/rifle_545
@@ -329,6 +324,13 @@
 	name = "knuckle dusters"
 	id = "knuckledusters"
 	build_path = /obj/item/clothing/gloves/knuckledusters
+	materials = list(DEFAULT_WALL_MATERIAL = 625)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/tacknife
+	name = "tactical knife"
+	id = "tacknife"
+	build_path = /obj/item/weapon/material/knife/tacknife
 	materials = list(DEFAULT_WALL_MATERIAL = 625)
 	hidden = 1
 
