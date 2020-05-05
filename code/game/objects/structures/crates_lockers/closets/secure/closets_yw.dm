@@ -53,6 +53,7 @@
 		/obj/item/weapon/material/knife/tacknife/survival,
 		/obj/item/clothing/head/pilot/alt,
 		/obj/item/clothing/mask/gas/half,
+		/obj/item/clothing/suit/storage/toggle/yw/secjacket
 		/obj/item/clothing/under/rank/khi/sec/pilot,
 		/obj/item/clothing/gloves/fingerless,
 		/obj/item/weapon/cartridge/security,
@@ -68,4 +69,5 @@
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/device/flashlight/maglight,
-		/obj/item/device/radio)
+		/obj/item/device/radio
+		)
