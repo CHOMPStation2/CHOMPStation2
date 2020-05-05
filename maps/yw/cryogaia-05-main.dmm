@@ -16815,12 +16815,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
@@ -16836,10 +16837,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	icon_state = "intact-supply";
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -38145,19 +38143,28 @@
 /turf/simulated/floor/tiled/red,
 /area/security/security_equiptment_storage)
 "bsC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/workshop)
 "bsE" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Workshop";
-	req_access = newlist();
-	req_one_access = list(14,24)
+	req_one_access = list(10)
 	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
@@ -38181,6 +38188,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -38190,6 +38204,13 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -38839,9 +38860,15 @@
 	icon_state = "tube1";
 	pixel_y = 0
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/workshop)
 "btX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
 /turf/simulated/floor/carpet,
 /area/engineering/workshop)
 "btY" = (
@@ -38851,6 +38878,9 @@
 "btZ" = (
 /obj/structure/bed/chair/sofa/right{
 	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
 /turf/simulated/floor/carpet,
 /area/engineering/workshop)
@@ -39488,18 +39518,22 @@
 /obj/structure/bed/chair/sofa{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 2;
-	listening = 1;
-	name = "Common Channel";
-	pixel_y = -21
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
 	},
 /turf/simulated/floor/carpet,
 /area/engineering/workshop)
 "bvc" = (
 /obj/structure/bed/chair/sofa/corner{
 	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	dir = 2;
+	listening = 1;
+	name = "Common Channel";
+	pixel_y = -21
 	},
 /turf/simulated/floor/carpet,
 /area/engineering/workshop)
@@ -42648,8 +42682,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Workshop";
-	req_access = newlist();
-	req_one_access = list(14,24)
+	req_one_access = list(10)
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -42667,8 +42700,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Workshop";
-	req_access = newlist();
-	req_one_access = list(14,24)
+	req_one_access = list(10)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -62859,6 +62891,16 @@
 /obj/structure/sign/directions/science,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
+"dFM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/workshop)
 "dQb" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	frequency = 1380;
@@ -63594,6 +63636,13 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
+"lhs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/workshop)
 "lya" = (
 /obj/machinery/light{
 	dir = 4;
@@ -64836,12 +64885,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"ylY" = (
-/obj/machinery/door/airlock/glass_engineering{
-	name = "Engine Gas Storage"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/engine_room)
 
 (1,1,1) = {"
 aaa
@@ -94424,7 +94467,7 @@ bJX
 aHV
 aKw
 bqs
-bsC
+lhs
 btY
 bvb
 bro
@@ -94676,7 +94719,7 @@ bdI
 aHV
 aKw
 bqs
-bsC
+dFM
 btZ
 bvc
 bro
@@ -94950,7 +94993,7 @@ bPE
 bPE
 bPE
 bPE
-ylY
+bVg
 bVg
 bPE
 bPE
