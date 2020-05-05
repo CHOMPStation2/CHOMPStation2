@@ -1,7 +1,7 @@
 /datum/gear/eyes/arglasses/sec
 	display_name = "AR-S glasses (Sec, BSG)"
 	path = /obj/item/clothing/glasses/omnihud/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden","Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Detective","Blueshield Guard")
 
 /datum/gear/eyes/arglasses/eng
 	display_name = "AR-E glasses (Eng)"
