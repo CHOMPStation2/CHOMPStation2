@@ -40,7 +40,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.preview_icon = null
 	S["bgstate"]			>> pref.bgstate
 	S["body_descriptors"]	>> pref.body_descriptors
-	S["Wingdings"]          >> pref.wingdings //YWadd
+	S["Wingdings"]			>> pref.wingdings //YWadd start
+	S["colorblind_mono"]	>> pref.colorblind_mono
+	S["colorblind_vulp"]	>> pref.colorblind_vulp
+	S["colorblind_taj"] 	>> pref.colorblind_taj 
+	S["haemophilia"]        >> pref.haemophilia //YWadd end
 
 /datum/category_item/player_setup_item/general/body/save_character(var/savefile/S)
 	S["species"]			<< pref.species
@@ -71,7 +75,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		<< pref.synth_markings
 	S["bgstate"]			<< pref.bgstate
 	S["body_descriptors"]	<< pref.body_descriptors
-	S["Wingdings"]          << pref.wingdings //YWadd
+	S["Wingdings"]          << pref.wingdings //YWadd start
+	S["colorblind_mono"]	<< pref.colorblind_mono
+	S["colorblind_vulp"]	<< pref.colorblind_vulp
+	S["colorblind_taj"] 	<< pref.colorblind_taj 
+	S["haemophilia"]        << pref.haemophilia //YWadd end
 
 /datum/category_item/player_setup_item/general/body/sanitize_character(var/savefile/S)
 	if(!pref.species || !(pref.species in GLOB.playable_species))
@@ -128,16 +136,20 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.b_synth	= pref.b_synth
 	character.synth_markings = pref.synth_markings
 	if(pref.species == "Grey")//YWadd START
-		character.wingdings = pref.wingdings //YWadd END
+		character.wingdings = pref.wingdings
 
-	if(pref.colorblind_1 == 1)
+	if(pref.colorblind_mono == 1)
 		character.add_modifier(/datum/modifier/trait/colorblind_monochrome)
 
-	else if(pref.colorblind_2 == 1)
+	else if(pref.colorblind_vulp == 1)
 		character.add_modifier(/datum/modifier/trait/colorblind_vulp)
 
-	else if(pref.colorblind_3 == 1)
+	else if(pref.colorblind_taj == 1)
 		character.add_modifier(/datum/modifier/trait/colorblind_taj)
+
+	if(pref.haemophilia == 1)
+		character.add_modifier(/datum/modifier/trait/haemophilia)
+	//YWadd END
 
 	// Destroy/cyborgize organs and limbs.
 	for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
@@ -213,15 +225,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 	if(has_flag(mob_species, HAS_SKIN_TONE))
 		. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
-	. += "<b>Disabilities</b><br> <a href='?src=\ref[src];disabilities_yw=1'>Adjust</a><br>"
-	//. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
+	. += "<b>Disabilities</b><br> <a href='?src=\ref[src];disabilities_yw=1'>Adjust</a><br>" // YWadd
+	//YWcommented moved onto disabilities. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
 	. += "Limbs: <a href='?src=\ref[src];limbs=1'>Adjust</a> <a href='?src=\ref[src];reset_limbs=1'>Reset</a><br>"
 	. += "Internal Organs: <a href='?src=\ref[src];organs=1'>Adjust</a><br>"
-	//YW Edit ADD
-	//if(pref.species == "Grey")
-	//	. += "Speak Wingdings: <a href='?src=\ref[src];wingdings=1'><b>[pref.wingdings ? "Yes" : "No"]</b></a><br>"
-	//YW Edit End
-
 	//display limbs below
 	var/ind = 0
 	for(var/name in pref.organ_data)
@@ -802,7 +809,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["disabilities"])
 		var/disability_flag = text2num(href_list["disabilities"])
 		pref.disabilities ^= disability_flag
-		Disabilities_YW(usr)
+		Disabilities_YW(usr) //YW Edit
 
 	else if(href_list["toggle_preview_value"])
 		pref.equip_preview_mob ^= text2num(href_list["toggle_preview_value"])
@@ -833,18 +840,32 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.wingdings = !pref.wingdings
 		Disabilities_YW(usr)
 
-	else if(href_list["colorblind_1"])
-		pref.colorblind_1 = !pref.colorblind_1
+	else if(href_list["colorblind_mono"])
+		pref.colorblind_mono = !pref.colorblind_mono
 		Disabilities_YW(usr)
 
-	else if(href_list["colorblind_2"])
-		pref.colorblind_2 = !pref.colorblind_2
+	else if(href_list["colorblind_vulp"])
+		pref.colorblind_vulp = !pref.colorblind_vulp
 		Disabilities_YW(usr)
 
-	else if(href_list["colorblind_3"])
-		pref.colorblind_3 = !pref.colorblind_3
+	else if(href_list["colorblind_taj"])
+		pref.colorblind_taj = !pref.colorblind_taj
 		Disabilities_YW(usr)
+
+	else if(href_list["haemophilia"])
+		pref.haemophilia = !pref.haemophilia
+		Disabilities_YW(usr)
+
+	else if(href_list["reset_disabilities"])
+		pref.wingdings = 0
+		pref.colorblind_mono = 0
+		pref.colorblind_taj = 0
+		pref.colorblind_vulp = 0
+		pref.haemophilia = 0
+		Disabilities_YW(usr)
+
 	//YW Add End
+
 
 	return ..()
 
@@ -939,21 +960,3 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	user << browse(dat, "window=species;size=700x400")
 
-/datum/category_item/player_setup_item/general/body/proc/Disabilities_YW(mob/user)
-	var/dat = "<body>"
-	dat += "<html><center>"
-
-	if(pref.species == "Grey")
-		dat += "Speak Wingdings: <a href='?src=\ref[src];wingdings=1'><b>[pref.wingdings ? "Yes" : "No"]</b></a><br>"
-	dat += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
-	if(pref.colorblind_2 == 0 && pref.colorblind_3 == 0)
-		dat += "Colorblind 1: <a href='?src=\ref[src];colorblind_1=1'><b>[pref.colorblind_1 ? "Yes" : "No"]</b></a><br>"
-	if(pref.colorblind_1 == 0 && pref.colorblind_3 == 0)
-		dat += "Colorblind 2: <a href='?src=\ref[src];colorblind_2=1'><b>[pref.colorblind_2 ? "Yes" : "No"]</b></a><br>"
-	if(pref.colorblind_1 == 0 && pref.colorblind_2 == 0)
-		dat += "Colorblind 3: <a href='?src=\ref[src];colorblind_3=1'><b>[pref.colorblind_3 ? "Yes" : "No"]</b></a><br>"
-
-	dat += "</center></html>"
-	var/datum/browser/popup = new(user, "disabil", "<div align='center'>Choose Disabilities</div>", 350, 380, src)
-	popup.set_content(dat)
-	popup.open()

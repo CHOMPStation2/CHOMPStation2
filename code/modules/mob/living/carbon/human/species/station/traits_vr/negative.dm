@@ -185,4 +185,14 @@ YW comment finish*/
 	desc = "You have trouble dealing with sudden flashes of light, taking quite a long time for you to be able to recover. The effects of flashes from cameras and security equipment leave you stunned for some time."
 	cost = -2
 	var_changes = list("flash_mod" = 2.0)
+
+
+/datum/trait/haemophilia
+	name = "Haemophilia"
+	desc = "Some say that when it rains, it pours.  Unfortunately, this is also true for yourself if you get cut. You bleed much faster than average"
+	cost = -3
+
+/datum/trait/haemophilia/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.add_modifier(/datum/modifier/trait/haemophilia)
 // YW Addition End
