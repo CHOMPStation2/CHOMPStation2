@@ -145,6 +145,7 @@
 	cost = -2
 	var_changes = list("lightweight" = 1)
 
+/* YW comment starts
 /datum/trait/colorblind/mono
 	name = "Colorblindness (Monochromancy)"
 	desc = "You simply can't see colors at all, period. You are 100% colorblind."
@@ -171,7 +172,7 @@
 /datum/trait/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/colorblind_taj)
-
+YW comment finish*/
 // YW Addition
 /datum/trait/light_sensitivity
 	name = "Photosensitivity"

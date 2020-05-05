@@ -130,6 +130,15 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	if(pref.species == "Grey")//YWadd START
 		character.wingdings = pref.wingdings //YWadd END
 
+	if(pref.colorblind_1 == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_monochrome)
+
+	else if(pref.colorblind_2 == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_vulp)
+
+	else if(pref.colorblind_3 == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_taj)
+
 	// Destroy/cyborgize organs and limbs.
 	for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
 		var/status = pref.organ_data[name]
@@ -204,12 +213,13 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 	if(has_flag(mob_species, HAS_SKIN_TONE))
 		. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
-	. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
+	. += "<b>Disabilities</b><br> <a href='?src=\ref[src];disabilities_yw=1'>Adjust</a><br>"
+	//. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
 	. += "Limbs: <a href='?src=\ref[src];limbs=1'>Adjust</a> <a href='?src=\ref[src];reset_limbs=1'>Reset</a><br>"
 	. += "Internal Organs: <a href='?src=\ref[src];organs=1'>Adjust</a><br>"
 	//YW Edit ADD
-	if(pref.species == "Grey")
-		. += "Speak Wingdings: <a href='?src=\ref[src];wingdings=1'><b>[pref.wingdings ? "Yes" : "No"]</b></a><br>"
+	//if(pref.species == "Grey")
+	//	. += "Speak Wingdings: <a href='?src=\ref[src];wingdings=1'><b>[pref.wingdings ? "Yes" : "No"]</b></a><br>"
 	//YW Edit End
 
 	//display limbs below
@@ -393,6 +403,9 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		SetSpecies(preference_mob())
 		pref.alternate_languages.Cut() // Reset their alternate languages. Todo: attempt to just fix it instead?
 		return TOPIC_HANDLED
+
+	else if(href_list["disabilities_yw"])
+		Disabilities_YW(usr)
 
 	else if(href_list["set_species"])
 		user << browse(null, "window=species")
@@ -789,7 +802,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["disabilities"])
 		var/disability_flag = text2num(href_list["disabilities"])
 		pref.disabilities ^= disability_flag
-		return TOPIC_REFRESH_UPDATE_PREVIEW
+		Disabilities_YW(usr)
 
 	else if(href_list["toggle_preview_value"])
 		pref.equip_preview_mob ^= text2num(href_list["toggle_preview_value"])
@@ -818,7 +831,19 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	//YW Add Start
 	else if(href_list["wingdings"])
 		pref.wingdings = !pref.wingdings
-		return TOPIC_REFRESH_UPDATE_PREVIEW
+		Disabilities_YW(usr)
+
+	else if(href_list["colorblind_1"])
+		pref.colorblind_1 = !pref.colorblind_1
+		Disabilities_YW(usr)
+
+	else if(href_list["colorblind_2"])
+		pref.colorblind_2 = !pref.colorblind_2
+		Disabilities_YW(usr)
+
+	else if(href_list["colorblind_3"])
+		pref.colorblind_3 = !pref.colorblind_3
+		Disabilities_YW(usr)
 	//YW Add End
 
 	return ..()
@@ -913,3 +938,22 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	dat += "</center></body>"
 
 	user << browse(dat, "window=species;size=700x400")
+
+/datum/category_item/player_setup_item/general/body/proc/Disabilities_YW(mob/user)
+	var/dat = "<body>"
+	dat += "<html><center>"
+
+	if(pref.species == "Grey")
+		dat += "Speak Wingdings: <a href='?src=\ref[src];wingdings=1'><b>[pref.wingdings ? "Yes" : "No"]</b></a><br>"
+	dat += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
+	if(pref.colorblind_2 == 0 && pref.colorblind_3 == 0)
+		dat += "Colorblind 1: <a href='?src=\ref[src];colorblind_1=1'><b>[pref.colorblind_1 ? "Yes" : "No"]</b></a><br>"
+	if(pref.colorblind_1 == 0 && pref.colorblind_3 == 0)
+		dat += "Colorblind 2: <a href='?src=\ref[src];colorblind_2=1'><b>[pref.colorblind_2 ? "Yes" : "No"]</b></a><br>"
+	if(pref.colorblind_1 == 0 && pref.colorblind_2 == 0)
+		dat += "Colorblind 3: <a href='?src=\ref[src];colorblind_3=1'><b>[pref.colorblind_3 ? "Yes" : "No"]</b></a><br>"
+
+	dat += "</center></html>"
+	var/datum/browser/popup = new(user, "disabil", "<div align='center'>Choose Disabilities</div>", 350, 380, src)
+	popup.set_content(dat)
+	popup.open()

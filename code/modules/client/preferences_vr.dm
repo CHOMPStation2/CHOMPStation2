@@ -3,6 +3,10 @@ datum/preferences
 	var/show_in_directory = 1	//Show in Character Directory
 	var/sensorpref = 5			//Set character's suit sensor level
 	var/wingdings = 1 //YW Add
+	var/list/disabilities_yw list("wingdings" = 1, "colorblind_1" = 0, "colorblind_2" = 0 ,"colorblind_1" = 0)
+	var/colorblind_1 = 0
+	var/colorblind_2 = 0
+	var/colorblind_3 = 0
 
 	var/job_talon_high = 0
 	var/job_talon_med = 0
