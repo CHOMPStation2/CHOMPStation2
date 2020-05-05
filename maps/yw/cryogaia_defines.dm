@@ -95,7 +95,7 @@
 
 	bot_patrolling = FALSE
 
-	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage")
+	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
 	spawnpoint_died = /datum/spawnpoint/tram
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo
@@ -168,6 +168,13 @@
 
 	lateload_single_pick = null //Nothing right now.
 
+	lateload_single_pick = list( //Gateway missions
+		list("Snow Outpost"),
+		list("Carp Farm"),
+		list("Snow Field"),
+		list("Listening Post")
+		)
+
 	planet_datums_to_make = list(/datum/planet/borealis2)
 
 /datum/map/cryogaia/perform_map_generation()
@@ -219,7 +226,8 @@
 	icon_state = "globe"
 	color = "#00AAFF"
 	initial_generic_waypoints = list(
-		"cryogaia_excursion_hangar"
+		"cryogaia_excursion_hangar",
+		"cryogaia_security_hangar"
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = null //None at the moment. Plains would be added here.
