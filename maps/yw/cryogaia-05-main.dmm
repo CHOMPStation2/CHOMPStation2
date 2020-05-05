@@ -13673,13 +13673,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
 "azE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/effect/shuttle_landmark/premade/security/cryogaia,
 /obj/effect/overmap/visitable/ship/landable/security,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
 	frequency = 1380;
 	id_tag = "secshuttle_docker_pump_out_internal"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	icon_state = "map-fuel";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
@@ -17991,7 +17994,12 @@
 	frequency = 1380;
 	icon_state = "door_locked";
 	id_tag = "secshuttle_door_ext";
-	locked = 1
+	locked = 1;
+	name = "Starboard Airlock"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact-fuel";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
@@ -19126,9 +19134,20 @@
 /area/security/lobby)
 "aKw" = (
 /obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/security/armoury)
 "aKx" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/wall,
 /area/security/armoury)
 "aKy" = (
@@ -20932,6 +20951,7 @@
 	c_tag = "Security Hangar East";
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/red,
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "aOj" = (
@@ -20954,6 +20974,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
 "aOl" = (
@@ -23246,7 +23267,17 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "aSn" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -28
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
 "aSo" = (
@@ -23279,6 +23310,7 @@
 	layer = 3.3;
 	pixel_x = 26
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
 "aSr" = (
@@ -23809,6 +23841,11 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/airlock)
 "aTt" = (
@@ -23928,6 +23965,11 @@
 /area/security/tactical)
 "aTG" = (
 /obj/structure/sign/warning/lethal_turrets,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/wall,
 /area/security/armoury)
 "aTH" = (
@@ -24049,6 +24091,11 @@
 /area/security/brig)
 "aTO" = (
 /obj/structure/grille,
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/security/armoury)
 "aTP" = (
@@ -24409,9 +24456,6 @@
 	name = "Riot Armor"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "aUw" = (
@@ -24456,9 +24500,6 @@
 	name = "Riot Armor"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/machinery/camera/network/security{
 	c_tag = "Armory North"
 	},
@@ -25861,7 +25902,6 @@
 	pixel_y = 0
 	},
 /obj/item/clothing/head/helmet/laserproof,
-/obj/structure/window/reinforced,
 /obj/machinery/door/window/brigdoor/eastleft{
 	dir = 4
 	},
@@ -26484,9 +26524,6 @@
 /area/security/briefing_room)
 "aXY" = (
 /obj/structure/table/rack,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/machinery/door/window/brigdoor/westright{
 	name = "Energy"
 	},
@@ -27568,16 +27605,12 @@
 	name = "LETHALS";
 	req_access = list(1)
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "aZU" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/box/shotgunshells,
 /obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunammo,
 /obj/machinery/door/window/brigdoor/northright{
 	dir = 2;
 	name = "LETHALS";
@@ -27586,6 +27619,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/item/weapon/storage/box/shotgunammo,
+/obj/item/weapon/storage/box/scattershot,
+/obj/item/weapon/storage/box/scattershot,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "aZV" = (
@@ -27929,6 +27965,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "bau" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "bav" = (
@@ -28510,10 +28551,6 @@
 /turf/simulated/wall,
 /area/security/security_processing)
 "bbC" = (
-/obj/machinery/camera/network/security{
-	c_tag = "Warden";
-	dir = 2
-	},
 /obj/machinery/newscaster/security_unit{
 	pixel_x = 0;
 	pixel_y = 30
@@ -28532,10 +28569,6 @@
 /area/security/detectives_office)
 "bbE" = (
 /obj/structure/table/rack,
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
 /obj/item/ammo_magazine/m9mmt/rubber,
 /obj/item/ammo_magazine/m9mmt/rubber,
 /obj/item/ammo_magazine/m9mmt/rubber,
@@ -29204,10 +29237,6 @@
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "bcJ" = (
-/obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+006
-	},
 /obj/machinery/door/window/brigdoor/northright{
 	dir = 4;
 	name = "Non-lethals"
@@ -29218,24 +29247,6 @@
 /obj/item/weapon/storage/box/beanbags,
 /obj/item/weapon/storage/box/stunshells,
 /obj/item/weapon/storage/box/stunshells,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/red,
-/area/security/armoury)
-"bcK" = (
-/obj/structure/table/rack,
-/obj/machinery/door/window/brigdoor/eastleft{
-	dir = 1;
-	name = "Energy Firearms"
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/item/weapon/gun/energy/gun{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/weapon/gun/energy/gun,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
@@ -29312,13 +29323,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/door/window/brigdoor/southleft{
 	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
 	},
 /obj/random/handgun/sec,
 /obj/random/handgun/sec,
@@ -29946,9 +29950,6 @@
 /obj/item/ammo_magazine/m45/rubber,
 /obj/item/ammo_magazine/m45/rubber,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /obj/machinery/door/window/brigdoor/southright{
 	dir = 4
 	},
@@ -30017,26 +30018,23 @@
 /turf/simulated/wall/r_wall,
 /area/security/detectives_office)
 "bdQ" = (
-/obj/structure/table/standard,
-/obj/item/weapon/cell/device/weapon{
-	pixel_x = 4;
-	pixel_y = 4
+/obj/structure/table/rack,
+/obj/machinery/door/window/brigdoor/eastright{
+	dir = 1;
+	name = "Energy Firearms"
 	},
-/obj/item/weapon/cell/device/weapon{
-	pixel_x = 2;
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/weapon/gun/energy/laser{
 	pixel_y = 2
 	},
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon{
-	pixel_x = -2;
+/obj/item/weapon/gun/energy/laser{
 	pixel_y = -2
 	},
-/obj/machinery/recharger/wallcharger{
-	dir = 1;
-	pixel_x = 4;
-	pixel_y = -30
-	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "bdR" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -31906,7 +31904,7 @@
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bhm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
 "bhn" = (
@@ -32773,12 +32771,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/security_equiptment_storage)
 "biT" = (
-/obj/item/device/geiger/wall{
-	dir = 4;
-	pixel_x = -30
+/obj/structure/table/bench/steel,
+/obj/effect/floor_decal/corner/red{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
-/area/security/airlock)
+/area/security/hangar)
 "biU" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor,
@@ -33845,6 +33843,11 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/floor_decal/rust,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/airlock)
 "bkx" = (
@@ -34524,7 +34527,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "blI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact-fuel";
 	dir = 10
 	},
 /turf/simulated/wall/rshull,
@@ -38149,6 +38153,11 @@
 	req_access = newlist();
 	req_one_access = list(14,24)
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
 "bsF" = (
@@ -38165,6 +38174,11 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -48526,24 +48540,27 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "bJX" = (
-/obj/structure/table/rack,
-/obj/machinery/door/window/brigdoor/eastright{
-	dir = 1;
-	name = "Energy Firearms"
+/obj/structure/table/standard,
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = 4;
+	pixel_y = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/weapon/gun/energy/laser{
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/gun/energy/laser{
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon{
+	pixel_x = -2;
 	pixel_y = -2
 	},
+/obj/machinery/recharger/wallcharger{
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = -30
+	},
 /obj/machinery/light,
-/turf/simulated/floor/tiled/red,
+/turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "bJY" = (
 /turf/simulated/wall/r_wall,
@@ -62340,24 +62357,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
-"ckz" = (
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "secshuttle_sensor";
-	master_tag = "expshuttle_docker";
-	pixel_y = 28
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380;
-	id_tag = "secshuttle_vent"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
 "ckA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -62498,6 +62497,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
+"ckN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact-fuel";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1;
+	icon_state = "map"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
 "ckO" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -62687,26 +62697,9 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/outpost)
-"cpE" = (
-/obj/structure/table/standard,
-/obj/item/device/flashlight,
-/obj/item/device/radio,
-/turf/simulated/floor/tiled/dark,
-/area/security/briefing_room)
-"cGh" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380;
-	id_tag = "secshuttle_vent"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"cKf" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
+"czP" = (
+/turf/simulated/wall/r_wall,
+/area/security/hangar)
 "cLv" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -62717,56 +62710,50 @@
 /obj/machinery/suit_cycler/medical,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
-"cRc" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/table/woodentable,
-/obj/machinery/microwave,
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"diF" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/railing{
+"cYO" = (
+/turf/simulated/floor/tiled/dark,
+/area/security/briefing_room)
+"cZX" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/donkpockets,
+/turf/simulated/floor/tiled/dark,
+/area/security/briefing_room)
+"dmp" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	icon_state = "map-fuel";
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
-"diO" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1380;
-	id_tag = "secshuttle_vent"
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	cycle_to_external_air = 1;
-	frequency = 1380;
-	id_tag = "secshuttle_docker";
-	pixel_y = 26;
-	req_one_access = list(1);
-	tag_airpump = "secshuttle_vent";
-	tag_chamber_sensor = "secshuttle_sensor";
-	tag_exterior_door = "secshuttle_door_ext";
-	tag_exterior_sensor = "secshuttle_exterior_sensor";
-	tag_interior_door = "secshuttle_door_int"
-	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/wall/rshull,
 /area/shuttle/security)
-"djI" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+"dpN" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"dvf" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/medbay)
+"dCX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -62775,128 +62762,59 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"dnx" = (
-/obj/effect/floor_decal/snow/floor/edges,
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 2;
-	flags = null
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
-"dnB" = (
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/industrial/danger,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"dpq" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"dqa" = (
-/obj/structure/sign/securearea,
-/turf/simulated/wall/r_wall,
-/area/security/hangar)
-"dss" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden,
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"dBj" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/tiled/steel,
-/area/security/briefing_room)
 "dDd" = (
 /obj/structure/sign/directions/science,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"dVe" = (
-/obj/effect/floor_decal/snow/floor/edges{
+"dLC" = (
+/obj/machinery/light,
+/obj/machinery/computer/ship/engines{
 	dir = 8
 	},
-/obj/effect/floor_decal/snow/floor/edges,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "south bump";
+	pixel_y = -28
 	},
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/power)
-"ecm" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"esC" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"esO" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 1
-	},
-/obj/machinery/button/remote/airlock{
-	desiredstate = 1;
-	id = "secsh_compartment";
-	name = "Compartment Access";
-	pixel_x = 6;
-	pixel_y = -24;
-	req_one_access = list(51,67);
-	specialfunctions = 4
-	},
-/obj/machinery/button/remote/airlock{
-	desiredstate = 1;
-	id = "secsh_cabin";
-	name = "Cabin Lockdown";
-	pixel_x = -6;
-	pixel_y = -24;
-	req_one_access = list(51,67);
-	specialfunctions = 4
-	},
-/obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "secshut_cabinshut";
-	name = "Cabin Blast Shutters";
-	pixel_x = 0;
-	pixel_y = -36;
-	req_access = list(51,67)
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"dQJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5;
+	icon_state = "intact"
+	},
+/turf/simulated/wall/rshull,
+/area/shuttle/security)
+"dZv" = (
+/obj/machinery/light,
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"ebv" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/wall/r_wall,
+/area/security/armoury)
+"erI" = (
+/obj/structure/closet/crate,
+/obj/item/weapon/book/manual/security_space_law,
+/obj/item/weapon/storage/box/cups,
+/turf/simulated/floor/tiled/dark,
+/area/security/briefing_room)
 "eti" = (
 /obj/structure/sign/directions/bridge{
 	icon_state = "direction_bridge";
@@ -62912,104 +62830,325 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
-"eJf" = (
-/obj/effect/floor_decal/snow/floor/edges{
+"eyE" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"eFW" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
+"eNQ" = (
+/obj/structure/table/standard,
+/obj/item/device/flashlight,
+/obj/item/device/radio,
+/turf/simulated/floor/tiled/dark,
+/area/security/briefing_room)
 "eQA" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/sign/directions/science,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
-"eRz" = (
-/obj/machinery/light/small{
-	icon_state = "bulb1";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/briefing_room)
-"eWi" = (
-/obj/effect/floor_decal/snow/floor/edges3{
-	icon_state = "gravsnow_edges";
-	dir = 1
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
-"eZR" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"fpY" = (
-/obj/structure/table/standard,
-/obj/structure/extinguisher_cabinet{
-	pixel_y = -26
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"fqd" = (
+"eVH" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/structure/handrail,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"fus" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 6
+"eZz" = (
+/obj/machinery/pointdefense_control{
+	id_tag = "secshuttle_pd";
+	name = "shuttle laser FCS"
 	},
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
-"fxF" = (
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "warning";
-	dir = 8
-	},
-/obj/machinery/camera/network/security{
-	c_tag = "Security Hangar Emergency Route";
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
-"fBS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "intact-scrubbers";
-	dir = 5
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"fCs" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/closet/secure_closet{
-	name = "confiscated goods storage";
-	req_one_access = list(1)
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"fcU" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "secshuttle_docker_pump_out_internal"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"fln" = (
+/obj/machinery/shipsensors{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/security)
+"fnX" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/railing{
+	icon_state = "railing0";
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"fsq" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/corner/blue{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"fwk" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	icon_state = "borderfloorcorner_black";
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	icon_state = "dangercorner";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"fCD" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "secpilotoffice";
+	name = "Office Shutters";
+	pixel_x = -26;
+	pixel_y = -24;
+	req_access = list(51)
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"fEK" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	icon_state = "railing0";
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
+"fHx" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
+"fHC" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"fIr" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "Security Hangar South";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "fIL" = (
 /obj/structure/sign/directions/science,
 /turf/simulated/wall,
 /area/storage/primary)
-"fKL" = (
+"gaV" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"gcS" = (
+/obj/machinery/door/airlock/multi_tile/metal{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "secshuttle_door_ext";
+	locked = 1;
+	name = "Rear Airlock"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact-fuel";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"geR" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
+"gfy" = (
+/obj/structure/sign/redcross{
+	desc = "The Star of Life, a symbol of Medical Aid.";
+	icon_state = "lifestar";
+	name = "Medbay"
+	},
+/turf/simulated/wall/r_wall,
+/area/security/hangar)
+"gvW" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"gwb" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_wall,
+/area/engineering/workshop)
+"gBJ" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/structure/railing{
+	icon_state = "railing0";
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"gNS" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "secshuttle_vent"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"gOn" = (
+/obj/structure/table/standard,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/armoury)
+"gQv" = (
+/obj/structure/table/rack,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/shoes/magboots,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/machinery/door/window/brigdoor/southright{
+	req_one_access = list(1)
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/weapon/tank/jetpack/oxygen,
+/obj/item/clothing/suit/space/void/security/alt,
+/obj/item/clothing/head/helmet/space/void/security/alt,
+/obj/item/device/gps/security,
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"gQF" = (
+/obj/machinery/suit_cycler/captain,
+/turf/simulated/floor/wood,
+/area/crew_quarters/captain)
+"gVi" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/vending/coffee,
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	dir = 2;
+	frequency = 1475;
+	icon_state = "intercom";
+	listening = 1;
+	name = "Station Intercom (Security)";
+	pixel_x = 0;
+	pixel_y = -21
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"gVt" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 2;
+	flags = null
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"hjV" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"hjZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/woodentable,
@@ -63018,118 +63157,47 @@
 	layer = 3.3;
 	pixel_x = 26
 	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"fLb" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
-	dir = 1
-	},
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
-"gtF" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"gxe" = (
-/obj/structure/closet/crate,
-/obj/item/weapon/book/manual/security_space_law,
-/obj/item/weapon/storage/box/cups,
-/turf/simulated/floor/tiled/dark,
-/area/security/briefing_room)
-"gxA" = (
-/turf/simulated/floor/reinforced,
-/area/security/hangar)
-"gOn" = (
-/obj/structure/table/standard,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
-/turf/simulated/floor/tiled/dark,
-/area/security/armoury)
-"gQF" = (
-/obj/machinery/suit_cycler/captain,
-/turf/simulated/floor/wood,
-/area/crew_quarters/captain)
-"hoo" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1380;
-	id_tag = "secshuttle_docker_pump_out_external"
-	},
-/obj/effect/floor_decal/industrial/warning{
+/obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"hpq" = (
+/turf/simulated/wall/rshull,
 /area/shuttle/security)
-"hwb" = (
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/industrial/danger,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/camera/network/security{
-	c_tag = "Security Hangar North"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"hNJ" = (
+"hsS" = (
 /obj/machinery/power/pointdefense{
 	id_tag = "secshuttle_pd"
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/security)
-"hRF" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "secshuttle_dock";
-	pixel_x = 32;
-	req_one_access = list(19,43,67)
+"hub" = (
+/obj/machinery/sleeper{
+	dir = 8
 	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"hJi" = (
+/obj/machinery/computer/secure_data{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"hRF" = (
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1";
 	pixel_x = 0
 	},
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
-"hSF" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
-	dir = 1
-	},
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
-	icon_state = "space";
-	layer = 4;
-	name = "EXTERNAL AIRLOCK";
-	pixel_x = 0
-	},
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
-"hUk" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"idd" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	id = "secpilotoffice";
-	layer = 3.1;
-	name = "Office Shutters"
-	},
-/obj/structure/table/marble,
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 2.7
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"inU" = (
+"hSN" = (
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 10;
 	frequency = 1380;
@@ -63146,40 +63214,48 @@
 	frequency = 1380;
 	icon_state = "door_locked";
 	id_tag = "secshuttle_door_ext";
-	locked = 1
+	locked = 1;
+	name = "Port Airlock"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"ixx" = (
-/obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "secpilotoffice";
-	name = "Office Shutters";
-	pixel_x = -26;
-	pixel_y = -24;
-	req_access = list(51)
+"hSY" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"izJ" = (
-/obj/machinery/atmospherics/unary/engine{
-	icon_state = "nozzle";
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"hVx" = (
+/obj/item/device/geiger/wall{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/dark,
+/area/security/airlock)
+"hXN" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/security)
-"iDg" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 4
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
-/obj/structure/catwalk,
-/obj/structure/railing{
-	icon_state = "railing0";
-	dir = 4
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
+"ipx" = (
+/obj/structure/closet/wardrobe/tactical,
+/obj/machinery/camera/motion/security{
+	c_tag = "Armory Tactical (Motion)"
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
 "iGb" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -63196,50 +63272,196 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/explorer_prep)
-"iGf" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "secshuttle_door_ext";
-	locked = 1
+"iGK" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+/obj/structure/closet/crate/secure/phoron{
+	desc = "A secure crate that contains spare canisters of phoron fuel, used by modern shuttles.";
+	name = "spare fuel crate";
+	req_one_access = list(51,67)
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"iGS" = (
-/obj/structure/table/bench/steel,
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"iId" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4;
-	icon_state = "shuttle_chair"
-	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	icon_state = "extinguisher_closed";
-	pixel_x = -30
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"iVr" = (
-/obj/machinery/sleeper{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"iXV" = (
-/obj/machinery/shipsensors{
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tank/phoron,
+/obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"iGO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/medbay)
+"iMf" = (
+/obj/structure/catwalk,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/railing{
+	icon_state = "railing0";
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
+"iMQ" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = 1380;
+	id_tag = "secsh_cabin";
+	name = "Cabin Access";
+	req_one_access = list(51)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"jci" = (
+"iVd" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/obj/structure/railing{
+	icon_state = "railing0";
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
+"jea" = (
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/voidcraft{
+	frequency = 1380;
+	id_tag = "secsh_compartment";
+	name = "Passenger Compartment";
+	req_one_access = list(1)
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"jAj" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 2;
+	flags = null
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
+"jLC" = (
+/obj/machinery/sleep_console,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"jNH" = (
+/obj/machinery/door/airlock/maintenance/sec{
+	name = "Emergency Medical Access";
+	req_one_access = list(1,52)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/steel,
+/area/security/hangar)
+"jPi" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/dark,
-/area/security/briefing_room)
-"jdv" = (
+/area/security/hangar)
+"jQM" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = 1380;
+	id_tag = "secshuttle_door_int";
+	name = "Airlock Access";
+	req_one_access = list(1)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"jRG" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_wall,
+/area/security/armoury)
+"jWp" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"jXl" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"knc" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"koz" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "secshuttle_dock";
+	pixel_x = 32;
+	req_one_access = list(19,43,67)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"kEx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -63251,102 +63473,67 @@
 	c_tag = "Pilot's Office";
 	dir = 8
 	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"jrj" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1;
-	icon_state = "map"
+/obj/item/weapon/paper{
+	info = "So, you're part of the new Security Pilot detail huh? Welcome aboard. Keep this paper handy, but make sure you leave it where other Pilot-Officers can see. Some words of advice; always land on the port side of whatever you're coming at because the gun coverage is better on the interceptor's starboard side, no thanks that sensor antenna. Plus that starboard side is where your hookup line to the local fuel depot is, whenever they finish towing that thing into position. Don't try to land her in the expedition hangar though! The final approach software's dumb as a box of rocks and it miscalculates where you're supposed to land. See you starside! -K.H.";
+	name = "Message to New Security Pilots"
 	},
-/obj/structure/handrail,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"jvd" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4;
-	icon_state = "shuttle_chair"
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
-/obj/structure/closet/walllocker/emerglocker/west,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"jvP" = (
-/obj/structure/table/rack,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/shoes/magboots,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/window/brigdoor/southleft{
-	req_one_access = list(1)
-	},
-/obj/item/weapon/tank/jetpack/oxygen,
-/obj/item/clothing/suit/space/void/security/alt,
-/obj/item/clothing/head/helmet/space/void/security/alt,
-/obj/item/device/gps/security,
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"jFo" = (
-/obj/structure/catwalk,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/railing{
-	dir = 2;
-	flags = null
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/power)
-"jHI" = (
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"jLo" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"jMm" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
-"jOC" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"jSb" = (
-/obj/machinery/computer/ship/sensors{
-	dir = 4
-	},
-/obj/machinery/power/terminal,
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"kfm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
+/obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"kOa" = (
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/shoes/magboots,
+/obj/item/device/suit_cooling_unit,
+/obj/item/weapon/tank/oxygen,
+/obj/item/clothing/suit/space/void/medical,
+/obj/item/clothing/head/helmet/space/void/medical,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
+"lhB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10;
+	icon_state = "intact"
+	},
+/turf/simulated/wall/rshull,
 /area/shuttle/security)
-"kqg" = (
+"luH" = (
+/obj/structure/sign/securearea,
+/turf/simulated/wall/r_wall,
+/area/borealis2/outdoors/grounds)
+"lAq" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	icon_state = "bulb1";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/bridge)
+"lKE" = (
+/obj/effect/floor_decal/snow/floor/edges3{
+	icon_state = "gravsnow_edges";
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"lNv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"lXR" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"lYP" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 8;
 	icon_state = "shuttle_chair"
@@ -63363,153 +63550,28 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"kCh" = (
+"lZI" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"kEZ" = (
-/obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/danger{
+/turf/simulated/floor/tiled/dark,
+/area/security/airlock)
+"mbE" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	icon_state = "borderfloorcorner_black";
 	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	icon_state = "dangercorner";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/camera/network/security{
-	c_tag = "Security Hangar South";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"kNl" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
-"kOa" = (
-/obj/structure/table/rack/shelf,
-/obj/item/clothing/shoes/magboots,
-/obj/item/device/suit_cooling_unit,
-/obj/item/weapon/tank/oxygen,
-/obj/item/clothing/suit/space/void/medical,
-/obj/item/clothing/head/helmet/space/void/medical,
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/explorer_prep)
-"kUK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1380;
-	id_tag = "secshuttle_docker_pump_out_internal"
-	},
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"kYd" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 8;
-	icon_state = "shuttle_chair"
-	},
-/obj/structure/closet/medical_wall{
-	pixel_x = 32;
+	dir = 9;
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/regular,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"leq" = (
-/obj/effect/floor_decal/borderfloorblack/corner,
-/obj/effect/floor_decal/industrial/danger/corner,
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
-"lAq" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/light/small{
-	icon_state = "bulb1";
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/bridge)
-"lEf" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"lMt" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4;
-	icon_state = "shuttle_chair"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"lTW" = (
-/obj/machinery/computer/ship/helm,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"lXa" = (
-/turf/simulated/floor/tiled/steel,
-/area/maintenance/medbay)
-"lXU" = (
-/obj/item/device/geiger/wall{
-	dir = 1;
-	pixel_y = -30
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/donkpockets,
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"mbr" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/box/donkpockets,
-/turf/simulated/floor/tiled/dark,
-/area/security/briefing_room)
-"mcj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	icon_state = "intact"
-	},
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
-"mgR" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
 "mjD" = (
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/dark,
@@ -63521,29 +63583,22 @@
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/grounds)
-"mpu" = (
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
-	id_tag = "secshuttle_door_int";
-	req_one_access = list(1)
+"mtD" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 4;
+	icon_state = "shuttle_chair"
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"mpH" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+"myq" = (
+/obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "mBp" = (
 /obj/structure/table/marble,
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -63562,51 +63617,156 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/bar)
-"mOq" = (
+"mEv" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"mIU" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 4;
+	icon_state = "shuttle_chair"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	icon_state = "extinguisher_closed";
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"mOf" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /obj/structure/railing{
-	icon_state = "railing0";
-	dir = 4
+	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
-"mSo" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 4
+"mOp" = (
+/obj/structure/sign/securearea,
+/turf/simulated/wall/r_wall,
+/area/security/hangar)
+"mSb" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK";
+	pixel_x = 0
 	},
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 8
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	icon_state = "map-fuel";
+	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9;
+	icon_state = "intact"
+	},
+/turf/simulated/wall/rshull,
+/area/shuttle/security)
+"mWX" = (
+/obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	icon_state = "railing0";
-	dir = 4
+	dir = 2;
+	flags = null
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
-"mYk" = (
+"mWZ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/shutters{
+	dir = 1;
+	id = "secshut_cabinshut";
+	layer = 3.1;
+	name = "Cabin Shutters"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"nfW" = (
-/turf/simulated/wall/rshull,
+"ncl" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"ndP" = (
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "secshuttle_sensor";
+	master_tag = "expshuttle_docker";
+	pixel_y = 28
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "secshuttle_vent"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"nxj" = (
-/obj/random/trash_pile,
+"nkg" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 1;
+	name = "co-pilot's chair"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"nso" = (
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 8
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "Security Hangar Emergency Route";
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
-"nzw" = (
-/obj/structure/railing,
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
+"nIw" = (
+/obj/structure/grille,
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/security/armoury)
+"nJd" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "secshut_cabinshut";
+	layer = 3.1;
+	name = "Cabin Shutters"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"nKa" = (
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
 "nKF" = (
 /obj/structure/sign/directions/security{
 	icon_state = "direction_sec";
@@ -63614,172 +63774,136 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"nNv" = (
+"nLJ" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"nOn" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"nXz" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
-	},
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
-"nYk" = (
-/obj/machinery/newscaster/security_unit{
-	pixel_x = -30
+/obj/effect/floor_decal/corner/red{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"ocK" = (
-/obj/machinery/computer/shuttle_control/explore/security,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"ogI" = (
-/obj/effect/floor_decal/industrial/warning/dust{
+"nQu" = (
+/obj/machinery/suit_cycler/security,
+/obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
-"okK" = (
-/obj/machinery/light,
-/obj/machinery/power/smes/buildable/point_of_interest,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -25
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"otz" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/railing{
-	dir = 1
-	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"oiS" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 10
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "secshuttle_docker_pump_out_external"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"osn" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "Security Hangar North"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "ovS" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_access = list(48)
 	},
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/grounds/traderpad)
-"oCF" = (
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
+"oQh" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/voidcraft{
-	frequency = 1380;
-	id_tag = "secsh_compartment";
-	req_one_access = list(1)
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled/steel,
+/area/security/briefing_room)
 "oRX" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/sign/directions/cargo,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
-"oSg" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+"oTu" = (
+/obj/structure/table/rack,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/shoes/magboots,
+/obj/structure/window/reinforced{
 	dir = 4;
-	frequency = 1380;
-	id_tag = "secshuttle_docker_pump_out_internal"
+	health = 1e+006
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"oVm" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 8
+/obj/item/weapon/tank/jetpack/oxygen,
+/obj/item/clothing/suit/space/void/security,
+/obj/item/clothing/head/helmet/space/void/security,
+/obj/machinery/door/window/brigdoor/southright{
+	req_one_access = list(1)
 	},
-/obj/effect/landmark/start{
-	name = "Security Pilot"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
+/obj/item/device/gps/security,
+/turf/simulated/floor/tiled/dark,
+/area/security/airlock)
 "pcP" = (
 /obj/structure/sign/directions/engineering,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"pdr" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
+"pgL" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
 	},
-/obj/structure/catwalk,
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"psH" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /obj/structure/railing{
-	icon_state = "railing0";
 	dir = 1
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
-"pdw" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
-"pgg" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/floor/tiled{
-	icon_state = "monotile"
-	},
-/area/engineering/workshop)
-"psb" = (
+"puQ" = (
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
-"psl" = (
-/obj/machinery/pointdefense_control{
-	id_tag = "secshuttle_pd";
-	name = "shuttle laser FCS"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"psR" = (
-/obj/machinery/light,
-/obj/machinery/computer/ship/engines{
-	dir = 8
-	},
-/obj/machinery/power/apc{
-	dir = 2;
-	name = "south bump";
-	pixel_y = -28
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
+/turf/simulated/wall,
+/area/borealis2/outdoors/grounds)
 "pxX" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -63806,7 +63930,41 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/hallway)
-"pAK" = (
+"pzJ" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	icon_state = "warning_dust";
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"pEH" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
+"pFr" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"pKD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"pLE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "intact-scrubbers";
 	dir = 4
@@ -63822,169 +63980,113 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"pDu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
-	},
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
-"pJz" = (
-/obj/structure/sign/securearea,
-/turf/simulated/wall/r_wall,
-/area/borealis2/outdoors/grounds)
-"pYH" = (
-/turf/simulated/wall/r_wall,
-/area/security/hangar)
-"qeu" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	id = "secpilotoffice";
-	layer = 3.1;
-	name = "Office Shutters"
-	},
-/obj/structure/table/marble,
-/obj/machinery/door/window/brigdoor/westleft{
-	req_access = list(51)
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"qfY" = (
-/obj/structure/sign/directions/security,
-/turf/simulated/wall/r_wall,
-/area/hallway/primary/central_one)
-"qlk" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 8;
-	icon_state = "shuttle_chair"
-	},
+"pOL" = (
 /obj/machinery/light{
 	dir = 4;
-	icon_state = "tube1"
+	icon_state = "tube1";
+	pixel_x = 0
 	},
-/obj/structure/closet/walllocker/emerglocker/east,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"qAM" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	id = "secshut_cabinshut";
-	layer = 3.1;
-	name = "Cabin Shutters"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"qTM" = (
-/obj/structure/sign/redcross{
-	desc = "The Star of Life, a symbol of Medical Aid.";
-	icon_state = "lifestar";
-	name = "Medbay"
-	},
-/turf/simulated/wall/r_wall,
-/area/security/hangar)
-"raV" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/obj/effect/floor_decal/snow/floor/edges,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
+/obj/machinery/power/apc{
 	dir = 2;
-	flags = null
+	name = "south bump";
+	pixel_y = -28
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/power)
-"reM" = (
-/obj/machinery/suit_cycler/security,
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"reY" = (
-/obj/machinery/alarm{
-	dir = 8;
-	icon_state = "alarm0";
-	pixel_x = 24
-	},
-/obj/machinery/camera/network/security{
-	c_tag = "Security Voidsuits";
-	dir = 8
+/obj/structure/cable/green,
+/obj/effect/floor_decal/corner/red{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
-/area/security/airlock)
-"rgH" = (
-/obj/machinery/light,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"rqj" = (
+/area/security/hangar)
+"pRu" = (
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/turf/simulated/wall/rshull,
+/area/shuttle/security)
+"pUc" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/closet/secure_closet{
+	name = "confiscated goods storage";
+	req_one_access = list(1)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"rCG" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+"qdr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact-fuel";
+	dir = 6
+	},
+/turf/simulated/wall/rshull,
+/area/shuttle/security)
+"qfy" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
-"rMU" = (
-/obj/machinery/firealarm{
-	dir = 2;
-	layer = 3.3;
-	pixel_x = 0;
-	pixel_y = 26
+"qfY" = (
+/obj/structure/sign/directions/security,
+/turf/simulated/wall/r_wall,
+/area/hallway/primary/central_one)
+"qmg" = (
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"rQm" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+"qtY" = (
+/obj/structure/table/rack,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/shoes/magboots,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
+/obj/machinery/door/window/brigdoor/southleft{
+	req_one_access = list(1)
+	},
+/obj/item/weapon/tank/jetpack/oxygen,
+/obj/item/clothing/suit/space/void/security/alt,
+/obj/item/clothing/head/helmet/space/void/security/alt,
+/obj/item/device/gps/security,
 /turf/simulated/floor/tiled/steel,
-/area/maintenance/medbay)
-"rWx" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 4
-	},
-/obj/structure/railing{
-	icon_state = "railing0";
-	dir = 4
-	},
-/obj/structure/railing{
+/area/security/pilotroom)
+"qEm" = (
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/power)
-"sbI" = (
+/area/borealis2/outdoors/grounds)
+"qZz" = (
+/obj/machinery/atmospherics/unary/engine{
+	icon_state = "nozzle";
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/security)
+"rfw" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"rnh" = (
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
@@ -64000,8 +64102,91 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"rpz" = (
+/obj/machinery/newscaster/security_unit{
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"rsy" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/shutters{
+	dir = 8;
+	id = "secpilotoffice";
+	layer = 3.1;
+	name = "Office Shutters"
+	},
+/obj/structure/table/marble,
+/obj/machinery/door/window/brigdoor/westleft{
+	req_access = list(51)
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"ruW" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK";
+	pixel_x = 0
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	icon_state = "map-fuel";
+	dir = 1
+	},
+/turf/simulated/wall/rshull,
+/area/shuttle/security)
+"rxV" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/medbay)
+"rLZ" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled{
+	icon_state = "monotile"
+	},
+/area/engineering/workshop)
+"rQv" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 4
+	},
+/obj/machinery/power/terminal,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"sao" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"scv" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
 "sdy" = (
 /obj/structure/table/rack,
 /obj/machinery/door/window/brigdoor/northright{
@@ -64024,45 +64209,7 @@
 /obj/item/clothing/head/helmet/space/void/captain,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
-"suL" = (
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"sCb" = (
-/obj/effect/floor_decal/borderfloorblack/corner{
-	icon_state = "borderfloorcorner_black";
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	icon_state = "dangercorner";
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"sEC" = (
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
-	},
-/obj/machinery/power/apc{
-	dir = 2;
-	name = "south bump";
-	pixel_y = -28
-	},
-/obj/structure/cable/green,
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"tbF" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/sign/directions/engineering,
-/turf/simulated/floor/plating,
-/area/hallway/primary/central_one)
-"tcH" = (
+"srp" = (
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -64072,6 +64219,89 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel,
 /area/security/briefing_room)
+"ssz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/medbay)
+"sFD" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 8;
+	icon_state = "shuttle_chair"
+	},
+/obj/structure/closet/medical_wall{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/weapon/storage/firstaid/regular,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"sPM" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/wall/r_wall,
+/area/security/armoury)
+"sTs" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8;
+	frequency = 1380;
+	id_tag = "secshuttle_vent"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"sTy" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"sUn" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/red/full,
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"sWe" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 5
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"tbF" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/sign/directions/engineering,
+/turf/simulated/floor/plating,
+/area/hallway/primary/central_one)
+"tdv" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
 "tdL" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -64086,155 +64316,58 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/security/pilotroom)
-"tey" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel,
-/area/maintenance/medbay)
-"tfz" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/shutters{
-	dir = 1;
-	id = "secshut_cabinshut";
-	layer = 3.1;
-	name = "Cabin Shutters"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"tgg" = (
-/obj/machinery/sleep_console,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"tor" = (
-/obj/effect/floor_decal/borderfloorblack{
+"tjT" = (
+/obj/effect/floor_decal/borderfloorblack/corner{
+	icon_state = "borderfloorcorner_black";
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/danger{
+/obj/effect/floor_decal/industrial/danger/corner{
+	icon_state = "dangercorner";
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
-"tBv" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4
+"tlE" = (
+/turf/simulated/floor/reinforced,
+/area/security/hangar)
+"trf" = (
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"tVV" = (
-/obj/structure/catwalk,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/railing{
+"tsl" = (
+/obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/power)
-"tXW" = (
-/obj/structure/catwalk,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
+/obj/effect/landmark/start{
+	name = "Security Pilot"
 	},
-/obj/structure/railing{
-	icon_state = "railing0";
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"txj" = (
+/obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/power)
-"ucU" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"ugG" = (
-/obj/effect/shuttle_landmark/automatic,
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
-/area/borealis2/outdoors/grounds)
-"uhU" = (
-/obj/structure/table/rack,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/shoes/magboots,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+/obj/structure/railing{
+	dir = 1
 	},
-/obj/item/weapon/tank/jetpack/oxygen,
-/obj/item/clothing/suit/space/void/security,
-/obj/item/clothing/head/helmet/space/void/security,
-/obj/machinery/door/window/brigdoor/southright{
-	req_one_access = list(1)
-	},
-/obj/item/device/gps/security,
-/turf/simulated/floor/tiled/dark,
-/area/security/airlock)
-"unZ" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -28
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/airlock)
-"uyz" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/vending/coffee,
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 2;
-	frequency = 1475;
-	icon_state = "intercom";
-	listening = 1;
-	name = "Station Intercom (Security)";
-	pixel_x = 0;
-	pixel_y = -21
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"uyG" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"uJW" = (
-/obj/machinery/computer/secure_data{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"uUw" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/sleep_console,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"uXH" = (
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
+"tDR" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 4
 	},
@@ -64257,19 +64390,154 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
-"uZO" = (
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
-	id_tag = "secsh_cabin";
-	req_one_access = list(51,67)
+"tRk" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
-/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"tUv" = (
+/obj/structure/table/standard,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -26
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"vmP" = (
+"ugG" = (
+/obj/effect/shuttle_landmark/automatic,
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
+"ukd" = (
+/obj/machinery/light,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"vsa" = (
+"unu" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 4;
+	icon_state = "shuttle_chair"
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/obj/structure/closet/walllocker/emerglocker/west,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"uxd" = (
+/obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/security/armoury)
+"uAA" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/wall,
+/area/security/armoury)
+"uAH" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/sleep_console,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"uEL" = (
+/obj/item/device/geiger/wall{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/box/donkpockets,
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"uNF" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 1;
+	name = "pilot's chair"
+	},
+/obj/machinery/button/remote/airlock{
+	desiredstate = 1;
+	id = "secsh_compartment";
+	name = "Compartment Access";
+	pixel_x = 6;
+	pixel_y = -24;
+	req_one_access = list(51,67);
+	specialfunctions = 4
+	},
+/obj/machinery/button/remote/airlock{
+	desiredstate = 1;
+	id = "secsh_cabin";
+	name = "Cabin Lockdown";
+	pixel_x = -6;
+	pixel_y = -24;
+	req_one_access = list(51,67);
+	specialfunctions = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "secshut_cabinshut";
+	name = "Cabin Blast Shutters";
+	pixel_x = 0;
+	pixel_y = -36;
+	req_access = newlist();
+	req_one_access = list(51,67)
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"uXJ" = (
+/obj/machinery/light/small{
+	icon_state = "bulb1";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/briefing_room)
+"vde" = (
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/medbay)
+"vnp" = (
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -64277,104 +64545,153 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"vCc" = (
+"vpq" = (
+/obj/machinery/computer/shuttle_control/explore/security,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"vsI" = (
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "Security Voidsuits";
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/airlock)
+"vte" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
 	frequency = 1380;
-	id_tag = "secshuttle_vent"
+	id_tag = "secshuttle_docker_pump_out_internal"
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"vIP" = (
-/obj/structure/table/rack,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/shoes/magboots,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/obj/machinery/door/window/brigdoor/southright{
-	req_one_access = list(1)
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/item/weapon/tank/jetpack/oxygen,
-/obj/item/clothing/suit/space/void/security/alt,
-/obj/item/clothing/head/helmet/space/void/security/alt,
-/obj/item/device/gps/security,
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"vWG" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"vYG" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 8
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
-"wqT" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"wuI" = (
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1";
 	pixel_x = 0
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"vBE" = (
+/obj/machinery/computer/ship/helm,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"vEz" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1;
+	icon_state = "map"
+	},
+/obj/structure/handrail,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"vHH" = (
+/obj/structure/catwalk,
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"wKh" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	icon_state = "warning_dust";
+/obj/structure/railing{
+	icon_state = "railing0";
 	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
+"vQT" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8;
+	frequency = 1380;
+	id_tag = "secshuttle_vent"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	cycle_to_external_air = 1;
+	frequency = 1380;
+	id_tag = "secshuttle_docker";
+	pixel_y = 26;
+	req_one_access = list(1);
+	tag_airpump = "secshuttle_vent";
+	tag_chamber_sensor = "secshuttle_sensor";
+	tag_exterior_door = "secshuttle_door_ext";
+	tag_exterior_sensor = "secshuttle_exterior_sensor";
+	tag_interior_door = "secshuttle_door_int"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"vWy" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "secshuttle_docker_pump_out_external"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"vXI" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/wall/r_wall,
+/area/security/armoury)
+"waD" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/wall,
 /area/borealis2/outdoors/grounds)
+"wfQ" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 8;
+	icon_state = "shuttle_chair"
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/obj/structure/closet/walllocker/emerglocker/east,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/security)
+"wnX" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/shutters{
+	dir = 8;
+	id = "secpilotoffice";
+	layer = 3.1;
+	name = "Office Shutters"
+	},
+/obj/structure/table/marble,
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 2.7
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"wzH" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/medbay)
+"wEz" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
 "wLk" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -64383,46 +64700,91 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/grounds/traderpad)
-"wRM" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel,
-/area/maintenance/medbay)
-"wSH" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
-/obj/structure/closet/crate/secure/phoron{
-	name = "spare fuel crate";
-	req_one_access = list(51)
-	},
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
-/turf/simulated/floor/tiled/steel,
-/area/security/pilotroom)
-"xaY" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
+"wNT" = (
+/obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"xsx" = (
+"wRL" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
-"xsR" = (
+"wYb" = (
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"wZQ" = (
+/obj/effect/floor_decal/borderfloorblack/corner,
+/obj/effect/floor_decal/industrial/danger/corner,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"xfI" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
+/turf/simulated/wall/rshull,
+/area/shuttle/security)
+"xix" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/table/woodentable,
+/obj/machinery/microwave,
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/security/pilotroom)
+"xiY" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating,
+/area/maintenance/medbay)
+"xlw" = (
+/obj/structure/table/rack,
+/obj/machinery/door/window/brigdoor/eastleft{
+	dir = 1;
+	name = "Energy Firearms"
+	},
+/obj/item/weapon/gun/energy/gun{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/gun/energy/gun,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/red,
+/area/security/armoury)
+"xwe" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"xHo" = (
+/obj/structure/table/bench/steel,
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
+"xSf" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -64438,22 +64800,7 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"xyb" = (
-/obj/structure/handrail{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/security)
-"xzZ" = (
-/obj/machinery/door/airlock/maintenance/sec{
-	name = "Emergency Medical Access";
-	req_one_access = list(1,52)
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/steel,
-/area/security/hangar)
-"xIz" = (
+"xWn" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
 	},
@@ -64464,47 +64811,11 @@
 	icon_state = "map-scrubbers";
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"xVY" = (
-/obj/structure/closet/wardrobe/tactical,
-/obj/machinery/camera/motion/security{
-	c_tag = "Armory Tactical (Motion)"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/tactical)
-"xYD" = (
-/obj/effect/floor_decal/borderfloorblack/corner{
-	icon_state = "borderfloorcorner_black";
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	icon_state = "dangercorner";
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
-"ydq" = (
-/obj/effect/floor_decal/borderfloorblack/corner{
-	icon_state = "borderfloorcorner_black";
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	icon_state = "dangercorner";
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
 "ylY" = (
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engine Gas Storage"
@@ -84740,8 +85051,8 @@ bNw
 aag
 aag
 aKZ
-pdr
-dnx
+gBJ
+gVt
 aag
 aag
 aag
@@ -84988,41 +85299,41 @@ aag
 aag
 aag
 aag
-rWx
-uXH
-mSo
-mSo
-tXW
-jFo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-mSo
-dVe
+iVd
+tDR
+fEK
+fEK
+iMf
+mWX
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+fEK
+scv
 aag
 aag
 aag
@@ -85244,8 +85555,8 @@ aag
 aag
 aag
 aag
-pdr
-dnx
+gBJ
+gVt
 aKZ
 aag
 aag
@@ -85274,7 +85585,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 aag
@@ -85526,7 +85837,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 aag
@@ -85778,7 +86089,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 aaY
@@ -86030,7 +86341,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 btM
@@ -86282,7 +86593,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 btM
@@ -86534,7 +86845,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 btM
@@ -86756,7 +87067,7 @@ abd
 abd
 abd
 abd
-eWi
+lKE
 abk
 aag
 aag
@@ -86786,7 +87097,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 bsy
 btM
@@ -87038,7 +87349,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 btM
@@ -87290,7 +87601,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 btM
@@ -87542,7 +87853,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 btM
@@ -87794,7 +88105,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 btM
@@ -88045,9 +88356,9 @@ aLQ
 aLQ
 aLQ
 aLQ
-eJf
-tVV
-eJf
+nLJ
+mOf
+nLJ
 aLQ
 buV
 byP
@@ -88297,9 +88608,9 @@ aQf
 aQf
 aQf
 aQf
-iDg
-mOq
-iDg
+fnX
+vHH
+fnX
 aQf
 aaj
 abk
@@ -88550,7 +88861,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aKZ
 aag
 aLR
@@ -88762,25 +89073,25 @@ aag
 aag
 aag
 aag
-dqa
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-pYH
-dqa
+mOp
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+czP
+mOp
 aag
 aaN
 aag
@@ -88802,7 +89113,7 @@ aag
 aag
 aag
 aag
-raV
+jAj
 aag
 aag
 aLR
@@ -89014,25 +89325,25 @@ aag
 aag
 aag
 aag
-pYH
-leq
-uyG
-uyG
-uyG
-uyG
-uyG
-uyG
-uyG
-tor
-uyG
-uyG
-uyG
-uyG
-uyG
-uyG
-uyG
-xYD
-pYH
+czP
+wZQ
+myq
+myq
+myq
+myq
+myq
+myq
+myq
+qfy
+myq
+myq
+myq
+myq
+myq
+myq
+myq
+tjT
+czP
 aag
 aag
 aag
@@ -89266,29 +89577,29 @@ aag
 aag
 aag
 aag
-pYH
-dnB
-gxA
-gxA
-gxA
-gxA
-gxA
-gxA
-gxA
-hNJ
-nfW
-nfW
-nfW
-nfW
-inU
-fus
-izJ
-wqT
-pYH
+czP
+gaV
+tlE
+tlE
+tlE
+tlE
+tlE
+tlE
+tlE
+hsS
+hpq
+hpq
+hpq
+hpq
+hSN
+qdr
+qZz
+xwe
+czP
 aag
 aag
 aag
-vYG
+sTy
 aHN
 bbg
 bbg
@@ -89518,25 +89829,25 @@ aag
 aag
 aag
 aag
-pYH
-dnB
-iXV
-nfW
-xsR
-xsR
-nfW
-nfW
-nfW
-nfW
-nfW
+czP
+gaV
+fln
+hpq
+xSf
+xSf
+hpq
+hpq
+hpq
+hpq
+hpq
 aZQ
-mcj
-ckz
-cGh
-fLb
-izJ
-wqT
-pYH
+dQJ
+ndP
+gNS
+dmp
+qZz
+xwe
+czP
 aag
 aag
 aag
@@ -89770,25 +90081,25 @@ aag
 aag
 aag
 aag
-pYH
-dnB
-nfW
-nfW
-jSb
-okK
-nfW
-iVr
-iId
-jvd
-lMt
-iVr
-pDu
-fqd
-dss
-hSF
-izJ
-wqT
-pYH
+czP
+gaV
+hpq
+hpq
+rQv
+dZv
+hpq
+hub
+mIU
+unu
+mtD
+hub
+lhB
+eVH
+pKD
+ruW
+qZz
+xwe
+czP
 aag
 aag
 aag
@@ -90022,25 +90333,25 @@ aag
 aag
 aag
 aag
-pYH
-dnB
-tfz
-lTW
-esO
-fpY
-xsx
-uUw
-rqj
-rqj
-hUk
-tgg
-nfW
-diO
-vCc
-iGf
-kCh
-wqT
-pYH
+czP
+gaV
+mWZ
+vBE
+uNF
+tUv
+pRu
+uAH
+hSY
+hSY
+pFr
+jLC
+hpq
+vQT
+sTs
+gcS
+oiS
+xwe
+czP
 aag
 aag
 aag
@@ -90274,25 +90585,25 @@ aag
 aag
 aag
 aag
-pYH
-hwb
-tfz
-ocK
-jOC
-gtF
-uZO
-mYk
-mYk
-mYk
-vsa
-mYk
-mpu
-oSg
-kfm
-tBv
-hoo
-kEZ
-pYH
+czP
+osn
+mWZ
+vpq
+nkg
+qmg
+iMQ
+sao
+sao
+sao
+vnp
+sao
+jQM
+fcU
+fcU
+ckN
+vWy
+fIr
+czP
 aag
 aag
 aag
@@ -90300,16 +90611,16 @@ aHa
 aaj
 aaj
 aab
-wKh
-wKh
-wKh
-wKh
-wKh
-wKh
-wKh
-wKh
-wKh
-wKh
+pzJ
+pzJ
+pzJ
+pzJ
+pzJ
+pzJ
+pzJ
+pzJ
+pzJ
+pzJ
 byJ
 aHR
 aSm
@@ -90526,32 +90837,32 @@ aag
 aag
 aag
 aag
-pYH
-dnB
-nfW
-nfW
-psl
-psR
-nfW
-rMU
-kYd
-qlk
-kqg
-fCs
-nfW
-jrj
-xyb
-hSF
-izJ
-wqT
-pYH
+czP
+gaV
+hpq
+hpq
+eZz
+dLC
+hpq
+trf
+sFD
+wfQ
+lYP
+pUc
+hpq
+vEz
+mEv
+mSb
+qZz
+xwe
+czP
 aag
 aaN
 aag
 aHa
 aaj
 aaj
-aab
+waD
 aTO
 aTO
 aTO
@@ -90561,8 +90872,8 @@ aTO
 aTO
 aTO
 aTO
-aTO
-ogI
+nIw
+qEm
 aaj
 aSm
 aag
@@ -90778,32 +91089,32 @@ aag
 aag
 aag
 aag
-pYH
-dnB
-hNJ
-nfW
-qAM
-qAM
-nfW
-oCF
-nfW
-nfW
-psb
+czP
+gaV
+hsS
+hpq
+nJd
+nJd
+hpq
+jea
+hpq
+hpq
+wRL
 bbc
 bhm
-kUK
+vte
 azE
-jMm
-izJ
-wqT
-pYH
+xfI
+qZz
+xwe
+czP
 aag
 aag
 aag
 aHa
 aaj
 aRg
-aab
+puQ
 aUp
 aUp
 aUp
@@ -90813,8 +91124,8 @@ aUp
 aUp
 aUp
 aUp
-aTO
-ogI
+uxd
+qEm
 aaj
 aSm
 aag
@@ -91027,28 +91338,28 @@ akb
 akb
 akb
 akb
-kNl
-kNl
-kNl
-pYH
-dnB
-gxA
-gxA
-gxA
-gxA
-gxA
-gxA
-gxA
-hNJ
-psb
-nfW
-nfW
-nfW
+fHx
+fHx
+fHx
+czP
+knc
+tlE
+tlE
+tlE
+tlE
+tlE
+tlE
+tlE
+hsS
+wRL
+hpq
+hpq
+hpq
 aHU
 blI
-izJ
-wqT
-pYH
+qZz
+xwe
+czP
 aIK
 aIK
 aIK
@@ -91065,8 +91376,8 @@ aUp
 aUp
 aUp
 aUp
-aTO
-ogI
+uxd
+qEm
 aKs
 aSm
 aag
@@ -91279,28 +91590,28 @@ akA
 akA
 akA
 akb
-tey
-lXa
-lXa
-xzZ
-ydq
-jLo
-jLo
-jLo
-jLo
-jLo
-jLo
-jLo
-jLo
-vWG
-jLo
-jLo
-jLo
-jLo
-jLo
-jLo
-sCb
-pYH
+wzH
+vde
+dvf
+jNH
+fwk
+hjV
+hjV
+hjV
+hjV
+hjV
+hjV
+hjV
+hjV
+jXl
+hjV
+hjV
+hjV
+hjV
+hjV
+hjV
+mbE
+czP
 bhp
 aQh
 aNz
@@ -91317,8 +91628,8 @@ aHV
 aUp
 aVD
 aUp
-aTO
-ogI
+uxd
+qEm
 aaj
 aSm
 aag
@@ -91531,35 +91842,35 @@ akA
 akA
 akA
 akb
-lXa
-mgR
-fxF
-qTM
-jHI
-ucU
-ucU
-ucU
-ucU
-ucU
-ucU
-ucU
-ucU
-dpq
-ucU
-ucU
-ucU
-ucU
-ucU
-ucU
-esC
-pYH
+vde
+pEH
+nso
+gfy
+fsq
+lNv
+lNv
+lNv
+lNv
+lNv
+lNv
+lNv
+lNv
+rfw
+lNv
+lNv
+lNv
+lNv
+lNv
+lNv
+tRk
+czP
 aNA
 aRy
 aIK
 aRt
 aTs
 bkw
-aKx
+uAA
 aUp
 aUp
 aUp
@@ -91569,8 +91880,8 @@ aUp
 aUp
 aUp
 aUp
-aTO
-ogI
+uxd
+qEm
 aaj
 aSm
 aag
@@ -91783,28 +92094,28 @@ akA
 akA
 akA
 akb
-lXa
-pdw
-nxj
-pJz
+vde
+txj
+geR
+luH
 aHf
-pYH
-pYH
-dqa
-suL
+czP
+czP
+mOp
+koz
 hRF
-suL
-suL
-suL
-wuI
-suL
+jPi
+jPi
+jPi
+dpN
+wYb
 aOh
-iGS
-iGS
-rCG
-eZR
-sEC
-pYH
+biT
+xHo
+lXR
+eyE
+pOL
+czP
 aNy
 aNy
 aHT
@@ -91821,8 +92132,8 @@ aUp
 aUp
 aHV
 aUp
-aTO
-ogI
+uxd
+qEm
 aHR
 aSm
 aag
@@ -92035,8 +92346,8 @@ akb
 akb
 akb
 akb
-lXa
-pdw
+vde
+txj
 akb
 akb
 akb
@@ -92045,12 +92356,12 @@ aGl
 aHf
 aJL
 aJL
-idd
-qeu
-idd
+wnX
+rsy
+wnX
 tdL
 aKt
-aHT
+aIK
 aIK
 aIK
 aSG
@@ -92073,8 +92384,8 @@ aUp
 aUp
 aVD
 aUp
-aTO
-ogI
+uxd
+qEm
 aaj
 aSm
 aag
@@ -92286,31 +92597,31 @@ awy
 awy
 ayg
 awy
-nXz
-rQm
-diF
+eFW
+rxV
+hXN
 aCF
 aDx
 akb
 aFs
 aGm
 aHf
-cKf
-nYk
-vmP
-oVm
-ixx
-mpH
-lEf
-aHT
+ncl
+rpz
+tdv
+tsl
+fCD
+nOn
+sUn
+aIK
 auQ
-unZ
+aSn
 aXN
-biT
+hVx
 auQ
-aHT
+aIK
 aQi
-gxe
+erI
 aHT
 aRz
 aXS
@@ -92325,8 +92636,8 @@ aUp
 aUp
 aHV
 aUp
-aTO
-ogI
+uxd
+qEm
 aaj
 aSm
 aag
@@ -92538,31 +92849,31 @@ akA
 akA
 akA
 akA
-nzw
-lXa
-otz
+xiY
+vde
+psH
 akb
 aDy
 akb
 akA
 aGn
 aHf
-vmP
-vmP
-vmP
-vmP
-vmP
-djI
-cRc
-aHT
+wEz
+nKa
+nKa
+nKa
+nKa
+jWp
+xix
+aIK
 aOw
-aSn
+lZI
 aXO
 aOk
 aWV
-aHT
-eRz
-cpE
+aIK
+uXJ
+eNQ
 aHT
 aXM
 bpC
@@ -92577,8 +92888,8 @@ aUp
 aUp
 aVD
 aUp
-aTO
-ogI
+uxd
+qEm
 aKs
 aSm
 aag
@@ -92799,22 +93110,22 @@ aDy
 aFt
 aGo
 aHf
-reM
-vmP
-vmP
-xaY
-vmP
-nNv
-lXU
-aHT
-uhU
-reY
+nQu
+wNT
+nKa
+gvW
+nKa
+dCX
+uEL
+aIK
+oTu
+vsI
 aXT
 aSq
 aRm
-aHT
-jci
-mbr
+aIK
+cYO
+cZX
 aHT
 aYa
 bpD
@@ -92829,9 +93140,9 @@ aUr
 aHV
 aHV
 aHV
-aHV
-aHV
-aHV
+vXI
+jRG
+sPM
 bro
 bsz
 btU
@@ -93051,20 +93362,20 @@ akb
 akb
 aGp
 aHf
-jvP
-vmP
-ecm
-fBS
-vmP
-nNv
-uyz
-aKx
-aHT
+qtY
+pgL
+fHC
+sWe
+nKa
+dCX
+gVi
+aHV
+aIK
 aIK
 aMO
 aIK
-aHT
-aHT
+aIK
+aIK
 aWX
 aUH
 aHT
@@ -93073,7 +93384,7 @@ bpE
 bkD
 aUr
 aUr
-xVY
+ipx
 bnb
 aXZ
 aUr
@@ -93303,14 +93614,14 @@ aCG
 asv
 azf
 aNF
-vIP
-vmP
-vmP
-pAK
-vmP
-nNv
-rgH
-aKx
+gQv
+pgL
+nKa
+pLE
+nKa
+dCX
+ukd
+aHV
 aEM
 aJJ
 aYR
@@ -93333,7 +93644,7 @@ aUr
 aZT
 aLV
 aLV
-bdJ
+xlw
 aHV
 aKw
 bqs
@@ -93547,7 +93858,7 @@ axk
 ayj
 ayZ
 axi
-wRM
+ssz
 aBI
 aBI
 awI
@@ -93556,16 +93867,16 @@ aBI
 aAb
 aNF
 aJL
-wSH
-uJW
-jdv
-fKL
-xIz
-sbI
+iGK
+hJi
+kEx
+hjZ
+xWn
+rnh
 bLR
 aIM
-tcH
-dBj
+srp
+oQh
 aTC
 aUI
 aSs
@@ -93799,7 +94110,7 @@ axl
 ayk
 aza
 axi
-aAy
+iGO
 aBI
 aCH
 aDD
@@ -93837,7 +94148,7 @@ aUr
 aZS
 aLV
 aLV
-bcK
+bdJ
 aHV
 aKw
 bqs
@@ -94595,8 +94906,8 @@ bpi
 bpj
 gOn
 aHV
-aHV
-bqs
+ebv
+gwb
 bsE
 bro
 brs
@@ -95355,7 +95666,7 @@ aHV
 brw
 bsH
 biz
-pgg
+rLZ
 bub
 bxG
 byZ

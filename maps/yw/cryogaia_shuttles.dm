@@ -41,7 +41,7 @@
 /obj/machinery/computer/shuttle_control/explore/security
 	name = "short jump console"
 	shuttle_tag = "Security Interceptor"
-	req_one_access = list(access_pilot,access_secpilot)
+	req_one_access = list(access_secpilot)
 
 /obj/effect/shuttle_landmark/premade/excursion/cryogaia
 	name = "NSB Cryogaia (Excursion Dock)"
