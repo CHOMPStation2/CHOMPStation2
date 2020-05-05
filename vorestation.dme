@@ -1489,6 +1489,7 @@
 #include "code\game\turfs\simulated\wall_icon.dm"
 #include "code\game\turfs\simulated\wall_types.dm"
 #include "code\game\turfs\simulated\wall_types_vr.dm"
+#include "code\game\turfs\simulated\wall_types_yw.dm"
 #include "code\game\turfs\simulated\walls.dm"
 #include "code\game\turfs\simulated\water.dm"
 #include "code\game\turfs\simulated\water_vr.dm"
