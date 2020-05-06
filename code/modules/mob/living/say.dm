@@ -110,9 +110,9 @@ proc/get_radio_key_from_channel(var/channel)
 			whispering = 1
 			. = 1
 		//VOREStation Edit End
-			//YW Edit start
+		//YW Edit start
 		if(wingdings)
-			message = span("wingdings",(message))
+			S.message = span("wingdings",(S.message))
 			. = 1
 		//YW Edit End
 

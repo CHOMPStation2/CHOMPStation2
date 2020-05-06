@@ -19,7 +19,7 @@
 			return 'icons/vore/custom_onmob_yw.dmi'
 	else
 		return ..()
-*/yw edit end
+yw edit end*/
 
 /mob/living/proc/weaveWebBindings()
 	set name = "Weave Web Bindings"
@@ -28,7 +28,7 @@
 		src.visible_message("<span class='notice'>\the [src] pulls silk from their manibles and delicately weaves it into bindings.</span>")
 		adjust_nutrition(-30)
 		spawn(30) //5 seconds to weave the bindings~
-			var/obj/item/clothing/suit/straight_jacket/web_bindings/bindings = new() //This sprite is amazing, I must say.
+			var/obj/item/clothing/suit/web_bindings/bindings = new() //This sprite is amazing, I must say.
 			src.put_in_hands(bindings)
 	else
 		to_chat(src, "You do not have enough nutrition to create webbing!") //CK~
