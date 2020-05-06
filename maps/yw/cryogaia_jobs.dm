@@ -45,6 +45,7 @@ var/const/SAR 				=(1<<14)
 	title = "Pathfinder"
 	flag = PATHFINDER
 	departments = list(DEPARTMENT_PLANET)
+	sorting_order = 1 // above the other explorers
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 1
