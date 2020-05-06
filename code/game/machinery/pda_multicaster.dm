@@ -1,8 +1,8 @@
 /obj/machinery/pda_multicaster
 	name = "\improper PDA multicaster"
 	desc = "This machine mirrors messages sent to it to specific departments."
-	icon = 'icons/obj/stationobjs.dmi'
-	icon_state = "controller"
+	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Edit
+	icon_state = "pdamulti" //VOREStation Edit
 	density = 1
 	anchored = 1
 	circuit = /obj/item/weapon/circuitboard/telecomms/pda_multicaster
@@ -19,6 +19,7 @@
 		"engineering" = new /obj/item/device/pda/multicaster/engineering(src),
 		"medical" = new /obj/item/device/pda/multicaster/medical(src),
 		"research" = new /obj/item/device/pda/multicaster/research(src),
+		"exploration" = new /obj/item/device/pda/multicaster/exploration(src), //VOREStation Add,
 		"cargo" = new /obj/item/device/pda/multicaster/cargo(src),
 		"civilian" = new /obj/item/device/pda/multicaster/civilian(src))
 
@@ -43,7 +44,7 @@
 	if(on)
 		icon_state = initial(icon_state)
 	else
-		icon_state = "[initial(icon_state)]-p"
+		icon_state = "[initial(icon_state)]_off" //VOREStation Edit
 
 /obj/machinery/pda_multicaster/attackby(obj/item/I, mob/user)
 	if(I.is_screwdriver())
@@ -77,15 +78,15 @@
 		if(stat & (BROKEN|NOPOWER|EMPED))
 			on = 0
 			update_PDAs(1) // 1 being to turn off.
-			idle_power_usage = 0
+			update_idle_power_usage(0)
 		else
 			on = 1
 			update_PDAs(0)
-			idle_power_usage = 750
+			update_idle_power_usage(750)
 	else
 		on = 0
 		update_PDAs(1)
-		idle_power_usage = 0
+		update_idle_power_usage(0)
 	update_icon()
 
 /obj/machinery/pda_multicaster/process()

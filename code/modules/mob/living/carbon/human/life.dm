@@ -4,9 +4,9 @@
 #define HUMAN_MAX_OXYLOSS 1 //Defines how much oxyloss humans can get per tick. A tile with no air at all (such as space) applies this value, otherwise it's a percentage of it.
 #define HUMAN_CRIT_MAX_OXYLOSS ( 2.0 / 6) //The amount of damage you'll get when in critical condition. We want this to be a 5 minute deal = 300s. There are 50HP to get through, so (1/6)*last_tick_duration per second. Breaths however only happen every 4 ticks. last_tick_duration = ~2.0 on average
 
-#define HEAT_DAMAGE_LEVEL_1 5 //Amount of damage applied when your body temperature just passes the 360.15k safety point
-#define HEAT_DAMAGE_LEVEL_2 10 //Amount of damage applied when your body temperature passes the 400K point
-#define HEAT_DAMAGE_LEVEL_3 20 //Amount of damage applied when your body temperature passes the 1000K point
+#define HEAT_DAMAGE_LEVEL_1 2 //VOREStation Edit //Amount of damage applied when your body temperature just passes the 360.15k safety point
+#define HEAT_DAMAGE_LEVEL_2 4 //VOREStation Edit //Amount of damage applied when your body temperature passes the 400K point
+#define HEAT_DAMAGE_LEVEL_3 8 //VOREStation Edit //Amount of damage applied when your body temperature passes the 1000K point
 
 #define COLD_DAMAGE_LEVEL_1 0.5 //Amount of damage applied when your body temperature just passes the 260.15k safety point
 #define COLD_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when your body temperature passes the 200K point
@@ -22,6 +22,7 @@
 #define COLD_GAS_DAMAGE_LEVEL_3 3 //Amount of damage applied when the current breath's temperature passes the 120K point
 
 #define RADIATION_SPEED_COEFFICIENT 0.1
+#define HUMAN_COMBUSTION_TEMP 524 //524k is the sustained combustion temperature of human fat
 
 /mob/living/carbon/human
 	var/oxygen_alert = 0
@@ -57,8 +58,8 @@
 
 	..()
 
-	if(life_tick%30==15)
-		hud_updateflag = 1022
+	if(life_tick % 30)
+		hud_updateflag = (1 << TOTAL_HUDS) - 1
 
 	voice = GetVoice()
 
@@ -90,7 +91,7 @@
 	else if(stat == DEAD && !stasis)
 		handle_defib_timer()
 
-	if(!handle_some_updates())
+	if(skip_some_updates())
 		return											//We go ahead and process them 5 times for HUD images and other stuff though.
 
 	//Update our name based on whether our face is obscured/disfigured
@@ -98,10 +99,10 @@
 
 	pulse = handle_pulse()
 
-/mob/living/carbon/human/proc/handle_some_updates()
+/mob/living/carbon/human/proc/skip_some_updates()
 	if(life_tick > 5 && timeofdeath && (timeofdeath < 5 || world.time - timeofdeath > 6000))	//We are long dead, or we're junk mobs spawned like the clowns on the clown shuttle
-		return 0
-	return 1
+		return 1
+	return 0
 
 /mob/living/carbon/human/breathe()
 	if(!inStasisNow())
@@ -274,7 +275,7 @@
 		if(rad_organ && !rad_organ.is_broken())
 			var/rads = radiation/25
 			radiation -= rads
-			nutrition += rads
+			adjust_nutrition(rads)
 			adjustBruteLoss(-(rads))
 			adjustFireLoss(-(rads))
 			adjustOxyLoss(-(rads))
@@ -793,7 +794,7 @@
 
 	if(bodytemperature < species.cold_level_1) //260.15 is 310.15 - 50, the temperature where you start to feel effects.
 		if(nutrition >= 2) //If we are very, very cold we'll use up quite a bit of nutriment to heat us up.
-			nutrition -= 2
+			adjust_nutrition(-2)
 		var/recovery_amt = max((body_temperature_difference / BODYTEMP_AUTORECOVERY_DIVISOR), BODYTEMP_AUTORECOVERY_MINIMUM)
 		//to_world("Cold. Difference = [body_temperature_difference]. Recovering [recovery_amt]")
 //				log_debug("Cold. Difference = [body_temperature_difference]. Recovering [recovery_amt]")
@@ -816,8 +817,8 @@
 	//Handle normal clothing
 	for(var/obj/item/clothing/C in list(head,wear_suit,w_uniform,shoes,gloves,wear_mask))
 		if(C)
-			if(C.max_heat_protection_temperature && C.max_heat_protection_temperature >= temperature)
-				. |= C.heat_protection
+			if(C.handle_high_temperature(temperature))
+				. |= C.get_heat_protection_flags()
 
 //See proc/get_heat_protection_flags(temperature) for the description of this proc.
 /mob/living/carbon/human/proc/get_cold_protection_flags(temperature)
@@ -825,8 +826,8 @@
 	//Handle normal clothing
 	for(var/obj/item/clothing/C in list(head,wear_suit,w_uniform,shoes,gloves,wear_mask))
 		if(C)
-			if(C.min_cold_protection_temperature && C.min_cold_protection_temperature <= temperature)
-				. |= C.cold_protection
+			if(C.handle_low_temperature(temperature))
+				. |= C.get_cold_protection_flags()
 
 /mob/living/carbon/human/get_heat_protection(temperature) //Temperature is the temperature you're being exposed to.
 	var/thermal_protection_flags = get_heat_protection_flags(temperature)
@@ -924,15 +925,7 @@
 		for(var/datum/modifier/mod in modifiers)
 			if(!isnull(mod.metabolism_percent))
 				nutrition_reduction *= mod.metabolism_percent
-
-		nutrition = max (0, nutrition - nutrition_reduction)
-
-	if (nutrition > 450)
-		if(overeatduration < 600) //capped so people don't take forever to unfat
-			overeatduration++
-	else
-		if(overeatduration > 1)
-			overeatduration -= 2 //doubled the unfat rate
+		adjust_nutrition(-nutrition_reduction)
 
 	if(noisy == TRUE && nutrition < 250 && prob(10)) //VOREStation edit for hunger noises.
 		var/sound/growlsound = sound(get_sfx("hunger_sounds"))
@@ -950,7 +943,7 @@
 
 //DO NOT CALL handle_statuses() from this proc, it's called from living/Life() as long as this returns a true value.
 /mob/living/carbon/human/handle_regular_status_updates()
-	if(!handle_some_updates())
+	if(skip_some_updates())
 		return 0
 
 	if(status_flags & GODMODE)	return 0
@@ -1291,8 +1284,11 @@
 					else
 						bodytemp.icon_state = "temp0"
 
-		if(blinded)		overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
-		else			clear_fullscreens()
+		if(blinded)
+			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+		
+		else if(!machine)
+			clear_fullscreens()
 
 		if(disabilities & NEARSIGHTED)	//this looks meh but saves a lot of memory by not requiring to add var/prescription
 			if(glasses)					//to every /obj/item
@@ -1387,6 +1383,10 @@
 			see_in_dark = 8
 			if(!druggy)		see_invisible = SEE_INVISIBLE_LEVEL_TWO
 
+		for(var/datum/modifier/M in modifiers)
+			if(!isnull(M.vision_flags))
+				sight |= M.vision_flags
+
 		if(!glasses_processed && (species.get_vision_flags(src) > 0))
 			sight |= species.get_vision_flags(src)
 		if(!seer && !glasses_processed && seedarkness)
@@ -1394,11 +1394,12 @@
 
 		if(machine)
 			var/viewflags = machine.check_eye(src)
-			machine.apply_visual(src)
 			if(viewflags < 0)
 				reset_view(null, 0)
 			else if(viewflags && !looking_elsewhere)
 				sight |= viewflags
+			else
+				machine.apply_visual(src)
 		else if(eyeobj)
 			if(eyeobj.owner != src)
 
@@ -1464,7 +1465,7 @@
 				if(air_master.current_cycle%3==1)
 					if(!(M.status_flags & GODMODE))
 						M.adjustBruteLoss(5)
-					nutrition += 10
+					adjust_nutrition(10)
 
 /mob/living/carbon/human/proc/handle_changeling()
 	if(mind && mind.changeling)
@@ -1821,7 +1822,15 @@
 	if(thermal_protection == 1) // Immune.
 		return
 	else
-		bodytemperature += (BODYTEMP_HEATING_MAX + (fire_stacks * 15)) * (1-thermal_protection)
+		var/fire_temp_add = (BODYTEMP_HEATING_MAX + (fire_stacks * 15)) * (1-thermal_protection)
+		//This is to prevent humans from heating up indefinitely. A human being on fire (fat burns at 250C) can't magically
+		//   increase your body temperature beyond 250C, but it's possible something else (atmos) has heated us up beyond it,
+		//   so don't worry about the firestacks at that point. Really, we should be cooling the room down, because it has
+		//   to expend energy to heat our body up! But let's not worry about that.
+		if((bodytemperature + fire_temp_add) > HUMAN_COMBUSTION_TEMP)
+			return
+
+		bodytemperature += fire_temp_add
 
 /mob/living/carbon/human/rejuvenate()
 	restore_blood()

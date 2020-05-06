@@ -371,7 +371,7 @@
 
 	//Find our spawning point.
 	var/list/join_props = job_master.LateSpawn(client, rank)
-	
+
 	if(!join_props)
 		return
 
@@ -459,7 +459,7 @@
 
 	dat += "Choose from the following open/valid positions:<br>"
 	dat += "<a href='byond://?src=\ref[src];hidden_jobs=1'>[show_hidden_jobs ? "Hide":"Show"] Hidden Jobs.</a><br>"
-	
+
 	var/deferred = ""
 	for(var/datum/job/job in job_master.occupations)
 		if(job && IsJobAvailable(job.title))
@@ -476,9 +476,9 @@
 			// Only players with the job assigned and AFK for less than 10 minutes count as active
 			for(var/mob/M in player_list) if(M.mind && M.client && M.mind.assigned_role == job.title && M.client.inactivity <= 10 MINUTES)
 				active++
-			
+
 			var/string = "<a href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions]) (Active: [active])</a><br>"
-			
+
 			if(job.offmap_spawn) //At the bottom
 				deferred += string
 			else
@@ -510,8 +510,6 @@
 
 	if(!new_character)
 		new_character = new(T)
-
-	new_character.lastarea = get_area(T)
 
 	if(ticker.random_players)
 		new_character.gender = pick(MALE, FEMALE)
@@ -605,7 +603,7 @@
 	return ready && ..()
 
 // Prevents lobby players from seeing say, even with ghostears
-/mob/new_player/hear_say(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "",var/italics = 0, var/mob/speaker = null)
+/mob/new_player/hear_say(var/list/message_pieces, var/verb = "says", var/italics = 0, var/mob/speaker = null)
 	return
 
 // Prevents lobby players from seeing emotes, even with ghosteyes

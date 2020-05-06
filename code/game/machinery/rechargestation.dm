@@ -62,6 +62,9 @@
 
 		recharge_amount = cell.give(recharge_amount)
 		use_power(recharge_amount / CELLRATE)
+	else
+		// Since external power is offline, draw operating current from the internal cell
+		cell.use(get_power_usage() * CELLRATE)
 
 	if(icon_update_tick >= 10)
 		icon_update_tick = 0
@@ -70,19 +73,6 @@
 
 	if(occupant || recharge_amount)
 		update_icon()
-
-//since the recharge station can still be on even with NOPOWER. Instead it draws from the internal cell.
-/obj/machinery/recharge_station/auto_use_power()
-	if(!(stat & NOPOWER))
-		return ..()
-
-	if(!has_cell_power())
-		return 0
-	if(use_power == USE_POWER_IDLE)
-		cell.use(idle_power_usage * CELLRATE)
-	else if(use_power >= USE_POWER_ACTIVE)
-		cell.use(active_power_usage * CELLRATE)
-	return 1
 
 //Processes the occupant, drawing from the internal power cell if needed.
 /obj/machinery/recharge_station/proc/process_occupant()
@@ -115,8 +105,8 @@
 			H.adjustBrainLoss(-(rand(1,3)))
 
 		// Also recharge their internal battery.
-		if(H.isSynthetic() && H.nutrition < 450)
-			H.nutrition = min(H.nutrition+10, 450)
+		if(H.isSynthetic() && H.nutrition < 500) //VOREStation Edit
+			H.nutrition = min(H.nutrition+10, 500) //VOREStation Edit
 			cell.use(7000/450*10)
 
 		// And clear up radiation
@@ -125,8 +115,8 @@
 
 
 /obj/machinery/recharge_station/examine(mob/user)
-	..(user)
-	to_chat(user, "The charge meter reads: [round(chargepercentage())]%")
+	. = ..()
+	. += "The charge meter reads: [round(chargepercentage())]%"
 
 /obj/machinery/recharge_station/proc/chargepercentage()
 	if(!cell)

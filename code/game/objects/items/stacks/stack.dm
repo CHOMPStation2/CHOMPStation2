@@ -58,11 +58,13 @@
 		item_state = initial(icon_state)
 
 /obj/item/stack/examine(mob/user)
-	if(..(user, 1))
+	. = ..()
+	
+	if(Adjacent(user))
 		if(!uses_charge)
-			to_chat(user, "There are [src.amount] [src.singular_name]\s in the stack.")
+			. += "There are [src.amount] [src.singular_name]\s in the stack."
 		else
-			to_chat(user, "There is enough charge for [get_amount()].")
+			. += "There is enough charge for [get_amount()]."
 
 /obj/item/stack/attack_self(mob/user as mob)
 	list_recipes(user)
@@ -143,7 +145,7 @@
 
 	if (recipe.time)
 		to_chat(user, "<span class='notice'>Building [recipe.title] ...</span>")
-		if (!do_after(user, recipe.time))
+		if (!do_after(user, recipe.time, exclusive = TRUE))
 			return
 
 	if (use(required))
