@@ -38721,6 +38721,14 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1380;
+	master_tag = "secshuttle_docker";
+	pixel_x = 0;
+	pixel_y = 24;
+	req_one_access = list(1)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
 "bsP" = (
