@@ -217,7 +217,9 @@
 				for(var/rider in L.buckled_mobs)
 					R.force_dismount(rider)
 		//VOREStation Addition End: Prevent taurriding abuse
+		//CHOMPStation start: Removes prob(5) of being yeeted
 		do_teleport(M, com.locked) //dead-on precision
+		//CHOMPStation end: Removes prob(5) of being yeeted
 
 		if(com.one_time_use) //Make one-time-use cards only usable one time!
 			com.one_time_use = 0
