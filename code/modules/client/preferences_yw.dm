@@ -5,7 +5,7 @@ datum/preferences
 	var/colorblind_taj = 0
 	var/haemophilia = 1
 
-
+//proc for setting disabilities
 /datum/category_item/player_setup_item/general/body/proc/Disabilities_YW(mob/user)
 	var/dat = "<body>"
 	dat += "<html><center>"
