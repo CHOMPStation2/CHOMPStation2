@@ -17716,10 +17716,6 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/solars)
 "aHd" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -21174,13 +21170,13 @@
 	dir = 8;
 	icon_state = "shuttle_chair"
 	},
-/obj/structure/fuel_port{
-	dir = 4;
-	pixel_x = 24;
-	pixel_y = 0
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
@@ -64532,6 +64528,21 @@
 /obj/structure/closet/secure_closet/security_pilot,
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"ryt" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/fuel_port{
+	dir = 4;
+	pixel_x = -24;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "rMq" = (
 /obj/effect/floor_decal/snow/floor/edges,
 /obj/structure/catwalk,
@@ -92024,7 +92035,7 @@ mQz
 mQz
 mQz
 aUv
-mQz
+ryt
 mQz
 mQz
 btO

@@ -25,8 +25,8 @@
 	supervisors = "the head of security"
 	selection_color = "#601C1C"
 	economic_modifier = 5
-	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks, access_secpilot)
-	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks, access_secpilot)
+	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks, access_secpilot, access_pilot)
+	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks, access_secpilot, access_pilot)
 	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/pilot
 
