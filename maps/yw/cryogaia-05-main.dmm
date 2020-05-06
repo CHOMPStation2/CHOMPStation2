@@ -19296,7 +19296,7 @@
 	req_one_access = list(51,52)
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel,
+/turf/simulated/floor/tiled/dark,
 /area/security/pilotroom)
 "aKu" = (
 /obj/structure/table/gamblingtable,
@@ -21158,6 +21158,11 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 0
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "aOi" = (
@@ -24679,6 +24684,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "aUw" = (
@@ -33093,6 +33099,11 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "biU" = (
@@ -39253,6 +39264,10 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact-fuel";
+	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
@@ -63293,6 +63308,11 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 0
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "cGu" = (
@@ -63315,6 +63335,14 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"cLr" = (
+/obj/structure/grille,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/security/armoury)
 "cLv" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -63357,6 +63385,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"cQf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "cRD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
@@ -63411,6 +63448,17 @@
 /obj/structure/sign/directions/science,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
+"dHU" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/binary/pump/fuel,
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "dVw" = (
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
@@ -63524,6 +63572,13 @@
 "fii" = (
 /obj/structure/sign/securearea,
 /turf/simulated/wall/r_wall,
+/area/security/hangar)
+"fsr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 25
+	},
+/turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "fyx" = (
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -63716,6 +63771,10 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
+/obj/machinery/atmospherics/pipe/tank/phoron{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "hXG" = (
@@ -63865,6 +63924,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"jIf" = (
+/obj/structure/sign/fire,
+/turf/simulated/wall/r_wall,
+/area/security/hangar)
 "jLo" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/industrial/warning{
@@ -63978,6 +64041,17 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"kzK" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "kIl" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -63997,6 +64071,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"kNE" = (
+/obj/structure/fuel_port{
+	dir = 4;
+	pixel_x = 6;
+	pixel_y = 0
+	},
+/turf/simulated/wall/rshull,
+/area/shuttle/security)
 "kOa" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/shoes/magboots,
@@ -64014,6 +64096,14 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/security/hangar)
+"laR" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/r_wall,
+/area/security/armoury)
 "ldV" = (
 /obj/structure/grille,
 /obj/structure/cable/green,
@@ -64026,14 +64116,6 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
-"ljE" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/wall/r_wall,
-/area/security/armoury)
 "lAq" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -64127,6 +64209,13 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
+"mEl" = (
+/obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/security/armoury)
 "mLn" = (
 /obj/machinery/newscaster/security_unit{
 	pixel_x = -30
@@ -64387,6 +64476,9 @@
 	pixel_x = 32;
 	req_one_access = list(19,43,67)
 	},
+/obj/machinery/atmospherics/pipe/tank/phoron{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "pWK" = (
@@ -64549,6 +64641,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"rRq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact-fuel";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "rVI" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
@@ -64662,14 +64762,6 @@
 /obj/structure/sign/directions/engineering,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
-"teR" = (
-/obj/structure/grille,
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/security/armoury)
 "tgo" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/secure_closet{
@@ -64708,13 +64800,6 @@
 /obj/item/weapon/storage/firstaid/regular,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"tMt" = (
-/obj/structure/grille,
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating,
-/area/security/armoury)
 "tVB" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	icon_state = "borderfloorcorner_black";
@@ -64813,21 +64898,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
-"uDw" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/fuel_port{
-	dir = 4;
-	pixel_x = -24;
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
 "uJH" = (
 /obj/structure/cable/heavyduty,
 /obj/structure/cable{
@@ -64942,6 +65012,20 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"vBZ" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	icon_state = "map-fuel";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "vJO" = (
 /obj/structure/table/rack,
 /obj/item/clothing/mask/breath,
@@ -65023,6 +65107,20 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"wkh" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	icon_state = "intact-fuel";
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "wnZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -91304,7 +91402,7 @@ aHa
 aaj
 aaj
 aab
-teR
+cLr
 aTO
 aTO
 aTO
@@ -91793,7 +91891,7 @@ aIF
 irz
 qws
 qgy
-qgy
+kNE
 qgy
 qgy
 bsO
@@ -92039,15 +92137,15 @@ rPX
 mQz
 mQz
 mQz
-mQz
-mQz
-mQz
-mQz
-mQz
+wkh
+vBZ
+kzK
+kzK
+kzK
 aUv
-uDw
-mQz
-mQz
+kzK
+dHU
+kzK
 btO
 mQz
 mQz
@@ -92288,11 +92386,11 @@ qcr
 hge
 kPo
 cuv
+cQf
+fsr
 cRD
-cRD
-cRD
-cRD
-cRD
+rRq
+rRq
 cRD
 cRD
 cRD
@@ -92542,7 +92640,7 @@ ewj
 aHf
 jAq
 jAq
-fii
+jIf
 pyX
 hRF
 omx
@@ -93833,7 +93931,7 @@ aUr
 aHV
 bbE
 bcJ
-ljE
+laR
 aHV
 aKw
 bqs
@@ -95095,7 +95193,7 @@ aLV
 aLW
 bdI
 aHV
-tMt
+mEl
 bqs
 saK
 btZ
