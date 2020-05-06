@@ -30,3 +30,6 @@
 
 /area/shuttle/casino/station
 	icon_state = "shuttlegrn2"
+	
+/area/surface/outpost/main/dorms
+	//further defined in southern_cross_areas.dm for chompstation
