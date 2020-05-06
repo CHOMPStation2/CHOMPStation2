@@ -12,6 +12,7 @@ var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
 var/const/BLUESHIELD		=(1<<13) //YW addition
+var/const/SECPILOT			=(1<<14) //YW addition
 var/const/INTERN			=(1<<15) //VOREStation Add
 
 var/const/MEDSCI			=(1<<1)
