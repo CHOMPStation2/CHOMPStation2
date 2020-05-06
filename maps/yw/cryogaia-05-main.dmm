@@ -17733,6 +17733,11 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/machinery/door/window/brigdoor/southright{
+	layer = 3;
+	req_access = newlist();
+	req_one_access = list(1,5)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
 "aHe" = (
@@ -29539,6 +29544,11 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/window/brigdoor/northleft{
+	layer = 3;
+	req_access = newlist();
+	req_one_access = list(1,5)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
 "bcL" = (
@@ -31625,6 +31635,11 @@
 /obj/machinery/sleep_console{
 	desc = "A control panel to operate a linked sleeper with. This one has some additional security measures to prevent tampering.";
 	name = "stasis cell console";
+	req_one_access = list(1,5)
+	},
+/obj/machinery/door/window/brigdoor/northright{
+	layer = 3;
+	req_access = newlist();
 	req_one_access = list(1,5)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -65176,6 +65191,11 @@
 "xMK" = (
 /obj/machinery/sleeper{
 	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/southleft{
+	layer = 3;
+	req_access = newlist();
+	req_one_access = list(1,5)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
