@@ -387,12 +387,13 @@
 		possible_designs += new D(src)
 //	generate_integrated_circuit_designs()
 	RefreshResearch()
+	known_designs.Add(/datum/design/item/engineering/t_scanner)//manually adds design because its from another machine
 
 
 /datum/research/autolathe/DesignHasReqs(var/datum/design/D)
 	if(D.req_tech.len == 0)
 		return 1
-	if((D.build_type && AUTOLATHE) || D.autolathe_build == 1)
+	if((D.build_type && AUTOLATHE))
 		return 1
 
 	else
