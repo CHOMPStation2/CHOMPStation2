@@ -19331,11 +19331,6 @@
 /turf/simulated/floor/plating,
 /area/security/armoury)
 "aKx" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/wall,
 /area/security/armoury)
 "aKy" = (
@@ -24067,11 +24062,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/airlock)
 "aTt" = (
@@ -24191,11 +24181,6 @@
 /area/security/tactical)
 "aTG" = (
 /obj/structure/sign/warning/lethal_turrets,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/wall,
 /area/security/armoury)
 "aTH" = (
@@ -30211,6 +30196,11 @@
 	hacked = 1;
 	name = "unlocked autolathe"
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "bdJ" = (
@@ -30231,6 +30221,11 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 4;
 	pixel_y = -30
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -30330,6 +30325,11 @@
 	},
 /obj/item/weapon/gun/energy/laser{
 	pixel_y = -2
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
@@ -32983,6 +32983,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "biI" = (
@@ -34145,11 +34150,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/floor_decal/rust,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/airlock)
 "bkx" = (
@@ -36693,6 +36693,11 @@
 "bpi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "bpj" = (
@@ -36702,6 +36707,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -38583,11 +38593,6 @@
 /area/shuttle/security)
 "bsE" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "intact-scrubbers";
 	dir = 4
@@ -38614,11 +38619,6 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "intact-scrubbers";
@@ -49085,6 +49085,11 @@
 	pixel_y = -30
 	},
 /obj/machinery/light,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "bJY" = (
@@ -63406,23 +63411,9 @@
 /obj/structure/sign/directions/science,
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
-"dQu" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/wall,
-/area/security/armoury)
 "dVw" = (
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
-"dWP" = (
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/turf/simulated/wall/r_wall,
-/area/security/armoury)
 "ehi" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -63434,6 +63425,16 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/wall/r_wall,
 /area/security/armoury)
@@ -63636,6 +63637,11 @@
 	dir = 1;
 	pixel_x = 0;
 	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -63886,14 +63892,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"jYk" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/wall/r_wall,
-/area/engineering/workshop)
 "kfm" = (
 /obj/structure/table/rack,
 /obj/item/clothing/mask/breath,
@@ -63980,14 +63978,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"kHh" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/wall,
-/area/borealis2/outdoors/grounds)
 "kIl" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -64036,6 +64026,14 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
+"ljE" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/r_wall,
+/area/security/armoury)
 "lAq" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -64150,6 +64148,11 @@
 	},
 /obj/item/weapon/gun/energy/gun,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "mOW" = (
@@ -64196,14 +64199,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"nmS" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/wall,
-/area/borealis2/outdoors/grounds)
 "nIo" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 4
@@ -64528,21 +64523,6 @@
 /obj/structure/closet/secure_closet/security_pilot,
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"ryt" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/fuel_port{
-	dir = 4;
-	pixel_x = -24;
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/hangar)
 "rMq" = (
 /obj/effect/floor_decal/snow/floor/edges,
 /obj/structure/catwalk,
@@ -64682,6 +64662,14 @@
 /obj/structure/sign/directions/engineering,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
+"teR" = (
+/obj/structure/grille,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/security/armoury)
 "tgo" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/secure_closet{
@@ -64720,6 +64708,13 @@
 /obj/item/weapon/storage/firstaid/regular,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"tMt" = (
+/obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/security/armoury)
 "tVB" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	icon_state = "borderfloorcorner_black";
@@ -64818,6 +64813,21 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"uDw" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/fuel_port{
+	dir = 4;
+	pixel_x = -24;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/hangar)
 "uJH" = (
 /obj/structure/cable/heavyduty,
 /obj/structure/cable{
@@ -91293,8 +91303,8 @@ aag
 aHa
 aaj
 aaj
-kHh
-aTO
+aab
+teR
 aTO
 aTO
 aTO
@@ -91545,7 +91555,7 @@ aag
 aHa
 aaj
 aRg
-nmS
+aab
 aUp
 aUp
 aUp
@@ -92035,7 +92045,7 @@ mQz
 mQz
 mQz
 aUv
-ryt
+uDw
 mQz
 mQz
 btO
@@ -92301,7 +92311,7 @@ aIK
 aRt
 aTs
 bkw
-dQu
+aKx
 aUp
 aUp
 aUp
@@ -93823,7 +93833,7 @@ aUr
 aHV
 bbE
 bcJ
-aHV
+ljE
 aHV
 aKw
 bqs
@@ -95085,7 +95095,7 @@ aLV
 aLW
 bdI
 aHV
-aKw
+tMt
 bqs
 saK
 btZ
@@ -95337,8 +95347,8 @@ bpi
 bpj
 gOn
 aHV
-dWP
-jYk
+aHV
+bqs
 bsE
 bro
 jiz
