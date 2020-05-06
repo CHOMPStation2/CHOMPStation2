@@ -161,8 +161,6 @@
 		design_last_ordered = FindDesign(href_list["make"]) //check if it's a valid design
 		if(!design_last_ordered)
 			return
-		if(!(design_last_ordered.build_type & AUTOLATHE))
-			return
 
 		//multiplier checks : only stacks can have one and its value is 1, 10 ,25 or max_multiplier
 		var/multiplier = text2num(href_list["multiplier"])
@@ -382,11 +380,27 @@
 
 /datum/research/autolathe
 
+/datum/research/autolathe/New()		//Insert techs into possible_tech here. Known_tech automatically updated.
+	for(var/T in typesof(/datum/tech) - /datum/tech)
+		known_tech += new T(src)
+	for(var/D in typesof(/datum/design) - /datum/design)
+		possible_designs += new D(src)
+//	generate_integrated_circuit_designs()
+	RefreshResearch()
+
+
 /datum/research/autolathe/DesignHasReqs(var/datum/design/D)
-	return D && (D.build_type & AUTOLATHE)
+	if(D.req_tech.len == 0)
+		return 1
+	if((D.build_type && AUTOLATHE) || D.autolathe_build == 1)
+		return 1
+
+	else
+		return 0
 
 /datum/research/autolathe/AddDesign2Known(var/datum/design/D)
-	if(!(D.build_type & AUTOLATHE))
+	if(D.autolathe_build == 1)
+		known_designs.Add(D)
 		return
 	..()
 
@@ -397,7 +411,7 @@
 	//return files.known_designs[id]
 
 /obj/machinery/autolathe/proc/FindDesign(var/id)
-	for(var/datum/design/item/autolathe/desired_design in files.known_designs)
+	for(var/datum/design/item/desired_design in files.known_designs)
 		if(desired_design.id == id)
 			return desired_design
 	return
@@ -426,6 +440,25 @@
 
 	if(O.loc != user && !(istype(O,/obj/item/stack)))
 		return 0
+
+	if(istype(O, /obj/item/weapon/disk))
+		if(istype(O, /obj/item/weapon/disk/design_disk))
+			var/obj/item/weapon/disk/design_disk/D = O
+			if(D.blueprint)
+				if(D.blueprint.autolathe_build == 1 || (D.blueprint.build_type && AUTOLATHE))
+					user.visible_message("[user] begins to load \the [O] in \the [src]...", "You begin to load a design from \the [O]...", "You hear the chatter of a floppy drive.")
+					busy = 1
+					files.AddDesign2Known(D.blueprint)
+					busy = 0
+				else
+					to_chat(user, "<span class='warning'>That disk doens't have a compatible design</span>")
+			else
+				to_chat(user, "<span class='warning'>That disk does not have a design on it!</span>")
+			return
+		else
+		// So that people who are bad at computers don't shred their disks
+			to_chat(user, "<span class='warning'>This is not the correct type of disk for the autolathe!</span>")
+			return
 
 	if(is_robot_module(O))
 		return 0
