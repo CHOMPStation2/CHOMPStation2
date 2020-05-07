@@ -1,4 +1,3 @@
-
 /area/casino/casino_ship
 	name = "\improper Casino Ship"
 	icon_state = "yellow"
