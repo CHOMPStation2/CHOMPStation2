@@ -434,6 +434,15 @@
 		else
 			set_light(0)
 		//VOREStation Edit End
+		
+	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
+	if(iscarbon(user))
+		var/mob/living/carbon/nerd = user
+		var/mysize = nerd.size_multiplier
+		if(mysize <= 0.5)
+			nerd.Weaken(1)
+			nerd.adjustBruteLoss(5-mysize*4)
+	//YAWNEDIT: Knockdown code end
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/weapon/gun/proc/Fire_userless(atom/target)
