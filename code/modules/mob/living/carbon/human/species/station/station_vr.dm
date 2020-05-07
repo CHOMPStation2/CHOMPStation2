@@ -93,8 +93,12 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
+<<<<<<< HEAD
 //CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
 //	wikilink="https://www.yawn.ocry.com/Akula"
+=======
+	wikilink="https://yawn.izac.live/Akula"
+>>>>>>> d06278c69e2e5c5c11a98dbe143481483bb3a6f2
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
@@ -181,7 +185,7 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-	wikilink="https://www.yawn.ocry.com/Zorren"
+	wikilink="https://yawn.izac.live/Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 

@@ -28876,10 +28876,11 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/lobby)
 "aVV" = (
-/obj/structure/shuttle/engine/propulsion,
-/turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/carry,
-/area/shuttle/tether)
+/obj/machinery/account_database{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/heads/hop)
 "aVW" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -29034,12 +29035,10 @@
 /turf/simulated/wall/r_wall,
 /area/tether/surfacebase/security/lobby)
 "aWf" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
-	},
+/obj/structure/shuttle/engine/propulsion,
 /turf/simulated/floor/reinforced,
 /turf/simulated/shuttle/plating/carry,
-/area/shuttle/tourbus/engines)
+/area/shuttle/tether)
 "aWg" = (
 /obj/structure/sign/directions/evac{
 	dir = 8
@@ -29082,6 +29081,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
+"aWj" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/turf/simulated/shuttle/plating/carry,
+/area/shuttle/tourbus/engines)
 "aWl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -31416,10 +31422,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
-"bax" = (
-/obj/machinery/account_database,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/heads/hop)
 "bay" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -35522,8 +35524,8 @@ aab
 aab
 aab
 aab
-aab
-aab
+aac
+aac
 aab
 aac
 aac
@@ -35532,8 +35534,8 @@ aab
 aab
 aab
 aab
-aab
-aab
+aac
+aac
 aab
 aab
 aab
@@ -35674,10 +35676,10 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -35791,30 +35793,6 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
 aac
 aac
 aac
@@ -35822,6 +35800,30 @@ aac
 aac
 aab
 aab
+aab
+aab
+aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -35933,46 +35935,46 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
-aab
-aab
-aab
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
-aac
 aac
 aac
 aac
 aac
 aac
 aab
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 aab
 aab
 aac
 aac
-aab
-aab
+aac
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -36113,9 +36115,9 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
+aac
+aac
+aac
 aab
 aab
 aab
@@ -36259,8 +36261,8 @@ aac
 aac
 aac
 aac
-aab
-aab
+aac
+aac
 aab
 aab
 aab
@@ -36401,8 +36403,8 @@ aac
 aac
 aac
 aac
-aab
-aab
+aac
+aac
 aab
 aab
 aab
@@ -36543,8 +36545,8 @@ aac
 aac
 aac
 aac
-aab
-aab
+aac
+aac
 aab
 aab
 aab
@@ -36685,8 +36687,8 @@ aac
 aac
 aac
 aac
-aab
-aab
+aac
+aac
 aab
 aab
 aab
@@ -36827,9 +36829,9 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
+aac
+aac
+aac
 aab
 aab
 aab
@@ -36969,9 +36971,9 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
+aac
+aac
+aac
 aab
 aab
 aab
@@ -37110,10 +37112,10 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -37252,10 +37254,10 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -37394,10 +37396,10 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -37536,10 +37538,10 @@ aac
 aac
 aac
 aac
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -37681,7 +37683,7 @@ aac
 aac
 aac
 aac
-aab
+aac
 aab
 aab
 aab
@@ -37823,7 +37825,7 @@ aac
 aac
 aac
 aac
-aMG
+aac
 aMG
 aMG
 aMG
@@ -37964,8 +37966,8 @@ aac
 aac
 aac
 aac
-adG
-adG
+aac
+aac
 adG
 adG
 adG
@@ -39314,7 +39316,7 @@ aab
 aab
 aab
 aab
-aab
+aac
 aac
 aac
 aac
@@ -40593,7 +40595,7 @@ aab
 aab
 aab
 aab
-aab
+aac
 aac
 aac
 aac
@@ -41019,7 +41021,7 @@ aab
 aab
 aab
 aab
-aab
+aac
 aac
 aac
 aac
@@ -41396,8 +41398,8 @@ aab
 aac
 aac
 aac
-aac
-aac
+aab
+aab
 aab
 aab
 aab
@@ -41538,8 +41540,8 @@ aac
 aac
 aac
 aac
-aac
-aac
+aab
+aab
 aab
 aab
 aab
@@ -41681,7 +41683,7 @@ aac
 aac
 aac
 aac
-aac
+aab
 aab
 aab
 aab
@@ -41823,8 +41825,8 @@ aac
 aac
 aac
 aac
-aac
-aac
+aab
+aab
 aab
 aab
 aab
@@ -43795,7 +43797,7 @@ mfi
 jHw
 jpB
 qWU
-aWf
+aWj
 aKU
 aOI
 aPb
@@ -44647,7 +44649,7 @@ isR
 jHw
 gHh
 qWU
-aWf
+aWj
 aKU
 aOI
 aPb
@@ -46022,7 +46024,7 @@ aZC
 aZC
 aZC
 aZC
-bax
+aVV
 baV
 bao
 bap
@@ -46632,7 +46634,7 @@ aNk
 uSA
 aNJ
 aNP
-aVV
+aWf
 aKU
 abg
 aOk
@@ -46774,7 +46776,7 @@ aNl
 aNl
 aNK
 aNP
-aVV
+aWf
 aKU
 abg
 aOk
@@ -46916,7 +46918,7 @@ aNm
 aNl
 aNK
 aNP
-aVV
+aWf
 aKU
 abg
 aOk
@@ -49129,10 +49131,10 @@ aac
 aac
 aab
 aab
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
 aac
 aac
 aac
@@ -49409,7 +49411,7 @@ aab
 aab
 aab
 aab
-aab
+aac
 aac
 aab
 aab
@@ -49544,7 +49546,7 @@ aac
 aac
 aac
 aac
-aab
+aac
 aab
 aab
 aab

@@ -1020,7 +1020,7 @@
 	else
 		user.visible_message("<span class='notice'><b>\The [user]</b> pokes [src].</span>","<span class='notice'>You poke [src].</span>")
 		playsound(src, 'sound/items/drop/plushie.ogg', 25, 0)
-		visible_message("[src] says, \"[pokephrase]\"")
+		audible_message("[src] says, \"[pokephrase]\"")
 	last_message = world.time
 
 /obj/item/toy/plushie/verb/rename_plushie()

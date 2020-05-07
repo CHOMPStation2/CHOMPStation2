@@ -94,7 +94,7 @@
 
 /datum/reagent/ethanol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //This used to do just toxin. That's boring. Let's make this FUN.
 	if(issmall(M)) removed *= 2
-	var/strength_mod = 3 //YW EDIT: multiply by inherent tolerance first, I don't want to strip out the following block yet
+	var/strength_mod = 3 * M.species.alcohol_tolerance //YW EDIT: multiply by inherent tolerance first, I don't want to strip out the following block yet
 	if(alien == IS_SKRELL)
 		strength_mod *= 5
 	if(alien == IS_TAJARA)

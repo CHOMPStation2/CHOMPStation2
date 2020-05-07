@@ -83,7 +83,7 @@ var/list/GPS_list = list()
 	dat["curr_z_name"] = using_map.get_zlevel_name(curr.z)
 	dat["gps_list"] = list()
 	dat["z_level_detection"] = using_map.get_map_levels(curr.z, long_range)
-
+	
 	for(var/obj/item/device/gps/G in GPS_list - src)
 		if(!G.tracking || G.emped || G.hide_signal)
 			continue
@@ -99,9 +99,7 @@ var/list/GPS_list = list()
 		gps_data["gps_tag"] = G.gps_tag
 
 		var/area/A = get_area(G)
-		gps_data["area_name"] = A.name
-		if(istype(A, /area/submap))
-			gps_data["area_name"] = "Unknown Area" // Avoid spoilers.
+		gps_data["area_name"] = A.get_name()
 
 		gps_data["z_name"] = using_map.get_zlevel_name(T.z)
 		gps_data["direction"] = get_adir(curr, T)

@@ -26,7 +26,7 @@
 var vchat_opts = {
 	msBeforeDropped: 30000, //No ping for this long, and the server must be gone
 	cookiePrefix: "vst-", //If you're another server, you can change this if you want.
-	alwaysShow: ["vc_looc", "vc_system"], //Categories to always display on every tab
+	alwaysShow: ["vc_adminpm", "vc_system"], //Categories to always display on every tab. YW Edit: removes vc_looc adds: vc_adminpm
 	vchatTabsVer: 1.0 //Version of vchat tabs save 'file'
 };
 
@@ -197,8 +197,8 @@ function start_vue() {
 					matches: ".pm",
 					becomes: "vc_adminpm",
 					pretty: "Admin PMs",
-					tooltip: "Messages to/from admins ('adminhelps')",
-					required: false,
+					tooltip: "Messages to/from admins ('adminhelps'), always enabled",
+					required: true, //YW Edit
 					admin: false
 				},
 				{
@@ -229,8 +229,8 @@ function start_vue() {
 					matches: ".ooc.looc, .ooc .looc", //Dumb game
 					becomes: "vc_looc",
 					pretty: "Local OOC",
-					tooltip: "Local OOC messages, always enabled",
-					required: true
+					tooltip: "Local OOC messages",
+					required: false //YW Edit
 				},
 				{
 					matches: ".boldannounce",

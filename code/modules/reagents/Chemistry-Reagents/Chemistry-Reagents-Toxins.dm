@@ -14,6 +14,7 @@
 	var/skin_danger = 0.2 // The multiplier for how effective the toxin is when making skin contact.
 
 /datum/reagent/toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	strength *= M.species.chem_strength_tox // YW ADD (e.g. basic toxin and 1.5 = 6 damage/u, but amatox or carptox are 15/u)
 	if(strength && alien != IS_DIONA)
 		if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
 		if(alien == IS_SLIME)
@@ -615,7 +616,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1
+	var/threshold = 1 * M.species.chem_strength_tox // YW ADD
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -663,7 +664,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1
+	var/threshold = 1 * M.species.chem_strength_tox // YW ADD
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -726,7 +727,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/drug_strength = 15
+	var/drug_strength = 15 * M.species.chem_strength_tox // YW ADD
 	if(alien == IS_SKRELL)
 		drug_strength = drug_strength * 0.8
 
