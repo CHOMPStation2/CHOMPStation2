@@ -93,12 +93,7 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-<<<<<<< HEAD
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
 //	wikilink="https://www.yawn.ocry.com/Akula"
-=======
-	wikilink="https://yawn.izac.live/Akula"
->>>>>>> d06278c69e2e5c5c11a98dbe143481483bb3a6f2
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
