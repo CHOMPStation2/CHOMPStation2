@@ -222,7 +222,6 @@ var/list/admin_verbs_debug = list(
 	/client/proc/enable_debug_verbs,
 	/client/proc/callproc,
 	/client/proc/callproc_datum,
-	/client/proc/debug_process,			//VOREStation Add,
 	/datum/admins/proc/quick_nif,	//CHOMPStation Addition 13/1/20 TFF - Allow spawning NIFs into players,
 	/client/proc/SDQL2_query,
 	/client/proc/Jump,
