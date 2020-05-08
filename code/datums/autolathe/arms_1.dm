@@ -1,5 +1,5 @@
 /datum/design/item/autolathe
-	var/hidden = 0
+	//var/hidden = 0
 	build_type = AUTOLATHE	 	//Flag as to what kind machine the design is built in. See defines.
 
 /datum/design/item/autolathe/arms						//Datum for object designs, used in construction	//IDs of that techs the object originated from and the minimum level requirements.

@@ -33,6 +33,7 @@ other types of metals and chemistry for reagents).
 	var/sort_string = "ZZZZZ"		//Sorting order
 	var/maxstack = 1                // yw edit, used by autolathe, says how many stacks a item can have or the limit of how many you can spawn at once
 	var/autolathe_build = 0         //YW Edit, makes other designs able to be built or added in autolathe, be via design disk or something else(added due to can't have two designs with same build_path without unit test getting angry)
+	var/hidden = 0
 
 /datum/design/New()
 	..()

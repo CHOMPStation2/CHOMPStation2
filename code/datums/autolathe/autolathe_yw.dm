@@ -39,7 +39,7 @@
 	var/temp_search
 	var/selected_category
 	var/screen = 1
-	var/list/categories = list("Arms and Ammunition", "Devices", "Engineering", "General", "Medical", "Tools")
+	var/list/categories = list("Arms and Ammunition", "Devices", "Engineering", "General", "Medical", "Tools", "Imported")
 
 	var/datum/wires/autolathe/wires = null
 
@@ -101,7 +101,7 @@
 			data["selected_category"] = selected_category
 			var/list/designs = list()
 			data["designs"] = designs
-			for(var/datum/design/item/autolathe/D in files.known_designs)
+			for(var/datum/design/item/D in files.known_designs)
 				if(!D.build_path || D.hidden && !hacked || selected_category != D.category)
 					continue
 				var/list/design = list()
@@ -118,7 +118,7 @@
 			data["search"] = temp_search
 			var/list/designs = list()
 			data["designs"] = designs
-			for(var/datum/design/item/autolathe/D in matching_designs)
+			for(var/datum/design/item/D in matching_designs)
 				var/list/design = list()
 				designs[++designs.len] = design
 				design["name"] = D.name
@@ -387,35 +387,37 @@
 		possible_designs += new D(src)
 //	generate_integrated_circuit_designs()
 	RefreshResearch()
-	known_designs.Add(/datum/design/item/engineering/t_scanner)//manually adds design because its from another machine
 
 
 /datum/research/autolathe/DesignHasReqs(var/datum/design/D)
 	if(D.req_tech.len == 0)
 		return 1
-	if((D.build_type && AUTOLATHE))
+	if(D.build_type == AUTOLATHE)
 		return 1
 
 	else
 		return 0
 
 /datum/research/autolathe/AddDesign2Known(var/datum/design/D)
-	if(D.autolathe_build == 1)
-		known_designs.Add(D)
+	if(D.id in known_designs)
 		return
-	..()
+	// Global datums make me nervous
+	known_designs.Add(D)
 
-//datum/research/proc/FindDesignByID(var/id)
-	//return known_designs[id]
+/obj/machinery/autolathe/proc/AddDesignViaDisk(var/datum/design/D)
+	for(var/datum/design/F in files.possible_designs)
+		if(F.autolathe_build != 1 || F.id != D.id)
+			continue
+		if(!F.category)
+			F.category = "Imported"
+		files.known_designs.Add(F)
 
-///obj/machinery/autolathe/proc/FindDesignByID(var/id)
-	//return files.known_designs[id]
 
 /obj/machinery/autolathe/proc/FindDesign(var/id)
 	for(var/datum/design/item/desired_design in files.known_designs)
 		if(desired_design.id == id)
 			return desired_design
-	return
+	return 0
 
 /obj/machinery/autolathe/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(busy)
@@ -445,12 +447,14 @@
 	if(istype(O, /obj/item/weapon/disk))
 		if(istype(O, /obj/item/weapon/disk/design_disk))
 			var/obj/item/weapon/disk/design_disk/D = O
+			var/datum/design/B = D.blueprint
 			if(D.blueprint)
-				if(D.blueprint.autolathe_build == 1 || (D.blueprint.build_type && AUTOLATHE))
+				if(B.autolathe_build == 1 || B.build_type == AUTOLATHE)
 					user.visible_message("[user] begins to load \the [O] in \the [src]...", "You begin to load a design from \the [O]...", "You hear the chatter of a floppy drive.")
 					busy = 1
-					files.AddDesign2Known(D.blueprint)
+					AddDesignViaDisk(D.blueprint)
 					busy = 0
+					to_chat(user, "wewew4")
 				else
 					to_chat(user, "<span class='warning'>That disk doens't have a compatible design</span>")
 			else
