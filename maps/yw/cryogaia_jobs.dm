@@ -36,6 +36,11 @@ var/const/SAR 				=(1<<14)
 	assignment = "Pathfinder"
 	rank = "Pathfinder"
 
+/datum/department/planetside
+	name = DEPARTMENT_PLANET
+	color = "#bab421"
+	sorting_order = 2 // Same as cargo in importance.
+
 /datum/job/pathfinder
 	title = "Pathfinder"
 	flag = PATHFINDER
@@ -48,9 +53,12 @@ var/const/SAR 				=(1<<14)
 	selection_color = "#d6d05c"
 	economic_modifier = 7
 	minimal_player_age = 7
-	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway)
-	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway)
+	pto_type = PTO_EXPLORATION
+
+	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway, access_pathfinder)
+	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_research, access_gateway, access_pathfinder)
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
+	job_description = "The Pathfinder's job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
 
 /datum/job/pilot
 	title = "Pilot"
@@ -64,9 +72,12 @@ var/const/SAR 				=(1<<14)
 	selection_color = "#999440"
 	economic_modifier = 5
 	minimal_player_age = 3
+	pto_type = PTO_EXPLORATION
+
 	access = list(access_pilot)
 	minimal_access = list(access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
+	job_description = "A Pilot flies the various shuttles in the Borealis System."
 
 /datum/job/explorer
 	title = "Explorer"
@@ -79,9 +90,12 @@ var/const/SAR 				=(1<<14)
 	supervisors = "the pathfinder and the research director"
 	selection_color = "#999440"
 	economic_modifier = 6
+	pto_type = PTO_EXPLORATION
+
 	access = list(access_explorer, access_research)
 	minimal_access = list(access_explorer, access_research)
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
+	job_description = "An Explorer searches for interesting things, and returns them to the station."
 
 /datum/job/sar
 	title = "Field Medic"
@@ -95,9 +109,12 @@ var/const/SAR 				=(1<<14)
 	selection_color = "#999440"
 	economic_modifier = 6
 	minimal_player_age = 3
-	access = list(access_medical, access_medical_equip, access_eva, access_maint_tunnels, access_external_airlocks)		//nerfs SAR access. Why the fuck do they have access to surgery and chemistry? They're not doctors, their medics.
-	minimal_access = list(access_medical, access_medical_equip, access_eva) //nerfs SAR access. Why the fuck do they have access to surgery and chemistry? They're not doctors, their medics.
+	pto_type = PTO_EXPLORATION
+
+	access = list(access_medical, access_medical_equip, access_eva, access_maint_tunnels, access_external_airlocks, access_sar, access_chemistry) //restoring chemistry access. FMs need it to mix meds, and they're basically just glorified EMTs - who also have chemistry access.
+	minimal_access = list(access_medical, access_medical_equip, access_eva, access_sar)
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
+	job_description = "A Field Medic works as the field doctor of expedition teams."
 
 /datum/job/offduty_exploration
 	title = "Off-duty Explorer"
@@ -111,3 +128,5 @@ var/const/SAR 				=(1<<14)
 	access = list(access_maint_tunnels, access_external_airlocks)
 	minimal_access = list(access_maint_tunnels, access_external_airlocks)
 	outfit_type = /decl/hierarchy/outfit/job/assistant/explorer
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
+	pto_type = PTO_EXPLORATION
