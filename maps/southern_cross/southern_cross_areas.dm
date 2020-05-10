@@ -833,9 +833,11 @@
 /area/storage/emergency_storage/firstdeck/fs_emergency
 	name = "First Deck Fore Starboard Emergency Storage"
 
-/area/ai_monitored/storage/eva/pilot
-	name = "Pilot EVA Storage"
+//CHOMPStation Edit Start 10/5/20 TFF - Change Pilot EVA to Auxillary EVA
+/area/ai_monitored/storage/eva/aux
+	name = "Auxiliary EVA Storage"
 	icon_state = "eva"
+//Chompstation Edit End
 
 /area/tcomm/
 	icon_state = "tcomsatcham"
