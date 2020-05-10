@@ -1086,6 +1086,10 @@
 	name = "\improper Cargo Locker Room"
 	icon_state = "quart"
 
+/area/security/security_hallway
+	name = "\improper Security Hallway"
+	icon_state = "security"
+
 //Deck Three (Z-3)
 
 /area/ai
