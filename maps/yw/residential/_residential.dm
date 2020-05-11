@@ -104,3 +104,39 @@
 /area/residential/mansion
 	name = "\improper Residential -  Mansion"
 	icon_state = "mansion"
+
+
+
+// Spawn points
+
+var/global/list/latejoin_residential = list()
+/obj/effect/landmark/residential
+	name = "JoinLateResidential"
+	delete_me = 1
+
+/obj/effect/landmark/residential/New()
+	latejoin_residential += loc // Register this turf as tram latejoin.
+	..()
+
+/datum/spawnpoint/residential
+	display_name = "NCS Serenity Residential"
+	restrict_job = list("Off-duty Worker", "Off-duty Cargo", "Off-duty Engineer", "Off-duty Medic", "Off-duty Scientist", "Off-duty Officer", "Chef")
+	msg = "has arrived on the NCS Serenity Residential level"
+	announce_channel = "Common"
+
+/datum/spawnpoint/residential/New()
+	..()
+	turfs = latejoin_residential
+
+
+/obj/machinery/cryopod/robot/door/residential
+	name = "Residential Elevator"
+	desc = "Wait aren't you already there?"
+	spawnpoint_type = /datum/spawnpoint/residential
+	announce_channel = "Common"
+	on_store_message = "has left through the Residential area Elevator."
+	on_store_name = "Residential Elevator"
+	on_enter_visible_message = "makes their way into the"
+	on_enter_occupant_message = "You hear cheery music."
+	on_store_visible_message_1 = "hums as it moves"
+	on_store_visible_message_2 = "into the elevator."

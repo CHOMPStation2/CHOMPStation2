@@ -389,13 +389,8 @@
 	icon_state = "snow"
 	outdoors = TRUE
 	movement_cost = 8
+	initial_flooring = /decl/flooring/snow
 	var/list/crossed_dirs = list()
-	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
-		'sound/effects/footstep/snow1.ogg',
-		'sound/effects/footstep/snow2.ogg',
-		'sound/effects/footstep/snow3.ogg',
-		'sound/effects/footstep/snow4.ogg',
-		'sound/effects/footstep/snow5.ogg'))
 
 /turf/simulated/floor/outdoors/snow/snow
 	name = "snow"
@@ -445,3 +440,4 @@
         for(var/i in 1 to amt)
             add_overlay(image(icon, "footprint[i]", text2num(d)))
 
+//**** Here ends snow ****

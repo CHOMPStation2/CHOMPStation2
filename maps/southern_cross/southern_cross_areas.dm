@@ -407,7 +407,7 @@
 /area/surface/outpost/main/bar
 	name = "\improper Main Outpost Bar"
 	icon_state = "bar"
-
+/*
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
 
@@ -428,7 +428,7 @@
 
 /area/surface/outpost/main/dorms/dorm_6
 	name = "\improper Main Outpost Dorm Six"
-
+*/
 /area/surface/outpost/main/airlock
 	name = "\improper Main Outpost Airlock"
 	icon_state = "red"
@@ -751,15 +751,12 @@
 	name = "\improper First Deck Fore Auxiliary Dock"
 	icon_state = "docking_hallway"
 
+//CHOMPStation Edit Start TFF 4/5/20 - One of these ain't the same thing, bruh. Escape Pod 1, Escape Pod 2, Research Access Hallway.
 /area/hallway/secondary/escape/firstdeck/ep_port
 	name = "\improper Large Escape Pod 2 Port"
 	icon_state = "escape_pod"
 
-/area/hallway/secondary/escape/firstdeck/ep_starboard1
-	name = "\improper First Deck Research Access Hallway"
-	icon_state = "escape_pod"
-
-/area/hallway/secondary/escape/firstdeck/ep_starboard2
+/area/hallway/secondary/escape/firstdeck/ep_starboard
 	name = "\improper Large Escape Pod 2 Starboard"
 	icon_state = "escape_pod"
 
@@ -770,6 +767,11 @@
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard
 	name = "\improper Escape Pods Aft Starboard"
 	icon_state = "escape_pod"
+
+/area/hallway/secondary/firstdeck/research_access
+	name = "\improper First Deck Research Access Hallway"
+	icon_state = "hallS"
+//CHOMPStation Edit End
 
 /area/hangar
 	name = "\improper First Deck Hangar"
@@ -1083,6 +1085,10 @@
 /area/quartermaster/lockerroom
 	name = "\improper Cargo Locker Room"
 	icon_state = "quart"
+
+/area/security/security_hallway
+	name = "\improper Security Hallway"
+	icon_state = "security"
 
 //Deck Three (Z-3)
 
