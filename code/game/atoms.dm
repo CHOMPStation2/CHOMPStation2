@@ -37,8 +37,8 @@
 
 	// During dynamic mapload (reader.dm) this assigns the var overrides from the .dmm file
 	// Native BYOND maploading sets those vars before invoking New(), by doing this FIRST we come as close to that behavior as we can.
-	if(use_preloader && (src.type == _preloader.target_path))//in case the instanciated atom is creating other atoms in New()
-		_preloader.load(src)
+	if(GLOB.use_preloader && (src.type == GLOB._preloader.target_path))//in case the instanciated atom is creating other atoms in New()
+		GLOB._preloader.load(src)
 
 	// Pass our arguments to InitAtom so they can be passed to initialize(), but replace 1st with if-we're-during-mapload.
 	var/do_initialize = SSatoms.initialized
@@ -184,13 +184,17 @@
 
 	var/list/output = list("[bicon(src)] That's [f_name] [suffix]", desc)
 
-	if(user.client?.examine_text_mode == EXAMINE_MODE_INCLUDE_USAGE)
+	if(user.client?.prefs.examine_text_mode == EXAMINE_MODE_INCLUDE_USAGE)
 		output += description_info
 
-	if(user.client?.examine_text_mode == EXAMINE_MODE_SWITCH_TO_PANEL)
+	if(user.client?.prefs.examine_text_mode == EXAMINE_MODE_SWITCH_TO_PANEL)
 		user.client.statpanel = "Examine" // Switch to stat panel
 
 	return output
+
+// Don't make these call bicon or anything, these are what bicon uses. They need to return an icon.
+/atom/proc/examine_icon()
+	return icon(icon=src.icon, icon_state=src.icon_state, dir=SOUTH, frame=1, moving=0)
 
 // called by mobs when e.g. having the atom as their machine, pulledby, loc (AKA mob being inside the atom) or buckled var set.
 // see code/modules/mob/mob_movement.dm for more.

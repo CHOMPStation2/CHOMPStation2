@@ -148,7 +148,18 @@
 	return 0
 
 /mob/proc/movement_delay(oldloc, direct)
-	return 0
+	. = 0
+	if(locate(/obj/item/weapon/grab) in src)
+		. += 7
+	
+	// Movespeed delay based on movement mode
+	switch(m_intent)
+		if("run")
+			if(drowsyness > 0)
+				. += 6
+			. += config.run_speed
+		if("walk")
+			. += config.walk_speed
 
 /mob/proc/Life()
 //	if(organStructure)
@@ -218,7 +229,7 @@
 			else
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
-	return
+		return 1
 
 
 /mob/proc/show_inv(mob/user as mob)

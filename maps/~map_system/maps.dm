@@ -147,15 +147,14 @@ var/list/all_maps = list()
 /datum/map/proc/get_zlevel_time(var/z)
 	if(!z)
 		z = 1
-	var/datum/planet/P = SSplanets.z_to_planet[z]
+	var/datum/planet/P = z <= SSplanets.z_to_planet.len ? SSplanets.z_to_planet[z] : null
 	// We found a planet tied to that zlevel, give them the time
-	if(istype(P))
+	if(P?.current_time)
 		return P.current_time
 
 	// We have to invent a time
 	else
-		var/seconds_stationtime = round(station_time_in_ticks*0.1) //Not actually ticks......
-		var/datum/time/T = new(seconds_stationtime)
+		var/datum/time/T = new (station_time_in_ds)
 		return T
 
 // Returns a boolean for if it's night or not on a particular zlevel
@@ -163,7 +162,7 @@ var/list/all_maps = list()
 	if(!z)
 		z = 1
 	var/datum/time/now = get_zlevel_time(z)
-	var/percent = now.seconds_stored / now.seconds_in_day
+	var/percent = now.seconds_stored / now.seconds_in_day //practically all of these are in DS
 
 	// First quarter, last quarter
 	if(percent < 0.25 || percent > 0.75)
