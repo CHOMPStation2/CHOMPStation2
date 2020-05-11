@@ -543,7 +543,6 @@
 /obj/screen/component_button
 	var/obj/screen/parent
 
-
 /obj/screen/component_button/Initialize(mapload, obj/screen/new_parent)
 	. = ..()
 	parent = new_parent
