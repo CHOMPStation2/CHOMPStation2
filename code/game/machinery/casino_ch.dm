@@ -1,5 +1,3 @@
-#define DISPENSER_MAX_CARTRIDGES 90
-
 /obj/structure/casino_table
 	name = "casino table"
 	desc = "this is an unremarkable table for a casino."
@@ -245,6 +243,9 @@
 	var/interval = 1
 	var/busy = 0
 
+	var/datum/effect/effect/system/confetti_spread
+	var/confetti_strength = 8
+
 /obj/structure/wheel_of_fortune/verb/setinterval()
 	set name = "Change interval"
 	set category = "Object"
@@ -272,6 +273,13 @@
 	add_fingerprint(user)
 	spawn(5 SECONDS)
 		visible_message("<span class='notice'>The wheel of fortune stops spinning, the number is [result]!</span>")
+
+		src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
+		src.confetti_spread.attach(src) //If somehow people start dragging slot machine
+		spawn(0)
+			for(var/i = 1 to confetti_strength)
+				src.confetti_spread.start()
+				sleep(10)
 		busy=0
 		icon_state = "wheel_of_fortune"
 
@@ -301,6 +309,7 @@
 	icon_state = "deluxe_dispenser"
 	ui_title = "Deluxe Drink Dispenser"
 	accept_drinking = 1
+	var/max_cartridges = 90 //Because it keeps getting borked by upstream, now gotta do it with variable until we can make more permanent solution - Jack
 
 
 /obj/machinery/chemical_dispenser/deluxe
@@ -416,10 +425,11 @@
 	if(spawn_cartridges)
 		for(var/type in spawn_cartridges)
 			add_cartridge_deluxe(new type(src))
+			world << "test 1"
 
 /obj/machinery/chemical_dispenser/deluxe/examine(mob/user)
 	user << desc
-	user << "It has [cartridges.len] cartridges installed, and has space for [DISPENSER_MAX_CARTRIDGES - cartridges.len] more."
+	user << "It has [cartridges.len] cartridges installed, and has space for [max_cartridges - cartridges.len] more."
 
 /obj/machinery/chemical_dispenser/deluxe/proc/add_cartridge_deluxe(obj/item/weapon/reagent_containers/chem_disp_cartridge/C, mob/user)
 	if(!istype(C))
@@ -427,7 +437,7 @@
 			user << "<span class='warning'>\The [C] will not fit in \the [src]!</span>"
 		return
 
-	if(cartridges.len >= DISPENSER_MAX_CARTRIDGES)
+	if(cartridges.len >= max_cartridges)
 		if(user)
 			user << "<span class='warning'>\The [src] does not have any slots open for \the [C] to fit into!</span>"
 		return
@@ -514,6 +524,7 @@
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/mug = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/wine = 25,
 					/obj/item/weapon/reagent_containers/food/drinks/metaglass = 25,
+					/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 25,
 					/obj/item/weapon/glass_extra/stick = 50,
 					/obj/item/weapon/glass_extra/straw = 50,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/gin = 10,
@@ -565,8 +576,6 @@
 	req_access = list(access_bar)
 	req_log_access = access_bar
 	has_logs = 1
-
-	/*/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 25,*/ //Metapint glass not ported yet - Jack
 
 /obj/machinery/vending/deluxe_dinner
 	name = "Deluxe Dining Distributor"
@@ -753,10 +762,10 @@
 
 				EXCHANGE RATE <br>
 				FROM	=	TO <br>
-				10 Thalers = 1 casino chip <br>
-				1 casino chip = 5 Thalers <br> <br>
+				5 Thalers = 1 casino chip <br>
+				1 casino chip = 2.5 Thalers (rounded down)<br> <br>
 
-				The special sentient prize is 50 chips! More about it in section below! <br> <br>
+				The special sentient prize is 100 chips! More about it in section below! <br> <br>
 
 				Melee weapons
 				<ul>
@@ -857,7 +866,7 @@
 				<h1><a name="SentientPrizes">Sentient prizes</a></h1>
 				Goodness me this is quite the casino huh? Who would have thought one could win other people as a prize? Well you can do just about anything you want with them! Be it just company, some less children friendly company, heck you can even eat them or make them eat you! The options and possibilities are quite frankly limitless! <br>
 				Now you might ask, how does one get these fancy prizes? Well they can be obtained by checking in at the exchange both and see the list of prizes, there might be none, there might be many, it depends on volunteers and losers! This brings us first to volunteers and then to losers! <br>
-				Volunteering is simple! Anyone can walk up to the booth and ask to be a sentient prize, what this means is that you get a nice sum of 250 chips for you to do whatever you want, but someone might come at any point and claim you! <br>
+				Volunteering is simple! Anyone can walk up to the booth and ask to be a sentient prize, what this means is that you get a nice sum of 150 chips for you to do whatever you want, but someone might come at any point and claim you! <br>
 				Losers are obtained differently, if youre completly busted and have nothing left, you become a prize that the one you lost to can do whatever they want with, this means both gamblers and dealers can end up as a prize, though if for whatever reason you dont become their prize, you get added to the list for someone else to enjoy. Becoming a prize means you also get 100 chips in compensation! <br>
 
 				Now hear this! The casino has decided that to spice things up, folks can bet themselves at any time and arent already a prize on the list! Doesnt matter if youre rich or broke, playing blackjack or roulette, you can bet yourself in any game and youre worth 250 chips! But be careful, cause if you lose, youre the winners prize! They can keep you, give you to someone else. or to the prize booth and get the chips you would have gotten as volunteer! But if given to the booth, the winner cant buy their prize back for the lower cost!<br><br>
@@ -890,7 +899,7 @@
 
 /obj/machinery/casino_chip_exchanger
 	name = "Casino Chip Exchanger"
-	desc = "Takes all your cash and gives you chips back! No change and no refund!"
+	desc = "Takes all your cash and gives you chips back! No change and half refund!"
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state ="casino_atm"
 	anchored = 1
@@ -905,6 +914,17 @@
 
 		user << "<span class='info'>You insert [I] into [src].</span>"
 		spawn_casinochips(round(I:worth/5), src.loc)
+		src.attack_hand(user)
+		qdel(I)
+	if(istype(I,/obj/item/weapon/spacecasinocash))
+		//consume the money
+		if(prob(50))
+			playsound(loc, 'sound/items/polaroid1.ogg', 50, 1)
+		else
+			playsound(loc, 'sound/items/polaroid2.ogg', 50, 1)
+
+		user << "<span class='info'>You insert [I] into [src].</span>"
+		spawn_money(round(I:worth/2.5), src.loc)
 		src.attack_hand(user)
 		qdel(I)
 

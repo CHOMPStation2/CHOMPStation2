@@ -894,7 +894,7 @@
 "arj" = (/obj/machinery/telecomms/relay/preset/telecomms,/turf/simulated/floor/tiled/dark{nitrogen = 100; oxygen = 0; temperature = 80},/area/tcomm/chamber)
 "ark" = (/obj/machinery/light,/turf/simulated/floor/bluegrid{name = "Mainframe Base"; nitrogen = 100; oxygen = 0; temperature = 80},/area/tcomm/chamber)
 "arl" = (/obj/machinery/telecomms/broadcaster/preset_right,/turf/simulated/floor/tiled/dark{nitrogen = 100; oxygen = 0; temperature = 80},/area/tcomm/chamber)
-"arm" = (/obj/structure/sign/warning/nosmoking_2{pixel_y = -32},/obj/machinery/telecomms/hub/preset/southerncross,/turf/simulated/floor/tiled/dark{nitrogen = 100; oxygen = 0; temperature = 80},/area/tcomm/chamber)
+"arm" = (/obj/structure/sign/warning/nosmoking_2{pixel_y = -32},/obj/machinery/telecomms/hub/preset/southerncross{autolinkers = list("hub","d1_relay","d2_relay","d3_relay","pnt_relay","cve_relay","wld_relay","tns_relay","explorer","exp_relay","c_relay","m_relay","r_relay","science","medical","supply","service","common","command","engineering","security","unused","hb_relay","receiverA","broadcasterA","casino_relay")},/turf/simulated/floor/tiled/dark{nitrogen = 100; oxygen = 0; temperature = 80},/area/tcomm/chamber)
 "arn" = (/obj/machinery/telecomms/receiver/preset_right/southerncross,/turf/simulated/floor/tiled/dark{nitrogen = 100; oxygen = 0; temperature = 80},/area/tcomm/chamber)
 "aro" = (/obj/machinery/telecomms/server/presets/command,/turf/simulated/floor/tiled/dark{nitrogen = 100; oxygen = 0; temperature = 80},/area/tcomm/chamber)
 "arp" = (/obj/machinery/telecomms/server/presets/security,/turf/simulated/floor/tiled/dark{nitrogen = 100; oxygen = 0; temperature = 80},/area/tcomm/chamber)
