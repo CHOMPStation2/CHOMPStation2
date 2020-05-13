@@ -546,7 +546,7 @@
 	var/filltype = 0       // Used to determine message.
 	var/total_used = 0     // Amount of material used.
 	if(busy)
-		visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Autolathe is busy. Please wait for completion of previous operation </span>\"")
+		visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Autolathe is busy. Please wait for completion of previous operation\"")
 		return
 	busy = 1
 	for(var/obj/item/eating in get_step(src,input_dir))
@@ -580,7 +580,7 @@
 			mass_per_sheet += eating.matter[material]
 
 		if(!filltype)
-			visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Storage is full. Operation aborted</span>\"")
+			visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Storage is full. Operation aborted\"")
 			return
 
 		flick("autolathe_o", src)
