@@ -53,7 +53,6 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 200)
 	build_path = /obj/item/device/t_scanner
 	sort_string = "NBAAA"
-	autolathe_build = 1 //Ywedit
 
 /datum/design/item/engineering/t_scanner_upg
 	name = "Upgraded T-ray Scanner"

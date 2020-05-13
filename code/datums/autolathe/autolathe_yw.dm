@@ -23,6 +23,8 @@
 	var/disabled = 0
 	var/shocked = 0
 	var/busy = 0
+	var/input_dir_name = "North"
+	var/input_dir = NORTH
 	var/operating = 0.0
 	var/list/queue = list()
 	var/queue_max_len = 12
@@ -398,20 +400,18 @@
 	else
 		return 0
 
-/datum/research/autolathe/AddDesign2Known(var/datum/design/D)
-	if(D.id in known_designs)
-		return
-	// Global datums make me nervous
-	known_designs.Add(D)
 
-/obj/machinery/autolathe/proc/AddDesignViaDisk(var/datum/design/D)
+/obj/machinery/autolathe/proc/AddDesignViaDisk(var/mob/user, var/datum/design/D)
 	for(var/datum/design/F in files.possible_designs)
 		if(F.autolathe_build != 1 || F.id != D.id)
 			continue
+		if(F in files.known_designs)
+			to_chat(user, "This design is already exists")
+			return
 		if(!F.category)
 			F.category = "Imported"
 		files.known_designs.Add(F)
-
+		return
 
 /obj/machinery/autolathe/proc/FindDesign(var/id)
 	for(var/datum/design/item/desired_design in files.known_designs)
@@ -452,9 +452,8 @@
 				if(B.autolathe_build == 1 || B.build_type == AUTOLATHE)
 					user.visible_message("[user] begins to load \the [O] in \the [src]...", "You begin to load a design from \the [O]...", "You hear the chatter of a floppy drive.")
 					busy = 1
-					AddDesignViaDisk(D.blueprint)
+					AddDesignViaDisk(user, D.blueprint)
 					busy = 0
-					to_chat(user, "wewew4")
 				else
 					to_chat(user, "<span class='warning'>That disk doens't have a compatible design</span>")
 			else
@@ -538,3 +537,84 @@
 
 	updateUsrDialog()
 	return
+
+/obj/machinery/autolathe/verb/eatmaterialsnearby()
+	set name = "Recycle nearby materials"
+	set category = "Object"
+	set src in oview(1)
+
+	var/filltype = 0       // Used to determine message.
+	var/total_used = 0     // Amount of material used.
+	if(busy)
+		visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Autolathe is busy. Please wait for completion of previous operation </span>\"")
+		return
+	busy = 1
+	for(var/obj/item/eating in get_step(src,input_dir))
+		if(istype(eating,/obj/item/ammo_magazine/clip) || istype(eating,/obj/item/ammo_magazine/s357) || istype(eating,/obj/item/ammo_magazine/s38) || istype(eating,/obj/item/ammo_magazine/s44) || istype(eating,/obj/item/stack))
+			continue
+
+		if(!eating.matter)
+			continue
+
+
+		var/mass_per_sheet = 0 // Amount of material constituting one sheet.
+		for(var/material in eating.matter)
+
+			if(isnull(stored_material[material]) || isnull(storage_capacity[material]))
+				continue
+
+			if(stored_material[material] >= storage_capacity[material])
+				continue
+
+			var/total_material = eating.matter[material]
+
+
+			if(stored_material[material] + total_material > storage_capacity[material])
+				total_material = storage_capacity[material] - stored_material[material]
+				filltype = 1
+			else
+				filltype = 2
+
+			stored_material[material] += total_material
+			total_used += total_material
+			mass_per_sheet += eating.matter[material]
+
+		if(!filltype)
+			visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Storage is full. Operation aborted</span>\"")
+			return
+
+		flick("autolathe_o", src)
+
+		if(istype(eating,/obj/item/stack))
+			var/obj/item/stack/stack = eating
+			stack.use(max(1, round(total_used/mass_per_sheet))) // Always use at least 1 to prevent infinite materials.
+		else
+			qdel(eating)
+		sleep(10*mat_efficiency)
+
+	busy = 0
+	if(filltype == 1)
+		visible_message("[bicon(src)] <b>\The [src]</b> beeps, \"Storage capacity full. Operation terminated. Materials recycled: [total_used]\"")
+	else
+		visible_message("[bicon(src)] <b>\The [src]</b> beeps, \"All materials recycled. Operation terminated. Materials recycled: [total_used]\"")
+
+
+
+/obj/machinery/autolathe/verb/setrecyclepos()
+	set name = "Set recycle input"
+	set category = "Object"
+	set src in oview(1)
+
+	input_dir_name = input("Which direction ?") in list("North", "South", "East", "West")
+	switch(input_dir_name)
+		if("North")
+			input_dir = NORTH
+		if("South")
+			input_dir = SOUTH
+		if("East")
+			input_dir = EAST
+		if("West")
+			input_dir = WEST
+	to_chat(src, "You set the material input to [input_dir_name]")
+
+

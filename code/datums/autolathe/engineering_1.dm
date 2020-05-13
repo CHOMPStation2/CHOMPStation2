@@ -2,6 +2,12 @@
 	category = "Engineering"			//category item goes to
 
 /datum/design/item/autolathe/engineering/airlockmodule
+	name = "power control module"
+	id = "powercontrolmodule"
+	build_path = /obj/item/weapon/module/power_control
+	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)
+
+/datum/design/item/autolathe/engineering/airlockmodule
 	name = "airlock electronics"
 	id = "airlock_electronics"
 	build_path = /obj/item/weapon/airlock_electronics

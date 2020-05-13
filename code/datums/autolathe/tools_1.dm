@@ -13,11 +13,11 @@
 	build_path = /obj/item/device/multitool
 	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 25)
 
-/*/datum/design/item/autolathe/tools/t_scanner
+/datum/design/item/autolathe/tools/t_scanner
 	name = "T-ray scanner"
 	id = "t_scanner"
 	build_path = /obj/item/device/t_scanner
-	materials = list(DEFAULT_WALL_MATERIAL = 187) already exists in normal designs */
+	materials = list(DEFAULT_WALL_MATERIAL = 187)
 
 /datum/design/item/autolathe/tools/weldertool
 	name = "welding tool"
