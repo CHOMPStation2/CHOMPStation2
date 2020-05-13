@@ -107,6 +107,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 4000)
 	build_path = /obj/item/ammo_casing/a12g/stunshell
 	sort_string = "MABBB"
+	autolathe_build = 1 //Ywedit
 
 // Phase weapons
 
