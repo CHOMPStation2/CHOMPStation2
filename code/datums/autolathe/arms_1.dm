@@ -1,5 +1,5 @@
 /datum/design/item/autolathe
-	var/hidden = 0
+	//var/hidden = 0
 	build_type = AUTOLATHE	 	//Flag as to what kind machine the design is built in. See defines.
 
 /datum/design/item/autolathe/arms						//Datum for object designs, used in construction	//IDs of that techs the object originated from and the minimum level requirements.
@@ -48,13 +48,14 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 450)
 	hidden = 1
 
-/datum/design/item/autolathe/arms/stunshell
+/*/datum/design/item/autolathe/arms/stunshell
 	name = "ammunition (stun cartridge, shotgun)"
 	id = "shotgun_stunshell"
 	build_path = /obj/item/ammo_casing/a12g/stunshell
 	time = 10
 	materials = list(DEFAULT_WALL_MATERIAL = 450, "glass" = 900)
-	hidden = 1
+	hidden = 1*/
+	//It Gotta be manually added by a Design_disk, uncomment in case it shall be constructed normally(or add it other way, this causes some irrelevant unit test errors)
 
 //////////////////
 /*Ammo magazines*/
