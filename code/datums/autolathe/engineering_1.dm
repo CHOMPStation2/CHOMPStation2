@@ -1,7 +1,7 @@
 /datum/design/item/autolathe/engineering						//Datum for object designs, used in construction	//IDs of that techs the object originated from and the minimum level requirements.
 	category = "Engineering"			//category item goes to
 
-/datum/design/item/autolathe/engineering/airlockmodule
+/datum/design/item/autolathe/engineering/powercontrolmodule
 	name = "power control module"
 	id = "powercontrolmodule"
 	build_path = /obj/item/weapon/module/power_control
