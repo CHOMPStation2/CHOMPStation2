@@ -326,7 +326,7 @@ var/global/list/latejoin_tram   = list()
 	//color = ""
 
 /obj/machinery/door/airlock/multi_tile/metal/red/allowed(mob/user)
-	if(get_security_level() in list("green","blue"))
+	if(get_security_level() in list("green","blue","yellow","violet","orange"))
 		return FALSE
 
 	return ..(user)
