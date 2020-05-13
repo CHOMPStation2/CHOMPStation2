@@ -15,6 +15,7 @@
 					LANGUAGE_ENOCHIAN	= 0
 					)
 	var/vr_sprites = list()
+	var/pto_type = null
 
 /obj/item/weapon/robot_module/robot/clerical
 	languages = list(
@@ -64,14 +65,16 @@
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	. = ..() //Any Global vore modules will come from here
 
-/obj/item/weapon/robot_module/robot/medical/surgeon //VOREStation sprites
+/obj/item/weapon/robot_module/robot/medical/surgeon
+	pto_type = PTO_MEDICAL
 	vr_sprites = list(
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
 						"ZOOM-BA" = "zoomba-medical"
 					 )
 
-/obj/item/weapon/robot_module/robot/medical/crisis //VOREStation sprites
+/obj/item/weapon/robot_module/robot/medical/crisis
+	pto_type = PTO_MEDICAL
 	vr_sprites = list(
 						"Handy" = "handy-med",
 						"Acheron" = "mechoid-Medical",
@@ -79,7 +82,8 @@
 						"ZOOM-BA" = "zoomba-crisis"
 					 )
 
-/obj/item/weapon/robot_module/robot/clerical/butler //VOREStation sprites
+/obj/item/weapon/robot_module/robot/clerical/butler
+	pto_type = PTO_CIVILIAN
 	vr_sprites = list(
 						"Handy - Service" = "handy-service",
 						"Handy - Hydro" = "handy-hydro",
@@ -88,7 +92,8 @@
 						"ZOOM-BA" = "zoomba-service"
 					 )
 
-/obj/item/weapon/robot_module/robot/clerical/general //VOREStation sprites
+/obj/item/weapon/robot_module/robot/clerical/general
+	pto_type = PTO_CIVILIAN
 	vr_sprites = list(
 						"Handy" = "handy-clerk",
 						"Acheron" = "mechoid-Service",
@@ -96,7 +101,8 @@
 						"ZOOM-BA" = "zoomba-clerical"
 					 )
 
-/obj/item/weapon/robot_module/robot/janitor //VOREStation sprites
+/obj/item/weapon/robot_module/robot/janitor
+	pto_type = PTO_CIVILIAN
 	vr_sprites = list(
 						"Handy" = "handy-janitor",
 						"Acheron" = "mechoid-Janitor",
@@ -104,7 +110,8 @@
 						"ZOOM-BA" = "zoomba-janitor"
 					 )
 
-/obj/item/weapon/robot_module/robot/security/general //VOREStation sprites
+/obj/item/weapon/robot_module/robot/security/general
+	pto_type = PTO_SECURITY
 	vr_sprites = list(
 						"Handy" = "handy-sec",
 						"Acheron" = "mechoid-Security",
@@ -112,7 +119,8 @@
 						"ZOOM-BA" = "zoomba-security"
 					 )
 
-/obj/item/weapon/robot_module/robot/miner //VOREStation sprites
+/obj/item/weapon/robot_module/robot/miner
+	pto_type = PTO_CARGO
 	vr_sprites = list(
 						"Handy" = "handy-miner",
 						"Acheron" = "mechoid-Miner",
@@ -120,28 +128,31 @@
 						"ZOOM-BA" = "zoomba-miner"
 					 )
 
-/obj/item/weapon/robot_module/robot/standard //VOREStation sprites
+/obj/item/weapon/robot_module/robot/standard
+	pto_type = PTO_CIVILIAN
 	vr_sprites = list(
 						"Handy" = "handy-standard",
 						"Acheron" = "mechoid-Standard",
 						"Shellguard Noble" = "Noble-STD",
 						"ZOOM-BA" = "zoomba-standard"
 					 )
-
-/obj/item/weapon/robot_module/robot/engineering/general //VOREStation sprites
+/obj/item/weapon/robot_module/robot/engineering/general
+	pto_type = PTO_ENGINEERING
 	vr_sprites = list(
 						"Acheron" = "mechoid-Engineering",
 						"Shellguard Noble" = "Noble-ENG",
 						"ZOOM-BA" = "zoomba-engineering"
 					 )
 
-/obj/item/weapon/robot_module/robot/research //VOREStation sprites
+/obj/item/weapon/robot_module/robot/research
+	pto_type = PTO_SCIENCE
 	vr_sprites = list(
 						"Acheron" = "mechoid-Science",
 						"ZOOM-BA" = "zoomba-research"
 					 )
 
-/obj/item/weapon/robot_module/robot/security/combat //VOREStation sprites
+/obj/item/weapon/robot_module/robot/security/combat
+	pto_type = PTO_SECURITY
 	vr_sprites = list(
 						"Acheron" = "mechoid-Combat",
 						"ZOOM-BA" = "zoomba-combat"
@@ -157,6 +168,7 @@
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
+	pto_type = PTO_SECURITY
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/knine/New(var/mob/living/silicon/robot/R)
@@ -223,7 +235,8 @@
 	name = "MediHound module"
 	channels = list("Medical" = 1)
 	networks = list(NETWORK_MEDICAL)
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Crew monitor anywhere!
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
+	pto_type = PTO_MEDICAL
 	can_be_pushed = 0
 	sprites = list(
 					"Medical Hound" = "medihound",
@@ -306,6 +319,7 @@
 	name = "Emergency Responce module"
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
+	pto_type = PTO_SECURITY
 	can_be_pushed = 0
 	sprites = list(
 					"Standard" = "ert",
@@ -360,6 +374,7 @@
 					"Borgi" = "borgi-jani"
 					)
 	channels = list("Service" = 1)
+	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/scrubpup/New(var/mob/living/silicon/robot/R)
@@ -444,6 +459,7 @@
 					"SciHoundDark" = "scihounddark"
 					)
 	channels = list("Science" = 1)
+	pto_type = PTO_SCIENCE
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/science/New(var/mob/living/silicon/robot/R)
@@ -519,6 +535,7 @@
 					)
 	channels = list("Engineering" = 1)
 	networks = list(NETWORK_ENGINEERING)
+	pto_type = PTO_ENGINEERING
 	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
 	can_be_pushed = 0
 
@@ -737,6 +754,7 @@
 					"ServicehoundV2 Darkmode" = "servedark",
 					)
 	channels = list("Service" = 1)
+	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
 
@@ -808,6 +826,7 @@
 					"CargoHoundDark" = "cargohounddark"
 					)
 	channels = list("Supply" = 1)
+	pto_type = PTO_CARGO
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/kmine/New(var/mob/living/silicon/robot/R)

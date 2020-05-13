@@ -345,7 +345,7 @@
 		if(!(A.type in areas_all))
 			areas_all.Add(A.type)
 
-	for(var/obj/machinery/power/apc/APC in machines)
+	for(var/obj/machinery/power/apc/APC in GLOB.apcs)
 		var/area/A = get_area(APC)
 		if(A && !(A.type in areas_with_APC))
 			areas_with_APC.Add(A.type)
@@ -584,7 +584,7 @@
 		if("Players")
 			to_chat(usr, span("filter_debuglogs", jointext(player_list,",")))
 		if("Admins")
-			to_chat(usr, span("filter_debuglogs", jointext(admins,",")))
+			to_chat(usr, span("filter_debuglogs", jointext(GLOB.admins,",")))
 		if("Mobs")
 			to_chat(usr, span("filter_debuglogs", jointext(mob_list,",")))
 		if("Living Mobs")
