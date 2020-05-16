@@ -1,8 +1,3 @@
-var/const/PATHFINDER 		=(1<<11)
-var/const/EXPLORER 			=(1<<12)
-var/const/PILOT 			=(1<<13)
-var/const/SAR 				=(1<<14)
-
 /obj/item/weapon/card/id/medical/sar
 	assignment = "Field Medic"
 	rank = "Field Medic"
@@ -60,7 +55,7 @@ var/const/SAR 				=(1<<14)
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
 	job_description = "The Pathfinder's job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
 
-/datum/alt_title/pathfinder	
+/datum/alt_title/pathfinder
         title = "Pathfinder"
 
 /datum/job/pilot
