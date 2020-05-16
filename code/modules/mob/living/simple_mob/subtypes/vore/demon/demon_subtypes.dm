@@ -1,3 +1,6 @@
+//CHOMPedit;KAS I commented this out, our demons_subtypes are in 'demons_subtypes_ch.dm"
+/*
+
 /mob/living/simple_mob/vore/demon/engorge
 	name = "Engorge"
 
@@ -17,3 +20,5 @@
 	icon_rest = null
 
 	vore_icons = null
+
+*/

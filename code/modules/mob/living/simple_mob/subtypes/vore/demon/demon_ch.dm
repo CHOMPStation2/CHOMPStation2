@@ -1,24 +1,27 @@
-//CHOMPedit;KAS I commented this out, our demons are in 'demon_ch.dm"
-/*
-
 /mob/living/simple_mob/vore/demon
 	name = "Rift Walker"
 	desc = "A large bipedal creature, body a mix of dark fur and scales. Marks on the creatures body pulse slowly with red light"
 
 	icon_state = "boxfox"
 	icon_living = "boxfox"
-	icon_dead = "boxfox_dead"
+	icon_dead = "dead"
 	icon_rest = "boxfox_rest"
-	icon = 'icons/mob/demon_vr.dmi'
+	icon = 'icons/mob/demon_ch.dmi'
 	vis_height = 47
 
 	faction = "demon"
-	maxHealth = 30
-	health = 30
+	maxHealth = 200
+	health = 200
 	movement_cooldown = 0
 
 	see_in_dark = 10
+	has_hands = TRUE
 	seedarkness = FALSE
+	attack_sound = 'sound/weapons/bladeslice.ogg'
+	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_SHADEKIN,LANGUAGE_CULT)
+
+	melee_damage_lower = 20
+	melee_damage_upper = 15
 
 	min_oxy = 0
 	max_oxy = 0
@@ -29,22 +32,25 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
-	maxbodytemp = INFINITY
+	maxbodytemp = 96669
 
 	response_help = "touches"
 	response_disarm = "pushes"
 	response_harm = "hits"
 
-	melee_damage_lower = 3
-	melee_damage_upper = 1
-	attacktext = list("clawed")
+	attacktext = list("mauled","slashed","clawed")
+	friendly = list("pokes", "scratches", "rurrs softly at", "sniffs on")
 
-	vore_active = TRUE
+	vore_active = 1
+	swallowTime = 2 SECOND
+	vore_pounce_chance = 15
 	vore_icons = SA_ICON_LIVING
+	vore_escape_chance = 25
 
 	var/shifted_out = FALSE
 	var/shift_state = AB_SHIFT_NONE
 	var/last_shift = 0
+	var/blood_spawn = 0
 	var/is_shifting = FALSE
 
 /mob/living/simple_mob/vore/demon/init_vore()
@@ -91,5 +97,3 @@
 		return canmove
 	else
 		return ..()
-
-*/
