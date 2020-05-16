@@ -12,7 +12,7 @@
 	another galaxy, greys have chosen mauna-b to act as their home planet due to high amount of grey\
 	residing in there."
 
-	wikilink = "https://www.yawn.ocry.com/index.php?title=Grey"
+	wikilink = "https://yawn.izac.live/index.php?title=Grey"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/grey)
 
 	num_alternate_languages = 3

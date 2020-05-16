@@ -305,6 +305,15 @@
 	if(!blinded)
 		flash_eyes()
 
+	for(var/datum/modifier/M in modifiers)
+		if(!isnull(M.explosion_modifier))
+			severity = CLAMP(severity + M.explosion_modifier, 1, 4)
+
+	severity = round(severity)
+
+	if(severity > 3)
+		return
+
 	switch(severity)
 		if(1.0)
 			if (stat != 2)
@@ -399,7 +408,7 @@
 	return
 
 /mob/living/silicon/reset_view()
-	..()
+	. = ..()
 	if(cameraFollow)
 		cameraFollow = null
 

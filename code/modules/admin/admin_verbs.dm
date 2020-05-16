@@ -222,7 +222,6 @@ var/list/admin_verbs_debug = list(
 	/client/proc/enable_debug_verbs,
 	/client/proc/callproc,
 	/client/proc/callproc_datum,
-	/client/proc/debug_process,			//VOREStation Add,
 	/datum/admins/proc/quick_nif,	//CHOMPStation Addition 13/1/20 TFF - Allow spawning NIFs into players,
 	/client/proc/SDQL2_query,
 	/client/proc/Jump,
@@ -233,7 +232,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/toggle_debug_logs,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/datum/admins/proc/view_runtimes,
-	/client/proc/show_gm_status,
+	// /client/proc/show_gm_status, // VOREStation Edit - We don't use SSgame_master yet.
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
@@ -244,7 +243,6 @@ var/list/admin_verbs_debug = list(
 var/list/admin_verbs_paranoid_debug = list(
 	/client/proc/callproc,
 	/client/proc/callproc_datum,
-	/client/proc/debug_process,			//VOREStation Add,
 	/client/proc/debug_controller
 	)
 
@@ -315,7 +313,6 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/cmd_admin_list_open_jobs,
 	/client/proc/callproc,
 	/client/proc/callproc_datum,
-	/client/proc/debug_process,			//VOREStation Add,
 	/client/proc/Debug2,
 	/client/proc/reload_admins,
 	/client/proc/kill_air,
@@ -412,7 +409,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/callproc,
 	/client/proc/callproc_datum,
 	/client/proc/debug_controller,
-	/client/proc/show_gm_status,
+	// /client/proc/show_gm_status,  // VOREStation Edit - We don't use SSgame_master yet.
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,

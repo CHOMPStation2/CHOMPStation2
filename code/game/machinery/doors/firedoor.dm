@@ -292,6 +292,7 @@
 					FA.anchored = 1
 					FA.density = 1
 					FA.wired = 1
+					FA.glass = glass
 					FA.update_icon()
 					qdel(src)
 		return
