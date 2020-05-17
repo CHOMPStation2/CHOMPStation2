@@ -145,6 +145,9 @@ var/global/list/engineering_networks = list(
 
 /obj/machinery/camera/motion/security
 	network = list(NETWORK_SECURITY)
+	
+/obj/machinery/camera/motion/telecom
+	network = list(NETWORK_TELECOM)
 
 // ALL UPGRADES
 
