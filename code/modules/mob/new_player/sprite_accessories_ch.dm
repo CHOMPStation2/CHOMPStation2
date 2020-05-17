@@ -2,7 +2,6 @@
 	icon = 'icons/mob/human_races/markings_ch.dmi'
 	orca_head
 		name = "Orca head"
-		icon = 'icons/mob/vore/wings_yw.dmi'
 		icon_state = "orca_head"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
