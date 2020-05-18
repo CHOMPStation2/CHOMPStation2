@@ -20,7 +20,7 @@
 	stuff_to_display = null
 
 /obj/item/integrated_circuit/output/screen/any_examine(mob/user)
-	to_chat(user, "There is a little screen labeled '[name]', which displays [!isnull(stuff_to_display) ? "'[stuff_to_display]'" : "nothing"].")
+	return "There is a little screen labeled '[name]', which displays [!isnull(stuff_to_display) ? "'[stuff_to_display]'" : "nothing"]."
 
 /obj/item/integrated_circuit/output/screen/do_work()
 	var/datum/integrated_io/I = inputs[1]
@@ -152,6 +152,7 @@
 /obj/item/integrated_circuit/output/text_to_speech/advanced/Initialize()
 	..()
 	my_voice = new (src)
+	mob_list -= my_voice // no life() ticks
 	my_voice.name = "TTS Circuit"
 
 /obj/item/integrated_circuit/output/text_to_speech/advanced/do_work()
@@ -333,7 +334,7 @@
 	else
 		text_output += "\an ["\improper[initial_name]"] labeled '[name]'"
 	text_output += " which is currently [get_pin_data(IC_INPUT, 1) ? "lit <font color=[led_color]>¤</font>" : "unlit."]"
-	to_chat(user,jointext(text_output,null))
+	return jointext(text_output,null)
 
 /obj/item/integrated_circuit/output/led/red
 	name = "red LED"

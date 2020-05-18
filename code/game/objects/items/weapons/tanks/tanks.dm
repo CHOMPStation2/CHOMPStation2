@@ -59,15 +59,13 @@ var/list/global/tank_gauge_cache = list()
 
 
 /obj/item/weapon/tank/Initialize()
-	..()
+	. = ..()
 
 	src.init_proxy()
 	src.air_contents = new /datum/gas_mixture()
 	src.air_contents.volume = volume //liters
 	src.air_contents.temperature = T20C
-	START_PROCESSING(SSobj, src)
 	update_gauge()
-	return
 
 /obj/item/weapon/tank/Destroy()
 	QDEL_NULL(air_contents)
@@ -81,9 +79,16 @@ var/list/global/tank_gauge_cache = list()
 
 	. = ..()
 
+/obj/item/weapon/tank/equipped() // Note that even grabbing into a hand calls this, so it should be fine as a 'has a player touched this'
+	. = ..()
+	// An attempt at optimization. There are MANY tanks during rounds that will never get touched.
+	// Don't see why any of those would explode spontaneously. So only tanks that players touch get processed.
+	// This could be optimized more, but it's a start!
+	START_PROCESSING(SSobj, src) // This has a built in safety to avoid multi-processing
+
 /obj/item/weapon/tank/examine(mob/user)
-	. = ..(user, 0)
-	if(.)
+	. = ..()
+	if(loc == user)
 		var/celsius_temperature = air_contents.temperature - T0C
 		var/descriptive
 		switch(celsius_temperature)
@@ -101,12 +106,12 @@ var/list/global/tank_gauge_cache = list()
 				descriptive = "cold"
 			else
 				descriptive = "bitterly cold"
-		to_chat(user, "<span class='notice'>\The [src] feels [descriptive].</span>")
+		. += "<span class='notice'>\The [src] feels [descriptive].</span>"
 
 	if(src.proxyassembly.assembly || wired)
-		to_chat(user, "<span class='warning'>It seems to have [wired? "some wires ": ""][wired && src.proxyassembly.assembly? "and ":""][src.proxyassembly.assembly ? "some sort of assembly ":""]attached to it.</span>")
+		. += "<span class='warning'>It seems to have [wired? "some wires ": ""][wired && src.proxyassembly.assembly? "and ":""][src.proxyassembly.assembly ? "some sort of assembly ":""]attached to it.</span>"
 	if(src.valve_welded)
-		to_chat(user, "<span class='warning'>\The [src] emergency relief valve has been welded shut!</span>")
+		. += "<span class='warning'>\The [src] emergency relief valve has been welded shut!</span>"
 
 
 /obj/item/weapon/tank/attackby(obj/item/weapon/W as obj, mob/user as mob)
