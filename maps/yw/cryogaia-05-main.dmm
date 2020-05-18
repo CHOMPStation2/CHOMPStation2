@@ -77,7 +77,13 @@
 /area/borealis2/outdoors/exterior)
 "aas" = (
 /obj/structure/fence/door,
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/exterior)
 "aat" = (
 /obj/structure/fence/corner,
@@ -240,7 +246,6 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
-/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds)
 "aaS" = (
@@ -336,7 +341,11 @@
 /obj/structure/fence/door{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/grounds)
 "aaY" = (
 /obj/effect/floor_decal/snow/floor/edges{
@@ -3240,6 +3249,9 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/machinery/camera/network/outside{
+	c_tag = "Monastery Surface Access"
+	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "agT" = (
@@ -4873,8 +4885,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Visitor's Dinning";
-	dir = 4
+	c_tag = "Dormitory Hall South";
+	dir = 2
 	},
 /obj/machinery/firealarm{
 	dir = 8;
@@ -5264,6 +5276,11 @@
 /area/hallway/secondary/entry/docking_lounge)
 "akN" = (
 /obj/structure/showcase/yw/plaque,
+/obj/machinery/camera/network/outside{
+	c_tag = "Arrivals Landing Pad";
+	dir = 4;
+	icon_state = "camera"
+	},
 /turf/simulated/floor/tiled,
 /area/borealis2/outdoors/grounds)
 "akO" = (
@@ -5595,6 +5612,9 @@
 	},
 /obj/machinery/alarm{
 	pixel_y = 22
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Monastery Engineering Bay"
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -6697,6 +6717,15 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/machinery/camera/network/substations,
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/medical)
 "anH" = (
@@ -7072,10 +7101,6 @@
 /obj/machinery/atmospherics/tvalve/digital/mirrored/bypass{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Pump Station";
-	dir = 1
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
 	pixel_y = -32
@@ -7168,6 +7193,9 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
 "aoy" = (
@@ -7177,6 +7205,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/medical)
@@ -7190,9 +7221,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "Medical substation";
-	dir = 8
+/obj/effect/floor_decal/industrial/warning/corner{
+	icon_state = "warningcorner";
+	dir = 1
 	},
 /turf/simulated/open,
 /area/maintenance/substation/medical)
@@ -7870,7 +7901,7 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "medbay reception"
+	c_tag = "Medbay Reception North"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -7966,6 +7997,12 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
 "apR" = (
@@ -8002,6 +8039,8 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/structure/railing,
+/obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
 "apT" = (
@@ -10989,7 +11028,7 @@
 /area/medical/medbay3)
 "auU" = (
 /obj/machinery/camera/network/medbay{
-	c_tag = "Medical Reception";
+	c_tag = "Medical Reception South";
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue{
@@ -11699,10 +11738,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
 "awh" = (
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Vault";
-	dir = 9
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -11722,8 +11757,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
-/area/security/nuke_storage)
+/area/maintenance/substation/civilian)
 "awj" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -12222,6 +12258,10 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
 	dir = 8
 	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
 "axb" = (
@@ -12743,6 +12783,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/camera/network/substations,
 /turf/simulated/floor,
 /area/maintenance/substation/civilian)
 "axV" = (
@@ -12855,9 +12896,6 @@
 	},
 /obj/structure/railing,
 /obj/effect/floor_decal/snow/floor/edges,
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/manifold/visible/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/visible/supply,
 /obj/structure/cable/heavyduty{
@@ -13265,6 +13303,10 @@
 /obj/machinery/power/terminal{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
 "ayN" = (
@@ -13278,7 +13320,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/security/nuke_storage)
+/area/maintenance/substation/civilian)
 "ayO" = (
 /obj/machinery/door/airlock/vault/bolted{
 	req_access = list(53)
@@ -13705,6 +13747,10 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/civilian)
 "azD" = (
@@ -13717,6 +13763,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
 "azE" = (
@@ -16389,10 +16436,6 @@
 	dir = 1
 	},
 /obj/item/clothing/shoes/boots/winter/medical,
-/obj/machinery/camera/network/medbay{
-	c_tag = "Medbay EMT office";
-	dir = 8
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
 "aEA" = (
@@ -17048,8 +17091,16 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "aFP" = (
+/obj/structure/closet,
+/obj/item/clothing/suit/storage/vest/hoscoat/jensen{
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0);
+	desc = "A trenchcoat augmented with a special alloy for some protection and style. Well, it was. It looks like most of the plating's been stripped out."
+	},
+/obj/item/clothing/glasses/fakesunglasses,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
 /turf/simulated/floor/plating,
-/area/security/security_equiptment_storage)
+/area/maintenance/security)
 "aFQ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/shutters{
@@ -17126,6 +17177,14 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/hop)
 "aFW" = (
@@ -17436,10 +17495,6 @@
 "aGC" = (
 /obj/machinery/newscaster{
 	pixel_x = -32
-	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "Medbay Psychiatrists Office";
-	dir = 4
 	},
 /obj/item/weapon/stool/padded,
 /obj/structure/cable/green{
@@ -19242,6 +19297,7 @@
 "aKo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/network/engineering{
+	c_tag = "Solar Array Shed - Interior";
 	dir = 1
 	},
 /obj/item/device/geiger/wall{
@@ -19415,6 +19471,7 @@
 /area/hallway/primary/central_one)
 "aKD" = (
 /obj/machinery/camera/network/civilian{
+	c_tag = "Internal Affairs West";
 	dir = 5
 	},
 /obj/structure/flora/pottedplant{
@@ -19672,7 +19729,7 @@
 	pixel_x = -30
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - HoS' Office";
+	c_tag = "Head of Security's Office";
 	dir = 4
 	},
 /obj/structure/table/woodentable,
@@ -19763,6 +19820,7 @@
 /area/lawoffice)
 "aLj" = (
 /obj/machinery/camera/network/civilian{
+	c_tag = "Internal Affair East";
 	dir = 9
 	},
 /obj/structure/flora/pottedplant{
@@ -20309,6 +20367,7 @@
 	pixel_x = -22;
 	pixel_y = 0
 	},
+/obj/machinery/camera/network/substations,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/command)
 "aMv" = (
@@ -20416,9 +20475,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security)
-"aMK" = (
-/turf/simulated/wall,
-/area/crew_quarters/heads/hos)
 "aML" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -20900,22 +20956,6 @@
 "aNF" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/security)
-"aNG" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
-	dir = 8;
-	name = "west bump";
-	pixel_x = -30
-	},
-/obj/structure/cable{
-	icon_state = "0-2";
-	d2 = 2
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/security)
 "aNH" = (
 /turf/simulated/wall,
 /area/crew_quarters/bar)
@@ -21272,6 +21312,11 @@
 	pixel_x = 0;
 	pixel_y = 24
 	},
+/obj/machinery/camera/network/substations,
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/security)
 "aOp" = (
@@ -21423,13 +21468,10 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)
-"aOy" = (
-/turf/simulated/wall/r_wall,
-/area/security/breakroom)
 "aOz" = (
 /obj/structure/reagent_dispensers/beerkeg,
 /obj/machinery/camera/network/civilian{
-	c_tag = "Library Fore";
+	c_tag = "Bar Backroom";
 	dir = 2
 	},
 /obj/machinery/alarm{
@@ -21732,6 +21774,9 @@
 	name = "Powernet Sensor - Security Subgrid";
 	name_tag = "Security Subgrid"
 	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)
 "aPg" = (
@@ -21742,6 +21787,10 @@
 /obj/structure/cable{
 	icon_state = "0-4";
 	d2 = 4
+	},
+/obj/machinery/light/small,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)
@@ -21759,6 +21808,9 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -25
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)
@@ -21815,12 +21867,18 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/warden)
 "aPl" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/random/maintenance/security,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/security)
 "aPm" = (
@@ -21954,14 +22012,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/bridge_hallway)
-"aPv" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	name = "Bar Maintenance";
-	req_access = list(25)
-	},
-/turf/simulated/floor,
-/area/crew_quarters/bar)
 "aPw" = (
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -22488,9 +22538,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
-"aQw" = (
-/turf/simulated/floor/plating,
-/area/crew_quarters/barrestroom)
 "aQx" = (
 /obj/machinery/photocopier,
 /obj/effect/floor_decal/corner/red{
@@ -22509,15 +22556,7 @@
 /turf/simulated/floor/wood,
 /area/security/breakroom)
 "aQz" = (
-/obj/structure/table/woodentable,
-/obj/machinery/reagentgrinder,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/packageWrap,
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	name = "Station Intercom (General)";
-	pixel_y = -22
-	},
+/obj/machinery/chem_master/condimaster,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "aQA" = (
@@ -23189,16 +23228,18 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/bar)
 "aRF" = (
-/obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
-/obj/item/weapon/reagent_containers/glass/rag,
-/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
 /obj/machinery/button/holosign{
 	id = "barsign";
 	pixel_x = -25
+	},
+/obj/structure/sink{
+	icon_state = "sink";
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
@@ -23777,6 +23818,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "aSR" = (
@@ -24286,7 +24328,7 @@
 	name = "Cell 2 Locker"
 	},
 /obj/machinery/camera/network/prison{
-	c_tag = "Prison Visitation";
+	c_tag = "Brig Cell 2";
 	dir = 2
 	},
 /obj/effect/floor_decal/corner/red{
@@ -24517,6 +24559,14 @@
 	dir = 8;
 	id = "comconference"
 	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
 "aUg" = (
@@ -24528,6 +24578,14 @@
 /obj/structure/window/reinforced/polarized{
 	dir = 1;
 	id = "comconference"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -24544,6 +24602,14 @@
 /obj/structure/window/reinforced/polarized{
 	dir = 4;
 	id = "comconference"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -24568,8 +24634,8 @@
 /area/teleporter)
 "aUk" = (
 /obj/machinery/door/airlock/maintenance/cargo{
-	req_access = list(50);
-	req_one_access = list(48)
+	req_access = newlist();
+	req_one_access = list(50,52)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
@@ -25165,10 +25231,10 @@
 /turf/simulated/floor/tiled,
 /area/teleporter)
 "aVr" = (
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Starboard"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/camera/motion/command{
+	c_tag = "Teleporter (Motion)"
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter)
 "aVs" = (
@@ -29343,7 +29409,7 @@
 /area/quartermaster/delivery)
 "bcs" = (
 /obj/machinery/camera/network/cargo{
-	c_tag = "CRG - Cargo Warehouse";
+	c_tag = "Secondary Storage";
 	dir = 4;
 	name = "security camera"
 	},
@@ -31676,6 +31742,9 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
 	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bgk" = (
@@ -32106,10 +32175,6 @@
 	pixel_x = -3;
 	pixel_y = 7
 	},
-/obj/machinery/camera/network/cargo{
-	dir = 4;
-	name = "security camera"
-	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
@@ -32425,15 +32490,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
-	},
-/obj/machinery/power/apc{
-	dir = 2;
-	name = "south bump";
-	pixel_y = -28
-	},
 /turf/simulated/floor/plating,
 /area/security/detectives_office)
 "bhF" = (
@@ -32591,6 +32647,7 @@
 /area/lawoffice)
 "bhQ" = (
 /obj/structure/closet/crate,
+/obj/random/cigarettes,
 /turf/simulated/floor/plating,
 /area/lawoffice)
 "bhR" = (
@@ -33163,19 +33220,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"biZ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/security)
 "bja" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -33967,7 +34011,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Cell Hallway";
+	c_tag = "Cell Hallway";
 	dir = 2
 	},
 /obj/effect/floor_decal/corner/red{
@@ -33980,19 +34024,13 @@
 /turf/simulated/floor/tiled,
 /area/security/brig)
 "bki" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+/obj/machinery/door/airlock/maintenance{
+	name = "Bar Maintenance";
+	req_access = list(25)
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
-	},
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
-/area/maintenance/security)
+/area/crew_quarters/bar)
 "bkj" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -34161,13 +34199,13 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/floor_decal/rust,
+/obj/machinery/camera/network/security{
+	c_tag = "Security Surface Exit";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/airlock)
 "bkx" = (
-/obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Expedition Airlock";
-	dir = 1
-	},
 /obj/machinery/space_heater,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -35692,7 +35730,7 @@
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal,
 /obj/machinery/camera/network/security{
-	c_tag = "Detective"
+	c_tag = "Detective's Office and Forensics"
 	},
 /turf/simulated/floor/lino,
 /area/security/detectives_office)
@@ -36487,7 +36525,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "Robotics";
+	c_tag = "Robotics Main Workshop";
 	dir = 8;
 	network = list("Research")
 	},
@@ -36576,6 +36614,10 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/vehicle/train/engine,
 /obj/effect/floor_decal/rust,
+/obj/machinery/camera/network/cargo{
+	c_tag = "Main Warehouse West";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "boU" = (
@@ -37343,8 +37385,8 @@
 	tag_door = "cargo_bay_door"
 	},
 /obj/machinery/camera/network/cargo{
-	dir = 9;
-	c_tag = "CRG - Mining Airlock"
+	c_tag = "Main Warehouse East";
+	dir = 8
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
@@ -38243,7 +38285,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/camera/network/research{
-	c_tag = "Research Port Entry"
+	c_tag = "Research West Entry"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/research)
@@ -38756,7 +38798,7 @@
 "bsP" = (
 /obj/item/weapon/stool/padded,
 /obj/machinery/camera/network/security{
-	c_tag = "Prison Court";
+	c_tag = "Locker Room";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -39456,7 +39498,7 @@
 	},
 /obj/vehicle/train/trolley,
 /obj/machinery/camera/network/engineering{
-	c_tag = "Atmospherics Hallway";
+	c_tag = "Engineering Workshop East";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -39467,7 +39509,7 @@
 "buk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/camera/network/security{
-	c_tag = "Prison Disposal Processing";
+	c_tag = "Secure Evidence Storage";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
@@ -39485,10 +39527,6 @@
 /area/security/evidence_storage)
 "bum" = (
 /obj/structure/table/standard,
-/obj/machinery/camera/network/security{
-	c_tag = "SEC - Evidence Storage";
-	dir = 8
-	},
 /obj/item/weapon/hand_labeler,
 /turf/simulated/floor/tiled/dark,
 /area/security/evidence_storage)
@@ -41006,7 +41044,7 @@
 	dir = 9
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "Engineering Workshop Port";
+	c_tag = "Engineering Workshop West";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -43949,6 +43987,15 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/machinery/camera/network/substations,
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "bBy" = (
@@ -44273,7 +44320,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "Research Hall Port";
+	c_tag = "Research Ring West";
 	dir = 4;
 	network = list("Research","Toxins Test Area")
 	},
@@ -44467,7 +44514,7 @@
 "bCx" = (
 /obj/machinery/recharge_station,
 /obj/machinery/camera/network/research{
-	c_tag = "Secure Xenobiology aft";
+	c_tag = "Robotics East (Mech Bay)";
 	dir = 1;
 	network = list("Research","Miscellaneous Reseach")
 	},
@@ -44541,7 +44588,10 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bCG" = (
 /obj/structure/disposalpipe/segment,
@@ -44550,7 +44600,16 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bCH" = (
 /turf/simulated/wall/titanium,
@@ -44593,7 +44652,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/shieldgen,
 /obj/machinery/camera/network/engineering{
-	c_tag = "Engineering Hardstorage Fore"
+	c_tag = "Engineering Hard Storage North"
 	},
 /turf/simulated/floor,
 /area/engineering/storage)
@@ -44633,6 +44692,9 @@
 	name = "west bump";
 	pixel_x = -30
 	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "bCR" = (
@@ -44643,6 +44705,9 @@
 /obj/structure/cable{
 	icon_state = "0-4";
 	d2 = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
@@ -44656,6 +44721,9 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
@@ -45243,13 +45311,20 @@
 "bDX" = (
 /obj/structure/railing,
 /obj/structure/catwalk,
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bDY" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/railing,
 /obj/structure/catwalk,
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bDZ" = (
 /turf/simulated/floor/plating,
@@ -45759,14 +45834,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningwing)
 "bFc" = (
-/obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Expedition Airlock";
-	dir = 2
-	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
 	icon_state = "warning_dust";
 	dir = 5
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Mining Access Interior"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningwing)
@@ -45927,7 +46001,7 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "Engineering Port"
+	c_tag = "Engineering West"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
@@ -47363,7 +47437,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "Xenobiology Control Room";
+	c_tag = "Research Ring East";
 	dir = 8;
 	network = list("Research","Toxins Test Area")
 	},
@@ -47727,10 +47801,10 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/snow/floor/edges{
-	dir = 4
-	},
-/obj/effect/floor_decal/snow/floor/edges{
 	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
@@ -48502,6 +48576,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/machinery/camera/network/substations,
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
 "bJf" = (
@@ -48513,6 +48588,9 @@
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
@@ -49213,6 +49291,10 @@
 	dir = 4;
 	name = "east bump";
 	pixel_x = 24
+	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
@@ -49956,7 +50038,8 @@
 	icon_state = "wooden_chair_wings";
 	dir = 8
 	},
-/obj/machinery/camera/autoname{
+/obj/machinery/camera/network/civilian{
+	c_tag = "Bar East";
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -49996,9 +50079,6 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "bLE" = (
-/obj/machinery/camera/network/northern_star{
-	dir = 8
-	},
 /obj/machinery/photocopier,
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 4
@@ -50042,7 +50122,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/shieldwallgen,
 /obj/machinery/camera/network/engineering{
-	c_tag = "Engineering Hard Storage Aft";
+	c_tag = "Engineering Hard Storage South";
 	dir = 1
 	},
 /turf/simulated/floor,
@@ -52690,7 +52770,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/exploration{
-	c_tag = "Exploration Meeting Room"
+	c_tag = "Exploration Meeting Room North"
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
@@ -53391,7 +53471,7 @@
 	},
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/machinery/camera/network/exploration{
-	c_tag = "Exploration Meeting Room";
+	c_tag = "Exploration Meeting Room South";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -53726,6 +53806,10 @@
 /obj/effect/landmark{
 	name = "carpspawn"
 	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	icon_state = "snow_edges2";
+	dir = 4
+	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bSx" = (
@@ -53814,6 +53898,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/camera/network/substations,
 /turf/simulated/floor,
 /area/maintenance/substation/research)
 "bSF" = (
@@ -54073,7 +54158,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/camera/network/exploration{
-	c_tag = "Exploration Hangar Fore"
+	c_tag = "Exploration Hangar Fore West"
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -54521,6 +54606,10 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/research)
@@ -56489,9 +56578,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/camera/network/engineering{
-	dir = 1
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 4;
@@ -56578,6 +56664,10 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
+	},
+/obj/machinery/camera/network/exploration{
+	c_tag = "Exploration Entrance";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
@@ -57106,13 +57196,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/locker)
 "bYR" = (
-/obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Expedition Airlock";
-	dir = 1
-	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Arrivals Teleporter Access Interior";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/locker)
@@ -60654,7 +60744,8 @@
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},
-/obj/machinery/camera/autoname{
+/obj/machinery/camera/network/civilian{
+	c_tag = "Bar West";
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -60864,7 +60955,7 @@
 	dir = 10
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "Toxins Substation";
+	c_tag = "Engineering Lobby South";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -60882,7 +60973,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "Xenobiology Surgery";
+	c_tag = "Research Ring South";
 	dir = 1;
 	network = list("Research","Miscellaneous Reseach")
 	},
@@ -60951,7 +61042,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/exploration{
-	c_tag = "Exploration Hangar Aft";
+	c_tag = "Exploration Hangar Aft West";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -60971,7 +61062,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/exploration{
-	c_tag = "Exploration Hangar Aft";
+	c_tag = "Exploration Hangar Aft East";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -61909,9 +62000,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/scanning)
 "ciH" = (
-/obj/machinery/camera/network/medbay{
-	dir = 2
-	},
 /obj/structure/closet/secure_closet/medical2,
 /obj/effect/floor_decal/corner/lime{
 	dir = 4
@@ -62057,9 +62145,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "ciX" = (
-/obj/machinery/camera/network/medbay{
-	dir = 2
-	},
 /obj/structure/closet/secure_closet/medical2,
 /obj/effect/floor_decal/corner/lime{
 	dir = 1
@@ -62520,10 +62605,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "Medbay break room";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgeryobs)
 "cjQ" = (
@@ -62534,6 +62615,10 @@
 	pixel_y = -24
 	},
 /obj/structure/reagent_dispensers/water_cooler/full,
+/obj/machinery/camera/network/medbay{
+	c_tag = "Surgery Observation";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgeryobs)
 "cjR" = (
@@ -62632,10 +62717,6 @@
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
-	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "Surgery Observation 2";
-	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgeryobs)
@@ -63315,6 +63396,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"cGk" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/overlay/snow/floor,
+/obj/machinery/camera/network/outside{
+	c_tag = "Emergency Ejection Port - Interior Wall";
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds)
 "cGu" = (
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
@@ -63414,6 +63506,12 @@
 /obj/machinery/computer/shuttle_control/explore/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"dcv" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Solar Array Shed - Exterior"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "doX" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 8;
@@ -63462,6 +63560,10 @@
 "dVw" = (
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
+"dZD" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "ehi" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -63486,6 +63588,13 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/security/armoury)
+"ein" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "eiF" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
@@ -63519,6 +63628,11 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"erg" = (
+/obj/structure/lattice,
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "eti" = (
 /obj/structure/sign/directions/bridge{
 	icon_state = "direction_bridge";
@@ -63534,6 +63648,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
+"etQ" = (
+/obj/structure/railing,
+/obj/structure/catwalk,
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "ewj" = (
 /obj/structure/sign/securearea,
 /turf/simulated/wall/r_wall,
@@ -63555,12 +63675,33 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"eCK" = (
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/floor,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/carpet,
+/obj/structure/closet{
+	name = "bar decoration supplies"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "eQA" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/sign/directions/science,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
+"eRh" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/obj/effect/floor_decal/snow/floor/edges2{
+	icon_state = "snow_edges2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "fat" = (
 /obj/item/device/geiger/wall{
 	dir = 4;
@@ -63573,6 +63714,17 @@
 /obj/structure/sign/securearea,
 /turf/simulated/wall/r_wall,
 /area/security/hangar)
+"fmC" = (
+/obj/structure/closet/secure_closet/freezer/money,
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/machinery/camera/motion/command{
+	c_tag = "Vault (Motion)"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/nuke_storage)
 "fsr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/extinguisher_cabinet{
@@ -63597,6 +63749,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"fDM" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "fIL" = (
 /obj/structure/sign/directions/science,
 /turf/simulated/wall,
@@ -63654,6 +63818,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel,
 /area/security/briefing_room)
+"grP" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Teleporter Arrivals Access";
+	dir = 4;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "gtK" = (
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
@@ -63733,6 +63905,41 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"hkP" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/supply{
+	dir = 10
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
+"hlL" = (
+/obj/effect/floor_decal/snow/floor/surround{
+	dir = 1
+	},
+/obj/machinery/camera/network/outside{
+	c_tag = "Engineering Access West";
+	dir = 8;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "hoH" = (
 /turf/simulated/floor/tiled/dark,
 /area/security/briefing_room)
@@ -63762,6 +63969,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"hQz" = (
+/turf/simulated/wall/r_wall,
+/area/security/brig)
 "hRF" = (
 /obj/machinery/light{
 	dir = 4;
@@ -63771,10 +63981,11 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/tank/phoron{
+/obj/structure/window/reinforced,
+/obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "hXG" = (
@@ -63793,6 +64004,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/briefing_room)
+"inP" = (
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/maintenance/security)
 "ioE" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
@@ -63816,6 +64032,12 @@
 "irz" = (
 /turf/simulated/floor/reinforced,
 /area/security/hangar)
+"ius" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Emergency Ejection Port - Outer Wall"
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/exterior)
 "iCz" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -63848,6 +64070,17 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/explorer_prep)
+"iIB" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/hallway)
 "iPS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5;
@@ -63855,6 +64088,13 @@
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
+"iRo" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "iTZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -63901,6 +64141,13 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"jyf" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "jAq" = (
 /turf/simulated/wall/r_wall,
 /area/security/hangar)
@@ -63935,6 +64182,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
+"jNW" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/overlay/snow/floor,
+/obj/machinery/camera/network/outside{
+	c_tag = "Emergency Ejection Port - Chamber Wall"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds)
 "jSJ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -63982,6 +64239,35 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
+"kjE" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Engineering Access East";
+	dir = 8;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
+"kki" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/supply{
+	dir = 10
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
 "kmr" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -64071,6 +64357,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"kLy" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	icon_state = "snow_edges2";
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "kNE" = (
 /obj/structure/fuel_port{
 	dir = 4;
@@ -64116,6 +64412,14 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
+"lyv" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Plains Access Shed";
+	dir = 8;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "lAq" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -64128,6 +64432,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
+"lAv" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "lCH" = (
 /obj/machinery/shipsensors{
 	dir = 1
@@ -64155,6 +64469,40 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"mbv" = (
+/obj/effect/floor_decal/snow/floor/edges3{
+	icon_state = "gravsnow_edges";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
+"mey" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/machinery/camera/network/outside{
+	c_tag = "Wilderness Checkpoint - Interior";
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"mfI" = (
+/obj/structure/table/woodentable,
+/obj/machinery/reagentgrinder,
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/weapon/packageWrap,
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
+/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "mfS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
@@ -64184,6 +64532,39 @@
 	},
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
+"msp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges3,
+/obj/effect/floor_decal/snow/floor/edges3{
+	icon_state = "gravsnow_edges";
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/power)
+"mAv" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	icon_state = "warningcorner_dust";
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/surround{
+	dir = 1
+	},
+/obj/machinery/camera/network/outside{
+	c_tag = "Security Outpost";
+	dir = 4;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "mBp" = (
 /obj/structure/table/marble,
@@ -64280,6 +64661,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"mWX" = (
+/obj/effect/floor_decal/snow/floor/edges3,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/exterior)
+"ngK" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Arrivals Access South"
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "nkp" = (
 /obj/machinery/pointdefense_control{
 	id_tag = "secshuttle_pd";
@@ -64288,6 +64679,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"nlq" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Mining Access";
+	dir = 4;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "nIo" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 4
@@ -64301,6 +64700,27 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
+"nNU" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/security)
+"nSw" = (
+/obj/machinery/camera/network/medbay{
+	c_tag = "MEDEVAC Corridor";
+	network = list("Medical","Security")
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/medbay)
 "nVM" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
@@ -64344,6 +64764,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"onp" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
+"osD" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 5
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "owi" = (
 /obj/item/device/geiger/wall{
 	dir = 1;
@@ -64390,6 +64826,32 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
+"oJX" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
+"oKj" = (
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges3{
+	icon_state = "gravsnow_edges";
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"oQx" = (
+/obj/structure/catwalk,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds/power)
 "oRX" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -64429,6 +64891,13 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"ptm" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	icon_state = "snow_edges2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "pug" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -64481,6 +64950,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"pMf" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Exploration Access";
+	dir = 8;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "pWK" = (
 /obj/effect/floor_decal/snow/floor/edges3{
 	icon_state = "gravsnow_edges";
@@ -64526,6 +65003,13 @@
 "qgy" = (
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
+"qgU" = (
+/obj/machinery/camera/motion/security{
+	c_tag = "Armory Exterior (Motion)";
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/security/armoury)
 "qws" = (
 /obj/machinery/power/pointdefense{
 	id_tag = "secshuttle_pd"
@@ -64543,6 +65027,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"qCu" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "qIb" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
@@ -64555,6 +65048,15 @@
 /obj/structure/closet/secure_closet/security_pilot,
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"qRH" = (
+/obj/effect/overlay/snow/floor,
+/obj/machinery/camera/network/outside{
+	c_tag = "Departures Landing Pad";
+	dir = 8;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "raA" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 1
@@ -64573,6 +65075,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
+"rhM" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/obj/machinery/camera/network/outside{
+	c_tag = "Wilderness Checkpoint - Exterior"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/exterior)
 "rkV" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -64671,6 +65183,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"rWK" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	icon_state = "snow_edges2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "saK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -64717,6 +65236,13 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"spS" = (
+/obj/machinery/camera/network/engineering{
+	c_tag = "Engineering Lobby North";
+	dir = 2
+	},
+/turf/simulated/floor/carpet,
+/area/engineering/foyer)
 "sDF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	icon_state = "map-fuel";
@@ -64739,6 +65265,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"sHI" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "sJx" = (
 /obj/machinery/light{
 	dir = 4;
@@ -64770,6 +65306,24 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"tkS" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 6
+	},
+/obj/machinery/camera/network/outside{
+	c_tag = "Cargo Landing Pad";
+	dir = 4;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
+"top" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "tqc" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning,
@@ -64866,9 +65420,28 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"ufB" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "ugG" = (
 /obj/effect/shuttle_landmark/automatic,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
+"ugV" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "ujb" = (
 /obj/structure/cable/heavyduty{
@@ -64876,6 +65449,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/grounds/traderpad)
+"ujo" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/camera/network/exploration{
+	c_tag = "Exploration Hangar Fore East"
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/excursion_dock)
 "uAK" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
@@ -64964,6 +65545,14 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
+"vlC" = (
+/obj/structure/bookcase,
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medbay Psychiatrists Office";
+	dir = 2
+	},
+/turf/simulated/wall,
+/area/medical/psych)
 "vrr" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -65012,6 +65601,15 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"vso" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/camera/network/research{
+	c_tag = "Research East Entry"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/rnd/research)
 "vBZ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -65073,6 +65671,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"vZi" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "Arrivals Access North"
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "wbg" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 4
@@ -65213,6 +65817,12 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/grounds/traderpad)
+"wMF" = (
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "wNx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -65225,6 +65835,22 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
+"wPo" = (
+/obj/machinery/power/apc{
+	cell_type = /obj/item/weapon/cell/super;
+	dir = 8;
+	name = "west bump";
+	pixel_x = -30
+	},
+/obj/structure/cable{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/security)
 "wPD" = (
 /obj/structure/railing{
 	dir = 8
@@ -65261,6 +65887,17 @@
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"wYr" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	icon_state = "snow_edges2";
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	icon_state = "snow_edges2";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "xch" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -65318,6 +65955,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"xPd" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/exterior)
 "xQM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
@@ -65349,6 +65993,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"xWX" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "xYs" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -84078,7 +84729,7 @@ aIC
 aJA
 aKp
 aHP
-aaj
+dcv
 abk
 aqD
 aqD
@@ -91601,8 +92252,8 @@ agG
 ahl
 afo
 aik
-aag
-aaZ
+wbg
+avu
 aag
 aag
 aag
@@ -91830,13 +92481,13 @@ aab
 aac
 aab
 aar
-aaj
-aaj
-aaj
-aaj
-aaj
-aaj
-aaj
+aQf
+aQf
+aQf
+wMF
+aQf
+aQf
+aQf
 abq
 abq
 aag
@@ -91874,7 +92525,7 @@ akb
 akb
 akb
 akb
-akb
+akA
 akb
 akb
 jSJ
@@ -92337,7 +92988,7 @@ aar
 aag
 aag
 aag
-aag
+mjH
 aag
 aag
 aag
@@ -92586,10 +93237,10 @@ aab
 aac
 aac
 aas
-aag
-aag
-aag
-aag
+wbg
+wbg
+wbg
+avu
 aag
 aag
 aag
@@ -92628,12 +93279,12 @@ apW
 apd
 akA
 aou
+akA
+akA
+akA
+akA
 akb
-akA
-akA
-akA
-akb
-dVw
+nSw
 fUD
 ioE
 ewj
@@ -92841,28 +93492,28 @@ aat
 aag
 aag
 aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aaZ
+ufB
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+wbg
+avu
 aag
 akb
 akb
@@ -93182,7 +93833,7 @@ aSm
 aag
 btP
 aag
-bxs
+hlL
 byJ
 aRg
 bxD
@@ -93201,7 +93852,7 @@ bNe
 bNe
 aag
 aag
-buX
+lAv
 aag
 aag
 aag
@@ -93421,7 +94072,7 @@ aHV
 aUp
 aUp
 aUp
-aUp
+qgU
 aUp
 aUp
 aUp
@@ -93454,7 +94105,7 @@ bNe
 bNe
 bNe
 buX
-buX
+sHI
 aag
 aag
 aag
@@ -93705,7 +94356,7 @@ bPz
 bQG
 bSd
 bNe
-buX
+avu
 aag
 aag
 aag
@@ -93958,7 +94609,7 @@ bPA
 bSe
 bNe
 buX
-buX
+top
 aag
 aag
 aag
@@ -94376,7 +95027,7 @@ aag
 aag
 aaZ
 aCY
-alK
+vlC
 anh
 anV
 aoS
@@ -94664,7 +95315,7 @@ aIQ
 aIQ
 aIQ
 aIQ
-aMK
+aIQ
 aIN
 aSs
 aYR
@@ -94698,7 +95349,7 @@ bro
 bxA
 byV
 bAl
-bBv
+iIB
 bBv
 bEf
 bFq
@@ -96389,8 +97040,8 @@ aaj
 aaj
 aaj
 aaj
-aaj
-ajn
+bFe
+jyf
 aag
 amZ
 anK
@@ -96641,8 +97292,8 @@ aaj
 aaj
 aaj
 aaj
-aaj
-ajn
+bFe
+jyf
 aaN
 amZ
 amZ
@@ -96893,8 +97544,8 @@ aaj
 aaj
 aaj
 aaj
-aaj
-ajn
+bFe
+jyf
 aag
 aag
 amZ
@@ -96932,7 +97583,7 @@ aLk
 aLk
 aLk
 aIP
-aHV
+inP
 aFP
 aIR
 aPt
@@ -97145,8 +97796,8 @@ aaj
 aaj
 aaj
 aaj
-aaj
-ajn
+bFe
+jyf
 akC
 akC
 akC
@@ -97184,8 +97835,8 @@ aMP
 aHp
 bhP
 aMJ
-aHV
-aOy
+aNF
+aNF
 aIR
 aSA
 aWY
@@ -97397,8 +98048,8 @@ aaj
 aaj
 aaj
 aaj
-aaj
-ajn
+bFe
+jyf
 akC
 alc
 amj
@@ -97745,7 +98396,7 @@ bZl
 bZY
 bPE
 bcc
-cbo
+jNW
 cbo
 cbo
 cbo
@@ -97757,7 +98408,7 @@ cbo
 cbo
 cbo
 cbo
-cbo
+cGk
 aao
 aao
 aaf
@@ -98264,7 +98915,7 @@ cbq
 cbq
 aao
 aao
-aaf
+ius
 aaf
 aaf
 aaf
@@ -98695,13 +99346,13 @@ aHj
 aJQ
 aLf
 aHp
-aMW
-aNF
-aPs
+nNU
+wPo
+bkj
 aPl
+bkj
+bkl
 aPs
-aAb
-aQw
 aRv
 aSI
 aZe
@@ -98898,7 +99549,7 @@ abB
 abS
 acg
 agn
-agn
+qRH
 agn
 abs
 aef
@@ -98947,12 +99598,12 @@ aJa
 aJQ
 aLg
 aHp
-biZ
-aNG
-aLk
+aMJ
+aNH
+aNH
 bki
-bkj
-bkl
+aNH
+aNH
 aPs
 aRq
 aSR
@@ -98960,7 +99611,7 @@ aZY
 bgc
 bar
 bar
-aNF
+hQz
 aQl
 aQl
 aQl
@@ -99201,9 +99852,9 @@ aLh
 aHp
 aMW
 aNH
-aNH
-aPv
-aNH
+eCK
+aPw
+mfI
 aNH
 aNH
 aNH
@@ -100925,7 +101576,7 @@ bka
 abm
 abm
 abm
-aag
+ngK
 ajB
 aag
 akb
@@ -101016,7 +101667,7 @@ bcc
 bou
 bou
 aaj
-aaj
+abk
 aag
 aag
 aag
@@ -101156,7 +101807,7 @@ aan
 aav
 aaw
 aan
-aag
+vZi
 aag
 aag
 aaN
@@ -101260,7 +101911,7 @@ aaj
 aaj
 bMY
 bxu
-bxu
+erg
 aag
 aag
 aag
@@ -101268,7 +101919,7 @@ aag
 bgj
 bgs
 bgt
-bgx
+osD
 aag
 aag
 aag
@@ -101512,7 +102163,7 @@ aaj
 aaj
 bNv
 bxu
-bxu
+erg
 aag
 aag
 aag
@@ -101520,7 +102171,7 @@ aag
 bgj
 bgr
 bgt
-bgD
+xWX
 aag
 aag
 aag
@@ -101764,7 +102415,7 @@ aaj
 aaj
 bNv
 aaj
-aaj
+abk
 aag
 aag
 aag
@@ -101772,7 +102423,7 @@ aag
 bgj
 bgs
 bgt
-bgx
+osD
 aag
 aag
 aag
@@ -102016,15 +102667,15 @@ aaj
 aaj
 bNv
 bNv
-bxu
+erg
+kjE
 aag
 aag
 aag
-aag
-bgs
-bgt
-bgt
-bgD
+fDM
+ein
+ein
+ugV
 aag
 aag
 aag
@@ -102275,7 +102926,7 @@ bSv
 bSv
 bSv
 bSv
-bSv
+eRh
 bSv
 bSv
 bSv
@@ -102524,10 +103175,10 @@ bKW
 bJM
 bID
 bSw
+rWK
 aag
-aag
-aag
-aag
+rWK
+rWK
 aag
 aag
 aag
@@ -102777,13 +103428,13 @@ bPP
 bID
 bKj
 bKj
-aag
+wYr
 bKj
 bKj
-aag
-aag
-aag
-aag
+ptm
+rWK
+rWK
+rWK
 aag
 aag
 aag
@@ -103032,11 +103683,11 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 bKj
 bKj
 bKj
-aag
+wYr
 aag
 aag
 aag
@@ -103262,7 +103913,7 @@ bqI
 bqK
 btb
 bvx
-bwO
+spS
 bxW
 bzz
 bwT
@@ -103289,7 +103940,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 abf
 aag
@@ -103541,7 +104192,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+wYr
 aag
 aag
 aag
@@ -103794,7 +104445,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -104046,7 +104697,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -104297,7 +104948,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+kLy
 aag
 aag
 aag
@@ -104549,7 +105200,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+wYr
 aag
 ccS
 aag
@@ -104802,7 +105453,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -105054,7 +105705,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -105306,7 +105957,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -106743,7 +107394,7 @@ awd
 atl
 atl
 atl
-aab
+ayK
 awY
 aBm
 aCj
@@ -107493,7 +108144,7 @@ aaj
 aaj
 aaj
 atl
-aud
+fmC
 ave
 awf
 awV
@@ -109591,7 +110242,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -109843,7 +110494,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -110095,7 +110746,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 abp
 aag
 aag
@@ -110347,7 +110998,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -110567,7 +111218,7 @@ bla
 bmg
 bra
 bjB
-brU
+vso
 buH
 bwb
 bvK
@@ -110599,7 +111250,7 @@ bKj
 cbu
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -110851,7 +111502,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -111103,7 +111754,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 ccS
@@ -111355,7 +112006,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -113620,7 +114271,7 @@ bYO
 bVH
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -113872,7 +114523,7 @@ bYP
 bVH
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -114300,7 +114951,7 @@ aag
 aag
 aag
 aag
-axe
+kki
 ayd
 aag
 aag
@@ -115129,7 +115780,7 @@ bKi
 avt
 aaj
 ceb
-aag
+grP
 aag
 aag
 aag
@@ -115878,7 +116529,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -116130,7 +116781,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 aag
@@ -116382,6 +117033,19 @@ bKj
 bKj
 bKj
 bKj
+ptm
+aag
+aag
+aag
+aag
+aaZ
+aag
+aag
+aag
+aag
+aag
+aag
+aag
 aag
 aag
 aag
@@ -116392,19 +117056,6 @@ aag
 aag
 aag
 aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aag
-aaZ
-aag
-aag
-aag
-aag
 bNu
 bNu
 bNu
@@ -116414,13 +117065,13 @@ aaf
 aaf
 aaf
 aaf
-bmE
+oJX
 cfh
 cfh
 cfh
 cfh
 cfh
-aad
+mbv
 aad
 aad
 aae
@@ -116606,7 +117257,7 @@ aag
 aag
 aag
 bhj
-bir
+tkS
 bir
 bir
 bmC
@@ -116634,7 +117285,7 @@ bKj
 bKj
 bKj
 bKj
-aag
+ptm
 aag
 aag
 abz
@@ -117159,7 +117810,7 @@ aag
 aaZ
 aKZ
 aag
-cfz
+mey
 bNu
 bUX
 ceH
@@ -117167,7 +117818,7 @@ cfc
 ceH
 ceH
 bNu
-brn
+xPd
 aaf
 aaf
 cfm
@@ -117379,7 +118030,7 @@ byK
 bAi
 bBq
 aag
-aag
+nlq
 bHW
 aaj
 bJL
@@ -117419,10 +118070,10 @@ ceH
 ceH
 ceH
 bOI
-brn
+mWX
 cfh
 cfh
-bmE
+dZD
 aaf
 aaf
 aaf
@@ -117632,8 +118283,8 @@ bAi
 bBq
 aKZ
 aag
-aag
-aMG
+btM
+oKj
 bKV
 aag
 aag
@@ -117671,7 +118322,7 @@ cfc
 ceH
 cli
 bNu
-brn
+rhM
 aaf
 aaf
 cfm
@@ -117829,7 +118480,7 @@ apa
 avr
 awt
 apa
-axe
+hkP
 ayd
 abq
 abq
@@ -117883,9 +118534,9 @@ byL
 bAi
 bBq
 aag
-aag
-aag
-aag
+onp
+bww
+bBs
 aag
 aKZ
 aag
@@ -117896,7 +118547,7 @@ aag
 aag
 aag
 aag
-aag
+pMf
 ajo
 aaj
 ccR
@@ -118135,7 +118786,7 @@ byK
 bAi
 bBq
 aag
-aag
+mjH
 aag
 aag
 aag
@@ -118329,7 +118980,7 @@ aag
 aag
 aag
 aag
-avt
+mAv
 aaj
 awv
 aag
@@ -118386,8 +119037,8 @@ aaj
 byK
 bAi
 bBq
-aag
-aag
+onp
+avu
 aag
 bGy
 bGy
@@ -119143,7 +119794,7 @@ biv
 bAj
 aag
 bCF
-bDX
+etQ
 bBq
 bGz
 bHZ
@@ -119394,8 +120045,8 @@ aag
 aag
 aag
 aaN
-aag
-aag
+btM
+avu
 bBq
 bGy
 bIa
@@ -119646,8 +120297,8 @@ aag
 aag
 aag
 aag
-abz
-aag
+qCu
+iRo
 bBq
 bGy
 bIb
@@ -119845,9 +120496,9 @@ aaN
 aba
 abd
 abd
-asx
-axc
-asx
+oQx
+msp
+oQx
 abe
 aag
 aag
@@ -119897,8 +120548,8 @@ aag
 aaN
 aag
 aag
-aag
-aag
+aaY
+iRo
 aag
 cgZ
 bGy
@@ -120149,7 +120800,7 @@ abd
 abd
 abd
 abd
-abd
+bBs
 bCH
 bCH
 bFh
@@ -124445,7 +125096,7 @@ aae
 aad
 aad
 bPt
-bTe
+ujo
 aWN
 aWN
 bUT
@@ -127000,7 +127651,7 @@ aaf
 bxs
 aaj
 aaj
-aaj
+lyv
 aaj
 aaj
 cjY
