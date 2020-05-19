@@ -24,6 +24,7 @@ var/global/list/station_networks = list(
 */
 var/global/list/engineering_networks = list(
 										NETWORK_ENGINE,
+										NETWORK_SUBSTATIONS, //YAWN ADD: new substations subnet
 										NETWORK_ENGINEERING,
 										//NETWORK_ENGINEERING_OUTPOST,	//VOREStation Edit: Tether has no Engineering Outpost,
 										NETWORK_ALARM_ATMOS,

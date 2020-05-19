@@ -10791,6 +10791,10 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_y = 0
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/outpost)
 "vk" = (
@@ -11070,6 +11074,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/outpost/research/anomaly_analysis)
 "vM" = (
@@ -11206,6 +11211,10 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/machinery/camera/network/substations{
+	icon_state = "camera";
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/outpost)
 "wg" = (
@@ -13436,10 +13445,6 @@
 /obj/structure/cable/blue{
 	d2 = 8;
 	icon_state = "0-8"
-	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "Toxins Substation";
-	dir = 1
 	},
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Xeno-Toxins"
@@ -18608,6 +18613,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/mining)
 "JQ" = (
+/obj/machinery/camera/network/substations{
+	icon_state = "camera";
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/mining)
 "JR" = (
@@ -20568,8 +20577,8 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/camera/network/engineering{
-	c_tag = "Xenoarchaeology Substation";
+/obj/machinery/camera/network/substations{
+	icon_state = "camera";
 	dir = 1
 	},
 /turf/simulated/floor/plating,

@@ -5620,7 +5620,7 @@
 /area/chapel/monastery/atmos)
 "aly" = (
 /obj/machinery/atmospherics/binary/pump/high_power/on{
-	dir = 4;
+	dir = 8;
 	name = "Pump station in";
 	target_pressure = 4500
 	},
