@@ -38212,7 +38212,7 @@
 "bBS" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/camera/network/engineering{
-	c_tag = "Medical Substation";
+	c_tag = "Atmospherics Southeast - Tanks";
 	dir = 8
 	},
 /obj/item/device/geiger/wall{

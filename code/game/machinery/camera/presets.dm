@@ -24,6 +24,7 @@ var/global/list/station_networks = list(
 */
 var/global/list/engineering_networks = list(
 										NETWORK_ENGINE,
+										NETWORK_SUBSTATIONS, //YAWN ADD: new substations subnet
 										NETWORK_ENGINEERING,
 										//NETWORK_ENGINEERING_OUTPOST,	//VOREStation Edit: Tether has no Engineering Outpost,
 										NETWORK_ALARM_ATMOS,
@@ -227,9 +228,12 @@ var/global/list/engineering_networks = list(
 	update_coverage()
 
 /obj/machinery/camera/proc/upgradeMotion()
+	if(!isturf(loc))
+		return //nooooo
 	assembly.upgrades.Add(new /obj/item/device/assembly/prox_sensor(assembly))
 	setPowerUsage()
 	START_MACHINE_PROCESSING(src)
+	sense_proximity(callback = .HasProximity)
 	update_coverage()
 
 /obj/machinery/camera/proc/setPowerUsage()
