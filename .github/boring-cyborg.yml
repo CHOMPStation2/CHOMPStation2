@@ -4,9 +4,9 @@
 # ** matches anything including /
 
 labelPRBasedOnFilePath:
-  # Add 'Type: Map' to any changes to /yw/*.dmm files
+  # Add 'Type: Map' to any changes to .dmm files
   "Type: Map":
-    - '**/yw/**.dmm'
+    - '**/*.dmm'
 
   # Add 'Type: Vore' to any changes to any vore files
   "Type: Vore":
