@@ -1276,14 +1276,8 @@ var/mob/dview/dview_mob = new
 	if(!center)
 		return
 
-	//VOREStation Add - Emergency Backup
-	if(!dview_mob)
-		dview_mob = new()
-		WARNING("dview mob was lost, and had to be recreated!")
-	//VOREStation Add End
-
 	dview_mob.loc = center
-
+	
 	dview_mob.see_invisible = invis_flags
 
 	. = view(range, dview_mob)
@@ -1311,6 +1305,11 @@ var/mob/dview/dview_mob = new
 		dead_mob_list -= src
 	else
 		living_mob_list -= src
+
+/mob/dview/Life()
+	mob_list -= src
+	dead_mob_list -= src
+	living_mob_list -= src
 
 /mob/dview/Destroy(var/force)
 	crash_with("Attempt to delete the dview_mob: [log_info_line(src)]")

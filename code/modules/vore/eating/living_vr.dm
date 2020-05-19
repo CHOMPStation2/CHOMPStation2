@@ -185,10 +185,11 @@
 //
 /mob/living/proc/vore_process_resist()
 	//Are we resisting from inside a belly?
-	if(isbelly(loc))
-		var/obj/belly/B = loc
-		B.relay_resist(src)
-		return TRUE //resist() on living does this TRUE thing.
+	// if(isbelly(loc))
+	// 	var/obj/belly/B = loc
+	// 	B.relay_resist(src)
+	// 	return TRUE //resist() on living does this TRUE thing.
+	// Note: This is no longer required, as the refactors to resisting allow bellies to just define container_resist
 
 	//Other overridden resists go here
 	return FALSE
@@ -327,7 +328,7 @@
 	if(!istype(tasted))
 		return
 
-	if(!canClick() || incapacitated(INCAPACITATION_ALL))
+	if(!checkClickCooldown() || incapacitated(INCAPACITATION_ALL))
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -508,51 +509,6 @@
     gas = list(
         "oxygen" = 21,
         "nitrogen" = 79)
-
-// Procs for micros stuffed into boots and the like to escape from them
-/mob/living/proc/escape_clothes(obj/item/clothing/C)
-	ASSERT(loc == C)
-
-	if(ishuman(C.loc)) //In a /mob/living/carbon/human
-		var/mob/living/carbon/human/H = C.loc
-		if(H.shoes == C) //Being worn
-			to_chat(src,"<font color='blue'> You start to climb around the larger creature's feet and ankles!</font>")
-			to_chat(H,"<font color='red'>Something is trying to climb out of your [C]!</font>")
-			var/original_loc = H.loc
-			for(var/escape_time = 100,escape_time > 0,escape_time--)
-				if(H.loc != original_loc)
-					to_chat(src,"<font color='red'>You're pinned back underfoot!</font>")
-					to_chat(H,"<font color='blue'>You pin the escapee back underfoot!</font>")
-					return
-				if(loc != C)
-					return
-				sleep(1)
-
-			to_chat(src,"<font color='blue'>You manage to escape \the [C]!</font>")
-			to_chat(H,"<font color='red'>Somone has climbed out of your [C]!</font>")
-			forceMove(H.loc)
-
-		else //Being held by a human
-			to_chat(src,"<font color='blue'>You start to climb out of \the [C]!</font>")
-			to_chat(H,"<font color='red'>Something is trying to climb out of your [C]!</font>")
-			for(var/escape_time = 60,escape_time > 0,escape_time--)
-				if(H.shoes == C)
-					to_chat(src,"<font color='red'>You're pinned underfoot!</font>")
-					to_chat(H,"<font color='blue'>You pin the escapee underfoot!</font>")
-					return
-				if(loc != C)
-					return
-				sleep(1)
-			to_chat(src,"<font color='blue'>You manage to escape \the [C]!</font>")
-			to_chat(H,"<font color='red'>Somone has climbed out of your [C]!</font>")
-			forceMove(H.loc)
-
-	to_chat(src,"<font color='blue'>You start to climb out of \the [C]!</font>")
-	sleep(50)
-	if(loc == C)
-		to_chat(src,"<font color='blue'>You climb out of \the [C]!</font>")
-		forceMove(C.loc)
-	return
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)
 	var/belly = user.vore_selected
@@ -741,17 +697,18 @@
 			"diamond"		= list("nutrition" = 50, "remark" = "The heavenly taste of [O] almost brings a tear to your eye. Its glimmering gloriousness is even better on the tongue than you imagined, so you savour it fondly."),
 			"platinum"		= list("nutrition" = 40, "remark" = "A bit tangy but elegantly balanced with a long faintly sour finish. Delectible."),
 			"mhydrogen"		= list("nutrition" = 30, "remark" = "Quite sweet on the tongue, you savour the light and easy to chew [O], finishing it quickly."),
+			"rutile"		= list("nutrition" = 50, "remark" = "A little... angular, you savour the light but chewy [O], finishing it quickly."),
 			MAT_VERDANTIUM	= list("nutrition" = 50, "remark" = "You taste scientific mystery and a rare delicacy. Your tastebuds tingle pleasantly as you eat [O] and the feeling warmly blossoms in your chest for a moment."),
 			MAT_LEAD		= list("nutrition" = 40, "remark" = "It takes some work to break down [O] but you manage it, unlocking lasting tangy goodness in the process. Yum."),
 		)
 		if(O.material in rock_munch)
 			var/S = rock_munch[O.material]
 			to_chat(src, "<span class='notice'>[S["remark"]]</span>")
-			nutrition += S["nutrition"]
+			adjust_nutrition(S["nutrition"])
 		else //Handle everything else.
 			if(istype(O, /obj/item/weapon/ore/slag/))
 				to_chat(src, "<span class='notice'>You taste dusty, crunchy mistakes. This is a travesty... but at least it is an edible one.</span>")
-				nutrition += 15
+				adjust_nutrition(15)
 			else //Random rock.
 				to_chat(src, "<span class='notice'>You taste stony, gravelly goodness - but you crave something with actual nutritional value.</span>")
 
@@ -763,10 +720,10 @@
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
 
-/mob/living/examine(mob/user, distance, infix, suffix)
-	. = ..(user, distance, infix, suffix)
+/mob/living/examine(mob/user, infix, suffix)
+	. = ..()
 	if(showvoreprefs)
-		to_chat(user, "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>")
+		. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>"
 
 /mob/living/Topic(href, href_list)	//Can't find any instances of Topic() being overridden by /mob/living in polaris' base code, even though /mob/living/carbon/human's Topic() has a ..() call
 	if(href_list["vore_prefs"])
@@ -791,6 +748,6 @@
 	dispvoreprefs += "<b>Healbelly permission:</b> [permit_healbelly ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
-	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name];size=200x300;can_resize=0;can_minimize=0")
+	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=200x300;can_resize=0;can_minimize=0")
 	onclose(user, "[name]")
 	return

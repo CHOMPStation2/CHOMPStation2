@@ -2314,9 +2314,7 @@
 /turf/simulated/wall,
 /area/residential/lobby)
 "gY" = (
-/obj/machinery/power/smes/magical{
-	output_level = 1e+006;
-	output_level_max = 1e+006
+/obj/machinery/power/debug_items/infinite_generator{
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,

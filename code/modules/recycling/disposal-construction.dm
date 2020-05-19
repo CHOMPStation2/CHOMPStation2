@@ -22,6 +22,7 @@
 	..(newturf)
 	ptype = newtype
 	dir = newdir
+	// Disposals handle "bent"/"corner" strangely, handle this specially.
 	if(ptype == DISPOSAL_PIPE_STRAIGHT && dir in cornerdirs)
 		ptype = DISPOSAL_PIPE_CORNER
 		switch(dir)
@@ -76,30 +77,24 @@
 				base_state = "disposal"
 			else
 				base_state = "condisposal"
-
 		if(DISPOSAL_PIPE_OUTLET)
 			base_state = "outlet"
 			dpdir = dir
-
 		if(DISPOSAL_PIPE_CHUTE)
 			base_state = "intake"
 			dpdir = dir
-
 		if(DISPOSAL_PIPE_SORTER)
 			base_state = "pipe-j1s"
 			dpdir = dir | right | flip
-
 		if(DISPOSAL_PIPE_SORTER_FLIPPED)
 			base_state = "pipe-j2s"
 			dpdir = dir | left | flip
-///// Z-Level stuff
 		if(DISPOSAL_PIPE_UPWARD)
 			base_state = "pipe-u"
 			dpdir = dir
 		if(DISPOSAL_PIPE_DOWNWARD)
 			base_state = "pipe-d"
 			dpdir = dir
-///// Z-Level stuff
 		if(DISPOSAL_PIPE_TAGGER)
 			base_state = "pipe-tagger"
 			dpdir = dir | flip
@@ -107,9 +102,7 @@
 			base_state = "pipe-tagger-partial"
 			dpdir = dir | flip
 
-///// Z-Level stuff
 	if(!(ptype in list(DISPOSAL_PIPE_BIN, DISPOSAL_PIPE_OUTLET, DISPOSAL_PIPE_CHUTE, DISPOSAL_PIPE_UPWARD, DISPOSAL_PIPE_DOWNWARD, DISPOSAL_PIPE_TAGGER, DISPOSAL_PIPE_TAGGER_PARTIAL)))
-///// Z-Level stuff
 		icon_state = "con[base_state]"
 	else
 		icon_state = base_state
@@ -128,9 +121,9 @@
 
 
 // flip and rotate verbs
-/obj/structure/disposalconstruct/verb/rotate()
+/obj/structure/disposalconstruct/verb/rotate_clockwise()
 	set category = "Object"
-	set name = "Rotate Pipe"
+	set name = "Rotate Pipe Clockwise"
 	set src in view(1)
 
 	if(usr.stat)
@@ -140,7 +133,7 @@
 		to_chat(usr, "You must unfasten the pipe before rotating it.")
 		return
 
-	set_dir(turn(dir, -90))
+	src.set_dir(turn(src.dir, 270))
 	update()
 
 /obj/structure/disposalconstruct/verb/flip()
@@ -157,7 +150,6 @@
 	do_a_flip()
 
 /obj/structure/disposalconstruct/proc/do_a_flip()
-	set_dir(turn(dir, 180))
 	switch(ptype)
 		if(DISPOSAL_PIPE_JUNCTION)
 			ptype = DISPOSAL_PIPE_JUNCTION_FLIPPED
@@ -201,12 +193,10 @@
 					return /obj/structure/disposalpipe/sortjunction/wildcard/flipped
 				if(DISPOSAL_SORT_UNTAGGED)
 					return /obj/structure/disposalpipe/sortjunction/untagged/flipped
-///// Z-Level stuff
 		if(DISPOSAL_PIPE_UPWARD)
 			return /obj/structure/disposalpipe/up
 		if(DISPOSAL_PIPE_DOWNWARD)
 			return /obj/structure/disposalpipe/down
-///// Z-Level stuff
 		if(DISPOSAL_PIPE_TAGGER)
 			return /obj/structure/disposalpipe/tagger
 		if(DISPOSAL_PIPE_TAGGER_PARTIAL)
@@ -218,7 +208,6 @@
 // attackby item
 // wrench: (un)anchor
 // weldingtool: convert to real pipe
-
 /obj/structure/disposalconstruct/attackby(var/obj/item/I, var/mob/user)
 	var/nicetype = "pipe"
 	var/ispipe = 0 // Indicates if we should change the level of this pipe
@@ -256,6 +245,7 @@
 
 	var/obj/structure/disposalpipe/CP = locate() in T
 
+	// wrench: (un)anchor
 	if(I.is_wrench())
 		if(anchored)
 			anchored = 0
@@ -294,6 +284,7 @@
 		playsound(loc, I.usesound, 100, 1)
 		update()
 
+	// weldingtool: convert to real pipe
 	else if(istype(I, /obj/item/weapon/weldingtool))
 		if(anchored)
 			var/obj/item/weapon/weldingtool/W = I
@@ -328,7 +319,6 @@
 						P.mode = 0 // start with pump off
 
 					else if(ptype==DISPOSAL_PIPE_OUTLET)
-
 						var/obj/structure/disposaloutlet/P = new /obj/structure/disposaloutlet(src.loc)
 						src.transfer_fingerprints_to(P)
 						P.set_dir(dir)
@@ -336,7 +326,6 @@
 						Trunk.linked = P
 
 					else if(ptype==DISPOSAL_PIPE_CHUTE)
-
 						var/obj/machinery/disposal/deliveryChute/P = new /obj/machinery/disposal/deliveryChute(src.loc)
 						src.transfer_fingerprints_to(P)
 						P.set_dir(dir)
@@ -356,6 +345,7 @@
 	else
 		return 0
 
+// VOREStation Add Start - Helper procs for RCD
 /obj/structure/disposalconstruct/proc/is_pipe()
 	return (ptype != DISPOSAL_PIPE_BIN && ptype != DISPOSAL_PIPE_OUTLET && ptype != DISPOSAL_PIPE_CHUTE)
 
@@ -372,3 +362,4 @@
 			return FALSE
 
 	return TRUE
+// VOREStation Add End

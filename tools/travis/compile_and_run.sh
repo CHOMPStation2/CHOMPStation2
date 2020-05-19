@@ -30,6 +30,7 @@ elif [ $exitVal -gt 0 ] && [ $TEST_DEFINE = "UNIT_TEST" ]; then
 fi
 
 # If we're running, run
+# YW Edit removes "|| exit 1" until we can fix our submaps
 if [ $RUN -eq 1 ];
 then
   DreamDaemon $BASENAME.dmb -invisible -trusted -core 2>&1 | tee log.txt;

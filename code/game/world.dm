@@ -15,6 +15,8 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
+	TgsNew()
+
 	config.post_load()
 
 	if(config && config.server_name != null && config.server_suffix && world.port > 0)
@@ -25,7 +27,7 @@
 	// if(config && config.log_runtime)
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
-	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
+	GLOB.timezoneOffset = get_timezone_offset()
 
 	callHook("startup")
 	init_vchat()
@@ -62,7 +64,7 @@
 
 	master_controller = new /datum/controller/game_controller()
 
-	Master.Initialize(10, FALSE)
+	Master.Initialize(10, FALSE, TRUE)
 
 	spawn(1)
 		master_controller.setup()
@@ -82,6 +84,7 @@ var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
+	TGS_TOPIC
 	log_topic("\"[T]\", from:[addr], master:[master], key:[key]")
 
 	if (T == "ping")
@@ -211,8 +214,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		return list2params(positions)
 
 	else if(T == "revision")
-		if(revdata.revision)
-			return list2params(list(branch = revdata.branch, date = revdata.date, revision = revdata.revision))
+		if(GLOB.revdata.revision)
+			return list2params(list(branch = GLOB.revdata.branch, date = GLOB.revdata.date, revision = GLOB.revdata.revision))
 		else
 			return "unknown"
 
@@ -341,7 +344,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		to_chat(C,message)
 
 
-		for(var/client/A in admins)
+		for(var/client/A in GLOB.admins)
 			if(A != C)
 				to_chat(A,amessage)
 
@@ -409,6 +412,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 				C << link("byond://[config.server]")
 
+	TgsReboot()
 	log_world("World rebooted at [time_stamp()]")
 	..()
 
@@ -644,9 +648,14 @@ proc/establish_old_db_connection()
 /world/proc/max_z_changed()
 	if(!istype(GLOB.players_by_zlevel, /list))
 		GLOB.players_by_zlevel = new /list(world.maxz, 0)
+		GLOB.living_players_by_zlevel = new /list(world.maxz, 0)
+	
 	while(GLOB.players_by_zlevel.len < world.maxz)
 		GLOB.players_by_zlevel.len++
 		GLOB.players_by_zlevel[GLOB.players_by_zlevel.len] = list()
+		
+		GLOB.living_players_by_zlevel.len++
+		GLOB.living_players_by_zlevel[GLOB.living_players_by_zlevel.len] = list()
 
 // Call this to make a new blank z-level, don't modify maxz directly.
 /world/proc/increment_max_z()

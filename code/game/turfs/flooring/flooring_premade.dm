@@ -387,8 +387,7 @@
 	name = "snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
-	outdoors = TRUE
-	movement_cost = 8
+	initial_flooring = /decl/flooring/snow
 	var/list/crossed_dirs = list()
 	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
 		'sound/effects/footstep/snow1.ogg',

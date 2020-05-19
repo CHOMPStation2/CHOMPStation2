@@ -228,9 +228,12 @@ var/global/list/engineering_networks = list(
 	update_coverage()
 
 /obj/machinery/camera/proc/upgradeMotion()
+	if(!isturf(loc))
+		return //nooooo
 	assembly.upgrades.Add(new /obj/item/device/assembly/prox_sensor(assembly))
 	setPowerUsage()
 	START_MACHINE_PROCESSING(src)
+	sense_proximity(callback = .HasProximity)
 	update_coverage()
 
 /obj/machinery/camera/proc/setPowerUsage()
@@ -239,4 +242,4 @@ var/global/list/engineering_networks = list(
 		mult++
 	if (isMotion())
 		mult++
-	active_power_usage = mult*initial(active_power_usage)
+	update_active_power_usage(mult * initial(active_power_usage))
