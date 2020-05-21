@@ -7,11 +7,7 @@
 	w_class = ITEMSIZE_NORMAL
 	drop_sound = 'sound/items/drop/metalshield.ogg'
 
-<<<<<<< HEAD
-/obj/item/clothing/gloves/arm_guard/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
-=======
 /obj/item/clothing/gloves/arm_guard/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)
->>>>>>> e791692aea59a96b1b45c20d61974aa10493a7f6
 	if(..()) //This will only run if no other problems occured when equiping.
 		if(H.wear_suit)
 			if(H.wear_suit.body_parts_covered & ARMS)
