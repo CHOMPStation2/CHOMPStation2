@@ -356,11 +356,11 @@ GLOBAL_DATUM_INIT(catalogue_data, /datum/category_collection/catalogue, new)
 	name = "Government - Solar Confederate Government"
 	datum_to_copy = /datum/lore/organization/gov/solgov
 
-//VOREStation Removal //CHOMP Re-addition. STOP MODIFYING BASE FILES.
+/* //VOREStation Removal
 /datum/category_item/catalogue/information/organization/virgov
 	name = "Government - Vir Governmental Authority"
 	datum_to_copy = /datum/lore/organization/gov/virgov
-
+*/
 
 /datum/category_item/catalogue/anomalous
 
