@@ -83,4 +83,4 @@
 					W.bandage()
 					W.disinfect()
 					H.UpdateDamageIcon()
-					playsound(src.loc, 'sound/effects/ointment.ogg', 25)
+					playsound(src, 'sound/effects/ointment.ogg', 25)

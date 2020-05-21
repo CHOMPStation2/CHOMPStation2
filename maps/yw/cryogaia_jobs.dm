@@ -61,7 +61,7 @@
 /datum/job/pilot
 	title = "Pilot"
 	flag = PILOT
-	departments = list(DEPARTMENT_PLANET)
+	departments = list(DEPARTMENT_CIVILIAN,DEPARTMENT_PLANET)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
@@ -102,7 +102,7 @@
 /datum/job/sar
 	title = "Field Medic"
 	flag = SAR
-	departments = list(DEPARTMENT_PLANET)
+	departments = list(DEPARTMENT_MEDICAL,DEPARTMENT_PLANET)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
