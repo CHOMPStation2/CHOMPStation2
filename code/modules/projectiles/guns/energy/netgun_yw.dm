@@ -8,12 +8,16 @@
 	icon_state = "hunter"
 	item_state = "gun" // Placeholder
 	mode_name = "stun"
+	projectile_type = /obj/item/projectile/beam/stun/blue
+	charge_cost = 320
+	fire_delay = 10
 
-	fire_sound = 'sound/weapons/eluger.ogg'
+
+	fire_sound = 'sound/weapons/Taser.ogg'
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 6, TECH_MAGNET = 4)
 
 	firemodes = list(
-		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun/blue, fire_sound='sound/weapons/Taser.ogg', charge_cost=240, fire_delay=5),
+		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun/blue, fire_sound='sound/weapons/Taser.ogg', charge_cost=320, fire_delay=10),
 		list(mode_name="capture", projectile_type=/obj/item/projectile/beam/energy_net, fire_sound = 'sound/weapons/eluger.ogg', charge_cost=1200, fire_delay=50)
 	)
 
