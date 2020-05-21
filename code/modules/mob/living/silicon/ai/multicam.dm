@@ -13,7 +13,7 @@
 
 /obj/screen/movable/pic_in_pic/ai/Destroy()
 	. = ..()
-	if(!QDELETED(aiEye)) // Safety to prevent exploit
+	if(!QDELETED(aiEye))
 		QDEL_NULL(aiEye)
 	else
 		aiEye = null
@@ -31,6 +31,12 @@
 	base.layer = DISPOSAL_LAYER
 	base.plane = PLATING_PLANE
 	base.appearance_flags = PIXEL_SCALE
+
+	for(var/direction in cardinal)
+		var/mutable_appearance/dir = new /mutable_appearance(base)
+		dir.dir = direction
+		dir.icon_state = "background_highlight_[direction]"
+		highlighted_mas += dir
 
 /obj/screen/movable/pic_in_pic/ai/add_background()
 	if((width > 0) && (height > 0))
@@ -70,7 +76,6 @@
 	if(!aiEye)
 		qdel(src)
 		return
-	
 	aiEye.static_visibility_range =	(round(max(width, height) / 2) + 1)
 	if(ai)
 		ai.camera_visibility(aiEye)
@@ -81,7 +86,6 @@
 	if(!aiEye)
 		qdel(src)
 		return
-	
 	aiEye.setLoc(get_turf(target))
 
 /obj/screen/movable/pic_in_pic/ai/refresh_view()
@@ -89,7 +93,6 @@
 	if(!aiEye)
 		qdel(src)
 		return
-	
 	aiEye.setLoc(get_turf(center))
 
 /obj/screen/movable/pic_in_pic/ai/proc/highlight()
@@ -109,6 +112,7 @@
 	if(!aiEye)
 		qdel(src)
 		return
+	highlighted = FALSE
 	overlays.Cut()
 	add_background()
 	add_buttons()

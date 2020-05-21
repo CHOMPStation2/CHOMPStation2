@@ -70,6 +70,7 @@
 							NETWORK_CRYOGAIA,
 							NETWORK_ENGINE,
 							NETWORK_ENGINEERING,
+							NETWORK_SUBSTATIONS,
 							NETWORK_EXPLORATION,
 							//NETWORK_DEFAULT,  //Is this even used for anything? Robots show up here, but they show up in ROBOTS network too,
 							NETWORK_MEDICAL,

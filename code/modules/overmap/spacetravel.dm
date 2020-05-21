@@ -29,14 +29,16 @@ var/list/cached_space = list()
 	return 1
 
 proc/get_deepspace(x,y)
-	var/obj/effect/overmap/visitable/sector/temporary/res = locate(x,y,global.using_map.overmap_z)
+	var/turf/unsimulated/map/overmap_turf = locate(x,y,global.using_map.overmap_z)
+	if(!istype(overmap_turf))
+		CRASH("Attempt to get deepspace at ([x],[y]) which is not on overmap: [overmap_turf]")
+	var/obj/effect/overmap/visitable/sector/temporary/res = locate() in overmap_turf
 	if(istype(res))
 		return res
 	else if(cached_space.len)
 		res = cached_space[cached_space.len]
 		cached_space -= res
-		res.x = x
-		res.y = y
+		res.forceMove(overmap_turf)
 		return res
 	else
 		return new /obj/effect/overmap/visitable/sector/temporary(x, y, global.using_map.get_empty_zlevel())
@@ -60,15 +62,16 @@ proc/overmap_spacetravel(var/turf/space/T, var/atom/movable/A)
 	var/obj/effect/overmap/visitable/M = get_overmap_sector(T.z)
 	if (!M)
 		return
-	
+
 	// Don't let AI eyes yeet themselves off the map
 	if(istype(A, /mob/observer/eye))
 		return
-	
+
 	if(A.lost_in_space())
 		if(!QDELETED(A))
 			qdel(A)
 		return
+
 
 	var/nx = 1
 	var/ny = 1
@@ -114,5 +117,5 @@ proc/overmap_spacetravel(var/turf/space/T, var/atom/movable/A)
 		var/obj/effect/overmap/visitable/sector/temporary/source = M
 		if (source.can_die())
 			testing("Caching [M] for future use")
-			source.loc = null
+			source.moveToNullspace()
 			cached_space += source

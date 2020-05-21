@@ -172,13 +172,10 @@
 			return id_card
 
 /obj/item/device/electronic_assembly/examine(mob/user)
-	. = ..(user, 1)
-	if(.)
+	. = ..()
+	if(Adjacent(user))
 		for(var/obj/item/integrated_circuit/IC in contents)
-			IC.external_examine(user)
-	//	for(var/obj/item/integrated_circuit/output/screen/S in contents)
-	//		if(S.stuff_to_display)
-	//			to_chat(user, "There's a little screen labeled '[S.name]', which displays '[S.stuff_to_display]'.")
+			. += IC.external_examine(user)
 		if(opened)
 			interact(user)
 
@@ -351,14 +348,6 @@
 		net_power += gained
 		return TRUE
 	return FALSE
-
-/obj/item/device/electronic_assembly/on_loc_moved(oldloc)
-	for(var/obj/O in contents)
-		O.on_loc_moved(oldloc)
-
-/obj/item/device/electronic_assembly/Moved(var/oldloc)
-	for(var/obj/O in contents)
-		O.on_loc_moved(oldloc)
 
 /obj/item/device/electronic_assembly/proc/on_anchored()
 	for(var/obj/item/integrated_circuit/IC in contents)
