@@ -32,6 +32,19 @@
 #define NETWORK_EXPLORATION "Exploration"
 #define NETWORK_XENOBIO "Xenobiology"
 
+/datum/map/tether/New()
+	..()
+	var/choice = pickweight(list(
+		"title" = 10,
+		"tether" = 50,
+		"tether_night" = 50,
+		"tether2_night" = 50,
+		"tether2_dog" = 1,
+		"tether2_love" = 1
+	))
+	if(choice)
+		lobby_screens = list(choice)
+
 /datum/map/tether
 	name = "Virgo"
 	full_name = "NSB Adephagia"
@@ -130,11 +143,12 @@
 		/area/rnd/miscellaneous_lab
 		)
 
+//TFF 5/4/20 - Mining Ops move, airlock path change
 	unit_test_exempt_from_atmos = list(
 		/area/engineering/atmos_intake, // Outside,
 		/area/rnd/external, //  Outside,
 		/area/tether/surfacebase/mining_main/external, // Outside,
-		/area/tether/surfacebase/mining_main/airlock, //  Its an airlock,
+		/area/tether/surfacebase/cargo/mining/airlock, //  It's an airlock,	TODO: repath for later Med EVA on Surface
 		/area/tether/surfacebase/emergency_storage/rnd,
 		/area/tether/surfacebase/emergency_storage/atrium)
 
@@ -177,6 +191,10 @@
 						 	 	 Z_LEVEL_ROGUEMINE_3,
 								 Z_LEVEL_ROGUEMINE_4)
 
+//TFF 16/4/20 - mining outpost shuttle defines
+	mining_station_z =		list(Z_LEVEL_SPACE_HIGH)
+	mining_outpost_z =		list(Z_LEVEL_SURFACE_MINE)
+
 	lateload_single_pick = null //Nothing right now.
 
 	planet_datums_to_make = list(/datum/planet/virgo3b)
@@ -209,6 +227,10 @@
 /obj/effect/overmap/visitable/sector/virgo3b
 	name = "Virgo 3B"
 	desc = "Full of phoron, and home to the NSB Adephagia, where you can dock and refuel your craft."
+	scanner_desc = @{"[i]Registration[/i]: NSB Adephagia
+[i]Class[/i]: Installation
+[i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
+[b]Notice[/b]: NanoTrasen Base, authorized personnel only"}
 	base = 1
 	icon_state = "globe"
 	color = "#d35b5b"
@@ -298,7 +320,7 @@
 /datum/map_z_level/tether/transit
 	z = Z_LEVEL_TRANSIT
 	name = "Transit"
-	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
 /datum/map_z_level/tether/station/space_low
 	z = Z_LEVEL_SPACE_LOW
@@ -327,11 +349,11 @@
 /datum/map_z_level/tether/mine
 	z = Z_LEVEL_SURFACE_MINE
 	name = "Mining Outpost"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
 
 /datum/map_z_level/tether/solars
 	z = Z_LEVEL_SOLARS
 	name = "Solar Field"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b

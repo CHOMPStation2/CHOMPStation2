@@ -374,3 +374,12 @@ var/global/list/##LIST_NAME = list();\
 #define MOUSE_OPACITY_TRANSPARENT 0
 #define MOUSE_OPACITY_ICON 1
 #define MOUSE_OPACITY_OPAQUE 2
+
+// Used by radios to indicate that they have sent a message via something other than subspace
+#define RADIO_CONNECTION_FAIL 0
+#define RADIO_CONNECTION_NON_SUBSPACE 1
+
+#define JOB_CARBON			0x1
+#define JOB_SILICON_ROBOT	0x2
+#define JOB_SILICON_AI		0x4
+#define JOB_SILICON			0x6 // 2|4, probably don't set jobs to this, but good for checking

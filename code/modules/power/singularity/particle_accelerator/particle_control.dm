@@ -3,7 +3,7 @@
 /obj/machinery/particle_accelerator/control_box
 	name = "Particle Accelerator Control Computer"
 	desc = "This controls the density of the particles."
-	icon = 'icons/obj/machines/particle_accelerator2.dmi'
+	icon = 'icons/obj/machines/particle_accelerator_vr.dmi' //VOREStation Edit
 	icon_state = "control_box"
 	reference = "control_box"
 	anchored = 0
@@ -24,7 +24,7 @@
 /obj/machinery/particle_accelerator/control_box/New()
 	wires = new(src)
 	connected_parts = list()
-	active_power_usage = initial(active_power_usage) * (strength + 1)
+	update_active_power_usage(initial(active_power_usage) * (strength + 1))
 	..()
 
 /obj/machinery/particle_accelerator/control_box/Destroy()

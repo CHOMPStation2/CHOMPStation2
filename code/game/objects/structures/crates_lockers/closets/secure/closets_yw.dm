@@ -67,6 +67,7 @@
 		/obj/item/clothing/head/soft/sec/corp,
 		/obj/item/clothing/accessory/holster/armpit,
 		/obj/item/weapon/gun/energy/taser,
+		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/radio

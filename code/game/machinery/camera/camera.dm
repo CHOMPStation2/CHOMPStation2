@@ -29,6 +29,7 @@
 	var/short_range = 2
 
 	var/light_disabled = 0
+	var/in_use_lights = 0 // TO BE IMPLEMENTED - LIES.
 	var/alarm_on = 0
 	var/busy = 0
 
@@ -86,6 +87,8 @@
 	// VOREStation Edit End
 
 /obj/machinery/camera/Destroy()
+	if(isMotion())
+		unsense_proximity(callback = .HasProximity)
 	deactivate(null, 0) //kick anyone viewing out
 	if(assembly)
 		qdel(assembly)

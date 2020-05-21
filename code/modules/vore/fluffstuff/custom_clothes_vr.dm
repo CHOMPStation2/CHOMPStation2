@@ -1858,7 +1858,7 @@ Departamental Swimsuits, for general use
 
 //Burrito Justice: Jayda Wilson
 /obj/item/clothing/under/solgov/utility/sifguard/medical/fluff
-	desc = "The utility uniform of the Society of Universal Cartographers, made from biohazard resistant material. This is an older issuing of the uniform, with integrated department markings."
+	desc = "The utility uniform of the Terran Commonwealth Explorer Corps, made from biohazard resistant material. This is an older issuing of the uniform, with integrated department markings."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1887,7 +1887,7 @@ Departamental Swimsuits, for general use
 
 	species_restricted = list("exclude", SPECIES_TESHARI)
 
-/obj/item/clothing/under/fluff/slime_skeleton/mob_can_equip(M as mob, slot)
+/obj/item/clothing/under/fluff/slime_skeleton/mob_can_equip(M as mob, slot, disable_warning = FALSE)
 	if(!..())
 		return 0
 

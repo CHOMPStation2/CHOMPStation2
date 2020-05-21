@@ -163,6 +163,7 @@
 /datum/map_z_level/tether_lateload/away_beach
 	name = "Away Mission - Desert Beach"
 	z = Z_LEVEL_BEACH
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 /datum/map_template/tether_lateload/away_beach_cave
 	name = "Desert Planet - Z2 Cave"
@@ -182,6 +183,7 @@
 /datum/map_z_level/tether_lateload/away_beach_cave
 	name = "Away Mission - Desert Cave"
 	z = Z_LEVEL_BEACH_CAVE
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 /obj/effect/step_trigger/zlevel_fall/beach
 	var/static/target_z
@@ -208,6 +210,7 @@
 /datum/map_z_level/tether_lateload/away_aerostat
 	name = "Away Mission - Aerostat"
 	z = Z_LEVEL_AEROSTAT
+	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
 
 /datum/map_template/tether_lateload/away_aerostat_surface
 	name = "Remmi Aerostat - Z2 Surface"
@@ -224,6 +227,7 @@
 /datum/map_z_level/tether_lateload/away_aerostat_surface
 	name = "Away Mission - Aerostat Surface"
 	z = Z_LEVEL_AEROSTAT_SURFACE
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/virgo2
 
 
 #include "space/_debrisfield.dm"
@@ -264,14 +268,6 @@
 	desc = "Approach and perform a scan to obtain further information."
 	icon_state = "object" //or "globe" for planetary stuff
 	known = FALSE
-	//initial_generic_waypoints = list("don't forget waypoints!")
-	var/true_name = "The scanned name goes here"
-	var/true_desc = "The scanned desc goes here"
-
-/obj/effect/overmap/visitable/sector/tether_gateway/get_scan_data(mob/user)
-	name = true_name
-	desc = true_desc
-	return ..()
 
 /datum/map_template/tether_lateload/gateway
 	name = "Gateway Submap"
@@ -503,6 +499,12 @@
 #include "om_ships/generic_shuttle.dm"
 #include "om_ships/mercenarybase.dm"
 #include "om_ships/mercship.dm"
+#include "om_ships/curashuttle.dm"
+
+//////////////////////////////////////////////////////////////////////////////
+//Capsule deployed ships
+#include "om_ships/shelter_5.dm"
+#include "om_ships/shelter_6.dm"
 
 //////////////////////////////////////////////////////////////////////////////
 //Offmap Spawn Locations

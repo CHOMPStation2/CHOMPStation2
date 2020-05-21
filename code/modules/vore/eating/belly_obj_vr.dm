@@ -54,7 +54,6 @@
 
 	var/tmp/mob/living/owner					// The mob whose belly this is.
 	var/tmp/digest_mode = DM_HOLD				// Current mode the belly is set to from digest_modes (+transform_modes if human)
-	var/tmp/tf_mode = DM_TRANSFORM_REPLICA		// Current transformation mode.
 	var/tmp/list/items_preserved = list()		// Stuff that wont digest so we shouldn't process it again.
 	var/tmp/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/tmp/recent_sound = FALSE				// Prevent audio spam
@@ -229,6 +228,17 @@
 		var/taste
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
+		//Stop AI processing in bellies
+		if(M.ai_holder)
+			M.ai_holder.go_sleep()
+
+// Called whenever an atom leaves this belly
+/obj/belly/Exited(atom/movable/thing, atom/OldLoc)
+	. = ..()
+	if(isliving(thing) && !isbelly(thing.loc))
+		var/mob/living/L = thing
+		if((L.stat != DEAD) && L.ai_holder)
+			L.ai_holder.go_wake()
 
 // Release all contents of this belly into the owning mob's location.
 // If that location is another mob, contents are transferred into whichever of its bellies the owning mob is in.
@@ -414,9 +424,8 @@
 // Called from the process_Life() methods of bellies that digest prey.
 // Default implementation calls M.death() and removes from internal contents.
 // Indigestable items are removed, and M is deleted.
-/obj/belly/proc/digestion_death(var/mob/living/M)
-	if(M.ckey)
-		message_admins("[key_name(owner)] has digested [key_name(M)] in their [lowertext(name)] ([owner ? ADMIN_JMP(owner) : "null"])")
+/obj/belly/proc/digestion_death(mob/living/M)
+	add_attack_logs(owner, M, "Digested in [lowertext(name)]")
 
 	// If digested prey is also a pred... anyone inside their bellies gets moved up.
 	if(is_vore_predator(M))
@@ -458,6 +467,7 @@
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
+	M.ghostize() // Make sure they're out, so we can copy attack logs and such.
 	qdel(M)
 
 // Handle a mob being absorbed
@@ -504,7 +514,7 @@
 	if(!digested)
 		items_preserved |= item
 	else
-		owner.nutrition += ((nutrition_percent / 100) * 5 * digested)
+		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
 			R.cell.charge += (50 * digested)
@@ -793,3 +803,6 @@
 			dupe.emote_lists[K] += I
 
 	return dupe
+
+/obj/belly/container_resist(mob/M)
+	return relay_resist(M)
