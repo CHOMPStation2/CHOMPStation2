@@ -152,23 +152,6 @@
 	using.icon_state = "view_images"
 	using.screen_loc = ui_ai_view_images
 	using.layer = SCREEN_LAYER
-<<<<<<< HEAD
-	adding += using
-
-//Multicamera mode 
-	using = new /obj/screen/ai/multicam() 
-	using.screen_loc = ui_ai_multicam 
-	adding += using 
- 
-//Add multicamera camera 
-	using = new /obj/screen/ai/add_multicam() 
-	using.screen_loc = ui_ai_add_multicam 
-	adding += using 
- 
-	mymob.client.screen = list()
-	mymob.client.screen += adding + other
-	mymob.client.screen += mymob.client.void
-=======
 	HUD.adding += using
 
 //Multicamera mode 
@@ -197,7 +180,6 @@
 	using.screen_loc = ui_ai_updown
 	using.layer = SCREEN_LAYER
 	HUD.adding += using
->>>>>>> e791692aea59a96b1b45c20d61974aa10493a7f6
 
 	using = new /obj/screen/ai/down() // special
 	using.name = "Move Downwards"
