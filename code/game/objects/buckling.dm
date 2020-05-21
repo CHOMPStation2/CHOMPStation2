@@ -188,6 +188,8 @@
 		
 		if(!buckle_dir)
 			L.set_dir(dir)
+		else
+			L.set_dir(buckle_dir)
 
 /atom/movable/proc/can_buckle_check(mob/living/M, forced = FALSE)
 	if(!buckled_mobs)
