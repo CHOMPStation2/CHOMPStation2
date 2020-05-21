@@ -278,24 +278,13 @@
 			msg += "<span class='warning'>[T.He] [T.has] \a [o.splinted] on [T.his] [o.name]!</span>"
 
 	if(suiciding)
-<<<<<<< HEAD
-		msg += "<span class='warning'>[T.He] appears to have commited suicide... there is no hope of recovery.</span><br>"
-
-	msg += attempt_vr(src,"examine_weight",args) //VOREStation Code
-	msg += attempt_vr(src,"examine_nutrition",args) //VOREStation Code
-	msg += attempt_vr(src,"examine_reagent_bellies",args) //CHOMP reagent bellies
-	msg += attempt_vr(src,"examine_bellies",args) //VOREStation Code
-	msg += attempt_vr(src,"examine_pickup_size",args) //VOREStation Code
-	msg += attempt_vr(src,"examine_step_size",args) //VOREStation Code
-	msg += attempt_vr(src,"examine_nif",args) //VOREStation Code
-	msg += attempt_vr(src,"examine_chimera",args) //VOREStation Code
-=======
 		msg += "<span class='warning'>[T.He] appears to have commited suicide... there is no hope of recovery.</span>"
 
 	//VOREStation Add
 	var/list/vorestrings = list()
 	vorestrings += examine_weight()
 	vorestrings += examine_nutrition()
+	vorestrings += examine_reagent_bellies() //CHOMP reagent bellies
 	vorestrings += examine_bellies()
 	vorestrings += examine_pickup_size()
 	vorestrings += examine_step_size()
@@ -306,7 +295,6 @@
 			vorestrings -= entry
 	msg += vorestrings
 	//VOREStation Add End
->>>>>>> e791692aea59a96b1b45c20d61974aa10493a7f6
 
 	if(mSmallsize in mutations)
 		msg += "[T.He] [T.is] very short!"
