@@ -14,11 +14,7 @@
 	punch_force = 5
 	var/obj/item/clothing/gloves/gloves = null	//Undergloves
 
-<<<<<<< HEAD
-/obj/item/clothing/gloves/gauntlets/mob_can_equip(mob/user, slot, disable_warning = 0)
-=======
 /obj/item/clothing/gloves/gauntlets/mob_can_equip(mob/user, slot, disable_warning = FALSE)
->>>>>>> e791692aea59a96b1b45c20d61974aa10493a7f6
 	var/mob/living/carbon/human/H = user
 	if(H.gloves)
 		gloves = H.gloves
