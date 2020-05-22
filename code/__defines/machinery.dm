@@ -2,6 +2,7 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 
 #define CELLRATE 0.002 // Multiplier for watts per tick <> cell storage (e.g., 0.02 means if there is a load of 1000 watts, 20 units will be taken from a cell per second)
                        // It's a conversion constant. power_used*CELLRATE = charge_provided, or charge_used/CELLRATE = power_provided
+#define SMESRATE 0.03333 // Same for SMESes. A different number for some reason.
 
 #define KILOWATTS *1000
 #define MEGAWATTS *1000000
@@ -17,6 +18,7 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define USE_POWER_ACTIVE 2	// Machine is using power at its active power level
 
 // Channel numbers for power.
+#define CURRENT_CHANNEL -1 // Passed as an argument this means "use whatever current channel is"
 #define EQUIP   1
 #define LIGHT   2
 #define ENVIRON 3
@@ -65,6 +67,9 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_SECURITY "Security"
 #define NETWORK_INTERROGATION "Interrogation"
 #define NETWORK_TELECOM "Tcomms"
+#define NETWORK_TCOMMS "Telecommunications"	//YW ADD: needs to be defined here or it freaks out
+#define NETWORK_OUTSIDE "Outside"		//YW ADD: ditto
+#define NETWORK_SUBSTATIONS "Substations"	//YW ADD: and again
 #define NETWORK_THUNDER "Entertainment"		//VOREStation Edit: broader definition
 #define NETWORK_COMMUNICATORS "Communicators"
 #define NETWORK_ALARM_ATMOS "Atmosphere Alarms"

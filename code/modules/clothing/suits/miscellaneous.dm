@@ -416,15 +416,15 @@ obj/item/clothing/suit/kamishimo
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/storage/miljacket/alt
-	name = "alternate military jacket"
-	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. This one is in the standard olive drab, and has a badge on the right breast."
+	name = "military jacket, alternate"
+	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. This one has some extra badges on it."
 	icon_state = "militaryjacket_badge"
 	item_state_slots = list(slot_r_hand_str = "suit_olive", slot_l_hand_str = "suit_olive")
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/storage/miljacket/green
-	name = "dark green military jacket"
-	desc = "A dark green canvas jacket. Feels sturdy, yet comfortable. This one is a rather saturated green tone. Weird."
+	name = "green military jacket"
+	desc = "A dark but rather high-saturation green canvas jacket. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket_green"
 	item_state_slots = list(slot_r_hand_str = "suit_olive", slot_l_hand_str = "suit_olive")
 	flags_inv = HIDEHOLSTER
@@ -435,6 +435,7 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_tan"
 	item_state_slots = list(slot_r_hand_str = "suit_orange", slot_l_hand_str = "suit_orange")
 	flags_inv = HIDEHOLSTER
+	index = 1
 
 /obj/item/clothing/suit/storage/miljacket/grey
 	name = "grey military jacket"
@@ -442,6 +443,7 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_grey"
 	item_state_slots = list(slot_r_hand_str = "suit_grey", slot_l_hand_str = "suit_grey")
 	flags_inv = HIDEHOLSTER
+	index = 1
 
 /obj/item/clothing/suit/storage/miljacket/navy
 	name = "navy military jacket"
@@ -449,6 +451,7 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_navy"
 	item_state_slots = list(slot_r_hand_str = "suit_navy", slot_l_hand_str = "suit_navy")
 	flags_inv = HIDEHOLSTER
+	index = 1
 
 /obj/item/clothing/suit/storage/miljacket/black
 	name = "black military jacket"
@@ -456,6 +459,7 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_black"
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
 	flags_inv = HIDEHOLSTER
+	index = 1
 
 /obj/item/clothing/suit/storage/miljacket/white
 	name = "white military jacket"
@@ -463,7 +467,7 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_white"
 	item_state_slots = list(slot_r_hand_str = "med_dep_jacket", slot_l_hand_str = "med_dep_jacket")
 	flags_inv = HIDEHOLSTER
-//YW EDIT ENDS
+	index = 1
 
 /obj/item/clothing/suit/storage/toggle/bomber
 	name = "bomber jacket"

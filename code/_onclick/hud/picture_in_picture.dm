@@ -2,6 +2,7 @@
 	name = "Picture-in-picture"
 	screen_loc = "CENTER"
 	plane = PLANE_WORLD
+	icon = null
 	var/atom/center
 	var/width = 0
 	var/height = 0
@@ -40,7 +41,6 @@
 	base.layer = DISPOSAL_LAYER
 	base.plane = PLATING_PLANE
 	base.appearance_flags = PIXEL_SCALE
-	
 	for(var/direction in cardinal)
 		var/mutable_appearance/dir = new /mutable_appearance(base)
 		dir.dir = direction

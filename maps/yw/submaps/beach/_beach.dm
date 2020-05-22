@@ -3,11 +3,18 @@
 	desc = "Home to sand and rocks."
 	icon_state = "globe"
 	color = "#ffd300" //Sandy
-	initial_generic_waypoints = list("borealis1_landing")
+	initial_generic_waypoints = list(
+									"borealis1_landing",
+									"borealis1_landing_backup"
+									)
 
 /obj/effect/shuttle_landmark/premade/borealis1_landing
 	name = "Borealis 1 Landing Pad"
 	landmark_tag = "borealis1_landing"
+
+/obj/effect/shuttle_landmark/premade/borealis1_landing_backup
+	name = "Borealis 1 Backup Landing Pad"
+	landmark_tag = "borealis1_landing_backup"
 
 //This is a special subtype of the thing that generates ores on a map
 //It will generate more rich ores because of the lower numbers than the normal one

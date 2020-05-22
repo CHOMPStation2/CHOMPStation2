@@ -10,10 +10,10 @@
 	desc = "Blueshield Special Access"
 	region = ACCESS_REGION_COMMAND
 
-var/const/access_sar = 68
+var/const/access_fieldmedic = 68
 /datum/access/fieldmedic
-	id = access_sar
-	desc = "Search and Rescue"
+	id = access_fieldmedic
+	desc = "Field Medic"
 	region = ACCESS_REGION_MEDBAY
 	
 var/const/access_pathfinder = 69

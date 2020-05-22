@@ -34,19 +34,21 @@ var/global/list/latejoin_talon = list()
 ///////////////////////////
 //// The Talon
 /obj/effect/overmap/visitable/ship/talon
-	name = "ITV Talon"
-	desc = "A semi-modern make of ship from Haephestus, registered as the ITV Talon."
+	scanner_name = "ITV Talon"
+	scanner_desc = @{"[i]Registration[/i]: ITV Talon
+[i]Class[/i]: Frigate
+[i]Transponder[/i]: Transmitting (CIV)
+[b]Notice[/b]: Independent trader vessel"}
+	color = "#aacccc"
 	vessel_mass = 10000
 	vessel_size = SHIP_SIZE_LARGE
 	initial_generic_waypoints = list("talon_fore", "talon_aft", "talon_port", "talon_starboard")
 	initial_restricted_waypoints = list("Talon's boat" = list("offmap_spawn_talonboat"), "Talon lifeboat" = list("offmap_spawn_talon_lifeboat"))
 
-
-/obj/effect/overmap/visitable/ship/talon/get_skybox_representation()
-	var/image/I = image('talon.dmi', "skybox")
-	I.pixel_x = 270
-	I.pixel_y = 60
-	return I
+	skybox_icon = 'talon.dmi' //Art by Gwyvern, distributed under Creative Commons license
+	skybox_icon_state = "skybox"
+	skybox_pixel_x = 270
+	skybox_pixel_y = 60
 
 // The shuttle's 'shuttle' computer
 /obj/machinery/computer/shuttle_control/explore/talonboat
@@ -152,15 +154,22 @@ Once in open space, consider disabling nonessential power-consuming electronics 
 /obj/machinery/drone_fabricator/talon
 	name = "somewhat glitchy drone fabricator"
 	desc = "Obtained from a derelict, it seems to work sometimes, not work sometimes, and work TOO good sometimes. Didn't come with a control console either..."
+	drone_type = /mob/living/silicon/robot/drone/talon
 
-/obj/machinery/drone_fabricator/talon/create_drone(var/client/player)
-	var/mob/living/silicon/robot/drone/new_drone = ..()
-	if(!istype(new_drone))
-		return
+/mob/living/silicon/robot/drone/talon
+	foreign_droid = TRUE
+	idcard_type = /obj/item/weapon/card/id/synthetic/talon
 
-	new_drone.foreign_droid = TRUE
+/obj/item/weapon/card/id/synthetic/talon
+	name = "\improper Talon synthetic ID"
+	desc = "Access module for Talon synthetics"
+	icon_state = "id-robot"
+	item_state = "tdgreen"
+	assignment = "Talon synthetic"
 
-	return new_drone
+/obj/item/weapon/card/id/synthetic/talon/Initialize()
+	. = ..()
+	access = list(access_talon, access_synth)
 
 /obj/machinery/power/smes/buildable/offmap_spawn/New()
 	..(1)

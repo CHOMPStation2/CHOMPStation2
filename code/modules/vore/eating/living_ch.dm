@@ -73,7 +73,7 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	set desc = "Transfer liquid from an organ to another or stomach, or into another person or container."
 	set popup_menu = FALSE
 
-	if(!canClick() || incapacitated(INCAPACITATION_ALL))
+	if(!checkClickCooldown() || incapacitated(INCAPACITATION_ALL))
 		return FALSE
 
 	var/mob/living/user = usr
