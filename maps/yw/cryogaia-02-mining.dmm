@@ -667,7 +667,10 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "bD" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	name = "Xenobiological Research Equipment";
+	req_one_access = list(12,47,52)
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -823,7 +826,7 @@
 "bV" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
-	name = "Dangerious Xenobiology Lab";
+	name = "Dangerous Xenobiology Lab";
 	req_access = list();
 	req_one_access = list(7,29)
 	},
@@ -840,7 +843,7 @@
 "bW" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
-	name = "Dangerious Xenobiology Lab";
+	name = "Dangerous Xenobiology Lab";
 	req_access = list();
 	req_one_access = list(7,29)
 	},
@@ -1285,6 +1288,11 @@
 	name = "west bump";
 	pixel_x = -28
 	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/launch)
 "dc" = (
@@ -1304,6 +1312,10 @@
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 28
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/outpost/launch)
@@ -1921,7 +1933,7 @@
 "ew" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
-	name = "Dangerious Xenobiology Lab";
+	name = "Dangerous Xenobiology Lab";
 	req_access = list();
 	req_one_access = list(7,29)
 	},
@@ -1937,7 +1949,7 @@
 "ex" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
-	name = "Dangerious Xenobiology Lab";
+	name = "Dangerous Xenobiology Lab";
 	req_access = list();
 	req_one_access = list(7,29)
 	},
@@ -12354,6 +12366,10 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/entry)
 "ym" = (
@@ -12573,6 +12589,11 @@
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -28
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/entry)
@@ -14996,6 +15017,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/medical)
 "CX" = (
@@ -21719,6 +21741,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
+"Sh" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/plating,
+/area/rnd/outpost/launch)
 "Wr" = (
 /obj/machinery/camera/network/research_outpost{
 	c_tag = "Toxins Testing Room";
@@ -60861,7 +60890,7 @@ dB
 Wr
 eG
 fg
-fg
+Sh
 gr
 cv
 ab

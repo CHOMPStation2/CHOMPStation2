@@ -15892,13 +15892,10 @@
 /area/maintenance/medbay)
 "aDy" = (
 /obj/machinery/door/firedoor,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/door/airlock/engineeringatmos{
 	name = "Pipe-Power Floor Transfer"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "aDz" = (
 /obj/structure/cable{
@@ -16858,17 +16855,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
-"aFs" = (
-/obj/structure/disposalpipe/up,
-/obj/structure/lattice,
-/turf/simulated/open,
-/area/maintenance/medbay)
-"aFt" = (
-/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
-/obj/machinery/atmospherics/pipe/zpipe/up/supply,
-/obj/structure/lattice,
-/turf/simulated/open,
-/area/maintenance/medbay)
 "aFu" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 1;
@@ -17337,20 +17323,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"aGl" = (
-/obj/structure/disposalpipe/down{
-	dir = 4
-	},
-/obj/structure/lattice,
-/turf/simulated/open,
-/area/maintenance/medbay)
-"aGm" = (
-/obj/structure/disposalpipe/junction{
-	icon_state = "pipe-j2";
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
 "aGn" = (
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 4
@@ -17362,18 +17334,19 @@
 /obj/structure/cable{
 	icon_state = "32-4"
 	},
-/obj/structure/disposalpipe/broken{
-	dir = 8
-	},
 /turf/simulated/open,
 /area/maintenance/medbay)
 "aGo" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
@@ -37454,7 +37427,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineering{
 	name = "Tech Storage";
-	req_access = newlist()
+	req_one_access = list(10,23,52)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -59421,6 +59394,7 @@
 /obj/machinery/door/airlock/glass_science{
 	name = "Nanite Laboratory"
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
 "ccW" = (
@@ -93538,11 +93512,11 @@ akb
 akb
 dVw
 fUD
-akb
-akb
-akb
+aHf
+aHf
 akA
-aGl
+akA
+akA
 aHf
 aJL
 aJL
@@ -93792,9 +93766,9 @@ rrK
 oyi
 aCF
 aDx
-akb
-aFs
-aGm
+akA
+akA
+akA
 aHf
 rvG
 mLn
@@ -94042,9 +94016,9 @@ akA
 tqc
 dVw
 cSk
-akb
-aDy
-akb
+aHf
+aHf
+aHf
 akA
 aGn
 aHf
@@ -94297,7 +94271,7 @@ aBH
 aCG
 aDz
 aDy
-aFt
+akA
 aGo
 aHf
 uOr
@@ -94548,8 +94522,8 @@ aAy
 akb
 akb
 aDA
-akb
-akb
+aHf
+aHf
 aGp
 aHf
 wwp
