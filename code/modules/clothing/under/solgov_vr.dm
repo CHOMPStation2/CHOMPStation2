@@ -31,23 +31,23 @@
 
 /obj/item/clothing/under/solgov/utility/fleet
 	name = "fleet coveralls"
-	desc = "The utility uniform of the TCG Fleet, made from an insulated material."
+	desc = "The utility uniform of the USDF Fleet, made from an insulated material." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/under/solgov/utility/marine
 	name = "marine fatigues"
-	desc = "The utility uniform of the TCG Marine Corps, made from durable material."
+	desc = "The utility uniform of the USDF Marine Corps, made from durable material." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/under/solgov/utility/marine/green
 	name = "green fatigues"
-	desc = "A green version of the TCG marine utility uniform, made from durable material."
+	desc = "A green version of the USDF marine utility uniform, made from durable material." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/under/solgov/utility/marine/tan
 	name = "tan fatigues"
-	desc = "A tan version of the TCG marine utility uniform, made from durable material."
+	desc = "A tan version of the USDF marine utility uniform, made from durable material." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/under/solgov/utility/marine/olive
 	name = "olive fatigues"
-	desc = "An olive version of the TCG marine utility uniform, made from durable material."
+	desc = "An olive version of the USDF marine utility uniform, made from durable material." //YW EDIT: TCG to USDF
 	icon = 'icons/obj/clothing/uniforms_vr.dmi'
 	icon_override = 'icons/mob/uniform_vr.dmi'
 	icon_state = "bdu_olive"
@@ -55,7 +55,7 @@
 
 /obj/item/clothing/under/solgov/utility/marine/desert
 	name = "desert fatigues"
-	desc = "A desert version of the TCG marine utility uniform, made from durable material."
+	desc = "A desert version of the USDF marine utility uniform, made from durable material." //YW EDIT: TCG to USDF
 	icon = 'icons/obj/clothing/uniforms_vr.dmi'
 	icon_override = 'icons/mob/uniform_vr.dmi'
 	icon_state = "bdu_olive"
@@ -65,16 +65,16 @@
 
 /obj/item/clothing/under/solgov/service/fleet
 	name = "fleet service uniform"
-	desc = "The service uniform of the TCG Fleet, made from immaculate white fabric."
+	desc = "The service uniform of the USDF Fleet, made from immaculate white fabric." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/under/solgov/service/marine
 	name = "marine service uniform"
-	desc = "The service uniform of the TCG Marine Corps. Slimming."
+	desc = "The service uniform of the USDF Marine Corps. Slimming." //YW EDIT: TCG to USDF
 	worn_state = "greenservice"
 
 /obj/item/clothing/under/solgov/service/marine/command
 	name = "marine command service uniform"
-	desc = "The service uniform of the TCG Marine Corps. Slimming and stylish."
+	desc = "The service uniform of the USDF Marine Corps. Slimming and stylish." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/under/solgov/mildress/sifguard
 	name = "\improper NDF dress uniform"
@@ -86,8 +86,8 @@
 
 /obj/item/clothing/under/solgov/mildress/marine
 	name = "marine dress uniform"
-	desc = "The dress uniform of the TCG Marine Corps, class given form."
+	desc = "The dress uniform of the USDF Marine Corps, class given form." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/under/solgov/mildress/marine/command
 	name = "marine command dress uniform"
-	desc = "The dress uniform of the TCG Marine Corps, even classier in gold."
+	desc = "The dress uniform of the USDF Marine Corps, even classier in gold." //YW EDIT: TCG to USDF

@@ -1,5 +1,5 @@
 /obj/item/clothing/accessory/permit/drone
-	desc = "A card issued by the EIO, indicating that the owner is a Drone Intelligence. Drones are mandated to carry this card within SolCom space, by law."
+	desc = "A card issued by the EIO, indicating that the owner is a Drone Intelligence. Drones are mandated to carry this card within SolGov space, by law." //YW EDIT: SolGov
 
 /obj/item/clothing/accessory/permit/gun/planetside
 	name = "explorer gun permit"
