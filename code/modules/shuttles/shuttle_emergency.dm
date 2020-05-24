@@ -37,7 +37,7 @@
 			if (emergency_shuttle.evac)
 				priority_announcement.Announce(replacetext(replacetext(using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"))
 			else
-				priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"), "Transfer System", 'sound/AI/tramdepart.ogg')
+				priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"), "Transfer System", 'sound/AI/yawn/shuttle_depart.ogg') //YW EDIT: Custom message thanks to VerySoft
 	..()
 
 /datum/shuttle/autodock/ferry/emergency/can_launch(var/user)
@@ -146,16 +146,16 @@
 
 	if (dna_hash in authorized)
 		src.visible_message("\The [src] buzzes. That ID has already been scanned.")
-		playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 50, 0)
+		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 0)
 		return 0
 
 	if (!(access_heads in access))
 		src.visible_message("\The [src] buzzes, rejecting [ident].")
-		playsound(src.loc, 'sound/machines/deniedbeep.ogg', 50, 0)
+		playsound(src, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return 0
 
 	src.visible_message("\The [src] beeps as it scans [ident].")
-	playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 0)
+	playsound(src, 'sound/machines/twobeep.ogg', 50, 0)
 	authorized[dna_hash] = auth_name
 	if (req_authorizations - authorized.len)
 		to_chat(world, "<span class='notice'><b>Alert: [req_authorizations - authorized.len] authorization\s needed to override the shuttle autopilot.</b></span>") //TODO- Belsima, make this an announcement instead of magic.
