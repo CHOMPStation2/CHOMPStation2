@@ -55,8 +55,8 @@
 	caliber = ".45"
 	load_method = MAGAZINE
 	fire_sound = 'sound/weapons/45pistol_vr.ogg'
-	magazine_type = /obj/item/ammo_magazine/c45m2024
-	allowed_magazines = list(/obj/item/ammo_magazine/c45m2024,/obj/item/ammo_magazine/m45)
+	magazine_type = /obj/item/ammo_magazine/m2024
+	allowed_magazines = list(/obj/item/ammo_magazine/m2024,/obj/item/ammo_magazine/m45)
 
 /obj/item/weapon/gun/projectile/m2024/update_icon()
 	..()
