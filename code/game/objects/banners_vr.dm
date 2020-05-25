@@ -1,2 +1,2 @@
 /obj/item/weapon/banner/solgov
-	name = "\improper SolCom banner"
+	name = "\improper SolGov banner" //YW EDIT: SolGov
