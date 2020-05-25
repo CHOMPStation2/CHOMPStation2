@@ -103,7 +103,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "mg42_75rnd"
 	caliber = "mauser"
-	ammo_type = /obj/item/ammo_casing/amg42
+	ammo_type = /obj/item/ammo_casing/a792x57m
 	max_ammo = 75
 	multiple_sprites = 0
 	w_class = ITEMSIZE_NORMAL

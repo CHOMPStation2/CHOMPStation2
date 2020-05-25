@@ -21,7 +21,7 @@
 
 ///////// 7.92x57mm Mauser /////////
 
-/obj/item/ammo_casing/amg42
+/obj/item/ammo_casing/a792x57m
 	desc = "A 7.92x57mm Mauser casing."
 	icon_state = "rifle-casing"
 	caliber = "mauser"
