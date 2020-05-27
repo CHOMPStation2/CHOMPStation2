@@ -709,7 +709,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "aurora_glasses"
  	icon_override = 'icons/vore/custom_onmob_yw.dmi'
- 	override = 1
  	item_state = "aurora_glasses"
 
  //Strix Hades
@@ -720,7 +719,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cd"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_cd"
 
 /obj/item/clothing/under/seromi/undercoat/fluff/strix
@@ -729,7 +727,6 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "tesh_uniform_cd"
-	override = 1
 	item_state = "tesh_uniform_cd"
 	sprite_sheets = list(
 					SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
@@ -741,7 +738,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cco"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_cco"
 
 /obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
@@ -750,7 +746,6 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "tesh_uniform_cco"
-	override = 1
 	item_state = "tesh_uniform_cco"
 	sprite_sheets = list(
 					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
@@ -887,7 +882,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_kita"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_kita"
 
 // ********
@@ -1025,7 +1019,6 @@
 	icon_state = "jiao_glasses"
 	off_state = "jiao_glasses_off"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	override = 1
 	item_state = "jiao_glasses"
 	species_restricted = list("Akula")
 
@@ -1157,7 +1150,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_saroth"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_saroth"
 
 /obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
@@ -1167,7 +1159,6 @@
     icon_state = "jaree_cloak"
     icon_override = 'icons/vore/custom_onmob_yw.dmi'
     item_state = "jaree_cloak"
-    override = 1
 
 /obj/item/clothing/head/ushanka/alt/fluff/Jaree
     name = "ushanka"
@@ -1246,7 +1237,6 @@
 	icon_state = "noel_glasses"
 	off_state = "noel_glasses_off"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	override = 1
 	item_state = "noel_glasses"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie
@@ -1256,7 +1246,6 @@
     icon_state = "noel_hoodie"
     // "noel_hoodie_open" will be the open state
     icon_override = 'icons/vore/custom_onmob_yw.dmi'
-    //override = 1 //What is this? VS does not have this
     item_state = null
 
 /obj/item/clothing/ears/earings/fluff/noel_earings
