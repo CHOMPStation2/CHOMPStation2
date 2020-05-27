@@ -185,7 +185,7 @@
 			L.forceMove(loc, direct, movetime)
 			L.last_move = last_move
 			L.inertia_dir = last_move
-		
+
 		if(!buckle_dir)
 			L.set_dir(dir)
 		else
