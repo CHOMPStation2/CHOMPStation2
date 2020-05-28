@@ -7,7 +7,7 @@
 	if(!changeling)
 		return
 	if(src.mind.changeling.readapts <= 0)
-		to_chat(src, "<span class='warning'>We must first absorb another compatable creature!</span>")
+		to_chat(src, "<span class='warning'>We must first absorb another compatible creature!</span>")
 		src.mind.changeling.readapts = 0
 		return
 
@@ -17,6 +17,7 @@
 	ling_datum.purchased_powers = list() //Then wipe all the powers we bought.
 	ling_datum.geneticpoints = ling_datum.max_geneticpoints //Now refund our points to the maximum.
 	ling_datum.chem_recharge_rate = 0.5 //If glands were bought, revert that upgrade.
+	ling_datum.thermal_sight = FALSE
 	src.mind.changeling.recursive_enhancement = 0 //Ensures this is cleared
 
 	ling_datum.chem_storage = 50
@@ -26,6 +27,6 @@
 		H.remove_modifiers_of_type(/datum/modifier/endoarmor) //Revert endoarmor too.
 	src.make_changeling() //And give back our freebies.
 
-	src << "<span class='notice'>We have removed our evolutions from this form, and are now ready to readapt.</span>"
+	to_chat(src, "<span class='notice'>We have removed our evolutions from this form, and are now ready to readapt.</span>")
 
 	ling_datum.purchased_powers_history.Add("Re-adapt (Reset to [ling_datum.max_geneticpoints])")

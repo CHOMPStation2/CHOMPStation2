@@ -1,3 +1,6 @@
+/obj/item/clothing/under/customs
+	desc = "A standard SolGov customs uniform. Complete with epaulettes." //YW EDIT: SolGov
+
 /obj/item/clothing/var/hides_bulges = FALSE // OwO wats this?
 
 /obj/item/clothing/under/permit
@@ -109,3 +112,20 @@
 //Same as Nanotrasen Security Uniforms
 /obj/item/clothing/under/ert
 	armor = list(melee = 5, bullet = 10, laser = 10, energy = 5, bomb = 5, bio = 0, rad = 0)
+
+/obj/item/clothing/under/dress/qipao
+	name = "qipao"
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "qipao"
+	item_state = "qipao"
+
+/obj/item/clothing/under/dress/qipao/white
+	name = "white qipao"
+	icon_state = "qipao_white"
+	item_state = "qipao_white"
+
+/obj/item/clothing/under/dress/qipao/red
+	name = "red qipao"
+	icon_state = "qipao_red"
+	item_state = "qipao_red"

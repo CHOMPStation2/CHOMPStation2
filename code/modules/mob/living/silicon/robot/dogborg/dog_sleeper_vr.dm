@@ -36,6 +36,7 @@
 	var/datum/matter_synth/water = null
 	var/digest_brute = 2
 	var/digest_burn = 3
+	var/recycles = FALSE
 
 /obj/item/device/dogborg/sleeper/New()
 	..()
@@ -48,6 +49,13 @@
 
 /obj/item/device/dogborg/sleeper/Exit(atom/movable/O)
 	return 0
+
+/obj/item/device/dogborg/sleeper/return_air()
+	return return_air_for_internal_lifeform()
+
+/obj/item/device/dogborg/sleeper/return_air_for_internal_lifeform()
+	var/datum/gas_mixture/belly_air/air = new(1000)
+	return air
 
 /obj/item/device/dogborg/sleeper/afterattack(var/atom/movable/target, mob/living/silicon/user, proximity)
 	hound = loc
@@ -76,7 +84,7 @@
 			if(do_after(user, 30, target) && length(contents) < max_item_count)
 				target.forceMove(src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] groans lightly as [target.name] slips inside.</span>", "<span class='notice'>Your [src.name] groans lightly as [target] slips inside.</span>")
-				playsound(hound, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
+				playsound(src, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(analyzer && istype(target,/obj/item))
 					var/obj/item/tech_item = target
 					for(var/T in tech_item.origin_tech)
@@ -94,7 +102,7 @@
 				trashmouse.forceMove(src)
 				trashmouse.reset_view(src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] groans lightly as [trashmouse] slips inside.</span>", "<span class='notice'>Your [src.name] groans lightly as [trashmouse] slips inside.</span>")
-				playsound(hound, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
+				playsound(src, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(delivery)
 					if(islist(deliverylists[delivery_tag]))
 						deliverylists[delivery_tag] |= trashmouse
@@ -116,7 +124,7 @@
 				START_PROCESSING(SSobj, src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] groans lightly as [trashman] slips inside.</span>", "<span class='notice'>Your [src.name] groans lightly as [trashman] slips inside.</span>")
 				message_admins("[key_name(hound)] has eaten [key_name(patient)] as a dogborg. ([hound ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
-				playsound(hound, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
+				playsound(src, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(delivery)
 					if(islist(deliverylists[delivery_tag]))
 						deliverylists[delivery_tag] |= trashman
@@ -147,7 +155,7 @@
 				START_PROCESSING(SSobj, src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] lights up as [H.name] slips inside.</span>", "<span class='notice'>Your [src] lights up as [H] slips inside. Life support functions engaged.</span>")
 				message_admins("[key_name(hound)] has eaten [key_name(patient)] as a dogborg. ([hound ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
-				playsound(hound, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
+				playsound(src, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 
 /obj/item/device/dogborg/sleeper/proc/go_out(var/target)
 	hound = src.loc
@@ -165,13 +173,15 @@
 			else
 				var/obj/T = C
 				T.loc = hound.loc
-		playsound(loc, 'sound/effects/splat.ogg', 50, 1)
+		playsound(src, 'sound/effects/splat.ogg', 50, 1)
 		update_patient()
 	else //You clicked eject with nothing in you, let's just reset stuff to be sure.
 		update_patient()
 
 /obj/item/device/dogborg/sleeper/proc/drain(var/amt = 3) //Slightly reduced cost (before, it was always injecting inaprov)
 	hound = src.loc
+	if(istype(hound,/obj/item/weapon/robot_module))
+		hound = hound.loc
 	hound.cell.charge = hound.cell.charge - amt
 
 /obj/item/device/dogborg/sleeper/attack_self(mob/user)
@@ -347,7 +357,7 @@
 				else
 					var/obj/T = C
 					T.loc = hound.loc
-			playsound(loc, 'sound/effects/splat.ogg', 50, 1)
+			playsound(src, 'sound/effects/splat.ogg', 50, 1)
 			update_patient()
 			deliverylists[delivery_tag].Cut()
 		sleeperUI(usr)
@@ -364,10 +374,10 @@
 			files.RefreshResearch()
 		if(success)
 			to_chat(usr, "You connect to the research server, push your data upstream to it, then pull the resulting merged data from the master branch.")
-			playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 1)
+			playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
 		else
 			to_chat(usr, "Reserch server ping response timed out.  Unable to connect.  Please contact the system administrator.")
-			playsound(src.loc, 'sound/machines/buzz-two.ogg', 50, 1)
+			playsound(src, 'sound/machines/buzz-two.ogg', 50, 1)
 		sleeperUI(usr)
 		return
 
@@ -400,6 +410,8 @@
 //For if the dogborg's existing patient uh, doesn't make it.
 /obj/item/device/dogborg/sleeper/proc/update_patient()
 	hound = src.loc
+	if(!istype(hound,/mob/living/silicon/robot))
+		return
 	if(UI_open == TRUE)
 		sleeperUI(hound)
 
@@ -483,11 +495,11 @@
 			'sound/vore/death8.ogg',
 			'sound/vore/death9.ogg',
 			'sound/vore/death10.ogg')
-		playsound(hound, finisher, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+		playsound(src, finisher, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 		to_chat(hound, "<span class='notice'>Your [src.name] is now clean. Ending self-cleaning cycle.</span>")
 		cleaning = 0
 		update_patient()
-		playsound(hound, 'sound/machines/ding.ogg', vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+		playsound(src, 'sound/machines/ding.ogg', vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 		return
 
 	if(prob(20))
@@ -504,7 +516,7 @@
 			'sound/vore/digest10.ogg',
 			'sound/vore/digest11.ogg',
 			'sound/vore/digest12.ogg')
-		playsound(hound, churnsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+		playsound(src, churnsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 	//If the timing is right, and there are items to be touched
 	if(air_master.current_cycle%3==1 && length(touchable_items))
 
@@ -540,7 +552,7 @@
 						'sound/vore/death8.ogg',
 						'sound/vore/death9.ogg',
 						'sound/vore/death10.ogg')
-					playsound(hound, deathsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+					playsound(src, deathsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 					if(is_vore_predator(T))
 						for(var/belly in T.vore_organs)
 							var/obj/belly/B = belly
@@ -591,7 +603,7 @@
 						drain(-50 * digested)
 					if(volume)
 						water.add_charge(volume)
-					if(!analyzer && !delivery && compactor && T.matter)
+					if(recycles && T.matter)
 						for(var/material in T.matter)
 							var/total_material = T.matter[material]
 							if(istype(T,/obj/item/stack))
@@ -617,6 +629,8 @@
 	return
 
 /obj/item/device/dogborg/sleeper/process()
+	if(!istype(src.loc,/mob/living/silicon/robot))
+		return
 
 	if(cleaning) //We're cleaning, return early after calling this as we don't care about the patient.
 		clean_cycle()
@@ -650,6 +664,7 @@
 	icon_state = "compactor"
 	injection_chems = null //So they don't have all the same chems as the medihound!
 	compactor = TRUE
+	recycles = TRUE
 	max_item_count = 25
 
 /obj/item/device/dogborg/sleeper/compactor/analyzer //sci-borg gut.
@@ -666,6 +681,7 @@
 	icon_state = "decompiler"
 	max_item_count = 10
 	decompiler = TRUE
+	recycles = TRUE
 
 /obj/item/device/dogborg/sleeper/compactor/delivery //Unfinished and unimplemented, still testing.
 	name = "Cargo Belly"
@@ -673,3 +689,17 @@
 	icon_state = "decompiler"
 	max_item_count = 20
 	delivery = TRUE
+
+/obj/item/device/dogborg/sleeper/compactor/brewer //Boozehound gut. //YW Changes
+	name = "Brew Belly"
+	desc = "A mounted drunk tank unit with fuel processor."
+	icon_state = "brewer"
+	injection_chems = null
+	max_item_count = 1
+	
+/obj/item/device/dogborg/sleeper/compactor/supply //Miner borg belly
+	name = "Supply Satchel"
+	desc = "A mounted survival unit with fuel processor."
+	icon_state = "sleeperc"
+	injection_chems = list("glucose","inaprovaline","tricordrazine")
+	max_item_count = 1

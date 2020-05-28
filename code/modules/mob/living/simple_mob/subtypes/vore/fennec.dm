@@ -1,3 +1,11 @@
+/datum/category_item/catalogue/fauna/fennec		//TODO: VIRGO_LORE_WRITING_WIP
+	name = "Wildlife - Fennec"
+	desc = "A small, dusty, big-eared sandfox, native to Virgo 4. It looks like a Zorren that's on all fours, \
+	and it's easy to see the resemblance to the little dunefox-like critters the Zorren are. However, the fennecs \
+	lack the sentience the Zorren have, and are therefore naught more than cute little critters, with a hungry \
+	attitude, willing to eat damn near anything they come across or can bump into. Bapping them will make them stop."
+	value = CATALOGUER_REWARD_TRIVIAL
+
 /mob/living/simple_mob/vore/fennec
 	name = "fennec" //why isn't this in the fox file, fennecs are foxes silly.
 	desc = "It's a dusty big-eared sandfox! Adorable!"
@@ -13,9 +21,9 @@
 	maxHealth = 30
 	health = 30
 
-	response_help = "pats the"
-	response_disarm = "gently pushes aside the"
-	response_harm = "hits the"
+	response_help = "pats"
+	response_disarm = "gently pushes aside"
+	response_harm = "hits"
 
 	harm_intent_damage = 5
 	melee_damage_lower = 1

@@ -16,21 +16,18 @@
 	max_storage_space = INVENTORY_STANDARD_SPACE
 	var/flippable = 0
 	var/side = 0 //0 = right, 1 = left
+	drop_sound = 'sound/items/drop/backpack.ogg'
 
-/obj/item/weapon/storage/backpack/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if (src.use_sound)
-		playsound(src.loc, src.use_sound, 50, 1, -5)
-	..()
 
 /obj/item/weapon/storage/backpack/equipped(var/mob/user, var/slot)
 	if (slot == slot_back && src.use_sound)
-		playsound(src.loc, src.use_sound, 50, 1, -5)
+		playsound(src, src.use_sound, 50, 1, -5)
 	..(user, slot)
 
 /*
 /obj/item/weapon/storage/backpack/dropped(mob/user as mob)
 	if (loc == user && src.use_sound)
-		playsound(src.loc, src.use_sound, 50, 1, -5)
+		playsound(src, src.use_sound, 50, 1, -5)
 	..(user)
 */
 
@@ -53,7 +50,7 @@
 
 /obj/item/weapon/storage/backpack/holding/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/storage/backpack/holding))
-		user << "<span class='warning'>The Bluespace interfaces of the two devices conflict and malfunction.</span>"
+		to_chat(user, "<span class='warning'>The Bluespace interfaces of the two devices conflict and malfunction.</span>")
 		qdel(W)
 		return
 	. = ..()
@@ -366,13 +363,12 @@
 	max_storage_space = ITEMSIZE_COST_NORMAL * 5
 
 /obj/item/weapon/storage/backpack/parachute/examine(mob/user)
-	var/msg = desc
-	if(get_dist(src, user) <= 1)
+	. = ..()
+	if(Adjacent(user))
 		if(parachute)
-			msg += " It seems to be packed."
+			. += "It seems to be packed."
 		else
-			msg += " It seems to be unpacked."
-	to_chat(user, msg)
+			. += "It seems to be unpacked."
 
 /obj/item/weapon/storage/backpack/parachute/handleParachute()
 	parachute = FALSE	//If you parachute in, the parachute has probably been used.
@@ -422,3 +418,10 @@
 			H.visible_message("<span class='notice'>\The [src] decides not to unpack \the [src]!</span>", \
 					"<span class='notice'>You decide not to unpack \the [src]!</span>")
 	return
+
+/obj/item/weapon/storage/backpack/satchel/ranger
+	name = "ranger satchel"
+	desc = "A satchel designed for the Go Go ERT Rangers series to allow for slightly bigger carry capacity for the ERT-Rangers.\
+	 Unlike the show claims, it is not a phoron-enhanced satchel of holding with plot-relevant content."
+	icon = 'icons/obj/clothing/ranger.dmi'
+	icon_state = "ranger_satchel"

@@ -1,9 +1,13 @@
 /obj/machinery/washing_machine
 	name = "Washing Machine"
-	icon = 'icons/obj/machines/washing_machine.dmi'
-	icon_state = "wm_10"
+	desc = "Not a hiding place."
+	icon = 'icons/obj/machines/washing_machine_vr.dmi' //VOREStation Edit
+	icon_state = "wm_1" //VOREStation Edit
 	density = 1
 	anchored = 1.0
+	clicksound = "button"
+	clickvol = 40
+
 	circuit = /obj/item/weapon/circuitboard/washing
 	var/state = 1
 	//1 = empty, open door
@@ -25,14 +29,10 @@
 		/obj/item/clothing/head/helmet/space
 		)
 
-/obj/machinery/washing_machine/New()
-	..()
-	component_parts = list()
-	component_parts += new /obj/item/weapon/stock_parts/motor(src)
-	component_parts += new /obj/item/weapon/stock_parts/gear(src)
-	component_parts += new /obj/item/weapon/stock_parts/gear(src)
-	RefreshParts()
-
+/obj/machinery/washing_machine/Initialize()
+	. = ..()
+	default_apply_parts()
+	
 /obj/machinery/washing_machine/verb/start()
 	set name = "Start Washing"
 	set category = "Object"
@@ -42,7 +42,7 @@
 		return
 
 	if(state != 4)
-		usr << "The washing machine cannot run in this state."
+		to_chat(usr, "The washing machine cannot run in this state.")
 		return
 
 	if(locate(/mob,washing))
@@ -59,8 +59,8 @@
 		I.decontaminate()
 
 	//Tanning!
-	for(var/obj/item/stack/material/hairlesshide/HH in washing)
-		var/obj/item/stack/material/wetleather/WL = new(src)
+	for(var/obj/item/stack/hairlesshide/HH in washing)
+		var/obj/item/stack/wetleather/WL = new(src)
 		WL.amount = HH.amount
 		qdel(HH)
 
@@ -81,7 +81,12 @@
 		usr.loc = src.loc
 
 /obj/machinery/washing_machine/update_icon()
-	icon_state = "wm_[state][panel_open]"
+	//VOREStation Edit
+	cut_overlays()
+	icon_state = "wm_[state]"
+	if(panel_open)
+		add_overlay("panel")
+	//VOREStation Edit End
 
 /obj/machinery/washing_machine/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(state == 2 && washing.len < 1)
@@ -93,7 +98,7 @@
 			return
 	/*if(W.is_screwdriver())
 		panel = !panel
-		user << "<span class='notice'>You [panel ? "open" : "close"] the [src]'s maintenance panel</span>"*/
+		to_chat(user, "<span class='notice'>You [panel ? "open" : "close"] the [src]'s maintenance panel</span>")*/
 	if(istype(W,/obj/item/weapon/pen/crayon) || istype(W,/obj/item/weapon/stamp))
 		if(state in list(	1, 3, 6))
 			if(!crayon)
@@ -115,7 +120,7 @@
 			..()
 
 	else if(is_type_in_list(W, disallowed_types))
-		user << "<span class='warning'>You can't fit \the [W] inside.</span>"
+		to_chat(user, "<span class='warning'>You can't fit \the [W] inside.</span>")
 		return
 
 	else if(istype(W, /obj/item/clothing) || istype(W, /obj/item/weapon/bedsheet))
@@ -126,9 +131,9 @@
 				washing += W
 				state = 3
 			else
-				user << "<span class='notice'>You can't put the item in right now.</span>"
+				to_chat(user, "<span class='notice'>You can't put the item in right now.</span>")
 		else
-			user << "<span class='notice'>The washing machine is full.</span>"
+			to_chat(user, "<span class='notice'>The washing machine is full.</span>")
 	else
 		..()
 	update_icon()
@@ -152,7 +157,7 @@
 			washing.Cut()
 			state = 1
 		if(5)
-			user << "<span class='warning'>The [src] is busy.</span>"
+			to_chat(user, "<span class='warning'>The [src] is busy.</span>")
 		if(6)
 			state = 7
 		if(7)

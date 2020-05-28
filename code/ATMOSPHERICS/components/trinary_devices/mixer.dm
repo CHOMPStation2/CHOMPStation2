@@ -8,7 +8,7 @@
 
 	name = "Gas mixer"
 
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 150		//internal circuitry, friction losses and stuff
 	power_rating = 3700	//This also doubles as a measure of how powerful the mixer is, in Watts. 3700 W ~ 5 HP
 
@@ -35,7 +35,7 @@
 		icon_state += use_power ? "on" : "off"
 	else
 		icon_state += "off"
-		use_power = 0
+		update_use_power(USE_POWER_OFF)
 
 /obj/machinery/atmospherics/trinary/mixer/New()
 	..()
@@ -85,20 +85,21 @@
 		to_chat(user, "<span class='warning'>Access denied.</span>")
 		return
 	usr.set_machine(src)
+	var/list/node_connects = get_node_connect_dirs()
 	var/dat = {"<b>Power: </b><a href='?src=\ref[src];power=1'>[use_power?"On":"Off"]</a><br>
 				<b>Set Flow Rate Limit: </b>
 				[set_flow_rate]L/s | <a href='?src=\ref[src];set_press=1'>Change</a>
 				<br>
 				<b>Flow Rate: </b>[round(last_flow_rate, 0.1)]L/s
 				<br><hr>
-				<b>Node 1 Concentration:</b>
+				<b>Node 1 ([dir_name(node_connects[1],TRUE)]) Concentration:</b>
 				<a href='?src=\ref[src];node1_c=-0.1'><b>-</b></a>
 				<a href='?src=\ref[src];node1_c=-0.01'>-</a>
 				[mixing_inputs[air1]]([mixing_inputs[air1]*100]%)
 				<a href='?src=\ref[src];node1_c=0.01'><b>+</b></a>
 				<a href='?src=\ref[src];node1_c=0.1'>+</a>
 				<br>
-				<b>Node 2 Concentration:</b>
+				<b>Node 2 ([dir_name(node_connects[2],TRUE)]) Concentration:</b>
 				<a href='?src=\ref[src];node2_c=-0.1'><b>-</b></a>
 				<a href='?src=\ref[src];node2_c=-0.01'>-</a>
 				[mixing_inputs[air2]]([mixing_inputs[air2]*100]%)
@@ -113,7 +114,7 @@
 /obj/machinery/atmospherics/trinary/mixer/Topic(href,href_list)
 	if(..()) return 1
 	if(href_list["power"])
-		use_power = !use_power
+		update_use_power(!use_power)
 	if(href_list["set_press"])
 		var/max_flow_rate = min(air1.volume, air2.volume)
 		var/new_flow_rate = input(usr,"Enter new flow rate limit (0-[max_flow_rate]L/s)","Flow Rate Control",src.set_flow_rate) as num

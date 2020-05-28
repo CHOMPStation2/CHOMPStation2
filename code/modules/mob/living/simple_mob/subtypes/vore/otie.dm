@@ -1,3 +1,11 @@
+/datum/category_item/catalogue/fauna/otie		//TODO: VIRGO_LORE_WRITING_WIP
+	name = "Creature - Otie"
+	desc = "A bioengineered longdog, the otie is very long, and very cute, depending on if you like dogs, \
+	especially long ones. They are black-and-grey furred, typically, and tanky, hard to kill. \
+	They seem hostile at first, but are also tame-able if you can approach one. Nipnipnip-ACK \
+	**the catalogue entry ends here.**"
+	value = CATALOGUER_REWARD_MEDIUM
+
 /mob/living/simple_mob/otie //Spawn this one only if you're looking for a bad time. Not friendly.
 	name = "otie"
 	desc = "The classic bioengineered longdog."
@@ -11,11 +19,12 @@
 	maxHealth = 150
 	health = 150
 	minbodytemp = 200
-	melee_damage_lower = 2
-	melee_damage_upper = 7 //Don't break my bones bro
-	response_help = "pets the"
-	response_disarm = "bops the"
-	response_harm = "hits the"
+	melee_damage_lower = 10
+	melee_damage_upper = 20 //Don't break my bones bro
+	see_in_dark = 8
+	response_help = "pets"
+	response_disarm = "bops"
+	response_harm = "hits"
 	attacktext = list("mauled")
 	friendly = list("nuzzles", "slobberlicks", "noses softly at", "noseboops", "headbumps against", "leans on", "nibbles affectionately on")
 	meat_amount = 6
@@ -101,6 +110,13 @@
 	faction = "neutral"
 	tamed = 1
 
+/mob/living/simple_mob/otie/friendly/chubby
+	name = "chubby otie"
+	desc = "The classic bioengineered longdog. This one might even tolerate you! What an absolute unit"
+	icon_state = "fotie"
+	icon_living = "fotie"
+	icon_rest = "fotie_rest"
+
 /mob/living/simple_mob/otie/cotie //same as above but has a little collar :v
 	name = "tamed otie"
 	desc = "The classic bioengineered longdog. This one has a nice little collar on its neck. However a proper domesticated otie is an oxymoron and the collar is likely just a decoration."
@@ -109,6 +125,13 @@
 	icon_rest = "cotie_rest"
 	faction = "neutral"
 	tamed = 1
+
+/mob/living/simple_mob/otie/cotie/chubby
+	name = "chubby tamed otie"
+	desc = "The classic bioengineered longdog. This one has a nice little collar on its neck. What an absolute unit."
+	icon_state = "fcotie"
+	icon_living = "fcotie"
+	icon_rest = "fcotie_rest"
 
 /mob/living/simple_mob/otie/cotie/phoron //friendly phoron pup with collar
 	name = "mutated otie"
@@ -146,6 +169,14 @@
 	var/check_records = 0 // If true, arrests people without a record.
 	var/check_arrest = 1 // If true, arrests people who are set to arrest.
 
+/mob/living/simple_mob/otie/security/chubby
+	name = "chubby guard otie"
+	desc = "The VARMAcorp bioengineering division flagship product on trained optimal snowflake guard dogs. What an absolute unit."
+	icon_state = "fsotie"
+	icon_living = "fsotie"
+	icon_rest = "fsotie_rest"
+	icon_dead = "fsotie-dead"
+
 /mob/living/simple_mob/otie/security/phoron
 	name = "mutated guard otie"
 	desc = "An extra rare phoron resistant version of the VARMAcorp trained snowflake guard dogs for infernal environments."
@@ -176,7 +207,7 @@
 /mob/living/simple_mob/otie/attackby(var/obj/item/O, var/mob/user) // Trade donuts for bellybrig victims.
 	if(istype(O, /obj/item/weapon/reagent_containers/food))
 		qdel(O)
-		playsound(src.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
+		playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 		if(!has_AI())//No autobarf on player control.
 			return
 		if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/donut) && istype(src, /mob/living/simple_mob/otie/security))
@@ -253,6 +284,8 @@
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
 	verbs |= /mob/living/simple_mob/proc/animal_mount
+	verbs |= /mob/living/proc/toggle_rider_reins
+	movement_cooldown = 3
 
 /mob/living/simple_mob/otie/MouseDrop_T(mob/living/M, mob/living/user)
 	return

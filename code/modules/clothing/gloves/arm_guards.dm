@@ -5,13 +5,18 @@
 	overgloves = 1
 	punch_force = 3
 	w_class = ITEMSIZE_NORMAL
+	drop_sound = 'sound/items/drop/metalshield.ogg'
 
-/obj/item/clothing/gloves/arm_guard/mob_can_equip(var/mob/living/carbon/human/H, slot)
+/obj/item/clothing/gloves/arm_guard/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)
 	if(..()) //This will only run if no other problems occured when equiping.
 		if(H.wear_suit)
 			if(H.wear_suit.body_parts_covered & ARMS)
 				to_chat(H, "<span class='warning'>You can't wear \the [src] with \the [H.wear_suit], it's in the way.</span>")
 				return 0
+			for(var/obj/item/clothing/accessory/A in H.wear_suit)
+				if(A.body_parts_covered & ARMS)
+					to_chat(H, "<span class='warning'>You can't wear \the [src] with \the [H.wear_suit]'s [A], it's in the way.</span>")
+					return 0
 		return 1
 
 /obj/item/clothing/gloves/arm_guard/laserproof

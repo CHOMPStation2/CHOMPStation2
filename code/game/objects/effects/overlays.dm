@@ -67,7 +67,7 @@
 	if (istype(W, /obj/item/weapon/shovel))
 		user.visible_message("<span class='notice'>[user] begins to shovel away \the [src].</span>")
 		if(do_after(user, 40))
-			user << "<span class='notice'>You have finished shoveling!</span>"
+			to_chat(user, "<span class='notice'>You have finished shoveling!</span>")
 			qdel(src)
 		return
 
@@ -76,18 +76,15 @@
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	mouse_opacity = 0 //Don't block underlying tile interactions
-
+/*
 /obj/effect/overlay/snow/floor/edges
 	icon_state = "snow_edges"
-
 /obj/effect/overlay/snow/floor/edges2
 	icon_state = "snow_edges2"
 /obj/effect/overlay/snow/floor/edges3
 	icon_state = "gravsnow_edges"
-
 /obj/effect/overlay/snow/floor/surround
-	icon_state = "snow_surround"
-
+	icon_state = "snow_surround" */
 /obj/effect/overlay/snow/airlock
 	icon_state = "snowairlock"
 	layer = DOOR_CLOSED_LAYER+0.01

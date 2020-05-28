@@ -24,7 +24,7 @@ MRE Stuff
 
 /obj/item/weapon/storage/mre/examine(mob/user)
 	. = ..()
-	to_chat(user, meal_desc)
+	. += meal_desc
 
 /obj/item/weapon/storage/mre/update_icon()
 	if(opened)
@@ -183,6 +183,20 @@ MRE Stuff
 	/obj/random/mre/sauce/crayon,
 	/obj/random/mre/sauce/crayon,
 	/obj/random/mre/sauce/crayon
+	)
+
+/obj/item/weapon/storage/mre/menu13
+	name = "medical MRE"
+	meal_desc = "This one is menu 13, vitamin paste & dessert. Only for emergencies."
+	icon_state = "crayonmre"
+	starts_with = list(
+	/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin,
+	/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin,
+	/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin,
+	/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
+	/obj/random/mre/drink,
+	/obj/item/weapon/storage/mrebag/dessert,
+	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
 	)
 
 /obj/item/weapon/storage/mre/random

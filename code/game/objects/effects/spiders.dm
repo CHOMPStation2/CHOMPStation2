@@ -40,6 +40,18 @@
 	health -= damage
 	healthcheck()
 
+/obj/effect/spider/spiderling/attack_hand(mob/living/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	user.do_attack_animation(src)
+	if(prob(20))
+		visible_message("<span class='warning'>\The [user] tries to stomp on \the [src], but misses!</span>")
+		var/list/nearby = oview(2, src)
+		if(length(nearby))
+			walk_to(src, pick(nearby), 2)
+			return
+	visible_message("<span class='warning'>\The [user] stomps \the [src] dead!</span>")
+	die()
+
 /obj/effect/spider/bullet_act(var/obj/item/projectile/Proj)
 	..()
 	health -= Proj.get_structure_damage()
@@ -133,6 +145,8 @@
 	var/obj/machinery/atmospherics/unary/vent_pump/entry_vent
 	var/travelling_in_vent = 0
 	var/list/grow_as = list(/mob/living/simple_mob/animal/giant_spider, /mob/living/simple_mob/animal/giant_spider/nurse, /mob/living/simple_mob/animal/giant_spider/hunter)
+
+	var/stunted = FALSE
 
 /obj/effect/spider/spiderling/frost
 	grow_as = list(/mob/living/simple_mob/animal/giant_spider/frost)
@@ -236,7 +250,7 @@
 			O.owner.apply_damage(1, TOX, O.organ_tag)
 			if(world.time > last_itch + 30 SECONDS)
 				last_itch = world.time
-				O.owner << "<span class='notice'>Your [O.name] itches...</span>"
+				to_chat(O.owner, "<span class='notice'>Your [O.name] itches...</span>")
 	else if(prob(1))
 		src.visible_message("<span class='notice'>\The [src] skitters.</span>")
 
@@ -261,8 +275,19 @@
 					break
 		if(amount_grown >= 100)
 			var/spawn_type = pick(grow_as)
-			new spawn_type(src.loc, src)
+			var/mob/living/simple_mob/animal/giant_spider/GS = new spawn_type(src.loc, src)
+			if(stunted)
+				spawn(2)
+					GS.make_spiderling()
 			qdel(src)
+
+/obj/effect/spider/spiderling/stunted
+	stunted = TRUE
+
+	grow_as = list(/mob/living/simple_mob/animal/giant_spider, /mob/living/simple_mob/animal/giant_spider/hunter)
+
+/obj/effect/spider/spiderling/non_growing
+	amount_grown = -1
 
 /obj/effect/decal/cleanable/spiderling_remains
 	name = "spiderling remains"

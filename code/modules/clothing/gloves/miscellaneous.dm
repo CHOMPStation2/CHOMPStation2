@@ -56,6 +56,7 @@
 	permeability_coefficient = 0.01
 	germ_level = 0
 	fingerprint_chance = 25
+	drop_sound = 'sound/items/drop/rubber.ogg'
 //	var/balloonPath = /obj/item/latexballon
 
 //TODO: Make inflating gloves a thing
@@ -81,6 +82,7 @@
 	item_state_slots = list(slot_r_hand_str = "lightbrown", slot_l_hand_str = "lightbrown")
 	permeability_coefficient = 0.05
 	siemens_coefficient = 0.75 //thick work gloves
+	drop_sound = 'sound/items/drop/leather.ogg'
 
 /obj/item/clothing/gloves/duty
 	desc = "These brown duty gloves are made from a durable synthetic."
@@ -109,6 +111,7 @@
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 	species_restricted = list("Vox")
+	drop_sound = 'sound/items/drop/metalboots.ogg'
 
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
@@ -127,3 +130,36 @@
 	overgloves = 1
 	force = 5
 	punch_force = 5
+	drop_sound = 'sound/items/drop/metalboots.ogg'
+
+/obj/item/clothing/gloves/ranger
+	var/glovecolor = "white"
+	name = "ranger gloves"
+	desc = "The gloves of the Rangers are the least memorable part. They're not even insulated in the show, so children \
+	don't try and take apart a toaster with inadequate protection. They only serve to complete the fancy outfit."
+	icon = 'icons/obj/clothing/ranger.dmi'
+	icon_state = "ranger_gloves"
+
+/obj/item/clothing/gloves/ranger/Initialize()
+	. = ..()
+	if(icon_state == "ranger_gloves")
+		name = "[glovecolor] ranger gloves"
+		icon_state = "[glovecolor]_ranger_gloves"
+
+/obj/item/clothing/gloves/ranger/black
+	glovecolor = "black"
+
+/obj/item/clothing/gloves/ranger/pink
+	glovecolor = "pink"
+
+/obj/item/clothing/gloves/ranger/green
+	glovecolor = "green"
+
+/obj/item/clothing/gloves/ranger/cyan
+	glovecolor = "cyan"
+
+/obj/item/clothing/gloves/ranger/orange
+	glovecolor = "orange"
+
+/obj/item/clothing/gloves/ranger/yellow
+	glovecolor = "yellow"

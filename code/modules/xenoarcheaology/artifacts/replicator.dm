@@ -7,7 +7,7 @@
 
 	idle_power_usage = 100
 	active_power_usage = 1000
-	use_power = 1
+	use_power = USE_POWER_IDLE
 
 	var/spawn_progress_time = 0
 	var/max_spawn_time = 50
@@ -74,7 +74,7 @@
 		viables.Remove(type)
 		construction[button_desc] = type
 
-	fail_message = "<font color='blue'>\icon[src] a [pick("loud","soft","sinister","eery","triumphant","depressing","cheerful","angry")] \
+	fail_message = "<font color='blue'>[bicon(src)] a [pick("loud","soft","sinister","eery","triumphant","depressing","cheerful","angry")] \
 		[pick("horn","beep","bing","bleep","blat","honk","hrumph","ding")] sounds and a \
 		[pick("yellow","purple","green","blue","red","orange","white")] \
 		[pick("light","dial","meter","window","protrusion","knob","antenna","swirly thing")] \
@@ -86,15 +86,15 @@
 	if(spawning_types.len && powered())
 		spawn_progress_time += world.time - last_process_time
 		if(spawn_progress_time > max_spawn_time)
-			src.visible_message("<span class='notice'>\icon[src] [src] pings!</span>")
+			src.visible_message("<span class='notice'>[bicon(src)] [src] pings!</span>")
 
 			var/obj/source_material = pop(stored_materials)
 			var/spawn_type = pop(spawning_types)
 			var/obj/spawned_obj = new spawn_type(src.loc)
 			if(source_material)
-				if(lentext(source_material.name) < MAX_MESSAGE_LEN)
+				if(length(source_material.name) < MAX_MESSAGE_LEN)
 					spawned_obj.name = "[source_material] " +  spawned_obj.name
-				if(lentext(source_material.desc) < MAX_MESSAGE_LEN * 2)
+				if(length(source_material.desc) < MAX_MESSAGE_LEN * 2)
 					if(spawned_obj.desc)
 						spawned_obj.desc += " It is made of [source_material]."
 					else
@@ -105,11 +105,11 @@
 			max_spawn_time = rand(30,100)
 
 			if(!spawning_types.len || !stored_materials.len)
-				use_power = 1
+				update_use_power(USE_POWER_IDLE)
 				icon_state = "borgcharger0(old)"
 
 		else if(prob(5))
-			src.visible_message("<span class='notice'>\icon[src] [src] [pick("clicks","whizzes","whirrs","whooshes","clanks","clongs","clonks","bangs")].</span>")
+			src.visible_message("<span class='notice'>[bicon(src)] [src] [pick("clicks","whizzes","whirrs","whooshes","clanks","clongs","clonks","bangs")].</span>")
 
 	last_process_time = world.time
 
@@ -140,13 +140,13 @@
 		if(index > 0 && index <= construction.len)
 			if(stored_materials.len > spawning_types.len)
 				if(spawning_types.len)
-					src.visible_message("<span class='notice'>\icon[src] a [pick("light","dial","display","meter","pad")] on [src]'s front [pick("blinks","flashes")] [pick("red","yellow","blue","orange","purple","green","white")].</span>")
+					src.visible_message("<span class='notice'>[bicon(src)] a [pick("light","dial","display","meter","pad")] on [src]'s front [pick("blinks","flashes")] [pick("red","yellow","blue","orange","purple","green","white")].</span>")
 				else
-					src.visible_message("<span class='notice'>\icon[src] [src]'s front compartment slides shut.</span>")
+					src.visible_message("<span class='notice'>[bicon(src)] [src]'s front compartment slides shut.</span>")
 
 				spawning_types.Add(construction[construction[index]])
 				spawn_progress_time = 0
-				use_power = 2
+				update_use_power(USE_POWER_ACTIVE)
 				icon_state = "borgcharger1(old)"
 			else
 				src.visible_message(fail_message)

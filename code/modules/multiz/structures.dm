@@ -111,7 +111,7 @@
 		if(!A.CanPass(M, M.loc, 1.5, 0))
 			to_chat(M, "<span class='notice'>\The [A] is blocking \the [src].</span>")
 			return FALSE
-	return M.Move(T)
+	return M.forceMove(T) //VOREStation Edit - Fixes adminspawned ladders
 
 /obj/structure/ladder/CanPass(obj/mover, turf/source, height, airflow)
 	return airflow || !density
@@ -159,7 +159,7 @@
 		A.forceMove(target)
 		if(isliving(A))
 			var/mob/living/L = A
-			if(L.pulling)
+			if(L.pulling && !L.pulling.anchored)
 				L.pulling.forceMove(target)
 
 /obj/structure/stairs/proc/upperStep(var/turf/T)

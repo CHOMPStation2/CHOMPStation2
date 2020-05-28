@@ -3,7 +3,7 @@
 	desc = "A large cleaning robot. It looks rather efficient."
 	icon_state = "edCLN0"
 	req_one_access = list(access_robotics, access_janitor)
-	botcard_access = list(access_janitor, access_maint_tunnels)
+	botcard_access = list(access_janitor)
 
 	locked = 0 // Start unlocked so roboticist can set them to patrol.
 	wait_if_pulled = 0 // One big boi.
@@ -27,7 +27,7 @@
 /mob/living/bot/cleanbot/edCLN/handleIdle()
 	if(prob(10))
 		custom_emote(2, "makes a less than thrilled beeping sound.")
-		playsound(src.loc, 'sound/machines/synth_yes.ogg', 50, 0)
+		playsound(src, 'sound/machines/synth_yes.ogg', 50, 0)
 
 	if(red_switch && !blue_switch && !green_switch && prob(10) || src.emagged)
 		if(istype(loc, /turf/simulated))
@@ -124,7 +124,7 @@
 	if(!emagged)
 		if(user)
 			to_chat(user, "<span class='notice'>The [src] buzzes and beeps.</span>")
-			playsound(src.loc, 'sound/machines/buzzbeep.ogg', 50, 0)
+			playsound(src, 'sound/machines/buzzbeep.ogg', 50, 0)
 		emagged = 1
 		return 1
 
@@ -229,7 +229,8 @@
 				build_step++
 				to_chat(user, "<span class='notice'>You complete the ED-CLN.</span>")
 				var/turf/T = get_turf(src)
-				new /mob/living/bot/cleanbot/edCLN(T,created_name)
+				var/mob/living/bot/cleanbot/edCLN/S = new /mob/living/bot/cleanbot/edCLN(T)
+				S.name = created_name
 				user.drop_item()
 				qdel(W)
 				user.drop_from_inventory(src)

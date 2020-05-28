@@ -37,18 +37,20 @@
 		user.drop_item()
 		P.loc = src
 		icon_state = "[initial(icon_state)]-open"
-		sleep(5)
+		flick("[initial(icon_state)]-open",src)
+		playsound(src, 'sound/bureaucracy/filingcabinet.ogg', 50, 1)
+		sleep(40)
 		icon_state = initial(icon_state)
 		updateUsrDialog()
 	else if(P.is_wrench())
-		playsound(loc, P.usesound, 50, 1)
+		playsound(src, P.usesound, 50, 1)
 		anchored = !anchored
 		to_chat(user, "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
 	else if(P.is_screwdriver())
 		to_chat(user, "<span class='notice'>You begin taking the [name] apart.</span>")
 		playsound(src, P.usesound, 50, 1)
 		if(do_after(user, 10 * P.toolspeed))
-			playsound(loc, P.usesound, 50, 1)
+			playsound(src, P.usesound, 50, 1)
 			to_chat(user, "<span class='notice'>You take the [name] apart.</span>")
 			new /obj/item/stack/material/steel( src.loc, 4 )
 			for(var/obj/item/I in contents)
@@ -98,9 +100,10 @@
 		if(istype(P) && (P.loc == src) && src.Adjacent(usr))
 			usr.put_in_hands(P)
 			updateUsrDialog()
-			icon_state = "[initial(icon_state)]-open"
+			flick("[initial(icon_state)]-open",src)
+			playsound(src, 'sound/bureaucracy/filingcabinet.ogg', 50, 1)
 			spawn(0)
-				sleep(5)
+				sleep(20)
 				icon_state = initial(icon_state)
 
 /*

@@ -8,7 +8,7 @@
 	var/id = null
 	var/active = 0
 	anchored = 1.0
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 4
 
@@ -21,5 +21,5 @@
 // VOREStation Edit Begin
 /obj/machinery/button/attack_hand(obj/item/weapon/W, mob/user as mob)
 	if(..()) return 1
-	playsound(loc, 'sound/machines/button.ogg', 100, 1)
+	playsound(src, 'sound/machines/button.ogg', 100, 1)
 // VOREStation Edit End

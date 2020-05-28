@@ -5,9 +5,10 @@
 
 /obj/machinery/disease2/isolator/
 	name = "pathogenic isolator"
+	desc = "Used to isolate and identify diseases, allowing for comparison with a remote database."
 	density = 1
 	anchored = 1
-	icon = 'icons/obj/virology.dmi'
+	icon = 'icons/obj/virology_vr.dmi' //VOREStation Edit
 	icon_state = "isolator"
 	var/isolating = 0
 	var/state = HOME
@@ -35,7 +36,7 @@
 	var/obj/item/weapon/reagent_containers/syringe/S = O
 
 	if(sample)
-		user << "\The [src] is already loaded."
+		to_chat(user, "\The [src] is already loaded.")
 		return
 
 	sample = S

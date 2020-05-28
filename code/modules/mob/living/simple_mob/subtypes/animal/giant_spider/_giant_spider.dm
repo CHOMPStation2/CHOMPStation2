@@ -68,12 +68,13 @@
 	icon_living = "guard"
 	icon_dead = "guard_dead"
 	has_eye_glow = TRUE
-
-	faction = "spiders"
+	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
+	faction = "awaymission" //yw edit, Makes away mobs be on the same fuckin' side.
 	maxHealth = 200
 	health = 200
 	pass_flags = PASSTABLE
 	movement_cooldown = 10
+	movement_sound = 'sound/effects/spider_loop.ogg'
 	poison_resist = 0.5
 
 	see_in_dark = 10
@@ -99,6 +100,12 @@
 
 	say_list_type = /datum/say_list/spider
 
+	tame_items = list(
+	/obj/item/weapon/reagent_containers/food/snacks/xenomeat = 10,
+	/obj/item/weapon/reagent_containers/food/snacks/meat/crab = 40,
+	/obj/item/weapon/reagent_containers/food/snacks/meat = 20
+	)
+
 	var/poison_type = "spidertoxin"	// The reagent that gets injected when it attacks.
 	var/poison_chance = 10			// Chance for injection to occur.
 	var/poison_per_bite = 5			// Amount added per injection.
@@ -116,3 +123,17 @@
 	if(prob(poison_chance))
 		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
 		L.reagents.add_reagent(poison_type, poison_per_bite)
+
+/mob/living/simple_mob/animal/giant_spider/proc/make_spiderling()
+	adjust_scale(icon_scale_x * 0.7, icon_scale_y * 0.7)
+	maxHealth = round(maxHealth * 0.5)
+	health = round(health * 0.5)
+	melee_damage_lower *= 0.7
+	melee_damage_upper *= 0.7
+
+	response_harm = "kicks"
+
+	see_in_dark = max(2, round(see_in_dark * 0.6))
+
+	if(poison_per_bite)
+		poison_per_bite *= 1.3

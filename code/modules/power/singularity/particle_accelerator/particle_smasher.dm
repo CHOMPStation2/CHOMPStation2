@@ -9,7 +9,7 @@
 	icon_state = "smasher"
 	anchored = 0
 	density = 1
-	use_power = 0
+	use_power = USE_POWER_OFF
 
 	var/successful_craft = FALSE	// Are we waiting to be emptied?
 	var/image/material_layer	// Holds the image used for the filled overlay.
@@ -37,11 +37,11 @@
 	..()
 
 /obj/machinery/particle_smasher/examine(mob/user)
-	..()
-	if(user in view(1))
-		to_chat(user, "<span class='notice'>\The [src] contains:</span>")
+	. = ..()
+	if(Adjacent(user))
+		. += "<span class='notice'>\The [src] contains:</span>"
 		for(var/obj/item/I in contents)
-			to_chat(user, "<span class='notice'>\the [I]</span>")
+			. += "<span class='notice'>\the [I]</span>"
 
 /obj/machinery/particle_smasher/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.type == /obj/item/device/analyzer)
@@ -142,13 +142,13 @@
 /obj/machinery/particle_smasher/process()
 	if(!src.anchored)	// Rapidly loses focus.
 		if(energy)
-			radiation_repository.radiate(src, round(((src.energy-150)/50)*5,1))
+			SSradiation.radiate(src, round(((src.energy-150)/50)*5,1))
 			energy = max(0, energy - 30)
 			update_icon()
 		return
 
 	if(energy)
-		radiation_repository.radiate(src, round(((src.energy-150)/50)*5,1))
+		SSradiation.radiate(src, round(((src.energy-150)/50)*5,1))
 		energy = CLAMP(energy - 5, 0, max_energy)
 
 	return
@@ -178,7 +178,7 @@
 	if(successful_craft)
 		visible_message("<span class='warning'>\The [src] fizzles.</span>")
 		if(prob(33))	// Why are you blasting it after it's already done!
-			radiation_repository.radiate(src, 10 + round(src.energy / 60, 1))
+			SSradiation.radiate(src, 10 + round(src.energy / 60, 1))
 			energy = max(0, energy - 30)
 		update_icon()
 		return

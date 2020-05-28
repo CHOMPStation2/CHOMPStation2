@@ -65,7 +65,7 @@
 	if(emagged)
 		projectile = /obj/item/projectile/beam
 
-	playsound(loc, emagged ? 'sound/weapons/Laser.ogg' : 'sound/weapons/Taser.ogg', 50, 1)
+	playsound(src, emagged ? 'sound/weapons/Laser.ogg' : 'sound/weapons/Taser.ogg', 50, 1)
 	var/obj/item/projectile/P = new projectile(loc)
 
 	P.firer = src
@@ -203,7 +203,8 @@
 				build_step++
 				to_chat(user, "<span class='notice'>You complete the ED-209.</span>")
 				var/turf/T = get_turf(src)
-				new /mob/living/bot/secbot/ed209(T,created_name,lasercolor)
+				var/mob/living/bot/secbot/ed209/S = new /mob/living/bot/secbot/ed209(T)
+				S.name = created_name
 				user.drop_item()
 				qdel(W)
 				user.drop_from_inventory(src)

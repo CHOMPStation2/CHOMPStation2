@@ -26,6 +26,7 @@
 */
 
 //For general use
+//YW EDITS START: EXTENSIVELY MODIFIED -KK
 /obj/item/device/modkit_conversion
 	name = "modification kit"
 	desc = "A kit containing all the needed tools and parts to modify a suit and helmet."
@@ -36,34 +37,124 @@
 	var/from_suit = /obj/item/clothing/suit/space/void
 	var/to_helmet = /obj/item/clothing/head/cardborg
 	var/to_suit = /obj/item/clothing/suit/cardborg
+
+	//conversion costs. refunds all parts by default, but can be tweaked per-kit
+	var/from_helmet_cost = 1
+	var/from_suit_cost = 2
+	var/to_helmet_cost = -1
+	var/to_suit_cost = -2
+
+	var/owner_ckey = null		//ckey of the kit owner as a string
+	var/skip_content_check = FALSE	//can we skip the contents check? we generally shouldn't, but this is necessary for rigs/coats with hoods/etc.
+	var/transfer_contents = FALSE	//should we transfer the contents across before deleting? we generally shouldn't, esp. in the case of rigs/coats with hoods/etc. note this does nothing if skip is FALSE.
+	var/can_repair = FALSE		//can we be used to repair damaged voidsuits when converting them?
+	var/can_revert = TRUE		//can we revert items, or is it a one-way trip?
+	var/delete_on_empty = FALSE	//do we self-delete when emptied?
+
 	//Conversion proc
 /obj/item/device/modkit_conversion/afterattack(obj/O, mob/user as mob)
-	var/flag
+	var/cost
 	var/to_type
-	if(istype(O,from_helmet))
-		flag = 1
+	var/keycheck
+
+	if(isturf(O)) //silently fail if you click on a turf. shouldn't work anyway because turfs aren't objects but if I don't do this it spits runtimes.
+		return
+	if(istype(O,/obj/item/clothing/suit/space/void/) && !can_repair) //check if we're a voidsuit and if we're allowed to repair
+		var/obj/item/clothing/suit/space/void/SS = O
+		if(LAZYLEN(SS.breaches))
+			to_chat(user, "<span class='warning'>You should probably repair that before you start tinkering with it.</span>")
+			return
+	if(O.blood_DNA || O.contaminated) //check if we're bloody or gooey or whatever, so modkits can't be used to hide crimes easily.
+		to_chat(user, "<span class='warning'>You should probably clean that up before you start tinkering with it.</span>")
+		return
+	//we have to check that it's not the original type first, because otherwise it might convert wrong based on pathing; the subtype can still count as the basetype
+	if(istype(O,to_helmet) && can_revert)
+		cost = to_helmet_cost
+		to_type = from_helmet
+	else if(istype(O,to_suit) && can_revert)
+		cost = to_suit_cost
+		to_type = from_suit
+	else if(!can_revert && (istype(O,to_helmet) || istype (O,to_suit)))
+		to_chat(user, "<span class='warning'>This kit doesn't seem to have the tools necessary to revert changes to modified items.</span>")
+		return
+	else if(istype(O,from_helmet))
+		cost = from_helmet_cost
 		to_type = to_helmet
+		keycheck = TRUE
 	else if(istype(O,from_suit))
-		flag = 2
+		cost = from_suit_cost
 		to_type = to_suit
+		keycheck = TRUE
 	else
-		return
-	if(!(parts & flag))
-		to_chat(user, "<span class='warning'>This kit has no parts for this modification left.</span>")
-		return
-	if(istype(O,to_type))
-		to_chat(user, "<span class='notice'>[O] is already modified.</span>")
+		to_chat(user, "<span class='notice'>This kit doesn't seem to have any tools or parts for whatever you're trying to use it on.</span>") //new error message
 		return
 	if(!isturf(O.loc))
-		to_chat(user, "<span class='warning'>[O] must be safely placed on the ground for modification.</span>")
+		to_chat(user, "<span class='warning'>You need to put \the [O] on the ground, a table, or other worksurface before modifying it.</span>")
 		return
-	playsound(user.loc, 'sound/items/Screwdriver.ogg', 100, 1)
-	var/N = new to_type(O.loc)
-	user.visible_message("<span class='warning'>[user] opens \the [src] and modifies \the [O] into \the [N].</span>","<span class='warning'>You open \the [src] and modify \the [O] into \the [N].</span>")
+	if(!skip_content_check && O.contents.len) //check if we're loaded/modified, in the event of gun/suit kits, to avoid purging stuff like ammo, badges, armbands, or suit helmets
+		to_chat(user, "<span class='warning'>You should probably remove any attached items or loaded ammunition before trying to modify that!</span>")
+		return
+	if(cost > parts)
+		to_chat(user, "<span class='warning'>The kit doesn't have enough parts left to modify that.</span>")
+		if(can_revert && ((to_helmet_cost || to_suit_cost) < 0))
+			to_chat(user, "<span class='notice'> You can recover parts by using the kit on an already-modified item.</span>")
+		return
+	if(keycheck && owner_ckey) //check if we're supposed to care
+		if(user.ckey != owner_ckey) //ERROR: UNAUTHORIZED USER
+			to_chat(user, "<span class='warning'>You probably shouldn't mess with all these strange tools and parts...</span>") //give them a slightly fluffy explanation as to why it didn't work
+			return
+	playsound(src, 'sound/items/Screwdriver.ogg', 100, 1)
+	var/obj/N = new to_type(O.loc)
+	user.visible_message("<span class='notice'>[user] opens \the [src] and modifies \the [O] into \the [N].</span>","<span class='notice'>You open \the [src] and modify \the [O] into \the [N].</span>")
+
+	//crude, but transfer prints and fibers to avoid forensics abuse, same as the bloody/gooey check above
+	N.fingerprints = O.fingerprints
+	N.fingerprintshidden = O.fingerprintshidden
+	N.fingerprintslast = O.fingerprintslast
+	N.suit_fibers = O.suit_fibers
+
+	//transfer logic could technically be made more thorough and handle stuff like helmet/boots/tank vars for suits, but in those cases you should be removing the items first anyway
+	if(skip_content_check && transfer_contents)
+		N.contents = O.contents
+		if(istype(N,/obj/item/weapon/gun/projectile/))
+			var/obj/item/weapon/gun/projectile/NN = N
+			var/obj/item/weapon/gun/projectile/OO = O
+			NN.magazine_type = OO.magazine_type
+			NN.ammo_magazine = OO.ammo_magazine
+		if(istype(N,/obj/item/weapon/gun/energy/))
+			var/obj/item/weapon/gun/energy/NE = N
+			var/obj/item/weapon/gun/energy/OE = O
+			NE.cell_type = OE.cell_type
+	else
+		if(istype(N,/obj/item/weapon/gun/projectile/))
+			var/obj/item/weapon/gun/projectile/NM = N
+			NM.contents = list()
+			NM.magazine_type = null
+			NM.ammo_magazine = null
+		if(istype(N,/obj/item/weapon/gun/energy/))
+			var/obj/item/weapon/gun/energy/NO = N
+			NO.contents = list()
+			NO.cell_type = null
+
 	qdel(O)
-	parts &= ~flag
-	if(!parts)
+	parts -= cost
+	if(!parts && delete_on_empty)
 		qdel(src)
+//YW EDITS END
+
+//DEBUG ITEM
+/obj/item/device/modkit_conversion/fluff/debug_gunkit
+	name = "Gun Transformation Kit"
+	desc = "A kit containing all the needed tools and fabric to modify one sidearm to another."
+	skip_content_check = FALSE
+	transfer_contents = FALSE
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "harmony_kit"
+
+	from_helmet = /obj/item/weapon/gun/energy/laser
+	to_helmet = /obj/item/weapon/gun/energy/retro
+//DEBUG ITEM ENDS
 
 //JoanRisu:Joan Risu
 /obj/item/weapon/flame/lighter/zippo/fluff/joan
@@ -91,7 +182,7 @@
 
 	if(default_parry_check(user, attacker, damage_source) && prob(75))
 		user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
-		playsound(user.loc, 'sound/weapons/punchmiss.ogg', 50, 1)
+		playsound(src, 'sound/weapons/punchmiss.ogg', 50, 1)
 		return 1
 	return 0
 
@@ -104,7 +195,7 @@
 
 	if(default_parry_check(user, attacker, damage_source) && prob(75))
 		user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
-		playsound(user.loc, 'sound/weapons/punchmiss.ogg', 50, 1)
+		playsound(src, 'sound/weapons/punchmiss.ogg', 50, 1)
 		return 1
 	return 0
 
@@ -249,7 +340,7 @@
 	name = "Mouse Plushie"
 	desc = "A plushie of a delightful mouse! What was once considered a vile rodent is now your very best friend."
 	slot_flags = SLOT_HEAD
-	icon_state = "mouse_brown"
+	icon_state = "mouse_brown"	//TFF 12/11/19 - Change sprite to not look dead. Heck you for that choice! >:C
 	item_state = "mouse_brown_head"
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_override = 'icons/vore/custom_items_vr.dmi'
@@ -304,7 +395,7 @@
 	if(istype(O,/obj/item/weapon/card/id) && O.icon_state != new_icon)
 		//O.icon = icon // just in case we're using custom sprite paths with fluff items.
 		O.icon_state = new_icon // Changes the icon without changing the access.
-		playsound(user.loc, 'sound/items/polaroid2.ogg', 100, 1)
+		playsound(src, 'sound/items/polaroid2.ogg', 100, 1)
 		user.visible_message("<span class='warning'> [user] reprints their ID.</span>")
 		qdel(src)
 	else if(O.icon_state == new_icon)
@@ -314,7 +405,7 @@
 		to_chat(user, "<span class='warning'>This isn't even an ID card you idiot.</span>")
 		return
 
-//arokha:Aronai Kadigan - Centcom ID (Medical dept)
+//arokha:Aronai Sieyes - Centcom ID (Medical dept)
 /obj/item/weapon/card/id/centcom/station/fluff/aronai
 	registered_name = "CONFIGURE ME"
 	assignment = "CC Medical"
@@ -351,8 +442,8 @@
 
 //SilencedMP5A5:Serdykov Antoz
 /obj/item/clothing/suit/armor/vest/wolftaur/serdy //SilencedMP5A5's specialty armor suit.
-	name = "KSS-8 security armor"
-	desc = "A set of armor made from pieces of many other armors. There are two orange holobadges on it, one on the chestplate, one on the steel flank plates. The holobadges appear to be russian in origin. 'Kosmicheskaya Stantsiya-8' is printed in faded white letters on one side, along the spine. It smells strongly of dog."
+	name = "custom security cuirass"
+	desc = "An armored vest that protects against some damage. It appears to be created for a wolfhound. The name 'Serdykov L. Antoz' is written on a tag inside one of the haunchplates."
 	species_restricted = null //Species restricted since all it cares about is a taur half
 	icon = 'icons/mob/taursuits_wolf_vr.dmi'
 	icon_state = "serdy_armor"
@@ -366,16 +457,27 @@
 		to_chat(H, "<span class='warning'>You need to have a wolf-taur half to wear this.</span>")
 		return 0
 
-/obj/item/clothing/head/helmet/serdy //SilencedMP5A5's specialty helmet. Uncomment if/when they make their custom item app and are accepted.
-	name = "KSS-8 security helmet"
-	desc = "desc = An old production model steel-ceramic lined helmet with a white stripe and a custom orange holographic visor. It has ear holes, and smells of dog. It's been heavily modified, and fitted with a metal mask to protect the jaw."
+/obj/item/clothing/head/serdyhelmet //SilencedMP5A5's specialty helmet.
+	name = "custom security helmet"
+	desc = "An old production model steel-ceramic lined helmet with a white stripe and a custom orange holographic visor. It has ear holes, and smells of dog."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "serdyhelm"
-
+	valid_accessory_slots = (ACCESSORY_SLOT_HELM_C)
+	restricted_accessory_slots = (ACCESSORY_SLOT_HELM_C)
+	flags = THICKMATERIAL
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "serdyhelm_mob"
+	cold_protection = HEAD
+	min_cold_protection_temperature = HELMET_MIN_COLD_PROTECTION_TEMPERATURE
+	heat_protection = HEAD
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+	w_class = ITEMSIZE_NORMAL
+	ear_protection = 1
+	drop_sound = 'sound/items/drop/helm.ogg'
 
-/*
+
 //SilencedMP5A5:Serdykov Antoz
 /obj/item/device/modkit_conversion/fluff/serdykit
 	name = "Serdykov's armor modification kit"
@@ -386,9 +488,9 @@
 
 	from_helmet = /obj/item/clothing/head/helmet
 	from_suit = /obj/item/clothing/suit/armor/vest/wolftaur
-	to_helmet = /obj/item/clothing/head/helmet/serdy
+	to_helmet = /obj/item/clothing/head/serdyhelmet
 	to_suit = /obj/item/clothing/suit/armor/vest/wolftaur/serdy
-*/
+
 
 //Cameron653: Diana Kuznetsova
 /obj/item/clothing/suit/fluff/purp_robes
@@ -552,7 +654,7 @@
 /obj/item/weapon/cane/wand/attack_self(mob/user)
     if(last_use + cooldown >= world.time)
         return
-    playsound(loc, 'sound/weapons/sparkle.ogg', 50, 1)
+    playsound(src, 'sound/weapons/sparkle.ogg', 50, 1)
     user.visible_message("<span class='warning'> [user] swings their wand.</span>")
     var/datum/effect/effect/system/spark_spread/s = new
     s.set_up(3, 1, src)
@@ -574,7 +676,7 @@
 		O.icon = new_icon
 		O.icon_state = new_icon_state // Changes the icon without changing the access.
 		O.desc = new_desc
-		playsound(user.loc, 'sound/items/polaroid2.ogg', 100, 1)
+		playsound(src, 'sound/items/polaroid2.ogg', 100, 1)
 		user.visible_message("<span class='warning'> [user] reprints their ID.</span>")
 		qdel(src)
 	else if(O.icon_state == new_icon)
@@ -606,9 +708,17 @@
 	no_message = "These saddlebags seem to be fitted for someone else, and keep slipping off!"
 	action_button_name = "Toggle Mlembulance Mode"
 	var/ambulance = FALSE
+	var/datum/looping_sound/ambulance/soundloop
 	var/ambulance_state = FALSE
 	var/ambulance_last_switch = 0
-	var/ambulance_volume = 25	//Allows for varediting, just in case
+
+/obj/item/weapon/storage/backpack/saddlebag/tempest/Initialize()
+	soundloop = new(list(src), FALSE)
+	return ..()
+
+/obj/item/weapon/storage/backpack/saddlebag/tempest/Destroy()
+	QDEL_NULL(soundloop)
+	return ..()
 
 /obj/item/weapon/storage/backpack/saddlebag/tempest/ui_action_click()
 	ambulance = !(ambulance)
@@ -621,9 +731,7 @@
 			M.update_inv_back()
 		ambulance_state = FALSE
 		set_light(2, 1, "#FF0000")
-		while(ambulance)
-			playsound(src.loc, 'sound/items/amulanceweeoo.ogg', ambulance_volume, 0)
-			sleep(20)
+		soundloop.start()
 	else
 		item_state = "tempestsaddlebag"
 		icon_state = "tempestbag"
@@ -631,6 +739,7 @@
 			var/mob/M = loc
 			M.update_inv_back()
 		set_light(0)
+		soundloop.stop()
 
 /obj/item/weapon/storage/backpack/saddlebag/tempest/process()
 	if(!ambulance)
@@ -646,6 +755,11 @@
 			M.update_inv_back()
 		set_light(2, 1, newlight)
 		ambulance_last_switch = world.time
+
+/datum/looping_sound/ambulance
+	mid_sounds = list('sound/items/amulanceweeoo.ogg'=1)
+	mid_length = 20
+	volume = 25
 
 //WickedTempest: Chakat Tempest
 /obj/item/weapon/implant/reagent_generator/tempest
@@ -773,7 +887,7 @@
 	set src in view(1)
 
 	//do_reagent_implant(usr)
-	if(!isliving(usr) || !usr.canClick())
+	if(!isliving(usr) || !usr.checkClickCooldown())
 		return
 
 	if(usr.incapacitated() || usr.stat > CONSCIOUS)
@@ -842,7 +956,7 @@
 	set src in view(1)
 
 	//do_reagent_implant(usr)
-	if(!isliving(usr) || !usr.canClick())
+	if(!isliving(usr) || !usr.checkClickCooldown())
 		return
 
 	if(usr.incapacitated() || usr.stat > CONSCIOUS)
@@ -911,7 +1025,7 @@
 	set src in view(1)
 
 	//do_reagent_implant(usr)
-	if(!isliving(usr) || !usr.canClick())
+	if(!isliving(usr) || !usr.checkClickCooldown())
 		return
 
 	if(usr.incapacitated() || usr.stat > CONSCIOUS)
@@ -996,7 +1110,7 @@
 	set src in view(1)
 
 	//do_reagent_implant(usr)
-	if(!isliving(usr) || !usr.canClick())
+	if(!isliving(usr) || !usr.checkClickCooldown())
 		return
 
 	if(usr.incapacitated() || usr.stat > CONSCIOUS)
@@ -1068,10 +1182,10 @@
 		var/clr = C.colourName
 
 		if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
-			to_chat(user,"<span class='warning'>The egg refuses to take on this color!</span>")
+			to_chat(user, "<span class='warning'>The egg refuses to take on this color!</span>")
 			return
 
-		to_chat(user,"<span class='notice'>You color \the [src] [clr]</span>")
+		to_chat(user, "<span class='notice'>You color \the [src] [clr]</span>")
 		icon_state = "egg_roiz_[clr]"
 		desc = "It's a large lizard egg. It has been colored [clr]!"
 		if (clr == "rainbow")
@@ -1227,394 +1341,6 @@
 	slot_flags = SLOT_TIE
 	slot = ACCESSORY_SLOT_DECOR
 
-//The perfect adminboos device?
-/obj/item/device/perfect_tele
-	name = "personal translocator"
-	desc = "Seems absurd, doesn't it? Yet, here we are. Generally considered dangerous contraband unless the user has permission from Central Command."
-	icon = 'icons/obj/device_alt.dmi'
-	icon_state = "hand_tele"
-	w_class = ITEMSIZE_SMALL
-	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_ILLEGAL = 7)
-
-	var/cell_type = /obj/item/weapon/cell/device/weapon
-	var/obj/item/weapon/cell/power_source
-	var/charge_cost = 800 // cell/device/weapon has 2400
-
-	var/list/beacons = list()
-	var/ready = 1
-	var/beacons_left = 3
-	var/failure_chance = 5 //Percent
-	var/obj/item/device/perfect_tele_beacon/destination
-	var/datum/effect/effect/system/spark_spread/spk
-	var/list/warned_users = list()
-	var/list/logged_events = list()
-
-/obj/item/device/perfect_tele/New()
-	..()
-	flags |= NOBLUDGEON
-	if(cell_type)
-		power_source = new cell_type(src)
-	else
-		power_source = new /obj/item/weapon/cell/device(src)
-	spk = new(src)
-	spk.set_up(5, 0, src)
-	spk.attach(src)
-
-/obj/item/device/perfect_tele/Destroy()
-	// Must clear the beacon's backpointer or we won't GC. Someday maybe do something nicer even.
-	for(var/obj/item/device/perfect_tele_beacon/B in beacons)
-		B.tele_hand = null
-	beacons.Cut()
-	QDEL_NULL(power_source)
-	QDEL_NULL(spk)
-	return ..()
-
-/obj/item/device/perfect_tele/update_icon()
-	if(!power_source)
-		icon_state = "[initial(icon_state)]_o"
-	else if(ready && (power_source.check_charge(charge_cost) || power_source.fully_charged()))
-		icon_state = "[initial(icon_state)]"
-	else
-		icon_state = "[initial(icon_state)]_w"
-
-	..()
-
-/obj/item/device/perfect_tele/attack_hand(mob/user)
-	if(user.get_inactive_hand() == src && power_source)
-		to_chat(user,"<span class='notice'>You eject \the [power_source] from \the [src].</span>")
-		user.put_in_hands(power_source)
-		power_source = null
-		update_icon()
-	else
-		return ..()
-
-/obj/item/device/perfect_tele/attack_self(mob/user)
-	if(!(user.ckey in warned_users))
-		warned_users |= user.ckey
-		alert(user,"This device can be easily used to break ERP preferences due to the nature of teleporting \
-		and tele-vore. Make sure you carefully examine someone's OOC prefs before teleporting them if you are \
-		going to use this device for ERP purposes. This device records all warnings given and teleport events for \
-		admin review in case of pref-breaking, so just don't do it.","OOC WARNING")
-
-	var/choice = alert(user,"What do you want to do?","[src]","Create Beacon","Cancel","Target Beacon")
-	switch(choice)
-		if("Create Beacon")
-			if(beacons_left <= 0)
-				alert("The translocator can't support any more beacons!","Error")
-				return
-
-			var/new_name = html_encode(input(user,"New beacon's name (2-20 char):","[src]") as text|null)
-
-			if(length(new_name) > 20 || length(new_name) < 2)
-				alert("Entered name length invalid (must be longer than 2, no more than than 20).","Error")
-				return
-			if(new_name in beacons)
-				alert("No duplicate names, please. '[new_name]' exists already.","Error")
-				return
-
-			var/obj/item/device/perfect_tele_beacon/nb = new(get_turf(src))
-			nb.tele_name = new_name
-			nb.tele_hand = src
-			nb.creator = user.ckey
-			beacons[new_name] = nb
-			beacons_left--
-			if(isliving(user))
-				var/mob/living/L = user
-				L.put_in_any_hand_if_possible(nb)
-
-		if("Target Beacon")
-			if(!beacons.len)
-				to_chat(user,"<span class='warning'>\The [src] doesn't have any beacons!</span>")
-			else
-				var/target = input("Which beacon do you target?","[src]") in beacons|null
-				if(target && (target in beacons))
-					destination = beacons[target]
-					to_chat(user,"<span class='notice'>Destination set to '[target]'.</span>")
-		else
-			return
-
-/obj/item/device/perfect_tele/attackby(obj/W, mob/user)
-	if(istype(W,cell_type) && !power_source)
-		power_source = W
-		power_source.update_icon() //Why doesn't a cell do this already? :|
-		user.unEquip(power_source)
-		power_source.forceMove(src)
-		to_chat(user,"<span class='notice'>You insert \the [power_source] into \the [src].</span>")
-		update_icon()
-
-	else if(istype(W,/obj/item/device/perfect_tele_beacon))
-		var/obj/item/device/perfect_tele_beacon/tb = W
-		if(tb.tele_name in beacons)
-			to_chat(user,"<span class='notice'>You re-insert \the [tb] into \the [src].</span>")
-			beacons -= tb.tele_name
-			user.unEquip(tb)
-			qdel(tb)
-			beacons_left++
-		else
-			to_chat(user,"<span class='notice'>\The [tb] doesn't belong to \the [src].</span>")
-			return
-	else
-		..()
-
-/obj/item/device/perfect_tele/proc/teleport_checks(mob/living/target,mob/living/user)
-	//Uhhuh, need that power source
-	if(!power_source)
-		to_chat(user,"<span class='warning'>\The [src] has no power source!</span>")
-		return FALSE
-
-	//Check for charge
-	if((!power_source.check_charge(charge_cost)) && (!power_source.fully_charged()))
-		to_chat(user,"<span class='warning'>\The [src] does not have enough power left!</span>")
-		return FALSE
-
-	//Only mob/living need apply.
-	if(!istype(user) || !istype(target))
-		return FALSE
-
-	//No, you can't teleport buckled people.
-	if(target.buckled)
-		to_chat(user,"<span class='warning'>The target appears to be attached to something...</span>")
-		return FALSE
-
-	//No, you can't teleport if it's not ready yet.
-	if(!ready)
-		to_chat(user,"<span class='warning'>\The [src] is still recharging!</span>")
-		return FALSE
-
-	//No, you can't teleport if there's no destination.
-	if(!destination)
-		to_chat(user,"<span class='warning'>\The [src] doesn't have a current valid destination set!</span>")
-		return FALSE
-
-	//No, you can't teleport if there's a jammer.
-	if(is_jammed(src) || is_jammed(destination))
-		to_chat(user,"<span class='warning'>\The [src] refuses to teleport you, due to strong interference!</span>")
-		return FALSE
-
-	//No, you can't port to or from away missions. Stupidly complicated check.
-	var/turf/uT = get_turf(user)
-	var/turf/dT = get_turf(destination)
-	var/list/dat = list()
-	dat["z_level_detection"] = using_map.get_map_levels(uT.z)
-
-	if(!uT || !dT)
-		return FALSE
-
-	if( (uT.z != dT.z) && (!(dT.z in dat["z_level_detection"])) )
-		to_chat(user,"<span class='warning'>\The [src] can't teleport you that far!</span>")
-		return FALSE
-
-	if(uT.block_tele || dT.block_tele)
-		to_chat(user,"<span class='warning'>Something is interfering with \the [src]!</span>")
-		return FALSE
-
-	//Seems okay to me!
-	return TRUE
-
-/obj/item/device/perfect_tele/afterattack(mob/living/target, mob/living/user, proximity)
-	//No, you can't teleport people from over there.
-	if(!proximity)
-		return
-
-	if(!teleport_checks(target,user))
-		return //The checks proc can send them a message if it wants.
-
-	//Bzzt.
-	ready = 0
-	power_source.use(charge_cost)
-
-	//Failure chance
-	if(prob(failure_chance) && beacons.len >= 2)
-		var/list/wrong_choices = beacons - destination.tele_name
-		var/wrong_name = pick(wrong_choices)
-		destination = beacons[wrong_name]
-		to_chat(user,"<span class='warning'>\The [src] malfunctions and sends you to the wrong beacon!</span>")
-
-	//Destination beacon vore checking
-	var/turf/dT = get_turf(destination)
-	var/atom/real_dest = dT
-
-	var/atom/real_loc = destination.loc
-	if(isbelly(real_loc))
-		real_dest = real_loc
-	if(isliving(real_loc))
-		var/mob/living/L = real_loc
-		if(L.vore_selected)
-			real_dest = L.vore_selected
-		else if(L.vore_organs.len)
-			real_dest = pick(L.vore_organs)
-
-	//Confirm televore
-	var/televored = FALSE
-	if(isbelly(real_dest))
-		var/obj/belly/B = real_dest
-		if(!target.can_be_drop_prey && B.owner != user)
-			to_chat(target,"<span class='warning'>\The [src] narrowly avoids teleporting you right into \a [lowertext(real_dest.name)]!</span>")
-			real_dest = dT //Nevermind!
-		else
-			televored = TRUE
-			to_chat(target,"<span class='warning'>\The [src] teleports you right into \a [lowertext(real_dest.name)]!</span>")
-
-	//Phase-out effect
-	phase_out(target,get_turf(target))
-
-	//Move them
-	target.forceMove(real_dest)
-
-	//Phase-in effect
-	phase_in(target,get_turf(target))
-
-	//And any friends!
-	for(var/obj/item/weapon/grab/G in target.contents)
-		if(G.affecting && (G.state >= GRAB_AGGRESSIVE))
-
-			//Phase-out effect for grabbed person
-			phase_out(G.affecting,get_turf(G.affecting))
-
-			//Move them, and televore if necessary
-			G.affecting.forceMove(real_dest)
-			if(televored)
-				to_chat(target,"<span class='warning'>\The [src] teleports you right into \a [lowertext(real_dest.name)]!</span>")
-
-			//Phase-in effect for grabbed person
-			phase_in(G.affecting,get_turf(G.affecting))
-
-	update_icon()
-	spawn(30 SECONDS)
-		ready = 1
-		update_icon()
-
-	logged_events["[world.time]"] = "[user] teleported [target] to [real_dest] [televored ? "(Belly: [lowertext(real_dest.name)])" : null]"
-
-/obj/item/device/perfect_tele/proc/phase_out(var/mob/M,var/turf/T)
-
-	if(!M || !T)
-		return
-
-	spk.set_up(5, 0, M)
-	spk.attach(M)
-	playsound(T, "sparks", 50, 1)
-	anim(T,M,'icons/mob/mob.dmi',,"phaseout",,M.dir)
-
-/obj/item/device/perfect_tele/proc/phase_in(var/mob/M,var/turf/T)
-
-	if(!M || !T)
-		return
-
-	spk.start()
-	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
-	playsound(T, 'sound/effects/sparks2.ogg', 50, 1)
-	anim(T,M,'icons/mob/mob.dmi',,"phasein",,M.dir)
-	spk.set_up(5, 0, src)
-	spk.attach(src)
-
-/obj/item/device/perfect_tele_beacon
-	name = "translocator beacon"
-	desc = "That's unusual."
-	icon = 'icons/obj/device_alt.dmi'
-	icon_state = "motion2"
-	w_class = ITEMSIZE_TINY
-
-	var/tele_name
-	var/obj/item/device/perfect_tele/tele_hand
-	var/creator
-	var/warned_users = list()
-
-/obj/item/device/perfect_tele_beacon/New()
-	..()
-	flags |= NOBLUDGEON
-
-/obj/item/device/perfect_tele_beacon/Destroy()
-	tele_name = null
-	tele_hand = null
-	return ..()
-
-/obj/item/device/perfect_tele_beacon/attack_hand(mob/user)
-	if((user.ckey != creator) && !(user.ckey in warned_users))
-		warned_users |= user.ckey
-		var/choice = alert(user,"This device is a translocator beacon. Having it on your person may mean that anyone \
-		who teleports to this beacon gets teleported into your selected vore-belly. If you are prey-only \
-		or don't wish to potentially have a random person teleported into you, it's suggested that you \
-		not carry this around.","OOC WARNING","Take It","Leave It")
-		if(choice == "Leave It")
-			return
-
-	..()
-
-/obj/item/device/perfect_tele_beacon/attack_self(mob/user)
-	if(!isliving(user))
-		return
-	var/mob/living/L = user
-	var/confirm = alert(user, "You COULD eat the beacon...", "Eat beacon?", "Eat it!", "No, thanks.")
-	if(confirm == "Eat it!")
-		var/obj/belly/bellychoice = input("Which belly?","Select A Belly") as null|anything in L.vore_organs
-		if(bellychoice)
-			user.visible_message("<span class='warning'>[user] is trying to stuff \the [src] into [user.gender == MALE ? "his" : user.gender == FEMALE ? "her" : "their"] [bellychoice]!</span>","<span class='notice'>You begin putting \the [src] into your [bellychoice]!</span>")
-			if(do_after(user,5 SECONDS,src))
-				user.unEquip(src)
-				forceMove(bellychoice)
-				user.visible_message("<span class='warning'>[user] eats a telebeacon!</span>","You eat the the beacon!")
-
-// A single-beacon variant for use by miners (or whatever)
-/obj/item/device/perfect_tele/one_beacon
-	name = "mini-translocator"
-	desc = "A more limited translocator with a single beacon, useful for some things, like setting the mining department on fire accidentally. Legal for use in the pursuit of NanoTrasen interests, namely mining and exploration."
-	icon_state = "minitrans"
-	beacons_left = 1 //Just one
-	cell_type = /obj/item/weapon/cell/device
-	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5)
-
-/*
-/obj/item/device/perfect_tele/one_beacon/teleport_checks(mob/living/target,mob/living/user)
-	var/turf/T = get_turf(destination)
-	if(T && user.z != T.z)
-		to_chat(user,"<span class='warning'>\The [src] is too far away from the beacon. Try getting closer first!</span>")
-		return FALSE
-	return ..()
-*/
-
-/obj/item/device/perfect_tele/admin
-	name = "alien translocator"
-	desc = "This strange device allows one to teleport people and objects across large distances."
-
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
-	charge_cost = 400
-	beacons_left = 6
-	failure_chance = 0 //Percent
-
-/obj/item/device/perfect_tele/admin/teleport_checks(mob/living/target,mob/living/user)
-	//Uhhuh, need that power source
-	if(!power_source)
-		to_chat(user,"<span class='warning'>\The [src] has no power source!</span>")
-		return FALSE
-
-	//Check for charge
-	if((!power_source.check_charge(charge_cost)) && (!power_source.fully_charged()))
-		to_chat(user,"<span class='warning'>\The [src] does not have enough power left!</span>")
-		return FALSE
-
-	//Only mob/living need apply.
-	if(!istype(user) || !istype(target))
-		return FALSE
-
-	//No, you can't teleport buckled people.
-	if(target.buckled)
-		to_chat(user,"<span class='warning'>The target appears to be attached to something...</span>")
-		return FALSE
-
-	//No, you can't teleport if it's not ready yet.
-	if(!ready)
-		to_chat(user,"<span class='warning'>\The [src] is still recharging!</span>")
-		return FALSE
-
-	//No, you can't teleport if there's no destination.
-	if(!destination)
-		to_chat(user,"<span class='warning'>\The [src] doesn't have a current valid destination set!</span>")
-		return FALSE
-
-	//Seems okay to me!
-	return TRUE
-
 //InterroLouis: Ruda Lizden
 /obj/item/clothing/accessory/badge/holo/detective/ruda
 	name = "Hisstective's Badge"
@@ -1671,7 +1397,7 @@
 			H.monkeyize()
 			qdel(src) //One time use.
 	else //If not, do nothing.
-		to_chat(user,"<span class='warning'>You are unable to inject other people.</span>")
+		to_chat(user, "<span class='warning'>You are unable to inject other people.</span>")
 
 /obj/item/weapon/fluff/injector/numb_bite
 	name = "Numbing Venom Injector"
@@ -1685,7 +1411,7 @@
 			H.species.give_numbing_bite() //This was annoying, but this is the easiest way of performing it.
 			qdel(src) //One time use.
 	else //If not, do nothing.
-		to_chat(user,"<span class='warning'>You are unable to inject other people.</span>")
+		to_chat(user, "<span class='warning'>You are unable to inject other people.</span>")
 
 //For 2 handed fluff weapons.
 /obj/item/weapon/material/twohanded/fluff //Twohanded fluff items.
@@ -1744,7 +1470,7 @@
 	set src in view(1)
 
 	//do_reagent_implant(usr)
-	if(!isliving(usr) || !usr.canClick())
+	if(!isliving(usr) || !usr.checkClickCooldown())
 		return
 
 	if(usr.incapacitated() || usr.stat > CONSCIOUS)
@@ -1835,7 +1561,7 @@
 /obj/item/weapon/melee/baton/fluff/stunstaff/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(wielded && default_parry_check(user, attacker, damage_source) && prob(30))
 		user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
-		playsound(user.loc, 'sound/weapons/punchmiss.ogg', 50, 1)
+		playsound(src, 'sound/weapons/punchmiss.ogg', 50, 1)
 		return 1
 	return 0
 
@@ -1857,14 +1583,14 @@
 /obj/item/weapon/melee/baton/fluff/stunstaff/attack_self(mob/user)
 	if(bcell && bcell.charge > hitcost)
 		status = !status
-		user << "<span class='notice'>[src] is now [status ? "on" : "off"].</span>"
+		to_chat(user, "<span class='notice'>[src] is now [status ? "on" : "off"].</span>")
 		if(status == 0)
-			playsound(user, 'sound/weapons/saberoff.ogg', 50, 1)
+			playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
 		else
-			playsound(user, 'sound/weapons/saberon.ogg', 50, 1)
+			playsound(src, 'sound/weapons/saberon.ogg', 50, 1)
 	else
 		status = 0
-		user << "<span class='warning'>[src] is out of charge.</span>"
+		to_chat(user, "<span class='warning'>[src] is out of charge.</span>")
 	update_held_icon()
 	add_fingerprint(user)
 
@@ -1909,12 +1635,12 @@
 	sharp = 1
 	edge = 1
 	w_class = active_w_class
-	playsound(user, 'sound/weapons/sparkle.ogg', 50, 1)
+	playsound(src, 'sound/weapons/sparkle.ogg', 50, 1)
 
 /obj/item/weapon/melee/fluffstuff/proc/deactivate(mob/living/user)
 	if(!active)
 		return
-	playsound(user, 'sound/weapons/sparkle.ogg', 50, 1)
+	playsound(src, 'sound/weapons/sparkle.ogg', 50, 1)
 	active = 0
 	embed_chance = initial(embed_chance)
 	force = initial(force)
@@ -2071,3 +1797,28 @@
          return 0
       else
          return 1
+
+//Nickcrazy - Damon Bones Xrim
+/obj/item/clothing/suit/storage/toggle/bomber/bombersec
+    name = "Security Bomber Jacket"
+    desc = "A black bomber jacket with the security emblem sewn onto it."
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_override = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "bombersec"
+
+
+//pimientopyro - Scylla Casmus
+/obj/item/clothing/glasses/fluff/scylla
+	name = "Cherry-Red Shades"
+	desc = "These cheap, cherry-red cat-eye glasses seem to give you the inclination to eat chalk when you wear them."
+
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "blindshades"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "blindshades_mob"
+
+//Storesund97 - Aurora
+/obj/item/clothing/accessory/solgov/department/security/aurora
+	name = "Old security insignia"
+	desc = "Insignia denoting assignment to the security department. These fit Expeditionary Corps uniforms. This one seems to be from the 2100s..."

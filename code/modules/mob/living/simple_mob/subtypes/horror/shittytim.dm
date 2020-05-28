@@ -8,6 +8,7 @@
 	icon_rest = "shitty_tim"
 	faction = "horror"
 	icon = 'icons/mob/horror_show/tallhorror.dmi'
+	vis_height = 64
 	icon_gib = "generic_gib"
 
 	attack_sound = 'sound/h_sounds/youknowwhoitis.ogg'
@@ -22,7 +23,7 @@
 	response_help = "pets the"
 	response_disarm = "bops the"
 	response_harm = "hits the"
-	attacktext = list("mutilate")
+	attacktext = list("mutilated")
 	friendly = list("nuzzles", "boops", "headbumps against", "leans on")
 
 

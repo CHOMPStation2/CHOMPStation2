@@ -24,6 +24,7 @@
 	item_flags = NOSLIP
 	slowdown = SHOES_SLOWDOWN+1
 	species_restricted = null
+	drop_sound = 'sound/items/drop/rubber.ogg'
 
 /obj/item/clothing/shoes/dress
 	name = "dress shoes"
@@ -98,6 +99,7 @@
 	force = 0
 	species_restricted = null
 	w_class = ITEMSIZE_SMALL
+	drop_sound = 'sound/items/drop/clothing.ogg'
 
 /obj/item/clothing/shoes/slippers_worn
 	name = "worn bunny slippers"
@@ -155,3 +157,36 @@
 	force = 0
 	w_class = ITEMSIZE_SMALL
 	species_restricted = null
+	drop_sound = 'sound/items/drop/clothing.ogg'
+
+/obj/item/clothing/shoes/boots/ranger
+	var/bootcolor = "white"
+	name = "ranger boots"
+	desc = "The Rangers special lightweight hybrid magboots-jetboots perfect for EVA. If only these functions were so easy to copy in reality.\
+	 These ones are just a well-made pair of boots in appropriate colours."
+	icon = 'icons/obj/clothing/ranger.dmi'
+	icon_state = "ranger_boots"
+
+/obj/item/clothing/shoes/boots/ranger/Initialize()
+	. = ..()
+	if(icon_state == "ranger_boots")
+		name = "[bootcolor] ranger boots"
+		icon_state = "[bootcolor]_ranger_boots"
+
+/obj/item/clothing/shoes/boots/ranger/black
+	bootcolor = "black"
+
+/obj/item/clothing/shoes/boots/ranger/pink
+	bootcolor = "pink"
+
+/obj/item/clothing/shoes/boots/ranger/green
+	bootcolor = "green"
+
+/obj/item/clothing/shoes/boots/ranger/cyan
+	bootcolor = "cyan"
+
+/obj/item/clothing/shoes/boots/ranger/orange
+	bootcolor = "orange"
+
+/obj/item/clothing/shoes/boots/ranger/yellow
+	bootcolor = "yellow"

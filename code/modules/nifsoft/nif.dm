@@ -146,6 +146,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		forceMove(parent)
 		parent.implants += src
 		spawn(0) //Let the character finish spawning yo.
+			if(!H) //Or letting them get deleted
+				return
 			if(H.mind)
 				owner = H.mind.name
 			implant(H)
@@ -204,7 +206,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	if(open == 0 && W.is_screwdriver())
 		if(do_after(user, 4 SECONDS, src) && open == 0)
 			user.visible_message("[user] unscrews and pries open \the [src].","<span class='notice'>You unscrew and pry open \the [src].</span>")
-			playsound(user, 'sound/items/Screwdriver.ogg', 50, 1)
+			playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
 			open = 1
 			update_icon()
 	else if(open == 1 && istype(W,/obj/item/stack/cable_coil))
@@ -214,7 +216,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			return
 		if(do_after(user, 6 SECONDS, src) && open == 1 && C.use(3))
 			user.visible_message("[user] replaces some wiring in \the [src].","<span class='notice'>You replace any burned out wiring in \the [src].</span>")
-			playsound(user, 'sound/items/Deconstruct.ogg', 50, 1)
+			playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 			open = 2
 			update_icon()
 	else if(open == 2 && istype(W,/obj/item/device/multitool))
@@ -225,7 +227,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	else if(open == 3 && W.is_screwdriver())
 		if(do_after(user, 3 SECONDS, src) && open == 3)
 			user.visible_message("[user] closes up \the [src].","<span class='notice'>You re-seal \the [src] for use once more.</span>")
-			playsound(user, 'sound/items/Screwdriver.ogg', 50, 1)
+			playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
 			open = FALSE
 			durability = initial(durability)
 			savetofile = TRUE
@@ -260,7 +262,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			install_done = world.time + 1 MINUTE
 			notify("Welcome back, [owner]! Performing quick-calibration...")
 		else if(!owner)
-			install_done = world.time + 30 MINUTES
+			install_done = world.time + 35 MINUTES
 			notify("Adapting to new user...")
 			sleep(5 SECONDS)
 			notify("Adjoining optic [human.isSynthetic() ? "interface" : "nerve"], please be patient.",TRUE)
@@ -270,7 +272,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			stat = NIF_TEMPFAIL
 			return FALSE
 
-	var/percent_done = (world.time - (install_done - (30 MINUTES))) / (30 MINUTES)
+	var/percent_done = (world.time - (install_done - (35 MINUTES))) / (35 MINUTES)
 
 	if(human.client)
 		human.client.screen.Add(global_hud.whitense) //This is the camera static
@@ -299,9 +301,9 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 				if(2)
 					human.Weaken(5)
 					to_chat(human,"<span class='danger'>A wave of weakness rolls over you.</span>")
-				if(3)
-					human.Sleeping(5)
-					to_chat(human,"<span class='danger'>You suddenly black out!</span>")
+				/*if(3)
+					human.Sleeping(5) //Disabled for being boring
+					to_chat(human,"<span class='danger'>You suddenly black out!</span>")*/
 
 		//Finishing up
 		if(1.0 to INFINITY)
@@ -359,7 +361,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /obj/item/device/nif/proc/notify(var/message,var/alert = 0)
 	if(!human || stat == NIF_TEMPFAIL) return
 
-	to_chat(human,"<b>\[\icon[src.big_icon]NIF\]</b> displays, \"<span class='[alert ? "danger" : "notice"]'>[message]</span>\"")
+	to_chat(human,"<b>\[[bicon(src.big_icon)]NIF\]</b> displays, \"<span class='[alert ? "danger" : "notice"]'>[message]</span>\"")
 	if(prob(1)) human.visible_message("<span class='notice'>\The [human] [pick(look_messages)].</span>")
 	if(alert)
 		human << bad_sound
@@ -379,7 +381,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		return FALSE
 
 	//Was enough, reduce and return.
-	human.nutrition -= use_charge
+	human.adjust_nutrition(-use_charge)
 	return TRUE
 
 //Install a piece of software
@@ -580,7 +582,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	name = "bioadaptive NIF"
 	desc = "A NIF that goes out of it's way to accomidate strange body types. \
 	Will function in species where it normally wouldn't."
-	durability = 25
+	durability = 75
 	bioadap = TRUE
 
 ////////////////////////////////

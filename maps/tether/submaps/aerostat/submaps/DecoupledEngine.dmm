@@ -42,18 +42,16 @@
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/virgo2/DecoupledEngine)
 "al" = (
-/obj/item/projectile/bullet/magnetic/fuelrod,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/obj/effect/floor_decal/rust,
+/obj/item/weapon/fuel_assembly/supermatter,
+/turf/simulated/floor,
 /area/submap/virgo2/DecoupledEngine)
 "am" = (
 /obj/item/weapon/arrow/rod,
 /turf/template_noop,
 /area/submap/virgo2/DecoupledEngine)
 "an" = (
-/turf/simulated/floor/water{
-	color = "#ddaa77";
-	name = "shallow water(?)"
-	},
+/turf/simulated/floor/lava,
 /area/submap/virgo2/DecoupledEngine)
 "ao" = (
 /obj/structure/lattice,
@@ -222,10 +220,7 @@
 	icon_state = "propulsion_r";
 	dir = 4
 	},
-/turf/simulated/floor/water{
-	color = "#ddaa77";
-	name = "shallow water(?)"
-	},
+/turf/simulated/floor/lava,
 /area/submap/virgo2/DecoupledEngine)
 "aP" = (
 /obj/effect/floor_decal/rust,
@@ -302,10 +297,7 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
 	},
-/turf/simulated/floor/water{
-	color = "#ddaa77";
-	name = "shallow water(?)"
-	},
+/turf/simulated/floor/lava,
 /area/submap/virgo2/DecoupledEngine)
 "aZ" = (
 /obj/item/stack/material/steel,
@@ -343,11 +335,6 @@
 "bd" = (
 /obj/machinery/atmospherics/pipe/tank/carbon_dioxide,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor,
-/area/submap/virgo2/DecoupledEngine)
-"be" = (
-/obj/effect/floor_decal/rust,
-/obj/item/projectile/bullet/magnetic/fuelrod,
 /turf/simulated/floor,
 /area/submap/virgo2/DecoupledEngine)
 "bf" = (
@@ -524,6 +511,15 @@
 "bE" = (
 /obj/tether_away_spawner/aerostat_surface,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/area/submap/virgo2/DecoupledEngine)
+"SB" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	icon_state = "intact";
+	dir = 6
+	},
+/obj/effect/floor_decal/rust,
+/obj/structure/salvageable/server,
+/turf/simulated/floor,
 /area/submap/virgo2/DecoupledEngine)
 
 (1,1,1) = {"
@@ -865,7 +861,7 @@ ao
 aw
 aI
 aP
-be
+al
 aA
 av
 br
@@ -1054,7 +1050,7 @@ ad
 ad
 ad
 aq
-az
+SB
 aM
 aW
 az
@@ -1113,7 +1109,7 @@ ab
 ab
 ad
 ai
-al
+bB
 ad
 ad
 ad

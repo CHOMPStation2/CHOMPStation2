@@ -17,15 +17,17 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/post_mmi_setup()
 	if(istype(mmi, /obj/item/device/mmi/inert/ai_remote))
 		make_shell()
-		playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 0)
+		playsound(src, 'sound/machines/twobeep.ogg', 50, 0)
 	else
-		playsound(loc, 'sound/voice/liveagain.ogg', 75, 1)
+		playsound(src, 'sound/voice/liveagain.ogg', 75, 1)
 	return
 
 /mob/living/silicon/robot/proc/make_shell()
 	shell = TRUE
 	braintype = "AI Shell"
 	SetName("[modtype] AI Shell [num2text(ident)]")
+	rbPDA = new /obj/item/device/pda/ai/shell(src)
+	setup_PDA()
 	GLOB.available_ai_shells |= src
 	if(!QDELETED(camera))
 		camera.c_tag = real_name	//update the camera name too
@@ -69,14 +71,11 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	// Languages and comms.
 	languages = AI.languages.Copy()
 	speech_synthesizer_langs = AI.speech_synthesizer_langs.Copy()
-	//VOREStation Edit Start
-	if(radio && AI.aiRadio && module) //AI keeps all channels, including Syndie if it is an Infiltrator.
+	if(radio && AI.aiRadio) //AI keeps all channels, including Syndie if it is an Infiltrator.
 //		if(AI.radio.syndie)
 //			radio.make_syndie()
 		radio.subspace_transmission = TRUE
-		module.channels = AI.aiRadio.channels
-		radio.recalculateChannels()
-	//VOREStation Edit End
+		radio.channels = AI.aiRadio.channels
 
 // Called after the AI transfers over.
 /mob/living/silicon/robot/proc/post_deploy()
@@ -97,8 +96,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	mainframe.deployed_shell = null
 	SetName("[modtype] AI Shell [num2text(ident)]")
 //	undeployment_action.Remove(src)
-	if(radio && module) //Return radio to normal	//VOREStation Edit
-		module.channels = initial(module.channels)	//VOREStation Edit
+	if(radio) //Return radio to normal
 		radio.recalculateChannels()
 	if(!QDELETED(camera))
 		camera.c_tag = real_name	//update the camera name too

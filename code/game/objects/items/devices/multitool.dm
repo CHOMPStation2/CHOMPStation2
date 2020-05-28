@@ -51,10 +51,10 @@
 	return ..()
 
 /obj/item/device/multitool/proc/mode_switch(mob/living/user)
-	if(++mode_index > modes.len) mode_index = 1
+	if(mode_index + 1 > modes.len) mode_index = 1
 
 	else
-		mode_index++
+		mode_index += 1
 
 	toolmode = modes[mode_index]
 	to_chat(user,"<span class='notice'>\The [src] is now set to [toolmode].</span>")
@@ -62,6 +62,9 @@
 	accepting_refs = (toolmode == MULTITOOL_MODE_INTCIRCUITS)
 
 	return
+
+/obj/item/device/multitool/is_multitool()
+	return TRUE
 
 /obj/item/device/multitool/cyborg
 	name = "multitool"

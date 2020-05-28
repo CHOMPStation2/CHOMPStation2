@@ -13,6 +13,8 @@
 	patrol_speed = 2
 	target_speed = 3
 
+	density = 1
+
 	var/default_icon_state = "secbot"
 	var/idcheck = FALSE // If true, arrests for having weapons without authorization.
 	var/check_records = FALSE // If true, arrests people without a record.
@@ -53,6 +55,8 @@
 	name = "Officer Beepsky"
 	desc = "It's Officer Beep O'sky! Powered by a potato and a shot of whiskey."
 	will_patrol = TRUE
+	maxHealth = 130
+	health = 130
 
 /mob/living/bot/secbot/slime
 	name = "Slime Securitron"
@@ -70,6 +74,8 @@
 /mob/living/bot/secbot/slime/slimesky
 	name = "Doctor Slimesky"
 	desc = "An old friend of Officer Beep O'sky.  He prescribes beatings to rowdy slimes so that real doctors don't need to treat the xenobiologists."
+	maxHealth = 130
+	health = 130
 
 /mob/living/bot/secbot/update_icons()
 	if(on && busy)
@@ -166,7 +172,7 @@
 		return
 
 	if(!target)
-		playsound(src.loc, pick(threat_found_sounds), 50)
+		playsound(src, pick(threat_found_sounds), 50)
 		global_announcer.autosay("[src] was attacked by a hostile <b>[target_name(attacker)]</b> in <b>[get_area(src)]</b>.", "[src]", "Security")
 	target = attacker
 	attacked = TRUE
@@ -177,7 +183,7 @@
 	if(declare_arrests)
 		global_announcer.autosay("[src] is [arrest_type ? "detaining" : "arresting"] a level [threat] suspect <b>[suspect_name]</b> in <b>[get_area(src)]</b>.", "[src]", "Security")
 	say("Down on the floor, [suspect_name]! You have [SECBOT_WAIT_TIME*2] seconds to comply.")
-	playsound(src.loc, pick(preparing_arrest_sounds), 50)
+	playsound(src, pick(preparing_arrest_sounds), 50)
 	// Register to be told when the target moves
 	GLOB.moved_event.register(target, src, /mob/living/bot/secbot/proc/target_moved)
 
@@ -215,7 +221,7 @@
 			awaiting_surrender = 0
 			say("Level [threat] infraction alert!")
 			custom_emote(1, "points at [M.name]!")
-			playsound(src.loc, pick(threat_found_sounds), 50)
+			playsound(src, pick(threat_found_sounds), 50)
 			return
 
 /mob/living/bot/secbot/handleAdjacentTarget()
@@ -233,15 +239,41 @@
 			global_announcer.autosay("[src] is [action] a level [threat] [action != "fighting" ? "suspect" : "threat"] <b>[target_name(target)]</b> in <b>[get_area(src)]</b>.", "[src]", "Security")
 		UnarmedAttack(target)
 
+/mob/living/bot/secbot/handlePanic()	// Speed modification based on alert level.
+	. = 0
+	switch(get_security_level())
+		if("green")
+			. = 0
+
+		if("yellow")
+			. = 0
+
+		if("violet")
+			. = 0
+
+		if("orange")
+			. = 0
+
+		if("blue")
+			. = 1
+
+		if("red")
+			. = 2
+
+		if("delta")
+			. = 2
+
+	return .
+
 // So Beepsky talks while beating up simple mobs.
 /mob/living/bot/secbot/proc/insult(var/mob/living/L)
 	if(can_next_insult > world.time)
 		return
 	if(threat >= 10)
-		playsound(src.loc, 'sound/voice/binsult.ogg', 75)
+		playsound(src, 'sound/voice/binsult.ogg', 75)
 		can_next_insult = world.time + 20 SECONDS
 	else
-		playsound(src.loc, pick(fighting_sounds), 75)
+		playsound(src, pick(fighting_sounds), 75)
 		can_next_insult = world.time + 5 SECONDS
 
 
@@ -260,7 +292,7 @@
 			cuff = FALSE
 		if(!cuff)
 			H.stun_effect_act(0, stun_strength, null)
-			playsound(loc, 'sound/weapons/Egloves.ogg', 50, 1, -1)
+			playsound(src, 'sound/weapons/Egloves.ogg', 50, 1, -1)
 			do_attack_animation(H)
 			busy = TRUE
 			update_icons()
@@ -270,7 +302,7 @@
 			visible_message("<span class='warning'>\The [H] was prodded by \the [src] with a stun baton!</span>")
 			insult(H)
 		else
-			playsound(loc, 'sound/weapons/handcuffs.ogg', 30, 1, -2)
+			playsound(src, 'sound/weapons/handcuffs.ogg', 30, 1, -2)
 			visible_message("<span class='warning'>\The [src] is trying to put handcuffs on \the [H]!</span>")
 			busy = TRUE
 			if(do_mob(src, H, 60))
@@ -279,13 +311,13 @@
 						H.handcuffed = new /obj/item/weapon/handcuffs/cable(H) // Better to be cable cuffed than stun-locked
 					else
 						H.handcuffed = new /obj/item/weapon/handcuffs(H)
-					H.update_inv_handcuffed()
+					H.update_handcuffed()
 			busy = FALSE
 	else if(istype(M, /mob/living))
 		var/mob/living/L = M
 		L.adjustBruteLoss(xeno_harm_strength)
 		do_attack_animation(M)
-		playsound(loc, "swing_hit", 50, 1, -1)
+		playsound(src, "swing_hit", 50, 1, -1)
 		busy = TRUE
 		update_icons()
 		spawn(2)
@@ -354,7 +386,7 @@
 		qdel(S)
 		var/obj/item/weapon/secbot_assembly/A = new /obj/item/weapon/secbot_assembly
 		user.put_in_hands(A)
-		user << "You add the signaler to the helmet."
+		to_chat(user, "You add the signaler to the helmet.")
 		user.drop_from_inventory(src)
 		qdel(src)
 	else

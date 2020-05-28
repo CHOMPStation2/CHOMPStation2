@@ -5,14 +5,22 @@
 // Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
 /obj/machinery/telecomms/relay/preset/cryogaia/basement_1
 	id = "Base Relay 1"
+	listening_level = Z_LEVEL_CRYOGAIA_LOWER
 	autolinkers = list("l_relay")
 
 /obj/machinery/telecomms/relay/preset/cryogaia/basement_2
 	id = "Mining Relay"
+	listening_level = Z_LEVEL_CRYOGAIA_MINE
 	autolinkers = list("m_relay")
+
+/obj/machinery/telecomms/relay/preset/cryogaia/residential
+	id = "Residential Relay"
+	listening_level = Z_LEVEL_CRYOGAIA_RESIDENTIAL
+	autolinkers = list("res_relay")
 
 /obj/machinery/telecomms/relay/preset/cryogaia/main
 	id = "Main Complex Relay"
+	listening_level =Z_LEVEL_CRYOGAIA_MAIN
 	autolinkers = list("s_relay")
 
 
@@ -21,7 +29,7 @@
 	network = "tcommsat"
 	autolinkers = list("hub", "relay", "c_relay", "s_relay", "m_relay", "r_relay", "science", "medical",
 	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay","explorer", "unused" ,
-	"receiverA", "broadcasterA", "l_relay") //VOREStation Edit - Added "hb_relay"
+	"receiverA", "broadcasterA", "l_relay", "res_relay") //VOREStation Edit - Added "hb_relay"
 
 
 /obj/machinery/telecomms/receiver/preset_right/cryogaia
@@ -58,6 +66,6 @@
 	name = "pre-linked multitool (tether hub)"
 	desc = "This multitool has already been linked to the Tether telecomms hub and can be used to configure one (1) relay."
 
-/obj/item/device/multitool/cryogaia_buffered/initialize()
+/obj/item/device/multitool/cryogaia_buffered/Initialize()
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/cryogaia)

@@ -14,6 +14,8 @@
 	light_range = 2
 	light_power = 0.5
 	light_color = "#FF0D00"
+	hitsound = 'sound/weapons/sear.ogg'
+	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
 
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	tracer_type = /obj/effect/projectile/tracer/laser
@@ -80,6 +82,19 @@
 	fire_sound = 'sound/weapons/eluger.ogg'
 	damage = 25
 	armor_penetration = 50
+	light_color = "#00CC33"
+
+	muzzle_type = /obj/effect/projectile/muzzle/xray
+	tracer_type = /obj/effect/projectile/tracer/xray
+	impact_type = /obj/effect/projectile/impact/xray
+
+/obj/item/projectile/beam/gamma
+	name = "gamma beam"
+	icon_state = "xray"
+	fire_sound = 'sound/weapons/eluger.ogg'
+	damage = 10
+	armor_penetration = 90
+	irradiate = 20
 	light_color = "#00CC33"
 
 	muzzle_type = /obj/effect/projectile/muzzle/xray
@@ -198,6 +213,7 @@
 	agony = 40
 	damage_type = HALLOSS
 	light_color = "#FFFFFF"
+	hitsound = 'sound/weapons/zapbang.ogg'
 
 	combustion = FALSE
 
@@ -215,6 +231,23 @@
 	icon_state = "stun"
 	agony = 30
 
+/obj/item/projectile/beam/stun/disabler
+	muzzle_type = /obj/effect/projectile/muzzle/laser_omni
+	tracer_type = /obj/effect/projectile/tracer/laser_omni
+	impact_type = /obj/effect/projectile/impact/laser_omni
+
+/obj/item/projectile/beam/stun/disabler/on_hit(atom/target, blocked = 0, def_zone)
+	. = ..(target, blocked, def_zone)
+
+	if(. && istype(target, /mob/living/silicon/robot) && prob(agony))
+		var/mob/living/silicon/robot/R = target
+		var/drainamt = agony * (rand(5, 15) / 10)
+		R.drain_power(0, 0, drainamt)
+		if(istype(firer, /mob/living/silicon/robot)) // Mischevious sappers, the swarm drones are.
+			var/mob/living/silicon/robot/A = firer
+			if(A.cell)
+				A.cell.give(drainamt * 2)
+
 /obj/item/projectile/beam/shock
 	name = "shock beam"
 	icon_state = "lightning"
@@ -227,3 +260,4 @@
 	damage = 30
 	agony = 15
 	eyeblur = 2
+	hitsound = 'sound/weapons/zapbang.ogg'

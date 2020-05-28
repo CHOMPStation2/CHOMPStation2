@@ -6,6 +6,7 @@ var/list/mining_overlay_cache = list()
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock-dark"
 	density = 1
+	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
 
 /turf/unsimulated/mineral/ice
 	name = "Ice wall"
@@ -61,7 +62,8 @@ var/list/mining_overlay_cache = list()
 		"carbon" = /obj/item/weapon/ore/coal,
 		"verdantium" = /obj/item/weapon/ore/verdantium,
 		"marble" = /obj/item/weapon/ore/marble,
-		"lead" = /obj/item/weapon/ore/lead
+		"lead" = /obj/item/weapon/ore/lead,
+		"rutile" = /obj/item/weapon/ore/rutile //VOREStation Add
 	)
 
 	has_resources = 1
@@ -132,15 +134,6 @@ turf/simulated/mineral/floor/light_corner
 		if(air_master)
 			air_master.mark_for_update(src)
 
-/turf/simulated/mineral/Entered(atom/movable/M as mob|obj)
-	. = ..()
-	if(istype(M,/mob/living/silicon/robot))
-		var/mob/living/silicon/robot/R = M
-		if(R.module)
-			for(var/obj/item/weapon/storage/bag/ore/O in list(R.module_state_1, R.module_state_2, R.module_state_3))
-				attackby(O, R)
-				return
-
 /turf/simulated/mineral/proc/get_cached_border(var/cache_id, var/direction, var/icon_file, var/icon_state, var/offset = 32)
 	//Cache miss
 	if(!mining_overlay_cache["[cache_id]_[direction]"])
@@ -170,6 +163,8 @@ turf/simulated/mineral/floor/light_corner
 	if(random_icon)
 		dir = pick(alldirs)
 		. = INITIALIZE_HINT_LATELOAD
+	var/decl/flooring/F = get_flooring_data(/decl/flooring/sand)
+	footstep_sounds = F?.footstep_sounds
 
 /turf/simulated/mineral/LateInitialize()
 	if(density && mineral)
@@ -228,6 +223,9 @@ turf/simulated/mineral/floor/light_corner
 			for(var/direction in alldirs)
 				if(istype(get_step(src, direction), /turf/simulated/mineral))
 					var/turf/simulated/mineral/M = get_step(src, direction)
+					M.update_icon()
+				if(istype(get_step(src, direction), /turf/simulated/wall/solidrock))
+					var/turf/simulated/wall/solidrock/M = get_step(src, direction)
 					M.update_icon()
 
 /turf/simulated/mineral/ex_act(severity)
@@ -339,7 +337,7 @@ turf/simulated/mineral/floor/light_corner
 				return
 
 			to_chat(user, "<span class='notice'>You start digging.</span>")
-			playsound(user.loc, 'sound/effects/rustle1.ogg', 50, 1)
+			playsound(user, 'sound/effects/rustle1.ogg', 50, 1)
 
 			if(!do_after(user,30)) return //YAWN change. 30 from 40
 
@@ -433,7 +431,7 @@ turf/simulated/mineral/floor/light_corner
 				var/datum/find/F = finds[1]
 				if(newDepth > F.excavation_required) // Digging too deep can break the item. At least you won't summon a Balrog (probably)
 					fail_message = ". <b>[pick("There is a crunching noise","[W] collides with some different rock","Part of the rock face crumbles away","Something breaks under [W]")]</b>"
-				wreckfinds(P.destroy_artefacts)
+					wreckfinds(P.destroy_artefacts)
 			to_chat(user, "<span class='notice'>You start [P.drill_verb][fail_message].</span>")
 
 			if(do_after(user,P.digspeed))
@@ -582,7 +580,7 @@ turf/simulated/mineral/floor/light_corner
 				M.flash_eyes()
 				if(prob(50))
 					M.Stun(5)
-			radiation_repository.flat_radiate(src, 25, 100)
+			SSradiation.flat_radiate(src, 25, 100)
 			if(prob(25))
 				excavate_find(prob(5), finds[1])
 	else if(rand(1,500) == 1)
@@ -652,10 +650,10 @@ turf/simulated/mineral/floor/light_corner
 
 	var/mineral_name
 	if(rare_ore)
-		mineral_name = pickweight(list("marble" = 5, "uranium" = 10, "platinum" = 10, "hematite" = 20, "carbon" = 20, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 5, "verdantium" = 1))
+		mineral_name = pickweight(list("marble" = 5, "uranium" = 10, "platinum" = 10, "hematite" = 20, "carbon" = 20, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 5, "verdantium" = 1, "rutile" = 4)) //VOREStation Edit
 
 	else
-		mineral_name = pickweight(list("marble" = 3, "uranium" = 10, "platinum" = 10, "hematite" = 70, "carbon" = 70, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 2, "verdantium" = 1))
+		mineral_name = pickweight(list("marble" = 3, "uranium" = 10, "platinum" = 10, "hematite" = 70, "carbon" = 70, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 2, "verdantium" = 1, "rutile" = 4)) //VOREStation Edit
 
 	if(mineral_name && (mineral_name in ore_data))
 		mineral = ore_data[mineral_name]

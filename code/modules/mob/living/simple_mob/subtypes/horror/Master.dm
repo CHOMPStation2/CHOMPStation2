@@ -8,6 +8,7 @@
 	icon_rest = "Helix"
 	faction = "horror"
 	icon = 'icons/mob/horror_show/master.dmi'
+	vis_height = 64
 	icon_gib = "generic_gib"
 	anchored = 1
 
@@ -23,7 +24,7 @@
 	response_help = "pets the"
 	response_disarm = "bops the"
 	response_harm = "hits the"
-	attacktext = list("smushes")
+	attacktext = list("smushed")
 	friendly = list("nuzzles", "boops", "bumps against", "leans on")
 
 

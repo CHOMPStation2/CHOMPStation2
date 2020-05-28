@@ -1,6 +1,7 @@
 /datum/category_item/player_setup_item/general/language
 	name = "Language"
 	sort_order = 2
+	var/static/list/forbidden_prefixes = list(";", ":", ".", "!", "*", "^", "-")
 
 /datum/category_item/player_setup_item/general/language/load_character(var/savefile/S)
 	S["language"]			>> pref.alternate_languages
@@ -13,15 +14,18 @@
 /datum/category_item/player_setup_item/general/language/sanitize_character()
 	if(!islist(pref.alternate_languages))	pref.alternate_languages = list()
 	if(pref.species)
-		var/datum/species/S = all_species[pref.species]
+		var/datum/species/S = GLOB.all_species[pref.species]
 		if(S && pref.alternate_languages.len > S.num_alternate_languages)
 			pref.alternate_languages.len = S.num_alternate_languages // Truncate to allowed length
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
 		pref.language_prefixes = config.language_prefixes.Copy()
+	for(var/prefix in pref.language_prefixes)
+		if(prefix in forbidden_prefixes)
+			pref.language_prefixes -= prefix
 
 /datum/category_item/player_setup_item/general/language/content()
 	. += "<b>Languages</b><br>"
-	var/datum/species/S = all_species[pref.species]
+	var/datum/species/S = GLOB.all_species[pref.species]
 	if(S.language)
 		. += "- [S.language]<br>"
 	if(S.default_language && S.default_language != S.language)
@@ -46,13 +50,13 @@
 		pref.alternate_languages.Cut(index, index+1)
 		return TOPIC_REFRESH
 	else if(href_list["add_language"])
-		var/datum/species/S = all_species[pref.species]
+		var/datum/species/S = GLOB.all_species[pref.species]
 		if(pref.alternate_languages.len >= S.num_alternate_languages)
 			alert(user, "You have already selected the maximum number of alternate languages for this species!")
 		else
 			var/list/available_languages = S.secondary_langs.Copy()
-			for(var/L in all_languages)
-				var/datum/language/lang = all_languages[L]
+			for(var/L in GLOB.all_languages)
+				var/datum/language/lang = GLOB.all_languages[L]
 				if(!(lang.flags & RESTRICTED) && (is_lang_whitelisted(user, lang)))
 					available_languages |= L
 
@@ -79,7 +83,7 @@
 					alert(user, "Only single characters allowed.", "Error", "Ok")
 				else if(char in list(";", ":", "."))
 					alert(user, "Radio character. Rejected.", "Error", "Ok")
-				else if(char in list("!","*", "^"))
+				else if(char in list("!","*","^","-"))
 					alert(user, "Say character. Rejected.", "Error", "Ok")
 				else if(contains_az09(char))
 					alert(user, "Non-special character. Rejected.", "Error", "Ok")

@@ -52,7 +52,7 @@
 				var/amount = rand(2,6)
 				var/quantity = rand(10,50)
 				var/list/possible_spawns = list()
-				for(var/bar_type in typesof(/obj/item/stack/material) - /obj/item/stack/material - /obj/item/stack/material/animalhide - typesof(/obj/item/stack/material/cyborg))
+				for(var/bar_type in typesof(/obj/item/stack/material) - /obj/item/stack/material - /obj/item/stack/animalhide - typesof(/obj/item/stack/material/cyborg))
 					possible_spawns += bar_type
 
 				var/bar_type = pick(possible_spawns)
@@ -381,6 +381,10 @@
 
 /obj/structure/symbol/gu
 	desc = "It looks like an unfolded square box from the top with a cross on it."
+	icon_state = "gu"
+
+/obj/structure/symbol/clock
+	desc = "It looks like some sort of gear."
 	icon_state = "gu"
 
 /obj/structure/symbol/lo

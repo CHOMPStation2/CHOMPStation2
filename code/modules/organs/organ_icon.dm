@@ -18,7 +18,7 @@ var/global/list/limb_icon_cache = list()
 	h_col = null
 	if(robotic >= ORGAN_ROBOT)
 		var/datum/robolimb/franchise = all_robolimbs[model]
-		if(!(franchise && franchise.skin_tone))
+		if(!(franchise && franchise.skin_tone) && !(franchise && franchise.skin_color))
 			if(human.synth_color)
 				s_col = list(human.r_synth, human.g_synth, human.b_synth)
 			return
@@ -36,7 +36,7 @@ var/global/list/limb_icon_cache = list()
 	h_col = null
 	if(robotic >= ORGAN_ROBOT)
 		var/datum/robolimb/franchise = all_robolimbs[model]
-		if(!(franchise && franchise.skin_tone))
+		if(!(franchise && franchise.skin_tone) && !(franchise && franchise.skin_color))
 			return
 	if(!isnull(dna.GetUIValue(DNA_UI_SKIN_TONE)) && (species.appearance_flags & HAS_SKIN_TONE))
 		s_tone = dna.GetUIValue(DNA_UI_SKIN_TONE)
@@ -46,8 +46,10 @@ var/global/list/limb_icon_cache = list()
 
 /obj/item/organ/external/head/sync_colour_to_human(var/mob/living/carbon/human/human)
 	..()
-	var/obj/item/organ/internal/eyes/eyes = owner.internal_organs_by_name[O_EYES]
-	if(eyes) eyes.update_colour()
+
+	if(owner)
+		var/obj/item/organ/internal/eyes/eyes = owner.internal_organs_by_name[O_EYES]
+		if(eyes) eyes.update_colour()
 
 /obj/item/organ/external/head/get_icon()
 	..()
@@ -69,7 +71,8 @@ var/global/list/limb_icon_cache = list()
 		if(should_have_eyes)
 			//And we have them
 			if(eyes)
-				eyes_icon.Blend(rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3]), ICON_ADD)
+				if(has_eye_color)
+					eyes_icon.Blend(rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3]), ICON_ADD)
 			//They're gone!
 			else
 				eyes_icon.Blend(rgb(128,0,0), ICON_ADD)
@@ -128,9 +131,9 @@ var/global/list/limb_icon_cache = list()
 
 /obj/item/organ/external/proc/get_icon(var/skeletal)
 
-	var/gender = "f"
-	if(owner && owner.gender == MALE)
-		gender = "m"
+	var/gender = "m"
+	if(owner && owner.gender == FEMALE)
+		gender = "f"
 
 	icon_cache_key = "[icon_name]_[species ? species.get_bodytype() : SPECIES_HUMAN]" //VOREStation Edit
 

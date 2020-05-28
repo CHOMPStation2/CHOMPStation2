@@ -18,15 +18,15 @@
 
 	switch(hardsuit_click_mode)
 		if(MIDDLE_CLICK)
-			src << "Hardsuit activation mode set to middle-click."
+			to_chat(src, "Hardsuit activation mode set to middle-click.")
 		if(ALT_CLICK)
-			src << "Hardsuit activation mode set to alt-click."
+			to_chat(src, "Hardsuit activation mode set to alt-click.")
 		if(CTRL_CLICK)
-			src << "Hardsuit activation mode set to control-click."
+			to_chat(src, "Hardsuit activation mode set to control-click.")
 		else
 			// should never get here, but just in case:
 			soft_assert(0, "Bad hardsuit click mode: [hardsuit_click_mode] - expected 0 to [MAX_HARDSUIT_CLICK_MODE]")
-			src << "Somehow you bugged the system. Setting your hardsuit mode to middle-click."
+			to_chat(src, "Somehow you bugged the system. Setting your hardsuit mode to middle-click.")
 			hardsuit_click_mode = MIDDLE_CLICK
 
 /mob/living/MiddleClickOn(atom/A)
@@ -63,7 +63,7 @@
 	return loc == card
 
 /mob/living/proc/HardsuitClickOn(var/atom/A, var/alert_ai = 0)
-	if(!can_use_rig() || !canClick())
+	if(!can_use_rig())
 		return 0
 	var/obj/item/weapon/rig/rig = get_rig()
 	if(istype(rig) && !rig.offline && rig.selected_module)

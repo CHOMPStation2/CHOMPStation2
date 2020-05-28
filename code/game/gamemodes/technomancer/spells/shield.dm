@@ -46,7 +46,7 @@
 		damage_to_energy_cost *= 0.50
 
 	if(!pay_energy(damage_to_energy_cost))
-		owner << "<span class='danger'>Your shield fades due to lack of energy!</span>"
+		to_chat(owner, "<span class='danger'>Your shield fades due to lack of energy!</span>")
 		qdel(src)
 		return 0
 
@@ -55,7 +55,7 @@
 	if(check_shield_arc(user, bad_arc, damage_source, attacker))
 		user.visible_message("<span class='danger'>\The [user]'s [src] blocks [attack_text]!</span>")
 		spark_system.start()
-		playsound(user.loc, 'sound/weapons/blade1.ogg', 50, 1)
+		playsound(src, 'sound/weapons/blade1.ogg', 50, 1)
 		adjust_instability(2)
 		return 1
 	return 0

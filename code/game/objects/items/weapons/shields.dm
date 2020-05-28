@@ -94,7 +94,7 @@
 					return 0
 			//Otherwise, if we're here, we're gonna stop the attack entirely.
 			user.visible_message("<span class='danger'>\The [user] blocks [attack_text] with \the [src]!</span>")
-			playsound(user.loc, 'sound/weapons/Genhit.ogg', 50, 1)
+			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
 			return 1
 	return 0
 
@@ -102,7 +102,7 @@
 	if(istype(W, /obj/item/weapon/melee/baton))
 		if(cooldown < world.time - 25)
 			user.visible_message("<span class='warning'>[user] bashes [src] with [W]!</span>")
-			playsound(user.loc, 'sound/effects/shieldbash.ogg', 50, 1)
+			playsound(src, 'sound/effects/shieldbash.ogg', 50, 1)
 			cooldown = world.time
 	else
 		..()
@@ -115,7 +115,8 @@
 	name = "energy combat shield"
 	desc = "A shield capable of stopping most projectile and melee attacks. It can be retracted, expanded, and stored anywhere."
 	icon = 'icons/obj/weapons.dmi'
-	icon_state = "eshield0" // eshield1 for expanded
+	icon_state = "eshield"
+	item_state = "eshield"
 	slot_flags = SLOT_EARS
 	flags = NOCONDUCT
 	force = 3.0
@@ -123,9 +124,16 @@
 	throw_speed = 1
 	throw_range = 4
 	w_class = ITEMSIZE_SMALL
+	var/lrange = 1.5
+	var/lpower = 1.5
+	var/lcolor = "#006AFF"
 	origin_tech = list(TECH_MATERIAL = 4, TECH_MAGNET = 3, TECH_ILLEGAL = 4)
 	attack_verb = list("shoved", "bashed")
 	var/active = 0
+	item_icons = list(
+			slot_l_hand_str = 'icons/mob/items/lefthand_melee.dmi',
+			slot_r_hand_str = 'icons/mob/items/righthand_melee.dmi',
+			)
 
 /obj/item/weapon/shield/energy/handle_shield(mob/user)
 	if(!active)
@@ -136,7 +144,7 @@
 		var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 		spark_system.set_up(5, 0, user.loc)
 		spark_system.start()
-		playsound(user.loc, 'sound/weapons/blade1.ogg', 50, 1)
+		playsound(src, 'sound/weapons/blade1.ogg', 50, 1)
 
 /obj/item/weapon/shield/energy/get_block_chance(mob/user, var/damage, atom/damage_source = null, mob/attacker = null)
 	if(istype(damage_source, /obj/item/projectile))
@@ -147,7 +155,7 @@
 
 /obj/item/weapon/shield/energy/attack_self(mob/living/user as mob)
 	if ((CLUMSY in user.mutations) && prob(50))
-		user << "<span class='warning'>You beat yourself in the head with [src].</span>"
+		to_chat(user, "<span class='warning'>You beat yourself in the head with [src].</span>")
 		user.take_organ_damage(5)
 	active = !active
 	if (active)
@@ -155,16 +163,16 @@
 		update_icon()
 		w_class = ITEMSIZE_LARGE
 		slot_flags = null
-		playsound(user, 'sound/weapons/saberon.ogg', 50, 1)
-		user << "<span class='notice'>\The [src] is now active.</span>"
+		playsound(src, 'sound/weapons/saberon.ogg', 50, 1)
+		to_chat(user, "<span class='notice'>\The [src] is now active.</span>")
 
 	else
 		force = 3
 		update_icon()
 		w_class = ITEMSIZE_TINY
 		slot_flags = SLOT_EARS
-		playsound(user, 'sound/weapons/saberoff.ogg', 50, 1)
-		user << "<span class='notice'>\The [src] can now be concealed.</span>"
+		playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
+		to_chat(user, "<span class='notice'>\The [src] can now be concealed.</span>")
 
 	if(istype(user,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
@@ -175,11 +183,40 @@
 	return
 
 /obj/item/weapon/shield/energy/update_icon()
-	icon_state = "eshield[active]"
+	var/mutable_appearance/blade_overlay = mutable_appearance(icon, "[icon_state]_blade")
+	if(lcolor)
+		blade_overlay.color = lcolor
+		color = lcolor
+	cut_overlays()		//So that it doesn't keep stacking overlays non-stop on top of each other
 	if(active)
-		set_light(1.5, 1.5, "#006AFF")
+		add_overlay(blade_overlay)
+		item_state = "[icon_state]_blade"
+		set_light(lrange, lpower, lcolor)
 	else
+		color = "FFFFFF"
 		set_light(0)
+		item_state = "[icon_state]"
+
+	if(istype(usr,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = usr
+		H.update_inv_l_hand()
+		H.update_inv_r_hand()
+
+/obj/item/weapon/shield/energy/AltClick(mob/living/user)
+	if(!in_range(src, user))	//Basic checks to prevent abuse
+		return
+	if(user.incapacitated() || !istype(user))
+		to_chat(user, "<span class='warning'>You can't do that right now!</span>")
+		return
+	if(alert("Are you sure you want to recolor your shield?", "Confirm Recolor", "Yes", "No") == "Yes")
+		var/energy_color_input = input(usr,"","Choose Energy Color",lcolor) as color|null
+		if(energy_color_input)
+			lcolor = sanitize_hexcolor(energy_color_input)
+		update_icon()
+
+/obj/item/weapon/shield/energy/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Alt-click to recolor it.</span>"
 
 /obj/item/weapon/shield/riot/tele
 	name = "telescopic shield"
@@ -203,7 +240,7 @@
 /obj/item/weapon/shield/riot/tele/attack_self(mob/living/user)
 	active = !active
 	icon_state = "teleriot[active]"
-	playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
+	playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 
 	if(active)
 		force = 8
@@ -211,14 +248,14 @@
 		throw_speed = 2
 		w_class = ITEMSIZE_LARGE
 		slot_flags = SLOT_BACK
-		user << "<span class='notice'>You extend \the [src].</span>"
+		to_chat(user, "<span class='notice'>You extend \the [src].</span>")
 	else
 		force = 3
 		throwforce = 3
 		throw_speed = 3
 		w_class = ITEMSIZE_NORMAL
 		slot_flags = null
-		user << "<span class='notice'>[src] can now be concealed.</span>"
+		to_chat(user, "<span class='notice'>[src] can now be concealed.</span>")
 
 	if(istype(user,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user

@@ -9,14 +9,14 @@
 	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.6
 
-/obj/item/clothing/suit/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/suit/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)
 	if(..()) //This will only run if no other problems occured when equiping.
 		for(var/obj/item/clothing/I in list(H.gloves, H.shoes))
 			if(I && (src.body_parts_covered & ARMS && I.body_parts_covered & ARMS) )
-				H << "<span class='warning'>You can't wear \the [src] with \the [I], it's in the way.</span>"
+				to_chat(H, "<span class='warning'>You can't wear \the [src] with \the [I], it's in the way.</span>")
 				return 0
 			if(I && (src.body_parts_covered & LEGS && I.body_parts_covered & LEGS) )
-				H << "<span class='warning'>You can't wear \the [src] with \the [I], it's in the way.</span>"
+				to_chat(H, "<span class='warning'>You can't wear \the [src] with \the [I], it's in the way.</span>")
 				return 0
 		return 1
 
@@ -189,7 +189,7 @@
 		var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 		spark_system.set_up(5, 0, user.loc)
 		spark_system.start()
-		playsound(user.loc, "sparks", 50, 1)
+		playsound(src, "sparks", 50, 1)
 
 		user.loc = picked
 		return PROJECTILE_FORCE_MISS
@@ -198,10 +198,10 @@
 /obj/item/clothing/suit/armor/reactive/attack_self(mob/user as mob)
 	active = !( active )
 	if (active)
-		user << "<font color='blue'>The reactive armor is now active.</font>"
+		to_chat(user, "<font color='blue'>The reactive armor is now active.</font>")
 		icon_state = "reactive"
 	else
-		user << "<font color='blue'>The reactive armor is now inactive.</font>"
+		to_chat(user, "<font color='blue'>The reactive armor is now inactive.</font>")
 		icon_state = "reactiveoff"
 		add_fingerprint(user)
 	return
@@ -520,6 +520,22 @@
 		|ACCESSORY_SLOT_ARMOR_M)
 	blood_overlay_type = "armor"
 
+/obj/item/clothing/suit/armor/pcarrier/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)
+	if(..()) //This will only run if no other problems occured when equiping.
+		if(H.gloves)
+			if(H.gloves.body_parts_covered & ARMS)
+				for(var/obj/item/clothing/accessory/A in src)
+					if(A.body_parts_covered & ARMS)
+						to_chat(H, "<span class='warning'>You can't wear \the [A] with \the [H.gloves], they're in the way.</span>")
+						return 0
+		if(H.shoes)
+			if(H.shoes.body_parts_covered & LEGS)
+				for(var/obj/item/clothing/accessory/A in src)
+					if(A.body_parts_covered & LEGS)
+						to_chat(H, "<span class='warning'>You can't wear \the [A] with \the [H.shoes], they're in the way.</span>")
+						return 0
+		return 1
+
 /obj/item/clothing/suit/armor/pcarrier/light
 	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate)
 
@@ -548,6 +564,11 @@
 	name = "blue plate carrier"
 	desc = "A lightweight blue plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
 	icon_state = "pcarrier_blue"
+
+/obj/item/clothing/suit/armor/pcarrier/press
+	name = "light blue plate carrier"
+	desc = "A lightweight light blue plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
+	icon_state = "pcarrier_press"
 
 /obj/item/clothing/suit/armor/pcarrier/blue/sol
 	name = "peacekeeper plate carrier"

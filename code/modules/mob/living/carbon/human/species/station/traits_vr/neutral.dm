@@ -19,38 +19,50 @@
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
 	excludes = list(/datum/trait/metabolism_up, /datum/trait/metabolism_down)
 
-/datum/trait/cold_discomfort
-	name = "Hot-Preference"
+/datum/trait/hot_blood
+	name = "Hot-Blooded"
 	desc = "You are too hot at the standard 20C. 18C is more suitable. Rolling down your jumpsuit or being unclothed helps."
 	cost = 0
 	var_changes = list("heat_discomfort_level" = T0C+19)
-	excludes = list(/datum/trait/hot_discomfort, /datum/trait/cold_blood)
+	excludes = list(/datum/trait/cold_blood, /datum/trait/extreme_cold_blood)
 
 // YW Addition
+/datum/trait/alcohol_intolerance_basic
+	name = "Liver of Lilies"
+	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
+	cost = 0
+	var_changes = list("alcohol_tolerance" = 2)
+
+/datum/trait/alcohol_tolerance_basic
+	name = "Liver of Iron"
+	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr! You may wish to note this down in your medical records."
+	cost = 0
+	var_changes = list("alcohol_tolerance" = 0.75)
+
 /*
 /datum/trait/cryogenic
 	name = "Cryogenic Metabolism"
 	desc = "Your body requires near cryogenic temperatures to operate. Extremely intricate arrangements are needed for you to remain indoors. The outdoors is comfortable for you, however. WARNING: You will spawn in an atmosphere that is VERY hostile to you with no protective equipment!"
 	cost = 0
 	var_changes = list("heat_discomfort_level" = T0C)
-	excludes = list(/datum/trait/cold_discomfort,/datum/trait/hot_discomfort,/datum/trait/cold_blood)
+	excludes = list(/datum/trait/hot_blood,/datum/trait/cold_blood,/datum/trait/extreme_cold_blood)
 */
 // YW Addition End
 
-/datum/trait/hot_discomfort
-	name = "Cold-Preference"
+/datum/trait/cold_blood
+	name = "Cold-Blooded"
 	desc = "You are too cold at the standard 20C. 22C is more suitable. Wearing clothing that covers your legs and torso helps."
 	cost = 0
 	var_changes = list("cold_discomfort_level" = T0C+21)
-	excludes = list(/datum/trait/cold_discomfort, /datum/trait/cold_blood)
+	excludes = list(/datum/trait/hot_blood, /datum/trait/cold_blood)
 
 // YW Addition
-/datum/trait/cold_blood
-	name = "Cold Blooded"
+/datum/trait/extreme_cold_blood
+	name = "Extremely Cold Blooded"
 	desc = "Your body relies on the outside temperature to keep warm. Wearing warm clothing such as jackets is commonplace for you."
 	cost = 0
 	var_changes = list("cold_discomfort_level" = T0C+24)
-	excludes = list(/datum/trait/hot_discomfort, /datum/trait/cold_discomfort)
+	excludes = list(/datum/trait/hot_blood, /datum/trait/cold_blood)
 // YW Addition End
 
 /datum/trait/autohiss_unathi
@@ -136,6 +148,16 @@
 /datum/trait/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/eat_trash
+
+/datum/trait/gem_eater
+	name = "Expensive Taste"
+	desc = "You only gain nutrition from ore. There's nothing that sates the appetite better than precious gems, exotic or rare minerals and you have damn fine taste. Anything else is beneath you."
+	cost = 0
+	var_changes = list("gets_food_nutrition" = 0, "eat_ore" = 1) //The verb is given in human.dm
+
+/datum/trait/gem_eater/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/eat_ore
 
 /datum/trait/glowing_eyes
 	name = "Glowing Eyes"

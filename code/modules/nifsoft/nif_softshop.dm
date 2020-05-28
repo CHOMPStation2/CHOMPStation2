@@ -6,8 +6,6 @@
 
 	icon = 'icons/obj/machines/ar_elements.dmi'
 	icon_state = "proj"
-	icon_vend = "beacon_yes"
-	icon_deny = "beacon_no"
 
 	products = list()
 	contraband = list()
@@ -21,6 +19,10 @@
 
 /obj/machinery/vending/nifsoft_shop/Initialize()
 	. = ..()
+
+	if(wires)
+		qdel(wires)
+	wires = new /datum/wires/vending/no_contraband(src) //These wires can't be hacked for contraband.
 	entopic = new(aholder = src, aicon = icon, aicon_state = "beacon")
 
 /obj/machinery/vending/nifsoft_shop/Destroy()
@@ -72,9 +74,9 @@
 		list(premium, CAT_COIN))
 
 	for(var/current_list in all_products)
-		var/category = current_list[2]
+		var/category = current_list[CAT_HIDDEN]
 
-		for(var/entry in current_list[1])
+		for(var/entry in current_list[CAT_NORMAL])
 			var/datum/nifsoft/NS = entry
 			var/applies_to = initial(NS.applies_to)
 			var/context = ""
@@ -97,8 +99,8 @@
 
 	var/mob/living/carbon/human/H = user
 	if(!H.nif || !H.nif.stat == NIF_WORKING)
-		to_chat(H,"<span class='warning'>[src] seems unable to connect to your NIF...</span>")
-		flick(icon_deny,entopic.my_image)
+		to_chat(H, "<span class='warning'>[src] seems unable to connect to your NIF...</span>")
+		flick("[icon_state]-deny",entopic.my_image)
 		return FALSE
 
 	return ..()
@@ -112,21 +114,21 @@
 
 	if(href_list["remove_coin"] && !istype(usr,/mob/living/silicon))
 		if(!coin)
-			usr << "There is no coin in this machine."
+			to_chat(usr, "There is no coin in this machine.")
 			return
 
 		coin.forceMove(src.loc)
 		if(!usr.get_active_hand())
 			usr.put_in_hands(coin)
-		usr << "<span class='notice'>You remove \the [coin] from \the [src]</span>"
+		to_chat(usr, "<span class='notice'>You remove \the [coin] from \the [src]</span>")
 		coin = null
 		categories &= ~CAT_COIN
 
 	if((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))))
 		if((href_list["vend"]) && (vend_ready) && (!currently_vending))
 			if((!allowed(usr)) && !emagged && scan_id)	//For SECURE VENDING MACHINES YEAH
-				usr << "<span class='warning'>Access denied.</span>"	//Unless emagged of course
-				flick(icon_deny,entopic.my_image)
+				to_chat(usr, "<span class='warning'>Access denied.</span>")	//Unless emagged of course
+				flick("[icon_state]-deny",entopic.my_image)
 				return
 
 			var/key = text2num(href_list["vend"])
@@ -141,15 +143,15 @@
 			if(initial(path.access))
 				var/list/soft_access = list(initial(path.access))
 				var/list/usr_access = usr.GetAccess()
-				if(!has_access(soft_access, list(), usr_access) && !emagged)
-					usr << "<span class='warning'>You aren't authorized to buy [initial(path.name)].</span>"
-					flick(icon_deny,entopic.my_image)
+				if(scan_id && !has_access(soft_access, list(), usr_access) && !emagged)
+					to_chat(usr, "<span class='warning'>You aren't authorized to buy [initial(path.name)].</span>")
+					flick("[icon_state]-deny",entopic.my_image)
 					return
 
 			if(R.price <= 0)
 				vend(R, usr)
 			else if(istype(usr,/mob/living/silicon)) //If the item is not free, provide feedback if a synth is trying to buy something.
-				usr << "<span class='danger'>Artificial unit recognized.  Artificial units cannot complete this transaction.  Purchase canceled.</span>"
+				to_chat(usr, "<span class='danger'>Artificial unit recognized.  Artificial units cannot complete this transaction.  Purchase canceled.</span>")
 				return
 			else
 				currently_vending = R
@@ -173,8 +175,8 @@
 /obj/machinery/vending/nifsoft_shop/vend(datum/stored_item/vending_product/R, mob/user)
 	var/mob/living/carbon/human/H = user
 	if((!allowed(usr)) && !emagged && scan_id && istype(H))	//For SECURE VENDING MACHINES YEAH
-		usr << "<span class='warning'>Purchase not allowed.</span>"	//Unless emagged of course
-		flick(icon_deny,entopic.my_image)
+		to_chat(usr, "<span class='warning'>Purchase not allowed.</span>")	//Unless emagged of course
+		flick("[icon_state]-deny",entopic.my_image)
 		return
 	vend_ready = 0 //One thing at a time!!
 	status_message = "Installing..."
@@ -183,13 +185,13 @@
 
 	if(R.category & CAT_COIN)
 		if(!coin)
-			user << "<span class='notice'>You need to insert a coin to get this item.</span>"
+			to_chat(user, "<span class='notice'>You need to insert a coin to get this item.</span>")
 			return
 		if(coin.string_attached)
 			if(prob(50))
-				user << "<span class='notice'>You successfully pull the coin out before \the [src] could swallow it.</span>"
+				to_chat(user, "<span class='notice'>You successfully pull the coin out before \the [src] could swallow it.</span>")
 			else
-				user << "<span class='notice'>You weren't able to pull the coin out fast enough, the machine ate it, string and all.</span>"
+				to_chat(user, "<span class='notice'>You weren't able to pull the coin out fast enough, the machine ate it, string and all.</span>")
 				qdel(coin)
 				coin = null
 				categories &= ~CAT_COIN
@@ -207,7 +209,7 @@
 	spawn(vend_delay)
 		R.amount--
 		new R.item_path(H.nif)
-		flick(icon_vend,entopic.my_image)
+		flick("[icon_state]-vend",entopic.my_image)
 		if(has_logs)
 			do_logging(R, user, 1)
 
@@ -217,3 +219,23 @@
 		currently_vending = null
 		SSnanoui.update_uis(src)
 	return 1
+
+//Can't throw intangible software at people.
+/obj/machinery/vending/nifsoft_shop/throw_item()
+	//TODO: Make it throw disks at people with random software? That might be fun. EVEN THE ILLEGAL ONES? ;o
+	return 0
+
+/datum/wires/vending/no_contraband
+
+/datum/wires/vending/no_contraband/UpdatePulsed(index) //Can't hack for contraband, need emag.
+	if(index != VENDING_WIRE_CONTRABAND)
+		..(index)
+	else
+		return
+
+/obj/machinery/vending/nifsoft_shop/emag_act(remaining_charges, mob/user) //Yeees, YEEES! Give me that black market tech.
+	if(!emagged || !(categories & CAT_HIDDEN))
+		emagged = 1
+		categories |= CAT_HIDDEN
+		to_chat(user, "You short out [src]'s access lock & stock restrictions.")
+		return 1

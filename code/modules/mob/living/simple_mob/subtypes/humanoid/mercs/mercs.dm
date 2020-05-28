@@ -89,6 +89,11 @@
 	firing_lanes = TRUE		// But not your buddies!
 	conserve_ammo = TRUE	// And don't go wasting bullets!
 
+/datum/ai_holder/simple_mob/merc/ranged/sniper
+	vision_range = 14	// We're a person with a long-ranged gun.
+
+/datum/ai_holder/simple_mob/merc/ranged/sniper/max_range(atom/movable/AM)
+	return holder.ICheckRangedAttack(AM) ? 14 : 1
 
 ////////////////////////////////
 //			Melee
@@ -108,7 +113,7 @@
 	attack_edge = 1
 	attacktext = list("slashed")
 
-	loot_list = list(/obj/item/weapon/melee/energy/sword/red = 100, /obj/item/weapon/shield/energy = 100)
+	loot_list = list(/obj/item/weapon/melee/energy/sword = 100, /obj/item/weapon/shield/energy = 100)
 
 // They have a shield, so they try to block
 /mob/living/simple_mob/humanoid/merc/melee/sword/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -159,6 +164,8 @@
 
 	loot_list = list(/obj/item/weapon/gun/projectile/automatic/c20r = 100)
 
+	projectile_dispersion = 7
+	projectile_accuracy = -20
 	base_attack_cooldown = 5 // Two attacks a second or so.
 	reload_max = 20
 
@@ -172,6 +179,27 @@
 	base_attack_cooldown = 5 // Two attacks a second or so.
 	reload_max = 20
 
+// Rifles
+/mob/living/simple_mob/humanoid/merc/ranged/rifle
+	icon_state = "syndicateranged_rifle"
+	icon_living = "syndicateranged_rifle"
+
+	loot_list = list(/obj/item/weapon/gun/projectile/automatic/z8 = 100)
+
+	projectilesound = 'sound/weapons/Gunshot_heavy.ogg'
+	projectiletype = /obj/item/projectile/bullet/rifle/a762
+	projectile_dispersion = 8
+	projectile_accuracy = -15
+	base_attack_cooldown = 5
+	reload_max = 30
+
+/mob/living/simple_mob/humanoid/merc/ranged/rifle/mag
+	loot_list = list(/obj/item/weapon/gun/magnetic/railgun/flechette = 100)
+	projectiletype = /obj/item/projectile/bullet/magnetic/flechette
+
+	projectilesound = 'sound/weapons/rapidslice.ogg'
+	reload_max = 10
+
 // Laser Rifle
 /mob/living/simple_mob/humanoid/merc/ranged/laser
 	icon_state = "syndicateranged_laser"
@@ -181,6 +209,8 @@
 
 	loot_list = list(/obj/item/weapon/gun/energy/laser = 100)
 
+	projectile_dispersion = 5
+	projectile_accuracy = -20
 	reload_max = 10
 
 // Ion Rifle
@@ -206,8 +236,93 @@
 	reload_max = 4
 	reload_time = 1.5 SECONDS	// It's a shotgun, it takes a moment
 
+	projectile_dispersion = 8
+	projectile_accuracy = -40
 	special_attack_charges = 5
 
+// Technician, also kind of a miniboss. Carries a dartgun and manhack launcher.
+/mob/living/simple_mob/humanoid/merc/ranged/technician
+	icon_state = "syndicateranged_technician"
+	icon_living = "syndicateranged_technician"
+	projectiletype = /obj/item/projectile/fake_syringe/poison	// Toxin dart.
+	projectilesound = 'sound/weapons/Gunshot_old.ogg'
+
+	loot_list = list(/obj/item/weapon/gun/projectile/dartgun = 100,
+		/obj/item/weapon/gun/launcher/grenade = 100,
+		/obj/item/weapon/grenade/spawnergrenade/manhacks/mercenary = 50,
+		/obj/item/weapon/grenade/spawnergrenade/manhacks/mercenary = 30
+		)
+
+	reload_max = 5
+	reload_time = 1 SECOND
+
+	// Manhacks.
+	grenade_type = /obj/item/weapon/grenade/spawnergrenade/manhacks/mercenary
+
+	projectile_dispersion = 8
+	projectile_accuracy = -40
+	special_attack_charges = 5
+
+// Sniper, definitely a miniboss, based on its massive range advantage, and method of battle.
+// Creates a beam for 2 seconds, fire after another .5, then a 5 second reload.
+/mob/living/simple_mob/humanoid/merc/ranged/sniper
+	icon_state = "syndicateranged_sniper"
+	icon_living = "syndicateranged_sniper"
+	projectiletype = /obj/item/projectile/bullet/rifle/a145/highvel // Really scary bullet.
+	projectilesound = 'sound/weapons/Gunshot_cannon.ogg'
+
+	projectile_accuracy = 75
+
+	reload_max = 1
+	reload_time = 5 SECONDS
+
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/sniper
+
+	ranged_attack_delay = 2.5 SECONDS
+
+	loot_list = list(/obj/item/sniper_rifle_part/barrel = 50,
+		/obj/item/sniper_rifle_part/stock = 50,
+		/obj/item/sniper_rifle_part/trigger_group = 50,
+		/obj/item/weapon/grenade/spawnergrenade/manhacks/mercenary = 90
+		)
+
+	// Babyfrags.
+	grenade_type = /obj/item/weapon/grenade/explosive/mini
+	// Babyfrags go a long way.
+	special_attack_min_range = 6
+	special_attack_max_range = 10
+
+/mob/living/simple_mob/humanoid/merc/ranged/sniper/ranged_pre_animation(atom/A)
+	Beam(get_turf(A), icon_state = "sniper_beam", time = 2 SECONDS, maxdistance = 15)
+	. = ..()
+
+/mob/living/simple_mob/humanoid/merc/ranged/sniper/shoot_target(atom/A)
+	set waitfor = FALSE
+	setClickCooldown(get_attack_speed())
+
+	face_atom(A)
+
+	var/atom/orig_targ = A
+
+	if(ranged_attack_delay)
+		A = get_turf(orig_targ)
+		ranged_pre_animation(A)
+		handle_attack_delay(A, ranged_attack_delay) // This will sleep this proc for a bit, which is why waitfor is false.
+
+	if(needs_reload)
+		if(reload_count >= reload_max)
+			try_reload()
+			return FALSE
+
+	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	shoot(A)
+	if(casingtype)
+		new casingtype(loc)
+
+	if(ranged_attack_delay)
+		ranged_post_animation(A)
+
+	return TRUE
 
 ////////////////////////////////
 //		Space Mercs
@@ -256,6 +371,9 @@
 	max_n2 = 0
 	minbodytemp = 0
 
+	projectile_dispersion = 7
+	projectile_accuracy = -20
+
 	corpse = /obj/effect/landmark/mobcorpse/syndicatecommando
 
 /mob/living/simple_mob/humanoid/merc/ranged/space/Process_Spacemove(var/check_drift = 0)
@@ -265,24 +383,39 @@
 //			PoI Mercs
 ////////////////////////////////
 
-// None of these drop weapons, until we have a better way to balance them
+// Most likely to drop a broken weapon matching them, if it's a gun.
 /mob/living/simple_mob/humanoid/merc/melee/poi
-	loot_list = list()
+	loot_list = list(/obj/item/weapon/material/knife/tacknife/combatknife = 100)
 
 /mob/living/simple_mob/humanoid/merc/melee/sword/poi
-	loot_list = list()
+	loot_list = list(/obj/item/weapon/melee/energy/sword/color = 20,
+		/obj/item/weapon/shield/energy = 40
+		)
 
 /mob/living/simple_mob/humanoid/merc/ranged/poi
-	loot_list = list()
+	loot_list = list(/obj/random/projectile/scrapped_pistol = 100)
 
 /mob/living/simple_mob/humanoid/merc/ranged/smg/poi
-	loot_list = list()
+	loot_list = list(/obj/random/projectile/scrapped_smg = 100)
 
 /mob/living/simple_mob/humanoid/merc/ranged/laser/poi
-	loot_list = list()
+	loot_list = list(/obj/random/projectile/scrapped_laser = 100)
 
-/mob/living/simple_mob/humanoid/merc/ranged/ionrifle
-	loot_list = list()
+/mob/living/simple_mob/humanoid/merc/ranged/ionrifle/poi
+	loot_list = list(/obj/random/projectile/scrapped_ionrifle = 100)
 
 /mob/living/simple_mob/humanoid/merc/ranged/grenadier/poi
-	loot_list = list()
+	loot_list = list(/obj/random/projectile/scrapped_shotgun = 100)
+
+/mob/living/simple_mob/humanoid/merc/ranged/rifle/poi
+	loot_list = list(/obj/random/projectile/scrapped_bulldog = 100)
+
+/mob/living/simple_mob/humanoid/merc/ranged/rifle/mag/poi
+	loot_list = list(/obj/random/projectile/scrapped_flechette = 100)
+
+/mob/living/simple_mob/humanoid/merc/ranged/technician/poi
+	loot_list = list(/obj/random/projectile/scrapped_dartgun = 100,
+		/obj/random/projectile/scrapped_grenadelauncher = 100,
+		/obj/item/weapon/grenade/spawnergrenade/manhacks/mercenary = 50,
+		/obj/item/weapon/grenade/spawnergrenade/manhacks/mercenary = 30
+		)

@@ -12,6 +12,7 @@ var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
 var/const/BLUESHIELD		=(1<<13) //YW addition
+var/const/SECPILOT			=(1<<14) //YW addition
 var/const/INTERN			=(1<<15) //VOREStation Add
 
 var/const/MEDSCI			=(1<<1)
@@ -58,7 +59,7 @@ var/list/command_positions = list(
 	"Research Director",
 	"Chief Medical Officer",
 	"Command Secretary",
-	"Blueshield Guard"
+	"Blueshield Guard" // YW Edit
 )
 
 
@@ -75,7 +76,8 @@ var/list/medical_positions = list(
 	"Geneticist",
 	"Psychiatrist",
 	"Chemist",
-	"Paramedic"
+	"Paramedic",
+	"Field Medic" //ywedit
 )
 
 
@@ -104,7 +106,8 @@ var/list/civilian_positions = list(
 	"Lawyer",
 	"Chaplain",
 	USELESS_JOB, //VOREStation Edit - Visitor not Assistant
-	"Intern" //VOREStation Edit - Intern
+	"Intern", //VOREStation Edit - Intern
+	"Pilot" //YWedit
 )
 
 
@@ -118,9 +121,9 @@ var/list/security_positions = list(
 
 var/list/planet_positions = list(
 	"Pathfinder", // VOREStation Edit - Added Pathfinder
-	"Explorer",
-	"Pilot",
-	"Field Medic"  // VOREStation Edit - Field Medic
+	"Explorer"
+	//YWmoved to civilian"Pilot",
+	//YWmoved to medical"Field Medic"  // VOREStation Edit - Field Medic
 )
 
 
@@ -132,7 +135,7 @@ var/list/nonhuman_positions = list(
 
 
 /proc/guest_jobbans(var/job)
-	return ((job in command_positions) || (job in nonhuman_positions) || (job in security_positions))
+	return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )
 
 /proc/get_job_datums()
 	var/list/occupations = list()

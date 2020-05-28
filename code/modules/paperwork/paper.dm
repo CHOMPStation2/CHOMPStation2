@@ -19,6 +19,7 @@
 	slot_flags = SLOT_HEAD
 	body_parts_covered = HEAD
 	attack_verb = list("bapped")
+	drop_sound = 'sound/items/drop/paper.ogg'
 
 	var/info		//What's actually written on the paper.
 	var/info_links	//A different version of the paper which includes html links at fields and EOF
@@ -98,16 +99,21 @@
 /obj/item/weapon/paper/alien/AltClick() // No airplanes for me.
 	return
 
-//lipstick wiping is in code/game/objects/items/weapons/cosmetics.dm!
 
-/obj/item/weapon/paper/New()
+/obj/item/weapon/paper/New(var/newloc, var/text, var/title)
 	..()
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)
 	stamps = ""
 
+	if(!isnull(title))
+		name = title
+
 	if(name != "paper")
 		desc = "This is a paper titled '" + name + "'."
+
+	if(!isnull(text))
+		info = text
 
 	if(info != initial(info))
 		info = html_encode(info)
@@ -135,12 +141,11 @@
 	free_space -= length(strip_html_properly(new_text))
 
 /obj/item/weapon/paper/examine(mob/user)
-	..()
+	. = ..()
 	if(in_range(user, src) || istype(user, /mob/observer/dead))
 		show_content(usr)
 	else
-		user << "<span class='notice'>You have to go closer if you want to read it.</span>"
-	return
+		. += "<span class='notice'>You have to go closer if you want to read it.</span>"
 
 /obj/item/weapon/paper/proc/show_content(var/mob/user, var/forceshow=0)
 	if(!(istype(user, /mob/living/carbon/human) || istype(user, /mob/observer/dead) || istype(user, /mob/living/silicon)) && !forceshow)
@@ -156,7 +161,7 @@
 	set src in usr
 
 	if((CLUMSY in usr.mutations) && prob(50))
-		usr << "<span class='warning'>You cut yourself on the paper.</span>"
+		to_chat(usr, "<span class='warning'>You cut yourself on the paper.</span>")
 		return
 	var/n_name = sanitizeSafe(input(usr, "What would you like to label the paper?", "Paper Labelling", null)  as text, MAX_NAME_LEN)
 
@@ -177,13 +182,14 @@
 		//crumple dat paper
 		info = stars(info,85)
 		user.visible_message("\The [user] crumples \the [src] into a ball!")
+		playsound(src, 'sound/bureaucracy/papercrumple.ogg', 50, 1)
 		icon_state = "scrap"
 		return
 	user.examinate(src)
 	if(rigged && (Holiday == "April Fool's Day"))
 		if(spam_flag == 0)
 			spam_flag = 1
-			playsound(loc, 'sound/items/bikehorn.ogg', 50, 1)
+			playsound(src, 'sound/items/bikehorn.ogg', 50, 1)
 			spawn(20)
 				spam_flag = 0
 	return
@@ -208,21 +214,39 @@
 			"<span class='notice'> [user] holds up a paper and shows it to [M]. </span>")
 		M.examinate(src)
 
-	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping
+	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping and paper eating
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(H == user)
-				user << "<span class='notice'>You wipe off the lipstick with [src].</span>"
-				H.lip_style = null
-				H.update_icons_body()
-			else
-				user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
-								 	 "<span class='notice'>You begin to wipe off [H]'s lipstick.</span>")
-				if(do_after(user, 10) && do_after(H, 10, 5, 0))	//user needs to keep their active hand, H does not.
-					user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
-										 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
+				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
+					user << "<span class='warning'>You begin to stuff \the [src] into your mouth!</span>"
+					if(do_after(user, 30))
+						user << "<span class='warning'>You stuff \the [src] into your mouth!</span>"
+						H.ingested.add_reagent("paper", 10)
+						H.adjustOxyLoss(10)
+						qdel(src)
+				else
+					user << "<span class='notice'>You wipe off the lipstick with [src].</span>"
 					H.lip_style = null
 					H.update_icons_body()
+			else
+				if(icon_state == "scrap" && H.check_has_mouth())
+					user.visible_message("<span class='warning'>[user] begins to stuff \the [src] into [H]'s mouth!</span>", \
+										 "<span class='warning'>You begin to stuff \the [src] into [H]'s mouth!</span>",)
+					if(do_after(user, 30, H))
+						user.visible_message("<span class='warning'>[user] stuffs \the [src] into [H]'s mouth!</span>",\
+											 "<span class='warning'>You stuff \the [src] into [H]'s mouth!</span>")
+						H.ingested.add_reagent("paper", 10)
+						H.adjustOxyLoss(10)
+						qdel(src)
+				else
+					user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
+								 	 "<span class='notice'>You begin to wipe off [H]'s lipstick.</span>")
+					if(do_after(user, 10, H))
+						user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
+										 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
+						H.lip_style = null
+						H.update_icons_body() //YW Edit End
 
 /obj/item/weapon/paper/proc/addtofield(var/id, var/text, var/links = 0)
 	var/locid = 0
@@ -368,6 +392,7 @@
 
 		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [TU.hes] trying to burn it!</span>", \
 		"<span class='[class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
+		playsound(src, 'sound/bureaucracy/paperburn.ogg', 50, 1)
 
 		spawn(20)
 			if(get_dist(src, user) < 2 && user.get_active_hand() == P && P.lit)
@@ -381,7 +406,7 @@
 				qdel(src)
 
 			else
-				user << "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>"
+				to_chat(user, "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>")
 
 
 /obj/item/weapon/paper/Topic(href, href_list)
@@ -394,16 +419,20 @@
 		//var/t = strip_html_simple(input(usr, "What text do you wish to add to " + (id=="end" ? "the end of the paper" : "field "+id) + "?", "[name]", null),8192) as message
 
 		if(free_space <= 0)
-			usr << "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>"
+			to_chat(usr, "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>")
 			return
 
-		var/t =  sanitize(input("Enter what you want to write:", "Write", null, null) as message, free_space, extra = 0)
+		var/t =  sanitize(input("Enter what you want to write:", "Write", null, null) as message, MAX_PAPER_MESSAGE_LEN, extra = 0)
 
 		if(!t)
 			return
 
 		var/obj/item/i = usr.get_active_hand() // Check to see if he still got that darn pen, also check if he's using a crayon or pen.
 		var/iscrayon = 0
+		if(!istype(i, /obj/item/weapon/pen))
+			alert(usr, "You aren't holding a pen anymore! If you want to keep your work, grab one.", "", "Okay")
+			i = usr.get_active_hand()
+
 		if(!istype(i, /obj/item/weapon/pen))
 			var/mob/living/M = usr
 			if(istype(M) && M.back && istype(M.back,/obj/item/weapon/rig))
@@ -429,7 +458,7 @@
 		// check for exploits
 		for(var/bad in paper_blacklist)
 			if(findtext(t,bad))
-				usr << "<font color='blue'>You think to yourself, \"Hm.. this is only paper...\</font>""
+				to_chat(usr, "<font color='blue'>You think to yourself, \"Hm.. this is only paper...\</font>"")
 				log_admin("PAPER: [usr] ([usr.ckey]) tried to use forbidden word in [src]: [bad].")
 				message_admins("PAPER: [usr] ([usr.ckey]) tried to use forbidden word in [src]: [bad].")
 				return
@@ -443,7 +472,7 @@
 
 
 		if(fields > 50)//large amount of fields creates a heavy load on the server, see updateinfolinks() and addtofield()
-			usr << "<span class='warning'>Too many fields. Sorry, you can't do this.</span>"
+			to_chat(usr, "<span class='warning'>Too many fields. Sorry, you can't do this.</span>")
 			fields = last_fields_value
 			return
 
@@ -456,6 +485,8 @@
 		update_space(t)
 
 		usr << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY>[info_links][stamps]</BODY></HTML>", "window=[name]") // Update the window
+
+		playsound(src, pick('sound/bureaucracy/pen1.ogg','sound/bureaucracy/pen2.ogg'), 10)
 
 		update_icon()
 
@@ -479,7 +510,7 @@
 		if (istype(P, /obj/item/weapon/paper/carbon))
 			var/obj/item/weapon/paper/carbon/C = P
 			if (!C.iscopy && !C.copied)
-				user << "<span class='notice'>Take off the carbon copy first.</span>"
+				to_chat(user, "<span class='notice'>Take off the carbon copy first.</span>")
 				add_fingerprint(user)
 				return
 		var/obj/item/weapon/paper_bundle/B = new(src.loc)
@@ -515,7 +546,7 @@
 				src.loc = get_turf(h_user)
 				if(h_user.client)	h_user.client.screen -= src
 				h_user.put_in_hands(B)
-		user << "<span class='notice'>You clip the [P.name] to [(src.name == "paper") ? "the paper" : src.name].</span>"
+		to_chat(user, "<span class='notice'>You clip the [P.name] to [(src.name == "paper") ? "the paper" : src.name].</span>")
 		src.loc = B
 		P.loc = B
 
@@ -525,7 +556,7 @@
 
 	else if(istype(P, /obj/item/weapon/pen))
 		if(icon_state == "scrap")
-			usr << "<span class='warning'>\The [src] is too crumpled to write on.</span>"
+			to_chat(usr, "<span class='warning'>\The [src] is too crumpled to write on.</span>")
 			return
 
 		var/obj/item/weapon/pen/robopen/RP = P
@@ -542,7 +573,7 @@
 		stamps += (stamps=="" ? "<HR>" : "<BR>") + "<i>This paper has been stamped with the [P.name].</i>"
 
 		var/image/stampoverlay = image('icons/obj/bureaucracy.dmi')
-		var/{x; y;}
+		var/x, y
 		if(istype(P, /obj/item/weapon/stamp/captain) || istype(P, /obj/item/weapon/stamp/centcomm))
 			x = rand(-2, 0)
 			y = rand(-1, 2)
@@ -556,7 +587,7 @@
 
 		if(istype(P, /obj/item/weapon/stamp/clown))
 			if(!clown)
-				user << "<span class='notice'>You are totally unable to use the stamp. HONK!</span>"
+				to_chat(user, "<span class='notice'>You are totally unable to use the stamp. HONK!</span>")
 				return
 
 		if(!ico)
@@ -569,7 +600,8 @@
 		stamped += P.type
 		overlays += stampoverlay
 
-		user << "<span class='notice'>You stamp the paper with your rubber stamp.</span>"
+		playsound(src, 'sound/bureaucracy/stamp.ogg', 50, 1)
+		to_chat(user, "<span class='notice'>You stamp the paper with your rubber stamp.</span>")
 
 	else if(istype(P, /obj/item/weapon/flame))
 		burnpaper(P, user)
@@ -632,6 +664,11 @@
 /obj/item/weapon/paper/crumpled/bloody/CrashedMedShuttle
 	name = "Blackbox Transcript - VMV Aurora's Light"
 	info = "<I>\[The paper is torn at the top, presumably from the impact. It's oil-stained, but you can just about read it.]</I><BR> <B>mmons 19:52:01:</B> Come on... it's right there in the distance, we're almost there!<BR> <B>Doctor Nazarril 19:52:26:</B> Odysseus online. Orrderrs, sirr?<BR> <B>Captain Simmons 19:52:29:</B> Brace for impact. We're going in full-speed.<BR> <B>Technician Dynasty 19:52:44:</B> Chief, fire's spread to the secondary propulsion systems.<BR> <B>Captain Simmons 19:52:51:</B> Copy. Any word from TraCon? Transponder's down still?<BR> <B>Technician Dynasty 19:53:02:</B> Can't get in touch, sir. Emergency beacon's active, but we're not going t-<BR> <B>Doctor Nazarril 19:53:08:</B> Don't say it. As long as we believe, we'll get through this.<BR> <B>Captain Simmons 19:53:11:</B> Damn right. We're a few klicks out from the port. Rough landing, but we can do it.<BR> <B>V.I.T.A 19:53:26:</B> Vessel diagnostics complete. Engines one, two, three offline. Engine four status: critical. Transponder offline. Fire alarm in the patient bay.<BR> <B>A loud explosion is heard.</B><BR> <B>V.I.T.A 19:53:29:</B> Alert: fuel intake valve open.<BR> <B>Technician Dynasty 19:53:31:</B> ... ah.<BR> <B>Doctor Nazarril 19:53:34:</B> Trrranslate?<BR> <B>V.I.T.A 19:53:37:</B> There is a 16.92% chance of this vessel safely landing at the emergency destination. Note that there is an 83.08% chance of detonation of fuel supplies upon landing.<BR> <B>Technician Dynasty 19:53:48:</B> We'll make it, sure, but we'll explode and take out half the LZ with us. Propulsion's down, we can't slow down. If we land there, everyone in that port dies, no question.<BR> <B>V.I.T.A 19:53:53:</B> The Technician is correct.<BR> <B>Doctor Nazarril 19:54:02:</B> Then... we can't land therrre.<BR> <B>V.I.T.A 19:54:11:</B>  Analysing... recommended course of action: attempt emergency landing in isolated area. Chances of survival: negligible. <BR> <B>Captain Simmons 19:54:27:</B> I- alright. I'm bringing us down. You all know what this means.<BR> <B>Doctor Nazarril 19:54:33:</B> Sh... I- I understand. It's been- it's been an honorr, Captain, Dynasty, VITA.<BR> <B>Technician Dynasty 19:54:39:</B> We had a good run. I'm going to miss this.<BR> <B>Captain Simmons 19:54:47:</B> VITA. Tell them we died heroes. Tell them... we did all we could.<BR> <B>V.I.T.A 19:54:48:</B> I will. Impact in five. Four. Three.<BR> <B>Doctor Nazarril 19:54:49:</B> Oh, starrs... I- you werrre all the... best frriends she everr had. Thank you.<BR> <B>Technician Dynasty 19:54:50:</B> Any time, kid. Any time.<BR> <B>V.I.T.A 19:54:41:</B> Two.<BR><B>V.I.T.A 19:54:42:</B> One.<BR> **8/DEC/2561**<BR> <B>V.I.T.A 06:22:16:</B> Backup power restored. Attempting to establish connection with emergency rescue personnel.<BR> <B>V.I.T.A 06:22:17:</B> Unable to establish connection. Transponder destroyed on impact.<BR> <B>V.I.T.A 06:22:18:</B> No lifesigns detected on board.<BR> **1/JAN/2562**<BR> <B>V.I.T.A 00:00:00:</B> Happy New Year, crew.<BR> <B>V.I.T.A 00:00:01:</B> Power reserves: 41%. Diagnostics offline. Cameras offline. Communications offline.<BR> <B>V.I.T.A 00:00:02:</B> Nobody's coming.<BR> **14/FEB/2562**<BR> <B>V.I.T.A 00:00:00:</B> Roses are red.<BR> <B>V.I.T.A 00:00:01:</B> Violets are blue.<BR> <B>V.I.T.A 00:00:02:</B> Won't you come back?<BR> <B>V.I.T.A 00:00:03:</B> I miss you.<BR> **15/FEB/2562**<BR><B>V.I.T.A 22:19:06:</B> Power reserves critical. Transferring remaining power to emergency broadcasting beacon.<BR> <B>V.I.T.A 22:19:07:</B> Should anyone find this, lay them to rest. They deserve a proper burial.<BR> <B>V.I.T.A 22:19:08:</B> Erasing files... shutting down.<BR> <B>A low, monotone beep.</B><BR> **16/FEB/2562**<BR> <B>Something chitters.</B><BR> <B>End of transcript.</B>"
+
+/obj/item/weapon/paper/shieldgen
+	name = "Memo:Station Bubble Shield Generator."
+	info = "<B>Hello Engineers</B><BR>\n<BR>\nYou might be wondering what happened to the shield generator.<BR>\nWell, Long story short, a bottle of vodka, and one 'enlightened' scientist later,<BR>\n It's particularly non-existing. We don't have time to replace it this shift, so grab a spare from your Secure storage. Good luck! -Interim Construction Specialist Tahls"
+
 
 /obj/item/weapon/paper/manifest
 	name = "supply manifest"

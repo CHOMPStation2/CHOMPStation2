@@ -42,40 +42,8 @@ var/global/list/item_vore_blacklist = list(
 		/obj/item/weapon/disk/nuclear,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz)
 
-var/global/list/digestion_sounds = list(
-		'sound/vore/digest1.ogg',
-		'sound/vore/digest2.ogg',
-		'sound/vore/digest3.ogg',
-		'sound/vore/digest4.ogg',
-		'sound/vore/digest5.ogg',
-		'sound/vore/digest6.ogg',
-		'sound/vore/digest7.ogg',
-		'sound/vore/digest8.ogg',
-		'sound/vore/digest9.ogg',
-		'sound/vore/digest10.ogg',
-		'sound/vore/digest11.ogg',
-		'sound/vore/digest12.ogg')
-
-var/global/list/death_sounds = list(
-		'sound/vore/death1.ogg',
-		'sound/vore/death2.ogg',
-		'sound/vore/death3.ogg',
-		'sound/vore/death4.ogg',
-		'sound/vore/death5.ogg',
-		'sound/vore/death6.ogg',
-		'sound/vore/death7.ogg',
-		'sound/vore/death8.ogg',
-		'sound/vore/death9.ogg',
-		'sound/vore/death10.ogg')
-
-var/global/list/hunger_sounds = list(
-		'sound/vore/growl1.ogg',
-		'sound/vore/growl2.ogg',
-		'sound/vore/growl3.ogg',
-		'sound/vore/growl4.ogg',
-		'sound/vore/growl5.ogg')
-
-var/global/list/vore_sounds = list(
+//Classic Vore sounds
+var/global/list/classic_vore_sounds = list(
 		"Gulp" = 'sound/vore/gulp.ogg',
 		"Insert" = 'sound/vore/insert.ogg',
 		"Insertion1" = 'sound/vore/insertion1.ogg',
@@ -86,15 +54,55 @@ var/global/list/vore_sounds = list(
 		"Squish2" = 'sound/vore/squish2.ogg',
 		"Squish3" = 'sound/vore/squish3.ogg',
 		"Squish4" = 'sound/vore/squish4.ogg',
-		"Rustle (cloth)" = 'sound/effects/rustle5.ogg',
+		"Rustle (cloth)" = 'sound/effects/rustle1.ogg',
+		"Rustle 2 (cloth)"	= 'sound/effects/rustle2.ogg',
+		"Rustle 3 (cloth)"	= 'sound/effects/rustle3.ogg',
+		"Rustle 4 (cloth)"	= 'sound/effects/rustle4.ogg',
+		"Rustle 5 (cloth)"	= 'sound/effects/rustle5.ogg',
 		"None" = null)
 
-var/global/list/struggle_sounds = list(
-		"Squish1" = 'sound/vore/squish1.ogg',
-		"Squish2" = 'sound/vore/squish2.ogg',
-		"Squish3" = 'sound/vore/squish3.ogg',
-		"Squish4" = 'sound/vore/squish4.ogg')
+var/global/list/classic_release_sounds = list(
+		"Rustle (cloth)" = 'sound/effects/rustle1.ogg',
+		"Rustle 2 (cloth)" = 'sound/effects/rustle2.ogg',
+		"Rustle 3 (cloth)" = 'sound/effects/rustle3.ogg',
+		"Rustle 4 (cloth)" = 'sound/effects/rustle4.ogg',
+		"Rustle 5 (cloth)" = 'sound/effects/rustle5.ogg',
+		"Splatter" = 'sound/effects/splat.ogg',
+		"None" = null
+		)
 
+//Poojy's Fancy Sounds
+var/global/list/fancy_vore_sounds = list(
+		"Gulp" = 'sound/vore/sunesound/pred/swallow_01.ogg',
+		"Swallow" = 'sound/vore/sunesound/pred/swallow_02.ogg',
+		"Insertion1" = 'sound/vore/sunesound/pred/insertion_01.ogg',
+		"Insertion2" = 'sound/vore/sunesound/pred/insertion_02.ogg',
+		"Tauric Swallow" = 'sound/vore/sunesound/pred/taurswallow.ogg',
+		"Stomach Move"		= 'sound/vore/sunesound/pred/stomachmove.ogg',
+		"Schlorp" = 'sound/vore/sunesound/pred/schlorp.ogg',
+		"Squish1" = 'sound/vore/sunesound/pred/squish_01.ogg',
+		"Squish2" = 'sound/vore/sunesound/pred/squish_02.ogg',
+		"Squish3" = 'sound/vore/sunesound/pred/squish_03.ogg',
+		"Squish4" = 'sound/vore/sunesound/pred/squish_04.ogg',
+		"Rustle (cloth)" = 'sound/effects/rustle1.ogg',
+		"Rustle 2 (cloth)"	= 'sound/effects/rustle2.ogg',
+		"Rustle 3 (cloth)"	= 'sound/effects/rustle3.ogg',
+		"Rustle 4 (cloth)"	= 'sound/effects/rustle4.ogg',
+		"Rustle 5 (cloth)"	= 'sound/effects/rustle5.ogg',
+		"None" = null
+		)
+
+var/global/list/fancy_release_sounds = list(
+		"Rustle (cloth)" = 'sound/effects/rustle1.ogg',
+		"Rustle 2 (cloth)" = 'sound/effects/rustle2.ogg',
+		"Rustle 3 (cloth)" = 'sound/effects/rustle3.ogg',
+		"Rustle 4 (cloth)" = 'sound/effects/rustle4.ogg',
+		"Rustle 5 (cloth)" = 'sound/effects/rustle5.ogg',
+		"Stomach Move" = 'sound/vore/sunesound/pred/stomachmove.ogg',
+		"Pred Escape" = 'sound/vore/sunesound/pred/escape.ogg',
+		"Splatter" = 'sound/effects/splat.ogg',
+		"None" = null
+		)
 
 var/global/list/global_vore_egg_types = list(
 		"Unathi" 		= UNATHI_EGG,
@@ -161,7 +169,6 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/pen,
 				/obj/item/weapon/photo,
 				/obj/item/weapon/reagent_containers/food,
-				/obj/item/weapon/reagent_containers/glass/bottle,
 				/obj/item/weapon/reagent_containers/glass/rag,
 				/obj/item/weapon/soap,
 				/obj/item/weapon/spacecash,
@@ -399,7 +406,7 @@ var/global/list/contamination_colors = list("green",
 				"beige",
 				"pink")
 
-//For the mechanic of leaving remains. Ones listed below are basically ones that got no bones.
+//For the mechanic of leaving remains. Ones listed below are basically ones that got no bones or leave no trace after death.
 var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_DIONA,
 				SPECIES_ALRAUNE,
@@ -418,7 +425,10 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_XENO_SENTINEL,
 				SPECIES_XENO_QUEEN,
 				SPECIES_SHADOW,
-				SPECIES_GOLEM)					//Some special species that may or may not be ever used in event too
+				SPECIES_GOLEM,					//Some special species that may or may not be ever used in event too,
+				SPECIES_SHADEKIN) //Shadefluffers just poof away
+
+/var/global/list/existing_solargrubs = list()
 
 /hook/startup/proc/init_vore_datum_ref_lists()
 	var/paths
@@ -460,12 +470,15 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 
 	// Custom species icon bases
 	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN) //Just ones that won't work well.
-	for(var/species_name in playable_species)
+	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID) //Include these anyway
+	for(var/species_name in GLOB.playable_species)
 		if(species_name in blacklisted_icons)
 			continue
-		var/datum/species/S = all_species[species_name]
+		var/datum/species/S = GLOB.all_species[species_name]
 		if(S.spawn_flags & SPECIES_IS_WHITELISTED)
 			continue
+		custom_species_bases += species_name
+	for(var/species_name in whitelisted_icons)
 		custom_species_bases += species_name
 
 	return 1 // Hooks must return 1

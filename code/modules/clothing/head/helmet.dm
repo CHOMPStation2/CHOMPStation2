@@ -14,6 +14,7 @@
 	siemens_coefficient = 0.7
 	w_class = ITEMSIZE_NORMAL
 	ear_protection = 1
+	drop_sound = 'sound/items/drop/helm.ogg'
 
 /obj/item/clothing/head/helmet/solgov
 	name = "\improper Solar Confederate Government helmet"
@@ -69,10 +70,10 @@
 /obj/item/clothing/head/helmet/riot/attack_self(mob/user as mob)
 	if(src.icon_state == initial(icon_state))
 		src.icon_state = "[icon_state]up"
-		user << "You raise the visor on the riot helmet."
+		to_chat(user, "You raise the visor on the riot helmet.")
 	else
 		src.icon_state = initial(icon_state)
-		user << "You lower the visor on the riot helmet."
+		to_chat(user, "You lower the visor on the riot helmet.")
 	update_clothing_icon()	//so our mob-overlays update
 
 /obj/item/clothing/head/helmet/laserproof
@@ -107,7 +108,7 @@
 	name = "tactical light helmet"
 	desc = "A tan helmet made from advanced ceramic with an integrated tactical flashlight."
 	icon_state = "flexitac"
-	armor = list(40, bullet = 40, laser = 60, energy = 35, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 40, laser = 60, energy = 35, bomb = 30, bio = 0, rad = 0)
 	siemens_coefficient = 0.6
 	brightness_on = 6
 	light_overlay = "helmet_light_dual_green"

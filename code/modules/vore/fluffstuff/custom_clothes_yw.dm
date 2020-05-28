@@ -228,6 +228,16 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "koreihelmet_mob"
 
+/obj/item/clothing/accessory/medal/silver/fluff/kaeninmedal
+	name = "Kaenin Qerrlar\'s medal of valor"
+	desc = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Kaenin Qerrlar, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Qerrlar piloted a combat exosuit to combat a hostile lifeform until it simply ran out of power, after this, he continued on foot.\" It is adorned with a purple ribbon."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "valormedal"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "valormedal_mob"
+	overlay_state = "valormedal_mob"
+
+
 // *************
 // CynicalTester
 // *************
@@ -722,8 +732,58 @@
 	override = 1
 	item_state = "tesh_uniform_cd"
 	sprite_sheets = list(
+					SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
+					)
+
+/obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
+ 	name = "Central Command Cloak"
+ 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+ 	icon = 'icons/vore/custom_clothes_yw.dmi'
+ 	icon_state = "tesh_cloak_cco"
+ 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+ 	override = 1
+ 	item_state = "tesh_cloak_cco"
+
+/obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
+	name = "Central Command Undercoat"
+	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	icon_state = "tesh_uniform_cco"
+	override = 1
+	item_state = "tesh_uniform_cco"
+	sprite_sheets = list(
 					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
 					)
+
+//Plague Boye
+/obj/item/clothing/suit/storage/trench/fluff/kelplaguecoat
+	name = "Dark Leather coat"
+	desc = "A finely made dark leather coat."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplaguecoat"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kelplaguecoat_mob"
+	blood_overlay_type = "coat"
+
+/obj/item/clothing/under/fluff/kelplagueuniform
+	name = "Dark vest"
+	desc = "A fancy looking leather suit made of dark cloths. Edgy."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplagueuniform"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kelplagueuniform_mob"
+
+/obj/item/clothing/mask/gas/plaguedoctor/fluff/kelplaguemask
+	name = "Customized Gas Mask"
+	desc = "A dark leather gas mask with rivets instead of stiches holding the two halves together."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kelplaguedoctor"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "kelplaguedoctor"
+	item_state_slots = null
+	armor = list(melee = 0, bullet = 0, laser = 2,energy = 2, bomb = 0, bio = 90, rad = 0)
+	body_parts_covered = HEAD|FACE|EYES
 
 // *******
 // Dawidoe
@@ -1037,11 +1097,11 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
-/obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr
+/obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr
 	name = "Cartographer Engineering Command Uniform"
 	desc = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
 
-/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr
+/obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr
 	name = "Cartographer Engineering Command Jacket"
 	desc = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
 
@@ -1429,3 +1489,175 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "tp_gloves_onmob"
 
+// ******
+// RisingStarSlash
+// ******
+//Monika Wolfe
+/obj/item/clothing/accessory/collar/fluff/stellar_collar
+	name = "Heart Collar"
+	desc = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Monika and Isha close together, paws locked and facing the picture slightly sideways with beaming smiles."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "stellarcollar"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "stellarcollar_mob"
+	overlay_state = "stellarcollar_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
+
+// ******
+// CheekyCrenando
+// ******
+//Srusu Rskuzu-Ahslru
+/obj/item/clothing/under/fluff/srususoviet
+	name = "Soviet Uniform"
+	desc = "A standard issue Soviet Dress uniform"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "srusuuniform"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "srusuuniform"
+
+// ******
+// Hagawaga
+// ******
+//Lana Xavier
+/obj/item/clothing/under/fluff/romanarmor
+	name = "Roman Legionary Armor"
+	desc = "Basically looks like what you would expect a segmented plated armor from the early Roman Empire to look like."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "hagawaga_romanarmor"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "hagawaga_romanarmor"
+
+// ******
+// Moca_The_Porg1
+// ******
+//Mocha
+/obj/item/clothing/under/fluff/mocha_uniform
+	name = "Winterized Explorer Jumpsuit"
+	desc = "A Greenish-white uniform for operating in hazardous environments. This one is suited for colder environments."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mocha_uniform"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "mocha_uniform"
+
+/obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
+	name = "Winterized Explorer Suit"
+	desc = "An armoured suit for exploring harsh environments. This one seems more suited for winter."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mocha_suit"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "mocha_suit_s"
+	slot_flags = SLOT_OCLOTHING
+	flags = THICKMATERIAL
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	hoodtype = /obj/item/clothing/head/hood/mocha_hood
+	siemens_coefficient = 0.9
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35) // Inferior to sec vests in bullet/laser but better for environmental protection.
+	allowed = list(
+		/obj/item/device/flashlight,
+		/obj/item/weapon/gun,
+		/obj/item/ammo_magazine,
+		/obj/item/weapon/melee,
+		/obj/item/weapon/material/knife,
+		/obj/item/weapon/tank,
+		/obj/item/device/radio,
+		/obj/item/weapon/pickaxe
+		)
+
+/obj/item/clothing/head/hood/mocha_hood
+	name = "Winterized Explorer Hood"
+	desc = "An armoured hood for exploring harsh environments. This one seems fluffier."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mocha_hood"
+	icon_override = "icons/vore/custom_clothes_yw.dmi"
+	item_state = "mocha_hood_s"
+	flags = THICKMATERIAL
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.9
+	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
+
+/obj/item/clothing/accessory/poncho/cloak/fluff/mocha
+    name = "Elaborate Cloak"
+    desc = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
+    icon = 'icons/vore/custom_clothes_yw.dmi'
+    icon_state = "mocha_cloak"
+    icon_override = 'icons/vore/custom_clothes_yw.dmi'
+    item_state = "mocha_cloak_s"
+    overlay_state = "mocha_cloak_s"
+
+// ******
+// Lawst
+// ******
+//Domine Brisillidine
+
+/obj/item/clothing/accessory/medal/silver/fluff/dominemedal
+	name = "Domine Brisillidine's medal of valor"
+	desc = "A silver medal, polished to a shine. On it, it says \"For Honorable Service, Domine Brisillidine, among the first to volunteer to save the world of Virgo-Erigone Four, homeworld of the zorren. Domine lead the volunteer team in to the combat zone and assisted with arming and coordinating them against the hostile forces.\" It is adorned with a purple ribbon."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "valormedal1"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "valormedal1_mob"
+	overlay_state = "valormedal1_mob"
+
+// ******
+// Foxicide
+// ******
+/obj/item/weapon/storage/backpack/fluff/kaith
+	name = "Light duffle bag"
+	desc = "A compact duffle bag, meant for long hikes."
+	icon = 'icons/obj/clothing/backpack.dmi'
+	icon_state = "duffle"
+
+
+// ******
+// SplinterGP
+// ******
+
+/obj/item/clothing/accessory/poncho/cloak/fluff/aroozee
+	name = "Aroozee Cloak"
+	desc = "A cloak made especially for a vasilissan, it smells of perfume."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_cloak"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_cloak_mob"
+	flags_inv = HIDETAIL
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/accessory/poncho/cloak/fluff/aroozeehos
+	name = "Aroozee Head of Security Cloak"
+	desc = "A cloak denoting the rank of head of security, it's made especially for a vasilissan and smells of perfume."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_cloak_hos"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_cloak_hos_mob"
+	flags_inv = HIDETAIL
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/accessory/collar/fluff/aroozee_valhollide_ring
+	name = "Aroozee valhollide ring"
+	desc = "A long, loose chain lace of silver, holding a special ring of a perfect, crystalline definition. <br>It's touch is perpetually that of deep ice-cold, no matter how long you hold it.<br> Staring at it, you feel quiet, your mind calm, your thoughts very still."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_valhollide_ring"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_valhollide_ring_mob"
+	overlay_state = "aroozee_valhollide_ring_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
+
+
+// *****
+// Rouwren
+// *****
+
+/obj/item/clothing/accessory/medal/fluff/rindeimos
+	name = "Broken Life Crystal"
+	desc = "The broken life crystal doesn't do anything, except remind you of loss."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "khlife3"
+	icon_override = 'icons/vore/custom_items_vr.dmi'
+	item_state = "khlife_overlay"
+	overlay_state = "khlife_overlay"

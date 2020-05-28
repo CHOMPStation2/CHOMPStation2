@@ -38,6 +38,8 @@
 	melee_damage_upper = 40
 	base_attack_cooldown = 2 SECONDS
 	projectiletype = /obj/item/projectile/beam/heavylaser
+	projectile_dispersion = 10
+	projectile_accuracy = -30
 
 	var/defense_mode = FALSE
 	var/defense_deflect = 35
@@ -45,6 +47,7 @@
 /mob/living/simple_mob/mechanical/mecha/combat/durand/proc/set_defense_mode(new_mode)
 	defense_mode = new_mode
 	deflect_chance = defense_mode ? defense_deflect : initial(deflect_chance)
+	projectile_accuracy = defense_mode ? -10 : initial(projectile_accuracy)
 	to_chat(src, span("notice", "You [defense_mode ? "en" : "dis"]able defense mode."))
 
 /mob/living/simple_mob/mechanical/mecha/combat/durand/SelfMove(turf/n, direct)
@@ -65,3 +68,11 @@
 /mob/living/simple_mob/mechanical/mecha/combat/durand/defensive/Initialize()
 	set_defense_mode(TRUE)
 	return ..()
+
+/mob/living/simple_mob/mechanical/mecha/combat/durand/defensive/mercenary
+	desc = "An aging combat exosuit utilized by many corporations. It was originally developed to fight in the First Contact War.\
+	This one has been retrofitted into a turret."
+
+	projectiletype = /obj/item/projectile/beam/heavylaser/fakeemitter
+
+	pilot_type = /mob/living/simple_mob/humanoid/merc/ranged

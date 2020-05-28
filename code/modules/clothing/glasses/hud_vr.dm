@@ -34,11 +34,11 @@
 
 /obj/item/clothing/glasses/omnihud/proc/flashed()
 	if(flash_prot && ishuman(loc))
-		loc << "<span class='warning'>Your [src.name] darken to try and protect your eyes!</span>"
+		to_chat(loc, "<span class='warning'>Your [src.name] darken to try and protect your eyes!</span>")
 
 /obj/item/clothing/glasses/omnihud/prescribe(var/mob/user)
 	prescription = !prescription
-	playsound(user,'sound/items/screwdriver.ogg', 50, 1)
+	playsound(src,'sound/items/screwdriver.ogg', 50, 1)
 	if(prescription)
 		name = "[initial(name)] (pr)"
 		user.visible_message("[user] uploads new prescription data to the [src.name].")
@@ -52,10 +52,10 @@
 
 	var/mob/living/carbon/human/H = user
 	if(!H.glasses || !(H.glasses == src))
-		user << "<span class='warning'>You must be wearing the [src] to see the display.</span>"
+		to_chat(user, "<span class='warning'>You must be wearing the [src] to see the display.</span>")
 	else
 		if(!ar_interact(H))
-			user << "<span class='warning'>The [src] does not have any kind of special display.</span>"
+			to_chat(user, "<span class='warning'>The [src] does not have any kind of special display.</span>")
 
 /obj/item/clothing/glasses/omnihud/proc/ar_interact(var/mob/living/carbon/human/user)
 	return 0 //The base models do nothing.
@@ -70,7 +70,7 @@
 	These have been upgraded with medical records access and virus database integration."
 	mode = "med"
 	action_button_name = "AR Console (Crew Monitor)"
-	arscreen_path = /datum/nano_module/crew_monitor
+	arscreen_path = /datum/nano_module/program/crew_monitor
 	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_STATUS_R,VIS_CH_BACKUP,VIS_AUGMENTED)
 
 	ar_interact(var/mob/living/carbon/human/user)
@@ -144,13 +144,13 @@
 			icon_state = off_state
 			item_state = "[initial(item_state)]-off"
 			usr.update_inv_glasses()
-			usr << "You deactivate the retinal projector on the [src]."
+			to_chat(usr, "You deactivate the retinal projector on the [src].")
 		else
 			active = 1
 			icon_state = initial(icon_state)
 			item_state = initial(item_state)
 			usr.update_inv_glasses()
-			usr << "You activate the retinal projector on the [src]."
+			to_chat(usr, "You activate the retinal projector on the [src].")
 		usr.update_action_buttons()
 
 /obj/item/clothing/glasses/omnihud/all
@@ -183,3 +183,28 @@
 	else
 		icon_state = initial(icon_state)
 	update_clothing_icon()
+
+
+/obj/item/clothing/glasses/hud/health/eyepatch
+    name = "Medical Hudpatch"
+    desc = "An eyepatch with built in scanners, that analyzes those in view and provides accurate data about their health status."
+    icon_state = "eyepatch"
+    item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
+    body_parts_covered = 0
+    enables_planes =  list(VIS_CH_STATUS,VIS_CH_HEALTH)
+    var/eye = null
+
+/obj/item/clothing/glasses/hud/health/eyepatch/verb/switcheye()
+	set name = "Switch Eyepatch"
+	set category = "Object"
+	set src in usr
+	if(!istype(usr, /mob/living)) return
+	if(usr.stat) return
+
+	eye = !eye
+	if(eye)
+		icon_state = "[icon_state]_1"
+	else
+		icon_state = initial(icon_state)
+	update_clothing_icon()
+

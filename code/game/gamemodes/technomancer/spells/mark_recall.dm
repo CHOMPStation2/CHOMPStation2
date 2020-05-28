@@ -7,18 +7,32 @@
 	obj_path = /obj/item/weapon/spell/mark
 	ability_icon_state = "tech_mark"
 	category = UTILITY_SPELLS
+//VOREStation Add - Multiple technomancer support
+/datum/technomancer_marker
+	var/weakref/U
+	var/image/I
+	var/turf/T
 
-//The object to teleport to when Recall is used.
-/obj/effect/mark_spell
-	name = "mark"
-	desc = "This is a strange looking disturbance."
-	opacity = 0
-	density = 0
-	anchored = 1
+/datum/technomancer_marker/New(var/mob/user)
+	U = weakref(user)
+	T = get_turf(user)
+	I = image('icons/goonstation/featherzone.dmi', T, "spawn-wall")
+	I.plane = TURF_PLANE
+	I.layer = ABOVE_TURF_LAYER
+	user.client?.images |= I
+	spawn(23) //That's just how long the animation is
+		I.icon_state = "spawn-wall-loop"
+
+/datum/technomancer_marker/Destroy()
+	var/mob/user = U?.resolve()
+	user?.client?.images -= I
+	I?.loc = null
+	U = T = I = null
+	return ..()
 
 //This is global, to avoid looping through a list of all objects, or god forbid, looping through world.
-/var/global/obj/effect/mark_spell/mark_spell_ref = null
-
+GLOBAL_LIST_INIT(mark_spells, list())
+//VOREStation Add End
 /obj/item/weapon/spell/mark
 	name = "mark"
 	icon_state = "mark"
@@ -26,21 +40,26 @@
 	cast_methods = CAST_USE
 	aspect = ASPECT_TELE
 
-/obj/item/weapon/spell/mark/on_use_cast(mob/living/user)
+/obj/item/weapon/spell/mark/on_use_cast(var/mob/living/user)
 	if(!allowed_to_teleport()) // Otherwise you could teleport back to the admin Z-level.
-		user << "<span class='warning'>You can't teleport here!</span>"
+		to_chat(user, "<span class='warning'>You can't teleport here!</span>")
 		return 0
 	if(pay_energy(1000))
-		if(!mark_spell_ref)
-			mark_spell_ref = new(get_turf(user))
-			user << "<span class='notice'>You mark \the [get_turf(user)] under you.</span>"
+		//VOREStation Add - Multiple technomancer support
+		var/datum/technomancer_marker/marker = GLOB.mark_spells[weakref(user)]
+		//They have one in the list
+		if(istype(marker))
+			qdel(marker)
+			to_chat(user, "<span class='notice'>Your mark is moved from its old position to \the [get_turf(user)] under you.</span>")
+		//They don't have one yet
 		else
-			mark_spell_ref.forceMove(get_turf(user))
-			user << "<span class='notice'>Your mark is moved from its old position to \the [get_turf(user)] under you.</span>"
+			to_chat(user, "<span class='notice'>You mark \the [get_turf(user)] under you.</span>")
+		GLOB.mark_spells[weakref(user)] = new /datum/technomancer_marker(user)
+		//VOREStation Add End
 		adjust_instability(5)
 		return 1
 	else
-		user << "<span class='warning'>You can't afford the energy cost!</span>"
+		to_chat(user, "<span class='warning'>You can't afford the energy cost!</span>")
 		return 0
 
 //Recall
@@ -62,10 +81,11 @@
 	cast_methods = CAST_USE
 	aspect = ASPECT_TELE
 
-/obj/item/weapon/spell/recall/on_use_cast(mob/living/user)
+/obj/item/weapon/spell/recall/on_use_cast(var/mob/living/user)
 	if(pay_energy(3000))
-		if(!mark_spell_ref)
-			user << "<span class='danger'>There's no Mark!</span>"
+		var/datum/technomancer_marker/marker = GLOB.mark_spells[weakref(user)] //VOREStation Add - Multiple technomancer support
+		if(!istype(marker))
+			to_chat(user, "<span class='danger'>There's no Mark!</span>")
 			return 0
 		else
 			if(!allowed_to_teleport())
@@ -79,23 +99,23 @@
 			while(time_left)
 				if(user.incapacitated())
 					visible_message("<span class='notice'>\The [user]'s glow fades.</span>")
-					user << "<span class='danger'>You cannot Recall while incapacitated!</span>"
+					to_chat(user, "<span class='danger'>You cannot Recall while incapacitated!</span>")
 					return 0
 				light_intensity++
 				set_light(light_intensity, light_intensity, l_color = "#006AFF")
 				time_left--
 				sleep(1 SECOND)
 
-			var/turf/target_turf = get_turf(mark_spell_ref)
+			var/turf/target_turf = marker.T //VOREStation Edit - Multiple technomancer support
 			var/turf/old_turf = get_turf(user)
 
 			for(var/obj/item/weapon/grab/G in user.contents) // People the Technomancer is grabbing come along for the ride.
 				if(G.affecting)
 					G.affecting.forceMove(locate( target_turf.x+rand(-1,1), target_turf.y+rand(-1,1), target_turf.z))
-					G.affecting << "<span class='warning'>You are teleported along with [user]!</span>"
+					to_chat(G.affecting, "<span class='warning'>You are teleported along with [user]!</span>")
 
 			user.forceMove(target_turf)
-			user << "<span class='notice'>You are teleported to your Mark.</span>"
+			to_chat(user, "<span class='notice'>You are teleported to your Mark.</span>")
 
 			playsound(target_turf, 'sound/effects/phasein.ogg', 25, 1)
 			playsound(target_turf, 'sound/effects/sparks2.ogg', 50, 1)
@@ -106,6 +126,6 @@
 			qdel(src)
 			return 1
 	else
-		user << "<span class='warning'>You can't afford the energy cost!</span>"
+		to_chat(user, "<span class='warning'>You can't afford the energy cost!</span>")
 		return 0
 

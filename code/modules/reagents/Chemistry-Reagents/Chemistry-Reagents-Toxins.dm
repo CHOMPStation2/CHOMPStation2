@@ -14,12 +14,13 @@
 	var/skin_danger = 0.2 // The multiplier for how effective the toxin is when making skin contact.
 
 /datum/reagent/toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	strength *= M.species.chem_strength_tox // YW ADD (e.g. basic toxin and 1.5 = 6 damage/u, but amatox or carptox are 15/u)
 	if(strength && alien != IS_DIONA)
 		if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
 		if(alien == IS_SLIME)
 			removed *= 0.25 // Results in half the standard tox as normal. Prometheans are 'Small' for flaps.
 			if(dose >= 10)
-				M.nutrition += strength * removed //Body has to deal with the massive influx of toxins, rather than try using them to repair.
+				M.adjust_nutrition(strength * removed) // Body has to deal with the massive influx of toxins, rather than try using them to repair.
 			else
 				M.heal_organ_damage((10/strength) * removed, (10/strength) * removed) //Doses of toxins below 10 units, and 10 strength, are capable of providing useful compounds for repair.
 		M.adjustToxLoss(strength * removed)
@@ -191,6 +192,7 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	strength = 5
+	filtered_organs = list(O_SPLEEN)
 
 /datum/reagent/toxin/expired_medicine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -232,6 +234,7 @@
 	color = "#FFFFFF"
 	strength = 0
 	overdose = REAGENTS_OVERDOSE
+	filtered_organs = list(O_SPLEEN, O_KIDNEYS)
 
 /datum/reagent/toxin/potassium_chloride/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -257,6 +260,7 @@
 	color = "#FFFFFF"
 	strength = 10
 	overdose = 20
+	filtered_organs = list(O_SPLEEN, O_KIDNEYS)
 
 /datum/reagent/toxin/potassium_chlorophoride/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -292,6 +296,35 @@
 	M.tod = stationtime2text()
 
 /datum/reagent/toxin/zombiepowder/Destroy()
+	if(holder && holder.my_atom && ismob(holder.my_atom))
+		var/mob/M = holder.my_atom
+		M.status_flags &= ~FAKEDEATH
+	return ..()
+
+/datum/reagent/toxin/lichpowder
+	name = "Lich Powder"
+	id = "lichpowder"
+	description = "A stablized nerve agent that puts the subject into a strange state of un-death."
+	reagent_state = SOLID
+	color = "#666666"
+	metabolism = REM * 0.75
+	strength = 2
+	mrate_static = TRUE
+
+/datum/reagent/toxin/lichpowder/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	if(alien == IS_DIONA)
+		return
+	M.status_flags |= FAKEDEATH
+	M.adjustOxyLoss(1 * removed)
+	M.silent = max(M.silent, 10)
+	M.tod = stationtime2text()
+
+	if(prob(1))
+		M.visible_message("[M] wheezes.", "You wheeze sharply... it's cold.")
+		M.bodytemperature = max(M.bodytemperature - 10 * TEMPERATURE_DAMAGE_COEFFICIENT, T0C - 10)
+
+/datum/reagent/toxin/lichpowder/Destroy()
 	if(holder && holder.my_atom && ismob(holder.my_atom))
 		var/mob/M = holder.my_atom
 		M.status_flags &= ~FAKEDEATH
@@ -364,7 +397,7 @@
 
 /datum/reagent/toxin/sifslurry/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA) // Symbiotic bacteria.
-		M.nutrition += strength * removed
+		M.adjust_nutrition(strength * removed)
 		return
 	else
 		M.add_modifier(/datum/modifier/slow_pulse, 30 SECONDS)
@@ -392,6 +425,16 @@
 	power = 10
 	meltdose = 4
 
+/datum/reagent/acid/digestive
+	name = "Digestive acid"
+	id = "stomacid"
+	description = "Some form of digestive slurry."
+	taste_description = "vomit"
+	reagent_state = LIQUID
+	color = "#664330"
+	power = 2
+	meltdose = 30
+
 /datum/reagent/thermite/venom
 	name = "Pyrotoxin"
 	id = "thermite_v"
@@ -408,11 +451,11 @@
 	if(alien == IS_DIONA)
 		return
 	if(prob(10))
-		to_chat(M,"<span class='warning'>Your veins feel like they're on fire!</span>")
+		to_chat(M, "<span class='warning'>Your veins feel like they're on fire!</span>")
 		M.adjust_fire_stacks(0.1)
 	else if(prob(5))
 		M.IgniteMob()
-		to_chat(M,"<span class='critical'>Some of your veins rupture, the exposed blood igniting!</span>")
+		to_chat(M, "<span class='critical'>Some of your veins rupture, the exposed blood igniting!</span>")
 
 /datum/reagent/condensedcapsaicin/venom
 	name = "Irritant toxin"
@@ -420,6 +463,7 @@
 	description = "A biological agent that acts similarly to pepperspray. This compound seems to be particularly cruel, however, capable of permeating the barriers of blood vessels."
 	taste_description = "fire"
 	color = "#B31008"
+	filtered_organs = list(O_SPLEEN)
 
 /datum/reagent/condensedcapsaicin/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -429,7 +473,7 @@
 	if(prob(50))
 		M.apply_effect(4, AGONY, 0)
 		if(prob(20))
-			to_chat(M,"<span class='danger'>You feel like your insides are burning!</span>")
+			to_chat(M, "<span class='danger'>You feel like your insides are burning!</span>")
 		else if(prob(20))
 			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!","rubs at their eyes!")]</span>")
 	else
@@ -529,7 +573,7 @@
 			M.UpdateAppearance()
 		if(prob(removed * 40)) //Additionally, let's make it so there's an 8% chance per tick for a random cosmetic/not guranteed good/bad mutation.
 			randmuti(M)//This should equate to 4 random cosmetic mutations per 10 injected/20 ingested/30 touching units
-			M << "<span class='warning'>You feel odd!</span>"
+			to_chat(M, "<span class='warning'>You feel odd!</span>")
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
 /datum/reagent/slimejelly
@@ -552,7 +596,7 @@
 			M.add_chemical_effect(CE_PAINKILLER, 60)
 	else
 		if(prob(10))
-			M << "<span class='danger'>Your insides are burning!</span>"
+			to_chat(M, "<span class='danger'>Your insides are burning!</span>")
 			M.adjustToxLoss(rand(100, 300) * removed)
 		else if(prob(40))
 			M.heal_organ_damage(25 * removed, 0)
@@ -572,7 +616,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1
+	var/threshold = 1 * M.species.chem_strength_tox // YW ADD
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -620,7 +664,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1
+	var/threshold = 1 * M.species.chem_strength_tox // YW ADD
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -683,7 +727,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/drug_strength = 15
+	var/drug_strength = 15 * M.species.chem_strength_tox // YW ADD
 	if(alien == IS_SKRELL)
 		drug_strength = drug_strength * 0.8
 
@@ -718,6 +762,7 @@
 	id = "serotrotium_v"
 	description = "A chemical compound that promotes concentrated production of the serotonin neurotransmitter in humans. This appears to be a biologically produced form, resulting in a specifically toxic nature."
 	taste_description = "chalky bitterness"
+	filtered_organs = list(O_SPLEEN)
 
 /datum/reagent/serotrotium/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -760,6 +805,7 @@
 	reagent_state = LIQUID
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
+	filtered_organs = list(O_SPLEEN)
 
 /datum/reagent/impedrezene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -904,7 +950,7 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 			M.UpdateAppearance()
 		if(prob(removed * 40))
 			randmuti(M)
-			M << "<span class='warning'>You feel odd!</span>"
+			to_chat(M, "<span class='warning'>You feel odd!</span>")
 	M.apply_effect(16 * removed, IRRADIATE, 0)
 
 /datum/reagent/aslimetoxin
@@ -934,7 +980,7 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 			M.UpdateAppearance()
 		if(prob(removed * 40))
 			randmuti(M)
-			M << "<span class='warning'>You feel odd!</span>"
+			to_chat(M, "<span class='warning'>You feel odd!</span>")
 	M.apply_effect(6 * removed, IRRADIATE, 0)
 
 /*
@@ -965,7 +1011,7 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 	metabolism = REM * 4
 
 /datum/reagent/irradiated_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	radiation_repository.radiate(get_turf(M), 20)	// Irradiate people around you.
+	SSradiation.radiate(get_turf(M), 20)	// Irradiate people around you.
 	M.radiation = max(M.radiation + 5 * removed, 0)	// Irradiate you. Because it's inside you.
 
 /datum/reagent/neurophage_nanites
@@ -976,6 +1022,7 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 	reagent_state = SOLID
 	color = "#555555"
 	metabolism = REM * 4
+	filtered_organs = list(O_SPLEEN)
 
 /datum/reagent/neurophage_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.adjustBrainLoss(2 * removed)	// Their job is to give you a bad time.

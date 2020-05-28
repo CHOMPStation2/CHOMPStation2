@@ -14,6 +14,8 @@
 	mob_swap_flags = ~HEAVY
 	mob_push_flags = ~HEAVY
 
+	has_huds = TRUE // We do show AI status huds for buildmode players
+
 	var/tt_desc = null //Tooltip description
 
 	//Settings for played mobs
@@ -65,7 +67,6 @@
 	var/maxbodytemp = 350			// Maximum of above
 	var/heat_damage_per_tick = 3	// Amount of damage applied if animal's body temperature is higher than maxbodytemp
 	var/cold_damage_per_tick = 2	// Same as heat_damage_per_tick, only if the bodytemperature it's lower than minbodytemp
-	var/fire_alert = 0				// 0 = fine, 1 = hot, 2 = cold
 
 	var/min_oxy = 5					// Oxygen in moles, minimum, 0 is 'no minimum'
 	var/max_oxy = 0					// Oxygen in moles, maximum, 0 is 'no maximum'
@@ -106,7 +107,7 @@
 	var/attack_sharp = FALSE			// Is the attack sharp?
 	var/attack_edge = FALSE				// Does the attack have an edge?
 
-	var/melee_attack_delay = null			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
+	var/melee_attack_delay = 2			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
 
@@ -155,12 +156,15 @@
 	// contained in a cage
 	var/in_stasis = 0
 
+	// don't process me if there's nobody around to see it
+	low_priority = TRUE
+
 /mob/living/simple_mob/Initialize()
 	verbs -= /mob/verb/observe
 	health = maxHealth
 
 	for(var/L in has_langs)
-		languages |= all_languages[L]
+		languages |= GLOB.all_languages[L]
 	if(languages.len)
 		default_language = languages[1]
 
@@ -192,13 +196,7 @@
 	. = ..()
 	to_chat(src,"<b>You are \the [src].</b> [player_msg]")
 
-
-/mob/living/simple_mob/emote(var/act, var/type, var/desc)
-	if(act)
-		..(act, type, desc)
-
-
-/mob/living/simple_mob/SelfMove(turf/n, direct)
+/mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
 	var/old_dir = dir
 	. = ..()
@@ -216,9 +214,7 @@
 	return ..()
 */
 /mob/living/simple_mob/movement_delay()
-	var/tally = 0 //Incase I need to add stuff other than "speed" later
-
-	tally = movement_cooldown
+	. = movement_cooldown
 
 	if(force_max_speed)
 		return -3
@@ -227,25 +223,27 @@
 		if(!isnull(M.haste) && M.haste == TRUE)
 			return -3
 		if(!isnull(M.slowdown))
-			tally += M.slowdown
+			. += M.slowdown
 
 	// Turf related slowdown
 	var/turf/T = get_turf(src)
 	if(T && T.movement_cost && !hovering) // Flying mobs ignore turf-based slowdown. Aquatic mobs ignore water slowdown, and can gain bonus speed in it.
 		if(istype(T,/turf/simulated/floor/water) && aquatic_movement)
-			tally -= aquatic_movement - 1
+			. -= aquatic_movement - 1
 		else
-			tally += T.movement_cost
+			. += T.movement_cost
 
 	if(purge)//Purged creatures will move more slowly. The more time before their purge stops, the slower they'll move.
-		if(tally <= 0)
-			tally = 1
-		tally *= purge
+		if(. <= 0)
+			. = 1
+		. *= purge
 
 	if(m_intent == "walk")
-		tally *= 1.5
+		. *= 1.5
 
-	return tally+config.animal_delay
+	 . += config.animal_delay
+
+	 . += ..()
 
 
 /mob/living/simple_mob/Stat()
@@ -262,14 +260,11 @@
 	update_icon()
 
 
-/mob/living/simple_mob/say(var/message,var/datum/language/language)
-	var/verb = "says"
+/mob/living/simple_mob/say_quote(var/message, var/datum/language/speaking = null)
 	if(speak_emote.len)
-		verb = pick(speak_emote)
-
-	message = sanitize(message)
-
-	..(message, null, verb)
+		. = pick(speak_emote)
+	else if(speaking)
+		. = ..()
 
 /mob/living/simple_mob/get_speech_ending(verb, var/ending)
 	return verb
@@ -296,3 +291,8 @@
 
 /mob/living/simple_mob/get_nametag_desc(mob/user)
 	return "<i>[tt_desc]</i>"
+
+/mob/living/simple_mob/make_hud_overlays()
+	hud_list[STATUS_HUD]  = gen_hud_image(buildmode_hud, src, "ai_0", plane = PLANE_BUILDMODE)
+	hud_list[LIFE_HUD]	  = gen_hud_image(buildmode_hud, src, "ais_1", plane = PLANE_BUILDMODE)
+	add_overlay(hud_list)

@@ -6,10 +6,12 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	name = "Yawn Wider"
 	desc = "How are you reading this?"
 	screen_loc = "1,1"
+	icon = 'icons/misc/loading.dmi' //VOREStation Add - Loading Screen
+	icon_state = "loading" //VOREStation Add - Loading Screen
 
 /obj/effect/lobby_image/Initialize()
 	icon = using_map.lobby_icon
-	var/known_icon_states = icon_states(icon)
+	var/known_icon_states = cached_icon_states(icon)
 	for(var/lobby_screen in using_map.lobby_screens)
 		if(!(lobby_screen in known_icon_states))
 			error("Lobby screen '[lobby_screen]' did not exist in the icon set [icon].")
@@ -27,7 +29,7 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 /mob/new_player/Login()
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
 	if(join_motd)
-		src << "<div class=\"motd\">[join_motd]</div>"
+		to_chat(src, "<div class=\"motd\">[join_motd]</div>")
 
 	if(!mind)
 		mind = new /datum/mind(key)

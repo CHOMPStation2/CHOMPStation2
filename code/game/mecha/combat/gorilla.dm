@@ -42,7 +42,7 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 /obj/effect/decal/mecha_wreckage/gorilla
 	name = "Gorilla wreckage"
 	desc = "... Blitzkrieg?"
-	icon = 'icons/mecha/NaziMech.dmi'
+	icon = 'icons/mecha/AxisMech.dmi'
 	icon_state = "pzrwreck"
 	plane = MOB_PLANE
 	pixel_x = -16
@@ -51,7 +51,7 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 /obj/mecha/combat/gorilla
 	desc = "<b><font color='red'>BLITZKRIEEEEEEEG!</font></b>"
 	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A"
-	icon = 'icons/mecha/NaziMech.dmi'
+	icon = 'icons/mecha/AxisMech.dmi'
 	icon_state = "pzrmech"
 	initial_icon = "pzrmech"
 	pixel_x = -16
@@ -81,7 +81,7 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 	max_universal_equip = 5
 	max_special_equip = 2
 
-/obj/mecha/combat/gorilla/New()
+/obj/mecha/combat/gorilla/Initialize()
 	..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay(src) // This thing basically cannot function without an external power supply.
 	ME.attach(src)
@@ -191,10 +191,10 @@ HONK Blaster and a pulse cannon protected by projectile armor and powered by a b
 		src.log_message("Toggled zoom mode.")
 		src.occupant_message("<font color='[src.zoom?"blue":"red"]'>Zoom mode [zoom?"en":"dis"]abled.</font>")
 		if(zoom)
-			src.occupant.client.view = 12
-			src.occupant << sound('sound/mecha/imag_enh.ogg',volume=50)
+			src.occupant.set_viewsize(12)
+			playsound(src, 'sound/mecha/imag_enh.ogg',50)
 		else
-			src.occupant.client.view = world.view//world.view - default mob view size
+			src.occupant.set_viewsize() // Reset to default
 	return
 
 

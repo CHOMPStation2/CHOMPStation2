@@ -93,6 +93,42 @@
 	O.update()
 	. = ..()
 
+/obj/item/weapon/storage/box/syndie_kit/imp_aug
+	name = "boxed augment implant (with injector)"
+	var/case_type = /obj/item/weapon/implantcase/shades
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/Initialize()
+	new /obj/item/weapon/implanter(src)
+	new case_type(src)
+	. = ..()
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/taser
+	case_type = /obj/item/weapon/implantcase/taser
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/laser
+	case_type = /obj/item/weapon/implantcase/laser
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/dart
+	case_type = /obj/item/weapon/implantcase/dart
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/toolkit
+	case_type = /obj/item/weapon/implantcase/toolkit
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/medkit
+	case_type = /obj/item/weapon/implantcase/medkit
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/surge
+	case_type = /obj/item/weapon/implantcase/surge
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/analyzer
+	case_type = /obj/item/weapon/implantcase/analyzer
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/sword
+	case_type = /obj/item/weapon/implantcase/sword
+
+/obj/item/weapon/storage/box/syndie_kit/imp_aug/sprinter
+	case_type = /obj/item/weapon/implantcase/sprinter
+
 /obj/item/weapon/storage/box/syndie_kit/space
 	name = "boxed space suit and helmet"
 	starts_with = list(
@@ -106,15 +142,7 @@
 	name = "chameleon kit"
 	desc = "Comes with all the clothes you need to impersonate most people.  Acting lessons sold seperately."
 	starts_with = list(
-		/obj/item/clothing/under/chameleon,
-		/obj/item/clothing/head/chameleon,
-		/obj/item/clothing/suit/chameleon,
-		/obj/item/clothing/shoes/chameleon,
-		/obj/item/weapon/storage/backpack/chameleon,
-		/obj/item/clothing/gloves/chameleon,
-		/obj/item/clothing/mask/chameleon,
-		/obj/item/clothing/glasses/chameleon,
-		/obj/item/clothing/accessory/chameleon,
+		/obj/item/weapon/storage/backpack/chameleon/full,
 		/obj/item/weapon/gun/energy/chameleon
 	)
 
@@ -238,6 +266,37 @@
 		/obj/item/weapon/tool/screwdriver
 	)
 
+/obj/item/weapon/storage/box/syndie_kit/voidsuit
+	starts_with = list(
+		/obj/item/clothing/suit/space/void/merc,
+		/obj/item/clothing/head/helmet/space/void/merc,
+		/obj/item/clothing/shoes/magboots,
+		/obj/item/weapon/tank/jetpack/oxygen
+	)
+
+/obj/item/weapon/storage/box/syndie_kit/voidsuit/fire
+	starts_with = list(
+		/obj/item/clothing/suit/space/void/merc/fire,
+		/obj/item/clothing/head/helmet/space/void/merc/fire,
+		/obj/item/clothing/shoes/magboots,
+		/obj/item/weapon/tank/jetpack/oxygen
+	)
+
+/obj/item/weapon/storage/box/syndie_kit/concussion_grenade
+	starts_with = list(
+		/obj/item/weapon/grenade/concussion = 8
+		)
+
+/obj/item/weapon/storage/box/syndie_kit/deadliest_game
+	starts_with = list(
+		/obj/item/weapon/beartrap/hunting = 4
+		)
+
+/obj/item/weapon/storage/box/syndie_kit/viral
+	starts_with = list(
+		/obj/item/weapon/virusdish/random = 3
+		)
+
 /obj/item/weapon/storage/secure/briefcase/rifle
 	name = "secure briefcase"
 	starts_with = list(
@@ -245,6 +304,15 @@
 		/obj/item/sniper_rifle_part/stock,
 		/obj/item/sniper_rifle_part/trigger_group,
 		/obj/item/ammo_casing/a145 = 4
+	)
+
+/obj/item/weapon/storage/secure/briefcase/flamer
+	name = "secure briefcase"
+	starts_with = list(
+		/obj/item/weapon/gun/magnetic/gasthrower,
+		/obj/item/weapon/cell/super,
+		/obj/item/weapon/stock_parts/capacitor/adv,
+		/obj/item/weapon/tank/phoron/pressurized = 2
 	)
 
 /obj/item/weapon/storage/secure/briefcase/fuelrod

@@ -31,9 +31,9 @@
 				overlays += "bees3"
 
 /obj/machinery/beehive/examine(var/mob/user)
-	..()
+	. = ..()
 	if(!closed)
-		to_chat(user, "The lid is open.")
+		. += "The lid is open."
 
 /obj/machinery/beehive/attackby(var/obj/item/I, var/mob/user)
 	if(I.is_crowbar())
@@ -43,7 +43,7 @@
 		return
 	else if(I.is_wrench())
 		anchored = !anchored
-		playsound(loc, I.usesound, 50, 1)
+		playsound(src, I.usesound, 50, 1)
 		user.visible_message("<span class='notice'>[user] [anchored ? "wrenches" : "unwrenches"] \the [src].</span>", "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
 		return
 	else if(istype(I, /obj/item/bee_smoker))
@@ -158,7 +158,7 @@
 /obj/machinery/honey_extractor
 	name = "honey extractor"
 	desc = "A machine used to turn honeycombs on the frame into honey and wax."
-	icon = 'icons/obj/virology.dmi'
+	icon = 'icons/obj/virology_vr.dmi' //VOREStation Edit
 	icon_state = "centrifuge"
 
 	var/processing = 0
@@ -241,6 +241,8 @@
 	icon = 'icons/obj/beekeeping.dmi'
 	icon_state = "wax"
 	default_type = "wax"
+	pass_color = TRUE
+	strict_color_stacking = TRUE
 
 /obj/item/stack/material/wax/New()
 	..()
@@ -252,6 +254,7 @@
 	icon_colour = "#fff343"
 	melting_point = T0C+300
 	weight = 1
+	pass_stack_colors = TRUE
 
 var/global/list/datum/stack_recipe/wax_recipes = list( \
 	new/datum/stack_recipe("candle", /obj/item/weapon/flame/candle) \

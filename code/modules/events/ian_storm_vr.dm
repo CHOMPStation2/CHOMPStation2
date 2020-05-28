@@ -4,8 +4,8 @@
 	endWhen = 3
 
 /datum/event/ianstorm/announce()
-	command_announcement.Announce("It has come to our attention that the station passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")
-	spawn(rand(50, 300))
+	command_announcement.Announce("It has come to our attention that the station passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert", 'sound/AI/ian_storm.ogg')
+	spawn(7 SECONDS)
 		command_announcement.Announce("Wait. No, thats wrong.  The station passed through an IAN storm!.", "Ian Alert")
 
 /datum/event/ianstorm/start()
@@ -23,7 +23,7 @@
 	for(var/i = 0, i < 3, i++)
 		var/turf/target = get_step(T, pick(alldirs))
 		if(target && istype(target, /turf/simulated/floor))
-			var/mob/living/simple_mob/corgi/Ian/doge = new(target)
+			var/mob/living/simple_mob/animal/passive/dog/corgi/Ian/doge = new(target)
 			doge.name = "Ian " + pick("Alpha", "Beta", "Chi", "Delta", "Epsilon", "Phi",
 				"Gamma", "Eta", "Iota", "Kappa", "Lambda", "Omicron", "Theta",
 				"Rho", "Sigma", "Tau", "Upsilon", "Omega", "Psi", "Zeta")

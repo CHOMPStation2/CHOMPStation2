@@ -22,6 +22,31 @@
 	damage = 20
 	armor_penetration = 100
 
+/obj/item/projectile/bullet/magnetic/flechette/hunting
+	name = "shredder slug"
+	armor_penetration = 30
+	SA_bonus_damage = 40
+	SA_vulnerability = SA_ANIMAL
+
+/obj/item/projectile/bullet/magnetic/heated
+	name = "slug"
+	icon_state = "gauss"
+	weaken = 0
+	stun = 0
+	damage = 30
+	damage_type = SEARING
+	embed_chance = 0
+	armor_penetration = 40
+	penetrating = 1
+
+/obj/item/projectile/bullet/magnetic/heated/weak
+	icon_state = "gauss_silenced"
+	damage = 15
+	agony = 5
+	embed_chance = 0
+	armor_penetration = 30
+	penetrating = 0
+
 /obj/item/projectile/bullet/magnetic/fuelrod
 	name = "fuel rod"
 	icon_state = "fuel-deuterium"
@@ -112,7 +137,7 @@
 /obj/item/projectile/bullet/magnetic/fuelrod/supermatter/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null) //You cannot touch the supermatter without disentigrating. Assumedly, this is true for condensed rods of it flying at relativistic speeds.
 	if(istype(target,/turf/simulated/wall) || istype(target,/mob/living))
 		target.visible_message("<span class='danger'>The [src] burns a perfect hole through \the [target] with a blinding flash!</span>")
-		playsound(target.loc, 'sound/effects/teleport.ogg', 40, 0)
+		playsound(target, 'sound/effects/teleport.ogg', 40, 0)
 	return ..(target, blocked, def_zone)
 
 /obj/item/projectile/bullet/magnetic/fuelrod/supermatter/check_penetrate()

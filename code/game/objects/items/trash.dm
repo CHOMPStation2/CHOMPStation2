@@ -6,6 +6,7 @@
 	icon = 'icons/obj/trash.dmi'
 	w_class = ITEMSIZE_SMALL
 	desc = "This is rubbish."
+	drop_sound = 'sound/items/drop/wrapper.ogg'
 
 /obj/item/trash/raisins
 	name = "\improper 4no raisins"
@@ -38,6 +39,7 @@
 /obj/item/trash/unajerky
 	name = "Moghes Imported Sissalik Jerky"
 	icon_state = "unathitinred"
+	drop_sound = 'sound/items/drop/soda.ogg'
 
 /obj/item/trash/syndi_cakes
 	name = "syndi cakes"
@@ -66,6 +68,7 @@
 /obj/item/trash/tray
 	name = "tray"
 	icon_state = "tray"
+	drop_sound = 'sound/items/trayhit1.ogg'
 
 /obj/item/trash/candle
 	name = "candle"
@@ -79,6 +82,10 @@
 /obj/item/trash/liquidprotein
 	name = "\improper \"LiquidProtein\" ration"
 	icon_state = "liquidprotein"
+
+/obj/item/trash/liquidvitamin
+	name = "\improper \"VitaPaste\" ration"
+	icon_state = "liquidvitamin"
 
 /obj/item/trash/tastybread
 	name = "bread tube"

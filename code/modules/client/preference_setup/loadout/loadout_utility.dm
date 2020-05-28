@@ -31,7 +31,7 @@
 	path = /obj/item/device/camera
 
 /datum/gear/utility/codex
-	display_name = "the traveler's guide to vir"
+	display_name = "the traveler's guide to borealis" //YW Edit
 	path = /obj/item/weapon/book/codex //VOREStation Edit
 	cost = 0
 
@@ -123,6 +123,24 @@
 	display_name = "implant, tracking"
 	path = /obj/item/weapon/implant/tracking/weak
 	cost = 0 //VOREStation Edit. Changed cost to 0
+
+/datum/gear/utility/implant/neural
+	display_name = "implant, neural assistance web"
+	description = "A complex web implanted into the subject, medically in order to compensate for neurological disease."
+	path = /obj/item/weapon/implant/neural
+	cost = 6
+
+/datum/gear/utility/implant/dud1
+	display_name = "implant, head"
+	description = "An implant with no obvious purpose."
+	path = /obj/item/weapon/implant/dud
+	cost = 1
+
+/datum/gear/utility/implant/dud2
+	display_name = "implant, torso"
+	description = "An implant with no obvious purpose."
+	path = /obj/item/weapon/implant/dud/torso
+	cost = 1
 
 /datum/gear/utility/implant/language
 	cost = 2

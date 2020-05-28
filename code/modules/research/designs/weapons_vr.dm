@@ -14,7 +14,7 @@
 	id = "protector"
 	req_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 2000, "silver" = 1000)
-	build_path = /obj/item/weapon/gun/energy/protector
+	build_path = /obj/item/weapon/gun/energy/gun/protector
 	sort_string = "MAAVA"
 
 /datum/design/item/weapon/energy/sickshot
@@ -26,7 +26,7 @@
 	sort_string = "MAAVB"
 
 /datum/design/item/weapon/energy/netgun
-	name = "\'Hunter\' capture gun"
+	name = "Energy net gun" //ywedit - hunter is the hybrid one
 	id = "netgun"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_MAGNET = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 6000, "glass" = 3000)
@@ -146,14 +146,15 @@
 	build_path = /obj/item/ammo_casing/microbattery/combat/xray
 	sort_string = "MAVCF"
 
-/datum/design/item/nsfw_cell/stripper
+// Who the fuck thought this was a good idea? -RadiantFlash
+/*/datum/design/item/nsfw_cell/stripper
 	name = "STRIPPER"
 	id = "nsfw_cell_stripper"
 	req_tech = list(TECH_MATERIAL = 7, TECH_BIO = 4, TECH_POWER = 4, TECH_COMBAT = 4, TECH_ILLEGAL = 5)
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "uranium" = 2000, "phoron" = 2000, "diamond" = 500)
 	build_path = /obj/item/ammo_casing/microbattery/combat/stripper
 	sort_string = "MAVCG"
-
+*/
 /*
 /datum/design/item/nsfw_cell/final
 	name = "FINAL OPTION"

@@ -29,10 +29,10 @@
 	var/force_holder = null //
 
 /obj/item/weapon/gripper/examine(mob/user)
-	..()
+	. = ..()
 	if(wrapped)
-		to_chat(user, "<span class='notice'>\The [src] is holding \the [wrapped].</span>")
-		wrapped.examine(user)
+		. += "<span class='notice'>\The [src] is holding \the [wrapped].</span>"
+		. += wrapped.examine(user)
 
 /obj/item/weapon/gripper/CtrlClick(mob/user)
 	drop_item()
@@ -54,6 +54,22 @@
 	can_hold = list(
 	/obj/item/weapon/cell,
 	/obj/item/weapon/stock_parts
+	)
+
+/obj/item/weapon/gripper/security
+	name = "security gripper"
+	desc = "A simple grasping tool for corporate security work."
+	icon_state = "gripper-sec"
+
+	can_hold = list(
+	/obj/item/weapon/paper,
+	/obj/item/weapon/paper_bundle,
+	/obj/item/weapon/pen,
+	/obj/item/weapon/sample,
+	/obj/item/weapon/forensics/sample_kit,
+	/obj/item/device/taperecorder,
+	/obj/item/device/tape,
+	/obj/item/device/uv_light
 	)
 
 /obj/item/weapon/gripper/paperwork

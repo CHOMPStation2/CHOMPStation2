@@ -32,6 +32,7 @@
 	var/will_patrol = 0 // If set to 1, will patrol, duh
 	var/patrol_speed = 1 // How many times per tick we move when patrolling
 	var/target_speed = 2 // Ditto for chasing the target
+	var/panic_on_alert = FALSE	// Will the bot go faster when the alert level is raised?
 	var/min_target_dist = 1 // How close we try to get to the target
 	var/max_target_dist = 50 // How far we are willing to go
 	var/max_patrol_dist = 250
@@ -44,7 +45,7 @@
 	..()
 	update_icons()
 
-	default_language = all_languages[LANGUAGE_GALCOM]
+	default_language = GLOB.all_languages[LANGUAGE_GALCOM]
 
 	botcard = new /obj/item/weapon/card/id(src)
 	botcard.access = botcard_access.Copy()
@@ -78,7 +79,7 @@
 /mob/living/bot/updatehealth()
 	if(status_flags & GODMODE)
 		health = getMaxHealth()
-		stat = CONSCIOUS
+		set_stat(CONSCIOUS)
 	else
 		health = getMaxHealth() - getFireLoss() - getBruteLoss()
 	oxyloss = 0
@@ -143,12 +144,8 @@
 /mob/living/bot/attack_ai(var/mob/user)
 	return attack_hand(user)
 
-/mob/living/bot/say(var/message)
-	var/verb = "beeps"
-
-	message = sanitize(message)
-
-	..(message, null, verb)
+/mob/living/bot/say_quote(var/message, var/datum/language/speaking = null)
+	return "beeps"
 
 /mob/living/bot/speech_bubble_appearance()
 	return "machine"
@@ -156,7 +153,7 @@
 /mob/living/bot/Bump(var/atom/A)
 	if(on && botcard && istype(A, /obj/machinery/door))
 		var/obj/machinery/door/D = A
-		if(!istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && D.check_access(botcard))
+		if(!istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && !istype(D, /obj/machinery/door/airlock/lift) && D.check_access(botcard))
 			D.open()
 	else
 		..()
@@ -170,14 +167,20 @@
 			if(!A || !A.loc || prob(1))
 				ignore_list -= A
 	handleRegular()
+
+	var/panic_speed_mod = 0
+
+	if(panic_on_alert)
+		panic_speed_mod = handlePanic()
+
 	if(target && confirmTarget(target))
 		if(Adjacent(target))
 			handleAdjacentTarget()
 		else
 			handleRangedTarget()
 		if(!wait_if_pulled || !pulledby)
-			for(var/i = 1 to target_speed)
-				sleep(20 / (target_speed + 1))
+			for(var/i = 1 to (target_speed + panic_speed_mod))
+				sleep(20 / (target_speed + panic_speed_mod + 1))
 				stepToTarget()
 		if(max_frustration && frustration > max_frustration * target_speed)
 			handleFrustrated(1)
@@ -186,7 +189,7 @@
 		lookForTargets()
 		if(will_patrol && !pulledby && !target)
 			if(patrol_path && patrol_path.len)
-				for(var/i = 1 to patrol_speed)
+				for(var/i = 1 to (patrol_speed + panic_speed_mod))
 					sleep(20 / (patrol_speed + 1))
 					handlePatrol()
 				if(max_frustration && frustration > max_frustration * patrol_speed)
@@ -204,6 +207,32 @@
 
 /mob/living/bot/proc/handleRangedTarget()
 	return
+
+/mob/living/bot/proc/handlePanic()	// Speed modification based on alert level.
+	. = 0
+	switch(get_security_level())
+		if("green")
+			. = 0
+
+		if("yellow")
+			. = 0
+
+		if("violet")
+			. = 0
+
+		if("orange")
+			. = 0
+
+		if("blue")
+			. = 1
+
+		if("red")
+			. = 2
+
+		if("delta")
+			. = 2
+
+	return .
 
 /mob/living/bot/proc/stepToTarget()
 	if(!target || !target.loc)

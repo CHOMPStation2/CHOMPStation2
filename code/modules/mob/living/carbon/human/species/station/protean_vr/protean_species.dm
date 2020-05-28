@@ -30,8 +30,8 @@
 	blood_volume =	0
 	min_age =		18
 	max_age =		200
-	brute_mod =		1
-	burn_mod =		1.4
+	brute_mod =		0.8
+	burn_mod =		1.5
 	oxy_mod =		0
 	item_slowdown_mod = 1.33
 
@@ -96,7 +96,8 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_gender,
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
-		/mob/living/carbon/human/proc/shapeshifter_select_ears
+		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/proc/eat_trash
 		)
 
 	var/global/list/abilities = list()
@@ -143,6 +144,8 @@
 		H.equip_to_slot_or_del(metal_stack, slot_in_backpack)
 
 	spawn(0) //Let their real nif load if they have one
+		if(!H) //Human could have been deleted in this amount of time. Observing does this, mannequins, etc.
+			return
 		if(!H.nif)
 			var/obj/item/device/nif/bioadap/new_nif = new()
 			new_nif.quick_implant(H)
@@ -159,10 +162,23 @@
 	return rgb(80,80,80,230)
 
 /datum/species/protean/handle_death(var/mob/living/carbon/human/H)
-	to_chat(H,"<span class='warning'>You died as a Protean. Please sit out of the round for at least 60 minutes before respawning, to represent the time it would take to ship a new-you to the station.</span>")
-	spawn(1) //This spawn is here so that if the protean_blob calls qdel, it doesn't try to gib the humanform.
-		if(H)
-			H.gib()
+	if(!H)
+		return // Iono!
+
+	if(H.temporary_form)
+		H.forceMove(H.temporary_form.drop_location())
+		H.ckey = H.temporary_form.ckey
+		QDEL_NULL(H.temporary_form)
+	
+	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 60 minutes before respawning, to represent the time it would take to ship a new-you to the station.</span>")
+
+	for(var/obj/item/organ/I in H.internal_organs)
+		I.removed()
+
+	for(var/obj/item/I in src)
+		H.drop_from_inventory(I)
+
+	qdel(H)
 
 /datum/species/protean/handle_environment_special(var/mob/living/carbon/human/H)
 	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace) or in someone (or a locker, really, but whatever)
@@ -296,7 +312,6 @@
 	material_name = MAT_STEEL
 
 /datum/modifier/protean/steel/tick()
-	..()
 	holder.adjustBruteLoss(-10,include_robo = TRUE) //Looks high, but these ARE modified by species resistances, so this is really 20% of this
 	holder.adjustFireLoss(-1,include_robo = TRUE) //And this is really double this
 	var/mob/living/carbon/human/H = holder
@@ -319,7 +334,7 @@
 	owner = 1
 	if(new_name)
 		src.name += " ([new_name])"
-		desc += "\nVALID THROUGH END OF: [time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+544)]\nREGISTRANT: [new_name]"
+		desc += "\nVALID THROUGH END OF: [time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+544)]\nREGISTRANT: [new_name]" //YW EDIT
 
 #undef DAM_SCALE_FACTOR
 #undef METAL_PER_TICK
