@@ -54,7 +54,12 @@
 
 /obj/machinery/mining/drill/Initialize()
 	. = ..()
+	if(ispath(cell))
+		cell = new cell(src)
 	default_apply_parts()
+
+/obj/machinery/mining/drill/loaded
+	cell = /obj/item/weapon/cell/high
 
 /obj/machinery/mining/drill/process()
 
@@ -236,7 +241,7 @@
 			capacity = 200 * P.rating
 		if(istype(P, /obj/item/weapon/stock_parts/capacitor))
 			charge_use -= 10 * P.rating
-	cell = locate(/obj/item/weapon/cell) in component_parts
+	cell = locate(/obj/item/weapon/cell) in src
 
 /obj/machinery/mining/drill/proc/check_supports()
 
