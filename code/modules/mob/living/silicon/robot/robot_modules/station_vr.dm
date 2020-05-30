@@ -256,6 +256,15 @@
 	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src) //Paws of life
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(2000)
+	synths += medicine
+	
+	var/obj/item/stack/medical/advanced/clotting/C = new (src)
+	C.uses_charge = 1
+	C.charge_costs = list(1000)
+	C.synths = list(medicine)
+	src.modules += C
+
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
@@ -273,12 +282,6 @@
 	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper(src) //So they can nom people and heal them
 	B.water = water
 	src.modules += B
-
-// - YW Edit
-
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)
-	medicine.name = "Medical supply reserves"
-	synths += medicine
 
 	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
 	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
