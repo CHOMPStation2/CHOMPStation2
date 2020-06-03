@@ -107,6 +107,9 @@
 	name = "west bump";
 	pixel_x = -24
 	},
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
 /turf/simulated/floor/carpet/blue,
 /area/aro2/room1)
 "aD" = (
@@ -418,6 +421,9 @@
 	name = "west bump";
 	pixel_x = -24
 	},
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/aro2/room2)
 "cE" = (
@@ -561,9 +567,6 @@
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/grass,
 /area/aro2/boatdeck)
-"dF" = (
-/turf/simulated/floor/tiled/eris/techmaint_perforated,
-/area/aro2/dining)
 "dG" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -605,10 +608,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/aro2/dining)
-"dQ" = (
-/obj/structure/table/steel,
-/turf/simulated/floor/tiled/eris/techmaint_perforated,
-/area/aro2/surfluid)
 "dU" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -813,6 +812,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/eris/dark,
 /area/aro2/starboardbay)
 "fn" = (
@@ -924,6 +926,9 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/eris/dark,
 /area/aro2/portbay)
@@ -1467,6 +1472,9 @@
 	name = "west bump";
 	pixel_x = -24
 	},
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/aro2/room3)
 "lR" = (
@@ -1512,10 +1520,6 @@
 	},
 /turf/simulated/floor/water/indoors/surfluid,
 /area/aro2/boatdeck)
-"mp" = (
-/obj/structure/table/bench/wooden,
-/turf/simulated/floor/tiled/techfloor,
-/area/aro2/dining)
 "ms" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/water/indoors/surfluid,
@@ -1949,6 +1953,12 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating/eris/under,
 /area/aro2/airarea)
+"rd" = (
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/eris/dark/gray_perforated,
+/area/aro2/powerarea)
 "rl" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -2088,6 +2098,18 @@
 	},
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/aro2/airarea)
+"sB" = (
+/obj/structure/table/steel,
+/obj/item/weapon/magnetic_ammo/pistol/khi{
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/obj/item/weapon/magnetic_ammo/pistol/khi{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/eris/techmaint_perforated,
+/area/aro2/surfluid)
 "sF" = (
 /turf/simulated/floor/tiled/eris/dark,
 /area/aro2/portbay)
@@ -2328,7 +2350,6 @@
 	name = "exterior shutters";
 	pixel_x = 28
 	},
-/obj/structure/closet/crate/bin,
 /turf/simulated/floor/wood,
 /area/aro2/dining)
 "va" = (
@@ -2394,12 +2415,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/cyancorner,
-/area/aro2/dining)
-"vJ" = (
-/obj/machinery/vending/cola{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/eris/techmaint_perforated,
 /area/aro2/dining)
 "vN" = (
 /obj/structure/cable/cyan{
@@ -2505,6 +2520,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/table/steel,
+/obj/machinery/chemical_dispenser/bar_soft/full,
 /turf/simulated/floor/tiled/eris/techmaint_perforated,
 /area/aro2/dining)
 "xk" = (
@@ -2637,9 +2654,16 @@
 /turf/simulated/floor/tiled/eris/dark,
 /area/aro2/boatdeck)
 "yK" = (
-/obj/machinery/vending/food/arojoan{
-	dir = 8
+/obj/structure/closet/secure_closet/freezer/fridge{
+	starts_with = null
 	},
+/obj/item/weapon/reagent_containers/food/snacks/generalschicken,
+/obj/item/weapon/storage/box/wings,
+/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon,
+/obj/item/weapon/reagent_containers/food/snacks/fries,
+/obj/item/weapon/reagent_containers/food/snacks/grilledcheese,
+/obj/item/weapon/reagent_containers/food/snacks/jellysandwich,
+/obj/item/weapon/reagent_containers/food/snacks/enchiladas,
 /turf/simulated/floor/tiled/eris/techmaint_perforated,
 /area/aro2/dining)
 "yY" = (
@@ -3489,6 +3513,10 @@
 /obj/machinery/door/airlock/multi_tile/glass,
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/aro2/surfluid)
+"II" = (
+/obj/structure/table/bench/steel,
+/turf/simulated/floor/tiled/techfloor,
+/area/aro2/dining)
 "IK" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -3548,6 +3576,10 @@
 	},
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/aro2/portbay)
+"Jn" = (
+/obj/structure/table/bench/steel,
+/turf/simulated/floor/tiled/eris/steel/bar_flat,
+/area/aro2/frontroom)
 "Js" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -4184,6 +4216,12 @@
 	},
 /turf/simulated/floor/tiled/eris/dark,
 /area/aro2/portbay)
+"PR" = (
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/aro2/cockpit)
 "PV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -4370,10 +4408,10 @@
 /turf/simulated/floor/plating/eris/under,
 /area/aro2/airarea)
 "Sp" = (
-/obj/machinery/vending/snack{
+/obj/machinery/vending/dinnerware{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/eris/techmaint_perforated,
+/turf/simulated/floor/wood,
 /area/aro2/dining)
 "Sq" = (
 /obj/structure/railing/grey{
@@ -4382,11 +4420,8 @@
 /turf/simulated/floor/water/indoors/surfluid,
 /area/aro2/surfluid)
 "Sr" = (
-/obj/machinery/chemical_dispenser/bar_soft/full{
-	dir = 8
-	},
-/obj/structure/table/steel,
-/turf/simulated/floor/tiled/eris/techmaint_perforated,
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/wood,
 /area/aro2/dining)
 "St" = (
 /obj/machinery/computer/ship/navigation/telescreen{
@@ -4738,6 +4773,12 @@
 /obj/structure/table/fancyblack,
 /turf/simulated/floor/carpet/bcarpet,
 /area/shuttle/aroboat2)
+"VW" = (
+/obj/structure/closet/autolok_wall{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/eris/dark/gray_perforated,
+/area/aro2/airarea)
 "VZ" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -4752,10 +4793,6 @@
 	},
 /turf/simulated/floor/tiled/eris/dark,
 /area/aro2/boatdeck)
-"We" = (
-/obj/structure/table/bench/wooden,
-/turf/simulated/floor/tiled/eris/steel/bar_flat,
-/area/aro2/frontroom)
 "Wg" = (
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/power/pointdefense{
@@ -13276,16 +13313,16 @@ Qz
 af
 ao
 ao
-We
-We
-We
+Jn
+Jn
+Jn
 ao
 ao
 bT
 bT
-mp
-mp
-mp
+II
+II
+II
 bT
 bT
 dv
@@ -13558,7 +13595,7 @@ Qz
 Qz
 Qz
 bV
-We
+Jn
 zV
 zV
 Kx
@@ -13606,7 +13643,7 @@ Jm
 lE
 gc
 jm
-sP
+rd
 oj
 oj
 oj
@@ -13700,7 +13737,7 @@ Qz
 Qz
 Qz
 bV
-We
+Jn
 zV
 us
 ED
@@ -13842,7 +13879,7 @@ Qz
 Qz
 Qz
 bV
-We
+Jn
 zV
 us
 AT
@@ -14277,9 +14314,9 @@ zV
 oU
 bU
 xb
-dF
-dF
-dF
+dk
+dk
+dk
 QW
 QW
 dk
@@ -14419,7 +14456,7 @@ pe
 pe
 bU
 yK
-vJ
+dk
 Sr
 Sp
 QW
@@ -15012,7 +15049,7 @@ RY
 FZ
 ds
 gd
-dQ
+sB
 kK
 nO
 TL
@@ -15267,7 +15304,7 @@ az
 az
 aL
 aL
-XN
+PR
 XN
 Me
 yx
@@ -16304,7 +16341,7 @@ Ln
 lK
 gi
 jt
-nq
+VW
 qT
 Pd
 ih
