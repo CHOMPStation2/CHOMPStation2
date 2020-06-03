@@ -103,8 +103,7 @@
 /obj/structure/closet/wardrobe/monastary
 	name = "Monastary wardrobe"
 	desc = "It's a storage unit for approved religious attire."
-	icon_state = "black"
-	icon_closed = "black"
+	closet_appearance = /decl/closet_appearance/wardrobe/black
 
 	starts_with = list(
 		/obj/item/clothing/suit/unathi/mantle = 2,
