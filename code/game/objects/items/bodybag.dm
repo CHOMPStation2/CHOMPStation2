@@ -44,8 +44,7 @@
 /obj/item/bodybag/large
 	name = "mass grave body bag"
 	desc = "A large folded bag designed for the storage and transportation of cadavers."
-	icon = 'icons/obj/bodybag.dmi'
-	icon_state = "bluebodybag_folded"
+	icon = 'icons/obj/closets/bodybag_large.dmi'
 	w_class = ITEMSIZE_LARGE
 
 	attack_self(mob/user)
@@ -56,9 +55,7 @@
 /obj/structure/closet/body_bag/large
 	name = "mass grave body bag"
 	desc = "A massive body bag that holds as much as it does due to bluespace lining on its zipper. Shockingly compact for its storage."
-	icon_state = "bluebodybag_closed"
-	icon_closed = "bluebodybag_closed"
-	icon_opened = "bluebodybag_open"
+	icon = 'icons/obj/closets/bodybag_large.dmi'
 	storage_capacity = (MOB_MEDIUM * 12) - 1 //Holds 12 bodys
 	item_path = /obj/item/bodybag/large
 //End of Yawn add
