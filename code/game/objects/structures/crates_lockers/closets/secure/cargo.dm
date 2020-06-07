@@ -89,9 +89,8 @@
 
 /obj/structure/closet/lumber
 	name = "Lumberjack's equipment"
-	icon_state = "mining"
-	icon_closed = "mining"
-	icon_opened = "miningopen"
+	desc = "It's a storage unit for Lumberjack equpiment, though it seems the lock is broken."
+	closet_appearance = /decl/closet_appearance/secure_closet/lumber
 
 	starts_with = list(
 		/obj/item/device/radio/headset/headset_mine,
