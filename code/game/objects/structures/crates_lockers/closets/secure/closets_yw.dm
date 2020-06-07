@@ -1,13 +1,7 @@
 /obj/structure/closet/secure_closet/blueshield
-	name = "blueshield's locker"
+	name = "blueshield's closet"
 	req_access = list(access_blueshield)
-	icon = 'icons/obj/closet_yw.dmi'
-	icon_state = "bssecure1"
-	icon_closed = "bssecure"
-	icon_locked = "bssecure1"
-	icon_opened = "bssecureopen"
-	icon_broken = "bssecurebroken"
-	icon_off = "bssecureoff"
+	closet_appearance = /decl/closet_appearance/secure_closet/blueshield
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(
@@ -39,13 +33,7 @@
 /obj/structure/closet/secure_closet/security_pilot
 	name = "security pilot's locker"
 	req_access = list(access_secpilot)
-	icon = 'icons/obj/closet_yw.dmi'
-	icon_state = "secpilot1"
-	icon_closed = "secpilot"
-	icon_locked = "secpilot1"
-	icon_opened = "secpilotopen"
-	icon_broken = "secpilotbroken"
-	icon_off = "secpilotoff"
+	closet_appearance = /decl/closet_appearance/secure_closet/security_pilot
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(

@@ -21464,7 +21464,6 @@
 /area/crew_quarters/bar)
 "aOB" = (
 /obj/structure/closet/gmcloset{
-	icon_closed = "black";
 	icon_state = "black";
 	name = "formal wardrobe"
 	},

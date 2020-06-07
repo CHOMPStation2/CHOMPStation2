@@ -2792,8 +2792,6 @@
 /area/syndicate_mothership)
 "hA" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
 	icon_state = "cabinet_closed"
 	},
 /turf/simulated/shuttle/floor/black,
@@ -9859,8 +9857,6 @@
 /area/shuttle/mercenary)
 "vB" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
 	icon_state = "cabinet_closed";
 	name = "Clothing Storage"
 	},
@@ -9882,8 +9878,6 @@
 /area/centcom/command)
 "vD" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
 	icon_state = "cabinet_closed"
 	},
 /obj/item/weapon/card/id/centcom,
@@ -20118,8 +20112,7 @@
 /area/wizard_station)
 "RI" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
+
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/suit/wizrobe/magusblue,
@@ -20249,8 +20242,6 @@
 /area/wizard_station)
 "RZ" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/under/psysuit,
@@ -20349,8 +20340,7 @@
 /area/wizard_station)
 "Sl" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
+
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/shoes/sandal/marisa{
@@ -20368,8 +20358,7 @@
 /area/wizard_station)
 "Sm" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
+
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/suit/wizrobe/magusred,
@@ -20382,8 +20371,7 @@
 /area/wizard_station)
 "Sn" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
+
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/suit/wizrobe/marisa,
@@ -20397,8 +20385,7 @@
 /area/wizard_station)
 "So" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
+
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/suit/wizrobe/red,
