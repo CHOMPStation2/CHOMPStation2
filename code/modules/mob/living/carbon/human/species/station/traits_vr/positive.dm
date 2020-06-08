@@ -141,13 +141,13 @@
 	name = "Liver of Steel"
 	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers! You may wish to note this down in your medical records."
 	cost = 1
-	var_changes = list("alcohol_tolerance" = 0.5)
+	var_changes = list("alcohol_mod" = 0.5)
 
 /datum/trait/alcohol_immunity
 	name = "Liver of Durasteel"
 	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed. You may wish to note this down in your medical records."
 	cost = 2
-	var_changes = list("alcohol_tolerance" = 0.25)
+	var_changes = list("alcohol_mod" = 0.25)
 //YW ADDITIONS END
 
 /datum/trait/photoresistant

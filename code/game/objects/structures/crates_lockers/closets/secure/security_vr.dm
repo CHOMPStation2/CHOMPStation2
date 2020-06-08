@@ -52,8 +52,8 @@
 //Custom NT Security Lockers, Only found at central command
 /obj/structure/closet/secure_closet/nanotrasen_security
 	name = "NanoTrasen security officer's locker"
-	icon = 'icons/obj/closet_vr.dmi'
 	req_access = list(access_brig)
+	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/security
 	storage_capacity = 3.5 * MOB_MEDIUM
 
 	starts_with = list(
@@ -93,8 +93,8 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_commander
 	name = "NanoTrasen commander's locker"
-	icon = 'icons/obj/closet_vr.dmi'
 	req_access = list(access_brig)
+	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/commander
 	storage_capacity = 3.5 * MOB_MEDIUM
 
 	starts_with = list(
@@ -142,8 +142,8 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_warden
 	name = "NanoTrasen warden's locker"
-	icon = 'icons/obj/closet_vr.dmi'
 	req_access = list(access_brig)
+	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/warden
 	storage_capacity = 3.5 * MOB_MEDIUM
 
 	starts_with = list(

@@ -107,7 +107,7 @@
 	name = "Liver of Air"
 	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = -1
-	var_changes = list("alcohol_tolerance" = 3)
+	var_changes = list("alcohol_mod" = 3)
 //YW ADDITIONS END
 
 /datum/trait/conductive
