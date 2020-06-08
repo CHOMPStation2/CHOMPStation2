@@ -5,7 +5,7 @@
 
 /obj/structure/closet/secure_closet/RD_wardrobe
 	name = "research director's locker"
-	closet_appearance = /decl/closet_appearance/secure_closet/rd
+	closet_appearance = /decl/closet_appearance/secure_closet/science/rd
 	req_access = list(access_rd)
 
 	starts_with = list(
