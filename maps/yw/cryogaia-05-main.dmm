@@ -63193,6 +63193,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "ckQ" = (
+/obj/structure/foodcart,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
