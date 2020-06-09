@@ -3754,5 +3754,6 @@
 #include "maps\yw\structures\closets\misc_vr.dm"
 #include "maps\yw\structures\closets\research.dm"
 #include "maps\yw\structures\closets\security.dm"
+#include "maps\yw\submaps\space\_fueldepot.dm"
 #include "maps\~map_system\maps.dm"
 // END_INCLUDE
