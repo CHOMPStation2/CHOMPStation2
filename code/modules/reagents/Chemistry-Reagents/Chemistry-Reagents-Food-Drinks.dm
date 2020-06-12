@@ -1696,9 +1696,9 @@
 	glass_name = "Ent's Draught"
 	glass_desc = "You can almost smell the tranquility emanating from this."
 
-/datum/reagent/drink/strawberrylovepotion //ywedit
-	name = "Strawberry Love Potion" //ywedit
-	id = "strawberrylovepotion" //ywedit
+/datum/reagent/drink/lovepotion
+	name = "Love Potion"
+	id = "lovepotion"
 	description = "Creamy strawberries and sugar, simple and sweet."
 	taste_description = "strawberries and cream"
 	color = "#fc8a8a" // rgb(252, 138, 138)
