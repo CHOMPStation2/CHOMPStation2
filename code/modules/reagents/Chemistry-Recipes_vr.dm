@@ -161,7 +161,7 @@
 	name = "Space Bulldog"
 	id = "bulldog"
 	result = "bulldog"
-	required_reagents = list("blackrussian" = 3, "cola" =1, "cream" =1)
+	required_reagents = list("blackrussian" = 3, "cola" =1) // YW edit, cream makes it turn into white russian, when they change on vorestation and we update, can change this
 	result_amount = 5
 
 /datum/chemical_reaction/drinks/sbagliato
