@@ -2240,10 +2240,10 @@
     catalysts = list("enzyme" = 10) //10u enzyme so it requires more than is usually added. Stops overlap with wine recipe
     result_amount = 5
 
-/datum/chemical_reaction/drinks/lovepotion
-	name = "Love Potion"
-	id = "lovepotion"
-	result = "lovepotion"
+/datum/chemical_reaction/drinks/strawberrylovepotion //ywedit start
+	name = "Strawberry Love Potion"
+	id = "strawberrylovepotion"
+	result = "strawberrylovepotion" //ywedit end
 	required_reagents = list("cream" = 1, "berryjuice" = 1, "sugar" = 1)
 	result_amount = 3
 
