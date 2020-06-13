@@ -61,7 +61,7 @@
 /datum/job/pilot
 	title = "Pilot"
 	flag = PILOT
-	departments = list(DEPARTMENT_CIVILIAN,DEPARTMENT_PLANET)
+	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
@@ -70,7 +70,7 @@
 	selection_color = "#999440"
 	economic_modifier = 5
 	minimal_player_age = 3
-	pto_type = PTO_EXPLORATION
+	pto_type = PTO_CIVILIAN
 	access = list(access_pilot)
 	minimal_access = list(access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
