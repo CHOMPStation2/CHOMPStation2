@@ -30,7 +30,7 @@
 	var/piping_layer = PIPING_LAYER_DEFAULT
 	var/wrench_mode = FALSE
 	var/obj/item/weapon/tool/wrench/tool
-	var/datum/pipe_recipe/recipe = null	// pipe recipie selected for display/construction
+	var/datum/pipe_recipe/recipe = null	// pipe recipie selected for display/construction //YW edit, added = null
 	var/static/datum/pipe_recipe/first_atmos
 	var/static/datum/pipe_recipe/first_disposal
 	var/static/datum/asset/iconsheet/pipes/icon_assets
