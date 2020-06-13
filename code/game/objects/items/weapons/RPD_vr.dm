@@ -55,9 +55,11 @@
 		recipe = first_atmos
 	if(!first_disposal)
 		first_disposal = disposal_pipe_recipes[disposal_pipe_recipes[1]][1]
-		recipe = first_disposal
+		recipe = first_disposal //YW added
+	//YW add fix
 	if(recipe == null)
 		recipe = atmos_pipe_recipes[atmos_pipe_recipes[1]][1]
+	//YW end
 
 /obj/item/weapon/pipe_dispenser/Destroy()
 	qdel_null(spark_system)
