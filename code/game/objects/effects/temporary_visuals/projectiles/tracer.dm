@@ -109,17 +109,11 @@
 	light_power = 0.5
 	light_color = "#0066FF"
 
-/obj/effect/projectile/tracer/tungsten
+/obj/effect/projectile/tungsten/tracer
 	icon_state = "mhd_laser"
 	light_range = 4
 	light_power = 3
 	light_color = "#3300ff"
-
-/obj/effect/projectile/tracer/cannon
-	icon_state = "cannon"
-	light_range = 1
-	light_power = 0.5
-	light_color = "#f6f2b6"
 
 //VOREStation edit: medigun
 /obj/effect/projectile/tracer/medigun

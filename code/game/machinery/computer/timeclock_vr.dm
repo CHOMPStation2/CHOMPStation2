@@ -16,7 +16,6 @@
 	density = FALSE
 	circuit = /obj/item/weapon/circuitboard/timeclock
 	clicksound = null
-	var/channel = "Common" //Radio channel to announce on
 
 	var/obj/item/weapon/card/id/card // Inserted Id card
 	var/obj/item/device/radio/intercom/announce	// Integreated announcer
@@ -85,16 +84,15 @@
 		if (job)
 			data["job_datum"] = list(
 				"title" = job.title,
-				"departments" = english_list(job.departments),
+				"department" = job.department,
 				"selection_color" = job.selection_color,
 				"economic_modifier" = job.economic_modifier,
-				"timeoff_factor" = job.timeoff_factor,
-				"pto_department" = job.pto_type
+				"timeoff_factor" = job.timeoff_factor
 			)
 		if(config.time_off && config.pto_job_change)
 			data["allow_change_job"] = TRUE
 			if(job && job.timeoff_factor < 0) // Currently are Off Duty, so gotta lookup what on-duty jobs are open
-				data["job_choices"] = getOpenOnDutyJobs(user, job.pto_type)
+				data["job_choices"] = getOpenOnDutyJobs(user, job.department)
 
 	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
@@ -119,20 +117,22 @@
 				card = I
 		update_icon()
 		return 1
-	if(href_list["switch-to-onduty-rank"])
-		if(checkFace())
-			if(checkCardCooldown())
-				makeOnDuty(href_list["switch-to-onduty-rank"], href_list["switch-to-onduty-assignment"])
-				usr.put_in_hands(card)
-				card = null
+	if(href_list["switch-to-onduty"])
+		if(card)
+			if(checkFace())
+				if(checkCardCooldown())
+					makeOnDuty(href_list["switch-to-onduty"])
+					usr.put_in_hands(card)
+					card = null
 		update_icon()
 		return 1
 	if(href_list["switch-to-offduty"])
-		if(checkFace())
-			if(checkCardCooldown())
-				makeOffDuty()
-				usr.put_in_hands(card)
-				card = null
+		if(card)
+			if(checkFace())
+				if(checkCardCooldown())
+					makeOffDuty()
+					usr.put_in_hands(card)
+					card = null
 		update_icon()
 		return 1
 	return 1 // Return 1 to update UI
@@ -140,58 +140,57 @@
 /obj/machinery/computer/timeclock/proc/getOpenOnDutyJobs(var/mob/user, var/department)
 	var/list/available_jobs = list()
 	for(var/datum/job/job in job_master.occupations)
-		if(isOpenOnDutyJob(user, department, job))
-			available_jobs[job.title] = list(job.title)
-			if(job.alt_titles)
-				for(var/alt_job in job.alt_titles)
-					if(alt_job != job.title)
-						available_jobs[job.title] += alt_job
+		if(job && job.is_position_available() && !job.whitelist_only && !jobban_isbanned(user,job.title) && job.player_old_enough(user.client))
+			if(job.department == department && !job.disallow_jobhop && job.timeoff_factor > 0)
+				available_jobs += job.title
+				if(job.alt_titles)
+					for(var/alt_job in job.alt_titles)
+						available_jobs += alt_job
 	return available_jobs
 
-/obj/machinery/computer/timeclock/proc/isOpenOnDutyJob(var/mob/user, var/department, var/datum/job/job)
-	return job \
-		   && job.is_position_available() \
-		   && !job.whitelist_only \
-		   && !jobban_isbanned(user,job.title) \
-		   && job.player_old_enough(user.client) \
-		   && job.player_has_enough_playtime(user.client) \
-		   && job.pto_type == department \
-		   && !job.disallow_jobhop \
-		   && job.timeoff_factor > 0
-
-/obj/machinery/computer/timeclock/proc/makeOnDuty(var/newrank, var/newassignment)
-	var/datum/job/oldjob = job_master.GetJob(card.rank)
-	var/datum/job/newjob = job_master.GetJob(newrank)
-	if(!oldjob || !isOpenOnDutyJob(usr, oldjob.pto_type, newjob))
+/obj/machinery/computer/timeclock/proc/makeOnDuty(var/newjob)
+	var/datum/job/foundjob = null
+	for(var/datum/job/job in job_master.occupations)
+		if(newjob == job.title)
+			foundjob = job
+			break
+		if(newjob in job.alt_titles)
+			foundjob = job
+			break
+	if(!newjob in getOpenOnDutyJobs(usr, job_master.GetJob(card.rank).department))
 		return
-	if(newassignment != newjob.title && !(newassignment in newjob.alt_titles))
-		return
-	if(newjob)
-		card.access = newjob.get_access()
-		card.rank = newjob.title
-		card.assignment = newassignment
+	if(foundjob && card)
+		card.access = foundjob.get_access()
+		card.rank = foundjob.title
+		card.assignment = newjob
 		card.name = text("[card.registered_name]'s ID Card ([card.assignment])")
 		data_core.manifest_modify(card.registered_name, card.assignment)
 		card.last_job_switch = world.time
 		callHook("reassign_employee", list(card))
-		newjob.current_positions++
+		foundjob.current_positions++
 		var/mob/living/carbon/human/H = usr
-		H.mind.assigned_role = card.rank
-		H.mind.role_alt_title = card.assignment
-		announce.autosay("[card.registered_name] has moved On-Duty as [card.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
+		H.mind.assigned_role = foundjob.title
+		H.mind.role_alt_title = newjob
+		announce.autosay("[card.registered_name] has moved On-Duty as [card.assignment].", "Employee Oversight")
 	return
 
 /obj/machinery/computer/timeclock/proc/makeOffDuty()
-	var/datum/job/foundjob = job_master.GetJob(card.rank)
+	var/datum/job/foundjob = null
+	for(var/datum/job/job in job_master.occupations)
+		if(card.rank == job.title)
+			foundjob = job
+			break
 	if(!foundjob)
 		return
-	var/new_dept = foundjob.pto_type || PTO_CIVILIAN
+	var/real_dept = foundjob.department
+	if(real_dept && real_dept == "Command")
+		real_dept = "Civilian"
 	var/datum/job/ptojob = null
 	for(var/datum/job/job in job_master.occupations)
-		if(job.pto_type == new_dept && job.timeoff_factor < 0)
+		if(job.department == real_dept && job.timeoff_factor < 0)
 			ptojob = job
 			break
-	if(ptojob)
+	if(ptojob && card)
 		var/oldtitle = card.assignment
 		card.access = ptojob.get_access()
 		card.rank = ptojob.title
@@ -204,15 +203,14 @@
 		H.mind.assigned_role = ptojob.title
 		H.mind.role_alt_title = ptojob.title
 		foundjob.current_positions--
-		announce.autosay("[card.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
+		announce.autosay("[card.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight")
 	return
 
 /obj/machinery/computer/timeclock/proc/checkCardCooldown()
 	if(!card)
 		return FALSE
-	var/time_left = 10 MINUTES - (world.time - card.last_job_switch)
-	if(time_left > 0)
-		to_chat(usr, "You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch.")
+	if((world.time - card.last_job_switch) < 15 MINUTES)
+		to_chat(usr, "You need to wait at least 15 minutes after last duty switch.")
 		return FALSE
 	return TRUE
 

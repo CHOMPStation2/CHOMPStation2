@@ -316,23 +316,23 @@ var/list/datum/power/changeling/powerinstances = list()
 
 
 	for (var/datum/power/changeling/P in powerinstances)
-		//to_world("[P] - [Pname] = [P.name == Pname ? "True" : "False"]")
+		//world << "[P] - [Pname] = [P.name == Pname ? "True" : "False"]"
 		if(P.name == Pname)
 			Thepower = P
 			break
 
 
 	if(Thepower == null)
-		to_chat(M.current, "This is awkward.  Changeling power purchase failed, please report this bug to a coder!")
+		M.current << "This is awkward.  Changeling power purchase failed, please report this bug to a coder!"
 		return
 
 	if(Thepower in purchased_powers)
-		to_chat(M.current, "We have already evolved this ability!")
+		M.current << "We have already evolved this ability!"
 		return
 
 
 	if(geneticpoints < Thepower.genomecost)
-		to_chat(M.current, "We cannot evolve this... yet.  We must acquire more DNA.")
+		M.current << "We cannot evolve this... yet.  We must acquire more DNA."
 		return
 
 	geneticpoints -= Thepower.genomecost

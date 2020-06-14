@@ -8,7 +8,7 @@
 	icon_state = "station_map"
 	anchored = 1
 	density = 0
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 10
 	active_power_usage = 500
 	circuit = /obj/item/weapon/circuitboard/station_map
@@ -33,15 +33,16 @@
 
 /obj/machinery/station_map/New()
 	..()
+	holomap_datum = new()
+	original_zLevel = loc.z
+	SSholomaps.station_holomaps += src
 	flags |= ON_BORDER // Why? It doesn't help if its not density
 
 /obj/machinery/station_map/Initialize()
 	. = ..()
-	holomap_datum = new()
-	original_zLevel = loc.z
-	SSholomaps.station_holomaps += src
 	if(SSholomaps.holomaps_initialized)
-		setup_holomap()
+		spawn(1) // Tragically we need to spawn this in order to give the frame construcing us time to set pixel_x/y
+			setup_holomap()
 
 /obj/machinery/station_map/Destroy()
 	SSholomaps.station_holomaps -= src
@@ -63,12 +64,14 @@
 	holomap_datum.initialize_holomap(T, reinit = TRUE)
 
 	small_station_map = image(SSholomaps.extraMiniMaps["[HOLOMAP_EXTRA_STATIONMAPSMALL]_[original_zLevel]"], dir = dir)
+	// small_station_map.plane = LIGHTING_PLANE // Not until we do planes ~Leshana
+	// small_station_map.layer = LIGHTING_LAYER+1 // Weird things will happen!
 
 	floor_markings = image('icons/obj/machines/stationmap.dmi', "decal_station_map")
 	floor_markings.dir = src.dir
-
-	spawn(1) //When built from frames, need to allow time for it to set pixel_x and pixel_y
-		update_icon()
+	// floor_markings.plane = ABOVE_TURF_PLANE // Not until we do planes ~Leshana
+	// floor_markings.layer = DECAL_LAYER
+	update_icon()
 
 /obj/machinery/station_map/attack_hand(var/mob/user)
 	if(watching_mob && (watching_mob != user))
@@ -123,7 +126,7 @@
 			GLOB.moved_event.register(watching_mob, src, /obj/machinery/station_map/proc/checkPosition)
 			GLOB.dir_set_event.register(watching_mob, src, /obj/machinery/station_map/proc/checkPosition)
 			GLOB.destroyed_event.register(watching_mob, src, /obj/machinery/station_map/proc/stopWatching)
-			update_use_power(USE_POWER_ACTIVE)
+			update_use_power(2)
 
 			if(bogus)
 				to_chat(user, "<span class='warning'>The holomap failed to initialize. This area of space cannot be mapped.</span>")
@@ -153,7 +156,7 @@
 		GLOB.dir_set_event.unregister(watching_mob, src)
 		GLOB.destroyed_event.unregister(watching_mob, src)
 	watching_mob = null
-	update_use_power(USE_POWER_IDLE)
+	update_use_power(1)
 
 /obj/machinery/station_map/power_change()
 	. = ..()
@@ -169,9 +172,6 @@
 	update_icon()
 
 /obj/machinery/station_map/update_icon()
-	if(!holomap_datum)
-		return //Not yet.
-		
 	overlays.Cut()
 	if(stat & BROKEN)
 		icon_state = "station_mapb"

@@ -197,7 +197,7 @@
 	item_state = "brittrenchcoat"
 
 //For general use
-/obj/item/clothing/suit/storage/vest/hoscoat/axis_greatcoat
+/obj/item/clothing/suit/storage/vest/hoscoat/nazi_greatcoat
 	name = "Greatcoat"
 	desc = "Perfect attire for kicking down the doors of suspected dissidents; this coat gives off an imposing look, while offering a luxuriously plush fur liner."
 
@@ -1752,7 +1752,7 @@ Departamental Swimsuits, for general use
 	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
 		if(..())
 			if(H.ckey != "silencedmp5a5")
-				to_chat(H, "<span class='warning'>...The faceplate is clearly not made for your anatomy, thus, does not fit.</span>")
+				H << "<span class='warning'>...The faceplate is clearly not made for your anatomy, thus, does not fit.</span>"
 				return 0
 			else
 				return 1
@@ -1771,7 +1771,7 @@ Departamental Swimsuits, for general use
 		if(..() && istype(H) && H.ckey == "silencedmp5a5")
 			return 1
 		else
-			to_chat(H, "<span class='warning'>This suit is not designed for you.</span>")
+			to_chat(H,"<span class='warning'>This suit is not designed for you.</span>")
 			return 0
 
 //Zigfe:Zaoozaoo Xrimxuqmqixzix
@@ -1858,7 +1858,7 @@ Departamental Swimsuits, for general use
 
 //Burrito Justice: Jayda Wilson
 /obj/item/clothing/under/solgov/utility/sifguard/medical/fluff
-	desc = "The utility uniform of the Terran Commonwealth Explorer Corps, made from biohazard resistant material. This is an older issuing of the uniform, with integrated department markings."
+	desc = "The utility uniform of the Society of Universal Cartographers, made from biohazard resistant material. This is an older issuing of the uniform, with integrated department markings."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1887,7 +1887,7 @@ Departamental Swimsuits, for general use
 
 	species_restricted = list("exclude", SPECIES_TESHARI)
 
-/obj/item/clothing/under/fluff/slime_skeleton/mob_can_equip(M as mob, slot, disable_warning = FALSE)
+/obj/item/clothing/under/fluff/slime_skeleton/mob_can_equip(M as mob, slot)
 	if(!..())
 		return 0
 
@@ -1902,66 +1902,17 @@ Departamental Swimsuits, for general use
 	return FALSE	//Indigestible
 
 //Bacon12366:Elly Brown
-/obj/item/clothing/suit/storage/star
-	name = "Star hoodie"
-	desc = "It's a black long hoodie with a big blue star at the chest area. It's made of pretty soft material."
+/obj/item/clothing/accessory/sweater/fluff/star
+	name = "Star Sweater"
+	desc = "It's a black long sweater with a big blue star at the chest area. It was made to show person's left shoulder."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "star_hoodie"
+	icon_state = "star_sweater"
 
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "star_hoodie"
+	item_state = "star_sweater"
 
-//KillerDragn:Excess
-/obj/item/clothing/accessory/collar/pink/fluff/warning
-	name = "Warning Collar (AGGRESSIVE)"
-	desc = "A bright red warning collar with white text - \"AGGRESSIVE\"."
-
-//KillerDragn:Excess
-/obj/item/clothing/under/fluff/excess
-	name = "XS-21E Labeled Latex Clothing"
-	desc = "A latex navy blue tube-top and matching compression shorts, with a bright yellow stripe down the side. \"XS-21E\" is written on the thigh. \"Warning\" is written in yellow by the stripe on the top."
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO
-	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "latex_clothes"
-	item_icons = list()
-	default_worn_icon = 'icons/vore/custom_clothes_vr.dmi'
-	color = COLOR_NAVY
-	sprite_sheets = null
-
-//SweetBlueSylveon:Pip Shyner
-/obj/item/clothing/accessory/poncho/roles/cloak/hop/fluff/pip
-	name = "Pip's Cloak"
-	desc = "A brightly colored cloak, similar in pattern to the CRO's cloak. It's colored White, Pink, and Blue, with Gold buttons."
-	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "pipcloak"
-	item_state = "pipcloak_mob"
-	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-
-/obj/item/clothing/accessory/poncho/roles/cloak/hop/fluff/pip/equipped()		//Because otherwise it gets reset every time
-	..()
-	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-
-//CappyCat:Cappy Fuzzlyfeathers
-/obj/item/clothing/accessory/watch
-	name = "silver pocket watch"
-	desc = "A fancy silver-plated digital pocket watch. Looks expensive."
-	icon = 'icons/obj/deadringer.dmi'
-	icon_state = "deadringer"
-	w_class = ITEMSIZE_SMALL
-	slot_flags = SLOT_ID | SLOT_BELT | SLOT_TIE
-
-//Pimientopyro:Zaku Fyodorovna
-/obj/item/clothing/suit/varsity/green/sweater_vest
-	name = "green sweater vest"
-	desc = "A green argyle sweater vest with a white undershirt, a must for long winter nights and looking like a dork."
-
-//Azura Chitin: Azura Chitin
-/obj/item/clothing/accessory/collar/azura
-	name = "Azura's collar"
-	desc = "A black collar with green patterns, reminiscent of tribal tattoos. Regardless of what the front of the tag says, the back of it reads \"Azura Chitin\"."
-	icon = 'icons/vore/custom_items_vr.dmi'
-	icon_state = "azuracollar"
-
-	icon_override = 'icons/vore/custom_onmob_vr.dmi'
-	icon_state = "azuracollar"
+	slot_flags = SLOT_OCLOTHING | SLOT_TIE
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	w_class = ITEMSIZE_NORMAL
+	slot = ACCESSORY_SLOT_OVER

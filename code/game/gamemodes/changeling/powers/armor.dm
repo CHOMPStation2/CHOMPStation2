@@ -81,13 +81,13 @@
 		magpulse = 0
 		set_slowdown()
 		force = 3
-		to_chat(user, "We release our grip on the floor.")
+		user << "We release our grip on the floor."
 	else
 		item_flags |= NOSLIP
 		magpulse = 1
 		set_slowdown()
 		force = 5
-		to_chat(user, "We cling to the terrain below us.")
+		user << "We cling to the terrain below us."
 
 /obj/item/clothing/shoes/magboots/changeling/dropped()
 	..()

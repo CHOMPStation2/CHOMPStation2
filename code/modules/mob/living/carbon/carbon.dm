@@ -33,22 +33,20 @@
 	touching.clear_reagents()
 	..()
 
-/* VOREStation Edit - Duplicated in our code
-/mob/living/carbon/Moved(atom/old_loc, direction, forced = FALSE)
+/mob/living/carbon/Move(NewLoc, direct)
 	. = ..()
 	if(.)
 		if(src.nutrition && src.stat != 2)
-			adjust_nutrition(-DEFAULT_HUNGER_FACTOR / 10)
+			src.nutrition -= DEFAULT_HUNGER_FACTOR/10
 			if(src.m_intent == "run")
-				adjust_nutrition(-DEFAULT_HUNGER_FACTOR / 10)
-
+				src.nutrition -= DEFAULT_HUNGER_FACTOR/10
 		if((FAT in src.mutations) && src.m_intent == "run" && src.bodytemperature <= 360)
 			src.bodytemperature += 2
 
-	// Moving around increases germ_level faster
-	if(germ_level < GERM_LEVEL_MOVE_CAP && prob(8))
-		germ_level++
-
+		// Moving around increases germ_level faster
+		if(germ_level < GERM_LEVEL_MOVE_CAP && prob(8))
+			germ_level++
+/* VOREStation Removal - Needless duplicate feature
 /mob/living/carbon/relaymove(var/mob/living/user, direction)
 	if((user in src.stomach_contents) && istype(user))
 		if(user.last_special <= world.time)
@@ -93,7 +91,7 @@
 		if (H.hand)
 			temp = H.organs_by_name["l_hand"]
 		if(temp && !temp.is_usable())
-			to_chat(H, "<font color='red'>You can't use your [temp.name]</font>")
+			H << "<font color='red'>You can't use your [temp.name]</font>"
 			return
 
 	return
@@ -107,11 +105,7 @@
 	if (shock_damage<1)
 		return 0
 
-	src.apply_damage(0.2 * shock_damage, BURN, def_zone, used_weapon="Electrocution") //shock the target organ
-	src.apply_damage(0.4 * shock_damage, BURN, BP_TORSO, used_weapon="Electrocution") //shock the torso more
-	src.apply_damage(0.2 * shock_damage, BURN, null, used_weapon="Electrocution") //shock a random part!
-	src.apply_damage(0.2 * shock_damage, BURN, null, used_weapon="Electrocution") //shock a random part!
-
+	src.apply_damage(shock_damage, BURN, def_zone, used_weapon="Electrocution")
 	playsound(loc, "sparks", 50, 1, -1)
 	if (shock_damage > 15)
 		src.visible_message(
@@ -149,8 +143,8 @@
 			var/mob/living/carbon/human/H = src
 			var/datum/gender/T = gender_datums[H.get_visible_gender()]
 			src.visible_message( \
-				"<span class='notice'>[src] examines [T.himself].</span>", \
-				"<span class='notice'>You check yourself for injuries.</span>" \
+				"<font color='blue'>[src] examines [T.himself].</font>", \
+				"<font color='blue'>You check yourself for injuries.</font>" \
 				)
 
 			for(var/obj/item/organ/external/org in H.organs)
@@ -310,7 +304,7 @@
 
 	else if (W == handcuffed)
 		handcuffed = null
-		update_handcuffed()
+		update_inv_handcuffed()
 		if(buckled && buckled.buckle_require_restraints)
 			buckled.unbuckle_mob()
 
@@ -318,8 +312,9 @@
 		legcuffed = null
 		update_inv_legcuffed()
 	else
-		..()
+	 ..()
 
+	return
 
 //generates realistic-ish pulse output based on preset levels
 /mob/living/carbon/proc/get_pulse(var/method)	//method 0 is for hands, 1 is for machines, more accurate
@@ -348,7 +343,7 @@
 	set category = "IC"
 
 	if(usr.sleeping)
-		to_chat(usr, "<font color='red'>You are already sleeping</font>")
+		usr << "<font color='red'>You are already sleeping</font>"
 		return
 	if(alert(src,"You sure you want to sleep for a while?","Sleep","Yes","No") == "Yes")
 		usr.sleeping = 20 //Short nap
@@ -402,14 +397,3 @@
 	if(does_not_breathe)
 		return FALSE
 	return ..()
-
-/mob/living/carbon/proc/update_handcuffed()
-	if(handcuffed)
-		drop_l_hand()
-		drop_r_hand()
-		stop_pulling()
-		throw_alert("handcuffed", /obj/screen/alert/restrained/handcuffed, new_master = handcuffed)
-	else
-		clear_alert("handcuffed")
-	update_action_buttons() //some of our action buttons might be unusable when we're handcuffed.
-	update_inv_handcuffed()

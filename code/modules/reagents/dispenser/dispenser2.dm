@@ -3,7 +3,6 @@
 	desc = "Automagically fabricates chemicals from electricity."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "dispenser"
-	clicksound = "switch"
 
 	var/list/spawn_cartridges = null // Set to a list of types to spawn one of each on New()
 
@@ -15,7 +14,7 @@
 	var/accept_drinking = 0
 	var/amount = 30
 
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 100
 	anchored = 1
 
@@ -26,8 +25,8 @@
 			add_cartridge(new type(src))
 
 /obj/machinery/chemical_dispenser/examine(mob/user)
-	. = ..()
-	. += "It has [cartridges.len] cartridges installed, and has space for [DISPENSER_MAX_CARTRIDGES - cartridges.len] more."
+	..()
+	to_chat(user, "It has [cartridges.len] cartridges installed, and has space for [DISPENSER_MAX_CARTRIDGES - cartridges.len] more.")
 
 /obj/machinery/chemical_dispenser/proc/add_cartridge(obj/item/weapon/reagent_containers/chem_disp_cartridge/C, mob/user)
 	if(!istype(C))
@@ -160,16 +159,12 @@
 		var/label = href_list["dispense"]
 		if(cartridges[label] && container && container.is_open_container())
 			var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
-			playsound(src.loc, 'sound/machines/reagent_dispense.ogg', 25, 1)
 			C.reagents.trans_to(container, amount)
 
 	else if(href_list["ejectBeaker"])
 		if(container)
-			container.forceMove(get_turf(src))
-
-			if(Adjacent(usr)) // So the AI doesn't get a beaker somehow.
-				usr.put_in_hands(container)
-
+			var/obj/item/weapon/reagent_containers/B = container
+			B.loc = loc
 			container = null
 
 	add_fingerprint(usr)

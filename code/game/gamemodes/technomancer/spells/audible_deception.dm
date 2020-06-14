@@ -92,4 +92,4 @@
 					M.Paralyse(4)
 				else
 					M.make_jittery(50)
-				to_chat(M, "<font color='red' size='7'><b>HONK</b></font>")
+				M << "<font color='red' size='7'><b>HONK</b></font>"

@@ -177,8 +177,7 @@
 		"platinum" = 40,
 		"lead" = 40,
 		"mhydrogen" = 40,
-		"verdantium" = 60,
-		"rutile" = 40) //VOREStation Add
+		"verdantium" = 60)
 
 /obj/machinery/mineral/processing_unit/New()
 	..()

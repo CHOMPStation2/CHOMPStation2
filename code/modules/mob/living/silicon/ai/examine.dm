@@ -1,39 +1,42 @@
 /mob/living/silicon/ai/examine(mob/user)
-	. = ..()
+	if(!..(user))
+		return
 
+	var/msg = ""
 	if (src.stat == DEAD)
-		. += "<span class='deadsay'>It appears to be powered-down.</span>"
+		msg += "<span class='deadsay'>It appears to be powered-down.</span>\n"
 	else
+		msg += "<span class='warning'>"
 		if (src.getBruteLoss())
 			if (src.getBruteLoss() < 30)
-				. += "<span class='warning'>It looks slightly dented.</span>"
+				msg += "It looks slightly dented.\n"
 			else
-				. += "<span class='warning'><B>It looks severely dented!</B></span>"
+				msg += "<B>It looks severely dented!</B>\n"
 		if (src.getFireLoss())
 			if (src.getFireLoss() < 30)
-				. += "<span class='warning'>It looks slightly charred.</span>"
+				msg += "It looks slightly charred.\n"
 			else
-				. += "<span class='warning'><B>Its casing is melted and heat-warped!</B></span>"
+				msg += "<B>Its casing is melted and heat-warped!</B>\n"
 		if (src.getOxyLoss() && (aiRestorePowerRoutine != 0 && !APU_power))
 			if (src.getOxyLoss() > 175)
-				. += "<span class='warning'><B>It seems to be running on backup power. Its display is blinking a \"BACKUP POWER CRITICAL\" warning.</B></span>"
+				msg += "<B>It seems to be running on backup power. Its display is blinking a \"BACKUP POWER CRITICAL\" warning.</B>\n"
 			else if(src.getOxyLoss() > 100)
-				. += "<span class='warning'><B>It seems to be running on backup power. Its display is blinking a \"BACKUP POWER LOW\" warning.</B></span>"
+				msg += "<B>It seems to be running on backup power. Its display is blinking a \"BACKUP POWER LOW\" warning.</B>\n"
 			else
-				. += "<span class='warning'>It seems to be running on backup power.</span>"
+				msg += "It seems to be running on backup power.\n"
 
 		if (src.stat == UNCONSCIOUS)
-			. += "<span class='warning'>It is non-responsive and displaying the text: \"RUNTIME: Sensory Overload, stack 26/3\".</span>"
-
+			msg += "It is non-responsive and displaying the text: \"RUNTIME: Sensory Overload, stack 26/3\".\n"
+		msg += "</span>"
 		if(deployed_shell)
-			. += "The wireless networking light is blinking."
-
-	. += "*---------*"
-	
+			msg += "The wireless networking light is blinking.\n"
+	msg += "*---------*"
 	if(hardware && (hardware.owner == src))
-		. += hardware.get_examine_desc()
-	
+		msg += "<br>"
+		msg += hardware.get_examine_desc()
+	user << msg
 	user.showLaws(src)
+	return
 
 /mob/proc/showLaws(var/mob/living/silicon/S)
 	return

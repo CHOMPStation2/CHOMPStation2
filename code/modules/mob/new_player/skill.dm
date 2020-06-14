@@ -3,7 +3,6 @@ var/global/const
 	SKILL_BASIC = 1
 	SKILL_ADEPT = 2
 	SKILL_EXPERT = 3
-	SKILL_PROF = 4
 
 /datum/skill/var
 	ID = "none" // ID of the skill, used in code
@@ -177,7 +176,7 @@ var/global/list/SKILL_PRE = list("Engineer" = SKILL_ENGINEER, "Roboticist" = SKI
 		setup_skills()
 
 	if(!M.skills || M.skills.len == 0)
-		to_chat(user, "There are no skills to display.")
+		user << "There are no skills to display."
 		return
 
 	var/HTML = "<body>"

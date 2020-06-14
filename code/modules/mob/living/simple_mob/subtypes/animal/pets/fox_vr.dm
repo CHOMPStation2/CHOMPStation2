@@ -175,7 +175,7 @@
 		return
 
 	if (!(ishuman(usr) && befriend_job && usr.job == befriend_job))
-		to_chat(usr, "<span class='notice'>[src] ignores you.</span>")
+		usr << "<span class='notice'>[src] ignores you.</span>"
 		return
 
 	friend = usr

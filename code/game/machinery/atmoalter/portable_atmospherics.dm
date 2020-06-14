@@ -1,6 +1,6 @@
 /obj/machinery/portable_atmospherics
 	name = "atmoalter"
-	use_power = USE_POWER_OFF
+	use_power = 0
 	layer = OBJ_LAYER // These are mobile, best not be under everything.
 	var/datum/gas_mixture/air_contents = new
 
@@ -21,20 +21,18 @@
 
 	return 1
 
-/obj/machinery/portable_atmospherics/Initialize()
-	..()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/machinery/portable_atmospherics/LateInitialize()
-	var/obj/machinery/atmospherics/portables_connector/port = locate() in loc
-	if(port)
-		connect(port)
-		update_icon()
-
 /obj/machinery/portable_atmospherics/Destroy()
 	QDEL_NULL(air_contents)
 	QDEL_NULL(holding)
-	return ..()
+	. = ..()
+
+/obj/machinery/portable_atmospherics/Initialize()
+	. = ..()
+	spawn()
+		var/obj/machinery/atmospherics/portables_connector/port = locate() in loc
+		if(port)
+			connect(port)
+			update_icon()
 
 /obj/machinery/portable_atmospherics/process()
 	if(!connected_port) //only react when pipe_network will ont it do it for you

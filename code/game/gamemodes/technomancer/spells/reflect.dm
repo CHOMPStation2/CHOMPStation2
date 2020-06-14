@@ -21,12 +21,13 @@
 	set_light(3, 2, l_color = "#006AFF")
 	spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src)
-	to_chat(owner, "<span class='notice'>Your shield will expire in 5 seconds!</span>")
-	QDEL_IN(src, 5 SECONDS)
+	owner << "<span class='notice'>Your shield will expire in 3 seconds!</span>"
+	spawn(5 SECONDS)
+		if(src)
+			owner << "<span class='danger'>Your shield expires!</span>"
+			qdel(src)
 
 /obj/item/weapon/spell/reflect/Destroy()
-	if(owner)
-		to_chat(owner, "<span class='danger'>Your shield expires!</span>")
 	spark_system = null
 	return ..()
 
@@ -37,7 +38,7 @@
 	var/damage_to_energy_cost = (damage_to_energy_multiplier * damage)
 
 	if(!pay_energy(damage_to_energy_cost))
-		to_chat(owner, "<span class='danger'>Your shield fades due to lack of energy!</span>")
+		owner << "<span class='danger'>Your shield fades due to lack of energy!</span>"
 		qdel(src)
 		return 0
 
@@ -67,7 +68,7 @@
 				if(!reflecting)
 					reflecting = 1
 					spawn(2 SECONDS) //To ensure that most or all of a burst fire cycle is reflected.
-						to_chat(owner, "<span class='danger'>Your shield fades due being used up!</span>")
+						owner << "<span class='danger'>Your shield fades due being used up!</span>"
 						qdel(src)
 
 				return PROJECTILE_CONTINUE // complete projectile permutation
@@ -76,8 +77,8 @@
 			var/obj/item/weapon/W = damage_source
 			if(attacker)
 				W.attack(attacker)
-				to_chat(attacker, "<span class='danger'>Your [damage_source.name] goes through \the [src] in one location, comes out \
-				on the same side, and hits you!</span>")
+				attacker << "<span class='danger'>Your [damage_source.name] goes through \the [src] in one location, comes out \
+				on the same side, and hits you!</span>"
 
 				spark_system.start()
 				playsound(user.loc, 'sound/weapons/blade1.ogg', 50, 1)
@@ -87,7 +88,7 @@
 				if(!reflecting)
 					reflecting = 1
 					spawn(2 SECONDS) //To ensure that most or all of a burst fire cycle is reflected.
-						to_chat(owner, "<span class='danger'>Your shield fades due being used up!</span>")
+						owner << "<span class='danger'>Your shield fades due being used up!</span>"
 						qdel(src)
 		return 1
 	return 0

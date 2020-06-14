@@ -23,7 +23,6 @@
 	display_contents_with_number = 0 // UNStABLE AS FuCK, turn on when it stops crashing clients
 	use_to_pickup = 1
 	slot_flags = SLOT_BELT
-	drop_sound = 'sound/items/drop/backpack.ogg'
 
 // -----------------------------
 //          Trash bag
@@ -34,7 +33,6 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "trashbag0"
 	item_state_slots = list(slot_r_hand_str = "trashbag", slot_l_hand_str = "trashbag")
-	drop_sound = 'sound/items/drop/wrapper.ogg'
 
 	w_class = ITEMSIZE_LARGE
 	max_w_class = ITEMSIZE_SMALL
@@ -61,7 +59,6 @@
 	desc = "It's a very flimsy, very noisy alternative to a bag."
 	icon = 'icons/obj/trash.dmi'
 	icon_state = "plasticbag"
-	drop_sound = 'sound/items/drop/wrapper.ogg'
 
 	w_class = ITEMSIZE_LARGE
 	max_w_class = ITEMSIZE_SMALL
@@ -142,36 +139,34 @@
 	if(O)
 		gather_all(get_turf(src), user)
 
-/obj/item/weapon/storage/bag/ore/proc/rangedload(atom/A, mob/user)
-	var/obj/item/weapon/ore/O = locate() in get_turf(A)
-	if(O)
-		gather_all(get_turf(A), user)
 
 /obj/item/weapon/storage/bag/ore/examine(mob/user)
-	. = ..()
+	..()
 
 	if(!Adjacent(user)) //Can only check the contents of ore bags if you can physically reach them.
-		return .
+		return
 
 	if(istype(user, /mob/living))
 		add_fingerprint(user)
 
 	if(!contents.len)
-		. += "It is empty."
+		to_chat(user, "It is empty.")
+		return
 
-	else if(world.time > last_update + 10)
+	if(world.time > last_update + 10)
 		update_ore_count()
 		last_update = world.time
 
-		. += "<span class='notice'>It holds:</span>"
-		for(var/ore in stored_ore)
-			. += "<span class='notice'>- [stored_ore[ore]] [ore]</span>"
+	to_chat(user, "<span class='notice'>It holds:</span>")
+	for(var/ore in stored_ore)
+		to_chat(user, "<span class='notice'>- [stored_ore[ore]] [ore]</span>")
+	return
 
 /obj/item/weapon/storage/bag/ore/open(mob/user as mob) //No opening it for the weird UI of having shit-tons of ore inside it.
 	if(world.time > last_update + 10)
 		update_ore_count()
 		last_update = world.time
-		user.examinate(src)
+		examine(user)
 
 /obj/item/weapon/storage/bag/ore/proc/update_ore_count() //Stolen from ore boxes.
 
@@ -222,14 +217,14 @@
 /obj/item/weapon/storage/bag/sheetsnatcher/can_be_inserted(obj/item/W as obj, stop_messages = 0)
 	if(!istype(W,/obj/item/stack/material))
 		if(!stop_messages)
-			to_chat(usr, "The snatcher does not accept [W].")
+			usr << "The snatcher does not accept [W]."
 		return 0
 	var/current = 0
 	for(var/obj/item/stack/material/S in contents)
 		current += S.amount
 	if(capacity == current)//If it's full, you're done
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>The snatcher is full.</span>")
+			usr << "<span class='warning'>The snatcher is full.</span>"
 		return 0
 	return 1
 
@@ -338,21 +333,6 @@
 	name = "sheet snatcher 9000"
 	desc = ""
 	capacity = 500//Borgs get more because >specialization
-
-// -----------------------------
-//    Food Bag (Service Hound)
-// -----------------------------
-/obj/item/weapon/storage/bag/dogborg
-	name = "dog bag"
-	icon = 'icons/obj/storage.dmi'
-	icon_state = "foodbag"
-	desc = "A bag for storing things of all kinds."
-	max_storage_space = ITEMSIZE_COST_NORMAL * 25
-	max_w_class = ITEMSIZE_NORMAL
-	w_class = ITEMSIZE_SMALL
-	can_hold = list(/obj/item/weapon/reagent_containers/food/snacks,/obj/item/weapon/reagent_containers/food/condiment,
-	/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/coin,/obj/item/weapon/spacecash,
-	/obj/item/weapon/reagent_containers/food/snacks/grown,/obj/item/seeds,/obj/item/weapon/grown,/obj/item/weapon/reagent_containers/pill)
 
 // -----------------------------
 //           Cash Bag

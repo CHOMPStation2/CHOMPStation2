@@ -53,9 +53,9 @@
 
 /obj/item/weapon/circuitboard/security/emag_act(var/remaining_charges, var/mob/user)
 	if(emagged)
-		to_chat(user, "Circuit lock is already removed.")
+		user << "Circuit lock is already removed."
 		return
-	to_chat(user, "<span class='notice'>You override the circuit lock and open controls.</span>")
+	user << "<span class='notice'>You override the circuit lock and open controls.</span>"
 	emagged = 1
 	locked = 0
 	return 1
@@ -63,26 +63,26 @@
 /obj/item/weapon/circuitboard/security/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I,/obj/item/weapon/card/id))
 		if(emagged)
-			to_chat(user, "<span class='warning'>Circuit lock does not respond.</span>")
+			user << "<span class='warning'>Circuit lock does not respond.</span>"
 			return
 		if(check_access(I))
 			locked = !locked
-			to_chat(user, "<span class='notice'>You [locked ? "" : "un"]lock the circuit controls.</span>")
+			user << "<span class='notice'>You [locked ? "" : "un"]lock the circuit controls.</span>"
 		else
-			to_chat(user, "<span class='warning'>Access denied.</span>")
+			user << "<span class='warning'>Access denied.</span>"
 	else if(istype(I,/obj/item/device/multitool))
 		if(locked)
-			to_chat(user, "<span class='warning'>Circuit controls are locked.</span>")
+			user << "<span class='warning'>Circuit controls are locked.</span>"
 			return
 		var/existing_networks = jointext(network,",")
 		var/input = sanitize(input(usr, "Which networks would you like to connect this camera console circuit to? Seperate networks with a comma. No Spaces!\nFor example: SS13,Security,Secret ", "Multitool-Circuitboard interface", existing_networks))
 		if(!input)
-			to_chat(usr, "No input found please hang up and try your call again.")
+			usr << "No input found please hang up and try your call again."
 			return
 		var/list/tempnetwork = splittext(input, ",")
 		tempnetwork = difflist(tempnetwork,restricted_camera_networks,1)
 		if(tempnetwork.len < 1)
-			to_chat(usr, "No network found please hang up and try your call again.")
+			usr << "No network found please hang up and try your call again."
 			return
 		network = tempnetwork
 	return

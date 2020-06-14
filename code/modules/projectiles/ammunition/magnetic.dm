@@ -11,4 +11,4 @@
 
 /obj/item/weapon/magnetic_ammo/examine(mob/user)
 	. = ..()
-	. += "There [(remaining == 1)? "is" : "are"] [remaining] flechette\s left!"
+	to_chat(user, "There [(remaining == 1)? "is" : "are"] [remaining] flechette\s left!")

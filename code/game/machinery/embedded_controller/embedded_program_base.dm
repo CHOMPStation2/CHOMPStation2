@@ -11,15 +11,8 @@
 		var/obj/machinery/embedded_controller/radio/R = M
 		id_tag = R.id_tag
 
-/datum/computer/file/embedded_program/Destroy()
-	if(master)
-		master.program = null
-		master = null
-	return ..()
-
-// Return TRUE if was a command for us, otherwise return FALSE (so controllers with multiple programs can try each in turn until one accepts)
 /datum/computer/file/embedded_program/proc/receive_user_command(command)
-	return FALSE
+	return
 
 /datum/computer/file/embedded_program/proc/receive_signal(datum/signal/signal, receive_method, receive_param)
 	return

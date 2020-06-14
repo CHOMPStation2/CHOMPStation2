@@ -141,7 +141,7 @@ var/savefile/Banlistjob
 
 	Banlistjob.cd = "/base"
 	if ( Banlistjob.dir.Find("[ckey][computerid][rank]") )
-		to_chat(usr,"<font color='red'>Banjob already exists.</font>")
+		usr << text("<font color='red'>Banjob already exists.</font>")
 		return 0
 	else
 		Banlistjob.dir.Add("[ckey][computerid][rank]")
@@ -219,22 +219,22 @@ var/savefile/Banlistjob
 
 /*/datum/admins/proc/permjobban(ckey, computerid, reason, bannedby, temp, minutes, rank)
 	if(AddBanjob(ckey, computerid, reason, usr.ckey, 0, 0, job))
-		to_chat(M, "<font color='red'><BIG><B>You have been banned from [job] by [usr.client.ckey].\nReason: [reason].</B></BIG></font>")
-		to_chat(M, "<font color='red'>This is a permanent ban.</font>")
+		M << "<font color='red'><BIG><B>You have been banned from [job] by [usr.client.ckey].\nReason: [reason].</B></BIG></font>"
+		M << "<font color='red'>This is a permanent ban.</font>"
 		if(config.banappeals)
-			to_chat(M, "<font color='red'>To try to resolve this matter head to [config.banappeals]</font>")
+			M << "<font color='red'>To try to resolve this matter head to [config.banappeals]</font>"
 		else
-			to_chat(M, "<font color='red'>No ban appeals URL has been set.</font>")
+			M << "<font color='red'>No ban appeals URL has been set.</font>"
 		log_admin("[usr.client.ckey] has banned from [job] [ckey].\nReason: [reason]\nThis is a permanent ban.")
 		message_admins("<font color='blue'>[usr.client.ckey] has banned from [job] [ckey].\nReason: [reason]\nThis is a permanent ban.</font>")
 /datum/admins/proc/timejobban(ckey, computerid, reason, bannedby, temp, minutes, rank)
 	if(AddBanjob(ckey, computerid, reason, usr.ckey, 1, mins, job))
-		to_chat(M, "<font color='red'><BIG><B>You have been jobbanned from [job] by [usr.client.ckey].\nReason: [reason].</B></BIG></font>")
-		to_chat(M, "<font color='red'>This is a temporary ban, it will be removed in [mins] minutes.</font>")
+		M << "<font color='red'><BIG><B>You have been jobbanned from [job] by [usr.client.ckey].\nReason: [reason].</B></BIG></font>"
+		M << "<font color='red'>This is a temporary ban, it will be removed in [mins] minutes.</font>"
 		if(config.banappeals)
-			to_chat(M, "<font color='red'>To try to resolve this matter head to [config.banappeals]</font>")
+			M << "<font color='red'>To try to resolve this matter head to [config.banappeals]</font>"
 		else
-			to_chat(M, "<font color='red'>No ban appeals URL has been set.</font>")
+			M << "<font color='red'>No ban appeals URL has been set.</font>"
 		log_admin("[usr.client.ckey] has jobbanned from [job] [ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
 		message_admins("<font color='blue'>[usr.client.ckey] has banned from [job] [ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</font>")*/
 //////////////////////////////////// DEBUG ////////////////////////////////////
@@ -253,17 +253,17 @@ var/savefile/Banlistjob
 			Banlistjob.cd = "/base"
 			Banlistjob.dir.Add("trash[i]trashid[i]")
 			Banlistjob.cd = "/base/trash[i]trashid[i]"
-			to_chat(Banlistjob["key"], "trash[i]")
+			Banlistjob["key"] << "trash[i]"
 		else
 			Banlistjob.cd = "/base"
 			Banlistjob.dir.Add("[last]trashid[i]")
 			Banlistjob.cd = "/base/[last]trashid[i]"
 			Banlistjob["key"] << last
-		to_chat(Banlistjob["id"], "trashid[i]")
-		to_chat(Banlistjob["reason"], "Trashban[i].")
+		Banlistjob["id"] << "trashid[i]"
+		Banlistjob["reason"] << "Trashban[i]."
 		Banlistjob["temp"] << a
 		Banlistjob["minutes"] << CMinutes + rand(1,2000)
-		to_chat(Banlistjob["bannedby"], "trashmin")
+		Banlistjob["bannedby"] << "trashmin"
 		last = "trash[i]"
 
 	Banlistjob.cd = "/base"

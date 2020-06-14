@@ -22,9 +22,6 @@
 		to_chat(src, "<span class='warning'>There is no blob here!</span>")
 		return
 
-	if(B.overmind != src)
-		to_chat(src, span("warning", "This blob isn't controlled by you."))
-
 	if(!istype(B, /obj/structure/blob/normal))
 		to_chat(src, "<span class='warning'>Unable to use this blob, find a normal one.</span>")
 		return
@@ -69,7 +66,7 @@
 		return TRUE
 
 	var/obj/structure/blob/B = null
-	var/list/potential_blobs = GLOB.all_blobs.Copy()
+	var/list/potential_blobs = blobs.Copy()
 	while(potential_blobs.len)
 		var/obj/structure/blob/temp = pick(potential_blobs)
 		if(!(locate(/obj/structure/blob/node) in range(temp, BLOB_NODE_PULSE_RANGE) ) && !(locate(/obj/structure/blob/core) in range(temp, BLOB_CORE_PULSE_RANGE) ))
@@ -80,8 +77,6 @@
 			potential_blobs -= temp // Don't take up the core's shield spot.
 		else if(!istype(temp, /obj/structure/blob/normal))
 			potential_blobs -= temp // Not a normal blob.
-		else if(temp.overmind != src)
-			potential_blobs -= temp // Not our blob.
 		else
 			B = temp
 			break
@@ -112,7 +107,7 @@
 		return TRUE
 
 	var/obj/structure/blob/B = null
-	var/list/potential_blobs = GLOB.all_blobs.Copy()
+	var/list/potential_blobs = blobs.Copy()
 	while(potential_blobs.len)
 		var/obj/structure/blob/temp = pick(potential_blobs)
 		if(!(locate(/obj/structure/blob/node) in range(temp, BLOB_NODE_PULSE_RANGE) ) && !(locate(/obj/structure/blob/core) in range(temp, BLOB_CORE_PULSE_RANGE) ))
@@ -123,8 +118,6 @@
 			potential_blobs -= temp // Don't take up the core's shield spot.
 		else if(!istype(temp, /obj/structure/blob/normal))
 			potential_blobs -= temp // Not a normal blob.
-		else if(temp.overmind != src)
-			potential_blobs -= temp // Not our blob.
 		else
 			B = temp
 			break
@@ -156,7 +149,7 @@
 		return TRUE
 
 	var/obj/structure/blob/B = null
-	var/list/potential_blobs = GLOB.all_blobs.Copy()
+	var/list/potential_blobs = blobs.Copy()
 	while(potential_blobs.len)
 		var/obj/structure/blob/temp = pick(potential_blobs)
 		if(locate(/obj/structure/blob/node) in range(temp, 5) )
@@ -165,8 +158,6 @@
 			potential_blobs -= temp
 		else if(!istype(temp, /obj/structure/blob/normal))
 			potential_blobs -= temp
-		else if(temp.overmind != src)
-			potential_blobs -= temp // Not our blob.
 		else
 			B = temp
 			break
@@ -193,7 +184,7 @@
 		other_T = get_step(T, direction)
 		if(other_T)
 			B = locate(/obj/structure/blob) in other_T
-			if(B && B.overmind == src)
+			if(B)
 				break
 
 	if(!B)
@@ -225,7 +216,7 @@
 		for(var/direction in cardinal)
 			var/turf/T = get_step(L, direction)
 			B = locate(/obj/structure/blob) in T
-			if(B && B.overmind == src)
+			if(B)
 				break
 		if(!B)
 			continue

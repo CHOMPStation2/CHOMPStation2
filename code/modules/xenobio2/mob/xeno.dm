@@ -67,7 +67,7 @@ Also includes Life and New
 			nutrition = 0
 		if((nutrition > 0 ) && traitdat.traits[TRAIT_XENO_EATS])
 			if(nutrition >= 300)
-				adjust_nutrition(-hunger_factor)
+				nutrition -= hunger_factor
 		else
 			if(traitdat.traits[TRAIT_XENO_EATS])
 				health = starve_damage
@@ -93,7 +93,7 @@ Also includes Life and New
 	traitdat.source = name
 
 	if(!health)
-		set_stat(DEAD)
+		stat = DEAD
 
 /mob/living/simple_mob/xeno/bullet_act(var/obj/item/projectile/Proj)
 	if(istype(Proj, /obj/item/projectile/beam/stun/xeno))

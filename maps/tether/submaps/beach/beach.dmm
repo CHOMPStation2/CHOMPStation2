@@ -35,7 +35,7 @@
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "aj" = (
-/turf/simulated/floor/water/beach,
+/turf/simulated/floor/water/ocean,
 /area/tether_away/beach)
 "ak" = (
 /turf/simulated/floor/water/ocean,
@@ -56,10 +56,7 @@
 /area/tether_away/beach)
 "ap" = (
 /obj/effect/overlay/palmtree_r,
-/turf/simulated/floor/water/beach/corner{
-	icon_state = "beachcorner";
-	dir = 8
-	},
+/turf/simulated/floor/beach/sand,
 /area/tether_away/beach/jungle)
 "aq" = (
 /turf/simulated/wall/wood,
@@ -263,7 +260,6 @@
 /area/tether_away/beach)
 "aY" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/greendouble,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "aZ" = (
@@ -275,19 +271,19 @@
 /area/tether_away/beach)
 "bb" = (
 /obj/structure/bed/chair,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "bc" = (
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "bd" = (
 /obj/item/weapon/beach_ball,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "be" = (
 /obj/item/clothing/head/collectable/paper,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "bf" = (
 /turf/simulated/floor/water/ocean,
@@ -306,23 +302,14 @@
 /turf/simulated/floor/water/ocean,
 /area/tether_away/beach/jungle)
 "bk" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 1
-	},
+/turf/simulated/floor/beach/sand,
 /area/tether_away/beach/water)
 "bl" = (
 /turf/unsimulated/wall/planetary/normal,
 /area/tether_away/beach/jungle)
 "bm" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/beach/jungle;
-	base_turf = /turf/simulated/floor/beach/sand/desert;
-	landmark_tag = "beach_c";
-	name = "Virgo 4 Beach (Center)"
-	},
 /turf/simulated/floor/beach/sand/desert,
-/area/tether_away/beach/jungle)
+/area/shuttle/excursion/away_beach)
 "bn" = (
 /mob/living/simple_mob/animal/passive/fish/measelshark,
 /turf/simulated/floor/water/deep/ocean,
@@ -338,148 +325,13 @@
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach/jungle)
 "bs" = (
+/obj/shuttle_connector/beach,
 /obj/effect/step_trigger/zlevel_fall/beach,
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)
-"cA" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 10
-	},
-/area/tether_away/beach/water)
-"cS" = (
-/turf/simulated/floor/water/beach/corner,
-/area/tether_away/beach/water)
-"dY" = (
-/turf/simulated/floor/water/beach/corner{
-	icon_state = "beachcorner";
-	dir = 8
-	},
-/area/tether_away/beach)
-"fQ" = (
-/turf/simulated/floor/water/beach,
-/area/tether_away/beach/water)
-"gA" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 6
-	},
-/area/tether_away/beach/water)
-"hx" = (
-/obj/effect/overmap/visitable/sector/virgo4,
-/turf/simulated/floor/water/deep/ocean,
-/area/tether_away/beach/water)
-"hN" = (
-/turf/simulated/floor/holofloor/beach/sand,
-/area/tether_away/beach/jungle)
-"le" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 5
-	},
-/area/tether_away/beach/jungle)
-"mC" = (
-/turf/simulated/floor/beach/sand/desert,
-/area/tether_away/beach/water)
-"oC" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 4
-	},
-/area/tether_away/beach/jungle)
-"pq" = (
-/turf/simulated/floor/water/beach/corner,
-/area/tether_away/beach/jungle)
-"pS" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 1
-	},
-/area/tether_away/beach/jungle)
-"tj" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 5
-	},
-/area/tether_away/beach/water)
-"tr" = (
-/turf/simulated/floor/beach/sand/desert,
-/area/tether_away/beach)
 "xW" = (
 /obj/tether_away_spawner/beach_outside_friendly,
 /turf/simulated/floor/beach/sand/desert,
-/area/tether_away/beach/jungle)
-"Ar" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/beach/jungle;
-	base_turf = /turf/simulated/floor/beach/sand/desert;
-	landmark_tag = "beach_nw";
-	name = "Virgo 4 Beach (NW)"
-	},
-/turf/simulated/floor/beach/sand/desert,
-/area/tether_away/beach/jungle)
-"BG" = (
-/turf/simulated/floor/water/beach/corner{
-	icon_state = "beachcorner";
-	dir = 8
-	},
-/area/tether_away/beach/jungle)
-"CP" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 10
-	},
-/area/tether_away/beach/jungle)
-"Dr" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/beach/jungle;
-	base_turf = /turf/simulated/floor/beach/sand/desert;
-	landmark_tag = "beach_e";
-	name = "Virgo 4 Beach (E)"
-	},
-/turf/simulated/floor/beach/sand/desert,
-/area/tether_away/beach/jungle)
-"DL" = (
-/turf/simulated/floor/water/beach/corner{
-	icon_state = "beachcorner";
-	dir = 8
-	},
-/area/tether_away/beach/water)
-"Ee" = (
-/turf/simulated/floor/water/beach/corner{
-	icon_state = "beachcorner";
-	dir = 4
-	},
-/area/tether_away/beach/jungle)
-"Ey" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 6
-	},
-/area/tether_away/beach/jungle)
-"Ij" = (
-/turf/simulated/floor/water/beach/corner{
-	icon_state = "beachcorner";
-	dir = 4
-	},
-/area/tether_away/beach/water)
-"Kw" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 8
-	},
-/area/tether_away/beach/jungle)
-"RQ" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 8
-	},
-/area/tether_away/beach/water)
-"Sv" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 9
-	},
 /area/tether_away/beach/jungle)
 "TU" = (
 /obj/tether_away_spawner/beach_outside,
@@ -489,27 +341,6 @@
 /obj/tether_away_spawner/beach_outside_friendly,
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
-"Va" = (
-/turf/simulated/floor/water/beach/corner{
-	icon_state = "beachcorner";
-	dir = 1
-	},
-/area/tether_away/beach/water)
-"VS" = (
-/turf/simulated/floor/water/beach/corner{
-	icon_state = "beachcorner";
-	dir = 1
-	},
-/area/tether_away/beach/jungle)
-"WX" = (
-/turf/simulated/floor/water/beach{
-	icon_state = "beach";
-	dir = 9
-	},
-/area/tether_away/beach/water)
-"Yv" = (
-/turf/simulated/floor/water/beach,
-/area/tether_away/beach/jungle)
 
 (1,1,1) = {"
 bl
@@ -764,7 +595,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -792,7 +623,7 @@ am
 am
 am
 am
-hx
+am
 bi
 "}
 (3,1,1) = {"
@@ -906,7 +737,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -1048,7 +879,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -1190,7 +1021,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -1332,7 +1163,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -1352,9 +1183,9 @@ am
 am
 bj
 bj
-Sv
-Kw
-CP
+bp
+bp
+bp
 bj
 bj
 am
@@ -1369,7 +1200,6 @@ aa
 aa
 aa
 aa
-ab
 aa
 aa
 aa
@@ -1474,7 +1304,8 @@ aa
 aa
 aa
 aa
-tr
+aa
+ad
 aj
 ak
 am
@@ -1493,11 +1324,11 @@ am
 am
 bj
 bj
-Sv
-Ee
-aa
-VS
-CP
+bp
+bp
+bp
+bp
+bp
 bj
 am
 am
@@ -1522,7 +1353,6 @@ aa
 aa
 aa
 aa
-ab
 aa
 aa
 aa
@@ -1616,7 +1446,8 @@ aa
 aa
 aa
 aa
-tr
+aa
+ad
 aj
 ak
 am
@@ -1634,12 +1465,12 @@ am
 am
 am
 bj
-Sv
-Ee
-aa
-aa
-ab
-Yv
+bp
+bp
+bp
+bp
+ap
+bp
 bj
 bj
 am
@@ -1758,7 +1589,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -1776,13 +1607,13 @@ am
 am
 bj
 bj
-pS
-aa
-aa
-aa
-aa
-VS
-CP
+bp
+bp
+bp
+bp
+bp
+bp
+bp
 bj
 am
 am
@@ -1900,7 +1731,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -1917,14 +1748,14 @@ am
 am
 am
 bj
-Sv
-Ee
-ab
-aa
-aa
-aa
-aa
-Yv
+bp
+bp
+ap
+bp
+bp
+bp
+bp
+bp
 bj
 bj
 am
@@ -1935,6 +1766,288 @@ bi
 bl
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+aj
+ak
+am
+am
+am
+am
+am
+am
+am
+am
+am
+am
+am
+am
+bj
+bj
+bp
+bp
+bp
+bp
+bp
+bp
+bp
+ap
+bp
+bj
+am
+am
+bi
+"}
+(12,1,1) = {"
+bl
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ad
+aj
+ak
+am
+am
+am
+am
+am
+am
+am
+am
+am
+am
+am
+am
+bj
+bp
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bp
+bp
+bj
+bn
+am
+bi
+"}
+(13,1,1) = {"
+bl
 aa
 aa
 aa
@@ -2024,7 +2137,6 @@ aa
 aa
 aa
 aa
-ab
 aa
 aa
 aa
@@ -2042,7 +2154,10 @@ aa
 aa
 aa
 aa
-tr
+aa
+aa
+aa
+ad
 aj
 ak
 am
@@ -2058,300 +2173,16 @@ am
 am
 am
 bj
-Sv
-Ee
-aa
-aa
-aa
-ab
-aa
-aa
-VS
-CP
-bj
-am
-am
-bi
-"}
-(12,1,1) = {"
-bl
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-ab
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-tr
-aj
-ak
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-bj
-pS
-tr
-tr
-tr
-tr
-tr
-tr
-tr
-aa
-Yv
-bj
-bn
-am
-bi
-"}
-(13,1,1) = {"
-bl
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-tr
-aj
-ak
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
-bj
-pS
-tr
+bp
+ad
 aq
 aq
 aq
 aq
 aw
-tr
-aa
-Yv
+ad
+bp
+bp
 bj
 am
 am
@@ -2385,7 +2216,7 @@ aa
 aa
 aa
 aa
-aa
+ac
 aa
 aa
 aa
@@ -2468,7 +2299,7 @@ bh
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -2483,17 +2314,17 @@ am
 am
 am
 bj
-Sv
-Ee
-tr
+bj
+bp
+ad
 aq
 aY
 aw
 aB
 aw
-tr
-aa
-Yv
+ad
+bp
+bp
 bj
 am
 am
@@ -2610,7 +2441,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -2625,17 +2456,17 @@ am
 am
 am
 bj
-pS
-aa
-tr
+bp
+bp
+ad
 aq
 aw
 aw
 aq
 aw
-tr
-aa
-Yv
+ad
+bp
+bp
 bj
 am
 am
@@ -2752,7 +2583,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -2767,17 +2598,17 @@ am
 am
 am
 bj
-le
+bp
 ap
-tr
+ad
 aq
 aq
 aq
 aq
 aw
-tr
-aa
-Yv
+ad
+bp
+bp
 bj
 am
 am
@@ -2802,6 +2633,7 @@ aa
 aa
 aa
 aa
+ac
 aa
 aa
 aa
@@ -2893,8 +2725,7 @@ aa
 aa
 aa
 aa
-aa
-tr
+ad
 aj
 ak
 am
@@ -2910,16 +2741,16 @@ am
 am
 bj
 bj
-le
-dY
-tr
-tr
-tr
-tr
-tr
-tr
-pq
-Ey
+bp
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bp
+bp
 bj
 am
 am
@@ -2957,7 +2788,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -3036,7 +2867,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -3053,14 +2884,14 @@ am
 am
 bj
 bj
-le
-oC
-BG
-aa
-aa
-aa
-ab
-Yv
+bp
+bp
+bp
+bp
+bp
+bp
+ap
+bp
 bj
 bj
 am
@@ -3178,7 +3009,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -3197,12 +3028,12 @@ bj
 bj
 bj
 bj
-le
-oC
-BG
-aa
-pq
-Ey
+bj
+bp
+bp
+bp
+bp
+bp
 bj
 am
 am
@@ -3320,7 +3151,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -3341,9 +3172,9 @@ bj
 bj
 bj
 bj
-le
-BG
-Yv
+bp
+bp
+bp
 bj
 bj
 am
@@ -3462,7 +3293,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -3484,8 +3315,8 @@ bj
 bj
 bj
 bj
-le
-Ey
+bp
+bp
 bj
 am
 am
@@ -3503,7 +3334,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -3604,7 +3435,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 am
@@ -3672,6 +3503,7 @@ aa
 aa
 aa
 aa
+ac
 aa
 aa
 aa
@@ -3745,8 +3577,7 @@ aa
 aa
 aa
 aa
-aa
-tr
+ad
 aj
 ak
 bf
@@ -3888,7 +3719,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -3948,7 +3779,7 @@ aa
 aa
 aa
 aa
-aa
+ac
 aa
 aa
 aa
@@ -4030,7 +3861,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -4052,9 +3883,9 @@ am
 bj
 bj
 bj
-Sv
-Kw
-CP
+bj
+bp
+bj
 bj
 am
 am
@@ -4172,7 +4003,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -4193,10 +4024,10 @@ am
 am
 am
 bj
-Sv
-Ee
-aa
-Yv
+bp
+bp
+bp
+bp
 bj
 am
 am
@@ -4314,7 +4145,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -4335,10 +4166,10 @@ am
 am
 am
 bj
-le
-oC
-oC
-Ey
+bj
+bp
+bp
+bj
 bj
 am
 am
@@ -4370,7 +4201,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -4456,7 +4287,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -4598,7 +4429,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -4648,9 +4479,9 @@ aa
 aa
 aa
 aa
+ac
 aa
 aa
-Ar
 aa
 aa
 aa
@@ -4740,7 +4571,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -4810,6 +4641,7 @@ aa
 aa
 aa
 aa
+ab
 aa
 aa
 aa
@@ -4881,8 +4713,7 @@ aa
 aa
 aa
 aa
-aa
-tr
+ad
 aj
 ak
 bf
@@ -4956,7 +4787,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -5308,7 +5139,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -5372,6 +5203,7 @@ aa
 aa
 aa
 aa
+ac
 aa
 aa
 aa
@@ -5449,8 +5281,7 @@ aa
 aa
 aa
 aa
-aa
-tr
+ad
 aj
 ak
 bf
@@ -5524,7 +5355,7 @@ aa
 aa
 aa
 aa
-aa
+ac
 aa
 aa
 aa
@@ -5661,6 +5492,7 @@ aa
 aa
 aa
 aa
+TU
 aa
 aa
 aa
@@ -5670,7 +5502,6 @@ aa
 aa
 aa
 aa
-ac
 aa
 aa
 aa
@@ -5807,7 +5638,6 @@ aa
 aa
 aa
 aa
-TU
 aa
 aa
 aa
@@ -5817,7 +5647,8 @@ aa
 aa
 aa
 aa
-ab
+aa
+aa
 aa
 aa
 aa
@@ -5876,7 +5707,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -6018,7 +5849,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -6071,8 +5902,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+ac
+bh
 aa
 aa
 aa
@@ -6160,7 +5991,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -6197,7 +6028,6 @@ aa
 aa
 aa
 aa
-ab
 aa
 aa
 aa
@@ -6302,7 +6132,8 @@ aa
 aa
 aa
 aa
-tr
+aa
+ad
 aj
 ak
 bf
@@ -6444,7 +6275,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -6586,7 +6417,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -6728,7 +6559,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -6794,8 +6625,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+ab
+bh
 aa
 aa
 aa
@@ -6917,7 +6748,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -7198,7 +7029,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -7353,7 +7184,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -7511,8 +7342,8 @@ aa
 aa
 aa
 aa
-ab
-bh
+aa
+ac
 aa
 aa
 aa
@@ -7580,7 +7411,7 @@ aa
 aa
 aa
 ad
-tr
+ad
 aj
 ak
 bf
@@ -7646,7 +7477,7 @@ aa
 aa
 aa
 aa
-aa
+ac
 aa
 aa
 aa
@@ -7722,7 +7553,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -7864,7 +7695,7 @@ an
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -8006,7 +7837,7 @@ ao
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -8148,7 +7979,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -8228,7 +8059,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 aa
 aa
 aa
@@ -8290,7 +8121,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -8333,37 +8164,6 @@ aa
 aa
 aa
 aa
-ac
-bh
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-ac
 aa
 aa
 aa
@@ -8395,6 +8195,37 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -8432,7 +8263,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -8523,21 +8354,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -8574,7 +8405,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -8631,7 +8462,6 @@ aa
 aa
 aa
 aa
-ab
 aa
 aa
 aa
@@ -8666,20 +8496,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -8716,7 +8547,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -8806,22 +8637,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -8948,21 +8779,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -9089,22 +8920,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -9231,22 +9062,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -9373,22 +9204,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 bs
@@ -9515,22 +9346,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -9657,22 +9488,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -9800,21 +9631,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -9942,22 +9773,22 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -10085,21 +9916,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 bm
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -10227,21 +10058,21 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
+bm
 aa
 aa
 aa
@@ -10376,13 +10207,13 @@ aa
 aa
 aa
 aa
+bm
+bm
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+bm
+bm
 aa
 aa
 aa
@@ -10562,7 +10393,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -10704,7 +10535,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -10846,7 +10677,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -10988,7 +10819,7 @@ ad
 ad
 ad
 ai
-tr
+ad
 aj
 ak
 bf
@@ -11130,7 +10961,7 @@ ad
 ad
 ad
 aZ
-tr
+ad
 aj
 ak
 bf
@@ -11272,7 +11103,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -11414,7 +11245,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -11556,7 +11387,7 @@ ad
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -11698,7 +11529,7 @@ aa
 ad
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -12408,7 +12239,7 @@ aa
 aa
 ad
 ad
-tr
+ad
 aj
 ak
 bf
@@ -12550,7 +12381,7 @@ aa
 aa
 aa
 ad
-tr
+ad
 aj
 ak
 bf
@@ -12692,7 +12523,7 @@ aa
 aa
 aa
 ad
-tr
+ad
 aj
 ak
 bf
@@ -12834,7 +12665,7 @@ aa
 aa
 aa
 ad
-tr
+ad
 aj
 ak
 bf
@@ -12976,7 +12807,7 @@ aa
 aa
 aa
 ad
-tr
+ad
 aj
 ak
 bf
@@ -13118,7 +12949,7 @@ aa
 aa
 aa
 ad
-tr
+ad
 aj
 ak
 bf
@@ -13260,7 +13091,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -13544,7 +13375,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -14538,7 +14369,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -14680,7 +14511,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -14822,7 +14653,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -14964,7 +14795,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -15106,7 +14937,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -15248,7 +15079,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -15390,7 +15221,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -15532,7 +15363,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -15674,7 +15505,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -15687,9 +15518,9 @@ am
 am
 am
 bf
-WX
-RQ
-cA
+bf
+bf
+bf
 bf
 am
 am
@@ -15816,7 +15647,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -15829,9 +15660,9 @@ am
 am
 am
 bf
+bf
 bk
-mC
-fQ
+bf
 bf
 am
 am
@@ -15958,7 +15789,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -15972,8 +15803,8 @@ am
 bf
 bf
 bk
-mC
-fQ
+bk
+bf
 bf
 am
 am
@@ -16100,7 +15931,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -16114,8 +15945,8 @@ am
 bf
 bf
 bk
-mC
-fQ
+bk
+bk
 bf
 am
 am
@@ -16242,7 +16073,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -16254,10 +16085,10 @@ am
 am
 am
 bf
-WX
-Ij
-mC
-fQ
+bf
+bk
+bk
+bk
 bf
 bf
 am
@@ -16384,7 +16215,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -16397,9 +16228,9 @@ bf
 bf
 bf
 bk
-mC
-mC
-fQ
+bk
+bk
+bk
 bf
 bf
 am
@@ -16526,7 +16357,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -16539,10 +16370,10 @@ bf
 bf
 bf
 bk
-mC
-mC
-Va
-cA
+bk
+bk
+bk
+bf
 bf
 am
 am
@@ -16668,7 +16499,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -16679,12 +16510,12 @@ bf
 bf
 bf
 bf
-WX
-Ij
-mC
-mC
-mC
-fQ
+bf
+bk
+bk
+bk
+bk
+bk
 bf
 am
 am
@@ -16810,7 +16641,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -16822,11 +16653,11 @@ bf
 bf
 bf
 bk
-mC
-mC
-mC
-mC
-fQ
+bk
+bk
+bk
+bk
+bk
 bf
 am
 am
@@ -16952,7 +16783,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -16964,11 +16795,11 @@ bf
 bf
 bf
 bk
-mC
-mC
-mC
-mC
-fQ
+bk
+bk
+bk
+bk
+bk
 bf
 am
 am
@@ -17094,7 +16925,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -17106,11 +16937,11 @@ bf
 bf
 bf
 bk
-mC
-mC
-mC
-mC
-fQ
+bk
+bk
+bk
+bk
+bk
 bf
 am
 am
@@ -17236,7 +17067,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -17247,12 +17078,12 @@ am
 am
 bf
 bf
-tj
-DL
-mC
-mC
-cS
-gA
+bf
+bk
+bk
+bk
+bk
+bf
 bf
 am
 am
@@ -17378,7 +17209,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -17391,9 +17222,9 @@ am
 bf
 bf
 bk
-mC
-mC
-fQ
+bk
+bk
+bk
 bf
 bf
 am
@@ -17518,9 +17349,9 @@ aa
 aa
 aa
 aa
-hN
 aa
-tr
+aa
+ad
 aj
 ak
 bf
@@ -17532,10 +17363,10 @@ am
 am
 bf
 bf
-tj
-DL
-cS
-gA
+bf
+bk
+bk
+bk
 bf
 am
 am
@@ -17662,7 +17493,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -17676,7 +17507,7 @@ am
 bf
 bf
 bk
-fQ
+bk
 bf
 bf
 am
@@ -17804,7 +17635,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -17818,7 +17649,7 @@ am
 am
 bf
 bk
-fQ
+bk
 bf
 bf
 am
@@ -17946,7 +17777,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -17960,7 +17791,7 @@ am
 am
 bf
 bk
-fQ
+bk
 bf
 am
 am
@@ -18088,7 +17919,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -18101,8 +17932,8 @@ am
 am
 am
 bf
+bf
 bk
-fQ
 bf
 am
 am
@@ -18230,7 +18061,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -18243,8 +18074,8 @@ am
 am
 am
 bf
+bf
 bk
-fQ
 bf
 am
 am
@@ -18372,7 +18203,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -18385,8 +18216,8 @@ am
 am
 am
 bf
-tj
-gA
+bf
+bf
 bf
 am
 am
@@ -18514,7 +18345,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -18656,7 +18487,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -18798,7 +18629,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -18895,7 +18726,6 @@ aa
 aa
 aa
 aa
-Dr
 aa
 aa
 aa
@@ -18940,7 +18770,8 @@ aa
 aa
 aa
 aa
-tr
+aa
+ad
 aj
 ak
 bf
@@ -19082,7 +18913,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -19224,7 +19055,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -19366,7 +19197,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -19508,7 +19339,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -19650,7 +19481,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -19792,7 +19623,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -19934,7 +19765,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -20076,7 +19907,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf
@@ -20218,7 +20049,7 @@ aa
 aa
 aa
 aa
-tr
+ad
 aj
 ak
 bf

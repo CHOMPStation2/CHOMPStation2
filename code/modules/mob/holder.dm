@@ -5,8 +5,6 @@ var/list/holder_mob_icon_cache = list()
 	name = "holder"
 	desc = "You shouldn't ever see this."
 	icon = 'icons/obj/objects.dmi'
-	randpixel = 0
-	center_of_mass = null
 	slot_flags = SLOT_HEAD | SLOT_HOLSTER
 	show_messages = 1
 
@@ -89,22 +87,6 @@ var/list/holder_mob_icon_cache = list()
 		else if(H.r_hand == src)
 			H.update_inv_r_hand()
 
-/obj/item/weapon/holder/container_resist(mob/living/held)
-	var/mob/M = loc
-	if(istype(M))
-		M.drop_from_inventory(src)
-		to_chat(M, "<span class='warning'>\The [held] wriggles out of your grip!</span>")
-		to_chat(held, "<span class='warning'>You wiggle out of [M]'s grip!</span>")
-	else if(istype(loc, /obj/item/clothing/accessory/holster))
-		var/obj/item/clothing/accessory/holster/holster = loc
-		if(holster.holstered == src)
-			holster.clear_holster()			
-		to_chat(held, "<span class='warning'>You extricate yourself from [holster].</span>")
-		held.forceMove(get_turf(held))
-	else if(isitem(loc))
-		to_chat(held, "<span class='warning'>You struggle free of [loc].</span>")
-		held.forceMove(get_turf(held))
-
 //Mob specific holders.
 /obj/item/weapon/holder/diona
 	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 5)
@@ -178,11 +160,11 @@ var/list/holder_mob_icon_cache = list()
 	grabber.put_in_hands(H)
 
 	if(self_grab)
-		to_chat(grabber, "<span class='notice'>\The [src] clambers onto you!</span>")
+		grabber << "<span class='notice'>\The [src] clambers onto you!</span>"
 		to_chat(src, "<span class='notice'>You climb up onto \the [grabber]!</span>")
 		grabber.equip_to_slot_if_possible(H, slot_back, 0, 1)
 	else
-		to_chat(grabber, "<span class='notice'>You scoop up \the [src]!</span>")
+		grabber << "<span class='notice'>You scoop up \the [src]!</span>"
 		to_chat(src, "<span class='notice'>\The [grabber] scoops you up!</span>")
 
 	H.sync(src)

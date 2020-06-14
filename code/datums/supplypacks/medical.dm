@@ -339,14 +339,14 @@
 /datum/supply_pack/med/distillery
 	name = "Chemical distiller crate"
 	contains = list(/obj/machinery/portable_atmospherics/powered/reagent_distillery = 1)
-	cost = 50
+	cost = 175
 	containertype = /obj/structure/largecrate
 	containername = "Chemical distiller crate"
 
 /datum/supply_pack/med/advdistillery
 	name = "Industrial Chemical distiller crate"
 	contains = list(/obj/machinery/portable_atmospherics/powered/reagent_distillery/industrial = 1)
-	cost = 150
+	cost = 250
 	containertype = /obj/structure/largecrate
 	containername = "Industrial Chemical distiller crate"
 

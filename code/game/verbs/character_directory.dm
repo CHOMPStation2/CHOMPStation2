@@ -18,8 +18,7 @@
 			var/mob/living/carbon/human/H = C.mob
 			if(data_core && data_core.general)
 				if(!find_general_record("name", H.real_name))
-					if(!find_record("name", H.real_name, data_core.hidden_general))
-						continue
+					continue
 			curID++
 			html += "<div class='block'>"
 			html += "<h3 class='uiContent highlight' style='font-size:16px'>[H.real_name]</h3><br>"

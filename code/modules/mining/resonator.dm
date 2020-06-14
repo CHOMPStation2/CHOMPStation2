@@ -63,7 +63,9 @@
 	transform = matrix()*0.75
 	animate(src, transform = matrix()*1.5, time = timetoburst)
 	// Queue the actual bursting
-	addtimer(CALLBACK(src, ./proc/burst, creator), timetoburst)
+	spawn(timetoburst)
+		if(!QDELETED(src))
+			burst(creator)
 
 /obj/effect/resonance/proc/burst(var/creator = null)
 	var/turf/T = get_turf(src)

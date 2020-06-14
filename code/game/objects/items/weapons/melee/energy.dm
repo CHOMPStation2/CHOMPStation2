@@ -86,12 +86,14 @@
 	return null
 
 /obj/item/weapon/melee/energy/examine(mob/user)
-	. = ..()
-	if(use_cell && Adjacent(user))
+	if(!..(user, 1))
+		return
+
+	if(use_cell)
 		if(bcell)
-			. += "<span class='notice'>The blade is [round(bcell.percent())]% charged.</span>"
-		else
-			. += "<span class='warning'>The blade does not have a power source installed.</span>"
+			to_chat(user, "<span class='notice'>The blade is [round(bcell.percent())]% charged.</span>")
+		if(!bcell)
+			to_chat(user, "<span class='warning'>The blade does not have a power source installed.</span>")
 
 /obj/item/weapon/melee/energy/attack_self(mob/living/user as mob)
 	if(use_cell)
@@ -166,7 +168,7 @@
 	. = ..()
 	var/mutable_appearance/blade_overlay = mutable_appearance(icon, "[icon_state]_blade")
 	blade_overlay.color = lcolor
-	color = lcolor
+	color = lcolor	
 	if(rainbow)
 		blade_overlay = mutable_appearance(icon, "[icon_state]_blade_rainbow")
 		blade_overlay.color = "FFFFFF"
@@ -198,8 +200,8 @@
 		update_icon()
 
 /obj/item/weapon/melee/energy/examine(mob/user)
-	. = ..()
-	. += "<span class='notice'>Alt-click to recolor it.</span>"
+	..()
+	to_chat(user, "<span class='notice'>Alt-click to recolor it.</span>")
 
 /*
  * Energy Axe
@@ -209,8 +211,6 @@
 	desc = "An energised battle axe."
 	icon_state = "eaxe"
 	item_state = "eaxe"
-	colorable = FALSE
-	lcolor = null
 	//active_force = 150 //holy...
 	active_force = 60
 	active_throwforce = 35

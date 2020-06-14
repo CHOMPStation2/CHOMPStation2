@@ -299,7 +299,7 @@
 /obj/item/weapon/hand
 	name = "hand of cards"
 	desc = "Some playing cards."
-	icon = 'icons/obj/playing_cards_ch.dmi' //CHOMPEDIT quickest solution to having custom chomp cards - Jack
+	icon = 'icons/obj/playing_cards.dmi'
 	icon_state = "empty"
 	w_class = ITEMSIZE_TINY
 
@@ -348,11 +348,11 @@
 	user.visible_message("<span class = 'notice'>\The [user] [concealed ? "conceals" : "reveals"] their hand.</span>")
 
 /obj/item/weapon/hand/examine(mob/user)
-	. = ..()
+	..(user)
 	if((!concealed) && cards.len)
-		. += "It contains: "
+		to_chat(user,"It contains: ")
 		for(var/datum/playingcard/P in cards)
-			. += "\The [P.name]."
+			to_chat(user,"\The [P.name].")
 
 /obj/item/weapon/hand/verb/Removecard()
 
@@ -453,5 +453,4 @@
 		update_icon()
 
 /obj/item/weapon/hand/pickup(mob/user as mob)
-	..()
 	src.update_icon()

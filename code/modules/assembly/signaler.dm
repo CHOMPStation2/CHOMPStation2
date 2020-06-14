@@ -17,22 +17,33 @@
 	var/datum/radio_frequency/radio_connection
 	var/deadman = FALSE
 
-/obj/item/device/assembly/signaler/Initialize()
-	. = ..()
-	set_frequency(frequency)
+/obj/item/device/assembly/signaler/New()
+	..()
+	spawn(40)
+		set_frequency(frequency)
+	return
+
 
 /obj/item/device/assembly/signaler/activate()
-	if(!process_cooldown())
-		return FALSE
+	if(cooldown > 0)	return FALSE
+	cooldown = 2
+	spawn(10)
+		process_cooldown()
+
 	signal()
 	return TRUE
 
 /obj/item/device/assembly/signaler/update_icon()
 	if(holder)
 		holder.update_icon()
+	return
 
-/obj/item/device/assembly/signaler/interact(var/mob/user)
+/obj/item/device/assembly/signaler/interact(mob/user as mob, flag1)
 	var/t1 = "-------"
+//		if ((src.b_stat && !( flag1 )))
+//			t1 = text("-------<BR>\nGreen Wire: []<BR>\nRed Wire:   []<BR>\nBlue Wire:  []<BR>\n", (src.wires & 4 ? text("<A href='?src=\ref[];wires=4'>Cut Wire</A>", src) : text("<A href='?src=\ref[];wires=4'>Mend Wire</A>", src)), (src.wires & 2 ? text("<A href='?src=\ref[];wires=2'>Cut Wire</A>", src) : text("<A href='?src=\ref[];wires=2'>Mend Wire</A>", src)), (src.wires & 1 ? text("<A href='?src=\ref[];wires=1'>Cut Wire</A>", src) : text("<A href='?src=\ref[];wires=1'>Mend Wire</A>", src)))
+//		else
+//			t1 = "-------"	Speaker: [src.listening ? "<A href='byond://?src=\ref[src];listen=0'>Engaged</A>" : "<A href='byond://?src=\ref[src];listen=1'>Disengaged</A>"]<BR>
 	var/dat = {"
 <TT>
 
@@ -55,6 +66,8 @@ Code:
 </TT>"}
 	user << browse(dat, "window=radio")
 	onclose(user, "radio")
+	return
+
 
 /obj/item/device/assembly/signaler/Topic(href, href_list, state = deep_inventory_state)
 	if(..())
@@ -84,7 +97,9 @@ Code:
 	if(usr)
 		attack_self(usr)
 
-/obj/item/device/assembly/signaler/attackby(var/obj/item/weapon/W, mob/user, params)
+	return
+
+/obj/item/device/assembly/signaler/attackby(obj/item/weapon/W, mob/user, params)
 	if(issignaler(W))
 		var/obj/item/device/assembly/signaler/signaler2 = W
 		if(secured && signaler2.secured)
@@ -105,6 +120,8 @@ Code:
 	signal.encryption = code
 	signal.data["message"] = "ACTIVATE"
 	radio_connection.post_signal(src, signal)
+	return
+
 
 /obj/item/device/assembly/signaler/pulse(var/radio = 0)
 	if(is_jammed(src))
@@ -116,6 +133,7 @@ Code:
 	else
 		..(radio)
 	return TRUE
+
 
 /obj/item/device/assembly/signaler/receive_signal(datum/signal/signal)
 	if(!signal)
@@ -130,7 +148,9 @@ Code:
 
 	if(!holder)
 		for(var/mob/O in hearers(1, src.loc))
-			O.show_message("[bicon(src)] *beep* *beep*", 3, "*beep* *beep*", 2)
+			O.show_message(text("\icon[] *beep* *beep*", src), 3, "*beep* *beep*", 2)
+	return
+
 
 /obj/item/device/assembly/signaler/proc/set_frequency(new_frequency)
 	if(!frequency)
@@ -143,6 +163,7 @@ Code:
 	radio_controller.remove_object(src, frequency)
 	frequency = new_frequency
 	radio_connection = radio_controller.add_object(src, frequency, RADIO_CHAT)
+	return
 
 /obj/item/device/assembly/signaler/process()
 	if(!deadman)
@@ -155,6 +176,7 @@ Code:
 		STOP_PROCESSING(SSobj, src)
 	else if(prob(5))
 		M.visible_message("[M]'s finger twitches a bit over [src]'s signal button!")
+	return
 
 /obj/item/device/assembly/signaler/verb/deadman_it()
 	set src in usr

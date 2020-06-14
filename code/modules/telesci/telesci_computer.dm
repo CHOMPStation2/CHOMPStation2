@@ -28,7 +28,6 @@
 	var/powerCoefficient = 12.5
 	var/list/crystals = list()
 	var/obj/item/device/gps/inserted_gps
-	var/overmap_range = 3
 
 /obj/machinery/computer/telescience/Destroy()
 	eject()
@@ -38,9 +37,8 @@
 	return ..()
 
 /obj/machinery/computer/telescience/examine(mob/user)
-	. = ..()
-	if(Adjacent(user))
-		. += "There are [crystals.len ? crystals.len : "no"] bluespace crystal\s in the crystal slots."
+	..()
+	user << "There are [crystals.len ? crystals.len : "no"] bluespace crystal\s in the crystal slots."
 
 /obj/machinery/computer/telescience/Initialize()
 	. = ..()
@@ -51,7 +49,7 @@
 /obj/machinery/computer/telescience/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/ore/bluespace_crystal))
 		if(crystals.len >= max_crystals)
-			to_chat(user, "<span class='warning'>There are not enough crystal slots.</span>")
+			user << "<span class='warning'>There are not enough crystal slots.</span>"
 			return
 		if(!user.unEquip(W))
 			return
@@ -70,7 +68,7 @@
 		if(M.connectable && istype(M.connectable, /obj/machinery/telepad))
 			telepad = M.connectable
 			M.connectable = null
-			to_chat(user, "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>")
+			user << "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>"
 	else
 		return ..()
 
@@ -107,8 +105,9 @@
 		if(telepad.panel_open)
 			data["tempMsg"] = "Telepad undergoing physical maintenance operations."
 
-		//We'll base our options on connected z's or overmap
-		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range)
+		data["sectorOptions"] = list()
+		for(var/z in using_map.player_levels)
+			data["sectorOptions"] += z
 
 		if(last_tele_data)
 			data["lastTeleData"] = list()

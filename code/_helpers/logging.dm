@@ -22,16 +22,16 @@
 	#endif
 
 /proc/error(msg)
-	to_world_log("## ERROR: [msg]")
+	world.log << "## ERROR: [msg]"
 
 #define WARNING(MSG) warning("[MSG] in [__FILE__] at line [__LINE__] src: [src] usr: [usr].")
 //print a warning message to world.log
 /proc/warning(msg)
-	to_world_log("## WARNING: [msg]")
+	world.log << "## WARNING: [msg]"
 
 //print a testing-mode debug message to world.log
 /proc/testing(msg)
-	to_world_log("## TESTING: [msg]")
+	world.log << "## TESTING: [msg]"
 
 /proc/log_admin(text)
 	admin_log.Add(text)
@@ -47,9 +47,9 @@
 	if (config.log_debug)
 		WRITE_LOG(debug_log, "DEBUG: [text]")
 
-	for(var/client/C in GLOB.admins)
+	for(var/client/C in admins)
 		if(C.is_preference_enabled(/datum/client_preference/debug/show_debug_logs))
-			to_chat(C, "<span class='filter_debuglog'>DEBUG: [text]</span>")
+			C << "DEBUG: [text]"
 
 /proc/log_game(text)
 	if (config.log_game)
@@ -154,12 +154,12 @@
 
 
 /proc/log_to_dd(text)
-	to_world_log(text) //this comes before the config check because it can't possibly runtime
+	world.log << text //this comes before the config check because it can't possibly runtime
 	if(config.log_world_output)
 		WRITE_LOG(diary, "DD_OUTPUT: [text]")
 
 /proc/log_error(text)
-	to_world_log(text)
+	world.log << text
 	WRITE_LOG(error_log, "RUNTIME: [text]")
 
 /proc/log_misc(text)
@@ -174,7 +174,7 @@
 	WRITE_LOG(href_logfile, "HREF: [text]")
 
 /proc/log_unit_test(text)
-	to_world_log("## UNIT_TEST: [text]")
+	world.log << "## UNIT_TEST: [text]"
 
 /proc/report_progress(var/progress_message)
 	admin_notice("<span class='boldannounce'>[progress_message]</span>", R_DEBUG)
@@ -259,28 +259,20 @@
 	return key_name(whom, 1, include_name)
 
 // Helper procs for building detailed log lines
-//
-// These procs must not fail under ANY CIRCUMSTANCES!
-//
-
 /datum/proc/log_info_line()
 	return "[src] ([type])"
 
 /atom/log_info_line()
-	. = ..()
 	var/turf/t = get_turf(src)
 	if(istype(t))
-		return "[.] @ [t.log_info_line()]"
+		return "([t]) ([t.x],[t.y],[t.z]) ([t.type])"
 	else if(loc)
-		return "[.] @ ([loc]) (0,0,0) ([loc.type])"
+		return "([loc]) (0,0,0) ([loc.type])"
 	else
-		return "[.] @ (NULL) (0,0,0) (NULL)"
-
-/turf/log_info_line()
-	return "([src]) ([x],[y],[z]) ([type])"
+		return "(NULL) (0,0,0) (NULL)"
 
 /mob/log_info_line()
-	return "[..()] (ckey=[ckey])"
+	return "[..()] ([ckey])"
 
 /proc/log_info_line(var/datum/d)
 	if(!d)

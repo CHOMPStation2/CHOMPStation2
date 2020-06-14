@@ -15,16 +15,16 @@
 
 /datum/event/gravity/start()
 	gravity_is_on = 0
-	for(var/area/A in world)
+	for(var/area/A in all_areas)
 		if(A.z in zLevels)
-			A.gravitychange(gravity_is_on)
+			A.gravitychange(gravity_is_on, A)
 
 /datum/event/gravity/end()
 	if(!gravity_is_on)
 		gravity_is_on = 1
 
-		for(var/area/A in world)
+		for(var/area/A in all_areas)
 			if(A.z in zLevels)
-				A.gravitychange(gravity_is_on)
+				A.gravitychange(gravity_is_on, A)
 
 		command_announcement.Announce("Gravity generators are again functioning within normal parameters. Sorry for any inconvenience.", "Gravity Restored")

@@ -3,43 +3,58 @@
 var/list/ship_engines = list()
 /datum/ship_engine
 	var/name = "ship engine"
-	var/obj/machinery/holder	//actual engine object
+	var/obj/machinery/engine	//actual engine object
+	var/zlevel = 0
 
-/datum/ship_engine/New(var/obj/machinery/_holder)
-	..()
-	holder = _holder
-	ship_engines += src
+/datum/ship_engine/New(var/obj/machinery/holder)
+	engine = holder
+	zlevel = holder.z
+	for(var/obj/machinery/computer/engines/E in machines)
+		if (E.z == zlevel && !(src in E.engines))
+			E.engines += src
+			break
 
-/datum/ship_engine/proc/can_burn()
-	return 0
-
-//Tries to fire the engine. Returns thrust
+//Tries to fire the engine. If successfull, returns 1
 /datum/ship_engine/proc/burn()
-	return 0
+	if(!engine)
+		die()
+	return 1
 
 //Returns status string for this engine
 /datum/ship_engine/proc/get_status()
+	if(!engine)
+		die()
 	return "All systems nominal"
 
 /datum/ship_engine/proc/get_thrust()
-	return 1
+	if(!engine)
+		die()
+	return 100
 
 //Sets thrust limiter, a number between 0 and 1
 /datum/ship_engine/proc/set_thrust_limit(var/new_limit)
+	if(!engine)
+		die()
 	return 1
 
 /datum/ship_engine/proc/get_thrust_limit()
+	if(!engine)
+		die()
 	return 1
 
 /datum/ship_engine/proc/is_on()
+	if(!engine)
+		die()
 	return 1
 
 /datum/ship_engine/proc/toggle()
+	if(!engine)
+		die()
 	return 1
 
-/datum/ship_engine/Destroy()
-	ship_engines -= src
-	for(var/obj/effect/overmap/visitable/ship/S in SSshuttles.ships)
-		S.engines -= src
-	holder = null
-	. = ..()
+/datum/ship_engine/proc/die()
+	for(var/obj/machinery/computer/engines/E in machines)
+		if (E.z == zlevel)
+			E.engines -= src
+			break
+	qdel(src)

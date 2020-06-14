@@ -4,7 +4,7 @@
 	var/list/whitelisted_to		//List of ckeys that are allowed to pick this in charsetup.
 
 //////////////// For-specific-character fluff ones /////////////////
-// arokha : Aronai Sieyes
+// arokha : Aronai Kadigan
 /datum/robolimb/kitsuhana
 	company = "Kitsuhana"
 	desc = "This limb seems rather vulpine and fuzzy, with realistic-feeling flesh."
@@ -204,7 +204,6 @@
 /datum/robolimb/dsi_teshari/New()
 	species_cannot_use = GLOB.all_species.Copy()
 	species_cannot_use -= SPECIES_TESHARI
-	species_cannot_use -= SPECIES_CUSTOM
 	..()
 
 /obj/item/weapon/disk/limb/dsi_teshari

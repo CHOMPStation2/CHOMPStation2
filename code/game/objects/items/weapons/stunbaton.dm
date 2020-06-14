@@ -101,13 +101,13 @@
 		set_light(0)
 
 /obj/item/weapon/melee/baton/examine(mob/user)
-	. = ..()
+	if(!..(user, 1))
+		return
 
-	if(Adjacent(user, src))
-		if(bcell)
-			. += "<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>"
-		if(!bcell)
-			. += "<span class='warning'>The baton does not have a power source installed.</span>"
+	if(bcell)
+		user <<"<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>"
+	if(!bcell)
+		user <<"<span class='warning'>The baton does not have a power source installed.</span>"
 
 /obj/item/weapon/melee/baton/attackby(obj/item/weapon/W, mob/user)
 	if(use_external_power)
@@ -118,12 +118,12 @@
 				user.drop_item()
 				W.loc = src
 				bcell = W
-				to_chat(user, "<span class='notice'>You install a cell in [src].</span>")
+				user << "<span class='notice'>You install a cell in [src].</span>"
 				update_icon()
 			else
-				to_chat(user, "<span class='notice'>[src] already has a cell.</span>")
+				user << "<span class='notice'>[src] already has a cell.</span>"
 		else
-			to_chat(user, "<span class='notice'>This cell is not fitted for [src].</span>")
+			user << "<span class='notice'>This cell is not fitted for [src].</span>"
 
 /obj/item/weapon/melee/baton/attack_hand(mob/user as mob)
 	if(user.get_inactive_hand() == src)
@@ -131,7 +131,7 @@
 			bcell.update_icon()
 			user.put_in_hands(bcell)
 			bcell = null
-			to_chat(user, "<span class='notice'>You remove the cell from the [src].</span>")
+			user << "<span class='notice'>You remove the cell from the [src].</span>"
 			status = 0
 			update_icon()
 			return
@@ -147,20 +147,20 @@
 			bcell = R.cell
 	if(bcell && bcell.charge > hitcost)
 		status = !status
-		to_chat(user, "<span class='notice'>[src] is now [status ? "on" : "off"].</span>")
+		user << "<span class='notice'>[src] is now [status ? "on" : "off"].</span>"
 		playsound(loc, "sparks", 75, 1, -1)
 		update_icon()
 	else
 		status = 0
 		if(!bcell)
-			to_chat(user, "<span class='warning'>[src] does not have a power source!</span>")
+			user << "<span class='warning'>[src] does not have a power source!</span>"
 		else
-			to_chat(user, "<span class='warning'>[src] is out of charge.</span>")
+			user << "<span class='warning'>[src] is out of charge.</span>"
 	add_fingerprint(user)
 
 /obj/item/weapon/melee/baton/attack(mob/M, mob/user)
 	if(status && (CLUMSY in user.mutations) && prob(50))
-		to_chat(user, "<span class='danger'>You accidentally hit yourself with the [src]!</span>")
+		user << "<span class='danger'>You accidentally hit yourself with the [src]!</span>"
 		user.Weaken(30)
 		deductcharge(hitcost)
 		return
@@ -236,12 +236,12 @@
 				user.drop_item()
 				W.loc = src
 				bcell = W
-				to_chat(user, "<span class='notice'>You install a cell in [src].</span>")
+				user << "<span class='notice'>You install a cell in [src].</span>"
 				update_icon()
 			else
-				to_chat(user, "<span class='notice'>[src] already has a cell.</span>")
+				user << "<span class='notice'>[src] already has a cell.</span>"
 		else
-			to_chat(user, "<span class='notice'>This cell is not fitted for [src].</span>")
+			user << "<span class='notice'>This cell is not fitted for [src].</span>"
 
 /obj/item/weapon/melee/baton/get_description_interaction()
 	var/list/results = list()

@@ -6,7 +6,7 @@
 	anchored = 1
 	density = 1
 	throwpass = 1
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	layer = ON_WINDOW_LAYER
 	power_channel = EQUIP
 	var/on = 0
@@ -44,11 +44,11 @@
 	if(istype(O, /obj/mecha))
 		var/obj/mecha/R = O
 		if(R && R.occupant)
-			to_chat(R.occupant,block_message)
+			R.occupant << block_message
 	else if(istype(O, /obj/vehicle/train/engine))
 		var/obj/vehicle/train/engine/E = O
 		if(E && E.load && E.is_train_head())
-			to_chat(E.load,block_message)
+			E.load << block_message
 
 	feedback_timer = 1
 	spawn(50) //Without this timer the feedback becomes horribly spamy

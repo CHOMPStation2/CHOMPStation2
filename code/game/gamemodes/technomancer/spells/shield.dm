@@ -46,7 +46,7 @@
 		damage_to_energy_cost *= 0.50
 
 	if(!pay_energy(damage_to_energy_cost))
-		to_chat(owner, "<span class='danger'>Your shield fades due to lack of energy!</span>")
+		owner << "<span class='danger'>Your shield fades due to lack of energy!</span>"
 		qdel(src)
 		return 0
 

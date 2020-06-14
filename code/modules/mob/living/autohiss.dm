@@ -6,7 +6,7 @@
 #define AUTOHISS_NUM 3
 
 
-/mob/proc/handle_autohiss(message, datum/language/L)
+/mob/living/proc/handle_autohiss(message, datum/language/L)
 	return message // no autohiss at this level
 
 /mob/living/carbon/human/handle_autohiss(message, datum/language/L)

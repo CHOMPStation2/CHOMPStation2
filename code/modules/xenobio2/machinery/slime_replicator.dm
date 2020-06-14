@@ -17,10 +17,16 @@
 	var/emptycolor = "#FF2222"
 	var/operatingcolor = "#FFFF22"
 
-/obj/machinery/slime/replicator/Initialize()
-	. = ..()
-	default_apply_parts()
+/obj/machinery/slime/replicator/New()
+	..()
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
+	component_parts += new /obj/item/weapon/stock_parts/micro_laser(src)
+	RefreshParts()
 	update_light_color()
+
 
 /obj/machinery/slime/replicator/attackby(var/obj/item/W, var/mob/user)
 	//Let's try to deconstruct first.
@@ -38,10 +44,10 @@
 		return ..()
 
 	if(core)
-		to_chat(user, "<span class='warning'>[src] is already filled!</span>")
+		user << "<span class='warning'>[src] is already filled!</span>"
 		return
 	if(panel_open)
-		to_chat(user, "<span class='warning'>Close the panel first!</span>")
+		user << "<span class='warning'>Close the panel first!</span>"
 	core = G
 	user.drop_from_inventory(G)
 	G.forceMove(src)
@@ -57,7 +63,7 @@
 
 /obj/machinery/slime/replicator/proc/replicate_slime()
 	if(!src.core)
-		src.visible_message("[bicon(src)] [src] pings unhappily.")
+		src.visible_message("\icon[src] [src] pings unhappily.")
 	else if(inuse)
 		return
 

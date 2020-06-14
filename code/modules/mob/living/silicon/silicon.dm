@@ -37,7 +37,7 @@
 
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src
-	for(var/datum/alarm_handler/AH in SSalarm.all_handlers)
+	for(var/datum/alarm_handler/AH in alarm_manager.all_handlers)
 		AH.unregister_alarm(src)
 	return ..()
 
@@ -175,7 +175,7 @@
 /mob/living/silicon/proc/show_station_manifest()
 	var/dat = "<div align='center'>"
 	if(!data_core)
-		to_chat(src, "<span class='notice'>There is no data to form a manifest with. Contact your Nanotrasen administrator.</span>")
+		to_chat(src,"<span class='notice'>There is no data to form a manifest with. Contact your Nanotrasen administrator.</span>")
 		return
 	dat += data_core.get_manifest(1) //The 1 makes it monochrome.
 
@@ -186,21 +186,14 @@
 //can't inject synths
 /mob/living/silicon/can_inject(var/mob/user, var/error_msg)
 	if(error_msg)
-		to_chat(user, "<span class='alert'>The armoured plating is too tough.</span>")
+		user << "<span class='alert'>The armoured plating is too tough.</span>"
 	return 0
 
 
 //Silicon mob language procs
 
 /mob/living/silicon/can_speak(datum/language/speaking)
-	if(universal_speak)
-		return TRUE
-	//need speech synthesizer support to vocalize a language
-	if(speaking in speech_synthesizer_langs)
-		return TRUE
-	if(speaking && speaking.flags & INNATE)
-		return TRUE
-	return FALSE
+	return universal_speak || (speaking in src.speech_synthesizer_langs) || (speaking.name == "Noise")	//need speech synthesizer support to vocalize a language
 
 /mob/living/silicon/add_language(var/language, var/can_speak=1)
 	var/var/datum/language/added_language = GLOB.all_languages[language]
@@ -220,11 +213,15 @@
 	..(rem_language)
 	speech_synthesizer_langs -= removed_language
 
-/mob/living/silicon/check_lang_data()
-	. = ""
+/mob/living/silicon/check_languages()
+	set name = "Check Known Languages"
+	set category = "IC"
+	set src = usr
+
+	var/dat = "<b><font size = 5>Known Languages</font></b><br/><br/>"
 
 	if(default_language)
-		. += "Current default language: [default_language] - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br><br>"
+		dat += "Current default language: [default_language] - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br/><br/>"
 
 	for(var/datum/language/L in languages)
 		if(!(L.flags & NONGLOBAL))
@@ -235,7 +232,10 @@
 				default_str = " - <a href='byond://?src=\ref[src];default_lang=\ref[L]'>set default</a>"
 
 			var/synth = (L in speech_synthesizer_langs)
-			. += "<b>[L.name] ([get_language_prefix()][L.key])</b>[synth ? default_str : null]<br>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br>[L.desc]<br><br>"
+			dat += "<b>[L.name] ([get_language_prefix()][L.key])</b>[synth ? default_str : null]<br/>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br/>[L.desc]<br/><br/>"
+
+	src << browse(dat, "window=checklanguage")
+	return
 
 /mob/living/silicon/proc/toggle_sensor_mode()
 	var/sensor_type = input("Please select sensor type.", "Sensor Integration", null) in list("Security","Medical","Disable")
@@ -253,7 +253,7 @@
 				plane_holder.set_vis(VIS_CH_STATUS,FALSE)
 				plane_holder.set_vis(VIS_CH_HEALTH,FALSE)
 
-			to_chat(src, "<span class='notice'>Security records overlay enabled.</span>")
+			to_chat(src,"<span class='notice'>Security records overlay enabled.</span>")
 		if ("Medical")
 			if(plane_holder)
 				//Disable Security planes
@@ -267,7 +267,7 @@
 				plane_holder.set_vis(VIS_CH_STATUS,TRUE)
 				plane_holder.set_vis(VIS_CH_HEALTH,TRUE)
 
-			to_chat(src, "<span class='notice'>Life signs monitor overlay enabled.</span>")
+			to_chat(src,"<span class='notice'>Life signs monitor overlay enabled.</span>")
 		if ("Disable")
 			if(plane_holder)
 				//Disable Security planes
@@ -280,7 +280,7 @@
 				//Disable Medical planes
 				plane_holder.set_vis(VIS_CH_STATUS,FALSE)
 				plane_holder.set_vis(VIS_CH_HEALTH,FALSE)
-			to_chat(src, "Sensor augmentations disabled.")
+			to_chat(src,"Sensor augmentations disabled.")
 
 	hudmode = sensor_type //This is checked in examine.dm on humans, so they can see medical/security records depending on mode
 
@@ -305,15 +305,6 @@
 	if(!blinded)
 		flash_eyes()
 
-	for(var/datum/modifier/M in modifiers)
-		if(!isnull(M.explosion_modifier))
-			severity = CLAMP(severity + M.explosion_modifier, 1, 4)
-
-	severity = round(severity)
-
-	if(severity > 3)
-		return
-
 	switch(severity)
 		if(1.0)
 			if (stat != 2)
@@ -335,8 +326,6 @@
 	if(!next_alarm_notice)
 		next_alarm_notice = world.time + SecondsToTicks(10)
 	if(alarm.hidden)
-		return
-	if(alarm.origin && !(get_z(alarm.origin) in using_map.get_map_levels(get_z(src), TRUE)))
 		return
 
 	var/list/alarms = queued_alarms[alarm_handler]
@@ -410,7 +399,7 @@
 	return
 
 /mob/living/silicon/reset_view()
-	. = ..()
+	..()
 	if(cameraFollow)
 		cameraFollow = null
 

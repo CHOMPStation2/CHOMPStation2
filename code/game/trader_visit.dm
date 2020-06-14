@@ -9,16 +9,16 @@ var/can_call_traders = 1
 	set desc = "Invite players to join the Beruang."
 
 	if(!holder)
-		to_chat(usr, "<span class='danger'>Only administrators may use this command.</span>")
+		usr << "<span class='danger'>Only administrators may use this command.</span>"
 		return
 	if(!ticker)
-		to_chat(usr, "<span class='danger'>The game hasn't started yet!</span>")
+		usr << "<span class='danger'>The game hasn't started yet!</span>"
 		return
 	if(ticker.current_state == 1)
-		to_chat(usr, "<span class='danger'>The round hasn't started yet!</span>")
+		usr << "<span class='danger'>The round hasn't started yet!</span>"
 		return
 	if(send_beruang)
-		to_chat(usr, "<span class='danger'>The Beruang has already been sent this round!</span>")
+		usr << "<span class='danger'>The Beruang has already been sent this round!</span>"
 		return
 	if(alert("Do you want to dispatch the Beruang trade ship?",,"Yes","No") != "Yes")
 		return
@@ -27,7 +27,7 @@ var/can_call_traders = 1
 			if("No")
 				return
 	if(send_beruang)
-		to_chat(usr, "<span class='danger'>Looks like somebody beat you to it!</span>")
+		usr << "<span class='danger'>Looks like somebody beat you to it!</span>"
 		return
 
 	message_admins("[key_name_admin(usr)] is dispatching the Beruang.", 1)
@@ -40,19 +40,19 @@ client/verb/JoinTraders()
 	set category = "IC"
 
 	if(!MayRespawn(1))
-		to_chat(usr, "<span class='warning'>You cannot join the traders.</span>")
+		usr << "<span class='warning'>You cannot join the traders.</span>"
 		return
 
 	if(istype(usr,/mob/observer/dead) || istype(usr,/mob/new_player))
 		if(!send_beruang)
-			to_chat(usr, "The Beruang is not currently heading to the station.")
+			usr << "The Beruang is not currently heading to the station."
 			return
 		if(traders.current_antagonists.len >= traders.hard_cap)
-			to_chat(usr, "The number of trader slots is already full!")
+			usr << "The number of trader slots is already full!"
 			return
 		traders.create_default(usr)
 	else
-		to_chat(usr, "You need to be an observer or new player to use this.")
+		usr << "You need to be an observer or new player to use this."
 
 proc/trigger_trader_visit()
 	if(!can_call_traders)
@@ -64,7 +64,6 @@ proc/trigger_trader_visit()
 
 	can_call_traders = 0 // Only one call per round.
 	send_beruang = 1
-	consider_trader_load() //VOREStation Add
 
 	sleep(600 * 5)
 	send_beruang = 0 // Can no longer join the traders.

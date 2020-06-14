@@ -65,13 +65,18 @@
 
 /obj/structure/ghost_pod/automatic/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/trigger), delay_to_self_open)
+	spawn(delay_to_self_open)
+		if(src)
+			trigger()
 
 /obj/structure/ghost_pod/automatic/trigger()
 	. = ..()
 	if(. == FALSE) // If we failed to get a volunteer, try again later if allowed to.
 		if(delay_to_try_again)
-			addtimer(CALLBACK(src, .proc/trigger), delay_to_try_again)
+			spawn(delay_to_try_again)
+				if(src)
+					trigger()
+
 
 // This type is triggered by a ghost clicking on it, as opposed to a living player.  A ghost query type isn't needed.
 /obj/structure/ghost_pod/ghost_activated

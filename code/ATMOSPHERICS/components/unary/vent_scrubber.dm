@@ -5,7 +5,7 @@
 
 	name = "Air Scrubber"
 	desc = "Has a valve and pump attached to it"
-	use_power = USE_POWER_OFF
+	use_power = 0
 	idle_power_usage = 150		//internal circuitry, friction losses and stuff
 	power_rating = 7500			//7500 W ~ 10 HP
 
@@ -29,7 +29,7 @@
 	var/radio_filter_in
 
 /obj/machinery/atmospherics/unary/vent_scrubber/on
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	icon_state = "map_scrubber_on"
 
 /obj/machinery/atmospherics/unary/vent_scrubber/New()
@@ -38,7 +38,7 @@
 
 	icon = null
 	initial_loc = get_area(loc)
-	area_uid = "\ref[initial_loc]"
+	area_uid = initial_loc.uid
 	if (!id_tag)
 		assign_uid()
 		id_tag = num2text(uid)
@@ -93,7 +93,7 @@
 		return 0
 
 	var/datum/signal/signal = new
-	signal.transmission_method = TRANSMISSION_RADIO //radio signal
+	signal.transmission_method = 1 //radio signal
 	signal.source = src
 	signal.data = list(
 		"area" = area_uid,
@@ -135,7 +135,7 @@
 		return 1
 
 	if (!node)
-		update_use_power(USE_POWER_OFF)
+		use_power = 0
 	//broadcast_status()
 	if(!use_power || (stat & (NOPOWER|BROKEN)))
 		return 0
@@ -180,21 +180,21 @@
 		return 0
 
 	if(signal.data["power"] != null)
-		update_use_power(text2num(signal.data["power"]))
+		use_power = text2num(signal.data["power"])
 	if(signal.data["power_toggle"] != null)
-		update_use_power(!use_power)
+		use_power = !use_power
 
 	if(signal.data["panic_siphon"]) //must be before if("scrubbing" thing
 		panic = text2num(signal.data["panic_siphon"])
 		if(panic)
-			update_use_power(USE_POWER_IDLE)
+			use_power = 1
 			scrubbing = 0
 		else
 			scrubbing = 1
 	if(signal.data["toggle_panic_siphon"] != null)
 		panic = !panic
 		if(panic)
-			update_use_power(USE_POWER_IDLE)
+			use_power = 1
 			scrubbing = 0
 		else
 			scrubbing = 1
@@ -287,8 +287,7 @@
 		deconstruct()
 
 /obj/machinery/atmospherics/unary/vent_scrubber/examine(mob/user)
-	. = ..()
-	if(Adjacent(user))
-		. += "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
+	if(..(user, 1))
+		user << "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
 	else
-		. += "You are too far away to read the gauge."
+		user << "You are too far away to read the gauge."

@@ -2,7 +2,6 @@
 	name = "cargo train tug"
 	desc = "A ridable electric car designed for pulling cargo trolleys."
 	icon = 'icons/obj/vehicles_vr.dmi'	//VOREStation Edit
-	description_info = "Use ctrl-click to quickly toggle the engine if you're adjacent (only when vehicle is stationary). Alt-click will grab the keys, if present."
 	icon_state = "cargo_engine"
 	on = 0
 	powered = 1
@@ -55,7 +54,7 @@
 		turn_off()
 		update_stats()
 		if(load && is_train_head())
-			to_chat(load, "The drive motor briefly whines, then drones to a stop.")
+			load << "The drive motor briefly whines, then drones to a stop."
 
 	if(is_train_head() && !on)
 		return 0
@@ -168,7 +167,7 @@
 
 	if(is_train_head() && istype(load, /mob/living/carbon/human))
 		var/mob/living/carbon/human/D = load
-		to_chat(D, "<font color='red'><B>You ran over [H]!</B></font>")
+		D << "<font color='red'><B>You ran over [H]!</B></font>"
 		visible_message("<B><font color='red'>\The [src] ran over [H]!</B></font>")
 		add_attack_logs(D,H,"Ran over with [src.name]")
 		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [H.name] ([H.ckey]), driven by [D.name] ([D.ckey])</font>")
@@ -193,26 +192,14 @@
 		return ..()
 
 /obj/vehicle/train/engine/examine(mob/user)
-	. = ..()
-	if(ishuman(user) && Adjacent(user))
-		. += "The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition."
-		. += "The charge meter reads [cell? round(cell.percent(), 0.01) : 0]%"
+	if(!..(user, 1))
+		return
 
+	if(!istype(usr, /mob/living/carbon/human))
+		return
 
-/obj/vehicle/train/engine/CtrlClick(var/mob/user)
-	if(Adjacent(user))
-		if(on)
-			stop_engine()
-		else
-			start_engine()
-	else
-		return ..()
-
-/obj/vehicle/train/engine/AltClick(var/mob/user)
-	if(Adjacent(user))
-		remove_key()
-	else
-		return ..()
+	user << "The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition."
+	user << "The charge meter reads [cell? round(cell.percent(), 0.01) : 0]%"
 
 /obj/vehicle/train/engine/verb/start_engine()
 	set name = "Start engine"
@@ -223,17 +210,17 @@
 		return
 
 	if(on)
-		to_chat(usr, "The engine is already running.")
+		usr << "The engine is already running."
 		return
 
 	turn_on()
 	if (on)
-		to_chat(usr, "You start [src]'s engine.")
+		usr << "You start [src]'s engine."
 	else
 		if(cell.charge < charge_use)
-			to_chat(usr, "[src] is out of power.")
+			usr << "[src] is out of power."
 		else
-			to_chat(usr, "[src]'s engine won't start.")
+			usr << "[src]'s engine won't start."
 
 /obj/vehicle/train/engine/verb/stop_engine()
 	set name = "Stop engine"
@@ -244,12 +231,12 @@
 		return
 
 	if(!on)
-		to_chat(usr, "The engine is already stopped.")
+		usr << "The engine is already stopped."
 		return
 
 	turn_off()
 	if (!on)
-		to_chat(usr, "You stop [src]'s engine.")
+		usr << "You stop [src]'s engine."
 
 /obj/vehicle/train/engine/verb/remove_key()
 	set name = "Remove key"

@@ -26,7 +26,7 @@
 		imap += icon('icons/misc/imap.dmi', "blank")
 		imap += icon('icons/misc/imap.dmi', "blank")
 
-	//to_world("[icount] images in list")
+	//world << "[icount] images in list"
 
 	for(var/wx = 1 ; wx <= world.maxx; wx++)
 
@@ -134,11 +134,11 @@
 			var/rx = ((wx*2+xoff)%32) + 1
 			var/ry = ((wy*2+yoff)%32) + 1
 
-			//to_world("trying [ix],[iy] : [ix+icx*iy]")
+			//world << "trying [ix],[iy] : [ix+icx*iy]"
 			var/icon/I = imap[1+(ix + icx*iy)*2]
 			var/icon/I2 = imap[2+(ix + icx*iy)*2]
 
-			//to_world("icon: [bicon(I)]")
+			//world << "icon: \icon[I]"
 
 			I.DrawBox(colour, rx, ry, rx+1, ry+1)
 
@@ -153,7 +153,7 @@
 
 		H.screen_loc = "[5 + i%icx],[6+ round(i/icx)]"
 
-		//to_world("[bicon(I)] at [H.screen_loc]")
+		//world<<"\icon[I] at [H.screen_loc]"
 
 		H.name = (i==0)?"maprefresh":"map"
 
@@ -263,10 +263,10 @@
 			var/rx = ((wx*2+xoff)%32) + 1
 			var/ry = ((wy*2+yoff)%32) + 1
 
-			//to_world("trying [ix],[iy] : [ix+icx*iy]")
+			//world << "trying [ix],[iy] : [ix+icx*iy]"
 			var/icon/I = imap[1+(ix + icx*iy)]
 
-			//to_world("icon: [bicon(I)]")
+			//world << "icon: \icon[I]"
 
 			I.DrawBox(colour, rx, ry, rx, ry)
 
@@ -279,7 +279,7 @@
 
 		H.screen_loc = "[5 + i%icx],[6+ round(i/icx)]"
 
-		//to_world("[bicon(I)] at [H.screen_loc]")
+		//world<<"\icon[I] at [H.screen_loc]"
 
 		H.name = (i==0)?"maprefresh":"map"
 

@@ -35,11 +35,11 @@
 		if(L.isSynthetic())
 			L.adjustBruteLoss(damage_to_inflict)
 			if(damage_to_inflict && prob(10))
-				to_chat(L, "<span class='danger'>Your chassis seems to slowly be decaying and breaking down.</span>")
+				L << "<span class='danger'>Your chassis seems to slowly be decaying and breaking down.</span>"
 		else
 			L.adjustToxLoss(damage_to_inflict)
 			if(damage_to_inflict && prob(10))
-				to_chat(L, "<span class='danger'>You feel almost like you're melting from the inside!</span>")
+				L << "<span class='danger'>You feel almost like you're melting from the inside!</span>"
 
 
 	adjust_instability(2)

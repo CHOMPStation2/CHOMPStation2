@@ -1,6 +1,3 @@
-/datum/supply_pack/med/medical
-	cost = 15
-
 /datum/supply_pack/med/medicalbiosuits
 	contains = list(
 			/obj/item/clothing/head/bio_hood/scientist = 3,

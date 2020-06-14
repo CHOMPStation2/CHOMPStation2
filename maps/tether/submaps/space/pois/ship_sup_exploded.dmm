@@ -261,18 +261,6 @@
 "bd" = (
 /turf/simulated/shuttle/wall/hard_corner,
 /area/tether_away/debrisfield/explored)
-"jq" = (
-/obj/structure/salvageable/data,
-/turf/simulated/shuttle/floor/airless,
-/area/tether_away/debrisfield/explored)
-"KY" = (
-/obj/structure/salvageable/server,
-/turf/simulated/shuttle/floor/white/airless,
-/area/tether_away/debrisfield/explored)
-"Mm" = (
-/obj/structure/salvageable/bliss,
-/turf/simulated/shuttle/floor/airless,
-/area/tether_away/debrisfield/explored)
 
 (1,1,1) = {"
 aa
@@ -382,11 +370,11 @@ ah
 ah
 ai
 aj
-KY
+aj
 ab
 aQ
 aQ
-jq
+aA
 ab
 ab
 aa
@@ -417,7 +405,7 @@ ab
 aj
 aj
 aj
-jq
+aA
 ab
 as
 ab
@@ -597,7 +585,7 @@ ab
 aj
 aj
 aj
-jq
+aA
 ab
 as
 ab
@@ -626,7 +614,7 @@ aj
 ab
 aU
 aU
-jq
+aA
 ab
 ab
 aa
@@ -639,7 +627,7 @@ aa
 aa
 ac
 ab
-Mm
+aA
 aA
 ag
 ag

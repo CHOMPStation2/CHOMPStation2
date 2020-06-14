@@ -23,17 +23,17 @@
 		//There have to be at least two posts, so these are effectively doubled
 		var/power_draw = 30000 //30 kW. How much power is drawn from powernet. Increase this to allow the generator to sustain longer shields, at the cost of more power draw.
 		var/max_stored_power = 50000 //50 kW
-		use_power = USE_POWER_OFF	//Draws directly from power net. Does not use APC power.
+		use_power = 0	//Draws directly from power net. Does not use APC power.
 
 /obj/machinery/shieldwallgen/attack_hand(mob/user as mob)
 	if(state != 1)
-		to_chat(user, "<font color='red'>The shield generator needs to be firmly secured to the floor first.</font>")
+		user << "<font color='red'>The shield generator needs to be firmly secured to the floor first.</font>"
 		return 1
 	if(src.locked && !istype(user, /mob/living/silicon))
-		to_chat(user, "<font color='red'>The controls are locked!</font>")
+		user << "<font color='red'>The controls are locked!</font>"
 		return 1
 	if(power != 1)
-		to_chat(user, "<font color='red'>The shield generator needs to be powered by wire underneath.</font>")
+		user << "<font color='red'>The shield generator needs to be powered by wire underneath.</font>"
 		return 1
 
 	if(src.active >= 1)
@@ -159,29 +159,29 @@
 /obj/machinery/shieldwallgen/attackby(obj/item/W, mob/user)
 	if(W.is_wrench())
 		if(active)
-			to_chat(user, "Turn off the field generator first.")
+			user << "Turn off the field generator first."
 			return
 
 		else if(state == 0)
 			state = 1
 			playsound(src, W.usesound, 75, 1)
-			to_chat(user, "You secure the external reinforcing bolts to the floor.")
+			user << "You secure the external reinforcing bolts to the floor."
 			src.anchored = 1
 			return
 
 		else if(state == 1)
 			state = 0
 			playsound(src, W.usesound, 75, 1)
-			to_chat(user, "You undo the external reinforcing bolts.")
+			user << "You undo the external reinforcing bolts."
 			src.anchored = 0
 			return
 
 	if(istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))
 		if (src.allowed(user))
 			src.locked = !src.locked
-			to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
+			user << "Controls are now [src.locked ? "locked." : "unlocked."]"
 		else
-			to_chat(user, "<font color='red'>Access denied.</font>")
+			user << "<font color='red'>Access denied.</font>"
 
 	else
 		src.add_fingerprint(user)

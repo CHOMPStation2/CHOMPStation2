@@ -9,7 +9,7 @@
 
 	var t = invalidFeedTarget(M)
 	if (t)
-		to_chat(src,t)
+		src << t
 		return
 
 	Feedon(M)
@@ -64,7 +64,7 @@
 				else if (istype(M, /mob/living/carbon))
 					var/mob/living/carbon/C = M
 					if (C.can_feel_pain())
-						to_chat(M, "<span class='danger'>[painMes]</span>")
+						M << "<span class='danger'>[painMes]</span>"
 
 			gain_nutrition(rand(20,25))
 
@@ -98,8 +98,7 @@
 
 /mob/living/carbon/slime/proc/Feedstop()
 	if(Victim)
-		if(Victim.client)
-			to_chat(Victim, "[src] has let go of your head!")
+		if(Victim.client) Victim << "[src] has let go of your head!"
 		Victim = null
 
 /mob/living/carbon/slime/proc/UpdateFeed(var/mob/M)

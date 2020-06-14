@@ -28,24 +28,27 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	return
 
 //I would prefer to rename this to attack(), but that would involve touching hundreds of files.
-/obj/item/proc/resolve_attackby(atom/A, mob/user, var/attack_modifier = 1, var/click_parameters)
+/obj/item/proc/resolve_attackby(atom/A, mob/user, var/attack_modifier = 1)
 	pre_attack(A, user)
 	add_fingerprint(user)
-	return A.attackby(src, user, attack_modifier, click_parameters)
+	return A.attackby(src, user, attack_modifier)
 
 // No comment
-/atom/proc/attackby(obj/item/W, mob/user, var/attack_modifier, var/click_parameters)
+/atom/proc/attackby(obj/item/W, mob/user, var/attack_modifier)
 	return
 
-/atom/movable/attackby(obj/item/W, mob/user, var/attack_modifier, var/click_parameters)
+/atom/movable/attackby(obj/item/W, mob/user, var/attack_modifier)
 	if(!(W.flags & NOBLUDGEON))
 		visible_message("<span class='danger'>[src] has been hit by [user] with [W].</span>")
 
-/mob/living/attackby(obj/item/I, mob/user, var/attack_modifier, var/click_parameters)
+/mob/living/attackby(obj/item/I, mob/user, var/attack_modifier)
 	if(!ismob(user))
 		return 0
 	if(can_operate(src) && I.do_surgery(src,user))
-		return 1
+		if(I.can_do_surgery(src,user))
+			return 1
+		else
+			return 0
 	if(attempt_vr(src,"vore_attackby",args)) return //VOREStation Add - The vore, of course.
 	return I.attack(src, user, user.zone_sel.selecting, attack_modifier)
 

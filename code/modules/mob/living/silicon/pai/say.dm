@@ -1,5 +1,5 @@
-/mob/living/silicon/pai/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
+/mob/living/silicon/pai/say(var/msg)
 	if(silence_time)
 		to_chat(src, "<font color=green>Communication circuits remain uninitialized.</font>")
 	else
-		..()
+		..(msg)

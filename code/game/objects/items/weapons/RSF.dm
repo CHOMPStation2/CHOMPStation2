@@ -8,8 +8,8 @@ RSF
 	name = "\improper Rapid-Service-Fabricator"
 	desc = "A device used to rapidly deploy service items."
 	description_info = "Control Clicking on the device will allow you to choose the glass it dispenses when in the proper mode."
-	icon = 'icons/obj/tools_vr.dmi' //VOREStation Edit
-	icon_state = "rsf" //VOREStation Edit
+	icon = 'icons/obj/tools.dmi'
+	icon_state = "rcd"
 	opacity = 0
 	density = 0
 	anchored = 0.0
@@ -33,9 +33,8 @@ RSF
 	w_class = ITEMSIZE_NORMAL
 
 /obj/item/weapon/rsf/examine(mob/user)
-	. = ..()
-	if(get_dist(user, src) == 0)
-		. += "<span class='notice'>It currently holds [stored_matter]/30 fabrication-units.</span>"
+	if(..(user, 0))
+		to_chat(user,"<span class='notice'>It currently holds [stored_matter]/30 fabrication-units.</span>")
 
 /obj/item/weapon/rsf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	..()

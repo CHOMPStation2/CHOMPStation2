@@ -63,7 +63,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 ////////////
 //SHUTTLES//
 ////////////
-//Shuttles only need starting area, movement is handled by landmarks
+//shuttle areas must contain at least two areas in a subgroup if you want to move a shuttle from one
+//place to another. Look at escape shuttle for example.
 //All shuttles should now be under shuttle since we have smooth-wall code.
 
 /area/shuttle
@@ -71,60 +72,164 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/space
-	forbid_events = TRUE
 
 /area/shuttle/arrival
 	name = "\improper Arrival Shuttle"
 	ambience = AMBIENCE_ARRIVALS
 
-/area/shuttle/supply
-	name = "\improper Supply Shuttle"
+/area/shuttle/arrival/pre_game
 	icon_state = "shuttle2"
+
+/area/shuttle/arrival/station
+	icon_state = "shuttle"
+	dynamic_lighting = 0
+	ambience = AMBIENCE_ARRIVALS
 
 /area/shuttle/escape
 	name = "\improper Emergency Shuttle"
 	music = "music/escape.ogg"
 
+/area/shuttle/escape/station
+	name = "\improper Emergency Shuttle Station"
+	icon_state = "shuttle2"
+	dynamic_lighting = 0
+
+/area/shuttle/escape/centcom
+	name = "\improper Emergency Shuttle CentCom"
+	icon_state = "shuttle"
+
+/area/shuttle/escape/transit // the area to pass through for 3 minute transit
+	name = "\improper Emergency Shuttle Transit"
+	icon_state = "shuttle"
+
 /area/shuttle/escape_pod1
 	name = "\improper Escape Pod One"
 	music = "music/escape.ogg"
+
+/area/shuttle/escape_pod1/station
+	icon_state = "shuttle2"
+
+/area/shuttle/escape_pod1/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/escape_pod1/transit
+	icon_state = "shuttle"
 
 /area/shuttle/escape_pod2
 	name = "\improper Escape Pod Two"
 	music = "music/escape.ogg"
 
+/area/shuttle/escape_pod2/station
+	icon_state = "shuttle2"
+
+/area/shuttle/escape_pod2/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/escape_pod2/transit
+	icon_state = "shuttle"
+
 /area/shuttle/escape_pod3
 	name = "\improper Escape Pod Three"
 	music = "music/escape.ogg"
+
+/area/shuttle/escape_pod3/station
+	icon_state = "shuttle2"
+
+/area/shuttle/escape_pod3/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/escape_pod3/transit
+	icon_state = "shuttle"
 
 /area/shuttle/escape_pod4
 	name = "\improper Escape Pod Four"
 	music = "music/escape.ogg"
 
+/area/shuttle/escape_pod4/station
+	icon_state = "shuttle2"
+
+/area/shuttle/escape_pod4/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/escape_pod4/transit
+	icon_state = "shuttle"
+
 /area/shuttle/escape_pod5
 	name = "\improper Escape Pod Five"
 	music = "music/escape.ogg"
+
+/area/shuttle/escape_pod5/station
+	icon_state = "shuttle2"
+
+/area/shuttle/escape_pod5/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/escape_pod5/transit
+	icon_state = "shuttle"
 
 /area/shuttle/escape_pod6
 	name = "\improper Escape Pod Six"
 	music = "music/escape.ogg"
 
+/area/shuttle/escape_pod6/station
+	icon_state = "shuttle2"
+
+/area/shuttle/escape_pod6/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/escape_pod6/transit
+	icon_state = "shuttle"
+
 /area/shuttle/large_escape_pod1
 	name = "\improper Large Escape Pod One"
 	music = "music/escape.ogg"
+
+/area/shuttle/large_escape_pod1/station
+	icon_state = "shuttle2"
+
+/area/shuttle/large_escape_pod1/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/large_escape_pod1/transit
+	icon_state = "shuttle"
 
 /area/shuttle/large_escape_pod2
 	name = "\improper Large Escape Pod Two"
 	music = "music/escape.ogg"
 
+/area/shuttle/large_escape_pod2/station
+	icon_state = "shuttle2"
+
+/area/shuttle/large_escape_pod2/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/large_escape_pod2/transit
+	icon_state = "shuttle"
+
 /area/shuttle/cryo
 	name = "\improper Cryogenic Storage"
+
+/area/shuttle/cryo/station
+	icon_state = "shuttle2"
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen
+
+/area/shuttle/cryo/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/cryo/transit
+	icon_state = "shuttle"
 
 /area/shuttle/mining
 	name = "\improper Mining Elevator"
 	music = "music/escape.ogg"
 	dynamic_lighting = 0
 	base_turf = /turf/simulated/mineral/floor/ignore_mapgen
+
+/area/shuttle/mining/station
+	icon_state = "shuttle2"
+
+/area/shuttle/mining/outpost
+	icon_state = "shuttle"
 
 /area/shuttle/transport1/centcom
 	icon_state = "shuttle"
@@ -193,11 +298,42 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/shuttle/thunderdome
 	name = "honk"
 
+/area/shuttle/thunderdome/grnshuttle
+	name = "\improper Thunderdome GRN Shuttle"
+	icon_state = "green"
+
+/area/shuttle/thunderdome/grnshuttle/dome
+	name = "\improper GRN Shuttle"
+	icon_state = "shuttlegrn"
+
+/area/shuttle/thunderdome/grnshuttle/station
+	name = "\improper GRN Station"
+	icon_state = "shuttlegrn2"
+
+/area/shuttle/thunderdome/redshuttle
+	name = "\improper Thunderdome RED Shuttle"
+	icon_state = "red"
+
+/area/shuttle/thunderdome/redshuttle/dome
+	name = "\improper RED Shuttle"
+	icon_state = "shuttlered"
+
+/area/shuttle/thunderdome/redshuttle/station
+	name = "\improper RED Station"
+	icon_state = "shuttlered2"
+// === Trying to remove these areas:
+
 /area/shuttle/research
 	name = "\improper Research Elevator"
 	music = "music/escape.ogg"
 	dynamic_lighting = 0
 	base_turf = /turf/simulated/mineral/floor/ignore_mapgen
+
+/area/shuttle/research/station
+	icon_state = "shuttle2"
+
+/area/shuttle/research/outpost
+	icon_state = "shuttle"
 
 /area/airtunnel1/      // referenced in airtunnel.dm:759
 
@@ -817,9 +953,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Construction Area"
 	icon_state = "construction"
 
-/area/hallway/secondary/entry
-	forbid_events = TRUE
-
 /area/hallway/secondary/entry/fore
 	name = "\improper Shuttle Dock Hallway - Mid"
 	icon_state = "entry_1"
@@ -992,8 +1125,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters
 	name = "\improper Dormitories"
 	icon_state = "Sleep"
+	flags = RAD_SHIELDED
 	ambience = AMBIENCE_GENERIC
-	forbid_events = TRUE
 
 /area/crew_quarters/toilet
 	name = "\improper Dormitory Toilets"
@@ -1003,7 +1136,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters/sleep
 	name = "\improper Dormitories"
 	icon_state = "Sleep"
-	flags = RAD_SHIELDED
 
 /area/crew_quarters/sleep/Apartment_A1
 	name = "\improper Apartment A1"
@@ -1295,7 +1427,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "Holodeck"
 	dynamic_lighting = 0
 	sound_env = LARGE_ENCLOSED
-	forbid_events = TRUE
 
 /area/holodeck/alphadeck
 	name = "\improper Holodeck Alpha"
@@ -1395,7 +1526,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Engine Room"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
-	forbid_events = TRUE
 
 /area/engineering/engine_airlock
 	name = "\improper Engine Room Airlock"
@@ -1911,6 +2041,17 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Cargo Mining Dock"
 	icon_state = "mining"
 
+/area/supply/station
+	name = "Supply Shuttle"
+	icon_state = "shuttle3"
+	requires_power = 0
+	base_turf = /turf/space
+
+/area/supply/dock
+	name = "Supply Shuttle"
+	icon_state = "shuttle3"
+	requires_power = 0
+	base_turf = /turf/space
 
 // SCIENCE
 

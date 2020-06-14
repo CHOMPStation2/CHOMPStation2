@@ -18,10 +18,10 @@
 		return
 
 	if(W.is_wirecutter())
-		to_chat(usr, "<font color='blue'>These cables are too tough to be cut with those [W.name].</font>")
+		usr << "<font color='blue'>These cables are too tough to be cut with those [W.name].</font>"
 		return
 	else if(istype(W, /obj/item/stack/cable_coil))
-		to_chat(usr, "<font color='blue'>You will need heavier cables to connect to these.</font>")
+		usr << "<font color='blue'>You will need heavier cables to connect to these.</font>"
 		return
 	else
 		..()

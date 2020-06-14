@@ -25,15 +25,18 @@
 /obj/vehicle/train/Initialize()
 	. = ..()
 	for(var/obj/vehicle/train/T in orange(1, src))
-		latch(T, null)
+		latch(T)
 
 /obj/vehicle/train/Move()
 	var/old_loc = get_turf(src)
-	if((. = ..()))
+	if(..())
 		if(tow)
 			tow.Move(old_loc)
-	else if(lead)
-		unattach()
+		return 1
+	else
+		if(lead)
+			unattach()
+		return 0
 
 /obj/vehicle/train/Bump(atom/Obstacle)
 	if(!istype(Obstacle, /atom/movable))
@@ -53,7 +56,7 @@
 			M.apply_damages(22 / move_delay)	// and do damage according to how fast the train is going
 			if(istype(load, /mob/living/carbon/human))
 				var/mob/living/D = load
-				to_chat(D, "<font color='red'>You hit [M]!</font>")
+				D << "<font color='red'>You hit [M]!</font>"
 				add_attack_logs(D,M,"Ran over with [src.name]")
 
 //trains are commonly open topped, so there is a chance the projectile will hit the mob riding the train instead
@@ -86,7 +89,7 @@
 /obj/vehicle/train/relaymove(mob/user, direction)
 	var/turf/T = get_step_to(src, get_step(src, direction))
 	if(!T)
-		to_chat(user, "You can't find a clear area to step onto.")
+		user << "You can't find a clear area to step onto."
 		return 0
 
 	if(user != load)
@@ -97,7 +100,7 @@
 
 	unload(user, direction)
 
-	to_chat(user, "<font color='blue'>You climb down from [src].</font>")
+	user << "<font color='blue'>You climb down from [src].</font>"
 
 	return 1
 
@@ -108,7 +111,7 @@
 		latch(C, user)
 	else
 		if(!load(C, user))
-			to_chat(user, "<font color='red'>You were unable to load [C] on [src].</font>")
+			user << "<font color='red'>You were unable to load [C] on [src].</font>"
 
 /obj/vehicle/train/attack_hand(mob/user as mob)
 	if(user.stat || user.restrained() || !Adjacent(user))
@@ -146,26 +149,22 @@
 //Note: there is a modified version of this in code\modules\vehicles\cargo_train.dm specifically for cargo train engines
 /obj/vehicle/train/proc/attach_to(obj/vehicle/train/T, mob/user)
 	if (get_dist(src, T) > 1)
-		if(user)
-			to_chat(user, "<font color='red'>[src] is too far away from [T] to hitch them together.</font>")
+		user << "<font color='red'>[src] is too far away from [T] to hitch them together.</font>"
 		return
 
 	if (lead)
-		if(user)
-			to_chat(user, "<font color='red'>[src] is already hitched to something.</font>")
+		user << "<font color='red'>[src] is already hitched to something.</font>"
 		return
 
 	if (T.tow)
-		if(user)	
-			to_chat(user, "<font color='red'>[T] is already towing something.</font>")
+		user << "<font color='red'>[T] is already towing something.</font>"
 		return
 
 	//check for cycles.
 	var/obj/vehicle/train/next_car = T
 	while (next_car)
 		if (next_car == src)
-			if(user)
-				to_chat(user, "<font color='red'>That seems very silly.</font>")
+			user << "<font color='red'>That seems very silly.</font>"
 			return
 		next_car = next_car.lead
 
@@ -175,7 +174,7 @@
 	set_dir(lead.dir)
 
 	if(user)
-		to_chat(user, "<font color='blue'>You hitch [src] to [T].</font>")
+		user << "<font color='blue'>You hitch [src] to [T].</font>"
 
 	update_stats()
 
@@ -183,13 +182,13 @@
 //detaches the train from whatever is towing it
 /obj/vehicle/train/proc/unattach(mob/user)
 	if (!lead)
-		to_chat(user, "<font color='red'>[src] is not hitched to anything.</font>")
+		user << "<font color='red'>[src] is not hitched to anything.</font>"
 		return
 
 	lead.tow = null
 	lead.update_stats()
 
-	to_chat(user, "<font color='blue'>You unhitch [src] from [lead].</font>")
+	user << "<font color='blue'>You unhitch [src] from [lead].</font>"
 	lead = null
 
 	update_stats()

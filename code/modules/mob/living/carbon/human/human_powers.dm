@@ -108,12 +108,12 @@
 
 	log_say("(COMMUNE to [key_name(M)]) [text]",src)
 
-	to_chat(M, "<font color='blue'>Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]</font>")
+	M << "<font color='blue'>Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]</font>"
 	if(istype(M,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
 		if(H.species.name == src.species.name)
 			return
-		to_chat(H, "<font color='red'>Your nose begins to bleed...</font>")
+		H << "<font color='red'>Your nose begins to bleed...</font>"
 		H.drip(1)
 
 /mob/living/carbon/human/proc/regurgitate()
@@ -137,7 +137,7 @@
 	var/msg = sanitize(input("Message:", "Psychic Whisper") as text|null)
 	if(msg)
 		log_say("(PWHISPER to [key_name(M)]) [msg]", src)
-		to_chat(M, "<font color='green'>You hear a strange, alien voice in your head... <i>[msg]</i></font>")
+		M << "<font color='green'>You hear a strange, alien voice in your head... <i>[msg]</i></font>"
 		to_chat(src, "<font color='green'>You said: \"[msg]\" to [M]</font>")
 	return
 
@@ -178,28 +178,9 @@
 	for(var/obj/item/W in src)
 		drop_from_inventory(W)
 
-	var/obj/item/organ/external/Chest = organs_by_name[BP_TORSO]
+	visible_message("<span class='warning'>\The [src] quivers slightly, then splits apart with a wet slithering noise.</span>")
 
-	if(Chest.robotic >= 2)
-		visible_message("<span class='warning'>\The [src] shudders slightly, then ejects a cluster of nymphs with a wet slithering noise.</span>")
-		species = GLOB.all_species[SPECIES_HUMAN] // This is hard-set to default the body to a normal FBP, without changing anything.
-
-		// Bust it
-		src.death()
-
-		for(var/obj/item/organ/internal/diona/Org in internal_organs) // Remove Nymph organs.
-			qdel(Org)
-
-		// Purge the diona verbs.
-		verbs -= /mob/living/carbon/human/proc/diona_split_nymph
-		verbs -= /mob/living/carbon/human/proc/regenerate
-
-		for(var/obj/item/organ/external/E in organs) // Just fall apart.
-			E.droplimb(TRUE)
-
-	else
-		visible_message("<span class='warning'>\The [src] quivers slightly, then splits apart with a wet slithering noise.</span>")
-		qdel(src)
+	qdel(src)
 
 /mob/living/carbon/human/proc/self_diagnostics()
 	set name = "Self-Diagnostics"
@@ -234,7 +215,7 @@
 		else
 			output += "[IO.name] - <span style='color:green;'>OK</span>\n"
 
-	to_chat(src,output)
+	src << output
 
 /mob/living/carbon/human
 	var/next_sonar_ping = 0
@@ -280,7 +261,7 @@
 		else // No need to check distance if they're standing right on-top of us
 			feedback += "right on top of you."
 		feedback += "</span>"
-		to_chat(src,jointext(feedback,null))
+		src << jointext(feedback,null)
 	if(!heard_something)
 		to_chat(src, "<span class='notice'>You hear no movement but your own.</span>")
 
@@ -302,7 +283,7 @@
 
 	var/delay_length = round(active_regen_delay * species.active_regen_mult)
 	if(do_after(src,delay_length))
-		adjust_nutrition(-200)
+		nutrition -= 200
 
 		for(var/obj/item/organ/I in internal_organs)
 			if(I.robotic >= ORGAN_ROBOT) // No free robofix.
@@ -345,5 +326,5 @@
 		active_regen = FALSE
 	else
 		to_chat(src, "<span class='critical'>Your regeneration is interrupted!</span>")
-		adjust_nutrition(-75)
+		nutrition -= 75
 		active_regen = FALSE

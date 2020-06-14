@@ -10,10 +10,9 @@
 	icon = 'icons/turf/space.dmi'
 	icon_state = "0"
 	dynamic_lighting = FALSE
-	initialized = FALSE
 
-/turf/unsimulated/fake_space/Initialize(mapload)
-	. = ..()
+/turf/unsimulated/fake_space/New()
+	..()
 	icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 //VOREStation Add End
 

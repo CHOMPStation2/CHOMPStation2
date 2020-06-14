@@ -246,10 +246,10 @@
 		if(edible == 1)
 			HasSliceMissing()
 			if(slices <= 0)
-				to_chat(user, "The cake hums away quietly as the chaos powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice.")
+				user << "The cake hums away quietly as the chaos powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."
 				return
 			else
-				to_chat(user, "You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!")
+				user << "You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!"
 				slices = slices - 1
 				icon_state = "chaoscake-[slices]"
 				new /obj/item/weapon/reagent_containers/food/snacks/chaoscakeslice(src.loc)
@@ -260,7 +260,7 @@
 	if(istype(W,/obj/item/weapon/chaoscake_layer))
 		var/obj/item/weapon/chaoscake_layer/C = W
 		if(C.layer_stage == 8)
-			to_chat(user, "Finally! The coin on the top, the almighty chaos cake is complete!")
+			user << "Finally! The coin on the top, the almighty chaos cake is complete!"
 			qdel(W)
 			stage++
 			desc = desclist2[stage]
@@ -268,12 +268,13 @@
 			edible = 1
 			name = "The Chaos Cake!"
 		else if(stage == maxstages)
-			to_chat(user, "The cake is already done!")
+			user << "The cake is already done!"
 		else if(stage == C.layer_stage)
-			to_chat(user, "You add another layer to the cake, nice.")
+			user << "You add another layer to the cake, nice."
 			qdel(W)
 			stage++
 			desc = desclist2[stage]
-			icon_state = "chaoscake_unfinished-[stage]"
+			icon_state = "chaoscake_stage-[stage]"
 		else
-			to_chat(user, "Hmm, doesnt seem like this layer is supposed to be added there?")
+			user << "Hmm, doesnt seem like this layer is supposed to be added there?"
+

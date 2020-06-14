@@ -15,7 +15,6 @@
 					LANGUAGE_ENOCHIAN	= 0
 					)
 	var/vr_sprites = list()
-	var/pto_type = null
 
 /obj/item/weapon/robot_module/robot/clerical
 	languages = list(
@@ -45,8 +44,7 @@
 	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
 	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
 	robot_modules["Servicehound"] = /obj/item/weapon/robot_module/robot/servicehound //YW changes
-	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
-	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
+	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -65,16 +63,14 @@
 	src.modules += new /obj/item/device/sleevemate(src) //Lets them scan people.
 	. = ..() //Any Global vore modules will come from here
 
-/obj/item/weapon/robot_module/robot/medical/surgeon
-	pto_type = PTO_MEDICAL
+/obj/item/weapon/robot_module/robot/medical/surgeon //VOREStation sprites
 	vr_sprites = list(
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
 						"ZOOM-BA" = "zoomba-medical"
 					 )
 
-/obj/item/weapon/robot_module/robot/medical/crisis
-	pto_type = PTO_MEDICAL
+/obj/item/weapon/robot_module/robot/medical/crisis //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-med",
 						"Acheron" = "mechoid-Medical",
@@ -82,8 +78,7 @@
 						"ZOOM-BA" = "zoomba-crisis"
 					 )
 
-/obj/item/weapon/robot_module/robot/clerical/butler
-	pto_type = PTO_CIVILIAN
+/obj/item/weapon/robot_module/robot/clerical/butler //VOREStation sprites
 	vr_sprites = list(
 						"Handy - Service" = "handy-service",
 						"Handy - Hydro" = "handy-hydro",
@@ -92,8 +87,7 @@
 						"ZOOM-BA" = "zoomba-service"
 					 )
 
-/obj/item/weapon/robot_module/robot/clerical/general
-	pto_type = PTO_CIVILIAN
+/obj/item/weapon/robot_module/robot/clerical/general //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-clerk",
 						"Acheron" = "mechoid-Service",
@@ -101,8 +95,7 @@
 						"ZOOM-BA" = "zoomba-clerical"
 					 )
 
-/obj/item/weapon/robot_module/robot/janitor
-	pto_type = PTO_CIVILIAN
+/obj/item/weapon/robot_module/robot/janitor //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-janitor",
 						"Acheron" = "mechoid-Janitor",
@@ -110,8 +103,7 @@
 						"ZOOM-BA" = "zoomba-janitor"
 					 )
 
-/obj/item/weapon/robot_module/robot/security/general
-	pto_type = PTO_SECURITY
+/obj/item/weapon/robot_module/robot/security/general //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-sec",
 						"Acheron" = "mechoid-Security",
@@ -119,8 +111,7 @@
 						"ZOOM-BA" = "zoomba-security"
 					 )
 
-/obj/item/weapon/robot_module/robot/miner
-	pto_type = PTO_CARGO
+/obj/item/weapon/robot_module/robot/miner //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-miner",
 						"Acheron" = "mechoid-Miner",
@@ -128,31 +119,28 @@
 						"ZOOM-BA" = "zoomba-miner"
 					 )
 
-/obj/item/weapon/robot_module/robot/standard
-	pto_type = PTO_CIVILIAN
+/obj/item/weapon/robot_module/robot/standard //VOREStation sprites
 	vr_sprites = list(
 						"Handy" = "handy-standard",
 						"Acheron" = "mechoid-Standard",
 						"Shellguard Noble" = "Noble-STD",
 						"ZOOM-BA" = "zoomba-standard"
 					 )
-/obj/item/weapon/robot_module/robot/engineering/general
-	pto_type = PTO_ENGINEERING
+
+/obj/item/weapon/robot_module/robot/engineering/general //VOREStation sprites
 	vr_sprites = list(
 						"Acheron" = "mechoid-Engineering",
 						"Shellguard Noble" = "Noble-ENG",
 						"ZOOM-BA" = "zoomba-engineering"
 					 )
 
-/obj/item/weapon/robot_module/robot/research
-	pto_type = PTO_SCIENCE
+/obj/item/weapon/robot_module/robot/research //VOREStation sprites
 	vr_sprites = list(
 						"Acheron" = "mechoid-Science",
 						"ZOOM-BA" = "zoomba-research"
 					 )
 
-/obj/item/weapon/robot_module/robot/security/combat
-	pto_type = PTO_SECURITY
+/obj/item/weapon/robot_module/robot/security/combat //VOREStation sprites
 	vr_sprites = list(
 						"Acheron" = "mechoid-Combat",
 						"ZOOM-BA" = "zoomba-combat"
@@ -162,14 +150,13 @@
 	name = "k9 robot module"
 	sprites = list(
 					"K9 hound" = "k9",
-					"K9 Alternative" = "k92",
+					"K9 Alternative (Static)" = "k92",
 					"Secborg model V-2" = "secborg",
 					"Borgi" = "borgi-sec",
 					"Secborg model V-3" = "SecVale" //CHOMPEdit
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
-	pto_type = PTO_SECURITY
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/knine/New(var/mob/living/silicon/robot/R)
@@ -236,8 +223,7 @@
 	name = "MediHound module"
 	channels = list("Medical" = 1)
 	networks = list(NETWORK_MEDICAL)
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
-	pto_type = PTO_MEDICAL
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Crew monitor anywhere!
 	can_be_pushed = 0
 	sprites = list(
 					"Medical Hound" = "medihound",
@@ -322,7 +308,6 @@
 	name = "Emergency Responce module"
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
-	pto_type = PTO_SECURITY
 	can_be_pushed = 0
 	sprites = list(
 					"Standard" = "ert",
@@ -377,7 +362,6 @@
 					"Borgi" = "borgi-jani"
 					)
 	channels = list("Service" = 1)
-	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/scrubpup/New(var/mob/living/silicon/robot/R)
@@ -438,7 +422,7 @@
 	G.recipes += new/datum/stack_recipe("glass sheet", /obj/item/stack/material/glass, 1, 1, 20)
 	src.modules += G
 
-	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //YW edit - using yw icon files
+	R.icon 		 = 'icons/mob/widerobot_yw.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -457,12 +441,9 @@
 	name = "Research Hound Module"
 	sprites = list(
 					"Research Hound" = "science",
-					"Borgi" = "borgi-sci",
-					"SciHound" = "scihound",
-					"SciHoundDark" = "scihounddark"
+					"Borgi" = "borgi-sci"
 					)
 	channels = list("Science" = 1)
-	pto_type = PTO_SCIENCE
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/science/New(var/mob/living/silicon/robot/R)
@@ -471,16 +452,16 @@
 	src.modules += new /obj/item/weapon/gripper/research(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
+	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
+	src.modules += new /obj/item/weapon/storage/part_replacer(src)
+	src.modules += new /obj/item/weapon/card/robot(src)
+	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
+	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
+	src.modules += new /obj/item/device/robotanalyzer(src)
 	src.modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/device/multitool(src)
-	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
-	src.modules += new /obj/item/weapon/storage/part_replacer(src)
-	src.modules += new /obj/item/device/robotanalyzer(src)
-	src.modules += new /obj/item/weapon/card/robot(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/organ/robotics(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/mech(src)
 	src.emag = new /obj/item/weapon/hand_tele(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
@@ -532,13 +513,10 @@
 	sprites = list(
 					"Pupdozer" = "pupdozer",
 					"Borgi" = "borgi-eng",
-					"V2 Engidog" = "thottbot",
-					"EngiHound" = "engihound",
-					"EngiHoundDark" = "engihounddark"
+					"V2 Engidog" = "thottbot"
 					)
 	channels = list("Engineering" = 1)
 	networks = list(NETWORK_ENGINEERING)
-	pto_type = PTO_ENGINEERING
 	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
 	can_be_pushed = 0
 
@@ -551,17 +529,20 @@
 	src.modules += new /obj/item/device/multitool(src)
 	src.modules += new /obj/item/device/t_scanner(src)
 	src.modules += new /obj/item/device/analyzer(src)
-	src.modules += new /obj/item/device/geiger(src)
 	src.modules += new /obj/item/taperoll/engineering(src)
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
+	src.modules += new /obj/item/device/pipe_painter(src)
+	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
 	src.modules += new /obj/item/weapon/pickaxe(src)
 	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
 	src.modules += new /obj/item/device/dogborg/boop_module(src)
 	src.modules += new /obj/item/weapon/gripper(src)
 	src.modules += new /obj/item/weapon/gripper/circuit(src)
+	src.modules += new /obj/item/device/analyzer(src)
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
+	src.modules += new /obj/item/device/geiger(src)
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
 
@@ -680,7 +661,10 @@
 /obj/item/weapon/robot_module/robot/servicehound
 	name = "service-hound module"
 	sprites = list(
-					"Pinkhound" = "k69"
+					"Blackhound" = "k50",
+					"Pinkhound" = "k69",
+					"ServicehoundV2" = "serve2",
+					"ServicehoundV2 Darkmode" = "servedark",
 					)
 	channels = list("Service" = 1)
 	can_be_pushed = 0
@@ -732,82 +716,6 @@
 	src.modules += B
 */
 
-	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //YW edit - using yw icon files
-	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
-	R.ui_style_vr = TRUE
-	R.pixel_x 	 = -16
-	R.old_x 	 = -16
-	R.default_pixel_x = -16
-	R.dogborg = TRUE
-	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/proc/toggle_rider_reins
-	R.verbs |= /mob/living/proc/shred_limb
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
-	..()
-
-// Uses modified K9 sprites.
-/obj/item/weapon/robot_module/robot/clerical/brodog
-	name = "service-hound module"
-	sprites = list(
-					"Blackhound" = "k50",
-					"Pinkhound" = "k69",
-					"ServicehoundV2" = "serve2",
-					"ServicehoundV2 Darkmode" = "servedark",
-					)
-	channels = list("Service" = 1)
-	pto_type = PTO_CIVILIAN
-	can_be_pushed = 0
-
-
-// In a nutshell, basicly service/butler robot but in dog form. - Port from CitadelRP
-/obj/item/weapon/robot_module/robot/clerical/brodog/New(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/weapon/gripper/service(src)
-	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
-	src.modules += new /obj/item/weapon/material/minihoe(src)
-	src.modules += new /obj/item/weapon/material/knife/machete/hatchet(src)
-	src.modules += new /obj/item/device/analyzer/plant_analyzer(src)
-	src.modules += new /obj/item/weapon/storage/bag/dogborg(src)
-	src.modules += new /obj/item/weapon/robot_harvester(src)
-	src.modules += new /obj/item/weapon/material/knife(src)
-	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
-	src.modules += new /obj/item/device/multitool(src) //to freeze trays
-	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/device/dogborg/boop_module(src)
-	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
-
-	var/datum/matter_synth/water = new /datum/matter_synth(500) // buffy fix, was 0
-	water.name = "Water reserves"
-	water.recharge_rate = 0
-	water.max_energy = 1000
-	R.water_res = water
-	synths += water
-
-
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
-	T.water = water
-	src.modules += T
-
-	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
-	M.stored_matter = 30
-	src.modules += M
-
-	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
-
-	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
-	L.lit = 1
-	src.modules += L
-
-	src.modules += new /obj/item/weapon/tray/robotray(src)
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
-
-/* // I don't know what kind of sleeper to put here, but also no need if you already have "Robot Nom" verb. - revisit later
-	var/obj/item/device/dogborg/sleeper/K9/B = new /obj/item/device/dogborg/sleeper/K9(src)
-	B.water = water
-	src.modules += B
-*/
-
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
@@ -818,62 +726,13 @@
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
-	..()
-
-/obj/item/weapon/robot_module/robot/kmine
-	name = "Supply Hound Module"
-	sprites = list(
-					"KMine" = "kmine",
-					"CargoHound" = "cargohound",
-					"CargoHoundDark" = "cargohounddark"
-					)
-	channels = list("Supply" = 1)
-	pto_type = PTO_CARGO
-	can_be_pushed = 0
-
-/obj/item/weapon/robot_module/robot/kmine/New(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/borg/sight/material(src)
-	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/storage/bag/ore(src)
-	src.modules += new /obj/item/weapon/pickaxe/borgdrill(src)
-	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
-	src.modules += new /obj/item/weapon/gripper/miner(src)
-	src.modules += new /obj/item/weapon/mining_scanner(src)
-	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.emag = new /obj/item/weapon/pickaxe/plasmacutter(src)
-	src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
-
-	var/datum/matter_synth/water = new /datum/matter_synth(500)
-	water.name = "Water reserves"
-	water.recharge_rate = 0
-	R.water_res = water
-	synths += water
-
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
-	T.water = water
-	src.modules += T
-
-	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper/compactor/supply(src)
-	B.water = water
-	src.modules += B
-
-	R.icon = 'icons/mob/widerobot_vr.dmi'
-	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
-	R.ui_style_vr = TRUE
-	R.pixel_x 	 = -16
-	R.old_x  	 = -16
-	R.default_pixel_x = -16
-	R.dogborg = TRUE
-	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	R.verbs |= /mob/living/proc/toggle_rider_reins
 	R.verbs |= /mob/living/proc/shred_limb
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
-
 	..()
+
+//YW changes - Addition of Servicehound end
+
 
 /obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
 	R.pixel_x = initial(pixel_x)

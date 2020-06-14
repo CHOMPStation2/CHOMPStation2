@@ -26,12 +26,10 @@
 	w_class = ITEMSIZE_NORMAL
 	max_w_class = ITEMSIZE_SMALL
 	max_storage_space = ITEMSIZE_SMALL * 7
-	use_sound = 'sound/items/storage/briefcase.ogg'
 
 	examine(mob/user)
-		. = ..()
-		if(Adjacent(user))
-			. += "The service panel is [src.open ? "open" : "closed"]."
+		if(..(user, 1))
+			user << text("The service panel is [src.open ? "open" : "closed"].")
 
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		if(locked)

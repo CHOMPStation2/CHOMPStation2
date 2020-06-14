@@ -1,15 +1,22 @@
-/obj/effect/overmap/visitable/sector/alienship
-	name = "Unknown Vessel"
-	desc = "An unknown vessel detected by sensors."
-	icon_state = "ship"
-	color = "#ff00ff"
-	initial_generic_waypoints = list("alien_vessel")
+// -- Datums -- //
 
-/obj/effect/shuttle_landmark/premade/excursion/alienship
+/datum/shuttle_destination/excursion/alienship
 	name = "Unknown Ship"
-	landmark_tag = "alien_vessel"
+	my_area = /area/shuttle/excursion/away_alienship
+	preferred_interim_area = /area/shuttle/excursion/space_moving
+	skip_me = TRUE
+
+	routes_to_make = list(
+		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS
+	)
 
 // -- Objs -- //
+
+/obj/shuttle_connector/alienship
+	name = "shuttle connector - alienship"
+	shuttle_name = "Excursion Shuttle"
+	destinations = list(/datum/shuttle_destination/excursion/alienship)
+	initialized = TRUE //Just don't.
 
 /obj/away_mission_init/alienship
 	name = "away mission initializer - alienship"

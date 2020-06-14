@@ -15,7 +15,6 @@
 	var/access = list()
 	access = access_crate_cash
 	var/worth = 0
-	drop_sound = 'sound/items/drop/paper.ogg'
 
 /obj/item/weapon/spacecash/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/spacecash))
@@ -30,7 +29,7 @@
 			h_user.drop_from_inventory(src)
 			h_user.drop_from_inventory(SC)
 			h_user.put_in_hands(SC)
-		to_chat(user, "<span class='notice'>You combine the Thalers to a bundle of [SC.worth] Thalers.</span>")
+		user << "<span class='notice'>You combine the Thalers to a bundle of [SC.worth] Thalers.</span>"
 		qdel(src)
 
 /obj/item/weapon/spacecash/update_icon()
@@ -151,13 +150,12 @@ proc/spawn_money(var/sum, spawnloc, mob/living/carbon/human/human_user as mob)
 	name = "charge card"
 	icon_state = "efundcard"
 	desc = "A card that holds an amount of money."
-	drop_sound = 'sound/items/drop/card.ogg'
 	var/owner_name = "" //So the ATM can set it so the EFTPOS can put a valid name on transactions.
 	attack_self() return  //Don't act
 	attackby()    return  //like actual
 	update_icon() return  //space cash
 
 /obj/item/weapon/spacecash/ewallet/examine(mob/user)
-	. = ..()
-	if(Adjacent(user))
-		. += "<span class='notice'>Charge card's owner: [src.owner_name]. Thalers remaining: [src.worth].</span>"
+	..(user)
+	if (!(user in view(2)) && user!=src.loc) return
+	user << "<font color='blue'>Charge card's owner: [src.owner_name]. Thalers remaining: [src.worth].</font>"

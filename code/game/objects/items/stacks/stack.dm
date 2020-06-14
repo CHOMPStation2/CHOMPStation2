@@ -13,8 +13,6 @@
 	gender = PLURAL
 	origin_tech = list(TECH_MATERIAL = 1)
 	icon = 'icons/obj/stacks.dmi'
-	randpixel = 7
-	center_of_mass = null
 	var/list/datum/stack_recipe/recipes
 	var/singular_name
 	var/amount = 1
@@ -58,13 +56,11 @@
 		item_state = initial(icon_state)
 
 /obj/item/stack/examine(mob/user)
-	. = ..()
-	
-	if(Adjacent(user))
+	if(..(user, 1))
 		if(!uses_charge)
-			. += "There are [src.amount] [src.singular_name]\s in the stack."
+			user << "There are [src.amount] [src.singular_name]\s in the stack."
 		else
-			. += "There is enough charge for [get_amount()]."
+			user << "There is enough charge for [get_amount()]."
 
 /obj/item/stack/attack_self(mob/user as mob)
 	list_recipes(user)
@@ -130,22 +126,22 @@
 
 	if (!can_use(required))
 		if (produced>1)
-			to_chat(user, "<span class='warning'>You haven't got enough [src] to build \the [produced] [recipe.title]\s!</span>")
+			user << "<span class='warning'>You haven't got enough [src] to build \the [produced] [recipe.title]\s!</span>"
 		else
-			to_chat(user, "<span class='warning'>You haven't got enough [src] to build \the [recipe.title]!</span>")
+			user << "<span class='warning'>You haven't got enough [src] to build \the [recipe.title]!</span>"
 		return
 
 	if (recipe.one_per_turf && (locate(recipe.result_type) in user.loc))
-		to_chat(user, "<span class='warning'>There is another [recipe.title] here!</span>")
+		user << "<span class='warning'>There is another [recipe.title] here!</span>"
 		return
 
 	if (recipe.on_floor && !isfloor(user.loc))
-		to_chat(user, "<span class='warning'>\The [recipe.title] must be constructed on the floor!</span>")
+		user << "<span class='warning'>\The [recipe.title] must be constructed on the floor!</span>"
 		return
 
 	if (recipe.time)
-		to_chat(user, "<span class='notice'>Building [recipe.title] ...</span>")
-		if (!do_after(user, recipe.time, exclusive = TRUE))
+		user << "<span class='notice'>Building [recipe.title] ...</span>"
+		if (!do_after(user, recipe.time))
 			return
 
 	if (use(required))
@@ -330,7 +326,7 @@
 			continue
 		var/transfer = src.transfer_to(item)
 		if (transfer)
-			to_chat(user, "<span class='notice'>You add a new [item.singular_name] to the stack. It now contains [item.amount] [item.singular_name]\s.</span>")
+			user << "<span class='notice'>You add a new [item.singular_name] to the stack. It now contains [item.amount] [item.singular_name]\s.</span>"
 		if(!amount)
 			break
 
@@ -362,14 +358,6 @@
 				src.interact(usr)
 	else
 		return ..()
-
-/obj/item/stack/Moved(atom/old_loc, direction, forced = FALSE)
-	. = ..()
-	if(isturf(loc))
-		for(var/obj/item/stack/S in loc)
-			if(S == src)
-				continue
-			S.transfer_to(src) // them to us, so if we're being pulled, we can keep being pulled
 
 /*
  * Recipe datum

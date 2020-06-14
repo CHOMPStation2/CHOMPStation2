@@ -122,7 +122,7 @@
 
 	var/mob/living/carbon/human/H = M
 	if(!istype(H))
-		to_chat(user, "<span class='warning'>Apparently it didn't work...</span>")
+		user << "<span class='warning'>Apparently it didn't work...</span>"
 		return
 
 	// Used by admin log.

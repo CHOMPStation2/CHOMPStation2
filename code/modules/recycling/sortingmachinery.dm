@@ -18,7 +18,6 @@
 		unwrap()
 
 	proc/unwrap()
-		playsound(loc, 'sound/items/package_unwrap.ogg', 50, 1)
 		// Destroy will drop our wrapped object on the turf, so let it.
 		qdel(src)
 
@@ -49,7 +48,6 @@
 					user.visible_message("\The [user] titles \the [src] with \a [W], marking down: \"[str]\"",\
 					"<span class='notice'>You title \the [src]: \"[str]\"</span>",\
 					"You hear someone scribbling a note.")
-					playsound(src, pick('sound/bureaucracy/pen1.ogg','sound/bureaucracy/pen2.ogg'), 20)
 					name = "[name] ([str])"
 					if(!examtext && !nameset)
 						nameset = 1
@@ -69,7 +67,6 @@
 					user.visible_message("\The [user] labels \the [src] with \a [W], scribbling down: \"[examtext]\"",\
 					"<span class='notice'>You label \the [src]: \"[examtext]\"</span>",\
 					"You hear someone scribbling a note.")
-					playsound(src, pick('sound/bureaucracy/pen1.ogg','sound/bureaucracy/pen2.ogg'), 20)
 		return
 
 	update_icon()
@@ -102,19 +99,18 @@
 			overlays += I
 
 	examine(mob/user)
-		. = ..()
-		if(get_dist(user, src) <= 4)
+		if(..(user, 4))
 			if(sortTag)
-				. += "<span class='notice'>It is labeled \"[sortTag]\"</span>"
+				to_chat(user, "<span class='notice'>It is labeled \"[sortTag]\"</span>")
 			if(examtext)
-				. += "<span class='notice'>It has a note attached which reads, \"[examtext]\"</span>"
+				to_chat(user, "<span class='notice'>It has a note attached which reads, \"[examtext]\"</span>")
+		return
 
 /obj/item/smallDelivery
 	desc = "A small wrapped package."
 	name = "small parcel"
 	icon = 'icons/obj/storage_vr.dmi'	//VOREStation Edit
 	icon_state = "deliverycrate3"
-	drop_sound = 'sound/items/drop/box.ogg'
 	var/obj/item/wrapped = null
 	var/sortTag = null
 	var/examtext = null
@@ -159,7 +155,6 @@
 					user.visible_message("\The [user] titles \the [src] with \a [W], marking down: \"[str]\"",\
 					"<span class='notice'>You title \the [src]: \"[str]\"</span>",\
 					"You hear someone scribbling a note.")
-					playsound(src, pick('sound/bureaucracy/pen1.ogg','sound/bureaucracy/pen2.ogg'), 20)
 					name = "[name] ([str])"
 					if(!examtext && !nameset)
 						nameset = 1
@@ -180,7 +175,6 @@
 					user.visible_message("\The [user] labels \the [src] with \a [W], scribbling down: \"[examtext]\"",\
 					"<span class='notice'>You label \the [src]: \"[examtext]\"</span>",\
 					"You hear someone scribbling a note.")
-					playsound(src, pick('sound/bureaucracy/pen1.ogg','sound/bureaucracy/pen2.ogg'), 20)
 		return
 
 	update_icon()
@@ -209,11 +203,12 @@
 			overlays += I
 
 	examine(mob/user)
-		if(get_dist(user, src) <= 4)
+		if(..(user, 4))
 			if(sortTag)
-				. += "<span class='notice'>It is labeled \"[sortTag]\"</span>"
+				to_chat(user, "<span class='notice'>It is labeled \"[sortTag]\"</span>")
 			if(examtext)
-				. += "<span class='notice'>It has a note attached which reads, \"[examtext]\"</span>"
+				to_chat(user, "<span class='notice'>It has a note attached which reads, \"[examtext]\"</span>")
+		return
 
 /obj/item/weapon/packageWrap
 	name = "package wrapper"
@@ -222,7 +217,6 @@
 	icon_state = "deliveryPaper"
 	w_class = ITEMSIZE_NORMAL
 	var/amount = 25.0
-	drop_sound = 'sound/items/drop/wrapper.ogg'
 
 
 	afterattack(var/obj/target as obj, mob/user as mob, proximity)
@@ -273,7 +267,6 @@
 				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
 				"<span class='notice'>You wrap \the [target], leaving [amount] units of paper on \the [src].</span>",\
 				"You hear someone taping paper around a small object.")
-				playsound(loc, 'sound/items/package_wrap.ogg', 50, 1)
 		else if (istype(target, /obj/structure/closet/crate))
 			var/obj/structure/closet/crate/O = target
 			if (src.amount > 3 && !O.opened)
@@ -285,7 +278,6 @@
 				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
 				"<span class='notice'>You wrap \the [target], leaving [amount] units of paper on \the [src].</span>",\
 				"You hear someone taping paper around a large object.")
-				playsound(loc, 'sound/items/package_wrap.ogg', 50, 1)
 			else if(src.amount < 3)
 				to_chat(user, "<span class='warning'>You need more paper.</span>")
 		else if (istype (target, /obj/structure/closet))
@@ -299,7 +291,6 @@
 				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
 				"<span class='notice'>You wrap \the [target], leaving [amount] units of paper on \the [src].</span>",\
 				"You hear someone taping paper around a large object.")
-				playsound(loc, 'sound/items/package_wrap.ogg', 50, 1)
 			else if(src.amount < 3)
 				to_chat(user, "<span class='warning'>You need more paper.</span>")
 		else
@@ -311,9 +302,10 @@
 		return
 
 	examine(mob/user)
-		. = ..()
-		if(get_dist(user, src) <= 0)
-			. += "<font color='blue'>There are [amount] units of package wrap left!</font>"
+		if(..(user, 0))
+			to_chat(user, "<font color='blue'>There are [amount] units of package wrap left!</font>")
+
+		return
 
 /obj/structure/bigDelivery/Destroy()
 	if(wrapped) //sometimes items can disappear. For example, bombs. --rastaf0

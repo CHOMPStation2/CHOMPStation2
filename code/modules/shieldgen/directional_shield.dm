@@ -97,21 +97,16 @@
 	var/high_color = "#0099FF"			// Color the shield will be when at max health.  A light blue.
 	var/low_color = "#FF0000"			// Color the shield will drift towards as health is lowered.  Deep red.
 
-/obj/item/shield_projector/Initialize()
+/obj/item/shield_projector/New()
 	START_PROCESSING(SSobj, src)
 	if(always_on)
 		create_shields()
-	GLOB.moved_event.register(src, src, .proc/moved_event)
 	..()
 
 /obj/item/shield_projector/Destroy()
 	destroy_shields()
 	STOP_PROCESSING(SSobj, src)
-	GLOB.moved_event.unregister(src, src, .proc/moved_event)
 	return ..()
-
-/obj/item/shield_projector/proc/moved_event()
-	update_shield_positions()
 
 /obj/item/shield_projector/proc/create_shield(var/newloc, var/new_dir)
 	var/obj/effect/directional_shield/S = new(newloc, src)
@@ -130,7 +125,6 @@
 	for(var/obj/effect/directional_shield/S in active_shields)
 		active_shields -= S
 		qdel(S)
-	set_light(0)
 	active = FALSE
 
 /obj/item/shield_projector/proc/update_shield_positions()
@@ -185,17 +179,12 @@
 		if(always_on)
 			to_chat(user, "<span class='warning'>You can't seem to deactivate \the [src].</span>")
 			return
-		set_on(FALSE)
+
+		destroy_shields()
 	else
 		set_dir(user.dir) // Needed for linear shields.
-		set_on(TRUE)
+		create_shields()
 	visible_message("<span class='notice'>\The [user] [!active ? "de":""]activates \the [src].</span>")
-
-/obj/item/shield_projector/proc/set_on(var/on)
-	if(isnull(on))
-		return
-
-	on ? create_shields() : destroy_shields() // Harmless if called when in the wrong state.
 
 /obj/item/shield_projector/process()
 	if(shield_health < max_shield_health && ( (last_damaged_time + shield_regen_delay) < world.time) )
@@ -208,12 +197,20 @@
 			playsound(get_turf(src), 'sound/machines/defib_safetyOff.ogg', 75, 0)
 
 /obj/item/shield_projector/examine(var/mob/user)
-	. = ..()
-	if(Adjacent(user))
-		. += "Its shield matrix is at [round( (shield_health / max_shield_health) * 100, 0.01)]% strength."
+	..()
+	if(get_dist(src, user) <= 1)
+		to_chat(user, "\The [src]'s shield matrix is at [round( (shield_health / max_shield_health) * 100, 0.01)]% strength.")
 
 /obj/item/shield_projector/emp_act(var/severity)
 	adjust_health(-max_shield_health / severity) // A strong EMP will kill the shield instantly, but weaker ones won't on the first hit.
+
+/obj/item/shield_projector/Move(var/newloc, var/direct)
+	..(newloc, direct)
+	update_shield_positions()
+
+/obj/item/shield_projector/on_loc_moved(atom/oldloc)
+	update_shield_positions()
+
 
 // Subtypes
 

@@ -25,6 +25,3 @@
 	damage = 25
 	damage_type = BRUTE
 	check_armour = "melee"
-
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
-	hitsound_wall = 'sound/weapons/effects/searwall.ogg'

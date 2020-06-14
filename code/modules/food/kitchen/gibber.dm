@@ -14,7 +14,7 @@
 	var/gib_time = 40        // Time from starting until meat appears
 	var/gib_throw_dir = WEST // Direction to spit meat and gibs in.
 
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 2
 	active_power_usage = 500
 
@@ -22,27 +22,21 @@
 /obj/machinery/gibber/autogibber
 	var/turf/input_plate
 
-/obj/machinery/gibber/autogibber/Initialize()
-	. = ..()
-	for(var/i in cardinal)
-		var/obj/machinery/mineral/input/input_obj = locate( /obj/machinery/mineral/input, get_step(src.loc, i) )
-		if(input_obj)
-			if(isturf(input_obj.loc))
-				input_plate = input_obj.loc
-				gib_throw_dir = i
-				qdel(input_obj)
-				break
+/obj/machinery/gibber/autogibber/New()
+	..()
+	spawn(5)
+		for(var/i in cardinal)
+			var/obj/machinery/mineral/input/input_obj = locate( /obj/machinery/mineral/input, get_step(src.loc, i) )
+			if(input_obj)
+				if(isturf(input_obj.loc))
+					input_plate = input_obj.loc
+					gib_throw_dir = i
+					qdel(input_obj)
+					break
 
-	if(!input_plate)
-		log_misc("a [src] didn't find an input plate.")
-
-/obj/machinery/gibber/Destroy()
-	occupant = null
-	return ..()
-
-/obj/machinery/gibber/autogibber/Destroy()
-	input_plate = null
-	return ..()
+		if(!input_plate)
+			log_misc("a [src] didn't find an input plate.")
+			return
 
 /obj/machinery/gibber/autogibber/Bumped(var/atom/A)
 	if(!input_plate) return
@@ -81,18 +75,18 @@
 	if(stat & (NOPOWER|BROKEN))
 		return
 	if(operating)
-		to_chat(user, "<span class='danger'>The gibber is locked and running, wait for it to finish.</span>")
+		user << "<span class='danger'>The gibber is locked and running, wait for it to finish.</span>"
 		return
 	else
 		src.startgibbing(user)
 
 /obj/machinery/gibber/examine()
-	. = ..()
-	. += "The safety guard is [emagged ? "<span class='danger'>disabled</span>" : "enabled"]."
+	..()
+	usr << "The safety guard is [emagged ? "<span class='danger'>disabled</span>" : "enabled"]."
 
 /obj/machinery/gibber/emag_act(var/remaining_charges, var/mob/user)
 	emagged = !emagged
-	to_chat(user, "<span class='danger'>You [emagged ? "disable" : "enable"] the gibber safety guard.</span>")
+	user << "<span class='danger'>You [emagged ? "disable" : "enable"] the gibber safety guard.</span>"
 	return 1
 
 /obj/machinery/gibber/attackby(var/obj/item/W, var/mob/user)
@@ -105,7 +99,7 @@
 		return ..()
 
 	if(G.state < 2)
-		to_chat(user, "<span class='danger'>You need a better grip to do that!</span>")
+		user << "<span class='danger'>You need a better grip to do that!</span>"
 		return
 
 	move_into_gibber(user,G.affecting)
@@ -119,24 +113,24 @@
 /obj/machinery/gibber/proc/move_into_gibber(var/mob/user,var/mob/living/victim)
 
 	if(src.occupant)
-		to_chat(user, "<span class='danger'>The gibber is full, empty it first!</span>")
+		user << "<span class='danger'>The gibber is full, empty it first!</span>"
 		return
 
 	if(operating)
-		to_chat(user, "<span class='danger'>The gibber is locked and running, wait for it to finish.</span>")
+		user << "<span class='danger'>The gibber is locked and running, wait for it to finish.</span>"
 		return
 
 	if(!(istype(victim, /mob/living/carbon)) && !(istype(victim, /mob/living/simple_mob)) )
-		to_chat(user, "<span class='danger'>This is not suitable for the gibber!</span>")
+		user << "<span class='danger'>This is not suitable for the gibber!</span>"
 		return
 
 	if(istype(victim,/mob/living/carbon/human) && !emagged)
-		to_chat(user, "<span class='danger'>The gibber safety guard is engaged!</span>")
+		user << "<span class='danger'>The gibber safety guard is engaged!</span>"
 		return
 
 
 	if(victim.abiotic(1))
-		to_chat(user, "<span class='danger'>Subject may not have abiotic items on.</span>")
+		user << "<span class='danger'>Subject may not have abiotic items on.</span>"
 		return
 
 	user.visible_message("<span class='danger'>[user] starts to put [victim] into the gibber!</span>")

@@ -4,12 +4,10 @@
 	var/lock = TRUE
 	var/turf/lastloc
 	var/lastprocess
-	var/matrix/init_transform
 
-/datum/orbit/New(var/atom/movable/_orbiter, var/atom/_orbiting, _lock)
+/datum/orbit/New(_orbiter, _orbiting, _lock)
 	orbiter = _orbiter
 	orbiting = _orbiting
-	init_transform = _orbiter.transform
 	SSorbit.processing += src
 	if (!orbiting.orbiters)
 		orbiting.orbiters = list()
@@ -26,7 +24,6 @@
 	SSorbit.processing -= src
 	if (orbiter)
 		orbiter.orbiting = null
-		orbiter.transform = init_transform
 		orbiter = null
 	if (orbiting)
 		if (orbiting.orbiters)
@@ -87,6 +84,7 @@
 	new/datum/orbit(src, A, lockinorbit)
 	if (!orbiting) //something failed, and our orbit datum deleted itself
 		return
+	var/matrix/initial_transform = matrix(transform)
 
 	//Head first!
 	if (pre_rotation)
@@ -102,6 +100,9 @@
 	transform = shift
 
 	SpinAnimation(rotation_speed, -1, clockwise, rotation_segments)
+
+	//we stack the orbits up client side, so we can assign this back to normal server side without it breaking the orbit
+	transform = initial_transform
 
 /atom/movable/proc/stop_orbit()
 	SpinAnimation(0,0)

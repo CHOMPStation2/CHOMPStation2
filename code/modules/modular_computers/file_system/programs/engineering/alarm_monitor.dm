@@ -42,7 +42,7 @@
 
 /datum/nano_module/alarm_monitor/all/New()
 	..()
-	alarm_handlers = SSalarm.all_handlers
+	alarm_handlers = alarm_manager.all_handlers
 
 /datum/nano_module/alarm_monitor/engineering/New()
 	..()
@@ -61,35 +61,31 @@
 		AH.unregister_alarm(object)
 
 /datum/nano_module/alarm_monitor/proc/all_alarms()
-	var/z = get_z(nano_host())
 	var/list/all_alarms = new()
 	for(var/datum/alarm_handler/AH in alarm_handlers)
-		all_alarms += AH.visible_alarms(z)
+		all_alarms += AH.visible_alarms()
 
 	return all_alarms
 
 /datum/nano_module/alarm_monitor/proc/major_alarms()
-	var/z = get_z(nano_host())
 	var/list/all_alarms = new()
 	for(var/datum/alarm_handler/AH in alarm_handlers)
-		all_alarms += AH.major_alarms(z)
+		all_alarms += AH.major_alarms()
 
 	return all_alarms
 
 // Modified version of above proc that uses slightly less resources, returns 1 if there is a major alarm, 0 otherwise.
 /datum/nano_module/alarm_monitor/proc/has_major_alarms()
-	var/z = get_z(nano_host())
 	for(var/datum/alarm_handler/AH in alarm_handlers)
-		if(AH.has_major_alarms(z))
+		if(AH.has_major_alarms())
 			return 1
 
 	return 0
 
 /datum/nano_module/alarm_monitor/proc/minor_alarms()
-	var/z = get_z(nano_host())
 	var/list/all_alarms = new()
 	for(var/datum/alarm_handler/AH in alarm_handlers)
-		all_alarms += AH.minor_alarms(z)
+		all_alarms += AH.minor_alarms()
 
 	return all_alarms
 
@@ -108,10 +104,9 @@
 	var/list/data = host.initial_data()
 
 	var/categories[0]
-	var/z = get_z(nano_host())
 	for(var/datum/alarm_handler/AH in alarm_handlers)
 		categories[++categories.len] = list("category" = AH.category, "alarms" = list())
-		for(var/datum/alarm/A in AH.visible_alarms(z))
+		for(var/datum/alarm/A in AH.major_alarms())
 			var/cameras[0]
 			var/lost_sources[0]
 
@@ -123,7 +118,7 @@
 					lost_sources[++lost_sources.len] = AS.source_name
 
 			categories[categories.len]["alarms"] += list(list(
-					"name" = sanitize("[A.alarm_name()]" + "[A.max_severity() > 1 ? "(MAJOR)" : ""]"),
+					"name" = sanitize(A.alarm_name()),
 					"origin_lost" = A.origin == null,
 					"has_cameras" = cameras.len,
 					"cameras" = cameras,

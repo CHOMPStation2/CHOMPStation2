@@ -6,8 +6,8 @@
 /obj/machinery/atmospherics/binary/circulator
 	name = "circulator"
 	desc = "A gas circulator turbine and heat exchanger."
-	icon = 'icons/obj/power.dmi'
-	icon_state = "circ-unassembled"
+	icon = 'icons/obj/pipes.dmi'
+	icon_state = "circ-off"
 	anchored = 0
 	pipe_flags = PIPING_DEFAULT_LAYER_ONLY|PIPING_ONE_PER_TURF
 
@@ -22,7 +22,6 @@
 	var/last_stored_energy_transferred = 0
 	var/volume_capacity_used = 0
 	var/stored_energy = 0
-	var/temperature_overlay
 
 	density = 1
 
@@ -77,19 +76,15 @@
 		update_icon()
 
 /obj/machinery/atmospherics/binary/circulator/update_icon()
-	icon_state = anchored ? "circ-assembled" : "circ-unassembled"
-	cut_overlays()
-	if (stat & (BROKEN|NOPOWER) || !anchored)
-		return 1
-	if (last_pressure_delta > 0 && recent_moles_transferred > 0)
-		if (temperature_overlay)
-			add_overlay(temperature_overlay)
-		if (last_pressure_delta > 5*ONE_ATMOSPHERE)
-			add_overlay("circ-run")
+	if(stat & (BROKEN|NOPOWER) || !anchored)
+		icon_state = "circ-p"
+	else if(last_pressure_delta > 0 && recent_moles_transferred > 0)
+		if(last_pressure_delta > 5*ONE_ATMOSPHERE)
+			icon_state = "circ-run"
 		else
-			add_overlay("circ-slow")
+			icon_state = "circ-slow"
 	else
-		add_overlay("circ-off")
+		icon_state = "circ-off"
 
 	return 1
 
@@ -102,7 +97,6 @@
 					"You hear a ratchet.")
 
 		if(anchored)
-			temperature_overlay = null
 			if(dir & (NORTH|SOUTH))
 				initialize_directions = NORTH|SOUTH
 			else if(dir & (EAST|WEST))

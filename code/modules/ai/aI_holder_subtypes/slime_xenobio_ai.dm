@@ -77,7 +77,7 @@
 		if(rabid)
 			return
 		var/justified = my_slime.is_justified_to_discipline() // This will also consider the AI-side of that proc.
-		remove_target() // Stop attacking.
+		lost_target() // Stop attacking.
 
 		if(justified)
 			obedience++
@@ -133,16 +133,15 @@
 		return
 	rabid = TRUE
 	my_slime.update_mood()
-	my_slime.visible_message(span("danger", "\The [my_slime] enrages!"))
+	my_slime.visible_message(span("danger", "\The [src] enrages!"))
 
 // Called when using a pacification agent (or it's Kendrick being initalized).
 /datum/ai_holder/simple_mob/xenobio_slime/proc/pacify()
-	remove_target() // So it stops trying to kill them.
+	lost_target() // So it stops trying to kill them.
 	rabid = FALSE
 	hostile = FALSE
 	retaliate = FALSE
 	cooperative = FALSE
-	holder.a_intent = I_HELP
 
 // The holder's attack changes based on intent. This lets the AI choose what effect is desired.
 /datum/ai_holder/simple_mob/xenobio_slime/pre_melee_attack(atom/A)
@@ -168,7 +167,7 @@
 			return 1 // Melee (eat) the target if dead/dying, don't shoot it.
 	return ..()
 
-/datum/ai_holder/simple_mob/xenobio_slime/can_attack(atom/movable/AM, var/vision_required = TRUE)
+/datum/ai_holder/simple_mob/xenobio_slime/can_attack(atom/movable/AM)
 	. = ..()
 	if(.) // Do some additional checks because we have Special Code(tm).
 		if(ishuman(AM))
@@ -179,7 +178,6 @@
 				if(!(H in grudges)) // Unless they're an ass.
 					return FALSE
 		if(discipline && !rabid)
-			holder.a_intent = I_HELP
 			return FALSE // We're a good slime.
 
 /datum/ai_holder/simple_mob/xenobio_slime/react_to_attack(atom/movable/attacker)
@@ -249,7 +247,7 @@
 				else
 					delayed_say("Fine...", speaker)
 					adjust_discipline(1, TRUE) // This must come before losing the target or it will be unjustified.
-					remove_target()
+					lost_target()
 
 
 			if(leader) // We're being asked to stop following someone.

@@ -46,9 +46,17 @@
 	var/list/containers = list()	// Beakers for our liquid biomass
 	var/container_limit = 3			// How many beakers can the machine hold?
 
-/obj/machinery/clonepod/Initialize()
-	. = ..()
-	default_apply_parts()
+/obj/machinery/clonepod/New()
+	..()
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/scanning_module(src)
+	component_parts += new /obj/item/weapon/stock_parts/scanning_module(src)
+	component_parts += new /obj/item/weapon/stock_parts/console_screen(src)
+	component_parts += new /obj/item/stack/cable_coil(src, 2)
+
+	RefreshParts()
 	update_icon()
 
 /obj/machinery/clonepod/attack_ai(mob/user as mob)
@@ -476,8 +484,8 @@
 //TO-DO: Make the genetics machine accept them.
 /obj/item/weapon/disk/data
 	name = "Cloning Data Disk"
-	icon = 'icons/obj/discs_vr.dmi' //VOREStation Edit
-	icon_state = "data-red" //VOREStation Edit
+	icon = 'icons/obj/cloning.dmi'
+	icon_state = "datadisk0" //Gosh I hope syndies don't mistake them for the nuke disk.
 	item_state = "card-id"
 	w_class = ITEMSIZE_SMALL
 	var/datum/dna2/record/buf = null
@@ -526,8 +534,9 @@
 	to_chat(user, "You flip the write-protect tab to [read_only ? "protected" : "unprotected"].")
 
 /obj/item/weapon/disk/data/examine(mob/user)
-	. = ..()
-	. += "The write-protect tab is set to [read_only ? "protected" : "unprotected"]."
+	..(user)
+	to_chat(user, text("The write-protect tab is set to [read_only ? "protected" : "unprotected"]."))
+	return
 
 /*
  *	Diskette Box

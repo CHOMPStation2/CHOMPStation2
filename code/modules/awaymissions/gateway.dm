@@ -26,7 +26,7 @@
 /obj/machinery/gateway/centerstation
 	density = 1
 	icon_state = "offcenter"
-	use_power = USE_POWER_IDLE
+	use_power = 1
 
 	//warping vars
 	var/list/linked = list()
@@ -85,13 +85,13 @@ obj/machinery/gateway/centerstation/process()
 	if(linked.len != 8)	return
 	if(!powered())		return
 	if(!awaygate)
-		to_chat(user, "<span class='notice'>Error: No destination found. Please program gateway.</span>")
+		user << "<span class='notice'>Error: No destination found. Please program gateway.</span>"
 		return
 	if(world.time < wait)
-		to_chat(user, "<span class='notice'>Error: Warpspace triangulation in progress. Estimated time to completion: [round(((wait - world.time) / 10) / 60)] minutes.</span>")
+		user << "<span class='notice'>Error: Warpspace triangulation in progress. Estimated time to completion: [round(((wait - world.time) / 10) / 60)] minutes.</span>"
 		return
 	if(!awaygate.calibrated && !LAZYLEN(awaydestinations)) //VOREStation Edit
-		to_chat(user, "<span class='notice'>Error: Destination gate uncalibrated. Gateway unsafe to use without far-end calibration update.</span>")
+		user << "<span class='notice'>Error: Destination gate uncalibrated. Gateway unsafe to use without far-end calibration update.</span>"
 		return
 
 	for(var/obj/machinery/gateway/G in linked)
@@ -133,14 +133,6 @@ obj/machinery/gateway/centerstation/process()
 		M.set_dir(SOUTH)
 		return
 	else
-		//VOREStation Addition Start: Prevent taurriding abuse
-		if(istype(M, /mob/living))
-			var/mob/living/L = M
-			if(LAZYLEN(L.buckled_mobs))
-				var/datum/riding/R = L.riding_datum
-				for(var/rider in L.buckled_mobs)
-					R.force_dismount(rider)
-		//VOREStation Addition End: Prevent taurriding abuse
 		var/obj/effect/landmark/dest = pick(awaydestinations)
 		if(dest)
 			M.forceMove(dest.loc)
@@ -152,11 +144,11 @@ obj/machinery/gateway/centerstation/process()
 		if(!awaygate)
 			awaygate = locate(/obj/machinery/gateway/centeraway)
 			if(!awaygate) // We still can't find the damn thing because there is no destination.
-				to_chat(user, "<span class='notice'>Error: Programming failed. No destination found.</span>")
+				user << "<span class='notice'>Error: Programming failed. No destination found.</span>"
 				return
-			to_chat(user, "<span class='notice'><b>Startup programming successful!</b></span>: A destination in another point of space and time has been detected.")
+			user << "<span class='notice'><b>Startup programming successful!</b></span>: A destination in another point of space and time has been detected."
 		else
-			to_chat(user, "<font color='black'>The gate is already calibrated, there is no work for you to do here.</font>")
+			user << "<font color='black'>The gate is already calibrated, there is no work for you to do here.</font>"
 			return
 
 /////////////////////////////////////Away////////////////////////
@@ -165,7 +157,7 @@ obj/machinery/gateway/centerstation/process()
 /obj/machinery/gateway/centeraway
 	density = 1
 	icon_state = "offcenter"
-	use_power = USE_POWER_OFF
+	use_power = 0
 	var/calibrated = 1
 	var/list/linked = list()	//a list of the connected gateway chunks
 	var/ready = 0
@@ -213,7 +205,7 @@ obj/machinery/gateway/centerstation/process()
 	if(!ready)			return
 	if(linked.len != 8)	return
 	if(!stationgate || !calibrated) // Vorestation edit. Not like Polaris ever touches this anyway.
-		to_chat(user, "<span class='notice'>Error: No destination found. Please calibrate gateway.</span>")
+		user << "<span class='notice'>Error: No destination found. Please calibrate gateway.</span>"
 		return
 
 	for(var/obj/machinery/gateway/G in linked)
@@ -247,7 +239,7 @@ obj/machinery/gateway/centerstation/process()
 	if(istype(M, /mob/living/carbon))
 		for(var/obj/item/weapon/implant/exile/E in M)//Checking that there is an exile implant in the contents
 			if(E.imp_in == M)//Checking that it's actually implanted vs just in their pocket
-				to_chat(M, "<font color='black'>The station gate has detected your exile implant and is blocking your entry.</font>")
+				M << "<font color='black'>The station gate has detected your exile implant and is blocking your entry.</font>"
 				return
 	M.forceMove(get_step(stationgate.loc, SOUTH))
 	M.set_dir(SOUTH)
@@ -258,16 +250,16 @@ obj/machinery/gateway/centerstation/process()
 /obj/machinery/gateway/centeraway/attackby(obj/item/device/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/device/multitool))
 		if(calibrated && stationgate)
-			to_chat(user, "<font color='black'>The gate is already calibrated, there is no work for you to do here.</font>")
+			user << "<font color='black'>The gate is already calibrated, there is no work for you to do here.</font>"
 			return
 		else
 			// VOREStation Add
 			stationgate = locate(/obj/machinery/gateway/centerstation)
 			if(!stationgate)
-				to_chat(user, "<span class='notice'>Error: Recalibration failed. No destination found... That can't be good.</span>")
+				user << "<span class='notice'>Error: Recalibration failed. No destination found... That can't be good.</span>"
 				return
 			// VOREStation Add End
 			else
-				to_chat(user, "<font color='blue'><b>Recalibration successful!</b>:</font><font color='black'> This gate's systems have been fine tuned. Travel to this gate will now be on target.</font>")
+				user << "<font color='blue'><b>Recalibration successful!</b>:</font><font color='black'> This gate's systems have been fine tuned. Travel to this gate will now be on target.</font>"
 				calibrated = 1
 				return

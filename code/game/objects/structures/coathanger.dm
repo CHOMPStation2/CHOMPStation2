@@ -24,7 +24,7 @@
 		user.drop_from_inventory(coat, src)
 		update_icon()
 	else
-		to_chat(user, "<span class='notice'>You cannot hang [W] on [src]</span>")
+		user << "<span class='notice'>You cannot hang [W] on [src]</span>"
 		return ..()
 
 /obj/structure/coatrack/CanPass(atom/movable/mover, turf/target)

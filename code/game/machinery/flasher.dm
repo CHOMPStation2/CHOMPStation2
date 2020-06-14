@@ -11,8 +11,9 @@
 	var/strength = 10 //How weakened targets are when flashed.
 	var/base_state = "mflash"
 	anchored = 1
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 2
+	flags = PROXMOVE
 
 /obj/machinery/flasher/portable //Portable version of the flasher. Only flashes when anchored
 	name = "portable flasher"
@@ -91,13 +92,13 @@
 		flash()
 	..(severity)
 
-/obj/machinery/flasher/portable/HasProximity(turf/T, atom/movable/AM, oldloc)
-	if(disable || !anchored || (last_flash && world.time < last_flash + 150))
+/obj/machinery/flasher/portable/HasProximity(atom/movable/AM as mob|obj)
+	if((disable) || (last_flash && world.time < last_flash + 150))
 		return
 
-	if(iscarbon(AM))
+	if(istype(AM, /mob/living/carbon))
 		var/mob/living/carbon/M = AM
-		if(M.m_intent != "walk")
+		if((M.m_intent != "walk") && (anchored))
 			flash()
 
 /obj/machinery/flasher/portable/attackby(obj/item/weapon/W as obj, mob/user as mob)
@@ -107,13 +108,11 @@
 
 		if(!anchored)
 			user.show_message(text("<span class='warning'>[src] can now be moved.</span>"))
-			cut_overlays()
-			unsense_proximity(callback = .HasProximity)
-			
+			overlays.Cut()
+
 		else if(anchored)
 			user.show_message(text("<span class='warning'>[src] is now secured.</span>"))
-			add_overlay("[base_state]-s")
-			sense_proximity(callback = .HasProximity)
+			overlays += "[base_state]-s"
 
 /obj/machinery/button/flasher
 	name = "flasher button"

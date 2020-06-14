@@ -123,7 +123,7 @@
 // food-related
 /datum/recipe/proc/make_food(var/obj/container as obj)
 	if(!result)
-		to_world("<span class='danger'>Recipe [type] is defined without a result, please bug report this.</span>")
+		world << "<span class='danger'>Recipe [type] is defined without a result, please bug report this.</span>"
 		return
 	var/obj/result_obj = new result(container)
 	if(istype(container, /obj/machinery))

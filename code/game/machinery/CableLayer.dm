@@ -13,13 +13,13 @@
 	cable.amount = 100
 	..()
 
-/obj/machinery/cablelayer/Moved(atom/old_loc, direction, forced = FALSE)
-	. = ..()
-	layCable(loc,direction)
+/obj/machinery/cablelayer/Move(new_turf,M_Dir)
+	..()
+	layCable(new_turf,M_Dir)
 
 /obj/machinery/cablelayer/attack_hand(mob/user as mob)
 	if(!cable&&!on)
-		to_chat(user, "<span class='warning'>\The [src] doesn't have any cable loaded.</span>")
+		user << "<span class='warning'>\The [src] doesn't have any cable loaded.</span>"
 		return
 	on=!on
 	user.visible_message("\The [user] [!on?"dea":"a"]ctivates \the [src].", "You switch [src] [on? "on" : "off"]")
@@ -30,9 +30,9 @@
 
 		var/result = load_cable(O)
 		if(!result)
-			to_chat(user, "<span class='warning'>\The [src]'s cable reel is full.</span>")
+			user << "<span class='warning'>\The [src]'s cable reel is full.</span>"
 		else
-			to_chat(user, "You load [result] lengths of cable into [src].")
+			user << "You load [result] lengths of cable into [src]."
 		return
 
 	if(O.is_wirecutter())
@@ -46,11 +46,11 @@
 				var/obj/item/stack/cable_coil/CC = new (get_turf(src))
 				CC.amount = m
 		else
-			to_chat(usr, "<span class='warning'>There's no more cable on the reel.</span>")
+			usr << "<span class='warning'>There's no more cable on the reel.</span>"
 
 /obj/machinery/cablelayer/examine(mob/user)
-	. = ..()
-	. += "[src]'s cable reel has [cable.amount] length\s left."
+	..()
+	user << "\The [src]'s cable reel has [cable.amount] length\s left."
 
 /obj/machinery/cablelayer/proc/load_cable(var/obj/item/stack/cable_coil/CC)
 	if(istype(CC) && CC.amount)

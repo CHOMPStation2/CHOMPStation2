@@ -34,10 +34,6 @@
 /obj/effect/map_effect/interval/sound_emitter/geiger/ext,
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/mine/explored/underdark)
-"I" = (
-/obj/structure/salvageable/server,
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/mine/explored/underdark)
 
 (1,1,1) = {"
 a
@@ -65,7 +61,7 @@ a
 a
 e
 d
-I
+d
 d
 d
 d
@@ -109,7 +105,7 @@ a
 a
 e
 d
-I
+d
 d
 d
 d

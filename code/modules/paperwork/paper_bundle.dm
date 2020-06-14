@@ -12,7 +12,6 @@
 	layer = MOB_LAYER
 	pressure_resistance = 1
 	attack_verb = list("bapped")
-	drop_sound = 'sound/items/drop/paper.ogg'
 	var/page = 1    // current page
 	var/list/pages = list()  // Ordered list of pages as they are to be displayed. Can be different order than src.contents.
 
@@ -23,7 +22,7 @@
 	if (istype(W, /obj/item/weapon/paper/carbon))
 		var/obj/item/weapon/paper/carbon/C = W
 		if (!C.iscopy && !C.copied)
-			to_chat(user, "<span class='notice'>Take off the carbon copy first.</span>")
+			user << "<span class='notice'>Take off the carbon copy first.</span>"
 			add_fingerprint(user)
 			return
 	// adding sheets
@@ -42,7 +41,7 @@
 			O.add_fingerprint(usr)
 			pages.Add(O)
 
-		to_chat(user, "<span class='notice'>You add \the [W.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>")
+		user << "<span class='notice'>You add \the [W.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>"
 		qdel(W)
 	else
 		if(istype(W, /obj/item/weapon/tape_roll))
@@ -59,9 +58,9 @@
 
 /obj/item/weapon/paper_bundle/proc/insert_sheet_at(mob/user, var/index, obj/item/weapon/sheet)
 	if(istype(sheet, /obj/item/weapon/paper))
-		to_chat(user, "<span class='notice'>You add [(sheet.name == "paper") ? "the paper" : sheet.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>")
+		user << "<span class='notice'>You add [(sheet.name == "paper") ? "the paper" : sheet.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>"
 	else if(istype(sheet, /obj/item/weapon/photo))
-		to_chat(user, "<span class='notice'>You add [(sheet.name == "photo") ? "the photo" : sheet.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>")
+		user << "<span class='notice'>You add [(sheet.name == "photo") ? "the photo" : sheet.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>"
 
 	user.drop_from_inventory(sheet)
 	sheet.loc = src
@@ -93,14 +92,14 @@
 				qdel(src)
 
 			else
-				to_chat(user, "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>")
+				user << "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>"
 
 /obj/item/weapon/paper_bundle/examine(mob/user)
-	. = ..()
-	if(Adjacent(user))
-		show_content(user)
+	if(..(user, 1))
+		src.show_content(user)
 	else
-		. += "<span class='notice'>It is too far away.</span>"
+		user << "<span class='notice'>It is too far away.</span>"
+	return
 
 /obj/item/weapon/paper_bundle/proc/show_content(mob/user as mob)
 	var/dat
@@ -203,7 +202,7 @@
 	set category = "Object"
 	set src in usr
 
-	to_chat(usr, "<span class='notice'>You loosen the bundle.</span>")
+	usr << "<span class='notice'>You loosen the bundle.</span>"
 	for(var/obj/O in src)
 		O.loc = usr.loc
 		O.layer = initial(O.layer)

@@ -20,7 +20,7 @@
 
 	level = 1
 
-	use_power = USE_POWER_OFF
+	use_power = 0
 	idle_power_usage = 150		//internal circuitry, friction losses and stuff
 	power_rating = 7500			//7500 W ~ 10 HP
 
@@ -176,7 +176,7 @@
 		return 0
 
 	var/datum/signal/signal = new
-	signal.transmission_method = TRANSMISSION_RADIO //radio signal
+	signal.transmission_method = 1 //radio signal
 	signal.source = src
 
 	signal.data = list(
@@ -200,9 +200,8 @@
 		set_frequency(frequency)
 
 /obj/machinery/atmospherics/binary/dp_vent_pump/examine(mob/user)
-	. = ..()
-	if(Adjacent(user))
-		. += "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
+	if(..(user, 1))
+		user << "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
 
 
 /obj/machinery/atmospherics/unary/vent_pump/power_change()
@@ -215,10 +214,10 @@
 	if(!signal.data["tag"] || (signal.data["tag"] != id) || (signal.data["sigtype"]!="command"))
 		return 0
 	if(signal.data["power"])
-		update_use_power(text2num(signal.data["power"]))
+		use_power = text2num(signal.data["power"])
 
 	if(signal.data["power_toggle"])
-		update_use_power(!use_power)
+		use_power = !use_power
 
 	if(signal.data["direction"])
 		pump_direction = text2num(signal.data["direction"])

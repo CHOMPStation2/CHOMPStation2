@@ -5,16 +5,11 @@
 
 /datum/datacore
 	var/name = "datacore"
-	//For general station crew
-	var/static/list/medical = list()
-	var/static/list/general = list()
-	var/static/list/security = list()
-	//For offmap spawns so they can have records accessible by certain things
-	var/static/list/hidden_medical = list()
-	var/static/list/hidden_general = list()
-	var/static/list/hidden_security = list()
+	var/medical[] = list()
+	var/general[] = list()
+	var/security[] = list()
 	//This list tracks characters spawned in the world and cannot be modified in-game. Currently referenced by respawn_character().
-	var/static/list/locked = list()
+	var/locked[] = list()
 
 
 /datum/datacore/proc/get_manifest(monochrome, OOC)
@@ -27,7 +22,6 @@
 	var/list/pla = new() //VOREStation Edit
 	var/list/civ = new()
 	var/list/bot = new()
-	var/list/off = new()
 	var/list/misc = new()
 	var/list/isactive = new()
 	var/dat = {"
@@ -52,61 +46,43 @@
 		if(OOC)
 			var/active = 0
 			for(var/mob/M in player_list)
-				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+				if(M.real_name == name && M.client && M.client.inactivity <= 10 * 60 * 10)
 					active = 1
 					break
 			isactive[name] = active ? "Active" : "Inactive"
 		else
 			isactive[name] = t.fields["p_stat"]
-			//to_world("[name]: [rank]")
+			//world << "[name]: [rank]"
 			//cael - to prevent multiple appearances of a player/job combination, add a continue after each line
 		var/department = 0
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_COMMAND))
+		if(real_rank in command_positions)
 			heads[name] = rank
 			department = 1
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_SECURITY))
+		if(real_rank in security_positions)
 			sec[name] = rank
 			department = 1
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_ENGINEERING))
+		if(real_rank in engineering_positions)
 			eng[name] = rank
 			department = 1
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_MEDICAL))
+		if(real_rank in medical_positions)
 			med[name] = rank
 			department = 1
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_RESEARCH))
+		if(real_rank in science_positions)
 			sci[name] = rank
 			department = 1
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_CARGO))
+		if(real_rank in cargo_positions)
 			car[name] = rank
 			department = 1
-		//VOREStation Add Begin
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_PLANET))
+		//VOREStation Edit Begin
+		if(real_rank in planet_positions)
 			pla[name] = rank
 			department = 1
-		//VOREStation Add End
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_CIVILIAN))
+		//VOREStation Edit End
+		if(real_rank in civilian_positions)
 			civ[name] = rank
 			department = 1
 		if(!department && !(name in heads))
 			misc[name] = rank
-
-	//For the offmap spawns
-	if(OOC)
-		for(var/datum/data/record/t in hidden_general)
-			var/name = t.fields["name"]
-			var/rank = t.fields["rank"]
-			var/real_rank = make_list_rank(t.fields["real_rank"])
-
-			var/active = 0
-			for(var/mob/M in player_list)
-				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
-					active = 1
-					break
-			isactive[name] = active ? "Active" : "Inactive"
-
-			var/datum/job/J = SSjob.get_job(real_rank)
-			if(J?.offmap_spawn)
-				off[name] = rank
 
 	// Synthetics don't have actual records, so we will pull them from here.
 	for(var/mob/living/silicon/ai/ai in mob_list)
@@ -166,12 +142,6 @@
 		for(name in bot)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[bot[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
-	// offmap spawners
-	if(off.len > 0)
-		dat += "<tr><th colspan=3>Offmap Spawns</th></tr>"
-		for(name in off)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[off[name]]</td><td>[isactive[name]]</td></tr>"
-			even = !even
 	// misc guys
 	if(misc.len > 0)
 		dat += "<tr><th colspan=3>Miscellaneous</th></tr>"
@@ -183,117 +153,6 @@
 	dat = replacetext(dat, "\n", "") // so it can be placed on paper correctly
 	dat = replacetext(dat, "\t", "")
 	return dat
-
-/*
-We can't just insert in HTML into the nanoUI so we need the raw data to play with.
-Instead of creating this list over and over when someone leaves their PDA open to the page
-we'll only update it when it changes.  The PDA_Manifest global list is zeroed out upon any change
-using /datum/datacore/proc/manifest_inject( ), or manifest_insert( )
-*/
-
-var/global/list/PDA_Manifest = list()
-
-/datum/datacore/proc/get_manifest_list()
-	if(PDA_Manifest.len)
-		return
-	var/list/heads = list()
-	var/list/sec = list()
-	var/list/eng = list()
-	var/list/med = list()
-	var/list/sci = list()
-	var/list/car = list()
-	var/list/pla = list() // Planetside crew: Explorers, Pilots, S&S
-	var/list/civ = list()
-	var/list/bot = list()
-	var/list/misc = list()
-	for(var/datum/data/record/t in data_core.general)
-		var/name = sanitize(t.fields["name"])
-		var/rank = sanitize(t.fields["rank"])
-		var/real_rank = make_list_rank(t.fields["real_rank"])
-
-		var/isactive = t.fields["p_stat"]
-		var/department = 0
-		var/depthead = 0 			// Department Heads will be placed at the top of their lists.
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_COMMAND))
-			heads[++heads.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-			depthead = 1
-			if(rank=="Colony Director" && heads.len != 1)
-				heads.Swap(1,heads.len)
-
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_SECURITY))
-			sec[++sec.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-			if(depthead && sec.len != 1)
-				sec.Swap(1,sec.len)
-
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_ENGINEERING))
-			eng[++eng.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-			if(depthead && eng.len != 1)
-				eng.Swap(1,eng.len)
-
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_MEDICAL))
-			med[++med.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-			if(depthead && med.len != 1)
-				med.Swap(1,med.len)
-
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_RESEARCH))
-			sci[++sci.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-			if(depthead && sci.len != 1)
-				sci.Swap(1,sci.len)
-
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_PLANET))
-			pla[++pla.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_CARGO))
-			car[++car.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-			if(depthead && car.len != 1)
-				car.Swap(1,car.len)
-
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_CIVILIAN))
-			civ[++civ.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-			if(depthead && civ.len != 1)
-				civ.Swap(1,civ.len)
-
-		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_SYNTHETIC))
-			bot[++bot.len] = list("name" = name, "rank" = rank, "active" = isactive)
-			department = 1
-
-		if(!department && !(name in heads))
-			misc[++misc.len] = list("name" = name, "rank" = rank, "active" = isactive)
-
-	// Synthetics don't have actual records, so we will pull them from here.
-	// Synths don't have records, which is the means by which isactive is retrieved, so I'm hardcoding it to active, don't really have any better means
-	for(var/mob/living/silicon/ai/ai in mob_list)
-		bot[++bot.len] = list("name" = ai.real_name, "rank" = "Artificial Intelligence", "active" = "Active")
-
-	for(var/mob/living/silicon/robot/robot in mob_list)
-		// No combat/syndicate cyborgs, no drones, and no AI shells.
-		if(robot.scrambledcodes || robot.shell || (robot.module && robot.module.hide_on_manifest))
-			continue
-
-		bot[++bot.len] = list("name" = robot.real_name, "rank" = "[robot.modtype] [robot.braintype]", "active" = "Active")
-
-
-	PDA_Manifest = list(
-		list("cat" = "Command", "elems" = heads),
-		list("cat" = "Security", "elems" = sec),
-		list("cat" = "Engineering", "elems" = eng),
-		list("cat" = "Medical", "elems" = med),
-		list("cat" = "Science", "elems" = sci),
-		list("cat" = "Cargo", "elems" = car),
-		list("cat" = "Exploration", "elems" = pla), // VOREStation Edit
-		list("cat" = "Civilian", "elems" = civ),
-		list("cat" = "Silicon", "elems" = bot),
-		list("cat" = "Miscellaneous", "elems" = misc)
-		)
-	return
 
 /datum/datacore/proc/manifest()
 	spawn()
@@ -328,13 +187,10 @@ var/global/list/PDA_Manifest = list()
 /datum/datacore/proc/manifest_inject(var/mob/living/carbon/human/H)
 	if(H.mind && !player_is_antag(H.mind, only_offstation_roles = 1))
 		var/assignment = GetAssignment(H)
-		var/hidden
-		var/datum/job/J = SSjob.get_job(assignment)
-		hidden = J?.offmap_spawn
 
 		var/id = generate_record_id()
 		//General Record
-		var/datum/data/record/G = CreateGeneralRecord(H, id, hidden)
+		var/datum/data/record/G = CreateGeneralRecord(H, id)
 		G.fields["name"]		= H.real_name
 		G.fields["real_rank"]	= H.mind.assigned_role
 		G.fields["rank"]		= assignment
@@ -356,7 +212,7 @@ var/global/list/PDA_Manifest = list()
 			G.fields["notes"] = H.gen_record
 
 		//Medical Record
-		var/datum/data/record/M = CreateMedicalRecord(H.real_name, id, hidden)
+		var/datum/data/record/M = CreateMedicalRecord(H.real_name, id)
 		M.fields["b_type"]		= H.b_type
 		M.fields["b_dna"]		= H.dna.unique_enzymes
 		M.fields["id_gender"]	= gender2text(H.identifying_gender)
@@ -368,7 +224,7 @@ var/global/list/PDA_Manifest = list()
 			M.fields["notes"] = H.med_record
 
 		//Security Record
-		var/datum/data/record/S = CreateSecurityRecord(H.real_name, id, hidden)
+		var/datum/data/record/S = CreateSecurityRecord(H.real_name, id)
 		if(H.get_FBP_type())
 			S.fields["brain_type"] = H.get_FBP_type()
 		else
@@ -401,7 +257,6 @@ var/global/list/PDA_Manifest = list()
 		L.fields["image"]		= icon(cached_character_icon(H), dir = SOUTH)
 		L.fields["antagfac"]	= H.antag_faction
 		L.fields["antagvis"]	= H.antag_vis
-		L.fields["offmap"]      = hidden
 		if(H.exploit_record && !jobban_isbanned(H, "Records"))
 			L.fields["exploit_record"] = H.exploit_record
 		else
@@ -412,7 +267,7 @@ var/global/list/PDA_Manifest = list()
 /proc/generate_record_id()
 	return add_zero(num2hex(rand(1, 65535)), 4)	//no point generating higher numbers because of the limitations of num2hex
 
-/datum/datacore/proc/CreateGeneralRecord(var/mob/living/carbon/human/H, var/id, var/hidden)
+/datum/datacore/proc/CreateGeneralRecord(var/mob/living/carbon/human/H, var/id)
 	ResetPDAManifest()
 	var/icon/front
 	var/icon/side
@@ -446,14 +301,11 @@ var/global/list/PDA_Manifest = list()
 	G.fields["photo_front"]	= front
 	G.fields["photo_side"]	= side
 	G.fields["notes"] = "No notes found."
-	if(hidden)
-		hidden_general += G
-	else
-		general += G
+	general += G
 
 	return G
 
-/datum/datacore/proc/CreateSecurityRecord(var/name, var/id, var/hidden)
+/datum/datacore/proc/CreateSecurityRecord(var/name, var/id)
 	ResetPDAManifest()
 	var/datum/data/record/R = new /datum/data/record()
 	R.name = "Security Record #[id]"
@@ -467,14 +319,11 @@ var/global/list/PDA_Manifest = list()
 	R.fields["ma_crim_d"]	= "No major crime convictions."
 	R.fields["notes"]		= "No notes."
 	R.fields["notes"] = "No notes."
-	if(hidden)
-		hidden_security += R
-	else
-		security += R
+	data_core.security += R
 
 	return R
 
-/datum/datacore/proc/CreateMedicalRecord(var/name, var/id, var/hidden)
+/datum/datacore/proc/CreateMedicalRecord(var/name, var/id)
 	ResetPDAManifest()
 	var/datum/data/record/M = new()
 	M.name = "Medical Record #[id]"
@@ -493,10 +342,7 @@ var/global/list/PDA_Manifest = list()
 	M.fields["cdi"]			= "None"
 	M.fields["cdi_d"]		= "No diseases have been diagnosed at the moment."
 	M.fields["notes"] = "No notes found."
-	if(hidden)
-		hidden_medical += M
-	else
-		medical += M
+	data_core.medical += M
 
 	return M
 

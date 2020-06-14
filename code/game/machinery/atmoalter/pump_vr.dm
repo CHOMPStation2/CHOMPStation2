@@ -5,7 +5,7 @@
 	anchored = 1
 	volume = 500000
 
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 50		//internal circuitry, friction losses and stuff
 	active_power_usage = 1000	// Blowers running
 	power_rating = 100000	//100 kW ~ 135 HP
@@ -85,12 +85,12 @@
 /obj/machinery/portable_atmospherics/powered/pump/huge/attackby(var/obj/item/I, var/mob/user)
 	if(I.is_wrench())
 		if(on)
-			to_chat(user, "<span class='warning'>Turn \the [src] off first!</span>")
+			user << "<span class='warning'>Turn \the [src] off first!</span>"
 			return
 
 		anchored = !anchored
 		playsound(get_turf(src), I.usesound, 50, 1)
-		to_chat(user, "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
+		user << "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>"
 
 		return
 
@@ -112,7 +112,7 @@
 
 /obj/machinery/portable_atmospherics/powered/pump/huge/stationary/attackby(var/obj/item/I, var/mob/user)
 	if(I.is_wrench())
-		to_chat(user, "<span class='warning'>The bolts are too tight for you to unscrew!</span>")
+		user << "<span class='warning'>The bolts are too tight for you to unscrew!</span>"
 		return
 
 	..()

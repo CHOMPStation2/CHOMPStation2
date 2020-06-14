@@ -128,7 +128,7 @@
 		return
 
 	if(!air_master)
-		to_chat(usr, "Cannot find air_system")
+		usr << "Cannot find air_system"
 		return
 	var/datum/air_group/dead_groups = list()
 	for(var/datum/air_group/group in air_master.air_groups)
@@ -150,7 +150,7 @@
 		return
 
 	if(!air_master)
-		to_chat(usr, "Cannot find air_system")
+		usr << "Cannot find air_system"
 		return
 
 	var/turf/T = get_turf(usr)
@@ -159,7 +159,7 @@
 		AG.next_check = 30
 		AG.group_processing = 0
 	else
-		to_chat(usr, "Local airgroup is unsimulated!")
+		usr << "Local airgroup is unsimulated!"
 	feedback_add_details("admin_verb","KLAG") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	*/
 
@@ -168,9 +168,9 @@
 	set desc = "This spams all the active jobban entries for the current round to standard output."
 	set category = "Debug"
 
-	to_chat(usr, "<b>Jobbans active in this round.</b>")
+	usr << "<b>Jobbans active in this round.</b>"
 	for(var/t in jobban_keylist)
-		to_chat(usr, "[t]")
+		usr << "[t]"
 
 /client/proc/print_jobban_old_filter()
 	set name = "Search Jobban Log"
@@ -181,7 +181,7 @@
 	if(!job_filter)
 		return
 
-	to_chat(usr, "<b>Jobbans active in this round.</b>")
+	usr << "<b>Jobbans active in this round.</b>"
 	for(var/t in jobban_keylist)
 		if(findtext(t, job_filter))
-			to_chat(usr, "[t]")
+			usr << "[t]"

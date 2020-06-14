@@ -103,7 +103,7 @@
 			loaded_vial.update_icon()
 			user.put_in_hands(loaded_vial)
 			loaded_vial = null
-			to_chat(user, "<span class='notice'>You remove the vial from the [src].</span>")
+			user << "<span class='notice'>You remove the vial from the [src].</span>"
 			update_icon()
 			playsound(src.loc, 'sound/weapons/flipblade.ogg', 50, 1)
 			return
@@ -129,7 +129,7 @@
 			update_icon()
 			playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
 		else
-			to_chat(user, "<span class='notice'>\The [src] already has a vial.</span>")
+			user << "<span class='notice'>\The [src] already has a vial.</span>"
 	else
 		..()
 
@@ -171,11 +171,11 @@
 		icon_state = "[initial(icon_state)]0"
 
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/examine(mob/user)
-	. = ..()
+	. = ..(user)
 	if(reagents && reagents.reagent_list.len)
-		. += "<span class='notice'>It is currently loaded.</span>"
+		to_chat(user, "<span class='notice'>It is currently loaded.</span>")
 	else
-		. += "<span class='notice'>It is spent.</span>"
+		to_chat(user, "<span class='notice'>It is spent.</span>")
 
 /obj/item/weapon/reagent_containers/hypospray/autoinjector/detox
 	name = "autoinjector (antitox)"

@@ -76,17 +76,12 @@
 					var/start_nutrition = H.nutrition
 					var/end_nutrition = 0
 
-					H.adjust_nutrition(-rechargeamt / 15)
+					H.nutrition -= rechargeamt / 10
 
 					end_nutrition = H.nutrition
 
-					if(start_nutrition - max(0, end_nutrition) < rechargeamt / 15)
-
-						if(H.isSynthetic())
-							H.adjustToxLoss((rechargeamt / 15) - (start_nutrition - max(0, end_nutrition)))
-
-						else
-							H.remove_blood((rechargeamt / 15) - (start_nutrition - max(0, end_nutrition)))
+					if(start_nutrition - max(0, end_nutrition) < rechargeamt / 10)
+						H.remove_blood((rechargeamt / 10) - (start_nutrition - max(0, end_nutrition)))
 
 			power_supply.give(rechargeamt) //... to recharge 1/5th the battery
 			update_icon()
@@ -114,12 +109,12 @@
 /obj/item/weapon/gun/energy/proc/load_ammo(var/obj/item/C, mob/user)
 	if(istype(C, /obj/item/weapon/cell))
 		if(self_recharge || battery_lock)
-			to_chat(user, "<span class='notice'>[src] does not have a battery port.</span>")
+			user << "<span class='notice'>[src] does not have a battery port.</span>"
 			return
 		if(istype(C, accept_cell_type))
 			var/obj/item/weapon/cell/P = C
 			if(power_supply)
-				to_chat(user, "<span class='notice'>[src] already has a power cell.</span>")
+				user << "<span class='notice'>[src] already has a power cell.</span>"
 			else
 				user.visible_message("[user] is reloading [src].", "<span class='notice'>You start to insert [P] into [src].</span>")
 				if(do_after(user, 5 * P.w_class))
@@ -131,12 +126,12 @@
 					update_icon()
 					update_held_icon()
 		else
-			to_chat(user, "<span class='notice'>This cell is not fitted for [src].</span>")
+			user << "<span class='notice'>This cell is not fitted for [src].</span>"
 	return
 
 /obj/item/weapon/gun/energy/proc/unload_ammo(mob/user)
 	if(self_recharge || battery_lock)
-		to_chat(user, "<span class='notice'>[src] does not have a battery port.</span>")
+		user << "<span class='notice'>[src] does not have a battery port.</span>"
 		return
 	if(power_supply)
 		user.put_in_hands(power_supply)
@@ -147,7 +142,7 @@
 		update_icon()
 		update_held_icon()
 	else
-		to_chat(user, "<span class='notice'>[src] does not have a power cell.</span>")
+		user << "<span class='notice'>[src] does not have a power cell.</span>"
 
 /obj/item/weapon/gun/energy/attackby(var/obj/item/A as obj, mob/user as mob)
 	..()
@@ -167,8 +162,8 @@
 		var/obj/item/rig_module/module = src.loc
 		if(module.holder && module.holder.wearer)
 			var/mob/living/carbon/human/H = module.holder.wearer
-			if(istype(H) && H.get_rig())
-				var/obj/item/weapon/rig/suit = H.get_rig()
+			if(istype(H) && H.back)
+				var/obj/item/weapon/rig/suit = H.back
 				if(istype(suit))
 					return suit.cell
 	return null
@@ -178,11 +173,12 @@
 	if(power_supply)
 		if(charge_cost)
 			var/shots_remaining = round(power_supply.charge / max(1, charge_cost))	// Paranoia
-			. += "Has [shots_remaining] shot\s remaining."
+			to_chat(user, "Has [shots_remaining] shot\s remaining.")
 		else
-			. += "Has infinite shots remaining."
+			to_chat(user, "Has infinite shots remaining.")
 	else
-		. += "Does not have a power cell."
+		to_chat(user, "Does not have a power cell.")
+	return
 
 /obj/item/weapon/gun/energy/update_icon(var/ignore_inhands)
 	if(power_supply == null)

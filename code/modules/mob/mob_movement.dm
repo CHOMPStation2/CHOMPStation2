@@ -1,8 +1,8 @@
 /mob/proc/setMoveCooldown(var/timeout)
-	next_move = max(world.time + timeout, next_move)
+	move_delay = max(world.time + timeout, move_delay)
 
-/mob/proc/checkMoveCooldown()
-	if(world.time < next_move)
+/mob/proc/check_move_cooldown()
+	if(world.time < src.move_delay)
 		return FALSE // Need to wait more.
 	return TRUE
 
@@ -31,20 +31,17 @@
 				var/mob/living/carbon/C = usr
 				C.toggle_throw_mode()
 			else
-				to_chat(usr, "<font color='red'>This mob type cannot throw items.</font>")
+				usr << "<font color='red'>This mob type cannot throw items.</font>"
 			return
 		if(NORTHWEST)
 			if(isliving(usr))
 				var/mob/living/carbon/C = usr
 				if(!C.get_active_hand())
-					if(C.pulling)
-						C.stop_pulling()
-						return
-					to_chat(usr, "<font color='red'>You have nothing to drop in your hand.</font>")
+					usr << "<font color='red'>You have nothing to drop in your hand.</font>"
 					return
 				drop_item()
 			else
-				to_chat(usr, "<font color='red'>This mob type cannot drop items.</font>")
+				usr << "<font color='red'>This mob type cannot drop items.</font>"
 			return
 
 //This gets called when you press the delete button.
@@ -52,7 +49,7 @@
 	set hidden = 1
 
 	if(!usr.pulling)
-		to_chat(usr, "<font color='blue'>You are not pulling anything.</font>")
+		usr << "<font color='blue'>You are not pulling anything.</font>"
 		return
 	usr.stop_pulling()
 
@@ -111,201 +108,206 @@
 			mob.control_object.forceMove(get_step(mob.control_object,direct))
 	return
 
-// NB: This is called for 'self movement', not for being pulled or things like that, which COULD be the case for /mob/Move
-// But to be honest, A LOT OF THIS CODE should be in /mob/Move
+
 /client/Move(n, direct)
-	// Prevents a double-datum lookup each time this is referenced
-	// May seem dumb, but it's faster to look up a var on my_mob than dereferencing mob on client, then dereferencing the var on that mob
-	// Having it in a var here means it's more available to look up things on. It won't speed up that second dereference, though.
-	var/mob/my_mob = mob
+	if(!mob)
+		return // Moved here to avoid nullrefs below
 
-	// Nothing to do in nullspace
-	if(!my_mob.loc)
-		return
+	if(mob.control_object)	Move_object(direct)
 
-	// Used many times below, faster reference.
-	var/atom/loc = my_mob.loc
-
-	// We're controlling an object which is SOMEHOW DIFFERENT FROM AN EYE??
-	if(my_mob.control_object)
-		Move_object(direct)
-
-	// Ghosty mob movement
-	if(my_mob.incorporeal_move && isobserver(my_mob))
+	if(mob.incorporeal_move && isobserver(mob))
 		Process_Incorpmove(direct)
 		return
 
-	// We're in the middle of another move we've already decided to do
-	if(moving)
-		return 0
+	if(moving)	return 0
 
-	// We're still cooling down from the last move
-	if(!my_mob.checkMoveCooldown())
+	if(!mob.check_move_cooldown())
 		return
 
-	// If dead and we try to move in our mob, it leaves our body
-	if(my_mob.stat == DEAD && isliving(my_mob) && !my_mob.forbid_seeing_deadchat)
-		my_mob.ghostize()
+	if(locate(/obj/effect/stop/, mob.loc))
+		for(var/obj/effect/stop/S in mob.loc)
+			if(S.victim == mob)
+				return
+
+	if(mob.stat==DEAD && isliving(mob) && !mob.forbid_seeing_deadchat)
+		mob.ghostize()
 		return
 
-	// If we have an eyeobj, it moves instead
-	if(my_mob.eyeobj)
-		return my_mob.EyeMove(n,direct)
+	// handle possible Eye movement
+	if(mob.eyeobj)
+		return mob.EyeMove(n,direct)
 
-	// This is sota the goto stop mobs from moving var (for some reason)
-	if(my_mob.transforming)
-		return
+	if(mob.transforming)	return//This is sota the goto stop mobs from moving var
 
-	if(isliving(my_mob))
-		var/mob/living/L = my_mob
+	if(isliving(mob))
+		var/mob/living/L = mob
 		if(L.incorporeal_move)//Move though walls
 			Process_Incorpmove(direct)
 			return
-		/* TODO observer unzoom
-		if(view != world.view) // If mob moves while zoomed in with device, unzoom them.
-			for(var/obj/item/item in mob.contents)
-				if(item.zoom)
-					item.zoom()
-					break
-		*/
+		if(mob.client)
+			if(mob.client.view != world.view) // If mob moves while zoomed in with device, unzoom them.
+				for(var/obj/item/item in mob.contents)
+					if(item.zoom)
+						item.zoom()
+						break
+				/*
+				if(locate(/obj/item/weapon/gun/energy/sniperrifle, mob.contents))		// If mob moves while zoomed in with sniper rifle, unzoom them.
+					var/obj/item/weapon/gun/energy/sniperrifle/s = locate() in mob
+					if(s.zoom)
+						s.zoom()
+				if(locate(/obj/item/device/binoculars, mob.contents))		// If mob moves while zoomed in with binoculars, unzoom them.
+					var/obj/item/device/binoculars/b = locate() in mob
+					if(b.zoom)
+						b.zoom()
+				*/
 
-	if(Process_Grab())
+	if(Process_Grab())	return
+
+	if(!mob.canmove)
 		return
 
-	// Can't move
-	if(!my_mob.canmove)
-		return
+	//if(istype(mob.loc, /turf/space) || (mob.flags & NOGRAV))
+	//	if(!mob.Process_Spacemove(0))	return 0
 
-	// Relaymove could handle it
-	if(my_mob.machine)
-		var/result = my_mob.machine.relaymove(my_mob, direct)
-		if(result)
-			return result
+	if(!mob.lastarea)
+		mob.lastarea = get_area(mob.loc)
 
-	// Can't control ourselves when drifting
-	if(isspace(loc) || my_mob.lastarea?.has_gravity == 0)
-		if(!my_mob.Process_Spacemove(0))
+	if((istype(mob.loc, /turf/space)) || (mob.lastarea.has_gravity == 0))
+		if(!mob.Process_Spacemove(0))	return 0
+
+	if(isobj(mob.loc) || ismob(mob.loc))//Inside an object, tell it we moved
+		var/atom/O = mob.loc
+		return O.relaymove(mob, direct)
+
+	if(isturf(mob.loc))
+
+		if(mob.restrained())//Why being pulled while cuffed prevents you from moving
+			for(var/mob/M in range(mob, 1))
+				if(M.pulling == mob)
+					if(!M.restrained() && M.stat == 0 && M.canmove && mob.Adjacent(M))
+						to_chat(src, "<font color='blue'>You're restrained! You can't move!</font>")
+						return 0
+					else
+						M.stop_pulling()
+
+		if(mob.pinned.len)
+			to_chat(src, "<font color='blue'>You're pinned to a wall by [mob.pinned[1]]!</font>")
 			return 0
 
-	// Inside an object, tell it we moved
-	if(isobj(loc) || ismob(loc))
-		return loc.relaymove(my_mob, direct)
+		mob.move_delay = world.time//set move delay
 
-	// Can't move unless you're in the world somewhere
-	if(!isturf(loc))
-		return
+		switch(mob.m_intent)
+			if("run")
+				if(mob.drowsyness > 0)
+					mob.move_delay += 6
+				mob.move_delay += config.run_speed
+			if("walk")
+				mob.move_delay += config.walk_speed
+		mob.move_delay += mob.movement_delay(n, direct)
 
-	// Why being pulled while cuffed prevents you from moving
-	if(my_mob.restrained())
-		for(var/mob/M in range(my_mob, 1))
-			if(M.pulling == my_mob)
-				if(!M.restrained() && M.stat == 0 && M.canmove && my_mob.Adjacent(M))
-					to_chat(src, "<font color='blue'>You're restrained! You can't move!</font>")
-					return 0
-				else
-					M.stop_pulling()
+		if(istype(mob.buckled, /obj/vehicle) || istype(mob.buckled, /mob))	//VOREStation Edit: taur riding. I think.
+			//manually set move_delay for vehicles so we don't inherit any mob movement penalties
+			//specific vehicle move delays are set in code\modules\vehicles\vehicle.dm
+			mob.move_delay = world.time
+			//drunk driving
+			if(mob.confused && prob(20)) //vehicles tend to keep moving in the same direction
+				direct = turn(direct, pick(90, -90))
+			if(istype(mob.buckled, /mob)) //VOREStation Edit to prevent mob riding speed exploit.
+				var/mob/M = mob.buckled
+				if(M.move_delay > mob.move_delay - 10)
+					return
+			return mob.buckled.relaymove(mob,direct)
 
-	if(my_mob.pinned.len)
-		to_chat(src, "<font color='blue'>You're pinned to a wall by [my_mob.pinned[1]]!</font>")
-		return 0
-
-	if(istype(my_mob.buckled, /obj/vehicle) || ismob(my_mob.buckled))
-		//manually set move_delay for vehicles so we don't inherit any mob movement penalties
-		//specific vehicle move delays are set in code\modules\vehicles\vehicle.dm
-		my_mob.next_move = world.time
-		//drunk driving
-		if(my_mob.confused && prob(20)) //vehicles tend to keep moving in the same direction
-			direct = turn(direct, pick(90, -90))
-		if(ismob(my_mob.buckled))
-			var/mob/M = my_mob.buckled
-			if(M.next_move > my_mob.next_move) // Don't let piggyback riders move their mob IN ADDITION TO the mob moving
+		if(istype(mob.machine, /obj/machinery))
+			if(mob.machine.relaymove(mob,direct))
 				return
-		return my_mob.buckled.relaymove(my_mob,direct)
 
-	if(my_mob.pulledby || my_mob.buckled) // Wheelchair driving!
-		if(isspace(loc))
-			return // No wheelchair driving in space
-		if(istype(my_mob.pulledby, /obj/structure/bed/chair/wheelchair))
-			my_mob.setMoveCooldown(3)
-			return my_mob.pulledby.relaymove(my_mob, direct)
-		else if(istype(my_mob.buckled, /obj/structure/bed/chair/wheelchair))
-			if(ishuman(my_mob))
-				var/mob/living/carbon/human/driver = my_mob
-				var/obj/item/organ/external/l_hand = driver.get_organ("l_hand")
-				var/obj/item/organ/external/r_hand = driver.get_organ("r_hand")
-				if((!l_hand || l_hand.is_stump()) && (!r_hand || r_hand.is_stump()))
-					return // No hands to drive your chair? Tough luck!
-			//drunk wheelchair driving
-			else if(my_mob.confused)
-				switch(my_mob.m_intent)
+		if(mob.pulledby || mob.buckled) // Wheelchair driving!
+			if(istype(mob.loc, /turf/space))
+				return // No wheelchair driving in space
+			if(istype(mob.pulledby, /obj/structure/bed/chair/wheelchair))
+				return mob.pulledby.relaymove(mob, direct)
+			else if(istype(mob.buckled, /obj/structure/bed/chair/wheelchair))
+				if(ishuman(mob))
+					var/mob/living/carbon/human/driver = mob
+					var/obj/item/organ/external/l_hand = driver.get_organ("l_hand")
+					var/obj/item/organ/external/r_hand = driver.get_organ("r_hand")
+					if((!l_hand || l_hand.is_stump()) && (!r_hand || r_hand.is_stump()))
+						return // No hands to drive your chair? Tough luck!
+				//drunk wheelchair driving
+				else if(mob.confused)
+					switch(mob.m_intent)
+						if("run")
+							if(prob(50))	direct = turn(direct, pick(90, -90))
+						if("walk")
+							if(prob(25))	direct = turn(direct, pick(90, -90))
+				mob.move_delay += 2
+				return mob.buckled.relaymove(mob,direct)
+
+		//We are now going to move
+		moving = 1
+		//Something with pulling things
+		if(locate(/obj/item/weapon/grab, mob))
+			mob.move_delay = max(mob.move_delay, world.time + 7)
+			var/list/L = mob.ret_grab()
+			if(istype(L, /list))
+				if(L.len == 2)
+					L -= mob
+					var/mob/M = L[1]
+					if(M)
+						if ((get_dist(mob, M) <= 1 || M.loc == mob.loc))
+							var/turf/T = mob.loc
+							. = ..()
+							if (isturf(M.loc))
+								var/diag = get_dir(mob, M)
+								if ((diag - 1) & diag)
+								else
+									diag = null
+								if ((get_dist(mob, M) > 1 || diag))
+									step(M, get_dir(M.loc, T))
+				else
+					for(var/mob/M in L)
+						M.other_mobs = 1
+						if(mob != M)
+							M.animate_movement = 3
+					for(var/mob/M in L)
+						spawn( 0 )
+							step(M, direct)
+							return
+						spawn( 1 )
+							M.other_mobs = null
+							M.animate_movement = 2
+							return
+
+		else
+			if(mob.confused)
+				switch(mob.m_intent)
 					if("run")
-						if(prob(50))
+						if(prob(75))
 							direct = turn(direct, pick(90, -90))
+							n = get_step(mob, direct)
 					if("walk")
 						if(prob(25))
 							direct = turn(direct, pick(90, -90))
-			my_mob.setMoveCooldown(3)
-			return my_mob.buckled.relaymove(my_mob,direct)
+							n = get_step(mob, direct)
+			. = mob.SelfMove(n, direct)
 
-	// We are now going to move
-	moving = 1
-	var/total_delay = my_mob.movement_delay(n, direct)
-	var/pre_move_loc = loc
+		for (var/obj/item/weapon/grab/G in mob)
+			if (G.state == GRAB_NECK)
+				mob.set_dir(reverse_dir[direct])
+			G.adjust_position()
+		for (var/obj/item/weapon/grab/G in mob.grabbed_by)
+			G.adjust_position()
 
-	// Confused direction randomization
-	if(my_mob.confused)
-		switch(my_mob.m_intent)
-			if("run")
-				if(prob(75))
-					direct = turn(direct, pick(90, -90))
-					n = get_step(my_mob, direct)
-			if("walk")
-				if(prob(25))
-					direct = turn(direct, pick(90, -90))
-					n = get_step(my_mob, direct)
-	
-	total_delay = DS2NEARESTTICK(total_delay) //Rounded to the next tick in equivalent ds
-	my_mob.setMoveCooldown(total_delay)
-	. = my_mob.SelfMove(n, direct, total_delay)
+		moving = 0
 
-	// If we have a grab
-	var/list/grablist = my_mob.ret_grab()
-	if(grablist.len)
-		grablist -= my_mob // Just in case we're in a circular grab chain
-		
-		// It's just us and another person
-		if(grablist.len == 1)
-			var/mob/M = grablist[1]
-			if(!my_mob.Adjacent(M)) //Oh no, we moved away
-				M.Move(pre_move_loc, get_dir(M, pre_move_loc), total_delay) //Have them step towards where we were
-		
-		// It's a grab chain
-		else
-			for(var/mob/M in grablist)
-				my_mob.other_mobs = 1
-				M.other_mobs = 1 //Has something to do with people being able or unable to pass a chain of mobs
-				
-				//Ugly!
-				spawn(0) //Step
-					M.Move(pre_move_loc, get_dir(M, pre_move_loc), total_delay)
-				spawn(1) //Unstep
-					M.other_mobs = null
-				spawn(1) //Unset
-					my_mob.other_mobs = null
+		return .
 
-	// Update all the grabs!
-	for (var/obj/item/weapon/grab/G in my_mob)
-		if (G.state == GRAB_NECK)
-			mob.set_dir(reverse_dir[direct])
-		G.adjust_position()
-	for (var/obj/item/weapon/grab/G in my_mob.grabbed_by)
-		G.adjust_position()
-	
-	// We're not in the middle of a move anymore
-	moving = 0
+	return
 
-/mob/proc/SelfMove(turf/n, direct, movetime)
-	return Move(n, direct, movetime)
+/mob/proc/SelfMove(turf/n, direct)
+	return Move(n, direct)
+
 
 ///Process_Incorpmove
 ///Called by client/Move()
@@ -364,7 +366,17 @@
 					anim(mobloc,mob,'icons/mob/mob.dmi',,"shadow",,mob.dir)
 				mob.forceMove(get_step(mob, direct))
 			mob.dir = direct
+	// Crossed is always a bit iffy
+	for(var/obj/S in mob.loc)
+		if(istype(S,/obj/effect/step_trigger) || istype(S,/obj/effect/beam))
+			S.Crossed(mob)
 
+	var/area/A = get_area_master(mob)
+	if(A)
+		A.Entered(mob)
+	if(isturf(mob.loc))
+		var/turf/T = mob.loc
+		T.Entered(mob)
 	mob.Post_Incorpmove()
 	return 1
 
@@ -377,8 +389,10 @@
 ///Return 1 for movement 0 for none
 /mob/proc/Process_Spacemove(var/check_drift = 0)
 
-	if(is_incorporeal())
+	//VOREStation Edit begin: SHADEKIN
+	if(shadekin_phasing_check())
 		return
+	//VOREStation Edit end: SHADEKIN
 
 	if(!Check_Dense_Object()) //Nothing to push off of so end here
 		update_floating(0)
@@ -456,6 +470,26 @@
 
 /mob/proc/update_gravity()
 	return
+/*
+// The real Move() proc is above, but touching that massive block just to put this in isn't worth it.
+/mob/Move(var/newloc, var/direct)
+	. = ..(newloc, direct)
+	if(.)
+		post_move(newloc, direct)
+*/
+// Called when a mob successfully moves.
+// Would've been an /atom/movable proc but it caused issues.
+/mob/Moved(atom/oldloc)
+	for(var/obj/O in contents)
+		O.on_loc_moved(oldloc)
+
+// Received from Moved(), useful for items that need to know that their loc just moved.
+/obj/proc/on_loc_moved(atom/oldloc)
+	return
+
+/obj/item/weapon/storage/on_loc_moved(atom/oldloc)
+	for(var/obj/O in contents)
+		O.on_loc_moved(oldloc)
 
 /client/verb/moveup()
 	set name = ".moveup"

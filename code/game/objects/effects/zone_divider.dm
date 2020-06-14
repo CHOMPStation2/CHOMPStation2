@@ -7,7 +7,6 @@
 	anchored = 1
 	density = 0
 	opacity = 0
-	can_atmos_pass = ATMOS_PASS_PROC
 
 /obj/effect/zone_divider/CanZASPass(turf/T, is_zone)
  	// Special case to prevent us from being part of a zone during the first air master tick.
@@ -16,5 +15,5 @@
 	if(air_master && air_master.current_cycle == 0)
 		spawn(1)
 			air_master.mark_for_update(get_turf(src))
-		return FALSE
-	return is_zone ? FALSE : TRUE // Anything except zones can pass
+		return ATMOS_PASS_NO
+	return is_zone ? ATMOS_PASS_NO : ATMOS_PASS_YES // Anything except zones can pass

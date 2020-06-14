@@ -3,27 +3,25 @@
 	icon_state = "submap"
 	flags = RAD_SHIELDED
 	ambience = AMBIENCE_RUINS
-	secret_name = TRUE
-	forbid_events = TRUE
 
 /area/submap/event //To be used for Events not for regular PoIs
 	name = "Unknown"
 	requires_power = FALSE
 
 /area/submap/spider1
-	name = "POI - Spider Nest"
+	name = "POI - spider nest"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/Field1
-	name = "POI - Field"
+	name = "POI - Field 1"
 	ambience = AMBIENCE_SIF
 
 /area/submap/Lake1
-	name = "POI - Lake"
+	name = "POI - Lake 1"
 	ambience = AMBIENCE_SIF
 
 /area/submap/MilitaryCamp1
-	name = "POI - Military Camp"
+	name = "POI - Military Camp 1"
 	ambience = AMBIENCE_HIGHSEC
 
 /area/submap/Mudpit
@@ -31,56 +29,56 @@
 	ambience = AMBIENCE_SIF
 
 /area/submap/Rocky1
-	name = "POI - Rocky Demise"
+	name = "POI - Rocky1"
 	ambience = AMBIENCE_SIF
 
 /area/submap/Rocky2
-	name = "Rocky Crevice"
+	name = "POI - Rocky2"
 	ambience = AMBIENCE_SIF
 
 /area/submap/Rocky3
-	name = "Rocky Valley"
+	name = "POI - Rocky3"
 	ambience = AMBIENCE_SIF
 
 /area/submap/Shack1
-	name = "POI - Shack"
+	name = "POI - Shack1"
 	ambience = AMBIENCE_RUINS
 
 /area/submap/Small1
-	name = "Snowy Thicket"
+	name = "POI - Small1"
 	ambience = AMBIENCE_SIF
 
 /area/submap/SnowR1
-	name = "POI - Rocky Overhang"
+	name = "POI - SnowR1"
 	ambience = AMBIENCE_SIF
 
 /area/submap/BoomBase
-	name = "POI - Lab Crater"
+	name = "POI - Boom1"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/Blackshuttledown
-	name = "POI - Black-Operative Shuttle"
+	name = "POI - BSD"
 	requires_power = FALSE
 	ambience = AMBIENCE_HIGHSEC
 
 /area/submap/Cragzone1
-	name = "Craggy Area"
+	name = "POI - Craggy1"
 	ambience = AMBIENCE_SIF
 
 /area/submap/Lab1
-	name = "POI - Remote Lab"
+	name = "POI - Lab1"
 	ambience = AMBIENCE_RUINS
 
 /area/submap/Rocky4
-	name = "Rocky Pond"
+	name = "POI - Rocky4"
 	ambience = AMBIENCE_SIF
 
 /area/submap/DJOutpost1
-	name = "POI - Radio Outpost"
+	name = "POI - DJOutpost1"
 	ambience = AMBIENCE_TECH_RUINS
 
 /area/submap/DJOutpost2
-	name = "POI - Abandoned Radio Outpost"
+	name = "POI - DJOutpost2"
 	ambience = AMBIENCE_GHOSTLY
 
 /area/submap/MHR
@@ -88,47 +86,43 @@
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/Rockybase
-	name = "POI - Rocky Base"
+	name = "POI - Rockybase"
 	ambience = AMBIENCE_HIGHSEC
 
 /area/submap/GovPatrol
-	name = "POI - Lost Government Patrol"
+	name = "POI - GovPatrol"
 	ambience = AMBIENCE_GHOSTLY
 
-/area/submap/KururakDen
-	name = "POI - Kururak Den"
-	ambience = AMBIENCE_SIF
-
 /area/submap/DecoupledEngine
-	name = "POI - Decoupled Engine"
+	name = "POI - DecoupledEngine"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/DoomP
-	name = "POI - Fortified Base"
+	name = "POI - DoomP"
 	ambience = AMBIENCE_HIGHSEC
 
 /area/submap/CaveS
-	name = "POI - Spider Cave"
+	name = "POI - CaveS"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/Drugd
-	name = "POI - Drug Den"
+	name = "POI - DrugDen"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/Manor1
-	name = "POI - Manor House"
+	name = "POI - Manor1"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/Epod3
-	name = "POI - Infested Escape Pod"
+	name = "POI - Epod3"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/Epod4
-	name = "POI - Flooded Escape Pod"
+	name = "POI - Epod4"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/ButcherShack
-	name = "POI - Butcher's Shack"
+	name = "POI - ButcherShack"
 	ambience = AMBIENCE_RUINS
 
 /area/submap/Chapel1
@@ -138,11 +132,3 @@
 /area/submap/Shelter1
 	name = "POI - Raided Shelter"
 	ambience = AMBIENCE_GHOSTLY
-
-/area/submap/ChemSpill2
-	name = "POI - Acrid Lake"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/FrostflyNest
-	name = "POI - Frostfly Nest"
-	ambience = AMBIENCE_SIF

@@ -88,8 +88,6 @@
 	if(!parent)
 		..()
 	else
-		if(leaking)
-			parent.mingle_with_turf(loc, volume)
 		var/datum/gas_mixture/pipe_air = return_air()
 		if(istype(loc, /turf/simulated/))
 			var/environment_temperature = 0

@@ -123,7 +123,7 @@
 	if(modifiers["shift"])
 		moved = 0
 		return 1
-	if(!usr.checkClickCooldown())
+	if(usr.next_move >= world.time) // Is this needed ?
 		return
 	owner.Trigger()
 	return 1

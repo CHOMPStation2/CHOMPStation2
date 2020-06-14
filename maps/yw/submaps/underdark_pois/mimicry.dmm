@@ -8,6 +8,10 @@
 "c" = (
 /turf/simulated/mineral/floor/ignore_cavegen/virgo3b,
 /area/mine/explored/underdark)
+"d" = (
+/obj/structure/closet/crate,
+/turf/simulated/mineral/floor/ignore_cavegen/virgo3b,
+/area/mine/explored/underdark)
 "e" = (
 /obj/structure/closet/crate/mimic/cointoss,
 /turf/simulated/mineral/floor/ignore_cavegen/virgo3b,
@@ -49,7 +53,7 @@ a
 b
 c
 e
-h
+d
 g
 h
 f
@@ -62,7 +66,7 @@ c
 i
 c
 c
-h
+d
 a
 "}
 (4,1,1) = {"
@@ -78,11 +82,11 @@ a
 (5,1,1) = {"
 b
 c
-e
+d
 f
-e
+d
 f
-h
+d
 a
 "}
 (6,1,1) = {"

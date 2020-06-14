@@ -36,11 +36,13 @@
 	..()
 
 /obj/item/weapon/material/gravemarker/examine(mob/user)
-	. = ..()
-	if(grave_name && get_dist(src, user) < 4)
-		. += "Here Lies [grave_name]"
-	if(epitaph && get_dist(src, user) < 2)
-		. += epitaph
+	..()
+	if(get_dist(src, user) < 4)
+		if(grave_name)
+			to_chat(user, "Here Lies [grave_name]")
+	if(get_dist(src, user) < 2)
+		if(epitaph)
+			to_chat(user, epitaph)
 
 /obj/item/weapon/material/gravemarker/update_icon()
 	if(icon_changes)

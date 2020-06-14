@@ -110,7 +110,7 @@
 		else if(options[choice] == "catrobe")
 			desc = "A painted holy figure of a plain looking Tajaran in a robe."
 
-		to_chat(M, "The religious icon is now a [choice]. All hail!")
+		M << "The religious icon is now a [choice]. All hail!"
 		return 1
 
 
@@ -127,5 +127,5 @@
 
 	if(src && input && !M.stat && in_range(M,src))
 		name = "icon of " + input
-		to_chat(M, "You name the figure. Glory to [input]!.")
+		M << "You name the figure. Glory to [input]!."
 		return 1

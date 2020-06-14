@@ -29,24 +29,23 @@
 
 // create a new disposal
 // find the attached trunk (if present) and init gas resvr.
-/obj/machinery/disposal/Initialize()
-	. = ..()
-	
-	trunk = locate() in loc
-	if(!trunk)
-		mode = 0
-		flush = 0
-	else
-		trunk.linked = src	// link the pipe trunk to self
+/obj/machinery/disposal/New()
+	..()
+	spawn(5)
+		trunk = locate() in src.loc
+		if(!trunk)
+			mode = 0
+			flush = 0
+		else
+			trunk.linked = src	// link the pipe trunk to self
 
-	air_contents = new/datum/gas_mixture(PRESSURE_TANK_VOLUME)
-	update()
+		air_contents = new/datum/gas_mixture(PRESSURE_TANK_VOLUME)
+		update()
 
 /obj/machinery/disposal/Destroy()
 	eject()
 	if(trunk)
 		trunk.linked = null
-		trunk = null
 	return ..()
 
 // attack by item places it in to disposal
@@ -360,7 +359,7 @@
 // charge the gas reservoir and perform flush if ready
 /obj/machinery/disposal/process()
 	if(!air_contents || (stat & BROKEN))			// nothing can happen if broken
-		update_use_power(USE_POWER_OFF)
+		update_use_power(0)
 		return
 
 	flush_count++
@@ -378,7 +377,7 @@
 		flush()
 
 	if(mode != 1) //if off or ready, no need to charge
-		update_use_power(USE_POWER_IDLE)
+		update_use_power(1)
 	else if(air_contents.return_pressure() >= SEND_PRESSURE)
 		mode = 2 //if full enough, switch to ready mode
 		update()
@@ -387,7 +386,7 @@
 
 /obj/machinery/disposal/proc/pressurize()
 	if(stat & NOPOWER)			// won't charge if no power
-		update_use_power(USE_POWER_OFF)
+		update_use_power(0)
 		return
 
 	var/atom/L = loc						// recharging from loc turf
@@ -1310,39 +1309,46 @@
 	icon_state = "pipe-t"
 	var/obj/linked 	// the linked obj/machinery/disposal or obj/disposaloutlet
 
-/obj/structure/disposalpipe/trunk/Initialize()
-	..() //Lateload below
+/obj/structure/disposalpipe/trunk/New()
+	..()
 	dpdir = dir
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/structure/disposalpipe/trunk/LateInitialize()
-	if(!linked)
+	spawn(1)
 		getlinked()
+
 	update()
-
-/obj/structure/disposalpipe/trunk/Destroy()
-	if(linked)
-		if(istype(linked, /obj/machinery/disposal))
-
-			var/obj/machinery/disposal/D = linked
-			D.trunk = null
-	linked = null
-	return ..()
+	return
 
 /obj/structure/disposalpipe/trunk/proc/getlinked()
 	linked = null
-	var/obj/machinery/disposal/D = locate() in loc
+	var/obj/machinery/disposal/D = locate() in src.loc
 	if(D)
 		linked = D
-		if(!D.trunk)
+		if (!D.trunk)
 			D.trunk = src
 
-	var/obj/structure/disposaloutlet/O = locate() in loc
+	var/obj/structure/disposaloutlet/O = locate() in src.loc
 	if(O)
 		linked = O
 
-// Override attackby so we disallow trunkremoval when somethings ontop
+	update()
+	return
+
+	// Override attackby so we disallow trunkremoval when somethings ontop
 /obj/structure/disposalpipe/trunk/attackby(var/obj/item/I, var/mob/user)
+
+	//Disposal bins or chutes
+	/*
+	These shouldn't be required
+	var/obj/machinery/disposal/D = locate() in src.loc
+	if(D && D.anchored)
+		return
+
+	//Disposal outlet
+	var/obj/structure/disposaloutlet/O = locate() in src.loc
+	if(O && O.anchored)
+		return
+	*/
+
 	//Disposal constructors
 	var/obj/structure/disposalconstruct/C = locate() in src.loc
 	if(C && C.anchored)
@@ -1434,70 +1440,72 @@
 	var/turf/target	// this will be where the output objects are 'thrown' to.
 	var/mode = 0
 
-/obj/structure/disposaloutlet/Initialize()
-	. = ..()
+	New()
+		..()
 
-	target = get_ranged_target_turf(src, dir, 10)
+		spawn(1)
+			target = get_ranged_target_turf(src, dir, 10)
 
 
-	var/obj/structure/disposalpipe/trunk/trunk = locate() in loc
-	if(trunk)
-		trunk.linked = src	// link the pipe trunk to self
+			var/obj/structure/disposalpipe/trunk/trunk = locate() in src.loc
+			if(trunk)
+				trunk.linked = src	// link the pipe trunk to self
 
 	// expel the contents of the holder object, then delete it
 	// called when the holder exits the outlet
-/obj/structure/disposaloutlet/proc/expel(var/obj/structure/disposalholder/H)
-	flick("outlet-open", src)
-	playsound(src, 'sound/machines/warning-buzzer.ogg', 50, 0, 0)
-	sleep(20)	//wait until correct animation frame
-	playsound(src, 'sound/machines/hiss.ogg', 50, 0, 0)
+	proc/expel(var/obj/structure/disposalholder/H)
 
-	if(H)
-		for(var/atom/movable/AM in H)
-			AM.forceMove(src.loc)
-			AM.pipe_eject(dir)
-			if(!istype(AM,/mob/living/silicon/robot/drone)) //Drones keep smashing windows from being fired out of chutes. Bad for the station. ~Z
-				spawn(5)
-					AM.throw_at(target, 3, 1)
-		H.vent_gas(src.loc)
-		qdel(H)
+		flick("outlet-open", src)
+		playsound(src, 'sound/machines/warning-buzzer.ogg', 50, 0, 0)
+		sleep(20)	//wait until correct animation frame
+		playsound(src, 'sound/machines/hiss.ogg', 50, 0, 0)
 
-	return
+		if(H)
+			for(var/atom/movable/AM in H)
+				AM.forceMove(src.loc)
+				AM.pipe_eject(dir)
+				if(!istype(AM,/mob/living/silicon/robot/drone)) //Drones keep smashing windows from being fired out of chutes. Bad for the station. ~Z
+					spawn(5)
+						AM.throw_at(target, 3, 1)
+			H.vent_gas(src.loc)
+			qdel(H)
 
-/obj/structure/disposaloutlet/attackby(var/obj/item/I, var/mob/user)
-	if(!I || !user)
 		return
-	src.add_fingerprint(user)
-	if(I.is_screwdriver())
-		if(mode==0)
-			mode=1
-			to_chat(user, "You remove the screws around the power connection.")
-			playsound(src, I.usesound, 50, 1)
+
+	attackby(var/obj/item/I, var/mob/user)
+		if(!I || !user)
 			return
-		else if(mode==1)
-			mode=0
-			to_chat(user, "You attach the screws around the power connection.")
-			playsound(src, I.usesound, 50, 1)
-			return
-	else if(istype(I, /obj/item/weapon/weldingtool) && mode==1)
-		var/obj/item/weapon/weldingtool/W = I
-		if(W.remove_fuel(0,user))
-			playsound(src, W.usesound, 100, 1)
-			to_chat(user, "You start slicing the floorweld off the disposal outlet.")
-			if(do_after(user,20 * W.toolspeed))
-				if(!src || !W.isOn()) return
-				to_chat(user, "You sliced the floorweld off the disposal outlet.")
-				var/obj/structure/disposalconstruct/C = new (src.loc)
-				src.transfer_fingerprints_to(C)
-				C.ptype = 7 // 7 =  outlet
-				C.update()
-				C.anchored = 1
-				C.density = 1
-				qdel(src)
-			return
-		else
-			to_chat(user, "You need more welding fuel to complete this task.")
-			return
+		src.add_fingerprint(user)
+		if(I.is_screwdriver())
+			if(mode==0)
+				mode=1
+				to_chat(user, "You remove the screws around the power connection.")
+				playsound(src, I.usesound, 50, 1)
+				return
+			else if(mode==1)
+				mode=0
+				to_chat(user, "You attach the screws around the power connection.")
+				playsound(src, I.usesound, 50, 1)
+				return
+		else if(istype(I, /obj/item/weapon/weldingtool) && mode==1)
+			var/obj/item/weapon/weldingtool/W = I
+			if(W.remove_fuel(0,user))
+				playsound(src, W.usesound, 100, 1)
+				to_chat(user, "You start slicing the floorweld off the disposal outlet.")
+				if(do_after(user,20 * W.toolspeed))
+					if(!src || !W.isOn()) return
+					to_chat(user, "You sliced the floorweld off the disposal outlet.")
+					var/obj/structure/disposalconstruct/C = new (src.loc)
+					src.transfer_fingerprints_to(C)
+					C.ptype = 7 // 7 =  outlet
+					C.update()
+					C.anchored = 1
+					C.density = 1
+					qdel(src)
+				return
+			else
+				to_chat(user, "You need more welding fuel to complete this task.")
+				return
 
 // called when movable is expelled from a disposal pipe or outlet
 // by default does nothing, override for special behaviour

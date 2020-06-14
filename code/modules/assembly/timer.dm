@@ -14,13 +14,13 @@
 
 
 /obj/item/device/assembly/timer/activate()
-	if(!..())
-		return FALSE
+	if(!..())	return 0//Cooldown check
 
-	set_state(!timing)
+	timing = !timing
 
 	update_icon()
 	return 0
+
 
 /obj/item/device/assembly/timer/toggle_secure()
 	secured = !secured
@@ -32,25 +32,27 @@
 	update_icon()
 	return secured
 
-/obj/item/device/assembly/timer/proc/set_state(var/state)
-	if(state && !timing) //Not running, starting though
-		START_PROCESSING(SSobj, src)
-	else if(timing && !state) //Running, stopping though
-		STOP_PROCESSING(SSobj, src)
-	timing = state
 
 /obj/item/device/assembly/timer/proc/timer_end()
-	if(!secured)
-		return 0
+	if(!secured)	return 0
 	pulse(0)
 	if(!holder)
-		visible_message("[bicon(src)] *beep* *beep*", "*beep* *beep*")
+		visible_message("\icon[src] *beep* *beep*", "*beep* *beep*")
+	cooldown = 2
+	spawn(10)
+		process_cooldown()
+	return
+
 
 /obj/item/device/assembly/timer/process()
-	if(timing && time-- <= 0)
-		set_state(0)
+	if(timing && (time > 0))
+		time--
+	if(timing && time <= 0)
+		timing = 0
 		timer_end()
 		time = 10
+	return
+
 
 /obj/item/device/assembly/timer/update_icon()
 	overlays.Cut()
@@ -85,8 +87,7 @@
 		return
 
 	if(href_list["time"])
-		var/new_timing = text2num(href_list["time"])
-		set_state(new_timing)
+		timing = text2num(href_list["time"])
 		update_icon()
 
 	if(href_list["tp"])

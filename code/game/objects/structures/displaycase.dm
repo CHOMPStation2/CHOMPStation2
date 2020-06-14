@@ -66,16 +66,16 @@
 /obj/structure/displaycase/attack_hand(mob/user as mob)
 	if (src.destroyed && src.occupied)
 		new /obj/item/weapon/gun/energy/captain( src.loc )
-		to_chat(user, "<span class='notice'>You deactivate the hover field built into the case.</span>")
+		user << "<span class='notice'>You deactivate the hover field built into the case.</span>"
 		src.occupied = 0
 		src.add_fingerprint(user)
 		update_icon()
 		return
 	else
-		to_chat(usr, "<span class='warning'>You kick the display case.</span>")
+		usr << text("<span class='warning'>You kick the display case.</span>")
 		for(var/mob/O in oviewers())
 			if ((O.client && !( O.blinded )))
-				to_chat(O, "<span class='warning'>[usr] kicks the display case.</span>")
+				O << "<span class='warning'>[usr] kicks the display case.</span>"
 		src.health -= 2
 		healthcheck()
 		return

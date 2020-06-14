@@ -2,8 +2,6 @@
 //
 // The datum containing all the chunks.
 
-#define CHUNK_SIZE 16
-
 /datum/visualnet
 	// The chunks of the map, mapping the areas that an object can see.
 	var/list/chunks = list()
@@ -38,63 +36,29 @@
 
 // Updates what the aiEye can see. It is recommended you use this when the aiEye moves or it's location is set.
 
-/datum/visualnet/proc/visibility(list/moved_eyes, client/C, list/other_eyes)
-	if(!islist(moved_eyes))
-		moved_eyes = moved_eyes ? list(moved_eyes) : list()
-	if(islist(other_eyes))
-		other_eyes = (other_eyes - moved_eyes)
-	else
-		other_eyes = list()
+/datum/visualnet/proc/visibility(mob/observer/eye/eye)
+	// 0xf = 15
+	var/x1 = max(0, eye.x - 16) & ~0xf
+	var/y1 = max(0, eye.y - 16) & ~0xf
+	var/x2 = min(world.maxx, eye.x + 16) & ~0xf
+	var/y2 = min(world.maxy, eye.y + 16) & ~0xf
 
-	var/list/chunks_pre_seen = list()
-	var/list/chunks_post_seen = list()
+	var/list/visibleChunks = list()
 
-	for(var/V in moved_eyes)
-		var/mob/observer/eye/eye = V
-		if(C)
-			chunks_pre_seen |= eye.visibleChunks
-		// 0xf = 15
-		var/static_range = eye.static_visibility_range
-		var/x1 = max(0, eye.x - static_range) & ~(CHUNK_SIZE - 1)
-		var/y1 = max(0, eye.y - static_range) & ~(CHUNK_SIZE - 1)
-		var/x2 = min(world.maxx, eye.x + static_range) & ~(CHUNK_SIZE - 1)
-		var/y2 = min(world.maxy, eye.y + static_range) & ~(CHUNK_SIZE - 1)
+	for(var/x = x1; x <= x2; x += 16)
+		for(var/y = y1; y <= y2; y += 16)
+			visibleChunks += getChunk(x, y, eye.z)
 
-		var/list/visibleChunks = list()
+	var/list/remove = eye.visibleChunks - visibleChunks
+	var/list/add = visibleChunks - eye.visibleChunks
 
-		for(var/x = x1; x <= x2; x += CHUNK_SIZE)
-			for(var/y = y1; y <= y2; y += CHUNK_SIZE)
-				visibleChunks |= getChunk(x, y, eye.z)
+	for(var/chunk in remove)
+		var/datum/chunk/c = chunk
+		c.remove(eye)
 
-		var/list/remove = eye.visibleChunks - visibleChunks
-		var/list/add = visibleChunks - eye.visibleChunks
-
-		for(var/chunk in remove)
-			var/datum/chunk/c = chunk
-			c.remove(eye, FALSE)
-
-		for(var/chunk in add)
-			var/datum/chunk/c = chunk
-			c.add(eye, FALSE)
-
-		if(C)
-			chunks_post_seen |= eye.visibleChunks
-
-	if(C)
-		for(var/V in other_eyes)
-			var/mob/observer/eye/eye = V
-			chunks_post_seen |= eye.visibleChunks
-
-		var/list/remove = chunks_pre_seen - chunks_post_seen
-		var/list/add = chunks_post_seen - chunks_pre_seen
-
-		for(var/chunk in remove)
-			var/datum/chunk/c = chunk
-			C.images -= c.obscured
-
-		for(var/chunk in add)
-			var/datum/chunk/c = chunk
-			C.images += c.obscured
+	for(var/chunk in add)
+		var/datum/chunk/c = chunk
+		c.add(eye)
 
 // Updates the chunks that the turf is located in. Use this when obstacles are destroyed or	when doors open.
 
@@ -129,7 +93,7 @@
 		var/x2 = min(world.maxx, T.x + 8) & ~0xf
 		var/y2 = min(world.maxy, T.y + 8) & ~0xf
 
-		//to_world("X1: [x1] - Y1: [y1] - X2: [x2] - Y2: [y2]")
+		//world << "X1: [x1] - Y1: [y1] - X2: [x2] - Y2: [y2]"
 
 		for(var/x = x1; x <= x2; x += 16)
 			for(var/y = y1; y <= y2; y += 16)

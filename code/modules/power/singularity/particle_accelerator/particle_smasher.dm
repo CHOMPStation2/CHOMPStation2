@@ -9,7 +9,7 @@
 	icon_state = "smasher"
 	anchored = 0
 	density = 1
-	use_power = USE_POWER_OFF
+	use_power = 0
 
 	var/successful_craft = FALSE	// Are we waiting to be emptied?
 	var/image/material_layer	// Holds the image used for the filled overlay.
@@ -37,11 +37,11 @@
 	..()
 
 /obj/machinery/particle_smasher/examine(mob/user)
-	. = ..()
-	if(Adjacent(user))
-		. += "<span class='notice'>\The [src] contains:</span>"
+	..()
+	if(user in view(1))
+		to_chat(user, "<span class='notice'>\The [src] contains:</span>")
 		for(var/obj/item/I in contents)
-			. += "<span class='notice'>\the [I]</span>"
+			to_chat(user, "<span class='notice'>\the [I]</span>")
 
 /obj/machinery/particle_smasher/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.type == /obj/item/device/analyzer)

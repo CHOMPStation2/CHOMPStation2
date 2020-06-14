@@ -18,22 +18,8 @@
 	var/datum/pipe_network/network
 
 	var/on = 0
-	use_power = USE_POWER_OFF
+	use_power = 0
 	level = 1
-
-/obj/machinery/atmospherics/portables_connector/fuel
-	icon_state = "map_connector-fuel"
-	pipe_state = "connector-fuel"
-	icon_connect_type = "-fuel"
-	pipe_flags = PIPING_ONE_PER_TURF
-	connect_types = CONNECT_TYPE_FUEL
-
-/obj/machinery/atmospherics/portables_connector/aux
-	icon_state = "map_connector-aux"
-	pipe_state = "connector-aux"
-	icon_connect_type = "-aux"
-	pipe_flags = PIPING_ONE_PER_TURF
-	connect_types = CONNECT_TYPE_AUX
 
 /obj/machinery/atmospherics/portables_connector/init_dir()
 	initialize_directions = dir
@@ -47,7 +33,7 @@
 		var/turf/T = get_turf(src)
 		if(!istype(T))
 			return
-		add_underlay(T, node, dir, node?.icon_connect_type)
+		add_underlay(T, node, dir)
 
 /obj/machinery/atmospherics/portables_connector/hide(var/i)
 	update_underlays()

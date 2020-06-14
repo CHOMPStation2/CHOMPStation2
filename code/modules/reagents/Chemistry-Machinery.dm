@@ -16,9 +16,9 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "mixer0"
 	circuit = /obj/item/weapon/circuitboard/chem_master
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 20
-	var/obj/item/weapon/reagent_containers/beaker = null
+	var/beaker = null
 	var/obj/item/weapon/storage/pill_bottle/loaded_pill_bottle = null
 	var/mode = 0
 	var/condi = 0
@@ -105,7 +105,7 @@
 		data["pillBottle"] = null
 
 	if(beaker)
-		var/datum/reagents/R = beaker.reagents
+		var/datum/reagents/R = beaker:reagents
 		var/ui_reagent_beaker_list[0]
 		for(var/datum/reagent/G in R.reagent_list)
 			ui_reagent_beaker_list[++ui_reagent_beaker_list.len] = list("name" = G.name, "volume" = G.volume, "description" = G.description, "id" = G.id)
@@ -160,15 +160,11 @@
 
 	if (href_list["ejectp"])
 		if(loaded_pill_bottle)
-			loaded_pill_bottle.forceMove(get_turf(src))
-
-			if(Adjacent(usr))
-				usr.put_in_hands(loaded_pill_bottle)
-
+			loaded_pill_bottle.loc = src.loc
 			loaded_pill_bottle = null
 
 	if(beaker)
-		var/datum/reagents/R = beaker.reagents
+		var/datum/reagents/R = beaker:reagents
 		if (tab == "analyze")
 			analyze_data["name"] = href_list["name"]
 			analyze_data["desc"] = href_list["desc"]
@@ -220,11 +216,7 @@
 
 		else if (href_list["eject"])
 			if(beaker)
-				beaker.forceMove(get_turf(src))
-
-				if(Adjacent(usr)) // So the AI doesn't get a beaker somehow.
-					usr.put_in_hands(beaker)
-
+				beaker:loc = src.loc
 				beaker = null
 				reagents.clear_reagents()
 				icon_state = "mixer0"
@@ -238,7 +230,7 @@
 				count = input("Select the number of pills to make.", "Max [max_pill_count]", pillamount) as null|num
 				if(!count) //Covers 0 and cancel
 					return
-				count = CLAMP(round(count), 1, max_pill_count) // Fix decimals input and clamp to reasonable amounts
+				count = CLAMP(count, 1, max_pill_count)
 
 			if(reagents.total_volume/count < 1) //Sanity checking.
 				return
@@ -260,7 +252,7 @@
 
 			if(reagents.total_volume/count < 1) //Sanity checking.
 				return
-			while(count-- > 0) // Will definitely eventually stop.
+			while (count--)
 				var/obj/item/weapon/reagent_containers/pill/P = new/obj/item/weapon/reagent_containers/pill(src.loc)
 				if(!name) name = reagents.get_master_reagent_name()
 				P.name = "[name] pill"
@@ -341,7 +333,7 @@
 	icon_state = "juicer1"
 	density = 0
 	anchored = 0
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 5
 	active_power_usage = 100
 	circuit = /obj/item/weapon/circuitboard/grinder
@@ -365,10 +357,14 @@
 		/obj/item/stack/material/glass/phoronglass = list("platinum", "silicon", "silicon", "silicon"), //5 platinum, 15 silicon,
 		)
 
-/obj/machinery/reagentgrinder/Initialize()
-	. = ..()
+/obj/machinery/reagentgrinder/New()
+	..()
 	beaker = new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
-	default_apply_parts()
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/motor(src)
+	component_parts += new /obj/item/weapon/stock_parts/gear(src)
+	RefreshParts()
+	return
 
 /obj/machinery/reagentgrinder/update_icon()
 	icon_state = "juicer"+num2text(!isnull(beaker))

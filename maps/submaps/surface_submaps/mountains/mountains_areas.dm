@@ -135,7 +135,3 @@
 	name = "POI - Trench Outpost"
 	requires_power = FALSE
 	icon_state = "submap2"
-
-/area/submap/Excavation
-	name = "POI - Excavation Site"
-	ambience = AMBIENCE_FOREBODING

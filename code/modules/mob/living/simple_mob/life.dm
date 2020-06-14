@@ -52,14 +52,19 @@
 			healths.icon_state = "health7"
 
 	//Updates the nutrition while we're here
-	var/food_per = (nutrition / initial(nutrition)) * 100
-	switch(food_per)
-		if(90 to INFINITY)
-			clear_alert("nutrition")
-		if(50 to 90)
-			throw_alert("nutrition", /obj/screen/alert/hungry)
-		if(-INFINITY to 50)
-			throw_alert("nutrition", /obj/screen/alert/starving)
+	if(nutrition_icon)
+		var/food_per = (nutrition / initial(nutrition)) * 100
+		switch(food_per)
+			if(90 to INFINITY)
+				nutrition_icon.icon_state = "nutrition0"
+			if(75 to 90)
+				nutrition_icon.icon_state = "nutrition1"
+			if(50 to 75)
+				nutrition_icon.icon_state = "nutrition2"
+			if(25 to 50)
+				nutrition_icon.icon_state = "nutrition3"
+			if(0 to 25)
+				nutrition_icon.icon_state = "nutrition4"
 
 // Override for special bullshit.
 /mob/living/simple_mob/proc/handle_special()
@@ -86,55 +91,54 @@
 			if( abs(Environment.temperature - bodytemperature) > temperature_range )	//VOREStation Edit: heating adjustments
 				bodytemperature += ((Environment.temperature - bodytemperature) / 5)
 
-			if(min_oxy && Environment.gas["oxygen"] < min_oxy)
-				atmos_unsuitable = 1
-				throw_alert("oxy", /obj/screen/alert/not_enough_oxy)
-			else if(max_oxy && Environment.gas["oxygen"] > max_oxy)
-				atmos_unsuitable = 1
-				throw_alert("oxy", /obj/screen/alert/too_much_oxy)
-			else
-				clear_alert("oxy")
-			
-			if(min_tox && Environment.gas["phoron"] < min_tox)
-				atmos_unsuitable = 2
-				throw_alert("tox_in_air", /obj/screen/alert/not_enough_tox)
-			else if(max_tox && Environment.gas["phoron"] > max_tox)
-				atmos_unsuitable = 2
-				throw_alert("tox_in_air", /obj/screen/alert/tox_in_air)
-			else
-				clear_alert("tox_in_air")
-
-			if(min_n2 && Environment.gas["nitrogen"] < min_n2)
-				atmos_unsuitable = 1
-				throw_alert("n2o", /obj/screen/alert/not_enough_nitro)
-			else if(max_n2 && Environment.gas["nitrogen"] > max_n2)
-				atmos_unsuitable = 1
-				throw_alert("n2o", /obj/screen/alert/too_much_nitro)
-			else
-				clear_alert("n2o")
-
-			if(min_co2 && Environment.gas["carbon_dioxide"] < min_co2)
-				atmos_unsuitable = 1
-				throw_alert("co2", /obj/screen/alert/not_enough_co2)
-			else if(max_co2 && Environment.gas["carbon_dioxide"] > max_co2)
-				atmos_unsuitable = 1
-				throw_alert("co2", /obj/screen/alert/too_much_co2)
-			else
-				clear_alert("co2")
+			if(min_oxy)
+				if(Environment.gas["oxygen"] < min_oxy)
+					atmos_unsuitable = 1
+			if(max_oxy)
+				if(Environment.gas["oxygen"] > max_oxy)
+					atmos_unsuitable = 1
+			if(min_tox)
+				if(Environment.gas["phoron"] < min_tox)
+					atmos_unsuitable = 2
+			if(max_tox)
+				if(Environment.gas["phoron"] > max_tox)
+					atmos_unsuitable = 2
+			if(min_n2)
+				if(Environment.gas["nitrogen"] < min_n2)
+					atmos_unsuitable = 1
+			if(max_n2)
+				if(Environment.gas["nitrogen"] > max_n2)
+					atmos_unsuitable = 1
+			if(min_co2)
+				if(Environment.gas["carbon_dioxide"] < min_co2)
+					atmos_unsuitable = 1
+			if(max_co2)
+				if(Environment.gas["carbon_dioxide"] > max_co2)
+					atmos_unsuitable = 1
 
 	//Atmos effect
 	if(bodytemperature < minbodytemp)
+		fire_alert = 2
 		adjustFireLoss(cold_damage_per_tick)
-		throw_alert("temp", /obj/screen/alert/cold, 3)
+		if(fire)
+			fire.icon_state = "fire1"
 	else if(bodytemperature > maxbodytemp)
+		fire_alert = 1
 		adjustFireLoss(heat_damage_per_tick)
-		throw_alert("temp", /obj/screen/alert/hot, 3)
+		if(fire)
+			fire.icon_state = "fire2"
 	else
-		clear_alert("temp")
+		fire_alert = 0
+		if(fire)
+			fire.icon_state = "fire0"
 
 	if(atmos_unsuitable)
 		adjustOxyLoss(unsuitable_atoms_damage)
-	else
+		if(oxygen)
+			oxygen.icon_state = "oxy1"
+	else if(oxygen)
+		if(oxygen)
+			oxygen.icon_state = "oxy0"
 		adjustOxyLoss(-unsuitable_atoms_damage)
 
 

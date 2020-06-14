@@ -6,14 +6,6 @@
 	sort_category = "Suits and Overwear"
 	cost = 2
 
-/datum/gear/suit/apron_white
-	display_name = "apron, colorable"
-	path = /obj/item/clothing/suit/storage/apron/white
-
-/datum/gear/suit/apron_white/New()
-	..()
-	gear_tweaks = list(gear_tweak_free_color_choice)
-
 /datum/gear/suit/greatcoat
 	display_name = "greatcoat"
 	path = /obj/item/clothing/suit/greatcoat
@@ -74,19 +66,17 @@
 	display_name = "leather vest, corporate, brown"
 	path = /obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen/sleeveless
 
-//YW EDIT BEGINS
 /datum/gear/suit/mil
-	display_name = "military jacket selection"
+	display_name = "military jacket"
 	path = /obj/item/clothing/suit/storage/miljacket
-	
-/datum/gear/suit/mil/New()
-	..()
-	var/list/mil_jackets = list()
-	for(var/military_style in typesof(/obj/item/clothing/suit/storage/miljacket))
-		var/obj/item/clothing/suit/storage/miljacket/miljacket = military_style
-		mil_jackets[initial(miljacket.name)] = miljacket
-	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(mil_jackets))
-//YW EDIT ENDS
+
+/datum/gear/suit/mil/alt
+	display_name = "military jacket, alt"
+	path = /obj/item/clothing/suit/storage/miljacket/alt
+
+/datum/gear/suit/mil/green
+	display_name = "military jacket, green"
+	path = /obj/item/clothing/suit/storage/miljacket/green
 
 /datum/gear/suit/greyjacket
 	display_name = "grey jacket"
@@ -198,11 +188,6 @@ datum/gear/suit/duster
 		ponchos[initial(poncho.name)] = poncho
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(ponchos))
 
-/datum/gear/suit/roles/poncho
-	display_name = "poncho, cargo"
-	path = /obj/item/clothing/accessory/poncho/roles/cargo
-	cost = 1
-
 /datum/gear/suit/roles/poncho/security
 	display_name = "poncho, security"
 	path = /obj/item/clothing/accessory/poncho/roles/security
@@ -218,6 +203,10 @@ datum/gear/suit/duster
 /datum/gear/suit/roles/poncho/science
 	display_name = "poncho, science"
 	path = /obj/item/clothing/accessory/poncho/roles/science
+
+/datum/gear/suit/roles/poncho/cargo
+	display_name = "poncho, cargo"
+	path = /obj/item/clothing/accessory/poncho/roles/cargo
 
 /datum/gear/suit/roles/poncho/cloak/hos
 	display_name = "cloak, head of security"
@@ -265,7 +254,7 @@ datum/gear/suit/duster
 /datum/gear/suit/roles/poncho/cloak/security
 	display_name = "cloak, security"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/security
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Blueshield Guard")
 
 /datum/gear/suit/roles/poncho/cloak/service
 	display_name = "cloak, service"
@@ -348,7 +337,7 @@ datum/gear/suit/duster
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard")
 
 /datum/gear/suit/wintercoat/medical
 	display_name = "winter coat, medical"
@@ -481,12 +470,12 @@ datum/gear/suit/duster
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command
-	allowed_roles = list("Colony Director","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard") //YW ADDITIONS
+	allowed_roles = list("Colony Director","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard")
 
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot")
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard")
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"

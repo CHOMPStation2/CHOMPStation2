@@ -25,9 +25,9 @@
 	mode = !mode
 	switch (mode)
 		if(1)
-			to_chat(usr, "The bag now picks up all seeds in a tile at once.")
+			usr << "The bag now picks up all seeds in a tile at once."
 		if(0)
-			to_chat(usr, "The bag now picks up one seed pouch at a time.")
+			usr << "The bag now picks up one seed pouch at a time."
 
 /obj/item/seeds/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	..()
@@ -42,10 +42,10 @@
 					else
 						S.item_quants[G.name] = 1
 				else
-					to_chat(user, "<span class='warning'>The seed bag is full.</span>")
+					user << "<span class='warning'>The seed bag is full.</span>"
 					S.updateUsrDialog()
 					return
-			to_chat(user, "<span class='notice'>You pick up all the seeds.</span>")
+			user << "<span class='notice'>You pick up all the seeds.</span>"
 		else
 			if (S.contents.len < S.capacity)
 				S.contents += src;
@@ -54,7 +54,7 @@
 				else
 					S.item_quants[name] = 1
 			else
-				to_chat(user, "<span class='warning'>The seed bag is full.</span>")
+				user << "<span class='warning'>The seed bag is full.</span>"
 		S.updateUsrDialog()
 	return
 

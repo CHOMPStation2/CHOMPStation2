@@ -4,12 +4,12 @@
 /obj/machinery/organ_printer
 	name = "organ printer"
 	desc = "It's a machine that prints organs."
-	icon = 'icons/obj/surgery_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/surgery.dmi'
 	icon_state = "bioprinter"
 
 	anchored = 1
 	density = 1
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 40
 	active_power_usage = 300
 
@@ -69,25 +69,27 @@
 	return ..()
 
 /obj/machinery/organ_printer/update_icon()
-	//VOREStation Edit
-	cut_overlays()
+	overlays.Cut()
 	if(panel_open)
-		add_overlay("bioprinter_panel_open")
+		overlays += "bioprinter_panel_open"
 	if(printing)
-		add_overlay("bioprinter_working")
-	//VOREStation Edit End
+		overlays += "bioprinter_working"
 
-/obj/machinery/organ_printer/Initialize()
-	. = ..()
-	default_apply_parts()
-	
+/obj/machinery/organ_printer/New()
+	..()
+
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	RefreshParts()
+
 /obj/machinery/organ_printer/examine(var/mob/user)
 	. = ..()
 	var/biomass = get_biomass_volume()
 	if(biomass)
-		. += "<span class='notice'>It is loaded with [biomass] units of biomass.</span>"
+		to_chat(user, "<span class='notice'>It is loaded with [biomass] units of biomass.</span>")
 	else
-		. += "<span class='notice'>It is not loaded with any biomass.</span>"
+		to_chat(user, "<span class='notice'>It is not loaded with any biomass.</span>")
 
 /obj/machinery/organ_printer/RefreshParts()
 	// Print Delay updating
@@ -159,7 +161,7 @@
 
 	container.reagents.remove_reagent("biomass", possible_list[choice][2])
 
-	update_use_power(USE_POWER_ACTIVE)
+	use_power = 2
 	printing = 1
 	update_icon()
 
@@ -167,7 +169,7 @@
 
 	sleep(print_delay)
 
-	update_use_power(USE_POWER_IDLE)
+	use_power = 1
 	printing = 0
 	update_icon()
 
@@ -270,7 +272,7 @@
 	icon_state = "bioprinter"
 	circuit = /obj/item/weapon/circuitboard/bioprinter
 
-/obj/machinery/organ_printer/flesh/full/Initialize()
+/obj/machinery/organ_printer/flesh/full/New()
 	. = ..()
 	container = new /obj/item/weapon/reagent_containers/glass/bottle/biomass(src)
 

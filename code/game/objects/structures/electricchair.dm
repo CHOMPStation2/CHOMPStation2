@@ -56,7 +56,7 @@
 		return
 	if(!A.powered(EQUIP))
 		return
-	A.use_power_oneoff(5000, EQUIP)
+	A.use_power(EQUIP, 5000)
 	var/light = A.power_light
 	A.updateicon()
 

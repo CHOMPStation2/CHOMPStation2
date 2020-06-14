@@ -177,15 +177,6 @@
 	QDEL_NULL(tank)
 	return ..()
 
-/obj/structure/closet/body_bag/cryobag/attack_hand(mob/living/user)
-	if(used)
-		var/confirm = alert(user, "Are you sure you want to open \the [src]? \
-		\The [src] will expire upon opening it.", "Confirm Opening", "No", "Yes")
-		if(confirm == "Yes")
-			..() // Will call `toggle()` and open the bag.
-	else
-		..()
-
 /obj/structure/closet/body_bag/cryobag/open()
 	. = ..()
 	if(used)
@@ -242,13 +233,13 @@
 		syringe.reagents.trans_to_mob(H, 30, CHEM_BLOOD)
 
 /obj/structure/closet/body_bag/cryobag/examine(mob/user)
-	. = ..()
+	..()
 	if(Adjacent(user)) //The bag's rather thick and opaque from a distance.
-		. += "<span class='info'>You peer into \the [src].</span>"
+		to_chat(user, "<span class='info'>You peer into \the [src].</span>")
 		if(syringe)
-			. += "<span class='info'>It has a syringe added to it.</span>"
+			to_chat(user, "<span class='info'>It has a syringe added to it.</span>")
 		for(var/mob/living/L in contents)
-			. += L.examine(user)
+			L.examine(user)
 
 /obj/structure/closet/body_bag/cryobag/attackby(obj/item/W, mob/user)
 	if(opened)

@@ -86,10 +86,15 @@
 	update_icon()
 
 
-/obj/item/device/taperecorder/hear_talk(mob/M, list/message_pieces, verb)
-	var/msg = multilingual_to_message(message_pieces, requires_machine_understands = TRUE, with_capitalization = TRUE)
+/obj/item/device/taperecorder/hear_talk(mob/living/M as mob, msg, var/verb="says", datum/language/speaking=null)
 	if(mytape && recording)
-		mytape.record_speech("[M.name] [verb], \"[msg]\"")
+
+		if(speaking)
+			if(!speaking.machine_understands)
+				msg = speaking.scramble(msg)
+			mytape.record_speech("[M.name] [speaking.format_message_plain(msg, verb)]")
+		else
+			mytape.record_speech("[M.name] [verb], \"[msg]\"")
 
 
 /obj/item/device/taperecorder/see_emote(mob/M as mob, text, var/emote_type)

@@ -4,6 +4,5 @@
 	produces_heat = 0
 	autolinkers = list("hb_relay")
 
-/obj/machinery/telecomms/relay/onTransitZ(oldz, newz)
-	. = ..()
-	listening_level = newz
+/obj/machinery/telecomms/relay/proc/reset_z()
+	listening_level = z

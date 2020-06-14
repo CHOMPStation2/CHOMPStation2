@@ -7,10 +7,9 @@
 */
 
 /mob/living/silicon/robot/ClickOn(var/atom/A, var/params)
-	if(!checkClickCooldown())
+	if(world.time <= next_click)
 		return
-	
-	setClickCooldown(1)
+	next_click = world.time + 1
 
 	if(client.buildmode) // comes after object.Click to allow buildmode gui objects to be clicked
 		build_click(src, client.buildmode, params, A)
@@ -34,6 +33,9 @@
 		return
 
 	if(stat || lockdown || weakened || stunned || paralysis)
+		return
+
+	if(!canClick())
 		return
 
 	face_atom(A) // change direction to face what you clicked on

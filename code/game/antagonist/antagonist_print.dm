@@ -36,7 +36,7 @@
 			num++
 
 	// Display the results.
-	to_world(text)
+	world << text
 
 /datum/antagonist/proc/print_objective(var/datum/objective/O, var/num, var/append_success)
 	var/text = "<br><b>Objective [num]:</b> [O.explanation_text] "
@@ -89,9 +89,9 @@
 		if(isnull(H.uplink_owner) && H.used_TC)
 			if(!has_printed)
 				has_printed = 1
-				to_world("<b>Ownerless Uplinks</b>")
-			to_world("[H.loc] (used [H.used_TC] TC)")
-			to_world(get_uplink_purchases(H))
+				world << "<b>Ownerless Uplinks</b>"
+			world << "[H.loc] (used [H.used_TC] TC)"
+			world << get_uplink_purchases(H)
 
 /proc/get_uplink_purchases(var/obj/item/device/uplink/H)
 	var/list/refined_log = new()

@@ -30,7 +30,7 @@
 
 
 	backbag = rand(1,5)
-	pdachoice = rand(1,5)
+	pdachoice = rand(1,4)
 	age = rand(current_species.min_age, current_species.max_age)
 	b_type = RANDOM_BLOOD_TYPE
 	if(H)
@@ -194,8 +194,6 @@
 	b_skin = blue
 
 /datum/preferences/proc/dress_preview_mob(var/mob/living/carbon/human/mannequin)
-	if(!mannequin.dna) // Special handling for preview icons before SSAtoms has initailized.
-		mannequin.dna = new /datum/dna(null)
 	copy_to(mannequin, TRUE)
 
 	if(!equip_preview_mob)
@@ -268,24 +266,3 @@
 	preview_icon.Blend(stamp, ICON_OVERLAY, 49, 1)
 
 	preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
-
-/datum/preferences/proc/get_highest_job()
-	var/datum/job/highJob
-	// Determine what job is marked as 'High' priority, and dress them up as such.
-	if(job_civilian_low & ASSISTANT)
-		highJob = job_master.GetJob("Assistant")
-	else
-		for(var/datum/job/job in job_master.occupations)
-			var/job_flag
-			switch(job.department_flag)
-				if(CIVILIAN)
-					job_flag = job_civilian_high
-				if(MEDSCI)
-					job_flag = job_medsci_high
-				if(ENGSEC)
-					job_flag = job_engsec_high
-			if(job.flag == job_flag)
-				highJob = job
-				break
-
-	return highJob

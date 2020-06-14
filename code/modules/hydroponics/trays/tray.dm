@@ -1,7 +1,6 @@
 /obj/machinery/portable_atmospherics/hydroponics
 	name = "hydroponics tray"
-	desc = "A tray usually full of fluid for growing plants."
-	icon = 'icons/obj/hydroponics_machines_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/hydroponics_machines.dmi'
 	icon_state = "hydrotray3"
 	density = 1
 	anchored = 1
@@ -44,12 +43,6 @@
 	// Seed details/line data.
 	var/datum/seed/seed = null // The currently planted seed
 
-	var/image/ov_lowhealth
-	var/image/ov_lowwater
-	var/image/ov_lownutri
-	var/image/ov_harvest
-	var/image/ov_frozen
-	var/image/ov_alert3
 
 	// Reagent information for process(), consider moving this to a controller along
 	// with cycle information under 'mechanical concerns' at some point.
@@ -132,11 +125,9 @@
 		"mutagen" = 15
 		)
 
-/obj/machinery/portable_atmospherics/hydroponics/AltClick(var/mob/living/user)
-	if(!istype(user))
-		return
-	if(mechanical && !user.incapacitated() && Adjacent(user))
-		close_lid(user)
+/obj/machinery/portable_atmospherics/hydroponics/AltClick()
+	if(mechanical && !usr.incapacitated() && Adjacent(usr))
+		close_lid(usr)
 		return 1
 	return ..()
 
@@ -176,8 +167,6 @@
 
 /obj/machinery/portable_atmospherics/hydroponics/Initialize()
 	. = ..()
-	if(!ov_lowhealth)
-		setup_overlays()
 	temp_chem_holder = new()
 	temp_chem_holder.create_reagents(10)
 	create_reagents(200)
@@ -318,8 +307,7 @@
 		return
 
 	if(closed_system)
-		if(user)
-			to_chat(user, "You can't harvest from the plant while the lid is shut.")
+		if(user) user << "You can't harvest from the plant while the lid is shut."
 		return
 
 	if(user)
@@ -346,7 +334,7 @@
 	if(!user || !dead) return
 
 	if(closed_system)
-		to_chat(user, "You can't remove the dead plant while the lid is shut.")
+		user << "You can't remove the dead plant while the lid is shut."
 		return
 
 	seed = null
@@ -356,7 +344,7 @@
 	yield_mod = 0
 	mutation_mod = 0
 
-	to_chat(user, "You remove the dead plant.")
+	user << "You remove the dead plant."
 	lastproduce = 0
 	check_health()
 	return
@@ -412,11 +400,11 @@
 		return
 	if(ishuman(usr) || istype(usr, /mob/living/silicon/robot))
 		if(labelled)
-			to_chat(usr, "You remove the label.")
+			usr << "You remove the label."
 			labelled = null
 			update_icon()
 		else
-			to_chat(usr, "There is no label to remove.")
+			usr << "There is no label to remove."
 	return
 
 /obj/machinery/portable_atmospherics/hydroponics/verb/setlight()
@@ -430,7 +418,7 @@
 		var/new_light = input("Specify a light level.") as null|anything in list(0,1,2,3,4,5,6,7,8,9,10)
 		if(new_light)
 			tray_light = new_light
-			to_chat(usr, "You set the tray to a light level of [tray_light] lumens.")
+			usr << "You set the tray to a light level of [tray_light] lumens."
 	return
 
 /obj/machinery/portable_atmospherics/hydroponics/proc/check_level_sanity()
@@ -478,15 +466,15 @@
 	if(O.is_wirecutter() || istype(O, /obj/item/weapon/surgical/scalpel))
 
 		if(!seed)
-			to_chat(user, "There is nothing to take a sample from in \the [src].")
+			user << "There is nothing to take a sample from in \the [src]."
 			return
 
 		if(sampled)
-			to_chat(user, "You have already sampled from this plant.")
+			user << "You have already sampled from this plant."
 			return
 
 		if(dead)
-			to_chat(user, "The plant is dead.")
+			user << "The plant is dead."
 			return
 
 		// Create a sample.
@@ -511,14 +499,14 @@
 			if(seed)
 				return ..()
 			else
-				to_chat(user, "There's no plant to inject.")
+				user << "There's no plant to inject."
 				return 1
 		else
 			if(seed)
 				//Leaving this in in case we want to extract from plants later.
-				to_chat(user, "You can't get any extract out of this plant.")
+				user << "You can't get any extract out of this plant."
 			else
-				to_chat(user, "There's nothing to draw something from.")
+				user << "There's nothing to draw something from."
 			return 1
 
 	else if (istype(O, /obj/item/seeds))
@@ -529,15 +517,15 @@
 			user.remove_from_mob(O)
 
 			if(!S.seed)
-				to_chat(user, "The packet seems to be empty. You throw it away.")
+				user << "The packet seems to be empty. You throw it away."
 				qdel(O)
 				return
 
-			to_chat(user, "You plant the [S.seed.seed_name] [S.seed.seed_noun].")
+			user << "You plant the [S.seed.seed_name] [S.seed.seed_noun]."
 			plant_seeds(S)
 
 		else
-			to_chat(user, "<span class='danger'>\The [src] already has seeds in it!</span>")
+			user << "<span class='danger'>\The [src] already has seeds in it!</span>"
 
 	else if (istype(O, /obj/item/weapon/material/minihoe))  // The minihoe
 
@@ -546,7 +534,7 @@
 			weedlevel = 0
 			update_icon()
 		else
-			to_chat(user, "<span class='danger'>This plot is completely devoid of weeds. It doesn't need uprooting.</span>")
+			user << "<span class='danger'>This plot is completely devoid of weeds. It doesn't need uprooting.</span>"
 
 	else if (istype(O, /obj/item/weapon/storage/bag/plants))
 
@@ -565,7 +553,7 @@
 		toxins += spray.toxicity
 		pestlevel -= spray.pest_kill_str
 		weedlevel -= spray.weed_kill_str
-		to_chat(user, "You spray [src] with [O].")
+		user << "You spray [src] with [O]."
 		playsound(loc, 'sound/effects/spray3.ogg', 50, 1, -6)
 		qdel(O)
 		check_health()
@@ -578,7 +566,7 @@
 
 		playsound(loc, O.usesound, 50, 1)
 		anchored = !anchored
-		to_chat(user, "You [anchored ? "wrench" : "unwrench"] \the [src].")
+		user << "You [anchored ? "wrench" : "unwrench"] \the [src]."
 
 	else if(istype(O,/obj/item/device/multitool))
 		if(!anchored)
@@ -618,31 +606,32 @@
 	else if(dead)
 		remove_dead(user)
 
-/obj/machinery/portable_atmospherics/hydroponics/examine(mob/user)
-	. = ..()
+/obj/machinery/portable_atmospherics/hydroponics/examine()
+
+	..()
 
 	if(seed)
-		. += "<span class='notice'>[seed.display_name] are growing here.</span>"
+		usr << "<span class='notice'>[seed.display_name] are growing here.</span>"
 	else
-		. += "It is empty."
+		usr << "[src] is empty."
 
-	if(!Adjacent(user))
-		return .
+	if(!Adjacent(usr))
+		return
 
-	. += "Water: [round(waterlevel,0.1)]/100"
-	. += "Nutrient: [round(nutrilevel,0.1)]/10"
+	usr << "Water: [round(waterlevel,0.1)]/100"
+	usr << "Nutrient: [round(nutrilevel,0.1)]/10"
 
 	if(seed)
 		if(weedlevel >= 5)
-			. += "It is <span class='danger'>infested with weeds</span>!"
+			usr << "\The [src] is <span class='danger'>infested with weeds</span>!"
 		if(pestlevel >= 5)
-			. += "It is <span class='danger'>infested with tiny worms</span>!"
+			usr << "\The [src] is <span class='danger'>infested with tiny worms</span>!"
 		if(dead)
-			. += "It has <span class='danger'>a dead plant</span>!"
+			usr << "<span class='danger'>The plant is dead.</span>"
 		else if(health <= (seed.get_trait(TRAIT_ENDURANCE)/ 2))
-			. += "It has <span class='danger'>an unhealthy plant</span>!"
+			usr << "The plant looks <span class='danger'>unhealthy</span>."
 	if(frozen == 1)
-		. += "<span class='notice'>It is cryogenically frozen.</span>"
+		to_chat(usr, "<span class='notice'>It is cryogenically frozen.</span>")
 	if(mechanical)
 		var/turf/T = loc
 		var/datum/gas_mixture/environment
@@ -665,7 +654,7 @@
 			var/light_available = T.get_lumcount() * 5
 			light_string = "a light level of [light_available] lumens"
 
-		. += "The tray's sensor suite is reporting [light_string] and a temperature of [environment.temperature]K at [environment.return_pressure()] kPa in the [environment_type] environment."
+		usr << "The tray's sensor suite is reporting [light_string] and a temperature of [environment.temperature]K at [environment.return_pressure()] kPa in the [environment_type] environment"
 
 /obj/machinery/portable_atmospherics/hydroponics/verb/close_lid_verb()
 	set name = "Toggle Tray Lid"
@@ -680,5 +669,5 @@
 
 /obj/machinery/portable_atmospherics/hydroponics/proc/close_lid(var/mob/living/user)
 	closed_system = !closed_system
-	to_chat(user, "You [closed_system ? "close" : "open"] the tray's lid.")
+	user << "You [closed_system ? "close" : "open"] the tray's lid."
 	update_icon()

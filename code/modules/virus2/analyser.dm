@@ -1,7 +1,7 @@
 /obj/machinery/disease2/diseaseanalyser
 	name = "disease analyser"
 	desc = "Analyzes diseases to find out information about them!"
-	icon = 'icons/obj/virology_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/virology.dmi'
 	icon_state = "analyser"
 	anchored = 1
 	density = 1
@@ -18,7 +18,7 @@
 	else if(!istype(O,/obj/item/weapon/virusdish)) return
 
 	if(dish)
-		to_chat(user, "\The [src] is already loaded.")
+		user << "\The [src] is already loaded."
 		return
 
 	dish = O

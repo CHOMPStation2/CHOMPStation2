@@ -143,6 +143,7 @@
 /turf/simulated/floor/bluegrid,
 /area/tether_away/debrisfield/derelict/interior)
 "ay" = (
+/obj/structure/prop/alien/power,
 /obj/structure/cable,
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -157,7 +158,6 @@
 	alpha = 0;
 	invisibility = 101
 	},
-/obj/machinery/power/rtg/abductor/built,
 /turf/simulated/floor/bluegrid,
 /area/tether_away/debrisfield/derelict/interior)
 "az" = (
@@ -234,30 +234,6 @@
 "aK" = (
 /turf/space,
 /area/tether_away/debrisfield/derelict)
-"aL" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 0
-	},
-/obj/machinery/power/fractal_reactor{
-	alpha = 0;
-	invisibility = 101
-	},
-/obj/machinery/power/rtg/abductor/built,
-/turf/simulated/floor/reinforced,
-/area/tether_away/debrisfield/derelict/interior)
-"aM" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/fractal_reactor{
-	alpha = 0;
-	invisibility = 101
-	},
-/obj/machinery/power/rtg/abductor/built,
-/turf/simulated/floor/reinforced,
-/area/tether_away/debrisfield/derelict/interior)
 "aN" = (
 /obj/random/humanoidremains,
 /obj/structure/cable{
@@ -350,6 +326,30 @@
 /area/tether_away/debrisfield/derelict/interior)
 "be" = (
 /obj/structure/prop/alien/computer/camera,
+/turf/simulated/floor/reinforced,
+/area/tether_away/debrisfield/derelict/interior)
+"bf" = (
+/obj/structure/prop/alien/power,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/obj/machinery/power/fractal_reactor{
+	alpha = 0;
+	invisibility = 101
+	},
+/turf/simulated/floor/reinforced,
+/area/tether_away/debrisfield/derelict/interior)
+"bg" = (
+/obj/structure/prop/alien/power,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/fractal_reactor{
+	alpha = 0;
+	invisibility = 101
+	},
 /turf/simulated/floor/reinforced,
 /area/tether_away/debrisfield/derelict/interior)
 "bh" = (
@@ -1133,30 +1133,6 @@
 /obj/structure/ghost_pod/manual/lost_drone/dogborg,
 /turf/simulated/floor/tiled/dark,
 /area/tether_away/debrisfield/derelict/ai_access_port)
-"dF" = (
-/obj/structure/salvageable/server,
-/turf/simulated/floor/greengrid,
-/area/tether_away/debrisfield/derelict/ai_chamber)
-"oS" = (
-/obj/structure/salvageable/server,
-/turf/simulated/floor/tiled/monotile,
-/area/tether_away/debrisfield/derelict/interior)
-"tR" = (
-/obj/structure/salvageable/computer,
-/turf/simulated/floor/tiled/dark,
-/area/tether_away/debrisfield/derelict/interior)
-"HB" = (
-/obj/structure/salvageable/implant_container,
-/turf/simulated/floor/tiled/white,
-/area/tether_away/debrisfield/derelict/interior)
-"QE" = (
-/obj/structure/salvageable/autolathe,
-/turf/simulated/floor/tiled/steel_grid,
-/area/tether_away/debrisfield/derelict/interior)
-"ZJ" = (
-/obj/structure/salvageable/personal,
-/turf/simulated/floor/tiled/monotile,
-/area/tether_away/debrisfield/derelict/interior)
 
 (1,1,1) = {"
 bR
@@ -1484,7 +1460,7 @@ aa
 ao
 ao
 ao
-aL
+bf
 bj
 bj
 bs
@@ -2241,7 +2217,7 @@ av
 bX
 aF
 av
-tR
+aF
 aF
 aF
 av
@@ -2357,7 +2333,7 @@ av
 aF
 aF
 av
-ZJ
+at
 at
 ao
 aa
@@ -2424,7 +2400,7 @@ aa
 aa
 aa
 ao
-oS
+at
 az
 au
 av
@@ -2776,7 +2752,7 @@ cB
 cB
 cA
 dk
-dF
+do
 do
 dt
 dt
@@ -2850,7 +2826,7 @@ cB
 cB
 cA
 dk
-dF
+do
 do
 du
 dw
@@ -2924,7 +2900,7 @@ cB
 cB
 cA
 dk
-dF
+do
 do
 du
 dw
@@ -2998,7 +2974,7 @@ cB
 cB
 cA
 dk
-dF
+do
 do
 dt
 dt
@@ -3240,7 +3216,7 @@ aa
 ao
 au
 at
-oS
+at
 av
 aF
 aF
@@ -3560,7 +3536,7 @@ av
 bk
 bk
 bk
-QE
+bk
 bk
 bu
 av
@@ -3647,7 +3623,7 @@ av
 cc
 cj
 cb
-HB
+cb
 cb
 ci
 av
@@ -4222,7 +4198,7 @@ aa
 ao
 ao
 ao
-aM
+bg
 bi
 bp
 bi

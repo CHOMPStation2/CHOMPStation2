@@ -10,7 +10,7 @@
 	icon = 'icons/obj/cooking_machines.dmi'
 	density = 1
 	anchored = 1
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 5
 
 	var/on_icon						// Icon state used when cooking.
@@ -39,19 +39,19 @@
 	cooking = new_setting
 	icon_state = new_setting ? on_icon : off_icon
 
-/obj/machinery/cooker/examine(mob/user)
-	. = ..()
-	if(cooking_obj && Adjacent(user))
-		. += "You can see \a [cooking_obj] inside."
+/obj/machinery/cooker/examine()
+	..()
+	if(cooking_obj && Adjacent(usr))
+		usr << "You can see \a [cooking_obj] inside."
 
 /obj/machinery/cooker/attackby(var/obj/item/I, var/mob/user)
 
 	if(!cook_type || (stat & (NOPOWER|BROKEN)))
-		to_chat(user, "<span class='warning'>\The [src] is not working.</span>")
+		user << "<span class='warning'>\The [src] is not working.</span>"
 		return
 
 	if(cooking)
-		to_chat(user, "<span class='warning'>\The [src] is running!</span>")
+		user << "<span class='warning'>\The [src] is running!</span>"
 		return
 
 	if(default_unfasten_wrench(user, I, 20))
@@ -62,11 +62,11 @@
 	if(istype(G))
 
 		if(!can_cook_mobs)
-			to_chat(user, "<span class='warning'>That's not going to fit.</span>")
+			user << "<span class='warning'>That's not going to fit.</span>"
 			return
 
 		if(!isliving(G.affecting))
-			to_chat(user, "<span class='warning'>You can't cook that.</span>")
+			user << "<span class='warning'>You can't cook that.</span>"
 			return
 
 		cook_mob(G.affecting, user)
@@ -75,33 +75,33 @@
 	// We're trying to cook something else. Check if it's valid.
 	var/obj/item/weapon/reagent_containers/food/snacks/check = I
 	if(istype(check) && islist(check.cooked) && (cook_type in check.cooked))
-		to_chat(user, "<span class='warning'>\The [check] has already been [cook_type].</span>")
+		user << "<span class='warning'>\The [check] has already been [cook_type].</span>"
 		return 0
 	else if(istype(check, /obj/item/weapon/reagent_containers/glass))
-		to_chat(user, "<span class='warning'>That would probably break [src].</span>")
+		user << "<span class='warning'>That would probably break [src].</span>"
 		return 0
 	else if(istype(check, /obj/item/weapon/disk/nuclear))
-		to_chat(user, "Central Command would kill you if you [cook_type] that.")
+		user << "Central Command would kill you if you [cook_type] that."
 		return 0
 	else if(!istype(check) && !istype(check, /obj/item/weapon/holder) && !istype(check, /obj/item/organ)) //Gripper check has to go here, else it still just cuts it off. ~Mechoid
 		// Is it a borg using a gripper?
 		if(istype(check, /obj/item/weapon/gripper)) // Grippers. ~Mechoid.
 			var/obj/item/weapon/gripper/B = check	//B, for Borg.
 			if(!B.wrapped)
-				to_chat(user, "\The [B] is not holding anything.")
+				user << "\The [B] is not holding anything."
 				return 0
 			else
 				var/B_held = B.wrapped
-				to_chat(user, "You use \the [B] to put \the [B_held] into \the [src].")
+				user << "You use \the [B] to put \the [B_held] into \the [src]."
 			return 0
 		else
-			to_chat(user, "<span class='warning'>That's not edible.</span>")
+			user << "<span class='warning'>That's not edible.</span>"
 			return 0
 
 	if(istype(I, /obj/item/organ))
 		var/obj/item/organ/O = I
 		if(O.robotic)
-			to_chat(user, "<span class='warning'>That would probably break [src].</span>")
+			user << "<span class='warning'>That would probably break [src].</span>"
 			return
 
 	// Gotta hurt.
@@ -203,7 +203,7 @@
 /obj/machinery/cooker/attack_hand(var/mob/user)
 
 	if(cooking_obj && user.Adjacent(src)) //Fixes borgs being able to teleport food in these machines to themselves.
-		to_chat(user, "<span class='notice'>You grab \the [cooking_obj] from \the [src].</span>")
+		user << "<span class='notice'>You grab \the [cooking_obj] from \the [src].</span>"
 		user.put_in_hands(cooking_obj)
 		set_cooking(FALSE)
 		cooking_obj = null
@@ -213,7 +213,7 @@
 	if(output_options.len)
 
 		if(cooking)
-			to_chat(user, "<span class='warning'>\The [src] is in use!</span>")
+			user << "<span class='warning'>\The [src] is in use!</span>"
 			return
 
 		var/choice = input("What specific food do you wish to make with \the [src]?") as null|anything in output_options+"Default"
@@ -221,10 +221,10 @@
 			return
 		if(choice == "Default")
 			selected_option = null
-			to_chat(user, "<span class='notice'>You decide not to make anything specific with \the [src].</span>")
+			user << "<span class='notice'>You decide not to make anything specific with \the [src].</span>"
 		else
 			selected_option = choice
-			to_chat(user, "<span class='notice'>You prepare \the [src] to make \a [selected_option].</span>")
+			user << "<span class='notice'>You prepare \the [src] to make \a [selected_option].</span>"
 
 	..()
 

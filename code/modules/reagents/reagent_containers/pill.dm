@@ -7,7 +7,6 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = null
 	item_state = "pill"
-	drop_sound = 'sound/items/drop/food.ogg'
 
 	var/base_state = "pill"
 
@@ -96,13 +95,13 @@
 
 //Pills
 /obj/item/weapon/reagent_containers/pill/antitox
-	name = "Dylovene (30u)" //VOREStation Edit
+	name = "Dylovene (25u)"
 	desc = "Neutralizes many common toxins."
 	icon_state = "pill1"
 
 /obj/item/weapon/reagent_containers/pill/antitox/Initialize()
 	. = ..()
-	reagents.add_reagent("anti_toxin", 30) //VOREStation Edit
+	reagents.add_reagent("anti_toxin", 25)
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/tox
@@ -146,13 +145,13 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/kelotane
-	name = "Kelotane (20u)" //VOREStation Edit
+	name = "Kelotane (15u)"
 	desc = "Used to treat burns."
 	icon_state = "pill3"
 
 /obj/item/weapon/reagent_containers/pill/kelotane/Initialize()
 	. = ..()
-	reagents.add_reagent("kelotane", 20) //VOREStation Edit
+	reagents.add_reagent("kelotane", 15)
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/paracetamol
@@ -196,13 +195,13 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/dexalin
-	name = "Dexalin (7.5u)" //VOREstation Edit
+	name = "Dexalin (15u)"
 	desc = "Used to treat oxygen deprivation."
 	icon_state = "pill1"
 
 /obj/item/weapon/reagent_containers/pill/dexalin/Initialize()
 	. = ..()
-	reagents.add_reagent("dexalin", 7.5) //VOREStation Edit
+	reagents.add_reagent("dexalin", 15)
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/dexalin_plus
@@ -256,7 +255,7 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/spaceacillin
-	name = "Spaceacillin (15u)" //VOREStation Edit
+	name = "Spaceacillin (10u)"
 	desc = "A theta-lactam antibiotic. Effective against many diseases likely to be encountered in space."
 	icon_state = "pill3"
 
@@ -266,23 +265,23 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/carbon
-	name = "Carbon (30u)" //VOREStation Edit
+	name = "Carbon (15u)"
 	desc = "Used to neutralise chemicals in the stomach."
 	icon_state = "pill3"
 
 /obj/item/weapon/reagent_containers/pill/carbon/Initialize()
 	. = ..()
-	reagents.add_reagent("carbon", 30) //VOREStation Edit
+	reagents.add_reagent("carbon", 15)
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/iron
-	name = "Iron (30u)" //VOREStation Edit
+	name = "Iron (15u)"
 	desc = "Used to aid in blood regeneration after bleeding."
 	icon_state = "pill1"
 
 /obj/item/weapon/reagent_containers/pill/iron/Initialize()
 	. = ..()
-	reagents.add_reagent("iron", 30) //VOREStation Edit
+	reagents.add_reagent("iron", 15)
 	color = reagents.get_color()
 
 //Not-quite-medicine

@@ -28,7 +28,6 @@
 	icon_state = "compressor"
 	anchored = TRUE
 	density = TRUE
-	can_atmos_pass = ATMOS_PASS_PROC
 	circuit = /obj/item/weapon/circuitboard/machine/power_compressor
 	var/obj/machinery/power/turbine/turbine
 	var/datum/gas_mixture/gas_contained
@@ -97,7 +96,7 @@
 
 // When anchored, don't let air past us.
 /obj/machinery/compressor/CanZASPass(turf/T, is_zone)
-	return !anchored
+	return anchored ? ATMOS_PASS_NO : ATMOS_PASS_YES
 
 /obj/machinery/compressor/proc/locate_machinery()
 	if(turbine)

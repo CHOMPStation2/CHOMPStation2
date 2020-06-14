@@ -1,4 +1,3 @@
-
 /obj/item/clothing/shoes/black
 	name = "black shoes"
 	icon_state = "black"
@@ -39,7 +38,6 @@
 	name = "leather shoes"
 	desc = "A sturdy pair of leather shoes."
 	icon_state = "leather"
-	drop_sound = 'sound/items/drop/leather.ogg'
 
 /obj/item/clothing/shoes/rainbow
 	name = "rainbow shoes"

@@ -172,10 +172,13 @@
 			return id_card
 
 /obj/item/device/electronic_assembly/examine(mob/user)
-	. = ..()
-	if(Adjacent(user))
+	. = ..(user, 1)
+	if(.)
 		for(var/obj/item/integrated_circuit/IC in contents)
-			. += IC.external_examine(user)
+			IC.external_examine(user)
+	//	for(var/obj/item/integrated_circuit/output/screen/S in contents)
+	//		if(S.stuff_to_display)
+	//			to_chat(user, "There's a little screen labeled '[S.name]', which displays '[S.stuff_to_display]'.")
 		if(opened)
 			interact(user)
 
@@ -262,11 +265,9 @@
 	else if(istype(I, /obj/item/device/integrated_electronics/wirer) || istype(I, /obj/item/device/integrated_electronics/debugger) || I.is_screwdriver())
 		if(opened)
 			interact(user)
-			return TRUE
 		else
 			to_chat(user, "<span class='warning'>\The [src] isn't opened, so you can't fiddle with the internal components.  \
 			Try using a crowbar.</span>")
-			return FALSE
 
 	else if(istype(I, /obj/item/device/integrated_electronics/detailer))
 		var/obj/item/device/integrated_electronics/detailer/D = I
@@ -349,6 +350,14 @@
 		return TRUE
 	return FALSE
 
+/obj/item/device/electronic_assembly/on_loc_moved(oldloc)
+	for(var/obj/O in contents)
+		O.on_loc_moved(oldloc)
+
+/obj/item/device/electronic_assembly/Moved(var/oldloc)
+	for(var/obj/O in contents)
+		O.on_loc_moved(oldloc)
+
 /obj/item/device/electronic_assembly/proc/on_anchored()
 	for(var/obj/item/integrated_circuit/IC in contents)
 		IC.on_anchored()
@@ -356,7 +365,3 @@
 /obj/item/device/electronic_assembly/proc/on_unanchored()
 	for(var/obj/item/integrated_circuit/IC in contents)
 		IC.on_unanchored()
-
-// Returns TRUE if I is something that could/should have a valid interaction. Used to tell circuitclothes to hit the circuit with something instead of the clothes
-/obj/item/device/electronic_assembly/proc/is_valid_tool(var/obj/item/I)
-	return I.is_crowbar() || I.is_screwdriver() || istype(I, /obj/item/integrated_circuit) || istype(I, /obj/item/weapon/cell/device) || istype(I, /obj/item/device/integrated_electronics)

@@ -24,9 +24,7 @@
 
 /obj/item/weapon/gun/magnetic/matfed/examine(mob/user)
 	. = ..()
-	var/ammotext = show_ammo()
-	if(ammotext)
-		. += ammotext
+	show_ammo(user)
 
 /obj/item/weapon/gun/magnetic/matfed/update_icon()
 	var/list/overlays_to_add = list()
@@ -71,9 +69,9 @@
 /obj/item/weapon/gun/magnetic/matfed/use_ammo()
 	mat_storage -= mat_cost
 
-/obj/item/weapon/gun/magnetic/matfed/show_ammo()
+/obj/item/weapon/gun/magnetic/matfed/show_ammo(var/mob/user)
 	if(mat_storage)
-		return list("<span class='notice'>It has [mat_storage] out of [max_mat_storage] units of [ammo_material] loaded.</span>")
+		to_chat(user, "<span class='notice'>It has [mat_storage] out of [max_mat_storage] units of [ammo_material] loaded.</span>")
 
 /obj/item/weapon/gun/magnetic/matfed/attackby(var/obj/item/thing, var/mob/user)
 	if(removable_components)

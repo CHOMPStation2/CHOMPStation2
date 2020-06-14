@@ -31,7 +31,7 @@
 	if(client.buildmode)
 		build_click(src, client.buildmode, params, A)
 		return
-	if(!checkClickCooldown()) return
+	if(!canClick()) return
 	setClickCooldown(4)
 	// You are responsible for checking config.ghost_interaction when you override this function
 	// Not all of them require checking, see below
@@ -50,8 +50,8 @@
 /obj/machinery/teleport/hub/attack_ghost(mob/user as mob)
 	var/atom/l = loc
 	var/obj/machinery/computer/teleporter/com = locate(/obj/machinery/computer/teleporter, locate(l.x - 2, l.y, l.z))
-	if(com?.teleport_control.locked)
-		user.loc = get_turf(com.teleport_control.locked)
+	if(com.locked)
+		user.loc = get_turf(com.locked)
 
 /obj/effect/portal/attack_ghost(mob/user as mob)
 	if(target)
@@ -61,13 +61,13 @@
 	if(awaygate)
 		user.loc = awaygate.loc
 	else
-		to_chat(user, "[src] has no destination.")
+		user << "[src] has no destination."
 
 /obj/machinery/gateway/centeraway/attack_ghost(mob/user as mob)
 	if(stationgate)
 		user.loc = stationgate.loc
 	else
-		to_chat(user, "[src] has no destination.")
+		user << "[src] has no destination."
 
 // -------------------------------------------
 // This was supposed to be used by adminghosts

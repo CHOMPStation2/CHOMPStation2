@@ -311,7 +311,7 @@
 						H.handcuffed = new /obj/item/weapon/handcuffs/cable(H) // Better to be cable cuffed than stun-locked
 					else
 						H.handcuffed = new /obj/item/weapon/handcuffs(H)
-					H.update_handcuffed()
+					H.update_inv_handcuffed()
 			busy = FALSE
 	else if(istype(M, /mob/living))
 		var/mob/living/L = M
@@ -386,7 +386,7 @@
 		qdel(S)
 		var/obj/item/weapon/secbot_assembly/A = new /obj/item/weapon/secbot_assembly
 		user.put_in_hands(A)
-		to_chat(user, "You add the signaler to the helmet.")
+		user << "You add the signaler to the helmet."
 		user.drop_from_inventory(src)
 		qdel(src)
 	else

@@ -3,7 +3,7 @@
 	desc = "A window."
 	icon = 'icons/obj/structures_vr.dmi' // VOREStation Edit - New icons
 	density = 1
-	can_atmos_pass = ATMOS_PASS_PROC
+	can_atmos_pass = ATMOS_PASS_DENSITY
 	w_class = ITEMSIZE_NORMAL
 
 	layer = WINDOW_LAYER
@@ -25,30 +25,27 @@
 	var/fulltile = FALSE // Set to true on full-tile variants.
 
 /obj/structure/window/examine(mob/user)
-	. = ..()
+	. = ..(user)
 
 	if(health == maxhealth)
-		. += "<span class='notice'>It looks fully intact.</span>"
+		to_chat(user, "<span class='notice'>It looks fully intact.</span>")
 	else
 		var/perc = health / maxhealth
 		if(perc > 0.75)
-			. += "<span class='notice'>It has a few cracks.</span>"
+			to_chat(user, "<span class='notice'>It has a few cracks.</span>")
 		else if(perc > 0.5)
-			. += "<span class='warning'>It looks slightly damaged.</span>"
+			to_chat(user, "<span class='warning'>It looks slightly damaged.</span>")
 		else if(perc > 0.25)
-			. += "<span class='warning'>It looks moderately damaged.</span>"
+			to_chat(user, "<span class='warning'>It looks moderately damaged.</span>")
 		else
-			. += "<span class='danger'>It looks heavily damaged.</span>"
+			to_chat(user, "<span class='danger'>It looks heavily damaged.</span>")
 	if(silicate)
 		if (silicate < 30)
-			. += "<span class='notice'>It has a thin layer of silicate.</span>"
+			to_chat(user, "<span class='notice'>It has a thin layer of silicate.</span>")
 		else if (silicate < 70)
-			. += "<span class='notice'>It is covered in silicate.</span>"
+			to_chat(user, "<span class='notice'>It is covered in silicate.</span>")
 		else
-			. += "<span class='notice'>There is a thick layer of silicate covering it.</span>"
-
-/obj/structure/window/examine_icon()
-	return icon(icon=initial(icon),icon_state=initial(icon_state))
+			to_chat(user, "<span class='notice'>There is a thick layer of silicate covering it.</span>")
 
 /obj/structure/window/take_damage(var/damage = 0,  var/sound_effect = 1)
 	var/initialhealth = health
@@ -147,8 +144,8 @@
 
 /obj/structure/window/CanZASPass(turf/T, is_zone)
 	if(is_fulltile() || get_dir(T, loc) == turn(dir, 180)) // Make sure we're handling the border correctly.
-		return !anchored // If it's anchored, it'll block air.
-	return TRUE // Don't stop airflow from the other sides.
+		return anchored ? ATMOS_PASS_NO : ATMOS_PASS_YES // If it's anchored, it'll block air.
+	return ATMOS_PASS_YES // Don't stop airflow from the other sides.
 
 /obj/structure/window/CheckExit(atom/movable/O as mob|obj, target as turf)
 	if(istype(O) && O.checkpass(PASSGLASS))
@@ -416,7 +413,7 @@
 /obj/structure/window/Move()
 	var/ini_dir = dir
 	update_nearby_tiles(need_rebuild=1)
-	. = ..()
+	..()
 	set_dir(ini_dir)
 	update_nearby_tiles(need_rebuild=1)
 
@@ -445,13 +442,6 @@
 	//this way it will only update full-tile ones
 	overlays.Cut()
 	if(!is_fulltile())
-		// Rotate the sprite somewhat so non-fulltiled windows can be seen as needing repair.
-		var/full_tilt_degrees = 15
-		var/tilt_to_apply = abs((health / maxhealth) - 1)
-		if(tilt_to_apply && prob(50))
-			tilt_to_apply = -tilt_to_apply
-		adjust_rotation(LERP(0, full_tilt_degrees, tilt_to_apply))
-
 		icon_state = "[basestate]"
 		return
 	var/list/dirs = list()

@@ -38,8 +38,8 @@
 	return 0
 
 /obj/item/mecha_parts/mecha_equipment/examine(mob/user)
-	. = ..()
-	. += "<span class='notice'>[src] will fill [equip_type?"a [equip_type]":"any"] slot.</span>"
+	..()
+	to_chat(user, "<span class='notice'>\The [src] will fill [equip_type?"a [equip_type]":"any"] slot.</span>")
 
 /obj/item/mecha_parts/mecha_equipment/New()
 	..()
@@ -144,6 +144,9 @@
 	if(energy_drain && !chassis.has_charge(energy_drain))
 		return 0
 	return 1
+
+/obj/item/mecha_parts/mecha_equipment/proc/handle_movement_action() //Any modules that have special effects or needs when taking a step or floating through space.
+	return
 
 /obj/item/mecha_parts/mecha_equipment/proc/action(atom/target)
 	return
@@ -263,7 +266,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/proc/occupant_message(message)
 	if(chassis)
-		chassis.occupant_message("[bicon(src)] [message]")
+		chassis.occupant_message("\icon[src] [message]")
 	return
 
 /obj/item/mecha_parts/mecha_equipment/proc/log_message(message)

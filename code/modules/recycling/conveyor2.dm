@@ -38,7 +38,13 @@
 		operating = FORWARDS
 		setmove()
 
-	default_apply_parts()
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/gear(src)
+	component_parts += new /obj/item/weapon/stock_parts/motor(src)
+	component_parts += new /obj/item/weapon/stock_parts/gear(src)
+	component_parts += new /obj/item/weapon/stock_parts/motor(src)
+	component_parts += new /obj/item/stack/cable_coil(src,5)
+	RefreshParts()
 
 /obj/machinery/conveyor/proc/setmove()
 	if(operating == FORWARDS)

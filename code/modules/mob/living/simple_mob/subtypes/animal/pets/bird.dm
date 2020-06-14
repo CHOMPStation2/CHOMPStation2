@@ -23,7 +23,7 @@
 	softfall = TRUE
 	parachuting = TRUE
 
-	attacktext = list("clawed", "pecked")
+	attacktext = list("claws", "pecks")
 	speak_emote = list("chirps", "caws")
 	has_langs = list("Bird")
 	response_help  = "pets"

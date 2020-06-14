@@ -8,7 +8,7 @@
 	icon_state = "heater_0"
 	density = 1
 	anchored = 1
-	use_power = USE_POWER_OFF
+	use_power = 0
 	idle_power_usage = 5			//5 Watts for thermostat related circuitry
 	circuit = /obj/item/weapon/circuitboard/unary_atmos/heater
 
@@ -21,9 +21,15 @@
 	var/set_temperature = T20C	//thermostat
 	var/heating = 0		//mainly for icon updates
 
-/obj/machinery/atmospherics/unary/heater/Initialize()
-	. = ..()
-	default_apply_parts()
+/obj/machinery/atmospherics/unary/heater/New()
+	..()
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
+	component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
+	component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
+	component_parts += new /obj/item/stack/cable_coil(src, 5)
+
+	RefreshParts()
 
 /obj/machinery/atmospherics/unary/heater/atmos_init()
 	if(node)
@@ -113,7 +119,7 @@
 	if(..())
 		return 1
 	if(href_list["toggleStatus"])
-		update_use_power(!use_power)
+		use_power = !use_power
 		update_icon()
 	if(href_list["temp"])
 		var/amount = text2num(href_list["temp"])
@@ -159,6 +165,6 @@
 	..()
 
 /obj/machinery/atmospherics/unary/heater/examine(mob/user)
-	..()
+	..(user)
 	if(panel_open)
-		. += "The maintenance hatch is open."
+		to_chat(user, "The maintenance hatch is open.")

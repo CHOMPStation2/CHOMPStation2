@@ -5,7 +5,7 @@
 	icon_state = "table2-idle"
 	density = 1
 	anchored = 1.0
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 1
 	active_power_usage = 5
 	surgery_odds = 100
@@ -53,18 +53,21 @@
 		return TRUE
 	return FALSE
 
+/obj/machinery/optable/MouseDrop_T(obj/O as obj, mob/user as mob)
+
+	if((!(istype(O, /obj/item/weapon)) || user.get_active_hand() != O))
+		return
+	user.drop_item()
+	if(O.loc != src.loc)
+		step(O, get_dir(O, src))
+	return
+
 /obj/machinery/optable/proc/check_victim()
 	if(locate(/mob/living/carbon/human, src.loc))
 		var/mob/living/carbon/human/M = locate(/mob/living/carbon/human, src.loc)
 		if(M.lying)
 			victim = M
-			if(M.pulse)
-				if(M.stat)
-					icon_state = "table2-sleep"
-				else
-					icon_state = "table2-active"
-			else
-				icon_state = "table2-dead"
+			icon_state = M.pulse ? "table2-active" : "table2-idle"
 			return 1
 	victim = null
 	icon_state = "table2-idle"
@@ -93,43 +96,40 @@
 	else
 		icon_state = "table2-idle"
 
-/obj/machinery/optable/MouseDrop_T(mob/living/carbon/target, mob/living/user)
-	if(!istype(target) || !istype(user))
+/obj/machinery/optable/MouseDrop_T(mob/target, mob/user)
+
+	var/mob/living/M = user
+	if(user.stat || user.restrained() || !check_table(user) || !iscarbon(target))
+		return
+	if(istype(M))
+		take_victim(target,user)
+	else
 		return ..()
 
-	if(!Adjacent(target) || !Adjacent(user))
-		return ..()
-	
-	if(user.incapacitated() || !check_table(target, user))
-		return ..()
-
-	take_victim(target, user)
-	
 /obj/machinery/optable/verb/climb_on()
 	set name = "Climb On Table"
 	set category = "Object"
 	set src in oview(1)
 
-	var/mob/living/user = usr
-	if(!istype(user) || user.incapacitated() || !check_table(user, user))
+	if(usr.stat || !ishuman(usr) || usr.restrained() || !check_table(usr))
 		return
 
-	take_victim(user, user)
+	take_victim(usr,usr)
 
-/obj/machinery/optable/attackby(obj/item/weapon/W, mob/living/carbon/user)
+/obj/machinery/optable/attackby(obj/item/weapon/W as obj, mob/living/carbon/user as mob)
 	if(istype(W, /obj/item/weapon/grab))
 		var/obj/item/weapon/grab/G = W
-		if(iscarbon(G.affecting) && check_table(G.affecting, user))
-			take_victim(G.affecting, user)
+		if(iscarbon(G.affecting) && check_table(G.affecting))
+			take_victim(G.affecting,usr)
 			qdel(W)
 			return
 
-/obj/machinery/optable/proc/check_table(mob/living/carbon/patient, mob/living/user)
+/obj/machinery/optable/proc/check_table(mob/living/carbon/patient as mob)
 	check_victim()
 	if(victim && get_turf(victim) == get_turf(src) && victim.lying)
-		to_chat(user, "<span class='warning'>\The [src] is already occupied!</span>")
+		usr << "<span class='warning'>\The [src] is already occupied!</span>"
 		return 0
 	if(patient.buckled)
-		to_chat(user, "<span class='notice'>Unbuckle \the [patient] first!</span>")
+		usr << "<span class='notice'>Unbuckle \the [patient] first!</span>"
 		return 0
 	return 1

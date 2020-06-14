@@ -108,10 +108,10 @@
 
 	put_mob(mob/living/carbon/M as mob)
 		if(!iscarbon(M))
-			to_chat(usr, "<span class='warning'>\The [src] cannot hold this!</span>")
+			usr << "<span class='warning'>\The [src] cannot hold this!</span>"
 			return
 		if(src.occupant)
-			to_chat(usr, "<span class='warning'>\The [src] is already occupied!</span>")
+			usr << "<span class='warning'>\The [src] is already occupied!</span>"
 			return
 		if(M.client)
 			M.client.perspective = EYE_PERSPECTIVE

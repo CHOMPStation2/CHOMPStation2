@@ -109,7 +109,7 @@
 /obj/effect/alien/resin/attack_hand()
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if (HULK in usr.mutations)
-		to_chat(usr, "<span class='notice'>You easily destroy the [name].</span>")
+		usr << "<span class='notice'>You easily destroy the [name].</span>"
 		for(var/mob/O in oviewers(src))
 			O.show_message("<span class='warning'>[usr] destroys the [name]!</span>", 1)
 		health = 0
@@ -125,7 +125,7 @@
 				healthcheck()
 				return
 
-		to_chat(usr, "<span class='notice'>You claw at the [name].</span>")
+		usr << "<span class='notice'>You claw at the [name].</span>"
 		for(var/mob/O in oviewers(src))
 			O.show_message("<span class='warning'>[usr] claws at the [name]!</span>", 1)
 		health -= rand(5,10)
@@ -160,31 +160,17 @@
 #define WEED_NODE_BASE "nodebase"
 
 /obj/effect/alien/weeds
-	name = "growth"
-	desc = "Weird organic growth."
+	name = "weeds"
+	desc = "Weird purple weeds."
 	icon_state = "weeds"
+
 	anchored = 1
 	density = 0
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
-
 	var/health = 15
 	var/obj/effect/alien/weeds/node/linked_node = null
 	var/static/list/weedImageCache
-
-/obj/effect/alien/weeds/Initialize(var/mapload, var/node, var/newcolor)
-	. = ..()
-	if(isspace(loc))
-		return INITIALIZE_HINT_QDEL
-	
-	linked_node = node
-	if(newcolor)
-		color = newcolor
-	
-	if(icon_state == "weeds")
-		icon_state = pick("weeds", "weeds1", "weeds2")
-
-	fullUpdateWeedOverlays()
 
 /obj/effect/alien/weeds/Destroy()
 	var/turf/T = get_turf(src)
@@ -195,43 +181,50 @@
 		W.updateWeedOverlays()
 
 	linked_node = null
-	return ..()
+	..()
 
 /obj/effect/alien/weeds/node
 	icon_state = "weednode"
-	name = "glowing growth"
-	desc = "Weird glowing organic growth."
+	name = "purple sac"
+	desc = "Weird purple octopus-like thing."
 	layer = ABOVE_TURF_LAYER+0.01
 	light_range = NODERANGE
-	
 	var/node_range = NODERANGE
-	var/set_color = "#321D37"
 
-/obj/effect/alien/weeds/node/Initialize(var/mapload, var/node, var/newcolor)
-	. = ..()
+	var/set_color = null
 
-	for(var/obj/effect/alien/weeds/existing in loc)
-		if(existing == src)
-			continue
-		else
-			qdel(existing)
+/obj/effect/alien/weeds/node/New()
+	..(src.loc, src)
 
-	if(newcolor)
-		set_color = newcolor
-	if(set_color)
-		color = set_color
+/obj/effect/alien/weeds/node/Initialize()
+	..()
+	START_PROCESSING(SSobj, src)
 
-	START_PROCESSING(SSobj, src) // Only the node processes in a subsystem, the rest are process()'d by the node
+	spawn(1 SECOND)
+		if(color)
+			set_color = color
 
 /obj/effect/alien/weeds/node/Destroy()
 	STOP_PROCESSING(SSobj, src)
-	return ..()
+	..()
+
+/obj/effect/alien/weeds/New(pos, node)
+	..()
+	if(istype(loc, /turf/space))
+		qdel(src)
+		return
+	linked_node = node
+	if(icon_state == "weeds")icon_state = pick("weeds", "weeds1", "weeds2")
+
+	fullUpdateWeedOverlays()
 
 /obj/effect/alien/weeds/proc/updateWeedOverlays()
-	cut_overlays()
 
-	if(!weedImageCache)
+	overlays.Cut()
+
+	if(!weedImageCache || !weedImageCache.len)
 		weedImageCache = list()
+//		weedImageCache.len = 4
 		weedImageCache[WEED_NORTH_EDGING] = image('icons/mob/alien.dmi', "weeds_side_n", layer=2.11, pixel_y = -32)
 		weedImageCache[WEED_SOUTH_EDGING] = image('icons/mob/alien.dmi', "weeds_side_s", layer=2.11, pixel_y = 32)
 		weedImageCache[WEED_EAST_EDGING] = image('icons/mob/alien.dmi', "weeds_side_e", layer=2.11, pixel_x = -32)
@@ -241,14 +234,18 @@
 	var/turf/S = get_step(src, SOUTH)
 	var/turf/E = get_step(src, EAST)
 	var/turf/W = get_step(src, WEST)
-	if(istype(N, /turf/simulated/floor) && !locate(/obj/effect/alien) in N.contents)
-		add_overlay(weedImageCache[WEED_SOUTH_EDGING])
-	if(istype(S, /turf/simulated/floor) && !locate(/obj/effect/alien) in S.contents)
-		add_overlay(weedImageCache[WEED_NORTH_EDGING])
-	if(istype(E, /turf/simulated/floor) && !locate(/obj/effect/alien) in E.contents)
-		add_overlay(weedImageCache[WEED_WEST_EDGING])
-	if(istype(W, /turf/simulated/floor) && !locate(/obj/effect/alien) in W.contents)
-		add_overlay(weedImageCache[WEED_EAST_EDGING])
+	if(!locate(/obj/effect/alien) in N.contents)
+		if(istype(N, /turf/simulated/floor))
+			overlays += weedImageCache[WEED_SOUTH_EDGING]
+	if(!locate(/obj/effect/alien) in S.contents)
+		if(istype(S, /turf/simulated/floor))
+			overlays += weedImageCache[WEED_NORTH_EDGING]
+	if(!locate(/obj/effect/alien) in E.contents)
+		if(istype(E, /turf/simulated/floor))
+			overlays += weedImageCache[WEED_WEST_EDGING]
+	if(!locate(/obj/effect/alien) in W.contents)
+		if(istype(W, /turf/simulated/floor))
+			overlays += weedImageCache[WEED_EAST_EDGING]
 
 /obj/effect/alien/weeds/proc/fullUpdateWeedOverlays()
 	for (var/obj/effect/alien/weeds/W in range(1,src))
@@ -256,51 +253,70 @@
 
 	return
 
-// NB: This is not actually called by a processing subsystem, it's called by the node processing
 /obj/effect/alien/weeds/process()
 	set background = 1
 	var/turf/U = get_turf(src)
-
-	if(isspace(U))
+/*
+	if (locate(/obj/movable, U))
+		U = locate(/obj/movable, U)
+		if(U.density == 1)
+			qdel(src)
+			return
+Alien plants should do something if theres a lot of poison
+	if(U.poison> 200000)
+		health -= round(U.poison/200000)
+		update()
+		return
+*/
+	if (istype(U, /turf/space))
 		qdel(src)
 		return
 
-	if(!linked_node)
+	if(!linked_node || (get_dist(linked_node, src) > linked_node.node_range) )
 		return
 
-	if(get_dist(linked_node, src) > linked_node.node_range)
-		return
+	if(linked_node != src)
+		color = linked_node.set_color
 
-	for(var/dirn in cardinal)
-		var/turf/T1 = get_turf(src)
-		var/turf/T2 = get_step(src, dirn)
+	direction_loop:
+		for(var/dirn in cardinal)
+			var/turf/T = get_step(src, dirn)
 
-		if(!istype(T2) || locate(/obj/effect/alien/weeds) in T2 || istype(T2.loc, /area/arrival) || isspace(T2))
-			continue
+			if (!istype(T) || T.density || locate(/obj/effect/alien/weeds) in T || istype(T.loc, /area/arrival) || istype(T, /turf/space))
+				continue
 
-		if(T1.c_airblock(T2) == BLOCKED)
-			continue
+	//		if (locate(/obj/movable, T)) // don't propogate into movables
+	//			continue
 
-		new /obj/effect/alien/weeds(T2, linked_node, color)
+			for(var/obj/O in T)
+				if(!O.CanZASPass(U))
+					continue direction_loop
 
-/obj/effect/alien/weeds/node/process()
-	set background = 1
-	. = ..()
+			var/obj/effect/E = new /obj/effect/alien/weeds(T, linked_node)
 
-	var/list/nearby_weeds = list()
-	for(var/obj/effect/alien/weeds/W in orange(node_range, src))
-		nearby_weeds |= W
+			E.color = color
 
-	for(var/nbw in nearby_weeds)
-		var/obj/effect/alien/weeds/W = nbw
+	if(istype(src, /obj/effect/alien/weeds/node))
+		var/obj/effect/alien/weeds/node/N = src
+		var/list/nearby_weeds = list()
+		for(var/obj/effect/alien/weeds/W in range(N.node_range,src))
+			nearby_weeds |= W
 
-		if(!W.linked_node)
-			W.linked_node = src
+		for(var/obj/effect/alien/weeds/W in nearby_weeds)
+			if(!W)
+				continue
 
-		W.color = W.linked_node.set_color
+			if(!W.linked_node)
+				W.linked_node = src
 
-		if(prob(max(10, 40 - (5 * nearby_weeds.len))))
-			W.process()
+			W.color = W.linked_node.set_color
+
+			if(W == src)
+				continue
+
+			if(prob(max(10, 40 - (5 * nearby_weeds.len))))
+				W.process()
+
 
 /obj/effect/alien/weeds/ex_act(severity)
 	switch(severity)
@@ -441,6 +457,7 @@
 
 	var/health = 100
 	var/status = BURST //can be GROWING, GROWN or BURST; all mutually exclusive
+	flags = PROXMOVE
 
 /obj/effect/alien/egg/New()
 /*
@@ -459,14 +476,14 @@
 
 	switch(status)
 		if(BURST)
-			to_chat(user, "<span class='warning'>You clear the hatched egg.</span>")
+			user << "<span class='warning'>You clear the hatched egg.</span>"
 			qdel(src)
 			return
 /*		if(GROWING)
-			to_chat(user, "<span class='warning'>The child is not developed yet.</span>")
+			user << "<span class='warning'>The child is not developed yet.</span>"
 			return
 		if(GROWN)
-			to_chat(user, "<span class='warning'>You retrieve the child.</span>")
+			user << "<span class='warning'>You retrieve the child.</span>"
 			Burst(0)
 			return
 
@@ -545,3 +562,15 @@
 	if(exposed_temperature > 500 + T0C)
 		health -= 5
 		healthcheck()
+/*
+/obj/effect/alien/egg/HasProximity(atom/movable/AM as mob|obj)
+	if(status == GROWN)
+		if(!CanHug(AM))
+			return
+
+		var/mob/living/carbon/C = AM
+		if(C.stat == CONSCIOUS && C.status_flags & XENO_HOST)
+			return
+
+		Burst(0)
+*/

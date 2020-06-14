@@ -32,11 +32,12 @@
 	var/survey_points = 0	// For redeeming at explorer equipment vendors.
 
 /obj/item/weapon/card/id/examine(mob/user)
-	. = ..()
-	if(in_range(user, src))
-		show(user) //Not chat related
+	set src in oview(1)
+	if(in_range(usr, src))
+		show(usr)
+		usr << desc
 	else
-		. += "<span class='warning'>It is too far away to read.</span>"
+		usr << "<span class='warning'>It is too far away.</span>"
 
 /obj/item/weapon/card/id/proc/prevent_tracking()
 	return 0
@@ -90,8 +91,8 @@
 	return dat
 
 /obj/item/weapon/card/id/attack_self(mob/user as mob)
-	user.visible_message("\The [user] shows you: [bicon(src)] [src.name]. The assignment on the card: [src.assignment]",\
-		"You flash your ID card: [bicon(src)] [src.name]. The assignment on the card: [src.assignment]")
+	user.visible_message("\The [user] shows you: \icon[src] [src.name]. The assignment on the card: [src.assignment]",\
+		"You flash your ID card: \icon[src] [src.name]. The assignment on the card: [src.assignment]")
 
 	src.add_fingerprint(user)
 	return
@@ -107,10 +108,10 @@
 	set category = "Object"
 	set src in usr
 
-	to_chat(usr, "[bicon(src)] [src.name]: The current assignment on the card is [src.assignment].")
-	to_chat(usr, "The blood type on the card is [blood_type].")
-	to_chat(usr, "The DNA hash on the card is [dna_hash].")
-	to_chat(usr, "The fingerprint hash on the card is [fingerprint_hash].")
+	usr << text("\icon[] []: The current assignment on the card is [].", src, src.name, src.assignment)
+	usr << "The blood type on the card is [blood_type]."
+	usr << "The DNA hash on the card is [dna_hash]."
+	usr << "The fingerprint hash on the card is [fingerprint_hash]."
 	return
 
 /obj/item/weapon/card/id/get_worn_icon_state(var/slot_name)

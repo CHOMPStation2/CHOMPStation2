@@ -3,7 +3,6 @@
 /obj/item/weapon/tank/jetpack
 	name = "jetpack (empty)"
 	desc = "A tank of compressed gas for use as propulsion in zero-gravity areas. Use with caution."
-	icon = 'icons/obj/tank_vr.dmi' //VOREStation Edit
 	icon_state = "jetpack"
 	gauge_icon = null
 	w_class = ITEMSIZE_LARGE
@@ -31,14 +30,14 @@
 /obj/item/weapon/tank/jetpack/examine(mob/user)
 	. = ..()
 	if(air_contents.total_moles < 5)
-		. += "<span class='danger'>The meter on \the [src] indicates you are almost out of gas!</span>"
+		user << "<span class='danger'>The meter on \the [src] indicates you are almost out of gas!</span>"
 		playsound(user, 'sound/effects/alert.ogg', 50, 1)
 
 /obj/item/weapon/tank/jetpack/verb/toggle_rockets()
 	set name = "Toggle Jetpack Stabilization"
 	set category = "Object"
 	stabilization_on = !( stabilization_on )
-	to_chat(usr, "You toggle the stabilization [stabilization_on? "on":"off"].")
+	usr << "You toggle the stabilization [stabilization_on? "on":"off"]."
 
 /obj/item/weapon/tank/jetpack/verb/toggle()
 	set name = "Toggle Jetpack"
@@ -57,7 +56,7 @@
 		M.update_inv_back()
 		M.update_action_buttons()
 
-	to_chat(usr, "You toggle the thrusters [on? "on":"off"].")
+	usr << "You toggle the thrusters [on? "on":"off"]."
 
 /obj/item/weapon/tank/jetpack/proc/allow_thrust(num, mob/living/user as mob)
 	if(!on)
@@ -85,8 +84,9 @@
 	item_state_slots = list(slot_r_hand_str = "jetpack-void", slot_l_hand_str = "jetpack-void")
 
 /obj/item/weapon/tank/jetpack/void/Initialize()
-	. = ..()
+	..()
 	air_contents.adjust_gas("oxygen", (6*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+	return
 
 /obj/item/weapon/tank/jetpack/oxygen
 	name = "jetpack (oxygen)"
@@ -95,8 +95,9 @@
 	item_state_slots = list(slot_r_hand_str = "jetpack", slot_l_hand_str = "jetpack")
 
 /obj/item/weapon/tank/jetpack/oxygen/Initialize()
-	. = ..()
+	..()
 	air_contents.adjust_gas("oxygen", (6*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+	return
 
 /obj/item/weapon/tank/jetpack/carbondioxide
 	name = "jetpack (carbon dioxide)"
@@ -106,16 +107,17 @@
 	item_state_slots = list(slot_r_hand_str = "jetpack-black", slot_l_hand_str = "jetpack-black")
 
 /obj/item/weapon/tank/jetpack/carbondioxide/Initialize()
-	. = ..()
+	..()
 	air_contents.adjust_gas("carbon_dioxide", (6*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+	return
 
 /obj/item/weapon/tank/jetpack/rig
 	name = "jetpack"
 	var/obj/item/weapon/rig/holder
 
 /obj/item/weapon/tank/jetpack/rig/examine()
-	. = ..()
-	. += "It's a jetpack. If you can see this, report it on the bug tracker."
+	usr << "It's a jetpack. If you can see this, report it on the bug tracker."
+	return 0
 
 /obj/item/weapon/tank/jetpack/rig/allow_thrust(num, mob/living/user as mob)
 

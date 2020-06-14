@@ -9,7 +9,7 @@
 	anchored = 1
 	opacity = 1
 	density = 1
-	can_atmos_pass = ATMOS_PASS_PROC
+	can_atmos_pass = ATMOS_PASS_DENSITY
 	layer = DOOR_OPEN_LAYER
 	var/open_layer = DOOR_OPEN_LAYER
 	var/closed_layer = DOOR_CLOSED_LAYER
@@ -42,7 +42,7 @@
 	if(isanimal(user))
 		var/mob/living/simple_mob/S = user
 		if(damage >= STRUCTURE_MIN_DAMAGE_THRESHOLD)
-			visible_message("<span class='danger'>\The [user] smashes into [src]!</span>")
+			visible_message("<span class='danger'>\The [user] smashes into the [src]!</span>")
 			playsound(src, S.attack_sound, 75, 1)
 			take_damage(damage)
 		else
@@ -82,17 +82,11 @@
 /obj/machinery/door/process()
 	if(close_door_at && world.time >= close_door_at)
 		if(autoclose)
-			close_door_at = world.time + next_close_wait()
+			close_door_at = next_close_time()
 			spawn(0)
 				close()
 		else
 			close_door_at = 0
-	if (..() == PROCESS_KILL && !close_door_at)
-		return PROCESS_KILL
-
-/obj/machinery/door/proc/autoclose_in(wait)
-	close_door_at = world.time + wait
-	START_MACHINE_PROCESSING(src)
 
 /obj/machinery/door/proc/can_open()
 	if(!density || operating || !ticker)
@@ -119,11 +113,7 @@
 			return																		//VOREStation Edit: unable to open doors
 		else
 			bumpopen(M)
-	if(istype(AM, /obj/item/device/uav))
-		if(check_access(null))
-			open()
-		else
-			do_animate("deny")
+
 
 	if(istype(AM, /mob/living/bot))
 		var/mob/living/bot/bot = AM
@@ -155,8 +145,8 @@
 
 /obj/machinery/door/CanZASPass(turf/T, is_zone)
 	if(is_zone)
-		return !block_air_zones // Block merging unless block_air_zones = 0
-	return !density // Block airflow unless density = 0
+		return block_air_zones ? ATMOS_PASS_NO : ATMOS_PASS_YES
+	return ..()
 
 /obj/machinery/door/proc/bumpopen(mob/user as mob)
 	if(operating)	return
@@ -336,13 +326,13 @@
 /obj/machinery/door/examine(mob/user)
 	. = ..()
 	if(src.health <= 0)
-		. += "It is broken!"
-	else if(src.health < src.maxhealth / 4)
-		. += "It looks like it's about to break!"
+		to_chat(user, "\The [src] is broken!")
+	if(src.health < src.maxhealth / 4)
+		to_chat(user, "\The [src] looks like it's about to break!")
 	else if(src.health < src.maxhealth / 2)
-		. += "It looks seriously damaged!"
+		to_chat(user, "\The [src] looks seriously damaged!")
 	else if(src.health < src.maxhealth * 3/4)
-		. += "It shows signs of damage!"
+		to_chat(user, "\The [src] shows signs of damage!")
 
 
 /obj/machinery/door/proc/set_broken()
@@ -437,12 +427,12 @@
 	operating = 0
 
 	if(autoclose)
-		autoclose_in(next_close_wait())
+		close_door_at = next_close_time()
 
 	return 1
 
-/obj/machinery/door/proc/next_close_wait()
-	return (normalspeed ? 150 : 5)
+/obj/machinery/door/proc/next_close_time()
+	return world.time + (normalspeed ? 150 : 5)
 
 /obj/machinery/door/proc/close(var/forced = 0)
 	if(!can_close(forced))
@@ -494,7 +484,8 @@
 		else
 			source.thermal_conductivity = initial(source.thermal_conductivity)
 
-/obj/machinery/door/Moved(atom/old_loc, direction, forced = FALSE)
+/obj/machinery/door/Move(new_loc, new_dir)
+	//update_nearby_tiles()
 	. = ..()
 	if(width > 1)
 		if(dir in list(EAST, WEST))

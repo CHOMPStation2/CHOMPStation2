@@ -466,7 +466,7 @@
 /area/tether_away/aerostat/solars)
 "bd" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/aerostat)
+/area/shuttle/aerostat/docked)
 "be" = (
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
@@ -477,11 +477,11 @@
 /area/tether_away/aerostat/inside)
 "bg" = (
 /turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
+/area/shuttle/aerostat/docked)
 "bh" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
+/area/shuttle/aerostat/docked)
 "bi" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner,
 /turf/simulated/floor/plating/virgo2,
@@ -535,7 +535,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
+/area/shuttle/aerostat/docked)
 "bs" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
@@ -633,11 +633,11 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
+/area/shuttle/aerostat/docked)
 "bI" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
+/area/shuttle/aerostat/docked)
 "bJ" = (
 /obj/structure/table/standard,
 /obj/random/cargopod,
@@ -774,6 +774,14 @@
 	icon_state = "void-hc"
 	},
 /area/tether_away/aerostat/inside)
+"cf" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/shuttle_connector/aerostat,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
 "cg" = (
 /obj/machinery/door/airlock/multi_tile/metal{
 	icon_state = "door_closed";
@@ -800,11 +808,11 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
+/area/shuttle/aerostat/docked)
 "cl" = (
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
+/area/shuttle/aerostat/docked)
 "cm" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -869,14 +877,8 @@
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "cv" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/aerostat;
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
-	landmark_tag = "aerostat_west";
-	name = "Virgo 2 Aerostat (W)"
-	},
 /turf/unsimulated/floor/sky/virgo2_sky,
-/area/tether_away/aerostat)
+/area/shuttle/excursion/away_aerostat)
 "cw" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/virgo2,
@@ -1624,64 +1626,22 @@
 /obj/random/toolbox,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"eL" = (
-/obj/structure/railing,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
 "fl" = (
 /obj/random/contraband,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"fH" = (
-/obj/structure/salvageable/implant_container,
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"gt" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
 "gD" = (
 /obj/tether_away_spawner/aerostat_inside,
 /turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"gT" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"gX" = (
-/obj/structure/salvageable/data,
-/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "hd" = (
 /obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"kD" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/aerostat;
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
-	landmark_tag = "aerostat_northwest";
-	name = "Virgo 2 Aerostat (NW)"
-	},
-/turf/unsimulated/floor/sky/virgo2_sky,
-/area/tether_away/aerostat)
 "kF" = (
 /obj/random/action_figure,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"pd" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/aerostat;
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
-	landmark_tag = "aerostat_east";
-	name = "Virgo 2 Aerostat (E)"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
 "tZ" = (
 /obj/structure/table/standard,
 /obj/random/powercell,
@@ -1698,19 +1658,6 @@
 /obj/random/firstaid,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"yy" = (
-/obj/structure/salvageable/autolathe,
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"zX" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/aerostat;
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
-	landmark_tag = "aerostat_south";
-	name = "Virgo 2 Aerostat (S)"
-	},
-/turf/unsimulated/floor/sky/virgo2_sky,
-/area/tether_away/aerostat)
 "AS" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1718,15 +1665,6 @@
 /obj/random/toolbox,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"Dt" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/aerostat;
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
-	landmark_tag = "aerostat_northeast";
-	name = "Virgo 2 Aerostat (NE)"
-	},
-/turf/unsimulated/floor/sky/virgo2_sky,
-/area/tether_away/aerostat)
 "Du" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -1772,29 +1710,10 @@
 /obj/random/contraband,
 /turf/simulated/floor/bluegrid/virgo2,
 /area/tether_away/aerostat/inside)
-"ON" = (
-/obj/structure/railing{
-	icon_state = "railing0";
-	dir = 1
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
 "Qe" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/cobweb2,
 /obj/random/contraband,
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"QE" = (
-/obj/structure/salvageable/machine,
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"Tq" = (
-/obj/effect/overmap/visitable/sector/virgo2,
-/turf/unsimulated/floor/sky/virgo2_sky,
-/area/tether_away/aerostat)
-"TR" = (
-/obj/structure/salvageable/computer,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "UC" = (
@@ -1803,17 +1722,10 @@
 /obj/random/toolbox,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"VR" = (
-/obj/machinery/door/airlock/external,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
 "Wk" = (
 /obj/random/drinkbottle,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"WS" = (
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
 "Ym" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/energy/taser/xeno,
@@ -2105,7 +2017,7 @@ aw
 aw
 aw
 aw
-Tq
+aw
 cZ
 "}
 (3,1,1) = {"
@@ -5018,10 +4930,10 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -5150,21 +5062,21 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -5292,21 +5204,21 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -5433,22 +5345,22 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -5575,21 +5487,21 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -5716,22 +5628,22 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -5858,22 +5770,22 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -6000,22 +5912,22 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -6142,22 +6054,22 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -6284,22 +6196,22 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -6427,21 +6339,21 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -6569,22 +6481,22 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -6712,21 +6624,21 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
 cv
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -6854,21 +6766,21 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
+cv
 aw
 aw
 aw
@@ -7003,13 +6915,13 @@ aw
 aw
 aw
 aw
-aw
-aw
+cv
+cv
 aw
 cc
 cY
-aw
-aw
+cv
+cv
 aw
 aw
 aw
@@ -7148,7 +7060,7 @@ aw
 aw
 aw
 aa
-cc
+cf
 cY
 aa
 aw
@@ -9568,7 +9480,7 @@ ci
 bv
 at
 bK
-QE
+bK
 bK
 au
 bv
@@ -10937,7 +10849,7 @@ aw
 aw
 aw
 aw
-kD
+aw
 aw
 aw
 aw
@@ -11221,8 +11133,8 @@ aw
 aw
 aw
 aw
-ON
-eL
+aw
+aw
 aw
 aw
 aw
@@ -11363,8 +11275,8 @@ aw
 aw
 aw
 aw
-ON
-eL
+aw
+aw
 aw
 aw
 aw
@@ -11505,19 +11417,19 @@ aw
 aw
 aw
 aw
-ON
-eL
 aw
 aw
 aw
 aw
-ac
-bo
-bf
-ac
-ac
-bo
-bf
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 ac
 be
 be
@@ -11571,7 +11483,7 @@ bv
 cD
 cB
 bK
-yy
+bK
 bv
 bj
 aw
@@ -11583,14 +11495,14 @@ aw
 aw
 bq
 ac
-ac
-bo
-bf
-ac
-ac
-bo
-bf
-ac
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -11647,20 +11559,20 @@ aw
 aw
 aw
 aw
-ON
-WS
-gt
-gt
-gt
-gt
-VR
-be
-be
-be
-be
-be
-be
-VR
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+ac
 be
 gD
 bj
@@ -11673,7 +11585,7 @@ aw
 aw
 bq
 bv
-gX
+bK
 bK
 cz
 cD
@@ -11724,17 +11636,17 @@ aw
 aw
 aw
 bq
-be
-VR
-be
-be
-be
-be
-be
-be
-VR
+bf
 aw
-zX
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -11789,20 +11701,20 @@ aw
 aw
 aw
 aw
-ON
-WS
-gT
-gT
-gT
-gT
-VR
-be
-be
-be
-be
-be
-be
-VR
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+ac
 be
 be
 bj
@@ -11815,7 +11727,7 @@ aw
 aw
 bq
 bv
-fH
+bK
 bK
 cz
 cD
@@ -11855,7 +11767,7 @@ bv
 cD
 cB
 bK
-TR
+bK
 bv
 bj
 aw
@@ -11866,15 +11778,15 @@ aw
 aw
 aw
 bq
-be
-VR
-be
-be
-be
-be
-be
-be
-VR
+bf
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -11931,19 +11843,19 @@ aw
 aw
 aw
 aw
-ON
-eL
 aw
 aw
 aw
 aw
-ac
-bo
-bf
-ac
-ac
-bo
-bf
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 ac
 be
 be
@@ -11997,7 +11909,7 @@ bv
 cD
 cB
 bK
-TR
+bK
 bv
 bj
 aw
@@ -12009,14 +11921,14 @@ aw
 aw
 bq
 ac
-ac
-bo
-bf
-ac
-ac
-bo
-bf
-ac
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -12073,8 +11985,8 @@ aw
 aw
 aw
 aw
-ON
-eL
+aw
+aw
 aw
 aw
 aw
@@ -12215,8 +12127,8 @@ aw
 aw
 aw
 aw
-ON
-eL
+aw
+aw
 aw
 aw
 aw
@@ -12499,7 +12411,7 @@ aw
 aw
 aw
 aw
-Dt
+aw
 aw
 aw
 aw
@@ -13970,7 +13882,7 @@ ci
 bv
 Gs
 bK
-QE
+bK
 bK
 Lw
 bv
@@ -16804,7 +16716,7 @@ bI
 br
 br
 br
-pd
+bg
 bg
 br
 br

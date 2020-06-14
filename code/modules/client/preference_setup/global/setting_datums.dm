@@ -98,18 +98,6 @@ var/list/_client_preferences_by_type
 	key = "DIGEST_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
-
-/datum/client_preference/emote_noises
-	description = "Emote Noises" //MERP
-	key = "EMOTE_NOISES"
-	enabled_description = "Noisy"
-	disabled_description = "Silent"
-/datum/client_preference/whisubtle_vis
-	description = "Whi/Subtles Ghost Visible" 
-	key = "WHISUBTLE_VIS"
-	enabled_description = "Visible"
-	disabled_description = "Hidden"
-	enabled_by_default = FALSE
 //VOREStation Add End
 /datum/client_preference/weather_sounds
 	description ="Weather sounds"
@@ -147,27 +135,15 @@ var/list/_client_preferences_by_type
 	enabled_description = "Show"
 	disabled_description = "Hide"
 
-/datum/client_preference/air_pump_noise
-	description ="Air Pump Ambient Noise"
-	key = "SOUND_AIRPUMP"
-	enabled_description = "Audible"
-	disabled_description = "Silent"
-
-/datum/client_preference/drop_sounds
-	description = "Dropped Item Sounds"
-	key = "SOUND_DROPPED"
-	enabled_description = "Enabled"
-	disabled_description = "Disabled"
+/datum/client_preference/air_pump_noise 
+	description ="Air Pump Ambient Noise" 
+	key = "SOUND_AIRPUMP" 
+	enabled_description = "Audible" 
+	disabled_description = "Silent" 
 
 /datum/client_preference/mob_tooltips
 	description ="Mob tooltips"
 	key = "MOB_TOOLTIPS"
-	enabled_description = "Show"
-	disabled_description = "Hide"
-
-/datum/client_preference/inv_tooltips
-	description ="Inventory tooltips"
-	key = "INV_TOOLTIPS"
 	enabled_description = "Show"
 	disabled_description = "Hide"
 
@@ -176,12 +152,6 @@ var/list/_client_preferences_by_type
 	key = "ATTACK_ICONS"
 	enabled_description = "Show"
 	disabled_description = "Hide"
-
-/datum/client_preference/precision_placement
-	description ="Precision Placement"
-	key = "PRECISE_PLACEMENT"
-	enabled_description = "Active"
-	disabled_description = "Inactive"
 
 /datum/client_preference/hotkeys_default
 	description ="Hotkeys Default"
@@ -260,17 +230,11 @@ var/list/_client_preferences_by_type
 	description ="Hear In-game Instruments"
 	key = "SOUND_INSTRUMENT"
 
-/datum/client_preference/vchat_enable
-	description = "Enable/Disable VChat"
-	key = "VCHAT_ENABLE"
-	enabled_description =  "Enabled"
-	disabled_description = "Disabled"
-
 /********************
 * Staff Preferences *
 ********************/
 /datum/client_preference/admin/may_toggle(var/mob/preference_mob)
-	return check_rights(R_ADMIN|R_EVENT, 0, preference_mob)
+	return check_rights(R_ADMIN, 0, preference_mob)
 
 /datum/client_preference/mod/may_toggle(var/mob/preference_mob)
 	return check_rights(R_MOD|R_ADMIN, 0, preference_mob)

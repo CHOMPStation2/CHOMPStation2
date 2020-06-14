@@ -322,7 +322,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				base_icon.MapColors(rgb(tone[1],0,0),rgb(0,tone[2],0),rgb(0,0,tone[3]))
 
 		//Handle husk overlay.
-		if(husk && ("overlay_husk" in cached_icon_states(species.icobase)))
+		if(husk && ("overlay_husk" in icon_states(species.icobase)))
 			var/icon/mask = new(base_icon)
 			var/icon/husk_over = new(species.icobase,"overlay_husk")
 			mask.MapColors(0,0,0,1, 0,0,0,1, 0,0,0,1, 0,0,0,1, 0,0,0,0)
@@ -581,24 +581,16 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(wear_suit && (wear_suit.flags_inv & HIDEJUMPSUIT) && !istype(wear_suit, /obj/item/clothing/suit/space/rig))
 		return //Wearing a suit that prevents uniform rendering
 
-	var/obj/item/clothing/under/under = w_uniform
-
-	var/uniform_sprite
-
-	if(under.index)
-		uniform_sprite = "[INV_W_UNIFORM_DEF_ICON]_[under.index].dmi"
-	else
-		uniform_sprite = "[INV_W_UNIFORM_DEF_ICON].dmi"
-
 	//Build a uniform sprite
 	//VOREStation Edit start.
-	var/icon/c_mask = tail_style?.clip_mask
-	if(c_mask)
+	var/icon/c_mask = null
+	if(tail_style && tail_style.clip_mask_icon && tail_style.clip_mask_state)
 		var/obj/item/clothing/suit/S = wear_suit
-		if(!istype(S) || (wear_suit.flags_inv & HIDETAIL) || S.taurized) // Reasons to not mask
-			c_mask = null
-	overlays_standing[UNIFORM_LAYER] = w_uniform.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_w_uniform_str, default_icon = uniform_sprite, default_layer = UNIFORM_LAYER, clip_mask = c_mask)
+		if(!(wear_suit && ((wear_suit.flags_inv & HIDETAIL) || (istype(S) && S.taurized)))) //Clip the lower half of the uniform off using the tail's clip mask.
+			c_mask = new /icon(tail_style.clip_mask_icon, tail_style.clip_mask_state)
+	overlays_standing[UNIFORM_LAYER] = w_uniform.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_w_uniform_str, default_icon = INV_W_UNIFORM_DEF_ICON, default_layer = UNIFORM_LAYER, clip_mask = c_mask)
 	//VOREStation Edit end.
+
 	apply_layer(UNIFORM_LAYER)
 
 /mob/living/carbon/human/update_inv_wear_id()
@@ -767,25 +759,22 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(!wear_suit)
 		return //No point, no suit.
 
-	var/obj/item/clothing/suit/suit = wear_suit
-	var/suit_sprite
-
-	if(istype(suit) && suit.index)
-		suit_sprite = "[INV_SUIT_DEF_ICON]_[suit.index].dmi"
-	else if(istype(suit, /obj/item/clothing) && !isnull(suit.update_icon_define))
-		suit_sprite = suit.update_icon_define
-	else
-		suit_sprite = "[INV_SUIT_DEF_ICON].dmi"
+	// Part of splitting the suit sprites up
+	var/iconFile = INV_SUIT_DEF_ICON
+	var/obj/item/clothing/suit/S //VOREStation edit - break this var out a level for use below.
+	if(istype(wear_suit, /obj/item/clothing/suit))
+		S = wear_suit
+		if(S.update_icon_define)
+			iconFile = S.update_icon_define
 
 	//VOREStation Edit start.
 	var/icon/c_mask = null
 	var/tail_is_rendered = (overlays_standing[TAIL_LAYER] || overlays_standing[TAIL_LAYER_ALT])
-	var/valid_clip_mask = tail_style?.clip_mask
+	var/valid_clip_mask = (tail_style && tail_style.clip_mask_icon && tail_style.clip_mask_state)
 
-	if(tail_is_rendered && valid_clip_mask && !(suit && istype(suit) && suit.taurized)) //Clip the lower half of the suit off using the tail's clip mask for taurs since taur bodies aren't hidden.
-		c_mask = valid_clip_mask
-	overlays_standing[SUIT_LAYER] = wear_suit.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_wear_suit_str, default_icon = suit_sprite, default_layer = SUIT_LAYER, clip_mask = c_mask)
-
+	if(tail_is_rendered && valid_clip_mask && !(S && S.taurized)) //Clip the lower half of the suit off using the tail's clip mask for taurs since taur bodies aren't hidden.
+		c_mask = new /icon(tail_style.clip_mask_icon, tail_style.clip_mask_state)
+	overlays_standing[SUIT_LAYER] = wear_suit.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_wear_suit_str, default_icon = iconFile, default_layer = SUIT_LAYER, clip_mask = c_mask)
 	//VOREStation Edit end.
 
 	apply_layer(SUIT_LAYER)
@@ -856,13 +845,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(QDESTROYING(src))
 		return
 
-	clear_alert("legcuffed")
 	remove_layer(LEGCUFF_LAYER)
 
 	if(!legcuffed)
 		return //Not legcuffed, why bother.
-
-	throw_alert("legcuffed", /obj/screen/alert/restrained/legcuffed, new_master = legcuffed)
 
 	overlays_standing[LEGCUFF_LAYER] = legcuffed.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_legcuffed_str, default_icon = INV_LCUFF_DEF_ICON, default_layer = LEGCUFF_LAYER)
 

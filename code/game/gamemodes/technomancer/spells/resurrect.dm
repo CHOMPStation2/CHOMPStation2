@@ -19,20 +19,21 @@
 	if(isliving(hit_atom))
 		var/mob/living/L = hit_atom
 		if(L == user)
-			to_chat(user, "<span class='warning'>Clever as you may seem, this won't work on yourself while alive.</span>")
+			user << "<span class='warning'>Clever as you may seem, this won't work on yourself while alive.</span>"
 			return 0
 		if(L.stat != DEAD)
-			to_chat(user, "<span class='warning'>\The [L] isn't dead!</span>")
+			user << "<span class='warning'>\The [L] isn't dead!</span>"
 			return 0
 		if(pay_energy(5000))
 			if(L.tod > world.time + 30 MINUTES)
-				to_chat(user, "<span class='danger'>\The [L]'s been dead for too long, even this function cannot replace cloning at this point.</span>")
+				user << "<span class='danger'>\The [L]'s been dead for too long, even this function cannot replace cloning at \
+				this point.</span>"
 				return 0
-			to_chat(user, "<span class='notice'>You stab \the [L] with a hidden integrated hypo, attempting to bring them back...</span>")
+			user << "<span class='notice'>You stab \the [L] with a hidden integrated hypo, attempting to bring them back...</span>"
 			if(istype(L, /mob/living/simple_mob))
 				var/mob/living/simple_mob/SM = L
 				SM.health = SM.getMaxHealth() / 3
-				SM.set_stat(CONSCIOUS)
+				SM.stat = CONSCIOUS
 				dead_mob_list -= SM
 				living_mob_list += SM
 				SM.update_icon()
@@ -43,8 +44,9 @@
 				if(!H.client && H.mind) //Don't force the dead person to come back if they don't want to.
 					for(var/mob/observer/dead/ghost in player_list)
 						if(ghost.mind == H.mind)
-							ghost.notify_revive("The Technomancer [user.real_name] is trying to revive you. \
-							Re-enter your body if you want to be revived!", 'sound/effects/genetics.ogg', source = user)
+							ghost << "<b><font color = #330033><font size = 3>The Technomancer [user.real_name] is trying to \
+							revive you. Return to your body if you want to be resurrected!</b> \
+							(Verbs -> Ghost -> Re-enter corpse)</font></font>"
 							break
 
 				H.adjustBruteLoss(-40)
@@ -52,14 +54,14 @@
 
 				sleep(10 SECONDS)
 				if(H.client)
-					L.set_stat(CONSCIOUS) //Note that if whatever killed them in the first place wasn't fixed, they're likely to die again.
+					L.stat = CONSCIOUS //Note that if whatever killed them in the first place wasn't fixed, they're likely to die again.
 					dead_mob_list -= H
 					living_mob_list += H
 					H.timeofdeath = null
 					visible_message("<span class='danger'>\The [H]'s eyes open!</span>")
-					to_chat(user, "<span class='notice'>It's alive!</span>")
+					user << "<span class='notice'>It's alive!</span>"
 					adjust_instability(50)
 					log_and_message_admins("has resurrected [H].")
 				else
-					to_chat(user, "<span class='warning'>The body of \the [H] doesn't seem to respond, perhaps you could try again?</span>")
+					user << "<span class='warning'>The body of \the [H] doesn't seem to respond, perhaps you could try again?</span>"
 					adjust_instability(10)

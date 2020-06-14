@@ -12,9 +12,13 @@
 /obj/effect/step_trigger/proc/Trigger(var/atom/movable/A)
 	return 0
 
-/obj/effect/step_trigger/Crossed(atom/movable/H as mob|obj)
-	if(H.is_incorporeal())
-		return
+/obj/effect/step_trigger/Crossed(H as mob|obj)
+	//VOREStation Edit begin: SHADEKIN
+	var/mob/SK = H
+	if(istype(SK))
+		if(SK.shadekin_phasing_check())
+			return
+	//VOREStation Edit end: SHADEKIN
 	..()
 	if(!H)
 		return

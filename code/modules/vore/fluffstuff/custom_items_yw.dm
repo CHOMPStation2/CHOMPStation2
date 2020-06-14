@@ -114,7 +114,6 @@
 /obj/item/device/modkit_conversion/fluff/amara_hos_kit
 	name = "Amara's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Head of security armored coat. It has a red wolf painted on it."
-	owner_ckey = "generalpantsu"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -127,7 +126,6 @@
 /obj/item/device/modkit_conversion/fluff/nika_sec_kit
 	name = "Nika's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Officer Armor Vest."
-	owner_ckey = "generalpantsu"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -204,7 +202,6 @@
 /obj/item/device/modkit_conversion/fluff/melissa_gun_kit
 	name = "Melissa's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a 45 Pistol."
-	owner_ckey = "dawidoe"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -216,12 +213,12 @@
 // championfire
 // ************
 
-//Yuki Windroar
+//Anoki Windroar
 
-/obj/item/weapon/implanter/reagent_generator/roiz/yuki
-	implant_type = /obj/item/weapon/implant/reagent_generator/roiz/yuki
+/obj/item/weapon/implanter/reagent_generator/roiz/anoki
+	implant_type = /obj/item/weapon/implant/reagent_generator/roiz/anoki
 
-/obj/item/weapon/implant/reagent_generator/roiz/yuki
+/obj/item/weapon/implant/reagent_generator/roiz/anoki
 	name = "egg laying implant"
 	desc = "This is an implant that allows the user to lay eggs."
 	usable_volume = 500
@@ -229,7 +226,7 @@
 
 	empty_message = list("Your lower belly feels smooth and empty. Sorry, we're out of eggs!", "The reduced pressure in your lower belly tells you there are no more eggs.")
 	full_message = list("Your lower belly looks swollen with irregular bumps, and it feels heavy.", "Your lower abdomen feels really heavy, making it a bit hard to walk.")
-	emote_descriptor = list("an egg right out of Yuki's lower belly!", "into Yuki's belly firmly, forcing him to lay an egg!", "Yuki really tight, who promptly lays an egg!")
+	emote_descriptor = list("an egg right out of Anoki's lower belly!", "into Anoki' belly firmly, forcing him to lay an egg!", "Anoki really tight, who promptly lays an egg!")
 
 // ********
 // Vitorhks
@@ -240,7 +237,6 @@
 /obj/item/device/modkit_conversion/fluff/jessica_sec_kit
 	name = "Jessica's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Officer Armor Vest."
-	owner_ckey = "vitorhks"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -324,7 +320,6 @@
 /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a
 	name = "Mitsuko's modkit Mk1"
 	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
-	owner_ckey = "lukevale"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -335,7 +330,6 @@
 /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/b
 	name = "Mitsuko's modkit Mk2"
 	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
-	owner_ckey = "lukevale"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -346,7 +340,6 @@
 /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c
 	name = "Mitsuko's modkit Mk3"
 	desc = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
-	owner_ckey = "lukevale"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -362,13 +355,13 @@
 
 /obj/item/device/healthanalyzer/improved/fluff/jiao_health
 	name = "Kanghu medical scanner MK2"
-	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is an improved unit."
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a improved unit."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "scanner_mk2"
 
 /obj/item/device/healthanalyzer/advanced/fluff/jiao_health
 	name = "Kanghu medical scanner MK3"
-	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is an advanced unit."
+	desc = "A Modified medical scanner, all the main components are compacted into the handle. This one is a advanced unit."
 	icon = 'icons/vore/custom_items_yw.dmi'
 	icon_state = "scanner_mk3"
 
@@ -491,7 +484,6 @@
 // SASOperative
 // **************
 
-// These seem to have been deprecated from loadouts? -KK
 /obj/item/device/modkit_conversion/fluff/skinner/a
 	name = "Joseph's modkit Mk1"
 	desc = "A kit containing all the needed tools and parts to modify a security jumpsuit."
@@ -569,7 +561,6 @@
 /obj/item/device/modkit_conversion/fluff/mocha_suit_kit
 	name = "Mocha's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a Explorer Suit"
-	owner_ckey = "mocatheporg1"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -590,7 +581,6 @@
 /obj/item/device/modkit_conversion/fluff/kaith_knife_kit
 	name = "Kaith's modkit"
 	desc = "A kit containing all the needed tools and parts to modify a survival knife"
-	owner_ckey = "foxicide"
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "modkit"
@@ -598,55 +588,3 @@
 	from_suit = /obj/item/weapon/material/knife/tacknife/survival
 	to_suit = /obj/item/weapon/material/knife/tacknife/survival/fluff/kaith
 
-// *************
-// Coda_Vanistok
-// *************
-/obj/item/weapon/implanter/fluff/coda
-	imp = new /obj/item/weapon/implant/fluff/coda
-	icon_state = "implanter1_1"
-
-/obj/item/weapon/implanter/fluff/coda/remove_implant() //No way to remove this implant.
-	to_chat(usr, "<span class='notice'>It seems \the [imp] can't be removed from \the [src].</span>")
-	return
-
-/obj/item/weapon/implanter/fluff/coda/attack()
-	..()
-	if(!imp) //After injection, the implanter poofs.
-		to_chat(usr, "<span class='notice'>\The [src] disentegrates after you use it!</span>")
-		qdel(src)
-
-/obj/item/weapon/implant/fluff/coda
-	name = "locked size-modification implant"
-	desc = "This is an implant that allows the user to change their size. It appears to be locked to two settings."
-	var/mob/living/implanted_in = null
-
-/obj/item/weapon/implant/fluff/coda/post_implant(mob/source)
-	..()
-	var/mob/living/H = source
-	H.verbs += /obj/item/weapon/implant/fluff/coda/proc/coda_implant_resize
-	implanted_in = source
-	START_PROCESSING(SSobj, src)
-
-/obj/item/weapon/implant/fluff/coda/process()
-	if(implanted_in && (src.imp_in != implanted_in)) //If the implant is removed.
-		implanted_in.setBrainLoss(200)
-		visible_message("<span class='notice'>\The [src] shorts and sparks during removal, frying itself!</span>")
-		playsound(src.loc, "sparks", 50, 1)
-		STOP_PROCESSING(SSobj, src)
-		name = "melted implant"
-		desc = "Charred circuit in melted plastic case. Wonder what that used to be..."
-		icon_state = "implant_melted"
-		malfunction = MALFUNCTION_PERMANENT
-
-/obj/item/weapon/implant/fluff/coda/proc/coda_implant_resize(var/mob/living/carbon/human/H)
-	set name = "Resize (Implant)"
-	set desc = "Change your size between two different preset options."
-	set category = "IC"
-
-	if(H.stat == DEAD)
-		return
-	switch(alert(H, "What would you like your size to be changed to?", "Size modification implant", "Normal", "Cancel", "Large"))
-		if("Normal")
-			H.resize(1)
-		if("Large")
-			H.resize(1.22)

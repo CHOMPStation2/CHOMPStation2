@@ -3,7 +3,7 @@
 	desc = "Encourages the growth of diseases. This model comes with a dispenser system and a small radiation generator."
 	density = 1
 	anchored = 1
-	icon = 'icons/obj/virology_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/virology.dmi'
 	icon_state = "incubator"
 	var/obj/item/weapon/virusdish/dish
 	var/obj/item/weapon/reagent_containers/glass/beaker = null
@@ -22,7 +22,7 @@
 	if(istype(O, /obj/item/weapon/reagent_containers/glass) || istype(O,/obj/item/weapon/reagent_containers/syringe))
 
 		if(beaker)
-			to_chat(user, "\The [src] is already loaded.")
+			user << "\The [src] is already loaded."
 			return
 
 		beaker = O
@@ -38,7 +38,7 @@
 	if(istype(O, /obj/item/weapon/virusdish))
 
 		if(dish)
-			to_chat(user, "The dish tray is aleady full!")
+			user << "The dish tray is aleady full!"
 			return
 
 		dish = O

@@ -4,7 +4,7 @@
 	icon_keyboard = "tech_key"
 	icon_screen = "holocontrol"
 
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	active_power_usage = 8000 //8kW for the scenery + 500W per holoitem
 	var/item_power_usage = 500
 
@@ -161,8 +161,8 @@
 		emagged = 1
 		safety_disabled = 1
 		update_projections()
-		to_chat(user, "<span class='notice'>You vastly increase projector power and override the safety and security protocols.</span>")
-		to_chat(user, "Warning.  Automatic shutoff and derezing protocols have been corrupted.  Please call [using_map.company_name] maintenance and do not use the simulator.")
+		user << "<span class='notice'>You vastly increase projector power and override the safety and security protocols.</span>"
+		user << "Warning.  Automatic shutoff and derezing protocols have been corrupted.  Please call [using_map.company_name] maintenance and do not use the simulator."
 		log_game("[key_name(usr)] emagged the Holodeck Control Computer")
 		return 1
 	return
@@ -187,7 +187,7 @@
 	current_program = powerdown_program
 	linkedholodeck = locate(projection_area)
 	if(!linkedholodeck)
-		to_world("<span class='danger'>Holodeck computer at [x],[y],[z] failed to locate projection area.</span>")
+		world << "<span class='danger'>Holodeck computer at [x],[y],[z] failed to locate projection area.</span>"
 
 //This could all be done better, but it works for now.
 /obj/machinery/computer/HolodeckControl/Destroy()
@@ -224,7 +224,7 @@
 			damaged = 1
 			loadProgram(powerdown_program, 0)
 			active = 0
-			update_use_power(USE_POWER_IDLE)
+			use_power = 1
 			for(var/mob/M in range(10,src))
 				M.show_message("The holodeck overloads!")
 
@@ -268,10 +268,10 @@
 		loadProgram(powerdown_program, 0)
 
 		if(!linkedholodeck.has_gravity)
-			linkedholodeck.gravitychange(1)
+			linkedholodeck.gravitychange(1,linkedholodeck)
 
 		active = 0
-		update_use_power(USE_POWER_IDLE)
+		use_power = 1
 
 
 /obj/machinery/computer/HolodeckControl/proc/loadProgram(var/prog, var/check_delay = 1)
@@ -301,7 +301,7 @@
 
 	last_change = world.time
 	active = 1
-	update_use_power(USE_POWER_ACTIVE)
+	use_power = 2
 
 	for(var/item in holographic_objs)
 		derez(item)
@@ -362,19 +362,19 @@
 
 	last_gravity_change = world.time
 	active = 1
-	update_use_power(USE_POWER_IDLE)
+	use_power = 1
 
 	if(A.has_gravity)
-		A.gravitychange(0)
+		A.gravitychange(0,A)
 	else
-		A.gravitychange(1)
+		A.gravitychange(1,A)
 
 /obj/machinery/computer/HolodeckControl/proc/emergencyShutdown()
 	//Turn it back to the regular non-holographic room
 	loadProgram(powerdown_program, 0)
 
 	if(!linkedholodeck.has_gravity)
-		linkedholodeck.gravitychange(1)
+		linkedholodeck.gravitychange(1,linkedholodeck)
 
 	active = 0
-	update_use_power(USE_POWER_IDLE)
+	use_power = 1

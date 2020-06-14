@@ -10,36 +10,17 @@
 /mob/observer/eye/aiEye/New()
 	..()
 	visualnet = cameranet
-	
-/mob/observer/eye/aiEye/Destroy()
-    if(owner)
-        var/mob/living/silicon/ai/ai = owner
-        ai.all_eyes -= src
-        owner = null
-    . = ..()
 
 /mob/observer/eye/aiEye/setLoc(var/T, var/cancel_tracking = 1)
-	if(owner)
-		T = get_turf(T)
-		loc = T
-
+	if(..())
 		var/mob/living/silicon/ai/ai = owner
 		if(cancel_tracking)
 			ai.ai_cancel_tracking()
 
-		if(use_static)
-			ai.camera_visibility(src)
-
-		if(ai.client && !ai.multicam_on)
-			ai.client.eye = src
-
-		if(ai.master_multicam)
-			ai.master_multicam.refresh_view()
-
+		//Holopad
 		if(ai.holo)
 			if(ai.hologram_follow)
 				ai.holo.move_hologram(ai)
-
 		return 1
 
 // AI MOVEMENT
@@ -60,24 +41,21 @@
 		client.eye = new_eye
 
 /mob/living/silicon/ai/proc/create_eyeobj(var/newloc)
-	if(eyeobj)
-		destroy_eyeobj()
-	if(!newloc)
-		newloc = src.loc
+	if(eyeobj) destroy_eyeobj()
+	if(!newloc) newloc = src.loc
 	eyeobj = new /mob/observer/eye/aiEye(newloc)
-	all_eyes += eyeobj
 	eyeobj.owner = src
 	eyeobj.name = "[src.name] (AI Eye)" // Give it a name
-	if(client)
-		client.eye = eyeobj
+	if(client) client.eye = eyeobj
 	SetName(src.name)
 
 // Intiliaze the eye by assigning it's "ai" variable to us. Then set it's loc to us.
-/mob/living/silicon/ai/Initialize()
-	. = ..()
+/mob/living/silicon/ai/New()
+	..()
 	create_eyeobj()
-	if(eyeobj)
-		eyeobj.loc = src.loc
+	spawn(5)
+		if(eyeobj)
+			eyeobj.loc = src.loc
 
 /mob/living/silicon/ai/Destroy()
 	destroy_eyeobj()
@@ -86,12 +64,7 @@
 /atom/proc/move_camera_by_click()
 	if(istype(usr, /mob/living/silicon/ai))
 		var/mob/living/silicon/ai/AI = usr
-		if(AI.eyeobj)
-			if(!AI.multicam_on || AI.client.eye != AI.eyeobj)
-				return
-			var/area/A = get_area(AI.eyeobj)
-			if(istype(A, /area/ai_multicam_room))
-				return
+		if(AI.eyeobj && AI.client.eye == AI.eyeobj)
 			var/turf/T = get_turf(src)
 			if(T)
 				AI.eyeobj.setLoc(T)
@@ -117,4 +90,4 @@
 		return
 
 	eyeobj.acceleration = !eyeobj.acceleration
-	to_chat(usr, "Camera acceleration has been toggled [eyeobj.acceleration ? "on" : "off"].")
+	usr << "Camera acceleration has been toggled [eyeobj.acceleration ? "on" : "off"]."

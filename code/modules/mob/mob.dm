@@ -22,10 +22,16 @@
 	pullin = null
 	purged = null
 	internals = null
+	oxygen = null
 	i_select = null
 	m_select = null
+	toxin = null
+	fire = null
+	bodytemp = null
 	healths = null
 	throw_icon = null
+	nutrition_icon = null
+	pressure = null
 	pain = null
 	item_use_icon = null
 	gun_move_icon = null
@@ -39,7 +45,6 @@
 		dead_mob_list += src
 	else
 		living_mob_list += src
-	lastarea = get_area(src)
 	hook_vr("mob_new",list(src)) //VOREStation Code
 	update_transform() // Some mobs may start bigger or smaller than normal.
 	return ..()
@@ -65,7 +70,7 @@
 					return
 	// Added voice muffling for Issue 41.
 	if(stat == UNCONSCIOUS || sleeping > 0)
-		to_chat(src, "<I>... You can almost hear someone talking ...</I>")
+		to_chat(src,"<I>... You can almost hear someone talking ...</I>")
 	else
 		to_chat(src,msg)
 		if(teleop)
@@ -142,18 +147,7 @@
 	return 0
 
 /mob/proc/movement_delay(oldloc, direct)
-	. = 0
-	if(locate(/obj/item/weapon/grab) in src)
-		. += 7
-	
-	// Movespeed delay based on movement mode
-	switch(m_intent)
-		if("run")
-			if(drowsyness > 0)
-				. += 6
-			. += config.run_speed
-		if("walk")
-			. += config.walk_speed
+	return 0
 
 /mob/proc/Life()
 //	if(organStructure)
@@ -223,7 +217,7 @@
 			else
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
-		return 1
+	return
 
 
 /mob/proc/show_inv(mob/user as mob)
@@ -237,16 +231,9 @@
 	if((is_blind(src) || usr.stat) && !isobserver(src))
 		to_chat(src, "<span class='notice'>Something is there but you can't see it.</span>")
 		return 1
-	
-	//Could be gone by the time they finally pick something
-	if(!A)
-		return 1
 
 	face_atom(A)
-	var/list/results = A.examine(src)
-	if(!results || !results.len)
-		results = list("You were unable to examine that. Tell a developer!")
-	to_chat(src, jointext(results, "<br>"))
+	A.examine(src)
 
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
 	set name = "Point To"
@@ -329,7 +316,7 @@
 /mob/proc/update_flavor_text()
 	set src in usr
 	if(usr != src)
-		to_chat(usr, "No.")
+		usr << "No."
 	var/msg = sanitize(input(usr,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text)) as message|null, extra = 0)	//VOREStation Edit: separating out OOC notes
 
 	if(msg != null)
@@ -344,9 +331,9 @@
 	if (flavor_text && flavor_text != "")
 		var/msg = replacetext(flavor_text, "\n", " ")
 		if(length(msg) <= 40)
-			return "<span class='notice'>[msg]</span>"
+			return "<font color='blue'>[msg]</font>"
 		else
-			return "<span class='notice'>[copytext_preserve_html(msg, 1, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</span></a>"
+			return "<font color='blue'>[copytext_preserve_html(msg, 1, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</font></a>"
 
 /*
 /mob/verb/help()
@@ -421,6 +408,26 @@
 /client/verb/changes()
 	set name = "Changelog"
 	set category = "OOC"
+	getFiles(
+		'html/88x31.png',
+		'html/bug-minus.png',
+		'html/cross-circle.png',
+		'html/hard-hat-exclamation.png',
+		'html/image-minus.png',
+		'html/image-plus.png',
+		'html/map-pencil.png',
+		'html/music-minus.png',
+		'html/music-plus.png',
+		'html/tick-circle.png',
+		'html/wrench-screwdriver.png',
+		'html/spell-check.png',
+		'html/burn-exclamation.png',
+		'html/chevron.png',
+		'html/chevron-expand.png',
+		'html/changelog.css',
+		'html/changelog.js',
+		'html/changelog.html'
+		)
 	src << browse('html/changelog.html', "window=changes;size=675x650")
 	if(prefs.lastchangelog != changelog_hash)
 		prefs.lastchangelog = changelog_hash
@@ -432,10 +439,10 @@
 	set category = "OOC"
 	var/is_admin = 0
 
-	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
+	if(client.holder && (client.holder.rights & R_ADMIN))
 		is_admin = 1
 	else if(stat != DEAD || istype(src, /mob/new_player))
-		to_chat(usr, "<font color='blue'>You must be observing to use this!</font>")
+		usr << "<font color='blue'>You must be observing to use this!</font>"
 		return
 
 	if(is_admin && stat == DEAD)
@@ -521,6 +528,15 @@
 
 
 /mob/proc/pull_damage()
+	if(ishuman(src))
+		var/mob/living/carbon/human/H = src
+		if(H.health - H.halloss <= config.health_threshold_softcrit)
+			for(var/name in H.organs_by_name)
+				var/obj/item/organ/external/e = H.organs_by_name[name]
+				if(e && H.lying)
+					if((e.status & ORGAN_BROKEN && (!e.splinted || (e.splinted && e.splinted in e.contents && prob(30))) || e.status & ORGAN_BLEEDING) && (H.getBruteLoss() + H.getFireLoss() >= 100))
+						return 1
+						break
 	return 0
 
 /mob/MouseDrop(mob/M as mob)
@@ -644,7 +660,7 @@
 /mob/proc/see(message)
 	if(!is_active())
 		return 0
-	to_chat(src,message)
+	src << message
 	return 1
 
 /mob/proc/show_viewers(message)
@@ -669,6 +685,10 @@
 				stat("CPU:","[world.cpu]")
 				stat("Instances:","[world.contents.len]")
 				stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
+
+			if(statpanel("Processes"))
+				if(processScheduler)
+					processScheduler.statProcesses()
 
 			if(statpanel("MC"))
 				stat("Location:", "([x], [y], [z]) [loc]")
@@ -741,12 +761,12 @@
 
 
 /mob/proc/facedir(var/ndir)
-	if(!canface() || (client && (client.moving || !checkMoveCooldown())))
+	if(!canface() || (client && (client.moving || (world.time < move_delay))))
 		return 0
 	set_dir(ndir)
 	if(buckled && buckled.buckle_movable)
 		buckled.set_dir(ndir)
-	setMoveCooldown(movement_delay())
+	move_delay += movement_delay()
 	return 1
 
 
@@ -909,16 +929,16 @@ mob/proc/yank_out_object()
 	set desc = "Remove an embedded item at the cost of bleeding and pain."
 	set src in view(1)
 
-	if(!isliving(usr) || !usr.checkClickCooldown())
+	if(!isliving(usr) || !usr.canClick())
 		return
 	usr.setClickCooldown(20)
 
 	if(usr.stat == 1)
-		to_chat(usr, "You are unconcious and cannot do that!")
+		usr << "You are unconcious and cannot do that!"
 		return
 
 	if(usr.restrained())
-		to_chat(usr, "You are restrained and cannot do that!")
+		usr << "You are restrained and cannot do that!"
 		return
 
 	var/mob/S = src
@@ -934,7 +954,7 @@ mob/proc/yank_out_object()
 		if(self)
 			to_chat(src, "You have nothing stuck in your body that is large enough to remove.")
 		else
-			to_chat(U, "[src] has nothing stuck in their wounds that is large enough to remove.")
+			U << "[src] has nothing stuck in their wounds that is large enough to remove."
 		return
 
 	var/obj/item/weapon/selection = input("What do you want to yank out?", "Embedded objects") in valid_objects
@@ -942,7 +962,7 @@ mob/proc/yank_out_object()
 	if(self)
 		to_chat(src, "<span class='warning'>You attempt to get a good grip on [selection] in your body.</span>")
 	else
-		to_chat(U, "<span class='warning'>You attempt to get a good grip on [selection] in [S]'s body.</span>")
+		U << "<span class='warning'>You attempt to get a good grip on [selection] in [S]'s body.</span>"
 
 	if(!do_after(U, 30))
 		return
@@ -956,7 +976,6 @@ mob/proc/yank_out_object()
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
 		src.verbs -= /mob/proc/yank_out_object
-		clear_alert("embeddedobject")
 
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
@@ -1008,11 +1027,6 @@ mob/proc/yank_out_object()
 /mob/proc/updateicon()
 	return
 
-// Please always use this proc, never just set the var directly.
-/mob/proc/set_stat(var/new_stat)
-	. = (stat != new_stat)
-	stat = new_stat
-
 /mob/verb/face_direction()
 
 	set name = "Face Direction"
@@ -1022,9 +1036,9 @@ mob/proc/yank_out_object()
 	set_face_dir()
 
 	if(!facing_dir)
-		to_chat(usr, "You are now not facing anything.")
+		usr << "You are now not facing anything."
 	else
-		to_chat(usr, "You are now facing [dir2text(facing_dir)].")
+		usr << "You are now facing [dir2text(facing_dir)]."
 
 /mob/proc/set_face_dir(var/newdir)
 	if(newdir == facing_dir)
@@ -1069,13 +1083,6 @@ mob/proc/yank_out_object()
 
 /mob/proc/setEarDamage()
 	return
-
-// Set client view distance (size of client's screen). Returns TRUE if anything changed.
-/mob/proc/set_viewsize(var/new_view = world.view)
-	if (client && new_view != client.view)
-		client.view = new_view
-		return TRUE
-	return FALSE
 
 //Throwing stuff
 
@@ -1201,49 +1208,6 @@ mob/proc/yank_out_object()
 		else
 			registered_z = null
 
-GLOBAL_LIST_EMPTY(living_players_by_zlevel)
-/mob/living/update_client_z(new_z)
-	var/precall_reg_z = registered_z
-	. = ..() // will update registered_z if necessary
-	if(precall_reg_z != registered_z) // parent did work, let's do work too
-		if(precall_reg_z)
-			GLOB.living_players_by_zlevel[precall_reg_z] -= src
-		if(registered_z)
-			GLOB.living_players_by_zlevel[registered_z] += src
-
 /mob/onTransitZ(old_z, new_z)
 	..()
 	update_client_z(new_z)
-
-/mob/cloak()
-	. = ..()
-	if(client && cloaked_selfimage)
-		client.images += cloaked_selfimage
-
-/mob/uncloak()
-	if(client && cloaked_selfimage)
-		client.images -= cloaked_selfimage
-	return ..()
-
-/mob/get_cloaked_selfimage()
-	var/icon/selficon = getCompoundIcon(src)
-	selficon.MapColors(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White
-	var/image/selfimage = image(selficon)
-	selfimage.color = "#0000FF"
-	selfimage.alpha = 100
-	selfimage.layer = initial(layer)
-	selfimage.plane = initial(plane)
-	selfimage.loc = src
-
-	return selfimage
-
-/mob/proc/GetAltName()
-	return ""
-
-/mob/proc/get_ghost(even_if_they_cant_reenter = 0)
-	if(mind)
-		return mind.get_ghost(even_if_they_cant_reenter)
-
-/mob/proc/grab_ghost(force)
-	if(mind)
-		return mind.grab_ghost(force = force)

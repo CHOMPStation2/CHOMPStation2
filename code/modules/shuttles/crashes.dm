@@ -3,34 +3,30 @@
 //
 
 /datum/shuttle
-	var/list/crash_locations = null
+	var/list/crash_areas = null
 	var/crash_message = "Oops. The shuttle blew up."	// Announcement made when shuttle crashes
 
 /datum/shuttle/New()
-	if(crash_locations)
-		var/crash_location_ids = crash_locations
-		crash_locations = list()
-		for(var/location_tag in crash_location_ids)
-			var/obj/effect/shuttle_landmark/L = SSshuttles.get_landmark(location_tag)
-			if(L)
-				crash_locations += L
+	if(crash_areas)
+		for(var/i in 1 to crash_areas.len)
+			crash_areas[i] = locate(crash_areas[i])
 	..()
 
 // Return 0 to let the jump continue, 1 to abort the jump.
 // Default implementation checks if the shuttle should crash and if so crashes it.
-/datum/shuttle/proc/process_longjump(var/obj/effect/shuttle_landmark/intended_destination)
-	if(should_crash(intended_destination))
-		do_crash(intended_destination)
+/datum/shuttle/proc/process_longjump(var/area/origin, var/area/intended_destination, var/direction)
+	if(should_crash())
+		do_crash(origin)
 		return 1
 
 // Decide if this is the time we crash.  Return true for yes
-/datum/shuttle/proc/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+/datum/shuttle/proc/should_crash(var/area/origin, var/area/intended_destination, var/direction)
 	return FALSE
 
 // Actually crash the shuttle
-/datum/shuttle/proc/do_crash(var/obj/effect/shuttle_landmark/intended_destination)
+/datum/shuttle/proc/do_crash(var/area/source)
 	// Choose the target
-	var/obj/effect/shuttle_landmark/target = pick(crash_locations)
+	var/area/target = pick(crash_areas)
 	ASSERT(istype(target))
 
 	// Blow up the target area?
@@ -38,18 +34,16 @@
 
 	//What people are we dealing with here
 	var/list/victims = list()
-	for(var/area/A in shuttle_area)
-		for(var/mob/living/L in A)
-			victims += L
-			spawn(0)
-				shake_camera(L,2 SECONDS,4)
+	for(var/mob/living/L in source)
+		victims += L
+		spawn(0)
+			shake_camera(L,2 SECONDS,4)
 
 	//SHAKA SHAKA SHAKA
 	sleep(2 SECONDS)
 
 	// Move the shuttle
-	if (!attempt_move(target))
-		return // Lucky!
+	move(source, target)
 
 	// Hide people
 	for(var/living in victims)
@@ -60,11 +54,9 @@
 		L.loc = null
 
 	// Blow up the shuttle
-	var/list/shuttle_turfs = list()
-	for(var/area/A in shuttle_area)
-		shuttle_turfs += get_area_turfs(A)
-	var/turf/epicenter = pick(shuttle_turfs)
-	var/boomsize = shuttle_turfs.len / 10 // Bigger shuttle = bigger boom
+	var/list/area_turfs = get_area_turfs(target)
+	var/turf/epicenter = pick(area_turfs)
+	var/boomsize = area_turfs.len / 10 // Bigger shuttle = bigger boom
 	explosion(epicenter, 0, boomsize, boomsize*2, boomsize*3)
 	moving_status = SHUTTLE_CRASHED
 	command_announcement.Announce("[crash_message]", "Shuttle Alert")

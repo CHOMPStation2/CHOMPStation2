@@ -24,7 +24,7 @@
 
 	if(!C.stat && alert("Are we sure we wish to regenerate?  We will appear to be dead while doing so.","Revival","Yes","No") == "No")
 		return
-	to_chat(C, "<span class='notice'>We will attempt to regenerate our form.</span>")
+	C << "<span class='notice'>We will attempt to regenerate our form.</span>"
 
 	C.update_canmove()
 	C.remove_changeling_powers()
@@ -43,10 +43,7 @@
 
 	spawn(rand(2 MINUTES, 4 MINUTES))
 		//The ling will now be able to choose when to revive
-		verbs.Add(/mob/proc/changeling_revive)
-
-		new /obj/changeling_revive_holder(src)
-
+		src.verbs += /mob/proc/changeling_revive
 		to_chat(src, "<span class='notice'><font size='5'>We are ready to rise.  Use the <b>Revive</b> verb when you are ready.</font></span>")
 
 	feedback_add_details("changeling_powers","FD")

@@ -52,11 +52,11 @@ datum/hSB
 				if("hsbtobj")
 					if(!admin) return
 					if(hsboxspawn)
-						to_world("<b>Sandbox:  [usr.key] has disabled object spawning!</b>")
+						world << "<b>Sandbox:  [usr.key] has disabled object spawning!</b>"
 						hsboxspawn = 0
 						return
 					if(!hsboxspawn)
-						to_world("<b>Sandbox:  [usr.key] has enabled object spawning!</b>")
+						world << "<b>Sandbox:  [usr.key] has enabled object spawning!</b>"
 						hsboxspawn = 1
 						return
 				if("hsbsuit")
@@ -103,7 +103,7 @@ datum/hSB
 							hsb.req_access += A
 
 					hsb.loc = usr.loc
-					to_chat(usr, "<b>Sandbox:  Created an airlock.</b>")
+					usr << "<b>Sandbox:  Created an airlock.</b>"
 				if("hsbcanister")
 					var/list/hsbcanisters = typesof(/obj/machinery/portable_atmospherics/canister/) - /obj/machinery/portable_atmospherics/canister/
 					var/hsbcanister = input(usr, "Choose a canister to spawn.", "Sandbox:") in hsbcanisters + "Cancel"

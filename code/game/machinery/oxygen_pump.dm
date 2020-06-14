@@ -41,11 +41,8 @@
 	return ..()
 
 /obj/machinery/oxygen_pump/MouseDrop(var/mob/living/carbon/human/target, src_location, over_location)
-	var/mob/living/user = usr
-	if(!istype(user) || !istype(target))
-		return ..()
-
-	if(CanMouseDrop(target, user))
+	..()
+	if(istype(target) && CanMouseDrop(target))
 		if(!can_apply_to_target(target, usr)) // There is no point in attempting to apply a mask if it's impossible.
 			return
 		usr.visible_message("\The [usr] begins placing \the [contained] onto [target].")
@@ -76,7 +73,7 @@
 		if(breather.internals)
 			breather.internals.icon_state = "internal0"
 		breather = null
-		update_use_power(USE_POWER_IDLE)
+		use_power = 1
 
 /obj/machinery/oxygen_pump/attack_ai(mob/user as mob)
 	ui_interact(user)
@@ -93,7 +90,7 @@
 			breather.internal = tank
 			if(breather.internals)
 				breather.internals.icon_state = "internal1"
-		update_use_power(USE_POWER_ACTIVE)
+		use_power = 2
 
 /obj/machinery/oxygen_pump/proc/can_apply_to_target(var/mob/living/carbon/human/target, mob/user as mob)
 	if(!user)
@@ -151,9 +148,9 @@
 /obj/machinery/oxygen_pump/examine(var/mob/user)
 	. = ..()
 	if(tank)
-		. += "The meter shows [round(tank.air_contents.return_pressure())] kPa."
+		to_chat(user, "The meter shows [round(tank.air_contents.return_pressure())] kPa.")
 	else
-		. += "<span class='warning'>It is missing a tank!</span>"
+		to_chat(user, "<span class='warning'>It is missing a tank!</span>")
 
 
 /obj/machinery/oxygen_pump/process()
@@ -165,7 +162,7 @@
 			contained.forceMove(src)
 			src.visible_message("<span class='notice'>\The [contained] rapidly retracts back into \the [src]!</span>")
 			breather = null
-			update_use_power(USE_POWER_IDLE)
+			use_power = 1
 		else if(!breather.internal && tank)
 			breather.internal = tank
 			if(breather.internals)
@@ -290,28 +287,15 @@
 			contained.forceMove(src)
 			src.visible_message("<span class='notice'>\The [contained] rapidly retracts back into \the [src]!</span>")
 			breather = null
-			update_use_power(USE_POWER_IDLE)
+			use_power = 1
 		else if(!breather.internal && tank)
 			breather.internal = tank
 			if(breather.internals)
 				breather.internals.icon_state = "internal0"
 
 		if(breather)	// Safety.
-			if(ishuman(breather) && !(breather.isSynthetic()))
+			if(ishuman(breather))
 				var/mob/living/carbon/human/H = breather
-
-				if(H.internal_organs_by_name[O_LUNGS])
-					var/obj/item/organ/internal/L = H.internal_organs_by_name[O_LUNGS]
-					if(L)
-						if(!(L.status & ORGAN_DEAD))
-							H.adjustOxyLoss(-(rand(10,15)))
-
-							if(L.is_bruised() && prob(30))
-								L.take_damage(-1)
-							else
-								H.AdjustLosebreath(-(rand(1, 5)))
-						else
-							H.adjustOxyLoss(-(rand(1,8)))
 
 				if(H.stat == DEAD)
 					H.add_modifier(/datum/modifier/bloodpump_corpse, 6 SECONDS)

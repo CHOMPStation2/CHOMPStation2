@@ -1,17 +1,3 @@
-/obj/machinery/portable_atmospherics/hydroponics/proc/setup_overlays()
-	ov_lowhealth = image(icon = icon, icon_state = "over_lowhealth3")
-	ov_lowhealth.plane = PLANE_LIGHTING_ABOVE
-	ov_lowwater = image(icon = icon, icon_state = "over_lowwater3")
-	ov_lowwater.plane = PLANE_LIGHTING_ABOVE
-	ov_lownutri = image(icon = icon, icon_state = "over_lownutri3")
-	ov_lownutri.plane = PLANE_LIGHTING_ABOVE
-	ov_harvest = image(icon = icon, icon_state = "over_alert3")
-	ov_harvest.plane = PLANE_LIGHTING_ABOVE
-	ov_frozen = image(icon = icon, icon_state = "over_harvest3")
-	ov_frozen.plane = PLANE_LIGHTING_ABOVE
-	ov_alert3 = image(icon = icon, icon_state = "over_frozen3")
-	ov_alert3.plane = PLANE_LIGHTING_ABOVE
-
 //Refreshes the icon and sets the luminosity
 /obj/machinery/portable_atmospherics/hydroponics/update_icon()
 	// Update name.
@@ -26,12 +12,12 @@
 	if(labelled)
 		name += " ([labelled])"
 
-	cut_overlays()
+	overlays.Cut()
 	// Updates the plant overlay.
 	if(!isnull(seed))
 
 		if(mechanical && health <= (seed.get_trait(TRAIT_ENDURANCE) / 2))
-			add_overlay(ov_lowhealth)
+			overlays += "over_lowhealth3"
 
 		if(dead)
 			var/ikey = "[seed.get_trait(TRAIT_PLANT_ICON)]-dead"
@@ -39,12 +25,12 @@
 			if(!dead_overlay)
 				dead_overlay = image('icons/obj/hydroponics_growing.dmi', "[ikey]")
 				dead_overlay.color = DEAD_PLANT_COLOUR
-			add_overlay(dead_overlay)
+			overlays |= dead_overlay
 		else
 			if(!seed.growth_stages)
 				seed.update_growth_stages()
 			if(!seed.growth_stages)
-				to_world("<span class='danger'>Seed type [seed.get_trait(TRAIT_PLANT_ICON)] cannot find a growth stage value.</span>")
+				world << "<span class='danger'>Seed type [seed.get_trait(TRAIT_PLANT_ICON)] cannot find a growth stage value.</span>"
 				return
 			var/overlay_stage = 1
 			if(age >= seed.get_trait(TRAIT_MATURATION))
@@ -63,7 +49,7 @@
 				plant_overlay = image('icons/obj/hydroponics_growing.dmi', "[ikey]")
 				plant_overlay.color = seed.get_trait(TRAIT_PLANT_COLOUR)
 				plant_controller.plant_icon_cache["[ikey]-[seed.get_trait(TRAIT_PLANT_COLOUR)]"] = plant_overlay
-			add_overlay(plant_overlay)
+			overlays |= plant_overlay
 
 			if(harvest && overlay_stage == seed.growth_stages)
 				ikey = "[seed.get_trait(TRAIT_PRODUCT_ICON)]"
@@ -72,25 +58,25 @@
 					harvest_overlay = image('icons/obj/hydroponics_products.dmi', "[ikey]")
 					harvest_overlay.color = seed.get_trait(TRAIT_PRODUCT_COLOUR)
 					plant_controller.plant_icon_cache["product-[ikey]-[seed.get_trait(TRAIT_PRODUCT_COLOUR)]"] = harvest_overlay
-				add_overlay(harvest_overlay)
+				overlays |= harvest_overlay
 
 
 	//Draw the cover.
 	if(closed_system)
-		add_overlay("hydrocover")
+		overlays += "hydrocover"
 
 	//Updated the various alert icons.
 	if(mechanical)
 		if(waterlevel <= 10)
-			add_overlay(ov_lowwater)
+			overlays += "over_lowwater3"
 		if(nutrilevel <= 2)
-			add_overlay(ov_lownutri)
+			overlays += "over_lownutri3"
 		if(weedlevel >= 5 || pestlevel >= 5 || toxins >= 40)
-			add_overlay(ov_alert3)
+			overlays += "over_alert3"
 		if(harvest)
-			add_overlay(ov_harvest)
+			overlays += "over_harvest3"
 		if(frozen)
-			add_overlay(ov_frozen)
+			overlays += "over_frozen3"
 
 	// Update bioluminescence.
 	if(seed)

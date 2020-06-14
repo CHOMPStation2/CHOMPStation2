@@ -34,7 +34,7 @@
 	response_help = "touches"
 	response_disarm = "pushes"
 	response_harm = "hits"
-	attacktext = "glomped"
+	attacktext = "glomps"
 	attack_sound = 'sound/effects/blobattack.ogg'
 
 	meat_amount = 2
@@ -60,20 +60,17 @@
 	verbs += /mob/living/proc/ventcrawl
 	return ..()
 
-/mob/living/simple_mob/vore/hostile/morph/Destroy()
-	form = null
-	return ..()
-
 /mob/living/simple_mob/vore/hostile/morph/proc/allowed(atom/movable/A)
 	return !is_type_in_typecache(A, blacklist_typecache) && (isobj(A) || ismob(A))
 
 /mob/living/simple_mob/vore/hostile/morph/examine(mob/user)
 	if(morphed)
-		. = form.examine(user)
-		if(get_dist(user, src) <= 3)
-			. += "<span class='warning'>[form] doesn't look quite right...</span>"
+		form.examine(user)
+		if(get_dist(user,src)<=3)
+			to_chat(user, "<span class='warning'>It doesn't look quite right...</span>")
 	else
-		. = ..()
+		..()
+	return
 
 /mob/living/simple_mob/vore/hostile/morph/ShiftClickOn(atom/movable/A)
 	if(Adjacent(A))
@@ -96,28 +93,22 @@
 	form = target
 
 	visible_message("<span class='warning'>[src] suddenly twists and changes shape, becoming a copy of [target]!</span>")
-	name = target.name
-	desc = target.desc
-	icon = target.icon
-	icon_state = target.icon_state
-	alpha = max(target.alpha, 150)
-	copy_overlays(target, TRUE)
+	appearance = target.appearance
+	copy_overlays(target)
+	alpha = max(alpha, 150)	//fucking chameleons
+	transform = initial(transform)
 	our_size_multiplier = size_multiplier
-	
-	pixel_x = initial(target.pixel_x)
-	pixel_y = initial(target.pixel_y)
-
-	density = target.density
-
 	if(isobj(target))
 		size_multiplier = 1
 		icon_scale_x = target.icon_scale_x
 		icon_scale_y = target.icon_scale_y
 		update_transform()
-	
 	else if(ismob(target))
 		var/mob/living/M = target
 		resize(M.size_multiplier)
+	pixel_y = initial(pixel_y)
+	pixel_x = initial(pixel_x)
+	density = target.density
 
 	//Morphed is weaker
 	melee_damage_lower = melee_damage_disguised
@@ -125,43 +116,29 @@
 	movement_cooldown = 5
 
 	morph_time = world.time + MORPH_COOLDOWN
-
 	return
 
-/mob/living/simple_mob/vore/hostile/morph/proc/restore(var/silent = FALSE)
+/mob/living/simple_mob/vore/hostile/morph/proc/restore()
 	if(!morphed)
 		to_chat(src, "<span class='warning'>You're already in your normal form!</span>")
 		return
 	morphed = FALSE
-	
-	if(!silent)
-		visible_message("<span class='warning'>[src] suddenly collapses in on itself, dissolving into a pile of green flesh!</span>")
-	
 	form = null
-	name = initial(name)
-	desc = initial(desc)
-
-	icon = initial(icon)
-	icon_state = initial(icon_state)
-
 	alpha = initial(alpha)
 	color = initial(color)
-	plane = initial(plane)
 	layer = initial(layer)
-
-	pixel_x = initial(pixel_x)
-	pixel_y = initial(pixel_y)
-	icon_scale_x = initial(icon_scale_x)
-	icon_scale_y = initial(icon_scale_y)
-
-	density = initial(density)
-
-	cut_overlays(TRUE) //ALL of zem
-	
+	plane = initial(plane)
 	maptext = null
 
-	size_multiplier = our_size_multiplier
-	resize(size_multiplier)
+	visible_message("<span class='warning'>[src] suddenly collapses in on itself, dissolving into a pile of green flesh!</span>")
+	name = initial(name)
+	desc = initial(desc)
+	icon = initial(icon)
+	icon_state = initial(icon_state)
+	size_multiplier = 0
+	resize(our_size_multiplier)
+	overlays.Cut()
+	density = initial(density)
 
 	//Baseline stats
 	melee_damage_lower = initial(melee_damage_lower)
@@ -173,7 +150,7 @@
 /mob/living/simple_mob/vore/hostile/morph/death(gibbed)
 	if(morphed)
 		visible_message("<span class='warning'>[src] twists and dissolves into a pile of green flesh!</span>")
-		restore(TRUE)
+		restore()
 	..()
 
 /mob/living/simple_mob/vore/hostile/morph/will_show_tooltip()

@@ -14,10 +14,11 @@
 	invisibility = 0
 	var/time_to_die = 10 SECONDS // Afer which, it will delete itself.
 
-/obj/effect/temporary_effect/Initialize()
-	. = ..()
+/obj/effect/temporary_effect/New()
+	..()
 	if(time_to_die)
-		QDEL_IN(src, time_to_die)
+		spawn(time_to_die)
+			qdel(src)
 
 // Shown really briefly when attacking with axes.
 /obj/effect/temporary_effect/cleave_attack
@@ -40,11 +41,12 @@
 /obj/effect/temporary_effect/shuttle_landing
 	name = "shuttle landing"
 	desc = "You better move if you don't want to go splat!"
-	//VOREStation Edit Start
-	icon = 'icons/goonstation/featherzone.dmi'
-	icon_state = "hazard-corners"
-	time_to_die = 5 SECONDS
-	//VOREStation Edit End
+	icon_state = "shuttle_warning_still"
+	time_to_die = 4.9 SECONDS
+
+/obj/effect/temporary_effect/shuttle_landing/Initialize()
+	flick("shuttle_warning", src) // flick() forces the animation to always begin at the start.
+	. = ..()
 
 // The manifestation of Zeus's might. Or just a really unlucky day.
 // This is purely a visual effect, this isn't the part of the code that hurts things.

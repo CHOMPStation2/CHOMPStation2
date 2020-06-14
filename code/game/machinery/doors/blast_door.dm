@@ -91,7 +91,7 @@
 	src.density = 1
 	update_nearby_tiles()
 	src.update_icon()
-	src.set_opacity(1)
+	src.set_opacity(1) // Used to be src.set_opacity(initial(opacity)) Why?
 	sleep(15)
 	src.operating = 0
 
@@ -244,7 +244,8 @@
 		force_open()
 
 	if(autoclose && src.operating && !(stat & BROKEN || stat & NOPOWER))
-		addtimer(CALLBACK(src, .proc/close, 15 SECONDS))
+		spawn(150)
+			close()
 	return 1
 
 // Proc: close()
@@ -269,7 +270,7 @@
 // If for some reason this is actually needed for something important, uncomment this.
 /obj/machinery/door/blast/CanZASPass(turf/T, is_zone)
 	if(is_zone)
-		return TRUE
+		return ATMOS_PASS_YES
 	return ..()
 */
 

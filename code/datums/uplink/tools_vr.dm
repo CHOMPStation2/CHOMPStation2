@@ -26,11 +26,6 @@
 	item_cost = 20
 	path = /obj/item/modular_computer/laptop/preset/custom_loadout/elite
 
-/datum/uplink_item/item/tools/inducer
-	name = "Inducer"
-	item_cost = 20
-	path = /obj/item/weapon/inducer/syndicate
-
 /datum/uplink_item/item/tools/luxurycapsule
 	name = "Survival Capsule (Luxury)"
 	item_cost = 40
@@ -40,11 +35,6 @@
 	name = "Translocator"
 	item_cost = 40
 	path = /obj/item/device/perfect_tele
-
-/datum/uplink_item/item/tools/uav
-	name = "Recon Skimmer"
-	item_cost = 40
-	path = /obj/item/device/uav
 
 /datum/uplink_item/item/tools/barcapsule
 	name = "Survival Capsule (Bar)"

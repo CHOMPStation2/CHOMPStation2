@@ -29,28 +29,31 @@
 	var/movement_cost = 0       // How much the turf slows down movement, if any.
 
 	var/list/footstep_sounds = null
-	var/list/vorefootstep_sounds = null		//CHOMPstation edit
 
 	var/block_tele = FALSE      // If true, most forms of teleporting to or from this turf tile will fail.
 	var/can_build_into_floor = FALSE // Used for things like RCDs (and maybe lattices/floor tiles in the future), to see if a floor should replace it.
 	var/list/dangerous_objects // List of 'dangerous' objs that the turf holds that can cause something bad to happen when stepped on, used for AI mobs.
 
-/turf/Initialize(mapload)
-	. = ..()
-	for(var/atom/movable/AM in src)
-		Entered(AM)
+/turf/New()
+	..()
+	for(var/atom/movable/AM as mob|obj in src)
+		spawn( 0 )
+			src.Entered(AM)
+			return
+	turfs |= src
 
-	//Lighting related
-	luminosity = !(dynamic_lighting)
-	has_opaque_atom |= (opacity)
-	
-	//Pathfinding related
+	if(dynamic_lighting)
+		luminosity = 0
+	else
+		luminosity = 1
+
 	if(movement_cost && pathweight == 1) // This updates pathweight automatically.
 		pathweight = movement_cost
 
 /turf/Destroy()
-	. = QDEL_HINT_IWILLGC
+	turfs -= src
 	..()
+	return QDEL_HINT_IWILLGC
 
 /turf/ex_act(severity)
 	return 0
@@ -60,10 +63,6 @@
 
 /turf/proc/is_intact()
 	return 0
-
-// Used by shuttle code to check if this turf is empty enough to not crush want it lands on.
-/turf/proc/is_solid_structure()
-	return 1
 
 /turf/attack_hand(mob/user)
 	if(!(user.canmove) || user.restrained() || !(user.pulling))
@@ -143,18 +142,43 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 			sleep(2)
 			O.update_transform()
 
-/turf/Entered(var/atom/movable/A, var/old_loc)
-	. = ..()
+var/const/enterloopsanity = 100
+/turf/Entered(atom/atom as mob|obj)
+
+	if(movement_disabled)
+		usr << "<span class='warning'>Movement is admin-disabled.</span>" //This is to identify lag problems
+		return
+	..()
+
+	if(!istype(atom, /atom/movable))
+		return
+
+	var/atom/movable/A = atom
 
 	if(ismob(A))
 		var/mob/M = A
-		if(M.lastarea?.has_gravity == 0)
+		if(!M.lastarea)
+			M.lastarea = get_area(M.loc)
+		if(M.lastarea.has_gravity == 0)
 			inertial_drift(M)
 		if(M.flying) //VORESTATION Edit Start. This overwrites the above is_space without touching it all that much.
 			M.make_floating(1) //VOREStation Edit End.
 		else if(!is_space())
 			M.inertia_dir = 0
 			M.make_floating(0)
+		if(isliving(M))
+			var/mob/living/L = M
+			L.handle_footstep(src)
+	..()
+	var/objects = 0
+	if(A && (A.flags & PROXMOVE))
+		for(var/atom/movable/thing in range(1))
+			if(objects++ > enterloopsanity) break
+			spawn(0)
+				if(A) //Runtime prevention
+					A.HasProximity(thing, 1)
+					if ((thing && A) && (thing.flags & PROXMOVE))
+						thing.HasProximity(A, 1)
 
 /turf/CanPass(atom/movable/mover, turf/target)
 	if(!target)
@@ -169,7 +193,7 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 //There's a lot of QDELETED() calls here if someone can figure out how to optimize this but not runtime when something gets deleted by a Bump/CanPass/Cross call, lemme know or go ahead and fix this mess - kevinz000
 /turf/Enter(atom/movable/mover, atom/oldloc)
 	if(movement_disabled && usr.ckey != movement_disabled_exception)
-		to_chat(usr, "<span class='warning'>Movement is admin-disabled.</span>") //This is to identify lag problems
+		usr << "<span class='warning'>Movement is admin-disabled.</span>" //This is to identify lag problems
 		return
 	// Do not call ..()
 	// Byond's default turf/Enter() doesn't have the behaviour we want with Bump()
@@ -226,7 +250,7 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 
 /turf/proc/inertial_drift(atom/movable/A as mob|obj)
 	if(!(A.last_move))	return
-	if((istype(A, /mob/) && src.x > 1 && src.x < (world.maxx) && src.y > 1 && src.y < (world.maxy)))
+	if((istype(A, /mob/) && src.x > 2 && src.x < (world.maxx - 1) && src.y > 2 && src.y < (world.maxy-1)))
 		var/mob/M = A
 		if(M.Process_Spacemove(1))
 			M.inertia_dir  = 0
@@ -244,23 +268,20 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	for(var/obj/O in src)
 		O.hide(O.hides_under_flooring() && !is_plating())
 
-/turf/proc/AdjacentTurfs(var/check_blockage = TRUE)
-	. = list()
-	for(var/t in (trange(1,src) - src))
-		var/turf/T = t
-		if(check_blockage)
-			if(!T.density)
-				if(!LinkBlocked(src, T) && !TurfBlockedNonWindow(T))
-					. += t
-		else
-			. += t
+/turf/proc/AdjacentTurfs()
+	var/L[] = new()
+	for(var/turf/simulated/t in oview(src,1))
+		if(!t.density)
+			if(!LinkBlocked(src, t) && !TurfBlockedNonWindow(t))
+				L.Add(t)
+	return L
 
-/turf/proc/CardinalTurfs(var/check_blockage = TRUE)
-	. = list()
-	for(var/ad in AdjacentTurfs(check_blockage))
-		var/turf/T = ad
+/turf/proc/CardinalTurfs()
+	var/L[] = new()
+	for(var/turf/simulated/T in AdjacentTurfs())
 		if(T.x == src.x || T.y == src.y)
-			. += T
+			L.Add(T)
+	return L
 
 /turf/proc/Distance(turf/t)
 	if(get_dist(src,t) == 1)
@@ -297,7 +318,7 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 			if(istype(O,/obj/effect/rune) || istype(O,/obj/effect/decal/cleanable) || istype(O,/obj/effect/overlay))
 				qdel(O)
 	else
-		to_chat(user, "<span class='warning'>\The [source] is too dry to wash that.</span>")
+		user << "<span class='warning'>\The [source] is too dry to wash that.</span>"
 	source.reagents.trans_to_turf(src, 1, 10)	//10 is the multiplier for the reaction effect. probably needed to wet the floor properly.
 
 /turf/proc/update_blood_overlays()

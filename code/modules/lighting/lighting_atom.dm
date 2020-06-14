@@ -65,19 +65,20 @@
 		T.reconsider_lights()
 	return ..()
 
-/atom/movable/Moved(atom/old_loc, direction, forced = FALSE)
+/atom/movable/Move()
+	var/turf/old_loc = loc
 	. = ..()
 
-	for(var/datum/light_source/L in light_sources)
-		L.source_atom.update_light()
+	if(loc != old_loc)
+		for(var/datum/light_source/L in light_sources)
+			L.source_atom.update_light()
 
-	var/turf/new_turf = loc
-	var/turf/old_turf = old_loc
-	if(istype(old_turf) && opacity)
-		old_turf.reconsider_lights()
+	var/turf/new_loc = loc
+	if(istype(old_loc) && opacity)
+		old_loc.reconsider_lights()
 
-	if(istype(new_turf) && opacity)
-		new_turf.reconsider_lights()
+	if(istype(new_loc) && opacity)
+		new_loc.reconsider_lights()
 
 /atom/proc/set_opacity(new_opacity)
 	if(new_opacity == opacity)

@@ -1,7 +1,7 @@
 /datum/job/centcom_officer //For Business
 	title = "CentCom Officer"
-	departments = list("Central Command")
-	department_accounts = list(DEPARTMENT_COMMAND, DEPARTMENT_ENGINEERING, DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH, DEPARTMENT_SECURITY, DEPARTMENT_CARGO, DEPARTMENT_PLANET, DEPARTMENT_CIVILIAN)
+	department = "Command"
+	head_position = 1
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
@@ -14,22 +14,12 @@
 	whitelist_only = 1
 	latejoin_only = 1
 	outfit_type = /decl/hierarchy/outfit/job/centcom_officer
-	job_description = "A Central Command Officer is there on official business. Most of time. Whatever it is, they're a VIP."
 
 	minimum_character_age = 25
 	ideal_character_age = 40
 
-	pto_type = PTO_CIVILIAN
-
 	get_access()
 		return get_all_accesses().Copy()
-
-//YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
-/datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
-	. = ..()
-	if(.)
-		H.implant_loyalty(src)
-//YW UNCOMMENTING END
 
 /*/datum/job/centcom_visitor //For Pleasure // You mean for admin abuse... -Ace
 	title = "CentCom Visitor"
@@ -76,7 +66,7 @@
 /datum/job/clown
 	title = "Clown"
 	flag = CLOWN
-	departments = list(DEPARTMENT_CIVILIAN)
+	department = "Civilian"
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = -1
@@ -86,21 +76,10 @@
 	economic_modifier = 1
 	access = list()
 	minimal_access = list()
-	job_description = "A Clown is there to entertain the crew and keep high morale using various harmless pranks and ridiculous jokes!"
-	alt_titles = list("Clown" = /datum/alt_title/clown, "Comedian" = /datum/alt_title/comedian, "Jester" = /datum/alt_title/jester)
+	alt_titles = list("Comedian","Jester")
 	whitelist_only = 1
 	latejoin_only = 1
 	outfit_type = /decl/hierarchy/outfit/job/clown
-	pto_type = PTO_CIVILIAN
-
-/datum/alt_title/clown
-	title = "Clown"
-
-/datum/alt_title/comedian
-	title = "Comedian"
-
-/datum/alt_title/jester
-	title = "Jester"
 
 /datum/job/clown/get_access()
 	if(config.assistant_maint)
@@ -111,7 +90,7 @@
 /datum/job/mime
 	title = "Mime"
 	flag = MIME
-	departments = list(DEPARTMENT_CIVILIAN)
+	department = "Civilian"
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = -1
@@ -121,21 +100,10 @@
 	economic_modifier = 1
 	access = list()
 	minimal_access = list()
-	job_description = "A Mime is there to entertain the crew and keep high morale using unbelievable performances and acting skills!"
-	alt_titles = list("Mime" = /datum/alt_title/mime, "Performer" = /datum/alt_title/performer, "Interpretive Dancer" = /datum/alt_title/interpretive_dancer)
+	alt_titles = list("Performer","Interpretive Dancer")
 	whitelist_only = 1
 	latejoin_only = 1
 	outfit_type = /decl/hierarchy/outfit/job/mime
-	pto_type = PTO_CIVILIAN
-
-/datum/alt_title/mime
-	title = "Mime"
-
-/datum/alt_title/performer
-	title = "Performer"
-
-/datum/alt_title/interpretive_dancer
-	title = "Interpretive Dancer"
 
 /datum/job/mime/get_access()
 	if(config.assistant_maint)

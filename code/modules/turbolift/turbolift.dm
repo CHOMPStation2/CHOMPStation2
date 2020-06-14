@@ -14,8 +14,7 @@
 	var/fire_mode = FALSE								// Flag to indicate firefighter mode is active.
 
 	var/tmp/moving_upwards
-	var/tmp/busy_state									// Used for controller processing.
-	var/tmp/next_process								// world.time process() should next do something
+	var/tmp/busy
 
 /datum/turbolift/proc/emergency_stop()
 	cancel_pending_floors()
@@ -98,42 +97,7 @@
 			door.close()
 	return
 
-#define LIFT_MOVING    1	// Lift will try moving.
-#define LIFT_WAITING_A 2	// Waiting 15ds after arrival to announce, then goto LIFT_WAITING_B
-#define LIFT_WAITING_B 3	// Waiting floor_wait_delay after announcement before potentially moving again.
-
-/datum/turbolift/process()
-	if(world.time < next_process)
-		return
-	switch(busy_state)
-		if(LIFT_MOVING)
-			if(!do_move())
-				if(target_floor)
-					// TODO - This logic copied from old processor.  Would be better to have error states.
-					target_floor.ext_panel.reset()
-					target_floor = null
-				return PROCESS_KILL
-			else if(!next_process)
-				log_debug("Turbolift [src] do_move() returned 1 but next_process = null; busy_state=[busy_state]")
-				return PROCESS_KILL
-		if(LIFT_WAITING_A)
-			var/area/turbolift/origin = locate(current_floor.area_ref)
-			control_panel_interior.visible_message("<b>The elevator</b> announces, \"[origin.lift_announce_str]\"")
-			next_process = world.time + floor_wait_delay
-			busy_state = LIFT_WAITING_B
-		if(LIFT_WAITING_B)
-			if(queued_floors.len)
-				busy_state = LIFT_MOVING
-			else
-				busy_state = null
-				return PROCESS_KILL
-		else
-			log_debug("Turbolift [src] process() called with unknown busy_state='[busy_state]'")
-			return PROCESS_KILL
-
-// Called by process when in LIFT_MOVING
 /datum/turbolift/proc/do_move()
-	next_process = null
 
 	var/current_floor_index = floors.Find(current_floor)
 
@@ -152,7 +116,6 @@
 		if(!doors_closing)
 			close_doors()
 			doors_closing = 1
-			next_process = world.time + 1 SECOND // Wait for doors to close
 			return 1
 		else // We failed to close the doors - probably, someone is blocking them; stop trying to move
 			doors_closing = 0
@@ -174,8 +137,10 @@
 		target_floor.arrived(src)
 		target_floor = null
 
-		next_process = world.time + 15
-		busy_state = LIFT_WAITING_A
+		sleep(15)
+		control_panel_interior.visible_message("<b>The elevator</b> announces, \"[origin.lift_announce_str]\"")
+		sleep(floor_wait_delay)
+
 		return 1
 
 	// Work out where we're headed.
@@ -208,21 +173,15 @@
 	current_floor = next_floor
 	control_panel_interior.visible_message("The elevator [moving_upwards ? "rises" : "descends"] smoothly.")
 
-	next_process = world.time + (next_floor.delay_time || move_delay)
-	return 1
+	return (next_floor.delay_time || move_delay || 30)
 
 /datum/turbolift/proc/queue_move_to(var/datum/turbolift_floor/floor)
 	if(!floor || !(floor in floors) || (floor in queued_floors))
 		return // STOP PRESSING THE BUTTON.
 	floor.pending_move(src)
 	queued_floors |= floor
-	busy_state = LIFT_MOVING
-	START_PROCESSING(SSprocessing, src)
+	turbolift_controller.lift_is_moving(src)
 
 // TODO: dummy machine ('lift mechanism') in powered area for functionality/blackout checks.
 /datum/turbolift/proc/is_functional()
 	return 1
-
-#undef LIFT_MOVING
-#undef LIFT_WAITING_A
-#undef LIFT_WAITING_B

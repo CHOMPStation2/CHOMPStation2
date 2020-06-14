@@ -10,10 +10,11 @@
 	var/deploying
 	var/deployed
 
-/obj/structure/droppod_door/Initialize(var/mapload, var/autoopen)
-	. = ..()
+/obj/structure/droppod_door/New(var/newloc, var/autoopen)
+	..(newloc)
 	if(autoopen)
-		addtimer(CALLBACK(src, .proc/deploy), 10 SECONDS)
+		spawn(100)
+			deploy()
 
 /obj/structure/droppod_door/attack_ai(var/mob/user)
 	if(!user.Adjacent(src))
@@ -25,7 +26,7 @@
 
 /obj/structure/droppod_door/attack_hand(var/mob/user)
 	if(deploying) return
-	to_chat(user, "<span class='danger'>You prime the explosive bolts. Better get clear!</span>")
+	user << "<span class='danger'>You prime the explosive bolts. Better get clear!</span>"
 	sleep(30)
 	deploy()
 

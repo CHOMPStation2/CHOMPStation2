@@ -11,8 +11,6 @@
 		var/list/checked_turfs = list()
 		for(var/turf/T in locs)
 			var/turf/Tcheck = get_step(T, stepdir)
-			if(!Tcheck) //Map edge
-				continue
 			if(Tcheck in checked_turfs)
 				continue
 			if(Tcheck in locs)

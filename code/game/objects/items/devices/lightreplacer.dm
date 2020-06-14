@@ -64,9 +64,8 @@
 	..()
 
 /obj/item/device/lightreplacer/examine(mob/user)
-	. = ..()
-	if(get_dist(user, src) <= 2)
-		. += "It has [uses] lights remaining."
+	if(..(user, 2))
+		to_chat(user, "It has [uses] lights remaining.")
 
 /obj/item/device/lightreplacer/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/stack/material) && W.get_material_name() == "glass")

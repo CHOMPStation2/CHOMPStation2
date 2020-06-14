@@ -9,7 +9,6 @@
 	slot_flags = SLOT_BELT
 	attack_verb = list("whipped", "lashed", "disciplined")
 	sprite_sheets = list(SPECIES_TESHARI = 'icons/mob/species/seromi/belt.dmi')
-	drop_sound = 'sound/items/drop/leather.ogg'
 
 	var/show_above_suit = 0
 
@@ -18,7 +17,7 @@
 	set category = "Object"
 
 	if(show_above_suit == -1)
-		to_chat(usr, "<span class='notice'>\The [src] cannot be worn above your suit!</span>")
+		usr << "<span class='notice'>\The [src] cannot be worn above your suit!</span>"
 		return
 	show_above_suit = !show_above_suit
 	update_icon()
@@ -163,7 +162,6 @@
 		/obj/item/weapon/melee/baton,
 		/obj/item/weapon/gun/energy/taser,
 		/obj/item/weapon/gun/energy/stunrevolver,
-		/obj/item/weapon/gun/magnetic/railgun/heater/pistol,
 		/obj/item/weapon/gun/energy/gun,
 		/obj/item/weapon/flame/lighter,
 		/obj/item/device/flashlight,

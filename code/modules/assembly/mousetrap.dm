@@ -7,10 +7,10 @@
 	var/armed = 0
 
 
-/obj/item/device/assembly/mousetrap/examine(var/mob/user)
-	. = ..(user)
+/obj/item/device/assembly/mousetrap/examine(mob/user)
+	..(user)
 	if(armed)
-		. += "It looks like it's armed."
+		to_chat(user, "It looks like it's armed.")
 
 /obj/item/device/assembly/mousetrap/update_icon()
 	if(armed)
@@ -20,7 +20,7 @@
 	if(holder)
 		holder.update_icon()
 
-/obj/item/device/assembly/mousetrap/proc/triggered(var/mob/target, var/type = "feet")
+/obj/item/device/assembly/mousetrap/proc/triggered(mob/target as mob, var/type = "feet")
 	if(!armed)
 		return
 	var/obj/item/organ/external/affecting = null
@@ -49,9 +49,10 @@
 	update_icon()
 	pulse(0)
 
-/obj/item/device/assembly/mousetrap/attack_self(var/mob/living/user)
+
+/obj/item/device/assembly/mousetrap/attack_self(mob/living/user as mob)
 	if(!armed)
-		to_chat(user, "<span class='notice'>You arm [src].</span>")
+		user << "<span class='notice'>You arm [src].</span>"
 	else
 		if((CLUMSY in user.mutations) && prob(50))
 			var/which_hand = "l_hand"
@@ -67,7 +68,8 @@
 	update_icon()
 	playsound(user.loc, 'sound/weapons/handcuffs.ogg', 30, 1, -3)
 
-/obj/item/device/assembly/mousetrap/attack_hand(var/mob/living/user)
+
+/obj/item/device/assembly/mousetrap/attack_hand(mob/living/user as mob)
 	if(armed)
 		if((CLUMSY in user.mutations) && prob(50))
 			var/which_hand = "l_hand"
@@ -79,9 +81,14 @@
 			return
 	..()
 
-/obj/item/device/assembly/mousetrap/Crossed(var/atom/movable/AM)
-	if(AM.is_incorporeal())
-		return
+
+/obj/item/device/assembly/mousetrap/Crossed(AM as mob|obj)
+	//VOREStation Edit begin: SHADEKIN
+	var/mob/SK = AM
+	if(istype(SK))
+		if(SK.shadekin_phasing_check())
+			return
+	//VOREStation Edit end: SHADEKIN
 	if(armed)
 		if(ishuman(AM))
 			var/mob/living/carbon/H = AM
@@ -93,7 +100,8 @@
 			triggered(AM)
 	..()
 
-/obj/item/device/assembly/mousetrap/on_found(var/mob/living/finder)
+
+/obj/item/device/assembly/mousetrap/on_found(mob/living/finder as mob)
 	if(armed)
 		finder.visible_message("<span class='warning'>[finder] accidentally sets off [src], breaking their fingers.</span>", \
 							   "<span class='warning'>You accidentally trigger [src]!</span>")
@@ -101,15 +109,18 @@
 		return 1	//end the search!
 	return 0
 
-/obj/item/device/assembly/mousetrap/hitby(var/atom/movable/A)
+
+/obj/item/device/assembly/mousetrap/hitby(A as mob|obj)
 	if(!armed)
 		return ..()
 	visible_message("<span class='warning'>[src] is triggered by [A].</span>")
 	triggered(null)
 
+
 /obj/item/device/assembly/mousetrap/armed
 	icon_state = "mousetraparmed"
 	armed = 1
+
 
 /obj/item/device/assembly/mousetrap/verb/hide_under()
 	set src in oview(1)
@@ -119,5 +130,5 @@
 	if(usr.stat)
 		return
 
-	layer = HIDING_LAYER
+	layer = TURF_LAYER+0.2
 	to_chat(usr, "<span class='notice'>You hide [src].</span>")

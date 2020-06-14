@@ -42,14 +42,14 @@
 			open = 0
 			icon_state = initial(icon_state)
 			flags_inv = HIDETIE|HIDEHOLSTER
-			to_chat(usr, "You button up the coat.")
+			usr << "You button up the coat."
 		else if(open == 0)
 			open = 1
 			icon_state = "[icon_state]_open"
 			flags_inv = HIDEHOLSTER
-			to_chat(usr, "You unbutton the coat.")
+			usr << "You unbutton the coat."
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "You attempt to button-up the velcro on your [src], before promptly realising how silly you are.")
+			usr << "You attempt to button-up the velcro on your [src], before promptly realising how silly you are."
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -68,14 +68,14 @@
 			open = 0
 			icon_state = initial(icon_state)
 			flags_inv = HIDETIE|HIDEHOLSTER
-			to_chat(usr, "You button up the coat.")
+			usr << "You button up the coat."
 		else if(open == 0)
 			open = 1
 			icon_state = "[icon_state]_open"
 			flags_inv = HIDEHOLSTER
-			to_chat(usr, "You unbutton the coat.")
+			usr << "You unbutton the coat."
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "You attempt to button-up the velcro on your [src], before promptly realising how silly you are.")
+			usr << "You attempt to button-up the velcro on your [src], before promptly realising how silly you are."
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -99,12 +99,12 @@
 
 		if(icon_state == icon_badge)
 			icon_state = icon_nobadge
-			to_chat(usr, "You conceal \the [src]'s badge.")
+			usr << "You conceal \the [src]'s badge."
 		else if(icon_state == icon_nobadge)
 			icon_state = icon_badge
-			to_chat(usr, "You reveal \the [src]'s badge.")
+			usr << "You reveal \the [src]'s badge."
 		else
-			to_chat(usr, "\The [src] does not have a badge.")
+			usr << "\The [src] does not have a badge."
 			return
 		update_clothing_icon()
 

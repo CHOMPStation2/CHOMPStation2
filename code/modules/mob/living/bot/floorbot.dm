@@ -57,7 +57,7 @@
 	if(!emagged)
 		emagged = 1
 		if(user)
-			to_chat(user, "<span class='notice'>The [src] buzzes and beeps.</span>")
+			user << "<span class='notice'>The [src] buzzes and beeps.</span>"
 			playsound(src.loc, 'sound/machines/buzzbeep.ogg', 50, 0)
 		return 1
 
@@ -333,18 +333,18 @@
 		..()
 		return
 	if(contents.len >= 1)
-		to_chat(user, "<span class='notice'>They wont fit in as there is already stuff inside.</span>")
+		user << "<span class='notice'>They wont fit in as there is already stuff inside.</span>"
 		return
 	if(user.s_active)
 		user.s_active.close(user)
 	if(T.use(10))
 		var/obj/item/weapon/toolbox_tiles/B = new /obj/item/weapon/toolbox_tiles
 		user.put_in_hands(B)
-		to_chat(user, "<span class='notice'>You add the tiles into the empty toolbox. They protrude from the top.</span>")
+		user << "<span class='notice'>You add the tiles into the empty toolbox. They protrude from the top.</span>"
 		user.drop_from_inventory(src)
 		qdel(src)
 	else
-		to_chat(user, "<span class='warning'>You need 10 floor tiles for a floorbot.</span>")
+		user << "<span class='warning'>You need 10 floor tiles for a floorbot.</span>"
 	return
 
 /obj/item/weapon/toolbox_tiles
@@ -366,7 +366,7 @@
 		var/obj/item/weapon/toolbox_tiles_sensor/B = new /obj/item/weapon/toolbox_tiles_sensor()
 		B.created_name = created_name
 		user.put_in_hands(B)
-		to_chat(user, "<span class='notice'>You add the sensor to the toolbox and tiles!</span>")
+		user << "<span class='notice'>You add the sensor to the toolbox and tiles!</span>"
 		user.drop_from_inventory(src)
 		qdel(src)
 	else if (istype(W, /obj/item/weapon/pen))
@@ -396,7 +396,7 @@
 		var/turf/T = get_turf(user.loc)
 		var/mob/living/bot/floorbot/A = new /mob/living/bot/floorbot(T)
 		A.name = created_name
-		to_chat(user, "<span class='notice'>You add the robot arm to the odd looking toolbox assembly! Boop beep!</span>")
+		user << "<span class='notice'>You add the robot arm to the odd looking toolbox assembly! Boop beep!</span>"
 		user.drop_from_inventory(src)
 		qdel(src)
 	else if(istype(W, /obj/item/weapon/pen))

@@ -7,7 +7,7 @@
 	name = "Power Monitoring Console"
 	desc = "Computer designed to remotely monitor power levels around the station"
 	icon_keyboard = "power_key"
-	icon_screen = "power_monitor"
+	icon_screen = "power:0"
 	light_color = "#ffcc33"
 
 	//computer stuff
@@ -15,7 +15,7 @@
 	anchored = 1.0
 	circuit = /obj/item/weapon/circuitboard/powermonitor
 	var/alerting = 0
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 300
 	active_power_usage = 300
 	var/datum/nano_module/power_monitor/power_monitor
@@ -31,9 +31,9 @@
 /obj/machinery/computer/power_monitor/update_icon()
 	if(!(stat & (NOPOWER|BROKEN)))
 		if(alerting)
-			icon_screen = "[initial(icon_screen)]"
+			icon_screen = "power:1"
 		else
-			icon_screen = "[initial(icon_screen)]_warn"
+			icon_screen = "power:0"
 	..()
 */
 // On creation automatically connects to active sensors. This is delayed to ensure sensors already exist.

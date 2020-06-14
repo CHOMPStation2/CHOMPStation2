@@ -9,7 +9,6 @@ var/datum/antagonist/loyalists/loyalists
 	feedback_tag = "loyalist_objective"
 	antag_indicator = "loyal_head"
 	welcome_text = "You belong to the Company, body and soul. Preserve its interests against the conspirators amongst the crew."
-	antag_sound = 'sound/effects/antag_notice/general_goodie_alert.ogg'
 	victory_text = "The heads of staff remained at their posts! The loyalists win!"
 	loss_text = "The heads of staff did not stop the revolution!"
 	victory_feedback_tag = "win - rev heads killed"
@@ -29,7 +28,7 @@ var/datum/antagonist/loyalists/loyalists
 	faction_welcome = "Preserve NanoTrasen's interests against the traitorous recidivists amongst the crew. Protect the heads of staff with your life."
 	faction_indicator = "loyal"
 	faction_invisible = 1
-	avoid_silicons = TRUE
+	restricted_jobs = list("AI", "Cyborg")
 
 /datum/antagonist/loyalists/New()
 	..()
@@ -40,7 +39,7 @@ var/datum/antagonist/loyalists/loyalists
 		return
 	global_objectives = list()
 	for(var/mob/living/carbon/human/player in mob_list)
-		if(!player.mind || player.stat==2 || !(SSjob.is_job_in_department(player.mind.assigned_role, DEPARTMENT_COMMAND)))
+		if(!player.mind || player.stat==2 || !(player.mind.assigned_role in command_positions))
 			continue
 		var/datum/objective/protect/loyal_obj = new
 		loyal_obj.target = player.mind

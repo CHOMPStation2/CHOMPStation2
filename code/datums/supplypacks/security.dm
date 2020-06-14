@@ -32,104 +32,8 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Armor crate"
 
-/datum/supply_pack/security/carriersblack
-	name = "Armor - Black modular armor"
-	contains = list(
-			/obj/item/clothing/suit/armor/pcarrier,
-			/obj/item/clothing/accessory/armor/armguards,
-			/obj/item/clothing/accessory/armor/legguards,
-			/obj/item/clothing/accessory/storage/pouches,
-			)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Plate Carrier crate"
-
-/datum/supply_pack/security/carriersblue
-	name = "Armor - Blue modular armor"
-	contains = list(
-			/obj/item/clothing/suit/armor/pcarrier/blue,
-			/obj/item/clothing/accessory/armor/armguards/blue,
-			/obj/item/clothing/accessory/armor/legguards/blue,
-			/obj/item/clothing/accessory/storage/pouches/blue,
-			)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Plate Carrier crate"
-
-/datum/supply_pack/security/carriersgreen
-	name = "Armor - Blue modular armor"
-	contains = list(
-			/obj/item/clothing/suit/armor/pcarrier/green,
-			/obj/item/clothing/accessory/armor/armguards/green,
-			/obj/item/clothing/accessory/armor/legguards/green,
-			/obj/item/clothing/accessory/storage/pouches/green,
-			)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Plate Carrier crate"
-
-/datum/supply_pack/security/carriersnavy
-	name = "Armor - Navy modular armor"
-	contains = list(
-			/obj/item/clothing/suit/armor/pcarrier/navy,
-			/obj/item/clothing/accessory/armor/armguards/navy,
-			/obj/item/clothing/accessory/armor/legguards/navy,
-			/obj/item/clothing/accessory/storage/pouches/navy,
-			)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Plate Carrier crate"
-
-/datum/supply_pack/security/carrierstan
-	name = "Armor - Tan modular armor"
-	contains = list(
-			/obj/item/clothing/suit/armor/pcarrier/tan,
-			/obj/item/clothing/accessory/armor/armguards/tan,
-			/obj/item/clothing/accessory/armor/legguards/tan,
-			/obj/item/clothing/accessory/storage/pouches/tan,
-			)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Plate Carrier crate"
-
-/datum/supply_pack/security/armorplate
-	name = "Armor - Security light armor plate"
-	contains = list(
-			/obj/item/clothing/accessory/armor/armorplate,
-			)
-	cost = 5
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Armor plate crate"
-
-/datum/supply_pack/security/armorplatestab
-	name = "Armor - Security stab armor plate"
-	contains = list(
-			/obj/item/clothing/accessory/armor/armorplate/stab,
-			)
-	cost = 10
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Armor plate crate"
-
-/datum/supply_pack/security/armorplatemedium
-	name = "Armor - Security armor plate"
-	contains = list(
-			/obj/item/clothing/accessory/armor/armorplate/medium,
-			)
-	cost = 10
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Armor plate crate"
-
-/datum/supply_pack/security/armorplatetac
-	name = "Armor - Security medium armor plate"
-	contains = list(
-			/obj/item/clothing/accessory/armor/armorplate/tactical,
-			)
-	cost = 15
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Armor plate crate"
-
 /datum/supply_pack/randomised/security/carriers
-	name = "Armor - Surplus plate carriers"
+	name = "Armor - Plate carriers"
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/suit/armor/pcarrier,
@@ -139,7 +43,7 @@
 			/obj/item/clothing/suit/armor/pcarrier/tan,
 			/obj/item/clothing/suit/armor/pcarrier/press
 			)
-	cost = 10
+	cost = 20
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Plate Carrier crate"
 
@@ -178,7 +82,7 @@
 	containername = "Helmet Covers crate"
 
 /datum/supply_pack/randomised/security/armorplates
-	name = "Armor - Surplus security armor plates"
+	name = "Armor - Security armor plates"
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/accessory/armor/armorplate,
@@ -192,12 +96,12 @@
 			/obj/item/clothing/accessory/armor/armorplate/riot,
 			/obj/item/clothing/accessory/armor/armorplate/bulletproof
 			)
-	cost = 40
+	cost = 50
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Armor plate crate"
 
 /datum/supply_pack/randomised/security/carrierarms
-	name = "Armor - Surplus security armguard attachments"
+	name = "Armor - Security armguard attachments"
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/accessory/armor/armguards,
@@ -209,12 +113,12 @@
 			/obj/item/clothing/accessory/armor/armguards/riot,
 			/obj/item/clothing/accessory/armor/armguards/bulletproof
 			)
-	cost = 40
+	cost = 50
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Armor plate crate"
 
 /datum/supply_pack/randomised/security/carrierlegs
-	name = "Armor - Surplus security legguard attachments"
+	name = "Armor - Security legguard attachments"
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/accessory/armor/legguards,
@@ -226,12 +130,12 @@
 			/obj/item/clothing/accessory/armor/legguards/riot,
 			/obj/item/clothing/accessory/armor/legguards/bulletproof
 			)
-	cost = 40
+	cost = 50
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Armor plate crate"
 
 /datum/supply_pack/randomised/security/carrierbags
-	name = "Armor - Surplus security pouch attachments"
+	name = "Armor - Security pouch attachments"
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/accessory/storage/pouches,
@@ -245,7 +149,7 @@
 			/obj/item/clothing/accessory/storage/pouches/large/green,
 			/obj/item/clothing/accessory/storage/pouches/large/tan
 			)
-	cost = 50
+	cost = 60
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Armor plate crate"
 
@@ -550,7 +454,6 @@
 			/obj/item/clothing/under/rank/warden/corp,
 			/obj/item/clothing/suit/storage/vest/wardencoat,
 			/obj/item/clothing/suit/storage/vest/wardencoat/alt,
-			/obj/item/clothing/suit/storage/vest/wardencoat/alt2, //VOREStation Add,
 			/obj/item/clothing/head/helmet/warden,
 			/obj/item/weapon/cartridge/security,
 			/obj/item/device/radio/headset/headset_sec,
@@ -578,7 +481,6 @@
 			/obj/item/clothing/suit/storage/vest/hos,
 			/obj/item/clothing/under/rank/head_of_security/corp,
 			/obj/item/clothing/suit/storage/vest/hoscoat,
-			/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt, //VOREStation Add,
 			/obj/item/clothing/head/helmet/dermal,
 			/obj/item/weapon/cartridge/hos,
 			/obj/item/device/radio/headset/heads/hos,

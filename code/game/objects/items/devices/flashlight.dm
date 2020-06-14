@@ -20,19 +20,23 @@
 
 /obj/item/device/flashlight/Initialize()
 	. = ..()
-
-	if(power_use && cell_type)
-		cell = new cell_type(src)
-		brightness_levels = list("low" = 0.25, "medium" = 0.5, "high" = 1)
-		power_usage = brightness_levels[brightness_level]
-	else
-		verbs -= /obj/item/device/flashlight/verb/toggle
-	
 	update_icon()
 
+/obj/item/device/flashlight/New()
+	if(power_use)
+		START_PROCESSING(SSobj, src)
+		if(cell_type)
+			cell = new cell_type(src)
+			brightness_levels = list("low" = 0.25, "medium" = 0.5, "high" = 1)
+			power_usage = brightness_levels[brightness_level]
+
+	else
+		verbs -= /obj/item/device/flashlight/verb/toggle
+	..()
+
 /obj/item/device/flashlight/Destroy()
-	STOP_PROCESSING(SSobj, src)
-	qdel_null(cell)
+	if(power_use)
+		STOP_PROCESSING(SSobj, src)
 	return ..()
 
 /obj/item/device/flashlight/get_cell()
@@ -49,21 +53,22 @@
 	if(choice)
 		brightness_level = choice
 		power_usage = brightness_levels[choice]
-		to_chat(user, "<span class='notice'>You set the brightness level on \the [src] to [brightness_level].</span>")
+		user << "<span class='notice'>You set the brightness level on \the [src] to [brightness_level].</span>"
 		update_icon()
 
 /obj/item/device/flashlight/process()
-	if(!on || !cell)
-		return PROCESS_KILL
-
-	if(brightness_level && power_usage)
-		if(cell.use(power_usage) != power_usage) // we weren't able to use our full power_usage amount!
-			visible_message("<span class='warning'>\The [src] flickers before going dull.</span>")
-			set_light(0)
-			playsound(src.loc, 'sound/effects/sparks3.ogg', 10, 1, -3) //Small cue that your light went dull in your pocket.
-			on = 0
-			update_icon()
-			return PROCESS_KILL
+	if(on)
+		if(cell)
+			if(brightness_level && power_usage)
+				if(power_usage < cell.charge)
+					cell.charge -= power_usage
+				else
+					cell.charge = 0
+					visible_message("<span class='warning'>\The [src] flickers before going dull.</span>")
+					set_light(0)
+					playsound(src.loc, 'sound/effects/sparks3.ogg', 10, 1, -3) //Small cue that your light went dull in your pocket.
+					on = 0
+					update_icon()
 
 /obj/item/device/flashlight/update_icon()
 	if(on)
@@ -81,34 +86,33 @@
 		set_light(0)
 
 /obj/item/device/flashlight/examine(mob/user)
-	. = ..()
+	..()
 	if(power_use && brightness_level)
-		. += "\The [src] is set to [brightness_level]."
+		var/tempdesc
+		tempdesc += "\The [src] is set to [brightness_level]. "
 		if(cell)
-			. += "\The [src] has a \the [cell] attached."
+			tempdesc += "\The [src] has a \the [cell] attached. "
 
 			if(cell.charge <= cell.maxcharge*0.25)
-				. += "It appears to have a low amount of power remaining."
+				tempdesc += "It appears to have a low amount of power remaining."
 			else if(cell.charge > cell.maxcharge*0.25 && cell.charge <= cell.maxcharge*0.5)
-				. += "It appears to have an average amount of power remaining."
+				tempdesc += "It appears to have an average amount of power remaining."
 			else if(cell.charge > cell.maxcharge*0.5 && cell.charge <= cell.maxcharge*0.75)
-				. += "It appears to have an above average amount of power remaining."
+				tempdesc += "It appears to have an above average amount of power remaining."
 			else if(cell.charge > cell.maxcharge*0.75 && cell.charge <= cell.maxcharge)
-				. += "It appears to have a high amount of power remaining."
+				tempdesc += "It appears to have a high amount of power remaining."
+
+		user << "[tempdesc]"
 
 /obj/item/device/flashlight/attack_self(mob/user)
 	if(power_use)
 		if(!isturf(user.loc))
-			to_chat(user, "You cannot turn the light on while in this [user.loc].") //To prevent some lighting anomalities.
+			user << "You cannot turn the light on while in this [user.loc]." //To prevent some lighting anomalities.
 			return 0
 		if(!cell || cell.charge == 0)
-			to_chat(user, "You flick the switch on [src], but nothing happens.")
+			user << "You flick the switch on [src], but nothing happens."
 			return 0
 	on = !on
-	if(on && power_use)
-		START_PROCESSING(SSobj, src)
-	else if(power_use)
-		STOP_PROCESSING(SSobj, src)
 	playsound(src.loc, 'sound/weapons/empty.ogg', 15, 1, -3)
 	update_icon()
 	user.update_action_buttons()
@@ -130,38 +134,38 @@
 		if(istype(H))
 			for(var/obj/item/clothing/C in list(H.head,H.wear_mask,H.glasses))
 				if(istype(C) && (C.body_parts_covered & EYES))
-					to_chat(user, "<span class='warning'>You're going to need to remove [C.name] first.</span>")
+					user << "<span class='warning'>You're going to need to remove [C.name] first.</span>"
 					return
 
 			var/obj/item/organ/vision
 			if(H.species.vision_organ)
 				vision = H.internal_organs_by_name[H.species.vision_organ]
 			if(!vision)
-				to_chat(user, "<span class='warning'>You can't find any [H.species.vision_organ ? H.species.vision_organ : "eyes"] on [H]!</span>")
+				user << "<span class='warning'>You can't find any [H.species.vision_organ ? H.species.vision_organ : "eyes"] on [H]!</span>"
 
 			user.visible_message("<span class='notice'>\The [user] directs [src] to [M]'s eyes.</span>", \
 							 	 "<span class='notice'>You direct [src] to [M]'s eyes.</span>")
 			if(H != user)	//can't look into your own eyes buster
 				if(M.stat == DEAD || M.blinded)	//mob is dead or fully blind
-					to_chat(user, "<span class='warning'>\The [M]'s pupils do not react to the light!</span>")
+					user << "<span class='warning'>\The [M]'s pupils do not react to the light!</span>"
 					return
 				if(XRAY in M.mutations)
-					to_chat(user, "<span class='notice'>\The [M] pupils give an eerie glow!</span>")
+					user << "<span class='notice'>\The [M] pupils give an eerie glow!</span>"
 				if(vision.is_bruised())
-					to_chat(user, "<span class='warning'>There's visible damage to [M]'s [vision.name]!</span>")
+					user << "<span class='warning'>There's visible damage to [M]'s [vision.name]!</span>"
 				else if(M.eye_blurry)
-					to_chat(user, "<span class='notice'>\The [M]'s pupils react slower than normally.</span>")
+					user << "<span class='notice'>\The [M]'s pupils react slower than normally.</span>"
 				if(M.getBrainLoss() > 15)
-					to_chat(user, "<span class='notice'>There's visible lag between left and right pupils' reactions.</span>")
+					user << "<span class='notice'>There's visible lag between left and right pupils' reactions.</span>"
 
 				var/list/pinpoint = list("oxycodone"=1,"tramadol"=5)
 				var/list/dilating = list("space_drugs"=5,"mindbreaker"=1)
 				if(M.reagents.has_any_reagent(pinpoint) || H.ingested.has_any_reagent(pinpoint))
-					to_chat(user, "<span class='notice'>\The [M]'s pupils are already pinpoint and cannot narrow any more.</span>")
+					user << "<span class='notice'>\The [M]'s pupils are already pinpoint and cannot narrow any more.</span>"
 				else if(M.reagents.has_any_reagent(dilating) || H.ingested.has_any_reagent(dilating))
-					to_chat(user, "<span class='notice'>\The [M]'s pupils narrow slightly, but are still very dilated.</span>")
+					user << "<span class='notice'>\The [M]'s pupils narrow slightly, but are still very dilated.</span>"
 				else
-					to_chat(user, "<span class='notice'>\The [M]'s pupils narrow.</span>")
+					user << "<span class='notice'>\The [M]'s pupils narrow.</span>"
 
 			user.setClickCooldown(user.get_attack_speed(src)) //can be used offensively
 			M.flash_eyes()
@@ -174,7 +178,7 @@
 			cell.update_icon()
 			user.put_in_hands(cell)
 			cell = null
-			to_chat(user, "<span class='notice'>You remove the cell from the [src].</span>")
+			user << "<span class='notice'>You remove the cell from the [src].</span>"
 			playsound(src, 'sound/machines/button.ogg', 30, 1, 0)
 			on = 0
 			update_icon()
@@ -223,13 +227,13 @@
 					user.drop_item()
 					W.loc = src
 					cell = W
-					to_chat(user, "<span class='notice'>You install a cell in \the [src].</span>")
+					user << "<span class='notice'>You install a cell in \the [src].</span>"
 					playsound(src, 'sound/machines/button.ogg', 30, 1, 0)
 					update_icon()
 				else
-					to_chat(user, "<span class='notice'>\The [src] already has a cell.</span>")
+					user << "<span class='notice'>\The [src] already has a cell.</span>"
 			else
-				to_chat(user, "<span class='notice'>\The [src] cannot use that type of cell.</span>")
+				user << "<span class='notice'>\The [src] cannot use that type of cell.</span>"
 
 	else
 		..()
@@ -291,7 +295,6 @@
 	desc = "A desk lamp with an adjustable mount."
 	icon_state = "lamp"
 	force = 10
-	center_of_mass = list("x" = 13,"y" = 11)
 	brightness_on = 10	//TFF 27/11/19 - post refactor fix for intensity levels.
 	w_class = ITEMSIZE_LARGE
 	power_use = 0
@@ -302,7 +305,6 @@
 /obj/item/device/flashlight/lamp/green
 	desc = "A classic green-shaded desk lamp."
 	icon_state = "lampgreen"
-	center_of_mass = list("x" = 15,"y" = 11)
 	brightness_on = 5
 	flashlight_colour = "#FFC58F"
 
@@ -356,7 +358,7 @@
 
 	// Usual checks
 	if(!fuel)
-		to_chat(user, "<span class='notice'>It's out of fuel.</span>")
+		user << "<span class='notice'>It's out of fuel.</span>"
 		return
 	if(on)
 		return
@@ -410,14 +412,14 @@
 /obj/item/device/flashlight/glowstick/attack_self(mob/user)
 
 	if(!fuel)
-		to_chat(user, "<span class='notice'>The glowstick has already been turned on.</span>")
+		user << "<span class='notice'>The glowstick has already been turned on.</span>"
 		return
 	if(on)
 		return
 
 	. = ..()
 	if(.)
-		user.visible_message("<span class='notice'>[user] cracks and shakes \the [name].</span>", "<span class='notice'>You crack and shake \the [src], turning it on!</span>")
+		user.visible_message("<span class='notice'>[user] cracks and shakes the glowstick.</span>", "<span class='notice'>You crack and shake the glowstick, turning it on!</span>")
 		START_PROCESSING(SSobj, src)
 
 /obj/item/device/flashlight/glowstick/red

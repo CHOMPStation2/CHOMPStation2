@@ -51,7 +51,7 @@
 	scannable = 1
 
 /datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -88,7 +88,7 @@
 	can_overdose_touch = TRUE
 
 /datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -96,7 +96,7 @@
 		M.adjustToxLoss(2 * removed)
 
 /datum/reagent/bicaridine/topical/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -132,7 +132,7 @@
 	scannable = 1
 
 /datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.5
 		M.adjustBruteLoss(2 * removed) //Mends burns, but has negative effects with a Promethean's skeletal structure.
@@ -151,7 +151,7 @@
 	scannable = 1
 
 /datum/reagent/dermaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -171,7 +171,7 @@
 	can_overdose_touch = TRUE
 
 /datum/reagent/dermaline/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -179,7 +179,7 @@
 		M.adjustToxLoss(2 * removed)
 
 /datum/reagent/dermaline/topical/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -195,7 +195,7 @@
 	scannable = 1
 
 /datum/reagent/dylovene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.66
 		if(dose >= 15)
@@ -291,17 +291,10 @@
 	reagent_state = LIQUID
 	color = "#8040FF"
 	scannable = 1
-	//YW ADDITIONS START
-	overdose = REAGENTS_OVERDOSE * 4 //120 overdose
-/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
-	..()
-	M.druggy = max(M.druggy, 5)
-	M.Confuse(5)
-	//YW ADDITIONS END
 
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+		var/chem_effective = 1
 		if(alien == IS_SLIME)
 			chem_effective = 0.5
 		M.adjustOxyLoss(-3 * removed * chem_effective)
@@ -324,7 +317,7 @@
 
 /datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+		var/chem_effective = 1
 		if(alien == IS_SLIME)
 			chem_effective = 0.5
 		M.adjustOxyLoss(-2 * removed * chem_effective)
@@ -361,7 +354,7 @@
 
 /datum/reagent/cryoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170)
-		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+		var/chem_effective = 1
 		if(alien == IS_SLIME)
 			chem_effective = 0.25
 			to_chat(M, "<span class='danger'>It's cold. Something causes your cellular mass to harden occasionally, resulting in vibration.</span>")
@@ -386,7 +379,7 @@
 
 /datum/reagent/clonexadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170)
-		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+		var/chem_effective = 1
 		if(alien == IS_SLIME)
 			if(prob(10))
 				to_chat(M, "<span class='danger'>It's so cold. Something causes your cellular mass to harden sporadically, resulting in seizure-like twitching.</span>")
@@ -420,7 +413,7 @@
 
 /datum/reagent/necroxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170 || (M.stat == DEAD && M.has_modifier_of_type(/datum/modifier/bloodpump_corpse)))
-		var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+		var/chem_effective = 1
 		if(alien == IS_SLIME)
 			if(prob(10))
 				to_chat(M, "<span class='danger'>It's so cold. Something causes your cellular mass to harden sporadically, resulting in seizure-like twitching.</span>")
@@ -448,7 +441,7 @@
 	mrate_static = TRUE
 
 /datum/reagent/paracetamol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	M.add_chemical_effect(CE_PAINKILLER, 25 * chem_effective)
@@ -472,7 +465,7 @@
 	mrate_static = TRUE
 
 /datum/reagent/tramadol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.8
 		M.add_chemical_effect(CE_SLOWDOWN, 1)
@@ -495,7 +488,7 @@
 	mrate_static = TRUE
 
 /datum/reagent/oxycodone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 		M.stuttering = min(50, max(0, M.stuttering + 5)) //If you can't feel yourself, and your main mode of speech is resonation, there's a problem.
@@ -522,12 +515,12 @@
 	scannable = 1
 
 /datum/reagent/synaptizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_DIONA)
 		return
 	if(alien == IS_SLIME)
 		if(dose >= 5) //Not effective in small doses, though it causes toxloss at higher ones, it will make the regeneration for brute and burn more 'efficient' at the cost of more nutrition.
-			M.adjust_nutrition(removed * 2)
+			M.nutrition -= removed * 2
 			M.adjustBruteLoss(-2 * removed)
 			M.adjustFireLoss(-1 * removed)
 		chem_effective = 0.5
@@ -555,7 +548,7 @@
 	if(alien == IS_SLIME)
 		M.make_jittery(4) //Hyperactive fluid pumping results in unstable 'skeleton', resulting in vibration.
 		if(dose >= 5)
-			M.adjust_nutrition(-removed * 2) // Sadly this movement starts burning food in higher doses.
+			M.nutrition = (M.nutrition - (removed * 2)) //Sadly this movement starts burning food in higher doses.
 	..()
 	if(prob(5))
 		M.emote(pick("twitch", "blink_r", "shiver"))
@@ -575,7 +568,7 @@
 /datum/reagent/alkysine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
+	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.25
 		if(M.brainloss >= 10)
@@ -699,7 +692,7 @@
 	scannable = 1
 
 /datum/reagent/respirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/repair_strength = 1 * M.species.chem_strength_heal //YW EDIT
+	var/repair_strength = 1
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -730,7 +723,7 @@
 	scannable = 1
 
 /datum/reagent/gastirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/repair_strength = 1 * M.species.chem_strength_heal //YW EDIT
+	var/repair_strength = 1
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -745,7 +738,7 @@
 			if(prob(10))
 				H.vomit(1)
 			else if(H.nutrition > 30)
-				M.adjust_nutrition(-removed * 30)
+				H.nutrition = max(0, H.nutrition - round(30 * removed))
 		else
 			H.adjustToxLoss(-10 * removed) // Carthatoline based, considering cost.
 
@@ -761,7 +754,7 @@
 	scannable = 1
 
 /datum/reagent/hepanephrodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/repair_strength = 1 * M.species.chem_strength_heal //YW EDIT
+	var/repair_strength = 1
 	if(alien == IS_SLIME)
 		repair_strength = 0.4
 	if(ishuman(M))
@@ -776,7 +769,7 @@
 			if(prob(5))
 				H.vomit(1)
 			else if(prob(5))
-				to_chat(H, "<span class='danger'>Something churns inside you.</span>")
+				to_chat(H,"<span class='danger'>Something churns inside you.</span>")
 				H.adjustToxLoss(10 * removed)
 				H.vomit(0, 1)
 		else
@@ -794,7 +787,7 @@
 	scannable = 1
 
 /datum/reagent/cordradaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/repair_strength = 1 * M.species.chem_strength_heal //YW EDIT
+	var/repair_strength = 1
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -821,7 +814,7 @@
 	scannable = 1
 
 /datum/reagent/immunosuprizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/strength_mod = 1 * M.species.chem_strength_heal //YW EDIT
+	var/strength_mod = 1
 
 	if(alien == IS_DIONA)	// It's a tree.
 		strength_mod = 0.25
@@ -878,7 +871,7 @@
 	scannable = 1
 
 /datum/reagent/skrellimmuno/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/strength_mod = 0.5 * M.species.chem_strength_heal //YW EDIT
+	var/strength_mod = 0.5
 
 	if(alien == IS_SKRELL)
 		strength_mod = 1
@@ -984,7 +977,7 @@
 	color = "#605048"
 	overdose = REAGENTS_OVERDOSE
 
-/datum/reagent/ethylredoxrazine/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethylredoxrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
 	M.dizziness = 0
@@ -995,14 +988,6 @@
 		for(var/datum/reagent/R in M.ingested.reagent_list)
 			if(istype(R, /datum/reagent/ethanol))
 				R.remove_self(removed * 30)
-
-/datum/reagent/ethylredoxrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	M.dizziness = 0
-	M.drowsyness = 0
-	M.stuttering = 0
-	M.SetConfused(0)
 	if(M.bloodstr)
 		for(var/datum/reagent/R in M.bloodstr.reagent_list)
 			if(istype(R, /datum/reagent/ethanol))
@@ -1116,7 +1101,7 @@
 			M.make_jittery(5)
 		if(dose >= 20 || M.toxloss >= 60) //Core disentigration, cellular mass begins treating itself as an enemy, while maintaining regeneration. Slime-cancer.
 			M.adjustBrainLoss(2 * removed)
-			M.adjust_nutrition(-20)
+			M.nutrition = max(H.nutrition - 20, 0)
 		if(M.bruteloss >= 60 && M.toxloss >= 60 && M.brainloss >= 30) //Total Structural Failure. Limbs start splattering.
 			var/obj/item/organ/external/O = pick(H.organs)
 			if(prob(20) && !istype(O, /obj/item/organ/external/chest/unbreakable/slime) && !istype(O, /obj/item/organ/external/groin/unbreakable/slime))
@@ -1315,11 +1300,11 @@
 		return
 	if(volume <= 0.1 && data != -1)
 		data = -1
-		to_chat(M, "<span class='warning'>You lose focus...</span>")
+		M << "<span class='warning'>You lose focus...</span>"
 	else
 		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
 			data = world.time
-			to_chat(M, "<span class='notice'>Your mind feels focused and undivided.</span>")
+			M << "<span class='notice'>Your mind feels focused and undivided.</span>"
 
 /datum/reagent/citalopram
 	name = "Citalopram"
@@ -1338,11 +1323,11 @@
 		return
 	if(volume <= 0.1 && data != -1)
 		data = -1
-		to_chat(M, "<span class='warning'>Your mind feels a little less stable...</span>")
+		M << "<span class='warning'>Your mind feels a little less stable...</span>"
 	else
 		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
 			data = world.time
-			to_chat(M, "<span class='notice'>Your mind feels stable... a little stable.</span>")
+			M << "<span class='notice'>Your mind feels stable... a little stable.</span>"
 
 /datum/reagent/paroxetine
 	name = "Paroxetine"
@@ -1361,14 +1346,14 @@
 		return
 	if(volume <= 0.1 && data != -1)
 		data = -1
-		to_chat(M, "<span class='warning'>Your mind feels much less stable...</span>")
+		M << "<span class='warning'>Your mind feels much less stable...</span>"
 	else
 		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
 			data = world.time
 			if(prob(90))
-				to_chat(M, "<span class='notice'>Your mind feels much more stable.</span>")
+				M << "<span class='notice'>Your mind feels much more stable.</span>"
 			else
-				to_chat(M, "<span class='warning'>Your mind breaks apart...</span>")
+				M << "<span class='warning'>Your mind breaks apart...</span>"
 				M.hallucination += 200
 
 /datum/reagent/qerr_quem
@@ -1410,14 +1395,3 @@
 	M.adjustOxyLoss(-4 * removed)
 	M.adjustToxLoss(-2 * removed)
 	M.adjustCloneLoss(-2 * removed)
-
-/datum/reagent/menthol
-	name = "Menthol"
-	id = "menthol"
-	description = "Tastes naturally minty, and imparts a very mild numbing sensation."
-	taste_description = "mint"
-	reagent_state = LIQUID
-	color = "#80af9c"
-	metabolism = REM * 0.002
-	overdose = REAGENTS_OVERDOSE * 0.25
-	scannable = 1

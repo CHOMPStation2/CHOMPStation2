@@ -1,5 +1,5 @@
 /obj/item/weapon/reagent_containers/pill/nutriment
-	name = "Nutriment (30u)"
+	name = "Nutriment pill"
 	desc = "Used to feed people on the field. Contains 30 units of Nutriment."
 	icon_state = "pill10"
 
@@ -8,7 +8,7 @@
 	reagents.add_reagent("nutriment", 30)
 
 /obj/item/weapon/reagent_containers/pill/protein
-	name = "Protein (30u)"
+	name = "Meat pill"
 	desc = "Used to feed carnivores on the field. Contains 30 units of Protein."
 	icon_state = "pill24"
 
@@ -17,7 +17,7 @@
 	reagents.add_reagent("protein", 30)
 
 /obj/item/weapon/reagent_containers/pill/rezadone
-	name = "Rezadone (5u)"
+	name = "Rezadone pill"
 	desc = "A powder with almost magical properties, this substance can effectively treat genetic damage in humanoids, though excessive consumption has side effects."
 	icon_state = "pill2"
 
@@ -27,7 +27,7 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/peridaxon
-	name = "Peridaxon (10u)"
+	name = "Peridaxon pill"
 	desc = "Used to encourage recovery of internal organs and nervous systems. Medicate cautiously."
 	icon_state = "pill10"
 
@@ -36,17 +36,17 @@
 	reagents.add_reagent("peridaxon", 10)
 
 /obj/item/weapon/reagent_containers/pill/carthatoline
-	name = "Carthatoline (15u)"
+	name = "Carthatoline pill"
 	desc = "Carthatoline is strong evacuant used to treat severe poisoning."
 	icon_state = "pill4"
 
 /obj/item/weapon/reagent_containers/pill/carthatoline/Initialize()
 	..()
-	reagents.add_reagent("carthatoline", 15)
+	reagents.add_reagent("carthatoline", 10)
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/alkysine
-	name = "Alkysine (10u)"
+	name = "Alkysine pill"
 	desc = "Alkysine is a drug used to lessen the damage to neurological tissue after a catastrophic injury. Can heal brain tissue."
 	icon_state = "pill3"
 
@@ -56,7 +56,7 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/imidazoline
-	name = "Imidazoline (15u)"
+	name = "Imidazoline pill"
 	desc = "Heals eye damage."
 	icon_state = "pill3"
 
@@ -66,29 +66,27 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/osteodaxon
-	name = "Osteodaxon (25u)"
+	name = "Osteodaxon pill"
 	desc = "An experimental drug used to heal bone fractures."
 	icon_state = "pill2"
 
 /obj/item/weapon/reagent_containers/pill/osteodaxon/Initialize()
 	..()
-	reagents.add_reagent("osteodaxon", 15)
-	reagents.add_reagent("inaprovaline", 10)
+	reagents.add_reagent("osteodaxon", 10)
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/myelamine
-	name = "Myelamine (25u)"
+	name = "Myelamine pill"
 	desc = "Used to rapidly clot internal hemorrhages by increasing the effectiveness of platelets."
 	icon_state = "pill1"
 
 /obj/item/weapon/reagent_containers/pill/myelamine/Initialize()
 	..()
-	reagents.add_reagent("myelamine", 15)
-	reagents.add_reagent("inaprovaline", 10)
+	reagents.add_reagent("myelamine", 10)
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/hyronalin
-	name = "Hyronalin (15u)"
+	name = "Hyronalin pill"
 	desc = "Hyronalin is a medicinal drug used to counter the effect of radiation poisoning."
 	icon_state = "pill4"
 
@@ -98,7 +96,7 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/arithrazine
-	name = "Arithrazine (5u)"
+	name = "Arithrazine pill"
 	desc = "Arithrazine is an unstable medication used for the most extreme cases of radiation poisoning."
 	icon_state = "pill2"
 
@@ -108,7 +106,7 @@
 	color = reagents.get_color()
 
 /obj/item/weapon/reagent_containers/pill/corophizine
-	name = "Corophizine (5u)"
+	name = "Corophizine pill"
 	desc = "A wide-spectrum antibiotic drug. Powerful and uncomfortable in equal doses."
 	icon_state = "pill2"
 
@@ -117,18 +115,8 @@
 	reagents.add_reagent("corophizine", 5)
 	color = reagents.get_color()
 
-/obj/item/weapon/reagent_containers/pill/vermicetol
-	name = "Vermicetol (15u)"
-	desc = "An extremely potent drug to treat physical injuries."
-	icon_state = "pill1"
-
-/obj/item/weapon/reagent_containers/pill/vermicetol/Initialize()
-	..()
-	reagents.add_reagent("vermicetol", 15)
-	color = reagents.get_color()
-
 /obj/item/weapon/reagent_containers/pill/healing_nanites
-	name = "Healing nanites (30u)"
+	name = "Healing nanites capsule"
 	desc = "Miniature medical robots that swiftly restore bodily damage."
 	icon_state = "pill1"
 
@@ -139,8 +127,8 @@
 
 /*CHOMPStation removal begin
 /obj/item/weapon/reagent_containers/pill/sleevingcure
-	name = "Vey-Med Resleeving Booster pill" //YW Edit
-	desc = "A rare medication provided by Vey-Med that helps counteract negative side effects of using resleeving machinery. Numb tongue before swallowing." //YW Edit
+	name = "Vey-Med Resleeving Booster pill"
+	desc = "A rare medication provided by Vey-Med that helps counteract negative side effects of using resleeving machinery. Numb tongue before swallowing."
 	icon_state = "pill3"
 
 /obj/item/weapon/reagent_containers/pill/sleevingcure/Initialize()

@@ -17,7 +17,7 @@
 	icon_state = "keyboard"
 	item_state = "keyboard"
 	attack_verb = list("smashed")
-	instrumentId = "piano"
+	instrumentId = "keyboard"
 	instrumentExt = "ogg"
 
 /obj/item/device/instrument/eguitar

@@ -14,33 +14,26 @@
 	var/amount = 3
 	var/expand = 1
 	var/metal = 0
-	var/dries = 1 //VOREStation Add
-	var/slips = 0 //VOREStation Add
 
-/obj/effect/effect/foam/Initialize(var/mapload, var/ismetal = 0)
-	. = ..()
-	//icon_state = "[ismetal? "m" : ""]foam" //VOREStation Removal
+/obj/effect/effect/foam/New(var/loc, var/ismetal = 0)
+	..(loc)
+	icon_state = "[ismetal? "m" : ""]foam"
 	metal = ismetal
 	playsound(src, 'sound/effects/bubbles2.ogg', 80, 1, -3)
-	if(dries) //VOREStation Add
-		addtimer(CALLBACK(src, .proc/post_spread), 3 + metal * 3)
-		addtimer(CALLBACK(src, .proc/pre_harden), 12 SECONDS)
-		addtimer(CALLBACK(src, .proc/harden), 15 SECONDS)
-
-/obj/effect/effect/foam/proc/post_spread()
-	process()
-	checkReagents()
-
-/obj/effect/effect/foam/proc/pre_harden()
-	return //VOREStation Edit
-
-/obj/effect/effect/foam/proc/harden()
-	if(metal)
-		var/obj/structure/foamedmetal/M = new(src.loc)
-		M.metal = metal
-		M.updateicon()
-	flick("[icon_state]-disolve", src)
-	QDEL_IN(src, 5)
+	spawn(3 + metal * 3)
+		process()
+		checkReagents()
+	spawn(120)
+		STOP_PROCESSING(SSobj, src)
+		sleep(30)
+		if(metal)
+			var/obj/structure/foamedmetal/M = new(src.loc)
+			M.metal = metal
+			M.updateicon()
+		flick("[icon_state]-disolve", src)
+		sleep(5)
+		qdel(src)
+	return
 
 /obj/effect/effect/foam/proc/checkReagents() // transfer any reagents to the floor
 	if(!metal && reagents)
@@ -81,11 +74,15 @@
 			qdel(src)
 
 /obj/effect/effect/foam/Crossed(var/atom/movable/AM)
-	if(AM.is_incorporeal())
-		return
+	//VOREStation Edit begin: SHADEKIN
+	var/mob/SK = AM
+	if(istype(SK))
+		if(SK.shadekin_phasing_check())
+			return
+	//VOREStation Edit end: SHADEKIN
 	if(metal)
 		return
-	if(slips && istype(AM, /mob/living)) //VOREStation Add
+	if(istype(AM, /mob/living))
 		var/mob/living/M = AM
 		M.slip("the foam", 6)
 
@@ -171,7 +168,7 @@
 		user.visible_message("<span class='warning'>[user] smashes through the foamed metal.</span>", "<span class='notice'>You smash through the metal foam wall.</span>")
 		qdel(src)
 	else
-		to_chat(user, "<span class='notice'>You hit the metal foam but bounce off it.</span>")
+		user << "<span class='notice'>You hit the metal foam but bounce off it.</span>"
 	return
 
 /obj/structure/foamedmetal/attackby(var/obj/item/I, var/mob/user)
@@ -187,4 +184,4 @@
 		user.visible_message("<span class='warning'>[user] smashes through the foamed metal.</span>", "<span class='notice'>You smash through the foamed metal with \the [I].</span>")
 		qdel(src)
 	else
-		to_chat(user, "<span class='notice'>You hit the metal foam to no effect.</span>")
+		user << "<span class='notice'>You hit the metal foam to no effect.</span>"

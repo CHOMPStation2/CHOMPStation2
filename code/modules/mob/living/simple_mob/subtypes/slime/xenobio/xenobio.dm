@@ -4,7 +4,6 @@
 	desc = "The most basic of slimes.  The grey slime has no remarkable qualities, however it remains one of the most useful colors for scientists."
 	layer = MOB_LAYER + 1 // Need them on top of other mobs or it looks weird when consuming something.
 	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime // This should never be changed for xenobio slimes.
-	max_nutrition = 1000
 	var/is_adult = FALSE // Slimes turn into adults when fed enough. Adult slimes are somewhat stronger, and can reproduce if fed enough.
 	var/maxHealth_adult = 200
 	var/power_charge = 0 // Disarm attacks can shock someone if high/lucky enough.
@@ -74,25 +73,25 @@
 	..()
 
 /mob/living/simple_mob/slime/xenobio/examine(mob/user)
-	. = ..()
+	..()
 	if(hat)
-		. += "It is wearing \a [hat]."
+		to_chat(user, "It is wearing \a [hat].")
 
 	if(stat == DEAD)
-		. += "It appears to be dead."
+		to_chat(user, "It appears to be dead.")
 	else if(incapacitated(INCAPACITATION_DISABLED))
-		. += "It appears to be incapacitated."
+		to_chat(user, "It appears to be incapacitated.")
 	else if(harmless)
-		. += "It appears to have been pacified."
+		to_chat(user, "It appears to have been pacified.")
 	else
 		if(has_AI())
 			var/datum/ai_holder/simple_mob/xenobio_slime/AI = ai_holder
 			if(AI.rabid)
-				. += "It seems very, very angry and upset."
+				to_chat(user, "It seems very, very angry and upset.")
 			else if(AI.obedience >= 5)
-				. += "It looks rather obedient."
+				to_chat(user, "It looks rather obedient.")
 			else if(AI.discipline)
-				. += "It has been subjugated by force, at least for now."
+				to_chat(user, "It has been subjugated by force, at least for now.")
 
 /mob/living/simple_mob/slime/xenobio/proc/make_adult()
 	if(is_adult)
@@ -102,7 +101,6 @@
 	melee_damage_lower = round(melee_damage_lower * 2) // 20
 	melee_damage_upper = round(melee_damage_upper * 2) // 30
 	maxHealth = maxHealth_adult
-	max_nutrition = 1200
 	amount_grown = 0
 	update_icon()
 	update_name()

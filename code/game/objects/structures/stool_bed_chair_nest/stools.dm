@@ -6,8 +6,6 @@ var/global/list/stool_cache = list() //haha stool
 	desc = "Apply butt."
 	icon = 'icons/obj/furniture_vr.dmi' //VOREStation Edit - new Icons
 	icon_state = "stool_preview" //set for the map
-	randpixel = 0
-	center_of_mass = null
 	force = 10
 	throwforce = 10
 	w_class = ITEMSIZE_HUGE
@@ -32,27 +30,27 @@ var/global/list/stool_cache = list() //haha stool
 	update_icon()
 
 /obj/item/weapon/stool/padded/New(var/newloc, var/new_material)
-	..(newloc,"steel",MAT_CARPET) //CHOMPstation edit: New tile material system
+	..(newloc, "steel", "carpet")
 
 /obj/item/weapon/stool/update_icon()
 	// Prep icon.
 	icon_state = ""
-	cut_overlays()
+	overlays.Cut()
 	// Base icon.
 	var/cache_key = "stool-[material.name]"
 	if(isnull(stool_cache[cache_key]))
 		var/image/I = image(icon, base_icon)
 		I.color = material.icon_colour
 		stool_cache[cache_key] = I
-	add_overlay(stool_cache[cache_key])
+	overlays |= stool_cache[cache_key]
 	// Padding overlay.
 	if(padding_material)
 		var/padding_cache_key = "stool-padding-[padding_material.name]"
 		if(isnull(stool_cache[padding_cache_key]))
-			var/image/I =  image(icon, "[base_icon]_padding") //VOREStation Edit
+			var/image/I =  image(icon, "stool_padding")
 			I.color = padding_material.icon_colour
 			stool_cache[padding_cache_key] = I
-		add_overlay(stool_cache[padding_cache_key])
+		overlays |= stool_cache[padding_cache_key]
 	// Strings.
 	if(padding_material)
 		name = "[padding_material.display_name] [initial(name)]" //this is not perfect but it will do for now.
@@ -116,39 +114,35 @@ var/global/list/stool_cache = list() //haha stool
 		qdel(src)
 	else if(istype(W,/obj/item/stack))
 		if(padding_material)
-			to_chat(user, "\The [src] is already padded.")
+			user << "\The [src] is already padded."
 			return
 		var/obj/item/stack/C = W
 		if(C.get_amount() < 1) // How??
 			user.drop_from_inventory(C)
 			qdel(C)
 			return
-		var/padding_type
-		 //CHOMPstation Start: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
+		var/padding_type //This is awful but it needs to be like this until tiles are given a material var.
 		if(istype(W,/obj/item/stack/tile/carpet))
-			var/obj/item/stack/tile/carpet/M = W
-			if(M.material && (M.material.flags & MATERIAL_PADDING))
-				padding_type = "[M.material.name]"
-		//CHOMPstation END
+			padding_type = "carpet"
 		else if(istype(W,/obj/item/stack/material))
 			var/obj/item/stack/material/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))
 				padding_type = "[M.material.name]"
 		if(!padding_type)
-			to_chat(user, "You cannot pad \the [src] with that.")
+			user << "You cannot pad \the [src] with that."
 			return
 		C.use(1)
 		if(!istype(src.loc, /turf))
 			user.drop_from_inventory(src)
 			src.loc = get_turf(src)
-		to_chat(user, "You add padding to \the [src].")
+		user << "You add padding to \the [src]."
 		add_padding(padding_type)
 		return
 	else if (W.is_wirecutter())
 		if(!padding_material)
-			to_chat(user, "\The [src] has no padding to remove.")
+			user << "\The [src] has no padding to remove."
 			return
-		to_chat(user, "You remove the padding from \the [src].")
+		user << "You remove the padding from \the [src]."
 		playsound(src.loc, W.usesound, 50, 1)
 		remove_padding()
 	else

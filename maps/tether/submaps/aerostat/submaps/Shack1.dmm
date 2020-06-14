@@ -45,12 +45,6 @@
 	icon_state = "wood_broken5"
 	},
 /area/submap/virgo2/Shack1)
-"l" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/multiple/voidsuit,
-/obj/structure/salvageable/personal,
-/turf/simulated/floor/wood,
-/area/submap/virgo2/Shack1)
 "m" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/wood,
@@ -163,7 +157,7 @@ a
 (6,1,1) = {"
 a
 b
-l
+O
 h
 i
 i

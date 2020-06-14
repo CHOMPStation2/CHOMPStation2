@@ -27,5 +27,5 @@
 	mode = input("Which colour do you want to use?", "Pipe painter", mode) in modes
 
 /obj/item/device/pipe_painter/examine(mob/user)
-	. = ..()
-	. += "It is in [mode] mode."
+	..(user)
+	user << "It is in [mode] mode."

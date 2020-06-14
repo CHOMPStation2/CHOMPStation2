@@ -134,7 +134,7 @@
 	var/is_open = 0 //Whether or not the wires are exposed
 	var/locked = 0
 	var/check_delay = 60	//periodically recheck if we need to rebuild a shield
-	use_power = USE_POWER_OFF
+	use_power = 0
 	idle_power_usage = 0
 	var/global/list/blockedturfs =  list(
 		/turf/space,
@@ -153,11 +153,10 @@
 
 	create_shields()
 
-	var/new_power_usage = 0
+	idle_power_usage = 0
 	for(var/obj/machinery/shield/shield_tile in deployed_shields)
-		new_power_usage += shield_tile.shield_idle_power
-	update_idle_power_usage(new_power_usage)
-	update_use_power(USE_POWER_IDLE)
+		idle_power_usage += shield_tile.shield_idle_power
+	update_use_power(1)
 
 /obj/machinery/shieldgen/proc/shields_down()
 	if(!active) return 0 //If it's already off, how did this get called?
@@ -167,7 +166,7 @@
 
 	collapse_shields()
 
-	update_use_power(USE_POWER_OFF)
+	update_use_power(0)
 
 /obj/machinery/shieldgen/proc/create_shields()
 	for(var/turf/target_tile in range(2, src))
@@ -206,7 +205,7 @@
 				new_power_usage += shield_tile.shield_idle_power
 
 			if (new_power_usage != idle_power_usage)
-				update_idle_power_usage(new_power_usage)
+				idle_power_usage = new_power_usage
 				use_power(0)
 
 			check_delay = 60
@@ -259,14 +258,14 @@
 		return
 
 	if (src.active)
-		user.visible_message("<font color='blue'>[bicon(src)] [user] deactivated the shield generator.</font>", \
-			"<font color='blue'>[bicon(src)] You deactivate the shield generator.</font>", \
+		user.visible_message("<font color='blue'>\icon[src] [user] deactivated the shield generator.</font>", \
+			"<font color='blue'>\icon[src] You deactivate the shield generator.</font>", \
 			"You hear heavy droning fade out.")
 		src.shields_down()
 	else
 		if(anchored)
-			user.visible_message("<font color='blue'>[bicon(src)] [user] activated the shield generator.</font>", \
-				"<font color='blue'>[bicon(src)] You activate the shield generator.</font>", \
+			user.visible_message("<font color='blue'>\icon[src] [user] activated the shield generator.</font>", \
+				"<font color='blue'>\icon[src] You activate the shield generator.</font>", \
 				"You hear heavy droning.")
 			src.shields_up()
 		else

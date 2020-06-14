@@ -696,10 +696,3 @@
 	icon_state = "brewer"
 	injection_chems = null
 	max_item_count = 1
-	
-/obj/item/device/dogborg/sleeper/compactor/supply //Miner borg belly
-	name = "Supply Satchel"
-	desc = "A mounted survival unit with fuel processor."
-	icon_state = "sleeperc"
-	injection_chems = list("glucose","inaprovaline","tricordrazine")
-	max_item_count = 1

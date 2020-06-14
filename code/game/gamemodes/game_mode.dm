@@ -91,7 +91,7 @@ var/global/list/additional_antag_types = list()
 			message_admins("Admin [key_name_admin(usr)] is debugging the [antag.role_text] template.")
 	else if(href_list["remove_antag_type"])
 		if(antag_tags && (href_list["remove_antag_type"] in antag_tags))
-			to_chat(usr, "Cannot remove core mode antag type.")
+			usr << "Cannot remove core mode antag type."
 			return
 		var/datum/antagonist/antag = all_antag_types[href_list["remove_antag_type"]]
 		if(antag_templates && antag_templates.len && antag && (antag in antag_templates) && (antag.id in additional_antag_types))
@@ -117,11 +117,9 @@ var/global/list/additional_antag_types = list()
 				return
 
 /datum/game_mode/proc/announce() //to be called when round starts
-	to_world("<B>The current game mode is [capitalize(name)]!</B>")
-	if(round_description)
-		to_world("[round_description]")
-	if(round_autoantag)
-		to_world("Antagonists will be added to the round automagically as needed.")
+	world << "<B>The current game mode is [capitalize(name)]!</B>"
+	if(round_description) world << "[round_description]"
+	if(round_autoantag) world << "Antagonists will be added to the round automagically as needed."
 	if(antag_templates && antag_templates.len)
 		var/antag_summary = "<b>Possible antagonist types:</b> "
 		var/i = 1
@@ -135,7 +133,7 @@ var/global/list/additional_antag_types = list()
 			i++
 		antag_summary += "."
 		if(antag_templates.len > 1 && master_mode != "secret")
-			to_world("[antag_summary]")
+			world << "[antag_summary]"
 		else
 			message_admins("[antag_summary]")
 
@@ -306,7 +304,7 @@ var/global/list/additional_antag_types = list()
 	var/escaped_on_pod_5 = 0
 	var/escaped_on_shuttle = 0
 
-	var/list/area/escape_locations = list(/area/shuttle/escape, /area/shuttle/escape_pod1/centcom, /area/shuttle/escape_pod2/centcom, /area/shuttle/escape_pod3/centcom, /area/shuttle/escape_pod5/centcom) //VOREStation Edit
+	var/list/area/escape_locations = list(/area/shuttle/escape/centcom, /area/shuttle/escape_pod1/centcom, /area/shuttle/escape_pod2/centcom, /area/shuttle/escape_pod3/centcom, /area/shuttle/escape_pod5/centcom)
 
 	for(var/mob/M in player_list)
 		if(M.client)
@@ -342,7 +340,7 @@ var/global/list/additional_antag_types = list()
 		text += " (<b>[escaped_total>0 ? escaped_total : "none"] [emergency_shuttle.evac ? "escaped" : "transferred"]</b>) and <b>[ghosts] ghosts</b>.<br>"
 	else
 		text += "There were <b>no survivors</b> (<b>[ghosts] ghosts</b>)."
-	to_world(text)
+	world << text
 
 	if(clients > 0)
 		feedback_set("round_end_clients",clients)
@@ -510,7 +508,7 @@ proc/display_roundstart_logout_report()
 
 	for(var/mob/M in mob_list)
 		if(M.client && M.client.holder)
-			to_chat(M,msg)
+			M << msg
 
 proc/get_nt_opposed()
 	var/list/dudes = list()
@@ -528,9 +526,9 @@ proc/get_nt_opposed()
 	if(!player || !player.current) return
 
 	var/obj_count = 1
-	to_chat(player.current, "<span class='notice'>Your current objectives:</span>")
+	player.current << "<span class='notice'>Your current objectives:</span>"
 	for(var/datum/objective/objective in player.objectives)
-		to_chat(player.current, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
+		player.current << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
 		obj_count++
 
 /mob/verb/check_round_info()
@@ -538,15 +536,15 @@ proc/get_nt_opposed()
 	set category = "OOC"
 
 	if(!ticker || !ticker.mode)
-		to_chat(usr, "<span class='warning'>Something is terribly wrong; there is no gametype.</span>")
+		usr << "Something is terribly wrong; there is no gametype."
 		return
 
 	if(master_mode != "secret")
-		to_chat(usr, "<span class='notice'><b>The roundtype is [capitalize(ticker.mode.name)]</b></span>")
+		usr << "<b>The roundtype is [capitalize(ticker.mode.name)]</b>"
 		if(ticker.mode.round_description)
-			to_chat(usr, "<span class='notice'><i>[ticker.mode.round_description]</i></span>")
+			usr << "<i>[ticker.mode.round_description]</i>"
 		if(ticker.mode.extended_round_description)
-			to_chat(usr, "<span class='notice'>[ticker.mode.extended_round_description]</span>")
+			usr << "[ticker.mode.extended_round_description]"
 	else
-		to_chat(usr, "<span class='notice'><i>Shhhh</i>. It's a secret.</span>")
+		usr << "<i>Shhhh</i>. It's a secret."
 	return

@@ -130,7 +130,7 @@
 	used = TRUE
 	desc += " This one has already been used."
 	overlays.Cut()
-	target.adjust_nutrition(amount)
+	target.nutrition += amount
 	user.custom_emote(message = "connects \the [src] to [user == target ? "their" : "[target]'s"] charging port, expending it.")
 
 /obj/item/weapon/cell/emergency_light

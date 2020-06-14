@@ -7,8 +7,6 @@
 	w_class = ITEMSIZE_NORMAL
 	var/mob/affecting = null
 	var/deity_name = "Christ"
-	use_sound = 'sound/bureaucracy/bookopen.ogg'
-	drop_sound = 'sound/bureaucracy/bookclose.ogg'
 
 /obj/item/weapon/storage/bible/booze
 	name = "bible"
@@ -28,7 +26,7 @@
 	if(!proximity) return
 	if(user.mind && (user.mind.assigned_role == "Chaplain"))
 		if(A.reagents && A.reagents.has_reagent("water")) //blesses all the water in the holder
-			to_chat(user, "<span class='notice'>You bless [A].</span>")
+			user << "<span class='notice'>You bless [A].</span>"
 			var/water2holy = A.reagents.get_reagent_amount("water")
 			A.reagents.del_reagent("water")
 			A.reagents.add_reagent("holywater",water2holy)

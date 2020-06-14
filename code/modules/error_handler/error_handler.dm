@@ -1,9 +1,7 @@
 // error_cooldown items will either be positive (cooldown time) or negative (silenced error)
 //  If negative, starts at -1, and goes down by 1 each time that error gets skipped
-GLOBAL_VAR_INIT(total_runtimes, 0)
-GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
-
-
+var/total_runtimes = 0
+var/total_runtimes_skipped = 0
 // The ifdef needs to be down here, since the error viewer references total_runtimes
 #ifdef DEBUG
 /world/Error(var/exception/e, var/datum/e_src)
@@ -12,7 +10,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 		return ..()
 	if(!GLOB.error_last_seen) // A runtime is occurring too early in start-up initialization
 		return ..()
-	GLOB.total_runtimes++
+	total_runtimes++
 
 	var/erroruid = "[e.file][e.line]"
 	var/last_seen = GLOB.error_last_seen[erroruid]
@@ -22,7 +20,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 		last_seen = world.time
 	if(cooldown < 0)
 		GLOB.error_cooldown[erroruid]-- // Used to keep track of skip count for this error
-		GLOB.total_runtimes_skipped++
+		total_runtimes_skipped++
 		return // Error is currently silenced, skip handling it
 
 	// Handle cooldowns and silencing spammy errors
@@ -51,12 +49,12 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 	// First, try to make better src/usr info lines
 	if(istype(e_src))
 		srcinfo = list("  src: [log_info_line(e_src)]")
-		var/atom/atom_e_src = e_src
-		if(istype(atom_e_src))
-			srcinfo += "  src.loc: [log_info_line(atom_e_src.loc)]"
+		locinfo = log_info_line(e_src)
+		if(locinfo)
+			srcinfo += "  src.loc: [locinfo]"
 	if(istype(usr))
 		usrinfo = list("  usr: [log_info_line(usr)]")
-		locinfo = log_info_line(usr.loc)
+		locinfo = log_info_line(usr)
 		if(locinfo)
 			usrinfo += "  usr.loc: [locinfo]"
 	// The proceeding mess will almost definitely break if error messages are ever changed

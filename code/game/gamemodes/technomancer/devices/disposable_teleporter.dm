@@ -23,12 +23,12 @@
 	uses = 1
 
 /obj/item/weapon/disposable_teleporter/examine(mob/user)
-	. = ..()
-	. += "[uses] uses remaining."
+	..()
+	user << "[uses] uses remaining."
 
 /obj/item/weapon/disposable_teleporter/attack_self(mob/user as mob)
 	if(!uses)
-		to_chat(user, "<span class='danger'>\The [src] has ran out of uses, and is now useless to you!</span>")
+		user << "<span class='danger'>\The [src] has ran out of uses, and is now useless to you!</span>"
 		return
 	else
 		var/area_wanted = input(user, "Area to teleport to", "Teleportation") in teleportlocs
@@ -63,8 +63,8 @@
 				targets.Add(T)
 
 		if(!targets.len)
-			to_chat(user, "\The [src] was unable to locate a suitable teleport destination, as all the possibilities \
-			were nonexistant or hazardous. Try a different area.")
+			user << "\The [src] was unable to locate a suitable teleport destination, as all the possibilities \
+			were nonexistant or hazardous. Try a different area."
 			return
 		var/turf/simulated/destination = null
 
@@ -72,8 +72,8 @@
 
 		if(destination)
 			user.forceMove(destination)
-			to_chat(user, "<span class='notice'>You are teleported to \the [A].</span>")
+			user << "<span class='notice'>You are teleported to \the [A].</span>"
 			uses--
 			if(uses <= 0)
-				to_chat(user, "<span class='danger'>\The [src] has ran out of uses, and disintegrates from your hands.</span>")
+				user << "<span class='danger'>\The [src] has ran out of uses, and disintegrates from your hands.</span>"
 				qdel(src)

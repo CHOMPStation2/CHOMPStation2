@@ -36,7 +36,7 @@ mob/Login()
 	var/list/servers = list()
 	for(var/x in global.servers)
 
-		to_world("[x] [servernames[ global.servers.Find(x) ]]")
+		world << "[x] [servernames[ global.servers.Find(x) ]]"
 
 		var/info = world.Export("[x]?status")
 		var/datum/server/S = new()
@@ -46,8 +46,8 @@ mob/Login()
 		S.weight += player_weight * S.players
 		S.link = x
 
-		to_world(S.players)
-		to_world(S.admins)
+		world << S.players
+		world << S.admins
 
 		weights.Add(S.weight)
 		servers.Add(S)

@@ -31,14 +31,8 @@
 
 /obj/effect/energy_field/Destroy()
 	update_nearby_tiles()
-	if(my_gen)
-		if(istype(my_gen))
-			my_gen.field.Remove(src)
-			my_gen = null
-		else if(istype(my_gen, /datum/artifact_effect/forcefield))
-			var/datum/artifact_effect/forcefield/AE = my_gen
-			AE.created_field.Remove(src)
-			my_gen = null
+	my_gen.field.Remove(src)
+	my_gen = null
 	var/turf/current_loc = get_turf(src)
 	. = ..()
 	for(var/direction in cardinal)

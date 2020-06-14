@@ -5,7 +5,6 @@
 	var/finished = FALSE
 	var/role_name = "a thing"
 	var/question = "Would you like to play as a thing?"
-	var/query_sound = 'sound/effects/ghost2.ogg' // A sound file to play to the ghost, to help people who are alt-tabbed know something might interest them.
 	var/be_special_flag = 0
 	var/list/check_bans = list()
 	var/wait_time = 60 SECONDS 	// How long to wait until returning the list of candidates.
@@ -43,9 +42,6 @@
 	spawn(0)
 		if(!C)
 			return
-		window_flash(C)
-		if(query_sound)
-			SEND_SOUND(C, sound(query_sound))
 		var/response = alert(C, question, "[role_name] request", "Yes", "No", "Never for this round")
 		if(response == "Yes")
 			response = alert(C, "Are you sure you want to play as a [role_name]?", "[role_name] request", "Yes", "No") // Protection from a misclick.
@@ -66,14 +62,12 @@
 /datum/ghost_query/promethean
 	role_name = "Promethean"
 	question = "Someone is requesting a soul for a promethean.  Would you like to play as one?"
-	query_sound = 'sound/effects/slime_squish.ogg'
 	be_special_flag = BE_ALIEN
 	cutoff_number = 1
 
 /datum/ghost_query/posi_brain
 	role_name = "Positronic Intelligence"
 	question = "Someone has activated a Positronic Brain.  Would you like to play as one?"
-	query_sound = 'sound/machines/boobeebeep.ogg'
 	be_special_flag = BE_AI
 	check_bans = list("AI", "Cyborg")
 	cutoff_number = 1
@@ -81,7 +75,6 @@
 /datum/ghost_query/drone_brain
 	role_name = "Drone Intelligence"
 	question = "Someone has activated a Drone AI Chipset.  Would you like to play as one?"
-	query_sound = 'sound/machines/boobeebeep.ogg'
 	be_special_flag = BE_AI
 	check_bans = list("AI", "Cyborg")
 	cutoff_number = 1
@@ -97,7 +90,6 @@
 /datum/ghost_query/xeno
 	role_name = "Alien"
 	question = "An Alien has just been created on the facility.  Would you like to play as them?"
-	query_sound = 'sound/voice/hiss5.ogg'
 	be_special_flag = BE_ALIEN
 
 /datum/ghost_query/blob
@@ -125,7 +117,7 @@
 /datum/ghost_query/lost_drone
 	role_name = "Lost Drone"
 	question = "A lost drone onboard has been discovered by a crewmember and they are attempting to reactivate it.  Would you like to play as the drone?"
-	be_special_flag = BE_LOSTDRONE	//VOREStation Edit
+	//be_special_flag = BE_AI	//VOREStation Removal: Positronic role is never used because intended purpose is unfitting, so remove the check
 	check_bans = list("AI", "Cyborg")
 	cutoff_number = 1
 

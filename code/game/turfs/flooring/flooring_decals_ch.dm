@@ -1,6 +1,5 @@
 /obj/effect/floor_decal/stairs
-	name = "stair decal"
-	icon = 'icons/obj/decals_ch.dmi'
+	icon = 'icons/turf/flooring/decals_ch.dmi'
 	icon_state = "metal_stairs"
 
 /obj/effect/floor_decal/stairs/wood_stairs

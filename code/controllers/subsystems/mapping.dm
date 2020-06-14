@@ -16,7 +16,8 @@ SUBSYSTEM_DEF(mapping)
 
 	if(config.generate_map)
 		// Map-gen is still very specific to the map, however putting it here should ensure it loads in the correct order.
-		using_map.perform_map_generation()
+		if(using_map.perform_map_generation())
+			using_map.refresh_mining_turfs()
 
 
 /datum/controller/subsystem/mapping/proc/load_map_templates()

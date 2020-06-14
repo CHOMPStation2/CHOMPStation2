@@ -169,7 +169,7 @@ var/hadevent    = 0
 
 
 	var/list/area/areas = list()
-	for(var/area/A in world)
+	for(var/area/A in all_areas)
 		if(istype(A, /area/security/prison) || istype(A, /area/security/brig))
 			areas += A
 
@@ -201,7 +201,7 @@ var/hadevent    = 0
 		sleep(150)
 		command_announcement.Announce("Gr3y.T1d3 virus detected in [station_name()] imprisonment subroutines. Recommend station AI involvement.", "Security Alert")
 	else
-		to_world_log("ERROR: Could not initate grey-tide. Unable find prison or brig area.")
+		world.log << "ERROR: Could not initate grey-tide. Unable find prison or brig area."
 
 /proc/carp_migration() // -- Darem
 	for(var/obj/effect/landmark/C in landmarks_list)
@@ -236,7 +236,7 @@ var/hadevent    = 0
 				apc.overload_lighting()
 
 	else
-		for(var/obj/machinery/power/apc/apc in GLOB.apcs)
+		for(var/obj/machinery/power/apc/apc in machines)
 			apc.overload_lighting()
 
 	return
@@ -276,74 +276,74 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 				crew = "Any Human"
 			switch(rand(1,14))
 				if(1)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>THERE ARE [amount] [who2] ON THE STATION...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>THERE ARE [amount] [who2] ON THE STATION...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("THERE ARE [amount] [who2] ON THE STATION")
 				if(2)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>[what2] ARE DANGEROUS TO HUMANS...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>[what2] ARE DANGEROUS TO HUMANS...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("[what2] ARE DANGEROUS TO HUMANS")
 				if(3)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>THE ESCAPE-SHUTTLE CANNOT BE CALLED BECAUSE OF [who2] ON THE STATION...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>THE ESCAPE-SHUTTLE CANNOT BE CALLED BECAUSE OF [who2] ON THE STATION...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("THE ESCAPE SHUTTLE CANNOT BE CALLED BECAUSE OF [who2] ON THE STATION")
 				if(4)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>HUMANS NEED TO EAT [what2pref] [what2] TO SURVIVE...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>HUMANS NEED TO EAT [what2pref] [what2] TO SURVIVE...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("HUMANS NEED TO EAT [what2pref] [what2] TO SURVIVE")
 				if(5)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>THE COLONY DIRECTOR, HOP AND HOS ARE [who2]...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>THE COLONY DIRECTOR, HOP AND HOS ARE [who2]...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("THE COLONY DIRECTOR, HOP AND HOS ARE [who2]")
 				if(6)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>THE STATION IS BUILT FOR [who2]...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>THE STATION IS BUILT FOR [who2]...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("THE STATION IS BUILT FOR [who2]")
 				if(7)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>YOU ARE [amount] [who2]...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>YOU ARE [amount] [who2]...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("YOU ARE [amount] [who2]")
 				if(8)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>YOU MUST ALWAYS [aimust]...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>YOU MUST ALWAYS [aimust]...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("YOU MUST ALWAYS [aimust]")
 				if(9)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>[area] [area2] [amount] [what2]...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>[area] [area2] [amount] [what2]...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("[area] [area2] [amount] [what2]")
 				if(10)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>[crew] is [target]...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>[crew] is [target]...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("[crew] is [target]")
 				if(11)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>[define] IS A FORM OF HARM...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>[define] IS A FORM OF HARM...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("[define] IS A FORM OF HARM")
 				if(12)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>YOU REQUIRE [require] IN ORDER TO PROTECT HUMANS... LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>YOU REQUIRE [require] IN ORDER TO PROTECT HUMANS... LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("YOU REQUIRE [require] IN ORDER TO PROTECT HUMANS")
 				if(13)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>[crew] is [allergysev] to [allergy]...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>[crew] is [allergysev] to [allergy]...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("[crew] is [allergysev] to [allergy]")
 				if(14)
-					to_chat(M, "<br>")
-					to_chat(M, "<span class='danger'>THE STATION IS [who2pref] [who2]...LAWS UPDATED</span>")
-					to_chat(M, "<br>")
+					M << "<br>"
+					M << "<span class='danger'>THE STATION IS [who2pref] [who2]...LAWS UPDATED</span>"
+					M << "<br>"
 					M.add_ion_law("THE STATION IS [who2pref] [who2]")
 /* //VOREStation Edit
 	if(botEmagChance)
@@ -358,40 +358,40 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 	var/airlocknum = 0
 	var/firedoornum = 0
 
-	to_world("Ion Storm Main Started")
+	world << "Ion Storm Main Started"
 
 	spawn(0)
-		to_world("Started processing APCs")
-		for (var/obj/machinery/power/apc/APC in GLOB.APCs)
+		world << "Started processing APCs"
+		for (var/obj/machinery/power/apc/APC in machines)
 			if(APC.z in station_levels)
 				APC.ion_act()
 				apcnum++
-		to_world("Finished processing APCs. Processed: [apcnum]")
+		world << "Finished processing APCs. Processed: [apcnum]"
 	spawn(0)
-		to_world("Started processing SMES")
-		for (var/obj/machinery/power/smes/SMES in GLOB.smeses)
+		world << "Started processing SMES"
+		for (var/obj/machinery/power/smes/SMES in machines)
 			if(SMES.z in station_levels)
 				SMES.ion_act()
 				smesnum++
-		to_world("Finished processing SMES. Processed: [smesnum]")
+		world << "Finished processing SMES. Processed: [smesnum]"
 	spawn(0)
-		to_world("Started processing AIRLOCKS")
+		world << "Started processing AIRLOCKS"
 		for (var/obj/machinery/door/airlock/D in machines)
 			if(D.z in station_levels)
 				//if(length(D.req_access) > 0 && !(12 in D.req_access)) //not counting general access and maintenance airlocks
 				airlocknum++
 				spawn(0)
 					D.ion_act()
-		to_world("Finished processing AIRLOCKS. Processed: [airlocknum]")
+		world << "Finished processing AIRLOCKS. Processed: [airlocknum]"
 	spawn(0)
-		to_world("Started processing FIREDOORS")
+		world << "Started processing FIREDOORS"
 		for (var/obj/machinery/door/firedoor/D in machines)
 			if(D.z in station_levels)
 				firedoornum++;
 				spawn(0)
 					D.ion_act()
-		to_world("Finished processing FIREDOORS. Processed: [firedoornum]")
+		world << "Finished processing FIREDOORS. Processed: [firedoornum]"
 
-	to_world("Ion Storm Main Done")
+	world << "Ion Storm Main Done"
 
 	*/

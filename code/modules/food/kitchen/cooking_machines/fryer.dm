@@ -42,7 +42,7 @@
 		return
 
 	if(!victim || !victim.Adjacent(user))
-		to_chat(user, "<span class='danger'>Your victim slipped free!</span>")
+		user << "<span class='danger'>Your victim slipped free!</span>"
 		cooking = 0
 		icon_state = off_icon
 		fry_loop.stop()
@@ -71,10 +71,10 @@
 		victim.apply_damage(rand(30,40), BURN, user.zone_sel.selecting)
 
 	if(!nopain)
-		to_chat(victim, "<span class='danger'>Agony consumes you as searing hot oil scorches your [E ? E.name : "flesh"] horribly!</span>")
+		victim << "<span class='danger'>Agony consumes you as searing hot oil scorches your [E ? E.name : "flesh"] horribly!</span>"
 		victim.emote("scream")
 	else
-		to_chat(victim, "<span class='danger'>Searing hot oil scorches your [E ? E.name : "flesh"]!</span>")
+		victim << "<span class='danger'>Searing hot oil scorches your [E ? E.name : "flesh"]!</span>"
 
 	if(victim.client)
 		add_attack_logs(user,victim,"[cook_type] in [src]")

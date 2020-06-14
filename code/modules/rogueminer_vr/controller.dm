@@ -3,7 +3,7 @@
 // Makes mining zones more difficult as you enter new ones
 // THIS IS THE FIRST UNIT INITIALIZED THAT STARTS EVERYTHING
 //////////////////////////////
-var/datum/controller/rogue/rm_controller
+var/datum/controller/rogue/rm_controller = new()
 
 /datum/controller/rogue
 	var/list/datum/rogue/zonemaster/all_zones = list()
@@ -13,19 +13,11 @@ var/datum/controller/rogue/rm_controller
 	//So I don't have to do absurd list[list[thing]] over and over.
 	var/list/diffstep_nums = list(
 		100,
-		350,
+		200,
+		300,
+		450,
 		600,
-		900,
-		1250,
-		1700)
-
-	var/list/diffstep_chances = list(
-		10,
-		20,
-		30,
-		45,
-		60,
-		80)
+		800)
 
 	var/list/diffstep_strs = list(
 		"Low",
@@ -41,16 +33,13 @@ var/datum/controller/rogue/rm_controller
 	//Info about our current step
 	var/diffstep = 1
 
-	//Difficulty cap
-	var/max_diffstep = 6
-
 	//The current mining zone that the shuttle goes to and whatnot
 	var/datum/rogue/zonemaster/current_zone = null
 	var/datum/rogue/zonemaster/previous_zone = null
 
 	// The world.time at which the scanner was last run (for cooldown)
 	var/last_scan = 0
-	var/scan_wait = 5 //In minutes
+	var/scan_wait = 10 //In minutes
 
 	var/debugging = 0
 
@@ -58,46 +47,29 @@ var/datum/controller/rogue/rm_controller
 	var/prefabs = list(
 		"tier1" = list(/datum/rogue/asteroid/predef/cargo),
 		"tier2" = list(/datum/rogue/asteroid/predef/cargo,/datum/rogue/asteroid/predef/cargo/angry),
-		"tier3" = list(/datum/rogue/asteroid/predef/cargo,/datum/rogue/asteroid/predef/cargo/angry),
-		"tier4" = list(/datum/rogue/asteroid/predef/cargo,/datum/rogue/asteroid/predef/cargo/angry,/datum/rogue/asteroid/predef/cargo_large),
+		"tier3" = list(/datum/rogue/asteroid/predef/cargo/angry,/datum/rogue/asteroid/predef/cargo_large),
+		"tier4" = list(/datum/rogue/asteroid/predef/cargo/angry,/datum/rogue/asteroid/predef/cargo_large),
 		"tier5" = list(/datum/rogue/asteroid/predef/cargo/angry,/datum/rogue/asteroid/predef/cargo_large),
 		"tier6" = list(/datum/rogue/asteroid/predef/cargo/angry,/datum/rogue/asteroid/predef/cargo_large)
 	)
 
 	///// Monster Lists /////
-	var/mobs = list(
-		"tier1" = list(
-						/mob/living/simple_mob/animal/space/bats/roguemines = 3,
-						/mob/living/simple_mob/animal/space/carp/roguemines = 2,
-						/mob/living/simple_mob/animal/space/goose/roguemines = 1),
+	var/mobs = list(/*
+		"tier1" = list(/mob/living/simple_mob/animal/space/carp, /mob/living/simple_mob/animal/space/goose),
 
-		"tier2" = list(
-						/mob/living/simple_mob/animal/space/bats/roguemines = 1,
-						/mob/living/simple_mob/animal/space/carp/roguemines = 2,
-						/mob/living/simple_mob/animal/space/goose/roguemines = 2,
-						/mob/living/simple_mob/animal/wolf/space/roguemines = 1),
+		"tier2" = list(/mob/living/simple_mob/animal/space/carp, /mob/living/simple_mob/animal/space/goose),
 
-		"tier3" = list(
-						/mob/living/simple_mob/animal/space/carp/roguemines = 1,
-						/mob/living/simple_mob/animal/space/goose/roguemines = 1,
-						/mob/living/simple_mob/animal/wolf/space/roguemines = 3,
-						/mob/living/simple_mob/animal/space/carp/large/roguemines = 2,
-						/mob/living/simple_mob/animal/space/bear/roguemines = 1),
+		"tier3" = list(/mob/living/simple_mob/animal/space/carp, /mob/living/simple_mob/animal/space/goose,
+						/mob/living/simple_mob/animal/space/bear, /mob/living/simple_mob/animal/space/carp/strong),
 
-		"tier4" = list(
-						/mob/living/simple_mob/animal/wolf/space/roguemines = 1,
-						/mob/living/simple_mob/animal/space/carp/large/roguemines = 4,
-						/mob/living/simple_mob/animal/space/bear/roguemines = 2),
+		"tier4" = list(/mob/living/simple_mob/animal/space/carp, /mob/living/simple_mob/animal/space/goose, /mob/living/simple_mob/animal/space/bear,
+						/mob/living/simple_mob/animal/space/carp/strong, /mob/living/simple_mob/animal/space/carp/pike/weak),
 
-		"tier5" = list(
-						/mob/living/simple_mob/animal/space/carp/large/roguemines = 2,
-						/mob/living/simple_mob/animal/space/bear/roguemines = 4,
-						/mob/living/simple_mob/vore/aggressive/corrupthound/space/roguemines = 1),
+		"tier5" = list(/mob/living/simple_mob/animal/space/carp, /mob/living/simple_mob/animal/space/bear, /mob/living/simple_mob/animal/space/carp/pike/weak,
+						/mob/living/simple_mob/animal/space/carp/strong, /mob/living/simple_mob/animal/space/carp/pike),
 
-		"tier6" = list(
-						/mob/living/simple_mob/animal/space/bear/roguemines = 6,
-						/mob/living/simple_mob/vore/aggressive/corrupthound/space/roguemines = 4,
-						/mob/living/simple_mob/animal/space/carp/large/huge/roguemines = 1)
+		"tier6" = list(/mob/living/simple_mob/animal/space/bear, /mob/living/simple_mob/animal/space/carp/strong,
+						/mob/living/simple_mob/animal/space/carp/pike, /mob/living/simple_mob/animal/space/carp/pike/weak)*/ //VORESTATION AI TEMPORARY REMOVAL
 	)
 
 /datum/controller/rogue/New()
@@ -107,7 +79,7 @@ var/datum/controller/rogue/rm_controller
 	//decay() //Decay removed for now, since people aren't getting high scores as it is.
 
 /datum/controller/rogue/proc/decay(var/manual = 0)
-	to_world_log("RM(stats): DECAY on controller from [difficulty] to [difficulty+(RM_DIFF_DECAY_AMT)] min 100.") //DEBUG code for playtest stats gathering.
+	world.log << "RM(stats): DECAY on controller from [difficulty] to [difficulty+(RM_DIFF_DECAY_AMT)] min 100." //DEBUG code for playtest stats gathering.
 	adjust_difficulty(RM_DIFF_DECAY_AMT)
 
 	if(!manual) //If it was called manually somehow, then don't start the timer, just decay now.
@@ -118,7 +90,7 @@ var/datum/controller/rogue/rm_controller
 /datum/controller/rogue/proc/dbg(var/message)
 	ASSERT(message) //I want a stack trace if there's no message
 	if(debugging)
-		to_world_log("[message]")
+		world.log << "[message]"
 
 /datum/controller/rogue/proc/adjust_difficulty(var/amt)
 	ASSERT(amt)
@@ -127,9 +99,8 @@ var/datum/controller/rogue/rm_controller
 
 	if(difficulty < diffstep_nums[diffstep])
 		diffstep--
-	else if(diffstep < max_diffstep)
-		if(difficulty >= diffstep_nums[diffstep+1])
-			diffstep++
+	else if(difficulty >= diffstep_nums[diffstep+1])
+		diffstep++
 
 /datum/controller/rogue/proc/get_oldest_zone()
 	var/oldest_time = world.time
@@ -185,7 +156,7 @@ var/datum/controller/rogue/rm_controller
 		ZM_target = pick(clean_zones)
 
 	if(ZM_target)
-		to_world_log("RM(stats): SCORING [ready_zones.len] zones (if unscored).") //DEBUG code for playtest stats gathering.
+		world.log << "RM(stats): SCORING [ready_zones.len] zones (if unscored)." //DEBUG code for playtest stats gathering.
 		for(var/datum/rogue/zonemaster/ZM_toscore in ready_zones) //Score all the zones first.
 			if(ZM_toscore.scored) continue
 			ZM_toscore.score_zone()

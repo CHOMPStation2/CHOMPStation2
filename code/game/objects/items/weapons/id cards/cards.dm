@@ -20,7 +20,6 @@
 	var/associated_account_number = 0
 
 	var/list/files = list(  )
-	drop_sound = 'sound/items/drop/card.ogg'
 
 /obj/item/weapon/card/data
 	name = "data disk"
@@ -71,10 +70,10 @@
 	origin_tech = list(TECH_MAGNET = 2, TECH_ILLEGAL = 2)
 	var/uses = 10
 
-/obj/item/weapon/card/emag/resolve_attackby(atom/A, mob/user, var/click_parameters)
+/obj/item/weapon/card/emag/resolve_attackby(atom/A, mob/user)
 	var/used_uses = A.emag_act(uses, user, src)
 	if(used_uses < 0)
-		return ..(A, user, click_parameters)
+		return ..(A, user)
 
 	uses -= used_uses
 	A.add_fingerprint(user)
@@ -99,9 +98,9 @@
 	if(istype(O, /obj/item/stack/telecrystal))
 		var/obj/item/stack/telecrystal/T = O
 		if(T.amount < 1)
-			to_chat(usr, "<span class='notice'>You are not adding enough telecrystals to fuel \the [src].</span>")
+			usr << "<span class='notice'>You are not adding enough telecrystals to fuel \the [src].</span>"
 			return
 		uses += T.amount/2 //Gives 5 uses per 10 TC
 		uses = CEILING(uses, 1) //Ensures no decimal uses nonsense, rounds up to be nice
-		to_chat(usr, "<span class='notice'>You add \the [O] to \the [src]. Increasing the uses of \the [src] to [uses].</span>")
+		usr << "<span class='notice'>You add \the [O] to \the [src]. Increasing the uses of \the [src] to [uses].</span>"
 		qdel(O)

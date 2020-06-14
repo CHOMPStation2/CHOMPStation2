@@ -4,7 +4,7 @@
 	speech_verb = "chimpers"
 	ask_verb = "chimpers"
 	exclaim_verb = "screeches"
-	key = "C"
+	key = "6"
 	syllables = list("ook","eek")
 	machine_understands = 0
 
@@ -71,7 +71,7 @@
 	speech_verb = "chirps"
 	ask_verb = "tweets"
 	exclaim_verb = "squawks"
-	key = "B"
+	key = "m"
 	flags = RESTRICTED
 	machine_understands = 0
 	space_chance = 100

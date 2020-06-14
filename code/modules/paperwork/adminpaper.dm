@@ -40,15 +40,11 @@
 	var/originhash = md5("[origin]")
 	var/timehash = copytext(md5("[world.time]"),1,10)
 	var/text = null
-	var/logo = alert(usr, "Do you want the header of your fax to have a NanoTrasen, SolGov, or Trader logo?","Fax Logo","NanoTrasen","SolGov","Trader") //VOREStation Add - Trader
+	var/logo = alert(usr, "Do you want the header of your fax to have a NanoTrasen or SolGov logo?","Fax Logo","NanoTrasen","SolGov")
 	if(logo == "SolGov")
 		logo = "sglogo.png"
-	//VOREStation Edit/Add
-	else if(logo == "NanoTrasen")
-		logo = "ntlogo.png"
 	else
-		logo = "trader.png"
-	//VOREStation Edit/Add End
+		logo = "ntlogo.png"
 	//TODO change logo based on who you're contacting.
 	text = "<center><img src = [logo]></br>"
 	text += "<b>[origin] Quantum Uplink Signed Message</b><br>"
@@ -84,7 +80,7 @@ obj/item/weapon/paper/admin/proc/updateDisplay()
 	if(href_list["write"])
 		var/id = href_list["write"]
 		if(free_space <= 0)
-			to_chat(usr, "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>")
+			usr << "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>"
 			return
 
 		var/t =  sanitize(input("Enter what you want to write:", "Write", null, null) as message, free_space, extra = 0)
@@ -100,7 +96,7 @@ obj/item/weapon/paper/admin/proc/updateDisplay()
 
 
 		if(fields > 50)//large amount of fields creates a heavy load on the server, see updateinfolinks() and addtofield()
-			to_chat(usr, "<span class='warning'>Too many fields. Sorry, you can't do this.</span>")
+			usr << "<span class='warning'>Too many fields. Sorry, you can't do this.</span>"
 			fields = last_fields_value
 			return
 

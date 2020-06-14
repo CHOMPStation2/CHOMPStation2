@@ -1,7 +1,6 @@
 /obj/item/weapon/mop_deploy
 	name = "mop"
 	desc = "Deployable mop."
-	icon = 'icons/obj/janitor.dmi'
 	icon_state = "mop"
 	force = 3
 	anchored = 1    // Never spawned outside of inventory, should be fine.
@@ -41,7 +40,7 @@
 			var/turf/T = get_turf(A)
 			if(T)
 				T.clean_deploy(src)
-			to_chat(user, "<span class='notice'>You have finished mopping!</span>")
+			user << "<span class='notice'>You have finished mopping!</span>"
 
 /obj/effect/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/weapon/mop_deploy) || istype(I, /obj/item/weapon/soap))

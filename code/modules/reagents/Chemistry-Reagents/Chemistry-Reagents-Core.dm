@@ -46,11 +46,11 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species.gets_food_nutrition == 0)
-			H.adjust_nutrition(removed)
+			H.nutrition += removed
 			is_vampire = 1 //VOREStation Edit END
 	if(alien == IS_SLIME)	// Treat it like nutriment for the jello, but not equivalent.
 		M.heal_organ_damage(0.2 * removed * volume_mod, 0)	// More 'effective' blood means more usable material.
-		M.adjust_nutrition(20 * removed * volume_mod)
+		M.nutrition += 20 * removed * volume_mod
 		M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
 		M.adjustToxLoss(removed / 2)	// Still has some water in the form of plasma.
 		return
@@ -175,10 +175,10 @@
 			S.visible_message("<span class='warning'>[S]'s flesh sizzles where the water touches it!</span>", "<span class='danger'>Your flesh burns in the water!</span>")
 
 		// Then extinguish people on fire.
-		var/needed = max(0,L.fire_stacks) * 5
+		var/needed = L.fire_stacks * 5
 		if(amount > needed)
 			L.ExtinguishMob()
-		L.water_act(amount / 25) // Div by 25, as water_act multiplies it by 5 in order to calculate firestack modification.
+		L.adjust_fire_stacks(-(amount / 5))
 		remove_self(needed)
   //YWedit start, readds promethean damage that was removed by vorestation.
 /datum/reagent/water/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)

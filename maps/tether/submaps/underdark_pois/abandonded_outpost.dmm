@@ -371,14 +371,6 @@
 /obj/item/device/geiger,
 /turf/simulated/mineral/floor/ignore_cavegen/virgo3b,
 /area/mine/explored/underdark)
-"DS" = (
-/obj/structure/salvageable/autolathe,
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/mine/explored/underdark)
-"Vo" = (
-/obj/structure/salvageable/computer,
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/mine/explored/underdark)
 
 (1,1,1) = {"
 aa
@@ -571,7 +563,7 @@ ad
 am
 ad
 ab
-DS
+ae
 ae
 ae
 av
@@ -838,7 +830,7 @@ aC
 ab
 as
 ae
-Vo
+ae
 ae
 as
 aE
@@ -864,7 +856,7 @@ aH
 ab
 ae
 ae
-Vo
+ae
 ae
 ae
 af

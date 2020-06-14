@@ -79,13 +79,13 @@ Class Procs:
 	if(!direct())
 		state |= CONNECTION_DIRECT
 		edge.direct++
-	//to_world("Marked direct.")
+	//world << "Marked direct."
 
 /connection/proc/mark_indirect()
 	if(direct())
 		state &= ~CONNECTION_DIRECT
 		edge.direct--
-	//to_world("Marked indirect.")
+	//world << "Marked indirect."
 
 /connection/proc/mark_space()
 	state |= CONNECTION_SPACE
@@ -99,18 +99,18 @@ Class Procs:
 /connection/proc/erase()
 	edge.remove_connection(src)
 	state |= CONNECTION_INVALID
-	//to_world("Connection Erased: [state]")
+	//world << "Connection Erased: [state]"
 
 /connection/proc/update()
-	//to_world("Updated, \...")
+	//world << "Updated, \..."
 	if(!istype(A,/turf/simulated))
-		//to_world("Invalid A.")
+		//world << "Invalid A."
 		erase()
 		return
 
 	var/block_status = air_master.air_blocked(A,B)
 	if(block_status & AIR_BLOCKED)
-		//to_world("Blocked connection.")
+		//world << "Blocked connection."
 		erase()
 		return
 	else if(block_status & ZONE_BLOCKED)
@@ -122,14 +122,14 @@ Class Procs:
 
 	if(state & CONNECTION_SPACE)
 		if(!b_is_space)
-			//to_world("Invalid B.")
+			//world << "Invalid B."
 			erase()
 			return
 		if(A.zone != zoneA)
-			//to_world("Zone changed, \...")
+			//world << "Zone changed, \..."
 			if(!A.zone)
 				erase()
-				//to_world("erased.")
+				//world << "erased."
 				return
 			else
 				edge.remove_connection(src)
@@ -137,22 +137,22 @@ Class Procs:
 				edge.add_connection(src)
 				zoneA = A.zone
 
-		//to_world("valid.")
+		//world << "valid."
 		return
 
 	else if(b_is_space)
-		//to_world("Invalid B.")
+		//world << "Invalid B."
 		erase()
 		return
 
 	if(A.zone == B.zone)
-		//to_world("A == B")
+		//world << "A == B"
 		erase()
 		return
 
 	if(A.zone != zoneA || (zoneB && (B.zone != zoneB)))
 
-		//to_world("Zones changed, \...")
+		//world << "Zones changed, \..."
 		if(A.zone && B.zone)
 			edge.remove_connection(src)
 			edge = air_master.get_edge(A.zone, B.zone)
@@ -160,9 +160,9 @@ Class Procs:
 			zoneA = A.zone
 			zoneB = B.zone
 		else
-			//to_world("erased.")
+			//world << "erased."
 			erase()
 			return
 
 
-	//to_world("valid.")
+	//world << "valid."

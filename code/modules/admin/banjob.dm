@@ -42,7 +42,7 @@ DEBUG
 	set name = "list all jobbans"
 
 	for(var/s in jobban_keylist)
-		to_world(s)
+		world << s
 
 /mob/verb/reload_jobbans()
 	set name = "reload jobbans"

@@ -169,13 +169,13 @@
 			/obj/item/clothing/shoes/magboots = 2,
 			/obj/item/weapon/tank/oxygen = 2
 			)
-	cost = 60
+	cost = 40
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Security Crowd Control voidsuit crate"
 	access = access_armory
 
 /datum/supply_pack/voidsuits/security/alt
-	name = "Security EVA voidsuits"
+	name = "Security EVA Riot voidsuits"
 	contains = list(
 			/obj/item/clothing/suit/space/void/security/alt = 2,
 			/obj/item/clothing/head/helmet/space/void/security/alt = 2,
@@ -183,9 +183,9 @@
 			/obj/item/clothing/shoes/magboots = 2,
 			/obj/item/weapon/tank/oxygen = 2
 			)
-	cost = 60
+	cost = 50
 	containertype = /obj/structure/closet/crate/secure
-	containername = "Security EVA voidsuit crate"
+	containername = "Security EVA Riot voidsuit crate"
 	access = access_armory
 
 /datum/supply_pack/voidsuits/supply
@@ -227,7 +227,7 @@
 
 /datum/supply_pack/voidsuits/unathi_bs_yw
 	name = "Unathi breacher chassis"
-	contains = list(/obj/item/weapon/rig/breacher) //YW Edit
+	contains = list(/obj/item/weapon/rig/breacher/fancy)
 	cost = 350
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Unathi breacher chassis crate"

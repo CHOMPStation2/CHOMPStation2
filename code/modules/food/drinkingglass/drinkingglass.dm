@@ -28,21 +28,21 @@
 	matter = list("glass" = 60)
 
 /obj/item/weapon/reagent_containers/food/drinks/glass2/examine(mob/M as mob)
-	. = ..()
+	..()
 
 	for(var/I in extras)
 		if(istype(I, /obj/item/weapon/glass_extra))
-			. += "There is \a [I] in \the [src]."
+			M << "There is \a [I] in \the [src]."
 		else if(istype(I, /obj/item/weapon/reagent_containers/food/snacks/fruit_slice))
-			. += "There is \a [I] on the rim."
+			M << "There is \a [I] on the rim."
 		else
-			. += "There is \a [I] somewhere on the glass. Somehow."
+			M << "There is \a [I] somewhere on the glass. Somehow."
 
 	if(has_ice())
-		. += "There is some ice floating in the drink."
+		M << "There is some ice floating in the drink."
 
 	if(has_fizz())
-		. += "It is fizzing slightly."
+		M << "It is fizzing slightly."
 
 /obj/item/weapon/reagent_containers/food/drinks/glass2/proc/has_ice()
 	if(reagents.reagent_list.len > 0)
@@ -74,9 +74,9 @@
 	update_icon()
 
 /obj/item/weapon/reagent_containers/food/drinks/glass2/proc/can_add_extra(obj/item/weapon/glass_extra/GE)
-	if(!("[base_icon]_[GE.glass_addition]left" in cached_icon_states(icon))) //VOREStation Edit
+	if(!("[base_icon]_[GE.glass_addition]left" in icon_states(DRINK_ICON_FILE)))
 		return 0
-	if(!("[base_icon]_[GE.glass_addition]right" in cached_icon_states(icon))) //VOREStation Edit
+	if(!("[base_icon]_[GE.glass_addition]right" in icon_states(DRINK_ICON_FILE)))
 		return 0
 
 	return 1
@@ -106,20 +106,20 @@
 			over_liquid |= "[base_icon][amnt]_fizz"
 
 		for(var/S in R.glass_special)
-			if("[base_icon]_[S]" in cached_icon_states(icon)) //VOREStation Edit
+			if("[base_icon]_[S]" in icon_states(DRINK_ICON_FILE))
 				under_liquid |= "[base_icon]_[S]"
-			else if("[base_icon][amnt]_[S]" in cached_icon_states(icon)) //VOREStation Edit
+			else if("[base_icon][amnt]_[S]" in icon_states(DRINK_ICON_FILE))
 				over_liquid |= "[base_icon][amnt]_[S]"
 
 		for(var/k in under_liquid)
-			underlays += image(icon, src, k, -3) //VOREStation Edit
+			underlays += image(DRINK_ICON_FILE, src, k, -3)
 
-		var/image/filling = image(icon, src, "[base_icon][amnt][R.glass_icon]", -2) //VOREStation Edit
+		var/image/filling = image(DRINK_ICON_FILE, src, "[base_icon][amnt][R.glass_icon]", -2)
 		filling.color = reagents.get_color()
 		underlays += filling
 
 		for(var/k in over_liquid)
-			underlays += image(icon, src, k, -1) //VOREStation Edit
+			underlays += image(DRINK_ICON_FILE, src, k, -1)
 	else
 		name = initial(name)
 		desc = initial(desc)
@@ -128,7 +128,7 @@
 	for(var/item in extras)
 		if(istype(item, /obj/item/weapon/glass_extra))
 			var/obj/item/weapon/glass_extra/GE = item
-			var/image/I = image(icon, src, "[base_icon]_[GE.glass_addition][side]") //VOREStation Edit
+			var/image/I = image(DRINK_ICON_FILE, src, "[base_icon]_[GE.glass_addition][side]")
 			if(GE.glass_color)
 				I.color = GE.glass_color
 			underlays += I
@@ -154,7 +154,7 @@
 		if(standard_splash_mob(user, target))
 			return 1
 		if(reagents && reagents.total_volume) //They are on harm intent, aka wanting to spill it.
-			to_chat(user, "<span class='notice'>You splash the solution onto [target].</span>")
+			user << "<span class='notice'>You splash the solution onto [target].</span>"
 			reagents.splash(target, reagents.total_volume)
 			return 1
 	..()

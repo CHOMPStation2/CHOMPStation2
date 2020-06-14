@@ -46,7 +46,7 @@
 	icon_state = "scanner_0"
 	density = 1
 	anchored = 1.0
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 50
 	active_power_usage = 300
 	interact_offline = 1
@@ -56,9 +56,16 @@
 	var/obj/item/weapon/reagent_containers/glass/beaker = null
 	var/opened = 0
 
-/obj/machinery/dna_scannernew/Initialize()
-	. = ..()
-	default_apply_parts()
+/obj/machinery/dna_scannernew/New()
+	..()
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/scanning_module(src)
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/micro_laser(src)
+	component_parts += new /obj/item/weapon/stock_parts/console_screen(src)
+	component_parts += new /obj/item/stack/cable_coil(src)
+	component_parts += new /obj/item/stack/cable_coil(src)
+	RefreshParts()
 
 /obj/machinery/dna_scannernew/relaymove(mob/user as mob)
 	if (user.stat)
@@ -101,13 +108,13 @@
 	if (usr.stat != 0)
 		return
 	if (!ishuman(usr) && !issmall(usr)) //Make sure they're a mob that has dna
-		to_chat(usr, "<span class='notice'>Try as you might, you can not climb up into the scanner.</span>")
+		usr << "<span class='notice'>Try as you might, you can not climb up into the scanner.</span>"
 		return
 	if (src.occupant)
-		to_chat(usr, "<span class='warning'>The scanner is already occupied!</span>")
+		usr << "<span class='warning'>The scanner is already occupied!</span>"
 		return
 	if (usr.abiotic())
-		to_chat(usr, "<span class='warning'>The subject cannot have abiotic items on.</span>")
+		usr << "<span class='warning'>The subject cannot have abiotic items on.</span>"
 		return
 	usr.stop_pulling()
 	usr.client.perspective = EYE_PERSPECTIVE
@@ -143,7 +150,7 @@
 			user.visible_message("\The [user] adds \a [item] to \the [src]!", "You add \a [item] to \the [src]!")
 			return
 		else
-			to_chat(user, "\The [brain] is not acceptable for genetic sampling!")
+			to_chat(user,"\The [brain] is not acceptable for genetic sampling!")
 
 	else if (!istype(item, /obj/item/weapon/grab))
 		return
@@ -253,7 +260,7 @@
 	var/obj/item/weapon/disk/data/disk = null
 	var/selected_menu_key = null
 	anchored = 1
-	use_power = USE_POWER_IDLE
+	use_power = 1
 	idle_power_usage = 10
 	active_power_usage = 400
 	var/waiting_for_user_input=0 // Fix for #274 (Mash create block injector without answering dialog to make unlimited injectors) - N3X
@@ -264,7 +271,7 @@
 			user.drop_item()
 			I.loc = src
 			src.disk = I
-			to_chat(user, "You insert [I].")
+			user << "You insert [I]."
 			SSnanoui.update_uis(src) // update all UIs attached to src
 			return
 	else
@@ -286,15 +293,19 @@
 		else
 	return
 
-/obj/machinery/computer/scan_consolenew/Initialize()
-	. = ..()
+/obj/machinery/computer/scan_consolenew/New()
+	..()
 	for(var/i=0;i<3;i++)
 		buffers[i+1]=new /datum/dna2/record
-	for(dir in list(NORTH,EAST,SOUTH,WEST))
-		connected = locate(/obj/machinery/dna_scannernew, get_step(src, dir))
-		if(connected)
-			break
-		VARSET_IN(src, injector_ready, TRUE, 25 SECONDS)
+	spawn(5)
+		for(dir in list(NORTH,EAST,SOUTH,WEST))
+			connected = locate(/obj/machinery/dna_scannernew, get_step(src, dir))
+			if(!isnull(connected))
+				break
+		spawn(250)
+			src.injector_ready = 1
+		return
+	return
 
 /obj/machinery/computer/scan_consolenew/proc/all_dna_blocks(var/list/buffer)
 	var/list/arr = list()

@@ -1,6 +1,6 @@
 #if DM_VERSION < 513
 
-#define ismovable(A) (istype(A, /atom/movable))
+#define ismovableatom(A) (istype(A, /atom/movable))
 
 #define islist(L) (istype(L, /list))
 
@@ -17,6 +17,8 @@
 //////////////////////////////////////////////////
 
 #else
+
+#define ismovableatom(A) ismovable(A)
 
 #define CLAMP01(x) clamp(x, 0, 1)
 

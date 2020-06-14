@@ -9,9 +9,9 @@
 	var/paint_color = "#666666"
 
 /obj/structure/vehiclecage/examine(mob/user)
-	. = ..()
+	..()
 	if(my_vehicle)
-		. += "<span class='notice'>It seems to contain \the [my_vehicle].</span>"
+		to_chat(user, "<span class='notice'>It seems to contain \the [my_vehicle].</span>")
 
 /obj/structure/vehiclecage/Initialize()
 	. = ..()

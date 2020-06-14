@@ -41,24 +41,24 @@
 
 // These are used on individual outposts as backup should power line be cut, or engineering outpost lost power.
 // 1M Charge, 150K I/O
-/obj/machinery/power/smes/buildable/outpost_substation/Initialize()
-	. = ..()
+/obj/machinery/power/smes/buildable/outpost_substation/New()
+	..(0)
 	component_parts += new /obj/item/weapon/smes_coil/weak(src)
 	recalc_coils()
 
 // This one is pre-installed on engineering shuttle. Allows rapid charging/discharging for easier transport of power to outpost
 // 11M Charge, 2.5M I/O
-/obj/machinery/power/smes/buildable/power_shuttle/Initialize()
-	. = ..()
+/obj/machinery/power/smes/buildable/power_shuttle/New()
+	..(0)
 	component_parts += new /obj/item/weapon/smes_coil/super_io(src)
 	component_parts += new /obj/item/weapon/smes_coil/super_io(src)
 	component_parts += new /obj/item/weapon/smes_coil(src)
 	recalc_coils()
 
 // Pre-installed and pre-charged SMES hidden from the station, for use in submaps.
-/obj/machinery/power/smes/buildable/point_of_interest/Initialize()
-	. = ..()
-	charge = capacity // Should be enough for an individual POI.
+/obj/machinery/power/smes/buildable/point_of_interest/New()
+	..(1)
+	charge = 1e7 // Should be enough for an individual POI.
 	RCon = FALSE
 	input_level = input_level_max
 	output_level = output_level_max
@@ -113,14 +113,13 @@
 		to_chat(usr, "<span class='warning'>Connection error: Destination Unreachable.</span>")
 
 	// Cyborgs standing next to the SMES can play with the wiring.
-	if(istype(usr, /mob/living/silicon/robot) && Adjacent(usr) && panel_open)
+	if(istype(usr, /mob/living/silicon/robot) && Adjacent(usr) && open_hatch)
 		wires.Interact(usr)
 
 // Proc: New()
 // Parameters: None
 // Description: Adds standard components for this SMES, and forces recalculation of properties.
-/obj/machinery/power/smes/buildable/Initialize(var/install_coils = 1)
-	. = ..()
+/obj/machinery/power/smes/buildable/New(var/install_coils = 1)
 	component_parts = list()
 	component_parts += new /obj/item/stack/cable_coil(src,30)
 	wires = new /datum/wires/smes(src)
@@ -130,13 +129,14 @@
 		for(var/i = 1, i <= cur_coils, i++)
 			component_parts += new /obj/item/weapon/smes_coil(src)
 		recalc_coils()
+	..()
 
 // Proc: attack_hand()
 // Parameters: None
 // Description: Opens the UI as usual, and if cover is removed opens the wiring panel.
 /obj/machinery/power/smes/buildable/attack_hand()
 	..()
-	if(panel_open)
+	if(open_hatch)
 		wires.Interact(usr)
 
 // Proc: recalc_coils()
@@ -329,7 +329,7 @@
 
 		// Crowbar - Disassemble the SMES.
 		if(W.is_crowbar())
-			if (terminals.len)
+			if (terminal)
 				to_chat(user, "<span class='warning'>You have to disassemble the terminal first!</span>")
 				return
 

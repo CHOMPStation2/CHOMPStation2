@@ -1,90 +1,82 @@
-/*Chomp uses custom_items.txt on the server because it's faster and easier.
+//GENERIC ITEMS keep this at the bottom of the file pls thx -shark
 
-Example of how it works here in the never case we need to know:
-/datum/gear/fluff/ckey/medal1
-	ckeywhitelist = list("ckey(no spaces, lower case)")
-	character_name = list("Character Name (spaces and capital letters included)")
-	description = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award on offer. It is often awarded by a captain to a member of their crew."
+//////////////////MEDALS GO BELOW
+//////////////////CONDUCT
+/datum/gear/fluff/medalofconductnadyr
+	ckeywhitelist = list("nadyr")
+	character_name = list("Taaa")
 	path = /obj/item/clothing/accessory/medal/conduct
-	display_name = "Character's Medal"
-*/
+	display_name = "Taaa's Medal of Conduct"
+	description = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award on offer. It is often awarded by a captain to a member of their crew."
 
-//////////////////ALPHABETISED BY CKEY
+/datum/gear/fluff/medalofconductdraycu
+	ckeywhitelist = list("draycu")
+	character_name = list("Vuhbar Groor")
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "Vuhbar Groor's Medal"
+	description = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award on offer. It is often awarded by a captain to a member of their crew."
 
-//0
+/datum/gear/fluff/medalofconductlowpowermia
+	ckeywhitelist = list("lowpowermia")
+	character_name = list("Mia Sceline")
+	description = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award on offer. It is often awarded by a captain to a member of their crew. It has a shitty '=3' carved into it."
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "Mia Sceline's Medal"
 
-//1
+//////////////////SILVER VALOR
+/datum/gear/fluff/medalofsilvervalorkazzc
+	ckeywhitelist = list("kazzc")
+	character_name = list("Kassc Zeravla")
+	path = /obj/item/clothing/accessory/medal/silver/valor
+	display_name = "Kassc Zeravla's Medal"
+	description = "A silver medal awarded for acts of exceptional valor."
 
-//2
+/datum/gear/fluff/medalofsilvervalorsomememeguy
+	ckeywhitelist = list("somememeguy")
+	character_name = list("Uboiezb")
+	path = /obj/item/clothing/accessory/medal/silver/valor
+	display_name = "Uboiezb's Medal"
+	description = "A silver medal awarded for acts of exceptional valor."
 
-//3
+/datum/gear/fluff/medalofsilvervalorkeithwinters
+	ckeywhitelist = list("keithwinters")
+	character_name = list("Keith Winters")
+	path = /obj/item/clothing/accessory/medal/silver/valor
+	display_name = "Keith Winters' Medal"
+	description = "A silver medal awarded for acts of exceptional valor."
 
-//4
+/datum/gear/fluff/medalofsilvervalornadyr
+	ckeywhitelist = list("nadyr")
+	character_name = list("Taaa")
+	path = /obj/item/clothing/accessory/medal/silver/valor
+	display_name = "Taaa's Medal of Valor"
+	description = "A silver medal awarded for acts of exceptional valor."
 
-//5
+//////////////////GOLD HEROISM
+/datum/gear/fluff/medalofgoldheroismnadyr
+	ckeywhitelist = list("nadyr")
+	character_name = list("Taaa")
+	path = /obj/item/clothing/accessory/medal/gold/heroism
+	display_name = "Taaa's Medal of Exceptional Heroism"
+	description = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
 
-//6
+/datum/gear/fluff/medalofgoldheroismerikthedog
+	ckeywhitelist = list("erikthedog")
+	character_name = list("Erik Ramadwood")
+	path = /obj/item/clothing/accessory/medal/gold/heroism
+	display_name = "Erik Ramadwood's Medal"
+	description = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
 
-//7
-
-//8
-
-//9
-
-//A
-
-//B
-
-//C
-
-//D
-
-//E
-
-//F
-
-//G
-
-//H
-
-//I
-
-//J
-
-//K
-
-//L
-
-//M
-
-//N
-
-//O
-
-//P
-
-//Q
-
-//R
-
-//S
-
-//T
-/datum/gear/fluff/thefurryfeline/medal1
+/datum/gear/fluff/medalofgoldheroismthefurryfeline
 	ckeywhitelist = list("thefurryfeline")
 	character_name = list("Samantha Janice Softfur")
 	path = /obj/item/clothing/accessory/medal/gold/heroism
 	display_name = "Samantha Janice Softfur's Medal"
 	description = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
 
-//U
-
-//V
-
-//W
-
-//X
-
-//Y
-
-//Z
+/datum/gear/fluff/medalofgoldheroismsharkmare
+	ckeywhitelist = list("Sharkmare")
+	character_name = list("Kiri")
+	path = /obj/item/clothing/accessory/medal/gold/heroism
+	display_name = "Kiri's Medal"
+	description = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."

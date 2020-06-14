@@ -1,6 +1,3 @@
-/datum/category_item/catalogue/information/organization/solgov
-	name = "Government - Commonwealth of Sol-Procyon"
-
 //TODO: VIRGO_LORE_WRITING_WIP - this whole file
 
 /datum/category_item/catalogue/fauna/akula
@@ -43,8 +40,23 @@
 	desc = ""
 	value = CATALOGUER_REWARD_TRIVIAL
 
+/datum/category_item/catalogue/fauna/xenohybrid
+	name = "Sapients - Xenomorph Hybrid"
+	desc = ""
+	value = CATALOGUER_REWARD_TRIVIAL
+
 /datum/category_item/catalogue/fauna/zorren
 	name = "Sapients - Zorren"
+	desc = ""
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/category_item/catalogue/fauna/highzorren
+	name = "Sapients - Highlander Zorren"
+	desc = ""
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/category_item/catalogue/fauna/flatzorren
+	name = "Sapients - Flatlander Zorren"
 	desc = ""
 	value = CATALOGUER_REWARD_TRIVIAL
 

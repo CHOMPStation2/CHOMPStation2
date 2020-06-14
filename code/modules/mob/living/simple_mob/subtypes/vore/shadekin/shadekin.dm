@@ -245,11 +245,6 @@
 	if((. = ..()))
 		handle_shade()
 
-/mob/living/simple_mob/shadekin/is_incorporeal()
-	if(ability_flags & AB_PHASE_SHIFTED)
-		return TRUE
-	return FALSE
-
 /mob/living/simple_mob/shadekin/handle_atmos()
 	if(ability_flags & AB_PHASE_SHIFTED)
 		return

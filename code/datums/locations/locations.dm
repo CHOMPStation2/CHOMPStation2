@@ -36,8 +36,8 @@ var/global/datum/locations/milky_way/all_locations = new()
 			choice = input(user, "Please choose a location.","Locations") as null|anything in choice.contents
 		else
 			break
-	to_chat(user,choice.name)
-	to_chat(user,choice.desc)
+	user << choice.name
+	user << choice.desc
 	return choice
 
 //	var/datum/locations/choice = input(user, "Please choose a location.","Locations") as null|anything in all_locations
@@ -46,11 +46,11 @@ var/global/datum/locations/milky_way/all_locations = new()
 
 /*
 /datum/locations/proc/show_contents()
-//	to_world("[src]\n[desc]")
+//	world << "[src]\n[desc]"
 	for(var/datum/locations/a in contents)
-		to_world("[a]\n[a.parent ? "Located in [a.parent]\n" : ""][a.desc]")
+		world << "[a]\n[a.parent ? "Located in [a.parent]\n" : ""][a.desc]"
 		a.show_contents()
-	to_world("\n")
+	world << "\n"
 
 /datum/locations/proc/count_locations()
 	var/i = 0
@@ -72,5 +72,5 @@ var/global/datum/locations/milky_way/all_locations = new()
 	set name = "Count Locations"
 	set category = "Debug"
 	var/location_number = locations.count_locations()
-	to_world(location_number)
+	world << location_number
 */
