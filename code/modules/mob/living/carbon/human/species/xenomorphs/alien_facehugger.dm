@@ -15,7 +15,6 @@ var/const/MAX_ACTIVE_TIME = 400
 	icon_state = "facehugger"
 	item_state = "facehugger"
 	w_class = 3 //note: can be picked up by aliens unlike most other items of w_class below 4
-	flags = PROXMOVE
 	body_parts_covered = FACE|EYES
 	throw_range = 5
 
@@ -47,11 +46,11 @@ var/const/MAX_ACTIVE_TIME = 400
 	..(user)
 	switch(stat)
 		if(DEAD,UNCONSCIOUS)
-			user << "<span class='danger'><b>[src] is not moving.</b></span>"
+			to_chat(user, "<span class='danger'><b>[src] is not moving.</b></span>")
 		if(CONSCIOUS)
-			user << "<span class='danger'><b>[src] seems to be active.</b></span>"
+			to_chat(user, "<span class='danger'><b>[src] seems to be active.</b></span>")
 	if (sterile)
-		user << "<span class='danger'><b>It looks like the proboscis has been removed.</b></span>"
+		to_chat(user, "<span class='danger'><b>It looks like the proboscis has been removed.</b></span>")
 	return
 
 /obj/item/clothing/mask/facehugger/attackby(obj/item/I, mob/user)

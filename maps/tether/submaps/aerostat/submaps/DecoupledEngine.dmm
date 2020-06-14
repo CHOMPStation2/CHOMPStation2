@@ -42,8 +42,9 @@
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/virgo2/DecoupledEngine)
 "al" = (
-/obj/item/projectile/bullet/magnetic/fuelrod,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/obj/effect/floor_decal/rust,
+/obj/item/weapon/fuel_assembly/supermatter,
+/turf/simulated/floor,
 /area/submap/virgo2/DecoupledEngine)
 "am" = (
 /obj/item/weapon/arrow/rod,
@@ -336,11 +337,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor,
 /area/submap/virgo2/DecoupledEngine)
-"be" = (
-/obj/effect/floor_decal/rust,
-/obj/item/projectile/bullet/magnetic/fuelrod,
-/turf/simulated/floor,
-/area/submap/virgo2/DecoupledEngine)
 "bf" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/window/phoronreinforced,
@@ -515,6 +511,15 @@
 "bE" = (
 /obj/tether_away_spawner/aerostat_surface,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/area/submap/virgo2/DecoupledEngine)
+"SB" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	icon_state = "intact";
+	dir = 6
+	},
+/obj/effect/floor_decal/rust,
+/obj/structure/salvageable/server,
+/turf/simulated/floor,
 /area/submap/virgo2/DecoupledEngine)
 
 (1,1,1) = {"
@@ -856,7 +861,7 @@ ao
 aw
 aI
 aP
-be
+al
 aA
 av
 br
@@ -1045,7 +1050,7 @@ ad
 ad
 ad
 aq
-az
+SB
 aM
 aW
 az
@@ -1104,7 +1109,7 @@ ab
 ab
 ad
 ai
-al
+bB
 ad
 ad
 ad

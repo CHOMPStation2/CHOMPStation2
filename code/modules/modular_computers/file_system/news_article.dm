@@ -23,7 +23,7 @@
 	server_file_path = 'news_articles/space_magazine_1.html'
 */
 
-
+/* CHOMPedit: commenting out YW articles because they don't make sense here and adding our own.
 //YAWN ADDS - All from discord
 /datum/computer_file/data/news_article/archives/vol_gwa_one
 	filename = "Galaxy Wide Archives"
@@ -38,3 +38,9 @@
 /datum/computer_file/data/news_article/tss/vol_two
 	filename = "The Sleepy Sergal vol. 2"
 	server_file_path = 'news_articles/the_sleepy_sergal_2.html'
+*/
+
+/datum/computer_file/data/news_article/starfire/year_2564
+	filename = "Starfire Report: Year 2564"
+	server_file_path = 'news_articles/starfire_report_2564.html'
+//End CHOMPedit

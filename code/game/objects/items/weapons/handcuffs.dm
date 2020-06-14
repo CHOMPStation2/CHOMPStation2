@@ -11,6 +11,7 @@
 	throw_range = 5
 	origin_tech = list(TECH_MATERIAL = 1)
 	matter = list(DEFAULT_WALL_MATERIAL = 500)
+	drop_sound = 'sound/items/drop/accessory.ogg'
 	var/elastic
 	var/dispenser = 0
 	var/breakouttime = 1200 //Deciseconds = 120s = 2 minutes
@@ -97,7 +98,7 @@
 		user.drop_from_inventory(cuffs)
 	cuffs.loc = target
 	target.handcuffed = cuffs
-	target.update_inv_handcuffed()
+	target.update_handcuffed()
 	target.drop_r_hand()
 	target.drop_l_hand()
 	target.stop_pulling()

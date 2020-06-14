@@ -4,9 +4,16 @@
 /mob/living
 	var/ooc_notes = null
 	var/obj/structure/mob_spawner/source_spawner = null
+	appearance_flags = TILE_BOUND|PIXEL_SCALE|KEEP_TOGETHER
+	var/hunger_rate = DEFAULT_HUNGER_FACTOR
 
 //custom say verbs
 	var/custom_say = null
 	var/custom_ask = null
 	var/custom_exclaim = null
 	var/custom_whisper = null
+
+//YW Add Start
+/mob
+	var/wingdings = 0
+//Yw Add End

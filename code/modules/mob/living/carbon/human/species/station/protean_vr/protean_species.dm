@@ -30,8 +30,8 @@
 	blood_volume =	0
 	min_age =		18
 	max_age =		200
-	brute_mod =		1
-	burn_mod =		1.4
+	brute_mod =		0.8
+	burn_mod =		1.5
 	oxy_mod =		0
 	item_slowdown_mod = 1.33
 
@@ -144,6 +144,8 @@
 		H.equip_to_slot_or_del(metal_stack, slot_in_backpack)
 
 	spawn(0) //Let their real nif load if they have one
+		if(!H) //Human could have been deleted in this amount of time. Observing does this, mannequins, etc.
+			return
 		if(!H.nif)
 			var/obj/item/device/nif/bioadap/new_nif = new()
 			new_nif.quick_implant(H)
@@ -319,7 +321,7 @@
 	owner = 1
 	if(new_name)
 		src.name += " ([new_name])"
-		desc += "\nVALID THROUGH END OF: [time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+544)]\nREGISTRANT: [new_name]"
+		desc += "\nVALID THROUGH END OF: [time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+300)]\nREGISTRANT: [new_name]"
 
 #undef DAM_SCALE_FACTOR
 #undef METAL_PER_TICK

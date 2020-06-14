@@ -7,11 +7,15 @@
 	if(msg)
 		var/mob/living/carbon/human/H = M
 		log_say("(GreyTP to [key_name(M)]) [msg]", src)
-		if(H.species.name == src.species.name)
-			M << "<font color='purple'>you hear [src.name]'s voice: <i>[msg]</i></font>"
-			to_chat(src, "<font color='purple'>You said: \"[msg]\" to [M]</font>")
+		if(ishuman(M))
+			if(H.species.name == src.species.name)
+				to_chat(M, "<font color='purple'>you hear [src.name]'s voice: <i>[msg]</i></font>")
+				to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
+			else
+				to_chat(M, "<font color='purple'>you hear a voice echo in your head... <i>[msg]</i></font>")
+				to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
 		else
-			M << "<font color='purple'>you hear a voice echo in your head... <i>[msg]</i></font>"
-			to_chat(src, "<font color='purple'>You said: \"[msg]\" to [M]</font>")
+			to_chat(M, "<font color='purple'>you hear a voice echo in your head... <i>[msg]</i></font>")
+			to_chat(src, "<font color='purple'>you said: \"[msg]\" to [M]</font>")
 
 	return

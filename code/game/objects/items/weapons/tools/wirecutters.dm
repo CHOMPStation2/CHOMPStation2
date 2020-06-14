@@ -6,6 +6,7 @@
 	desc = "This cuts wires."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "cutters"
+	center_of_mass = list("x" = 18,"y" = 10)
 	slot_flags = SLOT_BELT
 	force = 6
 	throw_speed = 2
@@ -16,6 +17,7 @@
 	attack_verb = list("pinched", "nipped")
 	hitsound = 'sound/items/wirecutter.ogg'
 	usesound = 'sound/items/wirecutter.ogg'
+	drop_sound = 'sound/items/drop/knife.ogg'
 	sharp = 1
 	edge = 1
 	toolspeed = 1
@@ -35,7 +37,7 @@
 		C.handcuffed = null
 		if(C.buckled && C.buckled.buckle_require_restraints)
 			C.buckled.unbuckle_mob()
-		C.update_inv_handcuffed()
+		C.update_handcuffed()
 		return
 	else
 		..()

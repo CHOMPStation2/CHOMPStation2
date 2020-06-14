@@ -2,6 +2,7 @@
 	name = "small rock"
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "ore2"
+	randpixel = 8
 	w_class = ITEMSIZE_SMALL
 	var/datum/geosample/geologic_data
 	var/material
@@ -42,7 +43,7 @@
 	..()
 	var/mob/living/carbon/human/H = hit_atom
 	if(istype(H) && H.has_eyes() && prob(85))
-		H << "<span class='danger'>Some of \the [src] gets in your eyes!</span>"
+		to_chat(H, "<span class='danger'>Some of \the [src] gets in your eyes!</span>")
 		H.Blind(5)
 		H.eye_blurry += 10
 		spawn(1)
@@ -94,7 +95,7 @@
 	..()
 	var/mob/living/carbon/human/H = hit_atom
 	if(istype(H) && H.has_eyes() && prob(85))
-		H << "<span class='danger'>Some of \the [src] gets in your eyes!</span>"
+		to_chat(H, "<span class='danger'>Some of \the [src] gets in your eyes!</span>")
 		H.Blind(10)
 		H.eye_blurry += 15
 		spawn(1)
@@ -113,8 +114,7 @@
 	material = null
 
 /obj/item/weapon/ore/New()
-	pixel_x = rand(0,16)-8
-	pixel_y = rand(0,8)-8
+	randpixel_xy()
 
 /obj/item/weapon/ore/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/device/core_sampler))
@@ -122,3 +122,15 @@
 		C.sample_item(src, user)
 	else
 		return ..()
+
+//VOREStation Add
+/obj/item/weapon/ore/attack(mob/living/M as mob, mob/living/user as mob)
+	if(M.handle_eat_ore(src, user))
+		return
+	..()
+
+/obj/item/weapon/ore/attack_generic(var/mob/living/user) //Allow adminbussed mobs to eat ore if they click it while NOT on help intent.
+	if(user.handle_eat_ore(src))
+		return
+	..()
+//VOREStation Add End

@@ -47,7 +47,7 @@
 	if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
 	M.heal_organ_damage(0.5 * removed, 0)
 	if(M.species.gets_food_nutrition) //VOREStation edit. If this is set to 0, they don't get nutrition from food.
-		M.nutrition += nutriment_factor * removed // For hunger and fatness
+		M.adjust_nutrition(nutriment_factor * removed) // For hunger and fatness
 	M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
 
 /datum/reagent/nutriment/glucose
@@ -133,6 +133,14 @@
 	taste_description = "unmistakably mayonnaise"
 	nutriment_factor = 10
 	color = "#FFFFFF"
+
+/datum/reagent/nutriment/yeast
+	name = "Yeast"
+	id = "yeast"
+	description = "For making bread rise!"
+	taste_description = "yeast"
+	nutriment_factor = 1
+	color = "#D3AF70"
 
 /datum/reagent/nutriment/flour
 	name = "Flour"
@@ -332,7 +340,7 @@
 /datum/reagent/nutriment/durian/touch_mob(var/mob/M, var/amount)
 	if(iscarbon(M) && !M.isSynthetic())
 		var/message = pick("Oh god, it smells disgusting here.", "What is that stench?", "That's an awful odor.")
-		to_chat(M,"<span class='alien'>[message]</span>")
+		to_chat(M, "<span class='alien'>[message]</span>")
 		if(prob(CLAMP(amount, 5, 90)))
 			var/mob/living/L = M
 			L.vomit()
@@ -380,10 +388,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/lipozine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.nutrition = max(M.nutrition - 10 * removed, 0)
-	M.overeatduration = 0
-	if(M.nutrition < 0)
-		M.nutrition = 0
+	M.adjust_nutrition(-10 * removed)
 
 /* Non-food stuff like condiments */
 
@@ -476,7 +481,7 @@
 			return
 
 	if(dose < 5 && (dose == metabolism || prob(5)))
-		M << "<span class='danger'>Your insides feel uncomfortably hot!</span>"
+		to_chat(M, "<span class='danger'>Your insides feel uncomfortably hot!</span>")
 	if(dose >= 5)
 		M.apply_effect(2, AGONY, 0)
 		if(prob(5))
@@ -620,7 +625,7 @@
 		if(!H.can_feel_pain())
 			return
 	if(dose == metabolism)
-		M << "<span class='danger'>You feel like your insides are burning!</span>"
+		to_chat(M, "<span class='danger'>You feel like your insides are burning!</span>")
 	else
 		M.apply_effect(4, AGONY, 0)
 		if(prob(5))
@@ -652,7 +657,7 @@
 	return
 
 /datum/reagent/drink/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	M.nutrition += nutrition * removed
+	M.adjust_nutrition(nutrition * removed)
 	M.dizziness = max(0, M.dizziness + adj_dizzy)
 	M.drowsyness = max(0, M.drowsyness + adj_drowsy)
 	M.sleeping = max(0, M.sleeping + adj_sleepy)
@@ -1850,6 +1855,17 @@
 
 	glass_name = "driver`s punch"
 	glass_desc = "A fruity punch!"
+	glass_special = list(DRINK_FIZZ)
+
+/datum/reagent/drink/mintapplesparkle
+	name = "Mint Apple Sparkle"
+	id = "mintapplesparkle"
+	description = "Delicious appleade with a touch of mint."
+	taste_description = "minty apples"
+	color = "#FDDA98"
+
+	glass_name = "mint apple sparkle"
+	glass_desc = "Delicious appleade with a touch of mint."
 	glass_special = list(DRINK_FIZZ)
 
 /datum/reagent/drink/berrycordial
