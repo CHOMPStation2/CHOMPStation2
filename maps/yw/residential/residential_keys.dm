@@ -20,13 +20,37 @@
 	name = "RS4 residential key"
 	access = list(8004)
 
+/obj/item/weapon/card/id/residential/rs5
+	name = "RS5 residential key"
+	access = list(8005)
+
+/obj/item/weapon/card/id/residential/rs6
+	name = "RS6 residential key"
+	access = list(8006)
+
+/obj/item/weapon/card/id/residential/rs7
+	name = "RS7 residential key"
+	access = list(8007)
+
+/obj/item/weapon/card/id/residential/rs8
+	name = "RS8 residential key"
+	access = list(8008)
+
+/obj/item/weapon/card/id/residential/rs9
+	name = "RS9 residential key"
+	access = list(8009)
+
+/obj/item/weapon/card/id/residential/rs10
+	name = "RS10 residential key"
+	access = list(8010)
+
 /obj/item/weapon/card/id/residential/rm1
 	name = "RM1 residential key"
-	access = list(8005)
+	access = list(8101)
 
 /obj/item/weapon/card/id/residential/rm2
 	name = "RM2 residential key"
-	access = list(8006)
+	access = list(8102)
 
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
@@ -36,27 +60,27 @@
 
 /obj/item/weapon/card/id/residential/s1
 	name = "S1 residential key"
-	access = list(8007)
+	access = list(8201)
 
 /obj/item/weapon/card/id/residential/s2
 	name = "S2 residential key"
-	access = list(8008)
+	access = list(8202)
 
 /obj/item/weapon/card/id/residential/s3
 	name = "S3 residential key"
-	access = list(8009)
+	access = list(8203)
 
 /obj/item/weapon/card/id/residential/s4
 	name = "S4 residential key"
-	access = list(8010)
+	access = list(8204)
 
 /obj/item/weapon/card/id/residential/s5
 	name = "S5 residential key"
-	access = list(8011)
+	access = list(8205)
 
 /obj/item/weapon/card/id/residential/s6
 	name = "S6 residential key"
-	access = list(8012)
+	access = list(8206)
 
 
 //FLUFF SPAWNS
@@ -102,6 +126,8 @@
 	ckeywhitelist = list("mocatheporg1")
 	character_name = list("Mocha")
 
+// MEDIUM KEYS
+
 /datum/gear/fluff/res_key_rm1
 	path = /obj/item/weapon/card/id/residential/rm1
 	display_name = "RM1 keys"
@@ -115,6 +141,9 @@
 	description = "residential"
 	ckeywhitelist = list("ashvor", "sleepyretard")
 	character_name = list("Sawyer Collins", "Vanechka Penkina")
+
+
+// SMALL KEYS
 
 /datum/gear/fluff/res_key_rs1
 	path = /obj/item/weapon/card/id/residential/rs1
@@ -143,3 +172,31 @@
 	description = "residential"
 	ckeywhitelist = list("lukevale")
 	character_name = list("Isha Breisacher")
+
+/datum/gear/fluff/res_key_rs5
+	path = /obj/item/weapon/card/id/residential/rs5
+	display_name = "RS5 keys"
+	description = "residential"
+	ckeywhitelist = list("codavanistok")
+	character_name = list("Coda Vanistok")
+
+/datum/gear/fluff/res_key_rs6
+	path = /obj/item/weapon/card/id/residential/rs6
+	display_name = "RS6 keys"
+	description = "residential"
+	ckeywhitelist = list("tofill")
+	character_name = list("tofill")
+
+/datum/gear/fluff/res_key_rs7
+	path = /obj/item/weapon/card/id/residential/rs7
+	display_name = "RS7 keys"
+	description = "residential"
+	ckeywhitelist = list("dopiotl", "deepindigo")
+	character_name = list("Jeanne Petite", "Kahlia 188")
+
+/datum/gear/fluff/res_key_rs8
+	path = /obj/item/weapon/card/id/residential/rs8
+	display_name = "RS8 keys"
+	description = "residential"
+	ckeywhitelist = list("cebutris")
+	character_name = list("Dakota Elliot")
