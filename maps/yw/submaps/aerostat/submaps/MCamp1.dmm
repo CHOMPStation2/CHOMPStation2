@@ -6,105 +6,105 @@
 /turf/template_noop,
 /area/submap/virgo2/MilitaryCamp1)
 "c" = (
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "e" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "f" = (
 /obj/item/stack/rods,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "g" = (
 /obj/item/weapon/material/shard,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "h" = (
 /obj/effect/decal/remains,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "i" = (
 /obj/cryogaia_away_spawner/aerostat_surface,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "j" = (
-/turf/simulated/wall/virgo2,
+/turf/simulated/wall/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "k" = (
 /obj/effect/mine,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "l" = (
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "m" = (
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "n" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/energy/gun,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "o" = (
 /obj/effect/mine,
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "q" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/projectile/automatic/c20r,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "r" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/syndie_kit/space,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "s" = (
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "t" = (
 /obj/machinery/door/airlock,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "w" = (
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "x" = (
 /obj/structure/girder,
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "y" = (
 /obj/machinery/computer/security,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "z" = (
 /obj/machinery/computer/message_monitor,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "A" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "B" = (
 /obj/structure/door_assembly,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "C" = (
 /obj/structure/table/standard,
 /obj/random/toolbox,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "D" = (
 /obj/machinery/light,
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/techfloor/virgo2,
+/turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "E" = (
 /obj/machinery/door/airlock,
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/MilitaryCamp1)
 "J" = (
 /obj/effect/mine,

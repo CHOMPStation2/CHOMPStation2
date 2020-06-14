@@ -140,6 +140,27 @@
 	var_changes = list("burn_mod" = 0.6)
 */
 //CHOMPStation Removal End
+
+//YW ADDITIONS START
+/datum/trait/improved_biocompat
+	name = "Improved Biocompatibility"
+	desc = "Your body is naturally (or artificially) more receptive to healing chemicals without being vulnerable to the 'bad stuff'. You heal more efficiently from most chemicals, with no other drawbacks. Remember to note this down in your medical records!"
+	cost = 2
+	var_changes = list("chem_strength_heal" = 1.2)
+
+/datum/trait/alcohol_tolerance_advanced
+	name = "Liver of Steel"
+	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers! You may wish to note this down in your medical records."
+	cost = 1
+	var_changes = list("alcohol_tolerance" = 0.5)
+
+/datum/trait/alcohol_immunity
+	name = "Liver of Durasteel"
+	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed. You may wish to note this down in your medical records."
+	cost = 2
+	var_changes = list("alcohol_tolerance" = 0.25)
+//YW ADDITIONS END
+
 /datum/trait/photoresistant
 	name = "Photoresistance"
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%"
@@ -179,6 +200,13 @@
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
 */
 //CHOMPStation Removal End
+
+/datum/trait/traceur
+	name = "Traceur"
+	desc = "You're capable of parkour and can *flip over low objects (most of the time)."
+	cost = 2
+	var_changes = list("agility" = 90)
+
 // YW Addition
 /datum/trait/bloodsucker_plus
 	name = "Evolved Bloodsucker"
@@ -198,10 +226,4 @@
 /datum/trait/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
-
-/datum/trait/daredevil
-	name = "Daredevil"
-	desc = "You will automatically vault tables and railings, even if it isn't in your best interest. Geronimo!"
-	cost = 1
-	var_changes = list("flags" = PASSTABLE)
 // YW Addition end

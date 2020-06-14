@@ -67,12 +67,12 @@
 	taste_description = "sparkles"
 	taste_mult = 3
 	reagent_state = LIQUID
-	color = "#964e06"
+	color = "#750404"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	scannable = 1
 
 /datum/reagent/vermicetol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)

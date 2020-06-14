@@ -22,41 +22,11 @@
 					/obj/item/clothing/glasses/omnihud/med = 4, /obj/item/device/glasses_kit = 1,  /obj/item/weapon/storage/quickdraw/syringe_case = 4)
 	..()
 
-//Custom vendors
-/obj/machinery/vending/dinnerware
-	name = "Dinnerware"
-	desc = "A kitchen and restaurant equipment vendor."
-	product_ads = "Mm, food stuffs!;Food and food accessories.;Get your plates!;You like forks?;I like forks.;Woo, utensils.;You don't really need these..."
-	icon_state = "dinnerware"
-	products = list(
-	/obj/item/weapon/tray = 8,
-	/obj/item/weapon/material/kitchen/utensil/fork = 6,
-	/obj/item/weapon/material/knife/plastic = 6,
-	/obj/item/weapon/material/kitchen/utensil/spoon = 6,
-	/obj/item/weapon/material/knife = 3,
-	/obj/item/weapon/material/kitchen/rollingpin = 2,
-	/obj/item/weapon/reagent_containers/food/drinks/glass2/square = 8,
-	/obj/item/weapon/reagent_containers/food/drinks/glass2/shake = 8,
-	/obj/item/weapon/glass_extra/stick = 15,
-	/obj/item/weapon/glass_extra/straw = 15,
-	/obj/item/clothing/suit/chef/classic = 2,
-	/obj/item/weapon/storage/toolbox/lunchbox = 3,
-	/obj/item/weapon/storage/toolbox/lunchbox/heart = 3,
-	/obj/item/weapon/storage/toolbox/lunchbox/cat = 3,
-	/obj/item/weapon/storage/toolbox/lunchbox/nt = 3,
-	/obj/item/weapon/storage/toolbox/lunchbox/mars = 3,
-	/obj/item/weapon/storage/toolbox/lunchbox/cti = 3,
-	/obj/item/weapon/storage/toolbox/lunchbox/nymph = 3,
-	/obj/item/weapon/storage/toolbox/lunchbox/syndicate = 3,
-	/obj/item/trash/bowl = 30)
-	contraband = list(/obj/item/weapon/material/knife/butch = 2)
-
 //I want this not just as part of the zoo. ;v
 /obj/machinery/vending/food
 	name = "Food-O-Mat"
 	desc = "A technological marvel, supposedly able to cook or mix a large variety of food or drink."
-	icon_state = "boozeomat"
-	icon_deny = "boozeomat-deny"
+	icon_state = "hotfood"
 	products = list(/obj/item/weapon/tray = 8,
 					/obj/item/weapon/material/kitchen/utensil/fork = 6,
 					/obj/item/weapon/material/knife/plastic = 6,
@@ -89,8 +59,6 @@
 /obj/machinery/vending/food/arojoan //Fluff vendor for the lewd houseboat.
 	name = "Custom Food-O-Mat"
 	desc = "Do you think Joan cooks? Of course not. Lazy squirrel!"
-	icon_state = "boozeomat"
-	icon_deny = "boozeomat-deny"
 	products = list(/obj/item/weapon/tray = 6,
 					/obj/item/weapon/material/kitchen/utensil/fork = 6,
 					/obj/item/weapon/material/knife/plastic = 6,
@@ -121,6 +89,7 @@
 	desc = "A self-defense equipment vending machine. When you need to take care of that clown."
 	product_slogans = "The best defense is good offense!;Buy for your whole family today!;Nobody can outsmart bullet!;God created man - Frozen Star made them EQUAL!;Nobody can outsmart bullet!;Stupidity can be cured! By LEAD.;Dead kids can't bully your children!"
 	product_ads = "Stunning!;Take justice in your own hands!;LEADearship!"
+	icon = 'icons/obj/vending_vr.dmi'
 	icon_state = "weapon"
 	products = list(/obj/item/device/flash = 6,/obj/item/weapon/reagent_containers/spray/pepper = 6, /obj/item/weapon/gun/projectile/olivaw = 5, /obj/item/weapon/gun/projectile/giskard = 5, /obj/item/ammo_magazine/mg/cl32/rubber = 20)
 	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/syndicake = 6)
@@ -136,7 +105,9 @@
 	name = "Blood-Onator"
 	desc = "Freezer-vendor for storage and quick dispensing of blood packs"
 	product_ads = "The true life juice!;Vampire's choice!;Home-grown blood only!;Donate today, be saved tomorrow!;Approved by Zeng-Hu Pharmaceuticals Incorporated!; Curse you, Vey-Med artificial blood!"
+	icon = 'icons/obj/vending_vr.dmi'
 	icon_state = "blood"
+	vend_delay = 7
 	idle_power_usage = 211
 	req_access = list(access_medical)
 	products = list(/obj/item/weapon/reagent_containers/blood/prelabeled/APlus = 3,/obj/item/weapon/reagent_containers/blood/prelabeled/AMinus = 3,
@@ -151,6 +122,7 @@
 	name = "Fingers and Toes"
 	desc = "A special vendor for gloves and shoes!"
 	product_ads = "Do you have fingers and toes? COVER THEM UP!;Show me your toes! Wait. NO DON'T! BUY NEW SHOES!;Don't leave prints, BUY SOME GLOVES!;Remember to check your shoes for micros! You don't have to let them out, but just check for them!;Fingers and Toes is not liable for micro entrapment or abuse under the feet of our patrons.!;This little piggy went WE WE WE all the way down to FINGERS AND TOES to pick up some sweet new gloves and shoes."
+	icon = 'icons/obj/vending_vr.dmi'
 	icon_state = "glovesnshoes"
 	products = list(/obj/item/clothing/gloves/evening = 5,
 					/obj/item/clothing/gloves/fingerless = 5,
@@ -278,7 +250,6 @@
 	desc = "A vendor using compressed matter cartridges to store large amounts of basic station uniforms."
 	product_ads = "Don't get caught naked!;Pick up your uniform!;Using compressed matter cartridges and VERY ETHICAL labor practices, we bring you the uniforms you need!;No uniform? No problem!;We've got your covered!;The Basics is not responsible for being crushed under the amount of things inside our machines. DO NOT VEND IN EXCESS!!"
 	icon_state = "loadout"
-	icon_vend = "loadout-purchase"
 	vend_delay = 16
 	products = list(/obj/item/device/pda = 50,
 					/obj/item/device/radio/headset = 50,
@@ -300,13 +271,13 @@
 					/obj/item/clothing/under/color/yellow = 5,
 					/obj/item/clothing/shoes/black = 20,
 					/obj/item/clothing/shoes/white = 20)
+	prices = list()
 
 /obj/machinery/vending/loadout/accessory
 	name = "Looty Inc."
 	desc = "A special vendor for accessories."
 	product_ads = "Want shinies? We have the shinies.;Need that special something to complete your outfit? We have what you need!;Ditch that old dull dangly something you've got and pick up one of our shinies!;Bracelets, collars, scarfs rings and more! We have the fancy things you need!;Does your pet need a collar? We don't judge! Keep them in line with one of one of ours!;Top of the line materials! 'Hand crafted' goods!"
 	icon_state = "accessory"
-	icon_vend = "accessory-purchase"
 	vend_delay = 6
 	products = list(/obj/item/clothing/accessory = 5,
 					/obj/item/clothing/accessory/armband/med/color = 10,
@@ -536,7 +507,6 @@
 	desc = "A special vendor using compressed matter cartridges to store large amounts of clothing."
 	product_ads = "Tired of your grey jumpsuit? Spruce yourself up!;We have the outfit for you!;Don't let that grey jumpsuit get you down, get a ROBUST outfit right now!;Using compressed matter catridges and VERY ETHICAL labor practices to bring YOU the clothing you crave!;Are you sure you want to go to work in THAT?;All of our wares have a whole TWO pockets!"
 	icon_state = "clothing"
-	icon_vend = "clothing-purchase"
 	vend_delay = 16
 	products = list(/obj/item/clothing/under/bathrobe = 5,
 					/obj/item/clothing/under/dress/black_corset = 5,
@@ -636,6 +606,9 @@
 					/obj/item/clothing/under/dress/sailordress = 5,
 					/obj/item/clothing/under/dress/sari = 5,
 					/obj/item/clothing/under/dress/sari/green = 5,
+					/obj/item/clothing/under/dress/qipao = 5,
+					/obj/item/clothing/under/dress/qipao/red = 5,
+					/obj/item/clothing/under/dress/qipao/white = 5,
 					/obj/item/clothing/under/shorts/red = 5,
 					/obj/item/clothing/under/shorts/green = 5,
 					/obj/item/clothing/under/shorts/blue = 5,
@@ -803,6 +776,9 @@
 					/obj/item/clothing/under/dress/sailordress = 100,
 					/obj/item/clothing/under/dress/sari = 100,
 					/obj/item/clothing/under/dress/sari/green = 100,
+					/obj/item/clothing/under/dress/qipao = 100,
+					/obj/item/clothing/under/dress/qipao/red = 100,
+					/obj/item/clothing/under/dress/qipao/white = 100,
 					/obj/item/clothing/under/shorts/red = 100,
 					/obj/item/clothing/under/shorts/green = 100,
 					/obj/item/clothing/under/shorts/blue = 100,
@@ -880,7 +856,6 @@
 	desc = "A special vendor for devices and gadgets."
 	product_ads = "You can't RESIST our great deals!;Feeling disconnected? We have a gadget for you!;You know you have the capacity to buy our capacitors!;FILL THAT HOLE IN YOUR HEART WITH OUR PLASTIC DISTRACTIONS!!!;Devices for everyone! Chips Co.!;ROBUST INVENTORY, GREAT PRICES! ;DON'T FORGET THE oyPAD 13s PRO! ON SALE NOW, ONLY ONE THOUSAND THALERS!"
 	icon_state = "gadgets"
-	icon_vend = "gadgets-purchase"
 	vend_delay = 11
 	products = list(/obj/item/clothing/suit/circuitry = 1,
 					/obj/item/clothing/head/circuitry = 1,
@@ -960,7 +935,6 @@
 	desc = "A special vendor using compressed matter cartridges to store large amounts of overwear!"
 	product_ads = "Dress your best! It's what big D would want.;Overwear for all occasions!;Big D has what you need if what you need is some form of jacket!;Need a new hoodie? Bid D has you covered.;Big D says you need a new suit!;Big D smiles when he sees you in one of his coats!"
 	icon_state = "suit"
-	icon_vend = "suit-purchase"
 	vend_delay = 16
 	products = list(/obj/item/clothing/suit/storage/apron = 5,
 					/obj/item/clothing/suit/storage/flannel/aqua = 5,
@@ -1143,7 +1117,8 @@
 	name = "Thespian's Delight"
 	desc = "Sometimes nerds need costumes!"
 	product_ads = "Don't let your art be stifled!;Remember, practice makes perfect!;Break a leg!;Don't make me get the cane!;Thespian's Delight entering stage right!;Costumes for your acting needs!"
-	icon_state = "Theater_b"
+	icon = 'icons/obj/vending.dmi'
+	icon_state = "theater"
 	products = list(/obj/item/clothing/suit/storage/hooded/carp_costume = 3,
 					/obj/item/clothing/suit/storage/hooded/carp_costume = 3,
 					/obj/item/clothing/suit/chickensuit = 3,
@@ -1307,14 +1282,9 @@
 		/obj/item/seeds/whitebeetseed = 3,
 		/obj/item/seeds/wabback = 2)
 
-//TFF 19/12/19 - Brig version of a Nutrimax
 /obj/machinery/vending/hydronutrients/brig
 	name = "Brig NutriMax"
 	desc = "A plant nutrients vendor. Seems some items aren't included."
-	product_slogans = "Aren't you glad you don't have to fertilize the natural way?;Now with 50% less stink!;Plants are people too!"
-	product_ads = "We like plants!;Don't you want some?;The greenest thumbs ever.;We like big plants.;Soft soil..."
-	icon_state = "nutri"
-	icon_deny = "nutri-deny"
 	products = list(/obj/item/weapon/reagent_containers/glass/bottle/eznutrient = 6,/obj/item/weapon/reagent_containers/glass/bottle/left4zed = 4,/obj/item/weapon/reagent_containers/glass/bottle/robustharvest = 3,/obj/item/weapon/plantspray/pests = 20,
 					/obj/item/weapon/reagent_containers/glass/beaker = 4,/obj/item/weapon/storage/bag/plants = 5)
 	premium = list(/obj/item/weapon/reagent_containers/glass/bottle/ammonia = 10,/obj/item/weapon/reagent_containers/glass/bottle/diethylamine = 5)
@@ -1332,3 +1302,10 @@
 /obj/machinery/vending/emergencyfood/filled
 	products = list(/obj/item/weapon/storage/box/wings/tray = 40)
 	contraband = list(/obj/item/weapon/storage/box/wings/tray = 20)
+
+/obj/machinery/vending/cola
+	icon_state = "Soda_Machine"
+
+/obj/machinery/vending/cola/soft
+	icon = 'icons/obj/vending_vr.dmi'
+	icon_state = "Cola_Machine"

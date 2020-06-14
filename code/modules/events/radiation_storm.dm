@@ -9,7 +9,7 @@
 	var/postStartTicks 		= 0
 
 /datum/event/radiation_storm/announce()
-	command_announcement.Announce("High levels of radiation detected near \the [station_name()]. Please evacuate into one of the shielded maintenance tunnels or dorms.", "Anomaly Alert", new_sound = 'sound/AI/radiation.ogg') //VOREStation Edit - Dorms ref //CHOMPEdit: Restored original message
+	command_announcement.Announce("High levels of radiation detected near \the [station_name()]. Please evacuate into one of the shielded maintenance tunnels or dorms. The area of the cafeteria is also shielded.", "Anomaly Alert", new_sound = 'sound/AI/radiation.ogg') //VOREStation Edit - Dorms ref //CHOMPEdit: Restored original message, TFF 16/4/20 - mention additional safe place(s) in announcement
 
 /datum/event/radiation_storm/start()
 	make_maint_all_access()

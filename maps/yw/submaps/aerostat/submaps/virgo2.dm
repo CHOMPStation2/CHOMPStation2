@@ -8,7 +8,7 @@
 #include "Smol1.dmm"
 #include "Mudpit.dmm"
 #include "Snowrock1.dmm"
-#include "Boombase.dmm"
+//#include "Boombase.dmm" //Remove boombase
 #include "Blackshuttledown.dmm"
 #include "Lab1.dmm"
 #include "Rocky4.dmm"
@@ -102,11 +102,11 @@
 	template_group = "Sif Free Radio"
 	cost = 5
 
-/datum/map_template/virgo2/Boombase
+/*/datum/map_template/virgo2/Boombase Remove boombase
 	name = "Boombase"
 	desc = "What happens when you don't follow SOP."
 	mappath = 'Boombase.dmm'
-	cost = 5
+	cost = 5*/
 
 /datum/map_template/virgo2/BSD
 	name = "Black Shuttle Down"

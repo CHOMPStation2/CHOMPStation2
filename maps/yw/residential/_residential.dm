@@ -1,16 +1,44 @@
-// -- Datums -- //
+// -- Shuttle -- //
 
-/datum/shuttle/ferry/residential
+/datum/shuttle/autodock/ferry/residential
 	name = "Residential Shuttle"
-	location = 1 // At offsite
-	warmup_time = 30
-	move_time = 270
-	area_station = /area/shuttle/residential/main
-	area_offsite = /area/shuttle/residential/residential
-	area_transition = /area/shuttle/residential/transition
+	location = FERRY_LOCATION_STATION
+	shuttle_area = /area/shuttle/residential
 	docking_controller_tag = "residential_shuttle"
-	dock_target_station = "residential_shuttle_station"
-	dock_target_offsite = "residential_shuttle_offsite"
+	landmark_offsite = "residential_residential"
+	landmark_station = "residential_station"
+	landmark_transition = "residential_transit"
+	warmup_time = 3 SECONDS //30 seconds actually (SECONDS is multiplying it by 10)
+	move_time = 27 SECONDS //270 seconds actually (SECONDS is multiplying it by 10)
+	var/announcer = "Automated Traffic Control"
+
+
+/datum/shuttle/autodock/ferry/residential/perform_shuttle_move()
+	..()
+	if (current_location == landmark_station)
+		command_announcement.Announce("The Residential Shuttle has docked at your facility.", announcer)
+	if (current_location == landmark_offsite)
+		command_announcement.Announce("The Residential Shuttle has docked at [using_map.dock_name].", announcer)
+
+/obj/effect/shuttle_landmark/premade/residential/residences
+	name = "NCS Serenity Residential"
+	landmark_tag = "residential_residential"
+	docking_controller = "residential_shuttle_offsite"
+	base_turf = /turf/space
+	base_area = /area/space
+
+/obj/effect/shuttle_landmark/premade/residential/transit
+	name = "Space"
+	landmark_tag = "residential_transit"
+
+/obj/effect/shuttle_landmark/premade/residential/station
+	name = "NSB Cryogaia"
+	landmark_tag = "residential_station"
+	docking_controller = "residential_shuttle_station"
+	base_turf = /turf/simulated/floor/outdoors/snow/plating/cryogaia
+	base_area = /area/borealis2/outdoors/grounds
+	special_dock_targets = list("Residential Shuttle" = "residential_shuttle_docking_left")
+
 
 // -- Objs -- //
 
@@ -21,17 +49,9 @@
 
 // -- Areas -- //
 
-/area/shuttle/residential/main
-	name = "\improper Residential Shuttle - Station"
+/area/shuttle/residential
+	name = "\improper Residential Shuttle"
 	base_turf = /turf/simulated/floor/outdoors/snow/plating/cryogaia
-
-/area/shuttle/residential/residential
-	name = "\improper Residential Shuttle - Residential"
-	base_turf = /turf/space
-
-/area/shuttle/residential/transition
-	name = "\improper Residential Shuttle - Transition"
-	base_turf = /turf/space
 
 /area/residential
 	icon = 'icons/turf/areas_yw.dmi'
@@ -84,3 +104,39 @@
 /area/residential/mansion
 	name = "\improper Residential -  Mansion"
 	icon_state = "mansion"
+
+
+
+// Spawn points
+
+var/global/list/latejoin_residential = list()
+/obj/effect/landmark/residential
+	name = "JoinLateResidential"
+	delete_me = 1
+
+/obj/effect/landmark/residential/New()
+	latejoin_residential += loc // Register this turf as tram latejoin.
+	..()
+
+/datum/spawnpoint/residential
+	display_name = "NCS Serenity Residential"
+	restrict_job = list("Off-duty Worker", "Off-duty Cargo", "Off-duty Engineer", "Off-duty Medic", "Off-duty Scientist", "Off-duty Officer", "Chef")
+	msg = "has arrived on the NCS Serenity Residential level"
+	announce_channel = "Common"
+
+/datum/spawnpoint/residential/New()
+	..()
+	turfs = latejoin_residential
+
+
+/obj/machinery/cryopod/robot/door/residential
+	name = "Residential Elevator"
+	desc = "Wait aren't you already there?"
+	spawnpoint_type = /datum/spawnpoint/residential
+	announce_channel = "Common"
+	on_store_message = "has left through the Residential area Elevator."
+	on_store_name = "Residential Elevator"
+	on_enter_visible_message = "makes their way into the"
+	on_enter_occupant_message = "You hear cheery music."
+	on_store_visible_message_1 = "hums as it moves"
+	on_store_visible_message_2 = "into the elevator."

@@ -7,6 +7,8 @@
 	var/use_jobwhitelist = 1
 	var/emojis = 1
 
+	var/vorefootstep_volume = 75	//In future see about making a function to adjust volume serverside in config.txt, easy to do with reenable values. - Jack
+
 /hook/startup/proc/read_ch_config()
 	var/list/Lines = file2list("config/config.txt")
 	for(var/t in Lines)

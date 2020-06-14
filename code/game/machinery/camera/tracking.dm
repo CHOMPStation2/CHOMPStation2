@@ -152,16 +152,16 @@
 	cameraFollow = null
 
 /mob/living/silicon/ai/proc/ai_actual_track(mob/living/target as mob)
-	if(!istype(target))	return
+	if(!istype(target))	return FALSE
 	var/mob/living/silicon/ai/U = usr
 
 	if(target == U.cameraFollow)
-		return
+		return TRUE
 
 	if(U.cameraFollow)
 		U.ai_cancel_tracking()
 	U.cameraFollow = target
-	U << "Now tracking [target.name] on camera."
+	to_chat(U, "Now tracking [target.name] on camera.")
 	target.tracking_initiated()
 
 	spawn (0)
@@ -171,7 +171,7 @@
 
 			switch(target.tracking_status())
 				if(TRACKING_NO_COVERAGE)
-					U << "Target is not near any active cameras."
+					to_chat(U, "Target is not near any active cameras.")
 					sleep(100)
 					continue
 				if(TRACKING_TERMINATE)
@@ -184,6 +184,8 @@
 				view_core()
 				return
 			sleep(10)
+
+	return TRUE
 
 /obj/machinery/camera/attack_ai(var/mob/living/silicon/ai/user as mob)
 	if (!istype(user))
