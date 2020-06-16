@@ -119,13 +119,6 @@
 	ckeywhitelist = list("joezill", "sinoxatori")
 	character_name = list("Ciri Vulture", "Kasali Vulture")
 
-/datum/gear/fluff/res_key_s6
-	path = /obj/item/weapon/card/id/residential/s6
-	display_name = "S6 keys"
-	description = "residential"
-	ckeywhitelist = list("mocatheporg1")
-	character_name = list("Mocha")
-
 // MEDIUM KEYS
 
 /datum/gear/fluff/res_key_rm1
@@ -207,3 +200,10 @@
 	description = "residential"
 	ckeywhitelist = list("guiltybeans", "rareshekel")
 	character_name = list("Reez Sheeh", "Easju Nawry")
+
+/datum/gear/fluff/res_key_rs10
+	path = /obj/item/weapon/card/id/residential/rs10
+	display_name = "RS10 keys"
+	description = "residential"
+	ckeywhitelist = list("mocatheporg1")
+	character_name = list("Mocha")
