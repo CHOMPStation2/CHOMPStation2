@@ -1137,18 +1137,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Visitor Room 12"
 	icon_state = "Sleep"
 
-//CHOMPStation Edit Start TFF 6/2/20 - Added two new dorms
-
-/area/crew_quarters/sleep/vistor_room_13
-	name = "\improper Visitor Room 12"
-	icon_state = "Sleep"
-
-/area/crew_quarters/sleep/vistor_room_14
-	name = "\improper Visitor Room 12"
-	icon_state = "Sleep"
-
-//CHOMPStation Edit End
-
 /area/crew_quarters/sleep/engi_wash
 	name = "\improper Engineering Washroom"
 	icon_state = "toilet"
@@ -1712,6 +1700,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/medical/first_aid_station
 	name = "\improper Port First-Aid Station"
 	icon_state = "medbay2"
+
+
 
 //Security
 
