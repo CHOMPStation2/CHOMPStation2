@@ -200,3 +200,10 @@
 	description = "residential"
 	ckeywhitelist = list("cebutris")
 	character_name = list("Dakota Elliot")
+
+/datum/gear/fluff/res_key_rs9
+	path = /obj/item/weapon/card/id/residential/rs9
+	display_name = "RS9 keys"
+	description = "residential"
+	ckeywhitelist = list("guiltybeans", "rareshekel")
+	character_name = list("Reez Sheeh", "Easju Nawry")
