@@ -80,10 +80,10 @@
 	var/num_admins_online = 0
 	var/num_devs_online = 0
 	var/num_event_managers_online = 0
-	
+
 	if(holder)
 		for(var/client/C in GLOB.admins)
-			if(R_ADMIN & C.holder.rights && R_BAN & C.holder.rights)
+			if(R_ADMIN & C.holder.rights || (!R_MOD & C.holder.rights))	//YW EDIT: Used to determine who shows up in admin rows
 
 				if(C.holder.fakekey && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))		//Event Managerss can't see stealthmins
 					continue
@@ -108,7 +108,7 @@
 				msg += "\n"
 
 				num_admins_online++
-			else if(R_ADMIN & C.holder.rights && !(R_SERVER & C.holder.rights))
+			else if(R_MOD & C.holder.rights && !(R_SERVER & C.holder.rights))
 				modmsg += "\t[C] is a [C.holder.rank]"
 
 				if(C.holder.fakekey && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))
@@ -179,7 +179,7 @@
 				if(!C.holder.fakekey)
 					msg += "\t[C] is a [C.holder.rank]\n"
 					num_admins_online++
-			else if(R_ADMIN & C.holder.rights && !(R_SERVER & C.holder.rights))
+			else if (R_MOD & C.holder.rights && !(R_SERVER & C.holder.rights))	//YW EDIT
 				if(!C.holder.fakekey)
 					modmsg += "\t[C] is a [C.holder.rank]\n"
 					num_mods_online++
@@ -195,7 +195,7 @@
 	msg = "<b>Current Admins ([num_admins_online]):</b>\n" + msg
 
 	if(config.show_mods)
-		msg += "\n<b> Current Game Masters ([num_mods_online]):</b>\n" + modmsg
+		msg += "\n<b> Current Moderators ([num_mods_online]):</b>\n" + modmsg	//YW EDIT
 
 	if(config.show_devs)
 		msg += "\n<b> Current Developers ([num_devs_online]):</b>\n" + devmsg
