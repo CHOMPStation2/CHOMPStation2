@@ -72,12 +72,12 @@
 
 // - Discord register
 GLOBAL_LIST_EMPTY(pending_discord_registrations)
-/datum/tgs_chat_command/register
+/datum/server_tools_command/register
 	name = "register"
 	help_text = "Registers your chat username with your Byond username"
 	admin_only = FALSE
 
-/datum/tgs_chat_command/register/Run(datum/tgs_chat_user/sender, params)
+/datum/server_tools_command/register/Run(datum/tgs_chat_user/sender, params)
 	// Try to find if that ID is registered to someone already
 	var/sql_discord = sql_sanitize_text(sender.id)
 	var/DBQuery/query = dbcon.NewQuery("SELECT discord_id FROM erro_player WHERE discord_id = '[sql_discord]'")
