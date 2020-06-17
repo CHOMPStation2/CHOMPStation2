@@ -21,12 +21,12 @@
 	return "FAX: ```[strip_html_properly(faxmsg)]```"
 
 // - Staffwho
-/datum/tgs_chat_command/staffwho
+/datum/server_tools_command/staffwho
 	name = "staffwho"
 	help_text = "Shows the current online staff count"
 	admin_only = TRUE
 
-/datum/tgs_chat_command/staffwho/Run(datum/tgs_chat_user/sender, params)
+/datum/server_tools_command/staffwho/Run(datum/tgs_chat_user/sender, params)
 	var/message = "Current online staff:\n"
 
 	var/list/admin_keys = list()
