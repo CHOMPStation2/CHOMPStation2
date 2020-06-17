@@ -80,10 +80,10 @@
 	var/num_admins_online = 0
 	var/num_devs_online = 0
 	var/num_event_managers_online = 0
-	
+
 	if(holder)
 		for(var/client/C in GLOB.admins)
-			if(R_ADMIN & C.holder.rights || (!R_MOD & C.holder.rights))	//YW EDIT: Used to determine who shows up in admin rows
+			if(R_ADMIN & C.holder.rights && R_BAN & C.holder.rights)
 
 				if(C.holder.fakekey && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))		//Event Managerss can't see stealthmins
 					continue
@@ -179,7 +179,7 @@
 				if(!C.holder.fakekey)
 					msg += "\t[C] is a [C.holder.rank]\n"
 					num_admins_online++
-			else if (R_MOD & C.holder.rights && !(R_SERVER & C.holder.rights))	//YW EDIT
+			else if(R_MOD & C.holder.rights && !(R_SERVER & C.holder.rights))	//YW EDIT
 				if(!C.holder.fakekey)
 					modmsg += "\t[C] is a [C.holder.rank]\n"
 					num_mods_online++
