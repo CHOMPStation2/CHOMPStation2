@@ -54,7 +54,7 @@
 		if(R_ADMIN & C.holder.rights && R_BAN & C.holder.rights) // R_ADMIN and R_BAN apparently an admin makes
 			admin_keys += keymsg
 
-		else if(R_ADMIN & C.holder.rights && !(R_SERVER & C.holder.rights)) // R_ADMIN but not R_SERVER makes a moderator
+		else if(R_MOD & C.holder.rights && !(R_SERVER & C.holder.rights)) // R_MOD but not R_SERVER makes a moderator
 			mod_keys += keymsg
 
 		else if(R_DEBUG & C.holder.rights) // R_SERVER makes a dev
@@ -68,7 +68,7 @@
 	var/dev_msg = english_list(dev_keys, "-None-")
 	var/other_msg = english_list(other_keys, "-None-")
 
-	message += "**Admins:** [admin_msg]\n**Mods/GMs:** [mod_msg]\n**Devs:** [dev_msg]\n**Other:** [other_msg]\n**Total:** [count] online"
+	message += "**Admins:** [admin_msg]\n**Mods:** [mod_msg]\n**Devs:** [dev_msg]\n**Other:** [other_msg]\n**Total:** [count] online"
 	return message
 
 // - Discord register
@@ -76,7 +76,7 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 /datum/server_tools_command/register
 	name = "register"
 	help_text = "Registers your chat username with your Byond username"
-	required_parameters = 1
+	required_parameters = 0
 	admin_only = FALSE
 
 /datum/server_tools_command/register/Run(datum/tgs_chat_user/sender, params)
