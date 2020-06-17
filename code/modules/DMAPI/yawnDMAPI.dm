@@ -24,6 +24,7 @@
 /datum/server_tools_command/staffwho
 	name = "staffwho"
 	help_text = "Shows the current online staff count"
+	required_parameters = 0
 	admin_only = TRUE
 
 /datum/server_tools_command/staffwho/Run(datum/tgs_chat_user/sender, params)
@@ -75,6 +76,7 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 /datum/server_tools_command/register
 	name = "register"
 	help_text = "Registers your chat username with your Byond username"
+	required_parameters = 1
 	admin_only = FALSE
 
 /datum/server_tools_command/register/Run(datum/tgs_chat_user/sender, params)
