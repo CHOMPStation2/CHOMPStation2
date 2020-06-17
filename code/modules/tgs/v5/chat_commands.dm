@@ -63,7 +63,7 @@
 	message += "**Admins:** [admin_msg]\n**Mods/GMs:** [mod_msg]\n**Devs:** [dev_msg]\n**Other:** [other_msg]\n**Total:** [count] online"
 	return message
 
-//YW EDIT: GLOBAL_LIST_EMPTY(pending_discord_registrations)
+GLOBAL_LIST_EMPTY(pending_discord_registrations)
 /datum/tgs_chat_command/register
 	name = "register"
 	help_text = "Registers your chat username with your Byond username"

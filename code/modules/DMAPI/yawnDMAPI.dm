@@ -72,6 +72,7 @@
 	return message
 
 // - Discord register
+/* Commented out until i can figure it out or until we update tgs
 GLOBAL_LIST_EMPTY(pending_discord_registrations)
 /datum/server_tools_command/register
 	name = "register"
@@ -127,3 +128,4 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 	GLOB.pending_discord_registrations[GLOB.pending_discord_registrations.len] = list("ckey" = key_to_find, "id" = sender.id, "time" = world.realtime)
 	
 	return "[sender.friendly_name], I've sent you a message in-game. Please verify your username there to complete your registration within 10 minutes."
+*/
