@@ -74,9 +74,9 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	ideal_character_age = 50
 
 	outfit_type = /decl/hierarchy/outfit/job/hop
-	job_description = "The Head of Personnel manages the Service department, the Exploration team, and most other civilians. They also \
+	job_description = "The Head of Personnel manages the Service department and most other civilians. They also \
 						manage the Supply department, through the Quartermaster. In addition, the Head of Personnel oversees the personal accounts \
-						of the crew, including their money and access. If necessary, the Head of Personnel is first in line to assume Acting Command."
+						of the crew, including their money and access. If necessary, the Head of Personnel is first in line to assume Acting Command." //YW EDIT
 	alt_titles = list("Crew Resources Officer" = /datum/alt_title/cro)
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
