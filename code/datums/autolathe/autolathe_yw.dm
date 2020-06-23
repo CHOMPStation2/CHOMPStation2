@@ -5,7 +5,6 @@
 /obj/machinery/autolathe
 	name = "autolathe"
 	desc = "It produces items using metal and glass."
-	icon = 'icons/obj/stationobjs_vr.dmi'
 	icon_state = "autolathe"
 	density = 1
 	anchored = 1
@@ -47,13 +46,11 @@
 
 /obj/machinery/autolathe/New()
 	..()
+
+/obj/machinery/autolathe/Initialize()
+	. = ..()
 	wires = new(src)
-	component_parts = list()
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
-	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
-	component_parts += new /obj/item/weapon/stock_parts/console_screen(src)
+	default_apply_parts()
 	RefreshParts()
 	files = new /datum/research/autolathe(src)
 	matching_designs = list()
@@ -181,7 +178,9 @@
 			to_chat(usr, "<span class='warning'>The autolathe queue is full!</span>")
 		if(!busy)
 			busy = 1
+			update_icon()
 			process_queue()
+			update_icon()
 			busy = 0
 
 	if(href_list["remove_from_queue"])
@@ -213,14 +212,16 @@
 	return 1
 
 /obj/machinery/autolathe/update_icon()
+	overlays.Cut()
+
+	icon_state = initial(icon_state)
+
 	if(panel_open)
-		icon_state = "autolathe_t"
-	else if(busy)
-		icon_state = "autolathe_n"
-	else
-		if(icon_state == "autolathe_n")
-			flick("autolathe_u", src) // If lid WAS closed, show opening animation
-		icon_state = "autolathe"
+		overlays.Add(image(icon, "[icon_state]_panel"))
+	if(stat & NOPOWER)
+		return
+	if(busy)
+		icon_state = "[icon_state]_work"
 
 /obj/machinery/autolathe/RefreshParts()
 	..()
@@ -285,7 +286,7 @@
 		being_built = list(D, multiplier)
 		use_power(power)
 		icon_state = "autolathe"
-		flick("autolathe_n",src)
+		flick("[initial(icon_state)]_finish", src)
 		if(is_stack)
 			var/list/materials_used = list(DEFAULT_WALL_MATERIAL=metal_cost*multiplier, "glass"=glass_cost*multiplier)
 			//stored_material = list(DEFAULT_WALL_MATERIAL -= materials_used[DEFAULT_WALL_MATERIAL], "glass" -= materials_used["glass"])
@@ -526,7 +527,7 @@
 	else
 		to_chat(user, "You fill \the [src] with \the [eating].")
 
-	flick("autolathe_o", src) // Plays metal insertion animation. Work out a good way to work out a fitting animation. ~Z
+	flick("autolathe_loading", src) // Plays metal insertion animation. Work out a good way to work out a fitting animation. ~Z
 
 	if(istype(eating,/obj/item/stack))
 		var/obj/item/stack/stack = eating
@@ -581,9 +582,9 @@
 
 		if(!filltype)
 			visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Storage is full. Operation aborted\"")
-			return
+			break
 
-		flick("autolathe_o", src)
+		flick("autolathe_loading", src)
 
 		if(istype(eating,/obj/item/stack))
 			var/obj/item/stack/stack = eating
