@@ -35,7 +35,6 @@
 	var/datum/research/files
 
 	var/mat_efficiency = 1
-	var/build_time = 50
 	var/list/datum/design/item/autolathe/matching_designs
 	var/temp_search
 	var/selected_category
@@ -180,8 +179,8 @@
 			busy = 1
 			update_icon()
 			process_queue()
-			update_icon()
 			busy = 0
+			update_icon()
 
 	if(href_list["remove_from_queue"])
 		var/index = text2num(href_list["remove_from_queue"])
@@ -222,6 +221,10 @@
 		return
 	if(busy)
 		icon_state = "[icon_state]_work"
+	if(!busy)
+		icon_state = "[icon_state]_pause"
+
+
 
 /obj/machinery/autolathe/RefreshParts()
 	..()
@@ -234,7 +237,6 @@
 
 	storage_capacity[DEFAULT_WALL_MATERIAL] = mb_rating  * 25000
 	storage_capacity["glass"] = mb_rating  * 12500
-	build_time = 50 / man_rating
 	mat_efficiency = 1.1 - man_rating * 0.1// Normally, price is 1.25 the amount of material, so this shouldn't go higher than 0.6. Maximum rating of parts is 5
 
 
@@ -278,6 +280,7 @@
 /obj/machinery/autolathe/proc/build_item(datum/design/D, multiplier)
 	desc = initial(desc)+"\nIt's building \a [initial(D.name)]."
 	var/is_stack = ispath(D.build_path, /obj/item/stack)
+	var/is_box = ispath(D.build_path, /obj/item/weapon/storage/box)
 	var/coeff = get_coeff(D)
 	var/metal_cost = D.materials[DEFAULT_WALL_MATERIAL]
 	var/glass_cost = D.materials["glass"]
@@ -285,8 +288,7 @@
 	if(can_build(D, multiplier))
 		being_built = list(D, multiplier)
 		use_power(power)
-		icon_state = "autolathe"
-		flick("[initial(icon_state)]_finish", src)
+		update_icon()
 		if(is_stack)
 			var/list/materials_used = list(DEFAULT_WALL_MATERIAL=metal_cost*multiplier, "glass"=glass_cost*multiplier)
 			//stored_material = list(DEFAULT_WALL_MATERIAL -= materials_used[DEFAULT_WALL_MATERIAL], "glass" -= materials_used["glass"])
@@ -298,13 +300,21 @@
 			stored_material["glass"] -= materials_used["glass"]
 		SSnanoui.update_uis(src)
 		sleep(32*coeff)
+		flick("[initial(icon_state)]_finish", src)
 		if(is_stack)
 			var/obj/item/stack/S = new D.build_path(BuildTurf)
 			S.amount = multiplier
 		else
 			var/obj/item/new_item = new D.build_path(BuildTurf)
-			new_item.matter[DEFAULT_WALL_MATERIAL] *= coeff
-			new_item.matter["glass"] *= coeff
+			if(is_box)
+				for(var/obj/item/L in new_item.contents)
+					if(!(L.matter))
+						continue
+					L.matter[DEFAULT_WALL_MATERIAL] *= coeff
+					L.matter["glass"] *= coeff
+			else
+				new_item.matter[DEFAULT_WALL_MATERIAL] *= coeff
+				new_item.matter["glass"] *= coeff
 	SSnanoui.update_uis(src)
 	desc = initial(desc)
 
