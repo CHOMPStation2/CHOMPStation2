@@ -4,7 +4,7 @@
 	admin_only = FALSE
 
 /datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
-	return "Current server status:\n**Web Manifest:** <https://vore-station.net/manifest.php>\n**Players:** [TGS_CLIENT_COUNT]\n**Round Duration:** [roundduration2text()]"
+	return "Current server status:\n**Down! Contact staff.** <https://cdn.discordapp.com/emojis/687779807358091364.gif?v=1>" //CHOMPEdit Not turning it off, but turning it into a sort of debug message to indicate if the server is down.
 
 /datum/tgs_chat_command/parsetest
 	name = "parsetest"
