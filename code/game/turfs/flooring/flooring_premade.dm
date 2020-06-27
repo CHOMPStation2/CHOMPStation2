@@ -416,6 +416,7 @@
 	name = "snow"
 	icon_state = "snownew"
 	movement_cost = 4
+	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
 
 /turf/simulated/floor/outdoors/snow/gravsnow
 	name = "snow"
