@@ -12651,27 +12651,6 @@
 	},
 /area/centcom/main_hall)
 "Bz" = (
-/obj/machinery/gateway{
-	dir = 9
-	},
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"BA" = (
-/obj/machinery/gateway{
-	dir = 1
-	},
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"BB" = (
-/obj/machinery/gateway{
-	dir = 5
-	},
 /turf/unsimulated/floor{
 	dir = 2;
 	icon_state = "dark"
@@ -12767,31 +12746,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
-"BM" = (
-/obj/machinery/gateway{
-	dir = 8
-	},
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"BN" = (
-/obj/machinery/gateway/centerstation,
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"BO" = (
-/obj/machinery/gateway{
-	dir = 4
-	},
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
 "BP" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/folder/red,
@@ -12848,27 +12802,6 @@
 	},
 /area/centcom/main_hall)
 "BU" = (
-/obj/machinery/gateway{
-	dir = 10
-	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"BV" = (
-/obj/machinery/gateway,
-/obj/effect/floor_decal/industrial/warning,
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"BW" = (
-/obj/machinery/gateway{
-	dir = 6
-	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/unsimulated/floor{
 	dir = 2;
@@ -20112,7 +20045,6 @@
 /area/wizard_station)
 "RI" = (
 /obj/structure/closet{
-
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/suit/wizrobe/magusblue,
@@ -20340,7 +20272,6 @@
 /area/wizard_station)
 "Sl" = (
 /obj/structure/closet{
-
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/shoes/sandal/marisa{
@@ -20358,7 +20289,6 @@
 /area/wizard_station)
 "Sm" = (
 /obj/structure/closet{
-
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/suit/wizrobe/magusred,
@@ -20371,7 +20301,6 @@
 /area/wizard_station)
 "Sn" = (
 /obj/structure/closet{
-
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/suit/wizrobe/marisa,
@@ -20385,7 +20314,6 @@
 /area/wizard_station)
 "So" = (
 /obj/structure/closet{
-
 	icon_state = "cabinet_closed"
 	},
 /obj/item/clothing/suit/wizrobe/red,
@@ -55248,7 +55176,7 @@ wx
 AR
 ww
 Bz
-BM
+Bz
 BU
 Bx
 Bx
@@ -55499,9 +55427,9 @@ wx
 wx
 An
 ww
-BA
-BN
-BV
+Bz
+Bz
+BU
 Bx
 Bx
 Bx
@@ -55751,9 +55679,9 @@ wx
 AC
 AS
 ww
-BB
-BO
-BW
+Bz
+Bz
+BU
 Bx
 Bx
 Bx
