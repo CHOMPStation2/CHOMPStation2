@@ -12790,17 +12790,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/hallway/lower/central)
-"aBa" = (
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 4;
-	pixel_y = -24
-	},
-/obj/machinery/camera/autoname{
-	dir = 1
-	},
-/turf/simulated/wall,
-/area/crew_quarters/coffee_shop)
 "aBb" = (
 /obj/machinery/bookbinder,
 /turf/simulated/floor/wood,
@@ -40327,6 +40316,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
+"bWT" = (
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = -24
+	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/central)
 "cpe" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -40416,6 +40416,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/tcomfoyer)
+"imj" = (
+/obj/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/aft)
 "iJO" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -79489,7 +79495,7 @@ aLe
 awt
 aAZ
 awv
-awv
+bWT
 aZq
 mfc
 ppq
@@ -79745,7 +79751,7 @@ awv
 aZq
 aZq
 aZq
-aBa
+aZq
 aZq
 aZq
 bbE
@@ -79997,7 +80003,7 @@ awv
 ayN
 ayN
 ayN
-ayN
+imj
 ayN
 ayN
 aMF
