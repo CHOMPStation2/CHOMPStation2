@@ -1398,9 +1398,6 @@
 /obj/structure/sign/poster,
 /turf/simulated/wall/titanium,
 /area/maintenance/chapel)
-"adF" = (
-/turf/simulated/wall,
-/area/space)
 "adG" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1501,17 +1498,14 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor,
-/area/space)
-"adV" = (
-/turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "adW" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/mime,
 /obj/item/weapon/pen/crayon/mime,
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "adX" = (
 /turf/simulated/wall,
 /area/maintenance/lowfloor3)
@@ -1664,7 +1658,7 @@
 "aep" = (
 /obj/structure/table/steel,
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "aeq" = (
 /turf/simulated/wall,
 /area/maintenance/starboard)
@@ -2042,14 +2036,14 @@
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "aeW" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "aeX" = (
 /obj/item/clothing/head/soft/mime,
 /obj/item/clothing/mask/gas/mime,
@@ -2061,7 +2055,7 @@
 	dir = 5
 	},
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "aeY" = (
 /turf/simulated/floor,
 /area/maintenance/starboard)
@@ -87432,7 +87426,7 @@ aan
 aan
 aan
 aan
-adF
+acB
 acB
 adB
 acB
@@ -87933,10 +87927,10 @@ aac
 aan
 aan
 aan
-adF
-adF
-adF
-adF
+acB
+acB
+acB
+acB
 acB
 adB
 acB
@@ -88185,7 +88179,7 @@ aac
 aan
 aan
 aan
-adF
+acB
 adU
 aep
 aeV
@@ -88437,9 +88431,9 @@ aac
 aan
 aan
 aan
-adF
-adV
-adV
+acB
+acN
+acN
 aeW
 afs
 adB
@@ -88689,9 +88683,9 @@ aac
 aan
 aan
 aan
-adF
+acB
 adW
-adV
+acN
 aeX
 acB
 adB
@@ -88941,10 +88935,10 @@ aac
 aan
 aan
 aan
-adF
-adF
-adF
-adF
+acB
+acB
+acB
+acB
 acB
 adD
 adT

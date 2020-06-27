@@ -7769,7 +7769,7 @@
 	opacity = 0
 	},
 /obj/machinery/door/airlock/maintenance/medical{
-	req_one_access = list(5,52,64)
+	req_one_access = list(52,64)
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9944,7 +9944,8 @@
 	dir = 1;
 	icon_state = "left";
 	name = "Medbay Reception Window";
-	req_access = list(5,45)
+	req_access = newlist();
+	req_one_access = list(5,45)
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -9969,7 +9970,8 @@
 /obj/machinery/door/window/eastleft{
 	dir = 1;
 	name = "Medbay Reception";
-	req_access = list(5,45)
+	req_access = newlist();
+	req_one_access = list(5,45)
 	},
 /obj/item/weapon/folder/white,
 /obj/effect/floor_decal/corner/paleblue{
@@ -10938,7 +10940,8 @@
 "auO" = (
 /obj/machinery/door/window/westright{
 	name = "Medbay Reception";
-	req_access = list(5,45)
+	req_access = newlist();
+	req_one_access = list(5,45)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -18183,7 +18186,8 @@
 	id = "EMT";
 	name = "EMT Mech Bay";
 	pixel_x = 25;
-	pixel_y = 25
+	pixel_y = 25;
+	req_one_access = list(5,66)
 	},
 /turf/simulated/floor/tiled/steel,
 /area/medical/medbay_emt_bay)
@@ -56061,7 +56065,7 @@
 "bWO" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
-/area/space)
+/area/cryogaia/station/excursion_dock)
 "bWP" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/portables_connector{
@@ -63188,7 +63192,8 @@
 	id = "EMT";
 	name = "EMT Mech Bay";
 	pixel_x = -25;
-	pixel_y = 25
+	pixel_y = 25;
+	req_one_access = list(5,66)
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
