@@ -12278,9 +12278,12 @@
 /turf/simulated/floor,
 /area/hallway/primary/starboard)
 "azP" = (
-/obj/machinery/disposal,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/lower/aft)
+/obj/structure/table/marble,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "azQ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -12532,9 +12535,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/lower/central)
 "aAy" = (
-/obj/machinery/vending/fitness,
-/turf/simulated/floor/tiled,
-/area/hallway/lower/aft)
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "aAz" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12774,6 +12777,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/lower/central)
 "aAY" = (
@@ -12786,17 +12790,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/hallway/lower/central)
-"aBa" = (
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 4;
-	pixel_y = -24
-	},
-/obj/machinery/camera/autoname{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/lower/aft)
 "aBb" = (
 /obj/machinery/bookbinder,
 /turf/simulated/floor/wood,
@@ -23944,12 +23937,6 @@
 	dir = 1;
 	id = "coffee"
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 1;
-	id = "coffeeshop";
-	layer = 3.1;
-	name = "Cafe Shutters"
-	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/coffee_shop)
 "aZs" = (
@@ -23966,12 +23953,6 @@
 /obj/structure/window/reinforced/polarized{
 	dir = 1;
 	id = "coffee"
-	},
-/obj/machinery/door/blast/shutters{
-	dir = 1;
-	id = "coffeeshop";
-	layer = 3.1;
-	name = "Cafe Shutters"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/coffee_shop)
@@ -24566,9 +24547,6 @@
 /turf/simulated/floor/tiled/yellow,
 /area/crew_quarters/coffee_shop)
 "bay" = (
-/obj/structure/sink/kitchen{
-	pixel_y = 28
-	},
 /obj/machinery/button/remote/blast_door{
 	id = "coffeeshop";
 	name = "Cafe Shutters";
@@ -24584,7 +24562,10 @@
 	pixel_x = 34;
 	pixel_y = -4
 	},
-/turf/simulated/floor/tiled/yellow,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "baz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25179,20 +25160,17 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "bbD" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/junction{
+	icon_state = "pipe-j2";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "bbE" = (
@@ -25623,7 +25601,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "bcz" = (
@@ -26558,15 +26535,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 2;
-	layer = 3.3;
-	pixel_x = 0;
-	pixel_y = 26
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"bew" = (
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -26578,6 +26546,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
+"bew" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "bex" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -26586,12 +26562,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/machinery/light_switch{
-	dir = 2;
-	name = "light switch ";
-	pixel_x = 0;
-	pixel_y = 36
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -28263,6 +28233,12 @@
 "bhK" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
+	},
+/obj/machinery/light_switch{
+	dir = 2;
+	name = "light switch ";
+	pixel_x = 0;
+	pixel_y = 36
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -40340,6 +40316,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
+"bWT" = (
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = -24
+	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/central)
 "cpe" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -40370,6 +40357,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
+"dTl" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"ept" = (
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "eDP" = (
 /obj/machinery/camera/motion/telecom{
 	c_tag = "Telecomms Access Corridor North"
@@ -40411,6 +40416,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/tcomfoyer)
+"imj" = (
+/obj/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/aft)
 "iJO" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -40436,6 +40447,29 @@
 /obj/structure/sign/atmos/n2,
 /turf/simulated/wall/r_wall,
 /area/tcommsat/chamber)
+"jLM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"jPt" = (
+/obj/structure/table/marble,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "coffeeshop";
+	layer = 3.1;
+	name = "Cafe Shutters"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"kEh" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "mbM" = (
 /obj/structure/table/glass,
 /obj/structure/cable/green{
@@ -40445,6 +40479,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
+"mfc" = (
+/obj/machinery/chem_master/condimaster,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "mnm" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -40477,6 +40516,13 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+"ppq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "qgS" = (
 /obj/machinery/door/airlock/maintenance/sec{
 	name = "Riot Control";
@@ -40485,6 +40531,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor,
 /area/security/prison)
+"scr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "sEM" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -40503,6 +40558,17 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
+"uXm" = (
+/obj/structure/table/marble,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"weC" = (
+/obj/structure/sink/kitchen{
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "wpF" = (
 /obj/machinery/alarm{
 	frequency = 1441;
@@ -40523,6 +40589,13 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+"xfe" = (
+/obj/structure/closet/secure_closet/freezer/fridge{
+	starts_with = list(/obj/item/weapon/reagent_containers/food/drinks/milk = 6, /obj/item/weapon/storage/fancy/egg_box = 4, /obj/item/weapon/reagent_containers/food/condiment/flour = 7, /obj/item/weapon/reagent_containers/food/condiment/sugar = 2)
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "xHg" = (
 /obj/machinery/door/airlock/engineeringatmos{
 	name = "Pipe-Power Floor Transfer"
@@ -78423,7 +78496,7 @@ aZq
 bau
 bbA
 bcx
-aZq
+jPt
 bew
 bfy
 bgl
@@ -78667,15 +78740,15 @@ aYi
 awv
 aCI
 awv
-ayL
+aZq
 azP
 aAy
-ayN
+uXm
 aZr
 bav
 bbB
 bcy
-aZq
+jPt
 bex
 bfz
 bgm
@@ -78919,10 +78992,10 @@ aRH
 azb
 aTH
 aCP
-ayN
-ayN
-ayN
-ayN
+aZq
+weC
+dTl
+aAy
 aZs
 baw
 bbB
@@ -79171,10 +79244,10 @@ aRI
 aCf
 awv
 aCQ
-ayN
-ayN
-ayN
-ayN
+aZq
+xfe
+jLM
+ept
 aZq
 bax
 bbC
@@ -79422,12 +79495,12 @@ aLe
 awt
 aAZ
 awv
-awv
-ayN
-ayN
-ayN
-ayN
+bWT
 aZq
+mfc
+ppq
+scr
+kEh
 bay
 bbD
 bcB
@@ -79675,10 +79748,10 @@ aAx
 aCN
 awv
 awv
-ayN
-ayN
-ayN
-aBa
+aZq
+aZq
+aZq
+aZq
 aZq
 aZq
 bbE
@@ -79930,7 +80003,7 @@ awv
 ayN
 ayN
 ayN
-ayN
+imj
 ayN
 ayN
 aMF
