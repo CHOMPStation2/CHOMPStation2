@@ -192,7 +192,8 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-standard",
 					"Insekt" = "insekt-Default",
 					"Usagi-II" = "tall2standard",
-					"Pyralis" = "Glitterfly-Standard"
+					"Pyralis" = "Glitterfly-Standard",
+					"Miss M" = "miss-standard" // YW change, Added Miss M
 					)
 
 
@@ -228,7 +229,8 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-med",
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
-					"Pyralis" = "Glitterfly-Surgeon"
+					"Pyralis" = "Glitterfly-Surgeon",
+					"Miss M" = "miss-medical" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -303,7 +305,8 @@ var/global/list/robot_modules = list(
 					"Drone - Chemistry" = "drone-chemistry",
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
-					"Pyralis" = "Glitterfly-Crisis"
+					"Pyralis" = "Glitterfly-Crisis",
+					"Miss M" = "miss-medical" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -381,7 +384,8 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-engineer",
 					"Usagi-II" = "tall2engineer",
 					"Pyralis" = "Glitterfly-Engineering",
-					"Servitor" = "servitor" //YW Addition to add new Servitor Sprite
+					"Servitor" = "servitor", //YW Addition to add new Servitor Sprite
+					"Miss M" = "miss-engineer" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/engineering/general/New()
@@ -495,7 +499,8 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-sec",
 					"Insekt" = "insekt-Sec",
 					"Usagi-II" = "tall2security",
-					"Pyralis" = "Glitterfly-Security"
+					"Pyralis" = "Glitterfly-Security",
+					"Miss M" = "miss-security" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -540,7 +545,8 @@ var/global/list/robot_modules = list(
 					"Mop Gear Rex" = "mopgearrex",
 					"Drone" = "drone-janitor",
 					"Usagi-II" = "tall2janitor",
-					"Pyralis" = "Glitterfly-Janitor"
+					"Pyralis" = "Glitterfly-Janitor",
+					"Miss M" = "miss-janitor" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/janitor/New()
@@ -602,7 +608,8 @@ var/global/list/robot_modules = list(
 					"Drone - Service" = "drone-service",
 					"Drone - Hydro" = "drone-hydro",
 					"Usagi-II" = "tall2service",
-					"Pyralis" = "Glitterfly-Service"
+					"Pyralis" = "Glitterfly-Service",
+					"Miss M" = "miss-service" // YW change, Added Miss M
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
@@ -694,7 +701,8 @@ var/global/list/robot_modules = list(
 					"Treadhead" = "Miner",
 					"Drone" = "drone-miner",
 					"Usagi-II" = "tall2miner",
-					"Pyralis" = "Glitterfly-Miner"
+					"Pyralis" = "Glitterfly-Miner",
+					"Miss M" = "miss-miner" // YW change, Added Miss M
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()

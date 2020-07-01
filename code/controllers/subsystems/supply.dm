@@ -24,9 +24,22 @@ SUBSYSTEM_DEF(supply)
 	var/movetime = 1200
 	var/datum/shuttle/autodock/ferry/supply/shuttle
 	var/list/material_points_conversion = list( // Any materials not named in this list are worth 0 points
+			"silver" = 2,
+			"marble" = 2,
+			"gold" = 2,
+			"uranium" = 2,
+			"lead" = 2,
+			"platinum" = 5,
 			"phoron" = 5,
-			"platinum" = 5
-		)
+			"titanium" = 6,
+			"plasteel" = 6,
+			"osmium" = 6,
+			"mhydrogen" = 6,
+			"verdantium" = 8,
+			"diamond" = 8,
+			"durasteel" = 9,
+			"morphium" = 13
+		)//SPOOKY number!
 
 /datum/controller/subsystem/supply/Initialize()
 	ordernum = rand(1,9000)
@@ -174,6 +187,8 @@ SUBSYSTEM_DEF(supply)
 
 	var/list/clear_turfs = get_clear_turfs()
 
+	var/shopping_log = "SUPPLY_BUY: "
+
 	for(var/datum/supply_order/SO in shoppinglist)
 		if(!clear_turfs.len)
 			break
@@ -184,6 +199,7 @@ SUBSYSTEM_DEF(supply)
 
 		SO.status = SUP_ORDER_SHIPPED
 		var/datum/supply_pack/SP = SO.object
+		shopping_log += "[SP.name];"
 
 		var/obj/A = new SP.containertype(pickedloc)
 		A.name = "[SP.containername] [SO.comment ? "([SO.comment])":"" ]"
@@ -238,6 +254,7 @@ SUBSYSTEM_DEF(supply)
 			slip.info += "</ul><br>"
 			slip.info += "CHECK CONTENTS AND STAMP BELOW THE LINE TO CONFIRM RECEIPT OF GOODS<hr>"
 
+	log_game(shopping_log)
 	return
 
 // Will attempt to purchase the specified order, returning TRUE on success, FALSE on failure
