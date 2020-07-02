@@ -19429,8 +19429,8 @@
 /obj/item/device/suit_cooling_unit,
 /obj/item/weapon/tank/jetpack/oxygen,
 /obj/item/clothing/mask/breath,
-/obj/item/clothing/suit/space/void/merc/prototype,
-/obj/item/clothing/head/helmet/space/void/merc/prototype,
+/obj/item/clothing/suit/space/void/security/prototype,
+/obj/item/clothing/head/helmet/space/void/security/prototype,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "aKC" = (
