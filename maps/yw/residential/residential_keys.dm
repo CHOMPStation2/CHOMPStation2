@@ -44,6 +44,10 @@
 	name = "RS10 residential key"
 	access = list(8010)
 
+/obj/item/weapon/card/id/residential/rs11
+	name = "RS11 residential key"
+	access = list(8011)
+
 /obj/item/weapon/card/id/residential/rm1
 	name = "RM1 residential key"
 	access = list(8101)
@@ -177,8 +181,8 @@
 	path = /obj/item/weapon/card/id/residential/rs6
 	display_name = "RS6 keys"
 	description = "residential"
-	ckeywhitelist = list("tofill")
-	character_name = list("tofill")
+	ckeywhitelist = list("generalpantsu","izac112")
+	character_name = list("Raine Kimberly","Jill Chambers")
 
 /datum/gear/fluff/res_key_rs7
 	path = /obj/item/weapon/card/id/residential/rs7
@@ -207,3 +211,10 @@
 	description = "residential"
 	ckeywhitelist = list("mocatheporg1")
 	character_name = list("Mocha")
+
+/datum/gear/fluff/res_key_rs11
+	path = /obj/item/weapon/card/id/residential/rs11
+	display_name = "RS11 keys"
+	description = "residential"
+	ckeywhitelist = list("rouwren")
+	character_name = list("Rin Deimos")
