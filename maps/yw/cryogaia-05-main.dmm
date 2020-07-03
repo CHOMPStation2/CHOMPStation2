@@ -43376,7 +43376,7 @@
 	frequency = 1443;
 	level = 3;
 	name = "Distribution and Waste Monitor";
-	sensors = list("dist_main_meter" = "Surface - Distribution Loop", "scrub_main_meter" = "Surface - Scrubbers Loop", "mair_main_meter" = "Surface - Mixed Air Tank", "dist_aux_meter" = "Station - Distribution Loop", "scrub_aux_meter" = "Station - Scrubbers Loop", "mair_aux_meter" = "Station - Mixed Air Tank", "mair_mining_meter" = "Mining Outpost - Mixed Air Tank")
+	sensors = list("mair_in_meter" = "Mixed Air In", "air_sensor" = "Mixed Air Supply Tank", "mair_out_meter" = "Mixed Air Out", "dloop_atm_meter" = "Distribution Loop", "wloop_atm_meter" = "Waste Loop", "wloop_engine_meter" = "Engine Waste")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
@@ -56203,7 +56203,11 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 4
 	},
-/obj/machinery/meter,
+/obj/machinery/meter{
+	frequency = 1443;
+	id = "wloop_engine_meter";
+	name = "Engine Waste"
+	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "bXi" = (
