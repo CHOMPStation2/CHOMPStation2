@@ -47,6 +47,7 @@
 	robot_modules["Servicehound"] = /obj/item/weapon/robot_module/robot/servicehound //YW changes
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
+	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //YW Addition booze
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
