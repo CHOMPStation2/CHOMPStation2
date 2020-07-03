@@ -921,6 +921,7 @@ var/list/name_to_material
 	sheet_singular_name = null
 	sheet_plural_name = "pile"
 	pass_stack_colors = TRUE
+	supply_conversion_value = 3 //YW Adds: logs worth points
 
 /material/wood/log/sif
 	name = MAT_SIFLOG
