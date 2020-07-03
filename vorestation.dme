@@ -1974,6 +1974,7 @@
 #include "code\modules\clothing\suits\wiz_robe.dm"
 #include "code\modules\clothing\suits\wolfbrigade.dm"
 #include "code\modules\clothing\suits\aliens\seromi.dm"
+#include "code\modules\clothing\suits\aliens\seromi_yw.dm"
 #include "code\modules\clothing\suits\aliens\tajara.dm"
 #include "code\modules\clothing\suits\aliens\unathi.dm"
 #include "code\modules\clothing\suits\aliens\vox.dm"
