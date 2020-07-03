@@ -3,10 +3,12 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
+#include "cryogaia_plains/cryogaia_plains.dm"
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
-	mappath = 'cryogaia_plains.dmm'
+	mappath = 'cryogaia_plains/cryogaia_plains.dmm'
+	annihilate = TRUE
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/cryogaia_plains
 
 /datum/map_z_level/cryogaia_lateload/cryogaia_plains
@@ -17,11 +19,12 @@
 
 /datum/map_template/cryogaia_lateload/cryogaia_plains/on_map_loaded(z)
 	. = ..()
-	seed_submaps(list(Z_LEVEL_PLAINS), 120, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
+	seed_submaps(list(Z_LEVEL_PLAINS), 240, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 #if AWAY_MISSION_TEST
+#include "cryogaia_plains/cryogaia_plains.dmm"
 #include "beach/beach.dmm"
 #include "beach/cave.dmm"
 #include "alienship/alienship.dmm"
@@ -128,7 +131,7 @@
 	desc = "An unmanned fuel depot floating in space."
 	mappath = 'space/fueldepot.dmm'
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_fueldepot
-	
+
 /datum/map_z_level/cryogaia_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_FUELDEPOT
