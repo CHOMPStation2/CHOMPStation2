@@ -41493,6 +41493,11 @@
 /obj/effect/floor_decal/snow/floor/surround{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bxt" = (
@@ -63290,6 +63295,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/grounds)
 "cll" = (
@@ -63438,6 +63448,14 @@
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
+"cOv" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "cOF" = (
 /obj/machinery/airlock_sensor{
 	frequency = 1380;
@@ -63491,6 +63509,11 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
+"dlB" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/step_trigger/teleporter/to_plains,
+/turf/simulated/floor/plating/snow/plating,
+/area/cryogaia/outpost/exploration_shed)
 "doX" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 8;
@@ -63835,6 +63858,14 @@
 /obj/item/weapon/storage/box/cups,
 /turf/simulated/floor/tiled/dark,
 /area/security/briefing_room)
+"gIB" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/exterior)
 "gOn" = (
 /obj/structure/table/standard,
 /obj/fiftyspawner/steel,
@@ -64114,6 +64145,28 @@
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
+"jrp" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/cryogaia/outpost/exploration_shed)
+"jwF" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "jxU" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -64512,6 +64565,17 @@
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/grounds)
+"mmd" = (
+/obj/machinery/door/airlock/glass_external/freezable{
+	req_one_access = list()
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds)
 "msp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -64576,6 +64640,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/armoury)
+"mJD" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "mLn" = (
 /obj/machinery/newscaster/security_unit{
 	pixel_x = -30
@@ -64700,6 +64772,15 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
+"nUB" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/cryogaia/outpost/exploration_shed)
 "nVM" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
@@ -65106,6 +65187,14 @@
 /obj/structure/closet/secure_closet/security_pilot,
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"rCD" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "rMq" = (
 /obj/effect/floor_decal/snow/floor/edges,
 /obj/structure/catwalk,
@@ -65271,6 +65360,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"taL" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/titanium,
+/area/borealis2/outdoors/grounds)
 "tbF" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -65436,6 +65533,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
+"uwU" = (
+/obj/cryogaia_away_spawner/wilds,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "uAK" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
@@ -65704,6 +65810,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"wkl" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "wnZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -65777,6 +65889,15 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
+"wHi" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/cryogaia/outpost/exploration_shed)
 "wIx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "intact-scrubbers";
@@ -65886,6 +66007,15 @@
 /obj/effect/floor_decal/corner/red,
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"xjh" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/cryogaia/outpost/exploration_shed)
 "xvq" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -122581,8 +122711,8 @@ clf
 clg
 clg
 clk
-aao
-aad
+taL
+cOv
 aad
 aad
 aad
@@ -122834,7 +122964,7 @@ bPt
 bPt
 bPt
 bPt
-aad
+jwF
 aad
 aae
 aad
@@ -123086,7 +123216,7 @@ ceE
 ceJ
 ceS
 bPt
-aad
+jwF
 aad
 aad
 aad
@@ -123338,7 +123468,7 @@ ceF
 ceK
 ceT
 bPt
-aad
+jwF
 aad
 aad
 aad
@@ -123590,7 +123720,7 @@ ceF
 ceL
 ceU
 bPt
-aad
+jwF
 aad
 aad
 aad
@@ -123842,7 +123972,7 @@ ceF
 ceL
 ceV
 bPt
-aad
+jwF
 aad
 aad
 aad
@@ -124094,7 +124224,7 @@ ceF
 ceM
 ceW
 bPt
-aad
+jwF
 aad
 aad
 aad
@@ -124346,7 +124476,7 @@ ceG
 ceG
 ceG
 bPt
-aad
+jwF
 aaQ
 aad
 aad
@@ -124598,7 +124728,7 @@ bPt
 bPt
 bPt
 bPt
-aad
+jwF
 aad
 aad
 aad
@@ -124850,7 +124980,7 @@ aad
 aad
 aad
 aad
-aad
+jwF
 aad
 aad
 aad
@@ -125102,7 +125232,7 @@ aad
 aaA
 aad
 aad
-aad
+jwF
 aad
 aad
 aad
@@ -125354,7 +125484,7 @@ aad
 aad
 aad
 aad
-aad
+jwF
 aad
 aad
 aad
@@ -125606,7 +125736,7 @@ aad
 aad
 aad
 aad
-aaz
+uwU
 aad
 aad
 aad
@@ -125858,7 +125988,7 @@ aad
 aad
 aad
 aaQ
-aad
+jwF
 aad
 aad
 aad
@@ -126110,7 +126240,7 @@ aad
 aad
 aad
 aad
-aad
+jwF
 aad
 aad
 aad
@@ -126362,7 +126492,7 @@ aad
 aad
 aad
 aad
-aad
+jwF
 aad
 aad
 aad
@@ -126614,7 +126744,7 @@ aad
 aae
 aad
 aaQ
-aad
+jwF
 aad
 aad
 aad
@@ -126866,7 +126996,7 @@ aad
 aad
 aad
 aad
-aad
+jwF
 aad
 aae
 aad
@@ -127118,7 +127248,7 @@ aad
 aad
 aad
 aad
-aad
+jwF
 aad
 aad
 aad
@@ -127370,7 +127500,7 @@ aad
 aad
 aad
 aae
-aad
+jwF
 aad
 aad
 aaf
@@ -127622,13 +127752,13 @@ aad
 aad
 aad
 aad
-aad
-aad
-aaf
-aaf
-aaf
+wkl
+rCD
+gIB
+gIB
+gIB
 bxs
-aaj
+mJD
 aaj
 lyv
 aaj
@@ -127880,7 +128010,7 @@ aaf
 cff
 cff
 cff
-cgo
+mmd
 cff
 cff
 cff
@@ -128130,9 +128260,9 @@ aad
 aae
 aaf
 cff
-cfi
-cfi
-cfi
+wHi
+nUB
+xjh
 cfi
 cfi
 cfi
@@ -128382,7 +128512,7 @@ aad
 aad
 aaf
 cff
-cfi
+jrp
 cfi
 cfi
 cfi
@@ -128886,15 +129016,15 @@ aar
 aaa
 aaa
 cff
-cfi
-cfi
-cfi
-cfi
-cfi
-cfi
-cfi
-cfi
-cfi
+dlB
+dlB
+dlB
+dlB
+dlB
+dlB
+dlB
+dlB
+dlB
 cff
 aaa
 aar
