@@ -284,7 +284,14 @@
 	ckeywhitelist = list("dawidoe")
 	character_name = list("Melissa Krutz")
 	allowed_roles = list("Security Officer")
-
+//Dopiotl
+//Jeanne Petite
+/datum/gear/fluff/jeans_chocolates
+	path = /obj/item/weapon/storage/secure/briefcase/fluff/jeans
+	display_name = "ChocoBox"
+	description = "M-M-M-M-MONEY SHOT"
+	ckeywhitelist = list("dopiotl")
+	character_name = list("Jeanne Petite")
 //dwaggy90
 //Saur Darastrix
 /datum/gear/fluff/saur_rig

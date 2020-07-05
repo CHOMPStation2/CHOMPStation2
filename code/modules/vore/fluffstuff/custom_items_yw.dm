@@ -650,3 +650,36 @@
 			H.resize(1)
 		if("Large")
 			H.resize(1.22)
+
+// *************
+// Dopiotl
+// *************
+/obj/item/weapon/storage/secure/briefcase/fluff/jeans
+	name = "Sweet Ebony"
+	desc = "An ebony/wooden secure case lined with gold. It looks thick, heavy, expensive, and incredibly sturdy. The design is sleek and elegant, adorned in intricate markings on the side, with hand-crafted artwork of a constellation you can't quite seem to recollect. It is surprisingly cold to the touch."
+	icon = 'icons/vore/custom_items_yw.dmi'
+	icon_state = "jeans_lockbox"
+	item_state_slots = list(slot_r_hand_str = "jeans_lockbox", slot_l_hand_str = "jeans_lockbox")
+	item_icons = list(
+		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
+		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
+		)
+	var/list/has_items = list(
+        /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+        /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+        /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+        /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+		/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+        /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+        /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+        /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+        )
+
+/obj/item/weapon/storage/secure/briefcase/fluff/jeans/New() //this is entierly nessicary to spawn stuff. "FUN" -luke
+	storage_slots = has_items.len
+	allowed = list()
+	for(var/P in has_items)
+		allowed += P
+		new P(src)
+	..()
+	return
