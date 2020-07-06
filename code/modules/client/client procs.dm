@@ -92,8 +92,8 @@
 		var/DBQuery/query = dbcon.NewQuery("UPDATE erro_player SET discord_id = '[sql_discord]' WHERE ckey = '[sql_ckey]'")
 		if(query.Execute())
 			to_chat(src, "<span class='notice'>Registration complete! Thank you for taking the time to register your Discord ID.</span>")
-			log_and_message_admins("[ckey] has registered their Discord ID to obtain the Crew Member role. Their Discord snowflake ID is: [their_id]")
-			admin_chat_message(message = "[ckey] has registered their Discord ID to obtain the Crew Member role. Their Discord is: <@[their_id]>", color = "#4eff22")
+			log_and_message_admins("[ckey] has registered their Discord ID. Their Discord snowflake ID is: [their_id]") //YW EDIT
+			admin_chat_message(message = "[ckey] has registered their Discord ID. Their Discord is: <@[their_id]>", color = "#4eff22") //YW EDIT
 			notes_add(ckey, "Discord ID: [their_id]")
 			world.VgsAddMemberRole(their_id)
 		else
