@@ -68,3 +68,13 @@
 		icon_state = "tesh-pattern-male"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+	teshari_large_eyes
+		name = "Teshari large eyes"
+		icon_state = "teshlarge_eyes"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+	teshari_coat
+		name = "Teshari coat"
+		icon_state = "tesh_coat"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_TORSO,BP_HEAD)
