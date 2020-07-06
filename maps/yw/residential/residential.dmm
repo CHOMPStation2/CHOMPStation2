@@ -8709,15 +8709,14 @@
 /turf/simulated/floor/wood,
 /area/residential/room7)
 "vD" = (
-/obj/structure/window/basic{
-	icon_state = "window";
-	dir = 8
-	},
-/obj/structure/window/basic{
+/obj/structure/curtain/black,
+/obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/structure/curtain/black,
-/turf/simulated/floor/plating,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
 /area/residential/room7)
 "vE" = (
 /obj/machinery/light_switch{
@@ -8727,23 +8726,21 @@
 /turf/simulated/floor/wood,
 /area/residential/room7)
 "vF" = (
-/obj/structure/window/basic{
-	icon_state = "window";
-	dir = 8
-	},
 /obj/structure/curtain/black,
 /obj/item/weapon/stool/padded,
-/turf/simulated/floor/plating,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
 /area/residential/room7)
 "vG" = (
-/obj/structure/window/basic{
-	icon_state = "window";
-	dir = 8
-	},
-/obj/structure/window/basic,
 /obj/structure/curtain/black,
 /obj/item/weapon/stool/padded,
-/turf/simulated/floor/plating,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/reinforced,
 /area/residential/room7)
 "vH" = (
 /obj/machinery/alarm{
@@ -8785,6 +8782,9 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/shower{
+	pixel_y = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room7)
 "vK" = (
@@ -8824,6 +8824,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/shower{
+	pixel_y = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room7)
 "vN" = (
@@ -9665,26 +9668,24 @@
 /turf/simulated/floor/plating,
 /area/residential/corridors)
 "xQ" = (
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	icon_state = "window";
+/obj/structure/curtain/black,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/curtain/black,
 /turf/simulated/floor/plating,
 /area/residential/room9)
 "xR" = (
-/obj/structure/window/basic,
 /obj/structure/curtain/black,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/residential/room9)
 "xS" = (
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	icon_state = "window";
+/obj/structure/curtain/black,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/structure/curtain/black,
 /turf/simulated/floor/plating,
 /area/residential/room9)
 "xT" = (
