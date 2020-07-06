@@ -41,6 +41,14 @@
 	icon_state = "cyberdoe_s"
 	do_colouration = 0
 
+/datum/sprite_accessory/wing/cyberangel
+	name = "Cyber angel wing (colorable)"
+	desc = ""
+	icon = 'icons/mob/vore/wings_yw.dmi'
+	icon_state = "cyber_angel"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 //Tails
 /datum/sprite_accessory/tail/tripplekitsune_colorable_yw
 	icon = 'icons/mob/vore/tails_yw.dmi'

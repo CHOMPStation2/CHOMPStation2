@@ -92,7 +92,8 @@
 	icon_state = "tile-tealcarpet"
 	no_variants = FALSE
 
-/obj/item/stack/tile/carpet/bcarpet
+/*/obj/item/stack/tile/carpet/bcarpet //YW EDIT: Commented out to help with upstream merging. Get on this you fucking virgo bois. -yw
+
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/blucarpet
 	icon_state = "tile-carpet"
@@ -105,7 +106,7 @@
 /obj/item/stack/tile/carpet/purcarpet
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/oracarpet
-	icon_state = "tile-carpet"
+	icon_state = "tile-carpet"*/
 
 /obj/item/stack/tile/floor
 	name = "floor tile"

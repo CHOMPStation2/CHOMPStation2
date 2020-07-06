@@ -1,3 +1,5 @@
+//File DEFUNCT
+
 /datum/server_tools_command/status
 	name = "status"	//the string to trigger this command on a chat bot. e.g. TGS3_BOT: do_this_command
 	help_text = "Will broadcast the current player count and other round information"	//help text for this command
