@@ -20,6 +20,11 @@
 	desc = "Hperformance brand prosthetic limbs."
 	icon = 'icons/mob/human_races/cyberlimbs/Hperformance/hperformance_main.dmi' //Sprited by: Generalpantsu
 
+/datum/robolimb/xionalt
+	company = "Xion (alt yw)."
+	desc = "Xion brand prosthetic limbs."
+	icon = 'icons/mob/human_races/cyberlimbs/xion/xion_alt5.dmi' //Sprited by: Generalpantsu
+
 /datum/robolimb/aphrodite_cyberdoe
 	company = "Aphrodite - Cyberdoe"
 	desc = "This limb feels soft and fluffy, realistic in design and squish. By Aphrodite Ltd."
