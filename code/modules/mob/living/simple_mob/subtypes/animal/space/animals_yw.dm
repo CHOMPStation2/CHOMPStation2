@@ -168,3 +168,9 @@
 	icon_living = "mouse_miner"
 	name = "Cooper"
 	desc = "A lonely miner's best friend."
+
+/mob/living/simple_mob/animal/passive/mouse/mining/New()
+	..()
+
+	verbs += /mob/living/proc/ventcrawl
+	verbs += /mob/living/proc/hide
