@@ -174,3 +174,19 @@
 
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
+	icon_state = "mouse_miner"
+	item_state = "mouse_miner"
+	icon_living = "mouse_miner"
+	icon_dead = "mouse_miner_dead"
+	icon_rest = "mouse_miner_sleep"
+	desc = "A lonely miner's best friend."
+
+
+/mob/living/simple_mob/animal/passive/mouse/mining/splat()
+	src.health = 0
+	src.set_stat(DEAD)
+	src.icon_dead = "mouse_miner_splat"
+	src.icon_state = "mouse_miner_splat"
+	layer = MOB_LAYER
+	if(client)
+		client.time_died_as_mouse = world.time
