@@ -189,7 +189,10 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/list/adm = get_admin_counts()
 	var/list/activemins = adm["present"]
 	var activeMins = activemins.len
-	SERVER_TOOLS_RELAY_BROADCAST("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.")
+	if(is_bwoink)
+		world.TgsTargetedChatBroadcast("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", TRUE)
+	else
+		world.TgsTargetedChatBroadcast("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", TRUE)
 	//YW EDIT END
 	GLOB.ahelp_tickets.active_tickets += src
 
