@@ -188,8 +188,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	to_chat(world, "<span class='boldannounce'>[msg]</span>")
 	log_world(msg)
 
-
-	send2chat("Server Initialization completed! - Took [time] second[time == 1 ? "" : "s"].", "bot announce")
+	SERVER_TOOLS_CHAT_BROADCAST("Server Initialization completed!")
 
 	if (!current_runlevel)
 		SetRunLevel(RUNLEVEL_LOBBY)
