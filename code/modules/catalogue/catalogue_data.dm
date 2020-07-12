@@ -352,9 +352,9 @@ GLOBAL_DATUM_INIT(catalogue_data, /datum/category_collection/catalogue, new)
 	name = "TSC - Major Bill's Transportation"
 	datum_to_copy = /datum/lore/organization/tsc/mbt
 
-/datum/category_item/catalogue/information/organization/solgov
-	name = "Government - Solar Confederate Government"
-	datum_to_copy = /datum/lore/organization/gov/solgov
+/datum/category_item/catalogue/information/organization/solgov //YW EDIT
+	name = "Government - Solar Confederate Government" //YW EDIT
+	datum_to_copy = /datum/lore/organization/gov/solgov //YW EDIT
 
 /* //VOREStation Removal
 /datum/category_item/catalogue/information/organization/virgov

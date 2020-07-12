@@ -26,6 +26,11 @@
 			icon = R.glass_icon_source
 		//CHOMPedit end of dynamic sprite source - Jack
 
+		if(R.glass_icon_file)
+			icon = R.glass_icon_file
+		else
+			icon = initial(icon)
+		
 		if(R.glass_icon_state)
 			icon_state = R.glass_icon_state
 		else
@@ -68,6 +73,7 @@ Drinks Data
 */
 
 /datum/reagent
+	var/glass_icon_file = null
 	var/glass_icon_state = null
 	var/glass_center_of_mass = null
 	var/glass_icon_source = null //CHOMP A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack

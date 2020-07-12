@@ -34,6 +34,7 @@
 	#include "structures/closets/research.dm"
 	#include "structures/closets/security.dm"
 	#include "turfs/outdoors.dm"
+	#include "overmap/sectors.dm"
 
 	//CHOMPStation Edit Start TFF 25/3/20 - Station level map z-levels separated into 3 distinct files to work with MapDiffBot. All other files renamed accordingly.
 	#include "southern_cross-1.dmm"

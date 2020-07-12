@@ -313,6 +313,7 @@
 	name = "rapid part exchange device"
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts."
 	icon_state = "RPED"
+	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi') //YW add - RPED sprite
 	w_class = ITEMSIZE_HUGE
 	can_hold = list(/obj/item/weapon/stock_parts)
 	storage_slots = 50
@@ -330,7 +331,7 @@
 	icon_state = "RPED"
 	w_class = ITEMSIZE_HUGE
 	//YAWN Changes
-	can_hold = list( 
+	can_hold = list(
 	/obj/item/weapon/cell,
 	/obj/item/weapon/stock_parts,
 	/obj/item/weapon/reagent_containers/glass/beaker)
