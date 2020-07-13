@@ -5,14 +5,16 @@
 #define Z_LEVEL_CRYOGAIA_LOWER			4
 #define Z_LEVEL_CRYOGAIA_MAIN			5
 #define Z_LEVEL_CRYOGAIA_RESIDENTIAL	6
-#define Z_LEVEL_BEACH					7
-#define Z_LEVEL_BEACH_CAVE				8
-#define Z_LEVEL_AEROSTAT				9
-#define Z_LEVEL_AEROSTAT_SURFACE		10
-#define Z_LEVEL_DEBRISFIELD				11
-#define Z_LEVEL_UNDERDARK				12
-#define Z_LEVEL_PLAINS					13
-#define Z_LEVEL_GATEWAY					14
+#define Z_LEVEL_PLAINS					7
+#define Z_LEVEL_BEACH					8
+#define Z_LEVEL_BEACH_CAVE				9
+#define Z_LEVEL_AEROSTAT				10
+#define Z_LEVEL_AEROSTAT_SURFACE		11
+#define Z_LEVEL_DEBRISFIELD				12
+#define Z_LEVEL_UNDERDARK				13
+#define Z_LEVEL_GUTTERSITE				14
+#define Z_LEVEL_FUELDEPOT				15
+#define Z_LEVEL_GATEWAY					16
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -153,9 +155,12 @@
 
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
+		list("Snow plains"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
-		list("Debris Field - Z1 Space")
+		list("Debris Field - Z1 Space"),
+		list("Gutter Site - Z1 Space"),
+		list("Fuel Depot - Z1 Space")
 		)
 
 	ai_shell_restricted = TRUE
@@ -166,8 +171,6 @@
 		Z_LEVEL_CRYOGAIA_MAIN,
 		Z_LEVEL_CRYOGAIA_CENTCOM
 		)
-
-	lateload_single_pick = null //Nothing right now.
 
 	lateload_single_pick = list( //Gateway missions
 		list("Snow Outpost"),
@@ -189,7 +192,8 @@
 	expected_z_levels = list(
 		Z_LEVEL_CRYOGAIA_MINE,
 		Z_LEVEL_CRYOGAIA_LOWER,
-		Z_LEVEL_CRYOGAIA_MAIN
+		Z_LEVEL_CRYOGAIA_MAIN,
+		Z_LEVEL_PLAINS
 	)
 
 // Short range computers see only the six main levels, others can see the surrounding surface levels.

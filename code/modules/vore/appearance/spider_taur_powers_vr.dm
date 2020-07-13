@@ -3,15 +3,11 @@
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	name = "web bindings"
 	desc = "A webbed cocoon that completely restrains the wearer."
-	icon = 'icons/obj/clothing/web.dmi'
 	icon_state = "web_bindings"
-	icon_override = 'icons/mob/vore/web.dmi'
-	item_state = "web_bindings"
-	override = 1
-
+	item_state = "web_bindings_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
-
+	
 /*yw edit start - Teshari Sprite /Commented out until we know this is needed again if it is please just uncomment this, Izac
 /obj/item/clothing/suit/straight_jacket/web_bindings/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
 	if(body_type == SPECIES_TESHARI)

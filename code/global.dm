@@ -41,7 +41,7 @@ var/const/starsys_name	= "Virgo-Erigone"
 //CHOMPStation Removal End
 var/const/game_version	= "CHOMPStation"	//CHOMPStation Edit TFF 24/12/19 - Chompers
 var/changelog_hash		= ""
-var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544) //VOREStation Edit //CHOMPedit: We're sticking with the year 2564
+var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544) //YW EDIT
 var/round_progressing = 1
 
 var/master_mode       = "extended" // "extended"

@@ -88,8 +88,6 @@
 /area/tether/surfacebase/outside/wilderness)
 "al" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
 	icon_state = "cabinet_closed"
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
