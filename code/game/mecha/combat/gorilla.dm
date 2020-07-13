@@ -163,7 +163,7 @@
 	icon_state = "canister"
 	damage = 120 //Do not get fucking shot.
 
-// GLITCHY UND LAGGY. Will later look into fixing.
+/* // GLITCHY UND LAGGY. Will later look into fixing.
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/mg42
 	name = "Maschinengewehr 60"
 	icon_state = "mecha_uac2"
@@ -176,6 +176,7 @@
 	projectile_energy_cost = 20
 	fire_cooldown = 1
 	salvageable = 0 // We don't want players ripping this off a dead mech.
+*/
 
 /obj/effect/decal/mecha_wreckage/gorilla
 	name = "Gorilla wreckage"

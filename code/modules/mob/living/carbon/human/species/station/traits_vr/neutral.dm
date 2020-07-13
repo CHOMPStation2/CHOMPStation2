@@ -174,7 +174,7 @@
 	..(S,H)
 	H.verbs |= /mob/living/proc/glow_toggle
 	H.verbs |= /mob/living/proc/glow_color
-	
+/*YW CHANGE START: Commented out because we got our own variants	
 // Alcohol Traits Start Here, from negative to positive.
 /datum/trait/alcohol_intolerance_advanced
 	name = "Liver of Air"
@@ -212,3 +212,4 @@
 	cost = 0
 	var_changes = list("alcohol_mod" = 0.25) // 25% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
 // Alcohol Traits End Here.
+YW CHANGE STOP*/
