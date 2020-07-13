@@ -298,13 +298,14 @@
 	teleport_y = src.y + 4
 	teleport_z = src.z
 	return ..()
-/* CHOMP Test removal
-/datum/planet/sif
+
+//CHOMPEdit this is very much necessary for us otherwise weather sounds play on other leves
+/datum/planet/sif 
 	expected_z_levels = list(
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD
-	)*/
+	)
 
 //Suit Storage Units
 
