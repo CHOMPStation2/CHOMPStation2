@@ -627,7 +627,8 @@
 //  J CKEYS
 
 //  K CKEYS
-
+//kbraid
+//Eili
 /datum/gear/fluff/kbraidgoggles
 	path = /obj/item/clothing/glasses/fluff/avigoggles_yw
 	display_name = "K'braid Aviation Goggles"
