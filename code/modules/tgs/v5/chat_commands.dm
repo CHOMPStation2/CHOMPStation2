@@ -2,7 +2,7 @@
 	name = "status"
 	help_text = "Shows the current production server status"
 	admin_only = FALSE
-/* YW EDIT: replaced by yw variant
+
 /datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
 	return "Current server status:\n**Down! Contact staff.** <https://cdn.discordapp.com/emojis/687779807358091364.gif?v=1>" //CHOMPEdit Not turning it off, but turning it into a sort of debug message to indicate if the server is down.
 
