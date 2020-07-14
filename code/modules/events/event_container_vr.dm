@@ -66,9 +66,9 @@
 	available_events = list(
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Nothing",					/datum/event/nothing,					1600),
 		// Leaks gas into an unoccupied room.
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Appendicitis", 			/datum/event/spontaneous_appendicitis, 	-30,		list(ASSIGNMENT_MEDICAL = 30), 1),		
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Appendicitis", 			/datum/event/spontaneous_appendicitis, 	-30,		list(ASSIGNMENT_MEDICAL = 30), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Atmos Leak",				/datum/event/atmos_leak, 				30,		list(ASSIGNMENT_ENGINEER = 25), 1),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Camera Damage",		/datum/event/camera_damage,		20, 	list(ASSIGNMENT_ENGINEER = 20)),		
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Camera Damage",		/datum/event/camera_damage,		20, 	list(ASSIGNMENT_ENGINEER = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Carp School",				/datum/event/carp_migration,			-20, 	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_SECURITY = 30, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 5), 1),
 		// Just disables comms for a short while.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Communication Blackout",	/datum/event/communications_blackout,	500,	list(ASSIGNMENT_AI = 150, ASSIGNMENT_SECURITY = 120), 1),
@@ -76,7 +76,7 @@
 		// Just blows out a few lights
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Electrical Storm",			/datum/event/electrical_storm, 			250,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_JANITOR = 150), 1),
 		//Escaped slime event itself needs to be rejiggered because of the mob refactor.
-		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Escaped Slimes",			/datum/event/escaped_slimes, 			-40,	list(ASSIGNMENT_SCIENTIST = 30, ASSIGNMENT_SECURITY = 20)),		
+		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Escaped Slimes",			/datum/event/escaped_slimes, 			-40,	list(ASSIGNMENT_SCIENTIST = 30, ASSIGNMENT_SECURITY = 20)),
 		// This one is just too fun.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravity Failure",			/datum/event/gravity,	 				75,		list(ASSIGNMENT_ENGINEER = 60), 1),
 		// Temporary power failure, but mitigatead by subgrids
@@ -85,6 +85,8 @@
 		// Pure RP fun, no mechanical effects.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					0,		list(ASSIGNMENT_AI = 80, ASSIGNMENT_CYBORG = 50, ASSIGNMENT_ENGINEER = 15, ASSIGNMENT_SCIENTIST = 5)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				-50,	list(ASSIGNMENT_ENGINEER = 45), 1),
+		//New CHOMPStation event. Mice and lizards grow into rats and lizardmen.
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Mutants",					/datum/event/mutants,					20,		list(ASSIGNMENT_ANY = 15, ASSIGNMENT_SECURITY = 25), 1),
 		// Opens doors in brig.  So just RP fun
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Prison Break",				/datum/event/prison_break,				-10,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_ENGINEER = 20), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Radiation Storm",			/datum/event/radiation_storm, 			50,		list(ASSIGNMENT_MEDICAL = 50), 1), //YW EDIT, Readded
