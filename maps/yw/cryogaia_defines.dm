@@ -196,6 +196,8 @@
 		Z_LEVEL_PLAINS
 	)
 
+// Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
+/*
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/cryogaia/get_map_levels(var/srcz, var/long_range = TRUE)
 	if (long_range && (srcz in map_levels))
@@ -221,7 +223,7 @@
 			Z_LEVEL_AEROSTAT_SURFACE)
 	else
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
-
+*/
 
 // Overmap represetation of cryogaia
 /obj/effect/overmap/visitable/sector/cryogaia
