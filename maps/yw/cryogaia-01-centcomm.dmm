@@ -12808,6 +12808,10 @@
 	icon_state = "dark"
 	},
 /area/centcom/main_hall)
+"BW" = (
+/obj/effect/floor_decal/sign/small_c,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
 "BX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -21273,78 +21277,171 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"UV" = (
-/obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
-	name = "escapeshuttle_leave";
-	teleport_x = 25;
-	teleport_x_offset = 245;
-	teleport_y = 25;
-	teleport_y_offset = 245;
-	teleport_z = 6;
-	teleport_z_offset = 6
+"UP" = (
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
-	name = "escapeshuttle_leave";
-	teleport_x = 25;
-	teleport_x_offset = 245;
-	teleport_y = 25;
-	teleport_y_offset = 245;
-	teleport_z = 6;
-	teleport_z_offset = 6
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/turf/space/transit/east,
-/area/space)
-"VV" = (
-/turf/space/transit/east,
-/area/space)
-"WK" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	name = "thrower_leftnostop"
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/turf/space/transit/east,
+/turf/unsimulated/wall,
 /area/space)
-"WQ" = (
-/obj/effect/shuttle_landmark/transit{
-	base_area = /area/space;
-	base_turf = /turf/space/transit/east;
-	landmark_tag = "belter_transit";
-	name = "Belter Transit"
-	},
-/turf/space/transit/east,
-/area/space)
-"WU" = (
-/obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
-	name = "escapeshuttle_leave";
-	teleport_x = 25;
-	teleport_x_offset = 245;
-	teleport_y = 25;
-	teleport_y_offset = 245;
-	teleport_z = 6;
-	teleport_z_offset = 6
-	},
-/turf/space/transit/east,
-/area/space)
-"Xp" = (
-/obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
-	name = "escapeshuttle_leave";
-	teleport_x = 25;
-	teleport_x_offset = 245;
-	teleport_y = 25;
-	teleport_y_offset = 245;
-	teleport_z = 6;
-	teleport_z_offset = 6
-	},
-/turf/space,
-/area/space)
+"UU" = (
+/obj/item/toy/chess/pawn_white,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"Vd" = (
+/obj/effect/floor_decal/sign/small_e,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Vg" = (
+/obj/item/toy/chess/pawn_black,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"Vh" = (
+/obj/item/toy/chess/rook_black,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"Vm" = (
+/obj/effect/floor_decal/sign/small_g,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Vn" = (
+/obj/item/toy/chess/queen_black,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"Vy" = (
+/obj/item/toy/chess/bishop_white,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"VK" = (
+/obj/item/toy/chess/pawn_black,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"VN" = (
+/obj/effect/floor_decal/sign/small_3,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"VU" = (
+/obj/effect/floor_decal/sign/small_b,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Wf" = (
+/obj/item/toy/chess/knight_white,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"Wh" = (
+/obj/effect/floor_decal/sign/small_d,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Wk" = (
+/obj/effect/floor_decal/sign/small_f,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Wv" = (
+/obj/item/toy/chess/rook_black,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"Ww" = (
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"WB" = (
+/obj/item/toy/chess/bishop_black,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"WD" = (
+/obj/item/toy/chess/rook_white,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"WH" = (
+/obj/effect/floor_decal/sign/small_8,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"WJ" = (
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"WV" = (
+/obj/effect/floor_decal/sign/small_1,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Xj" = (
+/obj/effect/floor_decal/sign/small_2,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Xl" = (
+/obj/item/toy/chess/queen_white,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"XK" = (
+/obj/effect/floor_decal/sign/small_4,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"XN" = (
+/obj/item/toy/chess/knight_black,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"XQ" = (
+/obj/item/toy/chess/knight_white,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"Yc" = (
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Yf" = (
+/obj/effect/floor_decal/sign/small_h,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Yi" = (
+/obj/effect/floor_decal/sign/small_a,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Yy" = (
+/obj/item/toy/chess/king_black,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"Za" = (
+/obj/effect/floor_decal/sign/small_5,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Zb" = (
+/obj/item/toy/chess/pawn_white,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
 "Zh" = (
 /obj/effect/landmark/ai_multicam_room,
 /turf/unsimulated/ai_visible,
 /area/ai_multicam_room)
+"Zj" = (
+/obj/item/toy/chess/bishop_black,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"Zl" = (
+/obj/item/toy/chess/knight_black,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"Zn" = (
+/obj/effect/floor_decal/sign/small_6,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
+"Zv" = (
+/obj/item/toy/chess/king_white,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"Zw" = (
+/obj/item/toy/chess/bishop_white,
+/turf/simulated/floor/holofloor/bmarble,
+/area/holodeck/source_chess)
+"ZA" = (
+/obj/item/toy/chess/rook_white,
+/turf/simulated/floor/holofloor/wmarble,
+/area/holodeck/source_chess)
+"ZM" = (
+/obj/effect/floor_decal/sign/small_7,
+/turf/simulated/floor/holofloor/wood,
+/area/holodeck/source_chess)
 
 (1,1,1) = {"
 ab
@@ -61919,18 +62016,18 @@ aa
 aa
 "}
 (162,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ah
+am
+am
+am
+am
+am
+am
+am
+am
+am
+am
+ah
 aa
 aa
 aa
@@ -62171,18 +62268,18 @@ aa
 aa
 "}
 (163,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+WH
+ZM
+Zn
+Za
+XK
+VN
+Xj
+WV
+Yc
+es
 aa
 aa
 aa
@@ -62423,18 +62520,18 @@ aa
 aa
 "}
 (164,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+Wv
+Vg
+WJ
+Ww
+WJ
+Ww
+UU
+WD
+Yi
+es
 aa
 aa
 aa
@@ -62675,18 +62772,18 @@ aa
 aa
 "}
 (165,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+Zl
+VK
+Ww
+WJ
+Ww
+WJ
+Zb
+XQ
+VU
+es
 aa
 aa
 aa
@@ -62927,18 +63024,18 @@ aa
 aa
 "}
 (166,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+Zj
+Vg
+WJ
+Ww
+WJ
+Ww
+UU
+Zw
+BW
+es
 aa
 aa
 aa
@@ -63179,18 +63276,18 @@ aa
 aa
 "}
 (167,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+Vn
+VK
+Ww
+WJ
+Ww
+WJ
+Zb
+Xl
+Wh
+es
 aa
 aa
 aa
@@ -63431,18 +63528,18 @@ aa
 aa
 "}
 (168,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+Yy
+Vg
+WJ
+Ww
+WJ
+Ww
+UU
+Zv
+Vd
+es
 aa
 aa
 aa
@@ -63683,18 +63780,18 @@ aa
 aa
 "}
 (169,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+WB
+VK
+Ww
+WJ
+Ww
+WJ
+Zb
+Vy
+Wk
+es
 aa
 aa
 aa
@@ -63935,18 +64032,18 @@ aa
 aa
 "}
 (170,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+XN
+Vg
+WJ
+Ww
+WJ
+Ww
+UU
+Wf
+Vm
+es
 aa
 aa
 aa
@@ -64187,18 +64284,18 @@ aa
 aa
 "}
 (171,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+Vh
+VK
+Ww
+WJ
+Ww
+WJ
+Zb
+ZA
+Yf
+es
 aa
 aa
 aa
@@ -64439,18 +64536,18 @@ aa
 aa
 "}
 (172,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ai
+Yc
+Yc
+Yc
+Yc
+Yc
+Yc
+Yc
+Yc
+Yc
+Yc
+es
 aa
 aa
 aa
@@ -64692,16 +64789,16 @@ aa
 "}
 (173,1,1) = {"
 ah
-am
-am
-am
-am
-am
-am
-am
-am
-am
-am
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
 ah
 am
 am
