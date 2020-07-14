@@ -835,7 +835,7 @@
 /turf/simulated/floor/tiled/eris/white/monofloor,
 /area/tether_away/guttersite/office)
 "cq" = (
-/obj/item/device/bluespaceradio/tether_prelinked,
+/obj/item/device/bluespaceradio/cryogaia_prelinked,
 /turf/simulated/mineral/floor/vacuum,
 /area/tether_away/guttersite/unexplored)
 "cr" = (
