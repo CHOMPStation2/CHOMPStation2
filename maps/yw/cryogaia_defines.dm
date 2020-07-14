@@ -6,15 +6,19 @@
 #define Z_LEVEL_CRYOGAIA_MAIN			5
 #define Z_LEVEL_CRYOGAIA_RESIDENTIAL	6
 #define Z_LEVEL_PLAINS					7
-#define Z_LEVEL_BEACH					8
-#define Z_LEVEL_BEACH_CAVE				9
-#define Z_LEVEL_AEROSTAT				10
-#define Z_LEVEL_AEROSTAT_SURFACE		11
-#define Z_LEVEL_DEBRISFIELD				12
-#define Z_LEVEL_UNDERDARK				13
-#define Z_LEVEL_GUTTERSITE				14
-#define Z_LEVEL_FUELDEPOT				15
-#define Z_LEVEL_GATEWAY					16
+#define Z_LEVEL_ROGUEMINE_1				8
+#define Z_LEVEL_ROGUEMINE_2				9
+#define Z_LEVEL_ROGUEMINE_3				10
+#define Z_LEVEL_ROGUEMINE_4				11
+#define Z_LEVEL_BEACH					12
+#define Z_LEVEL_BEACH_CAVE				13
+#define Z_LEVEL_AEROSTAT				14
+#define Z_LEVEL_AEROSTAT_SURFACE		15
+#define Z_LEVEL_DEBRISFIELD				16
+#define Z_LEVEL_UNDERDARK				17
+#define Z_LEVEL_GUTTERSITE				18
+#define Z_LEVEL_FUELDEPOT				19
+#define Z_LEVEL_GATEWAY					20
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -155,6 +159,7 @@
 
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
+		list("Asteroid Belt 1","Asteroid Belt 2","Asteroid Belt 3","Asteroid Belt 4"),
 		list("Snow plains"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
@@ -171,6 +176,13 @@
 		Z_LEVEL_CRYOGAIA_MAIN,
 		Z_LEVEL_CRYOGAIA_CENTCOM
 		)
+	
+	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_MAIN)
+	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_TRANSIT)
+	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
+						 		 Z_LEVEL_ROGUEMINE_2,
+						 	 	 Z_LEVEL_ROGUEMINE_3,
+								 Z_LEVEL_ROGUEMINE_4)
 
 	lateload_single_pick = list( //Gateway missions
 		list("Snow Outpost"),
