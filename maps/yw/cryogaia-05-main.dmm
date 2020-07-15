@@ -44557,27 +44557,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/explorer_meeting)
-"bCJ" = (
-/obj/effect/floor_decal/rust,
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
-	},
-/obj/machinery/shield_gen/external,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
-/area/engineering/storage)
-"bCK" = (
-/obj/machinery/shield_gen/external,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
-/area/engineering/storage)
-"bCL" = (
-/obj/machinery/shield_gen,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
-/area/engineering/storage)
 "bCM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -63762,6 +63741,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"fYB" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/shield_generator,
+/turf/simulated/floor,
+/area/engineering/storage)
 "gai" = (
 /obj/machinery/light,
 /obj/structure/cable/green{
@@ -64372,6 +64356,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"kCz" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/shield_generator,
+/turf/simulated/floor,
+/area/engineering/storage)
 "kIl" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -93647,7 +93642,7 @@ aLR
 abk
 aag
 bBt
-bCJ
+kCz
 bEb
 bFn
 bGB
@@ -93899,7 +93894,7 @@ aLR
 abk
 aag
 bBt
-bCK
+fYB
 bEb
 bFn
 bGB
@@ -94151,7 +94146,7 @@ byJ
 aRg
 bxD
 bBt
-bCL
+fYB
 bEb
 bFn
 bGC
