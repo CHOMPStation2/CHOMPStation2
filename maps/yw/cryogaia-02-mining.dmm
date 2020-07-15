@@ -8243,6 +8243,7 @@
 	pixel_y = 0
 	},
 /obj/item/weapon/storage/box/botanydisk,
+/obj/item/weapon/reagent_containers/dropper,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "qM" = (
