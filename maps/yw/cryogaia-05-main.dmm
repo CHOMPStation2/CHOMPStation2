@@ -63575,12 +63575,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
-"ejr" = (
-/obj/machinery/door/unpowered/shuttle{
-	req_one_access = list(48,52)
-	},
-/turf/simulated/shuttle/floor/yellow/airless,
-/area/shuttle/belter)
 "eks" = (
 /obj/machinery/computer/ship/sensors{
 	dir = 4;
@@ -63657,6 +63651,14 @@
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
+"eze" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	req_access = list();
+	req_one_access = list(48,52)
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/shuttle/floor/yellow/airless,
+/area/shuttle/belter)
 "eBH" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -64528,18 +64530,6 @@
 	},
 /turf/simulated/shuttle/floor/yellow/airless,
 /area/shuttle/belter)
-"lnB" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4
-	},
-/obj/structure/shuttle/engine/heater{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/yellow/airless,
-/area/shuttle/belter)
 "lyv" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "Plains Access Shed";
@@ -64824,16 +64814,6 @@
 /obj/effect/floor_decal/snow/floor/edges3,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior)
-"nda" = (
-/obj/structure/shuttle/window,
-/obj/effect/shuttle_landmark{
-	base_area = /area/borealis2/outdoors/grounds;
-	base_turf = /turf/simulated/floor/plating/snow/plating/cryogaia;
-	landmark_tag = "belter_colony";
-	name = "Cryogaia Belter Parking Spot"
-	},
-/turf/simulated/floor/airless,
-/area/shuttle/belter)
 "ngK" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "Arrivals Access South"
@@ -65635,6 +65615,19 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"tqr" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/borealis2/outdoors/grounds;
+	base_turf = /turf/simulated/floor/plating/snow/plating/cryogaia;
+	landmark_tag = "belter_colony";
+	name = "Cryogaia Belter Parking Spot"
+	},
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/shuttle/belter)
 "tIj" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -65728,6 +65721,9 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel,
 /area/security/hangar)
+"tWN" = (
+/turf/simulated/wall/rshull,
+/area/shuttle/belter)
 "tZc" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 4
@@ -66223,9 +66219,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
-"wKa" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/belter)
 "wLk" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -115234,11 +115227,11 @@ bKk
 bKk
 aag
 qWO
-wKa
-lnB
+tWN
 liz
 liz
-wKa
+liz
+tWN
 wOi
 aaZ
 aag
@@ -115486,11 +115479,11 @@ aag
 aag
 aka
 qWO
-wKa
+tWN
 pRd
 odI
 hkY
-wKa
+tWN
 wOi
 aaZ
 aag
@@ -115738,11 +115731,11 @@ aag
 aag
 aag
 qWO
-wKa
+tWN
 pzN
 lNM
 lNM
-wKa
+tWN
 wOi
 aaZ
 aag
@@ -115990,11 +115983,11 @@ cfz
 gJE
 gJE
 nIt
-ejr
+eze
 lNM
 lNM
 vuW
-wKa
+tWN
 vpP
 aaZ
 aag
@@ -116242,11 +116235,11 @@ bKV
 aag
 aag
 qWO
-wKa
+tWN
 rBA
 lNM
 vuW
-wKa
+tWN
 wOi
 aaZ
 aag
@@ -116494,11 +116487,11 @@ aag
 aag
 aag
 qWO
-wKa
+tWN
 rBA
 lNM
 vuW
-wKa
+tWN
 wOi
 aaZ
 aag
@@ -116746,11 +116739,11 @@ aag
 aag
 abl
 qWO
-wKa
+tWN
 jmQ
 kTr
 jmQ
-wKa
+tWN
 wOi
 aaZ
 aag
@@ -116998,11 +116991,11 @@ aag
 aag
 aag
 qWO
-wKa
-wKa
+tWN
+tWN
 grD
-wKa
-wKa
+tWN
+tWN
 wOi
 aaZ
 cdJ
@@ -117251,9 +117244,9 @@ aag
 aag
 qWO
 aaj
-wKa
-nda
-wKa
+tWN
+tqr
+tWN
 aaj
 wOi
 aaZ
