@@ -6690,6 +6690,8 @@
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 8
 	},
+/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/weapon/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "apk" = (

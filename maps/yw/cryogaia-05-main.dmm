@@ -18624,6 +18624,10 @@
 "aIX" = (
 /obj/structure/table/reinforced,
 /obj/item/device/flashlight/lamp,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
 "aIY" = (
@@ -19017,7 +19021,8 @@
 /area/lawoffice)
 "aJN" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
@@ -37125,6 +37130,10 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
 "bpK" = (
@@ -45978,6 +45987,9 @@
 	id = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_monitoring)
 "bFv" = (
@@ -51558,11 +51570,11 @@
 /area/engineering/engine_eva)
 "bOq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/effect/floor_decal/corner/yellow{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
@@ -52129,15 +52141,19 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bPB" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bPC" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
@@ -52221,8 +52237,6 @@
 "bPI" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full{
 	dir = 9;
@@ -52232,6 +52246,14 @@
 	dir = 4;
 	id = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9;
+	pixel_y = 0
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_monitoring)
@@ -52738,10 +52760,23 @@
 /area/engineering/engine_eva)
 "bQH" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bQI" = (
 /obj/effect/floor_decal/corner/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bQJ" = (
@@ -52866,6 +52901,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "bQS" = (
@@ -52875,7 +52913,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -52890,12 +52928,6 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "bQU" = (
@@ -52905,7 +52937,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -52921,6 +52953,9 @@
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Engine Power";
 	name_tag = "Engine Power"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
@@ -53598,6 +53633,8 @@
 	dir = 4;
 	icon_state = "corner_white_full"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "bSi" = (
@@ -55177,6 +55214,9 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "bVg" = (
@@ -55397,6 +55437,10 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
@@ -56110,6 +56154,7 @@
 	icon_state = "tube1";
 	pixel_y = 0
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "bXd" = (
@@ -57269,6 +57314,9 @@
 /area/shuttle/excursion)
 "bZh" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "bZi" = (
@@ -63985,6 +64033,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"icJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "ihR" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -64032,6 +64086,24 @@
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior)
+"iyJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full{
+	dir = 9;
+	icon_state = "fwindow"
+	},
+/obj/machinery/door/blast/radproof/open{
+	dir = 4;
+	id = "EngineBlast";
+	name = "Engine Monitoring Room Blast Doors"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_monitoring)
 "iCz" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -64862,6 +64934,16 @@
 /obj/structure/ore_box,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/belter)
+"ogB" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "omp" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/donkpockets,
@@ -64920,6 +65002,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"oFf" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor,
+/area/engineering/engine_room)
 "oHa" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -65413,6 +65500,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"soi" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "spS" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "Engineering Lobby North";
@@ -65483,6 +65576,14 @@
 /obj/structure/sign/directions/engineering,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
+"tgh" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "tgo" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/secure_closet{
@@ -65708,6 +65809,11 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"uBH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/wall/r_wall,
+/area/engineering/engine_eva)
 "uCI" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
@@ -65740,6 +65846,24 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"uYf" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full{
+	dir = 9;
+	icon_state = "fwindow"
+	},
+/obj/machinery/door/blast/radproof/open{
+	dir = 4;
+	id = "EngineBlast";
+	name = "Engine Monitoring Room Blast Doors"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_monitoring)
 "uYz" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -66245,6 +66369,24 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"xGX" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full{
+	dir = 9;
+	icon_state = "fwindow"
+	},
+/obj/machinery/door/blast/radproof/open{
+	dir = 4;
+	id = "EngineBlast";
+	name = "Engine Monitoring Room Blast Doors"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_monitoring)
 "xMK" = (
 /obj/machinery/sleeper{
 	dir = 8
@@ -66294,6 +66436,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"xVA" = (
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "xWX" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9
@@ -95664,11 +95813,11 @@ bOr
 bPC
 bQI
 bSh
-bTy
-bVe
-bVe
+uBH
+ogB
+soi
 bXc
-bXd
+oFf
 bZh
 bPE
 bcc
@@ -95917,11 +96066,11 @@ bPD
 bQJ
 bNe
 bTy
-bVe
+tgh
 bVe
 bXd
 bXd
-bZh
+xVA
 bPE
 bcc
 aag
@@ -96173,7 +96322,7 @@ bVf
 bSu
 bSu
 bSu
-bSu
+icJ
 bPE
 bcc
 aag
@@ -98685,7 +98834,7 @@ bKL
 bMa
 bNm
 bOy
-bFu
+uYf
 bQS
 bSp
 bTF
@@ -99189,7 +99338,7 @@ bKN
 bMc
 bNm
 bOA
-bFu
+xGX
 bQU
 bSp
 bTH
@@ -99441,7 +99590,7 @@ bKO
 bMd
 bAJ
 bOB
-bFu
+iyJ
 bQV
 bSp
 bRa
