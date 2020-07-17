@@ -1,7 +1,7 @@
 /mob/living/simple_mob/animal/passive/lizard/event
 	desc = "This one looks like it is growing huge!"
 	var/amount_grown = 0
-	var/faction = "lizard"
+	faction = "lizard"
 
 /mob/living/simple_mob/animal/passive/lizard/event/Life()
 	. = ..()
