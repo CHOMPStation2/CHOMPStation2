@@ -148,6 +148,19 @@
 	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed. You may wish to note this down in your medical records."
 	cost = 2
 	var_changes = list("alcohol_mod" = 0.25)
+	
+/datum/trait/pain_tolerance_basic
+	name = "Pain Tolerant"
+	desc = "You're a little more resistant to pain than most, and experience 10% less pain from from all sources."
+	cost = 1
+	var_changes = list("pain_mod" = 0.9)
+	
+/datum/trait/pain_tolerance_advanced
+	name = "High Pain Tolerance"
+	desc = "You are noticeably more resistant to pain than most, and experience 20% less pain from all sources."
+	cost = 2
+	var_changes = list("pain_mod" = 0.8)
+
 //YW ADDITIONS END
 
 /datum/trait/photoresistant
