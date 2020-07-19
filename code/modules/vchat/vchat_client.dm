@@ -379,7 +379,6 @@ var/to_chat_src
 		var/list/tojson = list("time" = time, "message" = message);
 		target << output(jsEncode(tojson), "htmloutput:putmessage")
 
-/* YW EDIT: disabled until we can fix the lag
 /client/proc/vchat_export_log()
 	set name = "Export chatlog"
 	set category = "OOC"
@@ -408,6 +407,7 @@ var/to_chat_src
 	// Write the messages to the log
 	for(var/list/result in results)
 		o_file << "[result["message"]]<br>"
+		CHECK_TICK
 
 	o_file << "</body></html>"
 
@@ -420,4 +420,3 @@ var/to_chat_src
 			spawn(1 MINUTE)
 				if(!fdel(o_file))
 					log_debug("Warning: [ckey]'s chatlog could not be deleted one minute after file transfer was initiated. It is located at 'data/chatlog_tmp/[ckey]_chat_log' and will need to be manually removed.")
-*/
