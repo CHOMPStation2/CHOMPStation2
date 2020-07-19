@@ -282,7 +282,7 @@
 	id = "scsatw"
 	description = "The screwdriver's bigger cousin."
 	taste_description = "smooth, savory booze and tangy orange juice."
-	strength = 0
+	strength = 7 // 2x that of Screwdriver, which means you DIVIDE the strength by half.
 	druggy = 0
 	halluci = 0
 	var/adj_dizzy = 0

@@ -50,10 +50,10 @@
 		if(LOC_HANGAR1)
 			spawn_area_type = /area/hangar/one
 			locstring = "the hangar deck"
-		if(LOC_HANGAR1)
+		if(LOC_HANGAR2)
 			spawn_area_type = /area/hangar/two
 			locstring = "the hangar deck"
-		if(LOC_HANGAR1)
+		if(LOC_HANGAR3)
 			spawn_area_type = /area/hangar/three
 			locstring = "the hangar deck"
 		if(LOC_VAULT)
