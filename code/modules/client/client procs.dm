@@ -455,7 +455,7 @@ client/verb/character_setup()
 		alert(src, "You can only try to reload VChat every 10 seconds at most.")
 		return
 
-	verbs -= /client/proc/vchat_export_log
+	// YW EDIT: disabled until we can fix the lag: verbs -= /client/proc/vchat_export_log
 
 	//Log, disable
 	log_debug("[key_name(src)] reloaded VChat.")
