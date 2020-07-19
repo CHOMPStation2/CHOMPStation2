@@ -133,7 +133,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 	send_playerinfo()
 	load_database()
 
-	//YW EDIT: disabled until we can fix the lag: owner.verbs += /client/proc/vchat_export_log
+	owner.verbs += /client/proc/vchat_export_log
 
 //Perform DB shenanigans
 /datum/chatOutput/proc/load_database()
