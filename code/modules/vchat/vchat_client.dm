@@ -133,7 +133,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 	send_playerinfo()
 	load_database()
 
-	owner.verbs += /client/proc/vchat_export_log
+	//YW EDIT: disabled until we can fix the lag: owner.verbs += /client/proc/vchat_export_log
 
 //Perform DB shenanigans
 /datum/chatOutput/proc/load_database()
@@ -379,6 +379,7 @@ var/to_chat_src
 		var/list/tojson = list("time" = time, "message" = message);
 		target << output(jsEncode(tojson), "htmloutput:putmessage")
 
+/* YW EDIT: disabled until we can fix the lag
 /client/proc/vchat_export_log()
 	set name = "Export chatlog"
 	set category = "OOC"
@@ -419,3 +420,4 @@ var/to_chat_src
 			spawn(1 MINUTE)
 				if(!fdel(o_file))
 					log_debug("Warning: [ckey]'s chatlog could not be deleted one minute after file transfer was initiated. It is located at 'data/chatlog_tmp/[ckey]_chat_log' and will need to be manually removed.")
+*/
