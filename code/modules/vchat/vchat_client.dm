@@ -383,7 +383,7 @@ var/to_chat_src
 	set name = "Export chatlog"
 	set category = "OOC"
 	
-	to_chat(user, "<span class='warning'>This verb is temporarily disabled due to performance issues.</span>")
+	to_chat(usr, "<span class='warning'>This verb is temporarily disabled due to performance issues.</span>")
 	return
 	
 	if(chatOutput.broken)
