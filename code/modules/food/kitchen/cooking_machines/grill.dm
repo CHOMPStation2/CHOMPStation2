@@ -9,6 +9,8 @@
 	can_burn_food = 1
 	cooked_sound = 'sound/machines/ding.ogg'
 	stat = POWEROFF
+	
+	container_type = /obj/item/weapon/reagent_containers/cooking_container/grill
 
 /obj/machinery/appliance/grill/toggle_power()
 	set src in view()
@@ -31,10 +33,10 @@
 	playsound(src, 'sound/machines/click.ogg', 40, 1)
 	update_icon()
 
-/obj/machinery/appliance/grill/initialize()
+/obj/machinery/appliance/grill/Initialize()
 	. = ..()
-	cooking_objs += new /datum/cooking_item(new /obj/item/weapon/reagent_containers/cooking_container(src))
-	cooking = 0
+	// cooking_objs += new /datum/cooking_item(new /obj/item/weapon/reagent_containers/cooking_container(src))
+	cooking = FALSE
 
 /obj/machinery/appliance/grill/has_space(var/obj/item/I)
 	var/datum/cooking_item/CI = cooking_objs[1]
@@ -70,7 +72,7 @@
 	return 0
 
 /obj/machinery/appliance/grill/update_icon()
-	if (!stat)
+	if(!stat)
 		icon_state = on_icon
 	else
 		icon_state = off_icon
