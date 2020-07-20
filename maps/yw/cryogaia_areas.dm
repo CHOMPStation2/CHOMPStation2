@@ -25,6 +25,64 @@
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
 
+/area/borealis2/outdoors/grounds/wall
+	name = "Perimeter Wall"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_hostile_area"
+
+/area/borealis2/outdoors/grounds/walkway
+	name = "Perimeter Wall - Upper"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_trespass_area"
+
+/area/borealis2/outdoors/grounds/checkpoint
+	name = "Perimeter Checkpoint"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_trespass_alt"
+
+/area/borealis2/outdoors/grounds/tower
+	name = "Perimeter Tower"
+
+/area/borealis2/outdoors/grounds/tower/north
+	name = "Perimeter Tower - N"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "north"
+
+/area/borealis2/outdoors/grounds/tower/northeast
+	name = "Perimeter Tower - NE"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "northeast"
+
+/area/borealis2/outdoors/grounds/tower/east
+	name = "Perimeter Tower - E"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "east"
+
+/area/borealis2/outdoors/grounds/tower/southeast
+	name = "Perimeter Tower - SE"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "southeast"
+
+/area/borealis2/outdoors/grounds/tower/south
+	name = "Perimeter Tower - S"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "south"
+
+/area/borealis2/outdoors/grounds/tower/southwest
+	name = "Perimeter Tower - SW"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "southwest"
+
+/area/borealis2/outdoors/grounds/tower/west
+	name = "Perimeter Tower - W"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "west"
+
+/area/borealis2/outdoors/grounds/tower/northwest
+	name = "Perimeter Tower - NW"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "northwest"
+
 /area/borealis2/outdoors/exterior
 	name = "The wilderness"
 

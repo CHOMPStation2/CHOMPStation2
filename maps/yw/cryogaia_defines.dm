@@ -4,21 +4,22 @@
 #define Z_LEVEL_CRYOGAIA_TRANSIT		3 //added due to explosions jumping from mine leve to lower.
 #define Z_LEVEL_CRYOGAIA_LOWER			4
 #define Z_LEVEL_CRYOGAIA_MAIN			5
-#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	6
-#define Z_LEVEL_ROGUEMINE_1				7
-#define Z_LEVEL_ROGUEMINE_2				8
-#define Z_LEVEL_ROGUEMINE_3				9
-#define Z_LEVEL_ROGUEMINE_4				10
-#define Z_LEVEL_PLAINS					11
-#define Z_LEVEL_BEACH					12
-#define Z_LEVEL_BEACH_CAVE				13
-#define Z_LEVEL_AEROSTAT				14
-#define Z_LEVEL_AEROSTAT_SURFACE		15
-#define Z_LEVEL_DEBRISFIELD				16
-#define Z_LEVEL_UNDERDARK				17
-#define Z_LEVEL_GUTTERSITE				18
-#define Z_LEVEL_FUELDEPOT				19
-#define Z_LEVEL_GATEWAY					20
+#define Z_LEVEL_CRYOGAIA_UPPER			6
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		7
+#define Z_LEVEL_ROGUEMINE_1			8
+#define Z_LEVEL_ROGUEMINE_2			9
+#define Z_LEVEL_ROGUEMINE_3			10
+#define Z_LEVEL_ROGUEMINE_4			11
+#define Z_LEVEL_PLAINS				12
+#define Z_LEVEL_BEACH				13
+#define Z_LEVEL_BEACH_CAVE			14
+#define Z_LEVEL_AEROSTAT			15
+#define Z_LEVEL_AEROSTAT_SURFACE		16
+#define Z_LEVEL_DEBRISFIELD			17
+#define Z_LEVEL_UNDERDARK			18
+#define Z_LEVEL_GUTTERSITE			19
+#define Z_LEVEL_FUELDEPOT			20
+#define Z_LEVEL_GATEWAY				21
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -47,7 +48,8 @@
 	holomap_smoosh = list(list(
 		Z_LEVEL_CRYOGAIA_MINE,
 		Z_LEVEL_CRYOGAIA_LOWER,
-		Z_LEVEL_CRYOGAIA_MAIN))
+		Z_LEVEL_CRYOGAIA_MAIN,
+		Z_LEVEL_CRYOGAIA_UPPER))
 
 	station_name  = "Cryogaia Outpost"
 	station_short = "Yawn Wider"
@@ -174,9 +176,10 @@
 		Z_LEVEL_CRYOGAIA_LOWER,
 		Z_LEVEL_CRYOGAIA_TRANSIT,
 		Z_LEVEL_CRYOGAIA_MAIN,
+		Z_LEVEL_CRYOGAIA_UPPER,
 		Z_LEVEL_CRYOGAIA_CENTCOM
 		)
-	
+
 	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_MAIN)
 	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_TRANSIT)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
@@ -205,6 +208,7 @@
 		Z_LEVEL_CRYOGAIA_MINE,
 		Z_LEVEL_CRYOGAIA_LOWER,
 		Z_LEVEL_CRYOGAIA_MAIN,
+		Z_LEVEL_CRYOGAIA_UPPER,
 		Z_LEVEL_PLAINS
 	)
 
@@ -216,11 +220,12 @@
 		return map_levels
 	else if (srcz == Z_LEVEL_CRYOGAIA_CENTCOM)
 		return list() // Nothing on transit!
-	else if (srcz >= Z_LEVEL_CRYOGAIA_MINE && srcz <= Z_LEVEL_CRYOGAIA_MAIN)
+	else if (srcz >= Z_LEVEL_CRYOGAIA_MINE && srcz <= Z_LEVEL_CRYOGAIA_UPPER)
 		return list(
 			Z_LEVEL_CRYOGAIA_MINE,
 			Z_LEVEL_CRYOGAIA_LOWER,
 			Z_LEVEL_CRYOGAIA_MAIN,
+			Z_LEVEL_CRYOGAIA_UPPER
 			)
 
 	else if (srcz == Z_LEVEL_CRYOGAIA_RESIDENTIAL)
@@ -249,7 +254,7 @@
 		"cryogaia_security_hangar"
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
-	extra_z_levels = null //None at the moment. Plains would be added here.
+	extra_z_levels = list(Z_LEVEL_PLAINS)
 
 /obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
 	. = ..()
@@ -326,6 +331,16 @@
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN
 	name = "Surface level"
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/open
+	holomap_legend_x = 220
+	holomap_legend_y = 160
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y
+
+/datum/map_z_level/cryogaia/upper
+	z = Z_LEVEL_CRYOGAIA_UPPER
+	name = "Upper level"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/open
 	holomap_legend_x = 220
