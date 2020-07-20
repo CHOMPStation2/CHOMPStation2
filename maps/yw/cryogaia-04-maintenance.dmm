@@ -20617,6 +20617,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "aTj" = (
@@ -25205,6 +25208,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/light/flamp,
 /turf/simulated/floor/grass,
 /area/hallway/lower/central)
 "bbG" = (
@@ -40420,6 +40424,14 @@
 /obj/random/maintenance/security,
 /turf/simulated/floor,
 /area/borealis2/outdoors/grounds/tower/southwest)
+"fwE" = (
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/range)
 "gTr" = (
 /obj/effect/floor_decal/corner/beige{
 	dir = 6
@@ -40449,6 +40461,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
+"ihI" = (
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/aft)
 "iij" = (
 /obj/machinery/camera/motion/telecom{
 	c_tag = "Telecomms Access Corridor South";
@@ -40629,6 +40648,13 @@
 /obj/structure/ladder/up,
 /turf/simulated/floor,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"qWF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/flamp,
+/turf/simulated/floor/grass,
+/area/hallway/lower/central)
 "scr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -40668,6 +40694,13 @@
 "tZF" = (
 /turf/simulated/floor,
 /area/borealis2/outdoors/grounds/tower/southwest)
+"sHm" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/starboard)
 "uXm" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave,
@@ -40680,6 +40713,13 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor,
 /area/borealis2/outdoors/grounds/tower/east)
+"vZk" = (
+/obj/machinery/light/small{
+	dir = 1;
+	icon_state = "bulb1"
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/medical/pyschwarde)
 "weC" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 22
@@ -65760,7 +65800,8 @@ aNg
 aNg
 aOP
 aNg
-aNg
+aPU
+aQN
 aQN
 aQN
 aQN
@@ -66018,7 +66059,7 @@ aQL
 aSj
 aTj
 aUf
-aQL
+fwE
 aVZ
 aQN
 aan
@@ -67272,7 +67313,7 @@ aJt
 bhG
 aOR
 aOR
-aPW
+aOR
 aQN
 aQN
 aQN
@@ -73026,7 +73067,7 @@ aiF
 ala
 ala
 ala
-anp
+vZk
 aGT
 anp
 anp
@@ -79853,7 +79894,7 @@ awv
 aCL
 ajX
 ayM
-azK
+qWF
 azK
 aEj
 aFd
@@ -86680,7 +86721,7 @@ aPb
 aPb
 aRZ
 aPb
-aPb
+sHm
 aUV
 aVQ
 aVQ
@@ -93263,12 +93304,12 @@ acZ
 aan
 bkO
 bls
+ihI
 bls
 bls
 bls
 bls
-bls
-bls
+ihI
 bls
 bkO
 aan
