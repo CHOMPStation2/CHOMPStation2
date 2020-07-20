@@ -269,6 +269,9 @@
 /area/cryogaia/station/pathfinder_office
 	name = "\improper Pathfinder's Office"
 
+/area/cryogaia/station/ert_arrival
+	name = "\improper Emergency Responder Point"
+
 /area/shuttle/excursion
 	name = "\improper Exploration Vessel"
 	icon_state = "shuttle2"
