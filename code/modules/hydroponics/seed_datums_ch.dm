@@ -177,7 +177,7 @@
 	name = "cinnamon"
 	seed_name = "cinnamon"
 	display_name = "cinnamon tree"
-	chems = list("cinnamonpowder", (5,25))
+	chems = list("cinnamonpowder" = list(5,25))
 	mutants = null
 	kitchen_tag = "cinnamon"
 
@@ -189,5 +189,5 @@
 	set_trait(TRAIT_YIELD,5)
 	set_trait(TRAIT_POTENCY,10)
 	set_trait(TRAIT_PRODUCT_ICON, "stalk") //Temporary value. Will keep if it looks nice
-	set_trait(TRAIT_PRODUCT_CPOLOR, "#A96622")
+	set_trait(TRAIT_PRODUCT_COLOR, "#A96622")
 	set_trait(TRAIT_PLANT_ICON,"tree2")

@@ -195,7 +195,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/butterscotch
 	name = "Butterscotch"
-	desc = "A sweet, brown liquid, usually used as part of confectionary. Just a spoon wouldn't hurt, right?"
+	desc = "A sweet, brown liquid, usually used as part of confectionary. Just a spoonful wouldn't hurt, right?"
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "butterscotch"
 	nutriment_amt = 1
@@ -206,8 +206,8 @@
 	bitesize = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/buttspie
-	name = "Butterscotch-cinnamon Pie"
-	desc = "A delightfully caramel-coloured filling in a crispy pie base. Looks delightful!"
+	name = "Butterscotch-Cinnamon Pie"
+	desc = "A delightfully caramel-coloured filling in a crispy pie base, with a spray of cream on top."
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "buttspie"
 	nutriment_amt = 20
