@@ -30,12 +30,13 @@
  *
  * */
  
-// Recipe type defines. Used to determine what machine makes them. TODO: Add Grill to the list.
+// Recipe type defines. Used to determine what machine makes them.
 #define MICROWAVE			0x1
 #define FRYER				0x2
 #define OVEN				0x4
-#define CANDYMAKER			0x8
-#define CEREALMAKER			0x10
+#define GRILL				0x8
+#define CANDYMAKER			0x10
+#define CEREALMAKER			0x20
 
 /datum/recipe
 	var/list/reagents		// Example: = list("berryjuice" = 5) // do not list same reagent twice
@@ -64,11 +65,12 @@
 		MICROWAVE
 		FRYER
 		OVEN
+		GRILL
 		CANDYMAKER
 		CEREALMAKER
 	*/
 	// This is a bitfield, more than one type can be used
-	// Grill is presently unused and not listed
+	// Grill is presently unused, but can have recipes added to it later.
 
 /datum/recipe/proc/check_reagents(var/datum/reagents/avail_reagents)
 	if(!reagents || !reagents.len)
