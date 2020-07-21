@@ -2581,9 +2581,6 @@
 /area/shuttle/arrival/pre_game)
 "hd" = (
 /obj/machinery/hologram/holopad,
-/obj/effect/landmark{
-	name = "Observer-Start"
-	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/arrival/pre_game)
 "he" = (

@@ -4,6 +4,8 @@
 /area/borealis2/elevator/medbasement
 	name = "Elevator shaft - Lower Medical"
 /area/borealis2/elevator/medbay
+	name = "Elevator shaft - Main Medical"
+/area/borealis2/elevator/medupper
 	name = "Elevator shaft - Upper Medical"
 /area/borealis2/elevator/dorms
 	name = "Elevator shaft - Dorms"
@@ -13,6 +15,8 @@
 	name = "Elevator shaft - Sci-Mining"
 /area/borealis2/elevator/sciminingtransit
 	name = "Elevator shaft - Depth tranist"
+/area/borealis2/elevator/uppermining
+	name = "Elevator shaft - Upper Level"
 /area/borealis2/outdoors
 	name = "Outside - Surface"
 	icon_state = "outside1"
@@ -277,6 +281,14 @@
 /area/cryogaia/station/ert_arrival
 	name = "\improper Emergency Responder Point"
 
+/area/cryogaia/station/hallway/primary/upper
+	name = "\improper Upper Level Hallways"
+	icon_state = "hallC1"
+
+/area/cryogaia/station/medical/upper
+	name = "\improper Medical Loft"
+	icon_state = "medbay_primary_storage"
+
 /area/constructionsite/cryogaia/upper
 	name = "\improper Upper Level Construction Area"
 
@@ -377,6 +389,10 @@
 /area/maintenance/medical_lower
 	name = "Underground Medical Maintenance"
 	icon_state = "maint_medbay_fore"
+
+/area/maintenance/medical_upper
+	name = "Upper Level Medical Maintenance"
+	icon_state = "maint_medbay_aft"
 
 /area/mine/unexplored/underdark
 	name = "Underground rock"
