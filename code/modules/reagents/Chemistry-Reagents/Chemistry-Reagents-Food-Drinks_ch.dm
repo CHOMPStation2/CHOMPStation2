@@ -10,3 +10,13 @@
 
 	glass_name = "akvavit"
 	glass_desc = "Burns the nose and throat, and soothes it with a herby aftertaste...Barely."
+
+/datum/reagent/cinnamonpowder
+	name = "ground cinnamon"
+	id = "cinnamonpowder"
+	description = "Cinnamon, a spice made from tree bark, ground into a fine powder. Probably not a good idea to eat on its own!"
+	taste_description= "overpoweringly sweet and woody"
+	color = "A96622"
+
+	glass_name = "ground cinnamon"
+	glass_desc = "A glass of ground cinnamon. Dare you take the challenge?"
