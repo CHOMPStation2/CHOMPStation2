@@ -177,6 +177,8 @@
 /area/chapel/monastery/recreation
 	name = "Monastery Recreation"
 
+/area/chapel/monastery/upper
+	name = "Monastery Upper Floor"
 
 //holodorms
 /area/holodeck/holodorm/source_basic
@@ -269,8 +271,14 @@
 /area/cryogaia/station/pathfinder_office
 	name = "\improper Pathfinder's Office"
 
+/area/cryogaia/station/explorer_upper
+	name = "\improper Exploration Upper Level"
+
 /area/cryogaia/station/ert_arrival
 	name = "\improper Emergency Responder Point"
+
+/area/constructionsite/cryogaia/upper
+	name = "\improper Upper Level Construction Area"
 
 /area/shuttle/excursion
 	name = "\improper Exploration Vessel"
