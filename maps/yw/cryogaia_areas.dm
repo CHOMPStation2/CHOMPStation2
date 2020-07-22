@@ -29,6 +29,11 @@
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
 
+/area/borealis2/outdoors/grounds/upper
+	name = "\The outpost grounds - upper level"
+	base_turf = /turf/simulated/open/cryogaia
+	icon_state = "outside2"
+
 /area/borealis2/outdoors/grounds/wall
 	name = "Perimeter Wall"
 	icon = 'icons/turf/areas.dmi'
@@ -92,6 +97,11 @@
 
 /area/borealis2/outdoors/exterior
 	name = "The wilderness"
+	icon_state = "outside1unex"
+
+/area/borealis2/outdoors/exterior/upper
+	name = "The wilderness - upper level"
+	icon_state = "outside2unex"
 
 /area/borealis2/outdoors/exterior/lake
 	name = "The Ice Lake"

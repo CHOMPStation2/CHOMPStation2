@@ -7,6 +7,7 @@
 	landmark_offsite = "arrivals_offsite"
 	landmark_station = "arrivals_station"
 	docking_controller_tag = "arrivals_shuttle"
+	ceiling_type = /turf/simulated/shuttle/floor/white/airless
 
 /obj/effect/shuttle_landmark/premade/arrivals/arrivals_offsite
 	name = "Transit to Station"
@@ -32,6 +33,7 @@
 	landmark_station = "escape_station"
 	landmark_transition = "escape_transit"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
+	ceiling_type = /turf/simulated/shuttle/floor/white/airless
 
 /obj/effect/shuttle_landmark/premade/escape/centcom
 	name = "NSC Serenity"
@@ -60,6 +62,7 @@
 	landmark_station = "supply_station"
 	docking_controller_tag = "supply_shuttle"
 	flags = SHUTTLE_FLAGS_PROCESS|SHUTTLE_FLAGS_SUPPLY
+	ceiling_type = /turf/simulated/shuttle/floor/white/airless
 
 /obj/effect/shuttle_landmark/premade/supply/centcom
 	name = "NSC Serenity"
@@ -82,6 +85,7 @@
 	landmark_offsite = "trade_away"
 	landmark_station = "trade_station"
 	docking_controller_tag = "trade_shuttle"
+	ceiling_type = /turf/simulated/shuttle/floor/black/airless
 
 /obj/effect/shuttle_landmark/premade/trade/away
 	name = "Deep Space"
@@ -110,6 +114,7 @@
 	announcer = "Automated Traffic Control"
 	arrival_message = "Attention.  A vessel is approaching the colony."
 	departure_message = "Attention.  A vessel is now leaving from the colony."
+	ceiling_type = /turf/simulated/shuttle/floor/black/airless
 
 	destination_tags = list(
 		"mercenary_base",
@@ -159,6 +164,7 @@
 	announcer = "Automated Traffic Control"
 	arrival_message = "Attention.  Unidentified object approaching the colony."
 	departure_message = "Attention.  Unidentified object exiting local space.  Unidentified object expected to escape Borealis gravity well with current velocity."
+	ceiling_type = /turf/simulated/shuttle/floor/black/airless
 
 	destination_tags = list(
 		"skipjack_base",
@@ -204,6 +210,7 @@
 	landmark_station = "specops_cc"
 	landmark_offsite = "specops_station"
 	docking_controller_tag = "specops_shuttle_port"
+	ceiling_type = /turf/simulated/shuttle/floor/black/airless
 
 /obj/effect/shuttle_landmark/premade/specops/centcom
 	name = "NSC Serenity"
@@ -217,7 +224,7 @@
 	landmark_tag = "specops_station"
 	docking_controller = "specops_dock_airlock"
 	special_dock_targets = list("Special Operations" = "specops_shuttle_fore")
-	
+
 //////////////////////////////////////////////////////////////
 // RogueMiner "Belter: Shuttle
 
