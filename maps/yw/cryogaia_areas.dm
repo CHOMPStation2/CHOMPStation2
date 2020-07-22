@@ -39,6 +39,9 @@
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "submap_trespass_area"
 
+/area/borealis2/outdoors/grounds/walkway/exploration
+	name = "Exploration - Exterior Rooftop"
+
 /area/borealis2/outdoors/grounds/checkpoint
 	name = "Perimeter Checkpoint"
 	icon = 'icons/turf/areas.dmi'
