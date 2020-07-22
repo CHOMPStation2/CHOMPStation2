@@ -4,7 +4,7 @@
 	admin_only = FALSE
 
 /datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
-	return "Current server status:\n**Web Manifest:** <https://vore-station.net/manifest.php>\n**Players:** [TGS_CLIENT_COUNT]\n**Round Duration:** [roundduration2text()]"
+	return "Current server status:\n**Down! Contact staff.** <https://cdn.discordapp.com/emojis/687779807358091364.gif?v=1>" //CHOMPEdit Not turning it off, but turning it into a sort of debug message to indicate if the server is down.
 
 /datum/tgs_chat_command/parsetest
 	name = "parsetest"
@@ -117,3 +117,21 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 	GLOB.pending_discord_registrations[GLOB.pending_discord_registrations.len] = list("ckey" = key_to_find, "id" = sender.id, "time" = world.realtime)
 	
 	return "[sender.friendly_name], I've sent you a message in-game. Please verify your username there to complete your registration within 10 minutes."
+
+//YW Commands
+//Status
+/datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
+	return "Current server status:**Players:** [TGS_CLIENT_COUNT]\n**Round Duration:** [roundduration2text()]"
+
+// - FAX
+/datum/tgs_chat_command/readfax
+	name = "readfax"
+	help_text = "Reads a fax with specified faxid"
+	//required_parameters = 1 Is not a thing
+	admin_only = TRUE
+
+/datum/tgs_chat_command/readfax/Run(sender, params)
+	var/list/all_params = splittext(params, " ")
+	var/faxid = all_params[1]
+	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+	return "FAX: ```[strip_html_properly(faxmsg)]```"

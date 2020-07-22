@@ -470,7 +470,6 @@
 				var/mob/living/silicon/robot/R = usr
 				if(R.module)
 					R.uneq_active()
-					R.hud_used.update_robot_modules_display()
 				else
 					to_chat(R, "You haven't selected a module yet.")
 
@@ -617,3 +616,20 @@
 /obj/screen/component_button/Click(params)
 	if(parent)
 		parent.component_click(src, params)
+
+// Character setup stuff
+/obj/screen/setup_preview
+	
+	var/datum/preferences/pref
+
+/obj/screen/setup_preview/Destroy()
+	pref = null
+	return ..()
+
+// Background 'floor'
+/obj/screen/setup_preview/bg
+	mouse_over_pointer = MOUSE_HAND_POINTER
+
+/obj/screen/setup_preview/bg/Click(params)
+	pref?.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
+	pref?.update_preview_icon()

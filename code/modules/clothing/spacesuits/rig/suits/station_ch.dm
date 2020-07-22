@@ -10,7 +10,7 @@
 	offline_slowdown = 3
 	offline_vision_restriction = 1
 	siemens_coefficient= 0.7
-
+	chest_type = /obj/item/clothing/suit/space/rig/ch
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ch/pursuit
 
 	allowed = list(
@@ -50,7 +50,7 @@
 		
 		
 ////////////////////////////////////////////////////////////////////////////////////////		
-//Backend stuff to make the sprites work. Copied and pasted from rig_pieces_vr.dm, but added ch to everything. Only reason for this to be touched is to add or remove species.
+//Backend stuff to make the sprites work. Copied and pasted from rig_pieces_vr.dm, but added ch to everything. Only reason for this to be touched is to add or remove species. This might just need to go in a new file named rig_pieces_ch.dm.
 /obj/item/clothing/head/helmet/space/rig/ch
 	sprite_sheets = list(
 		SPECIES_HUMAN			= 'icons/mob/head_ch.dmi',
@@ -85,6 +85,7 @@
 		SPECIES_TESHARI 		= 'icons/mob/species/seromi/suit_ch.dmi'
 		)
 
+/*
 /obj/item/clothing/head/helmet/space/rig/ch
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_ALRAUNE, SPECIES_GREY_YW/*ywedit*/)
 	flags = PHORONGUARD //YAWN Edit
@@ -100,3 +101,4 @@
 /obj/item/clothing/suit/space/rig/ch
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_ALRAUNE, SPECIES_GREY_YW/*ywedit*/)
 	flags = PHORONGUARD //YAWN Edit
+*/

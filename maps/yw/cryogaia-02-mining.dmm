@@ -667,7 +667,10 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
 "bD" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	name = "Xenobiological Research Equipment";
+	req_one_access = list(12,47,52)
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -823,7 +826,7 @@
 "bV" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
-	name = "Dangerious Xenobiology Lab";
+	name = "Dangerous Xenobiology Lab";
 	req_access = list();
 	req_one_access = list(7,29)
 	},
@@ -840,7 +843,7 @@
 "bW" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
-	name = "Dangerious Xenobiology Lab";
+	name = "Dangerous Xenobiology Lab";
 	req_access = list();
 	req_one_access = list(7,29)
 	},
@@ -1285,6 +1288,11 @@
 	name = "west bump";
 	pixel_x = -28
 	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/launch)
 "dc" = (
@@ -1304,6 +1312,10 @@
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 28
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/outpost/launch)
@@ -1921,7 +1933,7 @@
 "ew" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
-	name = "Dangerious Xenobiology Lab";
+	name = "Dangerous Xenobiology Lab";
 	req_access = list();
 	req_one_access = list(7,29)
 	},
@@ -1937,7 +1949,7 @@
 "ex" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
-	name = "Dangerious Xenobiology Lab";
+	name = "Dangerous Xenobiology Lab";
 	req_access = list();
 	req_one_access = list(7,29)
 	},
@@ -6458,11 +6470,8 @@
 	name = "Xenoflora Containment";
 	req_access = list(47)
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora/lab_atmos)
@@ -6477,8 +6486,8 @@
 /area/rnd/xenobiology/xenoflora/lab_atmos)
 "nv" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora/lab_atmos)
@@ -7747,7 +7756,7 @@
 /turf/simulated/wall,
 /area/rnd/xenobiology/control)
 "pI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/wall,
 /area/rnd/xenobiology/xenoflora)
 "pJ" = (
@@ -8118,8 +8127,9 @@
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
 "qz" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5;
+	icon_state = "intact"
 	},
 /turf/simulated/wall,
 /area/rnd/xenobiology/xenoflora)
@@ -12354,6 +12364,10 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/entry)
 "ym" = (
@@ -12573,6 +12587,11 @@
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -28
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/entry)
@@ -14996,6 +15015,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/medical)
 "CX" = (
@@ -18358,8 +18378,6 @@
 /area/outpost/mining_main/west_hall)
 "Jq" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
 	icon_state = "cabinet_closed";
 	name = "Clothing Storage"
 	},
@@ -21458,7 +21476,8 @@
 /area/gateway)
 "PX" = (
 /obj/machinery/door/airlock/glass_external{
-	req_one_access = list(48)
+	req_access = list(62);
+	req_one_access = newlist()
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
@@ -21539,7 +21558,8 @@
 /area/gateway)
 "Qg" = (
 /obj/machinery/door/airlock/glass_external{
-	req_one_access = list(48)
+	req_access = list(62);
+	req_one_access = newlist()
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
@@ -21719,6 +21739,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
+"RC" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology/xenoflora/lab_atmos)
+"Sh" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/plating,
+/area/rnd/outpost/launch)
 "Wr" = (
 /obj/machinery/camera/network/research_outpost{
 	c_tag = "Toxins Testing Room";
@@ -21726,6 +21759,29 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/outpost/launch)
+"Yz" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 1;
+	id = "PubPrep";
+	name = "Public Access Shutter -control";
+	pixel_y = -22;
+	req_access = list(62)
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 
 (1,1,1) = {"
 ab
@@ -60861,7 +60917,7 @@ dB
 Wr
 eG
 fg
-fg
+Sh
 gr
 cv
 ab
@@ -63663,7 +63719,7 @@ xy
 uo
 AL
 AL
-Pk
+Yz
 zT
 zT
 zT
@@ -69695,7 +69751,7 @@ ad
 ab
 lR
 mQ
-nu
+RC
 oe
 oS
 NW

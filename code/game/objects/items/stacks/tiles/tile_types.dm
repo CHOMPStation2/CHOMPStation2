@@ -97,7 +97,8 @@
 	icon_state = "tile-tealcarpet"
 	no_variants = FALSE
 
-/obj/item/stack/tile/carpet/bcarpet
+/obj/item/stack/tile/carpet/bcarpet //YW EDIT: Commented out to help with upstream merging. Get on this you fucking virgo bois. -yw //CHOMP Comment: Yawn commented out this block, but CHOMP already commented out this stuff so I just removed theirs.
+
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/blucarpet
 	icon_state = "tile-carpet"
@@ -111,7 +112,7 @@
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/oracarpet
 	icon_state = "tile-carpet"
- */
+	*/
 
 /obj/item/stack/tile/floor
 	name = "floor tile"
@@ -203,6 +204,30 @@
 	icon_state = "tile-linoleum"
 	force = 1.0
 	throwforce = 1.0
+	throw_speed = 5
+	throw_range = 20
+	flags = 0
+	no_variants = FALSE
+
+/obj/item/stack/tile/wmarble
+	name = "light marble tile"
+	singular_name = "light marble tile"
+	desc = "Some white marble tiles used for flooring."
+	icon_state = "tile-wmarble"
+	force = 6.0
+	throwforce = 15.0
+	throw_speed = 5
+	throw_range = 20
+	flags = 0
+	no_variants = FALSE
+
+/obj/item/stack/tile/bmarble
+	name = "dark marble tile"
+	singular_name = "dark marble tile"
+	desc = "Some black marble tiles used for flooring."
+	icon_state = "tile-bmarble"
+	force = 6.0
+	throwforce = 15.0
 	throw_speed = 5
 	throw_range = 20
 	flags = 0

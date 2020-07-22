@@ -47,6 +47,7 @@
 	robot_modules["Servicehound"] = /obj/item/weapon/robot_module/robot/servicehound //YW changes
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
+	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //YW Addition booze
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -259,6 +260,15 @@
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(2000)
+	synths += medicine
+	
+	var/obj/item/stack/medical/advanced/clotting/C = new (src)
+	C.uses_charge = 1
+	C.charge_costs = list(1000)
+	C.synths = list(medicine)
+	src.modules += C
+
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
 	water.recharge_rate = 0
@@ -276,12 +286,6 @@
 	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper(src) //So they can nom people and heal them
 	B.water = water
 	src.modules += B
-
-// - YW Edit
-
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)
-	medicine.name = "Medical supply reserves"
-	synths += medicine
 
 	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
 	var/obj/item/stack/medical/advanced/bruise_pack/P = new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -562,6 +566,7 @@
 	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
+	src.modules += new /obj/item/weapon/rms(src)
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
 

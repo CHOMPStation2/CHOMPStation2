@@ -242,7 +242,7 @@ Class Procs:
 		return 1
 	if(user.lying || user.stat)
 		return 1
-	if(!(istype(user, /mob/living/carbon/human) || istype(user, /mob/living/silicon)))
+	if(!user.IsAdvancedToolUser())  //Vorestation edit
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return 1
 	if(ishuman(user))
@@ -277,7 +277,7 @@ Class Procs:
 		text = "\The [src] pings."
 
 	state(text, "blue")
-	playsound(src.loc, 'sound/machines/ping.ogg', 50, 0)
+	playsound(src, 'sound/machines/ping.ogg', 50, 0)
 
 /obj/machinery/proc/shock(mob/user, prb)
 	if(inoperable())
@@ -304,6 +304,16 @@ Class Procs:
 		return
 	CB.apply_default_parts(src)
 	RefreshParts()
+
+/obj/machinery/proc/default_use_hicell()
+	var/obj/item/weapon/cell/C = locate(/obj/item/weapon/cell) in component_parts
+	if(C)
+		component_parts -= C
+		qdel(C)
+		C = new /obj/item/weapon/cell/high(src)
+		component_parts += C
+		return C
+		RefreshParts()
 
 /obj/machinery/proc/default_part_replacement(var/mob/user, var/obj/item/weapon/storage/part_replacer/R)
 	if(!istype(R))
@@ -342,7 +352,7 @@ Class Procs:
 		return FALSE
 	if(panel_open)
 		return FALSE // Close panel first!
-	playsound(loc, W.usesound, 50, 1)
+	playsound(src, W.usesound, 50, 1)
 	var/actual_time = W.toolspeed * time
 	if(actual_time != 0)
 		user.visible_message( \
@@ -403,12 +413,12 @@ Class Procs:
 	if(!panel_open)
 		return 0
 	user.visible_message("<span class='warning'>[user] has cut the wires inside \the [src]!</span>", "You have cut the wires inside \the [src].")
-	playsound(src.loc, W.usesound, 50, 1)
+	playsound(src, W.usesound, 50, 1)
 	new/obj/item/stack/cable_coil(get_turf(src), 5)
 	. = dismantle()
 
 /obj/machinery/proc/dismantle()
-	playsound(src.loc, 'sound/items/Crowbar.ogg', 50, 1)
+	playsound(src, 'sound/items/Crowbar.ogg', 50, 1)
 	//TFF 3/6/19 - port Cit RP fix of infinite frames. If it doesn't have a circuit board, don't create a frame. Return a smack instead. BONK!
 	if(!circuit)
 		return 0

@@ -14,9 +14,6 @@
     locate(min(CENTER.x+(RADIUS),world.maxx), min(CENTER.y+(RADIUS),world.maxy), CENTER.z) \
   )
 
-#define QDEL_NULL(item) qdel(item); item = null
-#define QDEL_LIST(L) if(L) { for(var/I in L) qdel(I); L.Cut(); }
-
 //Inverts the colour of an HTML string
 /proc/invertHTML(HTMLstring)
 
@@ -456,29 +453,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 //Returns a list of all mobs with their name
 /proc/getmobs()
-
-	var/list/mobs = sortmobs()
-	var/list/names = list()
-	var/list/creatures = list()
-	var/list/namecounts = list()
-	for(var/mob/M in mobs)
-		var/name = M.name
-		if (name in names)
-			namecounts[name]++
-			name = "[name] ([namecounts[name]])"
-		else
-			names.Add(name)
-			namecounts[name] = 1
-		if (M.real_name && M.real_name != M.name)
-			name += " \[[M.real_name]\]"
-		if (M.stat == 2)
-			if(istype(M, /mob/observer/dead/))
-				name += " \[ghost\]"
-			else
-				name += " \[dead\]"
-		creatures[name] = M
-
-	return creatures
+	return observe_list_format(sortmobs())
 
 //Orders mobs by type then by name
 /proc/sortmobs()
@@ -511,6 +486,34 @@ Turf and target are seperate in case you want to teleport some distance from a t
 //	for(var/mob/living/silicon/hive_mainframe/M in sortmob)
 //		mob_list.Add(M)
 	return moblist
+
+/proc/observe_list_format(input_list)
+	if(!islist(input_list))
+		return
+	var/list/names = list()
+	var/list/output_list = list()
+	var/list/namecounts = list()
+	var/name
+	for(var/atom/A in input_list)
+		name = A.name
+		if(name in names)
+			namecounts[name]++
+			name = "[name] ([namecounts[name]])"
+		else
+			names.Add(name)
+			namecounts[name] = 1
+		if(ismob(A))
+			var/mob/M = A
+			if(M.real_name && M.real_name != M.name)
+				name += " \[[M.real_name]\]"
+			if(M.stat == DEAD)
+				if(istype(M, /mob/observer/dead/))
+					name += " \[ghost\]"
+				else
+					name += " \[dead\]"
+		output_list[name] = A
+
+	return output_list
 
 // Format a power value in W, kW, MW, or GW.
 /proc/DisplayPower(powerused)
@@ -1467,11 +1470,9 @@ var/mob/dview/dview_mob = new
 		if(337.5)
 			return "North-Northwest"
 
-//gives us the stack trace from CRASH() without ending the current proc.
-/proc/stack_trace(msg)
-	CRASH(msg)
+/proc/pass()
+	return
 
-//This is used to force compiletime errors if you incorrectly supply variable names. Crafty!
 #define NAMEOF(datum, X) (#X || ##datum.##X)
 
 /proc/pick_closest_path(value, list/matches = get_fancy_list_of_atom_types())
@@ -1563,6 +1564,13 @@ var/mob/dview/dview_mob = new
 		return !QDELETED(D)
 	return FALSE
 
+//gives us the stack trace from CRASH() without ending the current proc.
+/proc/stack_trace(msg)
+	CRASH(msg)
+
+/datum/proc/stack_trace(msg)
+	CRASH(msg)
+
 // \ref behaviour got changed in 512 so this is necesary to replicate old behaviour.
 // If it ever becomes necesary to get a more performant REF(), this lies here in wait
 // #define REF(thing) (thing && istype(thing, /datum) && (thing:datum_flags & DF_USE_TAG) && thing:tag ? "[thing:tag]" : "\ref[thing]")
@@ -1576,9 +1584,6 @@ var/mob/dview/dview_mob = new
 			else
 				return "\[[url_encode(thing.tag)]\]"
 	return "\ref[input]"
-
-/proc/pass()
-	return 
 
 // Painlessly creates an <a href=...> element.
 // First argument is where to send the Topic call to when clicked. Should be a reference to an object. This is generally src, but not always.

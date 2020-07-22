@@ -1,12 +1,15 @@
+//CHOMP Edit changed for Southern Cross areas
 #define LOC_KITCHEN 0
 #define LOC_ATMOS 1
 #define LOC_CHAPEL 2
 #define LOC_LIBRARY 3
 #define LOC_HYDRO 4
-#define LOC_VAULT 5
-#define LOC_CONSTR 6
-#define LOC_TECH 7
-#define LOC_GARDEN 8
+#define LOC_TECH 5
+#define LOC_HANGAR1 6
+#define LOC_HANGAR2 7
+#define LOC_HANGAR3 8
+#define LOC_VAULT 9
+
 
 #define VERM_MICE 0
 #define VERM_LIZARDS 1
@@ -21,8 +24,8 @@
 	var/vermstring
 
 /datum/event/infestation/start()
-
-	location = rand(0,8)
+//CHOMP Edit changed for Southern Cross areas
+	location = rand(0,9)
 	var/list/turf/simulated/floor/turfs = list()
 	var/spawn_area_type
 	switch(location)
@@ -41,18 +44,21 @@
 		if(LOC_HYDRO)
 			spawn_area_type = /area/hydroponics
 			locstring = "hydroponics"
-		if(LOC_VAULT)
-			spawn_area_type = /area/security/nuke_storage
-			locstring = "the vault"
-		if(LOC_CONSTR)
-			spawn_area_type = /area/construction
-			locstring = "the construction area"
 		if(LOC_TECH)
 			spawn_area_type = /area/storage/tech
 			locstring = "technical storage"
-		if(LOC_GARDEN)
-			spawn_area_type = /area/hydroponics/garden
-			locstring = "the public garden"
+		if(LOC_HANGAR1)
+			spawn_area_type = /area/hangar/one
+			locstring = "the hangar deck"
+		if(LOC_HANGAR2)
+			spawn_area_type = /area/hangar/two
+			locstring = "the hangar deck"
+		if(LOC_HANGAR3)
+			spawn_area_type = /area/hangar/three
+			locstring = "the hangar deck"
+		if(LOC_VAULT)
+			spawn_area_type = /area/security/nuke_storage
+			locstring = "the vault"
 
 	for(var/areapath in typesof(spawn_area_type))
 		var/area/A = locate(areapath)
@@ -100,9 +106,11 @@
 #undef LOC_CHAPEL
 #undef LOC_LIBRARY
 #undef LOC_HYDRO
-#undef LOC_VAULT
 #undef LOC_TECH
-#undef LOC_GARDEN
+#undef LOC_HANGAR1
+#undef LOC_HANGAR2
+#undef LOC_HANGAR3
+#undef LOC_VAULT
 
 #undef VERM_MICE
 #undef VERM_LIZARDS

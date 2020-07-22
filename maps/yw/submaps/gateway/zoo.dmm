@@ -648,8 +648,6 @@
 /area/awaymission/zoo/pirateship)
 "bZ" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
 	icon_state = "cabinet_closed"
 	},
 /turf/simulated/shuttle/floor/black,

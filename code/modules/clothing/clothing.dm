@@ -140,11 +140,13 @@
 	switch(target_species)
 		//VOREStation Edit Start
 		if(SPECIES_HUMAN, SPECIES_SKRELL)	//humanoid bodytypes
-			species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_NEVREAN, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
+			species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
 		if(SPECIES_UNATHI)
 			species_restricted = list(SPECIES_UNATHI, SPECIES_XENOHYBRID)
 		if(SPECIES_VULPKANIN)
 			species_restricted = list(SPECIES_VULPKANIN, SPECIES_ZORREN_HIGH, SPECIES_FENNEC)
+		if(SPECIES_SERGAL)
+			species_restricted = list(SPECIES_SERGAL, SPECIES_NEVREAN)
 		//VOREStation Edit End
 		else
 			species_restricted = list(target_species)
@@ -166,15 +168,16 @@
 	switch(target_species)
 		//VOREStation Edit Start
 		if(SPECIES_HUMAN)
-			species_restricted = list(SPECIES_HUMAN, SPECIES_NEVREAN, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
+			species_restricted = list(SPECIES_HUMAN, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
 		if(SPECIES_SKRELL)
-			species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_NEVREAN, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
+			species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
 		if(SPECIES_UNATHI)
 			species_restricted = list(SPECIES_UNATHI, SPECIES_XENOHYBRID)
 		if(SPECIES_VULPKANIN)
 			species_restricted = list(SPECIES_VULPKANIN, SPECIES_ZORREN_HIGH, SPECIES_FENNEC)
+		if(SPECIES_SERGAL)
+			species_restricted = list(SPECIES_SERGAL, SPECIES_NEVREAN)
 		//VOREStation Edit End
-
 		else
 			species_restricted = list(target_species)
 
@@ -325,7 +328,7 @@
 			update_icon()
 			return
 
-		playsound(src.loc, W.usesound, 50, 1)
+		playsound(src, W.usesound, 50, 1)
 		user.visible_message("<font color='red'>[user] cuts the fingertips off of the [src].</font>","<font color='red'>You cut the fingertips off of the [src].</font>")
 
 		clipped = 1
@@ -602,7 +605,7 @@
 
 	if(usr.put_in_hands(holding))
 		usr.visible_message("<span class='danger'>\The [usr] pulls a knife out of their boot!</span>")
-		playsound(get_turf(src), 'sound/weapons/holster/sheathout.ogg', 25)
+		playsound(src, 'sound/weapons/holster/sheathout.ogg', 25)
 		holding = null
 		overlays -= image(icon, "[icon_state]_knife")
 	else
@@ -771,20 +774,24 @@
 	var/worn_state = null
 	valid_accessory_slots = (\
 		ACCESSORY_SLOT_UTILITY\
-		|ACCESSORY_SLOT_HOLSTER\
+		|SLOT_HOLSTER\
 		|ACCESSORY_SLOT_WEAPON\
 		|ACCESSORY_SLOT_ARMBAND\
 		|ACCESSORY_SLOT_DECOR\
 		|ACCESSORY_SLOT_MEDAL\
 		|ACCESSORY_SLOT_INSIGNIA\
 		|ACCESSORY_SLOT_TIE\
+		|ACCESSORY_SLOT_RANK\
+		|ACCESSORY_SLOT_DEPT\
 		|ACCESSORY_SLOT_OVER)
 	restricted_accessory_slots = (\
 		ACCESSORY_SLOT_UTILITY\
-		|ACCESSORY_SLOT_HOLSTER\
+		|SLOT_HOLSTER\
 		|ACCESSORY_SLOT_WEAPON\
 		|ACCESSORY_SLOT_ARMBAND\
 		|ACCESSORY_SLOT_TIE\
+		|ACCESSORY_SLOT_RANK\
+		|ACCESSORY_SLOT_DEPT\
 		|ACCESSORY_SLOT_OVER)
 
 	var/icon/rolled_down_icon = 'icons/mob/uniform_rolled_down.dmi'
