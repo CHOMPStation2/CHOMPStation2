@@ -209,10 +209,10 @@
 	name = "Butterscotch-Cinnamon Pie"
 	desc = "A delightfully caramel-coloured filling in a crispy pie base, with a spray of cream on top."
 	icon = 'icons/obj/food_ch.dmi'
-	icon_state = "buttspie"
-	nutriment_amt = 20
+	icon_state = "butts_pie"
+	nutriment_amt = 10
 	nutriment_desc = list("a warm, buttery sweetness that reminds you of home" = 5)
 
-/obj/item/weapon/reagent_containers/food/snacks/butterscotch/Initialize()
+/obj/item/weapon/reagent_containers/food/snacks/buttspie/Initialize()
 	..()
 	bitesize = 5

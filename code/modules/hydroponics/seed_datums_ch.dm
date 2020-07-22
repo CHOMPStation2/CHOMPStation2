@@ -188,6 +188,6 @@
 	set_trait(TRAIT_PRODUCTION,6)
 	set_trait(TRAIT_YIELD,5)
 	set_trait(TRAIT_POTENCY,10)
-	set_trait(TRAIT_PRODUCT_ICON, "stalk") //Temporary value. Will keep if it looks nice
-	set_trait(TRAIT_PRODUCT_COLOUR, "#A96622")
+	set_trait(TRAIT_PRODUCT_ICON, "stalk")
+	set_trait(TRAIT_PRODUCT_COLOUR, "#FF9A85")
 	set_trait(TRAIT_PLANT_ICON,"tree2")
