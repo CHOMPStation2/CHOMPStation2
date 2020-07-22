@@ -377,6 +377,14 @@
 	name = "\improper Security Interceptor Hangar"
 	icon_state = "security"
 
+/area/security/watchtower
+	name = "\improper Security Watchtower"
+	icon_state = "security"
+
+/area/maintenance/security_tower
+	name = "\improper Security Tower Maintenance"
+	icon_state = "darkred"
+
 /area/security/sorting
 	name = "\improper Security disposals processing"
 	icon_state = "security"
