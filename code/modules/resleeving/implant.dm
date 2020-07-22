@@ -32,8 +32,9 @@
 /obj/item/weapon/implant/backup/post_implant(var/mob/living/carbon/human/H)
 	if(istype(H))
 		BITSET(H.hud_updateflag, BACKUP_HUD)
-		SStranscore.implants |= src
-
+		if(H.mind && H.stat < DEAD)
+			SStranscore.m_backup(H.mind,H.nif)
+			persist_nif_data(H)
 		return 1
 
 //New, modern implanter instead of old style implanter.

@@ -32,7 +32,9 @@ SUBSYSTEM_DEF(transcore)
 /datum/controller/subsystem/transcore/fire(resumed = 0)
 	var/timer = TICK_USAGE
 
-	INTERNAL_PROCESS_STEP(SSTRANSCORE_IMPLANTS,TRUE,process_implants,cost_implants,SSTRANSCORE_BACKUPS)
+//	INTERNAL_PROCESS_STEP(SSTRANSCORE_IMPLANTS,TRUE,process_implants,cost_implants,SSTRANSCORE_BACKUPS)
+//Temporary band aid fix to address transcore resource use. Transcore backing up moved to the post_implant proc on the backup implant instead.
+//That means your mind saves ON IMPLANT, rather than once every time this subsytem fires.
 	INTERNAL_PROCESS_STEP(SSTRANSCORE_BACKUPS,FALSE,process_backups,cost_backups,SSTRANSCORE_IMPLANTS)
 
 /datum/controller/subsystem/transcore/proc/process_implants(resumed = 0)
@@ -57,7 +59,7 @@ SUBSYSTEM_DEF(transcore)
 			continue
 
 		//In a human
-		BITSET(H.hud_updateflag, BACKUP_HUD)
+		ENABLE_BITFIELD(H.hud_updateflag, BACKUP_HUD)
 
 		if(H == imp.imp_in && H.mind && H.stat < DEAD)
 			SStranscore.m_backup(H.mind,H.nif)
@@ -167,14 +169,14 @@ SUBSYSTEM_DEF(transcore)
 		global_announcer.autosay("[name] is past-due for a mind backup.", "TransCore Oversight", "Medical")
 
 // Called from mind_record to add itself to the transcore.
-/datum/controller/subsystem/transcore/proc/add_backup(var/datum/transhuman/mind_record/MR)
+/datum/controller/subsystem/transcore/proc/add_backup(datum/transhuman/mind_record/MR)
 	ASSERT(MR)
 	backed_up[MR.mindname] = MR
-	backed_up = sortAssoc(backed_up)
+	backed_up = sortTim(backed_up)
 	log_debug("Added [MR.mindname] to transcore DB.")
 
 // Remove a mind_record from the backup-checking list.  Keeps track of it in has_left // Why do we do that? ~Leshana
-/datum/controller/subsystem/transcore/proc/stop_backup(var/datum/transhuman/mind_record/MR)
+/datum/controller/subsystem/transcore/proc/stop_backup(datum/transhuman/mind_record/MR)
 	ASSERT(MR)
 	has_left[MR.mindname] = MR
 	backed_up.Remove("[MR.mindname]")
@@ -182,20 +184,20 @@ SUBSYSTEM_DEF(transcore)
 	log_debug("Put [MR.mindname] in transcore suspended DB.")
 
 // Called from body_record to add itself to the transcore.
-/datum/controller/subsystem/transcore/proc/add_body(var/datum/transhuman/body_record/BR)
+/datum/controller/subsystem/transcore/proc/add_body(datum/transhuman/body_record/BR)
 	ASSERT(BR)
 	body_scans[BR.mydna.name] = BR
-	body_scans = sortAssoc(body_scans)
+	body_scans = sortTim(body_scans)
 	log_debug("Added [BR.mydna.name] to transcore body DB.")
 
 // Remove a body record from the database (Usually done when someone cryos)  // Why? ~Leshana
-/datum/controller/subsystem/transcore/proc/remove_body(var/datum/transhuman/body_record/BR)
+/datum/controller/subsystem/transcore/proc/remove_body(datum/transhuman/body_record/BR)
 	ASSERT(BR)
 	body_scans.Remove("[BR.mydna.name]")
 	log_debug("Removed [BR.mydna.name] from transcore body DB.")
 
 // Moves all mind records from the databaes into the disk and shuts down all backup canary processing.
-/datum/controller/subsystem/transcore/proc/core_dump(var/obj/item/weapon/disk/transcore/disk)
+/datum/controller/subsystem/transcore/proc/core_dump(obj/item/weapon/disk/transcore/disk)
 	ASSERT(disk)
 	global_announcer.autosay("An emergency core dump has been initiated!", "TransCore Oversight", "Command")
 	global_announcer.autosay("An emergency core dump has been initiated!", "TransCore Oversight", "Medical")

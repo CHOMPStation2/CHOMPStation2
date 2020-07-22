@@ -349,3 +349,6 @@ var/global/list/##LIST_NAME = list();\
 #define JOB_SILICON_ROBOT	0x2
 #define JOB_SILICON_AI		0x4
 #define JOB_SILICON			0x6 // 2|4, probably don't set jobs to this, but good for checking
+
+//Preference save/load cooldown. This is in deciseconds.
+#define PREF_SAVELOAD_COOLDOWN 2 //Should be sufficiently hard to achieve without a broken mouse or autoclicker while still fulfilling its intended goal.
