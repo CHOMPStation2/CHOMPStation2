@@ -108,12 +108,15 @@
 
 /area/borealis2/outdoors/exterior/explore1
 	name = "Abandoned building"
+	icon_state = "outside1"
 
 /area/borealis2/outdoors/exterior/explore2
 	name = "Unexplored Area"
+	icon_state = "outside2"
 
 /area/borealis2/outdoors/exterior/explore3
 	name = "Unexplored Caves"
+	icon_state = "outside3"
 
 /area/borealis2/outdoors/grounds/power
 	name = "\The Exterior Powerline"
