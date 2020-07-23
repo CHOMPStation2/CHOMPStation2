@@ -4,6 +4,8 @@
 /area/borealis2/elevator/medbasement
 	name = "Elevator shaft - Lower Medical"
 /area/borealis2/elevator/medbay
+	name = "Elevator shaft - Main Medical"
+/area/borealis2/elevator/medupper
 	name = "Elevator shaft - Upper Medical"
 /area/borealis2/elevator/dorms
 	name = "Elevator shaft - Dorms"
@@ -13,6 +15,8 @@
 	name = "Elevator shaft - Sci-Mining"
 /area/borealis2/elevator/sciminingtransit
 	name = "Elevator shaft - Depth tranist"
+/area/borealis2/elevator/uppermining
+	name = "Elevator shaft - Upper Level"
 /area/borealis2/outdoors
 	name = "Outside - Surface"
 	icon_state = "outside1"
@@ -25,20 +29,94 @@
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
 
+/area/borealis2/outdoors/grounds/upper
+	name = "\The outpost grounds - upper level"
+	base_turf = /turf/simulated/open/cryogaia
+	icon_state = "outside2"
+
+/area/borealis2/outdoors/grounds/wall
+	name = "Perimeter Wall"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_hostile_area"
+
+/area/borealis2/outdoors/grounds/walkway
+	name = "Perimeter Wall - Upper"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_trespass_area"
+
+/area/borealis2/outdoors/grounds/walkway/exploration
+	name = "Exploration - Exterior Rooftop"
+
+/area/borealis2/outdoors/grounds/checkpoint
+	name = "Perimeter Checkpoint"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_trespass_alt"
+
+/area/borealis2/outdoors/grounds/tower
+	name = "Perimeter Tower"
+
+/area/borealis2/outdoors/grounds/tower/north
+	name = "Perimeter Tower - N"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "north"
+
+/area/borealis2/outdoors/grounds/tower/northeast
+	name = "Perimeter Tower - NE"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "northeast"
+
+/area/borealis2/outdoors/grounds/tower/east
+	name = "Perimeter Tower - E"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "east"
+
+/area/borealis2/outdoors/grounds/tower/southeast
+	name = "Perimeter Tower - SE"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "southeast"
+
+/area/borealis2/outdoors/grounds/tower/south
+	name = "Perimeter Tower - S"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "south"
+
+/area/borealis2/outdoors/grounds/tower/southwest
+	name = "Perimeter Tower - SW"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "southwest"
+
+/area/borealis2/outdoors/grounds/tower/west
+	name = "Perimeter Tower - W"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "west"
+
+/area/borealis2/outdoors/grounds/tower/northwest
+	name = "Perimeter Tower - NW"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "northwest"
+
 /area/borealis2/outdoors/exterior
 	name = "The wilderness"
+	icon_state = "outside1unex"
+
+/area/borealis2/outdoors/exterior/upper
+	name = "The wilderness - upper level"
+	icon_state = "outside2unex"
 
 /area/borealis2/outdoors/exterior/lake
 	name = "The Ice Lake"
 
 /area/borealis2/outdoors/exterior/explore1
 	name = "Abandoned building"
+	icon_state = "outside1"
 
 /area/borealis2/outdoors/exterior/explore2
 	name = "Unexplored Area"
+	icon_state = "outside2"
 
 /area/borealis2/outdoors/exterior/explore3
 	name = "Unexplored Caves"
+	icon_state = "outside3"
 
 /area/borealis2/outdoors/grounds/power
 	name = "\The Exterior Powerline"
@@ -119,6 +197,8 @@
 /area/chapel/monastery/recreation
 	name = "Monastery Recreation"
 
+/area/chapel/monastery/upper
+	name = "Monastery Upper Floor"
 
 //holodorms
 /area/holodeck/holodorm/source_basic
@@ -211,6 +291,23 @@
 /area/cryogaia/station/pathfinder_office
 	name = "\improper Pathfinder's Office"
 
+/area/cryogaia/station/explorer_upper
+	name = "\improper Exploration Upper Level"
+
+/area/cryogaia/station/ert_arrival
+	name = "\improper Emergency Responder Point"
+
+/area/cryogaia/station/hallway/primary/upper
+	name = "\improper Upper Level Hallways"
+	icon_state = "hallC1"
+
+/area/cryogaia/station/medical/upper
+	name = "\improper Medical Loft"
+	icon_state = "medbay_primary_storage"
+
+/area/constructionsite/cryogaia/upper
+	name = "\improper Upper Level Construction Area"
+
 /area/shuttle/excursion
 	name = "\improper Exploration Vessel"
 	icon_state = "shuttle2"
@@ -293,6 +390,14 @@
 	name = "\improper Security Interceptor Hangar"
 	icon_state = "security"
 
+/area/security/watchtower
+	name = "\improper Security Watchtower"
+	icon_state = "security"
+
+/area/maintenance/security_tower
+	name = "\improper Security Tower Maintenance"
+	icon_state = "darkred"
+
 /area/security/sorting
 	name = "\improper Security disposals processing"
 	icon_state = "security"
@@ -308,6 +413,10 @@
 /area/maintenance/medical_lower
 	name = "Underground Medical Maintenance"
 	icon_state = "maint_medbay_fore"
+
+/area/maintenance/medical_upper
+	name = "Upper Level Medical Maintenance"
+	icon_state = "maint_medbay_aft"
 
 /area/mine/unexplored/underdark
 	name = "Underground rock"
