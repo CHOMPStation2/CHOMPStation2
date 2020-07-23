@@ -24,7 +24,7 @@
 	my_landmark = "exphangar_1"
 	preferred_interim_tag = "shuttle3_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
@@ -61,7 +61,7 @@
 	my_landmark = "hangar_3"
 	preferred_interim_tag = "shuttle3_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 /*
 /datum/shuttle_destination/shuttle3/stationhangar3/get_arrival_message()
@@ -84,7 +84,7 @@
 	my_landmark = "shuttle3_mining"
 	preferred_interim_tag = "shuttle3_sky_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
 /*
 /datum/shuttle_destination/shuttle3/mining_base/get_arrival_message()
