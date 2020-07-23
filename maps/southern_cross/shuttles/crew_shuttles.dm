@@ -93,7 +93,7 @@
 	my_landmark = "hangar_1"
 	preferred_interim_tag = "shuttle1_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
@@ -111,7 +111,7 @@
 	my_landmark = "hangar_2"
 	preferred_interim_tag = "shuttle2_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
@@ -151,7 +151,7 @@
 	my_landmark = "shuttle1_arrivals_dock"
 	preferred_interim_tag = "shuttle1_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 /*
 /datum/shuttle_destination/shuttle1/docked_SC/get_arrival_message()
@@ -166,7 +166,7 @@
 	my_landmark = "shuttle2_arrivals_dock"
 	preferred_interim_tag = "shuttle2_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 /*
 /datum/shuttle_destination/shuttle2/docked_SC/get_arrival_message()
@@ -221,7 +221,7 @@
 	my_landmark = "shuttle1_planet"
 	preferred_interim_tag = "shuttle1_sky_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
 /*
 /datum/shuttle_destination/shuttle1/main_base/get_arrival_message()
@@ -235,7 +235,7 @@
 	my_landmark = "shuttle2_planet"
 	preferred_interim_tag = "shuttle2_sky_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
 /*
 /datum/shuttle_destination/shuttle2/main_base/get_arrival_message()
@@ -251,7 +251,7 @@
 	my_landmark = "shuttle1_mining"
 	preferred_interim_tag = "shuttle1_sky_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
 /*
 /datum/shuttle_destination/shuttle1/mining_base/get_arrival_message()
@@ -266,7 +266,7 @@
 	my_landmark = "shuttle2_mining"
 	preferred_interim_tag = "shuttle2_sky_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
 /*
 /datum/shuttle_destination/shuttle2/mining_base/get_arrival_message()
