@@ -30,7 +30,7 @@
 	name = "\The outpost grounds"
 
 /area/borealis2/outdoors/grounds/upper
-	name = "\The outpost grounds - upper level"
+	name = "\The outpost grounds"
 	base_turf = /turf/simulated/open/cryogaia
 	icon_state = "outside2"
 
@@ -40,7 +40,7 @@
 	icon_state = "submap_hostile_area"
 
 /area/borealis2/outdoors/grounds/walkway
-	name = "Perimeter Wall - Upper"
+	name = "Perimeter Wall Walkway"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "submap_trespass_area"
 
@@ -96,11 +96,11 @@
 	icon_state = "northwest"
 
 /area/borealis2/outdoors/exterior
-	name = "The wilderness"
+	name = "\The wilderness"
 	icon_state = "outside1unex"
 
 /area/borealis2/outdoors/exterior/upper
-	name = "The wilderness - upper level"
+	name = "\The wilderness"
 	icon_state = "outside2unex"
 
 /area/borealis2/outdoors/exterior/lake

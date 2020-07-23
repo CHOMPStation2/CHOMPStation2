@@ -43,7 +43,7 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "aak" = (
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/cryogaia,
 /area/borealis2/outdoors/grounds/walkway/exploration)
 "aal" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner,
@@ -269,6 +269,10 @@
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/east)
@@ -577,6 +581,14 @@
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
+"afk" = (
+/obj/structure/railing,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "afT" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
 /area/borealis2/elevator/uppermining)
@@ -646,6 +658,13 @@
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
+"apd" = (
+/obj/item/device/geiger/wall{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/wood,
+/area/chapel/monastery/upper)
 "aqM" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -712,6 +731,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
+"ayt" = (
+/obj/effect/floor_decal/corner/white/full{
+	icon_state = "corner_white_full";
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "aBo" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall,
@@ -740,15 +766,46 @@
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
+"aGV" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/obj/machinery/holoposter{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "aGZ" = (
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"aHe" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	icon_state = "pipe-t";
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
 "aII" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
+"aKe" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "aOh" = (
 /obj/machinery/light/small{
 	dir = 8;
@@ -764,6 +821,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "aPa" = (
@@ -816,6 +874,10 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"aYK" = (
+/obj/structure/railing,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "aYV" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
@@ -842,6 +904,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -1083,6 +1149,12 @@
 	pixel_x = -25;
 	pixel_y = 0
 	},
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/south)
 "bxY" = (
@@ -1094,7 +1166,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "bzg" = (
 /obj/structure/railing/grey{
@@ -1122,8 +1194,20 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 8
 	},
+/obj/structure/disposalpipe/down{
+	icon_state = "pipe-d";
+	dir = 8
+	},
 /turf/simulated/open,
 /area/cryogaia/station/hallway/primary/upper)
+"bDX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5;
+	icon_state = "intact-supply"
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "bGd" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -1282,7 +1366,7 @@
 	dir = 1;
 	pixel_y = -30
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "ccH" = (
 /obj/structure/cable{
@@ -1394,7 +1478,11 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/obj/structure/bed/chair/wood{
+	icon_state = "wooden_chair";
+	dir = 8
+	},
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "csN" = (
 /obj/machinery/door/airlock/maintenance/common,
@@ -1455,6 +1543,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"cGG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "cKq" = (
 /obj/machinery/light{
 	dir = 8
@@ -1465,6 +1562,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/explorer_upper)
+"cKO" = (
+/obj/machinery/holoposter{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "cMj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1599,6 +1703,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"dqr" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_upper)
 "dqB" = (
 /turf/simulated/wall,
 /area/crew_quarters/medbreak)
@@ -1656,6 +1772,14 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/tower/west)
+"duP" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "dxH" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -1734,6 +1858,10 @@
 	desc = "A sign denoting that this elevator shaft is not radiation proof";
 	name = "\improper NON-RADIATION SHIELDED AREA";
 	pixel_x = -30
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper)
@@ -1824,6 +1952,14 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southeast)
+"dYp" = (
+/obj/structure/flora/pottedplant/large,
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "dYD" = (
 /obj/structure/railing{
 	dir = 1;
@@ -1875,6 +2011,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"ehj" = (
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "ejf" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -1913,6 +2052,24 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
+"eqL" = (
+/obj/machinery/power/thermoregulator/cryogaia{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 9
+	},
+/obj/effect/floor_decal/rust,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/civilian/atrium/upper)
 "eqU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -1938,6 +2095,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
+"esP" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"evQ" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/civilian/atrium/upper)
 "exb" = (
 /obj/structure/railing{
 	dir = 1;
@@ -1954,6 +2120,18 @@
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
+"eCJ" = (
+/obj/structure/railing/grey{
+	icon_state = "grey_railing0";
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	icon_state = "grey_railing0";
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/cryogaia/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "eCS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5;
@@ -1999,6 +2177,13 @@
 "eFr" = (
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"eGZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "eIu" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	frequency = 1379;
@@ -2055,11 +2240,6 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	layer = 3.3;
-	pixel_x = 26
-	},
 /obj/structure/bed/chair{
 	dir = 1
 	},
@@ -2075,6 +2255,12 @@
 	},
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"eTt" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/chapel/monastery/upper)
 "eUq" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -2104,9 +2290,40 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"fbb" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4;
+	icon_state = "map-scrubbers"
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "fbI" = (
 /turf/simulated/wall/r_wall,
 /area/borealis2/outdoors/grounds/upper)
+"fdH" = (
+/obj/machinery/door/airlock/glass_external/public{
+	id_tag = "Outpost_NW_Interior"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/access_button/airlock_interior{
+	master_tag = "Outpost_NW_Master";
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/civilian/atrium/upper)
 "fdW" = (
 /obj/structure/railing/grey{
 	icon_state = "grey_railing0";
@@ -2130,6 +2347,16 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
+"fhH" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/holoposter{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "fiE" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
@@ -2160,6 +2387,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_tower)
+"fjn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "fkz" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -2175,6 +2409,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"flu" = (
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "fmu" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -2211,6 +2452,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"fnd" = (
+/obj/structure/railing/grey,
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/checkpoint)
 "foF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2222,19 +2473,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
-"fss" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/chapel/monastery/upper)
 "fuj" = (
 /obj/machinery/washing_machine,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -2270,6 +2508,7 @@
 	icon_state = "0-2";
 	pixel_y = 0
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "fxP" = (
@@ -2287,6 +2526,13 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/belter)
+"fyU" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white,
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "fCG" = (
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -2390,7 +2636,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "gcD" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -2411,14 +2657,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/chapel/monastery/upper)
-"ggP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/chapel/monastery/upper)
 "ghe" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -2430,6 +2668,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
+"ghy" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "giD" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -2440,6 +2692,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
+"gjR" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/weapon/ice_pick,
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "gkX" = (
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/belter)
@@ -2500,6 +2760,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
+"gyq" = (
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "gyY" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -2517,6 +2784,9 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper)
@@ -2651,7 +2921,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
 "hdV" = (
 /turf/unsimulated/wall/planetary/borealis2,
@@ -2703,8 +2973,18 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
+"hnZ" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "hru" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -2898,6 +3178,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"icm" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "icn" = (
 /obj/item/weapon/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -2938,6 +3237,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
+"ifG" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "igS" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	icon_state = "door_open";
@@ -2958,12 +3273,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"iiZ" = (
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "ilD" = (
 /obj/item/device/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
+"imp" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "imr" = (
 /obj/structure/railing/grey,
@@ -2994,11 +3321,17 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
+"iqr" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "iqA" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "isL" = (
 /obj/item/device/radio/intercom{
@@ -3032,6 +3365,18 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"iuG" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "iwg" = (
 /obj/item/weapon/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -3048,6 +3393,11 @@
 /obj/structure/railing/grey{
 	icon_state = "grey_railing0";
 	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -3107,6 +3457,25 @@
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/walkway)
+"iJZ" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "Outpost_NW_Master";
+	name = "Outpost Upper NW Access Controller";
+	pixel_y = -26;
+	tag_exterior_door = "Outpost_NW_Exterior";
+	tag_interior_door = "Outpost_NW_Interior"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 10
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/civilian/atrium/upper)
 "iKP" = (
 /obj/effect/landmark/start{
 	name = "Shaft Miner"
@@ -3158,11 +3527,22 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
 "iXv" = (
 /turf/simulated/wall,
 /area/medical/medbayupper)
+"iYV" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled,
+/area/medical/medbayskybridge)
 "iYX" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -3178,6 +3558,10 @@
 "jbk" = (
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
+"jbr" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_upper)
 "jbx" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -3203,6 +3587,16 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
+"jfp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
 "jfF" = (
 /obj/machinery/door/airlock/glass_external/freezable{
@@ -3272,6 +3666,36 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"jsY" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"jvm" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"jvU" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "jzU" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -3384,6 +3808,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
+"jTw" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 6;
+	icon_state = "warning_dust"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/civilian/atrium/upper)
 "jZh" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3416,9 +3848,15 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/item/device/geiger/wall{
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
+"kfb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4;
-	pixel_x = -30
+	icon_state = "intact-scrubbers"
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -3447,6 +3885,30 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
+"kox" = (
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/southeast)
+"kth" = (
+/obj/machinery/alarm{
+	dir = 1;
+	icon_state = "alarm0";
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"kup" = (
+/obj/structure/bed/chair/wood{
+	icon_state = "wooden_chair";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "kuv" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
@@ -3454,7 +3916,11 @@
 /area/borealis2/outdoors/grounds/tower/northwest)
 "kuV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled,
+/obj/structure/bed/chair/wood{
+	icon_state = "wooden_chair";
+	dir = 8
+	},
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "kwL" = (
 /obj/machinery/vending/coffee,
@@ -3535,6 +4001,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper)
+"kHX" = (
+/obj/machinery/door/airlock/glass_external/freezable{
+	id_tag = "Outpost_NW_Exterior"
+	},
+/obj/machinery/access_button/airlock_exterior{
+	master_tag = "Outpost_NW_Master";
+	pixel_x = 26
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/civilian/atrium/upper)
 "kJK" = (
 /turf/simulated/wall,
 /area/maintenance/security_tower)
@@ -3564,6 +4040,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/closet/crate,
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
 "kQv" = (
@@ -3587,6 +4064,14 @@
 /obj/structure/flora/pottedplant/large,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"kUM" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/weapon/ice_pick,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/hallway/primary/upper)
 "kUQ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3606,6 +4091,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"kZb" = (
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "lbe" = (
 /obj/item/device/geiger/wall{
 	dir = 4;
@@ -3624,6 +4117,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"lgc" = (
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "lgG" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
@@ -3690,6 +4190,11 @@
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "lnT" = (
@@ -3704,6 +4209,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"luV" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/civilian/atrium/upper)
 "lvE" = (
 /obj/machinery/access_button/airlock_exterior{
 	master_tag = "Monastary_Upper_NW_Exit";
@@ -3720,6 +4232,24 @@
 "lwd" = (
 /turf/simulated/open,
 /area/cryogaia/station/explorer_upper)
+"lwX" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "lzU" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
@@ -3757,6 +4287,11 @@
 	dir = 4;
 	pixel_x = -25;
 	pixel_y = 0
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -3838,6 +4373,18 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
+"lZO" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/holoposter{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "mab" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3865,7 +4412,7 @@
 	icon_state = "map-scrubbers"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
 "mem" = (
 /obj/structure/cable/green{
@@ -3898,7 +4445,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
 "miV" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -3941,6 +4488,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/west)
+"mqj" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "msh" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -3986,10 +4539,31 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
+"mxs" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "mxG" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"mza" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "mzQ" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 4
@@ -4039,6 +4613,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
+"mMk" = (
+/obj/structure/bed/chair/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "mMS" = (
 /obj/structure/railing/grey{
 	icon_state = "grey_railing0";
@@ -4100,6 +4680,12 @@
 "mWF" = (
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway/exploration)
+"mZw" = (
+/obj/structure/table/woodentable,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "nax" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -4209,6 +4795,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper)
+"niU" = (
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "nmc" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -4358,20 +4951,15 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/belter)
-"nMW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+"nNf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
 	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "nPp" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -4379,6 +4967,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
+"nQj" = (
+/obj/structure/bed/chair/wood{
+	icon_state = "wooden_chair";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "nQZ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -4586,6 +5181,31 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
+"osE" = (
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"ouq" = (
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"ouG" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "ovv" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
@@ -4689,6 +5309,9 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -4806,12 +5429,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "oPy" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
+"oRx" = (
+/obj/structure/bed/chair/wood{
+	icon_state = "wooden_chair";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "oSJ" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
@@ -4980,6 +5612,21 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway/exploration)
+"pza" = (
+/obj/structure/flora/pottedplant/large,
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"pAQ" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/medbreak)
 "pBg" = (
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -5041,6 +5688,10 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
 "pPJ" = (
@@ -5065,6 +5716,18 @@
 "pSa" = (
 /turf/simulated/wall/r_wall,
 /area/cryogaia/station/explorer_upper)
+"pSL" = (
+/obj/structure/railing/grey{
+	icon_state = "grey_railing0";
+	dir = 4
+	},
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/cryogaia/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
+"pTo" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/plating,
+/area/chapel/monastery/upper)
 "pVN" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -5350,6 +6013,16 @@
 "qze" = (
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"qzo" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "qzI" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/corner/paleblue{
@@ -5382,6 +6055,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
+"qAz" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "qAQ" = (
 /obj/structure/railing/grey{
 	icon_state = "grey_railing0";
@@ -5448,6 +6127,9 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
+"qMC" = (
+/turf/simulated/floor/wood,
+/area/chapel/monastery/upper)
 "qNi" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -5489,6 +6171,13 @@
 "qUI" = (
 /turf/simulated/wall/r_wall,
 /area/security/watchtower)
+"qXN" = (
+/obj/machinery/vending/fitness{
+	icon_state = "fitness";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "qYp" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5560,6 +6249,13 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
+"rpv" = (
+/obj/machinery/holoposter{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "rqN" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
@@ -5639,6 +6335,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"rUS" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	icon_state = "alarm0";
+	pixel_y = -22
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "rVU" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -5659,6 +6371,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
+"rZe" = (
+/turf/simulated/floor/tiled/dark,
+/area/borealis2/outdoors/grounds/upper)
 "saz" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5716,6 +6431,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/hallway/primary/upper)
+"sip" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "sjO" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -5736,6 +6455,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
+"skx" = (
+/obj/structure/flora/pottedplant/large,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"skJ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "skL" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -5770,6 +6499,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"ssq" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "ssw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5869,6 +6610,20 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
+"sFz" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "sFE" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
@@ -5929,6 +6684,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
+"sJK" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "sLD" = (
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia/covered,
 /area/borealis2/outdoors/grounds/upper)
@@ -5944,7 +6708,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
 "sQN" = (
 /obj/structure/railing{
@@ -6015,6 +6779,16 @@
 /obj/structure/sign/hangar/one,
 /turf/simulated/wall/r_wall,
 /area/quartermaster/miningdock)
+"sYf" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
 "sZO" = (
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
@@ -6049,6 +6823,13 @@
 "tbY" = (
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
+"tdf" = (
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "tez" = (
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
@@ -6075,6 +6856,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"tgp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/turf/simulated/floor/wood,
+/area/chapel/monastery/upper)
 "tgq" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -6100,6 +6888,13 @@
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
+"tjc" = (
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "tjQ" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
@@ -6160,6 +6955,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"tsK" = (
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/chapel/monastery/upper)
 "ttk" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -6200,6 +6999,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/explorer_upper)
+"tAd" = (
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/southwest)
 "tCm" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -6311,7 +7119,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "tNR" = (
 /obj/structure/cable/green{
@@ -6323,6 +7131,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/quartermaster/miningdock)
 "tOv" = (
@@ -6448,6 +7257,13 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"uiY" = (
+/obj/structure/table/woodentable,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "umR" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -6540,6 +7356,14 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
+"uGv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "uIO" = (
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
@@ -6657,6 +7481,10 @@
 	icon_state = "alarm0";
 	pixel_x = -22
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medical Loft";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
 "vdm" = (
@@ -6670,6 +7498,13 @@
 /area/borealis2/elevator/medupper)
 "vdJ" = (
 /turf/simulated/wall,
+/area/chapel/monastery/upper)
+"veC" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "veG" = (
 /turf/simulated/wall,
@@ -6701,7 +7536,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "vha" = (
 /obj/structure/railing/grey{
@@ -6710,6 +7545,18 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway/exploration)
+"viM" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "vnC" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -6758,6 +7605,19 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/chapel/monastery/upper)
+"vyz" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"vCF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "vDj" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -6850,6 +7710,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper)
+"vOV" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "vRp" = (
 /obj/item/weapon/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -6931,6 +7799,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper)
+"wif" = (
+/obj/structure/bed/chair/wood{
+	icon_state = "wooden_chair";
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "wiM" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -6998,6 +7873,11 @@
 "wte" = (
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/west)
+"wxb" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/civilian/atrium/upper)
 "wxv" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -7080,7 +7960,17 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
+/area/chapel/monastery/upper)
+"wEQ" = (
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
 "wFm" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -7113,8 +8003,13 @@
 	pixel_x = -25;
 	pixel_y = 0
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
+"wKR" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/civilian/atrium/upper)
 "wLl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -7129,6 +8024,13 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"wNZ" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/civilian/atrium/upper)
 "wPJ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
@@ -7159,6 +8061,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"wSO" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery/upper)
+"wSR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "wTE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4;
@@ -7250,6 +8162,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"xeH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/corner/white{
+	icon_state = "corner_white";
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "xeM" = (
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
@@ -7267,6 +8187,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/uppermining)
+"xke" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/plating,
+/area/chapel/monastery/upper)
 "xkf" = (
 /obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled,
@@ -7341,6 +8265,10 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
+"xyS" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
 "xzO" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
@@ -7396,6 +8324,7 @@
 	icon_state = "tube1";
 	pixel_y = 0
 	},
+/obj/effect/floor_decal/corner/white,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "xFf" = (
@@ -7446,6 +8375,9 @@
 /obj/machinery/light/small{
 	dir = 1;
 	icon_state = "bulb1"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper)
@@ -7525,6 +8457,10 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -17504,8 +18440,8 @@ aae
 aae
 aae
 qKe
-abc
-abi
+abb
+tAd
 abm
 abm
 abw
@@ -18140,7 +19076,7 @@ aaG
 aaM
 aaG
 lna
-aax
+aab
 kuv
 aaf
 aaf
@@ -18190,7 +19126,7 @@ mpn
 wyn
 wyn
 iyY
-lii
+wte
 cyd
 aaf
 aaf
@@ -38572,7 +39508,7 @@ qNi
 wFm
 buZ
 yfw
-buZ
+pAQ
 buZ
 buZ
 buZ
@@ -40940,7 +41876,7 @@ aaf
 aaf
 aaf
 gEW
-pcI
+oIw
 bvg
 lbe
 sqE
@@ -42098,7 +43034,7 @@ nmc
 nmc
 alC
 giD
-nmc
+iYV
 tgV
 jeG
 ePX
@@ -45396,13 +46332,13 @@ hCZ
 hCZ
 hCZ
 hCZ
-jQk
-jQk
+skx
+lZO
 fvv
 nIl
 jQk
-jQk
-jQk
+cKO
+skx
 hCZ
 hCZ
 hCZ
@@ -45411,8 +46347,8 @@ hCZ
 hCZ
 hCZ
 hCZ
-jQk
-jQk
+qXN
+lgc
 hCZ
 hCZ
 hCZ
@@ -45649,7 +46585,13 @@ jQk
 jQk
 nfI
 jQk
+vyz
 jQk
+aKe
+jQk
+jQk
+jQk
+nfI
 jQk
 jQk
 jQk
@@ -45660,14 +46602,8 @@ jQk
 jQk
 jQk
 jQk
-jQk
-nfI
-jQk
-jQk
-jQk
-jQk
-nfI
-jQk
+fhH
+skx
 hCZ
 hCZ
 eFr
@@ -45892,33 +46828,33 @@ eFr
 eFr
 eFr
 hCZ
+dYp
 jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
+esP
+wSR
+wSR
+wSR
+wSR
+sFz
+jvU
+hnZ
+mMk
+uiY
+oRx
+vCF
+vCF
+eGZ
+vCF
+vCF
+vCF
+vCF
+vCF
+bDX
+wSR
+wSR
+wSR
+wSR
+skJ
 jQk
 jQk
 hCZ
@@ -46143,15 +47079,15 @@ eFr
 eFr
 eFr
 eFr
-hCZ
-jQk
+wxb
+tjc
 jQk
 jQk
 tbQ
 tbQ
 tbQ
 jQk
-jQk
+jvm
 hyw
 prO
 prO
@@ -46159,13 +47095,13 @@ prO
 prO
 prO
 sAj
-jQk
+jsY
 jQk
 tbQ
 tbQ
 tbQ
 jQk
-jQk
+jsY
 hyw
 prO
 prO
@@ -46395,15 +47331,15 @@ eFr
 eFr
 eFr
 eFr
-hCZ
-jQk
+wxb
+tjc
 jQk
 jQk
 tbQ
 qze
 dco
 jQk
-jQk
+jvm
 mWs
 qze
 qze
@@ -46422,7 +47358,7 @@ mWs
 qze
 qze
 dco
-jQk
+nQj
 jQk
 jQk
 hCZ
@@ -46647,15 +47583,15 @@ eFr
 eFr
 eFr
 eFr
-hCZ
-jQk
+wxb
+tjc
 jQk
 jQk
 tbQ
 qze
 qze
 jQk
-jQk
+jvm
 mWs
 qze
 qze
@@ -46674,9 +47610,9 @@ mWs
 qze
 qze
 dco
+sip
 jQk
-jQk
-jQk
+kth
 hCZ
 eFr
 eFr
@@ -46899,15 +47835,15 @@ eFr
 eFr
 eFr
 eFr
-hCZ
-jQk
+wxb
+tjc
 jQk
 jQk
 tbQ
 qze
 dco
 jQk
-jQk
+jvm
 mWs
 qze
 qze
@@ -46926,7 +47862,7 @@ mWs
 qze
 qze
 dco
-jQk
+wif
 jQk
 jQk
 hCZ
@@ -47151,15 +48087,15 @@ eFr
 eFr
 eFr
 eFr
-hCZ
-jQk
+wxb
+tjc
 jQk
 jQk
 tbQ
 tbQ
 tbQ
 jQk
-jQk
+jvm
 fLr
 iCM
 iCM
@@ -47167,13 +48103,13 @@ iCM
 iCM
 iCM
 pVN
-jQk
+qAz
 jQk
 tbQ
 tbQ
 tbQ
 jQk
-jQk
+qAz
 fLr
 iCM
 iCM
@@ -47404,33 +48340,33 @@ eFr
 eFr
 eFr
 hCZ
+pza
 jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
+esP
+cGG
+vCF
+vCF
+vCF
+fbb
+vCF
+vCF
+mMk
+mZw
+oRx
+vCF
+vCF
+fjn
+vCF
+vCF
+vCF
+vCF
+vCF
+uGv
+wSR
+wSR
+wSR
+wSR
+skJ
 jQk
 jQk
 hCZ
@@ -47658,20 +48594,14 @@ eFr
 hCZ
 hCZ
 xEv
+flu
+lwX
+ssq
+duP
+duP
+iuG
 jQk
 jQk
-jQk
-jQk
-jQk
-ibY
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-jQk
-ibY
 jQk
 jQk
 jQk
@@ -47682,8 +48612,14 @@ jQk
 jQk
 jQk
 jQk
+jQk
 ibY
 jQk
+jQk
+jQk
+jQk
+aGV
+skx
 hCZ
 hCZ
 eFr
@@ -47910,19 +48846,19 @@ eFr
 eFr
 hCZ
 hCZ
+wxb
+ifG
 hCZ
 hCZ
 hCZ
 hCZ
-hCZ
-hCZ
+skx
+rpv
 jQk
+vOV
 jQk
-jQk
-jQk
-jQk
-jQk
-jQk
+rpv
+skx
 hCZ
 hCZ
 hCZ
@@ -47931,8 +48867,8 @@ hCZ
 hCZ
 hCZ
 hCZ
-jQk
-jQk
+gyq
+tdf
 hCZ
 hCZ
 hCZ
@@ -48161,10 +49097,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+hCZ
+ayt
+icm
+hCZ
 eFr
 eFr
 hCZ
@@ -48413,10 +49349,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+wxb
+xeH
+ghy
+hCZ
 eFr
 eFr
 eFr
@@ -48665,10 +49601,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+wxb
+tjc
+mxs
+hCZ
 eFr
 eFr
 eFr
@@ -48917,10 +49853,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+wxb
+tjc
+mxs
+hCZ
 eFr
 eFr
 eFr
@@ -49169,10 +50105,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+hCZ
+ouq
+mxs
+hCZ
 eFr
 eFr
 eFr
@@ -49421,10 +50357,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+hCZ
+iqr
+rUS
+hCZ
 eFr
 eFr
 eFr
@@ -49673,10 +50609,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+hCZ
+osE
+mxs
+hCZ
 eFr
 eFr
 eFr
@@ -49925,10 +50861,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+wxb
+tjc
+mxs
+hCZ
 eFr
 eFr
 eFr
@@ -50177,10 +51113,10 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+wxb
+tjc
+mxs
+hCZ
 eFr
 eFr
 eFr
@@ -50429,10 +51365,10 @@ aZL
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
+wxb
+tjc
+ouG
+hCZ
 eFr
 eFr
 eFr
@@ -50680,11 +51616,11 @@ aaf
 aaf
 xAZ
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+tpl
+hCZ
+ouq
+sJK
+hCZ
 eFr
 eFr
 eFr
@@ -50931,12 +51867,12 @@ aaf
 aaf
 aaf
 xAZ
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+tpl
+tpl
+hCZ
+hCZ
+fdH
+hCZ
 eFr
 eFr
 eFr
@@ -51182,13 +52118,13 @@ aaf
 aaf
 aaf
 aaf
-xAZ
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+bzg
+tpl
+tpl
+evQ
+eqL
+iJZ
+hCZ
 eFr
 eFr
 eFr
@@ -51414,15 +52350,15 @@ vdJ
 knW
 gOv
 vdJ
+xke
 rEr
-rEr
-rEr
+pTo
 vdJ
-lhg
-lhg
-lhg
-lhg
-lhg
+qMC
+imp
+imp
+imp
+qMC
 vdJ
 aaf
 aaf
@@ -51434,13 +52370,13 @@ aaf
 aaf
 aaf
 aaf
-xAZ
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+bzg
+tpl
+tpl
+evQ
+luV
+wKR
+evQ
 eFr
 eFr
 eFr
@@ -51660,7 +52596,7 @@ aaf
 aaf
 aaf
 akj
-lhg
+gjR
 bbx
 nbd
 scS
@@ -51668,13 +52604,13 @@ cwb
 vdJ
 kPV
 rEr
-rEr
+pTo
 vdJ
-lhg
+qMC
 kuV
 oPw
 crS
-lhg
+qMC
 vdJ
 nAJ
 aaf
@@ -51686,13 +52622,13 @@ aaf
 aaf
 aaf
 aaf
-xAZ
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+bzg
+tpl
+tpl
+kHX
+wNZ
+jTw
+evQ
 eFr
 eFr
 eFr
@@ -51922,11 +52858,11 @@ vdJ
 kFv
 vdJ
 vdJ
-lhg
-lhg
-qtC
-lhg
-lhg
+qMC
+qMC
+nNf
+qMC
+qMC
 vdJ
 mxG
 aaf
@@ -51938,13 +52874,13 @@ aaf
 aaf
 aaf
 aaf
-xAZ
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+bzg
+tpl
+tpl
+hCZ
+evQ
+evQ
+hCZ
 eFr
 eFr
 eFr
@@ -52170,15 +53106,15 @@ bLd
 tNO
 wDi
 wIH
-eLD
-lhg
+apd
+qMC
 gaB
 vdJ
-cQz
-lhg
-qtC
-lhg
-inN
+veC
+qMC
+nNf
+qMC
+tsK
 vdJ
 vdJ
 vdJ
@@ -52191,12 +53127,12 @@ aaf
 aaf
 aaf
 too
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+tpl
+tpl
+tpl
+tpl
+tpl
+tpl
 eFr
 eFr
 eFr
@@ -52419,20 +53355,20 @@ akj
 hrD
 aEe
 vdJ
-lhg
+qMC
 bxY
-lhg
-lhg
+qMC
+qMC
 iqA
-lhg
+qMC
 vdJ
-qyz
-lhg
-qtC
-lhg
-lhg
-lhg
-lhg
+eTt
+qMC
+nNf
+qMC
+qMC
+qMC
+qMC
 vdJ
 jla
 kDP
@@ -52442,13 +53378,13 @@ kDP
 kDP
 kDP
 kDP
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+tpl
+tpl
+tpl
+tpl
+tpl
+tpl
+tpl
 eFr
 eFr
 eFr
@@ -52671,19 +53607,19 @@ akj
 hrD
 aEe
 vdJ
-lhg
+qMC
 vgX
-lhg
-lhg
-weE
-lhg
+qMC
+qMC
+tgp
+qMC
 vdJ
-lhg
-lhg
-qtC
-lhg
-lhg
-lhg
+qMC
+qMC
+nNf
+qMC
+qMC
+qMC
 ccA
 vdJ
 qNY
@@ -52695,11 +53631,11 @@ aaf
 aaf
 aaf
 btU
-aZL
-eFr
-eFr
-eFr
-eFr
+pSL
+tpl
+tpl
+tpl
+tpl
 eFr
 eFr
 eFr
@@ -52921,22 +53857,22 @@ aaf
 aaf
 vdJ
 qyz
-qtC
+wTE
 vdJ
-lhg
+qMC
 vgX
-lhg
-lhg
-weE
-lhg
+qMC
+qMC
+tgp
+qMC
 vdJ
-lhg
-lhg
-qtC
-lhg
-lhg
-lhg
-lhg
+qMC
+qMC
+nNf
+qMC
+qMC
+qMC
+tsK
 vdJ
 qNY
 aaf
@@ -52948,9 +53884,9 @@ aaf
 aaf
 aaf
 aaf
-cDb
-eFr
-eFr
+eCJ
+tpl
+tpl
 eFr
 eFr
 eFr
@@ -53173,22 +54109,22 @@ aaf
 aaf
 akj
 lhg
-wTE
-vdJ
-lhg
-vgX
-lhg
-lhg
-weE
-lhg
-vdJ
-lhg
-lhg
 qtC
-lhg
-lhg
-lhg
-inN
+vdJ
+vdJ
+sAD
+vdJ
+vdJ
+mmL
+vdJ
+vdJ
+emT
+emT
+rKB
+emT
+emT
+vdJ
+vdJ
 vdJ
 qNY
 aaf
@@ -53425,22 +54361,22 @@ aaf
 aaf
 akj
 lhg
+kfb
+lhg
+lhg
+tyL
+lhg
+lhg
+weE
+lhg
+lhg
+lhg
+lhg
 qtC
-vdJ
-vdJ
-sAD
-vdJ
-vdJ
-mmL
-vdJ
-vdJ
-vdJ
-vdJ
-rKB
-vdJ
-vdJ
-vdJ
-vdJ
+kZb
+lhg
+eLD
+lhg
 vdJ
 qNY
 aaf
@@ -53679,17 +54615,17 @@ akj
 lhg
 hmw
 gSu
-ggP
+gSu
 jeP
-hIU
+sYf
 hIU
 mcv
-fss
+hIU
 hIU
 oGg
-oGg
+jfp
 joZ
-nMW
+oGg
 xwp
 kcJ
 lhg
@@ -53930,15 +54866,15 @@ aaf
 vdJ
 cQz
 qtC
-lhg
+vdJ
+wEQ
+niU
 gay
+niU
 gay
-gay
-gay
-gay
-gay
-gay
-lhg
+niU
+iiZ
+vdJ
 lhg
 lhg
 lhg
@@ -54182,7 +55118,7 @@ aaj
 akj
 lhg
 qtC
-anb
+afk
 hrD
 hrD
 hrD
@@ -54190,7 +55126,7 @@ hrD
 hrD
 hrD
 hrD
-iie
+qzo
 lhg
 lhg
 lhg
@@ -54434,7 +55370,7 @@ eFr
 akj
 lhg
 qtC
-anb
+aYK
 hrD
 hrD
 hrD
@@ -54442,7 +55378,7 @@ hrD
 hrD
 hrD
 hrD
-iie
+wSO
 lhg
 lhg
 lhg
@@ -54685,7 +55621,7 @@ eFr
 eFr
 akj
 lhg
-qtC
+mza
 anb
 hrD
 hrD
@@ -54695,7 +55631,7 @@ hrD
 hrD
 hrD
 iie
-lhg
+ehj
 lhg
 lhg
 lhg
@@ -54938,7 +55874,7 @@ eFr
 vdJ
 qyz
 qtC
-anb
+aYK
 hrD
 hrD
 hrD
@@ -54946,13 +55882,13 @@ hrD
 hrD
 hrD
 hrD
-iie
+wSO
 lhg
 lhg
 lhg
-fXx
-umR
-lhg
+fyU
+viM
+gjR
 emT
 tpl
 wAu
@@ -55189,7 +56125,7 @@ eFr
 eFr
 akj
 lhg
-qtC
+mza
 anb
 hrD
 hrD
@@ -55199,7 +56135,7 @@ hrD
 hrD
 hrD
 iie
-lhg
+ehj
 lhg
 lhg
 vdJ
@@ -55442,7 +56378,7 @@ eFr
 akj
 lhg
 qtC
-anb
+aYK
 hrD
 hrD
 hrD
@@ -55450,7 +56386,7 @@ hrD
 hrD
 hrD
 hrD
-iie
+wSO
 lhg
 lhg
 lhg
@@ -55948,11 +56884,11 @@ lhg
 qtC
 vdJ
 sOi
+mqj
 sQN
+mqj
 sQN
-sQN
-sQN
-sQN
+mqj
 gVC
 vdJ
 lhg
@@ -56197,17 +57133,17 @@ eFr
 eFr
 akj
 lhg
-qtC
+mza
 lhg
 lhg
 lhg
+ehj
 lhg
-lhg
-lhg
+ehj
 lhg
 lhg
 bcO
-bcO
+rZe
 bcO
 bcO
 rVU
@@ -56534,7 +57470,7 @@ wBP
 wrI
 iKP
 wrI
-pEF
+aHe
 qzN
 gyY
 sWC
@@ -56792,7 +57728,7 @@ yaM
 tZb
 erL
 gBF
-nny
+kUM
 erL
 eFr
 eFr
@@ -57208,10 +58144,10 @@ sxt
 ilD
 fXx
 lhg
+kup
 lhg
 lhg
-lhg
-lhg
+kup
 lhg
 lhg
 bcO
@@ -57286,7 +58222,7 @@ bIh
 wLn
 dcj
 uVX
-wrI
+xyS
 wrI
 wrI
 wrI
@@ -60094,7 +61030,7 @@ aaf
 lEu
 abe
 abe
-abp
+fnd
 abx
 aby
 abf
@@ -62092,7 +63028,7 @@ ofv
 lwd
 exb
 hsb
-hsb
+jbr
 hsb
 hsb
 bia
@@ -62591,7 +63527,7 @@ pSa
 hwP
 kFF
 pSa
-rmK
+dqr
 hsb
 hsb
 hsb
@@ -63334,7 +64270,7 @@ aaf
 aaf
 aEj
 aaT
-aaX
+aaT
 aaX
 aaX
 aaZ
@@ -63500,7 +64436,7 @@ aaH
 aaR
 uWc
 lCX
-aaF
+aaE
 qij
 aaf
 aaf
@@ -64124,8 +65060,8 @@ aak
 aas
 mWF
 vKM
-fCU
-abk
+abg
+kox
 abu
 abu
 abk
