@@ -1,3 +1,11 @@
+/decl/closet_appearance/medical_yw
+	color = COLOR_OFF_WHITE
+	decals = null
+	extra_decals = list(
+		"circle" = COLOR_BLUE_GRAY,
+		"stripes_horizontal" = COLOR_BLUE_GRAY
+	)
+
 /decl/closet_appearance/wall/autolok/shuttleemerg
 	color = COLOR_YELLOW_GRAY
 	decals = list(

@@ -2986,6 +2986,7 @@
 #include "code\modules\multiz\structures.dm"
 #include "code\modules\multiz\structures_vr.dm"
 #include "code\modules\multiz\turf.dm"
+#include "code\modules\multiz\turf_yw.dm"
 #include "code\modules\multiz\zshadow.dm"
 #include "code\modules\nano\nanoexternal.dm"
 #include "code\modules\nano\nanomanager.dm"

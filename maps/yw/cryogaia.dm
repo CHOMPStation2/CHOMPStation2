@@ -22,6 +22,7 @@
 		#include "cryogaia-03-transit.dmm" //transit level
 		#include "cryogaia-04-maintenance.dmm" //lowerlevel
 		#include "cryogaia-05-main.dmm" //main level
+		#include "cryogaia-06-upper.dmm" //upper level
 
 		#include "residential/residential.dmm" //residential level
 	#endif
