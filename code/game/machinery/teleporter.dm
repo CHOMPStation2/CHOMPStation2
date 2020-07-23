@@ -24,7 +24,7 @@
 	teleport_control = new(src)
 	var/obj/machinery/teleport/station/station = null
 	var/obj/machinery/teleport/hub/hub = null
-	
+
 	// Search surrounding turfs for the station, and then search the station's surrounding turfs for the hub.
 	for(var/direction in cardinal)
 		station = locate(/obj/machinery/teleport/station, get_step(src, direction))
@@ -122,12 +122,12 @@
 
 /datum/nano_module/program/teleport_control/Topic(href, href_list)
 	if(..()) return 1
-	
+
 	if(href_list["select_target"])
 		var/list/L = list()
 		var/list/areaindex = list()
 
-		for(var/obj/item/device/radio/beacon/R in all_beacons)
+		for(var/obj/item/device/radio/beacon/R in GLOB.all_beacons)
 			var/turf/T = get_turf(R)
 			if(!T)
 				continue
@@ -140,7 +140,7 @@
 				areaindex[tmpname] = 1
 			L[tmpname] = R
 
-		for (var/obj/item/weapon/implant/tracking/I in all_tracking_implants)
+		for (var/obj/item/weapon/implant/tracking/I in GLOB.all_tracking_implants)
 			if(!I.implanted || !ismob(I.loc))
 				continue
 			else
@@ -175,12 +175,12 @@
 	if(href_list["toggle_on"])
 		if(!station)
 			return 0
-		
+
 		if(station.engaged)
 			station.disengage()
 		else
 			station.engage()
-		
+
 		return 1
 
 /datum/nano_module/program/teleport_control/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/datum/topic_state/state = default_state)
