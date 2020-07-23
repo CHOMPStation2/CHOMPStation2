@@ -292,7 +292,7 @@
 	// Fetch janitorial locator
 	var/janidata[0]
 	var/list/cleaningList = list()
-	cleaningList += all_mops + all_mopbuckets + all_janitorial_carts
+	cleaningList += GLOB.all_mops + GLOB.all_mopbuckets + GLOB.all_janitorial_carts
 
 	// User's location
 	var/turf/userloc = get_turf(src)

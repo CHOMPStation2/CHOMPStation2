@@ -476,7 +476,7 @@ var/list/civilian_cartridges = list(
 		else
 			JaniData["user_loc"] = list("x" = 0, "y" = 0)
 		var/MopData[0]
-		for(var/obj/item/weapon/mop/M in all_mops)
+		for(var/obj/item/weapon/mop/M in GLOB.all_mops)
 			var/turf/ml = get_turf(M)
 			if(ml)
 				if(ml.z != cl.z)
@@ -489,7 +489,7 @@ var/list/civilian_cartridges = list(
 
 
 		var/BucketData[0]
-		for(var/obj/structure/mopbucket/B in all_mopbuckets)
+		for(var/obj/structure/mopbucket/B in GLOB.all_mopbuckets)
 			var/turf/bl = get_turf(B)
 			if(bl)
 				if(bl.z != cl.z)
@@ -513,7 +513,7 @@ var/list/civilian_cartridges = list(
 		if(!CbotData.len)
 			CbotData[++CbotData.len] = list("x" = 0, "y" = 0, dir=null, status = null)
 		var/CartData[0]
-		for(var/obj/structure/janitorialcart/B in all_janitorial_carts)
+		for(var/obj/structure/janitorialcart/B in GLOB.all_janitorial_carts)
 			var/turf/bl = get_turf(B)
 			if(bl)
 				if(bl.z != cl.z)

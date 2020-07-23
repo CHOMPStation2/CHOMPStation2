@@ -343,7 +343,7 @@
 
 /mob/proc/set_respawn_timer(var/time)
 	// Try to figure out what time to use
-	
+
 	// Special cases, can never respawn
 	if(ticker?.mode?.deny_respawn)
 		time = -1
@@ -351,22 +351,22 @@
 		time = -1
 	else if(!config.respawn)
 		time = -1
-	
+
 	// Special case for observing before game start
 	else if(ticker?.current_state <= GAME_STATE_SETTING_UP)
 		time = 1 MINUTE
-	
+
 	// Wasn't given a time, use the config time
 	else if(!time)
 		time = config.respawn_time
-	
+
 	var/keytouse = ckey
 	// Try harder to find a key to use
 	if(!keytouse && key)
 		keytouse = ckey(key)
 	else if(!keytouse && mind?.key)
 		keytouse = ckey(mind.key)
-	
+
 	GLOB.respawn_timers[keytouse] = world.time + time
 
 /mob/observer/dead/set_respawn_timer()
@@ -388,7 +388,7 @@
 		var/choice = alert(usr, "Returning to the menu will prevent your character from being revived in-round. Are you sure?", "Confirmation", "No, wait", "Yes, leave")
 		if(choice == "No, wait")
 			return
-	
+
 	// Beyond this point, you're going to respawn
 	to_chat(usr, config.respawn_message)
 
@@ -441,7 +441,7 @@
 
 
 	targets += observe_list_format(nuke_disks)
-	targets += observe_list_format(all_singularities)
+	targets += observe_list_format(GLOB.all_singularities)
 	targets += getmobs()
 	targets += observe_list_format(sortAtom(mechas_list))
 	targets += observe_list_format(SSshuttles.ships)

@@ -938,7 +938,7 @@
 	restore_all_organs()       // Reapply robotics/amputated status from preferences.
 
 	if(!client || !key) //Don't boot out anyone already in the mob.
-		for (var/obj/item/organ/internal/brain/H in all_brain_organs)
+		for (var/obj/item/organ/internal/brain/H in GLOB.all_brain_organs)
 			if(H.brainmob)
 				if(H.brainmob.real_name == src.real_name)
 					if(H.brainmob.mind)
