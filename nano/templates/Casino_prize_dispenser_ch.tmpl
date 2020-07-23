@@ -60,6 +60,17 @@
 		</div>
 	</div>
 </div>
+<div class='item'>
+	<div class='item'>
+		<div style='float'>
+			{{if data.category_pets >= 1}}
+				{{:helper.link('Select Pets', 'star', { "Select" : 'selected_pets' })}}
+			{{else}}
+				{{:helper.link('Disabled Pets', 'cancel', { "Select" : 1}, 'disabled')}}				
+			{{/if}}
+		</div>
+	</div>
+</div>
 {{/if}}
 
 {{if data.mode == 1}} <!-- Listing prizes -->
