@@ -237,9 +237,9 @@ var/list/gamemode_cache = list()
 	var/static/dooc_allowed = 1
 	var/static/dsay_allowed = 1
 
-	var/allow_byond_links = 0
-	var/allow_discord_links = 0
-	var/allow_url_links = 0					// honestly if I were you i'd leave this one off, only use in dire situations
+	var/allow_byond_links = 1	//CHOMP Edit turned this on
+	var/allow_discord_links = 1	//CHOMP Edit turned this on
+	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit bussy.
 
 	var/starlight = 0	// Whether space turfs have ambient light or not
 
