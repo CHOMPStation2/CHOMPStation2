@@ -94,11 +94,11 @@
 			scanned = list()
 			scannables = list(/obj/machinery/holosign/bar,/obj/item/weapon/material/kitchen/utensil/spoon,/obj/item/weapon/material/kitchen/utensil/fork,
 			/mob/living/carbon/human/monkey/punpun,/obj/machinery/chemical_dispenser/bar_alc/full,/obj/machinery/chemical_dispenser/bar_soft/full,/obj/machinery/smartfridge/drinks,
-			/obj/machinery/vending/boozeomat,/obj/machinery/media/jukebox,/obj/machinery/chem_master/condimaster,/obj/machinery/microwave,/obj/machinery/cooker/cereal,
-			/obj/machinery/cooker/candy,/obj/machinery/vending/dinnerware,/obj/structure/closet/secure_closet/freezer/meat,/obj/structure/closet/secure_closet/freezer/fridge,
+			/obj/machinery/vending/boozeomat,/obj/machinery/media/jukebox,/obj/machinery/chem_master/condimaster,/obj/machinery/microwave,
+			/obj/machinery/vending/dinnerware,/obj/structure/closet/secure_closet/freezer/meat,/obj/structure/closet/secure_closet/freezer/fridge,
 			/obj/machinery/cooker/fryer,/obj/machinery/cooker/grill,/obj/machinery/cooker/oven,/obj/machinery/icecream_vat,/obj/machinery/gibber,/obj/structure/kitchenspike,
 			/obj/machinery/portable_atmospherics/hydroponics,/obj/machinery/vending/hydronutrients,/obj/machinery/seed_storage/garden,/obj/machinery/honey_extractor,
-			/obj/machinery/biogenerator,/obj/machinery/seed_extractor)
+			/obj/machinery/biogenerator,/obj/machinery/seed_extractor,/obj/machinery/microwave)
 		if("Security")
 			mode = 6
 			scancount = 0
@@ -159,7 +159,7 @@
 		del(P)
 		to_chat(user, "<span class='notice'>Format accepted, printing voucher!</span>")
 		ready = 0
-		spawn(30 SECONDS)
+		spawn(300 SECONDS)
 			ready = 1
 		return
 	if(!findtext(P.info,format))
@@ -173,19 +173,19 @@
 	switch(mode)
 		if (1)
 			new /obj/item/surplus_voucher/com(T)
-			playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
+			playsound(src.loc, 'sound/machines/copier.ogg', 50, 0)
 		if (2)
 			new /obj/item/surplus_voucher/eng(T)
-			playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
+			playsound(src.loc, 'sound/machines/copier.ogg', 50, 0)
 		if (3)
 			new /obj/item/surplus_voucher/med(T)
-			playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
+			playsound(src.loc, 'sound/machines/copier.ogg', 50, 0)
 		if (4)
 			new /obj/item/surplus_voucher/sci(T)
-			playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
+			playsound(src.loc, 'sound/machines/copier.ogg', 50, 0)
 		if (5)
 			new /obj/item/surplus_voucher/ser(T)
-			playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
+			playsound(src.loc, 'sound/machines/copier.ogg', 50, 0)
 		if (6)
 			new /obj/item/surplus_voucher/sec(T)
-			playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
+			playsound(src.loc, 'sound/machines/copier.ogg', 50, 0)
