@@ -6,7 +6,8 @@
 	on_icon = "mixer_on"
 	cook_type = "candied"
 	appliancetype = CANDYMAKER
-	cooking_power = 0.6
+	circuit = /obj/item/weapon/circuitboard/candymachine
+	cooking_coeff = 1.0 // Original Value 0.6
 	cooked_sound = 'sound/machines/ding.ogg'
 
 	output_options = list(
