@@ -4,6 +4,7 @@
 /obj/effect/overmap/visitable
 	name = "map object"
 	scannable = TRUE
+	scanner_desc = "!! No Data Available !!"
 
 	var/list/map_z = list()
 	var/list/extra_z_levels //if you need to manually insist that these z-levels are part of this sector, for things like edge-of-map step trigger transitions rather than multi-z complexes
@@ -30,7 +31,7 @@
 	if(. == INITIALIZE_HINT_QDEL)
 		return
 
-	find_z_levels()     // This populates map_z and assigns z levels to the ship.
+	find_z_levels() // This populates map_z and assigns z levels to the ship.
 	register_z_levels() // This makes external calls to update global z level information.
 
 	if(!global.using_map.overmap_z)
@@ -58,7 +59,8 @@
 			. += A
 
 /obj/effect/overmap/visitable/proc/find_z_levels()
-	map_z = GetConnectedZlevels(z)
+	if(!LAZYLEN(map_z)) // If map_z is already populated use it as-is, otherwise start with connected z-levels.
+		map_z = GetConnectedZlevels(z)
 	if(LAZYLEN(extra_z_levels))
 		map_z |= extra_z_levels
 
@@ -69,10 +71,12 @@
 	global.using_map.player_levels |= map_z
 	if(!in_space)
 		global.using_map.sealed_levels |= map_z
+	/* VOREStation Removal - We have a map system that does this already.
 	if(base)
 		global.using_map.station_levels |= map_z
 		global.using_map.contact_levels |= map_z
 		global.using_map.map_levels |= map_z
+	*/
 
 /obj/effect/overmap/visitable/proc/get_space_zlevels()
 	if(in_space)
@@ -150,7 +154,7 @@
 	var/area/overmap/A = new
 	for (var/square in block(locate(1,1,global.using_map.overmap_z), locate(global.using_map.overmap_size,global.using_map.overmap_size,global.using_map.overmap_z)))
 		var/turf/T = square
-		if(T.x == global.using_map.overmap_size || T.y == global.using_map.overmap_size)
+		if(T.x == 1 || T.y == 1 || T.x == global.using_map.overmap_size || T.y == global.using_map.overmap_size)
 			T = T.ChangeTurf(/turf/unsimulated/map/edge)
 		else
 			T = T.ChangeTurf(/turf/unsimulated/map)

@@ -25,7 +25,7 @@
 		return
 
 	if(holster_in)
-		playsound(get_turf(src), holster_in, 50)
+		playsound(src, holster_in, 50)
 
 	if(istype(user))
 		user.stop_aiming(no_message=1)
@@ -62,7 +62,7 @@
 				)
 
 		if(holster_out)
-			playsound(get_turf(src), holster_out, sound_vol)
+			playsound(src, holster_out, sound_vol)
 
 		user.put_in_hands(holstered)
 		holstered.add_fingerprint(user)
@@ -71,7 +71,7 @@
 
 //YW change start
 /obj/item/clothing/accessory/holster/attack_hand(mob/user as mob)
-	if (user.a_intent == I_HURT && has_suit && (slot & ACCESSORY_SLOT_HOLSTER ))	//if we are part of a suit and are using harm intent
+	if (user.a_intent == I_HURT && has_suit && (slot & SLOT_HOLSTER ))	//if we are part of a suit and are using harm intent
 		if (holstered)
 			unholster(user)
 		return
@@ -88,11 +88,11 @@
 	..()
 
 /obj/item/clothing/accessory/holster/examine(mob/user)
-	..(user)
-	if (holstered)
-		to_chat(user, "A [holstered] is holstered here.")
+	. = ..(user)
+	if(holstered)
+		. += "A [holstered] is holstered here."
 	else
-		to_chat(user, "It is empty.")
+		. += "It is empty."
 
 /obj/item/clothing/accessory/holster/on_attached(obj/item/clothing/under/S, mob/user as mob)
 	..()

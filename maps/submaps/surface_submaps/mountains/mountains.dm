@@ -38,6 +38,7 @@
 #include "Geyser2.dmm"
 #include "Geyser3.dmm"
 #include "Cliff1.dmm"
+#include "excavation1.dmm"
 #endif
 
 // The 'mountains' is the mining z-level, and has a lot of caves.
@@ -340,3 +341,9 @@
 	mappath = 'maps/submaps/surface_submaps/mountains/CrashedMedShuttle1_vr.dmm'	//VOREStation Edit
 	cost = 20
 	fixed_orientation = TRUE
+
+/datum/map_template/surface/mountains/deep/excavation1
+	name = "Excavation Site"
+	desc = "An abandoned mining site."
+	mappath = 'maps/submaps/surface_submaps/mountains/excavation1.dmm'
+	cost = 20

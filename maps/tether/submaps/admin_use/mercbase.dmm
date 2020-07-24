@@ -391,10 +391,7 @@
 	},
 /area/antag/antag_base)
 "aF" = (
-/obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
-	icon_state = "cabinet_closed";
+/obj/structure/closet/cabinet{
 	name = "Clothing Storage"
 	},
 /obj/item/clothing/shoes/boots/combat,
@@ -488,10 +485,10 @@
 /area/antag/antag_base)
 "aN" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/hos,
 /obj/effect/landmark{
 	name = "Syndicate-Spawn"
 	},
+/obj/item/weapon/bedsheet/pirate,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -647,7 +644,6 @@
 /area/antag/antag_base)
 "aZ" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/hos,
 /obj/machinery/computer/security/telescreen/entertainment{
 	icon_state = "frame";
 	pixel_w = 0;
@@ -657,6 +653,7 @@
 /obj/effect/landmark{
 	name = "Syndicate-Spawn"
 	},
+/obj/item/weapon/bedsheet/pirate,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -680,10 +677,7 @@
 	},
 /area/antag/antag_base)
 "bc" = (
-/obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
-	icon_state = "cabinet_closed";
+/obj/structure/closet/cabinet{
 	name = "Clothing Storage"
 	},
 /obj/item/clothing/suit/storage/hooded/wintercoat,

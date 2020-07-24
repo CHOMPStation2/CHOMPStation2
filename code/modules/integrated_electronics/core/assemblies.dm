@@ -172,13 +172,10 @@
 			return id_card
 
 /obj/item/device/electronic_assembly/examine(mob/user)
-	. = ..(user, 1)
-	if(.)
+	. = ..()
+	if(Adjacent(user))
 		for(var/obj/item/integrated_circuit/IC in contents)
-			IC.external_examine(user)
-	//	for(var/obj/item/integrated_circuit/output/screen/S in contents)
-	//		if(S.stuff_to_display)
-	//			to_chat(user, "There's a little screen labeled '[S.name]', which displays '[S.stuff_to_display]'.")
+			. += IC.external_examine(user)
 		if(opened)
 			interact(user)
 
@@ -251,12 +248,12 @@
 			return FALSE
 		if(add_circuit(I, user))
 			to_chat(user, "<span class='notice'>You slide \the [I] inside \the [src].</span>")
-			playsound(get_turf(src), 'sound/items/Deconstruct.ogg', 50, 1)
+			playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 			interact(user)
 			return TRUE
 
 	else if(I.is_crowbar())
-		playsound(get_turf(src), 'sound/items/Crowbar.ogg', 50, 1)
+		playsound(src, 'sound/items/Crowbar.ogg', 50, 1)
 		opened = !opened
 		to_chat(user, "<span class='notice'>You [opened ? "opened" : "closed"] \the [src].</span>")
 		update_icon()
@@ -287,7 +284,7 @@
 		user.drop_item(cell)
 		cell.forceMove(src)
 		battery = cell
-		playsound(get_turf(src), 'sound/items/Deconstruct.ogg', 50, 1)
+		playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>You slot \the [cell] inside \the [src]'s power supplier.</span>")
 		interact(user)
 		return TRUE
@@ -351,14 +348,6 @@
 		net_power += gained
 		return TRUE
 	return FALSE
-
-/obj/item/device/electronic_assembly/on_loc_moved(oldloc)
-	for(var/obj/O in contents)
-		O.on_loc_moved(oldloc)
-
-/obj/item/device/electronic_assembly/Moved(var/oldloc)
-	for(var/obj/O in contents)
-		O.on_loc_moved(oldloc)
 
 /obj/item/device/electronic_assembly/proc/on_anchored()
 	for(var/obj/item/integrated_circuit/IC in contents)

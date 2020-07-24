@@ -3,9 +3,9 @@ language: c
 
 env:
   global:
-    - BASENAME="vorestation" #$BASENAME.dmb, #BASENAME.dme, etc.
-    - BYOND_MAJOR="512"
-    - BYOND_MINOR="1488"
+    - BASENAME="vorestation" # $BASENAME.dmb, $BASENAME.dme, etc.
+    - BYOND_MAJOR="513"
+    - BYOND_MINOR="1527"
     - MACRO_COUNT=4
 
 cache:

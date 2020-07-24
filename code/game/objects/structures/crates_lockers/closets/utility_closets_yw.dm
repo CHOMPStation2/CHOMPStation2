@@ -1,10 +1,7 @@
 /obj/structure/closet/shuttleemerg //wall mounted fire closet
 	name = "emergency repairs closet"
 	desc = "It's a storage unit for emergency repair supplies."
-	icon = 'icons/obj/closet_yw.dmi'
-	icon_state = "engicloset"
-	icon_closed = "engicloset"
-	icon_opened = "engicloset_open"
+	closet_appearance = /decl/closet_appearance/wall/autolok/shuttleemerg
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	anchored = 1

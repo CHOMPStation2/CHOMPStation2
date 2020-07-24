@@ -53,7 +53,7 @@ var/global/datum/controller/plants/plant_controller // Set in New().
 /datum/controller/plants/proc/setup()
 
 	// Build the icon lists.
-	for(var/icostate in icon_states('icons/obj/hydroponics_growing.dmi'))
+	for(var/icostate in cached_icon_states('icons/obj/hydroponics_growing.dmi'))
 		var/split = findtext(icostate,"-")
 		if(!split)
 			// invalid icon_state
@@ -71,7 +71,7 @@ var/global/datum/controller/plants/plant_controller // Set in New().
 			if(!(base in GLOB.forbidden_plant_growth_sprites))
 				accessible_plant_sprites[base] = ikey
 
-	for(var/icostate in icon_states('icons/obj/hydroponics_products.dmi'))
+	for(var/icostate in cached_icon_states('icons/obj/hydroponics_products.dmi'))
 		var/split = findtext(icostate,"-")
 		var/base = copytext(icostate,1,split)
 		if(split)
@@ -88,7 +88,7 @@ var/global/datum/controller/plants/plant_controller // Set in New().
 
 	// Make sure any seed packets that were mapped in are updated
 	// correctly (since the seed datums did not exist a tick ago).
-	for(var/obj/item/seeds/S in all_seed_packs)
+	for(var/obj/item/seeds/S in GLOB.all_seed_packs)
 		S.update_seed()
 
 	//Might as well mask the gene types while we're at it.

@@ -12,7 +12,7 @@
 	icon_dead = "deathclaw-dead"
 	icon_living = "deathclaw"
 	icon_state = "deathclaw"
-	icon = 'icons/mob/vore64x64_ch.dmi'
+	icon = 'icons/mob/vore64x64_ch.dmi' //CHOMPEdit changed filepath
 	vis_height = 64
 
 	attacktext = list("mauled")
@@ -56,7 +56,7 @@
 		riding_datum = new /datum/riding/simple_mob(src)
 	verbs |= /mob/living/simple_mob/proc/animal_mount
 	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 0
+	movement_cooldown = 3
 
 /mob/living/simple_mob/vore/aggressive/deathclaw/MouseDrop_T(mob/living/M, mob/living/user)
 	return

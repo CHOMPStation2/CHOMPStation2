@@ -4,7 +4,6 @@
 
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
-	#include "southern_cross_jobs_vr.dm"
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_events.dm"
 	#include "southern_cross_presets.dm"
@@ -29,13 +28,13 @@
 	#include "items/clothing/sc_under.dm"
 	#include "items/clothing/sc_accessory.dm"
 	#include "job/outfits.dm"
-	#include "job/outfits_vr.dm"
 	#include "structures/closets/engineering.dm"
 	#include "structures/closets/medical.dm"
 	#include "structures/closets/misc.dm"
 	#include "structures/closets/research.dm"
 	#include "structures/closets/security.dm"
 	#include "turfs/outdoors.dm"
+	#include "overmap/sectors.dm"
 
 	//CHOMPStation Edit Start TFF 25/3/20 - Station level map z-levels separated into 3 distinct files to work with MapDiffBot. All other files renamed accordingly.
 	#include "southern_cross-1.dmm"

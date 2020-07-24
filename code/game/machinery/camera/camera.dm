@@ -29,6 +29,7 @@
 	var/short_range = 2
 
 	var/light_disabled = 0
+	var/in_use_lights = 0 // TO BE IMPLEMENTED - LIES.
 	var/alarm_on = 0
 	var/busy = 0
 
@@ -86,6 +87,8 @@
 	// VOREStation Edit End
 
 /obj/machinery/camera/Destroy()
+	if(isMotion())
+		unsense_proximity(callback = .HasProximity)
 	deactivate(null, 0) //kick anyone viewing out
 	if(assembly)
 		qdel(assembly)
@@ -155,7 +158,7 @@
 		user.do_attack_animation(src)
 		user.setClickCooldown(user.get_attack_speed())
 		visible_message("<span class='warning'>\The [user] slashes at [src]!</span>")
-		playsound(src.loc, 'sound/weapons/slash.ogg', 100, 1)
+		playsound(src, 'sound/weapons/slash.ogg', 100, 1)
 		add_hiddenprint(user)
 		destroy()
 
@@ -166,7 +169,7 @@
 		S.do_attack_animation(src)
 		S.setClickCooldown(user.get_attack_speed())
 		visible_message("<span class='warning'>\The [user] [pick(S.attacktext)] \the [src]!</span>")
-		playsound(src.loc, S.attack_sound, 100, 1)
+		playsound(src, S.attack_sound, 100, 1)
 		add_hiddenprint(user)
 		destroy()
 	..()
@@ -180,7 +183,7 @@
 		panel_open = !panel_open
 		user.visible_message("<span class='warning'>[user] screws the camera's panel [panel_open ? "open" : "closed"]!</span>",
 		"<span class='notice'>You screw the camera's panel [panel_open ? "open" : "closed"].</span>")
-		playsound(src.loc, W.usesound, 50, 1)
+		playsound(src, W.usesound, 50, 1)
 
 	else if((W.is_wirecutter() || istype(W, /obj/item/device/multitool)) && panel_open)
 		interact(user)
@@ -255,7 +258,7 @@
 			if (istype(W, /obj/item)) //is it even possible to get into attackby() with non-items?
 				var/obj/item/I = W
 				if (I.hitsound)
-					playsound(loc, I.hitsound, 50, 1, -1)
+					playsound(src, I.hitsound, 50, 1, -1)
 		take_damage(W.force)
 
 	else
@@ -275,7 +278,7 @@
 			visible_message("<span class='notice'> [user] has deactivated [src]!</span>")
 		else
 			visible_message("<span class='notice'> [src] clicks and shuts down. </span>")
-		playsound(src.loc, 'sound/items/Wirecutter.ogg', 100, 1)
+		playsound(src, 'sound/items/Wirecutter.ogg', 100, 1)
 		icon_state = "[initial(icon_state)]1"
 		add_hiddenprint(user)
 	else
@@ -283,7 +286,7 @@
 			visible_message("<span class='notice'> [user] has reactivated [src]!</span>")
 		else
 			visible_message("<span class='notice'> [src] clicks and reactivates itself. </span>")
-		playsound(src.loc, 'sound/items/Wirecutter.ogg', 100, 1)
+		playsound(src, 'sound/items/Wirecutter.ogg', 100, 1)
 		icon_state = initial(icon_state)
 		add_hiddenprint(user)
 
@@ -305,7 +308,7 @@
 	var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, loc)
 	spark_system.start()
-	playsound(loc, "sparks", 50, 1)
+	playsound(src, "sparks", 50, 1)
 
 /obj/machinery/camera/proc/set_status(var/newstatus)
 	if (status != newstatus)
@@ -401,7 +404,7 @@
 
 	// Do after stuff here
 	to_chat(user, "<span class='notice'>You start to weld [src]..</span>")
-	playsound(src.loc, WT.usesound, 50, 1)
+	playsound(src, WT.usesound, 50, 1)
 	WT.eyecheck(user)
 	busy = 1
 	if(do_after(user, 100 * WT.toolspeed))

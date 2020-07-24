@@ -833,9 +833,11 @@
 /area/storage/emergency_storage/firstdeck/fs_emergency
 	name = "First Deck Fore Starboard Emergency Storage"
 
-/area/ai_monitored/storage/eva/pilot
-	name = "Pilot EVA Storage"
+//CHOMPStation Edit Start 10/5/20 TFF - Change Pilot EVA to Auxillary EVA
+/area/ai_monitored/storage/eva/aux
+	name = "Auxiliary EVA Storage"
 	icon_state = "eva"
+//Chompstation Edit End
 
 /area/tcomm/
 	icon_state = "tcomsatcham"
@@ -880,6 +882,15 @@
 
 /area/maintenance/substation/central // n/a
 	name = "Central Substation"
+
+//CHOMPStation Edit Start TFF 6/2/20 - Added substation
+
+/area/maintenance/substation/dorms
+	name = "Substation"
+	icon_state = "substation"
+	sound_env = SMALL_ENCLOSED
+
+//CHOMPStation Edit End
 
 /area/maintenance/robotics
 	name = "Robotics Maintenance"
@@ -1159,6 +1170,40 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/hallway/primary/thirddeck/starboard
 	name = "\improper Third Deck Starboard Hallway"
 	icon_state = "hallS"
+
+//CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms.
+
+/area/hallway/primary/thirddeck/aftcentral
+	name = "\improper Third Deck Central Aft Hallway"
+	icon_state = "hallC"
+
+/area/hallway/primary/thirddeck/aft
+	name = "\improper Third Deck Aft Hallway"
+	icon_state = "hallA"
+
+/area/hallway/primary/thirddeck/aftdoorm
+	name = "\improper Third Deck Aft Doorm Hallway"
+	icon_state = "docking_hallway"
+
+/area/maintenance/thirddeck/dormsport
+	name = "Third Deck Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+/area/maintenance/thirddeck/dormsstarboard
+	name = "Third Deck Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+/area/maintenance/thirddeck/dormsaft
+	name = "Third Deck Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+//CHOMPStation Edit Start TFF 6/2/20 KC - Added new First Aid station.
+
+/area/medical/first_aid_station/thirddeck
+	name = "\improper Center Thirddeck First-Aid Station"
+	icon_state = "medbay2"
+
+//CHOMPStation Edit End
 
 /area/maintenance/thirddeck/aftstarboard
 	name = "Third Deck Aft Starboard Maintenance"

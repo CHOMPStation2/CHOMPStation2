@@ -212,7 +212,6 @@
 	armor = list(melee = 30, bullet = 40, laser = 40, energy = 25, bomb = 60, bio = 100, rad = 50)
 	icon_state = "rig0-secalt"
 	item_state_slots = list(slot_r_hand_str = "syndicate-helm-black", slot_l_hand_str = "syndicate-helm-black")
-	
 /obj/item/clothing/suit/space/void/security/alt
 	name = "security EVA voidsuit"
 	desc = "A grey-black voidsuit with red highlights. A little tacky, but it offers better protection against modern firearms and radiation than standard-issue security voidsuits."

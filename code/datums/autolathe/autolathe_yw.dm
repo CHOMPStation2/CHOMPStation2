@@ -5,7 +5,6 @@
 /obj/machinery/autolathe
 	name = "autolathe"
 	desc = "It produces items using metal and glass."
-	icon = 'icons/obj/stationobjs_vr.dmi'
 	icon_state = "autolathe"
 	density = 1
 	anchored = 1
@@ -23,6 +22,8 @@
 	var/disabled = 0
 	var/shocked = 0
 	var/busy = 0
+	var/input_dir_name = "North"
+	var/input_dir = NORTH
 	var/operating = 0.0
 	var/list/queue = list()
 	var/queue_max_len = 12
@@ -34,24 +35,21 @@
 	var/datum/research/files
 
 	var/mat_efficiency = 1
-	var/build_time = 50
 	var/list/datum/design/item/autolathe/matching_designs
 	var/temp_search
 	var/selected_category
 	var/screen = 1
-	var/list/categories = list("Arms and Ammunition", "Devices", "Engineering", "General", "Medical", "Tools")
+	var/list/categories = list("Arms and Ammunition", "Devices", "Engineering", "General", "Medical", "Tools", "Imported")
 
 	var/datum/wires/autolathe/wires = null
 
 /obj/machinery/autolathe/New()
 	..()
+
+/obj/machinery/autolathe/Initialize()
+	. = ..()
 	wires = new(src)
-	component_parts = list()
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
-	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
-	component_parts += new /obj/item/weapon/stock_parts/console_screen(src)
+	default_apply_parts()
 	RefreshParts()
 	files = new /datum/research/autolathe(src)
 	matching_designs = list()
@@ -101,7 +99,7 @@
 			data["selected_category"] = selected_category
 			var/list/designs = list()
 			data["designs"] = designs
-			for(var/datum/design/item/autolathe/D in files.known_designs)
+			for(var/datum/design/item/D in files.known_designs)
 				if(!D.build_path || D.hidden && !hacked || selected_category != D.category)
 					continue
 				var/list/design = list()
@@ -118,7 +116,7 @@
 			data["search"] = temp_search
 			var/list/designs = list()
 			data["designs"] = designs
-			for(var/datum/design/item/autolathe/D in matching_designs)
+			for(var/datum/design/item/D in matching_designs)
 				var/list/design = list()
 				designs[++designs.len] = design
 				design["name"] = D.name
@@ -161,8 +159,6 @@
 		design_last_ordered = FindDesign(href_list["make"]) //check if it's a valid design
 		if(!design_last_ordered)
 			return
-		if(!(design_last_ordered.build_type & AUTOLATHE))
-			return
 
 		//multiplier checks : only stacks can have one and its value is 1, 10 ,25 or max_multiplier
 		var/multiplier = text2num(href_list["multiplier"])
@@ -181,8 +177,10 @@
 			to_chat(usr, "<span class='warning'>The autolathe queue is full!</span>")
 		if(!busy)
 			busy = 1
+			update_icon()
 			process_queue()
 			busy = 0
+			update_icon()
 
 	if(href_list["remove_from_queue"])
 		var/index = text2num(href_list["remove_from_queue"])
@@ -213,14 +211,20 @@
 	return 1
 
 /obj/machinery/autolathe/update_icon()
+	overlays.Cut()
+
+	icon_state = initial(icon_state)
+
 	if(panel_open)
-		icon_state = "autolathe_t"
-	else if(busy)
-		icon_state = "autolathe_n"
-	else
-		if(icon_state == "autolathe_n")
-			flick("autolathe_u", src) // If lid WAS closed, show opening animation
-		icon_state = "autolathe"
+		overlays.Add(image(icon, "[icon_state]_panel"))
+	if(stat & NOPOWER)
+		return
+	if(busy)
+		icon_state = "[icon_state]_work"
+	if(!busy)
+		icon_state = "[icon_state]_pause"
+
+
 
 /obj/machinery/autolathe/RefreshParts()
 	..()
@@ -233,7 +237,6 @@
 
 	storage_capacity[DEFAULT_WALL_MATERIAL] = mb_rating  * 25000
 	storage_capacity["glass"] = mb_rating  * 12500
-	build_time = 50 / man_rating
 	mat_efficiency = 1.1 - man_rating * 0.1// Normally, price is 1.25 the amount of material, so this shouldn't go higher than 0.6. Maximum rating of parts is 5
 
 
@@ -277,6 +280,7 @@
 /obj/machinery/autolathe/proc/build_item(datum/design/D, multiplier)
 	desc = initial(desc)+"\nIt's building \a [initial(D.name)]."
 	var/is_stack = ispath(D.build_path, /obj/item/stack)
+	var/is_box = ispath(D.build_path, /obj/item/weapon/storage/box)
 	var/coeff = get_coeff(D)
 	var/metal_cost = D.materials[DEFAULT_WALL_MATERIAL]
 	var/glass_cost = D.materials["glass"]
@@ -284,8 +288,7 @@
 	if(can_build(D, multiplier))
 		being_built = list(D, multiplier)
 		use_power(power)
-		icon_state = "autolathe"
-		flick("autolathe_n",src)
+		update_icon()
 		if(is_stack)
 			var/list/materials_used = list(DEFAULT_WALL_MATERIAL=metal_cost*multiplier, "glass"=glass_cost*multiplier)
 			//stored_material = list(DEFAULT_WALL_MATERIAL -= materials_used[DEFAULT_WALL_MATERIAL], "glass" -= materials_used["glass"])
@@ -297,13 +300,21 @@
 			stored_material["glass"] -= materials_used["glass"]
 		SSnanoui.update_uis(src)
 		sleep(32*coeff)
+		flick("[initial(icon_state)]_finish", src)
 		if(is_stack)
 			var/obj/item/stack/S = new D.build_path(BuildTurf)
 			S.amount = multiplier
 		else
 			var/obj/item/new_item = new D.build_path(BuildTurf)
-			new_item.matter[DEFAULT_WALL_MATERIAL] *= coeff
-			new_item.matter["glass"] *= coeff
+			if(is_box)
+				for(var/obj/item/L in new_item.contents)
+					if(!(L.matter))
+						continue
+					L.matter[DEFAULT_WALL_MATERIAL] *= coeff
+					L.matter["glass"] *= coeff
+			else
+				new_item.matter[DEFAULT_WALL_MATERIAL] *= coeff
+				new_item.matter["glass"] *= coeff
 	SSnanoui.update_uis(src)
 	desc = initial(desc)
 
@@ -382,25 +393,42 @@
 
 /datum/research/autolathe
 
+/datum/research/autolathe/New()		//Insert techs into possible_tech here. Known_tech automatically updated.
+	for(var/T in typesof(/datum/tech) - /datum/tech)
+		known_tech += new T(src)
+	for(var/D in typesof(/datum/design) - /datum/design)
+		possible_designs += new D(src)
+//	generate_integrated_circuit_designs()
+	RefreshResearch()
+
+
 /datum/research/autolathe/DesignHasReqs(var/datum/design/D)
-	return D && (D.build_type & AUTOLATHE)
+	if(D.req_tech.len == 0)
+		return 1
+	if(D.build_type == AUTOLATHE)
+		return 1
 
-/datum/research/autolathe/AddDesign2Known(var/datum/design/D)
-	if(!(D.build_type & AUTOLATHE))
+	else
+		return 0
+
+
+/obj/machinery/autolathe/proc/AddDesignViaDisk(var/mob/user, var/datum/design/D)
+	for(var/datum/design/F in files.possible_designs)
+		if(F.autolathe_build != 1 || F.id != D.id)
+			continue
+		if(F in files.known_designs)
+			to_chat(user, "This design is already exists")
+			return
+		if(!F.category)
+			F.category = "Imported"
+		files.known_designs.Add(F)
 		return
-	..()
-
-//datum/research/proc/FindDesignByID(var/id)
-	//return known_designs[id]
-
-///obj/machinery/autolathe/proc/FindDesignByID(var/id)
-	//return files.known_designs[id]
 
 /obj/machinery/autolathe/proc/FindDesign(var/id)
-	for(var/datum/design/item/autolathe/desired_design in files.known_designs)
+	for(var/datum/design/item/desired_design in files.known_designs)
 		if(desired_design.id == id)
 			return desired_design
-	return
+	return 0
 
 /obj/machinery/autolathe/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(busy)
@@ -426,6 +454,26 @@
 
 	if(O.loc != user && !(istype(O,/obj/item/stack)))
 		return 0
+
+	if(istype(O, /obj/item/weapon/disk))
+		if(istype(O, /obj/item/weapon/disk/design_disk))
+			var/obj/item/weapon/disk/design_disk/D = O
+			var/datum/design/B = D.blueprint
+			if(D.blueprint)
+				if(B.autolathe_build == 1 || B.build_type == AUTOLATHE)
+					user.visible_message("[user] begins to load \the [O] in \the [src]...", "You begin to load a design from \the [O]...", "You hear the chatter of a floppy drive.")
+					busy = 1
+					AddDesignViaDisk(user, D.blueprint)
+					busy = 0
+				else
+					to_chat(user, "<span class='warning'>That disk doens't have a compatible design</span>")
+			else
+				to_chat(user, "<span class='warning'>That disk does not have a design on it!</span>")
+			return
+		else
+		// So that people who are bad at computers don't shred their disks
+			to_chat(user, "<span class='warning'>This is not the correct type of disk for the autolathe!</span>")
+			return
 
 	if(is_robot_module(O))
 		return 0
@@ -489,7 +537,7 @@
 	else
 		to_chat(user, "You fill \the [src] with \the [eating].")
 
-	flick("autolathe_o", src) // Plays metal insertion animation. Work out a good way to work out a fitting animation. ~Z
+	flick("autolathe_loading", src) // Plays metal insertion animation. Work out a good way to work out a fitting animation. ~Z
 
 	if(istype(eating,/obj/item/stack))
 		var/obj/item/stack/stack = eating
@@ -500,3 +548,84 @@
 
 	updateUsrDialog()
 	return
+
+/obj/machinery/autolathe/verb/eatmaterialsnearby()
+	set name = "Recycle nearby materials"
+	set category = "Object"
+	set src in oview(1)
+
+	var/filltype = 0       // Used to determine message.
+	var/total_used = 0     // Amount of material used.
+	if(busy)
+		visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Autolathe is busy. Please wait for completion of previous operation\"")
+		return
+	busy = 1
+	for(var/obj/item/eating in get_step(src,input_dir))
+		if(istype(eating,/obj/item/ammo_magazine/clip) || istype(eating,/obj/item/ammo_magazine/s357) || istype(eating,/obj/item/ammo_magazine/s38) || istype(eating,/obj/item/ammo_magazine/s44) || istype(eating,/obj/item/stack))
+			continue
+
+		if(!eating.matter)
+			continue
+
+
+		var/mass_per_sheet = 0 // Amount of material constituting one sheet.
+		for(var/material in eating.matter)
+
+			if(isnull(stored_material[material]) || isnull(storage_capacity[material]))
+				continue
+
+			if(stored_material[material] >= storage_capacity[material])
+				continue
+
+			var/total_material = eating.matter[material]
+
+
+			if(stored_material[material] + total_material > storage_capacity[material])
+				total_material = storage_capacity[material] - stored_material[material]
+				filltype = 1
+			else
+				filltype = 2
+
+			stored_material[material] += total_material
+			total_used += total_material
+			mass_per_sheet += eating.matter[material]
+
+		if(!filltype)
+			visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Storage is full. Operation aborted\"")
+			break
+
+		flick("autolathe_loading", src)
+
+		if(istype(eating,/obj/item/stack))
+			var/obj/item/stack/stack = eating
+			stack.use(max(1, round(total_used/mass_per_sheet))) // Always use at least 1 to prevent infinite materials.
+		else
+			qdel(eating)
+		sleep(10*mat_efficiency)
+
+	busy = 0
+	if(filltype == 1)
+		visible_message("[bicon(src)] <b>\The [src]</b> beeps, \"Storage capacity full. Operation terminated. Materials recycled: [total_used]\"")
+	else
+		visible_message("[bicon(src)] <b>\The [src]</b> beeps, \"All materials recycled. Operation terminated. Materials recycled: [total_used]\"")
+
+
+
+/obj/machinery/autolathe/verb/setrecyclepos()
+	set name = "Set recycle input"
+	set category = "Object"
+	set src in oview(1)
+
+	input_dir_name = input("Which direction ?") in list("North", "South", "East", "West")
+	switch(input_dir_name)
+		if("North")
+			input_dir = NORTH
+		if("South")
+			input_dir = SOUTH
+		if("East")
+			input_dir = EAST
+		if("West")
+			input_dir = WEST
+	to_chat(src, "You set the material input to [input_dir_name]")
+
+

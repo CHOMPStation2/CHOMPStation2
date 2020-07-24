@@ -1083,7 +1083,7 @@
 
 	list_misc = list(
 		/obj/item/toy/sword,
-		/obj/item/toy/waterflower,
+		/obj/item/weapon/reagent_containers/spray/waterflower,
 		/obj/item/toy/stickhorse,
 		/obj/item/toy/katana,
 		/obj/item/toy/eight_ball/conch,
@@ -1175,7 +1175,7 @@
 		/obj/item/weapon/storage/box/casino/costume_plaguedoctor = 100,
 		/obj/item/weapon/storage/box/casino/costume_cutewitch = 100,
 		/obj/item/toy/sword = 50,
-		/obj/item/toy/waterflower = 50,
+		/obj/item/weapon/reagent_containers/spray/waterflower = 50,
 		/obj/item/toy/stickhorse = 50,
 		/obj/item/toy/katana = 50,
 		/obj/item/toy/eight_ball/conch = 50,

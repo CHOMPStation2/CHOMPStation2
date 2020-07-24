@@ -79,7 +79,7 @@
 	newMsg.body = msg
 	newMsg.time_stamp = "[stationtime2text()]"
 	newMsg.is_admin_message = adminMessage
-	newMsg.post_time = round_duration_in_ticks // Should be almost universally unique
+	newMsg.post_time = round_duration_in_ds // Should be almost universally unique
 	if(message_type)
 		newMsg.message_type = message_type
 	if(photo)
@@ -97,7 +97,7 @@
 	alert_readers(FC.announcement)
 
 /datum/feed_network/proc/alert_readers(var/annoncement)
-	for(var/obj/machinery/newscaster/NEWSCASTER in allCasters)
+	for(var/obj/machinery/newscaster/NEWSCASTER in GLOB.allCasters)
 		NEWSCASTER.newsAlert(annoncement)
 		NEWSCASTER.update_icon()
 
@@ -178,7 +178,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 
 /obj/machinery/newscaster/Initialize()
 	..() //Not returning . because lateload below
-	allCasters += src
+	GLOB.allCasters += src
 	unit_no = ++unit_no_cur
 	paper_remaining = 15
 	update_icon()
@@ -188,7 +188,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	node = get_exonet_node()
 
 /obj/machinery/newscaster/Destroy()
-	allCasters -= src
+	GLOB.allCasters -= src
 	node = null
 	return ..()
 
@@ -654,7 +654,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 			var/choice = alert("Please confirm Wanted Issue removal","Network Security Handler","Confirm","Cancel")
 			if(choice=="Confirm")
 				news_network.wanted_issue = null
-				for(var/obj/machinery/newscaster/NEWSCASTER in allCasters)
+				for(var/obj/machinery/newscaster/NEWSCASTER in GLOB.allCasters)
 					NEWSCASTER.update_icon()
 				screen=17
 			updateUsrDialog()
@@ -904,7 +904,7 @@ obj/item/weapon/newspaper/Topic(href, href_list)
 				if(curr_page == 0) //We're at the start, get to the middle
 					screen = 1
 			curr_page++
-			playsound(loc, "pageturn", 50, 1)
+			playsound(src, "pageturn", 50, 1)
 
 		else if(href_list["prev_page"])
 			if(curr_page == 0)
@@ -916,7 +916,7 @@ obj/item/weapon/newspaper/Topic(href, href_list)
 				if(curr_page == pages+1) //we're at the end, let's go back to the middle.
 					screen = 1
 			curr_page--
-			playsound(src.loc, "pageturn", 50, 1)
+			playsound(src, "pageturn", 50, 1)
 
 		if(istype(src.loc, /mob))
 			attack_self(src.loc)
@@ -974,9 +974,9 @@ obj/item/weapon/newspaper/attackby(obj/item/weapon/W as obj, mob/user as mob)
 		spawn(300)
 			alert = 0
 			update_icon()
-		playsound(src.loc, 'sound/machines/twobeep.ogg', 75, 1)
+//		playsound(src.loc, 'sound/machines/twobeep.ogg', 75, 1) //CHOMPEdit less peeps pls
 	else
 		for(var/mob/O in hearers(world.view-1, T))
 			O.show_message("<span class='newscaster'><EM>[name]</EM> beeps, \"Attention! Wanted issue distributed!\"</span>",2)
-		playsound(src.loc, 'sound/machines/warning-buzzer.ogg', 75, 1)
+		playsound(src, 'sound/machines/warning-buzzer.ogg', 75, 1)
 	return

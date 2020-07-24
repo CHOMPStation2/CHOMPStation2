@@ -41,6 +41,14 @@
 	icon_state = "cyberdoe_s"
 	do_colouration = 0
 
+/datum/sprite_accessory/wing/cyberangel
+	name = "Cyber angel wing (colorable)"
+	desc = ""
+	icon = 'icons/mob/vore/wings_yw.dmi'
+	icon_state = "cyber_angel"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 //Tails
 /datum/sprite_accessory/tail/tripplekitsune_colorable_yw
 	icon = 'icons/mob/vore/tails_yw.dmi'
@@ -128,12 +136,68 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "stripedtail_colorable_w"
 
+/datum/sprite_accessory/tail/tesh_pattern_fem
+	icon = 'icons/mob/vore/tails_yw.dmi'
+	name = "Female teshari tail(Pattern)"
+	desc = ""
+	icon_state = "seromitail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_fem_tail"
+
+/datum/sprite_accessory/tail/tesh_pattern_male
+	icon = 'icons/mob/vore/tails_yw.dmi'
+	name = "Male teshari tail(Pattern)"
+	desc = ""
+	icon_state = "seromitail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_male_tail"
+
+/datum/sprite_accessory/tail/tesh_pattern_fem_alt
+	icon = 'icons/mob/vore/tails_yw.dmi'
+	name = "Female teshari tail(Pattern, Alt.)"
+	desc = ""
+	icon_state = "seromitail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_fem_alt"
+
+
+/datum/sprite_accessory/tail/tesh_pattern_male_alt
+	icon = 'icons/mob/vore/tails_yw.dmi'
+	name = "Male teshari tail(Pattern, Alt.)"
+	desc = ""
+	icon_state = "seromitail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_male_alt"
+
+
 //ears
 
 /datum/sprite_accessory/ears/large_dragon
 	icon = 'icons/mob/vore/ears_yw.dmi'
-	name = "vary large dragon horns"
+	name = "Very large dragon horns"
 	desc = ""
 	icon_state = "big_liz"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/tesh_pattern_ear_male
+	icon = 'icons/mob/vore/ears_yw.dmi'
+	name = "Teshari ear ,pattern(Male)"
+	desc = ""
+	icon_state = "teshari"
+	color_blend_mode = ICON_MULTIPLY
+	do_colouration = 1
+	extra_overlay = "teshari_male_pattern"
+
+/datum/sprite_accessory/ears/tesh_pattern_ear_female
+	icon = 'icons/mob/vore/ears_yw.dmi'
+	name = "Teshari ear ,pattern(Female)"
+	desc = ""
+	icon_state = "teshari"
+	color_blend_mode = ICON_MULTIPLY
+	do_colouration = 1
+	extra_overlay = "teshari_female_pattern"

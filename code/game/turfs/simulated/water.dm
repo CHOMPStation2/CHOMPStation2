@@ -32,8 +32,6 @@
 	var/image/water_sprite = image(icon = 'icons/turf/outdoors.dmi', icon_state = water_state, layer = WATER_LAYER)
 	add_overlay(water_sprite)
 
-	update_icon_edge()
-
 /turf/simulated/floor/water/get_edge_icon_state()
 	return "water_shallow"
 
@@ -47,7 +45,7 @@
 	else if(istype(O, /obj/item/weapon/mop))
 		O.reagents.add_reagent(reagent_type, 5)
 		to_chat(user, "<span class='notice'>You wet \the [O] in \the [src].</span>")
-		playsound(loc, 'sound/effects/slosh.ogg', 25, 1)
+		playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 		return 1
 
 	else return ..()

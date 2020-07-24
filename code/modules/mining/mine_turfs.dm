@@ -49,23 +49,6 @@ var/list/mining_overlay_cache = list()
 	var/datum/artifact_find/artifact_find
 	var/ignore_mapgen
 
-	var/ore_types = list(
-		"hematite" = /obj/item/weapon/ore/iron,
-		"uranium" = /obj/item/weapon/ore/uranium,
-		"gold" = /obj/item/weapon/ore/gold,
-		"silver" = /obj/item/weapon/ore/silver,
-		"diamond" = /obj/item/weapon/ore/diamond,
-		"phoron" = /obj/item/weapon/ore/phoron,
-		"osmium" = /obj/item/weapon/ore/osmium,
-		"hydrogen" = /obj/item/weapon/ore/hydrogen,
-		"silicates" = /obj/item/weapon/ore/glass,
-		"carbon" = /obj/item/weapon/ore/coal,
-		"verdantium" = /obj/item/weapon/ore/verdantium,
-		"marble" = /obj/item/weapon/ore/marble,
-		"lead" = /obj/item/weapon/ore/lead,
-		// "rutile" = /obj/item/weapon/ore/rutile //VOREStation Add // CHOMP - Rykka commenting this out until it's brought in from upstream.
-	)
-
 	has_resources = 1
 
 // Alternative rock wall sprites.
@@ -244,7 +227,7 @@ turf/simulated/mineral/floor/light_corner
 			for(var/ore in resources)
 				var/amount_to_give = rand(CEILING(resources[ore]/2, 1), resources[ore])  // Should result in at least one piece of ore.
 				for(var/i=1, i <= amount_to_give, i++)
-					var/oretype = ore_types[ore]
+					var/oretype = GLOB.ore_types[ore]
 					new oretype(src)
 				resources[ore] = 0
 
@@ -337,7 +320,7 @@ turf/simulated/mineral/floor/light_corner
 				return
 
 			to_chat(user, "<span class='notice'>You start digging.</span>")
-			playsound(user.loc, 'sound/effects/rustle1.ogg', 50, 1)
+			playsound(user, 'sound/effects/rustle1.ogg', 50, 1)
 
 			if(!do_after(user,30)) return //YAWN change. 30 from 40
 
@@ -652,10 +635,10 @@ turf/simulated/mineral/floor/light_corner
 
 	var/mineral_name
 	if(rare_ore)
-		mineral_name = pickweight(list("marble" = 5, "uranium" = 10, "platinum" = 10, "hematite" = 20, "carbon" = 20, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 5, "verdantium" = 1)) // "rutile" = 4)) //VOREStation Edit // CHOMP - Rykka commenting this out until it's brought in from upstream.
+		mineral_name = pickweight(list("marble" = 5, "uranium" = 10, "platinum" = 10, "hematite" = 20, "carbon" = 20, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 5, "verdantium" = 1, "rutile" = 4)) //VOREStation Edit
 
 	else
-		mineral_name = pickweight(list("marble" = 3, "uranium" = 10, "platinum" = 10, "hematite" = 70, "carbon" = 70, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 2, "verdantium" = 1)) // "rutile" = 4)) //VOREStation Edit // CHOMP - Rykka commenting this out until it's brought in from upstream.
+		mineral_name = pickweight(list("marble" = 3, "uranium" = 10, "platinum" = 10, "hematite" = 70, "carbon" = 70, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 2, "verdantium" = 1, "rutile" = 4)) //VOREStation Edit
 
 	if(mineral_name && (mineral_name in ore_data))
 		mineral = ore_data[mineral_name]

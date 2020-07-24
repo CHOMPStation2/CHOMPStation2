@@ -137,8 +137,12 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 		return new type()
 	return asset_datums[type]
 
+/datum/asset
+	var/_abstract = /datum/asset // Marker so we don't instanatiate abstract types
+
 /datum/asset/New()
 	asset_datums[type] = src
+	register()
 
 /datum/asset/proc/register()
 	return
@@ -148,6 +152,7 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 
 //If you don't need anything complicated.
 /datum/asset/simple
+	_abstract = /datum/asset/simple
 	var/assets = list()
 	var/verify = FALSE
 
@@ -157,36 +162,67 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 /datum/asset/simple/send(client)
 	send_asset_list(client,assets,verify)
 
+//
+// iconsheet Assets - For making lots of icon states available at once without sending a thousand tiny files.
+//
+/datum/asset/iconsheet
+	_abstract = /datum/asset/iconsheet
+	var/name // Name of the iconsheet. Asset will be named after this.
+	var/verify = FALSE
+
+/datum/asset/iconsheet/register(var/list/sprites)
+	if (!name)
+		CRASH("iconsheet [type] cannot register without a name")
+	if (!islist(sprites))
+		CRASH("iconsheet [type] cannot register without a sprites list")
+
+	var/res_name = "iconsheet_[name].css"
+	var/fname = "data/iconsheets/[res_name]"
+	fdel(fname)
+	text2file(generate_css(sprites), fname)
+	register_asset(res_name, fcopy_rsc(fname))
+	fdel(fname)
+
+/datum/asset/iconsheet/send(client/C)
+	if (!name)
+		return
+	send_asset_list(C, list("iconsheet_[name].css"), verify)
+
+/datum/asset/iconsheet/proc/generate_css(var/list/sprites)
+	var/list/out = list(".[name]{display:inline-block;}")
+	for(var/sprite_id in sprites)
+		var/icon/I = sprites[sprite_id]
+		var/data_url = "'data:image/png;base64,[icon2base64(I)]'"
+		out += ".[name].[sprite_id]{width:[I.Width()]px;height:[I.Height()]px;background-image:url([data_url]);}"
+	return out.Join("\n")
+
+/datum/asset/iconsheet/proc/build_sprite_list(icon/I, list/directions, prefix = null)
+	if (length(prefix))
+		prefix = "[prefix]-"
+
+	if (!directions)
+		directions = list(SOUTH)
+
+	var/sprites = list()
+	for (var/icon_state_name in cached_icon_states(I))
+		for (var/direction in directions)
+			var/suffix = (directions.len > 1) ? "-[dir2text(direction)]" : ""
+			var/sprite_name = "[prefix][icon_state_name][suffix]"
+			var/icon/sprite = icon(I, icon_state=icon_state_name, dir=direction, frame=1, moving=FALSE)
+			if (!sprite || !length(cached_icon_states(sprite)))  // that direction or state doesn't exist
+				continue
+			sprites[sprite_name] = sprite
+	return sprites
+
+// Get HTML link tag for including the iconsheet css file.
+/datum/asset/iconsheet/proc/css_tag()
+	return "<link rel='stylesheet' href='iconsheet_[name].css' />"
+
+// get HTML tag for showing an icon
+/datum/asset/iconsheet/proc/icon_tag(icon_state, dir = SOUTH)
+	return "<span class='[name] [icon_state]-[dir2text(dir)]'></span>"
 
 //DEFINITIONS FOR ASSET DATUMS START HERE.
-/datum/asset/simple/pda
-	assets = list(
-		"pda_atmos.png" = 'icons/pda_icons/pda_atmos.png',
-		"pda_back.png" = 'icons/pda_icons/pda_back.png',
-		"pda_bell.png" = 'icons/pda_icons/pda_bell.png',
-		"pda_blank.png" = 'icons/pda_icons/pda_blank.png',
-		"pda_boom.png" = 'icons/pda_icons/pda_boom.png',
-		"pda_bucket.png" = 'icons/pda_icons/pda_bucket.png',
-		"pda_crate.png" = 'icons/pda_icons/pda_crate.png',
-		"pda_cuffs.png" = 'icons/pda_icons/pda_cuffs.png',
-		"pda_eject.png" = 'icons/pda_icons/pda_eject.png',
-		"pda_exit.png" = 'icons/pda_icons/pda_exit.png',
-		"pda_flashlight.png" = 'icons/pda_icons/pda_flashlight.png',
-		"pda_honk.png" = 'icons/pda_icons/pda_honk.png',
-		"pda_mail.png" = 'icons/pda_icons/pda_mail.png',
-		"pda_medical.png" = 'icons/pda_icons/pda_medical.png',
-		"pda_menu.png" = 'icons/pda_icons/pda_menu.png',
-		"pda_mule.png" = 'icons/pda_icons/pda_mule.png',
-		"pda_notes.png" = 'icons/pda_icons/pda_notes.png',
-		"pda_power.png" = 'icons/pda_icons/pda_power.png',
-		"pda_rdoor.png" = 'icons/pda_icons/pda_rdoor.png',
-		"pda_reagent.png" = 'icons/pda_icons/pda_reagent.png',
-		"pda_refresh.png" = 'icons/pda_icons/pda_refresh.png',
-		"pda_scanner.png" = 'icons/pda_icons/pda_scanner.png',
-		"pda_signaler.png" = 'icons/pda_icons/pda_signaler.png',
-		"pda_status.png" = 'icons/pda_icons/pda_status.png'
-	)
-
 /datum/asset/simple/generic
 	assets = list(
 		"search.js" = 'html/search.js',
@@ -197,20 +233,6 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 		"talisman.png" = 'html/images/talisman.png',
 		"paper_bg.png" = 'html/images/paper_bg.png',
 		"no_image32.png" = 'html/images/no_image32.png',
-		"sos_1.png" = 'icons/spideros_icons/sos_1.png',
-		"sos_2.png" = 'icons/spideros_icons/sos_2.png',
-		"sos_3.png" = 'icons/spideros_icons/sos_3.png',
-		"sos_4.png" = 'icons/spideros_icons/sos_4.png',
-		"sos_5.png" = 'icons/spideros_icons/sos_5.png',
-		"sos_6.png" = 'icons/spideros_icons/sos_6.png',
-		"sos_7.png" = 'icons/spideros_icons/sos_7.png',
-		"sos_8.png" = 'icons/spideros_icons/sos_8.png',
-		"sos_9.png" = 'icons/spideros_icons/sos_9.png',
-		"sos_10.png" = 'icons/spideros_icons/sos_10.png',
-		"sos_11.png" = 'icons/spideros_icons/sos_11.png',
-		"sos_12.png" = 'icons/spideros_icons/sos_12.png',
-		"sos_13.png" = 'icons/spideros_icons/sos_13.png',
-		"sos_14.png" = 'icons/spideros_icons/sos_14.png'
 	)
 	
 /datum/asset/simple/changelog
@@ -244,7 +266,7 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 		"nano/images/modular_computers/",
 		"nano/js/"
 	)
-	var/list/uncommon_dirs = list(
+	var/list/template_dirs = list(
 		"nano/templates/"
 	)
 
@@ -257,16 +279,31 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 				if(fexists(path + filename))
 					common[filename] = fcopy_rsc(path + filename)
 					register_asset(filename, common[filename])
-	for(var/path in uncommon_dirs)
+	// Combine all templates into a single bundle.
+	var/list/template_data = list()
+	for(var/path in template_dirs)
 		var/list/filenames = flist(path)
 		for(var/filename in filenames)
-			if(copytext(filename, length(filename)) != "/") // Ignore directories.
-				if(fexists(path + filename))
-					register_asset(filename, fcopy_rsc(path + filename))
+			if(copytext(filename, length(filename) - 4) == ".tmpl") // Ignore directories.
+				template_data[filename] = file2text(path + filename)
+	var/template_bundle = "function nanouiTemplateBundle(){return [json_encode(template_data)];}"
+	var/fname = "data/nano_templates_bundle.js"
+	fdel(fname)
+	text2file(template_bundle, fname)
+	register_asset("nano_templates_bundle.js", fcopy_rsc(fname))
+	fdel(fname)
 
-/datum/asset/nanoui/send(client, uncommon)
-	if(!islist(uncommon))
-		uncommon = list(uncommon)
-
-	send_asset_list(client, uncommon)
+/datum/asset/nanoui/send(client)
 	send_asset_list(client, common)
+
+
+// VOREStation Add Start - pipes iconsheet asset
+/datum/asset/iconsheet/pipes
+	name = "pipes"
+
+/datum/asset/iconsheet/pipes/register()
+	var/list/sprites = list()
+	for (var/each in list('icons/obj/pipe-item.dmi', 'icons/obj/pipes/disposal.dmi'))
+		sprites += build_sprite_list(each, global.alldirs)
+	..(sprites)
+// VOREStation Add End

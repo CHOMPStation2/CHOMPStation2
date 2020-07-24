@@ -25,6 +25,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	requires_power = 1
 	always_unpowered = 1
 	dynamic_lighting = 0
+	has_gravity = 0
 	power_light = 0
 	power_equip = 0
 	power_environ = 0
@@ -1137,6 +1138,18 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Visitor Room 12"
 	icon_state = "Sleep"
 
+//CHOMPStation Edit Start TFF 6/2/20 - Added two new dorms
+
+/area/crew_quarters/sleep/vistor_room_13
+	name = "\improper Visitor Room 12"
+	icon_state = "Sleep"
+
+/area/crew_quarters/sleep/vistor_room_14
+	name = "\improper Visitor Room 12"
+	icon_state = "Sleep"
+
+//CHOMPStation Edit End
+
 /area/crew_quarters/sleep/engi_wash
 	name = "\improper Engineering Washroom"
 	icon_state = "toilet"
@@ -1701,8 +1714,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Port First-Aid Station"
 	icon_state = "medbay2"
 
-
-
 //Security
 
 /area/security/main
@@ -1720,7 +1731,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/brig/prison_break()
 	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
 		temp_closet.locked = 0
-		temp_closet.icon_state = temp_closet.icon_closed
+		temp_closet.icon_state = "closed_unlocked"
 	for(var/obj/machinery/door_timer/temp_timer in src)
 		temp_timer.releasetime = 1
 	..()
@@ -1732,7 +1743,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/prison/prison_break()
 	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
 		temp_closet.locked = 0
-		temp_closet.icon_state = temp_closet.icon_closed
+		temp_closet.icon_state = "closed_unlocked"
 	for(var/obj/machinery/door_timer/temp_timer in src)
 		temp_timer.releasetime = 1
 	..()

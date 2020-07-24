@@ -1398,9 +1398,6 @@
 /obj/structure/sign/poster,
 /turf/simulated/wall/titanium,
 /area/maintenance/chapel)
-"adF" = (
-/turf/simulated/wall,
-/area/space)
 "adG" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1458,7 +1455,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/vault/bolted{
 	name = "AI core";
-	req_access = list(16)
+	req_access = newlist();
+	req_one_access = list(16,53,52)
 	},
 /obj/machinery/door/blast/regular{
 	id = "AICore";
@@ -1500,17 +1498,14 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor,
-/area/space)
-"adV" = (
-/turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "adW" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/mime,
 /obj/item/weapon/pen/crayon/mime,
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "adX" = (
 /turf/simulated/wall,
 /area/maintenance/lowfloor3)
@@ -1663,7 +1658,7 @@
 "aep" = (
 /obj/structure/table/steel,
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "aeq" = (
 /turf/simulated/wall,
 /area/maintenance/starboard)
@@ -1920,7 +1915,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/highsecurity{
 	name = "Messaging Server";
-	req_access = list(16)
+	req_access = newlist();
+	req_one_access = list(16,53,52)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2040,14 +2036,14 @@
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "aeW" = (
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "aeX" = (
 /obj/item/clothing/head/soft/mime,
 /obj/item/clothing/mask/gas/mime,
@@ -2059,7 +2055,7 @@
 	dir = 5
 	},
 /turf/simulated/floor,
-/area/space)
+/area/maintenance/chapel)
 "aeY" = (
 /turf/simulated/floor,
 /area/maintenance/starboard)
@@ -2356,7 +2352,7 @@
 "afL" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Hub";
-	req_access = list();
+	req_access = newlist();
 	req_one_access = list(56,30)
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -4906,7 +4902,7 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Virology Isolation 1"
+	c_tag = "Virology Isolation 3"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -4930,7 +4926,7 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Virology Isolation 2"
+	c_tag = "Virology Isolation 4"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -6366,8 +6362,9 @@
 "aou" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload Access";
-	req_access = list(16)
+	name = "Core Integrity and Cyborg Access";
+	req_access = newlist();
+	req_one_access = list(16,53,52)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6470,6 +6467,9 @@
 	},
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Virology Lab North"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -7288,7 +7288,7 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Virology Isolation 3";
+	c_tag = "Virology Isolation 2";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -7483,6 +7483,9 @@
 	name = "plastic table frame"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
 "aqS" = (
@@ -8212,7 +8215,7 @@
 	dir = 9
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Virology lab";
+	c_tag = "Virology Lab West";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -8265,7 +8268,7 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Virology Isolation 4";
+	c_tag = "Virology Isolation 1";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -9248,7 +9251,7 @@
 /area/medical/virology)
 "aui" = (
 /obj/machinery/camera/network/medbay{
-	c_tag = "Surgery Wing Starboard";
+	c_tag = "Virology Lab South";
 	dir = 1
 	},
 /obj/item/device/radio/intercom{
@@ -12087,7 +12090,7 @@
 	name = "plastic table frame"
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Virology Entry";
+	c_tag = "Virology Interior Lobby";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -12115,7 +12118,7 @@
 	pixel_y = -26
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Medbay Exam room";
+	c_tag = "Virology Entry Lock";
 	dir = 1
 	},
 /obj/random/medical,
@@ -12206,7 +12209,7 @@
 	pixel_y = -25
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Medbay Lower Annex Aft";
+	c_tag = "Medbay Lower Annex Southwest";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -12275,9 +12278,12 @@
 /turf/simulated/floor,
 /area/hallway/primary/starboard)
 "azP" = (
-/obj/machinery/disposal,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/lower/aft)
+/obj/structure/table/marble,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "azQ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -12529,9 +12535,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/lower/central)
 "aAy" = (
-/obj/machinery/vending/fitness,
-/turf/simulated/floor/tiled,
-/area/hallway/lower/aft)
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "aAz" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12771,6 +12777,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/lower/central)
 "aAY" = (
@@ -12783,17 +12790,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/hallway/lower/central)
-"aBa" = (
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 4;
-	pixel_y = -24
-	},
-/obj/machinery/camera/autoname{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/lower/aft)
 "aBb" = (
 /obj/machinery/bookbinder,
 /turf/simulated/floor/wood,
@@ -14605,15 +14601,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
-"aFy" = (
-/obj/structure/disposalpipe/up,
-/turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
-"aFz" = (
-/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
-/obj/machinery/atmospherics/pipe/zpipe/up/supply,
-/turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
 "aFA" = (
 /obj/structure/railing{
 	dir = 8
@@ -14799,44 +14786,34 @@
 /obj/item/weapon/storage/box/camerabug,
 /turf/simulated/floor/wood,
 /area/vacant/vacant_site/private)
-"aFV" = (
-/obj/structure/disposalpipe/down{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
-"aFW" = (
-/obj/structure/disposalpipe/junction{
-	icon_state = "pipe-j2";
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
 "aFX" = (
-/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/zpipe/down/supply{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "16-0"
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/disposalpipe/broken{
-	dir = 8
+/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
+	icon_state = "up-scrubbers";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/zpipe/up/supply{
+	icon_state = "up-supply";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
 "aFY" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
@@ -21496,6 +21473,10 @@
 	},
 /obj/machinery/door/firedoor/glass/hidden,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/civilian{
+	c_tag = "Dormitory Hall Northwest";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
 "aUV" = (
@@ -22050,8 +22031,6 @@
 /area/security/range)
 "aWa" = (
 /obj/structure/closet{
-	icon_closed = "cabinet_closed";
-	icon_opened = "cabinet_open";
 	icon_state = "cabinet_closed";
 	name = "Clothing Storage"
 	},
@@ -23082,7 +23061,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/network/prison{
-	c_tag = "SEC - Common Brig Enterance";
+	c_tag = "Brig Entrance";
 	dir = 8
 	},
 /obj/structure/cable/green{
@@ -23144,7 +23123,7 @@
 	},
 /obj/structure/table/steel,
 /obj/machinery/camera/network/prison{
-	c_tag = "SEC - Brig Observation";
+	c_tag = "Brig Observation";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -23324,6 +23303,7 @@
 	dir = 2;
 	req_access = list(24)
 	},
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
 "aYl" = (
@@ -23836,7 +23816,7 @@
 "aZa" = (
 /obj/machinery/seed_storage/garden,
 /obj/machinery/camera/network/prison{
-	c_tag = "SEC - Common Brig Fore";
+	c_tag = "Brig East";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -23896,7 +23876,7 @@
 /obj/machinery/librarypubliccomp,
 /obj/structure/table/woodentable,
 /obj/machinery/camera/network/civilian{
-	c_tag = "Library Fore";
+	c_tag = "Bar Backroom";
 	dir = 2
 	},
 /turf/simulated/floor/wood,
@@ -23907,6 +23887,9 @@
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
+/obj/machinery/camera/network/civilian{
+	c_tag = "Library North"
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "aZm" = (
@@ -24550,7 +24533,7 @@
 	pixel_y = 4
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Cafe Back Room";
+	c_tag = "Cafe Back Room";
 	dir = 2
 	},
 /turf/simulated/floor/tiled/yellow,
@@ -24564,9 +24547,6 @@
 /turf/simulated/floor/tiled/yellow,
 /area/crew_quarters/coffee_shop)
 "bay" = (
-/obj/structure/sink/kitchen{
-	pixel_y = 28
-	},
 /obj/machinery/button/remote/blast_door{
 	id = "coffeeshop";
 	name = "Cafe Shutters";
@@ -24582,7 +24562,10 @@
 	pixel_x = 34;
 	pixel_y = -4
 	},
-/turf/simulated/floor/tiled/yellow,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "baz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25177,20 +25160,17 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "bbD" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/junction{
+	icon_state = "pipe-j2";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "bbE" = (
@@ -25621,7 +25601,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "bcz" = (
@@ -25667,6 +25646,12 @@
 /obj/structure/window/reinforced/polarized{
 	dir = 1;
 	id = "coffee"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "coffeeshop";
+	layer = 3.1;
+	name = "Cafe Shutters"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/coffee_shop)
@@ -25805,7 +25790,7 @@
 	},
 /obj/effect/floor_decal/corner/blue,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Visitor Room Hall FP";
+	c_tag = "Dormitory Hall West";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -26076,7 +26061,7 @@
 /obj/structure/table/steel,
 /obj/item/weapon/dice,
 /obj/machinery/camera/network/prison{
-	c_tag = "Prison Port";
+	c_tag = "Prison West";
 	dir = 1
 	},
 /obj/item/weapon/deck/cards,
@@ -26132,10 +26117,6 @@
 	},
 /obj/item/weapon/bedsheet/orange,
 /obj/structure/bed/padded,
-/obj/machinery/camera/network/prison{
-	c_tag = "Prison Dormitories";
-	dir = 1
-	},
 /turf/simulated/floor/tiled,
 /area/security/perma)
 "bdx" = (
@@ -26145,7 +26126,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe,
 /obj/item/clothing/suit/storage/apron/overalls,
 /obj/machinery/camera/network/prison{
-	c_tag = "SEC - Brig Bedroom";
+	c_tag = "Brig Dormitory";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -26554,15 +26535,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 2;
-	layer = 3.3;
-	pixel_x = 0;
-	pixel_y = 26
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"bew" = (
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -26574,6 +26546,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
+"bew" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "bex" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -26582,12 +26562,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/machinery/light_switch{
-	dir = 2;
-	name = "light switch ";
-	pixel_x = 0;
-	pixel_y = 36
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -27407,7 +27381,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/network/security{
 	c_tag = "Prison Court";
-	dir = 1
+	dir = 1;
+	network = list("Prison")
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/security/perma/court)
@@ -28213,7 +28188,7 @@
 	pixel_y = -25
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "Library Aft";
+	c_tag = "Library South";
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
@@ -28258,6 +28233,12 @@
 "bhK" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
+	},
+/obj/machinery/light_switch{
+	dir = 2;
+	name = "light switch ";
+	pixel_x = 0;
+	pixel_y = 36
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -28662,7 +28643,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Visitor Room Hall AP";
+	c_tag = "Dormitory Hall Southwest";
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
@@ -30144,8 +30125,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Visitor's Dinning";
-	dir = 4
+	c_tag = "Dormitory Hall South";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
@@ -30597,9 +30578,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/machinery/camera/autoname{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
@@ -31080,6 +31058,14 @@
 	icon_state = "1-2";
 	pixel_y = 0
 	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/atmospheric)
 "bnn" = (
@@ -31317,6 +31303,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "bnQ" = (
@@ -31342,6 +31336,10 @@
 	icon_state = "0-4";
 	d2 = 4
 	},
+/obj/machinery/camera/network/substations,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/atmospheric)
 "bnT" = (
@@ -31355,6 +31353,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	icon_state = "bulb1";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/atmospheric)
@@ -31608,9 +31613,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/atmos)
 "boy" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/structure/cable/cyan{
 	d1 = 1;
 	d2 = 4;
@@ -31632,6 +31634,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/atmospheric)
@@ -31658,7 +31664,7 @@
 	frequency = 1443;
 	level = 3;
 	name = "Distribution and Waste Monitor";
-	sensors = list("mair_in_meter" = "Mixed Air In", "air_sensor" = "Mixed Air Supply Tank", "mair_out_meter" = "Mixed Air Out", "dloop_atm_meter" = "Distribution Loop", "wloop_atm_meter" = "Engine Waste")
+	sensors = list("mair_in_meter" = "Mixed Air In", "air_sensor" = "Mixed Air Supply Tank", "mair_out_meter" = "Mixed Air Out", "dloop_atm_meter" = "Distribution Loop", "wloop_atm_meter" = "Waste Loop", "wloop_engine_meter" = "Engine Waste")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -31997,9 +32003,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/camera/network/telecom{
-	c_tag = "Telecoms Main Computer Room"
-	},
 /obj/machinery/firealarm{
 	dir = 2;
 	layer = 3.3;
@@ -32014,6 +32017,9 @@
 /obj/item/weapon/pen/blue{
 	pixel_x = -3;
 	pixel_y = 2
+	},
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Monitoring Room"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
@@ -32221,7 +32227,7 @@
 /obj/item/weapon/storage/belt/utility/atmostech,
 /obj/item/weapon/storage/belt/utility/atmostech,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Atmospherics Fore Starboard";
+	c_tag = "Atmospherics Northeast";
 	dir = 2
 	},
 /turf/simulated/floor/tiled,
@@ -32330,7 +32336,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "Atmospherics Hallway";
+	c_tag = "Atmospherics Lobby East";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -32704,6 +32710,14 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "bqQ" = (
@@ -32811,6 +32825,14 @@
 "bra" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/sign/nosmoking_2{
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	icon_state = "warningcorner";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
@@ -33071,7 +33093,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Atmospherics Fore Port";
+	c_tag = "Atmospherics Northwest";
 	dir = 2
 	},
 /turf/simulated/floor/tiled,
@@ -33197,7 +33219,7 @@
 	pixel_y = 0
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Atmospherics Monitoring";
+	c_tag = "Atmospherics Monitoring";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -33299,6 +33321,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "brS" = (
@@ -33368,6 +33394,10 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark{
@@ -33460,6 +33490,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
@@ -33563,6 +33596,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
 	},
 /turf/simulated/floor,
 /area/engineering/atmos)
@@ -33735,6 +33776,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "bsJ" = (
@@ -33796,6 +33840,10 @@
 	dir = 4;
 	pixel_x = -28
 	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	icon_state = "warningcorner";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
 "bsP" = (
@@ -33814,6 +33862,7 @@
 /area/tcommsat/computer)
 "bsR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
 "bsS" = (
@@ -33990,10 +34039,6 @@
 /obj/structure/closet/crate,
 /obj/item/device/aicard,
 /obj/item/device/multitool,
-/obj/machinery/camera/network/telecom{
-	c_tag = "Telecoms Entrance South";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/dark,
 /area/tcommsat/entrance)
 "bts" = (
@@ -34052,6 +34097,10 @@
 	pixel_x = 25;
 	pixel_y = 22
 	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
 "bty" = (
@@ -34095,11 +34144,22 @@
 	tag_interior_sensor = "server_access_in_sensor";
 	tag_secure = 1
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/plating,
 /area/tcommsat/computer)
 "btA" = (
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Interior Access";
+	dir = 8;
+	icon_state = "camera"
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/sign/atmos/n2{
+	pixel_x = 0;
+	pixel_y = 28
 	},
 /turf/simulated/floor/plating,
 /area/tcommsat/computer)
@@ -34784,9 +34844,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/camera/network/telecom{
-	c_tag = "Telecoms Central Compartment North"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -35080,7 +35137,15 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/dark,
+/obj/effect/floor_decal/industrial/warning/corner{
+	icon_state = "warningcorner";
+	dir = 8
+	},
+/obj/machinery/camera/network/substations{
+	icon_state = "camera";
+	dir = 8
+	},
+/turf/simulated/floor,
 /area/tcommsat/powercontrol)
 "bvI" = (
 /obj/structure/cable/green{
@@ -35443,6 +35508,14 @@
 	dir = 4;
 	icon_state = "intact"
 	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "bws" = (
@@ -35537,7 +35610,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor,
 /area/tcommsat/powercontrol)
 "bwB" = (
 /obj/structure/table/standard,
@@ -35555,7 +35631,7 @@
 /area/tcomstorage)
 "bwC" = (
 /obj/machinery/camera/network/telecom{
-	c_tag = "Telecoms Storage"
+	c_tag = "Telecomms Storage"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -35712,7 +35788,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Atmospherics Port";
+	c_tag = "Atmospherics West";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -35800,6 +35876,14 @@
 	icon_state = "intact";
 	dir = 4
 	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "bxf" = (
@@ -35873,6 +35957,9 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "bxm" = (
@@ -35882,6 +35969,10 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/light/small,
+/obj/effect/floor_decal/industrial/warning/corner{
+	icon_state = "warningcorner";
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "bxn" = (
@@ -36124,6 +36215,14 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
 	},
 /turf/simulated/floor,
 /area/engineering/hallway_lower)
@@ -37131,10 +37230,6 @@
 /area/tcommsat/chamber)
 "bAh" = (
 /obj/machinery/light,
-/obj/machinery/camera/network/telecom{
-	c_tag = "Telecoms Central Compartment South";
-	dir = 1
-	},
 /turf/simulated/floor/bluegrid{
 	name = "Mainframe Base";
 	nitrogen = 100;
@@ -37313,7 +37408,7 @@
 	},
 /obj/effect/floor_decal/corner/black/full,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Atmospherics Aft Port";
+	c_tag = "Atmospherics Southwest";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -37388,7 +37483,7 @@
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Atmospherics Aft Starboard";
+	c_tag = "Atmospherics Southeast";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -37770,6 +37865,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor,
 /area/maintenance/aft)
 "bBo" = (
@@ -37980,6 +38076,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor,
 /area/rnd/lab)
 "bBM" = (
@@ -38032,9 +38129,13 @@
 	pixel_y = 0;
 	req_access = list(61)
 	},
-/obj/machinery/camera/network/telecom{
-	c_tag = "Telecoms Foyer";
-	dir = 8
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Foyer East";
+	dir = 8;
+	icon_state = "camera"
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tcomfoyer)
@@ -38064,7 +38165,7 @@
 "bBS" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/camera/network/engineering{
-	c_tag = "Medical substation";
+	c_tag = "Atmospherics Southeast - Tanks";
 	dir = 8
 	},
 /obj/item/device/geiger/wall{
@@ -38349,6 +38450,7 @@
 /obj/machinery/door/airlock/glass_science{
 	name = "Nanite Laboratory"
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "bCC" = (
@@ -38384,6 +38486,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "bCG" = (
@@ -38591,6 +38694,7 @@
 	icon_state = "warningcee";
 	dir = 8
 	},
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "bCV" = (
@@ -38615,6 +38719,7 @@
 	icon_state = "warningcee";
 	dir = 4
 	},
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "bCW" = (
@@ -38714,7 +38819,7 @@
 	pixel_y = -27
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "Research - Miscellaneous Test Chamber";
+	c_tag = "Abandoned Test Chamber";
 	dir = 1;
 	network = list("Research","Miscellaneous Reseach")
 	},
@@ -38724,6 +38829,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "High Security-Grey Tempest"
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor/reinforced,
 /area/rnd/lab)
 "bDh" = (
@@ -39026,8 +39132,10 @@
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "bDU" = (
-/obj/machinery/camera/motion{
-	dir = 4
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Foyer West";
+	dir = 4;
+	icon_state = "camera"
 	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
@@ -39109,16 +39217,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/autoname{
+	c_tag = "Dormitory Hall Northeast";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
-"bEc" = (
-/obj/machinery/camera/autoname{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/lower/central)
 "bEd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/geiger/wall{
@@ -39187,7 +39290,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "Toxins Substation";
+	c_tag = "Atmospherics Lobby South";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -39375,14 +39478,6 @@
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "bEF" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 1;
-	icon_state = "pdoor0";
-	id = "atmoslockdown";
-	name = "Atmospherics Lockdown";
-	opacity = 0
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -39392,14 +39487,6 @@
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "bEG" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 1;
-	icon_state = "pdoor0";
-	id = "atmoslockdown";
-	name = "Atmospherics Lockdown";
-	opacity = 0
-	},
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -40138,7 +40225,10 @@
 	req_access = list(61)
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/camera/motion,
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Access Room"
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
 "bGh" = (
@@ -40226,17 +40316,71 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
+"bWT" = (
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = -24
+	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/central)
+"cpe" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 5
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled,
+/area/engineering/hallway_lower)
 "cJF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/valve/digital,
 /turf/simulated/floor,
 /area/security/prison)
+"cVD" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Dormitory Hall East";
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/dorms)
 "ddA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
+"dTl" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"ept" = (
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"eDP" = (
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Access Corridor North"
+	},
+/turf/simulated/floor/reinforced,
+/area/tcomfoyer)
 "ePE" = (
 /obj/structure/stairs/east,
 /turf/simulated/floor/tiled,
@@ -40247,6 +40391,37 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
+"hEt" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/tcommsat/entrance)
+"iff" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbaylower)
+"iij" = (
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Access Corridor South";
+	dir = 1;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/reinforced,
+/area/tcomfoyer)
+"imj" = (
+/obj/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/aft)
 "iJO" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -40268,6 +40443,33 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
+"iLy" = (
+/obj/structure/sign/atmos/n2,
+/turf/simulated/wall/r_wall,
+/area/tcommsat/chamber)
+"jLM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"jPt" = (
+/obj/structure/table/marble,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "coffeeshop";
+	layer = 3.1;
+	name = "Cafe Shutters"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"kEh" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "mbM" = (
 /obj/structure/table/glass,
 /obj/structure/cable/green{
@@ -40277,6 +40479,50 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
+"mfc" = (
+/obj/machinery/chem_master/condimaster,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"mnm" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Server Room North"
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/tcommsat/chamber)
+"pcD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/sign/atmos/n2{
+	pixel_x = -28;
+	pixel_y = 0
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/tcommsat/chamber)
+"ppq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "qgS" = (
 /obj/machinery/door/airlock/maintenance/sec{
 	name = "Riot Control";
@@ -40285,6 +40531,44 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor,
 /area/security/prison)
+"scr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"sEM" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/camera/network/civilian{
+	c_tag = "Dormitory Hall Southeast";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/lower/dorms)
+"uXm" = (
+/obj/structure/table/marble,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"weC" = (
+/obj/structure/sink/kitchen{
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "wpF" = (
 /obj/machinery/alarm{
 	frequency = 1441;
@@ -40292,6 +40576,33 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
+"wqD" = (
+/obj/machinery/camera/motion/telecom{
+	c_tag = "Telecomms Server Room South";
+	dir = 1;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/tcommsat/chamber)
+"xfe" = (
+/obj/structure/closet/secure_closet/freezer/fridge{
+	starts_with = list(/obj/item/weapon/reagent_containers/food/drinks/milk = 6, /obj/item/weapon/storage/fancy/egg_box = 4, /obj/item/weapon/reagent_containers/food/condiment/flour = 7, /obj/item/weapon/reagent_containers/food/condiment/sugar = 2)
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"xHg" = (
+/obj/machinery/door/airlock/engineeringatmos{
+	name = "Pipe-Power Floor Transfer"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/maintenance/medical_lower)
 
 (1,1,1) = {"
 aaa
@@ -65805,7 +66116,7 @@ agw
 agw
 aDW
 age
-ajh
+age
 age
 age
 age
@@ -67820,9 +68131,9 @@ aAs
 aCv
 aAs
 aAs
+age
 agw
 agw
-aFV
 age
 aEd
 agw
@@ -68072,9 +68383,9 @@ aBI
 aCv
 aAs
 aEb
-age
-aFy
-aFW
+agw
+agw
+agw
 age
 age
 ajl
@@ -68323,8 +68634,8 @@ aAs
 aBJ
 aCv
 aAs
-aEc
-age
+agw
+agw
 agw
 aFX
 aEc
@@ -68576,8 +68887,8 @@ aBI
 aCv
 aAs
 agw
-aEc
-aFz
+agw
+agw
 aFY
 age
 aHp
@@ -68827,7 +69138,7 @@ aAs
 aAs
 aCw
 aAs
-agw
+xHg
 age
 age
 aJp
@@ -74104,7 +74415,7 @@ ala
 ala
 ala
 ala
-aqE
+iff
 arM
 asJ
 aoL
@@ -74668,7 +74979,7 @@ biP
 bjQ
 bky
 bgI
-blI
+cpe
 aYk
 bnV
 bnV
@@ -75911,7 +76222,7 @@ aQk
 aQk
 aQk
 aWw
-bEc
+awv
 aVF
 aZl
 baq
@@ -76099,7 +76410,7 @@ ado
 abx
 abx
 abx
-aeb
+abx
 aeF
 abx
 aJA
@@ -78185,7 +78496,7 @@ aZq
 bau
 bbA
 bcx
-aZq
+jPt
 bew
 bfy
 bgl
@@ -78429,15 +78740,15 @@ aYi
 awv
 aCI
 awv
-ayL
+aZq
 azP
 aAy
-ayN
+uXm
 aZr
 bav
 bbB
 bcy
-aZq
+jPt
 bex
 bfz
 bgm
@@ -78681,10 +78992,10 @@ aRH
 azb
 aTH
 aCP
-ayN
-ayN
-ayN
-ayN
+aZq
+weC
+dTl
+aAy
 aZs
 baw
 bbB
@@ -78933,10 +79244,10 @@ aRI
 aCf
 awv
 aCQ
-ayN
-ayN
-ayN
-ayN
+aZq
+xfe
+jLM
+ept
 aZq
 bax
 bbC
@@ -78959,7 +79270,7 @@ bof
 boL
 bps
 bqj
-bqg
+hEt
 brW
 bBP
 bts
@@ -79184,12 +79495,12 @@ aLe
 awt
 aAZ
 awv
-awv
-ayN
-ayN
-ayN
-ayN
+bWT
 aZq
+mfc
+ppq
+scr
+kEh
 bay
 bbD
 bcB
@@ -79437,10 +79748,10 @@ aAx
 aCN
 awv
 awv
-ayN
-ayN
-ayN
-aBa
+aZq
+aZq
+aZq
+aZq
 aZq
 aZq
 bbE
@@ -79692,7 +80003,7 @@ awv
 ayN
 ayN
 ayN
-ayN
+imj
 ayN
 ayN
 aMF
@@ -79719,7 +80030,7 @@ bqZ
 brY
 bsM
 bpt
-bpt
+iij
 bva
 bva
 bva
@@ -81225,7 +81536,7 @@ bEw
 bEz
 boi
 boM
-bpt
+eDP
 bpt
 bqZ
 bsa
@@ -81241,7 +81552,7 @@ byC
 bvg
 bvg
 bvg
-bvc
+wqD
 bva
 aan
 bwH
@@ -81737,7 +82048,7 @@ boN
 bqm
 boN
 bva
-bvP
+mnm
 bvg
 bvg
 bvg
@@ -81988,7 +82299,7 @@ bsc
 bsO
 btu
 bui
-bvb
+pcD
 bvR
 bwG
 bwG
@@ -83011,7 +83322,7 @@ aan
 bBb
 bBa
 bwH
-bBH
+aac
 bBI
 bCk
 bBY
@@ -83249,7 +83560,7 @@ boN
 bty
 boN
 bve
-bva
+iLy
 bva
 bva
 bva
@@ -84018,8 +84329,8 @@ aan
 aan
 aan
 bBa
-byu
-byu
+bwH
+bBI
 bBI
 bCm
 bCu
@@ -84270,7 +84581,7 @@ aan
 bkO
 bBc
 bBm
-aan
+byv
 aan
 bBI
 bCn
@@ -84522,8 +84833,8 @@ aan
 bkO
 bBa
 bkO
+byv
 aan
-bBK
 bBI
 bCo
 bCo
@@ -86287,13 +86598,13 @@ bAM
 bBf
 bBm
 bkO
-byu
-byu
-aan
-aan
-aan
-byu
-aac
+bBI
+bBI
+bBK
+bBK
+bBK
+bBI
+bBH
 aac
 aac
 aac
@@ -87188,7 +87499,7 @@ aan
 aan
 aan
 aan
-adF
+acB
 acB
 adB
 acB
@@ -87689,10 +88000,10 @@ aac
 aan
 aan
 aan
-adF
-adF
-adF
-adF
+acB
+acB
+acB
+acB
 acB
 adB
 acB
@@ -87941,7 +88252,7 @@ aac
 aan
 aan
 aan
-adF
+acB
 adU
 aep
 aeV
@@ -88193,9 +88504,9 @@ aac
 aan
 aan
 aan
-adF
-adV
-adV
+acB
+acN
+acN
 aeW
 afs
 adB
@@ -88445,9 +88756,9 @@ aac
 aan
 aan
 aan
-adF
+acB
 adW
-adV
+acN
 aeX
 acB
 adB
@@ -88697,10 +89008,10 @@ aac
 aan
 aan
 aan
-adF
-adF
-adF
-adF
+acB
+acB
+acB
+acB
 acB
 adD
 adT
@@ -90791,7 +91102,7 @@ aZO
 bBD
 bhj
 baN
-biy
+sEM
 bfc
 aZO
 baN
@@ -91037,7 +91348,7 @@ aZP
 aVY
 bcc
 aVY
-bEb
+cVD
 aVY
 aVY
 aVY
