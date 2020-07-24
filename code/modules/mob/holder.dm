@@ -172,6 +172,16 @@ var/list/holder_mob_icon_cache = list()
 	else
 		if(grabber.incapacitated()) return
 
+	//YW edit - size diff check
+	var/sizediff = grabber.size_multiplier - size_multiplier
+	if(sizediff < -0.5)
+		if(self_grab)
+			to_chat(src, "<span class='warning'>You are too big to fit in \the [grabber]\'s hands!</span>")
+		else
+			to_chat(grabber, "<span class='warning'>\The [src] is too big to fit in your hands!</span>")
+		return
+	//end YW edit
+
 	var/obj/item/weapon/holder/H = new holder_type(get_turf(src))
 	H.held_mob = src
 	src.forceMove(H)
