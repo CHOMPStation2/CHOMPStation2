@@ -40670,6 +40670,13 @@
 "qDc" = (
 /turf/simulated/mineral/floor,
 /area/mine/unexplored/lower_rock)
+"qJo" = (
+/obj/structure/table/rack,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/storage/fancy/cigarettes/dromedaryco,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "qWF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -40817,13 +40824,6 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/tower/south)
-"uvt" = (
-/obj/structure/table/rack,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/fancy/cigarettes/dromedaryco,
-/obj/random/maintenance/clean,
-/turf/simulated/floor/plating,
-/area/mine/explored/lower_rock)
 "uDy" = (
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -89722,7 +89722,7 @@ btE
 btE
 btE
 btE
-uvt
+qJo
 bls
 bls
 bls

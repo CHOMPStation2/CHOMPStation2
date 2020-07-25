@@ -200,6 +200,9 @@
 /area/chapel/monastery/upper
 	name = "Monastery Upper Floor"
 
+/area/chapel/monastery/music
+	name = "Monastery Music Room"
+
 //holodorms
 /area/holodeck/holodorm/source_basic
 	name = "\improper Holodeck Source"
