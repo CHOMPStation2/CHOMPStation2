@@ -1,3 +1,5 @@
+//YW change start
+//TODO
 /obj/structure/noticeboard/anomaly
 	notices = 5
 	icon_state = "nboard05"
@@ -115,6 +117,7 @@
 	P.overlays = list("paper_stamped_rd")
 	src.contents += P
 
+//YW Change stop
 /obj/structure/bookcase/manuals/xenoarchaeology
 	name = "Xenoarchaeology Manuals bookcase"
 

@@ -6044,7 +6044,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/starboard)
 "anP" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor,
 /area/maintenance/starboard)
 "anQ" = (
@@ -11648,7 +11648,10 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area)
 "azg" = (
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
+	dir = 4
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "azh" = (
@@ -12091,7 +12094,10 @@
 /area/hallway/lower/central)
 "aAe" = (
 /obj/effect/floor_decal/spline/plain,
-/obj/machinery/vending/fitness,
+/obj/machinery/vending/fitness{
+	icon_state = "fitness";
+	dir = 4
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "aAf" = (
@@ -13152,7 +13158,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/sleep/cryo)
 "aCD" = (
-/obj/machinery/lapvend,
+/obj/machinery/lapvend{
+	icon_state = "robotics";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/sleep/cryo)
 "aCE" = (
@@ -17915,7 +17924,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics)
 "aNU" = (
-/obj/machinery/vending/fitness,
+/obj/machinery/vending/fitness{
+	icon_state = "fitness";
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "aNV" = (
@@ -18538,8 +18550,11 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen/lower)
 "aPu" = (
-/obj/machinery/seed_storage/garden,
 /obj/effect/floor_decal/corner/green/full,
+/obj/machinery/seed_storage/garden{
+	icon_state = "seeds";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "aPv" = (
@@ -18565,9 +18580,12 @@
 	pixel_x = 0;
 	pixel_y = -26
 	},
-/obj/machinery/vending/hydronutrients,
 /obj/effect/floor_decal/corner/green{
 	dir = 10
+	},
+/obj/machinery/vending/hydronutrients{
+	icon_state = "nutri_generic";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
@@ -27737,12 +27755,16 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
@@ -30567,7 +30589,7 @@
 /area/maintenance/dorm)
 "bmQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cigbutt/cigarbutt,
+/obj/item/trash/cigbutt/cigarbutt,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -35980,13 +36002,6 @@
 /obj/random/maintenance/security,
 /turf/simulated/floor,
 /area/maintenance/aft)
-"byb" = (
-/obj/structure/table/rack,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/fancy/cigarettes/dromedaryco,
-/obj/random/maintenance/clean,
-/turf/simulated/floor/plating,
-/area/maintenance/aft)
 "byc" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -40655,6 +40670,13 @@
 "qDc" = (
 /turf/simulated/mineral/floor,
 /area/mine/unexplored/lower_rock)
+"qJo" = (
+/obj/structure/table/rack,
+/obj/item/weapon/flame/lighter/random,
+/obj/item/weapon/storage/fancy/cigarettes/dromedaryco,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "qWF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -88188,7 +88210,7 @@ btE
 btE
 btE
 btE
-bls
+bkO
 bls
 bkO
 bzy
@@ -88438,9 +88460,9 @@ btE
 btE
 bvi
 bvV
+bvj
 bwI
-btE
-bls
+bkO
 bls
 byv
 boQ
@@ -88690,9 +88712,9 @@ btE
 bus
 bvj
 bvW
+bvj
 bwJ
-btE
-bls
+bkO
 bls
 byv
 bzz
@@ -88942,9 +88964,9 @@ btE
 but
 bvj
 aCz
+bvj
 bwK
-btE
-bls
+bkO
 bls
 bkO
 bkO
@@ -89194,9 +89216,9 @@ btE
 buu
 bvj
 bvY
+bvj
 bwL
-btE
-bls
+bkO
 bls
 bls
 bls
@@ -89448,7 +89470,7 @@ bvk
 bvZ
 bwM
 btE
-byb
+bkO
 bls
 bwc
 bls
@@ -89700,7 +89722,7 @@ btE
 btE
 btE
 btE
-aan
+qJo
 bls
 bls
 bls

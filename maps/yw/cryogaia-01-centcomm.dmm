@@ -9283,7 +9283,7 @@
 /turf/unsimulated/map,
 /area/overmap)
 "um" = (
-/obj/item/weapon/cigbutt,
+/obj/item/trash/cigbutt,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/mercenary)
 "un" = (

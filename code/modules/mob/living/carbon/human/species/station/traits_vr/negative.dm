@@ -185,6 +185,7 @@
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/colorblind_taj)
 YW comment finish*/
+
 // YW Addition
 /datum/trait/light_sensitivity
 	name = "Photosensitivity"

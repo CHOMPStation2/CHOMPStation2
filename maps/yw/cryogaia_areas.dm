@@ -3,10 +3,13 @@
 	icon = 'icons/turf/areas_vr.dmi'
 /area/borealis2/elevator/medbasement
 	name = "Elevator shaft - Lower Medical"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/borealis2/elevator/medbay
 	name = "Elevator shaft - Main Medical"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/borealis2/elevator/medupper
 	name = "Elevator shaft - Upper Medical"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/borealis2/elevator/dorms
 	name = "Elevator shaft - Dorms"
 /area/borealis2/elevator/scicargo
@@ -28,9 +31,10 @@
 
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/borealis2/outdoors/grounds/upper
-	name = "\The outpost grounds - upper level"
+	name = "\The outpost grounds"
 	base_turf = /turf/simulated/open/cryogaia
 	icon_state = "outside2"
 
@@ -40,7 +44,7 @@
 	icon_state = "submap_hostile_area"
 
 /area/borealis2/outdoors/grounds/walkway
-	name = "Perimeter Wall - Upper"
+	name = "Perimeter Wall Walkway"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "submap_trespass_area"
 
@@ -54,6 +58,8 @@
 
 /area/borealis2/outdoors/grounds/tower
 	name = "Perimeter Tower"
+	sound_env = SMALL_ENCLOSED
+	forbid_events = TRUE
 
 /area/borealis2/outdoors/grounds/tower/north
 	name = "Perimeter Tower - N"
@@ -96,11 +102,11 @@
 	icon_state = "northwest"
 
 /area/borealis2/outdoors/exterior
-	name = "The wilderness"
+	name = "\The wilderness"
 	icon_state = "outside1unex"
 
 /area/borealis2/outdoors/exterior/upper
-	name = "The wilderness - upper level"
+	name = "\The wilderness"
 	icon_state = "outside2unex"
 
 /area/borealis2/outdoors/exterior/lake
@@ -200,6 +206,9 @@
 /area/chapel/monastery/upper
 	name = "Monastery Upper Floor"
 
+/area/chapel/monastery/music
+	name = "Monastery Music Room"
+
 //holodorms
 /area/holodeck/holodorm/source_basic
 	name = "\improper Holodeck Source"
@@ -269,13 +278,16 @@
 /area/crew_quarters/kitchen/fish_farm
 	name = "\improper Fish Farm"
 	icon_state = "red"
+
 /area/mine/explored/underdark
 	name = "\improper Mining Underdark"
 	base_turf = /turf/simulated/mineral/floor
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/cryogaia/tram //hold over from tether, used in tram station shocking rails code.
 	name = "\improper Tram Station"
 	icon_state = "dk_yellow"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 
 // Exploration Shuttle stuff //
@@ -304,6 +316,7 @@
 /area/cryogaia/station/medical/upper
 	name = "\improper Medical Loft"
 	icon_state = "medbay_primary_storage"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/constructionsite/cryogaia/upper
 	name = "\improper Upper Level Construction Area"
@@ -323,9 +336,11 @@
 // Bad guys!!
 /area/shuttle/mercenary
 	name = "\improper Mercenary Vessel"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/shuttle/skipjack
 	name = "\improper Vox Vessel"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 //Exploration area locations.
 
@@ -333,15 +348,18 @@
 /area/cryogaia/outpost/exploration_plains
 	name = "\improper Plains Exploration Zone"
 	icon_state = "green"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/cryogaia/outpost/exploration_shed
 	name = "\improper Plains Entrance Shed"
 /area/cryogaia_away/cave/unexplored/normal
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 //antag stuff
 /area/antag/antag_base
 	name = "\improper Syndicate Outpost"
 	requires_power = 0
 	dynamic_lighting = 0
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 // Security stuff
 
@@ -413,10 +431,12 @@
 /area/maintenance/medical_lower
 	name = "Underground Medical Maintenance"
 	icon_state = "maint_medbay_fore"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/maintenance/medical_upper
 	name = "Upper Level Medical Maintenance"
 	icon_state = "maint_medbay_aft"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/mine/unexplored/underdark
 	name = "Underground rock"
@@ -435,27 +455,34 @@
 	name = "\improper Medbay Annex"
 	icon_state = "medbay4"
 	music = 'sound/ambience/signal.ogg'
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/biostorage2
 	name = "\improper Auxiliary Storage"
 	icon_state = "medbay2"
 	music = 'sound/ambience/signal.ogg'
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/biostorage3
 	name = "\improper Secondary Auxiliary Storage"
 	icon_state = "medbay2"
 	music = 'sound/ambience/signal.ogg'
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/toilet
 	name = "\improper Medical bathroom"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/pyschwarde
 	name = "\improper Psychiatric lockup"
 	icon_state = "medbay2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/triage
 	name = "\improper Medbay Triage"
 	icon_state = "medbay4"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/scanning
 	name = "Medical Diagnostics Center"
 	icon_state = "medbay"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 
 //Science outpost
