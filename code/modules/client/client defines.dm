@@ -18,12 +18,13 @@
 		//OTHER//
 		/////////
 	var/datum/preferences/prefs = null
-	//var/move_delay		= 1
 	var/moving			= null
 	var/adminobs		= null
 	var/area			= null
 	var/time_died_as_mouse = null //when the client last died as a mouse
 	var/datum/tooltip/tooltips 	= null
+	var/datum/chatOutput/chatOutput
+	var/chatOutputLoadedAt
 
 	var/adminhelped = 0
 
@@ -52,7 +53,8 @@
 	var/related_accounts_cid = "(Requires database)"	//So admins know why it isn't working - Used to determine what other accounts previously logged in from this computer id
 	var/account_join_date = "(Requires database)"
 	var/account_age = "(Requires database)"
-	var/list/department_hours	// VOREStation Edit - Track hours of leave accured for each department.
+	var/list/department_hours = list()	// VOREStation Edit - Track hours of leave accured for each department.
+	var/list/play_hours	= list() // VOREStation Edit - Tracks total playtime hours for each departments.
 
 	preload_rsc = PRELOAD_RSC
 

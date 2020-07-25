@@ -1,5 +1,3 @@
-var/list/admins = list()							//list of all clients whom are admins
-
 //Since it didn't really belong in any other category, I'm putting this here
 //This is for procs to replace all the goddamn 'in world's that are chilling around the code
 
@@ -19,19 +17,20 @@ var/global/list/side_effects = list()				//list of all medical sideeffects types
 var/global/list/mechas_list = list()				//list of all mechs. Used by hostile mobs target tracking.
 var/global/list/joblist = list()					//list of all jobstypes, minus borg and AI
 
-var/global/list/turfs = list()						//list of all turfs
-
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER,HERM) //VOREStaton Edit
 #define all_genders_text_list list("Male","Female","Plural","Neuter","Herm") //VOREStation Edit
 
 var/list/mannequins_
 
+// Times that players are allowed to respawn ("ckey" = world.time)
+GLOBAL_LIST_EMPTY(respawn_timers)
+
+// Closets have magic appearances
+GLOBAL_LIST_EMPTY(closet_appearances)
+
 // Posters
 var/global/list/poster_designs = list()
 var/global/list/NT_poster_designs = list()
-
-// Uplinks
-var/list/obj/item/device/uplink/world_uplinks = list()
 
 //Preferences stuff
 	//Hairstyles
@@ -48,7 +47,7 @@ var/datum/category_collection/underwear/global_underwear = new()
 
 	//Backpacks
 var/global/list/backbaglist = list("Nothing", "Backpack", "Satchel", "Satchel Alt", "Messenger Bag")
-var/global/list/pdachoicelist = list("Default", "Slim", "Old", "Rugged")
+var/global/list/pdachoicelist = list("Default", "Slim", "Old", "Rugged", "Holographic", "Wrist-Bound")
 var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 
 // Visual nets
@@ -153,17 +152,30 @@ var/global/list/string_slot_flags = list(
 		var/datum/job/J = new T
 		joblist[J.title] = J
 
-	//Languages and species.
+	//Languages
 	paths = typesof(/datum/language)-/datum/language
 	for(var/T in paths)
 		var/datum/language/L = new T
-		GLOB.all_languages[L.name] = L
+		if (isnull(GLOB.all_languages[L.name]))
+			GLOB.all_languages[L.name] = L
+		else
+			log_debug("Language name conflict! [T] is named [L.name], but that is taken by [GLOB.all_languages[L.name].type]")
+			if(isnull(GLOB.language_name_conflicts[L.name]))
+				GLOB.language_name_conflicts[L.name] = list(GLOB.all_languages[L.name])
+			GLOB.language_name_conflicts[L.name] += L
 
 	for (var/language_name in GLOB.all_languages)
 		var/datum/language/L = GLOB.all_languages[language_name]
 		if(!(L.flags & NONGLOBAL))
-			GLOB.language_keys[lowertext(L.key)] = L
+			if(isnull(GLOB.language_keys[L.key]))
+				GLOB.language_keys[L.key] = L
+			else
+				log_debug("Language key conflict! [L] has key [L.key], but that is taken by [(GLOB.language_keys[L.key])]")
+				if(isnull(GLOB.language_key_conflicts[L.key]))
+					GLOB.language_key_conflicts[L.key] = list(GLOB.language_keys[L.key])
+				GLOB.language_key_conflicts[L.key] += L
 
+	//Species
 	var/rkey = 0
 	paths = typesof(/datum/species)
 	for(var/T in paths)
@@ -195,6 +207,19 @@ var/global/list/string_slot_flags = list(
 		var/datum/poster/P = new T
 		NT_poster_designs += P
 
+	//Closet appearances
+	paths = typesof(/decl/closet_appearance)
+	for(var/T in paths)
+		var/decl/closet_appearance/app = new T()
+		GLOB.closet_appearances[T] = app
+
+	// VOREStation Add - Vore Modes!
+	paths = typesof(/datum/digest_mode) - /datum/digest_mode/transform
+	for(var/T in paths)
+		var/datum/digest_mode/DM = new T
+		GLOB.digest_modes[DM.id] = DM
+	// VOREStation Add End
+
 	return 1
 
 /* // Uncomment to debug chemical reaction list.
@@ -206,7 +231,7 @@ var/global/list/string_slot_flags = list(
 			var/list/L = chemical_reactions_list[reaction]
 			for(var/t in L)
 				. += "    has: [t]\n"
-	world << .
+	to_world(.)
 */
 //Hexidecimal numbers
 var/global/list/hexNums = list("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F")

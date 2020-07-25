@@ -28,6 +28,7 @@
 	var/powerCoefficient = 12.5
 	var/list/crystals = list()
 	var/obj/item/device/gps/inserted_gps
+	var/overmap_range = 3
 
 /obj/machinery/computer/telescience/Destroy()
 	eject()
@@ -37,8 +38,9 @@
 	return ..()
 
 /obj/machinery/computer/telescience/examine(mob/user)
-	..()
-	user << "There are [crystals.len ? crystals.len : "no"] bluespace crystal\s in the crystal slots."
+	. = ..()
+	if(Adjacent(user))
+		. += "There are [crystals.len ? crystals.len : "no"] bluespace crystal\s in the crystal slots."
 
 /obj/machinery/computer/telescience/Initialize()
 	. = ..()
@@ -49,7 +51,7 @@
 /obj/machinery/computer/telescience/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/ore/bluespace_crystal))
 		if(crystals.len >= max_crystals)
-			user << "<span class='warning'>There are not enough crystal slots.</span>"
+			to_chat(user, "<span class='warning'>There are not enough crystal slots.</span>")
 			return
 		if(!user.unEquip(W))
 			return
@@ -68,7 +70,7 @@
 		if(M.connectable && istype(M.connectable, /obj/machinery/telepad))
 			telepad = M.connectable
 			M.connectable = null
-			user << "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>"
+			to_chat(user, "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>")
 	else
 		return ..()
 
@@ -105,9 +107,8 @@
 		if(telepad.panel_open)
 			data["tempMsg"] = "Telepad undergoing physical maintenance operations."
 
-		data["sectorOptions"] = list()
-		for(var/z in using_map.player_levels)
-			data["sectorOptions"] += z
+		//We'll base our options on connected z's or overmap
+		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range)
 
 		if(last_tele_data)
 			data["lastTeleData"] = list()
@@ -194,7 +195,7 @@
 		flick("pad-beam", telepad)
 
 		if(spawn_time > 15) // 1.5 seconds
-			playsound(telepad.loc, 'sound/weapons/flash.ogg', 50, 1)
+			playsound(telepad, 'sound/weapons/flash.ogg', 50, 1)
 			// Wait depending on the time the projectile took to get there
 			teleporting = 1
 			temp_msg = "Powering up bluespace crystals.<BR>Please wait."
@@ -240,7 +241,7 @@
 				dest = target
 
 			flick("pad-beam", telepad)
-			playsound(telepad.loc, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
+			playsound(telepad, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
 			for(var/atom/movable/ROI in source)
 				// if is anchored, don't let through
 				if(ROI.anchored)

@@ -1,3 +1,5 @@
+//File DEFUNCT
+
 /datum/server_tools_command
 	var/name = ""	//the string to trigger this command on a chat bot. e.g. TGS3_BOT: do_this_command
 	var/help_text = ""	//help text for this command

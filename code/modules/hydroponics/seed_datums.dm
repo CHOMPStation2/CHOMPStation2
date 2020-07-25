@@ -81,6 +81,7 @@
 /datum/seed/berry/poison
 	name = "poisonberries"
 	seed_name = "poison berry"
+	kitchen_tag = "poisonberries"
 	display_name = "poison berry bush"
 	mutants = list("deathberries")
 	chems = list("nutriment" = list(1), "toxin" = list(3,5), "poisonberryjuice" = list(10,5))
@@ -169,7 +170,7 @@
 	name = "bloodtomato"
 	seed_name = "blood tomato"
 	display_name = "blood tomato plant"
-	mutants = list("killer")
+	mutants = list("killertomato")
 	chems = list("nutriment" = list(1,10), "blood" = list(1,5))
 	splat_type = /obj/effect/decal/cleanable/blood/splatter
 
@@ -256,7 +257,7 @@
 	seed_name = "apple"
 	display_name = "apple tree"
 	kitchen_tag = "apple"
-	mutants = list("poisonapple","goldapple")
+	mutants = list("poisonapple","goldapple","fallingapple")	//CHOMPEDIT: adding fall apple to list
 	chems = list("nutriment" = list(1,10),"applejuice" = list(10,20))
 
 /datum/seed/apple/New()
@@ -292,6 +293,26 @@
 	set_trait(TRAIT_YIELD,3)
 	set_trait(TRAIT_PRODUCT_COLOUR,"#FFDD00")
 	set_trait(TRAIT_PLANT_COLOUR,"#D6B44D")
+
+/datum/seed/apple/sif
+	name = "sifbulb"
+	seed_name = "sivian tree"
+	display_name = "sivian tree"
+	kitchen_tag = "apple"
+	chems = list("nutriment" = list(1,5),"sifsap" = list(10,20))
+
+/datum/seed/apple/sif/New()
+	..()
+	set_trait(TRAIT_HARVEST_REPEAT,1)
+	set_trait(TRAIT_MATURATION,3)
+	set_trait(TRAIT_PRODUCTION,10)
+	set_trait(TRAIT_YIELD,3)
+	set_trait(TRAIT_POTENCY,12)
+	set_trait(TRAIT_PRODUCT_ICON,"alien3")
+	set_trait(TRAIT_PRODUCT_COLOUR,"#0720c3")
+	set_trait(TRAIT_PLANT_ICON,"tree5")
+	set_trait(TRAIT_FLESH_COLOUR,"#05157d")
+	set_trait(TRAIT_IDEAL_LIGHT, 1)
 
 //Ambrosia/varieties.
 /datum/seed/ambrosia
@@ -588,6 +609,7 @@
 	name = "sunflowers"
 	seed_name = "sunflower"
 	display_name = "sunflowers"
+	mutants = list("solarflower") //CHOMPEDIT A sunflower well suited for planting as a natural lamp
 	kitchen_tag = "sunflower"
 
 /datum/seed/flower/sunflower/New()
@@ -604,6 +626,7 @@
 	name = "lavender"
 	seed_name = "lavender"
 	display_name = "lavender"
+	mutants = list("milkdew") //CHOMPEDIT: leads to milk plant and lavender that makes a tier 2 source for some medical chems
 	kitchen_tag = "lavender"
 	chems = list("nutriment" = list(1,20), "bicaridine" = list(1,10))
 
@@ -888,6 +911,7 @@
 	name = "potato"
 	seed_name = "potato"
 	display_name = "potatoes"
+	mutants = list("voltato") //CHOMPEDIT: Adding a better potato battery and viable source for V200
 	kitchen_tag = "potato"
 	chems = list("nutriment" = list(1,10), "potatojuice" = list(10,10))
 
@@ -925,6 +949,7 @@
 	name = "soybean"
 	seed_name = "soybean"
 	display_name = "soybeans"
+	mutants = list("orangesapbean","purplesapbean","bluesapbean") //CHOMPEDIT: Adding sappy beanies to mutation
 	kitchen_tag = "soybeans"
 	chems = list("nutriment" = list(1,20), "soymilk" = list(10,20))
 
@@ -943,6 +968,7 @@
 	name = "wheat"
 	seed_name = "wheat"
 	display_name = "wheat stalks"
+	mutants = list("meatwheat")	//CHOMPEDIT: Meat wheat, the solution for vegetarian carnivores
 	kitchen_tag = "wheat"
 	chems = list("nutriment" = list(1,25), "flour" = list(10,30))
 

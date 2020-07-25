@@ -1,21 +1,34 @@
 /datum/job/rd
 	disallow_jobhop = TRUE
+	pto_type = PTO_SCIENCE
+	dept_time_required = 60
 
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network, access_maint_tunnels) //Yawn added "access_maint_tunnels"
+			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
+			            access_explorer, access_pathfinder) //YW Edit access_gateway, _explorer, and _pathfinder
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network, access_maint_tunnels)
+			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
+			            access_explorer, access_pathfinder) //YW Edit access_gateway, _explorer, and _pathfinder
 
 /datum/job/scientist
 	spawn_positions = 5
-	alt_titles = list("Xenoarcheologist", "Anomalist", "Phoron Researcher", "Circuit Designer")
+	pto_type = PTO_SCIENCE
+	alt_titles = list("Xenoarchaeologist" = /datum/alt_title/xenoarch, "Anomalist" = /datum/alt_title/anomalist, \
+						"Phoron Researcher" = /datum/alt_title/phoron_research, "Circuit Designer" = /datum/alt_title/circuit_designer)
+
+/datum/alt_title/circuit_designer
+	title = "Circuit Designer"
+	title_blurb = "A Circuit Designer is a Scientist whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
+				   They work to create various useful devices using the capabilities of integrated circuitry."
 
 /datum/job/xenobiologist
 	spawn_positions = 3
+	pto_type = PTO_SCIENCE
 
 /datum/job/roboticist
 	total_positions = 3
+	pto_type = PTO_SCIENCE

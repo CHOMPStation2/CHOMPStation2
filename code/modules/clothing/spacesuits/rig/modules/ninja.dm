@@ -59,7 +59,7 @@
 
 	for(var/mob/O in oviewers(H))
 		O.show_message("[H.name] appears from thin air!",1)
-	playsound(get_turf(H), 'sound/effects/stealthoff.ogg', 75, 1)
+	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
 
 
 /obj/item/rig_module/teleporter
@@ -83,8 +83,8 @@
 		return
 
 	holder.spark_system.start()
-	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
-	playsound(T, 'sound/effects/sparks2.ogg', 50, 1)
+	playsound(src, 'sound/effects/phasein.ogg', 25, 1)
+	playsound(src, 'sound/effects/sparks2.ogg', 50, 1)
 	anim(T,M,'icons/mob/mob.dmi',,"phasein",,M.dir)
 
 /obj/item/rig_module/teleporter/proc/phase_out(var/mob/M,var/turf/T)
@@ -100,7 +100,7 @@
 	var/mob/living/carbon/human/H = holder.wearer
 
 	if(!istype(H.loc, /turf))
-		H << "<span class='warning'>You cannot teleport out of your current location.</span>"
+		to_chat(H, "<span class='warning'>You cannot teleport out of your current location.</span>")
 		return 0
 
 	var/turf/T
@@ -110,23 +110,23 @@
 		T = get_teleport_loc(get_turf(H), H, 6, 1, 1, 1)
 
 	if(!T)
-		H << "<span class='warning'>No valid teleport target found.</span>"
+		to_chat(H, "<span class='warning'>No valid teleport target found.</span>")
 		return 0
 
 	if(T.density)
-		H << "<span class='warning'>You cannot teleport into solid walls.</span>"
+		to_chat(H, "<span class='warning'>You cannot teleport into solid walls.</span>")
 		return 0
 
 	if(T.z in using_map.admin_levels)
-		H << "<span class='warning'>You cannot use your teleporter on this Z-level.</span>"
+		to_chat(H, "<span class='warning'>You cannot use your teleporter on this Z-level.</span>")
 		return 0
 
 	if(T.contains_dense_objects())
-		H << "<span class='warning'>You cannot teleport to a location with solid objects.</span>"
+		to_chat(H, "<span class='warning'>You cannot teleport to a location with solid objects.</span>")
 		return 0
 
 	if(T.z != H.z || get_dist(T, get_turf(H)) > world.view)
-		H << "<span class='warning'>You cannot teleport to such a distant object.</span>"
+		to_chat(H, "<span class='warning'>You cannot teleport to such a distant object.</span>")
 		return 0
 
 	if(!..()) return 0

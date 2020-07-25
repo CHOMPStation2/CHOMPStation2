@@ -38,7 +38,7 @@
 	for(var/mob/living/M in oviewers(3, src))
 		shake_camera(M, 2, 2)
 
-	playsound(loc, 'sound/effects/meteorimpact.ogg', 50, 1)
+	playsound(src, 'sound/effects/meteorimpact.ogg', 50, 1)
 	density = initial(density)
 	opacity = initial(opacity)
 	plane = initial(plane)
@@ -51,16 +51,3 @@
 
 /obj/effect/falling_effect/ex_act()
 	return
-
-
-/obj/effect/falling_effect/pizza_delivery
-	name = "PIZZA PIE POWER!"
-	crushing = FALSE
-
-/obj/effect/falling_effect/pizza_delivery/Initialize(mapload)
-	..()
-	falling_type = pick(prob(25);/obj/item/pizzabox/meat,
-				prob(25);/obj/item/pizzabox/margherita,
-				prob(25);/obj/item/pizzabox/vegetable,
-				prob(25);/obj/item/pizzabox/mushroom)
-	return INITIALIZE_HINT_LATELOAD

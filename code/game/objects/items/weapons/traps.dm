@@ -6,6 +6,8 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "beartrap0"
 	desc = "A mechanically activated leg trap. Low-tech, but reliable. Looks like it could really hurt if you set it off."
+	randpixel = 0
+	center_of_mass = null
 	throwforce = 0
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_MATERIAL = 1)
@@ -16,7 +18,7 @@
 
 /obj/item/weapon/beartrap/suicide_act(mob/user)
 	var/datum/gender/T = gender_datums[user.get_visible_gender()]
-	viewers(user) << "<span class='danger'>[user] is putting the [src.name] on [T.his] head! It looks like [T.hes] trying to commit suicide.</span>"
+	to_chat(viewers(user),"<span class='danger'>[user] is putting the [src.name] on [T.his] head! It looks like [T.hes] trying to commit suicide.</span>")
 	return (BRUTELOSS)
 
 /obj/item/weapon/beartrap/proc/can_use(mob/user)
@@ -37,7 +39,7 @@
 				"<span class='danger'>You have deployed \the [src]!</span>",
 				"You hear a latch click loudly."
 				)
-			playsound(src.loc, 'sound/machines/click.ogg',70, 1)
+			playsound(src, 'sound/machines/click.ogg',70, 1)
 
 			deployed = 1
 			user.drop_from_inventory(src)
@@ -62,7 +64,7 @@
 			"<span class='notice'>You begin disarming \the [src]!</span>",
 			"You hear a latch click followed by the slow creaking of a spring."
 			)
-		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+		playsound(src, 'sound/machines/click.ogg', 50, 1)
 
 		if(do_after(user, 60))
 			user.visible_message(
@@ -96,22 +98,29 @@
 	if(!L.apply_damage(30, BRUTE, target_zone, blocked, soaked, used_weapon=src))
 		return 0
 
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		var/obj/item/organ/external/affected = H.get_organ(check_zone(target_zone))
+		if(!affected) // took it clean off!
+			to_chat(H, "<span class='danger'>The steel jaws of \the [src] take your limb clean off!</span>")
+			L.Stun(stun_length*2)
+			deployed = 0
+			anchored = FALSE
+			return
+
 	//trap the victim in place
 	set_dir(L.dir)
 	can_buckle = 1
 	buckle_mob(L)
 	L.Stun(stun_length)
-	L << "<span class='danger'>The steel jaws of \the [src] bite into you, trapping you in place!</span>"
+	to_chat(L, "<span class='danger'>The steel jaws of \the [src] bite into you, trapping you in place!</span>")
 	deployed = 0
+	anchored = FALSE
 	can_buckle = initial(can_buckle)
 
-/obj/item/weapon/beartrap/Crossed(AM as mob|obj)
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = AM
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+/obj/item/weapon/beartrap/Crossed(atom/movable/AM as mob|obj)
+	if(AM.is_incorporeal())
+		return
 	if(deployed && isliving(AM))
 		var/mob/living/L = AM
 		if(L.m_intent == "run")

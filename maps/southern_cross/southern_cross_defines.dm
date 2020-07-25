@@ -19,8 +19,8 @@
 	full_name = "Southern Cross"
 	path = "southern_cross"
 
-	lobby_icon = 'icons/misc/title_ch.dmi'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
-	lobby_screens = list("mockingjay00") //CHOMPStation Edit TFF 24/12/19 - CHOMPStation image
+	lobby_icon = 'icons/misc/CHOMPSTATION.gif'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
+	lobby_screens = list() //CHOMPStation Edit TFF 24/12/19 - CHOMPStation image
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'	//CHOMPStation Edit 25/1/20 TFF - Job icons for off-duty/exploration
 
 	holomap_smoosh = list(list(
@@ -38,6 +38,7 @@
 	company_name  = "NanoTrasen"
 	company_short = "NT"
 	starsys_name  = "Vir"
+	use_overmap = FALSE //CHOMPEdit we don't have the shuttles ready for overmap yet			   
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
@@ -84,6 +85,7 @@
 							)
 	usable_email_tlds = list("freemail.nt")
 	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage")
+	default_skybox = /datum/skybox_settings/southern_cross
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
 
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
@@ -102,12 +104,14 @@
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
 	lateload_single_pick = null
+	
+	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
 	if (long_range && (srcz in map_levels))
 		return map_levels
-	else if (srcz == Z_LEVEL_TRANSIT)
+	else if (srcz == Z_LEVEL_TRANSIT && !long_range)
 		return list() // Nothing on these z-levels- sensors won't show, and GPSes won't see each other.
 	else if (srcz >= Z_LEVEL_STATION_ONE && srcz <= Z_LEVEL_STATION_THREE) // Station can see other decks.
 		return list(
@@ -144,6 +148,10 @@
 	// Todo: Forest generation.
 	return 1
 
+// Skybox Settings
+/datum/skybox_settings/southern_cross
+	icon_state = "dyable"
+	random_color = TRUE
 // For making the 6-in-1 holomap, we calculate some offsets
 #define SOUTHERN_CROSS_MAP_SIZE 160 // Width and height of compiled in Southern Cross z levels.
 #define SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
@@ -291,7 +299,8 @@
 	teleport_z = src.z
 	return ..()
 
-/datum/planet/sif
+//CHOMPEdit this is very much necessary for us otherwise weather sounds play on other leves
+/datum/planet/sif 
 	expected_z_levels = list(
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,

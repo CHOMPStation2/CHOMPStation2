@@ -7,18 +7,18 @@
 /area/submap/virgo2/GovPatrol)
 "c" = (
 /obj/cryogaia_away_spawner/aerostat_surface,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
 "d" = (
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
 "e" = (
 /obj/item/device/radio/off,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
 "f" = (
 /obj/item/weapon/storage/box/flare,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
 "g" = (
 /obj/item/ammo_casing,
@@ -26,25 +26,25 @@
 /area/submap/virgo2/GovPatrol)
 "h" = (
 /obj/item/ammo_casing,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
 "i" = (
-/obj/item/clothing/under/utility/sifguard,
+/obj/item/clothing/under/solgov/utility/sifguard,
 /obj/item/clothing/shoes/boots/jackboots,
 /obj/effect/decal/remains,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
 "k" = (
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
 "m" = (
 /obj/effect/decal/remains,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
-"A" = (
+"v" = (
 /obj/random/multiple/voidsuit,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/GovPatrol)
 
 (1,1,1) = {"
@@ -130,7 +130,7 @@ d
 d
 d
 e
-A
+v
 i
 d
 d

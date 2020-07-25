@@ -152,10 +152,10 @@
 	volume = 500000
 	volume_rate = 7000
 
-	use_power = 1
-	idle_power_usage = 50		//internal circuitry, friction losses and stuff
-	active_power_usage = 1000	// Blowers running
-	power_rating = 100000	//100 kW ~ 135 HP
+	use_power = USE_POWER_IDLE
+	idle_power_usage = 50		//VOREStation Edit //internal circuitry, friction losses and stuff
+	active_power_usage = 1000	//VOREStation Edit // Blowers running
+	power_rating = 100000	//VOREStation Add //100 kW ~ 135 HP
 
 	var/global/gid = 1
 	var/id = 0
@@ -220,7 +220,7 @@
 			return
 
 		anchored = !anchored
-		playsound(src.loc, I.usesound, 50, 1)
+		playsound(src, I.usesound, 50, 1)
 		to_chat(user, "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
 
 		return

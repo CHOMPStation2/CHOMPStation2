@@ -19,6 +19,22 @@
 	item_state = "blueshield2"
 	armor = list(melee = 15, bullet = 10, laser = 10,energy = 5, bomb = 15, bio = 0, rad = 0)
 
+/obj/item/clothing/accessory/storage/webbing/combatpilot //redefined to change the name and keep it loaded in the event the sc files are disabled in future
+	name = "combat pilot harness"
+	desc = "Sturdy mess of black synthcotton belts and buckles."
+	icon_state = "pilot_webbing2"
+	sprite_sheets = list(
+			"Teshari" = 'icons/mob/species/seromi/ties.dmi'
+			)
+
+/obj/item/clothing/under/rank/khi/sec/pilot //yes, we're inheriting from the khi version; that one has full rolldown sprites
+	name = "security pilot uniform"
+	desc = "A lightweight uniform intended for vehicle and powersuit operators, designed to allow free movement and maximum comfort in hot, cramped cockpits. Comes prefitted with a harness and webbing for gear."
+	armor = list(melee = 0, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 0)
+	//we probably won't get hit by melee attacks as a pilot, but logically you'd want protection against anything that might penetrate the armor
+	starting_accessories = list(/obj/item/clothing/accessory/storage/webbing/combatpilot)
+	//come prefitted with some snappy extra webbing
+
 /obj/item/clothing/under/yw/rank/security/formal
 	name = "security suit"
 	desc = "A formal security suit for officers complete with nanotrasen belt buckle."
@@ -211,3 +227,43 @@
 	icon_state = "greyutility_sup"
 	worn_state = "greyutility_sup"
 	icon_override = 'icons/mob/uniform_yw.dmi'
+
+
+/obj/item/clothing/under/yw/victsuit/victdress
+	name = "black victorian dress"
+	desc = "A victorian style dress, fancy!"
+	icon_state = "victorianblackdress"
+	item_state = "victorianblackdress"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+/obj/item/clothing/under/yw/victsuit/victdress/red
+	name = "red victorian dress"
+	icon_state = "victorianreddress"
+	item_state = "victorianreddress"
+
+/obj/item/clothing/under/yw/victsuit
+	name = "black victorian suit"
+	desc = "A victorian style suit, fancy!"
+	icon = 'icons/mob/uniform_yw.dmi'
+	icon_state = "victorianvest"
+	item_state = "victorianvest"
+	icon_override = 'icons/mob/uniform_yw.dmi'
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+/obj/item/clothing/under/yw/victsuit/redblk
+	name = "red and black victorian suit"
+	icon_state = "victorianblred"
+	item_state = "victorianblred"
+
+/obj/item/clothing/under/yw/victsuit/red
+	name = "red victorian suit"
+	icon_state = "victorianredvest"
+	item_state = "victorianredvest"
+
+/obj/item/clothing/under/yw/victsuit/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
+	if(body_type == SPECIES_GREY_YW)
+		if(!inhands)
+			return 'icons/mob/species/grey/uniform.dmi'
+
+	else
+		return ..()

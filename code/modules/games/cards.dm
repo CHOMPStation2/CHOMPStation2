@@ -230,7 +230,7 @@
 			cards -= P
 		cards = newcards
 		user.visible_message("<span class = 'notice'>\The [user] shuffles [src].</span>")
-		playsound(user, 'sound/items/cardshuffle.ogg', 50, 1)
+		playsound(src, 'sound/items/cardshuffle.ogg', 50, 1)
 		cooldown = world.time
 	else
 		return
@@ -299,7 +299,7 @@
 /obj/item/weapon/hand
 	name = "hand of cards"
 	desc = "Some playing cards."
-	icon = 'icons/obj/playing_cards.dmi'
+	icon = 'icons/obj/playing_cards_ch.dmi' //CHOMPEDIT quickest solution to having custom chomp cards - Jack
 	icon_state = "empty"
 	w_class = ITEMSIZE_TINY
 
@@ -348,11 +348,11 @@
 	user.visible_message("<span class = 'notice'>\The [user] [concealed ? "conceals" : "reveals"] their hand.</span>")
 
 /obj/item/weapon/hand/examine(mob/user)
-	..(user)
+	. = ..()
 	if((!concealed) && cards.len)
-		to_chat(user,"It contains: ")
+		. += "It contains: "
 		for(var/datum/playingcard/P in cards)
-			to_chat(user,"\The [P.name].")
+			. += "\The [P.name]."
 
 /obj/item/weapon/hand/verb/Removecard()
 
@@ -453,4 +453,5 @@
 		update_icon()
 
 /obj/item/weapon/hand/pickup(mob/user as mob)
+	..()
 	src.update_icon()

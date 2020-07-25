@@ -114,7 +114,7 @@
 
 /turf/simulated/floor/tiled/techfloor
 	name = "floor"
-	icon = 'icons/turf/flooring/techfloor_vr.dmi'
+	icon = 'icons/turf/flooring/techfloor.dmi'
 	icon_state = "techfloor_gray"
 	initial_flooring = /decl/flooring/tiling/tech
 
@@ -324,6 +324,18 @@
 	icon_state = "lino"
 	initial_flooring = /decl/flooring/linoleum
 
+/turf/simulated/floor/wmarble
+	name = "marble"
+	icon = 'icons/turf/flooring/misc.dmi'
+	icon_state = "lightmarble"
+	initial_flooring = /decl/flooring/wmarble
+
+/turf/simulated/floor/bmarble
+	name = "marble"
+	icon = 'icons/turf/flooring/misc.dmi'
+	icon_state = "darkmarble"
+	initial_flooring = /decl/flooring/bmarble
+
 //ATMOS PREMADES
 /turf/simulated/floor/reinforced/airless
 	name = "vacuum floor"
@@ -389,13 +401,8 @@
 	icon_state = "snow"
 	outdoors = TRUE
 	movement_cost = 8
+	initial_flooring = /decl/flooring/snow
 	var/list/crossed_dirs = list()
-	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
-		'sound/effects/footstep/snow1.ogg',
-		'sound/effects/footstep/snow2.ogg',
-		'sound/effects/footstep/snow3.ogg',
-		'sound/effects/footstep/snow4.ogg',
-		'sound/effects/footstep/snow5.ogg'))
 
 /turf/simulated/floor/outdoors/snow/snow
 	name = "snow"
@@ -405,6 +412,7 @@
 	name = "snow"
 	icon_state = "snownew"
 	movement_cost = 4
+	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
 
 /turf/simulated/floor/outdoors/snow/gravsnow
 	name = "snow"
@@ -445,3 +453,4 @@
         for(var/i in 1 to amt)
             add_overlay(image(icon, "footprint[i]", text2num(d)))
 
+//**** Here ends snow ****

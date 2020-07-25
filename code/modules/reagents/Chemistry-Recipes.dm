@@ -118,7 +118,7 @@
 		var/turf/T = get_turf(container)
 		var/list/seen = viewers(4, T)
 		for(var/mob/M in seen)
-			M.show_message("<span class='notice'>\icon[container] [mix_message]</span>", 1)
+			M.show_message("<span class='notice'>[bicon(container)] [mix_message]</span>", 1)
 		playsound(T, reaction_sound, 80, 1)
 
 //obtains any special data that will be provided to the reaction products
@@ -897,7 +897,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		M << "<span class='warning'>The solution spews out foam!</span>"
+		to_chat(M, "<span class='warning'>The solution spews out foam!</span>")
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 0)
@@ -919,7 +919,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		M << "<span class='warning'>The solution spews out a metalic foam!</span>"
+		to_chat(M, "<span class='warning'>The solution spews out a metalic foam!</span>")
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 1)
@@ -937,7 +937,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		M << "<span class='warning'>The solution spews out a metalic foam!</span>"
+		to_chat(M, "<span class='warning'>The solution spews out a metalic foam!</span>")
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 2)
@@ -1861,7 +1861,7 @@
 	name = "Snow White"
 	id = "snowwhite"
 	result = "snowwhite"
-	required_reagents = list("beer" = 1, "lemon_lime" = 1)
+	required_reagents = list("pineapplejuice" = 1, "rum" = 1, "lemon_lime" = 1, "egg" = 1, "kahlua" = 1, "sugar" = 1) //VoreStation Edit
 	result_amount = 2
 
 /datum/chemical_reaction/drinks/irishcarbomb

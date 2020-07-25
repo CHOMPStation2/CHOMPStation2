@@ -8,8 +8,8 @@
 	valid_transform_species = list(
 		"Human", "Unathi", "Tajara", "Skrell",
 		"Diona", "Teshari", "Monkey","Sergal",
-		"Akula","Nevrean","Highlander Zorren",
-		"Flatland Zorren", "Vulpkanin", "Vasilissan",
+		"Akula","Nevrean","Zorren",
+		"Fennec", "Vulpkanin", "Vasilissan",
 		"Rapala", "Neaera", "Stok", "Farwa", "Sobaka",
 		"Wolpin", "Saru", "Sparra")
 
@@ -26,6 +26,9 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_hair_colors,
 		/mob/living/carbon/human/proc/shapeshifter_select_gender,
 		/mob/living/carbon/human/proc/regenerate,
+		/mob/living/carbon/human/proc/shapeshifter_select_wings,
+		/mob/living/carbon/human/proc/shapeshifter_select_tail,
+		/mob/living/carbon/human/proc/shapeshifter_select_ears,
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/succubus_drain,
 		/mob/living/carbon/human/proc/succubus_drain_finalize,

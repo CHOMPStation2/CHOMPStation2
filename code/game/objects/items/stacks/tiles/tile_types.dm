@@ -14,13 +14,19 @@
 	name = "tile"
 	singular_name = "tile"
 	desc = "A non-descript floor tile"
+	randpixel = 7
 	w_class = ITEMSIZE_NORMAL
 	max_amount = 60
+	drop_sound = 'sound/items/drop/axe.ogg'
+
+	var/material/material						//CHOMPEDIT: Start, To make tiles have material variables
+	var/default_type = DEFAULT_WALL_MATERIAL
+	var/perunit = SHEET_MATERIAL_AMOUNT
+	var/apply_colour							//CHOMPEDIT: End
 
 /obj/item/stack/tile/New()
 	..()
-	pixel_x = rand(-7, 7)
-	pixel_y = rand(-7, 7)
+	randpixel_xy()
 
 /*
  * Grass
@@ -37,6 +43,7 @@
 	flags = 0
 	origin_tech = list(TECH_BIO = 1)
 	no_variants = FALSE
+	drop_sound = 'sound/items/drop/herb.ogg'
 /*
  * Wood
  */
@@ -51,6 +58,7 @@
 	throw_range = 20
 	flags = 0
 	no_variants = FALSE
+	drop_sound = 'sound/items/drop/wooden.ogg'
 
 /obj/item/stack/tile/wood/sif
 	name = "alien wood tile"
@@ -66,9 +74,9 @@
 	stacktype = /obj/item/stack/tile/wood
 	build_type = /obj/item/stack/tile/wood
 
+
+//CHOMPEDIT: Moving carpets to tile_types_ch to give them proper names, descriptions and material variables
 /*
- * Carpets
- */
 /obj/item/stack/tile/carpet
 	name = "carpet"
 	singular_name = "carpet"
@@ -80,6 +88,7 @@
 	throw_range = 20
 	flags = 0
 	no_variants = FALSE
+	drop_sound = 'sound/items/drop/clothing.ogg'
 
 /obj/item/stack/tile/carpet/teal
 	name = "teal carpet"
@@ -88,7 +97,8 @@
 	icon_state = "tile-tealcarpet"
 	no_variants = FALSE
 
-/obj/item/stack/tile/carpet/bcarpet
+/obj/item/stack/tile/carpet/bcarpet //YW EDIT: Commented out to help with upstream merging. Get on this you fucking virgo bois. -yw //CHOMP Comment: Yawn commented out this block, but CHOMP already commented out this stuff so I just removed theirs.
+
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/blucarpet
 	icon_state = "tile-carpet"
@@ -102,6 +112,7 @@
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/oracarpet
 	icon_state = "tile-carpet"
+	*/
 
 /obj/item/stack/tile/floor
 	name = "floor tile"
@@ -193,6 +204,30 @@
 	icon_state = "tile-linoleum"
 	force = 1.0
 	throwforce = 1.0
+	throw_speed = 5
+	throw_range = 20
+	flags = 0
+	no_variants = FALSE
+
+/obj/item/stack/tile/wmarble
+	name = "light marble tile"
+	singular_name = "light marble tile"
+	desc = "Some white marble tiles used for flooring."
+	icon_state = "tile-wmarble"
+	force = 6.0
+	throwforce = 15.0
+	throw_speed = 5
+	throw_range = 20
+	flags = 0
+	no_variants = FALSE
+
+/obj/item/stack/tile/bmarble
+	name = "dark marble tile"
+	singular_name = "dark marble tile"
+	desc = "Some black marble tiles used for flooring."
+	icon_state = "tile-bmarble"
+	force = 6.0
+	throwforce = 15.0
 	throw_speed = 5
 	throw_range = 20
 	flags = 0

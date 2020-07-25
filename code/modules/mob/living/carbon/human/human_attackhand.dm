@@ -33,7 +33,7 @@
 		if(H.hand)
 			temp = H.organs_by_name["l_hand"]
 		if(!temp || !temp.is_usable())
-			H << "<font color='red'>You can't use your hand.</font>"
+			to_chat(H, "<font color='red'>You can't use your hand.</font>")
 			return
 	if(H.lying)
 		return
@@ -41,19 +41,13 @@
 
 	..()
 
-	var/lacertusol = 0
-	for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
-		if(R.id == "lacertusol")
-			lacertusol = 1
-			break
-
 	// Should this all be in Touch()?
 	if(istype(H))
 		if(H.get_accuracy_penalty() && H != src)	//Should only trigger if they're not aiming well
 			var/hit_zone = get_zone_with_miss_chance(H.zone_sel.selecting, src, H.get_accuracy_penalty())
 			if(!hit_zone)
 				H.do_attack_animation(src)
-				playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
+				playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 				visible_message("<font color='red'><B>[H] reaches for [src], but misses!</B></font>")
 				return FALSE
 
@@ -74,16 +68,16 @@
 			// VOREStation Edit - End
 			if(istype(H) && health < config.health_threshold_crit)
 				if(!H.check_has_mouth())
-					H << "<span class='danger'>You don't have a mouth, you cannot perform CPR!</span>"
+					to_chat(H, "<span class='danger'>You don't have a mouth, you cannot perform CPR!</span>")
 					return
 				if(!check_has_mouth())
-					H << "<span class='danger'>They don't have a mouth, you cannot perform CPR!</span>"
+					to_chat(H, "<span class='danger'>They don't have a mouth, you cannot perform CPR!</span>")
 					return
 				if((H.head && (H.head.body_parts_covered & FACE)) || (H.wear_mask && (H.wear_mask.body_parts_covered & FACE)))
-					H << "<span class='notice'>Remove your mask!</span>"
+					to_chat(H, "<span class='notice'>Remove your mask!</span>")
 					return 0
 				if((head && (head.body_parts_covered & FACE)) || (wear_mask && (wear_mask.body_parts_covered & FACE)))
-					H << "<span class='notice'>Remove [src]'s mask!</span>"
+					to_chat(H, "<span class='notice'>Remove [src]'s mask!</span>")
 					return 0
 
 				if (!cpr_time)
@@ -99,7 +93,7 @@
 					return
 
 				H.visible_message("<span class='danger'>\The [H] performs CPR on \the [src]!</span>")
-				H << "<span class='warning'>Repeat at least every 7 seconds.</span>"
+				to_chat(H, "<span class='warning'>Repeat at least every 7 seconds.</span>")
 
 				if(istype(H) && health > config.health_threshold_dead)
 					adjustOxyLoss(-(min(getOxyLoss(), 5)))
@@ -115,14 +109,14 @@
 				return 0
 			for(var/obj/item/weapon/grab/G in src.grabbed_by)
 				if(G.assailant == M)
-					M << "<span class='notice'>You already grabbed [src].</span>"
+					to_chat(M, "<span class='notice'>You already grabbed [src].</span>")
 					return
 			if(w_uniform)
 				w_uniform.add_fingerprint(M)
 
 			var/obj/item/weapon/grab/G = new /obj/item/weapon/grab(M, src)
 			if(buckled)
-				M << "<span class='notice'>You cannot grab [src], [TT.he] is buckled in!</span>"
+				to_chat(M, "<span class='notice'>You cannot grab [src], [TT.he] is buckled in!</span>")
 				return
 			if(!G)	//the grab will delete itself in New if affecting is anchored
 				return
@@ -131,11 +125,10 @@
 			LAssailant = M
 
 			H.do_attack_animation(src)
-			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+			playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 			//VORESTATION EDIT
 			visible_message("<span class='warning'>[M] has grabbed [src] [(M.zone_sel.selecting == BP_L_HAND || M.zone_sel.selecting == BP_R_HAND)? "by [(gender==FEMALE)? "her" : ((gender==MALE)? "his": "their")] hands": "passively"]!</span>")
 			//VORESTATION END END
-
 			return TRUE
 
 		if(I_HURT)
@@ -147,7 +140,7 @@
 					G.activate(M)
 					update_inv_wear_mask()
 				else
-					M << "<span class='warning'>\The [G] is already primed! Run!</span>"
+					to_chat(M, "<span class='warning'>\The [G] is already primed! Run!</span>")
 				return
 
 			if(!istype(H))
@@ -155,23 +148,19 @@
 				return
 
 			var/rand_damage = rand(1, 5)
-			if(lacertusol)
-				rand_damage = rand(5, 12)
 			var/block = 0
 			var/accurate = 0
 			var/hit_zone = H.zone_sel.selecting
 			var/obj/item/organ/external/affecting = get_organ(hit_zone)
 
 			if(!affecting || affecting.is_stump())
-				M << "<span class='danger'>They are missing that limb!</span>"
+				to_chat(M, "<span class='danger'>They are missing that limb!</span>")
 				return TRUE
 
 			switch(src.a_intent)
 				if(I_HELP)
 					// We didn't see this coming, so we get the full blow
 					rand_damage = 5
-					if(lacertusol)
-						rand_damage = 12
 					accurate = 1
 				if(I_HURT, I_GRAB)
 					// We're in a fighting stance, there's a chance we block
@@ -185,8 +174,6 @@
 			if(src.grabbed_by.len || src.buckled || !src.canmove || src==H)
 				accurate = 1 // certain circumstances make it impossible for us to evade punches
 				rand_damage = 5
-				if(lacertusol)
-					rand_damage = 12
 
 			// Process evasion and blocking
 			var/miss_type = 0
@@ -249,7 +236,7 @@
 			else
 				H.visible_message("<span class='danger'>[attack_message]</span>")
 
-			playsound(loc, ((miss_type) ? (miss_type == 1 ? attack.miss_sound : 'sound/weapons/thudswoosh.ogg') : attack.attack_sound), 25, 1, -1)
+			playsound(src, ((miss_type) ? (miss_type == 1 ? attack.miss_sound : 'sound/weapons/thudswoosh.ogg') : attack.attack_sound), 25, 1, -1)
 
 			add_attack_logs(H,src,"Melee attacked with fists (miss/block)")
 
@@ -309,10 +296,13 @@
 
 			var/randn = rand(1, 100)
 			last_push_time = world.time
-			if(!(species.flags & NO_SLIP) && randn <= 25)
+			// We ARE wearing shoes OR
+			// We as a species CAN be slipped when barefoot
+			// And also 1 in 4 because rngesus
+			if((shoes || !(species.flags & NO_SLIP)) && randn <= 25)
 				var/armor_check = run_armor_check(affecting, "melee")
 				apply_effect(3, WEAKEN, armor_check)
-				playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 				if(armor_check < 60)
 					visible_message("<span class='danger'>[M] has pushed [src]!</span>")
 				else
@@ -322,7 +312,7 @@
 			if(randn <= 60)
 				//See about breaking grips or pulls
 				if(break_all_grabs(M))
-					playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+					playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 					return
 
 				//Actually disarm them
@@ -330,10 +320,10 @@
 					if(I)
 						drop_from_inventory(I)
 						visible_message("<span class='danger'>[M] has disarmed [src]!</span>")
-						playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+						playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 						return
 
-			playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
+			playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 			visible_message("<font color='red'> <B>[M] attempted to disarm [src]!</B></font>")
 	return
 
@@ -420,7 +410,8 @@
 		return FALSE
 
 	if(organ.applied_pressure)
-		user << "<span class='warning'>Someone is already applying pressure to [user == src? "your [organ.name]" : "[src]'s [organ.name]"].</span>"
+		var/message = "<span class='warning'>Someone is already applying pressure to [user == src ? "your [organ.name]" : "[src]'s [organ.name]"].</span>"
+		to_chat(user,message)
 		return FALSE
 
 	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
@@ -442,4 +433,4 @@
 		else
 			user.visible_message("\The [user] stops applying pressure to [src]'s [organ.name]!", "You stop applying pressure to [src]'s [organ.name]!")
 
-	return TRUE 
+	return TRUE

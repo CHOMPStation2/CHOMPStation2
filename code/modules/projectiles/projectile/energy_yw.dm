@@ -2,7 +2,7 @@
 //Gauss beam for gaussguns -RadiantFlash//
 /obj/item/projectile/energy/gauss
 	name = "gauss bolt"
-	icon = 'icons/obj/projectiles_yw.dmi'
+	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "gauss"
 	damage = 35
 	stun = 0
@@ -12,9 +12,9 @@
 	pass_flags = PASSTABLE | PASSGRILLE
 	check_armour = "laser"
 
-/obj/item/projectile/energy/gaussweak.
+/obj/item/projectile/energy/gaussweak
 	name = "gauss bolt"
-	icon = 'icons/obj/projectiles_yw.dmi'
+	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "gauss"
 	damage = 25
 	stun = 0
@@ -26,7 +26,7 @@
 
 /obj/item/projectile/energy/gaussrifle
 	name = "gauss bolt"
-	icon = 'icons/obj/projectiles_yw.dmi'
+	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "gauss"
 	damage = 60
 	stun = 2

@@ -709,7 +709,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "aurora_glasses"
  	icon_override = 'icons/vore/custom_onmob_yw.dmi'
- 	override = 1
  	item_state = "aurora_glasses"
 
  //Strix Hades
@@ -720,7 +719,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cd"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_cd"
 
 /obj/item/clothing/under/seromi/undercoat/fluff/strix
@@ -729,10 +727,9 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "tesh_uniform_cd"
-	override = 1
 	item_state = "tesh_uniform_cd"
 	sprite_sheets = list(
-					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
+					SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
 					)
 
 /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
@@ -741,7 +738,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cco"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_cco"
 
 /obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
@@ -750,7 +746,6 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 	icon_state = "tesh_uniform_cco"
-	override = 1
 	item_state = "tesh_uniform_cco"
 	sprite_sheets = list(
 					"Teshari" = 'icons/vore/custom_onmob_yw.dmi'
@@ -887,7 +882,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_kita"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_kita"
 
 // ********
@@ -1025,7 +1019,6 @@
 	icon_state = "jiao_glasses"
 	off_state = "jiao_glasses_off"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	override = 1
 	item_state = "jiao_glasses"
 	species_restricted = list("Akula")
 
@@ -1157,7 +1150,6 @@
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_saroth"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	override = 1
  	item_state = "tesh_cloak_saroth"
 
 /obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
@@ -1167,7 +1159,6 @@
     icon_state = "jaree_cloak"
     icon_override = 'icons/vore/custom_onmob_yw.dmi'
     item_state = "jaree_cloak"
-    override = 1
 
 /obj/item/clothing/head/ushanka/alt/fluff/Jaree
     name = "ushanka"
@@ -1246,7 +1237,6 @@
 	icon_state = "noel_glasses"
 	off_state = "noel_glasses_off"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
-	override = 1
 	item_state = "noel_glasses"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie
@@ -1256,7 +1246,6 @@
     icon_state = "noel_hoodie"
     // "noel_hoodie_open" will be the open state
     icon_override = 'icons/vore/custom_onmob_yw.dmi'
-    //override = 1 //What is this? VS does not have this
     item_state = null
 
 /obj/item/clothing/ears/earings/fluff/noel_earings
@@ -1492,10 +1481,10 @@
 // ******
 // RisingStarSlash
 // ******
-//Stellar Wolf
+//Monika Wolfe
 /obj/item/clothing/accessory/collar/fluff/stellar_collar
 	name = "Heart Collar"
-	desc = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Stellar and Reyna close together, paws locked and facing the picture slightly sideways with beaming smiles."
+	desc = "The collar appears to have a heart shaped pin on the front, the medical logo on visible from a distance. Closer inspection shows that the heart can be opened, revealing a picture. On the picture you can see Monika and Isha close together, paws locked and facing the picture slightly sideways with beaming smiles."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "stellarcollar"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
@@ -1579,12 +1568,13 @@
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
 
 /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
-	name = "Warden Cloak"
-	desc = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
-	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "mocha_cloak"
-	icon_override = "icons/vore/custom_clothes_yw.dmi"
-	item_state = "mocha_cloak_s"
+    name = "Elaborate Cloak"
+    desc = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
+    icon = 'icons/vore/custom_clothes_yw.dmi'
+    icon_state = "mocha_cloak"
+    icon_override = 'icons/vore/custom_clothes_yw.dmi'
+    item_state = "mocha_cloak_s"
+    overlay_state = "mocha_cloak_s"
 
 // ******
 // Lawst
@@ -1608,3 +1598,55 @@
 	desc = "A compact duffle bag, meant for long hikes."
 	icon = 'icons/obj/clothing/backpack.dmi'
 	icon_state = "duffle"
+
+
+// ******
+// SplinterGP
+// ******
+
+/obj/item/clothing/accessory/poncho/cloak/fluff/aroozee
+	name = "Aroozee Cloak"
+	desc = "A cloak made especially for a vasilissan, it smells of perfume."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_cloak"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_cloak_mob"
+	flags_inv = HIDETAIL
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/accessory/poncho/cloak/fluff/aroozeehos
+	name = "Aroozee Head of Security Cloak"
+	desc = "A cloak denoting the rank of head of security, it's made especially for a vasilissan and smells of perfume."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_cloak_hos"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_cloak_hos_mob"
+	flags_inv = HIDETAIL
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/accessory/collar/fluff/aroozee_valhollide_ring
+	name = "Aroozee valhollide ring"
+	desc = "A long, loose chain lace of silver, holding a special ring of a perfect, crystalline definition. <br>It's touch is perpetually that of deep ice-cold, no matter how long you hold it.<br> Staring at it, you feel quiet, your mind calm, your thoughts very still."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aroozee_valhollide_ring"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "aroozee_valhollide_ring_mob"
+	overlay_state = "aroozee_valhollide_ring_mob"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	w_class = 2
+
+
+// *****
+// Rouwren
+// *****
+
+/obj/item/clothing/accessory/medal/fluff/rindeimos
+	name = "Broken Life Crystal"
+	desc = "The broken life crystal doesn't do anything, except remind you of loss."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "khlife3"
+	icon_override = 'icons/vore/custom_items_vr.dmi'
+	item_state = "khlife_overlay"
+	overlay_state = "khlife_overlay"

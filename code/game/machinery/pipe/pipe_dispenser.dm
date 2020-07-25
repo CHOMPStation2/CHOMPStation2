@@ -8,6 +8,13 @@
 	var/unwrenched = 0
 	var/wait = 0
 	var/p_layer = PIPING_LAYER_REGULAR
+	var/static/list/pipe_layers = list(
+		"Regular" = PIPING_LAYER_REGULAR,
+		"Supply" = PIPING_LAYER_SUPPLY,
+		"Scrubber" = PIPING_LAYER_SCRUBBER,
+		"Fuel" = PIPING_LAYER_FUEL,
+		"Aux" = PIPING_LAYER_AUX
+	)
 
 // TODO - Its about time to make this NanoUI don't we think?
 /obj/machinery/pipedispenser/attack_hand(var/mob/user as mob)
@@ -22,11 +29,10 @@
 	for(var/category in atmos_pipe_recipes)
 		lines += "<b>[category]:</b><BR>"
 		if(category == "Pipes")
-			// Stupid hack. Fix someday. So tired right now.
-			lines += "<a class='[p_layer == PIPING_LAYER_REGULAR ? "linkOn" : "linkOff"]' href='?src=\ref[src];setlayer=[PIPING_LAYER_REGULAR]'>Regular</a> "
-			lines += "<a class='[p_layer == PIPING_LAYER_SUPPLY ? "linkOn" : "linkOff"]' href='?src=\ref[src];setlayer=[PIPING_LAYER_SUPPLY]'>Supply</a> "
-			lines += "<a class='[p_layer == PIPING_LAYER_SCRUBBER ? "linkOn" : "linkOff"]' href='?src=\ref[src];setlayer=[PIPING_LAYER_SCRUBBER]'>Scrubber</a> "
-			lines += "<br>"
+			for(var/pipename in pipe_layers)
+				var/pipelayer = pipe_layers[pipename]
+				lines += "<a class='[p_layer == pipelayer ? "linkOn" : "linkOff"]' href='?src=\ref[src];setlayer=[pipelayer]'>[pipename]</a> "
+				lines += "<br>"
 		for(var/datum/pipe_recipe/PI in atmos_pipe_recipes[category])
 			lines += PI.Render(src)
 	var/dat = lines.Join()
@@ -71,14 +77,14 @@
 /obj/machinery/pipedispenser/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	src.add_fingerprint(usr)
 	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter))
-		usr << "<span class='notice'>You put [W] back to [src].</span>"
+		to_chat(usr, "<span class='notice'>You put [W] back to [src].</span>")
 		user.drop_item()
 		qdel(W)
 		return
 	else if(W.is_wrench())
 		if (unwrenched==0)
 			playsound(src, W.usesound, 50, 1)
-			user << "<span class='notice'>You begin to unfasten \the [src] from the floor...</span>"
+			to_chat(user, "<span class='notice'>You begin to unfasten \the [src] from the floor...</span>")
 			if (do_after(user, 40 * W.toolspeed))
 				user.visible_message( \
 					"<span class='notice'>[user] unfastens \the [src].</span>", \
@@ -91,7 +97,7 @@
 					usr << browse(null, "window=pipedispenser")
 		else /*if (unwrenched==1)*/
 			playsound(src, W.usesound, 50, 1)
-			user << "<span class='notice'>You begin to fasten \the [src] to the floor...</span>"
+			to_chat(user, "<span class='notice'>You begin to fasten \the [src] to the floor...</span>")
 			if (do_after(user, 20 * W.toolspeed))
 				user.visible_message( \
 					"<span class='notice'>[user] fastens \the [src].</span>", \
@@ -151,7 +157,7 @@ Nah
 /obj/machinery/pipedispenser/disposal/Topic(href, href_list)
 	if(href_list["makepipe"] || href_list["setlayer"] || href_list["makemeter"])	// Asking the disposal machine to do atmos stuff?
 		return 																		// That's a no no.
-	if(..())
+	if((. = ..()))
 		return
 	if(href_list["dmake"])
 		if(!wait)
@@ -163,8 +169,7 @@ Nah
 			C.add_fingerprint(usr)
 			C.update()
 			wait = 1
-			spawn(15)
-				wait = 0
+			VARSET_IN(src, wait, FALSE, 15)
 	return
 
 // adding a pipe dispensers that spawn unhooked from the ground

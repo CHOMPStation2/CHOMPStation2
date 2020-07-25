@@ -20,7 +20,7 @@
 /obj/item/weapon/syringe_cartridge/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/weapon/reagent_containers/syringe))
 		syringe = I
-		user << "<span class='notice'>You carefully insert [syringe] into [src].</span>"
+		to_chat(user, "<span class='notice'>You carefully insert [syringe] into [src].</span>")
 		user.remove_from_mob(syringe)
 		syringe.loc = src
 		sharp = 1
@@ -29,8 +29,8 @@
 
 /obj/item/weapon/syringe_cartridge/attack_self(mob/user)
 	if(syringe)
-		user << "<span class='notice'>You remove [syringe] from [src].</span>"
-		playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
+		to_chat(user, "<span class='notice'>You remove [syringe] from [src].</span>")
+		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 		user.put_in_hands(syringe)
 		syringe = null
 		sharp = initial(sharp)
@@ -97,7 +97,7 @@
 		user.visible_message("[user] unlatches and carefully relaxes the bolt on [src].", "<span class='warning'>You unlatch and carefully relax the bolt on [src], unloading the spring.</span>")
 		next = null
 	else if(darts.len)
-		playsound(src.loc, 'sound/weapons/flipblade.ogg', 50, 1)
+		playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
 		user.visible_message("[user] draws back the bolt on [src], clicking it into place.", "<span class='warning'>You draw back the bolt on the [src], loading the spring!</span>")
 		next = darts[1]
 	add_fingerprint(user)
@@ -105,16 +105,16 @@
 /obj/item/weapon/gun/launcher/syringe/attack_hand(mob/living/user as mob)
 	if(user.get_inactive_hand() == src)
 		if(!darts.len)
-			user << "<span class='warning'>[src] is empty.</span>"
+			to_chat(user, "<span class='warning'>[src] is empty.</span>")
 			return
 		if(next)
-			user << "<span class='warning'>[src]'s cover is locked shut.</span>"
+			to_chat(user, "<span class='warning'>[src]'s cover is locked shut.</span>")
 			return
 		var/obj/item/weapon/syringe_cartridge/C = darts[1]
 		darts -= C
 		user.put_in_hands(C)
 		user.visible_message("[user] removes \a [C] from [src].", "<span class='notice'>You remove \a [C] from [src].</span>")
-		playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
+		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 	else
 		..()
 
@@ -122,7 +122,7 @@
 	if(istype(A, /obj/item/weapon/syringe_cartridge))
 		var/obj/item/weapon/syringe_cartridge/C = A
 		if(darts.len >= max_darts)
-			user << "<span class='warning'>[src] is full!</span>"
+			to_chat(user, "<span class='warning'>[src] is full!</span>")
 			return
 		user.remove_from_mob(C)
 		C.loc = src

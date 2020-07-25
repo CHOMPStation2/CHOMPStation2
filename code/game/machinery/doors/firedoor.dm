@@ -38,7 +38,7 @@
 	var/hatch_open = 0
 
 	power_channel = ENVIRON
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
 
 	var/list/tile_info[4]
@@ -49,14 +49,17 @@
 		"hot",
 		"cold"
 	)
+	var/open_sound = 'sound/machines/firelockopen.ogg' //CHOMPEdit firedoor sound variable.
+	var/close_sound = 'sound/machines/firelockclose.ogg' //CHOMPEdit firedoor sound variable.
 
-/obj/machinery/door/firedoor/New()
+/obj/machinery/door/firedoor/Initialize()
 	. = ..()
+	//Delete ourselves if we find extra mapped in firedoors
 	for(var/obj/machinery/door/firedoor/F in loc)
 		if(F != src)
-			spawn(1)
-				qdel(src)
-			return .
+			log_debug("Duplicate firedoors at [x],[y],[z]")
+			return INITIALIZE_HINT_QDEL
+	
 	var/area/A = get_area(src)
 	ASSERT(istype(A))
 
@@ -78,14 +81,15 @@
 	return get_material_by_name(DEFAULT_WALL_MATERIAL)
 
 /obj/machinery/door/firedoor/examine(mob/user)
-	. = ..(user, 1)
-	if(!. || !density)
-		return
+	. = ..()
+	
+	if(!Adjacent(user))
+		return .
 
 	if(pdiff >= FIREDOOR_MAX_PRESSURE_DIFF)
-		to_chat(user, "<span class='warning'>WARNING: Current pressure differential is [pdiff]kPa! Opening door may result in injury!</span>")
+		. += "<span class='warning'>WARNING: Current pressure differential is [pdiff]kPa! Opening door may result in injury!</span>"
 
-	to_chat(user, "<b>Sensor readings:</b>")
+	. += "<b>Sensor readings:</b>"
 	for(var/index = 1; index <= tile_info.len; index++)
 		var/o = "&nbsp;&nbsp;"
 		switch(index)
@@ -99,7 +103,7 @@
 				o += "WEST: "
 		if(tile_info[index] == null)
 			o += "<span class='warning'>DATA UNAVAILABLE</span>"
-			to_chat(user, o)
+			. += o
 			continue
 		var/celsius = convert_k2c(tile_info[index][1])
 		var/pressure = tile_info[index][2]
@@ -107,14 +111,14 @@
 		o += "[celsius]&deg;C</span> "
 		o += "<span style='color:blue'>"
 		o += "[pressure]kPa</span></li>"
-		to_chat(user, o)
+		. += o
 
 	if(islist(users_to_open) && users_to_open.len)
 		var/users_to_open_string = users_to_open[1]
 		if(users_to_open.len >= 2)
 			for(var/i = 2 to users_to_open.len)
 				users_to_open_string += ", [users_to_open[i]]"
-		to_chat(user, "These people have opened \the [src] during an alert: [users_to_open_string].")
+		. += "These people have opened \the [src] during an alert: [users_to_open_string]."
 
 /obj/machinery/door/firedoor/Bumped(atom/AM)
 	if(p_open || operating)
@@ -198,14 +202,14 @@
 			if(src.blocked)
 				visible_message("<span class='alium'>\The [user] begins digging into \the [src] internals!</span>")
 				if(do_after(user,5 SECONDS,src))
-					playsound(src.loc, 'sound/machines/airlock_creaking.ogg', 100, 1)
+					playsound(src, 'sound/machines/airlock_creaking.ogg', 100, 1)
 					src.blocked = 0
 					update_icon()
 					open(1)
 			else if(src.density)
 				visible_message("<span class='alium'>\The [user] begins forcing \the [src] open!</span>")
 				if(do_after(user, 2 SECONDS,src))
-					playsound(src.loc, 'sound/machines/airlock_creaking.ogg', 100, 1)
+					playsound(src, 'sound/machines/airlock_creaking.ogg', 100, 1)
 					visible_message("<span class='danger'>\The [user] forces \the [src] open!</span>")
 					open(1)
 			else
@@ -289,6 +293,7 @@
 					FA.anchored = 1
 					FA.density = 1
 					FA.wired = 1
+					FA.glass = glass
 					FA.update_icon()
 					qdel(src)
 		return
@@ -348,7 +353,9 @@
 /obj/machinery/door/firedoor/process()
 	..()
 
-	if(density && next_process_time <= world.time)
+	if(!density)
+		return PROCESS_KILL
+	if(next_process_time <= world.time)
 		next_process_time = world.time + 100		// 10 second delays between process updates
 		var/changed = 0
 		lockdown=0
@@ -404,7 +411,10 @@
 
 /obj/machinery/door/firedoor/close()
 	latetoggle()
-	return ..()
+	. = ..()
+	// Queue us for processing when we are closed!
+	if(density)
+		START_MACHINE_PROCESSING(src)
 
 /obj/machinery/door/firedoor/open(var/forced = 0)
 	if(hatch_open)
@@ -428,9 +438,9 @@
 	switch(animation)
 		if("opening")
 			flick("door_opening", src)
-			playsound(src, 'sound/machines/firelockopen.ogg', 37, 1)
+			playsound(src, open_sound, 37, 1) //CHOMPEdit var
 		if("closing")
-			playsound(src, 'sound/machines/firelockclose.ogg', 37, 1)
+			playsound(src, close_sound, 37, 1) //CHOMPEdit var
 			flick("door_closing", src)
 	return
 
@@ -504,6 +514,8 @@
 /obj/machinery/door/firedoor/multi_tile
 	icon = 'icons/obj/doors/DoorHazard2x1.dmi'
 	width = 2
+	open_sound = 'sound/machines/firewide1o.ogg' //CHOMPEdit
+	close_sound = 'sound/machines/firewide1c.ogg' //CHOMPEdit
 
 /obj/machinery/door/firedoor/glass
 	name = "\improper Emergency Glass Shutter"

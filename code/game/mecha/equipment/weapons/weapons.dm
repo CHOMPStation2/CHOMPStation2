@@ -36,7 +36,7 @@
 			aimloc = locate(targloc.x+GaussRandRound(deviation,1),targloc.y+GaussRandRound(deviation,1),targloc.z)
 		if(!aimloc || aimloc == curloc || (locs && aimloc in locs))
 			break
-		playsound(chassis, fire_sound, fire_volume, 1)
+		playsound(src, fire_sound, fire_volume, 1)
 		projectiles--
 		var/turf/projectile_turf
 		if(chassis.locs && chassis.locs.len)	// Multi tile.
@@ -67,7 +67,7 @@
 		var/obj/item/projectile/P = A
 		P.dispersion = deviation
 		process_accuracy(P, chassis.occupant, target)
-		P.launch_projectile_from_turf(target, chassis.occupant.zone_sel.selecting, chassis.occupant, params)
+		P.launch_projectile_from_turf(target, chassis.get_pilot_zone_sel(), chassis.occupant, params)
 	else if(istype(A, /atom/movable))
 		var/atom/movable/AM = A
 		AM.throw_at(target, 7, 1, chassis)

@@ -42,24 +42,24 @@
 
 // Override Polaris's "confederate" naming convention. I hate it.
 /obj/item/clothing/suit/storage/vest/solgov
-	name = "\improper Solar Central Government armored vest"
-	desc = "A synthetic armor vest. This one is marked with the crest of the Solar Central Government."
+	name = "\improper Solar Central Government" //YW EDIT: SolGov
+	desc = "A synthetic armor vest. This one is marked with the crest of the Society of Universal CartographersSolar Central Government." //YW EDIT: Terran Commonwealth to Solar Central Government
 
 /obj/item/clothing/suit/storage/vest/solgov/heavy
-	name = "\improper Solar Central Government heavy armored vest"
-	desc = "A synthetic armor vest with SECURITY printed in distinctive blue lettering on the chest. This one has added webbing and ballistic plates." // USDF does peacekeeping, not these guys.
+	name = "\improper Solar Central Government heavy armored vest" //YW EDIT: SolGov
+	desc = "A synthetic armor vest with SECURITY printed in distinctive blue lettering on the chest. This one has added webbing and ballistic plates." //YW EDIT Old comment: USDF does peacekeeping, not these guys.
 
 /obj/item/clothing/suit/storage/vest/solgov/security
 	name = "master at arms heavy armored vest"
 	desc = "A synthetic armor vest with MASTER AT ARMS printed in silver lettering on the chest. This one has added webbing and ballistic plates."
 
 /obj/item/clothing/suit/storage/vest/solgov/command
-	name = "command heavy armored vest"
-	desc = "A synthetic armor vest with Solar Central Government printed in detailed gold lettering on the chest. This one has added webbing and ballistic plates."
+	name = "commander heavy armored vest"
+	desc = "A synthetic armor vest with Solar Central Government printed in detailed gold lettering on the chest. This one has added webbing and ballistic plates." //YW EDIT: SolGov
 
 /obj/item/clothing/suit/armor/combat/USDF
 	name = "marine body armor"
-	desc = "When I joined the Corps, we didn't have any fancy-schmanzy armor. We had sticks! Two sticks, and a rock for the whole platoon–and we had to <i>share</i> the rock!"
+	desc = "When I joined the Corps, we didn't have any fancy-schmanzy armor. We had sticks! Two sticks, and a rock for the whole platoon-and we had to <i>share</i> the rock!"
 	icon_state = "unsc_armor"
 	icon = 'icons/obj/clothing/suits_vr.dmi'
 	icon_override = 'icons/mob/suit_vr.dmi'
@@ -77,3 +77,11 @@
 	name = "imperial centurion armor"
 	desc = "Not all heroes wear capes, but it'd be cooler if they did."
 	icon_state = "ge_armorcent"
+
+/obj/item/clothing/suit/storage/vest/wardencoat/alt2
+	icon = 'icons/obj/clothing/suits_vr.dmi'
+	icon_override = 'icons/mob/suit_vr.dmi'
+
+/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt
+	icon = 'icons/obj/clothing/suits_vr.dmi'
+	icon_override = 'icons/mob/suit_vr.dmi'

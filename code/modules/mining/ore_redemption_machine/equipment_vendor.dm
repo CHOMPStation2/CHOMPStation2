@@ -3,12 +3,13 @@
 /obj/machinery/mineral/equipment_vendor
 	name = "mining equipment vendor"
 	desc = "An equipment vendor for miners, points collected at an ore redemption machine can be spent here."
-	icon = 'icons/obj/machines/mining_machines.dmi'
-	icon_state = "mining"
+	icon = 'icons/obj/vending.dmi'
+	icon_state = "adh-tool"
 	density = TRUE
 	anchored = TRUE
+	var/icon_deny = "adh-tool-deny"
+	var/icon_vend = "adh-tool-vend"
 	circuit = /obj/item/weapon/circuitboard/mining_equipment_vendor
-	var/icon_deny = "mining-deny"
 	var/obj/item/weapon/card/id/inserted_id
 	//VOREStation Edit Start - Heavily modified list
 	var/list/prize_list = list(
@@ -29,7 +30,10 @@
 		// TODO new /datum/data/mining_equipment("Explorer's Webbing",	/obj/item/storage/belt/mining,										500),
 		new /datum/data/mining_equipment("Umbrella",					/obj/item/weapon/melee/umbrella/random,								200),
 		new /datum/data/mining_equipment("Point Transfer Card",			/obj/item/weapon/card/mining_point_card,							500),
-		new /datum/data/mining_equipment("Survival Medipen",			/obj/item/weapon/reagent_containers/hypospray/autoinjector/miner,	500),
+		new /datum/data/mining_equipment("Trauma Medipen",				/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,	250),
+		new /datum/data/mining_equipment("Burn Medipen",				/obj/item/weapon/reagent_containers/hypospray/autoinjector/burn,	250),
+		new /datum/data/mining_equipment("Oxy Medipen",					/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,		250),
+		new /datum/data/mining_equipment("Detox Medipen",				/obj/item/weapon/reagent_containers/hypospray/autoinjector/detox,	250),
 		new /datum/data/mining_equipment("Mini-Translocator",			/obj/item/device/perfect_tele/one_beacon,							1200),
 		// new /datum/data/mining_equipment("Kinetic Crusher",			/obj/item/twohanded/required/kinetic_crusher,						750),
 		new /datum/data/mining_equipment("Kinetic Accelerator",			/obj/item/weapon/gun/energy/kinetic_accelerator,					900),
@@ -37,7 +41,7 @@
 		new /datum/data/mining_equipment("Fulton Pack",					/obj/item/extraction_pack,											1200),
 		new /datum/data/mining_equipment("Silver Pickaxe",				/obj/item/weapon/pickaxe/silver,									1200),
 		// new /datum/data/mining_equipment("Mining Conscription Kit",	/obj/item/storage/backpack/duffelbag/mining_conscript,				1000),
-		new /datum/data/mining_equipment("Space Cash",					/obj/item/weapon/spacecash/c100,									1000),
+		new /datum/data/mining_equipment("Thalers - 100",				/obj/item/weapon/spacecash/c100,									1000),
 		new /datum/data/mining_equipment("Hardsuit - Control Module",	/obj/item/weapon/rig/industrial/vendor,									2000),
 		new /datum/data/mining_equipment("Hardsuit - Plasma Cutter",		/obj/item/rig_module/device/plasmacutter,						800),
 		new /datum/data/mining_equipment("Hardsuit - Drill",				/obj/item/rig_module/device/drill,								5000),
@@ -54,6 +58,7 @@
 		new /datum/data/mining_equipment("Super Resonator",				/obj/item/resonator/upgraded,										2500),
 		new /datum/data/mining_equipment("Jump Boots",					/obj/item/clothing/shoes/bhop,										2500),
 		new /datum/data/mining_equipment("Luxury Shelter Capsule",		/obj/item/device/survivalcapsule/luxury,							3100),
+		new /datum/data/mining_equipment("Bar Shelter Capsule",		/obj/item/device/survivalcapsule/luxurybar,							10000),
 		new /datum/data/mining_equipment("KA White Tracer Rounds",		/obj/item/borg/upgrade/modkit/tracer,								125),
 		new /datum/data/mining_equipment("KA Adjustable Tracer Rounds",	/obj/item/borg/upgrade/modkit/tracer/adjustable,					175),
 		new /datum/data/mining_equipment("KA Super Chassis",			/obj/item/borg/upgrade/modkit/chassis_mod,							250),
@@ -78,7 +83,7 @@
 		new /datum/data/mining_equipment("Fishing Net",					/obj/item/weapon/material/fishing_net,								500),
 		new /datum/data/mining_equipment("Titanium Fishing Rod",		/obj/item/weapon/material/fishing_rod/modern,						1000),
 		new /datum/data/mining_equipment("Durasteel Fishing Rod",		/obj/item/weapon/material/fishing_rod/modern/strong,				7500),
-		new /datum/data/mining_equipment("Bar Shelter Capsule",		/obj/item/device/survivalcapsule/luxurybar,							10000)
+		new /datum/data/mining_equipment("Survival Equipment - Insulated Poncho",	/obj/random/thermalponcho,								750)
 		)
 	//VOREStation Edit End
 
@@ -107,7 +112,12 @@
 
 /obj/machinery/mineral/equipment_vendor/update_icon()
 	if(panel_open)
-		icon_state = "[initial(icon_state)]-open"
+		add_overlay("[initial(icon_state)]-panel")
+	else
+		cut_overlay("[initial(icon_state)]-panel")
+
+	if(stat & BROKEN)
+		icon_state = "[initial(icon_state)]-broken"
 	else if(powered())
 		icon_state = initial(icon_state)
 	else
@@ -174,6 +184,7 @@
 				inserted_id.mining_points -= prize.cost
 				to_chat(usr, "<span class='notice'>[src] clanks to life briefly before vending [prize.equipment_name]!</span>")
 				new prize.equipment_path(drop_location())
+				flick(icon_vend, src)
 		else
 			to_chat(usr, "<span class='warning'>Error: Please insert a valid ID!</span>")
 			flick(icon_deny, src)

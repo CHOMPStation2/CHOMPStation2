@@ -297,9 +297,9 @@ proc/findNullRod(var/atom/target)
 				M.forceMove(destination)
 				if(M != user)
 					prey = 1
-		user << "<span class='sinister'>You warp back to Nar-Sie[prey ? " along with your prey":""].</span>"
+		to_chat(user, "<span class='sinister'>You warp back to Nar-Sie[prey ? " along with your prey":""].</span>")
 	else
-		user << "<span class='danger'>...something's wrong!</span>"//There shouldn't be an instance of Harvesters when Nar-Sie isn't in the world.
+		to_chat(user, "<span class='danger'>...something's wrong!</span>") //There shouldn't be an instance of Harvesters when Nar-Sie isn't in the world.
 */
 
 /spell/targeted/fortify
@@ -537,7 +537,7 @@ proc/findNullRod(var/atom/target)
 		new_projectile.fire()
 		log_and_message_admins("has casted [src] at \the [hit_atom].")
 		if(fire_sound)
-			playsound(get_turf(src), fire_sound, 75, 1)
+			playsound(src, fire_sound, 75, 1)
 		return 1
 	return 0
 

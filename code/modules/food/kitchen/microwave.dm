@@ -5,9 +5,11 @@
 	icon_state = "mw"
 	density = 1
 	anchored = 1
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
 	active_power_usage = 100
+	clicksound = "button"
+	clickvol = "30"
 	flags = OPENCONTAINER | NOREACT
 	circuit = /obj/item/weapon/circuitboard/microwave
 	var/operating = 0 // Is it on?
@@ -29,13 +31,11 @@
 ********************/
 
 /obj/machinery/microwave/Initialize()
+	. = ..()
 	reagents = new/datum/reagents(100)
 	reagents.my_atom = src
 
-	component_parts = list()
-	component_parts += new /obj/item/weapon/stock_parts/console_screen(src)
-	component_parts += new /obj/item/weapon/stock_parts/motor(src)
-	component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
+	default_apply_parts()
 
 	if (!available_recipes)
 		available_recipes = new
@@ -58,9 +58,7 @@
 		acceptable_items |= /obj/item/device/soulstone
 		acceptable_items |= /obj/item/weapon/fuel_assembly/supermatter
 
-	RefreshParts()
 	soundloop = new(list(src), FALSE)
-	return ..()
 
 /obj/machinery/microwave/Destroy()
 	QDEL_NULL(soundloop)
@@ -236,7 +234,7 @@
 <A href='?src=\ref[src];action=dispose'>Eject ingredients!<BR>\
 "}
 
-	to_chat(user, browse("<HEAD><TITLE>Microwave Controls</TITLE></HEAD><TT>[dat]</TT>", "window=microwave"))
+	user << browse("<HEAD><TITLE>Microwave Controls</TITLE></HEAD><TT>[dat]</TT>", "window=microwave")
 	onclose(user, "microwave")
 	return
 
@@ -351,11 +349,11 @@
 	if (src.reagents.total_volume)
 		src.dirty++
 	src.reagents.clear_reagents()
-	usr << "<span class='notice'>You dispose of the microwave contents.</span>"
+	to_chat(usr, "<span class='notice'>You dispose of the microwave contents.</span>")
 	src.updateUsrDialog()
 
 /obj/machinery/microwave/proc/muck_start()
-	playsound(src.loc, 'sound/effects/splat.ogg', 50, 1) // Play a splat sound
+	playsound(src, 'sound/effects/splat.ogg', 50, 1) // Play a splat sound
 	src.icon_state = "mwbloody1" // Make it look dirty!!
 
 /obj/machinery/microwave/proc/muck_finish()
@@ -414,12 +412,12 @@
 
 /obj/machinery/microwave/advanced // specifically for complex recipes
 	name = "deluxe microwave"
-	icon = 'icons/obj/kitchen.dmi'
-	icon_state = "mw-deluxe"
+	icon = 'icons/obj/deluxemicrowave.dmi'
+	icon_state = "mw"
 	circuit = /obj/item/weapon/circuitboard/microwave/advanced
 	circuit_item_capacity = 100
 	item_level = 1
 
 /obj/machinery/microwave/advanced/Initialize()
 	..()
-	reagents.maximum_volume = 1000 
+	reagents.maximum_volume = 1000

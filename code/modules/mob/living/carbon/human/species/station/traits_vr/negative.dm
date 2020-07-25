@@ -90,6 +90,26 @@
 	cost = -3
 	var_changes = list("burn_mod" = 1.4)
 
+//YW ADDITIONS START
+/datum/trait/reduced_biocompat
+	name = "Reduced Biocompatibility"
+	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records!"
+	cost = -1
+	var_changes = list("chem_strength_heal" = 0.8)
+
+/datum/trait/sensitive_biochem
+	name = "Sensitive Biochemistry"
+	desc = "Your biochemistry is a little delicate, rendering you more susceptible to both deadly toxins and the more subtle ones. You'll probably want to list this in your medical records, and perhaps in your exploitable info as well."
+	cost = -1
+	var_changes = list("chem_strength_tox" = 1.25)
+
+/datum/trait/alcohol_intolerance_advanced
+	name = "Liver of Air"
+	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
+	cost = -1
+	var_changes = list("alcohol_mod" = 3)
+//YW ADDITIONS END
+
 /datum/trait/conductive
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 25%"
@@ -125,6 +145,7 @@
 	cost = -2
 	var_changes = list("lightweight" = 1)
 
+/* YW comment starts
 /datum/trait/colorblind/mono
 	name = "Colorblindness (Monochromancy)"
 	desc = "You simply can't see colors at all, period. You are 100% colorblind."
@@ -151,7 +172,7 @@
 /datum/trait/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/colorblind_taj)
-
+YW comment finish*/
 // YW Addition
 /datum/trait/light_sensitivity
 	name = "Photosensitivity"
@@ -164,4 +185,14 @@
 	desc = "You have trouble dealing with sudden flashes of light, taking quite a long time for you to be able to recover. The effects of flashes from cameras and security equipment leave you stunned for some time."
 	cost = -2
 	var_changes = list("flash_mod" = 2.0)
+
+
+/datum/trait/haemophilia
+	name = "Haemophilia"
+	desc = "Some say that when it rains, it pours.  Unfortunately, this is also true for yourself if you get cut. You bleed much faster than average"
+	cost = -3
+
+/datum/trait/haemophilia/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.add_modifier(/datum/modifier/trait/haemophilia)
 // YW Addition End
