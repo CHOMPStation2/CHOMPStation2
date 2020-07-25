@@ -31,9 +31,10 @@
 
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/borealis2/outdoors/grounds/upper
-	name = "\The outpost grounds - upper level"
+	name = "\The outpost grounds"
 	base_turf = /turf/simulated/open/cryogaia
 	icon_state = "outside2"
 
@@ -43,7 +44,7 @@
 	icon_state = "submap_hostile_area"
 
 /area/borealis2/outdoors/grounds/walkway
-	name = "Perimeter Wall - Upper"
+	name = "Perimeter Wall Walkway"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "submap_trespass_area"
 
@@ -57,6 +58,8 @@
 
 /area/borealis2/outdoors/grounds/tower
 	name = "Perimeter Tower"
+	sound_env = SMALL_ENCLOSED
+	forbid_events = TRUE
 
 /area/borealis2/outdoors/grounds/tower/north
 	name = "Perimeter Tower - N"
@@ -99,11 +102,11 @@
 	icon_state = "northwest"
 
 /area/borealis2/outdoors/exterior
-	name = "The wilderness"
+	name = "\The wilderness"
 	icon_state = "outside1unex"
 
 /area/borealis2/outdoors/exterior/upper
-	name = "The wilderness - upper level"
+	name = "\The wilderness"
 	icon_state = "outside2unex"
 
 /area/borealis2/outdoors/exterior/lake
@@ -202,6 +205,9 @@
 
 /area/chapel/monastery/upper
 	name = "Monastery Upper Floor"
+
+/area/chapel/monastery/music
+	name = "Monastery Music Room"
 
 //holodorms
 /area/holodeck/holodorm/source_basic
