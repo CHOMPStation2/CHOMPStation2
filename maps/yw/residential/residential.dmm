@@ -352,7 +352,7 @@
 /turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "bi" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -1415,11 +1415,11 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "er" = (
-/obj/machinery/cooker/candy,
+/obj/machinery/appliance/mixer/candy,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "es" = (
-/obj/machinery/cooker/cereal,
+/obj/machinery/appliance/mixer/cereal,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "et" = (
@@ -1543,7 +1543,7 @@
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "eI" = (
-/obj/machinery/cooker/fryer,
+/obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "eJ" = (
@@ -1583,7 +1583,7 @@
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "eO" = (
-/obj/machinery/cooker/grill,
+/obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "eP" = (
@@ -1650,7 +1650,7 @@
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "fb" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "fc" = (
@@ -5064,7 +5064,7 @@
 /turf/simulated/floor/lino,
 /area/residential/room1)
 "nd" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/lino,
 /area/residential/room1)
 "ne" = (
@@ -5087,7 +5087,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room3)
 "nh" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
 /area/residential/room3)
 "ni" = (
@@ -6437,7 +6437,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
 "qE" = (
-/obj/machinery/cooker/grill,
+/obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
 "qF" = (
@@ -9174,7 +9174,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room8)
 "wI" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
 /area/residential/room8)
 "wJ" = (

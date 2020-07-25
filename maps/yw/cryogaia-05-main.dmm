@@ -2252,11 +2252,11 @@
 /turf/simulated/floor/wood,
 /area/borealis2/outdoors/grounds)
 "aeI" = (
-/obj/machinery/cooker/grill,
+/obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/wood,
 /area/borealis2/outdoors/grounds)
 "aeJ" = (
-/obj/structure/closet/crate/freezer/meat,
+/obj/structure/closet/crate/freezer,
 /turf/simulated/floor/wood,
 /area/borealis2/outdoors/grounds)
 "aeK" = (
@@ -20518,7 +20518,7 @@
 	pixel_x = 8;
 	pixel_y = 25
 	},
-/obj/machinery/cooker/grill,
+/obj/machinery/appliance/cooker/grill,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
@@ -21464,7 +21464,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "aOJ" = (
-/obj/machinery/cooker/fryer,
+/obj/machinery/appliance/cooker/fryer,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/light{
 	dir = 1
@@ -21472,7 +21472,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "aOK" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
@@ -21939,7 +21939,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "aPB" = (
-/obj/machinery/cooker/cereal,
+/obj/machinery/appliance/mixer/cereal,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/camera/network/civilian{
@@ -21950,7 +21950,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "aPD" = (
-/obj/machinery/cooker/candy,
+/obj/machinery/appliance/mixer/candy,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -54948,7 +54948,7 @@
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
 "bUS" = (
-/obj/machinery/cooker/grill{
+/obj/machinery/appliance/cooker/grill{
 	dir = 2
 	},
 /turf/simulated/floor/tiled/techmaint,
