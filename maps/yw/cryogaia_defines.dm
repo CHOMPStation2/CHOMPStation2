@@ -152,7 +152,18 @@
 		/area/tcommsat/powercontrol,
 		/area/constructionsite/medical,
 		/area/borealis2/outdoors/grounds/entrance,
-		/area/security/vacantoffice)
+		/area/security/vacantoffice,
+		/area/borealis2/outdoors/grounds/tower/southwest,
+		/area/borealis2/outdoors/grounds/tower/south,
+		/area/borealis2/outdoors/grounds/tower/southeast,
+		/area/borealis2/outdoors/grounds/tower/east,
+		/area/borealis2/outdoors/grounds/tower/west,
+		/area/borealis2/outdoors/grounds/tower/northwest,
+		/area/borealis2/outdoors/grounds/tower/northeast,
+		/area/borealis2/outdoors/grounds/checkpoint,
+		/area/borealis2/outdoors/grounds/wall,
+		/area/cryogaia/station/ert_arrival
+		)
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)

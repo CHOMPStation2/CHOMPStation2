@@ -3252,6 +3252,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit_link)
 "agS" = (
@@ -3762,7 +3767,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
 "ahY" = (
-/obj/machinery/seed_storage/garden,
+/obj/machinery/seed_storage/garden{
+	icon_state = "seeds";
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/chapel/monastery/kitchen)
 "ahZ" = (
@@ -4106,7 +4117,10 @@
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/docking_lounge)
 "aiD" = (
-/obj/machinery/vending/hydronutrients,
+/obj/machinery/vending/hydronutrients{
+	icon_state = "nutri_generic";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/chapel/monastery/kitchen)
 "aiE" = (
@@ -4891,13 +4905,12 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit_link)
 "akf" = (
-/obj/machinery/vending/cigarette,
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "Dormitory Hall South";
-	dir = 2
+	c_tag = "Arrivals";
+	dir = 4
 	},
 /obj/machinery/firealarm{
 	dir = 8;
@@ -4906,6 +4919,10 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 8
+	},
+/obj/machinery/vending/cigarette{
+	icon_state = "cigs";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -5166,6 +5183,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/chapel/monastery/brew)
 "akA" = (
@@ -5318,7 +5339,6 @@
 /area/chapel/monastery/recreation)
 "akR" = (
 /obj/structure/table/glass,
-/obj/item/device/instrument/violin,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
@@ -5491,7 +5511,6 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/medbay)
 "alk" = (
-/obj/machinery/vending/cola,
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
@@ -5502,6 +5521,10 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 8
+	},
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -5759,12 +5782,15 @@
 /turf/simulated/floor/tiled,
 /area/medical/resleeving)
 "alN" = (
-/obj/machinery/vending/snack,
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 8
+	},
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -6495,6 +6521,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -7430,7 +7459,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
 "aoR" = (
-/obj/machinery/vending/coffee,
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
@@ -7440,6 +7468,10 @@
 /obj/item/device/geiger/wall{
 	dir = 4;
 	pixel_x = -30
+	},
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -14931,6 +14963,7 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/plating,
 /area/medical/medbay_emt_bay)
 "aBM" = (
@@ -17895,7 +17928,10 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "aHz" = (
-/obj/machinery/vending/snack,
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "aHA" = (
@@ -18120,6 +18156,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "aIa" = (
@@ -18175,7 +18212,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aIf" = (
-/obj/machinery/vending/cigarette,
+/obj/machinery/vending/cigarette{
+	icon_state = "cigs";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "aIg" = (
@@ -18696,7 +18736,10 @@
 /turf/simulated/floor/tiled,
 /area/storage/art)
 "aJh" = (
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "aJi" = (
@@ -19602,7 +19645,7 @@
 "aKY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/multi_tile/metal/mait,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
+/turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
 "aKZ" = (
 /obj/machinery/trailblazer/blue,
@@ -19944,10 +19987,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
-"aLJ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/maintenance/auxsolarport)
 "aLK" = (
 /turf/simulated/wall,
 /area/borealis2/outdoors/exterior/explore1)
@@ -25057,14 +25096,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "aVk" = (
-/obj/machinery/vending/cigarette{
-	name = "Cigarette machine";
-	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
+/obj/machinery/vending/cigarette,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "aVl" = (
@@ -32010,7 +32045,10 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner_oldtile/purple,
-/obj/machinery/vending/snack,
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "bgT" = (
@@ -32272,7 +32310,10 @@
 /turf/simulated/wall,
 /area/storage/tech)
 "bhw" = (
-/obj/machinery/vending/assist,
+/obj/machinery/vending/assist{
+	icon_state = "generic";
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/storage/tech)
 "bhx" = (
@@ -33904,7 +33945,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/security)
 "bkk" = (
-/obj/machinery/vending/snack,
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 4
+	},
 /turf/simulated/floor/carpet,
 /area/engineering/foyer)
 "bkl" = (
@@ -40342,12 +40386,15 @@
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/research)
 "bvM" = (
-/obj/machinery/vending/cigarette,
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -43515,7 +43562,6 @@
 /turf/simulated/floor,
 /area/rnd/research)
 "bBb" = (
-/obj/machinery/vending/cigarette,
 /obj/machinery/light/small{
 	dir = 8;
 	pixel_y = 0
@@ -43525,6 +43571,10 @@
 	},
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 1
+	},
+/obj/machinery/vending/cigarette{
+	icon_state = "cigs";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
@@ -43685,10 +43735,11 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/rust,
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningwing)
 "bBn" = (
@@ -44331,6 +44382,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningwing)
 "bCA" = (
@@ -45044,6 +45096,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningwing)
 "bDU" = (
@@ -46609,6 +46662,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningwing)
 "bGq" = (
@@ -46628,6 +46682,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningwing)
 "bGr" = (
@@ -48379,6 +48434,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
 "bJg" = (
@@ -48556,11 +48612,14 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "bJq" = (
-/obj/machinery/vending/snack,
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner_oldtile/purple,
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "bJr" = (
@@ -49089,6 +49148,10 @@
 	dir = 5;
 	icon_state = "intact-supply"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
 "bKi" = (
@@ -49177,11 +49240,14 @@
 	icon_state = "tube1";
 	pixel_x = 0
 	},
-/obj/machinery/vending/cola,
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner_oldtile/purple,
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "bKu" = (
@@ -49838,7 +49904,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "bLz" = (
-/obj/machinery/recharge_station,
+/obj/machinery/suit_cycler/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
 "bLA" = (
@@ -50415,7 +50481,10 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "bME" = (
-/obj/machinery/lapvend,
+/obj/machinery/lapvend{
+	icon_state = "robotics";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "bMF" = (
@@ -53887,9 +53956,12 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "bSV" = (
-/obj/machinery/lapvend,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/lapvend{
+	icon_state = "robotics";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -54991,6 +55063,8 @@
 	dir = 4;
 	pixel_x = -30
 	},
+/obj/structure/table/steel,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/checkpoint)
 "bUY" = (
@@ -56974,8 +57048,11 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "bYM" = (
-/obj/machinery/vending/cola,
 /obj/machinery/computer/timeclock/premade/south,
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "bYN" = (
@@ -57065,12 +57142,18 @@
 /area/cryogaia/station/explorer_prep)
 "bYW" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
 "bYX" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/machinery/vending/cigarette,
+/obj/machinery/vending/cigarette{
+	icon_state = "cigs";
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
 "bYY" = (
@@ -58359,24 +58442,6 @@
 /obj/structure/lattice,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
-"cbo" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 8
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
-"cbp" = (
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
-"cbq" = (
-/obj/effect/overlay/snow/floor,
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 4
-	},
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
 "cbr" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/ears/earmuffs,
@@ -59433,6 +59498,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
 "cdr" = (
@@ -59745,19 +59811,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
-"cdZ" = (
-/obj/effect/overlay/snow/floor,
-/obj/effect/floor_decal/snow/floor/edges3{
-	dir = 8
-	},
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
 "cea" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/snow/floor/edges3{
 	dir = 4
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "cec" = (
 /obj/structure/disposaloutlet{
@@ -60605,7 +60664,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "cgl" = (
-/obj/machinery/vending/fitness,
+/obj/machinery/vending/fitness{
+	icon_state = "fitness";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "cgn" = (
@@ -61594,7 +61656,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "cin" = (
-/obj/machinery/vending/medical,
+/obj/machinery/vending/medical{
+	icon_state = "med";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
 "cio" = (
@@ -63236,7 +63301,7 @@
 	c_tag = "Emergency Ejection Port - Interior Wall";
 	dir = 1
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "cGu" = (
 /turf/simulated/floor/tiled/dark,
@@ -63262,6 +63327,9 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor,
@@ -63330,6 +63398,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southeast)
 "cOF" = (
@@ -63579,7 +63648,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
+/turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/power)
 "eie" = (
 /obj/structure/cable/green{
@@ -63728,6 +63797,10 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
+"eHd" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "eIs" = (
 /obj/machinery/porta_turret/stationary,
 /turf/simulated/floor/plating/snow/plating,
@@ -63842,6 +63915,11 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/west)
+"eYR" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/southeast)
 "fat" = (
 /obj/item/device/geiger/wall{
 	dir = 4;
@@ -64034,6 +64112,12 @@
 /obj/machinery/power/shield_generator,
 /turf/simulated/floor,
 /area/engineering/storage)
+"fZU" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia/covered,
+/area/borealis2/outdoors/grounds)
 "gai" = (
 /obj/machinery/light,
 /obj/structure/cable/green{
@@ -64192,6 +64276,10 @@
 /obj/item/device/radio,
 /turf/simulated/floor/tiled/dark,
 /area/security/briefing_room)
+"gUE" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/south)
 "gVy" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -64908,7 +64996,7 @@
 /obj/machinery/camera/network/outside{
 	c_tag = "Emergency Ejection Port - Chamber Wall"
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "jOQ" = (
 /obj/structure/cable/green{
@@ -65111,6 +65199,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
+"kCp" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "kCz" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light{
@@ -65543,6 +65636,13 @@
 /obj/structure/stairs/east,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northeast)
+"muJ" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia/covered,
+/area/borealis2/outdoors/grounds)
 "mvx" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 1
@@ -65738,6 +65838,13 @@
 /obj/effect/floor_decal/snow/floor/edges3,
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/exterior)
+"ndl" = (
+/obj/machinery/vending/fitness{
+	icon_state = "fitness";
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/exit)
 "ngK" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "Arrivals Access South"
@@ -66172,6 +66279,10 @@
 /obj/structure/sign/directions/cargo,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
+"oTi" = (
+/obj/cryogaia_away_spawner/cryogaia,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia/covered,
+/area/borealis2/outdoors/grounds)
 "oTz" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -66218,6 +66329,11 @@
 /obj/structure/sign/directions/engineering,
 /turf/simulated/wall/r_wall,
 /area/civilian/atrium/central)
+"peM" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/south)
 "phJ" = (
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds)
@@ -66240,11 +66356,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"piS" = (
+/obj/machinery/vending/fitness,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_one)
 "pjA" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
+/turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/power)
 "pkM" = (
 /obj/machinery/door/airlock/maintenance/medical{
@@ -66278,7 +66398,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
+/turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/power)
 "pxX" = (
 /obj/structure/cable/green{
@@ -66744,6 +66864,11 @@
 "rDn" = (
 /turf/simulated/wall/r_wall,
 /area/borealis2/outdoors/grounds)
+"rFi" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/east)
 "rKg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -66908,6 +67033,13 @@
 "seJ" = (
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/east)
+"siS" = (
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/chapel/monastery/kitchen)
 "slf" = (
 /obj/machinery/button/remote/blast_door{
 	dir = 4;
@@ -67208,6 +67340,13 @@
 	dynamic_lighting = 1
 	},
 /area/borealis2/outdoors/exterior/explore1)
+"tzg" = (
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28
+	},
+/turf/simulated/floor/wood,
+/area/chapel/monastery/recreation)
 "tIj" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -67345,6 +67484,11 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel,
 /area/security/hangar)
+"tYd" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/northeast)
 "tYM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4;
@@ -67475,8 +67619,12 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/up{
+	icon_state = "pipe-u";
+	dir = 8
+	},
 /turf/simulated/floor,
-/area/quartermaster/miningwing)
+/area/maintenance/substation/cargo)
 "ugV" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9
@@ -67616,6 +67764,11 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"uFe" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/northwest)
 "uIN" = (
 /obj/effect/floor_decal/snow/floor/edges,
 /obj/effect/floor_decal/snow/floor/edges{
@@ -68321,6 +68474,16 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/solars)
+"wVl" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds)
 "wYr" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 1;
@@ -68456,6 +68619,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_monitoring)
+"xJh" = (
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "xMK" = (
 /obj/machinery/sleeper{
 	dir = 8
@@ -78487,8 +78657,8 @@ aad
 vZD
 mlo
 clS
-lXQ
-lXQ
+eHd
+kCp
 uTW
 mlo
 vZD
@@ -78940,7 +79110,7 @@ aae
 aad
 vZD
 fYs
-xVe
+uFe
 xVe
 xVe
 uBT
@@ -86743,8 +86913,8 @@ aaa
 aaa
 aaa
 aab
-aaj
-aaj
+phJ
+phJ
 aaq
 aad
 aad
@@ -86995,7 +87165,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aad
@@ -87057,7 +87227,7 @@ aHP
 aIB
 aIB
 aIB
-aLJ
+aIB
 aaj
 abk
 aqD
@@ -87247,7 +87417,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aar
@@ -87499,7 +87669,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aar
@@ -87751,7 +87921,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aar
@@ -88003,7 +88173,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aar
@@ -88255,7 +88425,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aar
@@ -88507,7 +88677,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aar
@@ -88759,7 +88929,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aar
@@ -89011,7 +89181,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aar
@@ -89263,7 +89433,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -89515,7 +89685,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -89767,7 +89937,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -90019,7 +90189,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -90271,7 +90441,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -90523,7 +90693,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaj
 aaj
@@ -90640,8 +90810,8 @@ abq
 abq
 abq
 abq
-aag
-aag
+hVT
+hVT
 abq
 abq
 abq
@@ -90775,7 +90945,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaj
 aaj
@@ -90891,10 +91061,10 @@ abq
 abq
 abq
 abq
-aag
-aag
-aag
-aag
+hVT
+hVT
+hVT
+hVT
 abq
 abq
 abq
@@ -91027,7 +91197,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaj
 aaj
@@ -91143,11 +91313,11 @@ abq
 abq
 abq
 abq
-aag
-aag
-aag
-aag
-aag
+hVT
+hVT
+hVT
+hVT
+hVT
 abq
 abq
 abq
@@ -91279,7 +91449,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaj
 aaj
@@ -91394,12 +91564,12 @@ abq
 abq
 abq
 abq
-aag
-aaO
-abp
-aag
-aag
-aag
+hVT
+hVT
+oTi
+hVT
+hVT
+hVT
 abq
 abq
 abq
@@ -91531,7 +91701,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaj
 aaj
@@ -91645,13 +91815,13 @@ abq
 abq
 abq
 abq
-aag
-aag
-aag
-aag
-aag
-aag
-aag
+hVT
+hVT
+hVT
+hVT
+hVT
+hVT
+hVT
 abq
 abq
 abq
@@ -91783,7 +91953,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaj
 aaj
@@ -91897,13 +92067,13 @@ abq
 abq
 abq
 abq
-aag
-aag
-aag
-aag
-aag
-aag
-aag
+fZU
+hVT
+hVT
+hVT
+hVT
+hVT
+hVT
 abq
 abq
 abq
@@ -92035,7 +92205,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -92147,15 +92317,15 @@ abq
 abq
 abq
 abq
-aag
-aag
-aag
+rvk
+rvk
+rvk
 abq
 abq
 abq
-aag
-aag
-aaO
+hVT
+hVT
+hVT
 abq
 abq
 abq
@@ -92287,7 +92457,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -92399,14 +92569,14 @@ abq
 abq
 abq
 abq
-aag
-aag
+rvk
+rvk
 abq
 abq
 abq
 abq
 abq
-aag
+fZU
 abq
 abq
 abq
@@ -92539,7 +92709,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -92649,19 +92819,19 @@ abq
 abq
 abq
 abq
-aag
-aag
-aag
-aag
+rvk
+rvk
+rvk
+rvk
 abq
 abq
 abq
 abq
 abq
-aag
+rvk
 abq
 abq
-aag
+rvk
 abq
 abq
 aag
@@ -92791,7 +92961,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aal
@@ -92901,19 +93071,19 @@ aag
 aag
 aag
 aag
-aag
-aag
+rvk
+rvk
 abq
 abq
 abq
 abq
-aag
-aag
-aag
-aag
-aag
-aag
-aag
+rvk
+rvk
+rvk
+rvk
+rvk
+rvk
+rvk
 abq
 abq
 aag
@@ -93043,7 +93213,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 kfU
@@ -93159,11 +93329,11 @@ abq
 abq
 abq
 abq
-aag
+rvk
 abq
-aag
-aag
-aag
+rvk
+rvk
+rvk
 abq
 abq
 abq
@@ -93295,7 +93465,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 kfU
@@ -93414,7 +93584,7 @@ abq
 abq
 abq
 abq
-aag
+rvk
 abq
 abq
 abq
@@ -93547,7 +93717,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaa
 kfU
@@ -93657,8 +93827,8 @@ aag
 aag
 aag
 aag
-aag
-aag
+rvk
+rvk
 abq
 abq
 abq
@@ -93799,7 +93969,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaa
 kfU
@@ -93910,7 +94080,7 @@ aag
 abq
 abq
 abq
-aag
+rvk
 abq
 abq
 abq
@@ -94051,7 +94221,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaa
 kfU
@@ -94303,7 +94473,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aaa
 kfU
@@ -94555,7 +94725,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 kfU
@@ -94807,7 +94977,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aaj
@@ -95059,7 +95229,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aQf
@@ -95311,7 +95481,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aax
@@ -95563,7 +95733,7 @@ aaa
 aaa
 aaa
 aab
-aaj
+phJ
 aab
 aar
 aag
@@ -95815,8 +95985,8 @@ aaa
 aaa
 aaa
 aab
-aaj
-aaj
+phJ
+phJ
 aas
 wbg
 wbg
@@ -96762,8 +96932,8 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -97013,9 +97183,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -97265,9 +97435,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -97517,9 +97687,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -97768,9 +97938,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -98020,9 +98190,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -98272,9 +98442,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -98523,9 +98693,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -98775,9 +98945,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -99027,10 +99197,10 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -99279,10 +99449,10 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -99532,9 +99702,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -99784,9 +99954,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -100037,8 +100207,8 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -100289,8 +100459,8 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -100541,8 +100711,8 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -100792,9 +100962,9 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -100978,17 +101148,17 @@ bZY
 bPE
 bcc
 jNW
-cbo
-cbo
-cbo
-cbo
-cbo
-cbo
-cdZ
-cbo
-cbo
-cbo
-cbo
+aai
+aai
+aai
+aai
+aai
+aai
+ajp
+aai
+aai
+aai
+aai
 cGk
 rWI
 dNQ
@@ -101044,10 +101214,10 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -101229,19 +101399,19 @@ bZm
 bZZ
 bKC
 bKC
-cbp
-cbp
-cbp
-cbp
-cbp
-cbp
-cbp
-cbp
-cbp
-cbp
-cbp
-cbp
-cbp
+agn
+agn
+agn
+agn
+agn
+agn
+agn
+agn
+agn
+agn
+agn
+agn
+agn
 ceN
 kqA
 aaf
@@ -101296,12 +101466,12 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -101481,19 +101651,19 @@ bZn
 caa
 bPE
 bcc
-cbq
-cbq
-cbq
-cbq
-cbq
-cbq
-cbq
+aal
+aal
+aal
+aal
+aal
+aal
+aal
 cea
-cbq
-cbq
-cbq
-cbq
-cbq
+aal
+aal
+aal
+aal
+aal
 rWI
 dNQ
 ius
@@ -101548,12 +101718,12 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -101800,12 +101970,12 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -102052,7 +102222,7 @@ cfP
 cfP
 cfP
 cfP
-cfS
+cNt
 cNt
 cNt
 cNt
@@ -102252,7 +102422,7 @@ vVG
 sEG
 eSB
 lIM
-lIM
+gUE
 vVG
 wFw
 aaf
@@ -102304,14 +102474,14 @@ cfP
 cfP
 cfP
 cfP
-cfS
 cNt
 cNt
 cNt
 cNt
 cNt
 cNt
-cfS
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -102504,7 +102674,7 @@ vVG
 lIM
 oTz
 lIM
-lIM
+peM
 vVG
 wFw
 aaf
@@ -102643,7 +102813,7 @@ aci
 agd
 abE
 abE
-abE
+ndl
 aci
 rvk
 iPw
@@ -104355,14 +104525,14 @@ cfP
 cfP
 cfP
 cfP
-cfS
-cfS
-cfS
-cfS
-cfS
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
+cNt
+cNt
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -108200,7 +108370,7 @@ aiz
 ans
 agk
 agk
-apM
+piS
 aqx
 art
 apM
@@ -112301,7 +112471,7 @@ bxd
 bHE
 cgJ
 brT
-brY
+xJh
 bME
 bKd
 bKd
@@ -112977,7 +113147,7 @@ agW
 ahy
 aia
 afO
-afO
+siS
 afj
 ajQ
 akm
@@ -113906,7 +114076,7 @@ cNt
 cNt
 cNt
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -113989,7 +114159,7 @@ agq
 afj
 ajP
 ako
-ajP
+tzg
 ajP
 ajP
 amG
@@ -114158,7 +114328,7 @@ cNt
 cNt
 cNt
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -114410,7 +114580,7 @@ cfP
 cfP
 cNt
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -114662,7 +114832,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -114914,7 +115084,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -115166,7 +115336,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -115418,7 +115588,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -115670,7 +115840,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -115922,7 +116092,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -116174,7 +116344,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -116426,7 +116596,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -116678,7 +116848,7 @@ cfP
 cfP
 cfP
 cNt
-cfS
+cNt
 cfP
 cfP
 cfP
@@ -117432,7 +117602,7 @@ cNt
 cNt
 cNt
 cNt
-cfS
+cNt
 cNt
 cNt
 cfP
@@ -117684,7 +117854,7 @@ cNt
 cNt
 cNt
 cNt
-cfS
+cNt
 cNt
 cNt
 cNt
@@ -117936,7 +118106,7 @@ cNt
 cNt
 cNt
 cNt
-cfS
+cNt
 cNt
 cNt
 cNt
@@ -118962,7 +119132,7 @@ cfP
 cfP
 cNt
 cNt
-cfS
+cNt
 cNt
 cNt
 cNt
@@ -119214,7 +119384,7 @@ cfP
 cNt
 cNt
 cNt
-cfS
+cNt
 cNt
 cNt
 cNt
@@ -120619,9 +120789,9 @@ aal
 aiS
 aiS
 aiS
-aiS
-aiS
-aiS
+wVl
+wVl
+wVl
 aiS
 aiS
 aiS
@@ -120954,8 +121124,8 @@ aaf
 aaf
 cfS
 cfP
-cfS
-cfS
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -121206,8 +121376,8 @@ aaf
 aaf
 aaf
 cfP
-cfS
-cfS
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -121458,9 +121628,9 @@ aad
 aaf
 aaf
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -121710,9 +121880,9 @@ aad
 aar
 aar
 cfP
-cfS
-cfS
-cfS
+cNt
+cNt
+cNt
 cfP
 cfP
 cfP
@@ -124388,7 +124558,7 @@ aag
 aag
 aag
 aag
-mjH
+muJ
 seJ
 ubG
 lED
@@ -124640,7 +124810,7 @@ aag
 aag
 aag
 aag
-btM
+ijZ
 qGK
 jsV
 rNQ
@@ -124932,7 +125102,7 @@ pVO
 jgc
 tZm
 jgc
-jgc
+eYR
 eNw
 vZD
 aad
@@ -125009,7 +125179,7 @@ cfP
 cfP
 cfP
 cfP
-cfQ
+qbe
 cfP
 cfP
 cfP
@@ -125310,7 +125480,7 @@ vZD
 vBB
 vBB
 fQL
-obq
+tYd
 nth
 vBB
 vZD
@@ -125399,7 +125569,7 @@ aad
 vZD
 seJ
 kCA
-xwV
+rFi
 uis
 gfE
 seJ
@@ -126503,7 +126673,7 @@ cfP
 cfP
 cfP
 cfP
-cfQ
+qbe
 qbe
 cfP
 cfP
@@ -129278,7 +129448,7 @@ cNt
 qbe
 qbe
 qbe
-cfQ
+qbe
 cfP
 qbe
 qbe
