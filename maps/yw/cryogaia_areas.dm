@@ -31,6 +31,7 @@
 
 /area/borealis2/outdoors/grounds
 	name = "\The outpost grounds"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/borealis2/outdoors/grounds/upper
 	name = "\The outpost grounds"
@@ -57,6 +58,8 @@
 
 /area/borealis2/outdoors/grounds/tower
 	name = "Perimeter Tower"
+	sound_env = SMALL_ENCLOSED
+	forbid_events = TRUE
 
 /area/borealis2/outdoors/grounds/tower/north
 	name = "Perimeter Tower - N"
