@@ -561,11 +561,11 @@
 	icon_state = "tesh_beltcloak_wrdn"
 	item_state = "tesh_beltcloak_wrdn"
 
-/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cs
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/hos
 	name = "security chief belted cloak"
 	desc = "A soft Teshari cloak made for the Head of Security"
-	icon_state = "tesh_beltcloak_cs"
-	item_state = "tesh_beltcloak_cs"
+	icon_state = "tesh_beltcloak_hos"
+	item_state = "tesh_beltcloak_hos"
 
 /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/jani
 	name = "janitor belted cloak"
