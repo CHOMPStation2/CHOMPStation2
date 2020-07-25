@@ -673,7 +673,7 @@
 	name = "Digestive Analyzer"
 	desc = "A mounted destructive analyzer unit with fuel processor."
 	icon_state = "analyzer"
-	max_item_count = 1
+	max_item_count = 10
 	startdrain = 100
 	analyzer = TRUE
 

@@ -90,13 +90,13 @@
 	id = "papershredder_electronics"
 	build_path = /obj/item/weapon/circuitboard/papershredder
 	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)
-
+/* Commented out for build errors
 /datum/design/item/autolathe/engineering/microwave
 	name = "microwave electronics"
 	id = "microwave_electronics"
 	build_path = /obj/item/weapon/circuitboard/microwave
 	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)
-
+*/
 /datum/design/item/autolathe/engineering/washing
 	name = "washing machine electronics"
 	id = "washingmachine_electronics"
