@@ -3466,14 +3466,6 @@
 	icon_state = "gravsnow_corner"
 	},
 /area/syndicate_mothership)
-"ja" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_l"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/specops)
 "jb" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/shuttle/floor/darkred,
@@ -4154,15 +4146,7 @@
 "kE" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8;
-	icon_state = "propulsion"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/specops)
-"kF" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_r"
+	icon_state = "burst_l"
 	},
 /turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
@@ -6767,11 +6751,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/specops)
-"pE" = (
-/turf/simulated/shuttle/wall{
-	icon_state = "wall3"
-	},
-/area/centcom/specops)
 "pF" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
@@ -7250,18 +7229,9 @@
 /area/centcom/specops)
 "qA" = (
 /obj/structure/table/rack,
-/obj/item/clothing/suit/armor/vest/ert/medical,
-/obj/item/clothing/suit/armor/vest/ert/medical,
-/obj/item/clothing/suit/armor/vest/ert/medical,
-/obj/item/clothing/suit/armor/vest/ert/medical,
-/obj/item/clothing/head/helmet/ert/medical,
-/obj/item/clothing/head/helmet/ert/medical,
-/obj/item/clothing/head/helmet/ert/medical,
-/obj/item/clothing/head/helmet/ert/medical,
-/obj/item/weapon/storage/backpack/ert/medical,
-/obj/item/weapon/storage/backpack/ert/medical,
-/obj/item/weapon/storage/backpack/ert/medical,
-/obj/item/weapon/storage/backpack/ert/medical,
+/obj/item/clothing/suit/space/void/responseteam/medical,
+/obj/item/clothing/suit/space/void/responseteam/medical,
+/obj/item/clothing/suit/space/void/responseteam/medical,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -7275,42 +7245,6 @@
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
 /obj/effect/floor_decal/industrial/outline/blue,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/centcom/specops)
-"qC" = (
-/obj/structure/table/rack,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/centcom/specops)
-"qD" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/centcom/specops)
-"qE" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "specops_centcom_dock";
-	name = "docking port controller";
-	pixel_x = 0;
-	pixel_y = -25;
-	req_one_access = list(103);
-	tag_door = "specops_centcom_dock_door"
-	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -21309,6 +21243,14 @@
 /obj/item/toy/chess/rook_black,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"Vi" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "burst_r"
+	},
+/turf/space,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/specops)
 "Vm" = (
 /obj/effect/floor_decal/sign/small_g,
 /turf/simulated/floor/holofloor/wood,
@@ -21321,6 +21263,21 @@
 /obj/item/toy/chess/bishop_white,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+"VI" = (
+/obj/structure/table/rack,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
 "VK" = (
 /obj/item/toy/chess/pawn_black,
 /turf/simulated/floor/holofloor/wmarble,
@@ -21329,6 +21286,24 @@
 /obj/effect/floor_decal/sign/small_3,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"VS" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/armor/vest/ert/medical,
+/obj/item/clothing/suit/armor/vest/ert/medical,
+/obj/item/clothing/suit/armor/vest/ert/medical,
+/obj/item/clothing/suit/armor/vest/ert/medical,
+/obj/item/clothing/head/helmet/ert/medical,
+/obj/item/clothing/head/helmet/ert/medical,
+/obj/item/clothing/head/helmet/ert/medical,
+/obj/item/clothing/head/helmet/ert/medical,
+/obj/item/weapon/storage/backpack/ert/medical,
+/obj/item/weapon/storage/backpack/ert/medical,
+/obj/item/weapon/storage/backpack/ert/medical,
+/obj/item/weapon/storage/backpack/ert/medical,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
 "VU" = (
 /obj/effect/floor_decal/sign/small_b,
 /turf/simulated/floor/holofloor/wood,
@@ -21380,6 +21355,15 @@
 /obj/effect/floor_decal/sign/small_1,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"Xd" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/engineer,
+/obj/item/clothing/suit/space/void/responseteam/engineer,
+/obj/item/clothing/suit/space/void/responseteam/engineer,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
 "Xj" = (
 /obj/effect/floor_decal/sign/small_2,
 /turf/simulated/floor/holofloor/wood,
@@ -21400,6 +21384,22 @@
 /obj/item/toy/chess/knight_white,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+"XR" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/security,
+/obj/item/clothing/suit/space/void/responseteam/security,
+/obj/item/clothing/suit/space/void/responseteam/security,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
+"Yb" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/command,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
 "Yc" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
@@ -21424,12 +21424,40 @@
 /obj/effect/floor_decal/sign/small_a,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"Yp" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
 "Yy" = (
 /obj/item/toy/chess/king_black,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+"YB" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion"
+	},
+/turf/space,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/specops)
 "YE" = (
 /turf/space/transit/east,
+/area/space)
+"YV" = (
+/obj/structure/table/rack,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
 /area/space)
 "Za" = (
 /obj/effect/floor_decal/sign/small_5,
@@ -21455,6 +21483,20 @@
 /obj/effect/floor_decal/sign/small_6,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"Zs" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "specops_centcom_dock";
+	name = "docking port controller";
+	pixel_x = 0;
+	pixel_y = -25;
+	req_one_access = list(103);
+	tag_door = "specops_centcom_dock_door"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
 "Zv" = (
 /obj/item/toy/chess/king_white,
 /turf/simulated/floor/holofloor/bmarble,
@@ -21490,10 +21532,18 @@
 	},
 /turf/space/transit/east,
 /area/space)
+"ZF" = (
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
 "ZM" = (
 /obj/effect/floor_decal/sign/small_7,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"ZP" = (
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/space)
 
 (1,1,1) = {"
 ab
@@ -37967,7 +38017,7 @@ mO
 mT
 mT
 nq
-pV
+mT
 mT
 mT
 mT
@@ -38220,11 +38270,11 @@ mT
 mT
 nq
 pW
+Xd
+pV
 qy
 rc
 ru
-mT
-mT
 mT
 sX
 sX
@@ -38713,7 +38763,7 @@ aa
 mO
 mU
 mT
-mT
+oU
 mT
 mT
 mT
@@ -39222,7 +39272,7 @@ nH
 nU
 mT
 mT
-oU
+oV
 nq
 mT
 mT
@@ -39474,7 +39524,7 @@ nI
 nV
 mT
 mT
-oV
+oW
 nq
 mT
 mT
@@ -39726,7 +39776,7 @@ nJ
 nW
 mT
 mT
-oW
+XR
 nq
 mT
 mT
@@ -39982,7 +40032,7 @@ oX
 mO
 pl
 pu
-pE
+mO
 qc
 mT
 mT
@@ -40741,6 +40791,7 @@ pu
 mO
 qd
 qA
+VS
 mO
 mO
 mO
@@ -40748,7 +40799,6 @@ mO
 mO
 mO
 mO
-aa
 aa
 aa
 aa
@@ -40993,14 +41043,14 @@ mT
 mO
 nq
 nq
+ZP
 mO
-ja
 kE
-kE
-kE
-kF
+YB
+YB
+YB
+Vi
 tw
-aa
 aa
 aa
 aa
@@ -41245,6 +41295,7 @@ mT
 mT
 qe
 qB
+ZP
 mO
 mB
 rB
@@ -41252,7 +41303,6 @@ sd
 sd
 mB
 tw
-aa
 aa
 aa
 aa
@@ -41496,7 +41546,8 @@ mT
 mT
 mT
 mT
-qC
+mT
+VI
 nq
 mB
 rW
@@ -41504,7 +41555,6 @@ se
 sq
 mB
 tw
-aa
 aa
 aa
 aa
@@ -41748,7 +41798,8 @@ mT
 mT
 mT
 mT
-qD
+mT
+Yp
 nq
 mB
 rX
@@ -41756,7 +41807,6 @@ rZ
 sr
 mB
 tw
-aa
 aa
 aa
 aa
@@ -42000,7 +42050,8 @@ pn
 pn
 pn
 mT
-qE
+mT
+Zs
 mO
 mB
 rY
@@ -42008,7 +42059,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -42253,6 +42303,7 @@ pv
 pG
 mT
 mT
+ZF
 rd
 rz
 rZ
@@ -42260,7 +42311,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -42505,6 +42555,7 @@ nv
 pH
 mT
 mT
+ZF
 rd
 rz
 rZ
@@ -42512,7 +42563,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -42757,6 +42807,7 @@ nv
 pI
 mT
 mT
+ZF
 mO
 mB
 rZ
@@ -42764,7 +42815,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -43008,7 +43058,8 @@ pq
 pq
 pq
 mT
-qD
+mT
+Yp
 mO
 mB
 sa
@@ -43016,7 +43067,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -43248,7 +43298,7 @@ aa
 aa
 aa
 mO
-nt
+Yb
 mT
 mT
 ob
@@ -43260,7 +43310,8 @@ mT
 mT
 mT
 mT
-qC
+mT
+VI
 mO
 mB
 sb
@@ -43268,7 +43319,6 @@ rZ
 sC
 mB
 tw
-aa
 aa
 aa
 aa
@@ -43512,7 +43562,8 @@ mT
 mT
 mT
 mT
-qB
+mT
+YV
 mO
 mB
 sc
@@ -43520,7 +43571,6 @@ so
 sc
 mB
 tw
-aa
 aa
 aa
 aa
@@ -43752,10 +43802,10 @@ aa
 aa
 aa
 mO
-nv
-nA
-nM
-od
+mT
+mT
+mT
+mT
 mO
 oA
 mT
@@ -43765,6 +43815,7 @@ mT
 pJ
 qf
 qe
+ZF
 mO
 aa
 mB
@@ -43772,7 +43823,6 @@ sp
 mB
 aa
 tw
-aa
 aa
 aa
 aa
@@ -44004,10 +44054,10 @@ aa
 aa
 aa
 mO
-mO
-mO
-mO
-mO
+nt
+nA
+nM
+od
 mO
 nh
 mT
@@ -44255,12 +44305,12 @@ aa
 aa
 mO
 mO
-nh
-mT
-mT
-mT
-mT
-mT
+mO
+mO
+mO
+mO
+mO
+mO
 mT
 mT
 mT
