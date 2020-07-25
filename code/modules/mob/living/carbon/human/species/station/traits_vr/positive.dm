@@ -226,3 +226,9 @@
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
 // YW Addition end
+
+/datum/trait/snowwalker
+	name = "Snow Walker"
+	desc = "You are able to move unhindered on snow."
+	cost = 2 //YW EDIT
+	var_changes = list("snow_movement" = -2)
