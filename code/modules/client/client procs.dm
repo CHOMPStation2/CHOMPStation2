@@ -82,7 +82,7 @@
 					return
 				sane = TRUE
 				break
-		
+
 		if(!sane)
 			to_chat(src, "<span class='warning'>Sorry, that link doesn't appear to be valid. Please try again.</span>")
 			return
@@ -111,7 +111,7 @@
 		if("usr")		hsrc = mob
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
-		if("chat")		return chatOutput.Topic(href, href_list)
+//		if("chat")		return chatOutput.Topic(href, href_list)
 
 	switch(href_list["action"])
 		if("openLink")
@@ -150,10 +150,10 @@
 		del(src)
 		return
 
-	chatOutput = new /datum/chatOutput(src) //veechat
-	chatOutput.send_resources()
-	spawn()
-		chatOutput.start()
+//	chatOutput = new /datum/chatOutput(src) //veechat
+//	chatOutput.send_resources()
+//	spawn()
+//		chatOutput.start()
 
 	//Only show this if they are put into a new_player mob. Otherwise, "what title screen?"
 	if(isnewplayer(src.mob))
@@ -443,7 +443,7 @@ client/verb/character_setup()
 	if(var_name == NAMEOF(src, holder))
 		return FALSE
 	return ..()
-
+/*
 /client/verb/reload_vchat()
 	set name = "Reload VChat"
 	set category = "OOC"
@@ -457,7 +457,7 @@ client/verb/character_setup()
 
 	//Log, disable
 	log_debug("[key_name(src)] reloaded VChat.")
-	winset(src, null, "outputwindow.htmloutput.is-visible=false;outputwindow.oldoutput.is-visible=false;outputwindow.chatloadlabel.is-visible=true")
+	winset(src, null, "outputwindow.htmloutput.is-visible=true;outputwindow.oldoutput.is-visible=false;outputwindow.chatloadlabel.is-visible=true")
 
 	//The hard way
 	qdel_null(src.chatOutput)
@@ -465,7 +465,7 @@ client/verb/character_setup()
 	chatOutput.send_resources()
 	spawn()
 		chatOutput.start()
-
+*/
 
 //This is for getipintel.net.
 //You're welcome to replace this proc with your own that does your own cool stuff.

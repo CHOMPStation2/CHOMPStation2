@@ -1108,9 +1108,9 @@ window "mainwindow"
 		anchor2 = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "CHOMPStation" // CHOMP Edit
+		title = "CHOMPStation"
 		is-maximized = true
-		icon = 'icons/ss13_64.png' // CHOMP Edit
+		icon = 'icons/ss13_64.png'
 		macro = "macro"
 		menu = "menu"
 	elem "asset_cache_browser"
@@ -1224,7 +1224,7 @@ window "outputwindow"
 		font-style = "bold"
 		text-color = #ffffff
 		background-color = #222222
-		is-visible = true
+		is-visible = false
 		saved-params = ""
 		text = "Chat is loading.\nIf nothing happens after 20s,\nuse OOC > \"Reload VChat\"."
 	elem "htmloutput"
@@ -1236,22 +1236,17 @@ window "outputwindow"
 		background-color = none
 		is-visible = false
 		saved-params = ""
-		auto-format = false
 	elem "oldoutput"
 		type = OUTPUT
 		pos = 0,0
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = none
-		text-color = #000000
-		background-color = #ffffff
-		is-visible = false
 		is-default = true
-		style = ".system {color:#FF0000;}"
-		max-lines = 0
 		saved-params = ""
+		style = ".system {color:#FF0000;}"
 		enable-http-images = true
+		max-lines = 0
 
 window "rpane"
 	elem "rpane"
@@ -1423,6 +1418,7 @@ window "preferences_window"
 		anchor1 = 80,0
 		anchor2 = 100,100
 		right-click = true
+		saved-params = "zoom;letterbox;zoom-mode"
 
 window "infowindow"
 	elem "infowindow"
