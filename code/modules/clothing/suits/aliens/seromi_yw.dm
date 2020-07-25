@@ -316,7 +316,7 @@
 
 /obj/item/clothing/suit/storage/seromi/beltcloak
 	name = "belted cloak"
-	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside."
+	desc = "A more ridged and stylized Teshari cloak."
 	icon = 'icons/mob/species/seromi/teshari_cloak_yw.dmi'
 	icon_override = 'icons/mob/species/seromi/teshari_cloak_yw.dmi'
 	icon_state = "tesh_beltcloak_bo"
@@ -472,7 +472,7 @@
 	item_state = "tesh_beltcloak_comm"
 
 /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/ce
-	name = "cheif engineer belted cloak"
+	name = "chief engineer belted cloak"
 	desc = "A soft Teshari cloak made the Chief Engineer"
 	icon_state = "tesh_beltcloak_ce"
 	item_state = "tesh_beltcloak_ce"

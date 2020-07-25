@@ -81,7 +81,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/command,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/command))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -89,7 +89,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/cargo,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cargo))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -97,7 +97,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/mining,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/mining))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -105,7 +105,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/qm,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/qm))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -113,7 +113,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/sec,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/sec))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -121,7 +121,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/service,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/service))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -129,7 +129,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/ce,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/ce))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -137,7 +137,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/eningeer,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/eningeer))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -145,7 +145,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/atmos,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/atmos))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -153,7 +153,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/sci,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/sci))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -161,7 +161,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/robo,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/robo))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -169,7 +169,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/cmo,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cmo))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -177,7 +177,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/medical,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/medical))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -185,7 +185,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/chemistry,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/chemistry))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -193,7 +193,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/viro,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/viro))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -201,7 +201,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/para,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/para))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
@@ -209,6 +209,6 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/iaa,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/iaa))
-		var/obj/item/clothing/suit/storage/seromi/cloak/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
