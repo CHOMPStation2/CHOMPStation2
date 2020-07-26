@@ -6,24 +6,31 @@
 labelPRBasedOnFilePath:
   # Add 'Type: Map' to any changes to .dmm files
   "Type: Map":
-    - '**.dmm'
+    - '**/*.dmm'
+
+  # Add 'Type: Vore' to any changes to any vore files
+  "Type: Vore":
+    - '**/*_vr*'
 
   # Add 'Type: Map' to any changes to image files
   "Type: Icon":
-    - '**.dmi'
-    - '**.png'
-    - '**.jpg'
+    - '**/*.dmi'
+    - '**/*.png'
+    - '**/*.jpg'
 
   # Add 'Type: Sound' to any change to sound files
   "Type: Sound":
-    - '**.ogg'
-    - '**.mp3'
-    - '**.wav'
+    - '**/*.ogg'
+    - '**/*.mp3'
+    - '**/*.wav'
 
-  # Add 'Type: Fluff' to any change to *custom_items*
+  # Add 'Type: Fluff' to any change to *custom_items_yw or loadout_fluffitems_yw*
   "Type: Fluff":
-    - '**custom_items**'
-    - '**loadout_fluff**'
+    - '**/*custom_items*_yw*'
+    - '**/*loadout_fluff*_yw*'
+    - 'config/alienwhitelist.txt'
+    - 'config/jobwhitelist.txt'
+    - 'config/custom_sprites.txt'
 
   # Contains changes to system folders
   "Type: .git or .github":

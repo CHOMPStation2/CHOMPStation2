@@ -230,13 +230,6 @@
 	desc = "Heavy-duty switching circuits for power control."
 	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50)
 
-/obj/item/weapon/module/power_control/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
-	if (istype(W, /obj/item/device/multitool))
-		var/obj/item/weapon/circuitboard/ghettosmes/newcircuit = new/obj/item/weapon/circuitboard/ghettosmes(user.loc)
-		qdel(src)
-		user.put_in_hands(newcircuit)
-
-
 /obj/item/weapon/module/id_auth
 	name = "\improper ID authentication module"
 	icon_state = "id_mod"
@@ -320,6 +313,7 @@
 	name = "rapid part exchange device"
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts."
 	icon_state = "RPED"
+	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi') //YW add - RPED sprite
 	w_class = ITEMSIZE_HUGE
 	can_hold = list(/obj/item/weapon/stock_parts)
 	storage_slots = 50
@@ -337,7 +331,7 @@
 	icon_state = "RPED"
 	w_class = ITEMSIZE_HUGE
 	//YAWN Changes
-	can_hold = list( 
+	can_hold = list(
 	/obj/item/weapon/cell,
 	/obj/item/weapon/stock_parts,
 	/obj/item/weapon/reagent_containers/glass/beaker)

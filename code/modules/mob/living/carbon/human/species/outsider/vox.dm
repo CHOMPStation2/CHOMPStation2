@@ -46,7 +46,7 @@
 	poison_type = "oxygen"
 	siemens_coefficient = 0.2
 
-	flags = NO_SCAN
+	flags = NO_SCAN | NO_DEFIB
 	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR
 
 	blood_color = "#9066BD"

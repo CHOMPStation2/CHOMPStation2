@@ -32,6 +32,8 @@
 	var/list/offset_y[0] //usage by the photocopier
 	var/rigged = 0
 	var/spam_flag = 0
+	var/age = 0
+	var/last_modified_ckey
 
 	var/const/deffont = "Verdana"
 	var/const/signfont = "Times New Roman"
@@ -141,12 +143,11 @@
 	free_space -= length(strip_html_properly(new_text))
 
 /obj/item/weapon/paper/examine(mob/user)
-	..()
+	. = ..()
 	if(in_range(user, src) || istype(user, /mob/observer/dead))
 		show_content(usr)
 	else
-		to_chat(user, "<span class='notice'>You have to go closer if you want to read it.</span>")
-	return
+		. += "<span class='notice'>You have to go closer if you want to read it.</span>"
 
 /obj/item/weapon/paper/proc/show_content(var/mob/user, var/forceshow=0)
 	if(!(istype(user, /mob/living/carbon/human) || istype(user, /mob/observer/dead) || istype(user, /mob/living/silicon)) && !forceshow)
@@ -190,7 +191,7 @@
 	if(rigged && (Holiday == "April Fool's Day"))
 		if(spam_flag == 0)
 			spam_flag = 1
-			playsound(loc, 'sound/items/bikehorn.ogg', 50, 1)
+			playsound(src, 'sound/items/bikehorn.ogg', 50, 1)
 			spawn(20)
 				spam_flag = 0
 	return
@@ -248,6 +249,15 @@
 										 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
 						H.lip_style = null
 						H.update_icons_body() //YW Edit End
+
+/obj/item/weapon/paper/proc/set_content(text,title)
+	if(title)
+		name = title
+	info = html_encode(text)
+	info = parsepencode(text)
+	update_icon()
+	update_space(info)
+	updateinfolinks()
 
 /obj/item/weapon/paper/proc/addtofield(var/id, var/text, var/links = 0)
 	var/locid = 0
@@ -393,7 +403,7 @@
 
 		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [TU.hes] trying to burn it!</span>", \
 		"<span class='[class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
-		playsound(src.loc, 'sound/bureaucracy/paperburn.ogg', 50, 1)
+		playsound(src, 'sound/bureaucracy/paperburn.ogg', 50, 1)
 
 		spawn(20)
 			if(get_dist(src, user) < 2 && user.get_active_hand() == P && P.lit)
@@ -482,6 +492,8 @@
 		else
 			info += t // Oh, he wants to edit to the end of the file, let him.
 			updateinfolinks()
+
+		last_modified_ckey = usr.ckey
 
 		update_space(t)
 

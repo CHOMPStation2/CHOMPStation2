@@ -3,7 +3,7 @@
 RED='\033[0;31m'
 NC='\033[0m'
 
-source $HOME/BYOND-${BYOND_MAJOR}.${BYOND_MINOR}/byond/bin/byondsetup
+source $HOME/BYOND/byond/bin/byondsetup
 
 # Copy example configs
 cp config/example/* config/
@@ -30,6 +30,7 @@ elif [ $exitVal -gt 0 ] && [ $TEST_DEFINE = "UNIT_TEST" ]; then
 fi
 
 # If we're running, run
+# YW Edit removes "|| exit 1" until we can fix our submaps
 if [ $RUN -eq 1 ];
 then
   DreamDaemon $BASENAME.dmb -invisible -trusted -core 2>&1 | tee log.txt;

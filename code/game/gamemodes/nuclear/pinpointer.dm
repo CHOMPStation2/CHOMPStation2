@@ -51,10 +51,10 @@
 			icon_state = "pinonfar"
 
 /obj/item/weapon/pinpointer/examine(mob/user)
-	..(user)
+	. = ..()
 	for(var/obj/machinery/nuclearbomb/bomb in machines)
 		if(bomb.timing)
-			to_chat(user, "Extreme danger.  Arming signal detected.   Time remaining: [bomb.timeleft]")
+			. += "Extreme danger.  Arming signal detected.   Time remaining: [bomb.timeleft]"
 
 
 
@@ -211,7 +211,7 @@
 /obj/item/weapon/pinpointer/nukeop/proc/workdisk()
 	if(bomb_set)	//If the bomb is set, lead to the shuttle
 		mode = 1	//Ensures worklocation() continues to work
-		playsound(loc, 'sound/machines/twobeep.ogg', 50, 1)	//Plays a beep
+		playsound(src, 'sound/machines/twobeep.ogg', 50, 1)	//Plays a beep
 		visible_message("<span class='notice'>Shuttle Locator active.</span>")			//Lets the mob holding it know that the mode has changed
 		return		//Get outta here
 
@@ -236,7 +236,7 @@
 /obj/item/weapon/pinpointer/nukeop/proc/worklocation()
 	if(!bomb_set)
 		mode = 0
-		playsound(loc, 'sound/machines/twobeep.ogg', 50, 1)
+		playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
 		visible_message("<span class='notice'>Authentication Disk Locator active.</span>")
 		return
 

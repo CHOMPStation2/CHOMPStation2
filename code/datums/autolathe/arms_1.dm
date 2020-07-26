@@ -1,5 +1,5 @@
 /datum/design/item/autolathe
-	var/hidden = 0
+	//var/hidden = 0
 	build_type = AUTOLATHE	 	//Flag as to what kind machine the design is built in. See defines.
 
 /datum/design/item/autolathe/arms						//Datum for object designs, used in construction	//IDs of that techs the object originated from and the minimum level requirements.
@@ -48,13 +48,14 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 450)
 	hidden = 1
 
-/datum/design/item/autolathe/arms/stunshell
+/*/datum/design/item/autolathe/arms/stunshell
 	name = "ammunition (stun cartridge, shotgun)"
-	id = "stunshell"
+	id = "shotgun_stunshell"
 	build_path = /obj/item/ammo_casing/a12g/stunshell
 	time = 10
 	materials = list(DEFAULT_WALL_MATERIAL = 450, "glass" = 900)
-	hidden = 1
+	hidden = 1*/
+	//It Gotta be manually added by a Design_disk, uncomment in case it shall be constructed normally(or add it other way, this causes some irrelevant unit test errors)
 
 //////////////////
 /*Ammo magazines*/
@@ -87,6 +88,13 @@
 	id = "pistol_45f"
 	build_path = /obj/item/ammo_magazine/m45/flash
 	materials = list(DEFAULT_WALL_MATERIAL = 656)
+
+/datum/design/item/autolathe/arms/pistol_45uzi
+	name = "uzi magazine (.45)"
+	id = "pistol_45uzi"
+	build_path = /obj/item/ammo_magazine/m45uzi
+	materials = list(DEFAULT_WALL_MATERIAL = 656)
+	hidden = 1
 
 /datum/design/item/autolathe/arms/tommymag
 	name = "Tommy Gun magazine (.45)"
@@ -122,7 +130,7 @@
 
 /datum/design/item/autolathe/arms/pistol_9mmp
 	name = "pistol magazine (9mm practice)"
-	id = "pistol_9mm_rubber"
+	id = "pistol_9mm_practice"
 	build_path = /obj/item/ammo_magazine/m9mm/practice
 	materials = list(DEFAULT_WALL_MATERIAL = 750)
 
@@ -132,6 +140,61 @@
 	build_path = /obj/item/ammo_magazine/m9mm/flash
 	materials = list(DEFAULT_WALL_MATERIAL = 750)
 
+/datum/design/item/autolathe/arms/pistol_9mm_compact
+	name = "compact pistol magazine (9mm)"
+	id = "pistol_9mm_compact"
+	build_path = /obj/item/ammo_magazine/m9mm/compact
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/pistol_9mmr_compact
+	name = "compact pistol magazine (9mm rubber)"
+	id = "pistol_9mm_compact_rubber"
+	build_path = /obj/item/ammo_magazine/m9mm/compact/rubber
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+/datum/design/item/autolathe/arms/pistol_9mmp_compact
+	name = "compact pistol magazine (9mm)"
+	id = "pistol_9mm_compact_practice"
+	build_path = /obj/item/ammo_magazine/m9mm/compact/practice
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/pistol_9mmf_compact
+	name = "compact pistol magazine (9mm)"
+	id = "pistol_9mm_compact_flash"
+	build_path = /obj/item/ammo_magazine/m9mm/compact/flash
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+
+/////// SMG Mags
+
+/datum/design/item/autolathe/arms/smg_9mm
+	name = "top-mounted SMG magazine (9mm)"
+	id = "smg_9mm"
+	build_path = /obj/item/ammo_magazine/m9mmt
+	materials = list(DEFAULT_WALL_MATERIAL = 750)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/smg_9mmr
+	name = "top-mounted SMG magazine (9mm rubber)"
+	id = "smg_9mmr"
+	build_path = /obj/item/ammo_magazine/m9mmt/rubber
+	materials = list(DEFAULT_WALL_MATERIAL = 380)
+
+/datum/design/item/autolathe/arms/smg_9mmp
+	name = "top-mounted SMG magazine (9mm practice)"
+	id = "smg_9mmp"
+	build_path = /obj/item/ammo_magazine/m9mmt/practice
+	materials = list(DEFAULT_WALL_MATERIAL = 380)
+
+/datum/design/item/autolathe/arms/smg_9mmf
+	name = "top-mounted SMG magazine (9mm flash)"
+	id = "smg_9mmf"
+	build_path = /obj/item/ammo_magazine/m9mmt/flash
+	materials = list(DEFAULT_WALL_MATERIAL = 380)
+
+
 /////// 10mm
 
 /datum/design/item/autolathe/arms/smg_10mm
@@ -140,11 +203,6 @@
 	build_path = /obj/item/ammo_magazine/m10mm
 	materials = list(DEFAULT_WALL_MATERIAL = 1875)
 
-/datum/design/item/autolathe/arms/pistol_44
-	name = "pistol magazine (.44)"
-	id = "pistol_44"
-	build_path = /obj/item/ammo_magazine/m44
-	materials = list(DEFAULT_WALL_MATERIAL = 1575)
 
 /////// 5.45mm
 /datum/design/item/autolathe/arms/rifle_545
@@ -190,6 +248,14 @@
 	id = "shotgun_speedloader_pellet"
 	build_path = /obj/item/ammo_magazine/clip/c12g/pellet
 	materials = list(DEFAULT_WALL_MATERIAL = 1337)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/shotgun_clip_slug
+	name = "2-round 12g speedloader (slug)"
+	id = "shotgun_speedloader_slug"
+	build_path = /obj/item/ammo_magazine/clip/c12g
+	materials = list(DEFAULT_WALL_MATERIAL = 1337)
+	hidden = 1
 
 
 ///////////////////////////////
@@ -259,6 +325,13 @@
 	name = "knuckle dusters"
 	id = "knuckledusters"
 	build_path = /obj/item/clothing/gloves/knuckledusters
+	materials = list(DEFAULT_WALL_MATERIAL = 625)
+	hidden = 1
+
+/datum/design/item/autolathe/arms/tacknife
+	name = "tactical knife"
+	id = "tacknife"
+	build_path = /obj/item/weapon/material/knife/tacknife
 	materials = list(DEFAULT_WALL_MATERIAL = 625)
 	hidden = 1
 

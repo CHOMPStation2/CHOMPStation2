@@ -21,6 +21,7 @@
 	icon_state = "ml3m_cmo"
 
 
+
 // The Magazine //
 /obj/item/ammo_magazine/cell_mag/medical //medical
 	name = "nanite magazine"

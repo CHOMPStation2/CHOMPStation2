@@ -649,7 +649,7 @@ obj/machinery/trailblazer/Initialize()
 
 /obj/machinery/trailblazer/yellow
 	name = "trail blazer"
-	desc = "A glowing stick- light. This one is glowing blue."
+	desc = "A glowing stick- light. This one is glowing yellow."
 	icon_state = "yellowtrail_light_on"
 
 /obj/machinery/trailblazer/yellow/randomize_color()

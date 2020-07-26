@@ -136,7 +136,7 @@
 	mob.updatehealth()
 
 /datum/disease2/effect/killertoxins
-	name = "Autoimmune Reponse"
+	name = "Autoimmune Response"
 	stage = 4
 	badness = 2
 
@@ -424,7 +424,7 @@
 	stage = 2
 
 /datum/disease2/effect/hungry/activate(var/mob/living/carbon/mob,var/multiplier)
-	mob.nutrition = max(0, mob.nutrition - 200)
+	mob.adjust_nutrition(-200)
 
 /datum/disease2/effect/fridge
 	name = "Reduced Circulation"

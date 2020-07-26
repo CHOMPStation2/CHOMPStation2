@@ -27,7 +27,7 @@
 /obj/machinery/alarm
 	name = "alarm"
 	desc = "Used to control various station atmospheric systems. The light indicates the current air status of the area."
-	icon = 'icons/obj/monitors_vr.dmi' //VOREStation Edit - Other icons
+	icon = 'icons/obj/monitors.dmi' //YW Edit, removed VR sprites
 	icon_state = "alarm0"
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
@@ -192,7 +192,7 @@
 			regulating_temperature = 1
 			audible_message("\The [src] clicks as it starts [environment.temperature > target_temperature ? "cooling" : "heating"] the room.",\
 			"You hear a click and a faint electronic hum.")
-			playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+			playsound(src, 'sound/machines/click.ogg', 50, 1)
 	else
 		//check for when we should stop adjusting temperature
 		if(get_danger_level(target_temperature, TLV["temperature"]) || abs(environment.temperature - target_temperature) <= 0.5)
@@ -200,7 +200,7 @@
 			regulating_temperature = 0
 			audible_message("\The [src] clicks quietly as it stops [environment.temperature > target_temperature ? "cooling" : "heating"] the room.",\
 			"You hear a click as a faint electronic humming stops.")
-			playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+			playsound(src, 'sound/machines/click.ogg', 50, 1)
 
 	if(regulating_temperature)
 		if(target_temperature > T0C + MAX_TEMPERATURE)
@@ -773,7 +773,7 @@
 		to_chat(user, "It does nothing.")
 		return
 	else
-		if(allowed(usr) && !wires.IsIndexCut(AALARM_WIRE_IDSCAN))
+		if(allowed(usr) && !wires.is_cut(WIRE_IDSCAN))
 			locked = !locked
 			to_chat(user, "<span class='notice'>You [locked ? "lock" : "unlock"] the Air Alarm interface.</span>")
 		else

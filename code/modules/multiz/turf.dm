@@ -39,14 +39,29 @@
 	..()
 	update()
 
+/turf/simulated/open/ChangeTurf()
+	var/turf/T = GetBelow(src)
+	if(T)
+		GLOB.turf_entered_event.unregister(T, src, .proc/BelowOpenUpdated)
+		GLOB.turf_exited_event.unregister(T, src, .proc/BelowOpenUpdated)
+	. = ..()
+
 /turf/simulated/open/Initialize()
 	. = ..()
 	ASSERT(HasBelow(z))
 	update()
+	var/turf/T = GetBelow(src)
+	if(T)
+		GLOB.turf_entered_event.register(T, src, .proc/BelowOpenUpdated)
+		GLOB.turf_exited_event.register(T, src, .proc/BelowOpenUpdated)
 
 /turf/simulated/open/Entered(var/atom/movable/mover)
 	. = ..()
 	mover.fall()
+
+/turf/simulated/open/proc/BelowOpenUpdated(turf/T, atom/movable/AM, old_loc)
+	if(isobj(AM) && GLOB.open_space_initialised && !AM.invisibility)
+		SSopen_space.add_turf(src, 1)
 
 // Called when thrown object lands on this turf.
 /turf/simulated/open/hitby(var/atom/movable/AM, var/speed)
@@ -70,11 +85,12 @@
 		O.hide(0)
 
 /turf/simulated/open/examine(mob/user, distance, infix, suffix)
-	if(..(user, 2))
+	. = ..()
+	if(Adjacent(user))
 		var/depth = 1
 		for(var/T = GetBelow(src); isopenspace(T); T = GetBelow(T))
 			depth += 1
-		to_chat(user, "It is about [depth] levels deep.")
+		. += "It is about [depth] levels deep."
 
 /**
 * Update icon and overlays of open space to be that of the turf below, plus any visible objects on that turf.
@@ -82,8 +98,13 @@
 /turf/simulated/open/update_icon()
 	cut_overlays() // Edit - Overlays are being crashy when modified.
 	update_icon_edge()// Add - Get grass into open spaces and whatnot.
-	var/turf/below = GetBelow(src)
 	if(below)
+		// Skybox lives on its own plane, if we don't set it to see that, then open space tiles over true space tiles see white nothingness below
+		if(is_space())
+			plane = SPACE_PLANE
+		else
+			plane = OPENSPACE_PLANE + src.z
+
 		var/below_is_open = isopenspace(below)
 
 		if(below_is_open)

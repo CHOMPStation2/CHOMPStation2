@@ -22,13 +22,13 @@
 /datum/design/item/autolathe/devices/sensor_infra
 	name = "infrared sensor"
 	id = "infrared_sensor"
-	build_path = /obj/item/device/assembly/signaler
+	build_path = /obj/item/device/assembly/infra
 	materials = list(DEFAULT_WALL_MATERIAL = 1250, "glass" = 625)
 
 /datum/design/item/autolathe/devices/sensor_prox
 	name = "proximity sensor"
 	id = "proximity_sensor"
-	build_path = /obj/item/device/assembly/signaler
+	build_path = /obj/item/device/assembly/prox_sensor
 	materials = list(DEFAULT_WALL_MATERIAL = 1000, "glass" = 250)
 
 /datum/design/item/autolathe/devices/beartrap
@@ -43,3 +43,9 @@
 	build_path = /obj/item/device/radio/electropack
 	materials = list(DEFAULT_WALL_MATERIAL = 12500, "glass" = 3125)
 	hidden = 1
+
+/datum/design/item/autolathe/devices/timer
+	name = "timer"
+	id = "timer"
+	build_path = /obj/item/device/assembly/timer
+	materials = list(DEFAULT_WALL_MATERIAL = 1000, "glass" = 250)

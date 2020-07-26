@@ -47,7 +47,7 @@
 
 /obj/item/weapon/gun/launcher/crossbow
 	name = "powered crossbow"
-	desc = "A 2557AD twist on an old classic. Pick up that can."
+	desc = "A 2320AD twist on an old classic. Pick up that can." //VOREStation Edit
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "crossbow"
 	item_state = "crossbow-solid"
@@ -208,18 +208,18 @@
 	icon_state = "crossbowframe[buildstate]"
 
 /obj/item/weapon/crossbowframe/examine(mob/user)
-	..(user)
+	. = ..()
 	switch(buildstate)
 		if(1)
-			to_chat(user, "It has a loose rod frame in place.")
+			. += "It has a loose rod frame in place."
 		if(2)
-			to_chat(user, "It has a steel backbone welded in place.")
+			. += "It has a steel backbone welded in place."
 		if(3)
-			to_chat(user, "It has a steel backbone and a cell mount installed.")
+			. += "It has a steel backbone and a cell mount installed."
 		if(4)
-			to_chat(user, "It has a steel backbone, plastic lath and a cell mount installed.")
+			. += "It has a steel backbone, plastic lath and a cell mount installed."
 		if(5)
-			to_chat(user, "It has a steel cable loosely strung across the lath.")
+			. += "It has a steel cable loosely strung across the lath."
 
 /obj/item/weapon/crossbowframe/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/stack/rods))

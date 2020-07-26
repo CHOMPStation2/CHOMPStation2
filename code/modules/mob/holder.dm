@@ -89,6 +89,22 @@ var/list/holder_mob_icon_cache = list()
 		else if(H.r_hand == src)
 			H.update_inv_r_hand()
 
+/obj/item/weapon/holder/container_resist(mob/living/held)
+	var/mob/M = loc
+	if(istype(M))
+		M.drop_from_inventory(src)
+		to_chat(M, "<span class='warning'>\The [held] wriggles out of your grip!</span>")
+		to_chat(held, "<span class='warning'>You wiggle out of [M]'s grip!</span>")
+	else if(istype(loc, /obj/item/clothing/accessory/holster))
+		var/obj/item/clothing/accessory/holster/holster = loc
+		if(holster.holstered == src)
+			holster.clear_holster()			
+		to_chat(held, "<span class='warning'>You extricate yourself from [holster].</span>")
+		held.forceMove(get_turf(held))
+	else if(isitem(loc))
+		to_chat(held, "<span class='warning'>You struggle free of [loc].</span>")
+		held.forceMove(get_turf(held))
+
 //Mob specific holders.
 /obj/item/weapon/holder/diona
 	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 5)
@@ -155,6 +171,16 @@ var/list/holder_mob_icon_cache = list()
 		if(src.incapacitated()) return
 	else
 		if(grabber.incapacitated()) return
+
+	//YW edit - size diff check
+	var/sizediff = grabber.size_multiplier - size_multiplier
+	if(sizediff < -0.5)
+		if(self_grab)
+			to_chat(src, "<span class='warning'>You are too big to fit in \the [grabber]\'s hands!</span>")
+		else
+			to_chat(grabber, "<span class='warning'>\The [src] is too big to fit in your hands!</span>")
+		return
+	//end YW edit
 
 	var/obj/item/weapon/holder/H = new holder_type(get_turf(src))
 	H.held_mob = src

@@ -10,29 +10,25 @@
 	active_power_usage = 40000	//40 kW
 	var/efficiency = 40000 //will provide the modified power rate when upgraded
 	var/obj/item/charging = null
-	var/list/allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/melee/baton, /obj/item/modular_computer, /obj/item/weapon/computer_hardware/battery_module, /obj/item/weapon/cell, /obj/item/device/flashlight, /obj/item/device/electronic_assembly, /obj/item/weapon/weldingtool/electric, /obj/item/ammo_magazine/smart, /obj/item/device/flash, /obj/item/device/defib_kit, /obj/item/ammo_casing/microbattery)  //VOREStation Add - NSFW Batteries
+	var/list/allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/melee/baton, /obj/item/modular_computer, /obj/item/weapon/computer_hardware/battery_module, /obj/item/weapon/cell, /obj/item/device/suit_cooling_unit/emergency, /obj/item/device/flashlight, /obj/item/device/electronic_assembly, /obj/item/weapon/weldingtool/electric, /obj/item/ammo_magazine/smart, /obj/item/device/flash, /obj/item/device/defib_kit, /obj/item/ammo_casing/microbattery)  //VOREStation Add - NSFW Batteries
 	var/icon_state_charged = "recharger2"
 	var/icon_state_charging = "recharger1"
 	var/icon_state_idle = "recharger0" //also when unpowered
 	var/portable = 1
 	circuit = /obj/item/weapon/circuitboard/recharger
 
-/obj/machinery/recharger/New()
-	component_parts = list()
-	component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
-	component_parts += new /obj/item/stack/cable_coil(src, 5)
-	RefreshParts()
-	..()
-	return
+/obj/machinery/recharger/Initialize()
+	. = ..()
+	default_apply_parts()
 
 /obj/machinery/recharger/examine(mob/user)
-	if(!..(user, 5))
-		return
+	. = ..()
 
-	to_chat(user, "[charging ? "[charging]" : "Nothing"] is in [src].")
-	if(charging)
-		var/obj/item/weapon/cell/C = charging.get_cell()
-		to_chat(user, "Current charge: [C.charge] / [C.maxcharge]")
+	if(get_dist(user, src) <= 5)
+		. += "[charging ? "[charging]" : "Nothing"] is in [src]."
+		if(charging)
+			var/obj/item/weapon/cell/C = charging.get_cell()
+			. += "Current charge: [C.charge] / [C.maxcharge]"
 
 /obj/machinery/recharger/attackby(obj/item/weapon/G as obj, mob/user as mob)
 	var/allowed = 0
@@ -88,7 +84,7 @@
 			return
 		anchored = !anchored
 		to_chat(user, "You [anchored ? "attached" : "detached"] [src].")
-		playsound(loc, G.usesound, 75, 1)
+		playsound(src, G.usesound, 75, 1)
 	else if(default_deconstruction_screwdriver(user, G))
 		return
 	else if(default_deconstruction_crowbar(user, G))

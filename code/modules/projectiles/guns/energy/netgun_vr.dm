@@ -1,7 +1,7 @@
 /obj/item/weapon/gun/energy/netgun
 	name = "energy net gun"
-	desc = "A Hephaestus-designed, usually dubbed 'Hunter' or 'non-lethal capture device' stunner and energy net launcher, \
-			for when you want criminals to stop acting like they're on a 20th century British comedy sketch show."
+	desc = "A Hephaestus-designed, usually dubbed 'non-lethal capture device' energy net launcher, \
+			for when you wanna capture feracious predators." //YW edit - small change to description
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "netgun"

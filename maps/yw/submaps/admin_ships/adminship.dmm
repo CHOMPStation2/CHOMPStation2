@@ -2785,7 +2785,7 @@
 /area/ship/adminships/engine_bay)
 "gC" = (
 /obj/item/weapon/phone,
-/obj/item/device/bluespaceradio,
+/obj/item/device/bluespaceradio/cryogaia_prelinked,
 /obj/structure/table/borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/bridge)

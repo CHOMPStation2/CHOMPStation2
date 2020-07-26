@@ -7,6 +7,8 @@
 	icon_state = "glasses"
 	var/datum/nano_module/arscreen
 	var/arscreen_path
+	var/datum/tgui_module/tgarscreen
+	var/tgarscreen_path
 	var/flash_prot = 0 //0 for none, 1 for flash weapon protection, 2 for welder protection
 	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_AUGMENTED)
 	plane_slots = list(slot_glasses)
@@ -15,21 +17,33 @@
 	..()
 	if(arscreen_path)
 		arscreen = new arscreen_path(src)
+	if(tgarscreen_path)
+		tgarscreen = new tgarscreen_path(src)
 
 /obj/item/clothing/glasses/omnihud/Destroy()
 	QDEL_NULL(arscreen)
+	QDEL_NULL(tgarscreen)
 	. = ..()
 
 /obj/item/clothing/glasses/omnihud/dropped()
 	if(arscreen)
 		SSnanoui.close_uis(src)
+	if(tgarscreen)
+		SStgui.close_uis(src)
 	..()
 
 /obj/item/clothing/glasses/omnihud/emp_act(var/severity)
+	if(arscreen)
+		SSnanoui.close_uis(src)
+	if(tgarscreen)
+		SStgui.close_uis(src)
 	var/disconnect_ar = arscreen
+	var/disconnect_tgar = tgarscreen
 	arscreen = null
+	tgarscreen = null
 	spawn(20 SECONDS)
 		arscreen = disconnect_ar
+		tgarscreen = disconnect_tgar
 	..()
 
 /obj/item/clothing/glasses/omnihud/proc/flashed()
@@ -38,7 +52,7 @@
 
 /obj/item/clothing/glasses/omnihud/prescribe(var/mob/user)
 	prescription = !prescription
-	playsound(user,'sound/items/screwdriver.ogg', 50, 1)
+	playsound(src,'sound/items/screwdriver.ogg', 50, 1)
 	if(prescription)
 		name = "[initial(name)] (pr)"
 		user.visible_message("[user] uploads new prescription data to the [src.name].")
@@ -70,12 +84,12 @@
 	These have been upgraded with medical records access and virus database integration."
 	mode = "med"
 	action_button_name = "AR Console (Crew Monitor)"
-	arscreen_path = /datum/nano_module/program/crew_monitor
+	tgarscreen_path = /datum/tgui_module/crew_monitor/glasses
 	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_STATUS_R,VIS_CH_BACKUP,VIS_AUGMENTED)
 
 	ar_interact(var/mob/living/carbon/human/user)
-		if(arscreen)
-			arscreen.ui_interact(user,"main",null,1,glasses_state)
+		if(tgarscreen)
+			tgarscreen.tgui_interact(user)
 		return 1
 
 /obj/item/clothing/glasses/omnihud/sec
@@ -183,3 +197,28 @@
 	else
 		icon_state = initial(icon_state)
 	update_clothing_icon()
+
+
+/obj/item/clothing/glasses/hud/health/eyepatch
+    name = "Medical Hudpatch"
+    desc = "An eyepatch with built in scanners, that analyzes those in view and provides accurate data about their health status."
+    icon_state = "eyepatch"
+    item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
+    body_parts_covered = 0
+    enables_planes =  list(VIS_CH_STATUS,VIS_CH_HEALTH)
+    var/eye = null
+
+/obj/item/clothing/glasses/hud/health/eyepatch/verb/switcheye()
+	set name = "Switch Eyepatch"
+	set category = "Object"
+	set src in usr
+	if(!istype(usr, /mob/living)) return
+	if(usr.stat) return
+
+	eye = !eye
+	if(eye)
+		icon_state = "[icon_state]_1"
+	else
+		icon_state = initial(icon_state)
+	update_clothing_icon()
+
