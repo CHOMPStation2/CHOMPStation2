@@ -3466,14 +3466,6 @@
 	icon_state = "gravsnow_corner"
 	},
 /area/syndicate_mothership)
-"ja" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_l"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/specops)
 "jb" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/shuttle/floor/darkred,
@@ -4154,15 +4146,7 @@
 "kE" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8;
-	icon_state = "propulsion"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/specops)
-"kF" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "burst_r"
+	icon_state = "burst_l"
 	},
 /turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
@@ -5556,12 +5540,6 @@
 /area/centcom/specops)
 "nr" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
 /obj/item/weapon/storage/box,
 /obj/item/weapon/storage/box,
 /obj/item/weapon/storage/box,
@@ -6765,11 +6743,6 @@
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
-	},
-/area/centcom/specops)
-"pE" = (
-/turf/simulated/shuttle/wall{
-	icon_state = "wall3"
 	},
 /area/centcom/specops)
 "pF" = (
@@ -21286,6 +21259,15 @@
 	},
 /turf/unsimulated/wall,
 /area/space)
+"US" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/engineer,
+/obj/item/clothing/suit/space/void/responseteam/engineer,
+/obj/item/clothing/suit/space/void/responseteam/engineer,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
 "UU" = (
 /obj/item/toy/chess/pawn_white,
 /turf/simulated/floor/holofloor/wmarble,
@@ -21388,6 +21370,17 @@
 /obj/item/toy/chess/queen_white,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+"Xs" = (
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
+/obj/structure/table/rack/shelf/steel,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
 "XK" = (
 /obj/effect/floor_decal/sign/small_4,
 /turf/simulated/floor/holofloor/wood,
@@ -21400,6 +21393,23 @@
 /obj/item/toy/chess/knight_white,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+"XS" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 32
+	},
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/magboots/adv,
+/obj/item/clothing/shoes/magboots/adv,
+/obj/item/clothing/shoes/magboots/adv,
+/obj/item/clothing/shoes/magboots/adv,
+/obj/item/clothing/shoes/magboots/adv,
+/obj/item/clothing/shoes/magboots/adv,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
 "Yc" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
@@ -21424,13 +21434,36 @@
 /obj/effect/floor_decal/sign/small_a,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"Yt" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/command,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
 "Yy" = (
 /obj/item/toy/chess/king_black,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+"YA" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion"
+	},
+/turf/space,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/specops)
 "YE" = (
 /turf/space/transit/east,
 /area/space)
+"YH" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "burst_r"
+	},
+/turf/space,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/specops)
 "Za" = (
 /obj/effect/floor_decal/sign/small_5,
 /turf/simulated/floor/holofloor/wood,
@@ -21494,6 +21527,24 @@
 /obj/effect/floor_decal/sign/small_7,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"ZR" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/medical,
+/obj/item/clothing/suit/space/void/responseteam/medical,
+/obj/item/clothing/suit/space/void/responseteam/medical,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
+"ZV" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/security,
+/obj/item/clothing/suit/space/void/responseteam/security,
+/obj/item/clothing/suit/space/void/responseteam/security,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/centcom/specops)
 
 (1,1,1) = {"
 ab
@@ -37967,7 +38018,7 @@ mO
 mT
 mT
 nq
-pV
+mT
 mT
 mT
 mT
@@ -38220,11 +38271,11 @@ mT
 mT
 nq
 pW
+US
+pV
 qy
 rc
 ru
-mT
-mT
 mT
 sX
 sX
@@ -38713,7 +38764,7 @@ aa
 mO
 mU
 mT
-mT
+oU
 mT
 mT
 mT
@@ -39222,7 +39273,7 @@ nH
 nU
 mT
 mT
-oU
+oV
 nq
 mT
 mT
@@ -39474,7 +39525,7 @@ nI
 nV
 mT
 mT
-oV
+oW
 nq
 mT
 mT
@@ -39726,7 +39777,7 @@ nJ
 nW
 mT
 mT
-oW
+ZV
 nq
 mT
 mT
@@ -39982,7 +40033,7 @@ oX
 mO
 pl
 pu
-pE
+mO
 qc
 mT
 mT
@@ -40740,6 +40791,7 @@ pl
 pu
 mO
 qd
+ZR
 qA
 mO
 mO
@@ -40748,7 +40800,6 @@ mO
 mO
 mO
 mO
-aa
 aa
 aa
 aa
@@ -40994,13 +41045,13 @@ mO
 nq
 nq
 mO
-ja
+mO
 kE
-kE
-kE
-kF
+YA
+YA
+YA
+YH
 tw
-aa
 aa
 aa
 aa
@@ -41242,9 +41293,10 @@ oZ
 pg
 mT
 mT
-mT
+Xs
 qe
 qB
+mO
 mO
 mB
 rB
@@ -41252,7 +41304,6 @@ sd
 sd
 mB
 tw
-aa
 aa
 aa
 aa
@@ -41496,6 +41547,7 @@ mT
 mT
 mT
 mT
+mT
 qC
 nq
 mB
@@ -41504,7 +41556,6 @@ se
 sq
 mB
 tw
-aa
 aa
 aa
 aa
@@ -41748,6 +41799,7 @@ mT
 mT
 mT
 mT
+mT
 qD
 nq
 mB
@@ -41756,7 +41808,6 @@ rZ
 sr
 mB
 tw
-aa
 aa
 aa
 aa
@@ -41993,12 +42044,13 @@ ny
 ny
 nq
 mO
-oy
+XS
 mT
 mT
 pn
 pn
 pn
+mT
 mT
 qE
 mO
@@ -42008,7 +42060,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -42253,6 +42304,7 @@ pv
 pG
 mT
 mT
+mT
 rd
 rz
 rZ
@@ -42260,7 +42312,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -42505,6 +42556,7 @@ nv
 pH
 mT
 mT
+mT
 rd
 rz
 rZ
@@ -42512,7 +42564,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -42757,6 +42808,7 @@ nv
 pI
 mT
 mT
+mT
 mO
 mB
 rZ
@@ -42764,7 +42816,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -43008,6 +43059,7 @@ pq
 pq
 pq
 mT
+mT
 qD
 mO
 mB
@@ -43016,7 +43068,6 @@ rZ
 sB
 mB
 tw
-aa
 aa
 aa
 aa
@@ -43248,12 +43299,13 @@ aa
 aa
 aa
 mO
-nt
+Yt
 mT
 mT
 ob
 nq
 oz
+mT
 mT
 mT
 mT
@@ -43268,7 +43320,6 @@ rZ
 sC
 mB
 tw
-aa
 aa
 aa
 aa
@@ -43512,6 +43563,7 @@ mT
 mT
 mT
 mT
+mT
 qB
 mO
 mB
@@ -43520,7 +43572,6 @@ so
 sc
 mB
 tw
-aa
 aa
 aa
 aa
@@ -43752,10 +43803,10 @@ aa
 aa
 aa
 mO
-nv
-nA
-nM
-od
+mT
+mT
+mT
+mT
 mO
 oA
 mT
@@ -43765,6 +43816,7 @@ mT
 pJ
 qf
 qe
+mT
 mO
 aa
 mB
@@ -43772,7 +43824,6 @@ sp
 mB
 aa
 tw
-aa
 aa
 aa
 aa
@@ -44004,10 +44055,10 @@ aa
 aa
 aa
 mO
-mO
-mO
-mO
-mO
+nt
+nA
+nM
+od
 mO
 nh
 mT
@@ -44255,12 +44306,12 @@ aa
 aa
 mO
 mO
-nh
-mT
-mT
-mT
-mT
-mT
+mO
+mO
+mO
+mO
+mO
+mO
 mT
 mT
 mT

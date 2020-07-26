@@ -313,3 +313,262 @@
 	name = "brown and grey cloak hood"
 	icon_state = "tesh_hood_brg"
 	item_state = "tesh_hood_brg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak
+	name = "belted cloak"
+	desc = "A more ridged and stylized Teshari cloak."
+	icon = 'icons/mob/species/seromi/teshari_cloak_yw.dmi'
+	icon_override = 'icons/mob/species/seromi/teshari_cloak_yw.dmi'
+	icon_state = "tesh_beltcloak_bo"
+	item_state = "tesh_beltcloak_bo"
+	species_restricted = list(SPECIES_TESHARI)
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_orange
+	name = "black belted cloak (orange)"
+	icon_state = "tesh_beltcloak_bo"
+	item_state = "tesh_beltcloak_bo"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_grey
+	name = "black belted cloak"
+	icon_state = "tesh_beltcloak_bg"
+	item_state = "tesh_beltcloak_bg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_midgrey
+	name = "black belted cloak (medium grey)"
+	icon_state = "tesh_beltcloak_bmg"
+	item_state = "tesh_beltcloak_bmg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_lightgrey
+	name = "black belted cloak (light grey)"
+	icon_state = "tesh_beltcloak_blg"
+	item_state = "tesh_beltcloak_blg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_white
+	name = "black belted cloak (white)"
+	icon_state = "tesh_beltcloak_bw"
+	item_state = "tesh_beltcloak_bw"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_red
+	name = "black belted cloak (red)"
+	icon_state = "tesh_beltcloak_br"
+	item_state = "tesh_beltcloak_br"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black
+	name = "black simple belted cloak"
+	icon_state = "tesh_beltcloak_bn"
+	item_state = "tesh_beltcloak_bn"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_yellow
+	name = "black belted cloak (yellow)"
+	icon_state = "tesh_beltcloak_by"
+	item_state = "tesh_beltcloak_by"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_green
+	name = "black belted cloak (green)"
+	icon_state = "tesh_beltcloak_bgr"
+	item_state = "tesh_beltcloak_bgr"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_blue
+	name = "black belted cloak (blue)"
+	icon_state = "tesh_beltcloak_bbl"
+	item_state = "tesh_beltcloak_bbl"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_purple
+	name = "black belted cloak (purple)"
+	icon_state = "tesh_beltcloak_bp"
+	item_state = "tesh_beltcloak_bp"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_pink
+	name = "black belted cloak (pink)"
+	icon_state = "tesh_beltcloak_bpi"
+	item_state = "tesh_beltcloak_bpi"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/black_brown
+	name = "black belted cloak (brown)"
+	icon_state = "tesh_beltcloak_bbr"
+	item_state = "tesh_beltcloak_bbr"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/orange_grey
+	name = "orange belted cloak"
+	icon_state = "tesh_beltcloak_og"
+	item_state = "tesh_beltcloak_og"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/rainbow
+	name = "rainbow belted cloak"
+	icon_state = "tesh_beltcloak_rainbow"
+	item_state = "tesh_beltcloak_rainbow"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/lightgrey_grey
+	name = "light grey belted cloak"
+	icon_state = "tesh_beltcloak_lgg"
+	item_state = "tesh_beltcloak_lgg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/white_grey
+	name = "white belted cloak"
+	icon_state = "tesh_beltcloak_wg"
+	item_state = "tesh_beltcloak_wg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/red_grey
+	name = "red belted cloak"
+	icon_state = "tesh_beltcloak_rg"
+	item_state = "tesh_beltcloak_rg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/orange
+	name = "orange simple belted cloak"
+	icon_state = "tesh_beltcloak_on"
+	item_state = "tesh_beltcloak_on"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/yellow_grey
+	name = "yellow belted cloak"
+	icon_state = "tesh_beltcloak_yg"
+	item_state = "tesh_beltcloak_yg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/green_grey
+	name = "green belted cloak"
+	icon_state = "tesh_beltcloak_gg"
+	item_state = "tesh_beltcloak_gg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/blue_grey
+	name = "blue belted cloak"
+	icon_state = "tesh_beltcloak_blug"
+	item_state = "tesh_beltcloak_blug"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/purple_grey
+	name = "purple belted cloak"
+	icon_state = "tesh_beltcloak_pg"
+	item_state = "tesh_beltcloak_pg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/pink_grey
+	name = "pink belted cloak"
+	icon_state = "tesh_beltcloak_pig"
+	item_state = "tesh_beltcloak_pig"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/brown_grey
+	name = "brown belted cloak"
+	icon_state = "tesh_beltcloak_brg"
+	item_state = "tesh_beltcloak_brg"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs
+	icon = 'icons/mob/species/seromi/teshari_cloak_yw.dmi'
+	icon_override = 'icons/mob/species/seromi/teshari_cloak_yw.dmi'
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cargo
+	name = "cargo belted cloak"
+	desc = "A soft Teshari cloak made for the Cargo department"
+	icon_state = "tesh_beltcloak_car"
+	item_state = "tesh_beltcloak_car"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/mining
+	name = "mining belted cloak"
+	desc = "A soft Teshari cloak made for Mining"
+	icon_state = "tesh_beltcloak_mine"
+	item_state = "tesh_beltcloak_mine"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/command
+	name = "command belted cloak"
+	desc = "A soft Teshari cloak made for the Command department"
+	icon_state = "tesh_beltcloak_comm"
+	item_state = "tesh_beltcloak_comm"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/ce
+	name = "chief engineer belted cloak"
+	desc = "A soft Teshari cloak made the Chief Engineer"
+	icon_state = "tesh_beltcloak_ce"
+	item_state = "tesh_beltcloak_ce"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/eningeer
+	name = "engineering belted cloak"
+	desc = "A soft Teshari cloak made for the Engineering department"
+	icon_state = "tesh_beltcloak_engie"
+	item_state = "tesh_beltcloak_engie"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/atmos
+	name = "atmospherics belted cloak"
+	desc = "A soft Teshari cloak made for the Atmospheric Technician"
+	icon_state = "tesh_beltcloak_atmos"
+	item_state = "tesh_beltcloak_atmos"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cmo
+	name = "chief medical belted officer cloak"
+	desc = "A soft Teshari cloak made the Cheif Medical Officer"
+	icon_state = "tesh_beltcloak_cmo"
+	item_state = "tesh_beltcloak_cmo"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/medical
+	name = "medical belted cloak"
+	desc = "A soft Teshari cloak made for the Medical department"
+	icon_state = "tesh_beltcloak_doc"
+	item_state = "tesh_beltcloak_doc"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/chemistry
+	name = "chemist belted cloak"
+	desc = "A soft Teshari cloak made for the Chemist"
+	icon_state = "tesh_beltcloak_chem"
+	item_state = "tesh_beltcloak_chem"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/viro
+	name = "virologist belted cloak"
+	desc = "A soft Teshari cloak made for the Virologist"
+	icon_state = "tesh_beltcloak_viro"
+	item_state = "tesh_beltcloak_viro"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/para
+	name = "paramedic belted cloak"
+	desc = "A soft Teshari cloak made for the Paramedic"
+	icon_state = "tesh_beltcloak_para"
+	item_state = "tesh_beltcloak_para"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/sci
+	name = "scientist belted cloak"
+	desc = "A soft Teshari cloak made for the Science department"
+	icon_state = "tesh_beltcloak_sci"
+	item_state = "tesh_beltcloak_sci"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/robo
+	name = "roboticist belted cloak"
+	desc = "A soft Teshari cloak made for the Roboticist"
+	icon_state = "tesh_beltcloak_robo"
+	item_state = "tesh_beltcloak_robo"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/sec
+	name = "security belted cloak"
+	desc = "A soft Teshari cloak made for the Security department"
+	icon_state = "tesh_beltcloak_sec"
+	item_state = "tesh_beltcloak_sec"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/qm
+	name = "quartermaster belted cloak"
+	desc = "A soft Teshari cloak made for the Quartermaster"
+	icon_state = "tesh_beltcloak_qm"
+	item_state = "tesh_beltcloak_qm"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/service
+	name = "service belted cloak"
+	desc = "A soft Teshari cloak made for the Service department"
+	icon_state = "tesh_beltcloak_serv"
+	item_state = "tesh_beltcloak_serv"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/iaa
+	name = "internal affairs belted cloak"
+	desc = "A soft Teshari cloak made for the Internal Affairs Agent"
+	icon_state = "tesh_beltcloak_iaa"
+	item_state = "tesh_beltcloak_iaa"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/wrdn
+	name = "warden belted cloak"
+	desc = "A soft Teshari cloak made for the Warden"
+	icon_state = "tesh_beltcloak_wrdn"
+	item_state = "tesh_beltcloak_wrdn"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/hos
+	name = "security chief belted cloak"
+	desc = "A soft Teshari cloak made for the Head of Security"
+	icon_state = "tesh_beltcloak_hos"
+	item_state = "tesh_beltcloak_hos"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/jani
+	name = "janitor belted cloak"
+	desc = "A soft Teshari cloak made for the Janitor"
+	icon_state = "tesh_beltcloak_jani"
+	item_state = "tesh_beltcloak_jani"
