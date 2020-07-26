@@ -8,4 +8,4 @@
  *   #define MAP_TEST 1
  */
 #define MAP_TEST 1
-maps/southern_cross/southern_cross_areas.dm
+#maps/southern_cross/southern_cross_areas.dm
