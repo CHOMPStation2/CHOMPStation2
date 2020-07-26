@@ -670,7 +670,10 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/machinery/vending/cigarette,
+/obj/machinery/vending/cigarette{
+	icon_state = "cigs";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
 "aqW" = (
@@ -1137,7 +1140,10 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
 "buZ" = (
@@ -1745,17 +1751,23 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/machinery/vending/fitness,
+/obj/machinery/vending/fitness{
+	icon_state = "fitness";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
 "dhP" = (
-/obj/machinery/vending/cola,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
+	},
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -2016,6 +2028,9 @@
 	dir = 4;
 	pixel_x = -23;
 	pixel_y = 0
+	},
+/obj/machinery/camera/network/mining{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -3577,6 +3592,9 @@
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
+/obj/machinery/camera/network/mining{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
 "iQi" = (
@@ -3805,6 +3823,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"jLK" = (
+/obj/machinery/camera/network/security,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/checkpoint)
 "jMd" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "Staff Room";
@@ -3863,6 +3885,9 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/machinery/camera/network/exploration{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
@@ -3978,8 +4003,11 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "kwL" = (
-/obj/machinery/vending/coffee,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -4094,6 +4122,7 @@
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 1
 	},
+/obj/machinery/camera/network/medbay,
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
 "kPV" = (
@@ -4500,6 +4529,9 @@
 	dir = 8;
 	pixel_x = 25;
 	pixel_y = 0
+	},
+/obj/machinery/camera/network/civilian{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -4965,7 +4997,6 @@
 	name = "Common Channel";
 	pixel_y = 21
 	},
-/obj/structure/device/piano/minimoog,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "ntu" = (
@@ -5185,6 +5216,12 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
+"oaa" = (
+/obj/machinery/camera/network/civilian{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "oaQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4;
@@ -5338,6 +5375,9 @@
 	dir = 1;
 	icon_state = "alarm0";
 	pixel_y = -22
+	},
+/obj/machinery/camera/network/civilian{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -5671,6 +5711,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/medbay{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
@@ -6201,6 +6244,10 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway/exploration)
+"qBc" = (
+/obj/machinery/camera/network/mining,
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/miningdock)
 "qBD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -6299,6 +6346,7 @@
 	icon_state = "corner_white";
 	dir = 4
 	},
+/obj/machinery/camera/network/civilian,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "qQU" = (
@@ -6733,6 +6781,17 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
+/obj/structure/closet/crate/centauri{
+	name = "Liquid Rations"
+	},
+/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
+/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
+/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
+/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
+/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
+/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
+/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
+/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "stF" = (
@@ -7515,6 +7574,7 @@
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 1
 	},
+/obj/machinery/mineral/equipment_vendor,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "uxw" = (
@@ -7573,6 +7633,7 @@
 	pixel_x = 0;
 	pixel_y = 26
 	},
+/obj/machinery/camera/network/exploration,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
 "uFT" = (
@@ -8324,6 +8385,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"xcB" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/machinery/camera/network/exploration,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_upper)
 "xdi" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8533,7 +8601,10 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/medical/medbayskybridge)
 "xFu" = (
@@ -46824,7 +46895,7 @@ nfI
 jQk
 jQk
 jQk
-jQk
+oaa
 jQk
 nfI
 jQk
@@ -58436,7 +58507,7 @@ eFr
 eFr
 eFr
 hEL
-ovv
+qBc
 mQT
 xDX
 sTI
@@ -60251,7 +60322,7 @@ aaf
 lEu
 abe
 abe
-abj
+jLK
 abj
 abj
 abf
@@ -62753,7 +62824,7 @@ pSa
 mem
 brf
 pSa
-rmK
+xcB
 hsb
 hsb
 hsb
