@@ -655,11 +655,11 @@ proc/establish_old_db_connection()
 	if(!istype(GLOB.players_by_zlevel, /list))
 		GLOB.players_by_zlevel = new /list(world.maxz, 0)
 		GLOB.living_players_by_zlevel = new /list(world.maxz, 0)
-
+	
 	while(GLOB.players_by_zlevel.len < world.maxz)
 		GLOB.players_by_zlevel.len++
 		GLOB.players_by_zlevel[GLOB.players_by_zlevel.len] = list()
-
+		
 		GLOB.living_players_by_zlevel.len++
 		GLOB.living_players_by_zlevel[GLOB.living_players_by_zlevel.len] = list()
 

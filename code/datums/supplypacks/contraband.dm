@@ -14,7 +14,7 @@
 			)
 
 	name = "Contraband crate"
-	cost = 500
+	cost = 25
 	containertype = /obj/structure/closet/crate
 	containername = "Unlabeled crate"
 	contraband = 1
