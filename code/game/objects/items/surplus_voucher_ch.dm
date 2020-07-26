@@ -62,9 +62,6 @@
 					prob(3);/obj/item/weapon/tool/screwdriver,
 					prob(3);/obj/item/device/analyzer,
 					prob(3);/obj/item/device/t_scanner,
-					prob(1);/obj/item/weapon/rms,
-					prob(1);/obj/item/weapon/rcd,
-					prob(3);/obj/item/weapon/rcd_ammo,
 					prob(2);/obj/item/weapon/grenade/chem_grenade/metalfoam,
 					prob(1);/obj/item/toy/figure/engineer)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
@@ -85,8 +82,6 @@
 					prob(6);/obj/item/weapon/storage/firstaid/toxin,
 					prob(6);/obj/item/weapon/storage/firstaid/o2,
 					prob(6);/obj/item/weapon/storage/firstaid/adv,
-					prob(2);/obj/item/weapon/storage/firstaid/surgery,
-					prob(1);/obj/item/weapon/storage/firstaid/combat,
 					prob(3);/obj/item/weapon/storage/pill_bottle/antitox,
 					prob(3);/obj/item/weapon/storage/pill_bottle/bicaridine,
 					prob(2);/obj/item/weapon/storage/pill_bottle/dexalin_plus,
@@ -99,7 +94,6 @@
 					prob(3);/obj/item/weapon/storage/pill_bottle/carbon,
 					prob(3);/obj/item/weapon/storage/pill_bottle/iron,
 					prob(4);/obj/item/weapon/storage/pill_bottle/assorted,
-					prob(1);/obj/item/weapon/storage/pill_bottle/combat,
 					prob(4);/obj/item/weapon/backup_implanter,
 					prob(2);/obj/item/toy/plushie/borgplushie/medihound)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
@@ -144,22 +138,16 @@
 
 /obj/item/surplus_voucher/sec/proc/spawn_item(var/turf/T)
 	var/path = pick(prob(2);/obj/item/weapon/storage/box/flashbangs,
-					prob(1);/obj/item/weapon/storage/box/empslite,
-					prob(3);/obj/item/weapon/storage/box/smokes,
-					prob(2);/obj/item/weapon/storage/box/teargas,
 					prob(4);/obj/item/weapon/storage/box/flare,
 					prob(5);/obj/item/weapon/storage/box/donut,
 					prob(4);/obj/item/weapon/storage/box/handcuffs,
 					prob(3);/obj/item/weapon/reagent_containers/spray/pepper,
-					prob(2);/obj/item/weapon/gun/energy/taser,
-					prob(2);/obj/item/weapon/gun/energy/stunrevolver,
 					prob(3);/obj/item/weapon/melee/baton/loaded,
 					prob(2);/obj/item/weapon/storage/box/beanbags,
 					prob(2);/obj/item/weapon/storage/box/stunshells,
 					prob(2);/obj/item/ammo_magazine/m45/rubber,
 					prob(2);/obj/item/ammo_magazine/m9mmt/rubber,
-					prob(1);/obj/item/weapon/gun/projectile/colt/detective,
-					prob(1);/obj/item/weapon/gun/projectile/shotgun/pump,
+                    prob(2);/obj/item/weapon/cell/device/weapon,
 					prob(1);/obj/item/toy/plushie/borgplushie)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
 	new path(T)

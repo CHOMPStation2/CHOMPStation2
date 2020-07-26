@@ -7,13 +7,11 @@
 			slot_l_hand_str = 'icons/mob/items/lefthand_vr.dmi',
 			slot_r_hand_str = 'icons/mob/items/righthand_vr.dmi',
 	)
-	force = 5
+	force = 0
 	throwforce = 7
 	throw_speed = 1
 	throw_range = 3
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 3)
-	matter = list(DEFAULT_WALL_MATERIAL = 5000)
 	preserve_item = FALSE
 	var/scancount = 0
 	var/scanreq = 3
