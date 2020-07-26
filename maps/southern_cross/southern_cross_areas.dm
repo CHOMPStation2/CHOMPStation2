@@ -772,7 +772,7 @@
 	name = "\improper First Deck Research Access Hallway"
 	icon_state = "hallS"
 //CHOMPStation Edit End
-
+/* Moving hangars to Space Station 13 areas.dm
 /area/hangar
 	name = "\improper First Deck Hangar"
 	icon_state = "hangar"
@@ -798,7 +798,7 @@
 /area/hangar/lockerroomthree
 	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
-
+*/
 /area/security/checkpoint3
 	name = "\improper Security - Auxiliary Checkpoint"
 	icon_state = "security"
