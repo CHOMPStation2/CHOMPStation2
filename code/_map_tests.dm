@@ -7,4 +7,5 @@
  *   Should you wish to edit set MAP_TEST to 1 like so:
  *   #define MAP_TEST 1
  */
-#define MAP_TEST 0
+#define MAP_TEST 1
+maps/southern_cross/southern_cross_areas.dm
