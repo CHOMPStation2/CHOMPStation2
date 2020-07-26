@@ -47,7 +47,6 @@
 #define LANGUAGE_SOL_COMMON "Sol Common"
 #define LANGUAGE_UNATHI "Sinta'unathi"
 #define LANGUAGE_SIIK "Siik"
-#define LANGUAGE_SIIK_TAJR "Siik Tajr"
 #define LANGUAGE_SKRELLIAN "Common Skrellian"
 #define LANGUAGE_TRADEBAND "Tradeband"
 #define LANGUAGE_GUTTER "Gutter"
