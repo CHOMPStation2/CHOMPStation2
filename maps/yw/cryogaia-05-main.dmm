@@ -16786,11 +16786,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/bridge)
 "aFm" = (
-/obj/machinery/vending/cigarette,
+/obj/machinery/vending/cigarette{
+	icon_state = "cigs";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "aFn" = (
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "aFo" = (
@@ -27508,11 +27514,14 @@
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "aZp" = (
-/obj/machinery/vending/assist,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = 32;
 	pixel_y = 0
+	},
+/obj/machinery/vending/assist{
+	icon_state = "generic";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
@@ -28363,10 +28372,13 @@
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "baI" = (
-/obj/machinery/vending/tool,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
+	},
+/obj/machinery/vending/tool{
+	icon_state = "tool";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
@@ -29014,10 +29026,13 @@
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "bbU" = (
-/obj/machinery/lapvend,
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1"
+	},
+/obj/machinery/lapvend{
+	icon_state = "robotics";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
@@ -60578,11 +60593,9 @@
 /obj/structure/cable{
 	icon_state = "32-1"
 	},
-/obj/structure/disposalpipe/down{
-	dir = 1
-	},
-/obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/plating,
+/obj/machinery/door/firedoor,
+/obj/structure/lattice,
+/turf/simulated/open,
 /area/borealis2/elevator/scicargo)
 "cgd" = (
 /obj/effect/spider/eggcluster/small/frost,
@@ -63528,6 +63541,16 @@
 /obj/structure/stairs/south,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/explorer_meeting)
+"dzt" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/ice,
+/area/borealis2/outdoors/grounds)
 "dzO" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
@@ -63600,6 +63623,12 @@
 "dZD" = (
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
+"eas" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia/covered,
 /area/borealis2/outdoors/exterior)
 "ecO" = (
 /obj/structure/cable/green{
@@ -63981,6 +64010,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"fwE" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/ice,
+/area/borealis2/outdoors/grounds)
 "fyp" = (
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/traderpad)
@@ -64158,6 +64197,13 @@
 "ggp" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/exterior)
+"gmq" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
 "gti" = (
 /obj/effect/floor_decal/corner/pink{
@@ -64773,6 +64819,15 @@
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
+"jjk" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/ice,
+/area/borealis2/outdoors/grounds)
 "jkk" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -65347,6 +65402,20 @@
 /obj/structure/ladder,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"lwB" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/ice,
+/area/borealis2/outdoors/grounds)
+"lya" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "lyv" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "Plains Access Shed";
@@ -65729,6 +65798,13 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
+"mDA" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "mDB" = (
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
@@ -66446,6 +66522,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"pDQ" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/ice,
+/area/borealis2/outdoors/grounds)
 "pGf" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
@@ -66554,6 +66637,10 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/security/armoury)
+"qhj" = (
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/ice,
+/area/borealis2/outdoors/grounds)
 "qiQ" = (
 /obj/structure/stairs/west,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -66859,6 +66946,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
 "rDn" = (
@@ -68087,6 +68175,17 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"vPH" = (
+/obj/structure/flora/tree/dead,
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
+"vRu" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/ice,
+/area/borealis2/outdoors/grounds)
 "vSR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -68142,6 +68241,18 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/security/armoury)
+"weg" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/ice,
+/area/borealis2/outdoors/grounds)
 "wfH" = (
 /obj/structure/catwalk,
 /obj/structure/railing{
@@ -76021,7 +76132,7 @@ cfN
 cfj
 cfj
 aaf
-bmE
+aaf
 aad
 cfP
 cfP
@@ -122828,7 +122939,7 @@ aag
 aag
 aag
 aag
-aqH
+dzt
 aag
 aba
 aHb
@@ -123079,9 +123190,9 @@ bYT
 aag
 aag
 aag
+weg
 aqH
-aqH
-aqH
+pDQ
 aag
 btM
 rWI
@@ -123332,8 +123443,8 @@ aag
 aag
 aag
 aag
-aqH
-aqH
+vRu
+qhj
 aag
 btM
 rWI
@@ -123584,9 +123695,9 @@ aag
 aag
 aag
 aag
+jjk
 aqH
-aqH
-aqH
+fwE
 btM
 rWI
 dNQ
@@ -123837,7 +123948,7 @@ aag
 aag
 aag
 aag
-aqH
+lwB
 aag
 btM
 rWI
@@ -125104,8 +125215,8 @@ tZm
 jgc
 eYR
 eNw
-vZD
-aad
+eas
+gmq
 aaf
 ceY
 cfm
@@ -125357,7 +125468,7 @@ taL
 cOv
 eNw
 vZD
-aad
+lya
 aaf
 aaf
 cfm
@@ -125609,7 +125720,7 @@ cot
 clj
 eNw
 vZD
-aad
+lya
 aaf
 aaf
 cfm
@@ -125861,7 +125972,7 @@ bPt
 clj
 eNw
 vZD
-aad
+lya
 aaf
 aaf
 cfm
@@ -126113,7 +126224,7 @@ bPt
 xUR
 vZD
 vZD
-aad
+lya
 aaf
 obP
 cfm
@@ -126365,7 +126476,7 @@ bPt
 jwF
 aad
 aad
-aad
+lya
 aaf
 ceY
 cfm
@@ -126617,7 +126728,7 @@ bPt
 jwF
 aad
 aad
-aad
+lya
 aaf
 aaf
 cfm
@@ -126869,7 +126980,7 @@ bPt
 jwF
 aad
 aad
-aad
+lya
 aaf
 aaf
 cfm
@@ -127121,7 +127232,7 @@ bPt
 jwF
 aad
 aad
-aad
+lya
 aaf
 aaf
 cfm
@@ -127373,7 +127484,7 @@ bPt
 jwF
 aad
 aad
-aad
+lya
 ceY
 aaf
 cfm
@@ -127625,7 +127736,7 @@ bPt
 jwF
 aad
 aad
-aad
+lya
 aaf
 aaf
 cfm
@@ -127877,7 +127988,7 @@ aad
 jwF
 aad
 aad
-aad
+lya
 ceZ
 aaf
 cfm
@@ -128129,7 +128240,7 @@ aad
 jwF
 aad
 aad
-aad
+lya
 aaf
 aaf
 cfm
@@ -128381,7 +128492,7 @@ aad
 uwU
 aad
 aad
-aad
+lya
 ceY
 obP
 cfm
@@ -128633,7 +128744,7 @@ aaQ
 jwF
 aad
 aad
-aad
+lya
 aaf
 aaf
 gAq
@@ -128885,7 +128996,7 @@ aad
 jwF
 aad
 aad
-aad
+lya
 aaf
 cfd
 aaf
@@ -129137,7 +129248,7 @@ aad
 jwF
 aad
 aad
-aad
+lya
 aaf
 aaf
 aaf
@@ -129389,7 +129500,7 @@ aaQ
 jwF
 aad
 aad
-aad
+lya
 ceY
 aaf
 ceY
@@ -129641,7 +129752,7 @@ aad
 jwF
 aad
 aae
-aad
+lya
 aaf
 aaf
 aaf
@@ -129893,7 +130004,7 @@ aad
 jwF
 aad
 aad
-aad
+mDA
 aaf
 aaf
 aaf
@@ -130144,7 +130255,7 @@ aad
 aae
 jwF
 aad
-aad
+mDA
 aaf
 aaf
 obP
@@ -130647,7 +130758,7 @@ aGi
 aad
 aad
 aad
-aad
+lya
 aaf
 cff
 cff
@@ -130899,7 +131010,7 @@ aad
 aad
 aad
 aad
-aae
+vPH
 aaf
 cff
 wHi
@@ -131151,7 +131262,7 @@ aad
 aad
 aad
 aad
-aad
+lya
 aaf
 cff
 jrp
