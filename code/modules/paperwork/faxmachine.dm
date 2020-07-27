@@ -30,14 +30,14 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 		alldepartments |= department
 	..()
 
-/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob)
+/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob) // CH edit begins here; this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 	user.set_machine(src)
 
-	if(issilicon(usr))
+	if(issilicon(usr)) // Normally, you have to insert an ID. Borgs, obviously, cannot do this, so it skips the ID process completely.
 		authenticated = 1
 		ui_interact(user)
 	else
-		ui_interact(user)
+		ui_interact(user) // CH edit ends here
 
 /**
  *  Display the NanoUI window for the fax machine.
