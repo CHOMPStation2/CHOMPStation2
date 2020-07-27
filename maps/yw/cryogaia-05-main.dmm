@@ -9742,8 +9742,8 @@
 "asK" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "Patient Ward";
-	req_access = list(5,6);
-	req_one_access = list()
+	req_access = list();
+	req_one_access = list(5,6,52)
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/corner/paleblue{
@@ -9757,16 +9757,16 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_medical{
-	name = "Patient Ward";
-	req_access = list();
-	req_one_access = list()
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/pink,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
+	},
+/obj/machinery/door/airlock/glass_medical{
+	name = "Patient Ward";
+	req_access = list();
+	req_one_access = list(5,6,52)
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -63726,6 +63726,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
+"elh" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior/explore3)
 "emj" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
@@ -64556,6 +64560,10 @@
 "hVT" = (
 /turf/simulated/floor/outdoors/snow/snow/cryogaia/covered,
 /area/borealis2/outdoors/grounds)
+"hXc" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia/covered,
+/area/borealis2/outdoors/exterior/explore3)
 "hXG" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -66227,6 +66235,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"oyP" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior/explore3)
 "ozs" = (
 /obj/effect/floor_decal/snow/floor/surround{
 	dir = 1
@@ -66453,6 +66465,10 @@
 /obj/machinery/recharge_station,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/recreation)
+"pmG" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia/covered,
+/area/borealis2/outdoors/exterior/explore3)
 "poz" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -74151,9 +74167,9 @@ cfP
 cfP
 cfP
 cfP
-cfQ
-cfQ
-cfQ
+elh
+elh
+elh
 cfP
 qbe
 qbe
@@ -74637,7 +74653,7 @@ cfP
 cfP
 cfP
 cfP
-cfQ
+elh
 cfP
 cfP
 cfP
@@ -77900,7 +77916,7 @@ aaf
 aad
 cfP
 qbe
-qbe
+hXc
 qbe
 qbe
 cfP
@@ -82694,17 +82710,17 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -82946,17 +82962,17 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -83201,14 +83217,14 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -83453,14 +83469,14 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
-aar
-aar
-aar
-aar
-aar
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -83706,13 +83722,13 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
-aar
-aar
-aar
-aar
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -83960,11 +83976,11 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
-aar
-aar
+cfP
+cfP
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -84212,11 +84228,11 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
-aar
-aar
+cfP
+cfP
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -84464,11 +84480,11 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
-aar
-aar
+cfP
+cfP
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -84718,9 +84734,9 @@ aad
 aad
 aad
 aad
-aar
-aar
-aar
+cfP
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -84971,8 +84987,8 @@ aad
 aad
 aad
 aad
-aar
-aar
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -85223,8 +85239,8 @@ aad
 aad
 aad
 aad
-aar
-aar
+cfP
+cfP
 cfP
 cfP
 cfP
@@ -85476,7 +85492,7 @@ aad
 aad
 aad
 aad
-aar
+cfP
 cfP
 cfP
 cfP
@@ -89985,9 +90001,9 @@ aaf
 aaf
 cfP
 cfP
-cNt
-cNt
-cNt
+pmG
+pmG
+pmG
 cfP
 cfP
 aaf
@@ -92524,8 +92540,8 @@ cfP
 cfP
 cfP
 cfP
-cNt
-cNt
+pmG
+pmG
 cfP
 cfP
 cfP
@@ -105609,7 +105625,7 @@ aaf
 cfR
 cfS
 cfS
-cfS
+oyP
 cNt
 cNt
 cNt
@@ -105861,7 +105877,7 @@ aaf
 cfS
 cfS
 cfS
-cfS
+oyP
 cNt
 cNt
 cNt
@@ -106113,7 +106129,7 @@ aaf
 cfS
 cfS
 cfS
-cfS
+oyP
 cNt
 cNt
 cNt
@@ -106365,7 +106381,7 @@ bmE
 cfS
 cfS
 cfS
-cfS
+oyP
 cNt
 cNt
 cNt
@@ -108132,7 +108148,7 @@ cfS
 cfP
 cfP
 cfP
-cNt
+pmG
 cNt
 cNt
 cNt
@@ -108384,7 +108400,7 @@ cfS
 cfS
 cfP
 cfP
-cNt
+pmG
 cNt
 cNt
 cNt
@@ -108636,7 +108652,7 @@ cfS
 cfS
 cfS
 cfS
-cfS
+oyP
 cNt
 cNt
 cNt
@@ -108888,7 +108904,7 @@ cfS
 cfS
 cfS
 cfS
-cfS
+oyP
 cNt
 cNt
 cNt
@@ -109140,7 +109156,7 @@ cfS
 cfS
 cfS
 cfS
-cfS
+oyP
 cNt
 cNt
 cNt
@@ -109392,7 +109408,7 @@ cfS
 bmE
 bmE
 cfS
-cfS
+oyP
 cNt
 cNt
 cNt
@@ -112922,7 +112938,7 @@ cfS
 cfS
 cfS
 cNt
-cNt
+pmG
 cNt
 cNt
 cNt
@@ -113174,7 +113190,7 @@ cfS
 cfS
 cNt
 cNt
-cNt
+pmG
 cNt
 cNt
 cNt
@@ -113426,7 +113442,7 @@ cfP
 cNt
 cNt
 cNt
-cNt
+pmG
 cNt
 cNt
 cNt
@@ -113675,10 +113691,10 @@ cfR
 cfP
 cfP
 cfP
-cNt
-cNt
-cNt
-cNt
+pmG
+pmG
+pmG
+pmG
 cNt
 cNt
 cNt
@@ -117705,7 +117721,7 @@ aaf
 cfS
 cfS
 cNt
-cNt
+pmG
 cNt
 cNt
 cNt
@@ -127790,7 +127806,7 @@ aad
 aGi
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -128042,7 +128058,7 @@ aad
 aad
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -128294,7 +128310,7 @@ aad
 aad
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -128546,7 +128562,7 @@ aad
 aad
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -128798,7 +128814,7 @@ aad
 aad
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -129050,7 +129066,7 @@ aad
 aad
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -129302,7 +129318,7 @@ aad
 aad
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -131066,7 +131082,7 @@ aad
 aad
 cfQ
 cfP
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -131318,7 +131334,7 @@ aad
 aad
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
@@ -131570,7 +131586,7 @@ aad
 aad
 cfQ
 cfQ
-qbe
+hXc
 qbe
 qbe
 qbe
