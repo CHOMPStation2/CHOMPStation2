@@ -6042,7 +6042,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/starboard)
 "anP" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor,
 /area/maintenance/starboard)
 "anQ" = (
