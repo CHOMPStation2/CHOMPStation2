@@ -94,7 +94,7 @@
 			/mob/living/carbon/human/monkey/punpun,/obj/machinery/chemical_dispenser/bar_alc/full,/obj/machinery/chemical_dispenser/bar_soft/full,/obj/machinery/smartfridge/drinks,
 			/obj/machinery/vending/boozeomat,/obj/machinery/media/jukebox,/obj/machinery/chem_master/condimaster,/obj/machinery/microwave,
 			/obj/machinery/vending/dinnerware,/obj/structure/closet/secure_closet/freezer/meat,/obj/structure/closet/secure_closet/freezer/fridge,
-			/obj/machinery/cooker/fryer,/obj/machinery/cooker/grill,/obj/machinery/cooker/oven,/obj/machinery/icecream_vat,/obj/machinery/gibber,/obj/structure/kitchenspike,
+			/obj/machinery/appliance/cooker/fryer,/obj/machinery/appliance/cooker/grill,/obj/machinery/appliance/cooker/oven,/obj/machinery/icecream_vat,/obj/machinery/gibber,/obj/structure/kitchenspike,
 			/obj/machinery/portable_atmospherics/hydroponics,/obj/machinery/vending/hydronutrients,/obj/machinery/seed_storage/garden,/obj/machinery/honey_extractor,
 			/obj/machinery/biogenerator,/obj/machinery/seed_extractor,/obj/machinery/microwave)
 		if("Security")
