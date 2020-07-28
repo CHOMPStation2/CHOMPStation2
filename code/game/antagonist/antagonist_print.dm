@@ -71,7 +71,7 @@
 	var/TC_uses = 0
 	var/uplink_true = 0
 	var/purchases = ""
-	for(var/obj/item/device/uplink/H in world_uplinks)
+	for(var/obj/item/device/uplink/H in GLOB.world_uplinks)
 		if(H && H.uplink_owner && H.uplink_owner == ply)
 			TC_uses += H.used_TC
 			uplink_true = 1
@@ -85,7 +85,7 @@
 
 /proc/print_ownerless_uplinks()
 	var/has_printed = 0
-	for(var/obj/item/device/uplink/H in world_uplinks)
+	for(var/obj/item/device/uplink/H in GLOB.world_uplinks)
 		if(isnull(H.uplink_owner) && H.used_TC)
 			if(!has_printed)
 				has_printed = 1
