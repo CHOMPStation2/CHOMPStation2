@@ -1,6 +1,7 @@
 // Note for newly added fluff items: Ckeys should not contain any spaces, underscores or capitalizations,
 // or else the item will not be usable.
 // Example: Someone whose username is "Master Pred_Man" should be written as "masterpredman" instead
+// Note: Do not use characters such as # in the display_name. It will cause the item to be unable to be selected.
 
 /datum/gear/fluff
 	path = /obj/item
@@ -74,7 +75,7 @@
 	character_name = list("Aronai Sieyes")
 
 /datum/gear/fluff/aronai_ccmedjacket
-	path = /obj/item/clothing/suit/storage/service/sifguard/medical/command
+	path = /obj/item/clothing/suit/storage/solgov/service/sifguard/medical/command
 	display_name  = "centcom medical jacket"
 	description = "A medical jacket straight from Central Command."
 	slot = slot_wear_suit
@@ -87,6 +88,13 @@
 	description = "For the kobold's pet."
 	ckeywhitelist = list("azurachitin")
 	character_name = list("Azura Chitin")
+
+/datum/gear/fluff/aurora
+	path = /obj/item/clothing/accessory/solgov/department/security/aurora
+	display_name = "Aurora's keepsake"
+	description = "An old solcom sec insignia given to Aurora"
+	ckeywhitelist = list("storesund97")
+	character_name = list("Aurora")
 
 //  B CKEYS
 /datum/gear/fluff/yuuko_kimono
@@ -139,27 +147,6 @@
 /datum/gear/fluff/tasald_box
 	path = /obj/item/weapon/storage/box/fluff/tasald
 	display_name = "Tasald's Box"
-	ckeywhitelist = list("bwoincognito")
-	character_name = list("Tasald Corlethian")
-
-/datum/gear/fluff/tasald_cartographer_jumpsuit
-	path = /obj/item/clothing/under/solgov/utility/sifguard/officer/exploration
-	display_name = "Tasald's Cartographer's uniform - jumpsuit"
-	slot = slot_w_uniform
-	ckeywhitelist = list("bwoincognito")
-	character_name = list("Tasald Corlethian")
-
-/datum/gear/fluff/tasald_cartographer_jacket
-	path = /obj/item/clothing/suit/storage/service/sifguard/command
-	display_name = "Tasald's Cartographer's uniform - jacket"
-	slot = slot_wear_suit
-	ckeywhitelist = list("bwoincognito")
-	character_name = list("Tasald Corlethian")
-
-/datum/gear/fluff/tasald_cartographer_beret
-	path = /obj/item/clothing/head/beret/sol/expedition/command
-	display_name = "Tasald's Cartographer's uniform - beret"
-	slot = slot_head
 	ckeywhitelist = list("bwoincognito")
 	character_name = list("Tasald Corlethian")
 
@@ -674,6 +661,18 @@
 	ckeywhitelist = list("nickcrazy")
 	character_name = list("Damon Bones Xrim")
 
+/datum/gear/fluff/NDF_Medical_jacket
+	path = /obj/item/clothing/under/solgov/utility/sifguard/medical
+	display_name = "Ridge's Medical Jacket"
+	ckeywhitelist = list("nickcrazy")
+	character_name = list("Ridge")
+
+/datum/gear/fluff/damon_jacket
+	path = /obj/item/clothing/suit/storage/toggle/bomber/bombersec
+	display_name = "Damon's Bomber Jacket"
+	ckeywhitelist = list("nickcrazy")
+	character_name = list("Damon Bones Xrim")
+
 /datum/gear/fluff/kt_fishing_rod
 	path = /obj/item/weapon/material/fishing_rod/modern/strong
 	display_name = "K't's fishing rod"
@@ -730,6 +729,13 @@
 	display_name = "Jamie's Unity Medal"
 	ckeywhitelist = list("phoenixgamma7")
 	character_name = list("Jamie Findlay")
+
+/datum/gear/fluff/scylla_shades
+	path = /obj/item/clothing/glasses/fluff/scylla
+	display_name = "Scylla's Shades"
+	description = "These cherry-red cat-eye shades give you an inclination to eat chalk."
+	ckeywhitelist = list("pimientopyro")
+	character_name = list("Scylla Casmus")
 
 //  Q CKEYS
 
@@ -804,9 +810,16 @@
 
 /datum/gear/fluff/nthasd_modkit //Converts a Security suit's sprite
 	path = /obj/item/device/modkit_conversion/hasd
-	display_name = "NT-HASD #556's Modkit"
+	display_name = "NT-HASD 556's Modkit"
 	ckeywhitelist = list("silencedmp5a5")
 	character_name = list("NT-HASD #556")
+	allowed_roles = list("Colony Director", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective")
+
+/datum/gear/fluff/serdykov_modkit //Also converts a Security suit's sprite
+	path = /obj/item/device/modkit_conversion/fluff/serdykit
+	display_name = "Serdykov Antoz's Modkit"
+	ckeywhitelist = list("silencedmp5a5")
+	character_name = list("Serdykov Antoz")
 	allowed_roles = list("Colony Director", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective")
 
 /datum/gear/fluff/tasy_clownuniform
@@ -1107,6 +1120,19 @@
 	display_name = "Ali's Unity Medal"
 	ckeywhitelist = list("xonkon")
 	character_name = list("Ali")
+
+/datum/gear/fluff/zena_suit
+	path = /obj/item/clothing/suit/space/void/engineering/zena
+	display_name = "Zena's Shroud Suit"
+	ckeywhitelist = list("xonkon")
+	character_name = list("Zena Aviv")
+
+/datum/gear/fluff/zena_helmet
+	path = /obj/item/clothing/head/helmet/space/void/engineering/zena
+	display_name = "Zena's Shroud Helmet"
+	ckeywhitelist = list("xonkon")
+	character_name = list("Zena Aviv")
+
 
 //  Y CKEYS
 

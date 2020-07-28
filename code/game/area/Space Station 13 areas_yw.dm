@@ -116,6 +116,23 @@
 	name = "\improper Abandoned Office"
 	icon_state = "vacant_site"
 
+/area/civilian/atrium
+	name = "\improper Atrium"
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "atrium_central"
+
+/area/civilian/atrium/lower
+	name = "\improper Lower Atrium"
+	icon_state = "atrium_lower"
+
+/area/civilian/atrium/central
+	name = "\improper Central Atrium"
+
+/area/civilian/atrium/upper
+	name = "\improper Upper Atrium"
+	icon_state = "atrium_upper"
+
+
 //area/vacant/vacant_office
 //	name = "\improper Abandoned Office"
 //	icon_state = "vacant_site"
@@ -171,9 +188,20 @@
 /area/security/labor
 	name = "Labor camp access"
 	icon_state = "security"
+
 /area/medical/medbaymain
 	name = "\improper Medbay Primary Hallway"
 	icon_state = "medbay"
+	music = 'sound/ambience/signal.ogg'
+
+/area/medical/medbayupper
+	name = "\improper Medbay Upper Hallway"
+	icon_state = "medbay2"
+	music = 'sound/ambience/signal.ogg'
+
+/area/medical/medbayskybridge
+	name = "\improper Medbay/Departures Skybridge"
+	icon_state = "medbay4"
 	music = 'sound/ambience/signal.ogg'
 
 /area/security/shuttledock

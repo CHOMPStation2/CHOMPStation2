@@ -62,9 +62,9 @@
 #define PIPING_ONE_PER_TURF 2 				//can only be built if nothing else with this flag is on the tile already.
 #define PIPING_DEFAULT_LAYER_ONLY 4			//can only exist at PIPING_LAYER_DEFAULT
 #define PIPING_CARDINAL_AUTONORMALIZE 8		//north/south east/west doesn't matter, auto normalize on build.
-//YW Additions
+
 // Disposals Construction
-//
+// Future: Eliminate these type codes by adding disposals equivilent of pipe_state.
 #define DISPOSAL_PIPE_STRAIGHT 0
 #define DISPOSAL_PIPE_CORNER 1
 #define DISPOSAL_PIPE_JUNCTION 2
@@ -84,7 +84,7 @@
 #define DISPOSAL_SORT_NORMAL 0
 #define DISPOSAL_SORT_WILDCARD 1
 #define DISPOSAL_SORT_UNTAGGED 2
-//YW Additions end
+
 // Macro for easy use of boilerplate code for searching for a valid node connection.
 #define STANDARD_ATMOS_CHOOSE_NODE(node_num, direction) \
 	for(var/obj/machinery/atmospherics/target in get_step(src, direction)) { \

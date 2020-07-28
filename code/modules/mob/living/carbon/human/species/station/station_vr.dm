@@ -239,6 +239,7 @@
 	max_age = 110
 
 /datum/species/unathi
+	mob_size = MOB_MEDIUM //To allow normal mob swapping
 	spawn_flags = SPECIES_CAN_JOIN //Species_can_join is the only spawn flag all the races get, so that none of them will be whitelist only if whitelist is enabled.
 	icobase = 'icons/mob/human_races/r_lizard_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_lizard_vr.dmi'

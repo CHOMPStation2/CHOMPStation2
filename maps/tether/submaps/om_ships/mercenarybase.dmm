@@ -3272,15 +3272,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/mercbase/roid)
 "nm" = (
-/obj/machinery/cooker/oven,
+/obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/dark,
 /area/mercbase/roid)
 "nn" = (
-/obj/machinery/cooker/grill,
+/obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/dark,
 /area/mercbase/roid)
 "no" = (
-/obj/machinery/cooker/fryer,
+/obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/dark,
 /area/mercbase/roid)
 "np" = (
@@ -3686,7 +3686,6 @@
 /area/mercbase/engineering)
 "ov" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/insiderepair,
 /turf/simulated/floor/tiled/dark,
 /area/mercbase/medicalOR)
 "ow" = (

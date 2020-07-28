@@ -14,13 +14,13 @@
 	var/skin_danger = 0.2 // The multiplier for how effective the toxin is when making skin contact.
 
 /datum/reagent/toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	strength *= M.species.chem_strength_tox // YW ADD (e.g. basic toxin and 1.5 = 6 damage/u, but amatox or carptox are 15/u)
+	strength *= M.species.chem_strength_tox
 	if(strength && alien != IS_DIONA)
 		if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
 		if(alien == IS_SLIME)
 			removed *= 0.25 // Results in half the standard tox as normal. Prometheans are 'Small' for flaps.
 			if(dose >= 10)
-				M.nutrition += strength * removed //Body has to deal with the massive influx of toxins, rather than try using them to repair.
+				M.adjust_nutrition(strength * removed) // Body has to deal with the massive influx of toxins, rather than try using them to repair.
 			else
 				M.heal_organ_damage((10/strength) * removed, (10/strength) * removed) //Doses of toxins below 10 units, and 10 strength, are capable of providing useful compounds for repair.
 		M.adjustToxLoss(strength * removed)
@@ -397,7 +397,7 @@
 
 /datum/reagent/toxin/sifslurry/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA) // Symbiotic bacteria.
-		M.nutrition += strength * removed
+		M.adjust_nutrition(strength * removed)
 		return
 	else
 		M.add_modifier(/datum/modifier/slow_pulse, 30 SECONDS)
@@ -616,7 +616,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1 * M.species.chem_strength_tox // YW ADD
+	var/threshold = 1 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -664,7 +664,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1 * M.species.chem_strength_tox // YW ADD
+	var/threshold = 1 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -727,7 +727,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/drug_strength = 15 * M.species.chem_strength_tox // YW ADD
+	var/drug_strength = 15 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		drug_strength = drug_strength * 0.8
 
@@ -786,7 +786,7 @@
 /datum/reagent/cryptobiolin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	var/drug_strength = 4
+	var/drug_strength = 4 * M.species.chem_strength_tox
 
 	if(alien == IS_SKRELL)
 		drug_strength = drug_strength * 0.8
@@ -832,7 +832,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/drug_strength = 100
+	var/drug_strength = 100 * M.species.chem_strength_tox
 
 	if(alien == IS_SKRELL)
 		drug_strength *= 0.8
@@ -855,7 +855,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1
+	var/threshold = 1 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -909,7 +909,7 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 	if(alien == IS_DIONA)
 		return
 
-	var/drug_strength = 29
+	var/drug_strength = 29 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		drug_strength = drug_strength * 0.8
 	else

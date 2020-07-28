@@ -157,9 +157,12 @@ Nah
 /obj/machinery/pipedispenser/disposal/Topic(href, href_list)
 	if(href_list["makepipe"] || href_list["setlayer"] || href_list["makemeter"])	// Asking the disposal machine to do atmos stuff?
 		return 																		// That's a no no.
-	if(..())
+	if((. = ..()))
 		return
 	if(href_list["dmake"])
+		if(unwrenched || !usr.canmove || usr.stat || usr.restrained() || !in_range(loc, usr))
+			usr << browse(null, "window=pipedispenser")
+			return
 		if(!wait)
 			var/ptype = text2num(href_list["dmake"])
 			var/pdir = (href_list["dir"] ? text2num(href_list["dir"]) : NORTH)
@@ -169,8 +172,7 @@ Nah
 			C.add_fingerprint(usr)
 			C.update()
 			wait = 1
-			spawn(15)
-				wait = 0
+			VARSET_IN(src, wait, FALSE, 15)
 	return
 
 // adding a pipe dispensers that spawn unhooked from the ground

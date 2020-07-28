@@ -15,6 +15,9 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
+	TgsNew()
+	VgsNew() // VOREStation Edit - VGS
+
 	config.post_load()
 
 	if(config && config.server_name != null && config.server_suffix && world.port > 0)
@@ -25,7 +28,7 @@
 	// if(config && config.log_runtime)
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
-	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
+	GLOB.timezoneOffset = get_timezone_offset()
 
 	callHook("startup")
 	init_vchat()
@@ -62,7 +65,7 @@
 
 	master_controller = new /datum/controller/game_controller()
 
-	Master.Initialize(10, FALSE)
+	Master.Initialize(10, FALSE, TRUE)
 
 	spawn(1)
 		master_controller.setup()
@@ -82,6 +85,8 @@ var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
+	TGS_TOPIC
+	VGS_TOPIC // VOREStation Edit - VGS
 	log_topic("\"[T]\", from:[addr], master:[master], key:[key]")
 
 	if (T == "ping")
@@ -103,6 +108,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		s["version"] = game_version
 		s["mode"] = master_mode
 		s["respawn"] = config.abandon_allowed
+		s["persistance"] = config.persistence_enabled
 		s["enter"] = config.enter_allowed
 		s["vote"] = config.allow_vote_mode
 		s["ai"] = config.allow_ai
@@ -178,12 +184,12 @@ var/world_topic_spam_protect_time = world.timeofday
 				if(!positions["misc"])
 					positions["misc"] = list()
 				positions["misc"][name] = rank
-		
+
 		for(var/datum/data/record/t in data_core.hidden_general)
 			var/name = t.fields["name"]
 			var/rank = t.fields["rank"]
 			var/real_rank = make_list_rank(t.fields["real_rank"])
-			
+
 			var/datum/job/J = SSjob.get_job(real_rank)
 			if(J?.offmap_spawn)
 				if(!positions["off"])
@@ -211,8 +217,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		return list2params(positions)
 
 	else if(T == "revision")
-		if(revdata.revision)
-			return list2params(list(branch = revdata.branch, date = revdata.date, revision = revdata.revision))
+		if(GLOB.revdata.revision)
+			return list2params(list(branch = GLOB.revdata.branch, date = GLOB.revdata.date, revision = GLOB.revdata.revision))
 		else
 			return "unknown"
 
@@ -341,7 +347,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		to_chat(C,message)
 
 
-		for(var/client/A in admins)
+		for(var/client/A in GLOB.admins)
 			if(A != C)
 				to_chat(A,amessage)
 
@@ -405,10 +411,12 @@ var/world_topic_spam_protect_time = world.timeofday
 			to_world("<span class='boldannounce'>Rebooting world immediately due to host request</span>")
 	else
 		Master.Shutdown()	//run SS shutdowns
+		//processScheduler.stop() //VOREStation Removal
 		for(var/client/C in GLOB.clients)
 			if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 				C << link("byond://[config.server]")
 
+	TgsReboot()
 	log_world("World rebooted at [time_stamp()]")
 	..()
 
@@ -520,6 +528,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		features += "closed"
 
 	features += config.abandon_allowed ? "respawn" : "no respawn"
+
+	features += config.persistence_enabled ? "persistence enabled" : "persistence disabled"
 
 	if (config && config.allow_vote_mode)
 		features += "vote"
@@ -644,9 +654,14 @@ proc/establish_old_db_connection()
 /world/proc/max_z_changed()
 	if(!istype(GLOB.players_by_zlevel, /list))
 		GLOB.players_by_zlevel = new /list(world.maxz, 0)
+		GLOB.living_players_by_zlevel = new /list(world.maxz, 0)
+	
 	while(GLOB.players_by_zlevel.len < world.maxz)
 		GLOB.players_by_zlevel.len++
 		GLOB.players_by_zlevel[GLOB.players_by_zlevel.len] = list()
+		
+		GLOB.living_players_by_zlevel.len++
+		GLOB.living_players_by_zlevel[GLOB.living_players_by_zlevel.len] = list()
 
 // Call this to make a new blank z-level, don't modify maxz directly.
 /world/proc/increment_max_z()
@@ -668,14 +683,3 @@ proc/establish_old_db_connection()
 	SStimer?.reset_buckets()
 
 #undef FAILED_DB_CONNECTION_CUTOFF
-/world/New()
-	SERVER_TOOLS_ON_NEW
-	return ..()
-
-/world/Reboot(var/reason)
-	SERVER_TOOLS_ON_REBOOT
-	return ..(reason)
-
-/world/Topic(T, addr, master, key)
-	SERVER_TOOLS_ON_TOPIC
-	return ..(T, addr, master, key)

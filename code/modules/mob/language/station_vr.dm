@@ -22,7 +22,7 @@
 	desc = "The dominant language of the Sergal homeworld, Vilous. It consists of aggressive low-pitched hissing and throaty growling."
 	speech_verb = "snarls"
 	colour = "sergal"
-	key = "t"
+	key = "T"
 	syllables = list ("grr", "gah", "woof", "arf", "arra", "rah", "wor", "sarg")
 
 /datum/language/vulpkanin
@@ -117,6 +117,21 @@
 		"danya", "da", "mied", "kuz,", "zan", "das", "krem", "myka", "to", "st", "no", "na", "ni",
 		"ko", "ne", "en", "po", "tro", "ra", "li", "on", "byl", "cto", "eni", "ost", "ol", "ego",
 		"ver", "stv", "pro", "ski"
+	)
+
+/datum/language/drudakar
+	name = LANGUAGE_DRUDAKAR
+	desc = "The native language of the D'Rudak'Ar, a loosely tied together community of dragons and demi-dragons based in the Diul system. Features include many hard consonants and rolling 'r's."
+	speech_verb = "gaos"
+	ask_verb = "gaos"
+	exclaim_verb = "GAOS"
+	whisper_verb = "gaos"
+	colour = "drudakar"
+	key = "K"
+	syllables = list(
+		"gok", "rha", "rou", "gao", "do", "ra", "bo", "lah", "draz", "khi", "zah", "lah", "ora", "ille",
+		"ghlas", "ghlai", "tyur", "vah", "bao", "raag", "drag", "zhi", "dahl", "tiyr", "vahl", "nyem",
+		"roar", "hyaa", "ma", "ha", "ya", "shi", "yo", "go"
 	)
 
 /datum/language/unathi

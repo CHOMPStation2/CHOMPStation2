@@ -101,13 +101,13 @@
 		set_light(0)
 
 /obj/item/weapon/melee/baton/examine(mob/user)
-	if(!..(user, 1))
-		return
+	. = ..()
 
-	if(bcell)
-		to_chat(user, "<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>")
-	if(!bcell)
-		to_chat(user, "<span class='warning'>The baton does not have a power source installed.</span>")
+	if(Adjacent(user, src))
+		if(bcell)
+			. += "<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>"
+		if(!bcell)
+			. += "<span class='warning'>The baton does not have a power source installed.</span>"
 
 /obj/item/weapon/melee/baton/attackby(obj/item/weapon/W, mob/user)
 	if(use_external_power)
@@ -148,7 +148,7 @@
 	if(bcell && bcell.charge > hitcost)
 		status = !status
 		to_chat(user, "<span class='notice'>[src] is now [status ? "on" : "off"].</span>")
-		playsound(loc, "sparks", 75, 1, -1)
+		playsound(src, "sparks", 75, 1, -1)
 		update_icon()
 	else
 		status = 0
@@ -178,7 +178,7 @@
 		var/mob/living/carbon/human/H = target
 		affecting = H.get_organ(hit_zone)
 
-	if(user.a_intent == I_GRAB || user.a_intent == I_HURT) // YW Edit
+	if(user.a_intent == I_GRAB || user.a_intent == I_HURT)
 		. = ..()
 		//whacking someone causes a much poorer electrical contact than deliberately prodding them.
 		agony *= 0.5
@@ -193,7 +193,7 @@
 			target.visible_message("<span class='danger'>[target] has been prodded in the [affecting.name] with [src] by [user]!</span>")
 		else
 			target.visible_message("<span class='danger'>[target] has been prodded with [src] by [user]!</span>")
-		playsound(loc, 'sound/weapons/Egloves.ogg', 50, 1, -1)
+		playsound(src, 'sound/weapons/Egloves.ogg', 50, 1, -1)
 
 	//stun effects
 	if(status)

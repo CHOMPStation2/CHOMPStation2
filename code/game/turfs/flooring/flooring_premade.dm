@@ -324,6 +324,18 @@
 	icon_state = "lino"
 	initial_flooring = /decl/flooring/linoleum
 
+/turf/simulated/floor/wmarble
+	name = "marble"
+	icon = 'icons/turf/flooring/misc.dmi'
+	icon_state = "lightmarble"
+	initial_flooring = /decl/flooring/wmarble
+
+/turf/simulated/floor/bmarble
+	name = "marble"
+	icon = 'icons/turf/flooring/misc.dmi'
+	icon_state = "darkmarble"
+	initial_flooring = /decl/flooring/bmarble
+
 //ATMOS PREMADES
 /turf/simulated/floor/reinforced/airless
 	name = "vacuum floor"
@@ -387,8 +399,7 @@
 	name = "snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
-	outdoors = TRUE
-	movement_cost = 8
+	initial_flooring = /decl/flooring/snow
 	var/list/crossed_dirs = list()
 	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
 		'sound/effects/footstep/snow1.ogg',
@@ -405,6 +416,7 @@
 	name = "snow"
 	icon_state = "snownew"
 	movement_cost = 4
+	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
 
 /turf/simulated/floor/outdoors/snow/gravsnow
 	name = "snow"

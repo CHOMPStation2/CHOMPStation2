@@ -1,6 +1,12 @@
 /datum/design/item/autolathe/engineering						//Datum for object designs, used in construction	//IDs of that techs the object originated from and the minimum level requirements.
 	category = "Engineering"			//category item goes to
 
+/datum/design/item/autolathe/engineering/powercontrolmodule
+	name = "power control module"
+	id = "powercontrolmodule"
+	build_path = /obj/item/weapon/module/power_control
+	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)
+
 /datum/design/item/autolathe/engineering/airlockmodule
 	name = "airlock electronics"
 	id = "airlock_electronics"
@@ -84,13 +90,13 @@
 	id = "papershredder_electronics"
 	build_path = /obj/item/weapon/circuitboard/papershredder
 	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)
-
+/* Commented out for build errors
 /datum/design/item/autolathe/engineering/microwave
 	name = "microwave electronics"
 	id = "microwave_electronics"
 	build_path = /obj/item/weapon/circuitboard/microwave
 	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)
-
+*/
 /datum/design/item/autolathe/engineering/washing
 	name = "washing machine electronics"
 	id = "washingmachine_electronics"

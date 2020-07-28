@@ -284,7 +284,14 @@
 	ckeywhitelist = list("dawidoe")
 	character_name = list("Melissa Krutz")
 	allowed_roles = list("Security Officer")
-
+//Dopiotl
+//Jeanne Petite
+/datum/gear/fluff/jeans_chocolates
+	path = /obj/item/weapon/storage/secure/briefcase/fluff/jeans
+	display_name = "ChocoBox"
+	description = "M-M-M-M-MONEY SHOT"
+	ckeywhitelist = list("dopiotl")
+	character_name = list("Jeanne Petite")
 //dwaggy90
 //Saur Darastrix
 /datum/gear/fluff/saur_rig
@@ -620,6 +627,14 @@
 //  J CKEYS
 
 //  K CKEYS
+//kbraid
+//Eili
+/datum/gear/fluff/kbraidgoggles
+	path = /obj/item/clothing/glasses/fluff/avigoggles_yw
+	display_name = "K'braid Aviation Goggles"
+	description = "You're such a goggle head!"
+	ckeywhitelist = list("kbraid")
+	character_name = list("Eili")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 
 //  L CKEYS
 

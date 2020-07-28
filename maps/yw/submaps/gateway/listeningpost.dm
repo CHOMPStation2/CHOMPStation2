@@ -1,7 +1,10 @@
 /obj/effect/overmap/visitable/sector/cryogaia_gateway/listeningpost
 	initial_generic_waypoints = list("tether_excursion_listeningpost")
-	true_name = "Strange Asteroid"
-	true_desc = "Scans indicate this asteroid is emitting large amounts of radio-frequency energy, and has indications of life being present."
+	scanner_name = "Strange Asteroid"
+	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
+[i]Class[/i]: Installation
+[i]Transponder[/i]: None Detected
+[b]Notice[/b]: Emitting encrypted radio-frequency traffic"}
 
 /obj/item/weapon/paper/listneningpost/mission
 	name = "\improper Operation: Watchtower"
@@ -136,7 +139,7 @@
 
 /obj/item/weapon/paper/listneningpost/year2559/june
 	name = "\improper June 2559 Report"
-	info = {"The WW2 guy is dead. Went out in a blaze of glory killing Space Nazis. Mike and Dave are pissed.
+	info = {"The WW2 guy is dead. Went out in a blaze of glory killing Space Axis. Mike and Dave are pissed.
 			They apparently broke protocol and went to help the V.O.R.E. crew in the attack, and they want to
 			keep helping. I know it's unorthodox but I have to side with Mike and Dave on this one. Respectfully
 			command, if we do not neutralize this so-called Fourth Reich, we'll have an enemy much worse than
@@ -147,13 +150,13 @@
 	name = "\improper July 2559 Report"
 	info = {"USDF ships have been spotted in the area. Admiral Glenn Pink is on board. This guy went MIA almost
 			ten years ago, and now he's back? Why? Apparently he's got some kind of connection with V.O.R.E.'s
-			captain Ace. Sounds like they're gearing up to go kick some Nazi ass. It's like a bad action movie
+			captain Ace. Sounds like they're gearing up to go kick some Axis ass. It's like a bad action movie
 			plot. I don't know who this Admiral Pink is, but I guess Ace has at least a couple friends in high
 			places."}
 
 /obj/item/weapon/paper/listneningpost/year2559/august
 	name = "\improper August 2559 Report"
-	info = {"So, the reason Admiral Pink showed up in the last report was because these Space Nazis hijacked
+	info = {"So, the reason Admiral Pink showed up in the last report was because these Space Axis hijacked
 			one of his vessels; the USDF Jormungandr or something. Well, the crazy bastards took it back.
 			We overheard radio transmissions about some kind of huge mech, bigger than anything we've ever seen
 			in regard to exosuits. Tore up the crew bad. Killed a few, wounded all of them, but after-action

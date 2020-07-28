@@ -141,7 +141,7 @@
 		var/image/fruit_base = image('icons/obj/hydroponics_products.dmi',"[seed.get_trait(TRAIT_PRODUCT_ICON)]-product")
 		fruit_base.color = "[seed.get_trait(TRAIT_PRODUCT_COLOUR)]"
 		plant_icon.overlays |= fruit_base
-		if("[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf" in icon_states('icons/obj/hydroponics_products.dmi'))
+		if("[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf" in cached_icon_states('icons/obj/hydroponics_products.dmi'))
 			var/image/fruit_leaves = image('icons/obj/hydroponics_products.dmi',"[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf")
 			fruit_leaves.color = "[seed.get_trait(TRAIT_PLANT_COLOUR)]"
 			plant_icon.overlays |= fruit_leaves
@@ -164,7 +164,7 @@
 
 			M.stop_pulling()
 			to_chat(M, "<span class='notice'>You slipped on the [name]!</span>")
-			playsound(src.loc, 'sound/misc/slip.ogg', 50, 1, -3)
+			playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
 			M.Stun(8)
 			M.Weaken(5)
 			seed.thrown_at(src,M)
@@ -200,7 +200,7 @@
 			else if(seed.chems)
 				if(W.sharp && W.edge && !isnull(seed.chems["woodpulp"]))
 					user.show_message("<span class='notice'>You make planks out of \the [src]!</span>", 1)
-					playsound(loc, 'sound/effects/woodcutting.ogg', 50, 1)
+					playsound(src, 'sound/effects/woodcutting.ogg', 50, 1)
 					var/flesh_colour = seed.get_trait(TRAIT_FLESH_COLOUR)
 					if(!flesh_colour) flesh_colour = seed.get_trait(TRAIT_PRODUCT_COLOUR)
 					for(var/i=0,i<2,i++)

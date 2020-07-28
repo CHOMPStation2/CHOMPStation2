@@ -184,7 +184,7 @@
 /obj/item/weapon/gun/energy/locked/special_check(mob/user)
 	if(locked)
 		var/turf/T = get_turf(src)
-		if(T.z in using_map.map_levels)
+		if(T.z in using_map.station_levels)
 			to_chat(user, "<span class='warning'>The safety device prevents the gun from firing this close to the facility.</span>")
 			return 0
 	return ..()
@@ -223,7 +223,7 @@
 	while(recharging)
 		if(!do_after(user, 10, src))
 			break
-		playsound(get_turf(src),'sound/items/change_drill.ogg',25,1)
+		playsound(src,'sound/items/change_drill.ogg',25,1)
 		if(power_supply.give(phase_power) < phase_power)
 			break
 

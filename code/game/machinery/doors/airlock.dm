@@ -81,7 +81,7 @@
 				if(do_after(user,5 SECONDS,src))
 					visible_message("<span class='danger'>\The [user] forces \the [src] open, sparks flying from its electronics!</span>")
 					src.do_animate("spark")
-					playsound(src.loc, 'sound/machines/airlock_creaking.ogg', 100, 1)
+					playsound(src, 'sound/machines/airlock_creaking.ogg', 100, 1)
 					src.locked = 0
 					src.welded = 0
 					update_icon()
@@ -90,7 +90,7 @@
 			else if(src.density)
 				visible_message("<span class='alium'>\The [user] begins forcing \the [src] open!</span>")
 				if(do_after(user, 5 SECONDS,src))
-					playsound(src.loc, 'sound/machines/airlock_creaking.ogg', 100, 1)
+					playsound(src, 'sound/machines/airlock_creaking.ogg', 100, 1)
 					visible_message("<span class='danger'>\The [user] forces \the [src] open!</span>")
 					open(1)
 			else
@@ -390,7 +390,8 @@
 	else if(electrified_until > 0 && world.time >= electrified_until)
 		electrify(0)
 
-	..()
+	if (..() == PROCESS_KILL && !(main_power_lost_until > 0 || backup_power_lost_until > 0 || electrified_until > 0))
+		. = PROCESS_KILL
 
 /obj/machinery/door/airlock/uranium/process()
 	if(world.time > last_event+20)
@@ -542,10 +543,6 @@ About the new airlock wires panel:
 		return 1
 	return 0
 
-/obj/machinery/door/airlock/proc/isWireCut(var/wireIndex)
-	// You can find the wires in the datum folder.
-	return wires.IsIndexCut(wireIndex)
-
 /obj/machinery/door/airlock/proc/canAIControl()
 	return ((src.aiControlDisabled!=1) && (!src.isAllPowerLoss()));
 
@@ -558,7 +555,7 @@ About the new airlock wires panel:
 	return (src.main_power_lost_until==0 || src.backup_power_lost_until==0)
 
 /obj/machinery/door/airlock/requiresID()
-	return !(src.isWireCut(AIRLOCK_WIRE_IDSCAN) || aiDisabledIdScanner)
+	return !(wires.is_cut(WIRE_IDSCAN) || aiDisabledIdScanner)
 
 /obj/machinery/door/airlock/proc/isAllPowerLoss()
 	if(stat & (NOPOWER|BROKEN))
@@ -568,10 +565,10 @@ About the new airlock wires panel:
 	return 0
 
 /obj/machinery/door/airlock/proc/mainPowerCablesCut()
-	return src.isWireCut(AIRLOCK_WIRE_MAIN_POWER1) || src.isWireCut(AIRLOCK_WIRE_MAIN_POWER2)
+	return wires.is_cut(WIRE_MAIN_POWER1) || wires.is_cut(WIRE_MAIN_POWER2)
 
 /obj/machinery/door/airlock/proc/backupPowerCablesCut()
-	return src.isWireCut(AIRLOCK_WIRE_BACKUP_POWER1) || src.isWireCut(AIRLOCK_WIRE_BACKUP_POWER2)
+	return wires.is_cut(WIRE_BACKUP_POWER1) || wires.is_cut(WIRE_BACKUP_POWER2)
 
 /obj/machinery/door/airlock/proc/loseMainPower()
 	main_power_lost_until = mainPowerCablesCut() ? -1 : world.time + SecondsToTicks(60)
@@ -579,6 +576,9 @@ About the new airlock wires panel:
 	// If backup power is permanently disabled then activate in 10 seconds if possible, otherwise it's already enabled or a timer is already running
 	if(backup_power_lost_until == -1 && !backupPowerCablesCut())
 		backup_power_lost_until = world.time + SecondsToTicks(10)
+
+	if(main_power_lost_until > 0 || backup_power_lost_until > 0)
+		START_MACHINE_PROCESSING(src)
 
 	// Disable electricity if required
 	if(electrified_until && isAllPowerLoss())
@@ -588,6 +588,9 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/proc/loseBackupPower()
 	backup_power_lost_until = backupPowerCablesCut() ? -1 : world.time + SecondsToTicks(60)
+
+	if(backup_power_lost_until > 0)
+		START_MACHINE_PROCESSING(src)
 
 	// Disable electricity if required
 	if(electrified_until && isAllPowerLoss())
@@ -613,7 +616,7 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/proc/electrify(var/duration, var/feedback = 0)
 	var/message = ""
-	if(src.isWireCut(AIRLOCK_WIRE_ELECTRIFY) && arePowerSystemsOn())
+	if(wires.is_cut(WIRE_ELECTRIFY) && arePowerSystemsOn())
 		message = text("The electrification wire is cut - Door permanently electrified.")
 		src.electrified_until = -1
 	else if(duration && !arePowerSystemsOn())
@@ -631,12 +634,15 @@ About the new airlock wires panel:
 		message = "The door is now electrified [duration == -1 ? "permanently" : "for [duration] second\s"]."
 		src.electrified_until = duration == -1 ? -1 : world.time + SecondsToTicks(duration)
 
+	if(electrified_until > 0)
+		START_MACHINE_PROCESSING(src)
+
 	if(feedback && message)
 		to_chat(usr,message)
 
 /obj/machinery/door/airlock/proc/set_idscan(var/activate, var/feedback = 0)
 	var/message = ""
-	if(src.isWireCut(AIRLOCK_WIRE_IDSCAN))
+	if(wires.is_cut(WIRE_IDSCAN))
 		message = "The IdScan wire is cut - IdScan feature permanently disabled."
 	else if(activate && src.aiDisabledIdScanner)
 		src.aiDisabledIdScanner = 0
@@ -651,7 +657,7 @@ About the new airlock wires panel:
 /obj/machinery/door/airlock/proc/set_safeties(var/activate, var/feedback = 0)
 	var/message = ""
 	// Safeties!  We don't need no stinking safeties!
-	if (src.isWireCut(AIRLOCK_WIRE_SAFETY))
+	if (wires.is_cut(WIRE_SAFETY))
 		message = text("The safety wire is cut - Cannot enable safeties.")
 	else if (!activate && src.safe)
 		safe = 0
@@ -869,7 +875,7 @@ About the new airlock wires panel:
 			if(!backup_power_lost_until)
 				src.loseBackupPower()
 		if("bolts")
-			if(src.isWireCut(AIRLOCK_WIRE_DOOR_BOLTS))
+			if(wires.is_cut(WIRE_DOOR_BOLTS))
 				to_chat(usr, "The door bolt control wire is cut - Door bolts permanently dropped.")
 			else if(activate && src.lock())
 				to_chat(usr, "The door bolts have been dropped.")
@@ -892,7 +898,7 @@ About the new airlock wires panel:
 			set_safeties(!activate, 1)
 		if("timing")
 			// Door speed control
-			if(src.isWireCut(AIRLOCK_WIRE_SPEED))
+			if(wires.is_cut(WIRE_SPEED))
 				to_chat(usr, "The timing wire is cut - Cannot alter timing.")
 			else if (activate && src.normalspeed)
 				normalspeed = 0
@@ -900,7 +906,7 @@ About the new airlock wires panel:
 				normalspeed = 1
 		if("lights")
 			// Bolt lights
-			if(src.isWireCut(AIRLOCK_WIRE_LIGHT))
+			if(wires.is_cut(WIRE_BOLT_LIGHT))
 				to_chat(usr, "The bolt lights wire is cut - The door bolt lights are permanently disabled.")
 			else if (!activate && src.lights)
 				lights = 0
@@ -936,7 +942,7 @@ About the new airlock wires panel:
 				src.welded = 1
 			else
 				src.welded = null
-			playsound(src.loc, C.usesound, 75, 1)
+			playsound(src, C.usesound, 75, 1)
 			src.update_icon()
 			return
 		else
@@ -1056,9 +1062,9 @@ About the new airlock wires panel:
 
 	//if the door is unpowered then it doesn't make sense to hear the woosh of a pneumatic actuator
 	if(arePowerSystemsOn())
-		playsound(src.loc, open_sound_powered, 50, 1)
+		playsound(src, open_sound_powered, 50, 1)
 	else
-		playsound(src.loc, open_sound_unpowered, 75, 1)
+		playsound(src, open_sound_unpowered, 75, 1)
 
 	if(src.closeOther != null && istype(src.closeOther, /obj/machinery/door/airlock/) && !src.closeOther.density)
 		src.closeOther.close()
@@ -1066,7 +1072,7 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/can_open(var/forced=0)
 	if(!forced)
-		if(!arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
+		if(!arePowerSystemsOn() || wires.is_cut(WIRE_OPEN_DOOR))
 			return 0
 
 	if(locked || welded)
@@ -1079,7 +1085,7 @@ About the new airlock wires panel:
 
 	if(!forced)
 		//despite the name, this wire is for general door control.
-		if(!arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
+		if(!arePowerSystemsOn() || wires.is_cut(WIRE_OPEN_DOOR))
 			return	0
 
 	return ..()
@@ -1140,9 +1146,9 @@ About the new airlock wires panel:
 			for(var/atom/movable/AM in turf)
 				if(AM.blocks_airlock())
 					if(!has_beeped)
-						playsound(src.loc, 'sound/machines/buzz-two.ogg', 50, 0)
+						playsound(src, 'sound/machines/buzz-two.ogg', 50, 0)
 						has_beeped = 1
-					close_door_at = world.time + 6
+					autoclose_in(6)
 					return
 
 	for(var/turf/turf in locs)
@@ -1153,15 +1159,14 @@ About the new airlock wires panel:
 	use_power(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
 	has_beeped = 0
 	if(arePowerSystemsOn())
-		playsound(src.loc, close_sound_powered, 50, 1)
+		playsound(src, close_sound_powered, 50, 1)
 	else
-		playsound(src.loc, open_sound_unpowered, 75, 1)
+		playsound(src, open_sound_unpowered, 75, 1)
 	for(var/turf/turf in locs)
 		var/obj/structure/window/killthis = (locate(/obj/structure/window) in turf)
 		if(killthis)
 			killthis.ex_act(2)//Smashin windows
-	..()
-	return
+	return ..()
 
 /obj/machinery/door/airlock/proc/lock(var/forced=0)
 	if(locked)
@@ -1181,7 +1186,7 @@ About the new airlock wires panel:
 		return
 
 	if (!forced)
-		if(operating || !src.arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_DOOR_BOLTS)) return
+		if(operating || !src.arePowerSystemsOn() || wires.is_cut(WIRE_DOOR_BOLTS)) return
 
 	src.locked = 0
 	playsound(src, bolt_up_sound, 30, 0, 3)

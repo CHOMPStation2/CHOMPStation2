@@ -24,3 +24,12 @@
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Blueshield armaments"
 	access = access_blueshield
+
+/datum/supply_pack/misc/bluespaceradioyw
+	name = "Bluespace Radio Packs"
+	contains = list(
+			 /obj/item/device/bluespaceradio/cryogaia_prelinked = 2
+			)
+	cost = 75
+	containertype = /obj/structure/closet/crate
+	containername = "Bluespace Radio Packs"

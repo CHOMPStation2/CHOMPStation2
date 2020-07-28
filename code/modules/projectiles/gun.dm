@@ -51,6 +51,7 @@
 	zoomdevicename = "scope"
 	drop_sound = 'sound/items/drop/gun.ogg'
 
+	var/recoil_mode = 1 //0 = no micro recoil, 1 = regular, anything higher than 1 is a multiplier //YAWN Addition, ported from CHOMP
 	var/automatic = 0
 	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
@@ -434,6 +435,20 @@
 		else
 			set_light(0)
 		//VOREStation Edit End
+		
+	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
+	if(recoil_mode && iscarbon(user) && !istype(src,/obj/item/weapon/gun/energy))
+		var/mob/living/carbon/nerd = user
+		var/mysize = nerd.size_multiplier
+		if(mysize <= 0.5)
+			nerd.Weaken(1*recoil_mode)
+			if(!istype(src,/obj/item/weapon/gun/energy))
+				nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
+				to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
+			else
+				to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
+				
+	//YAWNEDIT: Knockdown code end
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/weapon/gun/proc/Fire_userless(atom/target)
@@ -528,7 +543,7 @@
 		user.visible_message("*click click*", "<span class='danger'>*click*</span>")
 	else
 		src.visible_message("*click click*")
-	playsound(src.loc, 'sound/weapons/empty.ogg', 100, 1)
+	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
 
 // Called when the user is about to fire.
 // Moved from handle_post_fire() because if using a laser, the message for when someone got shot would show up before the firing message.
@@ -678,9 +693,9 @@
 		return
 
 	if(silenced)
-		playsound(user, shot_sound, 10, 1)
+		playsound(src, shot_sound, 10, 1)
 	else
-		playsound(user, shot_sound, 50, 1)
+		playsound(src, shot_sound, 50, 1)
 
 //Suicide handling.
 /obj/item/weapon/gun/var/mouthshoot = 0 //To stop people from suiciding twice... >.>
@@ -745,7 +760,7 @@
 	. = ..()
 	if(firemodes.len > 1)
 		var/datum/firemode/current_mode = firemodes[sel_mode]
-		to_chat(user, "The fire selector is set to [current_mode.name].")
+		. += "The fire selector is set to [current_mode.name]."
 
 /obj/item/weapon/gun/proc/switch_firemodes(mob/user)
 	if(firemodes.len <= 1)

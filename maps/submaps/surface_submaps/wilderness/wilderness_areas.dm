@@ -5,6 +5,7 @@
 	ambience = AMBIENCE_RUINS
 	secret_name = TRUE
 	forbid_events = TRUE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/submap/event //To be used for Events not for regular PoIs
 	name = "Unknown"
@@ -95,6 +96,10 @@
 	name = "POI - Lost Government Patrol"
 	ambience = AMBIENCE_GHOSTLY
 
+/area/submap/KururakDen
+	name = "POI - Kururak Den"
+	ambience = AMBIENCE_SIF
+
 /area/submap/DecoupledEngine
 	name = "POI - Decoupled Engine"
 	ambience = AMBIENCE_FOREBODING
@@ -138,3 +143,7 @@
 /area/submap/ChemSpill2
 	name = "POI - Acrid Lake"
 	ambience = AMBIENCE_FOREBODING
+
+/area/submap/FrostflyNest
+	name = "POI - Frostfly Nest"
+	ambience = AMBIENCE_SIF

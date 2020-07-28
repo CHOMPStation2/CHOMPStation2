@@ -42,7 +42,7 @@
 	//Lighting related
 	luminosity = !(dynamic_lighting)
 	has_opaque_atom |= (opacity)
-	
+
 	//Pathfinding related
 	if(movement_cost && pathweight == 1) // This updates pathweight automatically.
 		pathweight = movement_cost
@@ -142,44 +142,6 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 			sleep(2)
 			O.update_transform()
 
-var/const/enterloopsanity = 100
-/turf/Entered(atom/atom as mob|obj)
-
-	if(movement_disabled)
-		to_chat(usr, "<span class='warning'>Movement is admin-disabled.</span>") //This is to identify lag problems
-		return
-	..()
-
-	if(!istype(atom, /atom/movable))
-		return
-
-	var/atom/movable/A = atom
-
-	if(ismob(A))
-		var/mob/M = A
-		if(!M.lastarea)
-			M.lastarea = get_area(M.loc)
-		if(M.lastarea.has_gravity == 0)
-			inertial_drift(M)
-		if(M.flying) //VORESTATION Edit Start. This overwrites the above is_space without touching it all that much.
-			M.make_floating(1) //VOREStation Edit End.
-		else if(!is_space())
-			M.inertia_dir = 0
-			M.make_floating(0)
-		if(isliving(M))
-			var/mob/living/L = M
-			L.handle_footstep(src)
-	..()
-	var/objects = 0
-	if(A && (A.flags & PROXMOVE))
-		for(var/atom/movable/thing in range(1))
-			if(objects++ > enterloopsanity) break
-			spawn(0)
-				if(A) //Runtime prevention
-					A.HasProximity(thing, 1)
-					if ((thing && A) && (thing.flags & PROXMOVE))
-						thing.HasProximity(A, 1)
-
 /turf/CanPass(atom/movable/mover, turf/target)
 	if(!target)
 		return FALSE
@@ -247,22 +209,6 @@ var/const/enterloopsanity = 100
 
 /turf/proc/is_plating()
 	return 0
-
-/turf/proc/inertial_drift(atom/movable/A as mob|obj)
-	if(!(A.last_move))	return
-	if((istype(A, /mob/) && src.x > 1 && src.x < (world.maxx) && src.y > 1 && src.y < (world.maxy)))
-		var/mob/M = A
-		if(M.Process_Spacemove(1))
-			M.inertia_dir  = 0
-			return
-		spawn(5)
-			if((M && !(M.anchored) && !(M.pulledby) && (M.loc == src)))
-				if(M.inertia_dir)
-					step(M, M.inertia_dir)
-					return
-				M.inertia_dir = M.last_move
-				step(M, M.inertia_dir)
-	return
 
 /turf/proc/levelupdate()
 	for(var/obj/O in src)
@@ -337,6 +283,47 @@ var/const/enterloopsanity = 100
 			M.turf_collision(src, speed)
 
 /turf/AllowDrop()
+	return TRUE
+
+/turf/proc/can_engrave()
+	return FALSE
+
+/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool)
+
+	if(!tool.sharp || !can_engrave())
+		return FALSE
+
+	if(jobban_isbanned(vandal, "Graffiti"))
+		to_chat(vandal, SPAN_WARNING("You are banned from leaving persistent information across rounds."))
+		return
+
+	var/too_much_graffiti = 0
+	for(var/obj/effect/decal/writing/W in src)
+		too_much_graffiti++
+	if(too_much_graffiti >= 5)
+		to_chat(vandal, "<span class='warning'>There's too much graffiti here to add more.</span>")
+		return FALSE
+
+	var/message = sanitize(input("Enter a message to engrave.", "Graffiti") as null|text, trim = TRUE)
+	if(!message)
+		return FALSE
+
+	if(!vandal || vandal.incapacitated() || !Adjacent(vandal) || !tool.loc == vandal)
+		return FALSE
+
+	vandal.visible_message("<span class='warning'>\The [vandal] begins carving something into \the [src].</span>")
+
+	if(!do_after(vandal, max(20, length(message)), src))
+		return FALSE
+
+	vandal.visible_message("<span class='danger'>\The [vandal] carves some graffiti into \the [src].</span>")
+	var/obj/effect/decal/writing/graffiti = new(src)
+	graffiti.message = message
+	graffiti.author = vandal.ckey
+
+	if(lowertext(message) == "elbereth")
+		to_chat(vandal, "<span class='notice'>You feel much safer.</span>")
+
 	return TRUE
 
 // Returns false if stepping into a tile would cause harm (e.g. open space while unable to fly, water tile while a slime, lava, etc).

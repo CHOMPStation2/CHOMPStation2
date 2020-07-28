@@ -11,10 +11,10 @@ var/global/list/default_internal_channels = list(
 	num2text(MED_I_FREQ)=list(access_medical_equip),
 	num2text(SEC_FREQ) = list(access_security),
 	num2text(SEC_I_FREQ)=list(access_security),
-	num2text(SCI_FREQ) = list(access_tox, access_robotics, access_xenobiology, access_explorer),
+	num2text(SCI_FREQ) = list(access_tox, access_robotics, access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo, access_mining_station),
 	num2text(SRV_FREQ) = list(access_janitor, access_library, access_hydroponics, access_bar, access_kitchen),
-	num2text(EXP_FREQ) = list(access_explorer, access_pilot, access_rd)
+	num2text(EXP_FREQ) = list(access_explorer, access_pilot)
 )
 
 var/global/list/default_medbay_channels = list(
@@ -155,8 +155,8 @@ var/global/list/default_medbay_channels = list(
 	data["freq"] = format_frequency(frequency)
 	data["rawfreq"] = num2text(frequency)
 
-	data["mic_cut"] = (wires.IsIndexCut(WIRE_TRANSMIT) || wires.IsIndexCut(WIRE_SIGNAL))
-	data["spk_cut"] = (wires.IsIndexCut(WIRE_RECEIVE) || wires.IsIndexCut(WIRE_SIGNAL))
+	data["mic_cut"] = (wires.is_cut(WIRE_RADIO_TRANSMIT) || wires.is_cut(WIRE_RADIO_SIGNAL))
+	data["spk_cut"] = (wires.is_cut(WIRE_RADIO_RECEIVER) || wires.is_cut(WIRE_RADIO_SIGNAL))
 
 	var/list/chanlist = list_channels(user)
 	if(islist(chanlist) && chanlist.len)
@@ -215,12 +215,6 @@ var/global/list/default_medbay_channels = list(
 /mob/observer/dead/has_internal_radio_channel_access(var/list/req_one_accesses)
 	return can_admin_interact()
 
-/obj/item/device/radio/proc/text_wires()
-	if (b_stat)
-		return wires.GetInteractWindow()
-	return
-
-
 /obj/item/device/radio/proc/text_sec_channel(var/chan_name, var/chan_stat)
 	var/list = !!(chan_stat&FREQ_LISTENING)!=0
 	return {"
@@ -229,10 +223,10 @@ var/global/list/default_medbay_channels = list(
 			"}
 
 /obj/item/device/radio/proc/ToggleBroadcast()
-	broadcasting = !broadcasting && !(wires.IsIndexCut(WIRE_TRANSMIT) || wires.IsIndexCut(WIRE_SIGNAL))
+	broadcasting = !broadcasting && !(wires.is_cut(WIRE_RADIO_TRANSMIT) || wires.is_cut(WIRE_RADIO_SIGNAL))
 
 /obj/item/device/radio/proc/ToggleReception()
-	listening = !listening && !(wires.IsIndexCut(WIRE_RECEIVE) || wires.IsIndexCut(WIRE_SIGNAL))
+	listening = !listening && !(wires.is_cut(WIRE_RADIO_RECEIVER) || wires.is_cut(WIRE_RADIO_SIGNAL))
 
 /obj/item/device/radio/CanUseTopic()
 	if(!on)
@@ -284,10 +278,13 @@ var/global/list/default_medbay_channels = list(
 	if(.)
 		SSnanoui.update_uis(src)
 
+GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 /obj/item/device/radio/proc/autosay(var/message, var/from, var/channel, var/list/zlevels) //BS12 EDIT
+	if(!GLOB.autospeaker)
+		return
 	var/datum/radio_frequency/connection = null
 	if(channel && channels && channels.len > 0)
-		if (channel == "department")
+		if(channel == "department")
 			channel = channels[1]
 		connection = secure_radio_connections[channel]
 	else
@@ -299,15 +296,14 @@ var/global/list/default_medbay_channels = list(
 	if(!LAZYLEN(zlevels))
 		zlevels = list(0)
 
-	var/static/mob/living/silicon/ai/announcer/A = new /mob/living/silicon/ai/announcer(src, null, null, 1)
-	A.SetName(from)
-	Broadcast_Message(connection, A,
+	GLOB.autospeaker.SetName(from)
+	Broadcast_Message(connection, GLOB.autospeaker,
 						0, "*garbled automated announcement*", src,
-						message, from, "Automated Announcement", from, "synthesized voice",
-						4, 0, zlevels, connection.frequency, "states")
+						message_to_multilingual(message), from, "Automated Announcement", from, "synthesized voice",
+						DATA_FAKE, 0, zlevels, connection.frequency, "states")
 
 // Interprets the message mode when talking into a radio, possibly returning a connection datum
-/obj/item/device/radio/proc/handle_message_mode(mob/living/M as mob, message, message_mode)
+/obj/item/device/radio/proc/handle_message_mode(mob/living/M as mob, list/message_pieces, message_mode)
 	// If a channel isn't specified, send to common.
 	if(!message_mode || message_mode == "headset")
 		return radio_connection
@@ -321,20 +317,21 @@ var/global/list/default_medbay_channels = list(
 			return secure_radio_connections[message_mode]
 
 	// If we were to send to a channel we don't have, drop it.
-	return null
+	return RADIO_CONNECTION_FAIL
 
-/obj/item/device/radio/talk_into(mob/living/M as mob, message, channel, var/verb = "says", var/datum/language/speaking = null)
-	if(!on) return FALSE // the device has to be on
+/obj/item/device/radio/talk_into(mob/living/M as mob, list/message_pieces, channel, var/verb = "says")
+	if(!on)
+		return FALSE // the device has to be on
 	//  Fix for permacell radios, but kinda eh about actually fixing them.
-	if(!M || !message) return FALSE
+	if(!M || !message_pieces)
+		return FALSE
 
-	if(speaking && (speaking.flags & (SIGNLANG|NONVERBAL))) return FALSE
-
-	if(istype(M)) M.trigger_aiming(TARGET_CAN_RADIO)
+	if(istype(M))
+		M.trigger_aiming(TARGET_CAN_RADIO)
 
 	//  Uncommenting this. To the above comment:
 	// 	The permacell radios aren't suppose to be able to transmit, this isn't a bug and this "fix" is just making radio wires useless. -Giacom
-	if(wires.IsIndexCut(WIRE_TRANSMIT)) // The device has to have all its wires and shit intact
+	if(wires.is_cut(WIRE_RADIO_TRANSMIT)) // The device has to have all its wires and shit intact
 		return FALSE
 
 	if(!radio_connection)
@@ -352,11 +349,18 @@ var/global/list/default_medbay_channels = list(
 	*/
 
 	//#### Grab the connection datum ####//
-	var/datum/radio_frequency/connection = handle_message_mode(M, message, channel)
-	if (!istype(connection))
+	var/message_mode = handle_message_mode(M, message_pieces, channel)
+	switch(message_mode)
+		if(RADIO_CONNECTION_FAIL)
+			return FALSE
+		if(RADIO_CONNECTION_NON_SUBSPACE)
+			return TRUE
+
+	if(!istype(message_mode, /datum/radio_frequency))
 		return FALSE
 
 	var/pos_z = get_z(src)
+	var/datum/radio_frequency/connection = message_mode
 
 	//#### Tagging the signal with all appropriate identity values ####//
 
@@ -417,7 +421,7 @@ var/global/list/default_medbay_channels = list(
 		"name" = displayname,	// the mob's display name
 		"job" = jobname,		// the mob's job
 		"key" = mobkey,			// the mob's key
-		"vmessage" = pick(M.speak_emote), // the message to display if the voice wasn't understood
+		"vmessage" = message_to_multilingual(pick(M.speak_emote)), // the message to display if the voice wasn't understood
 		"vname" = M.voice_name, // the name to display if the voice wasn't understood
 		"vmask" = voicemask,	// 1 if the mob is using a voice gas mask
 
@@ -426,7 +430,7 @@ var/global/list/default_medbay_channels = list(
 
 		// Other tags:
 		"compression" = rand(45,50), // compressed radio signal
-		"message" = message, // the actual sent message
+		"message" = message_pieces, // the actual sent message
 		"connection" = connection, // the radio connection to use
 		"radio" = src, // stores the radio used for transmission
 		"slow" = 0, // how much to sleep() before broadcasting - simulates net lag
@@ -435,7 +439,6 @@ var/global/list/default_medbay_channels = list(
 		"server" = null, // the last server to log this signal
 		"reject" = 0,	// if nonzero, the signal will not be accepted by any broadcasting machinery
 		"level" = pos_z, // The source's z level
-		"language" = speaking,
 		"verb" = verb
 	)
 	signal.frequency = connection.frequency // Quick frequency set
@@ -472,7 +475,6 @@ var/global/list/default_medbay_channels = list(
 		signal.transmission_method = TRANSMISSION_SUBSPACE
 
 		//#### Sending the signal to all subspace receivers ####//
-
 		for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
 			R.receive_signal(signal)
 
@@ -487,7 +489,7 @@ var/global/list/default_medbay_channels = list(
 		else if(adhoc_fallback) //Less huzzah, we have to fallback
 			to_chat(loc, "<span class='warning'>\The [src] pings as it falls back to local radio transmission.</span>")
 			subspace_transmission = FALSE
-
+		
 		else //Oh well
 			return FALSE
 
@@ -520,22 +522,20 @@ var/global/list/default_medbay_channels = list(
 
 	//Nothing handled any sort of remote radio-ing and returned before now, just squawk on this zlevel.
 	return Broadcast_Message(connection, M, voicemask, pick(M.speak_emote),
-		src, message, displayname, jobname, real_name, M.voice_name,
-		filter_type, signal.data["compression"], using_map.get_map_levels(pos_z), connection.frequency, verb, speaking)
+		src, message_pieces, displayname, jobname, real_name, M.voice_name,
+		filter_type, signal.data["compression"], using_map.get_map_levels(pos_z), connection.frequency, verb)
 
 
-/obj/item/device/radio/hear_talk(mob/M as mob, msg, var/verb = "says", var/datum/language/speaking = null)
-	if (broadcasting)
+/obj/item/device/radio/hear_talk(mob/M as mob, list/message_pieces, var/verb = "says")
+	if(broadcasting)
 		if(get_dist(src, M) <= canhear_range)
-			talk_into(M, msg,null,verb,speaking)
-
-
+			talk_into(M, message_pieces, null, verb)
 
 /obj/item/device/radio/proc/receive_range(freq, level)
 	// check if this radio can receive on the given frequency, and if so,
 	// what the range is in which mobs will hear the radio
 	// returns: -1 if can't receive, range otherwise
-	if(wires.IsIndexCut(WIRE_RECEIVE))
+	if(wires.is_cut(WIRE_RADIO_RECEIVER))
 		return -1
 	if(!listening)
 		return -1
@@ -577,12 +577,12 @@ var/global/list/default_medbay_channels = list(
 
 /obj/item/device/radio/examine(mob/user)
 	. = ..()
-	if ((in_range(src, user) || loc == user))
-		if (b_stat)
-			user.show_message("<span class='notice'>\The [src] can be attached and modified!</span>")
+	
+	if((in_range(src, user) || loc == user))
+		if(b_stat)
+			. += "<span class='notice'>\The [src] can be attached and modified!</span>"
 		else
-			user.show_message("<span class='notice'>\The [src] can not be modified or attached!</span>")
-	return
+			. += "<span class='notice'>\The [src] can not be modified or attached!</span>"
 
 /obj/item/device/radio/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	..()

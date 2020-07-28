@@ -535,6 +535,37 @@
 	desc = "A red and white dress themed after some winter holidays. Tastefully festive!"
 	icon_state = "festivedress"
 
+/obj/item/clothing/under/dress/revealingdress
+	name = "revealing dress"
+	desc = "A very revealing black and blue dress. Is this work appropriate?"
+	icon_state = "revealingdress"
+	index = 1
+
+/obj/item/clothing/under/dress/gothic
+	name = "gothic dress"
+	desc = "A black dress with a sheer mesh over it, tastefully old school goth."
+	icon_state = "gothic"
+	index = 1
+
+/obj/item/clothing/under/dress/formalred
+	name = "formal red dress"
+	desc = "A very formal red dress, for those fancy galas."
+	icon_state = "formalred"
+	flags_inv = HIDESHOES
+	index = 1
+
+/obj/item/clothing/under/dress/pentagram
+	name = "pentagram dress"
+	desc = "A black dress with straps over the chest in the shape of a pentagram."
+	icon_state = "pentagram"
+	index = 1
+
+obj/item/clothing/under/dress/yellowswoop
+	name = "yellow swooped dress"
+	desc = "A yellow dress that swoops to the side."
+	icon_state = "yellowswoop"
+	index = 1
+
 /*
  * wedding stuff
  */
@@ -767,6 +798,12 @@ Uniforms and such
 	desc = "Jean shorts and a black halter top. Perfect for casual Fridays!"
 	icon_state = "haltertop"
 
+/obj/item/clothing/under/rippedpunk
+	name = "ripped punk jeans"
+	desc = "Black ripped jeans and a fishnet top. How punk."
+	icon_state = "rippedpunk"
+	index = 1
+
 /*
  * swimsuit
  */
@@ -937,6 +974,11 @@ Uniforms and such
 	desc = "A green uniform for operating in hazardous environments."
 	name = "explorer's jumpsuit"
 	icon_state = "explorer"
+
+/obj/item/clothing/under/explorer/armored
+	desc = "A green uniform for operating in hazardous environments. This one looks like it's been modified."
+	armor = list(melee = 10, bullet = 10, laser = 10,energy = 10, bomb = 10, bio = 10, rad = 30)
+	armorsoak = list(melee = 5, bullet = 5, laser = 5,energy = 5, bomb = 5, bio = 5, rad = 0)
 
 /obj/item/clothing/under/cohesion
 	name = "black cohesion suit"
