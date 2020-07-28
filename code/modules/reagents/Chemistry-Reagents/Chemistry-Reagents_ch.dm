@@ -546,15 +546,35 @@
 		return
 	M.adjustToxLoss(-0.5 * removed)
 
+/datum/reagent/drink/highpower
+	name = "The High power"
+	id = "highpower"
+	description = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
+	taste_description = "copper, ozone, and pain"
+	color = "#a2f563"
+
+	glass_name = "highpower"
+	glass_desc = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
+
+/datum/reagent/drink/highpower/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	if(prob(5))
+		M.say("!skin's crackles with energy and seems to be in pain.")
+		M.custom_pain("You feel painful electricity running through your body, like adrenaline, and like your blood's boiling!",30)
+		M.AdjustWeakened(3)		//Getting sapped makes the victim fall
+		M.Stun(3)
+	M.add_chemical_effect(CE_SPEEDBOOST, 1)
+
 /datum/reagent/ethanol/coffee/jackbrew
-	name = "\improper Jack's brew"
+	name = "Rush hour"
 	id = "jackbrew"
 	description = "Irish coffee, and hyperzine. A common mix for panicked drinkers, EMTS, Paramedics, and CMOs alone on the job."
 	taste_description = "wishing you could give up on the day"
 	color = "#4C3100"
 	strength = 15
 
-	glass_name = "Jack's brew"
+	glass_name = "Rush hour"
 	glass_desc = "Irish coffee, and hyperzine. A common mix for panicked drinkers, EMTS, Paramedics, and CMOs alone on the job."
 
 /datum/reagent/ethanol/coffee/jackbrew/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
@@ -566,7 +586,7 @@
 			M.nutrition = (M.nutrition - (removed * 2)) //Sadly this movement starts burning food in higher doses.
 	..()
 	if(prob(5))
-		M.emote(pick("twitch", "blink_r", "shiver", "weh"))
+		M.emote(pick("twitch", "blink_r", "shiver", "weh", "weh", "weh")) // weh - Jack
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
 /datum/reagent/ethanol/bookwyrm
@@ -617,26 +637,6 @@
 		else
 			M.sleeping = max(M.sleeping, 20)
 		M.drowsyness = max(M.drowsyness, 60)
-
-/datum/reagent/drink/highpower
-	name = "The High power"
-	id = "highpower"
-	description = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
-	taste_description = "copper, ozone, and pain"
-	color = "#a2f563"
-
-	glass_name = "highpower"
-	glass_desc = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
-
-/datum/reagent/drink/highpower/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	if(prob(5))
-		M.say("!skin's crackles with energy and seems to be in pain.")
-		M.custom_pain("You feel painful electricity running through your body, like adrenaline, and like your blood's boiling!",30)
-		M.AdjustWeakened(3)		//Getting sapped makes the victim fall
-		M.Stun(3)
-	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
 /datum/reagent/ethanol/flapper
 	name = "Flapper"

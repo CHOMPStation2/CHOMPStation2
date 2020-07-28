@@ -97,7 +97,7 @@
 	alert_readers(FC.announcement)
 
 /datum/feed_network/proc/alert_readers(var/annoncement)
-	for(var/obj/machinery/newscaster/NEWSCASTER in allCasters)
+	for(var/obj/machinery/newscaster/NEWSCASTER in GLOB.allCasters)
 		NEWSCASTER.newsAlert(annoncement)
 		NEWSCASTER.update_icon()
 
@@ -178,7 +178,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 
 /obj/machinery/newscaster/Initialize()
 	..() //Not returning . because lateload below
-	allCasters += src
+	GLOB.allCasters += src
 	unit_no = ++unit_no_cur
 	paper_remaining = 15
 	update_icon()
@@ -188,7 +188,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	node = get_exonet_node()
 
 /obj/machinery/newscaster/Destroy()
-	allCasters -= src
+	GLOB.allCasters -= src
 	node = null
 	return ..()
 
@@ -654,7 +654,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 			var/choice = alert("Please confirm Wanted Issue removal","Network Security Handler","Confirm","Cancel")
 			if(choice=="Confirm")
 				news_network.wanted_issue = null
-				for(var/obj/machinery/newscaster/NEWSCASTER in allCasters)
+				for(var/obj/machinery/newscaster/NEWSCASTER in GLOB.allCasters)
 					NEWSCASTER.update_icon()
 				screen=17
 			updateUsrDialog()

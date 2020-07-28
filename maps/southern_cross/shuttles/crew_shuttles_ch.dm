@@ -24,19 +24,19 @@
 	my_landmark = "exphangar_1"
 	preferred_interim_tag = "shuttle3_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle3/sif_orbit = 5 SECONDS
 	)
-
+/*
 /datum/shuttle_destination/shuttle3/root/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Exploration Hangar One."
 
 /datum/shuttle_destination/shuttle3/root/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Exploration Hangar One."
-
+*/
 /datum/shuttle_destination/shuttle3/sif_orbit
 	name = "Sif Orbit"
 	my_landmark = "shuttle3_orbit"
@@ -61,15 +61,15 @@
 	my_landmark = "hangar_3"
 	preferred_interim_tag = "shuttle3_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
-
+/*
 /datum/shuttle_destination/shuttle3/stationhangar3/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Three."
 
 /datum/shuttle_destination/shuttle3/stationhangar3/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Three."
-
+*/
 /datum/shuttle_destination/shuttle3/sky
 	name = "Skies of Sif"
 	my_landmark = "shuttle3_sky"
@@ -84,11 +84,12 @@
 	my_landmark = "shuttle3_mining"
 	preferred_interim_tag = "shuttle3_sky_transit"
 
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
-
+/*
 /datum/shuttle_destination/shuttle3/mining_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Wilderness Area."
 
 /datum/shuttle_destination/shuttle3/mining_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Wilderness Area."
+*/
