@@ -10463,6 +10463,69 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room6)
+"Ai" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Aw" = (
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"FU" = (
+/obj/structure/toilet,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Kd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"KX" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor,
+/area/residential/corridors)
+"Qu" = (
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"RF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/item/weapon/soap/nanotrasen,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Si" = (
+/turf/simulated/floor,
+/area/residential/lobby)
+"XR" = (
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
 
 (1,1,1) = {"
 aa
@@ -35220,14 +35283,14 @@ dY
 ev
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
-aa
+fc
+fc
+fc
+fc
+fc
+gX
+fc
+fc
 eP
 eR
 uL
@@ -35472,15 +35535,15 @@ dY
 ae
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
-aa
-eP
+fc
+FU
+Ai
+XR
+Aw
+Kd
+Ai
+Si
+KX
 hW
 ir
 fk
@@ -35724,14 +35787,14 @@ dY
 ae
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
-aa
+fc
+fc
+fc
+Aw
+Aw
+RF
+fc
+fc
 eP
 hY
 is
@@ -35976,13 +36039,13 @@ dY
 ae
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
+fc
+FU
+Ai
+Qu
+Aw
+RF
+fc
 aa
 eP
 eR
@@ -36228,13 +36291,13 @@ dY
 ae
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
+fc
+fc
+fc
+fc
+fc
+gX
+fc
 aa
 eP
 eR

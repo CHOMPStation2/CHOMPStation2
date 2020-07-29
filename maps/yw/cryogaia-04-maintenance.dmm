@@ -40313,6 +40313,17 @@
 "huc" = (
 /turf/simulated/wall,
 /area/constructionsite/medical)
+"huK" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/tcommsat/entrance)
 "hAT" = (
 /obj/structure/closet,
 /turf/simulated/floor/tiled/dark,
@@ -78624,7 +78635,7 @@ bla
 boc
 bkK
 bps
-bqg
+huK
 bDU
 brS
 bqg

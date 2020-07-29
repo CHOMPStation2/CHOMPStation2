@@ -18571,7 +18571,7 @@
 /area/crew_quarters/heads/hos)
 "aIR" = (
 /turf/simulated/wall,
-/area/security/breakroom)
+/area/crew_quarters/showers)
 "aIS" = (
 /obj/structure/flora/pottedplant/crystal,
 /turf/simulated/floor/tiled/dark,
@@ -20840,11 +20840,12 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/camera/network/security{
-	c_tag = "Security Break Room"
+/obj/item/device/geiger/wall{
+	dir = 1;
+	pixel_y = -30
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aNC" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/substation/security)
@@ -20859,8 +20860,8 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aNE" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -21806,13 +21807,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security)
-"aPm" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/security/breakroom)
 "aPn" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -21852,8 +21846,8 @@
 /area/security/brig)
 "aPo" = (
 /obj/machinery/washing_machine,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aPp" = (
 /turf/simulated/wall/r_wall,
 /area/security/hallway)
@@ -21901,7 +21895,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/security/breakroom)
+/area/maintenance/security)
 "aPs" = (
 /turf/simulated/floor/plating,
 /area/maintenance/security)
@@ -21916,8 +21910,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/washing_machine,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aPu" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -22331,8 +22325,17 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/obj/structure/mirror{
+	pixel_x = -30
+	},
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aQl" = (
 /turf/simulated/wall,
 /area/security/brig)
@@ -22359,16 +22362,9 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aQo" = (
-/obj/machinery/door/airlock/glass_security{
-	id_tag = "BrigFoyer";
-	layer = 2.8;
-	name = "Security Break Room";
-	req_access = newlist();
-	req_one_access = list(2,1,52)
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
 	d1 = 4;
@@ -22378,8 +22374,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/airlock/maintenance/sec{
+	name = "Security Restrooms";
+	req_access = list(1,12)
+	},
 /turf/simulated/floor/tiled/steel,
-/area/security/breakroom)
+/area/crew_quarters/showers)
 "aQp" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -22416,14 +22416,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aQr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aQs" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -22431,33 +22431,12 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/junction,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aQt" = (
 /obj/structure/bed/padded,
 /turf/simulated/floor/tiled,
 /area/security/brig)
-"aQu" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
-"aQv" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/reagent_dispensers/water_cooler/full,
-/obj/item/device/geiger/wall{
-	dir = 8;
-	pixel_x = 30
-	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
 "aQx" = (
 /obj/machinery/photocopier,
 /obj/effect/floor_decal/corner/red{
@@ -22469,12 +22448,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/briefing_room)
 "aQy" = (
-/obj/structure/bed/chair,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aQz" = (
 /obj/machinery/chem_master/condimaster,
 /turf/simulated/floor/wood,
@@ -22936,11 +22914,14 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aRl" = (
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/obj/machinery/door/airlock{
+	name = "Unit 2"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aRm" = (
 /obj/structure/table/rack,
 /obj/item/clothing/mask/breath,
@@ -23050,10 +23031,16 @@
 /turf/simulated/floor,
 /area/crew_quarters/barrestroom)
 "aRw" = (
-/obj/structure/table/glass,
-/obj/item/weapon/deck/cards,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/obj/structure/curtain/open/shower/security,
+/obj/machinery/shower{
+	dir = 4;
+	icon_state = "shower";
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/item/weapon/soap/nanotrasen,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aRx" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -23480,15 +23467,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
 "aSo" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/box/cups,
-/obj/machinery/firealarm{
-	dir = 4;
-	layer = 3.3;
-	pixel_x = 26
+/obj/structure/toilet{
+	dir = 8
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aSp" = (
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal,
@@ -23519,9 +23502,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/briefing_room)
 "aSt" = (
-/obj/structure/table/glass,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aSu" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -23550,8 +23532,8 @@
 	icon_state = "1-2";
 	pixel_y = 0
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aSw" = (
 /turf/simulated/wall,
 /area/security/lobby)
@@ -23595,13 +23577,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
 "aSA" = (
-/obj/machinery/status_display{
-	pixel_y = 30
-	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aSB" = (
 /obj/structure/closet/secure_closet/detective,
 /obj/item/weapon/reagent_containers/spray/pepper,
@@ -23656,14 +23635,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/airlock)
-"aSF" = (
-/obj/item/weapon/storage/box/donkpockets,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 25
-	},
-/obj/structure/table/standard,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
 "aSG" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -24099,14 +24070,19 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "aTA" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/obj/structure/curtain/open/shower/security,
+/obj/machinery/shower{
+	dir = 4;
+	icon_state = "shower";
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/item/weapon/soap/nanotrasen,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aTB" = (
 /obj/item/weapon/stool/padded,
 /obj/effect/floor_decal/spline/plain,
@@ -24688,14 +24664,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "aUw" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aUx" = (
 /obj/machinery/door/airlock/highsecurity/red{
 	name = "Red Tactical Armory";
@@ -25363,8 +25336,8 @@
 	icon_state = "1-2";
 	pixel_y = 0
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aVK" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -26176,8 +26149,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "aWZ" = (
 /obj/structure/table/steel,
 /obj/item/weapon/clipboard,
@@ -26886,17 +26859,6 @@
 /obj/item/weapon/deck/cah,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
-"aYi" = (
-/obj/machinery/microwave,
-/obj/machinery/light_switch{
-	dir = 2;
-	name = "light switch ";
-	pixel_x = 26;
-	pixel_y = 0
-	},
-/obj/structure/table/standard,
-/turf/simulated/floor/wood,
-/area/security/breakroom)
 "aYj" = (
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3;
@@ -28195,13 +28157,8 @@
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/barrestroom)
 "bas" = (
-/obj/structure/bed/chair,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
 	},
 /obj/machinery/alarm{
 	dir = 4;
@@ -28209,8 +28166,16 @@
 	pixel_x = -22;
 	pixel_y = 0
 	},
-/turf/simulated/floor/wood,
-/area/security/breakroom)
+/obj/structure/curtain/open/shower/security,
+/obj/machinery/shower{
+	dir = 4;
+	icon_state = "shower";
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/item/weapon/soap/nanotrasen,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "bat" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4;
@@ -28860,13 +28825,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_equiptment_storage)
 "bbI" = (
-/obj/machinery/door/airlock/glass_security{
-	id_tag = "BrigFoyer";
-	layer = 2.8;
-	name = "Security Break Room";
-	req_access = newlist();
-	req_one_access = list(2,1,52)
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	d1 = 1;
@@ -28877,8 +28835,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/sec{
+	name = "Security Restrooms";
+	req_access = list(1,12)
+	},
 /turf/simulated/floor/tiled/steel,
-/area/security/breakroom)
+/area/crew_quarters/showers)
 "bbJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4;
@@ -66199,6 +66161,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
+"oHE" = (
+/obj/machinery/door/airlock{
+	name = "Unit 1"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "oJX" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 1
@@ -99833,12 +99801,12 @@ aWT
 aOg
 aIQ
 aIR
-aPm
+aIR
 aIR
 aQo
 aIR
-aPm
-aPm
+aIR
+aIR
 aIR
 bal
 pxX
@@ -100091,7 +100059,7 @@ aQq
 bas
 aRw
 aTA
-aPm
+aIR
 baA
 beV
 aZZ
@@ -100343,7 +100311,7 @@ aQr
 aQy
 aSt
 aUw
-aPm
+aIR
 baC
 bdc
 bbs
@@ -100843,11 +100811,11 @@ aOn
 aNC
 aNC
 aNB
-aQu
+aIR
 aRl
-aRl
-aRl
-aPm
+aIR
+oHE
+aIR
 bbi
 beY
 bfo
@@ -101095,11 +101063,11 @@ aOo
 aPf
 aQg
 aND
-aQv
+aIR
 aSo
-aSF
-aYi
-aPm
+aIR
+aSo
+aIR
 bbj
 beZ
 bfr
