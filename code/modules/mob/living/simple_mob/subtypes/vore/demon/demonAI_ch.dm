@@ -1,4 +1,4 @@
-/mob/living/simple_mob/vore/demon
+/mob/living/simple_mob/vore/demonAI
 	name = "Rift Walker"
 	desc = "A large bipedal creature, body a mix of dark fur and scales. Marks on the creatures body pulse slowly with red light"
 
@@ -8,6 +8,12 @@
 	icon_rest = "boxfox_rest"
 	icon = 'icons/mob/demon_ch.dmi'
 	vis_height = 47
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run
+	var/cloaked_alpha = 60			// Lower = Harder to see.
+	var/cloaked_bonus_damage = 30	// This is added on top of the normal melee damage.
+	var/cloaked_weaken_amount = 3	// How long to stun for.
+	var/cloak_cooldown = 10 SECONDS	// Amount of time needed to re-cloak after losing it.
+	var/last_uncloak = 0			// world.time
 
 	faction = "demon"
 	maxHealth = 200
@@ -20,8 +26,8 @@
 	attack_sound = 'sound/misc/demonattack.ogg'
 	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_SHADEKIN,LANGUAGE_CULT)
 
-	melee_damage_lower = 20
-	melee_damage_upper = 15
+	melee_damage_lower = 10
+	melee_damage_upper = 5
 	var/poison_chance = 50
 	var/poison_type = "mindbreaker"
 	var/poison_per_bite = 3
@@ -56,25 +62,25 @@
 	var/blood_spawn = 0
 	var/is_shifting = FALSE
 
-/mob/living/simple_mob/vore/demon/init_vore()
+/mob/living/simple_mob/vore/demonAI/init_vore()
 	..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "You slide down the slick, slippery gullet of the creature. It's warm, and the air is thick. You can feel the doughy walls of the creatures gut push and knead into your form! Slimy juices coat your form stinging against your flesh as they waste no time to start digesting you. The creature's heartbeat and the gurgling of their stomach are all you can hear as your jostled about, treated like nothing but food."
 
-/mob/living/simple_mob/vore/demon/UnarmedAttack()
+/mob/living/simple_mob/vore/demonAI/UnarmedAttack()
 	if(shifted_out)
 		return FALSE
 
 	. = ..()
 
-/mob/living/simple_mob/vore/demon/can_fall()
+/mob/living/simple_mob/vore/demonAI/can_fall()
 	if(shifted_out)
 		return FALSE
 
 	return ..()
 
-/mob/living/simple_mob/vore/demon/zMove(direction)
+/mob/living/simple_mob/vore/demonAI/zMove(direction)
 	if(shifted_out)
 		var/turf/destination = (direction == UP) ? GetAbove(src) : GetBelow(src)
 		if(destination)
@@ -83,25 +89,83 @@
 
 	return ..()
 
-/mob/living/simple_mob/vore/demon/Life()
+/mob/living/simple_mob/vore/demonAI/Life()
 	. = ..()
 	if(shifted_out)
 		density = FALSE
 
-/mob/living/simple_mob/vore/demon/handle_atmos()
+/mob/living/simple_mob/vore/demonAI/handle_atmos()
 	if(shifted_out)
 		return
 	else
 		return .=..()
 
-/mob/living/simple_mob/vore/demon/update_canmove()
+/mob/living/simple_mob/vore/demonAI/update_canmove()
 	if(is_shifting)
 		canmove = FALSE
 		return canmove
 	else
 		return ..()
 
-/mob/living/simple_mob/vore/demon/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/vore/demonAI/cloak()
+	if(cloaked)
+		return
+	animate(src, alpha = cloaked_alpha, time = 1 SECOND)
+	cloaked = TRUE
+
+
+/mob/living/simple_mob/vore/demonAI/uncloak()
+	last_uncloak = world.time // This is assigned even if it isn't cloaked already, to 'reset' the timer if the spider is continously getting attacked.
+	if(!cloaked)
+		return
+	animate(src, alpha = initial(alpha), time = 1 SECOND)
+	cloaked = FALSE
+
+// Check if cloaking if possible.
+/mob/living/simple_mob/vore/demonAI/proc/can_cloak()
+	if(stat)
+		return FALSE
+	if(last_uncloak + cloak_cooldown > world.time)
+		return FALSE
+
+	return TRUE
+
+// Called by things that break cloaks, like Technomancer wards.
+/mob/living/simple_mob/vore/demonAI/break_cloak()
+	uncloak()
+
+
+/mob/living/simple_mob/vore/demonAI/is_cloaked()
+	return cloaked
+
+
+// Cloaks the spider automatically, if possible.
+/mob/living/simple_mob/vore/demonAI/handle_special()
+	if(!cloaked && can_cloak())
+		cloak()
+
+
+// Applies bonus base damage if cloaked.
+/mob/living/simple_mob/vore/demonAI/apply_bonus_melee_damage(atom/A, damage_amount)
+	var/turf/T = get_turf(src)
+	if(cloaked)
+		new /obj/effect/gibspawner/generic(T)
+		playsound(src.loc, 'sound/effects/blobattack.ogg', 50, 1)
+		uncloak()
+		return damage_amount + cloaked_bonus_damage
+	return ..()
+
+
+// Force uncloaking if attacked.
+/mob/living/simple_mob/vore/demonAI/bullet_act(obj/item/projectile/P)
+	. = ..()
+	break_cloak()
+
+/mob/living/simple_mob/vore/demonAI/hit_with_weapon(obj/item/O, mob/living/user, effective_force, hit_zone)
+	. = ..()
+	break_cloak()
+
+/mob/living/simple_mob/vore/demonAI/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		if(L.reagents)
@@ -109,27 +173,28 @@
 			if(L.can_inject(src, null, target_zone))
 				inject_poison(L, target_zone)
 
-/mob/living/simple_mob/vore/demon/proc/inject_poison(mob/living/L, target_zone)
+/mob/living/simple_mob/vore/demonAI/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
 		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
-/mob/living/simple_mob/vore/demon/death()
+
+/mob/living/simple_mob/vore/demonAI/death()
 	playsound(src, 'sound/misc/demondeath.ogg', 50, 1)
 	..()
 
-/mob/living/simple_mob/vore/demon/bullet_act()
+/mob/living/simple_mob/vore/demonAI/bullet_act()
     playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
     ..()
 
-/mob/living/simple_mob/vore/demon/attack_hand()
+/mob/living/simple_mob/vore/demonAI/attack_hand()
     playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
     ..()
 
-/mob/living/simple_mob/vore/demon/hitby()
+/mob/living/simple_mob/vore/demonAI/hitby()
     playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
     ..()
 
-/mob/living/simple_mob/vore/demon/attackby()
+/mob/living/simple_mob/vore/demonAI/attackby()
     playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
     ..()
