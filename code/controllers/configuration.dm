@@ -69,11 +69,11 @@ var/list/gamemode_cache = list()
 	var/static/allow_ai_shells = FALSE			// allow AIs to enter and leave special borg shells at will, and for those shells to be buildable.
 	var/static/give_free_ai_shell = FALSE		// allows a specific spawner object to instantiate a premade AI Shell
 	var/static/hostedby = null
-	
+
 	var/static/respawn = 1
 	var/static/respawn_time = 3000			// time before a dead player is allowed to respawn (in ds, though the config file asks for minutes, and it's converted below)
 	var/static/respawn_message = "<span class='notice'><B>Make sure to play a different character, and please roleplay correctly!</B></span>"
-	
+
 	var/static/guest_jobban = 1
 	var/static/usewhitelist = 0
 	var/static/kick_inactive = 0				//force disconnect for inactive players after this many minutes, if non-0
@@ -283,7 +283,7 @@ var/list/gamemode_cache = list()
 
 	// whether or not to use the nightshift subsystem to perform lighting changes
 	var/static/enable_night_shifts = FALSE
-	
+
 	var/static/vgs_access_identifier = null	// VOREStation Edit - VGS
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
 
@@ -495,7 +495,7 @@ var/list/gamemode_cache = list()
 				if ("respawn_time")
 					var/raw_minutes = text2num(value)
 					config.respawn_time = raw_minutes MINUTES
-				
+
 				if ("respawn_message")
 					config.respawn_message = value
 
@@ -929,7 +929,7 @@ var/list/gamemode_cache = list()
 
 				if("enable_night_shifts")
 					config.enable_night_shifts = TRUE
-				
+
 				// VOREStation Edit Start - Can't be in _vr file because it is loaded too late.
 				if("vgs_access_identifier")
 					config.vgs_access_identifier = value

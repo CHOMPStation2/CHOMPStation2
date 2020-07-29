@@ -628,10 +628,7 @@
 /turf/simulated/floor/wood,
 /area/maintenance/lowfloor1)
 "abS" = (
-/obj/machinery/vending/coffee{
-	product_ads = "Have a drink!;Drink up!;It's good for you!;Would you like a hot joe?;I'd kill for some coffee!;The best beans in the galaxy.;Only the finest brew for you.;Mmmm. Nothing like a coffee.;I like coffee, don't you?;Coffee helps you work!;Try some tea.;We hope you like the best!;Try our new chocolate!;Admin conspiracies;Would you like some tea, Mrs. Nesbit?";
-	shut_up = 0
-	},
+/obj/machinery/vending/coffee,
 /turf/simulated/floor/wood,
 /area/maintenance/lowfloor1)
 "abT" = (
@@ -5992,6 +5989,9 @@
 	name = "Common Channel";
 	pixel_y = 21
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Kitchen, Lower Level"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/lower)
 "anH" = (
@@ -7120,9 +7120,6 @@
 /area/hallway/lower/fore)
 "aqc" = (
 /obj/effect/mist,
-/obj/structure/railing{
-	dir = 8
-	},
 /turf/simulated/floor/water/hotspring,
 /area/chapel/chapel_morgue)
 "aqd" = (
@@ -7589,10 +7586,6 @@
 	},
 /turf/simulated/floor/water/hotspring,
 /area/hallway/lower/fore)
-"arg" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/chapel/chapel_morgue)
 "arh" = (
 /obj/structure/railing{
 	dir = 8
@@ -8167,16 +8160,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/hallway/lower/fore)
-"asd" = (
-/obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/water/hotspring,
 /area/hallway/lower/fore)
 "ase" = (
 /turf/simulated/floor/water/hotspring,
@@ -8980,23 +8963,12 @@
 	icon_state = "tube1";
 	pixel_y = 0
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
-"atO" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/structure/railing{
 	dir = 1;
 	icon_state = "railing0"
 	},
-/obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
-	},
 /turf/simulated/floor/water/hotspring,
-/area/hallway/lower/fore)
+/area/maintenance/medical_lower)
 "atP" = (
 /turf/simulated/floor/water/hotspring,
 /area/hallway/lower/fore)
@@ -9532,24 +9504,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
 "auL" = (
-/obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
-	},
 /turf/simulated/floor/water/hotspring,
 /area/maintenance/medical_lower)
 "auM" = (
-/obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
-	},
-/turf/simulated/floor/water/hotspring,
-/area/hallway/lower/fore)
-"auN" = (
-/obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
-	},
 /obj/structure/railing{
 	dir = 1;
 	icon_state = "railing0"
@@ -16752,6 +16709,9 @@
 /turf/simulated/floor,
 /area/maintenance/fish)
 "aLc" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/kitchen/fish_farm)
 "aLd" = (
@@ -17736,7 +17696,7 @@
 	dir = 1;
 	icon_state = "bulb1"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/fish_farm)
 "aNv" = (
 /obj/structure/cable/green{
@@ -31476,13 +31436,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
 "boS" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/table/rack{
 	dir = 8;
 	layer = 2.9
@@ -32172,7 +32125,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/tcommsat/computer)
 "bqt" = (
-/obj/structure/reagent_dispensers/fueltank,
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
@@ -32182,6 +32134,8 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
+/obj/machinery/atmospherics/pipe/zpipe/up/supply,
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/dorms)
 "bqu" = (
@@ -32659,11 +32613,12 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	icon_state = "map-scrubbers";
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -38919,6 +38874,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
+"bEc" = (
+/obj/structure/railing,
+/turf/simulated/floor/beach/sand/desert,
+/area/crew_quarters/kitchen/fish_farm)
 "bEd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/device/geiger/wall{
@@ -39555,13 +39514,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/fish_farm)
 "bFy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/fish_farm)
 "bFz" = (
 /obj/structure/cable/green{
@@ -39896,6 +39855,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "bFY" = (
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/crew_quarters/kitchen/fish_farm)
 "bFZ" = (
@@ -39961,6 +39921,10 @@
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -28
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Kitchen Freezer";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen/lower)
@@ -40105,6 +40069,13 @@
 /obj/machinery/atmospherics/valve/digital,
 /turf/simulated/floor,
 /area/security/prison)
+"cUb" = (
+/obj/structure/railing{
+	dir = 1;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/crew_quarters/kitchen/fish_farm)
 "cVD" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -40130,6 +40101,9 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/tower/southeast)
+"dix" = (
+/turf/simulated/floor/tiled,
+/area/maintenance/fish)
 "dkR" = (
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -40412,6 +40386,13 @@
 "iBb" = (
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/tower/southeast)
+"iIq" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/hydroponics)
 "iJO" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -40443,6 +40424,10 @@
 "iWA" = (
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"iZV" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/maintenance/aft)
 "jpD" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -40590,6 +40575,9 @@
 /obj/random/maintenance/security,
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"oym" = (
+/turf/simulated/floor/tiled,
+/area/crew_quarters/kitchen/fish_farm)
 "oyI" = (
 /obj/structure/sign/poster,
 /turf/simulated/wall/titanium,
@@ -40695,6 +40683,14 @@
 /obj/machinery/light/flamp,
 /turf/simulated/floor/grass,
 /area/civilian/atrium/lower)
+"qWH" = (
+/obj/machinery/light/small,
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/water/deep/indoors,
+/area/crew_quarters/kitchen/fish_farm)
 "rhC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -40804,6 +40800,17 @@
 "sIK" = (
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"sTm" = (
+/obj/structure/railing{
+	dir = 1;
+	icon_state = "railing0"
+	},
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/simulated/floor/water/hotspring,
+/area/hallway/lower/fore)
 "tgv" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark,
@@ -40820,6 +40827,12 @@
 /obj/structure/sign/poster,
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/east)
+"tGO" = (
+/obj/machinery/camera/network/civilian{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/kitchen/fish_farm)
 "tZF" = (
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/dark,
@@ -40861,14 +40874,6 @@
 "uZc" = (
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/east)
-"vvc" = (
-/obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
-	},
-/obj/machinery/light/small,
-/turf/simulated/floor/water/deep/indoors,
-/area/crew_quarters/kitchen/fish_farm)
 "vEX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -72804,7 +72809,7 @@ bFe
 bFe
 blF
 bFe
-aHv
+aHw
 aHv
 aHv
 aHv
@@ -73055,8 +73060,8 @@ anE
 aJn
 bFt
 bFx
-aLc
-aHv
+tGO
+dix
 aHv
 aHv
 aHv
@@ -73305,10 +73310,10 @@ aKH
 aLa
 anE
 aNu
-aLc
+oym
 bFy
-bEW
-aHv
+oym
+dix
 aHv
 aHv
 aHv
@@ -73559,8 +73564,8 @@ anE
 aLc
 aLc
 aLc
-bEW
-bEW
+aLc
+aLc
 aHv
 aHv
 aHv
@@ -73809,11 +73814,11 @@ aKJ
 aLy
 anE
 aMd
-aMd
+bEc
 bFY
+cUb
 aMd
-bEW
-bEW
+aMd
 bEW
 aHv
 aQg
@@ -74061,9 +74066,9 @@ aJU
 aJU
 anF
 aMd
-aMd
+bEc
 bFY
-aMd
+cUb
 aMd
 aMd
 aMd
@@ -74313,7 +74318,7 @@ aHv
 aJU
 bFe
 aMd
-aMd
+bEc
 bFY
 bXh
 aOA
@@ -74820,7 +74825,7 @@ anz
 bET
 cqT
 bEZ
-aOB
+bFf
 aOB
 aOB
 aOB
@@ -75327,8 +75332,8 @@ cqT
 bEX
 aQY
 bFd
-vvc
-bFe
+aQY
+qWH
 bFe
 bFe
 aQj
@@ -75580,8 +75585,8 @@ cqT
 cqT
 cqT
 cqT
-rEQ
 bFY
+rEQ
 aQj
 aQj
 aQj
@@ -75832,7 +75837,7 @@ cqT
 bEY
 bpG
 bpG
-bFe
+bpG
 bFe
 aQj
 aQj
@@ -79076,8 +79081,8 @@ apY
 are
 asa
 asY
-aqa
 auM
+atP
 agX
 fMr
 fMr
@@ -79328,7 +79333,7 @@ agX
 arf
 asb
 asY
-atO
+auM
 awU
 agX
 awu
@@ -79580,8 +79585,8 @@ apZ
 apW
 asb
 asY
-aqa
-auN
+sTm
+apZ
 agX
 aGo
 axH
@@ -79612,7 +79617,7 @@ bFo
 bFv
 aQs
 bFH
-aMP
+iIq
 aLe
 aRI
 aCf
@@ -80584,9 +80589,9 @@ amM
 agj
 aow
 agX
-aqa
-arg
-asd
+ata
+arh
+ata
 ata
 ata
 auO
@@ -80837,7 +80842,7 @@ adQ
 afW
 aoC
 aqc
-arh
+ase
 ase
 atb
 atP
@@ -86193,7 +86198,7 @@ bmh
 bmY
 bnB
 aUT
-bls
+iZV
 bls
 bls
 brg

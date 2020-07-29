@@ -1,5 +1,5 @@
 /obj/item/weapon/gun/energy/netgun
-	name = "energy net gun"
+	name = "\"Varmint Catcher\" energy net gun"
 	desc = "A Hephaestus-designed, usually dubbed 'non-lethal capture device' energy net launcher, \
 			for when you wanna capture feracious predators." //YW edit - small change to description
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
