@@ -212,14 +212,15 @@
 	icon_state = "butts_pie"
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/slice/buttspie
 	slices_num = 6
-	nutriment_amt = 24
+	nutriment_amt = 12
 	nutriment_desc = list("a warm, buttery sweetness that reminds you of home" = 5)
+	center_of_mass = list("x"=16, "y"=9)
 
 /obj/item/weapon/reagent_containers/food/snacks/slicable/buttspie/Initialize()
 	..()
 	bitesize = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/buttspie
+/obj/item/weapon/reagent_containers/food/snacks/slice/buttspie //TODO: Fix the numbers.
 	name = "Slice of Butterscotch-Cinnamon Pie"
 	desc = "A slice of pie, filled with delightfully caramel-coloured filling. There a spray of cream on top."
 	icon = 'icons/obj/food_ch.dmi'
@@ -231,4 +232,6 @@
 	..()
 	bitesize = 2
 
-//TODO: Fix the numbers.
+//Todo: "red hot" cinnamon candies. Spicy Boys? I love the name Spicy Boys
+
+//Todo: Cinnamon rolls. aghhhghgghhg ^q^
