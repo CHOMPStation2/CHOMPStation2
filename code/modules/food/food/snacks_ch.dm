@@ -195,7 +195,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/butterscotch
 	name = "Butterscotch"
-	desc = "A sweet, brown liquid, usually used as part of confectionary. Just a spoonful wouldn't hurt, right?"
+	desc = "A sweet, golden-brown liquid, usually used as part of confectionary. Just a spoonful wouldn't hurt, right?"
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "butterscotch"
 	nutriment_amt = 1
