@@ -21,8 +21,8 @@
 	var/heating_power = 100000	//This controls the strength at which it heats the environment. // The number seems ridiculous but this is actually pretty reasonable - Lunar
 
 	faction = "grubs"
-	maxHealth = 75 // Tanky fuckers.
-	health = 75 // Tanky fuckers.
+	maxHealth = 200 // Tanky fuckers.
+	health = 200 // Tanky fuckers.
 
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -56,13 +56,13 @@
 	heat_damage_per_tick = 0 //Even if the atmos stuff doesn't work, at least it won't take any damage.
 
 	armor = list(
-				"melee" = 0,
+				"melee" = -50,
 				"bullet" = 0,
-				"laser" = 0,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0)
+				"laser" = 50,
+				"energy" = 50,
+				"bomb" = 25,
+				"bio" = 100,
+				"rad" = 100)
 
 /datum/say_list/solarmoth
 	emote_see = list("flutters")
@@ -138,11 +138,37 @@
 /mob/living/simple_mob/vore/solarmoth/lunarmoth
 	name = "lunarmoth"
 	desc = "A majestic sparkling lunarmoth. Also a slight engineering hazard."
+	var/nospampls = 0
 	cold_damage_per_tick = 0
 	//ATMOS
-	set_temperature = T0C - 450
+	set_temperature = T0C - 10000
 	heating_power = -100000
 	//light
 	mycolour = COLOR_WHITE
+
+/mob/living/simple_mob/vore/solarmoth/lunarmoth/proc/chilltheglass() //Why does a coldfusion moth do this? science -shark
+	nospampls = 1
+	if(prob(25))
+		for(var/obj/machinery/light/light in range(5, src))
+			if(prob(50))
+				light.broken()
+	if(prob(10))
+		for(var/obj/structure/window/window in range(5, src))
+			if(prob(50))
+				window.shatter()
+	if(prob(20))
+		for(var/obj/machinery/door/firedoor/door in range(14, src)) //double viewrange
+			if(prob(5))
+				visible_message("<span class='danger'>Emergency Shutter malfunction!</span>")
+				door.blocked = 0
+				door.open(1)
+
+	spawn(100)
+		nospampls = 0
+
+/mob/living/simple_mob/vore/solarmoth/lunarmoth/Life()
+	..()
+	if(!nospampls)
+		chilltheglass() //shatter and broken calls for glass and lights. Also some special thing.
 
 
