@@ -92,7 +92,7 @@
 	allowed_roles = list("Quartermaster","Shaft Miner","Cargo Technician","Head of Personnel")
 
 
-//Cybersuit
-/datum/gear/uniform/cybersuit //Pathname of this particular item in the menu.
-	display_name = "cybersuit" //The name of the suit as shown in the loadout menu
-	path = /obj/item/clothing/under/cybersuit //Pathname of the suit which is found in custom_clothes_ch.dm
+//VR Suit
+/datum/gear/uniform/vrsuit //Pathname of this particular item in the menu.
+	display_name = "vr suit" //The name of the suit as shown in the loadout menu
+	path = /obj/item/clothing/under/vrsuit //Pathname of the suit which is found in custom_clothes_ch.dm

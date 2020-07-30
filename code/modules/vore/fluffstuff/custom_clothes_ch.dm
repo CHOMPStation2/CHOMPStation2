@@ -142,11 +142,11 @@
 	item_state = "nullsuit_cargo"
 	worn_state = "nullsuit_cargo"
 
-//Cybersuit
-/obj/item/clothing/under/cybersuit //Pathname of this particular object in the game.
-	name = "Cybersuit" //The name of the suit when examined
-	desc = "A bodysuit lined with advanced gizmos and pretty pretty lights." //The description of the suit when examined
+//VR Suit
+/obj/item/clothing/under/vrsuit //Pathname of this particular object in the game.
+	name = "VR Suit" //The name of the suit when examined
+	desc = "An ancient suit used by studio companies long ago to make their virtual reality bones work better." //The description of the suit when examined
 	sensor_mode = 3 //Sensor mode which means that by default when someone spawns they will have tracking sensors on
 	icon = 'icons/obj/clothing/uniforms_ch.dmi' //The icon of the suit when shown in the player's HUD
 	icon_override = 'icons/mob/uniform_ch.dmi' //The icon of the suit worn by the character's sprite
-	icon_state = "cybersuit" //The name of the suit within the .dmi file
+	icon_state = "vrsuit" //The name of the suit within the .dmi file
