@@ -87,16 +87,13 @@
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
 "at" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
@@ -113,7 +110,6 @@
 "aw" = (
 /obj/machinery/cooker/cereal,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -198,7 +194,6 @@
 "aK" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -294,9 +289,7 @@
 "aY" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
@@ -317,7 +310,6 @@
 /area/submap/Diner)
 "bc" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -369,7 +361,10 @@
 /area/submap/Diner)
 "bl" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/cell/high,
+/obj/item/weapon/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
 /turf/simulated/floor/lino,
 /area/submap/Diner)
 "bm" = (
@@ -389,7 +384,6 @@
 "bp" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/windoor_assembly{
-	icon_state = "l_windoor_assembly01";
 	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
@@ -406,7 +400,6 @@
 /area/submap/Diner)
 "bs" = (
 /obj/structure/sink{
-	icon_state = "sink";
 	dir = 8;
 	pixel_x = -12;
 	pixel_y = 2
@@ -441,8 +434,7 @@
 "by" = (
 /obj/structure/mirror{
 	dir = 4;
-	pixel_x = -32;
-	pixel_y = 0
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Diner)
@@ -452,7 +444,20 @@
 /area/submap/Diner)
 "bA" = (
 /obj/structure/table/standard,
+/obj/item/stack/cable_coil,
 /turf/simulated/floor/tiled/hydro,
+/area/submap/Diner)
+"It" = (
+/obj/item/weapon/storage/toolbox/mechanical,
+/turf/simulated/floor/lino,
+/area/submap/Diner)
+"Sl" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/template_noop)
+"TN" = (
+/obj/structure/table/standard,
+/obj/item/weapon/module/power_control,
+/turf/simulated/floor/tiled/white,
 /area/submap/Diner)
 
 (1,1,1) = {"
@@ -549,12 +554,12 @@ ac
 ac
 ac
 ac
+ab
 ac
 ac
 ac
 ac
-ac
-ac
+ab
 ac
 ac
 ac
@@ -567,6 +572,13 @@ aa
 aa
 ac
 ac
+ab
+ab
+ac
+ac
+ac
+ac
+ab
 ac
 ac
 ac
@@ -575,16 +587,9 @@ ac
 ac
 ac
 ac
+ab
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
 ac
 ab
 ab
@@ -596,7 +601,7 @@ ab
 ac
 ac
 ac
-ac
+ab
 ac
 ac
 ac
@@ -877,7 +882,7 @@ aZ
 bc
 bd
 be
-ah
+TN
 aK
 bp
 af
@@ -987,7 +992,7 @@ ad
 bf
 bk
 bi
-bi
+It
 ad
 bu
 bt
@@ -1114,10 +1119,10 @@ aa
 aa
 aa
 aa
+Sl
 aa
-aa
-aa
-aa
+Sl
+Sl
 aa
 aa
 aa
