@@ -10470,20 +10470,71 @@
 "Aw" = (
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
+"Co" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"CL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"FH" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/residential/corridors)
 "FU" = (
 /obj/structure/toilet,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Hq" = (
+/obj/machinery/door/airlock,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 "Kd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 "KX" = (
 /obj/machinery/door/airlock,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/residential/corridors)
+"Oa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/residential/corridors)
+"PZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
 "Qu" = (
 /obj/structure/sink{
 	dir = 4;
@@ -10496,6 +10547,7 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 "RF" = (
@@ -10510,6 +10562,8 @@
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 "Si" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/residential/lobby)
 "XR" = (
@@ -10524,6 +10578,7 @@
 	pixel_x = -32;
 	pixel_y = 0
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 
@@ -35539,13 +35594,13 @@ fc
 FU
 Ai
 XR
-Aw
+PZ
 Kd
-Ai
+Hq
 Si
 KX
-hW
-ir
+Oa
+FH
 fk
 iS
 eR
@@ -35791,7 +35846,7 @@ fc
 fc
 fc
 Aw
-Aw
+Co
 RF
 fc
 fc
@@ -36043,7 +36098,7 @@ fc
 FU
 Ai
 Qu
-Aw
+CL
 RF
 fc
 aa
