@@ -10463,6 +10463,124 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room6)
+"Ai" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Aw" = (
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Co" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"CL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"FH" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/residential/corridors)
+"FU" = (
+/obj/structure/toilet,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Hq" = (
+/obj/machinery/door/airlock,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Kd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"KX" = (
+/obj/machinery/door/airlock,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor,
+/area/residential/corridors)
+"Oa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/residential/corridors)
+"PZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Qu" = (
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"RF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/item/weapon/soap/nanotrasen,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
+"Si" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor,
+/area/residential/lobby)
+"XR" = (
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/lobby)
 
 (1,1,1) = {"
 aa
@@ -35220,14 +35338,14 @@ dY
 ev
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
-aa
+fc
+fc
+fc
+fc
+fc
+gX
+fc
+fc
 eP
 eR
 uL
@@ -35472,17 +35590,17 @@ dY
 ae
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
-aa
-eP
-hW
-ir
+fc
+FU
+Ai
+XR
+PZ
+Kd
+Hq
+Si
+KX
+Oa
+FH
 fk
 iS
 eR
@@ -35724,14 +35842,14 @@ dY
 ae
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
-aa
+fc
+fc
+fc
+Aw
+Co
+RF
+fc
+fc
 eP
 hY
 is
@@ -35976,13 +36094,13 @@ dY
 ae
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
+fc
+FU
+Ai
+Qu
+CL
+RF
+fc
 aa
 eP
 eR
@@ -36228,13 +36346,13 @@ dY
 ae
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-fe
-aa
+fc
+fc
+fc
+fc
+fc
+gX
+fc
 aa
 eP
 eR
