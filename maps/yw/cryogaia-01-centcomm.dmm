@@ -21264,6 +21264,7 @@
 /obj/item/clothing/suit/space/void/responseteam/engineer,
 /obj/item/clothing/suit/space/void/responseteam/engineer,
 /obj/item/clothing/suit/space/void/responseteam/engineer,
+/obj/item/clothing/suit/space/void/responseteam/engineer,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -21299,6 +21300,17 @@
 /obj/item/toy/chess/queen_black,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"Vr" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/janitor,
+/obj/item/clothing/suit/space/void/responseteam/janitor,
+/obj/item/clothing/suit/space/void/responseteam/janitor,
+/obj/item/clothing/suit/space/void/responseteam/janitor,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/centcom/specops)
 "Vy" = (
 /obj/item/toy/chess/bishop_white,
 /turf/simulated/floor/holofloor/wmarble,
@@ -21532,12 +21544,14 @@
 /obj/item/clothing/suit/space/void/responseteam/medical,
 /obj/item/clothing/suit/space/void/responseteam/medical,
 /obj/item/clothing/suit/space/void/responseteam/medical,
+/obj/item/clothing/suit/space/void/responseteam/medical,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/centcom/specops)
 "ZV" = (
 /obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/responseteam/security,
 /obj/item/clothing/suit/space/void/responseteam/security,
 /obj/item/clothing/suit/space/void/responseteam/security,
 /obj/item/clothing/suit/space/void/responseteam/security,
@@ -45568,7 +45582,7 @@ aa
 aa
 aa
 mO
-nB
+Vr
 nB
 oe
 mO
@@ -45820,7 +45834,7 @@ aa
 aa
 aa
 mO
-nC
+of
 nB
 of
 mO
@@ -46072,9 +46086,9 @@ aa
 aa
 aa
 mO
-nD
-nO
-og
+nC
+nB
+of
 mO
 oC
 pa
@@ -46324,9 +46338,9 @@ aa
 aa
 aa
 mO
-mO
-mO
-mO
+nD
+nO
+og
 mO
 oC
 pa
@@ -46575,10 +46589,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+mO
+mO
+mO
+mO
 mO
 oD
 nB

@@ -581,7 +581,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "aeZ" = (
 /obj/structure/table/rack/shelf/steel,
@@ -597,7 +597,7 @@
 	name = "plastic table frame"
 	},
 /obj/random/maintenance/medical,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "afT" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
@@ -648,7 +648,7 @@
 	pixel_x = 21;
 	pixel_y = 0
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "amc" = (
 /obj/structure/catwalk,
@@ -689,7 +689,7 @@
 	icon_state = "cigs";
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "aqW" = (
 /obj/structure/cable{
@@ -763,7 +763,7 @@
 	layer = 3.3;
 	pixel_x = 26
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "aAM" = (
 /obj/structure/cable/green{
@@ -779,6 +779,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"aBj" = (
+/obj/structure/railing/grey{
+	dir = 1;
+	flags = null
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "aBo" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall,
@@ -1066,6 +1073,11 @@
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
+"bnO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "bnZ" = (
 /obj/item/weapon/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -1163,7 +1175,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "buV" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -1173,7 +1185,7 @@
 	icon_state = "coffee";
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "buZ" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -1432,7 +1444,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "bYL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1821,7 +1833,7 @@
 /area/civilian/atrium/upper)
 "dcB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "dfC" = (
 /obj/structure/bed/chair/wood{
@@ -1843,7 +1855,7 @@
 	icon_state = "fitness";
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "dhP" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -2264,15 +2276,24 @@
 /area/borealis2/outdoors/grounds/tower/west)
 "efV" = (
 /obj/structure/railing,
-/obj/effect/floor_decal/corner/red{
-	dir = 5
-	},
 /obj/machinery/light/no_nightshift{
 	icon_state = "tube1";
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"egN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "ehJ" = (
 /obj/structure/railing{
 	dir = 4;
@@ -2437,7 +2458,7 @@
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "eKY" = (
 /obj/machinery/light{
@@ -2468,7 +2489,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "eQZ" = (
 /turf/simulated/wall,
@@ -2594,6 +2615,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"flA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "fmx" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -2840,6 +2867,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"gcN" = (
+/obj/structure/table/rack/steel,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/maintenance/security_tower)
 "gdt" = (
 /obj/structure/railing/grey{
 	icon_state = "grey_railing0";
@@ -2869,8 +2902,13 @@
 	icon_state = "tube1";
 	pixel_x = 0
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
+"ghz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/security/breakroom)
 "giD" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -2879,7 +2917,7 @@
 	dir = 4;
 	icon_state = "tube1"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "gjI" = (
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -2989,7 +3027,7 @@
 	pixel_x = 25;
 	pixel_y = 0
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "gvx" = (
 /obj/structure/railing{
@@ -3005,7 +3043,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "gyY" = (
 /obj/structure/cable/green{
@@ -3049,7 +3087,7 @@
 "gFG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "gHl" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
@@ -3224,6 +3262,21 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway/exploration)
+"hpL" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/machinery/microwave,
+/obj/item/device/geiger/wall{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/machinery/light/no_nightshift{
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "hqr" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -3285,6 +3338,7 @@
 	dir = 6
 	},
 /obj/random/medical/lite,
+/obj/random/tetheraid,
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
 "hAJ" = (
@@ -3293,6 +3347,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"hAV" = (
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "south bump";
+	pixel_y = -28;
+	req_access = newlist();
+	req_one_access = list(51)
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "hCZ" = (
 /turf/simulated/wall,
 /area/civilian/atrium/upper)
@@ -3303,7 +3371,7 @@
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "hFf" = (
 /turf/simulated/open,
@@ -3399,7 +3467,7 @@
 /obj/machinery/door/airlock/maintenance/sec,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/maintenance/security_tower)
+/area/security/watchtower)
 "hRM" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
@@ -3418,6 +3486,26 @@
 /obj/item/device/instrument/recorder,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
+"hTY" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/item/device/radio/intercom/department/security{
+	dir = 8;
+	icon_state = "secintercom";
+	pixel_x = -24;
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light/no_nightshift{
+	icon_state = "tube1";
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "hUR" = (
 /obj/structure/railing/grey{
 	icon_state = "grey_railing0";
@@ -3668,6 +3756,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
+"iCu" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/weapon/storage/box/donkpockets,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "Break Room";
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	icon_state = "extinguisher_closed";
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "iCB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4;
@@ -3817,7 +3924,7 @@
 	pixel_x = 28;
 	pixel_y = 0
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "jeP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3912,6 +4019,9 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"jyR" = (
+/turf/simulated/wall/r_wall,
+/area/security/breakroom)
 "jzU" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -3967,7 +4077,7 @@
 /area/cryogaia/station/hallway/primary/upper)
 "jKN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "jLk" = (
 /obj/structure/cable/green{
@@ -4059,6 +4169,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
+"jYb" = (
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/hallway/primary/upper)
 "jZh" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4161,7 +4278,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "kpg" = (
 /obj/machinery/vending/coffee{
@@ -4279,9 +4396,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
-"kJK" = (
-/turf/simulated/wall,
-/area/maintenance/security_tower)
 "kKk" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
@@ -4303,7 +4417,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/medbay,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "kPV" = (
 /obj/machinery/light/small{
@@ -4326,7 +4440,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "kUh" = (
 /obj/effect/floor_decal/corner/paleblue/full{
@@ -4354,6 +4468,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"kVN" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/vending/coffee{
+	icon_state = "coffee";
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "kZT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4427,7 +4553,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "lkz" = (
 /obj/structure/disposalpipe/segment{
@@ -4481,6 +4607,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"lut" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = -24
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "lvE" = (
 /obj/machinery/access_button/airlock_exterior{
 	master_tag = "Monastary_Upper_NW_Exit";
@@ -4495,6 +4629,12 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating/snow/plating,
 /area/chapel/monastery/upper)
+"lvH" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "lwd" = (
 /turf/simulated/open,
 /area/cryogaia/station/explorer_upper)
@@ -4858,9 +4998,6 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "mzQ" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
 /obj/item/device/radio/intercom/department/security{
 	dir = 4;
 	icon_state = "secintercom";
@@ -4993,6 +5130,13 @@
 /area/civilian/atrium/upper)
 "mWF" = (
 /turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/walkway/exploration)
+"mYz" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
+	flags = null
+	},
+/turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/walkway/exploration)
 "mYC" = (
 /obj/machinery/light{
@@ -5134,11 +5278,18 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "nny" = (
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper)
+"noQ" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/weapon/deck/cards,
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "nqi" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -5153,7 +5304,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
 "nrN" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "nsl" = (
 /obj/structure/cable{
@@ -5286,6 +5437,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/chapel/monastery/upper)
+"nHt" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "nIj" = (
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/upper)
@@ -5307,6 +5464,10 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/belter)
+"nOw" = (
+/obj/structure/reagent_dispensers/water_cooler/full,
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "nPp" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -5378,7 +5539,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "nYu" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
@@ -5661,6 +5822,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
+"oBV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "oCb" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
@@ -5695,6 +5862,17 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
 /area/civilian/atrium/upper)
+"oCZ" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/weapon/storage/box/cups,
+/obj/machinery/holoposter{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "oDz" = (
 /obj/structure/ladder,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -5836,6 +6014,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"oUY" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/structure/noticeboard/medical{
+	dir = 4;
+	name = "medical notice board";
+	pixel_x = 0;
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbayupper)
 "oWp" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5920,7 +6110,7 @@
 /obj/machinery/camera/network/medbay{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "phE" = (
 /obj/effect/floor_decal/corner/brown/full,
@@ -5961,6 +6151,9 @@
 	},
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"psk" = (
+/turf/simulated/floor/plating,
+/area/maintenance/security_tower)
 "puK" = (
 /obj/structure/railing/grey{
 	icon_state = "grey_railing0";
@@ -6156,6 +6349,13 @@
 /obj/effect/floor_decal/corner/brown,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"qgu" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "qgB" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -6198,6 +6398,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/holoposter{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper)
 "qlq" = (
@@ -6214,13 +6417,16 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southeast)
 "qmn" = (
-/obj/machinery/vending/snack,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
+	},
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -6240,14 +6446,11 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/red{
-	dir = 9
+/obj/effect/floor_decal/corner/red/full,
+/obj/item/device/geiger/wall{
+	dir = 4;
+	pixel_x = -30
 	},
-/obj/structure/closet,
-/obj/random/maintenance/security,
-/obj/random/maintenance/security,
-/obj/random/maintenance/security,
-/obj/random/maintenance/security,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "qmJ" = (
@@ -6440,7 +6643,7 @@
 	dir = 1
 	},
 /obj/structure/flora/pottedplant/large,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "qzN" = (
 /turf/simulated/wall,
@@ -6522,6 +6725,13 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"qGH" = (
+/obj/structure/closet,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/maintenance/security_tower)
 "qGO" = (
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 1
@@ -6665,6 +6875,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"rds" = (
+/obj/machinery/holoposter{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/hallway/primary/upper)
 "rdP" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
@@ -6739,12 +6956,6 @@
 /obj/machinery/cell_charger,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
-"rnY" = (
-/obj/effect/floor_decal/corner/red/full{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/security/watchtower)
 "rpj" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -6789,7 +7000,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "rDD" = (
 /turf/simulated/shuttle/floor/white/cryogaia,
@@ -7066,7 +7277,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "syH" = (
 /obj/structure/cable/green{
@@ -7390,7 +7601,7 @@
 	name = "plastic table frame"
 	},
 /obj/item/weapon/material/ashtray/plastic,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "tgz" = (
 /obj/structure/bookcase/manuals/medical,
@@ -7409,7 +7620,7 @@
 	dir = 8;
 	pixel_x = 28
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "tjQ" = (
 /obj/effect/floor_decal/corner/brown{
@@ -7554,6 +7765,22 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
+"tEB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
+"tGf" = (
+/obj/machinery/light/small{
+	icon_state = "bulb1";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/security_tower)
 "tKT" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -7705,6 +7932,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
+"tWN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9;
+	pixel_y = 0
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "tXH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/medical{
@@ -7721,6 +7955,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/constructionsite/medical/upper)
+"tYd" = (
+/obj/machinery/door/airlock/maintenance/sec,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/security/breakroom)
 "tZb" = (
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper)
@@ -7827,6 +8073,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"ure" = (
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "uro" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -7859,6 +8112,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"uzO" = (
+/obj/machinery/light/no_nightshift{
+	icon_state = "tube1";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/watchtower)
 "uAo" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
@@ -8013,6 +8273,7 @@
 	c_tag = "Medical Loft";
 	dir = 1
 	},
+/obj/random/tetheraid,
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
 "vdm" = (
@@ -8108,6 +8369,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
+"vrU" = (
+/obj/machinery/door/airlock/glass_security{
+	name = "Security Breakroom"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled,
+/area/security/breakroom)
 "vtA" = (
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
@@ -8283,6 +8551,13 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"vTQ" = (
+/obj/machinery/door/airlock/glass_security{
+	name = "Security Breakroom"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled,
+/area/security/watchtower)
 "vTU" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -8311,6 +8586,13 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
+"vZc" = (
+/obj/structure/railing/grey{
+	dir = 4;
+	flags = null
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "wdS" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -8425,7 +8707,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "wte" = (
 /turf/simulated/wall/titanium,
@@ -8538,15 +8820,17 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	icon_state = "map-scrubbers";
+	dir = 4
 	},
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_tower)
@@ -8576,6 +8860,12 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"wNY" = (
+/obj/structure/closet,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/maintenance/security_tower)
 "wPJ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
@@ -8712,6 +9002,13 @@
 /obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_upper)
+"xkg" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "xlt" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -8878,7 +9175,7 @@
 	icon_state = "Soda_Machine";
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "xFu" = (
 /obj/structure/bed/chair,
@@ -8900,6 +9197,9 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper)
+"xMy" = (
+/turf/simulated/floor/wood,
+/area/security/breakroom)
 "xOp" = (
 /obj/effect/floor_decal/corner/white/full{
 	icon_state = "corner_white_full";
@@ -37361,13 +37661,13 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-tlZ
+jyR
+ghz
+ghz
+ghz
+ghz
+jyR
+jyR
 ovG
 tlZ
 tlZ
@@ -37613,13 +37913,13 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-tlZ
+ghz
+lvH
+lvH
+egN
+bnO
+hTY
+tYd
 wFQ
 pmD
 pmD
@@ -37865,18 +38165,18 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-tlZ
-tlZ
-tlZ
-kJK
+ghz
+noQ
+qgu
+tEB
+xMy
+kVN
+jyR
+tGf
+gcN
+aDf
 hRu
-kJK
+aDf
 aDf
 cnY
 ieg
@@ -38117,15 +38417,15 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+ghz
+nHt
+nHt
+flA
+xMy
+hAV
+jyR
+psk
+psk
 aDf
 qmJ
 qmr
@@ -38369,15 +38669,15 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+ghz
+xMy
+xMy
+flA
+xMy
+xkg
+jyR
+wNY
+qGH
 aDf
 sWj
 xqc
@@ -38621,15 +38921,15 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+ghz
+xMy
+oBV
+tWN
+xMy
+lut
+jyR
+qUI
+qUI
 aDf
 efV
 xqc
@@ -38873,17 +39173,17 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-aDf
-rnY
+jyR
+hpL
+iCu
+oCZ
+nOw
+ure
+vrU
+uzO
+jjc
+vTQ
+jjc
 mzQ
 lbF
 jjc
@@ -39125,15 +39425,15 @@ eFr
 eFr
 eFr
 eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
-eFr
+jyR
+jyR
+jyR
+jyR
+jyR
+jyR
+jyR
+qUI
+qUI
 aDf
 aDf
 aDf
@@ -39349,7 +39649,7 @@ kwL
 nZu
 oxg
 iXv
-mEQ
+oUY
 vfZ
 itq
 iXv
@@ -44208,7 +44508,7 @@ eFr
 eFr
 eFr
 aZL
-aZL
+vZc
 fbI
 eFr
 eFr
@@ -44461,7 +44761,7 @@ aZL
 dXx
 aaf
 aaf
-xAZ
+aBj
 eFr
 eFr
 eFr
@@ -54284,7 +54584,7 @@ nny
 nny
 nny
 oLF
-nny
+rds
 nny
 nny
 nny
@@ -56556,7 +56856,7 @@ pQE
 pQE
 wYp
 nny
-nny
+jYb
 erL
 eFr
 eFr
@@ -59330,7 +59630,7 @@ erL
 qoj
 xFf
 qaR
-aZL
+vZc
 aZL
 aZL
 dXx
@@ -59581,7 +59881,7 @@ aaf
 aaf
 gRM
 pBg
-vVm
+mYz
 aaf
 aaf
 aaf
