@@ -76,6 +76,20 @@
 	P.overlays = list("paper_stamped_rd")
 	src.contents += P
 
+//YW ADD START
+/obj/structure/noticeboard/blueshield
+	notices = 1
+	icon_state = "nboard01"
+
+/obj/structure/noticeboard/nanite/New()
+	var/obj/item/weapon/paper/P = new()
+	P.name = "Staff Notice: Blueshield Special Reserve"
+	P.info = "<br>This secure storage unit is intended to be used for special equipment specifically for the use of Blueshield Agents in the event of a Code Red threat to Heads of Staff. Heads of Staff found 'commandeering' this equipment can expect to be severely reprimanded.<br><br>(Underneath, there is a messy handwritten addition.)<br><i>Sorry, we haven't had time or spare funds to issue anything yet. You know how frontier budgets are! Sit tight, champ. -Z.V.</i>"
+	P.stamped = list(/obj/item/weapon/stamp/centcomm)
+	P.overlays = list("paper_stamped_cent")
+	src.contents += P
+//YW ADD END
+
 /obj/structure/noticeboard/library
 	notices = 2
 	icon_state = "nboard02"
