@@ -34,6 +34,10 @@
 	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
 
 
+/area/constructionsite/medical/upper
+	name = "\improper Construction Site Medbay Loft"
+	icon_state = "medbay"
+
 /area/maintenance/mining
 	name = "Mining Maintence"
 	icon_state = "amaint"
