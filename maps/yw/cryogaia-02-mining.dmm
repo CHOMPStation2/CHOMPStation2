@@ -1722,7 +1722,10 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "dU" = (
-/obj/machinery/vending/assist,
+/obj/machinery/vending/assist{
+	icon_state = "generic";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "dV" = (
@@ -3103,7 +3106,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola{
+	icon_state = "Soda_Machine";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
 "gV" = (
@@ -3569,9 +3575,12 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/machinery/vending/snack,
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
+	},
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
@@ -7271,7 +7280,8 @@
 "oT" = (
 /obj/machinery/door/airlock/research{
 	name = "Xenoflora Storage";
-	req_access = list(55)
+	req_access = null;
+	req_one_access = list(77,52)
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/blue{
@@ -8779,7 +8789,8 @@
 	},
 /obj/machinery/door/airlock/glass_research{
 	name = "Xenoflora Research";
-	req_access = list(55)
+	req_access = null;
+	req_one_access = list(77,52)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9874,7 +9885,8 @@
 	},
 /obj/machinery/door/airlock/glass_research{
 	name = "Xenoflora Research";
-	req_access = list(55)
+	req_access = null;
+	req_one_access = list(77,52)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/hydro,
@@ -10372,7 +10384,8 @@
 /area/rnd/xenobiology/xenoflora)
 "uz" = (
 /obj/machinery/vending/hydronutrients{
-	categories = 3
+	icon_state = "nutri_generic";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
@@ -10953,7 +10966,10 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "vy" = (
-/obj/machinery/seed_storage/xenobotany,
+/obj/machinery/seed_storage/xenobotany{
+	icon_state = "seeds";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "vz" = (
@@ -19702,11 +19718,17 @@
 /turf/simulated/floor/tiled/steel,
 /area/outpost/mining_main/airlock)
 "Mb" = (
-/obj/machinery/vending/snack,
+/obj/machinery/vending/snack{
+	icon_state = "snack";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/break_room)
 "Mc" = (
-/obj/machinery/vending/cigarette,
+/obj/machinery/vending/cigarette{
+	icon_state = "cigs";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/break_room)
 "Md" = (
@@ -20696,10 +20718,10 @@
 /turf/simulated/wall,
 /area/maintenance/shelter3)
 "Op" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = list(7,29)
-	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter3)
 "Oq" = (
@@ -20775,15 +20797,15 @@
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/shelter3)
 "OB" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = list(48)
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
+	},
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter3)
