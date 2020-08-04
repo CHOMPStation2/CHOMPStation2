@@ -46,7 +46,7 @@
 "SE" = (/obj/structure/cliff/automatic/corner,/turf/simulated/floor/outdoors/dirt,/area/submap/priderock)
 "Tb" = (/obj/effect/decal/cleanable/dirt,/obj/structure/ledge/ledge_stairs,/turf/simulated/floor/outdoors/dirt,/area/submap/priderock)
 "Td" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/rocks,/area/submap/priderock)
-"UG" = (/obj/random/multiple/minevault,/turf/simulated/floor/outdoors/dirt,/area/submap/priderock)
+"UG" = (/obj/structure/closet/crate,/obj/random/maintenance/clean,/obj/random/maintenance/clean,/obj/random/maintenance/clean,/obj/random/maintenance/cargo,/obj/random/maintenance/medical,/obj/random/maintenance/medical,/turf/simulated/floor/outdoors/dirt,/area/submap/priderock)
 "VF" = (/obj/structure/cliff/automatic{dir = 6},/obj/structure/railing{dir = 4},/obj/structure/railing,/turf/simulated/floor/outdoors/dirt,/area/submap/priderock)
 "Wk" = (/turf/simulated/floor/outdoors/dirt,/area/submap/priderock)
 "Xd" = (/turf/simulated/floor/outdoors/grass/sif,/area/submap/priderock)
