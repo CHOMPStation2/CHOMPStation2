@@ -10486,6 +10486,11 @@
 	pixel_x = 25;
 	pixel_y = 0
 	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 "FH" = (
@@ -10501,6 +10506,9 @@
 /area/residential/corridors)
 "FU" = (
 /obj/structure/toilet,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 "Hq" = (
