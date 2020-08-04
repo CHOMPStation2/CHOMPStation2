@@ -21846,6 +21846,9 @@
 /area/security/brig)
 "aPo" = (
 /obj/machinery/washing_machine,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/showers)
 "aPp" = (
@@ -23477,6 +23480,9 @@
 /obj/structure/toilet{
 	dir = 8
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/showers)
 "aSp" = (
@@ -23538,6 +23544,11 @@
 	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/showers)
@@ -48427,6 +48438,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
 "bJg" = (
