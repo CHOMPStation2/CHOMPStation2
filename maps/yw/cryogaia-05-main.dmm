@@ -6152,6 +6152,9 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/white{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
 "amB" = (
@@ -6523,6 +6526,12 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -7036,6 +7045,9 @@
 	dir = 4;
 	pixel_x = -30
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
 "aoh" = (
@@ -7057,19 +7069,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
-"aoi" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/blue,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/docking_lounge)
 "aoj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/corner/white{
-	dir = 8
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
 "aok" = (
@@ -7519,26 +7521,20 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
 "aoW" = (
-/obj/machinery/door/airlock/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/corner/white{
-	dir = 8
+/obj/machinery/door/airlock/multi_tile/glass{
+	req_access = list();
+	req_one_access = list()
 	},
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/multi_tile,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/docking_lounge)
-"aoX" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
 /area/hallway/secondary/entry/docking_lounge)
 "aoY" = (
-/obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
 /area/hallway/secondary/entry/docking_lounge)
 "aoZ" = (
 /obj/structure/grille,
@@ -8427,10 +8423,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/reception)
-"aqu" = (
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "aqv" = (
@@ -9550,7 +9542,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "aso" = (
-/obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -9562,6 +9553,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -15112,6 +15106,9 @@
 	name = "HoP Office Line Shutters";
 	opacity = 0
 	},
+/obj/effect/floor_decal/industrial/loading{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "aCc" = (
@@ -15697,6 +15694,9 @@
 	id = "hop_office_line";
 	name = "HoP Office Line Shutters";
 	opacity = 0
+	},
+/obj/effect/floor_decal/industrial/loading{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
@@ -20751,12 +20751,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor,
 /area/maintenance/bridge)
-"aNr" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(52)
-	},
-/turf/simulated/floor/tiled/dark,
-/area/bridge/blueshield)
 "aNs" = (
 /obj/structure/table/rack,
 /obj/item/weapon/flame/lighter/zippo/blue,
@@ -22172,11 +22166,6 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "aPY" = (
-/obj/machinery/door/airlock/glass_command{
-	id_tag = "sbridgedoor";
-	name = "Command Department";
-	req_access = list(19)
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -22191,6 +22180,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/airlock/glass_command{
+	name = "Blueshield Office"
+	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/bridge/blueshield)
 "aPZ" = (
@@ -41690,7 +41683,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/chief)
 "bxS" = (
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/crew_quarters/heads/chief)
 "bxT" = (
 /turf/simulated/wall,
@@ -58597,7 +58590,7 @@
 "cbI" = (
 /obj/machinery/door/airlock/glass_external,
 /obj/effect/map_helper/airlock/door/simple,
-/turf/simulated/shuttle/plating,
+/turf/simulated/shuttle/floor/white,
 /area/shuttle/residential)
 "cbJ" = (
 /obj/structure/cable/yellow{
@@ -64489,6 +64482,10 @@
 	c_tag = "Blueshield Reserve";
 	dir = 1
 	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "equipment case";
+	req_one_access = list(350)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/blueshield)
 "hkP" = (
@@ -65906,6 +65903,10 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds)
+"mvY" = (
+/obj/effect/floor_decal/industrial/loading,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/heads/hop)
 "mwo" = (
 /obj/effect/floor_decal/snow/floor/edges3,
 /obj/effect/floor_decal/snow/floor/edges3{
@@ -67253,7 +67254,7 @@
 "rGh" = (
 /obj/machinery/door/airlock/highsecurity/red{
 	name = "Blueshield Special Reserve";
-	req_one_access = list(52)
+	req_one_access = list(350)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/blueshield)
@@ -74556,7 +74557,7 @@ pbC
 pbC
 pbC
 cfP
-qbe
+cfP
 qbe
 cfP
 cfP
@@ -107623,7 +107624,7 @@ ano
 aoh
 agk
 apL
-aqu
+aqq
 aso
 apL
 aoT
@@ -107872,7 +107873,7 @@ ajv
 ajv
 amB
 ano
-aoi
+ajI
 dQf
 apM
 apM
@@ -108377,7 +108378,7 @@ ajw
 amD
 anq
 anq
-aoX
+anq
 apO
 apM
 ars
@@ -109908,7 +109909,7 @@ aCi
 aDj
 aDk
 aFb
-aFb
+mvY
 aGJ
 aHC
 aDl
@@ -114704,7 +114705,7 @@ sdy
 aAu
 lAq
 aLG
-aNr
+aLG
 aNY
 aOZ
 aRV

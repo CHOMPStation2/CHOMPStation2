@@ -3120,6 +3120,7 @@
 #include "code\modules\persistence\filth.dm"
 #include "code\modules\persistence\graffiti.dm"
 #include "code\modules\persistence\noticeboard.dm"
+#include "code\modules\persistence\noticeboard_yw.dm"
 #include "code\modules\persistence\persistence.dm"
 #include "code\modules\persistence\datum\datum_filth.dm"
 #include "code\modules\persistence\datum\datum_graffiti.dm"
