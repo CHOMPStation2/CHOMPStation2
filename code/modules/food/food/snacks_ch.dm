@@ -234,4 +234,10 @@
 
 //Todo: "red hot" cinnamon candies. Spicy Boys? I love the name Spicy Boys
 
-//Todo: Cinnamon rolls. aghhhghgghhg ^q^
+/obj/item/weapon/reagent_containers/food/snacks/cinnamonroll
+	name = 'cinnamon roll'
+	desc = 'A sweet little precious cinnamon roll, just begging to be eaten.'
+	icon = "icons/obj/food_ch.dmi'
+	icon_state = "cinnamon_roll"
+	nutrient_amt = 1 //Todo - Change numbers.
+	nutrient_desc = list("a precious sweetness that needs protecting" = 2) //This is a WIP flavour,

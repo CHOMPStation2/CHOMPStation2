@@ -15,7 +15,7 @@
 	name = "ground cinnamon"
 	id = "cinnamonpowder"
 	description = "Cinnamon, a spice made from tree bark, ground into a fine powder. Probably not a good idea to eat on its own!"
-	taste_description= "overpoweringly sweet and woody spice. You feel like you need to cough"
+	taste_description= "sweet spice with a hint of wood"
 	color = "#a96622"
 
 	glass_name = "ground cinnamon"
