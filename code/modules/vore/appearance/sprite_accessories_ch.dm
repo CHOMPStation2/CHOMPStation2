@@ -7,6 +7,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/zorgoia
+	name = "Zorgoia"
+	desc = "Ears only the slinkiest of noodles can have!"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "zorgoia"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 //TAILS
 /datum/sprite_accessory/tail/alien_slug
 	name = "Alien slug tail"
@@ -26,6 +34,15 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "snaketail_stripes"
 
+/datum/sprite_accessory/tail/zorgoia
+	name = "Zorgoia tail, dual-color"
+	desc = ""
+	icon = 'icons/mob/vore/tails_ch.dmi'
+	icon_state = "zorgoia"
+	extra_overlay = "zorgoia_fluff"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 //WINGS
 
 /datum/sprite_accessory/wing/snagc
@@ -42,3 +59,16 @@
 	icon_state = "snail_shell"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+
+//TAURS - Apparently we still havent remade our taur files!
+
+/datum/sprite_accessory/tail/taur/zorgoia
+	name = "Zorgoia (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "zorgoia"
+	extra_overlay = "zorgoia_fluff"
+
+/datum/sprite_accessory/tail/taur/zorgoia/fat
+	name = "Zorgoia (Fat Taur)"
+	extra_overlay = "zorgoia_fat"
