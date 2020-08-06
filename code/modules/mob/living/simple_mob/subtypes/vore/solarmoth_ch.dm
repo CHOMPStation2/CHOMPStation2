@@ -19,6 +19,10 @@
 	var/original_temp = null //Value to remember temp
 	var/set_temperature = T0C + 450	//Sets the target point of 450 degrees celsius
 	var/heating_power = 100000	//This controls the strength at which it heats the environment. // The number seems ridiculous but this is actually pretty reasonable - Lunar
+	var/emp_heavy = 2
+	var/emp_med = 4
+	var/emp_light = 7
+	var/emp_long = 10
 
 	faction = "grubs"
 	maxHealth = 200 // Tanky fuckers.
@@ -118,6 +122,20 @@
 	//Since I'm changing hyper mode to be variable we need to store old power
 	original_temp = heating_power //We remember our old goal, for use in non perpetual heating level increase
 
+/mob/living/simple_mob/vore/solarmoth/proc/explode()
+	src.anchored = 0
+	set_light(0)
+	if(empulse(src, emp_heavy, emp_med, emp_light, emp_long))
+		qdel(src)
+	return
+
+/mob/living/simple_mob/vore/solarmoth/death()
+	explode()
+	..()
+
+/mob/living/simple_mob/vore/solarmoth/gib() //This baby will explode no matter what you do to it.
+	explode()
+	..()
 
 
 /mob/living/simple_mob/vore/solarmoth/handle_light()
