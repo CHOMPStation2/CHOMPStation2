@@ -98,7 +98,7 @@ var/list/holder_mob_icon_cache = list()
 	else if(istype(loc, /obj/item/clothing/accessory/holster))
 		var/obj/item/clothing/accessory/holster/holster = loc
 		if(holster.holstered == src)
-			holster.clear_holster()			
+			holster.clear_holster()
 		to_chat(held, "<span class='warning'>You extricate yourself from [holster].</span>")
 		held.forceMove(get_turf(held))
 	else if(isitem(loc))
@@ -199,7 +199,7 @@ var/list/holder_mob_icon_cache = list()
 	return H
 
 /obj/item/weapon/holder/human
-	icon = 'icons/mob/holder_complex.dmi'
+	icon = 'icons/mob/holder_complex_yw.dmi' //YW EDIT
 	var/list/generate_for_slots = list(slot_l_hand_str, slot_r_hand_str, slot_back_str)
 	slot_flags = SLOT_BACK
 
