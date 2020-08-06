@@ -12,7 +12,7 @@
 	circuit = /obj/item/weapon/circuitboard/fryer
 	appliancetype = FRYER
 	active_power_usage = 12 KILOWATTS
-	heating_power = 12000
+	heating_power = 12 KILOWATTS
 	
 	min_temp = 140 + T0C	// Same as above, increasing this to just under 2x to make the % increase on efficiency not quite so painful as it would be at 80.
 	optimal_temp = 400 + T0C // Increasing this to be 2x Oven to allow for a much higher/realistic frying temperatures. Doesn't really do anything but make heating the fryer take a bit longer.
@@ -22,7 +22,7 @@
 	// Power used to maintain temperature once it's heated.
 	// Going with 25% of the active power. This is a somewhat arbitrary value.
 
-	resistance = 60000	// Approx. 10 minutes to heat up.
+	resistance = 10 KILOWATTS	// Approx. 10 minutes to heat up.
 
 	max_contents = 2
 	container_type = /obj/item/weapon/reagent_containers/cooking_container/fryer
