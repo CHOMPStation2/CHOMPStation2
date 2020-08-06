@@ -15,3 +15,9 @@
 		/obj/item/weapon/reagent_containers/food/snacks/spreads/butter
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/cinnamonroll
+
+/datum/recipe/spicy_boys
+	appliance = OVEN
+	reagents = list("cinnamonpowder" = 5, "sugar" = 10, "cornoil" = 10)
+	result = /obj/item/weapon/reagent_containers/food/snacks/spicy_boys
+	result_quanitty = 6

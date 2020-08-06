@@ -232,12 +232,20 @@
 	..()
 	bitesize = 2
 
-//Todo: "red hot" cinnamon candies. Spicy Boys? I love the name Spicy Boys
+/obj/item/weapon/reagent_containers/food/snacks/spicy_boys //These are off-brand red hots/atomic fireballs
+	name = 'Spicy Boys'
+	desc = 'Spicy little candy rounds for very naughty individuals.'
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "spicy_boys"
+	nutrient_amt = 1 //todo - change numbers
+	nutrient_desc = list("a sweet, candy-like spiciness." = 2) //WIP flavour??
 
 /obj/item/weapon/reagent_containers/food/snacks/cinnamonroll
 	name = 'cinnamon roll'
-	desc = 'A sweet little precious cinnamon roll, just begging to be eaten.'
+	desc = 'A precious little cinnamon roll, just begging to be eaten.'
 	icon = "icons/obj/food_ch.dmi'
 	icon_state = "cinnamon_roll"
 	nutrient_amt = 1 //Todo - Change numbers.
-	nutrient_desc = list("a precious sweetness that needs protecting" = 2) //This is a WIP flavour,
+	nutrient_desc = list("a precious sweetness that needs protecting" = 2) //This is a WIP flavour, Could keep it if you don't mind the "gotta protect the precious cinnamon roll" joke
+
+//TODO: Maybe butterscotch candies?
