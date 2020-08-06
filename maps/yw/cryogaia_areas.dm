@@ -578,3 +578,14 @@
 /area/hallway/secondary/exit_link
 	name = "\improper Docking Area link"
 	icon_state = "escape"
+
+
+
+
+
+// SPECIAL AREAS
+/area/vrworld
+	name = "VR World"
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "vr"
+	requires_power = 0
