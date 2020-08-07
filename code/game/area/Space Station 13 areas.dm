@@ -2618,3 +2618,27 @@ var/list/the_station_areas = list (
 	luminosity = 1
 	dynamic_lighting = 0
 	requires_power = 0
+	
+	
+//CHOMPSTATION AREAS
+//Moved hangars to here from Southern cross areas.
+/area/hangar/one
+	name = "\improper Hangar One"
+
+/area/hangar/lockerroomone
+	name = "\improper Exploration Locker Room One"
+	icon_state = "hangarcontrol"
+
+/area/hangar/two
+	name = "\improper Hangar Two"
+
+/area/hangar/lockerroomtwo
+	name = "\improper Exploration Locker Room Two"
+	icon_state = "hangarcontrol"
+
+/area/hangar/three
+	name = "\improper Hangar Three"
+
+/area/hangar/lockerroomthree
+	name = "\improper Exploration Locker Room Three"
+	icon_state = "hangarcontrol"
