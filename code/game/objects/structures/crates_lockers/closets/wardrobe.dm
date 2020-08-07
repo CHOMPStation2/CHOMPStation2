@@ -57,7 +57,7 @@
 		/obj/item/clothing/suit/storage/det_trench/grey = 2,
 		/obj/item/clothing/suit/storage/forensics/blue = 2,
 		/obj/item/clothing/suit/storage/forensics/red = 2,
-		/obj/item/clothing/gloves/forensic = 2)
+		/obj/item/clothing/gloves/forensic = 2) //CHOMP Addition
 
 /obj/structure/closet/wardrobe/pink
 	name = "pink wardrobe"
