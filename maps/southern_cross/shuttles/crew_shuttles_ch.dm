@@ -2,6 +2,8 @@
 //CHOMPedit: Shuttle 3, Sif-bound exploration shuttle for the exploration outpost, Hangar 3, and the wilderness.
 //Created so pilots stop stealing the autopilot shuttles and making station-planet travel more burdensome.
 
+GLOBAL_LIST_EMPTY(shuttdisp_list)
+
 /obj/machinery/computer/shuttle_control/web/shuttle3
 	name = "shuttle control console"
 	shuttle_tag = "Shuttle 3"
@@ -30,13 +32,13 @@
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle3/sif_orbit = 5 SECONDS
 	)
-/*
+
 /datum/shuttle_destination/shuttle3/root/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Exploration Hangar One."
 
 /datum/shuttle_destination/shuttle3/root/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Exploration Hangar One."
-*/
+
 /datum/shuttle_destination/shuttle3/sif_orbit
 	name = "Sif Orbit"
 	my_landmark = "shuttle3_orbit"
@@ -63,13 +65,13 @@
 
 	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
-/*
+
 /datum/shuttle_destination/shuttle3/stationhangar3/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Three."
 
 /datum/shuttle_destination/shuttle3/stationhangar3/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Three."
-*/
+
 /datum/shuttle_destination/shuttle3/sky
 	name = "Skies of Sif"
 	my_landmark = "shuttle3_sky"
@@ -86,10 +88,84 @@
 
 	radio_announce = 0
 	announcer = "Outpost Automated ATC"
-/*
+
 /datum/shuttle_destination/shuttle3/mining_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Wilderness Area."
 
 /datum/shuttle_destination/shuttle3/mining_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Wilderness Area."
-*/
+
+
+/obj/machinery/status_display/shuttle_display
+	ignore_friendc = 1
+	mode = STATUS_DISPLAY_CUSTOM
+	name = "\improper STS display" //STS means Sif Transport System
+	desc = "A Sif Transport System display. It tracks automated shuttles."
+	message1 = "SHUT1" //Intended to be set on the map. Defaults to SHUT1 if spawned in.
+
+	var/datum/shuttle/autodock/web_shuttle/my_shuttle //This is set by the get_my_shuttle() proc. Don't modify it here. Typepath needs to be defined this far for the compiler to recognize shuttle datum variables.
+	var/last_z = Z_LEVEL_STATION_ONE
+	var/shuttle_tag = "Shuttle 1" //This needs to use the same tag system as the shuttles subsystem. Set this on the map, otherwise defaults to "Shuttle 1."
+	var/location_desc
+
+/obj/machinery/status_display/shuttle_display/examine(mob/user)
+	. = ..()
+	. += "[shuttle_tag] is currently [location_desc]."
+
+/obj/machinery/status_display/shuttle_display/Initialize()
+	..()
+	GLOB.shuttdisp_list |= src
+
+/hook/roundstart/proc/shuttdisp_connect()
+	for(var/obj/machinery/status_display/shuttle_display/SD in GLOB.shuttdisp_list)
+		SD.get_my_shuttle()
+	return TRUE
+
+/obj/machinery/status_display/shuttle_display/New()
+	..()
+	get_my_shuttle()
+	update()
+
+/obj/machinery/status_display/shuttle_display/proc/get_my_shuttle()
+	var/datum/shuttle/autodock/shuttle = SSshuttles.shuttles[shuttle_tag]
+	if(!shuttle)
+		log_debug("Shuttle display could not find its shuttle!")
+	else
+		my_shuttle = shuttle
+
+/obj/machinery/status_display/shuttle_display/update()
+	if(!..() && mode == STATUS_DISPLAY_CUSTOM)
+//		message1 = "SHUT1"
+		message2 = ""
+
+		if(!my_shuttle)
+			message2 = "ErrR"
+			location_desc = "ERROR SHUTTLE NOT FOUND"
+
+		else if(my_shuttle.autopilot == FALSE)
+			message2 = "MANUAL"
+			location_desc = "piloted manually. Please contact Exploration to return the shuttle to autopilot"
+
+		else if(my_shuttle.current_location.z == Z_LEVEL_STATION_ONE)
+			message2 = "Stat"
+			last_z = Z_LEVEL_STATION_ONE
+			location_desc = "docked on the station"
+
+		else if(my_shuttle.current_location.z == Z_LEVEL_SURFACE)
+			message2 = "Outp"
+			last_z = Z_LEVEL_SURFACE
+			location_desc =	"docked on the outpost"
+
+		else
+			if(last_z == Z_LEVEL_STATION_ONE) //This one doesn't work, seemingly no matter what "last_z" is set to
+				message2 = "STS-O"
+				location_desc = "travelling to the outpost"
+
+			if(last_z == Z_LEVEL_SURFACE) //This one works
+				message2 = "STS-S"
+				location_desc = "travelling to the station"
+
+
+		update_display(message1, message2)
+		return 1
+	return 0
