@@ -95,28 +95,28 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 /datum/shuttle_destination/shuttle3/mining_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Wilderness Area."
 
-
+//Shuttle displays for tracking Shuttles 1 and 2 without spammy intercom announcements. This could hypothetically be expanded to other shuttles if for some reason that's desirable.
 /obj/machinery/status_display/shuttle_display
 	ignore_friendc = 1
 	mode = STATUS_DISPLAY_CUSTOM
 	name = "\improper STS display" //STS means Sif Transport System
 	desc = "A Sif Transport System display. It tracks automated shuttles."
-	message1 = "SHUT1" //Intended to be set on the map. Defaults to SHUT1 if spawned in.
+	message1 = "SHUT1" //Intended to be set on the map. Defaults to SHUT1 if spawned in to allow lazier mapping.
 
 	var/datum/shuttle/autodock/web_shuttle/my_shuttle //This is set by the get_my_shuttle() proc. Don't modify it here. Typepath needs to be defined this far for the compiler to recognize shuttle datum variables.
 	var/last_z = Z_LEVEL_STATION_ONE
 	var/shuttle_tag = "Shuttle 1" //This needs to use the same tag system as the shuttles subsystem. Set this on the map, otherwise defaults to "Shuttle 1."
-	var/location_desc
+	var/location_desc //Location descriptions for extra information on examine.
 
-/obj/machinery/status_display/shuttle_display/examine(mob/user)
+/obj/machinery/status_display/shuttle_display/examine(mob/user) //Because the displays only fit 5 characters per line.
 	. = ..()
 	. += "[shuttle_tag] is currently [location_desc]."
 
 /obj/machinery/status_display/shuttle_display/Initialize()
 	..()
-	GLOB.shuttdisp_list |= src
+	GLOB.shuttdisp_list |= src //Populates the global list for the roundstart hook.
 
-/hook/roundstart/proc/shuttdisp_connect()
+/hook/roundstart/proc/shuttdisp_connect() //Initialize (and LateInitialize) call before the shuttle datums exist so this is needed to make shuttle displays work when mapped in
 	for(var/obj/machinery/status_display/shuttle_display/SD in GLOB.shuttdisp_list)
 		SD.get_my_shuttle()
 	return TRUE
@@ -126,25 +126,24 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 	get_my_shuttle()
 	update()
 
-/obj/machinery/status_display/shuttle_display/proc/get_my_shuttle()
+/obj/machinery/status_display/shuttle_display/proc/get_my_shuttle() //Links the displays to their shuttles. Must be called after the shuttle datums exist.
 	var/datum/shuttle/autodock/shuttle = SSshuttles.shuttles[shuttle_tag]
 	if(!shuttle)
 		log_debug("Shuttle display could not find its shuttle!")
 	else
 		my_shuttle = shuttle
 
-/obj/machinery/status_display/shuttle_display/update()
+/obj/machinery/status_display/shuttle_display/update() //Location tracking.
 	if(!..() && mode == STATUS_DISPLAY_CUSTOM)
-//		message1 = "SHUT1"
 		message2 = ""
 
 		if(!my_shuttle)
 			message2 = "ErrR"
 			location_desc = "ERROR SHUTTLE NOT FOUND"
 
-		else if(my_shuttle.autopilot == FALSE)
+		else if(my_shuttle.autopilot == FALSE) //This should prevent displays from being incorrect if somebody steals the shuttles.
 			message2 = "MANUAL"
-			location_desc = "piloted manually. Please contact Exploration to return the shuttle to autopilot"
+			location_desc = "piloted manually. Please contact Exploration to return the shuttle to autopilot" //Tell them to use Shuttle 3.
 
 		else if(my_shuttle.current_location.z == Z_LEVEL_STATION_ONE)
 			message2 = "Stat"
@@ -157,11 +156,11 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 			location_desc =	"docked on the outpost"
 
 		else
-			if(last_z == Z_LEVEL_STATION_ONE) //This one doesn't work, seemingly no matter what "last_z" is set to
+			if(last_z == Z_LEVEL_STATION_ONE)
 				message2 = "STS-O"
 				location_desc = "travelling to the outpost"
 
-			if(last_z == Z_LEVEL_SURFACE) //This one works
+			if(last_z == Z_LEVEL_SURFACE)
 				message2 = "STS-S"
 				location_desc = "travelling to the station"
 
