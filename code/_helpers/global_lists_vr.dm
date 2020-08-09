@@ -154,7 +154,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/bone,
 				/obj/item/weapon/broken_bottle,
 				/obj/item/weapon/card/emag_broken,
-				/obj/item/weapon/cigbutt,
+				/obj/item/trash/cigbutt,
 				/obj/item/weapon/circuitboard/broken,
 				/obj/item/weapon/clipboard,
 				/obj/item/weapon/corncob,
@@ -426,7 +426,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_XENO_QUEEN,
 				SPECIES_SHADOW,
 				SPECIES_GOLEM,					//Some special species that may or may not be ever used in event too,
-				SPECIES_SHADEKIN) //Shadefluffers just poof away
+				SPECIES_SHADEKIN)			//Shadefluffers just poof away
 
 /var/global/list/existing_solargrubs = list()
 

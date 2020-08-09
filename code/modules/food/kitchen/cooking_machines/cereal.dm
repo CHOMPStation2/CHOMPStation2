@@ -6,7 +6,6 @@
 	cook_type = "cerealized"
 	on_icon = "cereal_on"
 	off_icon = "cereal_off"
-	cooked_sound = 'sound/machines/ding.ogg'
 	appliancetype = CEREALMAKER
 	circuit = /obj/item/weapon/circuitboard/cerealmaker
 

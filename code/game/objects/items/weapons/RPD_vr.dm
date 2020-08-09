@@ -33,7 +33,7 @@
 	var/datum/pipe_recipe/recipe = null	// pipe recipie selected for display/construction //YW edit, added = null
 	var/static/datum/pipe_recipe/first_atmos
 	var/static/datum/pipe_recipe/first_disposal
-	var/static/datum/asset/iconsheet/pipes/icon_assets
+	var/static/datum/asset/spritesheet/pipes/icon_assets
 	var/static/list/pipe_layers = list(
 		"Regular" = PIPING_LAYER_REGULAR,
 		"Supply" = PIPING_LAYER_SUPPLY,
@@ -80,7 +80,7 @@
 /obj/item/weapon/pipe_dispenser/interact(mob/user)
 	SetupPipes()
 	if(!icon_assets)
-		icon_assets = get_asset_datum(/datum/asset/iconsheet/pipes)
+		icon_assets = get_asset_datum(/datum/asset/spritesheet/pipes)
 	icon_assets.send(user)
 
 	var/list/lines = list()
@@ -370,7 +370,7 @@
 	if(_dir == p_dir && flipped == p_flipped)
 		attrs += " class=\"linkOn\""
 	if(icon_state)
-		var/img_tag = icon_assets.icon_tag(icon_state, _dir)
+		var/img_tag = icon_assets.icon_tag("[dirtext]-[icon_state]")
 		return "<a href=\"?src=\ref[src];dir=[dirtext];flipped=[flipped]\" title=\"[title]\"[attrs]>[img_tag]</a>"
 	else
 		return "<a href=\"?src=\ref[src];dir=[dirtext];flipped=[flipped]\" title=\"[title]\"[attrs]>[noimg]</a>"

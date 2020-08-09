@@ -773,7 +773,7 @@
 		to_chat(user, "It does nothing.")
 		return
 	else
-		if(allowed(usr) && !wires.IsIndexCut(AALARM_WIRE_IDSCAN))
+		if(allowed(usr) && !wires.is_cut(WIRE_IDSCAN))
 			locked = !locked
 			to_chat(user, "<span class='notice'>You [locked ? "lock" : "unlock"] the Air Alarm interface.</span>")
 		else
@@ -788,3 +788,14 @@
 	..()
 	spawn(rand(0,15))
 		update_icon()
+
+// VOREStation Edit Start
+/obj/machinery/alarm/freezer
+	target_temperature = T0C - 13.15 // Chilly freezer room
+
+/obj/machinery/alarm/freezer/first_run()
+	. = ..()
+
+	TLV["temperature"] =	list(T0C - 40, T0C - 20, T0C + 40, T0C + 66) // K, Lower Temperature for Freezer Air Alarms (This is because TLV is hardcoded to be generated on first_run, and therefore the only way to modify this without changing TLV generation)
+
+// VOREStation Edit End

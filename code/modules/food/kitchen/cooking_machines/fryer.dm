@@ -55,6 +55,19 @@
 	if(Adjacent(user))
 		to_chat(user, "Oil Level: [oil.total_volume]/[optimal_oil]")
 		
+/obj/machinery/appliance/cooker/fryer/update_icon() // We add our own version of the proc to use the special fryer double-lights.
+	cut_overlays()
+	var/image/light
+	if(use_power == 1 && !stat)
+		light = image(icon, "fryer_light_idle")
+	else if(use_power == 2 && !stat)
+		light = image(icon, "fryer_light_preheating")
+	else
+		light = image(icon, "fryer_light_off")
+	light.pixel_x = light_x
+	light.pixel_y = light_y
+	add_overlay(light)
+		
 /obj/machinery/appliance/cooker/fryer/heat_up()
 	if (..())
 		//Set temperature of oil reagent

@@ -437,6 +437,7 @@
 	dat += jointext(nightmare_list, null) //AAAA
 
 	dat += "<br><a href='?src=\ref[src];setflavor=1'>Set Your Taste</a>"
+	dat += "<br><a href='?src=\ref[src];setsmell=1'>Set Your Smell</a>"
 	dat += "<br><a href='?src=\ref[src];togglenoisy=1'>Toggle Hunger Noises</a>"
 
 	//Under the last HR, save and stuff.
@@ -993,6 +994,17 @@
 			return FALSE
 		user.vore_taste = new_flavor
 
+	if(href_list["setsmell"])
+		var/new_smell = html_encode(input(usr,"What your character smells like (40ch limit). This text will be printed to the pred after 'X smells of...' so just put something like 'strawberries and cream':","Character Smell",user.vore_smell) as text|null)
+		if(!new_smell)
+			return FALSE
+
+		new_smell = readd_quotes(new_smell)
+		if(length(new_smell) > FLAVOR_MAX)
+			alert("Entered perfume/smell text too long. [FLAVOR_MAX] character limit.","Error!")
+			return FALSE
+		user.vore_smell = new_smell
+
 	if(href_list["toggle_dropnom_pred"])
 		var/choice = alert(user, "This toggle is for spontaneous, environment related vore as a predator, including drop-noms, teleporters, etc. You are currently [user.can_be_drop_pred ? " able to eat prey that you encounter by environmental actions." : "avoiding eating prey encountered in the environment."]", "", "Be Pred", "Cancel", "Don't be Pred")
 		switch(choice)
@@ -1014,7 +1026,7 @@
 				user.can_be_drop_prey = FALSE
 
 	if(href_list["toggledg"])
-		var/choice = alert(user, "This button is for those who don't like being digested. It can make you undigestable. Messages admins when changed, so don't try to use it for mechanical benefit. Set it once and save it. Digesting you is currently: [user.digestable ? "Allowed" : "Prevented"]", "", "Allow Digestion", "Cancel", "Prevent Digestion")
+		var/choice = alert(user, "This button is for those who don't like being digested. It can make you undigestable. Digesting you is currently: [user.digestable ? "Allowed" : "Prevented"]", "", "Allow Digestion", "Cancel", "Prevent Digestion")
 		switch(choice)
 			if("Cancel")
 				return FALSE
@@ -1022,8 +1034,6 @@
 				user.digestable = TRUE
 			if("Prevent Digestion")
 				user.digestable = FALSE
-
-		message_admins("[key_name(user)] toggled their digestability to [user.digestable] [ADMIN_COORDJMP(user)]")
 
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.digestable = user.digestable
@@ -1081,7 +1091,7 @@
 			user.client.prefs_vr.digest_leave_remains = user.digest_leave_remains
 
 	if(href_list["togglemv"])
-		var/choice = alert(user, "This button is for those who don't like being eaten by mobs. Messages admins when changed, so don't try to use it for mechanical benefit. Set it once and save it. Mobs are currently: [user.allowmobvore ? "Allowed to eat" : "Prevented from eating"] you.", "", "Allow Mob Predation", "Cancel", "Prevent Mob Predation")
+		var/choice = alert(user, "This button is for those who don't like being eaten by mobs. Mobs are currently: [user.allowmobvore ? "Allowed to eat" : "Prevented from eating"] you.", "", "Allow Mob Predation", "Cancel", "Prevent Mob Predation")
 		switch(choice)
 			if("Cancel")
 				return FALSE
@@ -1089,8 +1099,6 @@
 				user.allowmobvore = TRUE
 			if("Prevent Mob Predation")
 				user.allowmobvore = FALSE
-
-		message_admins("[key_name(user)] toggled their mob vore preference to [user.allowmobvore] [ADMIN_COORDJMP(user)]")
 
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.allowmobvore = user.allowmobvore

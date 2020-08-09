@@ -237,6 +237,7 @@ var/list/gamemode_cache = list()
 	var/static/dooc_allowed = 1
 	var/static/dsay_allowed = 1
 
+	var/persistence_enabled = 1
 	var/allow_byond_links = 1	//CHOMP Edit turned this on
 	var/allow_discord_links = 1	//CHOMP Edit turned this on
 	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit bussy.
@@ -580,6 +581,9 @@ var/list/gamemode_cache = list()
 
 				if("protect_roles_from_antagonist")
 					config.protect_roles_from_antagonist = 1
+
+				if ("persistence_enabled")
+					config.persistence_enabled = 1
 
 				if ("probability")
 					var/prob_pos = findtext(value, " ")

@@ -387,3 +387,56 @@
 	desc = "Asteroid-bound mercenary listening post"
 	mappath = 'gateway/listeningpost.dmm'
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+//////////////////////////////////////////////////////////////////////////////
+//Rogue Mines Stuff
+
+/datum/map_template/cryogaia_lateload/cryogaia_roguemines1
+	name = "Asteroid Belt 1"
+	desc = "Mining, but rogue. Zone 1"
+	mappath = 'rogue_mines/rogue_mine1.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines1
+
+/datum/map_z_level/cryogaia_lateload/roguemines1
+	name = "Belt 1"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	z = Z_LEVEL_ROGUEMINE_1
+
+/datum/map_template/cryogaia_lateload/cryogaia_roguemines2
+	name = "Asteroid Belt 2"
+	desc = "Mining, but rogue. Zone 2"
+	mappath = 'rogue_mines/rogue_mine2.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines2
+
+/datum/map_z_level/cryogaia_lateload/roguemines2
+	name = "Belt 2"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	z = Z_LEVEL_ROGUEMINE_2
+
+/datum/map_template/cryogaia_lateload/cryogaia_roguemines3
+	name = "Asteroid Belt 3"
+	desc = "Mining, but rogue. Zone 3"
+	mappath = 'rogue_mines/rogue_mine3.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines3
+
+/datum/map_z_level/cryogaia_lateload/roguemines3
+	name = "Belt 3"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	z = Z_LEVEL_ROGUEMINE_3
+
+/datum/map_template/cryogaia_lateload/cryogaia_roguemines4
+	name = "Asteroid Belt 4"
+	desc = "Mining, but rogue. Zone 4"
+	mappath = 'rogue_mines/rogue_mine4.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines4
+
+/datum/map_z_level/cryogaia_lateload/roguemines4
+	name = "Belt 4"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	z = Z_LEVEL_ROGUEMINE_4
+
+//////////////////////////////////////////////////////////////////////////////
