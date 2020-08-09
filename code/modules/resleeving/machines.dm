@@ -476,7 +476,8 @@
 			data["initialSick"] = TRUE
 		else
 			data["initialSick"] = FALSE
-//End chomp edit*/
+*/
+//End chomp edit
 	return data
 
 /obj/machinery/transhuman/resleever/attackby(obj/item/W as obj, mob/user as mob)
