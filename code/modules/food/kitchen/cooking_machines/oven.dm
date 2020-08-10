@@ -82,7 +82,7 @@
 		cooking = TRUE
 	else
 		open = TRUE
-		loss = (heating_power / resistance) * 4
+		loss = (heating_power / resistance) * 2 // Halve oven heat loss.
 		//When the oven door is opened, heat is lost MUCH faster and you stop cooking (because the door is open)
 		cooking = FALSE
 
