@@ -31944,6 +31944,9 @@
 	},
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
 /obj/machinery/atmospherics/pipe/zpipe/up/supply,
+/obj/structure/cable{
+	icon_state = "16-0"
+	},
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/dorms)
 "bqu" = (

@@ -47460,20 +47460,16 @@
 /area/rnd/research)
 "bHK" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/scicargo)
 "bHL" = (
+/obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/scicargo)
 "bHM" = (
@@ -48321,10 +48317,6 @@
 	icon_state = "0-2";
 	pixel_y = 0
 	},
-/turf/simulated/floor/plating,
-/area/borealis2/elevator/scicargo)
-"bIZ" = (
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/scicargo)
 "bJa" = (
@@ -60542,18 +60534,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
 "cgc" = (
-/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/zpipe/down/supply{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "32-1"
-	},
-/obj/machinery/door/firedoor,
-/obj/structure/lattice,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/borealis2/elevator/scicargo)
 "cgd" = (
 /obj/effect/spider/eggcluster/small/frost,
@@ -64729,6 +64710,21 @@
 "irz" = (
 /turf/simulated/floor/reinforced,
 /area/security/hangar)
+"iue" = (
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "32-1"
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/open,
+/area/borealis2/elevator/scicargo)
 "iup" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -115481,9 +115477,9 @@ bDL
 bEQ
 bIY
 bHL
-bvs
+iue
 bWA
-bIZ
+bvs
 cll
 bNR
 bRp
