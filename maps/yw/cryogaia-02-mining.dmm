@@ -1379,17 +1379,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
-"dk" = (
-/obj/machinery/status_display{
-	pixel_y = 30
-	},
-/obj/structure/cable/blue{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology)
 "dl" = (
 /obj/structure/sink{
 	pixel_x = 0;
@@ -1421,19 +1410,6 @@
 /obj/structure/table/standard,
 /obj/item/weapon/gun/energy/taser/xeno,
 /obj/item/weapon/melee/baton/slime/loaded,
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology)
-"do" = (
-/obj/structure/table/standard,
-/obj/item/device/radio/intercom{
-	dir = 1;
-	pixel_y = 24;
-	req_access = list()
-	},
-/obj/item/clothing/glasses/welding,
-/obj/item/clothing/glasses/welding,
-/obj/item/weapon/weldingtool,
-/obj/item/weapon/weldingtool,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "dp" = (
@@ -1910,13 +1886,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
-"er" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology)
 "es" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/spray/cleaner,
@@ -2099,27 +2068,6 @@
 	pixel_x = -25;
 	pixel_y = 8;
 	req_access = list(55)
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology)
-"eM" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
-/obj/structure/cable/blue{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology)
-"eN" = (
-/obj/structure/table/standard,
-/obj/item/glass_jar,
-/obj/item/glass_jar,
-/obj/item/weapon/storage/box/syringes,
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
@@ -2331,22 +2279,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
-"fn" = (
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
-	},
-/obj/structure/table/standard,
-/obj/machinery/reagentgrinder,
-/obj/item/stack/material/phoron,
-/obj/item/stack/material/phoron,
-/obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology)
 "fo" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -2355,19 +2287,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology)
-"fp" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/box/beakers{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "fq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2624,16 +2543,15 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "fT" = (
-/obj/structure/table/standard,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped,
 /obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
@@ -2934,6 +2852,7 @@
 	pixel_x = 0;
 	pixel_y = -27
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "gz" = (
@@ -21762,6 +21681,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
+"QR" = (
+/obj/structure/table/standard,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = 24;
+	req_access = list()
+	},
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/weapon/weldingtool,
+/obj/item/weapon/weldingtool,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
 "RC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -21775,6 +21710,45 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/outpost/launch)
+"SX" = (
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
+"TM" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/beakers{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
+"Un" = (
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
+"UP" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
+"VD" = (
+/obj/structure/table/standard,
+/obj/item/glass_jar,
+/obj/item/glass_jar,
+/obj/item/weapon/storage/box/syringes,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
+"VP" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
 "Wr" = (
 /obj/machinery/camera/network/research_outpost{
 	c_tag = "Toxins Testing Room";
@@ -21782,6 +21756,20 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/outpost/launch)
+"WU" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
+"Yw" = (
+/obj/machinery/status_display{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
 "Yz" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -21805,6 +21793,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/gateway)
+"ZH" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
 
 (1,1,1) = {"
 ab
@@ -63955,9 +63947,9 @@ ab
 ab
 ab
 ab
-ab
-ab
-ad
+cS
+cS
+cS
 cS
 dj
 dJ
@@ -64206,12 +64198,12 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ad
 cS
-dk
+cS
+Yw
+dN
+SX
+fm
 dK
 ep
 eL
@@ -64458,16 +64450,16 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ad
 cS
 dl
+dN
+dN
+dN
+dN
 dL
 dN
-eM
-fn
+dN
+dN
 fT
 gv
 gW
@@ -64710,17 +64702,17 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ad
 cS
 dm
+eq
+eq
+eq
+eq
 dM
 eq
-eN
-fo
-fU
+eq
+eq
+ep
 gw
 dN
 hx
@@ -64962,17 +64954,17 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ad
 cS
 dn
 dN
 dN
+VP
 eO
-fp
+TM
 fV
+dN
+dN
+dN
 gx
 cS
 hy
@@ -65214,14 +65206,14 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ad
 cS
-do
-jG
+QR
 dN
+dN
+VD
+fo
+fU
+UP
 eP
 fq
 fW
@@ -65466,14 +65458,14 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ad
 cS
-cS
-dO
-er
+Un
+dN
+dN
+dN
+dN
+dN
+dN
 eQ
 fr
 fX
@@ -65718,13 +65710,13 @@ ad
 ad
 ad
 ad
-ad
-ad
-ad
-ad
 cS
-ab
-dO
+dN
+dN
+dN
+WU
+jG
+ZH
 es
 eR
 fs
@@ -65975,7 +65967,7 @@ ae
 ae
 ae
 ae
-ab
+cS
 dO
 et
 et
