@@ -1399,9 +1399,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_ENGINEERING
 
 /area/engineering/atmos
- 	name = "\improper Atmospherics"
- 	icon_state = "atmos"
- 	sound_env = LARGE_ENCLOSED
+	name = "\improper Atmospherics"
+	icon_state = "atmos"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ATMOS
 
 /area/engineering/atmos/monitoring
 	name = "\improper Atmospherics Monitoring Room"
@@ -2651,6 +2652,12 @@ var/list/the_station_areas = list (
 	
 //CHOMPSTATION AREAS
 //Moved hangars to here from Southern cross areas.
+/area/hangar
+	name = "\improper First Deck Hangar"
+	icon_state = "hangar"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
+
 /area/hangar/one
 	name = "\improper Hangar One"
 
@@ -2671,3 +2678,4 @@ var/list/the_station_areas = list (
 /area/hangar/lockerroomthree
 	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
+	
