@@ -43,7 +43,6 @@
 			base_turf = T.type
 	else
 		base_area = locate(base_area || world.area)
-	name = (name + " ([x],[y])")
 	SSshuttles.register_landmark(landmark_tag, src)
 
 /obj/effect/shuttle_landmark/LateInitialize()
