@@ -9,7 +9,6 @@
 	off_icon = "grill_off"
 	can_burn_food = TRUE
 	circuit = /obj/item/weapon/circuitboard/grill
-	cooked_sound = 'sound/machines/ding.ogg'
 	active_power_usage = 4 KILOWATTS
 	heating_power = 4000
 	idle_power_usage = 2 KILOWATTS
@@ -21,9 +20,9 @@
 	// Grill is faster to heat and setup than the rest.
 	optimal_temp = 120 + T0C
 	min_temp = 60 + T0C
+	resistance = 8 KILOWATTS // Very fast to heat up.
 	
 	max_contents = 3 // Arbitrary number, 3 grill 'racks'
-	resistance = 8 KILOWATTS // Very fast to heat up.
 	container_type = /obj/item/weapon/reagent_containers/cooking_container/grill
 
 /* // Test Comment this out too, /cooker does this for us, and this path '/obj/machinery/appliance/grill' is invalid anyways, meaning it does jack shit. - Updated the paths, but I'm basically commenting all this shit out and if the grill works as-normal, none of this stuff is needed.

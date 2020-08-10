@@ -1253,6 +1253,13 @@
 "acF" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/rdoffice)
+"acG" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/lower/south)
 "acH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1372,6 +1379,40 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/north)
+"acZ" = (
+/obj/effect/floor_decal/borderfloor/shifted{
+	dir = 1;
+	icon_state = "borderfloor_shifted"
+	},
+/obj/effect/floor_decal/corner/lightorange/border/shifted{
+	dir = 1;
+	icon_state = "bordercolor_shifted"
+	},
+/obj/effect/floor_decal/corner/lightorange{
+	dir = 5;
+	icon_state = "corner_white"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/obj/machinery/computer/cryopod{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/solitary)
+"ada" = (
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/obj/machinery/computer/cryopod{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/surfacebase/security/brig)
 "adb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1536,6 +1577,27 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/open,
 /area/maintenance/lower/north)
+"adq" = (
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Atmospherics";
+	req_access = list(24)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	layer = 1;
+	name = "Atmospherics Lockdown";
+	opacity = 0;
+	open_layer = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "adr" = (
 /obj/structure/railing{
 	dir = 1
@@ -1643,6 +1705,53 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/north)
+"adE" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/machinery/alarm{
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/obj/machinery/computer/security/xenobio,
+/obj/machinery/camera/network/research/xenobio,
+/turf/simulated/floor/tiled/white,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
+"adF" = (
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiopen5";
+	name = "Pen 5 Containment";
+	pixel_x = -20;
+	pixel_y = -8;
+	req_access = list(55)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiopen3";
+	name = "Pen 3 Containment";
+	pixel_x = -20;
+	pixel_y = 8;
+	req_access = list(55)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiodiv3";
+	name = "Divider 3 Blast Doors";
+	pixel_x = -25;
+	pixel_y = 0;
+	req_access = list(55)
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -35;
+	pixel_y = 0
+	},
+/obj/machinery/camera/network/research/xenobio{
+	icon_state = "camera";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
 "adG" = (
 /obj/structure/railing{
 	dir = 4
@@ -1772,6 +1881,34 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/north)
+"adX" = (
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiodiv6";
+	name = "Divider 6 Blast Doors";
+	pixel_x = 38;
+	pixel_y = 0;
+	req_access = list(55)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiopen6";
+	name = "Pen 6 Containment";
+	pixel_x = 30;
+	pixel_y = 8;
+	req_access = list(55)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiopen8";
+	name = "Pen 8 Containment";
+	pixel_x = 30;
+	pixel_y = -8;
+	req_access = list(55)
+	},
+/obj/machinery/camera/network/research/xenobio{
+	icon_state = "camera";
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
 "adY" = (
 /turf/simulated/wall,
 /area/tether/surfacebase/surface_two_hall)
@@ -7391,27 +7528,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
-"apQ" = (
-/obj/machinery/door/airlock/maintenance/engi{
-	name = "Atmospherics";
-	req_access = list(24)
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 1;
-	icon_state = "pdoor0";
-	id = "atmoslockdown";
-	layer = 1;
-	name = "Atmospherics Lockdown";
-	opacity = 0;
-	open_layer = 1
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "apR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -9853,12 +9969,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
-"aup" = (
-/obj/structure/bed/chair/comfy{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
 "auq" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -10192,19 +10302,6 @@
 /obj/structure/stairs/south,
 /turf/simulated/floor/tiled,
 /area/rnd/staircase/secondfloor)
-"auW" = (
-/obj/structure/bed/chair/comfy{
-	dir = 1
-	},
-/obj/machinery/requests_console{
-	department = "Science";
-	departmentType = 2;
-	name = "Science Requests Console";
-	pixel_x = -30;
-	pixel_y = 0
-	},
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
 "auX" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -12121,10 +12218,6 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner2,
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/atmos)
-"aya" = (
-/obj/structure/bed/chair/comfy,
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
 "ayb" = (
 /obj/machinery/light_switch{
 	pixel_y = -28
@@ -19148,20 +19241,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/outpost/xenobiology/outpost_slimepens)
-"aLt" = (
-/obj/item/device/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
-/obj/machinery/alarm{
-	pixel_x = 0;
-	pixel_y = 30
-	},
-/obj/machinery/computer/security/xenobio,
-/obj/machinery/camera/network/research,
-/turf/simulated/floor/tiled/white,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
 "aLu" = (
 /obj/machinery/button/remote/blast_door{
 	id = "xenobiodiv4";
@@ -21065,38 +21144,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/storage)
-"aPb" = (
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiopen5";
-	name = "Pen 5 Containment";
-	pixel_x = -20;
-	pixel_y = -8;
-	req_access = list(55)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiopen3";
-	name = "Pen 3 Containment";
-	pixel_x = -20;
-	pixel_y = 8;
-	req_access = list(55)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiodiv3";
-	name = "Divider 3 Blast Doors";
-	pixel_x = -25;
-	pixel_y = 0;
-	req_access = list(55)
-	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -35;
-	pixel_y = 0
-	},
-/obj/machinery/camera/network/research{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
 "aPc" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -21110,34 +21157,6 @@
 	network = list("Xenobiology")
 	},
 /turf/simulated/floor/reinforced,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
-"aPd" = (
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiodiv6";
-	name = "Divider 6 Blast Doors";
-	pixel_x = 38;
-	pixel_y = 0;
-	req_access = list(55)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiopen6";
-	name = "Pen 6 Containment";
-	pixel_x = 30;
-	pixel_y = 8;
-	req_access = list(55)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiopen8";
-	name = "Pen 8 Containment";
-	pixel_x = 30;
-	pixel_y = -8;
-	req_access = list(55)
-	},
-/obj/machinery/camera/network/research{
-	dir = 8;
-	icon_state = "camera"
-	},
-/turf/simulated/floor/tiled/dark,
 /area/rnd/outpost/xenobiology/outpost_slimepens)
 "aPe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -24147,28 +24166,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/lowerhallway)
-"aTI" = (
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1;
-	icon_state = "borderfloor_shifted"
-	},
-/obj/effect/floor_decal/corner/lightorange/border/shifted{
-	dir = 1;
-	icon_state = "bordercolor_shifted"
-	},
-/obj/effect/floor_decal/corner/lightorange{
-	dir = 5;
-	icon_state = "corner_white"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/solitary)
 "aTJ" = (
 /obj/effect/floor_decal/borderfloor/shifted{
 	dir = 1;
@@ -25975,12 +25972,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/interrogation)
-"aWo" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/tether/surfacebase/security/brig)
 "aWq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -28393,6 +28384,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
+"dgA" = (
+/obj/structure/bed/chair/comfy/brown,
+/turf/simulated/floor/wood,
+/area/rnd/breakroom)
 "drH" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -28412,6 +28407,12 @@
 /obj/structure/railing,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/rnd)
+"dEl" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/rnd/breakroom)
 "dQd" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
@@ -29193,6 +29194,19 @@
 /obj/structure/disposalpipe/up,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/rnd)
+"qXI" = (
+/obj/machinery/requests_console{
+	department = "Science";
+	departmentType = 2;
+	name = "Science Requests Console";
+	pixel_x = -30;
+	pixel_y = 0
+	},
+/obj/structure/bed/chair/comfy/brown{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/rnd/breakroom)
 "rim" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -34916,7 +34930,7 @@ aIZ
 aJB
 aHT
 aKZ
-aPb
+adF
 aJB
 aKl
 aKZ
@@ -35193,7 +35207,7 @@ aab
 aab
 aab
 aHc
-aLt
+adE
 aHu
 aHx
 aHR
@@ -35488,7 +35502,7 @@ aLu
 aJF
 aKo
 aLa
-aPd
+adX
 aJF
 aKs
 aLa
@@ -37681,7 +37695,7 @@ aVx
 akg
 aVQ
 aWe
-aWo
+ada
 aUN
 acW
 adw
@@ -37719,9 +37733,9 @@ aqU
 arA
 ass
 aqk
-aya
+dgA
 auo
-auW
+qXI
 avu
 awj
 aAi
@@ -37862,7 +37876,7 @@ arB
 ast
 aqk
 atD
-aup
+dEl
 atJ
 atJ
 awk
@@ -38722,7 +38736,7 @@ atJ
 axP
 auv
 azl
-apQ
+adq
 aAT
 aAT
 aBW
@@ -40225,7 +40239,7 @@ aab
 aab
 aab
 aTt
-aTI
+acZ
 aTZ
 aUk
 aUy
@@ -44128,8 +44142,8 @@ aDF
 aDN
 aEe
 arZ
-aac
-aac
+arZ
+arZ
 aac
 arZ
 arZ
@@ -44270,7 +44284,7 @@ arZ
 aDP
 arZ
 arZ
-arZ
+acG
 arZ
 arZ
 arZ
@@ -45902,7 +45916,7 @@ aab
 aab
 aab
 aab
-aab
+aac
 aac
 aKv
 aPV
@@ -45917,8 +45931,8 @@ aKv
 aac
 aac
 aac
-aab
-aab
+aac
+aac
 aac
 aac
 aac
@@ -46044,8 +46058,8 @@ aab
 aab
 aab
 aab
-aab
-aab
+aac
+aac
 aKv
 aKv
 aKv
@@ -46059,20 +46073,20 @@ aKv
 aac
 aac
 aac
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 aac
 aac
 aac
@@ -46186,37 +46200,37 @@ aab
 aab
 aab
 aab
-aab
-aab
 aac
 aac
 aac
 aac
 aac
 aac
-apq
-apq
-apq
-apq
-apq
 aac
 aac
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 aac
 adu
 adu
@@ -46328,15 +46342,27 @@ aab
 aab
 aab
 aab
-aab
-aab
 aac
 aac
 aac
 aac
 aac
-apq
-apq
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -46345,20 +46371,8 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aac
+aac
 aac
 aac
 aac
@@ -46470,6 +46484,22 @@ aab
 aab
 aab
 aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -46483,29 +46513,13 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 ajT
 ajT
 ajT
@@ -46613,6 +46627,20 @@ aab
 aab
 aab
 aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 aab
 aab
 aab
@@ -46629,27 +46657,13 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 ajM
 ajM
 aUa
@@ -46757,6 +46771,16 @@ aab
 aab
 aab
 aab
+aac
+aac
+aac
+apq
+apq
+apq
+apq
+apq
+apq
+apq
 aab
 aab
 aab
@@ -46775,23 +46799,13 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aac
+aac
+aac
+aac
+aac
+aac
+aac
 ajM
 ajM
 ajM
@@ -46900,12 +46914,12 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
+apq
+apq
+apq
+apq
+apq
+apq
 aab
 aab
 aab

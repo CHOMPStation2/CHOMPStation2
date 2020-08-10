@@ -38,7 +38,7 @@
 	company_name  = "NanoTrasen"
 	company_short = "NT"
 	starsys_name  = "Vir"
-	use_overmap = FALSE //CHOMPEdit we don't have the shuttles ready for overmap yet			   
+	use_overmap = TRUE
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
@@ -87,8 +87,17 @@
 	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage")
 	default_skybox = /datum/skybox_settings/southern_cross
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
-
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
+
+	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
+
+	map_levels = list(
+			Z_LEVEL_STATION_ONE,
+			Z_LEVEL_STATION_TWO,
+			Z_LEVEL_STATION_THREE,
+			Z_LEVEL_SURFACE,
+			Z_LEVEL_SURFACE_MINE
+		)
 
 	//CHOMPStation Addition Start - Prior addition for Belt Miner system. TFF - Commenting out 15/2/20
 	/*
@@ -104,9 +113,11 @@
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
 	lateload_single_pick = null
-	
-	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
 
+
+
+// Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
+/*
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
 	if (long_range && (srcz in map_levels))
@@ -128,7 +139,7 @@
 			Z_LEVEL_SURFACE_WILD)
 	else
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
-
+*/
 /datum/map/southern_cross/perform_map_generation()
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
 
@@ -196,19 +207,19 @@
 /datum/map_z_level/southern_cross/surface
 	z = Z_LEVEL_SURFACE
 	name = "Plains"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/southern_cross/surface_mine
 	z = Z_LEVEL_SURFACE_MINE
 	name = "Mountains"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/southern_cross/surface_wild
 	z = Z_LEVEL_SURFACE_WILD
 	name = "Wilderness"
-	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/southern_cross/misc
@@ -298,15 +309,41 @@
 	teleport_y = src.y + 4
 	teleport_z = src.z
 	return ..()
+/*CHOMP edit Polaris is adding this stuff soon.
+/obj/effect/map_effect/portal/master/side_a/plains_to_caves
+	portal_id = "plains_caves-normal"
 
-//CHOMPEdit this is very much necessary for us otherwise weather sounds play on other leves
-/datum/planet/sif 
+/obj/effect/map_effect/portal/master/side_b/caves_to_plains
+	portal_id = "plains_caves-normal"
+
+/obj/effect/map_effect/portal/master/side_a/plains_to_caves/river
+	portal_id = "plains_caves-river"
+
+/obj/effect/map_effect/portal/master/side_b/caves_to_plains/river
+	portal_id = "plains_caves-river"
+
+
+/obj/effect/map_effect/portal/master/side_a/caves_to_wilderness
+	portal_id = "caves_wilderness-normal"
+
+/obj/effect/map_effect/portal/master/side_b/wilderness_to_caves
+	portal_id = "caves_wilderness-normal"
+
+/obj/effect/map_effect/portal/master/side_a/caves_to_wilderness/river
+	portal_id = "caves_wilderness-river"
+
+/obj/effect/map_effect/portal/master/side_b/wilderness_to_caves/river
+	portal_id = "caves_wilderness-river"
+*/
+/*
+//CHOMPEdit this is very much necessary for us otherwise weather sounds play on other levels
+/datum/planet/sif
 	expected_z_levels = list(
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD
 	)
-
+*/
 //Suit Storage Units
 
 /obj/machinery/suit_cycler/exploration

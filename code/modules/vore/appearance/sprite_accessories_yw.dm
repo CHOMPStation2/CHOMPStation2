@@ -158,7 +158,7 @@
 	icon = 'icons/mob/vore/tails_yw.dmi'
 	name = "Female teshari tail(Pattern, Alt.)"
 	desc = ""
-	icon_state = "seromitail_s"
+	icon_state = "teshari_fluffytail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "teshpattern_fem_alt"
@@ -168,7 +168,7 @@
 	icon = 'icons/mob/vore/tails_yw.dmi'
 	name = "Male teshari tail(Pattern, Alt.)"
 	desc = ""
-	icon_state = "seromitail_s"
+	icon_state = "teshari_fluffytail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "teshpattern_male_alt"

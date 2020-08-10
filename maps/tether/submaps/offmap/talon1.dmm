@@ -8,6 +8,48 @@
 "ac" = (
 /turf/simulated/wall,
 /area/talon/deckone/bridge)
+"ad" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/pointdefense{
+	id_tag = "talon_pd"
+	},
+/turf/simulated/floor/hull/airless,
+/area/space)
+"ae" = (
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "talon_windows"
+	},
+/obj/structure/lattice,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/space,
+/area/talon/deckone/bridge)
+"af" = (
+/obj/structure/lattice,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/space,
+/area/space)
+"ag" = (
+/obj/structure/lattice,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/space,
+/area/space)
 "ah" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/atmospherics/portables_connector/aux{
@@ -17,6 +59,14 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/eris/steel/gray_perforated,
 /area/talon/deckone/port_eng)
+"ai" = (
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "talon_windows"
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/talon/deckone/bridge)
 "aj" = (
 /obj/machinery/light{
 	dir = 8;
@@ -25,9 +75,71 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/brown_perforated,
 /area/talon/deckone/port_eng)
+"ak" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/table/standard,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/machinery/alarm/talon{
+	dir = 8;
+	pixel_x = 22;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/eris/steel,
+/area/talon/deckone/brig)
+"al" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass/talon,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/eris/under,
+/area/talon/deckone/bridge)
 "am" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/eris/under,
+/area/talon/maintenance/deckone_port)
+"an" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/eris/white/golden,
+/area/talon/deckone/bridge)
+"ao" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/eris/white/golden,
+/area/talon/deckone/bridge)
+"ap" = (
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "talon_sensor"
+	},
+/obj/structure/lattice,
+/turf/space,
 /area/talon/maintenance/deckone_port)
 "aq" = (
 /obj/machinery/camera/network/talon{
@@ -46,7 +158,7 @@
 	},
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/talon/deckone/armory)
-"aA" = (
+"as" = (
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -60,8 +172,24 @@
 	pixel_x = 8;
 	pixel_y = -26
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/eris/white/golden,
 /area/talon/deckone/bridge)
+"at" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/alarm/talon{
+	dir = 8;
+	pixel_x = 22;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/eris/dark/brown_perforated,
+/area/talon/deckone/port_eng)
 "aC" = (
 /turf/simulated/wall/rshull,
 /area/talon/maintenance/deckone_port)
@@ -1666,13 +1794,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/talon/deckone/central_hallway)
-"nv" = (
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id = "talon_sensor"
-	},
-/turf/space,
-/area/talon/maintenance/deckone_port)
 "nz" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
@@ -2241,29 +2362,6 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
-/area/talon/deckone/brig)
-"tn" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/alarm/talon{
-	alarm_id = "anomaly_testing";
-	breach_detection = 0;
-	dir = 8;
-	frequency = 1439;
-	pixel_x = 22;
-	pixel_y = 0;
-	report_danger_level = 0
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/turf/simulated/floor/tiled/eris/steel,
 /area/talon/deckone/brig)
 "tr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4772,13 +4870,6 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/brown_perforated,
 /area/talon/deckone/starboard_eng)
-"Qi" = (
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id = "talon_windows"
-	},
-/turf/space,
-/area/talon/deckone/bridge)
 "Qx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4;
@@ -5570,21 +5661,6 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating/eris/under,
 /area/talon/maintenance/deckone_port)
-"Xk" = (
-/obj/machinery/alarm/talon{
-	alarm_id = "anomaly_testing";
-	breach_detection = 0;
-	dir = 8;
-	frequency = 1439;
-	pixel_x = 22;
-	pixel_y = 0;
-	report_danger_level = 0
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/eris/dark/brown_perforated,
-/area/talon/deckone/port_eng)
 "Xt" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/eris/dark/monofloor,
@@ -14461,7 +14537,7 @@ aa
 aa
 aa
 aa
-nv
+ap
 Mm
 ey
 am
@@ -14788,7 +14864,7 @@ Yc
 Yc
 Yc
 Yc
-Xk
+at
 iR
 Py
 ji
@@ -15165,7 +15241,7 @@ aa
 aa
 aa
 aa
-aa
+ad
 ab
 ac
 ac
@@ -15195,7 +15271,7 @@ dZ
 cL
 pw
 Mz
-tn
+ak
 pp
 KJ
 LK
@@ -15307,7 +15383,7 @@ aa
 aa
 aa
 aa
-aa
+af
 ab
 ac
 lS
@@ -15449,7 +15525,7 @@ aa
 aa
 aa
 aa
-aa
+af
 ab
 ac
 FR
@@ -15591,15 +15667,15 @@ aa
 aa
 aa
 aa
-aa
-Qi
-IM
-zy
-LH
-LH
-LH
-LH
-aA
+ag
+ae
+al
+an
+ao
+ao
+ao
+ao
+as
 ac
 KP
 Vj
@@ -15734,7 +15810,7 @@ aa
 aa
 aa
 aa
-Qi
+ai
 IM
 RS
 on
@@ -15876,7 +15952,7 @@ aa
 aa
 aa
 aa
-Qi
+ai
 IM
 wm
 LH

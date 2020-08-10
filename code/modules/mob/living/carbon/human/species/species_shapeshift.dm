@@ -220,12 +220,10 @@ var/list/wrapped_species_by_ref = list()
 	if(!new_hair)
 		return
 	shapeshifter_set_hair_color(new_hair)
-	
 	var/new_grad = input("Please select a new hair gradient color.", "Hair Gradient Colour") as color
 	if(!new_grad)
 		return
 	shapeshifter_set_grad_color(new_grad)
-
 	var/new_fhair = input("Please select a new facial hair color.", "Facial Hair Color") as color
 	if(!new_fhair)
 		return
@@ -234,7 +232,7 @@ var/list/wrapped_species_by_ref = list()
 /mob/living/carbon/human/proc/shapeshifter_set_hair_color(var/new_hair)
 
 	change_hair_color(hex2num(copytext(new_hair, 2, 4)), hex2num(copytext(new_hair, 4, 6)), hex2num(copytext(new_hair, 6, 8)))
-	
+
 /mob/living/carbon/human/proc/shapeshifter_set_grad_color(var/new_grad)
 
 	change_grad_color(hex2num(copytext(new_grad, 2, 4)), hex2num(copytext(new_grad, 4, 6)), hex2num(copytext(new_grad, 6, 8)))

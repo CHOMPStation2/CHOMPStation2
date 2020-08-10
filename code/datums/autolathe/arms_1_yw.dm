@@ -12,6 +12,12 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 1337)
 	hidden = 1
 
+/datum/design/item/autolathe/arms/shotgun_drum_empty
+	name = "shotgun 12g drum magazine (Empty)"
+	id = "shotgun_empty_drum_magazine"
+	build_path = /obj/item/ammo_magazine/m12gdrumjack/empty
+	materials = list(DEFAULT_WALL_MATERIAL = 1625) //Why these cost so much ? the normal ones have 13000 matter so i just multiplied by 1.25(default) don't know why it costs so much
+
 //printable boxes of shotgun ammo, by KK
 //the prices are rounded up to the cost of nine shells, but compared to printing a bunch of speedloaders you get a small discount. honestly the speedloaders are overpriced (the metal frame is somehow more expensive than a third shell!) but take it up with polaris.
 /datum/design/item/autolathe/arms/ammobox/shotgun_box_beanbag

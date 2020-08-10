@@ -225,9 +225,9 @@
 	..()
 	M.Stun(2)
 
-/datum/reagent/ethanol/lovepotion
-	name = "Love Potion"
-	id = "lovepotion"
+/datum/reagent/ethanol/lovemaker
+	name = "The Love Maker"
+	id = "lovemaker"
 	description = "A drink said to help one find true love."
 	taste_description = "sweet fruit and honey."
 	strength = 30
@@ -238,7 +238,7 @@
 	targ_temp = 360
 	color = "#d3785d"
 
-	glass_name = "Love Potion"
+	glass_name = "The Love Maker"
 	glass_desc = "A drink said to help one find the perfect fuck."
 
 /datum/reagent/ethanol/honeyshot
@@ -282,7 +282,7 @@
 	id = "scsatw"
 	description = "The screwdriver's bigger cousin."
 	taste_description = "smooth, savory booze and tangy orange juice."
-	strength = 7 // 2x that of Screwdriver, which means you DIVIDE the strength by half.
+	strength = 30
 	druggy = 0
 	halluci = 0
 	var/adj_dizzy = 0

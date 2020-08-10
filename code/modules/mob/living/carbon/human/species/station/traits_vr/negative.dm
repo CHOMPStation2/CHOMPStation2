@@ -108,6 +108,18 @@
 	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = -1
 	var_changes = list("alcohol_mod" = 3)
+	
+/datum/trait/pain_intolerance_basic
+	name = "Pain Intolerant"
+	desc = "You are frail and sensitive to pain. You experience 25% more pain from all sources." 
+	cost = -1
+	var_changes = list("pain_mod" = 1.25)
+
+/datum/trait/pain_intolerance_advanced
+	name = "High Pain Intolerance"
+	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
+	cost = -2
+	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit
 //YW ADDITIONS END
 
 /datum/trait/conductive
@@ -173,6 +185,7 @@
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/colorblind_taj)
 YW comment finish*/
+
 // YW Addition
 /datum/trait/light_sensitivity
 	name = "Photosensitivity"
