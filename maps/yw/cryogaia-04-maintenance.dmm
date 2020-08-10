@@ -12012,6 +12012,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/machinery/disposal,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "aAj" = (
@@ -39767,6 +39768,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
+"bVR" = (
+/obj/machinery/vr_sleeper,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
 "bWT" = (
 /obj/machinery/light_switch{
 	dir = 1;
@@ -40812,6 +40817,12 @@
 "uZc" = (
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/east)
+"vwU" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
 "vEX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -83590,7 +83601,7 @@ atc
 atc
 atc
 atc
-atc
+auQ
 atc
 aAj
 atc
@@ -83839,12 +83850,12 @@ ari
 aoC
 aan
 aan
-aan
-aan
-aan
-aan
-aan
-aan
+atc
+auQ
+vwU
+auQ
+vwU
+auQ
 aAI
 aBr
 aBl
@@ -84091,12 +84102,12 @@ aoy
 aoC
 aan
 aan
-aan
-aan
-aan
-aan
-aan
-aan
+atc
+bVR
+bVR
+bVR
+bVR
+bVR
 aAI
 aBs
 aBl
@@ -84343,12 +84354,12 @@ arj
 aoC
 aan
 aan
-aan
-aan
-aan
-aan
-aan
-aan
+atc
+atc
+atc
+atc
+atc
+atc
 aAI
 aBt
 aBl

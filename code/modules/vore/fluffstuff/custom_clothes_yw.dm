@@ -1695,3 +1695,12 @@
 			return 'icons/vore/custom_clothes_yw_special.dmi'
 	else
 		return ..()
+
+/obj/item/clothing/under/harness_white
+	name = "white gear harness"
+	desc = "How... minimalist."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "gear_harness_white"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "gear_harness_white"
+	body_parts_covered = 0

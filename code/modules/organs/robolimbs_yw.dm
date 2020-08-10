@@ -23,7 +23,7 @@
 /datum/robolimb/xionalt
 	company = "Xion (alt yw)."
 	desc = "Xion brand prosthetic limbs."
-	icon = 'icons/mob/human_races/cyberlimbs/xion/xion_alt5.dmi' //Sprited by: Generalpantsu
+	icon = 'icons/mob/human_races/cyberlimbs/xion/xion_alt5.dmi' //Sprited by: Whiteout
 
 /datum/robolimb/aphrodite_cyberdoe
 	company = "Aphrodite - Cyberdoe"
