@@ -48,11 +48,6 @@
 "m" = (
 /turf/simulated/wall/r_wall,
 /area/cryogaia/outpost/exploration_shed)
-"n" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/step_trigger/teleporter/from_plains,
-/turf/simulated/floor/plating/snow/plating,
-/area/cryogaia/outpost/exploration_shed)
 "o" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/snow/plating,
@@ -100,6 +95,29 @@
 /obj/structure/flora/tree/dead,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/cryogaia/outpost/exploration_plains)
+"K" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/map_effect/portal/master/side_b{
+	dir = 4;
+	icon_state = "portal_side_b";
+	portal_id = "cryogaia_plains_1"
+	},
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#ff00ff"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/cryogaia/outpost/exploration_shed)
+"S" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 4;
+	icon_state = "portal_line_side_b"
+	},
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#ff00ff"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/cryogaia/outpost/exploration_shed)
 
 (1,1,1) = {"
 a
@@ -247,15 +265,15 @@ a
 a
 a
 m
-n
-n
-n
-n
-n
-n
-n
-n
-n
+o
+o
+o
+o
+o
+o
+o
+o
+o
 m
 a
 a
@@ -499,15 +517,15 @@ a
 a
 a
 m
-o
-o
-o
-o
-o
-o
-o
-o
-o
+K
+S
+S
+S
+S
+S
+S
+S
+S
 m
 a
 a
