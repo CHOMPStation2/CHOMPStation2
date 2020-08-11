@@ -437,7 +437,7 @@
 		//VOREStation Edit End
 		
 	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
-	if(recoil_mode && iscarbon(user) && !istype(src,/obj/item/weapon/gun/energy))
+	if(recoil_mode && iscarbon(user))
 		var/mob/living/carbon/nerd = user
 		var/mysize = nerd.size_multiplier
 		if(mysize <= 0.5)
