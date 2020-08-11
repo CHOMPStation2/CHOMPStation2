@@ -288,11 +288,11 @@
 
 /obj/item/proc/get_volume_by_throwforce_and_or_w_class() // This is used for figuring out how loud our sounds are for throwing.
 	if(throwforce && w_class)
-			return Clamp((throwforce + w_class) * 5, 30, 100)// Add the item's throwforce to its weight class and multiply by 5, then clamp the value between 30 and 100
+		return CLAMP((throwforce + w_class) * 5, 30, 100)// Add the item's throwforce to its weight class and multiply by 5, then clamp the value between 30 and 100
 	else if(w_class)
-			return Clamp(w_class * 8, 20, 100) // Multiply the item's weight class by 8, then clamp the value between 20 and 100
+		return CLAMP(w_class * 8, 20, 100) // Multiply the item's weight class by 8, then clamp the value between 20 and 100
 	else
-			return 0
+		return 0
 
 /obj/item/throw_impact(atom/hit_atom)
 	..()
@@ -351,7 +351,7 @@
 		else
 			playsound(src, drop_sound, 30)
 	else if(slot == slot_l_hand || slot == slot_r_hand)
-		playsound(src, pickup_sound, 20 preference = /datum/client_preference/pickup_sounds)
+		playsound(src, pickup_sound, 20, preference = /datum/client_preference/pickup_sounds)
 	return
 
 //Defines which slots correspond to which slot flags
