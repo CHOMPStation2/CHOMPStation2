@@ -1898,7 +1898,7 @@ area/crew_quarters/heads/sc/hop/quarters
 
 /area/expoutpost/debriefing
 	name = "\improper Exploration Carrier Debriefing"
-	ambience = AMBIENCE_EXPOUTPOST
+	ambience = AMBIENCE_OUTPOST
 
 /area/expoutpost/prep
 	name = "\improper Exploration Carrier Prep Room"
