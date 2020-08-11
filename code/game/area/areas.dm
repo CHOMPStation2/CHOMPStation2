@@ -370,7 +370,8 @@ var/list/mob/living/forced_ambiance_list = new
 		L.update_floating( L.Check_Dense_Object() )
 
 	L.lastarea = newarea
-	L.lastareachange = world.time
+//CHOMP Edit: disable constant ambience
+//	L.lastareachange = world.time
 	play_ambience(L, initial = TRUE)
 	if(no_spoilers)
 		L.disable_spoiler_vision()
