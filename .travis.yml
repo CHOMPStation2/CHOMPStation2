@@ -4,6 +4,9 @@ language: c
 env:
   global:
     - BASENAME="vorestation" # $BASENAME.dmb, $BASENAME.dme, etc.
+    - BYOND_MAJOR="513"
+    - BYOND_MINOR="1528"
+    - MACRO_COUNT=4
 
 cache:
   directories:
