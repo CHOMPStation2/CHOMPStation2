@@ -208,7 +208,15 @@
 	
 #define AMBIENCE_SUBSTATION list(\
 	'sound/ambience/substation/substation1.ogg',\
-	'sound/ambience/substation/substation2.ogg'\
+	'sound/ambience/substation/substation2.ogg',\
+	'sound/ambience/substation/substation3.ogg',\
+	'sound/ambience/substation/substation4.ogg',\
+	'sound/ambience/substation/substation5.ogg',\
+	'sound/ambience/substation/substation6.ogg',\
+	'sound/ambience/substation/substation7.ogg',\
+	'sound/ambience/substation/substation8.ogg',\
+	'sound/ambience/substation/substation9.ogg',\
+	'sound/ambience/substation/substation10.ogg'\
 	)
 	
 #define AMBIENCE_HANGAR list(\
