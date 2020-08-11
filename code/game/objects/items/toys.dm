@@ -27,7 +27,7 @@
 	throw_range = 20
 	force = 0
 	drop_sound = 'sound/items/drop/gloves.ogg'
-
+	pickup_sound = 'sound/items/pickup/gloves.ogg'
 
 /*
  * Balloons
@@ -38,6 +38,7 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "waterballoon-e"
 	drop_sound = 'sound/items/drop/rubber.ogg'
+	pickup_sound = 'sound/items/pickup/rubber.ogg'
 
 /obj/item/toy/balloon/New()
 	var/datum/reagents/R = new/datum/reagents(10)
@@ -102,6 +103,7 @@
 	icon_state = "syndballoon"
 	w_class = ITEMSIZE_LARGE
 	drop_sound = 'sound/items/drop/rubber.ogg'
+	pickup_sound = 'sound/items/pickup/rubber.ogg'
 
 /obj/item/toy/nanotrasenballoon
 	name = "criminal balloon"
@@ -114,6 +116,7 @@
 	icon_state = "ntballoon"
 	w_class = ITEMSIZE_LARGE
 	drop_sound = 'sound/items/drop/rubber.ogg'
+	pickup_sound = 'sound/items/pickup/rubber.ogg'
 
 /*
  * Fake telebeacon
@@ -152,6 +155,7 @@
 	attack_verb = list("attacked", "struck", "hit")
 	var/bullets = 5
 	drop_sound = 'sound/items/drop/gun.ogg'
+	pickup_sound = 'sound/items/pickup/gun.ogg'
 
 	examine(mob/user)
 		. = ..()
@@ -246,6 +250,7 @@
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
 	drop_sound = 'sound/items/drop/food.ogg'
+	pickup_sound = 'sound/items/pickup/food.ogg'
 
 /obj/effect/foam_dart_dummy
 	name = ""
@@ -264,6 +269,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "esword"
 	drop_sound = 'sound/items/drop/gun.ogg'
+	pickup_sound = 'sound/items/pickup/gun.ogg'
 	var/lcolor
 	var/rainbow = FALSE
 	item_icons = list(
@@ -352,7 +358,8 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "snappop"
 	w_class = ITEMSIZE_TINY
-	drop_sound = null
+	drop_sound = 'sound/items/drop/food.ogg'
+	pickup_sound = 'sound/items/pickup/food.ogg'
 
 	throw_impact(atom/hit_atom)
 		..()
@@ -390,6 +397,7 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "bosunwhistle"
 	drop_sound = 'sound/items/drop/card.ogg'
+	pickup_sound = 'sound/items/pickup/card.ogg'
 	var/cooldown = 0
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS | SLOT_HOLSTER
@@ -407,7 +415,8 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "ripleytoy"
 	var/cooldown = 0
-	drop_sound = 'sound/mecha/mechstep.ogg'
+	drop_sound = 'sound/items/drop/metalweapon.ogg'
+	pickup_sound = 'sound/items/pickup/metalweapon.ogg'
 
 //all credit to skasi for toy mech fun ideas
 /obj/item/toy/prize/attack_self(mob/user as mob)
@@ -490,6 +499,7 @@
 	var/cooldown = 0
 	var/toysay = "What the fuck did you do?"
 	drop_sound = 'sound/items/drop/accessory.ogg'
+	pickup_sound = 'sound/items/pickup/accessory.ogg'
 
 /obj/item/toy/figure/New()
 	..()
@@ -915,6 +925,7 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "nymphplushie"
 	drop_sound = 'sound/items/drop/plushie.ogg'
+	pickup_sound = 'sound/items/pickup/plushie.ogg'
 	w_class = ITEMSIZE_TINY
 	var/last_message = 0
 	var/pokephrase = "Uww!"
@@ -1435,6 +1446,7 @@
 	icon = 'icons/obj/clothing/belts.dmi'
 	slot_flags = SLOT_BELT
 	drop_sound = 'sound/items/drop/rubber.ogg'
+	pickup_sound = 'sound/items/pickup/rubber.ogg'
 
 /obj/item/toy/xmastree
 	name = "Miniature Christmas tree"
@@ -1444,7 +1456,8 @@
 	w_class = ITEMSIZE_TINY
 	force = 1
 	throwforce = 1
-	drop_sound = 'sound/items/drop/box.ogg'
+	drop_sound = 'sound/items/drop/cardboardbox.ogg'
+	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
 //////////////////////////////////////////////////////
 //					Chess Pieces					//

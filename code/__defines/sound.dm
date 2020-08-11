@@ -117,6 +117,7 @@
 	'sound/ambience/generic/generic7.ogg',\
 	'sound/ambience/generic/generic8.ogg'\
 	)
+// 'sound/ambience/generic/generic4.ogg'\ // VOREStation Edit: Comment out entry 4 as this doesn't fit on Virgo, and we have our own weather system.
 
 // Sounds of PA announcements, presumably involving shuttles?
 #define AMBIENCE_ARRIVALS list(\
@@ -155,7 +156,9 @@
 
 // Creepy AI/borg stuff.
 #define AMBIENCE_AI list(\
-	'sound/ambience/ai/ai1.ogg'\
+	'sound/ambience/ai/ai1.ogg',\
+	'sound/ambience/ai/ai2.ogg',\
+	'sound/ambience/ai/ai3.ogg'\
 	)
 
 // Peaceful sounds when floating in the void.
@@ -195,28 +198,19 @@
 #define AMBIENCE_AESTHETIC list(\
 	'sound/ambience/vaporwave.ogg'\
 	)
-
-//CHOMPedit: Exploration outpost ambience. Current tracks taken from Rainworld and Natural Selection 2.
-#define AMBIENCE_EXPOUTPOST list(\
+	
+#define AMBIENCE_OUTPOST list(\
 	'sound/ambience/expoutpost/expoutpost1.ogg',\
 	'sound/ambience/expoutpost/expoutpost2.ogg',\
 	'sound/ambience/expoutpost/expoutpost3.ogg',\
 	'sound/ambience/expoutpost/expoutpost4.ogg'\
 	)
 	
-//CHOMP Edit Sounds for Substation rooms. Just electrical sounds, really.
 #define AMBIENCE_SUBSTATION list(\
 	'sound/ambience/substation/substation1.ogg',\
-	'sound/ambience/substation/substation2.ogg',\
-	'sound/ambience/substation/substation3.ogg',\
-	'sound/ambience/substation/substation4.ogg',\
-	'sound/ambience/substation/substation5.ogg',\
-	'sound/ambience/substation/substation6.ogg',\
-	'sound/ambience/substation/substation7.ogg',\
-	'sound/ambience/substation/substation8.ogg'\
+	'sound/ambience/substation/substation2.ogg'\
 	)
 	
-//CHOMP Edit Sounds for hangars
 #define AMBIENCE_HANGAR list(\
 	'sound/ambience/hangar/hangar1.ogg',\
 	'sound/ambience/hangar/hangar2.ogg',\
@@ -225,12 +219,10 @@
 	'sound/ambience/hangar/hangar5.ogg',\
 	'sound/ambience/hangar/hangar6.ogg'\
 	)
-
-//CHOMP Edit Sounds for atmos
+	
 #define AMBIENCE_ATMOS list(\
 	'sound/ambience/engineering/engineering1.ogg',\
 	'sound/ambience/engineering/engineering2.ogg',\
 	'sound/ambience/engineering/engineering3.ogg',\
 	'sound/ambience/atmospherics/atmospherics1.ogg'\
 	)
-	

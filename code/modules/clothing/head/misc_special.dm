@@ -29,6 +29,7 @@
 	flash_protection = FLASH_PROTECTION_MAJOR
 	tint = TINT_HEAVY
 	drop_sound = 'sound/items/drop/helm.ogg'
+	pickup_sound = 'sound/items/pickup/helm.ogg'
 
 /obj/item/clothing/head/welding/attack_self()
 	toggle()
@@ -169,6 +170,7 @@
 	light_overlay = "helmet_light"
 	w_class = ITEMSIZE_NORMAL
 	drop_sound = 'sound/items/drop/herb.ogg'
+	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 /*
  * Kitty ears

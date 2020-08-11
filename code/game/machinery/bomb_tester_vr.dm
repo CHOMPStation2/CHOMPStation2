@@ -363,7 +363,7 @@
 		state("Invalid parameters.")
 	else
 		ping("Simulation complete!")
-		playsound(src, "sound/effects/printer.ogg", 50, 1)
+		playsound(src, "sound/machines/printer.ogg", 50, 1)
 		var/obj/item/weapon/paper/P = new(get_turf(src))
 		P.name = "Explosive Simulator printout"
 		P.info = simulation_results

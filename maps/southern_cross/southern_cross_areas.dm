@@ -185,7 +185,7 @@
 /area/surface/outpost/mining_main/gen_room
 	name = "North Mining Generator Room"
 	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION
 
 /area/surface/outpost/mining_main/emergencystorage
 	name = "\improper North Mining Emergency Storage"
@@ -220,7 +220,7 @@
 	name = "\improper Xenoresearch SMES Maintenance"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION
 
 /area/surface/outpost/research/xenoresearch/emergencystorage
 	name = "\improper Xenoresearch Emergency Storage"
@@ -261,7 +261,7 @@
 	name = "\improper Xenoarcheology SMES Maintenance"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION
 
 /area/surface/outpost/research/xenoarcheology/emergencystorage
 	name = "\improper Xenoarcheology Emergency Storage"
@@ -313,7 +313,7 @@
 /area/surface/outpost/main/gen_room
 	name = "\improper Main Outpost SMES"
 	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Edit
+	ambience = AMBIENCE_SUBSTATION
 
 /area/surface/outpost/main/gen_room/smes_left
 	name = "\improper Main Outpost Left Wing SMES"
@@ -547,7 +547,7 @@
 /area/outpost/mining_station/gen_station
 	name = "Mining Station Generator Room"
 	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Edit
+	ambience = AMBIENCE_SUBSTATION
 
 /area/outpost/mining_station/crew_area
 	name = "Mining Station Crew Area"
@@ -781,6 +781,7 @@
 	name = "\improper First Deck Hangar"
 	icon_state = "hangar"
 	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
 
 /area/hangar/one
 	name = "\improper Hangar One"
