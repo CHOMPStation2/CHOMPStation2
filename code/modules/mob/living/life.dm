@@ -46,7 +46,7 @@
 	//Check if we're on fire
 	handle_fire()
 	
-	if(client)	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them. CHOMP Edit: Disabled
+//	if(client)	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them. CHOMP Edit: Disabled
 //		handle_ambience()
 	
 	//stuff in the stomach
