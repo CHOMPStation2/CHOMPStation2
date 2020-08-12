@@ -26102,9 +26102,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
-"kfe" = (
-/turf/unsimulated/wall/planetary/borealis2,
-/area/cryogaia/outpost/exploration_shed)
 "kfl" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -43320,10 +43317,6 @@
 "qKD" = (
 /turf/simulated/wall,
 /area/quartermaster/office)
-"qKK" = (
-/obj/effect/floor_decal/rust,
-/turf/unsimulated/wall/planetary/borealis2,
-/area/cryogaia/outpost/exploration_shed)
 "qKP" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -88048,17 +88041,17 @@ lbT
 lbT
 lbT
 lbT
-kfe
-qKK
-qKK
-qKK
-qKK
-qKK
-qKK
-qKK
-qKK
-qKK
-kfe
+uaV
+npu
+npu
+npu
+npu
+npu
+npu
+npu
+npu
+npu
+uaV
 lbT
 lbT
 lbT
