@@ -17,8 +17,8 @@
 
 //	speed = 2 Virgo coders making my life hell. This conflicts with their new system
 
-	melee_damage_lower = 30 // Because fuck anyone who hurts this sweet, innocent creature.
-	melee_damage_upper = 30
+	melee_damage_lower = 5 // Because fuck anyone who hurts this sweet, innocent creature. CHOMPS KSC 8/12/20 "I don't care if they are sweet, 30 damage a wrong way to balance cuteness"
+	melee_damage_upper = 10
 	attacktext = list("thrashed")
 	friendly = "caressed"
 
