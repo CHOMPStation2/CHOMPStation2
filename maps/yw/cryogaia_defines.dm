@@ -372,7 +372,7 @@
 
 /datum/map_z_level/cryogaia/misc
 	z = Z_LEVEL_CRYOGAIA_MISC
-	name = "misc"
+	name = "Misc"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 /*
 /datum/map_z_level/tether/wilderness
