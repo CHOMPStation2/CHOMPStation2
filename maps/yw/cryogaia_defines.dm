@@ -169,7 +169,7 @@
 //		/area/engineering/atmos/intake
 		)
 
-	unit_test_z_levels = list(2,4,5)
+	unit_test_z_levels = list(3,5,6)
 
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
