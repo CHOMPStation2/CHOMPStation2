@@ -121,7 +121,6 @@
 		/area/outpost/mining_main/maintenance,
 		/area/outpost/research/power,
 		/area/borealis2/elevator/scimining,
-		
 		/area/vacant/vacant_site/east,
 		/area/tcommsat/chamber,
 		/area/maintenance/maintroom5,
@@ -168,7 +167,11 @@
 		/area/borealis2/outdoors/grounds/upper,
 		/area/cryogaia/station/ert_arrival,
 		/area/borealis2/elevator/uppermining,
-		/area/borealis2/elevator/medupper	
+		/area/borealis2/elevator/medupper,
+		/area/borealis2/outdoors/grounds/walkway,
+		/area/maintenance/upper/maintroom2,
+		/area/maintenance/upper/maintroom1
+
 		)
 		
 	unit_test_exempt_from_atmos = list(
