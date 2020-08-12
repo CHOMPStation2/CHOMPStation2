@@ -237,7 +237,7 @@ var/list/gamemode_cache = list()
 	var/static/dooc_allowed = 1
 	var/static/dsay_allowed = 1
 
-	var/persistence_enabled = 1
+	var/persistence_enabled = 0	//Disabling this means that any dirt or trash items will no longer persist across rounds.
 	var/allow_byond_links = 1	//CHOMP Edit turned this on
 	var/allow_discord_links = 1	//CHOMP Edit turned this on
 	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit bussy.
