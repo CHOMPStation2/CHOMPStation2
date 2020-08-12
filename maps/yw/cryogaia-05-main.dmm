@@ -23742,9 +23742,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
-"jjS" = (
-/turf/simulated/wall/titanium,
-/area/borealis2/outdoors/exterior)
 "jjV" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -49970,9 +49967,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
-"tov" = (
-/turf/simulated/wall/titanium,
-/area/cryogaia/station/excursion_dock)
 "tox" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
@@ -86007,7 +86001,7 @@ uDf
 uDf
 uDf
 uDf
-ocv
+sAw
 sAw
 nIT
 qqp
@@ -86169,7 +86163,7 @@ uDf
 uDf
 uDf
 uDf
-ocv
+sAw
 ahF
 roT
 kaJ
@@ -86655,7 +86649,7 @@ iSE
 iSE
 iSE
 iSE
-jjS
+sAw
 xTr
 nGa
 ncl
@@ -86817,11 +86811,11 @@ xEE
 xEE
 nlv
 iSE
-jjS
-tov
-tov
-tov
-tov
+sAw
+sAw
+sAw
+sAw
+sAw
 sAw
 sAw
 rOk

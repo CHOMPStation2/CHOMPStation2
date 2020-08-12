@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "b" = (
-/turf/unsimulated/wall/planetary/virgo2,
+/turf/unsimulated/wall/planetary/bor4,
 /area/cryogaia_away/aerostat/surface)
 "e" = (
 /obj/cryogaia_away_spawner/aerostat_surface,
