@@ -734,6 +734,12 @@
 /obj/machinery/camera/autoname,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
+"aoY" = (
+/obj/machinery/door/airlock/glass_external/freezable{
+	req_one_access = list()
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/tower/west)
 "apa" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
 /area/borealis2/elevator/scicargo)
@@ -4972,6 +4978,14 @@
 /obj/structure/largecrate,
 /turf/simulated/floor,
 /area/storage/auxillary)
+"bWv" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "bWx" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -5203,6 +5217,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
+"cao" = (
+/turf/simulated/wall/titanium,
+/area/borealis2/outdoors/grounds/tower/west)
 "car" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -10;
@@ -12391,6 +12408,11 @@
 /obj/item/device/glasses_kit,
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
+"eMe" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "eMl" = (
 /obj/structure/sign/securearea,
 /turf/simulated/wall/r_wall,
@@ -12804,6 +12826,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"eUH" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "eUS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/alarm{
@@ -19427,6 +19453,10 @@
 "hvF" = (
 /turf/simulated/wall/r_wall,
 /area/security/interrogation)
+"hvR" = (
+/obj/structure/stairs/north,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "hww" = (
 /obj/structure/medical_stand,
 /obj/effect/floor_decal/corner/pink/full{
@@ -20827,6 +20857,14 @@
 /obj/effect/floor_decal/corner/brown,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
+"hXZ" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/titanium,
+/area/borealis2/outdoors/grounds/tower/west)
 "hYe" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -23538,6 +23576,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
+"jhC" = (
+/obj/structure/ladder,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "jie" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 4;
@@ -24607,6 +24649,19 @@
 "jBs" = (
 /turf/simulated/wall,
 /area/security/lobby)
+"jBD" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_x = 0;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "jBF" = (
 /obj/machinery/autolathe,
 /obj/effect/floor_decal/rust,
@@ -28085,6 +28140,22 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/locker)
+"kTu" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 28
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "kTI" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
@@ -36450,6 +36521,10 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/ert_arrival)
+"oaG" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "oaI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external/freezable{
@@ -48912,6 +48987,22 @@
 /obj/machinery/status_display,
 /turf/simulated/wall,
 /area/crew_quarters/bar)
+"sVM" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
+"sXa" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/railing/grey{
+	dir = 4;
+	icon_state = "grey_railing0"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "sXk" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
@@ -49190,6 +49281,9 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster)
+"tdG" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/west)
 "tdU" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -63517,12 +63611,12 @@ iSE
 iSE
 iSE
 iSE
-iSE
-iSE
-iSE
-iSE
-iSE
-iSE
+cao
+cao
+cao
+cao
+cao
+cao
 iSE
 iSE
 iSE
@@ -63679,12 +63773,12 @@ iSE
 iSE
 iSE
 iSE
-iSE
-iSE
-iSE
-iSE
-iSE
-iSE
+cao
+jhC
+sVM
+eMe
+oaG
+cao
 iSE
 iSE
 iSE
@@ -63841,12 +63935,12 @@ dAA
 dAA
 dAA
 dAA
-dAA
-dAA
-dAA
-dAA
-dAA
-dAA
+cao
+tdG
+tdG
+tdG
+eUH
+cao
 dAA
 dAA
 dAA
@@ -64003,12 +64097,12 @@ vDp
 vDp
 vDp
 vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
+hXZ
+kTu
+sXa
+bWv
+jBD
+hXZ
 vDp
 vDp
 vDp
@@ -64165,12 +64259,12 @@ uDf
 uDf
 uDf
 uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+cao
+cao
+hvR
+tdG
+tdG
+cao
 uDf
 uDf
 uDf
@@ -64327,12 +64421,12 @@ uDf
 uDf
 uDf
 uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+cao
+cao
+cao
+cao
+aoY
+cao
 uDf
 uDf
 uDf
