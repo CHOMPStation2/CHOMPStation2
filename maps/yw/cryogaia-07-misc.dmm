@@ -903,10 +903,6 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
-"ek" = (
-/obj/structure/shuttle/engine/propulsion,
-/turf/space,
-/area/space)
 "eo" = (
 /obj/item/device/radio/intercom{
 	broadcasting = 1;
@@ -1253,6 +1249,19 @@
 /obj/machinery/teleport/station,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"ga" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/landmark{
+	name = "ninjastart"
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/syndicate_mothership{
+	name = "\improper Ninja Base"
+	})
 "gb" = (
 /obj/item/weapon/storage/firstaid/regular{
 	pixel_x = -2;
@@ -1514,10 +1523,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
-"hk" = (
-/obj/machinery/computer/teleporter,
-/turf/space,
-/area/space)
 "hm" = (
 /turf/simulated/floor/holofloor/reinforced,
 /area/holodeck/source_plating)
@@ -1615,15 +1620,6 @@
 	icon_state = "floor_white"
 	},
 /area/shuttle/arrival/pre_game)
-"hL" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/effect/landmark{
-	name = "ninjastart"
-	},
-/turf/space,
-/area/space)
 "hO" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/wizard_station)
@@ -1757,6 +1753,15 @@
 /obj/structure/table/woodentable/holotable,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/holodorm/source_basic)
+"ir" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/mirror,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/syndicate_mothership{
+	name = "\improper Ninja Base"
+	})
 "is" = (
 /obj/structure/signpost,
 /turf/unsimulated/beach/sand,
@@ -2676,12 +2681,6 @@
 	icon_state = "fakewindows"
 	},
 /area/syndicate_mothership)
-"mH" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_l"
-	},
-/turf/space,
-/area/space)
 "mI" = (
 /obj/structure/urinal{
 	pixel_y = 32
@@ -4029,11 +4028,6 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_meetinghall)
-"tH" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/rd,
-/turf/space,
-/area/space)
 "tI" = (
 /obj/structure/table/rack,
 /obj/item/clothing/glasses/thermal/plain/monocle,
@@ -4256,6 +4250,12 @@
 /obj/effect/floor_decal/corner/green/full,
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
+"uJ" = (
+/obj/structure/closet{
+	icon_state = "cabinet_closed"
+	},
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/trade/centcom)
 "uN" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4275,6 +4275,11 @@
 	name = "plating"
 	},
 /area/syndicate_mothership)
+"uR" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/rd,
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/trade/centcom)
 "uU" = (
 /obj/machinery/door/window/westleft{
 	name = "Storefront";
@@ -4981,6 +4986,14 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/trade/centcom)
+"ym" = (
+/obj/machinery/teleport/station,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/syndicate_mothership{
+	name = "\improper Ninja Base"
+	})
 "yo" = (
 /obj/structure/closet/hydrant{
 	pixel_y = 32
@@ -5366,10 +5379,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
-"As" = (
-/obj/machinery/teleport/station,
-/turf/space,
-/area/space)
 "At" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -5750,6 +5759,16 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/mercenary)
+"Ct" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/mask/balaclava/tactical,
+/obj/item/clothing/mask/balaclava,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/syndicate_mothership{
+	name = "\improper Ninja Base"
+	})
 "Cu" = (
 /obj/item/weapon/storage/box/donkpockets{
 	pixel_x = 3;
@@ -5760,17 +5779,6 @@
 	icon_state = "white"
 	},
 /area/wizard_station)
-"Cw" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/space,
-/area/space)
 "Cx" = (
 /obj/structure/table/rack,
 /obj/item/weapon/gun/energy/sniperrifle,
@@ -6409,20 +6417,6 @@
 	icon_state = "dark"
 	},
 /area/vrworld)
-"FD" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/space,
-/area/space)
 "FJ" = (
 /mob/living/simple_mob/humanoid/merc/melee,
 /turf/unsimulated/floor/techfloor_grid,
@@ -6579,11 +6573,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_boxingcourt)
-"GA" = (
-/obj/structure/table/steel_reinforced,
-/obj/structure/mirror,
-/turf/space,
-/area/space)
 "GB" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
@@ -7011,6 +7000,22 @@
 /area/syndicate_mothership{
 	name = "\improper Raider Base"
 	})
+"HZ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/syndicate_mothership{
+	name = "\improper Ninja Base"
+	})
 "Ib" = (
 /obj/machinery/vending/coffee,
 /turf/simulated/shuttle/floor{
@@ -7318,6 +7323,14 @@
 /obj/item/weapon/gun/projectile/automatic/glock,
 /turf/unsimulated/floor/techfloor_grid,
 /area/vrworld)
+"JI" = (
+/obj/machinery/computer/teleporter,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/syndicate_mothership{
+	name = "\improper Ninja Base"
+	})
 "JJ" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/rig/internalaffairs,
@@ -8065,13 +8078,6 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/trade/centcom)
-"Nf" = (
-/obj/structure/shuttle/engine/heater,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/space,
-/area/space)
 "Nk" = (
 /obj/mecha/combat/marauder/mauler,
 /turf/unsimulated/floor{
@@ -8814,19 +8820,6 @@
 	name = "plating"
 	},
 /area/syndicate_mothership/elite_squad)
-"QL" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/space,
-/area/space)
 "QM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -9629,6 +9622,12 @@
 /obj/item/weapon/reagent_containers/food/snacks/chips,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"Vr" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/space,
+/area/syndicate_mothership{
+	name = "\improper Ninja Base"
+	})
 "Vt" = (
 /turf/simulated/wall/cult{
 	can_open = 1
@@ -9836,12 +9835,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
-"WD" = (
-/obj/structure/closet{
-	icon_state = "cabinet_closed"
-	},
-/turf/space,
-/area/space)
 "WH" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/magboots,
@@ -9960,6 +9953,14 @@
 /obj/item/toy/chess/knight_black,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"Xi" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_l"
+	},
+/turf/space,
+/area/syndicate_mothership{
+	name = "\improper Ninja Base"
+	})
 "Xk" = (
 /obj/machinery/vending/medical{
 	pixel_y = -32;
@@ -10567,12 +10568,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
-"ZW" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/clothing/mask/balaclava/tactical,
-/obj/item/clothing/mask/balaclava,
-/turf/space,
-/area/space)
 "ZY" = (
 /obj/structure/window/reinforced/holowindow/disappearing,
 /obj/effect/floor_decal/corner/red{
@@ -10580,16 +10575,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
-"ZZ" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/space,
-/area/space)
 
 (1,1,1) = {"
 sv
@@ -31521,21 +31506,21 @@ zR
 zR
 zR
 zR
-Kr
-Kr
-Kr
-Kr
-Kr
-Kr
-Kr
-Kr
-Kr
-Kr
 zR
 zR
 zR
 zR
 zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+yE
 Oe
 cd
 yE
@@ -31696,8 +31681,8 @@ zR
 zR
 zR
 zR
-zR
-zR
+yE
+RS
 tR
 yK
 yE
@@ -31845,21 +31830,21 @@ zR
 zR
 zR
 zR
+Yd
+RZ
+bo
+WV
+WV
+bu
+RZ
+RZ
+Yd
 zR
 zR
-QL
-ZZ
-ZZ
-Cw
 zR
 zR
-zR
-zR
-zR
-zR
-zR
-zR
-WD
+yE
+uJ
 hG
 iF
 yE
@@ -32007,21 +31992,21 @@ zR
 zR
 zR
 zR
-zR
-GA
-zR
-zR
-zR
-zR
-hk
-Nf
-mH
-zR
-zR
+RZ
+ir
+Pu
+Pu
+Pu
+Pu
+JI
+dR
+Xi
 zR
 zR
 zR
-tH
+zR
+yE
+uR
 hG
 wO
 yE
@@ -32169,21 +32154,21 @@ zR
 zR
 zR
 zR
-FD
-ZW
-hL
-zR
-zR
-zR
-As
-Nf
-ek
-zR
-zR
+HZ
+Ct
+ga
+Pu
+Pu
+Pu
+ym
+dR
+Vr
 zR
 zR
 zR
 zR
+yE
+yE
 Hb
 yE
 yE
