@@ -32,6 +32,12 @@
 #include "BuriedTreasure.dmm"
 #include "BuriedTreasure2.dmm"
 #include "BuriedTreasure3.dmm"
+	//CHOMPS KSC 8/11/20 "5 additional POI's"
+#include "oldhotel.dmm"
+#include "priderock.dmm"
+#include "abandonedhome.dmm"
+#include "hotspring.dmm"
+#include "methlab.dmm"
 #endif
 
 
@@ -247,7 +253,7 @@
 	cost = 10
 	template_group = "Shallow Grave"
 
-	// CHOMP KSC 7/31/20 Added 5 more POI's for the plains.
+	// CHOMPS KSC 7/31/20 Added 5 more POI's for the plains.
 
 /datum/map_template/surface/plains/oldhotel
 	name = "Old Hotel"
