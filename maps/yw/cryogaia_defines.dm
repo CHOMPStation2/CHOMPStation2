@@ -138,7 +138,7 @@
 		/area/borealis2/outdoors,
 		/area/borealis2/outdoors/exterior/explore3,
 		/area/borealis2/outdoors/exterior,
-		/area/borealis2/outdoors/exterior/upper
+		/area/borealis2/outdoors/exterior/upper,
 		/area/borealis2/outdoors/exterior/explore2,
 		/area/borealis2/outdoors/exterior/lake,
 		/area/cryogaia/outpost/exploration_shed,
@@ -168,11 +168,9 @@
 		/area/borealis2/outdoors/grounds/upper,
 		/area/cryogaia/station/ert_arrival,
 		/area/borealis2/elevator/uppermining,
-		/area/borealis2/elevator/medupper,
-	
-		(
-		
+		/area/borealis2/elevator/medupper	
 		)
+		
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)
