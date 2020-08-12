@@ -21855,10 +21855,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
-"iud" = (
-/obj/effect/zone_divider,
-/turf/simulated/wall,
-/area/borealis2/outdoors/grounds)
 "iuH" = (
 /obj/structure/table/glass,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -43747,10 +43743,6 @@
 "qNF" = (
 /turf/simulated/wall,
 /area/maintenance/bridge)
-"qNO" = (
-/obj/effect/zone_divider,
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
 "qOf" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -67238,9 +67230,9 @@ lbT
 "}
 (31,1,1) = {"
 kCt
-iud
-qNO
-iud
+hAk
+daC
+hAk
 lbT
 pET
 pET
