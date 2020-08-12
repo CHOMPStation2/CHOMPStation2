@@ -1,25 +1,26 @@
 //Normal YW map defs
-#define Z_LEVEL_CRYOGAIA_CENTCOM		1
-#define Z_LEVEL_CRYOGAIA_MINE			2
-#define Z_LEVEL_CRYOGAIA_TRANSIT		3 //added due to explosions jumping from mine leve to lower.
-#define Z_LEVEL_CRYOGAIA_LOWER			4
-#define Z_LEVEL_CRYOGAIA_MAIN			5
-#define Z_LEVEL_CRYOGAIA_UPPER			6
-#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		7
-#define Z_LEVEL_ROGUEMINE_1			8
-#define Z_LEVEL_ROGUEMINE_2			9
-#define Z_LEVEL_ROGUEMINE_3			10
-#define Z_LEVEL_ROGUEMINE_4			11
-#define Z_LEVEL_PLAINS				12
-#define Z_LEVEL_BEACH				13
-#define Z_LEVEL_BEACH_CAVE			14
-#define Z_LEVEL_AEROSTAT			15
-#define Z_LEVEL_AEROSTAT_SURFACE		16
-#define Z_LEVEL_DEBRISFIELD			17
-#define Z_LEVEL_UNDERDARK			18
-#define Z_LEVEL_GUTTERSITE			19
-#define Z_LEVEL_FUELDEPOT			20
-#define Z_LEVEL_GATEWAY				21
+#define Z_LEVEL_CRYOGAIA_MISC			1
+#define Z_LEVEL_CRYOGAIA_CENTCOM		2
+#define Z_LEVEL_CRYOGAIA_MINE			3
+#define Z_LEVEL_CRYOGAIA_TRANSIT		4 //added due to explosions jumping from mine leve to lower.
+#define Z_LEVEL_CRYOGAIA_LOWER			5
+#define Z_LEVEL_CRYOGAIA_MAIN			6
+#define Z_LEVEL_CRYOGAIA_UPPER			7
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		8
+#define Z_LEVEL_ROGUEMINE_1			9
+#define Z_LEVEL_ROGUEMINE_2			10
+#define Z_LEVEL_ROGUEMINE_3			11
+#define Z_LEVEL_ROGUEMINE_4			12
+#define Z_LEVEL_PLAINS				13
+#define Z_LEVEL_BEACH				14
+#define Z_LEVEL_BEACH_CAVE			15
+#define Z_LEVEL_AEROSTAT			16
+#define Z_LEVEL_AEROSTAT_SURFACE		17
+#define Z_LEVEL_DEBRISFIELD			18
+#define Z_LEVEL_UNDERDARK			19
+#define Z_LEVEL_GUTTERSITE			20
+#define Z_LEVEL_FUELDEPOT			21
+#define Z_LEVEL_GATEWAY				22
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -36,7 +37,7 @@
 	zlevel_datum_type = /datum/map_z_level/cryogaia
 
 	use_overmap = TRUE
-	overmap_z = Z_LEVEL_CRYOGAIA_CENTCOM
+	overmap_z = Z_LEVEL_CRYOGAIA_MISC
 	overmap_size = 20
 	overmap_event_areas = 10
 
@@ -368,6 +369,11 @@
 	z = Z_LEVEL_CRYOGAIA_RESIDENTIAL
 	name = "Residential"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_CONSOLES
+
+/datum/map_z_level/cryogaia/misc
+	z = Z_LEVEL_CRYOGAIA_MISC
+	name = "misc"
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 /*
 /datum/map_z_level/tether/wilderness
 	name = "Wilderness"
