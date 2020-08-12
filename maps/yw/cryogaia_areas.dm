@@ -137,7 +137,7 @@
 /area/borealis2/outdoors/grounds/entrance
 	name = "\improper Cryogaia Compound Gate"
 
-/area/borealis2/outdoors/grounds/solars
+/area/borealis2/outdoors/grounds/upper/solars
 	name = "\The solar array"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "panelsA"

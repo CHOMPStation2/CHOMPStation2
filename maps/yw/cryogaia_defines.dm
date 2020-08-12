@@ -145,7 +145,7 @@
 		/area/borealis2/outdoors/grounds/traderpad,
 		/area/borealis2/elevator/scicargo,
 		/area/borealis2/outdoors/grounds/power,
-		/area/borealis2/outdoors/grounds/solars,
+		/area/borealis2/outdoors/grounds/upper/solars,
 		/area/borealis2/outdoors/exterior/explore1,
 		/area/security/airlock,
 		/area/borealis2/elevator/medbay,

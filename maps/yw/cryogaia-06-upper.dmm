@@ -522,6 +522,12 @@
 "ci" = (
 /turf/simulated/wall,
 /area/chapel/monastery/music)
+"cj" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "ck" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -546,6 +552,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
+"cm" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "cn" = (
 /turf/simulated/floor/reinforced,
 /area/cryogaia/station/excursion_dock)
@@ -1080,18 +1094,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
-"ec" = (
-/obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "ee" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/cable_coil/lime,
@@ -1494,6 +1496,18 @@
 	},
 /turf/simulated/open,
 /area/cryogaia/station/hallway/primary/upper/south)
+"fM" = (
+/obj/machinery/power/solar{
+	id = "portsolar";
+	name = "Port Solar Array"
+	},
+/obj/structure/cable/yellow{
+	d2 = 4;
+	dir = 8;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "fP" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
@@ -1615,6 +1629,18 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"gk" = (
+/obj/structure/railing/grey{
+	dir = 8;
+	icon_state = "grey_railing0"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "gl" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/plating/snow/plating,
@@ -1665,24 +1691,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
-"gx" = (
-/obj/structure/cable/heavyduty,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3
-	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "gy" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -1743,6 +1751,12 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"gF" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "gG" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
@@ -2583,6 +2597,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
+"jQ" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "jR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -2693,20 +2715,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
-"kh" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	dir = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "kj" = (
 /obj/machinery/light,
 /obj/machinery/firealarm{
@@ -3364,30 +3372,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
-"mK" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	dir = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	dir = 8;
-	icon_state = "1-2"
-	},
-/obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "mL" = (
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 4
@@ -3722,18 +3706,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
-"nX" = (
-/obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "oa" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -3814,18 +3786,6 @@
 "om" = (
 /turf/unsimulated/wall/planetary/borealis2,
 /area/borealis2/outdoors/grounds/upper)
-"oq" = (
-/obj/machinery/power/tracker{
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	d2 = 4;
-	dir = 1;
-	icon_state = "0-4"
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/solars)
 "or" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4219,17 +4179,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
-"pK" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "Solar Array Shed - Interior";
-	dir = 4
-	},
-/obj/item/device/geiger/wall{
-	dir = 4;
-	pixel_y = -30
-	},
-/turf/simulated/floor/plating/snow/plating,
-/area/maintenance/auxsolarport)
 "pL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -4329,6 +4278,19 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
+"qp" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "qs" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5018,20 +4980,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
+"sJ" = (
+/obj/structure/railing/grey,
+/obj/structure/railing/grey{
+	dir = 4;
+	icon_state = "grey_railing0"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "sK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
-"sM" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "sN" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/paleblue{
@@ -5479,26 +5441,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
-"uc" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	dir = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	dir = 8;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "ud" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -6214,12 +6156,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/east)
-"wE" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "wG" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
@@ -6260,6 +6196,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
+"wP" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	dir = 8;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "wQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9;
@@ -6528,6 +6473,30 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"xJ" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	dir = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	dir = 8;
+	icon_state = "1-2"
+	},
+/obj/structure/railing/grey{
+	dir = 8;
+	icon_state = "grey_railing0"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "xM" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/corner_oldtile/purple{
@@ -6597,6 +6566,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
+"yc" = (
+/obj/structure/railing/grey{
+	dir = 4;
+	icon_state = "grey_railing0"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "yd" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -6610,6 +6586,17 @@
 	},
 /turf/simulated/shuttle/floor/yellow/airless,
 /area/shuttle/belter)
+"yg" = (
+/obj/machinery/camera/network/engineering{
+	c_tag = "Solar Array Shed - Interior";
+	dir = 4
+	},
+/obj/item/device/geiger/wall{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/maintenance/auxsolarport)
 "yi" = (
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -6765,6 +6752,14 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
+"yU" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "yX" = (
 /obj/machinery/light/small{
 	dir = 1;
@@ -6785,6 +6780,24 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
+"zg" = (
+/obj/structure/cable/heavyduty,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "zh" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -6861,23 +6874,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway)
-"zs" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/solar{
-	dir = 2
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/snow/plating,
-/area/maintenance/auxsolarport)
 "zt" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/polarized{
@@ -8654,14 +8650,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
-"FM" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "FN" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1;
@@ -9080,18 +9068,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/east)
-"Hl" = (
-/obj/machinery/power/solar{
-	id = "portsolar";
-	name = "Port Solar Array"
-	},
-/obj/structure/cable/yellow{
-	d2 = 4;
-	dir = 8;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "Hm" = (
 /obj/structure/bed/chair/wood{
 	dir = 8;
@@ -9360,12 +9336,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
-"Il" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "Io" = (
 /obj/structure/railing{
 	dir = 1;
@@ -9534,12 +9504,6 @@
 /obj/structure/bookcase/manuals/medical,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
-"IR" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "IS" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -9559,6 +9523,12 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
 /area/civilian/atrium/upper)
+"IT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "IU" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10208,6 +10178,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
+"Le" = (
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "Lg" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -10446,6 +10419,13 @@
 /obj/structure/railing,
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"LZ" = (
+/obj/item/device/geiger/wall{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/hallway/primary/upper/south)
 "Mb" = (
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
@@ -10571,6 +10551,29 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"ML" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/solar{
+	dir = 2
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	dir = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/maintenance/auxsolarport)
 "MM" = (
 /obj/structure/sign/warning/airlock,
 /turf/simulated/wall/rshull,
@@ -10631,6 +10634,20 @@
 "MV" = (
 /turf/simulated/wall,
 /area/crew_quarters/medbreak)
+"MY" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	dir = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "Na" = (
 /obj/machinery/status_display,
 /turf/simulated/wall,
@@ -10929,18 +10946,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior/upper)
-"NW" = (
-/obj/effect/floor_decal/corner_oldtile/purple{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner_oldtile/purple{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/explorer_entrance)
 "NX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/multi_tile/metal/mait{
@@ -11209,6 +11214,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/excursion)
+"OH" = (
+/obj/machinery/power/tracker{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	d2 = 4;
+	dir = 1;
+	icon_state = "0-4"
+	},
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "OJ" = (
 /obj/machinery/button/remote/blast_door{
 	dir = 1;
@@ -11543,6 +11560,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
+"PI" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	dir = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "PJ" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
@@ -12120,6 +12146,18 @@
 	},
 /turf/simulated/wall,
 /area/security/watchtower)
+"RX" = (
+/obj/machinery/power/solar{
+	id = "portsolar";
+	name = "Port Solar Array"
+	},
+/obj/structure/cable/yellow{
+	d2 = 8;
+	dir = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "RY" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/paleblue{
@@ -12183,6 +12221,12 @@
 "Sk" = (
 /turf/simulated/wall,
 /area/medical/medbayskybridge)
+"Sm" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "Sn" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -12205,19 +12249,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
-"So" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "Sq" = (
 /obj/structure/railing/grey{
 	dir = 4;
@@ -12240,24 +12271,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/checkpoint)
-"Sv" = (
-/obj/machinery/power/solar{
-	id = "portsolar";
-	name = "Port Solar Array"
-	},
-/obj/structure/cable/yellow{
-	d2 = 8;
-	dir = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
-"Sw" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "Sx" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_one_access = list()
@@ -12370,6 +12383,13 @@
 /obj/item/device/instrument/recorder,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
+"SQ" = (
+/obj/structure/railing/grey{
+	dir = 8;
+	icon_state = "grey_railing0"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "SR" = (
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
@@ -13210,6 +13230,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
+"Vx" = (
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/device/geiger/wall{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "VB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -13239,6 +13275,18 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/cryogaia/station/excursion_dock)
+"VG" = (
+/obj/structure/railing/grey{
+	dir = 8;
+	icon_state = "grey_railing0"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "VH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4;
@@ -13883,6 +13931,10 @@
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/south)
+"XY" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "XZ" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
@@ -13993,6 +14045,26 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
+"Yz" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	dir = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	dir = 8;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "YC" = (
 /obj/structure/table/steel,
 /obj/item/device/suit_cooling_unit,
@@ -27921,28 +27993,28 @@ AN
 AN
 AN
 AN
-AN
-pJ
-FM
-So
-FM
-FM
-FM
-So
-FM
-FM
-FM
-So
-FM
-FM
-FM
-So
-ec
-ec
-ec
-nX
-Wi
-Wi
+Le
+jQ
+cm
+qp
+cm
+cm
+cm
+qp
+cm
+cm
+cm
+qp
+cm
+cm
+cm
+qp
+gk
+gk
+gk
+VG
+SQ
+SQ
 PN
 nQ
 nQ
@@ -28083,28 +28155,28 @@ AN
 AN
 AN
 AN
-AN
-gj
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+Le
+wP
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -28245,28 +28317,28 @@ Tv
 Tv
 Tv
 Tv
-Tv
-sM
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+PI
+yU
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -28407,28 +28479,28 @@ QY
 QY
 QY
 QY
-AN
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+Le
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -28562,35 +28634,35 @@ QY
 Ih
 xF
 gl
-pK
+yg
 fb
 fb
 fb
 Ap
 zo
 QY
-AN
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+Le
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -28731,28 +28803,28 @@ fb
 fb
 vS
 QY
-AN
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+Le
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -28883,7 +28955,7 @@ AN
 AN
 Ry
 gX
-zs
+ML
 bu
 qa
 ee
@@ -28893,28 +28965,28 @@ ry
 yl
 qZ
 Ve
-IR
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+IT
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -29055,28 +29127,28 @@ QY
 QY
 QY
 QY
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -29217,28 +29289,28 @@ GW
 cP
 cP
 Hp
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -29379,28 +29451,28 @@ sy
 cz
 cP
 Hp
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -29541,28 +29613,28 @@ nj
 Ou
 cP
 Hp
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 YD
 nQ
 nQ
@@ -29668,7 +29740,7 @@ nz
 oM
 sq
 fQ
-NW
+Vx
 AU
 AU
 Nx
@@ -29703,28 +29775,28 @@ nj
 Ua
 cP
 Hp
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 AN
 Wi
 Wi
@@ -29865,28 +29937,28 @@ nj
 tV
 Hk
 Hp
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 AN
 AN
 AN
@@ -30027,28 +30099,28 @@ Sj
 Nr
 cP
 Hp
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 AN
 AN
 AN
@@ -30189,28 +30261,28 @@ nj
 Nr
 cP
 Hp
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
 Sq
 Sq
 Sq
@@ -30351,28 +30423,28 @@ nj
 Hz
 cP
 Hp
-wE
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+cj
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -30513,28 +30585,28 @@ vT
 Pk
 cP
 Hp
-wE
-AN
-Hl
-kh
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+cj
+Le
+fM
+MY
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -30675,28 +30747,28 @@ vT
 Nr
 cP
 Hp
-Sw
-Il
-Il
-IR
-AN
-AN
-Hl
-kh
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Sm
+gF
+gF
+IT
+Le
+Le
+fM
+MY
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -30840,25 +30912,25 @@ mD
 mD
 mD
 mD
-Sw
-gx
-AN
-AN
-AN
-AN
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Sm
+zg
+Le
+Le
+Le
+Le
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -31008,19 +31080,19 @@ mD
 mD
 mD
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -31166,23 +31238,23 @@ bR
 Cw
 Bn
 bJ
-bR
+LZ
 bR
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -31332,19 +31404,19 @@ bC
 xy
 aS
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -31494,19 +31566,19 @@ mD
 ZO
 bR
 mD
-AN
-Hl
-mK
-Sv
-AN
-Hl
-mK
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+xJ
+RX
+Le
+fM
+xJ
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -31656,19 +31728,19 @@ yB
 Ky
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -31818,19 +31890,19 @@ mD
 Ru
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -31980,19 +32052,19 @@ QX
 Ru
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -32142,19 +32214,19 @@ KB
 Ru
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -32304,19 +32376,19 @@ KB
 Ru
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -32466,19 +32538,19 @@ KB
 Mc
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -32628,19 +32700,19 @@ KB
 Ru
 zJ
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -32790,19 +32862,19 @@ KB
 Ru
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+XY
 nQ
 nQ
 nQ
@@ -32952,19 +33024,19 @@ QX
 um
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-AN
-Sq
-Sq
-nq
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+Le
+yc
+yc
+sJ
 nQ
 nQ
 nQ
@@ -33114,16 +33186,16 @@ fk
 wC
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-Hl
-uc
-Sv
-AN
-YD
+Le
+fM
+Yz
+RX
+Le
+fM
+Yz
+RX
+Le
+XY
 nQ
 nQ
 nQ
@@ -33276,16 +33348,16 @@ mD
 Je
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-AN
-gj
-AN
-Sq
-nq
+Le
+fM
+Yz
+RX
+Le
+Le
+wP
+Le
+yc
+sJ
 nQ
 nQ
 nQ
@@ -33438,14 +33510,14 @@ mD
 Ru
 bR
 mD
-AN
-Hl
-uc
-Sv
-AN
-AN
-gj
-YD
+Le
+fM
+Yz
+RX
+Le
+Le
+wP
+XY
 nQ
 nQ
 nQ
@@ -33600,14 +33672,14 @@ NA
 cE
 aS
 mD
-AN
-Hl
-uc
-Sv
-AN
-AN
-gj
-YD
+Le
+fM
+Yz
+RX
+Le
+Le
+wP
+XY
 nQ
 nQ
 nQ
@@ -33762,14 +33834,14 @@ mD
 IK
 Nn
 mD
-AN
-Hl
-kh
-Sv
-AN
-AN
-oq
-YD
+Le
+fM
+MY
+RX
+Le
+Le
+OH
+XY
 nQ
 nQ
 nQ
@@ -33924,14 +33996,14 @@ mD
 JG
 Lp
 mD
-AN
-AN
-AN
-AN
-Sq
-Sq
-Sq
-nq
+Le
+Le
+Le
+Le
+yc
+yc
+yc
+sJ
 nQ
 nQ
 nQ
