@@ -113,10 +113,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/perma/control)
-"afS" = (
-/obj/structure/stairs/east,
-/turf/simulated/floor/tiled/dark,
-/area/cryogaia/station/excursion_dock)
 "agh" = (
 /obj/machinery/light_switch{
 	dir = 2;
@@ -764,10 +760,6 @@
 /obj/structure/plushie/carp,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
-"aDi" = (
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/dark,
-/area/cryogaia/station/excursion_dock)
 "aDq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -971,9 +963,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
-"aLq" = (
-/turf/simulated/wall,
-/area/cryogaia/station/excursion_dock)
 "aLr" = (
 /turf/simulated/floor/tiled/steel_dirty,
 /area/hallway/lower/aft)
@@ -4563,6 +4552,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage2)
+"cWl" = (
+/obj/structure/table/standard,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/maintroom8)
 "cWo" = (
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/dark,
@@ -9443,6 +9437,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/library)
+"gcm" = (
+/turf/simulated/wall,
+/area/maintenance/maintroom8)
 "gcx" = (
 /turf/simulated/wall,
 /area/maintenance/substation/civilian_lower)
@@ -15085,6 +15082,9 @@
 /obj/item/toy/stickhorse,
 /turf/simulated/floor/carpet,
 /area/maintenance/maintroom2)
+"jmS" = (
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/maintroom8)
 "jmT" = (
 /obj/structure/grille,
 /obj/machinery/meter{
@@ -15345,10 +15345,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/medical/virology)
-"jwu" = (
-/obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/tiled/dark,
-/area/cryogaia/station/excursion_dock)
 "jxh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -16382,6 +16378,12 @@
 /obj/structure/sign/poster,
 /turf/simulated/wall,
 /area/maintenance/lowfloor3)
+"jWv" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/maintroom8)
 "jWz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -17311,9 +17313,6 @@
 /obj/random/obstruction,
 /turf/simulated/floor,
 /area/maintenance/medical_lower)
-"ksw" = (
-/turf/simulated/floor/tiled/dark,
-/area/cryogaia/station/excursion_dock)
 "ksx" = (
 /obj/item/weapon/toolbox_tiles,
 /turf/simulated/floor,
@@ -22122,11 +22121,6 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
-"nhT" = (
-/obj/structure/table/standard,
-/obj/machinery/recharger,
-/turf/simulated/floor/tiled/dark,
-/area/cryogaia/station/excursion_dock)
 "nie" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/machinery/light{
@@ -28267,11 +28261,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
-"qQF" = (
-/obj/structure/table/standard,
-/obj/item/device/binoculars/spyglass,
-/turf/simulated/floor/tiled/dark,
-/area/cryogaia/station/excursion_dock)
 "qQS" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
 /turf/simulated/floor/tiled/techmaint,
@@ -29874,6 +29863,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
+"rRX" = (
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/maintroom8)
 "rSq" = (
 /obj/structure/girder,
 /turf/simulated/floor/tiled/white,
@@ -35393,12 +35389,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/aft)
-"vbo" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/cryogaia/station/excursion_dock)
 "vbG" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -36111,13 +36101,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/medical/morgue)
-"vzk" = (
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/dark,
-/area/cryogaia/station/excursion_dock)
 "vzt" = (
 /obj/structure/showcase/yw/chaplain2,
 /turf/simulated/floor/tiled/dark,
@@ -36898,6 +36881,10 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/lowfloor3)
+"vUX" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/maintroom8)
 "vVm" = (
 /obj/structure/table/standard,
 /obj/machinery/alarm{
@@ -38441,6 +38428,10 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/starboard)
+"wYC" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/maintroom8)
 "wYG" = (
 /obj/machinery/light,
 /turf/simulated/floor/wood/sif,
@@ -38576,6 +38567,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
+"xdj" = (
+/obj/structure/table/standard,
+/obj/item/device/binoculars/spyglass,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/maintroom8)
 "xdz" = (
 /obj/structure/table/standard,
 /obj/machinery/light,
@@ -61750,16 +61746,16 @@ vSL
 vSL
 igt
 vSL
-aLq
-aLq
-aLq
-aLq
+gcm
+gcm
+gcm
+gcm
 udc
 mRG
-aLq
-aLq
-aLq
-aLq
+gcm
+gcm
+gcm
+gcm
 mwy
 mwy
 hYh
@@ -61912,16 +61908,16 @@ mwy
 mwy
 emb
 mwy
-aLq
-nhT
-aDi
-aLq
-jwu
-jwu
-aLq
-qQF
-aDi
-aLq
+gcm
+cWl
+wYC
+gcm
+vUX
+vUX
+gcm
+xdj
+wYC
+gcm
 mwy
 mwy
 hYh
@@ -62074,16 +62070,16 @@ mwy
 mwy
 emb
 mwy
-aLq
-vbo
-vbo
-ksw
-ksw
-ksw
-ksw
-vbo
-vbo
-aLq
+gcm
+jWv
+jWv
+jmS
+jmS
+jmS
+jmS
+jWv
+jWv
+gcm
 mwy
 mwy
 hYh
@@ -62236,16 +62232,16 @@ mwy
 mwy
 emb
 mwy
-aLq
-ksw
-vzk
-ksw
-ksw
-ksw
-ksw
-vzk
-ksw
-aLq
+gcm
+jmS
+rRX
+jmS
+jmS
+jmS
+jmS
+rRX
+jmS
+gcm
 mwy
 mwy
 hYh
@@ -62398,16 +62394,16 @@ mwy
 mwy
 emb
 mwy
-aLq
-aLq
-aLq
-aLq
-ksw
-ksw
-aLq
-aLq
-aLq
-aLq
+gcm
+gcm
+gcm
+gcm
+jmS
+jmS
+gcm
+gcm
+gcm
+gcm
 mwy
 mwy
 hYh
@@ -62563,10 +62559,10 @@ mwy
 mwy
 mwy
 mwy
-aLq
-ksw
-ksw
-aLq
+gcm
+jmS
+jmS
+gcm
 mwy
 mwy
 mwy
@@ -62725,10 +62721,10 @@ mwy
 mwy
 mwy
 mwy
-aLq
-afS
-afS
-aLq
+gcm
+jmS
+jmS
+gcm
 mwy
 mwy
 mwy
@@ -62887,10 +62883,10 @@ mwy
 mwy
 mwy
 mwy
-aLq
-aLq
-aLq
-aLq
+gcm
+gcm
+gcm
+gcm
 mwy
 mwy
 mwy

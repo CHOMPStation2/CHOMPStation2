@@ -238,7 +238,15 @@
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 
-// Mining Underdark
+// Mining Underdark < does this name really apply anymoore?
+/area/maintenance/upper/maintroom1
+	name = "Forgotten Maintenance"
+	icon_state = "amaint"
+
+/area/maintenance/upper/maintroom2
+	name = "Forgotten Maintenance"
+	icon_state = "amaint"
+
 /area/maintenance/maintroom1
 	name = "Forgotten Maintenance"
 	icon_state = "amaint"
@@ -260,6 +268,11 @@
 /area/maintenance/maintroom7
 	name = "Forgotten Maintenance"
 	icon_state = "amaint"
+
+/area/maintenance/maintroom8
+	name = "Forgotten Maintenance"
+	icon_state = "amaint"
+
 /area/maintenance/holo
 	name = "Holodeck Maintenance"
 	icon_state = "pmaint"
@@ -294,6 +307,9 @@
 /area/cryogaia/station/excursion_dock
 	name = "\improper Exploration Vessel Dock"
 
+/area/cryogaia/station/explorer_entrance
+	name = "\improper Explorer Entrance Room"
+
 /area/cryogaia/station/explorer_prep
 	name = "\improper Explorer Prep Room"
 
@@ -303,14 +319,15 @@
 /area/cryogaia/station/pathfinder_office
 	name = "\improper Pathfinder's Office"
 
-/area/cryogaia/station/explorer_upper
-	name = "\improper Exploration Upper Level"
-
 /area/cryogaia/station/ert_arrival
 	name = "\improper Emergency Responder Point"
 
-/area/cryogaia/station/hallway/primary/upper
-	name = "\improper Upper Level Hallways"
+/area/cryogaia/station/hallway/primary/upper/south
+	name = "\improper Upper Southern Level Hallways"
+	icon_state = "hallC1"
+
+/area/cryogaia/station/hallway/primary/upper/east
+	name = "\improper Upper Northern Level Hallways"
 	icon_state = "hallC1"
 
 /area/cryogaia/station/medical/upper

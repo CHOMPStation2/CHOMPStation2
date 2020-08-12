@@ -6016,6 +6016,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"coN" = (
+/obj/effect/shuttle_landmark/automatic,
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "cpa" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -23303,19 +23307,6 @@
 /obj/structure/barricade,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
-"iYG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/obj/effect/floor_decal/corner/brown{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/miningwing)
 "iZl" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/floor_decal/corner/purple/full{
@@ -31617,6 +31608,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
+"mmC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningwing)
 "mmE" = (
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -81585,7 +81589,7 @@ wkL
 uRb
 oqx
 sjL
-iYG
+mmC
 wGm
 oFS
 jRc
@@ -85005,7 +85009,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+coN
 uDf
 uDf
 uDf
