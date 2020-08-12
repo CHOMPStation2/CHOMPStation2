@@ -1,26 +1,26 @@
 //Normal YW map defs
-#define Z_LEVEL_CRYOGAIA_MISC			1
-#define Z_LEVEL_CRYOGAIA_CENTCOM		2
-#define Z_LEVEL_CRYOGAIA_MINE			3
-#define Z_LEVEL_CRYOGAIA_TRANSIT		4 //added due to explosions jumping from mine leve to lower.
-#define Z_LEVEL_CRYOGAIA_LOWER			5
-#define Z_LEVEL_CRYOGAIA_MAIN			6
-#define Z_LEVEL_CRYOGAIA_UPPER			7
-#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		8
-#define Z_LEVEL_ROGUEMINE_1			9
-#define Z_LEVEL_ROGUEMINE_2			10
-#define Z_LEVEL_ROGUEMINE_3			11
-#define Z_LEVEL_ROGUEMINE_4			12
-#define Z_LEVEL_PLAINS				13
-#define Z_LEVEL_BEACH				14
-#define Z_LEVEL_BEACH_CAVE			15
-#define Z_LEVEL_AEROSTAT			16
+#define Z_LEVEL_CRYOGAIA_CENTCOM		1
+#define Z_LEVEL_CRYOGAIA_MINE			2
+#define Z_LEVEL_CRYOGAIA_TRANSIT		3 //added due to explosions jumping from mine leve to lower.
+#define Z_LEVEL_CRYOGAIA_LOWER			4
+#define Z_LEVEL_CRYOGAIA_MAIN			5
+#define Z_LEVEL_CRYOGAIA_UPPER			6
+#define Z_LEVEL_CRYOGAIA_MISC			7
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	8
+#define Z_LEVEL_ROGUEMINE_1				9
+#define Z_LEVEL_ROGUEMINE_2				10
+#define Z_LEVEL_ROGUEMINE_3				11
+#define Z_LEVEL_ROGUEMINE_4				12
+#define Z_LEVEL_PLAINS					13
+#define Z_LEVEL_BEACH					14
+#define Z_LEVEL_BEACH_CAVE				15
+#define Z_LEVEL_AEROSTAT				16
 #define Z_LEVEL_AEROSTAT_SURFACE		17
-#define Z_LEVEL_DEBRISFIELD			18
-#define Z_LEVEL_UNDERDARK			19
-#define Z_LEVEL_GUTTERSITE			20
-#define Z_LEVEL_FUELDEPOT			21
-#define Z_LEVEL_GATEWAY				22
+#define Z_LEVEL_DEBRISFIELD				18
+#define Z_LEVEL_UNDERDARK				19
+#define Z_LEVEL_GUTTERSITE				20
+#define Z_LEVEL_FUELDEPOT				21
+#define Z_LEVEL_GATEWAY					22
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -169,7 +169,7 @@
 //		/area/engineering/atmos/intake
 		)
 
-	unit_test_z_levels = list(3,5,6)
+	unit_test_z_levels = list(2,4,5,6)
 
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
