@@ -2112,6 +2112,24 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
+"aQv" = (
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "32-1"
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/open,
+/area/borealis2/elevator/scicargo)
 "aQA" = (
 /turf/simulated/wall/r_wall,
 /area/bridge/blueshield)
@@ -13944,21 +13962,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/ert_arrival)
-"fpu" = (
-/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/zpipe/down/supply{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "32-1"
-	},
-/obj/machinery/door/firedoor,
-/obj/structure/lattice,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/open,
-/area/borealis2/elevator/scicargo)
 "fpL" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
@@ -47459,9 +47462,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit_link)
-"sni" = (
-/turf/simulated/floor/plating,
-/area/borealis2/elevator/scicargo)
 "snj" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -54706,6 +54706,16 @@
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
+"vpQ" = (
+/obj/structure/cable{
+	icon_state = "16-0"
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/borealis2/elevator/scicargo)
 "vqe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -79651,7 +79661,7 @@ cQQ
 cQQ
 cQQ
 xQr
-sni
+vpQ
 lzM
 lzM
 lzM
@@ -79813,7 +79823,7 @@ vHY
 yja
 afA
 cbI
-fpu
+aQv
 nDn
 nwF
 pGl
