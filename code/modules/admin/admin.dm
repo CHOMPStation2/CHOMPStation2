@@ -938,10 +938,12 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set desc="Whether persistent data will be saved from now on."
 	set name="Toggle Persistent Data"
 	config.persistence_enabled = !(config.persistence_enabled)
+/* CHOMP the entire world doesn't need to know.
 	if(config.persistence_enabled)
 		to_world("<B>Persistence is now enabled..</B>")
 	else
 		to_world("<B>Persistence is no longer enabled.</B>")
+*/
 	message_admins("<font color='blue'>[key_name_admin(usr)] toggled persistence to [config.persistence_enabled ? "On" : "Off"].</font>", 1)
 	log_admin("[key_name(usr)] toggled persistence to [config.persistence_enabled ? "On" : "Off"].")
 	world.update_status()
