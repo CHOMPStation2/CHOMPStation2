@@ -6,21 +6,23 @@
 #define Z_LEVEL_CRYOGAIA_MAIN			5
 #define Z_LEVEL_CRYOGAIA_UPPER			6
 #define Z_LEVEL_CRYOGAIA_MISC			7
-#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	8
-#define Z_LEVEL_ROGUEMINE_1				9
-#define Z_LEVEL_ROGUEMINE_2				10
-#define Z_LEVEL_ROGUEMINE_3				11
-#define Z_LEVEL_ROGUEMINE_4				12
-#define Z_LEVEL_PLAINS					13
-#define Z_LEVEL_BEACH					14
-#define Z_LEVEL_BEACH_CAVE				15
-#define Z_LEVEL_AEROSTAT				16
-#define Z_LEVEL_AEROSTAT_SURFACE		17
-#define Z_LEVEL_DEBRISFIELD				18
-#define Z_LEVEL_UNDERDARK				19
-#define Z_LEVEL_GUTTERSITE				20
-#define Z_LEVEL_FUELDEPOT				21
-#define Z_LEVEL_GATEWAY					22
+#define Z_LEVEL_CRYOGAIA_WILDERNESS		8
+#define Z_LEVEL_CRYOGAIA_CAVES			9
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	10
+#define Z_LEVEL_ROGUEMINE_1				11
+#define Z_LEVEL_ROGUEMINE_2				12
+#define Z_LEVEL_ROGUEMINE_3				13
+#define Z_LEVEL_ROGUEMINE_4				14
+#define Z_LEVEL_PLAINS					15
+#define Z_LEVEL_BEACH					16
+#define Z_LEVEL_BEACH_CAVE				17
+#define Z_LEVEL_AEROSTAT				18
+#define Z_LEVEL_AEROSTAT_SURFACE		19
+#define Z_LEVEL_DEBRISFIELD				20
+#define Z_LEVEL_UNDERDARK				21
+#define Z_LEVEL_GUTTERSITE				22
+#define Z_LEVEL_FUELDEPOT				23
+#define Z_LEVEL_GATEWAY					24
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -230,7 +232,9 @@
 		Z_LEVEL_CRYOGAIA_LOWER,
 		Z_LEVEL_CRYOGAIA_MAIN,
 		Z_LEVEL_CRYOGAIA_UPPER,
-		Z_LEVEL_PLAINS
+		Z_LEVEL_PLAINS,
+		Z_LEVEL_CRYOGAIA_WILDERNESS,
+		Z_LEVEL_CRYOGAIA_CAVES
 	)
 
 // Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
@@ -275,7 +279,9 @@
 		"cryogaia_security_hangar"
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
-	extra_z_levels = list(Z_LEVEL_PLAINS)
+	extra_z_levels = list(Z_LEVEL_PLAINS,
+						  Z_LEVEL_CRYOGAIA_WILDERNESS,
+						  Z_LEVEL_CRYOGAIA_CAVES)
 
 /obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
 	. = ..()
