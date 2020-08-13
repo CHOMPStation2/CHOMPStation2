@@ -1588,21 +1588,6 @@
 /obj/item/device/radio/beacon,
 /turf/simulated/floor/tiled/dark,
 /area/ai_foyer)
-"aei" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/sign/kiddieplaque{
-	pixel_y = 32
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 28
-	},
-/mob/living/silicon/robot/ai_shell,
-/turf/simulated/floor/tiled/dark,
-/area/ai_foyer)
 "aej" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -39870,6 +39855,20 @@
 "dcc" = (
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
+"dcy" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/sign/kiddieplaque{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ai_foyer)
 "ddA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 5
@@ -80297,7 +80296,7 @@ acJ
 acX
 abf
 aar
-aei
+dcy
 aot
 afm
 afK
