@@ -294,14 +294,13 @@
 /area/medical/medbayupper)
 "bu" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	dir = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/closet/crate/solar{
 	dir = 2
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
@@ -425,15 +424,10 @@
 /area/quartermaster/miningdock)
 "bY" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	dir = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
 "ca" = (
@@ -783,6 +777,22 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/west)
+"dh" = (
+/obj/machinery/power/solar{
+	id = "portsolar";
+	name = "Port Solar Array"
+	},
+/obj/structure/cable/yellow{
+	d2 = 4;
+	dir = 8;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "di" = (
 /obj/machinery/vending/cola{
 	dir = 8;
@@ -984,10 +994,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/stool,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	dir = 8;
-	icon_state = "1-2"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
@@ -1085,10 +1094,9 @@
 /obj/item/stack/cable_coil/lime,
 /obj/structure/table/standard,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	dir = 8;
-	icon_state = "4-8"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
@@ -1142,14 +1150,6 @@
 	},
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
-"eu" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper/solars)
 "ey" = (
 /obj/machinery/photocopier,
 /obj/effect/floor_decal/corner_oldtile/purple,
@@ -1616,10 +1616,9 @@
 /area/borealis2/elevator/uppermining)
 "gj" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	dir = 8;
-	icon_state = "1-2"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -1830,12 +1829,12 @@
 /turf/simulated/floor/plating,
 /area/security/watchtower)
 "gX" = (
+/obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
 "ha" = (
@@ -2000,10 +1999,9 @@
 /area/security/watchtower)
 "hG" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	dir = 8;
-	icon_state = "1-2"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -3793,6 +3791,14 @@
 "om" = (
 /turf/unsimulated/wall/planetary/borealis2,
 /area/borealis2/outdoors/grounds/upper)
+"oq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/yellow{
+	icon_state = "0-8";
+	dir = 2
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/maintenance/auxsolarport)
 "or" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3967,11 +3973,7 @@
 	id = "portsolar";
 	name = "Port Solar Array"
 	},
-/obj/structure/cable/yellow{
-	d2 = 8;
-	dir = 8;
-	icon_state = "0-8"
-	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
 "oT" = (
@@ -4120,26 +4122,24 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "pv" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	dir = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	dir = 8;
-	icon_state = "1-2"
-	},
 /obj/structure/railing/grey{
 	dir = 8;
 	icon_state = "grey_railing0"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -4285,10 +4285,9 @@
 /obj/structure/table/standard,
 /obj/item/clothing/gloves/yellow,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	dir = 8;
-	icon_state = "4-8"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
@@ -4299,13 +4298,13 @@
 "qd" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -4660,9 +4659,8 @@
 	name = "Port Solar Array"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
-	dir = 8;
-	icon_state = "0-4"
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -5112,10 +5110,9 @@
 /area/civilian/atrium/upper)
 "tc" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
+	d1 = 1;
 	d2 = 8;
-	dir = 8;
-	icon_state = "2-8"
+	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -6522,17 +6519,13 @@
 	name = "south bump";
 	pixel_y = -28
 	},
-/obj/structure/cable/yellow{
-	d2 = 8;
-	dir = 8;
-	icon_state = "0-8"
-	},
 /obj/machinery/power/apc{
 	cell_type = /obj/item/weapon/cell/super;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
 	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
 "xH" = (
@@ -6549,6 +6542,12 @@
 /obj/effect/floor_decal/corner_oldtile/purple,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
+"xN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/maintenance/auxsolarport)
 "xO" = (
 /obj/structure/railing/grey{
 	dir = 8;
@@ -6633,9 +6632,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
-"yl" = (
-/turf/simulated/floor/plating/snow/plating,
-/area/maintenance/auxsolarport)
 "ym" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6861,11 +6857,7 @@
 	dir = 4;
 	icon_state = "term"
 	},
-/obj/structure/cable/yellow{
-	d2 = 8;
-	dir = 8;
-	icon_state = "0-8"
-	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
 "zp" = (
@@ -7183,9 +7175,9 @@
 "Ap" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d2 = 4;
-	dir = 8;
-	icon_state = "0-4"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
@@ -7298,11 +7290,12 @@
 	},
 /obj/structure/cable/yellow{
 	d2 = 4;
-	dir = 8;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	dir = 8
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
@@ -7734,14 +7727,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
-"Cg" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper/solars)
 "Ch" = (
 /obj/structure/railing/grey{
 	dir = 8;
@@ -7917,15 +7902,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
-"CJ" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	dir = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper/solars)
 "CL" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -8540,19 +8516,18 @@
 /area/maintenance/security_tower)
 "ER" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	dir = 8;
-	icon_state = "2-8"
-	},
 /obj/structure/closet/crate/solar{
 	dir = 2
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
@@ -8818,6 +8793,14 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"Gb" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Gd" = (
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
@@ -8901,6 +8884,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
+"GB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/maintenance/auxsolarport)
 "GC" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9530,6 +9520,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
+"IF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/maintenance/auxsolarport)
 "IG" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -11817,12 +11816,11 @@
 /obj/machinery/power/tracker{
 	dir = 1
 	},
-/obj/structure/cable/yellow{
-	d2 = 4;
-	dir = 1;
-	icon_state = "0-4"
-	},
 /obj/effect/overlay/snow/floor,
+/obj/structure/cable/yellow{
+	icon_state = "0-8";
+	dir = 2
+	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
 "QQ" = (
@@ -12189,21 +12187,19 @@
 /area/shuttle/excursion)
 "Sa" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
+	d1 = 4;
 	d2 = 8;
-	dir = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	d1 = 1;
-	d2 = 2;
-	dir = 8;
-	icon_state = "1-2"
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -12534,10 +12530,9 @@
 /area/cryogaia/station/medical/upper)
 "Tv" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	dir = 8;
-	icon_state = "4-8"
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -27975,11 +27970,11 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-va
-eu
+pJ
+Tv
+Tv
+KD
+KD
 KD
 qd
 KD
@@ -28137,11 +28132,11 @@ AN
 AN
 AN
 AN
-AN
+gj
 AN
 AN
 va
-hG
+va
 rx
 Sa
 oS
@@ -28299,11 +28294,11 @@ Tv
 Tv
 Tv
 Tv
-Tv
-Tv
-Tv
-CJ
-Cg
+Gb
+AN
+AN
+va
+va
 rx
 Sa
 oS
@@ -28622,7 +28617,7 @@ gl
 XM
 fb
 fb
-fb
+IF
 Ap
 zo
 QY
@@ -28784,8 +28779,8 @@ fb
 fb
 fb
 fb
-fb
-fb
+oq
+GB
 vS
 QY
 va
@@ -28947,8 +28942,8 @@ ee
 bY
 fb
 ry
-yl
 qZ
+xN
 Ve
 gI
 va
@@ -30738,7 +30733,7 @@ kq
 gI
 va
 va
-rx
+dh
 tc
 oS
 va
@@ -32857,7 +32852,7 @@ Sa
 oS
 va
 rx
-Sa
+tc
 oS
 gc
 nQ
