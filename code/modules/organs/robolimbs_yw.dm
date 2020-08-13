@@ -56,7 +56,7 @@
 	unavailable_to_build = 1
 	includes_tail = 0
 	suggested_species = "Vuplkanin"
-	whitelisted_to = list("dopiotl", "splintergp")
+	whitelisted_to = list("dopiotl")
 	monitor_styles = "idle=idle;\
 		idle-eye=eyeidle;\
 		emptyinput=emptyinput;\

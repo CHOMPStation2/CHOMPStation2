@@ -179,7 +179,7 @@
 	desc = ""
 	icon_state = "tails"
 	do_colouration = 0
-	ckeys_allowed = list("dopiotl", "splintergp")
+	ckeys_allowed = list("dopiotl")
 
 //ears
 
@@ -215,4 +215,4 @@
 	desc = ""
 	icon_state = "ears"
 	do_colouration = 0
-	ckeys_allowed = list("dopiotl", "splintergp")
+	ckeys_allowed = list("dopiotl")
