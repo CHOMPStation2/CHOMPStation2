@@ -106,16 +106,12 @@
 	'sound/ambience/holy/holy2.ogg'\
 	)
 
-// Generic sounds for less special rooms.
+// Generic sounds for less special rooms. Also apparently on southern cross it's for literally everything including the mining caves.
 #define AMBIENCE_GENERIC list(\
 	'sound/ambience/generic/generic1.ogg',\
 	'sound/ambience/generic/generic2.ogg',\
 	'sound/ambience/generic/generic3.ogg',\
-	'sound/ambience/generic/generic4.ogg',\
-	'sound/ambience/generic/generic5.ogg',\
-	'sound/ambience/generic/generic6.ogg',\
-	'sound/ambience/generic/generic7.ogg',\
-	'sound/ambience/generic/generic8.ogg'\
+	'sound/ambience/generic/generic4.ogg'\
 	)
 
 // Sounds of PA announcements, presumably involving shuttles?
@@ -143,7 +139,11 @@
 	'sound/ambience/maintenance/maintenance9.ogg',\
 	'sound/ambience/maintenance/maintenance10.ogg',\
 	'sound/ambience/maintenance/maintenance11.ogg',\
-	'sound/ambience/maintenance/maintenance12.ogg'\
+	'sound/ambience/maintenance/maintenance12.ogg',\
+	'sound/ambience/generic/generic5.ogg',\
+	'sound/ambience/generic/generic6.ogg',\
+	'sound/ambience/generic/generic7.ogg',\
+	'sound/ambience/generic/generic8.ogg'\
 	)
 
 // Life support machinery at work, keeping everyone breathing.
