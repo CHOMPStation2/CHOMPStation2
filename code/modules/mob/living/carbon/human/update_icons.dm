@@ -160,7 +160,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
-	
+
 
 //DAMAGE OVERLAYS
 //constructs damage icon for each organ from mask * damage field and saves it in our overlays_ lists
@@ -244,7 +244,11 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		icon_key += "[rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3])]"
 	else
 		icon_key += "[r_eyes], [g_eyes], [b_eyes]"
-
+	//YWadd start, early port, remove when it comes from upstream
+	var/obj/item/organ/external/head/head = organs_by_name[BP_HEAD]
+	if(head)
+		icon_key += "[head.eye_icon]"
+	//YWadd end.
 	for(var/organ_tag in species.has_limbs)
 		var/obj/item/organ/external/part = organs_by_name[organ_tag]
 		if(isnull(part) || part.is_stump() || part.is_hidden_by_tail()) //VOREStation Edit allowing tails to prevent bodyparts rendering, granting more spriter freedom for taur/digitigrade stuff.
