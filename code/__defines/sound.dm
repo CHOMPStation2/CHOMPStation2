@@ -143,7 +143,7 @@
 	'sound/ambience/generic/generic5.ogg',\
 	'sound/ambience/generic/generic6.ogg',\
 	'sound/ambience/generic/generic7.ogg',\
-	'sound/ambience/generic/generic8.ogg
+	'sound/ambience/generic/generic8.ogg'\
 	)
 
 // Life support machinery at work, keeping everyone breathing.
