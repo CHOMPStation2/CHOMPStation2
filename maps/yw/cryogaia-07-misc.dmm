@@ -1805,6 +1805,34 @@
 /obj/effect/floor_decal/carpet,
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_meetinghall)
+"iA" = (
+/obj/structure/closet,
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/item/clothing/suit/armor/laserproof,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/shoes/leg_guard/bulletproof,
+/obj/item/clothing/shoes/leg_guard/laserproof,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/bulletproof,
+/obj/item/clothing/gloves/arm_guard/laserproof,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/bulletproof,
+/obj/item/clothing/head/helmet/laserproof,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/mask/balaclava/tactical,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/vrworld)
 "iC" = (
 /obj/structure/closet,
 /obj/item/clothing/suit/armor/bulletproof,
@@ -2403,6 +2431,18 @@
 /obj/item/weapon/bedsheet/captain,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"lo" = (
+/obj/structure/closet/secure_closet/guncabinet/rifle{
+	locked = 0;
+	name = "unlocked rifle cabinet"
+	},
+/obj/item/weapon/storage/box/scattershot/large,
+/obj/item/weapon/storage/box/shotgunammo/large,
+/obj/item/weapon/material/knife/tacknife/combatknife,
+/obj/item/weapon/material/knife/tacknife/combatknife,
+/obj/machinery/light/small,
+/turf/unsimulated/floor/steel,
+/area/vrworld)
 "lq" = (
 /obj/structure/table/holotable,
 /obj/item/clothing/head/helmet/thunderdome,
@@ -3646,6 +3686,11 @@
 /obj/item/weapon/handcuffs/legcuffs,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/skipjack)
+"rM" = (
+/obj/machinery/door/airlock,
+/obj/effect/mobblocker,
+/turf/unsimulated/floor/techfloor_grid,
+/area/vrworld)
 "rP" = (
 /obj/structure/closet/acloset,
 /turf/unsimulated/floor{
@@ -6470,6 +6515,35 @@
 "FT" = (
 /turf/simulated/shuttle/wall/dark,
 /area/shuttle/skipjack)
+"FU" = (
+/obj/structure/closet,
+/obj/item/clothing/suit/armor/laserproof,
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/shoes/leg_guard/bulletproof,
+/obj/item/clothing/shoes/leg_guard/laserproof,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/bulletproof,
+/obj/item/clothing/gloves/arm_guard/laserproof,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/bulletproof,
+/obj/item/clothing/head/helmet/laserproof,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/mask/balaclava,
+/obj/item/clothing/mask/balaclava/tactical,
+/obj/item/device/flashlight/maglight,
+/obj/item/device/flashlight/maglight,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/unsimulated/floor/steel,
+/area/vrworld)
 "FV" = (
 /obj/structure/closet{
 	icon_state = "cabinet_closed"
@@ -8161,6 +8235,10 @@
 /obj/item/weapon/storage/firstaid/regular,
 /obj/item/weapon/storage/firstaid/surgery,
 /obj/item/device/defib_kit/compact/combat,
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
+	},
 /turf/unsimulated/floor/steel,
 /area/vrworld)
 "NL" = (
@@ -10769,9 +10847,9 @@ pT
 PY
 Xn
 kS
+iA
 iC
-iC
-iC
+iA
 zu
 eW
 Xn
@@ -10935,7 +11013,7 @@ xP
 xP
 xP
 zu
-gp
+lo
 bx
 zR
 Vh
@@ -11091,7 +11169,7 @@ pT
 pT
 pT
 pT
-Zn
+rM
 zu
 xP
 xP
@@ -11259,7 +11337,7 @@ xP
 xP
 xP
 zu
-gp
+lo
 bx
 zR
 Vh
@@ -11419,7 +11497,7 @@ Xn
 fn
 NK
 HB
-HB
+FU
 zu
 eW
 Xn

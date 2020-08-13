@@ -359,7 +359,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "bI" = (
@@ -1150,6 +1149,25 @@
 	},
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"ex" = (
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/bed/chair/backed_grey{
+	icon_state = "onestar_chair_grey";
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "ey" = (
 /obj/machinery/photocopier,
 /obj/effect/floor_decal/corner_oldtile/purple,
@@ -1490,6 +1508,16 @@
 	},
 /turf/simulated/open,
 /area/cryogaia/station/hallway/primary/upper/south)
+"fL" = (
+/obj/structure/table/woodentable,
+/obj/machinery/button/remote/airlock{
+	dir = 8;
+	id = "explolobby";
+	name = "Exploration Lobby Door";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "fP" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
@@ -1736,9 +1764,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
-"gH" = (
-/turf/simulated/wall/titanium,
-/area/cryogaia/station/excursion_dock)
 "gI" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
@@ -1964,6 +1989,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
+"hC" = (
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/water_cooler/full,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "hD" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8;
@@ -2645,6 +2680,12 @@
 "jX" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
 "jY" = (
@@ -5729,6 +5770,7 @@
 "ve" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
+	id_tag = "explolobby";
 	name = "Exploration Entrance Room";
 	req_one_access = list(19,43,67,68)
 	},
@@ -5741,6 +5783,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -7080,12 +7125,16 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/filingcabinet,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "zY" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "Aa" = (
@@ -10241,6 +10290,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
+"Le" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "Lg" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -10399,6 +10452,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/excursion)
+"LI" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/folder/blue,
+/obj/item/weapon/folder/red,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "LK" = (
 /turf/simulated/open,
 /area/borealis2/outdoors/grounds/tower/southeast)
@@ -11083,6 +11142,8 @@
 	pixel_x = -24
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/table/glass,
+/obj/item/weapon/material/ashtray/plastic,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "Ot" = (
@@ -11672,6 +11733,20 @@
 	},
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"Ql" = (
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/bed/chair/backed_grey{
+	icon_state = "onestar_chair_grey";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "Qn" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -12379,6 +12454,10 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/bed/chair/backed_grey{
+	icon_state = "onestar_chair_grey";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "SL" = (
@@ -12495,6 +12574,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
+"Tm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "Tn" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -29713,8 +29799,8 @@ dF
 Nb
 PZ
 SI
-PZ
-PZ
+Ql
+ex
 Oq
 nz
 oM
@@ -29872,7 +29958,7 @@ ku
 Cc
 NJ
 dF
-zA
+hC
 SR
 SR
 SR
@@ -30201,9 +30287,9 @@ SR
 SR
 SR
 xh
-SR
-SR
-SR
+LI
+Le
+fL
 JD
 SR
 SR
@@ -30364,7 +30450,7 @@ SR
 SR
 GT
 zY
-bh
+Tm
 bh
 Dp
 SR
@@ -30395,7 +30481,7 @@ DA
 FN
 oy
 Ut
-gH
+vT
 im
 im
 im
