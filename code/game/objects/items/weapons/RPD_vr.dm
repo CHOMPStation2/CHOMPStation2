@@ -56,6 +56,8 @@
 		recipe = first_atmos
 	if(!first_disposal)
 		first_disposal = GLOB.disposal_pipe_recipes[GLOB.disposal_pipe_recipes[1]][1]
+	if(!recipe)
+		recipe = first_atmos
 
 /obj/item/weapon/pipe_dispenser/Destroy()
 	qdel_null(spark_system)
