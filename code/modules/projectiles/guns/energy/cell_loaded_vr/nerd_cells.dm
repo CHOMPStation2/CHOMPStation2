@@ -31,7 +31,8 @@
 
 /obj/item/projectile/beam/medical_cell/brute/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-5)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-5)
 	else
 		return 1
 
@@ -43,7 +44,8 @@
 
 /obj/item/projectile/beam/medical_cell/burn/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustFireLoss(-5)
+		if(target.stat != DEAD)
+			target.adjustFireLoss(-5)
 	else
 		return 1
 
@@ -55,14 +57,15 @@
 
 /obj/item/projectile/beam/medical_cell/stabilize/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustOxyLoss(-30)
-		for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
-			var/obj/item/organ/external/O = target.organs_by_name[name]
-			for (var/datum/wound/W in O.wounds)
-				if (W.internal)
-					continue
-				W.disinfect()
-		target.add_modifier(/datum/modifier/stabilize, 20 SECONDS)
+		if(target.stat != DEAD)
+			target.adjustOxyLoss(-30)
+			for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
+				var/obj/item/organ/external/O = target.organs_by_name[name]
+				for (var/datum/wound/W in O.wounds)
+					if (W.internal)
+						continue
+					W.disinfect()
+			target.add_modifier(/datum/modifier/stabilize, 20 SECONDS)
 	else
 		return 1
 
@@ -83,7 +86,8 @@
 
 /obj/item/projectile/beam/medical_cell/toxin/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustToxLoss(-5)
+		if(target.stat != DEAD)
+			target.adjustToxLoss(-5)
 	else
 		return 1
 
@@ -95,10 +99,11 @@
 
 /obj/item/projectile/beam/medical_cell/omni/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-2.5)
-		target.adjustFireLoss(-2.5)
-		target.adjustToxLoss(-2.5)
-		target.adjustOxyLoss(-10)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-2.5)
+			target.adjustFireLoss(-2.5)
+			target.adjustToxLoss(-2.5)
+			target.adjustOxyLoss(-10)
 	else
 		return 1
 
@@ -110,8 +115,9 @@
 
 /obj/item/projectile/beam/medical_cell/antirad/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustToxLoss(-2.5)
-		target.radiation = max(target.radiation - 150, 0) //same as 5 units of arithrazine, sans the brute damage
+		if(target.stat != DEAD)
+			target.adjustToxLoss(-2.5)
+			target.radiation = max(target.radiation - 150, 0) //same as 5 units of arithrazine, sans the brute damage
 	else
 		return 1
 
@@ -123,7 +129,8 @@
 
 /obj/item/projectile/beam/medical_cell/brute2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-10)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-10)
 	else
 		return 1
 
@@ -135,7 +142,8 @@
 
 /obj/item/projectile/beam/medical_cell/burn2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustFireLoss(-10)
+		if(target.stat != DEAD)
+			target.adjustFireLoss(-10)
 	else
 		return 1
 
@@ -147,18 +155,19 @@
 
 /obj/item/projectile/beam/medical_cell/stabilize2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustOxyLoss(-200)
-		for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
-			var/obj/item/organ/external/O = target.organs_by_name[name]
-			for (var/datum/wound/W in O.wounds)
-				if(W.internal)
-					continue
-				if(O.is_bandaged() == FALSE)
-					W.bandage()
-				if(O.is_salved() == FALSE)
-					W.salve()
-				W.disinfect()
-		target.add_modifier(/datum/modifier/stabilize, 20 SECONDS)
+		if(target.stat != DEAD)
+			target.adjustOxyLoss(-200)
+			for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
+				var/obj/item/organ/external/O = target.organs_by_name[name]
+				for (var/datum/wound/W in O.wounds)
+					if(W.internal)
+						continue
+					if(O.is_bandaged() == FALSE)
+						W.bandage()
+					if(O.is_salved() == FALSE)
+						W.salve()
+					W.disinfect()
+			target.add_modifier(/datum/modifier/stabilize, 20 SECONDS)
 	else
 		return 1
 
@@ -170,10 +179,11 @@
 
 /obj/item/projectile/beam/medical_cell/omni2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-5)
-		target.adjustFireLoss(-5)
-		target.adjustToxLoss(-5)
-		target.adjustOxyLoss(-30)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-5)
+			target.adjustFireLoss(-5)
+			target.adjustToxLoss(-5)
+			target.adjustOxyLoss(-30)
 	else
 		return 1
 
@@ -185,7 +195,8 @@
 
 /obj/item/projectile/beam/medical_cell/toxin2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustToxLoss(-20)
+		if(target.stat != DEAD)
+			target.adjustToxLoss(-20)
 	else
 		return 1
 
@@ -197,7 +208,8 @@
 
 /obj/item/projectile/beam/medical_cell/haste/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.add_modifier(/datum/modifier/nerdhaste, 20 SECONDS)
+		if(target.stat != DEAD)
+			target.add_modifier(/datum/modifier/nerdhaste, 20 SECONDS)
 	else
 		return 1
 
@@ -217,7 +229,8 @@
 
 /obj/item/projectile/beam/medical_cell/resist/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.add_modifier(/datum/modifier/resistance, 20 SECONDS)
+		if(target.stat != DEAD)
+			target.add_modifier(/datum/modifier/resistance, 20 SECONDS)
 	else
 		return 1
 
@@ -253,7 +266,8 @@
 
 /obj/item/projectile/beam/medical_cell/brute3/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-20)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-20)
 	else
 		return 1
 
@@ -265,7 +279,8 @@
 
 /obj/item/projectile/beam/medical_cell/burn3/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustFireLoss(-20)
+		if(target.stat != DEAD)
+			target.adjustFireLoss(-20)
 	else
 		return 1
 
@@ -277,7 +292,8 @@
 
 /obj/item/projectile/beam/medical_cell/toxin3/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustToxLoss(-20)
+		if(target.stat != DEAD)
+			target.adjustToxLoss(-20)
 	else
 		return 1
 
@@ -289,10 +305,11 @@
 
 /obj/item/projectile/beam/medical_cell/omni3/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-10)
-		target.adjustFireLoss(-10)
-		target.adjustToxLoss(-10)
-		target.adjustOxyLoss(-60)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-10)
+			target.adjustFireLoss(-10)
+			target.adjustToxLoss(-10)
+			target.adjustOxyLoss(-60)
 	else
 		return 1
 
