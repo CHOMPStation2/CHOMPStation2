@@ -437,16 +437,17 @@
 		//VOREStation Edit End
 		
 	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
-	if(recoil_mode && iscarbon(user) && !istype(src,/obj/item/weapon/gun/energy))
+	if(recoil_mode && iscarbon(user))
 		var/mob/living/carbon/nerd = user
 		var/mysize = nerd.size_multiplier
-		if(mysize <= 0.5)
-			nerd.Weaken(1*recoil_mode)
-			if(!istype(src,/obj/item/weapon/gun/energy))
-				nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
-				to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
-			else
-				to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
+		if(recoil_mode < 0)
+			if(mysize <= 0.5)
+				nerd.Weaken(1*recoil_mode)
+				if(!istype(src,/obj/item/weapon/gun/energy))
+					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
+					to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
+				else
+					to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
 				
 	//YAWNEDIT: Knockdown code end
 
