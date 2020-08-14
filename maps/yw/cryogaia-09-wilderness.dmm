@@ -14,6 +14,12 @@
 /obj/item/weapon/material/shard,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"bL" = (
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
+"bM" = (
+/turf/simulated/wall/r_lead,
+/area/borealis2/outdoors/exterior/explore1)
 "dU" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -22,6 +28,12 @@
 /obj/structure/grille,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"fg" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
 "ft" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -44,6 +56,17 @@
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"ha" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "hd" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/closet/crate/large,
@@ -57,6 +80,15 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"hD" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/cyan,
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
 "hT" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
@@ -72,6 +104,10 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"hZ" = (
+/obj/structure/sign/warning/radioactive,
+/turf/simulated/wall/r_lead,
+/area/borealis2/outdoors/exterior/explore1)
 "if" = (
 /mob/living/simple_mob/animal/sif/savik,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -83,6 +119,24 @@
 /obj/effect/floor_decal/snow/floor/edges2,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"iX" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8;
+	icon_state = "map"
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"jv" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2,
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "jx" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -99,10 +153,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/exterior/explore1)
+"jO" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "jP" = (
 /obj/effect/floor_decal/snow/floor/edges3,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"jQ" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
 "kg" = (
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
@@ -116,6 +189,14 @@
 /obj/effect/overlay/snow/floor/pointy,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"kB" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 1;
+	icon_state = "gravsnow_edges"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
 "kW" = (
 /obj/effect/floor_decal/rust,
 /mob/living/simple_mob/tomato/space,
@@ -138,6 +219,34 @@
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior/lake)
+"mr" = (
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"nd" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
+"ni" = (
+/obj/structure/fans/tiny{
+	name = "Thermal Regulator Vent"
+	},
+/obj/machinery/door/airlock/glass_external/freezable{
+	req_access = newlist()
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "nw" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
@@ -220,13 +329,77 @@
 	},
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
+"qs" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "qG" = (
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"rc" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "trade_shuttle_dock_pump"
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "trade_shuttle_dock_sensor";
+	pixel_x = 30;
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
 "ry" = (
 /obj/structure/flora/tree/winter1,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
+"so" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4;
+	icon_state = "snow_edges2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
+"sw" = (
+/obj/machinery/power/smes/buildable/hybrid{
+	output_level = 1e+006;
+	output_level_max = 1e+006
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable/cyan{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"sG" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "trade_shuttle_dock_inner";
+	locked = 1;
+	name = "Dock One Internal Access";
+	req_access = newlist()
+	},
+/turf/simulated/floor/tiled/dark,
+/area/borealis2/outdoors/grounds/traderpad)
 "sJ" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 1;
@@ -276,6 +449,12 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"uR" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
 "vi" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -330,6 +509,19 @@
 	},
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"yJ" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 1;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
+"yX" = (
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
 "zc" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
@@ -373,12 +565,41 @@
 /obj/effect/floor_decal/rust/mono_rusted2,
 /turf/simulated/wall,
 /area/borealis2/outdoors/exterior/explore1)
+"AI" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
+"AW" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 1;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
+"AZ" = (
+/obj/structure/fence/corner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "Bj" = (
 /obj/effect/floor_decal/snow/floor/surround{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
+"Bo" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "BL" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 1
@@ -388,6 +609,29 @@
 	},
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
+"BO" = (
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = 30
+	},
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"Ca" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
+"De" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4;
+	icon_state = "snow_edges2"
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "DC" = (
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
@@ -432,6 +676,15 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"EN" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
+"EP" = (
+/obj/effect/shuttle_landmark/premade/trade/station,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
 "FH" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/overlay/snow/floor/pointy{
@@ -440,6 +693,15 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"FL" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
 "Gq" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
@@ -454,12 +716,48 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"GZ" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "trade_shuttle_dock_outer";
+	locked = 1;
+	name = "Dock One External Access";
+	req_access = newlist();
+	req_one_access = list(13,52)
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/tiled/dark,
+/area/borealis2/outdoors/grounds/traderpad)
+"Ha" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "Hg" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/floor_decal/rust,
 /obj/effect/overlay/snow/floor/pointy,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"Hj" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 1;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "Hz" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 4;
@@ -467,6 +765,10 @@
 	},
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"HA" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "HG" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 4
@@ -482,14 +784,81 @@
 "IF" = (
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
+"II" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/machinery/camera/network/northern_star{
+	c_tag = "DOCK - Dock 1 End";
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "trade_shuttle_dock_pump"
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"IL" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "IR" = (
 /obj/structure/symbol/sa,
 /turf/simulated/wall,
 /area/borealis2/outdoors/exterior/explore1)
+"Jk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	icon_state = "intact"
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"Kg" = (
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1380;
+	master_tag = "trade_shuttle_dock_airlock";
+	name = "exterior access button";
+	pixel_x = 28;
+	pixel_y = -6;
+	req_access = list(13)
+	},
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "trade_shuttle_dock_outer";
+	locked = 1;
+	name = "Dock One External Access";
+	req_access = newlist();
+	req_one_access = list(13,52)
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/tiled/dark,
+/area/borealis2/outdoors/grounds/traderpad)
 "Kl" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior/lake)
+"Ky" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 1;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "KS" = (
 /turf/simulated/wall,
 /area/borealis2/outdoors/exterior/explore1)
@@ -504,6 +873,44 @@
 /obj/structure/flora/tree/dead,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
+"Lq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10;
+	icon_state = "intact"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "trade_shuttle_dock_airlock";
+	pixel_x = 28;
+	pixel_y = 0;
+	req_one_access = list(13);
+	tag_airpump = "trade_shuttle_dock_pump";
+	tag_chamber_sensor = "trade_shuttle_dock_sensor";
+	tag_exterior_door = "trade_shuttle_dock_outer";
+	tag_interior_door = "trade_shuttle_dock_inner"
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"LH" = (
+/turf/simulated/wall/r_wall,
+/area/borealis2/outdoors/grounds/traderpad)
+"LO" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"Mc" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "My" = (
 /obj/effect/decal/remains/posi,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -515,6 +922,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/exterior/explore1)
+"MJ" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 1;
+	icon_state = "snow_edges2"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/traderpad)
 "NV" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
@@ -598,19 +1013,33 @@
 	},
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"Ql" = (
+/obj/structure/fence/corner{
+	dir = 4
+	},
+/obj/structure/fence/corner,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "Qp" = (
 /obj/cryogaia_away_spawner/wilds,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
-"Qw" = (
-/obj/structure/sign/warning/radioactive,
-/turf/simulated/wall,
-/area/borealis2/outdoors/exterior/explore1)
 "RK" = (
 /obj/item/weapon/material/shard,
 /obj/effect/overlay/snow/floor/pointy,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"Sx" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 1;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4;
+	icon_state = "snow_edges2"
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "Sz" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -625,6 +1054,27 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"TB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4;
+	icon_state = "intact"
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
+"TG" = (
+/obj/structure/fence/door,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "Uh" = (
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
@@ -648,6 +1098,20 @@
 	},
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
+"VE" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
+"VW" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
 "VY" = (
 /obj/structure/girder,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -658,6 +1122,10 @@
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior/lake)
+"Wh" = (
+/obj/structure/fence,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "Wl" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 1;
@@ -665,6 +1133,20 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"Wx" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "WN" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 4;
@@ -680,6 +1162,12 @@
 /obj/effect/floor_decal/rust/mono_rusted3,
 /turf/simulated/wall,
 /area/borealis2/outdoors/exterior/explore1)
+"XQ" = (
+/obj/structure/fence/corner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "Yc" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -687,11 +1175,28 @@
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior/lake)
+"YA" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "YJ" = (
 /obj/effect/floor_decal/rust/color_rustedfull,
 /obj/machinery/door/airlock/glass_external/freezable,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
+"Zp" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/traderpad)
 "Zw" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
@@ -699,6 +1204,14 @@
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
+"ZI" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 1;
+	icon_state = "snow_edges2"
+	},
+/obj/effect/floor_decal/snow/floor/edges2,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "ZR" = (
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior/lake)
@@ -12237,12 +12750,12 @@ IF
 IF
 PP
 qG
-KS
-Qw
+bM
+hZ
 tc
 kp
-Qw
-KS
+hZ
+bM
 qG
 Sz
 IF
@@ -12398,14 +12911,14 @@ IF
 IF
 IF
 Wl
-KS
-KS
+bM
+bM
 Uh
 Uh
 Uh
 Uh
-KS
-KS
+bM
+bM
 zV
 IF
 IF
@@ -12560,14 +13073,14 @@ IF
 IF
 IF
 Wl
-KS
+bM
 Uh
 Uh
 kW
 hA
 Uh
 Uh
-KS
+bM
 zV
 IF
 IF
@@ -12722,14 +13235,14 @@ IF
 IF
 IF
 Wl
-KS
+bM
 Uh
 Uh
 xP
 oZ
 Uh
 Uh
-KS
+bM
 zV
 IF
 IF
@@ -12884,14 +13397,14 @@ IF
 IF
 IF
 Wl
-KS
-KS
+bM
+bM
 dU
 Uh
 sK
 dU
-KS
-KS
+bM
+bM
 zV
 IF
 IF
@@ -13047,12 +13560,12 @@ IF
 IF
 sJ
 qG
-Qw
-KS
+hZ
+bM
 Uh
 ue
-KS
-Qw
+bM
+hZ
 qG
 DZ
 IF
@@ -13210,10 +13723,10 @@ IF
 IF
 sJ
 qG
-KS
-KS
-KS
-KS
+bM
+bM
+bM
+bM
 qG
 DZ
 IF
@@ -15647,29 +16160,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+AZ
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+AZ
 IF
 Iz
 me
@@ -15809,29 +16322,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+AW
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+jQ
+IL
+IL
+Ha
+AI
 IF
 Iz
 me
@@ -15971,29 +16484,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+jv
+AI
 IF
 Iz
 me
@@ -16133,29 +16646,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+jv
+AI
 IF
 Iz
 me
@@ -16295,29 +16808,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 Iz
 me
@@ -16457,29 +16970,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 Iz
 me
@@ -16619,29 +17132,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 Iz
 me
@@ -16781,29 +17294,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 Iz
 me
@@ -16943,29 +17456,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 Iz
 me
@@ -17105,29 +17618,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 Iz
 aE
@@ -17267,29 +17780,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 Iz
 Iz
@@ -17429,29 +17942,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -17591,29 +18104,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -17753,29 +18266,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -17915,29 +18428,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -18077,29 +18590,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -18239,29 +18752,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -18401,29 +18914,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -18563,29 +19076,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -18725,29 +19238,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -18887,29 +19400,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -19049,29 +19562,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -19205,35 +19718,35 @@ IF
 IF
 IF
 IF
+LH
+LH
+LH
+LH
+LH
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -19367,35 +19880,35 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+LH
+fg
+fg
+YA
+LH
+Wx
+ha
+Zp
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -19529,35 +20042,35 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+LH
+mr
+mr
+uR
+nd
+iX
+II
+qs
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -19678,48 +20191,48 @@ IF
 IF
 IF
 IF
+Ky
 IF
 IF
 IF
+Ky
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+yJ
+Ca
+Ca
+Ca
+Ca
+Ca
+Ca
+ni
+mr
+mr
+Jk
+sG
+TB
+LO
+GZ
+yX
+EP
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -19842,46 +20355,46 @@ IF
 IF
 IF
 IF
+Ky
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Hj
+De
+De
+De
+De
+bL
+De
+De
+ni
+mr
+mr
+Jk
+sG
+Lq
+rc
+Kg
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -20012,38 +20525,38 @@ IF
 IF
 IF
 IF
+ZI
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+LH
+BO
+mr
+VW
+LH
+Wx
+ha
+jO
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -20174,38 +20687,38 @@ IF
 IF
 IF
 IF
+ZI
 IF
 IF
+LH
+sw
+hD
+VE
+LH
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -20336,38 +20849,38 @@ IF
 IF
 IF
 IF
+ZI
 IF
 IF
+LH
+LH
+LH
+LH
+LH
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -20498,6 +21011,7 @@ IF
 IF
 IF
 IF
+ZI
 IF
 IF
 IF
@@ -20506,30 +21020,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -20660,6 +21173,7 @@ IF
 IF
 IF
 IF
+ZI
 IF
 IF
 IF
@@ -20668,30 +21182,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -20822,6 +21335,7 @@ IF
 IF
 IF
 IF
+ZI
 IF
 IF
 IF
@@ -20830,30 +21344,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-pd
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -20984,6 +21497,7 @@ IF
 IF
 IF
 IF
+ZI
 IF
 IF
 IF
@@ -20992,30 +21506,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -21146,6 +21659,7 @@ IF
 IF
 IF
 IF
+ZI
 IF
 IF
 IF
@@ -21154,30 +21668,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -21308,38 +21821,38 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Sx
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+Mc
+TG
+kB
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -21479,29 +21992,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+yX
+EN
+AI
 IF
 IF
 IF
@@ -21641,29 +22154,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Bo
+MJ
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+so
+FL
+AI
 IF
 IF
 IF
@@ -21803,29 +22316,29 @@ IF
 IF
 IF
 IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
-IF
+Ql
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+Wh
+XQ
 IF
 IF
 IF
@@ -22627,7 +23140,7 @@ IF
 IF
 IF
 IF
-IF
+pd
 IF
 IF
 IF
