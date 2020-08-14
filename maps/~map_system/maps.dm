@@ -204,7 +204,6 @@ var/list/all_maps = list()
 
 // Get a list of 'nearby' or 'connected' zlevels.
 // You should at least return a list with the given z if nothing else.
-//CHOMP Edit did some edits to this block to resolve a runtime in shuttles
 /datum/map/proc/get_map_levels(var/srcz, var/long_range = FALSE, var/om_range = -1)
 	//Overmap behavior
 	if(use_overmap)
