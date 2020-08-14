@@ -141,19 +141,19 @@
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
 */
 /datum/map/southern_cross/perform_map_generation()
-	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.
+	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.(This controls POI limit generation, increase or lower its values to have more or less POI's)
 
 	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_SURFACE_MINE), 75, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(Z_LEVEL_SURFACE_MINE), 75, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
+	seed_submaps(list(Z_LEVEL_SURFACE_MINE), 60, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(Z_LEVEL_SURFACE_MINE), 60, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 	// Plains to make them less plain.
-	seed_submaps(list(Z_LEVEL_SURFACE), 100, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
+	seed_submaps(list(Z_LEVEL_SURFACE), 80, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 75, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 75, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 60, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
+	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 60, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
 
-	// Now for the tunnels.
+	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_SURFACE_MINE, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SURFACE_MINE, 64, 64)         // Create the mining ore distribution map.
 	// Todo: Forest generation.

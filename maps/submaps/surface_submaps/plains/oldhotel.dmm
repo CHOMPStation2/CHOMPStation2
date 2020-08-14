@@ -15,7 +15,7 @@
 "fC" = (/obj/structure/bed/chair/oldsofa/right{dir = 1},/turf/simulated/floor/carpet/blue,/area/submap/oldhotel)
 "go" = (/obj/structure/simple_door/iron,/turf/simulated/floor/wood,/area/submap/oldhotel)
 "gA" = (/turf/template_noop,/area/template_noop)
-"gM" = (/obj/machinery/cooker/oven,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/oldhotel)
+"gM" = (/obj/machinery/appliance/cooker/oven,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/oldhotel)
 "hc" = (/obj/random/trash,/turf/simulated/floor/wood,/area/submap/oldhotel)
 "hp" = (/obj/random/junk,/turf/simulated/floor/carpet/sblucarpet,/area/submap/oldhotel)
 "hQ" = (/turf/simulated/wall/wood,/area/submap/oldhotel)
@@ -129,7 +129,7 @@ gAMUhQhQhQhQhQZGnDhQqglZtEQGSZhQVfGzhQwXMUMUMUMUgA
 gAMUMUhQhQDNTURMrKhQSZfCkhifqghQnDhQhQwXMUMUMUMUgA
 gAMUMUMUdLsVESdctzhQJTSZqgSZTUhQdrdrZGMUCxMUMUMUgA
 gAMUMUnGYQtVVjcZuUhQtntnhQgogocAuFnZhQCxMUMUMUMUgA
-gAMUMUhQhQMqSZSZqgtnqgSZZGJqJqSyJqbQUtCxMUMUMUMUgA
+gAMUMUhQhQMqSZSZqgtnqgSZZGbQbQSyJqbQUtCxMUMUMUMUgA
 gAMUMUnDZGnDhQhQhQhQhcDNhQrbCxmREsCxJqCxMUCxMUMUgA
 gAMUwXhQhQDNRMTUrKhQSZdnnDljJqEsCxCxCxMUMUCxMUGNgA
 gAMUMUCxIkiUaiSGSfZGqgkWZGAcCxmRyjMUMUCxMUMUMUMUgA
