@@ -281,7 +281,8 @@
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list(Z_LEVEL_PLAINS,
 						  Z_LEVEL_CRYOGAIA_WILDERNESS,
-						  Z_LEVEL_CRYOGAIA_CAVES)
+						  Z_LEVEL_CRYOGAIA_CAVES,
+						  Z_LEVEL_CRYOGAIA_MISC)/*Temporary change to fix arrivals*/
 
 /obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
 	. = ..()

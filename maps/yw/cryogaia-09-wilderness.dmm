@@ -373,21 +373,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/traderpad)
-"sw" = (
-/obj/machinery/power/smes/buildable/hybrid{
-	output_level = 1e+006;
-	output_level_max = 1e+006
-	},
-/obj/structure/cable/cyan{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
 "sG" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
@@ -609,16 +594,6 @@
 	},
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
-"BO" = (
-/obj/machinery/power/thermoregulator/cryogaia{
-	pixel_y = 30
-	},
-/obj/structure/cable/cyan{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
 "Ca" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
@@ -1047,6 +1022,19 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
+"SK" = (
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = 30
+	},
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
 "Tv" = (
 /obj/effect/overlay/snow/floor/pointy{
 	dir = 1;
@@ -1162,6 +1150,22 @@
 /obj/effect/floor_decal/rust/mono_rusted3,
 /turf/simulated/wall,
 /area/borealis2/outdoors/exterior/explore1)
+"WV" = (
+/obj/machinery/power/smes/buildable/hybrid{
+	input_level = 0;
+	output_level = 1e+006;
+	output_level_max = 1e+006
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable/cyan{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled,
+/area/borealis2/outdoors/grounds/traderpad)
 "XQ" = (
 /obj/structure/fence/corner{
 	dir = 4
@@ -20529,7 +20533,7 @@ ZI
 IF
 IF
 LH
-BO
+SK
 mr
 VW
 LH
@@ -20691,7 +20695,7 @@ ZI
 IF
 IF
 LH
-sw
+WV
 hD
 VE
 LH

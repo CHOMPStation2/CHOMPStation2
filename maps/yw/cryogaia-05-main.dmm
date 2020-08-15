@@ -4005,16 +4005,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
-"bEs" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
-	},
-/turf/simulated/wall/r_wall,
-/area/borealis2/outdoors/grounds/tower/east)
 "bET" = (
 /obj/machinery/airlock_sensor/airlock_exterior{
 	id_tag = "eng_al_ext_snsr";
@@ -11958,6 +11948,16 @@
 /obj/item/weapon/gun/projectile/automatic/z8,
 /turf/simulated/floor/tiled/red,
 /area/security/tactical)
+"eAJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 4;
+	icon_state = "grey_railing0"
+	},
+/turf/simulated/wall/titanium,
+/area/borealis2/outdoors/grounds/tower/east)
 "eAK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17634,6 +17634,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
+"gGb" = (
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_x = 0
+	},
+/turf/simulated/wall/titanium,
+/area/borealis2/outdoors/grounds/tower/east)
 "gGp" = (
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/effect/floor_decal/corner_oldtile/purple{
@@ -24904,12 +24911,6 @@
 /obj/item/device/holowarrant,
 /turf/simulated/floor/tiled/steel,
 /area/security/security_lockerroom)
-"jEp" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
-/area/borealis2/outdoors/grounds)
 "jEM" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -26606,9 +26607,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
-"knt" = (
-/turf/simulated/wall/r_wall,
-/area/borealis2/outdoors/grounds/tower/east)
 "knv" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -27126,13 +27124,6 @@
 /obj/effect/floor_decal/corner/paleblue/full,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
-"kvn" = (
-/obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
-	},
-/turf/simulated/wall/r_wall,
-/area/borealis2/outdoors/grounds/tower/east)
 "kvD" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack/shelf,
@@ -64714,12 +64705,12 @@ uDf
 uDf
 uDf
 uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+rQa
+fCC
+fCC
+fCC
+fCC
+fCC
 eey
 yig
 jrI
@@ -64774,7 +64765,7 @@ eHU
 eHU
 lEZ
 eHU
-kxl
+ckM
 wBx
 wBx
 wBx
@@ -64876,7 +64867,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -64934,9 +64925,9 @@ uDf
 uDf
 uDf
 uDf
-uDf
-uDf
-lta
+uQb
+fCC
+eMs
 uDf
 uDf
 uDf
@@ -65038,7 +65029,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65200,7 +65191,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65362,7 +65353,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65524,7 +65515,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65686,7 +65677,7 @@ uDf
 uDf
 fep
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65848,7 +65839,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66010,7 +66001,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66172,7 +66163,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66334,7 +66325,7 @@ uDf
 uDf
 uDf
 gGS
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66496,7 +66487,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66658,7 +66649,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66820,7 +66811,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66982,7 +66973,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -67144,7 +67135,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -67306,7 +67297,7 @@ wBx
 wBx
 wBx
 wBx
-gFB
+eMs
 uDf
 uDf
 uDf
@@ -85941,7 +85932,7 @@ uDf
 uDf
 uDf
 uDf
-jEp
+rQa
 owQ
 dAA
 iSE
@@ -86103,7 +86094,7 @@ uDf
 uDf
 uDf
 fIS
-jEp
+rQa
 owQ
 dAA
 iSE
@@ -86230,10 +86221,10 @@ uDf
 uDf
 uEv
 pze
-kvn
-knt
-bEs
-knt
+gGb
+pze
+eAJ
+pze
 uDf
 uDf
 uDf
