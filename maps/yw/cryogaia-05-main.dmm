@@ -24904,12 +24904,6 @@
 /obj/item/device/holowarrant,
 /turf/simulated/floor/tiled/steel,
 /area/security/security_lockerroom)
-"jEp" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
-/area/borealis2/outdoors/grounds)
 "jEM" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -64714,12 +64708,12 @@ uDf
 uDf
 uDf
 uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+rQa
+fCC
+fCC
+fCC
+fCC
+fCC
 eey
 yig
 jrI
@@ -64774,7 +64768,7 @@ eHU
 eHU
 lEZ
 eHU
-kxl
+ckM
 wBx
 wBx
 wBx
@@ -64876,7 +64870,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -64934,9 +64928,9 @@ uDf
 uDf
 uDf
 uDf
-uDf
-uDf
-lta
+uQb
+fCC
+eMs
 uDf
 uDf
 uDf
@@ -65038,7 +65032,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65200,7 +65194,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65362,7 +65356,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65524,7 +65518,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65686,7 +65680,7 @@ uDf
 uDf
 fep
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65848,7 +65842,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66010,7 +66004,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66172,7 +66166,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66334,7 +66328,7 @@ uDf
 uDf
 uDf
 gGS
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66496,7 +66490,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66658,7 +66652,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66820,7 +66814,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -66982,7 +66976,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -67144,7 +67138,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -67306,7 +67300,7 @@ wBx
 wBx
 wBx
 wBx
-gFB
+eMs
 uDf
 uDf
 uDf
@@ -85941,7 +85935,7 @@ uDf
 uDf
 uDf
 uDf
-jEp
+rQa
 owQ
 dAA
 iSE
@@ -86103,7 +86097,7 @@ uDf
 uDf
 uDf
 fIS
-jEp
+rQa
 owQ
 dAA
 iSE
