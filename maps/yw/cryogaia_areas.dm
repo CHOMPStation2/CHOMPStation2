@@ -104,6 +104,8 @@
 /area/borealis2/outdoors/exterior
 	name = "\The wilderness"
 	icon_state = "outside1unex"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
 
 /area/borealis2/outdoors/exterior/upper
 	name = "\The wilderness"
