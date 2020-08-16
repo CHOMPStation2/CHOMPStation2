@@ -2371,17 +2371,17 @@
 	},
 /area/shuttle/arrival/pre_game)
 "kS" = (
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
 /obj/machinery/recharger/wallcharger{
 	dir = 1;
 	pixel_x = 4;
 	pixel_y = 30
 	},
+/obj/item/weapon/reagent_containers/pill/protein,
+/obj/item/weapon/reagent_containers/pill/protein,
+/obj/item/weapon/reagent_containers/pill/protein,
+/obj/item/weapon/reagent_containers/pill/protein,
+/obj/item/weapon/reagent_containers/pill/protein,
+/obj/item/weapon/reagent_containers/pill/protein,
 /turf/unsimulated/floor/steel,
 /area/vrworld)
 "kY" = (
@@ -3202,6 +3202,12 @@
 	icon_state = "snow"
 	},
 /area/syndicate_mothership)
+"pA" = (
+/obj/item/weapon/gun/magnetic/railgun/automatic,
+/turf/unsimulated/floor{
+	icon_state = "lino"
+	},
+/area/vrworld)
 "pF" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/shuttle/floor/darkred,
@@ -4012,6 +4018,10 @@
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_picnicarea)
+"to" = (
+/obj/item/weapon/reagent_containers/pill/protein,
+/turf/unsimulated/floor/techfloor_grid,
+/area/vrworld)
 "tp" = (
 /obj/structure/table/standard,
 /turf/simulated/shuttle/floor/black,
@@ -4270,6 +4280,7 @@
 /area/shuttle/mercenary)
 "uA" = (
 /obj/item/weapon/storage/box/scattershot/large,
+/obj/item/weapon/gun/projectile/automatic/z8,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -4648,12 +4659,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/trade/centcom)
-"wC" = (
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/turf/unsimulated/floor{
-	icon_state = "steel"
-	},
-/area/vrworld)
 "wD" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1331;
@@ -5206,12 +5211,6 @@
 	name = "plating"
 	},
 /area/vrworld)
-"zq" = (
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/turf/unsimulated/floor{
-	icon_state = "lino"
-	},
-/area/vrworld)
 "zr" = (
 /obj/effect/overlay/palmtree_r,
 /turf/unsimulated/beach/sand,
@@ -5336,6 +5335,12 @@
 	},
 /turf/space/transit/north,
 /area/space)
+"zO" = (
+/obj/item/weapon/shield/energy,
+/turf/unsimulated/floor{
+	icon_state = "lino"
+	},
+/area/vrworld)
 "zR" = (
 /turf/space,
 /area/space)
@@ -6275,6 +6280,13 @@
 	name = "plating"
 	},
 /area/prison/solitary)
+"Ev" = (
+/obj/item/weapon/storage/box/scattershot/large,
+/obj/item/weapon/gun/projectile/automatic/glock,
+/turf/unsimulated/floor{
+	icon_state = "lino"
+	},
+/area/vrworld)
 "EB" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -6641,6 +6653,13 @@
 /obj/item/weapon/deck/cards,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/skipjack)
+"Gt" = (
+/obj/item/weapon/gun/projectile/automatic/stg,
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "freezerfloor"
+	},
+/area/vrworld)
 "Gv" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
@@ -9518,6 +9537,13 @@
 /obj/effect/floor_decal/sign/small_1,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"Uk" = (
+/obj/item/weapon/gun/projectile/automatic/tommygun,
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "dark"
+	},
+/area/vrworld)
 "Ul" = (
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_boxingcourt)
@@ -10598,6 +10624,11 @@
 /obj/item/device/kit/paint/ripley,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"ZG" = (
+/obj/item/weapon/reagent_containers/pill/protein,
+/obj/item/weapon/reagent_containers/pill/protein,
+/turf/unsimulated/floor/techfloor_grid,
+/area/vrworld)
 "ZL" = (
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 32
@@ -11482,14 +11513,14 @@ sv
 sv
 zR
 Xn
-ec
+to
 pT
 pT
 FJ
 pT
 pT
 Xn
-ec
+ZG
 pT
 pT
 Xd
@@ -12292,7 +12323,7 @@ sv
 sv
 zR
 Xn
-DD
+zO
 DD
 DD
 Xn
@@ -12616,7 +12647,7 @@ sv
 sv
 zR
 Xn
-DD
+pA
 DD
 DD
 Xn
@@ -12780,9 +12811,9 @@ zR
 Xn
 DD
 DD
-zq
+DD
 Xn
-wC
+co
 co
 co
 co
@@ -13102,7 +13133,7 @@ zR
 zR
 zR
 Xn
-DD
+zO
 DD
 DD
 Xn
@@ -13443,7 +13474,7 @@ df
 Xn
 hS
 tq
-hS
+Gt
 Xn
 zR
 Vh
@@ -13759,7 +13790,7 @@ DD
 DD
 DD
 Xn
-df
+Uk
 df
 df
 df
@@ -14238,7 +14269,7 @@ zR
 Xn
 DD
 DD
-uA
+Ev
 Xn
 DD
 DD
