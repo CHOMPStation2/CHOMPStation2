@@ -203,8 +203,8 @@
 		Z_LEVEL_CRYOGAIA_CENTCOM
 		)
 
-	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_MAIN)
-	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_TRANSIT)
+	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_UPPER)
+	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
 						 		 Z_LEVEL_ROGUEMINE_2,
 						 	 	 Z_LEVEL_ROGUEMINE_3,
