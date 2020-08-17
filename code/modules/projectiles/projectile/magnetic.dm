@@ -30,6 +30,13 @@
 	damage = 12
 	armor_penetration = 100
 
+/obj/item/projectile/bullet/magnetic/flechette/rapid
+	name = "rapid flechette"
+	icon_state = "flechette"
+	fire_sound = 'sound/weapons/rapidslice.ogg'
+	damage = 10
+	armor_penetration = 35
+
 /obj/item/projectile/bullet/magnetic/flechette/hunting
 	name = "shredder slug"
 	armor_penetration = 30
