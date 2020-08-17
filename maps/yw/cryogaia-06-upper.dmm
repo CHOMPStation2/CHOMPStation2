@@ -119,6 +119,29 @@
 	},
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"aE" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	id_tag = "explolobby";
+	name = "Exploration Entrance Room";
+	req_one_access = list(19,43,67,68,69)
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "aH" = (
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
@@ -3135,6 +3158,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
+"lz" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/space,
+/area/maintenance/upper/maintroom1)
 "lB" = (
 /turf/simulated/open,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -5800,29 +5827,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
-"ve" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	id_tag = "explolobby";
-	name = "Exploration Entrance Room";
-	req_one_access = list(19,43,67,68)
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/explorer_entrance)
 "vg" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -7245,6 +7249,21 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/medical/medbayupper)
+"Ai" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	name = "Exploration Prep Room";
+	req_one_access = list(43,67,68,69)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "Aj" = (
 /obj/structure/table/woodentable,
 /obj/item/device/instrument/accordion,
@@ -8138,10 +8157,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
-"Df" = (
-/obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/wall,
-/area/maintenance/upper/maintroom1)
 "Dg" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -10165,6 +10180,15 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"Ks" = (
+/obj/machinery/door/airlock/research{
+	name = "Exploration Storage Room";
+	req_one_access = list(43,67,68,69)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/steel_grid,
+/area/cryogaia/station/explorer_prep)
 "Kv" = (
 /obj/structure/railing/grey{
 	dir = 4;
@@ -10223,14 +10247,6 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
-"KF" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Exploration Briefing Room";
-	req_one_access = list(19,43,67,68,69)
-	},
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/explorer_meeting)
 "KG" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -10906,6 +10922,14 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/hallway/primary/upper/south)
+"Nu" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	name = "Exploration Briefing Room";
+	req_one_access = list(43,67,68,69)
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_meeting)
 "Nw" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -12367,10 +12391,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
-"Sj" = (
-/obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/wall/r_wall,
-/area/maintenance/upper/maintroom2)
 "Sk" = (
 /turf/simulated/wall,
 /area/medical/medbayskybridge)
@@ -12845,21 +12865,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
-"TZ" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Exploration Prep Room";
-	req_one_access = list(19,43,67,68)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
-	},
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/explorer_prep)
 "Ua" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -12921,6 +12926,10 @@
 "Ud" = (
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
+"Ue" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/space,
+/area/maintenance/upper/maintroom2)
 "Ug" = (
 /obj/machinery/alarm{
 	frequency = 1441;
@@ -13641,16 +13650,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
-"Wx" = (
-/obj/machinery/door/airlock/research{
-	name = "Exploration Storage Room";
-	req_access = newlist();
-	req_one_access = list(69)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/steel_grid,
-/area/cryogaia/station/explorer_prep)
 "WA" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -29681,7 +29680,7 @@ az
 az
 az
 SR
-ve
+aE
 az
 az
 az
@@ -30201,7 +30200,7 @@ vT
 im
 im
 im
-Sj
+Ue
 Nr
 cP
 Hp
@@ -30809,7 +30808,7 @@ dF
 dF
 dF
 GV
-TZ
+Ai
 ac
 ac
 ac
@@ -30817,7 +30816,7 @@ ac
 Zi
 Zi
 Ha
-KF
+Nu
 Zi
 Zi
 Zi
@@ -32104,7 +32103,7 @@ Vf
 sg
 fx
 Jb
-Wx
+Ks
 tB
 tB
 tB
@@ -32793,7 +32792,7 @@ pm
 pm
 pm
 pm
-Df
+lz
 Ba
 yw
 DV
