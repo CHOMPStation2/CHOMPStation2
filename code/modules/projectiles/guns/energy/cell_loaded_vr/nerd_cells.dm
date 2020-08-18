@@ -1,9 +1,9 @@
 // The Casing //
 /obj/item/ammo_casing/microbattery/medical
-	name = "\'ML-3\' nanite cell - UNKNOWN"
+	name = "\'NERD\' nanite cell - UNKNOWN"
 	desc = "A miniature nanite fabricator for a medigun."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med)
-	icon_state = "ml3m_batt"
+	icon_state = "nerd_batt" // CH edit - Changes ML3M to NERD
 	origin_tech = list(TECH_BIO = 2, TECH_MATERIAL = 1, TECH_MAGNETS = 2)
 
 /obj/item/projectile/beam/medical_cell
@@ -24,45 +24,48 @@
 	return
 
 /obj/item/ammo_casing/microbattery/medical/brute
-	name = "\'ML-3\' nanite cell - BRUTE"
+	name = "\'NERD\' nanite cell - BRUTE"
 	type_color = "#BF0000"
 	type_name = "<span style='color:#BF0000;font-weight:bold;'>BRUTE</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/brute
 
 /obj/item/projectile/beam/medical_cell/brute/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-5)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-5)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/burn
-	name = "\'ML-3\' nanite cell - BURN"
+	name = "\'NERD\' nanite cell - BURN"
 	type_color = "#FF8000"
 	type_name = "<span style='color:#FF8000;font-weight:bold;'>BURN</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/burn
 
 /obj/item/projectile/beam/medical_cell/burn/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustFireLoss(-5)
+		if(target.stat != DEAD)
+			target.adjustFireLoss(-5)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/stabilize
-	name = "\'ML-3\' nanite cell - STABILIZE" //Disinfects all open wounds, cures oxy damage
+	name = "\'NERD\' nanite cell - STABILIZE" //Disinfects all open wounds, cures oxy damage
 	type_color = "#0080FF"
 	type_name = "<span style='color:#0080FF;font-weight:bold;'>STABILIZE</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/stabilize
 
 /obj/item/projectile/beam/medical_cell/stabilize/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustOxyLoss(-30)
-		for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
-			var/obj/item/organ/external/O = target.organs_by_name[name]
-			for (var/datum/wound/W in O.wounds)
-				if (W.internal)
-					continue
-				W.disinfect()
-		target.add_modifier(/datum/modifier/stabilize, 20 SECONDS)
+		if(target.stat != DEAD)
+			target.adjustOxyLoss(-30)
+			for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
+				var/obj/item/organ/external/O = target.organs_by_name[name]
+				for (var/datum/wound/W in O.wounds)
+					if (W.internal)
+						continue
+					W.disinfect()
+			target.add_modifier(/datum/modifier/stabilize, 20 SECONDS)
 	else
 		return 1
 
@@ -76,132 +79,141 @@
 	incoming_oxy_damage_percent = 0
 
 /obj/item/ammo_casing/microbattery/medical/toxin
-	name = "\'ML-3\' nanite cell - TOXIN"
+	name = "\'NERD\' nanite cell - TOXIN"
 	type_color = "#00A000"
 	type_name = "<span style='color:#00A000;font-weight:bold;'>TOXIN</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/toxin
 
 /obj/item/projectile/beam/medical_cell/toxin/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustToxLoss(-5)
+		if(target.stat != DEAD)
+			target.adjustToxLoss(-5)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/omni
-	name = "\'ML-3\' nanite cell - OMNI"
+	name = "\'NERD\' nanite cell - OMNI"
 	type_color = "#8040FF"
 	type_name = "<span style='color:#8040FF;font-weight:bold;'>OMNI</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/omni
 
 /obj/item/projectile/beam/medical_cell/omni/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-2.5)
-		target.adjustFireLoss(-2.5)
-		target.adjustToxLoss(-2.5)
-		target.adjustOxyLoss(-10)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-2.5)
+			target.adjustFireLoss(-2.5)
+			target.adjustToxLoss(-2.5)
+			target.adjustOxyLoss(-10)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/antirad
-	name = "\'ML-3\' nanite cell - ANTIRAD"
+	name = "\'NERD\' nanite cell - ANTIRAD"
 	type_color = "#008000"
 	type_name = "<span style='color:#008000;font-weight:bold;'>ANTIRAD</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/antirad
 
 /obj/item/projectile/beam/medical_cell/antirad/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustToxLoss(-2.5)
-		target.radiation = max(target.radiation - 150, 0) //same as 5 units of arithrazine, sans the brute damage
+		if(target.stat != DEAD)
+			target.adjustToxLoss(-2.5)
+			target.radiation = max(target.radiation - 150, 0) //same as 5 units of arithrazine, sans the brute damage
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/brute2
-	name = "\'ML-3\' nanite cell - BRUTE-II"
+	name = "\'NERD\' nanite cell - BRUTE-II"
 	type_color = "#BF0000"
 	type_name = "<span style='color:#BF0000;font-weight:bold;'>BRUTE-II</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/brute2
 
 /obj/item/projectile/beam/medical_cell/brute2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-10)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-10)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/burn2
-	name = "\'ML-3\' nanite cell - BURN-II"
+	name = "\'NERD\' nanite cell - BURN-II"
 	type_color = "#FF8000"
 	type_name = "<span style='color:#FF8000;font-weight:bold;'>BURN-II</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/burn2
 
 /obj/item/projectile/beam/medical_cell/burn2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustFireLoss(-10)
+		if(target.stat != DEAD)
+			target.adjustFireLoss(-10)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/stabilize2
-	name = "\'ML-3\' nanite cell - STABILIZE-II" //Disinfects and bandages all open wounds, cures all oxy damage
+	name = "\'NERD\' nanite cell - STABILIZE-II" //Disinfects and bandages all open wounds, cures all oxy damage
 	type_color = "#0080FF"
 	type_name = "<span style='color:#0080FF;font-weight:bold;'>STABILIZE-II</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/stabilize2
 
 /obj/item/projectile/beam/medical_cell/stabilize2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustOxyLoss(-200)
-		for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
-			var/obj/item/organ/external/O = target.organs_by_name[name]
-			for (var/datum/wound/W in O.wounds)
-				if(W.internal)
-					continue
-				if(O.is_bandaged() == FALSE)
-					W.bandage()
-				if(O.is_salved() == FALSE)
-					W.salve()
-				W.disinfect()
-		target.add_modifier(/datum/modifier/stabilize, 20 SECONDS)
+		if(target.stat != DEAD)
+			target.adjustOxyLoss(-200)
+			for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
+				var/obj/item/organ/external/O = target.organs_by_name[name]
+				for (var/datum/wound/W in O.wounds)
+					if(W.internal)
+						continue
+					if(O.is_bandaged() == FALSE)
+						W.bandage()
+					if(O.is_salved() == FALSE)
+						W.salve()
+					W.disinfect()
+			target.add_modifier(/datum/modifier/stabilize, 20 SECONDS)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/omni2
-	name = "\'ML-3\' nanite cell - OMNI-II"
+	name = "\'NERD\' nanite cell - OMNI-II"
 	type_color = "#8040FF"
 	type_name = "<span style='color:#8040FF;font-weight:bold;'>OMNI-II</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/omni2
 
 /obj/item/projectile/beam/medical_cell/omni2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-5)
-		target.adjustFireLoss(-5)
-		target.adjustToxLoss(-5)
-		target.adjustOxyLoss(-30)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-5)
+			target.adjustFireLoss(-5)
+			target.adjustToxLoss(-5)
+			target.adjustOxyLoss(-30)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/toxin2
-	name = "\'ML-3\' nanite cell - TOXIN-II"
+	name = "\'NERD\' nanite cell - TOXIN-II"
 	type_color = "#00A000"
 	type_name = "<span style='color:#00A000;font-weight:bold;'>TOXIN-II</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/toxin2
 
 /obj/item/projectile/beam/medical_cell/toxin2/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustToxLoss(-20)
+		if(target.stat != DEAD)
+			target.adjustToxLoss(-20)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/haste
-	name = "\'ML-3\' nanite cell - HASTE"
+	name = "\'NERD\' nanite cell - HASTE"
 	type_color = "#FF3300"
 	type_name = "<span style='color:#FF3300;font-weight:bold;'>HASTE</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/haste
 
 /obj/item/projectile/beam/medical_cell/haste/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.add_modifier(/datum/modifier/ml3mhaste, 20 SECONDS)
+		if(target.stat != DEAD)
+			target.add_modifier(/datum/modifier/nerdhaste, 20 SECONDS)
 	else
 		return 1
 
-/datum/modifier/ml3mhaste
+/datum/modifier/nerdhaste
 	name = "haste"
 	desc = "You can move much faster!"
 	mob_overlay_state = "haste"
@@ -210,14 +222,15 @@
 	evasion = 1.15 //and a little harder to hit!
 
 /obj/item/ammo_casing/microbattery/medical/resist
-	name = "\'ML-3\' nanite cell - RESIST"
+	name = "\'NERD\' nanite cell - RESIST"
 	type_color = "#555555"
 	type_name = "<span style='color:#555555;font-weight:bold;'>RESIST</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/resist
 
 /obj/item/projectile/beam/medical_cell/resist/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.add_modifier(/datum/modifier/resistance, 20 SECONDS)
+		if(target.stat != DEAD)
+			target.add_modifier(/datum/modifier/resistance, 20 SECONDS)
 	else
 		return 1
 
@@ -230,7 +243,7 @@
 	incoming_damage_percent = 0.85
 
 /obj/item/ammo_casing/microbattery/medical/corpse_mend
-	name = "\'ML-3\' nanite cell - CORPSE MEND"
+	name = "\'NERD\' nanite cell - CORPSE MEND"
 	type_color = "#669900"
 	type_name = "<span style='color:#669900;font-weight:bold;'>CORPSE MEND</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/corpse_mend
@@ -246,59 +259,63 @@
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/brute3
-	name = "\'ML-3\' nanite cell - BRUTE-III"
+	name = "\'NERD\' nanite cell - BRUTE-III"
 	type_color = "#BF0000"
 	type_name = "<span style='color:#BF0000;font-weight:bold;'>BRUTE-III</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/brute3
 
 /obj/item/projectile/beam/medical_cell/brute3/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-20)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-20)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/burn3
-	name = "\'ML-3\' nanite cell - BURN-III"
+	name = "\'NERD\' nanite cell - BURN-III"
 	type_color = "#FF8000"
 	type_name = "<span style='color:#FF8000;font-weight:bold;'>BURN-III</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/burn3
 
 /obj/item/projectile/beam/medical_cell/burn3/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustFireLoss(-20)
+		if(target.stat != DEAD)
+			target.adjustFireLoss(-20)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/toxin3
-	name = "\'ML-3\' nanite cell - TOXIN-III"
+	name = "\'NERD\' nanite cell - TOXIN-III"
 	type_color = "#00A000"
 	type_name = "<span style='color:#00A000;font-weight:bold;'>TOXIN-III</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/toxin3
 
 /obj/item/projectile/beam/medical_cell/toxin3/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustToxLoss(-20)
+		if(target.stat != DEAD)
+			target.adjustToxLoss(-20)
 	else
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/omni3
-	name = "\'ML-3\' nanite cell - OMNI-III"
+	name = "\'NERD\' nanite cell - OMNI-III"
 	type_color = "#8040FF"
 	type_name = "<span style='color:#8040FF;font-weight:bold;'>OMNI-III</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/omni3
 
 /obj/item/projectile/beam/medical_cell/omni3/on_hit(var/mob/living/carbon/human/target)
 	if(istype(target, /mob/living/carbon/human))
-		target.adjustBruteLoss(-10)
-		target.adjustFireLoss(-10)
-		target.adjustToxLoss(-10)
-		target.adjustOxyLoss(-60)
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-10)
+			target.adjustFireLoss(-10)
+			target.adjustToxLoss(-10)
+			target.adjustOxyLoss(-60)
 	else
 		return 1
 
 // Illegal cells!
 /obj/item/ammo_casing/microbattery/medical/shrink
-	name = "\'ML-3\' nanite cell - SHRINK"
+	name = "\'NERD\' nanite cell - SHRINK"
 	type_color = "#910ffc"
 	type_name = "<span style='color:#910ffc;font-weight:bold;'>SHRINK</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/shrink
@@ -312,7 +329,7 @@
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/grow
-	name = "\'ML-3\' nanite cell - GROW"
+	name = "\'NERD\' nanite cell - GROW"
 	type_color = "#fc0fdc"
 	type_name = "<span style='color:#fc0fdc;font-weight:bold;'>GROW</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/grow
@@ -326,7 +343,7 @@
 		return 1
 
 /obj/item/ammo_casing/microbattery/medical/normalsize
-	name = "\'ML-3\' nanite cell - NORMALSIZE"
+	name = "\'NERD\' nanite cell - NORMALSIZE"
 	type_color = "#C70FEC"
 	type_name = "<span style='color:#C70FEC;font-weight:bold;'>NORMALSIZE</span>"
 	projectile_type = /obj/item/projectile/beam/medical_cell/normalsize
