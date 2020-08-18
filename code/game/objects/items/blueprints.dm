@@ -23,8 +23,8 @@
 	var/static/list/SPACE_AREA_TYPES = list(
 		/area/space,
 		/area/mine,
-		/area/borealis2/outdoors/exterior, //YWEdit Start.
-        /area/borealis2/outdoors/grounds   //YWEdit End.
+		/area/borealis2/outdoors/exterior, //YWEdit.
+        /area/borealis2/outdoors/grounds   //YWEdit.
 	)
 	var/static/list/SPECIAL_AREA_TYPES = list(
 		/area/shuttle,
