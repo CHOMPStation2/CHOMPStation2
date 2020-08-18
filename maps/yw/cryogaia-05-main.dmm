@@ -19920,6 +19920,25 @@
 /mob/living/simple_mob/animal/passive/bird/parrot/poly,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/chief)
+"hCF" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/warden)
 "hCK" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -70166,7 +70185,7 @@ cFZ
 stg
 pAk
 eGX
-jXB
+hCF
 mMr
 bmi
 bmi
