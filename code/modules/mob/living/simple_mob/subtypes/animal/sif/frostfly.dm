@@ -169,3 +169,4 @@
 		holder.face_atom(A)
 
 	F.energy = max(0, F.energy - 1)	// The AI will eventually flee.
+

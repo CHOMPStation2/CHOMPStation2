@@ -129,7 +129,7 @@
 
 /obj/machinery/computer/operating/tgui_act(action, params)
 	if(..())
-		return
+		return TRUE
 	if((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))) || (istype(usr, /mob/living/silicon)))
 		usr.set_machine(src)
 
@@ -177,8 +177,8 @@
 					playsound(src.loc, 'sound/machines/defib_success.ogg', 50, 0)
 				if(oxy && victim.getOxyLoss()>oxyAlarm)
 					playsound(src.loc, 'sound/machines/defib_safetyOff.ogg', 50, 0)
-				if(healthAnnounce && victim.health <= healthAlarm)
-					atom_say("[round(victim.health)]% health.")
+				if(healthAnnounce && ((victim.health / victim.maxHealth) * 100) <= healthAlarm)
+					atom_say("[round(((victim.health / victim.maxHealth) * 100))]% health.")
 
 // Surgery Helpers
 /obj/machinery/computer/operating/proc/build_surgery_list(mob/user)

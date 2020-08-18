@@ -371,20 +371,22 @@ var/list/mob/living/forced_ambiance_list = new
 
 	L.lastarea = newarea
 	L.lastareachange = world.time
-	play_ambience(L)
+	play_ambience(L, initial = TRUE)
 	if(no_spoilers)
 		L.disable_spoiler_vision()
 
-/area/proc/play_ambience(var/mob/living/L)
+/area/proc/play_ambience(var/mob/living/L, initial = TRUE)
 	// Ambience goes down here -- make sure to list each area seperately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
 	if(!(L && L.is_preference_enabled(/datum/client_preference/play_ambiance)))	return
 
 	// If we previously were in an area with force-played ambiance, stop it.
-	if(L in forced_ambiance_list)
+	if((L in forced_ambiance_list) && initial)
 		L << sound(null, channel = CHANNEL_AMBIENCE_FORCED)
 		forced_ambiance_list -= L
 
 	if(forced_ambience)
+		if(L in forced_ambiance_list)
+			return
 		if(forced_ambience.len)
 			forced_ambiance_list |= L
 			var/sound/chosen_ambiance = pick(forced_ambience)
@@ -393,8 +395,9 @@ var/list/mob/living/forced_ambiance_list = new
 			L << chosen_ambiance
 		else
 			L << sound(null, channel = CHANNEL_AMBIENCE_FORCED)
-	else if(src.ambience.len && prob(35))
-		if((world.time >= L.client.time_last_ambience_played + 1 MINUTE))
+	else if(src.ambience.len)
+		var/ambience_odds = L?.client.prefs.ambience_chance
+		if(prob(ambience_odds) && (world.time >= L.client.time_last_ambience_played + 1 MINUTE))
 			var/sound = pick(ambience)
 			L << sound(sound, repeat = 0, wait = 0, volume = 50, channel = CHANNEL_AMBIENCE)
 			L.client.time_last_ambience_played = world.time
