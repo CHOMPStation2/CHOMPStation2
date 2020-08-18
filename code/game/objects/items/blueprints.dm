@@ -20,11 +20,10 @@
 	var/const/ROOM_ERR_SPACE = -1
 	var/const/ROOM_ERR_TOOLARGE = -2
 
+	var/list/SPACE_OUTSIDE_TYPES = list() //YWEdit.
 	var/static/list/SPACE_AREA_TYPES = list(
 		/area/space,
-		/area/mine,
-		/area/borealis2/outdoors/exterior, //YWEdit Start.
-        /area/borealis2/outdoors/grounds   //YWEdit End.
+		/area/mine
 	)
 	var/static/list/SPECIAL_AREA_TYPES = list(
 		/area/shuttle,
@@ -121,6 +120,9 @@
 	return A
 
 /obj/item/blueprints/proc/get_area_type(var/area/A = get_area())
+	for(var/type in SPACE_OUTSIDE_TYPES) //YWEDIT Start.
+		if(istype(A, type))
+			return AREA_SPACE //YWEDIT End.
 	for(var/type in SPACE_AREA_TYPES)
 		if(istype(A, type))
 			return AREA_SPACE
