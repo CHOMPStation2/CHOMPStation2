@@ -22,7 +22,9 @@
 
 	var/static/list/SPACE_AREA_TYPES = list(
 		/area/space,
-		/area/mine
+		/area/mine,
+		/area/borealis2/outdoors/exterior, //YWEdit Start.
+        /area/borealis2/outdoors/grounds   //YWEdit End.
 	)
 	var/static/list/SPECIAL_AREA_TYPES = list(
 		/area/shuttle,
@@ -88,7 +90,10 @@
 	var/curAreaType = get_area_type()
 	switch (curAreaType)
 		if (AREA_SPACE)
-			text += "<p>According the blueprints, you are now in <b>outer space</b>.  Hold your breath.</p>"
+			if(!istype(A, /area/space))//YWEdit Start.
+				text += "<p>According the blueprints, you are now in <b>\"[A.name]\"</b>.</p>"
+			else
+				text += "<p>According the blueprints, you are now in <b>outer space</b>.  Hold your breath.</p>" //YWEdit End.
 		if (AREA_STATION)
 			text += "<p>According the blueprints, you are now in <b>\"[A.name]\"</b>.</p>"
 		if (AREA_SPECIAL)
