@@ -1018,6 +1018,10 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
+"dQ" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor,
+/area/maintenance/upper/maintroom2)
 "dR" = (
 /obj/machinery/computer/crew{
 	dir = 4
@@ -3158,10 +3162,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
-"lz" = (
-/obj/machinery/door/airlock/maintenance/common,
-/turf/space,
-/area/maintenance/upper/maintroom1)
 "lB" = (
 /turf/simulated/open,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -5943,6 +5943,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"vv" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor,
+/area/maintenance/upper/maintroom1)
 "vx" = (
 /obj/item/device/radio/intercom{
 	broadcasting = 0;
@@ -8577,15 +8581,6 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southeast)
-"EI" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/cryogaia/station/hallway/primary/upper/south)
 "EJ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -9133,20 +9128,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
-"GZ" = (
-/obj/machinery/door/firedoor/multi_tile{
-	dir = 2
-	},
-/obj/machinery/door/airlock/multi_tile/glass{
-	autoclose = 1;
-	dir = 2;
-	id_tag = "";
-	name = "Medical Diagnostics Center";
-	req_access = list(5);
-	req_one_access = list(5)
-	},
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/hallway/primary/upper/south)
 "Ha" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -11664,6 +11645,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/pathfinder_office)
+"PE" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/cryogaia/station/hallway/primary/upper/south)
 "PF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5;
@@ -12926,10 +12916,6 @@
 "Ud" = (
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
-"Ue" = (
-/obj/machinery/door/airlock/maintenance/common,
-/turf/space,
-/area/maintenance/upper/maintroom2)
 "Ug" = (
 /obj/machinery/alarm{
 	frequency = 1441;
@@ -13176,6 +13162,17 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"UI" = (
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 2
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1
+	},
+/turf/simulated/floor/tiled{
+	dir = 4
+	},
+/area/cryogaia/station/hallway/primary/upper/south)
 "UJ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -30200,7 +30197,7 @@ vT
 im
 im
 im
-Ue
+dQ
 Nr
 cP
 Hp
@@ -31174,13 +31171,13 @@ Yk
 fH
 vT
 Ir
-GZ
+UI
 mD
 oW
 vd
 mD
 mD
-EI
+PE
 mD
 mD
 mD
@@ -32792,7 +32789,7 @@ pm
 pm
 pm
 pm
-lz
+vv
 Ba
 yw
 DV
