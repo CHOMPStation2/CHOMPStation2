@@ -3,16 +3,14 @@
 #define Z_LEVEL_STATION_ONE				1
 #define Z_LEVEL_STATION_TWO				2
 #define Z_LEVEL_STATION_THREE			3
-#define Z_LEVEL_EMPTY_SPACE				4
-#define Z_LEVEL_SURFACE					5
-#define Z_LEVEL_SURFACE_MINE			6
-#define Z_LEVEL_MISC					7
-#define Z_LEVEL_CENTCOM					8
-#define Z_LEVEL_TRANSIT					9
-#define Z_LEVEL_SURFACE_WILD			10
-//Comment out Z_LEVEL_BELT temporarily - TFF 15/2/20
-//#define Z_LEVEL_BELT					11
-#define Z_LEVEL_GATEWAY					11
+//#define Z_LEVEL_EMPTY_SPACE				4 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
+#define Z_LEVEL_SURFACE					4
+#define Z_LEVEL_SURFACE_MINE			5
+#define Z_LEVEL_MISC					6
+#define Z_LEVEL_CENTCOM					7
+#define Z_LEVEL_TRANSIT					8
+#define Z_LEVEL_SURFACE_WILD			9
+#define Z_LEVEL_GATEWAY					10
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -198,12 +196,13 @@
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
+/* //CHOMPedit: Disabling empty space map level as overmap generation now generates this as needed.
 /datum/map_z_level/southern_cross/empty_space
 	z = Z_LEVEL_EMPTY_SPACE
 	name = "Empty"
 	flags = MAP_LEVEL_PLAYER
 	transit_chance = 76
-
+*/
 /datum/map_z_level/southern_cross/surface
 	z = Z_LEVEL_SURFACE
 	name = "Plains"

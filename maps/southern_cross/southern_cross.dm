@@ -40,7 +40,7 @@
 	#include "southern_cross-1.dmm"
 	#include "southern_cross-2.dmm"
 	#include "southern_cross-3.dmm"
-	#include "southern_cross-4.dmm"
+//	#include "southern_cross-4.dmm" CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.7
 	#include "southern_cross-5.dmm"
 	#include "southern_cross-6.dmm"
 	#include "southern_cross-7.dmm"
