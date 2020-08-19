@@ -19,6 +19,12 @@
 	icon_state = "map_vent_out"
 	external_pressure_bound = ONE_ATMOSPHERE * 1.1
 
+/obj/item/blueprints
+	SPACE_OUTSIDE_TYPES = list(
+		/area/borealis2/outdoors/exterior,
+        /area/borealis2/outdoors/grounds 
+	)
+
 
 
 /obj/effect/step_trigger/teleporter/planetary_fall/borealis2/find_planet()
