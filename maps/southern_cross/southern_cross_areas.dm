@@ -2032,6 +2032,12 @@ area/crew_quarters/heads/sc/hop/quarters
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
 
+// CHOMP Edit: Overmap exploration shuttle.
+/area/shuttle/stargazer
+	name = "\improper Stargazer"
+	icon_state = "shuttlered"
+	requires_power = 1
+
 //Temp Removal TFF 15/2/20
 /*
 // CHOMP-Edit: This is the Belt Mining addition
