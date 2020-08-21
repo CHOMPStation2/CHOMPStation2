@@ -35,6 +35,7 @@
 #include "Chapel.dmm"
 #include "Shelter.dmm"
 #include "Cragzone1.dmm"
+	//CHOMPS KSC 8/11/20 "8 additional POI's"
 #include "derelictengine.dmm"
 #include "wolfden.dmm"
 #include "demonpool.dmm"
