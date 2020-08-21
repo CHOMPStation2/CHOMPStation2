@@ -35,6 +35,14 @@
 #include "Chapel.dmm"
 #include "Shelter.dmm"
 #include "Cragzone1.dmm"
+#include "derelictengine.dmm"
+#include "wolfden.dmm"
+#include "demonpool.dmm"
+#include "frostoasis.dmm"
+#include "xenohive.dmm"
+#include "borglab.dmm"
+#include "chasm.dmm"
+#include "deathden.dmm"
 
 #endif
 
@@ -289,7 +297,6 @@
 	cost = 20
 
 	// CHOMPS KSC 8/20/20 Added 8 more POI's for the wilderness, spicy.
-
 
 /datum/map_template/surface/wilderness/deep/DerelictEngine
 	name = "Derelict Engine"
