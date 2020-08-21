@@ -6,7 +6,7 @@
 "i" = (/obj/random/cargopod,/obj/random/maintenance/security,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/WolfDen)
 "j" = (/obj/random/gun/random,/obj/random/junk,/turf/simulated/floor/outdoors/rocks/sif{outdoors = 0},/area/submap/WolfDen)
 "m" = (/obj/item/weapon/bone/ribs,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/WolfDen)
-"o" = (/turf/simulated/mineral/sif,/area/submap/WolfDen)
+"o" = (/turf/simulated/mineral/ignore_mapgen,/area/submap/WolfDen)
 "p" = (/mob/living/simple_mob/animal/wolf/direwolf/dog{faction = "wilderness"; maxHealth = 350; melee_damage_lower = 15; melee_damage_upper = 30; name = "Alpha dire wolf"},/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/WolfDen)
 "q" = (/obj/structure/loot_pile/surface/bones,/obj/random/maintenance/cargo,/turf/simulated/floor/outdoors/rocks/sif{outdoors = 0},/area/submap/WolfDen)
 "r" = (/obj/random/humanoidremains,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/WolfDen)

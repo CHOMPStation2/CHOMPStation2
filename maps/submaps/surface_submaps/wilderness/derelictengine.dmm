@@ -72,7 +72,7 @@
 "iZ" = (/obj/effect/floor_decal/techfloor{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/submap/DerelictEngine)
 "ja" = (/obj/effect/floor_decal/techfloor{dir = 8},/mob/living/simple_mob/humanoid/merc/ranged/ionrifle{health = 15; maxHealth = 15},/turf/simulated/shuttle/floor/alienplating/external,/area/submap/DerelictEngine)
 "je" = (/turf/simulated/shuttle/floor/alienplating/external,/area/submap/DerelictEngine)
-"jl" = (/turf/simulated/mineral/sif,/area/template_noop)
+"jl" = (/turf/simulated/mineral/ignore_mapgen,/area/template_noop)
 "jD" = (/obj/structure/table/alien,/obj/item/weapon/gun/energy/alien,/obj/item/prop/alien/phasecoil,/obj/item/clothing/suit/armor/alien/tank,/obj/item/stack/material/diamond{amount = 15},/turf/simulated/floor/greengrid,/area/submap/DerelictEngine)
 "jE" = (/obj/effect/floor_decal/techfloor/orange{dir = 8},/obj/effect/floor_decal/techfloor/orange{dir = 4},/obj/machinery/fusion_fuel_injector/mapped{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/submap/DerelictEngine)
 "jG" = (/obj/effect/floor_decal/techfloor/orange{dir = 4},/obj/effect/floor_decal/techfloor/orange{dir = 8},/turf/simulated/floor/tiled/techfloor,/area/submap/DerelictEngine)
