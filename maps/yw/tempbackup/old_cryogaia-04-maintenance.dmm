@@ -7616,7 +7616,7 @@
 /turf/simulated/floor,
 /area/maintenance/starboard)
 "arp" = (
-/obj/item/weapon/caution/cone,
+/obj/item/clothing/head/cone,
 /turf/simulated/floor,
 /area/maintenance/lowfloor3)
 "arq" = (
@@ -24927,7 +24927,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/maintroom6)
 "bce" = (
-/obj/item/weapon/caution/cone,
+/obj/item/clothing/head/cone,
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -32026,7 +32026,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics)
 "bqD" = (
-/obj/item/weapon/caution/cone,
+/obj/item/clothing/head/cone,
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "bqE" = (
