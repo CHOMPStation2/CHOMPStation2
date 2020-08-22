@@ -37,7 +37,7 @@
 "Aj" = (/mob/living/simple_mob/animal/sif/savik{faction = "diyaab"},/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
 "AM" = (/obj/structure/flora/ausbushes/ywflowers,/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
 "Bt" = (/obj/structure/flora/ausbushes/ppflowers,/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
-"BF" = (/mob/living/simple_mob/animal/sif/diyaab/polar{faction = "diyaab"},/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
+"BF" = (/mob/living/simple_mob/animal/sif/diyaab,/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
 "EW" = (/obj/structure/table/standard,/obj/item/weapon/gift,/obj/item/weapon/gun/energy/temperature,/turf/simulated/floor/wood/broken,/area/submap/FrostOasis)
 "Fl" = (/obj/structure/curtain/open/bed,/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/fancy/blackcandle_box,/obj/random/tetheraid,/obj/random/soap,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/medical,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/structure/window/reinforced/tinted/frosted{dir = 4},/turf/simulated/floor/wood/broken,/area/submap/FrostOasis)
 "It" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt,/area/template_noop)
