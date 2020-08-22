@@ -212,3 +212,8 @@
 		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
+
+/datum/gear/uniform/harness_white
+	display_name = "white gear harness (Full Body Prosthetic, Diona)"
+	path = /obj/item/clothing/under/harness_white
+	sort_category = "Xenowear"

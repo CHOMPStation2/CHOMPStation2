@@ -188,7 +188,7 @@
 		else
 			soundfile = fancy_vore_sounds[vore_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 			recent_sound = TRUE
 
 	//Messages if it's a mob
@@ -245,7 +245,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 
 	return count
 
@@ -293,7 +293,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 
 	return 1
 
@@ -329,7 +329,7 @@
 			if(!P.absorbed) //This is required first, in case there's a person absorbed and not absorbed in a stomach.
 				total_bulge += P.size_multiplier
 		if(total_bulge >= bulge_size && bulge_size != 0)
-			return("<span class='warning'>[formatted_message]</span><BR>")
+			return("<span class='warning'>[formatted_message]</span>")
 		else
 			return ""
 
@@ -559,9 +559,9 @@
 			struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
 		else
 			struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
-		playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises)
+		playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE)
 	else
-		playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises)
+		playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE)
 
 	if(escapable) //If the stomach has escapable enabled.
 		if(prob(escapechance)) //Let's have it check to see if the prey escapes first.

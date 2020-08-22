@@ -1,6 +1,6 @@
 /obj/structure/closet/secure_closet/blueshield
 	name = "blueshield's closet"
-	req_access = list(access_blueshield)
+	req_access = list(access_blueshield_exclusive)
 	closet_appearance = /decl/closet_appearance/secure_closet/blueshield
 	storage_capacity = 2.5 * MOB_MEDIUM
 
@@ -59,4 +59,12 @@
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/radio
+		)
+
+/obj/structure/closet/secure_closet/personal/volunteer
+	closet_appearance = /decl/closet_appearance/cabinet/secure
+
+	starts_with = list(
+		/obj/item/device/radio/off,
+		/obj/item/device/gps
 		)

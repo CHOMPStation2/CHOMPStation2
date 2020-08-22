@@ -50,6 +50,7 @@
 	icon_state = "x01stun"
 	icon = 'icons/obj/gun_yw.dmi'
 	item_state = null	//so the human update icon uses the icon_state instead.
+	item_icons = list(slot_r_hand_str = 'icons/mob/items/righthand_guns_yw.dmi', slot_l_hand_str = 'icons/mob/items/lefthand_guns_yw.dmi')
 	fire_sound = 'sound/weapons/Taser.ogg'
 	fire_delay = 8 // Handguns should be inferior to two-handed weapons.
 
