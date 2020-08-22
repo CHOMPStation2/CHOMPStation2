@@ -83,7 +83,7 @@
 "Sl" = (/obj/structure/salvageable/bliss,/obj/effect/alien/weeds,/turf/simulated/floor,/area/submap/XenoHive)
 "Tb" = (/obj/effect/alien/weeds,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/steel_dirty,/area/submap/XenoHive)
 "Tq" = (/mob/living/simple_mob/animal/space/alien,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/XenoHive)
-"Tv" = (/mob/living/simple_mob/animal/space/alien/sentinel/praetorian,/obj/effect/alien/weeds,/obj/structure/bed/nest,/turf/simulated/floor/outdoors/rocks/sif{outdoors = 0},/area/submap/XenoHive)
+"Tv" = (/mob/living/simple_mob/animal/space/alien/sentinel/praetorian,/obj/effect/alien/weeds,/obj/structure/bed/nest,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/XenoHive)
 "Vg" = (/obj/effect/alien/weeds,/obj/structure/prop/transmitter,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor,/area/submap/XenoHive)
 "Vj" = (/turf/simulated/floor/outdoors/dirt,/area/submap/XenoHive)
 "Vu" = (/obj/effect/alien/weeds/node,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/XenoHive)

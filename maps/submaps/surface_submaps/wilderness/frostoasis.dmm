@@ -48,7 +48,7 @@
 "Kq" = (/obj/structure/flora/tree/dead,/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
 "KW" = (/obj/structure/flora/tree/winter1,/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
 "Ld" = (/obj/structure/flora/grass/both,/obj/effect/landmark/loot_spawn/low,/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
-"Lt" = (/obj/structure/flora/ausbushes/ywflowers,/mob/living/simple_mob/animal/space/bear/polar{faction = "diyaab"},/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
+"Lt" = (/obj/structure/flora/ausbushes/ywflowers,/mob/living/simple_mob/animal/space/bear{faction = "diyaab"},/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
 "Mr" = (/obj/effect/landmark/loot_spawn/low,/turf/simulated/floor/outdoors/snow,/area/submap/FrostOasis)
 "MA" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt,/area/submap/FrostOasis)
 "Nc" = (/obj/random/outcrop,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/FrostOasis)
