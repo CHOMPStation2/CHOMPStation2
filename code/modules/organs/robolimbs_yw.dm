@@ -61,4 +61,6 @@
 		idle-eye=eyeidle;\
 		emptyinput=emptyinput;\
 		rainbow=rainbow;\
-		snow=snow"
+		snow=snow;\
+		robocop=robocop;\
+		rainbowcop=rainbowcop"
