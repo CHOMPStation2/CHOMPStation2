@@ -33,11 +33,11 @@
 #include "BuriedTreasure2.dmm"
 #include "BuriedTreasure3.dmm"
 	//CHOMPS KSC 8/11/20 "5 additional POI's"
-#include "oldhotel.dmm"
-#include "priderock.dmm"
-#include "lonehome.dmm"
-#include "hotspring.dmm"
 #include "methlab.dmm"
+#include "hotspring.dmm"
+#include "lonehome.dmm"
+#include "priderock.dmm"
+#include "oldhotel.dmm"
 #endif
 
 
@@ -268,7 +268,7 @@
 	cost = 10
 
 /datum/map_template/surface/plains/lonehome
-	name = "Abandoned Home"
+	name = "Lone Home"
 	desc = "A quite inoffensive looking home, damaged but still holding up."
 	mappath = 'maps/submaps/surface_submaps/plains/lonehome.dmm'
 	cost = 15
