@@ -189,6 +189,8 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	icon_state = "snowfall_med"
 	temp_high = 220
 	temp_low = 210
+	wind_high = 2
+	wind_low = 0
 	light_modifier = 0.5
 	flight_failure_modifier = 5
 	transition_chances = list(
@@ -221,6 +223,8 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	icon_state = "snowfall_heavy"
 	temp_high = 200
 	temp_low = 190
+	wind_high = 4
+	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
 	transition_chances = list(
@@ -260,6 +264,8 @@ var/datum/planet/borealis2/planet_borealis2 = null
 /datum/weather/borealis2/rain
 	name = "rain"
 	icon_state = "rain"
+	wind_high = 2
+	wind_low = 1
 	light_modifier = 0.5
 	effect_message = "<span class='warning'>Rain falls on you.</span>"
 
@@ -304,6 +310,8 @@ var/datum/planet/borealis2/planet_borealis2 = null
 /datum/weather/borealis2/storm
 	name = "storm"
 	icon_state = "storm"
+	wind_high = 4
+	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
 	effect_message = "<span class='warning'>Rain falls on you, drenching you in water.</span>"
@@ -485,6 +493,8 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	light_color = "#FF0000"
 	temp_high = 323.15	// 50c
 	temp_low = 313.15	// 40c
+	wind_high = 6
+	wind_low = 3
 	flight_failure_modifier = 50
 	transition_chances = list(
 		WEATHER_ASH_STORM = 100
