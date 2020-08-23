@@ -309,6 +309,9 @@
 /area/cryogaia/station/excursion_dock
 	name = "\improper Exploration Vessel Dock"
 
+/area/cryogaia/station/excursion_overhang
+	name = "The outpost grounds"
+
 /area/cryogaia/station/explorer_entrance
 	name = "\improper Explorer Entrance Room"
 
