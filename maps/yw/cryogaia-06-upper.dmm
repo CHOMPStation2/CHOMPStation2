@@ -11605,11 +11605,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
-"LP" = (
-/obj/structure/railing/grey,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/exterior/upper)
 "LR" = (
 /turf/simulated/floor/plating,
 /area/maintenance/security_tower)
@@ -11906,14 +11901,6 @@
 "NU" = (
 /turf/simulated/open,
 /area/borealis2/outdoors/grounds/tower/south)
-"NV" = (
-/obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/exterior/upper)
 "NX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/multi_tile/metal/mait{
@@ -12256,10 +12243,6 @@
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
-"Px" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/exterior/upper)
 "Py" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -14277,9 +14260,9 @@ aC
 aC
 aC
 aC
-NV
-Px
-LP
+aC
+aC
+aC
 aC
 aC
 aC
@@ -14440,7 +14423,7 @@ aC
 aC
 aC
 aC
-uP
+aC
 aC
 aC
 aC
@@ -14602,7 +14585,7 @@ aC
 aC
 aC
 aC
-uP
+aC
 aC
 aC
 aC
@@ -14764,8 +14747,8 @@ aC
 aC
 aC
 aC
-uP
-uP
+aC
+aC
 aC
 aC
 aC
@@ -14927,8 +14910,8 @@ aC
 aC
 aC
 aC
-uP
-uP
+aC
+aC
 aC
 aC
 aC
@@ -15090,7 +15073,7 @@ aC
 aC
 aC
 aC
-uP
+aC
 Fs
 uP
 uP
