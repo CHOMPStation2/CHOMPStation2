@@ -13804,7 +13804,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage3)
 "iCb" = (
-/obj/item/weapon/caution/cone,
+/obj/item/clothing/head/cone,
 /turf/simulated/floor,
 /area/maintenance/lowfloor3)
 "iCJ" = (
@@ -18022,7 +18022,7 @@
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
 "kLl" = (
-/obj/item/weapon/caution/cone,
+/obj/item/clothing/head/cone,
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -27024,7 +27024,7 @@
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "qcT" = (
-/obj/item/weapon/caution/cone,
+/obj/item/clothing/head/cone,
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "qdm" = (

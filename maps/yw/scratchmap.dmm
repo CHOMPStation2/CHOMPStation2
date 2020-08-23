@@ -793,7 +793,7 @@
 "pm" = (/obj/effect/decal/cleanable/vomit,/obj/item/weapon/stool/padded,/obj/machinery/light/small{dir = 4; pixel_y = 0},/turf/simulated/floor,/area/maintenance/lowfloor1)
 "pn" = (/obj/machinery/light/small{dir = 8; pixel_y = 0},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/maintenance/lowfloor1)
 "po" = (/obj/structure/cable{icon_state = "1-2"},/turf/simulated/floor/plating,/area/maintenance/lowfloor1)
-"pp" = (/obj/item/weapon/caution/cone,/turf/simulated/floor,/area/maintenance/lowfloor1)
+"pp" = (/obj/item/clothing/head/cone,/turf/simulated/floor,/area/maintenance/lowfloor1)
 "pq" = (/obj/item/weapon/broken_bottle,/turf/simulated/floor,/area/maintenance/lowfloor1)
 "pr" = (/obj/structure/table/woodentable,/obj/item/weapon/material/ashtray/plastic,/obj/item/trash/cigbutt/cigarbutt,/obj/random/maintenance/clean,/obj/random/maintenance/clean,/turf/simulated/floor,/area/maintenance/lowfloor1)
 "ps" = (/obj/machinery/space_heater,/turf/simulated/floor/plating,/area/maintenance/lowfloor1)
