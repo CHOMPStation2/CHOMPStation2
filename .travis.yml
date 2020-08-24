@@ -53,4 +53,3 @@ jobs:
       name: "Compile POIs (no run)"
     - env: TEST_DEFINE="AWAY_MISSION_TEST" TEST_FILE="code/_away_mission_tests.dm" RUN="0"
       name: "Compile away missions (no run)"  
-    
