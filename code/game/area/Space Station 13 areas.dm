@@ -2678,4 +2678,9 @@ var/list/the_station_areas = list (
 /area/hangar/lockerroomthree
 	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
+
+/area/shuttle/stargazer
+	name = "\improper Stargazer"
+	icon_state = "shuttlered"
+	requires_power = 1
 	
