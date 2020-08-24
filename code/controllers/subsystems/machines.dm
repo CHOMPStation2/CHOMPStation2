@@ -51,12 +51,14 @@ SUBSYSTEM_DEF(machines)
 // The above is a lie. Turbolifts also call this proc.
 /datum/controller/subsystem/machines/proc/makepowernets()
 	// TODO - check to not run while in the middle of a tick!
+	world.log << "Making power nets!"
 	for(var/datum/powernet/PN in powernets)
 		qdel(PN)
 	powernets.Cut()
 	setup_powernets_for_cables(cable_list)
 
 /datum/controller/subsystem/machines/proc/setup_powernets_for_cables(list/cables)
+	world.log << "Making power nets for cables!"
 	for(var/obj/structure/cable/PC in cables)
 		if(!PC.powernet)
 			var/datum/powernet/NewPN = new()
@@ -102,14 +104,17 @@ SUBSYSTEM_DEF(machines)
 	//cache for sanic speed (lists are references anyways)
 	var/list/current_run = src.current_run
 	while(current_run.len)
-		var/datum/pipe_network/PN = current_run[current_run.len]
+		var/q = !QDELETED(current_run[current_run.len])
+		//Switch instead of multiple if functions should make things cleaner for the compiler and the CPU
+		switch((istype(current_run[current_run.len],/datum/pipe_network) && q) + q)
+			if(0)
+				global.pipe_networks.Remove(current_run[current_run.len])
+			if(1)
+				global.pipe_networks.Remove(current_run[current_run.len])
+				DISABLE_BITFIELD(current_run[current_run.len].datum_flags, DF_ISPROCESSING)
+			if(2)
+				current_run[current_run.len].process(wait)
 		current_run.len--
-		if(istype(PN) && !QDELETED(PN))
-			PN.process(wait)
-		else
-			global.pipe_networks.Remove(PN)
-			if(!QDELETED(PN))
-				DISABLE_BITFIELD(PN.datum_flags, DF_ISPROCESSING)
 		if(MC_TICK_CHECK)
 			return
 
@@ -119,13 +124,15 @@ SUBSYSTEM_DEF(machines)
 
 	var/list/current_run = src.current_run
 	while(current_run.len)
-		var/obj/machinery/M = current_run[current_run.len]
+		var/q = QDELETED(current_run[current_run.len])
+		//Switch instead of multiple if functions should make things cleaner for the compiler and the CPU
+		switch((!istype(current_run[current_run.len],/obj/machinery/) || q || (current_run[current_run.len].process(wait) == PROCESS_KILL)) + q)
+			if(1)
+				global.processing_machines.Remove(current_run[current_run.len])
+				DISABLE_BITFIELD(current_run[current_run.len].datum_flags, DF_ISPROCESSING)
+			if(2)
+				global.processing_machines.Remove(current_run[current_run.len])
 		current_run.len--
-
-		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL))
-			global.processing_machines.Remove(M)
-			if(!QDELETED(M))
-				DISABLE_BITFIELD(M.datum_flags, DF_ISPROCESSING)
 		if(MC_TICK_CHECK)
 			return
 
