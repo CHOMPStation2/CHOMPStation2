@@ -401,17 +401,11 @@
 /turf/simulated/wall/r_lead,
 /area/engineering/engine_room)
 "ahF" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
+/obj/item/device/geiger/wall{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/borealis2/outdoors/grounds/tower/west)
 "ahR" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 8
@@ -4333,6 +4327,10 @@
 	dir = 4;
 	icon_state = "camera"
 	},
+/obj/structure/sign/warning/radioactive{
+	name = "\improper OUTPOST RADIATION PROOF";
+	pixel_x = -30
+	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "bKi" = (
@@ -5036,13 +5034,11 @@
 /turf/simulated/floor,
 /area/storage/auxillary)
 "bWv" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/snow/floor/edges3{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "bWx" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -8220,6 +8216,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
+"dde" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light/small{
+	dir = 1;
+	icon_state = "bulb1"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/southeast)
 "ddl" = (
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
@@ -9726,15 +9734,6 @@
 	dir = 8;
 	icon_state = "grey_railing0"
 	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 24
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "dLb" = (
@@ -10092,6 +10091,10 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/structure/railing/grey{
+	dir = 8;
+	icon_state = "grey_railing0"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/east)
@@ -10932,10 +10935,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list()
+/obj/machinery/light/small{
+	dir = 4
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "eeZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11961,10 +11964,6 @@
 "eAJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
-	},
-/obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
 	},
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/east)
@@ -18511,12 +18510,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
-	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/borealis2/outdoors/grounds/tower/east)
 "gZI" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -23512,6 +23507,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"jcM" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/checkpoint)
 "jde" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1;
@@ -26744,6 +26748,13 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
+"koI" = (
+/obj/structure/railing/grey{
+	dir = 4;
+	icon_state = "grey_railing0"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/southeast)
 "koX" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -31943,12 +31954,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/wall/titanium,
+/turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "mrb" = (
 /obj/item/weapon/stool/padded,
@@ -36854,8 +36860,11 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery)
 "ocv" = (
-/turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds)
+/obj/machinery/door/airlock/glass_external/freezable{
+	req_one_access = list()
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/tower/southwest)
 "ocM" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -42955,6 +42964,7 @@
 	dir = 4;
 	icon_state = "grey_railing0"
 	},
+/obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southeast)
 "qvn" = (
@@ -54490,13 +54500,17 @@
 /turf/simulated/wall/r_wall,
 /area/engineering/workshop)
 "vgU" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_x = 0;
+	pixel_y = 24
+	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/borealis2/outdoors/grounds/tower/southwest)
 "vgX" = (
 /obj/structure/table/standard,
 /obj/item/device/text_to_speech,
@@ -58323,12 +58337,13 @@
 "wDN" = (
 /obj/structure/cable/green{
 	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
-	},
-/obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southwest)
@@ -59774,6 +59789,13 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
+"xhg" = (
+/obj/item/device/geiger/wall{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/south)
 "xhz" = (
 /obj/structure/closet{
 	name = "materials"
@@ -61634,7 +61656,15 @@
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
 "xTr" = (
-/obj/machinery/space_heater,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southeast)
 "xTH" = (
@@ -64232,7 +64262,7 @@ neC
 phW
 iSE
 iSE
-cco
+iSE
 iSE
 liC
 iSE
@@ -64273,11 +64303,11 @@ doR
 doR
 doR
 doR
-ocv
+doR
 eHU
 nCX
 fxq
-hzN
+fxq
 iSH
 eHU
 dAA
@@ -64331,7 +64361,7 @@ dAA
 dAA
 dAA
 cao
-tdG
+ahF
 tdG
 tdG
 eUH
@@ -64387,8 +64417,8 @@ dAA
 dAA
 dAA
 phW
-phW
-phW
+vgU
+dKN
 dKN
 gcy
 phW
@@ -64435,7 +64465,7 @@ doR
 doR
 doR
 doR
-ocv
+doR
 eHU
 gtN
 hzN
@@ -64495,7 +64525,7 @@ vDp
 hXZ
 kTu
 sXa
-bWv
+sXa
 jBD
 hXZ
 vDp
@@ -64549,9 +64579,9 @@ vDp
 vDp
 vDp
 vyK
-vyK
-mra
 wDN
+mra
+neC
 tES
 phW
 iSE
@@ -64710,8 +64740,8 @@ rQa
 fCC
 fCC
 fCC
-fCC
-fCC
+ocv
+neC
 eey
 yig
 jrI
@@ -64872,8 +64902,8 @@ lta
 uDf
 uDf
 uDf
-uDf
-uDf
+phW
+phW
 wWc
 phW
 phW
@@ -64982,7 +65012,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65041,7 +65071,7 @@ dAA
 iSE
 iSE
 iSE
-sNi
+iSE
 iSE
 iSE
 liC
@@ -65144,7 +65174,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65306,7 +65336,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+lta
 uDf
 uDf
 uDf
@@ -65468,7 +65498,7 @@ eku
 eku
 eku
 eku
-eku
+bWv
 eku
 eku
 eku
@@ -66173,7 +66203,7 @@ uDf
 owQ
 dAA
 iSE
-sNi
+iSE
 iSE
 iSE
 iSE
@@ -69252,7 +69282,7 @@ owQ
 dAA
 iSE
 iSE
-gfD
+iSE
 iSE
 iSE
 iSE
@@ -71841,7 +71871,7 @@ uHV
 crf
 crf
 xlG
-nmi
+xhg
 bsA
 crf
 kGU
@@ -72164,7 +72194,7 @@ wBx
 xBe
 crf
 nmi
-vgU
+vRW
 nmi
 lHb
 crf
@@ -74760,7 +74790,7 @@ owQ
 dAA
 iSE
 iSE
-gfD
+iSE
 iSE
 iSE
 iSE
@@ -76541,7 +76571,7 @@ uDf
 owQ
 dAA
 iSE
-sNi
+iSE
 iSE
 iSE
 iSE
@@ -79458,7 +79488,7 @@ owQ
 dAA
 iSE
 iSE
-gfD
+iSE
 iSE
 iSE
 gfD
@@ -80430,7 +80460,7 @@ owQ
 dAA
 iSE
 iSE
-gfD
+iSE
 iSE
 iSE
 iSE
@@ -83990,9 +84020,9 @@ uDf
 nhY
 iPs
 vRw
-vtF
+jcM
 pgP
-pgP
+gBV
 iUT
 iPs
 faB
@@ -86151,7 +86181,7 @@ uDf
 uDf
 uDf
 uDf
-gGS
+uDf
 uDf
 uDf
 uDf
@@ -86226,6 +86256,7 @@ gGb
 pze
 eAJ
 pze
+pze
 uDf
 uDf
 uDf
@@ -86255,7 +86286,6 @@ uDf
 uDf
 uDf
 uDf
-sAw
 sAw
 nIT
 qqp
@@ -86388,6 +86418,7 @@ acu
 acu
 kAy
 pze
+pze
 uDf
 uDf
 uDf
@@ -86418,8 +86449,7 @@ uDf
 uDf
 uDf
 sAw
-ahF
-roT
+xTr
 kaJ
 rjf
 bXR
@@ -86457,7 +86487,7 @@ bfc
 iSE
 rNL
 gKK
-gKK
+udq
 gKK
 egS
 xHR
@@ -86549,39 +86579,39 @@ tVh
 qpy
 dRv
 xvS
-tVh
-tVh
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
-vDp
 gZo
-roT
+tVh
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+vDp
+lPH
+dde
 mOE
 roT
 qnX
@@ -86742,9 +86772,9 @@ dAA
 dAA
 dAA
 dAA
+sAw
 ncl
-ncl
-ncl
+koI
 qva
 bfi
 sAw
@@ -86903,8 +86933,8 @@ iSE
 iSE
 iSE
 iSE
+iSE
 sAw
-xTr
 nGa
 ncl
 koB
@@ -87040,7 +87070,6 @@ pze
 iSE
 gdA
 xEE
-kXB
 xEE
 xEE
 xEE
@@ -87052,7 +87081,8 @@ xEE
 xEE
 xEE
 xEE
-kXB
+xEE
+xEE
 xEE
 xEE
 xEE
@@ -87065,7 +87095,7 @@ xEE
 xEE
 nlv
 iSE
-sAw
+iSE
 sAw
 sAw
 sAw
@@ -87178,7 +87208,7 @@ vaU
 vaU
 vaU
 vaU
-dkI
+vaU
 vaU
 vaU
 vaU
@@ -87361,7 +87391,7 @@ xEE
 xEE
 xEE
 xEE
-kXB
+xEE
 vaU
 vaU
 vaU
@@ -87393,7 +87423,7 @@ xEE
 xEE
 xEE
 xEE
-kXB
+xEE
 xEE
 xEE
 oET
@@ -87426,7 +87456,7 @@ vaU
 vaU
 vaU
 vaU
-dkI
+vaU
 vaU
 vaU
 vaU
