@@ -48,13 +48,13 @@
 
 	response_help  = "pokes the"
 	response_disarm = "gently pushes aside the"
-	response_harm   = "tries to hurt"
+	response_harm   = "tries to hit"
 
 
 	//pass_flags = PASSTABLE //why? -LO
 
-	melee_damage_lower = 5 //Massive damage reduction, will be balanced with toxin injection/ //Toxin injection does not technically cause damage with these guys. Stomach acid does when they disegage their stomach from their mouths does, but that could be done differently.
-	melee_damage_upper = 10
+	melee_damage_lower = 2 //Massive damage reduction, will be balanced with toxin injection/ //LO-  Made up for in skills. Toxin injection does not technically cause damage with these guys. Stomach acid does when they disegage their stomach from their mouths does, but that could be done differently.
+	melee_damage_upper = 6
 	attacktext = list("clawed") // "You are [attacktext] by the mob!"
 	friendly = list("prods") // "The mob [friendly] the person."
 	attack_armor_pen = 0			// How much armor pen this attack has. //Changed from 40. -Lo
