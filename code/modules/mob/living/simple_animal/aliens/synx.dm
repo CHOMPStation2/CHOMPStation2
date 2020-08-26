@@ -11,9 +11,10 @@
 	icon_dead = "synx_dead"
 
 	var/list/speak = list()
-	var/speak_chance = 10 //MAy have forgotten to readd that.
+	var/speak_chance = 1 //MAy have forgotten to readd that.
 	//Synx speech code overrides normal speech code but is still a x in 200 chance of triggereing, as all mobs do.
 	//VAR$ SETUP
+	//annoying for mob controlled synxes.
 	var/realname = null
 	var/poison_per_bite = 2
 	var/poison_chance = 99.666
@@ -32,9 +33,7 @@
 	maxHealth = 75 //Lowered from 150. 150 is wayyy too high for a noodly stealth predator. - Lo
 	health = 75
 	movement_cooldown = 6
-
 	see_in_dark = 6
-	//stop_when_pulled = 0
 	grab_resist = 2 //slippery. %  grabwill not work. Should be 10-20%. -Lo
 	armor = list(			// will be determined
 				"melee" = 0, //Changed from 20.They don't have scales or armor. -LO
@@ -50,8 +49,6 @@
 	response_disarm = "gently pushes aside the synx, dislodging a clump of bristly hair in your hand. The substance quickly melts upon contact with your sweat."
 	response_harm   = "tries to hit the synx. This tears out an area of fur which firmly melts upon contact, covering you in something sticky."
 
-
-	//pass_flags = PASSTABLE //why? -LO
 
 	melee_damage_lower = 2 //Massive damage reduction, will be balanced with toxin injection/ //LO-  Made up for in skills. Toxin injection does not technically cause damage with these guys. Stomach acid does when they disegage their stomach from their mouths does, but that could be done differently.
 	melee_damage_upper = 6
