@@ -46,9 +46,9 @@
 				"rad" = 50)
 	has_hands = 1
 
-	response_help  = "pokes the"
-	response_disarm = "gently pushes aside the"
-	response_harm   = "tries to hit"
+	response_help  = "pokes the synx, shifting the fur-like bristles on its body."
+	response_disarm = "gently pushes aside the synx, dislodging a clump of bristly hair in your hand. The substance quickly melts upon contact with your sweat."
+	response_harm   = "tries to hit the synx. This tears out an area of fur which firmly melts upon contact, covering you in something sticky."
 
 
 	//pass_flags = PASSTABLE //why? -LO
@@ -209,7 +209,7 @@
 			M.custom_pain("You suddenly lose control over your body!", "You feel paralyzed!", "You can't move!", "You are frozen in place.", "Your muscles do not respond!", "You can't struggle!",60)
 			M.AdjustParalysis(1)
 //		M.add_chemical_effect(CE_STABLE, 15)
-		M.add_chemical_effect(CE_PAINKILLER, 50)
+		M.add_chemical_effect(CE_PAINKILLER, 60)
 		// M.adjustToxLoss(0.4) //Dealing twice of it as tox, even if you have no brute, its not true conversion. Synxchem without stomach shoved out of its mouth isn't going to do tox. -Lo
 	//	M.adjustHalLoss(1) //we do not need halloss as well as paralyze. lo-
 
