@@ -149,7 +149,7 @@
 	//verbs |= /mob/living/proc/disendstomach //to do later: add disendstomach verb and flag to check, also sprites of stomach outside the body.
 	verbs |= /mob/living/simple_mob/proc/contort
 	verbs |= /mob/living/simple_mob/retaliate/synx/proc/sonar_ping
-	verbs |= /mob/living/simple_mob/proc/shred_limb //shredlimb
+	verbs |= /mob/living/simple_mob/proc/shred_limb /shredlimb
 	verbs |= /mob/living/simple_mob/retaliate/synx/proc/disguise
 	verbs |= /mob/living/simple_mob/retaliate/synx/proc/randomspeech
 	realname = name
