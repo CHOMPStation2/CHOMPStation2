@@ -15,6 +15,7 @@
 	//Synx speech code overrides normal speech code but is still a x in 200 chance of triggereing, as all mobs do.
 	//VAR$ SETUP
 	var/realname = null
+	var/speed = victim.get_speed
 	var/poison_per_bite = 2
 	var/poison_chance = 99.666
 	var/poison_type = "synxchem"//inaprovalin, but evil
@@ -31,9 +32,7 @@
 
 	maxHealth = 75 //Lowered from 150. 150 is wayyy too high for a noodly stealth predator. - Lo
 	health = 75
-	//turns_per_move = 5 //Should just affect how often it wanders, subject to change.
-//This var is undefined. I should define it. :/ -Lo	speed = 2
-	movement_cooldown = 5
+	movement_cooldown = 6
 
 	see_in_dark = 6
 	//stop_when_pulled = 0
@@ -48,12 +47,8 @@
 	has_hands = 1
 
 	response_help  = "pokes the"
-
-	// "prods the" "scratches the" "pawbs the" "baps the" "sniffs at" "hisses at"
-
 	response_disarm = "gently pushes aside the"
-
-	//"shoves the" "moves the""bops the" //will be added more for flavor. -Lo
+	response_harm   = "tries to hurt"
 
 
 	//pass_flags = PASSTABLE //why? -LO
@@ -369,13 +364,13 @@
 		status_flags &= ~HIDING
 		reset_plane_and_layer()
 		to_chat(src,"<span class='notice'>You have stopped hiding.</span>")
-		// same as above. I have to define this somehow. :/ - Lo speed = 2
+		movement_cooldown = 3
 	else
 		status_flags |= HIDING
 		layer = HIDING_LAYER //Just above cables with their 2.44
 		plane = OBJ_PLANE
 		to_chat(src,"<span class='notice'>You are now hiding.</span>")
-	//	speed = 4 //ditto //readded this. should be much faster when hiding, pounce and grab. Lo-
+		movement_cooldown = 6
 
 /mob/living/simple_mob/retaliate/synx/proc/disguise()
 	set name = "Toggle Form"
