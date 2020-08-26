@@ -37960,9 +37960,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "wKr" = (
@@ -61030,7 +61027,7 @@ whU
 whU
 liE
 eNq
-mwy
+whU
 whU
 whU
 whU
@@ -61192,8 +61189,8 @@ whU
 whU
 liE
 eNq
-mwy
-mwy
+whU
+whU
 eNq
 whU
 eNq

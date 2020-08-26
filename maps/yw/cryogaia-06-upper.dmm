@@ -154,8 +154,9 @@
 /area/shuttle/excursion)
 "as" = (
 /obj/structure/catwalk,
+/obj/machinery/light/spot/no_nightshift,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/borealis2/outdoors/grounds/tower/northwest)
 "at" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -465,12 +466,8 @@
 	dir = 8;
 	icon_state = "grey_railing0"
 	},
-/obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
-	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/borealis2/outdoors/exterior/upper)
 "bg" = (
 /obj/machinery/light{
 	dir = 8
@@ -605,12 +602,8 @@
 /area/maintenance/auxsolarport)
 "bv" = (
 /obj/structure/catwalk,
-/obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
-	},
-/obj/structure/railing/grey,
-/turf/simulated/open/cryogaia,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "bw" = (
 /obj/machinery/door/firedoor/glass,
@@ -1494,10 +1487,6 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "dr" = (
-/obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
-	},
 /obj/structure/railing/grey{
 	dir = 4;
 	icon_state = "grey_railing0"
@@ -2736,12 +2725,9 @@
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
 "fZ" = (
-/obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
-	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/walkway)
+/area/borealis2/outdoors/grounds/tower/northwest)
 "ga" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
@@ -4580,13 +4566,13 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "jw" = (
-/obj/machinery/space_heater,
-/obj/machinery/firealarm{
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
 	dir = 1;
-	pixel_x = 6;
-	pixel_y = -24
+	icon_state = "grey_railing0"
 	},
-/turf/simulated/floor/tiled/techmaint,
+/obj/machinery/light/spot/no_nightshift,
+/turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "jx" = (
 /turf/simulated/wall/r_wall,
@@ -4838,13 +4824,17 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "jW" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
+	dir = 4;
+	icon_state = "grey_railing0"
+	},
 /obj/structure/railing/grey{
 	dir = 1;
 	icon_state = "grey_railing0"
 	},
-/obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/borealis2/outdoors/grounds/tower/northwest)
 "jX" = (
 /obj/structure/closet/secure_closet/personal/volunteer,
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -5466,13 +5456,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
 "lm" = (
-/obj/structure/catwalk,
-/obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+/obj/machinery/light{
+	dir = 4
 	},
-/obj/machinery/light/spot/no_nightshift,
-/turf/simulated/open/cryogaia,
+/obj/item/device/geiger/wall{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "ln" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -5859,12 +5850,13 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "mb" = (
-/obj/item/device/geiger/wall{
-	dir = 8;
-	pixel_x = 30
+/obj/structure/table/steel,
+/obj/structure/railing/grey{
+	dir = 1;
+	icon_state = "grey_railing0"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/borealis2/outdoors/grounds/tower/northwest)
 "mc" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/folder/yellow,
@@ -6022,9 +6014,19 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "mv" = (
-/obj/structure/catwalk,
-/turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/obj/machinery/light,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
+	dir = 2;
+	listening = 1;
+	name = "Common Channel";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/northwest)
 "mw" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -6557,13 +6559,13 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "nv" = (
-/obj/structure/catwalk,
-/obj/structure/railing/grey{
+/obj/machinery/space_heater,
+/obj/machinery/firealarm{
 	dir = 1;
-	icon_state = "grey_railing0"
+	pixel_x = 6;
+	pixel_y = -24
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
+/turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "nw" = (
 /obj/effect/floor_decal/corner/brown{
@@ -7787,10 +7789,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
 "sX" = (
-/obj/machinery/camera/network/security{
-	c_tag = "Northwest Tower - Upper"
+/obj/structure/catwalk,
+/obj/structure/railing/grey,
+/obj/structure/railing/grey{
+	dir = 8;
+	icon_state = "grey_railing0"
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "sY" = (
 /obj/machinery/light/small{
@@ -8525,16 +8530,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "wH" = (
-/obj/machinery/light,
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 2;
-	listening = 1;
-	name = "Common Channel";
-	pixel_y = -21
+/obj/structure/railing/grey{
+	dir = 8;
+	icon_state = "grey_railing0"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
@@ -8751,10 +8749,9 @@
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
 "xH" = (
-/obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list()
-	},
-/turf/simulated/floor/plating/snow/plating,
+/obj/structure/catwalk,
+/obj/structure/railing/grey,
+/turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "xN" = (
 /obj/structure/cable/heavyduty{
@@ -8767,6 +8764,7 @@
 	dir = 8;
 	icon_state = "grey_railing0"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "xP" = (
@@ -8848,8 +8846,10 @@
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
 "yo" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
+/obj/machinery/door/airlock/glass_external/freezable{
+	req_one_access = list()
+	},
+/turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "ys" = (
 /obj/machinery/door/airlock/glass_security{
@@ -8864,9 +8864,10 @@
 "yv" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
+	dir = 4;
 	icon_state = "grey_railing0"
 	},
+/obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "yw" = (
@@ -9394,9 +9395,16 @@
 /area/chapel/monastery/upper)
 "Bf" = (
 /obj/structure/catwalk,
-/obj/structure/railing/grey,
+/obj/structure/railing/grey{
+	dir = 4;
+	icon_state = "grey_railing0"
+	},
+/obj/structure/railing/grey{
+	dir = 1;
+	icon_state = "grey_railing0"
+	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/borealis2/outdoors/grounds/tower/southwest)
 "Bg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -9818,17 +9826,18 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Di" = (
-/obj/structure/catwalk,
-/obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
-	},
-/obj/structure/railing/grey{
+/obj/item/device/radio/intercom{
+	broadcasting = 0;
 	dir = 1;
-	icon_state = "grey_railing0"
+	listening = 1;
+	name = "Common Channel";
+	pixel_y = 21
 	},
-/turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/southwest)
 "Dl" = (
 /obj/effect/overmap/visitable/sector/cryogaia,
 /turf/simulated/open/cryogaia,
@@ -9842,14 +9851,11 @@
 /area/crew_quarters/medbreak)
 "Do" = (
 /obj/machinery/light{
-	dir = 1
+	dir = 4
 	},
-/obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 1;
-	listening = 1;
-	name = "Common Channel";
-	pixel_y = 21
+/obj/item/device/geiger/wall{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southwest)
@@ -10318,14 +10324,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
-"FK" = (
-/obj/structure/table/steel,
-/obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
 "FL" = (
 /obj/machinery/computer/station_alert/security{
 	dir = 8;
@@ -10623,10 +10621,6 @@
 /area/borealis2/outdoors/grounds/tower/west)
 "HH" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
-	},
-/obj/structure/railing/grey{
 	dir = 1;
 	icon_state = "grey_railing0"
 	},
@@ -10676,18 +10670,6 @@
 "HS" = (
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
-"HT" = (
-/obj/structure/catwalk,
-/obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
-	},
-/obj/machinery/light/spot/no_nightshift{
-	dir = 4;
-	icon_state = "tube1"
-	},
-/turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
 "HV" = (
 /obj/structure/railing/grey{
 	dir = 1;
@@ -11065,10 +11047,13 @@
 /area/security/watchtower)
 "JN" = (
 /obj/structure/catwalk,
-/obj/structure/railing/grey,
 /obj/structure/railing/grey{
 	dir = 8;
 	icon_state = "grey_railing0"
+	},
+/obj/machinery/light/spot/no_nightshift{
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
@@ -11761,14 +11746,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
-"NQ" = (
-/obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
-	},
-/obj/structure/catwalk,
-/turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
 "NR" = (
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 8
@@ -12897,16 +12874,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
-"TC" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/item/device/geiger/wall{
-	dir = 8;
-	pixel_x = 30
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
 "TH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
@@ -13514,9 +13481,6 @@
 	dir = 8;
 	icon_state = "grey_railing0"
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "WV" = (
@@ -13837,11 +13801,9 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
 "Yu" = (
-/obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+/obj/machinery/camera/network/security{
+	c_tag = "Northwest Tower - Upper"
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "Yx" = (
@@ -15266,14 +15228,14 @@ FC
 om
 WS
 bf
-HT
 iS
-iS
-iS
-iS
-HT
 JN
-gv
+iS
+iS
+iS
+iS
+JN
+sX
 gv
 gv
 gv
@@ -15427,15 +15389,15 @@ ro
 FC
 om
 WS
-lm
+WS
+as
 cH
 Yi
 Yi
 Yi
 Yi
 cH
-Bf
-gv
+xH
 gv
 gv
 gv
@@ -15589,15 +15551,15 @@ ro
 om
 om
 om
-yv
+li
+fZ
 Yi
 Lv
 gD
 gD
-FK
+mb
 Yi
-Bf
-gv
+xH
 gv
 gv
 gv
@@ -15751,15 +15713,15 @@ ro
 om
 om
 om
-nv
+li
+bv
 Yi
-sX
 Yu
 xO
 wH
+mv
 cH
-yo
-Op
+fZ
 Op
 Op
 Op
@@ -15866,7 +15828,7 @@ Op
 Op
 pn
 XP
-mb
+mm
 WT
 XV
 ws
@@ -15913,13 +15875,13 @@ ro
 om
 om
 om
-nv
+om
+bv
 Yi
 Lv
 Lv
 Lv
 Lv
-xH
 yo
 fZ
 Rs
@@ -16028,9 +15990,9 @@ Rs
 Rs
 pn
 js
-js
-js
-Do
+Di
+mm
+mm
 wG
 Mj
 xl
@@ -16075,15 +16037,15 @@ FC
 om
 om
 om
-yv
+om
+fZ
 Yi
 Lv
-TC
+lm
 Lv
-jw
+nv
 cH
-Bf
-nQ
+xH
 nQ
 nQ
 nQ
@@ -16189,9 +16151,9 @@ nQ
 nQ
 nQ
 HH
-NQ
-as
-js
+Mj
+mm
+Do
 mm
 UY
 Mj
@@ -16237,15 +16199,15 @@ om
 om
 om
 nQ
-lm
+nQ
+jw
 cH
 Yi
 cH
 cH
 cH
 cH
-Bf
-nQ
+xH
 nQ
 nQ
 nQ
@@ -16350,9 +16312,9 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-jW
+xm
+js
+Mj
 js
 XP
 Mj
@@ -16399,15 +16361,15 @@ om
 om
 om
 nQ
-Di
-uS
-uS
-uS
-uS
-uS
-uS
-bv
 nQ
+jW
+uS
+uS
+uS
+uS
+uS
+uS
+yv
 nQ
 nQ
 nQ
@@ -16512,8 +16474,8 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
+Bf
+Rt
 dr
 pn
 pn
@@ -38058,7 +38020,7 @@ Op
 Op
 Op
 Op
-mv
+kI
 lV
 SZ
 MB
@@ -38220,7 +38182,7 @@ Rs
 Rs
 Rs
 Rs
-mv
+kI
 no
 bk
 nh
