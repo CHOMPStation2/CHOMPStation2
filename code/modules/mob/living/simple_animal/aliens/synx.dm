@@ -32,7 +32,7 @@
 	maxHealth = 75 //Lowered from 150. 150 is wayyy too high for a noodly stealth predator. - Lo
 	health = 75
 	//turns_per_move = 5 //Should just affect how often it wanders, subject to change.
-	speed = 2
+//This var is undefined. I should define it. :/ -Lo	speed = 2
 	movement_cooldown = 5
 
 	see_in_dark = 6
@@ -47,8 +47,13 @@
 				"rad" = 50)
 	has_hands = 1
 
-	response_help  = "pokes the" "prods the" "scratches the" "pawbs the" "baps the" "sniffs at" "hisses at"
-	response_disarm = "gently pushes aside the" "shoves the" "moves the""bops the" //added more for flavor. -Lo
+	response_help  = "pokes the"
+
+	// "prods the" "scratches the" "pawbs the" "baps the" "sniffs at" "hisses at"
+
+	response_disarm = "gently pushes aside the"
+
+	//"shoves the" "moves the""bops the" //will be added more for flavor. -Lo
 
 
 	//pass_flags = PASSTABLE //why? -LO
@@ -203,9 +208,9 @@
 /datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		if(prob(8))
-			M.custom_pain("You feel no pain despite the clear signs of damage to your body!" "You feel numb!" "You feel dizzy and heavy." "You feel strange!",60)
+			M.custom_pain("You feel no pain despite the clear signs of damage to your body!", "You feel numb!", "You feel dizzy and heavy.", "You feel strange!",60)
 		if(prob(2))
-			M.custom_pain("You suddenly lose control over your body!" "You feel paralyzed!" "You can't move!" "You are frozen in place." "Your muscles do not respond!" "You can't struggleZ",60)
+			M.custom_pain("You suddenly lose control over your body!", "You feel paralyzed!", "You can't move!", "You are frozen in place.", "Your muscles do not respond!", "You can't struggle!",60)
 			M.AdjustParalysis(1)
 //		M.add_chemical_effect(CE_STABLE, 15)
 		M.add_chemical_effect(CE_PAINKILLER, 50)
@@ -270,23 +275,22 @@
 		//Since Halloss is not "real" damage this should not cause death
 */
 
- /datum/reagent/inaprovaline/synxchem/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(alien != IS_DIONA)
-		M.adjustHalLoss(-3)//im too nice
-		M.adjustToxLoss(0.4)
 		M.make_dizzy(10)
 		if(prob(5))
 			M.AdjustStunned(1)
 		if(prob(2))
 			M.AdjustParalysis(1)
 
+
 /datum/reagent/inaprovaline/synxchem/holo/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	return
 
 /datum/reagent/inaprovaline/synxchem/clown/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	return
-	*/
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -294,8 +298,11 @@
 //////////////////////////////////////////////////////////////////////////////////////
 // We should have this. Close contact with synxes causes their fur to shed off, melting into an adhesive. Though, let's mess with this. It should be mostly for flavor.
 //I AM A LITTLE CONFUSED ON WHAT THIS DOES.I gotta test it. It should maybe make the person who hit stop for 1 second.
+//DoPunch is undefined. Gotta figure this out.
 
-/mob/living/simple_mob/retaliate/synx/DoPunch(var/atom/A)
+
+
+/* /mob/living/simple_mob/retaliate/synx/DoPunch(var/atom/A)
 	. = ..()
 	if(.) // If we succeeded in hitting.
 		if(isliving(A))
@@ -303,10 +310,8 @@
 
 			if(prob(forcefeedchance))//Forcefeeding code
 				L.Weaken(2)
-				stop_automated_movement = 1
-				src.feed_self_to_grabbed(src,L)
 				update_icon()
-				stop_automated_movement = 0
+
 
 			if(L.reagents)
 				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
@@ -315,6 +320,7 @@
 					if(prob(poison_chance))
 						to_chat(L, "<span class='warning'>You feel a strange substance on you.</span>")
 						L.reagents.add_reagent(poison_type, poison_per_bite)
+*/
 
 
 /mob/living/simple_mob/retaliate/synx/hear_say(message,verb,language,fakename,isItalics,var/mob/living/speaker)
@@ -363,13 +369,13 @@
 		status_flags &= ~HIDING
 		reset_plane_and_layer()
 		to_chat(src,"<span class='notice'>You have stopped hiding.</span>")
-		speed = 2
+		// same as above. I have to define this somehow. :/ - Lo speed = 2
 	else
 		status_flags |= HIDING
 		layer = HIDING_LAYER //Just above cables with their 2.44
 		plane = OBJ_PLANE
 		to_chat(src,"<span class='notice'>You are now hiding.</span>")
-		speed = 4 //readded this. should be much faster when hiding, pounce and grab. Lo-
+	//	speed = 4 //ditto //readded this. should be much faster when hiding, pounce and grab. Lo-
 
 /mob/living/simple_mob/retaliate/synx/proc/disguise()
 	set name = "Toggle Form"
