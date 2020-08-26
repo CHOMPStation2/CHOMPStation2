@@ -54,6 +54,8 @@
 
 	melee_damage_lower = 5 //Massive damage reduction, will be balanced with toxin injection/ //Toxin injection does not technically cause damage with these guys. Stomach acid does when they disegage their stomach from their mouths does, but that could be done differently.
 	melee_damage_upper = 10
+	var/list/attacktext = list("clawed" "bit" "slashed" "mauled" "slapped") // "You are [attacktext] by the mob!"
+	var/list/friendly = list("nuzzles") // "The mob [friendly] the person."
 	attack_armor_pen = 0			// How much armor pen this attack has. //Changed from 40. -Lo
 	attack_sharp = 1
 	attack_edge = 1
@@ -74,6 +76,8 @@
 	swallowTime = 6 SECONDS //Enter the eel you nerd
 
 //Shouldn't be affected by lack of atmos, it's a space eel. //nah lets give him some temperature
+
+  grab_resist = 2 //slippery. %  grabwill not work. Should be 10-20%. -Lo
 	minbodytemp = 223		//Below -50 Degrees Celcius
 	maxbodytemp = 323		//Above 50 Degrees Celcius
 	min_oxy = 0
@@ -153,8 +157,6 @@
 	voices += "Unidentifiable Voice"
 	speak += "Who is there?"
 	speak += "What is that thing?!"
-
-
 
 //////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SPECIAL ITEMS/REAGENTS !!!! ////////////////////////////
