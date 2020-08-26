@@ -459,8 +459,8 @@
 	if(!heard_something)
 		to_chat(src, "<span class='notice'>You hear no movement but your own.</span>")
 
-/mob/living/simple_mob/proc/disendstomach() //Original code for disendedstomach burn damage.
-*/
+///mob/living/simple_mob/proc/disendstomach() //Original code for disendedstomach burn damage.
+//
 
 ////////////////////////////////////////
 ////////////////PET VERSION/////////////
