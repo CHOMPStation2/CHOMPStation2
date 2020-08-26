@@ -453,14 +453,22 @@
 
 
 ///mob/living/simple_mob/proc/disendstomach() //Original code for disendedstomach burn damage.
-//
+//lets see how this works.
 
 /mob/living/simple_mob/retaliate/synx/proc/disend_stomach()
 set name = "Disend Stomach"
 set desc = "Pushes your stomach through your face, making your attacks do additional burn damage at the cost of your food.."
 set category = "Abilities"
 
+	if(src.vore_active = 1
+		vore_escape_chance = 100) //purge whatever's in there.
 
+		set.src melee_damage_lower = 5 //This is their main means of self defense. Hurts more! -Lo
+		set.src melee_damage_upper = 12
+		set.src attacktext = list("smothered") // "You are [attacktext] by the mob!" BELLY IS OUT.
+		set.src attack_armor_pen = 5			//This acid is STRONG! -Lo
+		set.src attack_sharp = 0
+		set.src attack_edge = 0
 
 
 ////////////////////////////////////////
