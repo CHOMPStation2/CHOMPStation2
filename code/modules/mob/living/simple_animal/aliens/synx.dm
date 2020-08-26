@@ -35,6 +35,7 @@
 
 	see_in_dark = 6
 	//stop_when_pulled = 0
+	grab_resist = 2 //slippery. %  grabwill not work. Should be 10-20%. -Lo
 	armor = list(			// will be determined
 				"melee" = 0, //Changed from 20.They don't have scales or armor. -LO
 				"bullet" = 0,
@@ -77,7 +78,6 @@
 
 //Shouldn't be affected by lack of atmos, it's a space eel. //nah lets give him some temperature
 
-	grab_resist = 2 //slippery. %  grabwill not work. Should be 10-20%. -Lo
 	minbodytemp = 223		//Below -50 Degrees Celcius
 	maxbodytemp = 323		//Above 50 Degrees Celcius
 	min_oxy = 0
