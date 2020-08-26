@@ -14,7 +14,7 @@
 	var/speak_chance = 1 //MAy have forgotten to readd that.
 	//Synx speech code overrides normal speech code but is still a x in 200 chance of triggereing, as all mobs do.
 	//VAR$ SETUP
-	//annoying for mob controlled synxes.
+	//annoying for player controlled synxes.
 	var/realname = null
 	var/poison_per_bite = 2
 	var/poison_chance = 99.666
@@ -454,6 +454,13 @@
 
 ///mob/living/simple_mob/proc/disendstomach() //Original code for disendedstomach burn damage.
 //
+
+/mob/living/simple_mob/retaliate/synx/proc/disend_stomach()
+set name = "Disend Stomach"
+set desc = "Pushes your stomach through your face, making your attacks do additional burn damage at the cost of your food.."
+set category = "Abilities"
+
+
 
 
 ////////////////////////////////////////
