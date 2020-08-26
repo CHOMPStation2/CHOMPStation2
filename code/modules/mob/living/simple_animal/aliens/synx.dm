@@ -292,11 +292,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// PASSIVE POWERS!!!! /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
-// We should have this. Close contact with synxes causes their fur to shed off, melting into an adhesive. Though, let's mess with this. It should be mostly for flavor.
-//I AM A LITTLE CONFUSED ON WHAT THIS DOES.I gotta test it. It should maybe make the person who hit stop for 1 second.
-//DoPunch is undefined. Gotta figure this out.
-
-
+// nevermind. I added any roleplay flavor weird fur mechanics to happen when you touch or attack the synx.
 
 /* /mob/living/simple_mob/retaliate/synx/DoPunch(var/atom/A)
 	. = ..()
@@ -307,7 +303,6 @@
 			if(prob(forcefeedchance))//Forcefeeding code
 				L.Weaken(2)
 				update_icon()
-
 
 			if(L.reagents)
 				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
@@ -716,9 +711,10 @@
 	name = "This is synxes"
 
 /obj/random/mob/synx/item_to_spawn()
-	return pick(prob(666);/mob/living/simple_mob/retaliate/synx/pet/greed,
+	return pick(prob(66);/mob/living/simple_mob/retaliate/synx/pet/greed,
 		//prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,//He's crew so let's remove this
-		prob(333);/mob/living/simple_mob/retaliate/synx/pet/holo,)
+		prob(33);/mob/living/simple_mob/retaliate/synx/pet/holo,)
+		prob(50);/mob/living/simple_mob/retaliate/synx,) //normal eel boyo.
 
 ////////////////////////////////////////////////////////////////////////////
 //////////////////////////NOT A SYNX///////but looks kinda like one/////////
