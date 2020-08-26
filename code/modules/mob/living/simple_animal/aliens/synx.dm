@@ -15,7 +15,6 @@
 	//Synx speech code overrides normal speech code but is still a x in 200 chance of triggereing, as all mobs do.
 	//VAR$ SETUP
 	var/realname = null
-	var/speed = victim.get_speed
 	var/poison_per_bite = 2
 	var/poison_chance = 99.666
 	var/poison_type = "synxchem"//inaprovalin, but evil
