@@ -490,8 +490,8 @@
 	item_state = "tesh_beltcloak_atmos"
 
 /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cmo
-	name = "chief medical belted officer cloak"
-	desc = "A soft Teshari cloak made the Cheif Medical Officer"
+	name = "chief medical officer belted  cloak"
+	desc = "A soft Teshari cloak made the Chief Medical Officer"
 	icon_state = "tesh_beltcloak_cmo"
 	item_state = "tesh_beltcloak_cmo"
 
