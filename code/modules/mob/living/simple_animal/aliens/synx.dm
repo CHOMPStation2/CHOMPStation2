@@ -454,12 +454,12 @@
 
 
 
-///////
+///////TODO
 
-/mob/living/simple_mob/proc/disend_stomach()
-	set name = "Disend Stomach"
-	set desc = "Allows you to disend your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
-	set category = "Abilities"
+///mob/living/simple_mob/proc/disend_stomach()
+	//set name = "Disend Stomach"
+	//set desc = "Allows you to disend your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
+	//set category = "Abilities"
 
 
 ////////////////////////////////////////
