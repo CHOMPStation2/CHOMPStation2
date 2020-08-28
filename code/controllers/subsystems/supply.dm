@@ -205,8 +205,8 @@ SUBSYSTEM_DEF(supply)
 			else if(islist(SP.access) && SP.one_access)
 				var/list/L = SP.access // access var is a plain var, we need a list
 				A.req_one_access = L.Copy()
-				if(A.req_access)
-					A.req_access.Cut()
+				if(A.req_access) //Chompstation Edit (TODO: Figure out why the fuck this works for others but not us)
+					A.req_access.Cut()	//Chompstation Edit
 			else if(islist(SP.access) && !SP.one_access)
 				var/list/L = SP.access
 				A.req_access = L.Copy()
