@@ -18,7 +18,8 @@
 	//uses ~30% power to stay warm
 	optimal_power = 0.8 // Oven cooks .2 faster than the default speed.
 
-	light_x = 2
+	light_x = 3
+	light_y = 4
 	max_contents = 5
 	container_type = /obj/item/weapon/reagent_containers/cooking_container/oven
 
@@ -81,7 +82,7 @@
 		cooking = TRUE
 	else
 		open = TRUE
-		loss = (heating_power / resistance) * 4
+		loss = (heating_power / resistance) * 2 // Halve oven heat loss.
 		//When the oven door is opened, heat is lost MUCH faster and you stop cooking (because the door is open)
 		cooking = FALSE
 

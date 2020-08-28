@@ -185,6 +185,7 @@
 /area/surface/outpost/mining_main/gen_room
 	name = "North Mining Generator Room"
 	icon_state = "substation"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
 
 /area/surface/outpost/mining_main/emergencystorage
 	name = "\improper North Mining Emergency Storage"
@@ -219,6 +220,7 @@
 	name = "\improper Xenoresearch SMES Maintenance"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
 
 /area/surface/outpost/research/xenoresearch/emergencystorage
 	name = "\improper Xenoresearch Emergency Storage"
@@ -259,6 +261,7 @@
 	name = "\improper Xenoarcheology SMES Maintenance"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
 
 /area/surface/outpost/research/xenoarcheology/emergencystorage
 	name = "\improper Xenoarcheology Emergency Storage"
@@ -310,7 +313,7 @@
 /area/surface/outpost/main/gen_room
 	name = "\improper Main Outpost SMES"
 	icon_state = "substation"
-	ambience = AMBIENCE_ENGINEERING
+	ambience = AMBIENCE_SUBSTATION //CHOMP Edit
 
 /area/surface/outpost/main/gen_room/smes_left
 	name = "\improper Main Outpost Left Wing SMES"
@@ -320,7 +323,7 @@
 
 /area/surface/outpost/main/gen_room/smes
 	name = "\improper Main Outpost Dorm SMES"
-	icon_state = "substation"
+	icon_state = "substation"										
 
 /area/surface/outpost/main/pool
 	name = "\improper Main Outpost Pool"
@@ -527,7 +530,7 @@
 /area/surface/outpost/security/smes
 	name = "\improper Security Outpost SMES"
 	icon_state = "substation"
-	ambience = AMBIENCE_ENGINEERING
+	ambience = AMBIENCE_SUBSTATION //CHOMP Edit
 
 //Mining Station
 
@@ -544,6 +547,7 @@
 /area/outpost/mining_station/gen_station
 	name = "Mining Station Generator Room"
 	icon_state = "substation"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Edit
 
 /area/outpost/mining_station/crew_area
 	name = "Mining Station Crew Area"
@@ -875,6 +879,7 @@
 
 /area/maintenance/substation/atmospherics
 	name = "Atmospherics Substation"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
 
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
@@ -882,6 +887,7 @@
 
 /area/maintenance/substation/central // n/a
 	name = "Central Substation"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
 
 //CHOMPStation Edit Start TFF 6/2/20 - Added substation
 
@@ -889,6 +895,7 @@
 	name = "Substation"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
 
 //CHOMPStation Edit End
 
@@ -1816,6 +1823,7 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/surface/outpost/fishing/smes
 	name = "\improper Fishing SMES Maintenance"
 	icon_state = "substation"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
 
 //Shuttle 3 CHOMPedit
 

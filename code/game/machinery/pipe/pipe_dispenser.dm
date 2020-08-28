@@ -160,6 +160,9 @@ Nah
 	if((. = ..()))
 		return
 	if(href_list["dmake"])
+		if(unwrenched || !usr.canmove || usr.stat || usr.restrained() || !in_range(loc, usr))
+			usr << browse(null, "window=pipedispenser")
+			return
 		if(!wait)
 			var/ptype = text2num(href_list["dmake"])
 			var/pdir = (href_list["dir"] ? text2num(href_list["dir"]) : NORTH)

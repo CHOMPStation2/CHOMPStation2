@@ -12,7 +12,6 @@
 		/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline = 2,
 		/obj/item/weapon/reagent_containers/glass/bottle/antitoxin = 2)
 
-
 /obj/structure/closet/secure_closet/medical2
 	name = "anesthetics closet"
 	desc = "Used to knock people out."

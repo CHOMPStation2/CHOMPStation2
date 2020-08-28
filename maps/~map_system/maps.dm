@@ -210,8 +210,8 @@ var/list/all_maps = list()
 		//Get what sector we're in
 		var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
 		if(!istype(O))
-			//Anything in multiz then (or just themselves)
-			return GetConnectedZlevels(srcz)
+			//Not in a sector, just the passed zlevel
+			return list(srcz)
 
 		//Just the sector we're in
 		if(om_range == -1)
@@ -233,9 +233,9 @@ var/list/all_maps = list()
 		//If in station levels, return station levels
 		else if (srcz in station_levels)
 			return station_levels.Copy()
-		//Anything in multiz then (or just themselves)
+		//Just give them back their zlevel
 		else
-			return GetConnectedZlevels(srcz)
+			return list(srcz)
 
 /datum/map/proc/get_zlevel_name(var/index)
 	var/datum/map_z_level/Z = zlevels["[index]"]

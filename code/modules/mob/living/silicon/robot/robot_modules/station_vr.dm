@@ -12,7 +12,8 @@
 					LANGUAGE_CANILUNZT	= 0,
 					LANGUAGE_ECUREUILIAN= 0,
 					LANGUAGE_DAEMON		= 0,
-					LANGUAGE_ENOCHIAN	= 0
+					LANGUAGE_ENOCHIAN	= 0,
+					LANGUAGE_DRUDAKAR	= 0
 					)
 	var/vr_sprites = list()
 	var/pto_type = null
@@ -54,7 +55,8 @@
 					LANGUAGE_CANILUNZT	= 1,
 					LANGUAGE_ECUREUILIAN= 1,
 					LANGUAGE_DAEMON		= 1,
-					LANGUAGE_ENOCHIAN	= 1
+					LANGUAGE_ENOCHIAN	= 1,
+					LANGUAGE_DRUDAKAR	= 1
 					)
 
 /hook/startup/proc/robot_modules_vr()
@@ -187,6 +189,7 @@
 					"K9 Alternative" = "k92",
 					"Secborg model V-2" = "secborg",
 					"Borgi" = "borgi-sec",
+					"Otieborg" = "oties",
 					"Secborg model V-3" = "SecVale" //CHOMPEdit
 					)
 	channels = list("Security" = 1)
@@ -398,8 +401,8 @@
 	name = "Custodial Hound module"
 	sprites = list(
 					"Custodial Hound" = "scrubpup",
-					"Custodial Doggo" = "J9",
-					"Borgi" = "borgi-jani"
+					"Borgi" = "borgi-jani",
+					"Otieborg" = "otiej"
 					)
 	channels = list("Service" = 1)
 	pto_type = PTO_CIVILIAN

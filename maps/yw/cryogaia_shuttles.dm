@@ -54,3 +54,9 @@
 	landmark_tag = "cryogaia_security_hangar"
 	base_turf = /turf/simulated/floor/reinforced
 	base_area = /area/security/hangar
+
+/obj/effect/shuttle_landmark/premade/mining/cryogaia
+	name = "NSB Cryogaia (Belter Dock)"
+	landmark_tag = "belter_colony"
+	base_turf = /turf/simulated/floor/reinforced
+	base_area = /area/quartermaster/miningdock

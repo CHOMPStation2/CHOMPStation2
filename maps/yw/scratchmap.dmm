@@ -795,7 +795,7 @@
 "po" = (/obj/structure/cable{icon_state = "1-2"},/turf/simulated/floor/plating,/area/maintenance/lowfloor1)
 "pp" = (/obj/item/weapon/caution/cone,/turf/simulated/floor,/area/maintenance/lowfloor1)
 "pq" = (/obj/item/weapon/broken_bottle,/turf/simulated/floor,/area/maintenance/lowfloor1)
-"pr" = (/obj/structure/table/woodentable,/obj/item/weapon/material/ashtray/plastic,/obj/item/weapon/cigbutt/cigarbutt,/obj/random/maintenance/clean,/obj/random/maintenance/clean,/turf/simulated/floor,/area/maintenance/lowfloor1)
+"pr" = (/obj/structure/table/woodentable,/obj/item/weapon/material/ashtray/plastic,/obj/item/trash/cigbutt/cigarbutt,/obj/random/maintenance/clean,/obj/random/maintenance/clean,/turf/simulated/floor,/area/maintenance/lowfloor1)
 "ps" = (/obj/machinery/space_heater,/turf/simulated/floor/plating,/area/maintenance/lowfloor1)
 "pt" = (/obj/machinery/door/airlock/maintenance/common,/turf/simulated/floor,/area/maintenance/security_lower)
 "pu" = (/turf/simulated/floor/plating,/area/hallway/lower/fore)

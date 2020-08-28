@@ -313,6 +313,11 @@ var/global/list/light_type_cache = list()
 	light_type = /obj/item/weapon/light/tube/large
 	shows_alerts = FALSE	//VOREStation Edit
 
+//YW ADDITION START
+/obj/machinery/light/spot/no_nightshift
+	nightshift_allowed = FALSE
+//YW ADDITION END
+
 /obj/machinery/light/spot/flicker
 	auto_flicker = TRUE
 
