@@ -452,23 +452,14 @@
 		to_chat(src, "<span class='notice'>You hear no movement but your own.</span>")
 
 
-///mob/living/simple_mob/proc/disendstomach() //Original code for disendedstomach burn damage.
-//lets see how this works.
 
-/mob/living/simple_mob/retaliate/synx/proc/disend_stomach()
-set name = "Disend Stomach"
-set desc = "Pushes your stomach through your face, making your attacks do additional burn damage at the cost of your food.."
-set category = "Abilities"
 
-	if(src.vore_active = 1
-		vore_escape_chance = 100) //purge whatever's in there.
+///////
 
-		set.src melee_damage_lower = 5 //This is their main means of self defense. Hurts more! -Lo
-		set.src melee_damage_upper = 12
-		set.src attacktext = list("smothered") // "You are [attacktext] by the mob!" BELLY IS OUT.
-		set.src attack_armor_pen = 5			//This acid is STRONG! -Lo
-		set.src attack_sharp = 0
-		set.src attack_edge = 0
+/mob/living/simple_mob/proc/disend_stomach()
+	set name = "Disend Stomach"
+	set desc = "Allows you to disend your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
+	set category = "Abilities"
 
 
 ////////////////////////////////////////
@@ -725,7 +716,7 @@ set category = "Abilities"
 /obj/random/mob/synx/item_to_spawn()
 	return pick(prob(66);/mob/living/simple_mob/retaliate/synx/pet/greed,
 		//prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,//He's crew so let's remove this
-		prob(33);/mob/living/simple_mob/retaliate/synx/pet/holo,)
+		prob(33);/mob/living/simple_mob/retaliate/synx/pet/holo,
 		prob(50);/mob/living/simple_mob/retaliate/synx,) //normal eel boyo.
 
 ////////////////////////////////////////////////////////////////////////////
