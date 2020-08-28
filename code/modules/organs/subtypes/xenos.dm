@@ -213,3 +213,4 @@
 	cannot_amputate = 1
 	thick_skin = TRUE
 	eye_icon = "blank_eyes"
+	var/vision_flags = SEE_MOBS|SEE_TURFS
