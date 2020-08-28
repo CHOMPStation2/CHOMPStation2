@@ -298,8 +298,7 @@
 	var/trans = reagents.trans_to_mob(target, syringestab_amount_transferred, CHEM_BLOOD)
 	if(isnull(trans)) trans = 0
 	add_attack_logs(user,target,"Stabbed with [src.name] containing [contained], trasferred [trans] units")
-	if(!issilicon(user))
-		break_syringe(target, user)
+	break_syringe(target, user)
 
 /obj/item/weapon/reagent_containers/syringe/proc/break_syringe(mob/living/carbon/target, mob/living/carbon/user)
 	desc += " It is broken."
