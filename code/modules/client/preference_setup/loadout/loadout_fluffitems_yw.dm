@@ -635,7 +635,13 @@
 	description = "You're such a goggle head!"
 	ckeywhitelist = list("kbraid")
 	character_name = list("Eili")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
-
+//Braid
+/datum/gear/fluff/kbraidgoggles
+	path = /obj/item/clothing/glasses/fluff/avigoggles_yw
+	display_name = "Braid uniform"
+	description = "The uniform of an Avali named Braid"
+	ckeywhitelist = list("kbraid")
+	character_name = list("braid")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 //  L CKEYS
 
 //lawst

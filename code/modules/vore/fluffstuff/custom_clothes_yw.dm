@@ -1706,7 +1706,6 @@
 	body_parts_covered = UPPER_TORSO|ARMS|FEET
 	hoodtype = /obj/item/clothing/head/hood/kbraid_hood
 	action_button_name = "Toggle Headphones"
-	armor = list(melee = 5, bullet = 5, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/head/hood/kbraid_hood
 	name = "Earphones"
