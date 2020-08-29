@@ -11,11 +11,12 @@
 	icon_dead = "synx_dead"
 
 	var/list/speak = list()
-	var/speak_chance = 10 //MAy have forgotten to readd that.
+	var/speak_chance = 1 //MAy have forgotten to readd that.
 	//Synx speech code overrides normal speech code but is still a x in 200 chance of triggereing, as all mobs do.
 	//VAR$ SETUP
+	//annoying for player controlled synxes.
 	var/realname = null
-	var/poison_per_bite = 5
+	var/poison_per_bite = 2
 	var/poison_chance = 99.666
 	var/poison_type = "synxchem"//inaprovalin, but evil
 	var/transformed_state = "synx_transformed"
@@ -27,39 +28,37 @@
 	faction = "Synx"
 
 	//intelligence_level = SA_ANIMAL
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	ai_holder_type = null //added for player controlled variant only.
 
-	maxHealth = 150
-	health = 150
-	//turns_per_move = 5 //Should just affect how often it wanders, subject to change.
-	//speed = 2 //Re enabled custom speed
-	movement_cooldown = 5
-
+	maxHealth = 75 //Lowered from 150. 150 is wayyy too high for a noodly stealth predator. - Lo
+	health = 75
+	movement_cooldown = 6
 	see_in_dark = 6
-	//stop_when_pulled = 0
+	grab_resist = 2 //slippery. %  grabwill not work. Should be 10-20%. -Lo
 	armor = list(			// will be determined
-				"melee" = 20,
+				"melee" = 0, //Changed from 20.They don't have scales or armor. -LO
 				"bullet" = 0,
 				"laser" = 0,
 				"energy" = 0,
-				"bomb" = 10,
-				"bio" = 100,
-				"rad" = 100)
+				"bomb" = 0, //Same as above. -LO
+				"bio" = 50, //Nerfed from 100. They should have some protection against these things, but 100 is pushing it. -Lo
+				"rad" = 50)
 	has_hands = 1
 
-	response_help  = "pets the"
-	response_disarm = "gently pushes aside the"
+	response_help  = "pokes the synx, shifting the fur-like bristles on its body."
+	response_disarm = "gently pushes aside the synx, dislodging a clump of bristly hair in your hand. The substance quickly melts upon contact with your sweat."
+	response_harm   = "tries to hit the synx. This tears out an area of fur which firmly melts upon contact, covering you in something sticky."
 
 
-	pass_flags = PASSTABLE
-
-	melee_damage_lower = 5 //Massive damage reduction, will be balanced with toxin injection
-	melee_damage_upper = 5
-	attack_armor_pen = 40			// How much armor pen this attack has.
+	melee_damage_lower = 2 //Massive damage reduction, will be balanced with toxin injection/ //LO-  Made up for in skills. Toxin injection does not technically cause damage with these guys. Stomach acid does when they disegage their stomach from their mouths does, but that could be done differently.
+	melee_damage_upper = 6
+	attacktext = list("clawed") // "You are [attacktext] by the mob!"
+	friendly = list("prods") // "The mob [friendly] the person."
+	attack_armor_pen = 0			// How much armor pen this attack has. //Changed from 40. -Lo
 	attack_sharp = 1
 	attack_edge = 1
 
-//Vore stuff
+//Vore stuff//leaving most of this here even though its no going to be an AI controlled variant.
 	vore_active = 1
 	vore_capacity = 2
 	vore_pounce_chance = 50
@@ -75,6 +74,7 @@
 	swallowTime = 6 SECONDS //Enter the eel you nerd
 
 //Shouldn't be affected by lack of atmos, it's a space eel. //nah lets give him some temperature
+
 	minbodytemp = 223		//Below -50 Degrees Celcius
 	maxbodytemp = 323		//Above 50 Degrees Celcius
 	min_oxy = 0
@@ -119,8 +119,8 @@
 	..()
 	var/obj/belly/B = vore_selected
 	B.desc    = "The synx eagerly swallows you, taking you from its gullet into its long, serpentine stomach. The internals around you greedily press into your from all sides, keeping you coated in a slick coat of numbing fluids..."
-	B.digest_burn = 1
-	B.digest_brute = 1
+	B.digest_burn = 2
+	B.digest_brute = 0 //no brute should be done. ramping up burn as a result. this is acid. -Lo
 	B.emote_lists[DM_HOLD] = list(
 	"Your taut prison presses and pads into your body, the synx squeezing around you almost constrictingly tight while the rolling pulses of muscle around you keep your squirms well-contained.",
 	"You can feel parts of you sink and press into the squishy stomach walls as the synx's gut seems to relax, the wet ambience of its stomach muffling the parasite's various heartbeats.",
@@ -139,12 +139,15 @@
 	"The synx's body gleefully takes what's left of your life, Asteri's usually-repressed sadism overwhelmed with a sinister satisfaction in snuffing you out as your liquefied remains gush into a bit more heft on the parasite's emaciated frame.",
 	)
 
-/mob/living/simple_mob/retaliate/synx/New()
+/mob/living/simple_mob/retaliate/synx/New() //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
+//some things should be here that arent tho.
 	..()
 	verbs |= /mob/living/proc/ventcrawl
+	//verbs |= /mob/living/proc/disendstomach //to do later: add disendstomach verb and flag to check, also sprites of stomach outside the body.
 	verbs |= /mob/living/simple_mob/proc/contort
+	verbs |= /mob/living/simple_mob/retaliate/synx/proc/sonar_ping
+	verbs |= /mob/living/proc/shred_limb
 	verbs |= /mob/living/simple_mob/retaliate/synx/proc/disguise
-	//verbs += /mob/living/simple_mob/retaliate/synx/proc/honk
 	verbs |= /mob/living/simple_mob/retaliate/synx/proc/randomspeech
 	realname = name
 	voices += "Garbled voice"
@@ -154,7 +157,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SPECIAL ITEMS/REAGENTS !!!! ////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////// //keeping most of these the same except the stuff that apply to the standard synx. -lo
 /datum/seed/hardlightseed/
 	name = "Type NULL Hardlight Generator"
 	seed_name = "Biomechanical Hardlight generator seed"
@@ -197,16 +200,15 @@
 
 /datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		if(prob(5))
-			M.custom_pain("You feel no pain despite the clear signs of damage to your body!",60)
+		if(prob(8))
+			M.custom_pain("You feel no pain despite the clear signs of damage to your body!", "You feel numb!", "You feel dizzy and heavy.", "You feel strange!",60)
 		if(prob(2))
-			M.custom_pain("You suddenly lose control over your body!",60)
+			M.custom_pain("You suddenly lose control over your body!", "You feel paralyzed!", "You can't move!", "You are frozen in place.", "Your muscles do not respond!", "You can't struggle!",60)
 			M.AdjustParalysis(1)
-		M.add_chemical_effect(CE_STABLE, 15)
-		M.add_chemical_effect(CE_PAINKILLER, 50)
-		M.adjustBruteLoss(-0.2)//healing brute
-		M.adjustToxLoss(0.4) //Dealing twice of it as tox, even if you have no brute, its not true conversion.
-		M.adjustHalLoss(1)
+//		M.add_chemical_effect(CE_STABLE, 15)
+		M.add_chemical_effect(CE_PAINKILLER, 60)
+		// M.adjustToxLoss(0.4) //Dealing twice of it as tox, even if you have no brute, its not true conversion. Synxchem without stomach shoved out of its mouth isn't going to do tox. -Lo
+	//	M.adjustHalLoss(1) //we do not need halloss as well as paralyze. lo-
 
 /datum/reagent/inaprovaline/synxchem/holo
 	name = "SX type simulation nanomachines" //Educational!
@@ -249,8 +251,9 @@
 		new /obj/item/weapon/bikehorn(location)
 		M.custom_pain("You suddenly cough up a bikehorn!",60)
 
-/datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien != IS_DIONA)
+  /*why is this in here twice? -Lo
+	/datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+		if(alien != IS_DIONA)
 		if(prob(5))
 			M.custom_pain("You feel no pain despite the clear signs of damage to your body!",60)
 		if(prob(2))
@@ -263,18 +266,17 @@
 		M.adjustHalLoss(1) //dealing 5 times the amount of brute healed as halo, but we cant feel pain yet
 		// ^ I have no idea what this might cause, my ideal plan is that once the pain killer wears off you suddenly collapse;
 		//Since Halloss is not "real" damage this should not cause death
-
+*/
 
 /datum/reagent/inaprovaline/synxchem/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(alien != IS_DIONA)
-		M.adjustHalLoss(-3)//im too nice
-		M.adjustToxLoss(0.4)
 		M.make_dizzy(10)
 		if(prob(5))
 			M.AdjustStunned(1)
 		if(prob(2))
 			M.AdjustParalysis(1)
+
 
 /datum/reagent/inaprovaline/synxchem/holo/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	return
@@ -282,23 +284,23 @@
 /datum/reagent/inaprovaline/synxchem/clown/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	return
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// PASSIVE POWERS!!!! /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
-/*
-/mob/living/simple_mob/retaliate/synx/DoPunch(var/atom/A)
+// nevermind. I added any roleplay flavor weird fur mechanics to happen when you touch or attack the synx.
+
+/* /mob/living/simple_mob/retaliate/synx/DoPunch(var/atom/A)
 	. = ..()
 	if(.) // If we succeeded in hitting.
 		if(isliving(A))
 			var/mob/living/L = A
-			/*
+
 			if(prob(forcefeedchance))//Forcefeeding code
-				L.Weaken(5)
-				stop_automated_movement = 1
-				src.feed_self_to_grabbed(src,L)
+				L.Weaken(2)
 				update_icon()
-				stop_automated_movement = 0
-			*/
+
 			if(L.reagents)
 				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
 				if(L.can_inject(src, null, target_zone))
@@ -307,6 +309,7 @@
 						to_chat(L, "<span class='warning'>You feel a strange substance on you.</span>")
 						L.reagents.add_reagent(poison_type, poison_per_bite)
 */
+
 
 /mob/living/simple_mob/retaliate/synx/hear_say(message,verb,language,fakename,isItalics,var/mob/living/speaker)
 	. = ..()
@@ -354,13 +357,13 @@
 		status_flags &= ~HIDING
 		reset_plane_and_layer()
 		to_chat(src,"<span class='notice'>You have stopped hiding.</span>")
-		//speed = 2
+		movement_cooldown = 3
 	else
 		status_flags |= HIDING
 		layer = HIDING_LAYER //Just above cables with their 2.44
 		plane = OBJ_PLANE
 		to_chat(src,"<span class='notice'>You are now hiding.</span>")
-		//speed = 4
+		movement_cooldown = 6
 
 /mob/living/simple_mob/retaliate/synx/proc/disguise()
 	set name = "Toggle Form"
@@ -397,6 +400,67 @@
 		src.say(pick(speak))
 	spawn(5)
 		name = realname
+
+//lo- procs adjusted to mobs.
+
+/mob/living/simple_mob/retaliate/synx
+	var/next_sonar_ping = 0
+
+/mob/living/simple_mob/retaliate/synx/proc/sonar_ping()
+	set name = "Listen In"
+	set desc = "Allows you to listen in to movement and noises around you."
+	set category = "Abilities"
+
+	if(incapacitated())
+		to_chat(src, "<span class='warning'>You need to recover before you can use this ability.</span>")
+		return
+	if(world.time < next_sonar_ping)
+		to_chat(src, "<span class='warning'>You need another moment to focus.</span>")
+		return
+	if(is_deaf() || is_below_sound_pressure(get_turf(src)))
+		to_chat(src, "<span class='warning'>You are for all intents and purposes currently deaf!</span>")
+		return
+	next_sonar_ping += 10 SECONDS
+	var/heard_something = FALSE
+	to_chat(src, "<span class='notice'>You take a moment to listen in to your environment...</span>")
+	for(var/mob/living/L in range(client.view, src))
+		var/turf/T = get_turf(L)
+		if(!T || L == src || L.stat == DEAD || is_below_sound_pressure(T))
+			continue
+		heard_something = TRUE
+		var/feedback = list()
+		feedback += "<span class='notice'>There are noises of movement "
+		var/direction = get_dir(src, L)
+		if(direction)
+			feedback += "towards the [dir2text(direction)], "
+			switch(get_dist(src, L) / client.view)
+				if(0 to 0.2)
+					feedback += "very close by."
+				if(0.2 to 0.4)
+					feedback += "close by."
+				if(0.4 to 0.6)
+					feedback += "some distance away."
+				if(0.6 to 0.8)
+					feedback += "further away."
+				else
+					feedback += "far away."
+		else // No need to check distance if they're standing right on-top of us
+			feedback += "right on top of you."
+		feedback += "</span>"
+		to_chat(src,jointext(feedback,null))
+	if(!heard_something)
+		to_chat(src, "<span class='notice'>You hear no movement but your own.</span>")
+
+
+
+
+///////TODO
+
+///mob/living/simple_mob/proc/disend_stomach()
+	//set name = "Disend Stomach"
+	//set desc = "Allows you to disend your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
+	//set category = "Abilities"
+
 
 ////////////////////////////////////////
 ////////////////PET VERSION/////////////
@@ -650,15 +714,16 @@
 	name = "This is synxes"
 
 /obj/random/mob/synx/item_to_spawn()
-	return pick(prob(666);/mob/living/simple_mob/retaliate/synx/pet/greed,
+	return pick(prob(66);/mob/living/simple_mob/retaliate/synx/pet/greed,
 		//prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,//He's crew so let's remove this
-		prob(333);/mob/living/simple_mob/retaliate/synx/pet/holo,)
+		prob(33);/mob/living/simple_mob/retaliate/synx/pet/holo,
+		prob(50);/mob/living/simple_mob/retaliate/synx,) //normal eel boyo.
 
 ////////////////////////////////////////////////////////////////////////////
 //////////////////////////NOT A SYNX///////but looks kinda like one/////////
 ////////////////////////////////////////////////////////////////////////////
 /*
-Content relating to the SCP Foundation, including the SCP Foundation logo, is licensed under 
+Content relating to the SCP Foundation, including the SCP Foundation logo, is licensed under
 Creative Commons Sharealike 3.0 and all concepts originate from http://www.scp-wiki.net and its authors.
 This includes the sprites of the below Mob which are based upon SCP 939 and sprited by Riviera (not added yet)
 */
