@@ -1,6 +1,6 @@
 #define MAX_PROGRESS 100
 
-/obj/structure/alien/egg
+/obj/structure/alien/egg //CHOMPedit this entire file is a CHOMPedit
 	desc = "It looks like a weird egg."
 	name = "egg"
 	icon_state = "egg_growing"

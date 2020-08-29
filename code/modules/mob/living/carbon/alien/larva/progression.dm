@@ -1,4 +1,4 @@
-/mob/living/carbon/alien/larva/Stat() //Oh thank god we can see how close we are to full grown now
+/mob/living/carbon/alien/larva/Stat() //CHOMPedit. Oh thank god we can see how close we are to full grown now
 	. = ..()
 	if(. && statpanel("Status"))
 		stat("Growth", "[round(amount_grown)]/[max_grown]")

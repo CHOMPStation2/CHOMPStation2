@@ -1,4 +1,4 @@
-/obj/structure/alien
+/obj/structure/alien ////CHOMPedit This entire file is a CHOMPedit, for new eggs
 	name = "alien thing"
 	desc = "There's something alien about this."
 	icon = 'icons/mob/alien.dmi'

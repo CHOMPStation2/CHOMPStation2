@@ -27,3 +27,5 @@ proc/create_new_xenomorph(var/alien_caste,var/target)
 	faction = "xeno"
 	..(new_loc, SPECIES_XENO_QUEEN)
 
+//CHOMPedit. Removed AddInfectionImages code, due to it being commented out and not used
+

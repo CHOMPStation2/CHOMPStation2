@@ -419,3 +419,5 @@
 		if(0 to 1)
 			visible_message("<span class='alium'>[src.target] begins to crumble under the acid!</span>")
 	spawn(rand(150, 200)) tick()
+
+//CHOMPedit old eggs removed
