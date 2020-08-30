@@ -637,11 +637,11 @@
 	character_name = list("Eili")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 //Braid
 /datum/gear/fluff/kbraidgoggles
-	path = /obj/item/clothing/glasses/fluff/avigoggles_yw
+	path = /obj/item/clothing/suit/storage/hooded/fluff/kbraid
 	display_name = "Braid uniform"
 	description = "The uniform of an Avali named Braid"
 	ckeywhitelist = list("kbraid")
-	character_name = list("braid")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
+	character_name = list("Braid")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 //  L CKEYS
 
 //lawst
