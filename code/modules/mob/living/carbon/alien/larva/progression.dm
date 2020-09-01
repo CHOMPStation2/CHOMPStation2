@@ -1,3 +1,8 @@
+/mob/living/carbon/alien/larva/Stat() //CHOMPedit. Oh thank god we can see how close we are to full grown now
+	. = ..()
+	if(. && statpanel("Status"))
+		stat("Growth", "[round(amount_grown)]/[max_grown]")
+
 /mob/living/carbon/alien/larva/confirm_evolution()
 
 	to_chat(src, "<span class='notice'><b>You are growing into a beautiful alien! It is time to choose a caste.</b></span>")
