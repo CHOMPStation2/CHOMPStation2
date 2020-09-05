@@ -14,10 +14,7 @@
 
 	initial_generic_waypoints = list(
 		"outpost_nw",
-		"outpost_s",
-		"wilderness_ne",
-		"wilderness_nw",
-		"wilderness_sw"
+		"outpost_s"
 	)
 
 /obj/effect/overmap/visitable/planet/Sif/Initialize()
