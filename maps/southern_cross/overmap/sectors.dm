@@ -41,7 +41,7 @@
 	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
 	map_z = list(Z_LEVEL_STATION_ONE, Z_LEVEL_STATION_TWO, Z_LEVEL_STATION_THREE)
 	extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC) // Hopefully temporary, so arrivals announcements work. //CHOMPedit: adds Z_LEVEL_MISC to connect the exploration carrier with the station
-	initial_generic_waypoints = list("stargazer_dock")
+	initial_generic_waypoints = list("stargazer_dock", "d1_aux_a", "d1_aux_b", "d1_aux_c", "d1_aux_d", "d2_w1_a", "d2_w1_c", "d2_w1_e", "d2_w2_e", "d2_w3_a", "d2_w3_c", "d2_w3_e")
 
 /obj/effect/overmap/visitable/planet/Sif/Initialize()
 	. = ..()

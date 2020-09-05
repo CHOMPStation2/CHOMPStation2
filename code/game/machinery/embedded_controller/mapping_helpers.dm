@@ -88,6 +88,8 @@ Any frequency works, it's self-setting, but it seems like people have decided 13
 	my_airlock.id_tag = my_controller.id_tag + tag_addon
 	my_airlock.frequency = my_controller.frequency
 	my_airlock.set_frequency(my_controller.frequency)
+	my_airlock.req_access = my_controller.req_access
+	my_airlock.req_one_access = my_controller.req_one_access
 
 /obj/effect/map_helper/airlock/door/ext_door
 	name = "exterior airlock door"
@@ -148,6 +150,8 @@ Any frequency works, it's self-setting, but it seems like people have decided 13
 	my_sensor.master_tag = my_controller.id_tag
 	my_sensor.frequency = my_controller.frequency
 	my_sensor.set_frequency(my_controller.frequency)
+	my_sensor.req_access = my_controller.req_access
+	my_sensor.req_one_access = my_controller.req_one_access
 	if(command)
 		my_sensor.command = command
 
@@ -173,5 +177,29 @@ Any frequency works, it's self-setting, but it seems like people have decided 13
 	Buttons
 */
 
-/obj/effect/map_helper/airlock/buttons
-	name = "Just use a sensor instead. They are actually buttons."
+/obj/effect/map_helper/airlock/button
+	name = "Use a subtype! - button"
+	my_device_type = /obj/machinery/access_button
+	var/command
+
+/obj/effect/map_helper/airlock/button/setup()
+	var/obj/machinery/airlock_sensor/my_button = my_device
+	my_button.master_tag = my_controller.id_tag
+	my_button.frequency = my_controller.frequency
+	my_button.set_frequency(my_controller.frequency)
+	my_button.req_access = my_controller.req_access
+	my_button.req_one_access = my_controller.req_one_access
+	if(command)
+		my_button.command = command
+
+/obj/effect/map_helper/airlock/button/ext_button
+	name = "exterior button"
+	icon_state = "btnout"
+	tag_addon = "_exterior_button"
+	command = "cycle_exterior"
+
+/obj/effect/map_helper/airlock/button/int_button
+	name = "interior button"
+	icon_state = "btnin"
+	tag_addon = "_interior_button"
+	command = "cycle_interior"
