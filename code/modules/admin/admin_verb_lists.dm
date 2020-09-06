@@ -108,7 +108,7 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
 	/datum/admins/proc/view_feedback,
-	/client/proc/SetCKey
+	/client/proc/setckey //YW add - readds SetCkey proc
 	)
 
 var/list/admin_verbs_ban = list(
