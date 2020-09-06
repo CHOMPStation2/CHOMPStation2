@@ -45,6 +45,6 @@
 		icontype = options[choice]
 		var/active_sound = 'sound/effects/bubbles.ogg'
 		playsound(src.loc, "[active_sound]", 100, 0, 4)
-		M << "Your Tank now displays [choice]. Drink up and enjoy!"
+		to_chat(M, "Your Tank now displays [choice]. Drink up and enjoy!")
 		updateicon()
 		return 1

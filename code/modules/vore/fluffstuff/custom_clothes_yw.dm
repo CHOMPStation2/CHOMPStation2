@@ -1696,6 +1696,29 @@
 	else
 		return ..()
 
+/obj/item/clothing/suit/storage/hooded/fluff/kbraid
+	name = "Braid's outfit"
+	desc = "The uniform of an Avali named Braid"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kbraid_outfit"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kbraid_outfit_s"
+	body_parts_covered = UPPER_TORSO|ARMS|FEET
+	hoodtype = /obj/item/clothing/head/hood/kbraid_hood
+	action_button_name = "Toggle Headphones"
+
+/obj/item/clothing/head/hood/kbraid_hood
+	name = "Earphones"
+	desc = "A set of Avali earphones."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kbraid_head"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kbraid_head_s"
+	ear_protection = 1
+
+// ********
+// Whiteout
+// ********
 /obj/item/clothing/under/harness_white
 	name = "white gear harness"
 	desc = "How... minimalist."
