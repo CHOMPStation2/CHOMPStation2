@@ -28,7 +28,7 @@
 
 	var/rads = radiation/25
 	radiation -= rads
-	adjust_nutrition(rads)
+	/*adjust_nutrition(rads)*/ //CHOMPedit. Commented out to prevent xeno/diona obesity, it was a real problem
 	heal_overall_damage(rads,rads)
 	adjustOxyLoss(-(rads))
 	adjustToxLoss(-(rads))

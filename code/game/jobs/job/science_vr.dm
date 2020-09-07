@@ -47,7 +47,7 @@
 	supervisors = "the Research Director"
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobotany, access_hydroponics)
+	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobotany, access_hydroponics, access_xenobiology) //CHOMPS KSC 9/2/2020 - Added "access_xenobiology" to their access so they can enter Xenobotany.
 	minimal_access = list(access_research, access_xenobotany, access_hydroponics, access_tox_storage)
 	pto_type = PTO_SCIENCE
 

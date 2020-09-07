@@ -29,3 +29,23 @@
 		qdel(src)
 
 	return
+
+/obj/item/weapon/grenade/confetti/party_ball //Intended to be used only with the confetti cannon.
+	name = "party ball"
+	desc = "Full of !!FUN!!"
+	icon = 'icons/obj/grenade_ch.dmi'
+	icon_state = "party_ball"
+	confetti_strength = 2
+	det_time = 1
+	throwforce = 0 //Confetti cannon is only fun to shoot at people if it deals no damage.
+
+/obj/item/weapon/grenade/confetti/party_ball/detonate() //Could condense this by making the sound a variable in the parent but I'm lazy.
+	playsound(src.loc, 'sound/effects/confetti_ball.ogg', 50, 1, -3)
+	src.confetti_spread.set_up(10, 0, usr.loc)
+	spawn(0)
+		for(var/i = 1 to confetti_strength)
+			src.confetti_spread.start()
+			sleep(10)
+		qdel(src)
+
+	return
