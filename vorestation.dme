@@ -3112,6 +3112,7 @@
 #include "code\modules\organs\organ_stump.dm"
 #include "code\modules\organs\pain.dm"
 #include "code\modules\organs\robolimbs.dm"
+#include "code\modules\organs\robolimbs_ch.dm"
 #include "code\modules\organs\robolimbs_vr.dm"
 #include "code\modules\organs\robolimbs_yw.dm"
 #include "code\modules\organs\wound.dm"
