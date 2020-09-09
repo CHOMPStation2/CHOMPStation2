@@ -386,7 +386,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_OTHERWORLDLY
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/skipjack_station
+/area/skipjack_station // CHOMPEdit: Condensing shuttles
 	name = "Raider Outpost"
 	icon_state = "yellow"
 	requires_power = 0
@@ -394,7 +394,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
-/area/shuttle/skipjack
+/area/shuttle/skipjack // CHOMPEdit: Condensing shuttles
 	name = "\improper Skipjack"
 	icon_state = "yellow"
 	requires_power = 0

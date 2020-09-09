@@ -138,6 +138,8 @@ Any frequency works, it's self-setting, but it seems like people have decided 13
 
 /*
 	Sensors - did you know they function as buttons? You don't also need a button.
+	CHOMPEdit:	They don't function identically to buttons. They're also entirely unnecessary for station use because of their complexity.
+				They do function well and should be used for shuttle airlocks but unchanging environments don't need sensors.
 */
 /obj/effect/map_helper/airlock/sensor
 	name = "use a subtype! - airlock sensor"
@@ -177,6 +179,7 @@ Any frequency works, it's self-setting, but it seems like people have decided 13
 	Buttons
 */
 
+// CHOMPStation Addition: Button helpers, because they didn't exist before due to 'just use sensors'
 /obj/effect/map_helper/airlock/button
 	name = "Use a subtype! - button"
 	my_device_type = /obj/machinery/access_button
