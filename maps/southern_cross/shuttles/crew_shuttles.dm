@@ -26,7 +26,6 @@
 	start = /datum/shuttle_destination/shuttle1/root
 
 	path_nodes = list(
-		/datum/shuttle_destination/shuttle1/outside_SC,
 		/datum/shuttle_destination/shuttle1/sif_orbit,
 		/datum/shuttle_destination/shuttle1/sky,
 		/datum/shuttle_destination/shuttle1/main_base
@@ -38,7 +37,6 @@
 	path_nodes = list(
 		/datum/shuttle_destination/shuttle1/sky,
 		/datum/shuttle_destination/shuttle1/sif_orbit,
-		/datum/shuttle_destination/shuttle1/outside_SC,
 		/datum/shuttle_destination/shuttle1/root
 	)
 
@@ -70,7 +68,6 @@
 	start = /datum/shuttle_destination/shuttle2/root
 
 	path_nodes = list(
-		/datum/shuttle_destination/shuttle2/outside_SC,
 		/datum/shuttle_destination/shuttle2/sif_orbit,
 		/datum/shuttle_destination/shuttle2/sky,
 		/datum/shuttle_destination/shuttle2/main_base
@@ -82,7 +79,6 @@
 	path_nodes = list(
 		/datum/shuttle_destination/shuttle2/sky,
 		/datum/shuttle_destination/shuttle2/sif_orbit,
-		/datum/shuttle_destination/shuttle2/outside_SC,
 		/datum/shuttle_destination/shuttle2/root
 	)
 
@@ -97,7 +93,8 @@
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle1/outside_SC = 0,
+		/datum/shuttle_destination/shuttle1/sif_orbit = 30 SECONDS,
+		/datum/shuttle_destination/shuttle1/docked_SC = 0
 	)
 /*
 /datum/shuttle_destination/shuttle1/root/get_arrival_message()
@@ -115,7 +112,8 @@
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle2/outside_SC = 0,
+		/datum/shuttle_destination/shuttle2/sif_orbit = 30 SECONDS,
+		/datum/shuttle_destination/shuttle2/docked_SC = 0
 	)
 /*
 /datum/shuttle_destination/shuttle2/root/get_arrival_message()
@@ -125,6 +123,7 @@
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Two."
 */
 
+/*
 /datum/shuttle_destination/shuttle1/outside_SC
 	name = "Outside of NLS Southern Cross"
 	my_landmark = "shuttle1_seconddeck"
@@ -144,7 +143,7 @@
 		/datum/shuttle_destination/shuttle2/sif_orbit = 25 SECONDS,
 		/datum/shuttle_destination/shuttle2/docked_SC = 0
 	)
-
+*/
 
 /datum/shuttle_destination/shuttle1/docked_SC
 	name = "Southern Cross Docking Port"
@@ -153,6 +152,7 @@
 
 	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
+
 /*
 /datum/shuttle_destination/shuttle1/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
@@ -168,6 +168,7 @@
 
 	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
+
 /*
 /datum/shuttle_destination/shuttle2/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
