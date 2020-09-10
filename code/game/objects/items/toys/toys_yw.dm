@@ -19,7 +19,7 @@
 
 /obj/item/toy/plushie/teshari/eili
 	name = "Eili"
-	desc = "This is a plushie that resembles an Avali named Eili. The ammount of detail makes it almost look lifelike! Looks like he is sleeping. Shhh!"
+	desc = "This is a plushie that resembles an Avali named Eili. The ammount of detail makes it almost look lifelike! Looks like she is sleeping. Shhh!"
 	icon_state = "jeans_eiliplush"
 	pokephrase = "Weh!"
 	icon = 'icons/vore/custom_items_yw.dmi'
