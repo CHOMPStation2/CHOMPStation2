@@ -294,7 +294,7 @@
 	character_name = list("Jeanne Petite")
 /datum/gear/fluff/jeans_eiliplush
 	path = /obj/item/toy/plushie/teshari/eili
-	display_name = "Eili Plishi"
+	display_name = "Eili Plushi"
 	description = "My Favorite Pupil"
 	ckeywhitelist = list("dopiotl","kbraid")
 	character_name = list("Jeanne Petite","Eili","Braid")
