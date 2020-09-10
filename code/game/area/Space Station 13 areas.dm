@@ -360,6 +360,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 //ENEMY
 
 //names are used
+// CHOMPEdit start: Shuttle condensing
 /area/syndicate_station
 	name = "\improper Independent Station"
 	icon_state = "yellow"
@@ -377,6 +378,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	base_turf = /turf/space
 	ambience = AMBIENCE_HIGHSEC
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+// CHOMPEdit End: Shuttle condensing
 
 /area/wizard_station
 	name = "\improper Wizard's Den"
@@ -386,7 +388,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_OTHERWORLDLY
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/skipjack_station // CHOMPEdit: Condensing shuttles
+// CHOMPEdit Start: Shuttle condensing
+/area/skipjack_station
 	name = "Raider Outpost"
 	icon_state = "yellow"
 	requires_power = 0
@@ -394,13 +397,14 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
-/area/shuttle/skipjack // CHOMPEdit: Condensing shuttles
+/area/shuttle/skipjack
 	name = "\improper Skipjack"
 	icon_state = "yellow"
 	requires_power = 0
 	base_turf = /turf/space
 	ambience = AMBIENCE_HIGHSEC
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+// CHOMPEdit End: Shuttle condensing
 
 //PRISON
 /area/prison
