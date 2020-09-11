@@ -241,13 +241,6 @@
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 
 // Mining Underdark < does this name really apply anymoore?
-/area/maintenance/upper/maintroom1
-	name = "Forgotten Maintenance"
-	icon_state = "amaint"
-
-/area/maintenance/upper/maintroom2
-	name = "Forgotten Maintenance"
-	icon_state = "amaint"
 
 /area/maintenance/maintroom1
 	name = "Forgotten Maintenance"
@@ -329,10 +322,6 @@
 
 /area/cryogaia/station/hallway/primary/upper/south
 	name = "\improper Upper Southern Level Hallways"
-	icon_state = "hallC1"
-
-/area/cryogaia/station/hallway/primary/upper/east
-	name = "\improper Upper Northern Level Hallways"
 	icon_state = "hallC1"
 
 /area/cryogaia/station/medical/upper

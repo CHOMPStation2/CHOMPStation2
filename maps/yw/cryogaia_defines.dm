@@ -171,8 +171,6 @@
 		/area/borealis2/elevator/uppermining,
 		/area/borealis2/elevator/medupper,
 		/area/borealis2/outdoors/grounds/walkway,
-		/area/maintenance/upper/maintroom2,
-		/area/maintenance/upper/maintroom1,
 		/area/maintenance/maintroom8
 		)
 
