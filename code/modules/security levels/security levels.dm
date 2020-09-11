@@ -87,7 +87,7 @@
 			atc.reroute_traffic(yes = 0)
 
 		spawn()
-			SSnightshift.check_nightshift()
+			//SSnightshift.check_nightshift() //CHOMPedit: disabling this for now as we do not use the nightshift currently.
 
 		admin_chat_message(message = "Security level is now: [uppertext(get_security_level())]", color = "#CC2222") //VOREStation Add
 

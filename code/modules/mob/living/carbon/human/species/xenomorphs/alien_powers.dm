@@ -88,13 +88,13 @@
 		verbs -= /mob/living/carbon/human/proc/lay_egg
 		return
 
-	if(locate(/obj/effect/alien/egg) in get_turf(src))
+	if(locate(/obj/structure/alien/egg) in get_turf(src)) //CHOMPedit. Changed from obj/effect to obj/structure
 		to_chat(src, "There's already an egg here.")
 		return
 
 	if(check_alien_ability(75,1,O_EGG))
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
-		new /obj/effect/alien/egg(loc)
+		new /obj/structure/alien/egg(loc) //CHOMPedit. Changed from obj/effect to obj/structure
 
 	return
 

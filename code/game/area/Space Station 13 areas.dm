@@ -360,6 +360,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 //ENEMY
 
 //names are used
+// CHOMPEdit start: Shuttle condensing
 /area/syndicate_station
 	name = "\improper Independent Station"
 	icon_state = "yellow"
@@ -369,53 +370,15 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_HIGHSEC
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/syndicate_station/start
-	name = "\improper Mercenary Forward Operating Base"
+/area/shuttle/syndicate
+	name = "\improper Mercenary Shuttle"
 	icon_state = "yellow"
-
-/area/syndicate_station/southwest
-	name = "\improper wilderness cave"
-	icon_state = "southwest"
-
-/area/syndicate_station/northwest
-	name = "\improper wilderness forest"
-	icon_state = "northwest"
-
-/area/syndicate_station/northeast
-	name = "\improper wilderness forest"
-	icon_state = "northeast"
-
-/area/syndicate_station/southeast
-	name = "\improper wilderness caves"
-	icon_state = "southeast"
-
-/area/syndicate_station/north
-	name = "\improper outpost grounds"
-	icon_state = "north"
-
-/area/syndicate_station/south
-	name = "\improper the wilderness"
-	icon_state = "south"
-
-/area/syndicate_station/commssat
-	name = "\improper south of the communication satellite"
-	icon_state = "south"
-
-/area/syndicate_station/mining
-	name = "\improper northeast of the mining station"
-	icon_state = "north"
-
-/area/syndicate_station/arrivals_dock
-	name = "\improper docked with station"
-	icon_state = "shuttle"
-
-/area/syndicate_station/maint_dock
-	name = "\improper docked with station"
-	icon_state = "shuttle"
-
-/area/syndicate_station/transit
-	name = "\improper hyperspace"
-	icon_state = "shuttle"
+	requires_power = 0
+	flags = RAD_SHIELDED
+	base_turf = /turf/space
+	ambience = AMBIENCE_HIGHSEC
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+// CHOMPEdit End: Shuttle condensing
 
 /area/wizard_station
 	name = "\improper Wizard's Den"
@@ -425,41 +388,23 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_OTHERWORLDLY
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
+// CHOMPEdit Start: Shuttle condensing
 /area/skipjack_station
+	name = "Raider Outpost"
+	icon_state = "yellow"
+	requires_power = 0
+	dynamic_lighting = 0
+	flags = RAD_SHIELDED
+	ambience = AMBIENCE_HIGHSEC
+
+/area/shuttle/skipjack
 	name = "\improper Skipjack"
 	icon_state = "yellow"
 	requires_power = 0
 	base_turf = /turf/space
 	ambience = AMBIENCE_HIGHSEC
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/skipjack_station/start
-	name = "\improper Skipjack"
-	icon_state = "yellow"
-
-/area/skipjack_station/transit
-	name = "\improper hyperspace"
-	icon_state = "shuttle"
-
-/area/skipjack_station/southwest_solars
-	name = "\The wilderness"
-	icon_state = "southwest"
-
-/area/skipjack_station/northwest_solars
-	name = "\improper The wilderness"
-	icon_state = "northwest"
-
-/area/skipjack_station/northeast_solars
-	name = "\improper The wilderness"
-	icon_state = "northeast"
-
-/area/skipjack_station/southeast_solars
-	name = "\improper wilderness caves"
-	icon_state = "southeast"
-
-/area/skipjack_station/mining
-	name = "\improper south of mining station"
-	icon_state = "north"
+// CHOMPEdit End: Shuttle condensing
 
 //PRISON
 /area/prison

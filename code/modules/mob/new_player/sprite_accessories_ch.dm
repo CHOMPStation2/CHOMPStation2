@@ -94,6 +94,24 @@
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_TORSO, BP_HEAD, BP_GROIN)
 
+	vale_eyes
+		name = "VALE Eyes"
+		icon_state = "vale_eyes"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+
+	vale_belly
+		name = "VALE Belly"
+		icon_state = "vale_belly"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_TORSO, BP_GROIN)
+
+	vale_back
+		name = "VALE Back"
+		icon_state = "vale_back"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_TORSO)
+
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
 	desc = ""
