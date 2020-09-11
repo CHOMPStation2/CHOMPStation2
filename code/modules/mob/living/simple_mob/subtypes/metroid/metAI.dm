@@ -8,7 +8,10 @@
 	mauling = TRUE // They need it to get the most out of monkeys.
 
 	var/always_stun = FALSE // If true, the slime will elect to attempt to permastun the target.
-
+/*
+/datum/ai_holder/simple_mob/juvenile_metroid/ranged
+	pointblank = TRUE
+*/
 
 
 /datum/ai_holder/simple_mob/juvenile_metroid/passive/New() // For Jellybrig.
@@ -26,7 +29,7 @@
 // Hit the correct verbs to keep the slime species going.
 /datum/ai_holder/simple_mob/juvenile_metroid/proc/evolve_and_reproduce()
 	var/mob/living/simple_mob/metroid/juvenile/my_juvenile = holder
-	if(my_juvenile.amount_grown >= 10)
+	if(my_juvenile.nutrition >= my_juvenile.evo_point)
 		// Press the correct verb when we can.
 		if(my_juvenile.is_adult)
 			my_juvenile.reproduce() // Splits into four new baby slimes.

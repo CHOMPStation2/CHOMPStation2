@@ -109,13 +109,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 
 /mob/living/simple_mob/metroid/juvenile
-	var/is_baby = FALSE
-	var/is_super = FALSE
-	var/is_alpha = FALSE
-	var/is_gamma = FALSE
-	var/is_zeta = FALSE
-	var/is_omega = FALSE
-	var/is_queen = FALSE
+	var/is_juvenile = FALSE
 
 
 /mob/living/simple_mob/metroid/juvenile/baby
@@ -161,12 +155,12 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 	evo_point = 800
 	evo_limit = 1000
-	next = "/mob/living/simple_mob/metroid/evolution/super"
+	next = "/mob/living/simple_mob/metroid/juvenile/super"
 	vore_active = 0
-	
-	is_baby = TRUE
 
-/mob/living/simple_mob/metroid/evolution/baby/Initialize()
+	is_juvenile = TRUE
+
+/mob/living/simple_mob/metroid/juvenile/baby/Initialize()
 	playsound(src, 'sound/metroid/metroidsee.ogg', 100, 1)
 	..()
 
@@ -223,8 +217,8 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 		)
 
 	evo_point = 1200
-	evo_limit = 1400
-	next = "/mob/living/simple_mob/metroid/combat/alpha"
+	evo_limit = 1600
+	next = "/mob/living/simple_mob/metroid/juvenile/alpha"
 
 	vore_active = 1
 	vore_bump_chance = 0
@@ -234,25 +228,23 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	vore_default_mode = DM_DIGEST
 	swallowTime = 1 SECONDS //Hungry little bastards.
 	vore_escape_chance = 50
-	
-	is_super = TRUE
 
-/mob/living/simple_mob/metroid/evolution/super/Initialize()
+	is_juvenile = TRUE
+
+/mob/living/simple_mob/metroid/juvenile/super/Initialize()
 	playsound(src, 'sound/metroid/metroidsee.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/evolution/super/death()
+/mob/living/simple_mob/metroid/juvenile/super/death()
 	playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
 	..()
 
 
 
+
+
 /*
-//------------------------------------------------------------------------------------------------------------
-
-
-
-/mob/living/simple_mob/metroid/combat/alpha
+/mob/living/simple_mob/metroid/juvenile/alpha
 	name = "alpha metroid"
 	desc = "Some kind of head rammy thing!"
 	tt_desc = "Minimus Headamus Rammamus"
@@ -260,7 +252,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "alpha_dead"
 	icon_living = "alpha"
 	icon_state = "alpha"
-	ai_holder_type = /datum/ai_holder/simple_mob/metroid
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/gamma
 	movement_cooldown = 0.5
 	health = 300
@@ -293,18 +285,18 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	unsuitable_atoms_damage = 0
 
 	evo_point = 1200
-	evo_limit = 1400
-	next = "/mob/living/simple_mob/metroid/combat/gamma"
+	evo_limit = 1600
+	next = "/mob/living/simple_mob/metroid/juvenile/gamma"
 
-/mob/living/simple_mob/metroid/combat/alpha/Initialize()
+/mob/living/simple_mob/metroid/juvenile/alpha/Initialize()
 	playsound(src, 'sound/metroid/metroidsee.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/combat/alpha/death()
+/mob/living/simple_mob/metroid/juvenile/alpha/death()
 	playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/combat/alpha //active noms
+/mob/living/simple_mob/metroid/juvenile/alpha //active noms
 	vore_active = 1
 	vore_bump_chance = 0
 	vore_capacity = 1
@@ -323,7 +315,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 
 
-/mob/living/simple_mob/metroid/combat/gamma
+/mob/living/simple_mob/metroid/juvenile/gamma
 	name = "gamma metroid"
 	desc = "Some kind of head rammy thing! This one shoots electricity!"
 	tt_desc = "Maximus Headamus Rammamus"
@@ -331,10 +323,9 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "gamma_dead"
 	icon_living = "gamma"
 	icon_state = "gamma"
-	ai_holder_type = /datum/ai_holder/simple_mob/metroid
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/ranged
 	say_list_type = /datum/say_list/metroid/gamma
 	movement_cooldown = 0.5
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/pointblank
 	health = 400
 	maxHealth = 400
 	melee_damage_lower = 10
@@ -373,18 +364,18 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 	var/emp_chance = 20 // Beware synths
 	evo_point = 1200
-	evo_limit = 1400
-	next = "/mob/living/simple_mob/metroid/combat/zeta"
+	evo_limit = 1600
+	next = "/mob/living/simple_mob/metroid/juvenile/zeta"
 
-/mob/living/simple_mob/metroid/combat/gamma/Initialize()
+/mob/living/simple_mob/metroid/juvenile/gamma/Initialize()
 	playsound(src, 'sound/metroid/metroidgamma.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/combat/gamma/death()
+/mob/living/simple_mob/metroid/juvenile/gamma/death()
 	playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/combat/gamma //active noms
+/mob/living/simple_mob/metroid/juvenile/gamma //active noms
 	vore_active = 1
 	vore_bump_chance = 0
 	vore_capacity = 1
@@ -416,7 +407,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 
 
-/mob/living/simple_mob/metroid/combat/zeta
+/mob/living/simple_mob/metroid/juvenile/zeta
 	name = "zeta metroid"
 	desc = "Some kind of feet stompy thing!"
 	tt_desc = "Minimus Feetamus Walkamus"
@@ -424,16 +415,15 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "zeta_dead"
 	icon_living = "zeta"
 	icon_state = "zeta"
-	ai_holder_type = /datum/ai_holder/simple_mob/metroid
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/ranged
 	say_list_type = /datum/say_list/metroid/zeta
 	movement_cooldown = 1
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/pointblank
 	health = 500
 	maxHealth = 500
 	melee_damage_lower = 15
 	melee_damage_upper = 25
 	melee_miss_chance = 5
-	ranged_attack_delay = 1 SECOND
+	ranged_attack_delay = 2 SECOND
 	attack_armor_pen = 10
 	attacktext = list("slashed")
 	armor = list(
@@ -472,18 +462,18 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	old_x = -16
 	old_y = -16
 	evo_point = 1600
-	evo_limit = 1800
-	next = "/mob/living/simple_mob/metroid/combat/omega"
+	evo_limit = 2000
+	next = "/mob/living/simple_mob/metroid/juvenile/omega"
 
-/mob/living/simple_mob/metroid/combat/zeta/Initialize()
+/mob/living/simple_mob/metroid/juvenile/zeta/Initialize()
 	playsound(src, 'sound/metroid/metroidzeta.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/combat/zeta/death()
+/mob/living/simple_mob/metroid/juvenile/zeta/death()
 	playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/combat/zeta //active noms
+/mob/living/simple_mob/metroid/juvenile/zeta //active noms
 	vore_active = 1
 	vore_bump_chance = 0
 	vore_capacity = 1
@@ -514,7 +504,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 
 
-/mob/living/simple_mob/metroid/combat/omega
+/mob/living/simple_mob/metroid/juvenile/omega
 	name = "omega metroid"
 	desc = "Those are some big claws!"
 	tt_desc = "Maximus Feetamus Walkamus"
@@ -522,16 +512,15 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "omega_dead"
 	icon_living = "omega"
 	icon_state = "omega"
-	ai_holder_type = /datum/ai_holder/simple_mob/metroid
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/ranged
 	say_list_type = /datum/say_list/metroid/omega
 	movement_cooldown = 1
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/pointblank
 	health = 600
 	maxHealth = 600
 	melee_damage_lower = 25
 	melee_damage_upper = 40
 	melee_miss_chance = 5
-	ranged_attack_delay = 1 SECOND
+	ranged_attack_delay = 5 SECOND
 	attack_armor_pen = 20
 	attacktext = list("slashed")
 	armor = list(
@@ -571,19 +560,19 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	default_pixel_x = -16
 	pixel_x = -16
 	pixel_y = 0
-	evo_point = 1700
+	evo_point = 1600
 	evo_limit = 2000
-	next = "/mob/living/simple_mob/metroid/combat/queen"
+	next = "/mob/living/simple_mob/metroid/juvenile/queen"
 
-/mob/living/simple_mob/metroid/combat/omega/Initialize()
+/mob/living/simple_mob/metroid/juvenile/omega/Initialize()
 	playsound(src, 'sound/metroid/metroidomega.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/combat/omega/death()
+/mob/living/simple_mob/metroid/juvenile/omega/death()
 	playsound(src, 'sound/metroid/metroidomegadeath.ogg', 100, 1)
 	..()
 
-/mob/living/simple_mob/metroid/combat/omega //active noms
+/mob/living/simple_mob/metroid/juvenile/omega //active noms
 	vore_active = 1
 	vore_bump_chance = 0
 	vore_capacity = 2
@@ -614,7 +603,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 
 
-/mob/living/simple_mob/metroid/combat/queen
+/mob/living/simple_mob/metroid/juvenile/queen
 	name = "queen metroid"
 	desc = "The mother of all Metroids - allowed to have grown too far!"
 	tt_desc = "Maximus Queenamus Deathamus"
@@ -622,10 +611,9 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "queen_dead"
 	icon_living = "queen"
 	icon_state = "queen"
-	ai_holder_type = /datum/ai_holder/simple_mob/metroid
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/ranged
 	say_list_type = /datum/say_list/metroid/queen
 	movement_cooldown = 2
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/pointblank
 	health = 1000
 	maxHealth = 1000
 	melee_damage_lower = 30
@@ -664,28 +652,26 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	max_n2 = 0
 	unsuitable_atoms_damage = 0
 
-
-
-
 	pixel_x = -16
 	pixel_y = -16
 	old_x = -16
 	old_y = -16
-	evo_point = 1100
+	evo_point = 1200
 	evo_limit = INFINITY
 	next = null
+	var/is_queen = TRUE
 
-/mob/living/simple_mob/metroid/combat/queen/Initialize()
+/mob/living/simple_mob/metroid/juvenile/queen/Initialize()
 	playsound(src, 'sound/metroid/metroidqueen.ogg', 100, 1)
 	queen_amount++
 	..()
 
-/mob/living/simple_mob/metroid/combat/queen/death()
+/mob/living/simple_mob/metroid/juvenile/queen/death()
 	playsound(src, 'sound/metroid/metroidqueendeath.ogg', 100, 1)
 	queen_amount--
 	..()
 
-/mob/living/simple_mob/metroid/combat/queen //active noms
+/mob/living/simple_mob/metroid/juvenile/queen //active noms
 	vore_active = 1
 	vore_bump_chance = 0
 	vore_capacity = 4

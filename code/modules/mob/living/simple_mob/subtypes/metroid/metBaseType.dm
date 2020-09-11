@@ -47,17 +47,20 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 	say_list_type = /datum/say_list/metroid
 
-	harm_intent_damage = 5
+	harm_intent_damage = 5 //When someone uses fists. Default is 3
 
 	vore_active = 1
 	vore_pounce_chance = 25
 	vore_icons = SA_ICON_LIVING
 	
+	max_nutrition = 2200
+	nutrition = 0
 	var/evo_point = 0
 	var/evo_limit = 0
 	var/next
 
-//	meat_type = /obj/item/toy/figure/samus
+	meat_type = /obj/item/toy/figure/bounty_hunter
+	
 /datum/say_list/metroid
 	speak = list("Skree.", "Eree.", "Errer?")
 	emote_see = list("floats about","looks around", "rubs its talons")

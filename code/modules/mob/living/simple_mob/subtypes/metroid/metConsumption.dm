@@ -45,6 +45,8 @@
 		stop_consumption()
 
 /mob/living/simple_mob/metroid/juvenile/proc/start_consuming(mob/living/L)
+	if(!is_juvenile)
+		return
 	if(!can_consume(L))
 		return
 	if(!Adjacent(L))
