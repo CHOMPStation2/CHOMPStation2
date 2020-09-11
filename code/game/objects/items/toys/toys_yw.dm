@@ -21,8 +21,14 @@
 	name = "Eili"
 	desc = "This is a plushie that resembles an Avali named Eili. The ammount of detail makes it almost look lifelike! Looks like she is sleeping. Shhh!"
 	icon_state = "jeans_eiliplush"
+	item_state = "jeans_eiliplush"
+	slot_flags = SLOT_BACK
 	pokephrase = "Weh!"
 	icon = 'icons/vore/custom_items_yw.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'icons/vore/lefthand_toys_yw.dmi',
+		slot_r_hand_str = 'icons/vore/righthand_toys_yw.dmi',
+		slot_wear_back_str = 'icons/vore/custom_items_yw_special.dmi',
 
 	rename_plushie()
 		set name = "Name Plushie"
