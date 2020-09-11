@@ -35,3 +35,25 @@
 		if(src && !M.stat && in_range(M,src))
 			to_chat(M, "You cannot rename Eili! You hug her anyway.")
 			return 1
+
+/obj/item/toy/plushie/teshari_yw
+	name = "lifelike teshari plush"
+	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
+	icon_state = "teshariplushie_brown"
+	pokephrase = "Rya!"
+
+/obj/item/toy/plushie/teshariw_yw
+	name = "lifelike teshari plush"
+	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
+	icon_state = "teshariplushie_white"
+	pokephrase = "Rya!"
+/obj/item/toy/plushie/tesharib_yw
+	name = "lifelike teshari plush"
+	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
+	icon_state = "teshariplushie_black"
+	pokephrase = "Rya!"
+/obj/item/toy/plushie/teshariy_yw
+	name = "lifelike teshari plush"
+	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
+	icon_state = "teshariplushie_yellow"
+	pokephrase = "Rya!"
