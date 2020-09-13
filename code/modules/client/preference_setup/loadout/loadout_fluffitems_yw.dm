@@ -292,6 +292,12 @@
 	description = "M-M-M-M-MONEY SHOT"
 	ckeywhitelist = list("dopiotl")
 	character_name = list("Jeanne Petite")
+/datum/gear/fluff/jeans_eiliplush
+	path = /obj/item/toy/plushie/teshari/eili
+	display_name = "Eili Plushi"
+	description = "My Favorite Pupil"
+	ckeywhitelist = list("dopiotl","kbraid")
+	character_name = list("Jeanne Petite","Eili","Braid")
 //dwaggy90
 //Saur Darastrix
 /datum/gear/fluff/saur_rig
