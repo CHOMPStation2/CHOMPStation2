@@ -480,7 +480,7 @@ datum/gear/suit/duster
 
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
-	path = /obj/item/clothing/suit/storage/snowsuit/command
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command
 	allowed_roles = list("Site Manager","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard") //YW ADDITIONS
 
 /datum/gear/suit/snowsuit/security

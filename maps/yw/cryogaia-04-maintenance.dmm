@@ -10792,13 +10792,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics)
 "hdl" = (
-/obj/machinery/pros_fabricator{
+/obj/machinery/mecha_part_fabricator/pros{
 	desc = "A machine used for construction of legit prosthetics. You weren't sure if cardboard was considered an engineering material until now.";
 	dir = 4;
-	mat_efficiency = 0.9;
 	name = "Legitimate Prosthetics Fabricator";
-	res_max_amount = 150000;
-	speed = 0.2
+	res_max_amount = 150000
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/maintroom5)
@@ -12752,7 +12750,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_9)
 "ilh" = (
-/obj/machinery/portable_atmospherics/canister/sleeping_agent,
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -18006,7 +18004,7 @@
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "kZL" = (
-/obj/machinery/portable_atmospherics/canister/sleeping_agent,
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /turf/simulated/floor/reinforced/n20,
 /area/engineering/atmos)
 "kZT" = (
@@ -38795,7 +38793,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lowfloor3)
 "xOr" = (
-/obj/machinery/portable_atmospherics/canister/sleeping_agent,
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/machinery/light{
 	dir = 4
 	},
