@@ -3381,12 +3381,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "bpz" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "bpI" = (
@@ -8225,6 +8223,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "dhJ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "dhL" = (
@@ -11260,10 +11261,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/exit)
 "esm" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	dir = 8;
-	name = "Pump station in";
-	target_pressure = 4500
+/obj/machinery/atmospherics/binary/pump/high_power{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -16644,12 +16643,12 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "gvD" = (
-/obj/machinery/atmospherics/tvalve/digital/mirrored/bypass{
-	dir = 4
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
 	pixel_y = -32
+	},
+/obj/machinery/atmospherics/tvalve/mirrored{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -25368,7 +25367,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southeast)
 "kaW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -38232,9 +38230,6 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "oZd" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
@@ -54845,6 +54840,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/binary/passive_gate{
+	dir = 8;
+	target_pressure = 4500
+	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "vRT" = (
@@ -55677,12 +55676,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "wje" = (
@@ -57879,9 +57878,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/binary/passive_gate{
-	dir = 8;
-	target_pressure = 4500
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
