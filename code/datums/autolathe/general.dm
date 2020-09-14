@@ -158,10 +158,6 @@
 	name = "maglight"
 	path =/obj/item/device/flashlight/maglight
 
-/datum/category_item/autolathe/general/emergency_cell
-	name = "light fixture battery"
-	path =/obj/item/weapon/cell/emergency_light
-
 /datum/category_item/autolathe/general/idcard
 	name = "ID Card"
 	path = /obj/item/weapon/card/id

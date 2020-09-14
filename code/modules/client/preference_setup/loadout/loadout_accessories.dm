@@ -79,7 +79,7 @@
 /datum/gear/accessory/holster
 	display_name = "holster selection (Security, CD, HoP)"
 	path = /obj/item/clothing/accessory/holster
-	allowed_roles = list("Colony Director", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective", "Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/accessory/holster/New()
 	..()
