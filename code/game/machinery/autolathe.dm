@@ -344,6 +344,8 @@
 	if(recursive && stored_material[matstring] >= S.perunit)
 		eject_materials(matstring, -1)
 
+
+//YWAdd start.
 /obj/machinery/autolathe/verb/eatmaterialsnearby()
 	set name = "Recycle nearby materials"
 	set category = "Object"
@@ -422,3 +424,4 @@
 		if("West")
 			input_dir = WEST
 	to_chat(src, "You set the material input to [input_dir_name]")
+//YWAdd END.
