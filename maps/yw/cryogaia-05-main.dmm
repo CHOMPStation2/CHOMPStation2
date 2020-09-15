@@ -41716,6 +41716,7 @@
 	maxcharge = 15000
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/weapon/rms,
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/workshop)
 "qrN" = (
