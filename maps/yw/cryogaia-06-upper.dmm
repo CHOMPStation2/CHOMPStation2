@@ -5271,7 +5271,7 @@
 "lo" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Volunteer Storage";
-	req_one_access = list()
+	req_one_access = list(43,67,68,69)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8587,6 +8587,12 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
 /area/civilian/atrium/upper)
+"yR" = (
+/obj/structure/table/steel,
+/obj/item/weapon/gun/energy/netgun,
+/obj/item/weapon/gun/energy/netgun,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "yT" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -30034,7 +30040,7 @@ hL
 hX
 iw
 iZ
-jt
+yR
 jQ
 ks
 fS
