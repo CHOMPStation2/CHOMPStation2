@@ -169,7 +169,7 @@
 									5;new /obj/item/stack/material/phoron,
 									5;new /obj/item/stack/material/silver,
 									5;new /obj/item/stack/material/gold
-									//YW EDIT: 1;new /obj/item/stack/material/diamond
+									1;new /obj/item/stack/material/diamond
 									)
 				if(overcharge && emagged)
 					product = pick(1;new /obj/item/stack/rods,
@@ -178,13 +178,13 @@
 									10;new /obj/item/stack/tile/grass,
 									10;new /obj/item/stack/tile/carpet,
 									10;new /obj/item/weapon/reagent_containers/spray/waterflower
-									//YW EDIT: 10;new /obj/item/weapon/bikehorn,
-									//YW EDIT: 10;new /obj/item/weapon/storage/backpack/clown,
-									//YW EDIT: 10;new /obj/item/clothing/under/rank/clown,
-									//YW EDIT: 10;new /obj/item/clothing/shoes/clown_shoes,
-									//YW EDIT: 10;new /obj/item/clothing/mask/gas/clown_hat,
-									//YW EDIT: 10;new /obj/item/device/pda/clown,
-									//YW EDIT: 1;new /mob/living/simple_mob/vore/catgirl
+									10;new /obj/item/weapon/bikehorn,
+									10;new /obj/item/weapon/storage/backpack/clown,
+									10;new /obj/item/clothing/under/rank/clown,
+									10;new /obj/item/clothing/shoes/clown_shoes,
+									10;new /obj/item/clothing/mask/gas/clown_hat,
+									10;new /obj/item/device/pda/clown,
+									1;new /mob/living/simple_mob/vore/catgirl
 									)
 					spark_system.start()
 	product.loc = get_turf(A)
