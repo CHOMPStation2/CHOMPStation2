@@ -29,10 +29,12 @@
 	icon_rest = "firefly_dead"
 	icon = 'icons/mob/animal.dmi'
 	has_eye_glow = TRUE
+	heat_resist = -0.50
+	cold_resist = 0.75
 
 	maxHealth = 65
 	health = 65
-
+	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	pass_flags = PASSTABLE
 
 	var/energy = 100
@@ -81,7 +83,7 @@
 	return 1	// It literally produces a cryogenic mist inside itself. Cold doesn't bother it.
 
 /mob/living/simple_mob/animal/sif/frostfly/Initialize()
-	..()
+	. = ..() //VOREStation Edit
 	smoke_special = new
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide

@@ -152,8 +152,8 @@
 			use_power(7500) //This might need tweaking.
 			return
 
-		else if(((occupant.health >= heal_level) || (occupant.health == occupant.maxHealth)) && (!eject_wait))
-			playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
+		else if(((occupant.health == occupant.maxHealth)) && (!eject_wait))
+			playsound(src, 'sound/machines/ding.ogg', 50, 1)
 			audible_message("\The [src] signals that the growing process is complete.")
 			connected_message("Growing Process Complete.")
 			locked = 0
@@ -167,6 +167,11 @@
 		return
 
 	return
+
+/obj/machinery/clonepod/transhuman/get_completion()
+	if(occupant)
+		return 100 * ((occupant.health + abs(config.health_threshold_dead)) / (occupant.maxHealth + abs(config.health_threshold_dead)))
+	return 0
 
 //Synthetic version
 /obj/machinery/transhuman/synthprinter
@@ -346,13 +351,13 @@
 /obj/machinery/transhuman/synthprinter/attack_hand(mob/user as mob)
 	if((busy == 0) || (stat & NOPOWER))
 		return
-	user << "Current print cycle is [busy]% complete."
+	to_chat(user, "Current print cycle is [busy]% complete.")
 	return
 
 /obj/machinery/transhuman/synthprinter/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
 	if(busy)
-		user << "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>"
+		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
 		return
 	if(default_deconstruction_screwdriver(user, W))
 		return
@@ -361,15 +366,15 @@
 	if(default_part_replacement(user, W))
 		return
 	if(panel_open)
-		user << "<span class='notice'>You can't load \the [src] while it's opened.</span>"
+		to_chat(user, "<span class='notice'>You can't load \the [src] while it's opened.</span>")
 		return
 	if(!istype(W, /obj/item/stack/material))
-		user << "<span class='notice'>You cannot insert this item into \the [src]!</span>"
+		to_chat(user, "<span class='notice'>You cannot insert this item into \the [src]!</span>")
 		return
 
 	var/obj/item/stack/material/S = W
 	if(!(S.material.name in stored_material))
-		user << "<span class='warning'>\the [src] doesn't accept [S.material]!</span>"
+		to_chat(user, "<span class='warning'>\the [src] doesn't accept [S.material]!</span>")
 		return
 
 	var/amnt = S.perunit
@@ -380,9 +385,9 @@
 				stored_material[S.material.name] += amnt
 				S.use(1)
 				count++
-			user << "You insert [count] [S.name] into \the [src]."
+			to_chat(user, "You insert [count] [S.name] into \the [src].")
 	else
-		user << "\the [src] cannot hold more [S.name]."
+		to_chat(user, "\the [src] cannot hold more [S.name].")
 
 	updateUsrDialog()
 	return
@@ -439,28 +444,41 @@
 	blur_amount = (48 - manip_rating * 8)
 
 /obj/machinery/transhuman/resleever/attack_hand(mob/user as mob)
-	user.set_machine(src)
-	var/health_text = ""
-	var/mind_text = ""
-	if(src.occupant)
-		if(src.occupant.stat >= DEAD)
-			health_text = "<FONT color=red>DEAD</FONT>"
-		else if(src.occupant.health < 0)
-			health_text = "<FONT color=red>[round(src.occupant.health,0.1)]</FONT>"
-		else
-			health_text = "[round(src.occupant.health,0.1)]"
+	tgui_interact(user)
 
-		if(src.occupant.mind)
-			mind_text = "Mind present: [occupant.mind.name]"
-		else
-			mind_text = "Mind absent."
+/obj/machinery/transhuman/resleever/tgui_interact(mob/user, datum/tgui/ui = null)
+	if(stat & (NOPOWER|BROKEN))
+		return
 
-	var/dat ="<B>Resleever Status</B><BR>"
-	dat +="<B>Current occupant:</B> [src.occupant ? "<BR>Name: [src.occupant]<BR>Health: [health_text]<BR>" : "<FONT color=red>None</FONT>"]<BR>"
-	dat +="<B>Mind status:</B> [mind_text]<BR>"
-	user.set_machine(src)
-	user << browse(dat, "window=resleever")
-	onclose(user, "resleever")
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "ResleevingPod", "Resleever")
+		ui.open()
+
+/obj/machinery/transhuman/resleever/tgui_data(mob/user)
+	var/list/data = list()
+
+	data["occupied"] = !!occupant
+	if(occupant)
+		data["name"] = occupant.name
+		data["health"] = occupant.health
+		data["maxHealth"] = occupant.maxHealth
+		data["stat"] = occupant.stat
+		data["mindStatus"] = !!occupant.mind
+		data["mindName"] = occupant.mind?.name
+/* CHOMP Edit: Get rid of resleeving sickness stuff
+		if(occupant.has_modifier_of_type(/datum/modifier/resleeving_sickness) || occupant.has_modifier_of_type(/datum/modifier/faux_resleeving_sickness))
+			data["resleeveSick"] = TRUE
+		else
+			data["resleeveSick"] = FALSE
+
+		if(occupant.confused || occupant.eye_blurry)
+			data["initialSick"] = TRUE
+		else
+			data["initialSick"] = FALSE
+*/
+//End chomp edit
+	return data
 
 /obj/machinery/transhuman/resleever/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
@@ -474,10 +492,6 @@
 		var/obj/item/weapon/grab/G = W
 		if(!ismob(G.affecting))
 			return
-		for(var/mob/living/carbon/slime/M in range(1, G.affecting))
-			if(M.Victim == G.affecting)
-				usr << "[G.affecting:name] will not fit into the [src.name] because they have a slime latched onto their head."
-				return
 		var/mob/M = G.affecting
 		if(put_mob(M))
 			qdel(G)
@@ -489,7 +503,7 @@
 		C.removePersonality()
 		qdel(C)
 		sleevecards++
-		to_chat(user,"<span class='notice'>You store \the [C] in \the [src].</span>")
+		to_chat(user, "<span class='notice'>You store \the [C] in \the [src].</span>")
 		return
 
 	return ..()
@@ -543,7 +557,7 @@
 
 	//In case they already had a mind!
 	if(occupant && occupant.mind)
-		occupant << "<span class='warning'>You feel your mind being overwritten...</span>"
+		to_chat(occupant, "<span class='warning'>You feel your mind being overwritten...</span>")
 		log_and_message_admins("was resleeve-wiped from their body.",occupant.mind)
 		occupant.ghostize()
 
@@ -557,7 +571,7 @@
 	occupant.apply_vore_prefs() //Cheap hack for now to give them SOME bellies.
 	if(MR.one_time)
 		var/how_long = round((world.time - MR.last_update)/10/60)
-		to_chat(occupant,"<span class='danger'>Your mind backup was a 'one-time' backup. \
+		to_chat(occupant, "<span class='danger'>Your mind backup was a 'one-time' backup. \
 		You will not be able to remember anything since the backup, [how_long] minutes ago.</span>")
 
 	//Re-supply a NIF if one was backed up with them.
@@ -580,9 +594,9 @@
 
 	//Inform them and make them a little dizzy.
 	if(confuse_amount + blur_amount <= 16)
-		occupant << "<span class='notice'>You feel a small pain in your head as you're given a new backup implant. Your new body feels comfortable already, however.</span>"
+		to_chat(occupant, "<span class='notice'>You feel a small pain in your head as you're given a new backup implant. Your new body feels comfortable already, however.</span>")
 	else
-		occupant << "<span class='warning'>You feel a small pain in your head as you're given a new backup implant. Oh, and a new body. It's disorienting, to say the least.</span>"
+		to_chat(occupant, "<span class='warning'>You feel a small pain in your head as you're given a new backup implant. Oh, and a new body. It's disorienting, to say the least.</span>")
 
 	occupant.confused = max(occupant.confused, confuse_amount)
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
@@ -608,10 +622,10 @@
 
 /obj/machinery/transhuman/resleever/proc/put_mob(mob/living/carbon/human/M as mob)
 	if(!ishuman(M))
-		usr << "<span class='warning'>\The [src] cannot hold this!</span>"
+		to_chat(usr, "<span class='warning'>\The [src] cannot hold this!</span>")
 		return
 	if(src.occupant)
-		usr << "<span class='warning'>\The [src] is already occupied!</span>"
+		to_chat(usr, "<span class='warning'>\The [src] is already occupied!</span>")
 		return
 	if(M.client)
 		M.client.perspective = EYE_PERSPECTIVE

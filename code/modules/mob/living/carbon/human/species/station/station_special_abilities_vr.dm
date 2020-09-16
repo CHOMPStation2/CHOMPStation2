@@ -390,7 +390,7 @@
 		src.visible_message("<font color='red'><b>[src] suddenly extends their fangs and plunges them down into [B]'s neck!</b></font>")
 		B.apply_damage(5, BRUTE, BP_HEAD) //You're getting fangs pushed into your neck. What do you expect????
 		B.drip(80) //Remove enough blood to make them a bit woozy, but not take oxyloss.
-		src.nutrition += 400
+		adjust_nutrition(400)
 		sleep(50)
 		B.drip(1)
 		sleep(50)
@@ -745,6 +745,8 @@
 			to_chat(src,"<span class='warning'>Looks like you lost your chance...</span>")
 			return
 
+//		T.add_modifier(/datum/modifier/gory_devourment, 10 SECONDS) //CHOMPEdit - Don't need this because we don't do resleeving sickness.
+
 		//Removing an internal organ
 		if(T_int && T_int.damage >= 25) //Internal organ and it's been severely damaged
 			T.apply_damage(15, BRUTE, T_ext) //Damage the external organ they're going through.
@@ -834,7 +836,7 @@
 
 	if(!C.anchored && !C.pulledby) //Not currently anchored, and not pulled by anyone.
 		C.anchored = 1 //This is the only way to stop the inertial_drift.
-		C.nutrition -= 10
+		C.adjust_nutrition(-25)
 		update_floating()
 		to_chat(C, "<span class='notice'>You hover in place.</span>")
 		spawn(6) //.6 seconds.

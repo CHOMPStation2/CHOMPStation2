@@ -28,6 +28,7 @@
 		)
 
 	light_overlay = "helmet_light"
+	var/no_cycle = FALSE	//stop this item from being put in a cycler
 
 /obj/item/clothing/suit/space/void
 	name = "voidsuit"
@@ -36,7 +37,7 @@
 	desc = "A high-tech dark red space suit. Used for AI satellite maintenance."
 	slowdown = 1
 	armor = list(melee = 40, bullet = 5, laser = 20,energy = 5, bomb = 35, bio = 100, rad = 20)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit)
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/backpack)
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	min_pressure_protection = 0 * ONE_ATMOSPHERE
@@ -66,15 +67,16 @@
 	var/obj/item/clothing/head/helmet/helmet = null   // Deployable helmet, if any.
 	var/obj/item/weapon/tank/tank = null              // Deployable tank, if any.
 	var/obj/item/device/suit_cooling_unit/cooler = null// Cooling unit, for FBPs.  Cannot be installed alongside a tank.
+	
+	//Cycler settings
+	var/no_cycle = FALSE	//stop this item from being put in a cycler
 
 /obj/item/clothing/suit/space/void/examine(user)
-	..(user)
-	var/list/part_list = new
+	. = ..()
 	for(var/obj/item/I in list(helmet,boots,tank,cooler))
-		part_list += "\a [I]"
-	to_chat(user, "\The [src] has [english_list(part_list)] installed.")
+		. += "It has \a [I] installed."
 	if(tank && in_range(src,user))
-		to_chat(user, "<span class='notice'>The wrist-mounted pressure gauge reads [max(round(tank.air_contents.return_pressure()),0)] kPa remaining in \the [tank].</span>")
+		. += "<span class='notice'>The wrist-mounted pressure gauge reads [max(round(tank.air_contents.return_pressure()),0)] kPa remaining in \the [tank].</span>"
 
 /obj/item/clothing/suit/space/void/refit_for_species(var/target_species)
 	..()

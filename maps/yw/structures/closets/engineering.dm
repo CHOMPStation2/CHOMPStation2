@@ -5,12 +5,7 @@
 
 /obj/structure/closet/secure_closet/engineering_chief_wardrobe
 	name = "chief engineer's wardrobe"
-	icon_state = "securece1"
-	icon_closed = "securece"
-	icon_locked = "securece1"
-	icon_opened = "secureceopen"
-	icon_broken = "securecebroken"
-	icon_off = "secureceoff"
+	closet_appearance = /decl/closet_appearance/secure_closet/engineering/ce
 	req_access = list(access_ce)
 
 	starts_with = list(

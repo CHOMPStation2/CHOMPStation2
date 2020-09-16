@@ -70,7 +70,9 @@
 // Restricted, military, or mercenary aligned locations like the armory, the merc ship/base, BSD, etc.
 #define AMBIENCE_HIGHSEC list(\
 	'sound/ambience/highsec/highsec1.ogg',\
-	'sound/ambience/highsec/highsec2.ogg'\
+	'sound/ambience/highsec/highsec2.ogg',\
+	'sound/ambience/highsec/highsec3.ogg',\
+	'sound/ambience/highsec/highsec4.ogg'\
 	)
 
 // Ruined structures found on the surface or in the caves.
@@ -104,7 +106,7 @@
 	'sound/ambience/holy/holy2.ogg'\
 	)
 
-// Generic sounds for less special rooms.
+// Generic sounds for less special rooms. Also apparently on southern cross it's for literally everything including the mining caves.
 #define AMBIENCE_GENERIC list(\
 	'sound/ambience/generic/generic1.ogg',\
 	'sound/ambience/generic/generic2.ogg',\
@@ -115,8 +117,14 @@
 // Sounds of PA announcements, presumably involving shuttles?
 #define AMBIENCE_ARRIVALS list(\
 	'sound/ambience/arrivals/arrivals1.ogg',\
-	'sound/ambience/arrivals/arrivals2.ogg'\
+	'sound/ambience/arrivals/arrivals2.ogg',\
+	'sound/ambience/arrivals/arrivals3.ogg',\
+	'sound/ambience/arrivals/arrivals4.ogg',\
+	'sound/ambience/arrivals/arrivals5.ogg',\
+	'sound/ambience/arrivals/arrivals6.ogg',\
+	'sound/ambience/arrivals/arrivals7.ogg'\
 	)
+
 
 // Sounds suitable for being inside dark, tight corridors in the underbelly of the station.
 #define AMBIENCE_MAINTENANCE list(\
@@ -125,7 +133,17 @@
 	'sound/ambience/maintenance/maintenance3.ogg',\
 	'sound/ambience/maintenance/maintenance4.ogg',\
 	'sound/ambience/maintenance/maintenance5.ogg',\
-	'sound/ambience/maintenance/maintenance6.ogg'\
+	'sound/ambience/maintenance/maintenance6.ogg',\
+	'sound/ambience/maintenance/maintenance7.ogg',\
+	'sound/ambience/maintenance/maintenance8.ogg',\
+	'sound/ambience/maintenance/maintenance9.ogg',\
+	'sound/ambience/maintenance/maintenance10.ogg',\
+	'sound/ambience/maintenance/maintenance11.ogg',\
+	'sound/ambience/maintenance/maintenance12.ogg',\
+	'sound/ambience/generic/generic5.ogg',\
+	'sound/ambience/generic/generic6.ogg',\
+	'sound/ambience/generic/generic7.ogg',\
+	'sound/ambience/generic/generic8.ogg'\
 	)
 
 // Life support machinery at work, keeping everyone breathing.
@@ -177,3 +195,42 @@
 #define AMBIENCE_AESTHETIC list(\
 	'sound/ambience/vaporwave.ogg'\
 	)
+
+//CHOMPedit: Exploration outpost ambience. Current tracks taken from Rainworld and Natural Selection 2.
+#define AMBIENCE_EXPOUTPOST list(\
+	'sound/ambience/expoutpost/expoutpost1.ogg',\
+	'sound/ambience/expoutpost/expoutpost2.ogg',\
+	'sound/ambience/expoutpost/expoutpost3.ogg',\
+	'sound/ambience/expoutpost/expoutpost4.ogg'\
+	)
+	
+//CHOMP Edit Sounds for Substation rooms. Just electrical sounds, really.
+#define AMBIENCE_SUBSTATION list(\
+	'sound/ambience/substation/substation1.ogg',\
+	'sound/ambience/substation/substation2.ogg',\
+	'sound/ambience/substation/substation3.ogg',\
+	'sound/ambience/substation/substation4.ogg',\
+	'sound/ambience/substation/substation5.ogg',\
+	'sound/ambience/substation/substation6.ogg',\
+	'sound/ambience/substation/substation7.ogg',\
+	'sound/ambience/substation/substation8.ogg'\
+	)
+	
+//CHOMP Edit Sounds for hangars
+#define AMBIENCE_HANGAR list(\
+	'sound/ambience/hangar/hangar1.ogg',\
+	'sound/ambience/hangar/hangar2.ogg',\
+	'sound/ambience/hangar/hangar3.ogg',\
+	'sound/ambience/hangar/hangar4.ogg',\
+	'sound/ambience/hangar/hangar5.ogg',\
+	'sound/ambience/hangar/hangar6.ogg'\
+	)
+
+//CHOMP Edit Sounds for atmos
+#define AMBIENCE_ATMOS list(\
+	'sound/ambience/engineering/engineering1.ogg',\
+	'sound/ambience/engineering/engineering2.ogg',\
+	'sound/ambience/engineering/engineering3.ogg',\
+	'sound/ambience/atmospherics/atmospherics1.ogg'\
+	)
+	

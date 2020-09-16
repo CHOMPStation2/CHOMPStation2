@@ -10,8 +10,8 @@
 // #define DEBUG_MEDIAPLAYER
 
 #ifdef DEBUG_MEDIAPLAYER
-#define MP_DEBUG(x) owner << x
-#warning Please comment out #define DEBUG_MEDIAPLAYER before committing.
+#define MP_DEBUG(x) to_chat(owner,x)
+#warn Please comment out #define DEBUG_MEDIAPLAYER before committing.
 #else
 #define MP_DEBUG(x)
 #endif
@@ -40,7 +40,7 @@
 	if(!istype(M))
 		return ..()
 	// Optimization, no need to call update_music() if both are null (or same instance, strange as that would be)
-	if(M.lastarea && M.lastarea.media_source == src.media_source)
+	if(M.lastarea?.media_source == src.media_source)
 		return ..()
 	if(M.client && M.client.media && !M.client.media.forced)
 		M.update_music()

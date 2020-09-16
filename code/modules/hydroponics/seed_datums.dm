@@ -61,6 +61,7 @@
 	name = "glowberries"
 	seed_name = "glowberry"
 	display_name = "glowberry bush"
+	kitchen_tag = "glowberries" //CHOMP Addition
 	mutants = null
 	chems = list("nutriment" = list(1,10), "uranium" = list(3,5))
 
@@ -80,6 +81,7 @@
 /datum/seed/berry/poison
 	name = "poisonberries"
 	seed_name = "poison berry"
+	kitchen_tag = "poisonberries"
 	display_name = "poison berry bush"
 	mutants = list("deathberries")
 	chems = list("nutriment" = list(1), "toxin" = list(3,5), "poisonberryjuice" = list(10,5))
@@ -168,7 +170,7 @@
 	name = "bloodtomato"
 	seed_name = "blood tomato"
 	display_name = "blood tomato plant"
-	mutants = list("killer")
+	mutants = list("killertomato")
 	chems = list("nutriment" = list(1,10), "blood" = list(1,5))
 	splat_type = /obj/effect/decal/cleanable/blood/splatter
 
@@ -206,6 +208,7 @@
 	name = "bluespacetomato"
 	seed_name = "bluespace tomato"
 	display_name = "bluespace tomato plant"
+	kitchen_tag = "bluespacetomato" //CHOMP Addition
 	mutants = null
 	chems = list("nutriment" = list(1,20), "singulo" = list(10,5))
 
@@ -254,7 +257,7 @@
 	seed_name = "apple"
 	display_name = "apple tree"
 	kitchen_tag = "apple"
-	mutants = list("poisonapple","goldapple")
+	mutants = list("poisonapple","goldapple","fallingapple")	//CHOMPEDIT: adding fall apple to list
 	chems = list("nutriment" = list(1,10),"applejuice" = list(10,20))
 
 /datum/seed/apple/New()
@@ -291,6 +294,26 @@
 	set_trait(TRAIT_PRODUCT_COLOUR,"#FFDD00")
 	set_trait(TRAIT_PLANT_COLOUR,"#D6B44D")
 
+/datum/seed/apple/sif
+	name = "sifbulb"
+	seed_name = "sivian tree"
+	display_name = "sivian tree"
+	kitchen_tag = "apple"
+	chems = list("nutriment" = list(1,5),"sifsap" = list(10,20))
+
+/datum/seed/apple/sif/New()
+	..()
+	set_trait(TRAIT_HARVEST_REPEAT,1)
+	set_trait(TRAIT_MATURATION,3)
+	set_trait(TRAIT_PRODUCTION,10)
+	set_trait(TRAIT_YIELD,3)
+	set_trait(TRAIT_POTENCY,12)
+	set_trait(TRAIT_PRODUCT_ICON,"alien3")
+	set_trait(TRAIT_PRODUCT_COLOUR,"#0720c3")
+	set_trait(TRAIT_PLANT_ICON,"tree5")
+	set_trait(TRAIT_FLESH_COLOUR,"#05157d")
+	set_trait(TRAIT_IDEAL_LIGHT, 1)
+
 //Ambrosia/varieties.
 /datum/seed/ambrosia
 	name = "ambrosia"
@@ -317,13 +340,26 @@
 	seed_name = "ambrosia deus"
 	display_name = "ambrosia deus"
 	kitchen_tag = "ambrosiadeus"
-	mutants = null
+	mutants = list("ambrosiainfernus")
 	chems = list("nutriment" = list(1), "bicaridine" = list(1,8), "synaptizine" = list(1,8,1), "hyperzine" = list(1,10,1), "space_drugs" = list(1,10))
 
 /datum/seed/ambrosia/deus/New()
 	..()
 	set_trait(TRAIT_PRODUCT_COLOUR,"#A3F0AD")
 	set_trait(TRAIT_PLANT_COLOUR,"#2A9C61")
+
+/datum/seed/ambrosia/infernus
+	name = "ambrosiainfernus"
+	seed_name = "ambrosia infernus"
+	display_name = "ambrosia infernus"
+	kitchen_tag = "ambrosiainfernus"
+	mutants = null
+	chems = list("nutriment" = list(1,3), "oxycodone" = list(1,8), "impedrezene" = list(1,10), "mindbreaker" = list(1,10))
+
+/datum/seed/ambrosia/infernus/New()
+	..()
+	set_trait(TRAIT_PRODUCT_COLOUR,"#dc143c")
+	set_trait(TRAIT_PLANT_COLOUR,"#b22222")
 
 //Mushrooms/varieties.
 /datum/seed/mushroom
@@ -406,6 +442,7 @@
 	name = "libertycap"
 	seed_name = "liberty cap"
 	display_name = "liberty cap mushrooms"
+	kitchen_tag = "libertycap" //CHOMP Addition
 	mutants = null
 	chems = list("nutriment" = list(1), "stoxin" = list(3,3), "space_drugs" = list(1,25))
 
@@ -440,6 +477,7 @@
 	name = "destroyingangel"
 	seed_name = "destroying angel"
 	display_name = "destroying angel mushrooms"
+	kitchen_tag = "destroyingangel" //CHOMP Addition
 	mutants = null
 	chems = list("nutriment" = list(1,50), "amatoxin" = list(13,3), "psilocybin" = list(1,25))
 
@@ -473,6 +511,7 @@
 	name = "glowshroom"
 	seed_name = "glowshroom"
 	display_name = "glowshrooms"
+	kitchen_tag = "glowshrooms" //CHOMP Addition
 	mutants = null
 	chems = list("radium" = list(1,20))
 
@@ -493,6 +532,7 @@
 	name = "plastic"
 	seed_name = "plastellium"
 	display_name = "plastellium"
+	kitchen_tag = "plastellium" //CHOMP Addition
 	mutants = null
 	chems = list("plasticide" = list(1,10))
 
@@ -506,6 +546,25 @@
 	set_trait(TRAIT_PRODUCT_COLOUR,"#E6E6E6")
 	set_trait(TRAIT_PLANT_COLOUR,"#E6E6E6")
 	set_trait(TRAIT_PLANT_ICON,"mushroom10")
+
+/datum/seed/mushroom/spore
+	name = "sporeshroom"
+	seed_name = "corpellian"
+	display_name = "corpellian"
+	mutants = null
+	chems = list("serotrotium" = list(5,10), "mold" = list(1,10))
+
+/datum/seed/mushroom/spore/New()
+	..()
+	set_trait(TRAIT_MATURATION,15)
+	set_trait(TRAIT_PRODUCTION,5)
+	set_trait(TRAIT_YIELD,4)
+	set_trait(TRAIT_POTENCY,20)
+	set_trait(TRAIT_PRODUCT_ICON,"mushroom5")
+	set_trait(TRAIT_PRODUCT_COLOUR,"#e29cd2")
+	set_trait(TRAIT_PLANT_COLOUR,"#f8e6f4")
+	set_trait(TRAIT_PLANT_ICON,"mushroom9")
+	set_trait(TRAIT_SPORING, TRUE)
 
 //Flowers/varieties
 /datum/seed/flower
@@ -550,6 +609,7 @@
 	name = "sunflowers"
 	seed_name = "sunflower"
 	display_name = "sunflowers"
+	mutants = list("solarflower") //CHOMPEDIT A sunflower well suited for planting as a natural lamp
 	kitchen_tag = "sunflower"
 
 /datum/seed/flower/sunflower/New()
@@ -566,6 +626,7 @@
 	name = "lavender"
 	seed_name = "lavender"
 	display_name = "lavender"
+	mutants = list("milkdew") //CHOMPEDIT: leads to milk plant and lavender that makes a tier 2 source for some medical chems
 	kitchen_tag = "lavender"
 	chems = list("nutriment" = list(1,20), "bicaridine" = list(1,10))
 
@@ -746,7 +807,7 @@
 	seed_name = "peanut"
 	display_name = "peanut vines"
 	kitchen_tag = "peanut"
-	chems = list("nutriment" = list(1,10), "peanutoil" = list(1,3))
+	chems = list("nutriment" = list(1,10), "peanutoil" = list(3,10))
 
 /datum/seed/peanuts/New()
 	..()
@@ -755,7 +816,7 @@
 	set_trait(TRAIT_PRODUCTION,6)
 	set_trait(TRAIT_YIELD,6)
 	set_trait(TRAIT_POTENCY,10)
-	set_trait(TRAIT_PRODUCT_ICON,"potato")
+	set_trait(TRAIT_PRODUCT_ICON,"nuts")
 	set_trait(TRAIT_PRODUCT_COLOUR,"#C4AE7A")
 	set_trait(TRAIT_PLANT_ICON,"bush2")
 	set_trait(TRAIT_IDEAL_LIGHT, 6)
@@ -765,7 +826,7 @@
 	seed_name = "vanilla"
 	display_name = "vanilla"
 	kitchen_tag = "vanilla"
-	chems = list("nutriment" = list(1,10), "vanilla" = list(0,3), "sugar" = list(0, 1))
+	chems = list("nutriment" = list(1,10), "vanilla" = list(2,8), "sugar" = list(1, 4))
 
 /datum/seed/vanilla/New()
 	..()
@@ -829,7 +890,7 @@
 	seed_name = "corn"
 	display_name = "ears of corn"
 	kitchen_tag = "corn"
-	chems = list("nutriment" = list(1,10), "cornoil" = list(1,10))
+	chems = list("nutriment" = list(1,10), "cornoil" = list(3,15))
 	trash_type = /obj/item/weapon/corncob
 
 /datum/seed/corn/New()
@@ -850,6 +911,7 @@
 	name = "potato"
 	seed_name = "potato"
 	display_name = "potatoes"
+	mutants = list("voltato") //CHOMPEDIT: Adding a better potato battery and viable source for V200
 	kitchen_tag = "potato"
 	chems = list("nutriment" = list(1,10), "potatojuice" = list(10,10))
 
@@ -887,6 +949,7 @@
 	name = "soybean"
 	seed_name = "soybean"
 	display_name = "soybeans"
+	mutants = list("orangesapbean","purplesapbean","bluesapbean") //CHOMPEDIT: Adding sappy beanies to mutation
 	kitchen_tag = "soybeans"
 	chems = list("nutriment" = list(1,20), "soymilk" = list(10,20))
 
@@ -905,8 +968,9 @@
 	name = "wheat"
 	seed_name = "wheat"
 	display_name = "wheat stalks"
+	mutants = list("meatwheat")	//CHOMPEDIT: Meat wheat, the solution for vegetarian carnivores
 	kitchen_tag = "wheat"
-	chems = list("nutriment" = list(1,25), "flour" = list(15,15))
+	chems = list("nutriment" = list(1,25), "flour" = list(10,30))
 
 /datum/seed/wheat/New()
 	..()
@@ -1463,3 +1527,29 @@
 	set_trait(TRAIT_YIELD,-1)
 	set_trait(TRAIT_SPREAD,2)
 	set_trait(TRAIT_POTENCY,50)
+
+// Gnomes
+/datum/seed/gnomes
+	name = "gnomes"
+	seed_name = "gnomes"
+	display_name = "gnomes"
+	force_layer = 3
+	chems = list("magicdust" = list(5,20))
+
+/datum/seed/gnomes/New()
+	..()
+	set_trait(TRAIT_HARVEST_REPEAT,1)
+	set_trait(TRAIT_PLANT_ICON,"gnomes")
+	set_trait(TRAIT_PRODUCT_ICON,"gnomes")
+	set_trait(TRAIT_PRODUCT_COLOUR,"")
+	set_trait(TRAIT_FLESH_COLOUR,"")
+	set_trait(TRAIT_PLANT_COLOUR,"")
+	set_trait(TRAIT_BIOLUM_COLOUR,"#fff200")
+	set_trait(TRAIT_MATURATION,8)
+	set_trait(TRAIT_PRODUCTION,6)
+	set_trait(TRAIT_BIOLUM,1)
+	set_trait(TRAIT_YIELD,2)
+	set_trait(TRAIT_SPREAD,1)
+	set_trait(TRAIT_POTENCY,10)
+	set_trait(TRAIT_REQUIRES_NUTRIENTS,0)
+	set_trait(TRAIT_REQUIRES_WATER,0)

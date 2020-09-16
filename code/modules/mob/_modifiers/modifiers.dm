@@ -20,6 +20,10 @@
 	var/light_intensity = null			// Ditto. Not implemented yet.
 	var/mob_overlay_state = null		// Icon_state for an overlay to apply to a (human) mob while this exists.  This is actually implemented.
 	var/client_color = null				// If set, the client will have the world be shown in this color, from their perspective.
+	var/wire_colors_replace = null		// If set, the client will have wires replaced by the given replacement list. For colorblindness. //VOREStation Add
+	var/list/filter_parameters = null	// If set, will add a filter to the holder with the parameters in this var. Must be a list.
+	var/filter_priority = 1				// Used to make filters be applied in a specific order, if that is important.
+	var/filter_instance = null			// Instance of a filter created with the `filter_parameters` list. This exists to make `animate()` calls easier. Don't set manually.
 
 	// Now for all the different effects.
 	// Percentage modifiers are expressed as a multipler. (e.g. +25% damage should be written as 1.25)
@@ -48,6 +52,10 @@
 	var/pain_immunity					// Makes the holder not care about pain while this is on. Only really useful to human mobs.
 	var/pulse_modifier					// Modifier for pulse, will be rounded on application, then added to the normal 'pulse' multiplier which ranges between 0 and 5 normally. Only applied if they're living.
 	var/pulse_set_level					// Positive number. If this is non-null, it will hard-set the pulse level to this. Pulse ranges from 0 to 5 normally.
+	var/emp_modifier					// Added to the EMP strength, which is an inverse scale from 1 to 4, with 1 being the strongest EMP. 5 is a nullification.
+	var/explosion_modifier				// Added to the bomb strength, which is an inverse scale from 1 to 3, with 1 being gibstrength. 4 is a nullification.
+
+	var/vision_flags					// Vision flags to add to the mob. SEE_MOB, SEE_OBJ, etc.
 
 /datum/modifier/New(var/new_holder, var/new_origin)
 	holder = new_holder
@@ -59,7 +67,7 @@
 
 // Checks if the modifier should be allowed to be applied to the mob before attaching it.
 // Override for special criteria, e.g. forbidding robots from receiving it.
-/datum/modifier/proc/can_apply(var/mob/living/L)
+/datum/modifier/proc/can_apply(var/mob/living/L, var/suppress_output = FALSE)
 	return TRUE
 
 // Checks to see if this datum should continue existing.
@@ -78,6 +86,8 @@
 		holder.update_transform()
 	if(client_color)
 		holder.update_client_color()
+	if(LAZYLEN(filter_parameters))
+		holder.remove_filter(REF(src))
 	qdel(src)
 
 // Override this for special effects when it gets added to the mob.
@@ -113,7 +123,8 @@
 // Call this to add a modifier to a mob. First argument is the modifier type you want, second is how long it should last, in ticks.
 // Third argument is the 'source' of the modifier, if it's from someone else.  If null, it will default to the mob being applied to.
 // The SECONDS/MINUTES macro is very helpful for this.  E.g. M.add_modifier(/datum/modifier/example, 5 MINUTES)
-/mob/living/proc/add_modifier(var/modifier_type, var/expire_at = null, var/mob/living/origin = null)
+// The fourth argument is a boolean to suppress failure messages, set it to true if the modifier is repeatedly applied (as chem-based modifiers are) to prevent chat-spam
+/mob/living/proc/add_modifier(var/modifier_type, var/expire_at = null, var/mob/living/origin = null, var/suppress_failure = FALSE)
 	// First, check if the mob already has this modifier.
 	for(var/datum/modifier/M in modifiers)
 		if(ispath(modifier_type, M))
@@ -130,7 +141,7 @@
 
 	// If we're at this point, the mob doesn't already have it, or it does but stacking is allowed.
 	var/datum/modifier/mod = new modifier_type(src, origin)
-	if(!mod.can_apply(src))
+	if(!mod.can_apply(src, suppress_failure))
 		qdel(mod)
 		return
 	if(expire_at)
@@ -145,6 +156,9 @@
 		update_transform()
 	if(mod.client_color)
 		update_client_color()
+	if(LAZYLEN(mod.filter_parameters))
+		add_filter(REF(mod), mod.filter_priority, mod.filter_parameters)
+		mod.filter_instance = get_filter(REF(mod))
 
 	return mod
 

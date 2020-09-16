@@ -126,7 +126,6 @@
 /area/tether_away/debrisfield/explored)
 "av" = (
 /obj/structure/bed/chair/shuttle{
-	icon_state = "shuttle_chair";
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/black/airless,
@@ -332,7 +331,7 @@
 /turf/simulated/shuttle/floor/black/airless,
 /area/tether_away/debrisfield/explored)
 "aW" = (
-/obj/tether_away_spawner/debrisfield/carp/hard,
+/obj/cryogaia_away_spawner/debrisfield/carp/hard,
 /turf/space,
 /area/tether_away/debrisfield/explored)
 "aX" = (
@@ -390,7 +389,7 @@
 /turf/simulated/shuttle/floor/darkred/airless,
 /area/tether_away/debrisfield/explored)
 "bh" = (
-/obj/tether_away_spawner/debrisfield/carp,
+/obj/cryogaia_away_spawner/debrisfield/carp,
 /turf/space,
 /area/tether_away/debrisfield/explored)
 "bi" = (

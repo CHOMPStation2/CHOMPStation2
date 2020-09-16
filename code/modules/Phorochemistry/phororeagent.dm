@@ -117,86 +117,87 @@ var/induromol_code = rand(1, 50)
 	var/love_name
 
 /datum/reagent/phororeagent/love_potion/on_mob_life(var/mob/living/M as mob, var/alien)
-	if(ishuman(M))
-		if(!love_name)
-			var/dist = 100
-			for(var/mob/living/carbon/human/H in view(M))
-				if(H == M)
-					continue
-				var/distTo = sqrt(((M.x - H.x) ** 2) + ((M.y - H.y) ** 2))
-				if(distTo < dist)
-					dist = distTo
-					love_name = H.name
+	if(!istype(holder, /datum/reagents/metabolism/bloodstream))
+		if(ishuman(M))
+			if(!love_name)
+				var/dist = 100
+				for(var/mob/living/carbon/human/H in view(M))
+					if(H == M)
+						continue
+					var/distTo = sqrt(((M.x - H.x) ** 2) + ((M.y - H.y) ** 2))
+					if(distTo < dist)
+						dist = distTo
+						love_name = H.name
 
-			if(love_name)
-				M << "<font color='#e3209b'>You see [love_name]...</font>"
-				spawn(0)
-					sleep(10)
-					M << "<font color='#e3209b'>They are beautiful</font>"
+				if(love_name)
+					to_chat(M, "<font color='#e3209b'>You see [love_name]...</font>")
+					spawn(0)
+						sleep(10)
+						to_chat(M, "<font color='#e3209b'>They are beautiful</font>")
 
-					if(M.mind) //give protect objective
-						var/datum/objective/protection = new/datum/objective()
-						protection.explanation_text = "<font color='#e3209b'>Protect [love_name] at all costs</font>"
-						M.mind.objectives.Add(protection)
-						var/obj_count = 1
-						M << "<span class='notice'>Your current objectives:</span>"
-						for(var/datum/objective/objective in M.mind.objectives)
-							M << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
-							obj_count++
+						if(M.mind) //give protect objective
+							var/datum/objective/protection = new/datum/objective()
+							protection.explanation_text = "<font color='#e3209b'>Protect [love_name] at all costs</font>"
+							M.mind.objectives.Add(protection)
+							var/obj_count = 1
+							to_chat(M, "<span class='notice'>Your current objectives:</span>")
+							for(var/datum/objective/objective in M.mind.objectives)
+								to_chat(M, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
+								obj_count++
 
-						M << "<BR>"
-		else
-			if(prob(5))
-				if(prob(98))
-					var/list/love_messages = list("You feel strong affection towards [love_name]",
-					"You can't stop thinking about [love_name]", "[love_name] is love, [love_name] is life",
-					"[love_name] seems irresistable", "You cannot fathom life without [love_name]",
-					"[love_name] seems to be the essence of perfection",
-					"[love_name] can never be allowed to leave your side")
+							to_chat(M, "<BR>)")
+			else
+				if(prob(5))
+					if(prob(98))
+						var/list/love_messages = list("You feel strong affection towards [love_name]",
+						"You can't stop thinking about [love_name]", "[love_name] is love, [love_name] is life",
+						"[love_name] seems irresistable", "You cannot fathom life without [love_name]",
+						"[love_name] seems to be the essence of perfection",
+						"[love_name] can never be allowed to leave your side")
 
-					M << "<font color='#e3209b'>[pick(love_messages)]</font>"
+						to_chat(M, "<font color='#e3209b'>[pick(love_messages)]</font>")
 
-				else
-					M << "<font color='#e3209b'>You begin to build a trouser tent</font>"
+					else
+						to_chat(M, "<font color='#e3209b'>You begin to build a trouser tent</font>")
 	return ..()
 
 /datum/reagent/phororeagent/love_potion/on_remove(var/atom/A)
-	if(istype(A, /mob/living))
-		var/mob/living/M = A
-		if(M.mind)
-			var/message = "Your mind feels a lot more focused"
-			var/end_message = ""
-			var/list/message2list = list()
-			var/i = 1
-			var/length = lentext(message)
-			while(i <= length)
-				message2list += copytext(message, i, i + 1)
-				i++
-			var/col_perc = 1 / length
-			var/col_inc = 0
-			var/red = 0
-			var/green = 0
-			var/blue = 0
-			for(var/char in message2list) //fade from pink to black text
-				red = (227 * (1 - col_inc))
-				green = (32 * (1 - col_inc))
-				blue = (155 * (1 - col_inc))
-				end_message += "<font color = '[rgb(red, green, blue)]'>[char]</font>"
-				col_inc += col_perc
+	if(!istype(holder, /datum/reagents/metabolism/bloodstream))
+		if(istype(A, /mob/living))
+			var/mob/living/M = A
+			if(M.mind)
+				var/message = "Your mind feels a lot more focused"
+				var/end_message = ""
+				var/list/message2list = list()
+				var/i = 1
+				var/length = length(message)
+				while(i <= length)
+					message2list += copytext(message, i, i + 1)
+					i++
+				var/col_perc = 1 / length
+				var/col_inc = 0
+				var/red = 0
+				var/green = 0
+				var/blue = 0
+				for(var/char in message2list) //fade from pink to black text
+					red = (227 * (1 - col_inc))
+					green = (32 * (1 - col_inc))
+					blue = (155 * (1 - col_inc))
+					end_message += "<font color = '[rgb(red, green, blue)]'>[char]</font>"
+					col_inc += col_perc
 
-			M << end_message
+				to_chat(M, end_message)
 
-			for(var/datum/objective/O in M.mind.objectives)
-				if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
-					M.mind.objectives.Remove(O)
-					var/obj_count = 1
-					M << "<span class='notice'>Your current objectives:</span>"
-					for(var/datum/objective/objective in M.mind.objectives)
-						M << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
-						obj_count++
+				for(var/datum/objective/O in M.mind.objectives)
+					if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
+						M.mind.objectives.Remove(O)
+						var/obj_count = 1
+						to_chat(M, "<span class='notice'>Your current objectives:</span>")
+						for(var/datum/objective/objective in M.mind.objectives)
+							to_chat(M, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
+							obj_count++
 
-					M << "<BR>"
-					break
+						to_chat(M, "<BR>")
 
 /datum/reagent/phororeagent/love_potion/on_mob_death(var/mob/M)
 	//update objectives
@@ -205,12 +206,12 @@ var/induromol_code = rand(1, 50)
 			if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
 				M.mind.objectives.Remove(O)
 				var/obj_count = 1
-				M << "<span class='notice'>Your current objectives:</span>"
+				to_chat(M, "<span class='notice'>Your current objectives:</span>")
 				for(var/datum/objective/objective in M.mind.objectives)
-					M << "<B>Objective #[obj_count]</B>: [objective.explanation_text]"
+					to_chat(M, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
 					obj_count++
 
-				M << "<BR>"
+				to_chat(M, "<BR>")
 				break
 
 /obj/item/weapon/reagent_containers/glass/beaker/lovepotion
@@ -316,7 +317,7 @@ var/induromol_code = rand(1, 50)
 	if(istype(A, /mob/living))
 		var/mob/living/M = A
 		M.universal_understand = 0
-		M << "<span class='warning'>You no longer feel attuned to the spoken word.</span>"
+		to_chat(M, "<span class='warning'>You no longer feel attuned to the spoken word.</span>")
 
 /datum/reagent/phororeagent/babelizine/on_mob_death(var/mob/M)
 	holder.remove_reagent(src.id, src.volume)
@@ -454,7 +455,7 @@ var/induromol_code = rand(1, 50)
 	if(data[1])
 		if(istype(A, /mob))
 			var/mob/M = A
-			M << "<span class='notice'>You feel the last traces of chemicals leave your body as you return to death once more...</span>"
+			to_chat(M, "<span class='notice'>You feel the last traces of chemicals leave your body as you return to death once more...</span>")
 			M.death(0)
 		//Reagent giveth, and reagent taketh away
 
@@ -499,14 +500,14 @@ var/induromol_code = rand(1, 50)
 		H.f_style = "Shaved"
 
 	if(!M.digitalcamo)
-		M << "<span class='notice'>Your skin starts to feel strange</span>"
+		to_chat(M, "<span class='notice'>Your skin starts to feel strange</span>")
 	M.digitalcamo = 1
 	return ..()
 
 /datum/reagent/phororeagent/tegoxane/on_remove(var/atom/A)
 	if(istype(A, /mob))
 		var/mob/M = A
-		M << "<span class='notice'>Your skin feels normal again</span>"
+		to_chat(M, "<span class='notice'>Your skin feels normal again</span>")
 		M.digitalcamo = 0
 		M.icon = saved_icon
 		if(istype(M, /mob/living/carbon/human))
@@ -538,7 +539,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/expulsicol/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(!message_given)
-		M << "You don't feel very good..."
+		to_chat(M, "You don't feel very good...")
 		message_given = 1
 
 		spawn(20)
@@ -572,14 +573,14 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/oculusosone/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(M.client)
 		if(M.client.view == 7)
-			if(ishuman(M))
+			if(ishuman(M) && !(alien == IS_SLIME))
 				//check for mechanical eyes
 				var/mob/living/carbon/human/H = M
 				var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 				if(eyes.status & ORGAN_ROBOT)
 					return ..()
 
-			M << "<span class='notice'>You blink and your eyes quickly adapt to enhanced function.</span>"
+			to_chat(M, "<span class='notice'>You blink and your eyes quickly adapt to enhanced function.</span>")
 			M.client.view = 10
 	return ..()
 
@@ -589,13 +590,18 @@ var/induromol_code = rand(1, 50)
 		if(ishuman(M))
 			//check for mechanical eyes
 			var/mob/living/carbon/human/H = M
+			if(H.get_species() == SPECIES_PROMETHEAN)
+				if(M.client)
+					M.client.view = 7
+					to_chat(M, "<span class='notice'>After a few blinks, you realize the Oculusosone has worn off.</span>")
+				return ..()
 			var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 			if(eyes.status & ORGAN_ROBOT)
 				return ..()
 
 		if(M.client)
 			M.client.view = 7
-			M << "<span class='notice'>After a few blinks, you realize the Oculusosone has worn off.</span>"
+			to_chat(M, "<span class='notice'>After a few blinks, you realize the Oculusosone has worn off.</span>")
 	return ..()
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -676,9 +682,10 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/rad_x
 	id = "rad_x"
 	name = "Rad-X"
-	description = "Metabolizes only when absorbing radiation damage"
+	description = "Metabolizes slowly until absorbing radiation damage"
 	color = "#64110B"
-	metabolism = 0
+	metabolism = 0.15
+	overdose = 45
 
 /datum/reagent/phororeagent/rad_x/on_mob_life(var/mob/living/M as mob, var/alien)
 	var/metabolize = max(M.radiation - 25, 0)
@@ -697,7 +704,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/caloran/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(volume >= 2)
 		if(burn == -1)
-			M << "<span class='notice'>You feel your skin painfully harden.</span>"
+			to_chat(M, "<span class='notice'>You feel your skin painfully harden.</span>")
 			M.take_overall_damage(20, 0)
 			burn = M.getFireLoss()
 		else
@@ -710,7 +717,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/caloran/on_remove(var/atom/A)
 	if(istype(A, /mob))
 		var/mob/M = A
-		M << "<span class='notice'>Your skin returns to normal, no longer desensitized to extreme heat.</span>"
+		to_chat(M, "<span class='notice'>Your skin returns to normal, no longer desensitized to extreme heat.</span>")
 	return ..()
 
 /datum/reagent/phororeagent/the_stuff
@@ -723,7 +730,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/the_stuff/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(!init)
-		M << "<span class='warning'>You start tripping balls.</span>"
+		to_chat(M, "<span class='warning'>You start tripping balls.</span>")
 		init = 1
 	var/drugs = list("space_drugs", "serotrotium", "psilocybin", "nuka_cola", "atomicbomb", "hippiesdelight")
 	for(var/drug in drugs)
@@ -739,7 +746,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/frioline/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(M.bodytemperature > 310)
-		M << "<span class='notice'>You suddenly feel very cold.</span>"
+		to_chat(M, "<span class='notice'>You suddenly feel very cold.</span>")
 	M.bodytemperature = max(165, M.bodytemperature - 30)
 	return ..()
 
@@ -893,10 +900,10 @@ var/induromol_code = rand(1, 50)
 	if(world.time - initial_time >= 30) //three second startup lag
 		if(!metabolism)
 			metabolism = 1
-			M << "<span class='notice'>You begin to feel transcendental.</span>"
+			to_chat(M, "<span class='notice'>You begin to feel transcendental.</span>")
 
 		if(M.z > 5 || M.z == 2 || M.z < 1) //no centcomm teleport, also not dealing with other unknown sectors
-			M << "<span class='warning'>You feel the bluespace leave your body on this sector, nothing happens.</span>"
+			to_chat(M, "<span class='warning'>You feel the bluespace leave your body on this sector, nothing happens.</span>")
 			src = null
 			return
 
@@ -1092,11 +1099,11 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 			if(volume <= 10)
 				return
 			for(var/mob/M in viewers(7, T))
-				M << "<font color="green">You hear sizzling as the solution begins to eat away the [T.name].</font>"
+				to_chat(M, "<font color="green">You hear sizzling as the solution begins to eat away the [T.name].</font>")
 			sleep(30)
 			if(volume >= 50)
 				for(var/mob/M in viewers(7, T))
-					M << "<font color="green">The acid melts through the [T.name]!</font>"
+					to_chat(M, "<font color="green">The acid melts through the [T.name]!</font>")
 
 				if(istype(T, /turf/simulated/wall))
 					for(var/obj/O in T.contents) //Shamelessly stolen from walls.dm
@@ -1111,7 +1118,7 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 				//del(src)
 			else
 				for(var/mob/M in viewers(7, T))
-					M << "<font color="green">The sizzling stops leaving the floor intact.</font>"
+					to_chat(M, "<font color="green">The sizzling stops leaving the floor intact.</font>")
 		return
 
 	reaction_obj(var/obj/O, var/volume)
@@ -1120,15 +1127,15 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 			if(volume <= 10)
 				return
 			for(var/mob/M in viewers(7, O))
-				M << "<font color="green">You hear sizzling as the solution begins to eat away the [O.name].</font>"
+				to_chat(M, "<font color="green">You hear sizzling as the solution begins to eat away the [O.name].</font>")
 			sleep(30)
 			if(volume >= 50)
 				for(var/mob/M in viewers(7, O))
-					M << "<font color="green">The acid melts through the [O.name]!</font>"
+					to_chat(M, "<font color="green">The acid melts through the [O.name]!</font>")
 				del(O)
 			else
 				for(var/mob/M in viewers(7, O))
-					M << "<font color="green">The sizzling stops leaving the floor intact.</font>"
+					to_chat(M, "<font color="green">The sizzling stops leaving the floor intact.</font>")
 		else
 			return ..()
 

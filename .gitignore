@@ -1,12 +1,17 @@
 #ignore misc BYOND files
 Thumbs.db
+vchat.db
+vchat.db*
 *.log
 *.int
 *.rsc
 *.dmb
 *.lk
 *.backup
+*.before
 *.pyc
+*.pid
+data
 data/
 cfg/
 
@@ -33,3 +38,5 @@ temp.dmi
 /maps/RandomZLevels/backup
 /tools/midi2piano.zip
 /maps/yw/backup
+
+icons/mecha/mecha_ch.dmi

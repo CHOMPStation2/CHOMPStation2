@@ -179,7 +179,7 @@
 		/obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag,
 		/obj/item/clothing/suit/armor/pcarrier/navy/fluff/saur_pccarrier
 		)
-
+/*
 // ************
 // championfire
 // ************
@@ -191,7 +191,7 @@
 	desc = "A kit containing Anoki's equipment."
 	has_items = list(
 		/obj/item/weapon/implanter/reagent_generator/roiz/anoki)
-
+*/
 //Ivy Kaeire
 
 /obj/item/weapon/storage/box/fluff/ivy
@@ -291,8 +291,8 @@
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/vasharr_armlets,
 		/obj/item/clothing/accessory/fluff/vasharr_pendant,
-		/obj/item/clothing/suit/storage/service/sifguard/engineering/command/fluff/vasharr,
-		/obj/item/clothing/under/utility/sifguard/engineering/command/fluff/vasharr)
+		/obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr,
+		/obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr)
 
 //FrenziedVorcha / Defcunt
 

@@ -73,6 +73,7 @@
 	//VOREStation Add End
 
 	post_buckle_mob(M)
+	M.throw_alert("buckled", /obj/screen/alert/restrained/buckled, new_master = src)
 	return TRUE
 
 /atom/movable/proc/unbuckle_mob(mob/living/buckled_mob, force = FALSE)
@@ -88,6 +89,7 @@
 		buckled_mob.anchored = initial(buckled_mob.anchored)
 		buckled_mob.update_canmove()
 		buckled_mob.update_floating( buckled_mob.Check_Dense_Object() )
+		buckled_mob.clear_alert("buckled")
 	//	buckled_mob = null
 		buckled_mobs -= buckled_mob
 
@@ -113,7 +115,7 @@
 //Wrapper procs that handle sanity and user feedback
 /atom/movable/proc/user_buckle_mob(mob/living/M, mob/user, var/forced = FALSE, var/silent = FALSE)
 	if(!ticker)
-		user << "<span class='warning'>You can't buckle anyone in before the game starts.</span>"
+		to_chat(user, "<span class='warning'>You can't buckle anyone in before the game starts.</span>")
 		return FALSE // Is this really needed?
 	if(!user.Adjacent(M) || user.restrained() || user.stat || istype(user, /mob/living/silicon/pai))
 		return FALSE
@@ -133,6 +135,7 @@
 	//		step_towards(M, src)
 
 	. = buckle_mob(M, forced)
+	playsound(src.loc, 'sound/effects/seatbelt.ogg', 50, 1)
 	if(.)
 		var/reveal_message = list("buckled_mob" = null, "buckled_to" = null) //VORE EDIT: This being a list and messages existing for the buckle target atom.
 		if(!silent)
@@ -160,6 +163,7 @@
 
 /atom/movable/proc/user_unbuckle_mob(mob/living/buckled_mob, mob/user)
 	var/mob/living/M = unbuckle_mob(buckled_mob)
+	playsound(src.loc, 'sound/effects/seatbelt.ogg', 50, 1)
 	if(M)
 		if(M != user)
 			M.visible_message(\
@@ -174,19 +178,18 @@
 		add_fingerprint(user)
 	return M
 
-/atom/movable/proc/handle_buckled_mob_movement(newloc,direct)
-	if(has_buckled_mobs())
-		for(var/A in buckled_mobs)
-			var/mob/living/L = A
-//			if(!L.Move(newloc, direct))
-			if(!L.forceMove(newloc, direct))
-				loc = L.loc
-				last_move = L.last_move
-				L.inertia_dir = last_move
-				return FALSE
-			else
-				L.set_dir(dir)
-	return TRUE
+/atom/movable/proc/handle_buckled_mob_movement(atom/old_loc, direct, movetime)
+	for(var/A in buckled_mobs)
+		var/mob/living/L = A
+		if(!L.Move(loc, direct, movetime))
+			L.forceMove(loc, direct, movetime)
+			L.last_move = last_move
+			L.inertia_dir = last_move
+
+		if(!buckle_dir)
+			L.set_dir(dir)
+		else
+			L.set_dir(buckle_dir)
 
 /atom/movable/proc/can_buckle_check(mob/living/M, forced = FALSE)
 	if(!buckled_mobs)

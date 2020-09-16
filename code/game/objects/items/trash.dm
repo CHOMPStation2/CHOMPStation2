@@ -6,6 +6,21 @@
 	icon = 'icons/obj/trash.dmi'
 	w_class = ITEMSIZE_SMALL
 	desc = "This is rubbish."
+	drop_sound = 'sound/items/drop/wrapper.ogg'
+	var/age = 0
+
+/obj/item/trash/New(var/newloc, var/_age)
+	..(newloc)
+	if(!isnull(_age))
+		age = _age
+
+/obj/item/trash/Initialize()
+	SSpersistence.track_value(src, /datum/persistent/filth/trash)
+	. = ..()
+
+/obj/item/trash/Destroy()
+	SSpersistence.forget_value(src, /datum/persistent/filth/trash)
+	. = ..()
 
 /obj/item/trash/raisins
 	name = "\improper 4no raisins"
@@ -38,6 +53,7 @@
 /obj/item/trash/unajerky
 	name = "Moghes Imported Sissalik Jerky"
 	icon_state = "unathitinred"
+	drop_sound = 'sound/items/drop/soda.ogg'
 
 /obj/item/trash/syndi_cakes
 	name = "syndi cakes"
@@ -66,6 +82,7 @@
 /obj/item/trash/tray
 	name = "tray"
 	icon_state = "tray"
+	drop_sound = 'sound/items/trayhit1.ogg'
 
 /obj/item/trash/candle
 	name = "candle"
@@ -87,6 +104,23 @@
 /obj/item/trash/tastybread
 	name = "bread tube"
 	icon_state = "tastybread"
+
+// Aurora Food Port
+/obj/item/trash/brownies
+	name = "brownie tray"
+	icon_state = "brownies"
+
+/obj/item/trash/snacktray
+	name = "snacktray"
+	icon_state = "snacktray"
+
+/obj/item/trash/dipbowl
+	name = "dip bowl"
+	icon_state = "dipbowl"
+
+/obj/item/trash/chipbasket
+	name = "empty basket"
+	icon_state = "chipbasket_empty" 
 
 /obj/item/trash/attack(mob/M as mob, mob/living/user as mob)
 	return

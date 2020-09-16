@@ -2,6 +2,7 @@
 
 /obj/machinery/computer/prisoner
 	name = "prisoner management console"
+	desc = "Used to keep those sneaky prisoners in line, if they have an implant."
 	icon_keyboard = "security_key"
 	icon_screen = "explosive"
 	light_color = "#a91515"
@@ -29,7 +30,7 @@
 		else if(screen == 1)
 			dat += "<HR>Chemical Implants<BR>"
 			var/turf/Tr = null
-			for(var/obj/item/weapon/implant/chem/C in all_chem_implants)
+			for(var/obj/item/weapon/implant/chem/C in GLOB.all_chem_implants)
 				Tr = get_turf(C)
 				if(!Tr)	continue//Out of range
 				if(!C.implanted) continue
@@ -39,7 +40,7 @@
 				dat += "<A href='?src=\ref[src];inject10=\ref[C]'>(<font color=red>(10)</font>)</A><BR>"
 				dat += "********************************<BR>"
 			dat += "<HR>Tracking Implants<BR>"
-			for(var/obj/item/weapon/implant/tracking/T in all_tracking_implants)
+			for(var/obj/item/weapon/implant/tracking/T in GLOB.all_tracking_implants)
 				Tr = get_turf(T)
 				if(!Tr) continue//Out of range
 				if(!T.implanted) continue
@@ -88,7 +89,7 @@
 				if(src.allowed(usr))
 					screen = !screen
 				else
-					usr << "Unauthorized Access."
+					to_chat(usr, "Unauthorized Access.")
 
 			else if(href_list["warn"])
 				var/warning = sanitize(input(usr,"Message:","Enter your message here!",""))
@@ -96,7 +97,7 @@
 				var/obj/item/weapon/implant/I = locate(href_list["warn"])
 				if((I)&&(I.imp_in))
 					var/mob/living/carbon/R = I.imp_in
-					R << "<span class='notice'>You hear a voice in your head saying: '[warning]'</span>"
+					to_chat(R, "<span class='notice'>You hear a voice in your head saying: '[warning]'</span>")
 
 			src.add_fingerprint(usr)
 		src.updateUsrDialog()

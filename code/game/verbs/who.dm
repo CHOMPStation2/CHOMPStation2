@@ -61,12 +61,17 @@
 		msg += "[line]\n"
 
 	msg += "<b>Total Players: [length(Lines)]</b>"
-	src << msg
+	to_chat(src,msg)
 
 /client/verb/staffwho()
 	set category = "Admin"
 	set name = "Staffwho"
 
+	var/message = get_staffwho_message(holder)
+	to_chat(src, message)
+
+// VOREStation Edit - This whole proc has various vorestation edits throughout. Practically every other line.
+/proc/get_staffwho_message(datum/admins/holder)
 	var/msg = ""
 	var/modmsg = ""
 	var/devmsg = ""
@@ -75,9 +80,10 @@
 	var/num_admins_online = 0
 	var/num_devs_online = 0
 	var/num_event_managers_online = 0
+
 	if(holder)
-		for(var/client/C in admins)
-			if(R_ADMIN & C.holder.rights || (!R_MOD & C.holder.rights && !R_EVENT & C.holder.rights))	//Used to determine who shows up in admin rows
+		for(var/client/C in GLOB.admins)
+			if(R_ADMIN & C.holder.rights && R_BAN & C.holder.rights)
 
 				if(C.holder.fakekey && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))		//Event Managerss can't see stealthmins
 					continue
@@ -102,8 +108,13 @@
 				msg += "\n"
 
 				num_admins_online++
-			else if(R_MOD & C.holder.rights)				//Who shows up in mod rows.
+			else if(R_MOD & C.holder.rights && !(R_SERVER & C.holder.rights))
 				modmsg += "\t[C] is a [C.holder.rank]"
+
+				if(C.holder.fakekey && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))
+					continue
+				if(C.holder.fakekey)
+					msg += " <i>(as [C.holder.fakekey])</i>"
 
 				if(isobserver(C.mob))
 					modmsg += " - Observing"
@@ -121,7 +132,11 @@
 				num_mods_online++
 
 			else if(R_SERVER & C.holder.rights)
+				if(C.holder.fakekey && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))
+					continue
 				devmsg += "\t[C] is a [C.holder.rank]"
+				if(C.holder.fakekey)
+					devmsg += " <i>(as [C.holder.fakekey])</i>"
 				if(isobserver(C.mob))
 					devmsg += " - Observing"
 				else if(istype(C.mob,/mob/new_player))
@@ -137,8 +152,12 @@
 				devmsg += "\n"
 				num_devs_online++
 
-			else if(R_EVENT & C.holder.rights)
+			else
+				if(C.holder.fakekey && (!R_ADMIN & holder.rights && !R_MOD & holder.rights))
+					continue
 				eventMmsg += "\t[C] is a [C.holder.rank]"
+				if(C.holder.fakekey)
+					eventMmsg += " <i>(as [C.holder.fakekey])</i>"
 				if(isobserver(C.mob))
 					eventMmsg += " - Observing"
 				else if(istype(C.mob,/mob/new_player))
@@ -155,32 +174,35 @@
 				num_event_managers_online++
 
 	else
-		for(var/client/C in admins)
-			if(R_ADMIN & C.holder.rights || (!R_MOD & C.holder.rights && !R_EVENT & C.holder.rights))
+		for(var/client/C in GLOB.admins)
+			if(R_ADMIN & C.holder.rights && R_BAN & C.holder.rights)
 				if(!C.holder.fakekey)
 					msg += "\t[C] is a [C.holder.rank]\n"
 					num_admins_online++
-			else if (R_MOD & C.holder.rights)
-				modmsg += "\t[C] is a [C.holder.rank]\n"
-				num_mods_online++
-			else if (R_SERVER & C.holder.rights)
-				devmsg += "\t[C] is a [C.holder.rank]\n"
-				num_devs_online++
-			else if (R_EVENT & C.holder.rights)
-				eventMmsg += "\t[C] is a [C.holder.rank]\n"
-				num_event_managers_online++
+			else if(R_MOD & C.holder.rights && !(R_SERVER & C.holder.rights))	//YW EDIT
+				if(!C.holder.fakekey)
+					modmsg += "\t[C] is a [C.holder.rank]\n"
+					num_mods_online++
+			else if(R_SERVER & C.holder.rights)
+				if(!C.holder.fakekey)
+					devmsg += "\t[C] is a [C.holder.rank]\n"
+					num_devs_online++
+			else
+				if(!C.holder.fakekey)
+					eventMmsg += "\t[C] is a [C.holder.rank]\n"
+					num_event_managers_online++
 
-	if(config.admin_irc)
-		to_chat(src, "<span class='info'>Adminhelps are also sent to IRC. If no admins are available in game try anyway and an admin on IRC may see it and respond.</span>")
 	msg = "<b>Current Admins ([num_admins_online]):</b>\n" + msg
 
 	if(config.show_mods)
-		msg += "\n<b> Current Moderators ([num_mods_online]):</b>\n" + modmsg
+		msg += "\n<b> Current Moderators ([num_mods_online]):</b>\n" + modmsg	//YW EDIT
 
 	if(config.show_devs)
 		msg += "\n<b> Current Developers ([num_devs_online]):</b>\n" + devmsg
 
 	if(config.show_event_managers)
-		msg += "\n<b> Current Event Managers ([num_event_managers_online]):</b>\n" + eventMmsg
+		msg += "\n<b> Current Miscellaneous ([num_event_managers_online]):</b>\n" + eventMmsg
 
-	src << msg
+	msg += "\n<span class='info'>Adminhelps are also sent to Discord. If no admins are available in game try anyway and an admin on Discord may see it and respond.</span>"
+
+	return msg

@@ -22,7 +22,7 @@
 /mob/living/bot/cleanbot/handleIdle()
 	if(!screwloose && !oddbutton && prob(2))
 		custom_emote(2, "makes an excited booping sound!")
-		playsound(src.loc, 'sound/machines/synth_yes.ogg', 50, 0)
+		playsound(src, 'sound/machines/synth_yes.ogg', 50, 0)
 
 	if(screwloose && prob(5)) // Make a mess
 		if(istype(loc, /turf/simulated))
@@ -168,18 +168,18 @@
 			patrol_path = null
 		if("screw")
 			screwloose = !screwloose
-			usr << "<span class='notice'>You twiddle the screw.</span>"
+			to_chat(usr, "<span class='notice'>You twiddle the screw.</span>")
 		if("oddbutton")
 			oddbutton = !oddbutton
-			usr << "<span class='notice'>You press the weird button.</span>"
+			to_chat(usr, "<span class='notice'>You press the weird button.</span>")
 	attack_hand(usr)
 
 /mob/living/bot/cleanbot/emag_act(var/remaining_uses, var/mob/user)
 	. = ..()
 	if(!screwloose || !oddbutton)
 		if(user)
-			user << "<span class='notice'>The [src] buzzes and beeps.</span>"
-			playsound(src.loc, 'sound/machines/buzzbeep.ogg', 50, 0)
+			to_chat(user, "<span class='notice'>The [src] buzzes and beeps.</span>")
+			playsound(src, 'sound/machines/buzzbeep.ogg', 50, 0)
 		oddbutton = 1
 		screwloose = 1
 		return 1
@@ -219,7 +219,7 @@
 		var/turf/T = get_turf(loc)
 		var/mob/living/bot/cleanbot/A = new /mob/living/bot/cleanbot(T)
 		A.name = created_name
-		user << "<span class='notice'>You add the robot arm to the bucket and sensor assembly. Beep boop!</span>"
+		to_chat(user, "<span class='notice'>You add the robot arm to the bucket and sensor assembly. Beep boop!</span>")
 		user.drop_from_inventory(src)
 		qdel(src)
 

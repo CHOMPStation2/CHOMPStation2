@@ -47,8 +47,194 @@
 	if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
 	M.heal_organ_damage(0.5 * removed, 0)
 	if(M.species.gets_food_nutrition) //VOREStation edit. If this is set to 0, they don't get nutrition from food.
-		M.nutrition += nutriment_factor * removed // For hunger and fatness
+		M.adjust_nutrition(nutriment_factor * removed) // For hunger and fatness
 	M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
+
+// Aurora Cooking Port Insertion Begin
+
+/*
+	Coatings are used in cooking. Dipping food items in a reagent container with a coating in it
+	allows it to be covered in that, which will add a masked overlay to the sprite.
+	Coatings have both a raw and a cooked image. Raw coating is generally unhealthy
+	Generally coatings are intended for deep frying foods
+*/
+/datum/reagent/nutriment/coating
+	nutriment_factor = 6 //Less dense than the food itself, but coatings still add extra calories
+	var/messaged = 0
+	var/icon_raw
+	var/icon_cooked
+	var/coated_adj = "coated"
+	var/cooked_name = "coating"
+
+/datum/reagent/nutriment/coating/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+
+	//We'll assume that the batter isnt going to be regurgitated and eaten by someone else. Only show this once
+	if(data["cooked"] != 1)
+		if (!messaged)
+			to_chat(M, "<span class='warning'>Ugh, this raw [name] tastes disgusting.</span>")
+			nutriment_factor *= 0.5
+			messaged = 1
+
+		//Raw coatings will sometimes cause vomiting. 75% chance of this happening.
+		if(prob(75))
+			M.vomit()
+	..()
+
+/datum/reagent/nutriment/coating/initialize_data(var/newdata) // Called when the reagent is created.
+	..()
+	if (!data)
+		data = list()
+	else
+		if (isnull(data["cooked"]))
+			data["cooked"] = 0
+		return
+	data["cooked"] = 0
+	if (holder && holder.my_atom && istype(holder.my_atom,/obj/item/weapon/reagent_containers/food/snacks))
+		data["cooked"] = 1
+		name = cooked_name
+
+		//Batter which is part of objects at compiletime spawns in a cooked state
+
+
+//Handles setting the temperature when oils are mixed
+/datum/reagent/nutriment/coating/mix_data(var/newdata, var/newamount)
+	if (!data)
+		data = list()
+
+	data["cooked"] = newdata["cooked"]
+
+/datum/reagent/nutriment/coating/batter
+	name = "batter mix"
+	cooked_name = "batter"
+	id = "batter"
+	color = "#f5f4e9"
+	reagent_state = LIQUID
+	icon_raw = "batter_raw"
+	icon_cooked = "batter_cooked"
+	coated_adj = "battered"
+
+/datum/reagent/nutriment/coating/beerbatter
+	name = "beer batter mix"
+	cooked_name = "beer batter"
+	id = "beerbatter"
+	color = "#f5f4e9"
+	reagent_state = LIQUID
+	icon_raw = "batter_raw"
+	icon_cooked = "batter_cooked"
+	coated_adj = "beer-battered"
+
+/datum/reagent/nutriment/coating/beerbatter/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	M.add_chemical_effect(CE_ALCOHOL, 0.02) //Very slightly alcoholic
+
+//=========================
+//Fats
+//=========================
+/datum/reagent/nutriment/triglyceride
+	name = "triglyceride"
+	id = "triglyceride"
+	description = "More commonly known as fat, the third macronutrient, with over double the energy content of carbs and protein"
+
+	reagent_state = SOLID
+	nutriment_factor = 27//The caloric ratio of carb/protein/fat is 4:4:9
+	color = "#CCCCCC"
+
+/datum/reagent/nutriment/triglyceride/oil
+	//Having this base class incase we want to add more variants of oil
+	name = "Oil"
+	id = "oil"
+	description = "Oils are liquid fats."
+	reagent_state = LIQUID
+	color = "#c79705"
+	touch_met = 1.5
+	var/lastburnmessage = 0
+
+/datum/reagent/nutriment/triglyceride/oil/touch_turf(var/turf/simulated/T)
+	if(!istype(T))
+		return
+	
+	var/hotspot = (locate(/obj/fire) in T)
+	if(hotspot && !istype(T, /turf/space))
+		var/datum/gas_mixture/lowertemp = T.remove_air(T:air:total_moles)
+		lowertemp.temperature = max(min(lowertemp.temperature-2000, lowertemp.temperature / 2), 0)
+		lowertemp.react()
+		T.assume_air(lowertemp)
+		qdel(hotspot)
+
+	if(volume >= 3)
+		T.wet_floor(2)
+
+/datum/reagent/nutriment/triglyceride/oil/initialize_data(var/newdata) // Called when the reagent is created.
+	..()
+	if (!data)
+		data = list("temperature" = T20C)
+
+//Handles setting the temperature when oils are mixed
+/datum/reagent/nutriment/triglyceride/oil/mix_data(var/newdata, var/newamount)
+
+	if (!data)
+		data = list()
+
+	var/ouramount = volume - newamount
+	if (ouramount <= 0 || !data["temperature"] || !volume)
+		//If we get here, then this reagent has just been created, just copy the temperature exactly
+		data["temperature"] = newdata["temperature"]
+
+	else
+		//Our temperature is set to the mean of the two mixtures, taking volume into account
+		var/total = (data["temperature"] * ouramount) + (newdata["temperature"] * newamount)
+		data["temperature"] = total / volume
+
+	return ..()
+
+
+//Calculates a scaling factor for scalding damage, based on the temperature of the oil and creature's heat resistance
+/datum/reagent/nutriment/triglyceride/oil/proc/heatdamage(var/mob/living/carbon/M)
+	var/threshold = 360//Human heatdamage threshold
+	var/datum/species/S = M.get_species(1)
+	if (S && istype(S))
+		threshold = S.heat_level_1
+
+	//If temperature is too low to burn, return a factor of 0. no damage
+	if (data["temperature"] < threshold)
+		return 0
+
+	//Step = degrees above heat level 1 for 1.0 multiplier
+	var/step = 60
+	if (S && istype(S))
+		step = (S.heat_level_2 - S.heat_level_1)*1.5
+
+	. = data["temperature"] - threshold
+	. /= step
+	. = min(., 2.5)//Cap multiplier at 2.5
+
+/datum/reagent/nutriment/triglyceride/oil/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+	var/dfactor = heatdamage(M)
+	if (dfactor)
+		M.take_organ_damage(0, removed * 1.5 * dfactor)
+		data["temperature"] -= (6 * removed) / (1 + volume*0.1)//Cools off as it burns you
+		if (lastburnmessage+100 < world.time	)
+			to_chat(M, "<span class='danger'>Searing hot oil burns you, wash it off quick!</span>")
+			lastburnmessage = world.time
+
+/datum/reagent/nutriment/triglyceride/oil/corn
+	name = "Corn Oil"
+	id = "cornoil"
+	description = "An oil derived from various types of corn."
+	taste_description = "oil"
+	taste_mult = 0.1
+	reagent_state = LIQUID
+	
+/datum/reagent/nutriment/triglyceride/oil/peanut
+	name = "Peanut Oil"
+	id = "peanutoil"
+	description = "An oil derived from various types of nuts."
+	taste_description = "nuts"
+	taste_mult = 0.3
+	nutriment_factor = 15
+	color = "#4F3500"
+
+// Aurora Cooking Port Insertion End
 
 /datum/reagent/nutriment/glucose
 	name = "Glucose"
@@ -84,6 +270,24 @@
 		M.adjustToxLoss(2 * removed)
 		return
 	..()
+
+/datum/reagent/nutriment/protein/tofu
+	name = "tofu protein"
+	id = "tofu"
+	color = "#fdffa8"
+	taste_description = "tofu"
+
+/datum/reagent/nutriment/protein/seafood
+	name = "seafood protein"
+	id = "seafood"
+	color = "#f5f4e9"
+	taste_description = "fish"
+
+/datum/reagent/nutriment/protein/cheese // Also bad for skrell.
+	name = "cheese"
+	id = "cheese"
+	color = "#EDB91F"
+	taste_description = "cheese"
 
 /datum/reagent/nutriment/protein/egg // Also bad for skrell.
 	name = "egg yolk"
@@ -123,7 +327,7 @@
 				M.Weaken(2)
 			M.drowsyness = max(M.drowsyness, 20)
 		else
-			M.sleeping = max(M.sleeping, 20)
+			M.Sleeping(20)
 			M.drowsyness = max(M.drowsyness, 60)
 
 /datum/reagent/nutriment/mayo
@@ -133,6 +337,14 @@
 	taste_description = "unmistakably mayonnaise"
 	nutriment_factor = 10
 	color = "#FFFFFF"
+
+/datum/reagent/nutriment/yeast
+	name = "Yeast"
+	id = "yeast"
+	description = "For making bread rise!"
+	taste_description = "yeast"
+	nutriment_factor = 1
+	color = "#D3AF70"
 
 /datum/reagent/nutriment/flour
 	name = "Flour"
@@ -249,56 +461,6 @@
 	nutriment_factor = 1
 	color = "#801E28"
 
-/datum/reagent/nutriment/cornoil
-	name = "Corn Oil"
-	id = "cornoil"
-	description = "An oil derived from various types of corn."
-	taste_description = "slime"
-	taste_mult = 0.1
-	reagent_state = LIQUID
-	nutriment_factor = 20
-	color = "#302000"
-
-/datum/reagent/nutriment/cornoil/touch_turf(var/turf/simulated/T)
-	if(!istype(T))
-		return
-
-	var/hotspot = (locate(/obj/fire) in T)
-	if(hotspot && !istype(T, /turf/space))
-		var/datum/gas_mixture/lowertemp = T.remove_air(T:air:total_moles)
-		lowertemp.temperature = max(min(lowertemp.temperature-2000, lowertemp.temperature / 2), 0)
-		lowertemp.react()
-		T.assume_air(lowertemp)
-		qdel(hotspot)
-
-	if(volume >= 3)
-		T.wet_floor()
-
-/datum/reagent/nutriment/peanutoil
-	name = "Peanut Oil"
-	id = "peanutoil"
-	description = "An oil derived from various types of nuts."
-	taste_description = "nuts"
-	taste_mult = 0.3
-	reagent_state = LIQUID
-	nutriment_factor = 15
-	color = "#4F3500"
-
-/datum/reagent/nutriment/peanutoil/touch_turf(var/turf/simulated/T)
-	if(!istype(T))
-		return
-
-	var/hotspot = (locate(/obj/fire) in T)
-	if(hotspot && !istype(T, /turf/space))
-		var/datum/gas_mixture/lowertemp = T.remove_air(T:air:total_moles)
-		lowertemp.temperature = max(min(lowertemp.temperature-2000, lowertemp.temperature / 2), 0)
-		lowertemp.react()
-		T.assume_air(lowertemp)
-		qdel(hotspot)
-
-	if(volume >= 5)
-		T.wet_floor()
-
 /datum/reagent/nutriment/peanutbutter
 	name = "Peanut Butter"
 	id = "peanutbutter"
@@ -332,7 +494,7 @@
 /datum/reagent/nutriment/durian/touch_mob(var/mob/M, var/amount)
 	if(iscarbon(M) && !M.isSynthetic())
 		var/message = pick("Oh god, it smells disgusting here.", "What is that stench?", "That's an awful odor.")
-		to_chat(M,"<span class='alien'>[message]</span>")
+		to_chat(M, "<span class='alien'>[message]</span>")
 		if(prob(CLAMP(amount, 5, 90)))
 			var/mob/living/L = M
 			L.vomit()
@@ -380,10 +542,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/lipozine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.nutrition = max(M.nutrition - 10 * removed, 0)
-	M.overeatduration = 0
-	if(M.nutrition < 0)
-		M.nutrition = 0
+	M.adjust_nutrition(-10 * removed)
 
 /* Non-food stuff like condiments */
 
@@ -425,6 +584,22 @@
 	reagent_state = LIQUID
 	color = "#365E30"
 	overdose = REAGENTS_OVERDOSE
+	
+//SYNNONO MEME FOODS EXPANSION - Credit to Synnono
+
+/datum/reagent/spacespice
+	name = "Space Spice"
+	id = "spacespice"
+	description = "An exotic blend of spices for cooking. Definitely not worms."
+	reagent_state = SOLID
+	color = "#e08702"
+
+/datum/reagent/browniemix
+	name = "Brownie Mix"
+	id = "browniemix"
+	description = "A dry mix for making delicious brownies."
+	reagent_state = SOLID
+	color = "#441a03"
 
 /datum/reagent/frostoil
 	name = "Frost Oil"
@@ -470,13 +645,18 @@
 /datum/reagent/capsaicin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
+	if(alien == IS_ALRAUNE) // VOREStation Edit: It wouldn't affect plants that much.
+		if(prob(5))
+			to_chat(M, "<span class='rose'>You feel a pleasant sensation in your mouth.</span>")
+		M.bodytemperature += rand(10, 25)
+		return
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!H.can_feel_pain())
 			return
 
 	if(dose < 5 && (dose == metabolism || prob(5)))
-		M << "<span class='danger'>Your insides feel uncomfortably hot!</span>"
+		to_chat(M, "<span class='danger'>Your insides feel uncomfortably hot!</span>")
 	if(dose >= 5)
 		M.apply_effect(2, AGONY, 0)
 		if(prob(5))
@@ -620,7 +800,7 @@
 		if(!H.can_feel_pain())
 			return
 	if(dose == metabolism)
-		M << "<span class='danger'>You feel like your insides are burning!</span>"
+		to_chat(M, "<span class='danger'>You feel like your insides are burning!</span>")
 	else
 		M.apply_effect(4, AGONY, 0)
 		if(prob(5))
@@ -641,6 +821,7 @@
 	var/adj_drowsy = 0
 	var/adj_sleepy = 0
 	var/adj_temp = 0
+	var/nutriment_factor = 0 //CHOMPStation addition
 	var/water_based = TRUE
 
 /datum/reagent/drink/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -651,19 +832,22 @@
 	return
 
 /datum/reagent/drink/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	M.nutrition += nutrition * removed
+	M.adjust_nutrition(nutrition * removed)
 	M.dizziness = max(0, M.dizziness + adj_dizzy)
 	M.drowsyness = max(0, M.drowsyness + adj_drowsy)
-	M.sleeping = max(0, M.sleeping + adj_sleepy)
+	M.AdjustSleeping(adj_sleepy)
 	if(adj_temp > 0 && M.bodytemperature < 310) // 310 is the normal bodytemp. 310.055
 		M.bodytemperature = min(310, M.bodytemperature + (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 	if(adj_temp < 0 && M.bodytemperature > 310)
 		M.bodytemperature = min(310, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
+	if(issmall(M)) removed *= 2 //CHOMP Station addition Small bodymass, more effect from lower volume.
+	if(M.species.gets_food_nutrition) //CHOMPStation addition. If this is set to 0, they don't get nutrition from food.
+		M.nutrition += nutriment_factor * removed //CHOMPStation addition For hunger and fatness
 	/* VOREStation Removal
 	if(alien == IS_SLIME && water_based)
 		M.adjustToxLoss(removed * 2)
 	*/ //VOREStation Removal End
-
+	
 /datum/reagent/drink/overdose(var/mob/living/carbon/M, var/alien) //Add special interactions here in the future if desired.
 	..()
 
@@ -730,6 +914,7 @@
 	if(issmall(M))
 		effective_dose *= 2
 
+/* //VOREStation Removal - Assuming all juice has sugar is silly
 	if(alien == IS_UNATHI)
 		if(effective_dose < 2)
 			if(effective_dose == metabolism * 2 || prob(5))
@@ -741,8 +926,9 @@
 				M.Weaken(2)
 			M.drowsyness = max(M.drowsyness, 20)
 		else
-			M.sleeping = max(M.sleeping, 20)
+			M.Sleeping(20)
 			M.drowsyness = max(M.drowsyness, 60)
+*/
 
 /datum/reagent/drink/juice/lemon
 	name = "Lemon Juice"
@@ -1150,6 +1336,22 @@
 	..()
 	M.heal_organ_damage(0.5 * removed, 0)
 
+/datum/reagent/drink/decaf
+	name = "Decaf Coffee"
+	id = "decaf"
+	description = "Coffee with all the wake-up sucked out."
+	taste_description = "bad coffee"
+	taste_mult = 1.3
+	color = "#482000"
+	adj_temp = 25
+
+	cup_icon_state = "cup_coffee"
+	cup_name = "cup of decaf"
+	cup_desc = "Basically just brown, bitter water."
+
+	glass_name = "decaf coffee"
+	glass_desc = "Basically just brown, bitter water."
+
 /datum/reagent/drink/hot_coco
 	name = "Hot Chocolate"
 	id = "hot_coco"
@@ -1186,6 +1388,7 @@
 	id = "grapesoda"
 	description = "Grapes made into a fine drank."
 	taste_description = "grape soda"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#421C52"
 	adj_drowsy = -3
 
@@ -1213,6 +1416,7 @@
 	id = "lemonade"
 	description = "Oh the nostalgia..."
 	taste_description = "lemonade"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#FFFF00"
 	adj_temp = -5
 
@@ -1225,6 +1429,7 @@
 	id = "melonade"
 	description = "Oh the.. nostalgia?"
 	taste_description = "watermelon"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#FFB3BB"
 	adj_temp = -5
 
@@ -1237,6 +1442,7 @@
 	id = "appleade"
 	description = "Applejuice, improved."
 	taste_description = "apples"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#FFD1B3"
 	adj_temp = -5
 
@@ -1249,6 +1455,7 @@
 	id = "pineappleade"
 	description = "Spineapple, juiced up."
 	taste_description = "sweet`n`sour pineapples"
+	nutriment_factor = 5 //CHOMPStation addition
 	color = "#FFFF00"
 	adj_temp = -5
 
@@ -1261,6 +1468,7 @@
 	id = "kiraspecial"
 	description = "Long live the guy who everyone had mistaken for a girl. Baka!"
 	taste_description = "fruity sweetness"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#CCCC99"
 	adj_temp = -5
 
@@ -1273,6 +1481,7 @@
 	id = "brownstar"
 	description = "It's not what it sounds like..."
 	taste_description = "orange and cola soda"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#9F3400"
 	adj_temp = -2
 
@@ -1308,7 +1517,7 @@
 				M.Weaken(2)
 			M.drowsyness = max(M.drowsyness, 20)
 		else
-			M.sleeping = max(M.sleeping, 20)
+			M.Sleeping(20)
 			M.drowsyness = max(M.drowsyness, 60)
 
 /datum/reagent/drink/milkshake/chocoshake
@@ -1366,6 +1575,7 @@
 	id = "rewriter"
 	description = "The secret of the sanctuary of the Libarian..."
 	taste_description = "citrus and coffee"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#485000"
 	adj_temp = -5
 
@@ -1381,6 +1591,7 @@
 	id = "nuka_cola"
 	description = "Cola, cola never changes."
 	taste_description = "cola"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#100800"
 	adj_temp = -5
 	adj_sleepy = -2
@@ -1413,6 +1624,7 @@
 	id = "cola"
 	description = "A refreshing beverage."
 	taste_description = "cola"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	reagent_state = LIQUID
 	color = "#100800"
 	adj_drowsy = -3
@@ -1427,6 +1639,7 @@
 	id = "spacemountainwind"
 	description = "Blows right through you like a space wind."
 	taste_description = "sweet citrus soda"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#102000"
 	adj_drowsy = -7
 	adj_sleepy = -1
@@ -1441,6 +1654,7 @@
 	id = "dr_gibb"
 	description = "A delicious blend of 42 different flavors"
 	taste_description = "cherry soda"
+	nutriment_factor = 3 //CHOMPStation addition
 	color = "#102000"
 	adj_drowsy = -6
 	adj_temp = -5
@@ -1453,6 +1667,7 @@
 	id = "space_up"
 	description = "Tastes like a hull breach in your mouth."
 	taste_description = "citrus soda"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#202800"
 	adj_temp = -8
 
@@ -1465,6 +1680,7 @@
 	id = "lemon_lime"
 	description = "A tangy substance made of 0.5% natural citrus!"
 	taste_description = "tangy lime and lemon soda"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#878F00"
 	adj_temp = -8
 
@@ -1477,6 +1693,7 @@
 	id = "gingerale"
 	description = "The original."
 	taste_description = "somewhat tangy ginger ale"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#edcf8f"
 	adj_temp = -8
 
@@ -1501,6 +1718,7 @@
 	id = "roy_rogers"
 	description = "I'm a cowboy, on a steel horse I ride."
 	taste_description = "cola and fruit"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#4F1811"
 	adj_temp = -8
 
@@ -1513,6 +1731,7 @@
 	id = "collins_mix"
 	description = "Best hope it isn't a hoax."
 	taste_description = "gin and lemonade"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#D7D0B3"
 	adj_temp = -8
 
@@ -1525,6 +1744,7 @@
 	id = "arnold_palmer"
 	description = "Tastes just like the old man."
 	taste_description = "lemon and sweet tea"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#AF5517"
 	adj_temp = -8
 
@@ -1647,6 +1867,7 @@
 	id = "dreamcream"
 	description = "A smoothy, silky mix of honey and dairy."
 	taste_description = "sweet, soothing dairy"
+	nutriment_factor = 5 //CHOMPStation addition
 	color = "#fcfcc9" // rgb(252, 252, 201)
 
 	glass_name = "Dream Cream"
@@ -1657,6 +1878,7 @@
 	id = "vilelemon"
 	description = "A fizzy, sour lemonade mix."
 	taste_description = "fizzy, sour lemon"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#c6c603" // rgb(198, 198, 3)
 
 	glass_name = "Vile Lemon"
@@ -1668,6 +1890,7 @@
 	id = "entdraught"
 	description = "A natural, earthy combination of all things peaceful."
 	taste_description = "fresh rain and sweet memories"
+	nutriment_factor = 5 //CHOMPStation addition
 	color = "#3a6617" // rgb(58, 102, 23)
 
 	glass_name = "Ent's Draught"
@@ -1688,6 +1911,7 @@
 	id = "oilslick"
 	description = "A viscous, but sweet, ooze."
 	taste_description = "honey"
+	nutriment_factor = 15 //CHOMPStation addition
 	color = "#FDF5E6" // rgb(253,245,230)
 	water_based = FALSE
 
@@ -1700,6 +1924,7 @@
 	id = "slimeslammer"
 	description = "A viscous, but savory, ooze."
 	taste_description = "peanuts`n`slime"
+	nutriment_factor = 20 //CHOMPStation addition
 	color = "#93604D"
 	water_based = FALSE
 
@@ -1722,6 +1947,7 @@
 	id = "nuclearwaste"
 	description = "A viscous, glowing slurry."
 	taste_description = "sour honey drops"
+	nutriment_factor = 15 //CHOMPStation addition
 	color = "#7FFF00" // rgb(127,255,0)
 	water_based = FALSE
 
@@ -1747,6 +1973,7 @@
 	id = "sodaoil"
 	description = "A thick, bubbling soda."
 	taste_description = "chewy water"
+	nutriment_factor = 10 //CHOMPStation addition
 	color = "#F0FFF0" // rgb(245,255,250)
 	water_based = FALSE
 
@@ -1805,6 +2032,17 @@
 	glass_desc = "A fruity punch!"
 	glass_special = list(DRINK_FIZZ)
 
+/datum/reagent/drink/mintapplesparkle
+	name = "Mint Apple Sparkle"
+	id = "mintapplesparkle"
+	description = "Delicious appleade with a touch of mint."
+	taste_description = "minty apples"
+	color = "#FDDA98"
+
+	glass_name = "mint apple sparkle"
+	glass_desc = "Delicious appleade with a touch of mint."
+	glass_special = list(DRINK_FIZZ)
+
 /datum/reagent/drink/berrycordial
 	name = "Berry Cordial"
 	id = "berrycordial"
@@ -1833,6 +2071,7 @@
 	id = "fauxfizz"
 	description = "One sip and you're in the bahamas... maybe."
 	taste_description = "slightly tropical"
+	nutriment_factor = 4 //CHOMPStation addition
 	color = "#69375C"
 
 	glass_name = "tropical fizz"
@@ -1959,7 +2198,7 @@
 	..()
 	M.dizziness = max(0, M.dizziness - 5)
 	M.drowsyness = max(0, M.drowsyness - 3)
-	M.sleeping = max(0, M.sleeping - 2)
+	M.AdjustSleeping(-2)
 	if(M.bodytemperature > 310)
 		M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
 	//if(alien == IS_TAJARA)
@@ -2388,6 +2627,7 @@
 	id = "cubalibre"
 	description = "Rum, mixed with cola. Viva la revolucion."
 	taste_description = "cola"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#3E1B00"
 	strength = 30
 
@@ -2400,6 +2640,7 @@
 	description = "This thing makes the hair on the back of your neck stand up."
 	taste_description = "sweet tasting iron"
 	taste_mult = 1.5
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#820000"
 	strength = 15
 
@@ -2772,6 +3013,7 @@
 	id = "snowwhite"
 	description = "A cold refreshment"
 	taste_description = "refreshing cold"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#FFFFFF"
 	strength = 30
 
@@ -2783,6 +3025,7 @@
 	id = "suidream"
 	description = "Comprised of: White soda, blue curacao, melon liquor."
 	taste_description = "fruit"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#00A86B"
 	strength = 100
 
@@ -2878,6 +3121,7 @@
 	id = "whiskeycola"
 	description = "Whiskey, mixed with cola. Surprisingly refreshing."
 	taste_description = "cola with an alcoholic undertone"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#3E1B00"
 	strength = 25
 
@@ -2890,6 +3134,7 @@
 	id = "whiskeysoda"
 	description = "Ultimate refreshment."
 	taste_description = "carbonated whiskey"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#EAB300"
 	strength = 15
 
@@ -3049,6 +3294,7 @@
 	id = "xanaducannon"
 	description = "Common in the entertainment districts of Titan."
 	taste_description = "sweet alcohol"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#614126"
 	strength = 50
 
@@ -3060,6 +3306,7 @@
 	id = "debugger"
 	description = "From Shelf. Not for human consumption."
 	taste_description = "oily bitterness"
+	nutriment_factor = 10 //CHOMPStation addition
 	color = "#d3d3d3"
 	strength = 32
 
@@ -3071,6 +3318,7 @@
 	id = "spacersbrew"
 	description = "Ethanol and orange soda. A common emergency drink on frontier colonies."
 	taste_description = "bitter oranges"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#ffc04c"
 	strength = 43
 
@@ -3165,6 +3413,7 @@
 	id = "rotgut"
 	description = "A heinous combination of clashing flavors."
 	taste_description = "plague and coldsweats"
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#3a6617" // rgb(58, 102, 23)
 	strength = 10
 
@@ -3435,6 +3684,7 @@
 	description = "This thing makes the hair on the back of your neck stand up."
 	taste_description = "sweet victory and sour iron"
 	taste_mult = 1.5
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#F3C906"
 	strength = 30
 
@@ -3508,3 +3758,35 @@
 
 	glass_name = "fusionnaire"
 	glass_desc = "A relatively new cocktail, mostly served in the bars of NanoTrasen owned stations."
+
+/datum/reagent/ethanol/deathbell
+	name = "Deathbell"
+	id = "deathbell"
+	description = "A successful experiment to make the most alcoholic thing possible."
+	taste_description = "your brains smashed out by a smooth brick of hard, ice cold alcohol"
+	color = "#9f6aff"
+	taste_mult = 5
+	strength = 10
+	adj_temp = 10
+	targ_temp = 330
+
+	glass_name = "Deathbell"
+	glass_desc = "The perfect blend of the most alcoholic things a bartender can get their hands on."
+
+/datum/reagent/ethanol/deathbell/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+
+	if(dose * strength >= strength) // Early warning
+		M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
+	if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
+		M.slurring = max(M.slurring, 30)
+
+/datum/reagent/nutriment/magicdust
+	name = "Magic Dust"
+	id = "magicdust"
+	description = "A dust harvested from gnomes, aptly named by pre-industrial civilizations."
+	taste_description = "something tingly"
+	taste_mult = 2
+	reagent_state = LIQUID
+	nutriment_factor = 40 //very filling
+	color = "#d169b2"

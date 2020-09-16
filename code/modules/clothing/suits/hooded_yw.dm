@@ -3,7 +3,6 @@
 	desc = "A suit made to keep you nice and toasty on cold winter days. Or at least alive."
 	icon = 'icons/obj/clothing/suits_yw.dmi'
 	icon_state = "snowsuit"
-	override = 1
 	icon_override = 'icons/obj/clothing/suits_yw.dmi'
 	hoodtype =	/obj/item/clothing/head/hood/winter/snowsuit
 	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)

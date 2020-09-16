@@ -31,8 +31,9 @@
 	desc = "A banner with the symbol of the Solar Confederate Government."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/solgov)
 
+//VOREStation Removal //CHOMP re-addition. Seriously? You commented this out for your lore? What's wrong with JUST NOT SPAWNING IT or something.
 /obj/item/weapon/banner/virgov
 	name = "\improper VirGov banner"
 	icon_state = "banner-virgov"
 	desc = "A banner with the symbol of the local government, the Vir Governmental Authority, also known as VirGov."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/virgov)
+//	catalogue_data = list(/datum/category_item/catalogue/information/organization/virgov) //CHOMP Removal. We need to add our own code/game/busy_space/organizations.dm for lore

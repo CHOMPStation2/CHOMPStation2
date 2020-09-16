@@ -13,6 +13,11 @@
 	listening_level = Z_LEVEL_CRYOGAIA_MINE
 	autolinkers = list("m_relay")
 
+/obj/machinery/telecomms/relay/preset/cryogaia/residential
+	id = "Residential Relay"
+	listening_level = Z_LEVEL_CRYOGAIA_RESIDENTIAL
+	autolinkers = list("res_relay")
+
 /obj/machinery/telecomms/relay/preset/cryogaia/main
 	id = "Main Complex Relay"
 	listening_level =Z_LEVEL_CRYOGAIA_MAIN
@@ -24,12 +29,16 @@
 	network = "tcommsat"
 	autolinkers = list("hub", "relay", "c_relay", "s_relay", "m_relay", "r_relay", "science", "medical",
 	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay","explorer", "unused" ,
-	"receiverA", "broadcasterA", "l_relay") //VOREStation Edit - Added "hb_relay"
+	"receiverA", "broadcasterA", "l_relay", "res_relay") //VOREStation Edit - Added "hb_relay"
 
 
 /obj/machinery/telecomms/receiver/preset_right/cryogaia
+	id = "cryogaia_rx"
 	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, EXP_FREQ)
 
+/obj/machinery/telecomms/broadcaster/preset_right/cryogaia
+	id = "cryogaia_tx"
+	
 /obj/machinery/telecomms/bus/preset_two/cryogaia
 	freq_listening = list(SUP_FREQ, SRV_FREQ, EXP_FREQ)
 

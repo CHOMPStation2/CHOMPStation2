@@ -6,8 +6,8 @@
 	full_name = "The Flat Test Map"
 	path = "plane"
 
-	lobby_icon = 'icons/misc/title_ch.dmi'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
-	lobby_screens = list("mockingjay00")
+	lobby_icon = 'icons/misc/CHOMPSTATION.gif'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
+	lobby_screens = list()
 
 	zlevel_datum_type = /datum/map_z_level/plane
 

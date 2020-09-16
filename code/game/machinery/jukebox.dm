@@ -10,16 +10,18 @@
 
 /obj/machinery/media/jukebox/
 	name = "space jukebox"
+	desc = "Filled with songs both past and present!"
 	icon = 'icons/obj/jukebox.dmi'
 	icon_state = "jukebox2-nopower"
 	var/state_base = "jukebox2"
 	anchored = 1
 	density = 1
 	power_channel = EQUIP
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 100
 	circuit = /obj/item/weapon/circuitboard/jukebox
+	clicksound = 'sound/machines/buttonbeep.ogg'
 
 	// Vars for hacking
 	var/datum/wires/jukebox/wires = null
@@ -52,8 +54,8 @@
 		new/datum/track("Russkiy rep Diskoteka", 'sound/music/russianrapdisco.ogg')
 	)
 
-/obj/machinery/media/jukebox/New()
-	..()
+/obj/machinery/media/jukebox/Initialize()
+	. = ..()
 	default_apply_parts()
 	wires = new/datum/wires/jukebox(src)
 	update_icon()
@@ -61,7 +63,7 @@
 /obj/machinery/media/jukebox/Destroy()
 	qdel(wires)
 	wires = null
-	..()
+	return ..()
 
 // On initialization, copy our tracks from the global list
 /obj/machinery/media/jukebox/Initialize()
@@ -74,6 +76,9 @@
 				secret_tracks |= T
 			else
 				tracks |= T
+			if(T.casino) //CHOMPEDIT: preventing casion tracks from being added to other jukeboxes
+				tracks -= T
+
 	else if(!LAZYLEN(tracks)) //We don't even have default tracks
 		stat |= BROKEN // No tracks configured this round!
 
@@ -215,11 +220,11 @@
 		StopPlaying()
 	else if(href_list["play"])
 		if(emagged)
-			playsound(src.loc, 'sound/items/AirHorn.ogg', 100, 1)
+			playsound(src, 'sound/items/AirHorn.ogg', 100, 1)
 			for(var/mob/living/carbon/M in ohearers(6, src))
 				if(M.get_ear_protection() >= 2)
 					continue
-				M.sleeping = 0
+				M.SetSleeping(0)
 				M.stuttering += 20
 				M.ear_deaf += 30
 				M.Weaken(3)
@@ -319,7 +324,7 @@
 
 /obj/machinery/media/jukebox/proc/StopPlaying()
 	playing = 0
-	update_use_power(1)
+	update_use_power(USE_POWER_IDLE)
 	update_icon()
 	start_stop_song()
 
@@ -327,7 +332,7 @@
 	if(!current_track)
 		return
 	playing = 1
-	update_use_power(2)
+	update_use_power(USE_POWER_ACTIVE)
 	update_icon()
 	start_stop_song()
 	updateDialog()

@@ -26,6 +26,7 @@
 	throw_speed = 4
 	throw_range = 20
 	force = 0
+	drop_sound = 'sound/items/drop/gloves.ogg'
 
 
 /*
@@ -36,6 +37,7 @@
 	desc = "A translucent balloon. There's nothing in it."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "waterballoon-e"
+	drop_sound = 'sound/items/drop/rubber.ogg'
 
 /obj/item/toy/balloon/New()
 	var/datum/reagents/R = new/datum/reagents(10)
@@ -49,7 +51,7 @@
 	if(!proximity) return
 	if (istype(A, /obj/structure/reagent_dispensers/watertank) && get_dist(src,A) <= 1)
 		A.reagents.trans_to_obj(src, 10)
-		user << "<span class='notice'>You fill the balloon with the contents of [A].</span>"
+		to_chat(user, "<span class='notice'>You fill the balloon with the contents of [A].</span>")
 		src.desc = "A translucent balloon with some form of liquid sloshing around in it."
 		src.update_icon()
 	return
@@ -58,15 +60,15 @@
 	if(istype(O, /obj/item/weapon/reagent_containers/glass))
 		if(O.reagents)
 			if(O.reagents.total_volume < 1)
-				user << "The [O] is empty."
+				to_chat(user, "The [O] is empty.")
 			else if(O.reagents.total_volume >= 1)
 				if(O.reagents.has_reagent("pacid", 1))
-					user << "The acid chews through the balloon!"
+					to_chat(user, "The acid chews through the balloon!")
 					O.reagents.splash(user, reagents.total_volume)
 					qdel(src)
 				else
 					src.desc = "A translucent balloon with some form of liquid sloshing around in it."
-					user << "<span class='notice'>You fill the balloon with the contents of [O].</span>"
+					to_chat(user, "<span class='notice'>You fill the balloon with the contents of [O].</span>")
 					O.reagents.trans_to_obj(src, 10)
 	src.update_icon()
 	return
@@ -99,6 +101,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "syndballoon"
 	w_class = ITEMSIZE_LARGE
+	drop_sound = 'sound/items/drop/rubber.ogg'
 
 /obj/item/toy/nanotrasenballoon
 	name = "criminal balloon"
@@ -110,6 +113,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "ntballoon"
 	w_class = ITEMSIZE_LARGE
+	drop_sound = 'sound/items/drop/rubber.ogg'
 
 /*
  * Fake telebeacon
@@ -147,10 +151,12 @@
 	w_class = ITEMSIZE_SMALL
 	attack_verb = list("attacked", "struck", "hit")
 	var/bullets = 5
+	drop_sound = 'sound/items/drop/gun.ogg'
 
 	examine(mob/user)
-		if(..(user, 2) && bullets)
-			user << "<span class='notice'>It is loaded with [bullets] foam darts!</span>"
+		. = ..()
+		if(bullets && get_dist(user, src) <= 2)
+			. += "<span class='notice'>It is loaded with [bullets] foam darts!</span>"
 
 	attackby(obj/item/I as obj, mob/user as mob)
 		if(istype(I, /obj/item/toy/ammo/crossbow))
@@ -158,9 +164,9 @@
 				user.drop_item()
 				qdel(I)
 				bullets++
-				user << "<span class='notice'>You load the foam dart into the crossbow.</span>"
+				to_chat(user, "<span class='notice'>You load the foam dart into the crossbow.</span>")
 			else
-				usr << "<span class='warning'>It's already fully loaded.</span>"
+				to_chat(usr, "<span class='warning'>It's already fully loaded.</span>")
 
 
 	afterattack(atom/target as mob|obj|turf|area, mob/user as mob, flag)
@@ -175,7 +181,7 @@
 			bullets--
 			D.icon_state = "foamdart"
 			D.name = "foam dart"
-			playsound(user.loc, 'sound/items/syringeproj.ogg', 50, 1)
+			playsound(src, 'sound/items/syringeproj.ogg', 50, 1)
 
 			for(var/i=0, i<6, i++)
 				if (D)
@@ -223,7 +229,7 @@
 					O.show_message(text("<span class='danger'>\The [] casually lines up a shot with []'s head and pulls the trigger!</span>", user, M), 1, "<span class='warning'>You hear the sound of foam against skull</span>", 2)
 					O.show_message(text("<span class='warning'>\The [] was hit in the head by the foam dart!</span>", M), 1)
 
-			playsound(user.loc, 'sound/items/syringeproj.ogg', 50, 1)
+			playsound(src, 'sound/items/syringeproj.ogg', 50, 1)
 			new /obj/item/toy/ammo/crossbow(M.loc)
 			src.bullets--
 		else if (M.lying && src.bullets == 0)
@@ -239,6 +245,7 @@
 	icon_state = "foamdart"
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
+	drop_sound = 'sound/items/drop/food.ogg'
 
 /obj/effect/foam_dart_dummy
 	name = ""
@@ -256,6 +263,7 @@
 	desc = "A cheap, plastic replica of an energy sword. Realistic sounds! Ages 8 and up."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "esword"
+	drop_sound = 'sound/items/drop/gun.ogg'
 	var/lcolor
 	var/rainbow = FALSE
 	item_icons = list(
@@ -269,13 +277,13 @@
 	attack_self(mob/user as mob)
 		src.active = !( src.active )
 		if (src.active)
-			user << "<span class='notice'>You extend the plastic blade with a quick flick of your wrist.</span>"
-			playsound(user, 'sound/weapons/saberon.ogg', 50, 1)
+			to_chat(user, "<span class='notice'>You extend the plastic blade with a quick flick of your wrist.</span>")
+			playsound(src, 'sound/weapons/saberon.ogg', 50, 1)
 			src.item_state = "[icon_state]_blade"
 			src.w_class = ITEMSIZE_LARGE
 		else
-			user << "<span class='notice'>You push the plastic blade back down into the handle.</span>"
-			playsound(user, 'sound/weapons/saberoff.ogg', 50, 1)
+			to_chat(user, "<span class='notice'>You push the plastic blade back down into the handle.</span>")
+			playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
 			src.item_state = "[icon_state]"
 			src.w_class = ITEMSIZE_SMALL
 		update_icon()
@@ -308,8 +316,8 @@
 		update_icon()
 
 /obj/item/toy/sword/examine(mob/user)
-	..()
-	to_chat(user, "<span class='notice'>Alt-click to recolor it.</span>")
+	. = ..()
+	. += "<span class='notice'>Alt-click to recolor it.</span>"
 
 /obj/item/toy/sword/attackby(obj/item/weapon/W, mob/user)
 	if(istype(W, /obj/item/device/multitool) && !active)
@@ -344,6 +352,7 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "snappop"
 	w_class = ITEMSIZE_TINY
+	drop_sound = null
 
 	throw_impact(atom/hit_atom)
 		..()
@@ -355,17 +364,13 @@
 		playsound(src, 'sound/effects/snap.ogg', 50, 1)
 		qdel(src)
 
-/obj/item/toy/snappop/Crossed(H as mob|obj)
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = H
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+/obj/item/toy/snappop/Crossed(atom/movable/H as mob|obj)
+	if(H.is_incorporeal())
+		return
 	if((ishuman(H))) //i guess carp and shit shouldn't set them off
 		var/mob/living/carbon/M = H
 		if(M.m_intent == "run")
-			M << "<span class='warning'>You step on the snap pop!</span>"
+			to_chat(M, "<span class='warning'>You step on the snap pop!</span>")
 
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 			s.set_up(2, 0, src)
@@ -376,74 +381,6 @@
 			qdel(src)
 
 /*
- * Water flower
- */
-/obj/item/toy/waterflower
-	name = "water flower"
-	desc = "A seemingly innocent sunflower...with a twist."
-	icon = 'icons/obj/device.dmi'
-	icon_state = "sunflower"
-	item_state = "sunflower"
-	var/empty = 0
-	slot_flags = SLOT_HOLSTER
-
-/obj/item/toy/waterflower/New()
-	var/datum/reagents/R = new/datum/reagents(10)
-	reagents = R
-	R.my_atom = src
-	R.add_reagent("water", 10)
-
-/obj/item/toy/waterflower/attack(mob/living/carbon/human/M as mob, mob/user as mob)
-	return
-
-/obj/item/toy/waterflower/afterattack(atom/A as mob|obj, mob/user as mob)
-
-	if (istype(A, /obj/item/weapon/storage/backpack ))
-		return
-
-	else if (locate (/obj/structure/table, src.loc))
-		return
-
-	else if (istype(A, /obj/structure/reagent_dispensers/watertank) && get_dist(src,A) <= 1)
-		A.reagents.trans_to(src, 10)
-		user << "<span class='notice'>You refill your flower!</span>"
-		return
-
-	else if (src.reagents.total_volume < 1)
-		src.empty = 1
-		user << "<span class='notice'>Your flower has run dry!</span>"
-		return
-
-	else
-		src.empty = 0
-
-
-		var/obj/effect/decal/D = new/obj/effect/decal/(get_turf(src))
-		D.name = "water"
-		D.icon = 'icons/obj/chemical.dmi'
-		D.icon_state = "chempuff"
-		D.create_reagents(5)
-		src.reagents.trans_to_obj(D, 1)
-		playsound(src.loc, 'sound/effects/spray3.ogg', 50, 1, -6)
-
-		spawn(0)
-			for(var/i=0, i<1, i++)
-				step_towards(D,A)
-				D.reagents.touch_turf(get_turf(D))
-				for(var/atom/T in get_turf(D))
-					D.reagents.touch(T)
-					if(ismob(T) && T:client)
-						T:client << "<span class='warning'>\The [user] has sprayed you with water!</span>"
-				sleep(4)
-			qdel(D)
-
-		return
-
-/obj/item/toy/waterflower/examine(mob/user)
-	if(..(user, 0))
-		user << text("\icon[] [] units of water left!", src, src.reagents.total_volume)
-
-/*
  * Bosun's whistle
  */
 
@@ -452,14 +389,15 @@
 	desc = "A genuine Admiral Krush Bosun's Whistle, for the aspiring ship's captain! Suitable for ages 8 and up, do not swallow."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "bosunwhistle"
+	drop_sound = 'sound/items/drop/card.ogg'
 	var/cooldown = 0
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS | SLOT_HOLSTER
 
 /obj/item/toy/bosunwhistle/attack_self(mob/user as mob)
 	if(cooldown < world.time - 35)
-		user << "<span class='notice'>You blow on [src], creating an ear-splitting noise!</span>"
-		playsound(user, 'sound/misc/boatswain.ogg', 20, 1)
+		to_chat(user, "<span class='notice'>You blow on [src], creating an ear-splitting noise!</span>")
+		playsound(src, 'sound/misc/boatswain.ogg', 20, 1)
 		cooldown = world.time
 
 /*
@@ -469,19 +407,20 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "ripleytoy"
 	var/cooldown = 0
+	drop_sound = 'sound/mecha/mechstep.ogg'
 
 //all credit to skasi for toy mech fun ideas
 /obj/item/toy/prize/attack_self(mob/user as mob)
 	if(cooldown < world.time - 8)
-		user << "<span class='notice'>You play with [src].</span>"
-		playsound(user, 'sound/mecha/mechstep.ogg', 20, 1)
+		to_chat(user, "<span class='notice'>You play with [src].</span>")
+		playsound(src, 'sound/mecha/mechstep.ogg', 20, 1)
 		cooldown = world.time
 
 /obj/item/toy/prize/attack_hand(mob/user as mob)
 	if(loc == user)
 		if(cooldown < world.time - 8)
-			user << "<span class='notice'>You play with [src].</span>"
-			playsound(user, 'sound/mecha/mechturn.ogg', 20, 1)
+			to_chat(user, "<span class='notice'>You play with [src].</span>")
+			playsound(src, 'sound/mecha/mechturn.ogg', 20, 1)
 			cooldown = world.time
 			return
 	..()
@@ -550,6 +489,7 @@
 	icon_state = "nuketoy"
 	var/cooldown = 0
 	var/toysay = "What the fuck did you do?"
+	drop_sound = 'sound/items/drop/accessory.ogg'
 
 /obj/item/toy/figure/New()
 	..()
@@ -559,7 +499,7 @@
 	if(cooldown < world.time)
 		cooldown = (world.time + 30) //3 second cooldown
 		user.visible_message("<span class='notice'>The [src] says \"[toysay]\".</span>")
-		playsound(user, 'sound/machines/click.ogg', 20, 1)
+		playsound(src, 'sound/machines/click.ogg', 20, 1)
 
 /obj/item/toy/figure/cmo
 	name = "Chief Medical Officer action figure"
@@ -813,12 +753,12 @@
 
 // Attack mob
 /obj/item/toy/plushie/carp/attack(mob/M as mob, mob/user as mob)
-	playsound(loc, bitesound, 20, 1)	// Play bite sound in local area
+	playsound(src, bitesound, 20, 1)	// Play bite sound in local area
 	return ..()
 
 // Attack self
 /obj/item/toy/plushie/carp/attack_self(mob/user as mob)
-	playsound(src.loc, bitesound, 20, 1)
+	playsound(src, bitesound, 20, 1)
 	return ..()
 
 
@@ -880,9 +820,31 @@
 	anchored = 0
 	density = 1
 	var/phrase = "I don't want to exist anymore!"
+	var/searching = FALSE
+	var/opened = FALSE	// has this been slit open? this will allow you to store an object in a plushie.
+	var/obj/item/stored_item	// Note: Stored items can't be bigger than the plushie itself.
+
+/obj/structure/plushie/examine(mob/user)
+	. = ..()
+	if(opened)
+		. += "<i>You notice an incision has been made on [src].</i>"
+		if(in_range(user, src) && stored_item)
+			. += "<i>You can see something in there...</i>"
 
 /obj/structure/plushie/attack_hand(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+
+	if(stored_item && opened && !searching)
+		searching = TRUE
+		if(do_after(user, 10))
+			to_chat(user, "You find \icon[stored_item] [stored_item] in [src]!")
+			stored_item.forceMove(get_turf(src))
+			stored_item = null
+			searching = FALSE
+			return
+		else
+			searching = FALSE
+
 	if(user.a_intent == I_HELP)
 		user.visible_message("<span class='notice'><b>\The [user]</b> hugs [src]!</span>","<span class='notice'>You hug [src]!</span>")
 	else if (user.a_intent == I_HURT)
@@ -893,6 +855,34 @@
 		user.visible_message("<span class='notice'><b>\The [user]</b> pokes the [src].</span>","<span class='notice'>You poke the [src].</span>")
 		visible_message("[src] says, \"[phrase]\"")
 
+
+/obj/structure/plushie/attackby(obj/item/I as obj, mob/user as mob)
+	if(istype(I, /obj/item/device/threadneedle) && opened)
+		to_chat(user, "You sew the hole in [src].")
+		opened = FALSE
+		return
+
+	if(is_sharp(I) && !opened)
+		to_chat(user, "You open a small incision in [src]. You can place tiny items inside.")
+		opened = TRUE
+		return
+
+	if(opened)
+		if(stored_item)
+			to_chat(user, "There is already something in here.")
+			return
+
+		if(!(I.w_class > w_class))
+			to_chat(user, "You place [I] inside [src].")
+			user.drop_from_inventory(I, src)
+			I.forceMove(src)
+			stored_item = I
+			return
+		else
+			to_chat(user, "You open a small incision in [src]. You can place tiny items inside.")
+
+
+	..()
 
 /obj/structure/plushie/ian
 	name = "plush corgi"
@@ -924,11 +914,34 @@
 	desc = "A small toy plushie. It's very cute."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "nymphplushie"
+	drop_sound = 'sound/items/drop/plushie.ogg'
 	w_class = ITEMSIZE_TINY
 	var/last_message = 0
 	var/pokephrase = "Uww!"
+	var/searching = FALSE
+	var/opened = FALSE	// has this been slit open? this will allow you to store an object in a plushie.
+	var/obj/item/stored_item	// Note: Stored items can't be bigger than the plushie itself.
+
+
+/obj/item/toy/plushie/examine(mob/user)
+	. = ..()
+	if(opened)
+		. += "<i>You notice an incision has been made on [src].</i>"
+		if(in_range(user, src) && stored_item)
+			. += "<i>You can see something in there...</i>"
 
 /obj/item/toy/plushie/attack_self(mob/user as mob)
+	if(stored_item && opened && !searching)
+		searching = TRUE
+		if(do_after(user, 10))
+			to_chat(user, "You find \icon[stored_item] [stored_item] in [src]!")
+			stored_item.forceMove(get_turf(src))
+			stored_item = null
+			searching = FALSE
+			return
+		else
+			searching = FALSE
+
 	if(world.time - last_message <= 1 SECOND)
 		return
 	if(user.a_intent == I_HELP)
@@ -939,7 +952,8 @@
 		user.visible_message("<span class='warning'><b>\The [user]</b> attempts to strangle [src]!</span>","<span class='warning'>You attempt to strangle [src]!</span>")
 	else
 		user.visible_message("<span class='notice'><b>\The [user]</b> pokes [src].</span>","<span class='notice'>You poke [src].</span>")
-		visible_message("[src] says, \"[pokephrase]\"")
+		playsound(src, 'sound/items/drop/plushie.ogg', 25, 0)
+		audible_message("[src] says, \"[pokephrase]\"")
 	last_message = world.time
 
 /obj/item/toy/plushie/verb/rename_plushie()
@@ -961,6 +975,31 @@
 	if(istype(I, /obj/item/toy/plushie) || istype(I, /obj/item/organ/external/head))
 		user.visible_message("<span class='notice'>[user] makes \the [I] kiss \the [src]!.</span>", \
 		"<span class='notice'>You make \the [I] kiss \the [src]!.</span>")
+		return
+
+
+	if(istype(I, /obj/item/device/threadneedle) && opened)
+		to_chat(user, "You sew the hole underneath [src].")
+		opened = FALSE
+		return
+
+	if(is_sharp(I) && !opened)
+		to_chat(user, "You open a small incision in [src]. You can place tiny items inside.")
+		opened = TRUE
+		return
+
+	if( (!(I.w_class > w_class)) && opened)
+		if(stored_item)
+			to_chat(user, "There is already something in here.")
+			return
+
+		to_chat(user, "You place [I] inside [src].")
+		user.drop_from_inventory(I, src)
+		I.forceMove(src)
+		stored_item = I
+		to_chat(user, "You placed [I] into [src].")
+		return
+
 	return ..()
 
 /obj/item/toy/plushie/nymph
@@ -1332,7 +1371,7 @@
 	if(!cooldown) //for the sanity of everyone
 		var/message = generate_ion_law()
 		to_chat(user, "<span class='notice'>You press the button on [src].</span>")
-		playsound(user, 'sound/machines/click.ogg', 20, 1)
+		playsound(src, 'sound/machines/click.ogg', 20, 1)
 		visible_message("<span class='danger'>[message]</span>")
 		cooldown = 1
 		spawn(30) cooldown = 0
@@ -1351,7 +1390,7 @@
 	if(!cooldown) //for the sanity of everyone
 		var/message = pick("You won't get away this time, Griffin!", "Stop right there, criminal!", "Hoot! Hoot!", "I am the night!")
 		to_chat(user, "<span class='notice'>You pull the string on the [src].</span>")
-		//playsound(user, 'sound/misc/hoot.ogg', 25, 1)
+		//playsound(src, 'sound/misc/hoot.ogg', 25, 1)
 		visible_message("<span class='danger'>[message]</span>")
 		cooldown = 1
 		spawn(30) cooldown = 0
@@ -1370,7 +1409,7 @@
 	if(!cooldown) //for the sanity of everyone
 		var/message = pick("You can't stop me, Owl!", "My plan is flawless! The vault is mine!", "Caaaawwww!", "You will never catch me!")
 		to_chat(user, "<span class='notice'>You pull the string on the [src].</span>")
-		//playsound(user, 'sound/misc/caw.ogg', 25, 1)
+		//playsound(src, 'sound/misc/caw.ogg', 25, 1)
 		visible_message("<span class='danger'>[message]</span>")
 		cooldown = 1
 		spawn(30) cooldown = 0
@@ -1395,6 +1434,7 @@
 	icon_state = "inflatable"
 	icon = 'icons/obj/clothing/belts.dmi'
 	slot_flags = SLOT_BELT
+	drop_sound = 'sound/items/drop/rubber.ogg'
 
 /obj/item/toy/xmastree
 	name = "Miniature Christmas tree"
@@ -1404,3 +1444,78 @@
 	w_class = ITEMSIZE_TINY
 	force = 1
 	throwforce = 1
+	drop_sound = 'sound/items/drop/box.ogg'
+
+//////////////////////////////////////////////////////
+//					Chess Pieces					//
+//////////////////////////////////////////////////////
+
+/obj/item/toy/chess
+	name = "chess piece"
+	desc = "This should never display."
+	icon = 'icons/obj/chess.dmi'
+	w_class = ITEMSIZE_SMALL
+	force = 1
+	throwforce = 1
+	drop_sound = 'sound/items/drop/glass.ogg'
+
+/obj/item/toy/chess/pawn_white
+	name = "blue pawn"
+	desc = "A large pawn piece for playing chess. It's made of a blue-colored glass."
+	description_info = "Pawns can move forward one square, if that square is unoccupied. If the pawn has not yet moved, it has the option of moving two squares forward provided both squares in front of the pawn are unoccupied. A pawn cannot move backward. They can only capture an enemy piece on either of the two tiles diagonally in front of them, but not the tile directly in front of them."
+	icon_state = "w-pawn"
+/obj/item/toy/chess/pawn_black
+	name = "purple pawn"
+	desc = "A large pawn piece for playing chess. It's made of a purple-colored glass."
+	description_info = "Pawns can move forward one square, if that square is unoccupied. If the pawn has not yet moved, it has the option of moving two squares forward provided both squares in front of the pawn are unoccupied. A pawn cannot move backward. They can only capture an enemy piece on either of the two tiles diagonally in front of them, but not the tile directly in front of them."
+	icon_state = "b-pawn"
+/obj/item/toy/chess/rook_white
+	name = "blue rook"
+	desc = "A large rook piece for playing chess. It's made of a blue-colored glass."
+	description_info = "The Rook can move any number of vacant squares vertically or horizontally."
+	icon_state = "w-rook"
+/obj/item/toy/chess/rook_black
+	name = "purple rook"
+	desc = "A large rook piece for playing chess. It's made of a purple-colored glass."
+	description_info = "The Rook can move any number of vacant squares vertically or horizontally."
+	icon_state = "b-rook"
+/obj/item/toy/chess/knight_white
+	name = "blue knight"
+	desc = "A large knight piece for playing chess. It's made of a blue-colored glass. Sadly, you can't ride it."
+	description_info = "The Knight can either move two squares horizontally and one square vertically or two squares vertically and one square horizontally. The knight's movement can also be viewed as an 'L' laid out at any horizontal or vertical angle."
+	icon_state = "w-knight"
+/obj/item/toy/chess/knight_black
+	name = "purple knight"
+	desc = "A large knight piece for playing chess. It's made of a purple-colored glass. 'Just a flesh wound.'"
+	description_info = "The Knight can either move two squares horizontally and one square vertically or two squares vertically and one square horizontally. The knight's movement can also be viewed as an 'L' laid out at any horizontal or vertical angle."
+	icon_state = "b-knight"
+/obj/item/toy/chess/bishop_white
+	name = "blue bishop"
+	desc = "A large bishop piece for playing chess. It's made of a blue-colored glass."
+	description_info = "The Bishop can move any number of vacant squares in any diagonal direction."
+	icon_state = "w-bishop"
+/obj/item/toy/chess/bishop_black
+	name = "purple bishop"
+	desc = "A large bishop piece for playing chess. It's made of a purple-colored glass."
+	description_info = "The Bishop can move any number of vacant squares in any diagonal direction."
+	icon_state = "b-bishop"
+/obj/item/toy/chess/queen_white
+	name = "blue queen"
+	desc = "A large queen piece for playing chess. It's made of a blue-colored glass."
+	description_info = "The Queen can move any number of vacant squares diagonally, horizontally, or vertically."
+	icon_state = "w-queen"
+/obj/item/toy/chess/queen_black
+	name = "purple queen"
+	desc = "A large queen piece for playing chess. It's made of a purple-colored glass."
+	description_info = "The Queen can move any number of vacant squares diagonally, horizontally, or vertically."
+	icon_state = "b-queen"
+/obj/item/toy/chess/king_white
+	name = "blue king"
+	desc = "A large king piece for playing chess. It's made of a blue-colored glass."
+	description_info = "The King can move exactly one square horizontally, vertically, or diagonally. If your opponent captures this piece, you lose."
+	icon_state = "w-king"
+/obj/item/toy/chess/king_black
+	name = "purple king"
+	desc = "A large king piece for playing chess. It's made of a purple-colored glass."
+	description_info = "The King can move exactly one square horizontally, vertically, or diagonally. If your opponent captures this piece, you lose."
+	icon_state = "b-king"

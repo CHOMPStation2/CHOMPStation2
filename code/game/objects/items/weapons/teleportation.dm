@@ -48,7 +48,7 @@ Frequency:
 		return
 	var/turf/current_location = get_turf(usr)//What turf is the user on?
 	if(!current_location||current_location.z==3)//If turf was not found or they're on z level 2.
-		usr << "The [src] is malfunctioning."
+		to_chat(usr, "The [src] is malfunctioning.")
 		return
 	if ((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))))
 		usr.set_machine(src)
@@ -59,7 +59,7 @@ Frequency:
 			if (sr)
 				src.temp += "<B>Located Beacons:</B><BR>"
 
-				for(var/obj/item/device/radio/beacon/W in all_beacons)
+				for(var/obj/item/device/radio/beacon/W in GLOB.all_beacons)
 					if (W.frequency == src.frequency)
 						var/turf/tr = get_turf(W)
 						if (tr.z == sr.z && tr)
@@ -77,7 +77,7 @@ Frequency:
 							src.temp += "[W.code]-[dir2text(get_dir(sr, tr))]-[direct]<BR>"
 
 				src.temp += "<B>Extraneous Signals:</B><BR>"
-				for (var/obj/item/weapon/implant/tracking/W in all_tracking_implants)
+				for (var/obj/item/weapon/implant/tracking/W in GLOB.all_tracking_implants)
 					if (!W.implanted || !(istype(W.loc,/obj/item/organ/external) || ismob(W.loc) || W.malfunction))
 						continue
 
@@ -133,7 +133,7 @@ Frequency:
 /obj/item/weapon/hand_tele/attack_self(mob/user as mob)
 	var/turf/current_location = get_turf(user)//What turf is the user on?
 	if(!current_location || current_location.z in using_map.admin_levels || current_location.block_tele)//If turf was not found or they're on z level 2 or >7 which does not currently exist.
-		user << "<span class='notice'>\The [src] is malfunctioning.</span>"
+		to_chat(user, "<span class='notice'>\The [src] is malfunctioning.</span>")
 		return
 	var/list/L = list(  )
 	for(var/obj/machinery/teleport/hub/R in machines)
@@ -147,11 +147,11 @@ Frequency:
 					if(com)
 						break
 				break
-		if (istype(com, /obj/machinery/computer/teleporter) && com.locked && !com.one_time_use)
+		if (istype(com, /obj/machinery/computer/teleporter) && com.teleport_control.locked && !com.one_time_use)
 			if(R.icon_state == "tele1")
-				L["[com.id] (Active)"] = com.locked
+				L["[com.id] (Active)"] = com.teleport_control.locked
 			else
-				L["[com.id] (Inactive)"] = com.locked
+				L["[com.id] (Inactive)"] = com.teleport_control.locked
 	var/list/turfs = list(	)
 	for(var/turf/T in orange(10))
 		if(T.x>world.maxx-8 || T.x<8)	continue	//putting them at the edge is dumb
@@ -164,7 +164,7 @@ Frequency:
 	if ((user.get_active_hand() != src || user.stat || user.restrained()))
 		return
 	var/count = 0	//num of portals from this teleport in world
-	for(var/obj/effect/portal/PO in all_portals)
+	for(var/obj/effect/portal/PO in GLOB.all_portals)
 		if(PO.creator == src)	count++
 	if(count >= 3)
 		user.show_message("<span class='notice'>\The [src] is recharging!</span>")

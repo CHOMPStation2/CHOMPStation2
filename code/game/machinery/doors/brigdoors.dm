@@ -47,7 +47,7 @@
 		if(F.id == src.id)
 			LAZYADD(targets,F)
 
-	for(var/obj/structure/closet/secure_closet/brig/C in all_brig_closets)
+	for(var/obj/structure/closet/secure_closet/brig/C in GLOB.all_brig_closets)
 		if(C.id == src.id)
 			LAZYADD(targets,C)
 
@@ -114,7 +114,7 @@
 		if(C.broken)	continue
 		if(C.opened && !C.close())	continue
 		C.locked = 1
-		C.icon_state = C.icon_locked
+		C.icon_state = "closed_locked"
 	return 1
 
 
@@ -135,7 +135,7 @@
 		if(C.broken)	continue
 		if(C.opened)	continue
 		C.locked = 0
-		C.icon_state = C.icon_closed
+		C.icon_state = "closed_unlocked"
 
 	return 1
 
@@ -314,7 +314,7 @@
 //Stolen from status_display
 /obj/machinery/door_timer/proc/texticon(var/tn, var/px = 0, var/py = 0)
 	var/image/I = image('icons/obj/status_display.dmi', "blank")
-	var/len = lentext(tn)
+	var/len = length(tn)
 
 	for(var/d = 1 to len)
 		var/char = copytext(tn, len-d+1, len-d+2)

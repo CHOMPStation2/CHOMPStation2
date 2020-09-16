@@ -71,12 +71,12 @@
 
 		if (!power_supply || power_supply.charge < charge_cost)
 			user.visible_message("<span class='warning'>*click*</span>", "<span class='danger'>*click*</span>")
-			playsound(src.loc, 'sound/weapons/empty.ogg', 100, 1)
+			playsound(src, 'sound/weapons/empty.ogg', 100, 1)
 			return 0
 		if(pressure >= 10)
 			if (safetycatch) //weapons with a pressure regulator simply won't fire
 				user.visible_message("<span class='warning'>*click*</span>", "<span class='danger'>The pressure-interlock prevents you from firing \the [src].</span>")
-				playsound(src.loc, 'sound/weapons/empty.ogg', 100, 1)
+				playsound(src, 'sound/weapons/empty.ogg', 100, 1)
 				return 0
 			else if (prob(min(pressure, 100))) //pressure% chance of failing
 				var/severity = rand(pressure)
@@ -88,11 +88,11 @@
 /obj/item/weapon/gun/energy/particle/proc/pressuremalfunction(severity, var/mob/user, var/turf/T)
 	if (severity <= 10) // just doesn't fire. 10% chance in 100 atmo.
 		user.visible_message("<span class='warning'>*click*</span>", "<span class='danger'>\The [src] jams.</span>")
-		playsound(src.loc, 'sound/weapons/empty.ogg', 100, 1)
+		playsound(src, 'sound/weapons/empty.ogg', 100, 1)
 	else if (severity <= 60) //50% chance of fizzling and wasting a shot
 		user.visible_message("<span class='warning'>\The [user] fires \the [src], but the shot fizzles in the air!</span>", "<span class='danger'>You fire \the [src], but the shot fizzles in the air!</span>")
 		power_supply.charge -= charge_cost
-		playsound(src.loc, fire_sound, 100, 1)
+		playsound(src, fire_sound, 100, 1)
 		var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 		sparks.set_up(2, 1, T)
 		sparks.start()
@@ -134,9 +134,9 @@
 /obj/item/weapon/gun/energy/particle/attackby(var/obj/item/A as obj, mob/user as mob)
 	if(istype(A, /obj/item/pressurelock))
 		if(safetycatch)
-			user << "<span class='notice'>\The [src] already has a [attached_safety].</span>"
+			to_chat(user, "<span class='notice'>\The [src] already has a [attached_safety].</span>")
 			return
-		user << "<span class='notice'>You insert \the [A] into \the [src].</span>"
+		to_chat(user, "<span class='notice'>You insert \the [A] into \the [src].</span>")
 		user.drop_item()
 		A.loc = src
 		attached_safety = A
@@ -145,9 +145,9 @@
 
 	if(istype(A, /obj/item/weapon/tool/screwdriver))
 		if(safetycatch && attached_safety)
-			user << "<span class='notice'>You begin removing \the [attached_safety] from \the [src].</span>"
+			to_chat(user, "<span class='notice'>You begin removing \the [attached_safety] from \the [src].</span>")
 			if(do_after(user, 25))
-				user << "<span class='notice'>You remove \the [attached_safety] from \the [src].</span>"
+				to_chat(user, "<span class='notice'>You remove \the [attached_safety] from \the [src].</span>")
 				user.put_in_hands(attached_safety)
 				safetycatch = 0
 				attached_safety = null

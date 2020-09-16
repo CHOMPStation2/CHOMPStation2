@@ -28,7 +28,7 @@ var/list/sounds_cache = list()
 
 	log_admin("[key_name(src)] played a local sound [S]")
 	message_admins("[key_name_admin(src)] played a local sound [S]", 1)
-	playsound(get_turf(src.mob), S, 50, 0, 0)
+	playsound(src.mob, S, 50, 0, 0)
 	feedback_add_details("admin_verb","PLS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
@@ -61,7 +61,7 @@ var/list/sounds_cache = list()
 
 	for(var/mob/living/carbon/human/CP in human_mob_list)
 		if(CP.real_name=="Cuban Pete" && CP.key!="Rosham")
-			CP << "Your body can't contain the rhumba beat"
+			to_chat(CP, "Your body can't contain the rhumba beat")
 			CP.gib()
 
 

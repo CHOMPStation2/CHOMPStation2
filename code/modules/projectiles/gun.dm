@@ -49,7 +49,9 @@
 	origin_tech = list(TECH_COMBAT = 1)
 	attack_verb = list("struck", "hit", "bashed")
 	zoomdevicename = "scope"
+	drop_sound = 'sound/items/drop/gun.ogg'
 
+	var/recoil_mode = 1 //0 = no micro recoil, 1 = regular, anything higher than 1 is a multiplier //YAWN Addition, ported from CHOMP
 	var/automatic = 0
 	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
@@ -388,6 +390,9 @@
 			handle_click_empty(user)
 			break
 
+		if(i == 1) // So one burst only makes one message and not 3+ messages.
+			handle_firing_text(user, target, pointblank, reflex)
+
 		process_accuracy(projectile, user, target, i, held_twohanded)
 
 		if(pointblank)
@@ -416,14 +421,6 @@
 		if(one_handed_penalty >= 20)
 			to_chat(user, "<span class='warning'>You struggle to keep \the [src] pointed at the correct position with just one hand!</span>")
 
-	var/target_for_log
-	if(ismob(target))
-		target_for_log = target
-	else
-		target_for_log = "[target.name]"
-
-	add_attack_logs(user,target_for_log,"Fired gun [src.name] ([reflex ? "REFLEX" : "MANUAL"])")
-
 	//update timing
 	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
 	user.setMoveCooldown(move_delay)
@@ -438,6 +435,21 @@
 		else
 			set_light(0)
 		//VOREStation Edit End
+		
+	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
+	if(recoil_mode && iscarbon(user))
+		var/mob/living/carbon/nerd = user
+		var/mysize = nerd.size_multiplier
+		if(recoil_mode > 0)
+			if(mysize <= 0.5)
+				nerd.Weaken(1*recoil_mode)
+				if(!istype(src,/obj/item/weapon/gun/energy))
+					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
+					to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
+				else
+					to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
+				
+	//YAWNEDIT: Knockdown code end
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/weapon/gun/proc/Fire_userless(atom/target)
@@ -532,13 +544,11 @@
 		user.visible_message("*click click*", "<span class='danger'>*click*</span>")
 	else
 		src.visible_message("*click click*")
-	playsound(src.loc, 'sound/weapons/empty.ogg', 100, 1)
+	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
 
-//called after successfully firing
-/obj/item/weapon/gun/proc/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
-	if(fire_anim)
-		flick(fire_anim, src)
-
+// Called when the user is about to fire.
+// Moved from handle_post_fire() because if using a laser, the message for when someone got shot would show up before the firing message.
+/obj/item/weapon/gun/proc/handle_firing_text(mob/user, atom/target, pointblank = FALSE, reflex = FALSE)
 	if(silenced)
 		to_chat(user, "<span class='warning'>You fire \the [src][pointblank ? " point blank at \the [target]":""][reflex ? " by reflex":""]</span>")
 		for(var/mob/living/L in oview(2,user))
@@ -554,6 +564,19 @@
 			"<span class='warning'>You fire \the [src][pointblank ? " point blank at \the [target]":""][reflex ? " by reflex":""]!</span>",
 			"You hear a [fire_sound_text]!"
 			)
+
+	var/target_for_log
+	if(ismob(target))
+		target_for_log = target
+	else
+		target_for_log = "[target.name]"
+
+	add_attack_logs(user, target_for_log, "Fired gun '[src.name]' ([reflex ? "REFLEX" : "MANUAL"])")
+
+//called after successfully firing
+/obj/item/weapon/gun/proc/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
+	if(fire_anim)
+		flick(fire_anim, src)
 
 	if(muzzle_flash)
 		set_light(muzzle_flash)
@@ -671,9 +694,9 @@
 		return
 
 	if(silenced)
-		playsound(user, shot_sound, 10, 1)
+		playsound(src, shot_sound, 10, 1)
 	else
-		playsound(user, shot_sound, 50, 1)
+		playsound(src, shot_sound, 50, 1)
 
 //Suicide handling.
 /obj/item/weapon/gun/var/mouthshoot = 0 //To stop people from suiciding twice... >.>
@@ -738,7 +761,7 @@
 	. = ..()
 	if(firemodes.len > 1)
 		var/datum/firemode/current_mode = firemodes[sel_mode]
-		to_chat(user, "The fire selector is set to [current_mode.name].")
+		. += "The fire selector is set to [current_mode.name]."
 
 /obj/item/weapon/gun/proc/switch_firemodes(mob/user)
 	if(firemodes.len <= 1)

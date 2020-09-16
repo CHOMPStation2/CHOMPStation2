@@ -29,7 +29,7 @@
 
 /obj/item/weapon/grenade/flashbang/proc/bang(var/turf/T , var/mob/living/carbon/M)					// Added a new proc called 'bang' that takes a location and a person to be banged.
 	to_chat(M, "<span class='danger'>BANG</span>")						// Called during the loop that bangs people in lockers/containers and when banging
-	playsound(src.loc, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
+	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
 																	// -- Polymorph
 
 	//Checking for protections
@@ -80,10 +80,10 @@
 	if(ishuman(M))
 		var/obj/item/organ/internal/eyes/E = H.internal_organs_by_name[O_EYES]
 		if (E && E.damage >= E.min_bruised_damage)
-			M << "<span class='danger'>Your eyes start to burn badly!</span>"
+			to_chat(M, "<span class='danger'>Your eyes start to burn badly!</span>")
 			if(!banglet && !(istype(src , /obj/item/weapon/grenade/flashbang/clusterbang)))
 				if (E.damage >= E.min_broken_damage)
-					M << "<span class='danger'>You can't see anything!</span>"
+					to_chat(M, "<span class='danger'>You can't see anything!</span>")
 	if (M.ear_damage >= 15)
 		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
 		if(!banglet && !(istype(src , /obj/item/weapon/grenade/flashbang/clusterbang)))
@@ -119,11 +119,11 @@
 
 	for(var/do_spawn = numspawned, do_spawn > 0, do_spawn--)
 		new /obj/item/weapon/grenade/flashbang/cluster(src.loc)//Launches flashbangs
-		playsound(src.loc, 'sound/weapons/armbomb.ogg', 75, 1, -3)
+		playsound(src, 'sound/weapons/armbomb.ogg', 75, 1, -3)
 
 	for(var/do_again = again, do_again > 0, do_again--)
 		new /obj/item/weapon/grenade/flashbang/clusterbang/segment(src.loc)//Creates a 'segment' that launches a few more flashbangs
-		playsound(src.loc, 'sound/weapons/armbomb.ogg', 75, 1, -3)
+		playsound(src, 'sound/weapons/armbomb.ogg', 75, 1, -3)
 	qdel(src)
 	return
 

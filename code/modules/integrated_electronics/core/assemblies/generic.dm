@@ -154,8 +154,8 @@
 	icon_state = "setup_drone"
 	desc = "It's a case, for building mobile electronics with."
 	w_class = ITEMSIZE_NORMAL
-	max_components = IC_COMPONENTS_BASE * 1.5
-	max_complexity = IC_COMPLEXITY_BASE * 1.5
+	max_components = IC_COMPONENTS_BASE * 3 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
+	max_complexity = IC_COMPLEXITY_BASE * 3 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
 	can_anchor = FALSE
 
 /obj/item/device/electronic_assembly/drone/can_move()
@@ -211,7 +211,7 @@
 	if(!istype(T, /turf/simulated/floor))
 		to_chat(user, "<span class='warning'>You cannot place \the [src] on this spot!</span>")
 		return
-	playsound(src.loc, 'sound/machines/click.ogg', 75, 1)
+	playsound(src, 'sound/machines/click.ogg', 75, 1)
 	user.visible_message("\The [user] attaches \the [src] to the wall.",
 		"<span class='notice'>You attach \the [src] to the wall.</span>",
 		"<span class='italics'>You hear clicking.</span>")

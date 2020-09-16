@@ -14,6 +14,7 @@
 #define GODMODE     0x1000
 #define FAKEDEATH   0x2000  // Replaces stuff like changeling.changeling_fakedeath.
 #define DISFIGURED  0x4000  // Set but never checked. Remove this sometime and replace occurences with the appropriate organ code
+#define DOING_TASK	0x8000  // Performing a do_after or do_mob that's exclusive
 
 // Grab levels.
 #define GRAB_PASSIVE    1
@@ -115,10 +116,10 @@
 #define INV_BACK_DEF_ICON 'icons/mob/back.dmi'
 #define INV_L_HAND_DEF_ICON 'icons/mob/items/lefthand.dmi'
 #define INV_R_HAND_DEF_ICON 'icons/mob/items/righthand.dmi'
-#define INV_W_UNIFORM_DEF_ICON 'icons/mob/uniform.dmi'
+#define INV_W_UNIFORM_DEF_ICON "icons/mob/uniform"
 #define INV_ACCESSORIES_DEF_ICON 'icons/mob/ties.dmi'
 #define INV_TIE_DEF_ICON 'icons/mob/ties.dmi'
-#define INV_SUIT_DEF_ICON 'icons/mob/suit.dmi'
+#define INV_SUIT_DEF_ICON "icons/mob/suit"
 #define INV_SPACESUIT_DEF_ICON 'icons/mob/spacesuit.dmi'
 #define INV_WEAR_ID_DEF_ICON 'icons/mob/mob.dmi'
 #define INV_GLOVES_DEF_ICON 'icons/mob/hands.dmi'
@@ -325,6 +326,8 @@
 #define SPECIES_SKELETON		"Skeleton"
 #define SPECIES_GOLEM			"Golem"
 #define SPECIES_EVENT1			"X Occursus"
+#define SPECIES_EVENT2			"X Anomalous"
+#define SPECIES_EVENT3			"X Unowas"
 
 // Replicant types. Currently only used for alien pods and events.
 #define SPECIES_REPLICANT		"Replicant"
@@ -392,7 +395,13 @@
 #define VIS_OBJS			20
 #define VIS_MOBS			21
 
-#define VIS_COUNT			21 //Must be highest number from above.
+#define VIS_BUILDMODE		22
+
+#define VIS_CLOAKED			23
+
+#define VIS_STATUS			24
+
+#define VIS_COUNT			24 //Must be highest number from above.
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100
@@ -421,3 +430,5 @@
 #define EXAMINE_SKIPHANDS			0x0040
 #define EXAMINE_SKIPLEGS			0x0080
 #define EXAMINE_SKIPFEET			0x0100
+
+#define MAX_NUTRITION	5000 //VOREStation Edit

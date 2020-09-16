@@ -1,17 +1,18 @@
 var/list/obj/machinery/photocopier/faxmachine/allfaxes = list()
-var/list/admin_departments = list("[using_map.boss_name]", "Virgo-Prime Governmental Authority", "Supply") // Vorestation Edit
+var/list/admin_departments = list("[using_map.boss_name]", "Solar Central Government", "Central Command Job Boards", "Supply") // YW EDIT
 var/list/alldepartments = list()
 
 var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 
 /obj/machinery/photocopier/faxmachine
 	name = "fax machine"
+	desc = "Sent papers and pictures far away! Or to your co-worker's office a few doors down."
 	icon = 'icons/obj/library.dmi'
 	icon_state = "fax"
 	insert_anim = "faxsend"
 	req_one_access = list(access_lawyer, access_heads, access_armory, access_qm)
 
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 30
 	active_power_usage = 200
 	circuit = /obj/item/weapon/circuitboard/fax
@@ -29,10 +30,14 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 		alldepartments |= department
 	..()
 
-/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob)
+/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob) // CH edit begins here; this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 	user.set_machine(src)
 
-	ui_interact(user)
+	if(issilicon(usr)) // Normally, you have to insert an ID. Borgs, obviously, cannot do this, so it skips the ID process completely.
+		authenticated = 1
+		ui_interact(user)
+	else
+		ui_interact(user) // CH edit ends here
 
 /**
  *  Display the NanoUI window for the fax machine.
@@ -118,6 +123,18 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 
 	SSnanoui.update_uis(src)
 
+/obj/machinery/photocopier/faxmachine/attackby(obj/item/O as obj, mob/user as mob)
+	if(O.is_multitool() && panel_open)
+		var/input = sanitize(input(usr, "What Department ID would you like to give this fax machine?", "Multitool-Fax Machine Interface", department))
+		if(!input)
+			to_chat(usr, "No input found. Please hang up and try your call again.")
+			return
+		department = input
+		if( !(("[department]" in alldepartments) || ("[department]" in admin_departments)) && !(department == "Unknown"))
+			alldepartments |= department
+
+	return ..()
+
 /obj/machinery/photocopier/faxmachine/proc/sendfax(var/destination)
 	if(stat & (BROKEN|NOPOWER))
 		return
@@ -143,7 +160,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 		return 0	//You can't send faxes to "Unknown"
 
 	flick("faxreceive", src)
-	playsound(loc, "sound/effects/printer.ogg", 50, 1)
+	playsound(src, "sound/effects/printer.ogg", 50, 1)
 
 
 	// give the sprite some time to flick
@@ -185,8 +202,8 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	//message badmins that a fax has arrived
 	if (destination == using_map.boss_name)
 		message_admins(sender, "[uppertext(using_map.boss_short)] FAX", rcvdcopy, "CentComFaxReply", "#006100")
-	else if (destination == "Virgo-Prime Governmental Authority") // Vorestation Edit
-		message_admins(sender, "VIRGO GOVERNMENT FAX", rcvdcopy, "CentComFaxReply", "#1F66A0")
+	else if (destination == "Solar Central Government") // YW EDIT
+		message_admins(sender, "Solar Central Government FAX", rcvdcopy, "CentComFaxReply", "#1F66A0")
 	else if (destination == "Supply")
 		message_admins(sender, "[uppertext(using_map.boss_short)] SUPPLY FAX", rcvdcopy, "CentComFaxReply", "#5F4519")
 	else
@@ -203,9 +220,9 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	msg += "(<a href='?_src_=holder;FaxReply=\ref[sender];originfax=\ref[src];replyorigin=[reply_type]'>REPLY</a>)</b>: "
 	msg += "Receiving '[sent.name]' via secure connection ... <a href='?_src_=holder;AdminFaxView=\ref[sent]'>view message</a></span>"
 
-	for(var/client/C in admins)
-		if(check_rights((R_ADMIN|R_MOD),0,C))
-			C << msg
+	for(var/client/C in GLOB.admins)
+		if(check_rights((R_ADMIN|R_MOD|R_EVENT),0,C))
+			to_chat(C,msg)
 			C << 'sound/effects/printer.ogg'
 
 	// VoreStation Edit Start

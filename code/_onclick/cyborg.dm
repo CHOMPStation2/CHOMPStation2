@@ -7,9 +7,10 @@
 */
 
 /mob/living/silicon/robot/ClickOn(var/atom/A, var/params)
-	if(world.time <= next_click)
+	if(!checkClickCooldown())
 		return
-	next_click = world.time + 1
+	
+	setClickCooldown(1)
 
 	if(client.buildmode) // comes after object.Click to allow buildmode gui objects to be clicked
 		build_click(src, client.buildmode, params, A)
@@ -35,12 +36,9 @@
 	if(stat || lockdown || weakened || stunned || paralysis)
 		return
 
-	if(!canClick())
-		return
-
 	face_atom(A) // change direction to face what you clicked on
 
-	if(aiCamera.in_camera_mode)
+	if(aiCamera && aiCamera.in_camera_mode)
 		aiCamera.camera_mode_off()
 		if(is_component_functioning("camera"))
 			aiCamera.captureimage(A, usr)
@@ -62,7 +60,6 @@
 		A.add_hiddenprint(src)
 		A.attack_robot(src)
 		return
-
 	// buckled cannot prevent machine interlinking but stops arm movement
 	if( buckled )
 		return
@@ -71,7 +68,7 @@
 
 		W.attack_self(src)
 		return
-
+	
 	// cyborgs are prohibited from using storage items so we can I think safely remove (A.loc in contents)
 	if(A == loc || (A in loc) || (A in contents))
 		// No adjacency checks

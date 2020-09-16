@@ -70,7 +70,7 @@
 		turn_off()
 		update_stats()
 		if(load && is_train_head())
-			load << "The drive motor briefly whines, then drones to a stop."
+			to_chat(load, "The drive motor briefly whines, then drones to a stop.")
 
 	if(is_train_head() && !on)
 		return 0
@@ -205,14 +205,11 @@
 		return ..()
 
 /obj/vehicle/train/rover/engine/examine(mob/user)
-	if(!..(user, 1))
-		return
-
-	if(!istype(usr, /mob/living/carbon/human))
-		return
-
-	user << "The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition."
-	user << "The charge meter reads [cell? round(cell.percent(), 0.01) : 0]%"
+	. = ..()
+	if(Adjacent(user))
+		. += "The power light is [on ? "on" : "off"]."
+		. += "There are[key ? "" : " no"] keys in the ignition."
+		. += "The charge meter reads [cell? round(cell.percent(), 0.01) : 0]%"
 
 /obj/vehicle/train/rover/engine/verb/start_engine()
 	set name = "Start engine"
@@ -223,17 +220,17 @@
 		return
 
 	if(on)
-		usr << "The engine is already running."
+		to_chat(usr, "The engine is already running.")
 		return
 
 	turn_on()
 	if (on)
-		usr << "You start [src]'s engine."
+		to_chat(usr, "You start [src]'s engine.")
 	else
 		if(cell.charge < charge_use)
-			usr << "[src] is out of power."
+			to_chat(usr, "[src] is out of power.")
 		else
-			usr << "[src]'s engine won't start."
+			to_chat(usr, "[src]'s engine won't start.")
 
 /obj/vehicle/train/rover/engine/verb/stop_engine()
 	set name = "Stop engine"
@@ -244,12 +241,12 @@
 		return
 
 	if(!on)
-		usr << "The engine is already stopped."
+		to_chat(usr, "The engine is already stopped.")
 		return
 
 	turn_off()
 	if (!on)
-		usr << "You stop [src]'s engine."
+		to_chat(usr, "You stop [src]'s engine.")
 
 /obj/vehicle/train/rover/engine/verb/remove_key()
 	set name = "Remove key"

@@ -28,7 +28,7 @@
 
 	maxHealth = 25
 	health = 25
-
+	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	movement_cooldown = 0
 
 	melee_damage_lower = 2
@@ -39,6 +39,23 @@
 
 	say_list_type = /datum/say_list/diyaab
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
+
+	// What do you hit the mob with (on help) to get something from it?
+	harvest_tool = /obj/item/weapon/tool/wirecutters
+	// How long do we have to wait until it's harvestable again?
+	harvest_cooldown = 10 MINUTES
+	// How long does it take to harvest?
+	harvest_delay = 30 SECONDS
+	// What world.time was the last harvest?
+	harvest_recent = 0
+	// How many times do we roll on the chance table?
+	harvest_per_hit = 1
+	// Verb for harvesting. "sheared" "clipped" etc.
+	harvest_verb = "sheared"
+	// Associative list of paths and their chances. path = straws in the lot
+	harvest_results = list(
+		/obj/item/stack/material/cloth/diyaab = 10
+		)
 
 /datum/say_list/diyaab
 	speak = list("Awrr?", "Aowrl!", "Worrl.")

@@ -109,39 +109,35 @@
 		icon_state = "[module_sprites[icontype]]-wreck"
 		add_overlay("wreck-overlay")
 
-/mob/living/silicon/robot/Move(a, b, flag)
+/mob/living/silicon/robot/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
-	if(scrubbing)
-		var/datum/matter_synth/water = water_res
-		if(water && water.energy >= 1)
-			var/turf/tile = loc
-			if(isturf(tile))
-				water.use_charge(1)
-				tile.clean_blood()
-				if(istype(tile, /turf/simulated))
-					var/turf/simulated/T = tile
-					T.dirt = 0
-				for(var/A in tile)
-					if(istype(A,/obj/effect/rune) || istype(A,/obj/effect/decal/cleanable) || istype(A,/obj/effect/overlay))
-						qdel(A)
-					else if(istype(A, /mob/living/carbon/human))
-						var/mob/living/carbon/human/cleaned_human = A
-						if(cleaned_human.lying)
-							if(cleaned_human.head)
-								cleaned_human.head.clean_blood()
-								cleaned_human.update_inv_head(0)
-							if(cleaned_human.wear_suit)
-								cleaned_human.wear_suit.clean_blood()
-								cleaned_human.update_inv_wear_suit(0)
-							else if(cleaned_human.w_uniform)
-								cleaned_human.w_uniform.clean_blood()
-								cleaned_human.update_inv_w_uniform(0)
-							if(cleaned_human.shoes)
-								cleaned_human.shoes.clean_blood()
-								cleaned_human.update_inv_shoes(0)
-							cleaned_human.clean_blood(1)
-							cleaned_human << "<span class='warning'>[src] cleans your face!</span>"
-	return
+	if(scrubbing && isturf(loc) && water_res?.energy >= 1)
+		var/turf/tile = loc
+		water_res.use_charge(1)
+		tile.clean_blood()
+		if(istype(tile, /turf/simulated))
+			var/turf/simulated/T = tile
+			T.dirt = 0
+		for(var/A in tile)
+			if(istype(A,/obj/effect/rune) || istype(A,/obj/effect/decal/cleanable) || istype(A,/obj/effect/overlay))
+				qdel(A)
+			else if(istype(A, /mob/living/carbon/human))
+				var/mob/living/carbon/human/cleaned_human = A
+				if(cleaned_human.lying)
+					if(cleaned_human.head)
+						cleaned_human.head.clean_blood()
+						cleaned_human.update_inv_head(0)
+					if(cleaned_human.wear_suit)
+						cleaned_human.wear_suit.clean_blood()
+						cleaned_human.update_inv_wear_suit(0)
+					else if(cleaned_human.w_uniform)
+						cleaned_human.w_uniform.clean_blood()
+						cleaned_human.update_inv_w_uniform(0)
+					if(cleaned_human.shoes)
+						cleaned_human.shoes.clean_blood()
+						cleaned_human.update_inv_shoes(0)
+					cleaned_human.clean_blood(1)
+					to_chat(cleaned_human, "<span class='warning'>[src] cleans your face!</span>")
 
 /mob/living/silicon/robot/proc/vr_sprite_check()
 	if(wideborg == TRUE)
@@ -226,13 +222,13 @@
 	if(M in buckled_mobs)
 		return FALSE
 	if(M.size_multiplier > size_multiplier * 1.2)
-		to_chat(src,"<span class='warning'>This isn't a pony show! You need to be bigger for them to ride.</span>")
+		to_chat(src, "<span class='warning'>This isn't a pony show! You need to be bigger for them to ride.</span>")
 		return FALSE
 
 	var/mob/living/carbon/human/H = M
 
 	if(isTaurTail(H.tail_style))
-		to_chat(src,"<span class='warning'>Too many legs. TOO MANY LEGS!!</span>")
+		to_chat(src, "<span class='warning'>Too many legs. TOO MANY LEGS!!</span>")
 		return FALSE
 	if(M.loc != src.loc)
 		if(M.Adjacent(src))
@@ -276,6 +272,6 @@
 /mob/living/silicon/robot/onTransitZ(old_z, new_z)
 	if(shell)
 		if(deployed && using_map.ai_shell_restricted && !(new_z in using_map.ai_shell_allowed_levels))
-			to_chat(src,"<span class='warning'>Your connection with the shell is suddenly interrupted!</span>")
+			to_chat(src, "<span class='warning'>Your connection with the shell is suddenly interrupted!</span>")
 			undeploy()
 	..()

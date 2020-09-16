@@ -1,7 +1,7 @@
 /obj/machinery/mining
 	icon = 'icons/obj/mining_drill.dmi'
 	anchored = 0
-	use_power = 0 //The drill takes power directly from a cell.
+	use_power = USE_POWER_OFF //The drill takes power directly from a cell.
 	density = 1
 	layer = MOB_LAYER+0.1 //So it draws over mobs in the tile north of it.
 
@@ -52,16 +52,18 @@
 	var/need_update_field = 0
 	var/need_player_check = 0
 
-/obj/machinery/mining/drill/New()
+/obj/machinery/mining/drill/Initialize()
+	. = ..()
+	if(ispath(cell))
+		cell = new cell(src)
+	default_apply_parts()
+	cell = default_use_hicell()
 
-	..()
-	component_parts = list()
-	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
-	component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
-	component_parts += new /obj/item/weapon/stock_parts/micro_laser(src)
-	component_parts += new /obj/item/weapon/cell/high(src)
+/obj/machinery/mining/drill/get_cell()
+	return cell
 
-	RefreshParts()
+/obj/machinery/mining/drill/loaded
+	cell = /obj/item/weapon/cell/high
 
 /obj/machinery/mining/drill/process()
 
@@ -108,7 +110,7 @@
 		var/total_harvest = harvest_speed //Ore harvest-per-tick.
 		var/found_resource = 0 //If this doesn't get set, the area is depleted and the drill errors out.
 
-		for(var/metal in ore_types)
+		for(var/metal in GLOB.ore_types)
 
 			if(contents.len >= capacity)
 				system_error("Insufficient storage space.")
@@ -136,7 +138,7 @@
 					harvesting.resources[metal] = 0
 
 				for(var/i=1, i <= create_ore, i++)
-					var/oretype = ore_types[metal]
+					var/oretype = GLOB.ore_types[metal]
 					new oretype(src)
 
 		if(!found_resource)	// If a drill can't see an advanced material, it will destroy it while going through.
@@ -173,7 +175,7 @@
 			to_chat(user, "The drill already has a cell installed.")
 		else
 			user.drop_item()
-			O.loc = src
+			O.forceMove(src)
 			cell = O
 			component_parts += O
 			to_chat(user, "You install \the [O].")
@@ -185,7 +187,7 @@
 
 	if (panel_open && cell && user.Adjacent(src))
 		to_chat(user, "You take out \the [cell].")
-		cell.loc = get_turf(user)
+		cell.forceMove(get_turf(user))
 		component_parts -= cell
 		cell = null
 		return
@@ -243,7 +245,7 @@
 			capacity = 200 * P.rating
 		if(istype(P, /obj/item/weapon/stock_parts/capacitor))
 			charge_use -= 10 * P.rating
-	cell = locate(/obj/item/weapon/cell) in component_parts
+	cell = locate(/obj/item/weapon/cell) in src
 
 /obj/machinery/mining/drill/proc/check_supports()
 

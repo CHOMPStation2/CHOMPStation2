@@ -1,3 +1,4 @@
+//CHOMPEDIT seeds: teaseed
 /obj/machinery/seed_storage/garden
 	starting_seeds = list(
 		/obj/item/seeds/appleseed = 3,
@@ -36,16 +37,17 @@
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
+		/obj/item/seeds/teaseed = 3,
 		/obj/item/seeds/tobaccoseed = 3,
 		/obj/item/seeds/tomatoseed = 3,
 		/obj/item/seeds/towermycelium = 3,
 		/obj/item/seeds/vanilla = 3,
+		/obj/item/seeds/wabback = 2,
 		/obj/item/seeds/watermelonseed = 3,
 		/obj/item/seeds/wheatseed = 3,
 		/obj/item/seeds/whitebeetseed = 3,
 		/obj/item/seeds/shrinkshroom = 3,
-		/obj/item/seeds/megashroom = 3,
-		/obj/item/seeds/wabback = 2)
+		/obj/item/seeds/megashroom = 3)
 
 /obj/machinery/seed_storage/xenobotany
 	name = "Xenobotany seed storage"
@@ -93,6 +95,7 @@
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
+		/obj/item/seeds/teaseed = 3,
 		/obj/item/seeds/tobaccoseed = 3,
 		/obj/item/seeds/tomatoseed = 3,
 		/obj/item/seeds/towermycelium = 3,

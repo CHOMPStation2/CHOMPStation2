@@ -5,4 +5,4 @@
 	channels = list("Explorer" = 1)
 
 /obj/item/device/encryptionkey/explorer
-	channels = list("Science" = 1, "Explorer" = 1)
+	channels = list("Explorer" = 1) //YW EDIT: Removes Science to come in line with our chain of Command

@@ -41,14 +41,14 @@
 /obj/item/modular_computer/proc/install_default_programs()
 	return 1
 
-/obj/item/modular_computer/New()
+/obj/item/modular_computer/Initialize()
 	START_PROCESSING(SSobj, src)
 	install_default_hardware()
 	if(hard_drive)
 		install_default_programs()
 	update_icon()
 	update_verbs()
-	..()
+	. = ..()
 
 /obj/item/modular_computer/Destroy()
 	kill_program(1)
@@ -163,6 +163,7 @@
 	idle_threads.Add(active_program)
 	active_program.program_state = PROGRAM_STATE_BACKGROUND // Should close any existing UIs
 	SSnanoui.close_uis(active_program.NM ? active_program.NM : active_program)
+	SStgui.close_uis(active_program.TM ? active_program.TM : active_program)
 	active_program = null
 	update_icon()
 	if(istype(user))
@@ -202,7 +203,6 @@
 		minimize_program(user)
 
 	if(P.run_program(user))
-		active_program = P
 		update_icon()
 	return 1
 
@@ -254,6 +254,18 @@
 		return active_program.check_eye(user)
 	else
 		return ..()
+
+/obj/item/modular_computer/apply_visual(var/mob/user)
+	if(active_program)
+		return active_program.apply_visual(user)
+
+/obj/item/modular_computer/remove_visual(var/mob/user)
+	if(active_program)
+		return active_program.remove_visual(user)
+
+/obj/item/modular_computer/relaymove(var/mob/user, direction)
+	if(active_program)
+		return active_program.relaymove(user, direction)
 
 /obj/item/modular_computer/proc/set_autorun(program)
 	if(!hard_drive)

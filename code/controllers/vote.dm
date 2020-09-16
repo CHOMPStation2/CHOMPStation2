@@ -44,10 +44,12 @@ SUBSYSTEM_DEF(vote)
 		players_are_in_round = TRUE
 		break
 
+//CHOMPStation Edit Start TFF 21/1/20 - Revert removal of auto-transfer for no transfer if people aren't in the round.
 	if(!players_are_in_round)
-		log_debug("The crew transfer shuttle would have been called at vote time due to no players being present.") //YW Edit
-//		init_shift_change(null, 1)  //YW Edit
+		log_debug("The crew transfer shuttle was automatically called at vote time due to no players being present.")
+		init_shift_change(null, 1)
 		return
+//CHOMPStation Edit End
 
 	initiate_vote(VOTE_CREW_TRANSFER, "the server", 1)
 	log_debug("The server has called a crew transfer vote.")
@@ -220,7 +222,7 @@ SUBSYSTEM_DEF(vote)
 					if(ticker.current_state <= GAME_STATE_SETTING_UP)
 						initiator_key << "The crew transfer button has been disabled!"
 						return 0
-				question = "Your PDA beeps with a message from Central. Would you like an additional four hours to finish ongoing projects?" //Yawn Wider Edit
+				question = "Your PDA beeps with a message from Central. Would you like an additional hour to finish ongoing projects?" //Yawn Wider Edit //CHOMP EDIT: Changed to 'one' hour.
 				choices.Add("Initiate Crew Transfer", "Extend the Shift")  //VOREStation Edit
 			if(VOTE_ADD_ANTAGONIST)
 				if(!config.allow_extra_antags || ticker.current_state >= GAME_STATE_SETTING_UP)

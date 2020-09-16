@@ -27,11 +27,13 @@ BLIND     // can't see anything
 	var/activation_sound = 'sound/items/goggles_charge.ogg'
 	var/obj/screen/overlay = null
 	var/list/away_planes //Holder for disabled planes
+	drop_sound = 'sound/items/drop/accessory.ogg'
 
 	sprite_sheets = list(
 		"Teshari" = 'icons/mob/species/seromi/eyes.dmi',
 		"Vox" = 'icons/mob/species/vox/eyes.dmi',
-		"Sergal" = 'icons/mob/species/sergal/eyes_yw.dmi'
+		"Sergal" = 'icons/mob/species/sergal/eyes_yw.dmi',
+		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
 		)
 
 /obj/item/clothing/glasses/update_clothing_icon()
@@ -39,28 +41,49 @@ BLIND     // can't see anything
 		var/mob/M = src.loc
 		M.update_inv_glasses()
 
+/obj/item/clothing/glasses/proc/can_toggle(mob/living/user)
+	if(!toggleable)
+		return FALSE
+
+	// Prevent people from just turning their goggles back on.
+	if(!active && (vision_flags & (SEE_TURFS|SEE_OBJS)))
+		var/area/A = get_area(src)
+		if(A.no_spoilers)
+			return FALSE
+
+	return TRUE
+
+/obj/item/clothing/glasses/proc/toggle_active(mob/living/user)
+	if(active)
+		active = FALSE
+		icon_state = off_state
+		user.update_inv_glasses()
+		flash_protection = FLASH_PROTECTION_NONE
+		tint = TINT_NONE
+		away_planes = enables_planes
+		enables_planes = null
+
+	else
+		active = TRUE
+		icon_state = initial(icon_state)
+		user.update_inv_glasses()
+		flash_protection = initial(flash_protection)
+		tint = initial(tint)
+		enables_planes = away_planes
+		away_planes = null
+	user.update_action_buttons()
+	user.recalculate_vis()
+
 /obj/item/clothing/glasses/attack_self(mob/user)
 	if(toggleable)
-		if(active)
-			active = 0
-			icon_state = off_state
-			user.update_inv_glasses()
-			flash_protection = FLASH_PROTECTION_NONE
-			tint = TINT_NONE
-			away_planes = enables_planes
-			enables_planes = null
-			to_chat(usr, "You deactivate the optical matrix on the [src].")
+		if(!can_toggle(user))
+			to_chat(user, span("warning", "You don't seem to be able to toggle \the [src] here."))
 		else
-			active = 1
-			icon_state = initial(icon_state)
-			user.update_inv_glasses()
-			flash_protection = initial(flash_protection)
-			tint = initial(tint)
-			enables_planes = away_planes
-			away_planes = null
-			to_chat(usr, "You activate the optical matrix on the [src].")
-		user.update_action_buttons()
-		user.recalculate_vis()
+			toggle_active(user)
+			if(active)
+				to_chat(user, span("notice", "You activate the optical matrix on the [src]."))
+			else
+				to_chat(user, span("notice", "You deactivate the optical matrix on the [src]."))
 	..()
 
 /obj/item/clothing/glasses/meson
@@ -160,6 +183,7 @@ BLIND     // can't see anything
 	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
 	body_parts_covered = 0
 	var/eye = null
+	drop_sound = 'sound/items/drop/gloves.ogg'
 
 /obj/item/clothing/glasses/eyepatch/verb/switcheye()
 	set name = "Switch Eyepatch"
@@ -341,6 +365,7 @@ BLIND     // can't see anything
 	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
 	flash_protection = FLASH_PROTECTION_MAJOR
 	tint = BLIND
+	drop_sound = 'sound/items/drop/gloves.ogg'
 
 /obj/item/clothing/glasses/sunglasses/blindfold/tape
 	name = "length of tape"
@@ -435,13 +460,13 @@ BLIND     // can't see anything
 	toggleable = 1
 	action_button_name = "Toggle Goggles"
 	vision_flags = SEE_MOBS
-	enables_planes = list(VIS_FULLBRIGHT)
+	enables_planes = list(VIS_FULLBRIGHT, VIS_CLOAKED)
 	flash_protection = FLASH_PROTECTION_REDUCED
 
 	emp_act(severity)
 		if(istype(src.loc, /mob/living/carbon/human))
 			var/mob/living/carbon/human/M = src.loc
-			M << "<font color='red'>The Optical Thermal Scanner overloads and blinds you!</font>"
+			to_chat(M, "<font color='red'>The Optical Thermal Scanner overloads and blinds you!</font>")
 			if(M.glasses == src)
 				M.Blind(3)
 				M.eye_blurry = 5

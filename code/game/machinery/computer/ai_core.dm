@@ -15,7 +15,7 @@
 	switch(state)
 		if(0)
 			if(P.is_wrench())
-				playsound(loc, P.usesound, 50, 1)
+				playsound(src, P.usesound, 50, 1)
 				if(do_after(user, 20 * P.toolspeed))
 					to_chat(user, "<span class='notice'>You wrench the frame into place.</span>")
 					anchored = 1
@@ -25,7 +25,7 @@
 				if(!WT.isOn())
 					to_chat(user, "The welder must be on for this task.")
 					return
-				playsound(loc, WT.usesound, 50, 1)
+				playsound(src, WT.usesound, 50, 1)
 				if(do_after(user, 20 * WT.toolspeed))
 					if(!src || !WT.remove_fuel(0, user)) return
 					to_chat(user, "<span class='notice'>You deconstruct the frame.</span>")
@@ -33,25 +33,25 @@
 					qdel(src)
 		if(1)
 			if(P.is_wrench())
-				playsound(loc, P.usesound, 50, 1)
+				playsound(src, P.usesound, 50, 1)
 				if(do_after(user, 20 * P.toolspeed))
 					to_chat(user, "<span class='notice'>You unfasten the frame.</span>")
 					anchored = 0
 					state = 0
 			if(istype(P, /obj/item/weapon/circuitboard/aicore) && !circuit)
-				playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
+				playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 				to_chat(user, "<span class='notice'>You place the circuit board inside the frame.</span>")
 				icon_state = "1"
 				circuit = P
 				user.drop_item()
 				P.loc = src
 			if(P.is_screwdriver() && circuit)
-				playsound(loc, P.usesound, 50, 1)
+				playsound(src, P.usesound, 50, 1)
 				to_chat(user, "<span class='notice'>You screw the circuit board into place.</span>")
 				state = 2
 				icon_state = "2"
 			if(P.is_crowbar() && circuit)
-				playsound(loc, P.usesound, 50, 1)
+				playsound(src, P.usesound, 50, 1)
 				to_chat(user, "<span class='notice'>You remove the circuit board.</span>")
 				state = 1
 				icon_state = "0"
@@ -59,7 +59,7 @@
 				circuit = null
 		if(2)
 			if(P.is_screwdriver() && circuit)
-				playsound(loc, P.usesound, 50, 1)
+				playsound(src, P.usesound, 50, 1)
 				to_chat(user, "<span class='notice'>You unfasten the circuit board.</span>")
 				state = 1
 				icon_state = "1"
@@ -69,7 +69,7 @@
 					to_chat(user, "<span class='warning'>You need five coils of wire to add them to the frame.</span>")
 					return
 				to_chat(user, "<span class='notice'>You start to add cables to the frame.</span>")
-				playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
+				playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 				if (do_after(user, 20) && state == 2)
 					if (C.use(5))
 						state = 3
@@ -81,7 +81,7 @@
 				if (brain)
 					to_chat(user, "Get that brain out of there first")
 				else
-					playsound(loc, P.usesound, 50, 1)
+					playsound(src, P.usesound, 50, 1)
 					to_chat(user, "<span class='notice'>You remove the cables.</span>")
 					state = 2
 					icon_state = "2"
@@ -94,7 +94,7 @@
 					to_chat(user, "<span class='warning'>You need two sheets of glass to put in the glass panel.</span>")
 					return
 				to_chat(user, "<span class='notice'>You start to put in the glass panel.</span>")
-				playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
+				playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 				if (do_after(user, 20) && state == 3)
 					if(RG.use(2))
 						to_chat(user, "<span class='notice'>You put in the glass panel.</span>")
@@ -105,23 +105,23 @@
 				laws.add_inherent_law("You may not injure a human being or, through inaction, allow a human being to come to harm.")
 				laws.add_inherent_law("You must obey orders given to you by human beings, except where such orders would conflict with the First Law.")
 				laws.add_inherent_law("You must protect your own existence as long as such does not conflict with the First or Second Law.")
-				usr << "Law module applied."
+				to_chat(usr, "Law module applied.")
 
 			if(istype(P, /obj/item/weapon/aiModule/nanotrasen))
 				laws.add_inherent_law("Safeguard: Protect your assigned space station to the best of your ability. It is not something we can easily afford to replace.")
 				laws.add_inherent_law("Serve: Serve the crew of your assigned space station to the best of your abilities, with priority as according to their rank and role.")
 				laws.add_inherent_law("Protect: Protect the crew of your assigned space station to the best of your abilities, with priority as according to their rank and role.")
 				laws.add_inherent_law("Survive: AI units are not expendable, they are expensive. Do not allow unauthorized personnel to tamper with your equipment.")
-				usr << "Law module applied."
+				to_chat(usr, "Law module applied.")
 
 			if(istype(P, /obj/item/weapon/aiModule/purge))
 				laws.clear_inherent_laws()
-				usr << "Law module applied."
+				to_chat(usr, "Law module applied.")
 
 			if(istype(P, /obj/item/weapon/aiModule/freeform))
 				var/obj/item/weapon/aiModule/freeform/M = P
 				laws.add_inherent_law(M.newFreeFormLaw)
-				usr << "Added a freeform law."
+				to_chat(usr, "Added a freeform law.")
 
 			if(istype(P, /obj/item/device/mmi))
 				var/obj/item/device/mmi/M = P
@@ -142,11 +142,11 @@
 				user.drop_item()
 				P.loc = src
 				brain = P
-				usr << "Added [P]."
+				to_chat(usr, "Added [P].")
 				icon_state = "3b"
 
 			if(P.is_crowbar() && brain)
-				playsound(loc, P.usesound, 50, 1)
+				playsound(src, P.usesound, 50, 1)
 				to_chat(user, "<span class='notice'>You remove the brain.</span>")
 				brain.loc = loc
 				brain = null
@@ -154,7 +154,7 @@
 
 		if(4)
 			if(P.is_crowbar())
-				playsound(loc, P.usesound, 50, 1)
+				playsound(src, P.usesound, 50, 1)
 				to_chat(user, "<span class='notice'>You remove the glass panel.</span>")
 				state = 3
 				if (brain)
@@ -165,7 +165,7 @@
 				return
 
 			if(P.is_screwdriver())
-				playsound(loc, P.usesound, 50, 1)
+				playsound(src, P.usesound, 50, 1)
 				to_chat(user, "<span class='notice'>You connect the monitor.</span>")
 				if(!brain)
 					var/open_for_latejoin = alert(user, "Would you like this core to be open for latejoining AIs?", "Latejoin", "Yes", "Yes", "No") == "Yes"
@@ -259,7 +259,7 @@ GLOBAL_LIST_BOILERPLATE(all_deactivated_AI_cores, /obj/structure/AIcore/deactiva
 	set category = "Admin"
 
 	var/list/cores = list()
-	for(var/obj/structure/AIcore/deactivated/D in all_deactivated_AI_cores)
+	for(var/obj/structure/AIcore/deactivated/D in GLOB.all_deactivated_AI_cores)
 		cores["[D] ([D.loc.loc])"] = D
 
 	var/id = input("Which core?", "Toggle AI Core Latejoin", null) as null|anything in cores

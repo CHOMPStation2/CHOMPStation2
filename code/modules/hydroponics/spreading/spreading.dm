@@ -7,7 +7,7 @@
 		for(var/areapath in typesof(/area/hallway))
 			var/area/A = locate(areapath)
 			for(var/turf/simulated/floor/F in A.contents)
-				if(turf_clear(F))
+				if(!F.check_density())
 					turfs += F
 
 		if(turfs.len) //Pick a turf to spawn at if we can
@@ -72,8 +72,9 @@
 	var/obj/machinery/portable_atmospherics/hydroponics/soil/invisible/plant
 
 /obj/effect/plant/Destroy()
-	if(plant_controller)
-		plant_controller.remove_plant(src)
+	if(seed.get_trait(TRAIT_SPREAD)==2)
+		unsense_proximity(callback = .HasProximity, center = get_turf(src))
+	plant_controller.remove_plant(src)
 	for(var/obj/effect/plant/neighbor in range(1,src))
 		plant_controller.add_plant(neighbor)
 	return ..()
@@ -92,7 +93,7 @@
 	if(!plant_controller)
 		sleep(250) // ugly hack, should mean roundstart plants are fine. TODO initialize perhaps?
 	if(!plant_controller)
-		world << "<span class='danger'>Plant controller does not exist and [src] requires it. Aborting.</span>"
+		to_world("<span class='danger'>Plant controller does not exist and [src] requires it. Aborting.</span>")
 		qdel(src)
 		return
 
@@ -106,6 +107,7 @@
 	name = seed.display_name
 	max_health = round(seed.get_trait(TRAIT_ENDURANCE)/2)
 	if(seed.get_trait(TRAIT_SPREAD)==2)
+		sense_proximity(callback = .HasProximity) // Grabby
 		max_growth = VINE_GROWTH_STAGES
 		growth_threshold = max_health/VINE_GROWTH_STAGES
 		icon = 'icons/obj/hydroponics_vines.dmi'
@@ -242,16 +244,16 @@
 
 	if(W.is_wirecutter() || istype(W, /obj/item/weapon/surgical/scalpel))
 		if(sampled)
-			user << "<span class='warning'>\The [src] has already been sampled recently.</span>"
+			to_chat(user, "<span class='warning'>\The [src] has already been sampled recently.</span>")
 			return
 		if(!is_mature())
-			user << "<span class='warning'>\The [src] is not mature enough to yield a sample yet.</span>"
+			to_chat(user, "<span class='warning'>\The [src] is not mature enough to yield a sample yet.</span>")
 			return
 		if(!seed)
-			user << "<span class='warning'>There is nothing to take a sample from.</span>"
+			to_chat(user, "<span class='warning'>There is nothing to take a sample from.</span>")
 			return
 		if(sampled)
-			user << "<span class='danger'>You cannot take another sample from \the [src].</span>"
+			to_chat(user, "<span class='danger'>You cannot take another sample from \the [src].</span>")
 			return
 		if(prob(70))
 			sampled = 1

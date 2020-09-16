@@ -19,7 +19,7 @@
 /datum/gear/head/beret/bsec
 	display_name = "beret, navy (officer)"
 	path = /obj/item/clothing/head/beret/sec/navy/officer
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/beret/bsec_warden
 	display_name = "beret, navy (warden)"
@@ -34,7 +34,7 @@
 /datum/gear/head/beret/csec
 	display_name = "beret, corporate (officer)"
 	path = /obj/item/clothing/head/beret/sec/corporate/officer
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/beret/csec_warden
 	display_name = "beret, corporate (warden)"
@@ -57,7 +57,7 @@
 /datum/gear/head/beret/sec
 	display_name = "beret, red (security)"
 	path = /obj/item/clothing/head/beret/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/cap
 	display_name = "cap, black"
@@ -78,7 +78,7 @@
 /datum/gear/head/cap/corp
 	display_name = "cap, corporate (Security)"
 	path = /obj/item/clothing/head/soft/sec/corp
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/cap/green
 	display_name = "cap, green"
@@ -107,7 +107,7 @@
 /datum/gear/head/cap/sec
 	display_name = "cap, security (Security)"
 	path = /obj/item/clothing/head/soft/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/head/cap/yellow
 	display_name = "cap, yellow"
@@ -125,17 +125,9 @@
 	display_name = "cap, bill"
 	path = /obj/item/clothing/head/soft/mbill
 
-/*/datum/gear/head/cap/sol
+/datum/gear/head/cap/sol
 	display_name = "cap, sol"
-	path = /obj/item/clothing/head/soft/sol
-
-/datum/gear/head/cap/expdition
-	display_name = "cap, expedition"
-	path = /obj/item/clothing/head/soft/sol/expedition
-
-/datum/gear/head/cap/fleet
-	display_name = "cap, fleet"
-	path = /obj/item/clothing/head/soft/sol/fleet*/ // Vorestation removal
+	path = /obj/item/clothing/head/soft/solgov
 
 /datum/gear/head/cowboy
 	display_name = "cowboy, rodeo"
@@ -337,17 +329,17 @@
 	display_name = "welding, engie (engineering/robotics)"
 	path = /obj/item/clothing/head/welding/engie
 
-/*/datum/gear/head/beret/sol
+/datum/gear/head/beret/solgov
 	display_name = "beret sol, selection"
-	path = /obj/item/clothing/head/beret/sol
+	path = /obj/item/clothing/head/beret/solgov
 
-/datum/gear/head/beret/sol/New()
+/datum/gear/head/beret/solgov/New()
 	..()
 	var/list/sols = list()
-	for(var/sol_style in typesof(/obj/item/clothing/head/beret/sol))
-		var/obj/item/clothing/head/beret/sol/sol = sol_style
+	for(var/sol_style in typesof(/obj/item/clothing/head/beret/solgov))
+		var/obj/item/clothing/head/beret/solgov/sol = sol_style
 		sols[initial(sol.name)] = sol
-	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(sols))*/ // Vorestation removal.
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(sols))
 
 /datum/gear/head/surgery
 	display_name = "surgical cap selection"
@@ -375,3 +367,19 @@
 /datum/gear/head/jingasa
 	display_name = "jingasa"
 	path = /obj/item/clothing/head/jingasa
+
+/datum/gear/head/sunflower_crown
+	display_name = "sunflower crown"
+	path = /obj/item/clothing/head/sunflower_crown
+
+/datum/gear/head/lavender_crown
+	display_name = "lavender crown"
+	path = /obj/item/clothing/head/lavender_crown
+
+/datum/gear/head/poppy_crown
+	display_name = "poppy crown"
+	path = /obj/item/clothing/head/poppy_crown
+
+/datum/gear/head/rose_crown
+	display_name = "rose crown"
+	path = /obj/item/clothing/head/rose_crown

@@ -114,6 +114,7 @@ var/list/name_to_material
 	var/list/composite_material  // If set, object matter var will be a list containing these values.
 	var/luminescence
 	var/radiation_resistance = 0 // Radiation resistance, which is added on top of a material's weight for blocking radiation. Needed to make lead special without superrobust weapons.
+	var/supply_conversion_value  // Supply points per sheet that this material sells for.
 
 	// Placeholder vars for the time being, todo properly integrate windows/light tiles/rods.
 	var/created_window
@@ -138,10 +139,10 @@ var/list/name_to_material
 // Placeholders for light tiles and rglass.
 /material/proc/build_rod_product(var/mob/user, var/obj/item/stack/used_stack, var/obj/item/stack/target_stack)
 	if(!rod_product)
-		user << "<span class='warning'>You cannot make anything out of \the [target_stack]</span>"
+		to_chat(user, "<span class='warning'>You cannot make anything out of \the [target_stack]</span>")
 		return
 	if(used_stack.get_amount() < 1 || target_stack.get_amount() < 1)
-		user << "<span class='warning'>You need one rod and one sheet of [display_name] to make anything useful.</span>"
+		to_chat(user, "<span class='warning'>You need one rod and one sheet of [display_name] to make anything useful.</span>")
 		return
 	used_stack.use(1)
 	target_stack.use(1)
@@ -151,15 +152,15 @@ var/list/name_to_material
 
 /material/proc/build_wired_product(var/mob/living/user, var/obj/item/stack/used_stack, var/obj/item/stack/target_stack)
 	if(!wire_product)
-		user << "<span class='warning'>You cannot make anything out of \the [target_stack]</span>"
+		to_chat(user, "<span class='warning'>You cannot make anything out of \the [target_stack]</span>")
 		return
 	if(used_stack.get_amount() < 5 || target_stack.get_amount() < 1)
-		user << "<span class='warning'>You need five wires and one sheet of [display_name] to make anything useful.</span>"
+		to_chat(user, "<span class='warning'>You need five wires and one sheet of [display_name] to make anything useful.</span>")
 		return
 
 	used_stack.use(5)
 	target_stack.use(1)
-	user << "<span class='notice'>You attach wire to the [name].</span>"
+	to_chat(user, "<span class='notice'>You attach wire to the [name].</span>")
 	var/obj/item/product = new wire_product(get_turf(user))
 	user.put_in_hands(product)
 
@@ -256,6 +257,7 @@ var/list/name_to_material
 	weight = 22
 	stack_origin_tech = list(TECH_MATERIAL = 5)
 	door_icon_base = "stone"
+	supply_conversion_value = 2
 
 /material/diamond
 	name = "diamond"
@@ -271,6 +273,7 @@ var/list/name_to_material
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
 	hardness = 100
 	stack_origin_tech = list(TECH_MATERIAL = 6)
+	supply_conversion_value = 8
 
 /material/gold
 	name = "gold"
@@ -282,6 +285,7 @@ var/list/name_to_material
 	stack_origin_tech = list(TECH_MATERIAL = 4)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
+	supply_conversion_value = 2
 
 /material/gold/bronze //placeholder for ashtrays
 	name = "bronze"
@@ -297,6 +301,7 @@ var/list/name_to_material
 	stack_origin_tech = list(TECH_MATERIAL = 3)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
+	supply_conversion_value = 2
 
 //R-UST port
 /material/supermatter
@@ -329,6 +334,7 @@ var/list/name_to_material
 	door_icon_base = "stone"
 	sheet_singular_name = "crystal"
 	sheet_plural_name = "crystals"
+	supply_conversion_value = 5
 
 /*
 // Commenting this out while fires are so spectacularly lethal, as I can't seem to get this balanced appropriately.
@@ -370,6 +376,7 @@ var/list/name_to_material
 	hardness = 30 //VOREStation Edit - Please.
 	integrity = 201 //hack to stop kitchen benches being flippable, todo: refactor into weight system
 	stack_type = /obj/item/stack/material/marble
+	supply_conversion_value = 2
 
 /material/steel
 	name = DEFAULT_WALL_MATERIAL
@@ -428,6 +435,7 @@ var/list/name_to_material
 	conductivity = 13 // For the purposes of balance.
 	stack_origin_tech = list(TECH_MATERIAL = 2)
 	composite_material = list(DEFAULT_WALL_MATERIAL = SHEET_MATERIAL_AMOUNT, "platinum" = SHEET_MATERIAL_AMOUNT) //todo
+	supply_conversion_value = 6
 
 /material/plasteel/hull
 	name = MAT_PLASTEELHULL
@@ -457,6 +465,7 @@ var/list/name_to_material
 	reflectivity = 0.7 // Not a perfect mirror, but close.
 	stack_origin_tech = list(TECH_MATERIAL = 8)
 	composite_material = list("plasteel" = SHEET_MATERIAL_AMOUNT, "diamond" = SHEET_MATERIAL_AMOUNT) //shrug
+	supply_conversion_value = 9
 
 /material/durasteel/hull //The 'Hardball' of starship hulls.
 	name = MAT_DURASTEELHULL
@@ -514,12 +523,12 @@ var/list/name_to_material
 		return 0
 
 	if(!user.IsAdvancedToolUser())
-		user << "<span class='warning'>This task is too complex for your clumsy hands.</span>"
+		to_chat(user, "<span class='warning'>This task is too complex for your clumsy hands.</span>")
 		return 1
 
 	var/turf/T = user.loc
 	if(!istype(T))
-		user << "<span class='warning'>You must be standing on open flooring to build a window.</span>"
+		to_chat(user, "<span class='warning'>You must be standing on open flooring to build a window.</span>")
 		return 1
 
 	var/title = "Sheet-[used_stack.name] ([used_stack.get_amount()] sheet\s left)"
@@ -557,7 +566,7 @@ var/list/name_to_material
 			else
 				failed_to_build = 1
 	if(failed_to_build)
-		user << "<span class='warning'>There is no room in this location.</span>"
+		to_chat(user, "<span class='warning'>There is no room in this location.</span>")
 		return 1
 
 	var/build_path = /obj/structure/windoor_assembly
@@ -571,7 +580,7 @@ var/list/name_to_material
 		build_path = created_window
 
 	if(used_stack.get_amount() < sheets_needed)
-		user << "<span class='warning'>You need at least [sheets_needed] sheets to build this.</span>"
+		to_chat(user, "<span class='warning'>You need at least [sheets_needed] sheets to build this.</span>")
 		return 1
 
 	// Build the structure and update sheet count etc.
@@ -652,6 +661,22 @@ var/list/name_to_material
 	stack_type = null
 	shard_type = SHARD_NONE
 
+/material/graphite
+	name = MAT_GRAPHITE
+	stack_type = /obj/item/stack/material/graphite
+	flags = MATERIAL_BRITTLE
+	icon_base = "solid"
+	icon_reinf = "reinf_mesh"
+	icon_colour = "#333333"
+	hardness = 75
+	weight = 15
+	integrity = 175
+	protectiveness = 15
+	conductivity = 18
+	melting_point = T0C+3600
+	radiation_resistance = 15
+	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_MAGNET = 2)
+
 /material/osmium
 	name = "osmium"
 	stack_type = /obj/item/stack/material/osmium
@@ -660,6 +685,7 @@ var/list/name_to_material
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	conductivity = 100
+	supply_conversion_value = 6
 
 /material/tritium
 	name = "tritium"
@@ -688,6 +714,7 @@ var/list/name_to_material
 	stack_origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 6, TECH_MAGNET = 5)
 	conductivity = 100
 	is_fusion_fuel = 1
+	supply_conversion_value = 6
 
 /material/platinum
 	name = "platinum"
@@ -698,6 +725,7 @@ var/list/name_to_material
 	stack_origin_tech = list(TECH_MATERIAL = 2)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
+	supply_conversion_value = 5
 
 /material/iron
 	name = "iron"
@@ -717,6 +745,7 @@ var/list/name_to_material
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	radiation_resistance = 25 // Lead is Special and so gets to block more radiation than it normally would with just weight, totalling in 48 protection.
+	supply_conversion_value = 2
 
 // Particle Smasher and other exotic materials.
 
@@ -739,6 +768,7 @@ var/list/name_to_material
 	stack_origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 5, TECH_BIO = 4)
 	sheet_singular_name = "sheet"
 	sheet_plural_name = "sheets"
+	supply_conversion_value = 8
 
 /material/morphium
 	name = MAT_MORPHIUM
@@ -759,6 +789,7 @@ var/list/name_to_material
 	reflectivity = 0.2
 	radiation_resistance = 10
 	stack_origin_tech = list(TECH_MATERIAL = 8, TECH_ILLEGAL = 1, TECH_PHORON = 4, TECH_BLUESPACE = 4, TECH_ARCANE = 1)
+	supply_conversion_value = 13
 
 /material/morphium/hull
 	name = MAT_MORPHIUMHULL
@@ -890,6 +921,7 @@ var/list/name_to_material
 	sheet_singular_name = null
 	sheet_plural_name = "pile"
 	pass_stack_colors = TRUE
+	supply_conversion_value = 3 //YW Adds: logs worth points
 
 /material/wood/log/sif
 	name = MAT_SIFLOG
@@ -1011,6 +1043,8 @@ var/list/name_to_material
 	protectiveness = 3 // 13%
 	conductive = 0
 
+//CHOMPstation Removal Start: Moved to materials_ch and changed to allow for material var
+/*
 /material/carpet
 	name = "carpet"
 	display_name = "comfy"
@@ -1023,6 +1057,8 @@ var/list/name_to_material
 	sheet_plural_name = "tiles"
 	protectiveness = 1 // 4%
 	conductive = 0
+*/
+//CHOMPstation Removal End
 
 /material/cotton
 	name = "cotton"
@@ -1106,6 +1142,28 @@ var/list/name_to_material
 	display_name = "lime"
 	use_name = "lime cloth"
 	icon_colour = "#62E36C"
+	flags = MATERIAL_PADDING
+	ignition_point = T0C+232
+	melting_point = T0C+300
+	protectiveness = 1 // 4%
+	conductive = 0
+
+/material/cloth_yellow
+	name = "yellow"
+	display_name = "yellow"
+	use_name = "yellow cloth"
+	icon_colour = "#EEF573"
+	flags = MATERIAL_PADDING
+	ignition_point = T0C+232
+	melting_point = T0C+300
+	protectiveness = 1 // 4%
+	conductive = 0
+
+/material/cloth_orange
+	name = "orange"
+	display_name = "orange"
+	use_name = "orange cloth"
+	icon_colour = "#E3BF49"
 	flags = MATERIAL_PADDING
 	ignition_point = T0C+232
 	melting_point = T0C+300

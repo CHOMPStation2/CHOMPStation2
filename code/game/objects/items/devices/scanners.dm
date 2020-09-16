@@ -272,9 +272,11 @@ HALOGEN COUNTER	- Radcount on mobs
 			var/blood_volume = H.vessel.get_reagent_amount("blood")
 			var/blood_percent =  round((blood_volume / H.species.blood_volume)*100)
 			var/blood_type = H.dna.b_type
-			if(blood_percent <= BLOOD_VOLUME_BAD)
+			if(blood_volume <= H.species.blood_volume*H.species.blood_level_danger)
 				dat += "<span class='danger'><i>Warning: Blood Level CRITICAL: [blood_percent]% [blood_volume]cl. Type: [blood_type]</i></span><br>"
-			else if(blood_percent <= BLOOD_VOLUME_SAFE)
+			else if(blood_volume <= H.species.blood_volume*H.species.blood_level_warning)
+				dat += "<span class='danger'><i>Warning: Blood Level VERY LOW: [blood_percent]% [blood_volume]cl. Type: [blood_type]</i></span><br>"
+			else if(blood_volume <= H.species.blood_volume*H.species.blood_level_safe)
 				dat += "<span class='danger'>Warning: Blood Level LOW: [blood_percent]% [blood_volume]cl. Type: [blood_type]</span><br>"
 			else
 				dat += "<span class='notice'>Blood Level Normal: [blood_percent]% [blood_volume]cl. Type: [blood_type]</span><br>"
@@ -492,7 +494,7 @@ HALOGEN COUNTER	- Radcount on mobs
 	for(var/potential_color in S.slime_mutation)
 		var/mob/living/simple_mob/slime/xenobio/slime = potential_color
 		mutations.Add(initial(slime.slime_color))
-	user.show_message("Potental to mutate into [english_list(mutations)] colors.<br>Extract potential: [S.cores]<br>Nutrition: [S.nutrition]/[S.get_max_nutrition()]")
+	user.show_message("Potental to mutate into [english_list(mutations)] colors.<br>Extract potential: [S.cores]<br>Nutrition: [S.nutrition]/[S.max_nutrition]")
 
 	if (S.nutrition < S.get_starve_nutrition())
 		user.show_message("<span class='alert'>Warning: Subject is starving!</span>")

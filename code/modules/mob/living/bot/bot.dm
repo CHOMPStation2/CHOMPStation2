@@ -45,7 +45,7 @@
 	..()
 	update_icons()
 
-	default_language = all_languages[LANGUAGE_GALCOM]
+	default_language = GLOB.all_languages[LANGUAGE_GALCOM]
 
 	botcard = new /obj/item/weapon/card/id(src)
 	botcard.access = botcard_access.Copy()
@@ -68,9 +68,9 @@
 	if(health <= 0)
 		death()
 		return
-	weakened = 0
-	stunned = 0
-	paralysis = 0
+	SetWeakened(0)
+	SetStunned(0)
+	SetParalysis(0)
 
 	if(on && !client && !busy)
 		spawn(0)
@@ -79,7 +79,7 @@
 /mob/living/bot/updatehealth()
 	if(status_flags & GODMODE)
 		health = getMaxHealth()
-		stat = CONSCIOUS
+		set_stat(CONSCIOUS)
 	else
 		health = getMaxHealth() - getFireLoss() - getBruteLoss()
 	oxyloss = 0
@@ -144,12 +144,8 @@
 /mob/living/bot/attack_ai(var/mob/user)
 	return attack_hand(user)
 
-/mob/living/bot/say(var/message)
-	var/verb = "beeps"
-
-	message = sanitize(message)
-
-	..(message, null, verb)
+/mob/living/bot/say_quote(var/message, var/datum/language/speaking = null)
+	return "beeps"
 
 /mob/living/bot/speech_bubble_appearance()
 	return "machine"

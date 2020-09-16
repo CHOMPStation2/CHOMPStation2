@@ -2,7 +2,7 @@
 	name = "nanopaste"
 	singular_name = "nanite swarm"
 	desc = "A tube of paste containing swarms of repair nanites. Very effective in repairing robotic machinery."
-	icon = 'icons/obj/stacks.dmi'
+	icon = 'icons/obj/stacks_vr.dmi' //VOREStation Edit
 	icon_state = "nanopaste"
 	origin_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 3)
 	amount = 10
@@ -16,7 +16,7 @@
 	if (istype(M,/mob/living/silicon/robot))	//Repairing cyborgs
 		var/mob/living/silicon/robot/R = M
 		if (R.getBruteLoss() || R.getFireLoss())
-			if(do_after(user,7 * toolspeed))
+			if(do_after(user, 7 * toolspeed, exclusive = TRUE))
 				R.adjustBruteLoss(-15)
 				R.adjustFireLoss(-15)
 				R.updatehealth()
@@ -24,11 +24,24 @@
 				user.visible_message("<span class='notice'>\The [user] applied some [src] on [R]'s damaged areas.</span>",\
 				"<span class='notice'>You apply some [src] at [R]'s damaged areas.</span>")
 		else
-			user << "<span class='notice'>All [R]'s systems are nominal.</span>"
+			to_chat(user, "<span class='notice'>All [R]'s systems are nominal.</span>")
 
 	if (istype(M,/mob/living/carbon/human))		//Repairing robolimbs
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/external/S = H.get_organ(user.zone_sel.selecting)
+		if(!S)
+			to_chat(user, "<span class='warning'>No body part there to work on!</span>")
+			return 1
+
+		if(S.organ_tag == BP_HEAD)
+			if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space))
+				to_chat(user, "<span class='warning'>You can't apply [src] through [H.head]!</span>")
+				return 1
+		else
+			if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space))
+				to_chat(user, "<span class='warning'>You can't apply [src] through [H.wear_suit]!</span>")
+				return 1
+
 		//VOREStation Edit Start
 		if (S && (S.robotic >= ORGAN_ROBOT))
 			if(!S.get_damage())
@@ -38,9 +51,9 @@
 			else if(can_use(1))
 				user.setClickCooldown(user.get_attack_speed(src))
 				if(S.open >= 2)
-					if(do_after(user,5 * toolspeed))
+					if(do_after(user, 5 * toolspeed, exclusive = TRUE))
 						S.heal_damage(restoration_internal, restoration_internal, robo_repair = 1)
-				else if(do_after(user,5 * toolspeed))
+				else if(do_after(user, 5 * toolspeed, exclusive = TRUE))
 					S.heal_damage(restoration_external,restoration_external, robo_repair =1)
 				H.updatehealth()
 				use(1)

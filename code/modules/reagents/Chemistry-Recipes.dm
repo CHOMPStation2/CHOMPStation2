@@ -118,7 +118,7 @@
 		var/turf/T = get_turf(container)
 		var/list/seen = viewers(4, T)
 		for(var/mob/M in seen)
-			M.show_message("<span class='notice'>\icon[container] [mix_message]</span>", 1)
+			M.show_message("<span class='notice'>[bicon(container)] [mix_message]</span>", 1)
 		playsound(T, reaction_sound, 80, 1)
 
 //obtains any special data that will be provided to the reaction products
@@ -553,6 +553,20 @@
 	required_reagents = list ("ammonia" = 1, "ethanol" = 1)
 	result_amount = 2
 
+/datum/chemical_reaction/left4zed
+	name = "Left4Zed"
+	id = "left4zed"
+	result = "left4zed"
+	required_reagents = list ("diethylamine" = 2, "mutagen" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/robustharvest
+	name = "RobustHarvest"
+	id = "robustharvest"
+	result = "robustharvest"
+	required_reagents = list ("ammonia" = 1, "calcium" = 1, "neurotoxic_protein" = 1)
+	result_amount = 3
+
 /datum/chemical_reaction/space_cleaner
 	name = "Space cleaner"
 	id = "cleaner"
@@ -564,7 +578,7 @@
 	name = "Plant-B-Gone"
 	id = "plantbgone"
 	result = "plantbgone"
-	required_reagents = list("toxin" = 1, "water" = 4)
+	required_reagents = list("pacid" = 1, "diethylamine" = 4) //YW Edit
 	result_amount = 5
 
 /datum/chemical_reaction/foaming_agent
@@ -883,7 +897,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		M << "<span class='warning'>The solution spews out foam!</span>"
+		to_chat(M, "<span class='warning'>The solution spews out foam!</span>")
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 0)
@@ -905,7 +919,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		M << "<span class='warning'>The solution spews out a metalic foam!</span>"
+		to_chat(M, "<span class='warning'>The solution spews out a metalic foam!</span>")
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 1)
@@ -923,7 +937,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		M << "<span class='warning'>The solution spews out a metalic foam!</span>"
+		to_chat(M, "<span class='warning'>The solution spews out a metalic foam!</span>")
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 2)
@@ -1317,6 +1331,7 @@
 	id = "dough"
 	result = null
 	required_reagents = list("egg" = 3, "flour" = 10)
+	inhibitors = list("water" = 1, "beer" = 1) //To prevent it messing with batter recipes
 	result_amount = 1
 
 /datum/chemical_reaction/food/dough/on_reaction(var/datum/reagents/holder, var/created_volume)
@@ -1847,7 +1862,7 @@
 	name = "Snow White"
 	id = "snowwhite"
 	result = "snowwhite"
-	required_reagents = list("beer" = 1, "lemon_lime" = 1)
+	required_reagents = list("pineapplejuice" = 1, "rum" = 1, "lemon_lime" = 1, "egg" = 1, "kahlua" = 1, "sugar" = 1) //VoreStation Edit
 	result_amount = 2
 
 /datum/chemical_reaction/drinks/irishcarbomb
@@ -2196,6 +2211,13 @@
 	required_reagents = list("sake" = 1, "melonliquor" = 1)
 	result_amount = 2
 
+/datum/chemical_reaction/drinks/deathbell
+	name = "Deathbell"
+	id = "deathbell"
+	result = "deathbell"
+	required_reagents = list("antifreeze" = 1, "gargleblaster" = 1, "syndicatebomb" =1)
+	result_amount = 3
+
 /datum/chemical_reaction/bitters
 	name = "Bitters"
 	id = "bitters"
@@ -2478,13 +2500,13 @@
 	id = "virginsexonthebeach"
 	result = "virginsexonthebeach"
 	required_reagents = list("orangejuice" = 3, "grenadine" = 2)
-	result_amount = 4
+	result_amount = 5
 
 /datum/chemical_reaction/drinks/sexonthebeach
 	name = "Sex On The Beach"
 	id = "sexonthebeach"
 	result = "sexonthebeach"
-	required_reagents = list("orangejuice" = 3, "grenadine" = 2, "vodka" = 1)
+	required_reagents = list("virginsexonthebeach" = 5, "vodka" = 1)
 	result_amount = 6
 
 /datum/chemical_reaction/drinks/eggnog
@@ -2598,3 +2620,50 @@
 	required_reagents = list("radium" = 1, "spidertoxin" = 1, "sifsap" = 1)
 	catalysts = list("sifsap" = 10)
 	result_amount = 2
+
+/*
+====================
+	Aurora Food
+====================
+*/
+
+/datum/chemical_reaction/coating/batter
+	name = "Batter"
+	id = "batter"
+	result = "batter"
+	required_reagents = list("egg" = 3, "flour" = 10, "water" = 5, "sodiumchloride" = 2)
+	result_amount = 20
+
+/datum/chemical_reaction/coating/beerbatter
+	name = "Beer Batter"
+	id = "beerbatter"
+	result = "beerbatter"
+	required_reagents = list("egg" = 3, "flour" = 10, "beer" = 5, "sodiumchloride" = 2)
+	result_amount = 20
+
+/datum/chemical_reaction/browniemix
+	name = "Brownie Mix"
+	id = "browniemix"
+	result = "browniemix"
+	required_reagents = list("flour" = 5, "coco" = 5, "sugar" = 5)
+	result_amount = 15
+
+/datum/chemical_reaction/butter
+	name = "Butter"
+	id = "butter"
+	result = null
+	required_reagents = list("cream" = 20, "sodiumchloride" = 1)
+	result_amount = 1
+
+/datum/chemical_reaction/butter/on_reaction(var/datum/reagents/holder, var/created_volume)
+	var/location = get_turf(holder.my_atom)
+	for(var/i = 1, i <= created_volume, i++)
+		new /obj/item/weapon/reagent_containers/food/snacks/spreads/butter(location)
+	return
+
+/datum/chemical_reaction/browniemix
+	name = "Brownie Mix"
+	id = "browniemix"
+	result = "browniemix"
+	required_reagents = list("flour" = 5, "coco" = 5, "sugar" = 5)
+	result_amount = 15

@@ -75,7 +75,7 @@
 /obj/item/weapon/spell/audible_deception/on_ranged_cast(atom/hit_atom, mob/living/user)
 	var/turf/T = get_turf(hit_atom)
 	if(selected_sound && pay_energy(200))
-		playsound(T, selected_sound, 80, 1, -1)
+		playsound(src, selected_sound, 80, 1, -1)
 		adjust_instability(1)
 		// Air Horn time.
 		if(selected_sound == 'sound/items/AirHorn.ogg' && pay_energy(3800))
@@ -83,7 +83,7 @@
 			for(var/mob/living/carbon/M in ohearers(6, T))
 				if(M.get_ear_protection() >= 2)
 					continue
-				M.sleeping = 0
+				M.SetSleeping(0)
 				M.stuttering += 20
 				M.ear_deaf += 30
 				M.Weaken(3)
@@ -92,4 +92,4 @@
 					M.Paralyse(4)
 				else
 					M.make_jittery(50)
-				M << "<font color='red' size='7'><b>HONK</b></font>"
+				to_chat(M, "<font color='red' size='7'><b>HONK</b></font>")

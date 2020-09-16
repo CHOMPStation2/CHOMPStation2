@@ -31,6 +31,9 @@ other types of metals and chemistry for reagents).
 	var/time = 10					//How many ticks it requires to build
 	var/category = null 			//Primarily used for Mech Fabricators, but can be used for anything.
 	var/sort_string = "ZZZZZ"		//Sorting order
+	var/maxstack = 1                //YW Edit, used by autolathe, says how many stacks a item can have or the limit of how many you can spawn at once
+	var/autolathe_build = 0         //YW Edit, makes other designs able to be built or added in autolathe, be via design disk or something else(added due to can't have two designs with same build_path without unit test getting angry)
+	var/hidden = 0                  //YW Edit, Used by autolathe, says if an item needs the autolathe to be hacked in order to appear
 
 /datum/design/New()
 	..()

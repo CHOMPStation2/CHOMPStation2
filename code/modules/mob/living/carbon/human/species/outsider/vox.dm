@@ -46,7 +46,7 @@
 	poison_type = "oxygen"
 	siemens_coefficient = 0.2
 
-	flags = NO_SCAN
+	flags = NO_SCAN | NO_DEFIB
 	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR
 
 	blood_color = "#9066BD"
@@ -88,7 +88,7 @@
 		)
 
 /datum/species/vox/get_random_name(var/gender)
-	var/datum/language/species_language = all_languages[default_language]
+	var/datum/language/species_language = GLOB.all_languages[default_language]
 	return species_language.get_random_name(gender)
 
 /datum/species/vox/equip_survival_gear(var/mob/living/carbon/human/H, var/extendedtank = 0,var/comprehensive = 0)

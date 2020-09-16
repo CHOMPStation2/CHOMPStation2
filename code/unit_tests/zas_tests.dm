@@ -78,12 +78,12 @@
 	return 1
 
 /datum/unit_test/zas_area_test/supply_centcomm
-	name = "ZAS: Supply Shuttle (CentCom)"
-	area_path = /area/supply/dock
+	name = "ZAS: Supply Shuttle"
+	area_path = /area/shuttle/supply //yw edit: path changed
 
 /datum/unit_test/zas_area_test/emergency_shuttle
 	name = "ZAS: Emergency Shuttle"
-	area_path = /area/shuttle/escape/centcom
+	area_path = /area/shuttle/escape/centcom	//CHOMPStation Edit TFF 23/4/20 - Fix Travis
 
 /datum/unit_test/zas_area_test/ai_chamber
 	name = "ZAS: AI Chamber"
@@ -115,7 +115,7 @@
 /datum/unit_test/zas_area_test/mining_area
 	name = "ZAS: Mining Area (Vacuum)"
 	area_path = /area/mine/explored
-	expectation = UT_NORMAL //YW Edit: Mining area is normal and not a vaccuum - Cryogaia
+	expectation = UT_VACUUM //CHOMPStation Edit 7/1/20 TFF - Revert to Vacuum checking
 
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"

@@ -1,7 +1,7 @@
 /datum/preferences
 	//The mob should have a gender you want before running this proc. Will run fine without H
 /datum/preferences/proc/randomize_appearance_and_body_for(var/mob/living/carbon/human/H)
-	var/datum/species/current_species = all_species[species ? species : "Human"]
+	var/datum/species/current_species = GLOB.all_species[species ? species : "Human"]
 	set_biological_gender(pick(current_species.genders))
 
 	h_style = random_hair_style(biological_gender, species)
@@ -30,7 +30,7 @@
 
 
 	backbag = rand(1,5)
-	pdachoice = rand(1,4)
+	pdachoice = rand(1,5)
 	age = rand(current_species.min_age, current_species.max_age)
 	b_type = RANDOM_BLOOD_TYPE
 	if(H)
@@ -194,6 +194,8 @@
 	b_skin = blue
 
 /datum/preferences/proc/dress_preview_mob(var/mob/living/carbon/human/mannequin)
+	if(!mannequin.dna) // Special handling for preview icons before SSAtoms has initailized.
+		mannequin.dna = new /datum/dna(null)
 	copy_to(mannequin, TRUE)
 
 	if(!equip_preview_mob)
@@ -253,16 +255,53 @@
 	dress_preview_mob(mannequin)
 	COMPILE_OVERLAYS(mannequin)
 
-	preview_icon = icon('icons/effects/128x48.dmi', bgstate)
-	preview_icon.Scale(48+32, 16+32)
+	update_character_previews(new /mutable_appearance(mannequin))
 
-	var/icon/stamp = getFlatIcon(mannequin, defdir=NORTH)
-	preview_icon.Blend(stamp, ICON_OVERLAY, 25, 17)
+/datum/preferences/proc/get_highest_job()
+	var/datum/job/highJob
+	// Determine what job is marked as 'High' priority, and dress them up as such.
+	if(job_civilian_low & ASSISTANT)
+		highJob = job_master.GetJob("Assistant")
+	else
+		for(var/datum/job/job in job_master.occupations)
+			var/job_flag
+			switch(job.department_flag)
+				if(CIVILIAN)
+					job_flag = job_civilian_high
+				if(MEDSCI)
+					job_flag = job_medsci_high
+				if(ENGSEC)
+					job_flag = job_engsec_high
+			if(job.flag == job_flag)
+				highJob = job
+				break
 
-	stamp = getFlatIcon(mannequin, defdir=WEST)
-	preview_icon.Blend(stamp, ICON_OVERLAY, 1, 9)
+	return highJob
 
-	stamp = getFlatIcon(mannequin, defdir=SOUTH)
-	preview_icon.Blend(stamp, ICON_OVERLAY, 49, 1)
+/datum/preferences/proc/get_valid_hairstyles()
+	var/list/valid_hairstyles = list()
+	for(var/hairstyle in hair_styles_list)
+		var/datum/sprite_accessory/S = hair_styles_list[hairstyle]
+		if(!(species in S.species_allowed) && (!custom_base || !(custom_base in S.species_allowed))) //VOREStation Edit - Custom species base species allowance
+			continue
+		if((!S.ckeys_allowed) || (usr.ckey in S.ckeys_allowed)) //VOREStation Edit, allows ckey locked hairstyles.
+			valid_hairstyles[S.name] = hairstyle //VOREStation Edit, allows ckey locked hairstyles.
 
-	preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
+		//valid_hairstyles[hairstyle] = hair_styles_list[hairstyle] //VOREStation Edit. Replaced by above.
+
+	return valid_hairstyles
+
+/datum/preferences/proc/get_valid_facialhairstyles()
+	var/list/valid_facialhairstyles = list()
+	for(var/facialhairstyle in facial_hair_styles_list)
+		var/datum/sprite_accessory/S = facial_hair_styles_list[facialhairstyle]
+		if(biological_gender == MALE && S.gender == FEMALE)
+			continue
+		if(biological_gender == FEMALE && S.gender == MALE)
+			continue
+		if(!(species in S.species_allowed) && (!custom_base || !(custom_base in S.species_allowed))) //VOREStation Edit - Custom species base species allowance
+			continue
+
+		valid_facialhairstyles[facialhairstyle] = facial_hair_styles_list[facialhairstyle]
+
+	return valid_facialhairstyles

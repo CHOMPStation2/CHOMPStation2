@@ -21,14 +21,14 @@
 		mimic_active = FALSE
 		if(prob(mimic_chance))
 			var/mob/living/simple_mob/vore/aggressive/mimic/new_mimic = new(loc, src)
-			visible_message("<font color='red'><b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b></font>")
+			visible_message("<font color='red'><b>[new_mimic] suddenly growls as it turns out to be a mimic!</b></font>")
 			forceMove(new_mimic)
 			new_mimic.real_crate = src
 			new_mimic.name = name
 			new_mimic.desc = desc
 			new_mimic.icon = icon
-			new_mimic.icon_state = icon_opened
-			new_mimic.icon_living = icon_opened
+			new_mimic.icon_state = "open"
+			new_mimic.icon_living = "open"
 		else
 			return ..()
 	else
@@ -42,7 +42,7 @@
 
 /obj/structure/closet/crate/mimic/damage(var/damage)
 	if(contents.len)
-		visible_message("<font color='red'><b>The [src] makes out a crunchy noise as its contents are destroyed!</b></font>")
+		visible_message("<font color='red'><b>[src] makes out a crunchy noise as its contents are destroyed!</b></font>")
 		for(var/obj/O in src.contents)
 			qdel(O)
 	..()

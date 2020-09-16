@@ -32,7 +32,7 @@
 
 	// CONFIGURATION PHASE
 	// Coolant canisters, set types according to response.
-	for(var/obj/effect/engine_setup/coolant_canister/C in all_engine_setup_markers)
+	for(var/obj/effect/engine_setup/coolant_canister/C in GLOB.all_engine_setup_markers)
 		switch(response)
 			if("N2")
 				C.canister_type = /obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup/
@@ -44,7 +44,7 @@
 				C.canister_type = /obj/machinery/portable_atmospherics/canister/phoron/engine_setup/
 				continue
 
-	for(var/obj/effect/engine_setup/core/C in all_engine_setup_markers)
+	for(var/obj/effect/engine_setup/core/C in GLOB.all_engine_setup_markers)
 		switch(response)
 			if("N2")
 				C.energy_setting = ENERGY_NITROGEN
@@ -56,12 +56,12 @@
 				C.energy_setting = ENERGY_PHORON
 				continue
 
-	for(var/obj/effect/engine_setup/atmo_filter/F in all_engine_setup_markers)
+	for(var/obj/effect/engine_setup/atmo_filter/F in GLOB.all_engine_setup_markers)
 		F.coolant = response
 
 	var/list/delayed_objects = list()
 	// SETUP PHASE
-	for(var/obj/effect/engine_setup/S in all_engine_setup_markers)
+	for(var/obj/effect/engine_setup/S in GLOB.all_engine_setup_markers)
 		var/result = S.activate(0)
 		switch(result)
 			if(SETUP_OK)
@@ -126,7 +126,7 @@ GLOBAL_LIST_BOILERPLATE(all_engine_setup_markers, /obj/effect/engine_setup)
 		log_and_message_admins("## WARNING: Unable to locate pump at [x] [y] [z]!")
 		return SETUP_WARNING
 	P.target_pressure = P.max_pressure_setting
-	P.use_power = 1
+	P.update_use_power(USE_POWER_IDLE)
 	P.update_icon()
 	return SETUP_OK
 
@@ -259,7 +259,7 @@ GLOBAL_LIST_BOILERPLATE(all_engine_setup_markers, /obj/effect/engine_setup)
 				return SETUP_WARNING
 		F.rebuild_filtering_list()
 
-	F.use_power = 1
+	F.update_use_power(USE_POWER_IDLE)
 	F.update_icon()
 	return SETUP_OK
 

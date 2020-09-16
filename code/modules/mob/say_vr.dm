@@ -8,7 +8,7 @@
 	set desc = "Emote to nearby people (and your pred/prey)"
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		usr << "Speech is currently admin-disabled."
+		to_chat(usr, "Speech is currently admin-disabled.")
 		return
 
 	message = sanitize_or_reflect(message,src) //VOREStation Edit - Reflect too-long messages (within reason)
@@ -37,12 +37,13 @@
 
 	if(input)
 		log_subtle(message,src)
-		message = "<B>[src]</B> <I>[input]</I>"
+		message = "<span class='emote'><B>[src]</B> <I>[input]</I></span>"
 	else
 		return
 
 	if (message)
-		message = say_emphasis(message)
+		var/undisplayed_message = "<span class='emote'><B>[src]</B> <I>does something too subtle for you to see.</I></span>"
+		message = encode_html_emphasis(message)
 
 		var/list/vis = get_mobs_and_objs_in_view_fast(get_turf(src),1,2) //Turf, Range, and type 2 is emote
 		var/list/vis_mobs = vis["mobs"]
@@ -50,8 +51,12 @@
 
 		for(var/vismob in vis_mobs)
 			var/mob/M = vismob
-			spawn(0)
-				M.show_message(message, 2)
+			if(isobserver(M) && !is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)
+				spawn(0)
+					M.show_message(undisplayed_message, 2)
+			else
+				spawn(0)
+					M.show_message(message, 2)
 
 		for(var/visobj in vis_objs)
 			var/obj/O = visobj
@@ -79,13 +84,20 @@
 	else
 		return message
 
+// returns true if it failed
+/proc/reflect_if_needed(message, user)
+	if(length(message) > MAX_HUGE_MESSAGE_LEN)
+		fail_to_chat(user)
+		return TRUE
+	return FALSE
+
 /proc/fail_to_chat(user,message)
 	if(!message)
-		to_chat(user,"<span class='danger'>Your message was NOT SENT, either because it was FAR too long, or sanitized to nothing at all.</span>")
+		to_chat(user, "<span class='danger'>Your message was NOT SENT, either because it was FAR too long, or sanitized to nothing at all.</span>")
 		return
 
 	var/length = length(message)
 	var/posts = CEILING((length/MAX_MESSAGE_LEN), 1)
 	to_chat(user,message)
-	to_chat(user,"<span class='danger'>^ This message was NOT SENT ^ -- It was [length] characters, and the limit is [MAX_MESSAGE_LEN]. It would fit in [posts] separate messages.</span>")
+	to_chat(user, "<span class='danger'>^ This message was NOT SENT ^ -- It was [length] characters, and the limit is [MAX_MESSAGE_LEN]. It would fit in [posts] separate messages.</span>")
 #undef MAX_HUGE_MESSAGE_LEN

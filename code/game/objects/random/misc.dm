@@ -229,7 +229,7 @@
 	icon_state = "purplecomb"
 	spawn_nothing_percentage = 50
 /obj/random/contraband/item_to_spawn()
-	return pick(prob(6);/obj/item/weapon/storage/pill_bottle/tramadol,
+	return pick(prob(6);/obj/item/weapon/storage/pill_bottle/paracetamol, //VOREStation Edit,
 				prob(8);/obj/item/weapon/haircomb,
 				prob(4);/obj/item/weapon/storage/pill_bottle/happy,
 				prob(4);/obj/item/weapon/storage/pill_bottle/zoom,
@@ -309,6 +309,19 @@
 				prob(1);/obj/item/weapon/reagent_containers/food/snacks/meat/monkey,
 				prob(1);/obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
 				prob(1);/obj/item/weapon/reagent_containers/food/snacks/xenomeat)
+
+/obj/random/pizzabox
+	name = "random pizza box"
+	desc = "This is a random pizza box."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "pizzabox1"
+
+/obj/random/pizzabox/item_to_spawn()
+	return pick(/obj/item/pizzabox/margherita,
+				/obj/item/pizzabox/mushroom,
+				/obj/item/pizzabox/meat,
+				/obj/item/pizzabox/vegetable,
+				/obj/item/pizzabox/pineapple)
 
 /obj/random/material //Random materials for building stuff
 	name = "random material"
@@ -456,7 +469,20 @@
 				/obj/item/toy/plushie/spider,
 				/obj/item/toy/plushie/tabby_cat,
 				/obj/item/toy/plushie/tuxedo_cat,
-				/obj/item/toy/plushie/white_cat)
+				/obj/item/toy/plushie/white_cat,
+				//VOREStation Add Start
+				/obj/item/toy/plushie/lizardplushie,
+				/obj/item/toy/plushie/lizardplushie/kobold,
+				/obj/item/toy/plushie/lizardplushie/resh,
+				/obj/item/toy/plushie/slimeplushie,
+				/obj/item/toy/plushie/box,
+				/obj/item/toy/plushie/borgplushie,
+				/obj/item/toy/plushie/borgplushie/medihound,
+				/obj/item/toy/plushie/borgplushie/scrubpuppy,
+				/obj/item/toy/plushie/foxbear,
+				/obj/item/toy/plushie/nukeplushie,
+				/obj/item/toy/plushie/otter)
+				//VOREStation Add End
 
 /obj/random/plushielarge
 	name = "random large plushie"
@@ -491,7 +517,7 @@
 				/obj/item/toy/balloon,
 				/obj/item/toy/crossbow,
 				/obj/item/toy/blink,
-				/obj/item/toy/waterflower,
+				/obj/item/weapon/reagent_containers/spray/waterflower,
 				/obj/item/toy/eight_ball,
 				/obj/item/toy/eight_ball/conch,
 				/obj/item/toy/prize/ripley,
@@ -517,8 +543,8 @@
 				/obj/item/device/assembly/mousetrap/armed,
 				/obj/effect/decal/cleanable/spiderling_remains,
 				/obj/effect/decal/cleanable/ash,
-				/obj/item/weapon/cigbutt,
-				/obj/item/weapon/cigbutt/cigarbutt,
+				/obj/item/trash/cigbutt,
+				/obj/item/trash/cigbutt/cigarbutt,
 				/obj/effect/decal/remains/mouse)
 
 /obj/random/janusmodule
@@ -687,3 +713,16 @@
 				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/purple,
 				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/grey,
 				/obj/item/weapon/reagent_containers/food/condiment/small/packet/crayon/brown)
+
+/obj/random/thermalponcho
+	name = "random thermal poncho"
+	desc = "This is a thermal poncho spawn."
+	icon = 'icons/obj/clothing/ties.dmi'
+	icon_state = "classicponcho"
+
+/obj/random/thermalponcho/item_to_spawn()
+	return pick(prob(5);/obj/item/clothing/accessory/poncho/thermal,
+				prob(3);/obj/item/clothing/accessory/poncho/thermal/red,
+				prob(3);/obj/item/clothing/accessory/poncho/thermal/green,
+				prob(3);/obj/item/clothing/accessory/poncho/thermal/purple,
+				prob(3);/obj/item/clothing/accessory/poncho/thermal/blue)

@@ -199,6 +199,9 @@ Variables you may want to make use of are:
 
 /datum/species/event1/proc/toggle_cloning()
 	flags ^= NO_SCAN
+	
+/datum/species/event1/proc/toggle_defibbing()
+	flags ^= NO_DEFIB
 
 /datum/species/event1/proc/toggle_pain()
 	flags ^= NO_PAIN
@@ -220,3 +223,11 @@ Variables you may want to make use of are:
 
 /datum/species/event1/can_fall(var/mob/living/carbon/human/H)
 	return hover
+
+/datum/species/event1/sub1
+	name = SPECIES_EVENT2
+	name_plural = SPECIES_EVENT2
+
+/datum/species/event1/sub2
+	name = SPECIES_EVENT3
+	name_plural = SPECIES_EVENT3

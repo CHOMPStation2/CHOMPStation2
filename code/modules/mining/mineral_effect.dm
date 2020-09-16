@@ -1,6 +1,6 @@
 /obj/effect/mineral
 	name = "mineral vein"
-	icon = 'icons/obj/mining.dmi'
+	icon = 'icons/obj/mining_vr.dmi' //VOREStation Edit
 	desc = "Shiny."
 	mouse_opacity = 0
 	density = 0
@@ -22,5 +22,5 @@
 		if(O)
 			scanner_image = image(icon, loc = get_turf(src), icon_state = (O.scan_icon ? O.scan_icon : icon_state))
 		else
-			world << "No ore data for [src]!"
+			to_world("No ore data for [src]!")
 	return scanner_image

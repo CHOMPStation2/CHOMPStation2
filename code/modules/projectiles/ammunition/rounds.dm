@@ -67,6 +67,11 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber/strong
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
 
+/obj/item/ammo_casing/a44/rifle
+	desc = "A proprietary Hedberg-Hammarstrom .44 bullet casing designed for use in revolving rifles."
+	projectile_type = /obj/item/projectile/bullet/rifle/a44rifle
+	matter = list(DEFAULT_WALL_MATERIAL = 210)
+
 /*
  * .75 (aka Gyrojet Rockets, aka admin abuse)
  */
@@ -286,6 +291,14 @@
 	caliber = "14.5mm"
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 	matter = list(DEFAULT_WALL_MATERIAL = 1250)
+
+/obj/item/ammo_casing/a145/highvel
+	desc = "A 14.5mm sabot shell."
+	projectile_type = /obj/item/projectile/bullet/rifle/a145
+
+/obj/item/ammo_casing/a145/spent/Initialize()
+	..()
+	expend()
 
 /*
  * 5.45mm

@@ -3,6 +3,7 @@ var/const/NETWORK_SECOND_DECK  = "Second Deck"
 var/const/NETWORK_FIRST_DECK   = "First Deck"
 var/const/NETWORK_SUPPLY       = "Supply"
 var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
+var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outpost cameras
 
 //
 // Cameras
@@ -23,6 +24,9 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 
 /obj/machinery/camera/network/supply
 	network = list(NETWORK_SUPPLY)
+
+/obj/machinery/camera/network/carrier //CHOMPedit: Exploration carrier cameras
+	network = list(NETWORK_CARRIER)
 
 // ### Preset machines  ###
 
@@ -60,19 +64,44 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 	autolinkers = list("wld_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/transit
-	id = "Wild Relay"
+	id = "Transit Relay"
 	listening_level = Z_LEVEL_TRANSIT
 	autolinkers = list("tns_relay")
 
+/obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration carrier
+	listening_level = Z_LEVEL_MISC
+	autolinkers = list("exp_relay")
+
+//Temp Removal TFF 15/2/20
+/*
+/obj/machinery/telecomms/relay/preset/belt_outpost // CHOMPedit: Tcomms relay for Belt Outpost
+	id = "Belt Mining Relay"
+	listening_level = Z_LEVEL_BELT
+	autolinkers = list("belt_relay")
+*/
+
+/obj/machinery/telecomms/relay/preset/southerncross/centcomm
+	id = "Centcom Relay"
+	listening_level = Z_LEVEL_CENTCOM
+	autolinkers = list("cnt_relay")
+	
 // #### Telecomms ####
 /obj/machinery/telecomms/hub/preset/southerncross
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub",
-		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "explorer",
-		"c_relay", "m_relay", "r_relay",
+		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "cnt_relay", "explorer", "exp_relay",
+		//"belt_relay", // Chompstation edit - adds belt outpost to relays.	Temp Removal of Belt Relay TFF 15/2/20,
 		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused",
 		"hb_relay", "receiverA", "broadcasterA"
+	) //CHOMPedit: Adds "exp_relay"
+	
+/obj/machinery/telecomms/hub/preset/southerncross/centcomm
+	id = "CentCom Hub"
+	network = "tcommsat"
+	produces_heat = 0
+	autolinkers = list("hub_cent", "centcom", "receiverCent", "broadcasterCent",
+		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay"
 	)
 
 /obj/machinery/telecomms/receiver/preset_right/southerncross

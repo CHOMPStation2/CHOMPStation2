@@ -2,107 +2,110 @@
 // Vore management panel for players
 //
 
-#define BELLIES_MAX 30
+#define BELLIES_MAX 40
 #define BELLIES_NAME_MIN 2
 #define BELLIES_NAME_MAX 20
 #define BELLIES_DESC_MAX 2048
 #define FLAVOR_MAX 40
 
+/mob/living
+	var/datum/vore_look/vorePanel
+
 /mob/living/proc/insidePanel()
 	set name = "Vore Panel"
 	set category = "IC"
 
-	var/datum/vore_look/picker_holder = new()
-	picker_holder.loop = picker_holder
-	picker_holder.selected = vore_selected
+	if(!vorePanel)
+		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
+		vorePanel = new
 
-	var/dat = picker_holder.gen_ui(src)
-
-	picker_holder.popup = new(src, "insidePanel","Inside!", 450, 700, picker_holder)
-	picker_holder.popup.set_content(dat)
-	picker_holder.popup.open()
-	src.openpanel = 1
+	vorePanel.selected = vore_selected
+	vorePanel.show(src)
 
 /mob/living/proc/updateVRPanel() //Panel popup update call from belly events.
-	if(src.openpanel == 1)
-		var/datum/vore_look/picker_holder = new()
-		picker_holder.loop = picker_holder
-		picker_holder.selected = vore_selected
+	if(!vorePanel)
+		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and something tried to update it.")
+		vorePanel = new
 
-		var/dat = picker_holder.gen_ui(src)
-
-		picker_holder.popup = new(src, "insidePanel","Inside!", 450, 700, picker_holder)
-		picker_holder.popup.set_content(dat)
-		picker_holder.popup.open()
+	if(vorePanel.open)
+		vorePanel.selected = vore_selected
+		vorePanel.show(src)
 
 //
 // Callback Handler for the Inside form
 //
 /datum/vore_look
+	var/datum/browser/popup
 	var/obj/belly/selected
 	var/show_interacts = 0
-	var/datum/browser/popup
-	var/loop = null;  // Magic self-reference to stop the handler from being GC'd before user takes action.
+	var/open = FALSE
 
 /datum/vore_look/Destroy()
-	loop = null
 	selected = null
-	return QDEL_HINT_HARDDEL // TODO - Until I can better analyze how this weird thing works, lets be safe
+	QDEL_NULL(popup)
+	. = ..()
 
 /datum/vore_look/Topic(href,href_list[])
-	if (vp_interact(href, href_list))
+	if(vp_interact(href, href_list) && popup)
 		popup.set_content(gen_ui(usr))
 		usr << output(popup.get_content(), "insidePanel.browser")
 
+/datum/vore_look/proc/show(mob/living/user)
+	if(popup)
+		QDEL_NULL(popup)
+	popup = new(user, "insidePanel", "Inside!", 450, 700, src)
+	popup.set_content(gen_ui(user))
+	popup.open()
+	open = TRUE
+
 /datum/vore_look/proc/gen_ui(var/mob/living/user)
-	var/dat
+	var/list/dat = list()
 
 	var/atom/userloc = user.loc
-	if (isbelly(userloc))
+	if(isbelly(userloc))
 		var/obj/belly/inside_belly = userloc
 		var/mob/living/eater = inside_belly.owner
 
-		//Don't display this part if we couldn't find the belly since could be held in hand.
-		if(inside_belly)
-			dat += "<font color = 'green'>You are currently [user.absorbed ? "absorbed into " : "inside "]</font> <font color = 'yellow'>[eater]'s</font> <font color = 'red'>[inside_belly]</font>!<br><br>"
+		dat += "<font color='green'>You are currently [user.absorbed ? "absorbed into " : "inside "]</font> <font color = 'yellow'>[eater]'s</font> <font color = 'red'>[inside_belly.name]</font>!<br><br>"
 
-			if(inside_belly.desc)
-				dat += "[inside_belly.desc]<br><br>"
+		if(inside_belly.desc)
+			dat += "[inside_belly.desc]<br><br>" //Extra br
 
-			if (inside_belly.contents.len > 1)
-				dat += "You can see the following around you:<br>"
-				for (var/atom/movable/O in inside_belly)
-					if(istype(O,/mob/living))
-						var/mob/living/M = O
-						//That's just you
-						if(M == user)
+		if(inside_belly.contents.len > 1)
+			dat += "You can see the following around you: <br>"
+			var/list/belly_contents = list()
+			for (var/atom/movable/O in inside_belly)
+				if(istype(O,/mob/living))
+					var/mob/living/M = O
+					//That's just you
+					if(M == user)
+						continue
+
+					//That's an absorbed person you're checking
+					if(M.absorbed)
+						if(user.absorbed)
+							belly_contents += "<a href='?src=\ref[src];outsidepick=\ref[O];outsidebelly=\ref[inside_belly]'><span style='color:purple;'>[O]</span></a>"
+							continue
+						else
 							continue
 
-						//That's an absorbed person you're checking
-						if(M.absorbed)
-							if(user.absorbed)
-								dat += "<a href='?src=\ref[src];outsidepick=\ref[O];outsidebelly=\ref[inside_belly]'><span style='color:purple;'>[O]</span></a>"
-								continue
-							else
-								continue
+				//Anything else
+				dat += "<a href='?src=\ref[src];outsidepick=\ref[O];outsidebelly=\ref[inside_belly]'>[O]&#8203;</a>"
 
-					//Anything else
-					dat += "<a href='?src=\ref[src];outsidepick=\ref[O];outsidebelly=\ref[inside_belly]'>[O]&#8203;</a>"
+				//Zero-width space, for wrapping
+				dat += "&#8203;"
 
-					//Zero-width space, for wrapping
-					dat += "&#8203;"
+			dat += jointext(belly_contents, null) //Add in belly contents to main running list
 	else
 		dat += "You aren't inside anyone."
 
-	dat += "<HR>"
-
-	dat += "<ol style='list-style: none; padding: 0; overflow: auto;'>"
+	var/list/belly_list = list("<HR><ol style='list-style: none; padding: 0; overflow: auto;'>")
 	for(var/belly in user.vore_organs)
 		var/obj/belly/B = belly
 		if(B == selected)
-			dat += "<li style='float: left'><a href='?src=\ref[src];bellypick=\ref[B]'><b>[B.name]</b>"
+			belly_list += "<li style='float: left'><a href='?src=\ref[src];bellypick=\ref[B]'><b>[B.name]</b>"
 		else
-			dat += "<li style='float: left'><a href='?src=\ref[src];bellypick=\ref[B]'>[B.name]"
+			belly_list += "<li style='float: left'><a href='?src=\ref[src];bellypick=\ref[B]'>[B.name]"
 
 		var/spanstyle
 		switch(B.digest_mode)
@@ -122,46 +125,46 @@
 				spanstyle = "color:purple;"
 			if(DM_SIZE_STEAL)
 				spanstyle = "color:purple;"
-			if(DM_TRANSFORM)
-				switch(B.tf_mode)
-					if(DM_TRANSFORM_MALE)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_HAIR_AND_EYES)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_FEMALE)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_KEEP_GENDER)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR_EGG)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_REPLICA)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_REPLICA_EGG)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_KEEP_GENDER_EGG)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_MALE_EGG)
-						spanstyle = "color:purple;"
-					if(DM_TRANSFORM_FEMALE_EGG)
-						spanstyle = "color:purple;"
-					if(DM_EGG)
-						spanstyle = "color:purple;"
+			if(DM_TRANSFORM_MALE)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_HAIR_AND_EYES)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_FEMALE)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_KEEP_GENDER)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_CHANGE_SPECIES_AND_TAUR_EGG)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_REPLICA)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_REPLICA_EGG)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_KEEP_GENDER_EGG)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_MALE_EGG)
+				spanstyle = "color:purple;"
+			if(DM_TRANSFORM_FEMALE_EGG)
+				spanstyle = "color:purple;"
+			if(DM_EGG)
+				spanstyle = "color:purple;"
 
-		dat += "<span style='[spanstyle]'> ([B.contents.len])</span></a></li>"
+		belly_list += "<span style='[spanstyle]'> ([B.contents.len])</span></a></li>"
 
 	if(user.vore_organs.len < BELLIES_MAX)
-		dat += "<li style='float: left'><a href='?src=\ref[src];newbelly=1'>New+</a></li>"
-	dat += "</ol>"
-	dat += "<HR>"
+		belly_list += "<li style='float: left'><a href='?src=\ref[src];newbelly=1'>New+</a></li>"
+	belly_list += "</ol><HR>"
+
+	dat += jointext(belly_list, null) //Add in belly list to main running list
 
 	// Selected Belly (contents, configuration)
 	if(!selected)
 		dat += "No belly selected. Click one to select it."
 	else
+		var/list/belly_contents = list()
 		if(selected.contents.len)
-			dat += "<b>Contents:</b> "
+			belly_contents += "<b>Contents:</b> "
 			for(var/O in selected)
 
 				//Mobs can be absorbed, so treat them separately from everything else
@@ -170,110 +173,93 @@
 
 					//Absorbed gets special color OOoOOOOoooo
 					if(M.absorbed)
-						dat += "<a href='?src=\ref[src];insidepick=\ref[O]'><span style='color:purple;'>[O]</span></a>"
+						belly_contents += "<a href='?src=\ref[src];insidepick=\ref[O]'><span style='color:purple;'>[O]</span></a>"
 						continue
 
 				//Anything else
-				dat += "<a href='?src=\ref[src];insidepick=\ref[O]'>[O]</a>"
+				belly_contents += "<a href='?src=\ref[src];insidepick=\ref[O]'>[O]</a>"
 
 				//Zero-width space, for wrapping
-				dat += "&#8203;"
+				belly_contents += "&#8203;"
 
 			//If there's more than one thing, add an [All] button
 			if(selected.contents.len > 1)
-				dat += "<a href='?src=\ref[src];insidepick=1;pickall=1'>\[All\]</a>"
+				belly_contents += "<a href='?src=\ref[src];insidepick=1;pickall=1'>\[All\]</a>"
 
-			dat += "<HR>"
+			belly_contents += "<HR>"
+
+		if(belly_contents.len)
+			dat += jointext(belly_contents, null)
 
 		//Belly Name Button
-		dat += "<a href='?src=\ref[src];b_name=\ref[selected]'>Name:</a>"
-		dat += " '[selected.name]'"
+		dat += "<br><a href='?src=\ref[src];b_name=\ref[selected]'>Name:</a> '[selected.name]'"
 
 		//Belly Type button
-		dat += "<br><a href='?src=\ref[src];b_wetness=\ref[selected]'>Is this belly fleshy:</a>"
-		dat += "[selected.is_wet ? "Yes" : "No"]"
+		dat += "<br><a href='?src=\ref[src];b_wetness=\ref[selected]'>Is this belly fleshy:</a> [selected.is_wet ? "Yes" : "No"]"
 		if(selected.is_wet)
-			dat += "<br><a href='?src=\ref[src];b_wetloop=\ref[selected]'>Internal loop for prey?:</a>"
-			dat += "[selected.wet_loop ? "Yes" : "No"]"
+			dat += "<br><a href='?src=\ref[src];b_wetloop=\ref[selected]'>Internal loop for prey?:</a> [selected.wet_loop ? "Yes" : "No"]"
 
 		//Digest Mode Button
-		dat += "<br><a href='?src=\ref[src];b_mode=\ref[selected]'>Belly Mode:</a>"
 		var/mode = selected.digest_mode
-		dat += " [mode == DM_TRANSFORM ? selected.tf_mode : mode]"
+		dat += "<br><a href='?src=\ref[src];b_mode=\ref[selected]'>Belly Mode:</a> [mode]"
 
 		//Mode addons button
-		dat += "<br><a href='?src=\ref[src];b_addons=\ref[selected]'>Mode Addons:</a>"
 		var/list/flag_list = list()
 		for(var/flag_name in selected.mode_flag_list)
 			if(selected.mode_flags & selected.mode_flag_list[flag_name])
 				flag_list += flag_name
 		if(flag_list.len)
-			dat += " [english_list(flag_list)]"
+			dat += "<br><a href='?src=\ref[src];b_addons=\ref[selected]'>Mode Addons:</a> [english_list(flag_list)]"
 		else
-			dat += " None"
+			dat += "<br><a href='?src=\ref[src];b_addons=\ref[selected]'>Mode Addons:</a> None"
 
 		//Item Digest Mode Button
-		dat += "<br><a href='?src=\ref[src];b_item_mode=\ref[selected]'>Item Mode:</a>"
-		dat += "[selected.item_digest_mode]"
+		dat += "<br><a href='?src=\ref[src];b_item_mode=\ref[selected]'>Item Mode:</a> [selected.item_digest_mode]"
 
 		//Will it contaminate contents?
-		dat += "<br><a href='?src=\ref[src];b_contaminates=\ref[selected]'>Contaminates:</a>"
-		dat += " [selected.contaminates ? "Yes" : "No"]"
+		dat += "<br><a href='?src=\ref[src];b_contaminates=\ref[selected]'>Contaminates:</a> [selected.contaminates ? "Yes" : "No"]"
 
 		if(selected.contaminates)
 			//Contamination descriptors
-			dat += "<br><a href='?src=\ref[src];b_contamination_flavor=\ref[selected]'>Contamination Flavor:</a>"
-			dat += "[selected.contamination_flavor]"
+			dat += "<br><a href='?src=\ref[src];b_contamination_flavor=\ref[selected]'>Contamination Flavor:</a> [selected.contamination_flavor]"
 			//Contamination color
-			dat += "<br><a href='?src=\ref[src];b_contamination_color=\ref[selected]'>Contamination Color:</a>"
-			dat += "[selected.contamination_color]"
+			dat += "<br><a href='?src=\ref[src];b_contamination_color=\ref[selected]'>Contamination Color:</a> [selected.contamination_color]"
 
 		//Belly verb
-		dat += "<br><a href='?src=\ref[src];b_verb=\ref[selected]'>Vore Verb:</a>"
-		dat += " '[selected.vore_verb]'"
+		dat += "<br><a href='?src=\ref[src];b_verb=\ref[selected]'>Vore Verb:</a> '[selected.vore_verb]'"
 
 		//Inside flavortext
-		dat += "<br><a href='?src=\ref[src];b_desc=\ref[selected]'>Flavor Text:</a>"
-		dat += " '[selected.desc]'"
+		dat += "<br><a href='?src=\ref[src];b_desc=\ref[selected]'>Flavor Text:</a> '[selected.desc]'"
 
 		//Belly Sound Fanciness
-		dat += "<br><a href='?src=\ref[src];b_fancy_sound=\ref[selected]'>Use Fancy Sounds:</a>"
-		dat += "[selected.fancy_vore ? "Yes" : "No"]"
+		dat += "<br><a href='?src=\ref[src];b_fancy_sound=\ref[selected]'>Use Fancy Sounds:</a> [selected.fancy_vore ? "Yes" : "No"]"
 
 		//Belly sound
-		dat += "<br><a href='?src=\ref[src];b_sound=\ref[selected]'>Vore Sound: [selected.vore_sound]</a>"
-		dat += "<a href='?src=\ref[src];b_soundtest=\ref[selected]'>Test</a>"
+		dat += "<br><a href='?src=\ref[src];b_sound=\ref[selected]'>Vore Sound: [selected.vore_sound]</a> <a href='?src=\ref[src];b_soundtest=\ref[selected]'>Test</a>"
 
 		//Release sound
-		dat += "<br><a href='?src=\ref[src];b_release=\ref[selected]'>Release Sound: [selected.release_sound]</a>"
-		dat += "<a href='?src=\ref[src];b_releasesoundtest=\ref[selected]'>Test</a>"
+		dat += "<br><a href='?src=\ref[src];b_release=\ref[selected]'>Release Sound: [selected.release_sound]</a> <a href='?src=\ref[src];b_releasesoundtest=\ref[selected]'>Test</a>"
 
 		//Belly messages
 		dat += "<br><a href='?src=\ref[src];b_msgs=\ref[selected]'>Belly Messages</a>"
 
 		//Can belly taste?
-		dat += "<br><a href='?src=\ref[src];b_tastes=\ref[selected]'>Can Taste:</a>"
-		dat += " [selected.can_taste ? "Yes" : "No"]"
+		dat += "<br><a href='?src=\ref[src];b_tastes=\ref[selected]'>Can Taste:</a> [selected.can_taste ? "Yes" : "No"]"
 
 		//Nutritional percentage
-		dat += "<br><a href='?src=\ref[src];b_nutritionpercent=\ref[selected]'>Nutritional Gain:</a>"
-		dat += " [selected.nutrition_percent]%"
+		dat += "<br><a href='?src=\ref[src];b_nutritionpercent=\ref[selected]'>Nutritional Gain:</a> [selected.nutrition_percent]%"
 
 		//How much brute damage
-		dat += "<br><a href='?src=\ref[src];b_brute_dmg=\ref[selected]'>Digest Brute Damage:</a>"
-		dat += " [selected.digest_brute]"
+		dat += "<br><a href='?src=\ref[src];b_brute_dmg=\ref[selected]'>Digest Brute Damage:</a> [selected.digest_brute]"
 
 		//How much burn damage
-		dat += "<br><a href='?src=\ref[src];b_burn_dmg=\ref[selected]'>Digest Burn Damage:</a>"
-		dat += " [selected.digest_burn]"
+		dat += "<br><a href='?src=\ref[src];b_burn_dmg=\ref[selected]'>Digest Burn Damage:</a> [selected.digest_burn]"
 
 		//Minimum size prey must be to show up.
-		dat += "<br><a href='?src=\ref[src];b_bulge_size=\ref[selected]'>Required examine size:</a>"
-		dat += " [selected.bulge_size*100]%"
+		dat += "<br><a href='?src=\ref[src];b_bulge_size=\ref[selected]'>Required examine size:</a> [selected.bulge_size*100]%"
 
 		//Size that prey will be grown/shrunk to.
-		dat += "<br><a href='?src=\ref[src];b_grow_shrink=\ref[selected]'>Shrink/Grow size:</a>"
-		dat += "[selected.shrink_grow_size*100]%"
+		dat += "<br><a href='?src=\ref[src];b_grow_shrink=\ref[selected]'>Shrink/Grow size:</a> [selected.shrink_grow_size*100]%"
 
 		//Belly escapability
 		dat += "<br><a href='?src=\ref[src];b_escapable=\ref[selected]'>Belly Interactions ([selected.escapable ? "On" : "Off"])</a>"
@@ -281,99 +267,192 @@
 			dat += "<a href='?src=\ref[src];show_int=\ref[selected]'>[show_interacts ? "Hide" : "Show"]</a>"
 
 		if(show_interacts && selected.escapable)
+			var/list/interacts = list()
+			interacts += "<HR>"
+			interacts += "Interaction Settings <a href='?src=\ref[src];int_help=\ref[selected]'>?</a>"
+			interacts += "<br><a href='?src=\ref[src];b_escapechance=\ref[selected]'>Set Belly Escape Chance</a>"
+			interacts += " [selected.escapechance]%"
+
+			interacts += "<br><a href='?src=\ref[src];b_escapetime=\ref[selected]'>Set Belly Escape Time</a>"
+			interacts += " [selected.escapetime/10]s"
+
+			//Special <br> here to add a gap
+			interacts += "<br style='line-height:5px;'>"
+			interacts += "<br><a href='?src=\ref[src];b_transferchance=\ref[selected]'>Set Belly Transfer Chance</a>"
+			interacts += " [selected.transferchance]%"
+
+			interacts += "<br><a href='?src=\ref[src];b_transferlocation=\ref[selected]'>Set Belly Transfer Location</a>"
+			interacts += " [selected.transferlocation ? selected.transferlocation : "Disabled"]"
+
+			//Special <br> here to add a gap
+			interacts += "<br style='line-height:5px;'>"
+			interacts += "<br><a href='?src=\ref[src];b_absorbchance=\ref[selected]'>Set Belly Absorb Chance</a>"
+			interacts += " [selected.absorbchance]%"
+
+			interacts += "<br><a href='?src=\ref[src];b_digestchance=\ref[selected]'>Set Belly Digest Chance</a>"
+			interacts += " [selected.digestchance]%"
+			interacts += "<HR>"
+			dat += jointext(interacts, null)
+
+		//CHOMP belly reagent container start
+		dat += "<br><a href='?src=\ref[src];b_liquidcontainer=\ref[selected]'>Belly liquids ([selected.reagentbellymode ? "On" : "Off"])</a>"
+		if(selected.reagentbellymode)
+			dat += "<a href='?src=\ref[src];show_liq=\ref[selected]'>[show_liquids ? "Hide" : "Show"]</a>"
+
+		if(show_liquids && selected.reagentbellymode)
 			dat += "<HR>"
-			dat += "Interaction Settings <a href='?src=\ref[src];int_help=\ref[selected]'>?</a>"
-			dat += "<br><a href='?src=\ref[src];b_escapechance=\ref[selected]'>Set Belly Escape Chance</a>"
-			dat += " [selected.escapechance]%"
+			dat += "Liquid Settings <a href='?src=\ref[src];liq_help=\ref[selected]'>?</a>"
+			//Special <br> here to add a gap
+			dat += "<br style='line-height:5px;'>"
 
-			dat += "<br><a href='?src=\ref[src];b_escapetime=\ref[selected]'>Set Belly Escape Time</a>"
-			dat += " [selected.escapetime/10]s"
+			//Reagent Select Button
+			dat += "<br><a href='?src=\ref[src];reagent_choices=\ref[selected]'>Selected Liquid:</a>"
+			dat += " [selected.reagent_chosen]"
+
+			//Liquid addons button
+			dat += "<br><a href='?src=\ref[src];reagents_addons=\ref[selected]'>Liquid Addons:</a>"
+			var/list/reagent_flag_list = list()
+			for(var/reagent_flag_name in selected.reagent_mode_flag_list)
+				if(selected.reagent_mode_flags & selected.reagent_mode_flag_list[reagent_flag_name])
+					reagent_flag_list += reagent_flag_name
+			if(reagent_flag_list.len)
+				dat += " [english_list(reagent_flag_list)]"
+			else
+				dat += " None"
+
+			//Custom reagent name
+			dat += "<br><a href='?src=\ref[src];reagent_name=\ref[selected]'>Liquid Name:</a>"
+			dat += " '[selected.reagent_name]' "
+
+			//Custom verb for transfer
+			dat += "<br><a href='?src=\ref[src];reagent_transfer_verb=\ref[selected]'>Liquid Transfer Verb:</a>"
+			dat += " '[selected.reagent_transfer_verb]' "
 
 			//Special <br> here to add a gap
 			dat += "<br style='line-height:5px;'>"
-			dat += "<br><a href='?src=\ref[src];b_transferchance=\ref[selected]'>Set Belly Transfer Chance</a>"
-			dat += " [selected.transferchance]%"
 
-			dat += "<br><a href='?src=\ref[src];b_transferlocation=\ref[selected]'>Set Belly Transfer Location</a>"
-			dat += " [selected.transferlocation ? selected.transferlocation : "Disabled"]"
+			dat += "<br><a href='?src=\ref[src];reagent_nutri_rate=\ref[selected]'>Liquid Production Time:</a>"
+			dat += " [selected.gen_time_display] "
+
+			//Custom amount that a specific belly can be filled with
+			dat += "<br><a href='?src=\ref[src];reagent_custom_vol=\ref[selected]'>Custom Belly Capacity:</a>"
+			dat += " [selected.custom_max_volume] "
+
+			//Shows how full stomach is of reagents
+			dat += "<br> Capacity [selected.reagents.total_volume] / [selected.reagents.maximum_volume]"
+
+			dat += "<br> Liquid fullness messages <a href='?src=\ref[src];liq_fullness_help=\ref[selected]'>?</a>"
+			dat += "<a href='?src=\ref[src];show_liq_fullness=\ref[selected]'>[show_fullness_messages ? "Hide" : "Show"]</a>"
+			if(show_fullness_messages)
+				dat += "<br><a href='?src=\ref[src];b_liq_msgs1=\ref[selected]'>0-20% Fullness Messages</a>"
+				dat += "<a href='?src=\ref[src];b_liq_msgs1_toggle=\ref[selected]'>[selected.liquid_fullness1_messages ? "On" : "Off"]</a>"
+
+				dat += "<br><a href='?src=\ref[src];b_liq_msgs2=\ref[selected]'>21-40% Fullness Messages</a>"
+				dat += "<a href='?src=\ref[src];b_liq_msgs2_toggle=\ref[selected]'>[selected.liquid_fullness2_messages ? "On" : "Off"]</a>"
+
+				dat += "<br><a href='?src=\ref[src];b_liq_msgs3=\ref[selected]'>41-60% Fullness Messages</a>"
+				dat += "<a href='?src=\ref[src];b_liq_msgs3_toggle=\ref[selected]'>[selected.liquid_fullness3_messages ? "On" : "Off"]</a>"
+
+				dat += "<br><a href='?src=\ref[src];b_liq_msgs4=\ref[selected]'>61-80% Fullness Messages</a>"
+				dat += "<a href='?src=\ref[src];b_liq_msgs4_toggle=\ref[selected]'>[selected.liquid_fullness4_messages ? "On" : "Off"]</a>"
+
+				dat += "<br><a href='?src=\ref[src];b_liq_msgs5=\ref[selected]'>81-100% Fullness Messages</a>"
+				dat += "<a href='?src=\ref[src];b_liq_msgs5_toggle=\ref[selected]'>[selected.liquid_fullness5_messages ? "On" : "Off"]</a>"
+
+			//Toggle for the belly able to produce sloshing sounds
+			dat += "<br><a href='?src=\ref[src];reagent_sloshing=\ref[selected]'>Belly Fullness Sounds ([selected.vorefootsteps_sounds ? "On" : "Off"])</a>"
 
 			//Special <br> here to add a gap
 			dat += "<br style='line-height:5px;'>"
-			dat += "<br><a href='?src=\ref[src];b_absorbchance=\ref[selected]'>Set Belly Absorb Chance</a>"
-			dat += " [selected.absorbchance]%"
+			dat += "<a style='background:#990000;' href='?src=\ref[src];b_purge_liq=\ref[selected]'>Purge liquids from belly</a>"
 
-			dat += "<br><a href='?src=\ref[src];b_digestchance=\ref[selected]'>Set Belly Digest Chance</a>"
-			dat += " [selected.digestchance]%"
+			switch(user.receive_reagents)
+				if(TRUE)
+					dat += "<br><a style='background:#173d15;' href='?src=\ref[src];toggle_liq_rec=1'>Toggle Receiving (Currently: ON)</a>"
+				if(FALSE)
+					dat += "<br><a style='background:#990000;' href='?src=\ref[src];toggle_liq_rec=1'>Toggle Receiving (Currently: OFF)</a>"
+			switch(user.give_reagents)
+				if(TRUE)
+					dat += "<a style='background:#173d15;' href='?src=\ref[src];toggle_liq_giv=1'>Toggle Giving (Currently: ON)</a>"
+				if(FALSE)
+					dat += "<a style='background:#990000;' href='?src=\ref[src];toggle_liq_giv=1'>Toggle Giving (Currently: OFF)</a>"
+
+		//CHOMP belly reagent container end
 			dat += "<HR>"
 
 		//Delete button
-		dat += "<br><a style='background:#990000;' href='?src=\ref[src];b_del=\ref[selected]'>Delete Belly</a>"
+		dat += "<a style='background:#990000;' href='?src=\ref[src];b_del=\ref[selected]'>Delete Belly</a>"
 
 	dat += "<HR>"
 
+	var/list/nightmare_list = list()
 	switch(user.digestable)
 		if(TRUE)
-			dat += "<a style='background:#173d15;' href='?src=\ref[src];toggledg=1'>Toggle Digestable (Currently: ON)</a>"
+			nightmare_list += "<a style='background:#173d15;' href='?src=\ref[src];toggledg=1'>Toggle Digestable (Currently: ON)</a>"
 		if(FALSE)
-			dat += "<a style='background:#990000;' href='?src=\ref[src];toggledg=1'>Toggle Digestable (Currently: OFF)</a>"
+			nightmare_list += "<a style='background:#990000;' href='?src=\ref[src];toggledg=1'>Toggle Digestable (Currently: OFF)</a>"
 	switch(user.devourable)
 		if(TRUE)
-			dat += "<a style='background:#173d15;' href='?src=\ref[src];toggleddevour=1'>Toggle Devourable (Currently: ON)</a>"
+			nightmare_list += "<a style='background:#173d15;' href='?src=\ref[src];toggleddevour=1'>Toggle Devourable (Currently: ON)</a>"
 		if(FALSE)
-			dat += "<a style='background:#990000;' href='?src=\ref[src];toggleddevour=1'>Toggle Devourable (Currently: OFF)</a>"
+			nightmare_list += "<a style='background:#990000;' href='?src=\ref[src];toggleddevour=1'>Toggle Devourable (Currently: OFF)</a>"
 	switch(user.feeding)
 		if(TRUE)
-			dat += "<br><a style='background:#173d15;' href='?src=\ref[src];toggledfeed=1'>Toggle Feeding (Currently: ON)</a>"
+			nightmare_list += "<br><a style='background:#173d15;' href='?src=\ref[src];toggledfeed=1'>Toggle Feeding (Currently: ON)</a>"
 		if(FALSE)
-			dat += "<br><a style='background:#990000;' href='?src=\ref[src];toggledfeed=1'>Toggle Feeding (Currently: OFF)</a>"
+			nightmare_list += "<br><a style='background:#990000;' href='?src=\ref[src];toggledfeed=1'>Toggle Feeding (Currently: OFF)</a>"
+	switch(user.absorbable)
+		if(TRUE)
+			nightmare_list += "<a style='background:#173d15;' href='?src=\ref[src];toggleabsorbable=1'>Toggle Absorbtion Permission (Currently: ON)</a>"
+		if(FALSE)
+			nightmare_list += "<a style='background:#990000;' href='?src=\ref[src];toggleabsorbable=1'>Toggle Absorbtion Permission (Currently: OFF)</a>"
 	switch(user.digest_leave_remains)
 		if(TRUE)
-			dat += "<a style='background:#173d15;' href='?src=\ref[src];toggledlm=1'>Toggle Leaving Remains (Currently: ON)</a>"
+			nightmare_list += "<a style='background:#173d15;' href='?src=\ref[src];toggledlm=1'>Toggle Leaving Remains (Currently: ON)</a>"
 		if(FALSE)
-			dat += "<a style='background:#990000;' href='?src=\ref[src];toggledlm=1'>Toggle Leaving Remains (Currently: OFF)</a>"
+			nightmare_list += "<a style='background:#990000;' href='?src=\ref[src];toggledlm=1'>Toggle Leaving Remains (Currently: OFF)</a>"
 	switch(user.allowmobvore)
 		if(TRUE)
-			dat += "<br><a style='background:#173d15;' href='?src=\ref[src];togglemv=1'>Toggle Mob Vore (Currently: ON)</a>"
+			nightmare_list += "<br><a style='background:#173d15;' href='?src=\ref[src];togglemv=1'>Toggle Mob Vore (Currently: ON)</a>"
 		if(FALSE)
-			dat += "<br><a style='background:#990000;' href='?src=\ref[src];togglemv=1'>Toggle Mob Vore (Currently: OFF)</a>"
+			nightmare_list += "<br><a style='background:#990000;' href='?src=\ref[src];togglemv=1'>Toggle Mob Vore (Currently: OFF)</a>"
 	switch(user.permit_healbelly)
 		if(TRUE)
-			dat += "<a style='background:#173d15;' href='?src=\ref[src];togglehealbelly=1'>Toggle Healbelly Permission (Currently: ON)</a>"
+			nightmare_list += "<a style='background:#173d15;' href='?src=\ref[src];togglehealbelly=1'>Toggle Healbelly Permission (Currently: ON)</a>"
 		if(FALSE)
-			dat += "<a style='background:#990000;' href='?src=\ref[src];togglehealbelly=1'>Toggle Healbelly Permission (Currently: OFF)</a>"
+			nightmare_list += "<a style='background:#990000;' href='?src=\ref[src];togglehealbelly=1'>Toggle Healbelly Permission (Currently: OFF)</a>"
 
 	switch(user.can_be_drop_prey)
 		if(TRUE)
-			dat += "<br><a style='background:#173d15;' href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Prey Spontaneous Vore (Currently: ON)</a>"
+			nightmare_list += "<br><a style='background:#173d15;' href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Prey Spontaneous Vore (Currently: ON)</a>"
 		if(FALSE)
-			dat += "<br><a style='background:#990000;' href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Prey Spontaneous Vore (Currently: OFF)</a>"
+			nightmare_list += "<br><a style='background:#990000;' href='?src=\ref[src];toggle_dropnom_prey=1'>Toggle Prey Spontaneous Vore (Currently: OFF)</a>"
 
 	switch(user.can_be_drop_pred)
 		if(TRUE)
-			dat += "<a style='background:#173d15;' href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Pred Spontaneous Vore (Currently: ON)</a>"
+			nightmare_list += "<a style='background:#173d15;' href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Pred Spontaneous Vore (Currently: ON)</a>"
 		if(FALSE)
-			dat += "<a style='background:#990000;' href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Pred Spontaneous Vore (Currently: OFF)</a>"
+			nightmare_list += "<a style='background:#990000;' href='?src=\ref[src];toggle_dropnom_pred=1'>Toggle Pred Spontaneous Vore (Currently: OFF)</a>"
+
+	dat += jointext(nightmare_list, null) //AAAA
 
 	dat += "<br><a href='?src=\ref[src];setflavor=1'>Set Your Taste</a>"
-	dat += "<a href='?src=\ref[src];togglenoisy=1'>Toggle Hunger Noises</a>"
-
-	dat += "<HR>"
+	dat += "<br><a href='?src=\ref[src];setsmell=1'>Set Your Smell</a>"
+	dat += "<br><a href='?src=\ref[src];togglenoisy=1'>Toggle Hunger Noises</a>"
 
 	//Under the last HR, save and stuff.
-	dat += "<a href='?src=\ref[src];saveprefs=1'>Save Prefs</a>"
-	dat += "<a href='?src=\ref[src];refresh=1'>Refresh</a>"
-	dat += "<a href='?src=\ref[src];applyprefs=1'>Reload Slot Prefs</a>"
+	dat += "<HR><a href='?src=\ref[src];saveprefs=1'>Save Prefs</a>"
+	dat += "<br><a href='?src=\ref[src];refresh=1'>Refresh</a>"
+	dat += "<br><a href='?src=\ref[src];applyprefs=1'>Reload Slot Prefs</a>"
 
 	//Returns the dat html to the vore_look
-	return dat
+	return jointext(dat, null)
 
 /datum/vore_look/proc/vp_interact(href, href_list)
 	var/mob/living/user = usr
-	for(var/H in href_list)
-
 	if(href_list["close"])
-		qdel(src)  // Cleanup
-		user.openpanel = 0
+		open = FALSE
+		QDEL_NULL(popup)
 		return
 
 	if(href_list["show_int"])
@@ -400,7 +479,11 @@
 			intent = alert("What do you want to do to them?","Query","Examine","Help Out","Devour")
 			switch(intent)
 				if("Examine") //Examine a mob inside another mob
-					M.examine(user)
+					var/list/results = M.examine(user)
+					if(!results || !results.len)
+						results = list("You were unable to examine that. Tell a developer!")
+					to_chat(user, jointext(results, "<br>"))
+					return FALSE
 
 				if("Help Out") //Help the inside-mob out
 					if(user.stat || user.absorbed || M.absorbed)
@@ -450,7 +533,11 @@
 			intent = alert("What do you want to do to that?","Query","Examine","Use Hand")
 			switch(intent)
 				if("Examine")
-					T.examine(user)
+					var/list/results = T.examine(user)
+					if(!results || !results.len)
+						results = list("You were unable to examine that. Tell a developer!")
+					to_chat(user, jointext(results, "<br>"))
+					return FALSE
 
 				if("Use Hand")
 					if(user.stat)
@@ -497,7 +584,11 @@
 		intent = alert("Examine, Eject, Move? Examine if you want to leave this box.","Query","Examine","Eject","Move")
 		switch(intent)
 			if("Examine")
-				tgt.examine(user)
+				var/list/results = tgt.examine(user)
+				if(!results || !results.len)
+					results = list("You were unable to examine that. Tell a developer!")
+				to_chat(user, jointext(results, "<br>"))
+				return FALSE
 
 			if("Eject")
 				if(user.stat)
@@ -587,10 +678,11 @@
 
 		if(new_mode == DM_TRANSFORM) //Snowflek submenu
 			var/list/tf_list = selected.transform_modes
-			var/new_tf_mode = input("Choose TF Mode (currently [selected.tf_mode])") as null|anything in tf_list
+			var/new_tf_mode = input("Choose TF Mode (currently [selected.digest_mode])") as null|anything in tf_list
 			if(!new_tf_mode)
 				return FALSE
-			selected.tf_mode = new_tf_mode
+			selected.digest_mode = new_tf_mode
+			return
 
 		selected.digest_mode = new_mode
 		//selected.items_preserved.Cut() //Re-evaltuate all items in belly on belly-mode change	//Handled with item modes now
@@ -874,20 +966,22 @@
 		selected = user.vore_organs[1]
 		user.vore_selected = user.vore_organs[1]
 
+	//CHOMPStation Edit Start TFF 13/1/20 - Chomp-Specific Panel Save
 	if(href_list["saveprefs"])
 		if(!user.save_vore_prefs())
-			alert("ERROR: Virgo-specific preferences failed to save!","Error")
+			alert("ERROR: ChompStation-specific preferences failed to save!","Error")
 		else
-			to_chat(user,"<span class='notice'>Virgo-specific preferences saved!</span>")
+			to_chat(user,"<span class='notice'>ChompStation-specific preferences saved!</span>")
 
 	if(href_list["applyprefs"])
 		var/alert = alert("Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation","Reload","Cancel")
-		if(!alert == "Reload")
+		if(alert != "Reload")
 			return FALSE
 		if(!user.apply_vore_prefs())
-			alert("ERROR: Virgo-specific preferences failed to apply!","Error")
+			alert("ERROR: ChompStation-specific preferences failed to apply!","Error")
 		else
-			to_chat(user,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
+			to_chat(user,"<span class='notice'>ChompStation-specific preferences applied from active slot!</span>")
+	//CHOMPStation Edit End
 
 	if(href_list["setflavor"])
 		var/new_flavor = html_encode(input(usr,"What your character tastes like (40ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",user.vore_taste) as text|null)
@@ -899,6 +993,17 @@
 			alert("Entered flavor/taste text too long. [FLAVOR_MAX] character limit.","Error!")
 			return FALSE
 		user.vore_taste = new_flavor
+
+	if(href_list["setsmell"])
+		var/new_smell = html_encode(input(usr,"What your character smells like (40ch limit). This text will be printed to the pred after 'X smells of...' so just put something like 'strawberries and cream':","Character Smell",user.vore_smell) as text|null)
+		if(!new_smell)
+			return FALSE
+
+		new_smell = readd_quotes(new_smell)
+		if(length(new_smell) > FLAVOR_MAX)
+			alert("Entered perfume/smell text too long. [FLAVOR_MAX] character limit.","Error!")
+			return FALSE
+		user.vore_smell = new_smell
 
 	if(href_list["toggle_dropnom_pred"])
 		var/choice = alert(user, "This toggle is for spontaneous, environment related vore as a predator, including drop-noms, teleporters, etc. You are currently [user.can_be_drop_pred ? " able to eat prey that you encounter by environmental actions." : "avoiding eating prey encountered in the environment."]", "", "Be Pred", "Cancel", "Don't be Pred")
@@ -921,7 +1026,7 @@
 				user.can_be_drop_prey = FALSE
 
 	if(href_list["toggledg"])
-		var/choice = alert(user, "This button is for those who don't like being digested. It can make you undigestable. Messages admins when changed, so don't try to use it for mechanical benefit. Set it once and save it. Digesting you is currently: [user.digestable ? "Allowed" : "Prevented"]", "", "Allow Digestion", "Cancel", "Prevent Digestion")
+		var/choice = alert(user, "This button is for those who don't like being digested. It can make you undigestable. Digesting you is currently: [user.digestable ? "Allowed" : "Prevented"]", "", "Allow Digestion", "Cancel", "Prevent Digestion")
 		switch(choice)
 			if("Cancel")
 				return FALSE
@@ -929,8 +1034,6 @@
 				user.digestable = TRUE
 			if("Prevent Digestion")
 				user.digestable = FALSE
-
-		message_admins("[key_name(user)] toggled their digestability to [user.digestable] ([user ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[user.loc.];Y=[user.loc.y];Z=[user.loc.z]'>JMP</a>" : "null"])")
 
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.digestable = user.digestable
@@ -961,6 +1064,19 @@
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.feeding = user.feeding
 
+	if(href_list["toggleabsorbable"])
+		var/choice = alert(user, "This button allows preds to know whether you prefer or don't prefer to be absorbed. Currently you are [user.absorbable? "" : "not"] giving permission.", "", "Allow absorption", "Cancel", "Disallow absorption")
+		switch(choice)
+			if("Cancel")
+				return FALSE
+			if("Allow absorption")
+				user.absorbable = TRUE
+			if("Disallow absorption")
+				user.absorbable = FALSE
+
+		if(user.client.prefs_vr)
+			user.client.prefs_vr.absorbable = user.absorbable
+
 	if(href_list["toggledlm"])
 		var/choice = alert(user, "This button allows preds to have your remains be left in their belly after you are digested. This will only happen if pred sets their belly to do so. Remains consist of skeletal parts. Currently you are [user.digest_leave_remains? "" : "not"] leaving remains.", "", "Allow Post-digestion Remains", "Cancel", "Disallow Post-digestion Remains")
 		switch(choice)
@@ -975,7 +1091,7 @@
 			user.client.prefs_vr.digest_leave_remains = user.digest_leave_remains
 
 	if(href_list["togglemv"])
-		var/choice = alert(user, "This button is for those who don't like being eaten by mobs. Messages admins when changed, so don't try to use it for mechanical benefit. Set it once and save it. Mobs are currently: [user.allowmobvore ? "Allowed to eat" : "Prevented from eating"] you.", "", "Allow Mob Predation", "Cancel", "Prevent Mob Predation")
+		var/choice = alert(user, "This button is for those who don't like being eaten by mobs. Mobs are currently: [user.allowmobvore ? "Allowed to eat" : "Prevented from eating"] you.", "", "Allow Mob Predation", "Cancel", "Prevent Mob Predation")
 		switch(choice)
 			if("Cancel")
 				return FALSE
@@ -983,8 +1099,6 @@
 				user.allowmobvore = TRUE
 			if("Prevent Mob Predation")
 				user.allowmobvore = FALSE
-
-		message_admins("[key_name(user)] toggled their mob vore preference to [user.allowmobvore] ([user ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[user.loc.];Y=[user.loc.y];Z=[user.loc.z]'>JMP</a>" : "null"])")
 
 		if(user.client.prefs_vr)
 			user.client.prefs_vr.allowmobvore = user.allowmobvore
@@ -1011,6 +1125,204 @@
 				user.noisy = TRUE
 			if("Disable audible hunger")
 				user.noisy = FALSE
+
+	//CHOMP belly reagent container start
+
+	if(href_list["show_liq"])
+		show_liquids = !show_liquids
+		return 1 //Force update
+
+	if(href_list["show_liq_fullness"])
+		show_fullness_messages = !show_fullness_messages
+		return 1 //Force update
+
+	if(href_list["b_liq_msgs1_toggle"])
+		selected.liquid_fullness1_messages = !selected.liquid_fullness1_messages
+		return 1 //Force update
+
+	if(href_list["b_liq_msgs2_toggle"])
+		selected.liquid_fullness2_messages = !selected.liquid_fullness2_messages
+		return 1 //Force update
+
+	if(href_list["b_liq_msgs3_toggle"])
+		selected.liquid_fullness3_messages = !selected.liquid_fullness3_messages
+		return 1 //Force update
+
+	if(href_list["b_liq_msgs4_toggle"])
+		selected.liquid_fullness4_messages = !selected.liquid_fullness4_messages
+		return 1 //Force update
+
+	if(href_list["b_liq_msgs5_toggle"])
+		selected.liquid_fullness5_messages = !selected.liquid_fullness5_messages
+		return 1 //Force update
+
+	if(href_list["b_liq_msgs1"])
+		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
+
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 0 to 20% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full1")) as message
+		if(new_message)
+			selected.set_reagent_messages(new_message,"full1")
+
+	if(href_list["b_liq_msgs2"])
+		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
+
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 21 to 40% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full2")) as message
+		if(new_message)
+			selected.set_reagent_messages(new_message,"full2")
+
+	if(href_list["b_liq_msgs3"])
+		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
+
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 41 to 60% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full3")) as message
+		if(new_message)
+			selected.set_reagent_messages(new_message,"full3")
+
+	if(href_list["b_liq_msgs4"])
+		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
+
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 61 to 80% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full4")) as message
+		if(new_message)
+			selected.set_reagent_messages(new_message,"full4")
+
+	if(href_list["b_liq_msgs5"])
+		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
+
+		var/new_message = input(user,"These are sent to people who examine you when this belly is 81 to 100% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",selected.get_reagent_messages("full5")) as message
+		if(new_message)
+			selected.set_reagent_messages(new_message,"full5")
+
+	if(href_list["liq_help"])
+		alert("This is the settings for liquid bellies, every belly has a liquid storage that can be filled up and emptied by you and others (if your prefs allow them). Currently there are four belly modes, three that determines if digestion, absorption, and/or draining will produce a selected liquid at the cost of reduced nutrition. The fourth setting allows for producing a liquid over time using your nutrition. You can set the rate as well if you want it to be fast or slow. (Currently prefs of giving and receiving are not saved to avoid people leaving them on and risk abuse in initial period of release where community tries it out)")
+		return 0 //Force update
+
+	if(href_list["liq_fullness_help"])
+		alert("These are the settings for belly visibility when involving liquids, you can write custom messages for each interval of fullness. You can also decide if you want messages for a certain interval disabled, though this will not mean other interval's messages will show.")
+		return 0 //Force update
+
+	if(href_list["reagents_addons"])
+		var/list/menu_list = selected.reagent_mode_flag_list.Copy()
+		var/reagent_toggle_addon = input("Toggle Addon") as null|anything in menu_list
+		if(!reagent_toggle_addon)
+			return FALSE
+		selected.reagent_mode_flags ^= selected.reagent_mode_flag_list[reagent_toggle_addon]
+
+	if(href_list["b_liquidcontainer"])
+		if(selected.reagentbellymode == FALSE) //liquid container adjustments and interactions.
+			selected.reagentbellymode = TRUE
+			to_chat(usr,"<span class='warning'>Your [lowertext(selected.name)] now has interactions with prey that can produce liquids.</span>")
+		else if(selected.reagentbellymode == TRUE) //Doesnt produce liquids
+			selected.reagentbellymode = FALSE
+			to_chat(usr,"<span class='warning'>Your [lowertext(selected.name)] wont produce liquids when interacting with prey, liquids already in your [lowertext(selected.name)] must be emptied out or removed with purge.</span>")
+			show_liquids = 0 //Force the hiding of the panel
+		else
+			alert("Something went wrong. Your stomach will now not have special liquid abilities. Press the button enable them again and tell a dev.","Error") //If they somehow have a varable that's not 0 or 1
+			selected.reagentbellymode = FALSE
+			show_liquids = 0 //Force the hiding of the panel
+
+	if(href_list["reagent_choices"])
+		var/list/menu_list = selected.reagent_choices.Copy() //Useful if we want to make certain races, synths, borgs, and other things result in additional reagents to produce - Jack
+		var/new_reagent = input("Choose Reagent (currently [selected.reagent_chosen])") as null|anything in menu_list
+		if(!new_reagent)
+			return FALSE
+
+		selected.reagent_chosen = new_reagent
+		selected.ReagentSwitch() // For changing variables when a new reagent is chosen
+
+	if(href_list["reagent_name"])
+		var/new_name = html_encode(input(usr,"New name for liquid shown when transfering and dumping on floor (The actual liquid's name is still the same):","New Name") as text|null)
+
+		if(length(new_name) > BELLIES_NAME_MAX || length(new_name) < BELLIES_NAME_MIN)
+			alert("Entered name length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
+			return FALSE
+
+		selected.reagent_name = new_name
+
+	if(href_list["reagent_transfer_verb"])
+		var/new_verb = html_encode(input(usr,"New verb when liquid is transfered from this belly (infinitive tense, e.g. pump or inject):","New Verb") as text|null)
+
+		if(length(new_verb) > BELLIES_NAME_MAX || length(new_verb) < BELLIES_NAME_MIN)
+			alert("Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
+			return FALSE
+
+		selected.reagent_transfer_verb = new_verb
+
+	if(href_list["reagent_nutri_rate"])
+		selected.gen_time_display = input(user, "Choose the time it takes to fill the belly from empty state using nutrition.", "Set Liquid Production Time.")  in list("10 minutes","30 minutes","1 hour","3 hours","6 hours","12 hours","24 hours")|null
+		switch(selected.gen_time_display)
+			if("10 minutes")
+				selected.gen_time = 0
+			if("30 minutes")
+				selected.gen_time = 2
+			if("1 hour")
+				selected.gen_time = 5
+			if("3 hours")
+				selected.gen_time = 17
+			if("6 hours")
+				selected.gen_time = 29
+			if("12 hours")
+				selected.gen_time = 59
+			if("24 hours")
+				selected.gen_time = 119
+			if(null)
+				return
+
+	if(href_list["reagent_custom_vol"])
+		var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 0 to 100.", "Set Custom Belly Capacity.", selected.custom_max_volume) as num|null
+		if(new_custom_vol == null)
+			return
+		var/new_new_custom_vol = CLAMP(new_custom_vol, 10, 100)
+		selected.custom_max_volume = new_new_custom_vol
+
+	if(href_list["reagent_sloshing"])
+		if(selected.vorefootsteps_sounds == FALSE)
+			selected.vorefootsteps_sounds = TRUE
+			to_chat(usr,"<span class='warning'>Your [lowertext(selected.name)] can now make sounds when you walk around depending on how full you are.</span>")
+		else if(selected.vorefootsteps_sounds == TRUE)
+			selected.vorefootsteps_sounds = FALSE
+			to_chat(usr,"<span class='warning'>Your [lowertext(selected.name)] wont make any liquid sounds no matter how full it is.</span>")
+		else
+			alert("Something went wrong. Your stomach wont make liquid sounds. Press the button enable them again and tell a dev.","Error") //If they somehow have a varable that's not 0 or 1
+			selected.vorefootsteps_sounds = FALSE
+
+	if(href_list["b_purge_liq"])
+		var/alert = alert("Are you sure you want to delete the liquids in your [lowertext(selected.name)]?","Confirmation","Delete","Cancel")
+		if(!(alert == "Delete"))
+			return FALSE
+		else
+			selected.reagents.clear_reagents()
+
+	if(href_list["toggle_liq_rec"])
+		var/choice = alert(user, "This button is for allowing or preventing others from giving you liquids from their vore organs, isnt needed on if you are the one peforming the action. It is currently: [user.receive_reagents ? "Allowed" : "Prevented"]", "", "Allow Receiving", "Cancel", "Prevent Receiving")
+		switch(choice)
+			if("Cancel")
+				return FALSE
+			if("Allow Receiving")
+				user.receive_reagents = TRUE
+			if("Prevent Receiving")
+				user.receive_reagents = FALSE
+
+		if(user.client.prefs_vr)
+			user.client.prefs_vr.receive_reagents = user.receive_reagents
+
+	if(href_list["toggle_liq_giv"])
+		var/choice = alert(user, "This button is for allowing or preventing others from taking liquids from your vore organs, isnt needed on if you are the one peforming the action. It is currently: [user.give_reagents ? "Allowed" : "Prevented"]", "", "Allow Giving", "Cancel", "Prevent Giving")
+		switch(choice)
+			if("Cancel")
+				return FALSE
+			if("Allow Giving")
+				user.give_reagents = TRUE
+			if("Prevent Giving")
+				user.give_reagents = FALSE
+
+	//CHOMP belly reagent container end
+
+		if(user.client.prefs_vr)
+			user.client.prefs_vr.give_reagents = user.give_reagents
 
 	//Refresh when interacted with, returning 1 makes vore_look.Topic update
 	return TRUE

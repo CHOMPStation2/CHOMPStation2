@@ -1,33 +1,25 @@
 #include "submaps/virgo2.dm"
 
+/obj/effect/overmap/visitable/sector/virgo2
+	name = "Virgo 2"
+	desc = "Includes the Remmi Aerostat and associated ground mining complexes."
+	scanner_desc = @{"[i]Stellar Body[/i]: Virgo 2
+[i]Class[/i]: R-Class Planet
+[i]Habitability[/i]: Low (High Temperature, Toxic Atmosphere)
+[b]Notice[/b]: Planetary environment not suitable for life. Landing may be hazardous."}
+	icon_state = "globe"
+	color = "#dfff3f" //Bright yellow
+	initial_generic_waypoints = list("aerostat_west","aerostat_east","aerostat_south","aerostat_northwest","aerostat_northeast")
+	extra_z_levels = list(Z_LEVEL_AEROSTAT_SURFACE)
+	
 // -- Datums -- //
 
-/datum/shuttle_destination/excursion/virgo2orbit
-	name = "Virgo 2 Orbit"
-	my_area = /area/shuttle/excursion/space
-	preferred_interim_area = /area/shuttle/excursion/space_moving
-	skip_me = TRUE
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS,
-		/datum/shuttle_destination/excursion/virgo2orbit = 30 SECONDS
-	)
-
-/datum/shuttle_destination/excursion/aerostat
-	name = "Remmi Aerostat"
-	my_area = /area/shuttle/excursion/away_aerostat
-	preferred_interim_area = /area/shuttle/excursion/space_moving
-	skip_me = TRUE
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/virgo2orbit = 30 SECONDS
-	)
-
-/datum/shuttle/ferry/aerostat
+/datum/shuttle/autodock/ferry/aerostat
 	name = "Aerostat Ferry"
+	shuttle_area = /area/shuttle/aerostat
 	warmup_time = 10	//want some warmup time so people can cancel.
-	area_station = /area/shuttle/aerostat/docked
-	area_offsite = /area/shuttle/aerostat/landed
+	landmark_station = "aerostat_east"
+	landmark_offsite = "aerostat_surface"
 
 /datum/random_map/noise/ore/virgo2
 	descriptor = "virgo 2 ore distribution map"
@@ -42,19 +34,6 @@
 /obj/machinery/computer/shuttle_control/aerostat_shuttle
 	name = "aerostat ferry control console"
 	shuttle_tag = "Aerostat Ferry"
-
-/obj/shuttle_connector/aerostat
-	name = "shuttle connector - aerostat"
-	shuttle_name = "Excursion Shuttle"
-	destinations = list(/datum/shuttle_destination/excursion/virgo2orbit, /datum/shuttle_destination/excursion/aerostat)
-
-/obj/away_mission_init/aerostat/Initialize()
-	/*seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 50, /area/tether_away/aerostat/surface/unexplored, /datum/map_template/virgo2)
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, world.maxx, world.maxy)
-	new /datum/random_map/noise/ore/virgo2(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)*/
-
-	initialized = TRUE
-	return INITIALIZE_HINT_QDEL
 
 /obj/tether_away_spawner/aerostat_inside
 	name = "Aerostat Indoors Spawner"
@@ -152,7 +131,7 @@ VIRGO2_TURF_CREATE(/turf/simulated/mineral)
 	if(mineral)
 		return
 
-	var/mineral_name = pickweight(list("marble" = 5, "uranium" = 5, "platinum" = 10, "hematite" = 5, "carbon" = 5, "diamond" = 10, "gold" = 20, "silver" = 20, "lead" = 10, "verdantium" = 5))
+	var/mineral_name = pickweight(list("marble" = 5, "uranium" = 5, "platinum" = 5, "hematite" = 5, "carbon" = 5, "diamond" = 5, "gold" = 5, "silver" = 5, "lead" = 5, "verdantium" = 5, "rutile" = 20))
 
 	if(mineral_name && (mineral_name in ore_data))
 		mineral = ore_data[mineral_name]
@@ -165,18 +144,9 @@ VIRGO2_TURF_CREATE(/turf/simulated/mineral/floor/ignore_mapgen)
 
 // -- Areas -- //
 
-/area/shuttle/excursion/away_aerostat
-	name = "\improper Excursion Shuttle - Aerostat"
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
-
 // The aerostat shuttle
-/area/shuttle/aerostat/docked
-	name = "\improper Aerostat Shuttle - Dock"
-	base_turf = /turf/unsimulated/floor/sky/virgo2_sky
-
-/area/shuttle/aerostat/landed
-	name = "\improper Aerostat Shuttle - Surface"
-	base_turf = /turf/simulated/floor/plating/virgo2
+/area/shuttle/aerostat
+	name = "\improper Aerostat Shuttle"
 
 //The aerostat itself
 /area/tether_away/aerostat

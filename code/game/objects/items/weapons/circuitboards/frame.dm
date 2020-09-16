@@ -121,16 +121,6 @@
 							/obj/item/weapon/stock_parts/motor = 2,
 							/obj/item/stack/cable_coil = 5)
 
-/obj/item/weapon/circuitboard/microwave
-	name = T_BOARD("microwave")
-	build_path = /obj/machinery/microwave
-	board_type = new /datum/frame/frame_types/microwave
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50)
-	req_components = list(
-							/obj/item/weapon/stock_parts/console_screen = 1,
-							/obj/item/weapon/stock_parts/motor = 1,
-							/obj/item/weapon/stock_parts/capacitor = 1)
-
 /obj/item/weapon/circuitboard/recharger
 	name = T_BOARD("recharger")
 	build_path = /obj/machinery/recharger
@@ -182,7 +172,7 @@
 /obj/item/weapon/circuitboard/teleporter_hub
 	name = T_BOARD("teleporter hub")
 	build_path = /obj/machinery/teleport/hub
-	board_type = "teleporter_hub"
+	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 	req_components = list(
 							/obj/item/weapon/stock_parts/scanning_module = 4,
@@ -192,7 +182,7 @@
 /obj/item/weapon/circuitboard/teleporter_station
 	name = T_BOARD("teleporter station")
 	build_path = /obj/machinery/teleport/station
-	board_type = "teleporter_station"
+	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 3)
 	req_components = list(
 							/obj/item/weapon/stock_parts/console_screen = 1,
@@ -249,3 +239,4 @@
 							/obj/item/weapon/stock_parts/capacitor = 1,
 							/obj/item/weapon/stock_parts/spring = 1,
 							/obj/item/stack/cable_coil = 5)
+

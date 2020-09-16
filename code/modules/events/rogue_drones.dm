@@ -22,6 +22,7 @@
 /datum/event/rogue_drone/announce()
 	var/msg
 	var/rng = rand(1,5)
+	//CHOMPStation Edit Start TFF 14/1/20 - Virgo 3b -> Sif
 	switch(rng)
 		if(1)
 			msg = "A combat drone wing operating in close orbit above Sif has failed to return from a anti-piracy sweep.  If any are sighted, \
@@ -32,10 +33,10 @@
 		if(3)
 			msg = "Unidentified hackers have targeted a combat drone wing deployed around Sif. If any are sighted in the area, approach with caution."
 		if(4)
-			msg = "A passing derelict ship's drone defense systems have just activated. If any are sighted in the area, use caution."
+			msg = "A passing derelict ship's drone defense systems have just activated. If any are sighted in the area, use caution." //CHOMPStation Edit: Restored original message.
 		if(5)
 			msg = "We're detecting a swarm of small objects approaching your station.  Most likely a bunch of drones.  Please exercise caution if you see any."
-
+	//CHOMPStation Edit End
 	command_announcement.Announce(msg, "Rogue drone alert")
 
 /datum/event/rogue_drone/end()

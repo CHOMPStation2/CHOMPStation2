@@ -298,7 +298,7 @@
 	region = ACCESS_REGION_SUPPLY
 
 // /var/const/free_access_id = 51
-// /var/const/free_access_id= 52
+// /var/const/free_access_id = 52
 
 /var/const/access_heads_vault = 53
 /datum/access/heads_vault

@@ -158,7 +158,7 @@
 /datum/gear/uniform/job_skirt/security
 	display_name = "skirt, security"
 	path = /obj/item/clothing/under/rank/security/skirt
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/job_skirt/head_of_security
 	display_name = "skirt, hos"
@@ -173,7 +173,7 @@
 /datum/gear/uniform/job_turtle/security
 	display_name = "turtleneck, security"
 	path = /obj/item/clothing/under/rank/security/turtleneck
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer", "Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/job_turtle/engineering
 	display_name = "turtleneck, engineering"
@@ -183,7 +183,7 @@
 /datum/gear/uniform/job_turtle/medical
 	display_name = "turtleneck, medical"
 	path = /obj/item/clothing/under/rank/medical/turtleneck
-	allowed_roles = list("Chief Medical Officer", "Paramedic", "Medical Doctor", "Psychologist", "Search and Rescue", "Chemist")
+	allowed_roles = list("Chief Medical Officer", "Paramedic", "Medical Doctor", "Psychiatrist", "Search and Rescue", "Chemist")
 
 /datum/gear/uniform/jeans_qm
 	display_name = "jeans, QM"
@@ -307,7 +307,7 @@
 /datum/gear/uniform/corpsecsuit
 	display_name = "uniform, corporate (Security)"
 	path = /obj/item/clothing/under/rank/security/corp
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/corpwarsuit
 	display_name = "uniform, corporate (Warden)"
@@ -333,7 +333,7 @@
 /datum/gear/uniform/navysecsuit
 	display_name = "uniform, navy blue (Security)"
 	path = /obj/item/clothing/under/rank/security/navyblue
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/navywarsuit
 	display_name = "uniform, navy blue (Warden)"
@@ -432,7 +432,7 @@
 /datum/gear/uniform/pcrc
 	display_name = "uniform, PCRC (Security)"
 	path = /obj/item/clothing/under/pcrc
-	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard")
+	allowed_roles = list("Security Officer","Head of Security","Warden","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/brandsuit/grayson
 	display_name = "outfit, grayson"
@@ -517,3 +517,75 @@
 /datum/gear/uniform/lilacdress
 	display_name = "lilac dress"
 	path = /obj/item/clothing/under/dress/lilacdress
+
+/datum/gear/uniform/polka
+	display_name = "polka dot dress"
+	path = /obj/item/clothing/under/dress/polka
+
+/datum/gear/uniform/twistfront
+	display_name = "twistfront crop dress"
+	path = /obj/item/clothing/under/dress/twistfront
+
+/datum/gear/uniform/cropdress
+	display_name = "crop dress"
+	path = /obj/item/clothing/under/dress/cropdress
+
+/datum/gear/uniform/vneckdress
+	display_name = "v-neck dress"
+	path = /obj/item/clothing/under/dress/vneck
+
+/datum/gear/uniform/bluedress
+	display_name = "blue dress"
+	path = /obj/item/clothing/under/dress/bluedress
+
+/datum/gear/uniform/wench
+	display_name = "wench's dress"
+	path = /obj/item/clothing/under/dress/wench
+
+/datum/gear/uniform/littleblackdress
+	display_name = "little black dress"
+	path = /obj/item/clothing/under/dress/littleblackdress
+
+/datum/gear/uniform/pinktutu
+	display_name = "pink tutu"
+	path = /obj/item/clothing/under/dress/pinktutu
+
+/datum/gear/uniform/festivedress
+	display_name = "festive dress"
+	path = /obj/item/clothing/under/dress/festivedress
+
+/datum/gear/uniform/haltertop
+	display_name = "halter top"
+	path = /obj/item/clothing/under/haltertop
+
+/datum/gear/uniform/revealingdress
+	display_name = "revealing dress"
+	path = /obj/item/clothing/under/dress/revealingdress
+
+/datum/gear/uniform/rippedpunk
+	display_name = "ripped punk jeans"
+	path = /obj/item/clothing/under/rippedpunk
+
+/datum/gear/uniform/gothic
+	display_name = "gothic dress"
+	path = /obj/item/clothing/under/dress/gothic
+
+/datum/gear/uniform/formalred
+	display_name = "formal red dress"
+	path = /obj/item/clothing/under/dress/formalred
+
+/datum/gear/uniform/pentagram
+	display_name = "pentagram dress"
+	path = /obj/item/clothing/under/dress/pentagram
+
+/datum/gear/uniform/yellowswoop
+	display_name = "yellow swooped dress"
+	path = /obj/item/clothing/under/dress/yellowswoop
+
+/datum/gear/uniform/greenasym
+	display_name = "green asymmetrical jumpsuit"
+	path = /obj/item/clothing/under/greenasym
+
+/datum/gear/uniform/cyberpunkharness
+	display_name = "cyberpunk strapped harness"
+	path = /obj/item/clothing/under/cyberpunkharness

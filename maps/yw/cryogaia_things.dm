@@ -21,7 +21,7 @@
 
 
 
-/obj/effect/step_trigger/teleporter/planetary_fall/borealis2/Initialize()
+/obj/effect/step_trigger/teleporter/planetary_fall/borealis2/find_planet()
 	planet = planet_borealis2
 	. = ..()
 
@@ -119,6 +119,29 @@
 /obj/machinery/smartfridge/chemistry/chemvator/down/Initialize()
 	. = ..()
 	var/obj/machinery/smartfridge/chemistry/chemvator/above = locate(/obj/machinery/smartfridge/chemistry/chemvator,get_zstep(src,UP))
+	if(istype(above))
+		above.attached = src
+		attached = above
+		item_records = attached.item_records
+	else
+		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
+
+
+/obj/machinery/smartfridge/plantvator
+	name = "\improper Smart plantavator - Upper"
+	desc = "A refrigerated storage unit for Food and plant storage. Now sporting a fancy system of pulleys to lift bottles up and down."
+	var/obj/machinery/smartfridge/plantvator/attached
+
+/obj/machinery/smartfridge/plantvator/down/Destroy()
+	attached = null
+	return ..()
+
+/obj/machinery/smartfridge/plantvator/down
+	name = "\improper Smart Plantavator - Lower"
+
+/obj/machinery/smartfridge/plantvator/down/Initialize()
+	. = ..()
+	var/obj/machinery/smartfridge/plantvator/above = locate(/obj/machinery/smartfridge/plantvator,get_zstep(src,UP))
 	if(istype(above))
 		above.attached = src
 		attached = above
@@ -281,7 +304,6 @@ var/global/list/latejoin_tram   = list()
 	name = "Airlock NanoMed"
 	desc = "Wall-mounted Medical Equipment dispenser. This limited-use version dispenses antitoxins with mild painkillers for surface EVAs."
 	icon_state = "wallmed"
-	icon_deny = "wallmed-deny"
 	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
 	products = list(/obj/item/weapon/reagent_containers/pill/airlock = 10,/obj/item/device/healthanalyzer = 1)
 	contraband = list(/obj/item/weapon/reagent_containers/pill/tox = 2)
@@ -309,11 +331,24 @@ var/global/list/latejoin_tram   = list()
 
 	return ..(user)
 
+/obj/machinery/door/airlock/highsecurity/red
+	name = "Bridge Holdout Armory"
+	desc =  "Only to be opened on Code red or greater."
+	req_one_access = list(access_heads)
+
+/obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
+	if(get_security_level() in list("green","blue"))
+		return FALSE
+
+	return ..(user)
+
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
+	maxhealth = 600
 	var/frozen = 0
 	var/freezing = 0 //see process().
 	var/deiceTools[0]
+	var/nextWeatherCheck
 
 /obj/machinery/door/airlock/glass_external/freezable/New()
 	//Associate objects with the number of seconds it would take to de-ice a door.
@@ -390,8 +425,6 @@ var/global/list/latejoin_tram   = list()
 	return
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleFreezeUnfreeze()
-	freezing = 1 //don't do the thing i'm already doing.
-	var/random = rand(2,7)
 
 	for(var/datum/planet/borealis2/P in SSplanets.planets)
 		if(istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
@@ -400,15 +433,14 @@ var/global/list/latejoin_tram   = list()
 		else if(!istype(P.weather_holder.current_weather, /datum/weather/borealis2/blizzard))
 			if(frozen && prob(50))
 				unFreeze()
-
-	sleep((random + 13) SECONDS)
-	freezing = 0
 	return
-
 /obj/machinery/door/airlock/glass_external/freezable/process()
-	if(!freezing)  //don't do the thing if i'm already doing it.
-		spawn(0)
-			handleFreezeUnfreeze()
+	if(world.time >= nextWeatherCheck && !freezing)  //don't do the thing if i'm already doing it.
+		freezing = 1
+		var/random = rand(2,7)
+		nextWeatherCheck = (world.time + ((random + 13) SECONDS))
+		handleFreezeUnfreeze()
+		freezing = 0
 	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
@@ -437,18 +469,6 @@ var/global/list/latejoin_tram   = list()
 		..()
 //end of freezable airlock stuff.
 
-//Ice pick, mountain axe, or ice axe.
-/obj/item/weapon/ice_pick
-	name = "ice axe"
-	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
-	icon = 'icons/obj/items_yw.dmi'
-	icon_state = "icepick"
-	item_state = "icepick"
-	force = 15 //increasing force for icepick/axe, cause it's a freaking iceaxe.
-	throwforce = 0
-//end of Ice Pick
-
-
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
 	req_one_access = list(access_explorer,access_brig)
@@ -456,9 +476,9 @@ var/global/list/latejoin_tram   = list()
 /obj/structure/closet/secure_closet/guncabinet/excursion/New()
 	..()
 	for(var/i = 1 to 4)
-		new /obj/item/weapon/gun/energy/frontier/locked(src)
+		new /obj/item/weapon/gun/energy/locked/frontier(src)
 	for(var/i = 1 to 4)
-		new /obj/item/weapon/gun/energy/frontier/locked/holdout(src)
+		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
 
 // Underdark mob spawners
 /*
@@ -581,7 +601,7 @@ var/global/list/latejoin_tram   = list()
 // Icy crystals.
 /datum/category_item/catalogue/material/trail_blazer
 	name = "Ice Colony Equipment - Trailblazer"
-	desc = "This is a glowing stick embedded int he ground with a light on top, commonly used in snowy installations \
+	desc = "This is a glowing stick embedded in the ground with a light on top, commonly used in snowy installations \
 	and in tundra conditions."
 	value = CATALOGUER_REWARD_EASY
 
@@ -629,7 +649,7 @@ obj/machinery/trailblazer/Initialize()
 
 /obj/machinery/trailblazer/yellow
 	name = "trail blazer"
-	desc = "A glowing stick- light. This one is glowing blue."
+	desc = "A glowing stick- light. This one is glowing yellow."
 	icon_state = "yellowtrail_light_on"
 
 /obj/machinery/trailblazer/yellow/randomize_color()

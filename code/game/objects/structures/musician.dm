@@ -87,7 +87,7 @@
 	var/sound/music_played = sound(soundfile)
 	for(var/i in hearing_mobs)
 		var/mob/M = i
-		M.playsound_local(source, null, 100, falloff = 5, S = music_played)
+		M.playsound_local(source, null, 100, falloff = 0.5, S = music_played)
 
 /datum/song/proc/updateDialog(mob/user)
 	instrumentObj.updateDialog()		// assumes it's an object in world, override if otherwise
@@ -115,12 +115,12 @@
 					if(!playing || shouldStopPlaying(user))//If the instrument is playing, or special case
 						playing = 0
 						return
-					if(lentext(note) == 0)
+					if(length(note) == 0)
 						continue
 					var/cur_note = text2ascii(note) - 96
 					if(cur_note < 1 || cur_note > 7)
 						continue
-					for(var/i=2 to lentext(note))
+					for(var/i=2 to length(note))
 						var/ni = copytext(note,i,i+1)
 						if(!text2num(ni))
 							if(ni == "#" || ni == "b" || ni == "n")
@@ -208,11 +208,11 @@
 			t = html_encode(input(usr, "Please paste the entire song, formatted:", text("[]", name), t)  as message)
 			if(!in_range(instrumentObj, usr))
 				return
-			if(lentext(t) >= INSTRUMENT_MAX_LINE_LENGTH*INSTRUMENT_MAX_LINE_NUMBER)
+			if(length(t) >= INSTRUMENT_MAX_LINE_LENGTH*INSTRUMENT_MAX_LINE_NUMBER)
 				var/cont = input(usr, "Your message is too long! Would you like to continue editing it?", "", "yes") in list("yes", "no")
 				if(cont == "no")
 					break
-		while(lentext(t) > INSTRUMENT_MAX_LINE_LENGTH*INSTRUMENT_MAX_LINE_NUMBER)
+		while(length(t) > INSTRUMENT_MAX_LINE_LENGTH*INSTRUMENT_MAX_LINE_NUMBER)
 		//split into lines
 		spawn()
 			lines = splittext(t, "\n")
@@ -226,7 +226,7 @@
 				lines.Cut(INSTRUMENT_MAX_LINE_NUMBER+1)
 			var/linenum = 1
 			for(var/l in lines)
-				if(lentext(l) > INSTRUMENT_MAX_LINE_LENGTH)
+				if(length(l) > INSTRUMENT_MAX_LINE_LENGTH)
 					to_chat(usr, "Line [linenum] too long!")
 					lines.Remove(l)
 				else
@@ -256,7 +256,7 @@
 			return
 		if(lines.len > INSTRUMENT_MAX_LINE_NUMBER)
 			return
-		if(lentext(newline) > INSTRUMENT_MAX_LINE_LENGTH)
+		if(length(newline) > INSTRUMENT_MAX_LINE_LENGTH)
 			newline = copytext(newline, 1, INSTRUMENT_MAX_LINE_LENGTH)
 		lines.Add(newline)
 	else if(href_list["deleteline"])
@@ -269,7 +269,7 @@
 		var/content = html_encode(input("Enter your line: ", instrumentObj.name, lines[num]) as text|null)
 		if(!content || !in_range(instrumentObj, usr))
 			return
-		if(lentext(content) > INSTRUMENT_MAX_LINE_LENGTH)
+		if(length(content) > INSTRUMENT_MAX_LINE_LENGTH)
 			content = copytext(content, 1, INSTRUMENT_MAX_LINE_LENGTH)
 		if(num > lines.len || num < 1)
 			return
@@ -356,7 +356,7 @@
 /obj/structure/device/piano/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.is_wrench())
 		if(anchored)
-			playsound(src.loc, O.usesound, 50, 1)
+			playsound(src, O.usesound, 50, 1)
 			to_chat(user, "<span class='notice'>You begin to loosen \the [src]'s casters...</span>")
 			if (do_after(user, 40 * O.toolspeed))
 				user.visible_message( \
@@ -365,7 +365,7 @@
 					"You hear ratchet.")
 				src.anchored = 0
 		else
-			playsound(src.loc, O.usesound, 50, 1)
+			playsound(src, O.usesound, 50, 1)
 			to_chat(user, "<span class='notice'>You begin to tighten \the [src] to the floor...</span>")
 			if (do_after(user, 20 * O.toolspeed))
 				user.visible_message( \

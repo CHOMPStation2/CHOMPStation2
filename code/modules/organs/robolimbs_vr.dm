@@ -4,7 +4,7 @@
 	var/list/whitelisted_to		//List of ckeys that are allowed to pick this in charsetup.
 
 //////////////// For-specific-character fluff ones /////////////////
-// arokha : Aronai Kadigan
+// arokha : Aronai Sieyes
 /datum/robolimb/kitsuhana
 	company = "Kitsuhana"
 	desc = "This limb seems rather vulpine and fuzzy, with realistic-feeling flesh."
@@ -49,7 +49,7 @@
 
 // tucker0666 : Frost
 /datum/robolimb/zenghu_frost
-    company = "Zeng-Hu"
+    company = "Zeng-Hu (Custom)"
     desc = "This limb has realistic synthetic flesh covering with 'blue accents'."
     icon = 'icons/mob/human_races/cyberlimbs/_fluff_vr/Frosty.dmi'
     blood_color = "#45ccff"
@@ -202,8 +202,9 @@
 	suggested_species = "Teshari"
 
 /datum/robolimb/dsi_teshari/New()
-	species_cannot_use = all_species.Copy()
+	species_cannot_use = GLOB.all_species.Copy()
 	species_cannot_use -= SPECIES_TESHARI
+	species_cannot_use -= SPECIES_CUSTOM
 	..()
 
 /obj/item/weapon/disk/limb/dsi_teshari

@@ -20,7 +20,7 @@ var/list/wrapped_species_by_ref = list()
 
 /datum/species/shapeshifter/get_icobase(var/mob/living/carbon/human/H, var/get_deform)
 	if(!H) return ..(null, get_deform)
-	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_icobase(H, get_deform)
 
 /datum/species/shapeshifter/get_race_key(var/mob/living/carbon/human/H)
@@ -28,37 +28,37 @@ var/list/wrapped_species_by_ref = list()
 
 /datum/species/shapeshifter/get_bodytype(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_bodytype(H)
 
 /datum/species/shapeshifter/get_blood_mask(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_blood_mask(H)
 
 /datum/species/shapeshifter/get_damage_mask(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_damage_mask(H)
 
 /datum/species/shapeshifter/get_damage_overlays(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_damage_overlays(H)
 
 /datum/species/shapeshifter/get_tail(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_tail(H)
 
 /datum/species/shapeshifter/get_tail_animation(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_tail_animation(H)
 
 /datum/species/shapeshifter/get_tail_hair(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
 	return S.get_tail_hair(H)
 
 /datum/species/shapeshifter/handle_post_spawn(var/mob/living/carbon/human/H)
@@ -88,6 +88,7 @@ var/list/wrapped_species_by_ref = list()
 
 	var/list/valid_hairstyles = list()
 	var/list/valid_facialhairstyles = list()
+	var/list/valid_gradstyles = GLOB.hair_gradients
 	for(var/hairstyle in hair_styles_list)
 		var/datum/sprite_accessory/S = hair_styles_list[hairstyle]
 		if(gender == MALE && S.gender == FEMALE)
@@ -112,6 +113,9 @@ var/list/wrapped_species_by_ref = list()
 	if(valid_hairstyles.len)
 		var/new_hair = input("Select a hairstyle.", "Shapeshifter Hair") as null|anything in valid_hairstyles
 		change_hair(new_hair ? new_hair : "Bald")
+	if(valid_gradstyles.len)
+		var/new_hair = input("Select a hair gradient style.", "Shapeshifter Hair") as null|anything in valid_gradstyles
+		change_hair_gradient(new_hair ? new_hair : "None")
 	if(valid_facialhairstyles.len)
 		var/new_hair = input("Select a facial hair style.", "Shapeshifter Hair") as null|anything in valid_facialhairstyles
 		change_facial_hair(new_hair ? new_hair : "Shaved")
@@ -151,7 +155,7 @@ var/list/wrapped_species_by_ref = list()
 	var/new_species = null
 	new_species = input("Please select a species to emulate.", "Shapeshifter Body") as null|anything in species.get_valid_shapeshifter_forms(src)
 
-	if(!new_species || !all_species[new_species] || wrapped_species_by_ref["\ref[src]"] == new_species)
+	if(!new_species || !GLOB.all_species[new_species] || wrapped_species_by_ref["\ref[src]"] == new_species)
 		return
 	shapeshifter_change_shape(new_species)
 
@@ -173,7 +177,8 @@ var/list/wrapped_species_by_ref = list()
 
 	last_special = world.time + 50
 
-	var/new_skin = input("Please select a new body color.", "Shapeshifter Colour") as color
+	var/current = RGBdec2hex(list(r_skin, g_skin, b_skin))
+	var/new_skin = input("Please select a new body color.", "Shapeshifter Colour", current) as null|color
 	if(!new_skin)
 		return
 	shapeshifter_set_colour(new_skin)
@@ -215,6 +220,10 @@ var/list/wrapped_species_by_ref = list()
 	if(!new_hair)
 		return
 	shapeshifter_set_hair_color(new_hair)
+	var/new_grad = input("Please select a new hair gradient color.", "Hair Gradient Colour") as color
+	if(!new_grad)
+		return
+	shapeshifter_set_grad_color(new_grad)
 	var/new_fhair = input("Please select a new facial hair color.", "Facial Hair Color") as color
 	if(!new_fhair)
 		return
@@ -223,6 +232,10 @@ var/list/wrapped_species_by_ref = list()
 /mob/living/carbon/human/proc/shapeshifter_set_hair_color(var/new_hair)
 
 	change_hair_color(hex2num(copytext(new_hair, 2, 4)), hex2num(copytext(new_hair, 4, 6)), hex2num(copytext(new_hair, 6, 8)))
+
+/mob/living/carbon/human/proc/shapeshifter_set_grad_color(var/new_grad)
+
+	change_grad_color(hex2num(copytext(new_grad, 2, 4)), hex2num(copytext(new_grad, 4, 6)), hex2num(copytext(new_grad, 6, 8)))
 
 /mob/living/carbon/human/proc/shapeshifter_set_facial_color(var/new_fhair)
 
@@ -268,14 +281,14 @@ var/list/wrapped_species_by_ref = list()
 		limb_exists[O.organ_tag] = 1
 		wounds_by_limb[O.organ_tag] = O.wounds
 
-	species = all_species[new_species]
+	species = GLOB.all_species[new_species]
 	species.create_organs(src)
 //	species.handle_post_spawn(src)
 
 	for(var/limb in organs_by_name)
 		var/obj/item/organ/external/O = organs_by_name[limb]
 		if(limb_exists[O.organ_tag])
-			O.species = all_species[new_species]
+			O.species = GLOB.all_species[new_species]
 			O.wounds = wounds_by_limb[O.organ_tag]
 			// sync the organ's damage with its wounds
 			O.update_damages()

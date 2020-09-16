@@ -3,13 +3,15 @@
 var/obj/effect/lobby_image = new /obj/effect/lobby_image
 
 /obj/effect/lobby_image
-	name = "Yawn Wider"
+	name = "CHOMPStation"
 	desc = "How are you reading this?"
 	screen_loc = "1,1"
+	icon = 'icons/misc/loading.dmi' //VOREStation Add - Loading Screen
+	icon_state = "loading" //VOREStation Add - Loading Screen
 
 /obj/effect/lobby_image/Initialize()
 	icon = using_map.lobby_icon
-	var/known_icon_states = icon_states(icon)
+	var/known_icon_states = cached_icon_states(icon)
 	for(var/lobby_screen in using_map.lobby_screens)
 		if(!(lobby_screen in known_icon_states))
 			error("Lobby screen '[lobby_screen]' did not exist in the icon set [icon].")

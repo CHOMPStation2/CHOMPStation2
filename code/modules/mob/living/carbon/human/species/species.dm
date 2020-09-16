@@ -18,6 +18,9 @@
 	var/fire_icon_state = "humanoid"						// The icon_state used inside OnFire.dmi for when on fire.
 	var/suit_storage_icon = 'icons/mob/belt_mirror.dmi'		// Icons used for worn items in suit storage slot.
 
+	var/pixel_offset_x = 0                    // CHOMPedit. Used for offsetting 64x64 and up icons.
+	var/pixel_offset_y = 0                    // CHOMPedit. Used for offsetting 64x64 and up icons.
+
 	// Damage overlay and masks.
 	var/damage_overlays = 'icons/mob/human_races/masks/dam_human.dmi'
 	var/damage_mask = 'icons/mob/human_races/masks/dam_mask_human.dmi'
@@ -43,6 +46,10 @@
 	var/short_sighted										// Permanent weldervision.
 	var/blood_volume = 560									// Initial blood volume.
 	var/bloodloss_rate = 1									// Multiplier for how fast a species bleeds out. Higher = Faster
+	var/blood_level_safe = 0.85								//"Safe" blood level; above this, you're OK
+	var/blood_level_warning = 0.75								//"Warning" blood level; above this, you're a bit woozy and will have low-level oxydamage (no more than 20, or 15 with inap)
+	var/blood_level_danger = 0.6								//"Danger" blood level; above this, you'll rapidly take up to 50 oxyloss, and it will then steadily accumulate at a lower rate
+	var/blood_level_fatal = 0.4								//"Fatal" blood level; below this, you take extremely high oxydamage
 	var/hunger_factor = 0.05								// Multiplier for hunger.
 	var/active_regen_mult = 1								// Multiplier for 'Regenerate' power speed, in human_powers.dm
 
@@ -74,23 +81,33 @@
 	var/male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
 	var/female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
 
-	// Combat vars.
-	var/total_health = 100									// Point at which the mob will enter crit.
+	// Combat/health/chem/etc. vars.
+	var/total_health = 100								// How much damage the mob can take before entering crit.
 	var/list/unarmed_types = list(							// Possible unarmed attacks that the mob will use in combat,
 		/datum/unarmed_attack,
 		/datum/unarmed_attack/bite
 		)
 	var/list/unarmed_attacks = null							// For empty hand harm-intent attack
-	var/brute_mod =     1									// Physical damage multiplier.
-	var/burn_mod =      1									// Burn damage multiplier.
-	var/oxy_mod =       1									// Oxyloss modifier
-	var/toxins_mod =    1									// Toxloss modifier
-	var/radiation_mod = 1									// Radiation modifier
-	var/flash_mod =     1									// Stun from blindness modifier.
-	var/flash_burn =    0									// how much damage to take from being flashed if light hypersensitive
-	var/sound_mod =     1									// Stun from sounds, I.E. flashbangs.
-	var/chemOD_mod =	1									// Damage modifier for overdose
-	var/vision_flags = SEE_SELF								// Same flags as glasses.
+	var/brute_mod =     1								// Physical damage multiplier.
+	var/burn_mod =      1								// Burn damage multiplier.
+	var/oxy_mod =       1								// Oxyloss modifier
+	var/toxins_mod =    1								// Toxloss modifier. overridden by NO_POISON flag.
+	var/radiation_mod = 1								// Radiation modifier, determines the practically negligable burn damage from direct exposure to extreme sources.
+	var/flash_mod =     1								// Stun from blindness modifier (flashes and flashbangs)
+	var/flash_burn =    0								// how much damage to take from being flashed if light hypersensitive
+	var/sound_mod =     1								// Multiplier to the effective *range* of flashbangs. a flashbang's bang hits an entire screen radius, with some falloff.
+	var/chem_strength_heal =	1						// Multiplier to most beneficial chem strength
+	var/chem_strength_pain =	1						// Multiplier to painkiller strength (could be used in a negative trait to simulate long-term addiction reducing effects, etc.)
+	var/chem_strength_tox =		1						// Multiplier to toxic chem strength (inc. chloral/sopo/mindbreaker/etc. thresholds)
+	var/chemOD_threshold =		1						// Multiplier to overdose threshold; lower = easier overdosing
+	var/chemOD_mod =		1						// Damage modifier for overdose; higher = more damage from ODs
+	var/alcohol_mod =		1						// Multiplier to alcohol strength; 0.5 = half, 0 = no effect at all, 2 = double, etc.
+	var/pain_mod =			1						// Multiplier to pain effects; 0.5 = half, 0 = no effect (equal to NO_PAIN, really), 2 = double, etc.
+	// set below is EMP interactivity for nonsynth carbons
+	var/emp_sensitivity =		0			// bitflag. valid flags are: EMP_PAIN, EMP_BLIND, EMP_DEAFEN, EMP_CONFUSE, EMP_STUN, and EMP_(BRUTE/BURN/TOX/OXY)_DMG
+	var/emp_dmg_mod =		1			// Multiplier to all EMP damage sustained by the mob, if it's EMP-sensitive
+	var/emp_stun_mod = 		1			// Multiplier to all EMP disorient/etc. sustained by the mob, if it's EMP-sensitive
+	var/vision_flags = SEE_SELF							// Same flags as glasses.
 
 	// Death vars.
 	var/meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/human
@@ -142,6 +159,8 @@
 		"Your skin prickles in the heat."
 		)
 
+	var/water_resistance = 0.1								// How wet the species gets from being splashed.
+	var/water_damage_mod = 0								// How much water damage is multiplied by when splashing this species.
 
 	var/passive_temp_gain = 0								// Species will gain this much temperature every second
 	var/hazard_high_pressure = HAZARD_HIGH_PRESSURE			// Dangerously high pressure.
@@ -357,7 +376,8 @@
 				t_him = "him"
 			if(FEMALE)
 				t_him = "her"
-	if(H.zone_sel.selecting == "head") //VOREStation Edit - Headpats and Handshakes.
+	//VOREStation Edit Start - Headpats and Handshakes.
+	if(H.zone_sel.selecting == "head")
 		H.visible_message( \
 			"<span class='notice'>[H] pats [target] on the head.</span>", \
 			"<span class='notice'>You pat [target] on the head.</span>", )
@@ -365,6 +385,12 @@
 		H.visible_message( \
 			"<span class='notice'>[H] shakes [target]'s hand.</span>", \
 			"<span class='notice'>You shake [target]'s hand.</span>", )
+	//TFF 15/12/19 - Port nose booping from CHOMPStation
+	else if(H.zone_sel.selecting == "mouth")
+		H.visible_message( \
+			"<span class='notice'>[H] boops [target]'s nose.</span>", \
+			"<span class='notice'>You boop [target] on the nose.</span>", )
+	//VOREStation Edit End
 	else H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
 					"<span class='notice'>You hug [target] to make [t_him] feel better!</span>") //End VOREStation Edit
 
@@ -467,3 +493,9 @@
 // Allow species to display interesting information in the human stat panels
 /datum/species/proc/Stat(var/mob/living/carbon/human/H)
 	return
+
+/datum/species/proc/handle_water_damage(var/mob/living/carbon/human/H, var/amount = 0)
+	amount *= 1 - H.get_water_protection()
+	amount *= water_damage_mod
+	if(amount > 0)
+		H.adjustToxLoss(amount)

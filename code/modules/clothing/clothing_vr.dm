@@ -26,7 +26,7 @@
 			recent_squish = 0
 		for(var/mob/living/M in contents)
 			var/emote = pick(inside_emotes)
-			M << emote
+			to_chat(M,emote)
 	return
 */
 
@@ -37,23 +37,51 @@
 		for(var/mob/M in src)
 			full++
 		if(full >= 2)
-			to_chat(user,"<span class='warning'>You can't fit anyone else into \the [src]!</span>")
+			to_chat(user, "<span class='warning'>You can't fit anyone else into \the [src]!</span>")
 		else
 			var/obj/item/weapon/holder/micro/holder = I
 			if(holder.held_mob && holder.held_mob in holder)
-				to_chat(holder.held_mob,"<span class='warning'>[user] stuffs you into \the [src]!</span>")
+				to_chat(holder.held_mob, "<span class='warning'>[user] stuffs you into \the [src]!</span>")
 				holder.held_mob.forceMove(src)
-				to_chat(user,"<span class='notice'>You stuff \the [holder.held_mob] into \the [src]!</span>")
+				to_chat(user, "<span class='notice'>You stuff \the [holder.held_mob] into \the [src]!</span>")
 	else
 		..()
 
 /obj/item/clothing/shoes/attack_self(var/mob/user)
 	for(var/mob/M in src)
 		M.forceMove(get_turf(user))
-		to_chat(M,"<span class='warning'>[user] shakes you out of \the [src]!</span>")
-		to_chat(user,"<span class='notice'>You shake [M] out of \the [src]!</span>")
+		to_chat(M, "<span class='warning'>[user] shakes you out of \the [src]!</span>")
+		to_chat(user, "<span class='notice'>You shake [M] out of \the [src]!</span>")
 
 	..()
+
+/obj/item/clothing/shoes/container_resist(mob/living/micro)
+	var/mob/living/carbon/human/macro = loc
+	if(!istype(macro))
+		to_chat(micro, "<span class='notice'>You start to climb out of [src]!</span>")
+		if(do_after(micro, 50, src))
+			to_chat(micro, "<span class='notice'>You climb out of [src]!</span>")
+			micro.forceMove(loc)
+		return
+
+	var/escape_message_micro = "You start to climb out of [src]!"
+	var/escape_message_macro = "Something is trying to climb out of your [src]!"
+	var/escape_time = 60
+
+	if(macro.shoes == src)
+		escape_message_micro = "You start to climb around the larger creature's feet and ankles!"
+		escape_time = 100
+
+	to_chat(micro, "<span class='notice'>[escape_message_micro]</span>")
+	to_chat(macro, "<span class='danger'>[escape_message_macro]</span>")
+	if(!do_after(micro, escape_time, macro))
+		to_chat(micro, "<span class='danger'>You're pinned underfoot!</span>")
+		to_chat(macro, "<span class='danger'>You pin the escapee underfoot!</span>")
+		return
+
+	to_chat(micro, "<span class='notice'>You manage to escape [src]!</span>")
+	to_chat(macro, "<span class='danger'>Someone has climbed out of your [src]!</span>")
+	micro.forceMove(macro.loc)
 
 /obj/item/clothing/gloves
 	sprite_sheets = list(
@@ -79,14 +107,14 @@
 	if(ishuman(src.loc))
 		var/mob/living/carbon/human/H = src.loc
 		if(H.shoes == src)
-			H << "<font color='red'>[user]'s tiny body presses against you in \the [src], squirming!</font>"
-			user << "<font color='red'>Your body presses out against [H]'s form! Well, what little you can get to!</font>"
+			to_chat(H, "<font color='red'>[user]'s tiny body presses against you in \the [src], squirming!</font>")
+			to_chat(user, "<font color='red'>Your body presses out against [H]'s form! Well, what little you can get to!</font>")
 		else
-			H << "<font color='red'>[user]'s form shifts around in the \the [src], squirming!</font>"
-			user << "<font color='red'>You move around inside the [src], to no avail.</font>"
+			to_chat(H, "<font color='red'>[user]'s form shifts around in the \the [src], squirming!</font>")
+			to_chat(user, "<font color='red'>You move around inside the [src], to no avail.</font>")
 	else
 		src.visible_message("<font color='red'>\The [src] moves a little!</font>")
-		user << "<font color='red'>You throw yourself against the inside of \the [src]!</font>"
+		to_chat(user, "<font color='red'>You throw yourself against the inside of \the [src]!</font>")
 
 //Mask
 /obj/item/clothing/mask
@@ -114,7 +142,8 @@
 		SPECIES_AKULA 		= 'icons/mob/species/akula/mask_vr.dmi',
 		SPECIES_VULPKANIN 	= 'icons/mob/species/vulpkanin/mask.dmi',
 		SPECIES_XENOCHIMERA	= 'icons/mob/species/tajaran/mask_vr.dmi',
-		SPECIES_WEREBEAST	= 'icons/mob/species/werebeast/masks.dmi'
+		SPECIES_WEREBEAST	= 'icons/mob/species/werebeast/masks.dmi',
+		SPECIES_GREY_YW     = 'icons/mob/species/grey/mask.dmi'/*ywedit*/
 		)
 //"Spider" 		= 'icons/mob/species/spider/mask_vr.dmi' Add this later when they have custom mask sprites and everything.
 
@@ -134,7 +163,7 @@
 		var/mob/living/carbon/human/H = user
 		if(isTaurTail(H.tail_style))
 			var/datum/sprite_accessory/tail/taur/taurtail = H.tail_style
-			if(taurtail.suit_sprites && (get_worn_icon_state(slot_wear_suit_str) in icon_states(taurtail.suit_sprites)))
+			if(taurtail.suit_sprites && (get_worn_icon_state(slot_wear_suit_str) in cached_icon_states(taurtail.suit_sprites)))
 				icon_override = taurtail.suit_sprites
 				normalize = FALSE
 				taurized = TRUE
@@ -153,6 +182,15 @@
 		standing.layer = BODY_LAYER + 15 // 15 is above tail layer, so will not be covered by taurbody.
 	return standing
 
+/obj/item/clothing/suit/apply_accessories(var/image/standing)
+	if(LAZYLEN(accessories) && taurized)
+		for(var/obj/item/clothing/accessory/A in accessories)
+			var/image/I = new(A.get_mob_overlay())
+			I.pixel_x = 16 //Opposite of the pixel_x on the suit (-16) from taurization to cancel it out and puts the accessory in the correct place on the body.
+			standing.add_overlay(I)
+	else
+		return ..()
+
 //TFF 5/8/19 - sets Vorestation /obj/item/clothing/under sensor setting default?
 /obj/item/clothing/under
 	sensor_mode = 3
@@ -160,7 +198,9 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/mob/species/seromi/uniform.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/uniform.dmi')
+		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/uniform.dmi',
+		SPECIES_GREY_YW = 'icons/mob/species/grey/uniform.dmi'/*ywedit*/
+		)
 
 //TFF 5/8/19 - define numbers and specifics for suit sensor settings
 /obj/item/clothing/under/New(var/mob/living/carbon/human/H)

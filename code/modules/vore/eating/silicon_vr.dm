@@ -21,11 +21,11 @@
 
 /obj/effect/overlay/aiholo/proc/get_prey(var/mob/living/prey)
 	if(bellied) return
-	playsound('sound/effects/stealthoff.ogg',50,0)
+	playsound(src, 'sound/effects/stealthoff.ogg',50,0)
 	bellied = prey
 	prey.forceMove(src)
 	visible_message("[src] entirely engulfs [prey] in hardlight holograms!")
-	usr << "<span class='notice'>You completely engulf [prey] in hardlight holograms!</span>" //Can't be part of the above, because the above is from the hologram.
+	to_chat(usr, "<span class='notice'>You completely engulf [prey] in hardlight holograms!</span>") //Can't be part of the above, because the above is from the hologram.
 
 	desc = "[initial(desc)] It seems to have hardlight mode enabled and someone inside."
 	pass_flags = 0
@@ -34,10 +34,10 @@
 
 /obj/effect/overlay/aiholo/proc/drop_prey()
 	if(!bellied) return
-	playsound('sound/effects/stealthoff.ogg',50,0)
+	playsound(src, 'sound/effects/stealthoff.ogg',50,0)
 	bellied.forceMove(get_turf(src))
 	bellied.Weaken(2)
-	bellied.visible_message("[bellied] flops out of \the [src].","You flop out of \the [src].","You hear a thud.")
+	bellied.visible_message("[bellied] flops out of [src].","You flop out of [src].","You hear a thud.")
 	bellied = null
 
 	desc = "[initial(desc)]"
@@ -52,7 +52,7 @@
 
 	// Wrong state
 	if (!eyeobj || !holo)
-		usr << "<span class='warning'>You can only use this when holo-projecting!</span>"
+		to_chat(usr, "<span class='warning'>You can only use this when holo-projecting!</span>")
 		return
 
 	//Holopads have this 'masters' list where the keys are AI names and the values are the hologram effects
@@ -64,7 +64,7 @@
 
 	//Already full
 	if (hologram.bellied)
-		var/choice = alert("You can only contain one person. [hologram.bellied] is in you.","Already Full","Drop Mob","Cancel")
+		var/choice = alert("You can only contain one person. [hologram.bellied] is in you.", "Already Full", "Drop Mob", "Cancel")
 		if(choice == "Drop Mob")
 			hologram.drop_prey()
 		return
@@ -74,7 +74,7 @@
 		return //Probably cancelled
 
 	if(!istype(prey))
-		usr << "<span class='warning'>Invalid mob choice!</span>"
+		to_chat(usr, "<span class='warning'>Invalid mob choice!</span>")
 		return
 
 	hologram.visible_message("[hologram] starts engulfing [prey] in hardlight holograms!")
@@ -93,18 +93,16 @@
 
 /mob/living/AIShiftClick(var/mob/user) //Shift-click as AI overridden on mobs to examine.
 	if(user.client)
-		src.examine(user)
+		examine(user)
 	return
 
 //This can go here with all the references.
 /obj/effect/overlay/aiholo/examine(mob/user)
-	. = ..(user)
+	. = ..()
+	if(master)
+		var/flavor_text = master.print_flavor_text()
+		if(flavor_text)
+			. += "[flavor_text]"
 
-	var/msg = "\n"
-
-	//If you need an ooc_notes copy paste, this is NOT the one to use.
-	var/ooc_notes = master.ooc_notes
-	if(ooc_notes)
-		msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[master];ooc_notes=1'>\[View\]</a>\n"
-
-	user << msg
+		if(master.ooc_notes)
+			. += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[master];ooc_notes=1'>\[View\]</a>"

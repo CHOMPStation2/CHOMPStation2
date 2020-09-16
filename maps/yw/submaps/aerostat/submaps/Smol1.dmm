@@ -3,14 +3,14 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/Small1)
 "c" = (
 /turf/template_noop,
 /area/submap/virgo2/Small1)
 "d" = (
 /obj/cryogaia_away_spawner/aerostat_surface,
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/Small1)
 
 (1,1,1) = {"

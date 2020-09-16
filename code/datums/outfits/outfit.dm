@@ -87,7 +87,7 @@ var/list/outfits_decls_by_type_
 /decl/hierarchy/outfit/proc/equip(mob/living/carbon/human/H, var/rank, var/assignment)
 	equip_base(H)
 
-	rank = id_pda_assignment || rank
+	rank = rank || id_pda_assignment
 	assignment = id_pda_assignment || assignment || rank
 	var/obj/item/weapon/card/id/W = equip_id(H, rank, assignment)
 	if(W)
@@ -169,6 +169,8 @@ var/list/outfits_decls_by_type_
 		pda.ownjob = assignment
 		pda.ownrank = rank
 		pda.name = "PDA-[H.real_name] ([assignment])"
+		if(H.client.prefs.ttone) // YW Edit
+			pda.ttone = H.client.prefs.ttone
 		return pda
 
 /decl/hierarchy/outfit/dd_SortValue()

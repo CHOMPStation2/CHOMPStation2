@@ -5,10 +5,11 @@
 	shuttle_tag = "Shuttle 1"
 	req_access = list(access_pilot)
 
-/datum/shuttle/web_shuttle/shuttle1
+/datum/shuttle/autodock/web_shuttle/shuttle1
 	name = "Shuttle 1"
 	warmup_time = 0
-	current_area = /area/shuttle/shuttle1/start
+	shuttle_area = /area/shuttle/shuttle1/start
+	current_location = "hangar_1"
 	docking_controller_tag = "shuttle1_shuttle"
 	web_master_type = /datum/shuttle_web_master/shuttle1
 	autopilot = TRUE
@@ -25,7 +26,6 @@
 	start = /datum/shuttle_destination/shuttle1/root
 
 	path_nodes = list(
-		/datum/shuttle_destination/shuttle1/outside_SC,
 		/datum/shuttle_destination/shuttle1/sif_orbit,
 		/datum/shuttle_destination/shuttle1/sky,
 		/datum/shuttle_destination/shuttle1/main_base
@@ -37,7 +37,6 @@
 	path_nodes = list(
 		/datum/shuttle_destination/shuttle1/sky,
 		/datum/shuttle_destination/shuttle1/sif_orbit,
-		/datum/shuttle_destination/shuttle1/outside_SC,
 		/datum/shuttle_destination/shuttle1/root
 	)
 
@@ -48,10 +47,11 @@
 	shuttle_tag = "Shuttle 2"
 	req_access = list(access_pilot)
 
-/datum/shuttle/web_shuttle/shuttle2
+/datum/shuttle/autodock/web_shuttle/shuttle2
 	name = "Shuttle 2"
 	warmup_time = 0
-	current_area = /area/shuttle/shuttle2/start
+	shuttle_area = /area/shuttle/shuttle2/start
+	current_location = "hangar_2"
 	docking_controller_tag = "shuttle2_shuttle"
 	web_master_type = /datum/shuttle_web_master/shuttle2
 	autopilot = TRUE
@@ -68,7 +68,6 @@
 	start = /datum/shuttle_destination/shuttle2/root
 
 	path_nodes = list(
-		/datum/shuttle_destination/shuttle2/outside_SC,
 		/datum/shuttle_destination/shuttle2/sif_orbit,
 		/datum/shuttle_destination/shuttle2/sky,
 		/datum/shuttle_destination/shuttle2/main_base
@@ -80,7 +79,6 @@
 	path_nodes = list(
 		/datum/shuttle_destination/shuttle2/sky,
 		/datum/shuttle_destination/shuttle2/sif_orbit,
-		/datum/shuttle_destination/shuttle2/outside_SC,
 		/datum/shuttle_destination/shuttle2/root
 	)
 
@@ -88,47 +86,48 @@
 
 /datum/shuttle_destination/shuttle1/root
 	name = "Southern Cross Hangar One"
-	my_area = /area/shuttle/shuttle1/start
-	preferred_interim_area = /area/shuttle/shuttle1/transit
+	my_landmark = "hangar_1"
+	preferred_interim_tag = "shuttle1_transit"
 
-	dock_target = "hangar_1"
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle1/outside_SC = 0,
+		/datum/shuttle_destination/shuttle1/sif_orbit = 30 SECONDS,
+		/datum/shuttle_destination/shuttle1/docked_SC = 0
 	)
-
+/*
 /datum/shuttle_destination/shuttle1/root/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar One."
 
 /datum/shuttle_destination/shuttle1/root/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar One."
-
+*/
 /datum/shuttle_destination/shuttle2/root
 	name = "Southern Cross Hangar Two"
-	my_area = /area/shuttle/shuttle2/start
-	preferred_interim_area = /area/shuttle/shuttle2/transit
+	my_landmark = "hangar_2"
+	preferred_interim_tag = "shuttle2_transit"
 
-	dock_target = "hangar_2"
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle2/outside_SC = 0,
+		/datum/shuttle_destination/shuttle2/sif_orbit = 30 SECONDS,
+		/datum/shuttle_destination/shuttle2/docked_SC = 0
 	)
-
+/*
 /datum/shuttle_destination/shuttle2/root/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to Hangar Two."
 
 /datum/shuttle_destination/shuttle2/root/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed Hangar Two."
+*/
 
-
+/*
 /datum/shuttle_destination/shuttle1/outside_SC
 	name = "Outside of NLS Southern Cross"
-	my_area = /area/shuttle/shuttle1/seconddeck
-	preferred_interim_area = /area/shuttle/shuttle1/transit
+	my_landmark = "shuttle1_seconddeck"
+	preferred_interim_tag = "shuttle1_transit"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle1/sif_orbit = 25 SECONDS,
@@ -137,51 +136,51 @@
 
 /datum/shuttle_destination/shuttle2/outside_SC
 	name = "Outside of NLS Southern Cross"
-	my_area = /area/shuttle/shuttle2/seconddeck
-	preferred_interim_area = /area/shuttle/shuttle2/transit
+	my_landmark = "shuttle2_seconddeck"
+	preferred_interim_tag = "shuttle2_transit"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle2/sif_orbit = 25 SECONDS,
 		/datum/shuttle_destination/shuttle2/docked_SC = 0
 	)
-
+*/
 
 /datum/shuttle_destination/shuttle1/docked_SC
 	name = "Southern Cross Docking Port"
-	my_area = /area/shuttle/shuttle1/arrivals_dock
-	preferred_interim_area = /area/shuttle/shuttle1/transit
+	my_landmark = "shuttle1_arrivals_dock"
+	preferred_interim_tag = "shuttle1_transit"
 
-	dock_target = "shuttle1_dock_airlocksc"
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 
+/*
 /datum/shuttle_destination/shuttle1/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
 
 /datum/shuttle_destination/shuttle1/docked_SC/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Arrivals Dock."
-
+*/
 
 /datum/shuttle_destination/shuttle2/docked_SC
 	name = "Southern Cross Docking Port"
-	my_area = /area/shuttle/shuttle2/arrivals_dock
-	preferred_interim_area = /area/shuttle/shuttle2/transit
+	my_landmark = "shuttle2_arrivals_dock"
+	preferred_interim_tag = "shuttle2_transit"
 
-	dock_target = "shuttle2_dock_airlocksc"
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Southern Cross Docking Computer"
 
+/*
 /datum/shuttle_destination/shuttle2/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
 
 /datum/shuttle_destination/shuttle2/docked_SC/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Arrivals Dock."
-
+*/
 
 /datum/shuttle_destination/shuttle1/sif_orbit
 	name = "Sif Orbit"
-	my_area = /area/shuttle/shuttle1/orbit
-	preferred_interim_area = /area/shuttle/shuttle1/transit
+	my_landmark = "shuttle1_orbit"
+	preferred_interim_tag = "shuttle1_transit"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle1/sky = 25 SECONDS
@@ -189,8 +188,8 @@
 
 /datum/shuttle_destination/shuttle2/sif_orbit
 	name = "Sif Orbit"
-	my_area = /area/shuttle/shuttle2/orbit
-	preferred_interim_area = /area/shuttle/shuttle2/transit
+	my_landmark = "shuttle2_orbit"
+	preferred_interim_tag = "shuttle2_transit"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle2/sky = 25 SECONDS
@@ -199,8 +198,8 @@
 
 /datum/shuttle_destination/shuttle1/sky
 	name = "Skies of Sif"
-	my_area = /area/shuttle/shuttle1/sky
-	preferred_interim_area = /area/shuttle/shuttle1/sky_transit
+	my_landmark = "shuttle1_sky"
+	preferred_interim_tag = "shuttle1_sky_transit"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle1/main_base = 10 SECONDS,
@@ -209,8 +208,8 @@
 
 /datum/shuttle_destination/shuttle2/sky
 	name = "Skies of Sif"
-	my_area = /area/shuttle/shuttle2/sky
-	preferred_interim_area = /area/shuttle/shuttle2/sky_transit
+	my_landmark = "shuttle2_sky"
+	preferred_interim_tag = "shuttle2_sky_transit"
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle2/main_base = 10 SECONDS,
@@ -220,61 +219,60 @@
 
 /datum/shuttle_destination/shuttle1/main_base
 	name = "Main Outpost"
-	my_area = /area/shuttle/shuttle1/planet
-	preferred_interim_area = /area/shuttle/shuttle1/sky_transit
+	my_landmark = "shuttle1_planet"
+	preferred_interim_tag = "shuttle1_sky_transit"
 
-	dock_target = "surface_dock_1"
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
-
+/*
 /datum/shuttle_destination/shuttle1/main_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Main Outpost."
 
 /datum/shuttle_destination/shuttle1/main_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Main Outpost."
-
+*/
 /datum/shuttle_destination/shuttle2/main_base
 	name = "Main Outpost"
-	my_area = /area/shuttle/shuttle2/planet
-	preferred_interim_area = /area/shuttle/shuttle2/sky_transit
+	my_landmark = "shuttle2_planet"
+	preferred_interim_tag = "shuttle2_sky_transit"
 
-	dock_target = "surface_dock_2"
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
-
+/*
 /datum/shuttle_destination/shuttle2/main_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Main Outpost."
 
 /datum/shuttle_destination/shuttle2/main_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Main Outpost."
-
+*/
 
 /datum/shuttle_destination/shuttle1/mining_base
 	name = "Wilderness Landing Site"
-	my_area = /area/shuttle/shuttle1/mining
-	preferred_interim_area = /area/shuttle/shuttle1/sky_transit
+	// Note: Left area under this landmark as /area/shuttle/shuttle1/mining so it doesn't get seeded with POIs
+	my_landmark = "shuttle1_mining"
+	preferred_interim_tag = "shuttle1_sky_transit"
 
-	dock_target = "mining_dock_1"
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
-
+/*
 /datum/shuttle_destination/shuttle1/mining_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Wilderness Area."
 
 /datum/shuttle_destination/shuttle1/mining_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Wilderness Area."
-
+*/
 /datum/shuttle_destination/shuttle2/mining_base
 	name = "Wilderness Landing Site "
-	my_area = /area/shuttle/shuttle2/mining
-	preferred_interim_area = /area/shuttle/shuttle2/sky_transit
+	// Note: Left area under this landmark as /area/shuttle/shuttle2/mining so it doesn't get seeded with POIs
+	my_landmark = "shuttle2_mining"
+	preferred_interim_tag = "shuttle2_sky_transit"
 
-	dock_target = "mining_dock_2"
-	radio_announce = 1
+	radio_announce = 0
 	announcer = "Outpost Automated ATC"
-
+/*
 /datum/shuttle_destination/shuttle2/mining_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Wilderness Area."
 
 /datum/shuttle_destination/shuttle2/mining_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Wilderness Area."
+*/

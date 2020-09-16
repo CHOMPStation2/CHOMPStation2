@@ -22,16 +22,10 @@
 	pullin = null
 	purged = null
 	internals = null
-	oxygen = null
 	i_select = null
 	m_select = null
-	toxin = null
-	fire = null
-	bodytemp = null
 	healths = null
 	throw_icon = null
-	nutrition_icon = null
-	pressure = null
 	pain = null
 	item_use_icon = null
 	gun_move_icon = null
@@ -45,6 +39,7 @@
 		dead_mob_list += src
 	else
 		living_mob_list += src
+	lastarea = get_area(src)
 	hook_vr("mob_new",list(src)) //VOREStation Code
 	update_transform() // Some mobs may start bigger or smaller than normal.
 	return ..()
@@ -70,7 +65,7 @@
 					return
 	// Added voice muffling for Issue 41.
 	if(stat == UNCONSCIOUS || sleeping > 0)
-		to_chat(src,"<I>... You can almost hear someone talking ...</I>")
+		to_chat(src, "<I>... You can almost hear someone talking ...</I>")
 	else
 		to_chat(src,msg)
 		if(teleop)
@@ -146,9 +141,6 @@
 			return M
 	return 0
 
-/mob/proc/movement_delay(oldloc, direct)
-	return 0
-
 /mob/proc/Life()
 //	if(organStructure)
 //		organStructure.ProcessOrgans()
@@ -217,7 +209,7 @@
 			else
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
-	return
+		return TRUE
 
 
 /mob/proc/show_inv(mob/user as mob)
@@ -232,8 +224,15 @@
 		to_chat(src, "<span class='notice'>Something is there but you can't see it.</span>")
 		return 1
 
+	//Could be gone by the time they finally pick something
+	if(!A)
+		return 1
+
 	face_atom(A)
-	A.examine(src)
+	var/list/results = A.examine(src)
+	if(!results || !results.len)
+		results = list("You were unable to examine that. Tell a developer!")
+	to_chat(src, jointext(results, "<br>"))
 
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
 	set name = "Point To"
@@ -316,7 +315,7 @@
 /mob/proc/update_flavor_text()
 	set src in usr
 	if(usr != src)
-		usr << "No."
+		to_chat(usr, "No.")
 	var/msg = sanitize(input(usr,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text)) as message|null, extra = 0)	//VOREStation Edit: separating out OOC notes
 
 	if(msg != null)
@@ -330,10 +329,10 @@
 /mob/proc/print_flavor_text()
 	if (flavor_text && flavor_text != "")
 		var/msg = replacetext(flavor_text, "\n", " ")
-		if(lentext(msg) <= 40)
-			return "<font color='blue'>[msg]</font>"
+		if(length(msg) <= 40)
+			return "<span class='notice'>[msg]</span>"
 		else
-			return "<font color='blue'>[copytext_preserve_html(msg, 1, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</font></a>"
+			return "<span class='notice'>[copytext_preserve_html(msg, 1, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</span></a>"
 
 /*
 /mob/verb/help()
@@ -342,46 +341,56 @@
 	return
 */
 
+/mob/proc/set_respawn_timer(var/time)
+	// Try to figure out what time to use
+
+	// Special cases, can never respawn
+	if(ticker?.mode?.deny_respawn)
+		time = -1
+	else if(!config.abandon_allowed)
+		time = -1
+	else if(!config.respawn)
+		time = -1
+
+	// Special case for observing before game start
+	else if(ticker?.current_state <= GAME_STATE_SETTING_UP)
+		time = 1 MINUTE
+
+	// Wasn't given a time, use the config time
+	else if(!time)
+		time = config.respawn_time
+
+	var/keytouse = ckey
+	// Try harder to find a key to use
+	if(!keytouse && key)
+		keytouse = ckey(key)
+	else if(!keytouse && mind?.key)
+		keytouse = ckey(mind.key)
+
+	GLOB.respawn_timers[keytouse] = world.time + time
+
+/mob/observer/dead/set_respawn_timer()
+	if(config.antag_hud_restricted && has_enabled_antagHUD)
+		..(-1)
+	else
+		return // Don't set it, no need
+
 /mob/verb/abandon_mob()
-	set name = "Respawn"
+	set name = "Return to Menu"
 	set category = "OOC"
 
-	if (!( config.abandon_allowed ))
-		to_chat(usr, "<span class='notice'>Respawn is disabled.</span>")
-		return
-	if ((stat != 2 || !( ticker )))
+	if(stat != DEAD || !ticker)
 		to_chat(usr, "<span class='notice'><B>You must be dead to use this!</B></span>")
 		return
-	if (ticker.mode && ticker.mode.deny_respawn) //BS12 EDIT
-		to_chat(usr, "<span class='notice'>Respawn is disabled for this roundtype.</span>")
-		return
-	else
-		var/deathtime = world.time - src.timeofdeath
-		if(istype(src,/mob/observer/dead))
-			var/mob/observer/dead/G = src
-			if(G.has_enabled_antagHUD == 1 && config.antag_hud_restricted)
-				to_chat(usr, "<font color='blue'><B>By using the antagHUD you forfeit the ability to join the round.</B></font>")
-				return
-		var/deathtimeminutes = round(deathtime / 600)
-		var/pluralcheck = "minute"
-		if(deathtimeminutes == 0)
-			pluralcheck = ""
-		else if(deathtimeminutes == 1)
-			pluralcheck = " [deathtimeminutes] minute and"
-		else if(deathtimeminutes > 1)
-			pluralcheck = " [deathtimeminutes] minutes and"
-		var/deathtimeseconds = round((deathtime - deathtimeminutes * 600) / 10,1)
-		to_chat(usr, "You have been dead for[pluralcheck] [deathtimeseconds] seconds.")
 
-		if ((deathtime < (1 * 600)) && (ticker && ticker.current_state > GAME_STATE_PREGAME))	//VOREStation Edit: lower respawn timer
-			to_chat(usr, "You must wait 1 minute to respawn!")
+	// Final chance to abort "respawning"
+	if(mind && timeofdeath) // They had spawned before
+		var/choice = alert(usr, "Returning to the menu will prevent your character from being revived in-round. Are you sure?", "Confirmation", "No, wait", "Yes, leave")
+		if(choice == "No, wait")
 			return
-		else
-			to_chat(usr, "You can respawn now, enjoy your new life!")
 
-	log_game("[usr.name]/[usr.key] used abandon mob.")
-
-	to_chat(usr, "<font color='blue'><B>Make sure to play a different character, and please roleplay correctly!</B></font>")
+	// Beyond this point, you're going to respawn
+	to_chat(usr, config.respawn_message)
 
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
@@ -408,26 +417,6 @@
 /client/verb/changes()
 	set name = "Changelog"
 	set category = "OOC"
-	getFiles(
-		'html/88x31.png',
-		'html/bug-minus.png',
-		'html/cross-circle.png',
-		'html/hard-hat-exclamation.png',
-		'html/image-minus.png',
-		'html/image-plus.png',
-		'html/map-pencil.png',
-		'html/music-minus.png',
-		'html/music-plus.png',
-		'html/tick-circle.png',
-		'html/wrench-screwdriver.png',
-		'html/spell-check.png',
-		'html/burn-exclamation.png',
-		'html/chevron.png',
-		'html/chevron-expand.png',
-		'html/changelog.css',
-		'html/changelog.js',
-		'html/changelog.html'
-		)
 	src << browse('html/changelog.html', "window=changes;size=675x650")
 	if(prefs.lastchangelog != changelog_hash)
 		prefs.lastchangelog = changelog_hash
@@ -439,65 +428,35 @@
 	set category = "OOC"
 	var/is_admin = 0
 
-	if(client.holder && (client.holder.rights & R_ADMIN))
+	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
 		is_admin = 1
 	else if(stat != DEAD || istype(src, /mob/new_player))
-		usr << "<font color='blue'>You must be observing to use this!</font>"
+		to_chat(usr, "<font color='blue'>You must be observing to use this!</font>")
 		return
 
 	if(is_admin && stat == DEAD)
 		is_admin = 0
 
-	var/list/names = list()
-	var/list/namecounts = list()
-	var/list/creatures = list()
+	var/list/targets = list()
 
-	for(var/obj/O in world)				//EWWWWWWWWWWWWWWWWWWWWWWWW ~needs to be optimised
-		if(!O.loc)
-			continue
-		if(istype(O, /obj/item/weapon/disk/nuclear))
-			var/name = "Nuclear Disk"
-			if (names.Find(name))
-				namecounts[name]++
-				name = "[name] ([namecounts[name]])"
-			else
-				names.Add(name)
-				namecounts[name] = 1
-			creatures[name] = O
 
-		if(istype(O, /obj/singularity))
-			var/name = "Singularity"
-			if (names.Find(name))
-				namecounts[name]++
-				name = "[name] ([namecounts[name]])"
-			else
-				names.Add(name)
-				namecounts[name] = 1
-			creatures[name] = O
-
-	for(var/mob/M in sortAtom(mob_list))
-		var/name = M.name
-		if (names.Find(name))
-			namecounts[name]++
-			name = "[name] ([namecounts[name]])"
-		else
-			names.Add(name)
-			namecounts[name] = 1
-
-		creatures[name] = M
-
+	targets += observe_list_format(nuke_disks)
+	targets += observe_list_format(GLOB.all_singularities)
+	targets += getmobs()
+	targets += observe_list_format(sortAtom(mechas_list))
+	targets += observe_list_format(SSshuttles.ships)
 
 	client.perspective = EYE_PERSPECTIVE
 
 	var/eye_name = null
 
 	var/ok = "[is_admin ? "Admin Observe" : "Observe"]"
-	eye_name = input("Please, select a player!", ok, null, null) as null|anything in creatures
+	eye_name = input("Please, select a player!", ok, null, null) as null|anything in targets
 
 	if (!eye_name)
 		return
 
-	var/mob/mob_eye = creatures[eye_name]
+	var/mob/mob_eye = targets[eye_name]
 
 	if(client && mob_eye)
 		client.eye = mob_eye
@@ -528,15 +487,6 @@
 
 
 /mob/proc/pull_damage()
-	if(ishuman(src))
-		var/mob/living/carbon/human/H = src
-		if(H.health - H.halloss <= config.health_threshold_softcrit)
-			for(var/name in H.organs_by_name)
-				var/obj/item/organ/external/e = H.organs_by_name[name]
-				if(e && H.lying)
-					if((e.status & ORGAN_BROKEN && (!e.splinted || (e.splinted && e.splinted in e.contents && prob(30))) || e.status & ORGAN_BLEEDING) && (H.getBruteLoss() + H.getFireLoss() >= 100))
-						return 1
-						break
 	return 0
 
 /mob/MouseDrop(mob/M as mob)
@@ -660,7 +610,7 @@
 /mob/proc/see(message)
 	if(!is_active())
 		return 0
-	src << message
+	to_chat(src,message)
 	return 1
 
 /mob/proc/show_viewers(message)
@@ -685,10 +635,6 @@
 				stat("CPU:","[world.cpu]")
 				stat("Instances:","[world.contents.len]")
 				stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
-
-			if(statpanel("Processes"))
-				if(processScheduler)
-					processScheduler.statProcesses()
 
 			if(statpanel("MC"))
 				stat("Location:", "([x], [y], [z]) [loc]")
@@ -761,12 +707,12 @@
 
 
 /mob/proc/facedir(var/ndir)
-	if(!canface() || (client && (client.moving || (world.time < move_delay))))
+	if(!canface() || (client && (client.moving || !checkMoveCooldown())))
 		return 0
 	set_dir(ndir)
 	if(buckled && buckled.buckle_movable)
 		buckled.set_dir(ndir)
-	move_delay += movement_delay()
+	setMoveCooldown(movement_delay())
 	return 1
 
 
@@ -902,10 +848,10 @@
 	return
 
 /mob/proc/AdjustLosebreath(amount)
-	losebreath = CLAMP(0, losebreath + amount, 25)
+	losebreath = CLAMP(losebreath + amount, 0, 25)
 
 /mob/proc/SetLosebreath(amount)
-	losebreath = CLAMP(0, amount, 25)
+	losebreath = CLAMP(amount, 0, 25)
 
 /mob/proc/get_species()
 	return ""
@@ -929,16 +875,16 @@ mob/proc/yank_out_object()
 	set desc = "Remove an embedded item at the cost of bleeding and pain."
 	set src in view(1)
 
-	if(!isliving(usr) || !usr.canClick())
+	if(!isliving(usr) || !usr.checkClickCooldown())
 		return
 	usr.setClickCooldown(20)
 
 	if(usr.stat == 1)
-		usr << "You are unconcious and cannot do that!"
+		to_chat(usr, "You are unconcious and cannot do that!")
 		return
 
 	if(usr.restrained())
-		usr << "You are restrained and cannot do that!"
+		to_chat(usr, "You are restrained and cannot do that!")
 		return
 
 	var/mob/S = src
@@ -954,7 +900,7 @@ mob/proc/yank_out_object()
 		if(self)
 			to_chat(src, "You have nothing stuck in your body that is large enough to remove.")
 		else
-			U << "[src] has nothing stuck in their wounds that is large enough to remove."
+			to_chat(U, "[src] has nothing stuck in their wounds that is large enough to remove.")
 		return
 
 	var/obj/item/weapon/selection = input("What do you want to yank out?", "Embedded objects") in valid_objects
@@ -962,7 +908,7 @@ mob/proc/yank_out_object()
 	if(self)
 		to_chat(src, "<span class='warning'>You attempt to get a good grip on [selection] in your body.</span>")
 	else
-		U << "<span class='warning'>You attempt to get a good grip on [selection] in [S]'s body.</span>"
+		to_chat(U, "<span class='warning'>You attempt to get a good grip on [selection] in [S]'s body.</span>")
 
 	if(!do_after(U, 30))
 		return
@@ -976,6 +922,7 @@ mob/proc/yank_out_object()
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
 		src.verbs -= /mob/proc/yank_out_object
+		clear_alert("embeddedobject")
 
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
@@ -1027,6 +974,11 @@ mob/proc/yank_out_object()
 /mob/proc/updateicon()
 	return
 
+// Please always use this proc, never just set the var directly.
+/mob/proc/set_stat(var/new_stat)
+	. = (stat != new_stat)
+	stat = new_stat
+
 /mob/verb/face_direction()
 
 	set name = "Face Direction"
@@ -1036,9 +988,9 @@ mob/proc/yank_out_object()
 	set_face_dir()
 
 	if(!facing_dir)
-		usr << "You are now not facing anything."
+		to_chat(usr, "You are now not facing anything.")
 	else
-		usr << "You are now facing [dir2text(facing_dir)]."
+		to_chat(usr, "You are now facing [dir2text(facing_dir)].")
 
 /mob/proc/set_face_dir(var/newdir)
 	if(newdir == facing_dir)
@@ -1083,6 +1035,13 @@ mob/proc/yank_out_object()
 
 /mob/proc/setEarDamage()
 	return
+
+// Set client view distance (size of client's screen). Returns TRUE if anything changed.
+/mob/proc/set_viewsize(var/new_view = world.view)
+	if (client && new_view != client.view)
+		client.view = new_view
+		return TRUE
+	return FALSE
 
 //Throwing stuff
 
@@ -1208,6 +1167,49 @@ mob/proc/yank_out_object()
 		else
 			registered_z = null
 
+GLOBAL_LIST_EMPTY(living_players_by_zlevel)
+/mob/living/update_client_z(new_z)
+	var/precall_reg_z = registered_z
+	. = ..() // will update registered_z if necessary
+	if(precall_reg_z != registered_z) // parent did work, let's do work too
+		if(precall_reg_z)
+			GLOB.living_players_by_zlevel[precall_reg_z] -= src
+		if(registered_z)
+			GLOB.living_players_by_zlevel[registered_z] += src
+
 /mob/onTransitZ(old_z, new_z)
 	..()
 	update_client_z(new_z)
+
+/mob/cloak()
+	. = ..()
+	if(client && cloaked_selfimage)
+		client.images += cloaked_selfimage
+
+/mob/uncloak()
+	if(client && cloaked_selfimage)
+		client.images -= cloaked_selfimage
+	return ..()
+
+/mob/get_cloaked_selfimage()
+	var/icon/selficon = getCompoundIcon(src)
+	selficon.MapColors(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White
+	var/image/selfimage = image(selficon)
+	selfimage.color = "#0000FF"
+	selfimage.alpha = 100
+	selfimage.layer = initial(layer)
+	selfimage.plane = initial(plane)
+	selfimage.loc = src
+
+	return selfimage
+
+/mob/proc/GetAltName()
+	return ""
+
+/mob/proc/get_ghost(even_if_they_cant_reenter = 0)
+	if(mind)
+		return mind.get_ghost(even_if_they_cant_reenter)
+
+/mob/proc/grab_ghost(force)
+	if(mind)
+		return mind.grab_ghost(force = force)

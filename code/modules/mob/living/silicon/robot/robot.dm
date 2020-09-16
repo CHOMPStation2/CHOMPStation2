@@ -34,7 +34,6 @@
 
 //Hud stuff
 
-	var/obj/screen/cells = null
 	var/obj/screen/inv1 = null
 	var/obj/screen/inv2 = null
 	var/obj/screen/inv3 = null
@@ -125,7 +124,7 @@
 		camera = new /obj/machinery/camera(src)
 		camera.c_tag = real_name
 		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
-		if(wires.IsIndexCut(BORG_WIRE_CAMERA))
+		if(wires.is_cut(WIRE_BORG_CAMERA))
 			camera.status = 0
 
 	init()
@@ -259,9 +258,10 @@
 	if(module)
 		return
 	var/list/modules = list()
-	//VOREStatation Edit Start: shell restrictions
+	//VOREStatation Edit Start: shell restrictions //CHOMPstaton change to blacklist
 	if(shell)
-		modules.Add(shell_module_types)
+		modules.Add(robot_module_types)
+		modules.Remove(shell_module_blacklist)
 	else
 		modules.Add(robot_module_types)
 		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
@@ -537,7 +537,7 @@
 				to_chat(user, "You close the cover.")
 				opened = 0
 				updateicon()
-			else if(wiresexposed && wires.IsAllCut())
+			else if(wiresexposed && wires.is_all_cut())
 				//Cell is out, wires are exposed, remove MMI, produce damaged chassis, baleet original mob.
 				if(!mmi)
 					to_chat(user, "\The [src] has no brain to remove.")
@@ -685,12 +685,34 @@
 
 	add_fingerprint(user)
 
+
+	//YW changes, adding borg petting.  Help intent pets, Disarm intent taps, Grab should remove the battery for replacement, and Harm is punching(no damage)
 	if(istype(user,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
-		if(H.species.can_shred(H))
-			attack_generic(H, rand(30,50), "slashed")
-			return
-
+		//VOREStation Removal
+		//if(H.species.can_shred(H))
+		//	attack_generic(H, rand(30,50), "slashed")
+		//	return
+		//VOREStation Edit: Adding borg petting.  Help intent pets, Disarm intent taps, Grab should remove the battery for replacement, and Harm is punching(no damage)
+		switch(H.a_intent)
+			if(I_HELP)
+				visible_message("<span class='notice'>[H] pets [src].</span>")
+				return
+			if(I_HURT)
+				H.do_attack_animation(src)
+				if(H.species.can_shred(H))
+					attack_generic(H, rand(30,50), "slashed")
+					return
+				else
+					playsound(src, 'sound/effects/bang.ogg', 10, 1)
+					visible_message("<span class='warning'>[H] punches [src], but doesn't leave a dent.</span>")
+					return
+			if(I_DISARM)
+				H.do_attack_animation(src)
+				playsound(src, 'sound/effects/clang1.ogg', 10, 1)
+				visible_message("<span class='warning'>[H] taps [src].</span>")
+				return
+		//VOREStation Edit: Addition of borg petting end
 	if(opened && !wiresexposed && (!istype(user, /mob/living/silicon)))
 		var/datum/robot_component/cell_component = components["power cell"]
 		if(cell)
@@ -883,57 +905,6 @@
 /mob/living/silicon/robot/proc/radio_menu()
 	radio.interact(src)//Just use the radio's Topic() instead of bullshit special-snowflake code
 
-
-/mob/living/silicon/robot/Move(a, b, flag)
-
-	. = ..()
-
-	if(module)
-		if(module.type == /obj/item/weapon/robot_module/robot/janitor)
-			var/turf/tile = loc
-			if(isturf(tile))
-				tile.clean_blood()
-				if (istype(tile, /turf/simulated))
-					var/turf/simulated/S = tile
-					S.dirt = 0
-				for(var/A in tile)
-					if(istype(A, /obj/effect))
-						if(istype(A, /obj/effect/rune) || istype(A, /obj/effect/decal/cleanable) || istype(A, /obj/effect/overlay))
-							qdel(A)
-					else if(istype(A, /obj/item))
-						var/obj/item/cleaned_item = A
-						cleaned_item.clean_blood()
-					else if(istype(A, /mob/living/carbon/human))
-						var/mob/living/carbon/human/cleaned_human = A
-						if(cleaned_human.lying)
-							if(cleaned_human.head)
-								cleaned_human.head.clean_blood()
-								cleaned_human.update_inv_head(0)
-							if(cleaned_human.wear_suit)
-								cleaned_human.wear_suit.clean_blood()
-								cleaned_human.update_inv_wear_suit(0)
-							else if(cleaned_human.w_uniform)
-								cleaned_human.w_uniform.clean_blood()
-								cleaned_human.update_inv_w_uniform(0)
-							if(cleaned_human.shoes)
-								cleaned_human.shoes.clean_blood()
-								cleaned_human.update_inv_shoes(0)
-							cleaned_human.clean_blood(1)
-							cleaned_human << "<font color='red'>[src] cleans your face!</font>"
-
-		if((module_state_1 && istype(module_state_1, /obj/item/weapon/storage/bag/ore)) || (module_state_2 && istype(module_state_2, /obj/item/weapon/storage/bag/ore)) || (module_state_3 && istype(module_state_3, /obj/item/weapon/storage/bag/ore))) //Borgs and drones can use their mining bags ~automagically~ if they're deployed in a slot. Only mining bags, as they're optimized for mass use.
-			var/obj/item/weapon/storage/bag/ore/B = null
-			if(istype(module_state_1, /obj/item/weapon/storage/bag/ore)) //First orebag has priority, if they for some reason have multiple.
-				B = module_state_1
-			else if(istype(module_state_2, /obj/item/weapon/storage/bag/ore))
-				B = module_state_2
-			else if(istype(module_state_3, /obj/item/weapon/storage/bag/ore))
-				B = module_state_3
-			var/turf/tile = loc
-			if(isturf(tile))
-				B.gather_all(tile, src, 1) //Shhh, unless the bag fills, don't spam the borg's chat with stuff that's going on every time they move!
-		return
-
 /mob/living/silicon/robot/proc/self_destruct()
 	gib()
 	return
@@ -959,26 +930,26 @@
 
 	if(R)
 		R.UnlinkSelf()
-		R << "Buffers flushed and reset. Camera system shutdown.  All systems operational."
+		to_chat(R, "Buffers flushed and reset. Camera system shutdown.  All systems operational.")
 		src.verbs -= /mob/living/silicon/robot/proc/ResetSecurityCodes
 
 /mob/living/silicon/robot/proc/SetLockdown(var/state = 1)
 	// They stay locked down if their wire is cut.
-	if(wires.LockedCut())
+	if(wires.is_cut(WIRE_BORG_LOCKED))
 		state = 1
+	if(state)
+		throw_alert("locked", /obj/screen/alert/locked)
+	else
+		clear_alert("locked")
 	lockdown = state
 	lockcharge = state
 	update_canmove()
 
 /mob/living/silicon/robot/mode()
-	set name = "Activate Held Object"
-	set category = "IC"
-	set src = usr
-
-	if(world.time <= next_click) // Hard check, before anything else, to avoid crashing
+	if(!checkClickCooldown())
 		return
 
-	next_click = world.time + 1
+	setClickCooldown(1)
 
 	var/obj/item/W = get_active_hand()
 	if (W)
@@ -1068,14 +1039,14 @@
 		return // No point annoying the AI/s about renames and module resets for shells.
 	switch(notifytype)
 		if(ROBOT_NOTIFICATION_NEW_UNIT) //New Robot
-			connected_ai << "<br><br><span class='notice'>NOTICE - New [lowertext(braintype)] connection detected: <a href='byond://?src=\ref[connected_ai];track2=\ref[connected_ai];track=\ref[src]'>[name]</a></span><br>"
+			to_chat(connected_ai, "<br><br><span class='notice'>NOTICE - New [lowertext(braintype)] connection detected: <a href='byond://?src=\ref[connected_ai];track2=\ref[connected_ai];track=\ref[src]'>[name]</a></span><br>")
 		if(ROBOT_NOTIFICATION_NEW_MODULE) //New Module
-			connected_ai << "<br><br><span class='notice'>NOTICE - [braintype] module change detected: [name] has loaded the [first_arg].</span><br>"
+			to_chat(connected_ai, "<br><br><span class='notice'>NOTICE - [braintype] module change detected: [name] has loaded the [first_arg].</span><br>")
 		if(ROBOT_NOTIFICATION_MODULE_RESET)
-			connected_ai << "<br><br><span class='notice'>NOTICE - [braintype] module reset detected: [name] has unloaded the [first_arg].</span><br>"
+			to_chat(connected_ai, "<br><br><span class='notice'>NOTICE - [braintype] module reset detected: [name] has unloaded the [first_arg].</span><br>")
 		if(ROBOT_NOTIFICATION_NEW_NAME) //New Name
 			if(first_arg != second_arg)
-				connected_ai << "<br><br><span class='notice'>NOTICE - [braintype] reclassification detected: [first_arg] is now designated as [second_arg].</span><br>"
+				to_chat(connected_ai, "<br><br><span class='notice'>NOTICE - [braintype] reclassification detected: [first_arg] is now designated as [second_arg].</span><br>")
 		if(ROBOT_NOTIFICATION_AI_SHELL) //New Shell
 			to_chat(connected_ai, "<br><br><span class='notice'>NOTICE - New AI shell detected: <a href='?src=[REF(connected_ai)];track2=[html_encode(name)]'>[name]</a></span><br>")
 
@@ -1172,3 +1143,19 @@
 	if(module_active && istype(module_active,/obj/item/weapon/gripper))
 		var/obj/item/weapon/gripper/G = module_active
 		G.drop_item_nm()
+
+/mob/living/silicon/robot/disable_spoiler_vision()
+	if(sight_mode & (BORGMESON|BORGMATERIAL|BORGXRAY)) // Whyyyyyyyy have seperate defines.
+		var/i = 0
+		// Borg inventory code is very . . interesting and as such, unequiping a specific item requires jumping through some (for) loops.
+		var/current_selection_index = get_selected_module() // Will be 0 if nothing is selected.
+		for(var/thing in list(module_state_1, module_state_2, module_state_3))
+			i++
+			if(istype(thing, /obj/item/borg/sight))
+				var/obj/item/borg/sight/S = thing
+				if(S.sight_mode & (BORGMESON|BORGMATERIAL|BORGXRAY))
+					select_module(i)
+					uneq_active()
+
+		if(current_selection_index) // Select what the player had before if possible.
+			select_module(current_selection_index)

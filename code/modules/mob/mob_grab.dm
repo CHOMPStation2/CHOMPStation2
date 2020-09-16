@@ -174,7 +174,12 @@
 				assailant.visible_message("<span class='warning'>[assailant] covers [affecting]'s eyes!</span>")
 			if(affecting.eye_blind < 3)
 				affecting.Blind(3)
-
+		//TFF 8/1/20 CHOMPStation Addition Start - Re-add sitting on one's head.
+		if(BP_HEAD)
+			if(force_down)
+				if(announce)
+					assailant.visible_message("<span class='warning'>[assailant] sits on [target]'s head!</span>")
+		//CHOMPStation Addition End
 /obj/item/weapon/grab/attack_self()
 	return s_click(hud)
 
@@ -233,8 +238,6 @@
 		return
 	if(state == GRAB_UPGRADING)
 		return
-	if(!assailant.canClick())
-		return
 	if(world.time < (last_action + UPGRADE_COOLDOWN))
 		return
 	if(!assailant.canmove || assailant.lying)
@@ -257,9 +260,10 @@
 		state = GRAB_AGGRESSIVE
 		icon_state = "grabbed1"
 		hud.icon_state = "reinforce1"
+		add_attack_logs(assailant, affecting, "Aggressively grabbed", FALSE) // Not important enough to notify admins, but still helpful.
 	else if(state < GRAB_NECK)
 		if(isslime(affecting))
-			assailant << "<span class='notice'>You squeeze [affecting], but nothing interesting happens.</span>"
+			to_chat(assailant, "<span class='notice'>You squeeze [affecting], but nothing interesting happens.</span>")
 			return
 
 		assailant.visible_message("<span class='warning'>[assailant] has reinforced [TU.his] grip on [affecting] (now neck)!</span>")
@@ -315,7 +319,7 @@
 			switch(assailant.a_intent)
 				if(I_HELP)
 					if(force_down)
-						assailant << "<span class='warning'>You are no longer pinning [affecting] to the ground.</span>"
+						to_chat(assailant, "<span class='warning'>You are no longer pinning [affecting] to the ground.</span>")
 						force_down = 0
 						return
 					if(state >= GRAB_AGGRESSIVE)

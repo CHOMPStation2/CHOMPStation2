@@ -26,17 +26,15 @@
 	return
 
 /obj/item/weapon/storage/fancy/examine(mob/user)
-	if(!..(user, 1))
-		return
+	. = ..()
 
-	if(contents.len <= 0)
-		user << "There are no [icon_type]s left in the box."
-	else if(contents.len == 1)
-		user << "There is one [icon_type] left in the box."
-	else
-		user << "There are [contents.len] [icon_type]s in the box."
-
-	return
+	if(Adjacent(user))
+		if(!contents.len)
+			. += "There are no [icon_type]s left in the box."
+		else if(contents.len == 1)
+			. += "There is one [icon_type] left in the box."
+		else
+			. += "There are [contents.len] [icon_type]s in the box."
 
 /*
  * Egg Box
@@ -47,6 +45,7 @@
 	icon_state = "eggbox"
 	icon_type = "egg"
 	name = "egg box"
+	center_of_mass = list("x" = 16,"y" = 7)
 	storage_slots = 12
 	can_hold = list(
 		/obj/item/weapon/reagent_containers/food/snacks/egg,
@@ -210,7 +209,7 @@
 	throwforce = 2
 	slot_flags = SLOT_BELT
 	storage_slots = 6
-	can_hold = list(/obj/item/clothing/mask/smokable/cigarette, /obj/item/weapon/flame/lighter, /obj/item/weapon/cigbutt)
+	can_hold = list(/obj/item/clothing/mask/smokable/cigarette, /obj/item/weapon/flame/lighter, /obj/item/trash/cigbutt)
 	icon_type = "cigarette"
 	starts_with = list(/obj/item/clothing/mask/smokable/cigarette = 6)
 	var/brand = "\improper Trans-Stellar Duty-free"
@@ -245,7 +244,7 @@
 		var/obj/item/clothing/mask/smokable/cigarette/cig = locate() in src
 
 		if(cig == null)
-			user << "<span class='notice'>Looks like the packet is out of cigarettes.</span>"
+			to_chat(user, "<span class='notice'>Looks like the packet is out of cigarettes.</span>")
 			return
 
 		// Instead of running equip_to_slot_if_possible() we check here first,
@@ -259,7 +258,7 @@
 		user.equip_to_slot(cig, slot_wear_mask)
 
 		reagents.maximum_volume = 15 * contents.len
-		user << "<span class='notice'>You take a cigarette out of the pack.</span>"
+		to_chat(user, "<span class='notice'>You take a cigarette out of the pack.</span>")
 		update_icon()
 	else
 		..()
@@ -317,7 +316,7 @@
 	throwforce = 2
 	slot_flags = SLOT_BELT
 	storage_slots = 7
-	can_hold = list(/obj/item/clothing/mask/smokable/cigarette/cigar, /obj/item/weapon/cigbutt/cigarbutt)
+	can_hold = list(/obj/item/clothing/mask/smokable/cigarette/cigar, /obj/item/trash/cigbutt/cigarbutt)
 	icon_type = "cigar"
 	starts_with = list(/obj/item/clothing/mask/smokable/cigarette/cigar = 7)
 
@@ -357,6 +356,7 @@
 	icon_state = "vialbox6"
 	icon_type = "vial"
 	name = "vial storage box"
+	desc = "A helpful rack to hold test tubes."
 	storage_slots = 6
 	can_hold = list(/obj/item/weapon/reagent_containers/glass/beaker/vial)
 	starts_with = list(/obj/item/weapon/reagent_containers/glass/beaker/vial = 6)

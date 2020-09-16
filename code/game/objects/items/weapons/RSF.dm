@@ -8,8 +8,8 @@ RSF
 	name = "\improper Rapid-Service-Fabricator"
 	desc = "A device used to rapidly deploy service items."
 	description_info = "Control Clicking on the device will allow you to choose the glass it dispenses when in the proper mode."
-	icon = 'icons/obj/tools.dmi'
-	icon_state = "rcd"
+	icon = 'icons/obj/tools_vr.dmi' //VOREStation Edit
+	icon_state = "rsf" //VOREStation Edit
 	opacity = 0
 	density = 0
 	anchored = 0.0
@@ -33,8 +33,9 @@ RSF
 	w_class = ITEMSIZE_NORMAL
 
 /obj/item/weapon/rsf/examine(mob/user)
-	if(..(user, 0))
-		to_chat(user,"<span class='notice'>It currently holds [stored_matter]/30 fabrication-units.</span>")
+	. = ..()
+	if(get_dist(user, src) == 0)
+		. += "<span class='notice'>It currently holds [stored_matter]/30 fabrication-units.</span>"
 
 /obj/item/weapon/rsf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	..()
@@ -47,7 +48,7 @@ RSF
 		qdel(W)
 
 		stored_matter += 10
-		playsound(src.loc, 'sound/machines/click.ogg', 10, 1)
+		playsound(src, 'sound/machines/click.ogg', 10, 1)
 		to_chat(user,"<span class='notice'>The RSF now holds [stored_matter]/30 fabrication-units.</span>")
 		return
 
@@ -63,26 +64,30 @@ RSF
 		glasstype = /obj/item/weapon/reagent_containers/food/drinks/metaglass
 
 /obj/item/weapon/rsf/attack_self(mob/user as mob)
-	playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
+	playsound(src, 'sound/effects/pop.ogg', 50, 0)
 	if (mode == 1)
 		mode = 2
 		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Container'.</span>")
 		return
-	if (mode == 2)
+	if(mode == 2)
 		mode = 3
-		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Paper'</span>")
+		to_chat(user,"Changed dispensing mode to 'Metamorphic Glass: Pint'") //YW Changes begin
 		return
-	if (mode == 3)
+	if(mode == 3)
 		mode = 4
-		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Pen'</span>")
+		to_chat(user,"Changed dispensing mode to 'Paper'")
 		return
-	if (mode == 4)
+	if(mode == 4)
 		mode = 5
-		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Dice Pack'</span>")
+		to_chat(user,"Changed dispensing mode to 'Pen'")
 		return
-	if (mode == 5)
+	if(mode == 5)
+		mode = 6
+		to_chat(user,"Changed dispensing mode to 'Dice Pack'")
+		return
+	if(mode == 6)
 		mode = 1
-		to_chat(user,"<span class='notice'>Changed dispensing mode to 'Cigarette'</span>")
+		to_chat(user,"Changed dispensing mode to 'Cigarette'") // YW Changes end
 		return
 
 /obj/item/weapon/rsf/afterattack(atom/A, mob/user as mob, proximity)
@@ -100,7 +105,7 @@ RSF
 	if(!istype(A, /obj/structure/table) && !istype(A, /turf/simulated/floor))
 		return
 
-	playsound(src.loc, 'sound/machines/click.ogg', 10, 1)
+	playsound(src, 'sound/machines/click.ogg', 10, 1)
 	var/used_energy = 0
 	var/obj/product
 
@@ -112,12 +117,15 @@ RSF
 			product = new glasstype()
 			used_energy = 50
 		if(3)
+			product = new /obj/item/weapon/reagent_containers/food/drinks/metaglass()	//YW Changes begin
+			used_energy = 50
+		if(4)
 			product = new /obj/item/weapon/paper()
 			used_energy = 10
-		if(4)
+		if(5)
 			product = new /obj/item/weapon/pen()
 			used_energy = 50
-		if(5)
+		if(6) 																			//YW Changes end
 			product = new /obj/item/weapon/storage/pill_bottle/dice()
 			used_energy = 200
 

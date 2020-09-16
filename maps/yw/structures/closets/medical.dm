@@ -5,12 +5,7 @@
 
 /obj/structure/closet/secure_closet/CMO_wardrobe
 	name = "chief medical officer's locker"
-	icon_state = "cmosecure1"
-	icon_closed = "cmosecure"
-	icon_locked = "cmosecure1"
-	icon_opened = "cmosecureopen"
-	icon_broken = "cmosecurebroken"
-	icon_off = "cmosecureoff"
+	closet_appearance = /decl/closet_appearance/secure_closet/cmo
 	req_access = list(access_cmo)
 
 	starts_with = list(

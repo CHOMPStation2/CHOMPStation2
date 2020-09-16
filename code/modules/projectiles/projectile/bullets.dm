@@ -1,5 +1,6 @@
 /obj/item/projectile/bullet
 	name = "bullet"
+	icon = 'icons/obj/projectiles_yw.dmi' //YWEdit, uses our bullet sprites
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/Gunshot4.ogg'
 	damage = 60
@@ -8,6 +9,8 @@
 	check_armour = "bullet"
 	embed_chance = 20	//Modified in the actual embed process, but this should keep embed chance about the same
 	sharp = 1
+	hitsound_wall = "ricochet"
+	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	var/mob_passthrough_check = 0
 
 	muzzle_type = /obj/effect/projectile/muzzle/bullet
@@ -113,6 +116,7 @@
 
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
+	icon_state = "bullet_chonk" //Ywedit
 	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
 	damage = 50
 	armor_penetration = 15
@@ -214,6 +218,20 @@
 	armor_penetration = 80
 	hitscan = 1 //so the PTR isn't useless as a sniper weapon
 
+	icon_state = "bullet_alt"
+	tracer_type = /obj/effect/projectile/tracer/cannon
+
+/obj/item/projectile/bullet/rifle/a145/highvel
+	damage = 50
+	stun = 1
+	weaken = 0
+	penetrating = 15
+	armor_penetration = 90
+
+/obj/item/projectile/bullet/rifle/a44rifle
+	fire_sound = 'sound/weapons/gunshot4.ogg'
+	damage = 50
+
 /* Miscellaneous */
 
 /obj/item/projectile/bullet/suffocationbullet//How does this even work?
@@ -245,7 +263,7 @@
 	icon_state = "bullet_alt"
 	damage = 15
 	damage_type = BURN
-	incendiary = 1
+	incendiary = 0.5
 	flammability = 2
 
 /obj/item/projectile/bullet/incendiary/flamethrower
@@ -261,8 +279,19 @@
 	vacuum_traversal = 0
 
 /obj/item/projectile/bullet/incendiary/flamethrower/large
-	damage = 15
+	damage = 5
+	incendiary = 3
+	flammability = 2
 	range = 6
+
+/obj/item/projectile/bullet/incendiary/flamethrower/tiny
+	damage = 2
+	incendiary = 0
+	flammability = 2
+	modifier_type_to_apply = /datum/modifier/fire/stack_managed/weak
+	modifier_duration = 20 SECONDS
+	range = 6
+	agony = 0
 
 /* Practice rounds and blanks */
 

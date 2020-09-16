@@ -1,7 +1,7 @@
 /mob/living/simple_mob/animal/passive/mouse
 	nutrition = 20	//To prevent draining maint mice for infinite food. Low nutrition has no mechanical effect on simplemobs, so wont hurt mice themselves.
 
-	no_vore = 1 //Mice can't eat others due to the amount of bugs caused by it.
+	no_vore = TRUE //Mice can't eat others due to the amount of bugs caused by it.
 	vore_taste = "cheese"
 
 	can_pull_size = ITEMSIZE_TINY // Rykka - Uncommented these. Not sure why they were commented out in the original Polaris files, maybe a mob rework mistake?
@@ -9,25 +9,25 @@
 
 	desc = "A small rodent, often seen hiding in maintenance areas and making a nuisance of itself. And stealing cheese, or annoying the chef. SQUEAK! <3"
 
-	size_multiplier = 0.25
-	movement_cooldown = 1 //roughly half the speed of a person
+	movement_cooldown = 5
 	universal_understand = 1
 
 /mob/living/simple_mob/animal/passive/mouse/attack_hand(mob/living/L)
-	if(L.a_intent == I_HELP) //if lime intent
+	if(L.a_intent == I_HELP && !istype(loc, /obj/item/weapon/holder)) //if lime intent and not in a holder already
 		if(!src.attempt_to_scoop(L)) //the superior way to handle scooping, checks size
 			..() //mouse too big to grab? pet the large mouse instead
 	else
 		..()
 
+//No longer in use, as mice create a holder/micro object instead
 /obj/item/weapon/holder/mouse/attack_self(var/mob/U)
 	for(var/mob/living/simple_mob/M in src.contents)
-		if((I_HELP) && U.canClick()) //a little snowflakey, but makes it use the same cooldown as interacting with non-inventory objects
+		if((I_HELP) && U.checkClickCooldown()) //a little snowflakey, but makes it use the same cooldown as interacting with non-inventory objects
 			U.setClickCooldown(U.get_attack_speed()) //if there's a cleaner way in baycode, I'll change this
 			U.visible_message("<span class='notice'>[U] [M.response_help] \the [M].</span>")
 
 
-/mob/living/simple_mob/animal/passive/mouse/MouseDrop(var/obj/O) //this proc would be very easy to apply to all mobs with holders
+/mob/living/simple_mob/animal/passive/mouse/MouseDrop(var/obj/O) //this proc would be very easy to apply to all mobs, holders generate dynamically
 	if(!(usr == src || O))
 		return ..()
 	if(istype(O, /mob/living) && O.Adjacent(src)) //controls scooping by mobs
@@ -50,8 +50,3 @@
 			return 0
 	else
 		..()
-
-/mob/living/simple_mob/animal/passive/mouse/resize(var/new_size, var/animate = TRUE)
-	size_multiplier = max(size_multiplier + 0.75, 1) //keeps sprite sizes consistent, keeps multiplier values low
-	..()
-	size_multiplier = max(size_multiplier - 0.75, 0.25) //the limits here ensure no negative values or infinite shrinkage

@@ -1,6 +1,6 @@
 #define RECOMMENDED_VERSION 501
 /world/New()
-	world.log << "Map Loading Complete"
+	to_world_log("Map Loading Complete")
 	//logs
 	//VOREStation Edit Start
 	log_path += time2text(world.realtime, "YYYY/MM-Month/DD-Day/round-hh-mm-ss")
@@ -13,7 +13,10 @@
 	changelog_hash = md5('html/changelog.html')					//used for telling if the changelog has changed recently
 
 	if(byond_version < RECOMMENDED_VERSION)
-		world.log << "Your server's byond version does not meet the recommended requirements for this server. Please update BYOND"
+		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
+
+	TgsNew()
+	VgsNew() // VOREStation Edit - VGS
 
 	config.post_load()
 
@@ -25,9 +28,10 @@
 	// if(config && config.log_runtime)
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
-	GLOB.timezoneOffset = text2num(time2text(0,"hh")) * 36000
+	GLOB.timezoneOffset = get_timezone_offset()
 
 	callHook("startup")
+	init_vchat()
 	//Emergency Fix
 	load_mods()
 	//end-emergency fix
@@ -59,12 +63,9 @@
 	//Must be done now, otherwise ZAS zones and lighting overlays need to be recreated.
 	//createRandomZlevel()	//VOREStation Removal: Deprecated
 
-	processScheduler = new
 	master_controller = new /datum/controller/game_controller()
 
-	processScheduler.deferSetupFor(/datum/controller/process/ticker)
-	processScheduler.setup()
-	Master.Initialize(10, FALSE)
+	Master.Initialize(10, FALSE, TRUE)
 
 	spawn(1)
 		master_controller.setup()
@@ -84,6 +85,8 @@ var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
+	TGS_TOPIC
+	VGS_TOPIC // VOREStation Edit - VGS
 	log_topic("\"[T]\", from:[addr], master:[master], key:[key]")
 
 	if (T == "ping")
@@ -105,6 +108,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		s["version"] = game_version
 		s["mode"] = master_mode
 		s["respawn"] = config.abandon_allowed
+		s["persistance"] = config.persistence_enabled
 		s["enter"] = config.enter_allowed
 		s["vote"] = config.allow_vote_mode
 		s["ai"] = config.allow_ai
@@ -153,15 +157,15 @@ var/world_topic_spam_protect_time = world.timeofday
 	else if(T == "manifest")
 		var/list/positions = list()
 		var/list/set_names = list(
-				"heads" = command_positions,
-				"sec" = security_positions,
-				"eng" = engineering_positions,
-				"med" = medical_positions,
-				"sci" = science_positions,
-				"car" = cargo_positions,
-				"pla" = planet_positions, //VOREStation Edit,
-				"civ" = civilian_positions,
-				"bot" = nonhuman_positions
+				"heads" = SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND),
+				"sec" = SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY),
+				"eng" = SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING),
+				"med" = SSjob.get_job_titles_in_department(DEPARTMENT_MEDICAL),
+				"sci" = SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH),
+				"car" = SSjob.get_job_titles_in_department(DEPARTMENT_CARGO),
+				"pla" = SSjob.get_job_titles_in_department(DEPARTMENT_PLANET), //VOREStation Add,
+				"civ" = SSjob.get_job_titles_in_department(DEPARTMENT_CIVILIAN),
+				"bot" = SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)
 			)
 
 		for(var/datum/data/record/t in data_core.general)
@@ -180,6 +184,17 @@ var/world_topic_spam_protect_time = world.timeofday
 				if(!positions["misc"])
 					positions["misc"] = list()
 				positions["misc"][name] = rank
+
+		for(var/datum/data/record/t in data_core.hidden_general)
+			var/name = t.fields["name"]
+			var/rank = t.fields["rank"]
+			var/real_rank = make_list_rank(t.fields["real_rank"])
+
+			var/datum/job/J = SSjob.get_job(real_rank)
+			if(J?.offmap_spawn)
+				if(!positions["off"])
+					positions["off"] = list()
+				positions["off"][name] = rank
 
 		// Synthetics don't have actual records, so we will pull them from here.
 		for(var/mob/living/silicon/ai/ai in mob_list)
@@ -202,8 +217,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		return list2params(positions)
 
 	else if(T == "revision")
-		if(revdata.revision)
-			return list2params(list(branch = revdata.branch, date = revdata.date, revision = revdata.revision))
+		if(GLOB.revdata.revision)
+			return list2params(list(branch = GLOB.revdata.branch, date = GLOB.revdata.date, revision = GLOB.revdata.revision))
 		else
 			return "unknown"
 
@@ -329,12 +344,12 @@ var/world_topic_spam_protect_time = world.timeofday
 		C.irc_admin = input["sender"]
 
 		C << 'sound/effects/adminhelp.ogg'
-		C << message
+		to_chat(C,message)
 
 
-		for(var/client/A in admins)
+		for(var/client/A in GLOB.admins)
 			if(A != C)
-				A << amessage
+				to_chat(A,amessage)
 
 		return "Message Successful"
 
@@ -390,17 +405,18 @@ var/world_topic_spam_protect_time = world.timeofday
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")
 			message_admins("[key_name_admin(usr)] Has requested an immediate world restart via client side debugging tools")
-			world << "<span class='boldannounce'>[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools</span>"
+			to_world("<span class='boldannounce'>[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools</span>")
 
 		else
-			world << "<span class='boldannounce'>Rebooting world immediately due to host request</span>"
+			to_world("<span class='boldannounce'>Rebooting world immediately due to host request</span>")
 	else
-		processScheduler.stop()
 		Master.Shutdown()	//run SS shutdowns
+		//processScheduler.stop() //VOREStation Removal
 		for(var/client/C in GLOB.clients)
 			if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 				C << link("byond://[config.server]")
 
+	TgsReboot()
 	log_world("World rebooted at [time_stamp()]")
 	..()
 
@@ -513,6 +529,8 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	features += config.abandon_allowed ? "respawn" : "no respawn"
 
+	features += config.persistence_enabled ? "persistence enabled" : "persistence disabled"
+
 	if (config && config.allow_vote_mode)
 		features += "vote"
 
@@ -546,11 +564,11 @@ var/failed_old_db_connections = 0
 
 /hook/startup/proc/connectDB()
 	if(!config.sql_enabled)
-		world.log << "SQL connection disabled in config."
+		to_world_log("SQL connection disabled in config.")
 	else if(!setup_database_connection())
-		world.log << "Your server failed to establish a connection with the feedback database."
+		to_world_log("Your server failed to establish a connection with the feedback database.")
 	else
-		world.log << "Feedback database connection established."
+		to_world_log("Feedback database connection established.")
 	return 1
 
 proc/setup_database_connection()
@@ -573,7 +591,7 @@ proc/setup_database_connection()
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
-		world.log << dbcon.ErrorMsg()
+		to_world_log(dbcon.ErrorMsg())
 
 	return .
 
@@ -590,11 +608,11 @@ proc/establish_db_connection()
 
 /hook/startup/proc/connectOldDB()
 	if(!config.sql_enabled)
-		world.log << "SQL connection disabled in config."
+		to_world_log("SQL connection disabled in config.")
 	else if(!setup_old_database_connection())
-		world.log << "Your server failed to establish a connection with the SQL database."
+		to_world_log("Your server failed to establish a connection with the SQL database.")
 	else
-		world.log << "SQL database connection established."
+		to_world_log("SQL database connection established.")
 	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
@@ -618,7 +636,7 @@ proc/setup_old_database_connection()
 		failed_old_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
 	else
 		failed_old_db_connections++		//If it failed, increase the failed connections counter.
-		world.log << dbcon.ErrorMsg()
+		to_world_log(dbcon.ErrorMsg())
 
 	return .
 
@@ -636,24 +654,32 @@ proc/establish_old_db_connection()
 /world/proc/max_z_changed()
 	if(!istype(GLOB.players_by_zlevel, /list))
 		GLOB.players_by_zlevel = new /list(world.maxz, 0)
+		GLOB.living_players_by_zlevel = new /list(world.maxz, 0)
+	
 	while(GLOB.players_by_zlevel.len < world.maxz)
 		GLOB.players_by_zlevel.len++
 		GLOB.players_by_zlevel[GLOB.players_by_zlevel.len] = list()
+		
+		GLOB.living_players_by_zlevel.len++
+		GLOB.living_players_by_zlevel[GLOB.living_players_by_zlevel.len] = list()
 
 // Call this to make a new blank z-level, don't modify maxz directly.
 /world/proc/increment_max_z()
 	maxz++
 	max_z_changed()
 
+// Call this to change world.fps, don't modify it directly.
+/world/proc/change_fps(new_value = 20)
+	if(new_value <= 0)
+		CRASH("change_fps() called with [new_value] new_value.")
+	if(fps == new_value)
+		return //No change required.
+
+	fps = new_value
+	on_tickrate_change()
+
+// Called whenver world.tick_lag or world.fps are changed.
+/world/proc/on_tickrate_change()
+	SStimer?.reset_buckets()
+
 #undef FAILED_DB_CONNECTION_CUTOFF
-/world/New()
-	SERVER_TOOLS_ON_NEW
-	return ..()
-
-/world/Reboot(var/reason)
-	SERVER_TOOLS_ON_REBOOT
-	return ..(reason)
-
-/world/Topic(T, addr, master, key)
-	SERVER_TOOLS_ON_TOPIC
-	return ..(T, addr, master, key)

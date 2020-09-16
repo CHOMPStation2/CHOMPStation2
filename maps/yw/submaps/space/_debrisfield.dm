@@ -1,21 +1,17 @@
 // -- Datums -- //
 
-/datum/shuttle_destination/excursion/debrisfield
+/obj/effect/overmap/visitable/sector/debrisfield
 	name = "Debris Field"
-	my_area = /area/shuttle/excursion/debrisfield
-	preferred_interim_area = /area/shuttle/excursion/space_moving
-	skip_me = TRUE
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/borealis2_orbit = 30 SECONDS
-	)
+	desc = "Space junk galore."
+	scanner_desc = @{"[i]Transponder[/i]: Various faint signals
+[b]Notice[/b]: Warning! Significant field of space debris detected. May be salvagable."}
+	icon_state = "dust1"
+	known = FALSE
+	color = "#ee3333" //Redish, so it stands out against the other debris-like icons
+	initial_generic_waypoints = list("debrisfield_se", "debrisfield_nw")
 
 // -- Objs -- //
 
-/obj/shuttle_connector/debrisfield
-	name = "shuttle connector - debrisfield"
-	shuttle_name = "Excursion Shuttle"
-	destinations = list(/datum/shuttle_destination/excursion/debrisfield)
 
 /obj/effect/step_trigger/teleporter/debrisfield_loop/north/New()
 	..()
@@ -49,10 +45,6 @@
 	initialized = TRUE
 	return INITIALIZE_HINT_QDEL
 
-//And some special areas, including our shuttle landing spot (must be unique)
-/area/shuttle/excursion/debrisfield
-	name = "\improper Excursion Shuttle - Debris Field"
-
 /area/tether_away/debrisfield
 	name = "Away Mission - Debris Field"
 	icon = 'icons/turf/areas_vr.dmi'
@@ -63,3 +55,23 @@
 
 /area/tether_away/debrisfield/unexplored
 	icon_state = "debrisunexplored"
+
+/area/tether_away/debrisfield/derelict
+	icon_state = "debrisexplored"
+	forced_ambience = list('sound/ambience/tension/tension.ogg', 'sound/ambience/tension/horror.ogg')
+
+//TFF 26/12/19 - Sub-areas for the APCs.
+/area/tether_away/debrisfield/derelict/ai_access_port
+	name = "POI - Abandoned Derelict AI Acess Port"
+
+/area/tether_away/debrisfield/derelict/ai_access_starboard
+	name = "POI - Abandoned Derelict AI Access Starboard"
+
+/area/tether_away/debrisfield/derelict/ai_chamber
+	name = "POI - Abandoned Derelict AI Chamber"
+
+/area/tether_away/debrisfield/derelict/bridge
+	name = "POI - Abandoned Derelict Bridge"
+
+/area/tether_away/debrisfield/derelict/interior
+	name = "POI - Abandoned Derelict Interior"

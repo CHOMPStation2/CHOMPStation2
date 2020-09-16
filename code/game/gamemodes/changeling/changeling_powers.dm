@@ -24,6 +24,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	var/list/purchased_powers_history = list() //Used for round-end report, includes respec uses too.
 	var/last_shriek = null // world.time when the ling last used a shriek.
 	var/next_escape = 0	// world.time when the ling can next use Escape Restraints
+	var/thermal_sight = FALSE	// Is our Vision Augmented? With thermals?
 
 /datum/changeling/New(var/gender=FEMALE)
 	..()
@@ -64,8 +65,8 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	if(!mind)				return
 	if(!mind.changeling)	mind.changeling = new /datum/changeling(gender)
 
-	verbs += /datum/changeling/proc/EvolutionMenu
-	verbs += /mob/proc/changeling_respec
+	verbs.Add(/datum/changeling/proc/EvolutionMenu)
+	verbs.Add(/mob/proc/changeling_respec)
 	add_language("Changeling")
 
 	var/lesser_form = !ishuman(src)
@@ -84,7 +85,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 		if(P.isVerb)
 			if(lesser_form && !P.allowduringlesserform)	continue
 			if(!(P in src.verbs))
-				src.verbs += P.verbpath
+				verbs.Add(P.verbpath)
 			if(P.make_hud_button)
 				if(!src.ability_master)
 					src.ability_master = new /obj/screen/movable/ability_master(src)
@@ -111,7 +112,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	if(!mind || !mind.changeling)	return
 	for(var/datum/power/changeling/P in mind.changeling.purchased_powers)
 		if(P.isVerb)
-			verbs -= P.verbpath
+			verbs.Remove(P.verbpath)
 			var/obj/screen/ability/verb_based/changeling/C = ability_master.get_ability_by_proc_ref(P.verbpath)
 			if(C)
 				ability_master.remove_ability(C)
@@ -125,7 +126,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 	var/datum/changeling/changeling = src.mind.changeling
 	if(!changeling)
-		world.log << "[src] has the changeling_transform() verb but is not a changeling."
+		to_world_log("[src] has the changeling_transform() verb but is not a changeling.")
 		return
 
 	if(src.stat > max_stat)
@@ -181,20 +182,20 @@ turf/proc/AdjacentTurfsRangedSting()
 			add = 0
 		if(add && TurfBlockedNonWindow(t))
 			add = 0
-			for(var/obj/O in t)
-				if(!O.density)
+		for(var/obj/O in t)
+			if(O.density)
+				add = 0
+				break
+			if(istype(O, /obj/machinery/door))
+				//not sure why this doesn't fire on LinkBlocked()
+				add = 0
+				break
+			for(var/type in allowed)
+				if (istype(O, type))
 					add = 1
 					break
-				if(istype(O, /obj/machinery/door))
-					//not sure why this doesn't fire on LinkBlocked()
-					add = 0
-					break
-				for(var/type in allowed)
-					if (istype(O, type))
-						add = 1
-						break
-				if(!add)
-					break
+			if(!add)
+				break
 		if(add)
 			L.Add(t)
 	return L
@@ -238,5 +239,5 @@ turf/proc/AdjacentTurfsRangedSting()
 
 	to_chat(src, "<span class='notice'>We stealthily sting [T].</span>")
 	if(!T.mind || !T.mind.changeling)	return T	//T will be affected by the sting
-	T << "<span class='warning'>You feel a tiny prick.</span>"
+	to_chat(T, "<span class='warning'>You feel a tiny prick.</span>")
 	return

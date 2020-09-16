@@ -47,6 +47,9 @@
 	s.start()
 	holder.clear_reagents()
 
+///////////////////////////////////////////////////////////////////////////////////
+/// Miscellaneous Reactions
+
 /datum/chemical_reaction/xenolazarus
 	name = "Discount Lazarus"
 	id = "discountlazarus"
@@ -71,6 +74,9 @@
 			else
 				H.visible_message("<span class='info'>[H] twitches for a moment, but remains still.</span>") // no nutriment
 
+
+/datum/chemical_reaction/foam/softdrink
+	required_reagents = list("cola" = 1, "mint" = 1)
 
 ///////////////////////////////////////////////////////////////////////////////////
 /// Vore Drugs
@@ -129,6 +135,162 @@
 	required_reagents = list("whiskey" = 1, "protein" = 1)
 	result_amount = 2
 
+/datum/chemical_reaction/drinks/bigbeer
+	name = "Giant Beer"
+	id = "bigbeer"
+	result = "bigbeer"
+	required_reagents = list("syndicatebomb" = 1, "manlydorf" = 1, "grog" =1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/sweettea
+	name = "Sweetened Tea"
+	id = "sweettea"
+	result = "sweettea"
+	required_reagents = list("icetea" = 2, "sugar" = 1,)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/unsweettea
+	name = "Unsweetened Tea"
+	id = "unsweettea"
+	result = "unsweettea"
+	required_reagents = list("sweettea" = 3, "phoron" = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/drinks/galacticpanic
+	name = "Galactic Panic Attack"
+	id = "galacticpanic"
+	result = "galacticpanic"
+	required_reagents = list("gargleblaster" = 1, "singulo" = 1, "phoronspecial" =1, "neurotoxin" = 1, "atomicbomb" = 1, "hippiesdelight" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/bulldog
+	name = "Space Bulldog"
+	id = "bulldog"
+	result = "bulldog"
+	required_reagents = list("whiterussian" = 4, "cola" =1)
+	result_amount = 4
+
+/datum/chemical_reaction/drinks/sbagliato
+	name = "Negroni Sbagliato"
+	id = "sbagliato"
+	result = "sbagliato"
+	required_reagents = list("wine" = 1, "vermouth" = 1, "sodawater" =1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/italiancrisis
+	name = "Italian Crisis"
+	id = "italiancrisis"
+	result = "italiancrisis"
+	required_reagents = list("bulldog" = 1, "sbagliato" = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/drinks/sugarrush
+	name = "Sweet Rush"
+	id = "sugarrush"
+	result = "sugarrush"
+	required_reagents = list("sugar" = 1, "sodawater" = 1, "vodka" =1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/lotus
+	name = "Lotus"
+	id = "lotus"
+	result = "lotus"
+	required_reagents = list("sbagliato" = 1, "sugarrush" = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/drinks/shroomjuice
+	name = "Dumb Shroom Juice"
+	id = "shroomjuice"
+	result = "shroomjuice"
+	required_reagents = list("psilocybin" = 1, "applejuice" = 1, "limejuice" =1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/russianroulette
+	name = "Russian Roulette"
+	id = "russianroulette"
+	result = "russianroulette"
+	required_reagents = list("whiterussian" = 5, "iron" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/lovemaker
+	name = "The Love Maker"
+	id = "lovemaker"
+	result = "lovemaker"
+	required_reagents = list("honey" = 1, "sexonthebeach" = 5)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/honeyshot
+	name = "Honey Shot"
+	id = "honeyshot"
+	result = "honeyshot"
+	required_reagents = list("honey" = 1, "vodka" = 1, "grenadine" =1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/appletini
+	name = "Appletini"
+	id = "appletini"
+	result = "appletini"
+	required_reagents = list("applejuice" = 2, "vodka" = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/drinks/glowingappletini
+	name = "Glowing Appletini"
+	id = "glowingappletini"
+	result = "glowingappletini"
+	required_reagents = list("appletini" = 5, "uranium" = 1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/scsatw
+	name = "Slow Comfortable Screw Against the Wall"
+	id = "scsatw"
+	result = "scsatw"
+	required_reagents = list("screwdrivercocktail" = 3, "rum" =1, "whiskey" =1, "gin" =1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/choccymilk
+	name = "Choccy Milk"
+	id = "choccymilk"
+	result = "choccymilk"
+	required_reagents = list("milk" = 3, "coco" = 1)
+	result_amount = 4
+
+/datum/chemical_reaction/drinks/redspaceflush
+	name = "Redspace Flush"
+	id = "redspaceflush"
+	result = "redspaceflush"
+	required_reagents = list("rum" = 2, "whiskey" = 2, "blood" =1, "phoron" =1)
+	result_amount = 6
+
+/datum/chemical_reaction/drinks/graveyard
+	name = "Graveyard"
+	id = "graveyard"
+	result = "graveyard"
+	required_reagents = list("cola" = 1, "spacemountainwind" = 1, "dr_gibb" =1, "space_up" = 1)
+	result_amount = 4
+
+/datum/chemical_reaction/drinks/hairoftherat
+	name = "Hair of the Rat"
+	id = "hairoftherat"
+	result = "hairoftherat"
+	required_reagents = list("monstertamer" = 2, "nutriment" = 1)
+	result_amount = 3
+
+///////////////////////////////////////////////////////////////////////////////////
+/// Reagent colonies.
+/datum/chemical_reaction/meatcolony
+	name = "protein"
+	id = "meatcolony"
+	result = "protein"
+	required_reagents = list("meatcolony" = 5, "virusfood" = 5)
+	result_amount = 60
+
+/datum/chemical_reaction/plantcolony
+	name = "nutriment"
+	id = "plantcolony"
+	result = "nutriment"
+	required_reagents = list("plantcolony" = 5, "virusfood" = 5)
+	result_amount = 60
+
 ///////////////////////////////
 //SLIME CORES BELOW HERE///////
 ///////////////////////////////
@@ -145,7 +307,7 @@
 
 		var/list/borks = typesof(/obj/item/weapon/reagent_containers/food/snacks) - /obj/item/weapon/reagent_containers/food/snacks // BORK BORK BORK
 
-		playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
+		playsound(holder.my_atom, 'sound/effects/phasein.ogg', 100, 1)
 /* Removed at some point, unsure what to replace with
 		for(var/mob/living/carbon/human/M in viewers(get_turf(holder.my_atom), null))
 			if(M:eyecheck() <= 0)
@@ -175,7 +337,7 @@
 			for(var/mob/O in viewers(get_turf(holder.my_atom), null))
 				O.show_message(text("<span class='warning'>The solution begins to vibrate violently!</span>"), 1) // It was at this moment, the Xenobiologist knew... he fucked up.
 			sleep(30)
-			playsound(get_turf(holder.my_atom), 'sound/items/Welder2.ogg', 100, 1)
+			playsound(holder.my_atom, 'sound/items/Welder2.ogg', 100, 1)
 			for(var/mob/O in viewers(get_turf(holder.my_atom), null))
 				O.show_message(text("<span class='warning'>The reaction begins to rapidly sizzle and swell outwards!</span>"), 1)
 			sleep(20)
@@ -184,15 +346,28 @@
 			return
 
 		if(fail_chance < 101) // 10% chance of it not working at all.
-			playsound(get_turf(holder.my_atom), 'sound/items/Welder.ogg', 100, 1)
+			playsound(holder.my_atom, 'sound/items/Welder.ogg', 100, 1)
 			for(var/mob/O in viewers(get_turf(holder.my_atom), null))
 				O.show_message(text("<span class='warning'>The slime core fizzles disappointingly.</span>"), 1)
 			return
 
-		var/blocked = list(/obj/item/stack/material, /obj/item/stack/material/cyborg, /obj/item/stack/material/cyborg/plastic, /obj/item/stack/material/cyborg/plasteel, /obj/item/stack/material/cyborg/glass/reinforced, /obj/item/stack/material/cyborg/wood, /obj/item/stack/material/animalhide/human, /obj/item/stack/material/animalhide/corgi, /obj/item/stack/material/animalhide/cat, /obj/item/stack/material/animalhide/monkey, /obj/item/stack/material/animalhide/lizard , /obj/item/stack/material/animalhide/xeno, /obj/item/stack/material/cyborg, /obj/item/stack/material/cyborg/glass/reinforced)
+		var/blocked = list(
+							/obj/item/stack/material,					//Technical stacks
+							/obj/item/stack/hairlesshide,		//Useless leather production steps
+							/obj/item/stack/wetleather,
+							/obj/item/stack/material/algae/ten)			//Why is this one even a separate thing
+		blocked += typesof(/obj/item/stack/material/cyborg)				//Borg matter synths, should only exist in borgs
+		blocked += typesof(/obj/item/stack/animalhide)			//Hides which are only used for leather production anyway
+
+		var/rare_types = list(
+							/obj/item/stack/material/morphium,			//Complex materials requiring Particle Smasher to create
+							/obj/item/stack/material/morphium/hull,
+							/obj/item/stack/material/valhollide,
+							/obj/item/stack/material/supermatter)
+
 		var/list/material = typesof(/obj/item/stack/material) - blocked
 
-		playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
+		playsound(holder.my_atom, 'sound/effects/phasein.ogg', 100, 1)
 /* Removed at some point, unsure what to replace with
 		for(var/mob/living/carbon/human/M in viewers(get_turf(holder.my_atom), null))
 			if(M:eyecheck() <= 0)
@@ -200,6 +375,8 @@
 */
 		var/spawn_amount = rand(1,50)
 		var/chosen = pick(material)
+		if(chosen in rare_types)
+			spawn_amount = rand(1,15)
 		var/obj/item/stack/material/C = new chosen
 		C.amount = spawn_amount
 		C.loc = get_turf(holder.my_atom)
@@ -239,10 +416,10 @@
 		for(var/mob/O in viewers(get_turf(holder.my_atom), null))
 			O.show_message(text("<span class='warning'>The slime extract begins to vibrate violently!</span>"), 1)
 		sleep(50)
-		playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
+		playsound(holder.my_atom, 'sound/effects/phasein.ogg', 100, 1)
 		for(var/mob/living/M in range (get_turf(holder.my_atom), 7))
 			M.bodytemperature -= 140
-			M << "<span class='notice'> You suddenly feel a chill!</span>"
+			to_chat(M, "<span class='notice'> You suddenly feel a chill!</span>")
 
 
 
@@ -291,7 +468,7 @@
 	required_reagents = list("phoron" = 10, "bicaridine" = 10, "kelotane" = 10, "inaprovaline" = 10, "slimejelly" = 10)
 	on_reaction(var/datum/reagents/holder, var/created_volume)
 		for (var/mob/living/carbon/C in viewers(get_turf(holder.my_atom), null))
-			C << "<span class='notice'>A wave of energy suddenly invigorates you.</span>"
+			to_chat(C, "<span class='notice'>A wave of energy suddenly invigorates you.</span>")
 			C.adjustBruteLoss(-25)
 			C.adjustFireLoss(-25)
 			C.adjustToxLoss(-25)
@@ -307,10 +484,6 @@
 	required_reagents = list("phoron" = 20, "sugar" = 50, "lithium" = 50) //In case a xenobiologist is impatient and is willing to drain their dispenser resources, along with plasma!
 	result_amount = 5
 
-
-
-
-/* //VORESTATION AI TEMPORARY REMOVAL
 /datum/chemical_reaction/slimevore
 	name = "Slime Vore" // Hostile vore mobs only
 	id = "m_tele"
@@ -319,14 +492,46 @@
 	result_amount = 1
 	on_reaction(var/datum/reagents/holder)
 		var/mob_path = /mob/living/simple_mob
-		var/blocked = list(
-			/mob/living/simple_mob/hostile/mimic,
-			/mob/living/simple_mob/animal/space/alien/queen,
-			/mob/living/simple_mob/shadekin
+		var/blocked = list(														//List of things we do NOT want to spawn
+			/mob/living/simple_mob,												//Technical parent mobs
+			/mob/living/simple_mob/animal,
+			/mob/living/simple_mob/animal/passive,
+			/mob/living/simple_mob/animal/space,
+			/mob/living/simple_mob/blob,
+			/mob/living/simple_mob/mechanical,
+			/mob/living/simple_mob/mechanical/mecha,
+			/mob/living/simple_mob/slime,
+			/mob/living/simple_mob/vore,
+			/mob/living/simple_mob/vore/aggressive,
+			/mob/living/simple_mob/illusion,									//Other technical mobs
+			/mob/living/simple_mob/animal/passive/crab/Coffee,					//Unique pets/named mobs
+			/mob/living/simple_mob/animal/passive/cat/runtime,
+			/mob/living/simple_mob/animal/passive/cat/bones,
+			/mob/living/simple_mob/animal/passive/cat/tabiranth,
+			/mob/living/simple_mob/animal/passive/dog/corgi/puppy/Bockscar,
+			/mob/living/simple_mob/animal/passive/dog/corgi/Ian,
+			/mob/living/simple_mob/animal/passive/dog/corgi/Lisa,
+			/mob/living/simple_mob/animal/passive/dog/tamaskan/Spice,
+			/mob/living/simple_mob/animal/passive/fox/renault,
+			/mob/living/simple_mob/animal/passive/bird/azure_tit/tweeter,
+			/mob/living/simple_mob/animal/passive/bird/parrot/poly,
+			/mob/living/simple_mob/animal/sif/fluffy,
+			/mob/living/simple_mob/animal/sif/fluffy/silky,
+			/mob/living/simple_mob/animal/passive/snake/noodle,
+			/mob/living/simple_mob/slime/xenobio/rainbow/kendrick,
+			/mob/living/simple_mob/animal/space/space_worm,						//Space Worm parts that aren't proper heads
+			/mob/living/simple_mob/animal/space/space_worm/head/severed,
+			/mob/living/simple_mob/animal/borer,								//Event/player-control-only mobs
+			/mob/living/simple_mob/vore/hostile/morph
 			)//exclusion list for things you don't want the reaction to create.
-		var/list/voremobs = typesof(mob_path) - mob_path - blocked // list of possible hostile mobs
+		blocked += typesof(/mob/living/simple_mob/mechanical/ward)				//Wards that should be created with ward items, are mobs mostly on technicalities
+		blocked += typesof(/mob/living/simple_mob/construct)					//Should only exist
+		blocked += typesof(/mob/living/simple_mob/vore/demon)					//as player-controlled
+		blocked += typesof(/mob/living/simple_mob/shadekin)						//and/or event things
+		blocked += typesof(/mob/living/simple_mob/horror)
+		var/list/voremobs = typesof(mob_path) - blocked // list of possible hostile mobs
 
-		playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
+		playsound(holder.my_atom, 'sound/effects/phasein.ogg', 100, 1)
 /* Removed at some point, unsure what to replace with
 		for(var/mob/living/carbon/human/M in viewers(get_turf(holder.my_atom), null))
 			if(M:eyecheck() <= 0)
@@ -335,13 +540,13 @@
 		var/spawn_count = rand(1,3)
 		for(var/i = 1, i <= spawn_count, i++)
 			var/chosen = pick(voremobs)
-			var/mob/living/simple_mob/hostile/C = new chosen
+			var/mob/living/simple_mob/C = new chosen
 			C.faction = "slimesummon"
 			C.loc = get_turf(holder.my_atom)
 			if(prob(50))
 				for(var/j = 1, j <= rand(1, 3), j++)
 					step(C, pick(NORTH,SOUTH,EAST,WEST))
-*/
+
 
 /datum/chemical_reaction/food/syntiflesh
 	required_reagents = list("blood" = 5, "clonexadone" = 1)

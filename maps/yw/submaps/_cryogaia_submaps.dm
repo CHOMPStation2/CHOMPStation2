@@ -3,21 +3,12 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-/datum/map_template/cryogaia_lateload/cryogaia_ships
-	name = "Tether - Ships"
-	desc = "Ship transit map and whatnot."
-	mappath = 'cryogaia_ships.dmm'
-
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/ships
-
-/datum/map_z_level/cryogaia_lateload/ships
-	name = "Ships"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED
-
+#include "cryogaia_plains/cryogaia_plains.dm"
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
-	mappath = 'cryogaia_plains.dmm'
+	mappath = 'cryogaia_plains/cryogaia_plains.dmm'
+	annihilate = TRUE
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/cryogaia_plains
 
 /datum/map_z_level/cryogaia_lateload/cryogaia_plains
@@ -28,17 +19,20 @@
 
 /datum/map_template/cryogaia_lateload/cryogaia_plains/on_map_loaded(z)
 	. = ..()
-	seed_submaps(list(Z_LEVEL_PLAINS), 120, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
+	seed_submaps(list(Z_LEVEL_PLAINS), 240, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 #if AWAY_MISSION_TEST
+#include "cryogaia_plains/cryogaia_plains.dmm"
 #include "beach/beach.dmm"
 #include "beach/cave.dmm"
 #include "alienship/alienship.dmm"
 #include "aerostat/aerostat.dmm"
 #include "aerostat/surface.dmm"
 #include "space/debrisfield.dmm"
+#include "space/fueldepot.dmm"
+#include "space/guttersite.dmm"
 #endif
 
 #include "beach/_beach.dm"
@@ -74,18 +68,15 @@
 /obj/effect/step_trigger/zlevel_fall/beach
 	var/static/target_z
 
-
 #include "alienship/_alienship.dm"
 /datum/map_template/cryogaia_lateload/away_alienship
 	name = "Alien Ship - Z1 Ship"
 	desc = "The alien ship away mission."
 	mappath = 'alienship/alienship.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_alienship
+	associated_map_datum = /datum/map_z_level/tether_lateload/away_alienship
 
-/datum/map_z_level/cryogaia_lateload/away_alienship
+/datum/map_z_level/tether_lateload/away_alienship
 	name = "Away Mission - Alien Ship"
-	z = Z_LEVEL_ALIENSHIP
-
 
 #include "aerostat/_aerostat.dm"
 /datum/map_template/cryogaia_lateload/away_aerostat
@@ -108,7 +99,7 @@
 	. = ..()
 	seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 120, /area/cryogaia_away/aerostat/surface/unexplored, /datum/map_template/virgo2)
 	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_AEROSTAT_SURFACE, world.maxx - 4, world.maxy - 4)
-	new /datum/random_map/noise/ore/virgo2(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)
+	new /datum/random_map/noise/ore/bor4(null, 1, 1, Z_LEVEL_AEROSTAT_SURFACE, 64, 64)
 
 /datum/map_z_level/cryogaia_lateload/away_aerostat_surface
 	name = "Away Mission - Aerostat Surface"
@@ -116,8 +107,10 @@
 
 
 #include "space/_debrisfield.dm"
+#include "space/_fueldepot.dm"
 #include "space/pois/_templates.dm"
 #include "space/pois/debrisfield_things.dm"
+#include "space/_guttersite.dm"
 /datum/map_template/cryogaia_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
 	desc = "The Virgo 3 Debris Field away mission."
@@ -133,6 +126,25 @@
 	name = "Away Mission - Debris Field"
 	z = Z_LEVEL_DEBRISFIELD
 
+/datum/map_template/cryogaia_lateload/away_fueldepot
+	name = "Fuel Depot - Z1 Space"
+	desc = "An unmanned fuel depot floating in space."
+	mappath = 'space/fueldepot.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_fueldepot
+
+/datum/map_z_level/cryogaia_lateload/away_fueldepot
+	name = "Away Mission - Fuel Depot"
+	z = Z_LEVEL_FUELDEPOT
+
+/datum/map_template/cryogaia_lateload/away_guttersite
+	name = "Gutter Site - Z1 Space"
+	desc = "The Virgo Erigone Space Away Site."
+	mappath = 'space/guttersite.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_guttersite
+
+/datum/map_z_level/cryogaia_lateload/away_guttersite
+	name = "Away Mission - Gutter Site"
+	z = Z_LEVEL_GUTTERSITE
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
@@ -311,3 +323,120 @@
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/shadekin
 	)
+
+#include "admin_ships/adminship.dm"
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Gateway submaps go here
+
+/obj/effect/overmap/visitable/sector/cryogaia_gateway
+	name = "Unknown"
+	desc = "Approach and perform a scan to obtain further information."
+	icon_state = "object" //or "globe" for planetary stuff
+	known = FALSE
+	//initial_generic_waypoints = list("don't forget waypoints!")
+	var/true_name = "The scanned name goes here"
+	var/true_desc = "The scanned desc goes here"
+
+/obj/effect/overmap/visitable/sector/cryogaia_gateway/get_scan_data(mob/user)
+	name = true_name
+	desc = true_desc
+	return ..()
+
+/datum/map_template/cryogaia_lateload/gateway
+	name = "Gateway Submap"
+	desc = "Please do not use this."
+	mappath = null
+	associated_map_datum = null
+
+/datum/map_z_level/cryogaia_lateload/gateway_destination
+	name = "Gateway Destination"
+	z = Z_LEVEL_GATEWAY
+
+#include "gateway/snow_outpost.dm"
+/datum/map_template/cryogaia_lateload/gateway/snow_outpost
+	name = "Snow Outpost"
+	desc = "Big snowy area with various outposts."
+	mappath = 'gateway/snow_outpost.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+#include "gateway/zoo.dm"
+/datum/map_template/cryogaia_lateload/gateway/zoo
+	name = "Zoo"
+	desc = "Gigantic space zoo"
+	mappath = 'gateway/zoo.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+#include "gateway/carpfarm.dm"
+/datum/map_template/cryogaia_lateload/gateway/carpfarm
+	name = "Carp Farm"
+	desc = "Asteroid base surrounded by carp"
+	mappath = 'gateway/carpfarm.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+#include "gateway/snowfield.dm"
+/datum/map_template/cryogaia_lateload/gateway/snowfield
+	name = "Snow Field"
+	desc = "An old base in middle of snowy wasteland"
+	mappath = 'gateway/snowfield.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+#include "gateway/listeningpost.dm"
+/datum/map_template/cryogaia_lateload/gateway/listeningpost
+	name = "Listening Post"
+	desc = "Asteroid-bound mercenary listening post"
+	mappath = 'gateway/listeningpost.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
+
+//////////////////////////////////////////////////////////////////////////////
+//Rogue Mines Stuff
+
+/datum/map_template/cryogaia_lateload/cryogaia_roguemines1
+	name = "Asteroid Belt 1"
+	desc = "Mining, but rogue. Zone 1"
+	mappath = 'rogue_mines/rogue_mine1.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines1
+
+/datum/map_z_level/cryogaia_lateload/roguemines1
+	name = "Belt 1"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	z = Z_LEVEL_ROGUEMINE_1
+
+/datum/map_template/cryogaia_lateload/cryogaia_roguemines2
+	name = "Asteroid Belt 2"
+	desc = "Mining, but rogue. Zone 2"
+	mappath = 'rogue_mines/rogue_mine2.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines2
+
+/datum/map_z_level/cryogaia_lateload/roguemines2
+	name = "Belt 2"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	z = Z_LEVEL_ROGUEMINE_2
+
+/datum/map_template/cryogaia_lateload/cryogaia_roguemines3
+	name = "Asteroid Belt 3"
+	desc = "Mining, but rogue. Zone 3"
+	mappath = 'rogue_mines/rogue_mine3.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines3
+
+/datum/map_z_level/cryogaia_lateload/roguemines3
+	name = "Belt 3"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	z = Z_LEVEL_ROGUEMINE_3
+
+/datum/map_template/cryogaia_lateload/cryogaia_roguemines4
+	name = "Asteroid Belt 4"
+	desc = "Mining, but rogue. Zone 4"
+	mappath = 'rogue_mines/rogue_mine4.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines4
+
+/datum/map_z_level/cryogaia_lateload/roguemines4
+	name = "Belt 4"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	z = Z_LEVEL_ROGUEMINE_4
+
+//////////////////////////////////////////////////////////////////////////////

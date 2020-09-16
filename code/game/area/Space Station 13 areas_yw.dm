@@ -33,6 +33,27 @@
 	icon_state = "amaint"
 	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
 
+
+/area/constructionsite/medical/upper
+	name = "\improper Construction Site Medbay Loft"
+	icon_state = "medbay"
+
+/area/maintenance/mining
+	name = "Mining Maintence"
+	icon_state = "amaint"
+
+/area/maintenance/shelter
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
+/area/maintenance/shelter2
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
+/area/maintenance/shelter3
+	name = "Pulsar Radiation Shelter"
+	icon_state = "amaint"
+
 /area/maintenance/blueserg
 	name = "Blue Sergal"
 	icon_state = "amaint"
@@ -99,6 +120,23 @@
 	name = "\improper Abandoned Office"
 	icon_state = "vacant_site"
 
+/area/civilian/atrium
+	name = "\improper Atrium"
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "atrium_central"
+
+/area/civilian/atrium/lower
+	name = "\improper Lower Atrium"
+	icon_state = "atrium_lower"
+
+/area/civilian/atrium/central
+	name = "\improper Central Atrium"
+
+/area/civilian/atrium/upper
+	name = "\improper Upper Atrium"
+	icon_state = "atrium_upper"
+
+
 //area/vacant/vacant_office
 //	name = "\improper Abandoned Office"
 //	icon_state = "vacant_site"
@@ -149,12 +187,27 @@
 /area/security/outpost
 	name = "\improper Security outpost"
 	icon_state = "security"
+	flags = RAD_SHIELDED
 
 /area/security/labor
 	name = "Labor camp access"
 	icon_state = "security"
+
 /area/medical/medbaymain
 	name = "\improper Medbay Primary Hallway"
 	icon_state = "medbay"
 	music = 'sound/ambience/signal.ogg'
 
+/area/medical/medbayupper
+	name = "\improper Medbay Upper Hallway"
+	icon_state = "medbay2"
+	music = 'sound/ambience/signal.ogg'
+
+/area/medical/medbayskybridge
+	name = "\improper Medbay/Departures Skybridge"
+	icon_state = "medbay4"
+	music = 'sound/ambience/signal.ogg'
+
+/area/security/shuttledock
+	name = "\improper Security Interceptor Dock"
+	icon_state = "security"

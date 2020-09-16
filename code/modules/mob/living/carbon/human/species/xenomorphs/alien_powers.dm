@@ -72,7 +72,7 @@
 		amount = abs(round(amount))
 		if(check_alien_ability(amount,0,O_PLASMA))
 			M.gain_plasma(amount)
-			M << "<span class='alium'>[src] has transfered [amount] plasma to you.</span>"
+			to_chat(M, "<span class='alium'>[src] has transfered [amount] plasma to you.</span>")
 			to_chat(src, "<span class='alium'>You have transferred [amount] plasma to [M].</span>")
 	return
 
@@ -88,13 +88,13 @@
 		verbs -= /mob/living/carbon/human/proc/lay_egg
 		return
 
-	if(locate(/obj/effect/alien/egg) in get_turf(src))
+	if(locate(/obj/structure/alien/egg) in get_turf(src)) //CHOMPedit. Changed from obj/effect to obj/structure
 		to_chat(src, "There's already an egg here.")
 		return
 
 	if(check_alien_ability(75,1,O_EGG))
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
-		new /obj/effect/alien/egg(loc)
+		new /obj/structure/alien/egg(loc) //CHOMPedit. Changed from obj/effect to obj/structure
 
 	return
 
@@ -121,9 +121,7 @@
 
 	if(check_alien_ability(50,1,O_RESIN))
 		visible_message("<span class='alium'><B>[src] has planted some alien weeds!</B></span>")
-		var/obj/O = new /obj/effect/alien/weeds/node(loc)
-		if(O)
-			O.color = "#321D37"
+		new /obj/effect/alien/weeds/node(get_turf(src), null, "#321D37")
 	return
 
 /mob/living/carbon/human/proc/Spit(var/atom/A)
@@ -146,7 +144,7 @@
 		P.firer = src
 		P.old_style_target(A)
 		P.fire()
-		playsound(loc, 'sound/weapons/pierce.ogg', 25, 0)
+		playsound(src, 'sound/weapons/pierce.ogg', 25, 0)
 	else
 		..()
 
@@ -297,7 +295,7 @@
 
 	src.visible_message("<span class='danger'>\The [src] leaps at [T]!</span>")
 	src.throw_at(get_step(get_turf(T),get_turf(src)), 4, 1, src)
-	playsound(src.loc, 'sound/voice/hiss5.ogg', 50, 1)
+	playsound(src, 'sound/voice/hiss5.ogg', 50, 1)
 
 	sleep(5)
 

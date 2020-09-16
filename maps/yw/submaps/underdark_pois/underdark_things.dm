@@ -32,7 +32,7 @@
 	max_n2 = 0
 
 // Underdark mob spawners
-/obj/tether_away_spawner/underdark_drone_swarm
+/obj/cryogaia_away_spawner/underdark_drone_swarm
 	name = "Underdark Drone Swarm Spawner"
 	faction = "underdark"
 	atmos_comp = TRUE
@@ -43,7 +43,7 @@
 		/mob/living/simple_mob/mechanical/corrupt_maint_drone = 3,
 	)
 
-/obj/tether_away_spawner/underdark_normal
+/obj/cryogaia_away_spawner/underdark_normal
 	name = "Underdark Normal Spawner"
 	faction = "underdark"
 	atmos_comp = TRUE
@@ -56,7 +56,7 @@
 		/mob/living/simple_mob/animal/giant_spider/tunneler = 1,
 	)
 
-/obj/tether_away_spawner/underdark_hard
+/obj/cryogaia_away_spawner/underdark_hard
 	name = "Underdark Hard Spawner"
 	faction = "underdark"
 	atmos_comp = TRUE
@@ -68,7 +68,7 @@
 		/mob/living/simple_mob/vore/aggressive/rat/phoron = 2
 	)
 
-/obj/tether_away_spawner/underdark_boss
+/obj/cryogaia_away_spawner/underdark_boss
 	name = "Underdark Boss Spawner"
 	faction = "underdark"
 	atmos_comp = TRUE

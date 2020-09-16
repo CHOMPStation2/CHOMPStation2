@@ -14,12 +14,13 @@
 	var/skin_danger = 0.2 // The multiplier for how effective the toxin is when making skin contact.
 
 /datum/reagent/toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	strength *= M.species.chem_strength_tox
 	if(strength && alien != IS_DIONA)
 		if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
 		if(alien == IS_SLIME)
 			removed *= 0.25 // Results in half the standard tox as normal. Prometheans are 'Small' for flaps.
 			if(dose >= 10)
-				M.nutrition += strength * removed //Body has to deal with the massive influx of toxins, rather than try using them to repair.
+				M.adjust_nutrition(strength * removed) // Body has to deal with the massive influx of toxins, rather than try using them to repair.
 			else
 				M.heal_organ_damage((10/strength) * removed, (10/strength) * removed) //Doses of toxins below 10 units, and 10 strength, are capable of providing useful compounds for repair.
 		M.adjustToxLoss(strength * removed)
@@ -169,7 +170,7 @@
 /datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	M.adjustOxyLoss(20 * removed)
-	M.sleeping += 1
+	M.Sleeping(1)
 
 /datum/reagent/toxin/mold
 	name = "Mold"
@@ -396,7 +397,7 @@
 
 /datum/reagent/toxin/sifslurry/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA) // Symbiotic bacteria.
-		M.nutrition += strength * removed
+		M.adjust_nutrition(strength * removed)
 		return
 	else
 		M.add_modifier(/datum/modifier/slow_pulse, 30 SECONDS)
@@ -450,11 +451,11 @@
 	if(alien == IS_DIONA)
 		return
 	if(prob(10))
-		to_chat(M,"<span class='warning'>Your veins feel like they're on fire!</span>")
+		to_chat(M, "<span class='warning'>Your veins feel like they're on fire!</span>")
 		M.adjust_fire_stacks(0.1)
 	else if(prob(5))
 		M.IgniteMob()
-		to_chat(M,"<span class='critical'>Some of your veins rupture, the exposed blood igniting!</span>")
+		to_chat(M, "<span class='critical'>Some of your veins rupture, the exposed blood igniting!</span>")
 
 /datum/reagent/condensedcapsaicin/venom
 	name = "Irritant toxin"
@@ -472,7 +473,7 @@
 	if(prob(50))
 		M.apply_effect(4, AGONY, 0)
 		if(prob(20))
-			to_chat(M,"<span class='danger'>You feel like your insides are burning!</span>")
+			to_chat(M, "<span class='danger'>You feel like your insides are burning!</span>")
 		else if(prob(20))
 			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!","rubs at their eyes!")]</span>")
 	else
@@ -572,7 +573,7 @@
 			M.UpdateAppearance()
 		if(prob(removed * 40)) //Additionally, let's make it so there's an 8% chance per tick for a random cosmetic/not guranteed good/bad mutation.
 			randmuti(M)//This should equate to 4 random cosmetic mutations per 10 injected/20 ingested/30 touching units
-			M << "<span class='warning'>You feel odd!</span>"
+			to_chat(M, "<span class='warning'>You feel odd!</span>")
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
 /datum/reagent/slimejelly
@@ -595,7 +596,7 @@
 			M.add_chemical_effect(CE_PAINKILLER, 60)
 	else
 		if(prob(10))
-			M << "<span class='danger'>Your insides are burning!</span>"
+			to_chat(M, "<span class='danger'>Your insides are burning!</span>")
 			M.adjustToxLoss(rand(100, 300) * removed)
 		else if(prob(40))
 			M.heal_organ_damage(25 * removed, 0)
@@ -615,7 +616,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1
+	var/threshold = 1 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -644,7 +645,7 @@
 			else
 				M.Weaken(2)
 		else
-			M.sleeping = max(M.sleeping, 20)
+			M.Sleeping(20)
 		M.drowsyness = max(M.drowsyness, 60)
 
 /datum/reagent/chloralhydrate
@@ -663,7 +664,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1
+	var/threshold = 1 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -688,7 +689,7 @@
 			M.Weaken(30)
 			M.Confuse(40)
 		else
-			M.sleeping = max(M.sleeping, 30)
+			M.Sleeping(30)
 
 	if(effective_dose > 1 * threshold)
 		M.adjustToxLoss(removed)
@@ -726,7 +727,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/drug_strength = 15
+	var/drug_strength = 15 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		drug_strength = drug_strength * 0.8
 
@@ -785,7 +786,7 @@
 /datum/reagent/cryptobiolin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	var/drug_strength = 4
+	var/drug_strength = 4 * M.species.chem_strength_tox
 
 	if(alien == IS_SKRELL)
 		drug_strength = drug_strength * 0.8
@@ -831,7 +832,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/drug_strength = 100
+	var/drug_strength = 100 * M.species.chem_strength_tox
 
 	if(alien == IS_SKRELL)
 		drug_strength *= 0.8
@@ -854,7 +855,7 @@
 	if(alien == IS_DIONA)
 		return
 
-	var/threshold = 1
+	var/threshold = 1 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		threshold = 1.2
 
@@ -908,7 +909,7 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 	if(alien == IS_DIONA)
 		return
 
-	var/drug_strength = 29
+	var/drug_strength = 29 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)
 		drug_strength = drug_strength * 0.8
 	else
@@ -949,7 +950,7 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 			M.UpdateAppearance()
 		if(prob(removed * 40))
 			randmuti(M)
-			M << "<span class='warning'>You feel odd!</span>"
+			to_chat(M, "<span class='warning'>You feel odd!</span>")
 	M.apply_effect(16 * removed, IRRADIATE, 0)
 
 /datum/reagent/aslimetoxin
@@ -979,7 +980,7 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 			M.UpdateAppearance()
 		if(prob(removed * 40))
 			randmuti(M)
-			M << "<span class='warning'>You feel odd!</span>"
+			to_chat(M, "<span class='warning'>You feel odd!</span>")
 	M.apply_effect(6 * removed, IRRADIATE, 0)
 
 /*

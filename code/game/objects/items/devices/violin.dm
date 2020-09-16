@@ -6,6 +6,10 @@
 	var/instrumentExt = "mid"
 	icon = 'icons/obj/musician.dmi'
 	force = 10
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_instruments.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_instruments.dmi',
+		)
 
 /obj/item/device/instrument/New()
 	..()
@@ -40,10 +44,6 @@
 	attack_verb = list("smashed")
 	instrumentId = "violin"
 	item_state = "violin"
-	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/lefthand_instruments.dmi',
-		slot_r_hand_str = 'icons/mob/items/righthand_instruments.dmi',
-		)
 
 /obj/item/device/instrument/violin/gold
 	name = "golden violin"

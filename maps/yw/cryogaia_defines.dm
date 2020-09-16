@@ -1,18 +1,25 @@
 //Normal YW map defs
-#define Z_LEVEL_CRYOGAIA_CENTCOM	1
-#define Z_LEVEL_CRYOGAIA_MINE		2
-#define Z_LEVEL_CRYOGAIA_TRANSIT	3 //added due to explosions jumping from mine leve to lower.
-#define Z_LEVEL_CRYOGAIA_LOWER		4
-#define Z_LEVEL_CRYOGAIA_MAIN		5
-#define Z_LEVEL_SHIPS				6
-#define Z_LEVEL_ALIENSHIP			7
-#define Z_LEVEL_BEACH				8
-#define Z_LEVEL_BEACH_CAVE			9
-#define Z_LEVEL_AEROSTAT			10
-#define Z_LEVEL_AEROSTAT_SURFACE	11
-#define Z_LEVEL_DEBRISFIELD			12
-#define Z_LEVEL_UNDERDARK			13
-#define Z_LEVEL_PLAINS				14
+#define Z_LEVEL_CRYOGAIA_CENTCOM		1
+#define Z_LEVEL_CRYOGAIA_MINE			2
+#define Z_LEVEL_CRYOGAIA_TRANSIT		3 //added due to explosions jumping from mine leve to lower.
+#define Z_LEVEL_CRYOGAIA_LOWER			4
+#define Z_LEVEL_CRYOGAIA_MAIN			5
+#define Z_LEVEL_CRYOGAIA_UPPER			6
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		7
+#define Z_LEVEL_ROGUEMINE_1			8
+#define Z_LEVEL_ROGUEMINE_2			9
+#define Z_LEVEL_ROGUEMINE_3			10
+#define Z_LEVEL_ROGUEMINE_4			11
+#define Z_LEVEL_PLAINS				12
+#define Z_LEVEL_BEACH				13
+#define Z_LEVEL_BEACH_CAVE			14
+#define Z_LEVEL_AEROSTAT			15
+#define Z_LEVEL_AEROSTAT_SURFACE		16
+#define Z_LEVEL_DEBRISFIELD			17
+#define Z_LEVEL_UNDERDARK			18
+#define Z_LEVEL_GUTTERSITE			19
+#define Z_LEVEL_FUELDEPOT			20
+#define Z_LEVEL_GATEWAY				21
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -28,31 +35,36 @@
 
 	zlevel_datum_type = /datum/map_z_level/cryogaia
 
+	use_overmap = TRUE
+	overmap_z = Z_LEVEL_CRYOGAIA_CENTCOM
+	overmap_size = 20
+	overmap_event_areas = 10
+
+	usable_email_tlds = list("cryogaia.nt")
 	lobby_icon = 'icons/misc/title_yw2.dmi'
 	lobby_screens = list("cryogaia")
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
-/*	holomap_smoosh = list(list(
-		Z_LEVEL_SURFACE_LOW,
-		Z_LEVEL_SURFACE_MID,
-		Z_LEVEL_SURFACE_HIGH,
-		Z_LEVEL_SPACE_LOW,
-		Z_LEVEL_SPACE_MID,
-		Z_LEVEL_SPACE_HIGH)) */
+	holomap_smoosh = list(list(
+		Z_LEVEL_CRYOGAIA_MINE,
+		Z_LEVEL_CRYOGAIA_LOWER,
+		Z_LEVEL_CRYOGAIA_MAIN,
+		Z_LEVEL_CRYOGAIA_UPPER))
 
 	station_name  = "Cryogaia Outpost"
 	station_short = "Yawn Wider"
-	dock_name     = "NAS Midgard"
+	dock_name     = "NCS Serenity"
 	boss_name     = "Central Command"
 	boss_short    = "CentCom"
 	company_name  = "NanoTrasen"
 	company_short = "NT"
-	starsys_name  = "Borealis Majoris"
+	starsys_name  = "Borealis"
 
 	shuttle_docked_message = "The scheduled Shuttle to %dock_name% has arrived. It will depart in approximately %ETD%."
-	shuttle_leaving_dock = "The Shuttle has left the Outpost. Estimate %ETA% until the tram arrives at %dock_name%."
-	shuttle_called_message = "A scheduled crew transfer to %dock_name% is occuring. The tram will be arriving shortly. Those departing should proceed to the shuttle docking station within %ETA%."
+	shuttle_leaving_dock = "The Shuttle has left the Outpost. Estimate %ETA% until the shuttle arrives at %dock_name%."
+	shuttle_called_message = "A scheduled crew transfer to %dock_name% is occuring. The shuttle will be arriving shortly. Those departing should proceed to the shuttle docking station within %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
+	shuttle_name = "NAS |Faraday|"
 	emergency_shuttle_docked_message = "The evacuation shuttle has arrived at the shuttle docking station. You have approximately %ETD% to board the shuttle."
 	emergency_shuttle_leaving_dock = "The emergency shuttle has left the station. Estimate %ETA% until the shuttle arrives at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule shuttle has been called. It will arrive at the shuttle docking station in approximately %ETA%."
@@ -66,8 +78,9 @@
 							NETWORK_CRYOGAIA,
 							NETWORK_ENGINE,
 							NETWORK_ENGINEERING,
+							NETWORK_SUBSTATIONS,
 							NETWORK_EXPLORATION,
-							//NETWORK_DEFAULT,  //Is this even used for anything? Robots show up here, but they show up in ROBOTS network too,
+							NETWORK_DEFAULT,
 							NETWORK_MEDICAL,
 							NETWORK_MINE,
 							NETWORK_OUTSIDE,
@@ -91,7 +104,7 @@
 
 	bot_patrolling = FALSE
 
-	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage")
+	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
 	spawnpoint_died = /datum/spawnpoint/tram
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo
@@ -135,20 +148,37 @@
 		/area/security/airlock,
 		/area/borealis2/elevator/medbay,
 		/area/storage/auxillary,
-		/area/tcommsat/powercontrol
+		/area/vacant/vacant_site/locker,
+		/area/tcommsat/powercontrol,
+		/area/constructionsite/medical,
+		/area/borealis2/outdoors/grounds/entrance,
+		/area/security/vacantoffice,
+		/area/borealis2/outdoors/grounds/tower/southwest,
+		/area/borealis2/outdoors/grounds/tower/south,
+		/area/borealis2/outdoors/grounds/tower/southeast,
+		/area/borealis2/outdoors/grounds/tower/east,
+		/area/borealis2/outdoors/grounds/tower/west,
+		/area/borealis2/outdoors/grounds/tower/northwest,
+		/area/borealis2/outdoors/grounds/tower/northeast,
+		/area/borealis2/outdoors/grounds/checkpoint,
+		/area/borealis2/outdoors/grounds/wall,
+		/area/cryogaia/station/ert_arrival
 		)
 	unit_test_exempt_from_atmos = list(
-		/area/engineering/atmos/intake
+//		/area/engineering/atmos/intake
 		)
 
 	unit_test_z_levels = list(2,4,5)
 
 	lateload_z_levels = list(
-		list("Tether - Ships"/*",Tether - Plains"*/), //Stock Tether lateload maps
-		list("Alien Ship - Z1 Ship"),
+		//list("Alien Ship - Z1 Ship"),
+		list("Asteroid Belt 1","Asteroid Belt 2","Asteroid Belt 3","Asteroid Belt 4"),
+		list("Snow plains"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
-		list("Debris Field - Z1 Space")
+		list("Debris Field - Z1 Space"),
+		list("Gutter Site - Z1 Space"),
+		list("Fuel Depot - Z1 Space")
 		)
 
 	ai_shell_restricted = TRUE
@@ -157,10 +187,25 @@
 		Z_LEVEL_CRYOGAIA_LOWER,
 		Z_LEVEL_CRYOGAIA_TRANSIT,
 		Z_LEVEL_CRYOGAIA_MAIN,
+		Z_LEVEL_CRYOGAIA_UPPER,
 		Z_LEVEL_CRYOGAIA_CENTCOM
 		)
 
-	lateload_single_pick = null //Nothing right now.
+	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_MAIN)
+	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_TRANSIT)
+	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
+						 		 Z_LEVEL_ROGUEMINE_2,
+						 	 	 Z_LEVEL_ROGUEMINE_3,
+								 Z_LEVEL_ROGUEMINE_4)
+
+	lateload_single_pick = list( //Gateway missions
+		list("Snow Outpost"),
+		list("Carp Farm"),
+		list("Snow Field"),
+		list("Listening Post")
+		)
+
+	planet_datums_to_make = list(/datum/planet/borealis2)
 
 /datum/map/cryogaia/perform_map_generation()
 
@@ -173,21 +218,29 @@
 	expected_z_levels = list(
 		Z_LEVEL_CRYOGAIA_MINE,
 		Z_LEVEL_CRYOGAIA_LOWER,
-		Z_LEVEL_CRYOGAIA_MAIN
+		Z_LEVEL_CRYOGAIA_MAIN,
+		Z_LEVEL_CRYOGAIA_UPPER,
+		Z_LEVEL_PLAINS
 	)
 
+// Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
+/*
 // Short range computers see only the six main levels, others can see the surrounding surface levels.
 /datum/map/cryogaia/get_map_levels(var/srcz, var/long_range = TRUE)
 	if (long_range && (srcz in map_levels))
 		return map_levels
 	else if (srcz == Z_LEVEL_CRYOGAIA_CENTCOM)
 		return list() // Nothing on transit!
-	else if (srcz >= Z_LEVEL_CRYOGAIA_MINE && srcz <= Z_LEVEL_CRYOGAIA_MAIN)
+	else if (srcz >= Z_LEVEL_CRYOGAIA_MINE && srcz <= Z_LEVEL_CRYOGAIA_UPPER)
 		return list(
 			Z_LEVEL_CRYOGAIA_MINE,
 			Z_LEVEL_CRYOGAIA_LOWER,
 			Z_LEVEL_CRYOGAIA_MAIN,
+			Z_LEVEL_CRYOGAIA_UPPER
 			)
+
+	else if (srcz == Z_LEVEL_CRYOGAIA_RESIDENTIAL)
+		return list(Z_LEVEL_CRYOGAIA_RESIDENTIAL)
 	else if(srcz >= Z_LEVEL_BEACH && srcz <= Z_LEVEL_BEACH_CAVE) //Zs 16-17
 		return list(
 			Z_LEVEL_BEACH,
@@ -198,9 +251,65 @@
 			Z_LEVEL_AEROSTAT_SURFACE)
 	else
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
+*/
+
+// Overmap represetation of cryogaia
+/obj/effect/overmap/visitable/sector/cryogaia
+	name = "Borealis Majoris"
+	desc = "Home to coldness, and your workplace."
+	base = TRUE
+	icon_state = "globe"
+	color = "#00AAFF"
+	initial_generic_waypoints = list(
+		"cryogaia_excursion_hangar",
+		"cryogaia_security_hangar"
+	)
+	//Despite not being in the multi-z complex, these levels are part of the overmap sector
+	extra_z_levels = list(Z_LEVEL_PLAINS)
+
+/obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = FALSE)
+
+/obj/effect/overmap/visitable/sector/cryogaia/Uncrossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = TRUE)
+
+/obj/effect/overmap/visitable/sector/cryogaia/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
+	//For landables, we need to see if their shuttle is cloaked
+	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
+		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
+		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
+		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			atc.msg(message)
+
+	//For ships, it's safe to assume they're big enough to not be sneaky
+	else if(istype(AM, /obj/effect/overmap/visitable/ship))
+		atc.msg(message)
+
+/obj/effect/overmap/visitable/sector/cryogaia/get_space_zlevels()
+	return list() //None!
+
+/obj/effect/overmap/visitable/sector/virgo3b/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
+	//For landables, we need to see if their shuttle is cloaked
+	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
+		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
+		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
+		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			atc.msg(message)
+
+	//For ships, it's safe to assume they're big enough to not be sneaky
+	else if(istype(AM, /obj/effect/overmap/visitable/ship))
+		atc.msg(message)
 
 
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
+#define CRYOGAIA_MAP_SIZE 250 // Width and height of compiled in Southern Cross z levels.
+#define CRYOGAIA_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
+#define CRYOGAIA_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*CRYOGAIA_MAP_SIZE) - CRYOGAIA_HOLOMAP_CENTER_GUTTER) / 2) // 100
+#define CRYOGAIA_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*CRYOGAIA_MAP_SIZE)) / 2) // 60
 
 // We have a bunch of stuff common to the station z levels
 
@@ -209,30 +318,56 @@
 	name = "Subterranian depths"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/indoorrocks
+	holomap_legend_x = 220
+	holomap_legend_y = 160
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*1
 
 /datum/map_z_level/cryogaia/transit
 	z = Z_LEVEL_CRYOGAIA_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
+
 /datum/map_z_level/cryogaia/lower
 	name = "Subfloor"
 	z = Z_LEVEL_CRYOGAIA_LOWER
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/open // /turf/simulated/floor/outdoors/rocks/cryogaia
+	holomap_legend_x = 220
+	holomap_legend_y = 160
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X + CRYOGAIA_MAP_SIZE*1
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y + CRYOGAIA_MAP_SIZE*0
 
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN
 	name = "Surface level"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/open
-/*	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
-	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0 */
+	holomap_legend_x = 220
+	holomap_legend_y = 160
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y
+
+/datum/map_z_level/cryogaia/upper
+	z = Z_LEVEL_CRYOGAIA_UPPER
+	name = "Upper level"
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/open
+	holomap_legend_x = 220
+	holomap_legend_y = 160
+	holomap_offset_x = CRYOGAIA_HOLOMAP_MARGIN_X
+	holomap_offset_y = CRYOGAIA_HOLOMAP_MARGIN_Y
 
 /datum/map_z_level/cryogaia/centcom
 	z = Z_LEVEL_CRYOGAIA_CENTCOM
 	name = "Central Command"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
+
+/datum/map_z_level/cryogaia/residential
+	z = Z_LEVEL_CRYOGAIA_RESIDENTIAL
+	name = "Residential"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_CONSOLES
 /*
 /datum/map_z_level/tether/wilderness
 	name = "Wilderness"

@@ -11,7 +11,7 @@
 
 	density = 1
 	anchored = 1
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 20
 	active_power_usage = 5000
 
@@ -63,9 +63,9 @@
 		visible_message("\The [src] voices a strident beep, indicating a drone chassis is prepared.")
 
 /obj/machinery/drone_fabricator/examine(mob/user)
-	..(user)
+	. = ..()
 	if(produce_drones && drone_progress >= 100 && istype(user,/mob/observer/dead) && config.allow_drone_spawn && count_drones() < config.max_maint_drones)
-		to_chat(user, "<BR><B>A drone is prepared. Select 'Join As Drone' from the Ghost tab to spawn as a maintenance drone.</B>")
+		. += "<br><B>A drone is prepared. Select 'Join As Drone' from the Ghost tab to spawn as a maintenance drone.</B>"
 
 /obj/machinery/drone_fabricator/proc/create_drone(var/client/player)
 
@@ -115,6 +115,14 @@
 	if(jobban_isbanned(src,"Cyborg"))
 		to_chat(usr, "<span class='danger'>You are banned from playing synthetics and cannot spawn as a drone.</span>")
 		return
+
+	// VOREStation Addition Start
+	if(config.use_age_restriction_for_jobs && isnum(src.client.player_age))
+		var/time_till_play = max(0, 3 - src.client.player_age)
+		if(time_till_play)
+			to_chat(usr, "<span class='danger'>You have not been playing on the server long enough to join as drone.</span>")
+			return
+	// VOREStation Addition End
 
 	if(!MayRespawn(1))
 		return

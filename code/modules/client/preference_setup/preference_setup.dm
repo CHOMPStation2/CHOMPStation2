@@ -1,9 +1,3 @@
-#define TOPIC_NOACTION 0
-#define TOPIC_HANDLED 1
-#define TOPIC_REFRESH 2
-#define TOPIC_UPDATE_PREVIEW 4
-#define TOPIC_REFRESH_UPDATE_PREVIEW (TOPIC_REFRESH|TOPIC_UPDATE_PREVIEW)
-
 #define PREF_FBP_CYBORG "cyborg"
 #define PREF_FBP_POSI "posi"
 #define PREF_FBP_SOFTWARE "software"
@@ -238,7 +232,7 @@
 
 	. = OnTopic(href, href_list, usr)
 	if(. & TOPIC_UPDATE_PREVIEW)
-		pref_mob.client.prefs.preview_icon = null
+		pref_mob.client.prefs.update_preview_icon()
 	if(. & TOPIC_REFRESH)
 		pref_mob.client.prefs.ShowChoices(usr)
 
@@ -279,7 +273,7 @@
 	return 0 //Something went wrong!
 
 /datum/category_item/player_setup_item/proc/get_min_age()
-	var/datum/species/S = all_species[pref.species ? pref.species : "Human"]
+	var/datum/species/S = GLOB.all_species[pref.species ? pref.species : "Human"]
 	if(!is_FBP())
 		return S.min_age // If they're not a robot, we can just use the species var.
 	var/FBP_type = get_FBP_type()
@@ -293,7 +287,7 @@
 	return S.min_age // welp
 
 /datum/category_item/player_setup_item/proc/get_max_age()
-	var/datum/species/S = all_species[pref.species ? pref.species : "Human"]
+	var/datum/species/S = GLOB.all_species[pref.species ? pref.species : "Human"]
 	if(!is_FBP())
 		return S.max_age // If they're not a robot, we can just use the species var.
 	var/FBP_type = get_FBP_type()
@@ -305,3 +299,7 @@
 		if(PREF_FBP_SOFTWARE)
 			return 150
 	return S.max_age // welp
+
+/datum/category_item/player_setup_item/proc/color_square(red, green, blue, hex)
+	var/color = hex ? hex : "#[num2hex(red, 2)][num2hex(green, 2)][num2hex(blue, 2)]"
+	return "<span style='font-face: fixedsys; font-size: 14px; background-color: [color]; color: [color]'>___</span>"

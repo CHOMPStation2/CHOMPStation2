@@ -9,7 +9,7 @@
 		name = "[initial(name)]"
 		user.visible_message("[user] replaces the prescription lenses in \the [src] with generics.")
 
-	playsound(user,'sound/items/screwdriver.ogg', 50, 1)
+	playsound(src,'sound/items/screwdriver.ogg', 50, 1)
 
 //Prescription kit
 /obj/item/device/glasses_kit
@@ -27,14 +27,14 @@
 
 	//Too difficult
 	if(target == user)
-		user << "<span class='warning'>You can't use this on yourself. Get someone to help you.</span>"
+		to_chat(user, "<span class='warning'>You can't use this on yourself. Get someone to help you.</span>")
 		return
 
 	//We're applying a prescription
 	if(istype(target,/obj/item/clothing/glasses))
 		var/obj/item/clothing/glasses/G = target
 		if(!scrip_loaded)
-			user << "<span class='warning'>You need to build a prescription from someone first! Use the kit on someone.</span>"
+			to_chat(user, "<span class='warning'>You need to build a prescription from someone first! Use the kit on someone.</span>")
 			return
 
 		if(do_after(user,5 SECONDS))
@@ -45,7 +45,7 @@
 	else if(ishuman(target))
 		var/mob/living/carbon/human/T = target
 		if(T.glasses || (T.head && T.head.flags_inv & HIDEEYES))
-			user << "<span class='warning'>The person's eyes can't be covered!</span>"
+			to_chat(user, "<span class='warning'>The person's eyes can't be covered!</span>")
 			return
 
 		T.visible_message("[user] begins making measurements for prescription lenses for [target].","[user] begins measuring your eyes. Hold still!")
@@ -60,6 +60,17 @@
 /obj/item/clothing/glasses/sunglasses/sechud/tactical
 	item_flags = AIRTIGHT
 	body_parts_covered = EYES
+
+/obj/item/clothing/glasses/graviton/medgravpatch
+	name = "medical graviton eyepatch"
+	desc = "A graviton eyepatch with a medical overlay."
+	icon = 'icons/obj/clothing/glasses_vr.dmi'
+	icon_override = 'icons/mob/eyes_vr.dmi'
+	icon_state = "medgravpatch"
+	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
+	action_button_name = "Toggle Eyepatch"
+	off_state = "eyepatch"
+	enables_planes = list(VIS_CH_STATUS,VIS_CH_HEALTH,VIS_FULLBRIGHT,VIS_MESONS)
 
 /*---Tajaran-specific Eyewear---*/
 
@@ -116,5 +127,6 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/mob/species/seromi/eyes.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/eyes.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/eyes.dmi'
+		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/eyes.dmi',
+		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
 		)

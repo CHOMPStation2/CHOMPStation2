@@ -37,6 +37,7 @@
 	var/burned_fuel_for = 0 // Keeps track of how long the welder's been on, used to gradually empty the welder if left one, without RNG.
 	var/always_process = FALSE // If true, keeps the welder on the process list even if it's off.  Used for when it needs to regenerate fuel.
 	toolspeed = 1
+	drop_sound = 'sound/items/drop/scrap.ogg'
 
 /obj/item/weapon/weldingtool/Initialize()
 	. = ..()
@@ -55,9 +56,9 @@
 	return ..()
 
 /obj/item/weapon/weldingtool/examine(mob/user)
-	if(..(user, 0))
-		if(max_fuel)
-			to_chat(user, text("\icon[] The [] contains []/[] units of fuel!", src, src.name, get_fuel(),src.max_fuel ))
+	. = ..()
+	if(max_fuel && loc == user)
+		. += "It contains [get_fuel()]/[src.max_fuel] units of fuel!"
 
 /obj/item/weapon/weldingtool/attack(atom/A, mob/living/user, def_zone)
 	if(ishuman(A) && user.a_intent == I_HELP)
@@ -66,6 +67,20 @@
 
 		if(!S || S.robotic < ORGAN_ROBOT || S.open == 3)
 			return ..()
+
+		//VOREStation Add - No welding nanoform limbs
+		if(S.robotic > ORGAN_LIFELIKE)
+			return ..()
+		//VOREStation Add End
+
+		if(S.organ_tag == BP_HEAD)
+			if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space))
+				to_chat(user, "<span class='warning'>You can't apply [src] through [H.head]!</span>")
+				return 1
+		else
+			if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space))
+				to_chat(user, "<span class='warning'>You can't apply [src] through [H.wear_suit]!</span>")
+				return 1
 
 		if(!welding)
 			to_chat(user, "<span class='warning'>You'll need to turn [src] on to patch the damage on [H]'s [S.name]!</span>")
@@ -136,7 +151,7 @@
 		if(!welding && max_fuel)
 			O.reagents.trans_to_obj(src, max_fuel)
 			to_chat(user, "<span class='notice'>Welder refueled</span>")
-			playsound(src.loc, 'sound/effects/refill.ogg', 50, 1, -6)
+			playsound(src, 'sound/effects/refill.ogg', 50, 1, -6)
 			return
 		else if(!welding)
 			to_chat(user, "<span class='notice'>[src] doesn't use fuel.</span>")
@@ -144,9 +159,9 @@
 		else
 			message_admins("[key_name_admin(user)] triggered a fueltank explosion with a welding tool.")
 			log_game("[key_name(user)] triggered a fueltank explosion with a welding tool.")
-			//Yawn edit: removed weldertank booms
 			to_chat(user, "<span class='danger'>You begin welding on the fueltank and with a moment of lucidity you realize... you are doomed.</span>") //CHOMP Edit: changed yawn edit to just say you are doomed
-			//End yawn edit
+			var/obj/structure/reagent_dispensers/fueltank/tank = O // CHOMPS edit - Readds welderbombing 
+			tank.explode()
 			return
 	if (src.welding)
 		remove_fuel(1)
@@ -263,7 +278,7 @@
 				to_chat(M, "<span class='notice'>You switch the [src] on.</span>")
 			else if(T)
 				T.visible_message("<span class='danger'>\The [src] turns on.</span>")
-			playsound(loc, acti_sound, 50, 1)
+			playsound(src, acti_sound, 50, 1)
 			src.force = 15
 			src.damtype = "fire"
 			src.w_class = ITEMSIZE_LARGE
@@ -285,7 +300,7 @@
 			to_chat(M, "<span class='notice'>You switch \the [src] off.</span>")
 		else if(T)
 			T.visible_message("<span class='warning'>\The [src] turns off.</span>")
-		playsound(loc, deac_sound, 50, 1)
+		playsound(src, deac_sound, 50, 1)
 		src.force = 3
 		src.damtype = "brute"
 		src.w_class = initial(src.w_class)
@@ -440,11 +455,11 @@
 	name = "strange welding tool"
 	desc = "An experimental welder capable of synthesizing its own fuel from spatial waveforms. It's like welding with a star!"
 	icon_state = "hybwelder"
-	max_fuel = 20
+	max_fuel = 80 //more max fuel is better! Even if it doesn't actually use fuel.
 	eye_safety_modifier = -2	// Brighter than the sun. Literally, you can look at the sun with a welding mask of proper grade, this will burn through that.
 	slowdown = 0.1
 	toolspeed = 0.25
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_NORMAL
 	flame_intensity = 5
 	origin_tech = list(TECH_ENGINEERING = 5, TECH_PHORON = 4, TECH_PRECURSOR = 1)
 	reach = 2
@@ -547,13 +562,12 @@
 	return power_supply
 
 /obj/item/weapon/weldingtool/electric/examine(mob/user)
-	if(get_dist(src, user) > 1)
-		to_chat(user, desc)
-	else					// The << need to stay, for some reason
+	. = ..()
+	if(Adjacent(user))
 		if(power_supply)
-			user << text("\icon[] The [] has [] charge left.", src, src.name, get_fuel())
+			. += "It [src.name] has [get_fuel()] charge left."
 		else
-			user << text("\icon[] The [] has no power cell!", src, src.name)
+			. += "It [src.name] has no power cell!"
 
 /obj/item/weapon/weldingtool/electric/get_fuel()
 	if(use_external_power)
@@ -635,6 +649,10 @@
 				var/obj/item/weapon/rig/suit = H.back
 				if(istype(suit))
 					return suit.cell
+	if(istype(src.loc, /obj/item/mecha_parts/mecha_equipment))
+		var/obj/item/mecha_parts/mecha_equipment/mounting = src.loc
+		if(mounting.chassis && mounting.chassis.cell)
+			return mounting.chassis.cell
 	return null
 
 /obj/item/weapon/weldingtool/electric/mounted
@@ -642,5 +660,27 @@
 
 /obj/item/weapon/weldingtool/electric/mounted/cyborg
 	toolspeed = 0.5
+
+/obj/item/weapon/weldingtool/electric/mounted/exosuit
+	var/obj/item/mecha_parts/mecha_equipment/equip_mount = null
+	flame_intensity = 1
+	eye_safety_modifier = 2
+	always_process = TRUE
+
+/obj/item/weapon/weldingtool/electric/mounted/exosuit/Initialize()
+	..()
+
+	if(istype(loc, /obj/item/mecha_parts/mecha_equipment))
+		equip_mount = loc
+
+/obj/item/weapon/weldingtool/electric/mounted/exosuit/process()
+	..()
+
+	if(equip_mount && equip_mount.chassis)
+		var/obj/mecha/M = equip_mount.chassis
+		if(M.selected == equip_mount && get_fuel())
+			setWelding(TRUE, M.occupant)
+		else
+			setWelding(FALSE, M.occupant)
 
 #undef WELDER_FUEL_BURN_INTERVAL

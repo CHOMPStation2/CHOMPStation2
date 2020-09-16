@@ -3,10 +3,10 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/template_noop)
 "c" = (
-/turf/simulated/wall/virgo2,
+/turf/simulated/wall/bor4,
 /area/submap/virgo2/Lab1)
 "d" = (
 /obj/structure/grille,
@@ -18,7 +18,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/Lab1)
 "e" = (
 /obj/structure/grille,
@@ -27,7 +27,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/Lab1)
 "f" = (
 /obj/structure/grille,
@@ -39,7 +39,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/Lab1)
 "g" = (
 /obj/machinery/space_heater,
@@ -276,13 +276,17 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/virgo2/Lab1)
 "V" = (
-/turf/simulated/mineral/floor/ignore_mapgen/virgo2,
+/turf/simulated/mineral/floor/ignore_mapgen/bor4,
 /area/submap/virgo2/Lab1)
 "W" = (
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/plating/bor4,
+/area/submap/virgo2/Lab1)
+"X" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg,
+/turf/simulated/floor/tiled/steel_dirty,
 /area/submap/virgo2/Lab1)
 "Z" = (
-/obj/structure/ghost_pod/manual/lost_drone/dogborg,
+/obj/structure/salvageable/data,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/virgo2/Lab1)
 
@@ -343,7 +347,7 @@ d
 V
 V
 d
-h
+Z
 F
 K
 F
@@ -631,7 +635,7 @@ V
 d
 C
 H
-h
+Z
 h
 S
 d
@@ -664,7 +668,7 @@ a
 a
 V
 f
-Z
+X
 h
 p
 t
