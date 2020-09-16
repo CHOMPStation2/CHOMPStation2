@@ -55,7 +55,7 @@
 	icon_state = "teshariplushie_brown"
 	item_state = "teshariplushie_brown"
 	pokephrase = "Rya!"
-	slot_flags = SLOT_BACK | SLOT_HEAD | SLOT_EARS
+	slot_flags = SLOT_BACK | SLOT_HEAD
 	icon = 'icons/obj/toy_yw.dmi'
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_toys_yw.dmi',
