@@ -21,6 +21,9 @@
 	var/shocked = 0
 	var/busy = 0
 
+	var/input_dir = NORTH //YWedit
+	var/input_dir_name = "North"//YWEdit
+
 	var/mat_efficiency = 1
 	var/build_time = 50
 
@@ -340,3 +343,85 @@
 	stored_material[matstring] -= ejected * S.perunit
 	if(recursive && stored_material[matstring] >= S.perunit)
 		eject_materials(matstring, -1)
+
+
+//YWAdd start.
+/obj/machinery/autolathe/verb/eatmaterialsnearby()
+	set name = "Recycle nearby materials"
+	set category = "Object"
+	set src in oview(1)
+
+	var/filltype = 0       // Used to determine message.
+	var/total_used = 0     // Amount of material used.
+	if(busy)
+		visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Autolathe is busy. Please wait for completion of previous operation\"")
+		return
+	busy = 1
+	for(var/obj/item/eating in get_step(src,input_dir))
+		if(istype(eating,/obj/item/ammo_magazine/clip) || istype(eating,/obj/item/ammo_magazine/s357) || istype(eating,/obj/item/ammo_magazine/s38) || istype(eating,/obj/item/ammo_magazine/s44) || istype(eating,/obj/item/stack))
+			continue
+
+		if(!eating.matter)
+			continue
+
+
+		var/mass_per_sheet = 0 // Amount of material constituting one sheet.
+		for(var/material in eating.matter)
+
+			if(isnull(stored_material[material]) || isnull(storage_capacity[material]))
+				continue
+
+			if(stored_material[material] >= storage_capacity[material])
+				continue
+
+			var/total_material = eating.matter[material]
+
+
+			if(stored_material[material] + total_material > storage_capacity[material])
+				total_material = storage_capacity[material] - stored_material[material]
+				filltype = 1
+			else
+				filltype = 2
+
+			stored_material[material] += total_material
+			total_used += total_material
+			mass_per_sheet += eating.matter[material]
+
+		if(!filltype)
+			visible_message("[bicon(src)]<b>\The [src]</b> beeps, \"Storage is full. Operation aborted\"")
+			break
+
+		flick("autolathe_loading", src)
+
+		if(istype(eating,/obj/item/stack))
+			var/obj/item/stack/stack = eating
+			stack.use(max(1, round(total_used/mass_per_sheet))) // Always use at least 1 to prevent infinite materials.
+		else
+			qdel(eating)
+		sleep(10*mat_efficiency)
+
+	busy = 0
+	if(filltype == 1)
+		visible_message("[bicon(src)] <b>\The [src]</b> beeps, \"Storage capacity full. Operation terminated. Materials recycled: [total_used]\"")
+	else
+		visible_message("[bicon(src)] <b>\The [src]</b> beeps, \"All materials recycled. Operation terminated. Materials recycled: [total_used]\"")
+
+
+
+/obj/machinery/autolathe/verb/setrecyclepos()
+	set name = "Set recycle input"
+	set category = "Object"
+	set src in oview(1)
+
+	input_dir_name = input("Which direction ?") in list("North", "South", "East", "West")
+	switch(input_dir_name)
+		if("North")
+			input_dir = NORTH
+		if("South")
+			input_dir = SOUTH
+		if("East")
+			input_dir = EAST
+		if("West")
+			input_dir = WEST
+	to_chat(src, "You set the material input to [input_dir_name]")
+//YWAdd END.
