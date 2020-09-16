@@ -1,9 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/white,
 /turf/simulated/floor/tiled,
@@ -43,7 +41,6 @@
 /area/borealis2/elevator/uppermining)
 "ag" = (
 /obj/machinery/power/apc{
-	dir = 2;
 	name = "south bump";
 	pixel_y = -32
 	},
@@ -78,12 +75,10 @@
 /area/cryogaia/station/excursion_dock)
 "ak" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 8;
-	icon_state = "borderfloorcorner_black"
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 1;
-	icon_state = "dangercorner"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -115,8 +110,7 @@
 "ao" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway)
@@ -162,8 +156,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/danger{
-	dir = 8;
-	icon_state = "danger"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -185,9 +178,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "ax" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 2
-	},
+/obj/machinery/atmospherics/pipe/tank/air,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
 "ay" = (
@@ -196,8 +187,7 @@
 	pixel_x = -30
 	},
 /obj/structure/bed/chair/wood{
-	dir = 4;
-	icon_state = "wooden_chair"
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
@@ -232,9 +222,7 @@
 /turf/simulated/open,
 /area/civilian/atrium/upper)
 "aE" = (
-/obj/machinery/computer/shuttle_control/explore/excursion{
-	dir = 2
-	},
+/obj/machinery/computer/shuttle_control/explore/excursion,
 /turf/simulated/floor/tiled,
 /area/shuttle/excursion)
 "aF" = (
@@ -275,7 +263,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	dir = 1;
 	icon_state = "pdoor0";
 	id = "shuttle blast";
 	name = "Shuttle Blast Doors";
@@ -286,16 +273,14 @@
 /area/shuttle/excursion)
 "aL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
 "aM" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /obj/structure/railing,
 /turf/simulated/open,
@@ -333,8 +318,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -23;
-	pixel_y = 0
+	pixel_x = -23
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
@@ -352,18 +336,14 @@
 	icon_state = "comfychair_preview"
 	},
 /obj/machinery/light_switch{
-	dir = 2;
 	name = "light switch ";
 	pixel_x = 28;
 	pixel_y = 28
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 4;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = 21;
-	pixel_y = 0
+	pixel_x = 21
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
@@ -385,9 +365,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "aW" = (
-/obj/machinery/appliance/cooker/grill{
-	dir = 2
-	},
+/obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
 "aX" = (
@@ -430,8 +408,7 @@
 /area/shuttle/excursion)
 "bd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -451,7 +428,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	dir = 1;
 	icon_state = "pdoor0";
 	id = "shuttle blast";
 	name = "Shuttle Blast Doors";
@@ -463,8 +439,7 @@
 "bf" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/exterior/upper)
@@ -476,8 +451,7 @@
 /area/shuttle/excursion)
 "bh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 6;
-	icon_state = "intact"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
@@ -486,8 +460,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
@@ -497,9 +470,7 @@
 /area/shuttle/excursion)
 "bk" = (
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /obj/machinery/camera/network/security{
@@ -553,8 +524,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
@@ -660,8 +630,7 @@
 /area/shuttle/excursion)
 "bB" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
@@ -718,8 +687,7 @@
 /area/constructionsite/cryogaia/upper)
 "bH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/wall/rshull,
@@ -728,8 +696,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techfloor,
@@ -791,8 +758,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -804,12 +770,10 @@
 /area/shuttle/excursion)
 "bU" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
-	dir = 8;
-	icon_state = "steel_decals_central5"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/cryogaia/station/excursion_dock)
@@ -832,19 +796,16 @@
 /area/maintenance/auxsolarport)
 "bZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/excursion)
 "ca" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/effect/overlay/snow/floor,
 /obj/structure/table/steel,
@@ -852,8 +813,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "cb" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
@@ -889,8 +849,7 @@
 /area/medical/medbayupper)
 "ce" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -924,8 +883,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_tower)
@@ -943,9 +901,7 @@
 	dir = 6
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -991,8 +947,7 @@
 "cr" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 8;
-	icon_state = "warningcorner_dust"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -1039,15 +994,13 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/excursion)
 "cx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -1068,8 +1021,7 @@
 /area/shuttle/excursion)
 "cz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -1123,7 +1075,6 @@
 /obj/structure/closet/secure_closet/medical_wall{
 	name = "O- Blood Locker";
 	pixel_x = 32;
-	pixel_y = 0;
 	req_access = list();
 	req_one_access = list()
 	},
@@ -1138,8 +1089,7 @@
 	dir = 9
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
@@ -1184,20 +1134,17 @@
 /area/shuttle/excursion)
 "cL" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
 "cM" = (
 /obj/structure/sign/greencross{
-	pixel_x = -32;
-	pixel_y = 0
+	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1206,12 +1153,10 @@
 /area/shuttle/excursion)
 "cN" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -1289,7 +1234,6 @@
 /area/shuttle/excursion)
 "cW" = (
 /obj/machinery/shuttle_sensor{
-	dir = 2;
 	id_tag = "shuttlesens_exp_psg"
 	},
 /turf/simulated/wall/rshull,
@@ -1308,7 +1252,6 @@
 	pixel_y = 28
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 2;
 	frequency = 1380;
 	id_tag = "expshuttle_docker_pump_out_internal"
 	},
@@ -1317,11 +1260,9 @@
 /area/shuttle/excursion)
 "cZ" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1;
-	icon_state = "warning"
+	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 2;
 	frequency = 1380;
 	id_tag = "expshuttle_vent"
 	},
@@ -1342,7 +1283,6 @@
 /area/shuttle/excursion)
 "da" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 2;
 	frequency = 1380;
 	id_tag = "expshuttle_vent"
 	},
@@ -1388,8 +1328,7 @@
 /area/security/watchtower)
 "de" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -1427,8 +1366,7 @@
 /area/borealis2/outdoors/grounds/upper/solars)
 "di" = (
 /obj/machinery/vending/cola{
-	dir = 8;
-	icon_state = "Soda_Machine"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -1459,8 +1397,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/fitness{
-	dir = 4;
-	icon_state = "fitness"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
@@ -1481,15 +1418,13 @@
 	pixel_y = -30
 	},
 /obj/structure/bed/chair/wood{
-	dir = 1;
-	icon_state = "wooden_chair"
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "dr" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -1557,8 +1492,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	icon_state = "map"
+	dir = 4
 	},
 /obj/effect/shuttle_landmark/premade/excursion/cryogaia,
 /obj/effect/overmap/visitable/ship/landable/excursion,
@@ -1579,8 +1513,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8;
-	icon_state = "map"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
@@ -1631,8 +1564,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	icon_state = "map"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/excursion)
@@ -1671,7 +1603,6 @@
 	},
 /obj/machinery/access_button/airlock_exterior{
 	master_tag = "Outpost_Upper_SE_Exit";
-	pixel_x = 0;
 	pixel_y = -24
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -1679,12 +1610,10 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "dJ" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
@@ -1696,13 +1625,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/floor_decal/corner/white{
-	dir = 8;
-	icon_state = "corner_white"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -1737,13 +1664,11 @@
 "dO" = (
 /obj/structure/cable{
 	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 0
+	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
@@ -1768,8 +1693,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
@@ -1792,8 +1716,7 @@
 "dU" = (
 /obj/structure/flora/pottedplant/large,
 /obj/effect/floor_decal/corner/white{
-	dir = 1;
-	icon_state = "corner_white"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -1865,8 +1788,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
@@ -1898,8 +1820,7 @@
 "eg" = (
 /obj/structure/shuttle/engine/propulsion{
 	anchored = 0;
-	dir = 8;
-	icon_state = "propulsion"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
@@ -1915,9 +1836,7 @@
 /turf/simulated/floor/wood,
 /area/security/breakroom)
 "ei" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 2
-	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
 "ej" = (
@@ -2033,12 +1952,10 @@
 /area/shuttle/excursion)
 "ey" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6;
-	icon_state = "intact-scrubbers"
+	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
@@ -2048,8 +1965,7 @@
 /area/borealis2/outdoors/grounds/checkpoint)
 "eA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2064,8 +1980,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2117,8 +2032,7 @@
 /area/medical/medbayupper)
 "eH" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 8;
-	icon_state = "warning"
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2157,8 +2071,7 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/excursion)
@@ -2196,8 +2109,7 @@
 /area/shuttle/excursion)
 "eN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -2223,15 +2135,13 @@
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
 "eR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
@@ -2279,8 +2189,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
@@ -2294,15 +2203,13 @@
 /area/cryogaia/station/ert_arrival)
 "eZ" = (
 /obj/structure/bed/chair/wood{
-	dir = 4;
-	icon_state = "wooden_chair"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "fa" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/effect/overlay/snow/floor,
 /obj/structure/table/steel,
@@ -2388,8 +2295,7 @@
 	name = "Offplanet Mining Operations"
 	},
 /obj/effect/floor_decal/corner/brown{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
@@ -2410,8 +2316,7 @@
 /area/shuttle/excursion)
 "fm" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
@@ -2477,8 +2382,7 @@
 "fw" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -2503,8 +2407,7 @@
 /area/security/breakroom)
 "fA" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -2515,8 +2418,7 @@
 /area/chapel/monastery/upper)
 "fC" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/machinery/firealarm{
 	dir = 1;
@@ -2530,8 +2432,7 @@
 	dir = 4;
 	id = "hangarsurface";
 	name = "Engine Repair Bay";
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2563,8 +2464,7 @@
 /obj/structure/closet/walllocker/emerglocker/south,
 /obj/structure/closet/crate,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
@@ -2580,19 +2480,16 @@
 "fJ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/machinery/light/spot/no_nightshift{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "fK" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
-	dir = 2;
 	icon_state = "32-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -2603,8 +2500,7 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/down{
-	dir = 8;
-	icon_state = "pipe-d"
+	dir = 8
 	},
 /turf/simulated/open,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -2631,8 +2527,7 @@
 /obj/machinery/recharger,
 /obj/structure/table/steel,
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -2671,16 +2566,13 @@
 /area/shuttle/excursion)
 "fV" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 4;
-	icon_state = "borderfloorcorner_black"
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 4;
-	icon_state = "dangercorner"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
@@ -2697,7 +2589,6 @@
 /obj/machinery/button/remote/airlock{
 	desiredstate = 1;
 	dir = 4;
-	icon_state = "doorctrl0";
 	id = "expshuttle_door_cargo";
 	name = "hatch bolt control";
 	pixel_x = -32;
@@ -2719,8 +2610,7 @@
 "fY" = (
 /obj/structure/sign/warning/docking_area,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
@@ -2737,7 +2627,6 @@
 "gb" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
@@ -2748,17 +2637,14 @@
 /area/borealis2/outdoors/grounds/upper/solars)
 "gd" = (
 /obj/machinery/light/no_nightshift{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
 /obj/item/device/radio/intercom/department/security{
 	dir = 4;
-	icon_state = "secintercom";
-	pixel_x = 24;
-	pixel_y = 0
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
@@ -2775,8 +2661,7 @@
 "gf" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -2868,8 +2753,7 @@
 /area/cryogaia/station/explorer_prep)
 "gs" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
@@ -2894,8 +2778,7 @@
 /area/borealis2/outdoors/exterior/upper)
 "gw" = (
 /obj/machinery/atmospherics/unary/engine{
-	dir = 1;
-	icon_state = "nozzle"
+	dir = 1
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/excursion)
@@ -2929,8 +2812,7 @@
 "gz" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/machinery/light/spot/no_nightshift,
 /turf/simulated/open/cryogaia,
@@ -2952,8 +2834,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -3029,7 +2910,6 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
-	icon_state = "extinguisher_closed";
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -3038,7 +2918,6 @@
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
 	departmentType = 2;
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /obj/machinery/light{
@@ -3048,12 +2927,10 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 4;
-	icon_state = "borderfloorcorner_black"
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 4;
-	icon_state = "dangercorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -3078,12 +2955,10 @@
 /area/cryogaia/station/explorer_prep)
 "gR" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 4;
-	icon_state = "borderfloorcorner_black"
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 4;
-	icon_state = "dangercorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -3110,12 +2985,10 @@
 "gU" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southeast)
@@ -3168,12 +3041,10 @@
 /area/maintenance/medical_upper)
 "hb" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 1;
-	icon_state = "borderfloorcorner_black"
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 8;
-	icon_state = "dangercorner"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -3258,12 +3129,10 @@
 	},
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 8;
-	icon_state = "borderfloorcorner_black"
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 1;
-	icon_state = "dangercorner"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -3331,7 +3200,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/power/apc{
-	dir = 2;
 	name = "south bump";
 	pixel_y = -28;
 	req_access = list(67)
@@ -3351,8 +3219,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3379,8 +3246,7 @@
 	pixel_y = -25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3405,8 +3271,7 @@
 /area/security/breakroom)
 "hx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -3422,15 +3287,12 @@
 	},
 /obj/item/device/radio/intercom/department/security{
 	dir = 8;
-	icon_state = "secintercom";
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light/no_nightshift{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
@@ -3449,8 +3311,7 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6;
-	icon_state = "intact-scrubbers"
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
@@ -3484,9 +3345,7 @@
 	pixel_y = 4
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
@@ -3495,13 +3354,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
-/obj/machinery/light{
-	icon_state = "tube1";
-	pixel_x = 0
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "hE" = (
@@ -3509,8 +3364,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
@@ -3522,14 +3376,11 @@
 	dir = 10
 	},
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /obj/machinery/light/no_nightshift{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 1
@@ -3546,9 +3397,7 @@
 /area/borealis2/outdoors/grounds/upper/solars)
 "hH" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -3561,8 +3410,7 @@
 "hJ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -3589,7 +3437,6 @@
 /area/cryogaia/station/explorer_prep)
 "hM" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 4;
 	name = "Exploration Vessel Dock";
 	req_one_access = list()
 	},
@@ -3693,8 +3540,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 1;
-	icon_state = "intact-scrubbers"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
@@ -3725,8 +3571,7 @@
 /area/cryogaia/station/explorer_prep)
 "hZ" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
+	dir = 8
 	},
 /obj/machinery/firealarm{
 	dir = 4;
@@ -3793,8 +3638,7 @@
 /area/security/watchtower)
 "ig" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -3803,16 +3647,14 @@
 /area/chapel/monastery/upper)
 "ih" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/checkpoint)
 "ii" = (
 /obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
@@ -3909,22 +3751,19 @@
 /obj/item/clothing/shoes/boots/winter/explorer,
 /obj/machinery/alarm{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "ir" = (
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4;
-	icon_state = "warning_dust"
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "is" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -3934,16 +3773,14 @@
 "it" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "iu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3958,8 +3795,7 @@
 /area/cryogaia/station/excursion_dock)
 "iv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3981,8 +3817,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -4001,8 +3836,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 2
@@ -4056,8 +3890,7 @@
 /area/cryogaia/station/explorer_prep)
 "iB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4139,8 +3972,7 @@
 	name = "Offplanet Mining Operations"
 	},
 /obj/effect/floor_decal/corner/brown{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
@@ -4209,7 +4041,6 @@
 "iN" = (
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /obj/machinery/computer/security/exploration{
@@ -4268,22 +4099,19 @@
 "iS" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "iT" = (
 /obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
+	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/cryogaia/station/ert_arrival)
 "iU" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -4361,8 +4189,7 @@
 /area/cryogaia/station/pathfinder_office)
 "jc" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/cryogaia/station/ert_arrival)
@@ -4370,8 +4197,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/machinery/light/spot/no_nightshift{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southeast)
@@ -4503,13 +4329,11 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/corner/red{
@@ -4532,9 +4356,7 @@
 "jq" = (
 /obj/structure/closet/secure_closet/explorer,
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
@@ -4568,8 +4390,7 @@
 "jw" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/machinery/light/spot/no_nightshift,
 /turf/simulated/open/cryogaia,
@@ -4697,7 +4518,6 @@
 /obj/structure/closet/secure_closet/explorer,
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -4728,12 +4548,10 @@
 /area/cryogaia/station/explorer_prep)
 "jM" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/cryogaia/station/ert_arrival)
@@ -4778,8 +4596,7 @@
 /area/cryogaia/station/explorer_entrance)
 "jS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4826,12 +4643,10 @@
 "jW" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
@@ -4847,8 +4662,7 @@
 /area/cryogaia/station/explorer_entrance)
 "jY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass,
@@ -4858,7 +4672,6 @@
 /obj/structure/table/standard,
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -4872,8 +4685,7 @@
 /area/cryogaia/station/explorer_entrance)
 "ka" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4886,15 +4698,13 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/machinery/light/spot/no_nightshift{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "kc" = (
 /obj/structure/bed/chair/wood{
-	dir = 4;
-	icon_state = "wooden_chair"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -4941,7 +4751,6 @@
 /obj/machinery/light,
 /obj/machinery/firealarm{
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -4967,8 +4776,7 @@
 /area/cryogaia/station/explorer_prep)
 "kl" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
@@ -5070,8 +4878,7 @@
 "ku" = (
 /obj/structure/closet/secure_closet/personal/volunteer,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 1
@@ -5096,7 +4903,6 @@
 /obj/random/medical/lite,
 /obj/machinery/alarm{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22
 	},
 /obj/machinery/camera/network/medbay{
@@ -5127,8 +4933,7 @@
 "kz" = (
 /obj/structure/closet/secure_closet/personal/volunteer,
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 4
@@ -5160,8 +4965,7 @@
 /area/cryogaia/station/explorer_entrance)
 "kF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -5193,8 +4997,7 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6;
-	icon_state = "intact-scrubbers"
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
@@ -5206,39 +5009,33 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "kL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9;
-	icon_state = "intact-scrubbers"
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "kM" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/machinery/light/spot/no_nightshift{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southeast)
 "kN" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -5260,8 +5057,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "kQ" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
@@ -5273,7 +5069,6 @@
 "kT" = (
 /obj/machinery/alarm{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -5310,8 +5105,7 @@
 /area/cryogaia/station/explorer_meeting)
 "kW" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -5329,8 +5123,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -5438,9 +5231,7 @@
 	dir = 1
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 1;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = 21
 	},
@@ -5470,19 +5261,17 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/machinery/vending/snack{
-	dir = 4;
-	icon_state = "snack"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
 "lo" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Volunteer Storage";
-	req_one_access = list()
+	req_one_access = list(43,67,68,69)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5528,9 +5317,7 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "lu" = (
-/obj/structure/closet/crate{
-	dir = 4
-	},
+/obj/structure/closet/crate,
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/belter)
@@ -5546,12 +5333,10 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6;
-	icon_state = "intact-scrubbers"
+	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/structure/cable{
 	d1 = 2;
@@ -5650,7 +5435,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -5780,8 +5564,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/cola{
-	dir = 4;
-	icon_state = "Soda_Machine"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
@@ -5844,7 +5627,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
@@ -5852,8 +5634,7 @@
 "mb" = (
 /obj/structure/table/steel,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
@@ -5921,7 +5702,6 @@
 	dir = 8;
 	id = "explolobby";
 	name = "Exploration Lobby Door";
-	pixel_x = 0;
 	req_one_access = list(43,67,68,69)
 	},
 /turf/simulated/floor/tiled,
@@ -5999,8 +5779,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/machinery/light/spot/no_nightshift{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -6019,9 +5798,6 @@
 	dir = 8
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 2;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -6038,8 +5814,7 @@
 /area/security/watchtower)
 "mx" = (
 /obj/structure/bed/chair/wood{
-	dir = 1;
-	icon_state = "wooden_chair"
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
@@ -6047,7 +5822,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
-	icon_state = "extinguisher_closed";
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -6059,16 +5833,14 @@
 "mz" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -6076,8 +5848,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 8
@@ -6089,15 +5860,13 @@
 /area/cryogaia/station/explorer_entrance)
 "mA" = (
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j1"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -6114,8 +5883,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -6127,8 +5895,7 @@
 "mC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -6190,12 +5957,10 @@
 /area/cryogaia/station/explorer_entrance)
 "mJ" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -6231,8 +5996,7 @@
 /area/cryogaia/station/explorer_entrance)
 "mO" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -6249,8 +6013,7 @@
 /area/cryogaia/station/explorer_meeting)
 "mQ" = (
 /obj/machinery/vending/snack{
-	dir = 1;
-	icon_state = "snack"
+	dir = 1
 	},
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -6259,13 +6022,9 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "mR" = (
-/obj/machinery/light{
-	icon_state = "tube1";
-	pixel_x = 0
-	},
+/obj/machinery/light,
 /obj/machinery/vending/cola{
-	dir = 1;
-	icon_state = "Soda_Machine"
+	dir = 1
 	},
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -6294,8 +6053,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/medupper)
@@ -6334,10 +6092,7 @@
 /area/cryogaia/station/explorer_meeting)
 "mY" = (
 /obj/structure/filingcabinet/filingcabinet,
-/obj/machinery/light{
-	icon_state = "tube1";
-	pixel_x = 0
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 8
@@ -6425,8 +6180,7 @@
 	dir = 8
 	},
 /obj/machinery/vending/coffee{
-	dir = 8;
-	icon_state = "coffee"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
@@ -6446,8 +6200,7 @@
 /area/cryogaia/station/explorer_entrance)
 "nh" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southeast)
@@ -6475,8 +6228,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/structure/cable{
 	d2 = 2;
@@ -6487,8 +6239,7 @@
 "nl" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -6524,16 +6275,14 @@
 "nq" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "nr" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/effect/overlay/snow/floor,
 /obj/structure/table/steel,
@@ -6610,8 +6359,7 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "nA" = (
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6;
-	icon_state = "warning_dust"
+	dir = 6
 	},
 /obj/effect/floor_decal/rust,
 /obj/structure/cable{
@@ -6651,7 +6399,6 @@
 "nD" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -24
 	},
 /obj/structure/cable{
@@ -6723,16 +6470,14 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
 "nN" = (
 /obj/structure/railing,
 /obj/machinery/light/no_nightshift{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 1
@@ -6783,8 +6528,7 @@
 	pixel_x = -30
 	},
 /obj/machinery/light/no_nightshift{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -6799,8 +6543,7 @@
 /area/cryogaia/station/medical/upper)
 "of" = (
 /obj/machinery/vending/coffee{
-	dir = 4;
-	icon_state = "coffee"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -6814,7 +6557,6 @@
 "oq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	dir = 2;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating/snow/plating,
@@ -6830,16 +6572,13 @@
 /area/cryogaia/station/medical/upper)
 "os" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 8;
-	icon_state = "borderfloorcorner_black"
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 1;
-	icon_state = "dangercorner"
+	dir = 1
 	},
 /obj/machinery/light_switch{
 	dir = 1;
@@ -6966,8 +6705,7 @@
 "oE" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -6992,8 +6730,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -7005,8 +6742,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -7018,8 +6754,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4;
-	icon_state = "map-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -7038,8 +6773,7 @@
 /area/medical/medbayupper)
 "oL" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
@@ -7067,8 +6801,7 @@
 /area/borealis2/outdoors/grounds/upper/solars)
 "oW" = (
 /obj/machinery/vending/coffee{
-	dir = 4;
-	icon_state = "coffee"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -7115,8 +6848,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/civilian/atrium/upper)
@@ -7150,8 +6882,7 @@
 	pixel_x = 30
 	},
 /obj/machinery/light/no_nightshift{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
@@ -7171,7 +6902,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /obj/structure/disposalpipe/segment{
@@ -7204,7 +6934,6 @@
 "po" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
-	icon_state = "extinguisher_closed";
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled,
@@ -7212,8 +6941,7 @@
 "pp" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -7225,8 +6953,7 @@
 "pu" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 25;
-	pixel_y = 0
+	pixel_x = 25
 	},
 /obj/machinery/camera/network/civilian{
 	dir = 8
@@ -7235,8 +6962,7 @@
 /area/civilian/atrium/upper)
 "pv" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -7269,9 +6995,7 @@
 	dir = 6
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
@@ -7281,8 +7005,6 @@
 	},
 /obj/structure/noticeboard/medical{
 	dir = 4;
-	name = "medical notice board";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/white,
@@ -7352,9 +7074,7 @@
 /area/borealis2/outdoors/grounds/upper/solars)
 "qi" = (
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 1;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = 21
 	},
@@ -7367,8 +7087,7 @@
 /area/borealis2/outdoors/grounds/checkpoint)
 "qr" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -7416,7 +7135,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /obj/structure/cable/green{
@@ -7432,7 +7150,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -7446,8 +7163,7 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/structure/handrail{
 	dir = 4
@@ -7462,8 +7178,7 @@
 "qX" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey,
 /obj/effect/landmark{
@@ -7509,7 +7224,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /obj/structure/cable/green{
@@ -7542,8 +7256,7 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "rv" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -7573,15 +7286,13 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /turf/simulated/open,
 /area/civilian/atrium/upper)
 "rE" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -7594,9 +7305,6 @@
 	dir = 10
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 2;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -7649,8 +7357,7 @@
 	pixel_x = -30
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -7684,9 +7391,6 @@
 /area/civilian/atrium/upper)
 "sm" = (
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 2;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -7697,8 +7401,7 @@
 /area/quartermaster/miningdock)
 "sp" = (
 /obj/effect/floor_decal/corner/white{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -7710,8 +7413,7 @@
 /area/medical/medbayskybridge)
 "st" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/cryogaia/station/ert_arrival)
@@ -7758,8 +7460,7 @@
 /area/quartermaster/miningdock)
 "sH" = (
 /obj/effect/floor_decal/corner/brown{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
@@ -7783,8 +7484,7 @@
 /area/cryogaia/station/medical/upper)
 "sV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
@@ -7792,18 +7492,10 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
-"sY" = (
-/obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medical_upper)
 "ta" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
@@ -7837,16 +7529,12 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 4;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = 21;
-	pixel_y = 0
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -7886,15 +7574,13 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
+	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7906,9 +7592,7 @@
 /area/medical/medbayupper)
 "tt" = (
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -7933,20 +7617,16 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "tE" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
 "tF" = (
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 4;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = 21;
-	pixel_y = 0
+	pixel_x = 21
 	},
 /obj/machinery/light{
 	dir = 4
@@ -7998,7 +7678,6 @@
 	id_tag = "Monastary_Upper_SE_Exit";
 	name = "Monastary Upper SE Exit Controller";
 	pixel_x = 26;
-	pixel_y = 0;
 	tag_exterior_door = "Monastary_Upper_SE_Exit_Exterior";
 	tag_interior_door = "Monastary_Upper_SE_Exit_Interior"
 	},
@@ -8028,8 +7707,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -23;
-	pixel_y = 0
+	pixel_x = -23
 	},
 /obj/machinery/camera/network/mining{
 	dir = 4
@@ -8038,8 +7716,7 @@
 /area/quartermaster/miningdock)
 "tT" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/cryogaia/station/ert_arrival)
@@ -8065,8 +7742,7 @@
 "tY" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
@@ -8079,9 +7755,7 @@
 	dir = 4
 	},
 /obj/machinery/light_switch{
-	dir = 2;
 	name = "light switch ";
-	pixel_x = 0;
 	pixel_y = 36
 	},
 /turf/simulated/floor/tiled/white,
@@ -8092,15 +7766,13 @@
 /area/quartermaster/miningdock)
 "uj" = (
 /obj/effect/floor_decal/corner/white/full{
-	dir = 8;
-	icon_state = "corner_white_full"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "um" = (
 /obj/effect/floor_decal/corner/brown{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8110,9 +7782,7 @@
 "ux" = (
 /obj/structure/closet/crate/medical,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -8132,8 +7802,7 @@
 "uB" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -8147,8 +7816,7 @@
 "uG" = (
 /obj/machinery/space_heater,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -8165,8 +7833,7 @@
 "uS" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
@@ -8185,12 +7852,10 @@
 "uZ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -8199,15 +7864,13 @@
 /area/borealis2/outdoors/grounds/upper/solars)
 "vc" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "vd" = (
 /obj/machinery/vending/snack{
-	dir = 4;
-	icon_state = "snack"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -8261,8 +7924,7 @@
 "vs" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
@@ -8287,12 +7949,9 @@
 /area/medical/medbayupper)
 "vx" = (
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 4;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = 21;
-	pixel_y = 0
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -8301,12 +7960,10 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/machinery/vending/cola{
-	dir = 4;
-	icon_state = "Soda_Machine"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -8316,12 +7973,10 @@
 "vE" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -8332,8 +7987,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -8345,8 +7999,7 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "vJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -8363,8 +8016,7 @@
 "vL" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southeast)
@@ -8377,7 +8029,6 @@
 "vN" = (
 /obj/machinery/access_button/airlock_exterior{
 	master_tag = "Monastary_Upper_SE_Exit";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/machinery/door/airlock/glass_external/freezable{
@@ -8397,8 +8048,7 @@
 "vQ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -8420,7 +8070,6 @@
 "vS" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Solar Farm - SMES";
-	charge = 0;
 	cur_coils = 3
 	},
 /obj/structure/cable/heavyduty,
@@ -8464,15 +8113,13 @@
 /area/medical/medbayupper)
 "wp" = (
 /obj/effect/floor_decal/corner/white{
-	dir = 1;
-	icon_state = "corner_white"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "wq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -8480,8 +8127,7 @@
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
@@ -8504,7 +8150,6 @@
 /area/quartermaster/miningdock)
 "wB" = (
 /obj/machinery/power/apc{
-	dir = 2;
 	name = "south bump";
 	pixel_y = -28;
 	req_access = newlist();
@@ -8531,15 +8176,13 @@
 /area/borealis2/outdoors/grounds/tower/southwest)
 "wH" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
 "wJ" = (
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6;
-	icon_state = "warning_dust"
+	dir = 6
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
@@ -8564,9 +8207,6 @@
 	dir = 4
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 2;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -8577,7 +8217,6 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/apc;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
@@ -8606,12 +8245,10 @@
 /area/quartermaster/miningdock)
 "wZ" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 8;
-	icon_state = "door_open"
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/brown{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -8628,14 +8265,12 @@
 "xd" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6;
-	icon_state = "warning_dust"
+	dir = 6
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	id_tag = "Monastary_Upper_NW_Exit";
 	name = "Monastary Upper NW Exit Controller";
 	pixel_x = 26;
-	pixel_y = 0;
 	tag_exterior_door = "Monastary_Upper_NW_Exit_Exterior";
 	tag_interior_door = "Monastary_Upper_NW_Exit_Interior"
 	},
@@ -8648,12 +8283,9 @@
 "xk" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 4;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = 21;
-	pixel_y = 0
+	pixel_x = 21
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
@@ -8668,8 +8300,7 @@
 "xm" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
@@ -8694,8 +8325,7 @@
 /area/borealis2/outdoors/grounds/tower/east)
 "xv" = (
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1;
-	icon_state = "warning_dust"
+	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -8761,8 +8391,7 @@
 /area/maintenance/auxsolarport)
 "xO" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
@@ -8782,8 +8411,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
@@ -8796,8 +8424,7 @@
 /area/security/watchtower)
 "xX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
@@ -8830,8 +8457,7 @@
 /area/borealis2/outdoors/grounds/tower/west)
 "yk" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
@@ -8864,8 +8490,7 @@
 "yv" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
@@ -8878,8 +8503,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -8926,8 +8550,7 @@
 "yC" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
@@ -8953,8 +8576,7 @@
 /obj/item/device/defib_kit/loaded,
 /obj/machinery/newscaster{
 	layer = 3.3;
-	pixel_x = 28;
-	pixel_y = 0
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -8965,6 +8587,12 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
 /area/civilian/atrium/upper)
+"yR" = (
+/obj/structure/table/steel,
+/obj/item/weapon/gun/energy/netgun,
+/obj/item/weapon/gun/energy/netgun,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "yT" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8976,8 +8604,7 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "yX" = (
 /obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
@@ -8989,15 +8616,13 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
 "zg" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -9019,8 +8644,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/cigarette{
-	dir = 4;
-	icon_state = "cigs"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
@@ -9037,8 +8661,7 @@
 /area/medical/medbayskybridge)
 "zo" = (
 /obj/machinery/power/terminal{
-	dir = 4;
-	icon_state = "term"
+	dir = 4
 	},
 /obj/structure/cable/yellow,
 /turf/simulated/floor/plating/snow/plating,
@@ -9062,7 +8685,6 @@
 "zw" = (
 /obj/machinery/alarm{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /obj/machinery/camera/network/civilian{
@@ -9102,8 +8724,7 @@
 	dir = 9
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 8;
-	icon_state = "door_open"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
@@ -9120,8 +8741,7 @@
 "zK" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
@@ -9145,8 +8765,7 @@
 /area/quartermaster/miningdock)
 "zN" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/checkpoint)
@@ -9155,8 +8774,7 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9181,8 +8799,7 @@
 /area/crew_quarters/medbreak)
 "zT" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /obj/effect/landmark{
@@ -9198,8 +8815,7 @@
 /area/security/breakroom)
 "Ae" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9245,13 +8861,10 @@
 /area/borealis2/outdoors/grounds/checkpoint)
 "Av" = (
 /obj/structure/bed/chair/wood{
-	dir = 4;
-	icon_state = "wooden_chair"
+	dir = 4
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
@@ -9263,16 +8876,14 @@
 /area/borealis2/outdoors/grounds/upper/solars)
 "Ax" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
 "Az" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -9330,12 +8941,10 @@
 	},
 /obj/machinery/suit_cycler/mining,
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 1;
-	icon_state = "borderfloorcorner_black"
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 8;
-	icon_state = "dangercorner"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -9351,8 +8960,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "AP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	icon_state = "map"
+	dir = 4
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
@@ -9376,15 +8984,13 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/white{
-	dir = 10;
-	icon_state = "corner_white"
+	dir = 10
 	},
 /obj/structure/cable/green{
 	d1 = 2;
@@ -9396,12 +9002,10 @@
 "Bf" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
@@ -9486,12 +9090,10 @@
 /area/medical/medbayskybridge)
 "BB" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -9515,8 +9117,7 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /obj/structure/railing{
 	dir = 8
@@ -9539,8 +9140,7 @@
 /area/constructionsite/medical/upper)
 "BN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9555,12 +9155,10 @@
 "BO" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/machinery/light/spot/no_nightshift{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -9578,8 +9176,7 @@
 	dir = 4
 	},
 /obj/machinery/vending/coffee{
-	dir = 4;
-	icon_state = "coffee"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -9599,15 +9196,13 @@
 "Cb" = (
 /obj/machinery/alarm{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/constructionsite/medical/upper)
 "Ch" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -9625,9 +9220,7 @@
 	dir = 9
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 8
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -9635,12 +9228,10 @@
 /area/medical/medbayskybridge)
 "Ck" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 1;
-	icon_state = "borderfloorcorner_black"
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 8;
-	icon_state = "dangercorner"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
@@ -9654,8 +9245,7 @@
 "Cn" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6;
-	icon_state = "warning_dust"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/chapel/monastery/upper)
@@ -9678,19 +9268,16 @@
 "Cw" = (
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -23;
-	pixel_y = 0
+	pixel_x = -23
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "Cx" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
-	dir = 8;
-	icon_state = "borderfloorcorner_black"
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/danger/corner{
-	dir = 1;
-	icon_state = "dangercorner"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
@@ -9698,8 +9285,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance/medical,
@@ -9722,8 +9308,7 @@
 /area/borealis2/outdoors/exterior/upper)
 "CI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
@@ -9734,8 +9319,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/white{
-	dir = 6;
-	icon_state = "corner_white"
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -9744,23 +9328,20 @@
 	dir = 6
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "CS" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "CT" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -9775,8 +9356,7 @@
 "CX" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -9788,8 +9368,7 @@
 /area/quartermaster/miningdock)
 "CZ" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -9820,16 +9399,13 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4;
-	icon_state = "map-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Di" = (
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 1;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = 21
 	},
@@ -9866,7 +9442,6 @@
 "Ds" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
-	dir = 2;
 	icon_state = "32-4"
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
@@ -9880,9 +9455,7 @@
 /area/maintenance/security_tower)
 "Dt" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
@@ -9909,12 +9482,10 @@
 "Dz" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/south)
@@ -9937,8 +9508,7 @@
 /area/chapel/monastery/upper)
 "DF" = (
 /obj/machinery/vending/fitness{
-	dir = 4;
-	icon_state = "fitness"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -9994,16 +9564,12 @@
 /area/borealis2/outdoors/grounds/tower/southeast)
 "Ee" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
+	dir = 8
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 4;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = 21;
-	pixel_y = 0
+	pixel_x = 21
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
@@ -10041,7 +9607,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -10061,16 +9626,14 @@
 /area/civilian/atrium/upper)
 "Eo" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "Ep" = (
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
+	dir = 8
 	},
 /obj/structure/sign/warning/radioactive{
 	desc = "A sign denoting that this elevator shaft is not radiation proof";
@@ -10130,22 +9693,19 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4;
-	icon_state = "map-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "Ex" = (
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/apc;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
 	},
 /obj/structure/cable{
 	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 0
+	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled,
@@ -10160,8 +9720,7 @@
 /obj/structure/catwalk,
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
 	dir = 4;
@@ -10177,8 +9736,7 @@
 /area/medical/medbayupper)
 "EQ" = (
 /obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_tower)
@@ -10267,8 +9825,7 @@
 "Fl" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -10278,9 +9835,7 @@
 	dir = 1
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 1;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = 21
 	},
@@ -10291,15 +9846,13 @@
 /area/chapel/monastery/upper)
 "Fs" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia/covered,
 /area/borealis2/outdoors/exterior/upper)
 "Fv" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/item/device/geiger/wall{
 	dir = 4;
@@ -10326,8 +9879,7 @@
 /area/chapel/monastery/upper)
 "FL" = (
 /obj/machinery/computer/station_alert/security{
-	dir = 8;
-	icon_state = "computer"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
@@ -10361,8 +9913,7 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4;
-	icon_state = "map-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -10370,9 +9921,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/security_tower)
 "FU" = (
-/obj/structure/closet/crate{
-	dir = 4
-	},
+/obj/structure/closet/crate,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -10394,13 +9943,11 @@
 /area/borealis2/outdoors/grounds/upper)
 "Gf" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
@@ -10423,8 +9970,7 @@
 /area/borealis2/elevator/medupper)
 "Go" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
@@ -10436,8 +9982,7 @@
 /area/chapel/monastery/upper)
 "Gv" = (
 /obj/effect/floor_decal/corner/white{
-	dir = 6;
-	icon_state = "corner_white"
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -10462,8 +10007,7 @@
 /obj/structure/table/steel,
 /obj/machinery/newscaster{
 	layer = 3.3;
-	pixel_x = 28;
-	pixel_y = 0
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
@@ -10499,8 +10043,7 @@
 /area/borealis2/outdoors/grounds/tower/southeast)
 "GL" = (
 /obj/effect/floor_decal/corner/white{
-	dir = 5;
-	icon_state = "corner_white"
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -10517,8 +10060,7 @@
 /area/shuttle/belter)
 "GQ" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
@@ -10534,8 +10076,7 @@
 	dir = 4
 	},
 /obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
@@ -10552,8 +10093,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/white{
-	dir = 6;
-	icon_state = "corner_white"
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -10572,21 +10112,16 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/white{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Hm" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
-"Hp" = (
-/turf/simulated/wall,
-/area/cryogaia/station/hallway/primary/upper/east)
 "Hs" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/industrial/warning/dust/corner,
@@ -10601,7 +10136,6 @@
 	dir = 9
 	},
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/apc;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
@@ -10614,15 +10148,13 @@
 "HC" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
 "HH" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -10662,8 +10194,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/down{
-	dir = 4;
-	icon_state = "pipe-d"
+	dir = 4
 	},
 /turf/simulated/open,
 /area/constructionsite/cryogaia/upper)
@@ -10672,12 +10203,10 @@
 /area/cryogaia/station/excursion_dock)
 "HV" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -10691,13 +10220,11 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -10717,9 +10244,7 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	density = 0;
 	layer = 4;
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -10729,8 +10254,7 @@
 /area/quartermaster/miningdock)
 "Ig" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 1;
-	icon_state = "warningcorner_dust"
+	dir = 1
 	},
 /obj/structure/sign/warning/docking_area,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -10742,20 +10266,17 @@
 /area/chapel/monastery/upper)
 "Io" = (
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "Ip" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
@@ -10772,8 +10293,7 @@
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
-	dir = 8;
-	icon_state = "pipe-t"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -10826,8 +10346,7 @@
 /area/crew_quarters/medbreak)
 "IQ" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -10877,9 +10396,7 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "Jf" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
@@ -10891,8 +10408,7 @@
 /obj/item/weapon/deck/cards,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 25;
-	pixel_y = 0
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -10916,8 +10432,7 @@
 /area/shuttle/belter)
 "Jn" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /obj/structure/railing{
 	dir = 1
@@ -10930,8 +10445,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/item/device/radio/intercom/department/medbay{
 	dir = 4;
@@ -10959,16 +10473,13 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/white{
-	dir = 9;
-	icon_state = "corner_white"
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Jw" = (
 /obj/machinery/door/airlock/centcom{
-	locked = 0;
 	name = "Restricted Area";
-	opacity = 1;
 	req_access = list(103)
 	},
 /obj/machinery/shield_diffuser,
@@ -10994,8 +10505,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11015,7 +10525,6 @@
 	},
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "Outpost_Upper_SE_Exit";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -11028,8 +10537,7 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "JI" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/catwalk,
 /obj/effect/landmark{
@@ -11048,12 +10556,10 @@
 "JN" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/machinery/light/spot/no_nightshift{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northwest)
@@ -11083,9 +10589,7 @@
 /area/medical/medbayupper)
 "JX" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -11104,8 +10608,7 @@
 /area/chapel/monastery/upper)
 "Ka" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /obj/effect/landmark{
@@ -11142,8 +10645,7 @@
 /area/crew_quarters/medbreak)
 "Kk" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey,
 /obj/effect/overlay/snow/floor,
@@ -11162,9 +10664,6 @@
 	dir = 1
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
-	dir = 2;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -11173,8 +10672,7 @@
 "Ko" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
@@ -11211,20 +10709,17 @@
 /area/civilian/atrium/upper)
 "Kv" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
 "Kw" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
@@ -11262,8 +10757,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -11283,8 +10777,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/coffee{
-	dir = 4;
-	icon_state = "coffee"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
@@ -11297,9 +10790,7 @@
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "KO" = (
-/obj/machinery/computer/roguezones{
-	dir = 2
-	},
+/obj/machinery/computer/roguezones,
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 8
 	},
@@ -11334,16 +10825,14 @@
 /area/quartermaster/miningdock)
 "KU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
 "Lc" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -11359,8 +10848,7 @@
 "Li" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -11375,8 +10863,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 1;
-	icon_state = "warningcorner_dust"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -11404,9 +10891,7 @@
 "Ln" = (
 /obj/machinery/power/terminal,
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /obj/machinery/power/port_gen/pacman/mrs,
@@ -11427,8 +10912,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4;
-	icon_state = "map-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
@@ -11506,12 +10990,10 @@
 "Mf" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/west)
@@ -11531,7 +11013,6 @@
 "Mm" = (
 /obj/machinery/access_button/airlock_exterior{
 	master_tag = "Monastary_Upper_NW_Exit";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/machinery/door/airlock/glass_external/freezable{
@@ -11582,23 +11063,18 @@
 /area/cryogaia/station/medical/upper)
 "MJ" = (
 /obj/machinery/light/no_nightshift{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "MT" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 8;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = -21;
-	pixel_y = 0
+	pixel_x = -21
 	},
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
@@ -11654,7 +11130,6 @@
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	id_tag = "Outpost_Upper_SE_Exit";
 	name = "Outpost Upper SE Exit Controller";
-	pixel_x = 0;
 	pixel_y = 26;
 	tag_exterior_door = "Upper_Level_SE_Exterior";
 	tag_interior_door = "Upper_Level_SE_Interior"
@@ -11666,19 +11141,15 @@
 	dir = 6
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 4;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = 21;
-	pixel_y = 0
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "Nz" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /turf/simulated/open,
 /area/chapel/monastery/upper)
@@ -11696,7 +11167,6 @@
 "NC" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
-	icon_state = "extinguisher_closed";
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled,
@@ -11720,7 +11190,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
@@ -11777,8 +11246,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "Monastary_Upper_NW_Exit";
-	pixel_x = 24;
-	pixel_y = 0
+	pixel_x = 24
 	},
 /obj/machinery/door/airlock/glass_external/public{
 	frequency = 1379;
@@ -11827,8 +11295,7 @@
 	},
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11837,8 +11304,7 @@
 /area/chapel/monastery/upper)
 "Op" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -11874,7 +11340,6 @@
 	},
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "Monastary_Upper_SE_Exit";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/machinery/door/airlock/glass_external/public{
@@ -11892,16 +11357,12 @@
 /area/civilian/atrium/upper)
 "OA" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 8;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = -21;
-	pixel_y = 0
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/checkpoint)
@@ -11938,12 +11399,10 @@
 /area/quartermaster/miningdock)
 "ON" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/effect/overlay/snow/floor,
 /obj/structure/table/steel,
@@ -11951,8 +11410,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "OP" = (
 /obj/effect/floor_decal/corner/brown{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
@@ -11964,16 +11422,14 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "OQ" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
 "OS" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -11995,8 +11451,7 @@
 /area/borealis2/outdoors/grounds/checkpoint)
 "Pe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12039,9 +11494,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
@@ -12049,7 +11502,6 @@
 "Pn" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -24
 	},
 /obj/machinery/light/no_nightshift,
@@ -12083,8 +11535,7 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -12093,8 +11544,7 @@
 /area/cryogaia/station/medical/upper)
 "Pu" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -12102,12 +11552,10 @@
 "Py" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/machinery/light/spot/no_nightshift{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -12131,8 +11579,7 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "PF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/effect/landmark/start{
 	name = "Security Pilot"
@@ -12154,8 +11601,7 @@
 "PN" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -12189,8 +11635,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -12202,7 +11647,6 @@
 "Qa" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
-	dir = 2;
 	icon_state = "32-4"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -12231,8 +11675,7 @@
 "Qn" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -12244,8 +11687,7 @@
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
 /obj/machinery/light/spot/no_nightshift{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
@@ -12257,8 +11699,7 @@
 /area/maintenance/medical_upper)
 "Qq" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -12270,7 +11711,6 @@
 /area/chapel/monastery/upper)
 "Qv" = (
 /obj/machinery/power/thermoregulator/cryogaia{
-	pixel_x = 0;
 	pixel_y = 25
 	},
 /obj/structure/cable/green{
@@ -12288,8 +11728,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4;
-	icon_state = "map-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12340,8 +11779,7 @@
 /area/maintenance/medical_upper)
 "QN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12354,20 +11792,17 @@
 	},
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/yellow{
-	dir = 2;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
 "QQ" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /obj/machinery/light/spot/no_nightshift{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
@@ -12417,8 +11852,7 @@
 /area/shuttle/belter)
 "Rh" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12430,12 +11864,10 @@
 "Rl" = (
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -25;
-	pixel_y = 0
+	pixel_x = -25
 	},
 /obj/structure/bed/chair/wood{
-	dir = 4;
-	icon_state = "wooden_chair"
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
@@ -12449,8 +11881,7 @@
 /area/constructionsite/medical/upper)
 "Rn" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/machinery/holoposter{
 	dir = 8;
@@ -12461,8 +11892,7 @@
 "Rp" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6;
-	icon_state = "warning_dust"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -12482,8 +11912,7 @@
 /area/civilian/atrium/upper)
 "Rs" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -12491,8 +11920,7 @@
 "Rt" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
@@ -12520,12 +11948,10 @@
 "RB" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
@@ -12534,8 +11960,7 @@
 /area/chapel/monastery/upper)
 "RG" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -12548,8 +11973,7 @@
 "RJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -12570,8 +11994,7 @@
 "RL" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southeast)
@@ -12588,8 +12011,7 @@
 /area/constructionsite/cryogaia/upper)
 "RR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12675,8 +12097,7 @@
 "Sg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/white{
-	dir = 5;
-	icon_state = "corner_white"
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -12700,8 +12121,7 @@
 /area/medical/medbayskybridge)
 "Sq" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -12728,8 +12148,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "SC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12748,16 +12167,14 @@
 "SE" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
 "SH" = (
 /obj/machinery/vending/snack{
-	dir = 8;
-	icon_state = "snack"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -12765,15 +12182,13 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/east)
 "SN" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/cryogaia/cryogaia,
@@ -12789,12 +12204,10 @@
 "Tb" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -12824,8 +12237,7 @@
 	dir = 9
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 8;
-	icon_state = "door_open"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
@@ -12854,23 +12266,18 @@
 /area/borealis2/outdoors/grounds/upper)
 "Tw" = (
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 8;
-	listening = 1;
 	name = "Common Channel";
-	pixel_x = -21;
-	pixel_y = 0
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "TA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
@@ -12880,12 +12287,10 @@
 /area/medical/medbayskybridge)
 "TK" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -12929,7 +12334,6 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
-	icon_state = "extinguisher_closed";
 	pixel_x = 30
 	},
 /turf/simulated/floor/wood,
@@ -12954,8 +12358,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/alarm{
 	frequency = 1441;
@@ -12969,8 +12372,7 @@
 "Ui" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 25;
-	pixel_y = 0
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -13001,8 +12403,7 @@
 "Ur" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
@@ -13010,17 +12411,14 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "Ux" = (
 /obj/item/device/radio/intercom/department/security{
 	dir = 4;
-	icon_state = "secintercom";
-	pixel_x = 24;
-	pixel_y = 0
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
@@ -13038,8 +12436,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13050,8 +12447,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j1"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -13064,8 +12460,7 @@
 /area/crew_quarters/medbreak)
 "UE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13108,8 +12503,7 @@
 /area/chapel/monastery/upper)
 "UM" = (
 /obj/structure/bed/chair/wood{
-	dir = 1;
-	icon_state = "wooden_chair"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13126,12 +12520,10 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
@@ -13145,8 +12537,7 @@
 /area/security/watchtower)
 "UP" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -13220,12 +12611,10 @@
 	},
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13234,7 +12623,6 @@
 	},
 /obj/machinery/firealarm{
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
@@ -13251,9 +12639,7 @@
 	dir = 9
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
@@ -13291,8 +12677,7 @@
 /area/cryogaia/station/medical/upper)
 "VH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13330,8 +12715,7 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /obj/structure/railing{
 	dir = 4
@@ -13368,13 +12752,11 @@
 	dir = 6
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 25;
-	pixel_y = 0
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
@@ -13390,8 +12772,7 @@
 /area/medical/medbayupper)
 "Wi" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -13450,8 +12831,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/southeast)
@@ -13461,8 +12841,7 @@
 /area/borealis2/outdoors/grounds/tower/west)
 "WL" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -13478,28 +12857,23 @@
 /area/borealis2/outdoors/exterior/upper)
 "WT" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/southwest)
 "WV" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey{
-	dir = 4;
-	icon_state = "grey_railing0"
+	dir = 4
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "WX" = (
 /obj/item/device/radio/intercom{
-	broadcasting = 0;
 	dir = 1;
-	listening = 1;
 	name = "Common Channel";
 	pixel_y = 21
 	},
@@ -13550,24 +12924,21 @@
 /area/maintenance/medical_upper)
 "Xf" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/east)
 "Xh" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	icon_state = "grey_railing0"
+	dir = 1
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/south)
 "Xj" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -13618,8 +12989,7 @@
 /area/crew_quarters/medbreak)
 "Xu" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/east)
@@ -13652,9 +13022,7 @@
 /area/security/watchtower)
 "XF" = (
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /obj/machinery/camera/network/security{
@@ -13706,12 +13074,10 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/structure/sign/warning/radioactive{
 	desc = "A sign denoting that this elevator shaft is not radiation proof";
@@ -13726,15 +13092,13 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "XT" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "XV" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
@@ -13756,8 +13120,7 @@
 "Yc" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /obj/structure/railing/grey{
 	flags = null
@@ -13913,8 +13276,7 @@
 	dir = 9
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 1;
-	icon_state = "door_open"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
@@ -13924,9 +13286,7 @@
 "Zu" = (
 /obj/structure/railing/grey,
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -13943,8 +13303,7 @@
 "Zw" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
-	dir = 8;
-	icon_state = "grey_railing0"
+	dir = 8
 	},
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/tower/northeast)
@@ -13968,8 +13327,7 @@
 "ZE" = (
 /obj/structure/flora/pottedplant/large,
 /obj/effect/floor_decal/corner/white{
-	dir = 4;
-	icon_state = "corner_white"
+	dir = 4
 	},
 /obj/machinery/camera/network/civilian,
 /turf/simulated/floor/tiled,
@@ -13977,8 +13335,7 @@
 "ZH" = (
 /obj/structure/closet/crate/medical,
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -14005,8 +13362,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/vending/coffee{
-	dir = 1;
-	icon_state = "coffee"
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
@@ -14017,8 +13373,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -20103,7 +19458,7 @@ Mt
 Mt
 Mt
 Mt
-sY
+Qp
 Qa
 tq
 oK
@@ -28914,7 +28269,7 @@ AN
 AN
 AN
 AN
-Hp
+mD
 nk
 ny
 mD
@@ -30685,7 +30040,7 @@ hL
 hX
 iw
 iZ
-jt
+yR
 jQ
 ks
 fS

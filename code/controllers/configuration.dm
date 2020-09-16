@@ -36,8 +36,8 @@ var/list/gamemode_cache = list()
 	var/static/vote_period = 600				// length of voting period (deciseconds, default 1 minute)
 	var/static/vote_autotransfer_initial = 108000 // Length of time before the first autotransfer vote is called
 	var/static/vote_autotransfer_interval = 36000 // length of time before next sequential autotransfer vote
+	var/static/vote_autotransfer_amount = 1 // YW EDIT: number of extension votes before the final one
 	var/static/vote_autogamemode_timeleft = 100 //Length of time before round start when autogamemode vote is called (in seconds, default 100).
-	var/static/vote_autotransfer_amount = 3 //How many autotransfers to have
 	var/static/vote_no_default = 0				// vote does not default to nochange/norestart (tbi)
 	var/static/vote_no_dead = 0				// dead people can't vote (tbi)
 //	var/static/enable_authentication = 0		// goon authentication
@@ -206,16 +206,18 @@ var/list/gamemode_cache = list()
 
 	var/static/enter_allowed = 1
 
-	var/static/use_irc_bot = 0
-	var/static/use_node_bot = 0
-	var/static/irc_bot_port = 0
-	var/static/irc_bot_host = ""
-	var/static/irc_bot_export = 0 // whether the IRC bot in use is a Bot32 (or similar) instance; Bot32 uses world.Export() instead of nudge.py/libnudge
-	var/static/main_irc = ""
-	var/static/admin_irc = ""
-	var/static/python_path = "" //Path to the python executable.  Defaults to "python" on windows and "/usr/bin/env python2" on unix
-	var/static/use_lib_nudge = 0 //Use the C library nudge instead of the python nudge.
-	var/static/use_overmap = 0
+	var/use_irc_bot = 0
+	var/use_node_bot = 0
+	var/irc_bot_port = 0
+	var/irc_bot_host = ""
+	var/irc_bot_export = 0 // whether the IRC bot in use is a Bot32 (or similar) instance; Bot32 uses world.Export() instead of nudge.py/libnudge
+	var/main_irc = ""
+	var/admin_irc = ""
+	var/python_path = "" //Path to the python executable.  Defaults to "python" on windows and "/usr/bin/env python2" on unix
+	var/use_lib_nudge = 0 //Use the C library nudge instead of the python nudge.
+	var/use_overmap = 0
+	
+	var/static/list/engine_map = list("Supermatter Engine", "Edison's Bane")	// Comma separated list of engines to choose from.  Blank means fully random.
 
 	// Event settings
 	var/static/expected_round_length = 3 * 60 * 60 * 10 // 3 hours
@@ -284,7 +286,7 @@ var/list/gamemode_cache = list()
 
 	// whether or not to use the nightshift subsystem to perform lighting changes
 	var/static/enable_night_shifts = FALSE
-
+	
 	var/static/vgs_access_identifier = null	// VOREStation Edit - VGS
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
 
@@ -586,7 +588,7 @@ var/list/gamemode_cache = list()
 
 				if("persistence_disabled")
 					config.persistence_disabled = TRUE // Previously this forcibly set persistence enabled in the saves.
-					
+
 				if("persistence_ignore_mapload")
 					config.persistence_ignore_mapload = TRUE
 
@@ -791,6 +793,9 @@ var/list/gamemode_cache = list()
 
 				if("use_overmap")
 					config.use_overmap = 1
+
+				if("engine_map")
+					config.engine_map = splittext(value, ",")
 /*
 				if("station_levels")
 					using_map.station_levels = text2numlist(value, ";")
@@ -933,7 +938,7 @@ var/list/gamemode_cache = list()
 
 				if("enable_night_shifts")
 					config.enable_night_shifts = TRUE
-
+				
 				// VOREStation Edit Start - Can't be in _vr file because it is loaded too late.
 				if("vgs_access_identifier")
 					config.vgs_access_identifier = value

@@ -125,17 +125,18 @@
 		/area/borealis2/elevator/scimining,
 		/area/vacant/vacant_site/east,
 		/area/tcommsat/chamber,
-		/area/maintenance/maintroom5,
 		/area/tcomfoyer,
 		/area/maintenance/dorm,
 		/area/vacant/vacant_site,
-		/area/maintenance/maintroom3,
-		/area/maintenance/maintroom2,
-		/area/vacant/vacant_site/private,
 		/area/maintenance/maintroom1,
+		/area/maintenance/maintroom2,
+		/area/maintenance/maintroom3,
+		/area/maintenance/maintroom4,
+		/area/maintenance/maintroom5,
+		/area/maintenance/maintroom8,
+		/area/vacant/vacant_site/private,
 		/area/borealis2/elevator/medbasement,
 		/area/maintenance/lowfloor2,
-		/area/maintenance/maintroom4,
 		/area/borealis2/outdoors,
 		/area/borealis2/outdoors/exterior/explore3,
 		/area/borealis2/outdoors/exterior,
@@ -171,9 +172,7 @@
 		/area/borealis2/elevator/uppermining,
 		/area/borealis2/elevator/medupper,
 		/area/borealis2/outdoors/grounds/walkway,
-		/area/maintenance/upper/maintroom2,
-		/area/maintenance/upper/maintroom1,
-		/area/maintenance/maintroom8
+		/area/cryogaia/station/excursion_overhang
 		)
 
 	unit_test_exempt_from_atmos = list(

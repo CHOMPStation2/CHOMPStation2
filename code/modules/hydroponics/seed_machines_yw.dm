@@ -101,10 +101,10 @@
         return
 
       seed.loc = get_turf(src)
-      if(seed.seed.name == "new line" || isnull(plant_controller.seeds[seed.seed.name]))
-        seed.seed.uid = plant_controller.seeds.len + 1
+      if(seed.seed.name == "new line" || isnull(SSplants.seeds[seed.seed.name]))
+        seed.seed.uid = SSplants.seeds.len + 1
         seed.seed.name = "[seed.seed.uid]"
-        plant_controller.seeds[seed.seed.name] = seed.seed
+        SSplants.seeds[seed.seed.name] = seed.seed
       seed.update_seed()
       visible_message("[bicon(src)] [src] beeps and spits out [seed].")
 
@@ -128,7 +128,7 @@
     //TODO: this will be a cheaper operation the fewer chems the plant already
     //produces 
     if("prune")
-      if(!isnull(plant_controller.seeds[seed.seed.name]))
+      if(!isnull(SSplants.seeds[seed.seed.name]))
         seed.seed = seed.seed.diverge(1)
         seed.seed_type = seed.seed.name
         seed.update_seed()
@@ -140,7 +140,7 @@
     if("change_color")
       var/newcolor = uppertext(input(usr, "Choose the desired color for the plant in hex:", "Color preference", rgb(128,128,128)))
       if(is_valid_hex(newcolor)) 
-        if(!isnull(plant_controller.seeds[seed.seed.name]))
+        if(!isnull(SSplants.seeds[seed.seed.name]))
           seed.seed = seed.seed.diverge(1)
           seed.seed_type = seed.seed.name
           seed.update_seed()
@@ -192,7 +192,7 @@
     visible_message("[bicon(src)] Error: A minimum of 100 [SSchemistry.chemical_reagents[chem_name]] is required to perform this action.")
     return
   else
-    if(!isnull(plant_controller.seeds[seed.seed.name])) //diverge the seed into a new species
+    if(!isnull(SSplants.seeds[seed.seed.name])) //diverge the seed into a new species
       seed.seed = seed.seed.diverge(1)
       seed.seed_type = seed.seed.name
       seed.update_seed()
