@@ -688,12 +688,13 @@
 				if(!muzzled)
 					message = "[species.scream_verb]!"
 					m_type = 2
-					/* Removed, pending the location of some actually good, properly licensed sounds.
+					//CHOMPStation Edit Start. Uncommented block. Why was it commented in the first place?
+					//The offending content was commented out as well anyway.
 					if(get_gender() == FEMALE)
 						playsound(src, "[species.female_scream_sound]", 80, 1)
 					else
 						playsound(src, "[species.male_scream_sound]", 80, 1) //default to male screams if no gender is present.
-					*/
+					//CHOMPStation Edit End.
 				else
 					message = "makes a very loud noise."
 					m_type = 2
