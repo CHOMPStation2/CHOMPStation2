@@ -9,6 +9,7 @@ SUBSYSTEM_DEF(vote)
 	//Current vote
 	var/initiator
 	var/started_time
+	var/timebuff	//CHOMPEdit
 	var/time_remaining
 	var/duration
 	var/mode
@@ -30,6 +31,9 @@ SUBSYSTEM_DEF(vote)
 		if(time_remaining <= 0)
 			result()
 			reset()
+		else if(time_remaining <= timebuff/10)	//CHOMPEdit
+			to_chat(world,"<font color='#AD5AAD'><b>Only [time_remaining/60] minutes left to vote")	//CHOMPEdit
+			timebuff -= 600	//CHOMPEdit
 
 /datum/controller/subsystem/vote/proc/autotransfer()
 	// Before doing the vote, see if anyone is playing.
@@ -64,6 +68,7 @@ SUBSYSTEM_DEF(vote)
 	time_remaining = null
 	mode = null
 	question = null
+	timebuff = config.vote_period - 600 //CHOMPEdit
 	choices.Cut()
 	voted.Cut()
 	current_votes.Cut()
@@ -243,11 +248,12 @@ SUBSYSTEM_DEF(vote)
 			else
 				return 0
 
+		timebuff = config.vote_period - 600 //CHOMPEdit
 		mode = vote_type
 		initiator = initiator_key
 		started_time = world.time
 		duration = time
-		var/text = "[capitalize(mode)] vote started by [initiator]."
+		var/text = "[capitalize(mode)] vote started"	//CHOMPEdit
 		if(mode == VOTE_CUSTOM)
 			text += "\n[question]"
 
