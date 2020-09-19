@@ -750,8 +750,14 @@
 					/obj/item/toy/plushie/borgplushie/scrubpuppy = 1,
 					/obj/item/toy/plushie/foxbear = 1,
 					/obj/item/toy/plushie/nukeplushie = 1,
-					/obj/item/toy/plushie/otter = 1)
+					/obj/item/toy/plushie/otter = 1,
 					//VOREStation Add End
+					//YawnWider Add Start
+					/obj/item/toy/plushie/teshari/_yw = 1,
+					/obj/item/toy/plushie/teshari/w_yw = 1,
+					/obj/item/toy/plushie/teshari/b_yw = 1,
+					/obj/item/toy/plushie/teshari/y_yw = 1)
+					//YawnWider Add End
 	premium = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 1,
 					/obj/item/weapon/storage/trinketbox = 2)
 	prices = list(/obj/item/weapon/storage/fancy/heartbox = 15,
@@ -790,8 +796,14 @@
 					/obj/item/toy/plushie/borgplushie/scrubpuppy = 50,
 					/obj/item/toy/plushie/foxbear = 50,
 					/obj/item/toy/plushie/nukeplushie = 50,
-					/obj/item/toy/plushie/otter = 50)
+					/obj/item/toy/plushie/otter = 50,
 					//VOREStation Add End
+					//YawnWider Add Start
+					/obj/item/toy/plushie/teshari/_yw = 150,
+					/obj/item/toy/plushie/teshari/w_yw = 150,
+					/obj/item/toy/plushie/teshari/b_yw = 150,
+					/obj/item/toy/plushie/teshari/y_yw = 150)
+					//YawnWider Add End
 
 
 /obj/machinery/vending/fishing
