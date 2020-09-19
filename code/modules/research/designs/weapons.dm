@@ -107,7 +107,6 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 4000)
 	build_path = /obj/item/weapon/storage/box/stunshells
 	sort_string = "MABBB"
-	autolathe_build = 1 //Ywedit
 
 /datum/design/item/weapon/ballistic/ammo/empshell
 	name = "emp shells"
