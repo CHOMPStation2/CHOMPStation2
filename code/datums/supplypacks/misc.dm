@@ -84,8 +84,14 @@
 			/obj/item/toy/plushie/borgplushie/scrubpuppy,
 			/obj/item/toy/plushie/foxbear,
 			/obj/item/toy/plushie/nukeplushie,
-			/obj/item/toy/plushie/otter)
+			/obj/item/toy/plushie/otter,
 			//VOREStation Add End
+			//YawnWider Add Start
+			/obj/item/toy/plushie/teshari/_yw,
+			/obj/item/toy/plushie/teshari/w_yw,
+			/obj/item/toy/plushie/teshari/b_yw,
+			/obj/item/toy/plushie/teshari/y_yw)
+			//YawnWider Add End
 	name = "Plushies Crate"
 	cost = 15
 	containertype = /obj/structure/closet/crate/allico

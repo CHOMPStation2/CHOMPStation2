@@ -49,7 +49,7 @@
 			to_chat(M, "You cannot rename Eili! You hug her anyway.")
 			return 1
 
-/obj/item/toy/plushie/teshari_yw
+/obj/item/toy/plushie/teshari/_yw
 	name = "lifelike teshari plush"
 	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
 	icon_state = "teshariplushie_brown"
@@ -63,7 +63,7 @@
 		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
 		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
 
-/obj/item/toy/plushie/teshariw_yw
+/obj/item/toy/plushie/teshari/w_yw
 	name = "lifelike teshari plush"
 	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
 	icon_state = "teshariplushie_white"
@@ -77,7 +77,7 @@
 		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
 		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
 
-/obj/item/toy/plushie/tesharib_yw
+/obj/item/toy/plushie/teshari/b_yw
 	name = "lifelike teshari plush"
 	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
 	icon_state = "teshariplushie_black"
@@ -92,7 +92,7 @@
 		slot_head_str = 'icons/mob/toy_worn_yw.dmi',
 		slot_ear_str = 'icons/mob/toy_worn_yw.dmi')
 
-/obj/item/toy/plushie/teshariy_yw
+/obj/item/toy/plushie/teshari/y_yw
 	name = "lifelike teshari plush"
 	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
 	icon_state = "teshariplushie_yellow"
