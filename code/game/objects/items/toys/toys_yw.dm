@@ -35,7 +35,9 @@
 	item_icons = list(
 		slot_l_hand_str = 'icons/vore/custom_items_left_hand_yw.dmi',
 		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
-		slot_back_str = 'icons/vore/custom_onmob_yw.dmi')
+		slot_back_str = 'icons/vore/custom_onmob_yw.dmi',
+		slot_head_str = 'icons/vore/custom_onmob_yw.dmi')
+
 
 	rename_plushie()
 		set name = "Name Plushie"
