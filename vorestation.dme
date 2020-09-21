@@ -290,7 +290,6 @@
 #include "code\controllers\subsystems\mapping.dm"
 #include "code\controllers\subsystems\media_tracks.dm"
 #include "code\controllers\subsystems\mobs.dm"
-#include "code\controllers\subsystems\nanoui.dm"
 #include "code\controllers\subsystems\nightshift.dm"
 #include "code\controllers\subsystems\orbits.dm"
 #include "code\controllers\subsystems\overlays.dm"
@@ -3536,6 +3535,7 @@
 #include "code\modules\multiz\portals_vr.dm"
 #include "code\modules\multiz\stairs.dm"
 #include "code\modules\multiz\turf.dm"
+<<<<<<< HEAD
 #include "code\modules\multiz\turf_yw.dm"
 #include "code\modules\nano\nanoexternal.dm"
 #include "code\modules\nano\nanomanager.dm"
@@ -3559,6 +3559,9 @@
 #include "code\modules\news\news_init.dm"
 #include "code\modules\news\newspaper.dm"
 #include "code\modules\news\newspaper_layout.dm"
+=======
+#include "code\modules\multiz\zshadow.dm"
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 #include "code\modules\nifsoft\nif.dm"
 #include "code\modules\nifsoft\nif_softshop.dm"
 #include "code\modules\nifsoft\nif_tgui.dm"
@@ -4206,11 +4209,15 @@
 #include "code\modules\tgs\includes.dm"
 #include "code\modules\tgui\external.dm"
 #include "code\modules\tgui\modal.dm"
+#include "code\modules\tgui\nanomapgen.dm"
 #include "code\modules\tgui\states.dm"
 #include "code\modules\tgui\tgui.dm"
 #include "code\modules\tgui\tgui_window.dm"
 #include "code\modules\tgui\modules\_base.dm"
+<<<<<<< HEAD
 #include "code\modules\tgui\modules\admin_shuttle_controller.dm"
+=======
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 #include "code\modules\tgui\modules\agentcard.dm"
 #include "code\modules\tgui\modules\alarm.dm"
 #include "code\modules\tgui\modules\appearance_changer.dm"
@@ -4230,7 +4237,10 @@
 #include "code\modules\tgui\modules\shutoff_monitor.dm"
 #include "code\modules\tgui\modules\supermatter_monitor.dm"
 #include "code\modules\tgui\modules\teleporter.dm"
+<<<<<<< HEAD
 #include "code\modules\tgui\modules\admin\player_notes.dm"
+=======
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 #include "code\modules\tgui\modules\ntos-only\cardmod.dm"
 #include "code\modules\tgui\modules\ntos-only\configurator.dm"
 #include "code\modules\tgui\modules\ntos-only\email.dm"

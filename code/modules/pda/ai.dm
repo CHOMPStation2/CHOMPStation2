@@ -26,7 +26,11 @@
 	set name = "Use PDA"
 	set src in usr
 
+<<<<<<< HEAD
 	if(!can_use(usr))
+=======
+	if(!can_use())
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		return
 	tgui_interact(usr)
 

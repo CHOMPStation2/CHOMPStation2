@@ -26,7 +26,11 @@
 			var/list/L = list()
 			var/list/areaindex = list()
 
+<<<<<<< HEAD
 			for(var/obj/item/device/radio/beacon/R in GLOB.all_beacons)
+=======
+			for(var/obj/item/device/radio/beacon/R in all_beacons)
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 				var/turf/T = get_turf(R)
 				if(!T)
 					continue
@@ -39,7 +43,11 @@
 					areaindex[tmpname] = 1
 				L[tmpname] = R
 
+<<<<<<< HEAD
 			for(var/obj/item/weapon/implant/tracking/I in GLOB.all_tracking_implants)
+=======
+			for(var/obj/item/weapon/implant/tracking/I in all_tracking_implants)
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 				if(!I.implanted || !ismob(I.loc))
 					continue
 				else
@@ -59,7 +67,11 @@
 						areaindex[tmpname] = 1
 					L[tmpname] = I
 
+<<<<<<< HEAD
 			var/desc = tgui_input_list(usr, "Please select a location to lock in.", "Locking Menu", L)
+=======
+			var/desc = input("Please select a location to lock in.", "Locking Menu") in L|null
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if(!desc)
 				return FALSE
 			if(tgui_status(usr, state) != STATUS_INTERACTIVE)

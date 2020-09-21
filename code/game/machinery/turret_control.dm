@@ -13,7 +13,10 @@
 	icon_state = "control_standby"
 	anchored = TRUE
 	density = FALSE
+<<<<<<< HEAD
 	unacidable = TRUE
+=======
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	var/enabled = FALSE
 	var/lethal = FALSE
 	var/lethal_is_configurable = TRUE
@@ -125,7 +128,11 @@
 /obj/machinery/turretid/tgui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
+<<<<<<< HEAD
 		ui = new(user, src, "PortableTurret", name, ui_x = 500, ui_y = 400) // 500, 400
+=======
+		ui = new(user, src, "PortableTurret", name) // 500, 400
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		ui.open()
 
 /obj/machinery/turretid/tgui_data(mob/user)
@@ -194,6 +201,7 @@
 	TC.check_weapons = check_weapons
 	TC.check_anomalies = check_anomalies
 	TC.check_all = check_all
+	TC.check_down = check_down
 	TC.ailock = ailock
 
 	if(istype(control_area))

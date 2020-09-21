@@ -170,6 +170,7 @@
 			mode = params["mode"]
 
 		if("giv_name")
+<<<<<<< HEAD
 			var/nam = sanitizeName(tgui_input_text(usr, "Person pass is issued to", "Name", giv_name))
 			if(nam)
 				giv_name = nam
@@ -181,6 +182,19 @@
 			var/dur = tgui_input_number(usr, "Duration (in minutes) during which pass is valid (up to 360 minutes).", "Duration", null, 360, 0)
 			if(dur)
 				if(dur > 0 && dur <= 360) //VOREStation Edit
+=======
+			var/nam = sanitizeName(input("Person pass is issued to", "Name", giv_name) as text|null)
+			if(nam)
+				giv_name = nam
+		if("reason")
+			var/reas = sanitize(input("Reason why pass is issued", "Reason", reason) as text|null)
+			if(reas)
+				reason = reas
+		if("duration")
+			var/dur = input("Duration (in minutes) during which pass is valid (up to 120 minutes).", "Duration") as num|null
+			if(dur)
+				if(dur > 0 && dur <= 120)
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 					duration = dur
 				else
 					to_chat(usr, "<span class='warning'>Invalid duration.</span>")
@@ -241,7 +255,13 @@
 				pass.name = "guest pass #[number]"
 			else
 				to_chat(usr, "<span class='warning'>Cannot issue pass without issuing ID.</span>")
+<<<<<<< HEAD
 
 	add_fingerprint(usr)
 	return TRUE
 
+=======
+
+	add_fingerprint(usr)
+	return TRUE
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale

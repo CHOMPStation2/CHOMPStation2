@@ -9,11 +9,14 @@
 	var/list/known_targets
 	var/list/supported_types
 	var/datum/tgui_state/default/must_hack/hack_state
+<<<<<<< HEAD
 	
 /obj/item/device/multitool/hacktool/override
 	hackspeed = 0.75
 	max_level = 5
 	full_override = TRUE
+=======
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 
 /obj/item/device/multitool/hacktool/New()
 	..()
@@ -47,6 +50,7 @@
 		return 0
 
 	// Note, if you ever want to expand supported_types, you must manually add the custom state argument to their tgui_interact
+<<<<<<< HEAD
 	// DISABLED: too fancy, too high-effort // A.tgui_interact(user, custom_state = hack_state)
 	// Just brute-force it
 	if(istype(A, /obj/machinery/door/airlock))
@@ -64,6 +68,9 @@
 		else if(D.density == FALSE && D.locked == FALSE)
 			to_chat(user, "<span class='notice'>Overriding access. Door closing.</span>")
 			D.close()
+=======
+	A.tgui_interact(user, custom_state = hack_state)
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	return 1
 
 /obj/item/device/multitool/hacktool/proc/attempt_hack(var/mob/user, var/atom/target)

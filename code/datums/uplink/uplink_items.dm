@@ -51,7 +51,11 @@ var/datum/uplink/uplink = new()
 	if(!can_buy(U, user.mind.tcrystals))
 		return
 
+<<<<<<< HEAD
 	if(U.tgui_status(user, GLOB.tgui_deep_inventory_state) != STATUS_INTERACTIVE)
+=======
+	if(U.CanUseTopic(user, GLOB.tgui_inventory_state) != STATUS_INTERACTIVE)
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		return
 
 	var/cost = cost(U, user.mind.tcrystals)

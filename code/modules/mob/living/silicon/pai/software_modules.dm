@@ -71,7 +71,11 @@
 
 		// Check the carrier
 		var/datum/gender/TM = gender_datums[M.get_visible_gender()]
+<<<<<<< HEAD
 		var/answer = tgui_alert(M, "[P] is requesting a DNA sample from you. Will you allow it to confirm your identity?", "[P] Check DNA", list("Yes", "No"))
+=======
+		var/answer = input(M, "[P] is requesting a DNA sample from you. Will you allow it to confirm your identity?", "[P] Check DNA", "No") in list("Yes", "No")
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		if(answer == "Yes")
 			var/turf/T = get_turf(P.loc)
 			for (var/mob/v in viewers(T))
@@ -140,7 +144,11 @@
 
 /datum/pai_software/med_records/tgui_data(mob/living/silicon/pai/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	var/list/records = list()
 	for(var/datum/data/record/general in sortRecord(data_core.general))
 		var/list/record = list()
@@ -196,7 +204,11 @@
 
 /datum/pai_software/sec_records/tgui_data(mob/living/silicon/pai/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	var/list/records = list()
 	for(var/datum/data/record/general in sortRecord(data_core.general))
 		var/list/record = list()
@@ -369,6 +381,7 @@
 
 	return data
 
+<<<<<<< HEAD
 /datum/pai_software/pai_hud
 	name = "AR HUD"
 	ram_cost = 30
@@ -387,6 +400,36 @@
 
 /datum/pai_software/pai_hud/is_active(mob/living/silicon/pai/user)
 	return user.paiHUD
+=======
+/datum/pai_software/sec_hud
+	name = "Security HUD"
+	ram_cost = 20
+	id = "sec_hud"
+
+/datum/pai_software/sec_hud/toggle(mob/living/silicon/pai/user)
+	user.secHUD = !user.secHUD
+	user.plane_holder.set_vis(VIS_CH_ID, user.secHUD)
+	user.plane_holder.set_vis(VIS_CH_WANTED, user.secHUD)
+	user.plane_holder.set_vis(VIS_CH_IMPTRACK, user.secHUD)
+	user.plane_holder.set_vis(VIS_CH_IMPLOYAL, user.secHUD)
+	user.plane_holder.set_vis(VIS_CH_IMPCHEM, user.secHUD)
+
+/datum/pai_software/sec_hud/is_active(mob/living/silicon/pai/user)
+	return user.secHUD
+
+/datum/pai_software/med_hud
+	name = "Medical HUD"
+	ram_cost = 20
+	id = "med_hud"
+
+/datum/pai_software/med_hud/toggle(mob/living/silicon/pai/user)
+	user.medHUD = !user.medHUD
+	user.plane_holder.set_vis(VIS_CH_STATUS, user.medHUD)
+	user.plane_holder.set_vis(VIS_CH_HEALTH, user.medHUD)
+
+/datum/pai_software/med_hud/is_active(mob/living/silicon/pai/user)
+	return user.medHUD
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 
 /datum/pai_software/translator
 	name = "Universal Translator"
@@ -403,6 +446,7 @@
 		user.add_language(LANGUAGE_SKRELLIAN)
 		user.add_language(LANGUAGE_ZADDAT)
 		user.add_language(LANGUAGE_SCHECHI)
+<<<<<<< HEAD
 		user.add_language(LANGUAGE_DRUDAKAR)
 		user.add_language(LANGUAGE_SLAVIC) //CHOMP reAdd
 		user.add_language(LANGUAGE_BIRDSONG)
@@ -424,6 +468,8 @@
 		user.add_language("Mouse")
 		user.add_language("Animal")
 		user.add_language("Teppi")
+=======
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	else
 		user.remove_language(LANGUAGE_UNATHI)
 		user.remove_language(LANGUAGE_SIIK)
@@ -431,6 +477,7 @@
 		user.remove_language(LANGUAGE_SKRELLIAN)
 		user.remove_language(LANGUAGE_ZADDAT)
 		user.remove_language(LANGUAGE_SCHECHI)
+<<<<<<< HEAD
 		user.remove_language(LANGUAGE_DRUDAKAR)
 		user.remove_language(LANGUAGE_SLAVIC) //CHOMP reAdd
 		user.remove_language(LANGUAGE_BIRDSONG)
@@ -452,6 +499,8 @@
 		user.remove_language("Mouse")
 		user.remove_language("Animal")
 		user.remove_language("Teppi")
+=======
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 
 /datum/pai_software/translator/is_active(mob/living/silicon/pai/user)
 	return user.translator_on
@@ -470,7 +519,11 @@
 
 /datum/pai_software/signaller/tgui_data(mob/living/silicon/pai/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 	var/obj/item/radio/integrated/signal/R = user.sradio
 
 	data["frequency"] = R.frequency
@@ -493,7 +546,11 @@
 				spawn(0)
 					R.send_signal("ACTIVATE")
 				for(var/mob/O in hearers(1, R.loc))
+<<<<<<< HEAD
 					O.show_message("\icon[R][bicon(R)] *beep* *beep*", 3, "*beep* *beep*", 2)
+=======
+					O.show_message("[bicon(R)] *beep* *beep*", 3, "*beep* *beep*", 2)
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 			if("freq")
 				var/frequency = unformat_frequency(params["freq"])
 				frequency = sanitize_frequency(frequency, RADIO_LOW_FREQ, RADIO_HIGH_FREQ)

@@ -117,6 +117,7 @@
 		return
 	user.set_machine(src)
 	tgui_interact(user)
+<<<<<<< HEAD
 
 /obj/machinery/computer/arcade/battle/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -124,6 +125,15 @@
 		ui = new(user, src, "ArcadeBattle", name)
 		ui.open()
 
+=======
+
+/obj/machinery/computer/arcade/battle/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "ArcadeBattle", name)
+		ui.open()
+
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 /obj/machinery/computer/arcade/battle/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
 	data["name"] = name

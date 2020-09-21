@@ -419,7 +419,11 @@
 		return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
+<<<<<<< HEAD
 		ui = new(user, src, "PortableTurret", name, ui_x = 500, ui_y = 400)
+=======
+		ui = new(user, src, "PortableTurret", name, 500, 400)
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		ui.open()
 
 /obj/machinery/porta_turret/tgui_data(mob/user)
@@ -903,6 +907,7 @@
 	var/check_weapons
 	var/check_anomalies
 	var/check_all
+	var/check_down
 	var/ailock
 
 /obj/machinery/porta_turret/proc/setState(var/datum/turret_checks/TC)
@@ -918,6 +923,7 @@
 	check_weapons = TC.check_weapons
 	check_anomalies = TC.check_anomalies
 	check_all = TC.check_all
+	check_down = TC.check_down
 	ailock = TC.ailock
 
 	power_change()

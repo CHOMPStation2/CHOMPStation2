@@ -36,7 +36,12 @@ SUBSYSTEM_DEF(persistence)
 	if(!A || (A.flags & AREA_FLAG_IS_NOT_PERSISTENT))
 		return
 
+<<<<<<< HEAD
 	if(!(T.z in using_map.persist_levels))
+=======
+//	if((!T.z in GLOB.using_map.station_levels) || !initialized)
+	if(!(T.z in using_map.station_levels))
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
 		return
 
 	if(!tracking_values[track_type])

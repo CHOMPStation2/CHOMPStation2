@@ -9,4 +9,16 @@ GLOBAL_DATUM_INIT(tgui_deep_inventory_state, /datum/tgui_state/deep_inventory_st
 /datum/tgui_state/deep_inventory_state/can_use_topic(src_object, mob/user)
 	if(!user.contains(src_object))
 		return STATUS_CLOSE
+<<<<<<< HEAD
 	return user.shared_tgui_interaction(src_object)
+=======
+	return user.shared_tgui_interaction(src_object)
+
+/atom/proc/contains(var/atom/location)
+	if(!location)
+		return 0
+	if(location == src)
+		return 1
+
+	return contains(location.loc)
+>>>>>>> d49640431d... Merge pull request #9062 from ShadowLarkens/tgui_finale
