@@ -573,7 +573,7 @@ This function completely restores a damaged organ to perfect condition.
 //external organs handle brokenness a bit differently when it comes to damage. Instead brute_dam is checked inside process()
 //this also ensures that an external organ cannot be "broken" without broken_description being set.
 /obj/item/organ/external/is_broken()
-	return ((status & ORGAN_CUT_AWAY) || (status & ORGAN_BROKEN) && (!splinted || (splinted && splinted in src.contents && prob(30))))
+	return ((status & ORGAN_CUT_AWAY) || (status & ORGAN_BROKEN) && (!splinted || (splinted && splinted in src.contents && prob(30))) && !(CE_BONEFIX in owner.chem_effects)) //CHOMPEdit
 
 //Determines if we even need to process this organ.
 /obj/item/organ/external/proc/need_process()
@@ -735,8 +735,10 @@ Note that amputating the affected organ does in fact remove the infection from t
 			var/myeldose = owner.reagents.get_reagent_amount("myelamine")
 			if(!(W.can_autoheal() || (bicardose && inaprovaline) || myeldose))	//bicaridine and inaprovaline stop internal wounds from growing bigger with time, unless it is so small that it is already healing
 				W.open_wound(0.1 * wound_update_accuracy)
-
-			owner.vessel.remove_reagent("blood", wound_update_accuracy * W.damage/40) //line should possibly be moved to handle_blood, so all the bleeding stuff is in one place.
+			var/bloodmod = 1									//CHOMPEdit
+			if(CE_BLEEDSLOW in owner.chem_effects)				//CHOMPEdit
+				bloodmod *= owner.chem_effects[CE_BLEEDSLOW]	//CHOMPEdit
+			owner.vessel.remove_reagent("blood", bloodmod * wound_update_accuracy * W.damage/40) //CHOMPEdit //line should possibly be moved to handle_blood, so all the bleeding stuff is in one place.
 			if(prob(1 * wound_update_accuracy))
 				owner.custom_pain("You feel a stabbing pain in your [name]!", 50)
 

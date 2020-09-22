@@ -34,9 +34,12 @@
 #define CE_PAINKILLER "painkiller"
 #define CE_ALCOHOL "alcohol" // Liver filtering
 #define CE_ALCOHOL_TOXIC "alcotoxic" // Liver damage
+#define CE_BLEEDSLOW "bleedslow" //CHOMPEdit Myelamine, slows bleeding.
+#define CE_BONEFIX "bonefix" //CHOMPEdit Osteodaxon, temporarily treats bones
 #define CE_SPEEDBOOST "gofast" // Hyperzine
 #define CE_SLOWDOWN "goslow" // Slowdown
 #define CE_ANTACID "nopuke" // Don't puke.
+
 
 #define REAGENTS_PER_SHEET 20
 

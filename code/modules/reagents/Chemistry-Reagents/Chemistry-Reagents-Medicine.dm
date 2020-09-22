@@ -611,7 +611,7 @@
 /datum/reagent/peridaxon
 	name = "Peridaxon"
 	id = "peridaxon"
-	description = "Used to encourage recovery of internal organs and nervous systems. Medicate cautiously."
+	description = "Revitalizes necrosed organs once they have been healed."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#561EC3"
@@ -621,15 +621,18 @@
 /datum/reagent/peridaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		for(var/obj/item/organ/I in H.internal_organs)
-			if(I.robotic >= ORGAN_ROBOT)
-				continue
-			if(I.damage > 0) //Peridaxon heals only non-robotic organs
-				I.damage = max(I.damage - removed, 0)
-				H.Confuse(5)
-			if(I.damage <= 5 && I.organ_tag == O_EYES)
-				H.eye_blurry = min(M.eye_blurry + 10, 250) //Eyes need to reset, or something
-				H.sdisabilities &= ~BLIND
+		//CHOMPEdit Start
+		for(var/obj/item/organ/O in H.internal_organs)
+			if(O.status & ORGAN_DEAD)
+				O.status &= ~ORGAN_DEAD
+				H.update_icons_body()
+				break
+		for(var/obj/item/organ/O in H.organs)
+			if(O.status & ORGAN_DEAD)
+				O.status &= ~ORGAN_DEAD
+				H.update_icons_body()
+				break
+		//CHOMPEdit End
 		if(alien == IS_SLIME)
 			H.add_chemical_effect(CE_PAINKILLER, 20 * M.species.chem_strength_pain)
 			if(prob(33))
@@ -638,32 +641,30 @@
 /datum/reagent/osteodaxon
 	name = "Osteodaxon"
 	id = "osteodaxon"
-	description = "An experimental drug used to heal bone fractures."
+	description = "An experimental drug used to temporarily treat bone fractures."	//CHOMPEdit
 	reagent_state = LIQUID
 	color = "#C9BCE3"
-	metabolism = REM * 0.5
+	metabolism = REM * 0.03		//CHOMPEdit
+	ingest_met = 0.02 //CHOMPEdit
 	overdose = REAGENTS_OVERDOSE * 0.5
 	scannable = 1
 
 /datum/reagent/osteodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	M.heal_organ_damage(3 * removed, 0)	//Gives the bones a chance to set properly even without other meds
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		for(var/obj/item/organ/external/O in H.bad_external_organs)
-			if(O.status & ORGAN_BROKEN)
-				O.mend_fracture()		//Only works if the bone won't rebreak, as usual
-				H.custom_pain("You feel a terrible agony tear through your bones!",60)
-				H.AdjustWeakened(1)		//Bones being regrown will knock you over
+	//CHOMPEdit Begin
+	M.add_chemical_effect(CE_BONEFIX,1)
+	//CHOMPEdit End
+
 
 /datum/reagent/myelamine
 	name = "Myelamine"
 	id = "myelamine"
-	description = "Used to rapidly clot internal hemorrhages by increasing the effectiveness of platelets."
+	description = "Used to drastically slow bleeding for as long as the medicine is present."	//CHOMPEdit
 	reagent_state = LIQUID
 	color = "#4246C7"
-	metabolism = REM * 0.5
+	metabolism = REM * 0.03 //CHOMPEdit
+	ingest_met = 0.02 //CHOMPEdit
 	overdose = REAGENTS_OVERDOSE * 0.5
 	scannable = 1
 	var/repair_strength = 3
@@ -672,19 +673,10 @@
 	if(alien == IS_DIONA)
 		return
 	M.eye_blurry = min(M.eye_blurry + (repair_strength * removed), 250)
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		var/wound_heal = removed * repair_strength
-		for(var/obj/item/organ/external/O in H.bad_external_organs)
-			for(var/datum/wound/W in O.wounds)
-				if(W.bleeding())
-					W.damage = max(W.damage - wound_heal, 0)
-					if(W.damage <= 0)
-						O.wounds -= W
-				if(W.internal)
-					W.damage = max(W.damage - wound_heal, 0)
-					if(W.damage <= 0)
-						O.wounds -= W
+	//CHOMPEdit Begin
+	M.add_chemical_effect(CE_BLEEDSLOW,0.1/M.species.chem_strength_heal)
+	//CHOMPEdit End
+
 
 /datum/reagent/respirodaxon
 	name = "Respirodaxon"

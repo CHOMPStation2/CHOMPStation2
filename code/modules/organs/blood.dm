@@ -151,8 +151,9 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		var/blood_loss_modifier_multiplier = 1.0
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.bleeding_rate_percent))
-				blood_loss_modifier_multiplier += (M.bleeding_rate_percent - 1.0)
-
+				blood_loss_modifier_multiplier *= M.bleeding_rate_percent	//CHOMPEdit
+		if(CE_BLEEDSLOW in chem_effects)									//CHOMPEdit
+			blood_loss_modifier_multiplier *= chem_effects[CE_BLEEDSLOW]	//CHOMPEdit
 		blood_loss_divisor /= blood_loss_modifier_multiplier
 
 

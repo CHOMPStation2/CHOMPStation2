@@ -30,7 +30,24 @@
 	id = "eden_snake"
 	result = "eden_snake"
 	required_reagents = list("eden" = 1, "ethanol" = 1)
-	
+
+/datum/chemical_reaction/osteodaxon
+	name = "Osteodaxon"
+	id = "osteodaxon"
+	result = "osteodaxon"
+	required_reagents = list("inaprovaline" = 1, "paracetamol" = 2, "bicaridine" = 2, "calcium" = 1, "phoron" = 0.3)
+	catalysts = list("phoron" = 5)
+	inhibitors = list()
+	result_amount = 6
+
+/datum/chemical_reaction/myelamine
+	name = "Myelamine"
+	id = "myelamine"
+	result = "myelamine"
+	required_reagents = list("bicaridine" = 1, "iron" = 1, "inaprovaline" = 1, "phoron" = 0.1)
+	catalysts = list("phoron" = 5)
+	result_amount = 3
+
 ///SAP RECIPES//////
 
 /datum/chemical_reaction/myelamine_sap //This is the clotting agent used by clotting packs.

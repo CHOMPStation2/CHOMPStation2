@@ -53,7 +53,7 @@
 				. += 4
 			else if(E.splinted && E.splinted.loc != E)
 				. += 0.5
-			else if(E.status & ORGAN_BROKEN)
+			else if((E.status & ORGAN_BROKEN) && !(CE_BONEFIX in chem_effects))	//CHOMPEdit
 				. += 1.5
 	else
 		for(var/organ_name in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
@@ -62,7 +62,7 @@
 				. += 4
 			else if(E.splinted && E.splinted.loc != E)
 				. += 0.5
-			else if(E.status & ORGAN_BROKEN)
+			else if((E.status & ORGAN_BROKEN) && !(CE_BONEFIX in chem_effects))	//CHOMPEdit
 				. += 1.5
 
 	if(shock_stage >= 10) . += 3
