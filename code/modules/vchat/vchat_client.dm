@@ -383,6 +383,9 @@ var/to_chat_src
 	set name = "Export chatlog"
 	set category = "OOC"
 	
+	to_chat(usr, "<span class='warning'>This verb is temporarily disabled due to performance issues.</span>")
+	return
+
 	if(chatOutput.broken)
 		to_chat(src, "<span class='warning'>Error: VChat isn't processing your messages!</span>")
 		return
