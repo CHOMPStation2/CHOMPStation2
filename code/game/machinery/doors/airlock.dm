@@ -116,101 +116,66 @@
 	icon = 'icons/obj/doors/Doorcom.dmi'
 	req_one_access = list(access_heads)
 	assembly_type = /obj/structure/door_assembly/door_assembly_com
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/cmd3o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/cmd3c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/cmd3o.ogg'
 	department_close_powered = 'sound/machines/door/cmd3c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/security
 	name = "Security Airlock"
 	icon = 'icons/obj/doors/Doorsec.dmi'
 	req_one_access = list(access_security)
 	assembly_type = /obj/structure/door_assembly/door_assembly_sec
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/sec1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/sec1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/sec1o.ogg'
 	department_close_powered = 'sound/machines/door/sec1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/engineering
 	name = "Engineering Airlock"
 	icon = 'icons/obj/doors/Dooreng.dmi'
 	req_one_access = list(access_engine)
 	assembly_type = /obj/structure/door_assembly/door_assembly_eng
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/eng1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/eng1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/eng1o.ogg'
 	department_close_powered = 'sound/machines/door/eng1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/engineeringatmos
 	name = "Atmospherics Airlock"
 	icon = 'icons/obj/doors/Doorengatmos.dmi'
 	req_one_access = list(access_atmospherics)
 	assembly_type = /obj/structure/door_assembly/door_assembly_eat
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/eng1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/eng1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/eng1o.ogg'
 	department_close_powered = 'sound/machines/door/eng1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/medical
 	name = "Medical Airlock"
 	icon = 'icons/obj/doors/Doormed.dmi'
 	req_one_access = list(access_medical)
 	assembly_type = /obj/structure/door_assembly/door_assembly_med
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/med1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/med1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/med1o.ogg'
 	department_close_powered = 'sound/machines/door/med1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/maintenance
 	name = "Maintenance Access"
 	icon = 'icons/obj/doors/Doormaint.dmi'
 	//req_one_access = list(access_maint_tunnels) //VOREStation Edit - Maintenance is open access
 	assembly_type = /obj/structure/door_assembly/door_assembly_mai
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/door2o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/door2c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/door2o.ogg'
 	close_sound_powered = 'sound/machines/door/door2c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/maintenance/cargo
 	icon = 'icons/obj/doors/Doormaint_cargo.dmi'
 	req_one_access = list(access_cargo)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/door2o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/door2c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/door2o.ogg'
 	department_close_powered = 'sound/machines/door/door2c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/maintenance/command
 	icon = 'icons/obj/doors/Doormaint_command.dmi'
@@ -218,13 +183,8 @@
 
 /obj/machinery/door/airlock/maintenance/common
 	icon = 'icons/obj/doors/Doormaint_common.dmi'
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/hall3o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/hall3c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall3o.ogg'
 	close_sound_powered = 'sound/machines/door/hall3c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/maintenance/engi
 	icon = 'icons/obj/doors/Doormaint_engi.dmi'
@@ -249,13 +209,8 @@
 	name = "External Airlock"
 	icon = 'icons/obj/doors/Doorext.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_ext
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/space1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/space1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/space1o.ogg'
 	close_sound_powered = 'sound/machines/door/space1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/external/glass/bolted
 	icon_state = "door_locked" // So it looks visibly bolted in map editor
@@ -272,13 +227,8 @@
 	opacity = 0
 	glass = 1
 	req_one_access = list(access_external_airlocks)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/space1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/space1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/space1o.ogg'
 	close_sound_powered = 'sound/machines/door/space1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass
 	name = "Glass Airlock"
@@ -318,13 +268,8 @@
 	secured_wires = 1
 	assembly_type = /obj/structure/door_assembly/door_assembly_highsecurity //Until somebody makes better sprites.
 	req_one_access = list(access_heads_vault)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/vault1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/vault1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/vault1o.ogg'
 	close_sound_powered = 'sound/machines/door/vault1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/vault/bolted
 	icon_state = "door_locked"
@@ -343,15 +288,9 @@
 	opacity = 1
 	assembly_type = /obj/structure/door_assembly/door_assembly_hatch
 	req_one_access = list(access_maint_tunnels)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/hatchopen.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/hatchclose.ogg' //CHOMPEdit
-	open_sound_unpowered = 'sound/machines/hatchforced.ogg'//CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hatchopen.ogg'
 	close_sound_powered = 'sound/machines/door/hatchclose.ogg'
 	open_sound_unpowered = 'sound/machines/door/hatchforced.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/maintenance_hatch
 	name = "Maintenance Hatch"
@@ -360,15 +299,9 @@
 	opacity = 1
 	assembly_type = /obj/structure/door_assembly/door_assembly_mhatch
 	req_one_access = list(access_maint_tunnels)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/hatchopen.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/hatchclose.ogg' //CHOMPEdit
-	open_sound_unpowered = 'sound/machines/hatchforced.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hatchopen.ogg'
 	close_sound_powered = 'sound/machines/door/hatchclose.ogg'
 	open_sound_unpowered = 'sound/machines/door/hatchforced.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_command
 	name = "Command Airlock"
@@ -380,15 +313,10 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_com
 	glass = 1
 	req_one_access = list(access_heads)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/cmd1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/cmd1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/cmd1o.ogg'
 	department_close_powered = 'sound/machines/door/cmd1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_engineering
 	name = "Engineering Airlock"
@@ -400,13 +328,8 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_eng
 	glass = 1
 	req_one_access = list(access_engine)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/eng1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/eng1c.ogg' //CHOMPEdit
-=======
 	department_open_powered = 'sound/machines/door/eng1o.ogg'
 	department_close_powered = 'sound/machines/door/eng1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_engineeringatmos
 	name = "Atmospherics Airlock"
@@ -418,15 +341,10 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_eat
 	glass = 1
 	req_one_access = list(access_atmospherics)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/eng1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/eng1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/eng1o.ogg'
 	department_close_powered = 'sound/machines/door/eng1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_security
 	name = "Security Airlock"
@@ -438,15 +356,10 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_sec
 	glass = 1
 	req_one_access = list(access_security)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/sec1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/sec1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/sec1o.ogg'
 	department_close_powered = 'sound/machines/door/sec1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_medical
 	name = "Medical Airlock"
@@ -458,59 +371,39 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_med
 	glass = 1
 	req_one_access = list(access_medical)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/med1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/med1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/med1o.ogg'
 	department_close_powered = 'sound/machines/door/med1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/mining
 	name = "Mining Airlock"
 	icon = 'icons/obj/doors/Doormining.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_min
 	req_one_access = list(access_mining)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/cgo1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/cgo1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/cgo1o.ogg'
 	department_close_powered = 'sound/machines/door/cgo1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/atmos
 	name = "Atmospherics Airlock"
 	icon = 'icons/obj/doors/Dooratmo.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_atmo
 	req_one_access = list(access_atmospherics)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/eng1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/eng1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/eng1o.ogg'
 	department_close_powered = 'sound/machines/door/eng1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/research
 	name = "Research Airlock"
 	icon = 'icons/obj/doors/Doorresearch.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_research
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/sci1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/sci1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/sci1o.ogg'
 	department_close_powered = 'sound/machines/door/sci1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_research
 	name = "Research Airlock"
@@ -522,15 +415,10 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_research
 	glass = 1
 	req_one_access = list(access_research)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/sci1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/sci1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/sci1o.ogg'
 	department_close_powered = 'sound/machines/door/sci1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_mining
 	name = "Mining Airlock"
@@ -542,15 +430,10 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_min
 	glass = 1
 	req_one_access = list(access_mining)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/cgo1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/cgo1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/cgo1o.ogg'
 	department_close_powered = 'sound/machines/door/cgo1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_atmos
 	name = "Atmospherics Airlock"
@@ -562,15 +445,10 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_atmo
 	glass = 1
 	req_one_access = list(access_atmospherics)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/eng1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/eng1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/eng1o.ogg'
 	department_close_powered = 'sound/machines/door/eng1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/gold
 	name = "Gold Airlock"
@@ -651,15 +529,10 @@
 	icon = 'icons/obj/doors/Doorsci.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_science
 	req_one_access = list(access_research)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/sci1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/sci1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/sci1o.ogg'
 	department_close_powered = 'sound/machines/door/sci1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/glass_science
 	name = "Glass Airlocks"
@@ -668,15 +541,10 @@
 	assembly_type = /obj/structure/door_assembly/door_assembly_science
 	glass = 1
 	req_one_access = list(access_research)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/sci1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/sci1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/hall1o.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	close_sound_powered = 'sound/machines/door/hall1c.ogg' // VOREStation Edit: Default door sounds for fancy, department-off.
 	department_open_powered = 'sound/machines/door/sci1o.ogg'
 	department_close_powered = 'sound/machines/door/sci1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/highsecurity
 	name = "Secure Airlock"
@@ -685,13 +553,8 @@
 	secured_wires = 1
 	assembly_type = /obj/structure/door_assembly/door_assembly_highsecurity
 	req_one_access = list(access_heads_vault)
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/secure1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/secure1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/secure1o.ogg'
 	close_sound_powered = 'sound/machines/door/secure1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 /obj/machinery/door/airlock/voidcraft
 	name = "voidcraft hatch"
@@ -701,25 +564,15 @@
 	opacity = 0
 	glass = 1
 	assembly_type = /obj/structure/door_assembly/door_assembly_voidcraft
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/shuttle1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/shuttle1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/shuttle1o.ogg'
 	close_sound_powered = 'sound/machines/door/shuttle1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 // Airlock opens from top-bottom instead of left-right.
 /obj/machinery/door/airlock/voidcraft/vertical
 	icon = 'icons/obj/doors/shuttledoors_vertical.dmi'
 	assembly_type = /obj/structure/door_assembly/door_assembly_voidcraft/vertical
-<<<<<<< HEAD
-	open_sound_powered = 'sound/machines/shuttle1o.ogg' //CHOMPEdit
-	close_sound_powered = 'sound/machines/shuttle1c.ogg' //CHOMPEdit
-=======
 	open_sound_powered = 'sound/machines/door/shuttle1o.ogg'
 	close_sound_powered = 'sound/machines/door/shuttle1c.ogg'
->>>>>>> 0573ed777ae12f41690439016a152a1ffd8e192e
 
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_airlock
