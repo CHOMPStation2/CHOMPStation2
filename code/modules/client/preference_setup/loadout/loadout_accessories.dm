@@ -79,7 +79,7 @@
 /datum/gear/accessory/holster
 	display_name = "holster selection (Security, CD, HoP)"
 	path = /obj/item/clothing/accessory/holster
-	allowed_roles = list("Colony Director", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective", "Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/accessory/holster/New()
 	..()
@@ -114,6 +114,15 @@
 		var/obj/item/clothing/accessory/scarf_type = scarf
 		scarfs[initial(scarf_type.name)] = scarf_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(scarfs))
+
+/datum/gear/accessory/scarfcolor
+	display_name = "scarf (recolorable)"
+	path = /obj/item/clothing/accessory/scarf/white
+	cost = 1
+
+/datum/gear/accessory/scarfcolor/New()
+	..()
+	gear_tweaks = list(gear_tweak_free_color_choice)
 
 /datum/gear/accessory/jacket
 	display_name = "suit jacket selection"

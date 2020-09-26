@@ -235,7 +235,7 @@
 /obj/structure/flora/pottedplant/attackby(obj/item/I, mob/user)
 	if(issilicon(user))
 		return // Don't try to put modules in here, you're a borg. TODO: Inventory refactor to not be ass.
-
+	
 	if(stored_item)
 		to_chat(user, "<span class='notice'>[I] won't fit in. There already appears to be something in here...</span>")
 		return

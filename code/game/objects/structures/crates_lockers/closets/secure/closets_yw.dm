@@ -60,3 +60,11 @@
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/radio
 		)
+
+/obj/structure/closet/secure_closet/personal/volunteer
+	closet_appearance = /decl/closet_appearance/cabinet/secure
+
+	starts_with = list(
+		/obj/item/device/radio/off,
+		/obj/item/device/gps
+		)

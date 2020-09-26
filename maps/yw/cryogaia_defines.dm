@@ -5,21 +5,24 @@
 #define Z_LEVEL_CRYOGAIA_LOWER			4
 #define Z_LEVEL_CRYOGAIA_MAIN			5
 #define Z_LEVEL_CRYOGAIA_UPPER			6
-#define Z_LEVEL_CRYOGAIA_RESIDENTIAL		7
-#define Z_LEVEL_ROGUEMINE_1			8
-#define Z_LEVEL_ROGUEMINE_2			9
-#define Z_LEVEL_ROGUEMINE_3			10
-#define Z_LEVEL_ROGUEMINE_4			11
-#define Z_LEVEL_PLAINS				12
-#define Z_LEVEL_BEACH				13
-#define Z_LEVEL_BEACH_CAVE			14
-#define Z_LEVEL_AEROSTAT			15
-#define Z_LEVEL_AEROSTAT_SURFACE		16
-#define Z_LEVEL_DEBRISFIELD			17
-#define Z_LEVEL_UNDERDARK			18
-#define Z_LEVEL_GUTTERSITE			19
-#define Z_LEVEL_FUELDEPOT			20
-#define Z_LEVEL_GATEWAY				21
+#define Z_LEVEL_CRYOGAIA_MISC			7
+#define Z_LEVEL_CRYOGAIA_WILDERNESS		8
+#define Z_LEVEL_CRYOGAIA_CAVES			9
+#define Z_LEVEL_CRYOGAIA_RESIDENTIAL	10
+#define Z_LEVEL_ROGUEMINE_1				11
+#define Z_LEVEL_ROGUEMINE_2				12
+#define Z_LEVEL_ROGUEMINE_3				13
+#define Z_LEVEL_ROGUEMINE_4				14
+#define Z_LEVEL_PLAINS					15
+#define Z_LEVEL_BEACH					16
+#define Z_LEVEL_BEACH_CAVE				17
+#define Z_LEVEL_AEROSTAT				18
+#define Z_LEVEL_AEROSTAT_SURFACE		19
+#define Z_LEVEL_DEBRISFIELD				20
+#define Z_LEVEL_UNDERDARK				21
+#define Z_LEVEL_GUTTERSITE				22
+#define Z_LEVEL_FUELDEPOT				23
+#define Z_LEVEL_GATEWAY					24
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -36,12 +39,12 @@
 	zlevel_datum_type = /datum/map_z_level/cryogaia
 
 	use_overmap = TRUE
-	overmap_z = Z_LEVEL_CRYOGAIA_CENTCOM
+	overmap_z = Z_LEVEL_CRYOGAIA_MISC
 	overmap_size = 20
 	overmap_event_areas = 10
 
 	usable_email_tlds = list("cryogaia.nt")
-	lobby_icon = 'icons/misc/title_yw2.dmi'
+	lobby_icon = 'icons/misc/title_yw.dmi'
 	lobby_screens = list("cryogaia")
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
@@ -122,20 +125,22 @@
 		/area/borealis2/elevator/scimining,
 		/area/vacant/vacant_site/east,
 		/area/tcommsat/chamber,
-		/area/maintenance/maintroom5,
 		/area/tcomfoyer,
 		/area/maintenance/dorm,
 		/area/vacant/vacant_site,
-		/area/maintenance/maintroom3,
-		/area/maintenance/maintroom2,
-		/area/vacant/vacant_site/private,
 		/area/maintenance/maintroom1,
+		/area/maintenance/maintroom2,
+		/area/maintenance/maintroom3,
+		/area/maintenance/maintroom4,
+		/area/maintenance/maintroom5,
+		/area/maintenance/maintroom8,
+		/area/vacant/vacant_site/private,
 		/area/borealis2/elevator/medbasement,
 		/area/maintenance/lowfloor2,
-		/area/maintenance/maintroom4,
 		/area/borealis2/outdoors,
 		/area/borealis2/outdoors/exterior/explore3,
 		/area/borealis2/outdoors/exterior,
+		/area/borealis2/outdoors/exterior/upper,
 		/area/borealis2/outdoors/exterior/explore2,
 		/area/borealis2/outdoors/exterior/lake,
 		/area/cryogaia/outpost/exploration_shed,
@@ -143,7 +148,7 @@
 		/area/borealis2/outdoors/grounds/traderpad,
 		/area/borealis2/elevator/scicargo,
 		/area/borealis2/outdoors/grounds/power,
-		/area/borealis2/outdoors/grounds/solars,
+		/area/borealis2/outdoors/grounds/upper/solars,
 		/area/borealis2/outdoors/exterior/explore1,
 		/area/security/airlock,
 		/area/borealis2/elevator/medbay,
@@ -162,13 +167,19 @@
 		/area/borealis2/outdoors/grounds/tower/northeast,
 		/area/borealis2/outdoors/grounds/checkpoint,
 		/area/borealis2/outdoors/grounds/wall,
-		/area/cryogaia/station/ert_arrival
+		/area/borealis2/outdoors/grounds/upper,
+		/area/cryogaia/station/ert_arrival,
+		/area/borealis2/elevator/uppermining,
+		/area/borealis2/elevator/medupper,
+		/area/borealis2/outdoors/grounds/walkway,
+		/area/cryogaia/station/excursion_overhang
 		)
+
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)
 
-	unit_test_z_levels = list(2,4,5)
+	unit_test_z_levels = list(2,4,5,6)
 
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
@@ -191,8 +202,8 @@
 		Z_LEVEL_CRYOGAIA_CENTCOM
 		)
 
-	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_MAIN)
-	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_TRANSIT)
+	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_UPPER)
+	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
 						 		 Z_LEVEL_ROGUEMINE_2,
 						 	 	 Z_LEVEL_ROGUEMINE_3,
@@ -220,7 +231,9 @@
 		Z_LEVEL_CRYOGAIA_LOWER,
 		Z_LEVEL_CRYOGAIA_MAIN,
 		Z_LEVEL_CRYOGAIA_UPPER,
-		Z_LEVEL_PLAINS
+		Z_LEVEL_PLAINS,
+		Z_LEVEL_CRYOGAIA_WILDERNESS,
+		Z_LEVEL_CRYOGAIA_CAVES
 	)
 
 // Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
@@ -265,7 +278,10 @@
 		"cryogaia_security_hangar"
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
-	extra_z_levels = list(Z_LEVEL_PLAINS)
+	extra_z_levels = list(Z_LEVEL_PLAINS,
+						  Z_LEVEL_CRYOGAIA_WILDERNESS,
+						  Z_LEVEL_CRYOGAIA_CAVES,
+						  Z_LEVEL_CRYOGAIA_MISC)/*Temporary change to fix arrivals*/
 
 /obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
 	. = ..()
@@ -306,7 +322,7 @@
 
 
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
-#define CRYOGAIA_MAP_SIZE 250 // Width and height of compiled in Southern Cross z levels.
+#define CRYOGAIA_MAP_SIZE 160 // Width and height of compiled in Southern Cross z levels.
 #define CRYOGAIA_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
 #define CRYOGAIA_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*CRYOGAIA_MAP_SIZE) - CRYOGAIA_HOLOMAP_CENTER_GUTTER) / 2) // 100
 #define CRYOGAIA_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*CRYOGAIA_MAP_SIZE)) / 2) // 60
@@ -368,6 +384,11 @@
 	z = Z_LEVEL_CRYOGAIA_RESIDENTIAL
 	name = "Residential"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_CONSOLES
+
+/datum/map_z_level/cryogaia/misc
+	z = Z_LEVEL_CRYOGAIA_MISC
+	name = "Misc"
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 /*
 /datum/map_z_level/tether/wilderness
 	name = "Wilderness"
