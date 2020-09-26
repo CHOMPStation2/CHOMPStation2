@@ -53,7 +53,7 @@
 "hq" = (/obj/machinery/door/firedoor/border_only,/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating,/area/surface/outpost/research/xenoarcheology)
 "hD" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/machinery/conveyor_switch{id = "anolongstorage"; req_access = list(65)},/turf/simulated/floor/tiled/dark,/area/surface/outpost/research/xenoarcheology/anomaly)
 "hH" = (/obj/machinery/portable_atmospherics/canister/oxygen,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled,/area/surface/outpost/research/xenoarcheology/anomaly)
-"hN" = (/obj/machinery/portable_atmospherics/canister/sleeping_agent,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled,/area/surface/outpost/research/xenoarcheology/anomaly)
+"hN" = (/obj/machinery/portable_atmospherics/canister/nitrous_oxide,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled,/area/surface/outpost/research/xenoarcheology/anomaly)
 "hO" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 4},/obj/machinery/light,/turf/simulated/floor/reinforced,/area/surface/outpost/research/xenoarcheology/isolation_c)
 "hR" = (/obj/machinery/portable_atmospherics/canister/phoron,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled,/area/surface/outpost/research/xenoarcheology/anomaly)
 "hU" = (/turf/simulated/wall,/area/surface/outpost/research/xenoarcheology/longtermstorage)
