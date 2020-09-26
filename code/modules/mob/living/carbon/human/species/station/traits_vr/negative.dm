@@ -139,7 +139,7 @@
 	desc = "Increases your susceptibility to electric shocks by 100%"
 	cost = -4
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
-
+/*
 /datum/trait/haemophilia
 	name = "Haemophilia - Organics only"
 	desc = "When you bleed, you bleed a LOT. This trait is only for organics, buggy with synths!"
