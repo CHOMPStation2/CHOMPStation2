@@ -642,7 +642,7 @@
 "gOq" = (/obj/effect/decal/cleanable/blood,/turf/unsimulated/floor{icon_state = "white"},/area/skipjack_station)
 "gPu" = (/obj/structure/table/reinforced,/obj/item/weapon/storage/box/donut,/turf/unsimulated/floor{icon_state = "dark"},/area/centcom/specops)
 "gPR" = (/obj/machinery/seed_storage/garden,/turf/space,/turf/unsimulated/floor{icon_state = "steel"},/area/centcom/bar)
-"gPT" = (/obj/machinery/portable_atmospherics/canister/sleeping_agent{pixel_x = 1},/obj/machinery/atmospherics/portables_connector{dir = 4},/turf/unsimulated/floor{icon_state = "lino"},/area/tdome/tdomeadmin)
+"gPT" = (/obj/machinery/portable_atmospherics/canister/nitrous_oxide{pixel_x = 1},/obj/machinery/atmospherics/portables_connector{dir = 4},/turf/unsimulated/floor{icon_state = "lino"},/area/tdome/tdomeadmin)
 "gQj" = (/obj/structure/table/rack,/obj/item/device/aicard,/turf/simulated/shuttle/floor/voidcraft/dark,/area/shuttle/syndicate)
 "gQz" = (/obj/item/weapon/gun/energy/plasmastun,/turf/unsimulated/floor{icon_state = "plating"; name = "plating"},/area/skipjack_station)
 "gQF" = (/turf/simulated/shuttle/wall/dark/hard_corner,/area/shuttle/syndicate_elite/mothership)

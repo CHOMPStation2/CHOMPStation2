@@ -42,6 +42,9 @@
 /datum/computer_file/program/nano_host()
 	return computer.nano_host()
 
+/datum/computer_file/program/tgui_host()
+	return computer.tgui_host()
+
 /datum/computer_file/program/clone()
 	var/datum/computer_file/program/temp = ..()
 	temp.required_access = required_access
@@ -186,6 +189,8 @@
 /datum/computer_file/program/proc/check_eye(var/mob/user)
 	if(NM)
 		return NM.check_eye(user)
+	if(TM)
+		return TM.check_eye(user)
 	else
 		return -1
 

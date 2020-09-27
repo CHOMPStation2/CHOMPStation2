@@ -46,3 +46,21 @@
 	includes_tail = 0
 	suggested_species = "Unathi"
 	whitelisted_to = list("dameonowen")
+
+/datum/robolimb/dopiotl_jeanne
+	company = "Jeanne - Nanovulp"
+	desc = ""
+	icon = 'icons/mob/human_races/cyberlimbs/dopiotl/jeanne_nanovulp.dmi'
+	monitor_icon = 'icons/mob/human_races/cyberlimbs/dopiotl/nanovulp_animations.dmi'
+	lifelike = 1
+	unavailable_to_build = 1
+	includes_tail = 0
+	suggested_species = "Vuplkanin"
+	whitelisted_to = list("dopiotl")
+	monitor_styles = "idle=idle;\
+		idle-eye=eyeidle;\
+		emptyinput=emptyinput;\
+		rainbow=rainbow;\
+		snow=snow;\
+		robocop=robocop;\
+		rainbowcop=rainbowcop"

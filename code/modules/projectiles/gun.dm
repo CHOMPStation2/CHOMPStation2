@@ -50,6 +50,7 @@
 	attack_verb = list("struck", "hit", "bashed")
 	zoomdevicename = "scope"
 	drop_sound = 'sound/items/drop/gun.ogg'
+	pickup_sound = 'sound/items/pickup/gun.ogg'
 
 	var/recoil_mode = 1 //0 = no micro recoil, 1 = regular, anything higher than 1 is a multiplier //YAWN Addition, ported from CHOMP
 	var/automatic = 0

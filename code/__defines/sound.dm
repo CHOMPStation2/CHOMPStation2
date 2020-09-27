@@ -126,7 +126,7 @@
 	)
 
 
-// Sounds suitable for being inside dark, tight corridors in the underbelly of the station.
+// Sounds suitable for being inside dark, tight corridors in the underbelly of the station. //CHOMP Edit keeps original maints sounds and adds sounds from the generic pool which I added and are metal scraping sounds. I should really move these to maintenance folder some day...
 #define AMBIENCE_MAINTENANCE list(\
 	'sound/ambience/maintenance/maintenance1.ogg',\
 	'sound/ambience/maintenance/maintenance2.ogg',\
@@ -155,7 +155,9 @@
 
 // Creepy AI/borg stuff.
 #define AMBIENCE_AI list(\
-	'sound/ambience/ai/ai1.ogg'\
+	'sound/ambience/ai/ai1.ogg',\
+	'sound/ambience/ai/ai2.ogg',\
+	'sound/ambience/ai/ai3.ogg'\
 	)
 
 // Peaceful sounds when floating in the void.
@@ -170,7 +172,7 @@
 	'sound/ambience/ghostly/ghostly2.ogg'\
 	)
 
-// Concerning sounds, for when one discovers something horrible happened in a PoI.
+// Concerning sounds, for when one discovers something horrible happened in a PoI. //CHOMP Edit: Removed foreboding 3-6 as upstream updates just replaced them with maints sounds.
 #define AMBIENCE_FOREBODING list(\
 	'sound/ambience/foreboding/foreboding1.ogg',\
 	'sound/ambience/foreboding/foreboding2.ogg'\
@@ -216,7 +218,6 @@
 	'sound/ambience/substation/substation8.ogg'\
 	)
 	
-//CHOMP Edit Sounds for hangars
 #define AMBIENCE_HANGAR list(\
 	'sound/ambience/hangar/hangar1.ogg',\
 	'sound/ambience/hangar/hangar2.ogg',\
@@ -226,7 +227,6 @@
 	'sound/ambience/hangar/hangar6.ogg'\
 	)
 
-//CHOMP Edit Sounds for atmos
 #define AMBIENCE_ATMOS list(\
 	'sound/ambience/engineering/engineering1.ogg',\
 	'sound/ambience/engineering/engineering2.ogg',\
