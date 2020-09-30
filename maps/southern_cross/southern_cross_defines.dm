@@ -239,6 +239,8 @@
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
 
+/*
+ KSC 9/29/20 = No longer relevant code as we have nonencludian portals to jump between outpost,caves and wilderness
 //Teleport to Mine
 
 /obj/effect/step_trigger/teleporter/mine/to_mining/New()
@@ -273,6 +275,7 @@
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD
 	)
+*/
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
@@ -309,7 +312,9 @@
 	teleport_y = src.y + 4
 	teleport_z = src.z
 	return ..()
-/*CHOMP edit Polaris is adding this stuff soon.
+
+ /* KSC 9/29/20 = Adding these as we now have nonencludian portals */
+
 /obj/effect/map_effect/portal/master/side_a/plains_to_caves
 	portal_id = "plains_caves-normal"
 
@@ -334,7 +339,7 @@
 
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_caves/river
 	portal_id = "caves_wilderness-river"
-*/
+
 /*
 //CHOMPEdit this is very much necessary for us otherwise weather sounds play on other levels
 /datum/planet/sif
