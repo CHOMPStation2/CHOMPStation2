@@ -268,6 +268,7 @@
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
 	teleport_z = Z_LEVEL_SURFACE_MINE
+*/
 
 /datum/planet/sif
 	expected_z_levels = list(
@@ -275,7 +276,6 @@
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD
 	)
-*/
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4
