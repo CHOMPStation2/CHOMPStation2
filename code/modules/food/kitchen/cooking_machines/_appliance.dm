@@ -182,7 +182,7 @@
 
 //Handles all validity checking and error messages for inserting things
 /obj/machinery/appliance/proc/can_insert(var/obj/item/I, var/mob/user)
-	if (istype(I.loc, /mob/living/silicon))
+	if (istype(I, /obj/item/weapon/gripper))
 		return 0
 	else if (istype(I.loc, /obj/item/rig_module))
 		return 0
@@ -480,7 +480,8 @@
 	CI.container.reagents.trans_to_holder(buffer, CI.container.reagents.total_volume)
 
 	var/obj/item/weapon/reagent_containers/food/snacks/result = new cook_path(CI.container)
-	buffer.trans_to(result, buffer.total_volume)
+	buffer.trans_to_holder(result.reagents, buffer.total_volume) //trans_to doesn't handle food items well, so
+																 //just call trans_to_holder instead
 
 	//Filling overlay
 	var/image/I = image(result.icon, "[result.icon_state]_filling")
@@ -583,6 +584,7 @@
 	var/obj/item/thing
 	var/delete = 1
 	var/status = CI.container.check_contents()
+
 	if (status == 1)//If theres only one object in a container then we extract that
 		thing = locate(/obj/item) in CI.container
 		delete = 0
@@ -596,6 +598,7 @@
 		qdel(CI)
 	else
 		CI.reset()//reset instead of deleting if the container is left inside
+	user.visible_message("<span class='notice'>\The [user] remove \the [thing] from \the [src].</span>")
 
 /obj/machinery/appliance/proc/cook_mob(var/mob/living/victim, var/mob/user)
 	return

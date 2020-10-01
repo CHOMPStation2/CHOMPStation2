@@ -23,12 +23,7 @@
 /area/shuttle/casino/
 	name = "\improper Casino Shuttle"
 	dynamic_lighting = 0
-
-/area/shuttle/casino/ship
 	icon_state = "shuttlegrn"
-
-/area/shuttle/casino/station
-	icon_state = "shuttlegrn2"
 	
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"

@@ -46,9 +46,10 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle3/sky = 25 SECONDS,
-		/datum/shuttle_destination/shuttle3/outside_SC = 25 SECONDS
+		/datum/shuttle_destination/shuttle3/stationhangar3 = 25 SECONDS
 	)
 
+/*
 /datum/shuttle_destination/shuttle3/outside_SC
 	name = "Outside of NLS Southern Cross"
 	my_landmark = "shuttle3_seconddeck"
@@ -57,6 +58,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle3/stationhangar3 = 0 SECONDS
 	)
+*/
 
 /datum/shuttle_destination/shuttle3/stationhangar3
 	name = "Southern Cross Hangar Three"
@@ -132,6 +134,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 		log_debug("Shuttle display could not find its shuttle!")
 	else
 		my_shuttle = shuttle
+		GLOB.shuttdisp_list -= src //Remove the displays from the global list to reduce memory usage because it's only needed before shuttles initialize.
 
 /obj/machinery/status_display/shuttle_display/update() //Location tracking.
 	if(!..() && mode == STATUS_DISPLAY_CUSTOM)
@@ -168,3 +171,9 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 		update_display(message1, message2)
 		return 1
 	return 0
+
+/obj/machinery/status_display/shuttle_display/receive_signal() //This should ensure the shuttle screens can never be changed to a message.
+	return
+
+/obj/machinery/status_display/shuttle_display/on_alert_changed() //Same as above but for alert levels.
+	return

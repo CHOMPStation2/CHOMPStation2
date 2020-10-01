@@ -117,6 +117,10 @@
 	//List has indexes that are the digestion mode strings, and keys that are lists of strings.
 	var/tmp/list/emote_lists = list()
 
+	// Lets you do a fullscreen overlay. Set to an icon_state string.
+	var/belly_fullscreen = ""
+	var/disable_hud = FALSE
+
 //For serialization, keep this updated, required for bellies to save correctly.
 /obj/belly/vars_to_save()
 	return ..() + list(
@@ -156,6 +160,11 @@
 		"fancy_vore",
 		"is_wet",
 		"wet_loop",
+		"belly_fullscreen",
+		"disable_hud"
+		)
+
+/*These have been pulled from the above list as these were chomp edits for liquid belly stuff. This needs to be ported back in for TGUI port
 		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
 		"reagentbellymode",
 		"liquid_fullness1_messages",
@@ -180,7 +189,7 @@
 		"fullness3_messages",
 		"fullness4_messages",
 		"fullness5_messages"	//CHOMP end of variables from CHOMP
-		)
+*/
 
 /obj/belly/Initialize()
 	. = ..()
@@ -189,9 +198,10 @@
 		owner = loc
 		owner.vore_organs |= src
 		START_PROCESSING(SSbellies, src)
-	
-	create_reagents(100)	//CHOMP So we can have some liquids in bellies
-	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
+
+//These are commented out, waiting for liquid belly TGUI port.	
+//	create_reagents(100)	//CHOMP So we can have some liquids in bellies
+//	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents 
 
 
 /obj/belly/Destroy()
@@ -216,7 +226,7 @@
 		else
 			soundfile = fancy_vore_sounds[vore_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 			recent_sound = TRUE
 
 	//Messages if it's a mob
@@ -227,6 +237,7 @@
 		var/taste
 		if(can_taste && (taste = M.get_taste_message(FALSE)))
 			to_chat(owner, "<span class='notice'>[M] tastes of [taste].</span>")
+		vore_fx(M)
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
@@ -236,8 +247,31 @@
 	. = ..()
 	if(isliving(thing) && !isbelly(thing.loc))
 		var/mob/living/L = thing
+		L.clear_fullscreen("belly")
+		if(L.hud_used)
+			if(!L.hud_used.hud_shown)
+				L.toggle_hud_vis()
 		if((L.stat != DEAD) && L.ai_holder)
 			L.ai_holder.go_wake()
+
+/obj/belly/proc/vore_fx(mob/living/L)
+	if(!istype(L))
+		return
+	if(!L.show_vore_fx)
+		L.clear_fullscreen("belly")
+		return
+
+	if(belly_fullscreen)
+		var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
+		F.icon_state = belly_fullscreen
+		// F.color = belly_fullscreen_color
+	else
+		L.clear_fullscreen("belly")
+
+	if(disable_hud)
+		if(L?.hud_used?.hud_shown)
+			to_chat(L, "<span class='notice'>((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))</span>")
+			L.toggle_hud_vis(TRUE)
 
 // Release all contents of this belly into the owning mob's location.
 // If that location is another mob, contents are transferred into whichever of its bellies the owning mob is in.
@@ -273,7 +307,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 
 	return count
 
@@ -321,7 +355,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+			playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 
 	return 1
 
@@ -357,7 +391,7 @@
 			if(!P.absorbed) //This is required first, in case there's a person absorbed and not absorbed in a stomach.
 				total_bulge += P.size_multiplier
 		if(total_bulge >= bulge_size && bulge_size != 0)
-			return("<span class='warning'>[formatted_message]</span><BR>")
+			return("<span class='warning'>[formatted_message]</span>")
 		else
 			return ""
 
@@ -481,9 +515,9 @@
 		var/mob/living/carbon/human/Prey = M
 		var/mob/living/carbon/human/Pred = owner
 		//Reagent sharing for absorbed with pred - Copy so both pred and prey have these reagents.
-		Prey.bloodstr.trans_to_holder(Pred.bloodstr, Prey.bloodstr.total_volume, copy = TRUE)
-		Prey.ingested.trans_to_holder(Pred.bloodstr, Prey.ingested.total_volume, copy = TRUE)
-		Prey.touching.trans_to_holder(Pred.bloodstr, Prey.touching.total_volume, copy = TRUE)
+		Prey.bloodstr.trans_to_holder(Pred.ingested, Prey.bloodstr.total_volume, copy = TRUE)
+		Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, copy = TRUE)
+		Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, copy = TRUE)
 		// TODO - Find a way to make the absorbed prey share the effects with the pred.
 		// Currently this is infeasible because reagent containers are designed to have a single my_atom, and we get
 		// problems when A absorbs B, and then C absorbs A,  resulting in B holding onto an invalid reagent container.
@@ -587,9 +621,9 @@
 			struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
 		else
 			struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
-		playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises)
+		playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE)
 	else
-		playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises)
+		playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE)
 
 	if(escapable) //If the stomach has escapable enabled.
 		if(prob(escapechance)) //Let's have it check to see if the prey escapes first.
@@ -712,6 +746,7 @@
 	dupe.fancy_vore = fancy_vore
 	dupe.is_wet = is_wet
 	dupe.wet_loop = wet_loop
+/*These are commented out, waiting for liquid belly TGUI port.		
 	dupe.reagent_mode_flags = reagent_mode_flags	//CHOMP start of variables from CHOMP
 	dupe.reagentbellymode = reagentbellymode
 	dupe.vorefootsteps_sounds = vorefootsteps_sounds
@@ -730,6 +765,9 @@
 	dupe.gen_time_display = gen_time_display
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume	//CHOMP end of variables from CHOMP
+*/
+	dupe.belly_fullscreen = belly_fullscreen
+	dupe.disable_hud = disable_hud
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings
@@ -757,6 +795,7 @@
 	for(var/I in examine_messages)
 		dupe.examine_messages += I
 
+/*These are commented out, waiting for liquid belly TGUI port.	
 	// CHOMP reagent belly
 	//generated_reagents - strings
 	dupe.generated_reagents.Cut()
@@ -792,7 +831,7 @@
 	dupe.fullness5_messages.Cut()
 	for(var/I in fullness5_messages)
 		dupe.fullness5_messages += I
-
+*/
 
 	//emote_lists - index: digest mode, key: list of strings
 	dupe.emote_lists.Cut()
