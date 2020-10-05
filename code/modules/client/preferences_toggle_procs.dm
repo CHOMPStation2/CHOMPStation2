@@ -255,7 +255,7 @@
 	feedback_add_details("admin_verb","TAirPumpNoise")
 	
 /client/verb/toggle_old_door_sounds()
-	set name = "Toggle Old Door Sounds"
+	set name = "Toggle Door: Old Sounds"
 	set category = "Preferences"
 	set desc = "Toggles New/Old Door Sounds"
 
@@ -270,7 +270,7 @@
 	feedback_add_details("admin_verb","TOldDoorSounds")
 	
 /client/verb/toggle_department_door_sounds()
-	set name = "Toggle Department Door Sounds"
+	set name = "Toggle Door: Department Sounds"
 	set category = "Preferences"
 	set desc = "Toggles Department-Specific Door Sounds"
 
@@ -285,7 +285,7 @@
 	feedback_add_details("admin_verb","TDepartmentDoorSounds")
 
 /client/verb/toggle_pickup_sounds()
-	set name = "Toggle Picked Up Item Sounds"
+	set name = "Toggle Item: Picked up Sounds"
 	set category = "Preferences"
 	set desc = "Toggles sounds when items are picked up or thrown."
 
@@ -300,7 +300,7 @@
 	feedback_add_details("admin_verb", "TPickupSounds")
 
 /client/verb/toggle_drop_sounds()
-	set name = "Toggle Dropped Item Sounds"
+	set name = "Toggle Item: Dropped Sounds"
 	set category = "Preferences"
 	set desc = "Toggles sounds when items are dropped or thrown."
 
