@@ -905,7 +905,7 @@
 "ayD" = (/obj/machinery/atmospherics/binary/pump{dir = 4; name = "Port to Isolation"},/turf/simulated/floor/tiled/white,/area/rnd/xenobiology/xenoflora_isolation)
 "ayE" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/machinery/meter,/turf/simulated/floor/tiled,/area/rnd/xenobiology/xenoflora_isolation)
 "ayG" = (/obj/structure/disposalpipe/up,/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,/obj/machinery/atmospherics/pipe/zpipe/up/supply,/obj/structure/cable{d2 = 2; icon_state = "0-2"},/obj/structure/cable{d1 = 16; d2 = 0; icon_state = "16-0"},/turf/simulated/floor/plating,/area/maintenance/firstdeck/foreport)
-"ayH" = (/obj/item/weapon/caution/cone,/turf/simulated/floor,/area/maintenance/firstdeck/foreport)
+"ayH" = (/obj/item/clothing/suit/caution,/turf/simulated/floor,/area/maintenance/firstdeck/foreport)
 "ayI" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/monotile,/area/hallway/primary/firstdeck/fpcenter)
 "ayJ" = (/obj/machinery/atmospherics/binary/passive_gate{regulate_mode = 0; unlocked = 1},/turf/simulated/floor/plating,/area/maintenance/substation/firstdeck)
 "ayK" = (/obj/structure/cable/cyan,/obj/structure/cable/cyan{d2 = 2; icon_state = "0-2"},/obj/structure/cable/cyan{d2 = 4; icon_state = "0-4"},/obj/machinery/door/firedoor/glass,/obj/machinery/atmospherics/pipe/simple/hidden/black{dir = 4},/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/plating,/area/tcomm/computer)

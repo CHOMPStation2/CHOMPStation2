@@ -196,7 +196,7 @@
 
 /obj/machinery/computer/transhuman/resleeving/tgui_act(action, params)
 	if(..())
-		return
+		return TRUE
 
 	. = TRUE
 	switch(tgui_modal_act(src, action, params))
@@ -482,7 +482,7 @@
 	temp = list(text = text, style = style)
 	if(update_now)
 		SStgui.update_uis(src)
-		
+
 /obj/machinery/computer/transhuman/resleeving/proc/view_b_rec(action, params)
 	var/ref = params["ref"]
 	if(!length(ref))

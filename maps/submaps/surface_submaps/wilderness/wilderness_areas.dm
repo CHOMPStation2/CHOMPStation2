@@ -148,8 +148,6 @@
 	name = "POI - Frostfly Nest"
 	ambience = AMBIENCE_SIF
 
-	// CHOMPS KSC 8/20/20 Added 5 more POI's areas for their respective place.
-
 /area/submap/DerelictEngine
 	name = "POI - Derelict Engine"
 	ambience = AMBIENCE_OTHERWORLDLY

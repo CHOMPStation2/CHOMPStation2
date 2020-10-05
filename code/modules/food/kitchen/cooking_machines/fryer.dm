@@ -14,6 +14,8 @@
 	active_power_usage = 12 KILOWATTS
 	heating_power = 12 KILOWATTS
 	
+	light_y = 15
+	
 	min_temp = 140 + T0C	// Same as above, increasing this to just under 2x to make the % increase on efficiency not quite so painful as it would be at 80.
 	optimal_temp = 400 + T0C // Increasing this to be 2x Oven to allow for a much higher/realistic frying temperatures. Doesn't really do anything but make heating the fryer take a bit longer.
 	optimal_power = 0.95 // .35 higher than the default to give fryers faster cooking speed.

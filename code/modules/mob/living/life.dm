@@ -46,8 +46,8 @@
 	//Check if we're on fire
 	handle_fire()
 	
-//	if(client)	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them. CHOMP Edit: Disabled
-//		handle_ambience()
+	if(client && !(client.prefs.ambience_freq == 0))	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them, and do not have repeating ambience disabled.
+		handle_ambience()
 	
 	//stuff in the stomach
 	//handle_stomach() //VOREStation Code
@@ -91,13 +91,14 @@
 
 /mob/living/proc/handle_stomach()
 	return
-/* CHOMP Edit: Disable constant ambience
-/mob/living/proc/handle_ambience() // If you're in an ambient area and have not moved out of it for x time, we're going to play ambience again to you, to help break up the silence.
-	if(world.time >= (lastareachange + 30 SECONDS)) // Every 30 seconds, we're going to run a 35% chance to play ambience.
+
+/mob/living/proc/handle_ambience() // If you're in an ambient area and have not moved out of it for x time as configured per-client, and do not have it disabled, we're going to play ambience again to you, to help break up the silence.
+	if(world.time >= (lastareachange + client.prefs.ambience_freq MINUTES)) // Every 5 minutes (by default, set per-client), we're going to run a 35% chance (by default, also set per-client) to play ambience.
 		var/area/A = get_area(src)
 		if(A)
+			lastareachange = world.time // This will refresh the last area change to prevent this call happening LITERALLY every life tick.
 			A.play_ambience(src, initial = FALSE)
-*/
+
 /mob/living/proc/update_pulling()
 	if(pulling)
 		if(incapacitated())

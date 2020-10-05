@@ -34,8 +34,6 @@
 #include "ButcherShack.dmm"
 #include "Chapel.dmm"
 #include "Shelter.dmm"
-#include "Cragzone1.dmm"
-	//CHOMPS KSC 8/11/20 "8 additional POI's"
 #include "derelictengine.dmm"
 #include "wolfden.dmm"
 #include "demonpool.dmm"
@@ -296,8 +294,6 @@
 	desc = "The nest of a Frostfly, or more."
 	mappath = 'maps/submaps/surface_submaps/wilderness/FrostflyNest.dmm'
 	cost = 20
-
-	// CHOMPS KSC 8/20/20 Added 8 more POI's for the wilderness, spicy.
 
 /datum/map_template/surface/wilderness/deep/DerelictEngine
 	name = "Derelict Engine"
