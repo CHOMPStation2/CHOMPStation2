@@ -277,9 +277,9 @@
 
 		if("saveprefs")
 			if(!host.save_vore_prefs())
-				alert("ERROR: Virgo-specific preferences failed to save!","Error")
+				alert("ERROR: Chomp-specific preferences failed to save!","Error")
 			else
-				to_chat(usr, "<span class='notice'>Virgo-specific preferences saved!</span>")
+				to_chat(usr, "<span class='notice'>Chomp-specific preferences saved!</span>")
 				unsaved_changes = FALSE
 			return TRUE
 		if("reloadprefs")
@@ -287,9 +287,9 @@
 			if(alert != "Reload")
 				return FALSE
 			if(!host.apply_vore_prefs())
-				alert("ERROR: Virgo-specific preferences failed to apply!","Error")
+				alert("ERROR: Chomp-specific preferences failed to apply!","Error")
 			else
-				to_chat(usr,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
+				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
 				unsaved_changes = FALSE
 			return TRUE
 		if("setflavor")
