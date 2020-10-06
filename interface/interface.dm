@@ -71,7 +71,7 @@
 	set name = "hotkeys-help"
 	set category = "OOC"
 
-	var/admin = {"<font color='purple'>
+	var/admin = {"<font color='AD5AAD'>
 Admin:
 \tF5 = Aghost (admin-ghost)
 \tF6 = player-panel-new
@@ -79,7 +79,7 @@ Admin:
 \tF8 = Invisimin
 </font>"}
 
-	var/hotkey_mode = {"<font color='purple'>
+	var/hotkey_mode = {"<font color='AD5AAD'>
 Hotkey-Mode: (hotkey-mode must be on)
 \tTAB = toggle hotkey-mode
 \ta = left
@@ -104,7 +104,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 \tShift+Click = examine
 </font>"}
 
-	var/other = {"<font color='purple'>
+	var/other = {"<font color='AD5AAD'>
 Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+a = left
 \tCtrl+s = down
@@ -133,7 +133,7 @@ Any-Mode: (hotkey doesn't need to be on)
 \tEND = throw
 </font>"}
 
-	var/robot_hotkey_mode = {"<font color='purple'>
+	var/robot_hotkey_mode = {"<font color='AD5AAD'>
 Hotkey-Mode: (hotkey-mode must be on)
 \tTAB = toggle hotkey-mode
 \ta = left
@@ -155,7 +155,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 \tShift+Click = examine
 </font>"}
 
-	var/robot_other = {"<font color='purple'>
+	var/robot_other = {"<font color='AD5AAD'>
 Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+a = left
 \tCtrl+s = down

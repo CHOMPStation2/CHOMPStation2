@@ -67,6 +67,9 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_SECURITY "Security"
 #define NETWORK_INTERROGATION "Interrogation"
 #define NETWORK_TELECOM "Tcomms"
+#define NETWORK_TCOMMS "Telecommunications"	//YW ADD: needs to be defined here or it freaks out
+#define NETWORK_OUTSIDE "Outside"		//YW ADD: ditto
+#define NETWORK_SUBSTATIONS "Substations"	//YW ADD: and again
 #define NETWORK_THUNDER "Entertainment"		//VOREStation Edit: broader definition
 #define NETWORK_COMMUNICATORS "Communicators"
 #define NETWORK_ALARM_ATMOS "Atmosphere Alarms"
@@ -74,9 +77,10 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_ALARM_FIRE "Fire Alarms"
 #define NETWORK_TALON_HELMETS "TalonHelmets" //VOREStation Add
 #define NETWORK_TALON_SHIP "TalonShip" //VOREStation Add
+#define NETWORK_EXPLORATION "Exploration"
 
 // Those networks can only be accessed by pre-existing terminals. AIs and new terminals can't use them.
-var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret", NETWORK_COMMUNICATORS)
+var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret", NETWORK_COMMUNICATORS, NETWORK_EXPLORATION)
 
 #define TRANSMISSION_WIRE		0 //Is this ever used? I don't think it is.
 #define TRANSMISSION_RADIO		1 //Radio transmissions (like airlock controller to pump)

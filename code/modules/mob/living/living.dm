@@ -215,7 +215,7 @@ default behaviour is:
 		/* VOREStation Removal - See above
 		if(confused && prob(50) && m_intent=="run")
 			Weaken(2)
-			playsound(src, "punch", 25, 1, -1)
+			playsound(loc, "punch", 25, 1, -1)
 			visible_message("<span class='warning'>[src] [pick("ran", "slammed")] into \the [AM]!</span>")
 			src.apply_damage(5, BRUTE)
 			to_chat(src, "<span class='warning'>You just [pick("ran", "slammed")] into \the [AM]!</span>")
@@ -917,7 +917,7 @@ default behaviour is:
 
 /mob/living/proc/dragged(var/mob/living/dragger, var/oldloc)
 	var/area/A = get_area(src)
-	if(lying && !buckled && pull_damage() && A.has_gravity() && (prob(getBruteLoss() * 200 / maxHealth)))
+	if(lying && !buckled && pull_damage() && A.has_gravity && (prob(getBruteLoss() * 200 / maxHealth)))
 		adjustBruteLoss(2)
 		visible_message("<span class='danger'>\The [src]'s [isSynthetic() ? "state" : "wounds"] worsen terribly from being dragged!</span>")
 
@@ -935,9 +935,10 @@ default behaviour is:
 			// If it is too far away or across z-levels from old location, stop pulling.
 			if(get_dist(pulling.loc, oldloc) > 1 || pulling.loc.z != oldloc?.z)
 				stop_pulling()
+				return
 
 			// living might take damage from drags
-			else if(isliving(pulling))
+			if(isliving(pulling))
 				var/mob/living/M = pulling
 				M.dragged(src, oldloc)
 
@@ -1138,7 +1139,7 @@ default behaviour is:
 
 					Stun(5)
 					src.visible_message("<span class='warning'>[src] throws up!</span>","<span class='warning'>You throw up!</span>")
-					playsound(src, 'sound/effects/splat.ogg', 50, 1)
+					playsound(loc, 'sound/effects/splat.ogg', 50, 1)
 
 					var/turf/simulated/T = get_turf(src)	//TODO: Make add_blood_floor remove blood from human mobs
 					if(istype(T))

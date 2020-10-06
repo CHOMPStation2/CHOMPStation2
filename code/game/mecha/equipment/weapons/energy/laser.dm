@@ -5,7 +5,7 @@
 	icon_state = "mecha_laser"
 	energy_drain = 30
 	projectile = /obj/item/projectile/beam
-	fire_sound = 'sound/weapons/Laser.ogg'
+	fire_sound = 'sound/weapons/MediumLaser.ogg'
 
 	origin_tech = list(TECH_MATERIAL = 2, TECH_COMBAT = 3, TECH_MAGNET = 3)
 
@@ -36,7 +36,7 @@
 	icon_state = "mecha_laser-rig"
 	energy_drain = 60
 	projectile = /obj/item/projectile/beam
-	fire_sound = 'sound/weapons/Laser.ogg'
+	fire_sound = 'sound/weapons/MediumLaser.ogg'
 	required_type = list(/obj/mecha/combat, /obj/mecha/working)
 
 	equip_type = EQUIP_UTILITY
@@ -50,7 +50,7 @@
 	icon_state = "mecha_laser"
 	energy_drain = 60
 	projectile = /obj/item/projectile/beam/heavylaser
-	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+	fire_sound = 'sound/weapons/LargeLaser.ogg'
 
 	step_delay = 1
 

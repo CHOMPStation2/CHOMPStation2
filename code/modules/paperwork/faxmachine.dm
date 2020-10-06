@@ -1,5 +1,5 @@
 var/list/obj/machinery/photocopier/faxmachine/allfaxes = list()
-var/list/admin_departments = list("[using_map.boss_name]", "Virgo-Prime Governmental Authority", "Virgo-Erigonne Job Boards", "Supply") // Vorestation Edit
+var/list/admin_departments = list("[using_map.boss_name]", "Solar Central Government", "Central Command Job Boards", "Supply") // YW EDIT
 var/list/alldepartments = list()
 
 var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
@@ -32,10 +32,14 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 		alldepartments |= department
 	..()
 
-/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob)
+/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob) // CH edit begins here; this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 	user.set_machine(src)
 
-	tgui_interact(user)
+	if(issilicon(usr))
+		authenticated = 1
+		tgui_interact(user)
+	else
+		tgui_interact(user)
 
 /obj/machinery/photocopier/faxmachine/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -210,8 +214,8 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	//message badmins that a fax has arrived
 	if (destination == using_map.boss_name)
 		message_admins(sender, "[uppertext(using_map.boss_short)] FAX", rcvdcopy, "CentComFaxReply", "#006100")
-	else if (destination == "Virgo-Prime Governmental Authority") // Vorestation Edit
-		message_admins(sender, "VIRGO GOVERNMENT FAX", rcvdcopy, "CentComFaxReply", "#1F66A0")
+	else if (destination == "Solar Central Government") // YW EDIT
+		message_admins(sender, "Solar Central Government FAX", rcvdcopy, "CentComFaxReply", "#1F66A0")
 	else if (destination == "Supply")
 		message_admins(sender, "[uppertext(using_map.boss_short)] SUPPLY FAX", rcvdcopy, "CentComFaxReply", "#5F4519")
 	else

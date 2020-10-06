@@ -818,6 +818,7 @@
 		if(3)
 			if(diff==FORWARD)
 				user.visible_message("[user] installs the external armor layer to [holder].", "You install the external armor layer to [holder].")
+				//CHOMPedit. Prevents Sereniy from eating entire stacks of plasteel.
 				holder.icon_state = "gygax18"
 			else
 				user.visible_message("[user] cuts internal armor layer from [holder].", "You cut the internal armor layer from [holder].")

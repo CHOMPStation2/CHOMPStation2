@@ -15,6 +15,9 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["hair_red"]			>> pref.r_hair
 	S["hair_green"]			>> pref.g_hair
 	S["hair_blue"]			>> pref.b_hair
+	S["grad_red"]			>> pref.r_grad
+	S["grad_green"]			>> pref.g_grad
+	S["grad_blue"]			>> pref.b_grad
 	S["facial_red"]			>> pref.r_facial
 	S["grad_red"]			>> pref.r_grad
 	S["grad_green"]			>> pref.g_grad
@@ -26,6 +29,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["skin_green"]			>> pref.g_skin
 	S["skin_blue"]			>> pref.b_skin
 	S["hair_style_name"]	>> pref.h_style
+	S["grad_style_name"]	>> pref.grad_style
 	S["facial_style_name"]	>> pref.f_style
 	S["grad_style_name"]	>> pref.grad_style
 	S["eyes_red"]			>> pref.r_eyes
@@ -43,6 +47,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		>> pref.synth_markings
 	S["bgstate"]			>> pref.bgstate
 	S["body_descriptors"]	>> pref.body_descriptors
+	S["Wingdings"]			>> pref.wingdings //YWadd start
+	S["colorblind_mono"]	>> pref.colorblind_mono
+	S["colorblind_vulp"]	>> pref.colorblind_vulp
+	S["colorblind_taj"] 	>> pref.colorblind_taj 
+	S["haemophilia"]        >> pref.haemophilia //YWadd end
 
 /datum/category_item/player_setup_item/general/body/save_character(var/savefile/S)
 	S["species"]			<< pref.species
@@ -60,6 +69,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["skin_green"]			<< pref.g_skin
 	S["skin_blue"]			<< pref.b_skin
 	S["hair_style_name"]	<< pref.h_style
+	S["grad_style_name"]	<< pref.grad_style
 	S["facial_style_name"]	<< pref.f_style
 	S["grad_style_name"]	<< pref.grad_style
 	S["eyes_red"]			<< pref.r_eyes
@@ -77,6 +87,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		<< pref.synth_markings
 	S["bgstate"]			<< pref.bgstate
 	S["body_descriptors"]	<< pref.body_descriptors
+	S["Wingdings"]          << pref.wingdings //YWadd start
+	S["colorblind_mono"]	<< pref.colorblind_mono
+	S["colorblind_vulp"]	<< pref.colorblind_vulp
+	S["colorblind_taj"] 	<< pref.colorblind_taj 
+	S["haemophilia"]        << pref.haemophilia //YWadd end
 
 /datum/category_item/player_setup_item/general/body/sanitize_character(var/savefile/S)
 	if(!pref.species || !(pref.species in GLOB.playable_species))
@@ -95,6 +110,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.g_skin			= sanitize_integer(pref.g_skin, 0, 255, initial(pref.g_skin))
 	pref.b_skin			= sanitize_integer(pref.b_skin, 0, 255, initial(pref.b_skin))
 	pref.h_style		= sanitize_inlist(pref.h_style, hair_styles_list, initial(pref.h_style))
+	pref.grad_style		= sanitize_inlist(pref.grad_style, GLOB.hair_gradients, initial(pref.grad_style))
 	pref.f_style		= sanitize_inlist(pref.f_style, facial_hair_styles_list, initial(pref.f_style))
 	pref.grad_style		= sanitize_inlist(pref.grad_style, GLOB.hair_gradients, initial(pref.grad_style))
 	pref.r_eyes			= sanitize_integer(pref.r_eyes, 0, 255, initial(pref.r_eyes))
@@ -132,6 +148,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.b_skin	= pref.b_skin
 	character.s_tone	= pref.s_tone
 	character.h_style	= pref.h_style
+	character.grad_style= pref.grad_style
 	character.f_style	= pref.f_style
 	character.grad_style= pref.grad_style
 	character.b_type	= pref.b_type
@@ -140,6 +157,21 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.g_synth	= pref.g_synth
 	character.b_synth	= pref.b_synth
 	character.synth_markings = pref.synth_markings
+	if(pref.species == "Grey")//YWadd START
+		character.wingdings = pref.wingdings
+
+	if(pref.colorblind_mono == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_monochrome)
+
+	else if(pref.colorblind_vulp == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_vulp)
+
+	else if(pref.colorblind_taj == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_taj)
+
+	if(pref.haemophilia == 1)
+		character.add_modifier(/datum/modifier/trait/haemophilia)
+	//YWadd END
 
 	// Destroy/cyborgize organs and limbs.
 	for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
@@ -212,10 +244,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 	if(has_flag(mob_species, HAS_SKIN_TONE))
 		. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
-	. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
+	. += "<b>Disabilities</b><br> <a href='?src=\ref[src];disabilities_yw=1'>Adjust</a><br>" // YWadd
+	//YWcommented moved onto disabilities. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
 	. += "Limbs: <a href='?src=\ref[src];limbs=1'>Adjust</a> <a href='?src=\ref[src];reset_limbs=1'>Reset</a><br>"
 	. += "Internal Organs: <a href='?src=\ref[src];organs=1'>Adjust</a><br>"
-
 	//display limbs below
 	var/ind = 0
 	for(var/name in pref.organ_data)
@@ -401,6 +433,9 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.alternate_languages.Cut() // Reset their alternate languages. Todo: attempt to just fix it instead?
 		return TOPIC_HANDLED
 
+	else if(href_list["disabilities_yw"])
+		Disabilities_YW(usr)
+
 	else if(href_list["set_species"])
 		user << browse(null, "window=species")
 		if(!pref.species_preview || !(pref.species_preview in GLOB.all_species))
@@ -464,6 +499,16 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.g_hair = hex2num(copytext(new_hair, 4, 6))
 			pref.b_hair = hex2num(copytext(new_hair, 6, 8))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
+			
+	else if(href_list["grad_color"])
+		if(!has_flag(mob_species, HAS_HAIR_COLOR))
+			return TOPIC_NOACTION
+		var/new_grad = input(user, "Choose your character's secondary hair color:", "Character Preference", rgb(pref.r_grad, pref.g_grad, pref.b_grad)) as color|null
+		if(new_grad && has_flag(mob_species, HAS_HAIR_COLOR) && CanUseTopic(user))
+			pref.r_grad = hex2num(copytext(new_grad, 2, 4))
+			pref.g_grad = hex2num(copytext(new_grad, 4, 6))
+			pref.b_grad = hex2num(copytext(new_grad, 6, 8))
+			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["grad_color"])
 		if(!has_flag(mob_species, HAS_HAIR_COLOR))
@@ -481,6 +526,14 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		var/new_h_style = input(user, "Choose your character's hair style:", "Character Preference", pref.h_style)  as null|anything in valid_hairstyles
 		if(new_h_style && CanUseTopic(user))
 			pref.h_style = new_h_style
+			return TOPIC_REFRESH_UPDATE_PREVIEW
+			
+	else if(href_list["grad_style"])
+		var/list/valid_gradients = GLOB.hair_gradients
+
+		var/new_grad_style = input(user, "Choose a color pattern for your hair:", "Character Preference", pref.grad_style)  as null|anything in valid_gradients
+		if(new_grad_style && CanUseTopic(user))
+			pref.grad_style = new_grad_style
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["grad_style"])
@@ -834,7 +887,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["disabilities"])
 		var/disability_flag = text2num(href_list["disabilities"])
 		pref.disabilities ^= disability_flag
-		return TOPIC_REFRESH_UPDATE_PREVIEW
+		Disabilities_YW(usr) //YW Edit
 
 	else if(href_list["toggle_preview_value"])
 		pref.equip_preview_mob ^= text2num(href_list["toggle_preview_value"])
@@ -859,6 +912,38 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["cycle_bg"])
 		pref.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
+
+	//YW Add Start
+	else if(href_list["wingdings"])
+		pref.wingdings = !pref.wingdings
+		Disabilities_YW(usr)
+
+	else if(href_list["colorblind_mono"])
+		pref.colorblind_mono = !pref.colorblind_mono
+		Disabilities_YW(usr)
+
+	else if(href_list["colorblind_vulp"])
+		pref.colorblind_vulp = !pref.colorblind_vulp
+		Disabilities_YW(usr)
+
+	else if(href_list["colorblind_taj"])
+		pref.colorblind_taj = !pref.colorblind_taj
+		Disabilities_YW(usr)
+
+	else if(href_list["haemophilia"])
+		pref.haemophilia = !pref.haemophilia
+		Disabilities_YW(usr)
+
+	else if(href_list["reset_disabilities"])
+		pref.wingdings = 0
+		pref.colorblind_mono = 0
+		pref.colorblind_taj = 0
+		pref.colorblind_vulp = 0
+		pref.haemophilia = 0
+		Disabilities_YW(usr)
+
+	//YW Add End
+
 
 	return ..()
 
@@ -954,3 +1039,4 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	dat += "</center></body>"
 
 	user << browse(dat, "window=species;size=700x400")
+

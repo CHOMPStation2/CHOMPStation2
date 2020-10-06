@@ -5,7 +5,7 @@
 	
 	var/input_NIF
 
-	if(!check_rights(R_ADMIN))
+	if(!check_rights(R_ADMIN|R_EVENT|R_DEBUG))	//CHOMPStation Edit TFF 24/4/19: Allow Devs to use Quick-NIF verb.
 		return
 
 	var/mob/living/carbon/human/H = input("Pick a mob with a player","Quick NIF") as null|anything in player_list

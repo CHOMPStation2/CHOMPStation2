@@ -5,7 +5,7 @@ var/list/sounds_cache = list()
 	set name = "Play Global Sound"
 	if(!check_rights(R_SOUNDS))	return
 
-	var/sound/uploaded_sound = sound(S, repeat = 0, wait = 1, channel = 777)
+	var/sound/uploaded_sound = sound(S, volume = 50, repeat = 0, wait = 1, channel = 777)
 	uploaded_sound.priority = 250
 
 	sounds_cache += S

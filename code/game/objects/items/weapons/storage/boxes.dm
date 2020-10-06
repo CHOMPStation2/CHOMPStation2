@@ -153,7 +153,7 @@
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
-/obj/item/weapon/storage/box/beanbags/large/New()
+/obj/item/weapon/storage/box/beanbags/large
 	starts_with = list(/obj/item/ammo_casing/a12g/beanbag = 16)
 
 /obj/item/weapon/storage/box/shotgunammo

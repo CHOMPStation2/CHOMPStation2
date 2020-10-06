@@ -138,8 +138,12 @@
 		lastJob = job
 		. += "<a href='?src=\ref[src];job_info=[rank]'>"
 		if(jobban_isbanned(user, rank))
-			. += "<del>[rank]</del></td></a><td><b> \[BANNED]</b></td></tr>"
-			continue
+			if(config.usewhitelist && !check_whitelist(user))
+				. += "<del>[rank]</del></td><td><b> \[WHITELISTED]</b></td></tr>"
+				continue
+			else
+				. += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
+				continue
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
 			. += "<del>[rank]</del></td></a><td> \[IN [(available_in_days)] DAYS]</td></tr>"
@@ -358,7 +362,7 @@
 					pref.job_engsec_med |= job.flag
 				if(3)
 					pref.job_engsec_low |= job.flag
-		//VOREStation Add
+		/*/VOREStation Add //YW COMMENT OUT
 		if(TALON)
 			pref.job_talon_low &= ~job.flag
 			pref.job_talon_med &= ~job.flag
@@ -371,7 +375,7 @@
 					pref.job_talon_med |= job.flag
 				if(3)
 					pref.job_talon_low |= job.flag
-		//VOREStation Add End
+		VOREStation Add End*/
 
 	return 1
 
@@ -426,14 +430,4 @@
 					return job_engsec_med
 				if(3)
 					return job_engsec_low
-		//VOREStation Add
-		if(TALON)
-			switch(level)
-				if(1)
-					return job_talon_high
-				if(2)
-					return job_talon_med
-				if(3)
-					return job_talon_low
-		//VOREStation Add End
 	return 0

@@ -20,6 +20,11 @@
 	drop_sound = 'sound/items/drop/axe.ogg'
 	pickup_sound = 'sound/items/pickup/axe.ogg'
 
+	var/material/material						//CHOMPEDIT: Start, To make tiles have material variables
+	var/default_type = DEFAULT_WALL_MATERIAL
+	var/perunit = SHEET_MATERIAL_AMOUNT
+	var/apply_colour							//CHOMPEDIT: End
+
 /obj/item/stack/tile/New()
 	..()
 	randpixel_xy()
@@ -72,9 +77,9 @@
 	stacktype = /obj/item/stack/tile/wood
 	build_type = /obj/item/stack/tile/wood
 
+
+//CHOMPEDIT: Moving carpets to tile_types_ch to give them proper names, descriptions and material variables
 /*
- * Carpets
- */
 /obj/item/stack/tile/carpet
 	name = "carpet"
 	singular_name = "carpet"
@@ -96,7 +101,8 @@
 	icon_state = "tile-tealcarpet"
 	no_variants = FALSE
 
-/obj/item/stack/tile/carpet/bcarpet
+/obj/item/stack/tile/carpet/bcarpet //YW EDIT: Commented out to help with upstream merging. Get on this you fucking virgo bois. -yw //CHOMP Comment: Yawn commented out this block, but CHOMP already commented out this stuff so I just removed theirs.
+
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/blucarpet
 	icon_state = "tile-carpet"
@@ -110,6 +116,7 @@
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/oracarpet
 	icon_state = "tile-carpet"
+	*/
 
 /obj/item/stack/tile/floor
 	name = "floor tile"

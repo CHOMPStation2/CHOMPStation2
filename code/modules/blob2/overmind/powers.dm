@@ -56,7 +56,7 @@
 	set desc = "Create a resource tower which will generate resources for you."
 
 	if(!blob_type.can_build_resources)
-		return FALSE
+		return TRUE
 
 	createSpecial(40, blob_type.resource_type, 4, 1)
 
@@ -66,7 +66,7 @@
 	set desc = "Automatically places a resource tower near a node or your core, at a sufficent distance."
 
 	if(!blob_type.can_build_resources)
-		return FALSE
+		return TRUE
 
 	var/obj/structure/blob/B = null
 	var/list/potential_blobs = GLOB.all_blobs.Copy()
@@ -99,7 +99,7 @@
 	set desc = "Create a spore tower that will spawn spores to harass your enemies."
 
 	if(!blob_type.can_build_factories)
-		return FALSE
+		return TRUE
 
 	createSpecial(60, blob_type.factory_type, 7, 1)
 
@@ -109,7 +109,7 @@
 	set desc = "Automatically places a resource tower near a node or your core, at a sufficent distance."
 
 	if(!blob_type.can_build_factories)
-		return FALSE
+		return TRUE
 
 	var/obj/structure/blob/B = null
 	var/list/potential_blobs = GLOB.all_blobs.Copy()
@@ -143,7 +143,7 @@
 	set desc = "Create a node, which will expand blobs around it, and power nearby factory and resource blobs."
 
 	if(!blob_type.can_build_nodes)
-		return FALSE
+		return TRUE
 
 	createSpecial(100, blob_type.node_type, 5, 0)
 
@@ -153,7 +153,7 @@
 	set desc = "Automatically places a node blob at a sufficent distance."
 
 	if(!blob_type.can_build_nodes)
-		return FALSE
+		return TRUE
 
 	var/obj/structure/blob/B = null
 	var/list/potential_blobs = GLOB.all_blobs.Copy()

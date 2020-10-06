@@ -161,6 +161,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
 
+
 //DAMAGE OVERLAYS
 //constructs damage icon for each organ from mask * damage field and saves it in our overlays_ lists
 /mob/living/carbon/human/UpdateDamageIcon()

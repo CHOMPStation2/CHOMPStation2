@@ -88,6 +88,34 @@
 	build_path = /obj/item/device/healthanalyzer/improved
 	sort_string = "KBAAB"
 
+//YAWN changes
+/datum/design/item/medical/advanced_analyzer
+	name = "advanced health analyzer"
+	desc = "A prototype version of the improved health analyzer, able to distinguish the location of more serious injuries as well as accurately determine radiation levels, and neurological analysis suites"
+	id = "advanced_analyzer"
+	req_tech = list(TECH_MAGNET = 6, TECH_BIO = 7, TECH_PHORON = 4)
+	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 1000, "silver" = 1250, "gold" = 1750, "uranium" = 1000, "plastic" = 500)
+	build_path = /obj/item/device/healthanalyzer/advanced
+	sort_string = "KBAAC"
+
+/datum/design/item/medical/phasic_analyzer
+	name = "phasic health analyzer"
+	desc = "A prototype version of the advanced health analyzer, able to distinguish the location of more serious injuries as well as accurately determine radiation levels, and neurological analysis suites. This analyzer even picks up chemicals in the patient's stomach."
+	id = "phasic_analyzer"
+	req_tech = list(TECH_MAGNET = 7, TECH_BIO = 8, TECH_BLUESPACE = 6, TECH_PHORON = 5)
+	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 1000, "silver" = 1500, "gold" = 2000, "uranium" = 1250, "diamond" = 750, "phoron" = 500, "plastic" = 1000, "osmium" = 500)
+	build_path = /obj/item/device/healthanalyzer/phasic
+	sort_string = "KBAAD"
+
+/datum/design/item/medical/large_bodybag
+	desc = "A massive body bag made with bluespace tech."
+	id = "large_bodybag"
+	req_tech = list( TECH_ENGINEERING = 3, TECH_BIO = 5, TECH_BLUESPACE = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 3500, "glass" = 500, "phoron" = 4000, "plastic" = 18000) //2 phoron and 9 plastic sheets.
+	build_path = /obj/item/bodybag/large
+	sort_string = "KCAAB" //To be under the roller bed
+//End of YAWN changes
+
 /datum/design/item/medical/advanced_roller
 	name = "advanced roller bed"
 	desc = "A more advanced version of the regular roller bed, with inbuilt surgical stabilisers and an improved folding system."

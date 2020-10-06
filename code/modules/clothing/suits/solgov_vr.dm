@@ -4,75 +4,75 @@
 
 /obj/item/clothing/suit/storage/solgov/service/fleet
 	name = "fleet service jacket"
-	desc = "A navy blue TCG Fleet service jacket."
+	desc = "A navy blue USDF Fleet service jacket." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/snco
 	name = "fleet SNCO service jacket"
-	desc = "A navy blue TCG Fleet service jacket with silver cuffs."
+	desc = "A navy blue USDF Fleet service jacket with silver cuffs." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/officer
 	name = "fleet officer's service jacket"
-	desc = "A navy blue TCG Fleet dress jacket with silver accents."
+	desc = "A navy blue USDF Fleet dress jacket with silver accents." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/command
 	name = "fleet senior officer's service jacket"
-	desc = "A navy blue TCG Fleet dress jacket with gold accents."
+	desc = "A navy blue USDF Fleet dress jacket with gold accents." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/flag
 	name = "fleet flag officer's service jacket"
-	desc = "A navy blue TCG Fleet dress jacket with red accents."
+	desc = "A navy blue USDF Fleet dress jacket with red accents." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army
 	name = "marine coat"
-	desc = "An TCG Marine service coat. Green and undecorated."
+	desc = "An USDF Marine service coat. Green and undecorated." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/medical
 	name = "marine medical jacket"
-	desc = "An TCG Marine service coat. This one has blue markings."
+	desc = "An USDF Marine service coat. This one has blue markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/medical/command
 	name = "marine medical command jacket"
-	desc = "An TCG Marine service coat. This one has blue and gold markings."
+	desc = "An USDF Marine service coat. This one has blue and gold markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/engineering
 	name = "marine engineering jacket"
-	desc = "An TCG Marine service coat. This one has orange markings."
+	desc = "An USDF Marine service coat. This one has orange markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/engineering/command
 	name = "marine engineering command jacket"
-	desc = "An TCG Marine service coat. This one has orange and gold markings."
+	desc = "An USDF Marine service coat. This one has orange and gold markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/supply
 	name = "marine supply jacket"
-	desc = "An TCG Marine service coat. This one has brown markings."
+	desc = "An USDF Marine service coat. This one has brown markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/security
 	name = "marine security jacket"
-	desc = "An TCG Marine service coat. This one has red markings."
+	desc = "An USDF Marine service coat. This one has red markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/security/command
 	name = "marine security command jacket"
-	desc = "An TCG Marine service coat. This one has red and gold markings."
+	desc = "An USDF Marine service coat. This one has red and gold markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/service
 	name = "marine service jacket"
-	desc = "An TCG Marine service coat. This one has green markings."
+	desc = "An USDF Marine service coat. This one has green markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/service/command
 	name = "marine service command jacket"
-	desc = "An TCG Marine service coat. This one has green and gold markings."
+	desc = "An USDF Marine service coat. This one has green and gold markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/exploration
 	name = "marine exploration jacket"
-	desc = "An TCG Marine service coat. This one has purple markings."
+	desc = "An USDF Marine service coat. This one has purple markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/exploration/command
 	name = "marine exploration command jacket"
-	desc = "An TCG Marine service coat. This one has purple and gold markings."
+	desc = "An USDF Marine service coat. This one has purple and gold markings." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/service/army/command
 	name = "marine command jacket"
-	desc = "An TCG Marine Corps service coat. This one has gold markings."
+	desc = "An USDF Marine Corps service coat. This one has gold markings." //YW EDIT: TCG to USDF
 
 //Dress - murder me with a gun why are these 3 different types
 /obj/item/clothing/suit/storage/solgov/dress/sifguard
@@ -100,35 +100,35 @@
 
 /obj/item/clothing/suit/storage/solgov/dress/fleet
 	name = "fleet dress jacket"
-	desc = "A navy blue TCG Fleet dress jacket. Don't get near pasta sauce or vox."
+	desc = "A navy blue USDF Fleet dress jacket. Don't get near pasta sauce or vox." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/dress/fleet/snco
 	name = "fleet dress SNCO jacket"
-	desc = "A navy blue TCG Fleet dress jacket with silver cuffs. Don't get near pasta sauce or vox."
+	desc = "A navy blue USDF Fleet dress jacket with silver cuffs. Don't get near pasta sauce or vox." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/dress/fleet/officer
 	name = "fleet officer's dress jacket"
-	desc = "A navy blue TCG Fleet dress jacket with silver accents. Don't get near pasta sauce or vox."
+	desc = "A navy blue USDF Fleet dress jacket with silver accents. Don't get near pasta sauce or vox." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/dress/fleet/command
 	name = "fleet senior officer's dress jacket"
-	desc = "A navy blue TCG Fleet dress jacket with gold accents. Don't get near pasta sauce or vox."
+	desc = "A navy blue USDF Fleet dress jacket with gold accents. Don't get near pasta sauce or vox." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/solgov/dress/fleet/flag
 	name = "fleet flag officer's dress jacket"
-	desc = "A navy blue TCG Fleet dress jacket with red accents. Don't get near pasta sauce or vox."
+	desc = "A navy blue USDF Fleet dress jacket with red accents. Don't get near pasta sauce or vox." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/dress/solgov/fleet/sailor
 	name = "fleet dress overwear"
-	desc = "A navy blue TCG Fleet dress suit. Almost looks like a school-girl outfit."
+	desc = "A navy blue USDF Fleet dress suit. Almost looks like a school-girl outfit." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/dress/solgov/army
 	name = "marine dress jacket"
-	desc = "A tailored black TCG Marines dress jacket with red trim. So sexy it hurts."
+	desc = "A tailored black USDF Marines dress jacket with red trim. So sexy it hurts." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/dress/solgov/army/command
 	name = "marine officer's dress jacket"
-	desc = "A tailored black TCG Marines dress jacket with gold trim. Smells like ceremony."
+	desc = "A tailored black USDF Marines dress jacket with gold trim. Smells like ceremony." //YW EDIT: TCG to USDF
 
 //Misc
 
@@ -147,11 +147,11 @@
 
 /obj/item/clothing/suit/storage/toggle/dress/fleet
 	name = "fleet dress jacket"
-	desc = "A crisp white TCG Fleet dress jacket with blue and gold accents. Don't get near pasta sauce or vox."
+	desc = "A crisp white USDF Fleet dress jacket with blue and gold accents. Don't get near pasta sauce or vox." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/toggle/dress/fleet/command
 	name = "fleet command dress jacket"
-	desc = "A crisp white TCG Fleet dress jacket dripping with gold accents. So bright it's blinding."
+	desc = "A crisp white USDF Fleet dress jacket dripping with gold accents. So bright it's blinding." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/suit/storage/marshal_jacket
 	name = "colonial marshal jacket"

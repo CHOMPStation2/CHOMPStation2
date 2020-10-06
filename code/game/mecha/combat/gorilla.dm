@@ -1,8 +1,8 @@
 
 /obj/mecha/combat/gorilla
-	name = "Gorilla"
-	desc = "<b>Blitzkrieg!</b>" //stop using all caps in item descs i will fight you. its redundant with the bold.
-	icon = 'icons/mecha/mecha64x64.dmi'
+	desc = "<b><font color='red'>BLITZKRIEEEEEEEG!</font></b>"
+	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A"
+	icon = 'icons/mecha/AxisMech.dmi'
 	icon_state = "pzrmech"
 	initial_icon = "pzrmech"
 	pixel_x = -16
@@ -11,8 +11,8 @@
 	maxhealth = 5000
 	opacity = 0 // Because there's big tall legs to look through. Also it looks fucky if this is set to 1.
 	deflect_chance = 50
-	damage_absorption = list("brute"=0.1,"fire"=0.8,"bullet"=0.1,"laser"=0.6,"energy"=0.7,"bomb"=0.7) //values show how much damage will pass through, not how much will be absorbed.
-	max_temperature = 35000 //Just a bit better than the Durand.
+	damage_absorption = list("brute"=0.1,"fire"=0.7,"bullet"=0.1,"laser"=0.6,"energy"=0.7,"bomb"=0.7) //values show how much damage will pass through, not how much will be absorbed.
+	max_temperature = 35000
 	infra_luminosity = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/gorilla
 	add_req_access = 0
@@ -36,8 +36,6 @@
 	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon(src)
 	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon/weak(src) //Saves energy, I suppose. Anti-infantry.
-	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive(src)
 	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)
@@ -46,18 +44,39 @@
 
 /obj/mecha/combat/gorilla/mechstep(direction)
 	var/result = step(src,direction)
-	playsound(src,"mechstep",40,1)
+	var/stepsound = rand(1,2)
+	if(result)
+		switch(stepsound)
+			if(1)
+				playsound(src,'sound/mecha/bigmech_lstep.ogg',40,1)
+			if(2)
+				playsound(src,'sound/mecha/bigmech_rstep.ogg',40,1)
 	return result
 
 /obj/mecha/combat/gorilla/mechturn(direction)
 	dir = direction
-	playsound(src,"mechstep",40,1)
+	var/turnsound = rand(1,2)
+	switch(turnsound)
+		if(1)
+			playsound(src,'sound/mecha/bigmech_lturn.ogg',40,1)
+		if(2)
+			playsound(src,'sound/mecha/bigmech_rturn.ogg',40,1)
+	return 1
 
+/obj/mecha/combat/gorilla/mechturn(direction)
+	dir = direction
+	var/turnsound = rand(1,2)
+	switch(turnsound)
+		if(1)
+			playsound(src,'sound/mecha/bigmech_lturn.ogg',40,1)
+		if(2)
+			playsound(src,'sound/mecha/bigmech_rturn.ogg',40,1)
+	return 1
 
 /obj/mecha/combat/gorilla/relaymove(mob/user,direction)
-	if(user != src.occupant)
+	if(user != src.occupant) //While not "realistic", this piece is player friendly.
 		user.loc = get_turf(src)
-		to_chat(user, "You climb out from [src]")
+		user << "You climb out from [src]"
 		return 0
 	if(!can_move)
 		return 0

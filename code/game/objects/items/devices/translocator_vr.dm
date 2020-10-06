@@ -113,7 +113,7 @@
 
 /obj/item/device/perfect_tele/attack_self(mob/user)
 	if(loc_network)
-		for(var/obj/item/device/perfect_tele_beacon/stationary/nb in premade_tele_beacons)
+		for(var/obj/item/device/perfect_tele_beacon/stationary/nb in GLOB.premade_tele_beacons)
 			if(nb.tele_network == loc_network)
 				beacons[nb.tele_name] = nb
 		loc_network = null //Consumed

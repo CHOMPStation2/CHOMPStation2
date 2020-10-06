@@ -18,7 +18,8 @@
 		SPECIES_NEVREAN				= 'icons/mob/species/sergal/helmet_vr.dmi',
 		SPECIES_VULPKANIN			= 'icons/mob/species/vulpkanin/helmet.dmi',
 		SPECIES_ZORREN_HIGH			= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_FENNEC				= 'icons/mob/species/vulpkanin/helmet.dmi'
+		SPECIES_FENNEC				= 'icons/mob/species/vulpkanin/helmet.dmi',
+		SPECIES_GREY_YW				= 'icons/mob/species/grey/helmet.dmi' /*ywedit*/
 		)
 	sprite_sheets_obj = list(
 		SPECIES_TAJ 			= 'icons/obj/clothing/species/tajaran/hats.dmi', // Copied from void.dm

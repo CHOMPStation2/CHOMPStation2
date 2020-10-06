@@ -17,17 +17,17 @@
 	log = do_log
 	newscast = do_newscast
 
-/datum/announcement/priority/New(var/do_log = 1, var/new_sound, var/do_newscast = 0)
+/datum/announcement/priority/New(var/do_log = 1, var/new_sound = 'sound/misc/notice2.ogg', var/do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
 	title = "Priority Announcement"
 	announcement_type = "Priority Announcement"
 
-/datum/announcement/priority/command/New(var/do_log = 1, var/new_sound, var/do_newscast = 0)
+/datum/announcement/priority/command/New(var/do_log = 1, var/new_sound = 'sound/misc/notice2.ogg', var/do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
 	title = "[command_name()] Update"
 	announcement_type = "[command_name()] Update"
 
-/datum/announcement/priority/security/New(var/do_log = 1, var/new_sound, var/do_newscast = 0)
+/datum/announcement/priority/security/New(var/do_log = 1, var/new_sound = 'sound/misc/notice2.ogg', var/do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
 	title = "Security Announcement"
 	announcement_type = "Security Announcement"
@@ -107,21 +107,14 @@
 	announce_newscaster_news(news)
 
 /datum/announcement/proc/PlaySound(var/message_sound, var/list/zlevels)
+	if(!message_sound)
+		return
+
 	for(var/mob/M in player_list)
 		if(zlevels && !(M.z in zlevels))
 			continue
 		if(!istype(M,/mob/new_player) && !isdeaf(M))
-			M << 'sound/AI/preamble.ogg'
-
-	if(!message_sound)
-		return
-
-	spawn(22) // based on length of preamble.ogg + arbitrary delay
-		for(var/mob/M in player_list)
-			if(zlevels && !(M.z in zlevels))
-				continue
-			if(!istype(M,/mob/new_player) && !isdeaf(M))
-				M << message_sound
+			M << message_sound
 
 /datum/announcement/proc/Sound(var/message_sound, var/list/zlevels)
 	PlaySound(message_sound, zlevels)

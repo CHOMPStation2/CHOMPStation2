@@ -303,7 +303,7 @@
 /obj/item/weapon/hand
 	name = "hand of cards"
 	desc = "Some playing cards."
-	icon = 'icons/obj/playing_cards.dmi'
+	icon = 'icons/obj/playing_cards_ch.dmi' //CHOMPEDIT quickest solution to having custom chomp cards - Jack
 	icon_state = "empty"
 	drop_sound = 'sound/items/drop/paper.ogg'
 	pickup_sound = 'sound/items/pickup/paper.ogg'

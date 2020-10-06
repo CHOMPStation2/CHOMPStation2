@@ -163,6 +163,7 @@
 					prob(3);/obj/item/clothing/suit/storage/toggle/leather_jacket,
 					prob(3);/obj/item/device/pda,
 					prob(3);/obj/item/device/radio/headset,
+					prob(3);/obj/item/seeds/lustflower,
 					prob(3);/obj/item/weapon/camera_assembly,
 					prob(3);/obj/item/clothing/head/cone,
 					prob(3);/obj/item/weapon/cell/high,

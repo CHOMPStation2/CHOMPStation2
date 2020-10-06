@@ -2,6 +2,9 @@
 // The zone control console, fluffed ingame as
 // a scanner console for the asteroid belt
 //////////////////////////////
+#define OUTPOST_Z 2
+#define TRANSIT_Z 3
+#define BELT_Z 10
 
 /obj/machinery/computer/roguezones
 	name = "asteroid belt scanning computer"

@@ -107,7 +107,7 @@
 
 /obj/vehicle/train/rover/update_icon()
 	if(open)
-		icon_state = initial(icon_state) + "_open"
+		icon_state = initial(icon_state) + ""
 	else
 		icon_state = initial(icon_state)
 
@@ -299,7 +299,7 @@
 	return ..()
 
 /obj/vehicle/train/rover/engine/unload(var/mob/user, var/direction)
-	var/mob/living/carbon/human/C = load	
+	var/mob/living/carbon/human/C = load
 
 
 	if(ismob(load))

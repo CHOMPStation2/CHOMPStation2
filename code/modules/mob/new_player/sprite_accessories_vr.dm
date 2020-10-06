@@ -8,7 +8,7 @@
 
 	//var/icon_add = 'icons/mob/human_face.dmi' //Already defined in sprite_accessories.dm line 49.
 	var/color_blend_mode = ICON_MULTIPLY
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //This lets all races use the default hairstyles.
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //This lets all races use the default hairstyles.
 
 	astolfo
 		name = "Astolfo"
@@ -467,10 +467,10 @@
 		species_allowed = list(SPECIES_XENOHYBRID)
 		gender = NEUTER
 
-	xeno_head_hunter_color
+	xeno_head_hunter_color //ChompstationEdit editing code instead of the sprite because its easier to track
 		name = "Hunter dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
+		icon = 'icons/mob/human_face_ch.dmi'
+		icon_add = 'icons/mob/human_face_ch_add.dmi'
 		icon_state = "cxeno_hunter"
 		species_allowed = list(SPECIES_XENOHYBRID)
 		gender = NEUTER
@@ -490,7 +490,7 @@
 		icon = 'icons/mob/human_face_vr.dmi'
 		icon_add = 'icons/mob/human_face_vr_add.dmi'
 		icon_state = "shadekin_short"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW Edits
 		gender = NEUTER
 
 	shadekin_hair_poofy
@@ -498,7 +498,7 @@
 		icon = 'icons/mob/human_face_vr.dmi'
 		icon_add = 'icons/mob/human_face_vr_add.dmi'
 		icon_state = "shadekin_poofy"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW Edits
 		gender = NEUTER
 
 	shadekin_hair_long
@@ -506,7 +506,7 @@
 		icon = 'icons/mob/human_face_vr.dmi'
 		icon_add = 'icons/mob/human_face_vr_add.dmi'
 		icon_state = "shadekin_long"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW Edits
 		gender = NEUTER
 
 	shadekin_hair_rivyr
@@ -515,7 +515,7 @@
 		icon_add = 'icons/mob/human_face_vr_add.dmi'
 		icon_state = "shadekin_rivyr"
 		ckeys_allowed = list("verysoft")
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW Edits
 		gender = NEUTER
 
 /datum/sprite_accessory/facial_hair
@@ -1144,7 +1144,7 @@
 		icon_state = "shadekin-snoot"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW edits
 
 	taj_nose_alt
 		name = "Nose Color, alt. (Taj)"

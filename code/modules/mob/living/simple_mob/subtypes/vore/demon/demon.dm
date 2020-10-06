@@ -1,3 +1,6 @@
+//CHOMPedit;KAS I commented this out, our demons are in 'demon_ch.dm"
+/*
+
 /mob/living/simple_mob/vore/demon
 	name = "Rift Walker"
 	desc = "A large bipedal creature, body a mix of dark fur and scales. Marks on the creatures body pulse slowly with red light"
@@ -88,3 +91,5 @@
 		return canmove
 	else
 		return ..()
+
+*/

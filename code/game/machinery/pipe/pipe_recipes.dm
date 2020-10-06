@@ -134,7 +134,9 @@ GLOBAL_LIST_INIT(disposal_pipe_recipes, list(
 	dirtype = initial(construction_type.dispenser_class)
 	if (dirtype == PIPE_TRIN_M)
 		icon_state_m = "[icon_state]m"
-	paintable = ispath(path, /obj/machinery/atmospherics/pipe) && !(ispath(path, /obj/machinery/atmospherics/pipe/vent))	// VOREStation Add
+	
+	// YW Edit: Add HE pipes to non-paintable objects list.
+	paintable = ispath(path, /obj/machinery/atmospherics/pipe) && !(ispath(path, /obj/machinery/atmospherics/pipe/vent)) && !(ispath(path, /obj/machinery/atmospherics/pipe/simple/heat_exchanging))	// VOREStation Add
 
 
 //

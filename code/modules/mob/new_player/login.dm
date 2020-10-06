@@ -3,7 +3,7 @@
 var/obj/effect/lobby_image = new /obj/effect/lobby_image
 
 /obj/effect/lobby_image
-	name = "Polaris"
+	name = "CHOMPStation"
 	desc = "How are you reading this?"
 	screen_loc = "1,1"
 	icon = 'icons/misc/loading.dmi' //VOREStation Add - Loading Screen

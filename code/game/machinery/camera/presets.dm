@@ -24,6 +24,7 @@ var/global/list/station_networks = list(
 */
 var/global/list/engineering_networks = list(
 										NETWORK_ENGINE,
+										NETWORK_SUBSTATIONS, //YAWN ADD: new substations subnet
 										NETWORK_ENGINEERING,
 										//NETWORK_ENGINEERING_OUTPOST,	//VOREStation Edit: Tether has no Engineering Outpost,
 										NETWORK_ALARM_ATMOS,
@@ -80,6 +81,9 @@ var/global/list/engineering_networks = list(
 
 /obj/machinery/camera/network/northern_star
 	network = list(NETWORK_NORTHERN_STAR)
+	
+/obj/machinery/camera/network/outside
+	network = list(NETWORK_OUTSIDE)
 
 /obj/machinery/camera/network/prison
 	network = list(NETWORK_PRISON)
@@ -90,14 +94,20 @@ var/global/list/engineering_networks = list(
 /obj/machinery/camera/network/research
 	network = list(NETWORK_RESEARCH)
 
+/obj/machinery/camera/network/exploration //yw edit
+	network = list(NETWORK_EXPLORATION)
+
 /obj/machinery/camera/network/research_outpost
 	network = list(NETWORK_RESEARCH_OUTPOST)
 
 /obj/machinery/camera/network/security
 	network = list(NETWORK_SECURITY)
 
+/obj/machinery/camera/network/substations
+	network = list(NETWORK_SUBSTATIONS)
+
 /obj/machinery/camera/network/telecom
-	network = list(NETWORK_TELECOM)
+	network = list(NETWORK_TCOMMS) //yw edit
 
 /obj/machinery/camera/network/thunder
 	network = list(NETWORK_THUNDER)
@@ -142,6 +152,12 @@ var/global/list/engineering_networks = list(
 
 /obj/machinery/camera/motion/security
 	network = list(NETWORK_SECURITY)
+
+/obj/machinery/camera/motion/command
+	network = list(NETWORK_COMMAND)
+	
+/obj/machinery/camera/motion/telecom
+	network = list(NETWORK_TCOMMS) //yw edit
 
 // ALL UPGRADES
 

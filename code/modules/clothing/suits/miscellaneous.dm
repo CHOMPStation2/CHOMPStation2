@@ -234,6 +234,11 @@
 	icon_state = "straight_jacket"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER
+	//yw edit - Teshari sprite
+	sprite_sheets = list(
+		SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
+		)
+	//yw edit end
 
 	var/resist_time = 4800	// Eight minutes.
 
@@ -402,9 +407,10 @@ obj/item/clothing/suit/kamishimo
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	cold_protection = UPPER_TORSO|LOWER_TORSO
 
+//YW EDIT BEGINS
 /obj/item/clothing/suit/storage/miljacket
 	name = "military jacket"
-	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable."
+	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. This one's in the vintage olive drab."
 	icon_state = "militaryjacket_nobadge"
 	item_state_slots = list(slot_r_hand_str = "suit_olive", slot_l_hand_str = "suit_olive")
 	flags_inv = HIDEHOLSTER
@@ -856,6 +862,7 @@ obj/item/clothing/suit/kamishimo
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
+/* // Replaced by hooded snowsuits
 
 /obj/item/clothing/suit/storage/snowsuit
 	name = "snowsuit"
@@ -892,6 +899,7 @@ obj/item/clothing/suit/kamishimo
 /obj/item/clothing/suit/storage/snowsuit/science
 	name = "science snowsuit"
 	icon_state = "snowsuit_science"
+*/
 
 /obj/item/clothing/suit/caution
 	name = "wet floor sign"

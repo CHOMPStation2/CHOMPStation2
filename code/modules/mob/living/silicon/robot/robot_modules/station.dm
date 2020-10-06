@@ -40,7 +40,8 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/New(var/mob/living/silicon/robot/R)
 	..()
 	R.module = src
-
+	R.can_buckle = 1 //Chomp Addition; Makes all borgs rideable.
+	
 	add_camera_networks(R)
 	add_languages(R)
 	add_subsystems(R)
@@ -192,7 +193,8 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-standard",
 					"Insekt" = "insekt-Default",
 					"Usagi-II" = "tall2standard",
-					"Pyralis" = "Glitterfly-Standard"
+					"Pyralis" = "Glitterfly-Standard",
+					"Miss M" = "miss-standard" // YW change, Added Miss M
 					)
 
 
@@ -207,7 +209,7 @@ var/global/list/robot_modules = list(
 	name = "medical robot module"
 	channels = list("Medical" = 1)
 	networks = list(NETWORK_MEDICAL)
-	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the surgeon ability to watch Crew monitor
 	can_be_pushed = 0
 
 /obj/item/weapon/robot_module/robot/medical/surgeon
@@ -228,7 +230,8 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-med",
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
-					"Pyralis" = "Glitterfly-Surgeon"
+					"Pyralis" = "Glitterfly-Surgeon",
+					"Miss M" = "miss-medical" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -250,6 +253,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
+	src.modules += new /obj/item/device/sleevemate(src)
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
@@ -285,6 +289,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/medical/crisis
 	name = "crisis robot module"
+	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor) //Give the medical Crisis ability to watch Crew monitor
 	sprites = list(
 					"M-USE NanoTrasen" = "robotMedi",
 					"Cabeiri" = "eyebot-medical",
@@ -301,7 +306,8 @@ var/global/list/robot_modules = list(
 					"Drone - Chemistry" = "drone-chemistry",
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
-					"Pyralis" = "Glitterfly-Crisis"
+					"Pyralis" = "Glitterfly-Crisis",
+					"Miss M" = "miss-medical" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -317,6 +323,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/gripper/medical(src)
 	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
+	src.modules += new /obj/item/device/sleevemate(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
 
@@ -377,7 +384,9 @@ var/global/list/robot_modules = list(
 					"Treadwell" = "treadwell",
 					"Handy" = "handy-engineer",
 					"Usagi-II" = "tall2engineer",
-					"Pyralis" = "Glitterfly-Engineering"
+					"Pyralis" = "Glitterfly-Engineering",
+					"Servitor" = "servitor", //YW Addition to add new Servitor Sprite
+					"Miss M" = "miss-engineer" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/engineering/general/New()
@@ -491,7 +500,8 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-sec",
 					"Insekt" = "insekt-Sec",
 					"Usagi-II" = "tall2security",
-					"Pyralis" = "Glitterfly-Security"
+					"Pyralis" = "Glitterfly-Security",
+					"Miss M" = "miss-security" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -536,7 +546,8 @@ var/global/list/robot_modules = list(
 					"Mop Gear Rex" = "mopgearrex",
 					"Drone" = "drone-janitor",
 					"Usagi-II" = "tall2janitor",
-					"Pyralis" = "Glitterfly-Janitor"
+					"Pyralis" = "Glitterfly-Janitor",
+					"Miss M" = "miss-janitor" // YW change, Added Miss M
 					)
 
 /obj/item/weapon/robot_module/robot/janitor/New()
@@ -598,7 +609,8 @@ var/global/list/robot_modules = list(
 					"Drone - Service" = "drone-service",
 					"Drone - Hydro" = "drone-hydro",
 					"Usagi-II" = "tall2service",
-					"Pyralis" = "Glitterfly-Service"
+					"Pyralis" = "Glitterfly-Service",
+					"Miss M" = "miss-service" // YW change, Added Miss M
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
@@ -690,7 +702,8 @@ var/global/list/robot_modules = list(
 					"Treadhead" = "Miner",
 					"Drone" = "drone-miner",
 					"Usagi-II" = "tall2miner",
-					"Pyralis" = "Glitterfly-Miner"
+					"Pyralis" = "Glitterfly-Miner",
+					"Miss M" = "miss-miner" // YW change, Added Miss M
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()

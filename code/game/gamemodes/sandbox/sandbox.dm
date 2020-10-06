@@ -11,6 +11,12 @@
 		M.CanBuild()
 	return 1
 
+/datum/game_mode/sandbox/process()
+	for(var/mob/M in player_list)
+		if(M.sandbox == null)
+			M.CanBuild()
+	return 1
+
 /datum/game_mode/sandbox/post_setup()
 	..()
 	if(emergency_shuttle)

@@ -92,7 +92,6 @@
 			to_chat(user, "<span class='warning'>You can't put someone on themselves! Stop trying to break reality!</span>")
 			return
 
-
 	if(stripping)
 		add_attack_logs(user,src,"Removed equipment from slot [target_slot]")
 		unEquip(target_slot)

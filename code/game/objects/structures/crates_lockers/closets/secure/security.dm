@@ -29,7 +29,7 @@
 		/obj/item/device/radio/headset/heads/hop,
 		/obj/item/device/radio/headset/heads/hop/alt,
 		/obj/item/weapon/storage/box/ids = 2,
-		/obj/item/weapon/gun/energy/gun,
+		///obj/item/weapon/gun/energy/gun, //YW Edit,
 		/obj/item/weapon/gun/energy/gun/martin, //VOREStation Add,
 		/obj/item/weapon/storage/box/commandkeys, //VOREStation Add,
 		/obj/item/weapon/storage/box/servicekeys, //VOREStation Add,
@@ -66,7 +66,7 @@
 /obj/structure/closet/secure_closet/hos
 	name = "head of security's locker"
 	req_access = list(access_hos)
-	storage_capacity = 2.6 * MOB_MEDIUM
+	storage_capacity = 2.5 * MOB_MEDIUM
 	closet_appearance = /decl/closet_appearance/secure_closet/security/hos
 
 	starts_with = list(
@@ -150,7 +150,9 @@
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/megaphone,
 		/obj/item/clothing/mask/gas/half,
-		/obj/item/clothing/mask/gas/sechailer/swat/warden)
+		/obj/item/weapon/gun/projectile/revolvershotgun,
+		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
+		/obj/item/ammo_magazine/m12gdrumjack/beanbag)
 
 /obj/structure/closet/secure_closet/warden/Initialize()
 	if(prob(50))

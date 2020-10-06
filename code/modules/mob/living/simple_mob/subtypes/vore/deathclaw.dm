@@ -12,12 +12,12 @@
 	icon_dead = "deathclaw-dead"
 	icon_living = "deathclaw"
 	icon_state = "deathclaw"
-	icon = 'icons/mob/vore64x64.dmi'
+	icon = 'icons/mob/vore64x64_ch.dmi' //CHOMPEdit changed filepath
 	vis_height = 64
 
 	attacktext = list("mauled")
 
-	faction = "deathclaw"
+	faction = "awaymission" //makes away mobs fuckin' be on the same side.
 
 	maxHealth = 200
 	health = 200
@@ -86,3 +86,13 @@
 /datum/ai_holder/simple_mob/melee/deathclaw
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
+
+//YW Addition
+/mob/living/simple_mob/vore/aggressive/deathclaw/den
+
+	maxHealth = 400
+	health = 400
+	see_in_dark = 8
+	desc = "Big! Big! The size of three men! Claws as long as my forearm! Ripped apart! Ripped apart! This one seems angrier than most."
+	melee_damage_lower = 10
+	melee_damage_upper = 40

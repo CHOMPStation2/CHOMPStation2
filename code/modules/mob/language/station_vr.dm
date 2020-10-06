@@ -45,6 +45,7 @@
 	whisper_verb = "whispers"
 	exclaim_verb = "chitters"
 	key = "S"
+
 	syllables = list("sque","sqah","boo","beh","nweh","boopa","nah","wah","een","sweh")
 
 /datum/language/demon
@@ -70,6 +71,14 @@
 	syllables = list("salve","sum","loqui","operatur","iusta","et","permittit","facere","effercio","pluribus","enim","hoc",
 	"mihi","wan","six","tartu")
 	machine_understands = FALSE
+
+/datum/language/tajsign
+	name = LANGUAGE_SIIK_TAJR
+	desc = "A type of sign language mostly based on tail movements that was used during the Tajaran rebellion."
+	signlang_verb = list("uses their tail to convey", "gestures with their tail", "gestures with their tail elaborately")
+	colour = "tajaran"
+	key = "l"
+	flags = SIGNLANG | NO_STUTTER | NONVERBAL // | WHITELISTED (YWEdit)
 
 /datum/language/bug
 	name = LANGUAGE_VESPINAE

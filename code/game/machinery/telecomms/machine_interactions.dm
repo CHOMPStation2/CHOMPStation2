@@ -7,8 +7,8 @@
 
 */
 
-#define STATION_Z 1
-#define TELECOMM_Z 3
+#define STATION_Z 2
+#define TELECOMM_Z 4
 
 /obj/machinery/telecomms
 	var/list/temp = null // output message

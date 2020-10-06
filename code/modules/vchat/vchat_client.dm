@@ -382,7 +382,7 @@ var/to_chat_src
 /client/proc/vchat_export_log()
 	set name = "Export chatlog"
 	set category = "OOC"
-
+	
 	if(chatOutput.broken)
 		to_chat(src, "<span class='warning'>Error: VChat isn't processing your messages!</span>")
 		return

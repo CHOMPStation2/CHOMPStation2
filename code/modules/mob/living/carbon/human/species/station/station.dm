@@ -15,7 +15,7 @@
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
-	min_age = 17
+	min_age = 18
 	max_age = 130
 
 	economic_modifier = 10
@@ -75,7 +75,7 @@
 	min_age = 32
 	max_age = 260
 
-	economic_modifier = 7
+	economic_modifier = 10
 
 	blurb = "A heavily reptillian species, Unathi hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \
@@ -104,7 +104,7 @@
 
 	body_temperature = T20C
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#34AF10"
@@ -186,10 +186,10 @@
 	species_language = LANGUAGE_SIIK
 	health_hud_intensity = 2.5
 
-	min_age = 17
-	max_age = 80
+	min_age = 18
+	max_age = 110
 
-	economic_modifier = 7
+	economic_modifier = 10
 
 	blurb = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
 	While reaching to the stars independently from outside influences, the humans engaged them in peaceful trade contact \
@@ -218,7 +218,7 @@
 
 	primitive_form = SPECIES_MONKEY_TAJ
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#AFA59E"
@@ -278,7 +278,7 @@
 	min_age = 19
 	max_age = 130
 
-	economic_modifier = 12
+	economic_modifier = 10
 
 	darksight = 4
 	flash_mod = 1.2
@@ -288,7 +288,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
 
 	flesh_color = "#8CD7A3"
@@ -465,10 +465,10 @@
 	species_language = LANGUAGE_ROOTLOCAL
 	secondary_langs = list(LANGUAGE_ROOTGLOBAL)
 	assisted_langs = list(LANGUAGE_VOX)	// Diona are weird, let's just assume they can use basically any language.
-	min_age = 1
+	min_age = 18
 	max_age = 300
 
-	economic_modifier = 4
+	economic_modifier = 10
 
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \
@@ -522,7 +522,7 @@
 	body_temperature = T0C + 15		//make the plant people have a bit lower body temperature, why not
 
 	flags = NO_SCAN | IS_PLANT | NO_PAIN | NO_SLIP | NO_MINOR_CUT | NO_DEFIB
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	spawn_flags = SPECIES_CAN_JOIN
 
 	blood_color = "#004400"
 	flesh_color = "#907E4A"

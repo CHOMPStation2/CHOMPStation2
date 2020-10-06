@@ -126,7 +126,7 @@
 	var/list/areas_to_break = list()
 	var/list/area_types_to_break = null // Area types to include.
 	var/list/area_types_to_ignore = null // Area types to exclude, usually due to undesired inclusion from inheritence.
-	var/ignore_blast_doors = FALSE
+	var/ignore_blast_doors = TRUE //CHOMP Edit
 
 /datum/event2/event/prison_break/brig
 	area_display_name = "Brig"

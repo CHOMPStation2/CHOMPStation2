@@ -42,9 +42,9 @@
 	path = /obj/item/weapon/storage/backpack/dufflebag/emt
 
 /datum/gear/utility/dufflebag/sec
-	display_name = "security Dufflebag"
-	path = /obj/item/weapon/storage/backpack/dufflebag/sec
-	allowed_roles = list("Head of Security","Warden","Detective","Security Officer")
+    display_name = "security Dufflebag"
+    path = /obj/item/weapon/storage/backpack/dufflebag/sec
+    allowed_roles = list("Head of Security","Warden","Detective","Security Officer","Blueshield Guard","Security Pilot")//YW ADDITIONS
 
 /datum/gear/utility/dufflebag/eng
 	display_name = "engineering dufflebag"

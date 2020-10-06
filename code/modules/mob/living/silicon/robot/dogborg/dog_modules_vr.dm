@@ -236,6 +236,15 @@
 				R.cell.charge += 250
 				water.use_charge(5)
 			return
+		if(istype(target,/obj/item/weapon/reagent_containers/food))
+			user.visible_message("[user] nibbles away at \the [target.name].", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
+			if(do_after (user, 50))
+				user.visible_message("[user] finishes eating \the [target.name].", "<span class='notice'>You finish eating \the [target.name].</span>")
+				user << "<span class='notice'>You finish off \the [target.name].</span>"
+				del(target)
+				var/mob/living/silicon/robot/R = user
+				R.cell.charge = R.cell.charge + 250
+			return
 		if(istype(target,/obj/item/weapon/cell))
 			user.visible_message("[user] begins cramming \the [target.name] down its throat.", "<span class='notice'>You begin cramming \the [target.name] down your throat...</span>")
 			if(do_after (user, 50))
@@ -317,7 +326,7 @@
 	fire_sound = 'sound/weapons/eLuger.ogg'
 	projectile_type = /obj/item/projectile/beam/disable
 	charge_cost = 240 //Normal cost of a taser. It used to be 1000, but after some testing it was found that it would sap a borg's battery to quick
-	recharge_time = 10 //Takes ten ticks to recharge a shot, so don't waste them all!
+	recharge_time = 1 //Takes ten ticks to recharge a laser, so don't waste them all!
 	//cell_type = null //Same cell as a taser until edits are made.
 
 /obj/item/weapon/dogborg/swordtail

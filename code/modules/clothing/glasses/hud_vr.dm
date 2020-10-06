@@ -1,6 +1,6 @@
 /obj/item/clothing/glasses/omnihud
 	name = "\improper AR glasses"
-	desc = "The ARG-62 AR Glasses are capable of displaying information on individuals. \
+	desc = "The NT-62 AR Glasses are augmented reality glasses designed and exported by NanoTrasen and are capable of displaying information on individuals. \
 	Commonly used to allow non-augmented crew to interact with virtual interfaces. \
 	<br>They are also fitted with toggleable cosmetic electrochromic lenses. \
 	The lenses will not protect against sudden bright flashes or welding."
@@ -119,7 +119,7 @@
 
 /obj/item/clothing/glasses/omnihud/med
 	name = "\improper AR-M glasses"
-	desc = "The ARG-62-M AR Glasses are capable of displaying information on individuals. \
+	desc = "The NT-62-M AR Glasses are capable of displaying information on individuals. \
 	These have been upgraded with medical records access and virus database integration. \
 	They can also read data from active suit sensors using the crew monitoring system."
 	mode = "med"
@@ -134,7 +134,7 @@
 
 /obj/item/clothing/glasses/omnihud/sec
 	name = "\improper AR-S glasses"
-	desc = "The ARG-62-S AR Glasses are capable of displaying information on individuals. \
+	desc = "The NT-62-S AR Glasses are capable of displaying information on individuals. \
 	These have been upgraded with security records integration and flash protection. \
 	They also have access to security alerts such as camera and motion sensor alarms."
 	mode = "sec"
@@ -150,7 +150,7 @@
 
 /obj/item/clothing/glasses/omnihud/eng
 	name = "\improper AR-E glasses"
-	desc = "The ARG-62-E AR Glasses are capable of displaying information on individuals. \
+	desc = "The NT-62-E AR Glasses are capable of displaying information on individuals. \
 	These have been upgraded with advanced electrochromic lenses to protect your eyes during welding, \
 	and can also display a list of atmospheric, fire, and power alarms."
 	mode = "eng"
@@ -165,7 +165,7 @@
 
 /obj/item/clothing/glasses/omnihud/rnd
 	name = "\improper AR-R glasses"
-	desc = "The ARG-62-R AR Glasses are capable of displaying information on individuals. \
+	desc = "The NT-62-R AR Glasses are capable of displaying information on individuals. \
 	They... don't seem to do anything particularly interesting? But hey, at least they look kinda science-y."
 	mode = "sci"
 
@@ -209,7 +209,7 @@
 
 /obj/item/clothing/glasses/omnihud/all
 	name = "\improper AR-B glasses"
-	desc = "The ARG-62-B AR Glasses are capable of displaying information on individuals. \
+	desc = "The NT-62-B AR Glasses are capable of displaying information on individuals. \
 	These have been upgraded with (almost) every feature the lesser models have. Now we're talkin'. \
 	<br>Offers full protection against bright flashes/welders and full access to system alarm monitoring."
 	mode = "best"

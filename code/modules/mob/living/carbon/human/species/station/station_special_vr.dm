@@ -42,7 +42,8 @@
 	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \
 	Most, if not all chimeras possess the ability to undergo some type of regeneration process, at the cost of energy."
 
-	wikilink = "https://wiki.vore-station.net/Xenochimera"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink = "https://www.yawn.ocry.com/Xenochimera"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/xenochimera)
 
@@ -54,7 +55,6 @@
 	//primitive_form = "Farwa"
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE//Whitelisted as restricted is broken.
-	flags = NO_SCAN | NO_INFECT //Dying as a chimera is, quite literally, a death sentence. Well, if it wasn't for their revive, that is.
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	has_organ = list(    //Same organ list as tajarans.
@@ -387,7 +387,8 @@
 	Before they were found they built great cities out of their silk, being united and subjugated in warring factions under great Star Queens  \
 	Who forced the working class to build huge, towering cities to attempt to reach the stars, which they worship as gems of great spiritual and magical significance."
 
-	wikilink = "https://wiki.vore-station.net/Vasilissans"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink = "https://www.yawn.ocry.com/Vasilissans"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vasilissan)
 
@@ -456,7 +457,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
-	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags		 = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled forever
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	inherent_verbs = list(
 		/mob/living/proc/shred_limb,

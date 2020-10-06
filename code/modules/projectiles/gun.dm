@@ -52,6 +52,7 @@
 	drop_sound = 'sound/items/drop/gun.ogg'
 	pickup_sound = 'sound/items/pickup/gun.ogg'
 
+	var/recoil_mode = 1 //0 = no micro recoil, 1 = regular, anything higher than 1 is a multiplier //YAWN Addition, ported from CHOMP
 	var/automatic = 0
 	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
@@ -435,6 +436,21 @@
 		else
 			set_light(0)
 		//VOREStation Edit End
+		
+	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
+	if(recoil_mode && iscarbon(user))
+		var/mob/living/carbon/nerd = user
+		var/mysize = nerd.size_multiplier
+		if(recoil_mode > 0)
+			if(mysize <= 0.5)
+				nerd.Weaken(1*recoil_mode)
+				if(!istype(src,/obj/item/weapon/gun/energy))
+					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
+					to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
+				else
+					to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
+				
+	//YAWNEDIT: Knockdown code end
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/weapon/gun/proc/Fire_userless(atom/target)

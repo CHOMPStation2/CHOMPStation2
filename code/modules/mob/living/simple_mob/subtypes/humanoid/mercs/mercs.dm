@@ -198,9 +198,12 @@
 
 /mob/living/simple_mob/humanoid/merc/ranged/rifle/mag
 	loot_list = list(/obj/item/weapon/gun/magnetic/railgun/flechette = 100)
-	projectiletype = /obj/item/projectile/bullet/magnetic/flechette
+	projectiletype = /obj/item/projectile/bullet/magnetic/flechette/rapid // Who thought rapid fire 20 damage with 100% armor pen was a good idea? CH edit
 
 	projectilesound = 'sound/weapons/rapidslice.ogg'
+	projectile_dispersion = 5
+	projectile_accuracy = -20
+	base_attack_cooldown = 15
 	reload_max = 10
 
 // Laser Rifle

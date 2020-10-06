@@ -1136,9 +1136,9 @@ window "mainwindow"
 		anchor2 = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "VOREStation"
+		title = "CHOMPStation" // CHOMP Edit
 		is-maximized = true
-		icon = 'icons\\virgoicon.png'
+		icon = 'icons/ss13_64.png' // CHOMP Edit
 		macro = "macro"
 		menu = "menu"
 	elem "asset_cache_browser"

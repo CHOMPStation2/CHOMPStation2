@@ -102,6 +102,7 @@
 	var/obj/item/organ/external/T = organs_by_name[BP_TORSO]
 	if(T && T.robotic >= ORGAN_ROBOT)
 		src.verbs += /mob/living/carbon/human/proc/self_diagnostics
+		src.verbs += /mob/living/carbon/human/proc/setmonitor_state//YWadd, early port, remove comment when it comes from upstream
 		src.verbs += /mob/living/carbon/human/proc/reagent_purge //VOREStation Add
 		src.verbs += /mob/living/carbon/human/proc/setmonitor_state
 		var/datum/robolimb/R = all_robolimbs[T.model]

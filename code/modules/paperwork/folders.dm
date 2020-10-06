@@ -1,7 +1,7 @@
 /obj/item/weapon/folder
 	name = "folder"
 	desc = "A folder."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/bureaucracy.dmi' //CHOMPEdit: Continues using new folder sprite, contrary to YW
 	icon_state = "folder"
 	w_class = ITEMSIZE_SMALL
 	pressure_resistance = 2

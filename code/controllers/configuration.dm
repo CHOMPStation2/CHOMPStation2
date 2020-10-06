@@ -37,6 +37,7 @@ var/list/gamemode_cache = list()
 	var/static/vote_autotransfer_initial = 108000 // Length of time before the first autotransfer vote is called
 	var/static/vote_autotransfer_interval = 36000 // length of time before next sequential autotransfer vote
 	var/static/vote_autogamemode_timeleft = 100 //Length of time before round start when autogamemode vote is called (in seconds, default 100).
+	var/static/vote_autotransfer_amount = 3 //How many autotransfers to have
 	var/static/vote_no_default = 0				// vote does not default to nochange/norestart (tbi)
 	var/static/vote_no_dead = 0				// dead people can't vote (tbi)
 //	var/static/enable_authentication = 0		// goon authentication
@@ -215,7 +216,7 @@ var/list/gamemode_cache = list()
 	var/python_path = "" //Path to the python executable.  Defaults to "python" on windows and "/usr/bin/env python2" on unix
 	var/use_lib_nudge = 0 //Use the C library nudge instead of the python nudge.
 	var/use_overmap = 0
-	
+
 	var/static/list/engine_map = list("Supermatter Engine", "Edison's Bane")	// Comma separated list of engines to choose from.  Blank means fully random.
 
 	// Event settings
@@ -230,7 +231,7 @@ var/list/gamemode_cache = list()
 	// 15, 45, 70 minutes respectively
 	var/static/list/event_delay_upper = list(EVENT_LEVEL_MUNDANE = 9000,	EVENT_LEVEL_MODERATE = 27000,	EVENT_LEVEL_MAJOR = 42000)
 
-	var/static/aliens_allowed = 0
+	var/static/aliens_allowed = 1 //CHOMPedit to 1. This not only allows the natural spawning of xenos, but also the ability to lay eggs. Xenomorphs cannot lay eggs if this is 0
 	var/static/ninjas_allowed = 0
 	var/static/abandon_allowed = 1
 	var/static/ooc_allowed = 1
@@ -240,10 +241,9 @@ var/list/gamemode_cache = list()
 
 	var/persistence_disabled = FALSE
 	var/persistence_ignore_mapload = FALSE
-
-	var/allow_byond_links = 0
-	var/allow_discord_links = 0
-	var/allow_url_links = 0					// honestly if I were you i'd leave this one off, only use in dire situations
+	var/allow_byond_links = 1	//CHOMP Edit turned this on
+	var/allow_discord_links = 1	//CHOMP Edit turned this on
+	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit: pussy.
 
 	var/starlight = 0	// Whether space turfs have ambient light or not
 
@@ -285,7 +285,7 @@ var/list/gamemode_cache = list()
 
 	// whether or not to use the nightshift subsystem to perform lighting changes
 	var/static/enable_night_shifts = FALSE
-	
+
 	var/static/vgs_access_identifier = null	// VOREStation Edit - VGS
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
 
@@ -470,6 +470,9 @@ var/list/gamemode_cache = list()
 				if ("vote_autotransfer_interval")
 					config.vote_autotransfer_interval = text2num(value)
 
+				if ("vote_autotransfer_amount")
+					config.vote_autotransfer_amount = text2num(value) //YW addition, vote transfer amount
+
 				if ("vote_autogamemode_timeleft")
 					config.vote_autogamemode_timeleft = text2num(value)
 
@@ -584,6 +587,9 @@ var/list/gamemode_cache = list()
 
 				if("persistence_disabled")
 					config.persistence_disabled = TRUE // Previously this forcibly set persistence enabled in the saves.
+
+				if("persistence_ignore_mapload")
+					config.persistence_ignore_mapload = TRUE
 
 				if("persistence_ignore_mapload")
 					config.persistence_ignore_mapload = TRUE
@@ -934,7 +940,7 @@ var/list/gamemode_cache = list()
 
 				if("enable_night_shifts")
 					config.enable_night_shifts = TRUE
-				
+
 				// VOREStation Edit Start - Can't be in _vr file because it is loaded too late.
 				if("vgs_access_identifier")
 					config.vgs_access_identifier = value

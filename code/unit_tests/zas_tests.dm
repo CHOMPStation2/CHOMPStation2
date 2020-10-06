@@ -79,11 +79,11 @@
 
 /datum/unit_test/zas_area_test/supply_centcomm
 	name = "ZAS: Supply Shuttle"
-	area_path = /area/shuttle/supply
+	area_path = /area/shuttle/supply //yw edit: path changed
 
 /datum/unit_test/zas_area_test/emergency_shuttle
 	name = "ZAS: Emergency Shuttle"
-	area_path = /area/shuttle/escape
+	area_path = /area/shuttle/escape/centcom	//CHOMPStation Edit TFF 23/4/20 - Fix Travis
 
 /datum/unit_test/zas_area_test/ai_chamber
 	name = "ZAS: AI Chamber"
@@ -94,9 +94,10 @@
 // 	name = "ZAS: Mining Shuttle (Station)"
 // 	area_path = /area/shuttle/mining/station
 
-/datum/unit_test/zas_area_test/cargo_maint
-	name = "ZAS: Cargo Maintenance"
-	area_path = /area/maintenance/cargo
+// YW Edit - We do not have this zone anymore - Cryogaia
+// /datum/unit_test/zas_area_test/cargo_maint
+//	name = "ZAS: Cargo Maintenance"
+//	area_path = /area/maintenance/cargo
 
 // VOREStation Edit - We don't have this anymore - Tether
 // /datum/unit_test/zas_area_test/eng_shuttle
@@ -114,7 +115,7 @@
 /datum/unit_test/zas_area_test/mining_area
 	name = "ZAS: Mining Area (Vacuum)"
 	area_path = /area/mine/explored
-	expectation = UT_VACUUM
+	expectation = UT_VACUUM //CHOMPStation Edit 7/1/20 TFF - Revert to Vacuum checking
 
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"

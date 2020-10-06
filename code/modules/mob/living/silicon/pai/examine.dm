@@ -6,6 +6,7 @@
 			if(!src.client)	. += "It appears to be in stand-by mode." //afk
 		if(UNCONSCIOUS)		. += "<span class='warning'>It doesn't seem to be responding.</span>"
 		if(DEAD)			. += "<span class='deadsay'>It looks completely unsalvageable.</span>"
+	. += attempt_vr(src,"examine_reagent_bellies",args) //CHOMP reagent bellies
 	
 	// VOREStation Edit: Start
 	. += attempt_vr(src,"examine_bellies",args) //VOREStation Edit

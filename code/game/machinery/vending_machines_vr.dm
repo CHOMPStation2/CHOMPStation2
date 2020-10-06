@@ -15,7 +15,7 @@
 
 /obj/machinery/vending/engivend/New()
 	products += list(/obj/item/clothing/glasses/omnihud/eng = 6)
-	contraband += list(/obj/item/weapon/rms = 5)
+	//YW Removal: contraband += list(/obj/item/weapon/rms = 5)
 	..()
 
 /obj/machinery/vending/medical/New()
@@ -1004,7 +1004,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/snowsuit = 5,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -1091,7 +1091,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 100,
 					/obj/item/clothing/suit/storage/flannel/red = 100,
 					/obj/item/clothing/suit/unathi/robe = 100,
-					/obj/item/clothing/suit/storage/snowsuit = 100,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 100,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 100,

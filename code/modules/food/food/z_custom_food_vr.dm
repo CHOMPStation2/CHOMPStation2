@@ -3,7 +3,7 @@ var/global/deepFriedEverything = 0
 var/global/deepFriedNutriment = 0
 var/global/foodNesting = 0
 var/global/recursiveFood = 0
-var/global/ingredientLimit = 20
+var/global/ingredientLimit = 20000
 
 
 /obj/item/weapon/reagent_containers/food/snacks/customizable
@@ -11,7 +11,7 @@ var/global/ingredientLimit = 20
 	trash = /obj/item/trash/plate
 	bitesize = 2
 
-	var/ingMax = 100
+	var/ingMax = 20000
 	var/list/ingredients = list()
 	var/stackIngredients = 0
 	var/fullyCustom = 0

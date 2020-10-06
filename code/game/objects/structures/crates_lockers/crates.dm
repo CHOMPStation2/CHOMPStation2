@@ -288,6 +288,12 @@
 		/obj/item/weapon/tracker_electronics,
 		/obj/item/weapon/paper/solar)
 
+/obj/structure/closet/crate/cooper
+	name = "Cooper's Stache"
+
+	starts_with = list(
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge = 6,
+		/obj/item/stack/material/gold = 1)
 /obj/structure/closet/crate/freezer
 	name = "freezer"
 	desc = "A freezer."

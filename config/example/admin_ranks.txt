@@ -29,16 +29,16 @@
 # +EVERYTHING (or +HOST or +ALL) = Simply gives you everything without having to type every flag
 
 Admin Observer
-Moderator		+MOD
-Mentor                  +MENTOR
+Moderator			+MOD
+Mentor				+MENTOR
 
-Admin Candidate	+ADMIN
-Trial Admin		+@ +SPAWN +REJUV +VAREDIT +BAN
-Badmin			+@ +POSSESS +BUILDMODE +SERVER +FUN
-Game Admin		+@ +STEALTH +SOUNDS +DEBUG +PERMISSIONS
-Game Master		+EVERYTHING
-Head Admin		+EVERYTHING
-Retired Admin	+ADMIN +STEALTH
+Admin Candidate		+ADMIN
+Trial Admin			+@ +STEALTH +SPAWN +REJUV +VAREDIT +BAN +FUN
+Admin				+@ +POSSESS +BUILDMODE +SERVER
+Admin Supervisor	+@ +SOUNDS +DEBUG +PERMISSIONS
+Game Master			+ADMIN +FUN +POSSESS +REJUV +BUILD +SERVER +DEBUG +VAREDIT +SOUND +SPAWN
+Head Admin			+EVERYTHING
+Retired Admin		+ADMIN +STEALTH
 
 Host			+EVERYTHING
 

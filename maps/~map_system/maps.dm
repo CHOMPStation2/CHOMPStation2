@@ -89,7 +89,7 @@ var/list/all_maps = list()
 	var/shuttle_leaving_dock
 	var/shuttle_called_message
 	var/shuttle_recall_message
-	var/shuttle_name  = "NAS |Hawking|"	//VS ADD
+	var/shuttle_name  = "NAS |Faraday|" // YW EDIT: default name 'NAS |Hawking|'
 	var/emergency_shuttle_docked_message
 	var/emergency_shuttle_leaving_dock
 	var/emergency_shuttle_called_message
@@ -115,8 +115,10 @@ var/list/all_maps = list()
 
 	var/datum/skybox_settings/default_skybox // What skybox do we use if a zlevel doesn't have a custom one? Provide a type.
 
-	var/lobby_icon = 'icons/misc/title.dmi' // The icon which contains the lobby image(s)
-	var/list/lobby_screens = list("mockingjay00")                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
+	//CHOMPStation Edit Start TFF 24/12/19 - Chompers welcome screen message
+	var/lobby_icon = 'icons/misc/CHOMPSTATION.gif' // The icon which contains the lobby image(s)
+	var/list/lobby_screens = list()                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
+	//CHOMPStation Edit End
 
 	var/default_law_type = /datum/ai_laws/nanotrasen // The default lawset use by synth units, if not overriden by their laws var.
 
@@ -208,8 +210,8 @@ var/list/all_maps = list()
 		//Get what sector we're in
 		var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
 		if(!istype(O))
-			//Anything in multiz then (or just themselves)
-			return GetConnectedZlevels(srcz)
+			//Not in a sector, just the passed zlevel
+			return list(srcz)
 
 		//Just the sector we're in
 		if(om_range == -1)
@@ -231,9 +233,9 @@ var/list/all_maps = list()
 		//If in station levels, return station levels
 		else if (srcz in station_levels)
 			return station_levels.Copy()
-		//Anything in multiz then (or just themselves)
+		//Just give them back their zlevel
 		else
-			return GetConnectedZlevels(srcz)
+			return list(srcz)
 
 /datum/map/proc/get_zlevel_name(var/index)
 	var/datum/map_z_level/Z = zlevels["[index]"]

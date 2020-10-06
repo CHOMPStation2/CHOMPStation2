@@ -5,7 +5,7 @@
 	icon_state = "mecha_ion"
 	energy_drain = 120
 	projectile = /obj/item/projectile/ion
-	fire_sound = 'sound/weapons/Laser.ogg'
+	fire_sound = 'sound/weapons/IonCannon.ogg'
 
 	origin_tech = list(TECH_MATERIAL = 3, TECH_COMBAT = 4, TECH_MAGNET = 4)
 
