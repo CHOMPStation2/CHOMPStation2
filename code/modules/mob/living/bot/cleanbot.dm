@@ -6,6 +6,7 @@
 	botcard_access = list(access_janitor)
 	pass_flags = PASSTABLE
 
+	max_frustration = 12	//CHOMPEdit
 	locked = 0 // Start unlocked so roboticist can set them to patrol.
 	wait_if_pulled = 1
 	min_target_dist = 0
