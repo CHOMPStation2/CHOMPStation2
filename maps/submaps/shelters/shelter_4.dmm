@@ -419,8 +419,7 @@
 	icon_state = "tube1";
 	dir = 4
 	},
-/obj/structure/table/steel_reinforced,
-/obj/machinery/chemical_dispenser/ert/specialops,
+/obj/machinery/chemical_dispenser/ert,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod)
 "T" = (

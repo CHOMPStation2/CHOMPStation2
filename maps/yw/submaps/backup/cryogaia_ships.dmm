@@ -616,7 +616,7 @@
 /turf/simulated/floor/tiled/white,
 /area/houseboat)
 "bS" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/pros_fabricator{
 	req_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,

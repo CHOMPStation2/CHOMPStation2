@@ -26,7 +26,7 @@
 
 /datum/map_z_level/tether_lateload/underdark
 	name = "Underdark"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 	base_turf = /turf/simulated/mineral/floor/virgo3b
 	z = Z_LEVEL_UNDERDARK
 
@@ -45,7 +45,7 @@
 
 /datum/map_z_level/tether_lateload/tether_plains
 	name = "Away Mission - Plains"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 	base_turf = /turf/simulated/mineral/floor/virgo3b
 	z = Z_LEVEL_PLAINS
 
@@ -55,49 +55,40 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //Antag/Event/ERT Areas
-
-#include "../../submaps/admin_use_vr/ert.dm"
-#include "../../submaps/admin_use_vr/mercship.dm"
-
 /datum/map_template/admin_use/ert
 	name = "Special Area - ERT"
 	desc = "It's the ERT ship! Lorge."
-	mappath = 'maps/submaps/admin_use_vr/ert.dmm'
+	mappath = 'admin_use/ert.dmm'
 
 /datum/map_template/admin_use/trader
 	name = "Special Area - Trader"
 	desc = "Big trader ship."
-	mappath = 'maps/submaps/admin_use_vr/tradeship.dmm'
+	mappath = 'admin_use/tradeship.dmm'
 
 /datum/map_template/admin_use/mercenary
-	name = "Special Area - Merc Ship"
-	desc = "Prepare tae be boarded, arr!"
-	mappath = 'maps/submaps/admin_use_vr/kk_mercship.dmm'
-
-/datum/map_template/admin_use/old_mercenary
-	name = "Special Area - Old Merc Base"
+	name = "Special Area - Merc Base"
 	desc = "So much red!"
-	mappath = 'maps/submaps/admin_use_vr/mercbase.dmm'
+	mappath = 'admin_use/mercbase.dmm'
 
 /datum/map_template/admin_use/skipjack
 	name = "Special Area - Skipjack Base"
 	desc = "Stinky!"
-	mappath = 'maps/submaps/admin_use_vr/skipjack.dmm'
+	mappath = 'admin_use/skipjack.dmm'
 
 /datum/map_template/admin_use/thunderdome
 	name = "Special Area - Thunderdome"
 	desc = "Thunderrrrdomeee"
-	mappath = 'maps/submaps/admin_use_vr/thunderdome.dmm'
+	mappath = 'admin_use/thunderdome.dmm'
 
 /datum/map_template/admin_use/wizardbase
 	name = "Special Area - Wizard Base"
 	desc = "Wingardium Levosia"
-	mappath = 'maps/submaps/admin_use_vr/wizard.dmm'
+	mappath = 'admin_use/wizard.dmm'
 
 /datum/map_template/admin_use/dojo
 	name = "Special Area - Ninja Dojo"
 	desc = "Sneaky"
-	mappath = 'maps/submaps/admin_use_vr/dojo.dmm'
+	mappath = 'admin_use/dojo.dmm'
 
 //////////////////////////////////////////////////////////////////////////////
 //Rogue Mines Stuff
@@ -105,7 +96,7 @@
 /datum/map_template/tether_lateload/tether_roguemines1
 	name = "Asteroid Belt 1"
 	desc = "Mining, but rogue. Zone 1"
-	mappath = 'maps/submaps/rogue_mines_vr/rogue_mine1.dmm'
+	mappath = 'rogue_mines/rogue_mine1.dmm'
 
 	associated_map_datum = /datum/map_z_level/tether_lateload/roguemines1
 
@@ -117,7 +108,7 @@
 /datum/map_template/tether_lateload/tether_roguemines2
 	name = "Asteroid Belt 2"
 	desc = "Mining, but rogue. Zone 2"
-	mappath = 'maps/submaps/rogue_mines_vr/rogue_mine2.dmm'
+	mappath = 'rogue_mines/rogue_mine2.dmm'
 
 	associated_map_datum = /datum/map_z_level/tether_lateload/roguemines2
 
@@ -129,7 +120,7 @@
 /datum/map_template/tether_lateload/tether_roguemines3
 	name = "Asteroid Belt 3"
 	desc = "Mining, but rogue. Zone 3"
-	mappath = 'maps/submaps/rogue_mines_vr/rogue_mine3.dmm'
+	mappath = 'rogue_mines/rogue_mine3.dmm'
 
 	associated_map_datum = /datum/map_z_level/tether_lateload/roguemines3
 
@@ -141,7 +132,7 @@
 /datum/map_template/tether_lateload/tether_roguemines4
 	name = "Asteroid Belt 4"
 	desc = "Mining, but rogue. Zone 4"
-	mappath = 'maps/submaps/rogue_mines_vr/rogue_mine4.dmm'
+	mappath = 'rogue_mines/rogue_mine4.dmm'
 
 	associated_map_datum = /datum/map_z_level/tether_lateload/roguemines4
 
@@ -153,21 +144,21 @@
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 #if AWAY_MISSION_TEST
-#include "../../expedition_vr/beach/beach.dmm"
-#include "../../expedition_vr/beach/cave.dmm"
-#include "../../expedition_vr/alienship/alienship.dmm"
-#include "../../expedition_vr/aerostat/aerostat.dmm"
-#include "../../expedition_vr/aerostat/surface.dmm"
-#include "../../expedition_vr/space/debrisfield.dmm"
-#include "../../expedition_vr/space/fueldepot.dmm"
-#include "../../expedition_vr/space/guttersite.dmm"
+#include "beach/beach.dmm"
+#include "beach/cave.dmm"
+#include "alienship/alienship.dmm"
+#include "aerostat/aerostat.dmm"
+#include "aerostat/surface.dmm"
+#include "space/debrisfield.dmm"
+#include "space/fueldepot.dmm"
+#include "space/guttersite.dmm"
 #endif
 
-#include "../../expedition_vr/beach/_beach.dm"
+#include "beach/_beach.dm"
 /datum/map_template/tether_lateload/away_beach
 	name = "Desert Planet - Z1 Beach"
 	desc = "The beach away mission."
-	mappath = 'maps/expedition_vr/beach/beach.dmm'
+	mappath = 'beach/beach.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_beach
 
 /datum/map_z_level/tether_lateload/away_beach
@@ -178,7 +169,7 @@
 /datum/map_template/tether_lateload/away_beach_cave
 	name = "Desert Planet - Z2 Cave"
 	desc = "The beach away mission's cave."
-	mappath = 'maps/expedition_vr/beach/cave.dmm'
+	mappath = 'beach/cave.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_beach_cave
 
 /datum/map_template/tether_lateload/away_beach_cave/on_map_loaded(z)
@@ -199,22 +190,22 @@
 	var/static/target_z
 
 
-#include "../../expedition_vr/alienship/_alienship.dm"
+#include "alienship/_alienship.dm"
 /datum/map_template/tether_lateload/away_alienship
 	name = "Alien Ship - Z1 Ship"
 	desc = "The alien ship away mission."
-	mappath = 'maps/expedition_vr/alienship/alienship.dmm'
+	mappath = 'alienship/alienship.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_alienship
 
 /datum/map_z_level/tether_lateload/away_alienship
 	name = "Away Mission - Alien Ship"
 
 
-#include "../../expedition_vr/aerostat/_aerostat.dm"
+#include "aerostat/_aerostat.dm"
 /datum/map_template/tether_lateload/away_aerostat
 	name = "Remmi Aerostat - Z1 Aerostat"
 	desc = "The Virgo 2 Aerostat away mission."
-	mappath = 'maps/expedition_vr/aerostat/aerostat.dmm'
+	mappath = 'aerostat/aerostat.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_aerostat
 
 /datum/map_z_level/tether_lateload/away_aerostat
@@ -225,7 +216,7 @@
 /datum/map_template/tether_lateload/away_aerostat_surface
 	name = "Remmi Aerostat - Z2 Surface"
 	desc = "The surface from the Virgo 2 Aerostat."
-	mappath = 'maps/expedition_vr/aerostat/surface.dmm'
+	mappath = 'aerostat/surface.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_aerostat_surface
 
 /datum/map_template/tether_lateload/away_aerostat_surface/on_map_loaded(z)
@@ -240,15 +231,15 @@
 	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/virgo2
 
 
-#include "../../expedition_vr/space/_debrisfield.dm"
-#include "../../expedition_vr/space/_fueldepot.dm"
-#include "../../submaps/pois_vr/debris_field/_templates.dm"
-#include "../../submaps/pois_vr/debris_field/debrisfield_things.dm"
-#include "../../expedition_vr/space/_guttersite.dm"
+#include "space/_debrisfield.dm"
+#include "space/_fueldepot.dm"
+#include "space/pois/_templates.dm"
+#include "space/pois/debrisfield_things.dm"
+#include "space/_guttersite.dm"
 /datum/map_template/tether_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
 	desc = "The Virgo 3 Debris Field away mission."
-	mappath = 'maps/expedition_vr/space/debrisfield.dmm'
+	mappath = 'space/debrisfield.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_debrisfield
 
 /datum/map_template/tether_lateload/away_debrisfield/on_map_loaded(z)
@@ -263,7 +254,7 @@
 /datum/map_template/tether_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
 	desc = "An unmanned fuel depot floating in space."
-	mappath = 'maps/expedition_vr/space/fueldepot.dmm'
+	mappath = 'space/fueldepot.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_fueldepot
 
 /datum/map_z_level/tether_lateload/away_fueldepot
@@ -273,7 +264,7 @@
 /datum/map_template/tether_lateload/away_guttersite
 	name = "Gutter Site - Z1 Space"
 	desc = "The Virgo Erigone Space Away Site."
-	mappath = 'maps/expedition_vr/space/guttersite.dmm'
+	mappath = 'space/guttersite.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_guttersite
 
 /datum/map_z_level/tether_lateload/away_guttersite
@@ -300,51 +291,52 @@
 	name = "Gateway Destination"
 	z = Z_LEVEL_GATEWAY
 
-#include "../../gateway_vr/snow_outpost.dm"
+#include "gateway/snow_outpost.dm"
 /datum/map_template/tether_lateload/gateway/snow_outpost
 	name = "Snow Outpost"
 	desc = "Big snowy area with various outposts."
-	mappath = 'maps/gateway_vr/snow_outpost.dmm'
+	mappath = 'gateway/snow_outpost.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
 
-#include "../../gateway_vr/zoo.dm"
+#include "gateway/zoo.dm"
 /datum/map_template/tether_lateload/gateway/zoo
 	name = "Zoo"
 	desc = "Gigantic space zoo"
-	mappath = 'maps/gateway_vr/zoo.dmm'
+	mappath = 'gateway/zoo.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
 
-#include "../../gateway_vr/carpfarm.dm"
+#include "gateway/carpfarm.dm"
 /datum/map_template/tether_lateload/gateway/carpfarm
 	name = "Carp Farm"
 	desc = "Asteroid base surrounded by carp"
-	mappath = 'maps/gateway_vr/carpfarm.dmm'
+	mappath = 'gateway/carpfarm.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
 
-#include "../../gateway_vr/snowfield.dm"
+#include "gateway/snowfield.dm"
 /datum/map_template/tether_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"
-	mappath = 'maps/gateway_vr/snowfield.dmm'
+	mappath = 'gateway/snowfield.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
 
-#include "../../gateway_vr/listeningpost.dm"
+#include "gateway/listeningpost.dm"
 /datum/map_template/tether_lateload/gateway/listeningpost
 	name = "Listening Post"
 	desc = "Asteroid-bound mercenary listening post"
-	mappath = 'maps/gateway_vr/listeningpost.dmm'
+	mappath = 'gateway/listeningpost.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
 #if AWAY_MISSION_TEST
-#include "../../submaps/admin_use_vr/spa.dmm"
+#include "admin_use/spa.dmm"
 #endif
-#include "../../submaps/admin_use_vr/fun.dm"
+
+#include "admin_use/fun.dm"
 /datum/map_template/tether_lateload/fun/spa
 	name = "Space Spa"
 	desc = "A pleasant spa located in a spaceship."
-	mappath = 'maps/submaps/admin_use_vr/spa.dmm'
+	mappath = 'admin_use/spa.dmm'
 
 	associated_map_datum = /datum/map_z_level/tether_lateload/fun/spa
 
@@ -367,6 +359,7 @@
 
 /datum/map_z_level/tether_lateload
 	z = 0
+	flags = MAP_LEVEL_SEALED
 
 /datum/map_z_level/tether_lateload/New(var/datum/map/map, mapZ)
 	if(mapZ && !z)
@@ -519,46 +512,43 @@
 //////////////////////////////////////////////////////////////////////////////
 //Overmap ship spawns
 
-#include "../../offmap_vr/om_ships/hybridshuttle.dm"
-#include "../../offmap_vr/om_ships/screebarge.dm"
-#include "../../offmap_vr/om_ships/aro.dm"
-#include "../../offmap_vr/om_ships/aro2.dm"
-#include "../../offmap_vr/om_ships/bearcat.dm"
-#include "../../offmap_vr/om_ships/cruiser.dm"
-#include "../../offmap_vr/om_ships/vespa.dm"
-#include "../../offmap_vr/om_ships/generic_shuttle.dm"
-#include "../../offmap_vr/om_ships/geckos.dm"
-#include "../../offmap_vr/om_ships/mackerels.dm"
-#include "../../offmap_vr/om_ships/mercenarybase.dm"
-#include "../../offmap_vr/om_ships/mercship.dm"
-#include "../../offmap_vr/om_ships/curashuttle.dm"
+#include "om_ships/hybridshuttle.dm"
+#include "om_ships/screebarge.dm"
+#include "om_ships/aro.dm"
+#include "om_ships/aro2.dm"
+#include "om_ships/cruiser.dm"
+#include "om_ships/vespa.dm"
+#include "om_ships/generic_shuttle.dm"
+#include "om_ships/mercenarybase.dm"
+#include "om_ships/mercship.dm"
+#include "om_ships/curashuttle.dm"
 
 //////////////////////////////////////////////////////////////////////////////
 //Capsule deployed ships
-#include "../../offmap_vr/om_ships/shelter_5.dm"
-#include "../../offmap_vr/om_ships/shelter_6.dm"
+#include "om_ships/shelter_5.dm"
+#include "om_ships/shelter_6.dm"
 
 //////////////////////////////////////////////////////////////////////////////
 //Offmap Spawn Locations
-#include "../../offmap_vr/talon/talon.dm"
-#include "../../offmap_vr/talon/talon_areas.dm"
+#include "offmap/talon.dm"
+#include "offmap/talon_areas.dm"
 
 #if MAP_TEST
-#include "../../offmap_vr/talon/talon1.dmm"
-#include "../../offmap_vr/talon/talon2.dmm"
+#include "offmap/talon1.dmm"
+#include "offmap/talon2.dmm"
 #endif
 
 // Talon offmap spawn
 /datum/map_template/tether_lateload/offmap/talon1
 	name = "Offmap Ship - Talon Z1"
 	desc = "Offmap spawn ship, the Talon."
-	mappath = 'maps/offmap_vr/talon/talon1.dmm'
+	mappath = 'offmap/talon1.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/talon1
 
 /datum/map_template/tether_lateload/offmap/talon2
 	name = "Offmap Ship - Talon Z2"
 	desc = "Offmap spawn ship, the Talon."
-	mappath = 'maps/offmap_vr/talon/talon2.dmm'
+	mappath = 'offmap/talon2.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/talon2
 
 /datum/map_z_level/tether_lateload/talon1

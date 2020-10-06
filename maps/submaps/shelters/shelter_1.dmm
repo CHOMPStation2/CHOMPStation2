@@ -80,7 +80,6 @@
 "n" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/voidcraft/survival_pod,
-/obj/effect/floor_decal/industrial/danger/full,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod)
 "o" = (

@@ -86,6 +86,7 @@
 	icon_state = "32-2"
 	},
 /obj/structure/disposalpipe/down,
+/obj/effect/ceiling,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/open,
 /area/maintenance/tether_midpoint)
@@ -259,7 +260,6 @@
 	},
 /obj/structure/cable,
 /obj/effect/ceiling,
-/obj/effect/ceiling,
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 "y" = (
@@ -284,7 +284,6 @@
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
-/obj/effect/ceiling,
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 "B" = (
@@ -292,7 +291,6 @@
 /area/maintenance/tether_midpoint)
 "C" = (
 /obj/structure/disposalpipe/up,
-/obj/effect/ceiling,
 /obj/effect/ceiling,
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)

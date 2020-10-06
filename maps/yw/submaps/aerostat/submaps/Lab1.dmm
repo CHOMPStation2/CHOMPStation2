@@ -215,7 +215,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/virgo2/Lab1)
 "J" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/pros_fabricator,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/virgo2/Lab1)
 "K" = (

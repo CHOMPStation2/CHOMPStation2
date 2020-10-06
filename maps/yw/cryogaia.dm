@@ -23,9 +23,7 @@
 		#include "cryogaia-04-maintenance.dmm" //lowerlevel
 		#include "cryogaia-05-main.dmm" //main level
 		#include "cryogaia-06-upper.dmm" //upper level
-		#include "cryogaia-07-misc.dmm" //misc
-		#include "cryogaia-09-wilderness.dmm" //wilderness
-		#include "cryogaia-10-caves.dmm" // caves
+
 		#include "residential/residential.dmm" //residential level
 	#endif
 

@@ -9,10 +9,7 @@
 /turf/unsimulated/wall/planetary/virgo3b,
 /area/tether/surfacebase/outside/outside1)
 "aac" = (
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 2;
-	portal_id = "surfacemine"
-	},
+/obj/effect/step_trigger/teleporter/to_mining,
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/tether/surfacebase/mining_main/external)
 "aad" = (
@@ -599,26 +596,24 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/cargo/mining)
 "aaY" = (
-/obj/item/device/radio/intercom{
-	dir = 8;
-	pixel_x = -24
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/cargo/mining)
@@ -1052,17 +1047,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
 "abK" = (
-/obj/machinery/door/airlock/glass{
-	name = "Looking Glass"
+/obj/machinery/door/airlock/glass_mining{
+	name = "Warehouse"
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/techmaint,
-/area/tether/surfacebase/public_garden_one)
+/turf/simulated/floor/tiled/steel_grid,
+/area/tether/surfacebase/cargo/warehouse)
 "abL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1171,21 +1165,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
 "abY" = (
-/obj/machinery/door/airlock/maintenance/cargo{
-	name = "Mining Maintenance Access";
-	req_one_access = list(48)
+/obj/machinery/door/airlock/glass_mining{
+	name = "Warehouse"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/tether/surfacebase/cargo/mining)
+/turf/simulated/floor/tiled/steel_grid,
+/area/tether/surfacebase/cargo/warehouse)
 "abZ" = (
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -2092,16 +2076,19 @@
 /area/tether/surfacebase/cargo)
 "adC" = (
 /obj/machinery/door/airlock/glass_mining{
-	name = "Warehouse"
+	id_tag = "cargodoor";
+	name = "Cargo Office";
+	req_access = list(31);
+	req_one_access = list()
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel_grid,
-/area/tether/surfacebase/cargo/warehouse)
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/cargo/office)
 "adD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -3276,11 +3263,12 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/cargo)
 "afm" = (
-/obj/machinery/door/airlock/glass_mining{
-	name = "Warehouse"
+/obj/machinery/door/airlock/maintenance/cargo{
+	name = "Mining Maintenance Access";
+	req_one_access = list(48)
 	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel_grid,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/cargo/warehouse)
 "afn" = (
 /obj/machinery/door/firedoor/glass,
@@ -5453,28 +5441,6 @@
 	dir = 1
 	},
 /area/tether/surfacebase/surface_one_hall)
-"ajb" = (
-/obj/machinery/door/airlock/maintenance/cargo{
-	name = "Mining Maintenance Access";
-	req_one_access = list(48)
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/tether/surfacebase/cargo/warehouse)
-"ajc" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 8
-	},
-/obj/machinery/door/airlock/maintenance/common{
-	req_one_access = newlist()
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/lower/mining_eva)
 "ajd" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5590,9 +5556,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
-"ajl" = (
-/turf/simulated/wall/r_wall,
-/area/crew_quarters/sleep/Dorm_7)
 "ajm" = (
 /obj/machinery/vending/tool{
 	dir = 1;
@@ -7652,7 +7615,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/mining_eva)
 "amN" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/machinery/portable_atmospherics/canister/sleeping_agent,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/rnd/tankstorage)
 "amO" = (
@@ -8006,15 +7969,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
-"anm" = (
-/turf/simulated/wall/r_wall,
-/area/crew_quarters/sleep/Dorm_5)
-"ann" = (
-/turf/simulated/wall/r_wall,
-/area/crew_quarters/sleep/Dorm_3)
-"ano" = (
-/turf/simulated/wall/r_wall,
-/area/tether/surfacebase/outside/outside1)
 "anp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8206,64 +8160,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
-"anE" = (
-/turf/simulated/wall/r_wall,
-/area/crew_quarters/sleep/Dorm_1)
 "anF" = (
-/obj/machinery/door/airlock/glass_mining{
-	id_tag = "cargodoor";
-	name = "Cargo Office";
-	req_access = list();
-	req_one_access = list(48,50)
+/obj/machinery/door/airlock/maintenance/cargo{
+	name = "Mining Maintenance Access";
+	req_one_access = list(48)
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/cargo/office)
-"anG" = (
-/obj/machinery/door/airlock/maintenance/rnd{
-	req_one_access = list(47,24)
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/rnd/hallway)
-"anH" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 10
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red/bordercorner2{
-	dir = 8
-	},
-/obj/item/device/radio/intercom{
-	dir = 8;
-	pixel_x = -24
-	},
-/obj/structure/bed/chair/office/dark,
-/obj/structure/barricade/cutout/ntsec,
-/turf/simulated/floor/tiled,
-/area/security/checkpoint)
+/area/tether/surfacebase/cargo/office)
 "anI" = (
 /obj/structure/cable{
 	d2 = 2;
@@ -8287,12 +8190,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tether/surfacebase/emergency_storage/atrium)
-"anK" = (
-/obj/structure/symbol/lo,
-/turf/simulated/wall{
-	can_open = 1
-	},
-/area/maintenance/lower/atmos)
 "anL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -8647,16 +8544,6 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/tiled/techfloor,
 /area/tether/surfacebase/emergency_storage/atrium)
-"aop" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/action_figure,
-/obj/random/action_figure,
-/obj/random/action_figure,
-/obj/structure/closet/wardrobe/grey{
-	starts_with = list(/obj/structure/barricade/cutout/viva, /obj/item/clothing/under/color/grey = 3, /obj/item/clothing/shoes/black = 3, /obj/item/clothing/head/soft/grey = 3, /obj/item/clothing/mask/gas/wwii = 3, /obj/item/weapon/storage/toolbox/mechanical = 3, /obj/item/clothing/gloves/fyellow = 3, /obj/item/weapon/card/id/gold/captain/spare/fakespare = 3, /obj/item/weapon/soap/syndie = 3, /obj/item/weapon/storage/box/mousetraps = 3)
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/lower/atmos)
 "aoq" = (
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/tether/surfacebase/outside/outside1)
@@ -10184,12 +10071,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/vacant_site)
-"aqR" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 2
-	},
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/tether/surfacebase/mining_main/external)
 "aqS" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -10786,7 +10667,6 @@
 "arR" = (
 /obj/structure/table/glass,
 /obj/random/medical/lite,
-/obj/item/device/radio/intercom/department/medbay,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/first_aid_west)
 "arS" = (
@@ -11254,14 +11134,6 @@
 /obj/random/maintenance/medical,
 /turf/simulated/floor/plating,
 /area/vacant/vacant_site)
-"asG" = (
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 1;
-	name = "to_wilderness";
-	portal_id = "wilderness_step"
-	},
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/tether/surfacebase/outside/outside1)
 "asH" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -11346,42 +11218,6 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/grass,
 /area/tether/surfacebase/surface_one_hall)
-"asP" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/map_effect/portal/master/side_a{
-	dir = 4;
-	name = "to_solars";
-	portal_id = "solarstep"
-	},
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/tether/surfacebase/outside/outside1)
-"asQ" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/tether/surfacebase/outside/outside1)
-"asR" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/tether/surfacebase/outside/outside1)
-"asS" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel_dirty/virgo3b,
-/area/tether/surfacebase/outside/outside1)
-"asT" = (
-/obj/machinery/door/airlock/maintenance/cargo{
-	name = "Mining Maintenance Access";
-	req_one_access = list(48,50)
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/tether/surfacebase/cargo/office)
 "asU" = (
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -11448,29 +11284,6 @@
 /obj/item/weapon/pickaxe,
 /turf/simulated/floor/plating,
 /area/vacant/vacant_site)
-"atc" = (
-/obj/machinery/door/airlock/maintenance/common{
-	name = "Mining Maintenance Access"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/maintenance/lower/mining_eva)
-"atd" = (
-/obj/machinery/door/airlock{
-	id_tag = "lg_1";
-	name = "Looking Glass"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/techmaint,
-/area/tether/surfacebase/public_garden_one)
 "ate" = (
 /obj/structure/railing{
 	dir = 1
@@ -13120,6 +12933,26 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
+"avY" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/bordercorner2{
+	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/tiled,
+/area/security/checkpoint)
 "avZ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
@@ -17120,6 +16953,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/visitor_dining)
+"aHK" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/step_trigger/teleporter/to_solars,
+/turf/simulated/floor/tiled/steel_dirty/virgo3b,
+/area/tether/surfacebase/outside/outside1)
 "aHL" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
@@ -17946,6 +17784,22 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled,
+/area/rnd/hallway)
+"aJt" = (
+/obj/machinery/door/airlock/maintenance/rnd,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
 /area/rnd/hallway)
 "aJu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19957,7 +19811,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos/gas_storage)
 "aNA" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/machinery/portable_atmospherics/canister/sleeping_agent,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos/gas_storage)
@@ -20421,7 +20275,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_6)
 "aOw" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/machinery/portable_atmospherics/canister/sleeping_agent,
 /obj/machinery/light/small,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techmaint,
@@ -25549,6 +25403,13 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/maintenance/lower/atmos)
+"aXQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/action_figure,
+/obj/random/action_figure,
+/obj/random/action_figure,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/atmos)
 "aXR" = (
 /obj/structure/window/reinforced,
 /obj/structure/closet/masks,
@@ -26867,6 +26728,10 @@
 	},
 /turf/unsimulated/wall/planetary/virgo3b,
 /area/tether/surfacebase/outside/outside1)
+"baX" = (
+/obj/effect/step_trigger/teleporter/to_plains,
+/turf/simulated/floor/tiled/steel_dirty/virgo3b,
+/area/tether/surfacebase/outside/outside1)
 "baZ" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -27164,6 +27029,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/first_west)
+"bbL" = (
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Mining Maintenance Access"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/mining_eva)
 "bbN" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -28355,6 +28229,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
+"crC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/visible/supply{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/mining_eva)
 "csb" = (
 /obj/structure/railing{
 	dir = 4
@@ -28729,6 +28614,17 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/construction/vacant_mining_ops)
+"gaK" = (
+/obj/machinery/door/airlock/glass{
+	name = "Looking Glass"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/public_garden_one)
 "ghg" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 5
@@ -29569,6 +29465,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_one)
+"mdP" = (
+/obj/machinery/door/airlock{
+	id_tag = "lg_1";
+	name = "Looking Glass"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/public_garden_one)
 "mon" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -30067,6 +29975,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
+"qIr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Mining Maintenance Access"
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/cargo/mining)
 "qKn" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central1{
 	dir = 8
@@ -31063,19 +30987,19 @@ aaa
 aaa
 aaa
 aaa
-aaa
-asP
-asQ
-asQ
-asQ
-asQ
-asQ
-asR
-asQ
-asQ
-asR
-asQ
-aaa
+aHo
+aHK
+aHK
+aHK
+aHK
+aHK
+aHK
+aHK
+aHK
+aHK
+aHK
+aHK
+aHo
 aaa
 aaa
 aaa
@@ -31205,19 +31129,19 @@ aad
 aad
 aad
 aGD
-aaa
+aad
 aHL
 aHL
 aHL
 aHL
 aHL
 aHL
+aad
 aHL
 aHL
+aad
 aHL
-aHL
-aHL
-aaa
+aad
 aad
 aad
 aad
@@ -31347,19 +31271,19 @@ aad
 aad
 aad
 aGE
-aaa
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
 aHL
 aHL
-aHL
-aHL
-aHL
-aHL
-aHL
-aHL
-aHL
-aHL
-aHL
-aaa
+aad
+aad
+aad
 aad
 aad
 aad
@@ -31489,7 +31413,7 @@ aad
 aad
 aad
 aGE
-aHo
+aad
 aad
 aad
 aad
@@ -31501,7 +31425,7 @@ aad
 aHL
 aad
 aad
-aHo
+aad
 aad
 aad
 aad
@@ -31782,8 +31706,8 @@ aad
 aad
 aad
 aad
-aHL
 aad
+aHL
 aad
 aad
 aad
@@ -32351,7 +32275,7 @@ aad
 aad
 aad
 aad
-aHL
+aad
 aad
 aad
 aad
@@ -35566,7 +35490,7 @@ ajS
 ajS
 ajS
 ajS
-atd
+mdP
 ajS
 ajS
 ajS
@@ -35707,7 +35631,7 @@ bdC
 akU
 ali
 sbD
-abK
+gaK
 orF
 ajS
 aah
@@ -36476,33 +36400,33 @@ aad
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
@@ -36618,33 +36542,33 @@ aad
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
@@ -36760,33 +36684,33 @@ aad
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
-ano
-ano
-ano
+adK
+adK
+adK
 aad
 aad
 aad
@@ -37030,7 +36954,7 @@ aGX
 awn
 awn
 awn
-anG
+aJt
 awn
 aKL
 aLr
@@ -40210,10 +40134,10 @@ aad
 aad
 aad
 aad
+aad
+baV
+baV
 baW
-aaa
-aaa
-aaa
 "}
 (66,1,1) = {"
 aaa
@@ -40353,9 +40277,9 @@ aad
 aad
 aad
 aad
-aoq
-aoq
-asG
+baV
+baV
+baX
 "}
 (67,1,1) = {"
 aaa
@@ -40495,9 +40419,9 @@ aad
 aad
 aad
 baV
-aoq
-aoq
-asS
+baV
+baV
+baX
 "}
 (68,1,1) = {"
 aaa
@@ -40637,9 +40561,9 @@ aad
 aad
 aad
 baV
-aoq
-aoq
-asS
+baV
+baV
+baX
 "}
 (69,1,1) = {"
 aaa
@@ -40779,9 +40703,9 @@ aad
 aad
 baV
 baV
-aoq
-aoq
-asS
+baV
+baV
+baX
 "}
 (70,1,1) = {"
 aaa
@@ -40921,9 +40845,9 @@ aad
 aad
 baV
 baV
-aoq
-aoq
-asS
+baV
+baV
+baX
 "}
 (71,1,1) = {"
 aaa
@@ -41063,9 +40987,9 @@ aad
 aad
 baV
 baV
-aoq
-aoq
-asS
+baV
+baV
+baX
 "}
 (72,1,1) = {"
 aaa
@@ -41205,9 +41129,9 @@ aad
 aad
 baV
 baV
-aoq
-aoq
-asS
+baV
+baV
+baX
 "}
 (73,1,1) = {"
 aaa
@@ -41347,16 +41271,16 @@ aad
 aad
 aad
 baV
-aoq
-aoq
-asS
+baV
+baV
+baX
 "}
 (74,1,1) = {"
-aaa
-aaa
-aaa
-aaa
 aab
+aad
+aad
+aad
+aad
 aad
 aad
 aad
@@ -41489,14 +41413,14 @@ aad
 aad
 aad
 baV
-aoq
-aoq
-asS
+baV
+baV
+baX
 "}
 (75,1,1) = {"
 aac
-aaf
-aaf
+aae
+aae
 aae
 aae
 aae
@@ -41630,15 +41554,15 @@ aad
 aad
 aad
 aad
+aad
+baV
+baV
 baW
-aaa
-aaa
-aaa
 "}
 (76,1,1) = {"
-aqR
+aac
 aaf
-aaf
+aae
 aae
 aae
 aae
@@ -41668,7 +41592,7 @@ aar
 aar
 aar
 abT
-ajc
+crC
 abT
 agd
 acC
@@ -41778,7 +41702,7 @@ baV
 aaa
 "}
 (77,1,1) = {"
-aqR
+aac
 aaf
 aaf
 aaf
@@ -41808,7 +41732,7 @@ aaG
 aaM
 aaP
 aaY
-abY
+qIr
 ecq
 nDD
 jPk
@@ -41920,7 +41844,7 @@ aad
 aaa
 "}
 (78,1,1) = {"
-aqR
+aac
 aaf
 aaf
 aaf
@@ -41961,7 +41885,7 @@ amM
 abT
 abT
 abT
-atc
+bbL
 abT
 ahX
 aiY
@@ -42062,7 +41986,7 @@ aad
 aaa
 "}
 (79,1,1) = {"
-aqR
+aac
 aaf
 aaf
 aaf
@@ -42204,7 +42128,7 @@ aad
 aaa
 "}
 (80,1,1) = {"
-aqR
+aac
 aaf
 aaf
 aaf
@@ -42346,7 +42270,7 @@ aad
 aaa
 "}
 (81,1,1) = {"
-aqR
+aac
 aaf
 aaf
 aaf
@@ -42488,7 +42412,7 @@ aad
 aaa
 "}
 (82,1,1) = {"
-aqR
+aac
 aaf
 aaf
 aaf
@@ -42630,9 +42554,9 @@ aad
 aaa
 "}
 (83,1,1) = {"
-aqR
+aac
 aaf
-aaf
+aae
 aae
 aae
 aae
@@ -42772,9 +42696,9 @@ aad
 aaa
 "}
 (84,1,1) = {"
-aqR
-aaf
-aaf
+aac
+aae
+aae
 aae
 aae
 aae
@@ -42914,11 +42838,11 @@ aad
 aaa
 "}
 (85,1,1) = {"
-aaa
-aaa
-aaa
-aaa
 aab
+aad
+aad
+aad
+aad
 aad
 aad
 aad
@@ -42945,7 +42869,7 @@ aar
 aaX
 kxe
 sNu
-adC
+abK
 abP
 acd
 acy
@@ -43087,14 +43011,14 @@ aar
 abj
 abo
 abV
-afm
+abY
 ace
 ach
 acH
 acF
 adS
 aeJ
-ajb
+afm
 aIA
 agM
 ahc
@@ -43237,7 +43161,7 @@ acG
 adS
 agj
 acc
-asT
+anF
 amc
 amc
 amc
@@ -43662,7 +43586,7 @@ acL
 acP
 adv
 adB
-anF
+adC
 adQ
 aea
 aeg
@@ -43991,21 +43915,21 @@ aJc
 agM
 agM
 aLg
-ajl
-ajl
-ajl
-ajl
-anm
-anm
-anm
-anm
-ann
-ann
-ann
-ann
-anE
-anE
-anE
+aLg
+aLg
+aLg
+aLg
+aOj
+aOj
+aOj
+aOj
+aQb
+aQb
+aQb
+aQb
+aSi
+aSi
+aSi
 aSi
 aUe
 aUH
@@ -44963,7 +44887,7 @@ evF
 ast
 auR
 avq
-anH
+avY
 awM
 axs
 awN
@@ -45862,7 +45786,7 @@ aWo
 aWM
 aWV
 aVn
-aop
+aXQ
 aYi
 aYE
 aZd
@@ -46004,7 +45928,7 @@ aUP
 aUP
 bcT
 aVn
-anK
+aVn
 aYi
 aYi
 aYi
@@ -46342,7 +46266,7 @@ aad
 aad
 aad
 aad
-aah
+aad
 aah
 aah
 aah
@@ -46484,8 +46408,8 @@ aad
 aad
 aad
 aad
-aah
-aah
+aad
+aad
 aah
 aah
 aah
@@ -46626,8 +46550,8 @@ aad
 aad
 aad
 aad
-aah
-aah
+aad
+aad
 aah
 aah
 aah
@@ -46768,7 +46692,7 @@ aad
 aad
 aad
 aad
-aah
+aad
 aah
 aah
 aah
@@ -46910,7 +46834,7 @@ aad
 aad
 aad
 aad
-aah
+aad
 aah
 aah
 aah
@@ -47334,6 +47258,7 @@ aad
 aad
 aad
 aad
+aad
 aah
 aah
 aah
@@ -47348,13 +47273,12 @@ aah
 aah
 aah
 aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
+aad
+aad
+aad
+aad
+aad
+aad
 aah
 aah
 aah
@@ -47476,6 +47400,8 @@ aad
 aad
 aad
 aad
+aad
+aad
 aah
 aah
 aah
@@ -47489,22 +47415,20 @@ aah
 aah
 aah
 aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
 aah
 aah
 aah
@@ -47618,14 +47542,8 @@ aad
 aad
 aad
 aad
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
+aad
+aad
 aah
 aah
 aah
@@ -47640,22 +47558,28 @@ aah
 aah
 aah
 aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aah
+aah
+aah
+aah
 aah
 aah
 aad
-aad
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-baU
 aty
 aub
 aub
@@ -47760,20 +47684,8 @@ aad
 aad
 aad
 aad
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
+aad
+aad
 aah
 aah
 aah
@@ -47787,17 +47699,29 @@ aad
 aad
 aad
 aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
 aah
 aah
 aah
 aah
 aah
 aah
-aah
-aah
-aah
-aah
-baU
+aad
 atz
 auc
 auc
@@ -47902,22 +47826,6 @@ aad
 aad
 aad
 aad
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
 aad
 aad
 aad
@@ -47931,13 +47839,29 @@ aad
 aad
 aad
 aad
-aah
-aah
-aah
-aah
-aah
-aah
-aah
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
 aad
 aad
 atz
@@ -48045,20 +47969,6 @@ ajK
 aad
 aad
 aad
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
 aad
 aad
 aad
@@ -48075,9 +47985,23 @@ aad
 aad
 aad
 aad
-aah
-aah
-aah
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
 aad
 aad
 aad
@@ -48189,16 +48113,16 @@ aad
 aad
 aad
 aad
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
-aah
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
+aad
 aad
 aad
 aad
@@ -48332,12 +48256,12 @@ aad
 aad
 aad
 aad
-aah
-aah
-aah
-aah
-aah
-aah
+aad
+aad
+aad
+aad
+aad
+aad
 aad
 aad
 aad
