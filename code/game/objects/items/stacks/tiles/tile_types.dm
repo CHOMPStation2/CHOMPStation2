@@ -20,7 +20,7 @@
 	drop_sound = 'sound/items/drop/axe.ogg'
 	pickup_sound = 'sound/items/pickup/axe.ogg'
 
-	var/material/material						//CHOMPEDIT: Start, To make tiles have material variables
+	var/datum/material/material						//CHOMPEDIT: Start, To make tiles have material variables
 	var/default_type = DEFAULT_WALL_MATERIAL
 	var/perunit = SHEET_MATERIAL_AMOUNT
 	var/apply_colour							//CHOMPEDIT: End

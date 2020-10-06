@@ -233,10 +233,6 @@
 			else
 				to_chat(usr, "<span class='warning'>Cannot issue pass without issuing ID.</span>")
 
-<<<<<<< HEAD
 	add_fingerprint(usr)
 	return TRUE
-=======
-	src.add_fingerprint(usr)
-	SSnanoui.update_uis(src)
->>>>>>> master-holder
+
