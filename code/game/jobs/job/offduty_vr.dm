@@ -111,7 +111,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/assistant/officer
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_SECURITY
-	economic_modifier = 4
+	economic_modifier = 5
 
 /datum/alt_title/offduty_sec
 	title = "Off-duty Officer"
