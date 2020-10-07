@@ -156,8 +156,9 @@ var/list/_client_preferences_by_type
 /datum/client_preference/old_door_sounds
 	description ="Old Door Sounds"
 	key = "SOUND_OLDDOORS"
-	enabled_description = "New" //CHOMP Edit
-	disabled_description = "Old" //CHOMP Edit
+	enabled_description = "Old"
+	disabled_description = "New"
+	enabled_by_default = FALSE
 
 /datum/client_preference/department_door_sounds
 	description ="Department-Specific Door Sounds"
