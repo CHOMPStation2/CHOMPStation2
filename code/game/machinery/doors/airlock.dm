@@ -1227,7 +1227,7 @@ About the new airlock wires panel:
 		var/volume
 		if(old_sounds) // Do we have old sounds enabled? Play these even if we have department door sounds enabled.
 			if(arePowerSystemsOn())
-				sound = open_sound_powered
+				sound = legacy_open_powered
 				volume = 50
 			else
 				sound = open_sound_unpowered
@@ -1241,7 +1241,7 @@ About the new airlock wires panel:
 				volume = 75
 		else // Else, play these.
 			if(arePowerSystemsOn())
-				sound = legacy_open_powered
+				sound = open_sound_powered
 				volume = 50
 			else
 				sound = open_sound_unpowered
@@ -1356,7 +1356,7 @@ About the new airlock wires panel:
 		var/volume
 		if(old_sounds)
 			if(arePowerSystemsOn())
-				sound = close_sound_powered
+				sound = legacy_close_powered
 				volume = 50
 			else
 				sound = open_sound_unpowered
@@ -1370,7 +1370,7 @@ About the new airlock wires panel:
 				volume = 75
 		else
 			if(arePowerSystemsOn())
-				sound = legacy_close_powered
+				sound = close_sound_powered
 				volume = 50
 			else
 				sound = open_sound_unpowered
