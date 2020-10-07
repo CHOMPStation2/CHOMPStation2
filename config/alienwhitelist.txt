@@ -12,13 +12,6 @@ alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
 crossexonar - Protean
-<<<<<<< HEAD
-=======
-chillyfang - Black-Eyed Shadekin
-cgr - Protean
-draycu - Vox
-flaktual - Vox
->>>>>>> e791692aea59a96b1b45c20d61974aa10493a7f6
 funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
