@@ -54,7 +54,7 @@ var/list/assistant_occupations = list(
 
 
 var/list/command_positions = list(
-	"Colony Director",
+	"Site Manager",
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",
@@ -136,7 +136,7 @@ var/list/nonhuman_positions = list(
 )
 
 var/list/whitelisted_positions = list(
-	"Colony Director",
+	"Site Manager",
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",

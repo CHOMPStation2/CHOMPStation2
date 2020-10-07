@@ -29,7 +29,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	job_description = "The Site Manager manages the other Command Staff, and through them the rest of the station. Though they have access to everything, \
 						they do not understand everything, and are expected to delegate tasks to the appropriate crew member. The Site Manager is expected to \
 						have an understanding of Standard Operating Procedure, and is subject to it, and legal action, in the same way as every other crew member."
-	alt_titles = list("Overseer"= /datum/alt_title/overseer)
+	alt_titles = list("Overseer"= /datum/alt_title/overseer,"Colony Director"= /datum/alt_title/colonydirector) //CHOMPEdit
 
 //YW UNCOMMENTINGSTART: REINSTATE LOYALTY IMPLANT
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
@@ -46,7 +46,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 // Captain Alt Titles
 /datum/alt_title/overseer
 	title = "Overseer"
-
+/datum/alt_title/colonydirector	//CHOMPEdit
+	title = "Colony Director"	//CHOMPEdit
 //////////////////////////////////
 //		Head of Personnel
 //////////////////////////////////

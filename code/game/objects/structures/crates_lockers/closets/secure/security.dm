@@ -102,7 +102,8 @@
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
-		/obj/item/clothing/mask/gas/half)
+		/obj/item/clothing/mask/gas/half,
+		/obj/item/clothing/mask/gas/sechailer/swat/hos)
 
 /obj/structure/closet/secure_closet/hos/Initialize()
 	if(prob(50))
@@ -116,6 +117,7 @@
 
 /obj/structure/closet/secure_closet/warden
 	name = "warden's locker"
+	storage_capacity = 42
 	req_access = list(access_armory)
 	closet_appearance = /decl/closet_appearance/secure_closet/security/warden
 
