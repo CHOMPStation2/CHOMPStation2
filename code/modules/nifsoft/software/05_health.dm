@@ -32,16 +32,20 @@
 		if(HP_percent >= 0.9)
 			if(mode)
 				nif.notify("User Status: NORMAL. Medichines deactivating.")
+				H << 'sound/voice/nifmed_normal.ogg'
 				deactivate()
 			return TRUE
 		else if(!mode && HP_percent < 0.8)
 			nif.notify("User Status: INJURED. Commencing medichine routines.",TRUE)
+			H << 'sound/voice/nifmed_injured.ogg'
 			activate()
 		else if(mode == 1 && HP_percent < 0.2)
 			nif.notify("User Status: DANGER. Seek medical attention!",TRUE)
+			H << 'sound/voice/nifmed_danger.ogg'
 			mode = 2
 		else if(mode == 2 && HP_percent < -0.4)
 			nif.notify("User Status: CRITICAL. Notifying medical, and starting emergency stasis!",TRUE)
+			H << 'sound/voice/nifmed_critical.ogg'
 			mode = 3
 			if(!isbelly(H.loc)) //Not notified in case of vore, for gameplay purposes.
 				var/turf/T = get_turf(H)
