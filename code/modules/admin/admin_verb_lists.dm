@@ -358,6 +358,8 @@ var/list/admin_verbs_mod = list(
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
+	/datum/admins/proc/quick_nif, //VOREStation Add,
+	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
 )
 
