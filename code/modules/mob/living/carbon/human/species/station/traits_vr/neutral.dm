@@ -156,7 +156,7 @@ YW change end */
 	H.verbs |= /mob/living/carbon/human/proc/slime_feed
 
 /datum/trait/hard_vore
-	name = "Brutal Predation"
+	name = "Hard Vore" //CHOMPedit Renamed Brutal Predation to Hard Vore, because some people don't know what this actually does
 	desc = "Allows you to tear off limbs & tear out internal organs."
 	cost = 0
 
