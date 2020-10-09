@@ -6,7 +6,7 @@
 #include "construction1.dmm"
 #include "camp1.dmm"
 #include "house1.dmm"
-#include "beacons.dmm"
+// #include "beacons.dmm" // CHOMP Removal
 #include "Epod.dmm"
 #include "Epod2.dmm"
 #include "PascalB.dmm"
@@ -73,12 +73,14 @@
 	mappath = 'maps/submaps/surface_submaps/plains/house1_vr.dmm' //VOREStation Edit
 	cost = 10
 
+/* Chomp Removal
 /datum/map_template/surface/plains/beacons
 	name = "Collection of Marker Beacons"
 	desc = "A bunch of marker beacons, scattered in a strange pattern."
 	mappath = 'maps/submaps/surface_submaps/plains/beacons.dmm'
 	cost = 5
 	fixed_orientation = TRUE
+*/
 
 /datum/map_template/surface/plains/Epod
 	name = "Emergency Pod"
