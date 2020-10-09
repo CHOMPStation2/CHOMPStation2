@@ -104,13 +104,13 @@
 		if(!nif.human.bad_external_organs.len)
 			if(mode || active)
 				nif.notify("User Status: NORMAL. Medichines deactivating.")
-				W << 'sound/voice/nifmedsynth_normal.ogg' //CHOMP Add
+//Needs fixing				W << 'sound/voice/nifmedsynth_normal.ogg' //CHOMP Add
 				deactivate()
 			return TRUE
 
 		if(!mode && !active)
 			nif.notify("User Status: DAMAGED. Medichines performing minor repairs.",TRUE)
-			W << 'sound/voice/nifmedsynth_injured.ogg' //CHOMP Add
+//Needs fixing			W << 'sound/voice/nifmedsynth_injured.ogg' //CHOMP Add
 			activate()
 
 		for(var/eo in nif.human.bad_external_organs)
