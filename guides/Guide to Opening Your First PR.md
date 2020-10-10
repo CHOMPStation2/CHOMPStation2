@@ -16,7 +16,7 @@ Everyone has their own preferred Github clients - I use Gitkraken because it’s
 **SourceTree:** https://www.sourcetreeapp.com/
 **Github Desktop:** https://desktop.github.com/
 
-I recommend Gitkraken as it’s very good at handling things for you, and it comes with built-in darkmode. It DOES have paid features, but you don’t need them.
+I recommend Gitkraken as it’s very good at handling things for you, and it comes with built-in darkmode. It does have paid features, but you don’t need them.
 
 Cloning your Repo: AKA “Progress bar time”
 I’ll give these instructions in relevance to Gitkraken as that’s what I use, but they should be relatively applicable to other platforms.

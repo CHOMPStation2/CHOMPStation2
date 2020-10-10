@@ -271,15 +271,27 @@
 		if("bellypick")
 			host.vore_selected = locate(params["bellypick"])
 			return TRUE
+		if("move_belly")
+			var/dir = text2num(params["dir"])
+			if(LAZYLEN(host.vore_organs) <= 1)
+				to_chat(usr, "<span class='warning'>You can't sort bellies with only one belly to sort...</span>")
+				return TRUE
+
+			var/current_index = host.vore_organs.Find(host.vore_selected)
+			if(current_index)
+				var/new_index = clamp(current_index + dir, 1, LAZYLEN(host.vore_organs))
+				host.vore_organs.Swap(current_index, new_index)
+				unsaved_changes = TRUE
+			return TRUE
 
 		if("set_attribute")
 			return set_attr(usr, params)
 
 		if("saveprefs")
 			if(!host.save_vore_prefs())
-				alert("ERROR: Virgo-specific preferences failed to save!","Error")
+				alert("ERROR: Chomp-specific preferences failed to save!","Error")
 			else
-				to_chat(usr, "<span class='notice'>Virgo-specific preferences saved!</span>")
+				to_chat(usr, "<span class='notice'>Chomp-specific preferences saved!</span>")
 				unsaved_changes = FALSE
 			return TRUE
 		if("reloadprefs")
@@ -287,9 +299,9 @@
 			if(alert != "Reload")
 				return FALSE
 			if(!host.apply_vore_prefs())
-				alert("ERROR: Virgo-specific preferences failed to apply!","Error")
+				alert("ERROR: Chomp-specific preferences failed to apply!","Error")
 			else
-				to_chat(usr,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
+				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
 				unsaved_changes = FALSE
 			return TRUE
 		if("setflavor")
