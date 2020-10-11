@@ -92,7 +92,7 @@
 		to_chat(src, "There's already an egg here.")
 		return
 
-	if(check_alien_ability(200,1,O_EGG)) //CHOMPedit changed plasma cost from 75 to 200
+	if(check_alien_ability(200,1,O_EGG)) //CHOMPedit changed plasma cost from 75 to  200
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
 		new /obj/structure/alien/egg(loc) //CHOMPedit. Changed from obj/effect to obj/structure
 
