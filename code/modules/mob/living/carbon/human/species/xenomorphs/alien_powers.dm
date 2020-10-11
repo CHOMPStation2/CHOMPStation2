@@ -79,7 +79,7 @@
 // Queen verbs.
 /mob/living/carbon/human/proc/lay_egg()
 
-	set name = "Lay Egg (75)"
+	set name = "Lay Egg (200)" //CHOMPedit changed number value
 	set desc = "Lay an egg to produce huggers to impregnate prey with."
 	set category = "Abilities"
 
@@ -92,7 +92,7 @@
 		to_chat(src, "There's already an egg here.")
 		return
 
-	if(check_alien_ability(75,1,O_EGG))
+	if(check_alien_ability(200,1,O_EGG)) //CHOMPedit changed plasma cost from 75 to 200
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
 		new /obj/structure/alien/egg(loc) //CHOMPedit. Changed from obj/effect to obj/structure
 
@@ -331,7 +331,7 @@
 
 /mob/living/carbon/human/proc/gut()
 	set category = "Abilities"
-	set name = "Gut"
+	set name = "Slaughter" //CHOMPedit renamed Gut to Slaughter so its more obvious what it does
 	set desc = "While grabbing someone aggressively, rip their guts out or tear them apart."
 
 	if(last_special > world.time)
@@ -347,7 +347,7 @@
 		return
 
 	if(G.state < GRAB_AGGRESSIVE)
-		to_chat(src, "<span class='danger'>You must have an aggressive grab to gut your prey!</span>")
+		to_chat(src, "<span class='danger'>You must have an aggressive grab to slaughter your prey!</span>") //CHOMPedit
 		return
 
 	last_special = world.time + 50
