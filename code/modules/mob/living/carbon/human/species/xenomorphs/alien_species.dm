@@ -181,8 +181,6 @@
 	slowdown = 1
 	tail = null //CHOMPedit. Set to null
 	rarity_value = 5
-	darksight = 10 //CHOMPedit testing
-	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_drone.dmi'
 	deform =  'icons/mob/human_races/xenos/r_xenos_drone.dmi'
@@ -223,7 +221,6 @@
 	slowdown = -2
 	total_health = 150
 	tail = null //CHOMPedit. Set to null
-	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_hunter.dmi'
 	deform =  'icons/mob/human_races/xenos/r_xenos_hunter.dmi'
@@ -254,7 +251,6 @@
 	slowdown = 0
 	total_health = 200
 	tail = null //CHOMPedit. Set to null
-	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_sentinel.dmi'
 	deform =  'icons/mob/human_races/xenos/r_xenos_sentinel.dmi'
@@ -290,7 +286,6 @@
 	slowdown = 4
 	tail = null //CHOMPedit. Set to null
 	rarity_value = 10
-	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_queen.dmi'
 	deform =  'icons/mob/human_races/xenos/r_xenos_queen.dmi'
