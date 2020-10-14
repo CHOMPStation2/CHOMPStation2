@@ -694,13 +694,11 @@
 				if(!muzzled)
 					message = "[species.scream_verb]!"
 					m_type = 2
-					//CHOMPStation Edit Start. Uncommented block. Why was it commented in the first place?
-					//The offending content was commented out as well anyway.
-					if(get_gender() == FEMALE)
-						playsound(src, "[species.female_scream_sound]", 80, 1)
+					if(get_gender() == FEMALE) //CHOMPedit start : fixed scream sounds by giving them the ability to grab from a list, and a way to turn them off in preferences
+						playsound(src, pick(species.female_scream_sound), 80, preference = /datum/client_preference/emote_noises)
 					else
-						playsound(src, "[species.male_scream_sound]", 80, 1) //default to male screams if no gender is present.
-					//CHOMPStation Edit End.
+						playsound(src, pick(species.male_scream_sound), 80, preference = /datum/client_preference/emote_noises) //default to male screams if no gender is present.
+					//CHOMPedit end
 				else
 					message = "makes a very loud noise."
 					m_type = 2
