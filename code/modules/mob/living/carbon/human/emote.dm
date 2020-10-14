@@ -698,7 +698,7 @@
 						playsound(src, pick(species.female_scream_sound), 80, preference = /datum/client_preference/emote_noises)
 					else
 						playsound(src, pick(species.male_scream_sound), 80, preference = /datum/client_preference/emote_noises) //default to male screams if no gender is present.
-					//CHOMPedit end
+					//CHOMPedit end 
 				else
 					message = "makes a very loud noise."
 					m_type = 2
