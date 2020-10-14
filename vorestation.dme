@@ -3357,6 +3357,7 @@
 #include "code\modules\power\fusion\core\core_control.dm"
 #include "code\modules\power\fusion\core\core_field.dm"
 #include "code\modules\power\fusion\fuel_assembly\fuel_assembly.dm"
+#include "code\modules\power\fusion\fuel_assembly\fuel_assembly_ch.dm"
 #include "code\modules\power\fusion\fuel_assembly\fuel_compressor.dm"
 #include "code\modules\power\fusion\fuel_assembly\fuel_control.dm"
 #include "code\modules\power\fusion\fuel_assembly\fuel_injector.dm"

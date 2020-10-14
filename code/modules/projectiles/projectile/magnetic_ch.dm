@@ -4,3 +4,31 @@
 	fire_sound = 'sound/weapons/rapidslice.ogg'
 	damage = 10
 	armor_penetration = 35
+
+/obj/item/projectile/bullet/magnetic/fuelrod/blitz
+	name = "blitz rod"
+	icon_state = "fuel-blitz"
+	damage = 900
+	accuracy = 200
+	incendiary = 20
+	flammability = 4
+	weaken = 40
+	penetrating = 1
+	armor_penetration = 100
+	irradiate = 120
+	range = 75
+	searing = 1
+	detonate_travel = 1
+	detonate_mob = 1
+	energetic_impact = 1
+
+/obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(var/atom/A) //Future-proofing, again. In the event new fuel rods are introduced, and have special effects for when they stop flying.
+	if(src.loc)
+		var/mob/living/M = A
+		if(istype(M))
+			M.dust()
+		else
+			qdel(A)
+		visible_message("<span class='warning'>\The [src] incinerates its target and shatters in a violent explosion!</span>")
+		explosion(src.loc, 2, 3, 4, 8)
+	..(A)
