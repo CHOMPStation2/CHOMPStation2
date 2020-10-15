@@ -206,7 +206,7 @@
 			return 0
 
 		var/datum/species/S = GLOB.all_species[client.prefs.species]
-		
+
 		if(!(S.spawn_flags & SPECIES_CAN_JOIN))
 			alert(src,"Your current species, [client.prefs.species], is not available for play on the station.")
 			return 0
@@ -444,7 +444,7 @@
 		return
 
 	// Equip our custom items only AFTER deploying to spawn points eh?
-	//equip_custom_items(character)	//VOREStation Removal
+	equip_custom_items(character)	//CHOMPEdit readded to enable custom_item.txt
 
 	//character.apply_traits() //VOREStation Removal
 

@@ -683,6 +683,9 @@
 
 					if(isnull(gene_chem[i])) gene_chem[i] = 0
 
+					if(chems[rid].len < i) //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
+						continue
+
 					if(chems[rid][i])
 						chems[rid][i] = max(1,round((gene_chem[i] + chems[rid][i])/2))
 					else

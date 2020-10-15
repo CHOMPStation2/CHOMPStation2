@@ -1,10 +1,11 @@
 // The Gun //
 /obj/item/weapon/gun/projectile/cell_loaded //this one can load both medical and security cells! for ERT/admin use.
-	name = "multipurpose cell-loaded revolver"
-	desc = "Variety is the spice of life! This weapon is a hybrid of the KHI-102b 'Nanotech Selectable-Fire Weapon' and the Vey-Med ML-3 'Medigun', dubbed the 'NSFW-ML3M'. \
+	name = "multipurpose cell-loaded revolver" // CH edit - Changes ML-3 to NERD
+	desc = "Variety is the spice of life! This weapon is a hybrid of the HI-102b 'Nanotech Selectable-Cell Weapon' and the Vey-Med NERD 'Medigun'. \
 	It can fire both harmful and healing cells with an internal nanite fabricator and energy weapon cell loader. Up to three combinations of \
 	energy beams can be configured at once. Ammo not included."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/khi)
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus,
+							/datum/category_item/catalogue/information/organization/vey_med)
 
 	icon = 'icons/vore/custom_guns_vr.dmi'
 	icon_state = "nsfw"
@@ -205,9 +206,9 @@
 
 // The Casing //
 /obj/item/ammo_casing/microbattery
-	name = "\'NSFW\' microbattery - UNKNOWN"
+	name = "\'NSCW\' microbattery - UNKNOWN"
 	desc = "A miniature battery for an energy weapon."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/khi)
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
 	icon = 'icons/obj/ammo_vr.dmi'
 	icon_state = "nsfw_batt"
 	slot_flags = SLOT_BELT | SLOT_EARS

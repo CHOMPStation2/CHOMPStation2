@@ -318,6 +318,7 @@
 	cell = null
 	internal_tank = null
 
+	GLOB.mech_destroyed_roundstat++ //CHOMP Edit This is for the roundtrivia system
 	if(smoke_possible)	//Just making sure nothing is running.
 		qdel(smoke_system)
 
@@ -2219,7 +2220,7 @@
 			output += "Universal Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
 		for(var/obj/item/mecha_parts/mecha_equipment/W in special_equipment)
 			output += "Special Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
-		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment) // VOREstation Edit -  Adds micro equipent to the menu
+		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment)//CHOMPstation Edit -  Adds micro equipent to the menu
 			output += "Micro Utility Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
 		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_weapon_equipment)
 			output += "Micro Weapon Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"

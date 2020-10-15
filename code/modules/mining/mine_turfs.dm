@@ -6,6 +6,15 @@ var/list/mining_overlay_cache = list()
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock-dark"
 	density = 1
+	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
+
+/turf/unsimulated/mineral/ice
+	name = "Ice wall"
+	desc = "Frigid Ice that seems to be stronger than most manmade structures."
+	icon = 'icons/turf/snow_new.dmi'
+	icon_state = "Icerock"
+
+
 
 /turf/simulated/mineral //wall piece
 	name = "rock"
@@ -39,23 +48,6 @@ var/list/mining_overlay_cache = list()
 	var/obj/item/weapon/last_find
 	var/datum/artifact_find/artifact_find
 	var/ignore_mapgen
-
-	var/ore_types = list(
-		"hematite" = /obj/item/weapon/ore/iron,
-		"uranium" = /obj/item/weapon/ore/uranium,
-		"gold" = /obj/item/weapon/ore/gold,
-		"silver" = /obj/item/weapon/ore/silver,
-		"diamond" = /obj/item/weapon/ore/diamond,
-		"phoron" = /obj/item/weapon/ore/phoron,
-		"osmium" = /obj/item/weapon/ore/osmium,
-		"hydrogen" = /obj/item/weapon/ore/hydrogen,
-		"silicates" = /obj/item/weapon/ore/glass,
-		"carbon" = /obj/item/weapon/ore/coal,
-		"verdantium" = /obj/item/weapon/ore/verdantium,
-		"marble" = /obj/item/weapon/ore/marble,
-		"lead" = /obj/item/weapon/ore/lead,
-		"rutile" = /obj/item/weapon/ore/rutile //VOREStation Add
-	)
 
 	has_resources = 1
 
@@ -235,7 +227,7 @@ turf/simulated/mineral/floor/light_corner
 			for(var/ore in resources)
 				var/amount_to_give = rand(CEILING(resources[ore]/2, 1), resources[ore])  // Should result in at least one piece of ore.
 				for(var/i=1, i <= amount_to_give, i++)
-					var/oretype = ore_types[ore]
+					var/oretype = GLOB.ore_types[ore]
 					new oretype(src)
 				resources[ore] = 0
 
@@ -330,7 +322,7 @@ turf/simulated/mineral/floor/light_corner
 			to_chat(user, "<span class='notice'>You start digging.</span>")
 			playsound(user, 'sound/effects/rustle1.ogg', 50, 1)
 
-			if(!do_after(user,40)) return
+			if(!do_after(user,30)) return //YAWN change. 30 from 40
 
 			to_chat(user, "<span class='notice'>You dug a hole.</span>")
 			GetDrilled()
@@ -554,6 +546,8 @@ turf/simulated/mineral/floor/light_corner
 		//if the turf has already been excavated, some of it's ore has been removed
 		for (var/i = 1 to mineral.result_amount - mined_ore)
 			DropMineral()
+
+	GLOB.rocks_drilled_roundstat++
 
 	//destroyed artifacts have weird, unpleasant effects
 	//make sure to destroy them before changing the turf though

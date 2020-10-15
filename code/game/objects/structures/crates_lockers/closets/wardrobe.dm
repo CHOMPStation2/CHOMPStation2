@@ -56,7 +56,8 @@
 		/obj/item/clothing/suit/storage/det_trench = 2,
 		/obj/item/clothing/suit/storage/det_trench/grey = 2,
 		/obj/item/clothing/suit/storage/forensics/blue = 2,
-		/obj/item/clothing/suit/storage/forensics/red = 2)
+		/obj/item/clothing/suit/storage/forensics/red = 2,
+		/obj/item/clothing/gloves/forensic = 2) //CHOMP Addition
 
 /obj/structure/closet/wardrobe/pink
 	name = "pink wardrobe"
@@ -99,6 +100,19 @@
 		/obj/item/weapon/storage/fancy/blackcandle_box,
 		/obj/item/godfig = 2,
 		/obj/item/weapon/deck/tarot)
+
+/obj/structure/closet/wardrobe/monastary
+	name = "Monastary wardrobe"
+	desc = "It's a storage unit for approved religious attire."
+	closet_appearance = /decl/closet_appearance/wardrobe/black
+
+	starts_with = list(
+		/obj/item/clothing/suit/unathi/mantle = 2,
+		/obj/item/clothing/suit/unathi/robe = 2,
+		/obj/item/clothing/shoes/sandal = 2,
+		/obj/item/clothing/shoes/footwraps = 2,
+		/obj/item/clothing/shoes/boots/winter = 2,
+		/obj/item/clothing/suit/storage/hooded/wintercoat = 2)
 
 
 /obj/structure/closet/wardrobe/green

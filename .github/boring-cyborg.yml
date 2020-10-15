@@ -8,6 +8,10 @@ labelPRBasedOnFilePath:
   "Type: Map":
     - '**/*.dmm'
 
+  # Add 'Type: Vore' to any changes to any vore files
+  "Type: Vore":
+    - '**/*_vr*'
+
   # Add 'Type: Map' to any changes to image files
   "Type: Icon":
     - '**/*.dmi'
@@ -20,10 +24,10 @@ labelPRBasedOnFilePath:
     - '**/*.mp3'
     - '**/*.wav'
 
-  # Add 'Type: Fluff' to any change to *custom_items*
+  # Add 'Type: Fluff' to any change to *custom_items_yw or loadout_fluffitems_yw*
   "Type: Fluff":
-    - '**/*custom_items*'
-    - '**/*loadout_fluff*'
+    - '**/*custom_items*_yw*'
+    - '**/*loadout_fluff*_yw*'
     - 'config/alienwhitelist.txt'
     - 'config/jobwhitelist.txt'
     - 'config/custom_sprites.txt'

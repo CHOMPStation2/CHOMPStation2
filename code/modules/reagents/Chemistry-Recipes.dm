@@ -586,7 +586,7 @@
 	name = "Plant-B-Gone"
 	id = "plantbgone"
 	result = "plantbgone"
-	required_reagents = list("toxin" = 1, "water" = 4)
+	required_reagents = list("pacid" = 1, "diethylamine" = 4) //YW Edit
 	result_amount = 5
 
 /datum/chemical_reaction/foaming_agent

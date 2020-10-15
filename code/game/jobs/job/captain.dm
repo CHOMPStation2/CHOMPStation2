@@ -19,7 +19,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	req_admin_notify = 1
 	access = list() 			//See get_access()
 	minimal_access = list() 	//See get_access()
-	minimal_player_age = 14
+	minimal_player_age = 31
 	economic_modifier = 20
 
 	minimum_character_age = 25
@@ -29,14 +29,15 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	job_description = "The Site Manager manages the other Command Staff, and through them the rest of the station. Though they have access to everything, \
 						they do not understand everything, and are expected to delegate tasks to the appropriate crew member. The Site Manager is expected to \
 						have an understanding of Standard Operating Procedure, and is subject to it, and legal action, in the same way as every other crew member."
-	alt_titles = list("Overseer"= /datum/alt_title/overseer)
+	alt_titles = list("Overseer"= /datum/alt_title/overseer,"Colony Director"= /datum/alt_title/colonydirector) //CHOMPEdit
 
-/*
+//YW UNCOMMENTINGSTART: REINSTATE LOYALTY IMPLANT
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(src)
-*/
+//YW UNCOMMENTING END
+
 
 /datum/job/captain/get_access()
 	return get_all_station_access().Copy()
@@ -45,7 +46,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 // Captain Alt Titles
 /datum/alt_title/overseer
 	title = "Overseer"
-
+/datum/alt_title/colonydirector	//CHOMPEdit
+	title = "Colony Director"	//CHOMPEdit
 //////////////////////////////////
 //		Head of Personnel
 //////////////////////////////////
@@ -69,9 +71,9 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	ideal_character_age = 50
 
 	outfit_type = /decl/hierarchy/outfit/job/hop
-	job_description = "The Head of Personnel manages the Service department, the Exploration team, and most other civilians. They also \
+	job_description = "The Head of Personnel manages the Service department and most other civilians. They also \
 						manage the Supply department, through the Quartermaster. In addition, the Head of Personnel oversees the personal accounts \
-						of the crew, including their money and access. If necessary, the Head of Personnel is first in line to assume Acting Command."
+						of the crew, including their money and access. If necessary, the Head of Personnel is first in line to assume Acting Command." //YW EDIT
 	alt_titles = list("Crew Resources Officer" = /datum/alt_title/cro)
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
@@ -109,8 +111,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	minimal_player_age = 5
 	economic_modifier = 7
 
-	access = list(access_heads, access_keycard_auth)
-	minimal_access = list(access_heads, access_keycard_auth)
+	access = list(access_heads, access_keycard_auth, access_RC_announce) //YAWN EDIT
+	minimal_access = list(access_heads, access_keycard_auth, access_RC_announce)//YAWN EDIT
 
 	outfit_type = /decl/hierarchy/outfit/job/secretary
 	job_description = "A Command Secretary handles paperwork duty for the Heads of Staff, so they can better focus on managing their departments. \

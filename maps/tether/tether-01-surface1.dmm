@@ -1052,17 +1052,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
 "abK" = (
-/obj/machinery/door/airlock/glass{
-	name = "Looking Glass"
+/obj/machinery/door/airlock/glass_mining{
+	name = "Warehouse"
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/techmaint,
-/area/tether/surfacebase/public_garden_one)
+/turf/simulated/floor/tiled/steel_grid,
+/area/tether/surfacebase/cargo/warehouse)
 "abL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1171,21 +1170,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
 "abY" = (
-/obj/machinery/door/airlock/maintenance/cargo{
-	name = "Mining Maintenance Access";
-	req_one_access = list(48)
+/obj/machinery/door/airlock/glass_mining{
+	name = "Warehouse"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/tether/surfacebase/cargo/mining)
+/turf/simulated/floor/tiled/steel_grid,
+/area/tether/surfacebase/cargo/warehouse)
 "abZ" = (
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -2092,16 +2081,19 @@
 /area/tether/surfacebase/cargo)
 "adC" = (
 /obj/machinery/door/airlock/glass_mining{
-	name = "Warehouse"
+	id_tag = "cargodoor";
+	name = "Cargo Office";
+	req_access = list();
+	req_one_access = list(48,50)
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel_grid,
-/area/tether/surfacebase/cargo/warehouse)
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/cargo/office)
 "adD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -3276,11 +3268,12 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/cargo)
 "afm" = (
-/obj/machinery/door/airlock/glass_mining{
-	name = "Warehouse"
+/obj/machinery/door/airlock/maintenance/cargo{
+	name = "Mining Maintenance Access";
+	req_one_access = list(48)
 	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel_grid,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/cargo/warehouse)
 "afn" = (
 /obj/machinery/door/firedoor/glass,
@@ -5458,10 +5451,16 @@
 	name = "Mining Maintenance Access";
 	req_one_access = list(48)
 	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /turf/simulated/floor/plating,
-/area/tether/surfacebase/cargo/warehouse)
+/area/tether/surfacebase/cargo/mining)
 "ajc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
@@ -8210,20 +8209,11 @@
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/sleep/Dorm_1)
 "anF" = (
-/obj/machinery/door/airlock/glass_mining{
-	id_tag = "cargodoor";
-	name = "Cargo Office";
-	req_access = list();
+/obj/machinery/door/airlock/maintenance/cargo{
+	name = "Mining Maintenance Access";
 	req_one_access = list(48,50)
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/tether/surfacebase/cargo/office)
 "anG" = (
 /obj/machinery/door/airlock/maintenance/rnd{
@@ -10786,7 +10776,6 @@
 "arR" = (
 /obj/structure/table/glass,
 /obj/random/medical/lite,
-/obj/item/device/radio/intercom/department/medbay,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/first_aid_west)
 "arS" = (
@@ -11374,14 +11363,6 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/tether/surfacebase/outside/outside1)
-"asT" = (
-/obj/machinery/door/airlock/maintenance/cargo{
-	name = "Mining Maintenance Access";
-	req_one_access = list(48,50)
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/tether/surfacebase/cargo/office)
 "asU" = (
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -11448,29 +11429,6 @@
 /obj/item/weapon/pickaxe,
 /turf/simulated/floor/plating,
 /area/vacant/vacant_site)
-"atc" = (
-/obj/machinery/door/airlock/maintenance/common{
-	name = "Mining Maintenance Access"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/maintenance/lower/mining_eva)
-"atd" = (
-/obj/machinery/door/airlock{
-	id_tag = "lg_1";
-	name = "Looking Glass"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/techmaint,
-/area/tether/surfacebase/public_garden_one)
 "ate" = (
 /obj/structure/railing{
 	dir = 1
@@ -27163,6 +27121,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/first_west)
+"bbL" = (
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Mining Maintenance Access"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/mining_eva)
 "bbN" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -28728,6 +28695,17 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/construction/vacant_mining_ops)
+"gaK" = (
+/obj/machinery/door/airlock/glass{
+	name = "Looking Glass"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/public_garden_one)
 "ghg" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 5
@@ -29567,6 +29545,18 @@
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
+/area/tether/surfacebase/public_garden_one)
+"mdP" = (
+/obj/machinery/door/airlock{
+	id_tag = "lg_1";
+	name = "Looking Glass"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/public_garden_one)
 "mon" = (
 /obj/effect/floor_decal/borderfloor{
@@ -35565,7 +35555,7 @@ ajS
 ajS
 ajS
 ajS
-atd
+mdP
 ajS
 ajS
 ajS
@@ -35706,7 +35696,7 @@ bdC
 akU
 ali
 sbD
-abK
+gaK
 orF
 ajS
 aah
@@ -41807,7 +41797,7 @@ aaG
 aaM
 aaP
 aaY
-abY
+ajb
 ecq
 nDD
 jPk
@@ -41960,7 +41950,7 @@ amM
 abT
 abT
 abT
-atc
+bbL
 abT
 ahX
 aiY
@@ -42944,7 +42934,7 @@ aar
 aaX
 kxe
 sNu
-adC
+abK
 abP
 acd
 acy
@@ -43086,14 +43076,14 @@ aar
 abj
 abo
 abV
-afm
+abY
 ace
 ach
 acH
 acF
 adS
 aeJ
-ajb
+afm
 aIA
 agM
 ahc
@@ -43236,7 +43226,7 @@ acG
 adS
 agj
 acc
-asT
+anF
 amc
 amc
 amc
@@ -43661,7 +43651,7 @@ acL
 acP
 adv
 adB
-anF
+adC
 adQ
 aea
 aeg

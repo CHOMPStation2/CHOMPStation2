@@ -11,3 +11,8 @@
 	var/custom_ask = null
 	var/custom_exclaim = null
 	var/custom_whisper = null
+
+//YW Add Start
+/mob
+	var/wingdings = 0
+//Yw Add End

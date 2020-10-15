@@ -152,7 +152,7 @@
 	icon_state = "neurotoxin"
 	damage = 5
 	damage_type = BIOACID
-	agony = 80
+	agony = 60 //CHOMPedit lowered agony damage
 	check_armour = "bio"
 	armor_penetration = 25	// It's acid-based
 

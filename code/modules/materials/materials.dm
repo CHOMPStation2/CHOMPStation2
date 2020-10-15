@@ -922,6 +922,7 @@ var/list/name_to_material
 	sheet_singular_name = null
 	sheet_plural_name = "pile"
 	pass_stack_colors = TRUE
+	supply_conversion_value = 3 //YW Adds: logs worth points
 
 /datum/material/wood/log/sif
 	name = MAT_SIFLOG
@@ -1043,7 +1044,9 @@ var/list/name_to_material
 	protectiveness = 3 // 13%
 	conductive = 0
 
-/datum/material/carpet
+//CHOMPstation Removal Start: Moved to materials_ch and changed to allow for material var
+/*
+/material/carpet
 	name = "carpet"
 	display_name = "comfy"
 	use_name = "red upholstery"
@@ -1055,6 +1058,8 @@ var/list/name_to_material
 	sheet_plural_name = "tiles"
 	protectiveness = 1 // 4%
 	conductive = 0
+*/
+//CHOMPstation Removal End
 
 /datum/material/cotton
 	name = "cotton"

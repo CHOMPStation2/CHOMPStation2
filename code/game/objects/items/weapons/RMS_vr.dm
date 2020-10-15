@@ -169,7 +169,8 @@
 									5;new /obj/item/stack/material/phoron,
 									5;new /obj/item/stack/material/silver,
 									5;new /obj/item/stack/material/gold,
-									1;new /obj/item/stack/material/diamond)
+									1;new /obj/item/stack/material/diamond
+									)
 				if(overcharge && emagged)
 					product = pick(1;new /obj/item/stack/rods,
 									5;new /obj/item/device/fbp_backup_cell,
@@ -183,7 +184,8 @@
 									10;new /obj/item/clothing/shoes/clown_shoes,
 									10;new /obj/item/clothing/mask/gas/clown_hat,
 									10;new /obj/item/device/pda/clown,
-									1;new /mob/living/simple_mob/vore/catgirl)
+									1;new /mob/living/simple_mob/vore/catgirl
+									)
 					spark_system.start()
 	product.loc = get_turf(A)
 

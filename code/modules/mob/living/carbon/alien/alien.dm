@@ -42,9 +42,9 @@
 /mob/living/carbon/alien/u_equip(obj/item/W as obj)
 	return
 
-/mob/living/carbon/alien/Stat()
+/*/mob/living/carbon/alien/Stat() //CHOMPedit. Commented out because this doesn't work properly for larva, when it should. Will probably give Diona their own kind of they don't have one
 	..()
-	stat(null, "Progress: [amount_grown]/[max_grown]")
+	stat(null, "Progress: [amount_grown]/[max_grown]") */
 
 /mob/living/carbon/alien/restrained()
 	return 0

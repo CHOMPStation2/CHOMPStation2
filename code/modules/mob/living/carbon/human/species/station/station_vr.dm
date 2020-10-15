@@ -6,8 +6,8 @@
 	tail = "tail"
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
-	//darksight = 8
-	//slowdown = -0.5
+	darksight = 8
+	slowdown = -0.5
 	//brute_mod = 1.15
 	//burn_mod =  1.15
 	//gluttonous = 1
@@ -17,7 +17,7 @@
 	color_mult = 1
 
 	min_age = 18
-	max_age = 80
+	max_age = 110
 
 	blurb = "There are two subspecies of Sergal; Southern and Northern. Northern sergals are a highly aggressive race \
 	that lives in the plains and tundra of their homeworld. They are characterized by long, fluffy fur bodies with cold colors; \
@@ -28,7 +28,8 @@
 	lifespan, but due to their lust for violence, only a handful have ever survived beyond the age of 80, such as the infamous and \
 	legendary General Rain Silves who is claimed to have lived to 5000."
 
-	wikilink="https://wiki.vore-station.net/Backstory#Sergal"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Sergal"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
 
@@ -82,7 +83,7 @@
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
 	min_age = 18
-	max_age = 80
+	max_age = 110
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed \
@@ -92,7 +93,8 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-	wikilink="https://wiki.vore-station.net/Backstory#Akula"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Akula"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
@@ -128,7 +130,7 @@
 	inherent_verbs = list(/mob/living/proc/shred_limb,/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
-	max_age = 80
+	max_age = 110
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
 	in the Vilous system. Unlike sergals whom they share a star system with, their species is a very peaceful one. They possess remarkable \
@@ -136,7 +138,8 @@
 	over and over again. Consequently, they struggle to make copies of same things. Both genders have a voice that echoes a lot. Their natural \
 	tone oscillates between tenor and soprano. They are excessively noisy when they quarrel in their native language."
 
-	wikilink="https://wiki.vore-station.net/Backstory#Nevrean"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Nevrean"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
@@ -166,9 +169,10 @@
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
 
 	min_age = 18
-	max_age = 80
+	max_age = 110
 
 	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that \
@@ -177,7 +181,8 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-	wikilink="https://wiki.vore-station.net/Zorren"
+//CHOMPEdit: Removed wiki link	
+	//wikilink="https://yawn.izac.live/Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 
@@ -222,7 +227,8 @@
 	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
     which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
-	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
@@ -235,7 +241,7 @@
 	base_color = "#B43214"
 
 	min_age = 18
-	max_age = 80
+	max_age = 110
 
 /datum/species/unathi
 	mob_size = MOB_MEDIUM //To allow normal mob swapping
@@ -248,7 +254,9 @@
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
 	descriptors = list()
-	wikilink="https://wiki.vore-station.net/Unathi"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Unathi"
 
 /datum/species/tajaran
 	spawn_flags = SPECIES_CAN_JOIN
@@ -260,7 +268,9 @@
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
 	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
-	wikilink="https://wiki.vore-station.net/Tajaran"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Tajaran"
 	agility = 90
 
 /datum/species/skrell
@@ -271,14 +281,18 @@
 	min_age = 18
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
-	wikilink="https://wiki.vore-station.net/Skrell"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Skrell"
 
 /datum/species/zaddat
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN CHOMPstation edit: disabled pending staff discussion
 	min_age = 18
 	gluttonous = 0
 	descriptors = list()
-	// no wiki link exists for Zaddat yet
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Zaddat"
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
@@ -289,12 +303,14 @@
 		H.equip_to_slot_or_del(L, slot_in_backpack)
 
 /datum/species/diona
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
-	wikilink="https://wiki.vore-station.net/Diona"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Diona"
 
 /datum/species/teshari
-	mob_size = MOB_MEDIUM //To allow normal mob swapping
+	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
 	spawn_flags = SPECIES_CAN_JOIN
 	icobase = 'icons/mob/human_races/r_seromi_vr.dmi'
 	deform = 'icons/mob/human_races/r_seromi_vr.dmi'
@@ -305,7 +321,9 @@
 	swap_flags = ~HEAVY
 	gluttonous = 0
 	descriptors = list()
-	wikilink="https://wiki.vore-station.net/Teshari"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Teshari"
 	agility = 90
 
 	inherent_verbs = list(
@@ -317,7 +335,9 @@
 
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-	wikilink="https://wiki.vore-station.net/Promethean"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Promethean"
 
 /datum/species/human
 	color_mult = 1
@@ -326,14 +346,16 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 	min_age = 18
 	base_color = "#EECEB3"
-	wikilink="https://wiki.vore-station.net/Human"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Human"
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
 
 /datum/species/vox
 	gluttonous = 0
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
@@ -341,7 +363,9 @@
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
-	wikilink="https://wiki.vore-station.net/Vox"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Vox"
 
 datum/species/harpy
 	name = SPECIES_RAPALA
@@ -367,7 +391,8 @@ datum/species/harpy
 	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
-	wikilink="https://wiki.vore-station.net/Backstory#Rapala"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Rapala"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/rapala)
 
@@ -393,7 +418,9 @@ datum/species/harpy
 	but next to no verifiable evidence to their existence. However, they have recently been more verifiably \
 	documented in the Virgo system, following a mining bombardment of Virgo 3. The crew of NSB Adephagia have \
 	taken to calling these creatures 'Shadekin', and the name has generally stuck and spread. "		//TODO: Something more fitting for black-eyes
-	wikilink = "https://wiki.vore-station.net/Shadekin"
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink = "https://wiki.vore-station.net/Shadekin"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/shadekin)
 
 	language = LANGUAGE_SHADEKIN
@@ -431,7 +458,7 @@ datum/species/harpy
 	heat_level_3 = 1150
 
 	flags =  NO_SCAN
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled maybe forever
 
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
 

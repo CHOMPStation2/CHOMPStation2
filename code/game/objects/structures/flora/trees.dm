@@ -154,6 +154,12 @@
 /obj/structure/flora/tree/pine/choose_icon_state()
 	return "[base_state]_[rand(1, 3)]"
 
+//CHOMPStation Addition Start 15/2/20 TFF - Holodeck variation trees, drop no wood.
+/obj/structure/flora/tree/pine/holo
+	product = null
+	product_amount = 0
+//CHOMPStation Addition End
+
 
 /obj/structure/flora/tree/pine/xmas
 	name = "xmas tree"
@@ -215,6 +221,12 @@
 /obj/structure/flora/tree/dead/choose_icon_state()
 	return "[base_state]_[rand(1, 6)]"
 
+//CHOMPStation Addition Start 15/2/20 TFF - Holodeck variation trees, drop no wood.
+/obj/structure/flora/tree/dead/holo
+	product = null
+	product_amount = 0
+//CHOMPStation Addition End
+
 // Small jungle trees
 
 /obj/structure/flora/tree/jungle_small
@@ -246,6 +258,41 @@
 
 /obj/structure/flora/tree/jungle/choose_icon_state()
 	return "[base_state][rand(1, 6)]"
+
+// Winter Trees
+
+/obj/structure/flora/tree/winter
+	icon = 'icons/obj/flora/wintertree.dmi'
+	icon_state = "tree"
+	base_state = "tree"
+	product = /obj/item/stack/material/log
+	product_amount = 20
+	health = 800
+	max_health = 800
+	pixel_x = -48
+	pixel_y = -16
+	shake_animation_degrees = 2
+
+/obj/structure/flora/tree/winter/New()
+	..()
+	icon_state = "[base_state][rand(1, 6)]"
+
+
+/obj/structure/flora/tree/winter1
+	icon = 'icons/obj/flora/wintertreesmall-1.dmi'
+	icon_state = "tree"
+	base_state = "tree"
+	product = /obj/item/stack/material/log
+	product_amount = 20
+	health = 800
+	max_health = 800
+	pixel_x = -48
+	pixel_y = -16
+	shake_animation_degrees = 2
+
+/obj/structure/flora/tree/winter1/New()
+	..()
+	icon_state = "[base_state][rand(1, 6)]"
 
 // Sif trees
 

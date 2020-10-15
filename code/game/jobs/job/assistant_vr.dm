@@ -22,7 +22,6 @@
 					  "Lab Assistant" = /datum/alt_title/intern_sci,
 					  "Security Cadet" = /datum/alt_title/intern_sec,
 					  "Jr. Cargo Tech" = /datum/alt_title/intern_crg,
-					  "Jr. Explorer" = /datum/alt_title/intern_exp,
 					  "Server" = /datum/alt_title/server)
 	job_description = "An Intern does whatever is requested of them, often doing so in process of learning \
 						another job. Though they are part of the crew, they have no real authority."
@@ -60,12 +59,6 @@
 	title_blurb = "A Jr. Cargo Tech attempts to provide whatever the Cargo department needs. They are not proper Cargo Technicians, and are \
 					often in training to become a Cargo Technician. A Jr. Cargo Tech has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/cargo
-
-/datum/alt_title/intern_exp
-	title = "Jr. Explorer"
-	title_blurb = "A Jr. Explorer attempts to provide whatever the Exploration department needs. They are not proper Explorers, and are \
-					often in training to become an Explorer. A Jr. Explorer has no real authority."
-	title_outfit = /decl/hierarchy/outfit/job/assistant/explorer
 
 /datum/alt_title/server
 	title = "Server"

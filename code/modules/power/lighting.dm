@@ -313,6 +313,11 @@ var/global/list/light_type_cache = list()
 	light_type = /obj/item/weapon/light/tube/large
 	shows_alerts = FALSE	//VOREStation Edit
 
+//YW ADDITION START
+/obj/machinery/light/spot/no_nightshift
+	nightshift_allowed = FALSE
+//YW ADDITION END
+
 /obj/machinery/light/spot/flicker
 	auto_flicker = TRUE
 
@@ -327,6 +332,8 @@ var/global/list/light_type_cache = list()
 /obj/machinery/light/New(atom/newloc, obj/machinery/light_construct/construct = null)
 	..(newloc)
 
+	if(start_with_cell && !no_emergency)
+		cell = new/obj/item/weapon/cell/emergency_light(src)
 	if(construct)
 		start_with_cell = FALSE
 		status = LIGHT_EMPTY
@@ -457,6 +464,7 @@ var/global/list/light_type_cache = list()
 	else
 		update_use_power(USE_POWER_IDLE)
 		set_light(0)
+		update_icon()
 
 	update_active_power_usage((light_range * light_power) * LIGHTING_POWER_FACTOR)
 
@@ -518,6 +526,7 @@ var/global/list/light_type_cache = list()
 			. += "The [fitting] has been smashed."
 	if(cell)
 		. += "Its backup power charge meter reads [round((cell.charge / cell.maxcharge) * 100, 0.1)]%."
+
 
 /obj/machinery/light/proc/get_fitting_name()
 	var/obj/item/weapon/light/L = light_type

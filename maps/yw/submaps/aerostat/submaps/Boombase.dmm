@@ -1,0 +1,65 @@
+"aa" = (/turf/template_noop,/area/template_noop)
+"ab" = (/turf/template_noop,/area/submap/virgo2/BoomBase)
+"ac" = (/obj/effect/decal/remains/human,/turf/template_noop,/area/submap/virgo2/BoomBase)
+"ad" = (/turf/space,/area/submap/virgo2/BoomBase)
+"ae" = (/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"af" = (/obj/structure/girder,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"ag" = (/obj/structure/girder,/obj/item/stack/rods,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"ah" = (/turf/simulated/wall/bor4,/area/submap/virgo2/BoomBase)
+"ai" = (/obj/structure/closet/crate/secure/phoron,/obj/fiftyspawner/phoron,/turf/simulated/floor/plating,/area/submap/virgo2/BoomBase)
+"aj" = (/obj/structure/closet/crate/secure/phoron,/obj/fiftyspawner/phoron,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"ak" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/ash,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"al" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"am" = (/obj/effect/decal/cleanable/dirt,/obj/effect/spider,/obj/item/weapon/material/shard,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"an" = (/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"ao" = (/mob/living/simple_mob/animal/space/jelly,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"ap" = (/obj/machinery/portable_atmospherics/canister/empty/phoron,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"aq" = (/obj/machinery/portable_atmospherics/canister/empty/phoron,/obj/item/weapon/material/shard,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"ar" = (/obj/effect/decal/remains/human,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"as" = (/obj/item/weapon/material/shard,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"at" = (/obj/effect/spider/stickyweb,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"au" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"av" = (/obj/effect/decal/cleanable/ash,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"aw" = (/obj/effect/decal/cleanable/dirt,/obj/effect/spider/stickyweb,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"ax" = (/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/animal/space/jelly,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"ay" = (/obj/structure/table,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"az" = (/obj/effect/decal/cleanable/dirt,/obj/structure/table/standard,/obj/item/weapon/tank/phoron,/obj/item/weapon/fuel_assembly/phoron,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"aA" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/ash,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"aB" = (/obj/effect/decal/remains/human,/turf/space,/area/submap/virgo2/BoomBase)
+"aC" = (/obj/item/weapon/material/shard,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"aD" = (/obj/effect/decal/cleanable/ash,/turf/simulated/floor/tiled/techfloor/bor4,/area/submap/virgo2/BoomBase)
+"aE" = (/obj/effect/decal/cleanable/dirt,/turf/space,/area/submap/virgo2/BoomBase)
+"aF" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/ash,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"aG" = (/obj/cryogaia_away_spawner/aerostat_surface,/turf/space,/area/submap/virgo2/BoomBase)
+"aH" = (/obj/effect/decal/cleanable/dirt,/obj/cryogaia_away_spawner/aerostat_surface,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"aI" = (/obj/effect/decal/cleanable/ash,/turf/space,/area/submap/virgo2/BoomBase)
+"aJ" = (/obj/structure/ghost_pod/manual/lost_drone/dogborg,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"aK" = (/obj/item/device/transfer_valve,/turf/space,/area/submap/virgo2/BoomBase)
+"aL" = (/obj/item/weapon/material/shard,/turf/space,/area/submap/virgo2/BoomBase)
+"aM" = (/obj/effect/spider/stickyweb,/obj/item/weapon/material/shard,/turf/space,/area/submap/virgo2/BoomBase)
+"aY" = (/obj/effect/spider/stickyweb,/obj/effect/decal/cleanable/ash,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"aZ" = (/obj/effect/decal/remains/human,/obj/effect/decal/cleanable/ash,/turf/simulated/floor/plating/bor4,/area/submap/virgo2/BoomBase)
+"ba" = (/obj/item/stack/rods,/turf/simulated/wall/bor4,/area/submap/virgo2/BoomBase)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaabacabadadadadadadadadadadadadadadadadadadadaBaa
+aaababadadadahahahahahahahahahahahahahahahafagadaa
+aaababadadbaahaiajauakalamanaoapaqasatagadadadadaa
+aaababadadahaFauaualalauauanarananaeadadadadadadaa
+aaabadadadahauauaHalauafaEadadadadadadadadadadadaa
+aaabadadadahawauauauaEaEaEadadadadadadadadadadadaa
+aaadadadadahalalauafauaEadadadadadadadaGadahaeadaa
+aaadadadadahaxalaEaEaEadadadaIadadadadadadahafadaa
+aaadadadadahayalaEanadadadadadadadadadadadahafadaa
+aaadadadadahazaAadadadadadadadadadadadadadahafafaa
+aaabadadadahanaCadadadadadadadaKaLadadadadahafaeaa
+aaabadadavahaJanadadadadadadadadadadadadadadadadaa
+aaabadadadahaDanadadadadadadadadadadadadadadaeadaa
+aaabadadadafaeagadadadaGadadadadadadadadadaeaMadaa
+aaadadadadadadaeadadadadadadadadadadadaeaeataeadaa
+aaadadadadadadafaeadahaeaeaeadadadadaeaeaYaZahadaa
+aaadadadadadadaeafadadahahaeadadadadaeahahbaahadaa
+aaabababadadadadadadadadadadadadadadadadadadadaBaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

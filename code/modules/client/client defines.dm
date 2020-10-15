@@ -61,6 +61,7 @@
 
 	var/global/obj/screen/click_catcher/void
 
+	control_freak = 0 //CHOMPedit KSC 1/30/20 - This enables all clientside options for Players.
 	// List of all asset filenames sent to this client by the asset cache, along with their assoicated md5s
 	var/list/sent_assets = list()
 	/// List of all completed blocking send jobs awaiting acknowledgement by send_asset

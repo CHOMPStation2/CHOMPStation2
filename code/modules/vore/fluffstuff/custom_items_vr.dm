@@ -26,6 +26,7 @@
 */
 
 //For general use
+//YW EDITS START: EXTENSIVELY MODIFIED -KK
 /obj/item/device/modkit_conversion
 	name = "modification kit"
 	desc = "A kit containing all the needed tools and parts to modify a suit and helmet."
@@ -85,6 +86,7 @@
 		to_type = to_suit
 		keycheck = TRUE
 	else
+		to_chat(user, "<span class='notice'>This kit doesn't seem to have any tools or parts for whatever you're trying to use it on.</span>") //new error message
 		return
 	if(!isturf(O.loc))
 		to_chat(user, "<span class='warning'>You need to put \the [O] on the ground, a table, or other worksurface before modifying it.</span>")
@@ -138,6 +140,7 @@
 	parts -= cost
 	if(!parts && delete_on_empty)
 		qdel(src)
+//YW EDITS END
 
 //DEBUG ITEM
 /obj/item/device/modkit_conversion/fluff/debug_gunkit
@@ -555,7 +558,7 @@
 		sleep(30)
 		visible_message("<span class='warning'>The [name] shatters into dust!</span>")
 		if(owner_c)
-			to_chat(owner_c, "<span class='notice'>The HAVENS system is notified of your demise via \the [name].</span>")
+			to_chat(owner_c, "<span class='notice'>A signal is sent notifying of your demise by \the [name].</span>")
 		update_state(3)
 		name = "broken [initial(name)]"
 		desc = "This seems like a necklace, but the actual pendant is missing."
@@ -566,37 +569,30 @@
 	update_icon()
 
 /obj/item/weapon/paper/khcrystal_manual
-	name = "KH-LC91-1 manual"
-	info = {"<h4>KH-LC91-1 Life Crystal</h4>
+	name = "NT-LC91-1 manual"
+	info = {"<h4>NT-LC91-1 Life Crystal</h4>
 	<h5>Usage</h5>
 	<ol>
-		<li>Hold new crystal in hand.</li>
-		<li>Make fist with that hand.</li>
-		<li>Wait 1 second.</li>
+		<li>Hold unlinked crystal in hand.</li>
+		<li>Make fist around the crystal, squeezing down gently.</li>
+		<li>Hold for one second. If performed correctly, the crystal will glow blue.</li>
 	</ol>
 	<br />
 	<h5>Purpose</h5>
-	<p>The Kitsuhana Life Crystal is a small device typically worn around the neck for the purpose of reporting your status to the HAVENS (Kitsuhana's High-AVailability ENgram Storage) system, so that appropriate measures can be taken in the case of your body's demise. The whole device is housed inside a pleasing-to-the-eye elongated diamond.</p>
-	<p>Upon your body's desmise, the crystal will send a transmission to HAVENS. Depending on your membership level, the appropriate actions can be taken to ensure that you are back up and enjoying existence as soon as possible.</p>
+	<p>The NanoTrasen Life Crystal is a small device typically worn around the neck for the purpose of reporting your status to the off-world mind and body backup systems, so that appropriate measures can be taken in the case of your body's demise. The whole device is housed inside a pleasing-to-the-eye elongated quartz crystal.</p>
+	<p>Upon your body's desmise, the crystal will send a transmission to the location specified in your employee file.</p>
 
-	<p>Nanotrasen has negotiated a <i>FREE</i> Star membership for you in the HAVENS system, though an upgrade can be obtained depending on your citizenship and reputation level.</p>
-
-	As a reminder, the membership levels in HAVENS are:
-	<ul>
-		<li><b>HAVENS Star:</b> Upon reciving a signal from a transmitter indicating body demise, HAVENS will attempt to contact the owner for 48 hours, before starting the process of resleeving the owner into a new body they selected when registering their HAVENS membership.</li>
-		<li><b>HAVENS Nebula:</b> After the contact period from the Star service has expired, an agent will be alotted a HAVENS spacecraft, and will attempt to locate your remains, and any belongings you had, for up to one week. If possible, any more recent memory recordings or mindstates will be recovered before your resleeving. (Great for explorers! Don't miss out on anything you discovered!)</li>
-		<li><b>HAVENS Galaxy:</b> Upon reciving the signal from the Star service, a HAVENS High-Threat Response Team will be alotted a HAVENS FTL-capable Interdictor-class spacecraft and dispatched to your last known position to locate and recover your remains, plus any belongings. You will be resleeved on-site to continue where you left off.</li>
-	</ul>
+	<p>While NanoTrasen distributes these devices to their employees for free, they do not provide revival services with the crystals. It is the employee's responsibility to either negotiate a service with NanoTrasen or from other companies that provide the service. </p>
 	<br />
 	<h5>Technical</h5>
-	<p>The Life Crystal is a small 5cm long diamond containing four main components which are visible inside the translucent gem.</p>
+	<p>The Life Crystal is a small 5cm long quartz containing four main components which are visible inside the translucent gem.</p>
 
 	From tip to top, they are:
 	<ol>
-		<li><b>Qubit Bucket:</b> This small cube contains 200 bits worth of quantum-entangled bits for transmitting to HAVENS. QE transmission technologies cannot be jammed or interfered with, and are effectively instant over any distance.
+		<li><b>Qubit Bucket:</b> This small cube contains 200 bits worth of quantum-entangled bits for transmitting to the individual service. QE transmission technologies cannot be jammed or interfered with, and are effectively instant over any distance.
 		<li><b>Antimatter Bottle:</b> This tiny antimatter vessel is required to power the transmitter for the time it takes to transmit the signal to HAVENS. The inside of the crystal is thick enough to block any alpha or beta particles emitted when this antimatter contacts matter, however the crystal will be destroyed when activated.
 		<li><b>Decay Reactor:</b> This long-term microreactor will last for around one month and provide sufficient power to power all but the transmitter. This power is required for containing the antimatter bottle.
-		<li><b>Sensor Suite:</b> The sensor that tracks the owner's life-state, such that it can be transmitted back to HAVENS when necessary.
+		<li><b>Sensor Suite:</b> The sensor that tracks the owner's life-state, such that it can be transmitted when necessary.
 	</ol>
 	<p>The diamond itself is coated in a layer of graphene, to give it a pleasant rainbow finish. This also serves as a conductor that, if broken, will discharge the antimatter bottle immediately as it is unsafe to do so any point after the crystal is broken via physical means.</p>
 	<br />
@@ -608,7 +604,7 @@
 	name = "life crystal case"
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "khlifebox"
-	desc = "This case can only hold the KH-LC91-1 and a manual."
+	desc = "This case can only hold the NT-LC91-1 and a manual."
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	storage_slots = 2
 	can_hold = list(/obj/item/weapon/paper/khcrystal_manual, /obj/item/clothing/accessory/collar/khcrystal)

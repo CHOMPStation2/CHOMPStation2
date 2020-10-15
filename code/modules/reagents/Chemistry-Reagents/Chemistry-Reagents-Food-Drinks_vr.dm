@@ -112,7 +112,6 @@
 			M.adjust_nutrition(alt_nutriment_factor * removed)
 
 
-
 /datum/reagent/nutriment/magicdust/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	playsound(M, 'sound/items/hooh.ogg', 50, 1, -1)

@@ -12,6 +12,8 @@ var/list/whitelist = list()
 	if(!whitelist.len)	whitelist = null
 
 /proc/check_whitelist(mob/M /*, var/rank*/)
+	if(!config.usewhitelist)
+		return 1
 	if(!whitelist)
 		return 0
 	return ("[M.ckey]" in whitelist)

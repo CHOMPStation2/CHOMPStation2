@@ -84,3 +84,32 @@
 	else
 		starts_with += /obj/item/weapon/storage/backpack/satchel/eng
 	return ..()
+
+
+
+/obj/structure/closet/lumber
+	name = "Lumberjack's equipment"
+	desc = "It's a storage unit for Lumberjack equpiment, though it seems the lock is broken."
+	closet_appearance = /decl/closet_appearance/secure_closet/lumber
+
+	starts_with = list(
+		/obj/item/device/radio/headset/headset_mine,
+		/obj/item/clothing/under/overalls,
+		/obj/item/clothing/gloves/light_brown,
+		/obj/item/clothing/gloves/black,
+		/obj/item/clothing/shoes/black,
+		/obj/item/weapon/material/knife/machete/hatchet,
+		/obj/item/weapon/gun/energy/kinetic_accelerator,
+		/obj/item/device/flashlight/lantern,
+		/obj/item/weapon/shovel,
+		/obj/item/clothing/glasses/material,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/miner,
+		/obj/item/clothing/shoes/boots/winter/mining,
+		/obj/item/stack/marker_beacon/thirty)
+
+/obj/structure/closet/lumber/Initialize()
+	if(prob(50))
+		starts_with += /obj/item/weapon/storage/backpack/industrial
+	else
+		starts_with += /obj/item/weapon/storage/backpack/satchel/eng
+	return ..()

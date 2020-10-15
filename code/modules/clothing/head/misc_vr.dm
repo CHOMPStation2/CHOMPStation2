@@ -1,5 +1,5 @@
 /obj/item/clothing/head/centhat/customs
-	desc = "A formal hat for SolCom Customs Officers."
+	desc = "A formal hat for SolGov Customs Officers." //YW EDIT: SolGov
 
 /obj/item/clothing/head/fish
 	name = "fish skull"

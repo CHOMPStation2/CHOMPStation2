@@ -80,17 +80,17 @@
 		var/mob/living/carbon/human/X = user
 		if(istype(X.species, /datum/species/xenos))
 			if(src.locked || src.welded)
-				visible_message("<span class='alium'>\The [user] begins digging into \the [src] internals!</span>")
+				visible_message("<span class='alium'>\The [user] begins tearing into \the [src] internals!</span>") //CHOMPedit . edited message to make it more violent
 				src.do_animate("deny")
-				if(do_after(user,5 SECONDS,src))
-					visible_message("<span class='danger'>\The [user] forces \the [src] open, sparks flying from its electronics!</span>")
+				if(do_after(user,30 SECONDS,src)) //CHOMPedit . Increased time to force open welded door for alien
+					visible_message("<span class='danger'>\The [user] tears \the [src] open, sparks flying from its electronics!</span>") //CHOMPedit
 					src.do_animate("spark")
 					playsound(src, 'sound/machines/door/airlock_creaking.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS)
 					src.locked = 0
 					src.welded = 0
 					update_icon()
 					open(1)
-					src.emag_act()
+					src.set_broken() //CHOMPedit . Changed action to make ripping open the airlock more realistic
 			else if(src.density)
 				visible_message("<span class='alium'>\The [user] begins forcing \the [src] open!</span>")
 				if(do_after(user, 5 SECONDS,src))
@@ -241,6 +241,8 @@
 	explosion_resistance = 5
 	opacity = 0
 	glass = 1
+	open_sound_powered = 'sound/machines/hall1o.ogg' //CHOMPEdit
+	close_sound_powered = 'sound/machines/hall1c.ogg' //CHOMPEdit
 
 /obj/machinery/door/airlock/centcom
 	name = "Centcom Airlock"
@@ -1430,10 +1432,10 @@ About the new airlock wires panel:
 		//update the door's access to match the electronics'
 		secured_wires = electronics.secure
 		if(electronics.one_access)
-			req_access.Cut()
+			if(req_access) req_access.Cut()	//YWEdit
 			req_one_access = src.electronics.conf_access
 		else
-			req_one_access.Cut()
+			if(req_one_access) req_one_access.Cut()	//YWEdit
 			req_access = src.electronics.conf_access
 
 		//get the name from the assembly

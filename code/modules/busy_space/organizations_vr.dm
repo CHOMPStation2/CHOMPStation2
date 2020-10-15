@@ -114,7 +114,7 @@
 		"NAS Zeus orbiting Virgo-Prime",
 		"NIB Posideon in Alpha Centauri",
 		"NTB Anur on Virgo-Prime",
-		"the colony at Virgo-3B",
+		"the ruins of Virgo-3B", //YW EDIT
 		"the phoron refinery in Vilous",
 		"a dockyard orbiting Virgo-Prime",
 		"an asteroid orbiting Virgo 3",
@@ -610,7 +610,44 @@
 						"an emergency nav bouy",
 						"the USDF Naval Academy on Earth",
 						"Fort Rain on Tal")
-
+//YW Change start, as we are not planning on removing sol gov like vore, we will keep this here until we know what to do with it.
+/datum/lore/organization/mil/oni
+	name = "SolGov Office of Naval Intelligence"
+	short_name = "" // This is blank on purpose. Otherwise they call the ships "ONI ONI Name"
+	desc = "The Office of Naval Intelligence is SolGov's eyes and ears in the galaxy's affairs. Despite its name, and despite its \
+			usual association with the USDF, the Office of Naval Intelligence does not fall under the command of the military. From espionage \
+			to archeological research, ONI's work provides SolGov with the knowledge and technology it requires to advance both military and \
+			civilian interests across the galaxy."
+	history = "ONI was originally created by the consolidation of several military intelligence agencies from Sol during the Sol-Hegemony war. \
+			The USDF's victory in that war was largely accredited to intelligence and technology advancements provided by ONI during that time, \
+			most notably of which was the reverse-engineering of Unathi vessels, allowing the production of countermeasures that played a crucial \
+			role during in the late stages of the conflict. After the war, ONI's resources were pooled into numerous top secret projects; much of \
+			which remains unknown or outright denied to the public even today. Among their suspected activities include exploration, weapons \
+			development, xenoarcheology, xenobiology, corporate espionage, and manipulation of political affairs."
+	work = "espionage, piracy suppression, xeno research, and various other black projects"
+	headquarters = "Paris, Earth"
+	motto = "The truth will set you free."
+	ship_prefixes = list("ONI" = "classified", "ONI" = "archeological", "ONI" = "exploration", "ONI" = "logistic") // It's all ONI but let's mix up what missions they do.
+	ship_names = list("Bastille",
+					"Fant�me",
+					"Harpocrates",
+					"Hoenir",
+					"Mata Hari",
+					"Midsummer Night",
+					"Mirage",
+					"Persephone", // Director Ixchel Kisoda's personal research ship
+					"Versailles")
+	destination_names = list("parts unknown",
+							"none of your business",
+							"uncharted space",
+							"an undisclosed location",
+							"facility 8492",
+							"you don't want to know",
+							"if told you I'd have to kill you",
+							"... wait, why am I even telling you this? Just let me pass",
+							"stop asking questions")
+//YW Change stop
+/* Space foxes: deleted. Keeping them commented for historical reasons. -YW
 /datum/lore/organization/gov/kitsuhana
 	name = "Kitsuhana Heavy Industries"
 	short_name = "Kitsuhana"
@@ -664,6 +701,7 @@
 						"a Kitsuhana ringworld in Lund VI",
 						"a Kitsuhana ringworld in Dais IX",
 						"a Kitsuhana ringworld in Leibert II-b")
+*/
 
 /datum/lore/organization/gov/ares
 	name = "Ares Confederation"

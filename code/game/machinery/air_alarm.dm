@@ -27,7 +27,7 @@
 /obj/machinery/alarm
 	name = "alarm"
 	desc = "Used to control various station atmospheric systems. The light indicates the current air status of the area."
-	icon = 'icons/obj/monitors_vr.dmi' //VOREStation Edit - Other icons
+	icon = 'icons/obj/monitors_vr.dmi' //CHOMPEdit: Continues using new air alarm sprite, contrary to YW
 	icon_state = "alarm0"
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER

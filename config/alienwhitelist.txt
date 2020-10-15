@@ -12,10 +12,6 @@ alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
 crossexonar - Protean
-chillyfang - Black-Eyed Shadekin
-cgr - Protean
-draycu - Vox
-flaktual - Vox
 funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
@@ -64,4 +60,3 @@ xioen - Xenochimera
 xonkon - Protean
 zalvine - Shadekin Empathy
 zammyman215 - Vox
-stackerrobot - Protean

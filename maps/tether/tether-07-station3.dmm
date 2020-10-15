@@ -2189,13 +2189,13 @@
 /turf/simulated/wall/r_wall,
 /area/quartermaster/belterdock/surface_mining_outpost_shuttle_hangar)
 "adE" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -28;
-	pixel_y = 0
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_l"
 	},
-/obj/machinery/recharge_station,
-/turf/simulated/floor/tiled,
-/area/quartermaster/belterdock/surface_mining_outpost_shuttle_hangar)
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/mining_outpost/shuttle)
 "adF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -2206,14 +2206,12 @@
 /turf/simulated/floor/tiled/monotile,
 /area/tether/exploration)
 "adG" = (
-/obj/structure/bed/chair/office/light{
-	dir = 4
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
 	},
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/belterdock/surface_mining_outpost_shuttle_hangar)
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/mining_outpost/shuttle)
 "adH" = (
 /obj/machinery/light{
 	dir = 4
@@ -2226,23 +2224,9 @@
 /turf/simulated/wall/r_wall,
 /area/security/warden)
 "adJ" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = 24
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/belterdock)
-"adK" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8;
-	icon_state = "propulsion_l"
-	},
-/turf/simulated/floor/tiled/asteroid_steel/airless,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/mining_outpost/shuttle)
-"adL" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8
+	icon_state = "propulsion_r"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /turf/simulated/shuttle/plating/airless/carry,
@@ -2341,15 +2325,6 @@
 "adV" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/station/ai)
-"adW" = (
-/obj/structure/bed/chair/shuttle,
-/obj/item/device/radio/intercom{
-	dir = 1;
-	pixel_y = 24;
-	req_access = list()
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/shuttle/mining_outpost/shuttle)
 "adX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -2364,14 +2339,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/eva)
-"adY" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_r"
-	},
-/turf/simulated/floor/tiled/asteroid_steel/airless,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/mining_outpost/shuttle)
 "aed" = (
 /obj/structure/railing,
 /turf/space,
@@ -28079,6 +28046,23 @@
 	},
 /turf/space,
 /area/space)
+"aYZ" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -28;
+	pixel_y = 0
+	},
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled,
+/area/quartermaster/belterdock/surface_mining_outpost_shuttle_hangar)
+"aZb" = (
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/belterdock/surface_mining_outpost_shuttle_hangar)
 "aZf" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 8;
@@ -46439,7 +46423,7 @@ aQG
 aUc
 aTV
 aUF
-adJ
+aOL
 apC
 adB
 aVb
@@ -47576,11 +47560,11 @@ avt
 avt
 adD
 aZS
-adK
-adL
-adL
-adL
-adY
+adE
+adG
+adG
+adG
+adJ
 baB
 adD
 avt
@@ -48000,7 +47984,7 @@ aWI
 aWf
 aYJ
 adD
-adE
+aYZ
 aZS
 bai
 baO
@@ -48287,7 +48271,7 @@ adD
 aZZ
 ban
 bai
-adW
+bax
 bau
 baN
 bai
@@ -48568,7 +48552,7 @@ aYF
 aUe
 aZH
 adD
-adG
+aZb
 bab
 bai
 baA

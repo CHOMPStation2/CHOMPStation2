@@ -158,6 +158,7 @@ var/list/_client_preferences_by_type
 	key = "SOUND_OLDDOORS"
 	enabled_description = "Old"
 	disabled_description = "New"
+	enabled_by_default = FALSE
 
 /datum/client_preference/department_door_sounds
 	description ="Department-Specific Door Sounds"

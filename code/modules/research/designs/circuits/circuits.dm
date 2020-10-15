@@ -632,7 +632,6 @@ CIRCUITS BELOW
 	build_path = /obj/item/weapon/circuitboard/microwave/advanced
 	sort_string = "HACAA"
 
-
 /datum/design/circuit/shield_generator
 	name = "shield generator"
 	id = "shield_generator"

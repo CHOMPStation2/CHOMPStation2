@@ -6,7 +6,7 @@
 /////// Grower Pod ///////
 /obj/machinery/clonepod/transhuman
 	name = "grower pod"
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/khi,
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
 	circuit = /obj/item/weapon/circuitboard/transhuman_clonepod
 
@@ -85,9 +85,15 @@
 		H.add_modifier(modifier_type)
 
 	//Apply damage
-	H.adjustCloneLoss(H.getMaxHealth()*1.5)
+	H.adjustCloneLoss((H.getMaxHealth() - config.health_threshold_dead)*-0.75)
 	H.Paralyse(4)
 	H.updatehealth()
+
+	//Grower specific mutations
+	if(heal_level < 60)
+		randmutb(H)
+		H.dna.UpdateSE()
+		H.dna.UpdateUI()
 
 	//Update appearance, remake icons
 	H.UpdateAppearance()
@@ -128,10 +134,10 @@
 			connected_message("Clone Rejected: Deceased.")
 			return
 
-		else if(occupant.getCloneLoss() > 0)
+		else if(occupant.health < heal_level && occupant.getCloneLoss() > 0)
 
 			 //Slowly get that clone healed and finished.
-			occupant.adjustCloneLoss(-3 * heal_rate)
+			occupant.adjustCloneLoss(-2 * heal_rate)
 
 			//Premature clones may have brain damage.
 			occupant.adjustBrainLoss(-(CEILING((0.5*heal_rate), 1)))
@@ -171,7 +177,7 @@
 /obj/machinery/transhuman/synthprinter
 	name = "SynthFab 3000"
 	desc = "A rapid fabricator for synthetic bodies."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/khi,
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
 	icon = 'icons/obj/machines/synthpod.dmi'
 	icon_state = "pod_0"
@@ -398,7 +404,7 @@
 /obj/machinery/transhuman/resleever
 	name = "resleeving pod"
 	desc = "Used to combine mind and body into one unit."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/khi,
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
 	icon = 'icons/obj/machines/implantchair.dmi'
 	icon_state = "implantchair"
@@ -408,7 +414,6 @@
 	anchored = 1
 	var/blur_amount
 	var/confuse_amount
-	var/sickness_duration
 
 	var/mob/living/carbon/human/occupant = null
 	var/connected = null
@@ -438,9 +443,6 @@
 		manip_rating += M.rating
 	blur_amount = (48 - manip_rating * 8)
 
-	var/total_rating = manip_rating + scan_rating
-	sickness_duration = (45 - (total_rating-4)*1.875) MINUTES		// 45 minutes default, 30 minutes with max non-anomaly upgrades, 15 minutes with max anomaly ones
-
 /obj/machinery/transhuman/resleever/attack_hand(mob/user as mob)
 	tgui_interact(user)
 
@@ -464,7 +466,7 @@
 		data["stat"] = occupant.stat
 		data["mindStatus"] = !!occupant.mind
 		data["mindName"] = occupant.mind?.name
-
+/* CHOMP Edit: Get rid of resleeving sickness stuff
 		if(occupant.has_modifier_of_type(/datum/modifier/resleeving_sickness) || occupant.has_modifier_of_type(/datum/modifier/faux_resleeving_sickness))
 			data["resleeveSick"] = TRUE
 		else
@@ -474,7 +476,8 @@
 			data["initialSick"] = TRUE
 		else
 			data["initialSick"] = FALSE
-
+*/
+//End chomp edit
 	return data
 
 /obj/machinery/transhuman/resleever/attackby(obj/item/W as obj, mob/user as mob)
@@ -595,19 +598,8 @@
 	else
 		to_chat(occupant, "<span class='warning'>You feel a small pain in your head as you're given a new backup implant. Oh, and a new body. It's disorienting, to say the least.</span>")
 
-	occupant.confused = max(occupant.confused, confuse_amount)									// Apply immedeate effects
+	occupant.confused = max(occupant.confused, confuse_amount)
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
-	
-	// Vore deaths get a fake modifier labeled as such
-	if(!occupant.mind)
-		log_debug("[occupant] didn't have a mind to check for vore_death, which may be problematic.")
-
-	if(occupant.mind?.vore_death)
-		occupant.add_modifier(/datum/modifier/faux_resleeving_sickness, sickness_duration)
-		occupant.mind.vore_death = FALSE
-	// Normal ones get a normal modifier to nerf charging into combat
-	else
-		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
 
 	if(occupant.mind && occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
 		log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)

@@ -6,12 +6,17 @@
 	robot_module_types += "Pupdozer"
 	robot_module_types += "Service-Hound"
 	robot_module_types += "KMine"
+	robot_module_types += "BoozeHound" //YW changes
+	robot_module_types += "UnityHound" // CH changes
 	return 1
-
+/* //ChompStation Removal
 var/list/shell_module_types = list(
-	"Standard", "Service", "Clerical", "Service-Hound"
+	"Standard", "Engineering", "Surgeon",  "Crisis",
+	"Miner", "Janitor", "Service", "Clerical",
+	"Medihound", "Janihound",
+	"Servicehound", "BoozeHound" //YW changes
 )
-
+*/
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals
 
 var/global/list/acceptable_fruit_types= list(

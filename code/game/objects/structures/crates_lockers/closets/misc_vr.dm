@@ -151,7 +151,7 @@
 		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
 	return ..()
 
-/obj/structure/closet/secure_closet/pathfinder
+/obj/structure/closet/secure_closet/pathfinder //CHOMPedit: Changes bluespaceradio/tether_prelinked to bluespaceradio because we don't have Tether here
 	name = "pathfinder locker"
 	req_access = list(access_gateway)
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
@@ -173,7 +173,7 @@
 		/obj/item/device/geiger,
 		/obj/item/weapon/cell/device,
 		/obj/item/device/radio,
-		/obj/item/device/bluespaceradio/tether_prelinked,
+		/obj/item/device/bluespaceradio,
 		/obj/item/stack/marker_beacon/thirty,
 		/obj/item/weapon/material/knife/tacknife/survival,
 		/obj/item/weapon/material/knife/machete/deluxe,

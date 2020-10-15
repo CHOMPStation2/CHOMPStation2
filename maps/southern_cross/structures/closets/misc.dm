@@ -61,12 +61,10 @@
 		starts_with += /obj/item/weapon/storage/backpack
 	else
 		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
-	/* VOREStation Removal - Always give both
 	if(prob(75))
 		starts_with += /obj/item/weapon/material/knife/tacknife/survival
 	else
 		starts_with += /obj/item/weapon/material/knife/machete
-	*/ //VOREStation Removal End
 	return ..()
 
 //SAR Lockers

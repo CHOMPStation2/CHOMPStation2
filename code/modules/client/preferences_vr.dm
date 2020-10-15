@@ -1,7 +1,6 @@
 /datum/preferences
 	var/show_in_directory = 1	//Show in Character Directory
 	var/sensorpref = 5			//Set character's suit sensor level
-
 	var/job_talon_high = 0
 	var/job_talon_med = 0
 	var/job_talon_low = 0

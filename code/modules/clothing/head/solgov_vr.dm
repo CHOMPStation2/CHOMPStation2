@@ -2,8 +2,8 @@
 
 //Utility
 /obj/item/clothing/head/soft/solgov
-	name = "\improper SolCom cap"
-	desc = "It's a blue ballcap in Terran Commonwealth Government colors."
+	name = "\improper SolGov cap" //YW EDIT: SolGov
+	desc = "It's a blue ballcap in Solar Central Government colors." //YW EDIT: SolGov
 
 /obj/item/clothing/head/soft/solgov/veteranhat
 	name = "veteran hat"
@@ -19,23 +19,23 @@
 
 /obj/item/clothing/head/soft/solgov/fleet
 	name = "fleet cap"
-	desc = "It's a navy blue ballcap with a TCG Fleet crest."
+	desc = "It's a navy blue ballcap with a USDF Fleet crest." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/utility/fleet
 	name = "fleet utility cover"
-	desc = "A navy blue utility cover bearing the crest of a TCG Fleet."
+	desc = "A navy blue utility cover bearing the crest of a USDF Fleet." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/utility/army
 	name = "marine utility cover"
-	desc = "A green utility cover bearing the crest of the TCG Marines."
+	desc = "A green utility cover bearing the crest of the USDF Marines." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/utility/army/tan
 	name = "tan utility cover"
-	desc = "A tan utility cover bearing the crest of the TCG Marines."
+	desc = "A tan utility cover bearing the crest of the USDF Marines." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/utility/army/urban
 	name = "urban utility cover"
-	desc = "A grey utility cover bearing the crest of the TCG Marines."
+	desc = "A grey utility cover bearing the crest of the USDF Marines." //YW EDIT: TCG to USDF
 
 //Service
 /obj/item/clothing/head/service/sifguard
@@ -56,23 +56,23 @@
 
 /obj/item/clothing/head/service/army
 	name = "marine wheel cover"
-	desc = "A green service uniform cover with an TCG Marine crest."
+	desc = "A green service uniform cover with an USDF Marine crest." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/service/army/command
 	name = "marine officer's wheel cover"
-	desc = "A green service uniform cover with an TCG Marine crest and gold stripe."
+	desc = "A green service uniform cover with an USDF Marine crest and gold stripe." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/service/army/garrison
 	name = "marine garrison cap"
-	desc = "A green garrison cap belonging to the TCG Marine."
+	desc = "A green garrison cap belonging to the USDF Marine." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/service/army/garrison/command
 	name = "marine officer's garrison cap"
-	desc = "A green garrison cap belonging to the TCG Marine. This one has a gold pin."
+	desc = "A green garrison cap belonging to the USDF Marine. This one has a gold pin." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/service/army/campaign
 	name = "campaign cover"
-	desc = "A green campaign cover with an TCG Marine crest. Only found on the heads of Drill Sergeants."
+	desc = "A green campaign cover with an USDF Marine crest. Only found on the heads of Drill Sergeants." //YW EDIT: TCG to USDF
 
 //Dress
 /obj/item/clothing/head/dress/fleet/garrison
@@ -81,25 +81,25 @@
 
 /obj/item/clothing/head/dress/fleet
 	name = "fleet dress wheel cover"
-	desc = "A white dress uniform cover. This one has an TCG Fleet crest."
+	desc = "A white dress uniform cover. This one has an USDF Fleet crest." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/dress/fleet/command
 	name = "fleet officer's dress wheel cover"
-	desc = "A white dress uniform cover. This one has a gold stripe and an TCG Fleet crest."
+	desc = "A white dress uniform cover. This one has a gold stripe and an USDF Fleet crest." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/dress/army
 	name = "marine dress wheel cover"
-	desc = "A white dress uniform cover with an TCG Marine crest."
+	desc = "A white dress uniform cover with an USDF Marine crest." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/dress/army/command
 	name = "marine officer's dress wheel cover"
-	desc = "A white dress uniform cover with an TCG Marine crest and gold stripe."
+	desc = "A white dress uniform cover with an USDF Marine crest and gold stripe." //YW EDIT: TCG to USDF
 
 //Berets
 
 /obj/item/clothing/head/beret/solgov
 	name = "peacekeeper beret"
-	desc = "A beret in Terran Commonwealth Government colors. For peacekeepers that are more inclined towards style than safety."
+	desc = "A beret in Solar Central Government colors. For peacekeepers that are more inclined towards style than safety." //YW EDIT: Terran Commonwealth to Solar Central Government 
 
 /obj/item/clothing/head/beret/solgov/homeguard
 	name = "home guard beret"
@@ -127,15 +127,15 @@
 
 /obj/item/clothing/head/beret/solgov/marcom
 	name = "\improper MARSCOM beret"
-	desc = "A red beret with a gold insignia, denoting service in the TCGDF Mars Central Command. For brass who are more inclined towards style than safety."
+	desc = "A red beret with a gold insignia, denoting service in the USDFDF Mars Central Command. For brass who are more inclined towards style than safety." //YW EDIT: TCGDF to USDFDF
 
 /obj/item/clothing/head/beret/solgov/stratcom
 	name = "\improper STRATCOM beret"
-	desc = "A grey beret with a silver insignia, denoting service in the TCGDF Strategic Command. For intelligence personnel who are more inclined towards style than safety."
+	desc = "A grey beret with a silver insignia, denoting service in the USDFDF Strategic Command. For intelligence personnel who are more inclined towards style than safety." //YW EDIT: TCGDF to USDFDF
 
 /obj/item/clothing/head/beret/solgov/diplomatic
 	name = "diplomatic security beret"
-	desc = "A tan beret denoting service in the TCG Marines Diplomatic Security Group. For security personnel who are more inclined towards style than safety."
+	desc = "A tan beret denoting service in the USDF Marines Diplomatic Security Group. For security personnel who are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/borderguard
 	name = "border security beret"
@@ -179,64 +179,64 @@
 
 /obj/item/clothing/head/beret/solgov/fleet
 	name = "fleet beret"
-	desc = "A navy blue beret belonging to the TCG Fleet. For personnel that are more inclined towards style than safety."
+	desc = "A navy blue beret belonging to the USDF Fleet. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/security
 	name = "fleet security beret"
-	desc = "An TCG Fleet beret with a security crest. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret with a security crest. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/medical
 	name = "fleet medical beret"
-	desc = "An TCG Fleet beret with a medical crest. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret with a medical crest. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/engineering
 	name = "fleet engineering beret"
-	desc = "An TCG Fleet with an engineering crest. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet with an engineering crest. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/supply
 	name = "fleet supply beret"
-	desc = "An TCG Fleet beret with a supply crest. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret with a supply crest. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/service
 	name = "fleet service beret"
-	desc = "An TCG Fleet beret with a service crest. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret with a service crest. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/exploration
 	name = "fleet exploration beret"
-	desc = "An TCG Fleet beret with an exploration crest. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret with an exploration crest. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/command
 	name = "fleet command beret"
-	desc = "An TCG Fleet beret with a command crest. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret with a command crest. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/dress
 	name = "fleet dress beret"
-	desc = "A white TCG Fleet beret. For personnel that are more inclined towards style than safety."
+	desc = "A white USDF Fleet beret. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/dress/command
 	name = "fleet officer's dress beret"
-	desc = "A white TCG Fleet beret with a golden crest. For personnel that are more inclined towards style than safety."
+	desc = "A white USDF Fleet beret with a golden crest. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/branch
 	name = "first fleet beret"
-	desc = "An TCG Fleet beret carrying insignia of First Fleet, the Sol Guard, stationed in Sol. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret carrying insignia of First Fleet, the Sol Guard, stationed in Sol. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 	icon_state = "beret_navy_first"
 
 /obj/item/clothing/head/beret/solgov/fleet/branch/second
 	name = "second fleet beret"
-	desc = "An TCG Fleet beret carrying insignia of Second Fleet, the Home Guard, tasked with defense of Sol territories. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret carrying insignia of Second Fleet, the Home Guard, tasked with defense of Sol territories. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/branch/third
 	name = "third fleet beret"
-	desc = "An TCG Fleet beret carrying insignia of Third Fleet, the Border Guard, guarding borders of Sol territory against Vox and pirates. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret carrying insignia of Third Fleet, the Border Guard, guarding borders of Sol territory against Vox and pirates. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/branch/fourth
 	name = "fourth fleet beret"
-	desc = "An TCG Fleet beret carrying insignia of Fourth Fleet, stationed on Skrell border. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret carrying insignia of Fourth Fleet, stationed on Skrell border. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/beret/solgov/fleet/branch/fifth
 	name = "fifth fleet beret"
-	desc = "An TCG Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety."
+	desc = "An USDF Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety." //YW EDIT: TCG to USDF
 
 //ushanka
 
@@ -246,15 +246,15 @@
 
 /obj/item/clothing/head/ushanka/solgov/fleet
 	name = "fleet fur hat"
-	desc = "An TCG Fleet synthfur-lined hat for operating in cold environments."
+	desc = "An USDF Fleet synthfur-lined hat for operating in cold environments." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/ushanka/solgov/army
 	name = "marine fur hat"
-	desc = "An TCG Marine synthfur-lined hat for operating in cold environments."
+	desc = "An USDF Marine synthfur-lined hat for operating in cold environments." //YW EDIT: TCG to USDF
 
 /obj/item/clothing/head/ushanka/solgov/army/green
 	name = "green marine fur hat"
-	desc = "An TCG Marine synthfur-lined hat for operating in cold environments."
+	desc = "An USDF Marine synthfur-lined hat for operating in cold environments." //YW EDIT: TCG to USDF
 
 //Terran
 

@@ -1,13 +1,13 @@
 // Inherits from /book/ so it can fit on bookshelves.
 /obj/item/weapon/book/codex // Vorestation Edits throughout this object.
-	name = "The Traveler's Guide to Human Space: Virgo-Erigone Edition"
-	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Virgo-Erigone, human or not. It also \
-	has the words 'Don't Panic' in small, friendly letters on the cover."
+	name = "The Traveler's Guide to Human Space: Borealis Edition" //YW Edit
+	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to the Borealis system, human or not. It also \
+	has the words 'Don't Panic' in small, friendly letters on the cover." //YW Edit
 	icon_state = "codex"
 	item_state = "book4"
 	unique = TRUE
 	var/datum/codex_tree/tree = null
-	var/root_type = /datum/lore/codex/category/main_virgo_lore	//Runtimes on codex_tree.dm, line 18 with a null here
+	var/root_type = /datum/lore/codex/category/main_borealis_lore	//YW EDIT
 
 /obj/item/weapon/book/codex/Initialize()
 	tree = new(src, root_type)
@@ -20,11 +20,11 @@
 	tree.display(user)
 
 /obj/item/weapon/book/codex/lore/vir // Vorestation Edits throughout this object.
-	name = "The Traveler's Guide to Human Space: Virgo-Erigone Edition"
-	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Virgo-Erigone, human or not. It also \
-	has the words 'Don't Panic' in small, friendly letters on the cover."
+	name = "The Traveler's Guide to Human Space: Borealis Edition" //YW Edit
+	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to the Borealis system, human or not. It also \
+	has the words 'Don't Panic' in small, friendly letters on the cover." //YW Edit
 	icon_state = "codex"
-	root_type = /datum/lore/codex/category/main_virgo_lore
+	root_type = /datum/lore/codex/category/main_borealis_lore	//YW EDIT
 	libcategory = "Reference"
 
 /obj/item/weapon/book/codex/lore/robutt
@@ -37,7 +37,7 @@
 
 /obj/item/weapon/book/codex/lore/news
 	name = "Daedalus Pocket Newscaster"
-	desc = "A regularly-updating compendium of articles on current events. Essential for new arrivals in the Vir system and anyone interested in politics."
+	desc = "A regularly-updating compendium of articles on current events. Essential for new arrivals in the Borealis system and anyone interested in politics." //YW Edit
 	icon_state = "newscodex"
 	item_state = "book1"
 	w_class = ITEMSIZE_SMALL

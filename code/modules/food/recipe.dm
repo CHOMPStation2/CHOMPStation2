@@ -324,4 +324,3 @@
 
 
 /datum/recipe/proc/after_cook(obj/container) // Called When the Microwave is finished.
-

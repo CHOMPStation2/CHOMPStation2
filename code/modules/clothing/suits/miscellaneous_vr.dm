@@ -1,5 +1,5 @@
 /obj/item/clothing/suit/customs
-	desc = "A standard SolCom Customs formal jacket."
+	desc = "A standard SolGov Customs formal jacket." //YW EDIT: SolGov
 
 //HERE BE TAUR RELATED CLOTHES
 

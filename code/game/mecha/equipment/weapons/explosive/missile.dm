@@ -32,7 +32,7 @@
 	desc = "A missile battery that holds eight missiles."
 	icon_state = "mecha_missilerack"
 	projectile = /obj/item/projectile/bullet/srmrocket
-	fire_sound = 'sound/weapons/rpg.ogg'
+	fire_sound = 'sound/weapons/SRM.ogg' //CHOMP Edit
 	projectiles = 8
 	projectile_energy_cost = 1000
 	equip_cooldown = 60

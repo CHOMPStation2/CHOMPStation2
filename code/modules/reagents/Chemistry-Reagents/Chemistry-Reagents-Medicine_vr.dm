@@ -72,17 +72,18 @@
 	scannable = 1
 
 /datum/reagent/vermicetol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	var/chem_effective = 1
+	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(8 * removed * chem_effective, 0)
-
+		
+/*CHOMPStation removal begin
 /datum/reagent/sleevingcure
-	name = "Kitsuhanan Cure"
+	name = "Vey-Med Resleeving Booster"
 	id = "sleevingcure"
-	description = "A rare cure provided by KHI that helps counteract negative side effects of using imperfect resleeving machinery."
-	taste_description = "chocolate peanut butter"
+	description = "A rare medication provided by Vey-Med that helps counteract negative side effects of using resleeving machinery. The instructions say to numb tongue before swallowing."
+	taste_description = "indescribably awful"
 	taste_mult = 2
 	reagent_state = LIQUID
 	color = "#b4dcdc"
@@ -92,3 +93,4 @@
 /datum/reagent/sleevingcure/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.remove_a_modifier_of_type(/datum/modifier/resleeving_sickness)
 	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
+*/ //CHOMPStation removal end

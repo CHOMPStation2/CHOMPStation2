@@ -11,6 +11,8 @@ var/const/ENGINEER			=(1<<6)
 var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
+var/const/BLUESHIELD		=(1<<13) //YW addition
+var/const/SECPILOT			=(1<<14) //YW addition
 var/const/INTERN			=(1<<15) //VOREStation Add
 
 var/const/MEDSCI			=(1<<1)
@@ -47,18 +49,109 @@ var/const/CLOWN				=(1<<13) //VOREStation Add
 var/const/MIME				=(1<<14) //VOREStation Add
 var/const/ENTERTAINER		=(1<<15) //VOREStation Add
 
-//VOREStation Add
-var/const/TALON				=(1<<3)
+var/list/assistant_occupations = list(
+)
 
-var/const/TALCAP			=(1<<0)
-var/const/TALPIL			=(1<<1)
-var/const/TALDOC			=(1<<2)
-var/const/TALSEC			=(1<<3)
-var/const/TALENG			=(1<<4)
-//VOREStation Add End
+
+var/list/command_positions = list(
+	"Site Manager",
+	"Head of Personnel",
+	"Head of Security",
+	"Chief Engineer",
+	"Research Director",
+	"Chief Medical Officer",
+	"Command Secretary",
+	"Blueshield Guard" // YW Edit
+)
+
+
+var/list/engineering_positions = list(
+	"Chief Engineer",
+	"Station Engineer",
+	"Atmospheric Technician"
+)
+
+
+var/list/medical_positions = list(
+	"Chief Medical Officer",
+	"Medical Doctor",
+	"Geneticist",
+	"Psychiatrist",
+	"Chemist",
+	"Paramedic",
+	"Field Medic" //ywedit
+)
+
+
+var/list/science_positions = list(
+	"Research Director",
+	"Scientist",
+	"Geneticist",	//Part of both medical and science
+	"Roboticist",
+	"Xenobiologist"
+)
+
+//BS12 EDIT
+var/list/cargo_positions = list(
+	"Quartermaster",
+	"Cargo Technician",
+	"Shaft Miner"
+)
+
+var/list/civilian_positions = list(
+	"Head of Personnel",
+	"Bartender",
+	"Botanist",
+	"Chef",
+	"Janitor",
+	"Librarian",
+	"Lawyer",
+	"Chaplain",
+	USELESS_JOB, //VOREStation Edit - Visitor not Assistant
+	"Intern", //VOREStation Edit - Intern
+	"Pilot" //YWedit
+)
+
+
+var/list/security_positions = list(
+	"Head of Security",
+	"Warden",
+	"Detective",
+	"Security Officer"
+)
+
+
+var/list/planet_positions = list(
+	"Pathfinder", // VOREStation Edit - Added Pathfinder
+	"Explorer"
+	//YWmoved to civilian"Pilot",
+	//YWmoved to medical"Field Medic"  // VOREStation Edit - Field Medic
+)
+
+
+var/list/nonhuman_positions = list(
+	"AI",
+	"Cyborg",
+	"pAI"
+)
+
+var/list/whitelisted_positions = list(
+	"Site Manager",
+	"Head of Personnel",
+	"Head of Security",
+	"Chief Engineer",
+	"Research Director",
+	"Chief Medical Officer",
+	"Command Secretary",
+	"Warden",
+	"AI",
+	"Cyborg",
+	"pAI"
+)
+
 
 /proc/guest_jobbans(var/job)
-	return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )
+	return ((job in whitelisted_positions))
 
 /proc/get_job_datums()
 	var/list/occupations = list()

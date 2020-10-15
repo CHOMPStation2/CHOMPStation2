@@ -71,6 +71,9 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 
 	if(config.admin_legacy_system)
 		load_admin_ranks()
+		//Clear profile access
+		for(var/A in world.GetConfig("admin"))
+			world.SetConfig("APP/admin", A, null)
 
 		//load text from file
 		var/list/Lines = file2list("config/admins.txt")
@@ -99,6 +102,9 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 			//create the admin datum and store it for later use
 			var/datum/admins/D = new /datum/admins(rank, rights, ckey)
 
+			if(D.rights & R_DEBUG) //grant profile access
+				world.SetConfig("APP/admin", ckey, "role=admin")
+
 			//find the client for a ckey if they are connected and associate them with the new admin datum
 			D.associate(GLOB.directory[ckey])
 
@@ -123,6 +129,9 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 			var/rights = query.item[4]
 			if(istext(rights))	rights = text2num(rights)
 			var/datum/admins/D = new /datum/admins(rank, rights, ckey)
+
+			if(D.rights & R_DEBUG) //grant profile access
+				world.SetConfig("APP/admin", ckey, "role=admin")
 
 			//find the client for a ckey if they are connected and associate them with the new admin datum
 			D.associate(GLOB.directory[ckey])

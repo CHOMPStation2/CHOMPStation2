@@ -1,10 +1,14 @@
-/mob/living/carbon/human/proc/lick_wounds(var/mob/living/carbon/M in living_mobs(1))
+/mob/living/carbon/human/proc/lick_wounds(var/mob/living/carbon/M) //YWedit, originally, living/carbon/M in living_mobs(1), However, living_mobs does not include src as possible target.
 	set name = "Lick Wounds"
 	set category = "Abilities"
 	set desc = "Disinfect and heal small wounds with your saliva."
 
 	if(nutrition < 50)
 		to_chat(src, "<span class='warning'>You need more energy to produce antiseptic enzymes. Eat something and try again.</span>")
+		return
+	//YW edit. Added the distance check to here. this allows the ability to lick ones own wounds. although this also means that all living/carbon/M appear on the list if used.
+	if (get_dist(src,M) >= 2)
+		src << "<span class='warning'>You need to be closer to do that.</span>"
 		return
 
 	if ( ! (istype(src, /mob/living/carbon/human) || \
@@ -68,7 +72,7 @@
 					return 
 
 				else
-					visible_message("<span class='notice'>\The [src] [pick("slathers \a [W.desc] on [M]'s [affecting.name] with their spit.", 
+					visible_message("<span class='notice'>\The [src] [pick("slathers \a [W.desc] on [M]'s [affecting.name] with their spit.",
 																			   "drags their tongue across \a [W.desc] on [M]'s [affecting.name].",
 																			   "drips saliva onto \a [W.desc] on [M]'s [affecting.name].",
 																			   "uses their tongue to disinfect \a [W.desc] on [M]'s [affecting.name].",

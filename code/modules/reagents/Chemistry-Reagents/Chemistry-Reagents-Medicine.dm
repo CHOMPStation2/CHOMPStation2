@@ -300,6 +300,13 @@
 	reagent_state = LIQUID
 	color = "#8040FF"
 	scannable = 1
+	//YW ADDITIONS START
+	overdose = REAGENTS_OVERDOSE * 4 //120 overdose
+/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
+	..()
+	M.druggy = max(M.druggy, 5)
+	M.Confuse(5)
+	//YW ADDITIONS END
 
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -1043,6 +1050,23 @@
 	if(needs_update && ishuman(M))
 		H.update_mutations()
 
+/*/datum/reagent/hyperzine
+	name = "Hyperzine"
+	id = "hyperzine"
+	description = "Hyperzine is a highly effective, long lasting, muscle stimulant."
+	reagent_state = LIQUID
+	color = "#FF3300"
+	metabolism = REM * 1
+	mrate_static = TRUE
+	overdose = REAGENTS_OVERDOSE * 0.5
+
+/datum/reagent/hyperzine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	if(prob(5))
+		M.emote(pick("twitch", "blink_r", "shiver"))
+	M.add_chemical_effect(CE_SPEEDBOOST, 1)
+*/
 /datum/reagent/ethylredoxrazine
 	name = "Ethylredoxrazine"
 	id = "ethylredoxrazine"

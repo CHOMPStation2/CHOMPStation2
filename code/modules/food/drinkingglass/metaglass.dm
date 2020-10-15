@@ -23,7 +23,7 @@
 			icon = R.glass_icon_file
 		else
 			icon = initial(icon)
-		
+
 		if(R.glass_icon_state)
 			icon_state = R.glass_icon_state
 		else
@@ -61,7 +61,6 @@
 			center_of_mass = list("x"=16, "y"=10)
 			return
 
-
 /*
 Drinks Data
 */
@@ -70,6 +69,7 @@ Drinks Data
 	var/glass_icon_file = null
 	var/glass_icon_state = null
 	var/glass_center_of_mass = null
+	var/glass_icon_source = null //CHOMP A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
 
 /datum/reagent/adminordrazine
 	glass_icon_state = "golden_cup"
@@ -615,10 +615,6 @@ Drinks Data
 
 /datum/reagent/ethanol/chrysanthemum
 	glass_icon_state = "chrysanthemum"
-	glass_center_of_mass = list("x"=16, "y"=8)
-
-/datum/reagent/ethanol/cloverclub
-	glass_icon_state = "cloverclub"
 	glass_center_of_mass = list("x"=16, "y"=8)
 
 /datum/reagent/ethanol/coldfront

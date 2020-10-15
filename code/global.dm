@@ -25,19 +25,23 @@ var/diary				= null
 var/error_log			= null
 var/debug_log			= null
 var/href_logfile		= null
-// var/station_name		= "Northern Star"
-// var/const/station_orig	= "Northern Star" //station_name can't be const due to event prefix/suffix
-// var/const/station_short	= "Northern Star"
-// var/const/dock_name		= "Vir Interstellar Spaceport"
-// var/const/boss_name		= "Central Command"
-// var/const/boss_short	= "CentCom"
-// var/const/company_name	= "NanoTrasen"
-// var/const/company_short	= "NT"
-// var/const/star_name		= "Vir"
-// var/const/starsys_name	= "Vir"
-var/const/game_version	= "VOREStation"
+//CHOMPStation Removal Start TFF 24/12/19 - Blep. Remove extra stuff. Where do these even come in?
+/*
+var/station_name		= "Yawn Wider Station"
+var/const/station_orig	= "Yawn Wider Station" //station_name can't be const due to event prefix/suffix
+var/const/station_short	= "V.O.R.E."
+var/const/dock_name		= "Yawn Wider Central Command"
+var/const/boss_name		= "Central Command"
+var/const/boss_short	= "CentCom"
+var/const/company_name	= "NanoTrasen"
+var/const/company_short	= "NT"
+var/const/star_name		= "Virgo-Erigone"
+var/const/starsys_name	= "Virgo-Erigone"
+*/
+//CHOMPStation Removal End
+var/const/game_version	= "CHOMPStation"	//CHOMPStation Edit TFF 24/12/19 - Chompers
 var/changelog_hash		= ""
-var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 300) //VOREStation Edit
+var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544) //YW EDIT
 var/round_progressing = 1
 
 var/master_mode       = "extended" // "extended"

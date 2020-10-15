@@ -43,6 +43,7 @@
 
 #define WARNING_DELAY 20			//seconds between warnings.
 
+#define SUPERMATTER_COUNTDOWN_TIME 30 SECONDS // Causality destabilzation field will last this long, giving engineers a last-ditch chance to prevent boom, or get out.
 // Keeps Accent sounds from layering, increase or decrease as preferred.
 #define SUPERMATTER_ACCENT_SOUND_COOLDOWN 2 SECONDS
 
@@ -69,6 +70,9 @@
 	var/emergency_point = 500
 	var/emergency_alert = "CRYSTAL DELAMINATION IMMINENT."
 	var/explosion_point = 1000
+
+	///Are we exploding? (Chompers Edit)
+	var/final_countdown = FALSE
 
 	light_color = "#8A8A00"
 	var/warning_color = "#B8B800"
@@ -242,6 +246,8 @@
 	var/alert_msg = " Integrity at [integrity]%"
 	var/message_sound = 'sound/ambience/matteralarm.ogg'
 
+	if(final_countdown) // Chompers additon
+		return
 	if(damage > emergency_point)
 		alert_msg = emergency_alert + alert_msg
 		lastwarning = world.timeofday - WARNING_DELAY * 4
@@ -285,7 +291,7 @@
 		if(!exploded)
 			if(!istype(L, /turf/space))
 				announce_warning()
-			explode()
+			countdown() // Chompers Edit
 	else if(damage > warning_point) // while the core is still damaged and it's still worth noting its status
 		shift_light(5, warning_color)
 		if(damage > emergency_point)
@@ -390,6 +396,38 @@
 
 	return 1
 
+/obj/machinery/power/supermatter/update_icon() // Chompers Edit Start
+	cut_overlays()
+	if(final_countdown)
+		add_overlay("causality_field")
+
+/obj/machinery/power/supermatter/proc/countdown()
+	set waitfor = FALSE
+
+	if(final_countdown) // We're already doing it go away
+		return
+	final_countdown = TRUE
+	update_icon()
+
+	var/speaking = "[emergency_alert] The supermatter has reached critical integrity failure. Emergency causality destabilization field has been activated."
+	global_announcer.autosay(speaking, "Supermatter Monitor")
+	for(var/i in SUPERMATTER_COUNTDOWN_TIME to 0 step -10)
+		if(damage < explosion_point) // Cutting it a bit close there engineers
+			global_announcer.autosay("[safe_alert] Failsafe has been disengaged.", "Supermatter Monitor")
+			final_countdown = FALSE
+			update_icon()
+			return
+		else if((i % 50) != 0 && i > 50) // A message once every 5 seconds until the final 5 seconds which count down individualy
+			sleep(10)
+			continue
+		else if(i > 50)
+			speaking = "[DisplayTimeText(i, TRUE)] remain before causality stabilization."
+		else
+			speaking = "[i*0.1]..."
+		global_announcer.autosay(speaking, "Supermatter Monitor")
+		sleep(10)
+
+	explode() // Chompers Edit End
 
 /obj/machinery/power/supermatter/bullet_act(var/obj/item/projectile/Proj)
 	var/turf/L = loc

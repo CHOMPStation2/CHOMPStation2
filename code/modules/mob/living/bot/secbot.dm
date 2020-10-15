@@ -12,6 +12,7 @@
 	botcard_access = list(access_security, access_sec_doors, access_forensics_lockers, access_maint_tunnels)
 	patrol_speed = 2
 	target_speed = 3
+	max_frustration = 7	//CHOMPEdit
 
 	density = 1
 

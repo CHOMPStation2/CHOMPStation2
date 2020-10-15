@@ -251,6 +251,8 @@ GLOBAL_LIST_EMPTY(solars_list)
 				user.visible_message("<span class='notice'>[user] places the glass on the solar assembly.</span>")
 				if(tracker)
 					new /obj/machinery/power/tracker(get_turf(src), src)
+					for(var/obj/item/solar_assembly/A in loc)
+						qdel(A)
 				else
 					new /obj/machinery/power/solar(get_turf(src), src)
 				qdel(src)

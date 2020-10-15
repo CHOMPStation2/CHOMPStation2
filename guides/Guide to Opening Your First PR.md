@@ -2,7 +2,7 @@ Guide to Opening Your First PR
 This guide is intended for newbie developers who have never touched BYOND .dm code, Github, or other things. If you already know github, you can safely skip a good portion of the below information.
 
 Beginning:
-In order to go anywhere, we’re going to need our own Repository (the thing you get the code from) to make changes to. Luckily, this is a one-button-job. Go to https://github.com/VOREStation/VOREStation and click Fork, as shown here:
+In order to go anywhere, we’re going to need our own Repository (the thing you get the code from) to make changes to. Luckily, this is a one-button-job. Go to https://github.com/CHOMPStation2/CHOMPStation2 and click Fork, as shown here:
 https://i.imgur.com/tIbXmGN.png
 
 In the top left, you will see:
@@ -16,7 +16,7 @@ Everyone has their own preferred Github clients - I use Gitkraken because it’s
 **SourceTree:** https://www.sourcetreeapp.com/
 **Github Desktop:** https://desktop.github.com/
 
-I recommend Gitkraken as it’s very good at handling things for you, and it comes with built-in darkmode. It DOES have paid features, but you don’t need them.
+I recommend Gitkraken as it’s very good at handling things for you, and it comes with built-in darkmode. It does have paid features, but you don’t need them.
 
 Cloning your Repo: AKA “Progress bar time”
 I’ll give these instructions in relevance to Gitkraken as that’s what I use, but they should be relatively applicable to other platforms.
@@ -24,7 +24,7 @@ I’ll give these instructions in relevance to Gitkraken as that’s what I use,
 You’re going to open Gitkraken and be met with this:
 https://i.imgur.com/oXYqeZy.png
 
-Choose “Clone a Repo”, and then choose Github.com. You can then choose where you want your repo installed (I usually do a master folder, Devwork, and then each repo is cloned inside: Devwork/VOREStation, Devwork/Polaris)
+Choose “Clone a Repo”, and then choose Github.com. You can then choose where you want your repo installed (I usually do a master folder, Devwork, and then each repo is cloned inside: Devwork/CHOMPStation2, Devwork/VOREStation)
 https://i.imgur.com/y15Qir2.png
 https://i.imgur.com/bsw8p18.png
 
@@ -37,7 +37,7 @@ https://i.imgur.com/Ei6QZOh.png
 On the top left is your **local/remote**, those are the two important things we want to focus on.
 Local is stuff that’s locally on YOUR PC, and remote is the fork that you made (and the other things we add).
 
-Before we go further, we’ll want to add VOREStation as a remote so we can keep you up to date. Don’t worry, it’s easy.
+Before we go further, we’ll want to add CHOMPStation2 as a remote so we can keep you up to date. Don’t worry, it’s easy.
 Follow the picture instructions:
 https://i.imgur.com/0aBRaoq.png
 https://i.imgur.com/OaNNWjK.png
@@ -46,7 +46,7 @@ https://i.imgur.com/U7Maetj.png
 And you should see:
 https://i.imgur.com/Vlwn8R9.png
 
-If you see the VOREStation_Master ahead of your master, **don’t panic.** Right click on ‘master’ and choose “fast-forward”. You’ll see the local computer icon jump to meet Master, and then you go to the top and hit “Push” - Push sends your changes up to your repo/remote.
+If you see the CHOMPStation_Master ahead of your master, **don’t panic.** Right click on ‘master’ and choose “fast-forward”. You’ll see the local computer icon jump to meet Master, and then you go to the top and hit “Push” - Push sends your changes up to your repo/remote.
 
 Creating Your Branch:
 Now that that’s done, we’re going to create our branch.
@@ -78,7 +78,7 @@ https://i.imgur.com/lroAj8X.png
 You’ll see this pop out:
 https://i.imgur.com/21D6qt9.png
 
-If the TO repo doesn’t autofill, don’t panic. Just choose VOREStation/VOREStation, branch master.
+If the TO repo doesn’t autofill, don’t panic. Just choose CHOMPStation2/CHOMPStation2, branch master.
 
 Then type the NAME of your PR, and a description underneath, then hit “Create Pull Request”!
 
@@ -86,6 +86,6 @@ And that’s it!
 
 **You’ve now successfully made your first PR!** 
 
-Any further issues or changes, maintainers will assist you with! If you have any questions or run into any snags during this tutorial, feel free to @ a maintainer (The blue names on the sidebar) in #dev-general or just ask for help and someone should be with you momentarily!
+Any further issues or changes, maintainers will assist you with! If you have any questions or run into any snags during this tutorial, feel free to @ a maintainer (The green names on the sidebar) in #ss13-development or just ask for help and someone should be with you momentarily!
 
-**Good luck, and thank you for contributing to VORE. Your efforts are what keeps us all going! <3**
+**Good luck, and thank you for contributing to CHOMP. Your efforts are what keeps us all going! <3**

@@ -1,8 +1,8 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:32
 
 #define MUSICIAN_HEARCHECK_MINDELAY 4
-#define INSTRUMENT_MAX_LINE_LENGTH 50
-#define INSTRUMENT_MAX_LINE_NUMBER 300
+#define INSTRUMENT_MAX_LINE_LENGTH 300
+#define INSTRUMENT_MAX_LINE_NUMBER 400
 
 /datum/song
 	var/name = "Untitled"
@@ -30,6 +30,18 @@
 	instrumentObj = null
 	return ..()
 
+/obj/structure/device/piano
+	name = "space minimoog"
+	icon = 'icons/obj/musician.dmi'
+	icon_state = "minimoog"
+	anchored = 1
+	density = 1
+	var/datum/song/song
+	var/playing = 0
+	var/help = 0
+	var/edit = 1
+	var/repeat = 0
+	var/linelimit = INSTRUMENT_MAX_LINE_NUMBER
 
 // note is a number from 1-7 for A-G
 // acc is either "b", "n", or "#"
@@ -291,7 +303,6 @@
 	icon_state = "piano"
 	anchored = 1
 	density = 1
-	var/datum/song/song
 
 /obj/structure/device/piano/minimoog
 	name = "space minimoog"

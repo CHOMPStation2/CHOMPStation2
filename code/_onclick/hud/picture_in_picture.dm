@@ -40,7 +40,6 @@
 	base.layer = DISPOSAL_LAYER
 	base.plane = PLATING_PLANE
 	base.appearance_flags = PIXEL_SCALE
-
 	for(var/direction in cardinal)
 		var/mutable_appearance/dir = new /mutable_appearance(base)
 		dir.dir = direction

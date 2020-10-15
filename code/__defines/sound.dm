@@ -106,13 +106,13 @@
 	'sound/ambience/holy/holy2.ogg'\
 	)
 
-// Generic sounds for less special rooms.
+// Generic sounds for less special rooms. Also apparently on southern cross it's for literally everything including the mining caves.
 #define AMBIENCE_GENERIC list(\
 	'sound/ambience/generic/generic1.ogg',\
 	'sound/ambience/generic/generic2.ogg',\
-	'sound/ambience/generic/generic3.ogg'\
+	'sound/ambience/generic/generic3.ogg',\
+	'sound/ambience/generic/generic4.ogg'\
 	)
-// 'sound/ambience/generic/generic4.ogg'\ // VOREStation Edit: Comment out entry 4 as this doesn't fit on Virgo, and we have our own weather system.
 
 // Sounds of PA announcements, presumably involving shuttles?
 #define AMBIENCE_ARRIVALS list(\
@@ -125,7 +125,8 @@
 	'sound/ambience/arrivals/arrivals7.ogg'\
 	)
 
-// Sounds suitable for being inside dark, tight corridors in the underbelly of the station.
+
+// Sounds suitable for being inside dark, tight corridors in the underbelly of the station. //CHOMP Edit keeps original maints sounds and adds sounds from the generic pool which I added and are metal scraping sounds. I should really move these to maintenance folder some day...
 #define AMBIENCE_MAINTENANCE list(\
 	'sound/ambience/maintenance/maintenance1.ogg',\
 	'sound/ambience/maintenance/maintenance2.ogg',\
@@ -135,7 +136,14 @@
 	'sound/ambience/maintenance/maintenance6.ogg',\
 	'sound/ambience/maintenance/maintenance7.ogg',\
 	'sound/ambience/maintenance/maintenance8.ogg',\
-	'sound/ambience/maintenance/maintenance9.ogg'\
+	'sound/ambience/maintenance/maintenance9.ogg',\
+	'sound/ambience/maintenance/maintenance10.ogg',\
+	'sound/ambience/maintenance/maintenance11.ogg',\
+	'sound/ambience/maintenance/maintenance12.ogg',\
+	'sound/ambience/generic/generic5.ogg',\
+	'sound/ambience/generic/generic6.ogg',\
+	'sound/ambience/generic/generic7.ogg',\
+	'sound/ambience/generic/generic8.ogg'\
 	)
 
 // Life support machinery at work, keeping everyone breathing.
@@ -164,14 +172,10 @@
 	'sound/ambience/ghostly/ghostly2.ogg'\
 	)
 
-// Concerning sounds, for when one discovers something horrible happened in a PoI.
+// Concerning sounds, for when one discovers something horrible happened in a PoI. //CHOMP Edit: Removed foreboding 3-6 as upstream updates just replaced them with maints sounds.
 #define AMBIENCE_FOREBODING list(\
 	'sound/ambience/foreboding/foreboding1.ogg',\
-	'sound/ambience/foreboding/foreboding2.ogg',\
-	'sound/ambience/foreboding/foreboding3.ogg',\
-	'sound/ambience/foreboding/foreboding4.ogg',\
-	'sound/ambience/foreboding/foreboding5.ogg',\
-	'sound/ambience/foreboding/foreboding6.ogg'\
+	'sound/ambience/foreboding/foreboding2.ogg'\
 	)
 
 // Ambience heard when aboveground on Sif and not in a Point of Interest.
@@ -193,17 +197,25 @@
 #define AMBIENCE_AESTHETIC list(\
 	'sound/ambience/vaporwave.ogg'\
 	)
-	
-#define AMBIENCE_OUTPOST list(\
+
+//CHOMPedit: Exploration outpost ambience. Current tracks taken from Rainworld and Natural Selection 2.
+#define AMBIENCE_EXPOUTPOST list(\
 	'sound/ambience/expoutpost/expoutpost1.ogg',\
 	'sound/ambience/expoutpost/expoutpost2.ogg',\
 	'sound/ambience/expoutpost/expoutpost3.ogg',\
 	'sound/ambience/expoutpost/expoutpost4.ogg'\
 	)
 	
+//CHOMP Edit Sounds for Substation rooms. Just electrical sounds, really.
 #define AMBIENCE_SUBSTATION list(\
 	'sound/ambience/substation/substation1.ogg',\
-	'sound/ambience/substation/substation2.ogg'\
+	'sound/ambience/substation/substation2.ogg',\
+	'sound/ambience/substation/substation3.ogg',\
+	'sound/ambience/substation/substation4.ogg',\
+	'sound/ambience/substation/substation5.ogg',\
+	'sound/ambience/substation/substation6.ogg',\
+	'sound/ambience/substation/substation7.ogg',\
+	'sound/ambience/substation/substation8.ogg'\
 	)
 	
 #define AMBIENCE_HANGAR list(\
@@ -214,10 +226,11 @@
 	'sound/ambience/hangar/hangar5.ogg',\
 	'sound/ambience/hangar/hangar6.ogg'\
 	)
-	
+
 #define AMBIENCE_ATMOS list(\
 	'sound/ambience/engineering/engineering1.ogg',\
 	'sound/ambience/engineering/engineering2.ogg',\
 	'sound/ambience/engineering/engineering3.ogg',\
 	'sound/ambience/atmospherics/atmospherics1.ogg'\
 	)
+	

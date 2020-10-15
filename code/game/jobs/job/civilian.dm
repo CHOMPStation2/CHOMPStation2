@@ -236,9 +236,9 @@
 						handle complaints against crew members, and can have issues brought to the attention of Central Command, \
 						assuming their paperwork is in order."
 
-/*
+//YW UNCOMMENTINGSTART: REINSTATE LOYALTY IMPLANT
 /datum/job/lawyer/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(H)
-*/
+//YW UNCOMMENTING END

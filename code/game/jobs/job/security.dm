@@ -39,9 +39,13 @@
 /datum/alt_title/sec_chief
 	title = "Chief of Security"
 
-//////////////////////////////////
-//			Warden
-//////////////////////////////////
+//YW ADDITION START: LOYALTY IMPLANT FOR HOS
+/datum/job/hos/equip(var/mob/living/carbon/human/H)
+	. = ..()
+	if(.)
+		H.implant_loyalty(src)
+//YW ADDITION END
+
 /datum/job/warden
 	title = "Warden"
 	flag = WARDEN

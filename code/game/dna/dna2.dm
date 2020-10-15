@@ -191,6 +191,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 			size_multiplier = player_sizes_list.Find(N)
 			break
 
+	var/taurtype = /datum/sprite_accessory/tail/taur/spider
+	if(istype(character.tail_style, taurtype))
+		character.verbs += /mob/living/proc/weaveWebBindings
+
 	// Technically custom_species is not part of the UI, but this place avoids merge problems.
 	src.custom_species = character.custom_species
 	if(istype(character.species,/datum/species/custom))
@@ -294,7 +298,7 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	if (block<=0) return
 	ASSERT(maxvalue<=4095)
 	var/range = (4095 / maxvalue)
-	if(value)
+	if(value!=null)	//CHOMPEdit DO NOT PORT VIRGO'S FIX FOR RESLEEVING. IT IS BAD. Also fuck travis
 		SetUIValue(block,round(value * range),defer)
 
 // Getter version of above.

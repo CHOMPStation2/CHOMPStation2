@@ -275,7 +275,22 @@
 					message = "makes a strong noise."
 					m_type = 2
 
-		if("frown")
+		if ("cross") //YAWN addtion
+			var/M = null
+			if (param)
+				for (var/mob/A in view(null, null))
+					if (param == A.name)
+						M = A
+						break
+			if (!M)
+				param = null
+
+			if (param)
+				message = "crosses their arms at [param]."
+			else
+				message = "crosses their arms."
+				//End of YAWN Addtions
+		if ("frown")
 			message = "frowns."
 			m_type = 1
 
@@ -679,12 +694,13 @@
 				if(!muzzled)
 					message = "[species.scream_verb]!"
 					m_type = 2
-					/* Removed, pending the location of some actually good, properly licensed sounds.
+					//CHOMPStation Edit Start. Uncommented block. Why was it commented in the first place?
+					//The offending content was commented out as well anyway.
 					if(get_gender() == FEMALE)
 						playsound(src, "[species.female_scream_sound]", 80, 1)
 					else
 						playsound(src, "[species.male_scream_sound]", 80, 1) //default to male screams if no gender is present.
-					*/
+					//CHOMPStation Edit End.
 				else
 					message = "makes a very loud noise."
 					m_type = 2
@@ -742,7 +758,7 @@
 				message = "makes a light spitting noise, a poor attempt at a whistle."
 
 		if("help")
-			to_chat(src, "<span class='filter_say'>blink, blink_r, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cry, custom, deathgasp, drool, eyebrow, fastsway/qwag, \
+			to_chat(src, "<span class='filter_say'>blink, blink_r, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cross, cry, custom, deathgasp, drool, eyebrow, fastsway/qwag, \
 					frown, gasp, giggle, glare-(none)/mob, grin, groan, grumble, handshake, hug-(none)/mob, laugh, look-(none)/mob, moan, mumble, nod, pale, point-atom, \
 					raise, salute, scream, sneeze, shake, shiver, shrug, sigh, signal-#1-10, slap-(none)/mob, smile, sneeze, sniff, snore, stare-(none)/mob, stopsway/swag, sway/wag, swish, tremble, twitch, \
 					twitch_v, vomit, whimper, wink, yawn. Prometheans: squish Synthetics: beep, buzz, dwoop, yes, no, rcough, rsneeze, ping. Skrell: warble</span>")

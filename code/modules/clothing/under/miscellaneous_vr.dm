@@ -1,5 +1,5 @@
 /obj/item/clothing/under/customs
-	desc = "A standard SolCom customs uniform. Complete with epaulettes."
+	desc = "A standard SolGov customs uniform. Complete with epaulettes." //YW EDIT: SolGov
 
 /obj/item/clothing/var/hides_bulges = FALSE // OwO wats this?
 

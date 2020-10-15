@@ -258,9 +258,10 @@
 	if(module)
 		return
 	var/list/modules = list()
-	//VOREStatation Edit Start: shell restrictions
+	//VOREStatation Edit Start: shell restrictions //CHOMPstaton change to blacklist
 	if(shell)
-		modules.Add(shell_module_types)
+		modules.Add(robot_module_types)
+		modules.Remove(shell_module_blacklist)
 	else
 		modules.Add(robot_module_types)
 		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)

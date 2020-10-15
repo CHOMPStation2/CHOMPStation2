@@ -115,7 +115,7 @@
 	for(var/datum/reagent/current in reagent_list)
 		if(current.id == id)
 			if(current.id == "blood")
-				if(LAZYLEN(data) && !isnull(data["species"]) && !isnull(current.data["species"]) && data["species"] != current.data["species"])	// Species bloodtypes are already incompatible, this just stops it from mixing into the one already in a container.
+				if(!isnull(data["species"]) && !isnull(current.data["species"]) && data["species"] != current.data["species"])	// Species bloodtypes are already incompatible, this just stops it from mixing into the one already in a container.
 					continue
 
 			current.volume += amount
@@ -168,6 +168,7 @@
 /datum/reagents/proc/del_reagent(var/id)
 	for(var/datum/reagent/current in reagent_list)
 		if (current.id == id)
+			current.on_remove(my_atom) //YW Edit: Calls on_remove before the last of the thing is done, used in phorochemistry
 			reagent_list -= current
 			qdel(current)
 			update_total()

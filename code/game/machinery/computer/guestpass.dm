@@ -235,3 +235,4 @@
 
 	add_fingerprint(usr)
 	return TRUE
+

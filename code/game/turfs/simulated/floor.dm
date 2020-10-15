@@ -43,6 +43,7 @@
 		set_flooring(get_flooring_data(floortype), TRUE)
 		. = INITIALIZE_HINT_LATELOAD // We'll update our icons after everyone is ready
 	else
+		vorefootstep_sounds = base_vorefootstep_sounds //CHOMPstation edit
 		footstep_sounds = base_footstep_sounds
 	if(can_dirty && can_start_dirty)
 		if(prob(dirty_prob))
@@ -63,6 +64,7 @@
 	if(is_plating() && !initializing) // Plating -> Flooring
 		swap_decals()
 	flooring = newflooring
+	vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
 	footstep_sounds = newflooring.footstep_sounds
 	if(!initializing)
 		update_icon(1)
@@ -80,6 +82,7 @@
 	desc = base_desc
 	icon = base_icon
 	icon_state = base_icon_state
+	vorefootstep_sounds = base_vorefootstep_sounds	 //CHOMPstation edit
 	footstep_sounds = base_footstep_sounds
 
 	if(!is_plating()) // Flooring -> Plating
