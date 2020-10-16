@@ -36,19 +36,26 @@
 			if(istype(I, /obj/item/weapon/implant/reagent_generator))
 				rimplant = I
 				break
+
 	rimplant.empty_message = list("Your lower belly feels smooth and empty, clearly there are no eggs left to be had!", "The reduced pressure in your lower belly tells you there are no eggs left, for now...")
-	rimplant.full_message = list("Your lower belly is a bit bloated, possessing a mildly bumpy texture if pressed agaisnt...", "Your lower abdomen feels really heavy, making it a bit hard to walk.")
-	rimplant.emote_descriptor = list("an egg right out of [src]'s lower belly!", "into [src]'s belly firmly, forcing him to lay an egg!", "[src] really tight, who promptly lays an egg!")
+	rimplant.full_message = list("Your lower belly is a bit bloated, possessing a mildly bumpy texture if pressed against...", "Your lower abdomen feels really heavy, making it a bit hard to walk.")
+	rimplant.emote_descriptor = list("an egg right out of [src]'s lower belly!", "into [src]'s belly firmly, forcing them to lay an egg!", "[src] really tight, who promptly lays an egg!")
+
 	if(rimplant.reagents.total_volume >= rimplant.usable_volume*0.75)
-		to_chat(src, "<span class='notice'>[src] is very full on eggs, squeezing them now may result in a cascade!</span>")
-	if (rimplant && do_after(usr,100))
-		if(rimplant.reagents.total_volume <= rimplant.transfer_amount)
-			to_chat(src, "<span class='notice'>[pick(rimplant.empty_message)]</span>")
-			return
+		if(usr != src)
+			to_chat(usr, "<span class='notice'>[src] is very full on eggs, squeezing them now may result in a cascade!</span>")
+		to_chat(src, "<span class='notice'>[pick(rimplant.full_message)]</span>")
+
+	if(rimplant.reagents.total_volume <= rimplant.transfer_amount)
+		if(usr != src)
+			to_chat(usr, "<span class='notice'>It seems that [src] is out of eggs!</span>")
+		to_chat(src, "<span class='notice'>[pick(rimplant.empty_message)]</span>")
+		return
+	visible_message("<span class='notice'>[usr] starts squeezing [src]'s lower body firmly...</span>")
+	if (rimplant && do_after(usr,60))
 		var/egg = rimplant.eggtype
 		new egg(get_turf(src))
 		src.SetStunned(3)
-		src.adjustHalLoss(5)
 		playsound(src,'sound/vore/insert.ogg',50,1)
 		var/index = rand(1,3)
 
@@ -56,20 +63,23 @@
 			var/emote = rimplant.emote_descriptor[index]
 			var/verb_desc = rimplant.verb_descriptor[index]
 			var/self_verb_desc = rimplant.self_verb_descriptor[index]
-			usr.visible_message("<span class='notice'>[usr] [verb_desc] [emote]</span>",
+			visible_message("<span class='notice'>[usr] [verb_desc] [emote]</span>",
 							"<span class='notice'>You [self_verb_desc] [emote]</span>")
 		else
 			visible_message("<span class='notice'>[src] [pick(rimplant.short_emote_descriptor)] an egg.</span>",
 								"<span class='notice'>You [pick(rimplant.self_emote_descriptor)] an egg.</span>")
+
 		if(prob(15))
 			visible_message("<span class='notice'>[src] [pick(rimplant.random_emote)].</span>")
 		rimplant.reagents.remove_any(rimplant.transfer_amount)
-		if(prob(80*rimplant.reagents.total_volume/rimplant.usable_volume))
+
+		if(prob(70*rimplant.reagents.total_volume/rimplant.usable_volume))
+			to_chat(src, "<span class='notice'>You feel your legs quake as your muscles fail to stand strong!</span>")
 			while(rimplant.reagents.total_volume >= rimplant.transfer_amount)
-				if(do_after(src,20))
-					src.SetStunned(1)
-					src.adjustHalLoss(5)
+				if(do_after(src,30))
+					src.SetStunned(5)
 					playsound(src,'sound/vore/insert.ogg',50,1)
+					src.apply_effect(10,STUTTER,0)
 					new egg(get_turf(src))
 					rimplant.reagents.remove_any(rimplant.transfer_amount)
 					if(prob(25))
