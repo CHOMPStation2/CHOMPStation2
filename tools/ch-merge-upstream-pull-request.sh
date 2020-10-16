@@ -12,7 +12,7 @@ set -f # disable pathname expansion
 set -C # noclobber
 
 readonly BASE_BRANCH_NAME="upstream-merge-"
-readonly BASE_PULL_URL="https://api.github.com/repos/PolarisSS13/Polaris/pulls"
+readonly BASE_PULL_URL="https://api.github.com/repos/VOREStation/VOREStation/pulls"
 
 # Ensure the current directory is a git directory
 if [ ! -d .git ]; then

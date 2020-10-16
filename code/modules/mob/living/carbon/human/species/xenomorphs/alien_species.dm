@@ -11,6 +11,7 @@
 	rarity_value = 3
 
 	darksight = 10 //CHOMPedit. Added darksight
+	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
 
 	pixel_offset_x = -16 //CHOMPedit. I literally had to make a different form of pixel_x just for this species, fuck my life
 
@@ -54,8 +55,6 @@
 
 	breath_type = null
 	poison_type = null
-
-	vision_flags = SEE_SELF|SEE_MOBS
 
 	has_organ = list(
 		O_HEART =    /obj/item/organ/internal/heart,
