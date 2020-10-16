@@ -240,10 +240,10 @@
 	icon_state = "vial"
 	center_of_mass = list("x" = 15,"y" = 9)
 	matter = list("glass" = 250)
-	volume = 30
+	volume = 10 //CHOMPedit reduced volume size, because its stupid to give a tiny little vial 30 volume
 	w_class = ITEMSIZE_TINY
-	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,30)
+	amount_per_transfer_from_this = 5 //CHOMPedit edited default transfer amount so you don't dump everything in one go
+	possible_transfer_amounts = list(1,5,10) //CHOMPedit edited possible transfer amounts to work with volume
 	flags = OPENCONTAINER
 
 /obj/item/weapon/reagent_containers/glass/beaker/cryoxadone
