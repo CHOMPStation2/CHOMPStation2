@@ -80,6 +80,8 @@
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
 	push_flags = MONKEY|SLIME|SIMPLE_ANIMAL|ALIEN
 
+	body_temperature = 270
+
 	cold_level_1 = 180	//Default 260
 	cold_level_2 = 130	//Default 200
 	cold_level_3 = 70	//Default 120
@@ -157,6 +159,7 @@
 
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
 //CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
@@ -258,3 +261,8 @@
 		return SEE_SELF
 */
 //CHOMPStation Removal End
+||||||| parent of dc6fe4ad34... Merge pull request #9234 from VOREStation/upstream-merge-7725
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+=======
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+>>>>>>> dc6fe4ad34... Merge pull request #9234 from VOREStation/upstream-merge-7725
