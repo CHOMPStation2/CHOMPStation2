@@ -111,7 +111,12 @@ h1.alert, h2.alert		{color: #000000;}
 .say_quote				{font-family: Georgia, Verdana, sans-serif;}
 .terminus				{font-family: "Times New Roman", Times, serif, sans-serif}
 .interface				{color: #330033;}
+<<<<<<< HEAD
 .psionic                {color: #993399;}    /*YWedit*/
+||||||| parent of ae8e37f2ca... Merge pull request #9125 from Andromeda-K22/spacefam_speak
+=======
+.spacer					{color: #9c660b;}
+>>>>>>> ae8e37f2ca... Merge pull request #9125 from Andromeda-K22/spacefam_speak
 
 BIG IMG.icon 			{width: 32px; height: 32px;}
 
