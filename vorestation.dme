@@ -101,6 +101,9 @@
 #include "code\__defines\wires.dm"
 #include "code\__defines\xenoarcheaology.dm"
 #include "code\__defines\ZAS.dm"
+#include "code\__defines\dcs\flags.dm"
+#include "code\__defines\dcs\helpers.dm"
+#include "code\__defines\dcs\signals.dm"
 #include "code\_compatibility\509\_JSON.dm"
 #include "code\_compatibility\509\JSON Reader.dm"
 #include "code\_compatibility\509\JSON Writer.dm"
@@ -259,7 +262,12 @@
 #include "code\controllers\subsystems\character_setup.dm"
 #include "code\controllers\subsystems\chat.dm"
 #include "code\controllers\subsystems\circuits.dm"
+<<<<<<< HEAD
 #include "code\controllers\subsystems\discord.dm"
+||||||| parent of 1cf226210f... Merge pull request #9245 from ShadowLarkens/dcs
+=======
+#include "code\controllers\subsystems\dcs.dm"
+>>>>>>> 1cf226210f... Merge pull request #9245 from ShadowLarkens/dcs
 #include "code\controllers\subsystems\events.dm"
 #include "code\controllers\subsystems\garbage.dm"
 #include "code\controllers\subsystems\holomaps.dm"
@@ -340,6 +348,14 @@
 #include "code\datums\autolathe\medical_vr.dm"
 #include "code\datums\autolathe\tools.dm"
 #include "code\datums\autolathe\tools_vr.dm"
+<<<<<<< HEAD
+||||||| parent of 1cf226210f... Merge pull request #9245 from ShadowLarkens/dcs
+#include "code\datums\game_masters\_common.dm"
+=======
+#include "code\datums\components\_component.dm"
+#include "code\datums\elements\_element.dm"
+#include "code\datums\game_masters\_common.dm"
+>>>>>>> 1cf226210f... Merge pull request #9245 from ShadowLarkens/dcs
 #include "code\datums\helper_datums\construction_datum.dm"
 #include "code\datums\helper_datums\events.dm"
 #include "code\datums\helper_datums\getrev.dm"
