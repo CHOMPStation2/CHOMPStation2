@@ -2114,9 +2114,24 @@
 	pixel_y = 32
 	},
 /obj/structure/table/rack/steel,
+<<<<<<< HEAD
+||||||| parent of 3e561c13e8... Merge pull request #9205 from KillianKirilenko/kk-fixes
+/obj/item/weapon/storage/backpack/ert/engineer,
+/obj/item/weapon/storage/backpack/ert/engineer,
+/obj/item/weapon/storage/backpack/ert/engineer,
+=======
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/weapon/storage/backpack/ert/engineer,
+/obj/item/weapon/storage/backpack/ert/engineer,
+/obj/item/weapon/storage/backpack/ert/engineer,
+>>>>>>> 3e561c13e8... Merge pull request #9205 from KillianKirilenko/kk-fixes
 /obj/item/clothing/suit/space/void/responseteam/engineer,
 /obj/item/clothing/suit/space/void/responseteam/engineer,
 /obj/item/clothing/suit/space/void/responseteam/engineer,
+<<<<<<< HEAD
 /obj/item/clothing/suit/space/void/responseteam/engineer,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/specops/centcom)
@@ -2135,6 +2150,48 @@
 "zV" = (
 /obj/machinery/door/airlock/glass_command{
 	req_one_access = list(103)
+||||||| parent of 3e561c13e8... Merge pull request #9205 from KillianKirilenko/kk-fixes
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/ert/barracks)
+"pa" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/machinery/alarm/alarms_hidden{
+	dir = 1;
+	pixel_y = -26
+=======
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/ert/barracks)
+"pa" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/machinery/alarm/alarms_hidden{
+	dir = 1;
+	pixel_y = -26
+>>>>>>> 3e561c13e8... Merge pull request #9205 from KillianKirilenko/kk-fixes
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/specops/centcom)
