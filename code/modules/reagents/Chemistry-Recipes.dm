@@ -270,7 +270,7 @@
 	result = "peridaxon"
 	required_reagents = list("cordradaxon" = 1, "gastirodaxon" = 1, "hepanephrodaxon" = 1, "respirodaxon" = 1)	//CHOMPEdit
 	//catalysts = list("phoron" = 12) CHOMPEdit
-	result_amount = 12
+	result_amount = 12 //CHOMPEdit
 
 /datum/chemical_reaction/osteodaxon
 	name = "Osteodaxon"
