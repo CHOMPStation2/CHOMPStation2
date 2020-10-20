@@ -207,9 +207,23 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		return FALSE
 
 	//Write it out
+<<<<<<< HEAD
 	if(fexists(path))
 		fdel(path) //Byond only supports APPENDING to files, not replacing.
 	text2file(json_to_file, path)
+||||||| parent of b4fb235ba3... Merge pull request #9246 from ShadowLarkens/vchat_export_optimization
+#ifdef RUST_G
+	call(RUST_G, "file_write")(json_to_file, path)
+#else
+	// Fall back to using old format if we are not using rust-g
+	if(fexists(path))
+		fdel(path) //Byond only supports APPENDING to files, not replacing.
+	text2file(json_to_file, path)
+#endif
+=======
+	rustg_file_write(json_to_file, path)
+
+>>>>>>> b4fb235ba3... Merge pull request #9246 from ShadowLarkens/vchat_export_optimization
 	if(!fexists(path))
 		log_debug("Saving: [path] failed file write")
 		return FALSE
