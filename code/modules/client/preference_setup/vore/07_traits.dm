@@ -264,7 +264,7 @@
 			if(pref.dirty_synth && instance.not_for_synths)//if you are a synth you can't take this trait.
 				alert("You cannot take this trait as a SYNTH.\
 				Please remove that trait, or pick another trait to add.","Error")
-				pref.dirty_synth = 0	//Just to be sure
+				//pref.dirty_synth = 0	//Just to be sure // Commented out CHOMP Edit
 				return TOPIC_REFRESH
 
 
