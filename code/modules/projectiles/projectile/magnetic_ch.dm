@@ -8,7 +8,7 @@
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz
 	name = "blitz rod"
 	icon_state = "fuel-blitz"
-	damage = 500
+	damage = 900
 	accuracy = 200
 	incendiary = 20
 	flammability = 4
