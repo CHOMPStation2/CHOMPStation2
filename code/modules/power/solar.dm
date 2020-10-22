@@ -231,15 +231,7 @@ GLOBAL_LIST_EMPTY(solars_list)
 				playsound(src, 'sound/machines/click.ogg', 50, 1)
 				user.visible_message("<span class='notice'>[user] places the glass on the solar assembly.</span>")
 				if(tracker)
-<<<<<<< HEAD
-					new /obj/machinery/power/tracker(get_turf(src), src)
-					for(var/obj/item/solar_assembly/A in loc)
-						qdel(A)
-||||||| parent of 9166452e35... Merge pull request #9226 from VOREStation/upstream-merge-7710
-					new /obj/machinery/power/tracker(get_turf(src), src)
-=======
 					new /obj/machinery/power/tracker(get_turf(src), W.type)
->>>>>>> 9166452e35... Merge pull request #9226 from VOREStation/upstream-merge-7710
 				else
 					new /obj/machinery/power/solar(get_turf(src), W.type)
 				qdel(src)
