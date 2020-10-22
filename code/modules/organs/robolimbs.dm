@@ -76,13 +76,13 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Unbranded - Protez"
 	desc = "A simple robotic limb with retro design. Seems rather stiff."
 	icon = 'icons/mob/human_races/cyberlimbs/unbranded/unbranded_alt1.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/unbranded_alt2
 	company = "Unbranded - Mantis Prosis"
 	desc = "This limb has a casing of sleek black metal and repulsive insectile design."
 	icon = 'icons/mob/human_races/cyberlimbs/unbranded/unbranded_alt2.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/unbranded_tajaran
 	company = "Unbranded - Tajaran"
@@ -106,7 +106,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	suggested_species = SPECIES_TESHARI
 	desc = "A simple robotic limb with a small, raptor-like design. Seems rather stiff."
 	icon = 'icons/mob/human_races/cyberlimbs/unbranded/unbranded_teshari.dmi'
-	unavailable_to_build = 0
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/nanotrasen
 	company = "NanoTrasen"
@@ -145,7 +145,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Bishop"
 	desc = "This limb has a white polymer casing with blue holo-displays."
 	icon = 'icons/mob/human_races/cyberlimbs/bishop/bishop_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/bishop_alt1
 	company = "Bishop - Glyph"
@@ -186,7 +186,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Cyber Solutions"
 	desc = "This limb is grey and rough, with little in the way of aesthetic."
 	icon = 'icons/mob/human_races/cyberlimbs/cybersolutions/cybersolutions_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/cybersolutions_alt2
 	company = "Cyber Solutions - Outdated"
@@ -211,13 +211,13 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Einstein Engines"
 	desc = "This limb is lightweight with a sleek design."
 	icon = 'icons/mob/human_races/cyberlimbs/einstein/einstein_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/grayson
 	company = "Grayson"
 	desc = "This limb has a sturdy and heavy build to it."
 	icon = 'icons/mob/human_races/cyberlimbs/grayson/grayson_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 	monitor_styles = "blank=grayson_off;\
 		red=grayson_red;\
 		green=grayson_green;\
@@ -248,7 +248,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Hephaestus"
 	desc = "This limb has a militaristic black and green casing with gold stripes."
 	icon = 'icons/mob/human_races/cyberlimbs/hephaestus/hephaestus_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/hephaestus_alt1
 	company = "Hephaestus - Frontier"
@@ -284,7 +284,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Morpheus"
 	desc = "This limb is simple and functional; no effort has been made to make it look human."
 	icon = 'icons/mob/human_races/cyberlimbs/morpheus/morpheus_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 	monitor_styles = standard_monitor_styles
 
 /datum/robolimb/morpheus_alt1
@@ -305,7 +305,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Vey-Med"
 	desc = "This high quality limb is nearly indistinguishable from an organic one."
 	icon = 'icons/mob/human_races/cyberlimbs/veymed/veymed_main_vr.dmi' //Vorestation edit, fixing the color application
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 	lifelike = 1
 	skin_tone = 1
 	species_alternates = list(SPECIES_SKRELL = "Vey-Med - Skrell")
@@ -333,7 +333,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Ward-Takahashi"
 	desc = "This limb features sleek black and white polymers."
 	icon = 'icons/mob/human_races/cyberlimbs/wardtakahashi/wardtakahashi_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/wardtakahashi_alt1
 	company = "Ward-Takahashi - Shroud"
@@ -360,7 +360,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Xion"
 	desc = "This limb has a minimalist black and red casing."
 	icon = 'icons/mob/human_races/cyberlimbs/xion/xion_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 
 /datum/robolimb/xion_alt1
 	company = "Xion - Breach"
@@ -406,7 +406,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Zeng-Hu"
 	desc = "This limb has a rubbery fleshtone covering with visible seams."
 	icon = 'icons/mob/human_races/cyberlimbs/zenghu/zenghu_main.dmi'
-	unavailable_to_build = 1
+	unavailable_to_build = 0 // CHOMP Edit
 	skin_tone = 1
 
 /obj/item/weapon/disk/limb
