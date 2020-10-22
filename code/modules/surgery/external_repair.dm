@@ -129,6 +129,12 @@
 	"<span class='notice'>You finish taping up [target]'s [affected] with \the [tool].</span>")
 		affected.createwound(BRUISE, 10)
 	affected.heal_damage(0, 25, 0, 0)
+	//CHOMPSTATION Edit start. Makes burn repair fix husking.
+	if(target.getFireLoss() <= 20) //Dehusk if no longer crispy
+		target.mutations.Remove(HUSK)
+		target.status_flags &= ~DISFIGURED
+		target.update_icons_body()
+	//CHOMPSTATION Edit end.
 	if(!(affected.burn_dam))
 		affected.burn_stage = 0
 	if(istype(tool, /obj/item/stack))
