@@ -8,7 +8,7 @@
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz
 	name = "blitz rod"
 	icon_state = "fuel-blitz"
-	damage = 900
+	damage = 500
 	accuracy = 200
 	incendiary = 20
 	flammability = 4
@@ -22,13 +22,11 @@
 	detonate_mob = 1
 	energetic_impact = 1
 
-/obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(var/atom/A) //Future-proofing, again. In the event new fuel rods are introduced, and have special effects for when they stop flying.
+/obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(var/atom/A)
 	if(src.loc)
 		var/mob/living/M = A
-		if(istype(M))
+		if(istype(M) && M.maxHealth<=200)
 			M.dust()
-		else
-			qdel(A)
-		visible_message("<span class='warning'>\The [src] incinerates its target and shatters in a violent explosion!</span>")
-		explosion(src.loc, 2, 3, 4, 8)
+		visible_message("<span class='warning'>\The [src] impacts energetically with its target and shatters in a violent explosion!</span>")
+		explosion(src.loc, 3, 4, 5, 10)
 	..(A)
