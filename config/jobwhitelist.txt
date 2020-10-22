@@ -1,3 +1,0 @@
-# Job whitelist in format ckey - jobname
-# Like arokha - clown
-
