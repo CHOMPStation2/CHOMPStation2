@@ -30,6 +30,7 @@ datum/preferences
 	var/tgui_lock = FALSE
 
 	//character preferences
+	var/num_languages = 0				//CHOMPEdit
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
@@ -154,8 +155,11 @@ datum/preferences
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
 
 	var/list/volume_channels = list()
-
-
+//CHOMPEdit Begin
+/datum/preferences/proc/numlanguage()
+	var/datum/species/S = GLOB.all_species[species]
+	return num_languages ? num_languages : S.num_alternate_languages
+//CHOMPEdit End
 /datum/preferences/New(client/C)
 	player_setup = new(src)
 	set_biological_gender(pick(MALE, FEMALE))

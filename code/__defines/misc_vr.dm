@@ -20,7 +20,7 @@
 
 //For custom species
 #define STARTING_SPECIES_POINTS 1
-#define MAX_SPECIES_TRAITS 5
+#define MAX_SPECIES_TRAITS 8	//CHOMPEdit
 
 // Xenochimera thing mostly
 #define REVIVING_NOW		-1
