@@ -220,17 +220,23 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	if(vore_selected && vore_selected.contents.len) //Looping through all (potential) vore bellies would be more thorough but probably not worth the processing power if this check happens every 30 seconds.
 		var/mob/living/L
 		var/N = 0
+		var/hasdigestable = 0
+		var/hasindigestable = 0
 		for(L in vore_selected.contents) //This may have odd behavior with multiple prey.
 			if(istype(L, /mob/living/carbon/human/monkey))
 				L.nutrition = 0 //No stuffing monkeys with protein shakes for massive nutrition.
 			if(!L.digestable)
 				vore_selected.digest_mode = DM_DRAIN
 				N = 1  
+				hasindigestable = 1
 				break
 			else
 				vore_selected.digest_mode = DM_DIGEST
 				N = 1
+				hasdigestable = 1
 				break
+		if(hasdigestable && hasindigestable)
+			vore_selected.digest_mode = DM_DIGEST //Let's digest until we digest all the digestable prey, then move onto draining indigestable prey.
 		if(!N)
 			vore_selected.release_all_contents() //If there's no prey, spit out everything.
 
@@ -244,7 +250,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		for(var/mob/living/carbon/human/H in oview(2, src)) 
 			if(!istype(H) || !isliving(H) || H.stat == DEAD) //Living mobs only
 				continue
-			if(isSynthetic(H) || !H.species.breath_type) //Exclude species which don't breathe. Could also make a fancy gasmask check but that seems a bit cumbersome for such a small effect.
+			if(isSynthetic(H) || !H.species.breath_type || H.internal) //Exclude species which don't breathe or have internals.
 				continue
 			if(src.Adjacent(H)) //If they can breathe and are next to the pitcher, confuse them.
 				to_chat(H,"<font color='red'>The sweet, overwhelming scent from \the [src] makes your senses reel!</font>")
