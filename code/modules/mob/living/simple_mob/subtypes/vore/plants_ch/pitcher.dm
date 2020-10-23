@@ -115,16 +115,14 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		return
 
 	var/lastmeat = meat //If Life procs every 2 seconds that means it takes 20 seconds to digest a steak
-	meat = max(0,meat-meatspeed) //Clamp it to zero
-	adjust_nutrition(lastmeat-meat) //If there's no meat, this will just be zero.
-		meat -= meatspeed
-		nutrition += meatspeed //I guess you could also do adjust_nutrition(meatspeed)
+	meat = max(0,meat - meatspeed) //Clamp it to zero
+	adjust_nutrition(lastmeat - meat) //If there's no meat, this will just be zero.
 	if(nutrition >= PITCHER_SATED + NUTRITION_FRUIT)
 		if(prob(10)) //Should be about once every 20 seconds.
 			grow_fruit()
 	var/lastnutrition = nutrition
-		adjust_nutrition(-pitcher_metabolism)
-	adjustBruteLoss(nutrition-lastnutrition)
+	adjust_nutrition(-pitcher_metabolism)
+	adjustBruteLoss(nutrition - lastnutrition)
 	adjustToxLoss((nutrition - lastnutrition) * 3)
 	if(nutrition < pitcher_metabolism)
 		adjustToxLoss(pitcher_metabolism)
