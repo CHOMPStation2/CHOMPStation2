@@ -222,19 +222,19 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		var/N = 0
 		var/hasdigestable = 0
 		var/hasindigestable = 0
-		for(L in vore_selected.contents) //This may have odd behavior with multiple prey.
+		for(L in vore_selected.contents) 
 			if(istype(L, /mob/living/carbon/human/monkey))
 				L.nutrition = 0 //No stuffing monkeys with protein shakes for massive nutrition.
 			if(!L.digestable)
 				vore_selected.digest_mode = DM_DRAIN
 				N = 1  
 				hasindigestable = 1
-				break
+				continue
 			else
 				vore_selected.digest_mode = DM_DIGEST
 				N = 1
 				hasdigestable = 1
-				break
+				continue
 		if(hasdigestable && hasindigestable)
 			vore_selected.digest_mode = DM_DIGEST //Let's digest until we digest all the digestable prey, then move onto draining indigestable prey.
 		if(!N)
