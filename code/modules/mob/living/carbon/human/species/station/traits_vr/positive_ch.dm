@@ -6,8 +6,9 @@
 
 /datum/trait/densebones
 	name = "Dense bones"
-	desc = "Your bones are more dense then what is considered normal. It is much harder to fracture your bones, yet pain from fractures is much more intense."
+	desc = "Your bones (or robotic limbs) are more dense or stronger then what is considered normal. It is much harder to fracture your bones, yet pain from fractures is much more intense."
 	cost = 2
+	excludes = list(/datum/trait/hollow)
 
 /datum/trait/densebones/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -33,3 +34,4 @@
 	desc = "Your body is able to produce nutrition from being in light."
 	cost = 3
 	var_changes = list("photosynthesizing" = TRUE)
+	not_for_synths = 1 //Synths don't use nutrition.
