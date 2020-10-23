@@ -114,16 +114,18 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	if(!.)
 		return
 
-	if(meat >= meatspeed) //If Life procs every 2 seconds that means it takes 20 seconds to digest a steak
+	var/lastmeat = meat //If Life procs every 2 seconds that means it takes 20 seconds to digest a steak
+	meat = max(0,meat-meatspeed) //Clamp it to zero
+	adjust_nutrition(lastmeat-meat) //If there's no meat, this will just be zero.
 		meat -= meatspeed
 		nutrition += meatspeed //I guess you could also do adjust_nutrition(meatspeed)
 	if(nutrition >= PITCHER_SATED + NUTRITION_FRUIT)
 		if(prob(10)) //Should be about once every 20 seconds.
 			grow_fruit()
-	if(nutrition >= pitcher_metabolism)
+	var/lastnutrition = nutrition
 		adjust_nutrition(-pitcher_metabolism)
-		adjustBruteLoss(-pitcher_metabolism)
-		adjustToxLoss(-pitcher_metabolism * 3)
+	adjustBruteLoss(nutrition-lastnutrition)
+	adjustToxLoss((nutrition - lastnutrition) * 3)
 	if(nutrition < pitcher_metabolism)
 		adjustToxLoss(pitcher_metabolism)
 	if(world.time > last_lifechecks + 30 SECONDS) 
@@ -149,7 +151,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	if(!fruit)
 		if(nutrition >= PITCHER_SATED + NUTRITION_FRUIT)
 			fruit = 1
-			nutrition -= NUTRITION_FRUIT
+			adjust_nutrition(-NUTRITION_FRUIT)
 			return
 		else
 			return
@@ -163,7 +165,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 			else
 				new /mob/living/simple_mob/vore/pitcher_plant(get_turf(T)) 
 				fruit = 0 //No admeming this to spawn endless pitchers.
-				nutrition -= NUTRITION_PITCHER
+				adjust_nutrition(-NUTRITION_PITCHER)
 
 /mob/living/simple_mob/vore/pitcher_plant/attack_hand(mob/living/user)
 	if(user.a_intent == I_HELP)
