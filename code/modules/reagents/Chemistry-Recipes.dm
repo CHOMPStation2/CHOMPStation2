@@ -268,9 +268,9 @@
 	name = "Peridaxon"
 	id = "peridaxon"
 	result = "peridaxon"
-	required_reagents = list("bicaridine" = 2, "clonexadone" = 2)
-	catalysts = list("phoron" = 5)
-	result_amount = 2
+	required_reagents = list("cordradaxon" = 1, "gastirodaxon" = 1, "hepanephrodaxon" = 1, "respirodaxon" = 1)	//CHOMPEdit
+	//catalysts = list("phoron" = 12) CHOMPEdit
+	result_amount = 12 //CHOMPEdit
 
 /datum/chemical_reaction/osteodaxon
 	name = "Osteodaxon"
