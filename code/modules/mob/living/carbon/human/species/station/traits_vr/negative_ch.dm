@@ -1,3 +1,6 @@
+/datum/trait/hollow
+	excludes = list(/datum/trait/densebones)
+
 /datum/trait/slipperydirt
 	name = "Dirt Vulnerability"
 	desc = "Even the tiniest particles of dirt give you uneasy footing, even through several layers of footwear."
