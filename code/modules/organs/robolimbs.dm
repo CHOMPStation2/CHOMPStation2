@@ -145,7 +145,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Bishop"
 	desc = "This limb has a white polymer casing with blue holo-displays."
 	icon = 'icons/mob/human_races/cyberlimbs/bishop/bishop_main.dmi'
-	unavailable_to_build = 0 // CHOMP Edit
+	unavailable_to_build = 1
 
 /datum/robolimb/bishop_alt1
 	company = "Bishop - Glyph"
@@ -305,7 +305,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Vey-Med"
 	desc = "This high quality limb is nearly indistinguishable from an organic one."
 	icon = 'icons/mob/human_races/cyberlimbs/veymed/veymed_main_vr.dmi' //Vorestation edit, fixing the color application
-	unavailable_to_build = 0 // CHOMP Edit
+	unavailable_to_build = 1
 	lifelike = 1
 	skin_tone = 1
 	species_alternates = list(SPECIES_SKRELL = "Vey-Med - Skrell")
@@ -406,7 +406,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Zeng-Hu"
 	desc = "This limb has a rubbery fleshtone covering with visible seams."
 	icon = 'icons/mob/human_races/cyberlimbs/zenghu/zenghu_main.dmi'
-	unavailable_to_build = 0 // CHOMP Edit
+	unavailable_to_build = 1
 	skin_tone = 1
 
 /obj/item/weapon/disk/limb
