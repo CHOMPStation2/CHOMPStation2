@@ -340,6 +340,20 @@
 			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes") //check if they want this to happen for pref sake
 				M.change_gender_identity(gender_change)
 				M << "<span class='warning'>You feel like a new person</span>" //success
+
+////////////////////////////////////
+////////////   OTHER   ////////////
+//////////////////////////////////
+//This file is a fucking mess
+/datum/reagent/nutriment/pitcher_nectar //Pitcher plant reagent, doubles plant growth speed.
+	name = "Pitcher Nectar"
+	id = "pitcher_nectar"
+	description = "An odd, sticky slurry which promotes rapid plant growth."
+	taste_description = "pineapple"
+	reagent_state = LIQUID
+	nutriment_factor = 60
+	color = "#a839a2"
+
 ////////////////////////////////////////////////
 /////////DRINKS////////////////////////////////
 //////////////////////////////////////////////
@@ -891,3 +905,10 @@
 	description = "Orange liquid. It wobbles around a bit like jelly."
 	color = "#e0962f"
 	taste_description = "Ammonia"
+
+//New reagent definitions/overrides. If some of these get added upstream and cause a conflict later they might need deleting. 
+/datum/reagent/toxin/plantbgone/touch_mob(var/mob/living/L, amount) //Plantbgone override to damage plant mobs. Part of pitcher plants, touch_mob doesn't exist for plantbgone at the time of writing.
+	if(istype(L) && L.faction)
+		if(L.faction == "plants") //This would be better with a variable but I'm not adding that because upstream conflicts. If you send this upstream please do this.
+			L.adjustToxLoss(15 * amount)
+			L.visible_message("<span class='warning'>[L] withers rapidly!</span>", "<span class='danger'>The chemical burns you!</span>")
