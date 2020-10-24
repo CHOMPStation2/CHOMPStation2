@@ -1,3 +1,4 @@
+/* //CHOMPedit commented micromech stuff, because fuck this trash
 /datum/design/item/mechfab/gopher
 	category = list("Gopher")
 	time = 5
@@ -162,7 +163,7 @@
 	build_path = /obj/item/mecha_parts/micro/part/weasel_right_arm
 	materials = list(DEFAULT_WALL_MATERIAL = 8750)
 
-/*/datum/design/item/mechfab/weasel/left_leg
+/datum/design/item/mechfab/weasel/left_leg
 	name = "Weasel Left Leg"
 	id = "weasel_left_leg"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_left_leg
@@ -172,7 +173,7 @@
 	name = "Weasel Right Leg"
 	id = "weasel_right_leg"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_right_leg
-	materials = list(DEFAULT_WALL_MATERIAL = 12500)*/
+	materials = list(DEFAULT_WALL_MATERIAL = 12500)
 
 /datum/design/item/mechfab/weasel/tri_leg
 	name = "Weasel Tri Leg"
@@ -184,9 +185,9 @@
 	name = "Weasel Head"
 	id = "weasel_head"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_head
-	materials = list(DEFAULT_WALL_MATERIAL = 7000, "glass" = 2500)
+	materials = list(DEFAULT_WALL_MATERIAL = 7000, "glass" = 2500) */
 
-/datum/design/item/mecha/medigun
+/datum/design/item/mecha/medigun //Who the fuck thought it was a good idea to put this here?
 	name = "BL-3/P directed restoration system"
 	desc = "A portable medical system used to treat external injuries from afar."
 	id = "mech_medigun"
