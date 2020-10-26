@@ -128,7 +128,7 @@
 					mode = 2
 					nif.notify("Medichines unable to repair all damage. Perform manual repairs.",TRUE)
 				else if(mode == 2 && HP_percent < -0.4)
-					nif.notify("User Status: CRITICAL. Notifying medical, and starting emergency stasis!",TRUE)
+					nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
 					H << 'sound/voice/nifmed_critical.ogg' //CHOMP Add
 					mode = 0
 					if(!isbelly(H.loc)) //Not notified in case of vore, for gameplay purposes.
