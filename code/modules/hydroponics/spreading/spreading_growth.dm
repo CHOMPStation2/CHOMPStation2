@@ -130,12 +130,10 @@
 		//CHOMPedit start: Pitcher plant spawning
 		if((seed.get_trait(TRAIT_POTENCY)) >= 70) //Random event spacevines have 70 potency minimum. Should guarantee this always triggers on spacevines.
 			var/mob/living/pitcher
-			if(seed.get_trait(TRAIT_CARNIVOROUS) && prob(10))
+			if(!seed.get_trait(TRAIT_CARNIVOROUS) && prob(2)) //Check for canivorous or this could call if prob(10) above fails.
 				pitcher = new /mob/living/simple_mob/vore/pitcher_plant(src.loc)
-				pitcher.nutrition = 0
-			if(!seed.get_trait(TRAIT_CARNIVOROUS) && prob(5)) //Check for canivorous or this could call if prob(10) above fails.
-				pitcher = new /mob/living/simple_mob/vore/pitcher_plant(src.loc)
-				pitcher.nutrition = 100
+				pitcher.nutrition = 0 //With 0 nutrition, vine-spawned pitchers should die after ~10 minutes
+				pitcher.adjustToxLoss(170) //Reduce health, 200 is excessive when a lot of these are spawning.
 		//CHOMPedit end
 
 		//see if anything is there
