@@ -10,6 +10,9 @@
 	hud_type = /datum/hud_data/alien
 	rarity_value = 3
 
+	male_scream_sound = null //CHOMPedit Note, add xenomorph screams later, shouldn't be hard
+	female_scream_sound = null //CHOMPedit
+
 	darksight = 10 //CHOMPedit. Added darksight
 
 	pixel_offset_x = -16 //CHOMPedit. I literally had to make a different form of pixel_x just for this species, fuck my life
