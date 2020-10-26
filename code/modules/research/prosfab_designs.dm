@@ -73,14 +73,14 @@
 			O.dna.ResetSE()
 
 			// Skincolor weirdness.
-			O.s_col[1] = 0
-			O.s_col[2] = 0
-			O.s_col[3] = 0
+			O.s_col[1] = 255 // CHOMP Edit
+			O.s_col[2] = 255 // CHOMP Edit
+			O.s_col[3] = 255 // CHOMP Edit
 
 		// Resetting the UI does strange things for the skin of a non-human robot, which should be controlled by a whole different thing.
-		H.r_skin = 0
-		H.g_skin = 0
-		H.b_skin = 0
+		H.r_skin = 255 // CHOMP Edit
+		H.g_skin = 255 // CHOMP Edit
+		H.b_skin = 255 // CHOMP Edit
 		H.dna.ResetUIFrom(H)
 
 		H.real_name = "Synthmorph #[rand(100,999)]"
