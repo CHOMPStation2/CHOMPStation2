@@ -141,8 +141,12 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	
 
 /mob/living/simple_mob/vore/pitcher_plant/death()
-	anchored = 0
 	..()
+	anchored = 0
+	if(fruit)
+		new /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit(get_turf(src))
+		fruit = 0
+
 	
 
 /mob/living/simple_mob/vore/pitcher_plant/proc/grow_fruit() //This proc handles the pitcher turning nutrition into fruit (and new pitchers).
