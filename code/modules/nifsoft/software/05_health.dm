@@ -117,7 +117,7 @@
 			var/obj/item/organ/external/EO = eo
 			for(var/w in EO.wounds)
 				var/datum/wound/W = w
-				if(W.damage <= 5)
+				if(W.damage <= 25)
 					W.heal_damage(0.1)
 					EO.update_damages()
 					if(EO.update_icon())
@@ -127,6 +127,16 @@
 				else if(mode == 1)
 					mode = 2
 					nif.notify("Medichines unable to repair all damage. Perform manual repairs.",TRUE)
+				else if(mode == 2 && HP_percent < -0.4)
+					nif.notify("User Status: CRITICAL. Notifying medical, and starting emergency stasis!",TRUE)
+					H << 'sound/voice/nifmed_critical.ogg' //CHOMP Add
+					mode = 0
+					if(!isbelly(H.loc)) //Not notified in case of vore, for gameplay purposes.
+						var/turf/T = get_turf(H)
+						var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
+						a.autosay("[H.real_name] has been put in emergency stasis, located at ([T.x],[T.y],[T.z])!", "[H.real_name]'s NIF", "Medical")
+						qdel(a)
+
 
 		return TRUE
 
