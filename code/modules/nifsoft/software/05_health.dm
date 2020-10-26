@@ -100,6 +100,8 @@
 
 /datum/nifsoft/medichines_syn/life()
 	if((. = ..()))
+		var/mob/living/carbon/human/H = nif.human
+		var/HP_percent = H.health/H.getMaxHealth()
 		//We're good!
 		if(!nif.human.bad_external_organs.len)
 			if(mode || active)
