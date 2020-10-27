@@ -52,7 +52,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 				"bio" = 0,
 				"rad" = 100)
 
-	var/fruit = 0 //Has the pitcher produced a fruit?
+	var/fruit = FALSE //Has the pitcher produced a fruit?
 	var/meat = 0 //How many units of meat is the plant digesting? Separate from actual vore mechanics.
 	var/meatspeed = 5 //How many units of meat is converted to nutrition each tick?
 	var/pitcher_metabolism = 0.1 //How much nutriment does the pitcher lose every 2 seconds? 0.1 should be around 30 every 10 minutes.
@@ -145,14 +145,14 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	anchored = 0
 	if(fruit)
 		new /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit(get_turf(src))
-		fruit = 0
+		fruit = FALSE
 
 	
 
 /mob/living/simple_mob/vore/pitcher_plant/proc/grow_fruit() //This proc handles the pitcher turning nutrition into fruit (and new pitchers).
 	if(!fruit)
 		if(nutrition >= PITCHER_SATED + NUTRITION_FRUIT)
-			fruit = 1
+			fruit = TRUE
 			adjust_nutrition(-NUTRITION_FRUIT)
 			return
 		else
@@ -166,7 +166,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 				return
 			else
 				new /mob/living/simple_mob/vore/pitcher_plant(get_turf(T)) 
-				fruit = 0 //No admeming this to spawn endless pitchers.
+				fruit = FALSE //No admeming this to spawn endless pitchers.
 				adjust_nutrition(-NUTRITION_PITCHER)
 
 /mob/living/simple_mob/vore/pitcher_plant/attack_hand(mob/living/user)
@@ -174,7 +174,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		if(fruit)
 			to_chat(user, "You pick a fruit from \the [src].")
 			var/obj/F = new /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit(get_turf(user)) //Drops at the user's feet if put_in_hands fails
-			fruit = 0
+			fruit = FALSE
 			user.put_in_hands(F)
 		else
 			to_chat(user, "The [src] hasn't grown any fruit yet!")
