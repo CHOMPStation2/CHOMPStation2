@@ -15,7 +15,7 @@
 /obj/item/weapon/gun/launcher/confetti_cannon/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
-		. += "<font color='blue'>It's loaded with [confetti_charge] balls of confetti.</font>"
+		. += "<font color='blue'>It's loaded with [confetti_charge] ball\s of confetti.</font>"
 
 /obj/item/weapon/gun/launcher/confetti_cannon/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/weapon/paper) || istype(I, /obj/item/weapon/shreddedp))

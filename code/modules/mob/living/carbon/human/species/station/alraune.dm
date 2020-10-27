@@ -16,6 +16,9 @@
 	base_species = SPECIES_ALRAUNE
 	selects_bodytype = TRUE
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	body_temperature = T20C
 	breath_type = "oxygen"
 	poison_type = "phoron"
