@@ -119,7 +119,7 @@
 			var/obj/item/organ/external/EO = eo
 			for(var/w in EO.wounds)
 				var/datum/wound/W = w
-				if(W.damage <= 25)
+				if(W.damage <= 30)
 					W.heal_damage(0.1)
 					EO.update_damages()
 					if(EO.update_icon())
