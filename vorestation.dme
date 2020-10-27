@@ -3014,12 +3014,8 @@
 #include "code\modules\mob\living\simple_mob\subtypes\vore\hippo.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\horse.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\jelly.dm"
-<<<<<<< HEAD
-#include "code\modules\mob\living\simple_mob\subtypes\vore\lizardman.dm"
-||||||| parent of a51848c002... Merge pull request #9250 from ShadowLarkens/lamia
-=======
 #include "code\modules\mob\living\simple_mob\subtypes\vore\lamia.dm"
->>>>>>> a51848c002... Merge pull request #9250 from ShadowLarkens/lamia
+#include "code\modules\mob\living\simple_mob\subtypes\vore\lizardman.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\mimic.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\oregrub.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\otie.dm"
