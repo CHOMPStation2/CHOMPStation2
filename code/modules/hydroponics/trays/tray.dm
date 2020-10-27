@@ -1,3 +1,5 @@
+#define AGE_MOD_MAX 10 //CHOMPedit: Define for age_mod sanity check as a define to allow for easy tweaking.
+
 /obj/machinery/portable_atmospherics/hydroponics
 	name = "hydroponics tray"
 	desc = "A tray usually full of fluid for growing plants."
@@ -29,6 +31,7 @@
 	var/toxins = 0             // Toxicity in the tray?
 	var/mutation_level = 0     // When it hits 100, the plant mutates.
 	var/tray_light = 1         // Supplied lighting.
+	var/age_mod = 0            //CHOMPedit: Variable for chems which speed up plant growth. On average, every 3 age mod reduces growing time by 2.5 minutes.
 
 	// Mechanical concerns.
 	var/health = 0             // Plant health.
@@ -131,6 +134,12 @@
 		"radium" =  8,
 		"mutagen" = 15
 		)
+
+	//CHOMPedit: Reagents which double plant growth speed.
+	var/static/list/age_reagents = list(
+	"pitcher_nectar" =  1
+	)
+	//CHOMPedit end
 
 /obj/machinery/portable_atmospherics/hydroponics/AltClick(var/mob/living/user)
 	if(!istype(user))
@@ -286,6 +295,11 @@
 			else if(toxic_reagents[R.id])
 				toxins += toxic_reagents[R.id] * reagent_total
 
+			//CHOMPedit: Agents which speed up plant growth
+			if(age_reagents[R.id])
+				age_mod += age_reagents[R.id]  * reagent_total
+			//CHOMPedit end
+
 		//Handle some general level adjustments. These values are independent of plants existing.
 		if(weedkiller_reagents[R.id])
 			weedlevel -= weedkiller_reagents[R.id] * reagent_total
@@ -337,6 +351,7 @@
 		age = 0
 		sampled = 0
 		mutation_mod = 0
+		age_mod = 0 //CHOMPedit
 
 	check_health()
 	return
@@ -355,6 +370,7 @@
 	age = 0
 	yield_mod = 0
 	mutation_mod = 0
+	age_mod = 0 //CHOMPedit
 
 	to_chat(user, "You remove the dead plant.")
 	lastproduce = 0
@@ -371,6 +387,7 @@
 
 	dead = 0
 	age = 0
+	age_mod = 0 //CHOMPedit
 	health = seed.get_trait(TRAIT_ENDURANCE)
 	lastcycle = world.time
 	harvest = 0
@@ -447,6 +464,7 @@
 	pestlevel =      max(0,min(pestlevel,10))
 	weedlevel =      max(0,min(weedlevel,10))
 	toxins =         max(0,min(toxins,10))
+	age_mod =        max(0,min(age_mod,AGE_MOD_MAX)) //CHOMPedit: age_mod sanity check
 
 /obj/machinery/portable_atmospherics/hydroponics/proc/mutate_species()
 
@@ -682,3 +700,5 @@
 	closed_system = !closed_system
 	to_chat(user, "You [closed_system ? "close" : "open"] the tray's lid.")
 	update_icon()
+
+#undef AGE_MOD_MAX //CHOMPedit

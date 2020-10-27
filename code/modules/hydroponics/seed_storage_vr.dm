@@ -49,6 +49,7 @@
 		/obj/item/seeds/shrinkshroom = 3,
 		/obj/item/seeds/megashroom = 3)
 
+//CHOMPedit: adds pitcherseed
 /obj/machinery/seed_storage/xenobotany
 	name = "Xenobotany seed storage"
 	scanner = list("stats", "produce", "soil", "temperature", "light")
@@ -106,4 +107,5 @@
 		/obj/item/seeds/whitebeetseed = 3,
 		/obj/item/seeds/shrinkshroom = 3,
 		/obj/item/seeds/megashroom = 3,
-		/obj/item/seeds/lustflower = 2)
+		/obj/item/seeds/lustflower = 2,
+		/obj/item/seeds/pitcherseed = 3)

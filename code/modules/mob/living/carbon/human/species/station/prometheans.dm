@@ -49,6 +49,9 @@ var/datum/species/shapeshifter/promethean/prometheans
 
 	economic_modifier = 3
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	gluttonous =	1
 	virus_immune =	1
 	blood_volume =	560

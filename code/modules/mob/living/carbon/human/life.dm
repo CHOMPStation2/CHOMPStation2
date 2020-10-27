@@ -950,7 +950,14 @@
 			take_overall_damage(1,1)
 		else //heal in the dark
 			heal_overall_damage(1,1)
-
+	//CHOMPEdit Begin
+	if(species.photosynthesizing && nutrition < 1000)
+		var/light_amount = 0
+		if(isturf(loc))
+			var/turf/T = loc
+			light_amount = T.get_lumcount() / 10
+		adjust_nutrition(light_amount)
+	//CHOMPEdit End
 	// nutrition decrease
 	if (nutrition > 0 && stat != DEAD)
 		var/nutrition_reduction = species.hunger_factor
@@ -958,6 +965,11 @@
 		for(var/datum/modifier/mod in modifiers)
 			if(!isnull(mod.metabolism_percent))
 				nutrition_reduction *= mod.metabolism_percent
+		//CHOMPEdit Begin
+		if(nutrition > 1000 && species.grows && size_multiplier < RESIZE_HUGE)
+			nutrition_reduction *= 5
+			resize(min(size_multiplier+0.004,RESIZE_HUGE))
+		//CHOMPEdit End
 		adjust_nutrition(-nutrition_reduction)
 
 	if(noisy == TRUE && nutrition < 250 && prob(10)) //VOREStation edit for hunger noises.
