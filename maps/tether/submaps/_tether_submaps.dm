@@ -65,6 +65,11 @@
 	desc = "Big trader ship."
 	mappath = 'maps/submaps/admin_use_vr/tradeship.dmm'
 
+/datum/map_template/admin_use/salamander_trader
+	name = "Special Area - Salamander Trader"
+	desc = "Modest trader ship."
+	mappath = 'maps/offmap_vr/om_ships/salamander.dmm'
+
 /datum/map_template/admin_use/mercenary
 	name = "Special Area - Merc Base"
 	desc = "So much red!"
@@ -518,6 +523,15 @@
 #include "../../offmap_vr/om_ships/cruiser.dm"
 #include "../../offmap_vr/om_ships/vespa.dm"
 #include "../../offmap_vr/om_ships/generic_shuttle.dm"
+<<<<<<< HEAD
+||||||| parent of c6a9a08635... Merge pull request #9189 from KillianKirilenko/kk-ships
+#include "../../offmap_vr/om_ships/geckos.dm"
+#include "../../offmap_vr/om_ships/mackerels.dm"
+=======
+#include "../../offmap_vr/om_ships/salamander.dm"
+#include "../../offmap_vr/om_ships/geckos.dm"
+#include "../../offmap_vr/om_ships/mackerels.dm"
+>>>>>>> c6a9a08635... Merge pull request #9189 from KillianKirilenko/kk-ships
 #include "../../offmap_vr/om_ships/mercenarybase.dm"
 #include "../../offmap_vr/om_ships/mercship.dm"
 #include "../../offmap_vr/om_ships/curashuttle.dm"
