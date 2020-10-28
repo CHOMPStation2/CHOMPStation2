@@ -71,7 +71,7 @@
 //CHOMPSTATION edit start: Thought it would be funny for people to wear their reason for being on station on their shoulder.
 /datum/alt_title/prey
 	title = "Belly Filler"
-	title_blurb = "Considering this particular region of space's needs, a Belly Filler is a crewmember who has willingly consigned themselves to \
+	title_blurb = "Considering the needs of this particular region of space, a Belly Filler is a crewmember who has willingly consigned themselves to \
 				serving the voracious appetites of their fellow crewmembers. A Belly Filler has no authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/intern
 //CHOMPSTATION edit end.
