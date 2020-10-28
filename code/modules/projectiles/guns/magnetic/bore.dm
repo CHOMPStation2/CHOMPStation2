@@ -150,7 +150,7 @@
 			return
 
 		var/can_hold_val = 0
-		while(can_hold_val < round(max_mat_storage / 2000))
+		while(can_hold_val < M.amount)	//CHOMPEdit
 			if(mat_storage + 2000 <= max_mat_storage && do_after(user,1.5 SECONDS))
 				can_hold_val ++
 				mat_storage += 2000
