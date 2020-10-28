@@ -591,8 +591,8 @@ datum/species/harpy
 	min_age = 18
 	max_age = 80
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit Scree
+	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit
 
 	blurb = "Xenomorphs hybrids are a mixture of xenomorph DNA and some other humanoid species. \
 	Xenomorph hyrids mostly have had had their natural aggression removed due to the gene modification process \
