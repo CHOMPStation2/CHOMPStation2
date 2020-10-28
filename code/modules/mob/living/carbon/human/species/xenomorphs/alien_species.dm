@@ -10,8 +10,8 @@
 	hud_type = /datum/hud_data/alien
 	rarity_value = 3
 
-	male_scream_sound = null //CHOMPedit Note, add xenomorph screams later, shouldn't be hard
-	female_scream_sound = null //CHOMPedit
+	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
+	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
 
 	darksight = 10 //CHOMPedit. Added darksight
 	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
