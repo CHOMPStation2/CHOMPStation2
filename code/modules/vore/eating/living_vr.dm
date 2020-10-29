@@ -243,8 +243,8 @@
 
 
 	//CHOMP reagent belly
-	P.receive_reagents = src.receive_reagents
-	P.give_reagents = src.give_reagents
+//	P.receive_reagents = src.receive_reagents
+//	P.give_reagents = src.give_reagents
 
 
 	var/list/serialized = list()
