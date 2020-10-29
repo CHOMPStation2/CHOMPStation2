@@ -1,4 +1,5 @@
 /obj/machinery/fusion_fuel_compressor
+	var/blitzprogress = 0	//CHOMPEdit
 	name = "fuel compressor"
 	icon = 'icons/obj/machines/power/fusion.dmi'
 	icon_state = "fuel_compressor1"
@@ -46,22 +47,54 @@
 		return
 	if(default_part_replacement(user, thing))
 		return
-
+//CHOMPEdit Begin
 	if(istype(thing, /obj/item/stack/material))
 		var/obj/item/stack/material/M = thing
 		var/datum/material/mat = M.get_material()
-		if(!mat.is_fusion_fuel)
-			to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
-			return
-		if(M.get_amount() < 25)
-			to_chat(user, "<span class='warning'>You need at least 25 [mat.sheet_plural_name] to make a fuel rod.</span>")
-			return
-		var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), mat.name)
-		visible_message("<span class='notice'>\The [src] compresses the [mat.use_name] into a new fuel assembly.</span>")
-		M.use(25)
-		user.put_in_hands(F)
+		if(!blitzprogress)
+			if(!mat.is_fusion_fuel)
+				to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
+				return
+			if(M.get_amount() < 25)
+				if(mat.name=="supermatter")
+					visible_message("<span class='notice'>\The [user] places the [mat.use_name] into the compressor.</span>")
+					M.use(1)
+					blitzprogress = 1
+					verbs |= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
+					return
+				to_chat(user, "<span class='warning'>You need at least 25 [mat.sheet_plural_name] to make a fuel rod.</span>")
+				return
+			var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), mat.name)
+			visible_message("<span class='notice'>\The [src] compresses the [mat.use_name] into a new fuel assembly.</span>")
+			M.use(25)
+			user.put_in_hands(F)
+		else
+			if(mat.name=="phoron")
+				if(M.get_amount() < 25)
+					to_chat(user, "<span class='warning'>You need at least 25 phoron sheets to make a blitz rod!</span>")
+					return
+				var/obj/item/weapon/fuel_assembly/blitz/unshielded/F = new(get_turf(src))
+				visible_message("<span class='notice'>\The [src] compresses the supermatter and phoron into a new blitz rod! It looks unstable, maybe you should be careful with it.</span>")
+				M.use(25)
+				user.put_in_hands(F)
+				blitzprogress = 0
+				verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
+			else
+				to_chat(user, "<span class='warning'>A blitz rod is currently in progress! Either add 25 phoron sheets to complete it, or eject the supermatter sheet!</span>")
+				return
 
 	else if(do_special_fuel_compression(thing, user))
 		return
 
 	return ..()
+
+/obj/machinery/fusion_fuel_compressor/verb/eject_sheet()
+	set name = "Eject Supermatter Sheet"
+	set category = "Object"
+	set src in view(1)
+
+	var/obj/item/stack/material/supermatter/S = new (get_turf(src))
+	usr.put_in_hands(S)
+	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
+	blitzprogress = 0
+//CHOMPEdit End

@@ -109,6 +109,7 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
 	/datum/admins/proc/view_feedback,
+	/client/proc/admin_teleport,	//CHOMPEdit
 	/client/proc/setckey //YW add - readds SetCkey proc
 	)
 
@@ -360,6 +361,7 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/quick_nif, //CHOMPEdit
 	/datum/admins/proc/quick_authentic_nif, //CHOMPEdit
+	/client/proc/admin_teleport,		//CHOMPEdit
 	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
 )
 
