@@ -71,9 +71,10 @@
 				H.loneliness_stage -= 4
 			return
 		// Check for company.
-		for(var/mob/living/M in viewers(H))
+		for(var/mob/living/M in viewers(get_turf(H)))
 			if(check_mob_company(H,M))
 				return
+		//Check to see if there's anyone in our belly
 		if(H.vore_organs)
 			for(var/obj/belly/B in H.vore_organs)
 				for(var/mob/living/content in B.contents)
