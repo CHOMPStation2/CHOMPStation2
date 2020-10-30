@@ -25,7 +25,7 @@
 	return TRUE
 
 /mob/living/Crossed(var/atom/movable/AM)
-	if(AM == src || AM.is_incorporeal()) // We're not going to run over ourselves or ghosts
+	if(AM == src || AM.is_incorporeal() || AM.incorporeal_move) // We're not going to run over ourselves or ghosts
 		return
 
 	if(istype(AM, /mob/living/bot/mulebot))
