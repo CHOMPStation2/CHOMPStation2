@@ -25,7 +25,7 @@
 	return TRUE
 
 /mob/living/Crossed(var/atom/movable/AM)
-	if(AM == src || AM.is_incorporeal() || AM.incorporeal_move) // We're not going to run over ourselves or ghosts
+	if(AM == src || AM.is_incorporeal()) // We're not going to run over ourselves or ghosts
 		return
 
 	if(istype(AM, /mob/living/bot/mulebot))
@@ -37,7 +37,7 @@
 		V.RunOver(src)
 
 	var/mob/living/target = AM
-	if(istype(target))	//The slip vore begins
+	if(istype(target) && !target.incorporeal_move && !src.incorporeal_move)	//The slip vore begins
 		if(can_slip_vore(target) && !src.slip_vore_in_progress && !target.slip_vore_in_progress)	//If we can vore them go for it
 			target.slip_vore_in_progress = TRUE //Make them stop slipping
 			perform_the_nom(src,target,src,src.vore_selected,1)
