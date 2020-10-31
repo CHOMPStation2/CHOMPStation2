@@ -105,6 +105,7 @@
 	bolt_name="charging handle"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | CHAMBER_ON_RELOAD
 	bolt_release = null
+	muzzle_velocity = 853
 
 /obj/item/weapon/gun/projectile/revolvingrifle
 	manual_chamber = FALSE
