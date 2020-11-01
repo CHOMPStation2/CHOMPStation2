@@ -523,15 +523,9 @@
 #include "../../offmap_vr/om_ships/cruiser.dm"
 #include "../../offmap_vr/om_ships/vespa.dm"
 #include "../../offmap_vr/om_ships/generic_shuttle.dm"
-<<<<<<< HEAD
-||||||| parent of c6a9a08635... Merge pull request #9189 from KillianKirilenko/kk-ships
-#include "../../offmap_vr/om_ships/geckos.dm"
-#include "../../offmap_vr/om_ships/mackerels.dm"
-=======
 #include "../../offmap_vr/om_ships/salamander.dm"
 #include "../../offmap_vr/om_ships/geckos.dm"
 #include "../../offmap_vr/om_ships/mackerels.dm"
->>>>>>> c6a9a08635... Merge pull request #9189 from KillianKirilenko/kk-ships
 #include "../../offmap_vr/om_ships/mercenarybase.dm"
 #include "../../offmap_vr/om_ships/mercship.dm"
 #include "../../offmap_vr/om_ships/curashuttle.dm"
