@@ -35,6 +35,17 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
 		return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
 
+		//CHOMPEDIT: Snowflake synx hook. Hypothetically this could be expanded to any mob by, say, giving them a parasite variable and a check for it here.
+	if(istype(L,/mob/living/simple_mob/animal/synx))
+		var/syntox = B.digest_brute+B.digest_burn
+		B.owner.adjust_nutrition(-syntox)
+		L.adjust_nutrition(syntox)
+		L.adjustBruteLoss(-syntox*2) //Should automaticaly clamp to 0
+		L.adjustFireLoss(-syntox*2) //Should automaticaly clamp to 0
+		return
+
+ 		//END SYNX hook.
+
 	// Deal digestion damage (and feed the pred)
 	var/old_brute = L.getBruteLoss()
 	var/old_burn = L.getFireLoss()
@@ -165,12 +176,16 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			B.change_tail_nocolor(H)
 			B.change_wing_nocolor(H)
 			B.change_species(H, 1, 1) // ,1) preserves coloring
+			H.species.create_organs(H)
+			H.sync_organ_dna()
 			return null
 		if(changes_ears_tail_wing_color && (B.check_ears(H) || B.check_tail(H) || B.check_wing(H) || B.check_species(H)))
 			B.change_ears(H)
 			B.change_tail(H)
 			B.change_wing(H)
 			B.change_species(H, 1, 2) // ,2) does not preserve coloring.
+			H.species.create_organs(H)
+			H.sync_organ_dna()
 			return null
 	if(changes_gender && B.check_gender(H, changes_gender_to))
 		B.change_gender(H, changes_gender_to, 1)

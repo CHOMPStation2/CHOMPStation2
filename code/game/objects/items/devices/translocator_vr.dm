@@ -289,6 +289,16 @@
 	if(!teleport_checks(target,user))
 		return //The checks proc can send them a message if it wants.
 
+	if(istype(target, /mob/living))
+		var/mob/living/L = target
+		if(!L.stat)
+			if(L != user)
+				if(L.a_intent != I_HELP || L.has_AI())
+					to_chat(user, "<span class='notice'>[L] is resisting your attempt to teleport them with \the [src].</span>")
+					to_chat(L, "<span class='danger'> [user] is trying to teleport you with \the [src]!</span>")
+					if(!do_after(user, 30, L))
+						return
+
 	//Bzzt.
 	ready = 0
 	power_source.use(charge_cost)
@@ -326,7 +336,7 @@
 	var/televored = FALSE
 	if(isbelly(real_dest))
 		var/obj/belly/B = real_dest
-		if(!target.can_be_drop_prey && B.owner != user)
+		if(!(target.can_be_drop_prey) && B.owner != user)
 			to_chat(target,"<span class='warning'>\The [src] narrowly avoids teleporting you right into \a [lowertext(real_dest.name)]!</span>")
 			real_dest = dT //Nevermind!
 		else

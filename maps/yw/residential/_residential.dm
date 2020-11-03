@@ -11,6 +11,7 @@
 	warmup_time = 3 SECONDS //30 seconds actually (SECONDS is multiplying it by 10)
 	move_time = 27 SECONDS //270 seconds actually (SECONDS is multiplying it by 10)
 	var/announcer = "Automated Traffic Control"
+	ceiling_type = /turf/simulated/shuttle/floor/white/airless
 
 
 /datum/shuttle/autodock/ferry/residential/perform_shuttle_move()

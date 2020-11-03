@@ -1990,3 +1990,21 @@ Departamental Swimsuits, for general use
 	item_state = "zenasuit_mob"
 
 	species_restricted = null
+
+/obj/item/clothing/suit/storage/flintlock
+	name = "green jacket"
+	desc = "Flintlock's green jacket. It seems to be made of rather high quality leather."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "flintlock"
+	item_state_slots = list(slot_r_hand_str = "item_greensuit", slot_l_hand_str = "item_greensuit")
+	blood_overlay_type = "coat"
+	body_parts_covered = UPPER_TORSO|ARMS
+	flags_inv = HIDEHOLSTER
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "flintlock_mob"
+
+//BobOfBoblandia: Charles Gettler
+/obj/item/clothing/head/that/fluff/gettler
+	name = "Charles' Top-Hat"
+	desc = "A special hat, removed from its owner."

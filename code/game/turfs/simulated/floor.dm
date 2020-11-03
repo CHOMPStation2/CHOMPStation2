@@ -75,6 +75,9 @@
 /turf/simulated/floor/proc/make_plating(var/place_product, var/defer_icon_update)
 	cut_overlays()
 
+	for(var/obj/effect/decal/writing/W in src)
+		qdel(W)
+
 	name = base_name
 	desc = base_desc
 	icon = base_icon
@@ -105,6 +108,9 @@
 	var/floored_over = !is_plating()
 	for(var/obj/O in src)
 		O.hide(O.hides_under_flooring() && floored_over)
+
+/turf/simulated/floor/can_engrave()
+	return (!flooring || flooring.can_engrave)
 
 /turf/simulated/floor/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
@@ -152,7 +158,7 @@
 			var/turf/simulated/wall/T = get_turf(src) // Ref to the wall we just built.
 			// Apparently set_material(...) for walls requires refs to the material singletons and not strings.
 			// This is different from how other material objects with their own set_material(...) do it, but whatever.
-			var/material/M = name_to_material[the_rcd.material_to_use]
+			var/datum/material/M = name_to_material[the_rcd.material_to_use]
 			T.set_material(M, the_rcd.make_rwalls ? M : null, M)
 			T.add_hiddenprint(user)
 			return TRUE

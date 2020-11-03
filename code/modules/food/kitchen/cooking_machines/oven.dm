@@ -7,6 +7,7 @@
 	appliancetype = OVEN
 	food_color = "#A34719"
 	can_burn_food = TRUE
+	var/datum/looping_sound/oven/oven_loop
 	circuit = /obj/item/weapon/circuitboard/oven
 	cooked_sound = 'sound/machines/ding.ogg'
 	active_power_usage = 6 KILOWATTS
@@ -18,7 +19,8 @@
 	//uses ~30% power to stay warm
 	optimal_power = 0.8 // Oven cooks .2 faster than the default speed.
 
-	light_x = 2
+	light_x = 3
+	light_y = 4
 	max_contents = 5
 	container_type = /obj/item/weapon/reagent_containers/cooking_container/oven
 
@@ -37,6 +39,15 @@
 		"Cookie" = /obj/item/weapon/reagent_containers/food/snacks/variable/cookie,
 		"Donut" = /obj/item/weapon/reagent_containers/food/snacks/variable/donut,
 		)
+		
+/obj/machinery/appliance/cooker/oven/Initialize()
+	. = ..()
+	
+	oven_loop = new(list(src), FALSE)
+	
+/obj/machinery/appliance/cooker/oven/Destroy()
+	QDEL_NULL(oven_loop)
+	return ..()
 
 /obj/machinery/appliance/cooker/oven/update_icon()
 	if(!open)
@@ -44,12 +55,20 @@
 			icon_state = "ovenclosed_on"
 			if(cooking == TRUE)
 				icon_state = "ovenclosed_cooking"
+				if(oven_loop)
+					oven_loop.start(src)
 			else
 				icon_state = "ovenclosed_on"
+				if(oven_loop)
+					oven_loop.stop(src)
 		else
 			icon_state = "ovenclosed_off"
+			if(oven_loop)
+				oven_loop.stop(src)
 	else
 		icon_state = "ovenopen"
+		if(oven_loop)
+			oven_loop.stop(src)
 	..()
 
 /obj/machinery/appliance/cooker/oven/AltClick(var/mob/user)
@@ -81,11 +100,12 @@
 		cooking = TRUE
 	else
 		open = TRUE
-		loss = (heating_power / resistance) * 4
+		loss = (heating_power / resistance) * 2 // Halve oven heat loss.
 		//When the oven door is opened, heat is lost MUCH faster and you stop cooking (because the door is open)
 		cooking = FALSE
 
 	playsound(src, 'sound/machines/hatch_open.ogg', 20, 1)
+	to_chat(user, "<span class='notice'>You [open ? "open" : "close"] the oven door.</span>")
 	update_icon()
 	
 /obj/machinery/appliance/cooker/oven/proc/manip(var/obj/item/I)
@@ -114,9 +134,10 @@
 		if(temperature > T.temperature)
 			equalize_temperature()
 
-/obj/machinery/appliance/cooker/oven/can_remove_items(var/mob/user)
+/obj/machinery/appliance/cooker/oven/can_remove_items(var/mob/user, show_warning = TRUE)
 	if(!open)
-		to_chat(user, "<span class='warning'>You can't take anything out while the door is closed!</span>")
+		if(show_warning)
+			to_chat(user, "<span class='warning'>You can't take anything out while the door is closed!</span>")
 		return 0
 
 	else

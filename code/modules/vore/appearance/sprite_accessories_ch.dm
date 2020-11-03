@@ -15,6 +15,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/vale
+	name = "VALE Model Ear Coloring"
+	desc = ""
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "valeears"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 //TAILS
 /datum/sprite_accessory/tail/alien_slug
 	name = "Alien slug tail"
@@ -42,6 +50,17 @@
 	extra_overlay = "zorgoia_fluff"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/vale_tail
+	name = "Vale Tail, dual color (vwag)"
+	desc = ""
+	icon = 'icons/mob/vore/tails_ch.dmi'
+	icon_state = "valetail"
+	ani_state = "valetail_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "valetail_mark"
+	extra_overlay_w = "valetail_mark_w"
 
 //WINGS
 

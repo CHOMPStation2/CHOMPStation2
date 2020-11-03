@@ -8,6 +8,8 @@
 	maxHealth = 100
 	mob_size = 4
 
+	inventory_panel_type = null // Disable inventory
+
 	var/adult_form
 	var/dead_icon
 	var/amount_grown = 0
@@ -40,15 +42,12 @@
 /mob/living/carbon/alien/u_equip(obj/item/W as obj)
 	return
 
-/mob/living/carbon/alien/Stat()
+/*/mob/living/carbon/alien/Stat() //CHOMPedit. Commented out because this doesn't work properly for larva, when it should. Will probably give Diona their own kind of they don't have one
 	..()
-	stat(null, "Progress: [amount_grown]/[max_grown]")
+	stat(null, "Progress: [amount_grown]/[max_grown]") */
 
 /mob/living/carbon/alien/restrained()
 	return 0
-
-/mob/living/carbon/alien/show_inv(mob/user as mob)
-	return //Consider adding cuffs and hats to this, for the sake of fun.
 
 /mob/living/carbon/alien/cannot_use_vents()
 	return

@@ -196,7 +196,7 @@ var/datum/antagonist/raider/raiders
 		return 0
 
 	for(var/datum/mind/player in current_antagonists)
-		if(!player.current || get_area(player.current) != locate(/area/skipjack_station/start))
+		if(!player.current || get_area(player.current) != locate(/area/shuttle/skipjack)) // CHOMPEdit: Changed locate to work with new condensed shuttles
 			return 0
 	return 1
 

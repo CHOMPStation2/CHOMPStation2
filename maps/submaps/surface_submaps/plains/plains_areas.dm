@@ -111,8 +111,6 @@
 	name = "POI - Buried Treasure"
 	ambience = AMBIENCE_FOREBODING
 
-	// CHOMP KSC 7/31/20 Added 5 more POI's areas for their respective place.
-
 /area/submap/oldhotel
 	name = "POI - Old Hotel"
 	ambience = AMBIENCE_SIF
@@ -121,8 +119,8 @@
 	name = "POI - Pride Rock"
 	ambience = AMBIENCE_SIF
 
-/area/submap/abandonedhome
-	name = "POI - Abandoned Home"
+/area/submap/lonehome
+	name = "POI - Lone Home"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/hotspring

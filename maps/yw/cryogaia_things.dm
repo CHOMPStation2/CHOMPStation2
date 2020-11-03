@@ -19,6 +19,12 @@
 	icon_state = "map_vent_out"
 	external_pressure_bound = ONE_ATMOSPHERE * 1.1
 
+/obj/item/blueprints
+	SPACE_OUTSIDE_TYPES = list(
+		/area/borealis2/outdoors/exterior,
+        /area/borealis2/outdoors/grounds 
+	)
+
 
 
 /obj/effect/step_trigger/teleporter/planetary_fall/borealis2/find_planet()
@@ -326,7 +332,7 @@ var/global/list/latejoin_tram   = list()
 	//color = ""
 
 /obj/machinery/door/airlock/multi_tile/metal/red/allowed(mob/user)
-	if(get_security_level() in list("green","blue"))
+	if(get_security_level() in list("green","blue","yellow","violet","orange"))
 		return FALSE
 
 	return ..(user)
@@ -649,7 +655,7 @@ obj/machinery/trailblazer/Initialize()
 
 /obj/machinery/trailblazer/yellow
 	name = "trail blazer"
-	desc = "A glowing stick- light. This one is glowing blue."
+	desc = "A glowing stick- light. This one is glowing yellow."
 	icon_state = "yellowtrail_light_on"
 
 /obj/machinery/trailblazer/yellow/randomize_color()

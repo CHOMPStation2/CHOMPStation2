@@ -7,7 +7,7 @@ datum/controller/transfer_controller
 	var/shift_last_vote = 0 //VOREStation Edit
 datum/controller/transfer_controller/New()
 	timerbuffer = config.vote_autotransfer_initial
-	shift_hard_end = config.vote_autotransfer_initial + (config.vote_autotransfer_interval * 3) //CHOMPStation Edit //Change this "1" to how many extend votes you want there to be.
+	shift_hard_end = config.vote_autotransfer_initial + (config.vote_autotransfer_interval * 2) //CHOMPStation Edit //Change this "1" to how many extend votes you want there to be. //Note: Fuck you whoever just slapped a number here instead of using the FUCKING CONFIG LIKE ALL THE OTHER NUMBERS HERE
 	shift_last_vote = shift_hard_end - config.vote_autotransfer_interval //VOREStation Edit
 	START_PROCESSING(SSprocessing, src)
 

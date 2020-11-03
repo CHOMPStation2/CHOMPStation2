@@ -1,6 +1,6 @@
 //In future consider cleaning up often used recipes by adding them to the general recipe list with material criteria
 
-/material/plasteel/generate_recipes()
+/datum/material/plasteel/generate_recipes()
 	. = ..()
 //	recipes += new/datum/stack_recipe("Hammer Head", /obj/item/weapon/hammer_head, 2) //CHOMPEdit - Disabled because I had to disable code/game/objects/items/weapons/material/sledgehammer_construction_ch.dm due to lots of errors
 	recipes += new/datum/stack_recipe_list("sofas", list( \
@@ -10,7 +10,7 @@
 		new/datum/stack_recipe("sofa corner", /obj/structure/bed/chair/sofa/corner, 1, one_per_turf = 1, on_floor = 1), \
 		))
 		
-/material/plastic/generate_recipes()
+/datum/material/plastic/generate_recipes()
 	. = ..()
 	recipes += new/datum/stack_recipe_list("sofas", list( \
 		new/datum/stack_recipe("sofa middle", /obj/structure/bed/chair/sofa, 1, one_per_turf = 1, on_floor = 1, supplied_material = "[name]"), \
@@ -19,7 +19,7 @@
 		new/datum/stack_recipe("sofa corner", /obj/structure/bed/chair/sofa/corner, 1, one_per_turf = 1, on_floor = 1, supplied_material = "[name]"), \
 		))
 
-/material/wood/generate_recipes() //Is a little sad we cant have lovely wooden sofa
+/datum/material/wood/generate_recipes() //Is a little sad we cant have lovely wooden sofa
 	. = ..()
 	recipes += new/datum/stack_recipe_list("sofas", list( \
 		new/datum/stack_recipe("sofa middle", /obj/structure/bed/chair/sofa, 1, one_per_turf = 1, on_floor = 1, supplied_material = "[name]"), \
