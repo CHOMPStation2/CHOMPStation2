@@ -94,7 +94,7 @@
 			else if(src.density)
 				visible_message("<span class='alium'>\The [user] begins forcing \the [src] open!</span>")
 				if(do_after(user, 5 SECONDS,src))
-					playsound(src, 'sound/machines/door/airlock_creaking.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS) //Normal airlock creak since we're not destroying the door
+					playsound(src, 'sound/machines/door/airlock_creaking.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS)
 					visible_message("<span class='danger'>\The [user] forces \the [src] open!</span>")
 					open(1)
 			else
