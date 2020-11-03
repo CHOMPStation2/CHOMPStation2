@@ -8,12 +8,12 @@
 	var/energy	//Joules
 
 /obj/item/projectile/bullet/launch_projectile(atom/target, target_zone, mob/user, params, angle_override, forced_spread = 0)
-	energy = velocity * velocity * (grains / GRAINS_PER_KG)
+	energy = 0.5 * velocity * velocity * (grains / GRAINS_PER_KG)
 	return ..()
 
 /obj/item/projectile/bullet/proc/sub_velocity(var/amount)
 	velocity = max(0,velocity - amount)
-	energy = velocity * velocity * (grains / GRAINS_PER_KG)
+	energy = 0.5 * velocity * velocity * (grains / GRAINS_PER_KG)
 
 /obj/item/projectile/bullet/proc/sub_energy(var/amount)
 	energy = max(0,energy - amount)
