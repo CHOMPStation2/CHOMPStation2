@@ -1,19 +1,24 @@
 /turf/simulated
 	var/triggers = FALSE
-	var/list/potential_triggerers = list()	//What can set off our trigger?
-	var/list/trig_target_paths = list()		//What are the paths of whatever we want to call our proc on?
-	var/trig_target_trigger_uid				//What is the trigger_uid of whatever we want to call our proc on?
-	var/trig_proc							//What proc do we want to call?
-	var/list/trig_args = list()				//What are the arguments for said proc?
-	var/trig_message						//Should we send a message to the person who stepped here?
-	var/message_span_class = "notice"		//If we're gonna send them a message, what span class to use?
-	var/trig_single_use = FALSE				//Is this only a single use trigger, or can it be used multiple times?
-	var/has_been_used = FALSE				//Has this trigger been set off yet?
-	var/list/trig_targets = list()			//This is set automatically if the other target vars are set.
+	var/list/potential_triggerers = list()		//What can set off our trigger?
+	var/list/trig_target_paths = list()			//What are the paths of whatever we want to call our proc on?
+	var/trig_target_trigger_uid					//What is the trigger_uid of whatever we want to call our proc on?
+	var/trig_proc								//What proc do we want to call?
+	var/list/trig_args = list()					//What are the arguments for said proc?
+	var/trig_message							//Should we send a message to the person who stepped here?
+	var/message_span_class = "notice"			//If we're gonna send them a message, what span class to use?
+	var/trig_single_use = FALSE					//Is this only a single use trigger, or can it be used multiple times?
+	var/has_been_used = FALSE					//Has this trigger been set off yet?
+	var/list/trig_targets = list()				//This is set automatically if the other target vars are set.
+	var/list/been_triggered_by = list()			//Who has set this off so far?
+	var/trig_single_use_per_triggerer = FALSE	//Do we want to make so each atom can only trigger this once?
+	var/trig_target_is_trigerrer = FALSE		//Do we want to use the atom that trigerred us as the target?
 
 
 /turf/simulated/proc/can_use_trigger(atom/movable/mover)
 	if(trig_single_use && has_been_used)
+		return FALSE
+	if(trig_single_use_per_triggerer && (mover in been_triggered_by))
 		return FALSE
 	if(!potential_triggerers.len)
 		return TRUE
@@ -29,6 +34,8 @@
 	. = ..()
 	if(triggers && can_use_trigger(mover))
 		if(trig_proc)
+			if(trig_target_is_trigerrer)
+				trig_targets = list(mover)
 			if(trig_targets.len)
 				var/testname = trig_proc
 				//Find one of the 3 possible ways they could have written /proc/PROCNAME
@@ -55,6 +62,7 @@
 		if(trig_message)
 			to_chat(mover,"<span class='[message_span_class]'>"+trig_message+"</span>")
 		has_been_used = TRUE
+		been_triggered_by |= mover
 	else 
 		return
 
