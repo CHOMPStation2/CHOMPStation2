@@ -1,13 +1,11 @@
 /obj/machinery/feeder
 	name = "\improper Feeder"
 	icon = 'icons/obj/feeder.dmi'
-	desc = "This is a feeder. Put in a regent container, then click and drag the feeder to someone!"
-	anchored = 0
-	density = 0
-
-
-/obj/machinery/feeder/var/mob/living/carbon/human/attached = null
-/obj/machinery/feeder/var/obj/item/weapon/reagent_containers/beaker = null
+	desc = "This is a feeder. Put in a reagent container, then click and drag the feeder to someone!"
+	anchored = FALSE
+	density = FALSE
+	var/mob/living/carbon/human/attached = null
+	var/obj/item/weapon/reagent_containers/beaker = null
 
 /obj/machinery/feeder/update_icon()
 	if(attached)
@@ -15,7 +13,7 @@
 	else
 		icon_state = ""
 
-	overlays = null
+	overlays.Cut()
 
 	if(beaker)
 		var/datum/reagents/reagents = beaker.reagents
@@ -42,7 +40,7 @@
 		return
 
 	if(attached)
-		visible_message("The feeding tube is pulled out of [attached]")
+		visible_message("The feeding tube is pulled out of [attached].")
 		attached = null
 		update_icon()
 		return
@@ -56,18 +54,19 @@
 /obj/machinery/feeder/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/reagent_containers))
 		if(!isnull(beaker))
-			user << "There is already a reagent container inserted!"
+			. += "There is already a reagent container inserted!"
 			return
 
 		user.drop_item()
 		W.loc = src
 		beaker = W
-		user << "You insert \the [W] into \the [src]."
+		. += "You insert \the [W] into \the [src]."
 		update_icon()
 		return
 
 	if(default_deconstruction_screwdriver(user, W))
 		if(do_after(user, 15))
+			to_chat(user, "You deconstruct the feeder.")
 			var/obj/item/stack/material/plastic/A = new /obj/item/stack/material/plastic(src.loc)
 			A.amount = 4
 			if(beaker)
@@ -104,18 +103,18 @@
 		return ..()
 
 /obj/machinery/feeder/examine(mob/user)
-	..(user)
+	.=..()
 	if(!(user in view(2)) && user != src.loc) return
 
 	if(beaker)
 		if(beaker.reagents && beaker.reagents.reagent_list.len)
-			usr << "<span class='notice'>Inserted is \a [beaker] with [beaker.reagents.total_volume] units of liquid.</span>"
+			. += "<span class='notice'>Inserted is \a [beaker] with [beaker.reagents.total_volume] units of liquid.</span>"
 		else
-			usr << "<span class='notice'>Inserted is an empty [beaker].</span>"
+			. += "<span class='notice'>Inserted is an empty [beaker].</span>"
 	else
-		usr << "<span class='notice'>No container is inserted.</span>"
+		. += "<span class='notice'>No container is inserted.</span>"
 
-	usr << "<span class='notice'>[attached ? attached : "No one"] is being fed by it.</span>"
+	. += "<span class='notice'>[attached ? attached : "No one"] is being fed by it.</span>"
 
 /obj/machinery/feeder/CanPass(atom/movable/mover, turf/target, height = 0, air_group = 0)
 	if(height && istype(mover) && mover.checkpass(PASSTABLE)) //allow bullets, beams, thrown objects, mice, drones, and the like through.
