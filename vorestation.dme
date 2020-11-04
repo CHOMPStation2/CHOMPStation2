@@ -815,6 +815,7 @@
 #include "code\game\machinery\doorbell_vr.dm"
 #include "code\game\machinery\doppler_array.dm"
 #include "code\game\machinery\exonet_node.dm"
+#include "code\game\machinery\feeder.dm"
 #include "code\game\machinery\fire_alarm.dm"
 #include "code\game\machinery\flasher.dm"
 #include "code\game\machinery\floodlight.dm"
