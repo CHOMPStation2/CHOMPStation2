@@ -17,6 +17,7 @@
 	var/nothing_message = "Nothing happens."			//Should we send a message if nothing happens when the button is pressed?
 	var/nothing_message_span_class = "warning"			//Span class used for nothing message, normal ones include notice, warning, and danger.
 	var/list/trig_targets = list()
+	var/trig_target_is_trigerrer = FALSE				//Should we use the button presser as the target?
 
 /obj/kbutton/attackby(obj/item/weapon/W, mob/user as mob)
 	return attack_hand(user)
@@ -24,6 +25,8 @@
 /obj/kbutton/attack_hand(mob/user as mob)
 	. = ..()
 	if(can_press(user))
+		if(trig_target_is_trigerrer)
+			trig_targets = list(user)
 		button_trigger()
 		if(pressed_sound_file)
 			playsound(src, pressed_sound_file, pressed_sound_volume, 1)
@@ -96,6 +99,17 @@
 
 /obj/kbutton/single_use/can_press(mob/user)
 	return !has_been_pressed
+
+/obj/kbutton/single_use_per_mob
+	name = "button"
+	var/list/been_triggered_by = list()
+
+/obj/kbutton/single_use_per_mob/can_press(mob/user)
+	if(user in been_triggered_by)
+		return FALSE
+	else
+		been_triggered_by |= user
+		return TRUE
 
 /obj/kbutton/toggle
 	name = "toggle button"
