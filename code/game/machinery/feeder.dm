@@ -82,7 +82,7 @@
 	if(attached)
 
 		if(!(get_dist(src, attached) <= 1 && isturf(attached.loc)))
-			visible_message("The tube is pulled out of [attached]")
+			visible_message("The tube is pulled out of [attached].")
 			attached = null
 			update_icon()
 			return
