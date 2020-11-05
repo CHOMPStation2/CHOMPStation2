@@ -19,7 +19,12 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+||||||| parent of 4f80964719... Merge pull request #9277 from Cyantime/patch-3
+=======
+magpiemayhem - Vox
+>>>>>>> 4f80964719... Merge pull request #9277 from Cyantime/patch-3
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
