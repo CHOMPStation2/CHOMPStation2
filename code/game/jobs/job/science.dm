@@ -129,7 +129,7 @@ VR edit end*/
 	supervisors = "the Research Director"
 	selection_color = "#633D63"
 	economic_modifier = 5
-	access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
+	access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research, access_xenobiology, access_hydroponics) //As a job that handles so many corpses, it makes sense for them to have morgue access. // Chomp Edit : Give roboticists additionnal access.
 	minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
 	minimal_player_age = 3
 
