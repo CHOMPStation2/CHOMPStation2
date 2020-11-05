@@ -40,6 +40,7 @@
 /datum/alt_title/research_supervisor
 	title = "Research Supervisor"
 
+/* CHOMPEDIT Consolidate all Science jobs (Except RD) in science_ch.dm
 //////////////////////////////////
 //			Scientist
 //////////////////////////////////
@@ -148,3 +149,4 @@ VR edit end*/
 	title = "Mechatronic Engineer"
 	title_blurb = "A Mechatronic Engineer focuses on the construction and maintenance of Exosuits, and should be well versed in their use. \
 					They may also be called upon to work on synthetics and prosthetics, if needed."
+*/

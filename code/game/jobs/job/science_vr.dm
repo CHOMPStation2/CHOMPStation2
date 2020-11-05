@@ -14,6 +14,8 @@
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
 			            access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
 
+
+/* CHOMPEDIT Consolidate all Science jobs (Except RD) in science_ch.dm
 /datum/job/scientist
 	spawn_positions = 5
 	pto_type = PTO_SCIENCE
@@ -61,3 +63,4 @@
 	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
 	job_description = "A Xenobotanist grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
 					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+*/

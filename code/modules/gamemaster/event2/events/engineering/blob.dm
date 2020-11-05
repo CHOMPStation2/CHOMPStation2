@@ -41,7 +41,9 @@
 	var/list/medical = metric.get_people_in_department(DEPARTMENT_MEDICAL)
 	var/need_medical = FALSE
 
-	var/list/robotics = metric.get_people_with_job(/datum/job/roboticist)
+	var/list/robotics = metric.get_people_with_alt_title(/datum/job/scientist, /datum/alt_title/roboticist) // CHOMP edit, use scientist's alt-titles instead of the actual job.
+	robotics += metric.get_people_with_alt_title(/datum/job/scientist, /datum/alt_title/biomech) // CHOMP edit, use scientist's alt-titles instead of the actual job.
+	robotics += metric.get_people_with_alt_title(/datum/job/scientist, /datum/alt_title/mech_tech) // CHOMP edit, use scientist's alt-titles instead of the actual job.
 	var/need_robotics = FALSE
 
 	// Determine what kind of support might be needed.
