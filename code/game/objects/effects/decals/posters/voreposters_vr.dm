@@ -1,3 +1,4 @@
+/* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
 /datum/poster/vore_1
 	icon_state = "sbsposter1"
 	name = "Best Girl Pip"
@@ -22,10 +23,6 @@
 	icon_state = "sbsposter6"
 	name = "Mawletta"
 	desc = "The best view in the system."
-/datum/poster/vore_7
-	icon_state = "sbsposter7"
-	name = "Sam FEAR"
-	desc = "A poster of the most dangerous cat working for NT."
 /datum/poster/vore_8
 	icon_state = "sbsposter8"
 	name = "Shitty Timbs"
@@ -34,10 +31,6 @@
 	icon_state = "sbsposter9"
 	name = "Shitty Tim"
 	desc = "A Shitty Tim concert poster."
-/datum/poster/vore_10
-	icon_state = "sbsposter10"
-	name = "Kitty Kisuke"
-	desc = "A poster of famous redspace researcher, Kisuke Gema."
 /datum/poster/vore_11
 	icon_state = "sbsposter11"
 	name = "Fear"
@@ -54,6 +47,7 @@
 	icon_state = "dwposter1"
 	name = "WANTED: WAR CRIMINAL"
 	desc = "A poster bringing awareness to the distinguishing costume of a known war criminal operating in Virgo-Erigonne space."
+*/ //CHOMPedit end
 /datum/poster/vore_15
 	icon_state = "dwposter2"
 	name = "Implanter"
@@ -66,18 +60,22 @@
 	icon_state = "dwposter4"
 	name = "We know"
 	desc = "A poster purporting the infallibility of NanoTrasen's forensics department."
+/* //CHOMPedit
 /datum/poster/vore_18
 	icon_state = "dwposter5"
 	name = "KAT"
 	desc = "A promotional poster for popular exotube show 'Kat-Kat Korner'"
+*/ //CHOMPedit end
 /datum/poster/vore_19
 	icon_state = "dwposter6"
 	name = "install.css"
 	desc = "A nostalgia trip."
+/* //CHOMPedit
 /datum/poster/vore_20
 	icon_state = "dwposter7"
 	name = "TALON"
 	desc = "The logo and banner of a notable group of contractors known to trade with NanoTrasen."
+*/ //CHOMPedit end
 /datum/poster/vore_21
 	icon_state = "dwposter8"
 	name = "GPA"

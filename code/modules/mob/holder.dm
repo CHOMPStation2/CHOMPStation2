@@ -27,6 +27,19 @@ var/list/holder_mob_icon_cache = list()
 	..()
 	START_PROCESSING(SSobj, src)
 
+/obj/item/weapon/holder/throw_at(atom/target, range, speed, thrower)
+	if(held_mob)
+		held_mob.forceMove(loc)
+		var/thrower_mob_size = 1
+		if(ismob(thrower))
+			var/mob/M = thrower
+			thrower_mob_size = M.mob_size
+		var/mob_range = round(range * min(thrower_mob_size / held_mob.mob_size, 1))
+		held_mob.throw_at(target, mob_range, speed, thrower)
+		held_mob = null
+	drop_items()
+	qdel(src)
+
 /obj/item/weapon/holder/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
@@ -98,7 +111,7 @@ var/list/holder_mob_icon_cache = list()
 	else if(istype(loc, /obj/item/clothing/accessory/holster))
 		var/obj/item/clothing/accessory/holster/holster = loc
 		if(holster.holstered == src)
-			holster.clear_holster()			
+			holster.clear_holster()
 		to_chat(held, "<span class='warning'>You extricate yourself from [holster].</span>")
 		held.forceMove(get_turf(held))
 	else if(isitem(loc))
@@ -172,6 +185,16 @@ var/list/holder_mob_icon_cache = list()
 	else
 		if(grabber.incapacitated()) return
 
+	//YW edit - size diff check
+	var/sizediff = grabber.size_multiplier - size_multiplier
+	if(sizediff < -0.5)
+		if(self_grab)
+			to_chat(src, "<span class='warning'>You are too big to fit in \the [grabber]\'s hands!</span>")
+		else
+			to_chat(grabber, "<span class='warning'>\The [src] is too big to fit in your hands!</span>")
+		return
+	//end YW edit
+
 	var/obj/item/weapon/holder/H = new holder_type(get_turf(src))
 	H.held_mob = src
 	src.forceMove(H)
@@ -185,6 +208,7 @@ var/list/holder_mob_icon_cache = list()
 		to_chat(grabber, "<span class='notice'>You scoop up \the [src]!</span>")
 		to_chat(src, "<span class='notice'>\The [grabber] scoops you up!</span>")
 
+	add_attack_logs(grabber, H.held_mob, "Scooped up", FALSE) // Not important enough to notify admins, but still helpful.
 	H.sync(src)
 	return H
 

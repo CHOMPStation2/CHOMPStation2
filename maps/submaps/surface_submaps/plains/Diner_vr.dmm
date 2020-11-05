@@ -85,16 +85,13 @@
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
 "at" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
@@ -111,7 +108,6 @@
 "aw" = (
 /obj/machinery/appliance/mixer/cereal,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -198,7 +194,6 @@
 "aK" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -264,7 +259,8 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/Diner)
 "aS" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram,
+/obj/structure/table/standard,
+/obj/item/weapon/module/power_control,
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
 "aT" = (
@@ -289,10 +285,6 @@
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
-"aY" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram,
-/turf/simulated/floor/tiled,
-/area/submap/Diner)
 "aZ" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -302,9 +294,7 @@
 "ba" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
@@ -325,7 +315,6 @@
 /area/submap/Diner)
 "be" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -401,7 +390,6 @@
 "br" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/windoor_assembly{
-	icon_state = "l_windoor_assembly01";
 	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
@@ -418,7 +406,6 @@
 /area/submap/Diner)
 "bu" = (
 /obj/structure/sink{
-	icon_state = "sink";
 	dir = 8;
 	pixel_x = -12;
 	pixel_y = 2
@@ -453,8 +440,7 @@
 "bA" = (
 /obj/structure/mirror{
 	dir = 4;
-	pixel_x = -32;
-	pixel_y = 0
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Diner)
@@ -464,6 +450,7 @@
 /area/submap/Diner)
 "bC" = (
 /obj/structure/table/standard,
+/obj/item/stack/cable_coil,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Diner)
 "gw" = (
@@ -568,14 +555,14 @@ ac
 ac
 ac
 ac
+ab
 ac
 ac
 ac
 ac
 ac
 ac
-ac
-ac
+ab
 ac
 ac
 ac
@@ -589,6 +576,13 @@ aa
 aa
 ac
 ac
+ab
+ac
+ac
+ab
+ac
+ac
+ab
 ac
 ac
 ac
@@ -596,17 +590,10 @@ ac
 ac
 ac
 ac
+ab
 ac
 ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
 ac
 ab
 ab
@@ -615,7 +602,7 @@ aa
 (6,1,1) = {"
 aa
 ab
-ac
+ab
 ac
 ac
 ac
@@ -677,7 +664,7 @@ ae
 ae
 ae
 ad
-aS
+ap
 ap
 ad
 ae
@@ -704,7 +691,7 @@ ao
 aC
 ax
 ad
-aS
+ap
 aW
 ad
 ao
@@ -899,7 +886,7 @@ bb
 be
 bg
 bh
-ah
+aS
 aK
 br
 af
@@ -1056,7 +1043,7 @@ aH
 aH
 aH
 ad
-aY
+aG
 aG
 aG
 ad
@@ -1083,7 +1070,7 @@ aI
 aN
 aR
 ad
-aY
+aG
 aG
 bf
 ad

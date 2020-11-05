@@ -25,4 +25,7 @@
 	desc = "A 7.92x57mm Mauser casing."
 	icon_state = "rifle-casing"
 	caliber = "mauser"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	projectile_type = /obj/item/projectile/bullet/rifle/a762/lmg
+
+/obj/item/projectile/bullet/rifle/a762/lmg
+	icon_state = "bullet_alt"

@@ -1650,3 +1650,80 @@
 	icon_override = 'icons/vore/custom_items_vr.dmi'
 	item_state = "khlife_overlay"
 	overlay_state = "khlife_overlay"
+
+// ******
+// KBraid
+// ******
+/obj/item/clothing/glasses/fluff/avigoggles_yw
+	name = "aviation goggles"
+	desc = "You're such a goggle head!"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "avigoggles_i"
+	item_state = "avigoggles"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	action_button_name = "Flip Aviation Goggles"
+	item_flags = AIRTIGHT
+	var/up = 0
+
+/obj/item/clothing/glasses/fluff/avigoggles_yw/attack_self()
+	toggle()
+
+/obj/item/clothing/glasses/fluff/avigoggles_yw/verb/toggle()
+	set category = "Object"
+	set name = "Adjust aviation goggles"
+	set src in usr
+
+	if(usr.canmove && !usr.stat && !usr.restrained())
+		if(src.up)
+			src.up = !src.up
+			flags_inv |= HIDEEYES
+			body_parts_covered |= EYES
+			item_state = initial(item_state)
+			to_chat(usr, "You flip \the [src] down to protect your eyes.")
+		else
+			src.up = !src.up
+			flags_inv &= ~HIDEEYES
+			body_parts_covered &= ~EYES
+			item_state = "[initial(item_state)]_up"
+			to_chat(usr, "You push \the [src] up out of your face.")
+		update_clothing_icon()
+		usr.update_action_buttons()
+
+/obj/item/clothing/glasses/fluff/avigoggles_yw/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
+	if(body_type == SPECIES_TESHARI)
+		if(!inhands)
+			return 'icons/vore/custom_clothes_yw_special.dmi'
+	else
+		return ..()
+
+/obj/item/clothing/suit/storage/hooded/fluff/kbraid
+	name = "Braid's outfit"
+	desc = "The uniform of an Avali named Braid"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kbraid_outfit"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kbraid_outfit_s"
+	body_parts_covered = UPPER_TORSO|ARMS|FEET
+	hoodtype = /obj/item/clothing/head/hood/kbraid_hood
+	action_button_name = "Toggle Headphones"
+
+/obj/item/clothing/head/hood/kbraid_hood
+	name = "Earphones"
+	desc = "A set of Avali earphones."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "kbraid_head"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "kbraid_head_s"
+	ear_protection = 1
+
+// ********
+// Whiteout
+// ********
+/obj/item/clothing/under/harness_white
+	name = "white gear harness"
+	desc = "How... minimalist."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "gear_harness_white"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "gear_harness_white"
+	body_parts_covered = 0

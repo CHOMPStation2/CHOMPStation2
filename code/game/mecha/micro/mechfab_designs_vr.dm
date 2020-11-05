@@ -1,5 +1,5 @@
 /datum/design/item/mechfab/gopher
-	category = "Gopher"
+	category = list("Gopher")
 	time = 5
 
 /datum/design/item/mechfab/gopher/chassis
@@ -41,21 +41,21 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 12500)
 
 /datum/design/item/mecha/drill/micro
-	name = "Miniature Drill"
+	name = "Micro Drill" //CHOMPedit
 	id = "micro_drill"
 	build_path = /obj/item/mecha_parts/mecha_equipment/tool/drill/micro
 	time = 5
 	materials = list(DEFAULT_WALL_MATERIAL = 2500)
 
 /datum/design/item/mecha/hydraulic_clamp/micro
-	name = "Mounted ore box"
+	name = "Mounted micro ore box" //CHOMPedit
 	id = "ore_scoop"
 	build_path = /obj/item/mecha_parts/mecha_equipment/tool/micro/orescoop
 	time = 5
 	materials = list(DEFAULT_WALL_MATERIAL = 2500)
 
 /datum/design/item/mechfab/polecat
-	category = "Polecat"
+	category = list("Polecat")
 	time = 10
 
 /datum/design/item/mechfab/polecat/chassis
@@ -103,38 +103,38 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 12500, "plastic" = 7500)
 
 /datum/design/item/mecha/taser/micro
-	name = "\improper TS-12 \"Suppressor\" integrated taser"
+	name = "\improper TS-12 \"Suppressor\" integrated micro taser" //CHOMPedit
 	id = "micro_taser"
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/microtaser
 
 /datum/design/item/mecha/weapon/laser/micro
-	name = "\improper WS-19 \"Torch\" laser carbine"
+	name = "\improper WS-19 \"Torch\" micro laser carbine" //CHOMPedit
 	id = "micro_laser"
 //	req_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 3)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/microlaser
 
 /datum/design/item/mecha/weapon/laser_heavy/micro
-	name = "\improper PC-20 \"Lance\" light laser cannon"
+	name = "\improper PC-20 \"Lance\" micro laser cannon" //CHOMPedit
 	id = "micro_laser_heavy"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 10000, "glass" = 1000, "diamond" = 2000)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/microheavy
 
 /datum/design/item/mecha/weapon/grenade_launcher/micro
-	name = "\improper FP-20 mounted grenade launcher"
+	name = "\improper FP-20 mounted micro flashbang launcher" //CHOMPedit
 	id = "micro_flashbang_launcher"
 //	req_tech = list(TECH_COMBAT = 3)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/microflashbang
 
 /datum/design/item/mecha/weapon/scattershot/micro
-	name = "\improper Remington C-12 \"Boomstick\""
+	name = "\improper Remington C-12 \"Micro-Boomstick\"" //CHOMPedit
 	desc = "A mounted combat shotgun with integrated ammo-lathe."
 	id = "micro_scattershot"
 //	req_tech = list(TECH_COMBAT = 4)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/microshotgun
 
 /datum/design/item/mechfab/weasel
-	category = "Weasel"
+	category = list("Weasel")
 	time = 5
 
 /datum/design/item/mechfab/weasel/chassis

@@ -23,6 +23,7 @@
 	var/list/req_one_access = list()
 
 	var/atom/target = null
+	var/list/ignore_past = list() //CHOMPStation edit
 	var/list/ignore_list = list()
 	var/list/patrol_path = list()
 	var/list/target_path = list()
@@ -68,9 +69,9 @@
 	if(health <= 0)
 		death()
 		return
-	weakened = 0
-	stunned = 0
-	paralysis = 0
+	SetWeakened(0)
+	SetStunned(0)
+	SetParalysis(0)
 
 	if(on && !client && !busy)
 		spawn(0)
@@ -165,7 +166,15 @@
 	if(ignore_list.len)
 		for(var/atom/A in ignore_list)
 			if(!A || !A.loc || prob(1))
-				ignore_list -= A
+			//CHOMPEdit Begin
+				if(A in ignore_past)
+					if(prob(10/ignore_past[A]) || !A || !A.loc)
+						ignore_past[A]++
+						ignore_list -= A
+				else
+					ignore_past[A] = 1
+					ignore_list -= A
+			//CHOMPEdit End
 	handleRegular()
 
 	var/panic_speed_mod = 0
@@ -197,6 +206,12 @@
 			else
 				startPatrol()
 		else
+			if((locate(/obj/machinery/door) in loc) && !pulledby) //Don't hang around blocking doors, but don't run off if someone tries to pull us through one.
+				var/turf/my_turf = get_turf(src)
+				var/list/can_go = my_turf.CardinalTurfsWithAccess(botcard)
+				if(LAZYLEN(can_go))
+					if(step_towards(src, pick(can_go)))
+						return
 			handleIdle()
 
 /mob/living/bot/proc/handleRegular()
@@ -243,7 +258,7 @@
 		if(makeStep(target_path))
 			frustration = 0
 		else if(max_frustration)
-			++frustration
+			frustration++ //CHOMPEdit
 	return
 
 /mob/living/bot/proc/handleFrustrated(var/targ)
@@ -265,7 +280,12 @@
 	return 1
 
 /mob/living/bot/proc/handlePatrol()
-	makeStep(patrol_path)
+	//CHOMPEdit Begin
+	if(makeStep(patrol_path))
+		frustration = 0
+	else if(max_frustration)
+		frustration++ 
+	//CHOMPEdit End
 	return
 
 /mob/living/bot/proc/startPatrol()
@@ -309,6 +329,8 @@
 			ignore_list |= target
 		resetTarget()
 		obstacle = null
+	else if(target in ignore_past)	//CHOMPEdit
+		ignore_past.Remove(target)	//CHOMPEdit
 	return
 
 /mob/living/bot/proc/makeStep(var/list/path)
@@ -324,8 +346,8 @@
 /mob/living/bot/proc/resetTarget()
 	target = null
 	target_path = list()
-	frustration = 0
-	obstacle = null
+	//CHOMPEdit frustration = 0
+	//CHOMPEdit obstacle = null
 
 /mob/living/bot/proc/turn_on()
 	if(stat)

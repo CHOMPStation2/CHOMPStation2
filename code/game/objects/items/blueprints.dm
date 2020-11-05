@@ -20,6 +20,7 @@
 	var/const/ROOM_ERR_SPACE = -1
 	var/const/ROOM_ERR_TOOLARGE = -2
 
+	var/list/SPACE_OUTSIDE_TYPES = list() //YWEdit.
 	var/static/list/SPACE_AREA_TYPES = list(
 		/area/space,
 		/area/mine
@@ -88,7 +89,10 @@
 	var/curAreaType = get_area_type()
 	switch (curAreaType)
 		if (AREA_SPACE)
-			text += "<p>According the blueprints, you are now in <b>outer space</b>.  Hold your breath.</p>"
+			if(!istype(A, /area/space))//YWEdit Start.
+				text += "<p>According the blueprints, you are now in <b>\"[A.name]\"</b>.</p>"
+			else
+				text += "<p>According the blueprints, you are now in <b>outer space</b>.  Hold your breath.</p>" //YWEdit End.
 		if (AREA_STATION)
 			text += "<p>According the blueprints, you are now in <b>\"[A.name]\"</b>.</p>"
 		if (AREA_SPECIAL)
@@ -116,6 +120,9 @@
 	return A
 
 /obj/item/blueprints/proc/get_area_type(var/area/A = get_area())
+	for(var/type in SPACE_OUTSIDE_TYPES) //YWEDIT Start.
+		if(istype(A, type))
+			return AREA_SPACE //YWEDIT End.
 	for(var/type in SPACE_AREA_TYPES)
 		if(istype(A, type))
 			return AREA_SPACE

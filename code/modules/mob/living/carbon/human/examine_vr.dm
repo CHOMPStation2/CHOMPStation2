@@ -68,6 +68,8 @@
 /mob/living/carbon/human/proc/examine_nutrition()
 	if(!show_pudge()) //Some clothing or equipment can hide this.
 		return ""
+	if(nutrition_hidden) // Chomp Edit
+		return ""
 	var/message = ""
 	var/nutrition_examine = round(nutrition)
 	var/t_He 	= "It" //capitalised for use at the start of each line.

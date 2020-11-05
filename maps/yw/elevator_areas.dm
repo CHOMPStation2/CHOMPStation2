@@ -35,6 +35,12 @@
 	lift_announce_str = "Arriving at Apartment level."
 	delay_time = 5 SECONDS
 
+/area/turbolift/lumber_floor_upper_level
+	name = "surface (level 2)"
+	lift_floor_label = "Surface 2"
+	lift_floor_name = "Upper Level (Construction Area!)"
+	lift_announce_str = "Arriving at Upper Level."
+
 /area/turbolift/lumber_floor_main_level
 	name = "surface (level 1)"
 	lift_floor_label = "Surface 1"
@@ -72,5 +78,11 @@
 /area/turbolift/lumber_floor_medibasement
 	name = "Medbay (sublevel 1)"
 	lift_floor_label = "Medical Annex"
-	lift_floor_name = "Virology, Chemistry, EVA, Break room, Storage"
+	lift_floor_name = "Virology, Chemistry, EVA, Storage"
 	lift_announce_str = "Arriving at Medical Annex."
+
+/area/turbolift/lumber_floor_mediupper
+	name = "Medbay (level 2)"
+	lift_floor_label = "Medical Loft"
+	lift_floor_name = "Break Room, Storage, Skybridge to Departures"
+	lift_announce_str = "Arriving at Medical Loft."

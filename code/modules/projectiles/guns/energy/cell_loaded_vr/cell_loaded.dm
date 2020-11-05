@@ -1,7 +1,7 @@
 // The Gun //
 /obj/item/weapon/gun/projectile/cell_loaded //this one can load both medical and security cells! for ERT/admin use.
-	name = "multipurpose cell-loaded revolver"
-	desc = "Variety is the spice of life! This weapon is a hybrid of the HI-102b 'Nanotech Selectable-Cell Weapon' and the Vey-Med ML-3 'Medigun'. \
+	name = "multipurpose cell-loaded revolver" // CH edit - Changes ML-3 to NERD
+	desc = "Variety is the spice of life! This weapon is a hybrid of the HI-102b 'Nanotech Selectable-Cell Weapon' and the Vey-Med NERD 'Medigun'. \
 	It can fire both harmful and healing cells with an internal nanite fabricator and energy weapon cell loader. Up to three combinations of \
 	energy beams can be configured at once. Ammo not included."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus,

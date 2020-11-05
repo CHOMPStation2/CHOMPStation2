@@ -105,7 +105,7 @@ SUBSYSTEM_DEF(supply)
 					// Sell phoron and platinum
 					if(istype(A, /obj/item/stack))
 						var/obj/item/stack/P = A
-						var/material/mat = P.get_material()
+						var/datum/material/mat = P.get_material()
 						if(mat?.supply_conversion_value)
 							EC.contents[EC.contents.len]["value"] = P.get_amount() * mat.supply_conversion_value
 						EC.contents[EC.contents.len]["quantity"] = P.get_amount()
@@ -205,7 +205,8 @@ SUBSYSTEM_DEF(supply)
 			else if(islist(SP.access) && SP.one_access)
 				var/list/L = SP.access // access var is a plain var, we need a list
 				A.req_one_access = L.Copy()
-				A.req_access.Cut()
+				if(A.req_access) //Chompstation Edit (TODO: Figure out why the fuck this works for others but not us)
+					A.req_access.Cut()	//Chompstation Edit
 			else if(islist(SP.access) && !SP.one_access)
 				var/list/L = SP.access
 				A.req_access = L.Copy()

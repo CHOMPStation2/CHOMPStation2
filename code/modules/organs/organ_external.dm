@@ -14,6 +14,7 @@
 	dir = SOUTH
 	organ_tag = "limb"
 
+	var/brokenpain = 50				   //CHOMPEdit
 	// Strings
 	var/broken_description             // fracture string if any.
 	var/damage_state = "00"            // Modifier used for generating the on-mob damage overlay for this limb.
@@ -525,7 +526,7 @@ This function completely restores a damaged organ to perfect condition.
 //Burn damage can cause fluid loss due to blistering and cook-off
 
 	if((damage > 5 || damage + burn_dam >= 15) && type == BURN && (robotic < ORGAN_ROBOT) && !(species.flags & NO_BLOOD))
-		var/fluid_loss = 0.4 * (damage/(owner.getMaxHealth() - config.health_threshold_dead)) * owner.species.blood_volume*(1 - BLOOD_VOLUME_SURVIVE/100)
+		var/fluid_loss = 0.4 * (damage/(owner.getMaxHealth() - config.health_threshold_dead)) * owner.species.blood_volume*(1 - owner.species.blood_level_fatal)
 		owner.remove_blood(fluid_loss)
 
 	// first check whether we can widen an existing wound
@@ -1053,10 +1054,12 @@ Note that amputating the affected organ does in fact remove the infection from t
 		return
 
 	if(owner)
-		owner.visible_message(\
+		//CHOMPEdit Begin
+		owner.custom_pain(pick(\
 			"<span class='danger'>You hear a loud cracking sound coming from \the [owner].</span>",\
 			"<span class='danger'>Something feels like it shattered in your [name]!</span>",\
-			"<span class='danger'>You hear a sickening crack.</span>")
+			"<span class='danger'>You hear a sickening crack.</span>"),brokenpain)
+		//CHOMPEdit End
 		jostle_bone()
 		if(organ_can_feel_pain() && !isbelly(owner.loc))
 			owner.emote("scream")
@@ -1135,6 +1138,8 @@ Note that amputating the affected organ does in fact remove the infection from t
 	remove_splint()
 	get_icon()
 	unmutate()
+	drop_sound = 'sound/items/drop/weldingtool.ogg'
+	pickup_sound = 'sound/items/pickup/weldingtool.ogg'
 
 	for(var/obj/item/organ/external/T in children)
 		T.robotize(company, keep_organs = keep_organs)

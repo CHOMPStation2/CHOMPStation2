@@ -1,6 +1,6 @@
 /obj/turbolift_map_holder/lumber
 	icon = 'icons/obj/turbolift_preview_5x5.dmi'
-	depth = 4
+	depth = 5
 	lift_size_x = 4
 	lift_size_y = 4
 
@@ -13,10 +13,12 @@
 		/area/turbolift/lumber_floor_underground_transit,
 		/area/turbolift/lumber_floor_basement,
 		/area/turbolift/lumber_floor_main_level,
+		/area/turbolift/lumber_floor_upper_level,
 		)
+
 /obj/turbolift_map_holder/lumber/medevator
 	icon = 'icons/obj/turbolift_preview_3x3.dmi'
-	depth = 2
+	depth = 3
 	lift_size_x = 3
 	lift_size_y = 3
 	dir = EAST
@@ -25,4 +27,5 @@
 	areas_to_use = list(
 		/area/turbolift/lumber_floor_medibasement,
 		/area/turbolift/lumber_floor_medical,
+		/area/turbolift/lumber_floor_mediupper,
 		)

@@ -158,7 +158,7 @@
 	icon = 'icons/mob/vore/tails_yw.dmi'
 	name = "Female teshari tail(Pattern, Alt.)"
 	desc = ""
-	icon_state = "seromitail_s"
+	icon_state = "teshari_fluffytail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "teshpattern_fem_alt"
@@ -168,11 +168,18 @@
 	icon = 'icons/mob/vore/tails_yw.dmi'
 	name = "Male teshari tail(Pattern, Alt.)"
 	desc = ""
-	icon_state = "seromitail_s"
+	icon_state = "teshari_fluffytail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "teshpattern_male_alt"
 
+/datum/sprite_accessory/tail/jeanne_nanovulp
+	icon = 'icons/mob/human_races/cyberlimbs/dopiotl/jeanne_nanovulp.dmi'
+	name = "Jeanne kitsune nine tails"
+	desc = ""
+	icon_state = "tails"
+	do_colouration = 0
+	ckeys_allowed = list("dopiotl")
 
 //ears
 
@@ -201,3 +208,11 @@
 	color_blend_mode = ICON_MULTIPLY
 	do_colouration = 1
 	extra_overlay = "teshari_female_pattern"
+
+/datum/sprite_accessory/ears/jeanne_nanovulp
+	icon = 'icons/mob/human_races/cyberlimbs/dopiotl/jeanne_nanovulp.dmi'
+	name = "Jeanne nanovulp ears"
+	desc = ""
+	icon_state = "ears"
+	do_colouration = 0
+	ckeys_allowed = list("dopiotl")

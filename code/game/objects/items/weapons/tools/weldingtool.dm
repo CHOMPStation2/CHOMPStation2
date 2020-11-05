@@ -37,7 +37,8 @@
 	var/burned_fuel_for = 0 // Keeps track of how long the welder's been on, used to gradually empty the welder if left one, without RNG.
 	var/always_process = FALSE // If true, keeps the welder on the process list even if it's off.  Used for when it needs to regenerate fuel.
 	toolspeed = 1
-	drop_sound = 'sound/items/drop/scrap.ogg'
+	drop_sound = 'sound/items/drop/weldingtool.ogg'
+	pickup_sound = 'sound/items/pickup/weldingtool.ogg'
 
 /obj/item/weapon/weldingtool/Initialize()
 	. = ..()
@@ -159,9 +160,9 @@
 		else
 			message_admins("[key_name_admin(user)] triggered a fueltank explosion with a welding tool.")
 			log_game("[key_name(user)] triggered a fueltank explosion with a welding tool.")
-			//Yawn edit: removed weldertank booms
 			to_chat(user, "<span class='danger'>You begin welding on the fueltank and with a moment of lucidity you realize... you are doomed.</span>") //CHOMP Edit: changed yawn edit to just say you are doomed
-			//End yawn edit
+			var/obj/structure/reagent_dispensers/fueltank/tank = O // CHOMPS edit - Readds welderbombing 
+			tank.explode()
 			return
 	if (src.welding)
 		remove_fuel(1)
@@ -348,9 +349,11 @@
 				to_chat(user, "<span class='danger'>You go blind!</span>")
 				user.Blind(5)
 				user.eye_blurry = 5
-				user.disabilities |= NEARSIGHTED
-				spawn(100)
-					user.disabilities &= ~NEARSIGHTED
+				// Don't cure being nearsighted
+				if(!(H.disabilities & NEARSIGHTED))
+					user.disabilities |= NEARSIGHTED
+					spawn(100)
+						user.disabilities &= ~NEARSIGHTED
 	return
 
 /obj/item/weapon/weldingtool/is_hot()

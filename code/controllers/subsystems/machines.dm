@@ -121,11 +121,10 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/obj/machinery/M = current_run[current_run.len]
 		current_run.len--
-
-		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL))
+		var/q = QDELETED(M) //CHOMPStation edit
+		if(!istype(M) || q || (M.process(wait) == PROCESS_KILL)) //CHOMPStation edit
 			global.processing_machines.Remove(M)
-			if(!QDELETED(M))
-				DISABLE_BITFIELD(M.datum_flags, DF_ISPROCESSING)
+			M.datum_flags &= ~DF_ISPROCESSING + q*DF_ISPROCESSING; //CHOMPStation edit
 		if(MC_TICK_CHECK)
 			return
 
