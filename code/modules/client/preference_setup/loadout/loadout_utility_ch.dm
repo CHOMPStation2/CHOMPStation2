@@ -16,3 +16,10 @@
 		var/obj/item/weapon/implant/reagent_generator/egg/implant_type = implant
 		implants[initial(implant_type.name)] = implant_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(implants))
+
+/datum/gear/utility/protector
+	display_name = "Protector Energy Gun"
+	description = "The WT-98a 'Protector' is a common sidearm developed by Ward-Takahashi GMC. It features a powerful stun mode, and \
+					an alert-level-locked lethal mode, only usable when the connected jurisdiction allows. It also features an integrated flashlight!"
+	path = /obj/item/weapon/gun/energy/gun/protector/loadout
+	cost = 5

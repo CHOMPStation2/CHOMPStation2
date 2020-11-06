@@ -104,3 +104,7 @@
 	emagged = TRUE
 	name = "small energy gun"
 	desc = "The LAEP95 'Protector' is another firearm from Lawson Arms and "+TSC_HEPH+", unlike the Perun this is designed for issue to non-security staff. It contains a detachable cell. It also features an integrated flashlight!"
+
+// CHOMP EDIT : Add a version without tech levels for loadout.
+/obj/item/weapon/gun/energy/gun/protector/loadout
+	origin_tech = list(TECH_COMBAT = 0, TECH_MATERIAL = 0, TECH_MAGNET = 0)
