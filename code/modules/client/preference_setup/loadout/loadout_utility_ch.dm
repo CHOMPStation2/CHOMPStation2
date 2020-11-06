@@ -22,4 +22,5 @@
 	description = "The WT-98a 'Protector' is a common sidearm developed by Ward-Takahashi GMC. It features a powerful stun mode, and \
 					an alert-level-locked lethal mode, only usable when the connected jurisdiction allows. It also features an integrated flashlight!"
 	path = /obj/item/weapon/gun/energy/gun/protector/loadout
+	allowed_roles = list("Site Manager", "Head of Security","Warden","Detective","Security Officer")//YW ADDITIONS
 	cost = 5
