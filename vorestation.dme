@@ -2628,6 +2628,7 @@
 #include "code\modules\mob\living\say.dm"
 #include "code\modules\mob\living\status_indicators.dm"
 #include "code\modules\mob\living\zbullet_act_ch.dm"
+#include "code\modules\mob\living\zzballistic_test_ch.dm"
 #include "code\modules\mob\living\bot\bot.dm"
 #include "code\modules\mob\living\bot\bot_vr.dm"
 #include "code\modules\mob\living\bot\cleanbot.dm"

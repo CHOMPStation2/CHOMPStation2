@@ -428,3 +428,20 @@
 	if(!istype(P))
 		return
 	P.velocity = muzzle_velocity
+
+//Special ammo handling bullshit
+
+/obj/item/weapon/gun/projectile/pirate/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+	. = ..()
+	var/obj/item/projectile/bullet/P = projectile
+	if(!istype(P))
+		return
+	P.sub_velocity(P.velocity * 0.3)	//Yeah, a gun that supposedly shoots any bullet is gonna be pretty shit.
+
+/obj/item/weapon/gun/projectile/revolver/lemat/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+	. = ..()
+	var/obj/item/projectile/bullet/P = projectile
+	P.velocity = initial(P.velocity)
+	if(!istype(P))
+		return
+	P.sub_velocity(P.velocity - 35)

@@ -11,25 +11,29 @@
 #define BULLET_DEFLECTED_PAIN_EXPONENT 1.5
 #define BULLET_DEFLECTED_BRUISE_SUBTRACT 5
 
-#define SKIN_LOSS_COEFFICIENT 61
-#define ARMOR_LOSS_COEFFICIENT 200
-#define ARMOR_LOSS_MIN_MULT 0.5
-#define ARMOR_LOSS_MIN_ARMOR 20
-#define INTERNAL_LOSS_COEFFICIENT 250
+GLOBAL_VAR_INIT(SKIN_LOSS_COEFFICIENT,16)
+GLOBAL_VAR_INIT(ARMOR_LOSS_COEFFICIENT,150)
+GLOBAL_VAR_INIT(ARMOR_LOSS_MIN_MULT,0.5)
+GLOBAL_VAR_INIT(ARMOR_LOSS_MIN_ARMOR,20)
+GLOBAL_VAR_INIT(INTERNAL_LOSS_COEFFICIENT,195)
 #define ORGAN_LOSS_COEFFICIENT 350
-#define HIT_VITAL_ORGAN_CHANCE 30
+#define HIT_VITAL_ORGAN_CHANCE 35
 
 #define BONE_HIT_CHANCE_UNENCASED 45
 #define BONE_HIT_CHANCE_ENCASED 80
-#define BONE_JOULES_PERHP_AVG 30
-#define BONE_JOULES_PERHP_DEV 10
+GLOBAL_VAR_INIT(BONE_JOULES_PERHP_AVG,2)
+GLOBAL_VAR_INIT(BONE_JOULES_PERHP_DEV,1)
+GLOBAL_VAR_INIT(BONE_JOULES_MIN,100)
 #define BONE_HP_AVG 25
+
+GLOBAL_VAR_INIT(HOLLOW_POINT_VELLOSS_BONUS,2.35)
+GLOBAL_VAR_INIT(HOLLOW_POINT_CONVERSION_EFF,1.15)
 
 #define PROB_LEAVE_EARLY_FIRST 20
 #define PROB_LEAVE_EARLY_SECOND 40
 
-#define ENERGY_DAMAGE_FLESH_FACTOR 0.02
-#define ENERGY_DAMAGE_ORGAN_FACTOR 0.03
+GLOBAL_VAR_INIT(ENERGY_DAMAGE_FLESH_FACTOR,0.03)
+GLOBAL_VAR_INIT(ENERGY_DAMAGE_ORGAN_FACTOR,0.035)
 
 #define GAUSSIAN_RANDOM(vars...)	((-2*log(rand()))**0.5 * cos(6.28318530718*rand()))
 
@@ -52,13 +56,12 @@
 				var/ref_int_organ = H.internal_organs_by_name[int_organ]
 				if(ref_ext_organ && ref_int_organ && (ref_int_organ in ref_ext_organ.internal_organs))
 					input[ref_int_organ] = ballistic_variables["organ_hit_weight"][ext_organ][int_organ]
-					log_and_message_admins("Added [int_organ] with value [input[ref_int_organ]]")
 			if(input.len)
 				updated_organ_weight[ref_ext_organ] = input
-	log_and_message_admins("Beginning handle_ballistics")
+	//log_and_message_admins("Beginning handle_ballistics")
 	var/penetration_chance = armor_penetration_probability(ballistic_armor,P)
 	if(!prob(penetration_chance))	//Boo-hoo we got deflected. Do boring agony/bruises stuff.
-		log_and_message_admins("Bullet deflected")
+		//log_and_message_admins("Bullet deflected")
 		var/pain_hit = hit_organ ? "into your [hit_organ]" : "into you"
 
 		var/hurt_value = P.velocity * P.grains / (BULLET_DEFLECTED_PAIN_DIVISOR * (1 + ballistic_armor/BULLET_DEFLECTED_BULLET_DIVISOR + melee_armor/BULLET_DEFLECTED_MELEE_DIVISOR)) //Better armor spreads out the energy better.
@@ -74,31 +77,35 @@
 		P.sub_velocity(P.velocity)
 		return 2
 	else	//Now the FUN begins
-		log_and_message_admins("Bullet penetrated")
+		//log_and_message_admins("Bullet penetrated")
 		var/area_over_mass = P.diam * P.diam / P.grains
 		//Most of these calculations don't involve energies because I'm treating flesh and organic tissue as a fluid since it's squishy and stuff.
 		//Since drag is proportional to velocity, we can do things on an m*v basis instead of an mv^2 basis.
 		//Obviously bones are more solid, so we do actual energy calculations for that.
+		var/conversion_efficiency = P.hollow_point ? GLOB.HOLLOW_POINT_CONVERSION_EFF : 1
+		var/vel_loss_multiplier = P.hollow_point ? GLOB.HOLLOW_POINT_VELLOSS_BONUS : 1
+
 		var/energy_dumped_organic = 0
-		var/vel_lost_armor = ballistic_armor >= ARMOR_LOSS_MIN_ARMOR ? ARMOR_LOSS_COEFFICIENT * area_over_mass * ((1 + ARMOR_LOSS_MIN_MULT) - penetration_chance) : 0
+		var/vel_lost_armor = ballistic_armor >= GLOB.ARMOR_LOSS_MIN_ARMOR ? GLOB.ARMOR_LOSS_COEFFICIENT * area_over_mass * ((1 + GLOB.ARMOR_LOSS_MIN_MULT) - penetration_chance/100) : 0
 		P.sub_velocity(vel_lost_armor)
 
 		var/energy_past = P.energy
-		var/internal_loss = INTERNAL_LOSS_COEFFICIENT * area_over_mass
-		var/vel_lost_skin = SKIN_LOSS_COEFFICIENT * area_over_mass
+		var/internal_loss = vel_loss_multiplier * GLOB.INTERNAL_LOSS_COEFFICIENT * area_over_mass
+		var/vel_lost_skin = vel_loss_multiplier * GLOB.SKIN_LOSS_COEFFICIENT * area_over_mass
 		P.sub_velocity(vel_lost_skin + internal_loss)
 		energy_dumped_organic += (energy_past - P.energy)
 		if(prob(PROB_LEAVE_EARLY_FIRST) || !P.velocity)
-			energy_to_damage(energy_dumped_organic)
+			energy_to_damage(energy_dumped_organic * conversion_efficiency,def_zone)
 			return 1
 		if(hit_organ)
-			log_and_message_admins("organ_handle_ballistics called. hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
+			//log_and_message_admins("organ_handle_ballistics called. hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
 			return organ_handle_ballistics(P,hit_organ,energy_dumped_organic,internal_loss,ballistic_armor,updated_organ_weight)
 		else
-			log_and_message_admins("general_handle_ballistics called.")
+			//log_and_message_admins("general_handle_ballistics called.")
 			return general_handle_ballistics(P,def_zone,energy_dumped_organic,internal_loss,ballistic_armor)
 
 /mob/living/proc/organ_handle_ballistics(var/obj/item/projectile/bullet/P,var/obj/item/organ/external/hit_organ,var/energy_dumped_organic,var/internal_loss,var/ballistic_armor,var/list/updated_organ_weight)
+	var/conversion_efficiency = P.hollow_point ? GLOB.HOLLOW_POINT_CONVERSION_EFF : 1
 	var/energy_past
 	var/area_over_mass = P.diam * P.diam / P.grains
 	var/bone_chance = BONE_HIT_CHANCE_UNENCASED
@@ -106,87 +113,91 @@
 		bone_chance = BONE_HIT_CHANCE_ENCASED
 	else
 		bone_chance = ballistic_variables["bone_chance_unencased"][hit_organ.organ_tag]
-	log_and_message_admins("Bone hit chance is [bone_chance], organ is [hit_organ]")
+	//log_and_message_admins("Bone hit chance is [bone_chance], organ is [hit_organ]")
 	if(prob(bone_chance))
-		var/energy_to_fracture = max(300, hit_organ.min_broken_damage * (GAUSSIAN_RANDOM()*BONE_JOULES_PERHP_DEV + BONE_JOULES_PERHP_AVG))
-		log_and_message_admins("Bone hit, bone_chance1. energy_to_fracture = [energy_to_fracture]")
+		var/energy_to_fracture = max(GLOB.BONE_JOULES_MIN, hit_organ.min_broken_damage * (GAUSSIAN_RANDOM()*GLOB.BONE_JOULES_PERHP_DEV + GLOB.BONE_JOULES_PERHP_AVG))
+		//log_and_message_admins("Bone hit, bone_chance1. energy_to_fracture = [energy_to_fracture]")
 		if(energy_to_fracture>=P.energy) //We don't have enough energy to get through the bone. This is the end for us!
 			energy_dumped_organic += P.energy/2 //About half of our remaining energy will go into fucking up this boi, the rest is absorbed by the bone
 			P.sub_velocity(P.velocity)
-			log_and_message_admins("Insufficient projectile energy. Stopping projectile.")
-			energy_to_damage(energy_dumped_organic)
+			//log_and_message_admins("Insufficient projectile energy. Stopping projectile.")
+			energy_to_damage(energy_dumped_organic * conversion_efficiency,hit_organ.organ_tag)
 			return 2
 		else
-			log_and_message_admins("Sufficient projectile energy to pass through bone.")
+			//log_and_message_admins("Sufficient projectile energy to pass through bone.")
 			P.sub_energy(energy_to_fracture)
 			energy_dumped_organic += P.energy / 3 //About a third of the energy that goes into fracturing the bone also goes into fucking up tissues.
 			if(!(hit_organ.status & ORGAN_BROKEN))
-				log_and_message_admins("Fracturing [hit_organ]")
+				//log_and_message_admins("Fracturing [hit_organ]")
 				hit_organ.fracture()
-	log_and_message_admins("Bone checking done. hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
+	//log_and_message_admins("Bone checking done. hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
 	if(hit_organ.internal_organs.len && P.velocity > area_over_mass*ORGAN_LOSS_COEFFICIENT && prob(ballistic_variables["organ_hit_chance"][hit_organ.organ_tag]) && updated_organ_weight[hit_organ] && updated_organ_weight[hit_organ].len)
-		log_and_message_admins("Organ was hit by bullet.")
+		//log_and_message_admins("Organ was hit by bullet.")
 		energy_past = P.energy
 		P.sub_velocity(internal_loss)
-		damage_organ_energy(energy_past - P.energy, pickweight(updated_organ_weight[hit_organ]))
+		damage_organ_energy((energy_past - P.energy) * conversion_efficiency, pickweight(updated_organ_weight[hit_organ]))
 		if(!P.velocity)
-			log_and_message_admins("Organ stopped bullet.")
-			energy_to_damage(energy_dumped_organic)
+			//log_and_message_admins("Organ stopped bullet.")
+			energy_to_damage(energy_dumped_organic * conversion_efficiency,hit_organ.organ_tag)
 			return 2
-	log_and_message_admins("Organ check done, hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
+	//log_and_message_admins("Organ check done, hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
 	energy_past = P.energy
 	P.sub_velocity(internal_loss)
-	energy_dumped_organic += P.energy
+	energy_dumped_organic += energy_past - P.energy
 	if(!P.velocity || (hit_organ.organ_tag in ballistic_variables["organ_leave_early"]) || prob(PROB_LEAVE_EARLY_SECOND))
-		energy_to_damage(energy_dumped_organic)
+		energy_to_damage(energy_dumped_organic * conversion_efficiency,hit_organ.organ_tag)
 		return P.velocity ? -1 : 2
-		log_and_message_admins("Internal_loss 2 stopped bullet")
-	log_and_message_admins("Internal_loss 2 completed, hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
+		//log_and_message_admins("Internal_loss 2 stopped bullet")
+	//log_and_message_admins("Internal_loss 2 completed, hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
 	if(prob(bone_chance))
-		var/energy_to_fracture = max(300, hit_organ.min_broken_damage * (GAUSSIAN_RANDOM()*BONE_JOULES_PERHP_DEV + BONE_JOULES_PERHP_AVG))
-		log_and_message_admins("Bone hit, bone_chance1. energy_to_fracture = [energy_to_fracture]")
+		var/energy_to_fracture = max(GLOB.BONE_JOULES_MIN, hit_organ.min_broken_damage * (GAUSSIAN_RANDOM()*GLOB.BONE_JOULES_PERHP_DEV + GLOB.BONE_JOULES_PERHP_AVG))
+		//log_and_message_admins("Bone hit, bone_chance1. energy_to_fracture = [energy_to_fracture]")
 		if(energy_to_fracture>=P.energy) //We don't have enough energy to get through the bone. This is the end for us!
 			energy_dumped_organic += P.energy/2 //About half of our remaining energy will go into fucking up this boi, the rest is absorbed by the bone
 			P.sub_velocity(P.velocity)
-			log_and_message_admins("Insufficient projectile energy. Stopping projectile.")
-			energy_to_damage(energy_dumped_organic)
+			//log_and_message_admins("Insufficient projectile energy. Stopping projectile.")
+			energy_to_damage(energy_dumped_organic * conversion_efficiency,hit_organ.organ_tag)
 			return 2
 		else
-			log_and_message_admins("Sufficient projectile energy to pass through bone.")
+			//log_and_message_admins("Sufficient projectile energy to pass through bone.")
 			P.sub_energy(energy_to_fracture)
 			energy_dumped_organic += P.energy / 3 //About a third of the energy that goes into fracturing the bone also goes into fucking up tissues.
 			if(!(hit_organ.status & ORGAN_BROKEN))
-				log_and_message_admins("Fracturing [hit_organ]")
+				//log_and_message_admins("Fracturing [hit_organ]")
 				hit_organ.fracture()
 	energy_past = P.energy
 	P.sub_velocity(internal_loss)
-	energy_dumped_organic += P.energy
+	energy_dumped_organic += energy_past - P.energy
 	if(!P.velocity)
-		log_and_message_admins("Internal_loss 3 stopped bullet")
-		energy_to_damage(energy_dumped_organic)
+		//log_and_message_admins("Internal_loss 3 stopped bullet")
+		energy_to_damage(energy_dumped_organic * conversion_efficiency,hit_organ.organ_tag)
 		return 2
-	log_and_message_admins("Internal_loss 3 completed. hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
+	//log_and_message_admins("Internal_loss 3 completed. hit_organ = [hit_organ], energy_dumped_organic = [energy_dumped_organic], internal_loss = [internal_loss], ballistic_armor = [ballistic_armor], P.velocity = [P.velocity], P.energy = [P.energy]")
 	var/penetration_chance = armor_penetration_probability(ballistic_armor,P)
 	if(prob(penetration_chance))
-		log_and_message_admins("Projectile exiting.")
-		energy_to_damage(energy_dumped_organic)
+		//log_and_message_admins("Projectile exiting.")
+		energy_to_damage(energy_dumped_organic * conversion_efficiency,hit_organ.organ_tag)
 		return -1
 	else
-		log_and_message_admins("Projectile continuing inside body")
-		return organ_handle_ballistics(P,hit_organ,energy_dumped_organic,internal_loss,ballistic_armor,updated_organ_weight)
+		//log_and_message_admins("Projectile continuing inside body")
+		energy_dumped_organic += P.energy / 3
+		P.sub_velocity(P.velocity)
+		energy_to_damage(energy_dumped_organic * conversion_efficiency,hit_organ.organ_tag)
+		return 2
 
 /mob/living/proc/general_handle_ballistics(var/obj/item/projectile/bullet/P,var/def_zone,var/energy_dumped_organic,var/internal_loss,var/ballistic_armor)
+	var/conversion_efficiency = P.hollow_point ? GLOB.HOLLOW_POINT_CONVERSION_EFF : 1
 	var/energy_past
 	var/area_over_mass = P.diam * P.diam / P.grains
 	var/bone_chance = BONE_HIT_CHANCE_UNENCASED
-	if(def_zone in ballistic_variables["bone_chance_unencased"])
-		bone_chance = ballistic_variables["bone_chance_unencased"][def_zone]
+	//if(def_zone in ballistic_variables["bone_chance_unencased"])
+		//bone_chance = ballistic_variables["bone_chance_unencased"][def_zone]
 	if(prob(bone_chance))
-		var/energy_to_fracture = max(300, BONE_HP_AVG * (GAUSSIAN_RANDOM()*BONE_JOULES_PERHP_DEV + BONE_JOULES_PERHP_AVG))
+		var/energy_to_fracture = max(GLOB.BONE_JOULES_MIN, BONE_HP_AVG * (GAUSSIAN_RANDOM()*GLOB.BONE_JOULES_PERHP_DEV + GLOB.BONE_JOULES_PERHP_AVG))
 		if(energy_to_fracture>=P.energy) //We don't have enough energy to get through the bone. This is the end for us!
 			energy_dumped_organic += P.energy/2 //About half of our remaining energy will go into fucking up this boi, the rest is absorbed by the bone
 			P.sub_velocity(P.velocity)
-			energy_to_damage(energy_dumped_organic)
+			energy_to_damage(energy_dumped_organic * conversion_efficiency,def_zone)
 			return 2
 		else
 			P.sub_energy(energy_to_fracture)
@@ -195,23 +206,23 @@
 	if(P.velocity > area_over_mass * ORGAN_LOSS_COEFFICIENT && prob(HIT_VITAL_ORGAN_CHANCE))
 		energy_past = P.energy
 		P.sub_velocity(internal_loss)
-		energy_dumped_organic += (energy_past - P.energy) * 2
+		energy_dumped_organic += (energy_past - P.energy) * 1.5
 		if(!P.velocity)
-			energy_to_damage(energy_dumped_organic)
+			energy_to_damage(energy_dumped_organic * conversion_efficiency,def_zone)
 			return 2
 	energy_past = P.energy
 	P.sub_velocity(internal_loss)
-	energy_dumped_organic += P.energy
+	energy_dumped_organic += energy_past - P.energy
 	if(!P.velocity || (def_zone in ballistic_variables["organ_leave_early"]) || prob(PROB_LEAVE_EARLY_SECOND))
-		energy_to_damage(energy_dumped_organic)
+		energy_to_damage(energy_dumped_organic * conversion_efficiency,def_zone)
 		return P.velocity ? -1 : 2
 
 	if(prob(bone_chance))
-		var/energy_to_fracture = max(300, BONE_HP_AVG * (GAUSSIAN_RANDOM()*BONE_JOULES_PERHP_DEV + BONE_JOULES_PERHP_AVG))
+		var/energy_to_fracture = max(GLOB.BONE_JOULES_MIN, BONE_HP_AVG * (GAUSSIAN_RANDOM()*GLOB.BONE_JOULES_PERHP_DEV + GLOB.BONE_JOULES_PERHP_AVG))
 		if(energy_to_fracture>=P.energy) //We don't have enough energy to get through the bone. This is the end for us!
 			energy_dumped_organic += P.energy/2 //About half of our remaining energy will go into fucking up this boi, the rest is absorbed by the bone
 			P.sub_velocity(P.velocity)
-			energy_to_damage(energy_dumped_organic)
+			energy_to_damage(energy_dumped_organic * conversion_efficiency,def_zone)
 			return 2
 		else
 			P.sub_energy(energy_to_fracture)
@@ -219,26 +230,29 @@
 
 	energy_past = P.energy
 	P.sub_velocity(internal_loss)
-	energy_dumped_organic += P.energy
+	energy_dumped_organic += energy_past - P.energy
 	if(!P.velocity)
-		energy_to_damage(energy_dumped_organic)
+		energy_to_damage(energy_dumped_organic * conversion_efficiency,def_zone)
 		return 2
 	var/penetration_chance = armor_penetration_probability(ballistic_armor,P)
 	if(prob(penetration_chance))
-		energy_to_damage(energy_dumped_organic)
+		energy_to_damage(energy_dumped_organic * conversion_efficiency,def_zone)
 		return -1
 	else
-		return general_handle_ballistics(P,def_zone,energy_dumped_organic,internal_loss,ballistic_armor)
+		energy_dumped_organic += P.energy / 3
+		P.sub_velocity(P.velocity)
+		energy_to_damage(energy_dumped_organic * conversion_efficiency,def_zone)
+		return 2
 
 /mob/living/proc/damage_organ_energy(var/energy,var/obj/item/organ/internal/target)
-	var/damage = round(energy*ENERGY_DAMAGE_ORGAN_FACTOR)
-	log_and_message_admins("damage_organ_energy([energy]) : [target].take_damage([damage])")
+	var/damage = round(energy*GLOB.ENERGY_DAMAGE_ORGAN_FACTOR)
+	//log_and_message_admins("damage_organ_energy([energy]) : [target].take_damage([damage])")
 	target.take_damage(damage)
 	return
 
-/mob/living/proc/energy_to_damage(var/energy,var/obj/item/organ/external/def_zone)
-	var/damage = round(energy*ENERGY_DAMAGE_FLESH_FACTOR)
-	log_and_message_admins("energy_to_damage([energy]) : apply_damage([damage], BRUTE, [def_zone])")
+/mob/living/proc/energy_to_damage(var/energy,var/def_zone)
+	var/damage = round(energy*GLOB.ENERGY_DAMAGE_FLESH_FACTOR)
+	//log_and_message_admins("energy_to_damage([energy]) : apply_damage([damage], BRUTE, [def_zone])")
 	apply_damage(damage, BRUTE, def_zone)
 	return
 
@@ -250,12 +264,13 @@
 	return penetration_chance
 
 /mob/living/bullet_act(var/obj/item/projectile/P, var/def_zone)
-	log_and_message_admins("bullet_act_ch")
-	if(P.check_armour == "bullet")
-		log_and_message_admins("is bullet")
+	//log_and_message_admins("bullet_act_ch")
+	var/obj/item/projectile/bullet/B = P
+	if(P.check_armour == "bullet" && istype(B) && !B.old_bullet_act)
+		//log_and_message_admins("is bullet")
 		return handle_ballistics(P,def_zone)
 	else
-		log_and_message_admins("is not bullet")
+		//log_and_message_admins("is not bullet")
 		return ..()
 
 /mob/living
@@ -282,33 +297,3 @@
 				/*Xeno organs*/ O_EGG = 25) ), \
 		"organ_hit_chance" = list(BP_HEAD = 95, BP_TORSO = 90, BP_GROIN = 90) )
 
-#undef BULLET_AP_DIVISOR
-#undef AP_DIVISOR
-#undef ARMOR_Y_INTERCEPT
-#undef ARMOR_SLOPE
-#undef PENETRATION_PROBABILITY_EXP_BASE
-#undef PENETRATION_PROBABILITY_EXP_MULT
-
-#undef BULLET_DEFLECTED_PAIN_DIVISOR
-#undef BULLET_DEFLECTED_BULLET_DIVISOR
-#undef BULLET_DEFLECTED_MELEE_DIVISOR
-
-#undef SKIN_LOSS_COEFFICIENT
-#undef ARMOR_LOSS_COEFFICIENT
-#undef ARMOR_LOSS_MIN_MULT
-#undef ARMOR_LOSS_MIN_ARMOR
-#undef INTERNAL_LOSS_COEFFICIENT
-#undef ORGAN_LOSS_COEFFICIENT
-#undef HIT_VITAL_ORGAN_CHANCE
-
-#undef BONE_HIT_CHANCE_UNENCASED
-#undef BONE_HIT_CHANCE_ENCASED
-#undef BONE_JOULES_PERHP_AVG
-#undef BONE_JOULES_PERHP_DEV
-#undef BONE_HP_AVG
-
-#undef ENERGY_DAMAGE_FLESH_FACTOR
-#undef ENERGY_DAMAGE_ORGAN_FACTOR
-
-#undef PROB_LEAVE_EARLY_FIRST
-#undef PROB_LEAVE_EARLY_SECOND
