@@ -2229,6 +2229,7 @@
 #include "code\modules\food\recipes_microwave_ch.dm"
 #include "code\modules\food\recipes_microwave_vr.dm"
 #include "code\modules\food\recipes_oven.dm"
+#include "code\modules\food\recipes_oven_ch.dm"
 #include "code\modules\food\drinkingglass\drinkingglass.dm"
 #include "code\modules\food\drinkingglass\extras.dm"
 #include "code\modules\food\drinkingglass\glass_boxes.dm"
