@@ -70,6 +70,7 @@
 	armor_penetration = -50		//Slugs needed a nerf. Will probably fix the stats for shotguns in general in future updates.
 
 /obj/item/projectile/bullet/shotgun/buckshot	//#00 Buckshot
+	damage = 5
 	name = "buckshot pellet"
 	diam = 8.38
 	grains = 53.8
