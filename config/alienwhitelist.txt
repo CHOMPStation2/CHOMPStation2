@@ -11,13 +11,40 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+||||||| parent of 2b2292562b... Merge pull request #9280 from Detective-Google/protean-moment
+cgr - Protean
+chillyfang - Black-Eyed Shadekin
+=======
+cgr - Protean
+chargae - Protean
+chillyfang - Black-Eyed Shadekin
+>>>>>>> 2b2292562b... Merge pull request #9280 from Detective-Google/protean-moment
 crossexonar - Protean
+<<<<<<< HEAD
+||||||| parent of 2b2292562b... Merge pull request #9280 from Detective-Google/protean-moment
+draycu - Vox
+flaktual - Vox
+flurriee - Protean
+=======
+detectivegoogle - Protean
+draycu - Vox
+flaktual - Vox
+flurriee - Protean
+>>>>>>> 2b2292562b... Merge pull request #9280 from Detective-Google/protean-moment
 funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
+<<<<<<< HEAD
+||||||| parent of 2b2292562b... Merge pull request #9280 from Detective-Google/protean-moment
+khanivore - Protean
+=======
+khanivore - Protean
+killjaden - Protean
+>>>>>>> 2b2292562b... Merge pull request #9280 from Detective-Google/protean-moment
 ktccd - Diona
 khanivore - Protean
 mewchild - Diona
@@ -39,6 +66,7 @@ rykkastormheart - Xenochimera
 rubyflamewing - Protean
 radiantaurora - Protean
 ryumi - Protean
+scoutisafolflol - Xenochimera
 seiga - Vox
 sepulchre - Vox
 silvertalismen - Diona
