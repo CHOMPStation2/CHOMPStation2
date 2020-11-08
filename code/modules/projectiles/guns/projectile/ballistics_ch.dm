@@ -18,7 +18,7 @@
 	muzzle_velocity = 750	//Based off HK417 16 in barrel.
 
 /obj/item/weapon/gun/projectile/automatic/l6_saw
-	bolt_name="charging_handle"
+	bolt_name="charging handle"
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 960 //Prototype PU-21(https://en.wikipedia.org/wiki/IP-2)
 
@@ -58,7 +58,7 @@
 
 //automatic_yw.dm
 /obj/item/weapon/gun/projectile/automatic/mg42
-	bolt_name="charging_handle"
+	bolt_name="charging handle"
 	auto_loading_type = OPEN_BOLT
 	bolt_release = null
 	muzzle_velocity = 740	//Real gun.
