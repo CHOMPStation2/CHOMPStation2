@@ -89,6 +89,19 @@ var/list/grass_types = list(
 	name = "thick growth"
 	icon_state = "grass_sif_dark0"
 	edge_blending_priority = 5
+<<<<<<< HEAD
 	tree_chance = 4
 	grass_chance = 0
+||||||| parent of d771a57663... Merge pull request #9288 from VOREStation/upstream-merge-7701
+	tree_chance = 10
+	grass_chance = 0
+=======
+	tree_chance = 10
+	grass_chance = 1
+>>>>>>> d771a57663... Merge pull request #9288 from VOREStation/upstream-merge-7701
 
+	grass_types = list(
+		/obj/structure/flora/sif/frostbelle = 1,
+		/obj/structure/flora/sif/eyes = 5,
+		/obj/structure/flora/sif/tendrils = 30
+		)
