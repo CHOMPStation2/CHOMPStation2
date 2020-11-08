@@ -40,20 +40,19 @@
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 */
 
+GLOBAL_LIST_INIT(dwarf_first,file2list('config/names/dwarf_first.txt'))
+GLOBAL_LIST_INIT(dwarf_last,file2list('config/names/dwarf_last.txt'))
+
 /datum/species/dwarf
 	name = SPECIES_DWARF
 	name_plural = "Dwarves"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
-	blurb = "Humanity originated in the Sol system, and over the last five centuries has spread \
-	colonies across a wide swathe of space. They hold a wide range of forms and creeds.<br/><br/> \
-	While the central Sol government maintains control of its far-flung people, powerful corporate \
-	interests, rampant cyber and bio-augmentation and secretive factions make life on most human \
-	worlds tumultous at best."
+	blurb = "Dwarves. They live underground most of the time and need alcohol to survive."
 	num_alternate_languages = 3
 	species_language = LANGUAGE_DWARF
 	secondary_langs = list(LANGUAGE_SOL_COMMON, LANGUAGE_DWARF)
-	name_language = LANGUAGE_DWARF
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	agility = 5 // Dwarves are not very agile
 
 	min_age = 18
 	max_age = 130
@@ -79,34 +78,12 @@
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
-	inherent_verbs = list(
-		/mob/living/carbon/human/proc/tie_hair)
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 //Dwarf Name stuff
-/proc/dwarf_name() //hello caller: my name is urist mcuristurister
+/datum/species/dwarf/proc/dwarf_name() //hello caller: my name is urist mcuristurister
 	return "[pick(GLOB.dwarf_first)] [pick(GLOB.dwarf_last)]"
 
-/datum/species/dwarf/random_name(gender,unique,lastname)
+/datum/species/dwarf/get_random_name(gender)
 	return dwarf_name() //hello, ill return the value from dwarf_name proc to you when called.
-
-//Dwarf Speech handling - Basically a filter/forces them to say things. The IC helper
-/datum/species/dwarf/proc/handle_speech(datum/source, list/speech_args)
-	var/message = speech_args[SPEECH_MESSAGE]
-	if() // No accent if they speak their language
-		message = " [message]" //Credits to goonstation for the strings list.
-		var/list/dwarf_words = strings("dwarf_replacement.json", "dwarf") //thanks to regex too.
-		for(var/word in splittext(message," "))
-			var/value = dwarf_words[word] //Thus they will always be in character.
-			if(!value)
-				continue
-			if(islist(value)) //Whether they like it or not.
-				value = pick(value) //This could be drastically reduced if needed though.
-			message = replacetextEx(message, " [uppertext(word)]", " [uppertext(value)]")
-			message = replacetextEx(message, " [capitalize(word)]", " [capitalize(value)]")
-			message = replacetextEx(message, " [word]", " [value]") //Also its scottish.
-
-	if(prob(3))
-		message += " By Armok!"
-	speech_args[SPEECH_MESSAGE] = trim(message)
-
-
