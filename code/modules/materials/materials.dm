@@ -922,12 +922,7 @@ var/list/name_to_material
 	sheet_singular_name = null
 	sheet_plural_name = "pile"
 	pass_stack_colors = TRUE
-<<<<<<< HEAD
-	supply_conversion_value = 3 //YW Adds: logs worth points
-||||||| parent of 0841aacdac... Merge pull request #9287 from VOREStation/upstream-merge-7629
-=======
 	supply_conversion_value = 1
->>>>>>> 0841aacdac... Merge pull request #9287 from VOREStation/upstream-merge-7629
 
 /datum/material/wood/log/sif
 	name = MAT_SIFLOG
