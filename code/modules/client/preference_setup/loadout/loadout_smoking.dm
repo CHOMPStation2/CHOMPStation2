@@ -41,20 +41,6 @@
 	display_name = "cigar"
 	path = /obj/item/clothing/mask/smokable/cigarette/cigar
 
-// Chomp Edit start
-/datum/gear/cigar_case
-	display_name = "cigar case"
-	path = /obj/item/weapon/storage/fancy/cigar
-
-/datum/gear/cigar_case/New()
-	..()
-	var/list/cigars = list()
-	for(var/cigar in (typesof(/obj/item/weapon/storage/fancy/cigar)))
-		var/obj/item/weapon/storage/fancy/cigar/cigar_brand = cigar
-		cigars[initial(cigar_brand.name)] = cigar_brand
-	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cigars))
-// Chomp Edit end
-
 /datum/gear/cigarettes
 	display_name = "cigarette selection"
 	path = /obj/item/weapon/storage/fancy/cigarettes
