@@ -38,7 +38,7 @@
 	name = "Extreme slowdown"
 	desc = "You move EXTREMELY slower than baseline"
 	cost = -8
-	var_changes = list("slowdown" = 2.0)
+	var_changes = list("slowdown" = 4.0)
 
 /datum/trait/deep_sleeper
 	name = "Deep Sleeper"
