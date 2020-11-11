@@ -28,6 +28,19 @@
 		reagents.add_reagent("fuel", 1)
 	..()
 
+/obj/item/weapon/weldingtool/lasercannon/update_icon()
+	// Lights
+	if(welding && flame_intensity)
+		set_light(flame_intensity, flame_intensity, flame_color)
+	else
+		set_light(0)
+
+//	icon_state = welding ? "[icon_state]1" : "[initial(icon_state)]"
+	var/mob/M = loc
+	if(istype(M))
+		M.update_inv_l_hand()
+		M.update_inv_r_hand()
+
 /obj/item/weapon/tool/wrench/fuelrod
 	name = "fuel-rod cannon wrench"
 	desc = "This abomination or piece of art, depending on how you view it, seems to by some means use a fuel rod cannon as a wrench... how this is possible, one can only theorize."
