@@ -146,12 +146,12 @@
 	// Check again...
 	if(!l_hand && !r_hand)
 		return
-
+	var/adrenaline = has_modifier_of_type(/datum/modifier/adrenaline)	//CHOMPEdit
 	for (var/obj/item/organ/external/E in organs)
 		if(!E || !E.can_grasp)
 			continue
 
-		if((E.is_broken() || E.is_dislocated()) && !E.splinted)
+		if((E.is_broken() || E.is_dislocated()) && !E.splinted && !adrenaline)	//CHOMPEdit
 			switch(E.body_part)
 				if(HAND_LEFT, ARM_LEFT)
 					if(!l_hand)
