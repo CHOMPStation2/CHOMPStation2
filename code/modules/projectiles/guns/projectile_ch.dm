@@ -14,6 +14,10 @@
 #define BOLT_CASING_EJECTED 16
 #define BOLT_CASING_CHAMBERED 32
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////// CADYN'S BALLISTICS ////////////////////////////////////////////////////////////////////////// ORIGINAL FROM CHOMPSTATION ////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /obj/item/weapon/gun/projectile
 	var/manual_chamber = TRUE
 	var/auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK | LOCK_SLAPPABLE
@@ -21,6 +25,7 @@
 	var/bolt_open = FALSE
 	var/bolt_locked = FALSE
 	var/bolt_release = "bolt release"
+	var/muzzle_velocity = 500	// meters per second
 
 /obj/item/weapon/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
 	if(fire_anim)
@@ -416,3 +421,27 @@
 	set src in view(1)
 
 	switch_firemodes(usr)
+
+/obj/item/weapon/gun/projectile/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+	. = ..()
+	var/obj/item/projectile/bullet/P = projectile
+	if(!istype(P))
+		return
+	P.velocity = muzzle_velocity
+
+//Special ammo handling bullshit
+
+/obj/item/weapon/gun/projectile/pirate/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+	. = ..()
+	var/obj/item/projectile/bullet/P = projectile
+	if(!istype(P))
+		return
+	P.sub_velocity(P.velocity * 0.3)	//Yeah, a gun that supposedly shoots any bullet is gonna be pretty shit.
+
+/obj/item/weapon/gun/projectile/revolver/lemat/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+	. = ..()
+	var/obj/item/projectile/bullet/P = projectile
+	P.velocity = initial(P.velocity)
+	if(!istype(P))
+		return
+	P.sub_velocity(P.velocity - 35)
