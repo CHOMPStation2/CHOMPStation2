@@ -717,8 +717,8 @@
 	desc = "A mounted survival unit with fuel processor."
 	icon_state = "sleeperc"
 	injection_chems = list("glucose","inaprovaline","tricordrazine")
-<<<<<<< HEAD
 	max_item_count = 1
+	
 /obj/item/device/dogborg/sleeper/command //Command borg belly // CH addition
 	name = "Bluespace Filing Belly"
 	desc = "A mounted bluespace storage unit for carrying paperwork"
@@ -727,10 +727,5 @@
 	compactor = TRUE
 	recycles = FALSE
 	max_item_count = 25
-||||||| parent of 7c94823ae9... Merge pull request #9293 from VOREStation/Verkister-patch-6
-	max_item_count = 1
-=======
-	max_item_count = 10
->>>>>>> 7c94823ae9... Merge pull request #9293 from VOREStation/Verkister-patch-6
 
 #undef SLEEPER_INJECT_COST
