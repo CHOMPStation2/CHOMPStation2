@@ -3330,7 +3330,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/snowsuit = 5,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
