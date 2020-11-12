@@ -86,10 +86,10 @@
 	not_for_synths = TRUE
 	var/hallucination_max = 60
 	var/hallucination_increase = 3
-	var/episode_length_nomeds_avg = 2000
-	var/episode_length_nomeds_dev = 500
-	var/episode_length_meds_avg = 4000
-	var/episode_length_meds_dev = 1000
+	var/episode_length_nomeds_avg = 4000
+	var/episode_length_nomeds_dev = 100
+	var/episode_length_meds_avg = 2000
+	var/episode_length_meds_dev = 500
 	var/break_length_nomeds_avg = 3000
 	var/break_length_nomeds_dev = 600
 	var/break_length_meds_avg = 30000
