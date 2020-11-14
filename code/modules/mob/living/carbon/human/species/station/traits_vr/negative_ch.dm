@@ -71,7 +71,7 @@
 
 /datum/trait/blindness
 	name = "Permanently blind"
-	desc = "You are blind. For whatever reason, nothing is able to change this fact, not even surgery."
+	desc = "You are blind. For whatever reason, nothing is able to change this fact, not even surgery. WARNING: YOU WILL NOT BE ABLE TO SEE ANY POSTS USING THE ME VERB, ONLY SUBTLE AND DIALOGUE ARE VIEWABLE TO YOU, YOU HAVE BEEN WARNED."
 	cost = -8
 	special_env = TRUE
 
@@ -79,7 +79,7 @@
 	H.sdisabilities |= BLIND 		//no matter what you do, the blindess still comes for you
 
 /datum/trait/schizophrenia
-	name = "Schizophrenia"
+	name = "Episodic hallucinations."
 	desc = "You have a condition which causes you to spontaneously have hallucinations! Luckily for you, in the modern space age, our doctors have solutions for you, just make sure you don't forget to take your pills."
 	cost = -3
 	special_env = TRUE
