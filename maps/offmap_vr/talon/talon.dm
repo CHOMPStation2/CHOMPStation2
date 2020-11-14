@@ -404,7 +404,13 @@ Once in open space, consider disabling nonessential power-consuming electronics 
 
 /datum/tgui_module/camera/ntos/talon_ship
 	name = "Talon Ship Camera Monitor"
+<<<<<<< HEAD
 /datum/nano_module/camera_monitor/talon_ship/New(host)
+||||||| parent of 7208cc6fbc... Merge pull request #9297 from Meghan-Rossi/ntos_camera_fix
+/datum/tgui_module/camera/ntos/New(host)
+=======
+/datum/tgui_module/camera/ntos/talon_ship/New(host)
+>>>>>>> 7208cc6fbc... Merge pull request #9297 from Meghan-Rossi/ntos_camera_fix
 	. = ..(host, list(NETWORK_TALON_SHIP, NETWORK_THUNDER))
 
 /datum/tgui_module/camera/ntos/talon_helmet
