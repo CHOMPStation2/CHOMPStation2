@@ -6,7 +6,7 @@
 #include "construction1.dmm"
 #include "camp1.dmm"
 #include "house1.dmm"
-#include "beacons.dmm"
+// #include "beacons.dmm" // CHOMP Removal
 #include "Epod.dmm"
 #include "Epod2.dmm"
 #include "PascalB.dmm"
@@ -32,7 +32,6 @@
 #include "BuriedTreasure.dmm"
 #include "BuriedTreasure2.dmm"
 #include "BuriedTreasure3.dmm"
-	//CHOMPS KSC 8/11/20 "5 additional POI's"
 #include "methlab.dmm"
 #include "hotspring.dmm"
 #include "lonehome.dmm"
@@ -74,12 +73,14 @@
 	mappath = 'maps/submaps/surface_submaps/plains/house1_vr.dmm' //VOREStation Edit
 	cost = 10
 
+/* Chomp Removal
 /datum/map_template/surface/plains/beacons
 	name = "Collection of Marker Beacons"
 	desc = "A bunch of marker beacons, scattered in a strange pattern."
 	mappath = 'maps/submaps/surface_submaps/plains/beacons.dmm'
 	cost = 5
 	fixed_orientation = TRUE
+*/
 
 /datum/map_template/surface/plains/Epod
 	name = "Emergency Pod"
@@ -252,8 +253,6 @@
 	mappath = 'maps/submaps/surface_submaps/plains/BuriedTreasure3.dmm'
 	cost = 10
 	template_group = "Shallow Grave"
-
-	// CHOMPS KSC 7/31/20 Added 5 more POI's for the plains.
 
 /datum/map_template/surface/plains/oldhotel
 	name = "Old Hotel"

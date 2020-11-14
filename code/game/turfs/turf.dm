@@ -50,6 +50,7 @@
 
 /turf/Destroy()
 	. = QDEL_HINT_IWILLGC
+	cleanbot_reserved_turfs -= src
 	..()
 
 /turf/ex_act(severity)

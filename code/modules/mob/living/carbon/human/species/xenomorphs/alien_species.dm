@@ -10,7 +10,11 @@
 	hud_type = /datum/hud_data/alien
 	rarity_value = 3
 
+	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
+	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
+
 	darksight = 10 //CHOMPedit. Added darksight
+	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
 
 	pixel_offset_x = -16 //CHOMPedit. I literally had to make a different form of pixel_x just for this species, fuck my life
 
@@ -54,8 +58,6 @@
 
 	breath_type = null
 	poison_type = null
-
-	vision_flags = SEE_SELF|SEE_MOBS
 
 	has_organ = list(
 		O_HEART =    /obj/item/organ/internal/heart,
@@ -345,8 +347,6 @@
 	has_internals = 0
 
 	gear = list(
-		"o_clothing" =   list("loc" = ui_belt,      "name" = "Suit",         "slot" = slot_wear_suit, "state" = "equip",  "dir" = SOUTH),
-		"head" =         list("loc" = ui_id,        "name" = "Hat",          "slot" = slot_head,      "state" = "hair"),
 		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
 		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
-		)
+		) //CHOMPedit removed head and outer layer item slots, since they caused a slew of problems with xenomorphs

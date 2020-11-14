@@ -134,6 +134,16 @@
 		"roar", "hyaa", "ma", "ha", "ya", "shi", "yo", "go"
 	)
 
+/datum/language/spacer
+	name = LANGUAGE_SPACER
+	desc = "A rough pidgin-language comprised of Tradeband, Gutter, and Sol Common used by various space-born communities unique to Humanity."
+	key = "J"
+	syllables = list(
+		"ada", "zir", "bian", "ach", "usk", "ado", "ich", "cuan", "iga", "qing", "le", "que", "ki", "qaf", "dei", "eta"
+	)
+	colour = "spacer"
+	machine_understands = TRUE
+
 /datum/language/unathi
 	flags = 0
 /datum/language/tajaran
@@ -148,6 +158,8 @@
 	flags = 0
 /datum/language/gutter
 	machine_understands = FALSE
+	desc = "A dialect of Tradeband not uncommon amongst traders in the Free Trade Union. The language is often difficult to translate due to changing frequently and being highly colloquial."
+	partial_understanding = list(LANGUAGE_TRADEBAND = 30, LANGUAGE_SOL_COMMON = 10)
 /datum/language/human/monkey
 	flags = RESTRICTED
 /datum/language/skrell/monkey

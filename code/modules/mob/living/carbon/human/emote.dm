@@ -490,6 +490,12 @@
 					message = "points to [M]."
 				else
 			m_type = 1
+			
+		if("crack")
+			if(!restrained())
+				message = "cracks [T.his] knuckles."
+				playsound(src, 'sound/voice/knuckles.ogg', 50, 1, preference = /datum/client_preference/emote_noises)
+				m_type = 1
 
 		if("raise")
 			if(!restrained())
@@ -688,12 +694,11 @@
 				if(!muzzled)
 					message = "[species.scream_verb]!"
 					m_type = 2
-					/* Removed, pending the location of some actually good, properly licensed sounds.
-					if(get_gender() == FEMALE)
-						playsound(src, "[species.female_scream_sound]", 80, 1)
+					if(get_gender() == FEMALE) //CHOMPedit start : fixed scream sounds by giving them the ability to grab from a list, and a way to turn them off in preferences
+						playsound(src, pick(species.female_scream_sound), 80, preference = /datum/client_preference/emote_noises)
 					else
-						playsound(src, "[species.male_scream_sound]", 80, 1) //default to male screams if no gender is present.
-					*/
+						playsound(src, pick(species.male_scream_sound), 80, preference = /datum/client_preference/emote_noises) //default to male screams if no gender is present.
+					//CHOMPedit end 
 				else
 					message = "makes a very loud noise."
 					m_type = 2

@@ -8,6 +8,8 @@ Going to make a Pull Request? Make sure you read the [CONTRIBUTING.md](.github/C
 
 CHOMPStation is a fork of the Yawn-wider code branch which is a fork of the VOREStation code branch which is a fork of the Polaris code branch, itself a fork of the Baystation12 code branch, for the game Space Station 13.
 
+![Render Nanomaps](https://github.com/VOREStation/VOREStation/workflows/Render%20Nanomaps/badge.svg)
+
 ---
 
 ### LICENSE

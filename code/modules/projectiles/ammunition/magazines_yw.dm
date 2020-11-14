@@ -31,7 +31,7 @@
 	icon_state = "12gclipscatter"
 	desc = "A color-coded metal clip for holding and quickly loading shotgun shells. This one is loaded with scattershot."
 	ammo_type = /obj/item/ammo_casing/a12g/scatter
-	matter = list(DEFAULT_WALL_MATERIAL = 1070) // buckshot and slugs cost the same
+	matter = list(DEFAULT_WALL_MATERIAL = 1337)
 
 
 ///////// .45 /////////

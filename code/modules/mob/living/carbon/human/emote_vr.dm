@@ -164,7 +164,8 @@
 			message = "chirps!"
 			playsound(src.loc, 'sound/misc/nymphchirp.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 			m_type = 2
-		if ("hooh")
+		// CHOMP Removal: Begone demons
+		/*if ("hooh")
 			message = "lets out a hooh!"
 			playsound(src.loc, 'sound/items/hooh.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 			m_type = 2
@@ -176,6 +177,7 @@
 			message = "makes a weird noise!"
 			playsound(src.loc, 'sound/misc/ough.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 			m_type = 2 //End of Yawn Addtion
+		*/
 		if ("howl") // YW add begins
 			m_type = 2
 			message = "lets out a howl."
@@ -192,7 +194,7 @@
 				message = "does a flip!"
 				m_type = 1
 		if("vhelp") //Help for Virgo-specific emotes.
-			to_chat(src, "vwag, vflap, mlem, blep, awoo, awoo2, growl, nya, peep, chirp, hoot, weh, merp, myarp, bark, bork, mrow, mrowl, hypno, hiss, rattle, squeak, geck, baa, baa2, mar, wurble, snort, meow, moo, croak, gao, cackle, nsay, nme, flip")
+			to_chat(src, "vwag, vflap, mlem, blep, awoo, awoo2, growl, nya, peep, chirp, hoot, weh, merp, myarp, bark, bork, mrow, mrowl, hypno, howl, hiss, rattle, squeak, geck, baa, baa2, mar, wurble, snort, meow, moo, croak, gao, cackle, nsay, nme, flip") //CHOMP Addition: adds howl to list since YW didn't
 			return TRUE
 
 	if(message)
@@ -267,3 +269,25 @@
 	set desc = "Switch tail layer on top."
 	tail_alt = !tail_alt
 	update_tail_showing()
+
+/mob/living/carbon/human/verb/hide_wings_vr()
+	set name = "Show/Hide wings"
+	set category = "IC"
+	set desc = "Hide your wings, or show them if you already hid them."
+	wings_hidden = !wings_hidden
+	update_wing_showing()
+	var/message = ""
+	if(!wings_hidden)
+		message = "reveals their wings!"
+	else
+		message = "hides their wings."
+	visible_message("[src] [message]")
+
+// Chomp Edit Start
+/mob/living/carbon/human/verb/hide_nutrition_vr()
+	set name = "Show/Hide Nutrition Levels"
+	set category = "IC"
+	set desc = "Allow other player to see your current nutrition level or not."
+	nutrition_hidden = !nutrition_hidden
+	to_chat(src, "Players will [nutrition_hidden ? "no longer" : "now"] see your nutrition levels.")
+// Chomp Edit End

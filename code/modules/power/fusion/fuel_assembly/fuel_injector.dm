@@ -53,7 +53,12 @@ var/list/fuel_injectors = list()
 		if(injecting)
 			to_chat(user, "<span class='warning'>Shut \the [src] off before playing with the fuel rod!</span>")
 			return
-
+		//CHOMPEdit Begin
+		if(istype(W,/obj/item/weapon/fuel_assembly/blitz))
+			var/secondchance = alert("Are you sure you want to put the blitz rod in the fuel injector? This definitely wasn't meant to be used like this, and could only end badly.","Confirm","Yes","No")
+			if(secondchance=="No")
+				return
+		//CHOMPEdit End
 		if(cur_assembly)
 			cur_assembly.forceMove(get_turf(src))
 			visible_message("<span class='notice'>\The [user] swaps \the [src]'s [cur_assembly] for \a [W].</span>")
@@ -66,6 +71,13 @@ var/list/fuel_injectors = list()
 			cur_assembly.forceMove(get_turf(src))
 			user.put_in_hands(cur_assembly)
 		cur_assembly = W
+		//CHOMPEdit Begin
+		if(istype(W,/obj/item/weapon/fuel_assembly/blitz))
+			visible_message("<span class='warning'>The fuel injector begins to shake and whirr violently as it tries to accept the blitz rod!</span>")
+			spawn(30)
+				explosion(loc,2,3,4,8)
+				qdel(src)
+		//CHOMPEdit End
 		return
 
 	if(W.is_wrench() || W.is_screwdriver() || W.is_crowbar() || istype(W, /obj/item/weapon/storage/part_replacer))

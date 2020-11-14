@@ -112,6 +112,7 @@ h1.alert, h2.alert		{color: #000000;}
 .terminus				{font-family: "Times New Roman", Times, serif, sans-serif}
 .interface				{color: #330033;}
 .psionic                {color: #993399;}    /*YWedit*/
+.spacer					{color: #9c660b;}
 
 BIG IMG.icon 			{width: 32px; height: 32px;}
 

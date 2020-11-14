@@ -72,13 +72,24 @@ SUBSYSTEM_DEF(vote)
 /datum/controller/subsystem/vote/proc/get_result() // Get the highest number of votes
 	var/greatest_votes = 0
 	var/total_votes = 0
-
-	for(var/option in choices)
-		var/votes = choices[option]
-		total_votes += votes
-		if(votes > greatest_votes)
-			greatest_votes = votes
-
+	//CHOMPEdit Begin
+	if(mode == VOTE_CREW_TRANSFER)
+		var/transfer_votes = choices["Initiate Crew Transfer"]
+		var/extend_votes = choices["Extend the Shift"]
+		total_votes = extend_votes + transfer_votes
+		if(transfer_votes / total_votes > 0.7)
+			greatest_votes = transfer_votes
+			. = list("Initiate Crew Transfer")
+		else 
+			greatest_votes = extend_votes
+			. = list("Extend the Shift")
+	else
+		for(var/option in choices)
+			var/votes = choices[option]
+			total_votes += votes
+			if(votes > greatest_votes)
+				greatest_votes = votes
+	//CHOMPEdit End
 	if(!config.vote_no_default && choices.len) // Default-vote for everyone who didn't vote
 		var/non_voters = (GLOB.clients.len - total_votes)
 		if(non_voters > 0)
@@ -107,12 +118,14 @@ SUBSYSTEM_DEF(vote)
 				choices["Initiate Crew Transfer"] = round(choices["Initiate Crew Transfer"] * factor)
 				to_world("<font color='purple'>Crew Transfer Factor: [factor]</font>")
 				greatest_votes = max(choices["Initiate Crew Transfer"], choices["Extend the Shift"]) //VOREStation Edit
-
-	. = list() // Get all options with that many votes and return them in a list
-	if(greatest_votes)
-		for(var/option in choices)
-			if(choices[option] == greatest_votes)
-				. += option
+	//CHOMPEdit Begin
+	if(!(mode == VOTE_CREW_TRANSFER))
+		. = list() // Get all options with that many votes and return them in a list
+		if(greatest_votes)
+			for(var/option in choices)
+				if(choices[option] == greatest_votes)
+					. += option
+	//CHOMPEdit End
 
 /datum/controller/subsystem/vote/proc/announce_result()
 	var/list/winners = get_result()

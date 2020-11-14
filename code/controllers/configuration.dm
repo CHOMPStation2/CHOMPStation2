@@ -206,16 +206,18 @@ var/list/gamemode_cache = list()
 
 	var/static/enter_allowed = 1
 
-	var/static/use_irc_bot = 0
-	var/static/use_node_bot = 0
-	var/static/irc_bot_port = 0
-	var/static/irc_bot_host = ""
-	var/static/irc_bot_export = 0 // whether the IRC bot in use is a Bot32 (or similar) instance; Bot32 uses world.Export() instead of nudge.py/libnudge
-	var/static/main_irc = ""
-	var/static/admin_irc = ""
-	var/static/python_path = "" //Path to the python executable.  Defaults to "python" on windows and "/usr/bin/env python2" on unix
-	var/static/use_lib_nudge = 0 //Use the C library nudge instead of the python nudge.
-	var/static/use_overmap = 0
+	var/use_irc_bot = 0
+	var/use_node_bot = 0
+	var/irc_bot_port = 0
+	var/irc_bot_host = ""
+	var/irc_bot_export = 0 // whether the IRC bot in use is a Bot32 (or similar) instance; Bot32 uses world.Export() instead of nudge.py/libnudge
+	var/main_irc = ""
+	var/admin_irc = ""
+	var/python_path = "" //Path to the python executable.  Defaults to "python" on windows and "/usr/bin/env python2" on unix
+	var/use_lib_nudge = 0 //Use the C library nudge instead of the python nudge.
+	var/use_overmap = 0
+
+	var/static/list/engine_map = list("Supermatter Engine", "Edison's Bane")	// Comma separated list of engines to choose from.  Blank means fully random.
 
 	// Event settings
 	var/static/expected_round_length = 3 * 60 * 60 * 10 // 3 hours
@@ -237,10 +239,11 @@ var/list/gamemode_cache = list()
 	var/static/dooc_allowed = 1
 	var/static/dsay_allowed = 1
 
-	var/persistence_enabled = 0	//Disabling this means that any dirt or trash items will no longer persist across rounds.
+	var/persistence_disabled = FALSE
+	var/persistence_ignore_mapload = FALSE
 	var/allow_byond_links = 1	//CHOMP Edit turned this on
 	var/allow_discord_links = 1	//CHOMP Edit turned this on
-	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit bussy.
+	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit: pussy.
 
 	var/starlight = 0	// Whether space turfs have ambient light or not
 
@@ -582,8 +585,14 @@ var/list/gamemode_cache = list()
 				if("protect_roles_from_antagonist")
 					config.protect_roles_from_antagonist = 1
 
-				if ("persistence_enabled")
-					config.persistence_enabled = 1
+				if("persistence_disabled")
+					config.persistence_disabled = TRUE // Previously this forcibly set persistence enabled in the saves.
+
+				if("persistence_ignore_mapload")
+					config.persistence_ignore_mapload = TRUE
+
+				if("persistence_ignore_mapload")
+					config.persistence_ignore_mapload = TRUE
 
 				if ("probability")
 					var/prob_pos = findtext(value, " ")
@@ -786,6 +795,9 @@ var/list/gamemode_cache = list()
 
 				if("use_overmap")
 					config.use_overmap = 1
+
+				if("engine_map")
+					config.engine_map = splittext(value, ",")
 /*
 				if("station_levels")
 					using_map.station_levels = text2numlist(value, ";")

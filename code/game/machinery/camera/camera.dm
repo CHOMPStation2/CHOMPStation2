@@ -204,7 +204,9 @@
 		else
 			P = W
 			itemname = P.name
-			info = P.notehtml
+			var/datum/data/pda/app/notekeeper/N = P.find_program(/datum/data/pda/app/notekeeper)
+			if(N)
+				info = N.notehtml
 		to_chat(U, "You hold \a [itemname] up to the camera ...")
 		for(var/mob/living/silicon/ai/O in living_mob_list)
 			if(!O.client)
@@ -447,7 +449,7 @@
 		network.Cut()
 		update_coverage(1)
 
-/obj/machinery/camera/proc/nano_structure()
+/obj/machinery/camera/proc/tgui_structure()
 	var/cam[0]
 	cam["name"] = sanitize(c_tag)
 	cam["deact"] = !can_use()

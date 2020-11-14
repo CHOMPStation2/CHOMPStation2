@@ -26,6 +26,9 @@
 	breath_type = null
 	poison_type = null
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	virus_immune =	1
 	blood_volume =	0
 	min_age =		18
