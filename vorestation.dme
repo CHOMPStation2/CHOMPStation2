@@ -1131,6 +1131,7 @@
 #include "code\game\objects\items\surplus_voucher_ch.dm"
 #include "code\game\objects\items\tailoring.dm"
 #include "code\game\objects\items\toys.dm"
+#include "code\game\objects\items\toys_ch.dm"
 #include "code\game\objects\items\toys_vr.dm"
 #include "code\game\objects\items\trash.dm"
 #include "code\game\objects\items\trash_material.dm"
