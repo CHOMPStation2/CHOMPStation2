@@ -11,16 +11,8 @@
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-<<<<<<< HEAD
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
 			            access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
-||||||| parent of 1cd7a1fef0... Merge pull request #8900 from Heroman3003/great-alt-titling
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_xenoarch, access_eva, access_network, access_xenobotany)
-=======
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_xenoarch, access_eva, access_network, access_xenobotany)
-	alt_titles = list("Research Supervisor" = /datum/alt_title/research_supervisor, "Research Manager" = /datum/alt_title/research_manager,
-						"Head of Development" = /datum/alt_title/head_of_development,"Head Scientist" = /datum/alt_title/head_scientist)
-
 /datum/alt_title/research_manager
 	title = "Research Manager"
 
