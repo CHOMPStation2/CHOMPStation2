@@ -6,13 +6,13 @@
 	cooperative = TRUE
 	firing_lanes = TRUE
 	mauling = TRUE // They need it to get the most out of monkeys.
-
+	conserve_ammo = TRUE					// Might help avoid 'I shoot the wall forever' cheese.
+	var/closest_desired_distance = 1		// Otherwise run up to them to be able to potentially shock or punch them.
 	var/always_stun = FALSE // If true, the slime will elect to attempt to permastun the target.
-/*
-/datum/ai_holder/simple_mob/juvenile_metroid/ranged
-	pointblank = TRUE
-*/
 
+/datum/ai_holder/simple_mob/juvenile_metroid/on_engagement(atom/A)
+	if(get_dist(holder, A) > closest_desired_distance)
+		holder.IMove(get_step_towards(holder, A))
 
 /datum/ai_holder/simple_mob/juvenile_metroid/passive/New() // For Jellybrig.
 	..()
@@ -31,10 +31,7 @@
 	var/mob/living/simple_mob/metroid/juvenile/my_juvenile = holder
 	if(my_juvenile.nutrition >= my_juvenile.evo_point)
 		// Press the correct verb when we can.
-		if(my_juvenile.is_adult)
-			my_juvenile.reproduce() // Splits into four new baby slimes.
-		else
-			my_juvenile.evolve() // Turns our holder into an adult slime.
+		my_juvenile.evolve() // Turns our holder into an adult slime.
 
 
 // Called when using a pacification agent (or it's Jellybrig being initalized). Actually it's all just jellybrig, but I'm stealing everything from slime code anyway.
@@ -53,7 +50,7 @@
 
 		if( (!L.lying && prob(30 + (my_juvenile.power_charge * 7) ) || (!L.lying && always_stun) ))
 			my_juvenile.a_intent = I_DISARM // Stun them first.
-		else if(my_juvenile.can_consume(L) && L.lying)
+		else if(my_juvenile.is_juvenile && my_juvenile.can_consume(L) && L.lying)
 			my_juvenile.a_intent = I_GRAB // Then eat them.
 		else
 			my_juvenile.a_intent = I_HURT // Otherwise robust them.
