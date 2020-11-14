@@ -22,8 +22,6 @@
 /datum/alt_title/head_scientist
 	title = "Head Scientist"
 
->>>>>>> 1cd7a1fef0... Merge pull request #8900 from Heroman3003/great-alt-titling
-
 /datum/job/scientist
 	spawn_positions = 5
 	pto_type = PTO_SCIENCE
