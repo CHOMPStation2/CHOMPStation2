@@ -421,7 +421,7 @@
 	//You're in a belly!
 	if(isbelly(loc))
 		var/obj/belly/B = loc
-		var/confirm = alert(src, "You're in a mob. Don't use this as a trick to get out of hostile animals. This is for escaping from preference-breaking and if you're otherwise unable to escape from endo (pred AFK for a long time).", "Confirmation", "Okay", "Cancel")
+		var/confirm = alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", "Okay", "Cancel")
 		if(!confirm == "Okay" || loc != B)
 			return
 		//Actual escaping
@@ -440,7 +440,7 @@
 		var/mob/living/silicon/pred = loc.loc //Thing holding the belly!
 		var/obj/item/device/dogborg/sleeper/belly = loc //The belly!
 
-		var/confirm = alert(src, "You're in a dogborg sleeper. This is for escaping from preference-breaking or if your predator disconnects/AFKs. If your preferences were being broken, please admin-help as well.", "Confirmation", "Okay", "Cancel")
+		var/confirm = alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", "Okay", "Cancel")
 		if(!confirm == "Okay" || loc != belly)
 			return
 		//Actual escaping
@@ -501,7 +501,14 @@
 		return FALSE
 
 	// Prepare messages
-	if(user == pred) //Feeding someone to yourself
+	//CHOMPEdit begin
+	if(prey.is_slipping)
+		attempt_msg = "<span class='warning'>It seems like [prey] is about to slide into [pred]'s [lowertext(belly.name)]!</span>"
+		success_msg = "<span class='warning'>[prey] suddenly slides into [pred]'s [lowertext(belly.name)]!</span>"
+	else if(pred.is_slipping)
+		attempt_msg = "<span class='warning'>It seems like [prey] is gonna end up inside [pred]'s [lowertext(belly.name)] as [pred] comes sliding over!</span>"
+		success_msg = "<span class='warning'>[prey] suddenly slips inside of [pred]'s [lowertext(belly.name)] as [pred] slides into them!</span>"
+	else if(user == pred) //CHOMPEdit End //Feeding someone to yourself
 		attempt_msg = "<span class='warning'>[pred] is attempting to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 		success_msg = "<span class='warning'>[pred] manages to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 	else //Feeding someone to another person

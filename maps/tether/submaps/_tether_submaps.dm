@@ -65,6 +65,11 @@
 	desc = "Big trader ship."
 	mappath = 'maps/submaps/admin_use_vr/tradeship.dmm'
 
+/datum/map_template/admin_use/salamander_trader
+	name = "Special Area - Salamander Trader"
+	desc = "Modest trader ship."
+	mappath = 'maps/offmap_vr/om_ships/salamander.dmm'
+
 /datum/map_template/admin_use/mercenary
 	name = "Special Area - Merc Base"
 	desc = "So much red!"
@@ -444,8 +449,9 @@
 	if(my_mob && my_mob.stat != DEAD)
 		return //No need
 
-	if(LAZYLEN(loc.human_mobs(world.view)))
-		return //I'll wait.
+	for(var/mob/living/L in view(src,world.view))
+		if(L.client)
+			return //I'll wait.
 
 	if(prob(prob_spawn))
 		prob_spawn -= prob_fall
@@ -518,6 +524,9 @@
 #include "../../offmap_vr/om_ships/cruiser.dm"
 #include "../../offmap_vr/om_ships/vespa.dm"
 #include "../../offmap_vr/om_ships/generic_shuttle.dm"
+#include "../../offmap_vr/om_ships/salamander.dm"
+#include "../../offmap_vr/om_ships/geckos.dm"
+#include "../../offmap_vr/om_ships/mackerels.dm"
 #include "../../offmap_vr/om_ships/mercenarybase.dm"
 #include "../../offmap_vr/om_ships/mercship.dm"
 #include "../../offmap_vr/om_ships/curashuttle.dm"
