@@ -112,7 +112,7 @@
 
 			var/can_hold_val = 0
 			loading = TRUE
-			while(mat_storage + SHEET_MATERIAL_AMOUNT <= max_mat_storage && do_after(user,1.5 SECONDS))
+			while(can_hold_val < M.amount && mat_storage + SHEET_MATERIAL_AMOUNT <= max_mat_storage && do_after(user,1.5 SECONDS))  //CHOMPEdit
 				can_hold_val ++
 				mat_storage += SHEET_MATERIAL_AMOUNT
 				playsound(src, 'sound/effects/phasein.ogg', 15, 1)

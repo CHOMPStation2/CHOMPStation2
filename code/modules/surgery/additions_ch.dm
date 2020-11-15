@@ -14,12 +14,11 @@
 		return 0
 	if(coverage_check(user,target,affected,tool))
 		return 0
-	return target_zone == BP_TORSO
+	return target_zone == BP_TORSO && (HUSK in target.mutations)
 
 /datum/surgery_step/dehusk/structinitial
 	allowed_tools = list(
-		/obj/item/weapon/surgical/bioregen = 100, \
-		/obj/item/weapon/surgical/hemostat = 30
+		/obj/item/weapon/surgical/bioregen = 100
 	)
 	min_duration = 90
 	max_duration = 120
@@ -28,32 +27,20 @@
 	return ..() && target.op_stage.dehusk == 0
 
 /datum/surgery_step/dehusk/structinitial/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if(istype(tool,/obj/item/weapon/surgical/bioregen))
-		user.visible_message("<span class='notice'>[user] begins to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>", \
+	user.visible_message("<span class='notice'>[user] begins to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>", \
 	"<span class='notice'>You begin to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>")
-	else if(istype(tool,/obj/item/weapon/surgical/FixOVein))
-		user.visible_message("<span class='notice'>[user] attempts to create a mesh structure over gaps in [target]'s flesh using strands of damaged flesh with \the [tool].</span>", \
-	"<span class='notice'>You attempt to create a mesh structure over gaps in [target]'s flesh using strands of damaged flesh with \the [tool].</span>")
 	..()
 
 /datum/surgery_step/dehusk/structinitial/end_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if(istype(tool,/obj/item/weapon/surgical/bioregen))
-		user.visible_message("<span class='notice'>[user] creates a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>", \
+	user.visible_message("<span class='notice'>[user] creates a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>", \
 	"<span class='notice'>You create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>")
-	else if(istype(tool,/obj/item/weapon/surgical/FixOVein))
-		user.visible_message("<span class='notice'>[user] manages to create a mesh structure over gaps in [target]'s flesh using strands of damaged flesh with \the [tool].</span>", \
-	"<span class='notice'>You manage to create a mesh structure over gaps in [target]'s flesh using strands of damaged flesh with \the [tool].</span>")
 	target.op_stage.dehusk = 1
 	..()
 
 /datum/surgery_step/dehusk/structinitial/fail_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	if(istype(tool,/obj/item/weapon/surgical/bioregen))
-		user.visible_message("<span class='danger'>[user]'s hand slips, and the mesh falls, with \the [tool] scraping [target]'s body.</span>", \
+	user.visible_message("<span class='danger'>[user]'s hand slips, and the mesh falls, with \the [tool] scraping [target]'s body.</span>", \
 	"<span class='danger'>Your hand slips, and the mesh falls, with \the [tool] scraping [target]'s body.</span>")
-	else if(istype(tool,/obj/item/weapon/surgical/FixOVein))
-		user.visible_message("<span class='danger'>[user] fails to create a mesh structure over gaps in [target]'s flesh, the damaged flesh just falling off and doing more damage than good.</span>", \
-	"<span class='danger'>You fail to create a mesh structure over gaps in [target]'s flesh, the damaged flesh just falling off and doing more damage than good.</span>")
 	affected.createwound(CUT, 15)
 	affected.createwound(BRUISE, 10)
 	..()

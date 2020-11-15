@@ -100,6 +100,8 @@
 
 /datum/nifsoft/medichines_syn/life()
 	if((. = ..()))
+		var/mob/living/carbon/human/H = nif.human // Chomp Edit
+		var/HP_percent = H.health/H.getMaxHealth() // Chomp Edit
 		//We're good!
 		if(!nif.human.bad_external_organs.len)
 			if(mode || active)
@@ -117,7 +119,7 @@
 			var/obj/item/organ/external/EO = eo
 			for(var/w in EO.wounds)
 				var/datum/wound/W = w
-				if(W.damage <= 5)
+				if(W.damage <= 30) // Chomp Edit // The current limb break threshold.
 					W.heal_damage(0.1)
 					EO.update_damages()
 					if(EO.update_icon())
@@ -127,6 +129,17 @@
 				else if(mode == 1)
 					mode = 2
 					nif.notify("Medichines unable to repair all damage. Perform manual repairs.",TRUE)
+				// Chomp Edit Start //
+				else if(mode == 2 && HP_percent < -0.4)
+					nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
+					H << 'sound/voice/nifmed_critical.ogg' //CHOMP Add
+					mode = 0
+					if(!isbelly(H.loc)) //Not notified in case of vore, for gameplay purposes.
+						var/turf/T = get_turf(H)
+						var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
+						a.autosay("[H.real_name] is in critical condition, located at ([T.x],[T.y],[T.z])!", "[H.real_name]'s NIF", "Medical")
+						qdel(a)
+				// Chomp Edit End //
 
 		return TRUE
 

@@ -177,7 +177,7 @@
 			message = "makes a weird noise!"
 			playsound(src.loc, 'sound/misc/ough.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 			m_type = 2 //End of Yawn Addtion
-		*/ 
+		*/
 		if ("howl") // YW add begins
 			m_type = 2
 			message = "lets out a howl."
@@ -269,7 +269,7 @@
 	set desc = "Switch tail layer on top."
 	tail_alt = !tail_alt
 	update_tail_showing()
-	
+
 /mob/living/carbon/human/verb/hide_wings_vr()
 	set name = "Show/Hide wings"
 	set category = "IC"
@@ -282,4 +282,12 @@
 	else
 		message = "hides their wings."
 	visible_message("[src] [message]")
-	
+
+// Chomp Edit Start
+/mob/living/carbon/human/verb/hide_nutrition_vr()
+	set name = "Show/Hide Nutrition Levels"
+	set category = "IC"
+	set desc = "Allow other player to see your current nutrition level or not."
+	nutrition_hidden = !nutrition_hidden
+	to_chat(src, "Players will [nutrition_hidden ? "no longer" : "now"] see your nutrition levels.")
+// Chomp Edit End
