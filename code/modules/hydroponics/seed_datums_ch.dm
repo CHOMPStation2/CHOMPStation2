@@ -201,3 +201,22 @@
 	set_trait(TRAIT_IDEAL_HEAT, 283)
 	set_trait(TRAIT_NUTRIENT_CONSUMPTION, 0)
 	set_trait(TRAIT_WATER_CONSUMPTION, 0)
+
+/datum/seed/cinnamon //WIP - I have no idea what I'm doing with growables in code right now.
+	name = "cinnamon"
+	seed_name = "cinnamon"
+	display_name = "cinnamon tree"
+	chems = list("cinnamonpowder" = list(5,25))
+	mutants = null
+	kitchen_tag = "cinnamon"
+
+/datum/seed/cinnamon/New()
+	..()
+	set_trait(TRAIT_HARVEST_REPEAT,1)
+	set_trait(TRAIT_MATURATION,6)
+	set_trait(TRAIT_PRODUCTION,6)
+	set_trait(TRAIT_YIELD,5)
+	set_trait(TRAIT_POTENCY,10)
+	set_trait(TRAIT_PRODUCT_ICON, "stalk")
+	set_trait(TRAIT_PRODUCT_COLOUR, "#FF9A85")
+	set_trait(TRAIT_PLANT_ICON,"tree2")

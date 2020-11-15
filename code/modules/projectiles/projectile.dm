@@ -581,6 +581,13 @@
 		if(check_penetrate(A))
 			passthrough = TRUE
 		penetrating--
+	//CHOMPEdit Begin
+	var/obj/item/projectile/bullet/this = src
+	if(istype(this))
+		if(!this.velocity)
+			passthrough = FALSE
+			penetrating = 0
+	//CHOMPEdit End
 
 	if(passthrough)
 		trajectory_ignore_forcemove = TRUE
