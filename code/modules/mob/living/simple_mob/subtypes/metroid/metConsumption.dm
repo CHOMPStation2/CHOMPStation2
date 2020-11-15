@@ -68,6 +68,7 @@
 /mob/living/simple_mob/metroid/juvenile/proc/stop_consumption(mob/living/L)
 	if(!victim)
 		return
+	playsound(src, 'sound/metroid/metroiddetach.ogg', 50, 1)
 	victim.unbuckle_mob()
 	victim.visible_message(
 		span("notice", "\The [src] slides off of [victim]!"),
@@ -126,6 +127,7 @@
 		var/armor_modifier = abs((victim.getarmor(null, "bio") / 100) - 1)
 		var/damage_done = amount * armor_modifier
 		if(damage_done > 0)
+			playsound(src, 'sound/metroid/metroidattack.ogg', 100, 1)
 			victim.adjustCloneLoss(damage_done * 0.6)
 			victim.adjustToxLoss(damage_done * 0.4)
 			adjust_nutrition(damage_done * 5)

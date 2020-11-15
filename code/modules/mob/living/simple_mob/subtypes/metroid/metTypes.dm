@@ -24,7 +24,6 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 	var/mob/living/victim = null // the person the metroid is currently feeding on
 	var/optimal_combat = FALSE // Used to dumb down the combat AI somewhat.  If true, the metroid tends to be really dangerous to fight alone due to stunlocking.
-	var/power_charge = 0
 	var/evo_point = 0
 	var/evo_limit = 0
 	var/next = null
@@ -104,7 +103,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	if(prob(20))
 		visible_message("<span class='notice'>\The [src] dropped some toy!</span>")
 //		var/location = get_turf(src)
-//		new /obj/item/toy/figure/samus(location)
+
 
 
 
@@ -137,6 +136,8 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 				"rad" = 100)
 	gender = NEUTER
 	faction = "metroids"
+	max_nutrition = 2200
+	nutrition = 0
 
 	//Metroids aren't affected by most atmospheres except cold.
 	minbodytemp = T0C-40
@@ -149,6 +150,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
+	
 
 
 	response_help = "pets"
@@ -196,6 +198,8 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 				"rad" = 100)
 	gender = NEUTER
 	faction = "metroids"
+	max_nutrition = 2200
+	nutrition = 0
 
 	//Metroids aren't affected by most atmospheres except cold.
 	minbodytemp = T0C-40
@@ -239,11 +243,6 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
 	..()
 
-
-
-
-
-/*
 /mob/living/simple_mob/metroid/juvenile/alpha
 	name = "alpha metroid"
 	desc = "Some kind of head rammy thing!"
@@ -254,7 +253,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_state = "alpha"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/gamma
-	movement_cooldown = 0.5
+	movement_cooldown = 1
 	health = 300
 	maxHealth = 300
 	melee_damage_lower = 10
@@ -271,6 +270,8 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 				"rad" = 100)
 	gender = NEUTER
 	faction = "metroids"
+	max_nutrition = 2200
+	nutrition = 0
 
 	//Alphas lose their vulnerability to cold.
 	minbodytemp = 0
@@ -323,15 +324,15 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "gamma_dead"
 	icon_living = "gamma"
 	icon_state = "gamma"
-	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/ranged
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/gamma
-	movement_cooldown = 0.5
+	movement_cooldown = 1
 	health = 400
 	maxHealth = 400
 	melee_damage_lower = 10
 	melee_damage_upper = 20
 	melee_miss_chance = 5
-	ranged_attack_delay = 1 SECOND
+	ranged_attack_delay = 5 SECOND
 	attacktext = list("rammed")
 	armor = list(
 				"melee" = 55,
@@ -343,6 +344,8 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 				"rad" = 100)
 	gender = NEUTER
 	faction = "metroids"
+	max_nutrition = 2200
+	nutrition = 0
 
 	//move_shoot = 1				//Move and shoot at the same time.
 	//ranged_cooldown = 0 		//What the starting cooldown is on ranged attacks
@@ -415,9 +418,9 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "zeta_dead"
 	icon_living = "zeta"
 	icon_state = "zeta"
-	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/ranged
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/zeta
-	movement_cooldown = 1
+	movement_cooldown = 1.5
 	health = 500
 	maxHealth = 500
 	melee_damage_lower = 15
@@ -436,6 +439,9 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 				"rad" = 100)
 	gender = NEUTER
 	faction = "metroids"
+	max_nutrition = 2200
+	nutrition = 0
+	
 	makes_dirt = TRUE
 	//move_shoot = 1				//Move and shoot at the same time.
 	//ranged_cooldown = 0 		//What the starting cooldown is on ranged attacks
@@ -512,9 +518,9 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "omega_dead"
 	icon_living = "omega"
 	icon_state = "omega"
-	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/ranged
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/omega
-	movement_cooldown = 1
+	movement_cooldown = 1.5
 	health = 600
 	maxHealth = 600
 	melee_damage_lower = 25
@@ -533,6 +539,8 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 				"rad" = 100)
 	gender = NEUTER
 	faction = "metroids"
+	max_nutrition = 2200
+	nutrition = 0
 	makes_dirt = TRUE
 	//move_shoot = 1				//Move and shoot at the same time.
 	//ranged_cooldown = 0 		//What the starting cooldown is on ranged attacks
@@ -611,7 +619,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_dead = "queen_dead"
 	icon_living = "queen"
 	icon_state = "queen"
-	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/ranged
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/queen
 	movement_cooldown = 2
 	health = 1000
@@ -632,6 +640,8 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 				"rad" = 100)
 	gender = NEUTER
 	faction = "metroids"
+	max_nutrition = 2200
+	nutrition = 0
 	makes_dirt = TRUE
 	//move_shoot = 1				//Move and shoot at the same time.
 	//ranged_cooldown = 0 		//What the starting cooldown is on ranged attacks
@@ -659,7 +669,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	evo_point = 1200
 	evo_limit = INFINITY
 	next = null
-	var/is_queen = TRUE
+	is_queen = TRUE
 
 /mob/living/simple_mob/metroid/juvenile/queen/Initialize()
 	playsound(src, 'sound/metroid/metroidqueen.ogg', 100, 1)
@@ -696,4 +706,3 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 	threaten_sound = 'sound/metroid/metroidqueen.ogg'
 	stand_down_sound = 'sound/metroid/metroiddetach.ogg'
-*/
