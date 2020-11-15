@@ -123,7 +123,7 @@
 	..()
 	name = "Phase weapon prototype ([item_name])"
 
-/* //VOREStation Removal Start
+/**/ //VOREStation Removal Start // Chomp Edit : uncomment those weapons
 /datum/design/item/weapon/phase/phase_pistol
 	id = "phasepistol"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2, TECH_POWER = 2)
@@ -151,7 +151,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 10000, "glass" = 2000, "silver" = 1000, "diamond" = 750)
 	build_path = /obj/item/weapon/gun/energy/phasegun/cannon
 	sort_string = "MACAD"
-*/ //VOREStation Removal End
+/**/ //VOREStation Removal End // Chomp Edit : uncomment those weapons
 
 // Other weapons
 

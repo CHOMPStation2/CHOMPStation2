@@ -85,7 +85,7 @@
 				if(do_after(user,30 SECONDS,src)) //CHOMPedit . Increased time to force open welded door for alien
 					visible_message("<span class='danger'>\The [user] tears \the [src] open, sparks flying from its electronics!</span>") //CHOMPedit
 					src.do_animate("spark")
-					playsound(src, 'sound/machines/door/airlock_creaking.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS)
+					playsound(src, 'sound/machines/door/airlock_creaking_xeno.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS) //CHOMPedit gave xeno airlock breaking its own sound effect
 					src.locked = 0
 					src.welded = 0
 					update_icon()
