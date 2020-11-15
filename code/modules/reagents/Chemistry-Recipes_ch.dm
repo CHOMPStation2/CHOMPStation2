@@ -31,6 +31,12 @@
 	result = "eden_snake"
 	required_reagents = list("eden" = 1, "ethanol" = 1)
 	
+/datum/chemical_reaction/tercozolam
+	id = "tercozolam"
+	result = "tercozolam"
+	required_reagents = list("anti_toxin" = 1, "ethanol" = 1, "lithium" = 1)
+	result_amount = 3
+
 ///SAP RECIPES//////
 
 /datum/chemical_reaction/myelamine_sap //This is the clotting agent used by clotting packs.
