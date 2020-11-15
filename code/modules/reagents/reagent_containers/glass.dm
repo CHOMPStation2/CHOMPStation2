@@ -48,8 +48,10 @@
 		/obj/machinery/biogenerator,
 		/obj/structure/frame,
 		/obj/machinery/radiocarbon_spectrometer,
-		/obj/machinery/portable_atmospherics/powered/reagent_distillery
+		/obj/machinery/portable_atmospherics/powered/reagent_distillery,
+		/obj/machinery/feeder
 		)
+//CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 
 /obj/item/weapon/reagent_containers/glass/Initialize()
 	. = ..()

@@ -30,11 +30,10 @@
 	excludes = list(/datum/trait/lonely)
 
 /datum/trait/lonely/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M)
-	if(only_people && !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot))
-		return 0
-	if(M == H || M.stat == DEAD || M.invisibility > H.see_invisible)
-		return 0
-	if(only_people && !M.ckey)
+	var/social_check = only_people && !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
+	var/self_dead_invisible_check = M == H || M.stat == DEAD || M.invisibility > H.see_invisible
+	var/ckey_check = only_people && !M.ckey
+	if(social_check || self_dead_invisible_check || ckey_check)
 		return 0
 	if(M.faction == "neutral" || M.faction == H.faction)
 		if(H.loneliness_stage > 0)
@@ -71,9 +70,13 @@
 				H.loneliness_stage -= 4
 			return
 		// Check for company.
-		for(var/mob/living/M in viewers(H))
+		for(var/mob/living/M in H.contents)
+			if(istype(M) && check_mob_company(H,M))
+				return
+		for(var/mob/living/M in viewers(get_turf(H)))
 			if(check_mob_company(H,M))
 				return
+		//Check to see if there's anyone in our belly
 		if(H.vore_organs)
 			for(var/obj/belly/B in H.vore_organs)
 				for(var/mob/living/content in B.contents)

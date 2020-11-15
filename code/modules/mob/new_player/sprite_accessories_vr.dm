@@ -1184,17 +1184,6 @@
 	bee_stripes
 		name = "bee stripes"
 		icon_state = "beestripes"
-<<<<<<< HEAD
-		body_parts = list(BP_TORSO,BP_GROIN)
-||||||| parent of bbd7600f00... Merge pull request #9307 from KasparoVy/port-some-citrp-stuff
-		body_parts = list(BP_TORSO,BP_GROIN)
-
-	vas_toes
-		name = "Bug Paws (Vasilissan)"
-		icon_state = "vas_toes"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_L_FOOT,BP_R_FOOT)
-=======
 		body_parts = list(BP_TORSO,BP_GROIN)
 
 	vas_toes
@@ -1269,4 +1258,4 @@
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
 		species_allowed = list(SPECIES_TESHARI)
->>>>>>> bbd7600f00... Merge pull request #9307 from KasparoVy/port-some-citrp-stuff
+		body_parts = list(BP_L_FOOT,BP_R_FOOT)
