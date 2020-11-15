@@ -83,7 +83,7 @@
 	total_positions = 4
 	spawn_positions = 4
 	pto_type = PTO_CARGO
-	alt_titles = list("Deep Space Miner" = /datum/alt_title/deep_space_miner, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector)
+	alt_titles = list(/*CHOMPEdit Removal "Deep Space Miner" = /datum/alt_title/deep_space_miner*/, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector)
 
 /datum/alt_title/deep_space_miner
 	title = "Deep Space Miner"
