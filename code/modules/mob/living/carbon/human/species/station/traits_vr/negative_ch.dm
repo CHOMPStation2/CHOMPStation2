@@ -53,6 +53,8 @@
 	special_env = TRUE
 
 /datum/trait/low_blood_sugar/handle_environment_special(var/mob/living/carbon/human/H)
+	if(H.nutrition > 200)	//Sanity check because stupid bugs >:v
+		return
 	if((H.nutrition < 200) && prob(5))
 		if(H.nutrition > 150)
 			to_chat(H,"<span class='warning'>You start to feel noticeably weak as your stomach rumbles, begging for more food. Maybe you should eat something to keep your blood sugar up</span>")
