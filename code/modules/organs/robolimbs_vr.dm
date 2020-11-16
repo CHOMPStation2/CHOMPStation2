@@ -230,7 +230,7 @@ var/const/cyberbeast_monitor_styles = "blank=cyber_blank;\
 
 //Ported from CitRP
 /datum/robolimb/cyber_beast
-	company = "Cyber Tech"
+	company = "Cyber Tech(Protogen analogue)"
 	desc = "Adjusted for deep space, the material is durable and heavy."
 	icon = 'icons/mob/human_races/cyberlimbs/c-tech/c_beast.dmi'
 	unavailable_to_build = 1
