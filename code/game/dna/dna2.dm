@@ -298,7 +298,16 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	if (block<=0) return
 	ASSERT(maxvalue<=4095)
 	var/range = (4095 / maxvalue)
+<<<<<<< HEAD
 	if(value!=null)	//CHOMPEdit DO NOT PORT VIRGO'S FIX FOR RESLEEVING. IT IS BAD. Also fuck travis
+||||||| parent of 65f2685678... Merge pull request #9321 from VOREStation/Verkister-patch-7
+	if(value)
+=======
+	if(value == 0) //VOREStation Edit
+		SetUIValue(block,0,defer)
+		return
+	if(value)
+>>>>>>> 65f2685678... Merge pull request #9321 from VOREStation/Verkister-patch-7
 		SetUIValue(block,round(value * range),defer)
 
 // Getter version of above.
