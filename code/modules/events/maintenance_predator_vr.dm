@@ -71,14 +71,4 @@
 
 /datum/event/maintenance_predator/announce()
 	if(prob(announceProb))
-<<<<<<< HEAD
 		command_announcement.Announce("Unexpected biosignature detected in the maintenance tunnels of [station_name()].", "Lifesign Alert")
-
-//YW Addition: Adding named landmark for events
-/obj/effect/landmark/event_spawn/maintpred
-	name = "maint_pred"
-||||||| parent of 2ed936c6ee... Merge pull request #9311 from VOREStation/Verkister-patch-5
-		command_announcement.Announce("Unexpected biosignature detected in the maintenance tunnels of [station_name()].", "Lifesign Alert")
-=======
-		command_announcement.Announce("Unexpected biosignature detected in the maintenance tunnels of [station_name()].", "Lifesign Alert")
->>>>>>> 2ed936c6ee... Merge pull request #9311 from VOREStation/Verkister-patch-5
