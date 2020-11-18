@@ -56,7 +56,7 @@
 		var/mob/living/simple_mob/newPred = new mobtype(get_turf(spawnspot))
 		qdel(newPred.ai_holder)
 		newPred.ai_holder = null
-		newPred.movement_cooldown = 0			// Remove the needless artificial speed cap
+		//newPred.movement_cooldown = 0			// The "needless artificial speed cap" exists for a reason
 		if(D.mind)
 			D.mind.transfer_to(newPred)
 		to_chat(D, "<span class='notice'>You are <b>[newPred]</b>, somehow having gotten aboard the station in search of food. \
@@ -72,7 +72,3 @@
 /datum/event/maintenance_predator/announce()
 	if(prob(announceProb))
 		command_announcement.Announce("Unexpected biosignature detected in the maintenance tunnels of [station_name()].", "Lifesign Alert")
-
-//YW Addition: Adding named landmark for events
-/obj/effect/landmark/event_spawn/maintpred
-	name = "maint_pred"
