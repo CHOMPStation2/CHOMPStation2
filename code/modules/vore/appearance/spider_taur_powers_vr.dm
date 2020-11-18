@@ -1,4 +1,5 @@
-/obj/item/clothing/suit/web_bindings/
+// CHOMPEDIT : Make the web bindings a subtype of the straight jacket
+/obj/item/clothing/suit/straight_jacket/web/
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	name = "web bindings"
@@ -14,7 +15,7 @@
 	//yw edit end
 
 //yw edit start - Teshari Sprite
-/obj/item/clothing/suit/web_bindings/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
+/obj/item/clothing/suit/straight_jacket/web/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
 	if(body_type == SPECIES_TESHARI)
 		if(!inhands)
 			return 'icons/vore/custom_onmob_yw.dmi'
@@ -28,7 +29,7 @@
 		src.visible_message("<span class='notice'>\the [src] pulls silk from their manibles and delicately weaves it into bindings.</span>")
 		adjust_nutrition(-30)
 		spawn(30) //5 seconds to weave the bindings~
-			var/obj/item/clothing/suit/web_bindings/bindings = new() //This sprite is amazing, I must say.
+			var/obj/item/clothing/suit/straight_jacket/web/bindings = new() //This sprite is amazing, I must say.
 			src.put_in_hands(bindings)
 	else
 		to_chat(src, "You do not have enough nutrition to create webbing!") //CK~
