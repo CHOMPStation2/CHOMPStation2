@@ -188,6 +188,14 @@
 	M.adjustBruteLoss(1)
 	M.adjustToxLoss(1)
 
+/datum/reagent/tercozolam
+	name = "Tercozolam"
+	id = "tercozolam"
+	color = "#afeb17"
+	metabolism = 0.05
+	description = "A well respected drug used for treatment of schizophrenia in specific."
+	overdose = REAGENTS_OVERDOSE * 2
+
 ///SAP REAGENTS////
 //This is all a direct port from aeiou.
 

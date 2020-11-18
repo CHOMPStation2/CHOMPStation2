@@ -969,6 +969,9 @@
 		if(nutrition > 1000 && species.grows && size_multiplier < RESIZE_HUGE)
 			nutrition_reduction *= 5
 			resize(min(size_multiplier+0.004,RESIZE_HUGE))
+		if(nutrition < 200 && species.shrinks && size_multiplier > RESIZE_TINY)
+			nutrition_reduction *= 0.3
+			resize(max(size_multiplier-0.004,RESIZE_TINY))
 		//CHOMPEdit End
 		adjust_nutrition(-nutrition_reduction)
 
@@ -1053,7 +1056,7 @@
 				if (mind)
 					//Are they SSD? If so we'll keep them asleep but work off some of that sleep var in case of stoxin or similar.
 					if(client || sleeping > 3)
-						AdjustSleeping(-1)
+						AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
 						throw_alert("asleep", /obj/screen/alert/asleep)
 				if( prob(2) && health && !hal_crit )
 					spawn(0)
