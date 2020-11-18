@@ -3,14 +3,14 @@
 	pto_type = PTO_SECURITY
 	dept_time_required = 60
 
-	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_teleporter,
-						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
-						access_construction,
-						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_external_airlocks)
-	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_teleporter,
-						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
-						access_construction,
-						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_external_airlocks)
+	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
+			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks) //CHOMP Edit: Restores what access is given in security.dm.
+	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
+			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks) //CHOMP Edit: Restores what access is given in security.dm.
 	alt_titles = list("Security Commander" = /datum/alt_title/sec_commander, "Chief of Security" = /datum/alt_title/sec_chief, "Security Manager" = /datum/alt_title/security_manager)
 
 /datum/alt_title/security_manager
