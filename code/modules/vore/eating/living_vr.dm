@@ -422,7 +422,7 @@
 	if(isbelly(loc))
 		var/obj/belly/B = loc
 		var/confirm = alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", "Okay", "Cancel")
-		if(!confirm == "Okay" || loc != B)
+		if(confirm != "Okay" || loc != B)
 			return
 		//Actual escaping
 		absorbed = 0	//Make sure we're not absorbed
@@ -441,7 +441,7 @@
 		var/obj/item/device/dogborg/sleeper/belly = loc //The belly!
 
 		var/confirm = alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", "Okay", "Cancel")
-		if(!confirm == "Okay" || loc != belly)
+		if(confirm != "Okay" || loc != belly)
 			return
 		//Actual escaping
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(pred)] (BORG) ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
