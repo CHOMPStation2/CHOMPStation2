@@ -54,13 +54,19 @@
 	vore_icons = SA_ICON_LIVING
 	
 	max_nutrition = 2200
-	nutrition = 0
+	nutrition = 1000	//Life.dm uses nutrition/initial(nutrition) so you can't be setting this to 0, or else it causes runtimes
 	var/evo_point = 0
 	var/evo_limit = 0
 	var/next
+	var/ranged_cooldown = 0
+	var/ranged_cooldown_time = 0
 
 	meat_type = /obj/item/toy/figure/bounty_hunter
-	
+
+/mob/living/simple_mob/metroid/Initialize()
+	nutrition = 100		//Have them start off pretty hungry still
+	return ..()
+
 /datum/say_list/metroid
 	speak = list("Skree.", "Eree.", "Errer?")
 	emote_see = list("floats about","looks around", "rubs its talons")
@@ -79,6 +85,41 @@
 	verbs += /mob/living/proc/ventcrawl
 	update_icon()
 	return ..()
+
+/mob/living/simple_mob/metroid/shoot_target(atom/A)
+	set waitfor = FALSE
+	setClickCooldown(get_attack_speed())
+
+	face_atom(A)
+
+	if(ranged_attack_delay)
+		ranged_pre_animation(A)
+		handle_attack_delay(A, ranged_attack_delay) // This will sleep this proc for a bit, which is why waitfor is false.
+
+	if(needs_reload)
+		if(reload_count >= reload_max)
+			try_reload()
+			return FALSE
+			
+	//This is intended to fix 
+	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
+		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
+			visible_message("<span class='danger'><b>\The [src]</b> fires at \the [A]!</span>") //Leave notice of shooting.
+			shoot(A) //Perform the shoot action
+			if(casingtype) //If the mob is designated to leave casings...
+				new casingtype(loc) //... leave the casing.
+			ranged_cooldown = world.time + ranged_cooldown_time //Special addition here. This is a timer. Keeping updating the time after shooting. Add that ranged cooldown time specified in the mob to the world time.
+		return TRUE	//End these commands here.
+
+	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [A]!</span>")
+	shoot(A)
+	if(casingtype)
+		new casingtype(loc)
+
+	if(ranged_attack_delay)
+		ranged_post_animation(A)
+	
+	return TRUE
 
 /mob/living/simple_mob/metroid/init_vore()
 	..()
