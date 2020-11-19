@@ -52,6 +52,14 @@
 		dna.real_name = real_name
 		sync_organ_dna()
 
+<<<<<<< HEAD
+||||||| parent of 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
+	verbs |= /mob/living/proc/toggle_selfsurgery
+
+=======
+	//verbs |= /mob/living/proc/toggle_selfsurgery //VOREStation Removal
+
+>>>>>>> 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
 	for(var/organ in organs)

@@ -3254,12 +3254,37 @@
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "hi" = (
+<<<<<<< HEAD
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
 	pixel_x = 0;
 	pixel_y = -25
 	},
+||||||| parent of 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/laser{
+	faction = "wolfgirl"
+	},
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+>>>>>>> 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/walkway)
 "hj" = (
@@ -3453,6 +3478,7 @@
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "hD" = (
+<<<<<<< HEAD
 /obj/machinery/light{
 	dir = 4
 	},
@@ -3470,6 +3496,30 @@
 /obj/random/powercell,
 /obj/random/toolbox,
 /obj/random/tool/alien,
+||||||| parent of 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/smg/poi{
+	faction = "wolfgirl"
+	},
+/mob/living/simple_mob/vore/wolfgirl,
+/turf/simulated/floor/tiled/eris/dark/gray_perforated,
+/area/tether_away/guttersite/security)
+"hE" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/mob/living/simple_mob/humanoid/merc/melee/poi{
+	faction = "wolfgirl"
+	},
+/mob/living/simple_mob/vore/wolfgirl,
+=======
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/mob/living/simple_mob/vore/wolfgirl,
+>>>>>>> 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/vault)
 "hF" = (
@@ -3984,6 +4034,7 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/vault)
+<<<<<<< HEAD
 "iN" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/plushie,
@@ -3991,6 +4042,13 @@
 /obj/random/toy,
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/vault)
+||||||| parent of 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
+"iN" = (
+/obj/structure/table/rack/steel,
+/turf/simulated/floor/tiled/eris/dark/gray_perforated,
+/area/tether_away/guttersite/security)
+=======
+>>>>>>> 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
 "iO" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -4084,7 +4142,7 @@
 /area/tether_away/guttersite/bridge)
 "jd" = (
 /obj/structure/table/rack/steel,
-/obj/random/firstaid,
+/obj/random/tetheraid,
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "je" = (
@@ -12687,7 +12745,13 @@ fw
 fw
 fw
 fw
+<<<<<<< HEAD
 je
+||||||| parent of 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
+iN
+=======
+jd
+>>>>>>> 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
 fu
 ag
 ag
@@ -12829,7 +12893,13 @@ gy
 fw
 hg
 fw
+<<<<<<< HEAD
 jf
+||||||| parent of 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
+iN
+=======
+jd
+>>>>>>> 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
 fu
 ag
 ag
@@ -12956,9 +13026,19 @@ fu
 fw
 fw
 fw
+<<<<<<< HEAD
 kt
 gD
 jX
+||||||| parent of 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
+kE
+hE
+fw
+=======
+kE
+hD
+fw
+>>>>>>> 202f57afb4... Merge pull request #9325 from Novacat/nova-basicfixes
 gX
 fu
 fu
