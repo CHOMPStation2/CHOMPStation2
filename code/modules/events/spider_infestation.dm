@@ -17,7 +17,8 @@
 /datum/event/spider_infestation/start()
 	var/list/vents = list()
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
-		if(istype(get_area(temp_vent), /area/crew_quarters/sleep || /area/hallway/secondary/entry || /area/surface/outpost/main/dorms))
+		var/in_area = get_area(temp_vent)
+		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry) || istype(in_area, /area/surface/outpost/main/dorms))
 			continue
 		if(!temp_vent.welded && temp_vent.network && temp_vent.loc.z in using_map.station_levels)
 			if(temp_vent.network.normal_members.len > 50)
