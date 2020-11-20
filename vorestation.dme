@@ -2073,7 +2073,12 @@
 #include "code\modules\clothing\suits\wiz_robe.dm"
 #include "code\modules\clothing\suits\wolfbrigade.dm"
 #include "code\modules\clothing\suits\aliens\seromi.dm"
+<<<<<<< HEAD
 #include "code\modules\clothing\suits\aliens\seromi_yw.dm"
+||||||| parent of 7f84a6ce06... Merge pull request #9312 from KasparoVy/bird-is-the-word
+=======
+#include "code\modules\clothing\suits\aliens\seromi_vr.dm"
+>>>>>>> 7f84a6ce06... Merge pull request #9312 from KasparoVy/bird-is-the-word
 #include "code\modules\clothing\suits\aliens\tajara.dm"
 #include "code\modules\clothing\suits\aliens\unathi.dm"
 #include "code\modules\clothing\suits\aliens\vox.dm"
@@ -2113,6 +2118,7 @@
 #include "code\modules\clothing\under\jobs\security.dm"
 #include "code\modules\clothing\under\jobs\security_vr.dm"
 #include "code\modules\clothing\under\xenos\seromi.dm"
+#include "code\modules\clothing\under\xenos\seromi_vr.dm"
 #include "code\modules\clothing\under\xenos\vox.dm"
 #include "code\modules\customitems\item_spawning.dm"
 #include "code\modules\detectivework\footprints.dm"

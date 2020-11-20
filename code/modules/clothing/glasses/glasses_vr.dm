@@ -127,6 +127,14 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/mob/species/seromi/eyes.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/eyes.dmi',
+<<<<<<< HEAD
 		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/eyes.dmi',
 		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
 		)
+||||||| parent of 7f84a6ce06... Merge pull request #9312 from KasparoVy/bird-is-the-word
+		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/eyes.dmi'
+		)
+=======
+		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/eyes.dmi'
+		)
+>>>>>>> 7f84a6ce06... Merge pull request #9312 from KasparoVy/bird-is-the-word
