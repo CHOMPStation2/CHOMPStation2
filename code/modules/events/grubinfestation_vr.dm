@@ -11,9 +11,9 @@
 	spawncount = rand(2 * severity, 6 * severity)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
-		//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
+		//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work. Also make it ugly af because apparently it doesn't like looking at subtypes so I gotta get specific?
 		var/in_area = get_area(temp_vent)
-		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry) || istype(in_area, /area/surface/outpost/main/dorms))
+		if(istype(in_area, /area/crew_quarters/sleep/vistor_room_1) || istype(in_area, /area/crew_quarters/sleep/vistor_room_2) || istype(in_area, /area/crew_quarters/sleep/vistor_room_3) || istype(in_area, /area/crew_quarters/sleep/vistor_room_4) || istype(in_area, /area/crew_quarters/sleep/vistor_room_5) || istype(in_area, /area/crew_quarters/sleep/vistor_room_6) || istype(in_area, /area/crew_quarters/sleep/vistor_room_7) || istype(in_area, /area/crew_quarters/sleep/vistor_room_8) || istype(in_area, /area/crew_quarters/sleep/vistor_room_9) || istype(in_area, /area/crew_quarters/sleep/vistor_room_10) || istype(in_area, /area/crew_quarters/sleep/vistor_room_11) || istype(in_area, /area/crew_quarters/sleep/vistor_room_12) || istype(in_area, /area/crew_quarters/sleep/vistor_room_13) || istype(in_area, /area/crew_quarters/sleep/vistor_room_14) || istype(in_area, /area/hallway/secondary/entry/D1) || istype(in_area, /area/hallway/secondary/entry/D2) || istype(in_area, /area/hallway/secondary/entry/D3))
 			continue
 		if(!temp_vent.welded && temp_vent.network && temp_vent.loc.z in using_map.station_levels)
 			if(temp_vent.network.normal_members.len > 50)
