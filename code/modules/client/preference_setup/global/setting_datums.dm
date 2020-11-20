@@ -207,7 +207,7 @@ var/list/_client_preferences_by_type
 	key = "HUD_HOTKEYS"
 	enabled_description = "Enabled"
 	disabled_description = "Disabled"
-	enabled_by_default = FALSE // Backwards compatibility
+	enabled_by_default = TRUE // Backwards compatibility //CHOMP Edit: It's 2020, use your WASD keys by default. Flipped to True.
 
 /datum/client_preference/show_typing_indicator
 	description ="Typing indicator"
