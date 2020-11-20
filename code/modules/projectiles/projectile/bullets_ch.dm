@@ -70,12 +70,13 @@
 	grains = 31
 	velocity = 716
 	damage = 15
+	armour_penetration = 100	//Unfortunately my penetration code doesn't recognize the glory of 5.7x28 FN, so we must show it the wae.
 
 /obj/item/projectile/bullet/a57/ap
 	grains = 23
 	energy_add = 312.75
 	velocity = 850
-	armor_penetration = 35
+	armor_penetration = 150		//Also, no, this isn't as high as it looks because of the formulas I was using. This would have around a 35% chance of piercing combat armor(50 bullet armor)
 
 /obj/item/projectile/bullet/a57/hp
 	hollow_point = TRUE
