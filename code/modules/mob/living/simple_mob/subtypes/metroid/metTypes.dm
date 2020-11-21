@@ -54,7 +54,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 /mob/living/simple_mob/metroid/mine/init_vore()
 	..()
 	var/obj/belly/B = vore_selected
-	B.digest_burn = .5
+	B.digest_burn = 0.5
 	B.digest_brute = 0
 
 
