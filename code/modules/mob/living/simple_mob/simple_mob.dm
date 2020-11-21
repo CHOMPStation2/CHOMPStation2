@@ -108,6 +108,8 @@
 	var/melee_attack_delay = 2			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
+	var/ranged_cooldown = 0 //CHOMP Addition. This is part of a timer in combat.dm.
+	var/ranged_cooldown_time = 0 //CHOMP Addition: This variable can be thrown into mob variables in order to allow the mob to move AND shoot at the same time. The previous "ranged_attack_delay" is a dumb way of handling ranged attacks because it sleeps the entire mob - this one uses an internalized timer so it is slightly smarter.
 
 	//Special attacks
 //	var/special_attack_prob = 0				// The chance to ATTEMPT a special_attack_target(). If it fails, it will do a regular attack instead.
