@@ -383,7 +383,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	melee_damage_lower = 15
 	melee_damage_upper = 25
 	melee_miss_chance = 5
-	ranged_attack_delay = 2 SECOND
+	ranged_cooldown_time = 5 SECOND
 	attack_armor_pen = 10
 	attacktext = list("slashed")
 	armor = list(
@@ -400,7 +400,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	nutrition = 0
 	
 	makes_dirt = TRUE
-	ranged_cooldown_time = 5 SECOND
+
 	projectiletype	= /obj/item/projectile/energy/metroidacid	//The projectiles I shoot
 	projectilesound = 'sound/weapons/slashmiss.ogg' // The sound I make when I do it
 
@@ -480,7 +480,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	melee_damage_lower = 25
 	melee_damage_upper = 40
 	melee_miss_chance = 5
-	ranged_attack_delay = 5 SECOND
+	ranged_cooldown_time = 2.5 SECOND
 	attack_armor_pen = 20
 	attacktext = list("slashed")
 	armor = list(
@@ -496,7 +496,6 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	max_nutrition = 2200
 	nutrition = 0
 	makes_dirt = TRUE
-	ranged_cooldown_time = 2.5 SECOND
 	projectiletype	= /obj/item/projectile/beam/smalllaser	// The projectiles I shoot
 	projectilesound = 'sound/weapons/Flamer.ogg' // The sound I make when I do it
 
@@ -593,7 +592,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	max_nutrition = 2200
 	nutrition = 0
 	makes_dirt = TRUE
-	ranged_cooldown_time = 1 SECOND
+	ranged_cooldown_time = 1.5 SECOND
 	projectiletype	= /obj/item/projectile/energy/metroidacid	// The projectiles I shoot
 	projectilesound = 'sound/weapons/slashmiss.ogg' // The sound I make when I do it
 
