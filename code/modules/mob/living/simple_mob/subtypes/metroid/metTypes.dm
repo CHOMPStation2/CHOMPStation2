@@ -1,4 +1,4 @@
-var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
+GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 
 /*
 //All the REAL types of metroids!
@@ -619,12 +619,12 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 /mob/living/simple_mob/metroid/juvenile/queen/Initialize()
 	playsound(src, 'sound/metroid/metroidqueen.ogg', 100, 1)
-	queen_amount++
+	GLOB.queen_amount++
 	..()
 
 /mob/living/simple_mob/metroid/juvenile/queen/death()
 	playsound(src, 'sound/metroid/metroidqueendeath.ogg', 100, 1)
-	queen_amount--
+	GLOB.queen_amount--
 	..()
 
 /mob/living/simple_mob/metroid/juvenile/queen //active noms
