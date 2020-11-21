@@ -479,5 +479,6 @@
 	if (stat & BROKEN) // Fix the camera
 		stat &= ~BROKEN
 	wires.repair()
+	set_status(1)
 	update_icon()
 	update_coverage()
