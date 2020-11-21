@@ -31,7 +31,7 @@ var/list/spawntypes = list()
 
 		if(!(J.mob_type & allowed_mob_types))
 			return 0
-
+		
 		return 1
 
 /datum/spawnpoint/proc/get_spawn_position()
@@ -78,14 +78,3 @@ var/list/spawntypes = list()
 /datum/spawnpoint/cyborg/New()
 	..()
 	turfs = latejoin_cyborg
-
-//KSC test
-/*
-/datum/spawnpoint/stationgateway
-	display_name = "Station gateway"
-	msg = "has completed translation from station gateway"
-
-/datum/spawnpoint/stationgateway/New()
-	..()
-	turfs = latejoin_stationgateway
-*/
