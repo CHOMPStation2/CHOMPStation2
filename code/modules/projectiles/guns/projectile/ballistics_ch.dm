@@ -12,6 +12,7 @@
 	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "fiveseven"
 	load_method = MAGAZINE
+	muzzle_velocity = 650
 
 /obj/item/weapon/gun/projectile/fiveseven/update_icon()
 	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
@@ -52,6 +53,7 @@
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
 	)
 	load_method = MAGAZINE
+	muzzle_velocity = 400
 
 //Time to give all these existing guns some new properties.
 //automatic.dm

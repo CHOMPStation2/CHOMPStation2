@@ -70,7 +70,7 @@
 	grains = 31
 	velocity = 716
 	damage = 15
-	armour_penetration = 100	//Unfortunately my penetration code doesn't recognize the glory of 5.7x28 FN, so we must show it the wae.
+	armor_penetration = 100	//Unfortunately my penetration code doesn't recognize the glory of 5.7x28 FN, so we must show it the wae.
 
 /obj/item/projectile/bullet/a57/ap
 	grains = 23
