@@ -164,6 +164,11 @@
 			message = "chirps!"
 			playsound(src.loc, 'sound/misc/nymphchirp.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 			m_type = 2
+		//Dart Additions
+		if("reh")
+			message = "lets out a delreh."
+			m_type = 2
+			playsound(src, 'sound/voice/reh.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		// CHOMP Removal: Begone demons
 		/*if ("hooh")
 			message = "lets out a hooh!"
@@ -194,7 +199,7 @@
 				message = "does a flip!"
 				m_type = 1
 		if("vhelp") //Help for Virgo-specific emotes.
-			to_chat(src, "vwag, vflap, mlem, blep, awoo, awoo2, growl, nya, peep, chirp, hoot, weh, merp, myarp, bark, bork, mrow, mrowl, hypno, howl, hiss, rattle, squeak, geck, baa, baa2, mar, wurble, snort, meow, moo, croak, gao, cackle, nsay, nme, flip") //CHOMP Addition: adds howl to list since YW didn't
+			to_chat(src, "vwag, vflap, mlem, blep, awoo, awoo2, growl, nya, peep, chirp, hoot, weh, merp, reh, myarp, bark, bork, mrow, mrowl, hypno, howl, hiss, rattle, squeak, geck, baa, baa2, mar, wurble, snort, meow, moo, croak, gao, cackle, nsay, nme, flip") //CHOMP Addition: adds howl to list since YW didn't
 			return TRUE
 
 	if(message)
