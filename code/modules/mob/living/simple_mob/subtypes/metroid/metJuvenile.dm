@@ -65,7 +65,7 @@
 		return
 		
 	if(nutrition >= evo_point && !buckled && vore_fullness == 0 && !victim)
-		if(next == "/mob/living/simple_mob/metroid/juvenile/queen" && queen_amount > 0)
+		if(next == "/mob/living/simple_mob/metroid/juvenile/queen" && GLOB.queen_amount > 0)
 			to_chat(src, span("warning", "There is already a queen."))
 			return
 		playsound(src, 'sound/metroid/metroidgrow.ogg', 50, 1)

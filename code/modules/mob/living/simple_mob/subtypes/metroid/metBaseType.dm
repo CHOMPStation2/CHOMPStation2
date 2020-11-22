@@ -53,13 +53,16 @@
 	vore_pounce_chance = 25
 	vore_icons = SA_ICON_LIVING
 	
+	nutrition = 1000 //This actually gets overridden further down on initialize.
 	max_nutrition = 2200
-	nutrition = 0
 	var/evo_point = 0
 	var/evo_limit = 0
 	var/next
-
 	meat_type = /obj/item/toy/figure/bounty_hunter
+	
+/mob/living/simple_mob/metroid/Initialize()
+	nutrition = 100		//Have them start off pretty hungry still
+	return ..()
 	
 /datum/say_list/metroid
 	speak = list("Skree.", "Eree.", "Errer?")

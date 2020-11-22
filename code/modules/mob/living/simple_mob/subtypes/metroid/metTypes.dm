@@ -1,81 +1,41 @@
-var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
+GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 
 /*
-//The metroids' base variables!
+//All the REAL types of metroids!
 */
+//Remember to add vent crawling at some point.
 
-
-
-
-
-/*
-
-
-
-	layer = MOB_LAYER + 1
-
-
-	var/obj/machinery/atmospherics/unary/vent_pump/entry_vent //Graciously stolen from spider code, for vent travel.
-
-
-
-
-
-
-	var/mob/living/victim = null // the person the metroid is currently feeding on
-	var/optimal_combat = FALSE // Used to dumb down the combat AI somewhat.  If true, the metroid tends to be really dangerous to fight alone due to stunlocking.
-	var/evo_point = 0
-	var/evo_limit = 0
-	var/next = null
-
-
-
-
-
-
-
-
-
-
-
-/mob/living/simple_mob/metroid //activate noms
-	vore_active = 1
-	vore_pounce_chance = 25
-	vore_icons = SA_ICON_LIVING
-*/
-
-/*/mob/living/simple_mob/metroid/pet //Security's pet
+/mob/living/simple_mob/metroid/pet //Security's pet
 	name = "Jellybrig"
 	desc = "This one scree's happily at you."
-	ai_holder_type = /datum/ai_holder/simple_mob/metroid/passive
+	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/passive
+	say_list_type = /datum/say_list/metroid
 	faction = "neutral"
 	maxHealth = 400
 	health = 400
 	melee_damage_lower = 2
-	melee_damage_upper = 9
-	move_to_delay = 6
-	harm_intent_damage = 1
-	speak_chance = 1
-	stop_when_pulled = 1
+	melee_damage_upper = 6
+	movement_cooldown = 6
+	harm_intent_damage = 3
 	armor = list(
 				"melee" = 50,
 				"bullet" = -90,
 				"laser" = 0,
 				"energy" = -50,
-				"bomb" = 70,
+				"bomb" = -100,
 				"bio" = 100,
 				"rad" = 100)
 	vore_active = 1
-	vore_bump_chance = 0
+	vore_bump_chance = 25
 	vore_capacity = 3
 	vore_icons = SA_ICON_LIVING
 	vore_pounce_chance = 90 //Don't punch or grab this guy. He will grab you instead!
 	swallowTime = 1 SECONDS //Hungry little bastards.
 	vore_default_mode = DM_HOLD
-	vore_digest_chance = 1		// Chance to switch to digest mode if resisted
+	vore_digest_chance = 1		//Chance to switch to digest mode if resisted
 	vore_absorb_chance = 0
-	vore_escape_chance = 10
-*/
+	vore_escape_chance = 10		//Chance to escape if resisted.
+
 
 /mob/living/simple_mob/metroid/mine
 	name = "Mochtroid"
@@ -88,12 +48,13 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	next = null
 
 	vore_active = 1
-	vore_pounce_chance = 50
+	vore_pounce_chance = 25
 	vore_icons = SA_ICON_LIVING
+	
 /mob/living/simple_mob/metroid/mine/init_vore()
 	..()
 	var/obj/belly/B = vore_selected
-	B.digest_burn = 1
+	B.digest_burn = 0.5
 	B.digest_brute = 0
 
 
@@ -102,7 +63,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	..()
 	if(prob(20))
 		visible_message("<span class='notice'>\The [src] dropped some toy!</span>")
-//		var/location = get_turf(src)
+		new /obj/item/toy/figure/bounty_hunter(loc, src)
 
 
 
@@ -120,7 +81,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_living = "baby"
 	icon_state = "baby"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
-	speak_emote = list("churrs")
+	say_list_type = /datum/say_list/metroid
 	health = 200
 	maxHealth = 200
 	melee_damage_lower = 1
@@ -182,7 +143,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_living = "metroid"
 	icon_state = "metroid"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
-	speak_emote = list("churrs")
+	say_list_type = /datum/say_list/metroid
 	health = 250
 	maxHealth = 250
 	melee_damage_lower = 2
@@ -191,7 +152,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	armor = list(
 				"melee" = 0,
 				"bullet" = -50,
-				"laser" = 90,
+				"laser" = 70,
 				"energy" = 10,
 				"bomb" = -100,
 				"bio" = 100,
@@ -252,7 +213,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_living = "alpha"
 	icon_state = "alpha"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
-	say_list_type = /datum/say_list/metroid/gamma
+	say_list_type = /datum/say_list/metroid
 	movement_cooldown = 1
 	health = 300
 	maxHealth = 300
@@ -261,7 +222,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	melee_miss_chance = 5
 	attacktext = list("rammed")
 	armor = list(
-				"melee" = 50,
+				"melee" = 40,
 				"bullet" = 15,
 				"laser" = 50,
 				"energy" = 60,
@@ -325,14 +286,13 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	icon_living = "gamma"
 	icon_state = "gamma"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
-	say_list_type = /datum/say_list/metroid/gamma
-	movement_cooldown = 1
+	say_list_type = /datum/say_list/metroid
+	movement_cooldown = 1.5
 	health = 400
 	maxHealth = 400
 	melee_damage_lower = 10
 	melee_damage_upper = 20
 	melee_miss_chance = 5
-	ranged_attack_delay = 5 SECOND
 	attacktext = list("rammed")
 	armor = list(
 				"melee" = 55,
@@ -346,10 +306,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	faction = "metroids"
 	max_nutrition = 2200
 	nutrition = 0
-
-	//move_shoot = 1				//Move and shoot at the same time.
-	//ranged_cooldown = 0 		//What the starting cooldown is on ranged attacks
-	//ranged_cooldown_time = 150 	//How long, in deciseconds, the cooldown of ranged attacks is
+	ranged_cooldown_time = 5 SECOND
 	projectilesound = 'sound/weapons/taser2.ogg'
 	projectiletype = /obj/item/projectile/beam/stun/weak
 
@@ -389,7 +346,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	vore_escape_chance = 30
 
 
-/datum/say_list/metroid/gamma
+/datum/say_list/metroid
 	speak = list("Skree.", "Eree.", "Errer?")
 	emote_see = list("floats about","looks around", "rubs its talons")
 	emote_hear = list("chitters")
@@ -426,12 +383,12 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	melee_damage_lower = 15
 	melee_damage_upper = 25
 	melee_miss_chance = 5
-	ranged_attack_delay = 2 SECOND
+	ranged_cooldown_time = 5 SECOND
 	attack_armor_pen = 10
 	attacktext = list("slashed")
 	armor = list(
 				"melee" = 70,
-				"bullet" = 15,
+				"bullet" = 0,
 				"laser" = 50,
 				"energy" = 60,
 				"bomb" = 10,
@@ -443,11 +400,8 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	nutrition = 0
 	
 	makes_dirt = TRUE
-	//move_shoot = 1				//Move and shoot at the same time.
-	//ranged_cooldown = 0 		//What the starting cooldown is on ranged attacks
-	//ranged_cooldown_time = 60 	//How long, in deciseconds, the cooldown of ranged attacks is
-//	rapid = 0					// Three-round-burst fire mode //decided to disalbe for the zeta
-//	projectiletype	= /obj/item/projectile/energy/metroidacid	// The projectiles I shoot
+
+	projectiletype	= /obj/item/projectile/energy/metroidacid	//The projectiles I shoot
 	projectilesound = 'sound/weapons/slashmiss.ogg' // The sound I make when I do it
 
 
@@ -526,12 +480,12 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	melee_damage_lower = 25
 	melee_damage_upper = 40
 	melee_miss_chance = 5
-	ranged_attack_delay = 5 SECOND
+	ranged_cooldown_time = 2.5 SECOND
 	attack_armor_pen = 20
 	attacktext = list("slashed")
 	armor = list(
 				"melee" = 75,
-				"bullet" = 40,
+				"bullet" = 20,
 				"laser" = 55,
 				"energy" = 60,
 				"bomb" = 10,
@@ -542,10 +496,6 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	max_nutrition = 2200
 	nutrition = 0
 	makes_dirt = TRUE
-	//move_shoot = 1				//Move and shoot at the same time.
-	//ranged_cooldown = 0 		//What the starting cooldown is on ranged attacks
-	//ranged_cooldown_time = 150 	//How long, in deciseconds, the cooldown of ranged attacks is
-//	rapid = 0					// Three-round-burst fire mode
 	projectiletype	= /obj/item/projectile/beam/smalllaser	// The projectiles I shoot
 	projectilesound = 'sound/weapons/Flamer.ogg' // The sound I make when I do it
 
@@ -627,7 +577,6 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	melee_damage_lower = 30
 	melee_damage_upper = 60
 	melee_miss_chance = 5
-	ranged_attack_delay = 1 SECOND
 	attack_armor_pen = 20
 	attacktext = list("gnashed")
 	armor = list(
@@ -643,10 +592,7 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 	max_nutrition = 2200
 	nutrition = 0
 	makes_dirt = TRUE
-	//move_shoot = 1				//Move and shoot at the same time.
-	//ranged_cooldown = 0 		//What the starting cooldown is on ranged attacks
-	//ranged_cooldown_time = 120 	//How long, in deciseconds, the cooldown of ranged attacks is
-//	rapid = 1					// Three-round-burst fire mode
+	ranged_cooldown_time = 1.5 SECOND
 	projectiletype	= /obj/item/projectile/energy/metroidacid	// The projectiles I shoot
 	projectilesound = 'sound/weapons/slashmiss.ogg' // The sound I make when I do it
 
@@ -673,12 +619,12 @@ var/global/list/queen_amount = 0 //We only gonna want 1 queen in the world.
 
 /mob/living/simple_mob/metroid/juvenile/queen/Initialize()
 	playsound(src, 'sound/metroid/metroidqueen.ogg', 100, 1)
-	queen_amount++
+	GLOB.queen_amount++
 	..()
 
 /mob/living/simple_mob/metroid/juvenile/queen/death()
 	playsound(src, 'sound/metroid/metroidqueendeath.ogg', 100, 1)
-	queen_amount--
+	GLOB.queen_amount--
 	..()
 
 /mob/living/simple_mob/metroid/juvenile/queen //active noms
