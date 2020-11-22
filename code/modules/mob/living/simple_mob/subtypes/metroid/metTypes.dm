@@ -8,9 +8,9 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 /mob/living/simple_mob/metroid/jellybrig //Security's pet
 	name = "Jellybrig"
 	desc = "This one scree's happily at you."
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate //Instead of normal metroid code, this guy is basically a retaliatory punching bag.
+	ai_holder_type = /datum/ai_holder/simple_mob/jellybrig //Instead of normal metroid code, this guy is basically a retaliatory punching bag.
 	say_list_type = /datum/say_list/metroid
-	faction = "neutral"
+	faction = "notmetroid"
 	maxHealth = 400
 	health = 400
 	melee_damage_lower = 2
@@ -35,6 +35,15 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	vore_digest_chance = 1		//Chance to switch to digest mode if resisted
 	vore_absorb_chance = 0
 	vore_escape_chance = 10		//Chance to escape if resisted.
+	
+/datum/ai_holder/simple_mob/jellybrig
+	hostile = FALSE // The majority of simplemobs are hostile, jellybrig is nice.
+	cooperative = FALSE
+	retaliate = TRUE //so the monster can attack back
+	returns_home = FALSE
+	can_flee = FALSE
+	wander = TRUE
+	base_wander_delay = 9
 
 
 /mob/living/simple_mob/metroid/mine
