@@ -124,6 +124,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,0,	list(ASSIGNMENT_ANY = 5),		0),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Drone Pod Drop",			/datum/event/drone_pod_drop,			10,		list(ASSIGNMENT_SCIENTIST = 40), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Wave",		/datum/event/meteor_wave,		-110,		list(ASSIGNMENT_ENGINEER = 50),	1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Metroid Infestation",			/datum/event/metroid_infestation,			-20,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_ENGINEER = 40), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",		/datum/event/spacevine, 		20,		list(ASSIGNMENT_ENGINEER = 15), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",	/datum/event/viral_infection,	-50,	list(ASSIGNMENT_MEDICAL = 25), 	1),
 	)

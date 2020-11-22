@@ -5,10 +5,10 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 */
 //Remember to add vent crawling at some point.
 
-/mob/living/simple_mob/metroid/pet //Security's pet
+/mob/living/simple_mob/metroid/jellybrig //Security's pet
 	name = "Jellybrig"
 	desc = "This one scree's happily at you."
-	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid/passive
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate //Instead of normal metroid code, this guy is basically a retaliatory punching bag.
 	say_list_type = /datum/say_list/metroid
 	faction = "neutral"
 	maxHealth = 400
@@ -45,6 +45,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	icon_dead = "metroid_dead"
 	icon_living = "mochtroid"
 	icon_state = "mochtroid"
+	movement_cooldown = 2
 	next = null
 
 	vore_active = 1
@@ -214,7 +215,6 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	icon_state = "alpha"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid
-	movement_cooldown = 1
 	health = 300
 	maxHealth = 300
 	melee_damage_lower = 10
@@ -246,8 +246,8 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	max_n2 = 0
 	unsuitable_atoms_damage = 0
 
-	evo_point = 1200
-	evo_limit = 1600
+	evo_point = 1000
+	evo_limit = 1500
 	next = "/mob/living/simple_mob/metroid/juvenile/gamma"
 
 /mob/living/simple_mob/metroid/juvenile/alpha/Initialize()
@@ -287,7 +287,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	icon_state = "gamma"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid
-	movement_cooldown = 1.5
+	movement_cooldown = 2
 	health = 400
 	maxHealth = 400
 	melee_damage_lower = 10
@@ -323,8 +323,8 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	unsuitable_atoms_damage = 0
 
 	var/emp_chance = 20 // Beware synths
-	evo_point = 1200
-	evo_limit = 1600
+	evo_point = 1000
+	evo_limit = 1500
 	next = "/mob/living/simple_mob/metroid/juvenile/zeta"
 
 /mob/living/simple_mob/metroid/juvenile/gamma/Initialize()
@@ -377,7 +377,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	icon_state = "zeta"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/zeta
-	movement_cooldown = 1.5
+	movement_cooldown = 2
 	health = 500
 	maxHealth = 500
 	melee_damage_lower = 15
@@ -421,8 +421,8 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	pixel_y = -16
 	old_x = -16
 	old_y = -16
-	evo_point = 1600
-	evo_limit = 2000
+	evo_point = 1200
+	evo_limit = 1500
 	next = "/mob/living/simple_mob/metroid/juvenile/omega"
 
 /mob/living/simple_mob/metroid/juvenile/zeta/Initialize()
@@ -474,7 +474,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	icon_state = "omega"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/omega
-	movement_cooldown = 1.5
+	movement_cooldown = 2.5
 	health = 600
 	maxHealth = 600
 	melee_damage_lower = 25
@@ -518,7 +518,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	default_pixel_x = -16
 	pixel_x = -16
 	pixel_y = 0
-	evo_point = 1600
+	evo_point = 1300
 	evo_limit = 2000
 	next = "/mob/living/simple_mob/metroid/juvenile/queen"
 
@@ -571,7 +571,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	icon_state = "queen"
 	ai_holder_type = /datum/ai_holder/simple_mob/juvenile_metroid
 	say_list_type = /datum/say_list/metroid/queen
-	movement_cooldown = 2
+	movement_cooldown = 3
 	health = 1000
 	maxHealth = 1000
 	melee_damage_lower = 30

@@ -2178,6 +2178,7 @@
 #include "code\modules\events\maintenance_predator_vr.dm"
 #include "code\modules\events\meteor_strike_vr.dm"
 #include "code\modules\events\meteors.dm"
+#include "code\modules\events\metroid_infestation.dm"
 #include "code\modules\events\money_hacker.dm"
 #include "code\modules\events\money_lotto.dm"
 #include "code\modules\events\money_spam.dm"
