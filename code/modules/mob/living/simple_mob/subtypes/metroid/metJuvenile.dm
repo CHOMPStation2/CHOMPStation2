@@ -18,7 +18,6 @@
 		stop_consumption() // Unbuckle us from our victim.
 	return ..()
 
-
 /mob/living/simple_mob/metroid/juvenile/handle_special()
 	if(stat != DEAD)
 		if(victim)
@@ -151,3 +150,23 @@
 	if(istype(L) && a_intent == I_HURT)
 		// Feed off of their flesh, if able.
 		consume(L, 5)
+
+//Code to remove metroid from someone
+/mob/living/simple_mob/metroid/juvenile/attack_hand(mob/living/L)
+	if(victim) // Are we eating someone?
+		var/fail_odds = 30
+		if(victim == L) // Harder to get the metroid off if it's you that is being eatten.
+			fail_odds = 60
+
+		if(prob(fail_odds))
+			visible_message(span("warning", "\The [L] attempts to wrestle \the [name] off!"))
+			playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
+
+		else
+			visible_message(span("warning", "\The [L] manages to wrestle \the [name] off!"))
+			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+			stop_consumption()
+			step_away(src, L)
+
+	else
+		..()
