@@ -1,16 +1,16 @@
-// These slimes have the mechanics xenobiologists care about, such as reproduction, mutating into new colors, and being able to submit through fear.
+// These metroids have the mechanics xenobiologists care about, such as reproduction, mutating into new colors, and being able to submit through fear.
 
 /mob/living/simple_mob/metroid/juvenile
-	desc = "The most basic of slimes.  The grey slime has no remarkable qualities, however it remains one of the most useful colors for scientists."
+	desc = "This metroid should not be spawned. Yell at your local dev or event manager."
 	layer = MOB_LAYER + 1 // Need them on top of other mobs or it looks weird when consuming something.
 	max_nutrition = 1000
 	var/is_queen = FALSE // When the metroid is a queen, it should just be shitting out babies. Found in metAI.dm and in metTypes for the queen.
 	var/maxHealth_adult = 200
 	var/power_charge = 0 // Disarm attacks can shock someone if high/lucky enough.
-	var/mob/living/victim = null // the person the slime is currently feeding on
-	var/amount_grown = 0 // controls how long the slime has been overfed, if 10, grows or reproduces
-	var/number = 0 // This is used to make the slime semi-unique for indentification.
-	var/harmless = FALSE // Set to true when pacified. Makes the slime harmless, not get hungry, and not be able to grow/reproduce.
+	var/mob/living/victim = null // the person the metroid is currently feeding on
+	var/amount_grown = 0 // controls how long the metroid has been overfed, if 10, grows or reproduces
+	var/number = 0 // This is used to make the metroid semi-unique for indentification.
+	var/harmless = FALSE // Set to true when pacified. Makes the metroid harmless, not get hungry, and not be able to grow/reproduce.
 
 
 /mob/living/simple_mob/metroid/juvenile/Destroy()
@@ -18,15 +18,6 @@
 		stop_consumption() // Unbuckle us from our victim.
 	return ..()
 
-
-/*
-/mob/living/simple_mob/metroid/juvenile/update_icon()
-	icon = "
-	icon_living = "[icon_state_override ? "[icon_state_override] slime" : "slime"] [is_adult ? "adult" : "baby"][victim ? " eating" : ""]"
-	icon_dead = "[icon_state_override ? "[icon_state_override] slime" : "slime"] [is_adult ? "adult" : "baby"] dead"
-	icon_rest = icon_dead
-	..() // This will apply the correct icon_state and do the other overlay-related things.
-*/
 
 /mob/living/simple_mob/metroid/juvenile/handle_special()
 	if(stat != DEAD)
@@ -47,7 +38,7 @@
 		. += "It appears to have been pacified."
 
 /mob/living/simple_mob/metroid/juvenile/verb/evolve()
-	set category = "Slime"
+	set category = "metroid"
 	set desc = "This will let you advance to next form."
 
 	if(stat)
@@ -92,19 +83,15 @@
 /mob/living/simple_mob/metroid/juvenile/proc/pacify()
 	harmless = TRUE
 	if(has_AI())
-		var/datum/ai_holder/simple_mob/xenobio_slime/AI = ai_holder
+		var/datum/ai_holder/simple_mob/juvenile_metroid/AI = ai_holder
 		AI.pacify()
 
 	faction = "neutral"
 
-	// If for whatever reason the mob AI (or player) decides to try to attack something anyways.
-	melee_damage_upper = 1
-	melee_damage_lower = 3
 
 
-
-// Code for slimes attacking other things.
-// Slime attacks change based on intent.
+// Code for metroids attacking other things.
+// metroid attacks change based on intent.
 /mob/living/simple_mob/metroid/juvenile/apply_attack(mob/living/L, damage_to_do)
 	if(istype(L))
 		switch(a_intent)
@@ -129,7 +116,7 @@
 					L.Stun(4)
 					do_attack_animation(L)
 					if(L.buckled)
-						L.buckled.unbuckle_mob() // To prevent an exploit where being buckled prevents slimes from jumping on you.
+						L.buckled.unbuckle_mob() // To prevent an exploit where being buckled prevents metroids from jumping on you.
 					L.stuttering = max(L.stuttering, stun_power)
 
 					var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
@@ -149,7 +136,7 @@
 					L.Weaken(2)
 					do_attack_animation(L)
 					if(L.buckled)
-						L.buckled.unbuckle_mob() // To prevent an exploit where being buckled prevents slimes from jumping on you.
+						L.buckled.unbuckle_mob() // To prevent an exploit where being buckled prevents metroids from jumping on you.
 					return FALSE
 
 				else // Failed to do anything this time.
