@@ -80,16 +80,6 @@
 	visible_message("<span class='warning'>\The [src] suddenly evolves!</span>")
 	qdel(src)	
 
-/mob/living/simple_mob/metroid/juvenile/proc/pacify()
-	harmless = TRUE
-	if(has_AI())
-		var/datum/ai_holder/simple_mob/juvenile_metroid/AI = ai_holder
-		AI.pacify()
-
-	faction = "neutral"
-
-
-
 // Code for metroids attacking other things.
 // metroid attacks change based on intent.
 /mob/living/simple_mob/metroid/juvenile/apply_attack(mob/living/L, damage_to_do)
