@@ -111,6 +111,14 @@
 /obj/structure/stairs/east,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/lowerhall)
+"aar" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/mob/living/simple_mob/animal/passive/mouse/white/apple,
+/turf/simulated/floor/grass,
+/area/chapel/main)
 "aas" = (
 /obj/structure/closet/secure_closet/warden,
 /obj/item/weapon/gun/projectile/shotgun/pump/combat{
@@ -4903,6 +4911,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/interrogation)
+<<<<<<< HEAD
 "ajL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -4921,6 +4930,20 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tether/surfacebase/surface_two_hall)
+||||||| parent of 57315d8913... Merge pull request #9330 from Very-Soft/eventystuff
+"ajL" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/mob/living/simple_mob/animal/passive/mouse/white{
+	desc = "Noodle's best friend! Soft and white, and seemingly strangely intelligent.";
+	name = "Apple"
+	},
+/turf/simulated/floor/grass,
+/area/chapel/main)
+=======
+>>>>>>> 57315d8913... Merge pull request #9330 from Very-Soft/eventystuff
 "ajM" = (
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/tether/surfacebase/outside/outside2)
@@ -48787,6 +48810,7 @@ adu
 ahP
 aiL
 ahW
+<<<<<<< HEAD
 ahW
 amR
 aoE
@@ -48798,6 +48822,29 @@ aZk
 aoE
 aZG
 aro
+||||||| parent of 57315d8913... Merge pull request #9330 from Very-Soft/eventystuff
+ait
+aiK
+ajL
+aYd
+amu
+ajY
+ajY
+aZE
+apQ
+aXy
+=======
+ait
+aiK
+aar
+aYd
+amu
+ajY
+ajY
+aZE
+apQ
+aXy
+>>>>>>> 57315d8913... Merge pull request #9330 from Very-Soft/eventystuff
 aro
 aGN
 bag
