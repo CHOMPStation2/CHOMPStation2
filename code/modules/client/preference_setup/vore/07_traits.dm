@@ -86,6 +86,8 @@
 
 	if(character.isSynthetic())	//Checking if we have a synth on our hands, boys.
 		pref.dirty_synth = 1
+	else				//CHOMPEdit
+		pref.dirty_synth = 0	//CHOMPEdit
 
 	if(selected_species.selects_bodytype)
 		var/datum/species/custom/CS = character.species

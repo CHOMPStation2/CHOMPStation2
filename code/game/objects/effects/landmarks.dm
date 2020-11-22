@@ -31,6 +31,12 @@
 			latejoin_gateway += loc
 			delete_me = 1
 			return
+		//CHOMPEdit Begin
+		if("JoinLateStationGateway")
+			latejoin_gatewaystation += loc
+			delete_me = 1
+			return
+		//CHOMPEdit End
 		if("JoinLateElevator")
 			latejoin_elevator += loc
 			delete_me = 1
