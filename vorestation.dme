@@ -1922,6 +1922,7 @@
 #include "code\modules\client\preference_setup\loadout\loadout_xeno.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_xeno_ch.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_xeno_vr.dm"
+#include "code\modules\client\preference_setup\loadout\loadout_xeno_yw.dm"
 #include "code\modules\client\preference_setup\occupation\occupation.dm"
 #include "code\modules\client\preference_setup\skills\skills.dm"
 #include "code\modules\client\preference_setup\volume_sliders\01_volume.dm"
