@@ -6230,7 +6230,7 @@
 "mDM" = (/obj/effect/floor_decal/industrial/warning/cee{dir = 8},/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1},/obj/machinery/light/small{dir = 1},/obj/effect/map_helper/airlock/atmos/chamber_pump,/turf/simulated/floor/tiled,/area/hallway/secondary/entry/D1)
 "mDZ" = (/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_y = -32},/obj/machinery/light{dir = 4},/obj/machinery/ai_status_display{pixel_x = 32},/obj/structure/bed/chair/comfy/brown{dir = 8},/turf/simulated/floor/carpet/sblucarpet,/area/medical/psych)
 "mEp" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/tiled/monotile,/area/hallway/primary/seconddeck/aft)
-"mEJ" = (/obj/machinery/vending/giftvendor,/turf/simulated/floor/tiled/yellow,/area/crew_quarters/coffee_shop)
+"mEJ" = (/obj/machinery/vending/cart,/turf/simulated/floor/tiled/yellow,/area/crew_quarters/coffee_shop)
 "mES" = (/obj/machinery/alarm{dir = 4; pixel_x = -22},/turf/simulated/floor/tiled/freezer,/area/crew_quarters/barrestroom)
 "mFs" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/table/gamblingtable,/obj/item/weapon/deck/cards,/turf/simulated/floor/plating,/area/crew_quarters/locker)
 "mFY" = (/obj/machinery/computer/card{dir = 4},/obj/machinery/alarm{dir = 4; pixel_x = -22},/obj/effect/floor_decal/borderfloor{dir = 8},/obj/effect/floor_decal/corner/red/border{dir = 8},/turf/simulated/floor/tiled,/area/security/checkpoint2)
