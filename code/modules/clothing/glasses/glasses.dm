@@ -544,11 +544,6 @@ BLIND     // can't see anything
 	name = "optical thermal implants"
 	desc = "A set of implantable lenses designed to augment your vision"
 	icon_state = "thermalimplants"
-<<<<<<< HEAD
-	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
-||||||| parent of 7f84a6ce06... Merge pull request #9312 from KasparoVy/bird-is-the-word
-	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
-=======
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
 
 /obj/item/clothing/glasses/aerogelgoggles
@@ -585,4 +580,3 @@ BLIND     // can't see anything
 			to_chat(usr, "You push \the [src] up from in front of your eyes.")
 		update_clothing_icon()
 		usr.update_action_buttons()
->>>>>>> 7f84a6ce06... Merge pull request #9312 from KasparoVy/bird-is-the-word
