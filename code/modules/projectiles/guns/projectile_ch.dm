@@ -26,6 +26,9 @@
 	var/bolt_locked = FALSE
 	var/bolt_release = "bolt release"
 	var/muzzle_velocity = 500	// meters per second
+	var/sound_ejectchamber = 'sound/weapons/ballistics/pistol_ejectchamber.ogg'
+	var/sound_eject = 'sound/weapons/ballistics/pistol_eject.ogg'
+	var/sound_chamber = 'sound/weapons/ballistics/pistol_chamber.ogg'
 
 /obj/item/weapon/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
 	if(fire_anim)
@@ -94,11 +97,14 @@
 		other_ejected = casing_ejected ? other_ejected : ""
 		var/casing_chambered = CHECK_BITFIELD(result,BOLT_CASING_CHAMBERED) ? ", chambering a new round" : ""
 		if(closed && opened)
+			playsound(src, sound_ejectchamber, 50, 0)
 			user.visible_message("<span class='notice'>[user] pulls back \the [bolt_name] before releasing it[close_open_ejected] causing it to slide forward again[casing_chambered].</span>", \
 			"<span class='notice'>You pull back \the [bolt_name] before releasing it[close_open_ejected] causing it to slide forward again[casing_chambered].</span>")
 		else if(opened)
+			playsound(src, sound_eject, 50, 0)
 			if(locked)
 				if(CHECK_BITFIELD(auto_loading_type,LOCK_MANUAL_LOCK))
+					playsound(src, sound_ejectchamber, 50, 0)
 					user.visible_message("<span class='notice'>[user] pulls back \the [bolt_name] and locks it in the open position[casing_chambered][other_ejected].</span>", \
 					"<span class='notice'>You pull back \the [bolt_name] and lock it in the open position[other_ejected][casing_chambered].</span>")
 				else 
@@ -108,6 +114,7 @@
 				user.visible_message("<span class='notice'>[user] opens \the [bolt_name][casing_chambered][other_ejected].</span>", \
 				"<span class='notice'>You pull back \the [bolt_name][casing_chambered][other_ejected].</span>")
 		else if(closed)
+			playsound(src, sound_chamber, 50, 0)
 			if(unlocked)
 				if(bolt_release)
 					if(user.a_intent == I_HURT && CHECK_BITFIELD(auto_loading_type,LOCK_SLAPPABLE))
