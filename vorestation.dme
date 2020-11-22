@@ -1863,6 +1863,7 @@
 #include "code\modules\client\preferences_factions.dm"
 #include "code\modules\client\preferences_savefile.dm"
 #include "code\modules\client\preferences_spawnpoints.dm"
+#include "code\modules\client\preferences_spawnpoints_ch.dm"
 #include "code\modules\client\preferences_toggle_procs.dm"
 #include "code\modules\client\preferences_vr.dm"
 #include "code\modules\client\preferences_yw.dm"
