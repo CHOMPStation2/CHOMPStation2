@@ -115,25 +115,7 @@
 
 /mob/living/silicon/apply_effect(var/effect = 0,var/effecttype = STUN, var/blocked = 0)
 	return 0//The only effect that can hit them atm is flashes and they still directly edit so this works for now
-/*
-	if(!effect || (blocked >= 2))	return 0
-	switch(effecttype)
-		if(STUN)
-			stunned = max(stunned,(effect/(blocked+1)))
-		if(WEAKEN)
-			weakened = max(weakened,(effect/(blocked+1)))
-		if(PARALYZE)
-			paralysis = max(paralysis,(effect/(blocked+1)))
-		if(IRRADIATE)
-			radiation += min((effect - (effect*getarmor(null, "rad"))), 0)//Rads auto check armor
-		if(STUTTER)
-			stuttering = max(stuttering,(effect/(blocked+1)))
-		if(EYE_BLUR)
-			eye_blurry = max(eye_blurry,(effect/(blocked+1)))
-		if(DROWSY)
-			drowsyness = max(drowsyness,(effect/(blocked+1)))
-	updatehealth()
-	return 1*/
+
 
 /proc/islinked(var/mob/living/silicon/robot/bot, var/mob/living/silicon/ai/ai)
 	if(!istype(bot) || !istype(ai))
@@ -170,18 +152,6 @@
 		show_system_integrity()
 		show_malf_ai()
 	..()
-
-// this function displays the stations manifest in a separate window
-/mob/living/silicon/proc/show_station_manifest()
-	var/dat = "<div align='center'>"
-	if(!data_core)
-		to_chat(src, "<span class='notice'>There is no data to form a manifest with. Contact your Nanotrasen administrator.</span>")
-		return
-	dat += data_core.get_manifest(1) //The 1 makes it monochrome.
-
-	var/datum/browser/popup = new(src, "Crew Manifest", "Crew Manifest", 370, 420, src)
-	popup.set_content(dat)
-	popup.open()
 
 //can't inject synths
 /mob/living/silicon/can_inject(var/mob/user, var/error_msg)
@@ -336,7 +306,7 @@
 		next_alarm_notice = world.time + SecondsToTicks(10)
 	if(alarm.hidden)
 		return
-	if(alarm.origin && !(get_z(alarm.origin) in using_map.get_map_levels(get_z(src), TRUE)))
+	if(alarm.origin && !(get_z(alarm.origin) in using_map.get_map_levels(get_z(src), TRUE, om_range = DEFAULT_OVERMAP_RANGE)))
 		return
 
 	var/list/alarms = queued_alarms[alarm_handler]

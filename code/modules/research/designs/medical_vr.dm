@@ -32,7 +32,7 @@
 
 
 // ML-3M medigun and cells
-/*
+// CH edit - turns ML3M to NERD, removes some overtuned cells.
 /datum/design/item/medical/cell_based/AssembleDesignName()
 	..()
 	name = "Cell-based medical prototype ([item_name])"
@@ -123,7 +123,7 @@
 	name = "BRUTE-II"
 	id = "ml3m_cell_brute2"
 	req_tech = list(TECH_MATERIAL = 5, TECH_MAGNET = 3, TECH_POWER = 2, TECH_BIO = 5)
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 1000)
+	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 4000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/brute2
 	sort_string = "KVCCA"
 
@@ -131,7 +131,7 @@
 	name = "BURN-II"
 	id = "ml3m_cell_burn2"
 	req_tech = list(TECH_MATERIAL = 5, TECH_MAGNET = 3, TECH_POWER = 2, TECH_BIO = 5)
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 1000)
+	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 4000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/burn2
 	sort_string = "KVCCB"
 
@@ -139,7 +139,7 @@
 	name = "STABILIZE-II"
 	id = "ml3m_cell_stabilize2"
 	req_tech = list(TECH_MATERIAL = 5, TECH_MAGNET = 3, TECH_POWER = 2, TECH_BIO = 5)
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "silver" = 1000)
+	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "silver" = 4000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/stabilize2
 	sort_string = "KVCCC"
 
@@ -147,7 +147,7 @@
 	name = "OMNI-II"
 	id = "ml3m_cell_omni2"
 	req_tech = list(TECH_MATERIAL = 5, TECH_MAGNET = 3, TECH_POWER = 2, TECH_BIO = 5)
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 1000)
+	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 4000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/omni2
 	sort_string = "KVCCD"
 
@@ -157,10 +157,10 @@
 	name = "TOXIN-II"
 	id = "ml3m_cell_toxin2"
 	req_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 3, TECH_POWER = 3, TECH_BIO = 6)
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 1000, "silver" = 1000, "diamond" = 500)
+	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 4000, "silver" = 4000, "diamond" = 2000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/toxin2
 	sort_string = "KVCDA"
-
+/*
 /datum/design/item/ml3m_cell/haste
 	name = "HASTE"
 	id = "ml3m_cell_haste"
@@ -176,7 +176,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 1000, "uranium" = 1000, "diamond" = 1000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/resist
 	sort_string = "KVCDC"
-
+*/
 /datum/design/item/ml3m_cell/corpse_mend
 	name = "CORPSE MEND"
 	id = "ml3m_cell_corpse_mend"
@@ -186,7 +186,7 @@
 	sort_string = "KVCDD"
 
 //Tier 4
-
+/*
 /datum/design/item/ml3m_cell/brute3
 	name = "BRUTE-III"
 	id = "ml3m_cell_brute3"
@@ -244,5 +244,4 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 2000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/normalsize
 	sort_string = "KVCOC"
-
-Don't even think about it -DHA */
+*/

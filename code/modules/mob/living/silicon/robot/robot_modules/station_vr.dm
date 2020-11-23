@@ -12,7 +12,8 @@
 					LANGUAGE_CANILUNZT	= 0,
 					LANGUAGE_ECUREUILIAN= 0,
 					LANGUAGE_DAEMON		= 0,
-					LANGUAGE_ENOCHIAN	= 0
+					LANGUAGE_ENOCHIAN	= 0,
+					LANGUAGE_DRUDAKAR	= 0
 					)
 	var/vr_sprites = list()
 	var/pto_type = null
@@ -25,7 +26,7 @@
 					LANGUAGE_SIIK		= 1,
 					LANGUAGE_SKRELLIAN	= 1,
 					LANGUAGE_ROOTLOCAL	= 0,
-					LANGUAGE_GUTTER		= 1,
+					LANGUAGE_GUTTER		= 0,
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_EAL		= 1,
 					LANGUAGE_SIGN		= 0,
@@ -35,6 +36,27 @@
 					LANGUAGE_ECUREUILIAN= 1,
 					LANGUAGE_DAEMON		= 1,
 					LANGUAGE_ENOCHIAN	= 1
+					)
+
+/obj/item/weapon/robot_module/robot/chound
+	languages = list(
+					LANGUAGE_SOL_COMMON	= 1,
+					LANGUAGE_TRADEBAND	= 1,
+					LANGUAGE_UNATHI		= 1,
+					LANGUAGE_SIIK		= 1,
+					LANGUAGE_SKRELLIAN	= 1,
+					LANGUAGE_ROOTLOCAL	= 0,
+					LANGUAGE_GUTTER		= 0,
+					LANGUAGE_SCHECHI	= 1,
+					LANGUAGE_EAL		= 1,
+					LANGUAGE_SIGN		= 0,
+					LANGUAGE_BIRDSONG	= 1,
+					LANGUAGE_SAGARU		= 1,
+					LANGUAGE_CANILUNZT	= 1,
+					LANGUAGE_ECUREUILIAN= 1,
+					LANGUAGE_DAEMON		= 1,
+					LANGUAGE_ENOCHIAN	= 1,
+					LANGUAGE_DRUDAKAR	= 1
 					)
 
 /hook/startup/proc/robot_modules_vr()
@@ -48,6 +70,7 @@
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //YW Addition booze
+	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CH Addition Unity
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -149,7 +172,8 @@
 	pto_type = PTO_SCIENCE
 	vr_sprites = list(
 						"Acheron" = "mechoid-Science",
-						"ZOOM-BA" = "zoomba-research"
+						"ZOOM-BA" = "zoomba-research",
+						"XI-GUS" = "spiderscience"
 					 )
 
 /obj/item/weapon/robot_module/robot/security/combat
@@ -166,6 +190,7 @@
 					"K9 Alternative" = "k92",
 					"Secborg model V-2" = "secborg",
 					"Borgi" = "borgi-sec",
+					"Otieborg" = "oties",
 					"Secborg model V-3" = "SecVale" //CHOMPEdit
 					)
 	channels = list("Security" = 1)
@@ -262,7 +287,7 @@
 
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(2000)
 	synths += medicine
-	
+
 	var/obj/item/stack/medical/advanced/clotting/C = new (src)
 	C.uses_charge = 1
 	C.charge_costs = list(1000)
@@ -377,8 +402,8 @@
 	name = "Custodial Hound module"
 	sprites = list(
 					"Custodial Hound" = "scrubpup",
-					"Custodial Doggo" = "J9",
-					"Borgi" = "borgi-jani"
+					"Borgi" = "borgi-jani",
+					"Otieborg" = "otiej"
 					)
 	channels = list("Service" = 1)
 	pto_type = PTO_CIVILIAN
@@ -987,3 +1012,81 @@
 		B.reagents.add_reagent("beer2", 2 * amount)
 
 // YW Changes - Boozeborg end
+
+// CH Changes - Unity Hound begin
+/obj/item/weapon/robot_module/robot/chound
+	name = "Unity Hound Module"
+	sprites = list(
+					"Kcom" = "kcom"
+					)
+	channels = list(
+			"Medical" = 1,
+			"Engineering" = 1,
+			"Security" = 1,
+			"Service" = 1,
+			"Supply" = 0,
+			"Science" = 1,
+			"Command" = 1,
+			"Explorer" = 0
+			)
+	pto_type = PTO_CIVILIAN
+	can_be_pushed = 0
+
+/obj/item/weapon/robot_module/robot/chound/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/weapon/pen/robopen(src)
+	src.modules += new /obj/item/weapon/form_printer(src)
+	src.modules += new /obj/item/weapon/gripper/paperwork(src)
+	src.modules += new /obj/item/weapon/hand_labeler(src)
+	src.modules += new /obj/item/weapon/stamp(src)
+	src.modules += new /obj/item/weapon/stamp/denied(src)
+	src.modules += new /obj/item/weapon/taskmanager(src)
+	src.emag = new /obj/item/weapon/stamp/chameleon(src)
+	src.emag = new /obj/item/weapon/pen/chameleon(src)
+
+	var/datum/matter_synth/water = new /datum/matter_synth(500)
+	water.name = "Water reserves"
+	water.recharge_rate = 0
+	R.water_res = water
+	synths += water
+
+	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	T.water = water
+	src.modules += T
+
+	var/obj/item/device/dogborg/sleeper/B = new /obj/item/device/dogborg/sleeper/command(src)
+	B.water = water
+	src.modules += B
+
+	R.icon = 'icons/mob/widerobot_ch.dmi'
+	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
+	R.pixel_x 	 = -16
+	R.old_x  	 = -16
+	R.default_pixel_x = -16
+	R.dogborg = TRUE
+	R.wideborg = TRUE
+	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
+	R.verbs |= /mob/living/proc/toggle_rider_reins
+	R.verbs |= /mob/living/proc/shred_limb
+	R.verbs |= /mob/living/silicon/robot/proc/rest_style
+
+	..()
+
+/obj/item/weapon/robot_module/Reset(var/mob/living/silicon/robot/R)
+	R.pixel_x = initial(pixel_x)
+	R.pixel_y = initial(pixel_y)
+	R.icon = initial(R.icon)
+	R.dogborg = FALSE
+	R.wideborg = FALSE
+	R.ui_style_vr = FALSE
+	R.default_pixel_x = initial(pixel_x)
+	R.scrubbing = FALSE
+	R.verbs -= /mob/living/silicon/robot/proc/ex_reserve_refill
+	R.verbs -= /mob/living/silicon/robot/proc/robot_mount
+	R.verbs -= /mob/living/proc/toggle_rider_reins
+	R.verbs -= /mob/living/proc/shred_limb
+	R.verbs -= /mob/living/silicon/robot/proc/rest_style
+	..()
+// CH changes - Unity Hound end
+

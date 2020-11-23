@@ -7,6 +7,7 @@
 	robot_module_types += "Service-Hound"
 	robot_module_types += "KMine"
 	robot_module_types += "BoozeHound" //YW changes
+	robot_module_types += "UnityHound" // CH changes
 	return 1
 /* //ChompStation Removal
 var/list/shell_module_types = list(

@@ -8,6 +8,8 @@
 		TGS_ERROR_LOG("Invalid minimum_required_security_level: [minimum_required_security_level]!")
 		return
 
+#define TGS_V3_API //yw edit FORCE THIS SHIT ON HOLY FUCK
+
 #ifdef TGS_V3_API
 	if(minimum_required_security_level != TGS_SECURITY_TRUSTED)
 		TGS_WARNING_LOG("V3 DMAPI requires trusted security!")

@@ -145,6 +145,7 @@
 	name = "MediHound hypospray"
 	desc = "An advanced chemical synthesizer and injection system utilizing carrier's reserves, designed for heavy-duty medical equipment."
 	charge_cost = 10
+	reagent_ids = list("inaprovaline", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "paracetamol")
 	var/datum/matter_synth/water = null
 
 /obj/item/weapon/reagent_containers/borghypo/hound/process() //Recharges in smaller steps and uses the water reserves as well.
@@ -213,6 +214,7 @@
 		user.visible_message("[user] begins to lap up water from [target.name].", "<span class='notice'>You begin to lap up water from [target.name].</span>")
 		if(do_after (user, 50))
 			water.add_charge(50)
+			to_chat(src, "You refill some of your water reserves.")
 	else if(water.energy < 5)
 		to_chat(user, "<span class='notice'>Your mouth feels dry. You should drink up some water .</span>")
 		return
@@ -251,7 +253,7 @@
 				to_chat(user, "<span class='notice'>You finish off \the [target.name], and gain some charge!</span>")
 				var/mob/living/silicon/robot/R = user
 				var/obj/item/weapon/cell/C = target
-				R.cell.charge += C.maxcharge / 3
+				R.cell.charge += C.charge / 3
 				water.use_charge(5)
 				qdel(target)
 			return

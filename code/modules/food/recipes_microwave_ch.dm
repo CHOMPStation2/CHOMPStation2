@@ -1,10 +1,10 @@
 	//Imported food from old code
-/datum/recipe/microwave/sauerkraut
+/datum/recipe/sauerkraut
 	reagents = list("sodiumchloride" = 3)
 	fruit = list("cabbage" = 1)
 	result = /obj/item/weapon/reagent_containers/food/snacks/sauerkraut
 
-/datum/recipe/microwave/tamales
+/datum/recipe/tamales
 	fruit = list("corn" = 1)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/doughslice,
@@ -14,7 +14,7 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/tamales
 
-/datum/recipe/microwave/bigos
+/datum/recipe/bigos
 	reagents = list("flour" = 5, "water" = 5)
 	fruit = list("onion" = 1)
 	items = list(
@@ -23,7 +23,7 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/bigos
 
-/datum/recipe/microwave/concha
+/datum/recipe/concha
 	reagents = list("berryjuice" = 5)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/dough,
@@ -31,7 +31,7 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/concha
 
-/datum/recipe/microwave/pandenata
+/datum/recipe/pandenata
 	reagents = list("sugar" = 10, "cream" = 5)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/doughslice,
@@ -40,14 +40,14 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/pandenata
 
-/datum/recipe/microwave/tocino
+/datum/recipe/tocino
 	reagents = list("sodiumchloride" = 5, "wine" = 5)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/rawcutlet
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/tocino
 
-/datum/recipe/microwave/garlicbread
+/datum/recipe/garlicbread
 	fruit = list("onion" = 1)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
@@ -55,7 +55,7 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/garlicbread
 
-/datum/recipe/microwave/plumpburger
+/datum/recipe/plumpburger
 	fruit = list("plumphelmet" = 1)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
@@ -63,11 +63,11 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/plumpburger
 
-/datum/recipe/microwave/wataur
+/datum/recipe/wataur
 	reagents = list("water" = 100)
 	result = /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle/wataur
 
-/datum/recipe/microwave/bigbeanburrito
+/datum/recipe/bigbeanburrito
 	fruit = list("soybeans" = 3)
 	items = list(
 	/obj/item/weapon/reagent_containers/food/snacks/meatburrito,
@@ -76,7 +76,7 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito
 
-/datum/recipe/microwave/supremoburrito
+/datum/recipe/supremoburrito
 	fruit = list("soybeans" = 3, "chili" = 1)
 	items = list(
 	/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,
@@ -97,3 +97,12 @@
 		/obj/item/weapon/reagent_containers/food/snacks/steamrolltealeaf
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/greentealeaf
+
+/datum/recipe/butterscotch
+	reagents = list("sugar" = 10, "cream" = 5)
+	reagent_mix = RECIPE_REAGENT_REPLACE //No actual reagents since it's meant to be a cooking item
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/spreads/butter
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/butterscotch
+	result_quantity = 2

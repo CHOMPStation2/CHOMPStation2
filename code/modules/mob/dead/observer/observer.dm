@@ -24,6 +24,7 @@
 							//Note that this is not a reliable way to determine if admins started as observers, since they change mobs a lot.
 	var/has_enabled_antagHUD = 0
 	var/medHUD = 0
+	var/secHUD = 0
 	var/antagHUD = 0
 	universal_speak = 1
 	var/atom/movable/following = null
@@ -160,6 +161,12 @@
 		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE)
 		set_cached_examine_icon(src, I, 200 SECONDS)
 	return I
+	
+/mob/observer/dead/examine(mob/user)
+	. = ..()
+	
+	if(is_admin(user))
+		. += "\t><span class='admin'>[ADMIN_FULLMONTY(src)]</span>"
 
 /*
 Transfer_mind is there to check if mob is being deleted/not going to have a body.
@@ -290,6 +297,19 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	plane_holder.set_vis(VIS_CH_STATUS_OOC, medHUD)
 	to_chat(src, "<font color='blue'><B>Medical HUD [medHUD ? "Enabled" : "Disabled"]</B></font>")
 
+/mob/observer/dead/verb/toggle_secHUD()
+	set category = "Ghost"
+	set name = "Toggle Security HUD"
+	set desc = "Toggles Security HUD allowing you to see people's displayed ID's job, wanted status, etc"
+
+	secHUD = !secHUD
+	plane_holder.set_vis(VIS_CH_ID, secHUD)
+	plane_holder.set_vis(VIS_CH_WANTED, secHUD)
+	plane_holder.set_vis(VIS_CH_IMPTRACK, secHUD)
+	plane_holder.set_vis(VIS_CH_IMPLOYAL, secHUD)
+	plane_holder.set_vis(VIS_CH_IMPCHEM, secHUD)
+	to_chat(src, "<font color='blue'><B>Security HUD [secHUD ? "Enabled" : "Disabled"]</B></font>")
+
 /mob/observer/dead/verb/toggle_antagHUD()
 	set category = "Ghost"
 	set name = "Toggle AntagHUD"
@@ -326,7 +346,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		A = input(usr, "Select an area:", "Ghost Teleport") as null|anything in return_sorted_areas()
 	if(!A)
 		return
-	
+
 	usr.forceMove(pick(get_area_turfs(A)))
 	usr.on_mob_jump()
 
@@ -339,7 +359,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		input = input(usr, "Select a mob:", "Ghost Follow") as null|anything in getmobs()
 	if(!input)
 		return
-	
+
 	var/target = getmobs()[input]
 	if(!target) return
 	ManualFollow(target)
@@ -552,7 +572,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, "<span class='warning'>You may only spawn again as a mouse more than [mouse_respawn_time] minutes after your death. You have [timedifference_text] left.</span>")
 		return
 
-	var/response = alert(src, "Are you -sure- you want to become a mouse?","Are you sure you want to squeek?","Squeek!","Nope!")
+	var/response = alert(src, "Are you -sure- you want to become a mouse? You will have no rights or OOC protections.","Are you sure you want to squeek? You will have no rights or OOC protections.","Squeek!","Nope!")
 	if(response != "Squeek!") return  //Hit the wrong key...again.
 
 
@@ -859,10 +879,10 @@ mob/observer/dead/MayRespawn(var/feedback = 0)
 	set category = "Ghost"
 	set name = "Blank pAI alert"
 	set desc = "Flash an indicator light on available blank pAI devices for a smidgen of hope."
-	
+
 	if(usr.client.prefs?.be_special & BE_PAI)
 		var/count = 0
-		for(var/obj/item/device/paicard/p in all_pai_cards)
+		for(var/obj/item/device/paicard/p in GLOB.all_pai_cards)
 			var/obj/item/device/paicard/PP = p
 			if(PP.pai == null)
 				count++

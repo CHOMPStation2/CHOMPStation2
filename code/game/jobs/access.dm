@@ -1,7 +1,7 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
 
-/obj/var/list/req_access = list()
-/obj/var/list/req_one_access = list()
+/obj/var/list/req_access
+/obj/var/list/req_one_access
 
 //returns 1 if this mob has sufficient access to use this object
 /obj/proc/allowed(mob/M)
@@ -28,22 +28,23 @@
 	return check_access_list(I ? I.GetAccess() : list())
 
 /obj/proc/check_access_list(var/list/L)
-	if(!req_access)		req_access = list()
-	if(!req_one_access)	req_one_access = list()
 	if(!L)	return 0
 	if(!istype(L, /list))	return 0
 	return has_access(req_access, req_one_access, L)
 
 /proc/has_access(var/list/req_access, var/list/req_one_access, var/list/accesses)
-	for(var/req in req_access)
-		if(!(req in accesses)) //doesn't have this access
-			return 0
-	if(req_one_access.len)
-		for(var/req in req_one_access)
-			if(req in accesses) //has an access from the single access list
-				return 1
-		return 0
-	return 1
+	var/has_RA = LAZYLEN(req_access)
+	var/has_ROA = LAZYLEN(req_one_access)
+	var/has_A = LAZYLEN(accesses)
+	if(!has_RA && !has_ROA)		//we need none
+		return TRUE
+	if(!has_A)					//we need them but don't have them
+		return FALSE
+	if(has_RA && length(req_access - accesses))			//we don't have every access we need
+		return FALSE
+	if(has_ROA && !length(req_one_access & accesses))	//we have atleast one access from this list
+		return FALSE
+	return TRUE
 
 /proc/get_centcom_access(job)
 	switch(job)
@@ -106,35 +107,35 @@
 	if(!priv_all_access)
 		priv_all_access = get_access_ids()
 
-	return priv_all_access
+	return priv_all_access.Copy()
 
 /var/list/priv_station_access
 /proc/get_all_station_access()
 	if(!priv_station_access)
 		priv_station_access = get_access_ids(ACCESS_TYPE_STATION)
 
-	return priv_station_access
+	return priv_station_access.Copy()
 
 /var/list/priv_centcom_access
 /proc/get_all_centcom_access()
 	if(!priv_centcom_access)
 		priv_centcom_access = get_access_ids(ACCESS_TYPE_CENTCOM)
 
-	return priv_centcom_access
+	return priv_centcom_access.Copy()
 
 /var/list/priv_syndicate_access
 /proc/get_all_syndicate_access()
 	if(!priv_syndicate_access)
 		priv_syndicate_access = get_access_ids(ACCESS_TYPE_SYNDICATE)
 
-	return priv_syndicate_access
+	return priv_syndicate_access.Copy()
 
 /var/list/priv_private_access
 /proc/get_all_private_access()
 	if(!priv_private_access)
 		priv_private_access = get_access_ids(ACCESS_TYPE_PRIVATE)
 
-	return priv_syndicate_access
+	return priv_syndicate_access.Copy()
 
 /var/list/priv_region_access
 /proc/get_region_accesses(var/code)
@@ -148,7 +149,8 @@
 				priv_region_access["[A.region]"] = list()
 			priv_region_access["[A.region]"] += A.id
 
-	return priv_region_access["[code]"]
+	var/list/L = priv_region_access["[code]"]
+	return L.Copy()
 
 /proc/get_region_accesses_name(var/code)
 	switch(code)
@@ -180,7 +182,7 @@
 
 /proc/get_access_by_id(id)
 	var/list/AS = get_all_access_datums_by_id()
-	return AS[id]
+	return AS["[id]"]
 
 /proc/get_all_jobs()
 	var/list/all_jobs = list()

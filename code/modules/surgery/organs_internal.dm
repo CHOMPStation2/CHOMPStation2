@@ -14,48 +14,8 @@
 		return 0
 	return affected && affected.open == (affected.encased ? 3 : 2)
 
+//CHOMPedit. Removed unused embryo surgery
 
-//////////////////////////////////////////////////////////////////
-//					ALIEN EMBRYO SURGERY						//
-////////////////////////////////////////////////////////////////// // Here for future reference incase it's needed. See: Alien_embryo.dm and Alien_facehugger.dm
-/*
-/datum/surgery_step/internal/remove_embryo
-	allowed_tools = list(
-	/obj/item/weapon/surgical/hemostat = 100,	\
-	/obj/item/weapon/material/kitchen/utensil/fork = 20
-	)
-
-	allowed_procs = list(IS_WIRECUTTER = 75)
-	blood_level = 2
-
-	min_duration = 80
-	max_duration = 100
-
-	can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-		var/embryo = 0
-		for(var/obj/item/alien_embryo/A in target)
-			embryo = 1
-			break
-
-		if (!hasorgans(target))
-			return
-		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		return ..() && affected && embryo && affected.open == 3 && target_zone == BP_TORSO
-
-	begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-		var/msg = "[user] starts to pull something out from [target]'s ribcage with \the [tool]."
-		var/self_msg = "You start to pull something out from [target]'s ribcage with \the [tool]."
-		user.visible_message(msg, self_msg)
-		target.custom_pain("Something hurts horribly in your chest!",1)
-		..()
-
-	end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-		user.visible_message("<span class='warning'>[user] rips the larva out of [target]'s ribcage!</span>",
-							 "You rip the larva out of [target]'s ribcage!")
-
-		for(var/obj/item/alien_embryo/A in target)
-			A.loc = A.loc.loc
-*/
 //////////////////////////////////////////////////////////////////
 //				CHEST INTERNAL ORGAN SURGERY					//
 //////////////////////////////////////////////////////////////////
@@ -164,6 +124,9 @@
 	if (!..())
 		return 0
 
+	if(!istype(tool))
+		return 0
+
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
 	if(!(affected && !(affected.robotic >= ORGAN_ROBOT)))
@@ -227,6 +190,9 @@
 	if (!..())
 		return 0
 
+	if(!istype(tool))
+		return 0
+
 	target.op_stage.current_organ = null
 
 	var/list/removable_organs = list()
@@ -281,7 +247,7 @@
 	var/obj/item/organ/internal/O = tool
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	if(!affected)
+	if(!affected || !istype(O))
 		return
 
 	var/organ_compatible
@@ -361,6 +327,9 @@
 	if (!..())
 		return 0
 
+	if(!istype(tool))
+		return 0
+
 	target.op_stage.current_organ = null
 
 	var/list/removable_organs = list()
@@ -417,6 +386,9 @@
 	if (!..())
 		return 0
 
+	if(!istype(tool))
+		return 0
+
 	target.op_stage.current_organ = null
 
 	var/list/removable_organs = list()
@@ -459,15 +431,15 @@
 //						HEART SURGERY							//
 //////////////////////////////////////////////////////////////////
 // To be finished after some tests.
-// /datum/surgery_step/ribcage/heart/cut
-//	allowed_tools = list(
-//	/obj/item/weapon/surgical/scalpel = 100,		\
-//	/obj/item/weapon/material/knife = 75,	\
-//	/obj/item/weapon/material/shard = 50, 		\
-//	)
+/* /datum/surgery_step/ribcage/heart/cut
+	allowed_tools = list(
+	/obj/item/weapon/surgical/scalpel = 100,		
+	/obj/item/weapon/material/knife = 75,	
+	/obj/item/weapon/material/shard = 50, 		
+	)
 
-//	min_duration = 30
-//	max_duration = 40
+	min_duration = 30
+	max_duration = 40
 
-//	/datum/surgery_step/ribcage/heart/cut/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-//		return ..() && target.op_stage.ribcage == 2
+	/datum/surgery_step/ribcage/heart/cut/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
+		return ..() && target.op_stage.ribcage == 2 */

@@ -1,24 +1,26 @@
-#pretending we're C because otherwise ruby will initialize, even with "language: dm".
-language: c
+language: generic
+os: linux
+dist: bionic
 
 env:
   global:
     - BASENAME="vorestation" # $BASENAME.dmb, $BASENAME.dme, etc.
-    - BYOND_MAJOR="513"
-    - BYOND_MINOR="1527"
-    - MACRO_COUNT=4
 
 cache:
   directories:
-    - $HOME/BYOND-${BYOND_MAJOR}.${BYOND_MINOR}
+    - $HOME/BYOND
 
 addons:
   apt:
     packages:
-      - libc6-i386
+      - libc6:i386
       - libgcc1:i386
       - libstdc++6:i386
-      - libssl-dev:i386
+      - libssl1.1:i386
+      - g++-7
+      - g++-7-multilib
+      - gcc-multilib
+      - zlib1g:i386
 
 before_install:
   - chmod -R +x ./tools/travis
@@ -30,6 +32,7 @@ before_script:
   - shopt -s globstar
 
 script:
+  - ldd librust_g.so
   - ./tools/travis/compile_and_run.sh
 
 # Build-specific settings
@@ -37,13 +40,17 @@ jobs:
   include:
     - stage: "File Tests" #This is the odd man out, with specific installs and stuff.
       name: "Validate Files"
-      install: #Need python for some of the tag matching stuff
-        - pip install --user PyYaml -q
-        - pip install --user beautifulsoup4 -q
-      script: ./tools/travis/validate_files.sh
       addons:
         apt: 
-          packages: ~ # Don't need any packages for this
+          packages:
+            - python3
+            - python3-pip
+            - python3-setuptools
+      install: #Need python for some of the tag matching stuff
+        - tools/travis/install_build_deps.sh
+      script:
+        - tools/travis/validate_files.sh
+        - tools/travis/build_tgui.sh
     - stage: "Unit Tests"
       env: TEST_DEFINE="UNIT_TEST" TEST_FILE="code/_unit_tests.dm" RUN="1"
       name: "Compile normally (unit tests)"

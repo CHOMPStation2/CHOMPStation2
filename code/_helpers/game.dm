@@ -223,11 +223,11 @@
 
 	return hear
 
-
+var/mobs_radio_range_fired = 1					//CHOMPEdit
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
 
 	set background = 1
-
+	var/our_iter = num2text(++mobs_radio_range_fired)	//CHOMPEdit
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
 	var/list/speaker_coverage = list()
@@ -235,15 +235,25 @@
 		var/obj/item/device/radio/R = r // You better fucking be a radio.
 		var/turf/speaker = get_turf(R)
 		if(speaker)
-			for(var/turf/T in hear(R.canhear_range,speaker))
+			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
+				T.temp_check[our_iter] = TRUE	//CHOMPEdit
 				speaker_coverage[T] = R
 
 
 	// Try to find all the players who can hear the message
+	//CHOMPEdit Begin
+	//So, to explain a bit here: The old code that used to be here was pretty slow for a few reasons, most of which have been addressed now.
+	//Unsurprisingly, checking through the entire list of turfs within a radio's range for every mob's turf to see if it's in there is very slow.
+	//So, instead, we set a variable in a list on the turf that's unique to this runthrough(and thus multiple of these can run simultaneously)
+	//Then we just have to check if that variable is true for the turf the mob is on, and if it is, add that mob to our list.
 	for(var/i = 1; i <= player_list.len; i++)
 		var/mob/M = player_list[i]
-		if(M.can_hear_radio(speaker_coverage))
+		var/turf/T = get_turf(M)
+		if(istype(T) && T.temp_check[our_iter])
 			. += M
+	for(var/turf/T in speaker_coverage)
+		T.temp_check -= our_iter //Freeing up the memory.
+	//CHOMPEdit End
 	return .
 
 /mob/proc/can_hear_radio(var/list/hearturfs)
@@ -616,3 +626,82 @@ datum/projectile_data
 	if (!client_or_usr)
 		return
 	winset(client_or_usr, "mainwindow", "flash=5")
+
+/**
+ * Get a bounding box of a list of atoms.
+ *
+ * Arguments:
+ * - atoms - List of atoms. Can accept output of view() and range() procs.
+ *
+ * Returns: list(x1, y1, x2, y2)
+ */
+/proc/get_bbox_of_atoms(list/atoms)
+	var/list/list_x = list()
+	var/list/list_y = list()
+	for(var/_a in atoms)
+		var/atom/a = _a
+		list_x += a.x
+		list_y += a.y
+	return list(
+		min(list_x),
+		min(list_y),
+		max(list_x),
+		max(list_y))
+
+// Will recursively loop through an atom's contents and check for mobs, then it will loop through every atom in that atom's contents.
+// It will keep doing this until it checks every content possible. This will fix any problems with mobs, that are inside objects,
+// being unable to hear people due to being in a box within a bag.
+
+/proc/recursive_mob_check(var/atom/O,  var/list/L = list(), var/recursion_limit = 3, var/client_check = 1, var/sight_check = 1, var/include_radio = 1)
+
+	//GLOB.debug_mob += O.contents.len
+	if(!recursion_limit)
+		return L
+	for(var/atom/A in O.contents)
+
+		if(ismob(A))
+			var/mob/M = A
+			if(client_check && !M.client)
+				L |= recursive_mob_check(A, L, recursion_limit - 1, client_check, sight_check, include_radio)
+				continue
+			if(sight_check && !isInSight(A, O))
+				continue
+			L |= M
+			//log_world("[recursion_limit] = [M] - [get_turf(M)] - ([M.x], [M.y], [M.z])")
+
+		else if(include_radio && istype(A, /obj/item/radio))
+			if(sight_check && !isInSight(A, O))
+				continue
+			L |= A
+
+		if(isobj(A) || ismob(A))
+			L |= recursive_mob_check(A, L, recursion_limit - 1, client_check, sight_check, include_radio)
+	return L
+
+// The old system would loop through lists for a total of 5000 per function call, in an empty server.
+// This new system will loop at around 1000 in an empty server.
+
+/proc/get_mobs_in_view(var/R, var/atom/source, var/include_clientless = FALSE)
+	// Returns a list of mobs in range of R from source. Used in radio and say code.
+
+	var/turf/T = get_turf(source)
+	var/list/hear = list()
+
+	if(!T)
+		return hear
+
+	var/list/range = hear(R, T)
+
+	for(var/atom/A in range)
+		if(ismob(A))
+			var/mob/M = A
+			if(M.client || include_clientless)
+				hear += M
+			//log_world("Start = [M] - [get_turf(M)] - ([M.x], [M.y], [M.z])")
+		else if(istype(A, /obj/item/radio))
+			hear += A
+
+		if(isobj(A) || ismob(A))
+			hear |= recursive_mob_check(A, hear, 3, 1, 0, 1)
+
+	return hear

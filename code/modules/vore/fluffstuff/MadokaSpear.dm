@@ -42,7 +42,7 @@
 /obj/item/weapon/oldtwohanded/mob_can_equip(M as mob, slot)
 	//Cannot equip wielded items.
 	if(wielded)
-		M << "<span class='warning'>Unwield the [initial(name)] first!</span>"
+		to_chat(M, "<span class='warning'>Unwield the [initial(name)] first!</span>")
 		return 0
 
 	return ..()

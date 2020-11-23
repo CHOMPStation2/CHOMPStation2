@@ -10,7 +10,7 @@
 	active_power_usage = 40000	//40 kW
 	var/efficiency = 40000 //will provide the modified power rate when upgraded
 	var/obj/item/charging = null
-	var/list/allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/melee/baton, /obj/item/modular_computer, /obj/item/weapon/computer_hardware/battery_module, /obj/item/weapon/cell, /obj/item/device/suit_cooling_unit/emergency, /obj/item/device/flashlight, /obj/item/device/electronic_assembly, /obj/item/weapon/weldingtool/electric, /obj/item/ammo_magazine/smart, /obj/item/device/flash, /obj/item/device/defib_kit, /obj/item/ammo_casing/microbattery)  //VOREStation Add - NSFW Batteries
+	var/list/allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/melee/baton, /obj/item/modular_computer, /obj/item/weapon/computer_hardware/battery_module, /obj/item/weapon/cell, /obj/item/device/suit_cooling_unit/emergency, /obj/item/device/flashlight, /obj/item/device/electronic_assembly, /obj/item/weapon/weldingtool/electric, /obj/item/ammo_magazine/smart, /obj/item/device/flash, /obj/item/device/defib_kit, /obj/item/ammo_casing/microbattery, /obj/item/ammo_magazine/cell_mag, /obj/item/weapon/gun/projectile/cell_loaded)  //VOREStation Add - NSFW Batteries
 	var/icon_state_charged = "recharger2"
 	var/icon_state_charging = "recharger1"
 	var/icon_state_idle = "recharger0" //also when unpowered
@@ -68,9 +68,21 @@
 			if(EW.use_external_power)
 				to_chat(user, "<span class='notice'>\The [EW] has no recharge port.</span>")
 				return
-		if(!G.get_cell() && !istype(G, /obj/item/ammo_casing/microbattery))	//VOREStation Edit: NSFW charging
-			to_chat(user, "\The [G] does not have a battery installed.")
-			return
+		else if(istype(G, /obj/item/ammo_magazine/cell_mag))
+			var/obj/item/ammo_magazine/cell_mag/maggy = G
+			if(maggy.stored_ammo.len < 1)
+				to_chat(user, "\The [G] does not have any cells installed.")
+				return
+		else if(istype(G, /obj/item/weapon/gun/projectile/cell_loaded))
+			var/obj/item/weapon/gun/projectile/cell_loaded/gunny = G
+			if(gunny.ammo_magazine)
+				var/obj/item/ammo_magazine/cell_mag/maggy = gunny.ammo_magazine
+				if(maggy.stored_ammo.len < 1)
+					to_chat(user, "\The [G] does not have any cell in its magazine installed.")
+					return
+			else
+				to_chat(user, "\The [G] does not have a magazine installed..")
+				return
 
 		user.drop_item()
 		G.loc = src
@@ -93,6 +105,8 @@
 		return
 
 /obj/machinery/recharger/attack_hand(mob/user as mob)
+	if(!Adjacent(user))
+		return FALSE
 	add_fingerprint(user)
 
 	if(charging)
@@ -135,6 +149,7 @@
 		else if(istype(charging, /obj/item/ammo_casing/microbattery))
 			var/obj/item/ammo_casing/microbattery/batt = charging
 			if(batt.shots_left >= initial(batt.shots_left))
+				batt.shots_left = initial(batt.shots_left)
 				icon_state = icon_state_charged
 				update_use_power(USE_POWER_IDLE)
 			else
@@ -143,6 +158,26 @@
 				update_use_power(USE_POWER_ACTIVE)
 			return
 		//VOREStation Add End
+
+		else if(istype(charging, /obj/item/ammo_magazine/cell_mag))
+			charge_mag(charging)
+
+		else if(istype(charging, /obj/item/weapon/gun/projectile/cell_loaded))
+			var/obj/item/weapon/gun/projectile/cell_loaded/gunny = charging
+			charge_mag(gunny.ammo_magazine)
+
+/obj/machinery/recharger/proc/charge_mag(var/obj/item/ammo_magazine/cell_mag/maggy)
+	var/tally = maggy.stored_ammo.len
+	for(var/obj/item/ammo_casing/microbattery/batt in maggy)
+		if(batt.shots_left < initial(batt.shots_left))
+			icon_state = icon_state_charging
+			batt.shots_left++
+			update_use_power(USE_POWER_ACTIVE)
+		else
+			tally -= 1
+			if(tally == 0)
+				icon_state = icon_state_charged
+				update_use_power(USE_POWER_IDLE)
 
 /obj/machinery/recharger/emp_act(severity)
 	if(stat & (NOPOWER|BROKEN) || !anchored)
@@ -177,7 +212,7 @@
 	layer = ABOVE_TURF_LAYER
 	active_power_usage = 60000	//60 kW , It's more specialized than the standalone recharger (guns, batons, and flashlights only) so make it more powerful
 	efficiency = 60000
-	allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/gun/magnetic, /obj/item/weapon/melee/baton, /obj/item/device/flashlight, /obj/item/weapon/cell/device)
+	allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/gun/magnetic, /obj/item/weapon/melee/baton, /obj/item/device/flashlight, /obj/item/weapon/cell/device, /obj/item/ammo_casing/microbattery, /obj/item/ammo_magazine/cell_mag, /obj/item/weapon/gun/projectile/cell_loaded)
 	icon_state_charged = "wrecharger2"
 	icon_state_charging = "wrecharger1"
 	icon_state_idle = "wrecharger0"

@@ -1,3 +1,7 @@
+//Variables to make certain things work. Consider sending upstream. 
+/datum/seed
+	var/ai_mob_product = 0 //This variable determines whether or not a mob product is meant to be ai-controlled. If set to 0, mob products die without a player to control them.
+
 //////CHOMP PLANTS//////
 
 /datum/seed/soybean/sapbean
@@ -150,13 +154,38 @@
 	set_trait(TRAIT_WATER_CONSUMPTION, 6)
 	set_trait(TRAIT_NUTRIENT_CONSUMPTION, 0.25)
 
+/datum/seed/pitcher_plant //Pitcher plant
+	name = "pitcher plant"
+	seed_name = "pitcher plant"
+	seed_noun = "pits"
+	display_name = "pitcher shoots"
+	can_self_harvest = 1
+	apply_color_to_mob = FALSE
+	has_mob_product = /mob/living/simple_mob/vore/pitcher_plant
+	ai_mob_product = 1
+
+/datum/seed/pitcher_plant/New() //No custom icons yet. No spread trait yet even though pitcher fruit can be planted outside of a tray as I've not tied that to hydroponics code.
+	..()
+	set_trait(TRAIT_IMMUTABLE,1)
+	set_trait(TRAIT_CARNIVOROUS,1)
+	set_trait(TRAIT_MATURATION,8)
+	set_trait(TRAIT_PRODUCTION,6)
+	set_trait(TRAIT_WATER_CONSUMPTION,6)
+	set_trait(TRAIT_YIELD,1)
+	set_trait(TRAIT_POTENCY,10)
+	set_trait(TRAIT_PRODUCT_ICON,"corn")
+	set_trait(TRAIT_PRODUCT_COLOUR,"#a839a2")
+	set_trait(TRAIT_PLANT_COLOUR,"#5b6f43")
+	set_trait(TRAIT_PLANT_ICON,"ambrosia")
+
 /datum/seed/hardlightseed    //WIP: havent ported the mob and such yet, best someone more keen on these mobs does it - Jack
 	name = "Type NULL Hardlight Generator"
 	seed_name = "Biomechanical Hardlight generator seed"
 	display_name = "Biomechanical Hardlight stem"
 	mutants = null
 	can_self_harvest = 1
-	has_mob_product = null
+	has_mob_product = /mob/living/simple_mob/animal/synx/ai/pet/holo
+	ai_mob_product = 1
 
 /datum/seed/hardlightseed/New()
 	..()
@@ -172,3 +201,22 @@
 	set_trait(TRAIT_IDEAL_HEAT, 283)
 	set_trait(TRAIT_NUTRIENT_CONSUMPTION, 0)
 	set_trait(TRAIT_WATER_CONSUMPTION, 0)
+
+/datum/seed/cinnamon //WIP - I have no idea what I'm doing with growables in code right now.
+	name = "cinnamon"
+	seed_name = "cinnamon"
+	display_name = "cinnamon tree"
+	chems = list("cinnamonpowder" = list(5,25))
+	mutants = null
+	kitchen_tag = "cinnamon"
+
+/datum/seed/cinnamon/New()
+	..()
+	set_trait(TRAIT_HARVEST_REPEAT,1)
+	set_trait(TRAIT_MATURATION,6)
+	set_trait(TRAIT_PRODUCTION,6)
+	set_trait(TRAIT_YIELD,5)
+	set_trait(TRAIT_POTENCY,10)
+	set_trait(TRAIT_PRODUCT_ICON, "stalk")
+	set_trait(TRAIT_PRODUCT_COLOUR, "#FF9A85")
+	set_trait(TRAIT_PLANT_ICON,"tree2")

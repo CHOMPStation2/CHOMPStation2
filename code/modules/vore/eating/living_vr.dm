@@ -13,11 +13,12 @@
 	var/weight = 137					// Weight for mobs for weightgain system
 	var/weight_gain = 1 				// How fast you gain weight
 	var/weight_loss = 0.5 				// How fast you lose weight
-	var/vore_egg_type = "egg" 				// Default egg type.
+	var/vore_egg_type = "egg" 			// Default egg type.
 	var/feral = 0 						// How feral the mob is, if at all. Does nothing for non xenochimera at the moment.
 	var/revive_ready = REVIVING_READY	// Only used for creatures that have the xenochimera regen ability, so far.
 	var/metabolism = 0.0015
 	var/vore_taste = null				// What the character tastes like
+	var/vore_smell = null				// What the character smells like
 	var/no_vore = FALSE					// If the character/mob can vore.
 	var/noisy = FALSE					// Toggle audible hunger.
 	var/absorbing_prey = 0 				// Determines if the person is using the succubus drain or not. See station_special_abilities_vr.
@@ -31,6 +32,7 @@
 	var/adminbus_trash = FALSE			// For abusing trash eater for event shenanigans.
 	var/adminbus_eat_minerals = FALSE	// This creature subsists on a diet of pure adminium.
 	var/vis_height = 32					// Sprite height used for resize features.
+	var/show_vore_fx = TRUE			// Show belly fullscreens
 
 //
 // Hook for generic creation of stuff on new creatures
@@ -38,12 +40,13 @@
 /hook/living_new/proc/vore_setup(mob/living/M)
 	M.verbs += /mob/living/proc/escapeOOC
 	M.verbs += /mob/living/proc/lick
+	M.verbs += /mob/living/proc/smell
 	M.verbs += /mob/living/proc/switch_scaling
 	if(M.no_vore) //If the mob isn't supposed to have a stomach, let's not give it an insidepanel so it can make one for itself, or a stomach.
 		return TRUE
-	M.vorePanel = new
+	M.vorePanel = new(M)
 	M.verbs += /mob/living/proc/insidePanel
-	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+//	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
@@ -232,14 +235,16 @@
 	P.digest_leave_remains = src.digest_leave_remains
 	P.allowmobvore = src.allowmobvore
 	P.vore_taste = src.vore_taste
+	P.vore_smell = src.vore_smell
 	P.permit_healbelly = src.permit_healbelly
+	P.show_vore_fx = src.show_vore_fx
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
 
 
 	//CHOMP reagent belly
-	P.receive_reagents = src.receive_reagents
-	P.give_reagents = src.give_reagents
+//	P.receive_reagents = src.receive_reagents
+//	P.give_reagents = src.give_reagents
 
 
 	var/list/serialized = list()
@@ -268,13 +273,15 @@
 	digest_leave_remains = P.digest_leave_remains
 	allowmobvore = P.allowmobvore
 	vore_taste = P.vore_taste
+	vore_smell = P.vore_smell
 	permit_healbelly = P.permit_healbelly
+	show_vore_fx = P.show_vore_fx
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
 
 	//CHOMP reagents belly
-	receive_reagents = P.receive_reagents
-	give_reagents = P.give_reagents
+//	receive_reagents = P.receive_reagents
+//	give_reagents = P.give_reagents
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
@@ -367,6 +374,43 @@
 			var/datum/reagent/R = H.touching.reagent_list[1]
 			taste_message += " You also get the flavor of [R.taste_description] from something on them"
 	return taste_message
+
+
+
+//This is just the above proc but switched about.
+/mob/living/proc/smell(mob/living/smelled in living_mobs(1))
+	set name = "Smell"
+	set category = "IC"
+	set desc = "Smell someone nearby!"
+	set popup_menu = FALSE
+
+	if(!istype(smelled))
+		return
+	if(!checkClickCooldown() || incapacitated(INCAPACITATION_ALL))
+		return
+
+	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	visible_message("<span class='warning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+
+/mob/living/proc/get_smell_message(allow_generic = 1)
+	if(!vore_smell && !allow_generic)
+		return FALSE
+
+	var/smell_message = ""
+	if(vore_smell && (vore_smell != ""))
+		smell_message += "[vore_smell]"
+	else
+		if(ishuman(src))
+			var/mob/living/carbon/human/H = src
+			smell_message += "a normal [H.custom_species ? H.custom_species : H.species.name]"
+		else
+			smell_message += "a plain old normal [src]"
+
+	return smell_message
+
+
+
+
 //
 // OOC Escape code for pref-breaking or AFK preds
 //
@@ -377,8 +421,8 @@
 	//You're in a belly!
 	if(isbelly(loc))
 		var/obj/belly/B = loc
-		var/confirm = alert(src, "You're in a mob. Don't use this as a trick to get out of hostile animals. This is for escaping from preference-breaking and if you're otherwise unable to escape from endo (pred AFK for a long time).", "Confirmation", "Okay", "Cancel")
-		if(!confirm == "Okay" || loc != B)
+		var/confirm = alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", "Okay", "Cancel")
+		if(confirm != "Okay" || loc != B)
 			return
 		//Actual escaping
 		absorbed = 0	//Make sure we're not absorbed
@@ -396,8 +440,8 @@
 		var/mob/living/silicon/pred = loc.loc //Thing holding the belly!
 		var/obj/item/device/dogborg/sleeper/belly = loc //The belly!
 
-		var/confirm = alert(src, "You're in a dogborg sleeper. This is for escaping from preference-breaking or if your predator disconnects/AFKs. If your preferences were being broken, please admin-help as well.", "Confirmation", "Okay", "Cancel")
-		if(!confirm == "Okay" || loc != belly)
+		var/confirm = alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", "Okay", "Cancel")
+		if(confirm != "Okay" || loc != belly)
 			return
 		//Actual escaping
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(pred)] (BORG) ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
@@ -457,7 +501,14 @@
 		return FALSE
 
 	// Prepare messages
-	if(user == pred) //Feeding someone to yourself
+	//CHOMPEdit begin
+	if(prey.is_slipping)
+		attempt_msg = "<span class='warning'>It seems like [prey] is about to slide into [pred]'s [lowertext(belly.name)]!</span>"
+		success_msg = "<span class='warning'>[prey] suddenly slides into [pred]'s [lowertext(belly.name)]!</span>"
+	else if(pred.is_slipping)
+		attempt_msg = "<span class='warning'>It seems like [prey] is gonna end up inside [pred]'s [lowertext(belly.name)] as [pred] comes sliding over!</span>"
+		success_msg = "<span class='warning'>[prey] suddenly slips inside of [pred]'s [lowertext(belly.name)] as [pred] slides into them!</span>"
+	else if(user == pred) //CHOMPEdit End //Feeding someone to yourself
 		attempt_msg = "<span class='warning'>[pred] is attempting to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 		success_msg = "<span class='warning'>[pred] manages to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 	else //Feeding someone to another person
@@ -485,10 +536,6 @@
 	belly.nom_mob(prey, user)
 	if(!ishuman(user))
 		user.update_icons()
-
-	// Flavor handling
-	if(belly.can_taste && prey.get_taste_message(FALSE))
-		to_chat(belly.owner, "<span class='notice'>[prey] tastes of [prey.get_taste_message(FALSE)].</span>")
 
 	// Inform Admins
 	if(pred == user)
@@ -610,7 +657,7 @@
 			to_chat(src, "<span class='notice'>You can taste the flavor of spicy cardboard.</span>")
 		else if(istype(I,/obj/item/device/flashlight/glowstick))
 			to_chat(src, "<span class='notice'>You found out the glowy juice only tastes like regret.</span>")
-		else if(istype(I,/obj/item/weapon/cigbutt))
+		else if(istype(I,/obj/item/trash/cigbutt))
 			to_chat(src, "<span class='notice'>You can taste the flavor of bitter ash. Classy.</span>")
 		else if(istype(I,/obj/item/clothing/mask/smokable))
 			var/obj/item/clothing/mask/smokable/C = I
@@ -684,7 +731,7 @@
 		return
 
 	var/list/nom = null
-	var/material/M = null
+	var/datum/material/M = null
 	if(istype(I, /obj/item/weapon/ore)) //Raw unrefined ore. Some things are just better untempered!
 		var/obj/item/weapon/ore/O = I
 		//List in list, define by material property of ore in code/mining/modules/ore.dm.
@@ -699,7 +746,7 @@
 			"silver"		= list("nutrition" = 40, "remark" = "[O] tastes quite nice indeed as you munch on it. A little tarnished, but that's just fine aging.", "WTF" = FALSE),
 			"gold"			= list("nutrition" = 40, "remark" = "You taste supreme richness that exceeds expectations and satisfies your hunger.", "WTF" = FALSE),
 			"diamond"		= list("nutrition" = 50, "remark" = "The heavenly taste of [O] almost brings a tear to your eye. Its glimmering gloriousness is even better on the tongue than you imagined, so you savour it fondly.", "WTF" = FALSE),
-			"platinum"		= list("nutrition" = 40, "remark" = "A bit tangy but elegantly balanced with a long faintly sour finish. Delectible.", "WTF" = FALSE),
+			"platinum"		= list("nutrition" = 40, "remark" = "A bit tangy but elegantly balanced with a long faintly sour finish. Delectable.", "WTF" = FALSE),
 			"mhydrogen"		= list("nutrition" = 30, "remark" = "Quite sweet on the tongue, you savour the light and easy to chew [O], finishing it quickly.", "WTF" = FALSE),
 			"rutile"		= list("nutrition" = 50, "remark" = "A little... angular, you savour the light but chewy [O], finishing it quickly.", "WTF" = FALSE),
 			MAT_VERDANTIUM	= list("nutrition" = 50, "remark" = "You taste scientific mystery and a rare delicacy. Your tastebuds tingle pleasantly as you eat [O] and the feeling warmly blossoms in your chest for a moment.", "WTF" = FALSE),
@@ -735,11 +782,11 @@
 			"borosilicate glass"			= list("nutrition" = 10,  "remark" = "With a satisfying crunch, you grind [O] down with ease and find it somewhat palatable due to a subtle but familiar rush of phoronic warmth.", "WTF" = FALSE),
 			"reinforced borosilicate glass"	= list("nutrition" = 15,  "remark" = "With a satisfying crunch, you grind [O] down. It is quite palatable due to a subtle metallic tang and familiar rush of phoronic warmth.", "WTF" = FALSE),
 			MAT_GRAPHITE					= list("nutrition" = 30,  "remark" = "Satisfyingly metallic with a mildly savoury tartness, you chew [O] until its flavour is no more but are left longing for another.", "WTF" = FALSE),
-			"osmium"						= list("nutrition" = 45,  "remark" = "Successive bites serve to almost chill your palate, a rush of rich and mildly sour flavour unlocked with the grinding of your powerful jaws. Delectible.", "WTF" = FALSE),
+			"osmium"						= list("nutrition" = 45,  "remark" = "Successive bites serve to almost chill your palate, a rush of rich and mildly sour flavour unlocked with the grinding of your powerful jaws. Delectable.", "WTF" = FALSE),
 			"mhydrogen"						= list("nutrition" = 35,  "remark" = "Quite sweet on the tongue, you savour the light and easy to chew [O], finishing it quickly.", "WTF" = FALSE),
-			"platinum"						= list("nutrition" = 40,  "remark" = "A bit tangy but elegantly balanced with a long faintly sour finish. Delectible.", "WTF" = FALSE),
+			"platinum"						= list("nutrition" = 40,  "remark" = "A bit tangy but elegantly balanced with a long faintly sour finish. Delectable.", "WTF" = FALSE),
 			"iron"							= list("nutrition" = 15,  "remark" = "The familiar texture and taste of [O] does the job but leaves little to the imagination and hardly sates your appetite.", "WTF" = FALSE),
-			MAT_LEAD						= list("nutrition" = 0,   "remark" = "It takes some work to break down [O] but you manage it, unlocking lasting tangy goodness in the process. Yum.", "WTF" = FALSE),
+			MAT_LEAD						= list("nutrition" = 40,   "remark" = "It takes some work to break down [O] but you manage it, unlocking lasting tangy goodness in the process. Yum.", "WTF" = FALSE),
 			MAT_VERDANTIUM					= list("nutrition" = 55,  "remark" = "You taste scientific mystery and a rare delicacy. Your tastebuds tingle pleasantly as you eat [O] and the feeling warmly blossoms in your chest for a moment.", "WTF" = FALSE),
 			MAT_MORPHIUM					= list("nutrition" = 75,  "remark" = "The question, the answer and the taste: It all floods your mouth and your mind to momentarily overwhelm the senses. What the hell was that? Your mouth and throat are left tingling for a while.", "WTF" = 10),
 			"alienalloy"					= list("nutrition" = 120, "remark" = "Working hard for so long to rend the material apart has left your jaw sore, but a veritable explosion of mind boggling indescribable flavour is unleashed. Completely alien sensations daze and overwhelm you while it feels like an interdimensional rift opened in your mouth, briefly numbing your face.", "WTF" = 15)
@@ -818,8 +865,13 @@
 	dispvoreprefs += "<b>Healbelly permission:</b> [permit_healbelly ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
-	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
+//	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
+//	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=200x300;can_resize=0;can_minimize=0")
 	onclose(user, "[name]")
 	return
+
+// Full screen belly overlays!
+/obj/screen/fullscreen/belly
+	icon = 'icons/mob/screen_full_vore.dmi'
+	icon_state = ""

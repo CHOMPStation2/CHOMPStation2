@@ -1,5 +1,6 @@
 /obj/item/projectile/bullet
 	name = "bullet"
+	icon = 'icons/obj/projectiles_yw.dmi' //YWEdit, uses our bullet sprites
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/Gunshot4.ogg'
 	damage = 60
@@ -115,9 +116,10 @@
 
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
+	icon_state = "bullet_chonk" //Ywedit
 	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
 	damage = 50
-	armor_penetration = 15
+	armor_penetration = 20
 
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
 	name = "beanbag"
@@ -225,6 +227,10 @@
 	weaken = 0
 	penetrating = 15
 	armor_penetration = 90
+
+/obj/item/projectile/bullet/rifle/a44rifle
+	fire_sound = 'sound/weapons/gunshot4.ogg'
+	damage = 50
 
 /* Miscellaneous */
 

@@ -56,7 +56,7 @@
 	icon_override = 'icons/vore/nullsuits.dmi'
 	icon_state = ""
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
-	
+
 /obj/item/clothing/under/rank/nullsuit/civ
 	name = "civilian nullsuit"
 	desc = "A skin-tight bodysuit that leaves little to the imagination."
@@ -82,7 +82,7 @@
 	item_state = "nullsuit_sec"
 	worn_state = "nullsuit_sec"
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
-	
+
 /obj/item/clothing/under/rank/nullsuit/sec/hos //HoS version
 	name = "head of security nullsuit"
 	desc = "A skin-tight bodysuit that leaves little to the imagination with colors to distinguish the Head of Security. This particular variant has a tiny bit more padding."
@@ -97,7 +97,7 @@
 	item_state = "nullsuit_med"
 	worn_state = "nullsuit_med"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
-	
+
 /obj/item/clothing/under/rank/nullsuit/med/cmo //Chief Medical Officer version
 	name = "Chief Medical Officer nullsuit"
 	desc = "A skin-tight bodysuit that leaves little to the imagination with colors to distinguish the Chief Medical Officer. This particular variant has a tiny bit of bio resistance."
@@ -112,7 +112,7 @@
 	item_state = "nullsuit_eng"
 	worn_state = "nullsuit_eng"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
-	
+
 /obj/item/clothing/under/rank/nullsuit/eng/ce //Chief Engineer version
 	name = "chief engineer nullsuit"
 	desc = "A skin-tight bodysuit that leaves little to the imagination with colors to distinguish the Chief Engineer. This particular variant has a tiny bit of radiation resistance."
@@ -127,7 +127,7 @@
 	item_state = "nullsuit_sci"
 	worn_state = "nullsuit_sci"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
-	
+
 /obj/item/clothing/under/rank/nullsuit/sci/rd //Research Director version
 	name = "research director nullsuit"
 	desc = "A skin-tight bodysuit that leaves little to the imagination with colors to distinguish the research director. This particular variant has a tiny bit of explosion resistance."
@@ -141,4 +141,12 @@
 	icon_state = "nullsuit_cargo"
 	item_state = "nullsuit_cargo"
 	worn_state = "nullsuit_cargo"
-	
+
+//VR Suit
+/obj/item/clothing/under/vrsuit //Pathname of this particular object in the game.
+	name = "VR Suit" //The name of the suit when examined
+	desc = "An ancient suit used by studio companies long ago to make their virtual reality bones work better." //The description of the suit when examined
+	sensor_mode = 3 //Sensor mode which means that by default when someone spawns they will have tracking sensors on
+	icon = 'icons/obj/clothing/uniforms_ch.dmi' //The icon of the suit when shown in the player's HUD
+	icon_override = 'icons/mob/uniform_ch.dmi' //The icon of the suit worn by the character's sprite
+	icon_state = "vrsuit" //The name of the suit within the .dmi file

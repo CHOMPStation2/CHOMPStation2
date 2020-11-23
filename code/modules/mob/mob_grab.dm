@@ -260,6 +260,7 @@
 		state = GRAB_AGGRESSIVE
 		icon_state = "grabbed1"
 		hud.icon_state = "reinforce1"
+		add_attack_logs(assailant, affecting, "Aggressively grabbed", FALSE) // Not important enough to notify admins, but still helpful.
 	else if(state < GRAB_NECK)
 		if(isslime(affecting))
 			to_chat(assailant, "<span class='notice'>You squeeze [affecting], but nothing interesting happens.</span>")
@@ -384,8 +385,19 @@
 
 	//It's easier to break out of a grab by a smaller mob
 	break_strength += max(size_difference(affecting, assailant), 0)
+	//CHOMPEdit Begin
+	var/prob_mult = 1
+	var/mob/living/carbon/human/grabbee = affecting
+	var/mob/living/carbon/human/grabber = assailant
+	if(istype(grabbee))
+		prob_mult /= grabbee.species.grab_resist_divisor_self
+		break_strength += grabbee.species.grab_power_self
+	if(istype(grabber))
+		prob_mult /= grabber.species.grab_resist_divisor_victims
+		break_strength += grabber.species.grab_power_victims
 
-	var/break_chance = break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)]
+	var/break_chance = CLAMP(prob_mult*break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)],0,100)
+	//CHOMPEdit End
 	if(prob(break_chance))
 		if(state == GRAB_KILL)
 			reset_kill_state()

@@ -9,7 +9,7 @@
 
 	desc = "A small rodent, often seen hiding in maintenance areas and making a nuisance of itself. And stealing cheese, or annoying the chef. SQUEAK! <3"
 
-	movement_cooldown = 1.5 //roughly half the speed of a person
+	movement_cooldown = 5
 	universal_understand = 1
 
 /mob/living/simple_mob/animal/passive/mouse/attack_hand(mob/living/L)
@@ -50,3 +50,13 @@
 			return 0
 	else
 		..()
+/mob/living/simple_mob/animal/passive/mouse/white/apple
+	name = "Apple"
+	desc = "Dainty, well groomed and cared for, her eyes glitter with untold knowledge..."
+	gender = FEMALE
+
+/mob/living/simple_mob/animal/passive/mouse/white/apple/New()
+	..()
+	// Change my name back, don't want to be named Apple (666)
+	name = initial(name)
+	desc = initial(desc)

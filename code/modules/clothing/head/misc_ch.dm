@@ -20,3 +20,26 @@
 	item_state_slots = list(slot_r_hand_str = "wahcap", slot_l_hand_str = "wahcap")
 	icon = 'icons/obj/clothing/hats_ch.dmi'
 	icon_override = 'icons/mob/head_ch.dmi'
+
+
+/obj/item/clothing/head/crown //Generic crown doesnt exist, no sprites
+	icon = 'icons/obj/clothing/hats_ch.dmi'
+	icon_override = 'icons/mob/head_ch.dmi'
+	icon_state = "crown"
+	item_state = "crown"
+	name = "crown"
+	desc = "A crown, it's pretty."
+	body_parts_covered = 0
+
+/obj/item/clothing/head/crown/goose_king
+	name = "Crown of the golden goose king"
+	desc = "It's the crown given to the goose king from the golden goose casino, what an honor!"
+	icon_state = "goose_king"
+	item_state = "goose_king"
+
+
+/obj/item/clothing/head/crown/goose_queen
+	name = "Crown of the golden goose queen"
+	desc = "It's the crown given to the goose queen from the golden goose casino, what an honor!"
+	icon_state = "goose_queen"
+	item_state = "goose_queen"

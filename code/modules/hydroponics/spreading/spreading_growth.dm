@@ -33,7 +33,7 @@
 		neighbors |= floor
 
 	if(neighbors.len)
-		plant_controller.add_plant(src)	//if we have neighbours again, start processing
+		SSplants.add_plant(src)	//if we have neighbours again, start processing
 
 	// Update all of our friends.
 	var/turf/T = get_turf(src)
@@ -110,7 +110,7 @@
 	// We shouldn't have spawned if the controller doesn't exist.
 	check_health()
 	if(has_buckled_mobs() || neighbors.len)
-		plant_controller.add_plant(src)
+		SSplants.add_plant(src)
 
 //spreading vines aren't created on their final turf.
 //Instead, they are created at their parent and then move to their destination.
@@ -126,6 +126,15 @@
 		step_to(child, target_turf)
 		child.anchored = 1
 		child.update_icon()
+
+		//CHOMPedit start: Pitcher plant spawning
+		if((seed.get_trait(TRAIT_POTENCY)) >= 70) //Random event spacevines have 70 potency minimum. Should guarantee this always triggers on spacevines.
+			var/mob/living/pitcher
+			if(!seed.get_trait(TRAIT_CARNIVOROUS) && prob(2)) //Check for canivorous or this could call if prob(10) above fails.
+				pitcher = new /mob/living/simple_mob/vore/pitcher_plant(src.loc)
+				pitcher.nutrition = 0 //With 0 nutrition, vine-spawned pitchers should die after ~10 minutes
+				pitcher.adjustToxLoss(170) //Reduce health, 200 is excessive when a lot of these are spawning.
+		//CHOMPedit end
 
 		//see if anything is there
 		for(var/thing in child.loc)
@@ -160,7 +169,7 @@
 			continue
 		for(var/obj/effect/plant/neighbor in check_turf.contents)
 			neighbor.neighbors |= check_turf
-			plant_controller.add_plant(neighbor)
+			SSplants.add_plant(neighbor)
 	spawn(1) if(src) qdel(src)
 
 #undef NEIGHBOR_REFRESH_TIME

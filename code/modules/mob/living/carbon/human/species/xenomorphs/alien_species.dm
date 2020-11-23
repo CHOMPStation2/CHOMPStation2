@@ -10,12 +10,23 @@
 	hud_type = /datum/hud_data/alien
 	rarity_value = 3
 
+	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
+	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
+
+	darksight = 10 //CHOMPedit. Added darksight
+	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
+
+	pixel_offset_x = -16 //CHOMPedit. I literally had to make a different form of pixel_x just for this species, fuck my life
+
+
+	icon_template = 'icons/mob/human_races/xenos/template.dmi' //CHOMPedit. Add icon template for 64x64 sprites
+
 	has_fine_manipulation = 0
 	siemens_coefficient = 0
 	gluttonous = 2
 
-	brute_mod = 0.5 // Hardened carapace.
-	burn_mod = 2    // Weak to fire.
+	brute_mod = 0.65 //CHOMPedit. Edited brute vulnerability
+	burn_mod = 1.50  //CHOMPedit. Edited burn vulnerability
 
 	warning_low_pressure = 50
 	hazard_low_pressure = -1
@@ -24,7 +35,7 @@
 	cold_level_2 = -1
 	cold_level_3 = -1
 
-	flags =  NO_SCAN | NO_PAIN | NO_SLIP | NO_POISON | NO_MINOR_CUT | NO_INFECT
+	flags =  NO_SCAN | NO_PAIN | NO_SLIP | NO_POISON | NO_MINOR_CUT | NO_INFECT | NO_DEFIB
 	spawn_flags = SPECIES_IS_RESTRICTED
 
 	reagent_tag = IS_XENOS
@@ -33,8 +44,12 @@
 	flesh_color = "#282846"
 	gibbed_anim = "gibbed-a"
 	dusted_anim = "dust-a"
-	death_message = "lets out a waning guttural screech, green blood bubbling from its maw."
+	death_message = "lets out a piercing multi-toned screech, green blood bubbling from its maw as it ceases." //CHOMPedit. Changed message.
 	death_sound = 'sound/voice/hiss6.ogg'
+
+	damage_overlays = null //CHOMPedit. They don't have overlays yet, if someone wants to add some then be my guest
+	damage_mask = null //CHOMPedit.
+	blood_mask = null //CHOMPedit.
 
 	speech_sounds = list('sound/voice/hiss1.ogg','sound/voice/hiss2.ogg','sound/voice/hiss3.ogg','sound/voice/hiss4.ogg')
 	speech_chance = 100
@@ -43,8 +58,6 @@
 
 	breath_type = null
 	poison_type = null
-
-	vision_flags = SEE_SELF|SEE_MOBS
 
 	has_organ = list(
 		O_HEART =    /obj/item/organ/internal/heart,
@@ -91,8 +104,8 @@
 	return FALSE
 
 /datum/species/xenos/hug(var/mob/living/carbon/human/H,var/mob/living/target)
-	H.visible_message("<span class='notice'>[H] caresses [target] with its scythe-like arm.</span>", \
-					"<span class='notice'>You caress [target] with your scythe-like arm.</span>")
+	H.visible_message("<span class='notice'>[H] caresses [target] with its eldritch arm.</span>", \
+					"<span class='notice'>You caress [target] with your eldritch arm.</span>") //CHOMPedit. Changed messages
 
 /datum/species/xenos/handle_post_spawn(var/mob/living/carbon/human/H)
 
@@ -169,7 +182,7 @@
 	caste_name = "drone"
 	weeds_plasma_rate = 15
 	slowdown = 1
-	tail = "xenos_drone_tail"
+	tail = null //CHOMPedit. Set to null
 	rarity_value = 5
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_drone.dmi'
@@ -210,7 +223,7 @@
 	caste_name = "hunter"
 	slowdown = -2
 	total_health = 150
-	tail = "xenos_hunter_tail"
+	tail = null //CHOMPedit. Set to null
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_hunter.dmi'
 	deform =  'icons/mob/human_races/xenos/r_xenos_hunter.dmi'
@@ -240,7 +253,7 @@
 	caste_name = "sentinel"
 	slowdown = 0
 	total_health = 200
-	tail = "xenos_sentinel_tail"
+	tail = null //CHOMPedit. Set to null
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_sentinel.dmi'
 	deform =  'icons/mob/human_races/xenos/r_xenos_sentinel.dmi'
@@ -269,12 +282,12 @@
 /datum/species/xenos/queen
 
 	name = SPECIES_XENO_QUEEN
-	total_health = 250
+	total_health = 300 //CHOMPedit. Queen is chonk
 	weeds_heal_rate = 5
 	weeds_plasma_rate = 20
 	caste_name = "queen"
 	slowdown = 4
-	tail = "xenos_queen_tail"
+	tail = null //CHOMPedit. Set to null
 	rarity_value = 10
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_queen.dmi'
@@ -334,8 +347,6 @@
 	has_internals = 0
 
 	gear = list(
-		"o_clothing" =   list("loc" = ui_belt,      "name" = "Suit",         "slot" = slot_wear_suit, "state" = "equip",  "dir" = SOUTH),
-		"head" =         list("loc" = ui_id,        "name" = "Hat",          "slot" = slot_head,      "state" = "hair"),
 		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
 		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
-		)
+		) //CHOMPedit removed head and outer layer item slots, since they caused a slew of problems with xenomorphs

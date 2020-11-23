@@ -108,6 +108,18 @@
 	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = -1
 	var_changes = list("alcohol_mod" = 3)
+	
+/datum/trait/pain_intolerance_basic
+	name = "Pain Intolerant"
+	desc = "You are frail and sensitive to pain. You experience 25% more pain from all sources." 
+	cost = -1
+	var_changes = list("pain_mod" = 1.25)
+
+/datum/trait/pain_intolerance_advanced
+	name = "High Pain Intolerance"
+	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
+	cost = -2
+	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit
 //YW ADDITIONS END
 
 /datum/trait/conductive
@@ -128,6 +140,13 @@
 	cost = -4
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
 */
+/datum/trait/haemophilia
+	name = "Haemophilia - Organics only"
+	desc = "When you bleed, you bleed a LOT. This trait is only for organics, buggy with synths!"
+	cost = -2
+	var_changes = list("bloodloss_rate" = 2)
+	not_for_synths = 1
+
 /datum/trait/hollow
 	name = "Hollow Bones/Aluminum Alloy"
 	desc = "Your bones and robot limbs are much easier to break."
@@ -173,6 +192,7 @@
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/colorblind_taj)
 YW comment finish*/
+
 // YW Addition
 /datum/trait/light_sensitivity
 	name = "Photosensitivity"

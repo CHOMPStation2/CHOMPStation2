@@ -647,9 +647,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/zoo/pirateship)
 "bZ" = (
-/obj/structure/closet{
-	icon_state = "cabinet_closed"
-	},
+/obj/structure/closet/cabinet,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/zoo/tradeship)
 "ca" = (

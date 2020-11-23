@@ -25,7 +25,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	bump_flag =        SLIME
 	swap_flags =       MONKEY|SLIME|SIMPLE_ANIMAL
 	push_flags =       MONKEY|SLIME|SIMPLE_ANIMAL
-	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT
+	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT | NO_DEFIB
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | RADIATION_GLOWS | HAS_UNDERWEAR
 	spawn_flags		 = SPECIES_CAN_JOIN
 	health_hud_intensity = 2
@@ -33,6 +33,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 	species_language = LANGUAGE_PROMETHEAN
 	secondary_langs = list(LANGUAGE_PROMETHEAN, LANGUAGE_SOL_COMMON)	// For some reason, having this as their species language does not allow it to be chosen.
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	// Prometheans are weird, let's just assume they can use basically any language.
+
+	blood_name = "gelatinous ooze"
 
 	breath_type = null
 	poison_type = null
@@ -46,6 +48,9 @@ var/datum/species/shapeshifter/promethean/prometheans
 	max_age =		10
 
 	economic_modifier = 3
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	gluttonous =	1
 	virus_immune =	1

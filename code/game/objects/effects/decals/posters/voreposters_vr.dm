@@ -1,3 +1,4 @@
+/* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
 /datum/poster/vore_1
 	icon_state = "sbsposter1"
 	name = "Best Girl Pip"
@@ -22,10 +23,6 @@
 	icon_state = "sbsposter6"
 	name = "Mawletta"
 	desc = "The best view in the system."
-/datum/poster/vore_7
-	icon_state = "sbsposter7"
-	name = "Sam FEAR"
-	desc = "A poster of the most dangerous cat working for NT."
 /datum/poster/vore_8
 	icon_state = "sbsposter8"
 	name = "Shitty Timbs"
@@ -34,10 +31,6 @@
 	icon_state = "sbsposter9"
 	name = "Shitty Tim"
 	desc = "A Shitty Tim concert poster."
-/datum/poster/vore_10
-	icon_state = "sbsposter10"
-	name = "Kitty Kisuke"
-	desc = "A poster of famous redspace researcher, Kisuke Gema."
 /datum/poster/vore_11
 	icon_state = "sbsposter11"
 	name = "Fear"
@@ -54,6 +47,7 @@
 	icon_state = "dwposter1"
 	name = "WANTED: WAR CRIMINAL"
 	desc = "A poster bringing awareness to the distinguishing costume of a known war criminal operating in Virgo-Erigonne space."
+*/ //CHOMPedit end
 /datum/poster/vore_15
 	icon_state = "dwposter2"
 	name = "Implanter"
@@ -66,18 +60,22 @@
 	icon_state = "dwposter4"
 	name = "We know"
 	desc = "A poster purporting the infallibility of NanoTrasen's forensics department."
+/* //CHOMPedit
 /datum/poster/vore_18
 	icon_state = "dwposter5"
 	name = "KAT"
 	desc = "A promotional poster for popular exotube show 'Kat-Kat Korner'"
+*/ //CHOMPedit end
 /datum/poster/vore_19
 	icon_state = "dwposter6"
 	name = "install.css"
 	desc = "A nostalgia trip."
+/* //CHOMPedit
 /datum/poster/vore_20
 	icon_state = "dwposter7"
 	name = "TALON"
 	desc = "The logo and banner of a notable group of contractors known to trade with NanoTrasen."
+*/ //CHOMPedit end
 /datum/poster/vore_21
 	icon_state = "dwposter8"
 	name = "GPA"
@@ -94,3 +92,25 @@
 	icon_state = "dwposter11"
 	name = "Secgun"
 	desc = "A striking, wordless advertisement for NanoTrasen's security department. It wasn't very effective and just seems to be used as a warning sign."
+/datum/poster/vore_25
+	icon_state = "sbsposter14"
+	name = "Awoo"
+	desc = "A top contender for 'images you can hear'."
+/datum/poster/vore_26
+	icon_state = "sbsposter15"
+	name = "LikeEmSmall"
+	desc = "An advertisement for a defunct dating service for normal-sized individuals to find micro partners."
+/datum/poster/vore_27
+	icon_state = "sbsposter16"
+	name = "Borgar"
+	desc = "What do you want from Space McDonalds?"
+/datum/poster/vore_28
+	icon_state = "sbsposter17"
+	name = "DiveIn"
+	desc = "A limited edition holographic poster that seems to feature subliminal suggestions and conditioning."
+/*CHOMP Edit: Remove loss poster
+/datum/poster/vore_29
+	icon_state = "sbsposter18"
+	name = "Perdition"
+	desc = "You get the feeling that whomever made this intended for you to feel very differently than you do when you look at it."
+*/

@@ -17,11 +17,14 @@
 	see_in_dark = 10
 	has_hands = TRUE
 	seedarkness = FALSE
-	attack_sound = 'sound/weapons/bladeslice.ogg'
+	attack_sound = 'sound/misc/demonattack.ogg'
 	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_SHADEKIN,LANGUAGE_CULT)
 
 	melee_damage_lower = 20
 	melee_damage_upper = 15
+	var/poison_chance = 50
+	var/poison_type = "mindbreaker"
+	var/poison_per_bite = 3
 
 	min_oxy = 0
 	max_oxy = 0
@@ -97,3 +100,36 @@
 		return canmove
 	else
 		return ..()
+
+/mob/living/simple_mob/vore/demon/apply_melee_effects(var/atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		if(L.reagents)
+			var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
+			if(L.can_inject(src, null, target_zone))
+				inject_poison(L, target_zone)
+
+/mob/living/simple_mob/vore/demon/proc/inject_poison(mob/living/L, target_zone)
+	if(prob(poison_chance))
+		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+		L.reagents.add_reagent(poison_type, poison_per_bite)
+
+/mob/living/simple_mob/vore/demon/death()
+	playsound(src, 'sound/misc/demondeath.ogg', 50, 1)
+	..()
+
+/mob/living/simple_mob/vore/demon/bullet_act()
+    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
+    ..()
+
+/mob/living/simple_mob/vore/demon/attack_hand()
+    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
+    ..()
+
+/mob/living/simple_mob/vore/demon/hitby()
+    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
+    ..()
+
+/mob/living/simple_mob/vore/demon/attackby()
+    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
+    ..()

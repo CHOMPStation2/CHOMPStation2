@@ -10,6 +10,10 @@
 
 	maxHealth = 5
 	health = 5
+	melee_damage_lower = 1
+	melee_damage_upper = 3
+
+	movement_cooldown = 1.5
 
 	mob_size = MOB_MINISCULE
 	pass_flags = PASSTABLE
@@ -34,6 +38,10 @@
 	say_list_type = /datum/say_list/mouse
 
 	var/body_color //brown, gray and white, leave blank for random
+	
+	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
+	can_be_drop_prey = TRUE
+	can_be_drop_pred = FALSE
 
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
@@ -101,14 +109,12 @@
 
 /mob/living/simple_mob/animal/passive/mouse/rat
 	name = "rat"
+	body_color = "rat"
+	icon_state = "mouse_rat"
 	maxHealth = 20
 	health = 20
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
-
-/mob/living/simple_mob/animal/passive/mouse/rat/Initialize()
-	..()
-	adjust_scale(1.2)
 
 //TOM IS ALIVE! SQUEEEEEEEE~K :)
 /mob/living/simple_mob/animal/passive/mouse/brown/Tom

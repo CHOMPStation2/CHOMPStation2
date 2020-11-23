@@ -76,6 +76,9 @@
 	max_age = 260
 
 	economic_modifier = 10
+	
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	blurb = "A heavily reptillian species, Unathi hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \
@@ -191,6 +194,9 @@
 
 	economic_modifier = 10
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	blurb = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
 	While reaching to the stars independently from outside influences, the humans engaged them in peaceful trade contact \
 	and have accelerated the fledgling culture into the interstellar age. Their history is full of war and highly fractious \
@@ -198,7 +204,7 @@
 	home worlds and speak a variety of languages, especially Siik and Akhani."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/tajaran)
 
-	body_temperature = 320.15	//Even more cold resistant, even more flammable
+	body_temperature = 280.15	//Even more cold resistant, even more flammable
 
 	cold_level_1 = 200 //Default 260
 	cold_level_2 = 140 //Default 200
@@ -235,7 +241,7 @@
 		"Your overheated skin itches."
 		)
 
-	cold_discomfort_level = 275
+	cold_discomfort_level = 215
 
 	has_organ = list(    //No appendix.
 		O_HEART =    /obj/item/organ/internal/heart,
@@ -280,6 +286,9 @@
 
 	economic_modifier = 10
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	darksight = 4
 	flash_mod = 1.2
 	chemOD_mod = 0.9
@@ -292,7 +301,7 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
 
 	flesh_color = "#8CD7A3"
-	blood_color = "#1D2CBF"
+	blood_color = "#0081CD"
 	base_color = "#006666"
 
 	cold_level_1 = 280 //Default 260 - Lower is better
@@ -357,6 +366,9 @@
 
 	min_age = 16
 	max_age = 90
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	blurb = "The Zaddat are an Unathi client race only recently introduced to SolGov space. Having evolved on \
 	the high-pressure and post-apocalyptic world of Xohok, Zaddat require an environmental suit called a Shroud \
@@ -470,6 +482,9 @@
 
 	economic_modifier = 10
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \
 	there is no effective upper limit to the number that can fuse in gestalt, and reports exist	of the Epsilon Ursae \
@@ -521,7 +536,7 @@
 
 	body_temperature = T0C + 15		//make the plant people have a bit lower body temperature, why not
 
-	flags = NO_SCAN | IS_PLANT | NO_PAIN | NO_SLIP | NO_MINOR_CUT
+	flags = NO_SCAN | IS_PLANT | NO_PAIN | NO_SLIP | NO_MINOR_CUT | NO_DEFIB
 	spawn_flags = SPECIES_CAN_JOIN
 
 	blood_color = "#004400"

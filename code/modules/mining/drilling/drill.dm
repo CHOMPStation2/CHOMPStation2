@@ -59,11 +59,11 @@
 	default_apply_parts()
 	cell = default_use_hicell()
 
+/obj/machinery/mining/drill/get_cell()
+	return cell
+
 /obj/machinery/mining/drill/loaded
 	cell = /obj/item/weapon/cell/high
-
-/obj/machinery/mining/drill/get_cell()
-	return cell	
 
 /obj/machinery/mining/drill/process()
 
@@ -110,7 +110,7 @@
 		var/total_harvest = harvest_speed //Ore harvest-per-tick.
 		var/found_resource = 0 //If this doesn't get set, the area is depleted and the drill errors out.
 
-		for(var/metal in ore_types)
+		for(var/metal in GLOB.ore_types)
 
 			if(contents.len >= capacity)
 				system_error("Insufficient storage space.")
@@ -138,7 +138,7 @@
 					harvesting.resources[metal] = 0
 
 				for(var/i=1, i <= create_ore, i++)
-					var/oretype = ore_types[metal]
+					var/oretype = GLOB.ore_types[metal]
 					new oretype(src)
 
 		if(!found_resource)	// If a drill can't see an advanced material, it will destroy it while going through.

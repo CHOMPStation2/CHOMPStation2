@@ -16,3 +16,8 @@
 		/obj/item/weapon/storage/briefcase/inflatable,
 		/obj/item/clothing/head/helmet/space/emergency,
 		/obj/item/clothing/suit/space/emergency)
+
+/obj/structure/closet/medical
+	name = "medical supply closet"
+	desc = "May or may not contain medical junk."
+	closet_appearance = /decl/closet_appearance/medical_yw

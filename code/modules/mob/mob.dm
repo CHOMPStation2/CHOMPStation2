@@ -77,31 +77,14 @@
 // message is the message output to anyone who can see e.g. "[src] does something!"
 // self_message (optional) is what the src mob sees  e.g. "You do something!"
 // blind_message (optional) is what blind people will hear e.g. "You hear something!"
-/mob/visible_message(var/message, var/self_message, var/blind_message)
-
-	//VOREStation Edit
-	var/list/see
-	if(isbelly(loc))
-		var/obj/belly/B = loc
-		see = B.get_mobs_and_objs_in_belly()
-	else
-		see = get_mobs_and_objs_in_view_fast(get_turf(src),world.view,remote_ghosts = FALSE)
-	//VOREStation Edit End
-
-	var/list/seeing_mobs = see["mobs"]
-	var/list/seeing_objs = see["objs"]
-
-	for(var/obj in seeing_objs)
-		var/obj/O = obj
-		O.show_message(message, 1, blind_message, 2)
-	for(var/mob in seeing_mobs)
-		var/mob/M = mob
-		if(self_message && M == src)
-			M.show_message( self_message, 1, blind_message, 2)
-		else if(M.see_invisible >= invisibility && MOB_CAN_SEE_PLANE(M, plane))
-			M.show_message(message, 1, blind_message, 2)
-		else if(blind_message)
-			M.show_message(blind_message, 2)
+/mob/visible_message(var/message, var/self_message, var/blind_message, var/list/exclude_mobs = null)
+	if(self_message)
+		if(LAZYLEN(exclude_mobs))
+			exclude_mobs |= src
+		else
+			exclude_mobs = list(src)
+		src.show_message(self_message, 1, blind_message, 2)
+	. = ..(message, blind_message, exclude_mobs)
 
 // Returns an amount of power drawn from the object (-1 if it's not viable).
 // If drain_check is set it will not actually drain power, just return a value.
@@ -211,10 +194,6 @@
 				client.eye = loc
 		return TRUE
 
-
-/mob/proc/show_inv(mob/user as mob)
-	return
-
 //mob verbs are faster than object verbs. See http://www.byond.com/forum/?post=1326139&page=2#comment8198716 for why this isn't atom/verb/examine()
 /mob/verb/examinate(atom/A as mob|obj|turf in view())
 	set name = "Examine"
@@ -243,16 +222,24 @@
 	if(istype(A, /obj/effect/decal/point))
 		return 0
 
-	var/tile = get_turf(A)
+	var/turf/tile = get_turf(A)
 	if (!tile)
 		return 0
 
-	var/obj/P = new /obj/effect/decal/point(tile)
-	P.invisibility = invisibility
-	P.plane = plane
-	spawn (20)
-		if(P)
-			qdel(P)	// qdel
+	var/turf/our_tile = get_turf(src)
+	var/obj/visual = new /obj/effect/decal/point(our_tile)
+	visual.invisibility = invisibility
+	visual.plane = plane
+
+	animate(visual,
+		pixel_x = (tile.x - our_tile.x) * world.icon_size + A.pixel_x,
+		pixel_y = (tile.y - our_tile.y) * world.icon_size + A.pixel_y,
+		time = 1.7,
+		easing = EASE_OUT)
+
+	spawn(20)
+		if(visual)
+			qdel(visual)	// qdel
 
 	face_atom(A)
 	return 1
@@ -343,7 +330,7 @@
 
 /mob/proc/set_respawn_timer(var/time)
 	// Try to figure out what time to use
-	
+
 	// Special cases, can never respawn
 	if(ticker?.mode?.deny_respawn)
 		time = -1
@@ -351,22 +338,22 @@
 		time = -1
 	else if(!config.respawn)
 		time = -1
-	
+
 	// Special case for observing before game start
 	else if(ticker?.current_state <= GAME_STATE_SETTING_UP)
 		time = 1 MINUTE
-	
+
 	// Wasn't given a time, use the config time
 	else if(!time)
 		time = config.respawn_time
-	
+
 	var/keytouse = ckey
 	// Try harder to find a key to use
 	if(!keytouse && key)
 		keytouse = ckey(key)
 	else if(!keytouse && mind?.key)
 		keytouse = ckey(mind.key)
-	
+
 	GLOB.respawn_timers[keytouse] = world.time + time
 
 /mob/observer/dead/set_respawn_timer()
@@ -388,7 +375,7 @@
 		var/choice = alert(usr, "Returning to the menu will prevent your character from being revived in-round. Are you sure?", "Confirmation", "No, wait", "Yes, leave")
 		if(choice == "No, wait")
 			return
-	
+
 	// Beyond this point, you're going to respawn
 	to_chat(usr, config.respawn_message)
 
@@ -441,7 +428,7 @@
 
 
 	targets += observe_list_format(nuke_disks)
-	targets += observe_list_format(all_singularities)
+	targets += observe_list_format(GLOB.all_singularities)
 	targets += getmobs()
 	targets += observe_list_format(sortAtom(mechas_list))
 	targets += observe_list_format(SSshuttles.ships)
@@ -489,22 +476,17 @@
 /mob/proc/pull_damage()
 	return 0
 
-/mob/MouseDrop(mob/M as mob)
-	..()
-	if(M != usr) return
-	if(usr == src) return
-	if(!Adjacent(usr)) return
-	if(usr.incapacitated(INCAPACITATION_STUNNED | INCAPACITATION_FORCELYING | INCAPACITATION_KNOCKOUT | INCAPACITATION_RESTRAINED)) return //Incapacitated.
-	if(istype(M,/mob/living/silicon/ai)) return
-	show_inv(usr)
-
-
 /mob/verb/stop_pulling()
 
 	set name = "Stop Pulling"
 	set category = "IC"
 
 	if(pulling)
+		if(ishuman(pulling))
+			var/mob/living/carbon/human/H = pulling
+			visible_message(SPAN_WARNING("\The [src] lets go of \the [H]."), SPAN_NOTICE("You let go of \the [H]."), exclude_mobs = list(H))
+			if(!H.stat)
+				to_chat(H, SPAN_WARNING("\The [src] lets go of you."))
 		pulling.pulledby = null
 		pulling = null
 		if(pullin)
@@ -576,6 +558,16 @@
 
 	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
+		if(H.lying) // If they're on the ground we're probably dragging their arms to move them
+			visible_message(SPAN_WARNING("\The [src] leans down and grips \the [H]'s arms."), SPAN_NOTICE("You lean down and grip \the [H]'s arms."), exclude_mobs = list(H))
+			if(!H.stat)
+				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your arms."))
+		else //Otherwise we're probably just holding their arm to lead them somewhere
+			visible_message(SPAN_WARNING("\The [src] grips \the [H]'s arm."), SPAN_NOTICE("You grip \the [H]'s arm."), exclude_mobs = list(H))
+			if(!H.stat)
+				to_chat(H, SPAN_WARNING("\The [src] grips your arm."))
+		playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25) //Quieter than hugging/grabbing but we still want some audio feedback
+
 		if(H.pull_damage())
 			to_chat(src, "<font color='red'><B>Pulling \the [H] in their current condition would probably be a bad idea.</B></font>")
 
@@ -1029,6 +1021,40 @@ mob/proc/yank_out_object()
 /mob/verb/westfaceperm()
 	set hidden = 1
 	set_face_dir(client.client_dir(WEST))
+
+// Begin VOREstation edit
+/mob/verb/shiftnorth()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(pixel_y <= 16)
+		pixel_y++
+		is_shifted = TRUE
+
+/mob/verb/shiftsouth()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(pixel_y >= -16)
+		pixel_y--
+		is_shifted = TRUE
+
+/mob/verb/shiftwest()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(pixel_x >= -16)
+		pixel_x--
+		is_shifted = TRUE
+
+mob/verb/shifteast()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(pixel_x <= 16)
+		pixel_x++
+		is_shifted = TRUE
+// End VOREstation edit
 
 /mob/proc/adjustEarDamage()
 	return

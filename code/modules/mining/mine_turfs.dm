@@ -49,23 +49,6 @@ var/list/mining_overlay_cache = list()
 	var/datum/artifact_find/artifact_find
 	var/ignore_mapgen
 
-	var/ore_types = list(
-		"hematite" = /obj/item/weapon/ore/iron,
-		"uranium" = /obj/item/weapon/ore/uranium,
-		"gold" = /obj/item/weapon/ore/gold,
-		"silver" = /obj/item/weapon/ore/silver,
-		"diamond" = /obj/item/weapon/ore/diamond,
-		"phoron" = /obj/item/weapon/ore/phoron,
-		"osmium" = /obj/item/weapon/ore/osmium,
-		"hydrogen" = /obj/item/weapon/ore/hydrogen,
-		"silicates" = /obj/item/weapon/ore/glass,
-		"carbon" = /obj/item/weapon/ore/coal,
-		"verdantium" = /obj/item/weapon/ore/verdantium,
-		"marble" = /obj/item/weapon/ore/marble,
-		"lead" = /obj/item/weapon/ore/lead,
-		"rutile" = /obj/item/weapon/ore/rutile //VOREStation Add
-	)
-
 	has_resources = 1
 
 // Alternative rock wall sprites.
@@ -244,7 +227,7 @@ turf/simulated/mineral/floor/light_corner
 			for(var/ore in resources)
 				var/amount_to_give = rand(CEILING(resources[ore]/2, 1), resources[ore])  // Should result in at least one piece of ore.
 				for(var/i=1, i <= amount_to_give, i++)
-					var/oretype = ore_types[ore]
+					var/oretype = GLOB.ore_types[ore]
 					new oretype(src)
 				resources[ore] = 0
 

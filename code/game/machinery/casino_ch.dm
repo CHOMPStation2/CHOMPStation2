@@ -122,31 +122,28 @@
 
 	var/slot1 = rand(0,9)
 	switch(slot1)
-		if(1 to 3) symbol1 = "cherry"
+		if(0 to 3) symbol1 = "cherry"
 		if(4 to 4) symbol1 = "lemon"
-		//if(4 to 4) symbol1 = "watermelon"
 		if(5 to 5) symbol1 = "bell"
 		if(6 to 6) symbol1 = "four leaf clover"
 		if(7 to 7) symbol1 = "seven"
 		if(8 to 8) symbol1 = "diamond"
 		if(9 to 9) symbol1 = "platinum coin"
 
-	var/slot2 = rand(0,9)
+	var/slot2 = rand(0,16)
 	switch(slot2)
-		if(1 to 3) symbol2 = "cherry"
-		if(4 to 4) symbol2 = "lemon"
-		//if(4 to 4) symbol2 = "watermelon"
-		if(5 to 5) symbol2 = "bell"
-		if(6 to 6) symbol2 = "four leaf clover"
-		if(7 to 7) symbol2 = "seven"
-		if(8 to 8) symbol2 = "diamond"
-		if(9 to 9) symbol2 = "platinum coin"
+		if(0 to 5) symbol2 = "cherry"
+		if(6 to 7) symbol2 = "lemon"
+		if(8 to 9) symbol2 = "bell"
+		if(10 to 11) symbol2 = "four leaf clover"
+		if(12 to 13) symbol2 = "seven"
+		if(14 to 15) symbol2 = "diamond"
+		if(16) symbol2 = "platinum coin"
 
 	var/slot3 = rand(0,9)
 	switch(slot3)
-		if(1 to 3) symbol3 = "cherry"
+		if(0 to 3) symbol3 = "cherry"
 		if(4 to 4) symbol3 = "lemon"
-		//if(4 to 4) symbol3 = "watermelon"
 		if(5 to 5) symbol3 = "bell"
 		if(6 to 6) symbol3 = "four leaf clover"
 		if(7 to 7) symbol3 = "seven"
@@ -851,6 +848,29 @@
 					<li>Special blend whiskey</li>
 					<li>Akvavit</li>
 				</ul>
+				Pets
+				<ul>
+					<li>Armadillo 150</li>
+					<li>Cat 150</li>
+					<li>Goat 150</li>
+					<li>Fox 150</li>
+					<li>Lizard 150</li>
+					<li>Penguin 150</li>
+					<li>Goose 200</li>
+					<li>Chicken 200</li>
+					<li>Cow 200</li>
+					<li>Corgi 200</li>
+					<li>Snake 200</li>
+					<li>Yithian 200</li>
+					<li>Tindalos 200</li>
+					<li>Fennec 300</li>
+					<li>Red Panda 300</li>
+					<li>Horse 300</li>
+					<li>Otie 500</li>
+					<li>Chonker Otie 500</li>
+					<li>Zorgoia 500</li>
+				</ul>
+
 				Thats it for prizes! <br><br>
 
 				Now comes the part for the both operators, you got a very important job, it has a lot of responsibility, so it means that you gotta put that first before your own fun, cause unless you do it, a lot of folks are gonna be left sad and dissappointed they cant get any goodies! But the process is simple and can be quick, someone comes to you, they want some chips, or thalers back or a prize, you simply check this nice guide above to determine cost and ask for the amount of thalers or chips needed, if its a prize, then you follow this procedure:
@@ -882,6 +902,43 @@
 	desc = "A fancy casino wallet with flashy lights, oooh~"
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state = "casinowallet_black"
+	can_hold = list(
+		/obj/item/weapon/spacecash,
+		/obj/item/weapon/card,
+		/obj/item/clothing/mask/smokable/cigarette/,
+		/obj/item/device/flashlight/pen,
+		/obj/item/device/tape,
+		/obj/item/weapon/cartridge,
+		/obj/item/device/encryptionkey,
+		/obj/item/seeds,
+		/obj/item/stack/medical,
+		/obj/item/weapon/coin,
+		/obj/item/weapon/dice,
+		/obj/item/weapon/disk,
+		/obj/item/weapon/implanter,
+		/obj/item/weapon/flame/lighter,
+		/obj/item/weapon/flame/match,
+		/obj/item/weapon/forensics,
+		/obj/item/weapon/glass_extra,
+		/obj/item/weapon/haircomb,
+		/obj/item/weapon/hand,
+		/obj/item/weapon/key,
+		/obj/item/weapon/lipstick,
+		/obj/item/weapon/paper,
+		/obj/item/weapon/pen,
+		/obj/item/weapon/photo,
+		/obj/item/weapon/reagent_containers/dropper,
+		/obj/item/weapon/sample,
+		/obj/item/weapon/tool/screwdriver,
+		/obj/item/weapon/stamp,
+		/obj/item/clothing/accessory/permit,
+		/obj/item/clothing/accessory/badge,
+		/obj/item/weapon/makeover,
+		/obj/item/weapon/spacecasinocash,
+		/obj/item/weapon/casino_platinum_chip,
+		/obj/item/weapon/deck,
+		/obj/item/weapon/book/manual/casino
+		)
 
 /obj/item/weapon/storage/wallet/casino/verb/toggle_design()
 	set category = "Object"
@@ -956,6 +1013,7 @@
 	var/list/list_clothing 	= list()
 	var/list/list_misc 		= list()
 	var/list/list_drinks 	= list()
+	var/list/list_pets	 	= list()
 	var/list/prices    		= list() // Prices for each item, list(/type/path = price), items not in the list don't have a price.
 
 	// List of vending_product items available.
@@ -964,12 +1022,14 @@
 	var/list/clothing_product_records	 = list()
 	var/list/misc_product_records		 = list()
 	var/list/drinks_product_records		 = list()
+	var/list/pets_product_records		 = list()
 
 	var/category_weapons	 = 1	//For listing categories, if false then prizes of this categories cant be obtained nor bought for post-shift enjoyment
 	var/category_gear		 = 1	//If 1 prizes will be only logged
 	var/category_clothing	 = 1	//If 2 prizes will both be logged and spawned
 	var/category_misc		 = 1
 	var/category_drinks		 = 1
+	var/category_pets		 = 1
 
 	list_weapons = list(
 		/obj/item/weapon/scepter,
@@ -1050,6 +1110,28 @@
 		)
 
 
+	list_pets = list(
+		/obj/item/weapon/grenade/spawnergrenade/casino,
+		/obj/item/weapon/grenade/spawnergrenade/casino/goat,
+		/obj/item/weapon/grenade/spawnergrenade/casino/armadillo,
+		/obj/item/weapon/grenade/spawnergrenade/casino/cat,
+		/obj/item/weapon/grenade/spawnergrenade/casino/chicken,
+		/obj/item/weapon/grenade/spawnergrenade/casino/cow,
+		/obj/item/weapon/grenade/spawnergrenade/casino/corgi,
+		/obj/item/weapon/grenade/spawnergrenade/casino/fox,
+		/obj/item/weapon/grenade/spawnergrenade/casino/lizard,
+		/obj/item/weapon/grenade/spawnergrenade/casino/penguin,
+		/obj/item/weapon/grenade/spawnergrenade/casino/snake,
+		/obj/item/weapon/grenade/spawnergrenade/casino/yithian,
+		/obj/item/weapon/grenade/spawnergrenade/casino/tindalos,
+		/obj/item/weapon/grenade/spawnergrenade/casino/fennec,
+		/obj/item/weapon/grenade/spawnergrenade/casino/redpanda,
+		/obj/item/weapon/grenade/spawnergrenade/casino/horse,
+		/obj/item/weapon/grenade/spawnergrenade/casino/otie,
+		/obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby,
+		/obj/item/weapon/grenade/spawnergrenade/casino/zorgoia
+		)
+
 	prices = list(
 		/obj/item/weapon/scepter = 500,
 		/obj/item/weapon/melee/chainofcommand = 250,
@@ -1113,7 +1195,26 @@
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 50,
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing = 50,
 		/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey = 50,
-		/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps = 50
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps = 50,
+		/obj/item/weapon/grenade/spawnergrenade/casino = 200,
+		/obj/item/weapon/grenade/spawnergrenade/casino/goat = 150,
+		/obj/item/weapon/grenade/spawnergrenade/casino/armadillo = 150,
+		/obj/item/weapon/grenade/spawnergrenade/casino/cat = 150,
+		/obj/item/weapon/grenade/spawnergrenade/casino/chicken = 200,
+		/obj/item/weapon/grenade/spawnergrenade/casino/cow = 200,
+		/obj/item/weapon/grenade/spawnergrenade/casino/corgi = 200,
+		/obj/item/weapon/grenade/spawnergrenade/casino/fox = 150,
+		/obj/item/weapon/grenade/spawnergrenade/casino/lizard = 150,
+		/obj/item/weapon/grenade/spawnergrenade/casino/penguin = 150,
+		/obj/item/weapon/grenade/spawnergrenade/casino/snake = 200,
+		/obj/item/weapon/grenade/spawnergrenade/casino/yithian = 200,
+		/obj/item/weapon/grenade/spawnergrenade/casino/tindalos = 200,
+		/obj/item/weapon/grenade/spawnergrenade/casino/fennec = 300,
+		/obj/item/weapon/grenade/spawnergrenade/casino/redpanda = 300,
+		/obj/item/weapon/grenade/spawnergrenade/casino/horse = 300,
+		/obj/item/weapon/grenade/spawnergrenade/casino/otie = 500,
+		/obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby = 500,
+		/obj/item/weapon/grenade/spawnergrenade/casino/zorgoia = 500
 		)
 
 
@@ -1185,6 +1286,18 @@
 			product.category = category
 			drinks_product_records.Add(product)
 
+	var/list/pets_products = list(
+		list(list_pets, "cat_pets"))
+	for(var/current_list in pets_products)
+		var/category = current_list[2]
+
+		for(var/entry in current_list[1])
+			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
+
+			product.price = (entry in prices) ? prices[entry] : 0
+			product.category = category
+			pets_product_records.Add(product)
+
 /obj/machinery/casino_prize_dispenser/Destroy()
 	for(var/datum/stored_item/vending_product/R in weapons_product_records)
 		qdel(R)
@@ -1205,6 +1318,10 @@
 	for(var/datum/stored_item/vending_product/R in drinks_product_records)
 		qdel(R)
 	drinks_product_records = null
+
+	for(var/datum/stored_item/vending_product/R in pets_product_records)
+		qdel(R)
+	pets_product_records = null
 	return ..()
 
 /obj/machinery/casino_prize_dispenser/attackby(obj/item/weapon/W as obj, mob/user as mob)
@@ -1321,6 +1438,15 @@
 						"name" = I.item_name,
 						"price" = I.price,
 						"color" = I.display_color)))
+			if("cat_pets")
+				for(var/key = 1 to pets_product_records.len)
+					var/datum/stored_item/vending_product/I = pets_product_records[key]
+
+					listed_products.Add(list(list(
+						"key" = key,
+						"name" = I.item_name,
+						"price" = I.price,
+						"color" = I.display_color)))
 			else
 				return
 
@@ -1334,7 +1460,7 @@
 		data["category_clothing"] 	= category_clothing
 		data["category_misc"] 		= category_misc
 		data["category_drinks"] 	= category_drinks
-
+		data["category_pets"] 		= category_pets
 
 	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
@@ -1366,6 +1492,9 @@
 				if("selected_drinks")
 					currently_selecting = "cat_drinks"
 					prize_payout_mode = category_drinks
+				if("selected_pets")
+					currently_selecting = "cat_pets"
+					prize_payout_mode = category_pets
 				else
 					currently_selecting = null
 					prize_payout_mode = null
@@ -1420,6 +1549,16 @@
 
 				if("cat_drinks")
 					var/datum/stored_item/vending_product/R = drinks_product_records[key]
+					currently_selecting = null
+
+					if(R.price <= 0)
+						vend(R, usr)
+					else
+						currently_vending = R
+						status_message = "Please insert chips to pay for the prize!"
+						status_error = 0
+				if("cat_pets")
+					var/datum/stored_item/vending_product/R = pets_product_records[key]
 					currently_selecting = null
 
 					if(R.price <= 0)

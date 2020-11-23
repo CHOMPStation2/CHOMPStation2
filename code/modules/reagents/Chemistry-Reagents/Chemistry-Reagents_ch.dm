@@ -188,6 +188,14 @@
 	M.adjustBruteLoss(1)
 	M.adjustToxLoss(1)
 
+/datum/reagent/tercozolam
+	name = "Tercozolam"
+	id = "tercozolam"
+	color = "#afeb17"
+	metabolism = 0.05
+	description = "A well respected drug used for treatment of schizophrenia in specific."
+	overdose = REAGENTS_OVERDOSE * 2
+
 ///SAP REAGENTS////
 //This is all a direct port from aeiou.
 
@@ -340,6 +348,20 @@
 			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes") //check if they want this to happen for pref sake
 				M.change_gender_identity(gender_change)
 				M << "<span class='warning'>You feel like a new person</span>" //success
+
+////////////////////////////////////
+////////////   OTHER   ////////////
+//////////////////////////////////
+//This file is a fucking mess
+/datum/reagent/nutriment/pitcher_nectar //Pitcher plant reagent, doubles plant growth speed.
+	name = "Pitcher Nectar"
+	id = "pitcher_nectar"
+	description = "An odd, sticky slurry which promotes rapid plant growth."
+	taste_description = "pineapple"
+	reagent_state = LIQUID
+	nutriment_factor = 60
+	color = "#a839a2"
+
 ////////////////////////////////////////////////
 /////////DRINKS////////////////////////////////
 //////////////////////////////////////////////
@@ -546,15 +568,35 @@
 		return
 	M.adjustToxLoss(-0.5 * removed)
 
+/datum/reagent/drink/highpower
+	name = "The High power"
+	id = "highpower"
+	description = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
+	taste_description = "copper, ozone, and pain"
+	color = "#a2f563"
+
+	glass_name = "highpower"
+	glass_desc = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
+
+/datum/reagent/drink/highpower/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	if(prob(5))
+		M.say("!skin's crackles with energy and seems to be in pain.")
+		M.custom_pain("You feel painful electricity running through your body, like adrenaline, and like your blood's boiling!",30)
+		M.AdjustWeakened(3)		//Getting sapped makes the victim fall
+		M.Stun(3)
+	M.add_chemical_effect(CE_SPEEDBOOST, 1)
+
 /datum/reagent/ethanol/coffee/jackbrew
-	name = "\improper Jack's brew"
+	name = "Rush hour"
 	id = "jackbrew"
 	description = "Irish coffee, and hyperzine. A common mix for panicked drinkers, EMTS, Paramedics, and CMOs alone on the job."
 	taste_description = "wishing you could give up on the day"
 	color = "#4C3100"
 	strength = 15
 
-	glass_name = "Jack's brew"
+	glass_name = "Rush hour"
 	glass_desc = "Irish coffee, and hyperzine. A common mix for panicked drinkers, EMTS, Paramedics, and CMOs alone on the job."
 
 /datum/reagent/ethanol/coffee/jackbrew/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
@@ -566,7 +608,7 @@
 			M.nutrition = (M.nutrition - (removed * 2)) //Sadly this movement starts burning food in higher doses.
 	..()
 	if(prob(5))
-		M.emote(pick("twitch", "blink_r", "shiver", "weh"))
+		M.emote(pick("twitch", "blink_r", "shiver", "weh", "weh", "weh")) // weh - Jack
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
 /datum/reagent/ethanol/bookwyrm
@@ -617,26 +659,6 @@
 		else
 			M.sleeping = max(M.sleeping, 20)
 		M.drowsyness = max(M.drowsyness, 60)
-
-/datum/reagent/drink/highpower
-	name = "The High power"
-	id = "highpower"
-	description = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
-	taste_description = "copper, ozone, and pain"
-	color = "#a2f563"
-
-	glass_name = "highpower"
-	glass_desc = "A strange, softly crackling drink, smelling just like lightning's just struck, twice. It's rather difficult to make this without busting the lights."
-
-/datum/reagent/drink/highpower/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	if(prob(5))
-		M.say("!skin's crackles with energy and seems to be in pain.")
-		M.custom_pain("You feel painful electricity running through your body, like adrenaline, and like your blood's boiling!",30)
-		M.AdjustWeakened(3)		//Getting sapped makes the victim fall
-		M.Stun(3)
-	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
 /datum/reagent/ethanol/flapper
 	name = "Flapper"
@@ -891,3 +913,10 @@
 	description = "Orange liquid. It wobbles around a bit like jelly."
 	color = "#e0962f"
 	taste_description = "Ammonia"
+
+//New reagent definitions/overrides. If some of these get added upstream and cause a conflict later they might need deleting. 
+/datum/reagent/toxin/plantbgone/touch_mob(var/mob/living/L, amount) //Plantbgone override to damage plant mobs. Part of pitcher plants, touch_mob doesn't exist for plantbgone at the time of writing.
+	if(istype(L) && L.faction)
+		if(L.faction == "plants") //This would be better with a variable but I'm not adding that because upstream conflicts. If you send this upstream please do this.
+			L.adjustToxLoss(15 * amount)
+			L.visible_message("<span class='warning'>[L] withers rapidly!</span>", "<span class='danger'>The chemical burns you!</span>")

@@ -21,59 +21,61 @@
 	docking_controller = "cargo_bay"
 
 //Admin
-/obj/machinery/computer/shuttle_control/administration
+/obj/machinery/computer/shuttle_control/multi/administration
 	name = "shuttle control console"
 	req_access = list(access_cent_general)
-	shuttle_tag = "Administration"
+	shuttle_tag = "Administration Shuttle"
 
-/datum/shuttle/autodock/ferry/administration
-	name = "Administration"
-	location = FERRY_LOCATION_OFFSITE
+/datum/shuttle/autodock/multi/administration
+	name = "Administration Shuttle"
+	current_location = "admin_offsite"
 	warmup_time = 0
-	shuttle_area = /area/shuttle/administration/centcom
-	landmark_offsite = "admin_offsite"
-	landmark_station = "admin_station"
+	shuttle_area = /area/shuttle/administration
 	docking_controller_tag = "admin_shuttle"
+	move_direction = EAST
+	destination_tags = list(
+		"admin_offsite",
+		"d1_aux_b",
+		"d1_aux_c",
+		"d2_w1_e",
+		"d2_w2_e",
+		"d2_w3_e"
+	)
 
 /obj/effect/shuttle_landmark/southern_cross/admin_offsite
 	name = "Centcom"
 	landmark_tag = "admin_offsite"
 	docking_controller = "admin_shuttle_bay"
 	base_area = /area/centcom/command
-	base_turf = /turf/simulated/floor/plating
-
-/obj/effect/shuttle_landmark/southern_cross/admin_station
-	name = "SC Dock 2-E"
-	landmark_tag = "admin_station"
-	docking_controller = "admin_shuttle_dock_airlock"
+	base_turf = /turf/unsimulated/floor
 
 //Transport
 
-/obj/machinery/computer/shuttle_control/centcom
+/obj/machinery/computer/shuttle_control/multi/centcom
 	name = "shuttle control console"
 	req_access = list(access_cent_general)
-	shuttle_tag = "Centcom"
+	shuttle_tag = "Centcom Transport Shuttle"
 
-/datum/shuttle/autodock/ferry/centcom
-	name = "Centcom"
-	location = FERRY_LOCATION_OFFSITE
+/datum/shuttle/autodock/multi/centcom
+	name = "Centcom Transport Shuttle"
+	current_location = "transport1_offsite"
 	warmup_time = 0
-	shuttle_area = /area/shuttle/transport1/centcom
-	landmark_offsite = "transport1_offsite"
-	landmark_station = "transport1_station"
+	shuttle_area = /area/shuttle/transport1
 	docking_controller_tag = "centcom_shuttle"
+	move_direction = EAST
+	destination_tags = list(
+		"transport1_offsite",
+		"d1_aux_d",
+		"d2_w3_a",
+		"d2_w3_c"
+	)
 
 /obj/effect/shuttle_landmark/southern_cross/transport1_offsite
 	name = "Centcom"
 	landmark_tag = "transport1_offsite"
 	docking_controller = "centcom_shuttle_bay"
 	base_area = /area/centcom/command
-	base_turf = /turf/simulated/floor/plating
-
-/obj/effect/shuttle_landmark/southern_cross/transport1_station
-	name = "SC Dock 3-A"
-	landmark_tag = "transport1_station"
-	docking_controller = "centcom_shuttle_dock_airlock"
+	base_turf = /turf/unsimulated/floor
 
 
 //Merc
@@ -132,20 +134,27 @@
 
 //Trade Ship
 
-/obj/machinery/computer/shuttle_control/merchant
+/obj/machinery/computer/shuttle_control/multi/merchant
 	name = "merchant shuttle control console"
 	icon_keyboard = "power_key"
 	icon_screen = "shuttle"
 	shuttle_tag = "Merchant"
 
-/datum/shuttle/autodock/ferry/merchant
+/datum/shuttle/autodock/multi/merchant
 	name = "Merchant"
-	location = FERRY_LOCATION_OFFSITE
+	current_location = "merchant_offsite"
 	warmup_time = 0
-	shuttle_area = /area/shuttle/merchant/home
-	landmark_station = "merchant_station"
-	landmark_offsite = "merchant_offsite"
+	shuttle_area = /area/shuttle/merchant
 	docking_controller_tag = "trade_shuttle"
+	move_direction = WEST
+	destination_tags = list(
+		"merchant_offsite",
+		"d1_aux_b",
+		"d1_aux_c",
+		"d2_w1_e",
+		"d2_w2_e",
+		"d2_w3_e"
+	)
 
 /obj/effect/shuttle_landmark/southern_cross/merchant_offsite
 	name = "Trade Station"
@@ -153,11 +162,6 @@
 	docking_controller = "trade_shuttle_bay"
 	base_area = /area/space
 	base_turf = /turf/space
-
-/obj/effect/shuttle_landmark/southern_cross/merchant_station
-	name = "SC Dock 1-E"
-	landmark_tag = "merchant_station"
-	docking_controller = "trade_shuttle_dock_airlock"
 
 // Arrivals Shuttle
 /datum/shuttle/autodock/ferry/arrivals/southern_cross

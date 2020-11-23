@@ -30,6 +30,7 @@
 	var/synced = FALSE
 	var/startdrain = 500
 	var/max_item_count = 1
+	var/upgraded_capacity = FALSE
 	var/gulpsound = 'sound/vore/gulp.ogg'
 	var/datum/matter_synth/metal = null
 	var/datum/matter_synth/glass = null
@@ -38,7 +39,9 @@
 	var/datum/matter_synth/water = null
 	var/digest_brute = 2
 	var/digest_burn = 3
+	var/digest_multiplier = 1
 	var/recycles = FALSE
+	var/medsensor = TRUE //Does belly sprite come with patient ok/dead light?
 
 /obj/item/device/dogborg/sleeper/New()
 	..()
@@ -426,21 +429,25 @@
 
 	//Well, we HAD one, what happened to them?
 	if(patient in contents)
-		if(patient_laststat != patient.stat)
-			if(cleaning)
-				hound.sleeper_r = TRUE
-				hound.sleeper_g = FALSE
-				patient_laststat = patient.stat
-			else if(patient.stat & DEAD)
-				hound.sleeper_r = TRUE
-				hound.sleeper_g = FALSE
-				patient_laststat = patient.stat
-			else
-				hound.sleeper_r = FALSE
-				hound.sleeper_g = TRUE
-				patient_laststat = patient.stat
-			//Update icon
-			hound.updateicon()
+		if(medsensor)
+			if(patient_laststat != patient.stat)
+				if(cleaning)
+					hound.sleeper_r = TRUE
+					hound.sleeper_g = FALSE
+					patient_laststat = patient.stat
+				else if(patient.stat & DEAD)
+					hound.sleeper_r = TRUE
+					hound.sleeper_g = FALSE
+					patient_laststat = patient.stat
+				else
+					hound.sleeper_r = FALSE
+					hound.sleeper_g = TRUE
+					patient_laststat = patient.stat
+		else
+			hound.sleeper_r = TRUE
+			patient_laststat = patient.stat
+		//Update icon
+		hound.updateicon()
 		//Return original patient
 		return(patient)
 
@@ -448,17 +455,21 @@
 	else
 		for(var/mob/living/carbon/human/C in contents)
 			patient = C
-			if(cleaning)
-				hound.sleeper_r = TRUE
-				hound.sleeper_g = FALSE
-				patient_laststat = patient.stat
-			else if(patient.stat & DEAD)
-				hound.sleeper_r = TRUE
-				hound.sleeper_g = FALSE
-				patient_laststat = patient.stat
+			if(medsensor)
+				if(cleaning)
+					hound.sleeper_r = TRUE
+					hound.sleeper_g = FALSE
+					patient_laststat = patient.stat
+				else if(patient.stat & DEAD)
+					hound.sleeper_r = TRUE
+					hound.sleeper_g = FALSE
+					patient_laststat = patient.stat
+				else
+					hound.sleeper_r = FALSE
+					hound.sleeper_g = TRUE
+					patient_laststat = patient.stat
 			else
-				hound.sleeper_r = FALSE
-				hound.sleeper_g = TRUE
+				hound.sleeper_r = TRUE
 				patient_laststat = patient.stat
 			//Update icon and return new patient
 			hound.updateicon()
@@ -531,8 +542,8 @@
 			else
 				var/old_brute = T.getBruteLoss()
 				var/old_burn = T.getFireLoss()
-				T.adjustBruteLoss(digest_brute)
-				T.adjustFireLoss(digest_burn)
+				T.adjustBruteLoss(digest_brute * digest_multiplier)
+				T.adjustFireLoss(digest_burn * digest_multiplier)
 				var/actual_brute = T.getBruteLoss() - old_brute
 				var/actual_burn = T.getFireLoss() - old_burn
 				var/damage_gain = actual_brute + actual_burn
@@ -659,6 +670,7 @@
 	desc = "Equipment for a K9 unit. A mounted portable-brig that holds criminals."
 	icon_state = "sleeperb"
 	injection_chems = null //So they don't have all the same chems as the medihound!
+	medsensor = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor //Janihound gut.
 	name = "Garbage Processor"
@@ -668,12 +680,13 @@
 	compactor = TRUE
 	recycles = TRUE
 	max_item_count = 25
+	medsensor = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor/analyzer //sci-borg gut.
 	name = "Digestive Analyzer"
 	desc = "A mounted destructive analyzer unit with fuel processor."
 	icon_state = "analyzer"
-	max_item_count = 1
+	max_item_count = 10
 	startdrain = 100
 	analyzer = TRUE
 
@@ -698,12 +711,21 @@
 	icon_state = "brewer"
 	injection_chems = null
 	max_item_count = 1
-	
+
 /obj/item/device/dogborg/sleeper/compactor/supply //Miner borg belly
 	name = "Supply Satchel"
 	desc = "A mounted survival unit with fuel processor."
 	icon_state = "sleeperc"
 	injection_chems = list("glucose","inaprovaline","tricordrazine")
 	max_item_count = 1
+	
+/obj/item/device/dogborg/sleeper/command //Command borg belly // CH addition
+	name = "Bluespace Filing Belly"
+	desc = "A mounted bluespace storage unit for carrying paperwork"
+	icon_state = "sleeperd"
+	injection_chems = null
+	compactor = TRUE
+	recycles = FALSE
+	max_item_count = 25
 
 #undef SLEEPER_INJECT_COST

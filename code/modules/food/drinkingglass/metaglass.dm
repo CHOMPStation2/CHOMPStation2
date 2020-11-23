@@ -18,19 +18,12 @@
 /obj/item/weapon/reagent_containers/food/drinks/metaglass/on_reagent_change()
 	if (reagents.reagent_list.len > 0)
 		var/datum/reagent/R = reagents.get_master_reagent()
-		
-		//CHOMPedit start of dynamic sprite source - Jack
-		if(R.glass_icon_source == null)
-			icon = initial(icon)
-		else
-			icon = R.glass_icon_source
-		//CHOMPedit end of dynamic sprite source - Jack
 
 		if(R.glass_icon_file)
 			icon = R.glass_icon_file
 		else
 			icon = initial(icon)
-		
+
 		if(R.glass_icon_state)
 			icon_state = R.glass_icon_state
 		else

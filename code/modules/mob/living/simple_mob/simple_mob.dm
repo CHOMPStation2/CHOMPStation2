@@ -57,8 +57,6 @@
 	var/response_harm   = "tries to hurt"	// If clicked on harm intent
 	var/list/friends = list()		// Mobs on this list wont get attacked regardless of faction status.
 	var/harm_intent_damage = 3		// How much an unarmed harm click does to this mob.
-	var/meat_amount = 0				// How much meat to drop from this mob when butchered
-	var/obj/meat_type				// The meat object to drop
 	var/list/loot_list = list()		// The list of lootable objects to drop, with "/path = prob%" structure
 	var/obj/item/weapon/card/id/myid// An ID card if they have one to give them access to stuff.
 
@@ -92,7 +90,7 @@
 	var/needs_reload = FALSE							// If TRUE, mob needs to reload occasionally
 	var/reload_max = 1									// How many shots the mob gets before it has to reload, will not be used if needs_reload is FALSE
 	var/reload_count = 0								// A counter to keep track of how many shots the mob has fired so far. Reloads when it hits reload_max.
-	var/reload_time = 1 SECONDS							// How long it takes for a mob to reload. This is to buy a player a bit of time to run or fight.
+	var/reload_time = 4 SECONDS							// How long it takes for a mob to reload. This is to buy a player a bit of time to run or fight.
 	var/reload_sound = 'sound/weapons/flipblade.ogg'	// What sound gets played when the mob successfully reloads. Defaults to the same sound as reloading guns. Can be null.
 
 	//Mob melee settings
@@ -110,6 +108,8 @@
 	var/melee_attack_delay = 2			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
+	var/ranged_cooldown = 0 //CHOMP Addition. This is part of a timer in combat.dm.
+	var/ranged_cooldown_time = 0 //CHOMP Addition: This variable can be thrown into mob variables in order to allow the mob to move AND shoot at the same time. The previous "ranged_attack_delay" is a dumb way of handling ranged attacks because it sleeps the entire mob - this one uses an internalized timer so it is slightly smarter.
 
 	//Special attacks
 //	var/special_attack_prob = 0				// The chance to ATTEMPT a special_attack_target(). If it fails, it will do a regular attack instead.
@@ -158,6 +158,10 @@
 
 	// don't process me if there's nobody around to see it
 	low_priority = TRUE
+	// Used for if the mob can drop limbs. Overrides species dmi.
+	var/limb_icon
+	// Used for if the mob can drop limbs. Overrides the icon cache key, so it doesn't keep remaking the icon needlessly.
+	var/limb_icon_key
 
 /mob/living/simple_mob/Initialize()
 	verbs -= /mob/verb/observe
@@ -170,8 +174,8 @@
 
 	if(has_eye_glow)
 		add_eyes()
-	return ..()
 
+	return ..()
 
 /mob/living/simple_mob/Destroy()
 	default_language = null
@@ -189,7 +193,6 @@
 /mob/living/simple_mob/death()
 	update_icon()
 	..()
-
 
 //Client attached
 /mob/living/simple_mob/Login()
@@ -268,23 +271,6 @@
 
 /mob/living/simple_mob/get_speech_ending(verb, var/ending)
 	return verb
-
-
-// Harvest an animal's delicious byproducts
-/mob/living/simple_mob/proc/harvest(var/mob/user)
-	var/actual_meat_amount = max(1,(meat_amount/2))
-	if(meat_type && actual_meat_amount>0 && (stat == DEAD))
-		for(var/i=0;i<actual_meat_amount;i++)
-			var/obj/item/meat = new meat_type(get_turf(src))
-			meat.name = "[src.name] [meat.name]"
-		if(issmall(src))
-			user.visible_message("<span class='danger'>[user] chops up \the [src]!</span>")
-			new/obj/effect/decal/cleanable/blood/splatter(get_turf(src))
-			qdel(src)
-		else
-			user.visible_message("<span class='danger'>[user] butchers \the [src] messily!</span>")
-			gib()
-
 
 /mob/living/simple_mob/is_sentient()
 	return mob_class & MOB_CLASS_HUMANOID|MOB_CLASS_ANIMAL|MOB_CLASS_SLIME // Update this if needed.

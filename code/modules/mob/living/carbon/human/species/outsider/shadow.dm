@@ -12,6 +12,9 @@
 	has_organ = list()
 	siemens_coefficient = 0
 
+	male_scream_sound = null //CHOMPedit It has no mouth yet it must scream
+	female_scream_sound = null //CHOMPedit
+
 	blood_color = "#CCCCCC"
 	flesh_color = "#AAAAAA"
 
@@ -20,7 +23,7 @@
 	remains_type = /obj/effect/decal/cleanable/ash
 	death_message = "dissolves into ash..."
 
-	flags = NO_SCAN | NO_SLIP | NO_POISON | NO_MINOR_CUT
+	flags = NO_SCAN | NO_SLIP | NO_POISON | NO_MINOR_CUT | NO_DEFIB
 	spawn_flags = SPECIES_IS_RESTRICTED
 
 	genders = list(NEUTER)

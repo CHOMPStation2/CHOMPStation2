@@ -43,6 +43,7 @@ var/list/flooring_types
 	var/descriptor = "tiles"
 	var/flags
 	var/can_paint
+	var/can_engrave = FALSE
 	var/list/footstep_sounds = list() // key=species name, value = list of sounds,
 									  // For instance, footstep_sounds = list("key" = list(sound.ogg))
 	var/is_plating = FALSE
@@ -145,6 +146,7 @@ var/list/flooring_types
 	flags = TURF_REMOVE_SHOVEL
 	icon = 'icons/turf/outdoors.dmi'
 	icon_base = "grass_sif"
+	build_type = /obj/item/stack/tile/grass/sif
 	has_base_range = 1
 
 /decl/flooring/water
@@ -320,6 +322,7 @@ var/list/flooring_types
 	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BREAK | TURF_CAN_BURN
 	build_type = /obj/item/stack/tile/floor
 	can_paint = 1
+	can_engrave = TRUE
 	footstep_sounds = list("human" = list(
 		'sound/effects/footstep/floor1.ogg',
 		'sound/effects/footstep/floor2.ogg',
@@ -457,7 +460,7 @@ var/list/flooring_types
 	damage_temperature = T0C+200
 	descriptor = "planks"
 	build_type = /obj/item/stack/tile/wood
-	flags = TURF_CAN_BREAK | TURF_IS_FRAGILE | TURF_REMOVE_SCREWDRIVER
+	flags = TURF_CAN_BREAK | TURF_REMOVE_CROWBAR | TURF_REMOVE_SCREWDRIVER
 	footstep_sounds = list("human" = list(
 		'sound/effects/footstep/wood1.ogg',
 		'sound/effects/footstep/wood2.ogg',

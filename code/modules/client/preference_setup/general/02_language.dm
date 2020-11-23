@@ -6,6 +6,14 @@
 /datum/category_item/player_setup_item/general/language/load_character(var/savefile/S)
 	S["language"]			>> pref.alternate_languages
 	S["language_prefixes"]	>> pref.language_prefixes
+	//CHOMPEdit Begin
+	S["pos_traits"]		>> pref.pos_traits
+	var/morelang = 0
+	for(var/trait in pref.pos_traits)
+		if(trait==/datum/trait/linguist)
+			morelang = 1
+	pref.num_languages = morelang * 12
+	//CHOMPEdit End
 
 /datum/category_item/player_setup_item/general/language/save_character(var/savefile/S)
 	S["language"]			<< pref.alternate_languages
@@ -15,8 +23,8 @@
 	if(!islist(pref.alternate_languages))	pref.alternate_languages = list()
 	if(pref.species)
 		var/datum/species/S = GLOB.all_species[pref.species]
-		if(S && pref.alternate_languages.len > S.num_alternate_languages)
-			pref.alternate_languages.len = S.num_alternate_languages // Truncate to allowed length
+		if(S && pref.alternate_languages.len > pref.numlanguage()) //CHOMPEdit
+			pref.alternate_languages.len = pref.numlanguage() // Truncate to allowed length CHOMPEdit
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
 		pref.language_prefixes = config.language_prefixes.Copy()
 	for(var/prefix in pref.language_prefixes)
@@ -30,14 +38,14 @@
 		. += "- [S.language]<br>"
 	if(S.default_language && S.default_language != S.language)
 		. += "- [S.default_language]<br>"
-	if(S.num_alternate_languages)
+	if(pref.numlanguage()) //CHOMPEdit
 		if(pref.alternate_languages.len)
 			for(var/i = 1 to pref.alternate_languages.len)
 				var/lang = pref.alternate_languages[i]
 				. += "- [lang] - <a href='?src=\ref[src];remove_language=[i]'>remove</a><br>"
 
-		if(pref.alternate_languages.len < S.num_alternate_languages)
-			. += "- <a href='?src=\ref[src];add_language=1'>add</a> ([S.num_alternate_languages - pref.alternate_languages.len] remaining)<br>"
+		if(pref.alternate_languages.len < pref.numlanguage()) //CHOMPEdit
+			. += "- <a href='?src=\ref[src];add_language=1'>add</a> ([pref.numlanguage() - pref.alternate_languages.len] remaining)<br>"	//CHOMPEdit
 	else
 		. += "- [pref.species] cannot choose secondary languages.<br>"
 
@@ -51,7 +59,7 @@
 		return TOPIC_REFRESH
 	else if(href_list["add_language"])
 		var/datum/species/S = GLOB.all_species[pref.species]
-		if(pref.alternate_languages.len >= S.num_alternate_languages)
+		if(pref.alternate_languages.len >= pref.numlanguage()) //CHOMPEdit
 			alert(user, "You have already selected the maximum number of alternate languages for this species!")
 		else
 			var/list/available_languages = S.secondary_langs.Copy()
@@ -69,7 +77,7 @@
 				alert(user, "There are no additional languages available to select.")
 			else
 				var/new_lang = input(user, "Select an additional language", "Character Generation", null) as null|anything in available_languages
-				if(new_lang && pref.alternate_languages.len < S.num_alternate_languages)
+				if(new_lang && pref.alternate_languages.len < pref.numlanguage()) //CHOMPEdit
 					pref.alternate_languages |= new_lang
 					return TOPIC_REFRESH
 

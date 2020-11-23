@@ -31,9 +31,25 @@
 		nest = null
 	if(buckled)
 		buckled.unbuckle_mob(src, TRUE)
+
 	qdel(selected_image)
 	QDEL_NULL(vorePanel) //VOREStation Add
 	QDEL_LIST_NULL(vore_organs) //VOREStation Add
+
+	if(LAZYLEN(organs))
+		organs_by_name.Cut()
+		while(organs.len)
+			var/obj/item/OR = organs[1]
+			organs -= OR
+			qdel(OR)
+
+	if(LAZYLEN(internal_organs))
+		internal_organs_by_name.Cut()
+		while(internal_organs.len)
+			var/obj/item/OR = internal_organs[1]
+			internal_organs -= OR
+			qdel(OR)
+
 	return ..()
 
 //mob verbs are faster than object verbs. See mob/verb/examine.
@@ -48,7 +64,7 @@
 
 //mob verbs are faster than object verbs. See above.
 /mob/living/pointed(atom/A as mob|obj|turf in view())
-	if(src.stat || !src.canmove || src.restrained())
+	if(src.stat || src.restrained())
 		return 0
 	if(src.status_flags & FAKEDEATH)
 		return 0
@@ -132,16 +148,25 @@ default behaviour is:
 
 		if((tmob.mob_always_swap || (tmob.a_intent == I_HELP || tmob.restrained()) && (a_intent == I_HELP || src.restrained())) && tmob.canmove && canmove && !tmob.buckled && !buckled && can_swap && can_move_mob(tmob, 1, 0)) // mutual brohugs all around!
 			var/turf/oldloc = loc
+			//VOREstation Edit - Begin
+			
+			//check bumpnom chance, if it's a simplemob that's doing the bumping
+			var/mob/living/simple_mob/srcsimp = src
+			if(istype(srcsimp))
+				if(srcsimp.tryBumpNom(tmob))
+					now_pushing = 0
+					return
+			
+			//if it's a simplemob being bumped, and the above didn't make them start getting bumpnommed, they get a chance to bumpnom
+			var/mob/living/simple_mob/tmobsimp = tmob
+			if(istype(tmobsimp))
+				if(tmobsimp.tryBumpNom(src))
+					now_pushing = 0
+					return
+					
+			//VOREstation Edit - End
 			forceMove(tmob.loc)
 			//VOREstation Edit - Begin
-			if (istype(tmob, /mob/living/simple_mob)) //check bumpnom chance, if it's a simplemob that's bumped
-				tmob.Bumped(src)
-			else if(istype(src, /mob/living/simple_mob)) //otherwise, if it's a simplemob doing the bumping. Simplemob on simplemob doesn't seem to trigger but that's fine.
-				Bumped(tmob)
-			if (tmob.loc == src) //check if they got ate, and if so skip the forcemove
-				now_pushing = 0
-				return
-
 			// In case of micros, we don't swap positions; instead occupying the same square!
 			if (handle_micro_bump_helping(tmob))
 				now_pushing = 0
@@ -243,6 +268,19 @@ default behaviour is:
 	if(istype(mover, /obj/structure/blob) && faction == "blob") //Blobs should ignore things on their faction.
 		return TRUE
 	return ..()
+
+// Called when something steps onto us. This allows for mulebots and vehicles to run things over. <3
+/mob/living/Crossed(var/atom/movable/AM) // Transplanting this from /mob/living/carbon/human/Crossed()
+	if(AM == src || AM.is_incorporeal()) // We're not going to run over ourselves or ghosts
+		return
+
+	if(istype(AM, /mob/living/bot/mulebot))
+		var/mob/living/bot/mulebot/MB = AM
+		MB.runOver(src)
+
+	if(istype(AM, /obj/vehicle))
+		var/obj/vehicle/V = AM
+		V.RunOver(src)
 
 /mob/living/verb/succumb()
 	set hidden = 1
@@ -491,6 +529,15 @@ default behaviour is:
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(stunned > 0)
+		add_status_indicator("stunned")
+
+/mob/living/SetStunned(amount)
+	..()
+	if(stunned <= 0)
+		remove_status_indicator("stunned")
+	else
+		add_status_indicator("stunned")
 
 /mob/living/AdjustStunned(amount)
 	if(amount > 0)
@@ -498,12 +545,25 @@ default behaviour is:
 			if(!isnull(M.disable_duration_percent))
 				amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(stunned <= 0)
+		remove_status_indicator("stunned")
+	else
+		add_status_indicator("stunned")
 
 /mob/living/Weaken(amount)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(weakened > 0)
+		add_status_indicator("weakened")
+
+/mob/living/SetWeakened(amount)
+	..()
+	if(weakened <= 0)
+		remove_status_indicator("weakened")
+	else
+		add_status_indicator("weakened")
 
 /mob/living/AdjustWeakened(amount)
 	if(amount > 0)
@@ -511,12 +571,25 @@ default behaviour is:
 			if(!isnull(M.disable_duration_percent))
 				amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(weakened <= 0)
+		remove_status_indicator("weakened")
+	else
+		add_status_indicator("weakened")
 
 /mob/living/Paralyse(amount)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(paralysis > 0)
+		add_status_indicator("paralysis")
+
+/mob/living/SetParalysis(amount)
+	..()
+	if(paralysis <= 0)
+		remove_status_indicator("paralysis")
+	else
+		add_status_indicator("paralysis")
 
 /mob/living/AdjustParalysis(amount)
 	if(amount > 0)
@@ -524,12 +597,25 @@ default behaviour is:
 			if(!isnull(M.disable_duration_percent))
 				amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(paralysis <= 0)
+		remove_status_indicator("paralysis")
+	else
+		add_status_indicator("paralysis")
 
 /mob/living/Sleeping(amount)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(sleeping > 0)
+		add_status_indicator("sleeping")
+
+/mob/living/SetSleeping(amount)
+	..()
+	if(sleeping <= 0)
+		remove_status_indicator("sleeping")
+	else
+		add_status_indicator("sleeping")
 
 /mob/living/AdjustSleeping(amount)
 	if(amount > 0)
@@ -537,12 +623,25 @@ default behaviour is:
 			if(!isnull(M.disable_duration_percent))
 				amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(sleeping <= 0)
+		remove_status_indicator("sleeping")
+	else
+		add_status_indicator("sleeping")
 
 /mob/living/Confuse(amount)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(confused > 0)
+		add_status_indicator("confused")
+
+/mob/living/SetConfused(amount)
+	..()
+	if(confused <= 0)
+		remove_status_indicator("confused")
+	else
+		add_status_indicator("confused")
 
 /mob/living/AdjustConfused(amount)
 	if(amount > 0)
@@ -550,12 +649,25 @@ default behaviour is:
 			if(!isnull(M.disable_duration_percent))
 				amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(confused <= 0)
+		remove_status_indicator("confused")
+	else
+		add_status_indicator("confused")
 
 /mob/living/Blind(amount)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(eye_blind > 0)
+		add_status_indicator("blinded")
+
+/mob/living/SetBlinded(amount)
+	..()
+	if(eye_blind <= 0)
+		remove_status_indicator("blinded")
+	else
+		add_status_indicator("blinded")
 
 /mob/living/AdjustBlinded(amount)
 	if(amount > 0)
@@ -563,6 +675,10 @@ default behaviour is:
 			if(!isnull(M.disable_duration_percent))
 				amount = round(amount * M.disable_duration_percent)
 	..(amount)
+	if(eye_blind <= 0)
+		remove_status_indicator("blinded")
+	else
+		add_status_indicator("blinded")
 
 // ++++ROCKDTBEN++++ MOB PROCS //END
 
@@ -824,14 +940,20 @@ default behaviour is:
 /mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
 	. = ..()
 	handle_footstep(loc)
+	// Begin VOREstation edit
+	if(is_shifted)
+		is_shifted = FALSE
+		pixel_x = default_pixel_x
+		pixel_y = default_pixel_y
+	// End VOREstation edit
 
 	if(pulling) // we were pulling a thing and didn't lose it during our move.
+		var/pull_dir = get_dir(src, pulling)
+
 		if(pulling.anchored || !isturf(pulling.loc))
 			stop_pulling()
-			return
 
-		var/pull_dir = get_dir(src, pulling)
-		if(get_dist(src, pulling) > 1 || (moving_diagonally != SECOND_DIAG_STEP && ((pull_dir - 1) & pull_dir))) // puller and pullee more than one tile away or in diagonal position
+		else if(get_dist(src, pulling) > 1 || (moving_diagonally != SECOND_DIAG_STEP && ((pull_dir - 1) & pull_dir))) // puller and pullee more than one tile away or in diagonal position
 			// If it is too far away or across z-levels from old location, stop pulling.
 			if(get_dist(pulling.loc, oldloc) > 1 || pulling.loc.z != oldloc?.z)
 				stop_pulling()
@@ -846,6 +968,35 @@ default behaviour is:
 			if(pulling && get_dist(src, pulling) > 1) // the pullee couldn't keep up
 				stop_pulling()
 
+	if(!isturf(loc))
+		return
+	else if(lastarea?.has_gravity == 0)
+		inertial_drift()
+	//VOREStation Edit Start
+	else if(flying)
+		inertial_drift()
+		make_floating(1)
+	//VOREStation Edit End
+	else if(!isspace(loc))
+		inertia_dir = 0
+		make_floating(0)
+
+/mob/living/proc/inertial_drift()
+	if(x > 1 && x < (world.maxx) && y > 1 && y < (world.maxy))
+		if(Process_Spacemove(1))
+			inertia_dir = 0
+			return
+
+		var/locthen = loc
+		spawn(5)
+			if(!anchored && !pulledby && loc == locthen)
+				var/stepdir = inertia_dir ? inertia_dir : last_move
+				if(!stepdir)
+					return
+				var/turf/T = get_step(src, stepdir)
+				if(!T)
+					return
+				Move(T, stepdir, 5)
 
 /mob/living/proc/handle_footstep(turf/T)
 	return FALSE
@@ -1117,22 +1268,29 @@ default behaviour is:
 /mob/living/proc/is_sentient()
 	return TRUE
 
+/mob/living/get_icon_scale_x()
+	. = ..()
+	for(var/datum/modifier/M in modifiers)
+		if(!isnull(M.icon_scale_x_percent))
+			. *= M.icon_scale_x_percent
+
+/mob/living/get_icon_scale_y()
+	. = ..()
+	for(var/datum/modifier/M in modifiers)
+		if(!isnull(M.icon_scale_y_percent))
+			. *= M.icon_scale_y_percent
 
 /mob/living/update_transform()
 	// First, get the correct size.
 	var/desired_scale_x = size_multiplier //VOREStation edit
 	var/desired_scale_y = size_multiplier //VOREStation edit
-	for(var/datum/modifier/M in modifiers)
-		if(!isnull(M.icon_scale_x_percent))
-			desired_scale_x *= M.icon_scale_x_percent
-		if(!isnull(M.icon_scale_y_percent))
-			desired_scale_y *= M.icon_scale_y_percent
 
 	// Now for the regular stuff.
 	var/matrix/M = matrix()
 	M.Scale(desired_scale_x, desired_scale_y)
 	M.Translate(0, (vis_height/2)*(desired_scale_y-1)) //VOREStation edit
 	src.transform = M //VOREStation edit
+	handle_status_indicators()
 
 // This handles setting the client's color variable, which makes everything look a specific color.
 // This proc is here so it can be called without needing to check if the client exists, or if the client relogs.
@@ -1322,3 +1480,8 @@ default behaviour is:
 		clear_alert("weightless")
 	else
 		throw_alert("weightless", /obj/screen/alert/weightless)
+
+// Tries to turn off things that let you see through walls, like mesons.
+// Each mob does vision a bit differently so this is just for inheritence and also so overrided procs can make the vision apply instantly if they call `..()`.
+/mob/living/proc/disable_spoiler_vision()
+	handle_vision()

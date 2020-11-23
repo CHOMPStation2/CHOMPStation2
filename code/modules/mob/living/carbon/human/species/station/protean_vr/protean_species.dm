@@ -26,6 +26,9 @@
 	breath_type = null
 	poison_type = null
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	virus_immune =	1
 	blood_volume =	0
 	min_age =		18
@@ -97,7 +100,8 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
-		/mob/living/proc/eat_trash
+		/mob/living/proc/eat_trash,
+		/mob/living/carbon/human/proc/slime_feed
 		)
 
 	var/global/list/abilities = list()

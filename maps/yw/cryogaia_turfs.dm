@@ -29,6 +29,23 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 		/turf/simulated/floor/outdoors/snow,
 		/turf/simulated/floor/tiled/cryogaia,
 		)
+
+//a set of 'covered' outdoor tiles. can be used as shelter from storms and the inside of the caves.
+/turf/simulated/floor/outdoors/snow/snow/cryogaia/covered
+	outdoors = 0
+
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia/covered
+	outdoors = 0
+
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia/covered
+	outdoors = 0
+
+/turf/simulated/floor/reinforced/cryogaia
+	name = "hangar hatch"
+	desc = "A heavily reinforced hangar access point. It doesn't look like it'll open easily."
+	outdoors = 1
+	CRYOGAIA_SET_ATMOS
+
 /turf/simulated/floor/tiled/old_tile/gray/cryogaia
 	CRYOGAIA_SET_ATMOS
 
