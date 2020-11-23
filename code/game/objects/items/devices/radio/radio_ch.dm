@@ -15,15 +15,4 @@
                 output += cand_turf
                 continue
     return output
-
-/proc/testloop()
-    for(var/i = 0,i<10,i++)
-        world.log << i
-    for(var/i = 0,i<10,++i)
-        world.log << i
-
-/proc/gimmeworldtime()
-    return world.time
-
-/proc/hehehe()
-    qdel(world)
+#undef CANBROADCAST_INNERBOX
