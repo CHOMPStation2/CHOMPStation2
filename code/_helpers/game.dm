@@ -223,7 +223,7 @@
 
 	return hear
 
-var/mobs_radio_range_fired = 1						//CHOMPEdit
+var/mobs_radio_range_fired = 1					//CHOMPEdit
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
 
 	set background = 1
@@ -236,7 +236,7 @@ var/mobs_radio_range_fired = 1						//CHOMPEdit
 		var/turf/speaker = get_turf(R)
 		if(speaker)
 			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
-				T.temp_check[our_iter] = TRUE
+				T.temp_check[our_iter] = TRUE	//CHOMPEdit
 				speaker_coverage[T] = R
 
 
