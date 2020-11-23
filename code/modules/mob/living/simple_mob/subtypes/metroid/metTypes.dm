@@ -27,7 +27,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 				"rad" = 100)
 	vore_active = 1
 	vore_bump_chance = 25
-	vore_capacity = 3
+	vore_capacity = 1
 	vore_icons = SA_ICON_LIVING
 	vore_pounce_chance = 90 //Don't punch or grab this guy. He will grab you instead!
 	swallowTime = 1 SECONDS //Hungry little bastards.
