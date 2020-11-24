@@ -8,7 +8,7 @@
 	wielded_item_state = "laser-wielded"
 	fire_delay = 8
 	slot_flags = SLOT_BELT|SLOT_BACK
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit
 	force = 10
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	matter = list(DEFAULT_WALL_MATERIAL = 2000)
@@ -149,7 +149,7 @@
 	projectile_type = /obj/item/projectile/beam/heavylaser/cannon
 	battery_lock = 1
 	fire_delay = 20
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit. Lol a cannon used to be just large size? Are you kidding me? A CANNON.
 	one_handed_penalty = 90 // The thing's heavy and huge.
 	accuracy = 45
 	charge_cost = 600
@@ -174,6 +174,7 @@
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 	projectile_type = /obj/item/projectile/beam/xray
 	charge_cost = 200
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
 /obj/item/weapon/gun/energy/sniperrifle
 	name = "marksman energy rifle"
@@ -221,7 +222,7 @@
 	charge_cost = 1300
 	fire_delay = 20
 	force = 8
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	accuracy = 10
 	scoped_accuracy = 15
 	charge_meter = FALSE
@@ -294,3 +295,4 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 1, TECH_MATERIAL = 4)
 
 	projectile_type = /obj/item/projectile/scatter/laser
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.

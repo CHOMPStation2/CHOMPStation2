@@ -13,7 +13,7 @@
 	icon = 'icons/obj/railgun.dmi'
 //	one_handed_penalty = 15
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 4, TECH_ILLEGAL = 2, TECH_MAGNET = 4)
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
 	var/obj/item/weapon/cell/cell                              // Currently installed powercell.
 	var/obj/item/weapon/stock_parts/capacitor/capacitor        // Installed capacitor. Higher rating == faster charge between shots. Set to a path to spawn with one of that type.
