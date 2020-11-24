@@ -16,7 +16,6 @@
 
 	cell_type = /obj/item/weapon/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/hook
-	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
 // An easily concealable not-ripoff version. It would be silenced, if it didn't make it blatant you're the one using it.
 

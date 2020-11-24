@@ -268,7 +268,7 @@
 	item_state = "esword"
 	active_force = 30
 	active_throwforce = 20
-	active_w_class = ITEMSIZE_HUGE //CHOMP Edit
+	active_w_class = ITEMSIZE_LARGE
 	force = 3
 	throwforce = 5
 	throw_speed = 1
@@ -433,7 +433,7 @@
 	throwforce = 1  //Throwing or dropping the item deletes it.
 	throw_speed = 1
 	throw_range = 1
-	w_class = ITEMSIZE_HUGE//So you can't hide it in your pocket or some such. //CHOMP Edit
+	w_class = ITEMSIZE_LARGE//So you can't hide it in your pocket or some such.
 	flags = NOBLOODY
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	var/mob/living/creator

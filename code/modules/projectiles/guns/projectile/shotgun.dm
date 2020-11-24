@@ -5,7 +5,7 @@
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	max_shells = 4
-	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+	w_class = ITEMSIZE_LARGE
 	force = 10
 	slot_flags = SLOT_BACK
 	caliber = "12g"

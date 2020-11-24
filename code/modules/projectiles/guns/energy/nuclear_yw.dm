@@ -26,7 +26,7 @@
 	fire_sound = 'sound/weapons/Laser.ogg'
 	charge_cost = 1
 	force = 8
-	w_class = ITEMSIZE_HUGE 	//Probably gonna make it a rifle sooner or later //CHOMP Edit: Dude, come on. It's a machine gun.
+	w_class = ITEMSIZE_LARGE	//Probably gonna make it a rifle sooner or later
 	fire_delay = 6
 	burst_delay = 0.5
 

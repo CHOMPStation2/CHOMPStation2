@@ -5,7 +5,7 @@
 	The GC1 is currently undergoing limited consumer trials, and is firmly aimed at a segment of the enthusiast market with more money than sense."
 	icon_state = "caseless"
 	item_state = "caseless"
-	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+	w_class = ITEMSIZE_LARGE
 	caliber = "5mm caseless"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 3)
 	slot_flags = SLOT_BACK

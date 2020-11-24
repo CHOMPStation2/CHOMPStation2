@@ -17,7 +17,7 @@
  * Twohanded
  */
 /obj/item/weapon/material/twohanded
-	w_class = ITEMSIZE_HUGE //CHOMP Edit
+	w_class = ITEMSIZE_LARGE
 	var/wielded = 0
 	var/force_wielded = 0
 	var/force_unwielded
@@ -92,7 +92,7 @@
 	dulled_divisor = 0.75	//Still metal on a stick
 	sharp = 1
 	edge = 1
-	w_class = ITEMSIZE_HUGE //CHOMP Edit
+	w_class = ITEMSIZE_LARGE
 	slot_flags = SLOT_BACK
 	force_wielded = 30
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
@@ -147,7 +147,7 @@
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
 	description_info = "This weapon can strike from two tiles away, and over certain objects such as tables, or other people."
 	force = 10
-	w_class = ITEMSIZE_HUGE //CHOMP Edit
+	w_class = ITEMSIZE_LARGE
 	slot_flags = SLOT_BACK
 	force_divisor = 0.5 			// 15 when wielded with hardness 30 (glass)
 	unwielded_force_divisor = 0.375

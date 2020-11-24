@@ -4,7 +4,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "revolvshot"
 	item_state = null
-	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+	w_class = ITEMSIZE_LARGE
 	force = 10
 	caliber = "12g"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_ILLEGAL = 2)

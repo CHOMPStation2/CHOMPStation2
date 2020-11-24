@@ -26,7 +26,7 @@
 	force = 8
 	fire_sound = 'sound/weapons/Gauss_shoot.ogg'
 	slot_flags = SLOT_BELT|SLOT_BACK
-	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+	w_class = 4
 	projectile_type = /obj/item/projectile/energy/gaussrifle
 	origin_tech = null
 	charge_cost =400
