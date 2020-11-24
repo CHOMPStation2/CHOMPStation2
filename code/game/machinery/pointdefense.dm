@@ -138,7 +138,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/charge_cooldown = 1 SECOND  //time between it can fire at different targets
 	var/last_shot = 0
 	var/kill_range = 18
-	var/rotation_speed = 0.25 SECONDS  //How quickly we turn to face threats
+	var/rotation_speed = 4.5 SECONDS  //How quickly we turn to face threats
 	var/engaging = FALSE
 	var/id_tag = null
 
@@ -337,7 +337,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	kill_range = 10 + 4 * killrange_multiplier
 
 	var/rotation_divisor = total_component_rating_of_type(/obj/item/weapon/stock_parts/manipulator)
-	rotation_speed = 0.5 SECONDS / (rotation_divisor ? rotation_divisor : 1)
+	rotation_speed = 4.5 SECONDS / (rotation_divisor ? rotation_divisor : 1)
 
 /obj/machinery/pointdefense/proc/Activate()
 	if(active)
