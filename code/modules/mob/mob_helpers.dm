@@ -533,7 +533,7 @@ proc/is_blind(A)
 		threatcount += 4
 
 	if(auth_weapons && !access_obj.allowed(src))
-		if(istype(l_hand, /obj/item/weapon/gun) || istype(l_hand, /obj/item/weapon/melee) && !istype(l_hand, /obj/item/weapon/gun/energy/floragun) && !istype(l_hand, /obj/item/weapon/gun/energy/sizegun) && !istype(l_hand, /obj/item/weapon/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/weapon/gun/energy/lasertag) //CHOMP Edit: Specific guns to the exclusion list.
+		if(istype(l_hand, /obj/item/weapon/gun) || istype(l_hand, /obj/item/weapon/melee) && !istype(l_hand, /obj/item/weapon/gun/energy/floragun) && !istype(l_hand, /obj/item/weapon/gun/energy/sizegun) && !istype(l_hand, /obj/item/weapon/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/weapon/gun/energy/lasertag)) //CHOMP Edit: Specific guns to the exclusion list.
 			threatcount += 4
 
 		if(istype(r_hand, /obj/item/weapon/gun) || istype(r_hand, /obj/item/weapon/melee))
