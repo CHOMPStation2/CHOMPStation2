@@ -239,7 +239,7 @@ var/mobs_radio_range_fired = 1					//CHOMPEdit
 				T.temp_check[our_iter] = TRUE	//CHOMPEdit
 				speaker_coverage[T] = R
 
-
+	CHECK_TICK	//CHOMPEdit
 	// Try to find all the players who can hear the message
 	//CHOMPEdit Begin
 	//So, to explain a bit here: The old code that used to be here was pretty slow for a few reasons, most of which have been addressed now.
@@ -251,6 +251,7 @@ var/mobs_radio_range_fired = 1					//CHOMPEdit
 		var/turf/T = get_turf(M)
 		if(istype(T) && T.temp_check[our_iter])
 			. += M
+	CHECK_TICK
 	for(var/turf/T in speaker_coverage)
 		T.temp_check -= our_iter //Freeing up the memory.
 	//CHOMPEdit End

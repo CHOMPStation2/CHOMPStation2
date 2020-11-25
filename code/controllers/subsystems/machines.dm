@@ -121,7 +121,6 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/obj/machinery/M = current_run[current_run.len]
 		current_run.len--
-		var/q = QDELETED(M) //CHOMPStation edit
 		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL))
 			global.processing_machines.Remove(M)
 			if(!QDELETED(M))
