@@ -635,9 +635,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/dock_star)
-"fw" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
 "fx" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/rig_module/sprinter,
@@ -18429,7 +18426,7 @@ pn
 tH
 xv
 Ce
-fw
+FR
 FR
 Mt
 Pl
