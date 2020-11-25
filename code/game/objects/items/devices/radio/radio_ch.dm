@@ -37,6 +37,10 @@
                 continue
     broadcast_tiles = output
 
+/obj/item/device/radio/intercom/forceMove(atom/destination)
+    . = ..()
+    update_broadcast_tiles()
+
 /obj/item/device/radio/intercom/Initialize()
     update_broadcast_tiles()
 
