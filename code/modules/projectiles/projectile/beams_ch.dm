@@ -1,7 +1,7 @@
 /obj/item/projectile/beam/phaser //The "medium" phaser beam.
 	damage = 10
 	SA_bonus_damage = 40
-	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION)
+	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION, MOB_CLASS_HUMANOID)
 
 /obj/item/projectile/beam/phaser/light
 	damage = 5
