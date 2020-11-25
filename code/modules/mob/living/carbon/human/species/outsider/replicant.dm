@@ -13,7 +13,7 @@
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL)
 	name_language = LANGUAGE_TERMINUS
-	mob_class = MOB_CLASS_HUMANOID //CHOMP Addition
+
 
 	blood_color = "#aaaadd"
 
