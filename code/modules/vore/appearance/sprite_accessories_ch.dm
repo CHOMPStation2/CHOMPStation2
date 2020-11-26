@@ -91,3 +91,20 @@
 /datum/sprite_accessory/tail/taur/zorgoia/fat
 	name = "Zorgoia (Fat Taur)"
 	extra_overlay = "zorgoia_fat"
+
+/datum/sprite_accessory/tail/taur/fatdrake
+	name = "Drake (Fat Taur dual-color)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "fatdrake_s"
+	extra_overlay = "fatdrake_markings"
+
+/datum/sprite_accessory/tail/taur/redpanda
+	name = "Red Panda (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "redpanda"
+
+/datum/sprite_accessory/tail/taur/redpandadc
+	name = "Red Panda (Taur dual-color)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "redpanda_dc"
+	extra_overlay = "redpanda_dc_markings"
