@@ -42,6 +42,7 @@
     update_broadcast_tiles()
 
 /obj/item/device/radio/intercom/Initialize()
+    . = ..()
     update_broadcast_tiles()
 
 /obj/item/device/radio/intercom/can_broadcast_to()
