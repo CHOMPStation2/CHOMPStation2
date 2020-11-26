@@ -631,7 +631,7 @@
 
 /obj/item/projectile/proc/get_structure_damage()
 	if(damage_type == BRUTE || damage_type == BURN)
-		return damage
+		return damage + SA_bonus_damage //CHOMP Edit: Added SA_bonus_damage to the returned value so that phaser can do damage against shields.
 	return 0
 
 //return 1 if the projectile should be allowed to pass through after all, 0 if not.

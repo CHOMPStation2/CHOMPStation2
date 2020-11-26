@@ -14,6 +14,7 @@
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL)
 	name_language = LANGUAGE_TERMINUS
 
+
 	blood_color = "#aaaadd"
 
 	show_ssd = "eerily still."
