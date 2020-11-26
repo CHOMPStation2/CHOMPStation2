@@ -282,7 +282,6 @@
 	else
 		message = "hides their wings."
 	visible_message("[src] [message]")
-<<<<<<< HEAD
 
 // Chomp Edit Start
 /mob/living/carbon/human/verb/hide_nutrition_vr()
@@ -292,7 +291,3 @@
 	nutrition_hidden = !nutrition_hidden
 	to_chat(src, "Players will [nutrition_hidden ? "no longer" : "now"] see your nutrition levels.")
 // Chomp Edit End
-||||||| parent of 67fb08e6e2... Merge pull request #9335 from KasparoVy/damn-son-whered-i-find-this
-	
-=======
->>>>>>> 67fb08e6e2... Merge pull request #9335 from KasparoVy/damn-son-whered-i-find-this
