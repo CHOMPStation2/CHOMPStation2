@@ -1,3 +1,28 @@
 # Job whitelist in format ckey - jobname
 # Like arokha - clown
+<<<<<<< HEAD
 
+||||||| parent of f3b5f50fed... Merge pull request #9364 from VOREStation/radishfriend-whitelist-proper
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+=======
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+>>>>>>> f3b5f50fed... Merge pull request #9364 from VOREStation/radishfriend-whitelist-proper
