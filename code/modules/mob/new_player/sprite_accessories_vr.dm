@@ -1274,10 +1274,7 @@
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
 		species_allowed = list(SPECIES_TESHARI)
-<<<<<<< HEAD
 		body_parts = list(BP_L_FOOT,BP_R_FOOT)
-||||||| parent of 67fb08e6e2... Merge pull request #9335 from KasparoVy/damn-son-whered-i-find-this
-=======
 
 	voxscales
 		name = "Vox Scales"
@@ -1344,4 +1341,3 @@
 		icon_state = "unathilongfrills"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
->>>>>>> 67fb08e6e2... Merge pull request #9335 from KasparoVy/damn-son-whered-i-find-this
