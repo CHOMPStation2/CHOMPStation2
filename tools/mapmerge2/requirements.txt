@@ -1,3 +1,9 @@
 pygit2
 bidict==0.13.1
+<<<<<<< HEAD
 Pillow==7.1.0
+||||||| parent of 7d845f4361... Merge pull request #9377 from VOREStation/dependabot/pip/tools/mapmerge2/pillow-7.1.0
+Pillow==6.2.0
+=======
+Pillow==7.1.0
+>>>>>>> 7d845f4361... Merge pull request #9377 from VOREStation/dependabot/pip/tools/mapmerge2/pillow-7.1.0
