@@ -251,6 +251,8 @@ var/mobs_radio_range_fired = 1					//CHOMPEdit
 		var/turf/T = get_turf(M)
 		if(istype(T) && T.temp_check[our_iter])
 			. += M
+		else if(istype(M,/mob/observer))	//Give ghosts global hearing.
+			. += M
 	CHECK_TICK
 	for(var/turf/T in speaker_coverage)
 		T.temp_check -= our_iter //Freeing up the memory.
