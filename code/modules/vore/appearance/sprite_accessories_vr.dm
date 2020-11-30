@@ -591,33 +591,6 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "dragon-horns"
-<<<<<<< HEAD
-||||||| parent of db63b57de1... Merge pull request #9379 from Runa-Dacino/horned-succubi
-
-/datum/sprite_accessory/ears/synthhorns_plain
-	name = "Synth horns, plain"
-	desc = ""
-	icon_state = "synthhorns_plain"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "synthhorns_plain_light"
-
-/datum/sprite_accessory/ears/synthhorns_thick
-	name = "Synth horns, thick"
-	desc = ""
-	icon_state = "synthhorns_thick"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "synthhorns_thick_light"
-
-/datum/sprite_accessory/ears/synthhorns_curly
-	name = "Synth horns, curly"
-	desc = ""
-	icon_state = "synthhorns_curled"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-=======
 
 /datum/sprite_accessory/ears/synthhorns_plain
 	name = "Synth horns, plain"
@@ -660,7 +633,6 @@
 
 
 
->>>>>>> db63b57de1... Merge pull request #9379 from Runa-Dacino/horned-succubi
 /*
 ////////////////////////////
 /  =--------------------=  /
