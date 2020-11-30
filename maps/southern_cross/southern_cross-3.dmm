@@ -998,7 +998,7 @@
 "kET" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/plating,/area/maintenance/thirddeck/foreport)
 "kFg" = (/turf/simulated/wall/r_wall,/area/maintenance/thirddeck/aftport)
 "kFv" = (/obj/structure/closet/emcloset,/obj/machinery/atmospherics/pipe/simple/visible/universal,/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsaft)
-"kFT" = (/obj/machinery/light{dir = 1},/obj/machinery/ai_status_display{pixel_y = 32},/obj/machinery/power/pointdefense_control{id_tag = "PD Main"},/turf/simulated/floor/bluegrid,/area/ai/ai_server_room)
+"kFT" = (/obj/machinery/light{dir = 1},/obj/machinery/ai_status_display{pixel_y = 32},/obj/machinery/pointdefense_control{id_tag = "PD Main"},/turf/simulated/floor/bluegrid,/area/ai/ai_server_room)
 "kFY" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/access_button{command = "cycle_interior"; frequency = 1379; master_tag = "d3_starboard_dorms_airlock"; name = "interior access button"; pixel_x = 25; pixel_y = 26; req_access = null},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsaft)
 "kGh" = (/obj/machinery/computer/arcade,/obj/machinery/camera/network/third_deck{c_tag = "Third Deck - Port Civ Bar 2"},/obj/effect/floor_decal/carpet{dir = 1},/turf/simulated/floor/holofloor/carpet,/area/crew_quarters/cafeteria)
 "kGN" = (/obj/machinery/door/airlock/maintenance{req_access = null; req_one_access = null},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsstarboard)
