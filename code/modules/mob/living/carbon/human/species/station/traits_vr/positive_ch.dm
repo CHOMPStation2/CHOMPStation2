@@ -7,7 +7,7 @@
 /datum/trait/densebones
 	name = "Dense bones"
 	desc = "Your bones (or robotic limbs) are more dense or stronger then what is considered normal. It is much harder to fracture your bones, yet pain from fractures is much more intense."
-	cost = 2
+	cost = 3
 	excludes = list(/datum/trait/hollow)
 
 /datum/trait/densebones/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -107,6 +107,22 @@
 	cost = 2
 	special_env = TRUE
 	excludes = list(/datum/trait/slipperydirt)
+
+/datum/trait/endurance_high
+	cost = 3
+	excludes = list(/datum/trait/brute_resist, /datum/trait/minor_brute_resist, /datum/trait/minor_burn_resist, /datum/trait/burn_resist)
+
+/datum/trait/brute_resist
+	excludes = list(/datum/trait/minor_brute_resist, /datum/trait/burn_resist, /datum/trait/endurance_high)
+
+/datum/trait/minor_brute_resist
+	excludes = list(/datum/trait/brute_resist, /datum/trait/endurance_high)
+
+/datum/trait/burn_resist
+	excludes = list(/datum/trait/minor_burn_resist, /datum/trait/brute_resist, /datum/trait/endurance_high)
+
+/datum/trait/minor_burn_resist
+	excludes = list(/datum/trait/burn_resist, /datum/trait/endurance_high)
 
 /datum/trait/absorbent/handle_environment_special(var/mob/living/carbon/human/H)
 	var/turf/T = get_turf(H)
