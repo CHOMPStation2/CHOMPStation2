@@ -1,5 +1,9 @@
-/turf/simulated
-	var/triggers = FALSE
+/obj/effect/ctrigger
+	name = "Step Trigger"
+	icon = null
+	anchored = 1
+	invisibility = INVISIBILITY_OBSERVER
+	density = 0
 	var/list/potential_triggerers = list()		//What can set off our trigger?
 	var/list/trig_target_paths = list()			//What are the paths of whatever we want to call our proc on?
 	var/trig_target_trigger_uid					//What is the trigger_uid of whatever we want to call our proc on?
@@ -14,8 +18,7 @@
 	var/trig_single_use_per_triggerer = FALSE	//Do we want to make so each atom can only trigger this once?
 	var/trig_target_is_trigerrer = FALSE		//Do we want to use the atom that trigerred us as the target?
 
-
-/turf/simulated/proc/can_use_trigger(atom/movable/mover)
+/obj/effect/ctrigger/proc/can_use_trigger(atom/movable/mover)
 	if(trig_single_use && has_been_used)
 		return FALSE
 	if(trig_single_use_per_triggerer && (mover in been_triggered_by))
@@ -30,9 +33,9 @@
 				continue
 	return FALSE
 
-/turf/simulated/Entered(atom/movable/mover, atom/oldloc)
+/obj/effect/ctrigger/Crossed(atom/movable/mover)
 	. = ..()
-	if(triggers && can_use_trigger(mover))
+	if(can_use_trigger(mover))
 		if(trig_proc)
 			if(trig_target_is_trigerrer)
 				trig_targets = list(mover)
@@ -66,7 +69,7 @@
 	else 
 		return
 
-/turf/simulated/proc/update_trig_targets()
+/obj/effect/ctrigger/proc/update_trig_targets()
 	trig_targets = list()
 	for(var/path in trig_target_paths)
 		var/trig_target_path = text2path(path)
@@ -82,7 +85,7 @@
 	if(!trig_targets.len)
 		message_admins("TRIGGER ERROR: trig_targets STILL EMPTY AFTER CALLED update_trig_targets()")
 
-/turf/simulated/Initialize(mapload)
+/obj/effect/ctrigger/Initialize(mapload)
 	. = ..()
-	if(triggers)
+	if(trig_target_paths.len)
 		update_trig_targets()
