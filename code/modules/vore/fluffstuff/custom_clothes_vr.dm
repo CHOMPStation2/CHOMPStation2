@@ -937,6 +937,22 @@ No. With a teleporter? Just *no*. - Hawk, YW
 	worn_state = "khi_uniform_sci"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
 
+/obj/item/clothing/under/rank/khi/crg //Cargo version
+	name = "KHI cargo suit"
+	desc = "Kitsuhana Heavy Industries uniform. Looks like it's in supply and cargo division colors. Even post-scarcity societies need things moved and mined sometimes."
+	icon_state = "khi_uniform_crg_i"
+	item_state = "khi_uniform_crg"
+	worn_state = "khi_uniform_crg"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/under/rank/khi/civ //Science version
+	name = "KHI civilian suit"
+	desc = "Kitsuhana Heavy Industries uniform. Snazzy silver trim marks this is as the general civilian branch. Smells like paperwork and bureaucracy."
+	icon_state = "khi_uniform_civ_i"
+	item_state = "khi_uniform_civ"
+	worn_state = "khi_uniform_civ"
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+
 /obj/item/clothing/under/rank/khi/fluff/aronai //Aro fluff version
 	name = "KHI meditech suit"
 	desc = "An outdated uniform of some sort. You get the sense that whoever wore this must've been very full of themselves"
