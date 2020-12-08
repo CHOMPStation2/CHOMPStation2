@@ -161,8 +161,8 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 	if(!using_map.use_overmap)
 		return
 
-	// Someone else handling it?
-	if(signal.data["done"])
+	// Is there a valid signal
+	if(!signal)
 		return
 
 	// Where are we able to hear from (and talk to, since we're AIO) anyway?
