@@ -191,7 +191,6 @@
 /datum/trait/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/colorblind_taj)
-<<<<<<< HEAD
 YW comment finish*/
 
 // YW Addition
@@ -217,14 +216,10 @@ YW comment finish*/
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 // YW Addition End
-||||||| parent of b5b66c1ed1... Merge pull request #9406 from Runa-Dacino/Squashed-hypersensitivity
-	
-=======
 	
 /datum/trait/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
 	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."
 	cost = -1
 	var_changes = list("traumatic_mod" = 2)
-	
->>>>>>> b5b66c1ed1... Merge pull request #9406 from Runa-Dacino/Squashed-hypersensitivity
+
