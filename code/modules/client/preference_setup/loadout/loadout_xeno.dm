@@ -373,10 +373,6 @@
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/sec
 <<<<<<< HEAD
 	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Security Pilot")//YW ADDITIONS
-||||||| parent of 39fe761eee... Merge pull request #9394 from VOREStation/upstream-merge-7760
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer",)
-=======
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer")
 
 /datum/gear/suit/dept/cloak/security/New()
 	..()
@@ -385,7 +381,6 @@
 		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
->>>>>>> 39fe761eee... Merge pull request #9394 from VOREStation/upstream-merge-7760
 
 /datum/gear/suit/dept/cloak/service
 	display_name = "service cloak (Teshari)"
