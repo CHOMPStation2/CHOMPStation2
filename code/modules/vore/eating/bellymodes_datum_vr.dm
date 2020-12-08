@@ -58,10 +58,20 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
 	if(isrobot(B.owner))
-		var/mob/living/silicon/robot/R = B.owner
-		R.cell.charge += 25 * damage_gain
+		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit start: digestion producing reagents
+			var/mob/living/silicon/robot/R = B.owner
+			R.cell.charge += 20*damage_gain
+			B.GenerateBellyReagents_digesting()
+		else
+			var/mob/living/silicon/robot/R = B.owner
+			R.cell.charge += 25*damage_gain //CHOMPedit end
 	if(offset) // If any different than default weight, multiply the % of offset.
-		B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100) * 4.5 * (damage_gain) / difference)) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
+		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit start: digestion producing reagents
+			B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100)*4.5/(B.gen_cost*1.25)*(damage_gain)/difference)) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
+			B.digest_nutri_gain = offset*((B.nutrition_percent / 100)*0.5/(B.gen_cost*1.25)*(damage_gain)/difference) //for transfering nutrition value over to GenerateBellyReagents_digesting()
+			B.GenerateBellyReagents_digesting()
+		else
+			B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100) * 4.5 * (damage_gain) / difference)) //CHOMPedit end //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
 	else
 		B.owner.adjust_nutrition((B.nutrition_percent / 100) * 4.5 * (damage_gain) / difference)
 
@@ -75,6 +85,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	B.steal_nutrition(L)
 	if(L.nutrition < 100)
 		B.absorb_living(L)
+		if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
+			B.GenerateBellyReagents_absorbed() //CHOMPedit end: A bonus for pred, I know for a fact prey is usually at zero nutrition when absorption finally happens
 		return list("to_update" = TRUE)
 
 /datum/digest_mode/unabsorb
