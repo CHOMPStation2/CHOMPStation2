@@ -371,7 +371,6 @@
 /datum/gear/suit/dept/cloak/security
 	display_name = "security cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/sec
-<<<<<<< HEAD
 	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Security Pilot")//YW ADDITIONS
 
 /datum/gear/suit/dept/cloak/security/New()
