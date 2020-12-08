@@ -2607,8 +2607,8 @@ var/list/the_station_areas = list (
 	luminosity = 1
 	dynamic_lighting = 0
 	requires_power = 0
-	
-	
+
+
 //CHOMPSTATION AREAS
 //Moved hangars to here from Southern cross areas.
 /area/hangar
@@ -2638,8 +2638,29 @@ var/list/the_station_areas = list (
 	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
 
+//Chompstation overmap exploration shuttles
+
 /area/shuttle/stargazer
 	name = "\improper Stargazer"
 	icon_state = "shuttlered"
 	requires_power = 1
-	
+
+/area/shuttle/echidna
+	name = "\improper Echidna"
+	icon_state = "shuttlered"
+	requires_power = 1
+
+/area/shuttle/ursula
+	name = "\improper Ursula"
+	icon_state = "shuttlered"
+	requires_power = 1
+
+/area/shuttle/needle
+	name = "\improper Needle"
+	icon_state = "shuttlered"
+	requires_power = 1
+
+/area/shuttle/baby_mammoth
+	name = "\improper Baby_mammoth"
+	icon_state = "shuttlered"
+	requires_power = 1
