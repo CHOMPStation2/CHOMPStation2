@@ -323,13 +323,7 @@ turf/simulated/mineral/floor/light_corner
 			to_chat(user, "<span class='notice'>You start digging.</span>")
 			playsound(user, 'sound/effects/rustle1.ogg', 50, 1)
 
-<<<<<<< HEAD
-			if(!do_after(user,30)) return //YAWN change. 30 from 40
-||||||| parent of 8954f5e96a... Merge pull request #9421 from Hatterhat/shovel-thing-but-tgui
-			if(!do_after(user,40)) return
-=======
 			if(!do_after(user,digspeed)) return
->>>>>>> 8954f5e96a... Merge pull request #9421 from Hatterhat/shovel-thing-but-tgui
 
 			to_chat(user, "<span class='notice'>You dug a hole.</span>")
 			GetDrilled()
