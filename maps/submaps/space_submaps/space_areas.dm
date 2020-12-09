@@ -1,4 +1,4 @@
-//KSC These are areas for all 37 space POI's, these are for overmap exploration.
+//CHOMPedit KSC = These are areas for all 37 space POI's, these are for overmap exploration.
 
 /area/submap
 	name = "Submap Area"

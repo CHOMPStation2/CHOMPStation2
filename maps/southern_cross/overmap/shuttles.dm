@@ -1,3 +1,4 @@
+//CHOMPedit KSC = These are areas for the exploration ships in on cargo shuttle.
 //Stargazer
 /datum/shuttle/autodock/overmap/stargazer
 	name = "Stargazer"

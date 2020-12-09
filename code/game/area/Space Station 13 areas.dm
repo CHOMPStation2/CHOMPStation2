@@ -2638,7 +2638,7 @@ var/list/the_station_areas = list (
 	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
 
-//Chompstation overmap exploration shuttles
+//CHOMPedit KSC = overmap exploration shuttles
 
 /area/shuttle/stargazer
 	name = "\improper Stargazer"

@@ -4067,6 +4067,7 @@
 #include "maps\southern_cross\structures\closets\misc.dm"
 #include "maps\southern_cross\structures\closets\research.dm"
 #include "maps\southern_cross\structures\closets\security.dm"
+#include "maps\submaps\_helpers.dm"
 #include "maps\submaps\engine_submaps\engine.dm"
 #include "maps\submaps\engine_submaps\engine_areas.dm"
 #include "maps\submaps\engine_submaps_vr\tether\_engine_submaps.dm"
