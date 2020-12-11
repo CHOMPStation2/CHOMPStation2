@@ -19,7 +19,14 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+||||||| parent of da12394075... Merge pull request #9440 from barrabobabo/master
+magpiemayhem - Vox
+=======
+magpiemayhem - Vox
+marco_barko - Protean
+>>>>>>> da12394075... Merge pull request #9440 from barrabobabo/master
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
@@ -29,6 +36,7 @@ ontejbjoav - Diona
 oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
 pearlprophet - Protean
+pemdesos - Protean
 phoenixx0 - Vox
 rapidvalj - Vox
 rapidvalj - Common Skrellian
