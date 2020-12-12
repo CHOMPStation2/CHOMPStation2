@@ -689,6 +689,7 @@
 	max_item_count = 10
 	startdrain = 100
 	analyzer = TRUE
+	recycles = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor/decompiler
 	name = "Matter Decompiler"
@@ -704,6 +705,7 @@
 	icon_state = "decompiler"
 	max_item_count = 20
 	delivery = TRUE
+	recycles = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor/brewer //Boozehound gut. //YW Changes
 	name = "Brew Belly"
@@ -717,6 +719,7 @@
 	desc = "A mounted survival unit with fuel processor."
 	icon_state = "sleeperc"
 	injection_chems = list("glucose","inaprovaline","tricordrazine")
+<<<<<<< HEAD
 	max_item_count = 1
 	
 /obj/item/device/dogborg/sleeper/command //Command borg belly // CH addition
@@ -727,5 +730,11 @@
 	compactor = TRUE
 	recycles = FALSE
 	max_item_count = 25
+||||||| parent of d87e2227cc... Merge pull request #9448 from VOREStation/Verkister-patch-6
+	max_item_count = 10
+=======
+	max_item_count = 10
+	recycles = FALSE
+>>>>>>> d87e2227cc... Merge pull request #9448 from VOREStation/Verkister-patch-6
 
 #undef SLEEPER_INJECT_COST
