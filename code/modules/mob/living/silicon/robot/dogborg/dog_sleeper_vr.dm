@@ -689,6 +689,7 @@
 	max_item_count = 10
 	startdrain = 100
 	analyzer = TRUE
+	recycles = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor/decompiler
 	name = "Matter Decompiler"
@@ -704,6 +705,7 @@
 	icon_state = "decompiler"
 	max_item_count = 20
 	delivery = TRUE
+	recycles = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor/brewer //Boozehound gut. //YW Changes
 	name = "Brew Belly"
@@ -719,7 +721,7 @@
 	injection_chems = list("glucose","inaprovaline","tricordrazine")
 	max_item_count = 1
 	
-/obj/item/device/dogborg/sleeper/command //Command borg belly // CH addition
+/obj/item/device/dogborg/sleeper/command //Command borg belly //CHOMP addition
 	name = "Bluespace Filing Belly"
 	desc = "A mounted bluespace storage unit for carrying paperwork"
 	icon_state = "sleeperd"
@@ -727,5 +729,6 @@
 	compactor = TRUE
 	recycles = FALSE
 	max_item_count = 25
+	//CHOMP addition end
 
 #undef SLEEPER_INJECT_COST
