@@ -2242,7 +2242,7 @@ Departamental Swimsuits, for general use
 			
 		add_attack_logs(user, target, "Teleported [target] with via \the [src]'s [translocator]!")
 	else ..()
-
+/*CHOMP Removal
 //Vitoras: Verie
 /obj/item/clothing/suit/storage/hooded/fluff/verie
 	name = "distressingly cyan hoodie"
@@ -2287,5 +2287,5 @@ Departamental Swimsuits, for general use
 	item_state = "veriesuit"
 
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|FEET|ARMS|HANDS
-
+End CHOMP Removal*/
 
