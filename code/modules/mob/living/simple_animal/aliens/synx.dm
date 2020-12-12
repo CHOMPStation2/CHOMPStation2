@@ -14,6 +14,7 @@
 	icon_living = "synx_living"
 	icon_dead = "synx_dead"
 	mob_bump_flag = SIMPLE_ANIMAL //This not existing was breaking vore bump for some reason.
+	parasitic = TRUE //Digestion immunity var
 
 	var/list/speak = list()
 	var/speak_chance = 1 //MAy have forgotten to readd that.
@@ -350,7 +351,7 @@
 
 /mob/living/simple_mob/animal/synx/hear_say(message,verb,language,fakename,isItalics,var/mob/living/speaker)
 	. = ..()
-	if(!message)    return
+	if(!message || !speaker)    return
 	if (speaker == src) return
 	speaker = speaker.GetVoice()
 	speak += message

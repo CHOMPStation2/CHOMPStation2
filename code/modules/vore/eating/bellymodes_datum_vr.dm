@@ -35,16 +35,17 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
 		return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
 
-		//CHOMPEDIT: Snowflake synx hook. Hypothetically this could be expanded to any mob by, say, giving them a parasite variable and a check for it here.
-	if(istype(L,/mob/living/simple_mob/animal/synx))
-		var/syntox = B.digest_brute+B.digest_burn
-		B.owner.adjust_nutrition(-syntox)
-		L.adjust_nutrition(syntox)
-		L.adjustBruteLoss(-syntox*2) //Should automaticaly clamp to 0
-		L.adjustFireLoss(-syntox*2) //Should automaticaly clamp to 0
-		return
+		//CHOMPEDIT: Parasitic digestion immunity hook, used to be a synx istype check but this is more optimized.
+	if(L.parasitic)
+		if(isliving(L))
+			var/paratox = B.digest_brute+B.digest_burn
+			B.owner.adjust_nutrition(-paratox)
+			L.adjust_nutrition(paratox)
+			L.adjustBruteLoss(-paratox*2) //Should automaticaly clamp to 0
+			L.adjustFireLoss(-paratox*2) //Should automaticaly clamp to 0
+			return
 
- 		//END SYNX hook.
+ 		//CHOMPedit end
 
 	// Deal digestion damage (and feed the pred)
 	var/old_brute = L.getBruteLoss()
