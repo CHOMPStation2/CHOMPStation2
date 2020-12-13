@@ -18,6 +18,7 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	wikilink="https://wiki.chompstation13.net/index.php?title=Alraune" //CHOMPedit: add wiki link
 
 	body_temperature = T20C
 	breath_type = "oxygen"
