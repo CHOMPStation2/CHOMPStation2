@@ -243,15 +243,25 @@
 
 /obj/item/clothing/suit/storage/seromi/cloak/jobs/hos
 	name = "head of security cloak"
-	desc = "A soft Teshari cloak made for the Head of Security"
+	desc = "A soft Teshari cloak made for the Head of Security. This one is made with stronger fibers." //CHOMPedot
 	icon_state = "tesh_cloak_hos"
 	item_state = "tesh_cloak_hos"
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	item_flags = THICKMATERIAL
+	siemens_coefficient = 0.6
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0) //CHOMPedit end
 
 /obj/item/clothing/suit/storage/seromi/cloak/jobs/sec
 	name = "security cloak"
-	desc = "A soft Teshari cloak made for the Security department"
+	desc = "A soft Teshari cloak made for the Security department. This one is made with stronger fibers." //CHOMPedit
 	icon_state = "tesh_cloak_sec"
 	item_state = "tesh_cloak_sec"
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	item_flags = THICKMATERIAL
+	siemens_coefficient = 0.6
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0) //CHOMPedit end
 
 /obj/item/clothing/suit/storage/seromi/cloak/jobs/iaa
 	name = "internal affairs cloak"
@@ -823,9 +833,14 @@
 
 /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/sec
 	name = "security belted cloak"
-	desc = "A soft Teshari cloak made for the Security department"
+	desc = "A soft Teshari cloak made for the Security department. This one is made with stronger fibers." //CHOMPedit
 	icon_state = "tesh_beltcloak_sec"
 	item_state = "tesh_beltcloak_sec"
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	item_flags = THICKMATERIAL
+	siemens_coefficient = 0.6
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0) //CHOMPedit end
 
 /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/qm
 	name = "quartermaster belted cloak"
@@ -853,9 +868,14 @@
 
 /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/hos
 	name = "security chief belted cloak"
-	desc = "A soft Teshari cloak made for the Head of Security"
+	desc = "A soft Teshari cloak made for the Head of Security. This one is made with stronger fibers." //CHOMPedit
 	icon_state = "tesh_beltcloak_hos"
 	item_state = "tesh_beltcloak_hos"
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	item_flags = THICKMATERIAL
+	siemens_coefficient = 0.6
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0) //CHOMPedit end
 
 /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/jani
 	name = "janitor belted cloak"
