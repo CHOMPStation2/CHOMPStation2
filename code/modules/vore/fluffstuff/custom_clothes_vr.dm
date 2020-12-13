@@ -898,56 +898,56 @@ No. With a teleporter? Just *no*. - Hawk, YW
 	item_state = ""
 
 /obj/item/clothing/under/rank/khi/cmd //Command version
-	name = "KHI command suit"
-	desc = "An outdated command uniform, branded with the logo of a defunct spacer organization"
+	name = "GE command suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. An extra-comfortable command one, at that." //CHOMPedit
 	icon_state = "khi_uniform_cmd_i"
 	item_state = "khi_uniform_cmd"
 	worn_state = "khi_uniform_cmd"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/sec //Security version
-	name = "KHI security suit"
-	desc = "An outdated security uniform, branded with the logo of a defunct spacer organization"
+	name = "GE security suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. This one has angry red security stripes. Keepin' the peace in style." //CHOMPedit
 	icon_state = "khi_uniform_sec_i"
 	item_state = "khi_uniform_sec"
 	worn_state = "khi_uniform_sec"
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/med //Medical version
-	name = "KHI medical suit"
-	desc = "An outdated medical uniform, branded with the logo of a defunct spacer organization"
+	name = "GE medical suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. The medical version. Why not just get a new body, anyway?"//CHOMPedit
 	icon_state = "khi_uniform_med_i"
 	item_state = "khi_uniform_med"
 	worn_state = "khi_uniform_med"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
 
 /obj/item/clothing/under/rank/khi/eng //Engineering version
-	name = "KHI engineering suit"
-	desc = "An outdated engineer uniform, branded with the logo of a defunct spacer organization."
+	name = "GE engineering suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time." //CHOMPedit
 	icon_state = "khi_uniform_eng_i"
 	item_state = "khi_uniform_eng"
 	worn_state = "khi_uniform_eng"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
 
 /obj/item/clothing/under/rank/khi/sci //Science version
-	name = "KHI science suit"
-	desc = "An outdated science uniform, branded with the logo of a defunct spacer organization"
+	name = "GE science suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. For performing science in, based on the color! Only SCIENCE can save us now." //CHOMPedit
 	icon_state = "khi_uniform_sci_i"
 	item_state = "khi_uniform_sci"
 	worn_state = "khi_uniform_sci"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/crg //Cargo version
-	name = "KHI cargo suit"
-	desc = "Kitsuhana Heavy Industries uniform. Looks like it's in supply and cargo division colors. Even post-scarcity societies need things moved and mined sometimes."
+	name = "GE cargo suit" //CHOMPedit: Change to GE
+	desc = "A sleek cargo uniform from Gilthari Exports." //CHOMPedit
 	icon_state = "khi_uniform_crg_i"
 	item_state = "khi_uniform_crg"
 	worn_state = "khi_uniform_crg"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/civ //Science version
-	name = "KHI civilian suit"
-	desc = "Kitsuhana Heavy Industries uniform. Snazzy silver trim marks this is as the general civilian branch. Smells like paperwork and bureaucracy."
+	name = "GE civilian suit" //CHOMPedit: Change to GE
+	desc = "A sleek civilian uniform from Gilthari Exports." //CHOMPedit
 	icon_state = "khi_uniform_civ_i"
 	item_state = "khi_uniform_civ"
 	worn_state = "khi_uniform_civ"
