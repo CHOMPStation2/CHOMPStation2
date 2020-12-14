@@ -84,6 +84,158 @@
 					)
 	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/mysterysoup = 10)
 	vend_delay = 15
+
+//Specific food vending machines for events that want them!
+
+/obj/machinery/vending/fooditalian
+	name = "Italian Imports"
+	desc = "You wanted some italian food? Well here's some imported from the local pizza place!"
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/pineapple = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/pastatomato = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/meatballspagetti = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/meatball = 15
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/oldpizza = 1)
+	vend_delay = 10
+
+/obj/machinery/vending/foodfast
+	name = "United Grills"
+	desc = "Not sure how they're united but man is this grilled food delicious! Though it seems to just be a lot of fast food..."
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/monkeyburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/cheeseburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/fishburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/clownburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/mimeburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/bigbiteburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/superbiteburger = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/burger/bacon = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/hotdog = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/chickenfillet = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/fries = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/cheesyfries = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/chilicheesefries = 10
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/ghostburger = 3,
+					/obj/item/weapon/reagent_containers/food/snacks/tofuburger = 5)
+	vend_delay = 10
+
+/obj/machinery/vending/foodmeat
+	name = "Meaty Marvels"
+	desc = "What's a marvel is how you're not ordering from this machine yet!"
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/ribplate = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/meatbread = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/meat_pocket = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/meatpie = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/bacon_flatbread = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/roastbeef = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/stuffed_meatball = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/meatsteak = 20
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/monkeysdelight = 5)
+	vend_delay = 10
+
+/obj/machinery/vending/foodasian
+	name = "Authenticate Asian"
+	desc = "Some good ol' Sol food!"
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/sushi = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/chawanmushi = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/generalschicken = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/chickenkatsu = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sweet_and_sour = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/bibimbap = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/hotandsoursoup = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/milosoup = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/lomein = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/friedrice = 10
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/monkeyburger = 1)
+	vend_delay = 10
+
+/obj/machinery/vending/foodfish
+	name = "Fishy Food"
+	desc = "Don't mind the name, this is 100% fish!"
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/grilled_carp = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/kudzudonburi = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/zestfish = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/lobstercooked = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sashimi = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sharkmeatcooked = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sharkmeatdip = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sharkmeatcubes = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/cuttlefishcooked = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/monkfishcooked = 10
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/monkfish = 1)
+	vend_delay = 10
+
+/obj/machinery/vending/foodveggie
+	name = "Veggie Varieties"
+	desc = "Even vegitarians have their own vending machines! How thoughtful."
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/beetsoup = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/eggplantparm = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/eggbowl = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/flowerchildsalad = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/tossedsalad = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/fruitsalad = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/grilledcheese = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/stewedsoymeat = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/tofurkey = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/stuffing = 10
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/meatsteak = 1)
+	vend_delay = 10
+
+/obj/machinery/vending/fooddessert
+	name = "Delightful Desserts"
+	desc = "Even if you've stuffed your face with a pizza or two, you ALWAYS have room for dessert!"
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/applepie = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/cherrypie = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/keylimepie = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/pie = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pumpkinpie = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/berryclafoutis = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/funnelcake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/plaincake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/birthdaycake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesecake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/lemoncake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/limecake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/orangecake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/peanutcake = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/icecreamsandwich = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/cookie = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/brownies = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/chocolatebar = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/chocolatepiece = 20
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/donut/chaos = 10)
+	vend_delay = 10
+
+/obj/machinery/vending/foodstuffing
+	name = "Stuffing Site"
+	desc = "Is... is it just full of stuffing? No wait, there's turkey in there too."
+	icon_state = "hotfood"
+	products = list(/obj/item/weapon/reagent_containers/food/snacks/stuffing = 50,
+					/obj/item/weapon/reagent_containers/food/snacks/sliceable/turkey= 20
+					)
+	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/tofurkey = 10)
+	vend_delay = 10
+
+//End of food event machines
+
 /* For later, then
 /obj/machinery/vending/weapon_machine
 	name = "Frozen Star Guns&Ammo"
@@ -1004,7 +1156,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
+					/obj/item/clothing/suit/storage/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -1091,7 +1243,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 100,
 					/obj/item/clothing/suit/storage/flannel/red = 100,
 					/obj/item/clothing/suit/unathi/robe = 100,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 100,
+					/obj/item/clothing/suit/storage/snowsuit = 100,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 100,
@@ -2365,7 +2517,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
+					/obj/item/clothing/suit/storage/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -2452,7 +2604,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 100,
 					/obj/item/clothing/suit/storage/flannel/red = 100,
 					/obj/item/clothing/suit/unathi/robe = 100,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 100,
+					/obj/item/clothing/suit/storage/snowsuit = 100,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 100,
@@ -3109,21 +3261,16 @@
 					/obj/item/clothing/under/rank/trek/command/ds9 = 5,
 					/obj/item/clothing/under/rank/trek/command/voy = 5,
 					/obj/item/clothing/under/rank/trek/command/ent = 5,
-					/obj/item/clothing/under/rank/trek/eng = 5,
-					/obj/item/clothing/under/rank/trek/eng/next = 5,
-					/obj/item/clothing/under/rank/trek/eng/ds9 = 5,
-					/obj/item/clothing/under/rank/trek/eng/voy = 5,
-					/obj/item/clothing/under/rank/trek/eng/ent = 5,
+					/obj/item/clothing/under/rank/trek/engsec = 5,
+					/obj/item/clothing/under/rank/trek/engsec/next = 5,
+					/obj/item/clothing/under/rank/trek/engsec/ds9 = 5,
+					/obj/item/clothing/under/rank/trek/engsec/voy = 5,
+					/obj/item/clothing/under/rank/trek/engsec/ent = 5,
 					/obj/item/clothing/under/rank/trek/medsci = 5,
 					/obj/item/clothing/under/rank/trek/medsci/next = 5,
 					/obj/item/clothing/under/rank/trek/medsci/ds9 = 5,
 					/obj/item/clothing/under/rank/trek/medsci/voy = 5,
 					/obj/item/clothing/under/rank/trek/medsci/ent = 5,
-					/obj/item/clothing/under/rank/trek/sec = 5,
-					/obj/item/clothing/under/rank/trek/sec/next = 5,
-					/obj/item/clothing/under/rank/trek/sec/ds9 = 5,
-					/obj/item/clothing/under/rank/trek/sec/voy = 5,
-					/obj/item/clothing/under/rank/trek/sec/ent = 5,
 					/obj/item/clothing/under/rank/khi/cmd = 5,
 					/obj/item/clothing/under/rank/khi/eng = 5,
 					/obj/item/clothing/under/rank/khi/med = 5,
@@ -3354,7 +3501,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
+					/obj/item/clothing/suit/storage/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
