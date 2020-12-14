@@ -18,6 +18,7 @@
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
+	wikilink="https://wiki.chompstation13.net/index.php?title=Alraune" //CHOMPedit: add wiki link
 
 	body_temperature = T20C
 	breath_type = "oxygen"
@@ -68,10 +69,8 @@
 	traits with other humanoid beings.\
 	\
 	Most Alraunes are not interested in traversing space, their heavy preference for natural environments and general\
-	disinterest in things outside it keeps them as a species at a rather primal stage.\
-	\
-	However, after their discovery by the angels of Sanctum, many alraunes succumbed to their curiosity, and took the offer\
-	to learn of the world and venture out, whether it's to Sanctum, or elsewhere in the galaxy."
+	disinterest in things outside it keeps them as a species at a rather primal stage."
+	//CHOMPEdit: removed line referencing Virgo lore which does not apply here.
 	catalogue_data = list(/datum/category_item/catalogue/fauna/alraune)
 
 	has_limbs = list(

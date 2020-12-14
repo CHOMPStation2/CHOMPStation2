@@ -36,7 +36,7 @@
 
 	health_hud_intensity = 1.5
 
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_IS_RESTRICTED //CHOMPedit: this should disable the species
 	appearance_flags = HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
 	has_organ = list(
