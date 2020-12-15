@@ -142,7 +142,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 	machinetype = 6
 	produces_heat = 0
 	var/intercept = 0 // if nonzero, broadcasts all messages to syndicate channel
-	var/overmap_range = 1 //Same turf
+	var/overmap_range = 0 //Same turf //CHOMP Edit: Reverted range from 1 to 0 because I think this is causing double speak somehow over comms.
 
 	var/list/linked_radios_weakrefs = list()
 
