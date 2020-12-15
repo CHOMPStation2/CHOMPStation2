@@ -277,7 +277,7 @@
 				var/obj/item/weapon/spacecasinocash/cash = usr.get_active_hand()
 				paid = pay_with_chips(cash, usr, price)
 			else
-				to_chat(usr, "<span class='warning'>Payment failure: Improper payment method.</span>")
+				to_chat(usr, "<span class='warning'>Payment failure: Improper payment method, please provide chips.</span>")
 				return TRUE // we set this because they shouldn't even be able to get this far, and we want the UI to update.
 			if(paid)
 				if(item_given == TRUE)
