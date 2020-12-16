@@ -30,9 +30,18 @@ oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
+<<<<<<< HEAD
 rapidvalj - Vox
 rapidvalj - Common Skrellian
 rapidvalj - High Skrellian
+||||||| parent of 8fa7db96e8... Merge pull request #9469 from JoanRisu/Joan-whitelist-updates
+radiantaurora - Protean
+rapidvalj - Vox
+rapidvalj - Common Skrellian
+rapidvalj - High Skrellian
+=======
+radiantaurora - Protean
+>>>>>>> 8fa7db96e8... Merge pull request #9469 from JoanRisu/Joan-whitelist-updates
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
 rykkastormheart - Xenochimera
@@ -49,6 +58,9 @@ sharplight - Protean
 tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
 tastypred - Protean
+terrestris - Vox
+terrestris - Common Skrellian
+terrestris - High Skrellian
 timidvi - Diona
 varonis - Xenochimera
 verkister - Xenochimera
