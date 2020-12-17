@@ -26,7 +26,7 @@
 "bb" = (/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
 "bd" = (/obj/structure/sign/christmas/wreath,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "bg" = (/obj/structure/sign/christmas/lights{dir = 1},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
-"bh" = (/turf/simulated/wall/golddiamond,/area/casino/casino_ship/cockpit)
+"bh" = (/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "bk" = (/obj/structure/sign/christmas/wreath{dir = 4},/obj/structure/event/present,/turf/simulated/floor/carpet/turcarpet,/area/casino/casino_ship)
 "bl" = (/obj/effect/blocker,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
 "bm" = (/obj/structure/closet/cabinet,/obj/item/weapon/storage/box/fluff/swimsuit,/obj/item/weapon/storage/box/fluff/swimsuit,/obj/item/weapon/storage/box/fluff/swimsuit,/obj/item/weapon/storage/box/fluff/swimsuit/earth,/obj/item/weapon/storage/box/fluff/swimsuit/earth,/obj/item/weapon/storage/box/fluff/swimsuit/purple,/obj/item/weapon/storage/box/fluff/swimsuit/red,/obj/item/weapon/storage/box/fluff/swimsuit/white,/obj/item/clothing/mask/snorkel,/obj/item/clothing/mask/snorkel,/obj/item/clothing/mask/snorkel,/obj/item/clothing/mask/snorkel,/turf/simulated/floor/outdoors/dirt{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
@@ -165,7 +165,7 @@
 "eJ" = (/obj/structure/flora/pottedplant/xmas{anchored = 1},/turf/simulated/floor/carpet/purcarpet,/area/casino/casino_ship)
 "eL" = (/obj/structure/table/glass,/turf/simulated/floor/carpet/purcarpet,/area/casino/casino_ship)
 "eN" = (/obj/structure/window/reinforced{dir = 8; health = 1e+006},/obj/effect/effect/snow/medium,/obj/structure/flora/tree/pine/xmas,/turf/snow/snow2,/area/casino/casino_ship)
-"eO" = (/obj/structure/sign/christmas/wreath,/obj/structure/closet/crate/bin{anchored = 1},/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_y = 32},/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
+"eO" = (/obj/structure/sign/christmas/wreath,/obj/structure/closet/crate/bin,/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_y = 32},/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "eP" = (/obj/structure/sign/christmas/lights{dir = 1},/obj/machinery/slot_machine,/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
 "eR" = (/obj/machinery/door/airlock/security{name = "Holding cells"; req_access = list(201); req_one_access = list()},/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship/wing_right)
 "eS" = (/obj/structure/shuttle/engine/heater{dir = 8},/turf/simulated/wall/golddiamond,/area/casino/casino_ship/wing_right)
@@ -180,7 +180,7 @@
 "fj" = (/obj/structure/event/present,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "fk" = (/obj/structure/flora/tree/pine{desc = "A wondrous decorated Christmas tree. It has presents!"; icon_state = "pinepresents"},/turf/simulated/floor/carpet/turcarpet,/area/casino/casino_ship)
 "fl" = (/obj/structure/table/fancyblack,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
-"fo" = (/obj/structure/table/glass,/obj/item/weapon/paper_bin,/obj/item/device/tape,/obj/item/weapon/pen,/obj/item/weapon/pen{pixel_x = 4; pixel_y = 4},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"fo" = (/obj/structure/table/glass,/obj/item/weapon/paper_bin,/obj/item/device/tape,/obj/item/weapon/pen,/obj/item/weapon/pen{pixel_x = 4; pixel_y = 4},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "fp" = (/obj/structure/table/fancyblack,/turf/simulated/floor/carpet/turcarpet,/area/casino/casino_ship)
 "fq" = (/obj/structure/table/marble,/obj/machinery/door/window/westright{dir = 1; layer = 3.1; name = "Both access"; req_access = list(200)},/obj/machinery/door/blast/shutters{id = "Casinoboth 1"; layer = 3.2; name = "Exchange booth shutters 1"},/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "fs" = (/obj/structure/sign/christmas/lights{dir = 4},/turf/simulated/floor/water/deep/pool,/area/casino/casino_ship)
@@ -188,16 +188,16 @@
 "fv" = (/obj/structure/event/present,/obj/structure/event/present,/turf/simulated/floor/carpet/turcarpet,/area/casino/casino_ship)
 "fx" = (/obj/structure/reagent_dispensers/beerkeg,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "fy" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/item/weapon/gun/energy/sizegun,/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
-"fA" = (/obj/structure/closet/crate/bin{anchored = 1},/obj/structure/sign/christmas/lights,/obj/structure/sign/christmas/wreath{dir = 4},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
+"fA" = (/obj/structure/closet/crate/bin,/obj/structure/sign/christmas/lights,/obj/structure/sign/christmas/wreath{dir = 4},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "fB" = (/obj/structure/flora/grass/both,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
 "fC" = (/obj/machinery/slot_machine,/obj/structure/sign/christmas/lights{dir = 1},/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "fE" = (/obj/effect/effect/snow/medium,/turf/simulated/floor/water{outdoors = 0},/area/casino/casino_ship)
 "fF" = (/obj/structure/sign/christmas/lights{dir = 1},/obj/machinery/slot_machine,/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
-"fG" = (/obj/structure/table/glass,/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee{pixel_x = 4; pixel_y = 6},/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee,/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee{pixel_x = 6; pixel_y = -3},/obj/item/weapon/reagent_containers/food/condiment/small/sugar{pixel_x = -6; pixel_y = -1},/obj/item/weapon/reagent_containers/food/drinks/bottle/cream{pixel_x = -5; pixel_y = 17},/obj/item/weapon/reagent_containers/food/condiment/small/sugar{pixel_x = -6; pixel_y = -1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"fG" = (/obj/structure/table/glass,/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee{pixel_x = 4; pixel_y = 6},/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee,/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee{pixel_x = 6; pixel_y = -3},/obj/item/weapon/reagent_containers/food/condiment/small/sugar{pixel_x = -6; pixel_y = -1},/obj/item/weapon/reagent_containers/food/drinks/bottle/cream{pixel_x = -5; pixel_y = 17},/obj/item/weapon/reagent_containers/food/condiment/small/sugar{pixel_x = -6; pixel_y = -1},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "fI" = (/obj/structure/sign/christmas/wreath,/obj/structure/reagent_dispensers/water_cooler/full,/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "fJ" = (/obj/item/weapon/book/manual/casino,/obj/structure/table/marble,/obj/machinery/button/remote/airlock{id = "managerdoor"; pixel_x = 8; pixel_y = -2},/obj/item/weapon/card/id/casino/manager,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "fL" = (/obj/structure/sign/christmas/lights{dir = 4},/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
-"fM" = (/obj/structure/sign/christmas/wreath,/obj/structure/closet/crate/bin{anchored = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
+"fM" = (/obj/structure/sign/christmas/wreath,/obj/structure/closet/crate/bin,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "fN" = (/obj/machinery/power/smes/buildable/hybrid,/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/plating,/area/submap/lonehome)
 "fO" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/item/weapon/grenade/spawnergrenade/casino/tindalos,/obj/item/weapon/grenade/spawnergrenade/casino/redpanda{pixel_x = 7; pixel_y = 4},/obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby{pixel_x = -4; pixel_y = 5},/obj/item/weapon/grenade/spawnergrenade/casino/horse{pixel_x = 8; pixel_y = -4},/obj/item/weapon/grenade/spawnergrenade/casino/fennec{pixel_x = -8; pixel_y = -1},/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "fP" = (/obj/structure/sign/christmas/lights{dir = 1},/obj/structure/sign/christmas/lights{dir = 4},/obj/structure/flora/pottedplant/xmas{anchored = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
@@ -214,7 +214,7 @@
 "gg" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/purpledouble,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "gl" = (/obj/structure/flora/tree/pine/xmas,/obj/effect/effect/snow/medium,/turf/snow/snow2,/area/casino/casino_ship)
 "gm" = (/obj/machinery/door/airlock{name = "Custodial Closet"; req_access = list(160)},/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship/wing_left)
-"gn" = (/obj/structure/table/glass,/obj/structure/event/present,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"gn" = (/obj/structure/table/glass,/obj/structure/event/present,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "go" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/table/rack,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/toolbox/emergency,/obj/effect/floor_decal/borderfloor{dir = 1},/obj/effect/floor_decal/corner/yellow/border{dir = 1},/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship/wing_left)
 "gp" = (/obj/structure/table/rack,/obj/item/device/suit_cooling_unit,/obj/item/device/suit_cooling_unit,/obj/effect/floor_decal/borderfloor{dir = 1},/obj/effect/floor_decal/corner/yellow/border{dir = 1},/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship/wing_left)
 "gr" = (/obj/effect/zone_divider,/turf/simulated/mineral/ignore_mapgen/cave,/area/surface/outside/plains/mountains)
@@ -297,7 +297,7 @@
 "jU" = (/obj/structure/sign/christmas/lights,/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
 "jV" = (/obj/effect/effect/snow/medium,/obj/structure/window/reinforced{health = 1e+006},/obj/structure/flora/grass/both,/turf/snow/snow2,/area/casino/casino_ship)
 "jW" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/blast/shutters{id = "Casinodormshutters3"; layer = 3.5; name = "Casino Privacy shutters"},/turf/simulated/floor,/area/casino/casino_ship/dorms)
-"jY" = (/obj/structure/closet/crate/bin{anchored = 1},/obj/structure/sign/christmas/lights{dir = 1},/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
+"jY" = (/obj/structure/closet/crate/bin,/obj/structure/sign/christmas/lights{dir = 1},/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "ka" = (/obj/structure/bed/chair/oldsofa/corner,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "kb" = (/obj/effect/effect/snow/medium,/obj/structure/window/reinforced{dir = 8},/turf/snow/snow2,/area/casino/casino_ship)
 "kc" = (/obj/structure/table/gamblingtable,/obj/structure/event/present,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
@@ -316,8 +316,8 @@
 "kM" = (/obj/structure/bed/chair/comfy/brown{dir = 8},/obj/machinery/light/small{dir = 4},/turf/simulated/floor/carpet/purcarpet,/area/casino/casino_ship)
 "kN" = (/obj/structure/closet/secure_closet/freezer/fridge,/obj/effect/floor_decal/corner/grey/diagonal{dir = 4},/turf/simulated/floor/tiled/white,/area/submap/lonehome)
 "kP" = (/obj/effect/floor_decal/borderfloor,/obj/effect/floor_decal/corner/brown/border,/obj/machinery/light,/turf/simulated/floor/tiled,/area/casino/casino_ship/wing_left)
-"kS" = (/obj/structure/flora/pottedplant/xmas{anchored = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
-"kT" = (/obj/structure/table/glass,/obj/item/weapon/paper/card/heart,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"kS" = (/obj/structure/flora/pottedplant/xmas{anchored = 1},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
+"kT" = (/obj/structure/table/glass,/obj/item/weapon/paper/card/heart,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "kU" = (/obj/item/weapon/pickaxe/drill,/turf/simulated/floor/outdoors/dirt{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
 "kV" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/blast/shutters{dir = 2; id = "Casinodormshutters5"; layer = 3.5; name = "Casino Privacy shutters"},/turf/simulated/floor,/area/casino/casino_ship/dorms)
 "kY" = (/obj/machinery/computer/card{dir = 4},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
@@ -334,7 +334,7 @@
 "lK" = (/obj/structure/casino_table/blackjack_r{dir = 1},/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
 "lL" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8; health = 1e+006},/obj/effect/effect/snow/medium,/turf/snow/snow2,/area/casino/casino_ship)
 "lM" = (/obj/machinery/door/airlock/silver{name = "Bathroom"},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
-"lN" = (/obj/structure/closet,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"lN" = (/obj/structure/closet,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "lO" = (/turf/simulated/floor/wood,/area/casino/casino_ship)
 "lP" = (/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
 "lR" = (/obj/machinery/door/window/westleft{req_access = list(160)},/turf/simulated/floor/tiled,/area/casino/casino_ship/wing_left)
@@ -365,7 +365,7 @@
 "mI" = (/obj/structure/table/marble,/obj/machinery/cash_register/civilian{dir = 8},/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "mJ" = (/obj/structure/table/reinforced,/obj/machinery/recharger,/obj/item/weapon/cell/device/weapon,/obj/item/weapon/cell/device/weapon,/obj/item/weapon/cell/device/weapon,/obj/item/weapon/cell/device/weapon,/obj/item/weapon/cell/device/weapon,/obj/item/weapon/cell/device/weapon,/obj/item/weapon/cell/device/weapon,/obj/item/weapon/cell/device/weapon,/obj/effect/floor_decal/borderfloor,/obj/effect/floor_decal/corner/red/border,/obj/machinery/light,/turf/simulated/floor/tiled,/area/casino/casino_ship/wing_right)
 "mN" = (/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
-"mO" = (/obj/structure/table/glass,/obj/machinery/microwave/advanced{pixel_x = -3; pixel_y = 7},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"mO" = (/obj/structure/table/glass,/obj/machinery/microwave/advanced{pixel_x = -3; pixel_y = 7},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "mP" = (/obj/effect/mist,/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/wood,/area/casino/casino_ship)
 "mQ" = (/obj/structure/table/wooden_reinforced,/obj/item/device/communicator,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "mU" = (/obj/structure/table/glass,/obj/item/weapon/soap,/obj/item/weapon/soap,/turf/simulated/floor/tiled/freezer,/area/casino/casino_ship)
@@ -393,7 +393,7 @@
 "od" = (/turf/simulated/floor/water,/area/surface/outside/plains/mountains)
 "og" = (/obj/structure/table/glass,/obj/machinery/recharger,/turf/simulated/floor/wood,/area/casino/casino_ship)
 "oi" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
-"on" = (/obj/structure/bed/chair/comfy/purp{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"on" = (/obj/structure/bed/chair/comfy/purp{dir = 8},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "op" = (/obj/structure/grille/rustic,/obj/structure/window/phoronreinforced/full,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "os" = (/obj/structure/bed/chair/sofa/yellow,/obj/structure/sign/christmas/lights{dir = 1},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "ou" = (/obj/machinery/door/airlock/silver{name = "Lap dance room 1-2"},/turf/simulated/floor/carpet/purcarpet,/area/casino/casino_ship)
@@ -412,7 +412,7 @@
 "oU" = (/obj/structure/sign/christmas/wreath{dir = 8},/obj/machinery/light{dir = 4},/turf/simulated/floor/water/deep/pool,/area/casino/casino_ship)
 "oY" = (/obj/structure/table/marble,/obj/item/weapon/flame/candle/candelabra/everburn,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "oZ" = (/turf/simulated/floor/grass,/area/casino/casino_ship)
-"pc" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/material/knife/machete/hatchet{pixel_x = 4; pixel_y = 4},/obj/item/weapon/pickaxe/silver{pixel_x = -1; pixel_y = 9},/obj/item/weapon/pickaxe/silver,/turf/simulated/floor/plating,/area/submap/lonehome)
+"pc" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/material/knife/machete/hatchet{pixel_x = 4; pixel_y = 4},/obj/item/weapon/pickaxe/silver{pixel_x = -1; pixel_y = 9},/obj/item/weapon/pickaxe/silver,/obj/item/weapon/material/twohanded/fireaxe,/turf/simulated/floor/plating,/area/submap/lonehome)
 "pe" = (/obj/machinery/door/window/southright{dir = 4; name = "Bar"; req_access = list(160)},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "pg" = (/obj/structure/sign/christmas/lights{dir = 4},/turf/simulated/floor/wood,/area/casino/casino_ship)
 "ph" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "Casino_South_Interior"; locked = 1; name = "Landing South Internal"},/obj/machinery/access_button{command = "cycle_interior"; frequency = 1379; master_tag = "Casino_South"; name = "Internal Access Button"; pixel_x = -24},/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship)
@@ -422,7 +422,7 @@
 "pp" = (/obj/machinery/door/airlock/security{name = "Interrogation room"; req_access = list(201); req_one_access = list()},/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship/wing_right)
 "pu" = (/obj/structure/table/sifwoodentable,/turf/simulated/floor/outdoors/dirt{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
 "pv" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 4; health = 1e+006},/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8; health = 1e+006},/turf/simulated/floor/plating,/area/casino/casino_ship/wing_right)
-"px" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters5"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"px" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters5"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "py" = (/obj/structure/closet/crate/bin,/obj/effect/floor_decal/borderfloor/corner,/obj/effect/floor_decal/corner/red/bordercorner,/turf/simulated/floor/tiled,/area/casino/casino_ship/wing_right)
 "pz" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/blast/shutters{id = "Casinoprizes"; layer = 3.3; name = "Prize shutters"},/turf/simulated/floor,/area/casino/casino_ship)
 "pA" = (/mob/living/simple_mob/animal/sif/diyaab,/mob/living/simple_mob/vore/rabbit/white,/obj/structure/flora/tree/dead,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
@@ -439,7 +439,7 @@
 "pT" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced,/obj/item/weapon/melee/chainofcommand,/obj/item/weapon/scepter,/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "pU" = (/obj/item/weapon/bone/skull{anchored = 1; color = "black"; desc = "There seems to be a skull like hole on the ground... Seems like you can fit one in, but were is it?"; name = "Skull carving"},/turf/simulated/floor/flock,/area/surface/outside/plains/mountains)
 "pV" = (/obj/structure/bed/chair/oldsofa/right{dir = 4},/obj/structure/sign/christmas/lights{dir = 8},/obj/structure/sign/christmas/lights,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
-"pX" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm2"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"pX" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm2"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "pZ" = (/obj/structure/curtain/open/bed{name = "casino curtain"},/obj/structure/sign/christmas/lights,/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "qa" = (/obj/effect/effect/snow/medium,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 1; health = 1e+006; req_access = list(5)},/turf/snow/snow2,/area/casino/casino_ship)
 "qc" = (/turf/simulated/floor/water/deep,/area/surface/outside/plains/mountains)
@@ -457,7 +457,7 @@
 "qv" = (/obj/structure/bed/chair/office/dark{dir = 8},/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "qw" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/item/weapon/storage/fancy/cigar/havana,/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps,/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing,/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne,/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager,/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater,/obj/item/weapon/reagent_containers/food/drinks/bottle/patron,/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine,/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew,/obj/item/weapon/reagent_containers/food/drinks/golden_cup,/obj/machinery/light{dir = 8},/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "qB" = (/obj/structure/railing{dir = 4},/turf/simulated/floor/water/deep,/area/surface/outside/plains/outpost)
-"qC" = (/obj/structure/sign/christmas/lights{dir = 4},/obj/structure/closet/crate/bin{anchored = 1},/turf/simulated/floor/wood,/area/casino/casino_ship)
+"qC" = (/obj/structure/sign/christmas/lights{dir = 4},/obj/structure/closet/crate/bin,/turf/simulated/floor/wood,/area/casino/casino_ship)
 "qF" = (/obj/structure/table/wooden_reinforced,/obj/structure/sign/christmas/wreath{dir = 1},/obj/item/weapon/dice,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "qG" = (/obj/effect/effect/snow/medium,/obj/structure/flora/tree/pine/xmas,/turf/snow/snow2,/area/casino/casino_ship)
 "qH" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "Casino_North_Interior"; locked = 1; name = "Landing North Internal"},/obj/machinery/access_button{command = "cycle_interior"; frequency = 1379; master_tag = "Casino_North"; name = "Internal Access Button"; pixel_x = -24},/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship)
@@ -496,7 +496,7 @@
 "sc" = (/mob/living/simple_mob/animal/passive/penguin/tux,/turf/simulated/floor/wood/sif/broken,/area/surface/outside/plains/outpost)
 "sd" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8; health = 1e+006},/obj/effect/effect/snow/medium,/obj/structure/flora/grass/both,/turf/snow/snow2,/area/casino/casino_ship)
 "sm" = (/obj/random/trash,/turf/simulated/floor/tiled/freezer,/area/submap/lonehome)
-"su" = (/obj/structure/table/glass,/obj/item/weapon/reagent_containers/food/drinks/cup{pixel_x = 8; pixel_y = -3},/obj/item/weapon/reagent_containers/food/drinks/cup{pixel_x = -4; pixel_y = -3},/obj/item/weapon/storage/box/donut{pixel_y = 11},/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"su" = (/obj/structure/table/glass,/obj/item/weapon/reagent_containers/food/drinks/cup{pixel_x = 8; pixel_y = -3},/obj/item/weapon/reagent_containers/food/drinks/cup{pixel_x = -4; pixel_y = -3},/obj/item/weapon/storage/box/donut{pixel_y = 11},/obj/machinery/light{dir = 1},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "sy" = (/obj/structure/girder/displaced,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
 "sA" = (/obj/structure/table/bench/sifwooden,/turf/simulated/floor/outdoors/dirt{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
 "sD" = (/obj/structure/bed/chair/oldsofa/left{dir = 8},/obj/structure/sign/christmas/lights{dir = 4},/obj/structure/sign/christmas/lights,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
@@ -568,7 +568,7 @@
 "wb" = (/obj/structure/table/wooden_reinforced,/obj/structure/sign/christmas/wreath,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "wf" = (/obj/structure/sign/christmas/lights{dir = 4},/obj/structure/table/glass,/obj/item/weapon/paper_bin,/obj/item/device/tape,/obj/item/weapon/pen,/obj/item/weapon/pen{pixel_x = 4; pixel_y = 4},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "wh" = (/mob/living/simple_mob/animal/passive/fish/koi,/turf/simulated/floor/water/indoors,/area/casino/casino_ship)
-"wk" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters1"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"wk" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters1"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "wp" = (/obj/item/weapon/stool,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "wq" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/greendouble,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "wr" = (/obj/structure/flora/grass/green,/obj/effect/zone_divider,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
@@ -603,7 +603,7 @@
 "xG" = (/obj/structure/flora/rocks2,/obj/structure/boulder,/turf/simulated/floor/outdoors/dirt{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
 "xH" = (/obj/structure/table/wooden_reinforced,/obj/structure/sign/christmas/wreath,/obj/random/plushie,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "xI" = (/obj/machinery/vending/boozeomat,/turf/simulated/wall/log_sif,/area/submap/lonehome)
-"xK" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters6"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"xK" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters6"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "xL" = (/obj/structure/railing{dir = 4},/turf/simulated/floor/water,/area/surface/outside/plains/outpost)
 "xQ" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/item/toy/ammo/crossbow,/obj/item/toy/ammo/crossbow,/obj/item/toy/ammo/crossbow,/obj/item/toy/ammo/crossbow,/obj/item/toy/ammo/crossbow,/obj/item/clothing/under/sexybunny_white/sexybunny_black,/obj/item/clothing/under/sexybunny_white,/obj/item/clothing/head/collectable/rabbitears,/obj/item/clothing/head/collectable/rabbitears,/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "xR" = (/obj/structure/table/glass,/obj/item/weapon/storage/firstaid/o2{pixel_x = 8; pixel_y = 8},/obj/item/weapon/storage/firstaid/toxin{pixel_x = 4; pixel_y = 4},/obj/item/weapon/storage/firstaid/fire,/obj/item/weapon/storage/firstaid/adv{pixel_x = -4; pixel_y = -4},/turf/simulated/floor/tiled/white,/area/casino/casino_ship/wing_left)
@@ -616,7 +616,7 @@
 "yj" = (/obj/structure/table/reinforced,/obj/item/weapon/deck/cards/casino,/obj/item/weapon/deck/cards/casino,/obj/item/weapon/deck/cards/casino,/obj/item/weapon/deck/cards/casino,/obj/item/weapon/deck/cards/casino,/obj/item/weapon/deck/cards/casino,/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "yk" = (/obj/effect/effect/snow/medium,/obj/structure/window/reinforced{dir = 1; health = 1e+006; req_access = list(5)},/turf/snow/snow2,/area/casino/casino_ship)
 "yn" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/carpet/turcarpet,/area/submap/lonehome)
-"yo" = (/obj/structure/table/glass,/obj/item/weapon/reagent_containers/food/drinks/cup{pixel_x = 8; pixel_y = -3},/obj/item/weapon/reagent_containers/food/drinks/cup{pixel_x = -4; pixel_y = -3},/obj/item/weapon/storage/box/donut{pixel_y = 11},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"yo" = (/obj/structure/table/glass,/obj/item/weapon/reagent_containers/food/drinks/cup{pixel_x = 8; pixel_y = -3},/obj/item/weapon/reagent_containers/food/drinks/cup{pixel_x = -4; pixel_y = -3},/obj/item/weapon/storage/box/donut{pixel_y = 11},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "yp" = (/obj/effect/simple_portal/coords{name = "Maze Exit"; tele_x = 137; tele_y = 112; tele_z = 10},/turf/simulated/floor/outdoors/dirt{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
 "yt" = (/obj/machinery/sleeper{dir = 4},/obj/effect/floor_decal/borderfloorwhite,/obj/effect/floor_decal/corner/paleblue/border,/obj/machinery/light,/turf/simulated/floor/tiled/white,/area/casino/casino_ship/wing_left)
 "yu" = (/obj/structure/bed/chair/wood{dir = 8},/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/carpet,/area/submap/lonehome)
@@ -689,7 +689,7 @@
 "BH" = (/obj/machinery/space_heater,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "BP" = (/obj/structure/sign/christmas/lights,/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "BQ" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10},/obj/machinery/door/window/westleft{dir = 2; req_access = list(203)},/turf/simulated/floor/tiled/steel_ridged,/area/casino/casino_ship/wing_left)
-"BR" = (/obj/structure/closet/crate/bin{anchored = 1},/obj/structure/sign/christmas/lights,/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
+"BR" = (/obj/structure/closet/crate/bin,/obj/structure/sign/christmas/lights,/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "BS" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/structure/closet/crate/bin,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "BT" = (/obj/structure/table/glass,/obj/item/weapon/beach_ball,/obj/structure/sign/christmas/wreath{dir = 4},/turf/simulated/floor/wood,/area/casino/casino_ship)
 "BV" = (/mob/living/simple_mob/animal/space/goose/domesticated/casino,/turf/simulated/floor/wood,/area/casino/casino_ship)
@@ -698,7 +698,7 @@
 "BZ" = (/obj/structure/bed/chair/oldsofa/left{dir = 4},/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "Cb" = (/obj/structure/table/glass,/obj/item/weapon/book/manual/casino,/turf/simulated/floor/grass2,/area/casino/casino_ship)
 "Cg" = (/obj/structure/flora/grass/green,/obj/structure/flora/tree/dead,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
-"Ch" = (/obj/structure/closet/crate/bin{anchored = 1},/obj/structure/sign/christmas/lights,/obj/structure/sign/christmas/wreath{dir = 8},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
+"Ch" = (/obj/structure/closet/crate/bin,/obj/structure/sign/christmas/lights,/obj/structure/sign/christmas/wreath{dir = 8},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "Cm" = (/obj/structure/closet/secure_closet/freezer/kitchen{locked = 0},/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "Ct" = (/obj/structure/flora/log1,/turf/simulated/floor/water/hotspring{can_atmos_pass = 0; color = "cyan"; temperature = 300},/area/surface/outside/plains/mountains)
 "Cu" = (/obj/structure/bed/chair/oldsofa/right{dir = 8},/obj/structure/sign/christmas/lights{dir = 4},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
@@ -741,7 +741,7 @@
 "Ek" = (/obj/structure/window/reinforced{dir = 8; health = 1e+006},/obj/structure/window/reinforced{dir = 1},/obj/effect/effect/snow/medium,/turf/snow/snow2,/area/casino/casino_ship)
 "En" = (/obj/structure/window/phoronreinforced,/obj/structure/table/bench/marble,/obj/structure/curtain/bed{name = "curtain"},/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "Eo" = (/obj/structure/undies_wardrobe,/obj/structure/sign/christmas/lights{dir = 4},/turf/simulated/floor/wood,/area/casino/casino_ship)
-"Er" = (/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_x = -32},/obj/structure/bed/chair/comfy/purp{dir = 4},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"Er" = (/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_x = -32},/obj/structure/bed/chair/comfy/purp{dir = 4},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "Ew" = (/obj/structure/closet/secure_closet/engineering_electrical{req_access = list(203)},/obj/effect/floor_decal/borderfloor{dir = 1},/obj/effect/floor_decal/corner/yellow/border{dir = 1},/turf/simulated/floor/tiled,/area/casino/casino_ship/wing_left)
 "Ey" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
 "EF" = (/obj/structure/window/reinforced,/obj/item/clothing/head/helmet/space/emergency,/obj/item/clothing/head/helmet/space/emergency,/obj/item/clothing/head/helmet/space/emergency,/obj/item/clothing/head/helmet/space/emergency,/obj/item/clothing/head/helmet/space/emergency,/obj/effect/floor_decal/borderfloor,/obj/effect/floor_decal/corner/yellow/border,/obj/structure/table/rack/shelf,/obj/item/clothing/head/helmet/space/emergency,/obj/item/clothing/head/helmet/space/emergency,/obj/item/clothing/head/helmet/space/emergency,/obj/item/clothing/head/helmet/space/emergency,/obj/item/clothing/head/helmet/space/emergency,/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship/wing_left)
@@ -774,7 +774,7 @@
 "Gu" = (/obj/structure/table/marble,/obj/machinery/door/blast/shutters{dir = 4; id = "Casinobar"; layer = 3.1; name = "Casino bar shutter"},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "Gz" = (/obj/structure/curtain/open/bed{name = "casino curtain"},/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
 "GA" = (/obj/structure/sign/christmas/wreath{dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
-"GD" = (/obj/structure/sign/christmas/lights{dir = 8},/obj/structure/closet/crate/bin{anchored = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
+"GD" = (/obj/structure/sign/christmas/lights{dir = 8},/obj/structure/closet/crate/bin,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "GG" = (/obj/machinery/crystal/ice,/turf/simulated/floor/outdoors/ice{outdoors = 0},/area/surface/outside/plains/mountains)
 "GL" = (/obj/structure/table/wooden_reinforced,/obj/structure/sign/christmas/wreath{dir = 1},/obj/item/device/starcaster_news,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "GP" = (/obj/effect/floor_decal/corner/grey/diagonal{dir = 4},/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/animal/sif/glitterfly/rare{canmove = 0; glow_intensity = 0.5; glow_range = 7.5; glow_toggle = 1; move_speed = 10000; movement_cooldown = -10000},/turf/simulated/floor/tiled/white,/area/submap/lonehome)
@@ -840,14 +840,14 @@
 "Kr" = (/obj/structure/table/wooden_reinforced,/obj/item/weapon/book/manual/casino,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "Ks" = (/obj/fiftyspawner/diamond,/turf/simulated/floor/flock,/area/surface/outside/plains/mountains)
 "Kt" = (/obj/structure/kitchenspike,/turf/simulated/floor/tiled/freezer,/area/submap/lonehome)
-"Ku" = (/obj/structure/table/glass,/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee{pixel_x = 4; pixel_y = 6},/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee,/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee{pixel_x = 6; pixel_y = -3},/obj/item/weapon/reagent_containers/food/drinks/bottle/cream{pixel_x = -5; pixel_y = 17},/obj/item/weapon/reagent_containers/food/condiment/small/sugar{pixel_x = -6; pixel_y = -1},/obj/item/weapon/reagent_containers/food/condiment/small/sugar{pixel_x = -6; pixel_y = -1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"Ku" = (/obj/structure/table/glass,/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee{pixel_x = 4; pixel_y = 6},/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee,/obj/item/weapon/reagent_containers/food/condiment/small/packet/coffee{pixel_x = 6; pixel_y = -3},/obj/item/weapon/reagent_containers/food/drinks/bottle/cream{pixel_x = -5; pixel_y = 17},/obj/item/weapon/reagent_containers/food/condiment/small/sugar{pixel_x = -6; pixel_y = -1},/obj/item/weapon/reagent_containers/food/condiment/small/sugar{pixel_x = -6; pixel_y = -1},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "Kw" = (/obj/machinery/recharge_station,/obj/structure/sign/christmas/lights{dir = 8},/obj/structure/sign/christmas/lights,/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
 "Kz" = (/obj/structure/bed/chair/sofa/yellow/left,/obj/structure/sign/christmas/lights{dir = 1},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "KG" = (/mob/living/simple_mob/animal/sif/glitterfly/rare{canmove = 0; glow_intensity = 0.5; glow_range = 7.5; glow_toggle = 1; move_speed = 10000; movement_cooldown = -10000},/turf/simulated/floor/water/hotspring{can_atmos_pass = 0; color = "cyan"; temperature = 300},/area/surface/outside/plains/mountains)
 "KK" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8; health = 1e+006},/obj/machinery/door/blast/shutters{dir = 2; id = "Casinodormshutters6"; layer = 3.5; name = "Casino Privacy shutters"},/turf/simulated/floor,/area/casino/casino_ship/dorms)
 "KP" = (/obj/structure/flora/tree/pine{icon_state = "pine_2"},/obj/structure/flora/grass/green,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
 "KT" = (/obj/structure/sign/christmas/lights,/obj/structure/event/present,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
-"KV" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm4"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"KV" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm4"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "KW" = (/turf/simulated/floor/water/indoors,/area/casino/casino_ship)
 "KZ" = (/obj/structure/flora/pottedplant/xmas{anchored = 1},/obj/structure/sign/christmas/lights{dir = 8},/obj/structure/sign/christmas/lights,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "Le" = (/obj/structure/bed/chair/oldsofa/corner{dir = 8},/obj/structure/sign/christmas/lights,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
@@ -870,7 +870,7 @@
 "LS" = (/obj/structure/table/wooden_reinforced,/obj/structure/sign/christmas/wreath,/obj/item/toy/eight_ball/conch,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "LX" = (/obj/structure/bed/chair/oldsofa/left{dir = 4},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "Mb" = (/mob/living/simple_mob/animal/sif/kururak/hibernate,/turf/simulated/floor/outdoors/dirt{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
-"Mc" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters3"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"Mc" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters3"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "Me" = (/obj/machinery/vending/fishing,/obj/machinery/light{dir = 1},/turf/simulated/floor/grass,/area/casino/casino_ship)
 "Mj" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/piratedouble,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "Mm" = (/obj/machinery/gibber,/turf/simulated/floor/plating,/area/submap/lonehome)
@@ -882,7 +882,7 @@
 "MC" = (/obj/structure/table/marble,/obj/machinery/door/window/westright{layer = 3.1; name = "Both access"; req_access = list(200)},/obj/machinery/door/blast/shutters{dir = 8; id = "Casino Front Desk"; layer = 3.2; name = "Front Desk Shutters"},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "MF" = (/obj/structure/table/bench/sifwooden,/obj/effect/mist,/obj/structure/sign/christmas/wreath{dir = 1},/turf/simulated/floor/wood,/area/casino/casino_ship)
 "MG" = (/obj/structure/window/reinforced{dir = 8},/obj/item/weapon/tank/oxygen,/obj/item/weapon/tank/oxygen,/obj/item/weapon/tank/oxygen,/obj/item/weapon/tank/oxygen,/obj/item/weapon/tank/oxygen,/obj/structure/window/reinforced,/obj/effect/floor_decal/borderfloor,/obj/effect/floor_decal/corner/yellow/border,/obj/structure/table/rack/shelf,/obj/item/weapon/tank/oxygen,/obj/item/weapon/tank/oxygen,/obj/item/weapon/tank/oxygen,/obj/item/weapon/tank/oxygen,/obj/item/weapon/tank/oxygen,/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship/wing_left)
-"MI" = (/obj/structure/closet/crate/bin{anchored = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"MI" = (/obj/structure/closet/crate/bin,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "MJ" = (/obj/machinery/door/airlock/silver{id_tag = "casinodorm3"; name = "Dorm room 3"},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "MM" = (/obj/machinery/vending/snack,/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "MP" = (/obj/item/weapon/spacecasinocash/c200,/turf/simulated/floor/flock,/area/surface/outside/plains/mountains)
@@ -903,14 +903,14 @@
 "NG" = (/obj/structure/flora/ausbushes/reedbush,/turf/simulated/floor/grass,/area/casino/casino_ship)
 "NH" = (/obj/structure/sign/christmas/wreath,/obj/structure/event/present,/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet/turcarpet,/area/casino/casino_ship)
 "NL" = (/obj/structure/sign/christmas/lights{dir = 1},/obj/structure/event/present,/obj/machinery/light{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
-"NM" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm1"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"NM" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm1"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "NO" = (/obj/structure/table/wooden_reinforced,/obj/structure/sign/christmas/wreath,/obj/item/toy/eight_ball,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "NS" = (/obj/effect/decal/cleanable/dirt,/obj/structure/closet/crate/bin,/turf/simulated/floor/wood/sif,/area/submap/lonehome)
 "NX" = (/obj/effect/floor_decal/techfloor/orange{dir = 6},/turf/simulated/floor/tiled/techfloor,/area/casino/casino_ship)
 "Oa" = (/obj/machinery/door/airlock/glass_external{autoclose = 0; frequency = 1379; icon_state = "door_locked"; id_tag = "Casino_South_Interior"; locked = 1; name = "Landing South Internal"},/turf/simulated/floor/tiled/steel_grid,/area/casino/casino_ship)
 "Oc" = (/mob/living/simple_mob/animal/sif/leech,/turf/simulated/floor/water/deep,/area/surface/outside/plains/outpost)
 "Od" = (/turf/simulated/wall/log_sif,/area/submap/lonehome)
-"Oj" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm3"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"Oj" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm3"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "Ok" = (/obj/structure/closet/crate/bin,/turf/simulated/floor/wood/sif/broken,/area/submap/lonehome)
 "Om" = (/obj/structure/table/standard,/obj/item/weapon/material/ashtray,/turf/simulated/floor/tiled,/area/casino/casino_ship/wing_right)
 "Op" = (/obj/machinery/door/airlock/silver{id_tag = "casinodorm6"; name = "Dorm room 6"},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
@@ -961,7 +961,7 @@
 "Qu" = (/obj/structure/flora/log2,/turf/simulated/floor/water{outdoors = 0},/area/surface/outside/plains/mountains)
 "QB" = (/obj/machinery/door/airlock/silver{id_tag = "casinodorm2"; name = "Dorm room 2"},/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "QC" = (/obj/structure/flora/pottedplant/xmas{anchored = 1},/obj/structure/sign/christmas/lights,/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
-"QE" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters4"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6; req_access = null},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"QE" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters4"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6; req_access = null},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "QO" = (/obj/machinery/autolathe,/obj/effect/floor_decal/borderfloor,/obj/effect/floor_decal/corner/yellow/border,/turf/simulated/floor/tiled,/area/casino/casino_ship/wing_left)
 "QP" = (/obj/effect/floor_decal/techfloor/orange{dir = 5},/turf/simulated/floor/tiled/techfloor,/area/casino/casino_ship)
 "QS" = (/turf/simulated/floor/tiled/dark,/area/casino/casino_ship/wing_left)
@@ -988,18 +988,18 @@
 "RS" = (/obj/structure/bed/chair/sofa/yellow/corner{dir = 8},/obj/structure/sign/christmas/lights,/obj/structure/sign/christmas/lights{dir = 4},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "RX" = (/obj/structure/bed/chair/oldsofa/right{dir = 8},/obj/structure/sign/christmas/lights{dir = 4},/obj/structure/sign/christmas/lights{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "RY" = (/obj/structure/flora/tree/jungle,/turf/simulated/floor/grass,/area/casino/casino_ship)
-"Sb" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm5"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"Sb" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm5"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "Sf" = (/obj/structure/sign/christmas/wreath{dir = 1},/obj/machinery/light{layer = 3},/turf/simulated/floor/water/deep/pool,/area/casino/casino_ship)
 "Sn" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 8; health = 1e+006},/obj/effect/effect/snow/medium,/obj/structure/flora/grass/both,/turf/snow/snow2,/area/casino/casino_ship)
 "Sp" = (/obj/machinery/button/remote/blast_door{dir = 1; id = "Casinoboth 2"; name = "Casino Shutter"; pixel_x = -4; pixel_y = -29; req_one_access = list(200)},/obj/machinery/button/remote/blast_door{dir = 8; id = "Casinoprizes"; name = "Prize Shutters"; pixel_x = 28; pixel_y = 4; req_one_access = list(200)},/turf/simulated/floor/carpet/blucarpet,/area/casino/casino_ship)
-"Sq" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters2"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"Sq" = (/obj/machinery/button/remote/blast_door{id = "Casinodormshutters2"; name = "Casino Dorm Shutters"; pixel_x = 24; pixel_y = -6},/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "Sv" = (/obj/effect/effect/snow/medium,/obj/structure/window/reinforced{dir = 1; health = 1e+006; req_access = list(5)},/obj/structure/flora/grass/green,/turf/snow/snow2,/area/casino/casino_ship)
 "Sx" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/toolbox/electrical{pixel_y = 7},/obj/item/weapon/storage/toolbox/mechanical,/turf/simulated/floor/plating,/area/submap/lonehome)
 "Sy" = (/turf/simulated/floor/wood/sif,/area/surface/outside/plains/outpost)
 "SB" = (/obj/structure/sign/christmas/lights{dir = 4},/obj/machinery/light{dir = 4},/turf/simulated/floor/water/deep/pool,/area/casino/casino_ship)
 "SF" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 8; frequency = 1380; id_tag = "casino1_pump"},/obj/machinery/light/small{dir = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/casino/casino_ship)
-"SL" = (/obj/structure/closet/crate/bin{anchored = 1},/obj/machinery/light,/turf/simulated/floor/grass,/area/casino/casino_ship)
-"SO" = (/obj/structure/closet/crate/bin{anchored = 1},/obj/structure/sign/christmas/lights{dir = 1},/obj/structure/sign/christmas/wreath{dir = 8},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
+"SL" = (/obj/structure/closet/crate/bin,/obj/machinery/light,/turf/simulated/floor/grass,/area/casino/casino_ship)
+"SO" = (/obj/structure/closet/crate/bin,/obj/structure/sign/christmas/lights{dir = 1},/obj/structure/sign/christmas/wreath{dir = 8},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
 "SP" = (/mob/living/simple_mob/vore/rabbit/brown,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
 "ST" = (/mob/living/simple_mob/vore/rabbit/black,/turf/simulated/floor/outdoors/snow/sif/planetuse{temperature = 293.15},/area/surface/outside/plains/outpost)
 "SW" = (/obj/structure/bed/chair/oldsofa/corner{dir = 4},/obj/structure/sign/christmas/lights{dir = 1},/obj/structure/sign/christmas/lights{dir = 8},/turf/simulated/floor/carpet/oracarpet,/area/casino/casino_ship)
@@ -1019,7 +1019,7 @@
 "TG" = (/obj/structure/flora/tree/sif,/turf/simulated/floor/outdoors/mud/sif/planetuse{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
 "TH" = (/obj/structure/flora/pottedplant/xmas{anchored = 1},/obj/structure/sign/christmas/lights,/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_y = -32},/obj/machinery/light,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "TJ" = (/obj/structure/flora/log1,/turf/simulated/floor/water/deep,/area/surface/outside/plains/outpost)
-"TK" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm6"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"TK" = (/obj/structure/table/glass,/obj/machinery/button/remote/airlock{id = "casinodorm6"; name = "door lock"; pixel_x = 24; specialfunctions = 4},/obj/random/plushie,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "TO" = (/obj/structure/sign/christmas/wreath,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor/carpet/gaycarpet,/area/casino/casino_ship)
 "TT" = (/obj/structure/sign/christmas/lights{dir = 8},/obj/structure/event/present,/obj/structure/event/present,/obj/machinery/light{dir = 8},/turf/simulated/floor/carpet/turcarpet,/area/casino/casino_ship)
 "TX" = (/obj/machinery/computer/transhuman/resleeving{dir = 8},/turf/simulated/floor/tiled/white,/area/casino/casino_ship/wing_left)
@@ -1091,7 +1091,7 @@
 "Xy" = (/obj/structure/sign/christmas/wreath{dir = 4},/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_x = -32},/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship)
 "XB" = (/obj/effect/decal/remains/human,/obj/item/clothing/under/yw/victsuit/victdress,/turf/simulated/floor/flock,/area/surface/outside/plains/mountains)
 "XD" = (/obj/structure/flora/rocks1,/obj/structure/boulder,/turf/simulated/floor/outdoors/dirt{can_atmos_pass = 0; outdoors = 0; temperature = 300},/area/surface/outside/plains/mountains)
-"XF" = (/obj/structure/bed/chair/comfy/purp{dir = 8},/obj/machinery/light,/turf/simulated/floor/carpet/bcarpet,/area/casino/casino_ship/dorms)
+"XF" = (/obj/structure/bed/chair/comfy/purp{dir = 8},/obj/machinery/light,/turf/simulated/floor/wood,/area/casino/casino_ship/dorms)
 "XG" = (/obj/structure/flora/log2,/turf/simulated/floor/water,/area/surface/outside/plains/mountains)
 "XH" = (/obj/effect/floor_decal/borderfloor,/obj/effect/floor_decal/corner/brown/border,/turf/simulated/floor/tiled,/area/casino/casino_ship/wing_left)
 "XO" = (/obj/effect/zone_divider,/turf/simulated/floor/water,/area/surface/outside/plains/outpost)
@@ -1274,31 +1274,31 @@ hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNgNgNgNabababbZcfcgclcwabababababmNgNmNmNmNmN
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcgNmNmNgNgNgNgNdrcqabdAdJdJdJdRabdTdXabababababgNgNgNmNOuUgUggNgNmNmNaceaecekecereOePePffePePCLfjaEfkaEflfpfpfpflfvfkfvfjfCfFfFfIfFfFfMfPacbMbWacmNmNmNgNmNgNmNmNmNgNgNmNgNgNgNgNgNgNmNgNgNgNgNgNgNmNgNgNgNmNmNmNmNmNmNwtmNmNhXmNmNmNfBmNmNmNmNaFhXmNmNfXmNmNmNmNmNmNhXmNmNmNmNcCmNmNmNmNmNmNmNeGmNmNmNmNmNhXmNmNhXmNmNmNmNdqmNmNmNmNblmNmNmNmNhXmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNgNgNgNgNgNgNdrcqabfQfYgbgcdJgmdJdJgogpgvgAababababababgDgGacacacacacgZkchbhDcMeFeZeZbNeZeZeZdzfjhZfjflflflflflfjfjfjdzIqIqIqbDIqIqeFeFiKgyjjaPjojpjpjpjvaPjwjHjHjHjIaPjJjWjWjWkgaPbMbPbPbPbPbPbPbPbPbPbWacacgNmNmNmNmNmNmNmNmNmNmNmNfBmNmNrzhYmNmNmNlFmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNhXmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNwtmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNgNgNcpgNdrcqabababababababkDdJlRdJdJwHabababababablSlWacnAlXacmnmomvmwmycMeFbNbNbNbNbNbNeFeFeFdzdzdzdzdzdzdzeFeFeFbDbDbDbDbDbDeFeFmEfhglaPmOKusuMIkTaPmOfGsuMIkTaPmOfGsuMIkTaPoZoZoZikoZqWxzMexexeTxacacacacmNmNgNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNlFaFmNmNmNmNmNmNmNmNozmNmNmNhXmNmNmNmNmNmNmNmNwtmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNmNmNmNeGmNav
-hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNgNgNgNcqNsabCCabNyJCtOabZndJMGHALpEFabXTQSDuBQabPKSFacdyPUacXytnrKTfFapDeFyZyZbNyZyZyZeFBGeFeFeFeFeFeFeFeFeFBGeFYjYjYjbDYjYjeFeFfVgyfEaPlPlPlPlPwkaPlPlPlPlPSqaPlPlPlPlPMcaPoZoZDHoZoZoZuUoZoZoZoZacacacacacacacmNgNmNmNmNmNmNmNmNmNmNmNmNmNmNlFmNmNmNdqmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNcCmNmNmNSTmNmNmNmNmNmNhXmNmNmNmNfBmNhXblmNhXmNmNmNmNmNav
+hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNgNgNgNcqNsabCCabNyJCtOabZndJMGHALpEFabXTQSDuBQabPKSFacdyPUacXytnrKTfFapDeFyZyZbNyZyZyZeFBGeFeFeFeFeFeFeFeFeFBGeFYjYjYjbDYjYjeFeFfVgyfEaPbhlPlPlPwkaPbhlPlPlPSqaPbhlPlPlPMcaPoZoZDHoZoZoZuUoZoZoZoZacacacacacacacmNgNmNmNmNmNmNmNmNmNmNmNmNmNmNlFmNmNmNdqmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNcCmNmNmNSTmNmNmNmNmNmNhXmNmNmNmNfBmNhXblmNhXmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNgNAOgNcqNsabVRabXXxXxRabBDdJdJdJdJdJdJdJdJdJjiabqHqhacdZacacnTeFeFeFeFeFeFeZeZbNeZeZeZeFeFeFdzdzdzdzdzdzdzeFeFeFIqIqIqbDIqIqeFeFwygyfEaPErgnonlPkSaPErgnonlPkSaPErgnonlPkSaPUkCvoZoZuUZzoZoZDHoZzvacuXUFnXJFowacacacgNmNmNmNmNmNmNmNmNmNmNmNmNlFmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNcCmNmNmNmNmNaFmNmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNgNgNgNdrcqabVRabYLxXxXUwdJdJqsXHkPXHXHkDdJdJLMabYnjOaclhdyoueFeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFdzdzdzdzdzdzdzeFeFeFeFeFeFeFeFeFeFeFwfgyfEaPaPaPaPoifoaPaPaPaPoifoaPaPaPaPoifoaPTxDFAfAfAfoZoZNGoZoZoZacbDbDbDbDbDacacacacacgNwtmNmNmNmNmNmNeGmNmNlFmNfBmNmNmNmNmNaFmNmNmNmNmNmNmNmNmNdqhXmNmNOTmNmNozdqmNhXmNmNmNmNmNmNmNdqmNmNblmNmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcgNgNgNgNgNgNgNdrcqabababxXxXsIababRGababababababCMdJFoabYnjOacdZacacnTeFeFeFeFeFeFeFeFeFeFOsnIcnLBWlLBGSOseFOsnIcncncnWDcncnGSxncneFeFeFMzLnglaPZweYaPlPNMaPZweYaPlPpXaPZweYaPlPOjaPrLpHAfAfAfoZwhKWwhtFxzacTYFkbDbDVXacrjacrjacacacmNgNmNmNmNmNmNmNmNlFmNmNmNmNmNmNeGmNmNmNmNmNwtmNqmmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNaFmNmNmNblmNeGmNhXmNhYmNav
-hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNgNcpgNdrcqabPLzZxXxXBvabEddJMWYfuyuyEwababHSCNabfSGmacdyPUacxaijFaKleFeFeFdzdzdzaAXkdLdLdLegdLdLrtHYhddLQhdLdLdLegdLdLrnacbOeFeFknFpJXaPribqlMlPlNaPribqlMlPlNaPribqlMlPlNaPqWpHAfAfAfoZKWKWKWoZTxaczrFmbDbDNwacLQacLQacacacacacmNgNmNmNmNmNmNlFmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNhXmNmNmNmNmNmNmNmNmNmNeGmNmNmNmNmNmNblmNmNmNmNmNmNmNav
-hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNgNgNgNgNgNcqNsabYLxXxXxXTXabujdJdJdJdJdJpJacjYbNzPTOEyFPacnAlXacuZrKTfcMeFeFeFdzZcoCcecFqrosKzYFrsrsXhdzXhLSYXosKzNOrsrsSOqUackyeFeFeFNLAhaPaPaPaPxoaPaPaPaPaPQBaPaPaPaPaPMJaPaPTxpHAfAfAfoZKWwhKWNGoZacNwNwbDbDqiaceEuneEacBbMXBbacacacgNmNmNmNmNUNmNmNmNmNmNOTmNmNmNmNcCmNmNmNmNmNmNmNmNmNmNmNeGmNmNmNeGmNmNmNmNmNmNmNmNmNmNmNblmNmNmNaFmNmNmNav
-hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNgNgNgNAOgNcqNsabUbMuytUbZtabLlXZQOoDqYpPKbacXUbNgtjURIoPacacacacBnAdnLNCeFeFeFdzdzAYaAcFWobNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNmrmrbNbNbNbNbNbNmrBFVimrbNmrmrtNmrmrbNmrmrtNmrmrfLgyacqWCbAfAfAfoZuUoZoZoZoZacqiqibDbDbDnBeEeEeEwaeEeEeEmUacacacmNmNmNmNlFmNmNmNmNmNmNmNmNfBmNmNmNmNmNmNmNaFmNmNmNaFmNOTmNmNmNmNmNmNmNmNmNfBmNwtmNmNmNblmNmNmNmNmNmNmNav
-hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNgNabNsababababababababhkhkhkhkhkhkhkURbNGAqaykSvfEfEfEfEykykEPBReFeFeFeFeFeFeVcFZFbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNjUQojUbNbNbNbNbNbNbNbNbNbNjUjUQtjUjUwAjUjUQtbNbNfLfhacPttFAfoZoZZzoZoZDHoZmWacvNbDbDbDvNacWtpMtoacOHpMOHacacacacgNgNmNmNlFmNmNmNdqmNOTcCmNmNmNmNmNmNmNmNmNmNmNaFmNmNmNmNmNmNmNmNmNmNmNdqozmNmNmNaFmNmNblmNmNmNmNwtmNmNav
+hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNgNcpgNdrcqabPLzZxXxXBvabEddJMWYfuyuyEwababHSCNabfSGmacdyPUacxaijFaKleFeFeFdzdzdzaAXkdLdLdLegdLdLrtHYhddLQhdLdLdLegdLdLrnacbOeFeFknFpJXaPribqlMbhlNaPribqlMbhlNaPribqlMbhlNaPqWpHAfAfAfoZKWKWKWoZTxaczrFmbDbDNwacLQacLQacacacacacmNgNmNmNmNmNmNlFmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNhXmNmNmNmNmNmNmNmNmNmNeGmNmNmNmNmNmNblmNmNmNmNmNmNmNav
+hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNgNgNgNgNgNcqNsabYLxXxXxXTXabujdJdJdJdJdJpJabjYbNzPTOEyFPacnAlXacuZrKTfcMeFeFeFdzZcoCcecFqrosKzYFrsrsXhdzXhLSYXosKzNOrsrsSOqUackyeFeFeFNLAhaPaPaPaPxoaPaPaPaPaPQBaPaPaPaPaPMJaPaPTxpHAfAfAfoZKWwhKWNGoZacNwNwbDbDqiaceEuneEacBbMXBbacacacgNmNmNmNmNUNmNmNmNmNmNOTmNmNmNmNcCmNmNmNmNmNmNmNmNmNmNmNeGmNmNmNeGmNmNmNmNmNmNmNmNmNmNmNblmNmNmNaFmNmNmNav
+hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNgNgNgNAOgNcqNsabUbMuytUbZtabLlXZQOoDqYpPKbabXUbNgtjURIoPacacacacBnAdnLNCeFeFeFdzdzAYaAcFWobNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNmrmrbNbNbNbNbNbNmrBFVimrbNmrmrtNmrmrbNmrmrtNmrmrfLgyacqWCbAfAfAfoZuUoZoZoZoZacqiqibDbDbDnBeEeEeEwaeEeEeEmUacacacmNmNmNmNlFmNmNmNmNmNmNmNmNfBmNmNmNmNmNmNmNaFmNmNmNaFmNOTmNmNmNmNmNmNmNmNmNfBmNwtmNmNmNblmNmNmNmNmNmNmNav
+hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNgNabNsabababababababababababababababURbNGAqaykSvfEfEfEfEykykEPBReFeFeFeFeFeFeVcFZFbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNjUQojUbNbNbNbNbNbNbNbNbNbNjUjUQtjUjUwAjUjUQtbNbNfLfhacPttFAfoZoZZzoZoZDHoZmWacvNbDbDbDvNacWtpMtoacOHpMOHacacacacgNgNmNmNlFmNmNmNdqmNOTcCmNmNmNmNmNmNmNmNmNmNmNaFmNmNmNmNmNmNmNmNmNmNmNdqozmNmNmNaFmNmNblmNmNmNmNwtmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNgNgNgNgNdrcqacVdcDNHvMFnuGxHPJCTNLIpumRACTcBbNdSkbjjjjjjfEfEjjjjNojkacbObNbNeFeFeFddeoaJbNbNeFenhMhMhMhMhMeneFeFeFeFeFinhdQhrncReFeFeFcnGScneFeFAtsdPiPiPiaVoEaVzntzKwbNLNgyacxzoZAfoZDHoZoZCvoZoZoZacacacwvacacacacacacacacacacacacacacacmNmNmNlFmNmNmNmNmNmNmNhXhXmNmNeGmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNhXblmNdqmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmcgNgNgNgNgNdrcqacbkDcfveFeFrdXWXiXveFrdXWKrXveFbNGAkbhajjjjqGjgjjjjjjjkackybNbNeFeFeFiecFKZbNbNeFacjGjGjGjGjGaceFjQjQjQeFeFYXpncFcdeFeFceacacaceFnGaczNpzpzpzDaacacacacacbbfLgyacrLqWAfSLoZxzTxJDtFRYCvacDqwzeFBfvIqXRXwUxuwbRXgyaclOdkuOHiacgNmNmNlFmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNhXmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmcgNgNgNcpgNdrcqacTTaEaEeFeFeFeFeFeFeFeFeFeFeFeFbNdSVtjVexexexexexexAoeyxycBbNbNeFeFeFknoMxdembNhMZsdzdzdzdzdzGueFjQPYjQeFeFdzvFcFcZeFeFdztXfeacfqacacqwfyfOPEVmacyjaQaRacbSfLCRacacactUacacacacacacacacacIMeFeFeFTgXWYVEjxhlBYVSnaclOdzdzHiBWgNmNmNlFmNeGmNmNmNmNmNmNhXmNmNmNmNmNhXmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNaFmNmNmNmNblmNmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNgNdrcqacAFaTQPbNbNbNbNbNbNbNbNbNbNbNbNbNgtmrBFVimrmrmrmrViBFmrbNbNbNbNbNbNbNbNVimrbNbNhMZsdzulpknjdzGueFjQjQjQeFeFdzJMaWZYeFeFdzMCqvGzbDaYacpTCDoJCDTZacydbDPHacbbbNbgbdlCbgdzbgbgbdbglCbgbdrWacHheFeFeFeFeFeFQqeFeFeFnvaclOdzdzHiBtgNmNmNlFmNmNmNmNcCmNmNmNmNmNmNmNeGmNmNmNfBmNmNmNmNmNmNmNmNdqmNmNmNmNeGmNmNmNmNmNmNmNblmNhYmNeGmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNgNgNgNdrcqacBybwbxbNbNbNlYsQdcdcdcmaRBLsLsLsgtbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNhMZsdzZxzdImdzpeeFeFeFeFeFeFdzUTbsGDeFeFdzoQbDkCbDbDHQbDbDbDbDbDHQbDbDbDbtbNbNdzdzdzdzdzdzdzdzdzdzdzdzdzWSeFeFeFeFeFeFeFeFeFeFeFeFPMlOdzZlYqBtgNmNmNlFmNmNmNhXmNmNmNmNmNmNmNmNmNmNmNmNeGmNmNmNmNmNhYOTmNmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNmNmNmNmNmNav
-hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNcpgNdrcqacIPzCNXbNbNbNbNbNbNbNbNbNbNbNbNbNgtjUQoQtjUjUjUjUQtQojUbNbNbNbNbNbNbNbNQtjUbNbNhMZsdzKiobEVdzGueFjQjQjQeFeFdzRxAALveFeFdzMCqvVnbDSpacRDWwPwWwxQacYEbDbEacbbbNbIbJlpbIdzbIbIbJbIlpbIbJTebhIreFeFeFeFeFeFnIeFeFeFrCaclOdzdzHiBtmNmNmNlFmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNhXmNfBmNmNmNmNfBmNfBmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNmNmNmNmNmNav
+hPmcmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNcpgNdrcqacIPzCNXbNbNbNbNbNbNbNbNbNbNbNbNbNgtjUQoQtjUjUjUjUQtQojUbNbNbNbNbNbNbNbNQtjUbNbNhMZsdzKiobEVdzGueFjQjQjQeFeFdzRxAALveFeFdzMCqvVnbDSpacRDWwPwWwxQacYEbDbEacbbbNbIbJlpbIdzbIbIbJbIlpbIbJTeacIreFeFeFeFeFeFnIeFeFeFrCaclOdzdzHiBtmNmNmNlFmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNhXmNfBmNmNmNmNfBmNfBmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNgNgNgNdrcqacOPJpaEeFeFeFeFeFeFeFeFeFeFeFeFbNdSqaykykykQWykykykykEPJcpQbNbNeFeFeFknXkTAembNhMZsdzdzdzdzdzGueFjQPYjQeFeFdzvFcFwVeFeFdztXquacZqacaczWKhYMvQuoacINBqbRacbSfLEkacacacySacacacacacacacacacwWeFeFeFLXlBCuHPBZXWCuEkaclOdzdzHinZmNmNmNlFmNmNmNcCmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNfBmNmNmNmNmNmNmNmNFimNmNmNmNmNmNmNblmNmNmNaFmNdqmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNgNgNgNdrcqacbkDcaEeFeFrdXWmQXveFrdmsXWXveFbNGAkbjjjjjjjjqGjjjjjjjkackybNbNeFeFeFiecFXhbNbNeFackvkvkvkvkvaceFjQjQjQeFeFaLRSeocdeFeFceacacaceFnGaczNpzpzpzDaacacacacacbbfLLnaccicjlOcjQfaccmbVKdbVYNacZIcneFGSIZWKsDABpVlrqnfhaclOdkEJHiacgNmNmNlFmNmNmNmNmNXPmNmNmNmNdqmNmNmNeGmNmNcCmNmNmNmNmNmNmNmNdqmNmNeGmNaFanmNmNwtmNmNblmNhXmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNgNgNcpgNdrcqacRqzlrFKppFbLGLyvcumpttmtwPcucBbNdSkbNojjjjfEfEgzjjhajkacbObNbNeFeFeFddcFcvbNbNeFcHhMhMhMhMhMcHeFeFeFeFeFinhddLmzcReFeFeFwzBfwzeFeFcTFpcScScSJXOAOAyMchBsbNLNgyacUelOlOlOEoacmPdjdjdjVjacacacItacacacacacacacacacacacacacacacgNmNmNfXmNmNmNmNmNmNmNmNmNmNfBmNmNmNmNmNmNmNmNdqmNmNmNmNmNmNmNcCmNmNmNmNmNmNmNmNmNmNblmNmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNmNgNgNgNhkTwhkhkhkhkhkhkhkhkhkhkhkhkhkhkhkMMbNGAiIexexfEfEfEfEexexeyjYeFeFeFeFeFeFeVcFQjbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNmrBFmrbNbNbNbNbNbNbNbNbNbNmrmrVimrmrtNmrmrVibNbNfLfhacDElOlOlOlOcUdjdjdjdjVjacdklOlOlOdkacogsJIzlOdflODleEunVVacgNmNmNmNlFmNmNmNmNmNmNmNdqmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNeGmNmNmNmNmNmNmNdqmNmNmNmNmNmNblmNmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmNmNgNgNgNgNgNgNeSTwhkbXdebAaqbndevvhkAUEbkdkdcohkGsbNgtmrBFkfacacacacSWekeckaeFeFeFdzdzAYaAcFWobNbNbNbNbNbNbNbNbNbNbNbNbNbNbNbNjUjUbNbNbNbNbNbNjUQoQtjUbNjUjUwAjUjUbNjUjUwAjUjUfLgyacUelOlOlOpgacZMMFZZMFdBaclOdzdzdzlOqKlOlOlOlOlODyacWtrNacacmNmNmNmNlFmNmNmNmNmNmNhXmNmNhXmNmNmNmNmNmNeGhXmNSTmNmNmNmNmNmNeGmNfBmNmNmNmNmNmNmNmNmNblmNmNmNwtmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmcmcmcmNgNmNgNgNgNAOgNeSTwhkPNjyyblUybjyPNhkIKlUlUlUlUhkfAbNAZuzUKFPacnAlXacuZrKTfcMeFeFeFdzZcoCcecFzSOQCXuBFjbIQCdzQCqFaLOQCXCSbIKTChHGackyeFeFeFmpxAaPaPaPaPyDaPaPaPaPaPbCaPaPaPaPaPOpaPaPBTlOlOlOqCacacacacacacactvdzdzdzJbaclOlOlOZBWJacacacacacgNmNmNeGmNlFhXmNmNmNmNmNmNmNmNmNmNmNdqmNSPmNfBmNmNeGmNmNmNmNmNmNmNmNmNmNcCaFmNmNmNmNmNmNblmNmNmNmNmNhYmNav
-hPmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNmNgNgNgNepeShkhkhkhkeRhkhkhkhkhkmehkhkhkhkhkVNfRhkfSGmacdyPUacuqmyFapDeFeFeFdzdzdzaAoMdLegdLdLQhdLrtHYhddLdLegdLdLQhdLdLmzacbOeFeFknlLaVaPejcKlMlPlNaPejcKlMlPlNaPejcKlMlPlNaPMTlOlOlOlORsDOelYpKfgyaclOdzdzdzlOacdydydyHsdkacacacgNgNmNmNmNmNmNlFmNmNmNmNmNeGmNmNmNmNmNmNmNmNmNmNmNmNmNSTmNmNOTmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNblwtmNmNmNmNmNmNav
+hPmcmcmcmcmcmcmcmcmcmcmcmcmNmNmNmNmNgNgNgNepeShkhkhkhkeRhkhkhkhkhkmehkhkhkhkhkVNfRhkfSGmacdyPUacuqmyFapDeFeFeFdzdzdzaAoMdLegdLdLQhdLrtHYhddLdLegdLdLQhdLdLmzacbOeFeFknlLaVaPejcKlMbhlNaPejcKlMbhlNaPejcKlMbhlNaPMTlOlOlOlORsDOelYpKfgyaclOdzdzdzlOacdydydyHsdkacacacgNgNmNmNmNmNmNlFmNmNmNmNmNeGmNmNmNmNmNmNmNmNmNmNmNmNmNSTmNmNOTmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNblwtmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmNmNmNmNmNgNgNgNgNgNgNepeShkeHeThklUSXVvybuixblUlUlUVFlUlUlUyFhkYnjOacdZacacnTeFeFeFeFeFeFeFeFeFeFjRtpeqZWdMeqoRjReFjRIbeqeqcIeueqeqoRevVueFeFeFMzgyglaPZweYaPlPKVaPZweYaPlPSbaPZweYaPlPTKaPXdeEeEeEeEeEihmCmCSBeNaclOgJwDfJlOaceJeseLacacacmNmNmNmNmNmNmNmNmNlFmNmNfBmNmNmNmNmNmNmNmNmNmNmNmNeGmNmNmNmNmNmNmNmNmNfBozmNmNmNmNmNmNmNmNmNmNhXblmNmNmNaFmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmNmNmNcCmNgNgNmNgNcpgNepeShkeHlUIJlUlUlUpplUlUlUlUilhkgsGcZGnVhkYnjOaclhdytReFeFeFeFeFnQeFeFeFeFeFeFeFeFeFeFdzdzdzdzdzdzdzeFeFeFeFeFeFeFeFeFnQeFwffhfEaPaPaPaPoifoaPaPaPaPoifoaPaPaPaPoifoaPAkihihihihihihmCmCftgyaclOkYHWdzlOacacacacacmNgNmNmNmNmNmNmNmNmNmNlFmNmNmNmNeGmNmNmNdqmNmNmNmNmNeGmNfBmNmNfBmNhXmNmNmNmNmNmNmNmNhXmNmNmNwtmNmNmNblwtmNmNmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmNmNcCmNmNmNmNmNgNgNgNeSTwhkcPilhkurBXUWIHJHRiOmVGlUVFRiVKlUZPhkphOaacdZacacnTeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFdzdzdzdzdzdzdzeFeFeFeFeFeFeFeFeFeFeFwygyfEaPmOfGyolPkSaPmOfGyolPkSaPmOfGyolPkSaPBxmCmCmCmCmCmCmCmCfsgyaclOlOWnlOlOacacacmNgNmNmNmNwtmNmNmNmNmNmNmNlFmNmNmNmNmNmNmNmNyfmNmNmNmNmNmNmNmNmNmNmNmNhXmNmNmNmNmNmNmNmNmNdqmNmNmNmNmNmNblmNmNmNmNmNeGmNav
-hPmcmcmcmcmcmcmcmcmcmNmNmNmNmNmNmNgNgNAOgNeSTwhkcPlUhkFZeeewpvyCRiOmVGuchkFAyblUZPhkYahWacdyZfacXyPfrKTfFaKleFkEkEkEkEkEeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFkCkCkCkCkCeFeFfVLnfEaPlPlPlPlPQEaPlPlPlPlPpxaPlPlPlPlPxKaPYPmCmCmCmCmCmCmCmCoUeNacBVMnacacacacmNgNmNmNmNmNmNcCmNmNmNmNmNeGmNlFmNmNmNmNmNmNmNmNaFmNmNmNmNmNmNmNmNeGmNeGmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNaFmNmNmNmNav
+hPmcmcmcmcmcmcmcmcmcmNmNmNmNmNmNmNgNgNAOgNeSTwhkcPlUhkFZeeewpvyCRiOmVGuchkFAyblUZPhkYahWacdyZfacXyPfrKTfFaKleFkEkEkEkEkEeFeFeFeFeFeFeFeFeFeFeFeFeFeFeFkCkCkCkCkCeFeFfVLnfEaPbhlPlPlPQEaPbhlPlPlPpxaPbhlPlPlPxKaPYPmCmCmCmCmCmCmCmCoUeNacBVMnacacacacmNgNmNmNmNmNmNcCmNmNmNmNmNeGmNlFmNmNmNmNmNmNmNmNaFmNmNmNmNmNmNmNmNeGmNeGmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNaFmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmNcCmNmNgNmNgNgNgNgNgNepeShkhkhkhkhkhkhkhkHqlUlUlUEihkhkhkhkhkhkrUTracnAkMacxqmomvmwijcMeFkEeZeZeZkEeFkCkCkCkCkCeFeFeFkEkEkEkEkEeFkCIqIqIqkCeFeFMzgyglaPErgnXFMIkTaPErgnXFMIkTaPErgnXFMIkTaPFBmDlbmDmDSfmDmDlbsFgyacacacacgNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNlFmNmNeGOTmNmNeGmNmNmNmNmNeGmNmNmNmNmNmNmNhXfBmNmNeGmNmNmNmNmNmNmNmNmNmNmNmNmNblmNmNmNhXmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmNmNmNmNmNcCgNgNgNgNgNepeShkpmASqfngqeyRhkvjpyUXUHRnhkhkhkhkhkhkIanJacacacacacgZqpkchDcMcBkEkFkGlKkEcBkCIqIqIqkCeFeFeFkEeZeZeZkEcBkCPhgxzQkCeFeFYugygzaPgBgEgEgEgFaPvLkVkVkVZjaPKKgIgIgIRLaPcxcycycycycycycycycydKacacgNmNmNmNmNmNmNhYmNcCmNmNmNmNhYmNmNmNmNmNxpmNmNmNaFmNmNmNmNmNaFmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNhXmNmNfBmNmNmNmNaFmNmNmNmNblmNhYaFmNmNmNmNav
 hPmcmcmcmcmcmcmcmcmcmNmNmNmNmNmNmNmNgNcpgNepeShklUlUlUlUlUlUBkZRHphkhkhkhkmNgNmNgNFJrMrMmNgNmNmNacqInLmAnLLeRfTbetTkjUTbRfkCPhgxzQkCeFeFeFkEkFkGlKkERfeXBPLjWVeXWlWCaccxdKacmNgNgNgNgNgNmNmNmNgNmNmNgNgNgNgNmNmNmNgNgNgNmNgNgNmNgNgNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNmNlFmNmNmNmNmNmNmNmNmNmNdqmNfBmNmNmNmNmNmNmNmNmNmNmNmNmNmNeGmNmNmNmNmNmNmNmNmNmNblmNmNmNmNmNhXmNav
