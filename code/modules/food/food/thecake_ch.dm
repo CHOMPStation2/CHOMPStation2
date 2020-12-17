@@ -193,10 +193,10 @@
 		if(edible == 1)
 			HasSliceMissing()
 			if(slices <= 0)
-				user << "The cake hums away quietly as the singulo powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."
+				to_chat(usr, span("warning", "The cake hums away quietly as the singulo powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."))
 				return
 			else
-				user << "You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!"
+				to_chat(user, "<span class='notice'>You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!</span>")
 				slices = slices - 1
 				new /obj/item/weapon/reagent_containers/food/snacks/thecakeslice(src.loc)
 
@@ -206,23 +206,24 @@
 	if(istype(W,/obj/item/weapon/thecake_layer))
 		var/obj/item/weapon/thecake_layer/C = W
 		if(C.layer_stage == 5)
-			user << "Finally! The cherry on the top, the almighty infinity cake is complete!"
+			for(var/mob/O in view(src, null))
+				O.show_message("<span class='warning'>It has been done! \The Infinity Cake has been assembled!</span>",1)
 			qdel(W)
 			stage++
 			desc = desclist[stage]
-			icon_state = "thecake_stage-[stage]"
+			icon_state = "thecake_finished"
 			edible = 1
 			name = "The Infinity Cake!"
 		else if(stage == maxstages)
-			user << "The cake is already done!"
+			to_chat(usr, span("warning", "The cake is already done!"))
 		else if(stage == C.layer_stage)
-			user << "You add another layer to the cake, nice."
+			to_chat(usr, span("warning", "You add another layer to the cake, nice."))
 			qdel(W)
 			stage++
 			desc = desclist[stage]
 			icon_state = "thecake_stage-[stage]"
 		else
-			user << "Hmm, doesnt seem like this layer is supposed to be added there?"
+			to_chat(usr, span("warning", "Hmm, doesnt seem like this layer is supposed to be added there?"))
 
 // Chaos cake
 
