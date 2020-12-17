@@ -48,7 +48,7 @@
 	#include "southern_cross-9.dmm"
 	#include "southern_cross-10.dmm"
 	//CHOMPStation Edit End
-	#include "southern_cross-casino.dmm" //CHOMP By default is enabled cause shuttle wont connect with docks if loaded mid round - Jack :Temporarily disabled to save space - Raz
+	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
 	#include "submaps/_southern_cross_submaps.dm"
 

@@ -63,3 +63,26 @@
 			spawn(confetti.time_to_live*0.75+rand(10,30))
 				if (confetti) qdel(confetti)
 				src.total_confetti--
+
+/////////////////////////////////////////////
+// Snow fall
+// Permanent mood snow
+/////////////////////////////////////////////
+
+/obj/effect/effect/snow
+	name = "light snowfall"
+	icon = 'icons/effects/weather.dmi'
+	icon_state = "snowfall_light"
+
+	layer = 4.2
+	opacity = 0
+	anchored = 0.0
+	mouse_opacity = 0
+
+/obj/effect/effect/snow/medium
+	name = "medium snowfall"
+	icon_state = "snowfall_med"
+
+/obj/effect/effect/snow/heavy
+	name = "heavy snowfall"
+	icon_state = "snowfall_heavy"
