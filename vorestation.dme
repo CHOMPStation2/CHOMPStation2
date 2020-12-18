@@ -2071,6 +2071,7 @@
 #include "code\modules\clothing\suits\bio.dm"
 #include "code\modules\clothing\suits\bio_vr.dm"
 #include "code\modules\clothing\suits\hooded.dm"
+#include "code\modules\clothing\suits\hooded_ch.dm"
 #include "code\modules\clothing\suits\hooded_vr.dm"
 #include "code\modules\clothing\suits\hooded_yw.dm"
 #include "code\modules\clothing\suits\jobs.dm"
