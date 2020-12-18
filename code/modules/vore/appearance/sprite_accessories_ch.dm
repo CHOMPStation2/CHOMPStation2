@@ -110,8 +110,8 @@
 	extra_overlay = "redpanda_dc_markings"
 
 /datum/sprite_accessory/tail/taur/wolf/fatwolf_2c/fatwolfalt
-	name = "Fat Wolf dual-color-alt (Taur)"
+	name = "Fat Wolf 3-color-alt (Taur)"
 	icon = 'icons/mob/vore/taurs_ch.dmi'
 	icon_state = "fatwolfalt_s"
 	extra_overlay = "fatwolfalt_markings1"
-	//icon_sprite_tag = "fatwolf2c"
+	extra_overlay2 = "fatwolfalt_markings2"

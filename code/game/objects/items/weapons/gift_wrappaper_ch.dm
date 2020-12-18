@@ -114,22 +114,20 @@
 		/obj/item/weapon/spellbook,
 		/obj/item/weapon/book/tome/imbued)
 
-	if(!ispath(gift_type_advanced,/obj/item))	return
+	var/obj/item/I = null
 
-	var/obj/item/I1 = new gift_type_advanced(M)
 
 	if(chaos == TRUE)
-		var/obj/item/I2 = new gift_type_chaos(M)
-		M.remove_from_mob(src)
-		M.put_in_hands(I2)
-		I2.add_fingerprint(M)
+		if(!ispath(gift_type_chaos,/obj/item))	return
+		I = new gift_type_chaos(M)
 
-		qdel(src)
-		return
 	else
-		M.remove_from_mob(src)
-		M.put_in_hands(I1)
-		I1.add_fingerprint(M)
+		if(!ispath(gift_type_advanced,/obj/item))	return
+		I = new gift_type_advanced(M)
 
-		qdel(src)
-		return
+	M.remove_from_mob(src)
+	M.put_in_hands(I)
+	I.add_fingerprint(M)
+
+	qdel(src)
+	return
