@@ -105,12 +105,11 @@
 		/obj/item/weapon/grenade/spawnergrenade/casino/otie,
 		/obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby,
 		/obj/item/weapon/grenade/spawnergrenade/casino/zorgoia,
-		/obj/item/weapon/grenade/confetti)
+		/obj/item/weapon/lego)
 
 	var/gift_type_chaos = pick(
-		/obj/item/weapon/lego/gib,
+		/obj/item/weapon/grenade/spawnergrenade/casino/gygax,
 		/obj/item/weapon/grenade/spawnergrenade/casino/infinitycake,
-		/obj/item/weapon/gun/energy/meteorgun,
 		/obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer,
 		/obj/item/weapon/spellbook,
 		/obj/item/weapon/book/tome/imbued)

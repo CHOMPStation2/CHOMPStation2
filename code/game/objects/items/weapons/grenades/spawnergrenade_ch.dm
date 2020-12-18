@@ -114,8 +114,13 @@
 	name = "Casino Creature Container (Zorgoia)"
 	spawner_type = /mob/living/simple_mob/otie/zorgoia/friendly
 
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax
+	desc = "You feel great power inside this small round sphere, with great powers comes great responsibilities!"
+	name = "Mysterious Grenade"
+	spawner_type = /obj/mecha/combat/gygax/dark
+
 /obj/item/weapon/grenade/spawnergrenade/casino/infinitycake
-	desc = "Some say a cheese in his hubris made a cake to rival the gods. Sometimes it appears where it is least expected, only to vanish a few hours later.."
+	desc = "Some say a gouda in his hubris made a cake to rival the gods. Sometimes it appears where it is least expected, only to vanish a few hours later.."
 	name = "Mysterious Grenade"
 	spawner_type = null
 
@@ -135,7 +140,7 @@
 	return
 
 /obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer
-	name = "Mysterious grenade (Tell an admin on server or discord before playing with!)"
+	name = "Mysterious Grenade (Tell an admin on server or discord before playing with!)"
 	desc = "Sometimes one wishes upon a lucky star and obtains by pure chance great power! (TELL AN ADMIN ON DISCORD OR SERVER BEFORE PLAYING WITH)"
 
 /obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer/detonate()

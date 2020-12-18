@@ -53,5 +53,5 @@
 /obj/item/weapon/gun/launcher/confetti_cannon/overdrive
 	name = "overdrive confetti cannon"
 	desc = "For those times when you absolutely need colored paper everywhere, EVERYWHERE."
-	confetti_charge = 50
-	max_confetti = 50
+	confetti_charge = 100
+	max_confetti = 100
