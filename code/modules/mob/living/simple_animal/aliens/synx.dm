@@ -215,7 +215,7 @@
 
 /datum/reagent/inaprovaline/synxchem
 	name = "Alien nerveinhibitor"
-	description = "A toxin that slowly metabolizes damaging the person, but makes them unable to feel pain"
+	description = "A toxin that slowly metabolizes damaging the person, but makes them unable to feel pain."
 	id = "synxchem"
 	metabolism = REM * 0.1 //Slow metabolization to try and mimic permanent nerve damage without actually being too cruel to people
 	color = "#FFFFFF"
@@ -423,10 +423,10 @@
 		to_chat(src,"<span class='warning'>You can't disguise with your stomach outside of your body!</span>")
 		return
 	if(!transformed)
-		to_chat(src,"<span class='warning'>you changed back into your disguise.</span>")
+		to_chat(src,"<span class='warning'>You changed back into your disguise.</span>")
 		icon_living = transformed_state //Switch state to transformed state
 	else // If transformed is true.
-		to_chat(src,"<span class='warning'>now they see your true form.</span>")
+		to_chat(src,"<span class='warning'>Now they see your true form.</span>")
 		icon_living = initial(icon_living) //Switch state to what it was originally defined.
 
 
@@ -435,12 +435,12 @@
 
 /mob/living/simple_mob/animal/synx/proc/randomspeech()
 	set name = "speak"
-	set desc = "Takes a sentence you heard and says it"
+	set desc = "Take a sentence you heard and speak it."
 	set category = "Abilities"
 	if(speak && voices)
 		handle_mimic()
 	else
-		usr << "<span class='warning'>YOU NEED TO HEAR THINGS FIRST, try using Ventcrawl to eevesdrop on nerds</span>"
+		usr << "<span class='warning'>YOU NEED TO HEAR THINGS FIRST, try using Ventcrawl to eevesdrop on nerds.</span>"
 
 /mob/living/simple_mob/animal/synx/proc/handle_mimic()
 	name = pick(voices)
