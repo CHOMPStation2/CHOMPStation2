@@ -16,8 +16,16 @@ var/list/shell_module_types = list(
 	"Medihound", "Janihound",
 	"Servicehound", "BoozeHound" //YW changes
 )
+<<<<<<< HEAD
 */
+||||||| parent of f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
+
+=======
+
+var/list/awayabductors = list() // List of scatter landmarks for Abductors in Gateways
+>>>>>>> f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals
+var/list/eventabductors = list() // List of scatter landmarks for VOREStation abductor portals
 
 var/global/list/acceptable_fruit_types= list(
 											"ambrosia",

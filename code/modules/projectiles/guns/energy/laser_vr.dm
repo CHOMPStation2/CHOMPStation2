@@ -210,8 +210,16 @@
 	projectile_type = /obj/item/projectile/beam/phaser
 	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
+<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, charge_cost = 300),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 60),
+||||||| parent of f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam, charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser, charge_cost = 60),
+=======
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, charge_cost = 80),
+>>>>>>> f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/unload_ammo(var/mob/user)
@@ -262,8 +270,16 @@
 	modifystate = "carbinekill"
 	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
+<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="carbinekill", charge_cost = 300),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="carbinestun", charge_cost = 60),
+||||||| parent of f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam, modifystate="carbinekill", charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser, modifystate="carbinestun", charge_cost = 60),
+=======
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="carbinekill", charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="carbinestun", charge_cost = 80),
+>>>>>>> f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/carbine/update_icon()
@@ -293,8 +309,16 @@
 	modifystate = "holdoutkill"
 	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
+<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="holdoutkill", charge_cost = 600),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="holdoutstun", charge_cost = 120),
+||||||| parent of f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam, modifystate="holdoutkill", charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser, modifystate="holdoutstun", charge_cost = 120),
+=======
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="holdoutkill", charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="holdoutstun", charge_cost = 160),
+>>>>>>> f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
 		list(mode_name="stun", fire_delay=12, projectile_type=/obj/item/projectile/beam/stun/med, modifystate="holdoutshock", charge_cost = 300),
 	)
 
