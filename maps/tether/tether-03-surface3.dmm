@@ -3049,6 +3049,22 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
+<<<<<<< HEAD
+||||||| parent of 96380cd747... Merge pull request #9492 from Very-Soft/iaatime
+/obj/structure/sign/poster{
+	pixel_x = 32
+	},
+=======
+/obj/structure/closet/walllocker_double{
+	dir = 4;
+	pixel_x = 28
+	},
+/obj/item/device/flash,
+/obj/item/device/flash,
+/obj/random/drinkbottle,
+/obj/item/device/camera_film,
+/obj/item/device/tape/random,
+>>>>>>> 96380cd747... Merge pull request #9492 from Very-Soft/iaatime
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/iaa/officecommon)
 <<<<<<< HEAD
@@ -21046,13 +21062,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "mechbay-inner";
-	name = "Mech Bay";
-	pixel_y = -26;
-	req_access = list(29,47);
-	req_one_access = list(47)
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/third_south)
 "aHK" = (
@@ -22336,17 +22345,12 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/robotics/mechbay)
 "aJS" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = -64
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "mechbay";
-	name = "Mech Bay Access";
-	pixel_x = -30;
-	pixel_y = 30
-	},
-/turf/simulated/floor/bluegrid,
-/area/rnd/robotics/mechbay)
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "aJT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -31156,10 +31160,6 @@
 	dir = 1;
 	pixel_y = -25
 	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
-	pixel_x = 32
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "baX" = (
@@ -37832,7 +37832,7 @@
 	},
 /obj/structure/window/reinforced/polarized{
 	dir = 8;
-	id = "cmo_office"
+	id = "iaar"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officeb)
@@ -37847,7 +37847,7 @@
 	},
 /obj/structure/window/reinforced/polarized{
 	dir = 8;
-	id = "cmo_office"
+	id = "iaar"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officeb)
@@ -37857,7 +37857,7 @@
 	},
 /obj/structure/window/reinforced/polarized{
 	dir = 8;
-	id = "cmo_office"
+	id = "iaar"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officeb)
@@ -37867,7 +37867,7 @@
 	},
 /obj/structure/window/reinforced/polarized{
 	dir = 8;
-	id = "cmo_office"
+	id = "iaar"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officeb)
@@ -38060,10 +38060,16 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
+/obj/structure/closet/walllocker_double{
+	dir = 8;
+	pixel_x = -28
 	},
+/obj/item/device/camera,
+/obj/item/device/camera_film,
+/obj/item/device/taperecorder,
+/obj/item/device/tape/random,
+/obj/item/device/tape/random,
+/obj/item/weapon/storage/secure/briefcase,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officea)
 "ceN" = (
@@ -38337,6 +38343,31 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
+"dbk" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id = "mechbay";
+	name = "Mech Bay"
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "mechbay-inner";
+	name = "Mech Bay";
+	pixel_x = 27;
+	pixel_y = -5;
+	req_access = list(29,47);
+	req_one_access = list(47)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "mechbay";
+	name = "Mech Bay";
+	pixel_x = 27;
+	pixel_y = 6;
+	req_access = list(29,47);
+	req_one_access = list(47)
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/rnd/robotics/mechbay)
 "ddl" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
@@ -40650,6 +40681,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officeb)
 "mDf" = (
@@ -41916,6 +41950,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officea)
 "rEZ" = (
@@ -42838,6 +42875,16 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/item/weapon/pen/blue{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/item/weapon/pen/blade/red{
+	pixel_x = -2;
+	pixel_y = -2
+	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officea)
 "voF" = (
@@ -43527,10 +43574,16 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
+/obj/structure/closet/walllocker_double{
+	dir = 4;
+	pixel_x = 28
 	},
+/obj/item/device/camera,
+/obj/item/device/camera_film,
+/obj/item/device/taperecorder,
+/obj/item/device/tape/random,
+/obj/item/device/tape/random,
+/obj/item/weapon/storage/secure/briefcase,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officeb)
 "xHg" = (
@@ -43681,6 +43734,16 @@
 /obj/effect/floor_decal/spline/plain,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/obj/item/weapon/pen/blade/red{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/weapon/pen/blue{
+	pixel_x = 2;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/iaa/officeb)
@@ -53747,7 +53810,7 @@ aXd
 aHQ
 aIx
 aJg
-aJS
+aJT
 aKO
 aLU
 aKO
@@ -54030,7 +54093,7 @@ fgW
 aGW
 aHR
 aAs
-aJg
+dbk
 aJU
 aKQ
 aLV
@@ -58279,7 +58342,7 @@ bfe
 avy
 bgf
 avM
-asX
+aJS
 asX
 aIl
 aHB
