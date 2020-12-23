@@ -19,7 +19,16 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+||||||| parent of ba71ddca3c... Merge pull request #9501 from liache/patch-1
+magpiemayhem - Vox
+marco_barko - Protean
+=======
+liache - Black-Eyed Shadekin
+magpiemayhem - Vox
+marco_barko - Protean
+>>>>>>> ba71ddca3c... Merge pull request #9501 from liache/patch-1
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
