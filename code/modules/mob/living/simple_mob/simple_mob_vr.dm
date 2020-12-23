@@ -4,15 +4,9 @@
 #define SA_ICON_REST	0x04
 
 /mob/living/simple_mob
-<<<<<<< HEAD
-	base_attack_cooldown = 15
-||||||| parent of 61234d8d76... Merge pull request #9493 from Novacat/nova-basicfixes
-	base_attack_cooldown = 10
-=======
 	melee_attack_delay = 1
 	base_attack_cooldown = 10
 	melee_miss_chance = 25
->>>>>>> 61234d8d76... Merge pull request #9493 from Novacat/nova-basicfixes
 
 	var/temperature_range = 40			// How close will they get to environmental temperature before their body stops changing its heat
 
