@@ -1671,7 +1671,7 @@
 "WM" = (/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{dir = 8},/obj/structure/shuttle/engine/heater,/turf/simulated/shuttle/wall/voidcraft/hard_corner,/area/shuttle/baby_mammoth)
 "WO" = (/obj/machinery/atmospherics/pipe/simple/hidden/yellow{dir = 10},/turf/simulated/shuttle/wall/voidcraft/no_join,/area/shuttle/stargazer)
 "WX" = (/turf/simulated/shuttle/plating/airless/carry,/area/shuttle/needle)
-"WY" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 1; opacity = 1},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/obj/machinery/telecomms/allinone,/turf/simulated/shuttle/plating,/area/shuttle/ursula)
+"WY" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 1; opacity = 1},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/shuttle/plating,/area/shuttle/ursula)
 "Xc" = (/obj/machinery/computer/ship/helm{dir = 4},/turf/simulated/shuttle/floor/black,/area/shuttle/ursula)
 "Xh" = (/turf/simulated/shuttle/floor/black,/area/shuttle/needle)
 "Xp" = (/turf/simulated/shuttle/wall/voidcraft/hard_corner,/area/shuttle/echidna)
