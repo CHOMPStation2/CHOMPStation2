@@ -8,7 +8,12 @@ aruis - Diona
 aruis - Xenochimera
 amarewolf - Xenochimera
 azmodan412 - Xenochimera
+<<<<<<< HEAD
 alphaprime1 - Protean
+||||||| parent of 526852ec43... Merge pull request #9497 from Novacat/nova-basicfixes
+=======
+beyondmylife - Protean
+>>>>>>> 526852ec43... Merge pull request #9497 from Novacat/nova-basicfixes
 bothnevarbackwards - Diona
 bricker98 - Protean
 crossexonar - Protean
