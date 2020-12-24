@@ -207,8 +207,14 @@
 	var/recharging = 0
 	var/phase_power = 75
 
+<<<<<<< HEAD
 	projectile_type = /obj/item/projectile/beam/phaser
 	//CHOMP Edit: Changed beam type to new phaser beam type.
+||||||| parent of d5f352a806... Merge pull request #9513 from Novacat/nova-basicfixes
+	projectile_type = /obj/item/projectile/beam
+=======
+	projectile_type = /obj/item/projectile/beam/blue
+>>>>>>> d5f352a806... Merge pull request #9513 from Novacat/nova-basicfixes
 	firemodes = list(
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, charge_cost = 300),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 60),
