@@ -30,9 +30,16 @@ oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
+<<<<<<< HEAD
 rapidvalj - Vox
 rapidvalj - Common Skrellian
 rapidvalj - High Skrellian
+||||||| parent of 44d1cd8c62... Merge pull request #9512 from MashiMashers/Mashi-whitelist]
+radiantaurora - Protean
+=======
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+>>>>>>> 44d1cd8c62... Merge pull request #9512 from MashiMashers/Mashi-whitelist]
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
 rykkastormheart - Xenochimera
