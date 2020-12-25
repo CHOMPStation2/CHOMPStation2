@@ -216,11 +216,17 @@
 	if(compensation > 0)
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
+<<<<<<< HEAD
 			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
 				R.cell.charge += 15*compensation
 				GenerateBellyReagents_digested()
 			else
 				R.cell.charge += 25*compensation //CHOMPedit end
+||||||| parent of 0671c80388... Merge pull request #9519 from Verkister/borgains
+			R.cell.charge += 25*compensation
+=======
+			R.cell.charge += 25*compensation*(nutrition_percent / 100)
+>>>>>>> 0671c80388... Merge pull request #9519 from Verkister/borgains
 		else
 			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
 				owner.adjust_nutrition((nutrition_percent / 100)*3.0*compensation)
