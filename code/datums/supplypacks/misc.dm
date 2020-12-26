@@ -84,7 +84,14 @@
 			/obj/item/toy/plushie/borgplushie/scrubpuppy,
 			/obj/item/toy/plushie/foxbear,
 			/obj/item/toy/plushie/nukeplushie,
+<<<<<<< HEAD
 			/obj/item/toy/plushie/otter,
+||||||| parent of f98b1e125e... Merge pull request #9520 from Novacat/nova-basicfixes
+			/obj/item/toy/plushie/otter)
+=======
+			/obj/item/toy/plushie/otter,
+			/obj/item/toy/plushie/vox)
+>>>>>>> f98b1e125e... Merge pull request #9520 from Novacat/nova-basicfixes
 			//VOREStation Add End
 			//YawnWider Add Start
 			/obj/item/toy/plushie/teshari/_yw,
