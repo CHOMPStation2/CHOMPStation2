@@ -320,7 +320,13 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port_fore_wing)
 "aH" = (
 /obj/structure/catwalk,
@@ -331,14 +337,26 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard_fore_wing)
 "aI" = (
 /obj/structure/catwalk,
 /obj/structure/sign/warning/moving_parts{
 	pixel_x = 30
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port_fore_wing)
 "aJ" = (
 /obj/structure/table/rack/shelf/steel,
@@ -405,7 +423,13 @@
 /obj/structure/sign/warning/moving_parts{
 	pixel_x = -30
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard_fore_wing)
 "aT" = (
 /obj/structure/catwalk,
@@ -414,7 +438,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port_fore_wing)
 "aU" = (
 /obj/structure/catwalk,
@@ -422,7 +452,13 @@
 	dir = 1;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard_fore_wing)
 "aV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
@@ -455,11 +491,23 @@
 /area/talon/deckone/armory)
 "aZ" = (
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port_fore_wing)
 "ba" = (
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard_fore_wing)
 "bb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -475,14 +523,26 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port_aft_wing)
 "bd" = (
 /obj/structure/catwalk,
 /obj/structure/handrail{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard_aft_wing)
 "be" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -531,7 +591,13 @@
 /area/talon/deckone/medical)
 "bi" = (
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port_aft_wing)
 "bj" = (
 /obj/structure/window/reinforced,
@@ -546,7 +612,13 @@
 /area/talon/maintenance/deckone_starboard)
 "bl" = (
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard_aft_wing)
 "bm" = (
 /obj/structure/catwalk,
@@ -555,7 +627,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port_aft_wing)
 "bn" = (
 /obj/structure/catwalk,
@@ -564,7 +642,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard_aft_wing)
 "bo" = (
 /obj/machinery/light/small{
@@ -572,7 +656,13 @@
 	pixel_y = 0
 	},
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port)
 "bp" = (
 /obj/machinery/light/small{
@@ -580,7 +670,13 @@
 	pixel_y = 0
 	},
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard)
 "bq" = (
 /obj/machinery/airlock_sensor{
@@ -679,7 +775,13 @@
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port)
 "by" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -709,7 +811,13 @@
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/structure/catwalk,
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard)
 "bA" = (
 /obj/structure/catwalk,
@@ -720,7 +828,13 @@
 	dir = 8;
 	icon_state = "camera"
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_port)
 "bB" = (
 /obj/structure/catwalk,
@@ -731,7 +845,13 @@
 	dir = 4;
 	icon_state = "camera"
 	},
+<<<<<<< HEAD
 /turf/space,
+||||||| parent of f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
+/turf/simulated/floor/plating/eris/under,
+=======
+/turf/simulated/floor/plating/eris/under/airless,
+>>>>>>> f387fea87f... Merge pull request #9530 from KillianKirilenko/kk-adminships
 /area/talon/maintenance/deckone_starboard)
 "bC" = (
 /obj/structure/table/rack,
