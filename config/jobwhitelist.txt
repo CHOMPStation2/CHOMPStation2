@@ -1,3 +1,30 @@
 # Job whitelist in format ckey - jobname
 # Like arokha - clown
+<<<<<<< HEAD
 
+||||||| parent of 6367878240... Merge pull request #9534 from VOREStation/Akram-Whitelist-add
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+=======
+Akram - clown
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+>>>>>>> 6367878240... Merge pull request #9534 from VOREStation/Akram-Whitelist-add
