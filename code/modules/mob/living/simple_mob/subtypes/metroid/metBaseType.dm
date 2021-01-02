@@ -14,7 +14,7 @@
 
 	faction = "metroids"
 	maxHealth = 25
-	movement_cooldown = 0
+	movement_cooldown = 1.7
 	pass_flags = PASSTABLE
 	makes_dirt = FALSE	// Floats, mostly.
 	mob_class = MOB_CLASS_SLIME //This needs to be updated in simple_mob.dm and _defines/mobs.dm
@@ -53,13 +53,18 @@
 	vore_pounce_chance = 25
 	vore_icons = SA_ICON_LIVING
 	
+	nutrition = 1000 //This actually gets overridden further down on initialize.
 	max_nutrition = 2200
-	nutrition = 0
 	var/evo_point = 0
 	var/evo_limit = 0
 	var/next
-
 	meat_type = /obj/item/toy/figure/bounty_hunter
+	
+/mob/living/simple_mob/metroid/Initialize()
+	nutrition = 100		//Have them start off pretty hungry still.
+	existing_metroids += src //Keep track of how many for the event.
+	verbs += /mob/living/proc/ventcrawl //May not do anything at the moment.
+	return ..()
 	
 /datum/say_list/metroid
 	speak = list("Skree.", "Eree.", "Errer?")
@@ -75,14 +80,12 @@
 	threaten_sound = 'sound/metroid/metroidsee.ogg'
 	stand_down_sound = 'sound/metroid/metroiddetach.ogg'
 
-/mob/living/simple_mob/slime/Initialize()
-	verbs += /mob/living/proc/ventcrawl
-	update_icon()
-	return ..()
 
 /mob/living/simple_mob/metroid/init_vore()
 	..()
 	var/obj/belly/B = vore_selected
+	B.digest_brute = 1
+	B.digest_burn = 1
 	B.vore_verb = "swallow"
 	B.name = "membrane" //THERE IS A RUNTIME HERE SOMEHOW
 	B.desc	= "The metroid positions itself above you and swoops down, lazily enveloping you through its tight mouth and sending you straight to its bulbous membrane for all to see."

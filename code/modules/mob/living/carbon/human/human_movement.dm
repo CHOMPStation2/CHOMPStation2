@@ -165,7 +165,7 @@
 
 	// Wind makes it easier or harder to move, depending on if you're with or against the wind.
 	// I don't like that so I'm commenting it out :)
-	// VOREstation Edit Start 
+	// VOREstation Edit Start
 /*
 	if(T.outdoors && (T.z <= SSplanets.z_to_planet.len))
 		var/datum/planet/P = SSplanets.z_to_planet[z]

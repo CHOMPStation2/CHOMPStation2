@@ -38,6 +38,10 @@
 	say_list_type = /datum/say_list/mouse
 
 	var/body_color //brown, gray and white, leave blank for random
+	
+	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
+	can_be_drop_prey = TRUE
+	can_be_drop_pred = FALSE
 
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()

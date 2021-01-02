@@ -112,6 +112,12 @@
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_TORSO)
 
+	vulp_skull
+		name = "Vulp Skullface"
+		icon_state = "vulpskull"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
 	desc = ""

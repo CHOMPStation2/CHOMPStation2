@@ -7,7 +7,7 @@
 "cj" = (/turf/simulated/floor/outdoors/dirt,/area/template_noop)
 "eY" = (/obj/random/junk,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/Chasm)
 "gK" = (/obj/effect/floor_decal/rust,/obj/effect/floor_decal/rust/color_rustedfull,/obj/effect/decal/cleanable/dirt,/obj/item/weapon/cat_box/black,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
-"hG" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/animal/giant_spider/electric{faction = "virgo2"; icon = 'icons/mob/vore.dmi'; icon_dead = "jelly_dead"; icon_living = "jelly"; icon_state = "jelly"; name = "electric jelly blob"},/turf/simulated/floor/outdoors/rocks,/area/submap/Chasm)
+"hG" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/mob/living/simple_mob/animal/giant_spider/electric{faction = "virgo2"; health = 350; name = "slimed giant spider"},/turf/simulated/floor/outdoors/rocks,/area/submap/Chasm)
 "hR" = (/turf/template_noop,/area/template_noop)
 "ik" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/Chasm)
 "iu" = (/obj/effect/floor_decal/rust,/obj/effect/floor_decal/rust/mono_rusted2,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
@@ -30,6 +30,7 @@
 "sg" = (/obj/structure/loot_pile/mecha/odysseus,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "st" = (/obj/effect/floor_decal/rust,/obj/effect/decal/cleanable/dirt,/obj/item/weapon/bone/arm,/turf/simulated/floor/plating,/area/submap/Chasm)
 "tg" = (/obj/structure/ledge/ledge_stairs{dir = 1; name = "loose rock stairs"},/obj/effect/step_trigger/thrower,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
+"ua" = (/turf/simulated/wall/solidrock,/area/submap/Chasm)
 "uc" = (/obj/item/weapon/bone,/obj/random/junk,/obj/effect/floor_decal/rust,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/Chasm)
 "uf" = (/obj/structure/cliff/automatic,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "uj" = (/obj/structure/cliff/automatic/corner{dir = 10},/obj/item/weapon/bone/skull/unknown,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
@@ -105,22 +106,22 @@ hRhRhRDIScScScScScScSchRhRhRhRhRhRhRhRhR
 afbDEebNeYikiRknKvScScScSchRhRhRhRSchRhR
 hREekHScScScKvlznxikrIScScSchREeEeScSchR
 hRhRScScScScScoAScnxrRvVScScScztKvScSchR
-hRhRhRhRScScScoAScSctgCsScScScScDHKvEehR
-hRhRhRScScScpCKvKvKvHEHEKvpCScScScEcEehR
-hRhRScScScKvKvTpufufufufHFKvpkScScScEehR
-hRScScScLtKvTpNURzRzRzRzRYHFKvScScSchRhR
-hRScScpCKvTpNURzzqVDYUZnRzDWKvKvScSchRhR
-hRScScKvTpNURzPkTRucnJKXyLRYHFKvSpScSchR
-hRScScKvAqRzSHkRgKQiiFJiBQRzRYHFKvScSchR
-hRScScKvAqaEKXEuEahGPrmuFebFRzDWKvScSchR
-hRScScKvZaBUwPsgDiJJSjTlZSwFZdDWLtScSchR
-hRScScpkKvZaujyLwFstCoSSRzBQEhaFKvScSchR
-hRScScScpCKvZaYRRzyqUZXZwPQraFKvKvScSchR
-hREeScScScKvKvZaXUyDyDzsqxaFKvpCScSchRhR
-hREeEcScScScpCKvrYYpLJDQKvKvpkScScScDIEe
-cjEeKvDHScScScKvvdiuUZwnvdScScScScDHKzEe
-SDSDKvKzEeScScScKvOjWEKvScScScScEcKvSDSD
-SDSDSDDIEeScScScScScScScScScScScEeEeSDhR
+hRhRhRhRScuauaoAuauatgCsuauauaScDHKvEehR
+hRhRhRScuauapCKvKvKvHEHEKvpCuauaScEcEehR
+hRhRScuauaKvKvTpufufufufHFKvpkuaScScEehR
+hRScuauaLtKvTpNURzRzRzRzRYHFKvuauaSchRhR
+hRScuapCKvTpNURzzqVDYUZnRzDWKvKvuauahRhR
+hRScuaKvTpNURzPkTRucnJKXyLRYHFKvSpuaSchR
+hRScuaKvAqRzSHkRgKQiiFJiBQRzRYHFKvuaSchR
+hRScuaKvAqaEKXEuEahGPrmuFebFRzDWKvuaSchR
+hRScuaKvZaBUwPsgDiJJSjTlZSwFZdDWLtuaSchR
+hRScuapkKvZaujyLwFstCoSSRzBQEhaFKvuaSchR
+hRScuauapCKvZaYRRzyqUZXZwPQraFKvKvuaSchR
+hREeScuauaKvKvZaXUyDyDzsqxaFKvpCuauaSchR
+hREeEcScuauapCKvrYYpLJDQKvKvpkuauaScDIEe
+cjEeKvDHScuauaKvvdiuUZwnvduauauaScDHKzEe
+SDSDKvKzEeScuauaKvOjWEKvuauaScScEcKvSDSD
+SDSDSDDIEeScScuauauauauauaScScScEeEeSDhR
 hRhRcjcjcjcjScScScScScScScScSccjcjcjhRhR
 hRhRhRcjhRcjhRScScScScScScSccjhRcjhRhRhR
 "}

@@ -10,7 +10,8 @@
 #define Z_LEVEL_CENTCOM					7
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
-#define Z_LEVEL_GATEWAY					10
+#define Z_LEVEL_GATEWAY					11  //CHOMPedit - KSC = changed 10-11 so weather works on casino.
+#define Z_LEVEL_SURFACE_CASINO			10	//CHOMPedit - KSC = So there is weather on the casino.
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -84,7 +85,7 @@
 							NETWORK_SUPPLY
 							)
 	usable_email_tlds = list("freemail.nt")
-	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage")
+	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway")
 	default_skybox = /datum/skybox_settings/southern_cross
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
@@ -223,6 +224,13 @@
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
+//CHOMPedit - KSC = So Christmas Casino has weather.
+/datum/map_z_level/southern_cross/surface_casino
+	z = Z_LEVEL_SURFACE_CASINO
+	name = "Casino"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
 /datum/map_z_level/southern_cross/misc
 	z = Z_LEVEL_MISC
 	name = "Misc"
@@ -274,7 +282,8 @@
 	expected_z_levels = list(
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
-		Z_LEVEL_SURFACE_WILD
+		Z_LEVEL_SURFACE_WILD,
+		Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino.
 	)
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()

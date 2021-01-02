@@ -1,26 +1,36 @@
 /obj/item/weapon/card/id/casino
-	name = "casino employee id"
+	name = "casino id"
 	desc = "An ID card for an employee of the golden goose casino."
 	icon_state = "ch_casino"
 	item_state = "gold_id"
 
 	access = list(160)
 
-/obj/item/weapon/card/id/casino/booth
-	name = "casino booth employee id"
-	desc = "An ID card for an employee of the golden goose casino with extra access to prize booth."
+/obj/item/weapon/card/id/casino/both
+	name = "casino both id"
+	desc = "An ID card for an employee of the golden goose casino with extra access to prize both."
 	access = list(160, 200)
 
-/obj/item/weapon/card/id/casino
-	name = "casino employee id"
-	desc = "An ID card for an employee of the golden goose casino."
-	icon_state = "ch_casino"
-	item_state = "gold_id"
+/obj/item/weapon/card/id/casino/medical
+	name = "casino medical id"
+	desc = "An ID card for an employee of the golden goose casino that oversees medical care."
+	icon_state = "ch_casino_med"
+	access = list(160, 202)
 
-	access = list(160, 200, 201)
+/obj/item/weapon/card/id/casino/engineering
+	name = "casino engineering id"
+	desc = "An ID card for an employee of the golden goose casino that oversees maintenance."
+	icon_state = "ch_casino_eng"
+	access = list(160, 203)
+
+/obj/item/weapon/card/id/casino/security
+	name = "casino security id"
+	desc = "An ID card for an employee of the golden goose casino that oversees security."
+	icon_state = "ch_casino_sec"
+	access = list(160, 200, 201, 202, 203)
 
 /obj/item/weapon/card/id/casino/manager
 	name = "casino manager id"
-	desc = "An ID card for the manager of the golden goose casino."
+	desc = "An ID card for the manager of the golden goose casino, fancy!"
 	icon_state = "ch_casino_manager"
-	access = list(160, 200, 201, 300)
+	access = list(160, 200, 201, 202, 203, 300)

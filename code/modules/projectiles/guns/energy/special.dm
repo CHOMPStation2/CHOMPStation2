@@ -6,7 +6,7 @@
 	item_state = "ionrifle"
 	wielded_item_state = "ionrifle-wielded"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	slot_flags = SLOT_BACK
 	projectile_type = /obj/item/projectile/ion
@@ -48,6 +48,7 @@
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge
 	battery_lock = 1
 	var/decl/plantgene/gene = null
+	recoil_mode = 0 //CHOMP Addition
 
 	firemodes = list(
 		list(mode_name="induce mutations", projectile_type=/obj/item/projectile/energy/floramut, modifystate="floramut"),
@@ -91,7 +92,7 @@
 	icon_state = "riotgun"
 	item_state = "c20r"
 	slot_flags = SLOT_BELT|SLOT_BACK
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	projectile_type = /obj/item/projectile/meteor
 	cell_type = /obj/item/weapon/cell/potato
 	charge_cost = 100
@@ -114,6 +115,7 @@
 	desc = "A custom-built weapon of some kind."
 	icon_state = "xray"
 	projectile_type = /obj/item/projectile/beam/mindflayer
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
 /obj/item/weapon/gun/energy/toxgun
 	name = "phoron pistol"

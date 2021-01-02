@@ -93,7 +93,12 @@
 
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
-			dirtslip = H.species.dirtslip	//CHOMPEdit
+			//CHOMPEdit Begin
+			dirtslip = H.species.dirtslip
+			if(H.species.mudking)
+				dirt = min(dirt+2, 101)
+				update_dirt()
+			//CHOMPEdit End
 			// Tracking blood
 			var/list/bloodDNA = null
 			var/bloodcolor=""
@@ -147,6 +152,8 @@
 
 			if(M.slip("the [floor_type] floor", slip_stun))
 				for(var/i = 1 to slip_dist)
+					if(M.slip_vore_in_progress)	//CHOMPEdit
+						break					//CHOMPEdit
 					step(M, M.dir)
 					sleep(1)
 			else

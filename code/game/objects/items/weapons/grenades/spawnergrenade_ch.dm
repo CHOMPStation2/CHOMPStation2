@@ -113,3 +113,42 @@
 	desc = "It is set to detonate in 5 seconds. It will release a zorgoia that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Zorgoia)"
 	spawner_type = /mob/living/simple_mob/otie/zorgoia/friendly
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax
+	desc = "You feel great power inside this small round sphere, with great powers comes great responsibilities!"
+	name = "Mysterious Grenade"
+	spawner_type = /obj/mecha/combat/gygax/dark
+
+/obj/item/weapon/grenade/spawnergrenade/casino/infinitycake
+	desc = "Some say a gouda in his hubris made a cake to rival the gods. Sometimes it appears where it is least expected, only to vanish a few hours later.."
+	name = "Mysterious Grenade"
+	spawner_type = null
+
+/obj/item/weapon/grenade/spawnergrenade/casino/infinitycake/detonate()
+
+	var/turf/T = get_turf(src)
+	playsound(T, 'sound/effects/phasein.ogg', 100, 1)
+
+	new /obj/structure/thecake(T)
+	new /obj/item/weapon/thecake_layer(T)
+	new /obj/item/weapon/thecake_layer/three(T)
+	new /obj/item/weapon/thecake_layer/four(T)
+	new /obj/item/weapon/thecake_layer/five(T)
+	new /obj/item/weapon/thecake_layer/six(T)
+
+	qdel(src)
+	return
+
+/obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer
+	name = "Mysterious Grenade (Tell an admin on server or discord before playing with!)"
+	desc = "Sometimes one wishes upon a lucky star and obtains by pure chance great power! (TELL AN ADMIN ON DISCORD OR SERVER BEFORE PLAYING WITH)"
+
+/obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer/detonate()
+	var/turf/T = get_turf(src)
+	playsound(T, 'sound/effects/phasein.ogg', 100, 1)
+
+	new /obj/item/weapon/technomancer_catalog/universal(T)
+	new /obj/item/weapon/technomancer_core/universal(T)
+
+	qdel(src)
+	return

@@ -11,11 +11,12 @@
 	spawncount = rand(2 * severity, 6 * severity)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
-		//CHOMPEdit: Added a couple areas to the exclusion.
-		if(istype(get_area(temp_vent), /area/crew_quarters/sleep && /area/hallway/secondary/entry && /area/surface/outpost/main/dorms))
+		//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
+		var/in_area = get_area(temp_vent)
+		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
 			continue
 		if(!temp_vent.welded && temp_vent.network && temp_vent.loc.z in using_map.station_levels)
-			if(temp_vent.network.normal_members.len > 50)
+			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
 				vents += temp_vent
 
 /datum/event/grub_infestation/announce()

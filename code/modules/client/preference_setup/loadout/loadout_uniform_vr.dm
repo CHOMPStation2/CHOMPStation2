@@ -16,29 +16,38 @@
 
 //KHI Uniforms
 /datum/gear/uniform/job_khi/cmd
-	display_name = "khi uniform, cmd"
+	display_name = "ge uniform, cmd" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/cmd
 	allowed_roles = list("Head of Security","Site Manager","Head of Personnel","Chief Engineer","Research Director","Chief Medical Officer","Blueshield Guard") //YW ADDITIONS
 
 /datum/gear/uniform/job_khi/sec
-	display_name = "khi uniform, sec"
+	display_name = "geuniform, sec" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/sec
 	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard","Security Pilot") //YW ADDITIONS
 
 /datum/gear/uniform/job_khi/med
-	display_name = "khi uniform, med"
+	display_name = "ge uniform, med" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/med
 	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Field Medic")
 
 /datum/gear/uniform/job_khi/eng
-	display_name = "khi uniform, eng"
+	display_name = "ge uniform, eng" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/eng
 	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer")
 
 /datum/gear/uniform/job_khi/sci
-	display_name = "khi uniform, sci"
+	display_name = "ge uniform, sci" //CHOMPedit: changed to GE suit
 	path = /obj/item/clothing/under/rank/khi/sci
 	allowed_roles = list("Research Director", "Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Pathfinder", "Explorer")
+
+/datum/gear/uniform/job_khi/crg
+	display_name = "ge uniform, cargo" //CHOMPedit: changed to GE suit
+	path = /obj/item/clothing/under/rank/khi/crg
+	allowed_roles = list("Quartermaster", "Cargo Technician", "Shaft Miner")
+
+/datum/gear/uniform/job_khi/civ
+	display_name = "ge uniform, civ" //CHOMPedit: changed to GE suit
+	path = /obj/item/clothing/under/rank/khi/civ
 
 //Federation jackets
 /datum/gear/suit/job_fed/sec

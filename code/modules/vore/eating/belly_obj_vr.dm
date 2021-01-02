@@ -161,7 +161,31 @@
 		"is_wet",
 		"wet_loop",
 		"belly_fullscreen",
-		"disable_hud"
+		"disable_hud",
+		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
+		"reagentbellymode",
+		"liquid_fullness1_messages",
+		"liquid_fullness2_messages",
+		"liquid_fullness3_messages",
+		"liquid_fullness4_messages",
+		"liquid_fullness5_messages",
+		"reagent_name",
+		"reagent_chosen",
+		"reagentid",
+		"reagentcolor",
+		"gen_cost",
+		"gen_amount",
+		"gen_time",
+		"gen_time_display",
+		"reagent_transfer_verb",
+		"custom_max_volume",
+		"generated_reagents",
+		"vorefootsteps_sounds",
+		"fullness1_messages",
+		"fullness2_messages",
+		"fullness3_messages",
+		"fullness4_messages",
+		"fullness5_messages"     //CHOMP end of variables from CHOMP
 		)
 
 /*These have been pulled from the above list as these were chomp edits for liquid belly stuff. This needs to be ported back in for TGUI port
@@ -199,9 +223,9 @@
 		owner.vore_organs |= src
 		START_PROCESSING(SSbellies, src)
 
-//These are commented out, waiting for liquid belly TGUI port.	
-//	create_reagents(100)	//CHOMP So we can have some liquids in bellies
-//	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents 
+
+	create_reagents(100)	//CHOMP So we can have some liquids in bellies
+	flags |= NOREACT		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
 
 
 /obj/belly/Destroy()
@@ -402,7 +426,7 @@
 // in message boxes, this looks nice and is easily delimited.
 /obj/belly/proc/get_messages(type, delim = "\n\n")
 	ASSERT(type == "smo" || type == "smi" || type == "dmo" || type == "dmp" || type == "em")
-	
+
 	var/list/raw_messages
 	switch(type)
 		if("smo")
@@ -752,7 +776,7 @@
 	dupe.fancy_vore = fancy_vore
 	dupe.is_wet = is_wet
 	dupe.wet_loop = wet_loop
-/*These are commented out, waiting for liquid belly TGUI port.		
+
 	dupe.reagent_mode_flags = reagent_mode_flags	//CHOMP start of variables from CHOMP
 	dupe.reagentbellymode = reagentbellymode
 	dupe.vorefootsteps_sounds = vorefootsteps_sounds
@@ -771,7 +795,7 @@
 	dupe.gen_time_display = gen_time_display
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume	//CHOMP end of variables from CHOMP
-*/
+
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
 
@@ -801,7 +825,7 @@
 	for(var/I in examine_messages)
 		dupe.examine_messages += I
 
-/*These are commented out, waiting for liquid belly TGUI port.	
+
 	// CHOMP reagent belly
 	//generated_reagents - strings
 	dupe.generated_reagents.Cut()
@@ -837,7 +861,7 @@
 	dupe.fullness5_messages.Cut()
 	for(var/I in fullness5_messages)
 		dupe.fullness5_messages += I
-*/
+
 
 	//emote_lists - index: digest mode, key: list of strings
 	dupe.emote_lists.Cut()
