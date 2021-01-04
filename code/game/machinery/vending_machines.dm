@@ -753,15 +753,9 @@
 					/obj/item/toy/plushie/borgplushie/scrubpuppy = 1,
 					/obj/item/toy/plushie/foxbear = 1,
 					/obj/item/toy/plushie/nukeplushie = 1,
-<<<<<<< HEAD
-					/obj/item/toy/plushie/otter = 1,
-||||||| parent of f98b1e125e... Merge pull request #9520 from Novacat/nova-basicfixes
-					/obj/item/toy/plushie/otter = 1)
-=======
 					/obj/item/toy/plushie/otter = 1,
 					/obj/item/toy/plushie/vox = 1,
-					/obj/item/toy/mistletoe = 1)
->>>>>>> f98b1e125e... Merge pull request #9520 from Novacat/nova-basicfixes
+					/obj/item/toy/mistletoe = 1,
 					//VOREStation Add End
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 1,
