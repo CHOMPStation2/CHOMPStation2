@@ -220,7 +220,7 @@
 				R.cell.charge += 15*compensation
 				GenerateBellyReagents_digested()
 			else
-				R.cell.charge += 25*compensation //CHOMPedit end
+				R.cell.charge += 25*compensation*(nutrition_percent / 100) //CHOMPedit end
 		else
 			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
 				owner.adjust_nutrition((nutrition_percent / 100)*3.0*compensation)
