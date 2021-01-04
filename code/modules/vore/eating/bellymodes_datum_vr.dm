@@ -67,18 +67,12 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 25*damage_gain //CHOMPedit end
 	if(offset) // If any different than default weight, multiply the % of offset.
-<<<<<<< HEAD
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit start: digestion producing reagents
 			B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100)*4.5/(B.gen_cost*1.25)*(damage_gain)/difference)) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
 			B.digest_nutri_gain = offset*((B.nutrition_percent / 100)*0.5/(B.gen_cost*1.25)*(damage_gain)/difference) //for transfering nutrition value over to GenerateBellyReagents_digesting()
 			B.GenerateBellyReagents_digesting()
 		else
-			B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100) * 4.5 * (damage_gain) / difference)) //CHOMPedit end //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
-||||||| parent of 0671c80388... Merge pull request #9519 from Verkister/borgains
-		B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100) * 4.5 * (damage_gain) / difference)) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
-=======
-		B.owner.adjust_nutrition(offset*(4.5 * (damage_gain) / difference)) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
->>>>>>> 0671c80388... Merge pull request #9519 from Verkister/borgains
+			B.owner.adjust_nutrition(offset*(4.5 * (damage_gain) / difference)) //CHOMPedit end //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
 	else
 		B.owner.adjust_nutrition(4.5 * (damage_gain) / difference)
 
