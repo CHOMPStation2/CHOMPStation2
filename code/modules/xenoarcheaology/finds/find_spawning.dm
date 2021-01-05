@@ -295,7 +295,7 @@
 			if(spawn_type)
 				var/obj/item/weapon/gun/energy/new_gun = new spawn_type(src.loc)
 				new_item = new_gun
-				new_item.icon_state = "egun[rand(1,12)]"
+				new_item.icon_state = "egun[rand(1,18)]" //CHOMPStation Edit: We now reference our own DMI which has 18 unique guns.
 				new_gun.desc = "This is an antique energy weapon, you're not sure if it will fire or not."
 
 				//5% chance to explode when first fired
@@ -551,7 +551,7 @@
 			var/obj/item/weapon/reagent_containers/syringe/S = new_item
 
 			S.volume = 30
-			//If S hasn't initialized yet, S.reagents will be null.  
+			//If S hasn't initialized yet, S.reagents will be null.
 			//However, in that case Initialize will set the maximum volume to the volume for us, so we don't need to do anything.
 			S.reagents?.maximum_volume = 30
 
