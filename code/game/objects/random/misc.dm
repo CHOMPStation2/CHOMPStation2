@@ -674,7 +674,15 @@
 				/obj/item/toy/plushie/foxbear,
 				/obj/item/toy/plushie/nukeplushie,
 				/obj/item/toy/plushie/otter,
+<<<<<<< HEAD
 				/obj/item/toy/plushie/vox,
+||||||| parent of c4f471ff0e... Merge pull request #9541 from SarmentiCampbell/drakeborg
+				/obj/item/toy/plushie/vox)
+=======
+				/obj/item/toy/plushie/vox,
+				/obj/item/toy/plushie/borgplushie/drakiesec,
+				/obj/item/toy/plushie/borgplushie/drakiemed)
+>>>>>>> c4f471ff0e... Merge pull request #9541 from SarmentiCampbell/drakeborg
 				//VOREStation Add End
 				//YawnWider Add Start
 				/obj/item/toy/plushie/teshari/_yw,
