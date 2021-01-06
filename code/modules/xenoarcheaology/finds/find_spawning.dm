@@ -295,7 +295,13 @@
 			if(spawn_type)
 				var/obj/item/weapon/gun/energy/new_gun = new spawn_type(src.loc)
 				new_item = new_gun
+<<<<<<< HEAD
 				new_item.icon_state = "egun[rand(1,18)]" //CHOMPStation Edit: We now reference our own DMI which has 18 unique guns.
+||||||| parent of 6cd149bb46... Merge pull request #9548 from Sharkmare/patch-5
+				new_item.icon_state = "egun[rand(1,12)]"
+=======
+				new_item.icon_state = "egun[rand(1,6)]" //VOREStation Edit: max value is 6 since xenoarcheoloy_vr only has 6 egun variants
+>>>>>>> 6cd149bb46... Merge pull request #9548 from Sharkmare/patch-5
 				new_gun.desc = "This is an antique energy weapon, you're not sure if it will fire or not."
 
 				//5% chance to explode when first fired
