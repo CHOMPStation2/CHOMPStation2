@@ -182,11 +182,6 @@
 /area/surface/outpost/mining_main/mech_bay
 	name = "North Mining Mech Bay"
 
-/area/surface/outpost/mining_main/gen_room
-	name = "North Mining Generator Room"
-	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
-
 /area/surface/outpost/mining_main/emergencystorage
 	name = "\improper North Mining Emergency Storage"
 	flags = RAD_SHIELDED
@@ -203,10 +198,37 @@
 /area/surface/outpost/mining_main/tools
 	name = "North Mining Tool Storage"
 
-
 /area/surface/outpost/mining_main/cave
 	name = "North Mining Outpost Cave"
 	icon_state = "outpost_mine_main"
+
+//Rust-Engine Outpost CHOMPedit - ksc
+
+/area/surface/outpost/engineering/atmos_room
+	name = "North Atmos Room"
+	icon_state = "atmos"
+
+/area/surface/outpost/engineering/smes
+	name = "North Engineering SMES"
+	icon_state = "substation"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
+
+/area/surface/outpost/engineering/reactor_smes
+	name = "North Engineering Reactor SMES"
+	icon_state = "engine_smes"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
+
+/area/surface/outpost/engineering/storage
+	name = "North Engineering Storage"
+	icon_state = "storage"
+
+/area/surface/outpost/engineering/monitoring
+	name = "North Engineering Monitoring"
+	icon_state = "engine_monitoring"
+
+/area/surface/outpost/engineering/auxiliary_storage
+	name = "North Engineering Auxiliary Storage"
+	icon_state = "emergencystorage"
 
 //Research Surface Outpost
 
@@ -561,7 +583,7 @@
 
 /area/outpost/mining_station/dock
 	name = "Mining Station Dock"
-
+z
 //Turbolift
 
 /area/turbolift
