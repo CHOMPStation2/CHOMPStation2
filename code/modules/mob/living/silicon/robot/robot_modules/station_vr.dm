@@ -190,15 +190,9 @@
 					"K9 Alternative" = "k92",
 					"Secborg model V-2" = "secborg",
 					"Borgi" = "borgi-sec",
-<<<<<<< HEAD
 					"Otieborg" = "oties",
-					"Secborg model V-3" = "SecVale" //CHOMPEdit
-||||||| parent of c4f471ff0e... Merge pull request #9541 from SarmentiCampbell/drakeborg
-					"Otieborg" = "oties"
-=======
-					"Otieborg" = "oties",
+					"Secborg model V-3" = "SecVale", //CHOMPEdit
 					"Drake" = "drakesec"
->>>>>>> c4f471ff0e... Merge pull request #9541 from SarmentiCampbell/drakeborg
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
@@ -276,15 +270,9 @@
 					"Medical Hound" = "medihound",
 					"Dark Medical Hound (Static)" = "medihounddark",
 					"Mediborg model V-2" = "vale",
-<<<<<<< HEAD
 					"Borgi" = "borgi-medi",
-					"Mediborg model V-3" = "vale2" //CHOMPEdit
-||||||| parent of c4f471ff0e... Merge pull request #9541 from SarmentiCampbell/drakeborg
-					"Borgi" = "borgi-medi"
-=======
-					"Borgi" = "borgi-medi",
+					"Mediborg model V-3" = "vale2", //CHOMPEdit
 					"Drake" = "drakemed"
->>>>>>> c4f471ff0e... Merge pull request #9541 from SarmentiCampbell/drakeborg
 					)
 
 /obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
