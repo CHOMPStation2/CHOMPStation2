@@ -1,3 +1,15 @@
+//Red Color Fix
+/datum/material/cloth_red
+    name = "red"
+    display_name = "red"
+    use_name = "red cloth"
+    icon_colour = "#DA020A"
+    flags = MATERIAL_PADDING
+    ignition_point = T0C+232
+    melting_point = T0C+300
+    protectiveness = 1 // 4%
+    conductive = 0
+
 //CARPET materials
 
 /datum/material/carpet
