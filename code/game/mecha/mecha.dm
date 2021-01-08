@@ -2232,7 +2232,7 @@
 			output += "Universal Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
 		for(var/obj/item/mecha_parts/mecha_equipment/W in special_equipment)
 			output += "Special Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
-		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment)//CHOMPstation Edit -  Adds micro equipent to the menu
+		/*for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment)//CHOMPstation Edit -  Adds micro equipent to the menu
 			output += "Micro Utility Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
 		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_weapon_equipment)
 			output += "Micro Weapon Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
@@ -2244,7 +2244,7 @@
 	 <b>Available universal slots:</b> [max_universal_equip-universal_equipment.len]<br>
 	 <b>Available special slots:</b> [max_special_equip-special_equipment.len]<br>
 	 </div></div>
-	 "}
+	 "} */ //CHOMPedit commented micromech stuff, because fuck this trash
 	return output
 
 /obj/mecha/proc/get_equipment_list() //outputs mecha equipment list in html
