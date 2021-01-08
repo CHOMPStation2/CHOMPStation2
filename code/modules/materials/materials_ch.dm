@@ -1,6 +1,6 @@
 //Red Color Fix
 /datum/material/cloth_red
-    name = "red"
+    name = "carpet" //This is the easiest fix but god do i hate it -shark
     display_name = "red"
     use_name = "red cloth"
     icon_colour = "#DA020A"
