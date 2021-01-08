@@ -676,7 +676,7 @@
 				/obj/item/toy/plushie/otter,
 				/obj/item/toy/plushie/vox,
 				/obj/item/toy/plushie/borgplushie/drakiesec,
-				/obj/item/toy/plushie/borgplushie/drakiemed)
+				/obj/item/toy/plushie/borgplushie/drakiemed,
 				//VOREStation Add End
 				//YawnWider Add Start
 				/obj/item/toy/plushie/teshari/_yw,
