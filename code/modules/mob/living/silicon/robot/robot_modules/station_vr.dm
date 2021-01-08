@@ -191,7 +191,8 @@
 					"Secborg model V-2" = "secborg",
 					"Borgi" = "borgi-sec",
 					"Otieborg" = "oties",
-					"Secborg model V-3" = "SecVale" //CHOMPEdit
+					"Secborg model V-3" = "SecVale", //CHOMPEdit
+					"Drake" = "drakesec"
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
@@ -270,7 +271,8 @@
 					"Dark Medical Hound (Static)" = "medihounddark",
 					"Mediborg model V-2" = "vale",
 					"Borgi" = "borgi-medi",
-					"Mediborg model V-3" = "vale2" //CHOMPEdit
+					"Mediborg model V-3" = "vale2", //CHOMPEdit
+					"Drake" = "drakemed"
 					)
 
 /obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
@@ -403,7 +405,8 @@
 	sprites = list(
 					"Custodial Hound" = "scrubpup",
 					"Borgi" = "borgi-jani",
-					"Otieborg" = "otiej"
+					"Otieborg" = "otiej",
+					"Drake" = "drakejanit"
 					)
 	channels = list("Service" = 1)
 	pto_type = PTO_CIVILIAN
@@ -488,7 +491,8 @@
 					"Research Hound" = "science",
 					"Borgi" = "borgi-sci",
 					"SciHound" = "scihound",
-					"SciHoundDark" = "scihounddark"
+					"SciHoundDark" = "scihounddark",
+					"Drake" = "drakesci"
 					)
 	channels = list("Science" = 1)
 	pto_type = PTO_SCIENCE
@@ -563,7 +567,8 @@
 					"Borgi" = "borgi-eng",
 					"V2 Engidog" = "thottbot",
 					"EngiHound" = "engihound",
-					"EngiHoundDark" = "engihounddark"
+					"EngiHoundDark" = "engihounddark",
+					"Drake" = "drakeeng"
 					)
 	channels = list("Engineering" = 1)
 	networks = list(NETWORK_ENGINEERING)
@@ -785,6 +790,7 @@
 					"Pinkhound" = "k69",
 					"ServicehoundV2" = "serve2",
 					"ServicehoundV2 Darkmode" = "servedark",
+					"Drake" = "drakemine"
 					)
 	channels = list("Service" = 1)
 	pto_type = PTO_CIVILIAN
@@ -856,7 +862,8 @@
 	sprites = list(
 					"KMine" = "kmine",
 					"CargoHound" = "cargohound",
-					"CargoHoundDark" = "cargohounddark"
+					"CargoHoundDark" = "cargohounddark",
+					"Drake" = "drakemine"
 					)
 	channels = list("Supply" = 1)
 	pto_type = PTO_CARGO
