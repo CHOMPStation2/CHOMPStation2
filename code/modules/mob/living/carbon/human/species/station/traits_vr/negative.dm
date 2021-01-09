@@ -221,5 +221,5 @@ YW comment finish*/
 	name = "Neural Hypersensitivity"
 	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."
 	cost = -1
-	var_changes = list("traumatic_mod" = 2)
+	var_changes = list("trauma_mod" = 2)	//CHOMPEdit. Some dingus at virgo didn't test their stuff. Some other dingus let this get through.
 
