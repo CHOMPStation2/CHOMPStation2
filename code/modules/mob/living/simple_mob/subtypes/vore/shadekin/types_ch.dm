@@ -48,7 +48,7 @@
 //"Hunger." - Rakshasa
 /mob/living/simple_mob/shadekin/red/rakshasa
 	name ="Rakshasa"
-	desc = "A scary, black shadekin? Thier body oozes like goop."
+	desc = "A scary, black shadekin? Their body oozes like goop."
 	icon_state = "rakshasa"
 	vore_stomach_flavor = "You're floating in a warm, viscous goop, too dark to see. \
 	Your efforts to find light have failed. Darkness consumes you. \

@@ -193,8 +193,8 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-//CHOMPEdit: Removed wiki link	
-	//wikilink="https://yawn.izac.live/Zorren"
+//CHOMPEdit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 
@@ -270,8 +270,8 @@
 	inherent_verbs = list(/mob/living/proc/shred_limb)
 	descriptors = list()
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Unathi"
+//CHOMPSedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Unathi"
 
 /datum/species/tajaran
 	spawn_flags = SPECIES_CAN_JOIN
@@ -284,8 +284,8 @@
 	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Tajaran"
+//CHOMPSedit: links to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran"
 	agility = 90
 
 /datum/species/skrell
@@ -297,17 +297,17 @@
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Skrell"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
 
 /datum/species/zaddat
-	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN CHOMPstation edit: disabled pending staff discussion
+	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
 	gluttonous = 0
 	descriptors = list()
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Zaddat"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Zaddat"
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
@@ -321,8 +321,8 @@
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Diona"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
@@ -337,8 +337,8 @@
 	gluttonous = 0
 	descriptors = list()
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Teshari"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Teshari"
 	agility = 90
 
 	inherent_verbs = list(
@@ -351,8 +351,8 @@
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Promethean"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Promethean"
 
 /datum/species/human
 	color_mult = 1
@@ -362,8 +362,8 @@
 	min_age = 18
 	base_color = "#EECEB3"
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Human"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Humans"
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -379,8 +379,8 @@
 		/datum/mob_descriptor/vox_markings = 0
 		)
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Vox"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Vox"
 
 datum/species/harpy
 	name = SPECIES_RAPALA

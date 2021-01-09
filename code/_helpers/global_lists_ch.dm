@@ -12,3 +12,5 @@ var/global/list/vore_reagent_sounds = list(
 		'sound/vore/walkslosh9.ogg',
 		'sound/vore/walkslosh10.ogg',
 		"None" = null)
+
+/var/global/list/existing_metroids = list() //Global variable for tracking metroids for the event announcement. Needs to go here for load order.

@@ -34,12 +34,24 @@
 /obj/item/clothing/head/crown/goose_king
 	name = "Crown of the golden goose king"
 	desc = "It's the crown given to the goose king from the golden goose casino, what an honor!"
+	icon = 'icons/obj/clothing/hats_ch.dmi'
+	icon_override = 'icons/mob/head_ch.dmi'
 	icon_state = "goose_king"
 	item_state = "goose_king"
+
+/obj/item/clothing/head/crown/goose_king/christmas
+	name = "Crown of the Goose King of Holiday Spirit"
+	desc = "It's the crown from the golden goose casino of the Goose King! Given to the one to uphold christmas spirit on Southern Cross, merry christmas!"
 
 
 /obj/item/clothing/head/crown/goose_queen
 	name = "Crown of the golden goose queen"
 	desc = "It's the crown given to the goose queen from the golden goose casino, what an honor!"
+	icon = 'icons/obj/clothing/hats_ch.dmi'
+	icon_override = 'icons/mob/head_ch.dmi'
 	icon_state = "goose_queen"
 	item_state = "goose_queen"
+
+/obj/item/clothing/head/crown/goose_queen/christmas
+	name = "Crown of the Goose Queen of Holiday Cheer"
+	desc = "It's the crown from the golden goose casino of the Goose Queen! Given to the one to spread christmas cheer on Southern Cross, happy holidays!"

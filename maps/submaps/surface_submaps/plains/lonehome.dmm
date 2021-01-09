@@ -1,4 +1,4 @@
-"au" = (/obj/item/organ/internal/lungs/vox,/obj/item/weapon/beartrap/hunting{anchored = 1; deployed = 1},/obj/structure/curtain/black,/obj/random/junk,/obj/random/junk,/obj/random/junk,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor,/area/submap/lonehome)
+"au" = (/obj/item/organ/internal/lungs/vox,/obj/item/weapon/beartrap/hunting{anchored = 1; deployed = 1; icon_state = "beartrap1"},/obj/structure/curtain/black,/obj/random/junk,/obj/random/junk,/obj/random/junk,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor,/area/submap/lonehome)
 "aw" = (/obj/structure/flora/tree/sif,/turf/template_noop,/area/submap/lonehome)
 "aI" = (/obj/structure/window/reinforced{dir = 8; health = 1e+006},/obj/structure/flora/pottedplant/fern{pixel_y = 12},/obj/structure/table/bench/wooden,/turf/simulated/floor/wood,/area/submap/lonehome)
 "aJ" = (/obj/item/weapon/paper{info = "Seems to be filled with odd runes drawn with blood"; name = "Blood stained paper"},/turf/simulated/floor/wood/broken,/area/submap/lonehome)

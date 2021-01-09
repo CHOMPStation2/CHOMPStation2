@@ -22,7 +22,7 @@
 	scoped_accuracy = 75
 	ignore_visor_zoom_restriction = TRUE	// Ignore the restriction on vision modifiers when using this gun's scope.
 	one_handed_penalty = 90
-	var/bolt_open = 0
+	bolt_open = 0	//CHOMPEdit
 
 /obj/item/weapon/gun/projectile/heavysniper/update_icon()
 	if(bolt_open)

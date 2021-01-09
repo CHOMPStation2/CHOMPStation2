@@ -13,7 +13,7 @@
 	icon_override = 'icons/obj/gun_vr.dmi'
 	item_state = "battlerifle_i"
 	item_icons = null
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	recoil = 2 // The battlerifle was known for its nasty recoil.
 	max_shells = 36
 	caliber = "9.5x40mm"

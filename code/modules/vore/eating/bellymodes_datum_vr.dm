@@ -35,16 +35,17 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
 		return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
 
-		//CHOMPEDIT: Snowflake synx hook. Hypothetically this could be expanded to any mob by, say, giving them a parasite variable and a check for it here.
-	if(istype(L,/mob/living/simple_mob/animal/synx))
-		var/syntox = B.digest_brute+B.digest_burn
-		B.owner.adjust_nutrition(-syntox)
-		L.adjust_nutrition(syntox)
-		L.adjustBruteLoss(-syntox*2) //Should automaticaly clamp to 0
-		L.adjustFireLoss(-syntox*2) //Should automaticaly clamp to 0
-		return
+		//CHOMPEDIT: Parasitic digestion immunity hook, used to be a synx istype check but this is more optimized.
+	if(L.parasitic)
+		if(isliving(L))
+			var/paratox = B.digest_brute+B.digest_burn
+			B.owner.adjust_nutrition(-paratox)
+			L.adjust_nutrition(paratox)
+			L.adjustBruteLoss(-paratox*2) //Should automaticaly clamp to 0
+			L.adjustFireLoss(-paratox*2) //Should automaticaly clamp to 0
+			return
 
- 		//END SYNX hook.
+ 		//CHOMPedit end
 
 	// Deal digestion damage (and feed the pred)
 	var/old_brute = L.getBruteLoss()
@@ -53,17 +54,27 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	L.adjustFireLoss(B.digest_burn)
 	var/actual_brute = L.getBruteLoss() - old_brute
 	var/actual_burn = L.getFireLoss() - old_burn
-	var/damage_gain = actual_brute + actual_burn
+	var/damage_gain = (actual_brute + actual_burn)*(B.nutrition_percent / 100)
 
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
 	if(isrobot(B.owner))
-		var/mob/living/silicon/robot/R = B.owner
-		R.cell.charge += 25 * damage_gain
+		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit start: digestion producing reagents
+			var/mob/living/silicon/robot/R = B.owner
+			R.cell.charge += 20*damage_gain
+			B.GenerateBellyReagents_digesting()
+		else
+			var/mob/living/silicon/robot/R = B.owner
+			R.cell.charge += 25*damage_gain //CHOMPedit end
 	if(offset) // If any different than default weight, multiply the % of offset.
-		B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100) * 4.5 * (damage_gain) / difference)) //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
+		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit start: digestion producing reagents
+			B.owner.adjust_nutrition(offset*((B.nutrition_percent / 100)*4.5/(B.gen_cost*1.25)*(damage_gain)/difference)) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
+			B.digest_nutri_gain = offset*((B.nutrition_percent / 100)*0.5/(B.gen_cost*1.25)*(damage_gain)/difference) //for transfering nutrition value over to GenerateBellyReagents_digesting()
+			B.GenerateBellyReagents_digesting()
+		else
+			B.owner.adjust_nutrition(offset*(4.5 * (damage_gain) / difference)) //CHOMPedit end //4.5 nutrition points per health point. Normal same size 100+100 health prey with average weight would give 900 points if the digestion was instant. With all the size/weight offset taxes plus over time oxyloss+hunger taxes deducted with non-instant digestion, this should be enough to not leave the pred starved.
 	else
-		B.owner.adjust_nutrition((B.nutrition_percent / 100) * 4.5 * (damage_gain) / difference)
+		B.owner.adjust_nutrition(4.5 * (damage_gain) / difference)
 
 /datum/digest_mode/absorb
 	id = DM_ABSORB
@@ -75,6 +86,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	B.steal_nutrition(L)
 	if(L.nutrition < 100)
 		B.absorb_living(L)
+		if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
+			B.GenerateBellyReagents_absorbed() //CHOMPedit end: A bonus for pred, I know for a fact prey is usually at zero nutrition when absorption finally happens
 		return list("to_update" = TRUE)
 
 /datum/digest_mode/unabsorb

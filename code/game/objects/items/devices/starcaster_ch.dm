@@ -21,9 +21,61 @@
 /obj/item/device/starcaster_news/attack_self(mob/user as mob)
 
 	user.set_machine(src)
-	ui_interact(user) //Activates nanoUI. Fuck nanoUI.
+	tgui_interact(user) //Activates tgui. Bless tgui.
 	return
 
+/obj/item/device/starcaster_news/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "StarcasterCh", name) 
+		ui.open()
+
+/obj/item/device/starcaster_news/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state) //Mostly ripped off from news_browser.dm
+	var/list/data = list()
+
+	var/list/all_articles = list()
+	data["showing_archived"] = show_archived
+	data["article"] = null
+	if(loaded_article) 	// Viewing an article.
+		data["article"] = list(
+			"title" = loaded_article.filename,
+			"cover" = loaded_article.cover,
+			"content" = loaded_article.stored_data,
+		)
+	else										// Viewing list of articles
+		for(var/datum/computer_file/data/news_article/F in ntnet_global.available_news)
+			if(!show_archived && F.archived)
+				continue
+			all_articles.Add(list(list(
+				"name" = F.filename,
+				"uid" = F.uid,
+				"archived" = F.archived
+			)))
+	data["all_articles"] = all_articles
+
+	return data
+
+/obj/item/device/starcaster_news/tgui_act(action, list/params, datum/tgui/ui) //Also ripped from news_browser.dm. Bless tgui
+	if(..())
+		return TRUE
+	switch(action)
+		if("PRG_openarticle")
+			. = TRUE
+			if(loaded_article)
+				return TRUE
+
+			for(var/datum/computer_file/data/news_article/N in ntnet_global.available_news)
+				if(N.uid == text2num(params["uid"]))
+					loaded_article = N.clone()
+					break
+		if("PRG_reset")
+			. = TRUE
+			loaded_article = null
+		if("PRG_toggle_archived")
+			. = TRUE
+			show_archived = !show_archived
+
+/* Deprecated nanoUI code. Keeping mostly for reference.
 /obj/item/device/starcaster_news/Topic(href, href_list) //Mostly ripped off from news_browser.dm
 	if(..())
 		return 1
@@ -73,3 +125,4 @@
 		ui.auto_update_layout = 1
 		ui.set_initial_data(data)
 		ui.open()
+*/

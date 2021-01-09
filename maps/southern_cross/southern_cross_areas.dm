@@ -182,11 +182,6 @@
 /area/surface/outpost/mining_main/mech_bay
 	name = "North Mining Mech Bay"
 
-/area/surface/outpost/mining_main/gen_room
-	name = "North Mining Generator Room"
-	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
-
 /area/surface/outpost/mining_main/emergencystorage
 	name = "\improper North Mining Emergency Storage"
 	flags = RAD_SHIELDED
@@ -203,10 +198,37 @@
 /area/surface/outpost/mining_main/tools
 	name = "North Mining Tool Storage"
 
-
 /area/surface/outpost/mining_main/cave
 	name = "North Mining Outpost Cave"
 	icon_state = "outpost_mine_main"
+
+//Rust-Engine Outpost CHOMPedit - ksc
+
+/area/surface/outpost/engineering/atmos_room
+	name = "North Atmos Room"
+	icon_state = "atmos"
+
+/area/surface/outpost/engineering/smes
+	name = "North Engineering SMES"
+	icon_state = "substation"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
+
+/area/surface/outpost/engineering/reactor_smes
+	name = "North Engineering Reactor SMES"
+	icon_state = "engine_smes"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
+
+/area/surface/outpost/engineering/storage
+	name = "North Engineering Storage"
+	icon_state = "storage"
+
+/area/surface/outpost/engineering/monitoring
+	name = "North Engineering Monitoring"
+	icon_state = "engine_monitoring"
+
+/area/surface/outpost/engineering/auxiliary_storage
+	name = "North Engineering Auxiliary Storage"
+	icon_state = "emergencystorage"
 
 //Research Surface Outpost
 
@@ -220,7 +242,7 @@
 	name = "\improper Xenoresearch SMES Maintenance"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 /area/surface/outpost/research/xenoresearch/emergencystorage
 	name = "\improper Xenoresearch Emergency Storage"
@@ -261,7 +283,7 @@
 	name = "\improper Xenoarcheology SMES Maintenance"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 /area/surface/outpost/research/xenoarcheology/emergencystorage
 	name = "\improper Xenoarcheology Emergency Storage"
@@ -323,7 +345,7 @@
 
 /area/surface/outpost/main/gen_room/smes
 	name = "\improper Main Outpost Dorm SMES"
-	icon_state = "substation"										
+	icon_state = "substation"
 
 /area/surface/outpost/main/pool
 	name = "\improper Main Outpost Pool"
@@ -561,7 +583,7 @@
 
 /area/outpost/mining_station/dock
 	name = "Mining Station Dock"
-
+z
 //Turbolift
 
 /area/turbolift
@@ -879,7 +901,7 @@
 
 /area/maintenance/substation/atmospherics
 	name = "Atmospherics Substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
@@ -887,7 +909,7 @@
 
 /area/maintenance/substation/central // n/a
 	name = "Central Substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 //CHOMPStation Edit Start TFF 6/2/20 - Added substation
 
@@ -895,7 +917,7 @@
 	name = "Substation"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 //CHOMPStation Edit End
 
@@ -1178,11 +1200,19 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Third Deck Starboard Hallway"
 	icon_state = "hallS"
 
-//CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms.
+//CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms. 11/20/20 KC - Added more areas for gateway and halls.
 
-/area/hallway/primary/thirddeck/aftcentral
-	name = "\improper Third Deck Central Aft Hallway"
+/area/hallway/primary/thirddeck/aftportcentral
+	name = "\improper Third Deck Central Aft Port Hallway"
 	icon_state = "hallC"
+
+/area/hallway/primary/thirddeck/aftstarboardcentral
+	name = "\improper Third Deck Central Aft Starboard Hallway"
+	icon_state = "hallC"
+
+/area/hallway/primary/thirddeck/stationgateway
+	name = "\improper Third Deck Central Gateway"
+	icon_state = "teleporter"
 
 /area/hallway/primary/thirddeck/aft
 	name = "\improper Third Deck Aft Hallway"
@@ -1717,7 +1747,7 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/surface/outpost/fishing/smes
 	name = "\improper Fishing SMES Maintenance"
 	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 //Shuttle 3 CHOMPedit
 

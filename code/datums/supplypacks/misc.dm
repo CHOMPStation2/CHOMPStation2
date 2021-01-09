@@ -85,6 +85,7 @@
 			/obj/item/toy/plushie/foxbear,
 			/obj/item/toy/plushie/nukeplushie,
 			/obj/item/toy/plushie/otter,
+			/obj/item/toy/plushie/vox,
 			//VOREStation Add End
 			//YawnWider Add Start
 			/obj/item/toy/plushie/teshari/_yw,
