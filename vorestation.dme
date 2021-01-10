@@ -1915,6 +1915,7 @@
 #include "code\modules\client\preference_setup\loadout\loadout_gloves.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_gloves_vr.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_head.dm"
+#include "code\modules\client\preference_setup\loadout\loadout_head_ch.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_head_vr.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_head_yw.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_mask.dm"
