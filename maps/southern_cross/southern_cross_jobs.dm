@@ -68,16 +68,42 @@ var/const/access_explorer = 43
 /datum/job/explorer
 	title = "Explorer"
 	flag = EXPLORER
+<<<<<<< HEAD
 	department = "Civilian"
 	department_flag = CIVILIAN
+||||||| parent of 4caa4f98ec... Merge pull request #9563 from VOREStation/upstream-merge-7821
+	departments = list(DEPARTMENT_PLANET)
+	department_flag = CIVILIAN
+=======
+	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_PLANET)
+	department_flag = MEDSCI
+>>>>>>> 4caa4f98ec... Merge pull request #9563 from VOREStation/upstream-merge-7821
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4
+<<<<<<< HEAD
 	supervisors = "the explorer leader and the head of personnel"
 	selection_color = "#515151"
+||||||| parent of 4caa4f98ec... Merge pull request #9563 from VOREStation/upstream-merge-7821
+	supervisors = "the Head of Personnel"
+	selection_color = "#515151"
+=======
+	supervisors = "the Research Director"
+	selection_color =  "#633D63"
+>>>>>>> 4caa4f98ec... Merge pull request #9563 from VOREStation/upstream-merge-7821
 	economic_modifier = 4
+<<<<<<< HEAD
 	access = list(access_explorer)
 	minimal_access = list(access_explorer)
+||||||| parent of 4caa4f98ec... Merge pull request #9563 from VOREStation/upstream-merge-7821
+	access = list(access_explorer)
+	minimal_access = list(access_explorer)
+
+=======
+	access = list(access_explorer, access_research)
+	minimal_access = list(access_explorer, access_research)
+
+>>>>>>> 4caa4f98ec... Merge pull request #9563 from VOREStation/upstream-merge-7821
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
 /*
 	alt_titles = list(
