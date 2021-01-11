@@ -143,10 +143,7 @@
 /mob/living/silicon/robot/proc/vr_sprite_check()
 	if(wideborg == TRUE)
 		if(icontype== "Drake") // Why, Why can't we have normal nice things
-			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi' 
-		else
-			icon = 'icons/mob/widerobot_vr.dmi'
-		return
+			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi'
 	if((!(original_icon == icon)) && (!(icon == 'icons/mob/robots_vr.dmi')))
 		original_icon = icon
 	if((icon_state in vr_icons) && (icon == 'icons/mob/robots.dmi'))
