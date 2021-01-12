@@ -722,6 +722,8 @@
 			message = "snaps [T.his] fingers."
 			playsound(src, 'sound/effects/fingersnap.ogg', 50, 1, -3, preference = /datum/client_preference/emote_noises) //VOREStation Add
 			if(prob(0.0000000001)) // CHOMPStation edit
+				src.say("I don't feel so good...")
+				sleep(5 SECONDS)
 				src.gib()
 
 		if("swish")
