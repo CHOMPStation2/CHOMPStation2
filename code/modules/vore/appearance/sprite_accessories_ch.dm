@@ -23,6 +23,21 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/dragonforward
+	name = "Dragon horns (Forward)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "dragonforward"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/dragonforwardears
+	name = "Dragon horns w/Ears (Forward)"
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "dhornsears"
+	extra_overlay = "dhornsears_inner"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 //TAILS
 /datum/sprite_accessory/tail/alien_slug
 	name = "Alien slug tail"
