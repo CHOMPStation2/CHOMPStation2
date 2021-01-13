@@ -663,7 +663,7 @@ var/global/datum/controller/occupations/job_master
 				if(!isliving(V.mob))
 					continue
 				var/mob/living/M = V.mob
-				if(M.stat == UNCONSCIOUS || M.stat == DEAD || M.client.is_afk(10 MINUTE))
+				if(M.stat == UNCONSCIOUS || M.stat == DEAD || M.client.is_afk(10 MINUTES))
 					continue
 				if(!M.latejoin_vore)
 					continue
