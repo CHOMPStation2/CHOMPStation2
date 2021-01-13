@@ -663,11 +663,11 @@ var/global/datum/controller/occupations/job_master
 				if(!isliving(V.mob))
 					continue
 				var/mob/living/M = V.mob
-				if(M.stat == UNCONSCIOUS || M.stat == DEAD)
+				if(M.stat == UNCONSCIOUS || M.stat == DEAD || M.client.is_afk(10 MINUTE))
 					continue
 				if(!M.latejoin_vore)
 					continue
-				if(!(M.z in using_map.station_levels))
+				if(!(M.z in using_map.vorespawn_levels))
 					continue
 				preds += M
 				pred_names += M.real_name //very cringe
@@ -678,9 +678,18 @@ var/global/datum/controller/occupations/job_master
 					return
 				var/index = pred_names.Find(pred_name)
 				var/mob/living/pred = preds[index]
-				vore_spawn_gut = input(C, "Choose a Belly.", "Belly Spawnpoint") as null|anything in pred.vore_organs
+				var/list/available_bellies = list()
+				for(var/obj/belly/Y in pred.vore_organs)
+					if(Y.vorespawn_blacklist)
+						continue
+					available_bellies += Y
+				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
+				if(backup == "Yes")
+					backup = 1
+				vore_spawn_gut = input(C, "Choose a Belly.", "Belly Spawnpoint") as null|anything in available_bellies
 				if(!vore_spawn_gut)
 					return
+				to_chat(C, "<span class='warning'>[pred] has received your spawn request. Please wait.</span>")
 				log_admin("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
 				message_admins("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
 
@@ -688,16 +697,23 @@ var/global/datum/controller/occupations/job_master
 				if(confirm != "Yes")
 					to_chat(C, "<span class='warning'>[pred] has declined your spawn request.</span>")
 					return
+				if(!vore_spawn_gut || QDELETED(vore_spawn_gut))
+					to_chat(C, "<span class='warning'>Somehow, the belly you were trying to enter no longer exists.</span>")
+					return
 				if(pred.stat == UNCONSCIOUS || pred.stat == DEAD)
 					to_chat(C, "<span class='warning'>[pred] is not conscious.</span>")
 					to_chat(pred, "<span class='warning'>You must be conscious to accept.</span>")
 					return
-				if(!(pred.z in using_map.station_levels))
-					to_chat(C, "<span class='warning'>[pred] is no longer on station.</span>")
-					to_chat(pred, "<span class='warning'>You must be on the station to accept.</span>")
+				if(!(pred.z in using_map.vorespawn_levels))
+					to_chat(C, "<span class='warning'>[pred] is no longer in station grounds.</span>")
+					to_chat(pred, "<span class='warning'>You must be within station grounds to accept.</span>")
 					return
+				if(backup)
+					addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
 				log_admin("[key_name(C)] has vore spawned into [key_name(pred)]")
 				message_admins("[key_name(C)] has vore spawned into [key_name(pred)]")
+				to_chat(C, "<span class='notice'>You have been spawned via vore. You are free to roleplay how you got there as you please, such as teleportation or having had already been there.</span>")
+				to_chat(pred, "<span class='notice'>Your prey has spawned via vore. You are free to roleplay this how you please, such as teleportation or having had already been there.</span>")
 			else
 				to_chat(C, "<span class='warning'>No predators were available to accept you.</span>")
 				return
@@ -734,3 +750,9 @@ var/global/datum/controller/occupations/job_master
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)
 		.["msg"] = "has arrived on the station"
+
+/datum/controller/occupations/proc/m_backup_client(var/client/C)	//Same as m_backup, but takes a client entry. Used for vore late joining.
+	if(!ishuman(C.mob))
+		return
+	var/mob/living/carbon/human/CM = C.mob
+	SStranscore.m_backup(CM.mind, CM.nif)

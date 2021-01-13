@@ -273,6 +273,7 @@ const VoreSelectedBelly = (props, context) => {
     liq_msg3,
     liq_msg4,
     liq_msg5,
+    vorespawn_blacklist,
   } = belly;
 
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
@@ -473,6 +474,13 @@ const VoreSelectedBelly = (props, context) => {
                 <Button
                   onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
                   content={shrink_grow_size * 100 + "%"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Vore Spawn Blacklist">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_vorespawn_blacklist" })}
+                  icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
+                  selected={vorespawn_blacklist}
+                  content={vorespawn_blacklist ? "Yes" : "No"} />
               </LabeledList.Item>
             </LabeledList>
           </Flex.Item>

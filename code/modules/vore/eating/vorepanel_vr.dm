@@ -157,6 +157,7 @@
 			"shrink_grow_size" = selected.shrink_grow_size,
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
+			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		)
 
 		data["selected"]["addons"] = list()
@@ -921,6 +922,9 @@
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
+			. = TRUE
+		if("b_vorespawn_blacklist")
+			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
 			. = TRUE
 
 	if(.)
