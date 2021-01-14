@@ -273,6 +273,7 @@ const VoreSelectedBelly = (props, context) => {
     liq_msg3,
     liq_msg4,
     liq_msg5,
+    vorespawn_blacklist,
   } = belly;
 
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
@@ -473,6 +474,13 @@ const VoreSelectedBelly = (props, context) => {
                 <Button
                   onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
                   content={shrink_grow_size * 100 + "%"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Vore Spawn Blacklist">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_vorespawn_blacklist" })}
+                  icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
+                  selected={vorespawn_blacklist}
+                  content={vorespawn_blacklist ? "Yes" : "No"} />
               </LabeledList.Item>
             </LabeledList>
           </Flex.Item>
@@ -800,6 +808,7 @@ const VoreUserPreferences = (props, context) => {
     show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
+    latejoin_vore,
     noisy,
     liq_rec,
     liq_giv,
@@ -909,6 +918,18 @@ const VoreUserPreferences = (props, context) => {
               ? "Click here to allow being spontaneous pred."
               : "Click here to disable being spontaneous pred.")}
             content={can_be_drop_pred ? "Spontaneous Pred Enabled" : "Spontaneous Pred Disabled"} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <Button
+            onClick={() => act("toggle_latejoin_vore")}
+            icon={latejoin_vore ? "toggle-on" : "toggle-off"}
+            selected={latejoin_vore}
+            fluid
+            tooltip={"Toggle late join vore spawnpoint. "
+            + (latejoin_vore
+              ? "Click here to turn off vorish spawnpoint."
+              : "Click here to turn on vorish spawnpoint.")}
+            content={latejoin_vore ? "Vore Spawn Enabled" : "Vore Spawn Disabled"} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button

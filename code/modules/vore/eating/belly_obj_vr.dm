@@ -185,7 +185,8 @@
 		"fullness2_messages",
 		"fullness3_messages",
 		"fullness4_messages",
-		"fullness5_messages"     //CHOMP end of variables from CHOMP
+		"fullness5_messages",
+		"vorespawn_blacklist"     //CHOMP end of variables from CHOMP
 		)
 
 /*These have been pulled from the above list as these were chomp edits for liquid belly stuff. This needs to be ported back in for TGUI port
@@ -794,7 +795,8 @@
 	dupe.gen_time = gen_time
 	dupe.gen_time_display = gen_time_display
 	dupe.reagent_transfer_verb = reagent_transfer_verb
-	dupe.custom_max_volume = custom_max_volume	//CHOMP end of variables from CHOMP
+	dupe.custom_max_volume = custom_max_volume
+	dupe.vorespawn_blacklist = vorespawn_blacklist	//CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

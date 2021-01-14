@@ -157,6 +157,7 @@
 			"shrink_grow_size" = selected.shrink_grow_size,
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
+			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		)
 
 		data["selected"]["addons"] = list()
@@ -200,7 +201,7 @@
 				if(M.absorbed)
 					info["absorbed"] = TRUE
 			data["selected"]["contents"].Add(list(info))
-		
+
 		data["selected"]["show_liq"] = selected.show_liquids //CHOMPedit start: liquid belly options
 		data["selected"]["liq_interacts"] = list()
 		if(selected.show_liquids)
@@ -243,6 +244,7 @@
 		"show_vore_fx" = host.show_vore_fx,
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
+		"latejoin_vore" = host.latejoin_vore,
 		"noisy" = host.noisy,
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
@@ -271,7 +273,7 @@
 		// Host is inside someone else, and is trying to interact with something else inside that person.
 		if("pick_from_inside")
 			return pick_from_inside(usr, params)
-			
+
 		// Host is trying to interact with something in host's belly.
 		if("pick_from_outside")
 			return pick_from_outside(usr, params)
@@ -302,7 +304,7 @@
 			host.vore_selected = NB
 			unsaved_changes = TRUE
 			return TRUE
-		
+
 		if("bellypick")
 			host.vore_selected = locate(params["bellypick"])
 			return TRUE
@@ -373,6 +375,12 @@
 			host.can_be_drop_prey = !host.can_be_drop_prey
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.can_be_drop_prey = host.can_be_drop_prey
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_latejoin_vore")
+			host.latejoin_vore = !host.latejoin_vore
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.latejoin_vore = host.latejoin_vore
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_digest")
@@ -459,11 +467,11 @@
 
 	if(!(target in OB))
 		return TRUE // Aren't here anymore, need to update menu
-	
+
 	var/intent = "Examine"
 	if(isliving(target))
 		intent = alert("What do you want to do to them?","Query","Examine","Help Out","Devour")
-	
+
 	else if(istype(target, /obj/item))
 		intent = alert("What do you want to do to that?","Query","Examine","Use Hand")
 
@@ -561,7 +569,7 @@
 					host.vore_selected.transfer_contents(target, choice, 1)
 				return TRUE
 		return
-	
+
 	var/atom/movable/target = locate(params["pick"])
 	if(!(target in host.vore_selected))
 		return TRUE // Not in our X anymore, update UI
@@ -652,7 +660,7 @@
 			if(!toggle_addon)
 				return FALSE
 			host.vore_selected.mode_flags ^= host.vore_selected.mode_flag_list[toggle_addon]
-			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on 
+			host.vore_selected.items_preserved.Cut() //Re-evaltuate all items in belly on
 			. = TRUE
 		if("b_item_mode")
 			var/list/menu_list = host.vore_selected.item_digest_modes.Copy()
@@ -682,7 +690,7 @@
 			host.vore_selected.contamination_color = new_color
 			host.vore_selected.items_preserved.Cut() //To re-contaminate for new color
 			. = TRUE
-		if("b_desc")		
+		if("b_desc")
 			var/new_desc = html_encode(input(usr,"Belly Description ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc) as message|null)
 
 			if(new_desc)
@@ -915,7 +923,10 @@
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
 			. = TRUE
-	
+		if("b_vorespawn_blacklist")
+			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
+			. = TRUE
+
 	if(.)
 		unsaved_changes = TRUE
 
@@ -928,7 +939,7 @@
 	var/attr = params["liq_attribute"]
 	switch(attr)
 		if("b_show_liq")
-			if(!host.vore_selected.show_liquids) 
+			if(!host.vore_selected.show_liquids)
 				host.vore_selected.show_liquids = 1
 				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid options.</span>")
 			else
@@ -1028,7 +1039,7 @@
 	var/attr = params["liq_messages"]
 	switch(attr)
 		if("b_show_liq_fullness")
-			if(!host.vore_selected.show_fullness_messages) 
+			if(!host.vore_selected.show_fullness_messages)
 				host.vore_selected.show_fullness_messages = 1
 				to_chat(usr,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid examination options.</span>")
 			else
