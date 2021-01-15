@@ -68,14 +68,6 @@
 	title_blurb = "A Server helps out kitchen and diner staff with various tasks, primarily food delivery. A Server has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/service/server
 
-//CHOMPSTATION edit start: Thought it would be funny for people to wear their reason for being on station on their shoulder.
-/datum/alt_title/prey
-	title = "Belly Filler"
-	title_blurb = "Considering the needs of this particular region of space, a Belly Filler is a crewmember who has willingly consigned themselves to \
-				serving the voracious appetites of their fellow crewmembers. A Belly Filler has no authority."
-	title_outfit = /decl/hierarchy/outfit/job/assistant/intern
-//CHOMPSTATION edit end.
-
 /datum/job/intern/New()
 	..()
 	if(config)
