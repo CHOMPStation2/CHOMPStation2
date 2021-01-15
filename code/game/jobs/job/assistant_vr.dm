@@ -22,7 +22,7 @@
 					  "Lab Assistant" = /datum/alt_title/intern_sci, //CHOMPEdit
 					  "Security Cadet" = /datum/alt_title/intern_sec,
 					  "Jr. Cargo Tech" = /datum/alt_title/intern_crg,
-					  "Server" = /datum/alt_title/server,
+					  "Server" = /datum/alt_title/server
 	job_description = "An Intern does whatever is requested of them, often doing so in process of learning \
 						another job. Though they are part of the crew, they have no real authority."
 	timeoff_factor = 0 // Interns, noh
