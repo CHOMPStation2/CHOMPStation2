@@ -749,7 +749,9 @@ var/global/datum/controller/occupations/job_master
 	else if(!fail_deadly)
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)
-		.["msg"] = "has arrived on the station"
+		while (!isbelly(H.loc))
+		else ["msg"] = "has arrived on the station"
+			break
 
 /datum/controller/occupations/proc/m_backup_client(var/client/C)	//Same as m_backup, but takes a client entry. Used for vore late joining.
 	if(!ishuman(C.mob))
