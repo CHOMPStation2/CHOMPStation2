@@ -749,7 +749,7 @@ var/global/datum/controller/occupations/job_master
 	else if(!fail_deadly)
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)
-		while (!isbelly(H.loc))
+		while (isbelly(H.loc))
 		else ["msg"] = "has arrived on the station"
 			break
 
