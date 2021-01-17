@@ -404,7 +404,6 @@ var/list/organ_cache = list()
 			if(user)
 				add_attack_logs(user, owner, "Removed vital organ [src.name]")
 			if(owner.stat != DEAD)
-				owner.can_defib = 0
 				owner.death()
 
 	handle_organ_mod_special(TRUE)
