@@ -152,3 +152,13 @@
 
 	qdel(src)
 	return
+
+/obj/item/weapon/grenade/spawnergrenade/clustaur
+	desc = "It is set to detonate in 5 seconds. It will release a cluster of hydration."
+	name = "clustaur grenade"
+	icon = 'icons/obj/grenade_ch.dmi'
+	icon_state = "clustaur"
+	item_state = "clustaur"
+	banglet = 1
+	deliveryamt = 10
+	spawner_type = /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle/wataur
