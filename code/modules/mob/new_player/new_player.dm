@@ -164,7 +164,7 @@
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 			to_chat(usr, "<font color='red'>The round is either not ready, or has already finished...</font>")
 			return
-		
+
 		var/time_till_respawn = time_till_respawn()
 		if(time_till_respawn == -1) // Special case, never allowed to respawn
 			to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
@@ -352,7 +352,7 @@
 /mob/new_player/proc/time_till_respawn()
 	if(!ckey)
 		return -1 // What?
-		
+
 	var/timer = GLOB.respawn_timers[ckey]
 	// No timer at all
 	if(!timer)
@@ -461,6 +461,9 @@
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)
 		data_core.manifest_inject(character)
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
+	var/gut = join_props["voreny"]
+	if(gut)
+		character.forceMove(gut)
 
 	qdel(src) // Delete new_player mob
 

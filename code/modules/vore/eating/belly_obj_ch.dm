@@ -36,6 +36,7 @@
 	var/liquid_fullness3_messages = FALSE
 	var/liquid_fullness4_messages = FALSE
 	var/liquid_fullness5_messages = FALSE
+	var/vorespawn_blacklist = FALSE
 
 	var/list/fullness1_messages = list(
 		"%pred's %belly looks empty"
