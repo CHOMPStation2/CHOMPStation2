@@ -106,9 +106,8 @@
 
 /obj/item/Initialize(mapload)
 	. = ..()
-	/*
 	if(islist(origin_tech))
-		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)*/
+		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
 	if(embed_chance < 0)
 		if(sharp)
 			embed_chance = max(5, round(force/w_class))
