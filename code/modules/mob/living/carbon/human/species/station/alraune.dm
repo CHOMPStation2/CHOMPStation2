@@ -62,7 +62,7 @@
 	flesh_color = "#9ee02c"
 	blood_color = "#edf4d0" //sap!
 	base_color = "#1a5600"
-	
+
 	reagent_tag = IS_ALRAUNE
 
 	blurb = "Alraunes are a rare sight in space. Their bodies are reminiscent of that of plants, and yet they share many\
@@ -401,7 +401,7 @@
 		if(selection)
 			fruit_gland.fruit_type = selection
 		verbs |= /mob/living/carbon/human/proc/alraune_fruit_pick
-		verbs -= /mob/living/carbon/human/proc/alraune_fruit_select
+		//verbs -= /mob/living/carbon/human/proc/alraune_fruit_select // Chomp Edit
 		fruit_gland.organ_owner = src
 		fruit_gland.emote_descriptor = list("fruit right off of [fruit_gland.organ_owner]!", "a fruit from [fruit_gland.organ_owner]!")
 
