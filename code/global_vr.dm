@@ -34,6 +34,7 @@ var/global/list/acceptable_fruit_types= list(
 											"durian",
 											"eggplant",
 											"grapes",
+											"grass", // CH changes
 											"greengrapes",
 											"harebells",
 											"lavender",
@@ -46,14 +47,17 @@ var/global/list/acceptable_fruit_types= list(
 											"poppies",
 											"potato",
 											"pumpkin",
+											"reishi", // CH changes
 											"rice",
 											"rose",
 											"rhubarb",
+											"shand", // CH changes
 											"soybean",
 											"spineapple",
 											"sugarcane",
 											"sunflowers",
 											"tomato",
+											"towercap", // CH changes
 											"vanilla",
 											"watermelon",
 											"wheat",
