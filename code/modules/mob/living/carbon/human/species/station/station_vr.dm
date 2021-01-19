@@ -294,16 +294,10 @@
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
 	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
-<<<<<<< HEAD
 
 //CHOMPSedit: links to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran"
-||||||| parent of 38653887fa... Merge pull request #9580 from Heroman3003/sexes-for-everyones
-	wikilink="https://wiki.vore-station.net/Tajaran"
-=======
 	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-	wikilink="https://wiki.vore-station.net/Tajaran"
->>>>>>> 38653887fa... Merge pull request #9580 from Heroman3003/sexes-for-everyones
 	agility = 90
 
 /datum/species/skrell
@@ -314,16 +308,10 @@
 	min_age = 18
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
-<<<<<<< HEAD
 
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
-||||||| parent of 38653887fa... Merge pull request #9580 from Heroman3003/sexes-for-everyones
-	wikilink="https://wiki.vore-station.net/Skrell"
-=======
 	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-	wikilink="https://wiki.vore-station.net/Skrell"
->>>>>>> 38653887fa... Merge pull request #9580 from Heroman3003/sexes-for-everyones
 
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
@@ -346,16 +334,8 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
-<<<<<<< HEAD
-
-//CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
-||||||| parent of 38653887fa... Merge pull request #9580 from Heroman3003/sexes-for-everyones
-	wikilink="https://wiki.vore-station.net/Diona"
-=======
 	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-	wikilink="https://wiki.vore-station.net/Diona"
->>>>>>> 38653887fa... Merge pull request #9580 from Heroman3003/sexes-for-everyones
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
@@ -382,20 +362,11 @@
 		/mob/living/proc/toggle_pass_table
 		)
 
-<<<<<<< HEAD
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Promethean"
-
-||||||| parent of 38653887fa... Merge pull request #9580 from Heroman3003/sexes-for-everyones
-/datum/species/shapeshifter/promethean
-	spawn_flags = SPECIES_CAN_JOIN
-	wikilink="https://wiki.vore-station.net/Promethean"
-
-=======
->>>>>>> 38653887fa... Merge pull request #9580 from Heroman3003/sexes-for-everyones
+	
 /datum/species/human
 	color_mult = 1
 	icobase = 'icons/mob/human_races/r_human_vr.dmi'
