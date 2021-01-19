@@ -45,6 +45,8 @@
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
 
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
 		"You feel uncomfortably warm.",
@@ -106,6 +108,8 @@
 
 	primitive_form = "Sobaka"
 
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
@@ -153,6 +157,8 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
 	primitive_form = "Sparra"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -207,6 +213,8 @@
 	blood_color = "#240bc4"
 	color_mult = 1
 
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
 		"You feel uncomfortably warm.",
@@ -252,6 +260,8 @@
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+
 	flesh_color = "#966464"
 	base_color = "#B43214"
 
@@ -268,6 +278,7 @@
 	min_age = 18
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 	descriptors = list()
 
 //CHOMPSedit: link to our wiki
@@ -286,6 +297,7 @@
 
 //CHOMPSedit: links to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran"
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 	agility = 90
 
 /datum/species/skrell
@@ -299,11 +311,13 @@
 
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
 	gluttonous = 0
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 	descriptors = list()
 
 //CHOMPedit: link to our wiki
@@ -320,9 +334,9 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
-
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
@@ -335,6 +349,7 @@
 	push_flags = ~HEAVY //Allows them to use micro step code.
 	swap_flags = ~HEAVY
 	gluttonous = 0
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 	descriptors = list()
 
 //CHOMPedit: link to our wiki
@@ -350,16 +365,16 @@
 
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Promethean"
-
+	
 /datum/species/human
 	color_mult = 1
 	icobase = 'icons/mob/human_races/r_human_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_human_vr.dmi'
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 	min_age = 18
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 	base_color = "#EECEB3"
 
 //CHOMPedit: link to our wiki
@@ -394,6 +409,7 @@ datum/species/harpy
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = null
 	color_mult = 1
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
@@ -562,6 +578,7 @@ datum/species/harpy
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 
 	flesh_color = "#AFA59E"
 	base_color = "#333333"
@@ -604,6 +621,7 @@ datum/species/harpy
 
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 
 	blood_color = "#12ff12"
 	flesh_color = "#201730"
