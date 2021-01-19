@@ -334,6 +334,7 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
+//CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
 	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
 
