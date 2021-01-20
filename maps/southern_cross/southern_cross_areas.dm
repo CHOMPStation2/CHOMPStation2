@@ -673,7 +673,7 @@ z
 	name = "\improper Auxiliary Engineering Station"
 	sound_env = SMALL_ENCLOSED
 /*
-//KSC - CHOMPStation Edit 1/19/20 - Moving this to the third-deck
+//KSC - CHOMPStation Edit 1/19/21 - Moving this to the second-deck
 /area/crew_quarters/firstdeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
@@ -942,7 +942,7 @@ z
 	name = "\improper Locker Room"
 	icon_state = "locker"
 
-//CHOMPStation Edit Start KSC 1/19/20 - Added area for new GYM
+//CHOMPStation Edit Start KSC 1/19/21 - Added area for new GYM
 
 /area/crew_quarters/seconddeck/gym
 	name = "\improper Station Gym"
