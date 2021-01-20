@@ -17,6 +17,9 @@
 /obj/item/weapon/gun/projectile/fiveseven/update_icon()
 	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
 
+//Was originally expecting to be able to have 64x64 guns and just shrink them but that's just like not a thing because code doesn't allow it
+//And Kasssc kinda explained to me that even if the code did allow it, it wouldn't look right.
+//So, we have the mp5 as the only one that does have this, and it just uses filters to convert the 64x64 sprite into 32x32 for now.
 /obj/item/weapon/gun/projectile/automatic/cballistic
 	name = "I AM NOT SUPPOSED TO EXIST"
 	desc = "Yes hello I'm not supposed to exist, I'm just a weird code artefact thing please contact a developer."
@@ -54,6 +57,184 @@
 	)
 	load_method = MAGAZINE
 	muzzle_velocity = 400
+
+//Following guns are thanks to Serdy/Przyjaciel for the sprites and lore for WKHM. Naming the classes after him in honor <3
+/obj/item/weapon/gun/projectile/automatic/serdy
+	name = "I AM NOT SUPPOSED TO EXIST"
+	desc = "Yes hello I'm not supposed to exist, I'm just a weird code artefact thing please contact a developer."
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_state = "asval"
+	icon_expected_height = 32
+	icon_expected_width = 64
+
+/obj/item/weapon/gun/projectile/automatic/serdy/Initialize()
+	. = ..()
+	update_transform()
+
+/obj/item/weapon/gun/projectile/automatic/serdy/update_transform()
+	. = ..()
+	transform = transform.Translate(-16,0)
+//AK Variants
+
+/obj/item/weapon/gun/projectile/automatic/serdy/asval
+	name = "AS-VAL"
+	desc = "A somewhat competent remake of an ancient russian assault rifle. Commonly found in the hands of criminals, and on pan-slavic rimworlds. Integrally suppressed, chambered in 7.62x39mm."
+	caliber = "9x39mm"
+	magazine_type = /obj/item/ammo_magazine/asval
+	allowed_magazines = list(/obj/item/ammo_magazine/asval)
+	icon_state = "asval"
+	projectile_type = /obj/item/projectile/bullet/rifle/a9x39
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
+	muzzle_velocity = 295
+
+/obj/item/weapon/gun/projectile/automatic/serdy/krinkov
+	name = "Krinkov"
+	desc = "A professionally cut down AKM made to be easily concealable. With a 12 inch barrel, this is a very loud short barrel rifle. Illegal pretty much everywhere, and easy to get a hold of, these classic russian firearms are a mainstay amidst the various criminal organizations across the galaxy."
+	caliber = "7.62x39mm"
+	magazine_type = /obj/item/ammo_magazine/akm
+	allowed_magazines = list(/obj/item/ammo_magazine/akm)
+	icon_state = "krinkov"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
+	muzzle_velocity = 680
+
+/obj/item/weapon/gun/projectile/automatic/serdy/akm
+	name = "AKM"
+	desc = "The tried and true, old fashioned chatterbox. Ivan's favorite. Best used while at least somewhat inebriated. Chambered in 7.62x39mm."
+	caliber = "7.62x39mm"
+	magazine_type = /obj/item/ammo_magazine/akm
+	allowed_magazines = list(/obj/item/ammo_magazine/akm)
+	icon_state = "akm"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
+	muzzle_velocity = 715
+
+/obj/item/weapon/gun/projectile/automatic/serdy/scrapak
+	name = "AKM"
+	desc = "The 'Stalingrad Special'. This rickety old AKM has seen better days. Better bring some vodka, because every shot this gun manages to squeeze off without blowing up in your face is worthy of celebration. Chambered in 7.62x39mm"
+	caliber = "7.62x39mm"
+	magazine_type = /obj/item/ammo_magazine/akm
+	allowed_magazines = list(/obj/item/ammo_magazine/akm)
+	icon_state = "scrapak"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
+	muzzle_velocity = 700
+
+// AR Variants
+
+/obj/item/weapon/gun/projectile/automatic/serdy/m16a2
+	name = "M16A2"
+	desc = "A favorite service rifle everywhere, even today. It might be a reproduction, but Eugene Stoner smiles upon every man or woman who wields this beautiful democracy dispensing machine, even if it's never seen the soil of Terra, and never will. Chambered in 5.56x45mm."
+	caliber = "5.56x45mm"
+
+	magazine_type = /obj/item/ammo_magazine/m16
+	allowed_magazines = list(/obj/item/ammo_magazine/m16)
+	icon_state="m16"
+	projectile_type = /obj/item/projectile/bullet/rifle/a556
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
+	muzzle_velocity = 960
+
+/obj/item/weapon/gun/projectile/automatic/serdy/m4a1
+	name = "M4A1"
+	desc = "The M16's shorter, more lightweight little brother. An old terran flag is stamped into the receiver. These guns can be found just about everywhere. A favorite on the rimworlds due to its simplicity to produce, and reliability. Chambered in 5.56x45mm."
+	caliber = "5.56x45mm"
+	magazine_type = /obj/item/ammo_magazine/m16
+	allowed_magazines = list(/obj/item/ammo_magazine/m16)
+	icon_state="m4"
+	projectile_type = /obj/item/projectile/bullet/rifle/a556
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
+	load_method = MAGAZINE
+	muzzle_velocity = 910
+
+/obj/item/weapon/gun/projectile/automatic/serby/patriot
+	name = "Patriot"
+	desc = "I raised you, and loved you, I've given you weapons, taught you techniques, endowed you with knowledge. There's nothing more for me to give you. All that's left for you to take is my life. 'Still in a dream' is stamped into the receiver, and it has no serial number. Chambered in 5.56x45mm."
+	caliber = "5.56x45mm"
+	magazine_type = /obj/item/ammo_magazine/m16
+	allowed_magazines = list(/obj/item/ammo_magazine/m16)
+	icon_state="patriot"
+	projectile_type = /obj/item/projectile/bullet/rifle/a556
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
+	load_method = MAGAZINE
+	muzzle_velocity = 960
+
+//Other rifles
+
+/obj/item/weapon/gun/projectile/automatic/serby/m41ab //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
+	name = "M41A/2"
+	desc = "The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. This one is a rare, and fairly competent replica of the original by Scarborough Arms, with some minor design improvements over the original. The aluminium chassis is painted steel blue, and it has 'Scarborough Arms - Per falcis, per pravitas' inscribed on the stock."
+	caliber = "10x24mm caseless"
+	magazine_type = /obj/item/ammo_magazine/m41
+	allowed_magazines = list(/obj/item/ammo_magazine/m41)
+	icon_state="m41ab"
+	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	muzzle_velocity = 840
+
+/obj/item/weapon/gun/projectile/automatic/serby/m41a //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
+	name = "M41A"
+	desc = "A tried and true original. The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. 'PEACE THROUGH SUPERIOR FIREPOWER' is stamped into the side of the aluminium chassis."
+	caliber = "10x24mm caseless"
+	magazine_type = /obj/item/ammo_magazine/m41
+	allowed_magazines = list(/obj/item/ammo_magazine/m41)
+	icon_state="m41a"
+	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-10,-10), dispersion=list(0.0, 0.3, 0.6))
+	)
+	load_method = MAGAZINE
+	muzzle_velocity = 840
+
+/obj/item/weapon/gun/projectile/automatic/serby/sks 	//Reminder to myself to make sure this works and also to make sure that people are able to empty the internal mag
+	name = "SKS"
+	desc = "Just looking at it makes you want to buy a tacticool turtleneck, go into the woods, and -operate-. Chambered in 7.62x39mm."
+	caliber = "7.62x39mm"
+	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
+	load_method = SINGLE_CASING|SPEEDLOADER
+	icon_state = "sks"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	muzzle_velocity = 735
+	max_shells = 10
+	ammo_type = /obj/item/ammo_casing/a762x39
+
 
 //Time to give all these existing guns some new properties.
 //automatic.dm
