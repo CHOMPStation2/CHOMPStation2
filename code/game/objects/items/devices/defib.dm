@@ -288,7 +288,7 @@
 
 /obj/item/weapon/shockpaddles/proc/can_revive(mob/living/carbon/human/H) //This is checked right before attempting to revive
 	var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[O_BRAIN]
-	if(H.should_have_organ(O_BRAIN) && (!brain) )
+	if(H.should_have_organ(O_BRAIN) && (!brain) )	//CHOMPEdit Defib Timer Removal
 		return "buzzes, \"Resuscitation failed - Excessive neural degeneration. Further attempts futile.\""
 
 	H.updatehealth()
