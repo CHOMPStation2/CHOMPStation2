@@ -145,7 +145,7 @@ var/list/organ_cache = list()
 	STOP_PROCESSING(SSobj, src)
 	handle_organ_mod_special(TRUE)
 	if(owner && vital)
-		owner.death()
+		owner.death()	//CHOMPEdit Defib Timer Removal
 
 /obj/item/organ/proc/adjust_germ_level(var/amount)		// Unless you're setting germ level directly to 0, use this proc instead
 	germ_level = CLAMP(germ_level + amount, 0, INFECTION_LEVEL_MAX)
@@ -404,7 +404,7 @@ var/list/organ_cache = list()
 			if(user)
 				add_attack_logs(user, owner, "Removed vital organ [src.name]")
 			if(owner.stat != DEAD)
-				owner.death()
+				owner.death()	//CHOMPEdit Defib Timer Removal
 
 	handle_organ_mod_special(TRUE)
 
