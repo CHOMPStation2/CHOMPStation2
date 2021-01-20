@@ -91,6 +91,7 @@
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
 	muzzle_velocity = 295
+	w_class = ITEMSIZE_HUGE
 
 /obj/item/weapon/gun/projectile/automatic/serdy/krinkov
 	name = "Krinkov"
@@ -123,6 +124,7 @@
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
 	muzzle_velocity = 715
+	w_class = ITEMSIZE_HUGE
 
 /obj/item/weapon/gun/projectile/automatic/serdy/scrapak
 	name = "AKM"
@@ -139,6 +141,7 @@
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
 	muzzle_velocity = 700
+	w_class = ITEMSIZE_HUGE
 
 // AR Variants
 
@@ -158,6 +161,7 @@
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	muzzle_velocity = 960
+	w_class = ITEMSIZE_HUGE
 
 /obj/item/weapon/gun/projectile/automatic/serdy/m4a1
 	name = "M4A1"
@@ -174,8 +178,9 @@
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
 	muzzle_velocity = 910
+	w_class = ITEMSIZE_HUGE
 
-/obj/item/weapon/gun/projectile/automatic/serby/patriot
+/obj/item/weapon/gun/projectile/automatic/serdy/patriot
 	name = "Patriot"
 	desc = "I raised you, and loved you, I've given you weapons, taught you techniques, endowed you with knowledge. There's nothing more for me to give you. All that's left for you to take is my life. 'Still in a dream' is stamped into the receiver, and it has no serial number. Chambered in 5.56x45mm."
 	caliber = "5.56x45mm"
@@ -190,10 +195,11 @@
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
 	muzzle_velocity = 960
+	w_class = ITEMSIZE_HUGE
 
 //Other rifles
 
-/obj/item/weapon/gun/projectile/automatic/serby/m41ab //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
+/obj/item/weapon/gun/projectile/automatic/serdy/m41ab //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
 	name = "M41A/2"
 	desc = "The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. This one is a rare, and fairly competent replica of the original by Scarborough Arms, with some minor design improvements over the original. The aluminium chassis is painted steel blue, and it has 'Scarborough Arms - Per falcis, per pravitas' inscribed on the stock."
 	caliber = "10x24mm caseless"
@@ -208,7 +214,7 @@
 	load_method = MAGAZINE
 	muzzle_velocity = 840
 
-/obj/item/weapon/gun/projectile/automatic/serby/m41a //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
+/obj/item/weapon/gun/projectile/automatic/serdy/m41a //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
 	name = "M41A"
 	desc = "A tried and true original. The Armat M41A Pulse Rifle is a pulse-action assault rifle chambered for 10×24mm Caseless ammunition. 'PEACE THROUGH SUPERIOR FIREPOWER' is stamped into the side of the aluminium chassis."
 	caliber = "10x24mm caseless"
@@ -223,7 +229,7 @@
 	load_method = MAGAZINE
 	muzzle_velocity = 840
 
-/obj/item/weapon/gun/projectile/automatic/serby/sks 	//Reminder to myself to make sure this works and also to make sure that people are able to empty the internal mag
+/obj/item/weapon/gun/projectile/automatic/serdy/sks 	//Reminder to myself to make sure this works and also to make sure that people are able to empty the internal mag
 	name = "SKS"
 	desc = "Just looking at it makes you want to buy a tacticool turtleneck, go into the woods, and -operate-. Chambered in 7.62x39mm."
 	caliber = "7.62x39mm"
