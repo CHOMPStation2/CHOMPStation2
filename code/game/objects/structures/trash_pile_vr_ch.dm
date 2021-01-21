@@ -50,7 +50,7 @@
 		return ..()
 
 	produce_gamma_item()
-		if(prob(overridechancegamma && gammaunique!=2)
+		if(prob(overridechancegamma)&& gammaunique!=2)
 			var/path = pick(gammapicks)
 			var/obj/item/I = new path()
 			if(gammaunique!=0)
