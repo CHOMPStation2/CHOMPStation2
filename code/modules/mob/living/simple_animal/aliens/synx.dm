@@ -796,12 +796,12 @@
 		prob(50);/mob/living/simple_mob/animal/synx/ai,) //normal eel boyo.
 
 ////////////////////////////////////////////////////////////////////////////
-//////////////////////////NOT A SYNX///////but looks kinda like one/////////
+//////////////////////////NOT A SYNX///////but acts kinda like one/////////
 ////////////////////////////////////////////////////////////////////////////
 /*
 Content relating to the SCP Foundation, including the SCP Foundation logo, is licensed under
 Creative Commons Sharealike 3.0 and all concepts originate from http://www.scp-wiki.net and its authors.
-This includes the sprites of the below Mob which are based upon SCP 939 and sprited by Riviera (not added yet)
+This includes the sprites of the below Mob which are based upon SCP 939.
 */
 //SCP-939
 //sprites to be made.
@@ -831,9 +831,10 @@ This includes the sprites of the below Mob which are based upon SCP 939 and spri
 	ai_holder_type = /datum/ai_holder/simple_mob/scp
 	say_list_type = /datum/say_list/malf_drone
 
-	//icon_state = "scp_living"
-	//icon_living = "scp_living"
-	//icon_dead = "scp_dead"
+	icon = 'icons/mob/synxmanyvoices.dmi'
+	icon_state = "939_living"
+	icon_living = "939_living"
+	icon_dead = "939_dead"
 
 #undef SYNX_LOWER_DAMAGE
 #undef SYNX_UPPER_DAMAGE
