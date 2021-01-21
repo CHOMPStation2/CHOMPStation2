@@ -828,6 +828,8 @@ This includes the sprites of the below Mob which are based upon SCP 939.
 	name = "Unknown"
 	desc = "It's a red canine looking creature."
 	tt_desc = "Unknown Alien Lifeform"
+	
+	poison_chance = 0 //no poison, 
 	ai_holder_type = /datum/ai_holder/simple_mob/scp
 	say_list_type = /datum/say_list/malf_drone
 
