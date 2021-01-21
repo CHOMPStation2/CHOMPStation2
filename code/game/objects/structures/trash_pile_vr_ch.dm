@@ -24,6 +24,9 @@
 		/obj/item/weapon/storage/pill_bottle/zoom = 2,
 		/obj/item/weapon/storage/pill_bottle/paracetamol = 1,
 	) //override pick list gamma
+	
+	var/gammaunique = 1
+	
 
 	Initialize()
 		..()
@@ -47,8 +50,10 @@
 		return ..()
 
 	produce_gamma_item()
-		if(prob(overridechancegamma))
+		if(prob(overridechancegamma && gammaunique!=2)
 			var/path = pick(gammapicks)
 			var/obj/item/I = new path()
+			if(gammaunique!=0)
+				gammaunique++
 			return I
 		return ..()
