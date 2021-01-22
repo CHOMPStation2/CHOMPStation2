@@ -4,7 +4,7 @@
 	var/diam = 9	//mm
 	var/energy_add = 0
 	var/velocity = 500	//Meters per second
-	var/hollow_point = FALSE
+	var/hollow_point = FALSE	//Determines if the round leaves additional shrapnel in the wound
 	var/grains = 115	//I hope the unit is obvious
 	var/energy	//Joules
 	var/old_bullet_act = FALSE
@@ -153,6 +153,24 @@
 	energy_add = 170
 	velocity = 343
 	armor_penetration = -50
+	hollow_point = TRUE
+	
+/obj/item/projectile/bullet/22lr
+	fire_sound = 'sound/weapons/gunshot_pathetic.ogg'
+	grains = 40
+	diam = 5.7
+	velocity = 370
+	
+/obj/item/projectile/bullet/22lr/ap
+	grains = 31
+	diam = 5.7
+	velocity = 530
+	armor_penetration = 15
+
+/obj/item/projectile/bullet/22lr/hp
+	grains = 38
+	diam = 5.7
+	velocity = 380
 	hollow_point = TRUE
 
 //Shotgun projectiles
