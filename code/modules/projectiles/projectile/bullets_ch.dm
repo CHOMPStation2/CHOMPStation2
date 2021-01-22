@@ -155,18 +155,18 @@
 	armor_penetration = -50
 	hollow_point = TRUE
 	
-/obj/item/projectile/bullet/22lr
+/obj/item/projectile/bullet/a22lr
 	fire_sound = 'sound/weapons/gunshot_pathetic.ogg'
 	grains = 40
 	diam = 5.7
 	velocity = 370
 	
-/obj/item/projectile/bullet/22lr/ap
+/obj/item/projectile/bullet/a22lr/ap
 	grains = 31
 	velocity = 530
 	armor_penetration = 15
 
-/obj/item/projectile/bullet/22lr/hp
+/obj/item/projectile/bullet/a22lr/hp
 	grains = 38
 	velocity = 380
 	hollow_point = TRUE
