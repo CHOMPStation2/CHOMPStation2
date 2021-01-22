@@ -3,7 +3,7 @@
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage
 	maxHealth = 2 LASERS_TO_KILL // 60 health
 	health = 2 LASERS_TO_KILL
-	projectiletype = /obj/item/projectile/bullet/hivebot
+	projectiletype = /obj/item/projectile/bullet/a22lr //CHOMP Edit No longer uses Hivebot bullet. This is a 22 long rifle bullet now.
 
 // The regular ranged hivebot, that fires somewhat weak projectiles.
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic
