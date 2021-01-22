@@ -163,13 +163,11 @@
 	
 /obj/item/projectile/bullet/22lr/ap
 	grains = 31
-	diam = 5.7
 	velocity = 530
 	armor_penetration = 15
 
 /obj/item/projectile/bullet/22lr/hp
 	grains = 38
-	diam = 5.7
 	velocity = 380
 	hollow_point = TRUE
 
