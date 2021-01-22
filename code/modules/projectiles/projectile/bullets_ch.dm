@@ -2,12 +2,21 @@
 
 /obj/item/projectile/bullet
 	var/diam = 9	//mm
-	var/energy_add = 0
+	var/energy_add = 0 //See note below. Adds velocity, basically.
 	var/velocity = 500	//Meters per second
 	var/hollow_point = FALSE	//Determines if the round leaves additional shrapnel in the wound
 	var/grains = 115	//I hope the unit is obvious
 	var/energy	//Joules
-	var/old_bullet_act = FALSE
+	var/old_bullet_act = FALSE //This makes it so that the game ignores the new ballistic stuff and uses old damage system for the bullet.
+	
+/*energy_add
+Pretty much, when a bullet is a fired from a gun, it replaces the default muzzle velocity of the round with it's own muzzle velocity, 
+so if you want a certain round to have extra velocity, you have the option to add energy. For example, 
+if I have an AP round that shoots 650 m/s and the base round only shoots 600 m/s, I need to take the weight of the round in grains (say 60), 
+convert it to kilograms (divide by 15432 or some wacky number like that, just google grains to kilograms), then multiply the weight in kilograms by 
+the velocity squared for  both the 650, and 600, and subtract the result for 650 from the result for 600, then that number is what I would put there. 
+If you want to be lazy, or you can't find more specific numbers for the AP/HP versions of a round, then just don't bother with changing any of that and 
+only use the hollow_point and armor_penetration values.*/
 
 /obj/item/projectile/bullet/launch_projectile(atom/target, target_zone, mob/user, params, angle_override, forced_spread = 0)
 	energy = 0.5 * velocity * velocity * (grains / GRAINS_PER_KG) + energy_add
