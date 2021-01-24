@@ -35,11 +35,11 @@
 
 	attackby(obj/item/W, mob/user)
 		if(istype(W, /obj/item/weapon/pen))
-			colorindex += 1
-			if(colorindex >= 6)
-				colorindex = 0
+			colorindex = (colorindex + 1) % 6
 			icon_state = "mobcap[colorindex]"
 			update_icon()
+		if(istype(W, /obj/item/weapon/card/id))
+			capsuleowner = null
 		..()
 
 /obj/item/device/buttonofnormal/proc/nonrandom() //Secret ball randmoizer rig code
