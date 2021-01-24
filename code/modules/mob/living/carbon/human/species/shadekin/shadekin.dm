@@ -70,7 +70,7 @@
 
 	speech_bubble_appearance = "ghost"
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	virus_immune = 1
 

@@ -45,7 +45,7 @@
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -108,7 +108,7 @@
 
 	primitive_form = "Sobaka"
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -158,7 +158,7 @@
 
 	primitive_form = "Sparra"
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -213,7 +213,7 @@
 	blood_color = "#240bc4"
 	color_mult = 1
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -260,7 +260,7 @@
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	flesh_color = "#966464"
 	base_color = "#B43214"
@@ -277,8 +277,14 @@
 	color_mult = 1
 	min_age = 18
 	gluttonous = 0
+<<<<<<< HEAD
 	inherent_verbs = list(/mob/living/proc/shred_limb)
 	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+||||||| parent of d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+=======
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+>>>>>>> d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
 	descriptors = list()
 
 //CHOMPSedit: link to our wiki
@@ -294,10 +300,18 @@
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
 	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
+<<<<<<< HEAD
 
 //CHOMPSedit: links to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran"
 	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+||||||| parent of d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	wikilink="https://wiki.vore-station.net/Tajaran"
+=======
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+	wikilink="https://wiki.vore-station.net/Tajaran"
+>>>>>>> d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
 	agility = 90
 
 /datum/species/skrell
@@ -308,16 +322,24 @@
 	min_age = 18
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+<<<<<<< HEAD
 
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
 	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+||||||| parent of d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	wikilink="https://wiki.vore-station.net/Skrell"
+=======
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+	wikilink="https://wiki.vore-station.net/Skrell"
+>>>>>>> d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
 
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
 	gluttonous = 0
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 
 //CHOMPedit: link to our wiki
@@ -334,9 +356,17 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
+<<<<<<< HEAD
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
 	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+||||||| parent of d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
+	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	wikilink="https://wiki.vore-station.net/Diona"
+=======
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+	wikilink="https://wiki.vore-station.net/Diona"
+>>>>>>> d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
@@ -349,7 +379,7 @@
 	push_flags = ~HEAVY //Allows them to use micro step code.
 	swap_flags = ~HEAVY
 	gluttonous = 0
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 
 //CHOMPedit: link to our wiki
@@ -374,7 +404,7 @@
 	deform = 'icons/mob/human_races/r_def_human_vr.dmi'
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 	min_age = 18
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	base_color = "#EECEB3"
 
 //CHOMPedit: link to our wiki
@@ -409,7 +439,7 @@ datum/species/harpy
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = null
 	color_mult = 1
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
@@ -514,7 +544,7 @@ datum/species/harpy
 
 	speech_bubble_appearance = "ghost"
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	breath_type = null
 	poison_type = null
@@ -578,7 +608,7 @@ datum/species/harpy
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	flesh_color = "#AFA59E"
 	base_color = "#333333"
@@ -621,7 +651,7 @@ datum/species/harpy
 
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	blood_color = "#12ff12"
 	flesh_color = "#201730"
