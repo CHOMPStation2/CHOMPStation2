@@ -52,6 +52,12 @@
 	singular_name = "sivian grass floor tile"
 	desc = "A patch of grass like those that decorate the plains of Sif."
 
+//CHOMPedit: remove if this gets added upstream
+/obj/item/stack/tile/grass/sif/forest
+	name = "sivian overgrowth tile"
+	singular_name = "sivian overgrowth floor tile"
+	desc = "A patch of dark overgrowth like those that decorate the plains of Sif."
+//CHOMPedit end
 /*
  * Wood
  */

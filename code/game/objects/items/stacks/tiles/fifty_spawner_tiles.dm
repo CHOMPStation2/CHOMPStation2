@@ -8,6 +8,12 @@
 	name = "stack of sifgrass"
 	type_to_spawn = /obj/item/stack/tile/grass/sif
 
+//CHOMPedit, delete if this is added upstream.
+/obj/fiftyspawner/grass/sif/forest
+	name = "stack of sifgrass"
+	type_to_spawn = /obj/item/stack/tile/grass/sif/forest
+//CHOMPedit end
+
 /obj/fiftyspawner/wood
 	name = "stack of wood"
 	type_to_spawn = /obj/item/stack/tile/wood

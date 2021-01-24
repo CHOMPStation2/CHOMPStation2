@@ -159,7 +159,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 			return
 	if(fruit)
 		if(nutrition >= PITCHER_SATED + NUTRITION_PITCHER) 
-			var/turf/T = safepick(circleviewturfs(src, 2)) //Try this if the above doesn't work, add src.loc == T check to density check
+			var/turf/T = safepick(circleviewturfs(src, 2)) 
 			if(T.density) //No spawning in walls
 				return
 			else if(src.loc ==T)
