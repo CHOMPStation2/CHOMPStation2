@@ -277,14 +277,8 @@
 	color_mult = 1
 	min_age = 18
 	gluttonous = 0
-<<<<<<< HEAD
 	inherent_verbs = list(/mob/living/proc/shred_limb)
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-||||||| parent of d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-=======
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
->>>>>>> d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
 	descriptors = list()
 
 //CHOMPSedit: link to our wiki
@@ -300,18 +294,10 @@
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
 	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
-<<<<<<< HEAD
 
 //CHOMPSedit: links to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran"
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-||||||| parent of d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-	wikilink="https://wiki.vore-station.net/Tajaran"
-=======
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	wikilink="https://wiki.vore-station.net/Tajaran"
->>>>>>> d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
 	agility = 90
 
 /datum/species/skrell
@@ -322,18 +308,10 @@
 	min_age = 18
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
-<<<<<<< HEAD
 
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-||||||| parent of d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-	wikilink="https://wiki.vore-station.net/Skrell"
-=======
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	wikilink="https://wiki.vore-station.net/Skrell"
->>>>>>> d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
 
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
@@ -356,17 +334,9 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
-<<<<<<< HEAD
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-||||||| parent of d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
-	genders = list(MALE, FEMALE, PLURAL, NEUTER, HERM)
-	wikilink="https://wiki.vore-station.net/Diona"
-=======
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	wikilink="https://wiki.vore-station.net/Diona"
->>>>>>> d7aa5073eb... Merge pull request #9597 from Heroman3003/gender-fix
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
