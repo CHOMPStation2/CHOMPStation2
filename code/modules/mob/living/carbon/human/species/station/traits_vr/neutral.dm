@@ -161,14 +161,8 @@ YW change end */
 /datum/trait/hard_vore
 	name = "Hard Vore" //CHOMPedit Renamed Brutal Predation to Hard Vore, because some people don't know what this actually does
 	desc = "Allows you to tear off limbs & tear out internal organs."
-<<<<<<< HEAD
-	cost = 0
-||||||| parent of afe0f17b2e... Merge pull request #9582 from Heroman3003/All-species-neutral-traits
-	cost = 0 //I would make this cost a point, since it has some in game value, but there are easier, less damaging ways to perform the same functions.
-=======
 	cost = 0
 	custom_only = FALSE
->>>>>>> afe0f17b2e... Merge pull request #9582 from Heroman3003/All-species-neutral-traits
 
 /datum/trait/hard_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -207,13 +201,8 @@ YW change end */
 	name = "Glowing Body"
 	desc = "Your body glows about as much as a PDA light! Settable color and toggle in Abilities tab ingame."
 	cost = 0
-<<<<<<< HEAD
-
-||||||| parent of afe0f17b2e... Merge pull request #9582 from Heroman3003/All-species-neutral-traits
-=======
 	custom_only = FALSE
 
->>>>>>> afe0f17b2e... Merge pull request #9582 from Heroman3003/All-species-neutral-traits
 /datum/trait/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/glow_toggle
