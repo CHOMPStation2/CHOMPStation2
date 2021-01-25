@@ -443,14 +443,11 @@ var/global/list/disallowed_protean_accessories = list(
 	if(istype(loc, /obj/item/weapon/rig/protean))
 		var/obj/item/weapon/rig/protean/prig = loc
 		src.forceMove(get_turf(prig))
-		prig.forceMove(humanform)
+		qdel(prig)
 		return
 
 	if(isturf(loc))
-		var/obj/item/weapon/rig/protean/prig
-		for(var/obj/item/weapon/rig/protean/O in humanform.contents)
-			prig = O
-			break
+		var/obj/item/weapon/rig/protean/prig = new(loc)
 		if(prig)
 			prig.forceMove(get_turf(src))
 			src.forceMove(prig)
