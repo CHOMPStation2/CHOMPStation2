@@ -1399,4 +1399,18 @@
 		
 End CHOMP Removal*/
 
+<<<<<<< HEAD
 	
+||||||| parent of 9774850cec... Merge pull request #9611 from H0lySquirr3l/master
+
+
+
+
+=======
+// Astra - // Astra
+/obj/item/weapon/material/knife/ritual/fluff/astra
+	name = "Polished Ritual Knife"
+	desc = "A well kept strange ritual knife, There is a small tag with the name 'Astra Ether' on it. They are probably looking for this."
+	icon = 'icons/obj/wizard.dmi'
+	icon_state = "render"
+>>>>>>> 9774850cec... Merge pull request #9611 from H0lySquirr3l/master

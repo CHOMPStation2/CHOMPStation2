@@ -82,6 +82,24 @@
 	ckeywhitelist = list("arokha")
 	character_name = list("Aronai Sieyes")
 
+<<<<<<< HEAD
+||||||| parent of 9774850cec... Merge pull request #9611 from H0lySquirr3l/master
+/datum/gear/fluff/astraether_ritualknife
+    path = /obj/item/weapon/material/knife/ritual
+    display_name = "Astra's Ritual Knife"
+    description = "A well kept strange ritual knife, There is a small tag with the name 'Astra Ether' on it. They are probably looking for this."
+    ckeywhitelist = list("astraether")
+    character_name = list("Astra Ether")
+
+=======
+/datum/gear/fluff/astra_ritualknife
+    path = /obj/item/weapon/material/knife/ritual/fluff/astra
+    display_name = "Polished Ritual Knife"
+    description = "A well kept strange ritual knife, There is a small tag with the name 'Astra Ether' on it. They are probably looking for this."
+    ckeywhitelist = list("astraether")
+    character_name = list("Astra Ether")
+
+>>>>>>> 9774850cec... Merge pull request #9611 from H0lySquirr3l/master
 /datum/gear/fluff/collar/azura
 	path = /obj/item/clothing/accessory/collar/azura
 	display_name = "collar, Azura"
