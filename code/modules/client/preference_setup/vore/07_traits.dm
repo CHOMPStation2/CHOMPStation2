@@ -89,19 +89,6 @@
 	else				//CHOMPEdit
 		pref.dirty_synth = 0	//CHOMPEdit
 
-<<<<<<< HEAD
-	if(selected_species.selects_bodytype)
-		var/datum/species/custom/CS = character.species
-		var/S = pref.custom_base ? pref.custom_base : "Human"
-		var/datum/species/custom/new_CS = CS.produceCopy(S, pref.pos_traits + pref.neu_traits + pref.neg_traits, character)
-||||||| parent of f74536a0b6... Merge pull request #9601 from Heroman3003/quickfixholyheckibrokeeeverything
-	var/datum/species/S = character.species
-	var/SB = pref.custom_base ? pref.custom_base : "Human"
-	var/datum/species/new_S = S.produceCopy(SB, pref.pos_traits + pref.neu_traits + pref.neg_traits, character)
-
-	//Any additional non-trait settings can be applied here
-	new_S.blood_color = pref.blood_color
-=======
 	var/datum/species/S = character.species
 	var/SB
 	if(S.selects_bodytype)
@@ -112,7 +99,6 @@
 
 	//Any additional non-trait settings can be applied here
 	new_S.blood_color = pref.blood_color
->>>>>>> f74536a0b6... Merge pull request #9601 from Heroman3003/quickfixholyheckibrokeeeverything
 
 		//Any additional non-trait settings can be applied here
 		new_CS.blood_color = pref.blood_color
