@@ -147,37 +147,3 @@
 	affected.createwound(CUT, 15)
 	affected.createwound(BRUISE, 10)
 	..()
-
-/datum/surgery_step/internal/brain_revive
-	blood_level = 0
-	allowed_tools = list(/obj/item/weapon/surgical/bioregen=100)
-	min_duration = 120
-	max_duration = 150
-
-/datum/surgery_step/internal/brain_revive/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	var/obj/item/organ/internal/brain/brain = target.internal_organs_by_name[O_BRAIN]
-	return ..() && target_zone == BP_HEAD && istype(brain) && (brain.status & ORGAN_DEAD || brain.defib_timer == 0)
-
-/datum/surgery_step/internal/brain_revive/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] begins to use \the [tool] to reverse the decay on and revatilize [target]'s brain.</span>", \
-		"<span class='notice'>You begin to use \the [tool] to reverse the decay on and revatilize [target]'s brain.</span>")
-	..()
-
-/datum/surgery_step/internal/brain_revive/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] finishes reversing the decay on and revatalizing [target]'s brain.</span>", \
-		"<span class='notice'>You finish reversing the decay on and revatalizing [target]'s brain.</span>")
-	var/obj/item/organ/internal/brain/brain = target.internal_organs_by_name[O_BRAIN]
-	brain.damage = max(0,brain.damage - 10)
-	brain.status &= ~ORGAN_DEAD
-	brain.handle_organ_mod_special()
-	brain.defib_timer = (config.defib_timer MINUTES) / 20
-	START_PROCESSING(SSobj, brain)
-	..()
-
-/datum/surgery_step/internal/brain_revive/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='danger'>[user]'s hand slips, failing to finish the surgery, and damaging [target] with \the [tool].</span>", \
-		"<span class='danger'>Your hand slips, failing to finish the surgery, and damaging [target] with \the [tool].</span>")
-	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	affected.createwound(CUT, 15)
-	affected.createwound(BRUISE, 10)
-	..()
