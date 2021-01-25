@@ -588,6 +588,15 @@ proc/setup_database_connection()
 	. = dbcon.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
+		//CHOMPEdit Begin
+		var/DBQuery/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
+		var/num_tries = 0
+		while(!query_truncate.Execute() && num_tries<5)
+			num_tries++
+
+		if(num_tries==5)
+			log_admin("ERROR TRYING TO CLEAR erro_dialog")
+		//CHOMPEdit End
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
 		to_world_log(dbcon.ErrorMsg())
