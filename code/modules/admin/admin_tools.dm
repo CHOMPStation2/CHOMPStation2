@@ -45,7 +45,7 @@
 	//CHOMPEdit Begin
 	/*for(var/d in M.dialogue_log)
 		dat += "[d]<br>"*/
-	var/DBQuery/query = dbcon.NewQuery("SELECT mid,time,ckey,mob,type,message from feedback.erro_dialog WHERE ckey = '[M.ckey]'")
+	var/DBQuery/query = dbcon.NewQuery("SELECT mid,time,ckey,mob,type,message from erro_dialog WHERE ckey = '[M.ckey]'")
 	if(!query.Execute())
 		dat += "<i>Database query error</i>"
 	else
