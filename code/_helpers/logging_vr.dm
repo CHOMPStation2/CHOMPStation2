@@ -7,7 +7,8 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, Now(), '[speaker.ckey]', '[speaker.real_name]', 'nsay', '[html_decode(text)]')")
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "nsay", "message_content" = text))
 		query_insert.ErrorMsg()
 	//CHOMPEdit End
 
@@ -20,7 +21,8 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, Now(), '[speaker.ckey]', '[speaker.real_name]', 'nme', '[html_decode(text)]')")
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "nme", "message_content" = text))
 		query_insert.Execute()
 	//CHOMPEdit End
 
@@ -33,6 +35,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, Now(), '[speaker.ckey]', '[speaker.real_name]', 'subtle', '[html_decode(text)]')")
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "subtle", "message_content" = text))
 		query_insert.Execute()
 	//CHOMPEdit End
