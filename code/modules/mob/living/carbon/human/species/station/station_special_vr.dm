@@ -25,12 +25,7 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/reconstitute_form,
 		/mob/living/carbon/human/proc/sonar_ping,
-		/mob/living/carbon/human/proc/succubus_drain,
-		/mob/living/carbon/human/proc/succubus_drain_finalize,
-		/mob/living/carbon/human/proc/succubus_drain_lethal,
-		/mob/living/carbon/human/proc/bloodsuck,
 		/mob/living/carbon/human/proc/tie_hair,
-		/mob/living/proc/shred_limb,
 		/mob/living/proc/flying_toggle,
 		/mob/living/proc/start_wings_hovering) //Xenochimera get all the special verbs since they can't select traits.
 
@@ -300,7 +295,7 @@
 	update_xenochimera_hud(H, danger, feral_state)
 
 
-/datum/species/xenochimera/proc/produceCopy(var/datum/species/to_copy,var/list/traits,var/mob/living/carbon/human/H)
+/datum/species/xenochimera/produceCopy(var/datum/species/to_copy,var/list/traits,var/mob/living/carbon/human/H)
 	ASSERT(to_copy)
 	ASSERT(istype(H))
 
@@ -326,6 +321,13 @@
 	new_copy.blood_mask = to_copy.blood_mask
 	new_copy.damage_mask = to_copy.damage_mask
 	new_copy.damage_overlays = to_copy.damage_overlays
+	new_copy.traits = traits
+
+	//If you had traits, apply them
+	if(new_copy.traits)
+		for(var/trait in new_copy.traits)
+			var/datum/trait/T = all_traits[trait]
+			T.apply(new_copy,H)
 
 	//Set up a mob
 	H.species = new_copy
@@ -472,9 +474,6 @@
 
 	spawn_flags		 = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled forever
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	inherent_verbs = list(
-		/mob/living/proc/shred_limb,
-		/mob/living/proc/eat_trash)
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
