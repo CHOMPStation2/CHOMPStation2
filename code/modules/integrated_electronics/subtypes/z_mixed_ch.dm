@@ -12,8 +12,8 @@
 //push_data() makes sure any connections actually update
 
 /obj/item/integrated_circuit/logic/conditional
-	name = "conditional gate"
-	desc = "This gate checks a boolean and based on its state either outputs the first or second inputs value, this is also know as the ?: operator."
+	name = "conditional operator"
+	desc = "This operator checks a boolean and based on its state either outputs the first or second inputs value, this is also known as the ?: operator."
 	icon_state = "equal"
 	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 	inputs = list("Condition"= IC_PINTYPE_BOOLEAN,"True","False")
@@ -28,6 +28,24 @@
 	else
 		set_pin_data(IC_OUTPUT, 1,get_pin_data(IC_INPUT, 3))
 		activate_pin(3)
+	return push_data()
+
+/obj/item/integrated_circuit/logic/boollatch
+	name = "boolean latch"
+	desc = "A boolean latch is essentially a toggle swapping between true and false on being pulsed."
+	icon_state = "equal"
+	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
+	inputs = list()
+	outputs = list("State" = IC_PINTYPE_BOOLEAN)
+	activators = list("Toggle" = IC_PINTYPE_PULSE_IN, "on true" = IC_PINTYPE_PULSE_OUT, "on false" = IC_PINTYPE_PULSE_OUT)
+
+/obj/item/integrated_circuit/logic/boollatch/do_work()
+	if(get_pin_data(IC_OUTPUT, 1))
+		set_pin_data(IC_OUTPUT, 1,FALSE)
+		activate_pin(3)
+	else
+		set_pin_data(IC_OUTPUT, 1,TRUE)
+		activate_pin(2)
 	return push_data()
 
 //FIXES fr pads below because i dont want to edit the actual files, YES this removes checks for if user is close to the machine,, no they werent working anyway.
