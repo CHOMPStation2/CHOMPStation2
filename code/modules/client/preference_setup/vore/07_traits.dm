@@ -89,8 +89,15 @@
 		pref.dirty_synth = 0	//CHOMPEdit
 
 	var/datum/species/S = character.species
-	var/SB = pref.custom_base ? pref.custom_base : "Human"
+	var/SB
+	if(S.selects_bodytype)
+		SB = pref.custom_base ? pref.custom_base : "Human"
+	else
+		SB = S.name
 	var/datum/species/new_S = S.produceCopy(SB, pref.pos_traits + pref.neu_traits + pref.neg_traits, character)
+
+	//Any additional non-trait settings can be applied here
+	new_S.blood_color = pref.blood_color
 
 	//Any additional non-trait settings can be applied here
 	new_S.blood_color = pref.blood_color
