@@ -46,11 +46,11 @@
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
 
-		if(dbcon.IsConnected())
+		if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			var/isadmin = 0
 			if(src.client && src.client.holder)
 				isadmin = 1
-			var/DBQuery/query = dbcon.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")")
+			var/DBQuery/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")") //CHOMPEdit TGSQL
 			query.Execute()
 			var/newpoll = 0
 			while(query.NextRow())
@@ -216,12 +216,12 @@
 
 	if(href_list["privacy_poll"])
 		establish_db_connection()
-		if(!dbcon.IsConnected())
+		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			return
 		var/voted = 0
 
 		//First check if the person has not voted yet.
-		var/DBQuery/query = dbcon.NewQuery("SELECT * FROM erro_privacy WHERE ckey='[src.ckey]'")
+		var/DBQuery/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey='[src.ckey]'") //CHOMPEdit TGSQL
 		query.Execute()
 		while(query.NextRow())
 			voted = 1
@@ -247,7 +247,7 @@
 
 		if(!voted)
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), '[src.ckey]', '[option]')"
-			var/DBQuery/query_insert = dbcon.NewQuery(sql)
+			var/DBQuery/query_insert = SSdbcore.NewQuery(sql) //CHOMPEdit TGSQL
 			query_insert.Execute()
 			to_chat(usr, "<b>Thank you for your vote!</b>")
 			usr << browse(null,"window=privacypoll")
