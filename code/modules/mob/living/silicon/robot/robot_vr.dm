@@ -146,19 +146,11 @@
 		return
 	if(wideborg == TRUE)
 		if(icontype== "Drake") // Why, Why can't we have normal nice things
-<<<<<<< HEAD
-			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi'
-||||||| parent of d11eddaff0... Merge pull request #9609 from Verkister/chopshop
-			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi' 
-		else
-			icon = 'icons/mob/widerobot_vr.dmi'
-		return
-=======
+
 			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi'
 		else
 			icon = wideborg_dept
 		return
->>>>>>> d11eddaff0... Merge pull request #9609 from Verkister/chopshop
 	if((!(original_icon == icon)) && (!(icon == 'icons/mob/robots_vr.dmi')))
 		original_icon = icon
 	if((icon_state in vr_icons) && (icon == 'icons/mob/robots.dmi'))
