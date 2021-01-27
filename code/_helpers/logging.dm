@@ -65,7 +65,7 @@
 	if (config.log_say)
 		WRITE_LOG(diary, "SAY: [speaker.simple_info_line()]: [html_decode(text)]")
 
-	//Log the message to in-game dialogue logs, as well.
+	//Log the message to in-game dialogue logs, as well. //CHOMPEdit Begin
 	if(speaker.client)
 		//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>SAY:</u> - <span style=\"color:#32cd32\">[text]</span>"
 		if(!SSdbcore.IsConnected())
@@ -75,8 +75,12 @@
 		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "say", "message_content" = text))
 		if(!query_insert.Execute())
-			log_debug(query_insert.ErrorMsg())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 		//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>SAY:</u> - <span style=\"color:#32cd32\">[text]</span>"
+		//CHOMPEdit End
 
 /proc/log_ooc(text, client/user)
 	if (config.log_ooc)
@@ -87,7 +91,11 @@
 			return null
 	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "ooc", "message_content" = text))
-	query_insert.Execute()
+	if(!query_insert.Execute())
+		log_debug("Error during logging: "+query_insert.ErrorMsg())
+		qdel(query_insert)
+		return
+	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>OOC:</u> - <span style=\"color:blue\"><b>[text]</b></span>"
 
 /proc/log_aooc(text, client/user)
@@ -99,7 +107,11 @@
 			return null
 	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "aooc", "message_content" = text))
-	query_insert.Execute()
+	if(!query_insert.Execute())
+		log_debug("Error during logging: "+query_insert.ErrorMsg())
+		qdel(query_insert)
+		return
+	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>AOOC:</u> - <span style=\"color:red\"><b>[text]</b></span>"
 
 /proc/log_looc(text, client/user)
@@ -111,7 +123,11 @@
 			return null
 	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "looc", "message_content" = text))
-	query_insert.Execute()
+	if(!query_insert.Execute())
+		log_debug("Error during logging: "+query_insert.ErrorMsg())
+		qdel(query_insert)
+		return
+	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>LOOC:</u> - <span style=\"color:orange\"><b>[text]</b></span>"
 
 /proc/log_whisper(text, mob/speaker)
@@ -127,7 +143,11 @@
 				return null
 		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "whisper", "message_content" = text))
-		query_insert.Execute()
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 
 
 /proc/log_emote(text, mob/speaker)
@@ -143,7 +163,11 @@
 				return null
 		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "emote", "message_content" = text))
-		query_insert.Execute()
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//CHOMPEdit End
 
 /proc/log_attack(attacker, defender, message)
@@ -173,7 +197,11 @@
 				return null
 		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "deadsay", "message_content" = text))
-		query_insert.Execute()
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - <span style=\"color:green\">[text]</span>"
 	//GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[src]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
 	//CHOMPEdit End
@@ -189,7 +217,11 @@
 				return null
 		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "deademote", "message_content" = text))
-		query_insert.Execute()
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//CHOMPEdit End
 
 /proc/log_adminwarn(text)
@@ -207,7 +239,11 @@
 				return null
 		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "pda", "message_content" = text))
-		query_insert.Execute()
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
