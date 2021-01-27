@@ -45,7 +45,7 @@
 	//CHOMPEdit Begin
 	/*for(var/d in M.dialogue_log)
 		dat += "[d]<br>"*/
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT mid,time,ckey,mob,type,message from erro_dialog WHERE ckey = '[M.ckey]'")
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT mid,time,ckey,mob,type,message from erro_dialog WHERE ckey = :t_ckey", list("t_ckey" = M.ckey))
 	if(!query.Execute())
 		dat += "<i>Database query error</i>"
 	else
@@ -59,6 +59,7 @@
 			dat += "<fieldset style='border: 2px solid white; display: inline'>"
 			dat += messages
 			dat += "</fieldset>"
+	qdel(query)
 	//CHOMPEdit End
 	var/datum/browser/popup = new(usr, "admin_dialogue_log", "[src]", 650, 650, src)
 	popup.set_content(jointext(dat,null))

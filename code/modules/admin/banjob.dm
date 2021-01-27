@@ -85,7 +85,7 @@ DEBUG
 			var/job = query.item[2]
 
 			jobban_keylist.Add("[ckey] - [job]")
-
+		qdel(query) //CHOMPEdit TGSQL
 		//Job tempbans
 		var/DBQuery/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()") //CHOMPEdit TGSQL
 		query1.Execute()
@@ -95,6 +95,7 @@ DEBUG
 			var/job = query1.item[2]
 
 			jobban_keylist.Add("[ckey] - [job]")
+		qdel(query1) //CHOMPEdit TGSQL
 
 /proc/jobban_savebanfile()
 	var/savefile/S=new("data/job_full.ban")
