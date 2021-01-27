@@ -8,12 +8,20 @@
 	name = "stack of sifgrass"
 	type_to_spawn = /obj/item/stack/tile/grass/sif
 
+<<<<<<< HEAD
 //CHOMPedit, delete if this is added upstream.
 /obj/fiftyspawner/grass/sif/forest
 	name = "stack of sifgrass"
 	type_to_spawn = /obj/item/stack/tile/grass/sif/forest
 //CHOMPedit end
 
+||||||| parent of 9eaf2d11ce... Merge pull request #9619 from VOREStation/upstream-merge-7841
+=======
+/obj/fiftyspawner/grass/sif/forest
+	name = "stack of sifgrass"
+	type_to_spawn = /obj/item/stack/tile/grass/sif/forest
+
+>>>>>>> 9eaf2d11ce... Merge pull request #9619 from VOREStation/upstream-merge-7841
 /obj/fiftyspawner/wood
 	name = "stack of wood"
 	type_to_spawn = /obj/item/stack/tile/wood
