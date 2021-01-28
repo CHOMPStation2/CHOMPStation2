@@ -581,7 +581,7 @@ var/failed_old_db_connections = 0
 
 		if(num_tries==5)
 			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
-		qdel(query_truncate)
+		qdel(query_truncate2)
 	else 
 		to_world_log("Feedback database connection failed.")
 	//CHOMPEdit End
