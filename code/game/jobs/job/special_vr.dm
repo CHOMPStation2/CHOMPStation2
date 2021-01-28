@@ -24,7 +24,6 @@
 	get_access()
 		return get_all_accesses().Copy()
 
-<<<<<<< HEAD
 //YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
 /datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
 	. = ..()
@@ -32,21 +31,11 @@
 		H.implant_loyalty(src)
 //YW UNCOMMENTING END
 
-/*/datum/job/centcom_visitor //For Pleasure // You mean for admin abuse... -Ace
-	title = "CentCom Visitor"
-	department = "Civilian"
-	head_position = 1
-||||||| parent of f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
-/*/datum/job/centcom_visitor //For Pleasure // You mean for admin abuse... -Ace
-	title = "CentCom Visitor"
-	department = "Civilian"
-	head_position = 1
-=======
+/*CHOMP removal begin
 /datum/job/emergency_responder //For staff managing/leading ERTs
 	title = "Emergency Responder"
 	departments = list("Central Command")
 	department_accounts = list(DEPARTMENT_COMMAND, DEPARTMENT_ENGINEERING, DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH, DEPARTMENT_SECURITY, DEPARTMENT_CARGO, DEPARTMENT_PLANET, DEPARTMENT_CIVILIAN)
->>>>>>> f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
@@ -125,3 +114,4 @@
 		return list(access_maint_tunnels, access_entertainment)
 	else
 		return list(access_entertainment)
+CHOMP Removal end*/
