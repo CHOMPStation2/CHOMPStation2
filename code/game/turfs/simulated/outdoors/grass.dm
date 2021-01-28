@@ -89,12 +89,7 @@ var/list/grass_types = list(
 /turf/simulated/floor/outdoors/grass/sif/forest
 	name = "thick growth"
 	icon_state = "grass_sif_dark0"
-<<<<<<< HEAD
-	initial_flooring = /decl/flooring/grass/sif/forest //CHOMPedit: Remove if this ends up upstream
-||||||| parent of 9eaf2d11ce... Merge pull request #9619 from VOREStation/upstream-merge-7841
-=======
 	initial_flooring = /decl/flooring/grass/sif/forest
->>>>>>> 9eaf2d11ce... Merge pull request #9619 from VOREStation/upstream-merge-7841
 	edge_blending_priority = 5
 	tree_chance = 4
 	grass_chance = 1
