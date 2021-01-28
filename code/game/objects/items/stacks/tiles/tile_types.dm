@@ -52,21 +52,16 @@
 	singular_name = "sivian grass floor tile"
 	desc = "A patch of grass like those that decorate the plains of Sif."
 
-<<<<<<< HEAD
-//CHOMPedit: remove if this gets added upstream
 /obj/item/stack/tile/grass/sif/forest
 	name = "sivian overgrowth tile"
 	singular_name = "sivian overgrowth floor tile"
 	desc = "A patch of dark overgrowth like those that decorate the plains of Sif."
-//CHOMPedit end
-||||||| parent of 9eaf2d11ce... Merge pull request #9619 from VOREStation/upstream-merge-7841
-=======
+	
 /obj/item/stack/tile/grass/sif/forest
 	name = "sivian overgrowth tile"
 	singular_name = "sivian overgrowth floor tile"
 	desc = "A patch of dark overgrowth like those that decorate the plains of Sif."
 
->>>>>>> 9eaf2d11ce... Merge pull request #9619 from VOREStation/upstream-merge-7841
 /*
  * Wood
  */
