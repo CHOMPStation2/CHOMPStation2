@@ -92,9 +92,9 @@
 	name = "gamma beam"
 	icon_state = "xray"
 	fire_sound = 'sound/weapons/eluger.ogg'
-	damage = 8 //CHOMPedit
+	damage = 12 //CHOMPedit
 	armor_penetration = 90
-	irradiate = 7 //CHOMPedit
+	irradiate = 20 //CHOMPedit
 	light_color = "#00CC33"
 
 	muzzle_type = /obj/effect/projectile/muzzle/xray
