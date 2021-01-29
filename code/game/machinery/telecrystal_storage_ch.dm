@@ -71,3 +71,66 @@
 
 /datum/stored_item/telecrystals/init_products()
 	return
+
+/obj/tcspawner
+	name = "Telecrystal spawner"
+	desc = "This item spawns stack of 5 telecrystals"
+	icon = 'icons/misc/mark.dmi'
+	icon_state = "x4"
+	var/amount_to_spawn = 5
+
+/obj/tcspawner/Initialize()
+	..()
+
+	var/turf/T = get_turf(src)
+	var/obj/item/stack/telecrystal/M = new (T,amount_to_spawn)
+
+	var/obj/structure/closet/C = locate() in T
+	if(C)
+		C.contents += M
+
+	return INITIALIZE_HINT_QDEL
+
+/obj/tcspawner/stack5
+	desc = "This item spawns stack of 5 telecrystals"
+	amount_to_spawn = 5
+
+/obj/tcspawner/stack10
+	desc = "This item spawns stack of 10 telecrystals"
+	amount_to_spawn = 10
+
+/obj/tcspawner/stack15
+	desc = "This item spawns stack of 15 telecrystals"
+	amount_to_spawn = 15
+
+/obj/tcspawner/stack20
+	desc = "This item spawns stack of 20 telecrystals"
+	amount_to_spawn = 20
+
+/obj/tcspawner/stack25
+	desc = "This item spawns stack of 25 telecrystals"
+	amount_to_spawn = 25
+
+/obj/tcspawner/stack50
+	desc = "This item spawns stack of 50 telecrystals"
+	amount_to_spawn = 50
+
+/obj/tcspawner/stack75
+	desc = "This item spawns stack of 75 telecrystals"
+	amount_to_spawn = 75
+
+/obj/tcspawner/stack100
+	desc = "This item spawns stack of 100 telecrystals"
+	amount_to_spawn = 100
+
+/obj/tcspawner/stack150
+	desc = "This item spawns stack of 150 telecrystals"
+	amount_to_spawn = 150
+
+/obj/tcspawner/stack200
+	desc = "This item spawns stack of 200 telecrystals"
+	amount_to_spawn = 200
+
+/obj/tcspawner/stack240
+	desc = "This item spawns stack of 240 telecrystals"
+	amount_to_spawn = 240
