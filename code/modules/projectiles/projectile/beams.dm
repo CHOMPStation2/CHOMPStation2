@@ -94,7 +94,7 @@
 	fire_sound = 'sound/weapons/eluger.ogg'
 	damage = 12 //CHOMPedit
 	armor_penetration = 90
-	irradiate = 20 //CHOMPedit
+	irradiate = 20
 	light_color = "#00CC33"
 
 	muzzle_type = /obj/effect/projectile/muzzle/xray
