@@ -1,4 +1,6 @@
 /obj/effect/bspawner
+	name = "bluespace tear"
+	desc = "An erratic portal of bluespace energies, its tear seems quite unstable but seems to endlessly create crystals. . ."
 	anchored = 1
 	icon = 'icons/obj/stationobjs_vr.dmi'
 	icon_state = "portalgateway"

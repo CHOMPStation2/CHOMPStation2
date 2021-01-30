@@ -27,10 +27,12 @@
 		if((O.type == I.item_path) && (O.name == I.item_name))
 			mod_amount(I,O.amount)
 			hasRecord = TRUE
+			qdel(O)
 			break
 	if(!hasRecord)
 		var/datum/stored_item/item = new/datum/stored_item(src,O.type,O.name,O.amount)
 		item_records.Add(item)
+		qdel(O)
 
 /obj/machinery/smartfridge/tcrystal/tgui_act(action, params)
 	add_fingerprint(usr)
