@@ -89,7 +89,12 @@
 	armor = list(melee = 60, bullet = 50, laser = 50,energy = 40, bomb = 40, bio = 100, rad = 100)
 	siemens_coefficient= 0.3
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/eva
-
+	//CHOMPEdit Begin
+	rigsuit_max_pressure = 20 * ONE_ATMOSPHERE
+	rigsuit_min_pressure = 0
+	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	//CHOMPEdit End
+	
 	initial_modules = list(
 		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/maneuvering_jets,
