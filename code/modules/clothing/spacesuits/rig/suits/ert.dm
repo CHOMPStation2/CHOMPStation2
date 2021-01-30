@@ -106,3 +106,9 @@
 		/obj/item/rig_module/device/rcd,
 		/obj/item/rig_module/datajack
 		)
+		
+/obj/item/weapon/rig/ert/assetprotection/antiareli
+	name = "Heavy Asset Protection Special Agent control module"
+	desc = "A heavy suit worn by the highest level of the highest level of Asset Protection, don't mess with the person wearing this. Armoured and space ready and protected against almost fucking everything"
+	armor = list(melee = 80, bullet = 80, laser = 80,energy = 80, bomb = 100, bio = 100, rad = 100)
+	siemens_coefficient= 0
