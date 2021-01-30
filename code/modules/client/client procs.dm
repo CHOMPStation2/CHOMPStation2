@@ -128,7 +128,7 @@
 		if("usr")		hsrc = mob
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
-		if("chat")		return chatOutput.Topic(href, href_list)
+		//if("chat")		return chatOutput.Topic(href, href_list)
 
 	switch(href_list["action"])
 		if("openLink")
@@ -167,10 +167,10 @@
 		del(src)
 		return
 
-	chatOutput = new /datum/chatOutput(src) //veechat
+	/*chatOutput = new /datum/chatOutput(src) //veechat
 	chatOutput.send_resources()
 	spawn()
-		chatOutput.start()
+		chatOutput.start()*/
 
 	//Only show this if they are put into a new_player mob. Otherwise, "what title screen?"
 	if(isnewplayer(src.mob))
@@ -476,7 +476,7 @@ client/verb/character_setup()
 		return FALSE
 	return ..()
 
-/client/verb/reload_vchat()
+/*/client/verb/reload_vchat()
 	set name = "Reload VChat"
 	set category = "OOC"
 
@@ -496,7 +496,7 @@ client/verb/character_setup()
 	chatOutput = new /datum/chatOutput(src) //veechat
 	chatOutput.send_resources()
 	spawn()
-		chatOutput.start()
+		chatOutput.start()*/
 
 
 //This is for getipintel.net.

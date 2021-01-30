@@ -8,7 +8,7 @@ SUBSYSTEM_DEF(chat)
 	var/list/msg_queue = list()
 
 /datum/controller/subsystem/chat/Initialize(timeofday)
-	init_vchat()
+	//init_vchat()
 	..()
 
 /datum/controller/subsystem/chat/fire()
@@ -18,7 +18,8 @@ SUBSYSTEM_DEF(chat)
 		var/list/messages = msg_queue[C]
 		msg_queue -= C
 		if (C)
-			C << output(jsEncode(messages), "htmloutput:putmessage")
+			//C << output(jsEncode(messages), "htmloutput:putmessage")
+			C << messages
 
 		if(MC_TICK_CHECK)
 			return
@@ -39,7 +40,7 @@ SUBSYSTEM_DEF(chat)
 		target = GLOB.clients
 
 	//Some macros remain in the string even after parsing and fuck up the eventual output
-	var/original_message = message
+	//var/original_message = message
 	message = replacetext(message, "\n", "<br>")
 	message = replacetext(message, "\improper", "")
 	message = replacetext(message, "\proper", "")
@@ -55,12 +56,12 @@ SUBSYSTEM_DEF(chat)
 
 			if(!C)
 				continue // No client? No care.
-			else if(C.chatOutput.broken)
+			/*else if(C.chatOutput.broken)
 				DIRECT_OUTPUT(C, original_message)
 				continue
 			else if(!C.chatOutput.loaded)
 				continue // If not loaded yet, do nothing and history-sending on load will get it.
-
+			*/
 			LAZYINITLIST(msg_queue[C])
 			msg_queue[C][++msg_queue[C].len] = messageStruct
 	else
@@ -68,11 +69,11 @@ SUBSYSTEM_DEF(chat)
 
 		if(!C)
 			return // No client? No care.
-		else if(C.chatOutput.broken)
+		/*else if(C.chatOutput.broken)
 			DIRECT_OUTPUT(C, original_message)
 			return
 		else if(!C.chatOutput.loaded)
 			return // If not loaded yet, do nothing and history-sending on load will get it.
-
+		*/
 		LAZYINITLIST(msg_queue[C])
 		msg_queue[C][++msg_queue[C].len] = messageStruct

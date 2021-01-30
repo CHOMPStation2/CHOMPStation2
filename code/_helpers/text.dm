@@ -344,7 +344,7 @@ proc/TextPreview(var/string,var/len=40)
 		return tagdesc
 	if(!text_tag_cache[tagname])
 		var/icon/tag = icon(text_tag_icons, tagname)
-		text_tag_cache[tagname] = bicon(tag, TRUE, "text_tag")
+		text_tag_cache[tagname] = bicon(tag)
 	return text_tag_cache[tagname]
 
 /proc/contains_az09(var/input)

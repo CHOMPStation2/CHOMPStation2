@@ -1043,3 +1043,11 @@ proc/sort_atoms_by_layer(var/list/atoms)
 
 	//Animate it growing
 	animate(img, alpha = 0, transform = matrix()*grow_to, time = anim_duration, loop = loops)
+GLOBAL_DATUM_INIT(dummySave, /savefile, new("tmp/dummySave.sav")) //Cache of icons for the browser output
+/proc/icon2base64(icon/icon)
+	if (!isicon(icon))
+		return FALSE
+	WRITE_FILE(GLOB.dummySave["dummy"], icon)
+	var/iconData = GLOB.dummySave.ExportText("dummy")
+	var/list/partial = splittext(iconData, "{")
+	return replacetext(copytext_char(partial[2], 3, -5), "\n", "")
