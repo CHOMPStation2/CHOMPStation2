@@ -929,10 +929,16 @@
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
 			. = TRUE
+<<<<<<< HEAD
 		if("b_vorespawn_blacklist")
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
 			. = TRUE
 
+||||||| parent of 5dd99a1257... Merge pull request #9622 from Verkister/eastercameearly
+	
+=======
+
+>>>>>>> 5dd99a1257... Merge pull request #9622 from Verkister/eastercameearly
 	if(.)
 		unsaved_changes = TRUE
 
