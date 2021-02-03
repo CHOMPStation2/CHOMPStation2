@@ -31,6 +31,7 @@
 	charge_cost = 100
 	force = 8
 	w_class = ITEMSIZE_HUGE		//Probably gonna make it a rifle sooner or later //CHOMP Edit, and so I did.
+	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit. Let's make it so that if it doesn't fit in a backpack, it doesn't fit in a holster either.
 	fire_delay = 6
 
 	projectile_type = /obj/item/projectile/beam/stun/weak
