@@ -9,21 +9,6 @@
 	id_type = /obj/item/weapon/card/id/centcom
 	pda_type = /obj/item/device/pda/centcom
 
-<<<<<<< HEAD
-||||||| parent of 43ed9b5c9a... Merge pull request #9632 from Novacat/nova-basicfixes
-/decl/hierarchy/outfit/job/emergency_responder
-	name = OUTFIT_JOB_NAME("Emergency Responder")
-	uniform = /obj/item/clothing/under/ert
-	shoes = /obj/item/clothing/shoes/boots/swat
-	gloves = /obj/item/clothing/gloves/swat
-	l_ear = /obj/item/device/radio/headset/ert
-	belt = /obj/item/weapon/gun/energy/gun
-	glasses = /obj/item/clothing/glasses/sunglasses
-	back = /obj/item/weapon/storage/backpack/satchel
-	id_type = /obj/item/weapon/card/id/centcom/ERT
-	pda_type = /obj/item/device/pda/centcom
-
-=======
 /decl/hierarchy/outfit/job/emergency_responder
 	name = OUTFIT_JOB_NAME("Emergency Responder")
 	uniform = /obj/item/clothing/under/ert
@@ -39,7 +24,6 @@
 		..()
 		ert.add_antagonist(H.mind)
 
->>>>>>> 43ed9b5c9a... Merge pull request #9632 from Novacat/nova-basicfixes
 /decl/hierarchy/outfit/job/clown
 	name = OUTFIT_JOB_NAME("Clown")
 	uniform = /obj/item/clothing/under/rank/clown
