@@ -2,6 +2,15 @@ some~user - Species
 
 admiraldragon - Vox
 aetherelemental - Daemon
+<<<<<<< HEAD
+||||||| parent of ceb85ad0e8... Merge pull request #9640 from VOREStation/Verkister-patch-10
+alphaprime1 - Protean
+amarewolf - Xenochimera
+=======
+alphaprime1 - Protean
+amarewolf - Xenochimera
+amshaegaar - Vox
+>>>>>>> ceb85ad0e8... Merge pull request #9640 from VOREStation/Verkister-patch-10
 arandomalien - Xenochimera
 arokha - Protean
 aruis - Diona
@@ -13,10 +22,16 @@ bothnevarbackwards - Diona
 bricker98 - Protean
 crossexonar - Protean
 funnyman2003 - Xenochimera
+<<<<<<< HEAD
 flurriee - Protean
+||||||| parent of ceb85ad0e8... Merge pull request #9640 from VOREStation/Verkister-patch-10
+=======
+greennyy - Protean
+>>>>>>> ceb85ad0e8... Merge pull request #9640 from VOREStation/Verkister-patch-10
 hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
+jademanique - Black-Eyed Shadekin
 jademanique - Xenochimera
 ktccd - Diona
 khanivore - Protean
