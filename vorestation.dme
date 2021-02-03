@@ -1428,6 +1428,7 @@
 #include "code\game\objects\items\weapons\storage\boxes_ch.dm"
 #include "code\game\objects\items\weapons\storage\boxes_vr.dm"
 #include "code\game\objects\items\weapons\storage\briefcase.dm"
+#include "code\game\objects\items\weapons\storage\egg_vr.dm"
 #include "code\game\objects\items\weapons\storage\fancy.dm"
 #include "code\game\objects\items\weapons\storage\fancy_ch.dm"
 #include "code\game\objects\items\weapons\storage\fancy_yw.dm"
