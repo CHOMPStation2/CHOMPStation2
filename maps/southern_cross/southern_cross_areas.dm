@@ -672,10 +672,12 @@ z
 /area/engineering/auxiliary_engineering
 	name = "\improper Auxiliary Engineering Station"
 	sound_env = SMALL_ENCLOSED
-
+/*
+//KSC - CHOMPStation Edit 1/19/21 - Moving this to the second-deck
 /area/crew_quarters/firstdeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
+*/
 
 /area/construction/firstdeck/
 	name = "\improper Engineering Construction Area"
@@ -939,6 +941,14 @@ z
 /area/crew_quarters/seconddeck/locker
 	name = "\improper Locker Room"
 	icon_state = "locker"
+
+//CHOMPStation Edit Start KSC 1/19/21 - Added area for new GYM
+
+/area/crew_quarters/seconddeck/gym
+	name = "\improper Station Gym"
+	icon_state = "fitness"
+
+//CHOMPStation Edit End
 
 /area/crew_quarters/seconddeck/locker/locker_toilet
 	name = "\improper Locker Toilets"

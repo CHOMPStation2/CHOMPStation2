@@ -43,4 +43,9 @@
 /datum/computer_file/data/news_article/starfire/year_2564
 	filename = "Starfire Report: Year 2564"
 	server_file_path = 'news_articles/starfire_report_2564.html'
+
+/datum/computer_file/data/news_article/starfire/year_2565
+	filename = "Starfire Report: Year 2565"
+	server_file_path = 'news_articles/starfire_report_2565.html'
+
 //End CHOMPedit

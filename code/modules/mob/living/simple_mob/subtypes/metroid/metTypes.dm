@@ -34,7 +34,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	vore_default_mode = DM_HOLD
 	vore_digest_chance = 1		//Chance to switch to digest mode if resisted
 	vore_absorb_chance = 0
-	vore_escape_chance = 10		//Chance to escape if resisted.
+	vore_escape_chance = 2		//Chance to escape if resisted.
 	
 /datum/ai_holder/simple_mob/jellybrig
 	hostile = FALSE // The majority of simplemobs are hostile, jellybrig is nice.
