@@ -159,7 +159,7 @@
 	w_class = ITEMSIZE_HUGE //CHOMP Edit. Lol a cannon used to be just large size? Are you kidding me? A CANNON.
 	one_handed_penalty = 90 // The thing's heavy and huge.
 	accuracy = 45
-	charge_cost = 600
+	charge_cost = 400 //CHOMP Edit. Let's give this thing some more shots, seeing as it needs to be recharged at a charger.
 
 /obj/item/weapon/gun/energy/lasercannon/mounted
 	name = "mounted laser cannon"
@@ -196,14 +196,16 @@
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
 	action_button_name = "Use Scope"
-	battery_lock = 1
-	charge_cost = 600
-	fire_delay = 35
+	//Begin CHOMPstation Edit for making this thing not trash
+	//battery_lock = 0
+	charge_cost = 360 
+	fire_delay = 40
 	force = 10
 	w_class = ITEMSIZE_HUGE // So it can't fit in a backpack.
-	accuracy = -45 //shooting at the hip
-	scoped_accuracy = 50
+	accuracy = -30 //shooting at the hip
+	scoped_accuracy = 100
 	one_handed_penalty = 60 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
+	//End CHOMP Edit.
 
 /obj/item/weapon/gun/energy/sniperrifle/ui_action_click()
 	scope()
@@ -303,3 +305,4 @@
 
 	projectile_type = /obj/item/projectile/scatter/laser
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit because you can still holster it despite it not fitting in a backpack.

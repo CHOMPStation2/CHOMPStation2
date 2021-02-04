@@ -13,30 +13,30 @@
 ///mob/living/simple_animal/shadekin/red
 //then we simply add our shadekins name at the end (unless its used already)
 /mob/living/simple_mob/shadekin/red/proto
-	name ="Proto" 
+	name ="Proto"
 	//This here will be our shadekins name
-	
-	desc = "An invisible entity not meant for use." 
+
+	desc = "An invisible entity not meant for use."
 	//here goes a lil tidbit people can see when examining the shadekin. Multiple lines works just as on the vore part
-	
-	icon_state = "proto" 
+
+	icon_state = "proto"
 	//this will most likely also be your shadekins name, it corresponds to the name you gave the tail and body state in the DMIs
 	//so if you named the body state "proto" and "proto-1" then icon_state should be called "proto"
-	
+
 	vore_stomach_flavor = "You stared into the void,\
 	the void decided you look tasty,\
 	now you are in the void, pretty wet"
 	//This is what people see when they drop into your gut! the backslashes at the end of the sentence indicate the next text will be on its own line!
-	
-	
-	player_msg = "Proto is you, Proto shouldn't exist" 
+
+
+	player_msg = "Proto is you, Proto shouldn't exist"
 	//This message pops up when you are put into your shadekin
 	//I recommend you use it as a way to remind yourself of how you want to act generally as your shadekin.
-	
+
 //Step 3; PR
 // Assuming you already have a Fork of chompstation, make sure you got your files in order
 // and then simply make a new pull request to our github.
-	
+
 //Now once you pushed the new DMIs with your added sprites to our github.
 //And you finished writing this code section for your shadekin and pushed that too. You are done.
 //If this is your first time I recommend getting someone to look over your work.
@@ -155,3 +155,15 @@
 	eye_desc = "soft green eyes"
 //	vore_stomach_flavor = ""
 	player_msg = "You are Softpatch, you like things that are soft and are curious about the beings in realspace"
+
+//"Marr marr marr-marr maaarr marr?~ (Ever had your ass eaten by a shadekin before?~)" - Yrmir (Shadowfire117)
+/mob/living/simple_mob/shadekin/orange/yrmir
+	name = "Green and black shadekin" //Name is Yrmir and known only to other shadekins he talks to, he doesn't speak common to any degree so far
+	desc = "An orange eyed shadekin, this one has a very dark coat with several spots with faintly glowing green patches of fur. \
+	Said fur looks quite soft and warm with it filling out a bit, a closer look tells its a slim upper body while rump, hips and thighs are nice and filled out well. \
+	While he may have a more padded out builed below, the masculine part of them is quite visible as a large fat furred sack and sheath rests comfortably between his thighs and on his crotch. \
+	From the way he looks at you, you get the feeling he is possibly scheming something fun, at least for himself."
+	icon_state = "yrmir"
+	eye_desc = "glimmering orange eyes"
+//	vore_stomach_flavor = ""
+	player_msg = "You are Yrmir, an orange shadekin with interest in revelry, trickery and pleasures. Mostly for you but to a degree to the willing and unwilling that interest you."
