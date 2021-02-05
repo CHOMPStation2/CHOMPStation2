@@ -272,5 +272,5 @@
 	tracer_type = /obj/effect/projectile/tracer/precursor
 	impact_type = /obj/effect/projectile/impact/precursor
 
-	damage = 55
+	damage = 48
 	armor_penetration = 10
