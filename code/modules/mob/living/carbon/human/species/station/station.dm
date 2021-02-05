@@ -77,8 +77,8 @@
 
 	economic_modifier = 10
 	
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit added unathi scream
+	female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit
 
 	blurb = "A heavily reptillian species, Unathi hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \

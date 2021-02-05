@@ -435,6 +435,13 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray
 	materials = list(DEFAULT_WALL_MATERIAL = 9000, "glass" = 3000, "phoron" = 1000, "silver" = 1500, "gold" = 2500, "plastic" = 2000)
 
+/datum/design/item/mecha/weapon/laser_gamma //CHOMPedit begin : add Gamma Laser
+	name = "GA-X \"Render\" Experimental Gamma Laser"
+	id = "mech_laser_gamma"
+	req_tech = list(TECH_MATERIAL = 5, TECH_COMBAT = 5, TECH_PHORON = 4, TECH_POWER = 5, TECH_ILLEGAL = 3)
+	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/gamma
+	materials = list(DEFAULT_WALL_MATERIAL = 6000, "glass" = 4000, "phoron" = 2500, "silver" = 1000, "gold" = 500, "uranium" = 3000) //CHOMPedit end
+
 /datum/design/item/mecha/weapon/rigged_laser_xray
 	name = "Jury-Rigged Xray Rifle"
 	id = "mech_laser_xray-r"

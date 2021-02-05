@@ -171,7 +171,7 @@
 #define SOUTHERN_CROSS_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*SOUTHERN_CROSS_MAP_SIZE)) / 2) // 60
 
 /datum/map_z_level/southern_cross/station
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 
@@ -209,7 +209,7 @@
 /datum/map_z_level/southern_cross/surface
 	z = Z_LEVEL_SURFACE
 	name = "Plains"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/southern_cross/surface_mine
@@ -228,13 +228,13 @@
 /datum/map_z_level/southern_cross/surface_casino
 	z = Z_LEVEL_SURFACE_CASINO
 	name = "Casino"
-	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/southern_cross/misc
 	z = Z_LEVEL_MISC
 	name = "Misc"
-	flags = MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 6
 
 /datum/map_z_level/southern_cross/centcom

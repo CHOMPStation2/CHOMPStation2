@@ -1,5 +1,5 @@
 //new micro parts define
-
+/* //CHOMPedit commented micromech stuff, because fuck this trash
 /obj/item/mecha_parts/micro
 	name = "mecha part"
 	icon = 'icons/mecha/mech_construct_vr.dmi'
@@ -124,7 +124,7 @@
 	icon_state = "weasel-arm-right"
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 
-/*/obj/item/mecha_parts/micro/part/weasel_left_leg
+/obj/item/mecha_parts/micro/part/weasel_left_leg
 	name="Weasel Left Leg"
 	icon_state = "weasel-leg-left"
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
@@ -132,9 +132,9 @@
 /obj/item/mecha_parts/micro/part/weasel_right_leg
 	name="Weasel Right Leg"
 	icon_state = "weasel-leg-right"
-	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)*/
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 
 /obj/item/mecha_parts/micro/part/weasel_tri_leg
 	name="Weasel Legs"
 	icon_state = "weasel-leg-all"
-	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3) */

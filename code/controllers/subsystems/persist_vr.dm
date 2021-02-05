@@ -20,7 +20,7 @@ SUBSYSTEM_DEF(persist)
 		return
 
 	establish_db_connection()
-	if(!dbcon.IsConnected())
+	if(!SSdbcore.IsConnected())	//CHOMPEdit TGSQL
 		src.currentrun.Cut()
 		return
 	if(!resumed)
@@ -84,10 +84,11 @@ SUBSYSTEM_DEF(persist)
 		var/sql_dpt = sql_sanitize_text(department_earning)
 		var/sql_bal = text2num("[C.department_hours[department_earning]]")
 		var/sql_total = text2num("[C.play_hours[department_earning]]")
-		var/DBQuery/query = dbcon.NewQuery("INSERT INTO vr_player_hours (ckey, department, hours, total_hours) VALUES ('[sql_ckey]', '[sql_dpt]', [sql_bal], [sql_total]) ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)")
+		var/list/sqlargs = list("t_ckey" = sql_ckey, "t_department" = sql_dpt) //CHOMPEdit TGSQL
+		var/DBQuery/query = SSdbcore.NewQuery("INSERT INTO vr_player_hours (ckey, department, hours, total_hours) VALUES (:t_ckey, :t_department, [sql_bal], [sql_total]) ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)", sqlargs) //CHOMPEdit TGSQL
 		if(!query.Execute())	//CHOMPEdit
 			log_admin(query.ErrorMsg())	//CHOMPEdit
-
+		qdel(query) //CHOMPEdit TGSQL
 		if (MC_TICK_CHECK)
 			return
 

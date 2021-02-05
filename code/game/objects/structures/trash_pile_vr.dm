@@ -221,7 +221,8 @@
 					prob(1);/obj/item/weapon/spacecash/c50,
 					prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie,
 					prob(1);/obj/item/weapon/storage/box/cups,
-					prob(1);/obj/item/pizzavoucher)
+					prob(1);/obj/item/pizzavoucher,
+					prob(1);/obj/item/weapon/grenade/spawnergrenade/clustaur)// CHOMPStation edit
 
 	var/obj/item/I = new path()
 	return I

@@ -346,24 +346,26 @@ var/obj/machinery/blackbox_recorder/blackbox
 
 	round_end_data_gathering() //round_end time logging and some other data processing
 	establish_db_connection()
-	if(!dbcon.IsConnected()) return
+	if(!SSdbcore.IsConnected()) return //CHOMPEdit TGSQL
 	var/round_id
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT MAX(round_id) AS round_id FROM erro_feedback")
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT MAX(round_id) AS round_id FROM erro_feedback") //CHOMPEdit TGSQL
 	query.Execute()
 	while(query.NextRow())
 		round_id = query.item[1]
-
+	qdel(query) //CHOMPEdit TGSQL
 	if(!isnum(round_id))
 		round_id = text2num(round_id)
 	round_id++
 
 	for(var/datum/feedback_variable/FV in feedback)
-		var/sql = "INSERT INTO erro_feedback VALUES (null, Now(), [round_id], \"[FV.get_variable()]\", [FV.get_value()], \"[FV.get_details()]\")"
-		var/DBQuery/query_insert = dbcon.NewQuery(sql)
+		var/list/sqlargs = list("t_roundid" = round_id, "t_variable" = "[FV.get_variable()]", "t_value" = "[FV.get_value()]", "t_details" = "[FV.get_details()]") //CHOMPEdit TGSQL
+		var/sql = "INSERT INTO erro_feedback VALUES (null, Now(), :t_roundid, :t_variable, :t_value, :t_details)" //CHOMPEdit TGSQL
+		var/DBQuery/query_insert = SSdbcore.NewQuery(sql, sqlargs) //CHOMPEdit TGSQL
 		query_insert.Execute()
+		qdel(query_insert) //CHOMPEdit TGSQL
 
-// Sanitize inputs to avoid SQL injection attacks
+// Sanitize inputs to avoid SQL injection attacks //CHOMPEdit NOTE: This is not secure. Basic filters like this are pretty easy to bypass. Use the format for arguments used in the above.
 proc/sql_sanitize_text(var/text)
 	text = replacetext(text, "'", "''")
 	text = replacetext(text, ";", "")
