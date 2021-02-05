@@ -24,13 +24,7 @@
 	set name = "Msay"
 	set hidden = 1
 
-<<<<<<< HEAD
 	if(!check_rights(R_ADMIN|R_MOD|R_EVENT)) //VOREStation Edit //CHOMP Removal: Removed R_SERVER because it wasn't necessary.
-||||||| parent of 43ed9b5c9a... Merge pull request #9632 from Novacat/nova-basicfixes
-	if(!check_rights(R_ADMIN|R_MOD|R_SERVER|R_EVENT)) //VOREStation Edit
-=======
-	if(!check_rights(R_ADMIN|R_MOD|R_SERVER|R_STEALTH)) //VOREStation Edit
->>>>>>> 43ed9b5c9a... Merge pull request #9632 from Novacat/nova-basicfixes
 		return
 
 	msg = sanitize(msg)
@@ -53,13 +47,7 @@
 	set name = "Esay"
 	set hidden = 1
 
-<<<<<<< HEAD
 	if(!check_rights(R_ADMIN|R_MOD|R_EVENT|R_EVENT)) //CHOMP Removal: Removed R_SERVER because it wasn't necessary.
-||||||| parent of 43ed9b5c9a... Merge pull request #9632 from Novacat/nova-basicfixes
-	if(!check_rights(R_ADMIN|R_MOD|R_EVENT|R_SERVER|R_EVENT))
-=======
-	if(!check_rights(R_ADMIN|R_MOD|R_EVENT|R_SERVER|R_STEALTH)) //VOREStation Edit
->>>>>>> 43ed9b5c9a... Merge pull request #9632 from Novacat/nova-basicfixes
 		return
 
 	msg = sanitize(msg)
