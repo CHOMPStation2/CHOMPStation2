@@ -67,6 +67,8 @@
 	icon_expected_height = 32
 	icon_expected_width = 64
 	firemodes = list()
+	var/is_picked_up = FALSE
+	var/is_long = TRUE
 
 /obj/item/weapon/gun/projectile/automatic/serdy/Initialize()
 	. = ..()
@@ -74,7 +76,24 @@
 
 /obj/item/weapon/gun/projectile/automatic/serdy/update_transform()
 	. = ..()
+	if(is_picked_up && is_long)
+		transform = transform.Turn(-45)
 	transform = transform.Translate(-16,0)
+
+/obj/item/weapon/gun/projectile/automatic/serdy/equipped()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/projectile/automatic/serdy/pickup()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/projectile/automatic/serdy/dropped()
+	. = ..()
+	is_picked_up = FALSE
+	update_transform()
 
 /obj/item/weapon/gun/projectile/automatic/serdy/update_icon()
 	. = ..()
@@ -119,6 +138,7 @@
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
 	muzzle_velocity = 680
+	is_long = FALSE
 
 /obj/item/weapon/gun/projectile/automatic/serdy/akm
 	name = "AKM"
@@ -220,7 +240,7 @@
 	caliber = "10x24mm caseless"
 	magazine_type = /obj/item/ammo_magazine/m41
 	allowed_magazines = list(/obj/item/ammo_magazine/m41)
-	icon_state="m41ab"
+	icon_state="m41b"
 	projectile_type = /obj/item/projectile/bullet/rifle/a10x24
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -520,6 +540,7 @@
 	)
 	load_method = MAGAZINE
 	muzzle_velocity = 400
+	is_long = FALSE
 
 /obj/item/weapon/gun/projectile/automatic/serdy/vityaz
 	name = "WKHM 'Vityaz'"
@@ -537,6 +558,7 @@
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	muzzle_velocity = 430
+	is_long = FALSE
 
 //LMGs
 
@@ -575,6 +597,7 @@
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 405
+	is_long = FALSE
 
 /obj/item/weapon/gun/projectile/automatic/serdy/ssp4/silenced
 	name = "WKHM SSP4-S"
@@ -903,6 +926,7 @@
 	sound_ejectchamber = 'sound/weapons/ballistics/rifle_ejectchamber.ogg'
 	sound_eject = 'sound/weapons/ballistics/rifle_eject.ogg'
 	sound_chamber = 'sound/weapons/ballistics/rifle_chamber.ogg'
+	only_open_load = TRUE
 
 /obj/item/weapon/gun/projectile/revolvingrifle
 	manual_chamber = FALSE
@@ -920,15 +944,33 @@
 	icon_expected_width = 64
 	pump_animation = "winchester-pump"
 	var/is64x32 = TRUE
+	var/is_picked_up = FALSE
 
 /obj/item/weapon/gun/projectile/shotgun/pump/Initialize()
 	. = ..()
 	if(is64x32)
 		update_transform()
 
+/obj/item/weapon/gun/projectile/shotgun/pump/equipped()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/projectile/shotgun/pump/pickup()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/projectile/shotgun/pump/dropped()
+	. = ..()
+	is_picked_up = FALSE
+	update_transform()
+
 /obj/item/weapon/gun/projectile/shotgun/pump/update_transform()
 	. = ..()
 	if(is64x32)
+		if(is_picked_up)
+			transform = transform.Turn(-45)
 		transform = transform.Translate(-16,0)
 
 /obj/item/weapon/gun/projectile/shotgun/pump/combat

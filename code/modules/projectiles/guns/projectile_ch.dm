@@ -85,6 +85,7 @@
 /obj/item/weapon/gun/projectile/proc/bolt_handle(mob/user)
 	var/previous_chambered = chambered
 	var/result = bolt_toggle(TRUE)
+	update_icon()
 	if(!result)
 		to_chat(user,"<span class='notice'>Nothing happens.</span>")
 	else
@@ -421,10 +422,17 @@
 			else if(CHECK_BITFIELD(auto_loading_type,CLOSED_BOLT) && bolt_open)
 				to_chat(user,"<span class='warning'>This is a closed bolt gun! You need to close the bolt before firing it!</span>")
 				return 0
+			else if(bolt_open)
+				to_chat(user,"<span class='warning'>This is a manual action gun, the bolt or chamber must be closed before firing it!</span>")
+				return 0
 			else
 				return 1
 		else
 			return 1
+
+/obj/item/weapon/gun/projectile/unload_ammo(mob/user, var/allow_dump=1)
+	if(manual_chamber && only_open_load && !bolt_open)
+		to_chat(user,"<span class='warning'>You must open the bolt to load or unload this gun!</span>")
 
 /obj/item/weapon/gun/projectile/handle_click_empty(mob/user)
 	if (user)

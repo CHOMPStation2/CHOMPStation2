@@ -7,6 +7,22 @@
 	icon_expected_width = 64
 	var/is64x32 = TRUE
 	var/is64x32_override = FALSE
+	var/is_picked_up = FALSE
+
+/obj/item/weapon/gun/magnetic/railgun/equipped()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/magnetic/railgun/pickup()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/magnetic/railgun/dropped()
+	. = ..()
+	is_picked_up = FALSE
+	update_transform()
 
 /obj/item/weapon/gun/magnetic/railgun/Initialize()
 	. = ..()
@@ -22,4 +38,6 @@
 /obj/item/weapon/gun/magnetic/railgun/update_transform()
 	. = ..()
 	if(is64x32)
+		if(is_picked_up)
+			transform = transform.Turn(-45)
 		transform = transform.Translate(-16,0)

@@ -1,11 +1,28 @@
 /obj/item/weapon/gun/energy/laser
 	icon = 'icons/obj/64x32guns_ch.dmi'
 	icon_state = "lcarbine"
-	name = "NT LC-525"
+	name = "NT LC-525 Laser Rifle"
 	desc = "A relatively new, mass produced Nanotrasen laser carbine designed to kill with concentrated energy blasts. Just like the G40E, it has two firemodes, standard, and suppressive, which fires more efficent but weaker beams."
 	icon_expected_width = 64
 	var/is64x32 = TRUE
 	var/is64x32_override = FALSE
+	var/is_picked_up = FALSE
+
+/obj/item/weapon/gun/energy/laser/equipped()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/energy/laser/pickup()
+	. = ..()
+	is_picked_up = TRUE
+	update_transform()
+
+/obj/item/weapon/gun/energy/laser/dropped()
+	. = ..()
+	if(!istype(loc,/mob/living))
+		is_picked_up = FALSE
+	update_transform()
 
 /obj/item/weapon/gun/energy/laser/Initialize()
 	. = ..()
@@ -21,6 +38,8 @@
 /obj/item/weapon/gun/energy/laser/update_transform()
 	. = ..()
 	if(is64x32)
+		if(is_picked_up)
+			transform = transform.Turn(-45)
 		transform = transform.Translate(-16,0)
 
 /obj/item/weapon/gun/energy/laser/empty
