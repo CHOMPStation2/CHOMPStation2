@@ -262,6 +262,9 @@
 	eyeblur = 2
 	hitsound = 'sound/weapons/zapbang.ogg'
 
+/obj/item/projectile/beam/shock/weak
+	damage = 5
+	agony = 10
 
 /obj/item/projectile/beam/precursor //CHOMPedit added Precursor beam
 	name = "precursor beam"
@@ -275,7 +278,3 @@
 
 	damage = 48
 	armor_penetration = 10
-
-/obj/item/projectile/beam/shock/weak
-	damage = 5
-	agony = 10
