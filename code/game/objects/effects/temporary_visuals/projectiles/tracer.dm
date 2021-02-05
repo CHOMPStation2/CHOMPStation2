@@ -91,6 +91,12 @@
 	light_power = 0.5
 	light_color = "#8837A3"
 
+/obj/effect/projectile/tracer/precursor //CHOMPedit add precursor tracer
+	icon_state = "prec"
+	light_range = 2
+	light_power = 0.7
+	light_color = "#FF0099"
+
 /obj/effect/projectile/tracer/inversion
 	icon_state = "invert"
 	light_range = 2
