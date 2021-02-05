@@ -74,6 +74,12 @@
 	light_power = 0.5
 	light_color = "#8837A3"
 
+/obj/effect/projectile/impact/precursor //CHOMPedit add precursor impact
+	icon_state = "impact_prec"
+	light_range = 2
+	light_power = 0.7
+	light_color = "#FF0099"
+
 /obj/effect/projectile/impact/tungsten
 	icon_state = "impact_mhd_laser"
 	light_range = 4
