@@ -124,6 +124,7 @@
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien // Self charges.
 	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
 	modifystate = "alienpistol"
+	battery_lock = 1 //CHOMPedit adds battery lock.
 
 
 /obj/item/weapon/gun/energy/captain
