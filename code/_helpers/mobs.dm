@@ -122,14 +122,10 @@ Proc for attack log creation, because really why not
 
 	if(ismob(user)) //CHOMPEdit Begin
 		//user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attacked [target_str]: [what_done]</font>")
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", list("t_ckey" = user.ckey, "t_mob" = user.real_name, "t_content" = "<font color='red'>Attacked [target_str]: [what_done]</font>"))
-		query_insert.Execute(async=use_async)
-		qdel(query_insert)
+		SSdbcore.ReturnlessQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :t_ckey, :t_mob, :t_content)", list("t_ckey" = user.ckey, "t_mob" = user.real_name, "t_content" = "<font color='red'>Attacked [target_str]: [what_done]</font>"))
 	if(ismob(target))
 		//target.attack_log += text("\[[time_stamp()]\] <font color='orange'>Attacked by [user_str]: [what_done]</font>")
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>"))
-		query_insert.Execute(async=use_async)
-		qdel(query_insert)
+		SSdbcore.ReturnlessQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :t_ckey, :t_mob, :t_content)", list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>"))
 	//CHOMPEdit End
 	log_attack(user_str,target_str,what_done)
 	if(admin_notify)
