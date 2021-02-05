@@ -23,7 +23,7 @@
 /mob/living/carbon/human/proc/use_reagent_implant_egg()
 	set name = "Force Someone Adjacent To Lay An Egg, If Applicable!"
 	set desc = "Force someone adjacent to lay an egg by squeezing into their lower body! Whilst their reaction may vary, this is certainly going to overwhelm them for a moment!"
-	set category = "Local"
+	set category = "Object"
 	set src in view(1)
 	//do_reagent_implant(usr)
 	if(!isliving(usr) || !usr.checkClickCooldown())
@@ -93,7 +93,7 @@
 
 	set name = "Toggle cascading"
 	set desc = "Toggle whether or not being forced to lay an egg will cause you to lay all others as well, in rapid succession"
-	set category = "Local"
+	set category = "Object"
 
 	var/obj/item/weapon/implant/reagent_generator/egg/rimplant
 	for(var/obj/item/organ/external/E in organs)

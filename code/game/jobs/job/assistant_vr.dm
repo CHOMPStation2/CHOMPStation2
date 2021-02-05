@@ -22,10 +22,7 @@
 					  "Lab Assistant" = /datum/alt_title/intern_sci, //CHOMPEdit
 					  "Security Cadet" = /datum/alt_title/intern_sec,
 					  "Jr. Cargo Tech" = /datum/alt_title/intern_crg,
-					  "Server" = /datum/alt_title/server,
-					  //CHOMPSTATION edit start.
-					  "Belly Filler" = /datum/alt_title/prey)
-					  //CHOMPSTATION edit end.
+					  "Server" = /datum/alt_title/server)
 	job_description = "An Intern does whatever is requested of them, often doing so in process of learning \
 						another job. Though they are part of the crew, they have no real authority."
 	timeoff_factor = 0 // Interns, noh
@@ -67,14 +64,6 @@
 	title = "Server"
 	title_blurb = "A Server helps out kitchen and diner staff with various tasks, primarily food delivery. A Server has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/service/server
-
-//CHOMPSTATION edit start: Thought it would be funny for people to wear their reason for being on station on their shoulder.
-/datum/alt_title/prey
-	title = "Belly Filler"
-	title_blurb = "Considering the needs of this particular region of space, a Belly Filler is a crewmember who has willingly consigned themselves to \
-				serving the voracious appetites of their fellow crewmembers. A Belly Filler has no authority."
-	title_outfit = /decl/hierarchy/outfit/job/assistant/intern
-//CHOMPSTATION edit end.
 
 /datum/job/intern/New()
 	..()
