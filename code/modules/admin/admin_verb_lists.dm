@@ -104,13 +104,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/toggle_attack_logs,
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
-<<<<<<< HEAD
 	/datum/admins/proc/quick_nif, //VOREStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
-||||||| parent of 43ed9b5c9a... Merge pull request #9632 from Novacat/nova-basicfixes
-	/datum/admins/proc/quick_nif, //VOREStation Add,
-=======
->>>>>>> 43ed9b5c9a... Merge pull request #9632 from Novacat/nova-basicfixes
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
 	/datum/admins/proc/view_feedback,
@@ -147,6 +142,7 @@ var/list/admin_verbs_fun = list(
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
 	/client/proc/smite,
+	/client/proc/smite_vr, //VOREStation Add,
 	/client/proc/admin_lightning_strike,
 	)
 
@@ -157,6 +153,7 @@ var/list/admin_verbs_spawn = list(
 	/datum/admins/proc/spawn_plant,
 	/datum/admins/proc/spawn_atom,		//allows us to spawn instances,
 	/client/proc/respawn_character,
+	/client/proc/spawn_character_mob,  //VOREStation Add,
 	/client/proc/virus2_editor,
 	/client/proc/spawn_chemdisp_cartridge,
 	/client/proc/map_template_load,
@@ -187,7 +184,6 @@ var/list/admin_verbs_server = list(
 	/datum/admins/proc/toggle_space_ninja,
 	/client/proc/toggle_random_events,
 	/client/proc/check_customitem_activity,
-	/client/proc/nanomapgen_DumpImage,
 	/client/proc/modify_server_news,
 	/client/proc/recipe_dump,
 	/client/proc/panicbunker,
@@ -235,7 +231,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/toggle_debug_logs,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/datum/admins/proc/view_runtimes,
-	/client/proc/show_gm_status,
+	// /client/proc/show_gm_status, // VOREStation Edit - We don't use SSgame_master yet.
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
@@ -413,7 +409,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/callproc,
 	/client/proc/callproc_datum,
 	/client/proc/debug_controller,
-	/client/proc/show_gm_status,
+	// /client/proc/show_gm_status,  // VOREStation Edit - We don't use SSgame_master yet.
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
