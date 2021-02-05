@@ -92,7 +92,7 @@
 	name = "gamma beam"
 	icon_state = "xray"
 	fire_sound = 'sound/weapons/eluger.ogg'
-	damage = 10
+	damage = 12 //CHOMPedit
 	armor_penetration = 90
 	irradiate = 20
 	light_color = "#00CC33"
@@ -261,3 +261,7 @@
 	agony = 15
 	eyeblur = 2
 	hitsound = 'sound/weapons/zapbang.ogg'
+
+/obj/item/projectile/beam/shock/weak
+	damage = 5
+	agony = 10
