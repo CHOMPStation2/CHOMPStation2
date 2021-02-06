@@ -255,6 +255,8 @@
 	return null
 
 /obj/item/weapon/gun/projectile/proc/chamber_bullet()
+	if(chambered)
+		return 0
 	var/obj/item/ammo_casing/to_chamber
 	if(loaded.len)
 		to_chamber = loaded[1] //load next casing.

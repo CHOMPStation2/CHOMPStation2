@@ -296,6 +296,9 @@
 	ammo_type = /obj/item/ammo_casing/a762x54
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 70
+	bolt_name = "bolt"
+	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
+	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mosin/scoped
 	name = "Scoped Mosin Nagant"
@@ -358,6 +361,9 @@
 	scoped_accuracy = 50
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 90
+	bolt_name = "bolt"
+	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
+	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
 
 /obj/item/weapon/gun/projectile/automatic/serdy/awp/ui_action_click()
 	scope()
@@ -385,6 +391,9 @@
 	scoped_accuracy = 15
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 120
+	bolt_name = "bolt"
+	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
+	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
 
 
 /obj/item/weapon/gun/projectile/automatic/serdy/hectate/ui_action_click()
