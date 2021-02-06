@@ -433,6 +433,8 @@
 /obj/item/weapon/gun/projectile/unload_ammo(mob/user, var/allow_dump=1)
 	if(manual_chamber && only_open_load && !bolt_open)
 		to_chat(user,"<span class='warning'>You must open the bolt to load or unload this gun!</span>")
+	else
+		return ..()
 
 /obj/item/weapon/gun/projectile/handle_click_empty(mob/user)
 	if (user)
