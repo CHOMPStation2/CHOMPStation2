@@ -63,6 +63,7 @@ SUBSYSTEM_DEF(dbcore)
 				returnless_queries -= rquery_id
 				currentrun -= rquery_id
 				running_rqueries--
+				del(query)
 				continue
 			var/result = json_decode(job_result_str)
 			switch (result["status"])
@@ -70,6 +71,7 @@ SUBSYSTEM_DEF(dbcore)
 					returnless_queries -= rquery_id
 					currentrun -= rquery_id
 					running_rqueries--
+					del(query)
 					continue
 				if ("err")
 					last_error = result["data"]
@@ -77,6 +79,7 @@ SUBSYSTEM_DEF(dbcore)
 					returnless_queries -= rquery_id
 					currentrun -= rquery_id
 					running_rqueries--
+					del(query)
 					continue
 				if ("offline")
 					last_error = "offline"
@@ -84,12 +87,14 @@ SUBSYSTEM_DEF(dbcore)
 					returnless_queries -= rquery_id
 					currentrun -= rquery_id
 					running_rqueries--
+					del(query)
 					continue
 				else
 					log_debug("SQL QUERY UNKNOWN STATUS: [result["status"]] | [last_error] | [result["data"]] | Query used: [query["sql_query"]] | Arguments: [json_encode(query["arguments"])]")
 					returnless_queries -= rquery_id
 					currentrun -= rquery_id
 					running_rqueries--
+					del(query)
 					continue
 		currentrun -= rquery_id
 		continue
