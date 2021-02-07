@@ -4,7 +4,6 @@
 		mannequin.dna = new /datum/dna(null)
 	mannequin.delete_inventory(TRUE)
 	dress_preview_mob(mannequin)
-	mannequin.update_transform()
 	mannequin.toggle_tail_vr(setting = TRUE)
 	mannequin.toggle_wing_vr(setting = TRUE)
 	COMPILE_OVERLAYS(mannequin)
