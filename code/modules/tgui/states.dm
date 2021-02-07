@@ -122,18 +122,8 @@
 /mob/living/carbon/human/shared_living_tgui_distance(atom/movable/src_object)
 	if((TK in mutations) && (get_dist(src, src_object) <= 2))
 		return STATUS_INTERACTIVE
-<<<<<<< HEAD
-	return ..()
-||||||| parent of 9dcac9c0ad... Merge pull request #9650 from VOREStation/upstream-merge-7847
 	return ..()
 
 // Topic Extensions for old UIs
 /datum/proc/CanUseTopic(var/mob/user, var/datum/tgui_state/state)
 	return tgui_status(user, state)
-=======
-	return ..()
-
-// Topic Extensions for old UIs
-/datum/proc/CanUseTopic(var/mob/user, var/datum/tgui_state/state)
-	return tgui_status(user, state)
->>>>>>> 9dcac9c0ad... Merge pull request #9650 from VOREStation/upstream-merge-7847
