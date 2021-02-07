@@ -294,8 +294,13 @@ YW change end */
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("alcohol_mod" = 0.25) // 25% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
+<<<<<<< HEAD
 // Alcohol Traits End Here.
 YW CHANGE STOP*/
+||||||| parent of 9a9e6e5ede... Merge pull request #9646 from Verkister/oopsididitagain
+// Alcohol Traits End Here.
+=======
+// Alcohol Traits End Here.
 
 // Body shape traits
 /datum/trait/taller
@@ -393,3 +398,4 @@ YW CHANGE STOP*/
 /datum/trait/thinner/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.update_transform()
+>>>>>>> 9a9e6e5ede... Merge pull request #9646 from Verkister/oopsididitagain
