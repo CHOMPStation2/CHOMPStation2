@@ -228,13 +228,11 @@
 
 /datum/trait/agoraphobia/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M,var/invis_matters = TRUE)
 	var/list/in_range = list()
-	if(!M)
+	if(!istype(M))
 		return in_range
 	var/social_check = !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
 	var/ckey_check = !M.ckey
 	var/overall_checks = M == H || M.stat == DEAD || social_check || ckey_check 
-	if(!istype(M))
-		return in_range
 	if(invis_matters && M.invisibility > H.see_invisible)
 		return in_range
 	if(!overall_checks)
@@ -288,7 +286,7 @@
 		H.next_loneliness_time = world.time+500
 
 /datum/trait/lonely/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M)
-	if(!M)
+	if(!istype(M))
 		return 0
 	var/social_check = only_people && !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
 	var/self_invisible_check = M == H || M.invisibility > H.see_invisible
