@@ -55,6 +55,9 @@
 	var/last_shift = 0
 	var/blood_spawn = 0
 	var/is_shifting = FALSE
+	
+	var/enable_autolaugh = FALSE //Toggleable for Admemes only for now
+	var/laugh = 'sound/misc/demonlaugh.ogg' //Yknow maybe someone wants a custom laugh, you never know.
 
 /mob/living/simple_mob/vore/demon/init_vore()
 	..()
@@ -115,21 +118,25 @@
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/vore/demon/death()
-	playsound(src, 'sound/misc/demondeath.ogg', 50, 1)
+	laugh()
 	..()
 
 /mob/living/simple_mob/vore/demon/bullet_act()
-    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
-    ..()
+	laugh()
+	..()
 
 /mob/living/simple_mob/vore/demon/attack_hand()
-    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
-    ..()
+	laugh()
+	..()
 
 /mob/living/simple_mob/vore/demon/hitby()
-    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
-    ..()
+	laugh()
+	..()
 
 /mob/living/simple_mob/vore/demon/attackby()
-    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
-    ..()
+ 	laugh()
+	..()
+
+/mob/living/simple_mob/vore/demon/proc/laugh()
+	if(!src.ckey || enable_autolaugh)
+		playsound(src, laugh, 50, 1)
