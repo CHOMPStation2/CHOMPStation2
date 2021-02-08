@@ -1,0 +1,16 @@
+/turf/Initialize()
+	. = ..()
+	if(islist(footstep_sounds))
+		footstep_sounds = widelist(footstep_sounds)
+	if(islist(vorefootstep_sounds))
+		vorefootstep_sounds = widelist(vorefootstep_sounds)
+
+/turf/simulated/Initialize()
+	. = ..()
+	if(islist(base_vorefootstep_sounds))
+		base_vorefootstep_sounds = widelist(base_vorefootstep_sounds)
+
+/turf/simulated/floor/Initialize()
+	. = ..()
+	if(islist(base_footstep_sounds))
+		base_footstep_sounds = widelist(base_footstep_sounds)

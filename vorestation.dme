@@ -1611,6 +1611,7 @@
 #include "code\game\turfs\turf_ch.dm"
 #include "code\game\turfs\turf_changing.dm"
 #include "code\game\turfs\turf_flick_animations.dm"
+#include "code\game\turfs\turf_widelist_ch.dm"
 #include "code\game\turfs\unsimulated.dm"
 #include "code\game\turfs\flooring\floor_yw.dm"
 #include "code\game\turfs\flooring\flooring.dm"

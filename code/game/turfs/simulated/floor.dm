@@ -13,7 +13,7 @@
 	var/base_desc = "The naked hull."
 	var/base_icon = 'icons/turf/flooring/plating_vr.dmi'
 	var/base_icon_state = "plating"
-	var/static/list/base_footstep_sounds = list("human" = list(
+	var/list/base_footstep_sounds = list("human" = list( //CHOMPEdit
 		'sound/effects/footstep/plating1.ogg',
 		'sound/effects/footstep/plating2.ogg',
 		'sound/effects/footstep/plating3.ogg',
@@ -66,6 +66,12 @@
 	flooring = newflooring
 	vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
 	footstep_sounds = newflooring.footstep_sounds
+	//CHOMPEdit Begin
+	if(islist(vorefootstep_sounds))
+		vorefootstep_sounds = widelist(vorefootstep_sounds)
+	if(islist(footstep_sounds))
+		footstep_sounds = widelist(footstep_sounds)
+	//CHOMPEdit End
 	if(!initializing)
 		update_icon(1)
 	levelupdate()

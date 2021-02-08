@@ -1,7 +1,7 @@
 /turf/simulated
 
 	//CHOMP reagent belly sloshing sounds
-	var/static/list/base_vorefootstep_sounds = list("human" = list(
+	var/list/base_vorefootstep_sounds = list("human" = list(
 		'sound/vore/walkslosh1.ogg',
 		'sound/vore/walkslosh2.ogg',
 		'sound/vore/walkslosh3.ogg',
