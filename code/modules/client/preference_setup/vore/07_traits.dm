@@ -2,6 +2,9 @@
 #define NEUTRAL_MODE 2
 #define NEGATIVE_MODE 3
 
+#define ORGANICS	1
+#define SYNTHETICS	2
+
 /datum/preferences
 	var/custom_species	// Custom species name, can't be changed due to it having been used in savefiles already.
 	var/custom_base		// What to base the custom species on
@@ -15,6 +18,7 @@
 	var/starting_trait_points = STARTING_SPECIES_POINTS
 	var/max_traits = MAX_SPECIES_TRAITS
 	var/dirty_synth = 0		//Are you a synth
+	var/gross_meatbag = 0		//Where'd I leave my Voight-Kampff test kit?
 
 // Definition of the stuff for Ears
 /datum/category_item/player_setup_item/vore/traits
@@ -85,8 +89,16 @@
 
 	if(character.isSynthetic())	//Checking if we have a synth on our hands, boys.
 		pref.dirty_synth = 1
+<<<<<<< HEAD
 	else				//CHOMPEdit
 		pref.dirty_synth = 0	//CHOMPEdit
+||||||| parent of 8b0c23c122... Merge pull request #9659 from KillianKirilenko/kk-misc4
+=======
+		pref.gross_meatbag = 0
+	else
+		pref.gross_meatbag = 1
+		pref.dirty_synth = 0
+>>>>>>> 8b0c23c122... Merge pull request #9659 from KillianKirilenko/kk-misc4
 
 	var/datum/species/S = character.species
 	var/SB
@@ -276,11 +288,28 @@
 
 			var/conflict = FALSE
 
+<<<<<<< HEAD
 			user.isSynthetic()	//Recheck just to be sure
 			if(pref.dirty_synth && instance.not_for_synths)//if you are a synth you can't take this trait.
 				alert("You cannot take this trait as a SYNTH.\
 				Please remove that trait, or pick another trait to add.","Error")
 				//pref.dirty_synth = 0	//Just to be sure // Commented out because it allow for someone to take a synth-blacklisted trait CHOMP Edit
+||||||| parent of 8b0c23c122... Merge pull request #9659 from KillianKirilenko/kk-misc4
+			user.isSynthetic()	//Recheck just to be sure
+			if(pref.dirty_synth && instance.not_for_synths)//if you are a synth you can't take this trait.
+				alert("You cannot take this trait as a SYNTH.\
+				Please remove that trait, or pick another trait to add.","Error")
+				pref.dirty_synth = 0	//Just to be sure
+=======
+			if(pref.dirty_synth && !(instance.can_take & SYNTHETICS))
+				alert("The trait you've selected can only be taken by organic characters!","Error")
+				pref.dirty_synth = 0	//Just to be sure
+>>>>>>> 8b0c23c122... Merge pull request #9659 from KillianKirilenko/kk-misc4
+				return TOPIC_REFRESH
+
+			if(pref.gross_meatbag && !(instance.can_take & ORGANICS))
+				alert("The trait you've selected can only be taken by synthetic characters!","Error")
+				pref.gross_meatbag = 0	//Just to be sure
 				return TOPIC_REFRESH
 
 
