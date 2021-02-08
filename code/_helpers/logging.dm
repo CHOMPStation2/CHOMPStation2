@@ -72,9 +72,13 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "say", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 		//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>SAY:</u> - <span style=\"color:#32cd32\">[text]</span>"
 		//CHOMPEdit End
 
@@ -85,9 +89,13 @@
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			return null
-	SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "ooc", "message_content" = text))
-	//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+	if(!query_insert.Execute())
+		log_debug("Error during logging: "+query_insert.ErrorMsg())
+		qdel(query_insert)
+		return
+	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>OOC:</u> - <span style=\"color:blue\"><b>[text]</b></span>"
 
 /proc/log_aooc(text, client/user)
@@ -97,9 +105,13 @@
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			return null
-	SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "aooc", "message_content" = text))
-	//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+	if(!query_insert.Execute())
+		log_debug("Error during logging: "+query_insert.ErrorMsg())
+		qdel(query_insert)
+		return
+	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>AOOC:</u> - <span style=\"color:red\"><b>[text]</b></span>"
 
 /proc/log_looc(text, client/user)
@@ -109,9 +121,13 @@
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			return null
-	SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+	var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 		list("sender_ckey" = user.ckey, "sender_mob" = user.mob.real_name, "message_type" = "looc", "message_content" = text))
-	//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+	if(!query_insert.Execute())
+		log_debug("Error during logging: "+query_insert.ErrorMsg())
+		qdel(query_insert)
+		return
+	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>LOOC:</u> - <span style=\"color:orange\"><b>[text]</b></span>"
 
 /proc/log_whisper(text, mob/speaker)
@@ -125,9 +141,13 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "whisper", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 
 
 /proc/log_emote(text, mob/speaker)
@@ -141,9 +161,13 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "emote", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//CHOMPEdit End
 
 /proc/log_attack(attacker, defender, message)
@@ -171,9 +195,13 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "deadsay", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - <span style=\"color:green\">[text]</span>"
 	//GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[src]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
 	//CHOMPEdit End
@@ -187,9 +215,13 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "deademote", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//CHOMPEdit End
 
 /proc/log_adminwarn(text)
@@ -205,9 +237,13 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "pda", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
