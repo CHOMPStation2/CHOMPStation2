@@ -77,6 +77,8 @@
 	pred.Weaken(8)
 	var/mob/living/prey = src
 	var/fallloc = prey.loc
+	pred.init_vore()
+	prey.init_vore()
 	if(pred.can_be_drop_pred && prey.can_be_drop_prey)
 		pred.feed_grabbed_to_self_falling_nom(pred,prey)
 		pred.loc = fallloc
