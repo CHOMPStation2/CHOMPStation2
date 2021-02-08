@@ -134,7 +134,7 @@
 	..()
 
 /mob/living/simple_mob/vore/demon/attackby()
- 	laugh()
+	laugh()
 	..()
 
 /mob/living/simple_mob/vore/demon/proc/laugh()
