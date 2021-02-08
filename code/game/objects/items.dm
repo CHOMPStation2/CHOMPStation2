@@ -104,8 +104,10 @@
 
 	var/tip_timer // reference to timer id for a tooltip we might open soon
 
-/obj/item/New()
-	..()
+/obj/item/Initialize(mapload)
+	. = ..()
+	if(islist(origin_tech))
+		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
 	if(embed_chance < 0)
 		if(sharp)
 			embed_chance = max(5, round(force/w_class))

@@ -89,6 +89,7 @@ var/list/grass_types = list(
 /turf/simulated/floor/outdoors/grass/sif/forest
 	name = "thick growth"
 	icon_state = "grass_sif_dark0"
+	initial_flooring = /decl/flooring/grass/sif/forest
 	edge_blending_priority = 5
 	tree_chance = 4
 	grass_chance = 1
@@ -99,3 +100,18 @@ var/list/grass_types = list(
 		/obj/structure/flora/sif/tendrils = 30
 		)
 
+//CHOMPedit: animal spawning for sif rocks. This probably doesn't belong in grass.dm but it's where there other Sif spawns are, sue me.
+/turf/simulated/floor/outdoors/rocks/sif
+	var/animal_chance = 0.3 //Should spawn around... 0-7 per round? Tweak as needed.
+
+	var/animal_types = list(
+		/mob/living/simple_mob/vore/slug = 1
+		)
+
+/turf/simulated/floor/outdoors/rocks/sif/Initialize()
+	if(animal_chance && prob(animal_chance) && !check_density())
+		var/animal_type = pickweight(animal_types)
+		new animal_type(src)
+
+	. = ..()
+//CHOMPedit end

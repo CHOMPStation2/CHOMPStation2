@@ -148,6 +148,26 @@ var/list/flooring_types
 	icon_base = "grass_sif"
 	build_type = /obj/item/stack/tile/grass/sif
 	has_base_range = 1
+	
+/decl/flooring/grass/sif/forest
+	name = "thick growth"
+	desc = "A natural moss that has adapted to the sheer cold climate."
+	flags = TURF_REMOVE_SHOVEL
+	icon = 'icons/turf/outdoors.dmi'
+	icon_base = "grass_sif_dark"
+	build_type = /obj/item/stack/tile/grass/sif/forest
+	has_base_range = 1
+
+//CHOMPedit: sif/forest decl. If this ends up upstream just accept the upstream version.
+/decl/flooring/grass/sif/forest
+	name = "thick growth"
+	desc = "A natural moss that has adapted to the sheer cold climate."
+	flags = TURF_REMOVE_SHOVEL
+	icon = 'icons/turf/outdoors.dmi'
+	icon_base = "grass_sif_dark"
+	build_type = /obj/item/stack/tile/grass/sif/forest
+	has_base_range = 1
+//CHOMPedit end
 
 /decl/flooring/water
 	name = "water"

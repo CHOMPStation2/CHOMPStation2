@@ -60,6 +60,8 @@ var/global/datum/controller/occupations/job_master
 				return 0
 			if(!job.player_old_enough(player.client))
 				return 0
+			if(!check_whitelist(player)) // Yeah no, no more hardcoded whitelisting. Ree. - Jon. //CHOMPStation code.
+				return 0
 			//VOREStation Add
 			if(!job.player_has_enough_playtime(player.client))
 				return 0
@@ -755,4 +757,4 @@ var/global/datum/controller/occupations/job_master
 	if(!ishuman(C.mob))
 		return
 	var/mob/living/carbon/human/CM = C.mob
-	SStranscore.m_backup(CM.mind, CM.nif)
+	SStranscore.m_backup(CM.mind, CM.nif, TRUE)
