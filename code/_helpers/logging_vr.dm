@@ -7,9 +7,13 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "nsay", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//CHOMPEdit End
 
 /proc/log_nme(text, inside, mob/speaker)
@@ -21,9 +25,13 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "nme", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//CHOMPEdit End
 
 /proc/log_subtle(text, mob/speaker)
@@ -35,7 +43,11 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		SSdbcore.ReturnlessQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, '[time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]', :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "subtle", "message_content" = text))
-		//SSdbcore.QuerySelect(list(query_insert), warn = FALSE, qdel = TRUE)
+		if(!query_insert.Execute())
+			log_debug("Error during logging: "+query_insert.ErrorMsg())
+			qdel(query_insert)
+			return
+		qdel(query_insert)
 	//CHOMPEdit End
