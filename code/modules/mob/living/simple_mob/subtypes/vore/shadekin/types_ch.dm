@@ -160,9 +160,9 @@
 /mob/living/simple_mob/shadekin/orange/yrmir
 	name = "Green and black shadekin" //Name is Yrmir and known only to other shadekins he talks to, he doesn't speak common to any degree so far
 	desc = "An orange eyed shadekin, this one has a very dark coat with several spots with faintly glowing green patches of fur. \
-	Said fur looks quite soft and warm with it filling out a bit, a closer look tells its a slim upper body while rump, hips, thighs and rump are nice and filled out well. \
+	Said fur looks quite soft and warm with it filling out a bit, a closer look tells its a slim upper body while rump, hips and thighs are nice and filled out well. \
 	While he may have a more padded out builed below, the masculine part of them is quite visible as a large fat furred sack and sheath rests comfortably between his thighs and on his crotch. \
-	From the way he looks at you, you get the feeling he is possibly scheming something fun, at least for him."
+	From the way he looks at you, you get the feeling he is possibly scheming something fun, at least for himself."
 	icon_state = "yrmir"
 	eye_desc = "glimmering orange eyes"
 //	vore_stomach_flavor = ""
