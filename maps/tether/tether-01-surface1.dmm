@@ -16597,6 +16597,15 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/lowmedbaymaint)
 "aAY" = (
@@ -16690,9 +16699,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lowmedbaymaint)
 "aBi" = (
+<<<<<<< HEAD
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+/obj/machinery/door/airlock/maintenance/common,
+=======
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/firedoor/glass,
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 /turf/simulated/floor/plating,
 /area/maintenance/lowmedbaymaint)
 "aBj" = (
@@ -16769,6 +16785,35 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+=======
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 /turf/simulated/floor/plating,
 /area/maintenance/lowmedbaymaint)
 "aBq" = (
@@ -31819,6 +31864,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/lowerhall)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"dNP" = (
+/obj/machinery/door/airlock/silver{
+	name = "Clown's Office";
+	req_one_access = list(136)
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/clownoffice)
+=======
+"dNP" = (
+/obj/machinery/door/airlock/silver{
+	name = "Clown's Office";
+	req_one_access = list(136)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/clownoffice)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "dPC" = (
 /obj/structure/sink{
 	dir = 8;
@@ -32134,12 +32198,71 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/freezer,
 /area/tether/surfacebase/security/brig/bathroom)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"fvL" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+=======
+"fvL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "fyp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker/laundry_arrival)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"fAv" = (
+/obj/machinery/door/airlock/silver{
+	name = "Tomfoolery Closet";
+	req_one_access = list(137)
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+=======
+"fAv" = (
+/obj/machinery/door/airlock/silver{
+	name = "Tomfoolery Closet";
+	req_one_access = list(137)
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "fAW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -33043,6 +33166,50 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"jnN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+"joK" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/device/flashlight/lamp/green,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/tether/surfacebase/funny/clownoffice)
+=======
+"jnN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+"joK" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/device/flashlight/lamp/green,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/tether/surfacebase/funny/clownoffice)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "jva" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -34187,6 +34354,39 @@
 "naC" = (
 /turf/simulated/wall/r_wall,
 /area/medical/virologyisolation)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"naO" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/rust,
+/obj/item/weapon/soap/syndie,
+/obj/item/weapon/bananapeel,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+"nbj" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Medbay Substation";
+	req_one_access = list(11,24,5)
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/substation/SurfMedsubstation)
+=======
+"naO" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/rust,
+/obj/item/weapon/soap/syndie,
+/obj/item/weapon/bananapeel,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+"nbj" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Medbay Substation";
+	req_one_access = list(11,24,5)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/SurfMedsubstation)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "ndH" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -34265,6 +34465,53 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/vacant_site)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"nlO" = (
+/obj/machinery/door/airlock/silver{
+	name = "Clown's Office";
+	req_one_access = list(136)
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/clownoffice)
+"nlT" = (
+/turf/simulated/wall/r_wall,
+/area/tether/surfacebase/funny/hideyhole)
+"nmb" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+=======
+"nlO" = (
+/obj/machinery/door/airlock/silver{
+	name = "Clown's Office";
+	req_one_access = list(136)
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/clownoffice)
+"nlT" = (
+/turf/simulated/wall/r_wall,
+/area/tether/surfacebase/funny/hideyhole)
+"nmb" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "nmf" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -34288,6 +34535,37 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/brig)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"nmA" = (
+/obj/machinery/door/airlock/silver{
+	name = "Mime's Office";
+	req_one_access = list(138)
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/mimeoffice)
+=======
+"nmA" = (
+/obj/machinery/door/airlock/silver{
+	name = "Mime's Office";
+	req_one_access = list(138)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/mimeoffice)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "nmD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -34828,6 +35106,29 @@
 "pCj" = (
 /turf/simulated/wall/r_wall,
 /area/tether/surfacebase/security/brig)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"pIG" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/trash_pit)
+=======
+"pIG" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/trash_pit)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "pKE" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -34940,6 +35241,19 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/substation/cargostoresubstation)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"qJl" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/trash_pit)
+=======
+"qJl" = (
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/trash_pit)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "qJT" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/glasses/gglasses{
@@ -35059,6 +35373,46 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"qSJ" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/trash_pit)
+"qVi" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/plating,
+/area/maintenance/lowmedbaymaint)
+=======
+"qSJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lowmedbaymaint)
+"qVi" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/plating,
+/area/maintenance/lowmedbaymaint)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "qWk" = (
 /obj/machinery/light,
 /obj/structure/disposalpipe/segment{
@@ -35131,6 +35485,35 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/tram)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"rse" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/mimedouble,
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+"ruj" = (
+/obj/machinery/door/airlock/silver{
+	name = "Mime's Office";
+	req_one_access = list(138)
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/mimeoffice)
+=======
+"rse" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/mimedouble,
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+"ruj" = (
+/obj/machinery/door/airlock/silver{
+	name = "Mime's Office";
+	req_one_access = list(138)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/mimeoffice)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "rww" = (
 /obj/structure/stairs/south,
 /obj/structure/railing{
@@ -36099,6 +36482,29 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/brig)
+<<<<<<< HEAD
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+"vkL" = (
+/obj/machinery/power/apc{
+	pixel_y = -25
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+=======
+"vkL" = (
+/obj/machinery/power/apc{
+	pixel_y = -25
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/tether/surfacebase/funny/mimeoffice)
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 "vlJ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -49156,8 +49562,8 @@ aad
 aad
 aad
 aad
-aad
-aad
+adK
+adK
 aad
 aad
 aad
@@ -49298,8 +49704,8 @@ aad
 aad
 aad
 aad
-aad
-aad
+adK
+adK
 aad
 aad
 aad
@@ -52446,11 +52852,25 @@ bbr
 bbz
 bbL
 bbY
+<<<<<<< HEAD
 bbj
 aAG
 aAG
 aAG
 aAG
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+nbj
+mnN
+mnN
+mnN
+qSJ
+=======
+nbj
+mnN
+mnN
+mnN
+mnN
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 aBp
 aAD
 aah
@@ -52731,10 +53151,22 @@ aBh
 aBi
 aBi
 bHK
+<<<<<<< HEAD
 aBi
 aBi
 aBi
 aBi
+||||||| parent of ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
+fVG
+fVG
+fVG
+pIG
+=======
+fVG
+fVG
+qSJ
+pIG
+>>>>>>> ce45e92940... Merge pull request #9669 from Very-Soft/smolfix
 aBq
 aAD
 aah
