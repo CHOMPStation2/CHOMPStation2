@@ -30,8 +30,9 @@
 	
 	enable_autolaugh = !enable_autolaugh
 	if(enable_autolaugh)
-		return to_chat(src,"<span class='warning'>Autolaugh has been toggled on</span>")
-	return to_chat(src,"<span class='warning'>Autolaugh has been toggled off</span>")
+		to_chat(src,"<span class='warning'>Autolaugh has been toggled on</span>")
+	else
+		to_chat(src,"<span class='warning'>Autolaugh has been toggled off</span>")
 
 /mob/living/simple_mob/vore/demon/verb/manual_laugh()
 	set name = "Laugh"
