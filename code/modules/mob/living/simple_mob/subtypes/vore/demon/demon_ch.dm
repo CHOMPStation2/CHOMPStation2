@@ -56,7 +56,7 @@
 	var/blood_spawn = 0
 	var/is_shifting = FALSE
 	
-	var/enable_autolaugh = FALSE //Toggleable for Admemes only for now
+	var/enable_autolaugh = FALSE //Whether user controlled mob will laugh when interacting automatically.
 	var/laugh = 'sound/misc/demonlaugh.ogg' //Yknow maybe someone wants a custom laugh, you never know.
 
 /mob/living/simple_mob/vore/demon/init_vore()
@@ -136,7 +136,8 @@
 /mob/living/simple_mob/vore/demon/attackby()
 	laugh()
 	..()
-
+//This below proc could be improved by 1. add a bool for overriding the check (if we directly call the proc for example)
+//and possibly adding a switch that checks a string given by the above procs so that we can have uniwue sounds if needed
 /mob/living/simple_mob/vore/demon/proc/laugh()
 	if(!src.ckey || enable_autolaugh)
 		playsound(src, laugh, 50, 1)
