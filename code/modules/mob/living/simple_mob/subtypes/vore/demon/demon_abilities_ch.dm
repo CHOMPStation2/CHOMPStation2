@@ -45,3 +45,4 @@
 		enable_autolaugh = !enable_autolaugh
 	else
 		laugh()
+	to_chat(src,"<span class='warning'>You laugh!</span>") //lets add some fluff response for clicking the feel good button.
