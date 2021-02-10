@@ -5,4 +5,15 @@ GLOBAL_LIST_EMPTY(meteor_list)
 GLOBAL_LIST_EMPTY(wire_color_directory) // This is an associative list with the `holder_type` as the key, and a list of colors as the value.
 
 // Reference list for disposal sort junctions. Filled up by sorting junction's New()
+<<<<<<< HEAD
 GLOBAL_LIST_EMPTY(tagger_locations)
+||||||| parent of 6c0c21e8a8... Merge pull request #9672 from KillianKirilenko/kk-misc4
+GLOBAL_LIST_EMPTY(tagger_locations)
+
+GLOBAL_LIST_INIT(char_directory_tags, list("Pred", "Prey", "Switch", "Non-Vore", "Unset"))
+=======
+GLOBAL_LIST_EMPTY(tagger_locations)
+
+GLOBAL_LIST_INIT(char_directory_tags, list("Pred", "Prey", "Switch", "Non-Vore", "Unset"))
+GLOBAL_LIST_INIT(char_directory_erptags, list("Top", "Bottom", "Switch", "No ERP", "Unset"))
+>>>>>>> 6c0c21e8a8... Merge pull request #9672 from KillianKirilenko/kk-misc4

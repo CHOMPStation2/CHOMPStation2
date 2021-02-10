@@ -1,5 +1,14 @@
 /datum/preferences
 	var/show_in_directory = 1	//Show in Character Directory
+<<<<<<< HEAD
+||||||| parent of 6c0c21e8a8... Merge pull request #9672 from KillianKirilenko/kk-misc4
+	var/directory_tag = "Unset" //Sorting tag to use in character directory
+	var/directory_ad = ""		//Advertisement stuff to show in character directory.
+=======
+	var/directory_tag = "Unset" //Sorting tag to use in character directory
+	var/directory_erptag = "No ERP"	//ditto, but for non-vore scenes
+	var/directory_ad = ""		//Advertisement stuff to show in character directory.
+>>>>>>> 6c0c21e8a8... Merge pull request #9672 from KillianKirilenko/kk-misc4
 	var/sensorpref = 5			//Set character's suit sensor level
 	var/job_talon_high = 0
 	var/job_talon_med = 0
