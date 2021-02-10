@@ -40,15 +40,17 @@ SUBSYSTEM_DEF(dbcore)
 		src.currentrun = returnless_queries.Copy()
 
 	var/list/currentrun = src.currentrun
-
+	var/list/query = list()
 	for(var/rquery_id in currentrun)
-		var/list/query = returnless_queries[rquery_id]
+		if(MC_TICK_CHECK)
+			return
+		
+		query = returnless_queries[rquery_id]
 		if(!SSdbcore.IsConnected())
 			last_error = "No connection!"
 			log_debug(ErrorMsg())
 			return
-		if(MC_TICK_CHECK)
-			return
+		
 		if(query["status"] == RQUERY_NOTSTARTED)
 			if(running_rqueries + active_queries.len < 45)
 				query["status"] = rustg_sql_query_async(connection, query["sql_query"], json_encode(query["arguments"]))
@@ -63,7 +65,6 @@ SUBSYSTEM_DEF(dbcore)
 				returnless_queries -= rquery_id
 				currentrun -= rquery_id
 				running_rqueries--
-				del(query)
 				continue
 			var/result = json_decode(job_result_str)
 			switch (result["status"])
@@ -71,7 +72,6 @@ SUBSYSTEM_DEF(dbcore)
 					returnless_queries -= rquery_id
 					currentrun -= rquery_id
 					running_rqueries--
-					del(query)
 					continue
 				if ("err")
 					last_error = result["data"]
@@ -79,7 +79,6 @@ SUBSYSTEM_DEF(dbcore)
 					returnless_queries -= rquery_id
 					currentrun -= rquery_id
 					running_rqueries--
-					del(query)
 					continue
 				if ("offline")
 					last_error = "offline"
@@ -87,18 +86,16 @@ SUBSYSTEM_DEF(dbcore)
 					returnless_queries -= rquery_id
 					currentrun -= rquery_id
 					running_rqueries--
-					del(query)
 					continue
 				else
 					log_debug("SQL QUERY UNKNOWN STATUS: [result["status"]] | [last_error] | [result["data"]] | Query used: [query["sql_query"]] | Arguments: [json_encode(query["arguments"])]")
 					returnless_queries -= rquery_id
 					currentrun -= rquery_id
 					running_rqueries--
-					del(query)
 					continue
 		currentrun -= rquery_id
 		continue
-
+	
 	for(var/I in active_queries)
 		var/DBQuery/Q = I
 		if(world.time - Q.last_activity_time > (5 MINUTES))
