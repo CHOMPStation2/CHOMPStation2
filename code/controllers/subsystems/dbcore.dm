@@ -1,7 +1,11 @@
+#define RQUERY_NOTSTARTED -1
+
+//I ported most of this subsystem directly from TGstation, however ReturnlessQueries are my own little creation, and SQL logging is also my baby, so come screech at me if shit is breaking -- Cadyn 2/4/2021
+
 SUBSYSTEM_DEF(dbcore)
 	name = "Database"
 	flags = SS_BACKGROUND
-	wait = 1 MINUTES
+	wait = 2 SECONDS
 	init_order = INIT_ORDER_DBCORE
 	var/failed_connection_timeout = 0
 
@@ -11,14 +15,90 @@ SUBSYSTEM_DEF(dbcore)
 	var/failed_connections = 0
 
 	var/last_error
+	var/rquery_count = 0
+	var/running_rqueries = 0
 	var/list/active_queries = list()
-
+	var/list/returnless_queries = list()
+	var/list/currentrun = list()
 	var/connection  // Arbitrary handle returned from rust_g.
 
 /datum/controller/subsystem/dbcore/Initialize()
 	return ..()
 
-/datum/controller/subsystem/dbcore/fire()
+/datum/controller/subsystem/dbcore/stat_entry(msg_prefix)
+	var/list/msg = list(msg_prefix)
+	msg += "A:[active_queries.len]|"
+	msg += "R:[returnless_queries.len]"
+	..(msg.Join())
+
+/datum/controller/subsystem/dbcore/proc/ReturnlessQuery(sql_query, arguments) //Adding this for logging, pretty much it allows queries that don't need to have anything returned handled in the background.
+	returnless_queries["[rquery_count]"] = list("sql_query" = sql_query, "arguments" = arguments, "status" = RQUERY_NOTSTARTED)
+	rquery_count++
+
+/datum/controller/subsystem/dbcore/fire(resumed = 0)
+	if(!resumed)
+		src.currentrun = returnless_queries.Copy()
+
+	var/list/currentrun = src.currentrun
+
+	for(var/rquery_id in currentrun)
+		var/list/query = returnless_queries[rquery_id]
+		if(!SSdbcore.IsConnected())
+			last_error = "No connection!"
+			log_debug(ErrorMsg())
+			return
+		if(MC_TICK_CHECK)
+			return
+		if(query["status"] == RQUERY_NOTSTARTED)
+			if(running_rqueries + active_queries.len < 45)
+				query["status"] = rustg_sql_query_async(connection, query["sql_query"], json_encode(query["arguments"]))
+				running_rqueries++
+			currentrun -= rquery_id
+			continue
+		var/job_result_str = rustg_sql_check_query(query["status"])
+		if(job_result_str != RUSTG_JOB_NO_RESULTS_YET)
+			if (job_result_str == RUSTG_JOB_ERROR)
+				last_error = job_result_str
+				log_debug("SQL JOB ERROR: [job_result_str] | Query used: [query["sql_query"]] | Arguments: [json_encode(query["arguments"])]")
+				returnless_queries -= rquery_id
+				currentrun -= rquery_id
+				running_rqueries--
+				del(query)
+				continue
+			var/result = json_decode(job_result_str)
+			switch (result["status"])
+				if ("ok")
+					returnless_queries -= rquery_id
+					currentrun -= rquery_id
+					running_rqueries--
+					del(query)
+					continue
+				if ("err")
+					last_error = result["data"]
+					log_debug("SQL QUERY ERROR: [last_error] | Query used: [query["sql_query"]] | Arguments: [json_encode(query["arguments"])]")
+					returnless_queries -= rquery_id
+					currentrun -= rquery_id
+					running_rqueries--
+					del(query)
+					continue
+				if ("offline")
+					last_error = "offline"
+					log_debug("SQL QUERY OFFLINE: Query used: [query["sql_query"]] | Arguments: [json_encode(query["arguments"])]")
+					returnless_queries -= rquery_id
+					currentrun -= rquery_id
+					running_rqueries--
+					del(query)
+					continue
+				else
+					log_debug("SQL QUERY UNKNOWN STATUS: [result["status"]] | [last_error] | [result["data"]] | Query used: [query["sql_query"]] | Arguments: [json_encode(query["arguments"])]")
+					returnless_queries -= rquery_id
+					currentrun -= rquery_id
+					running_rqueries--
+					del(query)
+					continue
+		currentrun -= rquery_id
+		continue
+
 	for(var/I in active_queries)
 		var/DBQuery/Q = I
 		if(world.time - Q.last_activity_time > (5 MINUTES))
@@ -27,6 +107,8 @@ SUBSYSTEM_DEF(dbcore)
 			qdel(Q)
 		if(MC_TICK_CHECK)
 			return
+
+
 
 /datum/controller/subsystem/dbcore/Recover()
 	connection = SSdbcore.connection
@@ -142,7 +224,7 @@ SUBSYSTEM_DEF(dbcore)
 /datum/controller/subsystem/dbcore/proc/ErrorMsg()
 	if(!config.sql_enabled)
 		return "Database disabled by configuration"
-	return last_error
+	return "SQL SUBSYSTEM ERROR: [last_error]"
 
 /datum/controller/subsystem/dbcore/proc/ReportError(error)
 	last_error = error
