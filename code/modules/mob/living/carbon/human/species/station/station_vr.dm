@@ -40,11 +40,10 @@
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	inherent_verbs = list(/mob/living/proc/shred_limb)
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
-
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -83,6 +82,7 @@
 	secondary_langs = list(LANGUAGE_SKRELLIAN)
 	name_language = LANGUAGE_SKRELLIAN
 	color_mult = 1
+	inherent_verbs = list(/mob/living/proc/shred_limb)
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
 	min_age = 18
@@ -105,8 +105,6 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
 	primitive_form = "Sobaka"
-
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -135,7 +133,7 @@
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = LANGUAGE_BIRDSONG
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
+	inherent_verbs = list(/mob/living/proc/shred_limb,/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
 	max_age = 110
@@ -155,8 +153,6 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
 	primitive_form = "Sparra"
-
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -197,8 +193,8 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-//CHOMPEdit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Zorren"
+//CHOMPEdit: Removed wiki link	
+	//wikilink="https://yawn.izac.live/Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 
@@ -210,8 +206,6 @@
 	base_color = "#333333"
 	blood_color = "#240bc4"
 	color_mult = 1
-
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -237,7 +231,7 @@
 //	gluttonous = 1
 	num_alternate_languages = 3
 	color_mult = 1
-	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
@@ -258,8 +252,6 @@
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-
 	flesh_color = "#966464"
 	base_color = "#B43214"
 
@@ -276,11 +268,10 @@
 	min_age = 18
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 
-//CHOMPSedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Unathi"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Unathi"
 
 /datum/species/tajaran
 	spawn_flags = SPECIES_CAN_JOIN
@@ -290,12 +281,11 @@
 	color_mult = 1
 	min_age = 18
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
-	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
 
-//CHOMPSedit: links to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran"
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Tajaran"
 	agility = 90
 
 /datum/species/skrell
@@ -307,19 +297,17 @@
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Skrell"
 
 /datum/species/zaddat
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN CHOMPstation edit: disabled pending staff discussion
 	min_age = 18
 	gluttonous = 0
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Zaddat"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Zaddat"
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
@@ -332,9 +320,9 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Diona"
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
@@ -347,35 +335,35 @@
 	push_flags = ~HEAVY //Allows them to use micro step code.
 	swap_flags = ~HEAVY
 	gluttonous = 0
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Teshari"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Teshari"
 	agility = 90
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/proc/hide,
+		/mob/living/proc/shred_limb,
 		/mob/living/proc/toggle_pass_table
 		)
 
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Promethean"
-	
+
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Promethean"
+
 /datum/species/human
 	color_mult = 1
 	icobase = 'icons/mob/human_races/r_human_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_human_vr.dmi'
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 	min_age = 18
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	base_color = "#EECEB3"
 
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Humans"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Human"
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -386,12 +374,13 @@
 	min_age = 18
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
+	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/proc/eat_trash)
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
 
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Vox"
+//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//	wikilink="https://www.yawn.ocry.com/Vox"
 
 datum/species/harpy
 	name = SPECIES_RAPALA
@@ -405,7 +394,6 @@ datum/species/harpy
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = null
 	color_mult = 1
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
@@ -499,6 +487,8 @@ datum/species/harpy
 	base_color = "#f0f0f0"
 	color_mult = 1
 
+	inherent_verbs = list(/mob/living/proc/shred_limb)
+
 	has_glowing_eyes = TRUE
 
 	male_cough_sounds = null
@@ -508,7 +498,8 @@ datum/species/harpy
 
 	speech_bubble_appearance = "ghost"
 
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+	genders = list(PLURAL, NEUTER)		//no sexual dymorphism
+	ambiguous_genders = TRUE	//but just in case
 
 	breath_type = null
 	poison_type = null
@@ -572,7 +563,6 @@ datum/species/harpy
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	flesh_color = "#AFA59E"
 	base_color = "#333333"
@@ -615,7 +605,6 @@ datum/species/harpy
 
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	blood_color = "#12ff12"
 	flesh_color = "#201730"
@@ -626,3 +615,4 @@ datum/species/harpy
 		"You feel uncomfortably warm.",
 		"Your chitin feels hot."
 		)
+	inherent_verbs = list(/mob/living/proc/shred_limb)
