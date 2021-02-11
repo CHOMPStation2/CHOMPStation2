@@ -49,7 +49,20 @@
 	build_path = /obj/item/weapon/rms
 	sort_string = "NAAAB"
 
+<<<<<<< HEAD
 // YW addition end
+||||||| parent of f4442f6080... Merge pull request #9017 from ShadowLarkens/rpd_obtainable
+=======
+/datum/design/item/tool/rpd
+	name = "Rapid Pipe Dispenser"
+	desc = "A counterpart to the rapid construction device that allows creating and placing atmospheric and disposal pipes."
+	id = "rapidpipedispenser"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 4000, MAT_GLASS = 2000)
+	build_path = /obj/item/weapon/pipe_dispenser
+	sort_string = "NAAAD"
+
+>>>>>>> f4442f6080... Merge pull request #9017 from ShadowLarkens/rpd_obtainable
 // Other devices
 
 /datum/design/item/engineering/AssembleDesignName()
