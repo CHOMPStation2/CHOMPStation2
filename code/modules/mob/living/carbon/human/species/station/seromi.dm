@@ -64,7 +64,7 @@
 	total_health = 50
 	brute_mod = 1.35
 	burn_mod =  1.35
-	mob_size = MOB_SMALL
+	mob_size = MOB_MEDIUM // Chomp Edit
 	pass_flags = PASSTABLE
 	holder_type = /obj/item/weapon/holder/human
 //	short_sighted = 1 CHOMPEdit: We're fine without near-sightedness for now.

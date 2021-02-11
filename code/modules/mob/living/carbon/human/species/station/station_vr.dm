@@ -193,7 +193,7 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-//CHOMPEdit: Removed wiki link	
+//CHOMPEdit: Removed wiki link
 	//wikilink="https://yawn.izac.live/Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
@@ -325,7 +325,7 @@
 //	wikilink="https://www.yawn.ocry.com/Diona"
 
 /datum/species/teshari
-	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
+	mob_size = MOB_MEDIUM //YW Edit: changed from MOB_MEDIUM to MOB_SMALL // Chomp edit
 	spawn_flags = SPECIES_CAN_JOIN
 	icobase = 'icons/mob/human_races/r_seromi_vr.dmi'
 	deform = 'icons/mob/human_races/r_seromi_vr.dmi'
