@@ -434,6 +434,7 @@
 	movement_cost = 0
 
 #define FOOTSTEP_SPRITE_AMT 2
+<<<<<<< HEAD
 /turf/snow/Entered(atom/A)
     if(isliving(A) && !istype(A, /mob/living/simple_mob))
         var/mdir = "[A.dir]"
@@ -450,8 +451,41 @@
     cut_overlays()
     for(var/d in crossed_dirs)
         var/amt = crossed_dirs[d]
+||||||| parent of 962faef478... Merge pull request #9502 from VOREStation/upstream-merge-7795
 
-        for(var/i in 1 to amt)
-            add_overlay(image(icon, "footprint[i]", text2num(d)))
+/turf/snow/Entered(atom/A)
+    if(isliving(A))
+        var/mdir = "[A.dir]"
+        if(crossed_dirs[mdir])
+            crossed_dirs[mdir] = min(crossed_dirs[mdir] + 1, FOOTSTEP_SPRITE_AMT)
+        else
+            crossed_dirs[mdir] = 1
+
+        update_icon()
+
+    . = ..()
+
+/turf/snow/update_icon()
+    cut_overlays()
+    for(var/d in crossed_dirs)
+        var/amt = crossed_dirs[d]
+=======
+
+// TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
+/turf/simulated/floor/snow/Entered(atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		if(L.hovering) // Flying things shouldn't make footprints.
+			return ..()
+		var/mdir = "[A.dir]"
+		crossed_dirs[mdir] = 1
+		update_icon()
+	. = ..()
+>>>>>>> 962faef478... Merge pull request #9502 from VOREStation/upstream-merge-7795
+
+/turf/simulated/floor/snow/update_icon()
+	..()
+	for(var/d in crossed_dirs)
+		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
 
 //**** Here ends snow ****
