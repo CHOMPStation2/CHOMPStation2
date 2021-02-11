@@ -3,7 +3,7 @@
 	desc = "Shiny!"
 	icon = 'icons/obj/tables_vr.dmi'
 	icon_state = "darkglass_table_preview"
-	flipped = -1
+//	flipped = -1 //CHOMPedit - KSC = So one can climb tables and walk on them. (Having this on -1 means you can climb this table but unable to walk over an other table tile of the same type)
 	can_reinforce = FALSE
 	can_plate = FALSE
 
@@ -11,7 +11,7 @@
 	material = get_material_by_name("darkglass")
 	verbs -= /obj/structure/table/verb/do_flip
 	verbs -= /obj/structure/table/proc/do_put
-	
+
 	..()
 
 /obj/structure/table/darkglass/dismantle(obj/item/weapon/wrench/W, mob/user)
@@ -26,7 +26,7 @@
 	desc = "Cloth!"
 	icon = 'icons/obj/tablesfancy_vr.dmi'
 	icon_state = "fancyblack"
-	flipped = -1
+//	flipped = -1 //CHOMPedit - KSC = So one can climb tables and walk on them. (Having this on -1 means you can climb this table but unable to walk over an other table tile of the same type)
 	can_reinforce = FALSE
 	can_plate = FALSE
 
@@ -34,7 +34,7 @@
 	material = get_material_by_name("fancyblack")
 	verbs -= /obj/structure/table/verb/do_flip
 	verbs -= /obj/structure/table/proc/do_put
-	
+
 	..()
 
 /obj/structure/table/fancyblack/dismantle(obj/item/weapon/wrench/W, mob/user)

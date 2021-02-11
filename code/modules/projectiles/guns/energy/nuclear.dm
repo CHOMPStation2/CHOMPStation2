@@ -30,7 +30,8 @@
 	item_state = null	//so the human update icon uses the icon_state instead.
 	charge_cost = 100
 	force = 8
-	w_class = ITEMSIZE_LARGE	//Probably gonna make it a rifle sooner or later
+	w_class = ITEMSIZE_HUGE		//Probably gonna make it a rifle sooner or later //CHOMP Edit, and so I did.
+	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit. Let's make it so that if it doesn't fit in a backpack, it doesn't fit in a holster either.
 	fire_delay = 6
 
 	projectile_type = /obj/item/projectile/beam/stun/weak
@@ -55,7 +56,7 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_POWER = 3)
 	slot_flags = SLOT_BELT
 	force = 8 //looks heavier than a pistol
-	w_class = ITEMSIZE_LARGE	//Looks bigger than a pistol, too.
+	w_class = ITEMSIZE_HUGE	//Looks bigger than a pistol, too. //CHOMP Edit: Looks like a cannon, lol.
 	fire_delay = 6	//This one's not a handgun, it should have the same fire delay as everything else
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge
 	battery_lock = 1

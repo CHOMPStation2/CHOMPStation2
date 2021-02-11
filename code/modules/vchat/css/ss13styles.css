@@ -176,6 +176,8 @@ h1.alert, h2.alert		{color: #000000;}
 .psionic                                {color: #993399;}    
 .wingdings                              {font-family: Wingdings, Webdings} 
 /* YW Edit End */
+.spacer					{color: #9c660b;} /* VOREStation Add */
+.blob					{color: #ff950d; font-weight: bold; font-style: italic;}
 
 .black					{color: #000000;}
 .darkgray				{color: #808080;}

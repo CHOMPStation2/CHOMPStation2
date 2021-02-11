@@ -2,7 +2,7 @@
 	name = "\improper Casino Ship"
 	icon_state = "yellow"
 	requires_power = 0
-	dynamic_lighting = 0
+	dynamic_lighting = 1
 
 /area/casino/casino_ship/wing_left
 	name = "\improper Casino Ship left wing"
@@ -24,25 +24,25 @@
 	name = "\improper Casino Shuttle"
 	dynamic_lighting = 0
 	icon_state = "shuttlegrn"
-	
+
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
-  
+
 /area/surface/outpost/main/dorms/dorm_1
 	name = "\improper Main Outpost Dorm One"
-  
+
 /area/surface/outpost/main/dorms/dorm_2
 	name = "\improper Main Outpost Dorm Two"
-  
+
 /area/surface/outpost/main/dorms/dorm_3
 	name = "\improper Main Outpost Dorm Three"
-  
+
 /area/surface/outpost/main/dorms/dorm_4
 	name = "\improper Main Outpost Dorm Four"
-  
+
 /area/surface/outpost/main/dorms/dorm_5
 	name = "\improper Main Outpost Dorm Five"
-  
+
 /area/surface/outpost/main/dorms/dorm_6
 	name = "\improper Main Outpost Dorm Six"
 

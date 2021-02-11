@@ -48,9 +48,9 @@
 					"Vehicle",
 					"Rigsuit",
 					"Phazon",
-					"Gopher", // VOREStation Add
-					"Polecat", // VOREStation Add
-					"Weasel", // VOREStation Add
+					//"Gopher", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
+					//"Polecat", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
+					//"Weasel", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 					"Exosuit Equipment",
 					"Exosuit Internals",
 					"Exosuit Ammunition",

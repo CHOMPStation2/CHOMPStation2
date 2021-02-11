@@ -12,6 +12,9 @@
 		"Draining Liquids" = DM_FLAG_REAGENTSDRAIN
 		)
 
+	var/show_liquids = FALSE //Moved from vorepanel_ch to be a belly var
+	var/show_fullness_messages = FALSE //Moved from vorepanel_ch to be a belly var
+
 	var/nutri_reagent_gen = FALSE					//if belly produces reagent over time using nutrition, needs to be optimized to use subsystem - Jack
 	var/list/generated_reagents = list("water" = 1) //Any number of reagents, the associated value is how many units are generated per process()
 	var/reagent_name = "water" 						//What is shown when reagents are removed, doesn't need to be an actual reagent
@@ -33,6 +36,7 @@
 	var/liquid_fullness3_messages = FALSE
 	var/liquid_fullness4_messages = FALSE
 	var/liquid_fullness5_messages = FALSE
+	var/vorespawn_blacklist = FALSE
 
 	var/list/fullness1_messages = list(
 		"%pred's %belly looks empty"
@@ -73,7 +77,7 @@
 ///////////////////// NUTRITION REAGENT PRODUCTION /////////////////
 
 /obj/belly/proc/HandleBellyReagents()
-	if(reagentbellymode == TRUE && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume)
+	if(reagentbellymode && reagent_mode_flags & DM_FLAG_REAGENTSNUTRI && reagents.total_volume < custom_max_volume) //Removed if(reagentbellymode == TRUE) since that's less optimized
 		if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
 			GenerateBellyReagents()
 			gen_interval = 0

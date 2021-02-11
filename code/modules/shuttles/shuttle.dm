@@ -317,7 +317,7 @@
 					bug.gib()
 				else
 					qdel(AM) //it just gets atomized I guess? TODO throw it into space somewhere, prevents people from using shuttles as an atom-smasher
-
+	var/list/radios = list()	//CHOMPEdit
 	var/list/powernets = list()
 	for(var/area/A in shuttle_area)
 		// If there was a zlevel above our origin and we own the ceiling, erase our ceiling now we're leaving
@@ -347,6 +347,10 @@
 		// We only need to rebuild powernets for our cables.  No need to check machines because they are on top of cables.
 		for(var/obj/structure/cable/C in A)
 			powernets |= C.powernet
+		//CHOMPEdit Begin
+		for(var/obj/item/device/radio/intercom/I in A)
+			radios |= I
+		//CHOMPEdit End
 
 	// Actually do the movement of everything - This replaces origin.move_contents_to(destination)
 	translate_turfs(turf_translation, current_location.base_area, current_location.base_turf)
@@ -370,7 +374,11 @@
 		cables |= P.cables
 		qdel(P)
 	SSmachines.setup_powernets_for_cables(cables)
-
+	//CHOMPEdit Begin
+	for(var/obj/item/device/radio/intercom/I in radios)
+		if(istype(I))
+			I.update_broadcast_tiles()
+	//CHOMPEdit End
 	// Adjust areas of mothershuttle so it doesn't try and bring us with it if it jumps while we aren't on it.
 	if(mothershuttle)
 		var/datum/shuttle/MS = SSshuttles.shuttles[mothershuttle]

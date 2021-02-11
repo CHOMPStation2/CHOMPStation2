@@ -26,7 +26,7 @@
 	fire_sound = 'sound/weapons/Laser.ogg'
 	charge_cost = 1
 	force = 8
-	w_class = ITEMSIZE_LARGE	//Probably gonna make it a rifle sooner or later
+	w_class = ITEMSIZE_HUGE 	//Probably gonna make it a rifle sooner or later //CHOMP Edit: Dude, come on. It's a machine gun.
 	fire_delay = 6
 	burst_delay = 0.5
 
@@ -59,7 +59,7 @@
 	modifystate = "x01stun"
 
 	firemodes = list(
-		list(mode_name="stun", fire_delay = 8, projectile_type= /obj/item/projectile/energy/electrode/x01stunshot, modifystate="x01stun", fire_sound='sound/weapons/Taser.ogg', charge_cost = 240),
+		list(mode_name="stun", fire_delay = 8, projectile_type= /obj/item/projectile/beam/stun, modifystate="x01stun", fire_sound='sound/weapons/Taser.ogg', charge_cost = 240),
 		list(mode_name="laser", fire_delay = 8, projectile_type=/obj/item/projectile/beam, modifystate="x01laser", fire_sound='sound/weapons/Laser.ogg', charge_cost = 480),
 		list(mode_name="gauss", fire_delay=15, projectile_type=/obj/item/projectile/energy/gauss, modifystate="x01gauss", fire_sound='sound/weapons/gauss_shoot.ogg', charge_cost = 360)
 		)

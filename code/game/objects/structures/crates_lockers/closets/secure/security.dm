@@ -152,7 +152,9 @@
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/weapon/gun/projectile/revolvershotgun,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
-		/obj/item/ammo_magazine/m12gdrumjack/beanbag)
+		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
+		/obj/item/device/retail_scanner/security	//CHOMPStation addition
+		)
 
 /obj/structure/closet/secure_closet/warden/Initialize()
 	if(prob(50))
@@ -191,7 +193,11 @@
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
-		/obj/item/device/flashlight/maglight)
+		/obj/item/device/flashlight/maglight,
+		/obj/item/device/holowarrant,				//CHOMPStation addition
+		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
+		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
+		)
 
 /obj/structure/closet/secure_closet/security/Initialize()
 	if(prob(50))
@@ -232,8 +238,8 @@
 
 	starts_with = list(
 		/obj/item/clothing/accessory/badge/holo/detective,
-		/obj/item/clothing/gloves/black,
-		///obj/item/gunbox, //VOREStation Removal,
+		/obj/item/clothing/gloves/forensic, //CHOMP Edit replaces black gloves
+		/obj/item/gunbox, //CHOMP Edit undoes vorestation removal and adds back gunbox
 		/obj/item/weapon/storage/belt/detective,
 		/obj/item/weapon/storage/box/evidence,
 		/obj/item/device/radio/headset/headset_sec,
@@ -246,7 +252,10 @@
 		/obj/item/weapon/storage/briefcase/crimekit,
 		/obj/item/device/taperecorder,
 		/obj/item/weapon/storage/bag/detective,
-		/obj/item/device/tape/random = 3)
+		/obj/item/device/tape/random = 3,
+		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
+		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
+		)
 
 /obj/structure/closet/secure_closet/injection
 	name = "lethal injections locker"

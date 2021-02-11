@@ -7,6 +7,7 @@
 
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz
 	name = "blitz rod"
+	icon = 'icons/obj/projectiles_ch.dmi'
 	icon_state = "fuel-blitz"
 	damage = 900
 	accuracy = 200
