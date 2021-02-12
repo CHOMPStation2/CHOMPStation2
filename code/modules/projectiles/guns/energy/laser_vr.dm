@@ -221,6 +221,7 @@
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, charge_cost = 80),
 >>>>>>> f030a055e9... Merge pull request #9478 from Novacat/nova-basicfixes
 	)
+	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
 /obj/item/weapon/gun/energy/locked/frontier/unload_ammo(var/mob/user)
 	if(recharging)

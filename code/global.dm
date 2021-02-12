@@ -131,8 +131,8 @@ var/custom_event_msg = null
 
 // Database connections. A connection is established on world creation.
 // Ideally, the connection dies when the server restarts (After feedback logging.).
-var/DBConnection/dbcon     = new() // Feedback    database (New database)
-var/DBConnection/dbcon_old = new() // /tg/station database (Old database) -- see the files in the SQL folder for information on what goes where.
+//var/DBConnection/dbcon     = new() // Feedback    database (New database) //CHOMPEdit Switching to TG SQL
+//var/DBConnection/dbcon_old = new() // /tg/station database (Old database) -- see the files in the SQL folder for information on what goes where. //CHOMPEdit Switching to TG SQL
 
 // Added for Xenoarchaeology, might be useful for other stuff.
 var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")

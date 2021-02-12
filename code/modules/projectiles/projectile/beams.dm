@@ -92,7 +92,7 @@
 	name = "gamma beam"
 	icon_state = "xray"
 	fire_sound = 'sound/weapons/eluger.ogg'
-	damage = 10
+	damage = 12 //CHOMPedit
 	armor_penetration = 90
 	irradiate = 20
 	light_color = "#00CC33"
@@ -261,3 +261,20 @@
 	agony = 15
 	eyeblur = 2
 	hitsound = 'sound/weapons/zapbang.ogg'
+
+/obj/item/projectile/beam/shock/weak
+	damage = 5
+	agony = 10
+
+/obj/item/projectile/beam/precursor //CHOMPedit added Precursor beam
+	name = "precursor beam"
+	icon_state = "alien beam"
+	fire_sound = 'sound/weapons/MediumLaser.ogg'
+	light_color = "#FF0099"
+
+	muzzle_type = /obj/effect/projectile/muzzle/precursor
+	tracer_type = /obj/effect/projectile/tracer/precursor
+	impact_type = /obj/effect/projectile/impact/precursor
+
+	damage = 48
+	armor_penetration = 10

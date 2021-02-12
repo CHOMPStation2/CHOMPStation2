@@ -62,6 +62,12 @@
 	light_power = 0.5
 	light_color = "#8837A3"
 
+/obj/effect/projectile/muzzle/precursor //CHOMPedit add Precursor muzzle
+	icon_state = "muzzle_prec"
+	light_range = 2
+	light_power = 0.7
+	light_color = "#FF0099"
+
 /obj/effect/projectile/muzzle/inversion
 	icon_state = "muzzle_invert"
 	light_range = 2

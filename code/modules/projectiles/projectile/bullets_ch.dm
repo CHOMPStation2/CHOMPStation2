@@ -2,12 +2,21 @@
 
 /obj/item/projectile/bullet
 	var/diam = 9	//mm
-	var/energy_add = 0
+	var/energy_add = 0 //See note below. Adds velocity, basically.
 	var/velocity = 500	//Meters per second
-	var/hollow_point = FALSE
+	var/hollow_point = FALSE	//Determines if the round leaves additional shrapnel in the wound
 	var/grains = 115	//I hope the unit is obvious
 	var/energy	//Joules
-	var/old_bullet_act = FALSE
+	var/old_bullet_act = FALSE //This makes it so that the game ignores the new ballistic stuff and uses old damage system for the bullet.
+	
+/*energy_add
+Pretty much, when a bullet is a fired from a gun, it replaces the default muzzle velocity of the round with it's own muzzle velocity, 
+so if you want a certain round to have extra velocity, you have the option to add energy. For example, 
+if I have an AP round that shoots 650 m/s and the base round only shoots 600 m/s, I need to take the weight of the round in grains (say 60), 
+convert it to kilograms (divide by 15432 or some wacky number like that, just google grains to kilograms), then multiply the weight in kilograms by 
+the velocity squared for  both the 650, and 600, and subtract the result for 650 from the result for 600, then that number is what I would put there. 
+If you want to be lazy, or you can't find more specific numbers for the AP/HP versions of a round, then just don't bother with changing any of that and 
+only use the hollow_point and armor_penetration values.*/
 
 /obj/item/projectile/bullet/launch_projectile(atom/target, target_zone, mob/user, params, angle_override, forced_spread = 0)
 	energy = 0.5 * velocity * velocity * (grains / GRAINS_PER_KG) + energy_add
@@ -117,6 +126,18 @@
 	hollow_point = TRUE
 	armor_penetration = -50
 
+/obj/item/projectile/bullet/a762x25
+	fire_sound = 'sound/weapons/gunshot2.ogg'
+	diam = 7.92
+	grains = 85
+	velocity = 469
+
+/obj/item/projectile/bullet/a9x18
+	fire_sound = 'sound/weapons/gunshot2.ogg'
+	diam = 9.27
+	grains = 95
+	velocity = 319
+
 /obj/item/projectile/bullet/a10mm
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	diam = 10.17
@@ -154,6 +175,22 @@
 	velocity = 343
 	armor_penetration = -50
 	hollow_point = TRUE
+	
+/obj/item/projectile/bullet/a22lr
+	fire_sound = 'sound/weapons/gunshot_pathetic.ogg'
+	grains = 40
+	diam = 5.7
+	velocity = 370
+	
+/obj/item/projectile/bullet/a22lr/ap
+	grains = 31
+	velocity = 530
+	armor_penetration = 15
+
+/obj/item/projectile/bullet/a22lr/hp
+	grains = 38
+	velocity = 380
+	hollow_point = TRUE
 
 //Shotgun projectiles
 
@@ -176,19 +213,13 @@
 	submunition_spread_max = 67.5
 	submunitions = list(/obj/item/projectile/bullet/shotgun/buckshot = 8)
 
-/obj/item/ammo_casing/a12g/pellet
-	name = "shotgun buckshot shell"
-	desc = "A 12 gauge buckshot shell."
-	icon_state = "gshell"
-	projectile_type = /obj/item/projectile/bullet/shotgun/buckshot/shell
-
 //Rifle projectiles
 /obj/item/projectile/bullet/rifle
 	armor_penetration = 0 //No. Rifle rounds don't get extra AP by default, their nature already makes them more armor penetrating.
 
 /obj/item/projectile/bullet/rifle/a762 //7.62x51 NATO
 	fire_sound = 'sound/weapons/ballistics/a762.ogg'
-	diam = 7.62
+	diam = 7.82
 	grains = 147
 	velocity = 850
 
@@ -204,9 +235,25 @@
 	armor_penetration = -50
 	hollow_point = TRUE
 
+/obj/item/projectile/bullet/rifle/a762x39 //7.62x39 Soviet
+	fire_sound = 'sound/weapons/ballistics/a762.ogg'
+	diam = 7.85
+	grains = 122
+	velocity = 730
+
+/obj/item/projectile/bullet/rifle/a762x39/ap
+	grains = 123
+	velocity = 740
+	energy_add = 117.16
+	armor_penetration = 50
+
+/obj/item/projectile/bullet/rifle/a762x39/hp
+	hollow_point = TRUE
+	armor_penetration = -50
+
 /obj/item/projectile/bullet/rifle/a545
 	fire_sound = 'sound/weapons/ballistics/a545.ogg'
-	diam = 5.45
+	diam = 5.6
 	grains = 53
 	velocity = 880
 
@@ -219,8 +266,24 @@
 	hollow_point = TRUE
 	armor_penetration = -50
 
+/obj/item/projectile/bullet/rifle/a556 //5.56x45mm NATO
+	diam = 5.7
+	grains = 62
+	velocity = 961
+
+/obj/item/projectile/bullet/rifle/a556/ap
+	grains = 52
+	velocity = 1030
+	energy_add = 462.92
+	armor_penetration = 50
+
+/obj/item/projectile/bullet/rifle/a556/hp
+	hollow_point = TRUE
+	armor_penetration = -50
+
 /obj/item/projectile/bullet/rifle/a145 // 14.5×114mm
 	fire_sound = 'sound/weapons/ballistics/a145.ogg'
+	diam = 14.88
 	grains = 921
 	velocity = 1000
 
@@ -240,6 +303,22 @@
 	grains = 310
 	velocity = 365
 
+/obj/item/projectile/bullet/rifle/a9x39 //We also have actual 9x39mm
+	fire_sound = 'sound/weapons/ballistics/a545.ogg'
+	diam = 9.25
+	grains = 259
+	velocity = 280
+
+/obj/item/projectile/bullet/rifle/a9x39/ap
+	grains = 267
+	armor_penetration = 25
+
+/obj/item/projectile/bullet/rifle/a10x24
+	fire_sound = 'sound/weapons/ballistics/a762.ogg'
+	grains = 210
+	diam = 10.2
+	velocity = 840
+
 /obj/item/projectile/bullet/rifle/a762/lmg	//This is actually 7.92x57 ffs
 	diam = 7.92
 	grains = 181
@@ -247,7 +326,7 @@
 
 /obj/item/projectile/bullet/rifle/a762x54
 	fire_sound = 'sound/weapons/ballistics/a762x54.ogg'
-	diam = 7.62
+	diam = 7.92
 	grains = 151
 	velocity = 830
 	hitscan = 1
@@ -255,160 +334,31 @@
 /obj/item/projectile/bullet/rifle/a762x54/ap
 	armor_penetration = 50
 
-//Time to replace projectiles with their proper counterparts now that we have added them.
-/obj/item/ammo_casing/a10mm
-	projectile_type = /obj/item/projectile/bullet/a10mm
+/obj/item/projectile/bullet/rifle/a338
+	fire_sound = 'sound/weapons/ballistics/a762x54.ogg'
+	damage = 45
+	diam = 8.61
+	grains = 250
+	velocity = 921
+	hitscan = 1
+	penetrating = 2
 
-/obj/item/ammo_casing/a38
-	projectile_type = /obj/item/projectile/bullet/a38
+/obj/item/projectile/bullet/rifle/a338/ap
+	armor_penetration = 50
 
-/obj/item/ammo_casing/a380
-	projectile_type = /obj/item/projectile/bullet/a380
+/obj/item/projectile/bullet/rifle/a50bmg
+	fire_sound = 'sound/weapons/ballistics/a145.ogg'
+	damage = 65
+	diam = 13
+	grains = 750
+	velocity = 860
+	hitscan = 1
+	penetrating = 2
 
-/obj/item/ammo_casing/a357
-	projectile_type = /obj/item/projectile/bullet/a357
+/obj/item/projectile/bullet/rifle/a50bmg/ap
+	armor_penetration = 50
 
-/obj/item/ammo_casing/a57
-	desc = "A standard 5.7x28mm round"
-	caliber = "5.7x28mm"
-	projectile_type = /obj/item/projectile/bullet/a57
-	matter = list(DEFAULT_WALL_MATERIAL = 60)
-
-/obj/item/ammo_casing/a57/ap
-	desc = "An armor piercing 5.7x28mm round"
-	projectile_type = /obj/item/projectile/bullet/a57/ap
-
-/obj/item/ammo_casing/a57/hp
-	desc = "A hollow point 5.7x28mm round"
-	projectile_type = /obj/item/projectile/bullet/a57/ap
-
-/obj/item/ammo_casing/a57/rubber
-	desc = "A rubber 5.7x28mm round"
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber
-
-/obj/item/ammo_magazine/m9mmp90	//congratulations you are now being converted 5.7x28mm, a.k.a the round the p90 actually uses.
-	name = "large capacity top mounted magazine (5.7x28mm armor-piercing)"	//Ugh, we'll leave it AP I guess
-	ammo_type = /obj/item/ammo_casing/a57/ap
-	caliber = "5.7x28mm"
-
-/obj/item/ammo_casing/a762x54
-	desc = "A standard 7.62x54mmR round"
-	caliber = "7.62x54mmR"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x54
-	matter = list(DEFAULT_WALL_MATERIAL = 160)
-
-/obj/item/ammo_casing/a762x54/ap
-	desc = "An armor piercing 7.62x54mmR round"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x54/ap
-
-/obj/item/ammo_magazine/m762svd	//You are now being converted to 7.62x54mmR :3
-	name = "\improper SVD magazine (7.62x54mmR)"
-	caliber = "7.62x54mmR"
-	ammo_type = /obj/item/ammo_casing/a762x54
-
-/obj/item/ammo_magazine/m762svd/ap
-	name = "\improper SVD magazine (7.62x54mmR armor-piercing)"
-	ammo_type = /obj/item/ammo_casing/a762x54/ap
-
-//New magazines
-/obj/item/ammo_magazine/a57
-	name = "five-seven magazine(5.7x28mm standard)"
-	icon_state = "fiveseven"
-	max_ammo = 20
-	mag_type = MAGAZINE
-	caliber= "5.7x28mm"
-	matter = list(DEFAULT_WALL_MATERIAL = 800)
-	multiple_sprites = 0
-	ammo_type = /obj/item/ammo_casing/a57
-
-/obj/item/ammo_magazine/a57/ap
-	name = "five-seven magazine(5.7x28mm armor-piercing)"
-	ammo_type = /obj/item/ammo_casing/a57/ap
-
-/obj/item/ammo_magazine/a57/hp
-	name = "five-seven magazine(5.7x28mm hollow-point)"
-	ammo_type = /obj/item/ammo_casing/a57/hp
-
-/obj/item/ammo_magazine/a57/rubber
-	name = "five-seven magazine(5.7x28mm rubber)"
-	ammo_type = /obj/item/ammo_casing/a57/rubber
-
-/obj/item/ammo_magazine/mp5mag
-	name = "mp5 magazine(9x19mm standard)"
-	icon = 'icons/obj/ammo_vr.dmi'
-	icon_state = "smg"
-	max_ammo = 30
-	mag_type = MAGAZINE
-	caliber = "9mm"
-	matter = list(DEFAULT_WALL_MATERIAL = 800)
-	multiple_sprites = 1
-	ammo_type = /obj/item/ammo_casing/a9mm
-
-/obj/item/ammo_magazine/mp5mag/ap
-	name = "mp5 magazine(9x19mm armor-piercing)"
-	ammo_type = /obj/item/ammo_casing/a9mm/ap
-
-/obj/item/ammo_magazine/mp5mag/hp
-	name = "mp5 magazine(9x19mm hollow-point)"
-	ammo_type = /obj/item/ammo_casing/a9mm/ap
-
-/obj/item/ammo_magazine/mp5mag/rubber
-	name = "mp5 magazine(9x19mm rubber)"
-	ammo_type = /obj/item/ammo_casing/a9mm/rubber
-
-//Add some autolathe entries for the new converted mags
-/datum/category_item/autolathe/arms/smg_mp5
-	name = "mp5 magazine(9x19mm standard)"
-	path = /obj/item/ammo_magazine/mp5mag
-	hidden = 1
-
-/datum/category_item/autolathe/arms/smg_mp5_ap
-	name = "mp5 magazine(9x19mm armor-piercing)"
-	path = /obj/item/ammo_magazine/mp5mag/ap
-	hidden = 1
-
-/datum/category_item/autolathe/arms/smg_mp5_hp
-	name = "mp5 magazine(9x19mm hollow-point)"
-	path = /obj/item/ammo_magazine/mp5mag/hp
-	hidden = 1
-
-/datum/category_item/autolathe/arms/smg_mp5_rubber
-	name = "mp5 magazine(9x19mm rubber)"
-	path = /obj/item/ammo_magazine/mp5mag/rubber
-
-/datum/category_item/autolathe/arms/pistol_fiveseven
-	name = "five-seven magazine(5.7x28mm standard)"
-	path = /obj/item/ammo_magazine/a57
-	hidden = 1
-
-/datum/category_item/autolathe/arms/pistol_fiveseven_ap
-	name = "five-seven magazine(5.7x28mm armor-piercing)"
-	path = /obj/item/ammo_magazine/a57/ap
-	hidden = 1
-
-/datum/category_item/autolathe/arms/pistol_fiveseven_hp
-	name = "five-seven magazine(5.7x28mm hollow-point)"
-	path = /obj/item/ammo_magazine/a57/hp
-	hidden = 1
-
-/datum/category_item/autolathe/arms/pistol_fiveseven_rubber
-	name = "five-seven magazine(5.7x28mm rubber)"
-	path = /obj/item/ammo_magazine/a57/rubber
-
-/datum/category_item/autolathe/arms/smg_p90
-	name = "large capacity top mounted magazine (5.7x28mm armor-piercing)"
-	path = /obj/item/ammo_magazine/m9mmp90
-	hidden = 1
-
-/datum/category_item/autolathe/arms/svd_762
-	name = "SVD magazine (7.62x54mmR)"
-	path = /obj/item/ammo_magazine/m762svd
-	hidden = 1
-
-/datum/category_item/autolathe/arms/svd_762_ap
-	name = "SVD magazine (7.62x54mmR armor-piercing)"
-	path = /obj/item/ammo_magazine/m762svd/ap
-	hidden = 1
+//NOTE: Ammo casings and magazines used to be in this part of the file. They have been moved to respective files in the projectiles/ammunition folder.
 
 //Various "We're not dealing with this shit because of how bad it is" (Some of these may be implemented into the new system with later updates)
 /obj/item/projectile/bullet/magnetic

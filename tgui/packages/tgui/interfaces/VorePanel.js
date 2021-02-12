@@ -23,18 +23,6 @@ const digestModeToColor = {
   "Size Steal": "purple",
   "Heal": "purple",
   "Encase In Egg": "purple",
-  "Transform": "purple",
-  "Transform (Hair and eyes)": "purple",
-  "Transform (Male)": "purple",
-  "Transform (Female)": "purple",
-  "Transform (Keep Gender)": "purple",
-  "Transform (Replica Of Self)": "purple",
-  "Transform (Change Species and Taur)": "purple",
-  "Transform (Change Species and Taur) (EGG)": "purple",
-  "Transform (Replica Of Self) (EGG)": "purple",
-  "Transform (Keep Gender) (EGG)": "purple",
-  "Transform (Male) (EGG)": "purple",
-  "Transform (Female) (EGG)": "purple",
 };
 
 const digestModeToPreyMode = {
@@ -48,18 +36,6 @@ const digestModeToPreyMode = {
   "Size Steal": "having your size stolen.",
   "Heal": "being healed.",
   "Encase In Egg": "being encased in an egg.",
-  "Transform": "being transformed.",
-  "Transform (Hair and eyes)": "being transformed.",
-  "Transform (Male)": "being transformed.",
-  "Transform (Female)": "being transformed.",
-  "Transform (Keep Gender)": "being transformed.",
-  "Transform (Replica Of Self)": "being transformed.",
-  "Transform (Change Species and Taur)": "being transformed.",
-  "Transform (Change Species and Taur) (EGG)": "being transformed.",
-  "Transform (Replica Of Self) (EGG)": "being transformed.",
-  "Transform (Keep Gender) (EGG)": "being transformed.",
-  "Transform (Male) (EGG)": "being transformed.",
-  "Transform (Female) (EGG)": "being transformed.",
 };
 
 /**
@@ -273,6 +249,7 @@ const VoreSelectedBelly = (props, context) => {
     liq_msg3,
     liq_msg4,
     liq_msg5,
+    vorespawn_blacklist,
   } = belly;
 
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
@@ -473,6 +450,13 @@ const VoreSelectedBelly = (props, context) => {
                 <Button
                   onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
                   content={shrink_grow_size * 100 + "%"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Vore Spawn Blacklist">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_vorespawn_blacklist" })}
+                  icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
+                  selected={vorespawn_blacklist}
+                  content={vorespawn_blacklist ? "Yes" : "No"} />
               </LabeledList.Item>
             </LabeledList>
           </Flex.Item>
@@ -800,6 +784,7 @@ const VoreUserPreferences = (props, context) => {
     show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
+    latejoin_vore,
     noisy,
     liq_rec,
     liq_giv,
@@ -909,6 +894,18 @@ const VoreUserPreferences = (props, context) => {
               ? "Click here to allow being spontaneous pred."
               : "Click here to disable being spontaneous pred.")}
             content={can_be_drop_pred ? "Spontaneous Pred Enabled" : "Spontaneous Pred Disabled"} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <Button
+            onClick={() => act("toggle_latejoin_vore")}
+            icon={latejoin_vore ? "toggle-on" : "toggle-off"}
+            selected={latejoin_vore}
+            fluid
+            tooltip={"Toggle late join vore spawnpoint. "
+            + (latejoin_vore
+              ? "Click here to turn off vorish spawnpoint."
+              : "Click here to turn on vorish spawnpoint.")}
+            content={latejoin_vore ? "Vore Spawn Enabled" : "Vore Spawn Disabled"} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button
