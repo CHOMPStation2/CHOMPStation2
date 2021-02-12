@@ -46,17 +46,17 @@
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
 
-		if(dbcon.IsConnected())
+		if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			var/isadmin = 0
 			if(src.client && src.client.holder)
 				isadmin = 1
-			var/DBQuery/query = dbcon.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")")
+			var/DBQuery/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = :t_ckey) AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = :t_ckey)",list("t_ckey" = ckey)) //CHOMPEdit TGSQL
 			query.Execute()
 			var/newpoll = 0
 			while(query.NextRow())
 				newpoll = 1
 				break
-
+			qdel(query) //CHOMPEdit TGSQL
 			if(newpoll)
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
 			else
@@ -164,7 +164,7 @@
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 			to_chat(usr, "<font color='red'>The round is either not ready, or has already finished...</font>")
 			return
-		
+
 		var/time_till_respawn = time_till_respawn()
 		if(time_till_respawn == -1) // Special case, never allowed to respawn
 			to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
@@ -216,17 +216,17 @@
 
 	if(href_list["privacy_poll"])
 		establish_db_connection()
-		if(!dbcon.IsConnected())
+		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			return
 		var/voted = 0
 
 		//First check if the person has not voted yet.
-		var/DBQuery/query = dbcon.NewQuery("SELECT * FROM erro_privacy WHERE ckey='[src.ckey]'")
+		var/DBQuery/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
 		query.Execute()
 		while(query.NextRow())
 			voted = 1
 			break
-
+		qdel(query) //CHOMPEdit TGSQL
 		//This is a safety switch, so only valid options pass through
 		var/option = "UNKNOWN"
 		switch(href_list["privacy_poll"])
@@ -246,10 +246,12 @@
 			return
 
 		if(!voted)
-			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), '[src.ckey]', '[option]')"
-			var/DBQuery/query_insert = dbcon.NewQuery(sql)
+			var/list/sqlargs = list("t_ckey" = src.ckey, "t_option" = "[option]") //CHOMPEdit TGSQL
+			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
+			var/DBQuery/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 			query_insert.Execute()
 			to_chat(usr, "<b>Thank you for your vote!</b>")
+			qdel(query_insert)
 			usr << browse(null,"window=privacypoll")
 
 	if(!ready && href_list["preference"])
@@ -352,7 +354,7 @@
 /mob/new_player/proc/time_till_respawn()
 	if(!ckey)
 		return -1 // What?
-		
+
 	var/timer = GLOB.respawn_timers[ckey]
 	// No timer at all
 	if(!timer)
@@ -461,6 +463,9 @@
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)
 		data_core.manifest_inject(character)
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
+	var/gut = join_props["voreny"]
+	if(gut)
+		character.forceMove(gut)
 
 	qdel(src) // Delete new_player mob
 

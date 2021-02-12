@@ -564,13 +564,30 @@ var/failed_old_db_connections = 0
 /hook/startup/proc/connectDB()
 	if(!config.sql_enabled)
 		to_world_log("SQL connection disabled in config.")
-	else if(!setup_database_connection())
-		to_world_log("Your server failed to establish a connection with the feedback database.")
-	else
+	else if(establish_db_connection())//CHOMPEdit Begin
 		to_world_log("Feedback database connection established.")
+		var/DBQuery/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
+		var/num_tries = 0
+		while(!query_truncate.Execute() && num_tries<5)
+			num_tries++
+
+		if(num_tries==5)
+			log_admin("ERROR TRYING TO CLEAR erro_dialog")
+		qdel(query_truncate)
+		var/DBQuery/query_truncate2 = SSdbcore.NewQuery("TRUNCATE erro_attacklog")
+		num_tries = 0
+		while(!query_truncate2.Execute() && num_tries<5)
+			num_tries++
+
+		if(num_tries==5)
+			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
+		qdel(query_truncate2)
+	else 
+		to_world_log("Feedback database connection failed.")
+	//CHOMPEdit End
 	return 1
 
-proc/setup_database_connection()
+/*proc/setup_database_connection() CHOMPEdit TGSQL
 
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -588,34 +605,38 @@ proc/setup_database_connection()
 	. = dbcon.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
+		//CHOMPEdit Begin
+		var/DBQuery/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
+		var/num_tries = 0
+		while(!query_truncate.Execute() && num_tries<5)
+			num_tries++
+
+		if(num_tries==5)
+			log_admin("ERROR TRYING TO CLEAR erro_dialog")
+		//CHOMPEdit End
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
 		to_world_log(dbcon.ErrorMsg())
 
-	return .
+	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-proc/establish_db_connection()
-	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
-		return 0
-
-	if(!dbcon || !dbcon.IsConnected())
-		return setup_database_connection()
-	else
-		return 1
+proc/establish_db_connection() //CHOMPEdit TGSQL
+	return SSdbcore.Connect()
 
 
 /hook/startup/proc/connectOldDB()
 	if(!config.sql_enabled)
 		to_world_log("SQL connection disabled in config.")
-	else if(!setup_old_database_connection())
-		to_world_log("Your server failed to establish a connection with the SQL database.")
-	else
+	else if(establish_old_db_connection()) //CHOMPEdit Begin
 		to_world_log("SQL database connection established.")
+	else
+		to_world_log("SQL database connection failed")
+	//CHOMPEdit End
 	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
-proc/setup_old_database_connection()
+/*proc/setup_old_database_connection() //CHOMPStation TGSQL
 
 	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -637,17 +658,11 @@ proc/setup_old_database_connection()
 		failed_old_db_connections++		//If it failed, increase the failed connections counter.
 		to_world_log(dbcon.ErrorMsg())
 
-	return .
+	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
 proc/establish_old_db_connection()
-	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)
-		return 0
-
-	if(!dbcon_old || !dbcon_old.IsConnected())
-		return setup_old_database_connection()
-	else
-		return 1
+	return SSdbcore.Connect()
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()

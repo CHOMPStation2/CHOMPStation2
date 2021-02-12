@@ -281,9 +281,12 @@
 
 /obj/item/clothing/under/seromi/undercoat/jobs/hos
 	name = "head of security undercoat"
-	desc = "A traditional Teshari garb made for the Head of Security"
+	desc = "A traditional Teshari garb made for the Head of Security. Made with slightly sturdier materials." //CHOMPedit
 	icon_state = "tesh_uniform_hos"
 	item_state = "tesh_uniform_hos"
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) //CHOMPedit start
+	siemens_coefficient = 0.9
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS //CHOMPedit end
 
 /obj/item/clothing/under/seromi/undercoat/jobs/rd
 	name = "research director undercoat"
@@ -371,9 +374,12 @@
 
 /obj/item/clothing/under/seromi/undercoat/jobs/sec
 	name = "security undercoat"
-	desc = "A traditional Teshari garb made for the Security department"
+	desc = "A traditional Teshari garb made for the Security department. Made with slightly sturdier materials." //CHOMPedit
 	icon_state = "tesh_uniform_sec"
 	item_state = "tesh_uniform_sec"
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) //CHOMPedit start
+	siemens_coefficient = 0.9
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS //CHOMPedit end
 
 /obj/item/clothing/under/seromi/undercoat/jobs/service
 	name = "service undercoat"

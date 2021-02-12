@@ -82,6 +82,19 @@ You will find a dispenser within the room you started in which contains some bas
 	installation = /obj/item/weapon/gun/energy/ionrifle/weak
 	lethal = TRUE
 
+/obj/item/device/perfect_tele/frontier/unknown/abductor/one
+	loc_network = "abd1"
+/obj/item/device/perfect_tele/frontier/unknown/abductor/two
+	loc_network = "abd2"
+/obj/item/device/perfect_tele/frontier/unknown/abductor/three
+	loc_network = "abd3"
+/obj/item/device/perfect_tele/frontier/unknown/abductor/four
+	loc_network = "abd4"
+/obj/item/device/perfect_tele/frontier/unknown/abductor/five
+	loc_network = "abd5"
+/obj/item/device/perfect_tele/frontier/unknown/abductor/six
+	loc_network = "abd6"
+
 /obj/machinery/power/rtg/abductor/built/abductor
 	name = "Void Core"
 	power_gen = 5000000

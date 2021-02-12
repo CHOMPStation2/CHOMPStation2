@@ -1,4 +1,4 @@
-
+/* //CHOMPedit commented micromech stuff, because fuck this trash
 /datum/construction/mecha/polecat_chassis
 	steps = list(list("key"=/obj/item/mecha_parts/micro/part/polecat_torso),//1
 					 list("key"=/obj/item/mecha_parts/micro/part/polecat_left_arm),//2
@@ -766,3 +766,4 @@
 		..()
 		feedback_inc("mecha_weasel_created",1)
 		return
+*/

@@ -110,8 +110,8 @@
 
 //ketrai:Ketrai
 /obj/item/clothing/head/fluff/ketrai
-	name = "Pink Bear Hat"
-	desc = "A pink space bear hat, the origins are unknown"
+	name = "Bear Pelt"
+	desc = "A luxury space bear pelt, its origins unknown."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "bearpelt"
@@ -898,56 +898,56 @@ No. With a teleporter? Just *no*. - Hawk, YW
 	item_state = ""
 
 /obj/item/clothing/under/rank/khi/cmd //Command version
-	name = "KHI command suit"
-	desc = "An outdated command uniform, branded with the logo of a defunct spacer organization"
+	name = "GE command suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. An extra-comfortable command one, at that." //CHOMPedit
 	icon_state = "khi_uniform_cmd_i"
 	item_state = "khi_uniform_cmd"
 	worn_state = "khi_uniform_cmd"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/sec //Security version
-	name = "KHI security suit"
-	desc = "An outdated security uniform, branded with the logo of a defunct spacer organization"
+	name = "GE security suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. This one has angry red security stripes. Keepin' the peace in style." //CHOMPedit
 	icon_state = "khi_uniform_sec_i"
 	item_state = "khi_uniform_sec"
 	worn_state = "khi_uniform_sec"
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/med //Medical version
-	name = "KHI medical suit"
-	desc = "An outdated medical uniform, branded with the logo of a defunct spacer organization"
+	name = "GE medical suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. The medical version. Why not just get a new body, anyway?"//CHOMPedit
 	icon_state = "khi_uniform_med_i"
 	item_state = "khi_uniform_med"
 	worn_state = "khi_uniform_med"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
 
 /obj/item/clothing/under/rank/khi/eng //Engineering version
-	name = "KHI engineering suit"
-	desc = "An outdated engineer uniform, branded with the logo of a defunct spacer organization."
+	name = "GE engineering suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time." //CHOMPedit
 	icon_state = "khi_uniform_eng_i"
 	item_state = "khi_uniform_eng"
 	worn_state = "khi_uniform_eng"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
 
 /obj/item/clothing/under/rank/khi/sci //Science version
-	name = "KHI science suit"
-	desc = "An outdated science uniform, branded with the logo of a defunct spacer organization"
+	name = "GE science suit" //CHOMPedit: Change to GE
+	desc = "Gilthari Exports uniform. For performing science in, based on the color! Only SCIENCE can save us now." //CHOMPedit
 	icon_state = "khi_uniform_sci_i"
 	item_state = "khi_uniform_sci"
 	worn_state = "khi_uniform_sci"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/crg //Cargo version
-	name = "KHI cargo suit"
-	desc = "Kitsuhana Heavy Industries uniform. Looks like it's in supply and cargo division colors. Even post-scarcity societies need things moved and mined sometimes."
+	name = "GE cargo suit" //CHOMPedit: Change to GE
+	desc = "A sleek cargo uniform from Gilthari Exports." //CHOMPedit
 	icon_state = "khi_uniform_crg_i"
 	item_state = "khi_uniform_crg"
 	worn_state = "khi_uniform_crg"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/civ //Science version
-	name = "KHI civilian suit"
-	desc = "Kitsuhana Heavy Industries uniform. Snazzy silver trim marks this is as the general civilian branch. Smells like paperwork and bureaucracy."
+	name = "GE civilian suit" //CHOMPedit: Change to GE
+	desc = "A sleek civilian uniform from Gilthari Exports." //CHOMPedit
 	icon_state = "khi_uniform_civ_i"
 	item_state = "khi_uniform_civ"
 	worn_state = "khi_uniform_civ"
@@ -2026,7 +2026,7 @@ Departamental Swimsuits, for general use
 	desc = "A special hat, removed from its owner."
 
 //Ryumi: Nikki Yumeno
-/obj/item/clothing/under/skirt/outfit/fluff/nikki 
+/obj/item/clothing/under/skirt/outfit/fluff/nikki
 	name = "dorky outfit"
 	desc = "A little witch costume that looks like it's been worn as ordinary clothes. Who in their right mind would...??"
 	icon = 'icons/vore/custom_clothes_vr.dmi'
@@ -2052,7 +2052,7 @@ Departamental Swimsuits, for general use
 	icon_state = "nikki_boots"
 	item_state = "nikki_boots"
 
-/obj/item/clothing/shoes/fluff/nikki/mob_can_equip(var/mob/living/carbon/human/M, slot, disable_warning = 0) 
+/obj/item/clothing/shoes/fluff/nikki/mob_can_equip(var/mob/living/carbon/human/M, slot, disable_warning = 0)
 	if(..())
 		if (M.ckey == "ryumi")
 			return 1
@@ -2086,7 +2086,7 @@ Departamental Swimsuits, for general use
 	icon_state = "nikki-hat"
 	item_state = "nikki-hat"
 	item_icons = list(
-		slot_l_hand_str = 'icons/vore/custom_clothes_left_hand_vr.dmi', 
+		slot_l_hand_str = 'icons/vore/custom_clothes_left_hand_vr.dmi',
 		slot_r_hand_str = 'icons/vore/custom_clothes_right_hand_vr.dmi',
 		slot_head_str = 'icons/vore/custom_onmob_32x48_vr.dmi'
 		)
@@ -2140,19 +2140,19 @@ Departamental Swimsuits, for general use
 		to_chat(user, "<span class='warning'>You think to turn \the [src] on its creator?! <b>FOOOOOOOOL.</b></span>")
 		to_chat(user, "<span class='notice'>From seemingly nowhere you hear echoing, derisive laughter, accompanied by a stock laugh track and... Are those bike horns?</span>")
 		return 0
-	
+
 	if (!istype(target))
 		to_chat(user, "<span class='warning'>\The [src] isn't a valid target!</span>")
 		return 0
-	
+
 	// Because other mobs (i.e. monkeys) apparently have dropnom prey set to 0, we check SPECIFICALLY for humans' dropnom setting.
 	if (target.type == /mob/living/carbon/human && !target.can_be_drop_prey)
 		teleport_fail(user, target)
 		return 0
-	
+
 	if (!translocator.teleport_checks(target, user))
 		return 0
-	
+
 	else return 1
 
 /obj/item/clothing/head/fluff/nikki/attackby(obj/item/weapon/I as obj, mob/user as mob)
@@ -2239,6 +2239,53 @@ Departamental Swimsuits, for general use
 			if (I_HURT)
 				user.visible_message("<span class='danger'>[user] swipes \the [src] over \the [target]!</span>")
 				translocator.afterattack(target, user, proximity_flag)
-			
+
 		add_attack_logs(user, target, "Teleported [target] with via \the [src]'s [translocator]!")
 	else ..()
+/*CHOMP Removal
+//Vitoras: Verie
+/obj/item/clothing/suit/storage/hooded/fluff/verie
+	name = "distressingly cyan hoodie"
+	desc = "A cute, brightly colored hoodie perfect for occasional concealment of a verie silly nerd. A little tag inside \
+	the collar bears only the letters \"VW.\""
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "verie_hoodie"
+
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	item_state = "verie_hoodie"
+
+	hoodtype = /obj/item/clothing/head/hood/winter/fluff/verie
+
+	var/owner = "vitoras"
+
+/obj/item/clothing/suit/storage/hooded/fluff/verie/ToggleHood()
+	// If you ain't the robutt, you probably don't have the hair style that the hooded icon states are made for. sorry!
+	var/mob/living/carbon/human/H = src.loc
+	if (H.ckey != owner)
+		to_chat(H, "Strange... the hood doesn't go over your head no matter how you try to put it up.")
+		return
+	..()
+
+/obj/item/clothing/head/hood/winter/fluff/verie
+	name = "not-so-cyan hood"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "verie_hood"
+
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	item_state = "verie_hood"
+
+/obj/item/clothing/under/fluff/verie
+	name = "salaciously stylised suit"
+	desc = "It's kind of difficult to identify the type of material that makes up this form-fitting suit. It is stretchy and flexible, but \
+	is firm in its toughness, and clings tightly to the skin. Come to think of it, it glistens quite a bit in the light and- \
+	oh god it's latex.\
+	\n... A <b>Verie</b> appropriate material choice indeed." //the wordplay never ends
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "veriesuit"
+
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	item_state = "veriesuit"
+
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|FEET|ARMS|HANDS
+End CHOMP Removal*/
+

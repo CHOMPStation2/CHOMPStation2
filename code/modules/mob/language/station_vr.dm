@@ -101,7 +101,7 @@
 	colour = "changeling"
 	key = "M"
 	machine_understands = FALSE
-	flags = WHITELISTED | HIVEMIND
+	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark
 
 /datum/language/slavic
 	name = LANGUAGE_SLAVIC

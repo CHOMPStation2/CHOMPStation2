@@ -1,3 +1,4 @@
+/* //CHOMPedit commented micromech stuff, because fuck this trash
 /obj/mecha
 	var/max_micro_utility_equip = 0
 	var/max_micro_weapon_equip = 0
@@ -155,5 +156,5 @@
 	return result
 
 /obj/effect/decal/mecha_wreckage/micro
-	icon = 'icons/mecha/micro.dmi'
+	icon = 'icons/mecha/micro.dmi' */
 

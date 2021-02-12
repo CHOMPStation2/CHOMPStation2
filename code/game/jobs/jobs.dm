@@ -144,9 +144,7 @@ var/list/whitelisted_positions = list(
 	"Chief Medical Officer",
 	"Command Secretary",
 	"Warden",
-	"AI",
-	"Cyborg",
-	"pAI"
+	"AI"
 )
 
 
