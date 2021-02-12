@@ -239,3 +239,13 @@
 	accuracy_dispersion = 25
 	incoming_hal_damage_percent = 1.75
 	incoming_oxy_damage_percent = 1.25
+	
+/datum/trait/insect_sting
+	name = "Insect Sting"
+	desc = "Allows you to sting your victim with a smalll amount of poison"
+	cost = 1
+
+/datum/trait/insect_sting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/insect_sting
+	
