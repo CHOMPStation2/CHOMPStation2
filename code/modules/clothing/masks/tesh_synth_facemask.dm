@@ -40,6 +40,7 @@
 	update_icon()
 		var/mob/living/carbon/human/H = loc
 		if (maskmaster && maskmaster.stat == DEAD) icon_state = "synth_facemask_dead"
+		else icon_state = "synth_facemask"
 		if(istype(H)) H.update_inv_wear_mask()
 
 	process()
