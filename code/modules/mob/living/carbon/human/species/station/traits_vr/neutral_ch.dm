@@ -16,6 +16,15 @@
 	..(S,H)
 	H.verbs |= /mob/living/proc/succubus_bite
 
+/datum/trait/insect_sting
+	name = "Insect Sting"
+	desc = "Allows you to sting your victim with a smalll amount of poison"
+	cost = 0
+
+/datum/trait/insect_sting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/insect_sting
+
 /datum/trait/nutritiongrow
 	name = "Growing"
 	desc = "After you consume enough nutrition, you start to slowly grow while metabolizing nutrition faster."
