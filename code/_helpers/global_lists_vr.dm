@@ -183,6 +183,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/device/paicard,
 				/obj/item/device/pda,
 				/obj/item/device/radio/headset,
+				/obj/item/device/starcaster_news, //chompstation addition
 				/obj/item/inflatable/torn,
 				/obj/item/organ,
 				/obj/item/stack/material/cardboard,
@@ -219,7 +220,8 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/fancy/crayons,
 				/obj/item/weapon/storage/fancy/egg_box,
 				/obj/item/weapon/storage/wallet,
-				/obj/item/weapon/storage/vore_egg)
+        /obj/item/weapon/storage/vore_egg,
+				/obj/item/weapon/material/kitchen) //chompstation addition
 
 var/global/list/contamination_flavors = list(
 				"Generic" = contamination_flavors_generic,
