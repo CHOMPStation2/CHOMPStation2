@@ -1,5 +1,15 @@
 /datum/preferences
 	var/show_in_directory = 1	//Show in Character Directory
+<<<<<<< HEAD
+||||||| parent of 5fbfdbc931... Merge pull request #9695 from TheFurryFeline/patch-25
+	var/directory_tag = "Unset" //Sorting tag to use in character directory
+	var/directory_erptag = "No ERP"	//ditto, but for non-vore scenes
+	var/directory_ad = ""		//Advertisement stuff to show in character directory.
+=======
+	var/directory_tag = "Unset" //Sorting tag to use in character directory
+	var/directory_erptag = "Unset"	//ditto, but for non-vore scenes
+	var/directory_ad = ""		//Advertisement stuff to show in character directory.
+>>>>>>> 5fbfdbc931... Merge pull request #9695 from TheFurryFeline/patch-25
 	var/sensorpref = 5			//Set character's suit sensor level
 	var/job_talon_high = 0
 	var/job_talon_med = 0
