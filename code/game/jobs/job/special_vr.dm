@@ -79,8 +79,8 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
+	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	supervisors = "the spirit of laughter"
 	selection_color = "#515151"
 	economic_modifier = 1
@@ -109,8 +109,8 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
+	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	supervisors = "the spirit of performance"
 	selection_color = "#515151"
 	economic_modifier = 1
