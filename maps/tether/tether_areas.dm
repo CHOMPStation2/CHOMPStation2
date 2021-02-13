@@ -1299,6 +1299,11 @@
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_GENERIC
 
+/area/tether/exploration/pilot_office
+	name = "\improper Pilot's Office"
+	sound_env = STANDARD_STATION
+	ambience = AMBIENCE_GENERIC
+
 /area/shuttle/excursion
 	requires_power = 1
 	icon_state = "shuttle2"
