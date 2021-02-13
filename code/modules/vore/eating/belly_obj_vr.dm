@@ -162,7 +162,6 @@
 		"is_wet",
 		"wet_loop",
 		"belly_fullscreen",
-<<<<<<< HEAD
 		"disable_hud",
 		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
 		"reagentbellymode",
@@ -188,13 +187,8 @@
 		"fullness3_messages",
 		"fullness4_messages",
 		"fullness5_messages",
-		"vorespawn_blacklist"     //CHOMP end of variables from CHOMP
-||||||| parent of 337c472feb... Merge pull request #9666 from Verkister/eggpanel
-		"disable_hud"
-=======
-		"disable_hud",
+		"vorespawn_blacklist",     //CHOMP end of variables from CHOMP
 		"egg_type"
->>>>>>> 337c472feb... Merge pull request #9666 from Verkister/eggpanel
 		)
 
 /*These have been pulled from the above list as these were chomp edits for liquid belly stuff. This needs to be ported back in for TGUI port
