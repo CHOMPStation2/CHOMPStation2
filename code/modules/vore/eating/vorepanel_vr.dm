@@ -18,6 +18,7 @@
 	if(!vorePanel)
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
+	init_vore()	//Returns if the organs already exist anyway.
 
 	vorePanel.tgui_interact(src)
 
@@ -929,7 +930,6 @@
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
 			. = TRUE
-			
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
 			. = TRUE
