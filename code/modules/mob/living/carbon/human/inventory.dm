@@ -269,6 +269,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 		if(slot_glasses)
 			src.glasses = W
 			W.equipped(src, slot)
+			worn_clothing += glasses
 			update_inv_glasses()
 		if(slot_gloves)
 			src.gloves = W
