@@ -221,6 +221,7 @@ const VoreSelectedBelly = (props, context) => {
     contaminates,
     contaminate_flavor,
     contaminate_color,
+    egg_type,
     escapable,
     interacts,
     contents,
@@ -399,6 +400,12 @@ const VoreSelectedBelly = (props, context) => {
                   icon={can_taste ? "toggle-on" : "toggle-off"}
                   selected={can_taste}
                   content={can_taste ? "Yes" : "No"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Egg Type">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_egg_type" })}
+                  icon="pen"
+                  content={capitalize(egg_type)} />
               </LabeledList.Item>
             </LabeledList>
           </Flex.Item>

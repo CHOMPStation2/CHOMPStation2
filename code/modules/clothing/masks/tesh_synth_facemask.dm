@@ -7,15 +7,27 @@
 	icon_override = 'icons/mob/species/seromi/synth_facemask.dmi'
 	icon_state = "synth_facemask"
 	origin_tech = list(TECH_ILLEGAL = 1)
+	var/lstat
+	var/mob/living/carbon/maskmaster
 
 	equipped()
 		..()
 		var/mob/living/carbon/human/H = loc
 		if(istype(H) && H.wear_mask == src)
 			canremove = 0
+			maskmaster = H
+			START_PROCESSING(SSprocessing, src)
+
 	dropped()
 		canremove = 1
+		maskmaster = null
+		STOP_PROCESSING(SSprocessing, src)
 		return ..()
+
+	Destroy()
+		. = ..()
+		STOP_PROCESSING(SSprocessing, src)
+
 	mob_can_equip(var/mob/living/carbon/human/user, var/slot)
 		if (!..())
 			return 0
@@ -27,12 +39,20 @@
 		return 0
 	update_icon()
 		var/mob/living/carbon/human/H = loc
-		if (H.stat == DEAD) icon_state = "synth_facemask_dead"
+		if (maskmaster && maskmaster.stat == DEAD) icon_state = "synth_facemask_dead"
+		else icon_state = "synth_facemask"
 		if(istype(H)) H.update_inv_wear_mask()
+
+	process()
+		if(maskmaster && lstat != maskmaster.stat)
+			lstat = maskmaster.stat
+			update_icon()
+		lstat = maskmaster.stat
+
 
 //LOADOUT ITEM
 /datum/gear/mask/synthface/
-	display_name = "Synth Facemask(Tesh)"
+	display_name = "Synth Facemask (Teshari)"
 	path = /obj/item/clothing/mask/synthfacemask
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_TESHARI
