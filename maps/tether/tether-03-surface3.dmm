@@ -681,6 +681,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
 "aaZ" = (
@@ -804,7 +808,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -817,6 +820,20 @@
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 4
 	},
+<<<<<<< HEAD
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/structure/sign/poster{
+	pixel_x = 32
+	},
+=======
+/obj/structure/sign/poster{
+	pixel_x = 32
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
 "abj" = (
@@ -2058,6 +2075,7 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/triage)
 "add" = (
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -2066,6 +2084,36 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 4
+	},
+=======
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
 "ade" = (
@@ -2667,6 +2715,7 @@
 /area/tether/surfacebase/security/upperhall)
 "adT" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 ||||||| parent of d6307e55b9... Merge pull request #9465 from KillianKirilenko/kk-misc2
@@ -2677,8 +2726,25 @@
 /obj/machinery/camera/network/security{
 	dir = 8
 >>>>>>> d6307e55b9... Merge pull request #9465 from KillianKirilenko/kk-misc2
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/camera/network/security{
+	dir = 8
+=======
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/borderfloor{
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/borderfloor{
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
@@ -2690,9 +2756,23 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+=======
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/bordercorner2{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
 "adU" = (
@@ -3664,6 +3744,7 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/briefingroom)
 "afm" = (
+<<<<<<< HEAD
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced,
 /obj/machinery/button/remote/airlock{
@@ -3672,18 +3753,51 @@
 	pixel_x = -6;
 	pixel_y = 0;
 	req_access = list(1)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+=======
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner/red{
 	dir = 6;
 	icon_state = "corner_white"
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+=======
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/red{
 	dir = 9;
 	icon_state = "corner_white"
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+=======
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/lobby)
+/area/tether/surfacebase/security/upperhall)
 "afn" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3749,26 +3863,86 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenoflora_storage)
 "afs" = (
+<<<<<<< HEAD
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced,
 /obj/machinery/door/window/brigdoor/eastleft{
 	req_access = list(63)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+=======
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/red{
 	dir = 6;
 	icon_state = "corner_white"
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/red{
 	dir = 9;
 	icon_state = "corner_white"
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+=======
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 4
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+=======
+/obj/structure/disposalpipe/segment,
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/lobby)
+/area/tether/surfacebase/security/upperhall)
 "aft" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+=======
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+	},
+<<<<<<< HEAD
 <<<<<<< HEAD
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
@@ -3780,9 +3954,17 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 >>>>>>> d6307e55b9... Merge pull request #9465 from KillianKirilenko/kk-misc2
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/lobby)
+/area/tether/surfacebase/security/upperhall)
 "afu" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -3808,6 +3990,7 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/processing)
 "afv" = (
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -3816,10 +3999,38 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+=======
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/lobby)
+/area/tether/surfacebase/security/upperhall)
 "afw" = (
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -3827,10 +4038,37 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
 	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+=======
+/obj/effect/landmark{
+	name = "lightsout"
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/red/bordercorner,
 /obj/effect/floor_decal/steeldecal/steel_decals4,
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/bordercorner2{
+	dir = 5
+	},
+=======
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
 "afx" = (
@@ -4897,20 +5135,47 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/lobby)
-"agW" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/machinery/hologram/holopad,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/borderfloor{
+=======
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+"agW" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/red/bordercorner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
 "agX" = (
@@ -5210,7 +5475,14 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/glass,
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/lobby)
 "ahx" = (
@@ -5352,6 +5624,7 @@
 /area/tether/surfacebase/surface_three_hall)
 "ahC" = (
 /obj/structure/cable/green{
+<<<<<<< HEAD
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -5360,13 +5633,39 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+=======
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+=======
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/lobby)
 "ahD" = (
@@ -5407,7 +5706,17 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/lobby)
 "ahG" = (
@@ -5468,18 +5777,57 @@
 /area/tether/surfacebase/security/lobby)
 "ahJ" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/junction,
 /obj/machinery/hologram/holopad,
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/structure/disposalpipe/junction,
+/obj/machinery/hologram/holopad,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/upperhall)
+/area/tether/surfacebase/security/lobby)
 "ahK" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -6185,19 +6533,44 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+=======
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+	},
+<<<<<<< HEAD
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+=======
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 2;
+	icon_state = "pipe-c"
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/upperhall)
+/area/tether/surfacebase/security/lobby)
 "aiQ" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -6818,6 +7191,7 @@
 	},
 /area/tether/surfacebase/security/lobby)
 "ajP" = (
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
@@ -6829,6 +7203,33 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+=======
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
 "ajQ" = (
@@ -11964,6 +12365,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
+"asM" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
 "asN" = (
 /obj/machinery/alarm{
 	pixel_y = 25
@@ -12384,6 +12803,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenoflora)
+<<<<<<< HEAD
 "atL" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -12399,6 +12819,27 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+=======
+"atL" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "atM" = (
 /obj/structure/table/standard,
 /obj/machinery/microwave,
@@ -13637,6 +14078,7 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/xenobiology/outpost_north_airlock)
+<<<<<<< HEAD
 "awc" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/disposalpipe/segment{
@@ -13644,6 +14086,22 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+=======
+"awc" = (
+/obj/machinery/camera/network/security{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "awd" = (
 /obj/machinery/librarycomp,
 /obj/machinery/light/small{
@@ -14027,13 +14485,24 @@
 /turf/simulated/floor/tiled,
 /area/hallway/lower/third_south)
 "awI" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
 <<<<<<< HEAD
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+=======
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
@@ -14052,9 +14521,20 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4
 >>>>>>> d6307e55b9... Merge pull request #9465 from KillianKirilenko/kk-misc2
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/structure/disposalpipe/junction{
+	dir = 4
+=======
+/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/upperhall)
+/area/tether/surfacebase/security/lobby)
 "awJ" = (
 /obj/machinery/smartfridge,
 /obj/effect/floor_decal/borderfloor{
@@ -14444,6 +14924,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/bar_backroom)
+"axq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
 "axr" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
@@ -20191,6 +20678,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/servicebackroom)
+<<<<<<< HEAD
 "aGr" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -20206,6 +20694,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+=======
+"aGr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "aGs" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
@@ -22744,10 +23244,24 @@
 /turf/simulated/floor/reinforced,
 /area/tether/surfacebase/shuttle_pad)
 "aKJ" = (
-/obj/structure/shuttle/engine/propulsion,
-/turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/carry,
-/area/shuttle/tether)
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/bordercorner2{
+	dir = 5
+	},
+/obj/structure/disposalpipe/sortjunction{
+	name = "HOS Office";
+	sortType = "HOS Office"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
 "aKK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -22873,12 +23387,19 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/shuttle_pad)
 "aKY" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
-/turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/carry,
-/area/shuttle/tourbus/engines)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/lobby)
 "aKZ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -26690,12 +27211,90 @@
 	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/medical/triage)
+"aSN" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 1;
+	name = "Security";
+	sortType = "Security"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/lobby)
+"aSO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+"aSP" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
 "aSQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/xenobiology/outpost_first_aid)
+"aSR" = (
+/obj/machinery/papershredder,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+"aSS" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 6
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red/bordercorner2{
+	dir = 6
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+"aST" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/landmark{
+	name = "lightsout"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/surface_three_hall)
 "aSU" = (
 /obj/machinery/vending/medical,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -26748,6 +27347,19 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/outpost/xenobiology/outpost_storage)
+"aSZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/surface_three_hall)
 "aTa" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -26793,6 +27405,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/xenobiology/outpost_first_aid)
+"aTg" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/simulated/floor/reinforced,
+/turf/simulated/shuttle/plating/carry,
+/area/shuttle/tether)
 "aTh" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
@@ -26831,6 +27448,13 @@
 "aTk" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/outpost/xenobiology/outpost_storage)
+"aTl" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/turf/simulated/shuttle/plating/carry,
+/area/shuttle/tourbus/engines)
 "aTm" = (
 /turf/simulated/wall/r_wall,
 /area/tether/surfacebase/medical/admin)
@@ -27453,6 +28077,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_three)
+<<<<<<< HEAD
 "aUx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -27460,6 +28085,22 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+"aUx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+=======
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "aUy" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_command{
@@ -28693,19 +29334,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/storage)
-"aWK" = (
-/obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
-	},
-/obj/machinery/hologram/holopad,
-/obj/effect/landmark{
-	name = "lightsout"
-	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/surface_three_hall)
 "aWL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -28752,19 +29380,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
-"aWP" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/upperhall)
 "aWQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -38777,6 +39392,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/third_south)
+<<<<<<< HEAD
 "eSz" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -38797,6 +39413,29 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+"eSz" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+=======
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "fcg" = (
 /obj/structure/bed/chair/bay/chair{
 	dir = 8
@@ -38978,25 +39617,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
-"fRH" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "surfbriglockdown";
-	name = "Security Blast Doors";
-	opacity = 0
-	},
-/obj/structure/window/reinforced/polarized/full{
-	id = "hos_office"
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/tether/surfacebase/security/hos)
 "fYr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
@@ -39146,6 +39766,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/third_south)
+<<<<<<< HEAD
 "gDk" = (
 /obj/effect/landmark{
 	name = "lightsout"
@@ -39162,6 +39783,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+"gDk" = (
+/obj/effect/landmark{
+	name = "lightsout"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+=======
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "gHh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -39495,6 +40134,7 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/shuttle_pad)
+<<<<<<< HEAD
 "ieN" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
@@ -39502,6 +40142,28 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+"ieN" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 6
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red/bordercorner2{
+	dir = 6
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+=======
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "ifI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/computer/atmos_alert{
@@ -40886,6 +41548,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+<<<<<<< HEAD
 "nEn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -40908,6 +41571,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+"nEn" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/red/bordercorner,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+=======
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "nJe" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/teleporter/departing)
@@ -40962,6 +41644,7 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/breakroom)
+<<<<<<< HEAD
 "nYB" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -40985,6 +41668,46 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+"nXZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/kitchen)
+"nYB" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/bordercorner2{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+=======
+"nXZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/kitchen)
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "oat" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
@@ -41629,20 +42352,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/security/hos)
-"qnC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/sortjunction{
-	dir = 8;
-	name = "Security";
-	sortType = "Security"
-	},
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/surface_three_hall)
 "qom" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -41952,6 +42661,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
+<<<<<<< HEAD
 "rLM" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -41970,6 +42680,23 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+"rLM" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+=======
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "rMS" = (
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -42763,6 +43490,7 @@
 	},
 /turf/simulated/floor/tiled/monofloor,
 /area/tether/surfacebase/shuttle_pad)
+<<<<<<< HEAD
 "vaG" = (
 /obj/machinery/papershredder,
 /obj/effect/floor_decal/borderfloor,
@@ -42775,6 +43503,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/upperhall)
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+"vaG" = (
+/obj/machinery/papershredder,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/upperhall)
+=======
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 "viF" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
@@ -53554,8 +54294,8 @@ aey
 adW
 adW
 adW
-qAt
-eSz
+afv
+ajP
 ajN
 aUi
 ado
@@ -53687,7 +54427,7 @@ qVj
 gvp
 lgb
 aaY
-aWP
+add
 adS
 xsf
 aWZ
@@ -53695,10 +54435,10 @@ qze
 aez
 nyy
 agH
-agW
-gDk
-rLM
-abY
+afm
+afw
+asM
+axq
 ajQ
 aVL
 adR
@@ -53829,7 +54569,7 @@ aWv
 qnv
 lWE
 abi
-nYB
+adT
 acr
 jKY
 adn
@@ -53837,12 +54577,12 @@ jmQ
 agd
 aeB
 aHH
-add
-ahJ
-aiP
-ajP
-aUx
-vaG
+afs
+agV
+atL
+aGr
+aSO
+aSR
 adR
 aWq
 ajM
@@ -53979,12 +54719,28 @@ whW
 whW
 iLF
 adO
+<<<<<<< HEAD
 ieN
 nEn
 adT
 afw
 awI
 ieN
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+qAt
+nEn
+adT
+afw
+awI
+ieN
+=======
+aft
+agW
+awc
+aKJ
+aSP
+aSS
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 aWb
 aWn
 aWF
@@ -54246,7 +55002,7 @@ aab
 aOm
 adG
 ueB
-fRH
+dFg
 dFg
 ueB
 ueB
@@ -54264,7 +55020,13 @@ afl
 eCP
 adO
 adp
+<<<<<<< HEAD
 aeK
+||||||| parent of ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
+afs
+=======
+ahC
+>>>>>>> ec37995958... Merge pull request #9707 from TheFurryFeline/TFF-Post-MedSec_Move_Fixy
 agG
 ahx
 ahI
@@ -54406,7 +55168,7 @@ aeC
 ade
 adO
 adX
-afm
+ahF
 agP
 ahy
 ahV
@@ -54548,7 +55310,7 @@ afl
 agc
 adO
 aef
-afs
+ahC
 agT
 ahA
 ahX
@@ -54690,7 +55452,7 @@ afl
 gzd
 adO
 aep
-aft
+ahJ
 agU
 kRa
 aft
@@ -54753,7 +55515,7 @@ jML
 jHw
 jpB
 qWU
-aKY
+aTl
 aKU
 aOI
 aPb
@@ -54832,14 +55594,14 @@ afl
 gzd
 adO
 aes
-afv
-agV
-ahC
+aiP
+awI
+aKY
 ahZ
 aiS
 ajL
 aiV
-aWK
+aST
 akE
 alh
 alh
@@ -54976,12 +55738,12 @@ adO
 aeI
 afR
 ahu
-ahF
+aSN
 aia
 aiT
 ajO
 aWw
-qnC
+aSZ
 aWV
 ali
 ali
@@ -55605,7 +56367,7 @@ caw
 jHw
 gHh
 qWU
-aKY
+aTl
 aKU
 aOI
 aKj
@@ -57590,7 +58352,7 @@ aNk
 uSA
 aNJ
 aNP
-aKJ
+aTg
 aKU
 abg
 aOk
@@ -57732,7 +58494,7 @@ aNl
 aNl
 aNK
 aNP
-aKJ
+aTg
 aKU
 abg
 aOk
@@ -57874,7 +58636,7 @@ aNm
 aNl
 aNK
 aNP
-aKJ
+aTg
 aKU
 abg
 aOk
