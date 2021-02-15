@@ -15,7 +15,7 @@
 /datum/trait/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/succubus_bite
-
+	
 /datum/trait/nutritiongrow
 	name = "Growing"
 	desc = "After you consume enough nutrition, you start to slowly grow while metabolizing nutrition faster."
