@@ -4426,6 +4426,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 6
 	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner2{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
 "agq" = (
@@ -8647,12 +8653,6 @@
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/mauve/bordercorner2{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
@@ -24987,36 +24987,43 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "aPq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/uppersouthstairwell)
+"aPr" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -28;
 	req_access = list(67)
 	},
-/obj/structure/cable/green,
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner2{
-	dir = 9
-	},
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
 /obj/effect/floor_decal/borderfloorwhite/corner2,
 /obj/effect/floor_decal/corner/paleblue/bordercorner2,
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/uppersouthstairwell)
-"aPr" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "aPs" = (
@@ -25600,8 +25607,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloorwhite/corner2,
-/obj/effect/floor_decal/corner/paleblue/bordercorner2,
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-21"
 	},
@@ -26389,11 +26394,11 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/servicebackroom)
 "aSm" = (
+/obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/medical{
 	name = "Medical Admin Access"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "aSn" = (
@@ -37620,22 +37625,18 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals7,
-/obj/effect/floor_decal/steeldecal/steel_decals7{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
+/obj/effect/floor_decal/corner/mauve/border{
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner2{
-	dir = 1
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner2{
-	dir = 1
+/obj/effect/floor_decal/corner/mauve/bordercorner2{
+	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+/obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
@@ -58241,8 +58242,8 @@ afJ
 aIt
 aIt
 aPq
-aSb
-boe
+aSm
+anL
 bof
 bog
 boh
@@ -58383,8 +58384,8 @@ agi
 aIR
 aLL
 aPr
-aSm
-nbM
+aSb
+boe
 art
 asm
 akI
