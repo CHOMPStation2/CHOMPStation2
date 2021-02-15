@@ -4,6 +4,14 @@
 		return
 
 	var/turf/turf_source = get_turf(source)
+<<<<<<< HEAD
+||||||| parent of 445d1516ab... Merge pull request #9722 from VOREStation/Verkister-patch-8
+	var/area/area_source = turf_source.loc
+=======
+	if(!turf_source)
+		return
+	var/area/area_source = turf_source.loc
+>>>>>>> 445d1516ab... Merge pull request #9722 from VOREStation/Verkister-patch-8
 
 	//allocate a channel if necessary now so its the same for everyone
 	channel = channel || open_sound_channel()
@@ -19,6 +27,18 @@
 		if(!M || !M.client)
 			continue
 		var/turf/T = get_turf(M)
+<<<<<<< HEAD
+||||||| parent of 445d1516ab... Merge pull request #9722 from VOREStation/Verkister-patch-8
+		var/area/A = T.loc
+		if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+			continue
+=======
+		if(!T)
+			continue
+		var/area/A = T.loc
+		if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+			continue
+>>>>>>> 445d1516ab... Merge pull request #9722 from VOREStation/Verkister-patch-8
 		var/distance = get_dist(T, turf_source)
 
 		if(distance <= maxdistance)
