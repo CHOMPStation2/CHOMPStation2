@@ -18,6 +18,11 @@
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
 	dept_time_required = 60
 
+	job_description = "The Head of Personnel manages the Service department and most other civilians. They also \
+						manage the Supply department, through the Quartermaster and the Exploration department, through the Pathfinder. \
+						In addition, the Head of Personnel oversees the personal accounts of the crew, including their money and access. \
+						If necessary, the Head of Personnel is first in line to assume Acting Command." //CHOMPedit Placing Explo under HoP
+
 	alt_titles = list("Crew Resources Officer" = /datum/alt_title/cro, "Deputy Director" = /datum/alt_title/deputy_director, "Staff Manager" = /datum/alt_title/staff_manager,
 						"Facility Steward" = /datum/alt_title/facility_steward) //CHOMPEdit
 
@@ -25,14 +30,14 @@
 			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
 			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue,
 			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
-			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_clown, access_tomfoolery, access_mime, access_keycard_auth)
+			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station, access_hop,
+			            access_RC_announce, access_clown, access_tomfoolery, access_mime, access_keycard_auth, access_pilot, access_explorer, access_gateway, access_pathfinder) //CHOMPedit HoP in charge of Explo
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
 			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
 			            access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue,
 			            access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,
-			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station,
-			            access_hop, access_RC_announce, access_clown, access_tomfoolery, access_mime, access_keycard_auth)
+			            access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station, access_hop,
+			            access_RC_announce, access_clown, access_tomfoolery, access_mime, access_keycard_auth, access_pilot, access_explorer, access_gateway, access_pathfinder) //CHOMPedit HoP in charge of Explo
 
 /datum/alt_title/deputy_director
 	title = "Deputy Director"

@@ -6,13 +6,13 @@
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
-			            access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
+			            access_RC_announce, access_keycard_auth, access_tcomsat, access_xenoarch, access_eva, access_network,
+			            access_xenobotany) //CHOMPedit HoP in charge of Explo
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
-			            access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
+			            access_RC_announce, access_keycard_auth, access_tcomsat, access_xenoarch, access_eva, access_network,
+			            access_xenobotany) //CHOMPedit HoP in charge of Explo
 /datum/alt_title/research_manager
 	title = "Research Manager"
 
