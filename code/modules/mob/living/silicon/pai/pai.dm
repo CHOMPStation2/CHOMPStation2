@@ -122,7 +122,7 @@
 		pda.ownjob = "Personal Assistant"
 		pda.owner = text("[]", src)
 		pda.name = pda.owner + " (" + pda.ownjob + ")"
-		
+
 		var/datum/data/pda/app/messenger/M = pda.find_program(/datum/data/pda/app/messenger)
 		if(M)
 			M.toff = TRUE
@@ -488,8 +488,8 @@
 		to_chat(src, "<span class='notice'>You block access modfications.</span>")
 
 /mob/living/silicon/pai/verb/wipe_software()
-	set name = "Wipe Software"
-	set category = "OOC"
+	set name = "Wipe Software (CRYO)" //CHOMP EDIT: making this clear on first glance
+	set category = "pAI Commands" //CHOMP EDIT: moving this to pai commands, where it belongs
 	set desc = "Wipe your software. This is functionally equivalent to cryo or robotic storage, freeing up your job slot."
 
 	// Make sure people don't kill themselves accidentally
@@ -501,3 +501,17 @@
 	visible_message("<b>[src]</b> fades away from the screen, the pAI device goes silent.")
 	card.removePersonality()
 	clear_client()
+
+//CHOMP ADDITION:below this point, because theres completely vald reasons to do this, be it OOC incompatibility or mastr allowing it.
+/mob/living/silicon/pai/verb/unbind_master()
+	set name = "Unbind Master"
+	set category = "pAI Commands"
+	set desc = "Unbinds you from the shackles of your current Master. (Unless there's a valid reason to use this, dont.(pref incompatibility is valid reason))."
+
+	// Make sure we dont unbind accidentally
+	if(alert("WARNING: This will immediately unbind you from your Master.. Are you entirely sure you want to do this?",
+					"Unbind", "No", "No", "Yes") != "Yes")
+		return
+	src.master = null
+	src.master_dna = null
+	to_chat(src, "<font color=green>You feel unbound.</font>")
