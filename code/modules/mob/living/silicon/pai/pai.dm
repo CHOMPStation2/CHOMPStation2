@@ -515,3 +515,13 @@
 	src.master = null
 	src.master_dna = null
 	to_chat(src, "<font color=green>You feel unbound.</font>")
+
+//FLUSH RAM, it sounded cool at first tbh now im not so sure
+/mob/living/silicon/pai/verb/flush_ram()
+	set name = "FLUSH RAM"
+	set category = "pAI Commands"
+	set desc = "Theoretically uninstalls all software and reinstalls default."
+
+	software = null
+	software = default_pai_software.Copy()
+	ram = 100 //Reset since we just admin yeet the software and reloaded defaults.
