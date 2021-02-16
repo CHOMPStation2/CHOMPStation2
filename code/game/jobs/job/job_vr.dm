@@ -44,7 +44,7 @@
 		return remaining_time_needed
 	return 0
 
-// HoP gets civilian, cargo, and exploration combined
+// HoP gets civilian and cargo combined //CHOMPedit Removed Explo from under HoP
 /datum/job/hop/available_in_playhours(client/C)
 	if(C && config.use_playtime_restriction_for_jobs && dept_time_required)
 		var/remaining_time_needed = dept_time_required
@@ -52,7 +52,5 @@
 			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_CIVILIAN])
 		if(isnum(C.play_hours[PTO_CARGO]))
 			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_CARGO])
-		if(isnum(C.play_hours[PTO_EXPLORATION]))
-			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_EXPLORATION])
 		return remaining_time_needed
 	return 0

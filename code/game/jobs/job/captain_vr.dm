@@ -15,7 +15,7 @@
 	disallow_jobhop = TRUE
 	pto_type = PTO_CIVILIAN
 	departments = list(DEPARTMENT_COMMAND, DEPARTMENT_CIVILIAN)
-	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
+	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO) //CHOMPedit Removed explo
 	dept_time_required = 60
 
 	alt_titles = list("Crew Resources Officer" = /datum/alt_title/cro, "Deputy Director" = /datum/alt_title/deputy_director, "Staff Manager" = /datum/alt_title/staff_manager,

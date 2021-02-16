@@ -4,7 +4,7 @@
 /datum/job/rd
 	title = "Research Director"
 	flag = RD
-	departments_managed = list(DEPARTMENT_RESEARCH)
+	departments_managed = list(DEPARTMENT_RESEARCH, DEPARTMENT_PLANET) //CHOMPedit
 	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_COMMAND)
 	sorting_order = 2
 	department_flag = MEDSCI
