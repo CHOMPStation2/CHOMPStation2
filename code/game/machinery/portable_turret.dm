@@ -322,6 +322,14 @@
 	var/obj/item/projectile/P = initial(E.projectile_type)
 	//var/obj/item/ammo_casing/shottype = E.projectile_type
 
+<<<<<<< HEAD
+||||||| parent of ecc578ba78... Merge pull request #9728 from Novacat/nova-basicfixes
+	GLOB.moved_event.register_global(src, /obj/machinery/porta_turret/proc/point_defense)
+
+=======
+	//GLOB.moved_event.register_global(src, /obj/machinery/porta_turret/proc/point_defense) //VOREStation Removal
+
+>>>>>>> ecc578ba78... Merge pull request #9728 from Novacat/nova-basicfixes
 	projectile = P
 	lethal_projectile = projectile
 	shot_sound = initial(P.fire_sound)
