@@ -531,5 +531,5 @@
 	medHUD = 0			// Toggles whether the Medical  HUD is active or not
 	medical_cannotfind = 0
 	security_cannotfind = 0
-	var/translator_on = 0 // keeps track of the translator module
+	translator_on = 0 // keeps track of the translator module
 
