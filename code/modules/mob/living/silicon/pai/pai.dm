@@ -517,11 +517,19 @@
 	to_chat(src, "<font color=green>You feel unbound.</font>")
 
 //FLUSH RAM, it sounded cool at first tbh now im not so sure
+//Externally now called Factory Reset.
 /mob/living/silicon/pai/verb/flush_ram()
-	set name = "FLUSH RAM"
+	set name = "Factory Reset"
 	set category = "pAI Commands"
-	set desc = "Theoretically uninstalls all software and reinstalls default."
+	set desc = "Uninstalls all software and reinstalls default."
 
 	software = null
 	software = default_pai_software.Copy()
 	ram = 100 //Reset since we just admin yeet the software and reloaded defaults.
+// Various software-specific vars
+	secHUD = 0			// Toggles whether the Security HUD is active or not
+	medHUD = 0			// Toggles whether the Medical  HUD is active or not
+	medical_cannotfind = 0
+	security_cannotfind = 0
+	var/translator_on = 0 // keeps track of the translator module
+
