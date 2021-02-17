@@ -533,14 +533,14 @@
 	security_cannotfind = 0
 	translator_on = 0 // keeps track of the translator module
 //MEDHUD
-	src.plane_holder.set_vis(VIS_CH_STATUS, user.medHUD)
-	src.plane_holder.set_vis(VIS_CH_HEALTH, user.medHUD)
+	src.plane_holder.set_vis(VIS_CH_STATUS, medHUD)
+	src.plane_holder.set_vis(VIS_CH_HEALTH, medHUD)
 //SECHUD
-	src.plane_holder.set_vis(VIS_CH_ID, user.secHUD)
-	src.plane_holder.set_vis(VIS_CH_WANTED, user.secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPTRACK, user.secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPLOYAL, user.secHUD)
-	src.plane_holder.set_vis(VIS_CH_IMPCHEM, user.secHUD)
+	src.plane_holder.set_vis(VIS_CH_ID, secHUD)
+	src.plane_holder.set_vis(VIS_CH_WANTED, secHUD)
+	src.plane_holder.set_vis(VIS_CH_IMPTRACK, secHUD)
+	src.plane_holder.set_vis(VIS_CH_IMPLOYAL, secHUD)
+	src.plane_holder.set_vis(VIS_CH_IMPCHEM, secHUD)
 //Translator
 	src.remove_language(LANGUAGE_UNATHI)
 	src.remove_language(LANGUAGE_SIIK)
