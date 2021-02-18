@@ -495,6 +495,22 @@
 	name = "\improper Entertainment Stage"
 	icon_state = "library"
 
+/area/tether/surfacebase/funny/clownoffice
+	name = "\improper Clown's Office"
+	icon_state = "library"
+
+/area/tether/surfacebase/funny/mimeoffice
+	name = "\improper Mime's Office"
+	icon_state = "library"
+
+/area/tether/surfacebase/funny/tomfoolery
+	name = "\improper Tomfoolery Closet"
+	icon_state = "library"
+
+/area/tether/surfacebase/funny/hideyhole
+	name = "\improper Pilferer's Hole"
+	icon_state = "library"
+
 /area/tether/surfacebase/entertainment/backstage
 	name = "\improper Entertainment Backstage"
 	icon_state = "library"
@@ -1297,6 +1313,11 @@
 /area/tether/exploration/showers
 	name = "\improper Exploration Showers"
 	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+
+/area/tether/exploration/pilot_office
+	name = "\improper Pilot's Office"
+	sound_env = STANDARD_STATION
 	ambience = AMBIENCE_GENERIC
 
 /area/shuttle/excursion

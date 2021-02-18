@@ -299,7 +299,7 @@ YW CHANGE STOP*/
 
 // Body shape traits
 /datum/trait/taller
-	name = "Taller"
+	name = "Tall"
 	desc = "Your body is taller than average."
 	cost = 0
 	custom_only = FALSE
@@ -311,7 +311,7 @@ YW CHANGE STOP*/
 	H.update_transform()
 
 /datum/trait/tall
-	name = "Tall"
+	name = "Slightly Tall"
 	desc = "Your body is a bit taller than average."
 	cost = 0
 	custom_only = FALSE
@@ -323,7 +323,7 @@ YW CHANGE STOP*/
 	H.update_transform()
 
 /datum/trait/short
-	name = "Short"
+	name = "Slightly Short"
 	desc = "Your body is a bit shorter than average."
 	cost = 0
 	custom_only = FALSE
@@ -335,8 +335,8 @@ YW CHANGE STOP*/
 	H.update_transform()
 
 /datum/trait/shorter
-	name = "Shorter"
-	desc = "You are shorter than average."
+	name = "Short"
+	desc = "Your body is shorter than average."
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("icon_scale_y" = 0.915)
@@ -346,21 +346,9 @@ YW CHANGE STOP*/
 	..(S,H)
 	H.update_transform()
 
-/datum/trait/fat
-	name = "Overweight"
-	desc = "You are heavier than average."
-	cost = 0
-	custom_only = FALSE
-	var_changes = list("icon_scale_x" = 1.054)
-	excludes = list(/datum/trait/obese, /datum/trait/thin, /datum/trait/thinner)
-
-/datum/trait/fat/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.update_transform()
-
 /datum/trait/obese
-	name = "Obese"
-	desc = "You are much heavier than average."
+	name = "Very Bulky"
+	desc = "Your body is much wider than average."
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("icon_scale_x" = 1.095)
@@ -370,9 +358,21 @@ YW CHANGE STOP*/
 	..(S,H)
 	H.update_transform()
 
+/datum/trait/fat
+	name = "Bulky"
+	desc = "Your body is wider than average."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("icon_scale_x" = 1.054)
+	excludes = list(/datum/trait/obese, /datum/trait/thin, /datum/trait/thinner)
+
+/datum/trait/fat/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.update_transform()
+
 /datum/trait/thin
 	name = "Thin"
-	desc = "You are skinnier than average."
+	desc = "Your body is thinner than average."
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("icon_scale_x" = 0.945)
@@ -384,7 +384,7 @@ YW CHANGE STOP*/
 
 /datum/trait/thinner
 	name = "Very Thin"
-	desc = "You are much skinnier than average."
+	desc = "Your body is much thinner than average."
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("icon_scale_x" = 0.905)
