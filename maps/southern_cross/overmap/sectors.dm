@@ -66,7 +66,7 @@
 		"d2_near_sw",
 		"d3_near_w",
 		"d3_near_se",
-		"stargazer_dock"
+		"baby_mammoth_dock"
 		)
 
 /obj/effect/overmap/visitable/planet/Sif/Initialize()

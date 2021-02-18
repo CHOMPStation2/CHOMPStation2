@@ -13,6 +13,8 @@
 
 	if(stat != CONSCIOUS)
 		return
+	init_vore()
+	T.init_vore()
 	// Verbs are horrifying. They don't call overrides. So we're stuck with this.
 	if(istype(src, /mob/living/simple_mob/animal/passive/mouse) && !T.ckey)
 		// Mice can't eat logged out players!

@@ -39,7 +39,7 @@
 	var/is_wet = TRUE						// Is this belly's insides made of slimy parts?
 	var/wet_loop = TRUE						// Does the belly have a fleshy loop playing?
 	var/obj/item/weapon/storage/vore_egg/ownegg	// Is this belly creating an egg?
-	var/egg_type = "egg"					// Default egg type and path.
+	var/egg_type = "Egg"					// Default egg type and path.
 	var/egg_path = /obj/item/weapon/storage/vore_egg
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
@@ -187,7 +187,8 @@
 		"fullness3_messages",
 		"fullness4_messages",
 		"fullness5_messages",
-		"vorespawn_blacklist"     //CHOMP end of variables from CHOMP
+		"vorespawn_blacklist",     //CHOMP end of variables from CHOMP
+		"egg_type"
 		)
 
 /*These have been pulled from the above list as these were chomp edits for liquid belly stuff. This needs to be ported back in for TGUI port
@@ -821,6 +822,7 @@
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
+	dupe.egg_type = egg_type
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings

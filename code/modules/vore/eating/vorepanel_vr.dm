@@ -18,6 +18,7 @@
 	if(!vorePanel)
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
+	init_vore()	//Returns if the organs already exist anyway.
 
 	vorePanel.tgui_interact(src)
 
@@ -150,6 +151,7 @@
 			"release_sound" = selected.release_sound,
 			// "messages" // TODO
 			"can_taste" = selected.can_taste,
+			"egg_type" = selected.egg_type,
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
@@ -165,6 +167,7 @@
 			if(selected.mode_flags & selected.mode_flag_list[flag_name])
 				data["selected"]["addons"].Add(flag_name)
 
+		data["selected"]["egg_type"] = selected.egg_type
 		data["selected"]["contaminates"] = selected.contaminates
 		data["selected"]["contaminate_flavor"] = null
 		data["selected"]["contaminate_color"] = null
@@ -696,6 +699,13 @@
 			host.vore_selected.contamination_color = new_color
 			host.vore_selected.items_preserved.Cut() //To re-contaminate for new color
 			. = TRUE
+		if("b_egg_type")
+			var/list/menu_list = global_vore_egg_types.Copy()
+			var/new_egg_type = input("Choose Egg Type (currently [host.vore_selected.egg_type])") as null|anything in menu_list
+			if(!new_egg_type)
+				return FALSE
+			host.vore_selected.egg_type = new_egg_type
+			. = TRUE
 		if("b_desc")
 			var/new_desc = html_encode(input(usr,"Belly Description ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc) as message|null)
 
@@ -929,7 +939,6 @@
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
 			. = TRUE
-			
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
 			. = TRUE

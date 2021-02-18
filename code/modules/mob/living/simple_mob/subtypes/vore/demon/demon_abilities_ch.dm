@@ -22,3 +22,27 @@
 	blood_spawn = world.time
 
 	return
+
+/mob/living/simple_mob/vore/demon/verb/toggle_laugh()
+	set name = "Toggle Auto Laugh"
+	set desc = "Toggles whether the demon will automatically laugh when interacted with."
+	set category = "Abilities"
+	
+	enable_autolaugh = !enable_autolaugh
+	if(enable_autolaugh)
+		to_chat(src,"<span class='warning'>Autolaugh has been toggled on</span>")
+	else
+		to_chat(src,"<span class='warning'>Autolaugh has been toggled off</span>")
+
+/mob/living/simple_mob/vore/demon/verb/manual_laugh()
+	set name = "Laugh"
+	set desc = "Plays the laugh track."
+	set category = "Abilities"
+	
+	if(!enable_autolaugh) //yeah this is kinda sorta dirty but id rather use a bool over something else here to control this.
+		enable_autolaugh = !enable_autolaugh
+		laugh()
+		enable_autolaugh = !enable_autolaugh
+	else
+		laugh()
+	to_chat(src,"<span class='warning'>You laugh!</span>") //lets add some fluff response for clicking the feel good button.
