@@ -262,7 +262,7 @@
 	..()
 	if(prob(1))
 		new /obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel(src)
-		return QDEL_HINT_QUEUE
+		qdel(src) //Dispose of the body, let no one find it.
 		
 /obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel/Initialize()
 	. = ..()
