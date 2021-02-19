@@ -13,9 +13,9 @@
 	if(M.confused)
 		M.Confuse(-8*removed)
 	if(M.eye_blurry)
-		M.eye_blurry = max(M.eye_blurry - 8*removed, 0)
+		M.eye_blurry = max(M.eye_blurry - 25*removed, 0)
 	if(M.jitteriness)
-		M.make_jittery(max(M.jitteriness - 8*removed,0))
+		M.make_jittery(max(M.jitteriness - 25*removed,0))
 
 /datum/reagent/numbing_enzyme
 	name = "Numbing Enzyme"
@@ -92,5 +92,11 @@
 
 /datum/reagent/sleevingcure/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.remove_a_modifier_of_type(/datum/modifier/resleeving_sickness)
+<<<<<<< HEAD
 	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
 */ //CHOMPStation removal end
+||||||| parent of d0f929ce44... Merge pull request #9754 from TheFurryFeline/patch-26
+	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
+=======
+	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
+>>>>>>> d0f929ce44... Merge pull request #9754 from TheFurryFeline/patch-26
