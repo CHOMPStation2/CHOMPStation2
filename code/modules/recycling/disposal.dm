@@ -31,7 +31,7 @@
 // find the attached trunk (if present) and init gas resvr.
 /obj/machinery/disposal/Initialize()
 	. = ..()
-	
+
 	trunk = locate() in loc
 	if(!trunk)
 		mode = 0
