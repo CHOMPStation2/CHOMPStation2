@@ -11,6 +11,17 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+||||||| parent of 91fed8751e... Merge pull request #9769 from Heroman3003/whitelistupdate
+cgr - Protean
+chargae - Protean
+chillyfang - Black-Eyed Shadekin
+=======
+camanis - Protean
+cgr - Protean
+chargae - Protean
+chillyfang - Black-Eyed Shadekin
+>>>>>>> 91fed8751e... Merge pull request #9769 from Heroman3003/whitelistupdate
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
@@ -30,9 +41,18 @@ oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
+<<<<<<< HEAD
 rapidvalj - Vox
 rapidvalj - Common Skrellian
 rapidvalj - High Skrellian
+||||||| parent of 91fed8751e... Merge pull request #9769 from Heroman3003/whitelistupdate
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+=======
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+residentcody - Protean
+>>>>>>> 91fed8751e... Merge pull request #9769 from Heroman3003/whitelistupdate
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
 rykkastormheart - Xenochimera
@@ -45,7 +65,12 @@ silvertalismen - Diona
 silvertalismen - Vox
 silvertalismen - Xenochimera
 storesund97 - Protean
+<<<<<<< HEAD
 sharplight - Protean
+||||||| parent of 91fed8751e... Merge pull request #9769 from Heroman3003/whitelistupdate
+=======
+syzygyrior - Black-Eyed Shadekin
+>>>>>>> 91fed8751e... Merge pull request #9769 from Heroman3003/whitelistupdate
 tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
 tastypred - Protean
