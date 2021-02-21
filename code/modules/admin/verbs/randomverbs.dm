@@ -515,7 +515,25 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(new_character.mind)
 		new_character.mind.loaded_from_ckey = picked_ckey
 		new_character.mind.loaded_from_slot = picked_slot
+<<<<<<< HEAD
 	//VOREStation Add End
+||||||| parent of 278c3eaa3f... Merge pull request #9761 from VOREStation/upstream-merge-7891
+
+	for(var/lang in picked_client.prefs.alternate_languages)
+		var/datum/language/chosen_language = GLOB.all_languages[lang]
+		if(chosen_language)
+			if(is_lang_whitelisted(src,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
+				new_character.add_language(lang)
+	//VOREStation Add End
+=======
+	//VOREStation Add End
+
+	for(var/lang in picked_client.prefs.alternate_languages)
+		var/datum/language/chosen_language = GLOB.all_languages[lang]
+		if(chosen_language)
+			if(is_lang_whitelisted(src,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
+				new_character.add_language(lang)
+>>>>>>> 278c3eaa3f... Merge pull request #9761 from VOREStation/upstream-merge-7891
 
 	//If desired, apply equipment.
 	if(equipment)

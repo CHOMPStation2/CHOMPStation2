@@ -113,7 +113,15 @@
 	icon_state = "slag"
 	material = null
 
+<<<<<<< HEAD
 /obj/item/weapon/ore/New()
+||||||| parent of 278c3eaa3f... Merge pull request #9761 from VOREStation/upstream-merge-7891
+/obj/item/weapon/ore/New()
+	..()
+=======
+/obj/item/weapon/ore/Initialize()
+	..()
+>>>>>>> 278c3eaa3f... Merge pull request #9761 from VOREStation/upstream-merge-7891
 	randpixel_xy()
 
 /obj/item/weapon/ore/attackby(obj/item/weapon/W as obj, mob/user as mob)
