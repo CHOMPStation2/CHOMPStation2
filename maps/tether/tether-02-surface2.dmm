@@ -31457,6 +31457,7 @@
 /obj/item/device/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
+<<<<<<< HEAD
 "bhJ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -31466,6 +31467,16 @@
 	},
 /turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/tether/surfacebase/reading_room)
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+"bhJ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+=======
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 "bhK" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -34320,12 +34331,24 @@
 /obj/machinery/door/airlock/maintenance/medical,
 /turf/simulated/floor/tiled/techfloor,
 /area/tether/surfacebase/medical/breakroom)
+<<<<<<< HEAD
 "bpL" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/wall,
 /area/tether/surfacebase/medical/breakroom)
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+"bpL" = (
+/obj/effect/decal/cleanable/filth,
+/obj/item/weapon/bone/skull,
+/mob/living/simple_mob/vore/aggressive/rat{
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	},
+/turf/simulated/floor/water/indoors,
+/area/tether/surfacebase/fish_farm)
+=======
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 "bpO" = (
 /obj/structure/railing{
 	dir = 4
@@ -34472,6 +34495,66 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
+<<<<<<< HEAD
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+"fLW" = (
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Sewage Processing"
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+"fWy" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/structure/closet/crate/trashcart,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+"glx" = (
+/obj/structure/cable/orange{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/obj/structure/cable/orange,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/reading_room)
+"grL" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+=======
+"fLW" = (
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Sewage Processing"
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+"glx" = (
+/obj/structure/cable/orange{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/obj/structure/cable/orange,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/reading_room)
+"grL" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 "gwn" = (
 /obj/item/trash/snack_bowl,
 /obj/item/trash/sosjerky,
@@ -34736,6 +34819,50 @@
 /obj/item/weapon/flame/lighter/zippo/moff,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
+<<<<<<< HEAD
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+"sKR" = (
+/obj/structure/disposalpipe/broken,
+/obj/effect/decal/cleanable/filth,
+/obj/effect/landmark/teleplumb_exit,
+/turf/simulated/floor/water/indoors,
+/area/tether/surfacebase/fish_farm)
+"sLx" = (
+/obj/effect/decal/cleanable/filth,
+/obj/item/weapon/bone,
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/hole{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/hole/right{
+	dir = 4
+	},
+/turf/simulated/floor/water/indoors,
+/area/tether/surfacebase/fish_farm)
+=======
+"swg" = (
+/obj/structure/railing,
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+"sLx" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/hole{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/hole/right{
+	dir = 4
+	},
+/turf/simulated/floor/water/indoors,
+/area/tether/surfacebase/fish_farm)
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 "sVf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -34841,6 +34968,31 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
+<<<<<<< HEAD
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+"uFL" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+=======
+"uFL" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/fish_farm)
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 "uHy" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -34870,6 +35022,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -34928,6 +35081,17 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
 =======
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+/turf/simulated/floor/water/indoors,
+/area/tether/surfacebase/fish_farm)
+"vje" = (
+/obj/structure/sign/biohazard,
+/turf/simulated/wall,
+/area/tether/surfacebase/fish_farm)
+=======
+/turf/simulated/floor/water/indoors,
+/area/tether/surfacebase/fish_farm)
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 "voE" = (
 /obj/effect/floor_decal/corner_techfloor_grid,
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -40294,11 +40458,25 @@ adt
 adt
 adt
 adt
+<<<<<<< HEAD
 adt
 adt
 adt
 adt
 adt
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+azs
+awN
+bhJ
+fFF
+azs
+=======
+azs
+ayw
+ayw
+ayw
+azs
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 adt
 adt
 adt
@@ -40436,11 +40614,25 @@ adt
 adt
 adt
 adt
+<<<<<<< HEAD
 adt
 adt
 adt
 adt
 adt
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+azs
+axO
+bpL
+sKR
+vje
+=======
+azs
+ayw
+ayw
+ayw
+azs
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 adt
 adt
 adt
@@ -40578,11 +40770,25 @@ adt
 adt
 adt
 adt
+<<<<<<< HEAD
 adt
 adt
 adt
 adt
 adt
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+azs
+axO
+sLx
+uFL
+azs
+=======
+azs
+swg
+sLx
+uFL
+azs
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 adt
 adt
 adt
@@ -41009,6 +41215,18 @@ adt
 adt
 adt
 azs
+<<<<<<< HEAD
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+awN
+flk
+gGm
+vje
+=======
+awN
+flk
+gGm
+azs
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 aBd
 aCn
 aDk
@@ -41146,10 +41364,22 @@ ajV
 adt
 adt
 adt
+<<<<<<< HEAD
 adt
 adt
 adt
 adt
+||||||| parent of a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
+azs
+axO
+viY
+fWy
+=======
+azs
+axO
+viY
+bOW
+>>>>>>> a5f6757a6b... Merge pull request #9778 from Novacat/nova-basicfixes
 azs
 azq
 aAw
