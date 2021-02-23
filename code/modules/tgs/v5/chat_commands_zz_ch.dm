@@ -81,4 +81,5 @@
 		return "[sender.friendly_name], the server's database is either not responding or there's no such Discord ID in the database."
 
 	var/user_key = query.item[1]
+	qdel(query)
 	return "<@[params]>'s ckey is [user_key]"
