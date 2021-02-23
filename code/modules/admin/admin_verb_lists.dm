@@ -360,7 +360,6 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/quick_nif, //CHOMPEdit
-	/datum/admins/proc/quick_authentic_nif, //CHOMPEdit
 	/client/proc/admin_teleport,		//CHOMPEdit
 	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
 )
