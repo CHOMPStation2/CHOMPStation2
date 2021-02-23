@@ -56,7 +56,7 @@
 	if(!query.NextRow())
 		qdel(query)
 		return "[sender.friendly_name], the server's database is either not responding or there's no such ckey in the database."
-	
+
 	if(!query.item[1])
 		qdel(query)
 		return "[sender.friendly_name], [key_to_find] is in the database, but has no discord ID associated with them."
@@ -82,3 +82,13 @@
 
 	var/user_key = query.item[1]
 	return "<@[params]>'s ckey is [user_key]"
+
+
+//modded fax code to properly handle non existing files before accessing the void
+/datum/tgs_chat_command/readfax/Run(sender, params)
+	var/list/all_params = splittext(params, " ")
+	var/faxid = all_params[1]
+	if(!all_params[1] || !fexists("[config.fax_export_dir]/fax_[faxid].html"))
+		return "I’m sorry Dave, I’m afraid I can’t do that"
+	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+	return "FAX: ```[strip_html_properly(faxmsg)]```"
