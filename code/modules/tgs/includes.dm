@@ -16,4 +16,5 @@
 #include "v5\api_vgs.dm" // VOREStation Edit - Include here so it has access to v5 defines
 #include "v5\commands.dm"
 #include "v5\chat_commands.dm"
+#include "v5\chat_commands_zz_ch.dm"
 #include "v5\undefs.dm"
