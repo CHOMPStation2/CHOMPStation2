@@ -73,7 +73,7 @@
 	if(!params)
 		return "[sender.friendly_name], you need to provide a Discord ID at the end of the command. To obtain someone's Discord ID, you need to enable developer mode on discord, and then right click on their name and click Copy ID."
 
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=params))
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=params))
 	query.Execute()
 
 	if(!query.NextRow())
