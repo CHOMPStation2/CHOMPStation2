@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `death` (
   `fireloss` int(11) DEFAULT NULL,
   `oxyloss` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=13925 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=13926 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- Data exporting was unselected.
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `erro_attacklog` (
   `mob` varchar(128) DEFAULT NULL,
   `message` varchar(1024) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=596 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=886 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `erro_connection_log` (
   `ip` varchar(64) NOT NULL,
   `computerid` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12319 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12353 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `erro_dialog` (
   `type` varchar(32) NOT NULL,
   `message` text NOT NULL,
   PRIMARY KEY (`mid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1739 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3345 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `erro_player` (
   `ip` varchar(18) NOT NULL,
   `computerid` varchar(32) NOT NULL,
   `lastadminrank` varchar(32) NOT NULL DEFAULT 'Player',
-  `discord_id` varchar(256) NOT NULL,
+  `discord_id` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `ckey` (`ckey`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1349 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
@@ -274,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `population` (
   `admincount` int(11) DEFAULT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3613 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3627 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 

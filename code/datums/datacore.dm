@@ -17,7 +17,7 @@
 	var/static/list/locked = list()
 
 
-/datum/datacore/proc/get_manifest(monochrome, OOC)
+/datum/datacore/proc/get_manifest(monochrome, OOC,var/snowflake = FALSE) //CHOMPStation Edit
 	var/list/heads = new()
 	var/list/sec = new()
 	var/list/eng = new()
@@ -40,8 +40,9 @@
 		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: [OOC?"#373737; color:white":"#DEF"]"]}
 	</style></head>
 	<table class="manifest" width='350px'>
+	[snowflake?"<tr><th colspan=3 style = \"background-color: #026e6a\"><b>Online players:</b> [TGS_CLIENT_COUNT]</th></tr><tr><th colspan=3 style = \"background-color: #027a76\"><b>Crew members:</b> [data_core.general.len]</th></tr><tr class='head'>":""]
 	<tr class='head'><th>Name</th><th>Rank</th><th>Activity</th></tr>
-	"}
+	"} //Also a chompstation edit with the snowflake stuff on line 43
 	var/even = 0
 	// sort mobs
 	for(var/datum/data/record/t in data_core.general)
