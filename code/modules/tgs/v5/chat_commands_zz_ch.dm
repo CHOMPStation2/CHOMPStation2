@@ -28,15 +28,17 @@
 	help_text = "Shows the current crew manifest"
 	admin_only = FALSE
 
-/datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
-	var/outp = "Crew Manifest:"
+/proc/ManifestToHtml()
+	var/html = ""
 	if(data_core)
-		data_core.get_manifest_list()
-	for(var/list/item in PDA_Manifest)
-		outp += "\n__**[item["cat"]]:**__"
-		for(var/list/person in item["elems"])
-			outp += "\n[person["name"]] -:- [person["rank"]]"
-	return outp
+		html = data_core.get_manifest(FALSE,TRUE,snowflake = TRUE)
+	else
+		html = "<b>ERROR: NO DATACORE</b>" //Could make the error more fancy later
+	rustg_file_write(html,"C:\\nodebot\\html.html")
+
+/datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
+	ManifestToHtml()
+	return "!!ManifestCompiled"
 
 /datum/tgs_chat_command/discordping
 	name = "discordping"
@@ -73,7 +75,7 @@
 	if(!params)
 		return "[sender.friendly_name], you need to provide a Discord ID at the end of the command. To obtain someone's Discord ID, you need to enable developer mode on discord, and then right click on their name and click Copy ID."
 
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=params))
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=params))
 	query.Execute()
 
 	if(!query.NextRow())
@@ -81,4 +83,5 @@
 		return "[sender.friendly_name], the server's database is either not responding or there's no such Discord ID in the database."
 
 	var/user_key = query.item[1]
+	qdel(query)
 	return "<@[params]>'s ckey is [user_key]"
