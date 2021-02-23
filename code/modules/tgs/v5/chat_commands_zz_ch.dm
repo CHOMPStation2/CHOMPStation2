@@ -28,18 +28,17 @@
 	help_text = "Shows the current crew manifest"
 	admin_only = FALSE
 
-/datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
-	var/outp = "Crew Manifest:"
-	var/list/total = list()
+/proc/ManifestToHtml()
+	var/html = ""
 	if(data_core)
-		data_core.get_manifest_list()
-	for(var/list/item in PDA_Manifest)
-		outp += "\n__**[item["cat"]]:**__"
-		for(var/list/person in item["elems"])
-			total |= person
-			outp += "\n[person["name"]] -:- [person["rank"]]"
+		html = data_core.get_manifest(FALSE,TRUE,snowflake = TRUE)
+	else
+		html = "<b>ERROR: NO DATACORE</b>" //Could make the error more fancy later
+	rustg_file_write(html,"C:\\nodebot\\html.html")
 
-	return "**Total crew members:** [total.len]\n" + outp
+/datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
+	ManifestToHtml()
+	return "!!ManifestCompiled"
 
 /datum/tgs_chat_command/discordping
 	name = "discordping"
