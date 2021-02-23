@@ -34,6 +34,7 @@
 	admin_log.Add(text)
 	if (config.log_admin)
 		WRITE_LOG(diary, "ADMINPM: [key_name(source)]->[key_name(dest)]: [html_decode(text)]")
+	world.TgsTargetedChatBroadcast("ADMINPM: [key_name(source)]->[key_name(dest)]: [html_decode(text)]", TRUE) //CHOMPEdit, bot shows all adminpms now
 
 /proc/log_debug(text)
 	if (config.log_debug)

@@ -46,8 +46,9 @@
 			query_string += "&sendername=[url_encode(sender.name)]"
 			query_string += "&sentname=[url_encode(sent.name)]"
 			world.Export("[config.chat_webhook_url]?[query_string]")
-	//YW EDIT
-	world.TgsTargetedChatBroadcast("FAX: [sanitize(faxname)] / [sanitize(sent.name)] - SENT BY: [sanitize(sender.name)] - FAXID: **[sanitize(faxid)]**", TRUE)
+	//YW EDIT //CHOMPEdit also
+	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+	world.TgsTargetedChatBroadcast("FAX: [sanitize(faxname)] / [sanitize(sent.name)] - SENT BY: [sanitize(sender.name)] - FAXID: **[sanitize(faxid)]** \n FAX: ```[strip_html_properly(faxmsg)]```", TRUE) 
 	//YW EDIT END
 
 //
