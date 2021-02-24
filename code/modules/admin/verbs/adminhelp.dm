@@ -1,5 +1,11 @@
 /client/var/datum/admin_help/current_ticket	//the current ticket the (usually) not-admin client is dealing with
 
+/proc/get_ahelp_channel()
+	var/datum/tgs_api/v5/api = TGS_READ_GLOBAL(tgs)
+	if(istype(api))
+		for(var/datum/tgs_chat_channel/channel in api.chat_channels)
+			if(channel.custom_tag == "ahelps")
+				return channel
 //
 //TICKET MANAGER
 //
@@ -190,9 +196,9 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/list/activemins = adm["present"]
 	var activeMins = activemins.len
 	if(is_bwoink)
-		world.TgsChatBroadcast("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", list("814243638800416799")) //CHOMPEdit
+		world.TgsChatBroadcast("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", get_ahelp_channel()) //CHOMPEdit
 	else
-		world.TgsChatBroadcast("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", list("814243638800416799")) //CHOMPEdit
+		world.TgsChatBroadcast("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", get_ahelp_channel()) //CHOMPEdit
 	//YW EDIT END
 	GLOB.ahelp_tickets.active_tickets += src
 
@@ -204,7 +210,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 /datum/admin_help/proc/AddInteraction(formatted_message)
 	var/curinteraction = "[gameTimestamp()]: [formatted_message]"
-	world.TgsChatBroadcast("ADMINHELP: TICKETID:[id] [strip_html_properly(curinteraction)]", list("814243638800416799")) //CHOMPEdit
+	world.TgsChatBroadcast("ADMINHELP: TICKETID:[id] [strip_html_properly(curinteraction)]", get_ahelp_channel()) //CHOMPEdit
 	_interactions += curinteraction
 
 //private
