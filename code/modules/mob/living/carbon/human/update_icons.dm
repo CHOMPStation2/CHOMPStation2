@@ -236,10 +236,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//Create a new, blank icon for our mob to use.
 	var/icon/stand_icon = new(species.icon_template ? species.icon_template : 'icons/mob/human.dmi', icon_state = "blank")
 
-	var/g = "male"
-	if(gender == FEMALE)
-		g = "female"
-
+	var/g = (gender == MALE ? "male" : "female")
 	var/icon_key = "[species.get_race_key(src)][g][s_tone][r_skin][g_skin][b_skin]"
 	if(lip_style)
 		icon_key += "[lip_style]"
@@ -252,7 +249,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		icon_key += "[r_eyes], [g_eyes], [b_eyes]"
 	var/obj/item/organ/external/head/head = organs_by_name[BP_HEAD]
 	if(head)
-		icon_key += "[head.eye_icon]"
+		if(!istype(head, /obj/item/organ/external/stump))
+			icon_key += "[head.eye_icon]"
 	for(var/organ_tag in species.has_limbs)
 		var/obj/item/organ/external/part = organs_by_name[organ_tag]
 		if(isnull(part) || part.is_stump() || part.is_hidden_by_tail()) //VOREStation Edit allowing tails to prevent bodyparts rendering, granting more spriter freedom for taur/digitigrade stuff.

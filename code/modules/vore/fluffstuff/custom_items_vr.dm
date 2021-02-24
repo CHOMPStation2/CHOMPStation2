@@ -1228,7 +1228,7 @@
 	desc = "A standard vacuum-flask filled with good and expensive drink."
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/viktor/Initialize()
-	..()
+	. = ..()
 	reagents.add_reagent("pwine", 60)
 
 //RadiantAurora: Tiemli Kroto
