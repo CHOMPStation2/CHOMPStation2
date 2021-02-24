@@ -5,7 +5,7 @@
 	if(istype(api))
 		for(var/datum/tgs_chat_channel/channel in api.chat_channels)
 			if(channel.custom_tag == "ahelps")
-				return channel
+				return list(channel)
 //
 //TICKET MANAGER
 //
