@@ -79,7 +79,7 @@
 
 /mob/living/simple_mob/vore/demon/verb/toggle_sizespell()
 	set name = "Shrink/Grow Amount"
-	set desc = "Changes the amount you grow/shrik people."
+	set desc = "Changes the amount you grow/shrink people."
 	set category = "Abilities"
 
 	var/size_select = input("Put the desired size (25-200%)", "Set Size", size_amount * 100) as num //Stolen from sizegun code
@@ -87,10 +87,7 @@
 		to_chat(usr, "<span class='notice'>Invalid size.</span>")
 		return
 	size_amount = (size_select/100)
-	to_chat(usr, "<span class='notice'>You set the size to [size_select]%</span>")
-
-	var/sizetopercent = size_amount*100
-	to_chat(src,"<span class='warning'>Size spell set to [sizetopercent]%</span>") //Telling the user the new amount
+	to_chat(src,"<span class='notice'>Size spell set to [size_select]%</span>") //Telling the user the new amount
 
 /mob/living/simple_mob/vore/demon/verb/demon_bite()
 	set name = "Mindbreaker Bite"
