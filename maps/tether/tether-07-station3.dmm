@@ -22143,10 +22143,12 @@
 "doD" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/handrail,
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = 24
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/excursion/cargo)
@@ -22996,12 +22998,12 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 8
 	},
-/obj/structure/closet/emergsuit_wall{
-	dir = 1;
-	pixel_y = -32
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/excursion/general)
+"hBg" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/excursion/cargo)
 "hIb" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -24557,7 +24559,9 @@
 /area/shuttle/excursion/general)
 "qEn" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/handrail,
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/excursion/cargo)
 "qJK" = (
@@ -36516,9 +36520,9 @@ abY
 acE
 acK
 acK
-adj
-adj
-adj
+acK
+acK
+acK
 acK
 acK
 acK
@@ -37366,7 +37370,7 @@ aaa
 abe
 acs
 acF
-adj
+qxW
 qEn
 oYj
 qTB
@@ -37508,8 +37512,8 @@ aaa
 abe
 abY
 acE
-adj
-qEn
+qxW
+hBg
 fQo
 lSD
 eQX
@@ -37650,7 +37654,7 @@ aaa
 abe
 acA
 acG
-adj
+qxW
 doD
 vpU
 utX

@@ -190,9 +190,9 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/list/activemins = adm["present"]
 	var activeMins = activemins.len
 	if(is_bwoink)
-		world.TgsTargetedChatBroadcast("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", TRUE)
+		world.TgsChatBroadcast("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", list("814243638800416799")) //CHOMPEdit
 	else
-		world.TgsTargetedChatBroadcast("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", TRUE)
+		world.TgsChatBroadcast("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", list("814243638800416799")) //CHOMPEdit
 	//YW EDIT END
 	GLOB.ahelp_tickets.active_tickets += src
 
@@ -203,7 +203,9 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	return ..()
 
 /datum/admin_help/proc/AddInteraction(formatted_message)
-	_interactions += "[gameTimestamp()]: [formatted_message]"
+	var/curinteraction = "[gameTimestamp()]: [formatted_message]"
+	world.TgsChatBroadcast("ADMINHELP: TICKETID:[id] [strip_html_properly(curinteraction)]", list("814243638800416799")) //CHOMPEdit
+	_interactions += curinteraction
 
 //private
 /datum/admin_help/proc/FullMonty(ref_src)
