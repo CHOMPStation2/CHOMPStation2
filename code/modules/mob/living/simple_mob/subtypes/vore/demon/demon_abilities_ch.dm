@@ -93,7 +93,7 @@
 	to_chat(src,"<span class='warning'>Size spell set to [sizetopercent]%</span>") //Telling the user the new amount
 
 /mob/living/simple_mob/vore/demon/verb/demon_bite()
-	set name = "Minbreaker Bite"
+	set name = "Mindbreaker Bite"
 	set category = "Abilities"
 	set desc = "Inject mindbreaker into your grabbed prey!"
 	set popup_menu = FALSE // Stop licking by accident! //Yes this is from lick code, sue me.
