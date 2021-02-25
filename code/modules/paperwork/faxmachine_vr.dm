@@ -54,6 +54,8 @@
  * Call the chat webhook to transmit a notification of an admin fax to the admin chat.
  */
 /obj/machinery/photocopier/faxmachine/proc/message_chat_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/faxid, font_colour="#006100")
+	if(config.discord_faxes_disabled) //CHOMPEdit
+		return
 	if (config.chat_webhook_url)
 		spawn(0)
 			var/query_string = "type=fax"
@@ -70,12 +72,26 @@
 		var/obj/item/weapon/paper_bundle/B = sent
 		faxid = copytext(faxid,1,idlen-2)
 		var/faxids = "FAXMULTIID: [faxid]_0"
-		for(var/page = 1, page <= B.pages.len, page++)
-			faxids+= "|[faxid]_[page]"
-		world.TgsTargetedChatBroadcast("MULTIFAX: [sanitize(faxname)] / [sanitize(sent.name)] - SENT BY: [sanitize(sender.name)] - [faxids]", TRUE) 
+		var/contents = ""
 
-	
-	world.TgsTargetedChatBroadcast("FAX: [sanitize(faxname)] / [sanitize(sent.name)] - SENT BY: [sanitize(sender.name)] - FAXID: **[sanitize(faxid)]**", TRUE) 
+		if((!config.nodebot_enabled) && config.discord_faxes_autoprint)
+			var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid]_0.html")
+			contents += "\nFAX: ```[strip_html_properly(faxmsg)]```"
+
+		for(var/page = 1, page <= B.pages.len, page++)
+			var/curid = "[faxid]_[page]"
+			faxids+= "|[curid]"
+			if((!config.nodebot_enabled) && config.discord_faxes_autoprint)
+				var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[curid].html")
+				contents += "\nFAX PAGE [page]: ```[strip_html_properly(faxmsg)]```"
+
+		world.TgsTargetedChatBroadcast("MULTIFAX: [sanitize(faxname)] / [sanitize(sent.name)] - SENT BY: [sanitize(sender.name)] - [faxids] [contents]", TRUE) 
+	else
+		var/contents = ""
+		if((!config.nodebot_enabled) && config.discord_faxes_autoprint)
+			var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+			contents += "\nFAX: ```[strip_html_properly(faxmsg)]```"
+		world.TgsTargetedChatBroadcast("FAX: [sanitize(faxname)] / [sanitize(sent.name)] - SENT BY: [sanitize(sender.name)] - FAXID: **[sanitize(faxid)]** [contents]", TRUE) 
 	//YW EDIT END
 
 //
