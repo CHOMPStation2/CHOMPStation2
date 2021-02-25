@@ -42,33 +42,33 @@
 
 /datum/trait/deep_sleeper
 	name = "Deep Sleeper"
-	desc = "When you fall asleep, it takes you twice as long to wake up."
+	desc = "When you fall asleep, it takes you four times as long to wake up."
 	cost = -1
-	var_changes = list("waking_speed" = 0.5)
+	var_changes = list("waking_speed" = 0.25)
 
 /datum/trait/low_blood_sugar
 	name = "Low blood sugar"
 	desc = "If you let your nutrition get too low, you will start to experience adverse affects including hallucinations, unconsciousness, and weakness"
-	cost = -2
+	cost = -1
 	special_env = TRUE
 
 /datum/trait/low_blood_sugar/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.nutrition > 200)	//Sanity check because stupid bugs >:v
 		return
 	if((H.nutrition < 200) && prob(5))
-		if(H.nutrition > 150)
+		if(H.nutrition > 100)
 			to_chat(H,"<span class='warning'>You start to feel noticeably weak as your stomach rumbles, begging for more food. Maybe you should eat something to keep your blood sugar up</span>")
-		else if(H.nutrition > 100)
-			to_chat(H,"<span class='warning'>You begin to feel rather weak, and your stomach rumbles loudly. You feel lightheaded and it's getting harder to think. You really need to eat something.</span>")
 		else if(H.nutrition > 50)
+			to_chat(H,"<span class='warning'>You begin to feel rather weak, and your stomach rumbles loudly. You feel lightheaded and it's getting harder to think. You really need to eat something.</span>")
+		else if(H.nutrition > 25)
 			to_chat(H,"<span class='danger'>You're feeling very weak and lightheaded, and your stomach continously rumbles at you. You really need to eat something!</span>")
 		else
 			to_chat(H,"<span class='critical'>You're feeling extremely weak and lightheaded. You feel as though you might pass out any moment and your stomach is screaming for food by now! You should really find something to eat!</span>")
-	if((H.nutrition < 150) && prob(15))
+	if((H.nutrition < 100) && prob(10))
 		H.Confuse(20)
-	if((H.nutrition < 100) && prob(30))
-		H.hallucination = max(50,H.hallucination+10)
-	if((H.nutrition < 50) && prob(10))
+	if((H.nutrition < 50) && prob(25))
+		H.hallucination = max(50,H.hallucination+8)
+	if((H.nutrition < 25) && prob(5))
 		H.drowsyness = max(100,H.drowsyness+30)
 
 /datum/trait/blindness
