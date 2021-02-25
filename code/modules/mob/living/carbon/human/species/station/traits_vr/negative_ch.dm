@@ -65,9 +65,9 @@
 		else
 			to_chat(H,"<span class='critical'>You're feeling extremely weak and lightheaded. You feel as though you might pass out any moment and your stomach is screaming for food by now! You should really find something to eat!</span>")
 	if((H.nutrition < 100) && prob(10))
-		H.Confuse(20)
+		H.Confuse(10)
 	if((H.nutrition < 50) && prob(25))
-		H.hallucination = max(50,H.hallucination+8)
+		H.hallucination = max(30,H.hallucination+8)
 	if((H.nutrition < 25) && prob(5))
 		H.drowsyness = max(100,H.drowsyness+30)
 
