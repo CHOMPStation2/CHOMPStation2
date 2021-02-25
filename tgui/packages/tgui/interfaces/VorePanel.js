@@ -92,8 +92,8 @@ const digestModeToPreyMode = {
  *      </Flex.Item>
  *
  * NEW EDITS 2/25/21: COLORED BELLY OVERLAYS
- * 
- * LINE 5 - import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
+ * LINE 5:
+ *import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
  *
  * LINE 172 - <Window width={700} height={800} resizable>
  *
