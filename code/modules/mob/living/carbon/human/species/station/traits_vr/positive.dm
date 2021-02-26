@@ -216,9 +216,15 @@
 
 /datum/trait/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
 */
 //CHOMPStation Removal End
+||||||| parent of af5812a12a... Merge pull request #9793 from Heroman3003/silksong
+	H.verbs |= /mob/living/carbon/human/proc/lick_wounds 
+=======
+	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
+>>>>>>> af5812a12a... Merge pull request #9793 from Heroman3003/silksong
 
 /datum/trait/traceur
 	name = "Traceur"
@@ -269,3 +275,17 @@
 	desc = "You are able to move unhindered on snow."
 	cost = 2 //YW EDIT
 	var_changes = list("snow_movement" = -2)
+
+/datum/trait/weaver
+	name = "Weaver"
+	desc = "You can produce silk and create various articles of clothing and objects."
+	cost = 2
+	var_changes = list("is_weaver" = 1)
+
+/datum/trait/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.verbs |= /mob/living/carbon/human/proc/check_silk_amount
+	H.verbs |= /mob/living/carbon/human/proc/toggle_silk_production
+	H.verbs |= /mob/living/carbon/human/proc/weave_structure
+	H.verbs |= /mob/living/carbon/human/proc/weave_item
+	H.verbs |= /mob/living/carbon/human/proc/set_silk_color
