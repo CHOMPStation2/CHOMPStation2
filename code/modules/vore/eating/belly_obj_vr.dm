@@ -291,7 +291,7 @@
 	if(belly_fullscreen)
 		var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
 		F.icon_state = belly_fullscreen
-		// F.color = belly_fullscreen_color
+		F.color = belly_fullscreen_color //CHOMPEdit
 	else
 		L.clear_fullscreen("belly")
 
