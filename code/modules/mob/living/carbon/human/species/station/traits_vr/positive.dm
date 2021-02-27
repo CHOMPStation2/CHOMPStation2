@@ -216,15 +216,9 @@
 
 /datum/trait/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-<<<<<<< HEAD
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
 */
 //CHOMPStation Removal End
-||||||| parent of af5812a12a... Merge pull request #9793 from Heroman3003/silksong
-	H.verbs |= /mob/living/carbon/human/proc/lick_wounds 
-=======
-	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
->>>>>>> af5812a12a... Merge pull request #9793 from Heroman3003/silksong
 
 /datum/trait/traceur
 	name = "Traceur"
