@@ -283,6 +283,9 @@
 				//pref.dirty_synth = 0	//Just to be sure // Commented out because it allow for someone to take a synth-blacklisted trait CHOMP Edit
 				return TOPIC_REFRESH
 
+			if(pref.species in instance.banned_species)
+				alert("The trait you've selected cannot be taken by the species you've chosen!","Error")
+				return TOPIC_REFRESH
 
 			if(trait_choice in pref.pos_traits + pref.neu_traits + pref.neg_traits)
 				conflict = instance.name
