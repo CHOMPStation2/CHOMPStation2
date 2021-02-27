@@ -167,42 +167,57 @@ var/world_topic_spam_protect_time = world.timeofday
 			var/real_rank = make_list_rank(t.fields["real_rank"])
 
 			var/department = 0
+			var/active = 0	//CHOMPStation Edit Begin
+			for(var/mob/M in player_list)
+				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+					active = 1
+					break
+			var/isactive = active ? "Active" : "Inactive"
 			for(var/k in set_names)
 				if(real_rank in set_names[k])
 					if(!positions[k])
 						positions[k] = list()
-					positions[k][name] = rank
+					positions[k][name] = list(rank,isactive)
 					department = 1
 			if(!department)
 				if(!positions["misc"])
 					positions["misc"] = list()
-				positions["misc"][name] = rank
+				positions["misc"][name] = list(rank,isactive)
 
 		for(var/datum/data/record/t in data_core.hidden_general)
 			var/name = t.fields["name"]
 			var/rank = t.fields["rank"]
 			var/real_rank = make_list_rank(t.fields["real_rank"])
 
+			var/active = 0	//CHOMPStation Edit Begin
+			for(var/mob/M in player_list)
+				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+					active = 1
+					break
+			var/isactive = active ? "Active" : "Inactive"
+
 			var/datum/job/J = SSjob.get_job(real_rank)
 			if(J?.offmap_spawn)
 				if(!positions["off"])
 					positions["off"] = list()
-				positions["off"][name] = rank
+				positions["off"][name] = list(rank,isactive)
 
 		// Synthetics don't have actual records, so we will pull them from here.
 		for(var/mob/living/silicon/ai/ai in mob_list)
+			var/isactive = (ai.client && ai.client.inactivity <= 10 MINUTES) ? "Active" : "Inactive"
 			if(!positions["bot"])
 				positions["bot"] = list()
-			positions["bot"][ai.name] = "Artificial Intelligence"
+			positions["bot"][ai.name] = list("Artificial Intelligence",isactive)
 		for(var/mob/living/silicon/robot/robot in mob_list)
 			// No combat/syndicate cyborgs, no drones, and no AI shells.
+			var/isactive = (robot.client && robot.client.inactivity <= 10 MINUTES) ? "Active" : "Inactive"
 			if(robot.shell)
 				continue
 			if(robot.module && robot.module.hide_on_manifest)
 				continue
 			if(!positions["bot"])
 				positions["bot"] = list()
-			positions["bot"][robot.name] = "[robot.modtype] [robot.braintype]"
+			positions["bot"][robot.name] = list("[robot.modtype] [robot.braintype]",isactive) //CHOMPEdit end
 
 		for(var/k in positions)
 			positions[k] = list2params(positions[k]) // converts positions["heads"] = list("Bob"="Captain", "Bill"="CMO") into positions["heads"] = "Bob=Captain&Bill=CMO"
