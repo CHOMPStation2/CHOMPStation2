@@ -129,8 +129,14 @@ YW change end */
 	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
+<<<<<<< HEAD
 	var_changes = list("gets_food_nutrition" = 0) //The verb is given in human.dm
 	excludes = list(/datum/trait/bloodsucker_plus)
+||||||| parent of 7b5b76d379... Merge pull request #8808 from KillianKirilenko/kk-misc3
+	var_changes = list("gets_food_nutrition" = 0) //The verb is given in human.dm
+=======
+	var_changes = list("organic_food_coeff" = 0) //The verb is given in human.dm
+>>>>>>> 7b5b76d379... Merge pull request #8808 from KillianKirilenko/kk-misc3
 
 /datum/trait/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -184,11 +190,19 @@ YW change end */
 	desc = "You only gain nutrition from raw ore and refined minerals. There's nothing that sates the appetite better than precious gems, exotic or rare minerals and you have damn fine taste. Anything else is beneath you."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("gets_food_nutrition" = 0, "eat_minerals" = 1)
+	var_changes = list("organic_food_coeff" = 0, "eat_minerals" = 1)
 
 /datum/trait/gem_eater/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/eat_minerals
+	
+/datum/trait/synth_chemfurnace
+	name = "Biofuel Processor"
+	desc = "You are able to gain energy through consuming and processing normal food. Energy-dense foods such as protein bars and survival food will yield the best results."
+	cost = 0
+	custom_only = FALSE
+	can_take = SYNTHETICS
+	var_changes = list("organic_food_coeff" = 0, "synthetic_food_coeff" = 0.25)
 
 /datum/trait/glowing_eyes
 	name = "Glowing Eyes"
