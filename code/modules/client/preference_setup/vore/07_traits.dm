@@ -282,23 +282,9 @@
 
 			var/conflict = FALSE
 
-<<<<<<< HEAD
-			user.isSynthetic()	//Recheck just to be sure
-			if(pref.dirty_synth && instance.not_for_synths)//if you are a synth you can't take this trait.
-				alert("You cannot take this trait as a SYNTH.\
-				Please remove that trait, or pick another trait to add.","Error")
-				//pref.dirty_synth = 0	//Just to be sure // Commented out because it allow for someone to take a synth-blacklisted trait CHOMP Edit
-||||||| parent of 8b0c23c122... Merge pull request #9659 from KillianKirilenko/kk-misc4
-			user.isSynthetic()	//Recheck just to be sure
-			if(pref.dirty_synth && instance.not_for_synths)//if you are a synth you can't take this trait.
-				alert("You cannot take this trait as a SYNTH.\
-				Please remove that trait, or pick another trait to add.","Error")
-				pref.dirty_synth = 0	//Just to be sure
-=======
 			if(pref.dirty_synth && !(instance.can_take & SYNTHETICS))
 				alert("The trait you've selected can only be taken by organic characters!","Error")
-				pref.dirty_synth = 0	//Just to be sure
->>>>>>> 8b0c23c122... Merge pull request #9659 from KillianKirilenko/kk-misc4
+				//pref.dirty_synth = 0	//Just to be sure //CHOMPEdit this shit broke, stop.
 				return TOPIC_REFRESH
 
 			if(pref.gross_meatbag && !(instance.can_take & ORGANICS))
