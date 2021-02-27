@@ -93,7 +93,6 @@ var/global/list/string_slot_flags = list(
 	"holster" = SLOT_HOLSTER
 )
 
-//CHOMP Edit: This fix is taken from citadel station pr #2779. Fixes a "pretty horrific memory leak" that is called any time someone opens character creator.
 GLOBAL_LIST_EMPTY(mannequins)
 /proc/get_mannequin(var/ckey = "NULL")
 	var/mob/living/carbon/human/dummy/mannequin/M = GLOB.mannequins[ckey]
