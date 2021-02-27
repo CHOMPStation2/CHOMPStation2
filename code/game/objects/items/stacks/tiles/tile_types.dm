@@ -20,6 +20,7 @@
 	drop_sound = 'sound/items/drop/axe.ogg'
 	pickup_sound = 'sound/items/pickup/axe.ogg'
 
+<<<<<<< HEAD
 	var/datum/material/material						//CHOMPEDIT: Start, To make tiles have material variables
 	var/default_type = DEFAULT_WALL_MATERIAL
 	var/perunit = SHEET_MATERIAL_AMOUNT
@@ -27,6 +28,13 @@
 
 /obj/item/stack/tile/New()
 	..()
+||||||| parent of a55ce9bf09... Merge pull request #9772 from VOREStation/upstream-merge-7893
+/obj/item/stack/tile/New()
+	..()
+=======
+/obj/item/stack/tile/Initialize()
+	. = ..()
+>>>>>>> a55ce9bf09... Merge pull request #9772 from VOREStation/upstream-merge-7893
 	randpixel_xy()
 
 /*
