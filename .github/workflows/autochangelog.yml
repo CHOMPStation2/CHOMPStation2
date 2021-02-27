@@ -15,15 +15,8 @@ jobs:
         if: github.event.pull_request.merged == true
         steps:
           - uses: /actions/checkout@v2
-<<<<<<< HEAD
-||||||| parent of 175cf74d47... Merge pull request #9506 from VOREStation/upstream-merge-7806
             with:
                 ref: ${{ github.head_ref }}
-                token: ${{ secrets.Autochangelog_Autocommit_Token }}
-=======
-            with:
-                ref: ${{ github.head_ref }}
->>>>>>> 175cf74d47... Merge pull request #9506 from VOREStation/upstream-merge-7806
           - name: Ensure +x on CI directory
             run: |
                 chmod -R +x ./tools/ci
