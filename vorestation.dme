@@ -2814,13 +2814,9 @@
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\positive.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\positive_ch.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\trait.dm"
-<<<<<<< HEAD
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\trait_ch.dm"
-||||||| parent of af5812a12a... Merge pull request #9793 from Heroman3003/silksong
-=======
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\weaver_objs.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\weaver_recipies.dm"
->>>>>>> af5812a12a... Merge pull request #9793 from Heroman3003/silksong
 #include "code\modules\mob\living\carbon\human\species\virtual_reality\avatar.dm"
 #include "code\modules\mob\living\carbon\human\species\virtual_reality\opaque_form.dm"
 #include "code\modules\mob\living\carbon\human\species\xenomorphs\alien_powers.dm"
@@ -3955,13 +3951,8 @@
 #include "code\modules\vore\hook-defs_vr.dm"
 #include "code\modules\vore\trycatch_vr.dm"
 #include "code\modules\vore\appearance\preferences_vr.dm"
-<<<<<<< HEAD
 #include "code\modules\vore\appearance\spider_taur_powers_vr.dm"
 #include "code\modules\vore\appearance\sprite_accessories_ch.dm"
-||||||| parent of af5812a12a... Merge pull request #9793 from Heroman3003/silksong
-#include "code\modules\vore\appearance\spider_taur_powers_vr.dm"
-=======
->>>>>>> af5812a12a... Merge pull request #9793 from Heroman3003/silksong
 #include "code\modules\vore\appearance\sprite_accessories_taur_vr.dm"
 #include "code\modules\vore\appearance\sprite_accessories_taur_yw.dm"
 #include "code\modules\vore\appearance\sprite_accessories_vr.dm"
