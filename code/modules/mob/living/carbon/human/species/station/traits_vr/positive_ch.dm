@@ -54,7 +54,7 @@
 	cost = 3
 	var_changes = list("blood_volume" = 840)
 	excludes = list(/datum/trait/more_blood_extreme,/datum/trait/less_blood,/datum/trait/less_blood_extreme)
-	not_for_synths = TRUE
+	can_take = ORGANICS
 
 /datum/trait/more_blood_extreme
 	name = "Very high blood volume"
@@ -62,7 +62,7 @@
 	cost = 6
 	var_changes = list("blood_volume" = 1400)
 	excludes = list(/datum/trait/more_blood,/datum/trait/less_blood,/datum/trait/less_blood_extreme)
-	not_for_synths = TRUE
+	can_take = ORGANICS
 
 /datum/trait/heavyweight
 	name = "Heavyweight"
@@ -164,7 +164,7 @@
 	desc = "When you get critically damaged, you'll have an adrenaline rush before going down, giving you another chance to finish the fight, or get to safety."
 	cost = 6
 	special_env = TRUE
-	not_for_synths = TRUE
+	can_take = ORGANICS
 	var/last_adrenaline_rush
 
 /datum/trait/adrenaline_rush/handle_environment_special(var/mob/living/carbon/human/H)

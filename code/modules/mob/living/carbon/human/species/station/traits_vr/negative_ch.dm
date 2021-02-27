@@ -18,7 +18,7 @@
 	cost = -3
 	var_changes = list("blood_volume" = 375)
 	excludes = list(/datum/trait/less_blood_extreme,/datum/trait/more_blood,/datum/trait/more_blood_extreme)
-	not_for_synths = TRUE
+	can_take = ORGANICS
 
 /datum/trait/less_blood_extreme
 	name = "Extremely low blood volume"
@@ -26,7 +26,7 @@
 	cost = -5
 	var_changes = list("blood_volume" = 224)
 	excludes = list(/datum/trait/less_blood,/datum/trait/more_blood,/datum/trait/more_blood_extreme)
-	not_for_synths = TRUE
+	can_take = ORGANICS
 
 /datum/trait/scrawny
 	name = "Scrawny"
@@ -85,7 +85,7 @@
 	desc = "You have a condition which causes you to spontaneously have hallucinations! Luckily for you, in the modern space age, our doctors have solutions for you, just make sure you don't forget to take your pills."
 	cost = -3
 	special_env = TRUE
-	not_for_synths = TRUE
+	can_take = ORGANICS
 	var/hallucination_max = 60
 	var/hallucination_increase = 3
 	var/episode_length_nomeds_avg = 4000
