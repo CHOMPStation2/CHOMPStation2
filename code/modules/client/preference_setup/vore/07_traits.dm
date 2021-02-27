@@ -89,16 +89,10 @@
 
 	if(character.isSynthetic())	//Checking if we have a synth on our hands, boys.
 		pref.dirty_synth = 1
-<<<<<<< HEAD
-	else				//CHOMPEdit
-		pref.dirty_synth = 0	//CHOMPEdit
-||||||| parent of 8b0c23c122... Merge pull request #9659 from KillianKirilenko/kk-misc4
-=======
 		pref.gross_meatbag = 0
 	else
 		pref.gross_meatbag = 1
 		pref.dirty_synth = 0
->>>>>>> 8b0c23c122... Merge pull request #9659 from KillianKirilenko/kk-misc4
 
 	var/datum/species/S = character.species
 	var/SB
