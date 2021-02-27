@@ -63,7 +63,13 @@ new = 0
 print('Reading changelogs...')
 for line in args.pr_body.splitlines():
 	print(f"Checking line '{line}'")
+<<<<<<< HEAD
 	if line[0] == "🆑": # Find the start of the changelog
+||||||| parent of 2ee78f6369... Merge pull request #9510 from VOREStation/upstream-merge-7809
+	if line[:1] == "??": # Find the start of the changelog
+=======
+	if line[:1] == "🆑": # Find the start of the changelog
+>>>>>>> 2ee78f6369... Merge pull request #9510 from VOREStation/upstream-merge-7809
 		print("Found opening :cl: tag")
 		if incltag == True: # If we're already reading logs, skip
 			continue
