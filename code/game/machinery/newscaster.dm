@@ -164,16 +164,8 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	securityCaster = 1
 
 /obj/machinery/newscaster/Initialize()
-<<<<<<< HEAD
-	..() //Not returning . because lateload below
-	GLOB.allCasters += src
-||||||| parent of a55ce9bf09... Merge pull request #9772 from VOREStation/upstream-merge-7893
-	..() //Not returning . because lateload below
-	allCasters += src
-=======
 	..()
-	allCasters += src
->>>>>>> a55ce9bf09... Merge pull request #9772 from VOREStation/upstream-merge-7893
+	GLOB.allCasters += src
 	unit_no = ++unit_no_cur
 	paper_remaining = 15
 	update_icon()
