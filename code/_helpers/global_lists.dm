@@ -93,6 +93,7 @@ var/global/list/string_slot_flags = list(
 	"holster" = SLOT_HOLSTER
 )
 
+<<<<<<< HEAD
 //CHOMP Edit: This fix is taken from citadel station pr #2779. Fixes a "pretty horrific memory leak" that is called any time someone opens character creator.
 GLOBAL_LIST_EMPTY(mannequins)
 /proc/get_mannequin(var/ckey = "NULL")
@@ -101,6 +102,23 @@ GLOBAL_LIST_EMPTY(mannequins)
 		GLOB.mannequins[ckey] = new /mob/living/carbon/human/dummy/mannequin(null)
 		M = GLOB.mannequins[ckey]
 	return M
+||||||| parent of 881bc76902... Merge pull request #9805 from Verkister/blurgh
+/proc/get_mannequin(var/ckey)
+	if(!mannequins_)
+		mannequins_ = new()
+ 	. = mannequins_[ckey]
+	if(!.)
+		. = new/mob/living/carbon/human/dummy/mannequin()
+		mannequins_[ckey] = .
+=======
+GLOBAL_LIST_EMPTY(mannequins)
+/proc/get_mannequin(var/ckey = "NULL")
+	var/mob/living/carbon/human/dummy/mannequin/M = GLOB.mannequins[ckey]
+	if(!istype(M))
+		GLOB.mannequins[ckey] = new /mob/living/carbon/human/dummy/mannequin(null)
+		M = GLOB.mannequins[ckey]
+	return M
+>>>>>>> 881bc76902... Merge pull request #9805 from Verkister/blurgh
 
 //////////////////////////
 /////Initial Building/////
