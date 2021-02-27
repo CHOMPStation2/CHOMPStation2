@@ -1,6 +1,6 @@
 name: Autochangelog
 on: 
-    pull_request:
+    pull_request_target:
         types: closed
         branches:
             - master
@@ -15,16 +15,10 @@ jobs:
         if: github.event.pull_request.merged == true
         steps:
           - uses: /actions/checkout@v2
-<<<<<<< HEAD
-||||||| parent of 2ee78f6369... Merge pull request #9510 from VOREStation/upstream-merge-7809
-            with:
-                ref: master
-=======
             with:
                 ref: master
           - name: Update repository to master
             run: git pull "origin" master
->>>>>>> 2ee78f6369... Merge pull request #9510 from VOREStation/upstream-merge-7809
           - name: Ensure +x on CI directory
             run: |
                 chmod -R +x ./tools/ci
