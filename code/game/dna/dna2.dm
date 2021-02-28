@@ -200,10 +200,6 @@ var/global/list/datum/dna/gene/dna_genes[0]
 			size_multiplier = player_sizes_list.Find(N)
 			break
 
-	var/taurtype = /datum/sprite_accessory/tail/taur/spider
-	if(istype(character.tail_style, taurtype))
-		character.verbs += /mob/living/proc/weaveWebBindings
-
 	// Technically custom_species is not part of the UI, but this place avoids merge problems.
 	src.custom_species = character.custom_species
 	src.base_species = character.species.base_species
