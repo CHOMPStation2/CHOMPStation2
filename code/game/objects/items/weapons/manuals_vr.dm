@@ -103,9 +103,9 @@
 		<h2>Meat Pie:</h2>
 		Flat Dough and Meat in an Oven Pan, same way you use the Grill; take the Pan out, put the ingredients in, and place it back to cook. Simple, but very good looking and tasty!
 		<h2>Burritos:</h2>
-		A personal favorite due to flexibility of options: Use a Tortilla as a base for all of these. For a meaty one, add 2 cooked cutlets to the Microwave; very simple and filling! To add some cheese to that meaty burrito use 2 meatballs and 1 cheese wedge <b>((For some reason only the base meaty burrito uses cutlets all the other recipies uses meatballs... please let someone in #wiki or #dev know if this changes.))</b> For a Breakfast Wrap, add a whole Egg, Cooked Bacon (Raw Bacon cooked in the Microwave), and Cheese in with the Tortilla. For Vegan Burritos, just cook a Tortilla and Tofu together in the Microwave.
+		Burritos: A personal favorite due to flexibility of options: Use a Tortilla as a base for all of these. For a Chili one, add 2 Meatballs and 1 Space Spice (found near the Flour) to the Microwave; very simple and filling! Add a Cheese Wedge instead of the spice to make a queso burrito. For a Breakfast Wrap, add a whole Egg, Cooked Bacon (Raw Bacon cooked in the Microwave), and Cheese in with the Tortilla. For Vegan Burritos, just cook a Tortilla and Tofu together in the Microwave.
 		<h2>Tacos:</h2>
-		Either a Tortilla or Dough Slice as the base, then 1 cooked Cutlet, and a Cheese Wedge. Very easy to mass produce, great in a pinch!
+		Use a tortilla then 1 cooked Cutlet, and a Cheese Wedge. Very easy to mass produce, great in a pinch!
 		<h2>Cheesy Nachos:</h2>
 		Tortilla, Cheese and 1 unit of Salt in the microwave, the perfect Finger Food!
 		<h2>Spaghetti:</h2>
@@ -129,8 +129,8 @@
 
 		"}
 
-//accurate as of 2/17/21
-/obj/item/weapon/book/manual//bar_guide
+//accurate as of 2/23/21
+/obj/item/weapon/book/manual/bar_guide
 	name = "How to Alcohol (And other Drinks)"
 	desc = "A helpful guide to the world of barkeeping."
 	icon_state = "bar-guide"
@@ -214,7 +214,7 @@
 		1 part Beer, 2 parts Ale
 		<h3>Whiskey Cola:</h3>
 		2 parts Whiskey, 1 part Space Cola
-		<h3>Binman Bliss:
+		<h3>Binman Bliss:</h3>
 		1 part Sake, 1 part Tequila
 
 		<h1>High Alcohol</h1>
