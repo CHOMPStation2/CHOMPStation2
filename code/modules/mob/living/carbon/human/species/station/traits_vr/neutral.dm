@@ -208,39 +208,6 @@ YW change end */
 	H.verbs |= /mob/living/proc/glow_toggle
 	H.verbs |= /mob/living/proc/glow_color
 
-<<<<<<< HEAD
-||||||| parent of 3558e37a44... Merge pull request #9751 from VOREStation/upstream-merge-7864
-/*
-//Allergen traits! Not available to any species with a base allergens var.
-/datum/trait/allergy_gluten
-	name = "Allergy: Gluten"
-	desc = "You're highly allergic to gluten proteins, which are found in most common grains. This trait cannot be taken by skrell or tajara."
-	cost = 0
-	custom_only = FALSE
-	banned_species = list(SPECIES_SKRELL,SPECIES_TAJ)
-	var_changes = list("allergens" = 16)
-	excludes = list(/datum/trait/allergy_nuts,/datum/trait/allergy_soy)
-
-/datum/trait/allergy_nuts
-	name = "Allergy: Nuts"
-	desc = "You're highly allergic to hard-shell seeds, such as peanuts. This trait cannot be taken by skrell or tajara."
-	cost = 0
-	custom_only = FALSE
-	banned_species = list(SPECIES_SKRELL,SPECIES_TAJ)
-	var_changes = list("allergens" = 64)
-	excludes = list(/datum/trait/allergy_gluten,/datum/trait/allergy_soy)
-
-/datum/trait/allergy_soy
-	name = "Allergy: Soy"
-	desc = "You're highly allergic to soybeans, and some other kinds of bean. This trait cannot be taken by skrell or tajara."
-	cost = 0
-	custom_only = FALSE
-	banned_species = list(SPECIES_SKRELL,SPECIES_TAJ)
-	var_changes = list("allergens" = 32)
-	excludes = list(/datum/trait/allergy_gluten,/datum/trait/allergy_nuts)
-*/
-
-=======
 
 //Allergen traits! Not available to any species with a base allergens var.
 /datum/trait/allergy_gluten
@@ -268,7 +235,6 @@ YW change end */
 	excludes = list(/datum/trait/allergy_gluten,/datum/trait/allergy_nuts)
 
 
->>>>>>> 3558e37a44... Merge pull request #9751 from VOREStation/upstream-merge-7864
 // Spicy Food Traits, from negative to positive.
 /datum/trait/spice_intolerance_extreme
 	name = "Extreme Spice Intolerance"
