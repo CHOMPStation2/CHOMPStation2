@@ -1397,6 +1397,7 @@
 #include "code\game\objects\items\weapons\implants\implantpad.dm"
 #include "code\game\objects\items\weapons\implants\implantreagent_ch.dm"
 #include "code\game\objects\items\weapons\implants\implantreagent_vr.dm"
+#include "code\game\objects\items\weapons\implants\implantrestrainingbolt.dm"
 #include "code\game\objects\items\weapons\implants\implantuplink.dm"
 #include "code\game\objects\items\weapons\implants\neuralbasic.dm"
 #include "code\game\objects\items\weapons\material\ashtray.dm"
