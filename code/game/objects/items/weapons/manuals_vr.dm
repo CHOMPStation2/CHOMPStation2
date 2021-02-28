@@ -102,25 +102,11 @@
 		<b>The cornerstone of basic food:</b> to prepare these, microwave a piece of Dough to get a bun and grab a piece of Meat. Open the Grill, remove the Rack, and add both Bun and Meat to the Rack. Then, place the Rack back into the Grill to cook and remove it once finished. If you feel fancy, you can add cheese afterwards for a cheeseburger.
 		<h2>Meat Pie:</h2>
 		Flat Dough and Meat in an Oven Pan, same way you use the Grill; take the Pan out, put the ingredients in, and place it back to cook. Simple, but very good looking and tasty!
-<<<<<<< HEAD
-		<h2>Burritos:</h2>
-		A personal favorite due to flexibility of options: Use a Tortilla as a base for all of these. For a meaty one, add 2 cooked cutlets to the Microwave; very simple and filling! To add some cheese to that meaty burrito use 2 meatballs and 1 cheese wedge <b>((For some reason only the base meaty burrito uses cutlets all the other recipies uses meatballs... please let someone in #wiki or #dev know if this changes.))</b> For a Breakfast Wrap, add a whole Egg, Cooked Bacon (Raw Bacon cooked in the Microwave), and Cheese in with the Tortilla. For Vegan Burritos, just cook a Tortilla and Tofu together in the Microwave.
-		<h2>Tacos:</h2>
-		Either a Tortilla or Dough Slice as the base, then 1 cooked Cutlet, and a Cheese Wedge. Very easy to mass produce, great in a pinch!
-		<h2>Cheesy Nachos:</h2>
-||||||| parent of 96aab9866f... Merge pull request #9791 from H0lySquirr3l/master
-		<h2>Burritos:</h2> 
-		Burritos: A personal favorite due to flexibility of options: Use a Tortilla as a base for all of these. For a Chili one, add 2 Meatballs and 1 Space Spice (found near the Flour) to the Microwave; very simple and filling! Add a Cheese Wedge instead of the spice to make a queso burrito. For a Breakfast Wrap, add a whole Egg, Cooked Bacon (Raw Bacon cooked in the Microwave), and Cheese in with the Tortilla. For Vegan Burritos, just cook a Tortilla and Tofu together in the Microwave.
-		<h2>Tacos:</h2> 
-		Use a tortilla then 1 cooked Cutlet, and a Cheese Wedge. Very easy to mass produce, great in a pinch!
-		<h2>Cheesy Nachos:</h2> 
-=======
 		<h2>Burritos:</h2>
 		Burritos: A personal favorite due to flexibility of options: Use a Tortilla as a base for all of these. For a Chili one, add 2 Meatballs and 1 Space Spice (found near the Flour) to the Microwave; very simple and filling! Add a Cheese Wedge instead of the spice to make a queso burrito. For a Breakfast Wrap, add a whole Egg, Cooked Bacon (Raw Bacon cooked in the Microwave), and Cheese in with the Tortilla. For Vegan Burritos, just cook a Tortilla and Tofu together in the Microwave.
 		<h2>Tacos:</h2>
 		Use a tortilla then 1 cooked Cutlet, and a Cheese Wedge. Very easy to mass produce, great in a pinch!
 		<h2>Cheesy Nachos:</h2>
->>>>>>> 96aab9866f... Merge pull request #9791 from H0lySquirr3l/master
 		Tortilla, Cheese and 1 unit of Salt in the microwave, the perfect Finger Food!
 		<h2>Spaghetti:</h2>
 		Without Tomato’s from Botany it's not going to be the flashiest, but one can make Boiled Spaghetti with Spaghetti and Water in the Microwave. Kitsune Udon can be made with Spaghetti, Egg Yolk (crack egg in beaker then add to microwave), and Tofu. Spaghetti and Meatballs can be made by doing the Boiled Spaghetti Recipe and adding 2 Meatballs; adding 4 Meatballs into the initial mix makes Spesslaw. Lastly, Spaghetti, Milk, and Cheese in the Oven makes Macaroni and Cheese.
