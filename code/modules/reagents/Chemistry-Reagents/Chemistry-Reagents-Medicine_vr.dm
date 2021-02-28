@@ -92,11 +92,5 @@
 
 /datum/reagent/sleevingcure/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.remove_a_modifier_of_type(/datum/modifier/resleeving_sickness)
-<<<<<<< HEAD
 	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
 */ //CHOMPStation removal end
-||||||| parent of d0f929ce44... Merge pull request #9754 from TheFurryFeline/patch-26
-	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
-=======
-	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
->>>>>>> d0f929ce44... Merge pull request #9754 from TheFurryFeline/patch-26
