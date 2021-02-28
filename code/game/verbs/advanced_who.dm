@@ -86,6 +86,7 @@
 				entry += " - <span class='blue'>In Lobby</span><br>"
 			else
 				entry += " - <span class='green'>Playing</span><br>"
+
 			Lines += entry
 
 	msg += "<table>"
@@ -94,5 +95,11 @@
 	msg += "</table>"
 	msg += "<b>Total Players: [length(Lines)]</b>"
 	msg = "<span class='filter_info'>" + msg + "</span>"
+<<<<<<< HEAD
 	to_chat(src, msg)
 YW EDIT STOP*/
+||||||| parent of 7ea7566f26... Merge pull request #9799 from VOREStation/upstream-merge-7920
+	to_chat(src, msg)
+=======
+	to_chat(src, msg)
+>>>>>>> 7ea7566f26... Merge pull request #9799 from VOREStation/upstream-merge-7920
