@@ -1376,12 +1376,8 @@
 #include "code\game\objects\items\weapons\grenades\spawnergrenade_vr.dm"
 #include "code\game\objects\items\weapons\grenades\supermatter.dm"
 #include "code\game\objects\items\weapons\id cards\cards.dm"
-<<<<<<< HEAD
 #include "code\game\objects\items\weapons\id cards\CH_ids.dm"
-||||||| parent of 6da3d37c41... Merge pull request #9766 from Novacat/nova-basicfixes
-=======
 #include "code\game\objects\items\weapons\id cards\cards_vr.dm"
->>>>>>> 6da3d37c41... Merge pull request #9766 from Novacat/nova-basicfixes
 #include "code\game\objects\items\weapons\id cards\station_ids.dm"
 #include "code\game\objects\items\weapons\id cards\station_ids_vr.dm"
 #include "code\game\objects\items\weapons\id cards\syndicate_ids.dm"
