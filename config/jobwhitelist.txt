@@ -1,3 +1,33 @@
 # Job whitelist in format ckey - jobname
 # Like arokha - clown
+<<<<<<< HEAD
 
+||||||| parent of af90f96eed... Merge pull request #9812 from Novacat/nova-basicfixes
+Akram - clown
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+=======
+akram - clown
+amshaegaar - mime
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+joey4298 - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+>>>>>>> af90f96eed... Merge pull request #9812 from Novacat/nova-basicfixes
