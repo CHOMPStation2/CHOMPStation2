@@ -133,7 +133,7 @@ Proc for attack log creation, because really why not
 		//query_insert.Execute(async=use_async)
 		//qdel(query_insert)
 		if(SSdbcore.Connect())
-			rustg_sql_query_async(SSdbcore.connection, "INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", json_encode(list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>"))
+			rustg_sql_query_async(SSdbcore.connection, "INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", json_encode(list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>")))
 	//CHOMPEdit End
 	log_attack(user_str,target_str,what_done)
 	if(admin_notify)
