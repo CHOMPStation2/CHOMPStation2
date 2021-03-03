@@ -404,12 +404,7 @@
 	name = "Custodial Hound module"
 	sprites = list(
 					"Custodial Hound" = "scrubpup",
-<<<<<<< HEAD
-||||||| parent of c98fd7a393... Merge pull request #9833 from Verkister/patch-35
-					"Janihound model V-2" = "j9",
-=======
 					"Janihound model V-2" = "J9",
->>>>>>> c98fd7a393... Merge pull request #9833 from Verkister/patch-35
 					"Borgi" = "borgi-jani",
 					"Otieborg" = "otiej",
 					"Drake" = "drakejanit"
