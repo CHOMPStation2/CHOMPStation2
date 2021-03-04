@@ -2743,6 +2743,7 @@
 #include "code\modules\mob\living\carbon\human\human_defines_vr.dm"
 #include "code\modules\mob\living\carbon\human\human_helpers.dm"
 #include "code\modules\mob\living\carbon\human\human_helpers_vr.dm"
+#include "code\modules\mob\living\carbon\human\human_modular_limbs.dm"
 #include "code\modules\mob\living\carbon\human\human_movement.dm"
 #include "code\modules\mob\living\carbon\human\human_movement_ch.dm"
 #include "code\modules\mob\living\carbon\human\human_organs.dm"
