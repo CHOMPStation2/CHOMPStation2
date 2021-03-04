@@ -224,7 +224,7 @@
 	return hear
 
 var/mobs_radio_range_fired = 1					//CHOMPEdit
-/proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
+/proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios, var/ghosts_can_hear = TRUE)
 
 	set background = 1
 	var/our_iter = num2text(++mobs_radio_range_fired)	//CHOMPEdit
@@ -251,7 +251,7 @@ var/mobs_radio_range_fired = 1					//CHOMPEdit
 		var/turf/T = get_turf(M)
 		if(istype(T) && T.temp_check[our_iter])
 			. += M
-		else if(istype(M,/mob/observer))	//Give ghosts global hearing.
+		else if(istype(M,/mob/observer) && ghosts_can_hear)	//Give ghosts global hearing.
 			. += M
 	CHECK_TICK
 	for(var/turf/T in speaker_coverage)

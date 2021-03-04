@@ -339,7 +339,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 						var/vmask, var/list/vmessage_pieces, var/obj/item/device/radio/radio,
 						var/list/message_pieces, var/name, var/job, var/realname, var/vname,
 						var/data, var/compression, var/list/level, var/freq, var/verbage = "says",
-						var/list/forced_radios)
+						var/list/forced_radios, var/ghosts_can_hear = TRUE) //CHOMPEdit
 
   /* ###### Prepare the radio connection ###### */
 
@@ -390,7 +390,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 				radios |= R
 
 	// Get a list of mobs who can hear from the radios we collected.
-	var/list/receive = get_mobs_in_radio_ranges(radios)
+	var/list/receive = get_mobs_in_radio_ranges(radios,ghosts_can_hear) //CHOMPEdit
 
   /* ###### Organize the receivers into categories for displaying the message ###### */
 
