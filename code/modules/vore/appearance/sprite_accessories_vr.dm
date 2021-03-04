@@ -2059,11 +2059,6 @@
 	icon_state = "xenotailalt_fullcolour"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-<<<<<<< HEAD
-	
-||||||| parent of 58dba1e323... Merge pull request #9768 from rboys2/clara-dev-peacocktail
-
-=======
 
 /datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
 	name = "Peacock tail (vwag)"
@@ -2083,7 +2078,6 @@
 	color_blend_mode = ICON_MULTIPLY
 	ckeys_allowed = list("prettiebyrd")
 
->>>>>>> 58dba1e323... Merge pull request #9768 from rboys2/clara-dev-peacocktail
 /*
 ////////////////////////////
 /  =--------------------=  /
