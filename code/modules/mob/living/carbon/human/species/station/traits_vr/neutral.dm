@@ -213,33 +213,108 @@ YW change end */
 
 /*
 //Allergen traits! Not available to any species with a base allergens var.
-/datum/trait/allergy_gluten
+/datum/trait/allergy
 	name = "Allergy: Gluten"
 	desc = "You're highly allergic to gluten proteins, which are found in most common grains. This trait cannot be taken by skrell or tajara."
 	cost = 0
 	custom_only = FALSE
+<<<<<<< HEAD
 	banned_species = list(SPECIES_SKRELL,SPECIES_TAJ)
 	var_changes = list("allergens" = 16)
 	excludes = list(/datum/trait/allergy_nuts,/datum/trait/allergy_soy)
+||||||| parent of f81d14b128... Merge pull request #9850 from cadyn/patch-1
+	var_changes = list("allergens" = 16)
+	excludes = list(/datum/trait/allergy_nuts,/datum/trait/allergy_soy)
+=======
+	var/allergen = GRAINS
+>>>>>>> f81d14b128... Merge pull request #9850 from cadyn/patch-1
 
-/datum/trait/allergy_nuts
+/datum/trait/allergy/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	S.allergens |= allergen
+	..(S,H)
+
+/datum/trait/allergy/meat
+	name = "Allergy: Meat"
+	desc = "You're highly allergic to just about any form of meat. You're probably better off just sticking to vegetables."
+	cost = 0
+	custom_only = FALSE
+	allergen = MEAT
+
+/datum/trait/allergy/fish
+	name = "Allergy: Fish"
+	desc = "You're highly allergic to fish. It's probably best to avoid seafood in general..."
+	cost = 0
+	custom_only = FALSE
+	allergen = FISH
+
+/datum/trait/allergy/fruit
+	name = "Allergy: Fruit"
+	desc = "You're highly allergic to fruit. Vegetables are fine, but you should probably read up on how to tell the difference."
+	cost = 0
+	custom_only = FALSE
+	allergen = FRUIT
+
+/datum/trait/allergy/vegetable
+	name = "Allergy: Vegetable"
+	desc = "You're highly allergic to vegetables. Fruit are fine, but you should probably read up on how to tell the difference."
+	cost = 0
+	custom_only = FALSE
+	allergen = VEGETABLE
+
+/datum/trait/allergy/nuts
 	name = "Allergy: Nuts"
 	desc = "You're highly allergic to hard-shell seeds, such as peanuts. This trait cannot be taken by skrell or tajara."
 	cost = 0
 	custom_only = FALSE
+<<<<<<< HEAD
 	banned_species = list(SPECIES_SKRELL,SPECIES_TAJ)
 	var_changes = list("allergens" = 64)
 	excludes = list(/datum/trait/allergy_gluten,/datum/trait/allergy_soy)
+||||||| parent of f81d14b128... Merge pull request #9850 from cadyn/patch-1
+	var_changes = list("allergens" = 64)
+	excludes = list(/datum/trait/allergy_gluten,/datum/trait/allergy_soy)
+=======
+	allergen = SEEDS
+>>>>>>> f81d14b128... Merge pull request #9850 from cadyn/patch-1
 
-/datum/trait/allergy_soy
+/datum/trait/allergy/soy
 	name = "Allergy: Soy"
 	desc = "You're highly allergic to soybeans, and some other kinds of bean. This trait cannot be taken by skrell or tajara."
 	cost = 0
 	custom_only = FALSE
+<<<<<<< HEAD
 	banned_species = list(SPECIES_SKRELL,SPECIES_TAJ)
 	var_changes = list("allergens" = 32)
 	excludes = list(/datum/trait/allergy_gluten,/datum/trait/allergy_nuts)
 */
+||||||| parent of f81d14b128... Merge pull request #9850 from cadyn/patch-1
+	var_changes = list("allergens" = 32)
+	excludes = list(/datum/trait/allergy_gluten,/datum/trait/allergy_nuts)
+
+=======
+	allergen = BEANS
+
+/datum/trait/allergy/dairy
+	name = "Allergy: Lactose"
+	desc = "You're highly allergic to lactose, and consequently, just about all forms of dairy."
+	cost = 0
+	custom_only = FALSE
+	allergen = DAIRY
+
+/datum/trait/allergy/fungi
+	name = "Allergy: Fungi"
+	desc = "You're highly allergic to Fungi such as mushrooms."
+	cost = 0
+	custom_only = FALSE
+	allergen = FUNGI
+
+/datum/trait/allergy/coffee
+	name = "Allergy: Coffee"
+	desc = "You're highly allergic to coffee in specific."
+	cost = 0
+	custom_only = FALSE
+	allergen = COFFEE
+>>>>>>> f81d14b128... Merge pull request #9850 from cadyn/patch-1
 
 // Spicy Food Traits, from negative to positive.
 /datum/trait/spice_intolerance_extreme
