@@ -78,27 +78,15 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Unbranded - Protez"
 	desc = "A simple robotic limb with retro design. Seems rather stiff."
 	icon = 'icons/mob/human_races/cyberlimbs/unbranded/unbranded_alt1.dmi'
-<<<<<<< HEAD
 	unavailable_to_build = 0 // CHOMP Edit
-||||||| parent of 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
-	unavailable_to_build = 1
-=======
-	unavailable_to_build = 1
 	modular_bodyparts = MODULAR_BODYPART_CYBERNETIC
->>>>>>> 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
 
 /datum/robolimb/unbranded_alt2
 	company = "Unbranded - Mantis Prosis"
 	desc = "This limb has a casing of sleek black metal and repulsive insectile design."
 	icon = 'icons/mob/human_races/cyberlimbs/unbranded/unbranded_alt2.dmi'
-<<<<<<< HEAD
 	unavailable_to_build = 0 // CHOMP Edit
-||||||| parent of 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
-	unavailable_to_build = 1
-=======
-	unavailable_to_build = 1
 	modular_bodyparts = MODULAR_BODYPART_CYBERNETIC
->>>>>>> 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
 
 /datum/robolimb/unbranded_tajaran
 	company = "Unbranded - Tajaran"
@@ -215,14 +203,8 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Cyber Solutions"
 	desc = "This limb is grey and rough, with little in the way of aesthetic."
 	icon = 'icons/mob/human_races/cyberlimbs/cybersolutions/cybersolutions_main.dmi'
-<<<<<<< HEAD
 	unavailable_to_build = 0 // CHOMP Edit
-||||||| parent of 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
-	unavailable_to_build = 1
-=======
-	unavailable_to_build = 1
 	modular_bodyparts = MODULAR_BODYPART_CYBERNETIC
->>>>>>> 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
 
 /datum/robolimb/cybersolutions_alt2
 	company = "Cyber Solutions - Outdated"
@@ -249,14 +231,8 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Einstein Engines"
 	desc = "This limb is lightweight with a sleek design."
 	icon = 'icons/mob/human_races/cyberlimbs/einstein/einstein_main.dmi'
-<<<<<<< HEAD
 	unavailable_to_build = 0 // CHOMP Edit
-||||||| parent of 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
-	unavailable_to_build = 1
-=======
-	unavailable_to_build = 1
 	modular_bodyparts = MODULAR_BODYPART_CYBERNETIC
->>>>>>> 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
 
 /datum/robolimb/grayson
 	company = "Grayson"
@@ -380,14 +356,8 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Ward-Takahashi"
 	desc = "This limb features sleek black and white polymers."
 	icon = 'icons/mob/human_races/cyberlimbs/wardtakahashi/wardtakahashi_main.dmi'
-<<<<<<< HEAD
 	unavailable_to_build = 0 // CHOMP Edit
-||||||| parent of 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
-	unavailable_to_build = 1
-=======
-	unavailable_to_build = 1
 	modular_bodyparts = MODULAR_BODYPART_CYBERNETIC
->>>>>>> 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
 
 /datum/robolimb/wardtakahashi_alt1
 	company = "Ward-Takahashi - Shroud"
@@ -414,14 +384,8 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "Xion"
 	desc = "This limb has a minimalist black and red casing."
 	icon = 'icons/mob/human_races/cyberlimbs/xion/xion_main.dmi'
-<<<<<<< HEAD
 	unavailable_to_build = 0 // CHOMP Edit
-||||||| parent of 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
-	unavailable_to_build = 1
-=======
-	unavailable_to_build = 1
 	modular_bodyparts = MODULAR_BODYPART_CYBERNETIC
->>>>>>> 827b30c844... Merge pull request #9787 from VOREStation/upstream-merge-7905
 
 /datum/robolimb/xion_alt1
 	company = "Xion - Breach"
