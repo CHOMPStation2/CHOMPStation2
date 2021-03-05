@@ -33,6 +33,7 @@
 
 	var/ability_cost = 100
 
+
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
 		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
@@ -40,6 +41,7 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
+
 	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
@@ -48,7 +50,7 @@
 		shadekin_adjust_energy(-ability_cost)
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
 
-	var/turf/T = get_turf(src)
+	//var/turf/T = get_turf(src) //CHOMPREMOVAL: This is done earlier since we need it to get lighting
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE
