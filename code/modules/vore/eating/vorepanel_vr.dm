@@ -61,8 +61,19 @@
 
 // Note, in order to allow others to look at others vore panels, this state would need
 // to be changed to tgui_always_state, and a custom tgui_status() implemented for true "rights" management.
+// Currently there is no way for others to look at others vore panels so the above concern can wait.
 /datum/vore_look/tgui_state(mob/user)
-	return GLOB.tgui_self_state
+	return GLOB.tgui_always_state
+
+/datum/vore_look/tgui_status(mob/user, datum/tgui_state/state)
+	. = STATUS_CLOSE
+	if(!state)
+		return
+	if(user.client)
+		if(user.stat)
+			. = max(., STATUS_UPDATE)
+		else
+			. = max(., STATUS_INTERACTIVE)
 
 /datum/vore_look/var/static/list/nom_icons
 /datum/vore_look/proc/cached_nom_icon(atom/target)
@@ -954,6 +965,7 @@
 			. = TRUE
 
 	if(.)
+<<<<<<< HEAD
 		unsaved_changes = TRUE
 
 //CHOMPedit start: liquid belly procs
@@ -1128,3 +1140,8 @@
 				host.vore_selected.set_reagent_messages(new_message,"full5")
 			. = TRUE
 //CHOMPedit end
+||||||| parent of 013ff5ebd4... Merge pull request #9853 from Verkister/patch-37
+		unsaved_changes = TRUE
+=======
+		unsaved_changes = TRUE
+>>>>>>> 013ff5ebd4... Merge pull request #9853 from Verkister/patch-37
