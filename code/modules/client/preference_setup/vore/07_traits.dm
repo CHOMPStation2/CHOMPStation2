@@ -345,9 +345,15 @@
 				pref.gross_meatbag = 0	//Just to be sure
 				return TOPIC_REFRESH
 
-			if(pref.species in instance.banned_species || (LAZYLEN(instance.allowed_species) && !(pref.species in instance.allowed_species))) //CHOMPEDIT: Whitelising!
+			if(pref.species in instance.banned_species)
 				alert("The trait you've selected cannot be taken by the species you've chosen!","Error")
 				return TOPIC_REFRESH
+
+			//CHOMPADDITION START Adding whitelist for traits
+			if( LAZYLEN(instance.allowed_species) && !(pref.species in instance.allowed_species)) //Adding white list handling -shark
+				alert("The trait you've selected cannot be taken by the species you've chosen!","Error")
+				return TOPIC_REFRESH
+			//CHOMPADDITION END
 
 			if(trait_choice in pref.pos_traits + pref.neu_traits + pref.neg_traits)
 				conflict = instance.name
