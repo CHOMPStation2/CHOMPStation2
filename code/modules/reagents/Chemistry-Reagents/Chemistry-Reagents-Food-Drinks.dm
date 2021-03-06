@@ -884,7 +884,7 @@
 	if(adj_temp < 0 && M.bodytemperature > 310)
 		M.bodytemperature = min(310, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 	if(issmall(M)) removed *= 2 //CHOMP Station addition Small bodymass, more effect from lower volume.
-	if(M.species.gets_food_nutrition) //CHOMPStation addition. If this is set to 0, they don't get nutrition from food.
+	if(M.species.organic_food_coeff) //CHOMPStation addition. If this is set to 0, they don't get nutrition from food.
 		M.nutrition += nutriment_factor * removed //CHOMPStation addition For hunger and fatness
 	/* VOREStation Removal
 	if(alien == IS_SLIME && water_based)
