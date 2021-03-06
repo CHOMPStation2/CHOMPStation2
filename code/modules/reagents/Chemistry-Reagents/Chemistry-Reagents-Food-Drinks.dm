@@ -12,6 +12,7 @@
 	var/allergen_type = GENERIC	// What potential allergens does this contain?
 	var/injectable = 0
 	color = "#664330"
+	affects_robots = 1	//VOREStation Edit
 
 /datum/reagent/nutriment/mix_data(var/list/newdata, var/newamount)
 
@@ -38,7 +39,7 @@
 				data -= taste
 
 /datum/reagent/nutriment/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(!injectable && alien != IS_SLIME && alien != IS_CHIMERA) //VOREStation Edit
+	if(!injectable && alien != IS_SLIME && alien != IS_CHIMERA && !M.isSynthetic()) //VOREStation Edit
 		M.adjustToxLoss(0.1 * removed)
 		return
 	if(M.species.allergens & allergen_type)
@@ -906,7 +907,7 @@
 	if(adj_temp < 0 && M.bodytemperature > 310)
 		M.bodytemperature = min(310, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 	if(issmall(M)) removed *= 2 //CHOMP Station addition Small bodymass, more effect from lower volume.
-	if(M.species.gets_food_nutrition) //CHOMPStation addition. If this is set to 0, they don't get nutrition from food.
+	if(M.species.organic_food_coeff) //CHOMPStation addition. If this is set to 0, they don't get nutrition from food.
 		M.nutrition += nutriment_factor * removed //CHOMPStation addition For hunger and fatness
 	/* VOREStation Removal
 	if(alien == IS_SLIME && water_based)
