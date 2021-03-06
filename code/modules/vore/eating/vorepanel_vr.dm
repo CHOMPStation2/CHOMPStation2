@@ -18,7 +18,7 @@
 	if(!vorePanel)
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
-	init_vore()	//Returns if the organs already exist anyway.
+	init_vore()	//CHOMPedit Returns if the organs already exist anyway.
 
 	vorePanel.tgui_interact(src)
 
@@ -60,32 +60,9 @@
 	return host
 
 // Note, in order to allow others to look at others vore panels, this state would need
-<<<<<<< HEAD
-// to be changed to tgui_always_state, and a custom tgui_status() implemented for true "rights" management.
-||||||| parent of e236746acd... Merge pull request #9856 from ShadowLarkens/vorepanel_adjust
-// to be changed to tgui_always_state, and a custom tgui_status() implemented for true "rights" management.
-// Currently there is no way for others to look at others vore panels so the above concern can wait.
-=======
 // to be modified.
->>>>>>> e236746acd... Merge pull request #9856 from ShadowLarkens/vorepanel_adjust
 /datum/vore_look/tgui_state(mob/user)
-<<<<<<< HEAD
-	return GLOB.tgui_self_state
-||||||| parent of e236746acd... Merge pull request #9856 from ShadowLarkens/vorepanel_adjust
-	return GLOB.tgui_always_state
-
-/datum/vore_look/tgui_status(mob/user, datum/tgui_state/state)
-	. = STATUS_CLOSE
-	if(!state)
-		return
-	if(user.client)
-		if(user.stat)
-			. = max(., STATUS_UPDATE)
-		else
-			. = max(., STATUS_INTERACTIVE)
-=======
 	return GLOB.tgui_vorepanel_state
->>>>>>> e236746acd... Merge pull request #9856 from ShadowLarkens/vorepanel_adjust
 
 /datum/vore_look/var/static/list/nom_icons
 /datum/vore_look/proc/cached_nom_icon(atom/target)

@@ -27,10 +27,9 @@
 
 	// Where are we able to hear from (and talk to, since we're AIO) anyway?
 	//var/map_levels = using_map.get_map_levels(z, TRUE, overmap_range)
-	var/ghostshear = FALSE
+
 	if("[signal.data["level"]]" == "[z]")
 		signal.data["level"] = list(0)
-		ghostshear = TRUE
 	else
 		signal.data["level"] = list(z)
 
@@ -69,6 +68,5 @@
 			connection.frequency,
 			signal.data["verb"],
 			signal.data["language"],
-			forced_radios,
-			ghosts_can_hear = ghostshear
+			forced_radios
 		)
