@@ -71,24 +71,7 @@
 	update_shadekin_hud(H)
 
 /datum/trait/kintype
-	banned_species = list(	SPECIES_AKULA,
-							SPECIES_ALRAUNE,
-							SPECIES_NEVREAN,
-							SPECIES_PROTEAN,
-							SPECIES_RAPALA,
-							SPECIES_SERGAL,
-							SPECIES_SHADEKIN_CREW,
-							SPECIES_VASILISSAN,
-							SPECIES_VULPKANIN,
-							SPECIES_XENOCHIMERA,
-							SPECIES_ZORREN_HIGH,
-							SPECIES_CUSTOM,
-							SPECIES_WEREBEAST,
-							SPECIES_FENNEC,
-							SPECIES_XENOHYBRID,
-							SPECIES_VOX,
-							SPECIES_ZADDAT,
-							SPECIES_PROMETHEAN)
+	allowed_species = list(SPECIES_SHADEKIN)
 	var/color = "Blue"
 	desc = "Makes your shadekin adapted as a Blue eyed kin! This gives you decreased energy regeneration in darkness, decreased regeneration in the light amd unchanged health!"
 	cost = 0
