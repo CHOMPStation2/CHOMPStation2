@@ -18,7 +18,7 @@
 	if(!vorePanel)
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
-	init_vore()	//Returns if the organs already exist anyway.
+	init_vore()	//CHOMPedit Returns if the organs already exist anyway.
 
 	vorePanel.tgui_interact(src)
 
@@ -60,9 +60,9 @@
 	return host
 
 // Note, in order to allow others to look at others vore panels, this state would need
-// to be changed to tgui_always_state, and a custom tgui_status() implemented for true "rights" management.
+// to be modified.
 /datum/vore_look/tgui_state(mob/user)
-	return GLOB.tgui_self_state
+	return GLOB.tgui_vorepanel_state
 
 /datum/vore_look/var/static/list/nom_icons
 /datum/vore_look/proc/cached_nom_icon(atom/target)
