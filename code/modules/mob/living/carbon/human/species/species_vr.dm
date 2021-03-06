@@ -20,14 +20,6 @@
 	var/wikilink = null //link to wiki page for species
 	var/icon_height = 32
 	var/agility = 20 //prob() to do agile things
-<<<<<<< HEAD
-||||||| parent of 7b5b76d379... Merge pull request #8808 from KillianKirilenko/kk-misc3
-	var/is_weaver = FALSE
-	var/silk_production = FALSE
-	var/silk_reserve = 100
-	var/silk_max_reserve = 500
-	var/silk_color = "#FFFFFF"
-=======
 
 	var/organic_food_coeff = 1
 	var/synthetic_food_coeff = 0
@@ -44,7 +36,6 @@
 	var/silk_reserve = 100
 	var/silk_max_reserve = 500
 	var/silk_color = "#FFFFFF"
->>>>>>> 7b5b76d379... Merge pull request #8808 from KillianKirilenko/kk-misc3
 
 	var/list/traits = list()
 

@@ -41,7 +41,7 @@ var/global/list/robot_modules = list(
 	..()
 	R.module = src
 	R.can_buckle = 1 //Chomp Addition; Makes all borgs rideable.
-	
+
 	add_camera_networks(R)
 	add_languages(R)
 	add_subsystems(R)
@@ -254,6 +254,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
 	src.modules += new /obj/item/device/sleevemate(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen(src) //chompstation addition
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"

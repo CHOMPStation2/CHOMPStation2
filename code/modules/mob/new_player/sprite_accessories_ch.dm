@@ -118,6 +118,18 @@
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
+	manedwolf1
+		name = "Maned Wolf Primary Markings"
+		icon_state = "manedwolf1"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD,BP_TORSO,BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
+
+	manedwolf2
+		name = "Maned Wolf Secondary Markings"
+		icon_state = "manedwolf2"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD,BP_TORSO,BP_GROIN)
+
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
 	desc = ""
