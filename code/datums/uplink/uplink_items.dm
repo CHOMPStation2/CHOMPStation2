@@ -51,13 +51,7 @@ var/datum/uplink/uplink = new()
 	if(!can_buy(U, user.mind.tcrystals))
 		return
 
-<<<<<<< HEAD
-	if(U.tgui_status(user, GLOB.tgui_inventory_state) != STATUS_INTERACTIVE)
-||||||| parent of a7d4de830f... Merge pull request #9704 from VOREStation/upstream-merge-7869
-	if(U.CanUseTopic(user, GLOB.tgui_inventory_state) != STATUS_INTERACTIVE)
-=======
 	if(U.tgui_status(user, GLOB.tgui_deep_inventory_state) != STATUS_INTERACTIVE)
->>>>>>> a7d4de830f... Merge pull request #9704 from VOREStation/upstream-merge-7869
 		return
 
 	var/cost = cost(U, user.mind.tcrystals)
