@@ -71,25 +71,11 @@
 	var/TC_uses = FALSE
 	var/uplink_true = FALSE
 	var/purchases = ""
-<<<<<<< HEAD
-	for(var/obj/item/device/uplink/H in GLOB.world_uplinks)
-		if(H && H.uplink_owner && H.uplink_owner == ply)
-			TC_uses += H.used_TC
-			uplink_true = 1
-			purchases += get_uplink_purchases(H)
-||||||| parent of a7d4de830f... Merge pull request #9704 from VOREStation/upstream-merge-7869
-	for(var/obj/item/device/uplink/H in world_uplinks)
-		if(H && H.uplink_owner && H.uplink_owner == ply)
-			TC_uses += H.used_TC
-			uplink_true = 1
-			purchases += get_uplink_purchases(H)
-=======
 	for(var/mob/M in player_list)
 		if(M.mind && M.mind.used_TC)
 			TC_uses += M.mind.used_TC
 			uplink_true = TRUE
 			purchases += get_uplink_purchases(M.mind)
->>>>>>> a7d4de830f... Merge pull request #9704 from VOREStation/upstream-merge-7869
 	if(uplink_true)
 		text += " (used [TC_uses] TC)"
 		if(purchases)
@@ -97,33 +83,7 @@
 
 	return text
 
-<<<<<<< HEAD
-/proc/print_ownerless_uplinks()
-	var/has_printed = 0
-	for(var/obj/item/device/uplink/H in GLOB.world_uplinks)
-		if(isnull(H.uplink_owner) && H.used_TC)
-			if(!has_printed)
-				has_printed = 1
-				to_world("<b>Ownerless Uplinks</b>")
-			to_world("[H.loc] (used [H.used_TC] TC)")
-			to_world(get_uplink_purchases(H))
-
-/proc/get_uplink_purchases(var/obj/item/device/uplink/H)
-||||||| parent of a7d4de830f... Merge pull request #9704 from VOREStation/upstream-merge-7869
-/proc/print_ownerless_uplinks()
-	var/has_printed = 0
-	for(var/obj/item/device/uplink/H in world_uplinks)
-		if(isnull(H.uplink_owner) && H.used_TC)
-			if(!has_printed)
-				has_printed = 1
-				to_world("<b>Ownerless Uplinks</b>")
-			to_world("[H.loc] (used [H.used_TC] TC)")
-			to_world(get_uplink_purchases(H))
-
-/proc/get_uplink_purchases(var/obj/item/device/uplink/H)
-=======
 /proc/get_uplink_purchases(var/datum/mind/M)
->>>>>>> a7d4de830f... Merge pull request #9704 from VOREStation/upstream-merge-7869
 	var/list/refined_log = new()
 	for(var/datum/uplink_item/UI in M.purchase_log)
 		refined_log.Add("[M.purchase_log[UI]]x[UI.log_icon()][UI.name]")
