@@ -504,15 +504,9 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-sec",
 					"Insekt" = "insekt-Sec",
 					"Usagi-II" = "tall2security",
-<<<<<<< HEAD
 					"Pyralis" = "Glitterfly-Security",
-					"Miss M" = "miss-security" // YW change, Added Miss M
-||||||| parent of 19f6b569c8... Merge pull request #9690 from VOREStation/upstream-merge-7867
-					"Pyralis" = "Glitterfly-Security"
-=======
-					"Pyralis" = "Glitterfly-Security",
+					"Miss M" = "miss-security", // YW change, Added Miss M
 					"Decapod" = "decapod-Security"
->>>>>>> 19f6b569c8... Merge pull request #9690 from VOREStation/upstream-merge-7867
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -621,15 +615,9 @@ var/global/list/robot_modules = list(
 					"Drone - Service" = "drone-service",
 					"Drone - Hydro" = "drone-hydro",
 					"Usagi-II" = "tall2service",
-<<<<<<< HEAD
 					"Pyralis" = "Glitterfly-Service",
-					"Miss M" = "miss-service" // YW change, Added Miss M
-||||||| parent of 19f6b569c8... Merge pull request #9690 from VOREStation/upstream-merge-7867
-					"Pyralis" = "Glitterfly-Service"
-=======
-					"Pyralis" = "Glitterfly-Service",
+					"Miss M" = "miss-service", // YW change, Added Miss M
 					"Decapod" = "decapod-Service"
->>>>>>> 19f6b569c8... Merge pull request #9690 from VOREStation/upstream-merge-7867
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
