@@ -226,7 +226,6 @@ YW change end */
 	desc = "You're highly allergic to gluten proteins, which are found in most common grains."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("allergens" = 16)
 	var/allergen = GRAINS
 
 /datum/trait/allergy/apply(var/datum/species/S,var/mob/living/carbon/human/H)
