@@ -837,6 +837,7 @@ This includes the sprites of the below Mob which are based upon SCP 939.
 	icon_state = "939_living"
 	icon_living = "939_living"
 	icon_dead = "939_dead"
+	pixel_x = -15
 
 #undef SYNX_LOWER_DAMAGE
 #undef SYNX_UPPER_DAMAGE

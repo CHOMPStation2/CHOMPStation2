@@ -43,7 +43,7 @@
 	start_y =  10
 	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
 	map_z = list(Z_LEVEL_STATION_ONE, Z_LEVEL_STATION_TWO, Z_LEVEL_STATION_THREE)
-	extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC) // Hopefully temporary, so arrivals announcements work. //CHOMPedit: adds Z_LEVEL_MISC to connect the exploration carrier with the station
+	extra_z_levels = list(Z_LEVEL_MISC) // Hopefully temporary, so arrivals announcements work. //CHOMPedit: adds Z_LEVEL_MISC to connect the exploration carrier with the station
 	initial_generic_waypoints = list(
 		"d1_aux_a",
 		"d1_aux_b",

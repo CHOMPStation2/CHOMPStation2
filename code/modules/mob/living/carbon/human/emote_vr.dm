@@ -193,8 +193,12 @@
 				handle_flip_vr()
 				message = "does a flip!"
 				m_type = 1
+		if("roarbark") //Roarbark is CHOMP Addition
+			message = "lets out a roar-bark!"
+			m_type = 2	//Also full disclosure this sounds AWFUL with the normal pitch shifting
+			playsound(loc, 'sound/voice/roarbark.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("vhelp") //Help for Virgo-specific emotes.
-			to_chat(src, "vwag, vflap, mlem, blep, awoo, awoo2, growl, nya, peep, chirp, hoot, weh, merp, myarp, bark, bork, mrow, mrowl, hypno, howl, hiss, rattle, squeak, geck, baa, baa2, mar, wurble, snort, meow, moo, croak, gao, cackle, nsay, nme, flip") //CHOMP Addition: adds howl to list since YW didn't
+			to_chat(src, "vwag, vflap, mlem, blep, awoo, awoo2, growl, nya, peep, chirp, hoot, weh, merp, myarp, bark, bork, mrow, mrowl, hypno, howl, hiss, rattle, squeak, geck, baa, baa2, mar, wurble, snort, meow, moo, croak, gao, cackle, nsay, nme, flip, roarbark") //CHOMP Addition: adds howl to list since YW didn't
 			return TRUE
 
 	if(message)
@@ -202,6 +206,14 @@
 		return TRUE
 
 	return FALSE
+
+/mob/living/carbon/human/verb/toggle_resizing_immunity()
+	set name = "Toggle Resizing Immunity"
+	set desc = "Toggles your ability to resist resizing attempts"
+	set category = "IC"
+
+	resizable = !resizable
+	to_chat(src, "<span class='notice'>You are now [resizable ? "susceptible" : "immune"] to being resized.</span>")
 
 
 /mob/living/carbon/human/proc/handle_flip_vr()

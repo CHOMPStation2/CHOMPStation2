@@ -25,8 +25,8 @@
 	var/perunit = SHEET_MATERIAL_AMOUNT
 	var/apply_colour							//CHOMPEDIT: End
 
-/obj/item/stack/tile/New()
-	..()
+/obj/item/stack/tile/Initialize()
+	. = ..()
 	randpixel_xy()
 
 /*

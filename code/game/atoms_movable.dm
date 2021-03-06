@@ -134,7 +134,7 @@
 				for(var/i in loc)
 					var/atom/movable/thing = i
 					// We don't call parent so we are calling this for byond
-					thing.Crossed(src)
+					thing.Crossed(src, oldloc)
 
 			// We're a multi-tile object (multiple locs)
 			else if(. && newloc)
@@ -461,6 +461,8 @@
 		major_dist = dist_y
 		minor_dir = dx
 		minor_dist = dist_x
+
+	range = min(dist_x + dist_y, range)
 
 	while(src && target && src.throwing && istype(src.loc, /turf) \
 		  && ((abs(target.x - src.x)+abs(target.y - src.y) > 0 && dist_travelled < range) \
