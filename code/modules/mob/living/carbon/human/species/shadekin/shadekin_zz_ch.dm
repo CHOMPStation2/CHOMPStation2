@@ -72,66 +72,63 @@
 
 /datum/trait/kintype
 	allowed_species = list(SPECIES_SHADEKIN)
-	var/color = "Blue"
+	var/color = BLUE_EYES
 	desc = "Makes your shadekin adapted as a Blue eyed kin! This gives you decreased energy regeneration in darkness, decreased regeneration in the light amd unchanged health!"
 	cost = 0
 	var_changes = list(	"total_health" = 100,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 	custom_only = FALSE
 
-/datum/trait/kintype/New()
-	..()
-	name = "Shadekin [color] Adaption" //This works but desc can not be changed here sadly.
-
 /datum/trait/kintype/red
-	color = "Red"
+	name = "Shadekin Red Adaption"
+	color =	RED_EYES
 	desc = "Makes your shadekin adapted as a Red eyed kin! This gives you minimal energy regeneration in darkness, moderate regeneration in the light amd increased health!"
 	var_changes = list(	"total_health" = 200,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 /datum/trait/kintype/purple
-	color = "Purple"
+	name = "Shadekin Purple Adaption"
+	color = PURPLE_EYES
 	desc = "Makes your shadekin adapted as a Purple eyed kin! This gives you moderate energy regeneration in darkness, minor degeneration in the light amd increased health!"
 	var_changes = list(	"total_health" = 150,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 
 /datum/trait/kintype/yellow
-	color = "Yellow"
+	name = "Shadekin Yellow Adaption"
+	color = YELLOW_EYES
 	desc = "Makes your shadekin adapted as a Yellow eyed kin! This gives you the highest energy regeneration in darkness, high degeneration in the light amd unchanged health!"
 	var_changes = list(	"total_health" = 100,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 
 /datum/trait/kintype/green
-	color = "Green"
+	name = "Shadekin Green Adaption"
+	color = GREEN_EYES
 	desc = "Makes your shadekin adapted as a Green eyed kin! This gives you high energy regeneration in darkness, minor regeneration in the light amd unchanged health!"
 	var_changes = list(	"total_health" = 100,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 
 /datum/trait/kintype/orange
-	color = "Orange"
+	name = "Shadekin Orange Adaption"
+	color = ORANGE_EYES
 	desc = "Makes your shadekin adapted as a Orange eyed kin! This gives you minor energy regeneration in darkness, modeate degeneration in the light amd increased health!"
 	var_changes = list(	"total_health" = 175,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 
 /datum/trait/kintype/apply(var/datum/species/shadekin/S,var/mob/living/carbon/human/H)
-	switch(color)
-		if("Blue")
-			H.shapeshifter_set_eye_color("0000FF")
-			S.kin_type = BLUE_EYES
-		if("Red")
-			H.shapeshifter_set_eye_color("FF0000")
-			S.kin_type = RED_EYES
-		if("Green")
-			H.shapeshifter_set_eye_color("00FF00")
-			S.kin_type = GREEN_EYES
-		if("Purple")
-			H.shapeshifter_set_eye_color("FF00FF")
-			S.kin_type = PURPLE_EYES
-		if("Yellow")
-			H.shapeshifter_set_eye_color("FFFF00")
-			S.kin_type = YELLOW_EYES
-		if("Orange")
-			H.shapeshifter_set_eye_color("FFA500")
-			S.kin_type = ORANGE_EYES
+	if(color)
+		S.kin_type = color
+		switch(color)
+			if(BLUE_EYES)
+				H.shapeshifter_set_eye_color("0000FF")
+			if(RED_EYES)
+				H.shapeshifter_set_eye_color("FF0000")
+			if(GREEN_EYES)
+				H.shapeshifter_set_eye_color("00FF00")
+			if(PURPLE_EYES)
+				H.shapeshifter_set_eye_color("FF00FF")
+			if(YELLOW_EYES)
+				H.shapeshifter_set_eye_color("FFFF00")
+			if(ORANGE_EYES)
+				H.shapeshifter_set_eye_color("FFA500")
 
 
 /datum/unarmed_attack/shadekinharmbap
