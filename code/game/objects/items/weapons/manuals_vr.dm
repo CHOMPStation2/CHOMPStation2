@@ -126,7 +126,6 @@
 		<h4>((The websites linked above are also on our stations wiki. Which is always in need of helping heads to fix it up. The recipes listed on the web link may not be fully accurate so please don't be afraid to pop into the discord wiki channel and lend a hand!))</h4>
                 </body>
             </html>
-
 		"}
 
 //accurate as of 2/23/21
