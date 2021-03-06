@@ -68,10 +68,10 @@
 			var/datum/trait/instance = all_traits[T]
 			if(client.prefs.species in instance.banned_species)
 				pass = FALSE
-				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.")
+				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.</span>")
 			else if(LAZYLEN(instance.allowed_species) && !(client.prefs.species in instance.allowed_species)) //We use else if here, so as to prevent getting two errors for one trait.
 				pass = FALSE
-				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.")
+				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.</span>")
 	//CHOMP Addition End
 
 	//Final popup notice
