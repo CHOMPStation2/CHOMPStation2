@@ -404,7 +404,7 @@
 	name = "Custodial Hound module"
 	sprites = list(
 					"Custodial Hound" = "scrubpup",
-					"Janihound model V-2" = "j9",
+					"Janihound model V-2" = "J9",
 					"Borgi" = "borgi-jani",
 					"Otieborg" = "otiej",
 					"Drake" = "drakejanit"

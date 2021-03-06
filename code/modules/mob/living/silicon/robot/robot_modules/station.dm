@@ -41,7 +41,7 @@ var/global/list/robot_modules = list(
 	..()
 	R.module = src
 	R.can_buckle = 1 //Chomp Addition; Makes all borgs rideable.
-	
+
 	add_camera_networks(R)
 	add_languages(R)
 	add_subsystems(R)
@@ -194,7 +194,8 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Default",
 					"Usagi-II" = "tall2standard",
 					"Pyralis" = "Glitterfly-Standard",
-					"Miss M" = "miss-standard" // YW change, Added Miss M
+					"Miss M" = "miss-standard", // YW change, Added Miss M
+					"Decapod" = "decapod-Standard"
 					)
 
 
@@ -231,7 +232,8 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Surgeon",
-					"Miss M" = "miss-medical" // YW change, Added Miss M
+					"Miss M" = "miss-medical", // YW change, Added Miss M
+					"Decapod" = "decapod-Surgeon"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -254,6 +256,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
 	src.modules += new /obj/item/device/sleevemate(src)
+	src.modules += new /obj/item/weapon/surgical/bioregen(src) //chompstation addition
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
@@ -307,7 +310,8 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Crisis",
-					"Miss M" = "miss-medical" // YW change, Added Miss M
+					"Miss M" = "miss-medical", // YW change, Added Miss M
+					"Decapod" = "decapod-Crisis"
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -386,7 +390,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2engineer",
 					"Pyralis" = "Glitterfly-Engineering",
 					"Servitor" = "servitor", //YW Addition to add new Servitor Sprite
-					"Miss M" = "miss-engineer" // YW change, Added Miss M
+					"Miss M" = "miss-engineer", // YW change, Added Miss M
+					"Decapod" = "decapod-Engineering"
 					)
 
 /obj/item/weapon/robot_module/robot/engineering/general/New()
@@ -501,7 +506,8 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Sec",
 					"Usagi-II" = "tall2security",
 					"Pyralis" = "Glitterfly-Security",
-					"Miss M" = "miss-security" // YW change, Added Miss M
+					"Miss M" = "miss-security", // YW change, Added Miss M
+					"Decapod" = "decapod-Security"
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -547,7 +553,8 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-janitor",
 					"Usagi-II" = "tall2janitor",
 					"Pyralis" = "Glitterfly-Janitor",
-					"Miss M" = "miss-janitor" // YW change, Added Miss M
+					"Miss M" = "miss-janitor", // YW change, Added Miss M
+					"Decapod" = "decapod-Janitor"
 					)
 
 /obj/item/weapon/robot_module/robot/janitor/New()
@@ -610,7 +617,8 @@ var/global/list/robot_modules = list(
 					"Drone - Hydro" = "drone-hydro",
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Service",
-					"Miss M" = "miss-service" // YW change, Added Miss M
+					"Miss M" = "miss-service", // YW change, Added Miss M
+					"Decapod" = "decapod-Service"
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
@@ -664,7 +672,8 @@ var/global/list/robot_modules = list(
 					"Default" = "Service2",
 					"Drone" = "drone-blu",
 					"Usagi-II" = "tall2service",
-					"Pyralis" = "Glitterfly-Clerical"
+					"Pyralis" = "Glitterfly-Clerical",
+					"Decapod" = "decapod-Clerical"
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
@@ -703,7 +712,8 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-miner",
 					"Usagi-II" = "tall2miner",
 					"Pyralis" = "Glitterfly-Miner",
-					"Miss M" = "miss-miner" // YW change, Added Miss M
+					"Miss M" = "miss-miner", // YW change, Added Miss M
+					"Decapod" = "decapod-Miner"
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()
@@ -733,7 +743,8 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-science",
 					"Insekt" = "insekt-Sci",
 					"Usagi-II" = "tall2peace",
-					"Pyralis" = "Glitterfly-Research"
+					"Pyralis" = "Glitterfly-Research",
+					"Decapod" = "decapod-Research"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()
@@ -798,7 +809,8 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"Haruka" = "marinaCB",
 					"Combat Android" = "droid-combat",
-					"Insekt" = "insekt-Combat"
+					"Insekt" = "insekt-Combat",
+					"Decapod" = "decapod-Combat"
 					)
 
 /obj/item/weapon/robot_module/robot/security/combat/New()

@@ -20,9 +20,13 @@
 /obj/effect/simple_portal/proc/handle_teleport(atom/movable/AM)
 	if(destination)
 		AM.forceMove(destination)
-		if(!AM.is_incorporeal())
+		if(!AM.is_incorporeal() && !istype(AM,/mob/observer))
 			playsound(get_turf(src),teleport_sound,60,1)
 			playsound(get_turf(destination),teleport_sound,60,1)
+
+/obj/effect/simple_portal/attack_ghost(var/mob/observer/dead/user)
+	. = ..()
+	handle_teleport(user)
 
 /obj/effect/simple_portal/coords
 	var/tele_x
