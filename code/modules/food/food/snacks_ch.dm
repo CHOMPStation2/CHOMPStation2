@@ -249,3 +249,21 @@
 	nutriment_desc = list("a precious sweetness that needs protecting" = 2) //This is a WIP flavour, Could keep it if you don't mind the "gotta protect the precious cinnamon roll" joke
 
 //TODO: Maybe butterscotch candies?
+
+//So what if like yknow, you buy a bread tube and wow you actually get to test the new and improved producct.
+/obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel
+	name = "bread tube 2"
+	desc = "Bread in a tube. Chewy...and surprisingly tasty. Now with twice the bread to tube!"
+	filling_color = "#75491c"
+	nutriment_amt = 12
+	nutriment_desc = list("bread" = 4, "sweetness" = 6)
+
+/obj/item/weapon/reagent_containers/food/snacks/tastybread/New()
+	..()
+	if(prob(1))
+		new /obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel(src)
+		qdel(src) //Dispose of the body, let no one find it.
+		
+/obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel/Initialize()
+	. = ..()
+	bitesize = 4

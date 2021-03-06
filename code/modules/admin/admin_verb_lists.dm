@@ -106,7 +106,6 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
 	/datum/admins/proc/quick_nif, //VOREStation Add,
-	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
 	/datum/admins/proc/view_feedback,
@@ -361,7 +360,6 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/quick_nif, //CHOMPEdit
-	/datum/admins/proc/quick_authentic_nif, //CHOMPEdit
 	/client/proc/admin_teleport,		//CHOMPEdit
 	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
 )
