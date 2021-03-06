@@ -6,6 +6,8 @@
 									   /datum/power/shadekin/create_shade)
 	shadekin_ability_datums = list()
 	var/kin_type
+	var/energy_light = 0.25
+	var/energy_dark = 0.75
 
 /datum/species/shadekin/handle_shade(var/mob/living/carbon/human/H)
 	//Shifted kin don't gain/lose energy (and save time if we're at the cap)
@@ -29,41 +31,11 @@
 			H.adjustFireLoss((-0.10)*darkness)
 			H.adjustBruteLoss((-0.10)*darkness)
 			H.adjustToxLoss((-0.10)*darkness)
-			dark_gains = 0.75
+			//energy_dark and energy_light are set by the shadekin eye traits.
+			//These are balanced around their playstyles and 2 planned new aggressive abilities
+			dark_gains = energy_dark
 		else
-			dark_gains = 0.25
-
-//HANDLING FOR KIN EYE TRAITS
-		if(kin_type)
-			switch(kin_type)
-				if(BLUE_EYES)
-					dark_gains = 0.5
-				if(RED_EYES)
-					if(is_dark)
-						dark_gains = 0.1
-					else
-						dark_gains = -1
-				if(PURPLE_EYES)
-					if(is_dark)
-						dark_gains = 1
-					else
-						dark_gains = -0.5
-				if(YELLOW_EYES)
-					if(is_dark)
-						dark_gains = 3
-					else
-						dark_gains = -2
-				if(GREEN_EYES)
-					if(is_dark)
-						dark_gains = 2
-					else
-						dark_gains = 0.125
-				if(ORANGE_EYES)
-					if(is_dark)
-						dark_gains = 0.25
-					else
-						dark_gains = -0.5
-//These are balanced around their playstyles and 2 planned new aggressive abilities
+			dark_gains = energy_light
 
 	set_energy(H, get_energy(H) + dark_gains)
 
@@ -73,49 +45,63 @@
 /datum/trait/kintype
 	allowed_species = list(SPECIES_SHADEKIN)
 	var/color = BLUE_EYES
+	name = "Shadekin Blue Adaptation"
 	desc = "Makes your shadekin adapted as a Blue eyed kin! This gives you decreased energy regeneration in darkness, decreased regeneration in the light amd unchanged health!"
 	cost = 0
 	var_changes = list(	"total_health" = 100,
+						"energy_light" = 0.5,
+						"energy_dark" = 0.5,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 	custom_only = FALSE
 
 /datum/trait/kintype/red
-	name = "Shadekin Red Adaption"
+	name = "Shadekin Red Adaptation"
 	color =	RED_EYES
 	desc = "Makes your shadekin adapted as a Red eyed kin! This gives you minimal energy regeneration in darkness, moderate regeneration in the light amd increased health!"
 	var_changes = list(	"total_health" = 200,
+						"energy_light" = -1,
+						"energy_dark" = 0.1,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 /datum/trait/kintype/purple
-	name = "Shadekin Purple Adaption"
+	name = "Shadekin Purple Adaptation"
 	color = PURPLE_EYES
 	desc = "Makes your shadekin adapted as a Purple eyed kin! This gives you moderate energy regeneration in darkness, minor degeneration in the light amd increased health!"
 	var_changes = list(	"total_health" = 150,
+						"energy_light" = 1,
+						"energy_dark" = -0.5,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 
 /datum/trait/kintype/yellow
-	name = "Shadekin Yellow Adaption"
+	name = "Shadekin Yellow Adaptation"
 	color = YELLOW_EYES
 	desc = "Makes your shadekin adapted as a Yellow eyed kin! This gives you the highest energy regeneration in darkness, high degeneration in the light amd unchanged health!"
 	var_changes = list(	"total_health" = 100,
+						"energy_light" = 3,
+						"energy_dark" = -2,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 
 /datum/trait/kintype/green
-	name = "Shadekin Green Adaption"
+	name = "Shadekin Green Adaptation"
 	color = GREEN_EYES
 	desc = "Makes your shadekin adapted as a Green eyed kin! This gives you high energy regeneration in darkness, minor regeneration in the light amd unchanged health!"
 	var_changes = list(	"total_health" = 100,
+						"energy_light" = 2,
+						"energy_dark" = 0.125,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 
 /datum/trait/kintype/orange
-	name = "Shadekin Orange Adaption"
+	name = "Shadekin Orange Adaptation"
 	color = ORANGE_EYES
 	desc = "Makes your shadekin adapted as a Orange eyed kin! This gives you minor energy regeneration in darkness, modeate degeneration in the light amd increased health!"
 	var_changes = list(	"total_health" = 175,
+						"energy_light" = 0.25,
+						"energy_dark" = -0.5,
 						"unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,/datum/unarmed_attack/shadekinharmbap))
 
 /datum/trait/kintype/apply(var/datum/species/shadekin/S,var/mob/living/carbon/human/H)
-	if(color)
+	if(color && istype(S)) //Sanity check to see if they're actually a shadekin, otherwise just don't do anything. They shouldn't be able to spawn with the trait.
 		S.kin_type = color
+		..(S,H)
 		switch(color)
 			if(BLUE_EYES)
 				H.shapeshifter_set_eye_color("0000FF")
