@@ -965,7 +965,6 @@
 			. = TRUE
 
 	if(.)
-<<<<<<< HEAD
 		unsaved_changes = TRUE
 
 //CHOMPedit start: liquid belly procs
@@ -1140,8 +1139,3 @@
 				host.vore_selected.set_reagent_messages(new_message,"full5")
 			. = TRUE
 //CHOMPedit end
-||||||| parent of 013ff5ebd4... Merge pull request #9853 from Verkister/patch-37
-		unsaved_changes = TRUE
-=======
-		unsaved_changes = TRUE
->>>>>>> 013ff5ebd4... Merge pull request #9853 from Verkister/patch-37
