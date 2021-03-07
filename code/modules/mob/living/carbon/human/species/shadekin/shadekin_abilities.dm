@@ -33,7 +33,7 @@
 
 	var/ability_cost = 100
 
-//CHOMADDITION Conditional shifting ased on observers and darkness
+//CHOMPADDITION Conditional shifting ased on observers and darkness
 	var/darkness = 1
 	var/turf/T = get_turf(src)
 	if(!T)
@@ -52,7 +52,7 @@
 		ability_cost = ability_cost + ( 15 * watcher )
 	if(!(ability_flags & AB_PHASE_SHIFTED))
 		log_debug("[src] attempted to shift with [watcher] visible Carbons and it cost [ability_cost] in a darkness level of [darkness]")
-//CHOMADDITION END
+//CHOMPADDITION END
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
