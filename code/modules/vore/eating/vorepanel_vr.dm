@@ -250,7 +250,13 @@
 		"show_vore_fx" = host.show_vore_fx,
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
+<<<<<<< HEAD
 		"latejoin_vore" = host.latejoin_vore,
+||||||| parent of 3fd320ad33... Merge pull request #9862 from Heroman3003/sizememes
+=======
+		"step_mechanics_active" = host.step_mechanics_pref,
+		"pickup_mechanics_active" = host.pickup_pref,
+>>>>>>> 3fd320ad33... Merge pull request #9862 from Heroman3003/sizememes
 		"noisy" = host.noisy,
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
@@ -423,6 +429,18 @@
 			host.allowmobvore = !host.allowmobvore
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.allowmobvore = host.allowmobvore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_steppref")
+			host.step_mechanics_pref = !host.step_mechanics_pref
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.step_mechanics_pref = host.step_mechanics_pref
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_pickuppref")
+			host.pickup_pref = !host.pickup_pref
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.pickup_pref = host.pickup_pref
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_healbelly")
