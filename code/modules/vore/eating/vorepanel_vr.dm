@@ -18,6 +18,7 @@
 	if(!vorePanel)
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
+	init_vore()	//CHOMPedit Returns if the organs already exist anyway.
 
 	vorePanel.tgui_interact(src)
 
@@ -48,6 +49,8 @@
 /datum/vore_look/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
+		update_preview_icon()	//CHOMPEdit
+		give_client_previews(user.client) //CHOMPEdit
 		ui = new(user, src, "VorePanel", "Inside!")
 		ui.open()
 
@@ -57,9 +60,9 @@
 	return host
 
 // Note, in order to allow others to look at others vore panels, this state would need
-// to be changed to tgui_always_state, and a custom tgui_status() implemented for true "rights" management.
+// to be modified.
 /datum/vore_look/tgui_state(mob/user)
-	return GLOB.tgui_self_state
+	return GLOB.tgui_vorepanel_state
 
 /datum/vore_look/var/static/list/nom_icons
 /datum/vore_look/proc/cached_nom_icon(atom/target)
@@ -133,7 +136,6 @@
 			"digest_mode" = B.digest_mode,
 			"contents" = LAZYLEN(B.contents),
 		)))
-
 	data["selected"] = null
 	if(host.vore_selected)
 		var/obj/belly/selected = host.vore_selected
@@ -150,12 +152,15 @@
 			"release_sound" = selected.release_sound,
 			// "messages" // TODO
 			"can_taste" = selected.can_taste,
+			"egg_type" = selected.egg_type,
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
 			"bulge_size" = selected.bulge_size,
 			"shrink_grow_size" = selected.shrink_grow_size,
 			"belly_fullscreen" = selected.belly_fullscreen,
+			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
+			"mapRef" = map_name,	//CHOMPEdit
 			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
@@ -165,6 +170,7 @@
 			if(selected.mode_flags & selected.mode_flag_list[flag_name])
 				data["selected"]["addons"].Add(flag_name)
 
+		data["selected"]["egg_type"] = selected.egg_type
 		data["selected"]["contaminates"] = selected.contaminates
 		data["selected"]["contaminate_flavor"] = null
 		data["selected"]["contaminate_color"] = null
@@ -696,6 +702,13 @@
 			host.vore_selected.contamination_color = new_color
 			host.vore_selected.items_preserved.Cut() //To re-contaminate for new color
 			. = TRUE
+		if("b_egg_type")
+			var/list/menu_list = global_vore_egg_types.Copy()
+			var/new_egg_type = input("Choose Egg Type (currently [host.vore_selected.egg_type])") as null|anything in menu_list
+			if(!new_egg_type)
+				return FALSE
+			host.vore_selected.egg_type = new_egg_type
+			. = TRUE
 		if("b_desc")
 			var/new_desc = html_encode(input(usr,"Belly Description ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc) as message|null)
 
@@ -708,7 +721,7 @@
 				. = TRUE
 		if("b_msgs")
 			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
-			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
+			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly. '%countprey' will be replaced with the number of living prey in your belly."
 			switch(params["msgtype"])
 				if("dmp")
 					var/new_message = input(user,"These are sent to prey when they expire. Write them in 2nd person ('you feel X'). Avoid using %prey in this type."+help,"Digest Message (to prey)",host.vore_selected.get_messages("dmp")) as message
@@ -896,7 +909,14 @@
 			. = TRUE
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
+			update_preview_icon()	//CHOMPEdit Begin
 			. = TRUE
+		if("b_fullscreen_color")
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			if(newcolor)
+				host.vore_selected.belly_fullscreen_color = newcolor
+			update_preview_icon()
+			. = TRUE 				//CHOMPEdit End
 		if("b_disable_hud")
 			host.vore_selected.disable_hud = !host.vore_selected.disable_hud
 			. = TRUE
@@ -929,7 +949,6 @@
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
 			. = TRUE
-			
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
 			. = TRUE

@@ -2,7 +2,7 @@ import { round } from 'common/math';
 import { capitalize } from 'common/string';
 import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from "../backend";
-import { Box, Button, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
+import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
 import { Window } from "../layouts";
 import { classes } from 'common/react';
 
@@ -91,13 +91,85 @@ const digestModeToPreyMode = {
  *          content={liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"} />
  *      </Flex.Item>
  *
+ * NEW EDITS 2/25/21: COLORED BELLY OVERLAYS
+ * LINE 5:
+ *import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
+ *
+ * LINE 172 - <Window width={700} height={800} resizable>
+ *
+ * LINE 301 - belly_fullscreen_color,
+ * mapRef,
+ *
+ * LINE 604 - <Section title="Belly Fullscreens Preview and Coloring">
+ *           <Flex direction="row">
+ *             <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
+ *             <Button
+ *               icon="eye-dropper"
+ *               onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
+ *               Select Color
+ *             </Button>
+ *           </Flex>
+ *           <ByondUi
+ *             style={{
+ *               width: '200px',
+ *               height: '200px',
+ *             }}
+ *             params={{
+ *               id: mapRef,
+ *               type: 'map',
+ *             }} />
+ *         </Section>
+ *         <Section height="260px" style={{ overflow: "auto" }}>
+ *           <Section title="Vore FX">
+ *             <LabeledList>
+ *               <LabeledList.Item label="Disable Prey HUD">
+ *                 <Button
+ *                   onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
+ *                   icon={disable_hud ? "toggle-on" : "toggle-off"}
+ *                   selected={disable_hud}
+ *                   content={disable_hud ? "Yes" : "No"} />
+ *               </LabeledList.Item>
+ *             </LabeledList>
+ *           </Section>
+ *           <Section title="Belly Fullscreens Styles">
+ *             Belly styles:
+ *             <Button
+ *               fluid
+ *               selected={belly_fullscreen === "" || belly_fullscreen === null}
+ *               onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
+ *               Disabled
+ *             </Button>
+ *             {Object.keys(possible_fullscreens).map(key => (
+ *               <Button
+ *                 key={key}
+ *                 width="256px"
+ *                 height="256px"
+ *                 selected={key === belly_fullscreen}
+ *                 onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
+ *                 <Box
+ *                   className={classes([
+ *                     'vore240x240',
+ *                     key,
+ *                   ])}
+ *                   style={{
+ *                     transform: 'translate(0%, 4%)',
+ *                   }} />
+ *               </Button>
+ *             ))}
+ *           </Section>
+ *         </Section>
+ *
+ * LINE 900 - const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+ *
+ * return tabIndex===4 ? null : (
+ *
  * That's everything so far.
  *
  */
 export const VorePanel = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-    <Window width={700} height={660} resizable>
+    <Window width={700} height={800} resizable>
       <Window.Content scrollable>
         {data.unsaved_changes && (
           <NoticeBox danger>
@@ -221,10 +293,13 @@ const VoreSelectedBelly = (props, context) => {
     contaminates,
     contaminate_flavor,
     contaminate_color,
+    egg_type,
     escapable,
     interacts,
     contents,
     belly_fullscreen,
+    belly_fullscreen_color,
+    mapRef,
     possible_fullscreens,
     disable_hud,
     show_liq,
@@ -400,6 +475,12 @@ const VoreSelectedBelly = (props, context) => {
                   selected={can_taste}
                   content={can_taste ? "Yes" : "No"} />
               </LabeledList.Item>
+              <LabeledList.Item label="Egg Type">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_egg_type" })}
+                  icon="pen"
+                  content={capitalize(egg_type)} />
+              </LabeledList.Item>
             </LabeledList>
           </Flex.Item>
           <Flex.Item basis="49%" grow={1}>
@@ -520,41 +601,63 @@ const VoreSelectedBelly = (props, context) => {
         </Section>
       ) || tabIndex === 4 && (
         <Fragment>
-          <Section title="Vore FX">
-            <LabeledList>
-              <LabeledList.Item label="Disable Prey HUD">
-                <Button
-                  onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
-                  icon={disable_hud ? "toggle-on" : "toggle-off"}
-                  selected={disable_hud}
-                  content={disable_hud ? "Yes" : "No"} />
-              </LabeledList.Item>
-            </LabeledList>
-          </Section>
-          <Section title="Belly Fullscreens">
-            <Button
-              fluid
-              selected={belly_fullscreen === "" || belly_fullscreen === null}
-              onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
-              Disabled
-            </Button>
-            {Object.keys(possible_fullscreens).map(key => (
+          <Section title="Belly Fullscreens Preview and Coloring">
+            <Flex direction="row">
+              <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
               <Button
-                key={key}
-                width="256px"
-                height="256px"
-                selected={key === belly_fullscreen}
-                onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
-                <Box
-                  className={classes([
-                    'vore240x240',
-                    key,
-                  ])}
-                  style={{
-                    transform: 'translate(0%, 4%)',
-                  }} />
+                icon="eye-dropper"
+                onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
+                Select Color
               </Button>
-            ))}
+            </Flex>
+            <ByondUi
+              style={{
+                width: '200px',
+                height: '200px',
+              }}
+              params={{
+                id: mapRef,
+                type: 'map',
+              }} />
+          </Section>
+          <Section height="260px" style={{ overflow: "auto" }}>
+            <Section title="Vore FX">
+              <LabeledList>
+                <LabeledList.Item label="Disable Prey HUD">
+                  <Button
+                    onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
+                    icon={disable_hud ? "toggle-on" : "toggle-off"}
+                    selected={disable_hud}
+                    content={disable_hud ? "Yes" : "No"} />
+                </LabeledList.Item>
+              </LabeledList>
+            </Section>
+            <Section title="Belly Fullscreens Styles">
+              Belly styles:
+              <Button
+                fluid
+                selected={belly_fullscreen === "" || belly_fullscreen === null}
+                onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: null })}>
+                Disabled
+              </Button>
+              {Object.keys(possible_fullscreens).map(key => (
+                <Button
+                  key={key}
+                  width="256px"
+                  height="256px"
+                  selected={key === belly_fullscreen}
+                  onClick={() => act("set_attribute", { attribute: "b_fullscreen", val: key })}>
+                  <Box
+                    className={classes([
+                      'vore240x240',
+                      key,
+                    ])}
+                    style={{
+                      transform: 'translate(0%, 4%)',
+                    }} />
+                </Button>
+              ))}
+            </Section>
           </Section>
         </Fragment>
       ) || tabIndex === 5 && (
@@ -794,7 +897,9 @@ const VoreUserPreferences = (props, context) => {
     show_pictures,
   } = data;
 
-  return (
+  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
+
+  return tabIndex===4 ? null : (
     <Section title="Preferences" buttons={
       <Button icon="eye" selected={show_pictures} onClick={() => act("show_pictures")}>
         Contents Preference: {show_pictures ? "Show Pictures" : "Show List"}

@@ -124,9 +124,13 @@ var/global/list/global_vore_egg_types = list(
 	"Slime glob",
 	"Chicken",
 	"Synthetic",
-	"Cooking error",
+	"Bluespace Floppy",
+	"Bluespace Compressed File",
+	"Bluespace CD",
 	"Escape pod",
+	"Cooking error",
 	"Web cocoon",
+	"Honeycomb",
 	"Bug cocoon",
 	"Rock",
 	"Yellow",
@@ -155,9 +159,13 @@ var/global/list/tf_vore_egg_types = list(
 	"Slime glob"	= /obj/item/weapon/storage/vore_egg/slimeglob,
 	"Chicken"		= /obj/item/weapon/storage/vore_egg/chicken,
 	"Synthetic"		= /obj/item/weapon/storage/vore_egg/synthetic,
-	"Cooking error"	= /obj/item/weapon/storage/vore_egg/badrecipe,
+	"Bluespace Floppy"	= /obj/item/weapon/storage/vore_egg/floppy,
+	"Bluespace Compressed File"	= /obj/item/weapon/storage/vore_egg/file,
+	"Bluespace CD"	= /obj/item/weapon/storage/vore_egg/cd,
 	"Escape pod"	= /obj/item/weapon/storage/vore_egg/escapepod,
+	"Cooking error"	= /obj/item/weapon/storage/vore_egg/badrecipe,
 	"Web cocoon"	= /obj/item/weapon/storage/vore_egg/cocoon,
+	"Honeycomb"	= /obj/item/weapon/storage/vore_egg/honeycomb,
 	"Bug cocoon"	= /obj/item/weapon/storage/vore_egg/bugcocoon,
 	"Rock"			= /obj/item/weapon/storage/vore_egg/rock,
 	"Yellow"		= /obj/item/weapon/storage/vore_egg/yellow,
@@ -183,6 +191,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/device/paicard,
 				/obj/item/device/pda,
 				/obj/item/device/radio/headset,
+				/obj/item/device/starcaster_news, //chompstation addition
 				/obj/item/inflatable/torn,
 				/obj/item/organ,
 				/obj/item/stack/material/cardboard,
@@ -219,7 +228,8 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/fancy/crayons,
 				/obj/item/weapon/storage/fancy/egg_box,
 				/obj/item/weapon/storage/wallet,
-				/obj/item/weapon/storage/vore_egg)
+        /obj/item/weapon/storage/vore_egg,
+				/obj/item/weapon/material/kitchen) //chompstation addition
 
 var/global/list/contamination_flavors = list(
 				"Generic" = contamination_flavors_generic,
@@ -529,4 +539,22 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 	for(var/species_name in whitelisted_icons)
 		custom_species_bases += species_name
 
+	// Weaver recipe stuff
+	paths = typesof(/datum/weaver_recipe/structure) - /datum/weaver_recipe/structure
+	for(var/path in paths)
+		var/datum/weaver_recipe/instance = new path()
+		if(!instance.title)
+			continue //A prototype or something
+		weavable_structures[instance.title] = instance
+
+	paths = typesof(/datum/weaver_recipe/item) - /datum/weaver_recipe/item
+	for(var/path in paths)
+		var/datum/weaver_recipe/instance = new path()
+		if(!instance.title)
+			continue //A prototype or something
+		weavable_items[instance.title] = instance
+
 	return 1 // Hooks must return 1
+
+var/global/list/weavable_structures = list()
+var/global/list/weavable_items = list()

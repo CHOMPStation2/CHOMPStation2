@@ -49,11 +49,6 @@
 	M.verbs += /mob/living/proc/insidePanel
 	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 
-	//Tries to load prefs if a client is present otherwise gives freebie stomach
-	spawn(2 SECONDS)
-		if(M)
-			M.init_vore()
-
 	//return TRUE to hook-caller
 	return TRUE
 
@@ -102,16 +97,12 @@
 		//Has to be aggressive grab, has to be living click-er and non-silicon grabbed
 		if(G.state >= GRAB_AGGRESSIVE && (isliving(user) && !issilicon(G.affecting)))
 			var/mob/living/attacker = user  // Typecast to living
+			G.affecting.init_vore()
 
 			// src is the mob clicked on and attempted predator
 
 			///// If user clicked on themselves
 			if(src == G.assailant && is_vore_predator(src))
-				if(!G.affecting.devourable)
-					to_chat(user, "<span class='notice'>They aren't able to be devoured.</span>")
-					log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(G.affecting)] against their prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
-					return FALSE
-
 				if(feed_grabbed_to_self(src, G.affecting))
 					qdel(G)
 					return TRUE
@@ -157,6 +148,10 @@
 		var/mob/living/attacker = user  // Typecast to living
 		if(is_vore_predator(src))
 			for(var/mob/living/M in H.contents)
+				M.init_vore()
+				if(!M.devourable)
+					to_chat(user, "<span class='notice'>[M] isn't able to be devoured.</span>")
+					return FALSE
 				if(attacker.eat_held_mob(attacker, M, src))
 					if(H.held_mob == M)
 						H.held_mob = null
@@ -503,6 +498,11 @@
 	if(user_to_pred > 1 || user_to_prey > 1)
 		return FALSE
 
+	if(!prey.devourable)
+		to_chat(user, "<span class='notice'>They aren't able to be devoured.</span>")
+		log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(prey)] against their prefs ([prey ? ADMIN_JMP(prey) : "null"])")
+		return FALSE
+
 	// Prepare messages
 	//CHOMPEdit begin
 	if(prey.is_slipping)
@@ -615,7 +615,7 @@
 		to_chat(src, "<span class='warning'>You are not allowed to eat this.</span>")
 		return
 
-	if(is_type_in_list(I,edible_trash) | adminbus_trash)
+	if(is_type_in_list(I,edible_trash) | adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) //chompstation add synth check
 		if(I.hidden_uplink)
 			to_chat(src, "<span class='warning'>You really should not be eating this.</span>")
 			message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? ADMIN_JMP(src) : "null"])")
@@ -701,6 +701,15 @@
 		else if (istype(I,/obj/item/clothing/accessory/collar))
 			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
 			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
+		//kcin2000 1/29/21 - lets you eat the news digitally and adds a text for the paper news
+		else if(istype(I,/obj/item/device/starcaster_news))
+			to_chat(src, "<span class='notice'>You can taste the dry flavor of digital garbage, oh wait its just the news.</span>")
+		else if(istype(I,/obj/item/weapon/newspaper))
+			to_chat(src, "<span class='notice'>You can taste the dry flavor of garbage, oh wait its just the news.</span>")
+		//kcin2001 1/29/21 - Adding some special synth trash eat
+		else if (istype(I,/obj/item/weapon/cell))
+			visible_message("<span class='warning'>[src] sates their electric appeite with a [I]!</span>")
+			to_chat(src, "<span class='notice'>You can taste the spicy flavor of electrolytes, yum.</span>")
 		else
 			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
 		return

@@ -262,7 +262,7 @@
 				prob(8);/obj/item/weapon/haircomb,
 				prob(4);/obj/item/weapon/storage/pill_bottle/happy,
 				prob(4);/obj/item/weapon/storage/pill_bottle/zoom,
-				prob(10);/obj/item/weapon/contraband/poster,
+				prob(10);/obj/item/weapon/contraband/poster/custom,
 				prob(4);/obj/item/weapon/material/butterfly,
 				prob(6);/obj/item/weapon/material/butterflyblade,
 				prob(6);/obj/item/weapon/material/butterflyhandle,
@@ -626,7 +626,12 @@
 				/obj/item/toy/figure/warden,
 				/obj/item/toy/figure/psychologist,
 				/obj/item/toy/figure/paramedic,
-				/obj/item/toy/figure/ert)
+				/obj/item/toy/figure/ert,
+				//chompstation Add start
+				/obj/item/toy/figure/station,
+				/obj/item/toy/sif)
+				//chompstation Add end
+
 
 /obj/random/plushie
 	name = "random plushie"

@@ -48,8 +48,17 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 500, "silver" = 300, "phoron" = 300, "diamond" = 500) //Probably change the price in the future just put something for now
 	build_path = /obj/item/weapon/rms
 	sort_string = "NAAAB"
-
 // YW addition end
+
+/datum/design/item/tool/rpd
+	name = "Rapid Pipe Dispenser"
+	desc = "A counterpart to the rapid construction device that allows creating and placing atmospheric and disposal pipes."
+	id = "rapidpipedispenser"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 4000, MAT_GLASS = 2000)
+	build_path = /obj/item/weapon/pipe_dispenser
+	sort_string = "NAAAD"
+
 // Other devices
 
 /datum/design/item/engineering/AssembleDesignName()

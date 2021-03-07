@@ -29,9 +29,9 @@
 /obj/structure/alien/egg/process()
 	progress++
 	if(progress >= MAX_PROGRESS)
-		for(var/mob/observer/ghost/O in GLOB.ghost_mob_list)
-			if(O.client && O.client.prefs && (BE_ALIEN))
-				to_chat(O, "<span class='notice'>An alien is ready to hatch! ([ghost_follow_link(src, O)]) (<a href='byond://?src=\ref[src];spawn=1'>spawn</a>)</span>")
+		for(var/mob/observer/dead/O) //CHOMPedit fixed the snowflake ghost_pod notification.
+			if(O.client)
+				to_chat(O, "<span class='notice'>An alien is ready to hatch! (<a href='byond://?src=\ref[src];spawn=1'>spawn</a>)</span>")
 		STOP_PROCESSING(SSobj, src)
 		update_icon()
 
