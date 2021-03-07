@@ -186,6 +186,15 @@
 		else
 			stored_ore[O.name] = 1
 
+//CHOMPstation edit START
+/obj/item/weapon/storage/bag/ore/large
+	name = "large mining satchel"
+	desc = "This little bugger can be used to store and transport ores.  Appears to have upgraded storage space, up to three times your normal satchel!"
+	icon = 'icons/obj/mining_ch.dmi'
+	icon_state = "satchel_large"
+	max_storage_space = ITEMSIZE_COST_NORMAL * 75 // triple storage size
+//CHOMPstation edit END
+
 // -----------------------------
 //          Plant bag
 // -----------------------------
