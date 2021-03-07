@@ -33,6 +33,27 @@
 
 	var/ability_cost = 100
 
+//CHOMPADDITION Conditional shifting ased on observers and darkness
+	var/darkness = 1
+	var/turf/T = get_turf(src)
+	if(!T)
+		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		return FALSE
+
+	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
+	darkness = 1-brightness //Invert
+
+	var/watcher =-1
+	for(var/mob/living/carbon/human/watchers in view_or_range(7,get_turf(src),"range" ))
+		watcher++
+
+	ability_cost = CLAMP(ability_cost/(0.01+darkness*2),50, 80)//This allows for 1 watcher in full light
+	if(watcher>0)
+		ability_cost = ability_cost + ( 15 * watcher )
+	if(!(ability_flags & AB_PHASE_SHIFTED))
+		log_debug("[src] attempted to shift with [watcher] visible Carbons and it cost [ability_cost] in a darkness level of [darkness]")
+//CHOMPADDITION END
+
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
 		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
@@ -40,6 +61,7 @@
 	else if(stat)
 		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
 		return FALSE
+
 	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
 		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
 		return FALSE
@@ -48,7 +70,7 @@
 		shadekin_adjust_energy(-ability_cost)
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
 
-	var/turf/T = get_turf(src)
+	//var/turf/T = get_turf(src) //CHOMPREMOVAL: This is done earlier since we need it to get lighting
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE

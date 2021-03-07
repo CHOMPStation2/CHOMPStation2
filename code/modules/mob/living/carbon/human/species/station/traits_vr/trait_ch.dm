@@ -1,5 +1,6 @@
 /datum/trait
 	var/special_env = FALSE
+	var/list/allowed_species		// A list of species that CAN take this trait, use this if only 1 species can use it. -shark
 
 /datum/trait/proc/handle_environment_special(var/mob/living/carbon/human/H)
 	return

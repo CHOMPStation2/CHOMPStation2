@@ -41,7 +41,7 @@
 	S["traits_cheating"]	>> pref.traits_cheating
 	S["max_traits"]		>> pref.max_traits
 	S["trait_points"]	>> pref.starting_trait_points
-	
+
 	S["custom_say"]		>> pref.custom_say
 	S["custom_whisper"]	>> pref.custom_whisper
 	S["custom_ask"]		>> pref.custom_ask
@@ -58,7 +58,7 @@
 	S["traits_cheating"]	<< pref.traits_cheating
 	S["max_traits"]		<< pref.max_traits
 	S["trait_points"]	<< pref.starting_trait_points
-	
+
 	S["custom_say"]		<< pref.custom_say
 	S["custom_whisper"]	<< pref.custom_whisper
 	S["custom_ask"]		<< pref.custom_ask
@@ -179,7 +179,7 @@
 	. += "<a href='?src=\ref[src];blood_color=1'>Set Color</a>"
 	. += "<a href='?src=\ref[src];blood_reset=1'>R</a><br>"
 	. += "<br>"
-	
+
 	. += "<b>Custom Say: </b>"
 	. += "<a href='?src=\ref[src];custom_say=1'>Set Say Verb</a><br>"
 	. += "<b>Custom Whisper: </b>"
@@ -348,6 +348,12 @@
 			if(pref.species in instance.banned_species)
 				alert("The trait you've selected cannot be taken by the species you've chosen!","Error")
 				return TOPIC_REFRESH
+
+			//CHOMPADDITION START Adding whitelist for traits
+			if( LAZYLEN(instance.allowed_species) && !(pref.species in instance.allowed_species)) //Adding white list handling -shark
+				alert("The trait you've selected cannot be taken by the species you've chosen!","Error")
+				return TOPIC_REFRESH
+			//CHOMPADDITION END
 
 			if(trait_choice in pref.pos_traits + pref.neu_traits + pref.neg_traits)
 				conflict = instance.name
