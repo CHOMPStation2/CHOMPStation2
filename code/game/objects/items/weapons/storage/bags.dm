@@ -192,7 +192,15 @@
 	desc = "This little bugger can be used to store and transport ores.  Appears to have upgraded storage space, up to three times your normal satchel!"
 	icon = 'icons/obj/mining_ch.dmi'
 	icon_state = "satchel_large"
-	max_storage_space = ITEMSIZE_COST_NORMAL * 75 // triple storage size
+	max_storage_space = ITEMSIZE_COST_NORMAL * 75 // triple storage size of original
+
+/obj/item/weapon/storage/bag/ore/holding
+	name = "satchel of holding"
+	desc = "An ore satchel that opens into a localized pocket of bluespace."
+	icon = 'icons/obj/mining_ch.dmi'
+	icon_state = "satchel_bspace"
+	max_storage_space = ITEMSIZE_COST_NORMAL * 250 // ten times storage size of original
+
 //CHOMPstation edit END
 
 // -----------------------------
