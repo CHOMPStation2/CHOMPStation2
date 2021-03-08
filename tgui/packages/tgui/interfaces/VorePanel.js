@@ -887,13 +887,9 @@ const VoreUserPreferences = (props, context) => {
     show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
-<<<<<<< HEAD
     latejoin_vore,
-||||||| parent of 3fd320ad33... Merge pull request #9862 from Heroman3003/sizememes
-=======
     step_mechanics_active,
     pickup_mechanics_active,
->>>>>>> 3fd320ad33... Merge pull request #9862 from Heroman3003/sizememes
     noisy,
     liq_rec,
     liq_giv,
