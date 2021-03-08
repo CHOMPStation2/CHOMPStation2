@@ -208,13 +208,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
-<<<<<<< HEAD
-			"latejoin_vore"			= latejoin_vore,
-||||||| parent of 3fd320ad33... Merge pull request #9862 from Heroman3003/sizememes
-=======
+			"latejoin_vore"			= latejoin_vore, //CHOMPedit
 			"step_mechanics_pref"	= step_mechanics_pref,
 			"pickup_pref"			= pickup_pref,
->>>>>>> 3fd320ad33... Merge pull request #9862 from Heroman3003/sizememes
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
