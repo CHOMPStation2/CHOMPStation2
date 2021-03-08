@@ -32,7 +32,7 @@
 	. = ..()
 	(.).pixel_x = skybox_offset_x
 	(.).pixel_y = skybox_offset_y
-
+/*
 /obj/effect/overmap/visitable/sector/Southern_Cross
 	name = "Southern Cross"
 	icon_state = "object"
@@ -42,8 +42,8 @@
 	start_x =  10
 	start_y =  10
 	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
-	map_z = list(Z_LEVEL_STATION_ONE, Z_LEVEL_STATION_TWO, Z_LEVEL_STATION_THREE)
-	extra_z_levels = list(Z_LEVEL_MISC) // Hopefully temporary, so arrivals announcements work. //CHOMPedit: adds Z_LEVEL_MISC to connect the exploration carrier with the station
+	//map_z = list(Z_LEVEL_STATION_ONE, Z_LEVEL_STATION_TWO, Z_LEVEL_STATION_THREE)
+	//extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC) // Hopefully temporary, so arrivals announcements work. //CHOMPedit: adds Z_LEVEL_MISC to connect the exploration carrier with the station
 	initial_generic_waypoints = list(
 		"d1_aux_a",
 		"d1_aux_b",
@@ -68,7 +68,7 @@
 		"d3_near_se",
 		"baby_mammoth_dock"
 		)
-
+*/
 /obj/effect/overmap/visitable/planet/Sif/Initialize()
 	. = ..()
 	docking_codes = null
