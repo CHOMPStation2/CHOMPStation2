@@ -888,6 +888,8 @@ const VoreUserPreferences = (props, context) => {
     can_be_drop_prey,
     can_be_drop_pred,
     latejoin_vore,
+    step_mechanics_active,
+    pickup_mechanics_active,
     noisy,
     liq_rec,
     liq_giv,
@@ -1037,6 +1039,34 @@ const VoreUserPreferences = (props, context) => {
               : ("Regardless of Predator Setting, you will not leave remains behind."
                 + " Click this to allow leaving remains.")}
             content={digest_leave_remains ? "Allow Leaving Remains Behind" : "Do Not Allow Leaving Remains Behind"} />
+        </Flex.Item>
+        <Flex.Item basis="49%">
+          <Button
+            onClick={() => act("toggle_steppref")}
+            icon={step_mechanics_active ? "toggle-on" : "toggle-off"}
+            selected={step_mechanics_active}
+            fluid
+            tooltipPosition="top"
+            tooltip={step_mechanics_active 
+              ? "This setting controls whether or not you participate in size-based step mechanics."
+              + "Includes both stepping on others, as well as getting stepped on. Click to disable step mechanics."
+              : ("You will not participate in step mechanics."
+                + " Click to enable step mechanics.")}
+            content={step_mechanics_active ? "Step Mechanics Enabled" : "Step Mechanics Disabled"} />
+        </Flex.Item>
+        <Flex.Item basis="49%">
+          <Button
+            onClick={() => act("toggle_pickuppref")}
+            icon={pickup_mechanics_active ? "toggle-on" : "toggle-off"}
+            selected={pickup_mechanics_active}
+            fluid
+            tooltipPosition="top"
+            tooltip={pickup_mechanics_active 
+              ? "Allows macros to pick you up into their hands, and you to pick up micros."
+              + "Click to disable pick-up mechanics"
+              : ("You will not participate in pick-up mechanics."
+                + " Click this to allow picking up/being picked up.")}
+            content={pickup_mechanics_active ? "Pick-up Mechanics Enabled" : "Pick-up Mechanics Disabled"} />
         </Flex.Item>
         <Flex.Item basis="49%">
           <Button

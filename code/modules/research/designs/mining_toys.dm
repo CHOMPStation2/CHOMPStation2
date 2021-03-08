@@ -48,3 +48,13 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 1000,"glass" = 1000)
 	build_path = /obj/item/device/depth_scanner
 	sort_string = "FBAAA"
+// CHOMPstation addition
+/datum/design/item/weapon/mining/satchel_holding
+	name = "Satchel of Holding"
+	desc = "An ore satchel that opens into a localized pocket of bluespace."
+	id = "satchel_bspace"
+	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 6)
+	materials = list("gold" = 2500, "diamond" = 1000, "uranium" = 250)
+	build_path = /obj/item/weapon/storage/bag/ore/holding
+	sort_string = "FBAAB"
+// CHOMPstation addition end
