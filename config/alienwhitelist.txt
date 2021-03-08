@@ -16,6 +16,13 @@ funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
 hollifex - Diona
+<<<<<<< HEAD
+||||||| parent of 2fd3fbbba8... Merge pull request #9879 from ResidentCody/Personal-Fork
+h0lysquirr3l - Protean
+=======
+h0lysquirr3l - Protean
+idcaboutaname - Protean
+>>>>>>> 2fd3fbbba8... Merge pull request #9879 from ResidentCody/Personal-Fork
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
@@ -30,9 +37,20 @@ oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
+<<<<<<< HEAD
 rapidvalj - Vox
 rapidvalj - Common Skrellian
 rapidvalj - High Skrellian
+||||||| parent of 2fd3fbbba8... Merge pull request #9879 from ResidentCody/Personal-Fork
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+residentcody - Protean
+=======
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+residentcody - Black-Eyed Shadekin
+residentcody - Protean
+>>>>>>> 2fd3fbbba8... Merge pull request #9879 from ResidentCody/Personal-Fork
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
 rykkastormheart - Xenochimera
