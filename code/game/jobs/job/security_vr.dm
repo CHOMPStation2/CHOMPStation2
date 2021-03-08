@@ -4,13 +4,33 @@
 	dept_time_required = 60
 
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
+<<<<<<< HEAD
 			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
 			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks, access_teleporter) //CHOMP Edit: Restores what access is given in security.dm.
+||||||| parent of e6f50c920a... Merge pull request #9868 from Novacat/nova-pathfinder
+						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+						access_construction,
+						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_external_airlocks)
+=======
+						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+						access_construction,
+						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks)
+>>>>>>> e6f50c920a... Merge pull request #9868 from Novacat/nova-pathfinder
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
+<<<<<<< HEAD
 			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
 			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks, access_teleporter) //CHOMP Edit: Restores what access is given in security.dm.
+||||||| parent of e6f50c920a... Merge pull request #9868 from Novacat/nova-pathfinder
+						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+						access_construction,
+						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_external_airlocks)
+=======
+						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+						access_construction,
+						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks)
+>>>>>>> e6f50c920a... Merge pull request #9868 from Novacat/nova-pathfinder
 	alt_titles = list("Security Commander" = /datum/alt_title/sec_commander, "Chief of Security" = /datum/alt_title/sec_chief, "Security Manager" = /datum/alt_title/security_manager)
 
 /datum/alt_title/security_manager
