@@ -250,13 +250,9 @@
 		"show_vore_fx" = host.show_vore_fx,
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
-<<<<<<< HEAD
-		"latejoin_vore" = host.latejoin_vore,
-||||||| parent of 3fd320ad33... Merge pull request #9862 from Heroman3003/sizememes
-=======
+		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
->>>>>>> 3fd320ad33... Merge pull request #9862 from Heroman3003/sizememes
 		"noisy" = host.noisy,
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
