@@ -42,8 +42,11 @@
 		"Raccoon" = "pai-raccoon",
 		"Raptor" = "pai-raptor",
 		"Rat" = "rat",
-		"Panther" = "panther"
+		"Panther" = "panther",
 		//VOREStation Addition End
+		//Chompstation Addition Start
+		"Construction Drone" = "pai-bigdrone"
+		//Chompstation Addition End
 		)
 
 	var/global/list/possible_say_verbs = list(
