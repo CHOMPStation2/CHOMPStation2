@@ -25,7 +25,7 @@
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
 
-	siemens_coefficient = 0
+	siemens_coefficient = 1
 	darksight = 10
 
 	slowdown = -0.5
