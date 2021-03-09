@@ -319,7 +319,6 @@
 	cell = null
 	internal_tank = null
 
-	GLOB.mech_destroyed_roundstat++ //CHOMP Edit This is for the roundtrivia system
 	if(smoke_possible)	//Just making sure nothing is running.
 		qdel(smoke_system)
 
