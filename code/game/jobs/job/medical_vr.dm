@@ -4,31 +4,13 @@
 	dept_time_required = 60
 
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-<<<<<<< HEAD
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter, //CHOMPEdit
-			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
-||||||| parent of e6f50c920a... Merge pull request #9868 from Novacat/nova-pathfinder
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
-=======
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
 			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
->>>>>>> e6f50c920a... Merge pull request #9868 from Novacat/nova-pathfinder
 
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-<<<<<<< HEAD
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,//CHOMPEdit
-			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
-	alt_titles = list("Chief Physician" = /datum/alt_title/chief_physician, "Medical Director" = /datum/alt_title/medical_director, /*CHOMPEdit Removal"Healthcare Manager" = /datum/alt_title/healthcare_manager*/)
-||||||| parent of e6f50c920a... Merge pull request #9868 from Novacat/nova-pathfinder
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
-	alt_titles = list("Chief Physician" = /datum/alt_title/chief_physician, "Medical Director" = /datum/alt_title/medical_director, "Healthcare Manager" = /datum/alt_title/healthcare_manager)
-=======
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
 			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
-	alt_titles = list("Chief Physician" = /datum/alt_title/chief_physician, "Medical Director" = /datum/alt_title/medical_director, "Healthcare Manager" = /datum/alt_title/healthcare_manager)
->>>>>>> e6f50c920a... Merge pull request #9868 from Novacat/nova-pathfinder
+	alt_titles = list("Chief Physician" = /datum/alt_title/chief_physician, "Medical Director" = /datum/alt_title/medical_director, /*CHOMPEdit Removal"Healthcare Manager" = /datum/alt_title/healthcare_manager*/)
 
 /datum/alt_title/chief_physician
 	title = "Chief Physician"
