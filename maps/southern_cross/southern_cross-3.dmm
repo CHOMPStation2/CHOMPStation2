@@ -1382,7 +1382,7 @@
 "nIu" = (/obj/machinery/door/airlock/maintenance{name = "Firefighting equipment"; req_access = null; req_one_access = null},/obj/machinery/door/firedoor/glass,/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsaft)
 "nKZ" = (/obj/effect/floor_decal/spline/plain,/obj/machinery/light_construct{dir = 8},/turf/simulated/floor/tiled/eris/steel/bar_dance,/area/maintenance/thirddeck/aftport)
 "nLX" = (/obj/machinery/atmospherics/pipe/simple/hidden,/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsport)
-"nMn" = (/obj/item/weapon/implant/dud,/obj/structure/table/steel,/obj/item/weapon/implant/sizecontrol,/obj/item/weapon/implant/dud/old,/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsstarboard)
+"nMn" = (/obj/item/weapon/implant/dud,/obj/structure/table/steel,/obj/item/weapon/implant/sizecontrol,/obj/item/weapon/implant/dud,/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsstarboard)
 "nMy" = (/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 5},/turf/simulated/floor/tiled,/area/bridge)
 "nMY" = (/obj/structure/table/wooden_reinforced,/obj/machinery/atmospherics/unary/vent_pump/on,/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_x = -32},/obj/item/device/flashlight/lamp/green,/turf/simulated/floor/carpet,/area/crew_quarters/heads/sc/sd)
 "nNp" = (/obj/machinery/light{dir = 1},/obj/machinery/ai_status_display{pixel_y = 32},/turf/simulated/floor/wood,/area/bridge/meeting_room)
