@@ -2794,7 +2794,12 @@
 #include "code\modules\mob\living\carbon\human\species\shadekin\shadekin.dm"
 #include "code\modules\mob\living\carbon\human\species\shadekin\shadekin_abilities.dm"
 #include "code\modules\mob\living\carbon\human\species\shadekin\shadekin_hud.dm"
+<<<<<<< HEAD
 #include "code\modules\mob\living\carbon\human\species\shadekin\shadekin_zz_ch.dm"
+||||||| parent of bb94127a6f... Merge pull request #9881 from Sharkmare/Carbonkin-Content-update
+=======
+#include "code\modules\mob\living\carbon\human\species\shadekin\shadekin_trait.dm"
+>>>>>>> bb94127a6f... Merge pull request #9881 from Sharkmare/Carbonkin-Content-update
 #include "code\modules\mob\living\carbon\human\species\station\alraune.dm"
 #include "code\modules\mob\living\carbon\human\species\station\blank_vr.dm"
 #include "code\modules\mob\living\carbon\human\species\station\golem.dm"

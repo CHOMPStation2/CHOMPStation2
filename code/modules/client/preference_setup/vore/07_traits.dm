@@ -144,7 +144,7 @@
 		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
 
 	var/traits_left = pref.max_traits
-	
+
 	if(pref.species == SPECIES_CUSTOM)
 		var/points_left = pref.starting_trait_points
 
@@ -349,12 +349,20 @@
 				alert("The trait you've selected cannot be taken by the species you've chosen!","Error")
 				return TOPIC_REFRESH
 
+<<<<<<< HEAD
 			//CHOMPADDITION START Adding whitelist for traits
 			if( LAZYLEN(instance.allowed_species) && !(pref.species in instance.allowed_species)) //Adding white list handling -shark
 				alert("The trait you've selected cannot be taken by the species you've chosen!","Error")
 				return TOPIC_REFRESH
 			//CHOMPADDITION END
 
+||||||| parent of bb94127a6f... Merge pull request #9881 from Sharkmare/Carbonkin-Content-update
+=======
+			if( LAZYLEN(instance.allowed_species) && !(pref.species in instance.allowed_species)) //Adding white list handling -shark
+				alert("The trait you've selected cannot be taken by the species you've chosen!","Error")
+				return TOPIC_REFRESH
+
+>>>>>>> bb94127a6f... Merge pull request #9881 from Sharkmare/Carbonkin-Content-update
 			if(trait_choice in pref.pos_traits + pref.neu_traits + pref.neg_traits)
 				conflict = instance.name
 
