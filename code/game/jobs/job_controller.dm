@@ -510,6 +510,7 @@ var/global/datum/controller/occupations/job_master
 					to_chat(H, "<span class='danger'>Failed to locate a storage object on your mob, either you spawned with no arms and no backpack or this is a bug.</span>")
 
 		if(istype(H)) //give humans wheelchairs, if they need them.
+<<<<<<< HEAD
 			if(istype(H.loc, /obj/belly)) //unless in a gut
 				var/obj/item/organ/external/l_foot = H.get_organ("l_foot")
 				var/obj/item/organ/external/r_foot = H.get_organ("r_foot")
@@ -526,6 +527,40 @@ var/global/datum/controller/occupations/job_master
 					if(R)
 						W.color = R.color
 						qdel(R)
+||||||| parent of bc30b1d143... Merge pull request #9882 from VOREStation/upstream-merge-7849
+			var/obj/item/organ/external/l_foot = H.get_organ("l_foot")
+			var/obj/item/organ/external/r_foot = H.get_organ("r_foot")
+			var/obj/item/weapon/storage/S = locate() in H.contents
+			var/obj/item/wheelchair/R = null
+			if(S)
+				R = locate() in S.contents
+			if(!l_foot || !r_foot || R)
+				var/obj/structure/bed/chair/wheelchair/W = new /obj/structure/bed/chair/wheelchair(H.loc)
+				W.buckle_mob(H)
+				H.update_canmove()
+				W.set_dir(H.dir)
+				W.add_fingerprint(H)
+				if(R)
+					W.color = R.color
+					qdel(R)
+=======
+			var/obj/item/organ/external/l_foot = H.get_organ("l_foot")
+			var/obj/item/organ/external/r_foot = H.get_organ("r_foot")
+			var/obj/item/weapon/storage/S = locate() in H.contents
+			var/obj/item/wheelchair/R
+			if(S)
+				R = locate() in S.contents
+			if(!l_foot || !r_foot || R)
+				var/wheelchair_type = R?.unfolded_type || /obj/structure/bed/chair/wheelchair
+				var/obj/structure/bed/chair/wheelchair/W = new wheelchair_type(H.loc)
+				W.buckle_mob(H)
+				H.update_canmove()
+				W.set_dir(H.dir)
+				W.add_fingerprint(H)
+				if(R)
+					W.color = R.color
+					qdel(R)
+>>>>>>> bc30b1d143... Merge pull request #9882 from VOREStation/upstream-merge-7849
 
 		to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
 
