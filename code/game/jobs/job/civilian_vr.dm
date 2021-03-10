@@ -238,25 +238,3 @@
 /datum/alt_title/tragedian
 	title = "Tragedian"
 	title_blurb = "A Tragedian will focus on making people think about life and world around them! Life is a tragedy, and who's better to convey its emotions than you?"
-
-//CHOMP ADDITION: Below, well sort off, these are the clown and mime returning! as entertainer alts
-//They even get their respective outfits.
-/datum/alt_title/clown
-	title = "Clown"
-	title_blurb = "A Clown is there to entertain the crew and keep high morale using various harmless pranks and ridiculous jokes!"
-	title_outfit = /decl/hierarchy/outfit/job/clown
-
-/datum/alt_title/clown/jester
-	title = "Jester"
-
-/datum/alt_title/clown/fool
-	title = "Fool"
-
-/datum/alt_title/mime
-	title = "Mime"
-	title_blurb = "A Mime is there to entertain the crew and keep high morale using unbelievable performances and acting skills!"
-	title_outfit = /decl/hierarchy/outfit/job/mime
-
-/datum/alt_title/mime/poseur
-	title = "Poseur"
-//CHOMP ADDITION END

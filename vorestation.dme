@@ -795,6 +795,7 @@
 #include "code\game\jobs\job\silicon.dm"
 #include "code\game\jobs\job\silicon_vr.dm"
 #include "code\game\jobs\job\special_vr.dm"
+#include "code\game\jobs\job\zz_alt_titles_ch.dm"
 #include "code\game\machinery\adv_med.dm"
 #include "code\game\machinery\adv_med_vr.dm"
 #include "code\game\machinery\ai_slipper.dm"
