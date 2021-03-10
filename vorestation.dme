@@ -3245,6 +3245,7 @@
 #include "code\modules\multiz\turf.dm"
 #include "code\modules\multiz\turf_yw.dm"
 #include "code\modules\multiz\zshadow.dm"
+<<<<<<< HEAD
 #include "code\modules\nano\nanoexternal.dm"
 #include "code\modules\nano\nanomanager.dm"
 #include "code\modules\nano\nanomapgen.dm"
@@ -3264,6 +3265,12 @@
 #include "code\modules\nano\interaction\remote.dm"
 #include "code\modules\nano\interaction\self.dm"
 #include "code\modules\nano\interaction\zlevel.dm"
+||||||| parent of b14abd6164... Merge pull request #9885 from Novacat/nova-basicfixes
+=======
+#include "code\modules\news\news_init.dm"
+#include "code\modules\news\newspaper.dm"
+#include "code\modules\news\newspaper_layout.dm"
+>>>>>>> b14abd6164... Merge pull request #9885 from Novacat/nova-basicfixes
 #include "code\modules\nifsoft\nif.dm"
 #include "code\modules\nifsoft\nif_softshop.dm"
 #include "code\modules\nifsoft\nif_statpanel.dm"
