@@ -92,12 +92,4 @@
 			if(I && I.imp_in)
 				to_chat(I.imp_in, "<span class='notice'>You hear a voice in your head saying: '[warning]'</span>")
 			. = TRUE
-<<<<<<< HEAD
-
 	add_fingerprint(usr)
-||||||| parent of 8a2dddef3a... Merge pull request #9765 from VOREStation/upstream-merge-7902
-
-	add_fingerprint(usr)
-=======
-	add_fingerprint(usr)
->>>>>>> 8a2dddef3a... Merge pull request #9765 from VOREStation/upstream-merge-7902
