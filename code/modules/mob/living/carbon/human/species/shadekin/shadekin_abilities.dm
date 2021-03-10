@@ -33,7 +33,6 @@
 
 	var/ability_cost = 100
 
-//CHOMPADDITION Conditional shifting ased on observers and darkness
 	var/darkness = 1
 	var/turf/T = get_turf(src)
 	if(!T)
@@ -43,16 +42,18 @@
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
 
-	var/watcher =-1
-	for(var/mob/living/carbon/human/watchers in view_or_range(7,get_turf(src),"range" ))
-		watcher++
+	var/watcher = 0
+	for(var/mob/living/carbon/human/watchers in oview(7,src ))	// If we can see them...
+		if(watchers in oviewers(7,src))	// And they can see us...
+			if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/weapon/holder))	// And they are alive and not being held by someone...
+				watcher++	// They are watching us!
 
 	ability_cost = CLAMP(ability_cost/(0.01+darkness*2),50, 80)//This allows for 1 watcher in full light
 	if(watcher>0)
 		ability_cost = ability_cost + ( 15 * watcher )
 	if(!(ability_flags & AB_PHASE_SHIFTED))
-		log_debug("[src] attempted to shift with [watcher] visible Carbons and it cost [ability_cost] in a darkness level of [darkness]")
-//CHOMPADDITION END
+		log_debug("[src] attempted to shift with [watcher] visible Carbons with a  cost of [ability_cost] in a darkness level of [darkness]")
+
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
@@ -70,7 +71,6 @@
 		shadekin_adjust_energy(-ability_cost)
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
 
-	//var/turf/T = get_turf(src) //CHOMPREMOVAL: This is done earlier since we need it to get lighting
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE
