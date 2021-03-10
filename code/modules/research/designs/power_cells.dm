@@ -66,16 +66,8 @@
 /datum/design/item/powercell/advance_device
 	name = "device, advanced"
 	build_type = PROTOLATHE
-<<<<<<< HEAD
 	id = "advance_device"
-	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 50)
-||||||| parent of 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
-	id = "weapon"
-	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 50)
-=======
-	id = "weapon"
 	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 50, MAT_COPPER = 15)
->>>>>>> 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
 	build_path = /obj/item/weapon/cell/device/weapon
 	category = list("Misc")
 	sort_string = "BAABB"
@@ -84,7 +76,7 @@
 	name = "device, super"
 	id = "super_device"
 	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2)
-	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 70, "gold" = 50, "silver" = 20,)
+	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 70, "gold" = 50, "silver" = 20, MAT_COPPER = 15)
 	build_path = /obj/item/weapon/cell/device/super
 	category = list("Misc")
 	sort_string = "BAABC"
@@ -93,7 +85,7 @@
 	name = "device, hyper"
 	id = "hyper_device"
 	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
-	materials = list(DEFAULT_WALL_MATERIAL = 1400, "glass" = 1400, "gold" = 150, "silver" = 150)
+	materials = list(DEFAULT_WALL_MATERIAL = 1400, "glass" = 1400, "gold" = 150, "silver" = 150, MAT_COPPER = 50)
 	build_path = /obj/item/weapon/cell/device/hyper
 	category = list("Misc")
 	sort_string = "BAABD"
