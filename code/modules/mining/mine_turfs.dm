@@ -49,26 +49,6 @@ var/list/mining_overlay_cache = list()
 	var/datum/artifact_find/artifact_find
 	var/ignore_mapgen
 
-<<<<<<< HEAD
-||||||| parent of 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
-	var/ore_types = list(
-		"hematite" = /obj/item/weapon/ore/iron,
-		"uranium" = /obj/item/weapon/ore/uranium,
-		"gold" = /obj/item/weapon/ore/gold,
-		"silver" = /obj/item/weapon/ore/silver,
-		"diamond" = /obj/item/weapon/ore/diamond,
-		"phoron" = /obj/item/weapon/ore/phoron,
-		"osmium" = /obj/item/weapon/ore/osmium,
-		"hydrogen" = /obj/item/weapon/ore/hydrogen,
-		"silicates" = /obj/item/weapon/ore/glass,
-		"carbon" = /obj/item/weapon/ore/coal,
-		"verdantium" = /obj/item/weapon/ore/verdantium,
-		"marble" = /obj/item/weapon/ore/marble,
-		"lead" = /obj/item/weapon/ore/lead,
-		"rutile" = /obj/item/weapon/ore/rutile //VOREStation Add
-	)
-
-=======
 	var/ore_types = list(
 		"hematite" = /obj/item/weapon/ore/iron,
 		"uranium" = /obj/item/weapon/ore/uranium,
@@ -92,7 +72,6 @@ var/list/mining_overlay_cache = list()
 		"rutile" = /obj/item/weapon/ore/rutile
 	)
 
->>>>>>> 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
 	has_resources = 1
 
 // Alternative rock wall sprites.
