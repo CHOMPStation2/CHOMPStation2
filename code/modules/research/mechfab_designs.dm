@@ -764,16 +764,8 @@
 	name = "Ripley Leg Actuator Overdrive"
 	desc = "System enhancements and overdrives to make a mech's legs move faster."
 	id = "mech_speedboost_ripley"
-<<<<<<< HEAD
-	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4, TECH_ENGINEERING = 4)
-	materials = list(DEFAULT_WALL_MATERIAL = 10000, "silver" = 1000, "gold" = 1000)
-||||||| parent of 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
-	req_tech = list( TECH_POWER = 5, TECH_MATERIAL = 4, TECH_ENGINEERING = 4)
-	materials = list(DEFAULT_WALL_MATERIAL = 10000, "silver" = 1000, "gold" = 1000)
-=======
 	req_tech = list( TECH_POWER = 5, TECH_MATERIAL = 4, TECH_ENGINEERING = 4)
 	materials = list(DEFAULT_WALL_MATERIAL = 10000, MAT_ALUMINIUM = 1000, "gold" = 1000)
->>>>>>> 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
 	build_path = /obj/item/mecha_parts/mecha_equipment/speedboost
 
 /datum/design/item/synthetic_flash
