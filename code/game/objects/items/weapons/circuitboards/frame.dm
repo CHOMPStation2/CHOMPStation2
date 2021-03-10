@@ -177,14 +177,8 @@
 /obj/item/weapon/circuitboard/teleporter_hub
 	name = T_BOARD("teleporter hub")
 	build_path = /obj/machinery/teleport/hub
-<<<<<<< HEAD
 	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
-||||||| parent of 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
-	board_type = "teleporter_hub"
-=======
-	board_type = "teleporter_hub"
 	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
->>>>>>> 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 //CHOMPedit Balance
 	req_components = list(
@@ -198,14 +192,8 @@
 /obj/item/weapon/circuitboard/teleporter_station
 	name = T_BOARD("teleporter station")
 	build_path = /obj/machinery/teleport/station
-<<<<<<< HEAD
 	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
-||||||| parent of 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
-	board_type = "teleporter_station"
-=======
-	board_type = "teleporter_station"
 	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
->>>>>>> 4e5a8041e8... Merge pull request #9620 from VOREStation/upstream-merge-7811
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 3)
 	req_components = list(
 							/obj/item/weapon/stock_parts/console_screen = 1,
