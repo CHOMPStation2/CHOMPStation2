@@ -1519,6 +1519,12 @@ shaved
 
 /datum/sprite_accessory/facial_hair
 	icon = 'icons/mob/Human_face.dmi'
+<<<<<<< HEAD
+||||||| parent of ef6b45e6ae... Merge pull request #9428 from VOREStation/upstream-merge-7775
+	color_blend_mode = ICON_MULTIPLY
+=======
+	color_blend_mode = ICON_ADD
+>>>>>>> ef6b45e6ae... Merge pull request #9428 from VOREStation/upstream-merge-7775
 
 /datum/sprite_accessory/facial_hair/shaved
 	name = "Shaved"
