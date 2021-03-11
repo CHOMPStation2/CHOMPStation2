@@ -73,5 +73,17 @@
 
 	var/image/selected_image = null // Used for buildmode AI control stuff.
 
+<<<<<<< HEAD
+||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
+	var/allow_self_surgery = FALSE	// Used to determine if the mob can perform surgery on itself.
+
+=======
+	var/allow_self_surgery = FALSE	// Used to determine if the mob can perform surgery on itself.
+
+
+	var/tail_alt = 0
+	var/flying = 0				// Allows flight
+>>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 	var/inventory_panel_type = /datum/inventory_panel
 	var/datum/inventory_panel/inventory_panel
+
