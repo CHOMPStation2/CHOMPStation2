@@ -51,7 +51,7 @@
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,										2500),
 		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							1200),
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											750),
-
+		EQUIPMENT("Large Mining Satchel",						/obj/item/weapon/storage/bag/ore/large,								1000), //CHOMPstation addition
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
@@ -75,6 +75,7 @@
 		EQUIPMENT("KA Damage Increase",			/obj/item/borg/upgrade/modkit/damage,							1000),
 		EQUIPMENT("KA Efficiency Increase",		/obj/item/borg/upgrade/modkit/efficiency,						1200),
 		EQUIPMENT("KA Range Increase",			/obj/item/borg/upgrade/modkit/range,							1000),
+		EQUIPMENT("KA Cooldown Decrease",		/obj/item/borg/upgrade/modkit/cooldown,							1000),
 		EQUIPMENT("KA Holster",					/obj/item/clothing/accessory/holster/waist/kinetic_accelerator,	350),
 		EQUIPMENT("KA Super Chassis",			/obj/item/borg/upgrade/modkit/chassis_mod,						250),
 		EQUIPMENT("KA Hyper Chassis",			/obj/item/borg/upgrade/modkit/chassis_mod/orange,				300),
@@ -82,7 +83,7 @@
 		EQUIPMENT("KA White Tracer Rounds",		/obj/item/borg/upgrade/modkit/tracer,							125),
 	)
 	prize_list["Digging Tools"] = list(
-		// EQUIPMENT("Diamond Pickaxe",	/obj/item/weapon/pickaxe/diamond,				2000),
+		EQUIPMENT("Diamond Pickaxe",	/obj/item/weapon/pickaxe/diamond,				2000), //CHOMPstation re-addition
 		// EQUIPMENT("Kinetic Crusher",	/obj/item/twohanded/required/kinetic_crusher,	750),
 		EQUIPMENT("Resonator",			/obj/item/resonator,							900),
 		EQUIPMENT("Silver Pickaxe",		/obj/item/weapon/pickaxe/silver,				1200),

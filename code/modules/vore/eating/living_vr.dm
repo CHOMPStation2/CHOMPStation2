@@ -33,7 +33,7 @@
 	var/adminbus_eat_minerals = FALSE	// This creature subsists on a diet of pure adminium.
 	var/vis_height = 32					// Sprite height used for resize features.
 	var/show_vore_fx = TRUE				// Show belly fullscreens
-	var/latejoin_vore = FALSE			// If enabled, latejoiners can spawn into this, assuming they have a client
+	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
 
 //
 // Hook for generic creation of stuff on new creatures
@@ -103,11 +103,6 @@
 
 			///// If user clicked on themselves
 			if(src == G.assailant && is_vore_predator(src))
-				if(!G.affecting.devourable)
-					to_chat(user, "<span class='notice'>They aren't able to be devoured.</span>")
-					log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(G.affecting)] against their prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
-					return FALSE
-
 				if(feed_grabbed_to_self(src, G.affecting))
 					qdel(G)
 					return TRUE
@@ -241,6 +236,8 @@
 	P.show_vore_fx = src.show_vore_fx
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
+	P.step_mechanics_pref = src.step_mechanics_pref
+	P.pickup_pref = src.pickup_pref
 
 
 	//CHOMP stuff
@@ -280,6 +277,8 @@
 	show_vore_fx = P.show_vore_fx
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
+	step_mechanics_pref = P.step_mechanics_pref
+	pickup_pref = P.pickup_pref
 
 	//CHOMP stuff
 	latejoin_vore = P.latejoin_vore
@@ -326,13 +325,13 @@
 	//A uniform could hide it.
 	if(istype(w_uniform,/obj/item/clothing))
 		var/obj/item/clothing/under = w_uniform
-		if(under.hides_bulges)
+		if(istype(under) && under.hides_bulges)
 			return FALSE
 
 	//We return as soon as we find one, no need for 'else' really.
 	if(istype(wear_suit,/obj/item/clothing))
 		var/obj/item/clothing/suit = wear_suit
-		if(suit.hides_bulges)
+		if(istype(suit) && suit.hides_bulges)
 			return FALSE
 
 	return ..()
@@ -501,6 +500,11 @@
 	var/user_to_prey = get_dist(get_turf(user),get_turf(prey))
 
 	if(user_to_pred > 1 || user_to_prey > 1)
+		return FALSE
+
+	if(!prey.devourable)
+		to_chat(user, "<span class='notice'>They aren't able to be devoured.</span>")
+		log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(prey)] against their prefs ([prey ? ADMIN_JMP(prey) : "null"])")
 		return FALSE
 
 	// Prepare messages
@@ -880,6 +884,8 @@
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
+	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
+	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=200x300;can_resize=0;can_minimize=0")
 	onclose(user, "[name]")
 	return

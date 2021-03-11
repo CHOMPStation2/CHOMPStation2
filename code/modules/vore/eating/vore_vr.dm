@@ -56,6 +56,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/show_vore_fx = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
+	var/step_mechanics_pref = FALSE
+	var/pickup_pref = TRUE
 
 
 	//CHOMP stuff
@@ -138,6 +140,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	show_vore_fx = json_from_file["show_vore_fx"]
 	can_be_drop_prey = json_from_file["can_be_drop_prey"]
 	can_be_drop_pred = json_from_file["can_be_drop_pred"]
+	step_mechanics_pref = json_from_file["step_mechanics_pref"]
+	pickup_pref = json_from_file["pickup_pref"]
 	belly_prefs = json_from_file["belly_prefs"]
 
 
@@ -168,6 +172,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		can_be_drop_prey = FALSE
 	if(isnull(can_be_drop_pred))
 		can_be_drop_pred = FALSE
+	if(isnull(step_mechanics_pref))
+		step_mechanics_pref = TRUE
+	if(isnull(pickup_pref))
+		pickup_pref = TRUE
 	if(isnull(belly_prefs))
 		belly_prefs = list()
 
@@ -200,7 +208,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
-			"latejoin_vore"			= latejoin_vore,
+			"latejoin_vore"			= latejoin_vore, //CHOMPedit
+			"step_mechanics_pref"	= step_mechanics_pref,
+			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,

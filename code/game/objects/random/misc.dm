@@ -626,7 +626,12 @@
 				/obj/item/toy/figure/warden,
 				/obj/item/toy/figure/psychologist,
 				/obj/item/toy/figure/paramedic,
-				/obj/item/toy/figure/ert)
+				/obj/item/toy/figure/ert,
+				//chompstation Add start
+				/obj/item/toy/figure/station,
+				/obj/item/toy/sif)
+				//chompstation Add end
+
 
 /obj/random/plushie
 	name = "random plushie"

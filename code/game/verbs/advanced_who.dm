@@ -86,6 +86,7 @@
 				entry += " - <span class='blue'>In Lobby</span><br>"
 			else
 				entry += " - <span class='green'>Playing</span><br>"
+
 			Lines += entry
 
 	msg += "<table>"
