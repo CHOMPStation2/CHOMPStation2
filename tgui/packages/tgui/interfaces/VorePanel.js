@@ -289,6 +289,8 @@ const VoreSelectedBelly = (props, context) => {
     digest_burn,
     bulge_size,
     shrink_grow_size,
+    emote_time,
+    emote_active,
     addons,
     contaminates,
     contaminate_flavor,
@@ -547,6 +549,7 @@ const VoreSelectedBelly = (props, context) => {
                   onClick={() => act("set_attribute", { attribute: "b_grow_shrink" })}
                   content={shrink_grow_size * 100 + "%"} />
               </LabeledList.Item>
+<<<<<<< HEAD
               <LabeledList.Item label="Vore Spawn Blacklist">
                 <Button
                   onClick={() => act("set_attribute", { attribute: "b_vorespawn_blacklist" })}
@@ -554,6 +557,21 @@ const VoreSelectedBelly = (props, context) => {
                   selected={vorespawn_blacklist}
                   content={vorespawn_blacklist ? "Yes" : "No"} />
               </LabeledList.Item>
+||||||| parent of e62be0a1e6... Merge pull request #9914 from Heroman3003/emotiguration
+=======
+              <LabeledList.Item label="Idle Emotes">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_emoteactive" })}
+                  icon={emote_active ? "toggle-on" : "toggle-off"}
+                  selected={emote_active}
+                  content={emote_active ? "Active" : "Inactive"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Idle Emote Delay">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_emotetime" })}
+                  content={emote_time + " seconds"} />
+              </LabeledList.Item>
+>>>>>>> e62be0a1e6... Merge pull request #9914 from Heroman3003/emotiguration
             </LabeledList>
           </Flex.Item>
           <Flex.Item basis="100%" mt={1}>
