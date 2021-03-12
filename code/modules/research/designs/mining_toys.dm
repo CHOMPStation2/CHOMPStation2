@@ -48,7 +48,14 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 1000,"glass" = 1000, MAT_COPPER = 50)
 	build_path = /obj/item/device/depth_scanner
 	sort_string = "FBAAA"
-<<<<<<< HEAD
+
+/datum/design/item/weapon/mining/mining_scanner
+	id = "mining_scanner"
+	req_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_BLUESPACE = 1)
+	materials = list(DEFAULT_WALL_MATERIAL = 1000,"glass" = 500, MAT_COPPER = 250)
+	build_path = /obj/item/weapon/mining_scanner/advanced
+	sort_string = "FBAAB"
+
 // CHOMPstation addition
 /datum/design/item/weapon/mining/satchel_holding
 	name = "Satchel of Holding"
@@ -57,15 +64,5 @@
 	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 6)
 	materials = list("gold" = 2500, "diamond" = 1000, "uranium" = 250)
 	build_path = /obj/item/weapon/storage/bag/ore/holding
-	sort_string = "FBAAB"
+	sort_string = "FBAAC"
 // CHOMPstation addition end
-||||||| parent of 5b249903d4... Merge pull request #9894 from VOREStation/upstream-merge-7955
-=======
-
-/datum/design/item/weapon/mining/mining_scanner
-	id = "mining_scanner"
-	req_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_BLUESPACE = 1)
-	materials = list(DEFAULT_WALL_MATERIAL = 1000,"glass" = 500, MAT_COPPER = 250)
-	build_path = /obj/item/weapon/mining_scanner/advanced
-	sort_string = "FBAAB"
->>>>>>> 5b249903d4... Merge pull request #9894 from VOREStation/upstream-merge-7955
