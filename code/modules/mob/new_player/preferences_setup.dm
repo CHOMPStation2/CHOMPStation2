@@ -254,6 +254,15 @@
 	var/mob/living/carbon/human/dummy/mannequin/mannequin = get_mannequin(client_ckey)
 	mannequin.delete_inventory(TRUE)
 	dress_preview_mob(mannequin)
+<<<<<<< HEAD
+||||||| parent of 4ff627ce07... Merge pull request #9932 from Verkister/patch-39
+	mannequin.toggle_tail(setting = TRUE)
+	mannequin.toggle_wing(setting = TRUE)
+=======
+	mannequin.update_transform() //VOREStation Edit to update size/shape stuff.
+	mannequin.toggle_tail(setting = TRUE)
+	mannequin.toggle_wing(setting = TRUE)
+>>>>>>> 4ff627ce07... Merge pull request #9932 from Verkister/patch-39
 	COMPILE_OVERLAYS(mannequin)
 
 	update_character_previews(new /mutable_appearance(mannequin))
