@@ -42,6 +42,20 @@ var/global/list/facial_hair_styles_male_list = list()
 var/global/list/facial_hair_styles_female_list = list()
 var/global/list/skin_styles_female_list = list()		//unused
 var/global/list/body_marking_styles_list = list()		//stores /datum/sprite_accessory/marking indexed by name
+<<<<<<< HEAD
+||||||| parent of 32224e5c9d... Merge pull request #9924 from Novacat/nova-basicfixes
+var/global/list/ear_styles_list = list()	// Stores /datum/sprite_accessory/ears indexed by type
+var/global/list/tail_styles_list = list()	// Stores /datum/sprite_accessory/tail indexed by type
+var/global/list/wing_styles_list = list()	// Stores /datum/sprite_accessory/wing indexed by type
+
+GLOBAL_LIST(custom_species_bases)
+=======
+var/global/list/ear_styles_list = list()	// Stores /datum/sprite_accessory/ears indexed by type
+var/global/list/tail_styles_list = list()	// Stores /datum/sprite_accessory/tail indexed by type
+var/global/list/wing_styles_list = list()	// Stores /datum/sprite_accessory/wing indexed by type
+
+GLOBAL_LIST_INIT(custom_species_bases, new) // Species that can be used for a Custom Species icon base
+>>>>>>> 32224e5c9d... Merge pull request #9924 from Novacat/nova-basicfixes
 	//Underwear
 var/datum/category_collection/underwear/global_underwear = new()
 
