@@ -123,13 +123,7 @@
 	name = "BRUTE-II"
 	id = "ml3m_cell_brute2"
 	req_tech = list(TECH_MATERIAL = 5, TECH_MAGNET = 3, TECH_POWER = 2, TECH_BIO = 5)
-<<<<<<< HEAD
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 4000)
-||||||| parent of 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 1000)
-=======
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, MAT_COPPER = 500, "gold" = 1000)
->>>>>>> 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
 	build_path = /obj/item/ammo_casing/microbattery/medical/brute2
 	sort_string = "KVCCA"
 
@@ -137,13 +131,7 @@
 	name = "BURN-II"
 	id = "ml3m_cell_burn2"
 	req_tech = list(TECH_MATERIAL = 5, TECH_MAGNET = 3, TECH_POWER = 2, TECH_BIO = 5)
-<<<<<<< HEAD
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 4000)
-||||||| parent of 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "gold" = 1000)
-=======
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, MAT_COPPER = 500, "gold" = 1000)
->>>>>>> 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
 	build_path = /obj/item/ammo_casing/microbattery/medical/burn2
 	sort_string = "KVCCB"
 
@@ -151,13 +139,7 @@
 	name = "STABILIZE-II"
 	id = "ml3m_cell_stabilize2"
 	req_tech = list(TECH_MATERIAL = 5, TECH_MAGNET = 3, TECH_POWER = 2, TECH_BIO = 5)
-<<<<<<< HEAD
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "silver" = 4000)
-||||||| parent of 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "silver" = 1000)
-=======
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, MAT_COPPER = 500, "silver" = 1000)
->>>>>>> 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
 	build_path = /obj/item/ammo_casing/microbattery/medical/stabilize2
 	sort_string = "KVCCC"
 
@@ -165,13 +147,7 @@
 	name = "OMNI-II"
 	id = "ml3m_cell_omni2"
 	req_tech = list(TECH_MATERIAL = 5, TECH_MAGNET = 3, TECH_POWER = 2, TECH_BIO = 5)
-<<<<<<< HEAD
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 4000)
-||||||| parent of 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 1000)
-=======
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, MAT_COPPER = 500, "uranium" = 1000)
->>>>>>> 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
 	build_path = /obj/item/ammo_casing/microbattery/medical/omni2
 	sort_string = "KVCCD"
 
@@ -181,13 +157,7 @@
 	name = "TOXIN-II"
 	id = "ml3m_cell_toxin2"
 	req_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 3, TECH_POWER = 3, TECH_BIO = 6)
-<<<<<<< HEAD
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 4000, "silver" = 4000, "diamond" = 2000)
-||||||| parent of 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, "uranium" = 1000, "silver" = 1000, "diamond" = 500)
-=======
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "plastic" = 2500, MAT_COPPER = 500, "uranium" = 1000, "silver" = 1000, "diamond" = 500)
->>>>>>> 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
 	build_path = /obj/item/ammo_casing/microbattery/medical/toxin2
 	sort_string = "KVCDA"
 /*
