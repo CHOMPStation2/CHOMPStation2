@@ -51,37 +51,83 @@
 
 /datum/gear/accessory/holster
 	display_name = "holster selection (Security, SM, HoP, Exploration)"
+<<<<<<< HEAD
 	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Explorer","Pathfinder", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+||||||| parent of 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
+	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Explorer","Pathfinder")
+=======
+	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Explorer","Pathfinder","Talon Guard")
+>>>>>>> 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
 
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown (Eng, Sec, Med, Exploration, Miner)"
+<<<<<<< HEAD
 	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+||||||| parent of 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner")
+=======
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard")
+>>>>>>> 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
 
 /datum/gear/accessory/black_vest
 	display_name = "webbing, black (Eng, Sec, Med, Exploration, Miner)"
+<<<<<<< HEAD
 	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+||||||| parent of 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner")
+=======
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard")
+>>>>>>> 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
 
 /datum/gear/accessory/white_vest
 	display_name = "webbing, white (Medical)"
-	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic")
+	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Talon Doctor")
 
 /datum/gear/accessory/brown_drop_pouches
 	display_name = "drop pouches, brown (Eng, Sec, Med, Exploration, Miner)"
+<<<<<<< HEAD
 	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+||||||| parent of 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner")
+=======
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard")
+>>>>>>> 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
 
 /datum/gear/accessory/black_drop_pouches
 	display_name = "drop pouches, black (Eng, Sec, Med, Exploration, Miner)"
+<<<<<<< HEAD
 	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+||||||| parent of 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner")
+=======
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard")
+>>>>>>> 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
 
 /datum/gear/accessory/white_drop_pouches
 	display_name = "drop pouches, white (Medical)"
-	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic")
+	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Talon Doctor")
 
+<<<<<<< HEAD
+||||||| parent of 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
+/datum/gear/accessory/bluespace
+	display_name = "bluespace badge (Eng, Sec, Med, Exploration, Miner)"
+	path = /obj/item/clothing/accessory/storage/bluespace
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner")
+	cost = 2
+
+=======
+/datum/gear/accessory/bluespace
+	display_name = "bluespace badge (Eng, Sec, Med, Exploration, Miner)"
+	path = /obj/item/clothing/accessory/storage/bluespace
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard")
+	cost = 2
+
+>>>>>>> 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
 /datum/gear/accessory/webbing
 	cost = 1
 
 /datum/gear/accessory/stethoscope
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic", "Field Medic")
+	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic","Field Medic","Talon Doctor")
 
 /datum/gear/accessory/khcrystal
 	display_name = "Life Crystal"
@@ -97,7 +143,13 @@
 	display_name = "pilot qualification pin"
 	description = "An iron pin denoting the qualification to fly USG spacecraft."
 	path = /obj/item/clothing/accessory/solgov/specialty/pilot
+<<<<<<< HEAD
 	allowed_roles = list("Pathfinder", "Pilot", "Field Medic","Security Pilot") //YW ADDITIONS
+||||||| parent of 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
+	allowed_roles = list("Pathfinder", "Pilot", "Field Medic")
+=======
+	allowed_roles = list("Pathfinder","Pilot","Field Medic","Talon Pilot")	
+>>>>>>> 7f74202862... Merge pull request #9940 from Meghan-Rossi/talontweaks
 
 /datum/gear/accessory/flops
 	display_name = "drop straps"
