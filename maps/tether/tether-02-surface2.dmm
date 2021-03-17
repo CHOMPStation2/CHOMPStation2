@@ -8295,7 +8295,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/north)
 "amS" = (
 /obj/structure/cable{
@@ -8308,7 +8308,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/north)
 "amT" = (
 /obj/structure/cable{
@@ -8329,7 +8329,7 @@
 	name = "Maintenance Access"
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/north)
 "amV" = (
 /obj/structure/railing{
@@ -13542,19 +13542,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/bar)
 "avQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
+/obj/structure/table/rack/holorack,
+/obj/effect/floor_decal/rust,
+/obj/random/maintenance/clean,
+/obj/random/tech_supply,
+/obj/random/maintenance/research,
 /turf/simulated/floor/plating,
-/area/maintenance/lower/public_garden_maintenence/upper)
+/area/tether/surfacebase/outside/outside2)
 "avR" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -15931,11 +15925,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/bar)
 "aBb" = (
-/obj/structure/railing{
-	dir = 4
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/turf/simulated/wall,
-/area/tether/surfacebase/fish_farm)
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/research)
 "aBc" = (
 /obj/machinery/light{
 	dir = 8
@@ -20615,14 +20612,10 @@
 /turf/simulated/floor,
 /area/maintenance/substation/research)
 "aKj" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
-/turf/simulated/floor,
-/area/maintenance/substation/research)
+/obj/structure/railing,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aKk" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -23139,6 +23132,10 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
+"aOM" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor,
+/area/tether/surfacebase/fish_farm)
 "aON" = (
 /obj/structure/catwalk,
 /obj/random/junk,
@@ -23272,6 +23269,22 @@
 "aPc" = (
 /turf/simulated/wall,
 /area/rnd/research)
+"aPd" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/asmaint2)
+"aPe" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger/corner,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/asmaint2)
 "aPf" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -23500,12 +23513,23 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
+"aPv" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aPw" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
+"aPx" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aPy" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
@@ -23526,12 +23550,38 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
+"aPA" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/public_garden_maintenence/upper)
+"aPB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/public_garden_maintenence/upper)
 "aPC" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
+"aPD" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aPE" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -23666,6 +23716,22 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/emergency_storage/atmos)
+"aPU" = (
+/obj/structure/catwalk,
+/obj/effect/floor_decal/rust,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
+"aPV" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aPW" = (
 /obj/machinery/light{
 	dir = 8
@@ -23845,6 +23911,9 @@
 /obj/structure/frame/computer,
 /turf/simulated/floor,
 /area/maintenance/lower/south)
+"aQq" = (
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aQr" = (
 /obj/structure/frame{
 	anchored = 1
@@ -24200,10 +24269,45 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
+"aRe" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/tether/surfacebase/outside/outside2)
+"aRf" = (
+/obj/structure/catwalk,
+/obj/effect/floor_decal/rust,
+/obj/random/drinkbottle,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
+"aRg" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
+"aRh" = (
+/obj/structure/table/rack/holorack,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
+"aRi" = (
+/obj/structure/catwalk,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aRj" = (
 /obj/random/tool,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
+"aRk" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aRl" = (
 /obj/machinery/requests_console{
 	department = "Science";
@@ -24405,6 +24509,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
+"aRB" = (
+/obj/structure/closet,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/outside/outside2)
 "aRC" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
@@ -24475,6 +24586,19 @@
 	can_open = 1
 	},
 /area/maintenance/lower/south)
+"aRJ" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/water/deep/indoors,
+/area/maintenance/asmaint2)
+"aRK" = (
+/obj/structure/catwalk,
+/obj/effect/floor_decal/rust,
+/obj/random/junk,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/asmaint2)
 "aRL" = (
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
@@ -40011,7 +40135,7 @@ akX
 akX
 adt
 adt
-adt
+aQq
 adt
 adt
 adt
@@ -40153,7 +40277,7 @@ aui
 akX
 akX
 adt
-adt
+aQq
 adt
 adt
 adt
@@ -40295,7 +40419,7 @@ ass
 avi
 akX
 adt
-adt
+aQq
 adt
 adt
 adt
@@ -40437,7 +40561,7 @@ ars
 avj
 akX
 adt
-adt
+aQq
 adt
 adt
 adt
@@ -40578,6 +40702,9 @@ atH
 auj
 akX
 akX
+aac
+aRe
+aac
 adt
 adt
 adt
@@ -40591,11 +40718,8 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
-adt
-adt
+aHm
+aHm
 aHm
 aHE
 aHE
@@ -40719,6 +40843,7 @@ ars
 atI
 aqt
 akX
+<<<<<<< HEAD
 adt
 adt
 adt
@@ -40728,6 +40853,27 @@ adt
 adt
 adt
 adt
+||||||| parent of 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
+adt
+adt
+adt
+adt
+adt
+azs
+axO
+bCs
+grL
+=======
+aPv
+aPD
+aRf
+aac
+aac
+azs
+axO
+bCs
+grL
+>>>>>>> 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
 azs
 azs
 azs
@@ -40736,8 +40882,8 @@ azs
 azs
 azs
 azs
-adt
-adt
+aHm
+aHm
 aHm
 aHm
 aqp
@@ -40860,6 +41006,7 @@ ars
 asw
 akX
 akX
+<<<<<<< HEAD
 adt
 adt
 adt
@@ -40871,18 +41018,43 @@ adt
 adt
 adt
 azs
+||||||| parent of 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
+adt
+adt
+adt
+adt
+adt
+adt
+azs
+axO
+pqb
+bOW
+fLW
+=======
+aKj
+aPx
+aPU
+aPx
+aRi
+aPU
+fLW
+axO
+pqb
+bOW
+fLW
+>>>>>>> 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
 aBB
 aCm
 aDj
 aDV
 aCm
 aBB
-azs
-adt
-adt
-aHm
-aHm
-aHm
+aOM
+aJf
+aRK
+aJf
+arY
+aJf
 aJf
 aJf
 aJf
@@ -41001,6 +41173,7 @@ aqB
 art
 akX
 akX
+<<<<<<< HEAD
 adt
 adt
 adt
@@ -41012,6 +41185,31 @@ adt
 adt
 adt
 adt
+||||||| parent of 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+azs
+awN
+flk
+gGm
+=======
+avQ
+aKj
+aPx
+aPV
+aRg
+aRk
+aRk
+azs
+awN
+flk
+gGm
+>>>>>>> 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
 azs
 aBd
 aCn
@@ -41020,10 +41218,10 @@ aDk
 aEx
 aBd
 azs
-adt
-adt
-aHm
-aHm
+aRJ
+arY
+aJf
+aJf
 aqq
 aJf
 aJf
@@ -41145,7 +41343,9 @@ akX
 ajV
 ajV
 ajV
+aPA
 ajV
+<<<<<<< HEAD
 ajV
 adt
 adt
@@ -41154,6 +41354,24 @@ adt
 adt
 adt
 adt
+||||||| parent of 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
+ajV
+adt
+adt
+adt
+azs
+axO
+viY
+bOW
+=======
+aRh
+aRh
+aRB
+azs
+axO
+viY
+bOW
+>>>>>>> 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
 azs
 azq
 aAw
@@ -41162,10 +41380,10 @@ aDk
 aEy
 azq
 azs
-adt
-adt
-aHm
-aHm
+aHE
+aHE
+aPd
+aPe
 aqr
 are
 arh
@@ -41287,8 +41505,9 @@ amQ
 atJ
 auk
 auk
-avQ
+aPB
 ajV
+<<<<<<< HEAD
 adt
 adt
 adt
@@ -41296,6 +41515,23 @@ awY
 awY
 awY
 awY
+||||||| parent of 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
+adt
+adt
+adt
+azs
+azs
+sgu
+azs
+=======
+aac
+aac
+aac
+azs
+azs
+sgu
+azs
+>>>>>>> 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
 azs
 azq
 aAw
@@ -41304,9 +41540,9 @@ aDk
 aEy
 azq
 azs
-adt
-adt
-aGy
+aHm
+aHm
+aHm
 aHE
 aqs
 aHE
@@ -41437,15 +41673,23 @@ awY
 awY
 azq
 azq
+<<<<<<< HEAD
 awY
 aBb
+||||||| parent of 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
+azq
+aBb
+=======
+azq
+azs
+>>>>>>> 36ba127529... Merge pull request #9949 from Heroman3003/maint-update
 aBC
 aCo
 aDk
 aDk
 aEz
 aBC
-aBb
+azs
 awY
 awY
 aGy
@@ -43300,7 +43544,7 @@ aEc
 aEc
 aEc
 aJJ
-aKj
+aBb
 aKW
 aLD
 aMo
