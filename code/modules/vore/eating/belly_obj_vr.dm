@@ -164,6 +164,7 @@
 		"belly_fullscreen",
 		"disable_hud",
 		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
+		"belly_fullscreen_color",
 		"reagentbellymode",
 		"liquid_fullness1_messages",
 		"liquid_fullness2_messages",
@@ -840,6 +841,7 @@
 	dupe.wet_loop = wet_loop
 
 	dupe.reagent_mode_flags = reagent_mode_flags	//CHOMP start of variables from CHOMP
+	dupe.belly_fullscreen_color = belly_fullscreen_color
 	dupe.reagentbellymode = reagentbellymode
 	dupe.vorefootsteps_sounds = vorefootsteps_sounds
 	dupe.liquid_fullness1_messages = liquid_fullness1_messages
