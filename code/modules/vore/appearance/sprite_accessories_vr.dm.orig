@@ -39,11 +39,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	apply_restrictions = TRUE
-<<<<<<< HEAD
-	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_YW)//YW edits
-=======
 	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
->>>>>>> master
 
 // Ears avaliable to anyone
 
@@ -696,11 +692,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	apply_restrictions = TRUE
-<<<<<<< HEAD
-	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_YW)//YW edits
-=======
 	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
->>>>>>> master
 
 // Everyone tails
 
@@ -1602,9 +1594,6 @@
 	icon_state = "tail_smooth"
 	ani_state = "tail_smooth_w"
 	do_colouration = 1
-<<<<<<< HEAD:code/modules/vore/appearance/sprite_accessories_vr.dm.orig
-	color_blend_mode = ICON_MULTIPLY
-||||||| parent of 50a0c85781... Merge pull request #9977 from SpaceVampire/tentacletail:code/modules/mob/new_player/sprite_accessories_tail_vr.dm
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/triplekitsune_colorable
@@ -1781,7 +1770,6 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	ckeys_allowed = list("prettiebyrd")
-=======
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/triplekitsune_colorable
@@ -1967,4 +1955,3 @@
 	ani_state = "tentacle_w"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
->>>>>>> 50a0c85781... Merge pull request #9977 from SpaceVampire/tentacletail:code/modules/mob/new_player/sprite_accessories_tail_vr.dm
