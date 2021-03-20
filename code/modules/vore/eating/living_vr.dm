@@ -48,6 +48,7 @@
 	M.vorePanel = new(M)
 	M.verbs += /mob/living/proc/insidePanel
 	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 
 	//return TRUE to hook-caller
 	return TRUE
