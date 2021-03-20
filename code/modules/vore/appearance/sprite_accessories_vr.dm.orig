@@ -1602,4 +1602,369 @@
 	icon_state = "tail_smooth"
 	ani_state = "tail_smooth_w"
 	do_colouration = 1
+<<<<<<< HEAD:code/modules/vore/appearance/sprite_accessories_vr.dm.orig
 	color_blend_mode = ICON_MULTIPLY
+||||||| parent of 50a0c85781... Merge pull request #9977 from SpaceVampire/tentacletail:code/modules/mob/new_player/sprite_accessories_tail_vr.dm
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/triplekitsune_colorable
+	name = "Kitsune 3 tails, colorable"
+	desc = ""
+	icon_state = "triplekitsune"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "triplekitsune_tips"
+
+/datum/sprite_accessory/tail/ninekitsune_colorable
+	name = "Kitsune 9 tails, colorable"
+	desc = ""
+	icon_state = "ninekitsune"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "ninekitsune-tips"
+
+/datum/sprite_accessory/tail/shadekin_short
+	name = "Shadekin Short Tail, colorable"
+	desc = ""
+	icon_state = "shadekin-short"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	//apply_restrictions = TRUE
+	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+
+/datum/sprite_accessory/tail/wartacosushi_tail //brightened +20RGB from matching roboparts
+	name = "Ward-Takahashi Tail"
+	desc = ""
+	icon_state = "wardtakahashi_vulp"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/wartacosushi_tail_dc
+	name = "Ward-Takahashi Tail, dual-color"
+	desc = ""
+	icon_state = "wardtakahashi_vulp_dc"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "wardtakahashi_vulp_dc_mark"
+
+/datum/sprite_accessory/tail/Easterntail
+	name = "Eastern Dragon (Animated)"
+	desc = ""
+	icon_state = "Easterntail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "EasterntailColorTip"
+	ani_state = "Easterntail_w"
+	extra_overlay_w = "EasterntailColorTip_w"
+
+/datum/sprite_accessory/tail/synthtail_static
+	name = "Synthetic lizard tail"
+	desc = ""
+	icon_state = "synthtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/synthtail_vwag
+	name = "Synthetic lizard tail (vwag)"
+	desc = ""
+	icon_state = "synthtail"
+	ani_state = "synthtail_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/Plugtail
+	name = "Synthetic plug tail"
+	desc = ""
+	icon_state = "Plugtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "PlugtailMarking"
+	extra_overlay2 = "PlugtailMarking2"
+
+/datum/sprite_accessory/tail/Segmentedtail
+	name = "Segmented tail, animated"
+	desc = ""
+	icon_state = "Segmentedtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "Segmentedtailmarking"
+	ani_state = "Segmentedtail_w"
+	extra_overlay_w = "Segmentedtailmarking_w"
+
+/datum/sprite_accessory/tail/Segmentedlights
+	name = "Segmented tail, animated synth"
+	desc = ""
+	icon_state = "Segmentedtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "Segmentedlights"
+	ani_state = "Segmentedtail_w"
+	extra_overlay_w = "Segmentedlights_w"
+
+/datum/sprite_accessory/tail/fox_tail
+	name = "Fox tail"
+	desc = ""
+	icon_state = "fox_tail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/fox_tail_plain
+	name = "Fox tail"
+	desc = ""
+	icon_state = "fox_tail_plain_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/fennec_tail
+	name = "Fennec tail"
+	desc = ""
+	icon_state = "fennec_tail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard_tail_smooth
+	name = "Lizard Tail (Smooth)"
+	desc = ""
+	icon_state = "lizard_tail_smooth"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard_tail_dark_tiger
+	name = "Lizard Tail (Dark Tiger)"
+	desc = ""
+	icon_state = "lizard_tail_dark_tiger"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard_tail_light_tiger
+	name = "Lizard Tail (Light Tiger)"
+	desc = ""
+	icon_state = "lizard_tail_light_tiger"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard_tail_spiked
+	name = "Lizard Tail (Spiked)"
+	desc = ""
+	icon_state = "lizard_tail_spiked"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/xenotail_fullcolour
+	name = "xenomorph tail (fully colourable)"
+	desc = ""
+	icon_state = "xenotail_fullcolour"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/xenotailalt_fullcolour
+	name = "xenomorph tail alt. (fully colourable)"
+	desc = ""
+	icon_state = "xenotailalt_fullcolour"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
+	name = "Peacock tail (vwag)"
+	desc = ""
+	icon = "icons/mob/vore/tails_vr.dmi"
+	icon_state = "peacocktail_red"
+	ani_state = "peacocktail_red_w"
+	ckeys_allowed = list("prettiebyrd")
+
+/datum/sprite_accessory/tail/peacocktail //ditto
+	name = "Peacock tail, colorable (vwag)"
+	desc = ""
+	icon = "icons/mob/vore/tails_vr.dmi"
+	icon_state = "peacocktail"
+	ani_state = "peacocktail_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	ckeys_allowed = list("prettiebyrd")
+=======
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/triplekitsune_colorable
+	name = "Kitsune 3 tails, colorable"
+	desc = ""
+	icon_state = "triplekitsune"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "triplekitsune_tips"
+
+/datum/sprite_accessory/tail/ninekitsune_colorable
+	name = "Kitsune 9 tails, colorable"
+	desc = ""
+	icon_state = "ninekitsune"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "ninekitsune-tips"
+
+/datum/sprite_accessory/tail/shadekin_short
+	name = "Shadekin Short Tail, colorable"
+	desc = ""
+	icon_state = "shadekin-short"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	//apply_restrictions = TRUE
+	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+
+/datum/sprite_accessory/tail/wartacosushi_tail //brightened +20RGB from matching roboparts
+	name = "Ward-Takahashi Tail"
+	desc = ""
+	icon_state = "wardtakahashi_vulp"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/wartacosushi_tail_dc
+	name = "Ward-Takahashi Tail, dual-color"
+	desc = ""
+	icon_state = "wardtakahashi_vulp_dc"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "wardtakahashi_vulp_dc_mark"
+
+/datum/sprite_accessory/tail/Easterntail
+	name = "Eastern Dragon (Animated)"
+	desc = ""
+	icon_state = "Easterntail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "EasterntailColorTip"
+	ani_state = "Easterntail_w"
+	extra_overlay_w = "EasterntailColorTip_w"
+
+/datum/sprite_accessory/tail/synthtail_static
+	name = "Synthetic lizard tail"
+	desc = ""
+	icon_state = "synthtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/synthtail_vwag
+	name = "Synthetic lizard tail (vwag)"
+	desc = ""
+	icon_state = "synthtail"
+	ani_state = "synthtail_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/Plugtail
+	name = "Synthetic plug tail"
+	desc = ""
+	icon_state = "Plugtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "PlugtailMarking"
+	extra_overlay2 = "PlugtailMarking2"
+
+/datum/sprite_accessory/tail/Segmentedtail
+	name = "Segmented tail, animated"
+	desc = ""
+	icon_state = "Segmentedtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "Segmentedtailmarking"
+	ani_state = "Segmentedtail_w"
+	extra_overlay_w = "Segmentedtailmarking_w"
+
+/datum/sprite_accessory/tail/Segmentedlights
+	name = "Segmented tail, animated synth"
+	desc = ""
+	icon_state = "Segmentedtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "Segmentedlights"
+	ani_state = "Segmentedtail_w"
+	extra_overlay_w = "Segmentedlights_w"
+
+/datum/sprite_accessory/tail/fox_tail
+	name = "Fox tail"
+	desc = ""
+	icon_state = "fox_tail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/fox_tail_plain
+	name = "Fox tail"
+	desc = ""
+	icon_state = "fox_tail_plain_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/fennec_tail
+	name = "Fennec tail"
+	desc = ""
+	icon_state = "fennec_tail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard_tail_smooth
+	name = "Lizard Tail (Smooth)"
+	desc = ""
+	icon_state = "lizard_tail_smooth"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard_tail_dark_tiger
+	name = "Lizard Tail (Dark Tiger)"
+	desc = ""
+	icon_state = "lizard_tail_dark_tiger"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard_tail_light_tiger
+	name = "Lizard Tail (Light Tiger)"
+	desc = ""
+	icon_state = "lizard_tail_light_tiger"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard_tail_spiked
+	name = "Lizard Tail (Spiked)"
+	desc = ""
+	icon_state = "lizard_tail_spiked"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/xenotail_fullcolour
+	name = "xenomorph tail (fully colourable)"
+	desc = ""
+	icon_state = "xenotail_fullcolour"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/xenotailalt_fullcolour
+	name = "xenomorph tail alt. (fully colourable)"
+	desc = ""
+	icon_state = "xenotailalt_fullcolour"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
+	name = "Peacock tail (vwag)"
+	desc = ""
+	icon = "icons/mob/vore/tails_vr.dmi"
+	icon_state = "peacocktail_red"
+	ani_state = "peacocktail_red_w"
+	ckeys_allowed = list("prettiebyrd")
+
+/datum/sprite_accessory/tail/peacocktail //ditto
+	name = "Peacock tail, colorable (vwag)"
+	desc = ""
+	icon = "icons/mob/vore/tails_vr.dmi"
+	icon_state = "peacocktail"
+	ani_state = "peacocktail_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	ckeys_allowed = list("prettiebyrd")
+
+/datum/sprite_accessory/tail/tentacle
+	name = "Tentacle, colorable (vwag)"
+	desc = ""
+	icon = "icons/mob/vore/tails_vr.dmi"
+	icon_state = "tentacle"
+	ani_state = "tentacle_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+>>>>>>> 50a0c85781... Merge pull request #9977 from SpaceVampire/tentacletail:code/modules/mob/new_player/sprite_accessories_tail_vr.dm
