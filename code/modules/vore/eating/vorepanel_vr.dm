@@ -158,6 +158,8 @@
 			"digest_burn" = selected.digest_burn,
 			"bulge_size" = selected.bulge_size,
 			"shrink_grow_size" = selected.shrink_grow_size,
+			"emote_time" = selected.emote_time,
+			"emote_active" = selected.emote_active,
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
 			"mapRef" = map_name,	//CHOMPEdit
@@ -902,6 +904,16 @@
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_brute = new_new_damage
 			. = TRUE
+		if("b_emoteactive")
+			host.vore_selected.emote_active = !host.vore_selected.emote_active
+			. = TRUE
+		if("b_emotetime")
+			var/new_time = input(user, "Choose the period it takes for idle belly emotes to be shown to prey. Measured in seconds, Minimum 1 minute, Maximum 10 minutes.", "Set Belly Emote Delay.", host.vore_selected.digest_brute)
+			if(new_time == null)
+				return FALSE
+			var/new_new_time = CLAMP(new_time, 60, 600)
+			host.vore_selected.emote_time = new_new_time
+			. = TRUE
 		if("b_escapable")
 			if(host.vore_selected.escapable == 0) //Possibly escapable and special interactions.
 				host.vore_selected.escapable = 1
@@ -1040,7 +1052,7 @@
 			host.vore_selected.reagent_name = new_name
 			. = TRUE
 		if("b_liq_reagent_transfer_verb")
-			var/new_verb = html_encode(input(usr,"New verb when liquid is transfered from this belly (infinitive tense, e.g. pump or inject):","New Verb") as text|null)
+			var/new_verb = html_encode(input(usr,"New verb when liquid is transfered from this belly:","New Verb") as text|null)
 
 			if(length(new_verb) > BELLIES_NAME_MAX || length(new_verb) < BELLIES_NAME_MIN)
 				alert("Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")

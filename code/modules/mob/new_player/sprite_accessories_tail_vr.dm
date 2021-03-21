@@ -1,946 +1,4 @@
 /*
-	Hello and welcome to VOREStation sprite_accessories: For a more general overview
-	please read sprite_accessories.dm. This file is for ears and tails.
-	This is intended to be friendly for people with little to no actual coding experience.
-	!!WARNING!!: changing existing accessory information can be VERY hazardous to savefiles,
-	to the point where you may completely corrupt a server's savefiles. Please refrain
-	from doing this unless you absolutely know what you are doing, and have defined a
-	conversion in savefile.dm
-*/
-
-// Add Additional variable onto sprite_accessory
-/datum/sprite_accessory
-	// Ckey of person allowed to use this, if defined.
-	list/ckeys_allowed = null
-	apply_restrictions = FALSE		//whether to apply restrictions for specific tails/ears/wings
-
-/*
-////////////////////////////
-/  =--------------------=  /
-/  == Ear Definitions  ==  /
-/  =--------------------=  /
-////////////////////////////
-*/
-/datum/sprite_accessory/ears
-	name = "You should not see this..."
-	icon = 'icons/mob/vore/ears_vr.dmi'
-	do_colouration = 0 // Set to 1 to blend (ICON_ADD) hair color
-
-	color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
-	var/extra_overlay // Icon state of an additional overlay to blend in.
-	var/extra_overlay2
-	var/desc = "You should not see this..."
-
-// Species-unique ears
-
-/datum/sprite_accessory/ears/shadekin
-	name = "Shadekin Ears, colorable"
-	desc = ""
-	icon_state = "shadekin"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-// Ears avaliable to anyone
-
-/datum/sprite_accessory/ears/alt_ram_horns
-	name = "Solid ram horns"
-	desc = ""
-	icon_state = "ram_horns_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/hyena
-	name = "hyena ears, dual-color"
-	desc = ""
-	icon_state = "hyena"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "hyena-inner"
-
-/datum/sprite_accessory/ears/moth
-	name = "moth antennae"
-	desc = ""
-	icon_state = "moth"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/squirrel_orange
-	name = "squirel, orange"
-	desc = ""
-	icon_state = "squirrel-orange"
-
-/datum/sprite_accessory/ears/squirrel_red
-	name = "squirrel, red"
-	desc = ""
-	icon_state = "squirrel-red"
-
-/datum/sprite_accessory/ears/bunny_white
-	name = "bunny, white"
-	desc = ""
-	icon_state = "bunny"
-
-/datum/sprite_accessory/ears/bear_brown
-	name = "bear, brown"
-	desc = ""
-	icon_state = "bear-brown"
-
-/datum/sprite_accessory/ears/bear_panda
-	name = "bear, panda"
-	desc = ""
-	icon_state = "panda"
-
-/datum/sprite_accessory/ears/wolf_grey
-	name = "wolf, grey"
-	desc = ""
-	icon_state = "wolf-grey"
-
-/datum/sprite_accessory/ears/wolf_green
-	name = "wolf, green"
-	desc = ""
-	icon_state = "wolf-green"
-
-/datum/sprite_accessory/ears/wisewolf
-	name = "wolf, wise"
-	desc = ""
-	icon_state = "wolf-wise"
-
-/datum/sprite_accessory/ears/mouse_grey
-	name = "mouse, grey"
-	desc = ""
-	icon_state = "mouse-grey"
-
-/datum/sprite_accessory/ears/bee
-	name = "bee antennae"
-	desc = ""
-	icon_state = "bee"
-
-/datum/sprite_accessory/ears/antennae
-	name = "antennae, colorable"
-	desc = ""
-	icon_state = "antennae"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/curly_bug
-	name = "curly antennae, colorable"
-	desc = ""
-	icon_state = "curly_bug"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/dual_robot
-	name = "synth antennae, colorable"
-	desc = ""
-	icon_state = "dual_robot_antennae"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/right_robot
-	name = "right synth, colorable"
-	desc = ""
-	icon_state = "right_robot_antennae"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/left_robot
-	name = "left synth, colorable"
-	desc = ""
-	icon_state = "left_robot_antennae"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/oni_h1
-	name = "oni horns"
-	desc = ""
-	icon_state = "oni-h1"
-
-/datum/sprite_accessory/ears/oni_h1_c
-	name = "oni horns, colorable"
-	desc = ""
-	icon_state = "oni-h1_c"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/demon_horns1
-	name = "demon horns"
-	desc = ""
-	icon_state = "demon-horns1"
-
-/datum/sprite_accessory/ears/demon_horns1_c
-	name = "demon horns, colorable"
-	desc = ""
-	icon_state = "demon-horns1_c"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/demon_horns2
-	name = "demon horns, colorable(outward)"
-	desc = ""
-	icon_state = "demon-horns2"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/dragon_horns
-	name = "dragon horns, colorable"
-	desc = ""
-	icon_state = "dragon-horns"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/foxears
-	name = "highlander zorren ears"
-	desc = ""
-	icon_state = "foxears"
-
-/datum/sprite_accessory/ears/fenears
-	name = "flatland zorren ears"
-	desc = ""
-	icon_state = "fenears"
-
-/datum/sprite_accessory/ears/sergal //Redundant
-	name = "Sergal ears"
-	icon_state = "serg_plain_s"
-
-/datum/sprite_accessory/ears/foxearshc
-	name = "highlander zorren ears, colorable"
-	desc = ""
-	icon_state = "foxearshc"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/fenearshc
-	name = "flatland zorren ears, colorable"
-	desc = ""
-	icon_state = "fenearshc"
-	extra_overlay = "fenears-inner"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/sergalhc
-	name = "Sergal ears, colorable"
-	icon_state = "serg_plain_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/mousehc
-	name = "mouse, colorable"
-	desc = ""
-	icon_state = "mouse"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "mouseinner"
-
-/datum/sprite_accessory/ears/mousehcno
-	name = "mouse, colorable, no inner"
-	desc = ""
-	icon_state = "mouse"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/wolfhc
-	name = "wolf, colorable"
-	desc = ""
-	icon_state = "wolf"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "wolfinner"
-
-/datum/sprite_accessory/ears/bearhc
-	name = "bear, colorable"
-	desc = ""
-	icon_state = "bear"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/smallbear
-	name = "small bear"
-	desc = ""
-	icon_state = "smallbear"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/squirrelhc
-	name = "squirrel, colorable"
-	desc = ""
-	icon_state = "squirrel"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/kittyhc
-	name = "kitty, colorable"
-	desc = ""
-	icon_state = "kitty"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "kittyinner"
-
-/datum/sprite_accessory/ears/bunnyhc
-	name = "bunny, colorable"
-	desc = ""
-	icon_state = "bunny"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/antlers
-	name = "antlers"
-	desc = ""
-	icon_state = "antlers"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/antlers_e
-	name = "antlers with ears"
-	desc = ""
-	icon_state = "cow-nohorns"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "antlers_mark"
-
-/datum/sprite_accessory/ears/smallantlers
-	name = "small antlers"
-	desc = ""
-	icon_state = "smallantlers"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/smallantlers_e
-	name = "small antlers with ears"
-	desc = ""
-	icon_state = "smallantlers"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "deer"
-
-/datum/sprite_accessory/ears/deer
-	name = "deer ears"
-	desc = ""
-	icon_state = "deer"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/cow
-	name = "cow, horns"
-	desc = ""
-	icon_state = "cow"
-
-/datum/sprite_accessory/ears/cowc
-	name = "cow, horns, colorable"
-	desc = ""
-	icon_state = "cow-c"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/cow_nohorns
-	name = "cow, no horns"
-	desc = ""
-	icon_state = "cow-nohorns"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/caprahorns
-	name = "caprine horns"
-	desc = ""
-	icon_state = "caprahorns"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/otie
-	name = "otie, colorable"
-	desc = ""
-	icon_state = "otie"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "otie-inner"
-
-/datum/sprite_accessory/ears/donkey
-	name = "donkey, colorable"
-	desc = ""
-	icon_state = "donkey"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "otie-inner"
-
-/datum/sprite_accessory/ears/zears
-	name = "jagged ears"
-	desc = ""
-	icon_state = "zears"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/elfs
-	name = "elven ears"
-	desc = ""
-	icon_state = "elfs"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/sleek
-	name = "sleek ears"
-	desc = ""
-	icon_state = "sleek"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/drake
-	name = "drake frills"
-	desc = ""
-	icon_state = "drake"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/vulp
-	name = "vulpkanin, dual-color"
-	desc = ""
-	icon_state = "vulp"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "vulp-inner"
-
-/datum/sprite_accessory/ears/vulp_short
-	name = "vulpkanin short"
-	desc = ""
-	icon_state = "vulp_terrier"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/vulp_short_dc
-	name = "vulpkanin short, dual-color"
-	desc = ""
-	icon_state = "vulp_terrier"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "vulp_terrier-inner"
-
-/datum/sprite_accessory/ears/vulp_jackal
-	name = "vulpkanin thin, dual-color"
-	desc = ""
-	icon_state = "vulp_jackal"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "vulp_jackal-inner"
-
-/datum/sprite_accessory/ears/bunny_floppy
-	name = "floopy bunny ears (colorable)"
-	desc = ""
-	icon_state = "floppy_bun"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/teshari
-	name = "Teshari (colorable)"
-	desc = ""
-	icon_state = "teshari"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "teshariinner"
-
-/datum/sprite_accessory/ears/tesharihigh
-	name = "Teshari upper ears (colorable)"
-	desc = ""
-	icon_state = "tesharihigh"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "tesharihighinner"
-
-/datum/sprite_accessory/ears/tesharilow
-	name = "Teshari lower ears (colorable)"
-	desc = ""
-	icon_state = "tesharilow"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "tesharilowinner"
-
-/datum/sprite_accessory/ears/tesh_pattern_ear_male
-	name = "Teshari male ear pattern (colorable)"
-	desc = ""
-	icon_state = "teshari"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "teshari_male_pattern"
-
-/datum/sprite_accessory/ears/tesh_pattern_ear_female
-	name = "Teshari female ear pattern (colorable)"
-	desc = ""
-	icon_state = "teshari"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "teshari_female_pattern"
-
-/datum/sprite_accessory/ears/inkling
-	name = "colorable mature inkling hair"
-	desc = ""
-	icon = 'icons/mob/human_face_vr.dmi'
-	icon_state = "inkling-colorable"
-	color_blend_mode = ICON_MULTIPLY
-	do_colouration = 1
-
-/datum/sprite_accessory/ears/large_dragon
-	name = "Large dragon horns"
-	desc = ""
-	icon_state = "big_liz"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-// Special snowflake ears go below here.
-
-/datum/sprite_accessory/ears/molenar_kitsune
-	name = "quintail kitsune ears (Molenar)"
-	desc = ""
-	icon_state = "molenar-kitsune"
-
-/datum/sprite_accessory/ears/lilimoth_antennae
-	name = "citheronia antennae (Kira72)"
-	desc = ""
-	icon_state = "lilimoth_antennae"
-
-/datum/sprite_accessory/ears/molenar_deathclaw
-	name = "deathclaw ears (Molenar)"
-	desc = ""
-	icon_state = "molenar-deathclaw"
-
-/datum/sprite_accessory/ears/miria_fluffdragon
-	name = "fluffdragon ears (Miria Masters)"
-	desc = ""
-	icon_state = "miria-fluffdragonears"
-
-/datum/sprite_accessory/ears/miria_kitsune
-	name = "kitsune ears (Miria Masters)"
-	desc = ""
-	icon_state = "miria-kitsuneears"
-
-/datum/sprite_accessory/ears/runac
-	name = "fennecsune ears (Runac)"
-	desc = ""
-	icon_state = "runac"
-
-/datum/sprite_accessory/ears/kerena
-	name = "wingwolf ears (Kerena)"
-	desc = ""
-	icon_state = "kerena"
-
-/datum/sprite_accessory/ears/rosey
-	name = "tritail kitsune ears (Rosey)"
-	desc = ""
-	icon_state = "rosey"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/aronai
-	name = "aronai ears/head (Aronai)"
-	desc = ""
-	icon_state = "aronai"
-
-/datum/sprite_accessory/ears/holly
-	name = "tigress ears (Holly Sharp)"
-	desc = ""
-	icon_state = "tigressears"
-
-/datum/sprite_accessory/ears/molenar_inkling
-	name = "teal mature inkling hair (Kari Akiren)"
-	desc = ""
-	icon_state = "molenar-tentacle"
-
-/datum/sprite_accessory/ears/shock
-	name = "pharoah hound ears (Shock Diamond)"
-	desc = ""
-	icon_state = "shock"
-
-/datum/sprite_accessory/ears/alurane
-	name = "alurane ears/hair (Pumila)"
-	desc = ""
-	icon_state = "alurane-ears"
-
-/datum/sprite_accessory/ears/frost
-    name = "Frost antenna"
-    desc = ""
-    icon_state = "frosted_tips"
-
-/datum/sprite_accessory/ears/sylv_pip
-    name = "sylveon ears and ribbons (Pip Shyner)"
-    desc = ""
-    icon_state = "pipears"
-
-/datum/sprite_accessory/ears/elf_caprine_colorable
-	name = "Caprine horns with pointy ears, colorable"
-	desc = ""
-	icon_state = "elfs"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "caprahorns"
-
-/datum/sprite_accessory/ears/elf_oni_colorable
-	name = "oni horns with pointy ears, colorable"
-	desc = ""
-	icon_state = "elfs"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "oni-h1_c"
-
-/datum/sprite_accessory/ears/elf_demon_colorable
-	name = "Demon horns with pointy ears, colorable"
-	desc = ""
-	icon_state = "elfs"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "demon-horns1_c"
-
-/datum/sprite_accessory/ears/elf_demon_outwards_colorable
-	name = "Demon horns with pointy ears, outwards, colourable"
-	desc = ""
-	icon_state = "elfs"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "demon-horns2"
-
-/datum/sprite_accessory/ears/elf_dragon_colorable
-	name = "Dragon horns with pointy ears, colourable"
-	desc = ""
-	icon_state = "elfs"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "dragon-horns"
-
-/datum/sprite_accessory/ears/synthhorns_plain
-	name = "Synth horns, plain"
-	desc = ""
-	icon_state = "synthhorns_plain"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "synthhorns_plain_light"
-
-/datum/sprite_accessory/ears/synthhorns_thick
-	name = "Synth horns, thick"
-	desc = ""
-	icon_state = "synthhorns_thick"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "synthhorns_thick_light"
-
-/datum/sprite_accessory/ears/synthhorns_curly
-	name = "Synth horns, curly"
-	desc = ""
-	icon_state = "synthhorns_curled"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/forward_curled_demon_horns_bony
-	name = "Succubus horns, colourable"
-	desc = ""
-	icon_state = "succu-horns_b"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/forward_curled_demon_horns_bony_with_colorable_ears
-	name = "Succubus horns with pointy ears, colourable"
-	desc = ""
-	icon_state = "elfs"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "succu-horns_b"
-
-/datum/sprite_accessory/ears/chorns_nubbydogs
-	name = "Nubby Chorns"
-	desc = ""
-	icon_state = "chorn_nubby"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_herk
-	name = "Herk Chorns"
-	desc = ""
-	icon_state = "chorn_herk"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_bork
-	name = "Bork Chorns"
-	desc = ""
-	icon_state = "chorn_bork"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_bull
-	name = "Bull Chorns"
-	desc = ""
-	icon_state = "chorn_bull"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_bicarrot
-	name = "Bicarrot Chorns"
-	desc = ""
-	icon_state = "chorn_bicarrot"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_longcarrot
-	name = "Long Carrot Chorns"
-	desc = ""
-	icon_state = "chorn_longcarrot"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_shortcarrot
-	name = "Short Carrot Chorns"
-	desc = ""
-	icon_state = "chorn_shortcarrot"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_scorp
-	name = "Scorp Chorns"
-	desc = ""
-	icon_state = "chorn_scorp"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_ocean
-	name = "Ocean Chorns"
-	desc = ""
-	icon_state = "chorn_ocean"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/chorns_chub
-	name = "Chub Chorns"
-	desc = ""
-	icon_state = "chorn_chub"
-	do_colouration = 0
-	color_blend_mode = ICON_MULTIPLY
-
-
-
-
-/*
-////////////////////////////
-/  =--------------------=  /
-/  == Wing Definitions ==  /
-/  =--------------------=  /
-////////////////////////////
-*/
-/datum/sprite_accessory/wing
-	name = "You should not see this..."
-	icon = 'icons/mob/vore/wings_vr.dmi'
-	do_colouration = 0 //Set to 1 to enable coloration using the tail color.
-
-	color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
-	var/extra_overlay // Icon state of an additional overlay to blend in.
-	var/extra_overlay2 //Tertiary.
-	var/clothing_can_hide = 1 // If true, clothing with HIDETAIL hides it. If the clothing is bulky enough to hide a tail, it should also hide wings.
-	// var/show_species_tail = 1 // Just so // TODO - Seems not needed ~Leshana
-	var/desc = "You should not see this..."
-	var/ani_state // State when flapping/animated
-	var/extra_overlay_w // Flapping state for extra overlay
-	var/extra_overlay2_w
-
-/datum/sprite_accessory/wing/shock //Unable to split the tail from the wings in the sprite, so let's just classify it as wings.
-	name = "pharoah hound tail (Shock Diamond)"
-	desc = ""
-	icon_state = "shock"
-
-/datum/sprite_accessory/wing/featheredlarge //Made by Natje!
-	name = "large feathered wings (colorable)"
-	desc = ""
-	icon_state = "feathered2"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/spider_legs //Not really /WINGS/ but they protrude from the back, kinda. Might as well have them here.
-	name = "spider legs"
-	desc = ""
-	icon_state = "spider-legs"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/moth
-	name = "moth wings"
-	desc = ""
-	icon_state = "moth"
-
-/datum/sprite_accessory/wing/mothc
-	name = "moth wings, colorable"
-	desc = ""
-	icon_state = "moth"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/dragonfly
-	name = "dragonfly"
-	desc = ""
-	icon_state = "dragonfly"
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/citheroniamoth
-	name = "citheronia wings"
-	desc = ""
-	icon_state = "citheronia_wings"
-
-/datum/sprite_accessory/wing/feathered
-	name = "feathered wings, colorable"
-	desc = ""
-	icon_state = "feathered"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/feathered_medium
-	name = "medium feathered wings, colorable" // Keekenox made these feathery things with a little bit more shape to them than the other wings. They are medium sized wing boys.
-	desc = ""
-	icon_state = "feathered3"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/bat_black
-	name = "bat wings, black"
-	desc = ""
-	icon_state = "bat-black"
-
-/datum/sprite_accessory/wing/bat_color
-	name = "bat wings, colorable"
-	desc = ""
-	icon_state = "bat-color"
-	do_colouration = 1
-
-/datum/sprite_accessory/wing/bat_red
-	name = "bat wings, red"
-	desc = ""
-	icon_state = "bat-red"
-
-/datum/sprite_accessory/wing/harpywings
-	name = "harpy wings, colorable"
-	desc = ""
-	icon_state = "harpywings"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/harpywings_alt
-	name = "harpy wings alt, archeopteryx"
-	desc = ""
-	icon_state = "harpywings_alt"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "harpywings_altmarkings"
-
-/datum/sprite_accessory/wing/harpywings_alt_neckfur
-	name = "harpy wings alt, archeopteryx & neckfur"
-	desc = ""
-	icon_state = "harpywings_alt"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "harpywings_altmarkings"
-	extra_overlay2 = "neckfur"
-
-/datum/sprite_accessory/wing/harpywings_bat
-	name = "harpy wings, bat"
-	desc = ""
-	icon_state = "harpywings_bat"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "harpywings_batmarkings"
-
-/datum/sprite_accessory/wing/harpywings_bat_neckfur
-	name = "harpy wings, bat & neckfur"
-	desc = ""
-	icon_state = "harpywings_bat"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "harpywings_batmarkings"
-	extra_overlay2 = "neckfur"
-
-/datum/sprite_accessory/wing/neckfur
-	name = "neck fur"
-	desc = ""
-	icon_state = "neckfur"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/feathered
-	name = "feathered wings, colorable"
-	desc = ""
-	icon_state = "feathered"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/beewings
-	name = "bee wings"
-	desc = ""
-	icon_state = "beewings"
-
-/datum/sprite_accessory/wing/sepulchre
-	name = "demon wings (Sepulchre)"
-	desc = ""
-	icon_state = "sepulchre_wings"
-
-/datum/sprite_accessory/wing/miria_fluffdragon
-	name = "fluffdragon wings (Miria Masters)"
-	desc = ""
-	icon_state = "miria-fluffdragontail"
-
-/datum/sprite_accessory/wing/scree
-	name = "green taj wings (Scree)"
-	desc = ""
-	icon_state = "scree-wings"
-
-/datum/sprite_accessory/wing/liquidfirefly_gazer //I g-guess this could be considered wings?
-	name = "gazer eyestalks"
-	desc = ""
-	icon_state = "liquidfirefly-eyestalks"
-
-/datum/sprite_accessory/wing/moth_full
-	name = "moth antenna and wings"
-	desc = ""
-	icon_state = "moth_full"
-
-/datum/sprite_accessory/wing/moth_full_gray
-	name = "moth antenna and wings, colorable"
-	desc = ""
-	icon_state = "moth_full_gray"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/kerena
-	name = "wingwolf wings (Kerena)"
-	desc = ""
-	icon_state = "kerena-wings"
-
-/datum/sprite_accessory/wing/snag
-	name = "xenomorph backplate"
-	desc = ""
-	icon_state = "snag-backplate"
-
-/datum/sprite_accessory/wing/sepulchre_c_yw
-	name = "demon wings (colorable)"
-	desc = ""
-	icon_state = "sepulchre_wingsc"
-	do_colouration = 1
-
-/datum/sprite_accessory/wing/cyberdragon
-	name = "Cyber dragon wing (colorable)"
-	desc = ""
-	icon_state = "cyberdragon_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/wing/cyberdragon_red
-	name = "Cyber dragon wing (red)"
-	desc = ""
-	icon_state = "cyberdragon_red_s"
-	do_colouration = 0
-
-/datum/sprite_accessory/wing/cyberdoe
-	name = "Cyber doe wing"
-	desc = ""
-	icon_state = "cyberdoe_s"
-	do_colouration = 0
-
-/datum/sprite_accessory/wing/drago_wing
-	name = "Cybernetic Dragon wings"
-	desc = ""
-	icon_state = "drago_wing"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "drago_wing_2"
-
-/*
 ////////////////////////////
 /  =--------------------=  /
 /  == Tail Definitions ==  /
@@ -951,20 +9,7 @@
 	name = "You should not see this..."
 	icon = 'icons/mob/vore/tails_vr.dmi'
 	do_colouration = 0 //Set to 1 to enable coloration using the tail color.
-
-	color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
-	var/extra_overlay // Icon state of an additional overlay to blend in.
-	var/extra_overlay2 //Tertiary.
-	var/show_species_tail = 0 // If false, do not render species' tail.
-	var/clothing_can_hide = 1 // If true, clothing with HIDETAIL hides it
-	var/desc = "You should not see this..."
-	var/ani_state // State when wagging/animated
-	var/extra_overlay_w // Wagging state for extra overlay
-	var/extra_overlay2_w // Tertiary wagging.
-	var/list/hide_body_parts = list() //Uses organ tag defines. Bodyparts in this list do not have their icons rendered, allowing for more spriter freedom when doing taur/digitigrade stuff.
-	var/icon/clip_mask_icon = null //Icon file used for clip mask.
-	var/clip_mask_state = null //Icon state to generate clip mask. Clip mask is used to 'clip' off the lower part of clothing such as jumpsuits & full suits.
-	var/icon/clip_mask = null //Instantiated clip mask of given icon and state
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //This lets all races use
 
 /datum/sprite_accessory/tail/New()
 	. = ..()
@@ -1201,36 +246,43 @@
 	name = "quintail kitsune tails (Molenar)"
 	desc = ""
 	icon_state = "molenar-kitsune"
+	ckeys_allowed = list("molenar")
 
 /datum/sprite_accessory/tail/miria_fluffdragon
 	name = "fluffdragon tail (Miria Masters)"
 	desc = ""
 	icon_state = "miria-fluffdragontail"
+	ckeys_allowed = list("miriamasters")
 
 /datum/sprite_accessory/tail/miria_kitsune
 	name = "Black kitsune tails (Miria Masters)"
 	desc = ""
 	icon_state = "miria-kitsunetail"
+	ckeys_allowed = list("miriamasters")
 
 /datum/sprite_accessory/tail/molenar_deathclaw
 	name = "deathclaw bits (Molenar)"
 	desc = ""
 	icon_state = "molenar-deathclaw"
+	ckeys_allowed = list("molenar","silvertalismen","jertheace")
 
 /datum/sprite_accessory/tail/runac
 	name = "fennecsune tails (Runac)"
 	desc = ""
 	icon_state = "runac"
+	ckeys_allowed = list("rebcom1807")
 
 /datum/sprite_accessory/tail/reika //Leaving this since it was too hard to split the wings from the tail.
 	name = "fox tail (+ beewings) (Reika)"
 	desc = ""
 	icon_state = "reika"
+	ckeys_allowed = list("rikaru19xjenkins")
 
 /datum/sprite_accessory/tail/rosey
 	name = "tritail kitsune tails (Rosey)"
 	desc = ""
 	icon_state = "rosey_three"
+	ckeys_allowed = list("joey4298")
 
 /datum/sprite_accessory/tail/rosey2
 	name = "pentatail kitsune tails (Rosey)" //I predict seven tails next. ~CK
@@ -1238,32 +290,38 @@
 	icon_state = "rosey_five"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+	ckeys_allowed = list("joey4298")
 
 /datum/sprite_accessory/tail/scree
 	name = "green taj tail (Scree)"
 	desc = ""
 	icon_state = "scree"
+	ckeys_allowed = list("scree")
 
 /datum/sprite_accessory/tail/aronai
 	name = "aronai tail (Aronai)"
 	desc = ""
 	icon_state = "aronai"
+	ckeys_allowed = list("arokha")
 
 /datum/sprite_accessory/tail/cabletail
     name = "cabletail"
     desc = "cabletail"
     icon_state = "cabletail"
+    ckeys_allowed = list("tucker0666")
 
 /datum/sprite_accessory/tail/featherfluff_tail
     name = "featherfluff_tail"
     desc = ""
     icon_state = "featherfluff_tail"
+    ckeys_allowed = list("tucker0666")
 
 /datum/sprite_accessory/tail/ketrai_wag
 	name = "fennix tail (vwag)"
 	desc = ""
 	icon_state = "ketraitail"
 	ani_state = "ketraitail_w"
+	//ckeys_allowed = list("ketrai") //They requested it to be enabled for everyone.
 
 /datum/sprite_accessory/tail/ketrainew_wag
 	name = "new fennix tail (vwag)"
@@ -1288,6 +346,7 @@
 	name = "tigress tail (Holly)"
 	desc = ""
 	icon_state = "tigresstail"
+	ckeys_allowed = list("hoodoo")
 
 /datum/sprite_accessory/tail/satyr
 	name = "goat legs, colorable"
@@ -1927,6 +986,8 @@
 	icon_state = "shadekin-short"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+	//apply_restrictions = TRUE
+	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 /datum/sprite_accessory/tail/wartacosushi_tail //brightened +20RGB from matching roboparts
 	name = "Ward-Takahashi Tail"
@@ -2077,30 +1138,3 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	ckeys_allowed = list("prettiebyrd")
-
-/*
-////////////////////////////
-/  =--------------------=  /
-/  == Misc Definitions ==  /
-/  =--------------------=  /
-////////////////////////////
-*/
-
-// Yes, I have to add all of this just to make some glowy hair.
-// No, this isn't a character creation option, but... I guess in the future it could be, if anyone wants that?
-
-/datum/sprite_accessory/hair_accessory
-	name = "You should not see this..."
-	icon = 'icons/mob/vore/hair_accessories_vr.dmi'
-	do_colouration = 0 // Set to 1 to blend (ICON_ADD) hair color
-
-	var/ignores_lighting = 0 // Whether or not this hair accessory will ignore lighting and glow in the dark.
-	color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
-	var/desc = "You should not see this..."
-
-/datum/sprite_accessory/hair_accessory/verie_hair_glow //CHOMP Comment: Leaving the name Verie here because I cannot be arsed to change it in other code
-	name = "hair glow" //CHOMP Edit: removed the name Verie
-	desc = ""
-	icon_state = "verie_hair_glow" //CHOMP Comment: Leaving the name Verie here because I cannot be arsed to change the .dmi
-	ignores_lighting = 1
-	//ckeys_allowed = list("vitoras") // This probably won't come into play EVER but better safe than sorry
