@@ -78,14 +78,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		>> pref.synth_markings
 	S["bgstate"]			>> pref.bgstate
 	S["body_descriptors"]	>> pref.body_descriptors
-<<<<<<< HEAD
 	S["Wingdings"]			>> pref.wingdings //YWadd start
 	S["colorblind_mono"]	>> pref.colorblind_mono
 	S["colorblind_vulp"]	>> pref.colorblind_vulp
 	S["colorblind_taj"] 	>> pref.colorblind_taj 
 	S["haemophilia"]        >> pref.haemophilia //YWadd end
-||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
-=======
 	S["ear_style"]		>> pref.ear_style
 	S["r_ears"]			>> pref.r_ears
 	S["g_ears"]			>> pref.g_ears
@@ -116,7 +113,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["r_wing3"]		>> pref.r_wing3
 	S["g_wing3"]		>> pref.g_wing3
 	S["b_wing3"]		>> pref.b_wing3
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 
 /datum/category_item/player_setup_item/general/body/save_character(var/savefile/S)
 	S["species"]			<< pref.species
@@ -152,14 +148,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		<< pref.synth_markings
 	S["bgstate"]			<< pref.bgstate
 	S["body_descriptors"]	<< pref.body_descriptors
-<<<<<<< HEAD
 	S["Wingdings"]          << pref.wingdings //YWadd start
 	S["colorblind_mono"]	<< pref.colorblind_mono
 	S["colorblind_vulp"]	<< pref.colorblind_vulp
 	S["colorblind_taj"] 	<< pref.colorblind_taj 
 	S["haemophilia"]        << pref.haemophilia //YWadd end
-||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
-=======
 	S["ear_style"]		<< pref.ear_style
 	S["r_ears"]			<< pref.r_ears
 	S["g_ears"]			<< pref.g_ears
@@ -190,7 +183,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["r_wing3"]		<< pref.r_wing3
 	S["g_wing3"]		<< pref.g_wing3
 	S["b_wing3"]		<< pref.b_wing3
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 
 /datum/category_item/player_setup_item/general/body/sanitize_character(var/savefile/S)
 	if(!pref.species || !(pref.species in GLOB.playable_species))
@@ -1143,8 +1135,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
-<<<<<<< HEAD
-	//YW Add Start
 	else if(href_list["wingdings"])
 		pref.wingdings = !pref.wingdings
 		Disabilities_YW(usr)
@@ -1175,9 +1165,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	//YW Add End
 
-
-||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
-=======
 	else if(href_list["ear_style"])
 		// Construct the list of names allowed for this user.
 		var/list/pretty_ear_styles = list("Normal" = null)
@@ -1303,8 +1290,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.g_wing3 = hex2num(copytext(new_wingc3, 4, 6))
 			pref.b_wing3 = hex2num(copytext(new_wingc3, 6, 8))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
-
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 	return ..()
 
 /datum/category_item/player_setup_item/general/body/proc/reset_limbs()
