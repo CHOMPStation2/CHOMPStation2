@@ -1134,6 +1134,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["cycle_bg"])
 		pref.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
+		
+	//YW Add Start
 
 	else if(href_list["wingdings"])
 		pref.wingdings = !pref.wingdings
