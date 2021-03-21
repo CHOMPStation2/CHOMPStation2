@@ -77,7 +77,7 @@
 	title = "Clown"
 	flag = CLOWN
 	departments = list(DEPARTMENT_CIVILIAN)
-	department_flag = CIVILIAN
+	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
@@ -107,7 +107,7 @@
 	title = "Mime"
 	flag = MIME
 	departments = list(DEPARTMENT_CIVILIAN)
-	department_flag = CIVILIAN
+	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
