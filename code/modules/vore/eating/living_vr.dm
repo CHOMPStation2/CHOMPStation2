@@ -49,6 +49,11 @@
 	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 
+	//Tries to load prefs if a client is present otherwise gives freebie stomach
+	spawn(2 SECONDS)
+		if(M)
+			M.init_vore()
+
 	//return TRUE to hook-caller
 	return TRUE
 
@@ -97,7 +102,6 @@
 		//Has to be aggressive grab, has to be living click-er and non-silicon grabbed
 		if(G.state >= GRAB_AGGRESSIVE && (isliving(user) && !issilicon(G.affecting)))
 			var/mob/living/attacker = user  // Typecast to living
-			G.affecting.init_vore()
 
 			// src is the mob clicked on and attempted predator
 
@@ -148,10 +152,6 @@
 		var/mob/living/attacker = user  // Typecast to living
 		if(is_vore_predator(src))
 			for(var/mob/living/M in H.contents)
-				M.init_vore()
-				if(!M.devourable)
-					to_chat(user, "<span class='notice'>[M] isn't able to be devoured.</span>")
-					return FALSE
 				if(attacker.eat_held_mob(attacker, M, src))
 					if(H.held_mob == M)
 						H.held_mob = null
@@ -290,6 +290,7 @@
 		vore_organs.Cut()
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
+			break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
 
 	return TRUE
 

@@ -78,7 +78,6 @@
 			var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
 			if(L.can_inject(src, null, target_zone))
 				last_inject = world.time
-				L.init_vore()
 				if(!L.allowmobvore) //If we can't eat them, stop mauling them.
 					ai_holder.lose_target() //Call this first so the attacks stop if the reagent proc runtimes.
 					L.reagents.add_reagent("bicaridine", venom_dose) //If we can't eat them, give them some bicar to compensate for no heal belly.
