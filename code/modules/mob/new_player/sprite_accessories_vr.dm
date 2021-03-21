@@ -629,4 +629,3 @@
 	icon_state = "verie_hair_glow"
 	ignores_lighting = 1
 	//ckeys_allowed = list("vitoras") // This probably won't come into play EVER but better safe than sorry
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
