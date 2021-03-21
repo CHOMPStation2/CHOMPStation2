@@ -106,6 +106,7 @@
 /obj/item/clothing/suit/syndicatefake
 	name = "red space suit replica"
 	icon = 'icons/obj/clothing/spacesuits.dmi'
+	icon_override = "icons/mob/spacesuit.dmi" //Chomp edit to fix its missing icon
 	icon_state = "syndicate"
 	desc = "A plastic replica of the syndicate space suit, you'll look just like a real murderous syndicate agent in this! This is a toy, it is not made for use in space!"
 	w_class = ITEMSIZE_NORMAL
