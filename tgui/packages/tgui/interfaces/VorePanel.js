@@ -289,6 +289,8 @@ const VoreSelectedBelly = (props, context) => {
     digest_burn,
     bulge_size,
     shrink_grow_size,
+    emote_time,
+    emote_active,
     addons,
     contaminates,
     contaminate_flavor,
@@ -553,6 +555,18 @@ const VoreSelectedBelly = (props, context) => {
                   icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
                   selected={vorespawn_blacklist}
                   content={vorespawn_blacklist ? "Yes" : "No"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Idle Emotes">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_emoteactive" })}
+                  icon={emote_active ? "toggle-on" : "toggle-off"}
+                  selected={emote_active}
+                  content={emote_active ? "Active" : "Inactive"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Idle Emote Delay">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_emotetime" })}
+                  content={emote_time + " seconds"} />
               </LabeledList.Item>
             </LabeledList>
           </Flex.Item>
