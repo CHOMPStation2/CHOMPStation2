@@ -105,7 +105,7 @@
 
 /obj/item/clothing/suit/syndicatefake
 	name = "red space suit replica"
-	icon = 'icons/mob/spacesuit.dmi'
+	icon = 'icons/mob/spacesuit.dmi' //CHOMPedit: fixs them not showing up
 	icon_state = "syndicate"
 	desc = "A plastic replica of the syndicate space suit, you'll look just like a real murderous syndicate agent in this! This is a toy, it is not made for use in space!"
 	w_class = ITEMSIZE_NORMAL
