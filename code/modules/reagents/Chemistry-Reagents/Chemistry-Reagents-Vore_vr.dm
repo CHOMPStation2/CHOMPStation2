@@ -14,7 +14,7 @@
 
 /datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.size_range_check(M.size_multiplier))
-		M.resize(M.size_multiplier+0.01)//Incrrease 1% per tick.
+		M.resize(M.size_multiplier+0.01, FALSE)//Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 /datum/reagent/microcillin
@@ -28,7 +28,7 @@
 
 /datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.size_range_check(M.size_multiplier))
-		M.resize(M.size_multiplier-0.01) //Decrease 1% per tick.
+		M.resize(M.size_multiplier-0.01, FALSE) //Decrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 
