@@ -171,7 +171,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
 
-
 //DAMAGE OVERLAYS
 //constructs damage icon for each organ from mask * damage field and saves it in our overlays_ lists
 /mob/living/carbon/human/UpdateDamageIcon()
@@ -452,7 +451,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(facial_hair_style && facial_hair_style.species_allowed && (src.species.get_bodytype(src) in facial_hair_style.species_allowed))
 			var/icon/facial_s = new/icon("icon" = facial_hair_style.icon, "icon_state" = "[facial_hair_style.icon_state]_s")
 			if(facial_hair_style.do_colouration)
-				facial_s.Blend(rgb(r_facial, g_facial, b_facial), ICON_MULTIPLY)
+				facial_s.Blend(rgb(r_facial, g_facial, b_facial), facial_hair_style.color_blend_mode)
 
 			face_standing.Blend(facial_s, ICON_OVERLAY)
 
@@ -532,7 +531,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(!head_organ.eye_icon)
 		return
 
-	var/icon/eyes_icon = new/icon(head_organ.eye_icon_location, head_organ.eye_icon)
+	var/icon/eyes_icon = new/icon(head_organ.eye_icon_location, head_organ.eye_icon)		//VOREStation Edit
 	if(eyes)
 		eyes_icon.Blend(rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3]), ICON_ADD)
 	else
