@@ -23,8 +23,7 @@
 	var/noisy = FALSE					// Toggle audible hunger.
 	var/absorbing_prey = 0 				// Determines if the person is using the succubus drain or not. See station_special_abilities_vr.
 	var/drain_finalized = 0				// Determines if the succubus drain will be KO'd/absorbed. Can be toggled on at any time.
-	var/fuzzy = 1						// Preference toggle for sharp/fuzzy icon.
-	var/tail_alt = 0					// Tail layer toggle.
+	var/fuzzy = 0						// Preference toggle for sharp/fuzzy icon.
 	var/permit_healbelly = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = TRUE			// Mobs are pred by default.
@@ -48,6 +47,7 @@
 	M.vorePanel = new(M)
 	M.verbs += /mob/living/proc/insidePanel
 	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 
 	//return TRUE to hook-caller
 	return TRUE
