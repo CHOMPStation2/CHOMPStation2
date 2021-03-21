@@ -13,16 +13,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-<<<<<<< HEAD
-	if(M.size_multiplier < RESIZE_HUGE)
-		M.resize(M.size_multiplier+0.01, FALSE)//Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
-||||||| parent of e41b0b22f6... Merge pull request #9928 from Zap-zapper/master
-	if(M.size_multiplier < RESIZE_HUGE)
-		M.resize(M.size_multiplier+0.01)//Incrrease 1% per tick.
-=======
 	if(M.size_range_check(M.size_multiplier))
 		M.resize(M.size_multiplier+0.01)//Incrrease 1% per tick.
->>>>>>> e41b0b22f6... Merge pull request #9928 from Zap-zapper/master
 	return
 
 /datum/reagent/microcillin
@@ -35,16 +27,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-<<<<<<< HEAD
-	if(M.size_multiplier > RESIZE_TINY)
-		M.resize(M.size_multiplier-0.01, FALSE) //Decrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
-||||||| parent of e41b0b22f6... Merge pull request #9928 from Zap-zapper/master
-	if(M.size_multiplier > RESIZE_TINY)
-		M.resize(M.size_multiplier-0.01) //Decrease 1% per tick.
-=======
 	if(M.size_range_check(M.size_multiplier))
 		M.resize(M.size_multiplier-0.01) //Decrease 1% per tick.
->>>>>>> e41b0b22f6... Merge pull request #9928 from Zap-zapper/master
 	return
 
 
