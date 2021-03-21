@@ -7268,6 +7268,7 @@
 /obj/item/weapon/stock_parts/matter_bin,
 /obj/item/weapon/stock_parts/matter_bin,
 /obj/item/weapon/stock_parts/manipulator,
+/obj/item/weapon/stock_parts/console_screen,
 /obj/item/weapon/circuitboard/partslathe,
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -7289,6 +7290,7 @@
 	},
 /obj/item/weapon/stock_parts/manipulator,
 /obj/structure/table/rack/steel,
+/obj/item/weapon/stock_parts/console_screen,
 /obj/item/weapon/circuitboard/autolathe,
 /turf/simulated/floor/plating,
 /area/storage/tech)
@@ -7809,36 +7811,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/storage/tech)
-<<<<<<< HEAD
-"ly" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/item/weapon/circuitboard/transhuman_synthprinter{
-	pixel_x = -3;
-	pixel_y = 4
-	},
-/obj/item/weapon/circuitboard/rdconsole{
-	pixel_x = 0;
-	pixel_y = 2
-	},
-/obj/item/weapon/circuitboard/destructive_analyzer,
-/obj/item/weapon/circuitboard/protolathe{
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/obj/item/weapon/circuitboard/rdserver{
-	pixel_x = 6;
-	pixel_y = -4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating,
-/area/storage/tech)
-||||||| parent of 990448b094... Merge pull request #9860 from Heroman3003/boradening
 "ly" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -7864,8 +7836,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/storage/tech)
-=======
->>>>>>> 990448b094... Merge pull request #9860 from Heroman3003/boradening
 "lz" = (
 /obj/item/weapon/stool,
 /turf/simulated/floor,
@@ -10068,7 +10038,7 @@
 /turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod1)
-"oG" = (
+"oF" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8;
 	icon_state = "propulsion_r"
@@ -10076,6 +10046,20 @@
 /turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod1)
+<<<<<<< HEAD
+||||||| parent of 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
+"oH" = (
+/obj/structure/stairs/spawner/west,
+/turf/simulated/sky/virgo3b/west,
+/turf/simulated/floor/tiled/white,
+/area/medical/biostorage)
+=======
+"oG" = (
+/obj/structure/stairs/spawner/west,
+/turf/simulated/sky/virgo3b/west,
+/turf/simulated/floor/tiled/white,
+/area/medical/biostorage)
+>>>>>>> 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
 "oM" = (
 /turf/simulated/open,
 /area/engineering/foyer_mezzenine)
@@ -29051,7 +29035,7 @@ vE
 wm
 ws
 xj
-xQ
+oG
 vT
 aP
 aP
@@ -35994,7 +35978,7 @@ oD
 oE
 oE
 oE
-oG
+oF
 oY
 sW
 ef
