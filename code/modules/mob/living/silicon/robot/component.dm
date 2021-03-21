@@ -77,18 +77,10 @@
 	external_type = /obj/item/robot_parts/robot_component/armour
 	max_damage = 90
 
-<<<<<<< HEAD
-||||||| parent of b3f3ea7c9d... Merge pull request #9974 from VOREStation/upstream-merge-7988
-/datum/robot_component/armour/platform
-	name = "platform armour plating"
-	external_type = /obj/item/robot_parts/robot_component/armour_platform
-	max_damage = 180
-=======
 /datum/robot_component/armour/platform
 	name = "platform armour plating"
 	external_type = /obj/item/robot_parts/robot_component/armour_platform
 	max_damage = 140
->>>>>>> b3f3ea7c9d... Merge pull request #9974 from VOREStation/upstream-merge-7988
 
 // ACTUATOR
 // Enables movement.
