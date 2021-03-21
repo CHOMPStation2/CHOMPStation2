@@ -1423,12 +1423,8 @@
 #include "code\game\objects\items\weapons\material\swords.dm"
 #include "code\game\objects\items\weapons\material\thrown.dm"
 #include "code\game\objects\items\weapons\material\twohanded.dm"
-<<<<<<< HEAD
 #include "code\game\objects\items\weapons\material\twohanded_ch.dm"
-||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
-=======
 #include "code\game\objects\items\weapons\material\twohanded_vr.dm"
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 #include "code\game\objects\items\weapons\material\whetstone.dm"
 #include "code\game\objects\items\weapons\melee\deflect.dm"
 #include "code\game\objects\items\weapons\melee\energy.dm"
@@ -3178,10 +3174,7 @@
 #include "code\modules\mob\new_player\preferences_setup_vr.dm"
 #include "code\modules\mob\new_player\skill.dm"
 #include "code\modules\mob\new_player\sprite_accessories.dm"
-<<<<<<< HEAD
 #include "code\modules\mob\new_player\sprite_accessories_ch.dm"
-||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
-=======
 #include "code\modules\mob\new_player\sprite_accessories_ear.dm"
 #include "code\modules\mob\new_player\sprite_accessories_ear_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_extra.dm"
@@ -3190,15 +3183,10 @@
 #include "code\modules\mob\new_player\sprite_accessories_tail_vr.dm"
 #include "code\modules\mob\new_player\sprite_accessories_taur.dm"
 #include "code\modules\mob\new_player\sprite_accessories_taur_vr.dm"
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 #include "code\modules\mob\new_player\sprite_accessories_vr.dm"
-<<<<<<< HEAD
 #include "code\modules\mob\new_player\sprite_accessories_yw.dm"
-||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
-=======
 #include "code\modules\mob\new_player\sprite_accessories_wing.dm"
 #include "code\modules\mob\new_player\sprite_accessories_wing_vr.dm"
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 #include "code\modules\modular_computers\laptop_vendor.dm"
 #include "code\modules\modular_computers\computers\modular_computer\core.dm"
 #include "code\modules\modular_computers\computers\modular_computer\damage.dm"
@@ -3322,12 +3310,8 @@
 #include "code\modules\organs\organ_stump.dm"
 #include "code\modules\organs\pain.dm"
 #include "code\modules\organs\robolimbs.dm"
-<<<<<<< HEAD
 #include "code\modules\organs\robolimbs_ch.dm"
-||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
-=======
 #include "code\modules\organs\robolimbs_custom.dm"
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 #include "code\modules\organs\robolimbs_vr.dm"
 #include "code\modules\organs\robolimbs_yw.dm"
 #include "code\modules\organs\wound.dm"
@@ -4006,18 +3990,12 @@
 #include "code\modules\vore\hook-defs_vr.dm"
 #include "code\modules\vore\trycatch_vr.dm"
 #include "code\modules\vore\appearance\preferences_vr.dm"
-<<<<<<< HEAD
 #include "code\modules\vore\appearance\sprite_accessories_ch.dm"
 #include "code\modules\vore\appearance\sprite_accessories_taur_ch.dm"
 #include "code\modules\vore\appearance\sprite_accessories_taur_vr.dm"
 #include "code\modules\vore\appearance\sprite_accessories_taur_yw.dm"
 #include "code\modules\vore\appearance\sprite_accessories_vr.dm"
 #include "code\modules\vore\appearance\sprite_accessories_yw.dm"
-||||||| parent of f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
-#include "code\modules\vore\appearance\sprite_accessories_taur_vr.dm"
-#include "code\modules\vore\appearance\sprite_accessories_vr.dm"
-=======
->>>>>>> f75b0bc9d5... Merge pull request #9327 from VOREStation/upstream-merge-7697
 #include "code\modules\vore\appearance\update_icons_vr.dm"
 #include "code\modules\vore\eating\belly_dat_vr.dm"
 #include "code\modules\vore\eating\belly_obj_ch.dm"
