@@ -852,6 +852,7 @@
 	set category = "Preferences"
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
+	fuzzy = !fuzzy
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
