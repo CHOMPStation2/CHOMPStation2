@@ -22,6 +22,6 @@
   
 	//yw edit
 /obj/item/organ/external/head/vr/grey
-	eye_icons_vr = 'icons/mob/human_face_yw.dmi'
-	eye_icon_vr = "eyes_grey"
+	eye_icon_location = 'icons/mob/human_face_yw.dmi'
+	eye_icon = "eyes_grey"
 	//yw edit
