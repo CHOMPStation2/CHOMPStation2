@@ -1812,10 +1812,20 @@
 #include "code\modules\ai\ai_holder_targeting_vr.dm"
 #include "code\modules\ai\interfaces.dm"
 #include "code\modules\ai\say_list.dm"
+<<<<<<< HEAD
 #include "code\modules\ai\ai_holder_subtypes\simple_mob_ai.dm"
 #include "code\modules\ai\ai_holder_subtypes\simple_mob_ai_ch.dm"
 #include "code\modules\ai\ai_holder_subtypes\simple_mob_ai_vr.dm"
 #include "code\modules\ai\ai_holder_subtypes\slime_xenobio_ai.dm"
+||||||| parent of 2ca6e2f95b... Merge pull request #9995 from Heroman3003/blurb2
+#include "code\modules\ai\ai_holder_subtypes\simple_mob_ai.dm"
+#include "code\modules\ai\ai_holder_subtypes\simple_mob_ai_vr.dm"
+#include "code\modules\ai\ai_holder_subtypes\slime_xenobio_ai.dm"
+=======
+#include "code\modules\ai\aI_holder_subtypes\simple_mob_ai.dm"
+#include "code\modules\ai\aI_holder_subtypes\simple_mob_ai_vr.dm"
+#include "code\modules\ai\aI_holder_subtypes\slime_xenobio_ai.dm"
+>>>>>>> 2ca6e2f95b... Merge pull request #9995 from Heroman3003/blurb2
 #include "code\modules\alarm\alarm.dm"
 #include "code\modules\alarm\alarm_handler.dm"
 #include "code\modules\alarm\atmosphere_alarm.dm"
