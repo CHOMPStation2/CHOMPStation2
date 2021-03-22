@@ -88,6 +88,8 @@ TODO: Make them light up and heat the air when exposed to oxygen.
 	vore_icons = SA_ICON_LIVING
 
 /mob/living/simple_mob/animal/passive/gaslamp/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "internal chamber"

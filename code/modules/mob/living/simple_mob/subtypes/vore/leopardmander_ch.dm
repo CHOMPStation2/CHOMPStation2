@@ -104,6 +104,8 @@
 	vore_bump_emote = "tries to snap up"
 
 /mob/living/simple_mob/vore/leopardmander/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -175,6 +177,8 @@
 	verbs |= /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow
 
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"

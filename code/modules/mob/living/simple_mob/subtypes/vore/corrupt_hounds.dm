@@ -122,6 +122,8 @@
 	return TRUE
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "fuel processor"
@@ -144,6 +146,8 @@
 		"'FU3L mE A1RE@Dy, S0 sO SORrY!?', your corrupted captor growls as its synthetic innards begin oozing more potent juices, grinding down into your body with increasing fervor!")
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi/init_vore()
+	if(!voremob_loaded)
+		return
 	..()
 	var/obj/belly/B = vore_selected
 	B.name = "fuel processor"

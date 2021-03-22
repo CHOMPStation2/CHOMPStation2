@@ -62,6 +62,8 @@
 	return
 
 /mob/living/simple_mob/vore/aggressive/deathclaw/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"

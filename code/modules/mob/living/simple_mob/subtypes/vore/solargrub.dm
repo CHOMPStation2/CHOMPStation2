@@ -168,6 +168,8 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		return 1
 
 /mob/living/simple_mob/vore/solargrub/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"

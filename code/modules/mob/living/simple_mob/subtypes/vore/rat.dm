@@ -54,6 +54,8 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/rat
 
 /mob/living/simple_mob/vore/aggressive/rat/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"

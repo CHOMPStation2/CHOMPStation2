@@ -50,6 +50,8 @@
 	base_wander_delay = 4
 
 /mob/living/simple_mob/animal/passive/fox/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
@@ -199,6 +201,8 @@
 	makes_dirt = FALSE	// No more dirt
 
 /mob/living/simple_mob/animal/passive/fox/renault/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"

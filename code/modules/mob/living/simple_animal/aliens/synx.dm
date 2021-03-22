@@ -108,6 +108,8 @@
 
 
 /mob/living/simple_mob/animal/synx/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	//B.human_prey_swallow_time = 6 SECONDS //doesnt work
@@ -137,6 +139,8 @@
 	B.mode_flags = DM_FLAG_NUMBING	//Prey are more docile when it doesn't hurt.
 
 /mob/living/simple_mob/animal/synx/ai/pet/asteri/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.desc    = "The synx eagerly swallows you, taking you from its gullet into its long, serpentine stomach. The internals around you greedily press into your from all sides, keeping you coated in a slick coat of numbing fluids..."
@@ -551,6 +555,8 @@
 	player_msg = "You aren't supposed to be in this. Wrong mob."
 
 /mob/living/simple_mob/animal/synx/ai/pet/init_vore()
+	if(!voremob_loaded)
+		return
     .=..()
     var/obj/belly/B = vore_selected
     B.vore_verb = "swallow"
@@ -558,6 +564,8 @@
     B.digest_brute = 0
 
 /mob/living/simple_mob/animal/synx/ai/pet/holo/init_vore()
+	if(!voremob_loaded)
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.vore_verb = "swallow"
