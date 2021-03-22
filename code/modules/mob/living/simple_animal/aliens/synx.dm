@@ -557,11 +557,11 @@
 /mob/living/simple_mob/animal/synx/ai/pet/init_vore()
 	if(!voremob_loaded)
 		return
-    .=..()
-    var/obj/belly/B = vore_selected
-    B.vore_verb = "swallow"
-    B.digest_burn = 1
-    B.digest_brute = 0
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.vore_verb = "swallow"
+	B.digest_burn = 1
+	B.digest_brute = 0
 
 /mob/living/simple_mob/animal/synx/ai/pet/holo/init_vore()
 	if(!voremob_loaded)
