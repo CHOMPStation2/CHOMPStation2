@@ -50,7 +50,7 @@
 	base_wander_delay = 4
 
 /mob/living/simple_mob/animal/passive/fox/init_vore()
-	..()
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "Slick foxguts. Cute on the outside, slimy on the inside!"
@@ -199,7 +199,7 @@
 	makes_dirt = FALSE	// No more dirt
 
 /mob/living/simple_mob/animal/passive/fox/renault/init_vore()
-	..()
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "Slick foxguts. They seem somehow more regal than perhaps other foxes!"

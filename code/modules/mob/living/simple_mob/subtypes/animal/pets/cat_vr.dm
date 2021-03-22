@@ -1,5 +1,5 @@
 /mob/living/simple_mob/animal/passive/cat/runtime/init_vore()
-	..()
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "The slimy wet insides of Runtime! Not quite as clean as the cat on the outside."
