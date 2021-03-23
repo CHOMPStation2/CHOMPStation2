@@ -9,6 +9,40 @@
 	id_type = /obj/item/weapon/card/id/centcom
 	pda_type = /obj/item/device/pda/centcom
 
+<<<<<<< HEAD
+||||||| parent of 5229d72483... Merge pull request #9989 from VOREStation/upstream-merge-7815
+/decl/hierarchy/outfit/job/emergency_responder
+	name = OUTFIT_JOB_NAME("Emergency Responder")
+	uniform = /obj/item/clothing/under/ert
+	shoes = /obj/item/clothing/shoes/boots/swat
+	gloves = /obj/item/clothing/gloves/swat
+	l_ear = /obj/item/device/radio/headset/ert
+	glasses = /obj/item/clothing/glasses/sunglasses
+	back = /obj/item/weapon/storage/backpack/satchel
+	id_type = /obj/item/weapon/card/id/centcom/ERT
+	pda_type = /obj/item/device/pda/centcom
+	
+	post_equip(var/mob/living/carbon/human/H)
+		..()
+		ert.add_antagonist(H.mind)
+
+=======
+/decl/hierarchy/outfit/job/emergency_responder
+	name = OUTFIT_JOB_NAME("Emergency Responder")
+	uniform = /obj/item/clothing/under/ert
+	shoes = /obj/item/clothing/shoes/boots/swat
+	gloves = /obj/item/clothing/gloves/swat
+	l_ear = /obj/item/device/radio/headset/ert
+	glasses = /obj/item/clothing/glasses/sunglasses
+	back = /obj/item/weapon/storage/backpack/satchel
+	id_type = /obj/item/weapon/card/id/centcom/ERT
+	pda_type = /obj/item/device/pda/centcom
+
+	post_equip(var/mob/living/carbon/human/H)
+		..()
+		ert.add_antagonist(H.mind)
+
+>>>>>>> 5229d72483... Merge pull request #9989 from VOREStation/upstream-merge-7815
 /decl/hierarchy/outfit/job/clown
 	name = OUTFIT_JOB_NAME("Clown")
 	uniform = /obj/item/clothing/under/rank/clown
@@ -16,6 +50,7 @@
 	shoes = /obj/item/clothing/shoes/clown_shoes
 	mask = /obj/item/clothing/mask/gas/clown_hat
 	backpack_contents = list(/obj/item/weapon/stamp/clown = 1, /obj/item/weapon/bikehorn = 1)
+	id_type = /obj/item/weapon/card/id/civilian/clown
 	pda_type = /obj/item/device/pda/clown
 	flags = 0
 
@@ -26,8 +61,9 @@
 	head = /obj/item/clothing/head/soft/mime
 	mask = /obj/item/clothing/mask/gas/mime
 	backpack_contents = list(/obj/item/weapon/pen/crayon/mime = 1)
+	id_type = /obj/item/weapon/card/id/civilian/mime
 	pda_type = /obj/item/device/pda/mime
-	
+
 	post_equip(var/mob/living/carbon/human/H)
 		..()
 		if(H.backbag == 1)

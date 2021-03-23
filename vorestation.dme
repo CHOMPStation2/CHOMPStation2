@@ -412,11 +412,14 @@
 #include "code\datums\outfits\jobs\civilian.dm"
 #include "code\datums\outfits\jobs\civilian_vr.dm"
 #include "code\datums\outfits\jobs\command.dm"
+#include "code\datums\outfits\jobs\command_vr.dm"
 #include "code\datums\outfits\jobs\engineering.dm"
 #include "code\datums\outfits\jobs\job.dm"
 #include "code\datums\outfits\jobs\medical.dm"
+#include "code\datums\outfits\jobs\medical_vr.dm"
 #include "code\datums\outfits\jobs\misc.dm"
 #include "code\datums\outfits\jobs\science.dm"
+#include "code\datums\outfits\jobs\science_vr.dm"
 #include "code\datums\outfits\jobs\security.dm"
 #include "code\datums\outfits\jobs\security_yw.dm"
 #include "code\datums\outfits\jobs\special_vr.dm"
@@ -1383,7 +1386,13 @@
 #include "code\game\objects\items\weapons\grenades\supermatter.dm"
 #include "code\game\objects\items\weapons\id cards\cards.dm"
 #include "code\game\objects\items\weapons\id cards\cards_vr.dm"
+<<<<<<< HEAD
 #include "code\game\objects\items\weapons\id cards\CH_ids.dm"
+||||||| parent of 5229d72483... Merge pull request #9989 from VOREStation/upstream-merge-7815
+=======
+#include "code\game\objects\items\weapons\id cards\id_stacks.dm"
+#include "code\game\objects\items\weapons\id cards\id_stacks_vr.dm"
+>>>>>>> 5229d72483... Merge pull request #9989 from VOREStation/upstream-merge-7815
 #include "code\game\objects\items\weapons\id cards\station_ids.dm"
 #include "code\game\objects\items\weapons\id cards\station_ids_vr.dm"
 #include "code\game\objects\items\weapons\id cards\syndicate_ids.dm"
