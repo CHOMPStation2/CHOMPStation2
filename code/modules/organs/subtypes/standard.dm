@@ -334,7 +334,13 @@
 	if(!iscarbon(owner) || !owner.species)
 		return
 
+<<<<<<< HEAD
 	var/icon/eyecon 
+||||||| parent of 8b3a5b2362... Merge pull request #10004 from VOREStation/upstream-merge-7998
+	var/icon/eyecon
+=======
+	var/icon/eyecon //VOREStation Add
+>>>>>>> 8b3a5b2362... Merge pull request #10004 from VOREStation/upstream-merge-7998
 
 	//Eye color/icon
 	var/should_have_eyes = owner.should_have_organ(O_EYES)
