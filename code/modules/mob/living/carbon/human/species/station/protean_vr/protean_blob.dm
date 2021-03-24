@@ -48,7 +48,7 @@
 	var/human_brute = 0
 	var/human_burn = 0
 
-	player_msg = "In this form, your health will regenerate as long as you have metal in you, and you can ventcrawl!"
+	player_msg = "In this form, your health will regenerate as long as you have metal in you." //CHOMP Edit removed ventcrawl
 
 	can_buckle = TRUE //Blobsurfing
 
@@ -319,7 +319,7 @@
 		..()
 		
 /mob/living/simple_mob/protean_blob/MouseDrop(var/atom/over_object) //CHOMP Add this whole block.
-	if(ishuman(over_object) && usr == src)
+	if(ishuman(over_object) && usr == srcc && src.Adjacent(over_object))
 		var/mob/living/carbon/human/H = over_object
 		get_scooped(H, TRUE)
 	else
