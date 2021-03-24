@@ -19,6 +19,18 @@
 	slot_flags = SLOT_EARS
 	var/associated_account_number = 0
 
+<<<<<<< HEAD
+||||||| parent of ed17ffc0ba... Merge pull request #10008 from VOREStation/upstream-merge-8008
+	var/list/initial_sprite_stack = list("")
+	var/base_icon = "icons/obj/card_new.dmi"
+	var/list/sprite_stack
+
+=======
+	var/list/initial_sprite_stack = list("")
+	var/base_icon = 'icons/obj/card_new.dmi'
+	var/list/sprite_stack
+
+>>>>>>> ed17ffc0ba... Merge pull request #10008 from VOREStation/upstream-merge-8008
 	var/list/files = list(  )
 	drop_sound = 'sound/items/drop/card.ogg'
 	pickup_sound = 'sound/items/pickup/card.ogg'
