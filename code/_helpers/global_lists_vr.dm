@@ -35,6 +35,7 @@ var/global/list/vantag_choices_list = list(
 var/global/list/item_vore_blacklist = list(
 		/obj/item/weapon/hand_tele,
 		/obj/item/weapon/card/id/gold/captain/spare,
+		/obj/item/weapon/gun,
 		/obj/item/weapon/pinpointer,
 		/obj/item/clothing/shoes/magboots,
 		/obj/item/blueprints,
