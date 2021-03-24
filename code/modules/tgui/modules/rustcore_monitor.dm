@@ -7,10 +7,10 @@
 /datum/tgui_module/rustcore_monitor/tgui_act(action, params)
 	if(..())
 		return TRUE
-
+/*CHOMP Removal brainlet.
 	for(var/parameter in params)
 		to_world("[parameter] - [params[parameter]]")
-
+*/
 	switch(action)
 		if("toggle_active")
 			var/obj/machinery/power/fusion_core/C = locate(params["core"])
@@ -58,10 +58,10 @@
 						"name" = reagent,
 						"amount" = C.owned_field.dormant_reactant_quantities[reagent]
 						)))
-
+/*CHOMP Removal brainlet.
 				for(var/list/reactant in reactants)
 					to_world("[reactant[1]] [reactant[2]]")
-
+*/
 			cores.Add(list(list(
 				"name" = C.name,
 				"has_field" = C.owned_field ? TRUE : FALSE,

@@ -7,10 +7,10 @@
 /datum/tgui_module/gyrotron_control/tgui_act(action, params)
 	if(..())
 		return TRUE
-
+/*CHOMP Removal brainlet.
 	for(var/parameter in params)
 		to_world("[parameter] - [params[parameter]]")
-
+*/
 	switch(action)
 		if("toggle_active")
 			var/obj/machinery/power/emitter/gyrotron/G = locate(params["gyro"])
