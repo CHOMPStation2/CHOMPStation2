@@ -3,6 +3,12 @@
 	var/swallowTime = (3 SECONDS)		//How long it takes to eat its prey in 1/10 of a second. The default is 3 seconds.
 	var/list/prey_excludes = list()		//For excluding people from being eaten.
 
+/mob/living/simple_mob/insidePanel() //CHOMPedit: On-demand belly loading.
+	if(vore_active && !voremob_loaded)
+		voremob_loaded = TRUE
+		init_vore()
+	..()
+
 //
 // Simple nom proc for if you get ckey'd into a simple_mob mob! Avoids grabs.
 //
@@ -11,10 +17,11 @@
 	set category = "IC"
 	set desc = "Since you can't grab, you get a verb!"
 
+	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
+		voremob_loaded = TRUE
+		init_vore()
 	if(stat != CONSCIOUS)
 		return
-	init_vore()
-	T.init_vore()
 	// Verbs are horrifying. They don't call overrides. So we're stuck with this.
 	if(istype(src, /mob/living/simple_mob/animal/passive/mouse) && !T.ckey)
 		// Mice can't eat logged out players!
