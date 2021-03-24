@@ -21,6 +21,11 @@
 	
 //I doooon't think I can get rig_back.dmi as a _ch file. That is part of /obj/item/weapon/rig/update_icon(var/update_mob_icon).
 
+/obj/item/rig/protean/relaymove(mob/user, var/direction)
+	if(user.stat || user.stunned)
+		return
+	forced_move(direction, user, FALSE)
+
 /obj/item/clothing/head/helmet/space/rig/protean
 	name = "mass"
 	desc = "A helmet-shaped clump of nanomachines."
@@ -53,7 +58,7 @@
 		/obj/item/device/suit_cooling_unit,
 		/obj/item/weapon/melee/baton,
 		/obj/item/weapon/storage/backpack,
-		)	//Subspace radio is in for the citadel version. IDK if we have that.
+		)	//Subspace radio is in for the citadel version. IDK if we have that and I don't think we need it so I removed it from this list.
 
 	
 	
@@ -76,18 +81,18 @@
 		)
 		
 	sprite_sheets_obj = list(
-		SPECIES_HUMAN			= 'icons/obj/clothing/hats.dmi',
-		SPECIES_TAJ 			= 'icons/obj/clothing/hats.dmi',
-		SPECIES_SKRELL 			= 'icons/obj/clothing/hats.dmi',
-		SPECIES_UNATHI 			= 'icons/obj/clothing/hats.dmi',
-		SPECIES_XENOHYBRID		= 'icons/obj/clothing/hats.dmi',
-		SPECIES_AKULA 			= 'icons/obj/clothing/hats.dmi',
-		SPECIES_SERGAL			= 'icons/obj/clothing/hats.dmi',
-		SPECIES_VULPKANIN 		= 'icons/obj/clothing/hats.dmi',
-		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/hats.dmi',
-		SPECIES_FENNEC 			= 'icons/obj/clothing/hats.dmi',
-		SPECIES_PROMETHEAN		= 'icons/obj/clothing/hats.dmi',
-		SPECIES_TESHARI 		= 'icons/obj/clothing/hats.dmi'
+		SPECIES_HUMAN			= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_TAJ 			= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_SKRELL 			= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_UNATHI 			= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_XENOHYBRID		= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_AKULA 			= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_SERGAL			= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_VULPKANIN 		= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_ZORREN_HIGH 	= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_FENNEC 			= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_PROMETHEAN		= 'icons/obj/clothing/hats_ch.dmi',
+		SPECIES_TESHARI 		= 'icons/obj/clothing/hats_ch.dmi'
 		)
 
 /obj/item/clothing/suit/space/rig/protean
