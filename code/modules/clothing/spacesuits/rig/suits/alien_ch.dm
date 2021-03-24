@@ -3,7 +3,7 @@
 */
 /obj/item/weapon/rig/protean
 	name = "nanosuit control cluster"
-//	suit_type = "nanomachine"
+	suit_type = "nanomachine"
 	icon = 'icons/obj/rig_modules_ch.dmi'
 	icon_state = "nanomachine_rig"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 90)
@@ -21,7 +21,7 @@
 	
 //I doooon't think I can get rig_back.dmi as a _ch file. That is part of /obj/item/weapon/rig/update_icon(var/update_mob_icon).
 
-/obj/item/rig/protean/relaymove(mob/user, var/direction)
+/obj/item/weapon/rig/protean/relaymove(mob/user, var/direction)
 	if(user.stat || user.stunned)
 		return
 	forced_move(direction, user, FALSE)
