@@ -64,7 +64,7 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		verbs |= /mob/living/proc/ventcrawl
+//		verbs |= /mob/living/proc/ventcrawl //CHOMP Removal
 		verbs |= /mob/living/proc/hide
 		verbs |= /mob/living/simple_mob/protean_blob/proc/rig_transform //CHOMP Addition
 		verbs |= /mob/living/proc/usehardsuit //CHOMP Addition
