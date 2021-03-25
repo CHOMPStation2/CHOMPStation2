@@ -52,20 +52,20 @@
 	vore_active = 1
 	vore_pounce_chance = 25
 	vore_icons = SA_ICON_LIVING
-	
+
 	nutrition = 1000 //This actually gets overridden further down on initialize.
 	max_nutrition = 2200
 	var/evo_point = 0
 	var/evo_limit = 0
 	var/next
 	meat_type = /obj/item/toy/figure/bounty_hunter
-	
+
 /mob/living/simple_mob/metroid/Initialize()
 	nutrition = 100		//Have them start off pretty hungry still.
 	existing_metroids += src //Keep track of how many for the event.
 	verbs += /mob/living/proc/ventcrawl //May not do anything at the moment.
 	return ..()
-	
+
 /datum/say_list/metroid
 	speak = list("Skree.", "Eree.", "Errer?")
 	emote_see = list("floats about","looks around", "rubs its talons")
@@ -82,7 +82,9 @@
 
 
 /mob/living/simple_mob/metroid/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.digest_brute = 1
 	B.digest_burn = 1

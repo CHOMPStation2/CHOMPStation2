@@ -17,6 +17,9 @@
 	name = "Abductor Ship"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 
+/area/abductor/interior
+	name = "Abductor Ship Interior"
+
 /area/abductor/exterior
 	name = "Abductor Ship Exterior"
 	has_gravity = 0

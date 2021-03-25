@@ -1,6 +1,25 @@
 /client/var/datum/admin_help/current_ticket	//the current ticket the (usually) not-admin client is dealing with
 
-//
+//CHOMPEdit Begin
+/proc/get_ahelp_channel()
+	var/datum/tgs_api/v5/api = TGS_READ_GLOBAL(tgs)
+	if(istype(api) && config.ahelp_channel_tag)
+		for(var/datum/tgs_chat_channel/channel in api.chat_channels)
+			if(channel.custom_tag == config.ahelp_channel_tag)
+				return list(channel)
+	return 0
+
+/proc/ahelp_discord_message(var/message)
+	if(!message)
+		return
+	if(config.discord_ahelps_disabled)
+		return
+	var/datum/tgs_chat_channel/ahelp_channel = get_ahelp_channel()
+	if(ahelp_channel)
+		world.TgsChatBroadcast(message,ahelp_channel)
+	else
+		world.TgsTargetedChatBroadcast(message,TRUE)
+//CHOMPEdit End
 //TICKET MANAGER
 //
 
@@ -190,9 +209,9 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/list/activemins = adm["present"]
 	var activeMins = activemins.len
 	if(is_bwoink)
-		world.TgsTargetedChatBroadcast("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", TRUE)
+		ahelp_discord_message("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.") //CHOMPEdit
 	else
-		world.TgsTargetedChatBroadcast("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.", TRUE)
+		ahelp_discord_message("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.") //CHOMPEdit
 	//YW EDIT END
 	GLOB.ahelp_tickets.active_tickets += src
 
@@ -203,7 +222,10 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	return ..()
 
 /datum/admin_help/proc/AddInteraction(formatted_message)
-	_interactions += "[gameTimestamp()]: [formatted_message]"
+	var/curinteraction = "[gameTimestamp()]: [formatted_message]"
+	if(config.discord_ahelps_all)	//CHOMPEdit
+		ahelp_discord_message("ADMINHELP: TICKETID:[id] [strip_html_properly(curinteraction)]") //CHOMPEdit
+	_interactions += curinteraction
 
 //private
 /datum/admin_help/proc/FullMonty(ref_src)

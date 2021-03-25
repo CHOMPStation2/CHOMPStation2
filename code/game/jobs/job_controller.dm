@@ -60,8 +60,6 @@ var/global/datum/controller/occupations/job_master
 				return 0
 			if(!job.player_old_enough(player.client))
 				return 0
-			if(!check_whitelist(player)) // Yeah no, no more hardcoded whitelisting. Ree. - Jon. //CHOMPStation code.
-				return 0
 			//VOREStation Add
 			if(!job.player_has_enough_playtime(player.client))
 				return 0
@@ -416,7 +414,7 @@ var/global/datum/controller/occupations/job_master
 
 					// Implants get special treatment
 					if(G.slot == "implant")
-						var/obj/item/weapon/implant/I = G.spawn_item(H)
+						var/obj/item/weapon/implant/I = G.spawn_item(H, H.client.prefs.gear[G.display_name])
 						I.invisibility = 100
 						I.implant_loadout(H)
 						continue
@@ -512,22 +510,23 @@ var/global/datum/controller/occupations/job_master
 					to_chat(H, "<span class='danger'>Failed to locate a storage object on your mob, either you spawned with no arms and no backpack or this is a bug.</span>")
 
 		if(istype(H)) //give humans wheelchairs, if they need them.
-			if(istype(H.loc, /obj/belly)) //unless in a gut
+			if(istype(H.loc, /obj/belly)) //CHOMPedit start unless in a gut
 				var/obj/item/organ/external/l_foot = H.get_organ("l_foot")
 				var/obj/item/organ/external/r_foot = H.get_organ("r_foot")
 				var/obj/item/weapon/storage/S = locate() in H.contents
-				var/obj/item/wheelchair/R = null
+				var/obj/item/wheelchair/R 
 				if(S)
 					R = locate() in S.contents
 				if(!l_foot || !r_foot || R)
-					var/obj/structure/bed/chair/wheelchair/W = new /obj/structure/bed/chair/wheelchair(H.loc)
+					var/wheelchair_type = R?.unfolded_type || /obj/structure/bed/chair/wheelchair
+					var/obj/structure/bed/chair/wheelchair/W = new wheelchair_type(H.loc)
 					W.buckle_mob(H)
 					H.update_canmove()
 					W.set_dir(H.dir)
 					W.add_fingerprint(H)
 					if(R)
 						W.color = R.color
-						qdel(R)
+						qdel(R) //CHOMPedit end
 
 		to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
 
@@ -747,7 +746,7 @@ var/global/datum/controller/occupations/job_master
 			to_chat(C, "Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.")
 			var/spawning = pick(latejoin)
 			.["turf"] = get_turf(spawning)
-			.["msg"] = "will arrive at the station shortly"  //VOREStation Edit - Grammar but mostly 'shuttle' reference removal, and this also applies to notified spawn-character verb use
+			.["msg"] = "will arrive at the station shortly"
 	else if(!fail_deadly)
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)

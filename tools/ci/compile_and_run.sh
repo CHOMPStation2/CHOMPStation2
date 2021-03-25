@@ -33,7 +33,7 @@ fi
 # YW Edit removes "|| exit 1" until we can fix our submaps
 if [ $RUN -eq 1 ];
 then
-  DreamDaemon $BASENAME.dmb -invisible -trusted -core 2>&1 | tee log.txt;
+  DreamDaemon $BASENAME.dmb -close -trusted -invisible -verbose -core 2>&1 | tee log.txt;
   grep "All Unit Tests Passed" log.txt
   grep "Caught 0 Runtimes" log.txt
 fi
