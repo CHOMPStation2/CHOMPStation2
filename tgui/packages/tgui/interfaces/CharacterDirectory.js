@@ -26,7 +26,7 @@ export const CharacterDirectory = (props, context) => {
     personalVisibility,
     personalTag,
     personalErpTag,
-    personalEventTag, //CHOMPEdit
+    personalEventTag,
   } = data;
 
   const [overlay, setOverlay] = useLocalState(context, "overlay", null);
@@ -58,14 +58,12 @@ export const CharacterDirectory = (props, context) => {
                     content={personalErpTag}
                     onClick={() => act("setErpTag")} />
                 </LabeledList.Item>
-                //CHOMPEdit start
                 <LabeledList.Item label="Event Pref">
                   <Button
                     fluid
                     content={personalEventTag}
                     onClick={() => act("setEventTag")} />
                 </LabeledList.Item>
-                //CHOMPEdit end
                 <LabeledList.Item label="Advertisement">
                   <Button
                     fluid
@@ -102,13 +100,11 @@ const ViewCharacter = (props, context) => {
           {overlay.erptag}
         </Box>
       </Section>
-      //CHOMPEdit start
       <Section level={2} title="Event Pref">
         <Box>
           {overlay.eventtag}
         </Box>
       </Section>
-      //CHOMPEdit end
       <Section level={2} title="Character Ad">
         <Box style={{ "word-break": "break-all" }}>
           {overlay.character_ad ? overlay.character_ad.split("\n").map((c, i) => <Box key={i}>{c}</Box>) : "Unset."}
@@ -151,7 +147,7 @@ const CharacterDirectoryList = (props, context) => {
           <SortButton id="name">Name</SortButton>
           <SortButton id="tag">Vore Tag</SortButton>
           <SortButton id="erptag">ERP Tag</SortButton>
-          <SortButton id="eventtag">Event Pref</SortButton> //CHOMPEdit
+          <SortButton id="eventtag">Event Pref</SortButton>
           <Table.Cell collapsing textAlign="right">View</Table.Cell>
         </Table.Row>
         {directory
@@ -164,7 +160,7 @@ const CharacterDirectoryList = (props, context) => {
               <Table.Cell p={1}>{character.name}</Table.Cell>
               <Table.Cell>{character.tag}</Table.Cell>
               <Table.Cell>{character.erptag}</Table.Cell>
-              <Table.Cell>{character.eventtag}</Table.Cell> //CHOMPEdit
+              <Table.Cell>{character.eventtag}</Table.Cell>
               <Table.Cell collapsing textAlign="right">
                 <Button
                   onClick={() => setOverlay(character)}
