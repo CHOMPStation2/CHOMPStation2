@@ -719,6 +719,7 @@
 					/obj/item/clothing/under/dress/maid = 5,
 					/obj/item/clothing/under/dress/maid/sexy = 5,
 					/obj/item/clothing/under/dress/maid/janitor = 5,
+					/obj/item/clothing/under/harness = 5, //CHOMP Edit: Added gear harness,
 					/obj/item/clothing/under/moderncoat = 5,
 					/obj/item/clothing/under/permit = 5,
 					/obj/item/clothing/under/oldwoman = 5,
@@ -1156,7 +1157,6 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -1243,7 +1243,6 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 100,
 					/obj/item/clothing/suit/storage/flannel/red = 100,
 					/obj/item/clothing/suit/unathi/robe = 100,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 100,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 100,
@@ -1446,7 +1445,7 @@
 		/obj/item/seeds/riceseed = 3,
 		/obj/item/seeds/rose = 3,
 		/obj/item/seeds/soyaseed = 3,
-		/obj/item/seeds/spineapple = 3,
+		/obj/item/seeds/pineapple = 3,
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,
@@ -1573,40 +1572,6 @@
 					)
 	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/mysterysoup = 10)
 	vend_delay = 15
-/* For later, then
-/obj/machinery/vending/weapon_machine
-	name = "Frozen Star Guns&Ammo"
-	desc = "A self-defense equipment vending machine. When you need to take care of that clown."
-	product_slogans = "The best defense is good offense!;Buy for your whole family today!;Nobody can outsmart bullet!;God created man - Frozen Star made them EQUAL!;Nobody can outsmart bullet!;Stupidity can be cured! By LEAD.;Dead kids can't bully your children!"
-	product_ads = "Stunning!;Take justice in your own hands!;LEADearship!"
-	icon = 'icons/obj/vending_vr.dmi'
-	icon_state = "weapon"
-	products = list(/obj/item/device/flash = 6,/obj/item/weapon/reagent_containers/spray/pepper = 6, /obj/item/weapon/gun/projectile/olivaw = 5, /obj/item/weapon/gun/projectile/giskard = 5, /obj/item/ammo_magazine/mg/cl32/rubber = 20)
-	contraband = list(/obj/item/weapon/reagent_containers/food/snacks/syndicake = 6)
-	prices = list(/obj/item/device/flash = 600,/obj/item/weapon/reagent_containers/spray/pepper = 800,  /obj/item/weapon/gun/projectile/olivaw = 1600, /obj/item/weapon/gun/projectile/giskard = 1200, /obj/item/ammo_magazine/mg/cl32/rubber = 200)
-*/
-
-/obj/machinery/vending/fitness/New()
-	products += list(/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 8)
-	prices += list(/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 5)
-	..()
-
-/obj/machinery/vending/blood
-	name = "Blood-Onator"
-	desc = "Freezer-vendor for storage and quick dispensing of blood packs"
-	product_ads = "The true life juice!;Vampire's choice!;Home-grown blood only!;Donate today, be saved tomorrow!;Approved by Zeng-Hu Pharmaceuticals Incorporated!; Curse you, Vey-Med artificial blood!"
-	icon = 'icons/obj/vending_vr.dmi'
-	icon_state = "blood"
-	vend_delay = 7
-	idle_power_usage = 211
-	req_access = list(access_medical)
-	products = list(/obj/item/weapon/reagent_containers/blood/prelabeled/APlus = 3,/obj/item/weapon/reagent_containers/blood/prelabeled/AMinus = 3,
-					/obj/item/weapon/reagent_containers/blood/prelabeled/BPlus = 3,/obj/item/weapon/reagent_containers/blood/prelabeled/BMinus = 3,
-					/obj/item/weapon/reagent_containers/blood/prelabeled/OPlus = 2,/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus = 5,
-					/obj/item/weapon/reagent_containers/blood/empty = 5)
-	contraband = list(/obj/item/weapon/reagent_containers/glass/bottle/stoxin = 2)
-	req_log_access = access_cmo
-	has_logs = 1
 
 /obj/machinery/vending/abductor
 	name = "Abduct-U"
@@ -1616,14 +1581,19 @@
 	products = list(/obj/item/weapon/card/id/syndicate/station_access = 1,
 					/obj/item/weapon/storage/box/syndie_kit/chameleon = 1,
 					/obj/item/clothing/mask/bandana = 1,
+					/obj/item/clothing/glasses/sunglasses = 1,
 					/obj/item/device/radio/headset/syndicate/alt = 1,
 					/obj/item/device/pda = 1,
 					/obj/item/device/communicator = 1,
 					/obj/item/weapon/tape_roll = 2,
 					/obj/item/weapon/handcuffs = 4,
+					/obj/item/weapon/handcuffs/legcuffs = 4,
 					/obj/item/weapon/cell/device/weapon/recharge/alien = 2,
 					/obj/item/device/chameleon = 1,
-					/obj/item/weapon/storage/mre/menu11 = 2
+					/obj/item/weapon/storage/mre/menu11 = 2,
+					/obj/item/device/flash = 2,
+					/obj/item/weapon/pen/reagent/paralysis = 4,
+					/obj/item/device/perfect_tele/alien = 1
 					)
 	vend_delay = 15
 
@@ -2075,6 +2045,7 @@
 					/obj/item/clothing/under/dress/maid = 5,
 					/obj/item/clothing/under/dress/maid/sexy = 5,
 					/obj/item/clothing/under/dress/maid/janitor = 5,
+					/obj/item/clothing/under/harness = 5, //CHOMP Edit: Added gear harness,
 					/obj/item/clothing/under/moderncoat = 5,
 					/obj/item/clothing/under/permit = 5,
 					/obj/item/clothing/under/oldwoman = 5,
@@ -2512,7 +2483,6 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -2599,7 +2569,6 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 100,
 					/obj/item/clothing/suit/storage/flannel/red = 100,
 					/obj/item/clothing/suit/unathi/robe = 100,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 100,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 100,
@@ -3139,6 +3108,7 @@
 					/obj/item/clothing/under/dress/maid = 5,
 					/obj/item/clothing/under/dress/maid/sexy = 5,
 					/obj/item/clothing/under/dress/maid/janitor = 5,
+					/obj/item/clothing/under/harness = 5, //CHOMP Edit: Added gear harness,
 					/obj/item/clothing/under/moderncoat = 5,
 					/obj/item/clothing/under/permit = 5,
 					/obj/item/clothing/under/oldwoman = 5,
@@ -3257,20 +3227,20 @@
 					/obj/item/clothing/under/rank/trek/command/voy = 5,
 					/obj/item/clothing/under/rank/trek/command/ent = 5,
 					/obj/item/clothing/under/rank/trek/eng = 5,
+					/obj/item/clothing/under/rank/trek/sec = 5,
 					/obj/item/clothing/under/rank/trek/eng/next = 5,
+					/obj/item/clothing/under/rank/trek/sec/next = 5,
 					/obj/item/clothing/under/rank/trek/eng/ds9 = 5,
+					/obj/item/clothing/under/rank/trek/sec/ds9 = 5,
 					/obj/item/clothing/under/rank/trek/eng/voy = 5,
+					/obj/item/clothing/under/rank/trek/sec/voy = 5,
 					/obj/item/clothing/under/rank/trek/eng/ent = 5,
+					/obj/item/clothing/under/rank/trek/sec/ent = 5,
 					/obj/item/clothing/under/rank/trek/medsci = 5,
 					/obj/item/clothing/under/rank/trek/medsci/next = 5,
 					/obj/item/clothing/under/rank/trek/medsci/ds9 = 5,
 					/obj/item/clothing/under/rank/trek/medsci/voy = 5,
 					/obj/item/clothing/under/rank/trek/medsci/ent = 5,
-					/obj/item/clothing/under/rank/trek/sec = 5,
-					/obj/item/clothing/under/rank/trek/sec/next = 5,
-					/obj/item/clothing/under/rank/trek/sec/ds9 = 5,
-					/obj/item/clothing/under/rank/trek/sec/voy = 5,
-					/obj/item/clothing/under/rank/trek/sec/ent = 5,
 					/obj/item/clothing/under/rank/khi/cmd = 5,
 					/obj/item/clothing/under/rank/khi/eng = 5,
 					/obj/item/clothing/under/rank/khi/med = 5,
@@ -3501,7 +3471,6 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -3940,7 +3909,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/slice/mushroompizza = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/orangecake = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/peanutcake = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/slice/pineapple = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/pineappleslice = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/plaincake = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/pumpkinpie = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/tofubread = 10,
@@ -4404,7 +4373,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/slice/mushroompizza = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/orangecake = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/peanutcake = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/slice/pineapple = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/pineappleslice = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/plaincake = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/pumpkinpie = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/slice/tofubread = 10,
@@ -4576,7 +4545,7 @@
 		/obj/item/seeds/riceseed = 3,
 		/obj/item/seeds/rose = 3,
 		/obj/item/seeds/soyaseed = 3,
-		/obj/item/seeds/spineapple = 3,
+		/obj/item/seeds/pineapple = 3,
 		/obj/item/seeds/sugarcaneseed = 3,
 		/obj/item/seeds/sunflowerseed = 3,
 		/obj/item/seeds/shandseed = 2,

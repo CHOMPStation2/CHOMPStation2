@@ -9,17 +9,25 @@
 	if(M.mind)
 		dat += "<b>Current Antag?:</b> [(M.mind.special_role)?"Yes":"No"]<br>"
 	dat += "<br><b>Note:</b> This is arranged from earliest to latest. <br><br>"
-
-
-	if(!isemptylist(M.attack_log))
-		dat += "<fieldset style='border: 2px solid white; display: inline'>"
-		for(var/l in M.attack_log)
-			dat += "[l]<br>"
-
-		dat += "</fieldset>"
-
+	//CHOMPEdit Begin
+	/*for(var/d in M.dialogue_log)
+		dat += "[d]<br>"*/
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT id,time,ckey,mob,message from erro_attacklog WHERE ckey = :t_ckey", list("t_ckey" = M.ckey))
+	if(!query.Execute())
+		dat += "<i>Database query error</i>"
 	else
-		dat += "<i>No attack logs found for [M].</i>"
+		var/messages = ""
+		while(query.NextRow())
+			messages += "([query.item[2]]) (ckey:[query.item[3]] real_name:[query.item[4]]) [query.item[5]]<br>"
+
+		if(messages=="")
+			dat+="<i>Query returned nothing.</i>"
+		else
+			dat += "<fieldset style='border: 2px solid white; display: inline'>"
+			dat += messages
+			dat += "</fieldset>"
+	qdel(query)
+	//CHOMPEdit End
 
 	var/datum/browser/popup = new(usr, "admin_attack_log", "[src]", 650, 650, src)
 	popup.set_content(jointext(dat,null))
@@ -41,15 +49,26 @@
 		dat += "<b>Current Antag?:</b> [(M.mind.special_role)?"Yes":"No"]<br>"
 	dat += "<br><b>Note:</b> This is arranged from earliest to latest. <br><br>"
 
-	if(!isemptylist(M.dialogue_log))
-		dat += "<fieldset style='border: 2px solid white; display: inline'>"
-
-		for(var/d in M.dialogue_log)
-			dat += "[d]<br>"
-
-		dat += "</fieldset>"
+	
+	//CHOMPEdit Begin
+	/*for(var/d in M.dialogue_log)
+		dat += "[d]<br>"*/
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT mid,time,ckey,mob,type,message from erro_dialog WHERE ckey = :t_ckey", list("t_ckey" = M.ckey))
+	if(!query.Execute())
+		dat += "<i>Database query error</i>"
 	else
-		dat += "<i>No dialogue logs found for [M].</i>"
+		var/messages = ""
+		while(query.NextRow())
+			messages += "([query.item[2]]) (ckey:[query.item[3]] real_name:[query.item[4]] type:[query.item[5]]) [query.item[6]]<br>"
+
+		if(messages=="")
+			dat+="<i>Query returned nothing.</i>"
+		else
+			dat += "<fieldset style='border: 2px solid white; display: inline'>"
+			dat += messages
+			dat += "</fieldset>"
+	qdel(query)
+	//CHOMPEdit End
 	var/datum/browser/popup = new(usr, "admin_dialogue_log", "[src]", 650, 650, src)
 	popup.set_content(jointext(dat,null))
 	popup.open()
@@ -58,8 +77,3 @@
 
 
 	feedback_add_details("admin_verb","PDL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
-
-// Used to get `atom/O as obj|mob|turf in view()` to match against strings containing apostrophes immediately after substrings that match to other objects. Somehow. - Ater
-/proc/admin_atom_validate(atom/A)
-	return view()

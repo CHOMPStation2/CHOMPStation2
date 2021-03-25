@@ -62,6 +62,18 @@
 			pass = FALSE
 			to_chat(src,"<span class='warning'>Your custom species is not playable. Reconfigure your traits on the VORE tab.</span>")
 
+	//CHOMP Addition Begin
+	if(client?.prefs?.neu_traits)
+		for(var/T in client.prefs.neu_traits)
+			var/datum/trait/instance = all_traits[T]
+			if(client.prefs.species in instance.banned_species)
+				pass = FALSE
+				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.</span>")
+			else if(LAZYLEN(instance.allowed_species) && !(client.prefs.species in instance.allowed_species)) //We use else if here, so as to prevent getting two errors for one trait.
+				pass = FALSE
+				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.</span>")
+	//CHOMP Addition End
+
 	//Final popup notice
 	if (!pass)
 		spawn()

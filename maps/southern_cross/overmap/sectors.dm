@@ -42,8 +42,7 @@
 	start_x =  10
 	start_y =  10
 	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
-	map_z = list(Z_LEVEL_STATION_ONE, Z_LEVEL_STATION_TWO, Z_LEVEL_STATION_THREE)
-	extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC) // Hopefully temporary, so arrivals announcements work. //CHOMPedit: adds Z_LEVEL_MISC to connect the exploration carrier with the station
+	extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC,Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
 	initial_generic_waypoints = list(
 		"d1_aux_a",
 		"d1_aux_b",
@@ -66,9 +65,11 @@
 		"d2_near_sw",
 		"d3_near_w",
 		"d3_near_se",
-		"stargazer_dock"
+		"baby_mammoth_dock"
 		)
 
-/obj/effect/overmap/visitable/planet/Sif/Initialize()
-	. = ..()
-	docking_codes = null
+/obj/effect/overmap/visitable/sector/Southern_Cross/get_space_zlevels() //These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
+	return list(Z_LEVEL_STATION_ONE,
+			Z_LEVEL_STATION_TWO,
+			Z_LEVEL_STATION_THREE,
+			Z_LEVEL_MISC)

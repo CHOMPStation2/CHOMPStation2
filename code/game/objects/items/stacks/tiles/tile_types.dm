@@ -25,8 +25,8 @@
 	var/perunit = SHEET_MATERIAL_AMOUNT
 	var/apply_colour							//CHOMPEDIT: End
 
-/obj/item/stack/tile/New()
-	..()
+/obj/item/stack/tile/Initialize()
+	. = ..()
 	randpixel_xy()
 
 /*
@@ -51,6 +51,16 @@
 	name = "sivian grass tile"
 	singular_name = "sivian grass floor tile"
 	desc = "A patch of grass like those that decorate the plains of Sif."
+
+/obj/item/stack/tile/grass/sif/forest
+	name = "sivian overgrowth tile"
+	singular_name = "sivian overgrowth floor tile"
+	desc = "A patch of dark overgrowth like those that decorate the plains of Sif."
+	
+/obj/item/stack/tile/grass/sif/forest
+	name = "sivian overgrowth tile"
+	singular_name = "sivian overgrowth floor tile"
+	desc = "A patch of dark overgrowth like those that decorate the plains of Sif."
 
 /*
  * Wood

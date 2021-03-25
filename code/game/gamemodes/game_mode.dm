@@ -292,7 +292,6 @@ var/global/list/additional_antag_types = list()
 			antag.check_victory()
 			antag.print_player_summary()
 		sleep(10)
-		print_ownerless_uplinks()
 
 	var/clients = 0
 	var/surviving_humans = 0
@@ -303,10 +302,16 @@ var/global/list/additional_antag_types = list()
 	var/escaped_on_pod_1 = 0
 	var/escaped_on_pod_2 = 0
 	var/escaped_on_pod_3 = 0
+	var/escaped_on_pod_4 = 0 //CHOMP Add
 	var/escaped_on_pod_5 = 0
+	var/escaped_on_pod_6 = 0 //CHOMP Add
 	var/escaped_on_shuttle = 0
+	var/escaped_on_pod_large_1 = 0 //CHOMP Add
+	var/escaped_on_pod_large_2 = 0 //CHOMP Add
+	var/escaped_on_cryopod = 0 //CHOMP Add
 
-	var/list/area/escape_locations = list(/area/shuttle/escape, /area/shuttle/escape_pod1/centcom, /area/shuttle/escape_pod2/centcom, /area/shuttle/escape_pod3/centcom, /area/shuttle/escape_pod5/centcom) //VOREStation Edit
+	var/list/area/escape_locations = list(/area/shuttle/escape/centcom, /area/shuttle/cryo/centcom, /area/shuttle/escape_pod1/centcom, /area/shuttle/escape_pod2/centcom, /area/shuttle/escape_pod3/centcom, /area/shuttle/escape_pod5/centcom, /area/shuttle/escape_pod6/centcom, /area/shuttle/large_escape_pod1/centcom
+, /area/shuttle/large_escape_pod2/centcom) //CHOMP Edit: Appended /centcom to the escape shuttle again to fix transfer message. Added some escape pods to the list.
 
 	for(var/mob/M in player_list)
 		if(M.client)
@@ -330,8 +335,20 @@ var/global/list/additional_antag_types = list()
 					escaped_on_pod_2++
 				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod3/centcom)
 					escaped_on_pod_3++
+				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod4/centcom) //CHOMP Add
+					escaped_on_pod_4++
 				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod5/centcom)
 					escaped_on_pod_5++
+				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod6/centcom) //CHOMP Add
+					escaped_on_pod_6++
+				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/large_escape_pod1/centcom) //CHOMP Add
+					escaped_on_pod_large_1++
+				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/large_escape_pod2/centcom) //CHOMP Add
+					escaped_on_pod_large_2++
+				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/cryo/centcom) //CHOMP Add
+					escaped_on_cryopod++
+				
+
 
 			if(isobserver(M))
 				ghosts++
@@ -364,8 +381,18 @@ var/global/list/additional_antag_types = list()
 		feedback_set("escaped_on_pod_2",escaped_on_pod_2)
 	if(escaped_on_pod_3 > 0)
 		feedback_set("escaped_on_pod_3",escaped_on_pod_3)
+	if(escaped_on_pod_4 > 0) //CHOMP Add
+		feedback_set("escaped_on_pod_4",escaped_on_pod_4)
 	if(escaped_on_pod_5 > 0)
 		feedback_set("escaped_on_pod_5",escaped_on_pod_5)
+	if(escaped_on_pod_6 > 0) //CHOMP Add
+		feedback_set("escaped_on_pod_6",escaped_on_pod_6)
+	if(escaped_on_pod_large_1 > 0) //CHOMP Add
+		feedback_set("escaped_on_pod_large_1",escaped_on_pod_large_1)
+	if(escaped_on_pod_large_2 > 0) //CHOMP Add
+		feedback_set("escaped_on_pod_large_2",escaped_on_pod_large_2)
+	if(escaped_on_cryopod > 0) //CHOMP Add
+		feedback_set("escaped_on_cryopod",escaped_on_cryopod)
 
 	send2mainirc("A round of [src.name] has ended - [surviving_total] survivors, [ghosts] ghosts.")
 

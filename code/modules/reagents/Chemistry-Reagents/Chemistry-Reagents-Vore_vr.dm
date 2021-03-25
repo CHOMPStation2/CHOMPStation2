@@ -13,8 +13,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(M.size_multiplier < RESIZE_HUGE)
-		M.resize(M.size_multiplier+0.01)//Incrrease 1% per tick.
+	if(M.size_range_check(M.size_multiplier))
+		M.resize(M.size_multiplier+0.01, FALSE)//Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 /datum/reagent/microcillin
@@ -27,8 +27,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(M.size_multiplier > RESIZE_TINY)
-		M.resize(M.size_multiplier-0.01) //Decrease 1% per tick.
+	if(M.size_range_check(M.size_multiplier))
+		M.resize(M.size_multiplier-0.01, FALSE) //Decrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 
@@ -43,9 +43,9 @@
 
 /datum/reagent/normalcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.size_multiplier > RESIZE_NORMAL)
-		M.resize(M.size_multiplier-0.01) //Decrease by 1% size per tick.
+		M.resize(M.size_multiplier-0.01, FALSE) //Decrease by 1% size per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	else if(M.size_multiplier < RESIZE_NORMAL)
-		M.resize(M.size_multiplier+0.01) //Increase 1% per tick.
+		M.resize(M.size_multiplier+0.01, FALSE) //Increase 1% per tick.  //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 

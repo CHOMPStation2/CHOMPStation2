@@ -419,6 +419,7 @@
 	desc = "A \"Space Life\" brand... wait, what the hell is this thing?"
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "nuketoy"
+	w_class = ITEMSIZE_SMALL //chompstation add because WHY ARE THEY SO BIG
 	var/cooldown = 0
 	var/toysay = "What the fuck did you do?"
 	drop_sound = 'sound/items/drop/accessory.ogg'

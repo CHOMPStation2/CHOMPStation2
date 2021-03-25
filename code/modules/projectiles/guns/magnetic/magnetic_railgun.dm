@@ -15,10 +15,10 @@
 	load_type = /obj/item/weapon/rcd_ammo
 	projectile_type = /obj/item/projectile/bullet/magnetic/slug
 
-	cell = /obj/item/weapon/cell/hyper
+	cell = /obj/item/weapon/cell/device/weapon //CHOMP Edit.
 	capacitor = /obj/item/weapon/stock_parts/capacitor/adv
 	loaded = /obj/item/weapon/rcd_ammo/large
-	removable_components = FALSE
+	removable_components = TRUE //CHOMP Edit.
 
 	var/slowdown_held = 2
 	var/slowdown_worn = 1
@@ -83,11 +83,13 @@
 	icon_state = "flechette_gun"
 	item_state = "z8carbine"
 
-	cell = /obj/item/weapon/cell/hyper
+	cell = /obj/item/weapon/cell/device/weapon //CHOMP Edit.
 	capacitor = /obj/item/weapon/stock_parts/capacitor/adv
+	removable_components = TRUE //CHOMP Edit.
 
 	fire_delay = 0
 
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	slot_flags = SLOT_BACK
 
 	slowdown = 0
@@ -98,6 +100,7 @@
 	load_type = /obj/item/weapon/magnetic_ammo
 	projectile_type = /obj/item/projectile/bullet/magnetic/flechette
 	loaded = /obj/item/weapon/magnetic_ammo
+	removable_components = TRUE //CHOMP Edit.
 	empty_sound = 'sound/weapons/smg_empty_alarm.ogg'
 
 	firemodes = list(
@@ -114,8 +117,9 @@
 	item_state = "combatrevolver"
 	w_class = ITEMSIZE_SMALL
 
-	cell = /obj/item/weapon/cell/super
+	cell = /obj/item/weapon/cell/device/weapon //CHOMP Edit.
 	capacitor = /obj/item/weapon/stock_parts/capacitor
+	removable_components = TRUE //CHOMPstation Edit
 
 	fire_delay = 0
 
@@ -129,7 +133,6 @@
 	load_type = /obj/item/weapon/magnetic_ammo/pistol
 	projectile_type = /obj/item/projectile/bullet/magnetic/flechette/small
 	loaded = /obj/item/weapon/magnetic_ammo/pistol
-	removable_components = TRUE
 	empty_sound = 'sound/weapons/smg_empty_alarm.ogg'
 
 	firemodes = list(
@@ -145,14 +148,14 @@
 	icon_state = "railgun_sec"
 	item_state = "cshotgun"
 
-	removable_components = TRUE
-
 	cell = /obj/item/weapon/cell/device/weapon
 	capacitor = /obj/item/weapon/stock_parts/capacitor
+	removable_components = TRUE //CHOMPstation Edit
 
 	fire_delay = 8
 
 	slot_flags = SLOT_BACK
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
 	slowdown = 0
 	slowdown_held = 0.3
@@ -182,6 +185,7 @@
 
 	cell = /obj/item/weapon/cell/device/weapon
 	capacitor = /obj/item/weapon/stock_parts/capacitor
+	removable_components = TRUE //CHOMPstation Edit
 
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 
@@ -209,10 +213,11 @@
 	icon_state = "railgun_sifguard"
 	item_state = "z8carbine"
 
-	cell = /obj/item/weapon/cell/high
+	cell = /obj/item/weapon/cell/device/weapon //CHOMP Edit.
 	capacitor = /obj/item/weapon/stock_parts/capacitor/adv
+	removable_components = TRUE //CHOMPstation Edit.
 
-	slot_flags = SLOT_BACK
+	slot_flags = SLOT_BELT|SLOT_BACK //CHOMPstation Edit. This is a carbine.
 
 	slowdown_held = 0.3
 

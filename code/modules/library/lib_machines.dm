@@ -31,6 +31,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 	var/category = "Any"
 	var/author
 	var/SQLquery
+	var/list/SQLargs //CHOMPEdit TGSQL
 
 /obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
@@ -44,7 +45,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 			<A href='?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
 			establish_old_db_connection()
-			if(!dbcon_old.IsConnected())
+			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font><BR>"
 			else if(!SQLquery)
 				dat += "<font color=red><b>ERROR</b>: Malformed search request. Please contact your system administrator for assistance.</font><BR>"
@@ -52,7 +53,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 				dat += {"<table>
 				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
 
-				var/DBQuery/query = dbcon_old.NewQuery(SQLquery)
+				var/DBQuery/query = SSdbcore.NewQuery(SQLquery, SQLargs) //CHOMPEdit TGSQL
 				query.Execute()
 
 				while(query.NextRow())
@@ -61,6 +62,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 					var/category = query.item[3]
 					var/id = query.item[4]
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td>[id]</td></tr>"
+				qdel(query)
 				dat += "</table><BR>"
 			dat += "<A href='?src=\ref[src];back=1'>\[Go Back\]</A><BR>"
 	user << browse(dat, "window=publiclibrary")
@@ -95,10 +97,16 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 		author = sanitizeSQL(author)
 	if(href_list["search"])
 		SQLquery = "SELECT author, title, category, id FROM library WHERE "
+		SQLargs = list() //CHOMPEdit begin
 		if(category == "Any")
-			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%'"
+			SQLquery += "author LIKE '%:t_author%' AND title LIKE '%:t_title%'"
+			SQLargs["t_author"] = author
+			SQLargs["t_title"] = title
 		else
-			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%' AND category='[category]'"
+			SQLquery += "author LIKE CONCAT('%',:t_author,'%') AND title LIKE CONCAT('%',:t_title,'%') AND category=:t_category"
+			SQLargs["t_author"] = author
+			SQLargs["t_title"] = title
+			SQLargs["t_category"] = category //CHOMPEdit End
 		screenstate = 1
 
 	if(href_list["back"])
@@ -139,7 +147,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 	var/static/list/base_genre_books
 
 /obj/machinery/librarycomp/Initialize()
-	..()
+	. = ..()
 
 	if(!base_genre_books || !base_genre_books.len)
 		base_genre_books = list(
@@ -277,13 +285,13 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 
 			//dat += "<h3><font color=red>Warning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.</font></h3>" //VOREStation Removal
 
-			if(!dbcon_old.IsConnected())
+			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 			else
 				dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 				<table>
 				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-				var/DBQuery/query = dbcon_old.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
+				var/DBQuery/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
 				query.Execute()
 
 				while(query.NextRow())
@@ -292,6 +300,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 					var/title = query.item[3]
 					var/category = query.item[4]
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
+				qdel(query) //CHOMPEdit TGSQL
 				dat += "</table>"
 			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
@@ -402,7 +411,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 						alert("This book has been rejected from the database. Aborting!")
 					else
 						establish_old_db_connection()
-						if(!dbcon_old.IsConnected())
+						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 							alert("Connection to Archive has been severed. Aborting.")
 						else
 							/*
@@ -411,22 +420,24 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 							var/sqlcontent = dbcon.Quote(scanner.cache.dat)
 							var/sqlcategory = dbcon.Quote(upload_category)
 							*/
-							var/sqltitle = sanitizeSQL(scanner.cache.name)
+							var/list/sql_args = list("t_title" = scanner.cache.name, "t_author" = scanner.cache.author, "t_content" = scanner.cache.dat, "t_category" = upload_category) //CHOMPEdit TGSQL
+							/*var/sqltitle = sanitizeSQL(scanner.cache.name) CHOMPEdit TGSQL
 							var/sqlauthor = sanitizeSQL(scanner.cache.author)
 							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
-							var/sqlcategory = sanitizeSQL(upload_category)
-							var/DBQuery/query = dbcon_old.NewQuery("INSERT INTO library (author, title, content, category) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]')")
+							var/sqlcategory = sanitizeSQL(upload_category)*/
+							var/DBQuery/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES (:t_author, :t_title, :t_content, :t_category)", sql_args) //CHOMPEdit TGSQL
 							if(!query.Execute())
 								to_chat(usr,query.ErrorMsg())
 							else
 								log_game("[usr.name]/[usr.key] has uploaded the book titled [scanner.cache.name], [length(scanner.cache.dat)] signs")
 								alert("Upload Complete.")
+							qdel(query) //CHOMPEdit TGSQL
 	//VOREStation Edit End
 
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
 		establish_old_db_connection()
-		if(!dbcon_old.IsConnected())
+		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			alert("Connection to Archive has been severed. Aborting.")
 		if(bibledelay)
 			for (var/mob/V in hearers(src))
@@ -435,7 +446,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 			bibledelay = 1
 			spawn(6)
 				bibledelay = 0
-			var/DBQuery/query = dbcon_old.NewQuery("SELECT * FROM library WHERE id=[sqlid]")
+			var/DBQuery/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]") //CHOMPEdit TGSQL
 			query.Execute()
 
 			while(query.NextRow())
@@ -451,6 +462,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 				B.item_state = B.icon_state
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
+			qdel(query) //CHOMPEdit TGSQL
 	if(href_list["orderbyid"])
 		var/orderid = input("Enter your order:") as num|null
 		if(orderid)

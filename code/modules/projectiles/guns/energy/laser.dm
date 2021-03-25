@@ -103,12 +103,12 @@
 	unlikely.\
 	<br><br>\
 	An interesting note about this weapon, when compared to contemporary energy weapons, is \
-	that this gun appears to be inferior to modern laser weapons. The beam fired has less \
-	of an ability to harm, and the power consumption appears to be higher than average for \
-	a human-made energy side-arm. One possible explaination is that the creators of this \
+	that this gun appears to be only slightly superior to modern laser weapons. The beam fired has \
+	roughly the same ability to harm, yet the power consumption is higher than average \
+	for a human-made energy side-arm. One possible explaination is that the creators of this \
 	weapon, in their later years, had less of a need to optimize their capability for war, \
-	and instead focused on other endeavors. Another explaination is that vast age of the weapon \
-	may have caused it to degrade, yet still remain functional at a reduced capability."
+	and instead focused on other endeavors. Another explanation is that the vast age of the weapon \
+	may have caused it to degrade, yet still remain functional at a reduced capability." //CHOMPedit changed description to be accurate with new projectile
 	value = CATALOGUER_REWARD_MEDIUM
 
 /obj/item/weapon/gun/energy/alien
@@ -117,13 +117,14 @@
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
-	fire_delay = 10 // Handguns should be inferior to two-handed weapons. Even alien ones I suppose.
-	charge_cost = 480 // Five shots.
+	fire_delay = 9 //CHOMPedit changed cooldown from 10 to 9.
+	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
 
-	projectile_type = /obj/item/projectile/beam/cyan
+	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
 	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien // Self charges.
 	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
 	modifystate = "alienpistol"
+	battery_lock = 1 //CHOMPedit adds battery lock.
 
 
 /obj/item/weapon/gun/energy/captain
@@ -159,7 +160,7 @@
 	w_class = ITEMSIZE_HUGE //CHOMP Edit. Lol a cannon used to be just large size? Are you kidding me? A CANNON.
 	one_handed_penalty = 90 // The thing's heavy and huge.
 	accuracy = 45
-	charge_cost = 600
+	charge_cost = 400 //CHOMP Edit. Let's give this thing some more shots, seeing as it needs to be recharged at a charger.
 
 /obj/item/weapon/gun/energy/lasercannon/mounted
 	name = "mounted laser cannon"
@@ -196,14 +197,16 @@
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
 	action_button_name = "Use Scope"
-	battery_lock = 1
-	charge_cost = 600
-	fire_delay = 35
+	//Begin CHOMPstation Edit for making this thing not trash
+	//battery_lock = 0
+	charge_cost = 360 
+	fire_delay = 40
 	force = 10
 	w_class = ITEMSIZE_HUGE // So it can't fit in a backpack.
-	accuracy = -45 //shooting at the hip
-	scoped_accuracy = 50
+	accuracy = -30 //shooting at the hip
+	scoped_accuracy = 100
 	one_handed_penalty = 60 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
+	//End CHOMP Edit.
 
 /obj/item/weapon/gun/energy/sniperrifle/ui_action_click()
 	scope()
@@ -303,3 +306,4 @@
 
 	projectile_type = /obj/item/projectile/scatter/laser
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
+	slot_flags = SLOT_BELT|SLOT_BACK //CHOMP Edit because you can still holster it despite it not fitting in a backpack.

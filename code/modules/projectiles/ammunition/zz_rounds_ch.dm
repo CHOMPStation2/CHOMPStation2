@@ -36,6 +36,16 @@
 	desc = "A rubber 5.7x28mm round"
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber
 
+/obj/item/ammo_casing/a762x25
+	desc = "A standard 7.62x25mm Tokarev round"
+	caliber = "7.62x25mm"
+	projectile_type = /obj/item/projectile/bullet/a762x25
+
+/obj/item/ammo_casing/a9x18
+	desc = "A standard 9x18mm Makarov round"
+	caliber = "9x18mm"
+	projectile_type = /obj/item/projectile/bullet/a9x18
+
 /obj/item/ammo_casing/a762x54
 	desc = "A standard 7.62x54mmR round"
 	caliber = "7.62x54mmR"
@@ -45,6 +55,24 @@
 /obj/item/ammo_casing/a762x54/ap
 	desc = "An armor piercing 7.62x54mmR round"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762x54/ap
+
+/obj/item/ammo_casing/a338
+	desc = "A standard .338 Lapua round"
+	caliber = ".338"
+	projectile_type = /obj/item/projectile/bullet/rifle/a338
+
+/obj/item/ammo_casing/a338/ap
+	desc = "An armor piercing .338 Lapua round"
+	projectile_type = /obj/item/projectile/bullet/rifle/a338/ap
+
+/obj/item/ammo_casing/a50bmg
+	desc = "A standard .50 BMG round"
+	caliber = ".50 BMG"
+	projectile_type = /obj/item/projectile/bullet/rifle/a50bmg
+
+/obj/item/ammo_casing/a50bmg/ap
+	desc = "An armor piercing .50 BMG round"
+	projectile_type = /obj/item/projectile/bullet/rifle/a50bmg/ap
 
 /obj/item/ammo_casing/a9x39
 	desc = "A standard 9x39mm round"

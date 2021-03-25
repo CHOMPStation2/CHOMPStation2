@@ -18,7 +18,7 @@
 	cost = -3
 	var_changes = list("blood_volume" = 375)
 	excludes = list(/datum/trait/less_blood_extreme,/datum/trait/more_blood,/datum/trait/more_blood_extreme)
-	not_for_synths = TRUE
+	can_take = ORGANICS
 
 /datum/trait/less_blood_extreme
 	name = "Extremely low blood volume"
@@ -26,7 +26,7 @@
 	cost = -5
 	var_changes = list("blood_volume" = 224)
 	excludes = list(/datum/trait/less_blood,/datum/trait/more_blood,/datum/trait/more_blood_extreme)
-	not_for_synths = TRUE
+	can_take = ORGANICS
 
 /datum/trait/scrawny
 	name = "Scrawny"
@@ -42,33 +42,33 @@
 
 /datum/trait/deep_sleeper
 	name = "Deep Sleeper"
-	desc = "When you fall asleep, it takes you twice as long to wake up."
+	desc = "When you fall asleep, it takes you four times as long to wake up."
 	cost = -1
-	var_changes = list("waking_speed" = 0.5)
+	var_changes = list("waking_speed" = 0.25)
 
 /datum/trait/low_blood_sugar
 	name = "Low blood sugar"
 	desc = "If you let your nutrition get too low, you will start to experience adverse affects including hallucinations, unconsciousness, and weakness"
-	cost = -2
+	cost = -1
 	special_env = TRUE
 
 /datum/trait/low_blood_sugar/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.nutrition > 200)	//Sanity check because stupid bugs >:v
 		return
 	if((H.nutrition < 200) && prob(5))
-		if(H.nutrition > 150)
+		if(H.nutrition > 100)
 			to_chat(H,"<span class='warning'>You start to feel noticeably weak as your stomach rumbles, begging for more food. Maybe you should eat something to keep your blood sugar up</span>")
-		else if(H.nutrition > 100)
-			to_chat(H,"<span class='warning'>You begin to feel rather weak, and your stomach rumbles loudly. You feel lightheaded and it's getting harder to think. You really need to eat something.</span>")
 		else if(H.nutrition > 50)
+			to_chat(H,"<span class='warning'>You begin to feel rather weak, and your stomach rumbles loudly. You feel lightheaded and it's getting harder to think. You really need to eat something.</span>")
+		else if(H.nutrition > 25)
 			to_chat(H,"<span class='danger'>You're feeling very weak and lightheaded, and your stomach continously rumbles at you. You really need to eat something!</span>")
 		else
 			to_chat(H,"<span class='critical'>You're feeling extremely weak and lightheaded. You feel as though you might pass out any moment and your stomach is screaming for food by now! You should really find something to eat!</span>")
-	if((H.nutrition < 150) && prob(15))
-		H.Confuse(20)
-	if((H.nutrition < 100) && prob(30))
-		H.hallucination = max(50,H.hallucination+10)
-	if((H.nutrition < 50) && prob(10))
+	if((H.nutrition < 100) && prob(10))
+		H.Confuse(10)
+	if((H.nutrition < 50) && prob(25))
+		H.hallucination = max(30,H.hallucination+8)
+	if((H.nutrition < 25) && prob(5))
 		H.drowsyness = max(100,H.drowsyness+30)
 
 /datum/trait/blindness
@@ -85,7 +85,7 @@
 	desc = "You have a condition which causes you to spontaneously have hallucinations! Luckily for you, in the modern space age, our doctors have solutions for you, just make sure you don't forget to take your pills."
 	cost = -3
 	special_env = TRUE
-	not_for_synths = TRUE
+	can_take = ORGANICS
 	var/hallucination_max = 60
 	var/hallucination_increase = 3
 	var/episode_length_nomeds_avg = 4000
@@ -228,11 +228,11 @@
 
 /datum/trait/agoraphobia/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M,var/invis_matters = TRUE)
 	var/list/in_range = list()
+	if(!istype(M))
+		return in_range
 	var/social_check = !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
 	var/ckey_check = !M.ckey
 	var/overall_checks = M == H || M.stat == DEAD || social_check || ckey_check 
-	if(!istype(M))
-		return in_range
 	if(invis_matters && M.invisibility > H.see_invisible)
 		return in_range
 	if(!overall_checks)
@@ -286,6 +286,8 @@
 		H.next_loneliness_time = world.time+500
 
 /datum/trait/lonely/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M)
+	if(!istype(M))
+		return 0
 	var/social_check = only_people && !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
 	var/self_invisible_check = M == H || M.invisibility > H.see_invisible
 	var/ckey_check = only_people && !M.ckey

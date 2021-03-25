@@ -198,7 +198,7 @@
 	var/weapons_only_cycle = FALSE	//So combat mechs don't switch to their equipment at times.
 
 /obj/mecha/Initialize()
-	..()
+	. = ..()
 
 	for(var/path in starting_components)
 		var/obj/item/mecha_parts/component/C = new path(src)
@@ -208,6 +208,7 @@
 		for(var/path in starting_equipment)
 			var/obj/item/mecha_parts/mecha_equipment/ME = new path(src)
 			ME.attach(src)
+	update_transform()
 
 /obj/mecha/drain_power(var/drain_check)
 
@@ -1577,11 +1578,12 @@
 		src.verbs += /obj/mecha/verb/eject
 		src.Entered(mmi_as_oc)
 		src.Move(src.loc)
-		src.icon_state = src.reset_icon()
+		update_icon()
 		set_dir(dir_in)
 		src.log_message("[mmi_as_oc] moved in as pilot.")
 		if(!hasInternalDamage())
 			src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
+		update_icon()
 		return 1
 	else
 		return 0
@@ -1884,7 +1886,7 @@
 		src.forceMove(src.loc)
 		src.verbs += /obj/mecha/verb/eject
 		src.log_append_to_last("[H] moved in as pilot.")
-		src.icon_state = src.reset_icon()
+		update_icon()
 		//VOREStation Edit Add
 		if(occupant.hud_used)
 			minihud = new (occupant.hud_used, src)
@@ -2004,7 +2006,7 @@
 		occupant.clear_alert("mech damage")
 		occupant.in_enclosed_vehicle = 0
 		occupant = null
-		icon_state = src.reset_icon()+"-open"
+		update_icon()
 		set_dir(dir_in)
 		verbs -= /obj/mecha/verb/eject
 
@@ -2663,13 +2665,6 @@
 		cell.give(amount)
 		return 1
 	return 0
-
-/obj/mecha/proc/reset_icon()
-	if (initial_icon)
-		icon_state = initial_icon
-	else
-		icon_state = initial(icon_state)
-	return icon_state
 
 //This is for mobs mostly.
 /obj/mecha/attack_generic(var/mob/user, var/damage, var/attack_message)
