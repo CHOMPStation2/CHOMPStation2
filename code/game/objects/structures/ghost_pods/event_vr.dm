@@ -38,7 +38,7 @@
 			break
 
 		if(choice)
-			finalized = alert(M, "Are you sure you want to play as [choice]? By clicking yes you should expect to be treated as vore predator and possibly killed. You will have minimal OOC pref protections.","Confirmation","No","Yes")
+			finalized = alert(M, "Are you sure you want to play as [choice]? By clicking yes you should expect to be treated as vore predator and possibly killed. Do not attack other players. You will have minimal OOC pref protections.","Confirmation","No","Yes")
 
 	if(randomize)
 		choice = pick(possible_mobs)
