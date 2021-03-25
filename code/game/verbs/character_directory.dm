@@ -29,10 +29,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 /datum/character_directory/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-	
+
 	data["personalVisibility"] = user?.client?.prefs?.show_in_directory
 	data["personalTag"] = user?.client?.prefs?.directory_tag || "Unset"
 	data["personalErpTag"] = user?.client?.prefs?.directory_erptag || "Unset"
+	data["personalEventTag"] = vantag_choices_list[user?.client?.prefs?.vantag_preference] //CHOMPEdit
 
 	return data
 
@@ -44,7 +45,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		// Allow opt-out.
 		if(!C?.prefs?.show_in_directory)
 			continue
-		
+
 		// These are the three vars we're trying to find
 		// The approach differs based on the mob the client is controlling
 		var/name = null
@@ -52,6 +53,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/flavor_text = null
 		var/tag = C.prefs.directory_tag || "Unset"
 		var/erptag = C.prefs.directory_erptag || "Unset"
+		var/eventtag = vantag_choices_list[C.prefs.vantag_preference] //CHOMPEdit
 		var/character_ad = C.prefs.directory_ad
 
 		if(ishuman(C.mob))
@@ -82,12 +84,13 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		// But if we can't find the name, they must be using a non-compatible mob type currently.
 		if(!name)
 			continue
-		
+
 		directory_mobs.Add(list(list(
 			"name" = name,
 			"ooc_notes" = ooc_notes,
 			"tag" = tag,
 			"erptag" = erptag,
+			"eventtag" = eventtag, //CHOMPEdit
 			"character_ad" = character_ad,
 			"flavor_text" = flavor_text,
 		)))
@@ -123,6 +126,17 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				return
 			usr?.client?.prefs?.directory_erptag = new_erptag
 			return TRUE
+		//CHOMPEdit start
+		if("setEventTag")
+			var/list/names_list = list()
+			for(var/C in vantag_choices_list)
+				names_list[vantag_choices_list[C]] = C
+			var/list/new_eventtag = input(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference) as null|anything in names_list
+			if(!new_eventtag)
+				return
+			usr?.client?.prefs?.vantag_preference = names_list[new_eventtag]
+			return TRUE
+		//CHOMPEdit end
 		if("setVisible")
 			usr?.client?.prefs?.show_in_directory = !usr?.client?.prefs?.show_in_directory
 			to_chat(usr, "<span class='notice'>You are now [usr.client.prefs.show_in_directory ? "shown" : "not shown"] in the directory.</span>")
