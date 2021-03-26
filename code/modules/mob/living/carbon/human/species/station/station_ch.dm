@@ -23,7 +23,7 @@
 	spawn_flags = SPECIES_IS_RESTRICTED
 
 /datum/species/shadekin
-	spawn_flags = SPECIES_IS_RESTRICTED
+	//spawn_flags = SPECIES_IS_RESTRICTED
 
 //datum/species/protean
 //	spawn_flags = SPECIES_IS_RESTRICTED

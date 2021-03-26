@@ -198,7 +198,7 @@
 	var/weapons_only_cycle = FALSE	//So combat mechs don't switch to their equipment at times.
 
 /obj/mecha/Initialize()
-	..()
+	. = ..()
 
 	for(var/path in starting_components)
 		var/obj/item/mecha_parts/component/C = new path(src)
@@ -352,10 +352,10 @@
 		C.forceMove(src)
 		cell = C
 		return
-	cell = new(src)
-	cell.name = "mecha power cell"
-	cell.charge = 15000
-	cell.maxcharge = 15000
+	cell = new /obj/item/weapon/cell/mech(src)
+
+/obj/mecha/get_cell()
+	return cell
 
 /obj/mecha/proc/add_cabin()
 	cabin_air = new

@@ -35,7 +35,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
-	maxbodytemp = 96669
+	maxbodytemp = 323 //50 Degrees and above will now cause FireLoss
 
 	response_help = "touches"
 	response_disarm = "pushes"
@@ -55,12 +55,14 @@
 	var/last_shift = 0
 	var/blood_spawn = 0
 	var/is_shifting = FALSE
-	
+
 	var/enable_autolaugh = FALSE //Whether user controlled mob will laugh when interacting automatically.
 	var/laugh = 'sound/misc/demonlaugh.ogg' //Yknow maybe someone wants a custom laugh, you never know.
 
 /mob/living/simple_mob/vore/demon/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "You slide down the slick, slippery gullet of the creature. It's warm, and the air is thick. You can feel the doughy walls of the creatures gut push and knead into your form! Slimy juices coat your form stinging against your flesh as they waste no time to start digesting you. The creature's heartbeat and the gurgling of their stomach are all you can hear as your jostled about, treated like nothing but food."
@@ -141,3 +143,11 @@
 /mob/living/simple_mob/vore/demon/proc/laugh()
 	if(!src.ckey || enable_autolaugh)
 		playsound(src, laugh, 50, 1)
+
+//Fire heals demons instead.
+//This should include all fire sources assuming they dont weirdly make their own damage handling.
+//Yes this also means that negative fire is bad for them...
+/mob/living/simple_mob/vore/demon/adjustFireLoss(amount)
+	amount = 0 - amount
+	src.adjustBruteLoss(amount)
+	..()

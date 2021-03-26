@@ -233,22 +233,22 @@
 	K.damage += modifier
 
 
-// //Cooldown
-// /obj/item/borg/upgrade/modkit/cooldown
-// 	name = "cooldown decrease"
-// 	desc = "Decreases the cooldown of a kinetic accelerator."
-// 	modifier = 2.5
+ //Cooldown - CHOMPstation re-addition start
+/obj/item/borg/upgrade/modkit/cooldown
+	name = "cooldown decrease"
+	desc = "Decreases the cooldown of a kinetic accelerator."
+	modifier = 2.5
 
-// /obj/item/borg/upgrade/modkit/cooldown/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
-// 	. = ..()
-// 	if(.)
-// 		KA.overheat_time -= modifier
+/obj/item/borg/upgrade/modkit/cooldown/install(obj/item/weapon/gun/energy/kinetic_accelerator/KA, mob/user)
+	. = ..()
+	if(.)
+		KA.fire_delay -= modifier
 
-// /obj/item/borg/upgrade/modkit/cooldown/uninstall(obj/item/weapon/gun/energy/kinetic_accelerator/KA)
-// 	KA.overheat_time += modifier
-// 	..()
+/obj/item/borg/upgrade/modkit/cooldown/uninstall(obj/item/weapon/gun/energy/kinetic_accelerator/KA)
+	KA.fire_delay += modifier
+	..()
 
-//Cooldown
+//Cooldown - CHOMPstation re-addition end
 /obj/item/borg/upgrade/modkit/efficiency
 	name = "energy efficiency"
 	desc = "Decreases the energy use of a kinetic accelerator."

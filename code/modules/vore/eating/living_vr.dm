@@ -23,8 +23,7 @@
 	var/noisy = FALSE					// Toggle audible hunger.
 	var/absorbing_prey = 0 				// Determines if the person is using the succubus drain or not. See station_special_abilities_vr.
 	var/drain_finalized = 0				// Determines if the succubus drain will be KO'd/absorbed. Can be toggled on at any time.
-	var/fuzzy = 1						// Preference toggle for sharp/fuzzy icon.
-	var/tail_alt = 0					// Tail layer toggle.
+	var/fuzzy = 0						// Preference toggle for sharp/fuzzy icon.
 	var/permit_healbelly = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = TRUE			// Mobs are pred by default.
@@ -33,7 +32,7 @@
 	var/adminbus_eat_minerals = FALSE	// This creature subsists on a diet of pure adminium.
 	var/vis_height = 32					// Sprite height used for resize features.
 	var/show_vore_fx = TRUE				// Show belly fullscreens
-	var/latejoin_vore = FALSE			// If enabled, latejoiners can spawn into this, assuming they have a client
+	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
 
 //
 // Hook for generic creation of stuff on new creatures
@@ -48,6 +47,12 @@
 	M.vorePanel = new(M)
 	M.verbs += /mob/living/proc/insidePanel
 	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+
+	//Tries to load prefs if a client is present otherwise gives freebie stomach
+	spawn(2 SECONDS)
+		if(M)
+			M.init_vore()
 
 	//return TRUE to hook-caller
 	return TRUE
@@ -97,17 +102,11 @@
 		//Has to be aggressive grab, has to be living click-er and non-silicon grabbed
 		if(G.state >= GRAB_AGGRESSIVE && (isliving(user) && !issilicon(G.affecting)))
 			var/mob/living/attacker = user  // Typecast to living
-			G.affecting.init_vore()
 
 			// src is the mob clicked on and attempted predator
 
 			///// If user clicked on themselves
 			if(src == G.assailant && is_vore_predator(src))
-				if(!G.affecting.devourable)
-					to_chat(user, "<span class='notice'>They aren't able to be devoured.</span>")
-					log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(G.affecting)] against their prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
-					return FALSE
-
 				if(feed_grabbed_to_self(src, G.affecting))
 					qdel(G)
 					return TRUE
@@ -153,10 +152,6 @@
 		var/mob/living/attacker = user  // Typecast to living
 		if(is_vore_predator(src))
 			for(var/mob/living/M in H.contents)
-				M.init_vore()
-				if(!M.devourable)
-					to_chat(user, "<span class='notice'>[M] isn't able to be devoured.</span>")
-					return FALSE
 				if(attacker.eat_held_mob(attacker, M, src))
 					if(H.held_mob == M)
 						H.held_mob = null
@@ -241,6 +236,8 @@
 	P.show_vore_fx = src.show_vore_fx
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
+	P.step_mechanics_pref = src.step_mechanics_pref
+	P.pickup_pref = src.pickup_pref
 
 
 	//CHOMP stuff
@@ -280,6 +277,8 @@
 	show_vore_fx = P.show_vore_fx
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
+	step_mechanics_pref = P.step_mechanics_pref
+	pickup_pref = P.pickup_pref
 
 	//CHOMP stuff
 	latejoin_vore = P.latejoin_vore
@@ -291,6 +290,7 @@
 		vore_organs.Cut()
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
+			break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
 
 	return TRUE
 
@@ -326,13 +326,13 @@
 	//A uniform could hide it.
 	if(istype(w_uniform,/obj/item/clothing))
 		var/obj/item/clothing/under = w_uniform
-		if(under.hides_bulges)
+		if(istype(under) && under.hides_bulges)
 			return FALSE
 
 	//We return as soon as we find one, no need for 'else' really.
 	if(istype(wear_suit,/obj/item/clothing))
 		var/obj/item/clothing/suit = wear_suit
-		if(suit.hides_bulges)
+		if(istype(suit) && suit.hides_bulges)
 			return FALSE
 
 	return ..()
@@ -501,6 +501,11 @@
 	var/user_to_prey = get_dist(get_turf(user),get_turf(prey))
 
 	if(user_to_pred > 1 || user_to_prey > 1)
+		return FALSE
+
+	if(!prey.devourable)
+		to_chat(user, "<span class='notice'>They aren't able to be devoured.</span>")
+		log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(prey)] against their prefs ([prey ? ADMIN_JMP(prey) : "null"])")
 		return FALSE
 
 	// Prepare messages
@@ -848,6 +853,7 @@
 	set category = "Preferences"
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
+	fuzzy = !fuzzy
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
@@ -880,6 +886,8 @@
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
+	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
+	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=200x300;can_resize=0;can_minimize=0")
 	onclose(user, "[name]")
 	return

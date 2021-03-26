@@ -335,7 +335,7 @@
 	path = /obj/item/clothing/head/welding/engie
 
 /datum/gear/head/beret/solgov
-	display_name = "beret sol, selection"
+	display_name = "beret government, selection"
 	path = /obj/item/clothing/head/beret/solgov
 
 /datum/gear/head/beret/solgov/New()
@@ -392,3 +392,7 @@
 /datum/gear/head/blackngoldheaddress
 	display_name = "black and gold headdress"
 	path = /obj/item/clothing/head/blackngoldheaddress
+
+/datum/gear/head/plaguedoctor2
+	display_name = "golden plague doctor's hat"
+	path = /obj/item/clothing/head/plaguedoctorhat/gold

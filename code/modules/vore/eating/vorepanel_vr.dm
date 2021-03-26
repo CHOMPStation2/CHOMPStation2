@@ -18,7 +18,16 @@
 	if(!vorePanel)
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
-	init_vore()	//Returns if the organs already exist anyway.
+
+	if(!vorePanel.bellies_loaded) //CHOMPedit Start: On-demand belly loading
+		var/datum/vore_preferences/P = client.prefs_vr
+		var/firstbelly = FALSE // First belly loaded on init_vore
+		for(var/entry in P.belly_prefs)
+			if(!firstbelly)
+				firstbelly = TRUE
+				continue
+			list_to_object(entry,src)
+		vorePanel.bellies_loaded = TRUE //CHOMPedit End
 
 	vorePanel.tgui_interact(src)
 
@@ -32,6 +41,7 @@
 	var/mob/living/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
+	var/bellies_loaded = FALSE //CHOMPedit: On-demand belly loading
 
 /datum/vore_look/New(mob/living/new_host)
 	if(istype(new_host))
@@ -49,6 +59,8 @@
 /datum/vore_look/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
+		update_preview_icon()	//CHOMPEdit
+		give_client_previews(user.client) //CHOMPEdit
 		ui = new(user, src, "VorePanel", "Inside!")
 		ui.open()
 
@@ -58,9 +70,9 @@
 	return host
 
 // Note, in order to allow others to look at others vore panels, this state would need
-// to be changed to tgui_always_state, and a custom tgui_status() implemented for true "rights" management.
+// to be modified.
 /datum/vore_look/tgui_state(mob/user)
-	return GLOB.tgui_self_state
+	return GLOB.tgui_vorepanel_state
 
 /datum/vore_look/var/static/list/nom_icons
 /datum/vore_look/proc/cached_nom_icon(atom/target)
@@ -134,7 +146,6 @@
 			"digest_mode" = B.digest_mode,
 			"contents" = LAZYLEN(B.contents),
 		)))
-
 	data["selected"] = null
 	if(host.vore_selected)
 		var/obj/belly/selected = host.vore_selected
@@ -157,7 +168,11 @@
 			"digest_burn" = selected.digest_burn,
 			"bulge_size" = selected.bulge_size,
 			"shrink_grow_size" = selected.shrink_grow_size,
+			"emote_time" = selected.emote_time,
+			"emote_active" = selected.emote_active,
 			"belly_fullscreen" = selected.belly_fullscreen,
+			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
+			"mapRef" = map_name,	//CHOMPEdit
 			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
@@ -247,7 +262,9 @@
 		"show_vore_fx" = host.show_vore_fx,
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
-		"latejoin_vore" = host.latejoin_vore,
+		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
+		"step_mechanics_active" = host.step_mechanics_pref,
+		"pickup_mechanics_active" = host.pickup_pref,
 		"noisy" = host.noisy,
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
@@ -420,6 +437,18 @@
 			host.allowmobvore = !host.allowmobvore
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.allowmobvore = host.allowmobvore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_steppref")
+			host.step_mechanics_pref = !host.step_mechanics_pref
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.step_mechanics_pref = host.step_mechanics_pref
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_pickuppref")
+			host.pickup_pref = !host.pickup_pref
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.pickup_pref = host.pickup_pref
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_healbelly")
@@ -717,8 +746,8 @@
 				host.vore_selected.desc = new_desc
 				. = TRUE
 		if("b_msgs")
-			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
-			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
+			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message (500 for idle messages), max 10 messages per topic.","Really, don't.")
+			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly. '%countprey' will be replaced with the number of living prey in your belly."
 			switch(params["msgtype"])
 				if("dmp")
 					var/new_message = input(user,"These are sent to prey when they expire. Write them in 2nd person ('you feel X'). Avoid using %prey in this type."+help,"Digest Message (to prey)",host.vore_selected.get_messages("dmp")) as message
@@ -745,6 +774,31 @@
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"em")
 
+				if("im_digest")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Digest mode. Write them in 2nd person ('%pred's %belly squishes down on you.')."+help,"Idle Message (Digest)",host.vore_selected.get_messages("im_digest")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_digest")
+
+				if("im_hold")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Hold mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Hold)",host.vore_selected.get_messages("im_hold")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_hold")
+
+				if("im_absorb")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Absorb mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Absorb)",host.vore_selected.get_messages("im_absorb")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_absorb")
+
+				if("im_heal")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Heal mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Heal)",host.vore_selected.get_messages("im_heal")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_heal")
+
+				if("im_drain")
+					var/new_message = input(user,"These are sent to prey every minute when you are on Drain mode. Write them in 2nd person ('%pred's %belly squishes down on you.')"+help,"Idle Message (Drain)",host.vore_selected.get_messages("im_drain")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"im_drain")
+
 				if("reset")
 					var/confirm = alert(user,"This will delete any custom messages. Are you sure?","Confirmation","DELETE","Cancel")
 					if(confirm == "DELETE")
@@ -752,6 +806,8 @@
 						host.vore_selected.digest_messages_owner = initial(host.vore_selected.digest_messages_owner)
 						host.vore_selected.struggle_messages_outside = initial(host.vore_selected.struggle_messages_outside)
 						host.vore_selected.struggle_messages_inside = initial(host.vore_selected.struggle_messages_inside)
+						host.vore_selected.examine_messages = initial(host.vore_selected.examine_messages)
+						host.vore_selected.emote_lists = initial(host.vore_selected.emote_lists)
 			. = TRUE
 		if("b_verb")
 			var/new_verb = html_encode(input(usr,"New verb when eating (infinitive tense, e.g. nom or swallow):","New Verb") as text|null)
@@ -858,6 +914,16 @@
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_brute = new_new_damage
 			. = TRUE
+		if("b_emoteactive")
+			host.vore_selected.emote_active = !host.vore_selected.emote_active
+			. = TRUE
+		if("b_emotetime")
+			var/new_time = input(user, "Choose the period it takes for idle belly emotes to be shown to prey. Measured in seconds, Minimum 1 minute, Maximum 10 minutes.", "Set Belly Emote Delay.", host.vore_selected.digest_brute)
+			if(new_time == null)
+				return FALSE
+			var/new_new_time = CLAMP(new_time, 60, 600)
+			host.vore_selected.emote_time = new_new_time
+			. = TRUE
 		if("b_escapable")
 			if(host.vore_selected.escapable == 0) //Possibly escapable and special interactions.
 				host.vore_selected.escapable = 1
@@ -906,7 +972,14 @@
 			. = TRUE
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
+			update_preview_icon()	//CHOMPEdit Begin
 			. = TRUE
+		if("b_fullscreen_color")
+			var/newcolor = input(usr, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			if(newcolor)
+				host.vore_selected.belly_fullscreen_color = newcolor
+			update_preview_icon()
+			. = TRUE 				//CHOMPEdit End
 		if("b_disable_hud")
 			host.vore_selected.disable_hud = !host.vore_selected.disable_hud
 			. = TRUE
@@ -989,7 +1062,7 @@
 			host.vore_selected.reagent_name = new_name
 			. = TRUE
 		if("b_liq_reagent_transfer_verb")
-			var/new_verb = html_encode(input(usr,"New verb when liquid is transfered from this belly (infinitive tense, e.g. pump or inject):","New Verb") as text|null)
+			var/new_verb = html_encode(input(usr,"New verb when liquid is transfered from this belly:","New Verb") as text|null)
 
 			if(length(new_verb) > BELLIES_NAME_MAX || length(new_verb) < BELLIES_NAME_MIN)
 				alert("Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")

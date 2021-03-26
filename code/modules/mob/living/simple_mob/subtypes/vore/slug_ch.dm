@@ -33,7 +33,7 @@
 				"bio" = 0,
 				"rad" = 100) //Relatively harmless but agonizing to kill with melee.
 
-	glow_toggle = TRUE 
+	glow_toggle = TRUE
 	glow_range = 1.3 //This seems to be the minimum range which makes glow visible.
 	glow_color = "#33ccff" //Same glow color as Sif trees.
 	glow_intensity = 1
@@ -45,7 +45,7 @@
 
 /mob/living/simple_mob/vore/slug //I guess separating the vore variables is a little more organized?
 	vore_bump_chance = 100 //Always attempt a bump nom if possible...
-	vore_bump_emote = "knocks over and begins slowly engulfing" 
+	vore_bump_emote = "knocks over and begins slowly engulfing"
 	vore_active = 1
 	vore_icons = 1
 	vore_capacity = 1
@@ -55,7 +55,9 @@
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_mob/vore/slug/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.desc	= "Somehow you remained still just long enough for the slug to wrap its radula around your body and gradually draw you into its pharynx. The slug moves with agonizing slowness and devours prey at a snail's pace; inch by inch you're crammed down its gullet and squishes and squeezed into the slug's gizzard. Thick walls bear down, covered with shallow, toothy ridges. The slimy moss in here suggests you're not the slug's diet but the gizzard seems intent on churning and scraping over you regardless..."
 	B.digest_burn = 0.1
@@ -109,9 +111,9 @@
 	spread_slime()
 
 /mob/living/simple_mob/vore/slug/do_attack(atom/A, turf/T) //Override of attack proc to ensure the slug can only attempt to eat people, not harm them. Inability to actually hurt anybody is intended, otherwise this mob wouldn't have 98 melee armor.
-	if(ckey) //If we're player controlled, use the default attack code. 
+	if(ckey) //If we're player controlled, use the default attack code.
 		return ..()
-	if(istype(A, /mob/living) && !will_eat(A)) 
+	if(istype(A, /mob/living) && !will_eat(A))
 		ai_holder.lose_target() //Ignore anybody we can't eat.
 		return
 	else //This is the parent do_attack() code for determining whether or not attacks can hit.
@@ -127,7 +129,7 @@
 			playsound(src, 'sound/rakshasa/Decay1.ogg', 75, 1)
 			visible_message(span("warning", "\The [src] misses."))
 			return FALSE
-		tryBumpNom(A) //Meant for bump noms but this works as intended here and has sanity checks. 
+		tryBumpNom(A) //Meant for bump noms but this works as intended here and has sanity checks.
 
 /mob/living/simple_mob/vore/slug/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
 	..()
@@ -135,8 +137,8 @@
 
 /datum/ai_holder/simple_mob/passive/slug_ch
 	wander = TRUE
-	base_wander_delay = 7 
-	wander_when_pulled = TRUE	
+	base_wander_delay = 7
+	wander_when_pulled = TRUE
 	vision_range = 10
 	can_flee = FALSE //Otherwise it'll run as soon as it gets a target.
 
@@ -153,7 +155,7 @@
 	buckle_lying = TRUE
 
 	var/persist_time = 5 MINUTES //How long until we cease existing.
-	var/mob/living/simple_mob/vore/slug/my_slug = null //This should be set by the slug. 
+	var/mob/living/simple_mob/vore/slug/my_slug = null //This should be set by the slug.
 	var/turf/my_turf = null //The turf we spawn on.
 	var/base_escape_time = 1 MINUTE //How long does it take to struggle free? Affected by the victim's size_multiplier.
 
@@ -166,9 +168,9 @@
 /*	for(var/obj/effect/slug_glue/G in my_turf.contents)
 		if(G == src)
 			continue
-		else	
+		else
 			qdel(G) //Prevent glue layering
-*/ //Not including this due to performance concerns but keeping as comments for reference. 
+*/ //Not including this due to performance concerns but keeping as comments for reference.
 
 /obj/effect/slug_glue/proc/dissipate() //When spawned, set a timer to despawn.
 	if(!persist_time)
@@ -204,7 +206,7 @@
 		if(istype(L, /mob/living/simple_mob/vore/slug))
 			return
 
-		if(L.m_intent == "run" && !L.buckled) 
+		if(L.m_intent == "run" && !L.buckled)
 			if(has_buckled_mobs())
 				return
 			buckle_mob(L)
