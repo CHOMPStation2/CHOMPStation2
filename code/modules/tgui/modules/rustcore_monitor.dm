@@ -51,9 +51,6 @@
 						"amount" = C.owned_field.dormant_reactant_quantities[reagent]
 						)))
 
-				for(var/list/reactant in reactants)
-					to_world("[reactant[1]] [reactant[2]]")
-
 			cores.Add(list(list(
 				"name" = C.name,
 				"has_field" = C.owned_field ? TRUE : FALSE,
