@@ -1,5 +1,5 @@
 #define DAM_SCALE_FACTOR 0.01
-#define METAL_PER_TICK 100 //CHOMP Removal
+#define METAL_PER_TICK 100
 /datum/species/protean
 	name =             SPECIES_PROTEAN
 	name_plural =      "Proteans"
@@ -386,4 +386,4 @@ CHOMP Removal end*/
 			return
 //CHOMP Add end
 #undef DAM_SCALE_FACTOR
-#undef METAL_PER_TICK //CHOMP Removal
+#undef METAL_PER_TICK
