@@ -6,6 +6,7 @@
 	#include "southern_cross_defines.dm"
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_events.dm"
+	#include "southern_cross_overrides.dm"
 	#include "southern_cross_presets.dm"
 	#include "southern_cross_shuttles.dm"
 	#include "southern_cross_shuttles_ch.dm"

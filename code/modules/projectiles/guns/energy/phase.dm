@@ -13,6 +13,15 @@
 	one_handed_penalty = 15
 	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
+/obj/item/weapon/gun/energy/phasegun/mounted
+	self_recharge = 1
+	use_external_power = 1
+	one_handed_penalty = 0
+
+/obj/item/weapon/gun/energy/phasegun/mounted/cyborg
+	charge_cost = 400
+	recharge_time = 7
+
 /obj/item/weapon/gun/energy/phasegun/pistol
 	name = "phase pistol"
 	desc = "The RayZar EW15 Apollo is an energy handgun, specifically designed for self-defense against aggressive wildlife."
