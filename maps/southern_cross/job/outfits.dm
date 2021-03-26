@@ -14,7 +14,7 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	id_slot = slot_wear_id
 	pda_slot = slot_l_store
 	pda_type = /obj/item/device/pda/explorer //VORESTation Edit - Better Brown
-	id_type = /obj/item/weapon/card/id/science/explorer
+	id_type = /obj/item/weapon/card/id/exploration //CHOMPedit: fix conflicts with citrp ID port
 	id_pda_assignment = "Explorer"
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL
 	backpack_contents = list(/obj/item/clothing/accessory/permit/gun/planetside = 1)
