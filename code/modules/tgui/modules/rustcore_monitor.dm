@@ -50,19 +50,10 @@
 						"name" = reagent,
 						"amount" = C.owned_field.dormant_reactant_quantities[reagent]
 						)))
-<<<<<<< HEAD
-/*CHOMP Removal brainlet.
-				for(var/list/reactant in reactants)
-					to_world("[reactant[1]] [reactant[2]]")
-*/
-||||||| parent of 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
 
 				for(var/list/reactant in reactants)
 					to_world("[reactant[1]] [reactant[2]]")
 
-=======
-
->>>>>>> 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
 			cores.Add(list(list(
 				"name" = C.name,
 				"has_field" = C.owned_field ? TRUE : FALSE,
