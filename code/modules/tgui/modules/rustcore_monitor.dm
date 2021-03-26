@@ -7,23 +7,32 @@
 /datum/tgui_module/rustcore_monitor/tgui_act(action, params)
 	if(..())
 		return TRUE
+<<<<<<< HEAD
 /*CHOMP Removal brainlet.
 	for(var/parameter in params)
 		to_world("[parameter] - [params[parameter]]")
 */
+||||||| parent of 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
+
+	for(var/parameter in params)
+		to_world("[parameter] - [params[parameter]]")
+
+=======
+
+	var/obj/machinery/power/fusion_core/C = null
+	if(params["core"])
+		C = locate(params["core"]) in GLOB.fusion_cores
+		if(!istype(C))
+			return FALSE
+
+>>>>>>> 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
 	switch(action)
 		if("toggle_active")
-			var/obj/machinery/power/fusion_core/C = locate(params["core"])
-			if(!istype(C))
-				return FALSE
 			if(!C.Startup()) //Startup() whilst the device is active will return null.
 				C.Shutdown()
 			return TRUE
 
 		if("toggle_reactantdump")
-			var/obj/machinery/power/fusion_core/C = locate(params["core"])
-			if(!istype(C))
-				return FALSE
 			C.reactant_dump = !C.reactant_dump
 			return TRUE
 
@@ -31,16 +40,11 @@
 			var/new_ident = sanitize_text(input("Enter a new ident tag.", "Core Control", core_tag) as null|text)
 			if(new_ident)
 				core_tag = new_ident
+			return TRUE
 
 		if("set_fieldstr")
-			var/obj/machinery/power/fusion_core/C = locate(params["core"])
-			if(!istype(C))
-				return FALSE
-
 			var/new_strength = params["fieldstr"]
-
 			C.target_field_strength = new_strength
-
 			return TRUE
 
 /datum/tgui_module/rustcore_monitor/tgui_data(mob/user)
@@ -58,10 +62,19 @@
 						"name" = reagent,
 						"amount" = C.owned_field.dormant_reactant_quantities[reagent]
 						)))
+<<<<<<< HEAD
 /*CHOMP Removal brainlet.
 				for(var/list/reactant in reactants)
 					to_world("[reactant[1]] [reactant[2]]")
 */
+||||||| parent of 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
+
+				for(var/list/reactant in reactants)
+					to_world("[reactant[1]] [reactant[2]]")
+
+=======
+
+>>>>>>> 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
 			cores.Add(list(list(
 				"name" = C.name,
 				"has_field" = C.owned_field ? TRUE : FALSE,
