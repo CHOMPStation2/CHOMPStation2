@@ -50,6 +50,8 @@
 	var/obj/item/device/radio/headset/mob_headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 
+	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.
+
 // Release belly contents before being gc'd!
 /mob/living/simple_mob/Destroy()
 	release_vore_contents()
@@ -86,8 +88,6 @@
 			icon_state = "[icon_rest]-[vore_fullness]"
 
 /mob/living/simple_mob/proc/will_eat(var/mob/living/M)
-	M.init_vore()
-	init_vore()
 	if(client) //You do this yourself, dick!
 		//ai_log("vr/wont eat [M] because we're player-controlled", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
@@ -193,7 +193,7 @@
 
 // Make sure you don't call ..() on this one, otherwise you duplicate work.
 /mob/living/simple_mob/init_vore()
-	if(!vore_active || no_vore)
+	if(!vore_active || no_vore || !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		return
 
 	if(LAZYLEN(vore_organs))

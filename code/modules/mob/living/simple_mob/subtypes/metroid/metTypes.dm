@@ -35,7 +35,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	vore_digest_chance = 1		//Chance to switch to digest mode if resisted
 	vore_absorb_chance = 0
 	vore_escape_chance = 2		//Chance to escape if resisted.
-	
+
 /datum/ai_holder/simple_mob/jellybrig
 	hostile = FALSE // The majority of simplemobs are hostile, jellybrig is nice.
 	cooperative = FALSE
@@ -60,9 +60,11 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	vore_active = 1
 	vore_pounce_chance = 25
 	vore_icons = SA_ICON_LIVING
-	
+
 /mob/living/simple_mob/metroid/mine/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.digest_burn = 0.5
 	B.digest_brute = 0
@@ -121,7 +123,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
-	
+
 
 
 	response_help = "pets"
@@ -407,7 +409,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	faction = "metroids"
 	max_nutrition = 2200
 	nutrition = 0
-	
+
 	makes_dirt = TRUE
 
 	projectiletype	= /obj/item/projectile/energy/metroidacid	//The projectiles I shoot

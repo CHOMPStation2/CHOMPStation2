@@ -18,7 +18,16 @@
 	if(!vorePanel)
 		log_debug("[src] ([type], \ref[src]) didn't have a vorePanel and tried to use the verb.")
 		vorePanel = new(src)
-	init_vore()	//CHOMPedit Returns if the organs already exist anyway.
+
+	if(!vorePanel.bellies_loaded) //CHOMPedit Start: On-demand belly loading
+		var/datum/vore_preferences/P = client.prefs_vr
+		var/firstbelly = FALSE // First belly loaded on init_vore
+		for(var/entry in P.belly_prefs)
+			if(!firstbelly)
+				firstbelly = TRUE
+				continue
+			list_to_object(entry,src)
+		vorePanel.bellies_loaded = TRUE //CHOMPedit End
 
 	vorePanel.tgui_interact(src)
 
@@ -32,6 +41,7 @@
 	var/mob/living/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
+	var/bellies_loaded = FALSE //CHOMPedit: On-demand belly loading
 
 /datum/vore_look/New(mob/living/new_host)
 	if(istype(new_host))
