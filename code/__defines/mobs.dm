@@ -316,13 +316,13 @@
 #define SPECIES_VR_SKELETON		"Virtual Reality Skeleton"
 #define SPECIES_VR_VOX			"Virtual Reality Vox"
 
-// Ayyy IDs.
-#define SPECIES_XENO			"Xenomorph"
-#define SPECIES_XENO_DRONE		"Xenomorph Drone"
-#define SPECIES_XENO_HUNTER		"Xenomorph Hunter"
-#define SPECIES_XENO_SENTINEL	"Xenomorph Sentinel"
-#define SPECIES_XENO_QUEEN		"Xenomorph Queen"
-
+// Ayyy IDs. CHOMPedit
+#define SPECIES_GENA			"Genaprawn"
+#define SPECIES_GENA_DRONE		"Genaprawn Drone"
+#define SPECIES_GENA_HUNTER		"Genaprawn Hunter"
+#define SPECIES_GENA_SENTINEL	"Genaprawn Sentinel"
+#define SPECIES_GENA_QUEEN		"Genaprawn Queen"
+//CHOMPedit end
 // Misc species. Mostly unused but might as well be complete.
 #define SPECIES_SHADOW			"Shadow"
 #define SPECIES_SKELETON		"Skeleton"

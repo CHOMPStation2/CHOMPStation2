@@ -286,7 +286,7 @@
 				temp_img = icon('icons/obj/butts_vr.dmi', "machine")
 			if(SPECIES_WEREBEAST)
 				temp_img = icon('icons/obj/butts_vr.dmi', "vulp") // Give Werewolves their own thicc'er than a boal of oatmeal ass sprite someday?
-			if(SPECIES_XENOHYBRID, SPECIES_XENO, SPECIES_XENO_DRONE, SPECIES_XENO_HUNTER, SPECIES_XENO_QUEEN, SPECIES_XENO_SENTINEL) // Xenos + Xenohybrids have their own asses, thanks to Pybro.
+			if(SPECIES_XENOHYBRID, SPECIES_GENA, SPECIES_GENA_DRONE, SPECIES_GENA_HUNTER, SPECIES_GENA_QUEEN, SPECIES_GENA_SENTINEL) // Xenos + Xenohybrids have their own asses, thanks to Pybro. CHOMPedit
 				temp_img = icon('icons/obj/butts_vr.dmi', "xeno")
 			if(SPECIES_ZORREN_HIGH)
 				temp_img = icon('icons/obj/butts_vr.dmi', "vulp") // placeholder until we get zorren butts.
