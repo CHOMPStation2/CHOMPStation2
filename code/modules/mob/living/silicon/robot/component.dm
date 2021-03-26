@@ -247,6 +247,12 @@
 	icon_state = "armor"
 	icon_state_broken = "armor_broken"
 
+/obj/item/robot_parts/robot_component/armour_platform
+	name = "platform armour plating"
+	icon_state = "armor"
+	icon_state_broken = "armor_broken"
+	color = COLOR_GRAY80
+
 /obj/item/robot_parts/robot_component/camera
 	name = "camera"
 	icon_state = "camera"
