@@ -7,17 +7,6 @@
 /datum/tgui_module/rustcore_monitor/tgui_act(action, params)
 	if(..())
 		return TRUE
-<<<<<<< HEAD
-/*CHOMP Removal brainlet.
-	for(var/parameter in params)
-		to_world("[parameter] - [params[parameter]]")
-*/
-||||||| parent of 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
-
-	for(var/parameter in params)
-		to_world("[parameter] - [params[parameter]]")
-
-=======
 
 	var/obj/machinery/power/fusion_core/C = null
 	if(params["core"])
@@ -25,7 +14,6 @@
 		if(!istype(C))
 			return FALSE
 
->>>>>>> 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
 	switch(action)
 		if("toggle_active")
 			if(!C.Startup()) //Startup() whilst the device is active will return null.
