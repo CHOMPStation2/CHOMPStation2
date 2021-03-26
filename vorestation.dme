@@ -2073,6 +2073,7 @@
 #include "code\modules\clothing\spacesuits\rig\modules\specific\vision.dm"
 #include "code\modules\clothing\spacesuits\rig\modules\specific\voice.dm"
 #include "code\modules\clothing\spacesuits\rig\suits\alien.dm"
+#include "code\modules\clothing\spacesuits\rig\suits\alien_ch.dm"
 #include "code\modules\clothing\spacesuits\rig\suits\combat.dm"
 #include "code\modules\clothing\spacesuits\rig\suits\ert.dm"
 #include "code\modules\clothing\spacesuits\rig\suits\ert_vr.dm"
