@@ -2216,7 +2216,7 @@
 #include "code\modules\events\event_container_vr.dm"
 #include "code\modules\events\event_dynamic.dm"
 #include "code\modules\events\event_manager.dm"
-#include "code\modules\events\gravity_vr.dm"
+#include "code\modules\events\gravity.dm"
 #include "code\modules\events\grid_check.dm"
 #include "code\modules\events\grubinfestation_vr.dm"
 #include "code\modules\events\ian_storm_vr.dm"
