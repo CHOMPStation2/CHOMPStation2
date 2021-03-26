@@ -1,7 +1,7 @@
 //Stand-in until this is made more lore-friendly.
 /datum/species/xenos
-	name = SPECIES_GENA
-	name_plural = "Genaprawns"
+	name = SPECIES_GENA //CHOMPedit
+	name_plural = "Genaprawns" //CHOMPedit
 
 	default_language = "Xenolingua" //CHOMPedit
 	language = "Hivemind"
@@ -114,7 +114,7 @@
 		H.mind.special_role = "Alien"
 
 	alien_number++ //Keep track of how many aliens we've had so far.
-	H.real_name = "alien [caste_name] ([alien_number])"
+	H.real_name = "Genaprawn [caste_name] ([alien_number])" //CHOMPedit
 	H.name = H.real_name
 
 	..()
@@ -170,7 +170,7 @@
 //CHOMPedit removed infection images, since they do not exist anymore.
 
 /datum/species/xenos/drone
-	name = SPECIES_GENA_DRONE
+	name = SPECIES_GENA_DRONE //CHOMPedit
 	caste_name = "drone"
 	weeds_plasma_rate = 15
 	slowdown = 1
@@ -210,7 +210,7 @@
 	..()
 
 /datum/species/xenos/hunter
-	name = SPECIES_GENA_HUNTER
+	name = SPECIES_GENA_HUNTER //CHOMPedit
 	weeds_plasma_rate = 5
 	caste_name = "hunter"
 	slowdown = -2
@@ -240,7 +240,7 @@
 		)
 
 /datum/species/xenos/sentinel
-	name = SPECIES_GENA_SENTINEL
+	name = SPECIES_GENA_SENTINEL //CHOMPedit
 	weeds_plasma_rate = 10
 	caste_name = "sentinel"
 	slowdown = 0
@@ -273,7 +273,7 @@
 
 /datum/species/xenos/queen
 
-	name = SPECIES_GENA_QUEEN
+	name = SPECIES_GENA_QUEEN //CHOMPedit
 	total_health = 300 //CHOMPedit. Queen is chonk
 	weeds_heal_rate = 5
 	weeds_plasma_rate = 20
@@ -317,10 +317,10 @@
 	..()
 	// Make sure only one official queen exists at any point.
 	if(!alien_queen_exists(1,H))
-		H.real_name = "alien queen ([alien_number])"
+		H.real_name = "Genaprawn queen ([alien_number])" //CHOMPedit
 		H.name = H.real_name
 	else
-		H.real_name = "alien princess ([alien_number])"
+		H.real_name = "Genaprawn princess ([alien_number])" //CHOMPedit
 		H.name = H.real_name
 
 /datum/hud_data/alien
