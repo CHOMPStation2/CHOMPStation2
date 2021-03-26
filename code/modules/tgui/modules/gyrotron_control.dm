@@ -8,17 +8,6 @@
 /datum/tgui_module/gyrotron_control/tgui_act(action, params)
 	if(..())
 		return TRUE
-<<<<<<< HEAD
-/*CHOMP Removal brainlet.
-	for(var/parameter in params)
-		to_world("[parameter] - [params[parameter]]")
-*/
-||||||| parent of 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
-
-	for(var/parameter in params)
-		to_world("[parameter] - [params[parameter]]")
-
-=======
 
 	// If the command requires a gyrotron, and we can't find it, we don't need to check any further
 	var/obj/machinery/power/emitter/gyrotron/G = null
@@ -27,7 +16,6 @@
 		if(!istype(G))
 			return FALSE
 
->>>>>>> 9d3f910ef7... Merge pull request #10022 from VOREStation/upstream-merge-8007
 	switch(action)
 		if("set_tag")
 			var/new_ident = sanitize_text(input("Enter a new ident tag.", "Gyrotron Control", gyro_tag) as null|text)
