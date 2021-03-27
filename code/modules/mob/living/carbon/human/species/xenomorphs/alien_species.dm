@@ -96,7 +96,7 @@
 	return SPECIES_GENA //CHOMPedit
 
 /datum/species/xenos/get_random_name()
-	return "alien [caste_name] ([alien_number])"
+	return "Genaprawn [caste_name] ([alien_number])" //CHOMPedit
 
 /datum/species/xenos/can_understand(var/mob/other)
 	if(istype(other, /mob/living/carbon/alien/larva))
