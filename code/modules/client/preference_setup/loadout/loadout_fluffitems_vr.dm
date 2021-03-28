@@ -1046,22 +1046,12 @@
 	ckeywhitelist = list("vitoras")
 	character_name = list("Roanna Ti'Rox")
 
-<<<<<<< HEAD
-||||||| parent of a39a93b1b4... Merge pull request #10007 from Heroman3003/idfix3
-/datum/gear/fluff/harmony_id
-	path = /obj/item/weapon/card/id/fluff/harmony
-	display_name = "Harmony's ITG-ID card"
-	ckeywhitelist = list("verysoft")
-	character_name = list("Harmony")
-
-=======
 /datum/gear/fluff/harmony_id
 	path = /obj/item/weapon/card/id/event/fluff/harmony
 	display_name = "Harmony's ITG-ID card"
 	ckeywhitelist = list("verysoft")
 	character_name = list("Harmony")
 
->>>>>>> a39a93b1b4... Merge pull request #10007 from Heroman3003/idfix3
 //  W CKEYS
 /datum/gear/fluff/sthasha_bracer
 	path = /obj/item/clothing/accessory/bracer/fluff/xander_sthasha
