@@ -341,8 +341,8 @@
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
 	spawn_flags = SPECIES_CAN_JOIN
-	icobase = 'icons/mob/human_races/r_seromi_vr.dmi'
-	deform = 'icons/mob/human_races/r_seromi_vr.dmi'
+	icobase = 'icons/mob/human_races/r_teshari_vr.dmi'
+	deform = 'icons/mob/human_races/r_teshari_vr.dmi'
 	icobase_tail = 1
 	color_mult = 1
 	min_age = 18
