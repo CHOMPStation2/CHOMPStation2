@@ -78,7 +78,6 @@
 			var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
 			if(L.can_inject(src, null, target_zone))
 				last_inject = world.time
-				L.init_vore()
 				if(!L.allowmobvore) //If we can't eat them, stop mauling them.
 					ai_holder.lose_target() //Call this first so the attacks stop if the reagent proc runtimes.
 					L.reagents.add_reagent("bicaridine", venom_dose) //If we can't eat them, give them some bicar to compensate for no heal belly.
@@ -105,7 +104,9 @@
 	vore_bump_emote = "tries to snap up"
 
 /mob/living/simple_mob/vore/leopardmander/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The leopardmander tosses its head back with you firmly clasped in its jaws, and in a few swift moments it finishes swallowing you down into its hot, dark gut. Your weight makes absolutely no impact on its form, the doughy walls giving way beneath you with unnatural softness. The thick, humid air is tinged with an oddly pleasant smell, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder, smothering you in thick hot gutflesh~"
@@ -176,7 +177,9 @@
 	verbs |= /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow
 
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The exotic leopardmander tosses its head back with you firmly clasped in its jaws, and in a few swift moments it finishes swallowing you down into its hot, brightly glowing gut. Your weight makes absolutely no impact on its form, the doughy walls giving way beneath you, with their unnatural softness. The thick, humid air is tinged with an oddly pleasant smell, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder, smothering you in thick hot gutflesh~ You can only really sort of see outside that thick-walled gut."
