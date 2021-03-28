@@ -171,7 +171,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	animate(src, transform = M, time = anim_time)
 	update_icon_special() //May contain transform-altering things
 
-
 //DAMAGE OVERLAYS
 //constructs damage icon for each organ from mask * damage field and saves it in our overlays_ lists
 /mob/living/carbon/human/UpdateDamageIcon()
@@ -268,12 +267,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				icon_key += "[rgb(part.s_col[1],part.s_col[2],part.s_col[3])]"
 			if(part.body_hair && part.h_col && part.h_col.len >= 3)
 				icon_key += "[rgb(part.h_col[1],part.h_col[2],part.h_col[3])]"
-																   
 				if(species.color_mult)
 					icon_key += "[ICON_MULTIPLY]"
 				else
 					icon_key += "[ICON_ADD]"
-						  
 			else
 				icon_key += "#000000"
 
@@ -486,15 +483,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	var/icon/ears_s = get_ears_overlay()
 	if(ears_s)
 		face_standing.Blend(ears_s, ICON_OVERLAY)
-														
-																
-																															
-						 
-		
-						  
-
-																	   
-							  
 
 	overlays_standing[HAIR_LAYER] = image(face_standing, layer = BODY_LAYER+HAIR_LAYER, "pixel_y" = head_organ.head_offset)
 	apply_layer(HAIR_LAYER)
@@ -543,7 +531,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(!head_organ.eye_icon)
 		return
 
-	var/icon/eyes_icon = new/icon(head_organ.eye_icon_location, head_organ.eye_icon)
+	var/icon/eyes_icon = new/icon(head_organ.eye_icon_location, head_organ.eye_icon)		//VOREStation Edit
 	if(eyes)
 		eyes_icon.Blend(rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3]), ICON_ADD)
 	else
@@ -652,14 +640,12 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		uniform_sprite = "[INV_W_UNIFORM_DEF_ICON].dmi"
 
 	//Build a uniform sprite
-						  
 	var/icon/c_mask = tail_style?.clip_mask
 	if(c_mask)
 		var/obj/item/clothing/suit/S = wear_suit
 		if((wear_suit?.flags_inv & HIDETAIL) || (istype(S) && S.taurized)) // Reasons to not mask: 1. If you're wearing a suit that hides the tail or if you're wearing a taurized suit.
 			c_mask = null
 	overlays_standing[UNIFORM_LAYER] = w_uniform.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_w_uniform_str, default_icon = uniform_sprite, default_layer = UNIFORM_LAYER, clip_mask = c_mask)
-						
 	apply_layer(UNIFORM_LAYER)
 
 /mob/living/carbon/human/update_inv_wear_id()
@@ -741,7 +727,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(!shoes || (wear_suit && wear_suit.flags_inv & HIDESHOES) || (w_uniform && w_uniform.flags_inv & HIDESHOES))
 		return //Either nothing to draw, or it'd be hidden.
 
-				   
 	for(var/f in list(BP_L_FOOT, BP_R_FOOT))
 		var/obj/item/organ/external/foot/foot = get_organ(f)
 		if(istype(foot) && foot.is_hidden_by_tail()) //If either foot is hidden by the tail, don't render footwear.
@@ -838,7 +823,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	else
 		suit_sprite = "[INV_SUIT_DEF_ICON].dmi"
 
-						  
 	var/icon/c_mask = null
 	var/tail_is_rendered = (overlays_standing[TAIL_LAYER] || overlays_standing[TAIL_LAYER_ALT])
 	var/valid_clip_mask = tail_style?.clip_mask
@@ -846,8 +830,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(tail_is_rendered && valid_clip_mask && !(istype(suit) && suit.taurized)) //Clip the lower half of the suit off using the tail's clip mask for taurs since taur bodies aren't hidden.
 		c_mask = valid_clip_mask
 	overlays_standing[SUIT_LAYER] = wear_suit.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_wear_suit_str, default_icon = suit_sprite, default_layer = SUIT_LAYER, clip_mask = c_mask)
-
-						
 
 	apply_layer(SUIT_LAYER)
 
@@ -970,7 +952,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		overlays_standing[used_tail_layer] = tail_image
 		apply_layer(used_tail_layer)
 		return
-						  
 
 	var/species_tail = species.get_tail(src) // Species tail icon_state prefix.
 
@@ -1065,7 +1046,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	set_tail_state("[species.get_tail(src)]_static")
 
-																	   
 /mob/living/carbon/human/proc/update_wing_showing()
 	if(QDESTROYING(src))
 		return
@@ -1078,7 +1058,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		overlays_standing[WING_LAYER] = wing_image
 
 	apply_layer(WING_LAYER)
-					   
 
 /mob/living/carbon/human/update_modifier_visuals()
 	if(QDESTROYING(src))

@@ -23,8 +23,7 @@
 	var/noisy = FALSE					// Toggle audible hunger.
 	var/absorbing_prey = 0 				// Determines if the person is using the succubus drain or not. See station_special_abilities_vr.
 	var/drain_finalized = 0				// Determines if the succubus drain will be KO'd/absorbed. Can be toggled on at any time.
-	var/fuzzy = 1						// Preference toggle for sharp/fuzzy icon.
-	var/tail_alt = 0					// Tail layer toggle.
+	var/fuzzy = 0						// Preference toggle for sharp/fuzzy icon.
 	var/permit_healbelly = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = TRUE			// Mobs are pred by default.
@@ -48,6 +47,12 @@
 	M.vorePanel = new(M)
 	M.verbs += /mob/living/proc/insidePanel
 	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+
+	//Tries to load prefs if a client is present otherwise gives freebie stomach
+	spawn(2 SECONDS)
+		if(M)
+			M.init_vore()
 
 	//return TRUE to hook-caller
 	return TRUE
@@ -97,7 +102,6 @@
 		//Has to be aggressive grab, has to be living click-er and non-silicon grabbed
 		if(G.state >= GRAB_AGGRESSIVE && (isliving(user) && !issilicon(G.affecting)))
 			var/mob/living/attacker = user  // Typecast to living
-			G.affecting.init_vore()
 
 			// src is the mob clicked on and attempted predator
 
@@ -148,10 +152,6 @@
 		var/mob/living/attacker = user  // Typecast to living
 		if(is_vore_predator(src))
 			for(var/mob/living/M in H.contents)
-				M.init_vore()
-				if(!M.devourable)
-					to_chat(user, "<span class='notice'>[M] isn't able to be devoured.</span>")
-					return FALSE
 				if(attacker.eat_held_mob(attacker, M, src))
 					if(H.held_mob == M)
 						H.held_mob = null
@@ -290,6 +290,7 @@
 		vore_organs.Cut()
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
+			break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
 
 	return TRUE
 
@@ -852,6 +853,7 @@
 	set category = "Preferences"
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
+	fuzzy = !fuzzy
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()

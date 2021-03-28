@@ -21,6 +21,7 @@
 								  "Jelly Blob" = /mob/living/simple_mob/animal/space/jelly,
 								  "Wolf" = /mob/living/simple_mob/animal/wolf,
 								  "Sect Queen" = /mob/living/simple_mob/vore/sect_queen,
+								  "Sect Drone" = /mob/living/simple_mob/vore/sect_drone,
 								  "Defanged Xenomorph" = /mob/living/simple_mob/vore/xeno_defanged,
 								  )
 
@@ -37,7 +38,7 @@
 			break
 
 		if(choice)
-			finalized = alert(M, "Are you sure you want to play as [choice]?","Confirmation","No","Yes")
+			finalized = alert(M, "Are you sure you want to play as [choice]? By clicking yes you should expect to be treated as vore predator and possibly killed. Do not attack other players. You will have minimal OOC pref protections.","Confirmation","No","Yes")
 
 	if(randomize)
 		choice = pick(possible_mobs)
