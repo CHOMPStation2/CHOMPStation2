@@ -270,7 +270,7 @@
 	contraband = list(/obj/item/weapon/reagent_containers/glass/bottle/stoxin = 2)
 	req_log_access = access_cmo
 	has_logs = 1
-	
+
 /obj/machinery/vending/abductor
 	name = "Abduct-U"
 	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects."
@@ -292,9 +292,8 @@
 					/obj/item/device/flash = 2,
 					/obj/item/weapon/pen/reagent/paralysis = 4,
 					/obj/item/device/perfect_tele/alien = 1
-					)
 	vend_delay = 15
-
+	
 /obj/machinery/vending/loadout
 	name = "Fingers and Toes"
 	desc = "A special vendor for gloves and shoes!"
@@ -743,6 +742,7 @@
 					/obj/item/clothing/under/dress/maid = 5,
 					/obj/item/clothing/under/dress/maid/sexy = 5,
 					/obj/item/clothing/under/dress/maid/janitor = 5,
+					/obj/item/clothing/under/harness = 5, //CHOMP Edit: Added gear harness,
 					/obj/item/clothing/under/moderncoat = 5,
 					/obj/item/clothing/under/permit = 5,
 					/obj/item/clothing/under/oldwoman = 5,
@@ -1180,7 +1180,6 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -1267,7 +1266,6 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 100,
 					/obj/item/clothing/suit/storage/flannel/red = 100,
 					/obj/item/clothing/suit/unathi/robe = 100,
-					/obj/item/clothing/suit/storage/snowsuit = 100,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 100,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 100,
@@ -1807,6 +1805,7 @@
 					/obj/item/clothing/under/dress/maid = 5,
 					/obj/item/clothing/under/dress/maid/sexy = 5,
 					/obj/item/clothing/under/dress/maid/janitor = 5,
+					/obj/item/clothing/under/harness = 5, //CHOMP Edit: Added gear harness,
 					/obj/item/clothing/under/moderncoat = 5,
 					/obj/item/clothing/under/permit = 5,
 					/obj/item/clothing/under/oldwoman = 5,
@@ -1924,11 +1923,16 @@
 					/obj/item/clothing/under/rank/trek/command/ds9 = 5,
 					/obj/item/clothing/under/rank/trek/command/voy = 5,
 					/obj/item/clothing/under/rank/trek/command/ent = 5,
-					/obj/item/clothing/under/rank/trek/engsec = 5,
-					/obj/item/clothing/under/rank/trek/engsec/next = 5,
-					/obj/item/clothing/under/rank/trek/engsec/ds9 = 5,
-					/obj/item/clothing/under/rank/trek/engsec/voy = 5,
-					/obj/item/clothing/under/rank/trek/engsec/ent = 5,
+					/obj/item/clothing/under/rank/trek/eng = 5,
+					/obj/item/clothing/under/rank/trek/sec = 5,
+					/obj/item/clothing/under/rank/trek/eng/next = 5,
+					/obj/item/clothing/under/rank/trek/sec/next = 5,
+					/obj/item/clothing/under/rank/trek/eng/ds9 = 5,
+					/obj/item/clothing/under/rank/trek/sec/ds9 = 5,
+					/obj/item/clothing/under/rank/trek/eng/voy = 5,
+					/obj/item/clothing/under/rank/trek/sec/voy = 5,
+					/obj/item/clothing/under/rank/trek/eng/ent = 5,
+					/obj/item/clothing/under/rank/trek/sec/ent = 5,
 					/obj/item/clothing/under/rank/trek/medsci = 5,
 					/obj/item/clothing/under/rank/trek/medsci/next = 5,
 					/obj/item/clothing/under/rank/trek/medsci/ds9 = 5,
@@ -2164,7 +2168,6 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 5,
 					/obj/item/clothing/suit/storage/flannel/red = 5,
 					/obj/item/clothing/suit/unathi/robe = 5,
-					/obj/item/clothing/suit/storage/snowsuit = 5,
 					/obj/item/clothing/suit/storage/toggle/internalaffairs = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/bluejacket = 5,
 					/obj/item/clothing/suit/storage/toggle/lawyer/purpjacket = 5,
@@ -3202,3 +3205,80 @@
 					/obj/item/weapon/reagent_containers/food/snacks/xenomeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat = 10)
 	vend_delay = 15
+
+//TFF 19/12/19 - Brig version of a seed storage vendor
+/obj/machinery/seed_storage/brig
+	name = "Prisoners' food seed storage"
+	starting_seeds = list(
+		/obj/item/seeds/appleseed = 3,
+		/obj/item/seeds/bananaseed = 3,
+		/obj/item/seeds/berryseed = 3,
+		/obj/item/seeds/cabbageseed = 3,
+		/obj/item/seeds/carrotseed = 3,
+		/obj/item/seeds/celery = 3,
+		/obj/item/seeds/chantermycelium = 3,
+		/obj/item/seeds/cherryseed = 3,
+		/obj/item/seeds/chiliseed = 3,
+		/obj/item/seeds/cocoapodseed = 3,
+		/obj/item/seeds/cornseed = 3,
+		/obj/item/seeds/durian = 3,
+		/obj/item/seeds/eggplantseed = 3,
+		/obj/item/seeds/grapeseed = 3,
+		/obj/item/seeds/grassseed = 3,
+		/obj/item/seeds/replicapod = 3,
+		/obj/item/seeds/lavenderseed = 3,
+		/obj/item/seeds/lemonseed = 3,
+		/obj/item/seeds/lettuce = 3,
+		/obj/item/seeds/limeseed = 3,
+		/obj/item/seeds/mtearseed = 2,
+		/obj/item/seeds/orangeseed = 3,
+		/obj/item/seeds/onionseed = 3,
+		/obj/item/seeds/peanutseed = 3,
+		/obj/item/seeds/plumpmycelium = 3,
+		/obj/item/seeds/poppyseed = 3,
+		/obj/item/seeds/potatoseed = 3,
+		/obj/item/seeds/pumpkinseed = 3,
+		/obj/item/seeds/rhubarb = 3,
+		/obj/item/seeds/riceseed = 3,
+		/obj/item/seeds/rose = 3,
+		/obj/item/seeds/soyaseed = 3,
+		/obj/item/seeds/pineapple = 3,
+		/obj/item/seeds/sugarcaneseed = 3,
+		/obj/item/seeds/sunflowerseed = 3,
+		/obj/item/seeds/shandseed = 2,
+		/obj/item/seeds/tobaccoseed = 3,
+		/obj/item/seeds/tomatoseed = 3,
+		/obj/item/seeds/towermycelium = 3,
+		/obj/item/seeds/vanilla = 3,
+		/obj/item/seeds/watermelonseed = 3,
+		/obj/item/seeds/wheatseed = 3,
+		/obj/item/seeds/whitebeetseed = 3,
+		/obj/item/seeds/wabback = 2)
+
+/obj/machinery/vending/hydronutrients/brig
+	name = "Brig NutriMax"
+	desc = "A plant nutrients vendor. Seems some items aren't included."
+	products = list(/obj/item/weapon/reagent_containers/glass/bottle/eznutrient = 6,/obj/item/weapon/reagent_containers/glass/bottle/left4zed = 4,/obj/item/weapon/reagent_containers/glass/bottle/robustharvest = 3,/obj/item/weapon/plantspray/pests = 20,
+					/obj/item/weapon/reagent_containers/glass/beaker = 4,/obj/item/weapon/storage/bag/plants = 5)
+	premium = list(/obj/item/weapon/reagent_containers/glass/bottle/ammonia = 10,/obj/item/weapon/reagent_containers/glass/bottle/diethylamine = 5)
+
+/obj/machinery/vending/emergencyfood
+	name = "Food Cube Dispenser"
+	desc = "An ominous machine dispensing food cubes. It will keep you fed, but at what cost?"
+	icon = 'icons/obj/vending_vr.dmi'
+	icon_state = "foodcube"
+	product_ads = "Afraid to starve?;Starvation is not an option!;Add water before consumption.;Let me take care of you.;Dire circumstances call for food cubes, do not let the taste deter you."
+	products = list(/obj/item/weapon/storage/box/wings/tray = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 10)
+	contraband = list(/obj/item/weapon/storage/box/wings/tray = 5)
+
+/obj/machinery/vending/emergencyfood/filled
+	products = list(/obj/item/weapon/storage/box/wings/tray = 40)
+	contraband = list(/obj/item/weapon/storage/box/wings/tray = 20)
+
+/obj/machinery/vending/cola
+	icon_state = "Soda_Machine"
+
+/obj/machinery/vending/cola/soft
+	icon = 'icons/obj/vending_vr.dmi'
+	icon_state = "Cola_Machine"
