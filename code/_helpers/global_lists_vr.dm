@@ -223,16 +223,10 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/fancy/crayons,
 				/obj/item/weapon/storage/fancy/egg_box,
 				/obj/item/weapon/storage/wallet,
-<<<<<<< HEAD
         			/obj/item/weapon/storage/vore_egg,
-				/obj/item/weapon/material/kitchen) //chompstation addition
-||||||| parent of 2664382e67... Merge pull request #9976 from H0lySquirr3l/master
-				/obj/item/weapon/storage/vore_egg)
-=======
-				/obj/item/weapon/storage/vore_egg,
+				/obj/item/weapon/material/kitchen, //chompstation addition
 				/obj/item/weapon/bikehorn/tinytether
 				)
->>>>>>> 2664382e67... Merge pull request #9976 from H0lySquirr3l/master
 
 var/global/list/contamination_flavors = list(
 				"Generic" = contamination_flavors_generic,
