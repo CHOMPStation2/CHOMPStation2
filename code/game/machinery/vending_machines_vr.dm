@@ -292,6 +292,7 @@
 					/obj/item/device/flash = 2,
 					/obj/item/weapon/pen/reagent/paralysis = 4,
 					/obj/item/device/perfect_tele/alien = 1
+					)
 	vend_delay = 15
 	
 /obj/machinery/vending/loadout
