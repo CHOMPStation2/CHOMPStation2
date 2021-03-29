@@ -264,16 +264,6 @@
 	. = ..()
 	desc = "A small card designating affiliation with the Ironcrest Transport Group. It has a NanoTrasen insignia and a lot of very small print on the back to do with practices and regulations for contractors to use."
 
-<<<<<<< HEAD
-/obj/item/weapon/card/id/event/altcard/pinkgold
-	icon_state = "pinkGold"
-	item_state = "pinkGold_id"
-||||||| parent of fc0ed975c5... Merge pull request #10029 from Very-Soft/morealtids
-/obj/item/weapon/card/id/event/altcard/pinkgold
-	icon_state = "pinkGold"
-	item_state = "pinkGold_id"
-
-=======
 
 /obj/item/weapon/card/id/event/polymorphic/itg
 	icon = 'icons/obj/card_vr.dmi'
@@ -281,4 +271,3 @@
 	icon_state = "itg"
 	name = "\improper ITG identification card"
 	desc = "A small card designating affiliation with the Ironcrest Transport Group. It has a NanoTrasen insignia and a lot of very small print on the back to do with practices and regulations for contractors to use."
->>>>>>> fc0ed975c5... Merge pull request #10029 from Very-Soft/morealtids
