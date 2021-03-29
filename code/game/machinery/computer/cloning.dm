@@ -380,7 +380,7 @@
 		return
 	if(isnull(subject) || (!(ishuman(subject))) || (!subject.dna))
 		if(isalien(subject))
-			set_scan_temp("Xenomorphs are not scannable.", "bad")
+			set_scan_temp("Genaprawns are not scannable.", "bad") //CHOMPedit
 			SStgui.update_uis(src)
 			return
 		// can add more conditions for specific non-human messages here
