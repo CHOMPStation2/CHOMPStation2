@@ -371,8 +371,7 @@ var/global/datum/controller/occupations/job_master
 			if(istype(S, /obj/effect/landmark/start) && istype(S.loc, /turf))
 				H.forceMove(S.loc)
 			else
-				var/list/spawn_props = LateSpawn(H.client, rank)
-				var/turf/T = spawn_props["turf"]
+				var/turf/T = get_turf(pick(latejoin))
 				if(!T)
 					to_chat(H, "<span class='critical'>You were unable to be spawned at your chosen late-join spawnpoint. Please verify your job/spawn point combination makes sense, and try another one.</span>")
 					return
@@ -387,14 +386,14 @@ var/global/datum/controller/occupations/job_master
 		if(job)
 
 			//Equip custom gear loadout.
-			var/list/custom_equip_slots = list() //If more than one item takes the same slot, all after the first one spawn in storage.
+			var/list/custom_equip_slots = list()
 			var/list/custom_equip_leftovers = list()
 			if(H.client.prefs.gear && H.client.prefs.gear.len && !(job.mob_type & JOB_SILICON))
 				for(var/thing in H.client.prefs.gear)
 					var/datum/gear/G = gear_datums[thing]
 					if(!G) //Not a real gear datum (maybe removed, as this is loaded from their savefile)
 						continue
-					
+
 					var/permitted
 					// Check if it is restricted to certain roles
 					if(G.allowed_roles)
@@ -415,19 +414,20 @@ var/global/datum/controller/occupations/job_master
 
 					// Implants get special treatment
 					if(G.slot == "implant")
-						var/obj/item/weapon/implant/I = G.spawn_item(H)
+						var/obj/item/weapon/implant/I = G.spawn_item(H, H.client.prefs.gear[G.display_name])
 						I.invisibility = 100
 						I.implant_loadout(H)
 						continue
 
-					// Try desperately (and sorta poorly) to equip the item
+					// Try desperately (and sorta poorly) to equip the item. Now with increased desperation!
 					if(G.slot && !(G.slot in custom_equip_slots))
 						var/metadata = H.client.prefs.gear[G.display_name]
 						if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
 							custom_equip_leftovers += thing
 						else if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
 							to_chat(H, "<span class='notice'>Equipping you with \the [thing]!</span>")
-							custom_equip_slots.Add(G.slot)
+							if(G.slot != slot_tie)
+								custom_equip_slots.Add(G.slot)
 						else
 							custom_equip_leftovers.Add(thing)
 					else
@@ -435,13 +435,13 @@ var/global/datum/controller/occupations/job_master
 
 			// Set up their account
 			job.setup_account(H)
-			
+
 			// Equip job items.
 			job.equip(H, H.mind ? H.mind.role_alt_title : "")
-			
+
 			// Stick their fingerprints on literally everything
 			job.apply_fingerprints(H)
-			
+
 			// Only non-silicons get post-job-equip equipment
 			if(!(job.mob_type & JOB_SILICON))
 				H.equip_post_job()
@@ -487,11 +487,11 @@ var/global/datum/controller/occupations/job_master
 				return H.Robotize()
 			if(job.mob_type & JOB_SILICON_AI)
 				return H
-			
+
 			// TWEET PEEP
-			if(rank == "Colony Director")
+			if(rank == "Site Manager")
 				var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP) ? null : sound('sound/misc/boatswain.ogg', volume=20)
-				captain_announcement.Announce("All hands, [alt_title ? alt_title : "Colony Director"] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
+				captain_announcement.Announce("All hands, [alt_title ? alt_title : "Site Manager"] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
 
 			//Deferred item spawning.
 			if(spawn_in_storage && spawn_in_storage.len)
@@ -510,21 +510,23 @@ var/global/datum/controller/occupations/job_master
 					to_chat(H, "<span class='danger'>Failed to locate a storage object on your mob, either you spawned with no arms and no backpack or this is a bug.</span>")
 
 		if(istype(H)) //give humans wheelchairs, if they need them.
-			var/obj/item/organ/external/l_foot = H.get_organ("l_foot")
-			var/obj/item/organ/external/r_foot = H.get_organ("r_foot")
-			var/obj/item/weapon/storage/S = locate() in H.contents
-			var/obj/item/wheelchair/R = null
-			if(S)
-				R = locate() in S.contents
-			if(!l_foot || !r_foot || R)
-				var/obj/structure/bed/chair/wheelchair/W = new /obj/structure/bed/chair/wheelchair(H.loc)
-				W.buckle_mob(H)
-				H.update_canmove()
-				W.set_dir(H.dir)
-				W.add_fingerprint(H)
-				if(R)
-					W.color = R.color
-					qdel(R)
+			if(istype(H.loc, /obj/belly)) //CHOMPedit start unless in a gut
+				var/obj/item/organ/external/l_foot = H.get_organ("l_foot")
+				var/obj/item/organ/external/r_foot = H.get_organ("r_foot")
+				var/obj/item/weapon/storage/S = locate() in H.contents
+				var/obj/item/wheelchair/R 
+				if(S)
+					R = locate() in S.contents
+				if(!l_foot || !r_foot || R)
+					var/wheelchair_type = R?.unfolded_type || /obj/structure/bed/chair/wheelchair
+					var/obj/structure/bed/chair/wheelchair/W = new wheelchair_type(H.loc)
+					W.buckle_mob(H)
+					H.update_canmove()
+					W.set_dir(H.dir)
+					W.add_fingerprint(H)
+					if(R)
+						W.color = R.color
+						qdel(R) //CHOMPedit end
 
 		to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
 
@@ -540,6 +542,8 @@ var/global/datum/controller/occupations/job_master
 		// EMAIL GENERATION
 		// Email addresses will be created under this domain name. Mostly for the looks.
 		var/domain = "freemail.nt"
+		if(using_map && LAZYLEN(using_map.usable_email_tlds))
+			domain = using_map.usable_email_tlds[1]
 		var/sanitized_name = sanitize(replacetext(replacetext(lowertext(H.real_name), " ", "."), "'", ""))
 		var/complete_login = "[sanitized_name]@[domain]"
 
@@ -646,24 +650,90 @@ var/global/datum/controller/occupations/job_master
 
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
+	var/obj/belly/vore_spawn_gut
 
 	var/datum/job/J = SSjob.get_job(rank)
 	fail_deadly = J?.offmap_spawn
 
 	//Spawn them at their preferred one
 	if(C && C.prefs.spawnpoint)
-		if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
-			if(fail_deadly)
-				to_chat(C, "<span class='warning'>Your chosen spawnpoint is unavailable for this map and your job requires a specific spawnpoint. Please correct your spawn point choice.</span>")
-				return
+		if(C.prefs.spawnpoint == "Vore Belly")
+			var/list/preds = list()
+			var/list/pred_names = list() //This is cringe
+			for(var/client/V in GLOB.clients)
+				if(!isliving(V.mob))
+					continue
+				var/mob/living/M = V.mob
+				if(M.stat == UNCONSCIOUS || M.stat == DEAD || M.client.is_afk(10 MINUTES))
+					continue
+				if(!M.latejoin_vore)
+					continue
+				if(!(M.z in using_map.vorespawn_levels))
+					continue
+				preds += M
+				pred_names += M.real_name //very cringe
+
+			if(preds.len)
+				var/pred_name = input(C, "Choose a Predator.", "Pred Spawnpoint") as null|anything in pred_names
+				if(!pred_name)
+					return
+				var/index = pred_names.Find(pred_name)
+				var/mob/living/pred = preds[index]
+				var/list/available_bellies = list()
+				for(var/obj/belly/Y in pred.vore_organs)
+					if(Y.vorespawn_blacklist)
+						continue
+					available_bellies += Y
+				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
+				if(backup == "Yes")
+					backup = 1
+				vore_spawn_gut = input(C, "Choose a Belly.", "Belly Spawnpoint") as null|anything in available_bellies
+				if(!vore_spawn_gut)
+					return
+				to_chat(C, "<span class='warning'>[pred] has received your spawn request. Please wait.</span>")
+				log_admin("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
+				message_admins("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
+
+				var/confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+				if(confirm != "Yes")
+					to_chat(C, "<span class='warning'>[pred] has declined your spawn request.</span>")
+					return
+				if(!vore_spawn_gut || QDELETED(vore_spawn_gut))
+					to_chat(C, "<span class='warning'>Somehow, the belly you were trying to enter no longer exists.</span>")
+					return
+				if(pred.stat == UNCONSCIOUS || pred.stat == DEAD)
+					to_chat(C, "<span class='warning'>[pred] is not conscious.</span>")
+					to_chat(pred, "<span class='warning'>You must be conscious to accept.</span>")
+					return
+				if(!(pred.z in using_map.vorespawn_levels))
+					to_chat(C, "<span class='warning'>[pred] is no longer in station grounds.</span>")
+					to_chat(pred, "<span class='warning'>You must be within station grounds to accept.</span>")
+					return
+				if(backup)
+					addtimer(CALLBACK(src, .proc/m_backup_client, C), 5 SECONDS)
+				log_admin("[key_name(C)] has vore spawned into [key_name(pred)]")
+				message_admins("[key_name(C)] has vore spawned into [key_name(pred)]")
+				to_chat(C, "<span class='notice'>You have been spawned via vore. You are free to roleplay how you got there as you please, such as teleportation or having had already been there.</span>")
+				to_chat(pred, "<span class='notice'>Your prey has spawned via vore. You are free to roleplay this how you please, such as teleportation or having had already been there.</span>")
 			else
-				to_chat(C, "<span class='warning'>Your chosen spawnpoint ([C.prefs.spawnpoint]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead.</span>")
-				spawnpos = null
-		else
+				to_chat(C, "<span class='warning'>No predators were available to accept you.</span>")
+				return
 			spawnpos = spawntypes[C.prefs.spawnpoint]
+		else
+			if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
+				if(fail_deadly)
+					to_chat(C, "<span class='warning'>Your chosen spawnpoint is unavailable for this map and your job requires a specific spawnpoint. Please correct your spawn point choice.</span>")
+					return
+				else
+					to_chat(C, "<span class='warning'>Your chosen spawnpoint ([C.prefs.spawnpoint]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead.</span>")
+					spawnpos = null
+			else
+				spawnpos = spawntypes[C.prefs.spawnpoint]
 
 	//We will return a list key'd by "turf" and "msg"
-	. = list("turf","msg")
+	. = list("turf","msg", "voreny")
+	if(vore_spawn_gut)
+		.["voreny"] = vore_spawn_gut
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
@@ -676,8 +746,14 @@ var/global/datum/controller/occupations/job_master
 			to_chat(C, "Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.")
 			var/spawning = pick(latejoin)
 			.["turf"] = get_turf(spawning)
-			.["msg"] = "will arrive at the station shortly"  //VOREStation Edit - Grammar but mostly 'shuttle' reference removal, and this also applies to notified spawn-character verb use
+			.["msg"] = "will arrive at the station shortly"
 	else if(!fail_deadly)
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)
 		.["msg"] = "has arrived on the station"
+
+/datum/controller/occupations/proc/m_backup_client(var/client/C)	//Same as m_backup, but takes a client entry. Used for vore late joining.
+	if(!ishuman(C.mob))
+		return
+	var/mob/living/carbon/human/CM = C.mob
+	SStranscore.m_backup(CM.mind, CM.nif, TRUE)

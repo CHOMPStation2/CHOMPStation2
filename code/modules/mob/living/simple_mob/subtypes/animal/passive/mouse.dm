@@ -7,9 +7,12 @@
 	item_state = "mouse_gray"
 	icon_living = "mouse_gray"
 	icon_dead = "mouse_gray_dead"
+	kitchen_tag = "rodent"
 
 	maxHealth = 5
 	health = 5
+	melee_damage_lower = 1
+	melee_damage_upper = 3
 
 	movement_cooldown = 1.5
 
@@ -36,6 +39,10 @@
 	say_list_type = /datum/say_list/mouse
 
 	var/body_color //brown, gray and white, leave blank for random
+	
+	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
+	can_be_drop_prey = TRUE
+	can_be_drop_pred = FALSE
 
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()

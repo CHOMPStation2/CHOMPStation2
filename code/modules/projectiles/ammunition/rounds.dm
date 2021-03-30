@@ -131,6 +131,7 @@
 	desc = "A .45 Armor-Piercing bullet casing."
 	icon_state = "r-casing"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium/ap
+	matter = list(DEFAULT_WALL_MATERIAL = 50, MAT_PLASTEEL = 25)
 
 /obj/item/ammo_casing/a45/practice
 	desc = "A .45 practice bullet casing."
@@ -160,6 +161,7 @@
 /obj/item/ammo_casing/a45/hp
 	desc = "A .45 hollow-point bullet casing."
 	projectile_type = /obj/item/projectile/bullet/pistol/medium/hp
+	matter = list(DEFAULT_WALL_MATERIAL = 60, MAT_PLASTIC = 15)
 
 /*
  * 10mm
@@ -246,6 +248,14 @@
 //	projectile_type = /obj/item/projectile/bullet/shotgun/ion
 	matter = list(DEFAULT_WALL_MATERIAL = 360, "uranium" = 240)
 
+/obj/item/ammo_casing/a12g/flechette
+	name = "shotgun flechette"
+	desc = "A 12 gauge flechette cartidge, also known as nailshot."
+	icon_state = "slshell"
+	caliber = "12g"
+	projectile_type = /obj/item/projectile/scatter/flechette
+	matter = list(DEFAULT_WALL_MATERIAL = 360, MAT_PLASTEEL = 100)
+
 /*
  * 7.62mm
  */
@@ -290,14 +300,15 @@
 	icon_state = "lcasing"
 	caliber = "14.5mm"
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
-	matter = list(DEFAULT_WALL_MATERIAL = 1250)
+	matter = list(MAT_TITANIUM = 2500, MAT_URANIUM = 1000, MAT_PLASTEEL = 1500)
 
 /obj/item/ammo_casing/a145/highvel
 	desc = "A 14.5mm sabot shell."
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
+	matter = list(MAT_TITANIUM = 2500, MAT_PLASTEEL = 1500)
 
 /obj/item/ammo_casing/a145/spent/Initialize()
-	..()
+	. = ..()
 	expend()
 
 /*
@@ -359,7 +370,7 @@
 	name = "rocket shell"
 	desc = "A high explosive designed to be fired from a launcher."
 	icon_state = "rocketshell"
-	projectile_type = /obj/item/missile
+	projectile_type = /obj/item/projectile/bullet/srmrocket
 	caliber = "rocket"
 	matter = list(DEFAULT_WALL_MATERIAL = 10000)
 

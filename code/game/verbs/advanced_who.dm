@@ -1,4 +1,5 @@
 
+/* YW EDIT START
 /client/verb/who_advanced()
 	set name = "Advanced Who"
 	set category = "OOC"
@@ -85,6 +86,7 @@
 				entry += " - <span class='blue'>In Lobby</span><br>"
 			else
 				entry += " - <span class='green'>Playing</span><br>"
+
 			Lines += entry
 
 	msg += "<table>"
@@ -94,3 +96,4 @@
 	msg += "<b>Total Players: [length(Lines)]</b>"
 	msg = "<span class='filter_info'>" + msg + "</span>"
 	to_chat(src, msg)
+YW EDIT STOP*/

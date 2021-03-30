@@ -8,14 +8,11 @@
 	desc = "It's a g-g-g-g-ghooooost!" //jinkies!
 	icon = 'icons/mob/ghost.dmi'
 	icon_state = "ghost"
-	layer = BELOW_MOB_LAYER
-	plane = PLANE_GHOSTS
-	alpha = 127
 	stat = DEAD
 	canmove = 0
 	blinded = 0
 	anchored = 1	//  don't get pushed around
-	invisibility = INVISIBILITY_OBSERVER
+
 	var/can_reenter_corpse
 	var/datum/hud/living/carbon/hud = null // hud
 	var/bootime = 0
@@ -24,6 +21,7 @@
 							//Note that this is not a reliable way to determine if admins started as observers, since they change mobs a lot.
 	var/has_enabled_antagHUD = 0
 	var/medHUD = 0
+	var/secHUD = 0
 	var/antagHUD = 0
 	universal_speak = 1
 	var/atom/movable/following = null
@@ -89,27 +87,22 @@
 	var/cleanup_timer // Refernece to a timer that will delete this mob if no client returns
 
 /mob/observer/dead/New(mob/body)
+
+	appearance = body
+	invisibility = INVISIBILITY_OBSERVER
+	layer = BELOW_MOB_LAYER
+	plane = PLANE_GHOSTS
+	alpha = 127
+
 	sight |= SEE_TURFS | SEE_MOBS | SEE_OBJS | SEE_SELF
 	see_invisible = SEE_INVISIBLE_OBSERVER
 	see_in_dark = world.view //I mean. I don't even know if byond has occlusion culling... but...
-	plane = PLANE_GHOSTS //Why doesn't the var above work...???
 	verbs += /mob/observer/dead/proc/dead_tele
 
 	var/turf/T
 	if(ismob(body))
 		T = get_turf(body)				//Where is the body located?
 		attack_log = body.attack_log	//preserve our attack logs by copying them to our ghost
-
-		if (ishuman(body))
-			var/mob/living/carbon/human/H = body
-			icon = H.icon
-			icon_state = H.icon_state
-			add_overlay(H.overlays_standing) //All our equipment sprites
-		else
-			icon = body.icon
-			icon_state = body.icon_state
-			add_overlay(body.overlays)
-
 		gender = body.gender
 		if(body.mind && body.mind.name)
 			name = body.mind.name
@@ -123,6 +116,12 @@
 					name = capitalize(pick(first_names_female)) + " " + capitalize(pick(last_names))
 
 		mind = body.mind	//we don't transfer the mind but we keep a reference to it.
+
+		// Fix for naked ghosts.
+		// Unclear why this isn't being grabbed by appearance.
+		if(ishuman(body))
+			var/mob/living/carbon/human/H = body
+			add_overlay(H.overlays_standing)
 
 	if(!T)	T = pick(latejoin)			//Safety in case we cannot find the body's position
 	forceMove(T)
@@ -295,6 +294,19 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	plane_holder.set_vis(VIS_CH_HEALTH, medHUD)
 	plane_holder.set_vis(VIS_CH_STATUS_OOC, medHUD)
 	to_chat(src, "<font color='blue'><B>Medical HUD [medHUD ? "Enabled" : "Disabled"]</B></font>")
+
+/mob/observer/dead/verb/toggle_secHUD()
+	set category = "Ghost"
+	set name = "Toggle Security HUD"
+	set desc = "Toggles Security HUD allowing you to see people's displayed ID's job, wanted status, etc"
+
+	secHUD = !secHUD
+	plane_holder.set_vis(VIS_CH_ID, secHUD)
+	plane_holder.set_vis(VIS_CH_WANTED, secHUD)
+	plane_holder.set_vis(VIS_CH_IMPTRACK, secHUD)
+	plane_holder.set_vis(VIS_CH_IMPLOYAL, secHUD)
+	plane_holder.set_vis(VIS_CH_IMPCHEM, secHUD)
+	to_chat(src, "<font color='blue'><B>Security HUD [secHUD ? "Enabled" : "Disabled"]</B></font>")
 
 /mob/observer/dead/verb/toggle_antagHUD()
 	set category = "Ghost"
@@ -558,7 +570,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, "<span class='warning'>You may only spawn again as a mouse more than [mouse_respawn_time] minutes after your death. You have [timedifference_text] left.</span>")
 		return
 
-	var/response = alert(src, "Are you -sure- you want to become a mouse?","Are you sure you want to squeek?","Squeek!","Nope!")
+	var/response = alert(src, "Are you -sure- you want to become a mouse? You will have no rights or OOC protections.","Are you sure you want to squeek? You will have no rights or OOC protections.","Squeek!","Nope!")
 	if(response != "Squeek!") return  //Hit the wrong key...again.
 
 
@@ -899,3 +911,8 @@ mob/observer/dead/MayRespawn(var/feedback = 0)
 	to_chat(src, "<span class='ghostalert'><a href=?src=[REF(src)];reenter=1>(Click to re-enter)</a></span>")
 	if(sound)
 		SEND_SOUND(src, sound(sound))
+
+/mob/observer/dead/verb/respawn()
+	set name = "Respawn"
+	set category = "Ghost"
+	src.abandon_mob()

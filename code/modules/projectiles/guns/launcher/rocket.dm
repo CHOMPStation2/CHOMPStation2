@@ -3,7 +3,7 @@
 	desc = "MAGGOT."
 	icon_state = "rocket"
 	item_state = "rocket"
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	throw_speed = 2
 	throw_range = 10
 	force = 5.0
@@ -35,10 +35,8 @@
 /obj/item/weapon/gun/launcher/rocket/consume_next_projectile()
 	if(rockets.len)
 		var/obj/item/ammo_casing/rocket/I = rockets[1]
-		var/obj/item/missile/M = new (src)
-		M.primed = 1
 		rockets -= I
-		return M
+		return
 	return null
 
 /obj/item/weapon/gun/launcher/rocket/handle_post_fire(mob/user, atom/target)

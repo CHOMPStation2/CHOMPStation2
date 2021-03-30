@@ -1,3 +1,6 @@
+#define ORGANICS	1
+#define SYNTHETICS	2
+
 /datum/trait/speed_fast
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
@@ -100,6 +103,12 @@
 	cost = 2
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing))
 
+/datum/trait/fangs
+	name = "Numbing Fangs"
+	desc = "Provides fangs that makes the person bit unable to feel their body or pain."
+	cost = 1
+	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
+
 /datum/trait/minor_brute_resist
 	name = "Minor Brute Resist"
 	desc = "Adds 10% resistance to brute damage sources."
@@ -159,13 +168,13 @@
 	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed. You may wish to note this down in your medical records."
 	cost = 2
 	var_changes = list("alcohol_mod" = 0.25)
-	
+
 /datum/trait/pain_tolerance_basic
 	name = "Pain Tolerant"
 	desc = "You're a little more resistant to pain than most, and experience 10% less pain from from all sources."
 	cost = 1
 	var_changes = list("pain_mod" = 0.9)
-	
+
 /datum/trait/pain_tolerance_advanced
 	name = "High Pain Tolerance"
 	desc = "You are noticeably more resistant to pain than most, and experience 20% less pain from all sources."
@@ -225,7 +234,7 @@
 	name = "Evolved Bloodsucker"
 	desc = "Makes you able to gain nutrition by draining blood as well as eating food. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 1
-	var_changes = list("gets_food_nutrition" = 0.5) // Hopefully this works???
+	var_changes = list("organic_food_coeff" = 0.5) // Hopefully this works???
 	excludes = list(/datum/trait/bloodsucker)
 
 /datum/trait/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -247,13 +256,15 @@
 	cost = 2
 	var_changes = list("cold_level_1" = 200,  "cold_level_2" = 150, "cold_level_3" = 90, "breath_cold_level_1" = 180, "breath_cold_level_2" = 100, "breath_cold_level_3" = 60, "cold_discomfort_level" = 210, "heat_level_1" = 305, "heat_level_2" = 360, "heat_level_3" = 700, "breath_heat_level_1" = 345, "breath_heat_level_2" = 380, "breath_heat_level_3" = 780, "heat_discomfort_level" = 295)
 	excludes = list(/datum/trait/hotadapt)
-	
+	can_take = ORGANICS // CHOMP edit
+
 /datum/trait/hotadapt
 	name = "Heat-Adapted"
 	desc = "You are able to withstand much hotter temperatures than other species, and can even be comfortable in extremely hot environments. You are also more vulnerable to cold environments as a consequence of these adaptations."
 	cost = 2
 	var_changes = list("heat_level_1" = 420, "heat_level_2" = 460, "heat_level_3" = 1100, "breath_heat_level_1" = 440, "breath_heat_level_2" = 510, "breath_heat_level_3" = 1500, "heat_discomfort_level" = 390, "cold_level_1" = 280, "cold_level_2" = 220, "cold_level_3" = 140, "breath_cold_level_1" = 260, "breath_cold_level_2" = 240, "breath_cold_level_3" = 120, "cold_discomfort_level" = 280)
 	excludes = list(/datum/trait/coldadapt)
+	can_take = ORGANICS // CHOMP edit
 // YW Addition end
 
 /datum/trait/snowwalker
@@ -261,3 +272,17 @@
 	desc = "You are able to move unhindered on snow."
 	cost = 2 //YW EDIT
 	var_changes = list("snow_movement" = -2)
+
+/datum/trait/weaver
+	name = "Weaver"
+	desc = "You can produce silk and create various articles of clothing and objects."
+	cost = 2
+	var_changes = list("is_weaver" = 1)
+
+/datum/trait/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.verbs |= /mob/living/carbon/human/proc/check_silk_amount
+	H.verbs |= /mob/living/carbon/human/proc/toggle_silk_production
+	H.verbs |= /mob/living/carbon/human/proc/weave_structure
+	H.verbs |= /mob/living/carbon/human/proc/weave_item
+	H.verbs |= /mob/living/carbon/human/proc/set_silk_color

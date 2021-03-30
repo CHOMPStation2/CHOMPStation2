@@ -81,7 +81,7 @@
 	item_state = "arifle"
 	wielded_item_state = "arifle-wielded"
 	item_state = null
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "5.45mm"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)
@@ -139,7 +139,7 @@
 	icon_state = "carbine" // This isn't a carbine. :T
 	item_state = "z8carbine"
 	wielded_item_state = "z8carbine-wielded"
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "7.62mm"
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 3)
@@ -213,7 +213,7 @@
 	icon_state = "l6closed100"
 	item_state = "l6closed"
 	wielded_item_state = "genericLMG-wielded"
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	slot_flags = 0
 	max_shells = 50
@@ -296,7 +296,7 @@
 	icon_state = "ashot"
 	item_state = null
 	wielded_item_state = "woodarifle-wielded" //Placeholder
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "12g"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 4)

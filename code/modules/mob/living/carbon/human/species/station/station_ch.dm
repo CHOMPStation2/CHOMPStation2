@@ -2,7 +2,7 @@
 //Note that at the time of this PR we are simply disabling everything new to discuss keeping versus scrapping later.
 
 ///datum/species/zaddat
-//	spawn_flags = SPECIES_IS_RESTRICTED
+//	spawn_flags = SPECIES_IS_RESTRICTED //Species has been enabled elsewhere.
 
 ///datum/species/crew_shadekin
 //	spawn_flags = SPECIES_IS_RESTRICTED
@@ -13,8 +13,8 @@
 /datum/species/human/spacer
 	spawn_flags = SPECIES_IS_RESTRICTED
 
-/datum/species/alraune
-	spawn_flags = SPECIES_IS_RESTRICTED
+///datum/species/alraune
+//	spawn_flags = SPECIES_IS_RESTRICTED //Species has been enabled, keeping this here for reference.
 
 ///datum/species/werebeast
 //	spawn_flags = SPECIES_IS_RESTRICTED
@@ -23,7 +23,7 @@
 	spawn_flags = SPECIES_IS_RESTRICTED
 
 /datum/species/shadekin
-	spawn_flags = SPECIES_IS_RESTRICTED
+	//spawn_flags = SPECIES_IS_RESTRICTED
 
 //datum/species/protean
 //	spawn_flags = SPECIES_IS_RESTRICTED

@@ -293,7 +293,7 @@
 
 /obj/machinery/sleeper/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
-		return
+		return TRUE
 	if(!controls_inside && usr == occupant)
 		return
 	if(panel_open)
@@ -529,5 +529,5 @@
 	stasis_level = 100 //Just one setting
 
 /obj/machinery/sleeper/survival_pod/Initialize()
-	..()
+	. = ..()
 	RefreshParts(1)

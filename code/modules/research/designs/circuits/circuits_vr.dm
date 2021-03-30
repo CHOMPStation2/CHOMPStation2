@@ -27,6 +27,7 @@
 	sort_string = "HABAH"
 
 //////Micro mech stuff
+/* //CHOMPedit commented micromech stuff, because fuck this trash
 /datum/design/circuit/mecha/gopher_main
 	name = "'Gopher' central control"
 	id = "gopher_main"
@@ -79,7 +80,7 @@
 	id = "weasel_targ"
 	req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
 	build_path = /obj/item/weapon/circuitboard/mecha/weasel/targeting
-	sort_string = "NAAGC"
+	sort_string = "NAAGC" */
 
 /datum/design/circuit/transhuman_clonepod
 	name = "grower pod"

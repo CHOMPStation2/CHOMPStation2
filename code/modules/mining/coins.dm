@@ -13,6 +13,7 @@
 	var/string_attached
 	var/sides = 2
 	drop_sound = 'sound/items/drop/ring.ogg'
+	pickup_sound = 'sound/items/pickup/ring.ogg'
 
 /obj/item/weapon/coin/New()
 	randpixel_xy()
@@ -44,6 +45,18 @@
 /obj/item/weapon/coin/platinum
 	name = "platinum coin"
 	icon_state = "coin_adamantine"
+
+/obj/item/weapon/coin/morphium
+	name = "morphium coin"
+	icon_state = "coin_morphium"
+
+/obj/item/weapon/coin/aluminium
+	name = "aluminium coin"
+	icon_state = "coin_aluminium"
+
+/obj/item/weapon/coin/verdantium
+	name = "verdantium coin"
+	icon_state = "coin_verdantium"
 
 /obj/item/weapon/coin/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/stack/cable_coil))

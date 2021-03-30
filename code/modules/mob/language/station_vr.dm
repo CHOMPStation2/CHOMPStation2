@@ -101,7 +101,7 @@
 	colour = "changeling"
 	key = "M"
 	machine_understands = FALSE
-	flags = WHITELISTED | HIVEMIND
+	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark
 
 /datum/language/slavic
 	name = LANGUAGE_SLAVIC
@@ -119,6 +119,20 @@
 		"ver", "stv", "pro", "ski"
 	)
 
+/datum/language/clownish
+	name = LANGUAGE_CLOWNISH
+	desc = "A special elective language course for those studying at the Clown Planet Institute."
+	speech_verb = "honks"
+	ask_verb = "seins"
+	exclaim_verb = "crenks"
+	whisper_verb = "squeaks"
+	colour = "#F785F2" // Pink for the clown.
+	key = "<"
+	flags = WHITELISTED | CLOWN
+	syllables = list(
+		"honk", "knock", "salt", "slip", "lube", "banana", "flower", "pie", "did you hear", "🅱️", "haha", "bully", "going up",
+	)
+
 /datum/language/drudakar
 	name = LANGUAGE_DRUDAKAR
 	desc = "The native language of the D'Rudak'Ar, a loosely tied together community of dragons and demi-dragons based in the Diul system. Features include many hard consonants and rolling 'r's."
@@ -134,13 +148,23 @@
 		"roar", "hyaa", "ma", "ha", "ya", "shi", "yo", "go"
 	)
 
+/datum/language/spacer
+	name = LANGUAGE_SPACER
+	desc = "A rough pidgin-language comprised of Tradeband, Gutter, and Sol Common used by various space-born communities unique to Humanity."
+	key = "J"
+	syllables = list(
+		"ada", "zir", "bian", "ach", "usk", "ado", "ich", "cuan", "iga", "qing", "le", "que", "ki", "qaf", "dei", "eta"
+	)
+	colour = "spacer"
+	machine_understands = TRUE
+
 /datum/language/unathi
 	flags = 0
 /datum/language/tajaran
 	flags = 0
 /datum/language/skrell
 	flags = 0
-/datum/language/seromi
+/datum/language/teshari
 	flags = 0
 /datum/language/zaddat
 	flags = 0
@@ -148,6 +172,8 @@
 	flags = 0
 /datum/language/gutter
 	machine_understands = FALSE
+	desc = "A dialect of Tradeband not uncommon amongst traders in the Free Trade Union. The language is often difficult to translate due to changing frequently and being highly colloquial."
+	partial_understanding = list(LANGUAGE_TRADEBAND = 30, LANGUAGE_SOL_COMMON = 10)
 /datum/language/human/monkey
 	flags = RESTRICTED
 /datum/language/skrell/monkey

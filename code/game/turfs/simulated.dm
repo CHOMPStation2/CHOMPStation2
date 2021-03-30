@@ -82,8 +82,9 @@
 		return
 
 	if (istype(A,/mob/living))
+		var/dirtslip = FALSE	//CHOMPEdit
 		var/mob/living/M = A
-		if(M.lying)
+		if(M.lying || M.flying) //VOREStation Edit
 			return ..()
 
 		if(M.dirties_floor())
@@ -92,6 +93,12 @@
 
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
+			//CHOMPEdit Begin
+			dirtslip = H.species.dirtslip
+			if(H.species.mudking)
+				dirt = min(dirt+2, 101)
+				update_dirt()
+			//CHOMPEdit End
 			// Tracking blood
 			var/list/bloodDNA = null
 			var/bloodcolor=""
@@ -117,7 +124,7 @@
 
 				bloodDNA = null
 
-		if(src.wet)
+		if(src.wet || (dirtslip && (dirt > 50 || outdoors)))	//CHOMPEdit
 
 			if(M.buckled || (src.wet == 1 && M.m_intent == "walk"))
 				return
@@ -125,7 +132,14 @@
 			var/slip_dist = 1
 			var/slip_stun = 6
 			var/floor_type = "wet"
-
+			//CHOMPEdit Begin
+			if(dirtslip)
+				slip_stun = 10
+				if(dirt > 50)
+					floor_type = "dirty"
+				else if(outdoors)
+					floor_type = "uneven"
+			//CHOMPEdit End
 			switch(src.wet)
 				if(2) // Lube
 					floor_type = "slippery"
@@ -138,6 +152,8 @@
 
 			if(M.slip("the [floor_type] floor", slip_stun))
 				for(var/i = 1 to slip_dist)
+					if(M.slip_vore_in_progress)	//CHOMPEdit
+						break					//CHOMPEdit
 					step(M, M.dir)
 					sleep(1)
 			else

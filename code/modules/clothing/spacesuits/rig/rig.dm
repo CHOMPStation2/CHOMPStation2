@@ -11,6 +11,7 @@
 	name = "hardsuit control module"
 	icon = 'icons/obj/rig_modules.dmi'
 	desc = "A back-mounted hardsuit deployment and control mechanism."
+	flags = PHORONGUARD
 	slot_flags = SLOT_BACK
 	req_one_access = list()
 	req_access = list()
@@ -28,8 +29,8 @@
 
 	var/suit_state //The string used for the suit's icon_state.
 
-	var/interface_path = "hardsuit.tmpl"
-	var/ai_interface_path = "hardsuit.tmpl"
+	var/interface_path = "RIGSuit"
+	var/ai_interface_path = "RIGSuit"
 	var/interface_title = "Hardsuit Controller"
 	var/wearer_move_delay //Used for AI moving.
 	var/ai_controlled_move_delay = 10
@@ -43,6 +44,8 @@
 	var/glove_type = /obj/item/clothing/gloves/gauntlets/rig
 	var/cell_type =  /obj/item/weapon/cell/high
 	var/air_type =   /obj/item/weapon/tank/oxygen
+	var/unremovable_cell = FALSE //CHOMP Edit - an addition for protean living hardsuit.
+
 
 	//Component/device holders.
 	var/obj/item/weapon/tank/air_supply                       // Air tank, if any.
@@ -284,6 +287,7 @@
 
 	if(!seal_target && !suit_is_deployed())
 		M.visible_message("<span class='danger'>[M]'s suit flashes an error light.</span>","<span class='danger'>Your suit flashes an error light. It can't function properly without being fully deployed.</span>")
+		playsound(src, 'sound/machines/rig/rigerror.ogg', 20, FALSE)
 		failed_to_seal = 1
 
 	if(!failed_to_seal)
@@ -293,6 +297,7 @@
 			if(seal_delay && !do_after(M,seal_delay))
 				if(M)
 					to_chat(M, "<span class='warning'>You must remain still while the suit is adjusting the components.</span>")
+					playsound(src, 'sound/machines/rig/rigerror.ogg', 20, FALSE)
 				failed_to_seal = 1
 		if(!M)
 			failed_to_seal = 1
@@ -340,6 +345,7 @@
 						piece.armor["bio"] = 100
 					else
 						piece.armor["bio"] = src.armor["bio"]
+					playsound(src,'sound/machines/rig/rigservo.ogg', 10, FALSE)
 
 				else
 					failed_to_seal = 1
@@ -371,6 +377,7 @@
 		else
 			minihud = new (M.hud_used, src)
 	to_chat(M, "<span class='notice'><b>Your entire suit [canremove ? "loosens as the components relax" : "tightens around you as the components lock into place"].</b></span>")
+	playsound(src, 'sound/machines/rig/rigstarted.ogg', 10, FALSE)
 	M.client.screen -= booting_L
 	qdel(booting_L)
 	booting_R.icon_state = "boot_done"
@@ -493,7 +500,7 @@
 			wearer.wearing_rig = null
 		wearer = null
 		return PROCESS_KILL
-	
+
 	// Run through cooling
 	coolingProcess()
 
@@ -508,6 +515,7 @@
 							to_chat(wearer, "<span class='danger'>Your suit beeps stridently, and suddenly goes dead.</span>")
 						else
 							to_chat(wearer, "<span class='danger'>Your suit beeps stridently, and suddenly you're wearing a leaden mass of metal and plastic composites instead of a powered suit.</span>")
+						playsound(src, 'sound/machines/rig/rigdown.ogg', 60, FALSE)
 					if(offline_vision_restriction == 1)
 						to_chat(wearer, "<span class='danger'>The suit optics flicker and die, leaving you with restricted vision.</span>")
 					else if(offline_vision_restriction == 2)
@@ -565,6 +573,7 @@
 
 	if(fail_msg)
 		to_chat(user, fail_msg)
+		playsound(src, 'sound/machines/rig/rigerror.ogg', 20, FALSE)
 		return 0
 
 	// This is largely for cancelling stealth and whatever.
@@ -575,81 +584,6 @@
 
 	cell.use(cost*10)
 	return 1
-
-/obj/item/weapon/rig/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/nano_state = inventory_state)
-	if(!user)
-		return
-
-	var/list/data = list()
-
-	if(selected_module)
-		data["primarysystem"] = "[selected_module.interface_name]"
-
-	if(src.loc != user)
-		data["ai"] = 1
-
-	data["seals"] =     "[src.canremove]"
-	data["sealing"] =   "[src.sealing]"
-	data["helmet"] =    (helmet ? "[helmet.name]" : "None.")
-	data["gauntlets"] = (gloves ? "[gloves.name]" : "None.")
-	data["boots"] =     (boots ?  "[boots.name]" :  "None.")
-	data["chest"] =     (chest ?  "[chest.name]" :  "None.")
-
-	data["charge"] =       cell ? round(cell.charge,1) : 0
-	data["maxcharge"] =    cell ? cell.maxcharge : 0
-	data["chargestatus"] = cell ? FLOOR((cell.charge/cell.maxcharge)*50, 1) : 0
-
-	data["emagged"] =       subverted
-	data["coverlock"] =     locked
-	data["interfacelock"] = interface_locked
-	data["aicontrol"] =     control_overridden
-	data["aioverride"] =    ai_override_enabled
-	data["securitycheck"] = security_check_enabled
-	data["malf"] =          malfunction_delay
-
-
-	var/list/module_list = list()
-	var/i = 1
-	for(var/obj/item/rig_module/module in installed_modules)
-		var/list/module_data = list(
-			"index" =             i,
-			"name" =              "[module.interface_name]",
-			"desc" =              "[module.interface_desc]",
-			"can_use" =           "[module.usable]",
-			"can_select" =        "[module.selectable]",
-			"can_toggle" =        "[module.toggleable]",
-			"is_active" =         "[module.active]",
-			"engagecost" =        module.use_power_cost*10,
-			"activecost" =        module.active_power_cost*10,
-			"passivecost" =       module.passive_power_cost*10,
-			"engagestring" =      module.engage_string,
-			"activatestring" =    module.activate_string,
-			"deactivatestring" =  module.deactivate_string,
-			"damage" =            module.damage
-			)
-
-		if(module.charges && module.charges.len)
-
-			module_data["charges"] = list()
-			var/datum/rig_charge/selected = module.charges[module.charge_selected]
-			module_data["chargetype"] = selected ? "[selected.display_name]" : "none"
-
-			for(var/chargetype in module.charges)
-				var/datum/rig_charge/charge = module.charges[chargetype]
-				module_data["charges"] += list(list("caption" = "[chargetype] ([charge.charges])", "index" = "[chargetype]"))
-
-		module_list += list(module_data)
-		i++
-
-	if(module_list.len)
-		data["modules"] = module_list
-
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
-	if (!ui)
-		ui = new(user, src, ui_key, ((src.loc != user) ? ai_interface_path : interface_path), interface_title, 480, 550, state = nano_state)
-		ui.set_initial_data(data)
-		ui.open()
-		ui.set_auto_update(1)
 
 /obj/item/weapon/rig/update_icon(var/update_mob_icon)
 
@@ -697,44 +631,6 @@
 		return 0
 
 	return 1
-
-//TODO: Fix Topic vulnerabilities for malfunction and AI override.
-/obj/item/weapon/rig/Topic(href,href_list)
-	if(!check_suit_access(usr))
-		return 0
-
-	if(href_list["toggle_piece"])
-		if(ishuman(usr) && (usr.stat || usr.stunned || usr.lying))
-			return 0
-		toggle_piece(href_list["toggle_piece"], usr)
-	else if(href_list["toggle_seals"])
-		toggle_seals(usr)
-	else if(href_list["interact_module"])
-
-		var/module_index = text2num(href_list["interact_module"])
-
-		if(module_index > 0 && module_index <= installed_modules.len)
-			var/obj/item/rig_module/module = installed_modules[module_index]
-			switch(href_list["module_mode"])
-				if("activate")
-					module.activate()
-				if("deactivate")
-					module.deactivate()
-				if("engage")
-					module.engage()
-				if("select")
-					selected_module = module
-				if("select_charge_type")
-					module.charge_selected = href_list["charge_type"]
-	else if(href_list["toggle_ai_control"])
-		ai_override_enabled = !ai_override_enabled
-		notify_ai("Synthetic suit control has been [ai_override_enabled ? "enabled" : "disabled"].")
-	else if(href_list["toggle_suit_lock"])
-		locked = !locked
-
-	usr.set_machine(src)
-	src.add_fingerprint(usr)
-	return 0
 
 /obj/item/weapon/rig/proc/notify_ai(var/message)
 	for(var/obj/item/rig_module/ai_container/module in installed_modules)
@@ -814,6 +710,7 @@
 				if(istype(holder))
 					if(use_obj && check_slot == use_obj)
 						to_chat(H, "<span class='notice'><b>Your [use_obj.name] [use_obj.gender == PLURAL ? "retract" : "retracts"] swiftly.</b></span>")
+						playsound(src, 'sound/machines/rig/rigservo.ogg', 10, FALSE)
 						use_obj.canremove = 1
 						holder.drop_from_inventory(use_obj)
 						use_obj.forceMove(get_turf(src))
@@ -832,6 +729,7 @@
 					return
 			else
 				to_chat(H, "<span class='notice'>Your [use_obj.name] [use_obj.gender == PLURAL ? "deploy" : "deploys"] swiftly.</span>")
+				playsound(src, 'sound/machines/rig/rigservo.ogg', 10, FALSE)
 
 	if(piece == "helmet" && helmet)
 		helmet.update_light(H)
@@ -1003,14 +901,19 @@
 	wearer.lay_down()
 	to_chat(user, "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>")
 
-/obj/item/weapon/rig/proc/forced_move(var/direction, var/mob/user)
+/obj/item/weapon/rig/proc/forced_move(var/direction, var/mob/user, var/ai_moving = TRUE)
 
 	// Why is all this shit in client/Move()? Who knows?
 	if(world.time < wearer_move_delay)
 		return
 
-	if(!wearer || !wearer.loc || !ai_can_move_suit(user, check_user_module = 1))
+	if(!wearer || !wearer.loc) //CHOMP Edit - Removed some stuff for protean living hardsuit
 		return
+		
+//CHOMP Addition - Added this for protean living hardsuit
+	if(ai_moving)
+		if(!ai_can_move_suit(user, check_user_module = 1))
+			return
 
 	//This is sota the goto stop mobs from moving var
 	if(wearer.transforming || !wearer.canmove)
@@ -1069,7 +972,10 @@
 			wearer_move_delay += 2
 			return wearer.buckled.relaymove(wearer,direction)
 
-	cell.use(200) //Arbitrary, TODO
+	var/power_cost = 200
+	if(!ai_moving)
+		power_cost = 20
+	cell.use(power_cost) //Arbitrary, TODO
 	wearer.Move(get_step(get_turf(wearer),direction),direction)
 
 // This returns the rig if you are contained inside one, but not if you are wearing it

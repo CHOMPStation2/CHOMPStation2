@@ -62,6 +62,8 @@
 
 	//No need to update all of these procs if the guy is dead.
 	fall() //VORESTATION EDIT. Prevents people from floating
+	if(unnaturally_resized)	//VORESTATION EDIT.
+		handle_unnatural_size()
 	if(stat != DEAD && !stasis)
 		//Updates the number of stored chemicals for powers
 		handle_changeling()
@@ -69,7 +71,8 @@
 		//Organs and blood
 		handle_organs()
 		stabilize_body_temperature() //Body temperature adjusts itself (self-regulation)
-		weightgain() //VORESTATION EDIT
+		weightgain() 			//VOREStation Addition
+		process_weaver_silk()	//VOREStation Addition
 		handle_shock()
 
 		handle_pain()
@@ -77,7 +80,7 @@
 		handle_medical_side_effects()
 
 		handle_heartbeat()
-		handle_nif() //VOREStation Add
+		handle_nif() 			//VOREStation Addition
 		if(!client)
 			species.handle_npc(src)
 
@@ -483,7 +486,7 @@
 				throw_alert("oxy", /obj/screen/alert/not_enough_co2)
 			if("volatile_fuel")
 				throw_alert("oxy", /obj/screen/alert/not_enough_fuel)
-			if("sleeping_agent")
+			if("nitrous_oxide")
 				throw_alert("oxy", /obj/screen/alert/not_enough_n2o)
 
 	else
@@ -535,8 +538,8 @@
 		clear_alert("tox_in_air")
 
 	// If there's some other shit in the air lets deal with it here.
-	if(breath.gas["sleeping_agent"])
-		var/SA_pp = (breath.gas["sleeping_agent"] / breath.total_moles) * breath_pressure
+	if(breath.gas["nitrous_oxide"])
+		var/SA_pp = (breath.gas["nitrous_oxide"] / breath.total_moles) * breath_pressure
 
 		// Enough to make us paralysed for a bit
 		if(SA_pp > SA_para_min)
@@ -552,7 +555,7 @@
 		else if(SA_pp > 0.15)
 			if(prob(20))
 				spawn(0) emote(pick("giggle", "laugh"))
-		breath.adjust_gas("sleeping_agent", -breath.gas["sleeping_agent"]/6, update = 0) //update after
+		breath.adjust_gas("nitrous_oxide", -breath.gas["nitrous_oxide"]/6, update = 0) //update after
 
 	// Were we able to breathe?
 	if (failed_inhale || failed_exhale)
@@ -717,7 +720,7 @@
 					cold_dam = COLD_DAMAGE_LEVEL_1
 
 			take_overall_damage(burn=cold_dam, used_weapon = "Low Body Temperature")
-			
+
 	else clear_alert("temp")
 
 	// Account for massive pressure differences.  Done by Polymorph
@@ -784,10 +787,13 @@
 	if (species.body_temperature == null)
 		return //this species doesn't have metabolic thermoregulation
 
-	// FBPs will overheat, prosthetic limbs are fine.
-	if(robobody_count)
-		if(!nif || !nif.flag_check(NIF_O_HEATSINKS,NIF_FLAGS_OTHER)) //VOREStation Edit - NIF heatsinks
-			bodytemperature += round(robobody_count*1.75)
+	// FBPs will overheat when alive, prosthetic limbs are fine.
+	if(stat != DEAD && robobody_count)
+		if(!nif || !nif.flag_check(NIF_O_HEATSINKS,NIF_FLAGS_OTHER)) //VOREStation Edit - NIF heatsinks prevent the base heat increase per tick if installed.
+			bodytemperature += round(robobody_count*1.15)
+		var/obj/item/organ/internal/robotic/heatsink/HS = internal_organs_by_name[O_HEATSINK]
+		if(!HS || HS.is_broken()) // However, NIF Heatsinks will not compensate for a core FBP component (your heatsink) being lost.
+			bodytemperature += round(robobody_count*0.5)
 
 	var/body_temperature_difference = species.body_temperature - bodytemperature
 
@@ -836,7 +842,19 @@
 
 /mob/living/carbon/human/get_heat_protection(temperature) //Temperature is the temperature you're being exposed to.
 	var/thermal_protection_flags = get_heat_protection_flags(temperature)
-	return get_thermal_protection(thermal_protection_flags)
+
+	. = get_thermal_protection(thermal_protection_flags)
+	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
+
+	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
+	for(var/thing in modifiers)
+		var/datum/modifier/M = thing
+		if(!isnull(M.heat_protection))
+			. *= 1 - M.heat_protection
+
+	// Code that calls this expects 1 = immunity so we need to invert again.
+	. = 1 - .
+	. = min(., 1.0)
 
 /mob/living/carbon/human/get_cold_protection(temperature)
 	if(COLD_RESISTANCE in mutations)
@@ -844,7 +862,20 @@
 
 	temperature = max(temperature, 2.7) //There is an occasional bug where the temperature is miscalculated in ares with a small amount of gas on them, so this is necessary to ensure that that bug does not affect this calculation. Space's temperature is 2.7K and most suits that are intended to protect against any cold, protect down to 2.0K.
 	var/thermal_protection_flags = get_cold_protection_flags(temperature)
-	return get_thermal_protection(thermal_protection_flags)
+
+	. = get_thermal_protection(thermal_protection_flags)
+	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
+
+	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
+	for(var/thing in modifiers)
+		var/datum/modifier/M = thing
+		if(!isnull(M.cold_protection))
+			// Invert the modifier values so they align with the current working value.
+			. *= 1 - M.cold_protection
+
+	// Code that calls this expects 1 = immunity so we need to invert again.
+	. = 1 - .
+	. = min(., 1.0)
 
 /mob/living/carbon/human/proc/get_thermal_protection(var/flags)
 	.=0
@@ -881,14 +912,14 @@
 	if(reagents)
 		chem_effects.Cut()
 
-		if(!isSynthetic())
+		if(touching)
+			touching.metabolize()
+		if(ingested)
+			ingested.metabolize()
+		if(bloodstr)
+			bloodstr.metabolize()
 
-			if(touching)
-				touching.metabolize()
-			if(ingested)
-				ingested.metabolize()
-			if(bloodstr)
-				bloodstr.metabolize()
+		if(!isSynthetic())
 
 			var/total_phoronloss = 0
 			for(var/obj/item/I in src)
@@ -922,7 +953,14 @@
 			take_overall_damage(1,1)
 		else //heal in the dark
 			heal_overall_damage(1,1)
-
+	//CHOMPEdit Begin
+	if(species.photosynthesizing && nutrition < 1000)
+		var/light_amount = 0
+		if(isturf(loc))
+			var/turf/T = loc
+			light_amount = T.get_lumcount() / 10
+		adjust_nutrition(light_amount)
+	//CHOMPEdit End
 	// nutrition decrease
 	if (nutrition > 0 && stat != DEAD)
 		var/nutrition_reduction = species.hunger_factor
@@ -930,6 +968,14 @@
 		for(var/datum/modifier/mod in modifiers)
 			if(!isnull(mod.metabolism_percent))
 				nutrition_reduction *= mod.metabolism_percent
+		//CHOMPEdit Begin
+		if(nutrition > 1000 && species.grows && size_multiplier < RESIZE_HUGE)
+			nutrition_reduction *= 5
+			resize(min(size_multiplier+0.004,RESIZE_HUGE))
+		if(nutrition < 200 && species.shrinks && size_multiplier > RESIZE_TINY)
+			nutrition_reduction *= 0.3
+			resize(max(size_multiplier-0.004,RESIZE_TINY))
+		//CHOMPEdit End
 		adjust_nutrition(-nutrition_reduction)
 
 	if(noisy == TRUE && nutrition < 250 && prob(10)) //VOREStation edit for hunger noises.
@@ -1013,7 +1059,7 @@
 				if (mind)
 					//Are they SSD? If so we'll keep them asleep but work off some of that sleep var in case of stoxin or similar.
 					if(client || sleeping > 3)
-						AdjustSleeping(-1)
+						AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
 						throw_alert("asleep", /obj/screen/alert/asleep)
 				if( prob(2) && health && !hal_crit )
 					spawn(0)
@@ -1258,25 +1304,23 @@
 		if(blinded)
 			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
 			throw_alert("blind", /obj/screen/alert/blind)
-
 		else
-			clear_fullscreens()
+			clear_fullscreen("blind")
 			clear_alert("blind")
 
-		if(blinded)
-			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+		var/apply_nearsighted_overlay = FALSE
+		if(disabilities & NEARSIGHTED)
+			apply_nearsighted_overlay = TRUE
 
-		else if(!machine)
-			clear_fullscreens()
-			clear_alert("blind")
-
-		if(disabilities & NEARSIGHTED)	//this looks meh but saves a lot of memory by not requiring to add var/prescription
-			if(glasses)					//to every /obj/item
+			if(glasses)
 				var/obj/item/clothing/glasses/G = glasses
-				if(!G.prescription)
-					set_fullscreen(disabilities & NEARSIGHTED, "impaired", /obj/screen/fullscreen/impaired, 1)
-			else if (!nif || !nif.flag_check(NIF_V_CORRECTIVE,NIF_FLAGS_VISION))	//VOREStation Edit - NIF
-				set_fullscreen(disabilities & NEARSIGHTED, "impaired", /obj/screen/fullscreen/impaired, 1)
+				if(G.prescription)
+					apply_nearsighted_overlay = FALSE
+
+			if(nif && nif.flag_check(NIF_V_CORRECTIVE, NIF_FLAGS_VISION)) // VOREStation Edit - NIF
+				apply_nearsighted_overlay = FALSE
+
+		set_fullscreen(apply_nearsighted_overlay, "nearsighted", /obj/screen/fullscreen/impaired, 1)
 
 		set_fullscreen(eye_blurry, "blurry", /obj/screen/fullscreen/blurry)
 		set_fullscreen(druggy, "high", /obj/screen/fullscreen/high)
@@ -1284,6 +1328,8 @@
 			throw_alert("high", /obj/screen/alert/high)
 		else
 			clear_alert("high")
+
+		if(!isbelly(loc)) clear_fullscreen("belly") //VOREStation Add - Belly fullscreens safety
 
 		if(config.welder_vision)
 			var/found_welder
@@ -1295,6 +1341,8 @@
 					if(!O.up)
 						found_welder = 1
 				if(!found_welder && nif && nif.flag_check(NIF_V_UVFILTER,NIF_FLAGS_VISION))	found_welder = 1 //VOREStation Add - NIF
+				if(istype(glasses, /obj/item/clothing/glasses/sunglasses/thinblindfold))
+					found_welder = 1
 				if(!found_welder && istype(head, /obj/item/clothing/head/welding))
 					var/obj/item/clothing/head/welding/O = head
 					if(!O.up)
@@ -1429,7 +1477,7 @@
 				if(prob(5))
 					to_chat(src, "<span class='danger'>You lose directional control!</span>")
 					Confuse(10)
-		if (getToxLoss() >= 45)
+		if (getToxLoss() >= 45 && !isSynthetic())
 			spawn vomit()
 
 
@@ -1524,7 +1572,8 @@
 		custom_pain("[pick("It hurts so much", "You really need some painkillers", "Dear god, the pain")]!", 40)
 
 	if(shock_stage >= 30)
-		if(shock_stage == 30) emote("me",1,"is having trouble keeping their eyes open.")
+		if(shock_stage == 30 && !isbelly(loc)) //VOREStation Edit
+			emote("me",1,"is having trouble keeping their eyes open.")
 		eye_blurry = max(2, eye_blurry)
 		stuttering = max(stuttering, 5)
 
@@ -1532,7 +1581,8 @@
 		to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
 
 	if (shock_stage >= 60)
-		if(shock_stage == 60) emote("me",1,"'s body becomes limp.")
+		if(shock_stage == 60 && !isbelly(loc)) //VOREStation Edit
+			emote("me",1,"'s body becomes limp.")
 		if (prob(2))
 			to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
 			Weaken(20)
@@ -1548,7 +1598,8 @@
 			Paralyse(5)
 
 	if(shock_stage == 150)
-		emote("me",1,"can no longer stand, collapsing!")
+		if(!isbelly(loc)) //VOREStation Edit
+			emote("me",1,"can no longer stand, collapsing!")
 		Weaken(20)
 
 	if(shock_stage >= 150)

@@ -11,6 +11,16 @@
 	charge_cost = 240
 	projectile_type = /obj/item/projectile/energy/phase
 	one_handed_penalty = 15
+	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
+
+/obj/item/weapon/gun/energy/phasegun/mounted
+	self_recharge = 1
+	use_external_power = 1
+	one_handed_penalty = 0
+
+/obj/item/weapon/gun/energy/phasegun/mounted/cyborg
+	charge_cost = 400
+	recharge_time = 7
 
 /obj/item/weapon/gun/energy/phasegun/pistol
 	name = "phase pistol"

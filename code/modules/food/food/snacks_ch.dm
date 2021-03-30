@@ -192,3 +192,78 @@
 	..()
 	reagents.add_reagent("tealeavesgreen", 6)
 	bitesize = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/butterscotch
+	name = "Butterscotch"
+	desc = "A sweet, golden-brown liquid, usually used as part of confectionary. Just a spoonful wouldn't hurt, right?"
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "butterscotch" //Sprite by Dinnel
+	nutriment_amt = 1
+	nutriment_desc = list("sickly sweet deliciousness" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/butterscotch/Initialize()
+	..()
+	bitesize = 1
+
+/obj/item/weapon/reagent_containers/food/snacks/slicable/buttspie
+	name = "Butterscotch-Cinnamon Pie"
+	desc = "A delightfully caramel-coloured filling in a crispy pie base, dotted with sprays of cream."
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "butts_pie" //Sprite by Dinnel
+	slice_path = /obj/item/weapon/reagent_containers/food/snacks/slice/buttspie
+	slices_num = 6
+	nutriment_amt = 12
+	nutriment_desc = list("a warm, buttery sweetness that reminds you of home" = 5)
+	center_of_mass = list("x"=16, "y"=9)
+
+/obj/item/weapon/reagent_containers/food/snacks/slicable/buttspie/Initialize()
+	..()
+	bitesize = 4
+
+/obj/item/weapon/reagent_containers/food/snacks/slice/buttspie //TODO: Fix the numbers.
+	name = "Slice of Butterscotch-Cinnamon Pie"
+	desc = "A slice of pie, filled with delightfully caramel-coloured filling. There a spray of cream on top."
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "butts_pie_slice" //Sprite by Dinnel
+	trash = /obj/item/trash/plate
+	whole_path = /obj/item/weapon/reagent_containers/food/snacks/slicable/buttspie
+
+/obj/item/weapon/reagent_containers/food/snacks/slice/buttspie/Initialize()
+	..()
+	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/spicy_boys //These are off-brand red hots/atomic fireballs
+	name = "Spicy Boys"
+	desc = "Spicy little candy rounds for very naughty individuals."
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "spicy_boys" //Sprite by Dinnel
+	nutriment_amt = 1 //todo - change numbers
+	nutriment_desc = list("a sweet, candy-like spiciness." = 2) //WIP flavour??
+
+/obj/item/weapon/reagent_containers/food/snacks/cinnamonroll
+	name = "cinnamon roll"
+	desc = "A precious little cinnamon roll, just begging to be eaten."
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "cinnamon_roll" //Sprite by Dinnel
+	nutriment_amt = 1 //Todo - Change numbers.
+	nutriment_desc = list("a precious sweetness that needs protecting" = 2) //This is a WIP flavour, Could keep it if you don't mind the "gotta protect the precious cinnamon roll" joke
+
+//TODO: Maybe butterscotch candies?
+
+//So what if like yknow, you buy a bread tube and wow you actually get to test the new and improved producct.
+/obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel
+	name = "bread tube 2"
+	desc = "Bread in a tube. Chewy...and surprisingly tasty. Now with twice the bread to tube!"
+	filling_color = "#75491c"
+	nutriment_amt = 12
+	nutriment_desc = list("bread" = 4, "sweetness" = 6)
+
+/obj/item/weapon/reagent_containers/food/snacks/tastybread/New()
+	..()
+	if(prob(1))
+		new /obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel(src)
+		qdel(src) //Dispose of the body, let no one find it.
+		
+/obj/item/weapon/reagent_containers/food/snacks/tastybread/sequel/Initialize()
+	. = ..()
+	bitesize = 4

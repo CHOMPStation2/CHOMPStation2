@@ -29,7 +29,7 @@
 
 
 /obj/machinery/computer/med_data/Initialize()
-	..()
+	. = ..()
 	field_edit_questions = list(
 		// General
 		"sex" = "Please select new sex:",
@@ -137,7 +137,7 @@
 					fields[++fields.len] = FIELD("Name", active1.fields["name"], null)
 					fields[++fields.len] = FIELD("ID", active1.fields["id"], null)
 					fields[++fields.len] = FIELD("Sex", active1.fields["sex"], "sex")
-					fields[++fields.len] = FIELD("Age", active1.fields["age"], "age")
+					fields[++fields.len] = FIELD("Age", "[active1.fields["age"]]", "age")
 					fields[++fields.len] = FIELD("Fingerprint", active1.fields["fingerprint"], "fingerprint")
 					fields[++fields.len] = FIELD("Physical Status", active1.fields["p_stat"], "p_stat")
 					fields[++fields.len] = FIELD("Mental Status", active1.fields["m_stat"], "m_stat")
@@ -170,7 +170,7 @@
 				data["virus"] = list()
 				for(var/ID in virusDB)
 					var/datum/data/record/v = virusDB[ID]
-					data["virus"] += list(list("name" = v.fields["name"], "D" = v))
+					data["virus"] += list(list("name" = v.fields["name"], "D" = "\ref[v]"))
 			if(MED_DATA_MEDBOT)
 				data["medbots"] = list()
 				for(var/mob/living/bot/medbot/M in mob_list)
@@ -198,7 +198,7 @@
 
 /obj/machinery/computer/med_data/tgui_act(action, params)
 	if(..())
-		return
+		return TRUE
 
 	if(!data_core.general.Find(active1))
 		active1 = null
@@ -266,16 +266,9 @@
 				active2 = null
 			if("vir")
 				var/datum/data/record/v = locate(params["vir"])
-				var/list/payload = list(
-					id = v.fields["id"],
-					name = v.fields["name"],
-					max_stages = "Unknown",
-					spread_text = v.fields["spread type"],
-					cure = v.fields["antigen"],
-					desc = v.fields["description"],
-					severity = "Unknown"
-				);
-				tgui_modal_message(src, "virus", "", null, payload)
+				if(!istype(v))
+					return FALSE
+				tgui_modal_message(src, "virus", "", null, v.fields["tgui_description"])
 			if("del_all")
 				for(var/datum/data/record/R in data_core.medical)
 					qdel(R)
@@ -449,7 +442,7 @@
 		<br>\n
 		<center><b>Comments/Log</b></center><br>"}
 		for(var/c in active2.fields["comments"])
-			P.info += "[c]<br>"
+			P.info += "[c["header"]]<br>[c["text"]]<br>"
 	else
 		P.info += "<b>Medical Record Lost!</b><br>"
 	P.info += "</tt>"
@@ -508,3 +501,6 @@
 	icon_screen = "medlaptop"
 	circuit = /obj/item/weapon/circuitboard/med_data/laptop
 	density = 0
+
+#undef FIELD
+#undef MED_FIELD

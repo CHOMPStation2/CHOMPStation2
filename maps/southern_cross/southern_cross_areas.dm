@@ -182,11 +182,6 @@
 /area/surface/outpost/mining_main/mech_bay
 	name = "North Mining Mech Bay"
 
-/area/surface/outpost/mining_main/gen_room
-	name = "North Mining Generator Room"
-	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
-
 /area/surface/outpost/mining_main/emergencystorage
 	name = "\improper North Mining Emergency Storage"
 	flags = RAD_SHIELDED
@@ -203,10 +198,37 @@
 /area/surface/outpost/mining_main/tools
 	name = "North Mining Tool Storage"
 
-
 /area/surface/outpost/mining_main/cave
 	name = "North Mining Outpost Cave"
 	icon_state = "outpost_mine_main"
+
+//Rust-Engine Outpost CHOMPedit - ksc
+
+/area/surface/outpost/engineering/atmos_room
+	name = "North Atmos Room"
+	icon_state = "atmos"
+
+/area/surface/outpost/engineering/smes
+	name = "North Engineering SMES"
+	icon_state = "substation"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
+
+/area/surface/outpost/engineering/reactor_smes
+	name = "North Engineering Reactor SMES"
+	icon_state = "engine_smes"
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
+
+/area/surface/outpost/engineering/storage
+	name = "North Engineering Storage"
+	icon_state = "storage"
+
+/area/surface/outpost/engineering/monitoring
+	name = "North Engineering Monitoring"
+	icon_state = "engine_monitoring"
+
+/area/surface/outpost/engineering/auxiliary_storage
+	name = "North Engineering Auxiliary Storage"
+	icon_state = "emergencystorage"
 
 //Research Surface Outpost
 
@@ -220,7 +242,7 @@
 	name = "\improper Xenoresearch SMES Maintenance"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 /area/surface/outpost/research/xenoresearch/emergencystorage
 	name = "\improper Xenoresearch Emergency Storage"
@@ -261,7 +283,7 @@
 	name = "\improper Xenoarcheology SMES Maintenance"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 /area/surface/outpost/research/xenoarcheology/emergencystorage
 	name = "\improper Xenoarcheology Emergency Storage"
@@ -323,7 +345,7 @@
 
 /area/surface/outpost/main/gen_room/smes
 	name = "\improper Main Outpost Dorm SMES"
-	icon_state = "substation"										
+	icon_state = "substation"
 
 /area/surface/outpost/main/pool
 	name = "\improper Main Outpost Pool"
@@ -561,7 +583,7 @@
 
 /area/outpost/mining_station/dock
 	name = "Mining Station Dock"
-
+z
 //Turbolift
 
 /area/turbolift
@@ -650,10 +672,12 @@
 /area/engineering/auxiliary_engineering
 	name = "\improper Auxiliary Engineering Station"
 	sound_env = SMALL_ENCLOSED
-
+/*
+//KSC - CHOMPStation Edit 1/19/21 - Moving this to the second-deck
 /area/crew_quarters/firstdeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
+*/
 
 /area/construction/firstdeck/
 	name = "\improper Engineering Construction Area"
@@ -879,7 +903,7 @@
 
 /area/maintenance/substation/atmospherics
 	name = "Atmospherics Substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
@@ -887,7 +911,7 @@
 
 /area/maintenance/substation/central // n/a
 	name = "Central Substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 //CHOMPStation Edit Start TFF 6/2/20 - Added substation
 
@@ -895,7 +919,7 @@
 	name = "Substation"
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 //CHOMPStation Edit End
 
@@ -917,6 +941,14 @@
 /area/crew_quarters/seconddeck/locker
 	name = "\improper Locker Room"
 	icon_state = "locker"
+
+//CHOMPStation Edit Start KSC 1/19/21 - Added area for new GYM
+
+/area/crew_quarters/seconddeck/gym
+	name = "\improper Station Gym"
+	icon_state = "fitness"
+
+//CHOMPStation Edit End
 
 /area/crew_quarters/seconddeck/locker/locker_toilet
 	name = "\improper Locker Toilets"
@@ -1178,11 +1210,19 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Third Deck Starboard Hallway"
 	icon_state = "hallS"
 
-//CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms.
+//CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms. 11/20/20 KC - Added more areas for gateway and halls.
 
-/area/hallway/primary/thirddeck/aftcentral
-	name = "\improper Third Deck Central Aft Hallway"
+/area/hallway/primary/thirddeck/aftportcentral
+	name = "\improper Third Deck Central Aft Port Hallway"
 	icon_state = "hallC"
+
+/area/hallway/primary/thirddeck/aftstarboardcentral
+	name = "\improper Third Deck Central Aft Starboard Hallway"
+	icon_state = "hallC"
+
+/area/hallway/primary/thirddeck/stationgateway
+	name = "\improper Third Deck Central Gateway"
+	icon_state = "teleporter"
 
 /area/hallway/primary/thirddeck/aft
 	name = "\improper Third Deck Aft Hallway"
@@ -1281,61 +1321,10 @@ area/crew_quarters/heads/sc/hop/quarters
 
 /area/shuttle/response_ship
 	name = "\improper Response Team Ship"
-	icon_state = "centcom"
+	icon_state = "shuttlered"
 	requires_power = 0
 	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
-
-/area/shuttle/response_ship/start
-	name = "\improper Response Team Base"
-	icon_state = "shuttlered"
-	base_turf = /turf/unsimulated/floor/
-
-/area/shuttle/response_ship/firstdeck
-	name = "north-west of first deck"
-	icon_state = "northwest"
-
-/area/shuttle/response_ship/seconddeck
-	name = "south-east of second deck"
-	icon_state = "southeast"
-
-/area/shuttle/response_ship/thirddeck
-	name = "north-east of third deck"
-	icon_state = "northeast"
-
-/area/shuttle/response_ship/planet
-	name = "planetside outpost"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/outdoors/dirt/sif/planetuse
-
-/area/shuttle/response_ship/mining
-	name = "mining site"
-	icon_state = "shuttlered"
-	base_turf = /turf/space
-
-/area/shuttle/response_ship/arrivals_dock
-	name = "\improper docked with Southern Cross"
-	icon_state = "shuttle"
-
-/area/shuttle/response_ship/orbit
-	name = "in orbit of Sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/space
-
-/area/shuttle/response_ship/sky
-	name = "hovering over skies of sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/simulated/sky/west
-
-/area/shuttle/response_ship/sky_transit
-	name = "in flight over sif"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/sky/moving/west
-
-/area/shuttle/response_ship/transit
-	name = "transit"
-	icon_state = "shuttlered"
-	base_turf = /turf/space
 
 //Shuttle One
 
@@ -1440,23 +1429,15 @@ area/crew_quarters/heads/sc/hop/quarters
 	base_turf = /turf/simulated/sky/moving
 
 // Centcom Transport Shuttle
-/area/shuttle/transport1/centcom
-	icon_state = "shuttle"
-	name = "\improper Transport Shuttle Centcom"
-
-/area/shuttle/transport1/station
+/area/shuttle/transport1
 	icon_state = "shuttle"
 	name = "\improper Transport Shuttle"
 
 // Centcom Admin Shuttle
 
-/area/shuttle/administration/centcom
-	name = "\improper Administration Shuttle CentCom"
-	icon_state = "shuttlered"
-
-/area/shuttle/administration/station
+/area/shuttle/administration
 	name = "\improper Administration Shuttle"
-	icon_state = "shuttlered2"
+	icon_state = "shuttlered"
 
 //Merc
 
@@ -1595,56 +1576,9 @@ area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Clan Dojo"
 	dynamic_lighting = 0
 
-/area/ninja_dojo/start
-	name = "\improper Clan Dojo"
+/area/shuttle/ninja
+	name = "\improper Ninja Shuttle"
 	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/plating
-
-/area/ninja_dojo/firstdeck
-	name = "south of first deck"
-	icon_state = "south"
-
-/area/ninja_dojo/seconddeck
-	name = "north of second deck"
-	icon_state = "north"
-
-/area/ninja_dojo/thirddeck
-	name = "west of third deck"
-	icon_state = "west"
-
-/area/ninja_dojo/mining
-	name = "mining site"
-	icon_state = "shuttlered"
-
-/area/ninja_dojo/planet
-	name = "planet outposts"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
-
-/area/ninja_dojo/transit
-	name = "transit"
-	icon_state = "shuttlered"
-	base_turf = /turf/space/transit/north
-
-/area/ninja_dojo/orbit
-	name = "in orbit of Sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/space
-
-/area/ninja_dojo/sky
-	name = "hovering over skies of sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/simulated/sky/south
-
-/area/ninja_dojo/sky_transit
-	name = "in flight over sif"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/sky/moving/south
-
-/area/ninja_dojo/arrivals_dock
-	name = "\improper docked with Southern Cross"
-	icon_state = "shuttle"
-	dynamic_lighting = 0
 
 //Trade Ship
 
@@ -1823,7 +1757,7 @@ area/crew_quarters/heads/sc/hop/quarters
 /area/surface/outpost/fishing/smes
 	name = "\improper Fishing SMES Maintenance"
 	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition											
+	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
 //Shuttle 3 CHOMPedit
 

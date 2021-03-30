@@ -1,3 +1,4 @@
+/* //CHOMPedit commented micromech stuff, because fuck this trash
 /obj/mecha/micro/sec/moved_inside(var/mob/living/carbon/human/H as mob)
 	if(..())
 		if(H.client)
@@ -30,6 +31,7 @@
 	max_equip = 3
 	max_micro_utility_equip = 0
 	max_micro_weapon_equip = 3
+	damage_minimum = 5		//A teeny bit of armor
 
 /obj/effect/decal/mecha_wreckage/micro/sec/polecat
 	name = "Polecat wreckage"
@@ -54,4 +56,4 @@
 
 /obj/effect/decal/mecha_wreckage/micro/sec/weasel
 	name = "Weasel wreckage"
-	icon_state = "weasel-broken"
+	icon_state = "weasel-broken" */

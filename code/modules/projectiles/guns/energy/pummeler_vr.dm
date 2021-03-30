@@ -23,7 +23,7 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_MAGNET = 5)
 
 	slot_flags = SLOT_BELT|SLOT_BACK
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
 //Projectile
 /obj/item/projectile/pummel

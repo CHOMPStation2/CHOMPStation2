@@ -2,7 +2,7 @@
 	for(var/mob/living/carbon/human/Q in living_mob_list)
 		if(self && ignore_self && self == Q)
 			continue
-		if(Q.species.name != SPECIES_XENO_QUEEN)
+		if(Q.species.name != SPECIES_GENA_QUEEN) //CHOMPedit
 			continue
 		if(!Q.key || !Q.client || Q.stat)
 			continue
@@ -79,8 +79,8 @@
 // Queen verbs.
 /mob/living/carbon/human/proc/lay_egg()
 
-	set name = "Lay Egg (75)"
-	set desc = "Lay an egg to produce huggers to impregnate prey with."
+	set name = "Lay Egg (200)" //CHOMPedit changed number value
+	set desc = "Lay an egg that hatch into larva." //CHOMPedit
 	set category = "Abilities"
 
 	if(!config.aliens_allowed)
@@ -92,7 +92,7 @@
 		to_chat(src, "There's already an egg here.")
 		return
 
-	if(check_alien_ability(75,1,O_EGG))
+	if(check_alien_ability(200,1,O_EGG)) //CHOMPedit changed plasma cost from 75 to  200
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
 		new /obj/structure/alien/egg(loc) //CHOMPedit. Changed from obj/effect to obj/structure
 
@@ -110,7 +110,7 @@
 
 	if(check_alien_ability(500))
 		visible_message("<span class='alium'><B>[src] begins to twist and contort!</B></span>", "<span class='alium'>You begin to evolve!</span>")
-		src.set_species("Xenomorph Queen")
+		src.set_species("Genaprawn Queen") //CHOMPedit
 
 	return
 
@@ -172,6 +172,8 @@
 /*			var/turf/simulated/floor/F = O							//Turfs are qdel'd to space (Even asteroid tiles), will need to be touched by someone smarter than myself. -Mech
 			if(F.flooring && (F.flooring.flags & TURF_ACID_IMMUNE))
 */
+			cannot_melt = 1
+		else
 			cannot_melt = 1
 
 	if(cannot_melt)
@@ -329,7 +331,7 @@
 
 /mob/living/carbon/human/proc/gut()
 	set category = "Abilities"
-	set name = "Gut"
+	set name = "Slaughter" //CHOMPedit renamed Gut to Slaughter so its more obvious what it does
 	set desc = "While grabbing someone aggressively, rip their guts out or tear them apart."
 
 	if(last_special > world.time)
@@ -345,7 +347,7 @@
 		return
 
 	if(G.state < GRAB_AGGRESSIVE)
-		to_chat(src, "<span class='danger'>You must have an aggressive grab to gut your prey!</span>")
+		to_chat(src, "<span class='danger'>You must have an aggressive grab to slaughter your prey!</span>") //CHOMPedit
 		return
 
 	last_special = world.time + 50

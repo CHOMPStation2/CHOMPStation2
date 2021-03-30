@@ -1,3 +1,6 @@
+#define ORGANICS	1
+#define SYNTHETICS	2
+
 /datum/trait/speed_slow
 	name = "Slowdown"
 	desc = "Allows you to move slower on average than baseline."
@@ -140,6 +143,13 @@
 	cost = -4
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
 */
+/datum/trait/haemophilia
+	name = "Haemophilia - Organics only"
+	desc = "When you bleed, you bleed a LOT."
+	cost = -2
+	var_changes = list("bloodloss_rate" = 2)
+	can_take = ORGANICS
+
 /datum/trait/hollow
 	name = "Hollow Bones/Aluminum Alloy"
 	desc = "Your bones and robot limbs are much easier to break."
@@ -209,3 +219,10 @@ YW comment finish*/
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 // YW Addition End
+	
+/datum/trait/neural_hypersensitivity
+	name = "Neural Hypersensitivity"
+	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."
+	cost = -1
+	var_changes = list("trauma_mod" = 2)	//CHOMPEdit. Some dingus at virgo didn't test their stuff. Some other dingus let this get through.
+

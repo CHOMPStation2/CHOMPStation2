@@ -94,6 +94,42 @@
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_TORSO, BP_HEAD, BP_GROIN)
 
+	vale_eyes
+		name = "VALE Eyes"
+		icon_state = "vale_eyes"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+
+	vale_belly
+		name = "VALE Belly"
+		icon_state = "vale_belly"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_TORSO, BP_GROIN)
+
+	vale_back
+		name = "VALE Back"
+		icon_state = "vale_back"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_TORSO)
+
+	vulp_skull
+		name = "Vulp Skullface"
+		icon_state = "vulpskull"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+
+	manedwolf1
+		name = "Maned Wolf Primary Markings"
+		icon_state = "manedwolf1"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD,BP_TORSO,BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
+
+	manedwolf2
+		name = "Maned Wolf Secondary Markings"
+		icon_state = "manedwolf2"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD,BP_TORSO,BP_GROIN)
+
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
 	desc = ""

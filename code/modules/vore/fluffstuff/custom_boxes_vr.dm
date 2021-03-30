@@ -93,7 +93,6 @@
 	desc = "A small box containing Yonra's personal effects"
 	has_items = list(
 		/obj/item/weapon/melee/fluff/holochain/mass,
-		/obj/item/weapon/implanter/reagent_generator/yonra,
 		/obj/item/clothing/accessory/medal/silver/unity)
 
 //ivymoomoo:Ivy Baladeva
@@ -217,6 +216,16 @@
 		/obj/item/clothing/under/fluff/wolfgirl,
 		/obj/item/weapon/melee/fluffstuff/wolfgirlsword,
 		/obj/item/weapon/shield/fluff/wolfgirlshield)
+
+// Ryumi: Nikki Yumeno
+/obj/item/weapon/storage/box/fluff
+	name = "Nikki's Outfit Box"
+	desc = "Warning: Contains dangerous amounts of dork."
+	has_items = list(
+		/obj/item/weapon/rig/nikki,
+		/obj/item/clothing/head/fluff/nikki,
+		/obj/item/clothing/under/skirt/outfit/fluff/nikki,
+		/obj/item/clothing/shoes/fluff/nikki)
 
 /*
 Swimsuits, for general use, to avoid arriving to work with your swimsuit.

@@ -32,7 +32,7 @@
 	s.start()
 	qdel(src)
 
-// The hivebot's default projectile.
+// The hivebot's default projectile. //CHOMP Edit this is no longer actually used by ranged_damage.dm for the hivebot. Hivebot now uses custom 22 long rifle.
 /obj/item/projectile/bullet/hivebot
 	damage = 10
 	damage_type = BRUTE
@@ -46,6 +46,7 @@
 	health = 1 LASERS_TO_KILL
 	melee_damage_lower = 8
 	melee_damage_upper = 8
+	attack_armor_pen = 5
 
 /datum/ai_holder/simple_mob/hivebot
 	pointblank = TRUE

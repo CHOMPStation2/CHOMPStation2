@@ -247,7 +247,7 @@
 /turf/simulated/floor/reinforced/n20/Initialize()
 	. = ..()
 	if(!air) make_air()
-	air.adjust_gas("sleeping_agent", ATMOSTANK_NITROUSOXIDE)
+	air.adjust_gas("nitrous_oxide", ATMOSTANK_NITROUSOXIDE)
 
 /turf/simulated/floor/cult
 	name = "engraved floor"
@@ -317,7 +317,6 @@
 	name = "tiles"
 	icon_state = "freezer"
 	initial_flooring = /decl/flooring/tiling/freezer
-	temperature = T0C - 5 // VOREStation Edit: Chillier Freezer Tiles on-start
 
 /turf/simulated/floor/lino
 	name = "lino"

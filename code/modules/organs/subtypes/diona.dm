@@ -3,7 +3,7 @@
 		return 0
 
 	//This is a terrible hack and I should be ashamed.
-	var/datum/seed/diona = plant_controller.seeds["diona"]
+	var/datum/seed/diona = SSplants.seeds["diona"]
 	if(!diona)
 		return 0
 
@@ -212,7 +212,7 @@
 	vital = TRUE
 
 /obj/item/organ/internal/brain/cephalon/Initialize()
-	..()
+	. = ..()
 	spawn(30 SECONDS)	// FBP Dionaea need some way to be disassembled through surgery, if absolutely necessary.
 		if(!owner.isSynthetic())
 			vital = FALSE

@@ -1,15 +1,15 @@
 /datum/design/item/prosfab
 	build_type = PROSFAB
-	category = "Misc"
+	category = list("Misc")
 	req_tech = list(TECH_MATERIAL = 1)
 
 /datum/design/item/prosfab/pros
-	category = "Prosthetics"
+	category = list("Prosthetics")
 
 // Make new external organs and make 'em robotish
 /datum/design/item/prosfab/pros/Fabricate(var/newloc, var/fabricator)
-	if(istype(fabricator, /obj/machinery/pros_fabricator))
-		var/obj/machinery/pros_fabricator/prosfab = fabricator
+	if(istype(fabricator, /obj/machinery/mecha_part_fabricator/pros))
+		var/obj/machinery/mecha_part_fabricator/pros/prosfab = fabricator
 		var/obj/item/organ/O = new build_path(newloc)
 		if(prosfab.manufacturer)
 			var/datum/robolimb/manf = all_robolimbs[prosfab.manufacturer]
@@ -37,8 +37,8 @@
 
 // Deep Magic for the torso since it needs to be a new mob
 /datum/design/item/prosfab/pros/torso/Fabricate(var/newloc, var/fabricator)
-	if(istype(fabricator, /obj/machinery/pros_fabricator))
-		var/obj/machinery/pros_fabricator/prosfab = fabricator
+	if(istype(fabricator, /obj/machinery/mecha_part_fabricator/pros))
+		var/obj/machinery/mecha_part_fabricator/pros/prosfab = fabricator
 		var/newspecies = "Human"
 
 		var/datum/robolimb/manf = all_robolimbs[prosfab.manufacturer]
@@ -73,14 +73,14 @@
 			O.dna.ResetSE()
 
 			// Skincolor weirdness.
-			O.s_col[1] = 0
-			O.s_col[2] = 0
-			O.s_col[3] = 0
+			O.s_col[1] = 255 // CHOMP Edit
+			O.s_col[2] = 255 // CHOMP Edit
+			O.s_col[3] = 255 // CHOMP Edit
 
 		// Resetting the UI does strange things for the skin of a non-human robot, which should be controlled by a whole different thing.
-		H.r_skin = 0
-		H.g_skin = 0
-		H.b_skin = 0
+		H.r_skin = 255 // CHOMP Edit
+		H.g_skin = 255 // CHOMP Edit
+		H.b_skin = 255 // CHOMP Edit
 		H.dna.ResetUIFrom(H)
 
 		H.real_name = "Synthmorph #[rand(100,999)]"
@@ -102,7 +102,7 @@
 	build_path = /obj/item/organ/external/chest
 	gender = MALE
 
-/obj/item/organ/external/chest/f //To satisfy Travis. :|
+/obj/item/organ/external/chest/f //To satisfy CI. :|
 
 /datum/design/item/prosfab/pros/torso/female
 	name = "FBP Torso (F)"
@@ -175,7 +175,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 2813)
 
 /datum/design/item/prosfab/pros/internal
-	category = "Prosthetics, Internal"
+	category = list("Prosthetics, Internal")
 
 /datum/design/item/prosfab/pros/internal/cell
 	name = "Prosthetic Powercell"
@@ -192,6 +192,34 @@
 	time = 15
 	materials = list(DEFAULT_WALL_MATERIAL = 5625, "glass" = 5625)
 //	req_tech = list(TECH_ENGINEERING = 2, TECH_MATERIAL = 2)
+
+/datum/design/item/prosfab/pros/internal/hydraulic
+	name = "Hydraulic Hub"
+	id = "pros_hydraulic"
+	build_path = /obj/item/organ/internal/heart/machine
+	time = 15
+	materials = list(DEFAULT_WALL_MATERIAL = 7500, MAT_PLASTIC = 3000)
+
+/datum/design/item/prosfab/pros/internal/reagcycler
+	name = "Reagent Cycler"
+	id = "pros_reagcycler"
+	build_path = /obj/item/organ/internal/stomach/machine
+	time = 15
+	materials = list(DEFAULT_WALL_MATERIAL = 7500, MAT_PLASTIC = 3000)
+
+/datum/design/item/prosfab/pros/internal/heatsink
+	name = "Heatsink"
+	id = "pros_heatsink"
+	build_path = /obj/item/organ/internal/robotic/heatsink
+	time = 15
+	materials = list(DEFAULT_WALL_MATERIAL = 7500, MAT_PLASTIC = 3000)
+
+/datum/design/item/prosfab/pros/internal/diagnostic
+	name = "Diagnostic Controller"
+	id = "pros_diagnostic"
+	build_path = /obj/item/organ/internal/robotic/diagnostic
+	time = 15
+	materials = list(DEFAULT_WALL_MATERIAL = 7500, MAT_PLASTIC = 3000)
 
 /datum/design/item/prosfab/pros/internal/heart
 	name = "Prosthetic Heart"
@@ -242,7 +270,7 @@
 
 //////////////////// Cyborg Parts ////////////////////
 /datum/design/item/prosfab/cyborg
-	category = "Cyborg Parts"
+	category = list("Cyborg Parts")
 	time = 20
 	materials = list(DEFAULT_WALL_MATERIAL = 3750)
 
@@ -298,7 +326,7 @@
 
 //////////////////// Cyborg Internals ////////////////////
 /datum/design/item/prosfab/cyborg/component
-	category = "Cyborg Internals"
+	category = list("Cyborg Internals")
 	build_type = PROSFAB
 	time = 12
 	materials = list(DEFAULT_WALL_MATERIAL = 7500)
@@ -329,9 +357,14 @@
 	build_path = /obj/item/robot_parts/robot_component/camera
 
 /datum/design/item/prosfab/cyborg/component/armour
-	name = "Armour Plating"
+	name = "Armour Plating (Robot)"
 	id = "armour"
 	build_path = /obj/item/robot_parts/robot_component/armour
+
+/datum/design/item/prosfab/cyborg/component/armour_heavy
+	name = "Armour Plating (Platform)"
+	id = "platform_armour"
+	build_path = /obj/item/robot_parts/robot_component/armour_platform
 
 /datum/design/item/prosfab/cyborg/component/ai_shell
 	name = "AI Remote Interface"
@@ -340,7 +373,7 @@
 
 //////////////////// Cyborg Modules ////////////////////
 /datum/design/item/prosfab/robot_upgrade
-	category = "Cyborg Modules"
+	category = list("Cyborg Modules")
 	build_type = PROSFAB
 	time = 12
 	materials = list(DEFAULT_WALL_MATERIAL = 7500)

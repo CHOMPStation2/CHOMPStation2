@@ -21,12 +21,16 @@
 	var/energy_drain = 0
 	var/obj/mecha/chassis = null
 	var/range = MELEE //bitflags
+	/// Bitflag. Used by exosuit fabricator to assign sub-categories based on which exosuits can equip this.
+	var/mech_flags = NONE
 	var/salvageable = 1
 	var/required_type = /obj/mecha //may be either a type or a list of allowed types
 	var/equip_type = null //mechaequip2
 	var/allow_duplicate = FALSE
 	var/ready_sound = 'sound/mecha/mech_reload_default.ogg' //Sound to play once the fire delay passed.
 	var/enable_special = FALSE	// Will the tool do its special?
+
+	var/step_delay = 0	// Does the component slow/speed up the suit?
 
 /obj/item/mecha_parts/mecha_equipment/proc/do_after_cooldown(target=1)
 	sleep(equip_cooldown)
@@ -43,6 +47,9 @@
 
 /obj/item/mecha_parts/mecha_equipment/New()
 	..()
+	return
+
+/obj/item/mecha_parts/mecha_equipment/proc/add_equip_overlay(obj/mecha/M as obj)
 	return
 
 /obj/item/mecha_parts/mecha_equipment/proc/update_chassis_page()
@@ -74,12 +81,14 @@
 				chassis.special_equipment -= src
 				listclearnulls(chassis.special_equipment)
 			//VOREStation Addition begin: MICROMECHS
+			//CHOMPedit commented micromech stuff, because fuck this trash
+			/*
 			if(equip_type == EQUIP_MICRO_UTILITY)
 				chassis.micro_utility_equipment -= src
 				listclearnulls(chassis.micro_utility_equipment)
 			if(equip_type == EQUIP_MICRO_WEAPON)
 				chassis.micro_weapon_equipment -= src
-				listclearnulls(chassis.micro_weapon_equipment)
+				listclearnulls(chassis.micro_weapon_equipment) */
 			//VOREStation Addition end: MICROMECHS
 		chassis.universal_equipment -= src
 		chassis.equipment -= src
@@ -164,10 +173,12 @@
 	if(equip_type == EQUIP_SPECIAL && M.special_equipment.len < M.max_special_equip)
 		return 1
 	//VOREStation Addition begin: MICROMECHS
+	//CHOMPedit commented micromech stuff, because fuck this trash
+	/*
 	if(equip_type == EQUIP_MICRO_UTILITY && M.micro_utility_equipment.len < M.max_micro_utility_equip)
 		return 1
 	if(equip_type == EQUIP_MICRO_WEAPON && M.micro_weapon_equipment.len < M.max_micro_weapon_equip)
-		return 1
+		return 1 */
 	//VOREStation Addition end: MICROMECHS
 	if(equip_type != EQUIP_SPECIAL && M.universal_equipment.len < M.max_universal_equip) //The exosuit needs to be military grade to actually have a universal slot capable of accepting a true weapon.
 		if(equip_type == EQUIP_WEAPON && !istype(M, /obj/mecha/combat))
@@ -198,12 +209,14 @@
 		M.special_equipment += src
 		has_equipped = 1
 	//VOREStation Addition begin: MICROMECHS
+	//CHOMPedit commented micromech stuff, because fuck this trash
+	/*
 	if(equip_type == EQUIP_MICRO_UTILITY && M.micro_utility_equipment.len < M.max_micro_utility_equip && !has_equipped)
 		M.micro_utility_equipment += src
 		has_equipped = 1
 	if(equip_type == EQUIP_MICRO_WEAPON && M.micro_weapon_equipment.len < M.max_micro_weapon_equip && !has_equipped)
 		M.micro_weapon_equipment += src
-		has_equipped = 1
+		has_equipped = 1 */
 	//VOREStation Addition end: MICROMECHS
 	if(equip_type != EQUIP_SPECIAL && M.universal_equipment.len < M.max_universal_equip && !has_equipped)
 		M.universal_equipment += src
@@ -236,10 +249,12 @@
 				if(EQUIP_SPECIAL)
 					chassis.special_equipment -= src
 				//VOREStation Addition begin: MICROMECHS
+				//CHOMPedit commented micromech stuff, because fuck this trash
+				/*
 				if(EQUIP_MICRO_UTILITY)//CHOMPstation edit - This was improperly named bugging detaching on my equipment fix.
 					chassis.micro_utility_equipment -= src
 				if(EQUIP_MICRO_WEAPON)
-					chassis.micro_weapon_equipment -= src
+					chassis.micro_weapon_equipment -= src */
 				//VOREStation Addition end: MICROMECHS
 		if(chassis.selected == src)
 			chassis.selected = null
@@ -273,3 +288,6 @@
 
 /obj/item/mecha_parts/mecha_equipment/proc/MoveAction() //Allows mech equipment to do an action upon the mech moving
 	return
+
+/obj/item/mecha_parts/mecha_equipment/proc/get_step_delay() // Equipment returns its slowdown or speedboost.
+	return step_delay

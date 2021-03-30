@@ -18,10 +18,8 @@
 	var/obj/screen/background/cam_background
 	var/obj/screen/background/cam_foreground
 	var/obj/screen/skybox/local_skybox
-	// Needed for moving camera support
-	var/camera_diff_x = -1
-	var/camera_diff_y = -1
-	var/camera_diff_z = -1
+	// Stuff for moving cameras
+	var/turf/last_camera_turf
 
 /datum/tgui_module/camera/New(host, list/network_computer)
 	. = ..()
@@ -37,37 +35,7 @@
 	cam_screen.del_on_map_removal = FALSE
 	cam_screen.screen_loc = "[map_name]:1,1"
 	
-	cam_plane_masters = list()
-
-	// 'Utility' planes
-	cam_plane_masters += new /obj/screen/plane_master/fullbright						//Lighting system (lighting_overlay objects)
-	cam_plane_masters += new /obj/screen/plane_master/lighting							//Lighting system (but different!)
-	cam_plane_masters += new /obj/screen/plane_master/ghosts							//Ghosts!
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_AI_EYE}			//AI Eye!
-
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_STATUS}			//Status is the synth/human icon left side of medhuds
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_HEALTH}			//Health bar
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_LIFE}			//Alive-or-not icon
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_ID}				//Job ID icon
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_WANTED}			//Wanted status
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_IMPLOYAL}		//Loyalty implants
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_IMPTRACK}		//Tracking implants
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_IMPCHEM}		//Chemical implants
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_SPECIAL}		//"Special" role stuff
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_CH_STATUS_OOC}		//OOC status HUD
-
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_ADMIN1}			//For admin use
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_ADMIN2}			//For admin use
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_ADMIN3}			//For admin use
-
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_MESONS} 			//Meson-specific things like open ceilings.
-	cam_plane_masters += new /obj/screen/plane_master{plane = PLANE_BUILDMODE}			//Things that only show up while in build mode
-
-	// Real tangible stuff planes
-	cam_plane_masters += new /obj/screen/plane_master/main{plane = TURF_PLANE}
-	cam_plane_masters += new /obj/screen/plane_master/main{plane = OBJ_PLANE}
-	cam_plane_masters += new /obj/screen/plane_master/main{plane = MOB_PLANE}
-	cam_plane_masters += new /obj/screen/plane_master/cloaked								//Cloaked atoms!
+	cam_plane_masters = get_tgui_plane_masters()
 
 	for(var/plane in cam_plane_masters)
 		var/obj/screen/instance = plane
@@ -100,6 +68,10 @@
 	cam_foreground.add_overlay(noise)
 
 /datum/tgui_module/camera/Destroy()
+	if(active_camera)
+		GLOB.moved_event.unregister(active_camera, src, .proc/update_active_camera_screen)
+	active_camera = null
+	last_camera_turf = null
 	qdel(cam_screen)
 	QDEL_LIST(cam_plane_masters)
 	qdel(cam_background)
@@ -136,7 +108,6 @@
 	var/list/data = list()
 	data["activeCamera"] = null
 	if(active_camera)
-		differential_check()
 		data["activeCamera"] = list(
 			name = active_camera.c_tag,
 			status = active_camera.status,
@@ -144,7 +115,7 @@
 	return data
 
 /datum/tgui_module/camera/tgui_static_data(mob/user)
-	var/list/data = list()
+	var/list/data = ..()
 	data["mapRef"] = map_name
 	var/list/cameras = get_available_cameras(user)
 	data["cameras"] = list()
@@ -160,47 +131,70 @@
 
 /datum/tgui_module/camera/tgui_act(action, params)
 	if(..())
-		return
+		return TRUE
 	
 	if(action && !issilicon(usr))
 		playsound(tgui_host(), "terminal_type", 50, 1)
-	
+
 	if(action == "switch_camera")
 		var/c_tag = params["name"]
 		var/list/cameras = get_available_cameras(usr)
 		var/obj/machinery/camera/C = cameras["[ckey(c_tag)]"]
+		if(active_camera)
+			GLOB.moved_event.unregister(active_camera, src, .proc/update_active_camera_screen)
 		active_camera = C
+		GLOB.moved_event.register(active_camera, src, .proc/update_active_camera_screen)
 		playsound(tgui_host(), get_sfx("terminal_type"), 25, FALSE)
-
-		reload_cameraview()
-
+		update_active_camera_screen()
 		return TRUE
 
-/datum/tgui_module/camera/proc/differential_check()
-	var/turf/T = get_turf(active_camera)
-	if(T)
-		var/new_x = T.x
-		var/new_y = T.y
-		var/new_z = T.z
-		if((new_x != camera_diff_x) || (new_y != camera_diff_y) || (new_z != camera_diff_z))
-			reload_cameraview()
+	if(action == "pan")
+		var/dir = params["dir"]
+		var/turf/T = get_turf(active_camera)
+		for(var/i in 1 to 10)
+			T = get_step(T, dir)
+		if(T)
+			var/obj/machinery/camera/target
+			var/best_dist = INFINITY
 
-/datum/tgui_module/camera/proc/reload_cameraview()
+			var/list/possible_cameras = get_available_cameras(usr)
+			for(var/obj/machinery/camera/C in get_area(T))
+				if(!possible_cameras["[ckey(C.c_tag)]"])
+					continue
+				var/dist = get_dist(C, T)
+				if(dist < best_dist)
+					best_dist = dist
+					target = C
+
+			if(target)
+				if(active_camera)
+					GLOB.moved_event.unregister(active_camera, src, .proc/update_active_camera_screen)
+				active_camera = target
+				GLOB.moved_event.register(active_camera, src, .proc/update_active_camera_screen)
+				playsound(tgui_host(), get_sfx("terminal_type"), 25, FALSE)
+				update_active_camera_screen()
+				. = TRUE
+
+/datum/tgui_module/camera/proc/update_active_camera_screen()
 	// Show static if can't use the camera
 	if(!active_camera?.can_use())
 		show_camera_static()
 		return TRUE
 
-	var/turf/camTurf = get_turf(active_camera)
+	// If we're not forcing an update for some reason and the cameras are in the same location,
+	// we don't need to update anything.
+	// Most security cameras will end here as they're not moving.
+	var/turf/newturf = get_turf(active_camera)
+	if(newturf == last_camera_turf)
+		return
 
-	camera_diff_x = camTurf.x
-	camera_diff_y = camTurf.y
-	camera_diff_z = camTurf.z
+	// Cameras that get here are moving, and are likely attached to some moving atom such as cyborgs.
+	last_camera_turf = get_turf(active_camera)
 
 	var/list/visible_turfs = list()
 	for(var/turf/T in (active_camera.isXRay() \
-			? range(active_camera.view_range, camTurf) \
-			: view(active_camera.view_range, camTurf)))
+			? range(active_camera.view_range, newturf) \
+			: view(active_camera.view_range, newturf)))
 		visible_turfs += T
 
 	var/list/bbox = get_bbox_of_atoms(visible_turfs)
@@ -214,9 +208,9 @@
 	cam_foreground.fill_rect(1, 1, size_x, size_y)
 
 	local_skybox.cut_overlays()
-	local_skybox.add_overlay(SSskybox.get_skybox(get_z(camTurf)))
+	local_skybox.add_overlay(SSskybox.get_skybox(get_z(newturf)))
 	local_skybox.scale_to_view(size_x)
-	local_skybox.set_position("CENTER", "CENTER", (world.maxx>>1) - camTurf.x, (world.maxy>>1) - camTurf.y)
+	local_skybox.set_position("CENTER", "CENTER", (world.maxx>>1) - newturf.x, (world.maxy>>1) - newturf.y)
 
 // Returns the list of cameras accessible from this computer
 // This proc operates in two distinct ways depending on the context in which the module is created.
@@ -279,6 +273,8 @@
 		user.client.clear_map(map_name)
 	// Turn off the console
 	if(length(concurrent_users) == 0 && is_living)
+		if(active_camera)
+			GLOB.moved_event.unregister(active_camera, src, .proc/update_active_camera_screen)
 		active_camera = null
 		playsound(tgui_host(), 'sound/machines/terminal_off.ogg', 25, FALSE)
 
@@ -287,33 +283,7 @@
 // If/when that is done, just move all the PC_ specific data and stuff to the modular computers themselves
 // instead of copying this approach here.
 /datum/tgui_module/camera/ntos
-	tgui_id = "NtosCameraConsole"
-
-/datum/tgui_module/camera/ntos/tgui_state()
-	return GLOB.tgui_ntos_state
-
-/datum/tgui_module/camera/ntos/tgui_static_data()
-	. = ..()
-	
-	var/datum/computer_file/program/host = tgui_host()
-	if(istype(host) && host.computer)
-		. += host.computer.get_header_data()
-
-/datum/tgui_module/camera/ntos/tgui_act(action, params)
-	if(..())
-		return
-
-	var/datum/computer_file/program/host = tgui_host()
-	if(istype(host) && host.computer)
-		if(action == "PC_exit")
-			host.computer.kill_program()
-			return TRUE
-		if(action == "PC_shutdown")
-			host.computer.shutdown_computer()
-			return TRUE
-		if(action == "PC_minimize")
-			host.computer.minimize_program(usr)
-			return TRUE
+	ntos = TRUE
 
 // ERT Version provides some additional networks.
 /datum/tgui_module/camera/ntos/ert

@@ -29,14 +29,15 @@ other types of metals and chemistry for reagents).
 	var/list/chemicals = list()		//List of chemicals.
 	var/build_path = null			//The path of the object that gets created.
 	var/time = 10					//How many ticks it requires to build
-	var/category = null 			//Primarily used for Mech Fabricators, but can be used for anything.
+	var/list/category = list() 			//Primarily used for Mech Fabricators, but can be used for anything.
 	var/sort_string = "ZZZZZ"		//Sorting order
-	var/maxstack = 1                //YW Edit, used by autolathe, says how many stacks a item can have or the limit of how many you can spawn at once
-	var/autolathe_build = 0         //YW Edit, makes other designs able to be built or added in autolathe, be via design disk or something else(added due to can't have two designs with same build_path without unit test getting angry)
-	var/hidden = 0                  //YW Edit, Used by autolathe, says if an item needs the autolathe to be hacked in order to appear
+	var/search_metadata 			// Optional string that interfaces can use as part of search filters. See- item/borg/upgrade/ai and the Exosuit Fabs.
 
 /datum/design/New()
 	..()
+	if(!islist(category))
+		log_runtime(EXCEPTION("Warning: Design [type] defined a non-list category. Please fix this."))
+		category = list(category)
 	item_name = name
 	AssembleDesignInfo()
 
@@ -66,9 +67,19 @@ other types of metals and chemistry for reagents).
 /datum/design/item
 	build_type = PROTOLATHE
 
-//Make sure items don't get free power
+//Make sure items don't get free power, or resources. Also make things be recycled with proper values.
 /datum/design/item/Fabricate()
 	var/obj/item/I = ..()
+
+	if(LAZYLEN(materials))
+		if(!LAZYLEN(I.matter))
+			I.matter = list()
+		else
+			I.matter.Cut()
+
+		for(var/matname in materials)
+			I.matter[matname] = materials[matname]
+
 	var/obj/item/weapon/cell/C = I.get_cell()
 	if(C)
 		C.charge = 0

@@ -86,9 +86,9 @@
 	flags = RESTRICTED | HIVEMIND
 
 /datum/language/xenocommon
-	name = "Xenomorph"
+	name = "Xenolingua" //CHOMPedit
 	colour = "alien"
-	desc = "The common tongue of the xenomorphs."
+	desc = "The common tongue of both the xenomorphs and the Genaprawns." //CHOMPedit
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"
@@ -98,7 +98,7 @@
 
 /datum/language/xenos
 	name = "Hivemind"
-	desc = "Xenomorphs have the strange ability to commune over a psychic hivemind."
+	desc = "Some aliens have the strange ability to commune over a psychic hivemind." //CHOMPedit
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"
@@ -154,3 +154,31 @@
 	key = "]"
 	flags = RESTRICTED
 	syllables = list("chan","ange","thi","se")
+
+//Bloblang.
+/datum/language/blob
+	name = LANGUAGE_BLOB
+	desc = "The massive processing power of the Blob's core gives the overmind finely tuned abilities to transmit messages to nearby life-forms through chemical signals."
+	speech_verb = "resonates"
+	ask_verb = "reverberates"
+	exclaim_verb = "shudders"
+	colour = "blob"
+	key = "}"
+	machine_understands = TRUE
+	flags = RESTRICTED
+
+	syllables = list("^", "˅", "-", "°", "~")
+
+/datum/language/corticalborer/broadcast(var/mob/living/speaker,var/message,var/speaker_mask)
+
+	var/mob/living/simple_mob/animal/borer/B
+
+	if(istype(speaker,/mob/living/carbon))
+		var/mob/living/carbon/M = speaker
+		B = M.has_brain_worms()
+	else if(istype(speaker,/mob/living/simple_mob/animal/borer))
+		B = speaker
+
+	if(B)
+		speaker_mask = B.true_name
+	..(speaker,message,speaker_mask)

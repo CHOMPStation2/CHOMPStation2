@@ -26,7 +26,7 @@
 #define BORGMESON 0x1
 #define BORGTHERM 0x2
 #define BORGXRAY  0x4
-#define BORGMATERIAL  8
+#define BORGMATERIAL  0x8
 
 #define STANCE_ATTACK    11 // Backwards compatability
 #define STANCE_ATTACKING 12 // Ditto
@@ -160,12 +160,6 @@
 #define FLASH_PROTECTION_MODERATE 1
 #define FLASH_PROTECTION_MAJOR 2
 
-#define ANIMAL_SPAWN_DELAY round(config.respawn_delay / 6)
-#define DRONE_SPAWN_DELAY  round(config.respawn_delay / 3)
-
-#define ANIMAL_SPAWN_DELAY round(config.respawn_delay / 6)
-#define DRONE_SPAWN_DELAY  round(config.respawn_delay / 3)
-
 // Incapacitation flags, used by the mob/proc/incapacitated() proc
 #define INCAPACITATION_RESTRAINED 1
 #define INCAPACITATION_BUCKLED_PARTIALLY 2
@@ -213,6 +207,13 @@
 #define O_AUG_RIBS "rib augment"
 #define O_AUG_SPINE "spinal augment"
 #define O_AUG_PELVIC "pelvic augment"
+
+// FBP components.
+
+#define O_PUMP     "hydraulic hub"
+#define O_CYCLER   "reagent cycler"
+#define O_HEATSINK "thermal regulator"
+#define O_DIAGNOSTIC "diagnostic controller"
 
 // Non-Standard organs
 #define O_MOUTH    "mouth"
@@ -282,6 +283,7 @@
 #define BORG_BRAINTYPE_CYBORG	"Cyborg"
 #define BORG_BRAINTYPE_POSI		"Robot"
 #define BORG_BRAINTYPE_DRONE	"Drone"
+#define BORG_BRAINTYPE_PLATFORM	"Platform"
 #define BORG_BRAINTYPE_AI_SHELL	"AI Shell"
 
 // 'Regular' species.
@@ -314,13 +316,13 @@
 #define SPECIES_VR_SKELETON		"Virtual Reality Skeleton"
 #define SPECIES_VR_VOX			"Virtual Reality Vox"
 
-// Ayyy IDs.
-#define SPECIES_XENO			"Xenomorph"
-#define SPECIES_XENO_DRONE		"Xenomorph Drone"
-#define SPECIES_XENO_HUNTER		"Xenomorph Hunter"
-#define SPECIES_XENO_SENTINEL	"Xenomorph Sentinel"
-#define SPECIES_XENO_QUEEN		"Xenomorph Queen"
-
+// Ayyy IDs. CHOMPedit
+#define SPECIES_GENA			"Genaprawn"
+#define SPECIES_GENA_DRONE		"Genaprawn Drone"
+#define SPECIES_GENA_HUNTER		"Genaprawn Hunter"
+#define SPECIES_GENA_SENTINEL	"Genaprawn Sentinel"
+#define SPECIES_GENA_QUEEN		"Genaprawn Queen"
+//CHOMPedit end
 // Misc species. Mostly unused but might as well be complete.
 #define SPECIES_SHADOW			"Shadow"
 #define SPECIES_SKELETON		"Skeleton"
@@ -432,3 +434,5 @@
 #define EXAMINE_SKIPFEET			0x0100
 
 #define MAX_NUTRITION	5000 //VOREStation Edit
+
+#define FAKE_INVIS_ALPHA_THRESHOLD 127 // If something's alpha var is at or below this number, certain things will pretend it is invisible.

@@ -25,18 +25,16 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/reconstitute_form,
 		/mob/living/carbon/human/proc/sonar_ping,
-		/mob/living/carbon/human/proc/succubus_drain,
-		/mob/living/carbon/human/proc/succubus_drain_finalize,
-		/mob/living/carbon/human/proc/succubus_drain_lethal,
-		/mob/living/carbon/human/proc/bloodsuck,
 		/mob/living/carbon/human/proc/tie_hair,
-		/mob/living/proc/shred_limb,
 		/mob/living/proc/flying_toggle,
 		/mob/living/proc/start_wings_hovering) //Xenochimera get all the special verbs since they can't select traits.
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
 	max_age = 80
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	blurb = "Some amalgamation of different species from across the universe,with extremely unstable DNA, making them unfit for regular cloners. \
 	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \
@@ -56,6 +54,8 @@
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE//Whitelisted as restricted is broken.
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	has_organ = list(    //Same organ list as tajarans.
 		O_HEART =    /obj/item/organ/internal/heart,
@@ -295,7 +295,7 @@
 	update_xenochimera_hud(H, danger, feral_state)
 
 
-/datum/species/xenochimera/proc/produceCopy(var/datum/species/to_copy,var/list/traits,var/mob/living/carbon/human/H)
+/datum/species/xenochimera/produceCopy(var/datum/species/to_copy,var/list/traits,var/mob/living/carbon/human/H)
 	ASSERT(to_copy)
 	ASSERT(istype(H))
 
@@ -321,6 +321,13 @@
 	new_copy.blood_mask = to_copy.blood_mask
 	new_copy.damage_mask = to_copy.damage_mask
 	new_copy.damage_overlays = to_copy.damage_overlays
+	new_copy.traits = traits
+
+	//If you had traits, apply them
+	if(new_copy.traits)
+		for(var/trait in new_copy.traits)
+			var/datum/trait/T = all_traits[trait]
+			T.apply(new_copy,H)
 
 	//Set up a mob
 	H.species = new_copy
@@ -376,10 +383,17 @@
 	icobase_tail = 1
 
 	inherent_verbs = list(
-		/mob/living/proc/weaveWebBindings)
+		/mob/living/carbon/human/proc/check_silk_amount,
+		/mob/living/carbon/human/proc/toggle_silk_production,
+		/mob/living/carbon/human/proc/weave_structure,
+		/mob/living/carbon/human/proc/weave_item,
+		/mob/living/carbon/human/proc/set_silk_color)
 
 	min_age = 18
 	max_age = 80
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	blurb = "Vasilissans are a tall, lanky, spider like people. \
 	Each having four eyes, an extra four, large legs sprouting from their back, and a chitinous plating on their body, and the ability to spit webs \
@@ -403,9 +417,15 @@
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+
 	flesh_color = "#AFA59E" //Gray-ish. Not sure if this is really needed, but eh.
 	base_color 	= "#333333" //Blackish-gray
 	blood_color = "#0952EF" //Spiders have blue blood.
+
+	is_weaver = TRUE
+	silk_reserve = 500
+	silk_max_reserve = 1000
 
 /datum/species/spider/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.stat == DEAD) // If they're dead they won't need anything.
@@ -451,6 +471,9 @@
 	min_age = 18
 	max_age = 200
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	blurb = "Big buff werewolves. These are a limited functionality event species that are not balanced for regular gameplay. Adminspawn only."
 
 	wikilink="N/A"
@@ -459,12 +482,11 @@
 
 	spawn_flags		 = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled forever
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	inherent_verbs = list(
-		/mob/living/proc/shred_limb,
-		/mob/living/proc/eat_trash)
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -475,7 +497,7 @@
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/werebeast),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/werebeast),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),

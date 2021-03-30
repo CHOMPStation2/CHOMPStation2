@@ -66,10 +66,9 @@
 	robot_modules["Janihound"] = /obj/item/weapon/robot_module/robot/scrubpup
 	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
 	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
-	robot_modules["Servicehound"] = /obj/item/weapon/robot_module/robot/servicehound //YW changes
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //YW Addition booze
+	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //CH Addition booze found in /code/modules/mob/living/silicon/robot/subtypes/boozeborg_ch.dm
 	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CH Addition Unity
 	return 1
 
@@ -172,7 +171,8 @@
 	pto_type = PTO_SCIENCE
 	vr_sprites = list(
 						"Acheron" = "mechoid-Science",
-						"ZOOM-BA" = "zoomba-research"
+						"ZOOM-BA" = "zoomba-research",
+						"XI-GUS" = "spiderscience"
 					 )
 
 /obj/item/weapon/robot_module/robot/security/combat
@@ -190,7 +190,8 @@
 					"Secborg model V-2" = "secborg",
 					"Borgi" = "borgi-sec",
 					"Otieborg" = "oties",
-					"Secborg model V-3" = "SecVale" //CHOMPEdit
+					"Secborg model V-3" = "SecVale", //CHOMPEdit
+					"Drake" = "drakesec"
 					)
 	channels = list("Security" = 1)
 	networks = list(NETWORK_SECURITY)
@@ -205,8 +206,6 @@
 	src.modules += new /obj/item/taperoll/police(src) //Block out crime scenes.
 	src.modules += new /obj/item/weapon/gun/energy/taser/mounted/cyborg(src) //They /are/ a security borg, after all.
 	src.modules += new /obj/item/weapon/dogborg/pounce(src) //Pounce
-	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
-	src.modules += new /obj/item/weapon/tool/crowbar(src)
 	src.emag 	 = new /obj/item/weapon/gun/energy/laser/mounted(src) //Emag. Not a big problem.
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
@@ -223,7 +222,8 @@
 	B.water = water
 	src.modules += B
 
-	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_sec_vr.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_sec_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -269,7 +269,8 @@
 					"Dark Medical Hound (Static)" = "medihounddark",
 					"Mediborg model V-2" = "vale",
 					"Borgi" = "borgi-medi",
-					"Mediborg model V-3" = "vale2" //CHOMPEdit
+					"Mediborg model V-3" = "vale2", //CHOMPEdit
+					"Drake" = "drakemed"
 					)
 
 /obj/item/weapon/robot_module/robot/medihound/New(var/mob/living/silicon/robot/R)
@@ -332,6 +333,8 @@
 	R.icon = 'icons/mob/widerobot_vr.dmi'
 
 	src.modules += new /obj/item/device/dogborg/pounce_module(src) //Pounce shit test
+	R.icon = 'icons/mob/widerobot_med_vr.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_med_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -401,8 +404,10 @@
 	name = "Custodial Hound module"
 	sprites = list(
 					"Custodial Hound" = "scrubpup",
+					"Janihound model V-2" = "J9",
 					"Borgi" = "borgi-jani",
-					"Otieborg" = "otiej"
+					"Otieborg" = "otiej",
+					"Drake" = "drakejanit"
 					)
 	channels = list("Service" = 1)
 	pto_type = PTO_CIVILIAN
@@ -466,7 +471,8 @@
 	G.recipes += new/datum/stack_recipe("glass sheet", /obj/item/stack/material/glass, 1, 1, 20)
 	src.modules += G
 
-	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //YW edit - using yw icon files
+	R.icon 		 = 'icons/mob/widerobot_jan_vr.dmi'
+	R.wideborg_dept  = 'icons/mob/widerobot_jan_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -487,7 +493,8 @@
 					"Research Hound" = "science",
 					"Borgi" = "borgi-sci",
 					"SciHound" = "scihound",
-					"SciHoundDark" = "scihounddark"
+					"SciHoundDark" = "scihounddark",
+					"Drake" = "drakesci"
 					)
 	channels = list("Science" = 1)
 	pto_type = PTO_SCIENCE
@@ -540,7 +547,8 @@
 	C.synths = list(wire)
 	src.modules += C
 
-	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_sci_vr.dmi'
+	R.wideborg_dept  = 'icons/mob/widerobot_sci_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -562,7 +570,8 @@
 					"Borgi" = "borgi-eng",
 					"V2 Engidog" = "thottbot",
 					"EngiHound" = "engihound",
-					"EngiHoundDark" = "engihounddark"
+					"EngiHoundDark" = "engihounddark",
+					"Drake" = "drakeeng"
 					)
 	channels = list("Engineering" = 1)
 	networks = list(NETWORK_ENGINEERING)
@@ -691,77 +700,9 @@
 	src.modules += PS
 	//YW changes end, plasteel manipulator
 	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
-	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
-	R.ui_style_vr = TRUE
-	R.pixel_x 	 = -16
-	R.old_x 	 = -16
-	R.default_pixel_x = -16
-	R.dogborg = TRUE
-	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
-//	R.verbs |= /mob/living/proc/shred_limb - YW Edit
-	R.verbs |= /mob/living/silicon/robot/proc/rest_style
-	..()
 
-
-//YW changes - Addition of Servicehound start
-/obj/item/weapon/robot_module/robot/servicehound
-	name = "service-hound module"
-	sprites = list(
-					"Pinkhound" = "k69"
-					)
-	channels = list("Service" = 1)
-	can_be_pushed = 0
-
-// In a nutshell, basicly service/butler robot but in dog form.
-/obj/item/weapon/robot_module/robot/servicehound/New(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/weapon/gripper/service(src)
-	src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
-	src.modules += new /obj/item/weapon/material/minihoe(src)
-	src.modules += new /obj/item/weapon/material/knife/machete/hatchet(src)
-	src.modules += new /obj/item/device/analyzer/plant_analyzer(src)
-	src.modules += new /obj/item/weapon/storage/bag/plants(src)
-	src.modules += new /obj/item/weapon/robot_harvester(src)
-	src.modules += new /obj/item/weapon/material/knife(src)
-	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
-	src.modules += new /obj/item/device/multitool(src) //to freeze trays
-	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/device/dogborg/boop_module(src)
-	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
-
-	var/datum/matter_synth/water = new /datum/matter_synth()
-	water.name = "Water reserves"
-	water.recharge_rate = 0
-	water.max_energy = 1000
-	water.energy = 0
-	R.water_res = water
-	synths += water
-
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
-	T.water = water
-	src.modules += T
-
-	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
-	M.stored_matter = 30
-	src.modules += M
-
-	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
-
-	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
-	L.lit = 1
-	src.modules += L
-
-	src.modules += new /obj/item/weapon/tray/robotray(src)
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
-
-/* // I don't know what kind of sleeper to put here, but also no need if you already have "Robot Nom" verb.
-	var/obj/item/device/dogborg/sleeper/K9/B = new /obj/item/device/dogborg/sleeper/K9(src)
-	B.water = water
-	src.modules += B
-*/
-
-	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //YW edit - using yw icon files
+	R.icon 		 = 'icons/mob/widerobot_eng_vr.dmi'
+	R.wideborg_dept  = 'icons/mob/widerobot_eng_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -784,6 +725,7 @@
 					"Pinkhound" = "k69",
 					"ServicehoundV2" = "serve2",
 					"ServicehoundV2 Darkmode" = "servedark",
+					"Drake" = "drakemine"
 					)
 	channels = list("Service" = 1)
 	pto_type = PTO_CIVILIAN
@@ -837,7 +779,8 @@
 	src.modules += B
 */
 
-	R.icon 		 = 'icons/mob/widerobot_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_ser_vr.dmi'
+	R.wideborg_dept  = 'icons/mob/widerobot_ser_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -847,6 +790,8 @@
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
 	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
+	R.verbs |= /mob/living/proc/toggle_rider_reins
+	R.verbs |= /mob/living/proc/shred_limb
 	R.verbs |= /mob/living/silicon/robot/proc/rest_style
 	..()
 
@@ -855,7 +800,8 @@
 	sprites = list(
 					"KMine" = "kmine",
 					"CargoHound" = "cargohound",
-					"CargoHoundDark" = "cargohounddark"
+					"CargoHoundDark" = "cargohounddark",
+					"Drake" = "drakemine"
 					)
 	channels = list("Supply" = 1)
 	pto_type = PTO_CARGO
@@ -888,7 +834,8 @@
 	B.water = water
 	src.modules += B
 
-	R.icon = 'icons/mob/widerobot_vr.dmi'
+	R.icon = 'icons/mob/widerobot_car_vr.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_car_vr.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -920,97 +867,7 @@
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-
-//YW Changes - BoozeBorg Begin
-
-/obj/item/weapon/robot_module/robot/booze
-	name = "BoozeHound robot module"
-	channels = list("Service" = 1)
-	languages = list(
-					LANGUAGE_SOL_COMMON	= 1,
-					LANGUAGE_UNATHI		= 1,
-					LANGUAGE_SIIK		= 1,
-					LANGUAGE_AKHANI		= 1,
-					LANGUAGE_SKRELLIAN	= 1,
-					LANGUAGE_SKRELLIANFAR = 0,
-					LANGUAGE_ROOTLOCAL	= 0,
-					LANGUAGE_TRADEBAND	= 1,
-					LANGUAGE_GUTTER		= 0,
-					LANGUAGE_SCHECHI	= 1,
-					LANGUAGE_EAL		= 1,
-					LANGUAGE_TERMINUS	= 1,
-					LANGUAGE_SIGN		= 0
-					)
-
-
-/obj/item/weapon/robot_module/robot/booze
-	sprites = list(
-				"Beer Buddy" = "boozeborg",
-				"Brilliant Blue" = "boozeborg(blue)",
-				"Caffine Dispenser" = "boozeborg(coffee)",
-				"Gamer Juice Maker" = "boozeborg(green)",
-				"Liqour Licker" = "boozeborg(orange)",
-				"The Grapist" = "boozeborg(purple)",
-				"Vampire's Aid" = "boozeborg(red)",
-				"Vodka Komrade" = "boozeborg(vodka)"
-				)
-
-/obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/weapon/gripper/service(src)
-	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
-	//src.modules += new /obj/item/weapon/material/minihoe(src)
-	//src.modules += new /obj/item/device/analyzer/plant_analyzer(src)
-	//src.modules += new /obj/item/weapon/storage/bag/plants(src)
-	//src.modules += new /obj/item/weapon/robot_harvester(src)
-	src.modules += new /obj/item/weapon/material/knife(src)
-	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
-	src.modules += new /obj/item/device/multitool(src) //to freeze trays
-	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/weapon/tray/robotray
-	src.modules += new /obj/item/device/dogborg/boop_module(src)
-	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src)
-	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
-	R.verbs += /mob/living/silicon/robot/proc/reskin_booze
-
-	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
-	M.stored_matter = 30
-	src.modules += M
-
-	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
-
-	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
-	L.lit = 1
-	src.modules += L
-
-	src.modules += new /obj/item/weapon/tray/robotray(src)
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
-	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
-
-	var/datum/reagents/N = new/datum/reagents(50)
-	src.emag.reagents = N
-	N.my_atom = src.emag
-	N.add_reagent("beer2", 50)
-	src.emag.name = "Mickey Finn's Special Brew"
-
-	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
-	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
-	R.ui_style_vr = TRUE
-	R.pixel_x 	 = -16
-	R.old_x 	 = -16
-	R.default_pixel_x = -16
-	R.dogborg = TRUE
-	R.wideborg = TRUE
-	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	..()
-
-/obj/item/weapon/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
-	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
-	E.reagents.add_reagent("enzyme", 2 * amount)
-	if(src.emag)
-		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
-		B.reagents.add_reagent("beer2", 2 * amount)
-
-// YW Changes - Boozeborg end
+//Boozeborg stuff found in /code/modules/mob/living/silicon/robot/subtypes/boozeborg_ch.dm
 
 // CH Changes - Unity Hound begin
 /obj/item/weapon/robot_module/robot/chound
@@ -1057,6 +914,7 @@
 	src.modules += B
 
 	R.icon = 'icons/mob/widerobot_ch.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_ch.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16

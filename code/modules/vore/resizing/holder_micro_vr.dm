@@ -22,7 +22,7 @@
 	if(!Adjacent(usr)) return
 	if(isAI(M)) return
 	for(var/mob/living/carbon/human/O in contents)
-		O.show_inv(usr)
+		O.show_inventory_panel(usr, state = GLOB.tgui_deep_inventory_state)
 
 /obj/item/weapon/holder/micro/attack_self(mob/living/carbon/user) //reworked so it works w/ nonhumans
 	user.setClickCooldown(user.get_attack_speed())
@@ -48,3 +48,23 @@
 	..()
 	for(var/mob/living/carbon/human/I in contents)
 		item_state = lowertext(I.species.name)
+
+//Egg features.
+/obj/item/weapon/holder/attack_hand(mob/living/user as mob)
+	if(istype(src.loc, /obj/item/weapon/storage/vore_egg)) //Don't scoop up the egged mob
+		src.pickup(user)
+		user.drop_from_inventory(src)
+		return
+	..()
+
+/obj/item/weapon/holder/container_resist(mob/living/held)
+	if(!istype(src.loc, /obj/item/weapon/storage/vore_egg))
+		..()
+	else
+		var/obj/item/weapon/storage/vore_egg/E = src.loc
+		if(isbelly(E.loc))
+			var/obj/belly/B = E.loc
+			B.relay_resist(held, E)
+			return
+		E.hatch(held)
+		return

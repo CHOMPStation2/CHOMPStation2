@@ -1,5 +1,5 @@
 // This causes PoI maps to get 'checked' and compiled, when undergoing a unit test.
-// This is so Travis can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
+// This is so CI can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 // When adding a new PoI, please add it to this list.
 #if MAP_TEST
 #include "spider1.dmm"
@@ -34,8 +34,6 @@
 #include "ButcherShack.dmm"
 #include "Chapel.dmm"
 #include "Shelter.dmm"
-#include "Cragzone1.dmm"
-	//CHOMPS KSC 8/11/20 "8 additional POI's"
 #include "derelictengine.dmm"
 #include "wolfden.dmm"
 #include "demonpool.dmm"
@@ -296,8 +294,6 @@
 	desc = "The nest of a Frostfly, or more."
 	mappath = 'maps/submaps/surface_submaps/wilderness/FrostflyNest.dmm'
 	cost = 20
-
-	// CHOMPS KSC 8/20/20 Added 8 more POI's for the wilderness, spicy.
 
 /datum/map_template/surface/wilderness/deep/DerelictEngine
 	name = "Derelict Engine"

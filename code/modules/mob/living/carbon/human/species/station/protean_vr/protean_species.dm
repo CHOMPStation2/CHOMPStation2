@@ -17,7 +17,7 @@
 
 	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT | NO_PAIN
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_LIPS
-	spawn_flags		 = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled probably forever
+	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE 
 	health_hud_intensity = 2
 	num_alternate_languages = 3
 	assisted_langs = list(LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
@@ -25,6 +25,9 @@
 
 	breath_type = null
 	poison_type = null
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	virus_immune =	1
 	blood_volume =	0
@@ -59,10 +62,12 @@
 	siemens_coefficient =   1.5 //Very bad zappy times
 	rarity_value =          5
 
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+
 	has_organ = list(
 		O_BRAIN = /obj/item/organ/internal/mmi_holder/posibrain/nano,
 		O_ORCH = /obj/item/organ/internal/nano/orchestrator,
-		O_FACT = /obj/item/organ/internal/nano/refactory
+		O_FACT = /obj/item/organ/internal/nano/refactory,
 		)
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest/unbreakable/nano),
@@ -86,8 +91,8 @@
 		/mob/living/carbon/human/proc/nano_regenerate, //These verbs are hidden so you can macro them,
 		/mob/living/carbon/human/proc/nano_partswap,
 		/mob/living/carbon/human/proc/nano_metalnom,
-		/mob/living/carbon/human/proc/nano_blobform,
-		/mob/living/carbon/human/proc/nano_set_size,
+		/mob/living/carbon/human/proc/nano_blobform, 
+		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/nano_change_fitting, //These verbs are displayed normally,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair_colors,
@@ -97,9 +102,13 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/carbon/human/proc/succubus_drain,
+		/mob/living/carbon/human/proc/slime_feed,
+		/mob/living/carbon/human/proc/succubus_drain_finalize,
+		/mob/living/carbon/human/proc/succubus_drain_lethal,
 		/mob/living/proc/eat_trash
-		)
-
+		) //CHOMP Edit - Added succ stuff that promies have too. Also changed nano_set_size to standard set_size so there is no metal cost.
+		
 	var/global/list/abilities = list()
 
 	var/monochromatic = FALSE //IGNORE ME
@@ -131,8 +140,8 @@
 
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
 	var/obj/item/stack/material/steel/metal_stack = new()
-	metal_stack.amount = 3
-
+	metal_stack.amount = 5 //CHOMP Edit
+	
 	var/obj/item/clothing/accessory/permit/nanotech/permit = new()
 	permit.set_name(H.real_name)
 
@@ -151,6 +160,9 @@
 			new_nif.quick_implant(H)
 		else
 			H.nif.durability = rand(21,25)
+			
+		var/obj/item/weapon/rig/protean/prig = new /obj/item/weapon/rig/protean(H)
+		prig.myprotean = H
 
 /datum/species/protean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 	return ..() //Wut
@@ -169,8 +181,8 @@
 		H.forceMove(H.temporary_form.drop_location())
 		H.ckey = H.temporary_form.ckey
 		QDEL_NULL(H.temporary_form)
-	
-	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 60 minutes before respawning, to represent the time it would take to ship a new-you to the station.</span>")
+
+	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 5 or 10 minutes before respawning, to represent the time it would take to ship a new-you to the station, depending on how you died.</span>")
 
 	for(var/obj/item/organ/I in H.internal_organs)
 		I.removed()
@@ -185,6 +197,7 @@
 		H.nano_intoblob()
 		return ..() //Any instakill shot runtimes since there are no organs after this. No point to not skip these checks, going to nullspace anyway.
 
+/*CHOMP Station removal start		
 	var/obj/item/organ/internal/nano/refactory/refactory = locate() in H.internal_organs
 	if(refactory && !(refactory.status & ORGAN_DEAD))
 
@@ -205,6 +218,7 @@
 			H.add_modifier(/datum/modifier/protean/silver, origin = refactory)
 
 	return ..()
+CHOMP Station removal end*/
 
 /datum/species/protean/get_additional_examine_text(var/mob/living/carbon/human/H)
 	return ..() //Hmm, what could be done here?
@@ -226,7 +240,7 @@
 		for(var/ability in abilities)
 			var/obj/effect/protean_ability/A = ability
 			stat("[A.ability_name]",A.atom_button_text())
-
+			
 // Various modifiers
 /datum/modifier/protean
 	stacks = MODIFIER_STACK_FORBID
@@ -257,6 +271,7 @@
 	if(!refactory.use_stored_material(material_name,material_use))
 		expire()
 
+/*CHOMP Removal start
 /datum/modifier/protean/mhydrogen
 	name = "Protean Effect - M.Hydrogen"
 	desc = "You're affected by the presence of metallic hydrogen."
@@ -301,6 +316,7 @@
 
 	accuracy = 30
 	evasion = 30
+CHOMP Removal end*/
 
 /datum/modifier/protean/steel
 	name = "Protean Effect - Steel"
@@ -312,7 +328,7 @@
 	material_name = MAT_STEEL
 
 /datum/modifier/protean/steel/tick()
-	holder.adjustBruteLoss(-10,include_robo = TRUE) //Looks high, but these ARE modified by species resistances, so this is really 20% of this
+	holder.adjustBruteLoss(-2,include_robo = TRUE) //Looks high, but these ARE modified by species resistances, so this is really 20% of this
 	holder.adjustFireLoss(-1,include_robo = TRUE) //And this is really double this
 	var/mob/living/carbon/human/H = holder
 	for(var/organ in H.internal_organs)
@@ -323,6 +339,7 @@
 		// If not damaged, but dead, fix it
 		else if(O.status & ORGAN_DEAD)
 			O.status &= ~ORGAN_DEAD //Unset dead if we repaired it entirely
+
 
 // PAN Card
 /obj/item/clothing/accessory/permit/nanotech
@@ -345,6 +362,28 @@
 	. = ..()
 	. += validstring
 	. += registring
+	
+//CHOMP Add start
+/mob/living/carbon/human/proc/rig_transform()
+	set name = "Modify Form - Hardsuit"
+	set desc = "Allows a protean to solidify its form into one extremely similar to a hardsuit."
+	set category = "Abilities"
 
+	if(istype(loc, /obj/item/weapon/rig/protean))
+		var/obj/item/weapon/rig/protean/prig = loc
+		src.forceMove(get_turf(prig))
+		prig.forceMove(src)
+		return
+
+	if(isturf(loc))
+		var/obj/item/weapon/rig/protean/prig
+		for(var/obj/item/weapon/rig/protean/O in contents)
+			prig = O
+			break
+		if(prig)
+			prig.forceMove(get_turf(src))
+			src.forceMove(prig)
+			return
+//CHOMP Add end
 #undef DAM_SCALE_FACTOR
 #undef METAL_PER_TICK

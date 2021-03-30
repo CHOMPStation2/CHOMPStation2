@@ -21,7 +21,8 @@
 		/obj/item/weapon/camera_assembly,
 		/obj/item/weapon/tank,
 		/obj/item/weapon/circuitboard,
-		/obj/item/weapon/smes_coil
+		/obj/item/weapon/smes_coil,
+		/obj/item/weapon/fuel_assembly //chompstation addition so they can set up rust
 		)
 
 	var/obj/item/wrapped = null // Item currently being held.
@@ -35,6 +36,10 @@
 		. += wrapped.examine(user)
 
 /obj/item/weapon/gripper/CtrlClick(mob/user)
+	drop_item()
+	return
+
+/obj/item/weapon/gripper/AltClick(mob/user)
 	drop_item()
 	return
 
@@ -213,9 +218,10 @@
 
 	can_hold = list(
 		/obj/item/mecha_parts/part,
-		/obj/item/mecha_parts/micro/part,		//VOREStation Edit: Allow construction of micromechs,
+		//obj/item/mecha_parts/micro/part, //VOREStation Edit: Allow construction of micromechs //CHOMPedit commented micromech stuff, because fuck this trash
 		/obj/item/mecha_parts/mecha_equipment,
-		/obj/item/mecha_parts/mecha_tracking
+		/obj/item/mecha_parts/mecha_tracking,
+		/obj/item/mecha_parts/component
 		)
 
 /obj/item/weapon/gripper/no_use //Used when you want to hold and put items in other things, but not able to 'use' the item
@@ -252,12 +258,15 @@
 		return resolved
 	return ..()
 
-/obj/item/weapon/gripper/verb/drop_item()
+/obj/item/weapon/gripper/verb/drop_gripper_item()
 
 	set name = "Drop Item"
 	set desc = "Release an item from your magnetic gripper."
 	set category = "Robot Commands"
 
+	drop_item()
+
+obj/item/weapon/gripper/proc/drop_item()
 	if(!wrapped)
 		//There's some weirdness with items being lost inside the arm. Trying to fix all cases. ~Z
 		for(var/obj/item/thing in src.contents)
@@ -268,7 +277,7 @@
 		wrapped = null
 		return
 
-	to_chat(src.loc, "<span class='danger'>You drop \the [wrapped].</span>")
+	to_chat(src.loc, "<span class='notice'>You drop \the [wrapped].</span>")
 	wrapped.loc = get_turf(src)
 	wrapped = null
 	//update_icon()

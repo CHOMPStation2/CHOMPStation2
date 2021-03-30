@@ -17,6 +17,7 @@
 			/obj/item/weapon/reagent_containers/food/drinks/bottle/patron,
 			/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager,
 			/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
+			/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,
 			/obj/item/weapon/storage/fancy/cigarettes/dromedaryco,
 			/obj/item/weapon/lipstick/random,
 			/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 2,
@@ -38,6 +39,7 @@
 			/obj/item/weapon/storage/box/glasses/shot,
 			/obj/item/weapon/storage/box/glasses/mug,
 			/obj/item/weapon/storage/box/glasses/meta,
+			/obj/item/weapon/storage/box/glasses/meta/metapint,
 			/obj/item/weapon/reagent_containers/food/drinks/shaker,
 			/obj/item/weapon/storage/box/glass_extras/straws,
 			/obj/item/weapon/storage/box/glass_extras/sticks
@@ -53,19 +55,12 @@
 	containertype = /obj/structure/largecrate
 	containername = "cooking oil tank crate"
 
-/datum/supply_pack/randomised/hospitality/
-	group = "Hospitality"
-
-/datum/supply_pack/randomised/hospitality/pizza
-	num_contained = 5
-	contains = list(
-			/obj/item/pizzabox/margherita,
-			/obj/item/pizzabox/mushroom,
-			/obj/item/pizzabox/meat,
-			/obj/item/pizzabox/vegetable,
-			/obj/item/pizzabox/pineapple
-			)
+/datum/supply_pack/hospitality/pizza
 	name = "Surprise pack of five pizzas"
+	contains = list(
+			/obj/random/pizzabox = 5,
+			/obj/item/weapon/material/knife/plastic
+			)
 	cost = 15
 	containertype = /obj/structure/closet/crate/freezer/centauri
 	containername = "Pizza crate"
@@ -83,3 +78,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/allico
 	containername = "crate of gifts"
+
+/datum/supply_pack/randomised/hospitality/
+	group = "Hospitality"
+

@@ -170,9 +170,11 @@
 
 		if(!body_coverage)
 			return
-		if (fruit)
+
+		var/obj/item/organ/external/E = target.get_organ(target.hand ? BP_L_HAND : BP_R_HAND)
+		if(istype(E) && E.robotic < ORGAN_ROBOT && fruit)
 			var/injecting = min(5,max(1,get_trait(TRAIT_POTENCY)/5))
-			to_chat(target, "<span class='danger'>You are stung by \the [fruit]!</span>")
+			to_chat(target, SPAN_DANGER("You are stung by \the [fruit]!"))
 			for(var/chem in chems)
 				target.reagents.add_reagent(chem,injecting)
 				if (fruit.reagents)
@@ -410,8 +412,8 @@
 	seed_noun = pick("spores","nodes","cuttings","seeds")
 
 	set_trait(TRAIT_POTENCY,rand(5,30),200,0)
-	set_trait(TRAIT_PRODUCT_ICON,pick(plant_controller.accessible_product_sprites))
-	set_trait(TRAIT_PLANT_ICON,pick(plant_controller.accessible_plant_sprites))
+	set_trait(TRAIT_PRODUCT_ICON,pick(SSplants.accessible_product_sprites))
+	set_trait(TRAIT_PLANT_ICON,pick(SSplants.accessible_plant_sprites))
 	set_trait(TRAIT_PLANT_COLOUR,"#[get_random_colour(0,75,190)]")
 	set_trait(TRAIT_PRODUCT_COLOUR,"#[get_random_colour(0,75,190)]")
 	update_growth_stages()
@@ -791,10 +793,10 @@
 			to_chat(user, "You [harvest_sample ? "take a sample" : "harvest"] from the [display_name].")
 
 		//This may be a new line. Update the global if it is.
-		if(name == "new line" || !(name in plant_controller.seeds))
-			uid = plant_controller.seeds.len + 1
+		if(name == "new line" || !(name in SSplants.seeds))
+			uid = SSplants.seeds.len + 1
 			name = "[uid]"
-			plant_controller.seeds[name] = src
+			SSplants.seeds[name] = src
 
 		if(harvest_sample)
 			var/obj/item/seeds/seeds = new(get_turf(user))
@@ -880,6 +882,6 @@
 
 /datum/seed/proc/update_growth_stages()
 	if(get_trait(TRAIT_PLANT_ICON))
-		growth_stages = plant_controller.plant_sprites[get_trait(TRAIT_PLANT_ICON)]
+		growth_stages = SSplants.plant_sprites[get_trait(TRAIT_PLANT_ICON)]
 	else
 		growth_stages = 0

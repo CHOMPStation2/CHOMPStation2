@@ -17,4 +17,4 @@
 	display_name = "AR-B glasses (CD, HoP, BSG)"
 	path = /obj/item/clothing/glasses/omnihud/all
 	cost = 2
-	allowed_roles = list("Colony Director","Head of Personnel","Blueshield Guard")
+	allowed_roles = list("Site Manager","Head of Personnel","Blueshield Guard")

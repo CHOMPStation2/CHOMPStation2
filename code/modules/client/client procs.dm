@@ -45,7 +45,6 @@
 	if( findtext(href,"<script",1,0) )
 		to_world_log("Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
-		//del(usr)
 		return
 
 	// Tgui Topic middleware
@@ -95,16 +94,18 @@
 
 		var/sql_discord = sql_sanitize_text(their_id)
 		var/sql_ckey = sql_sanitize_text(ckey)
-		var/DBQuery/query = dbcon.NewQuery("UPDATE erro_player SET discord_id = '[sql_discord]' WHERE ckey = '[sql_ckey]'")
+		var/DBQuery/query = SSdbcore.NewQuery("UPDATE erro_player SET discord_id = :t_discord_id WHERE ckey = :t_ckey", list("t_discord_id" = sql_discord, "t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 		if(query.Execute())
 			to_chat(src, "<span class='notice'>Registration complete! Thank you for taking the time to register your Discord ID.</span>")
 			log_and_message_admins("[ckey] has registered their Discord ID. Their Discord snowflake ID is: [their_id]") //YW EDIT
 			admin_chat_message(message = "[ckey] has registered their Discord ID. Their Discord is: <@[their_id]>", color = "#4eff22") //YW EDIT
 			notes_add(ckey, "Discord ID: [their_id]")
 			world.VgsAddMemberRole(their_id)
+			qdel(query) //CHOMPEdit TGSQL
 		else
 			to_chat(src, "<span class='warning'>There was an error registering your Discord ID in the database. Contact an administrator.</span>")
 			log_and_message_admins("[ckey] failed to register their Discord ID. Their Discord snowflake ID is: [their_id]. Is the database connected?")
+			qdel(query) //CHOMPEdit TGSQL
 		return
 	//VOREStation Add End
 
@@ -227,7 +228,6 @@
 
 	if(!void)
 		void = new()
-		void.MakeGreed()
 	screen += void
 
 	if((prefs.lastchangelog != changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
@@ -275,18 +275,22 @@
 
 /proc/get_player_age(key)
 	establish_db_connection()
-	if(!dbcon.IsConnected())
+	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 		return null
 
 	var/sql_ckey = sql_sanitize_text(ckey(key))
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 	query.Execute()
-
+	//CHOMPEdit Begin
 	if(query.NextRow())
-		return text2num(query.item[1])
+		var/outp = text2num(query.item[1])
+		qdel(query)
+		return outp
 	else
+		qdel(query)
 		return -1
+	//CHOMPEdit End
 
 
 /client/proc/log_client_to_db()
@@ -295,12 +299,12 @@
 		return
 
 	establish_db_connection()
-	if(!dbcon.IsConnected())
+	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 		return
 
 	var/sql_ckey = sql_sanitize_text(src.ckey)
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
+	var/DBQuery/query = SSdbcore.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 	query.Execute()
 	var/sql_id = 0
 	player_age = 0	// New players won't have an entry so knowing we have a connection we set this to zero to be updated if their is a record.
@@ -308,27 +312,28 @@
 		sql_id = query.item[1]
 		player_age = text2num(query.item[2])
 		break
-
+	qdel(query) //CHOMPEdit TGSQL
 	account_join_date = sanitizeSQL(findJoinDate())
-	if(account_join_date && dbcon.IsConnected())
-		var/DBQuery/query_datediff = dbcon.NewQuery("SELECT DATEDIFF(Now(),'[account_join_date]')")
+	if(account_join_date && SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+		var/DBQuery/query_datediff = SSdbcore.NewQuery("SELECT DATEDIFF(Now(),'[account_join_date]')") //CHOMPEdit TGSQL
 		if(query_datediff.Execute() && query_datediff.NextRow())
 			account_age = text2num(query_datediff.item[1])
+		qdel(query_datediff) //CHOMPEdit TGSQL
 
-	var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
+	var/DBQuery/query_ip = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'") //CHOMPEdit TGSQL
 	query_ip.Execute()
 	related_accounts_ip = ""
 	while(query_ip.NextRow())
 		related_accounts_ip += "[query_ip.item[1]], "
 		break
-
-	var/DBQuery/query_cid = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
+	qdel(query_ip) //CHOMPEdit TGSQL
+	var/DBQuery/query_cid = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'") //CHOMPEdit TGSQL
 	query_cid.Execute()
 	related_accounts_cid = ""
 	while(query_cid.NextRow())
 		related_accounts_cid += "[query_cid.item[1]], "
 		break
-
+	qdel(query_cid) //CHOMPEdit TGSQL
 	//Just the standard check to see if it's actually a number
 	if(sql_id)
 		if(istext(sql_id))
@@ -377,7 +382,7 @@
 			log_admin("Couldn't perform IP check on [key] with [address]")
 
 	// VOREStation Edit Start - Department Hours
-	var/DBQuery/query_hours = dbcon.NewQuery("SELECT department, hours, total_hours FROM vr_player_hours WHERE ckey = '[sql_ckey]'")
+	var/DBQuery/query_hours = SSdbcore.NewQuery("SELECT department, hours, total_hours FROM vr_player_hours WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 	if(query_hours.Execute())
 		while(query_hours.NextRow())
 			department_hours[query_hours.item[1]] = text2num(query_hours.item[2])
@@ -388,20 +393,23 @@
 		spawn(0)
 			alert(src, "The query to load your existing playtime failed. Screenshot this, give the screenshot to a developer, and reconnect, otherwise you may lose any recorded play hours (which may limit access to jobs). ERROR: [error_message]", "PROBLEMS!!")
 	// VOREStation Edit End - Department Hours
-
+	qdel(query_hours) //CHOMPEdit TGSQL
 	if(sql_id)
 		//Player already identified previously, we need to just update the 'lastseen', 'ip' and 'computer_id' variables
-		var/DBQuery/query_update = dbcon.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]' WHERE id = [sql_id]")
+		var/DBQuery/query_update = SSdbcore.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]' WHERE id = [sql_id]") //CHOMPEdit TGSQL
 		query_update.Execute()
+		qdel(query_update) //CHOMPEdit TGSQL
 	else
 		//New player!! Need to insert all the stuff
-		var/DBQuery/query_insert = dbcon.NewQuery("INSERT INTO erro_player (id, ckey, firstseen, lastseen, ip, computerid, lastadminrank) VALUES (null, '[sql_ckey]', Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]')")
+		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_player (id, ckey, firstseen, lastseen, ip, computerid, lastadminrank) VALUES (null, :t_ckey, Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]')", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 		query_insert.Execute()
+		qdel(query_insert) //CHOMPEdit TGSQL
 
 	//Logging player access
 	var/serverip = "[world.internet_address]:[world.port]"
-	var/DBQuery/query_accesslog = dbcon.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]','[sql_ckey]','[sql_ip]','[sql_computerid]');")
+	var/DBQuery/query_accesslog = SSdbcore.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]',:t_ckey,'[sql_ip]','[sql_computerid]');", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 	query_accesslog.Execute()
+	qdel(query_accesslog) //CHOMPEdit TGSQL
 
 #undef TOPIC_SPAM_DELAY
 #undef UPLOAD_LIMIT

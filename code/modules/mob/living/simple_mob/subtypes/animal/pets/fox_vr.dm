@@ -50,7 +50,9 @@
 	base_wander_delay = 4
 
 /mob/living/simple_mob/animal/passive/fox/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "Slick foxguts. Cute on the outside, slimy on the inside!"
@@ -190,16 +192,18 @@
 //Captain fox
 /mob/living/simple_mob/animal/passive/fox/renault
 	name = "Renault"
-	desc = "Renault, the Colony Director's trustworthy fox. I wonder what it says?"
+	desc = "Renault, the Site Manager's trustworthy fox. I wonder what it says?"
 	tt_desc = "Vulpes nobilis"
-	//befriend_job = "Colony Director" Sebbe edit: couldn't make this work, commenting out for now.
+	//befriend_job = "Site Manager" Sebbe edit: couldn't make this work, commenting out for now.
 
 	var/mob/living/friend = null // Our best pal, who we'll follow. awoo.
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 	makes_dirt = FALSE	// No more dirt
 
 /mob/living/simple_mob/animal/passive/fox/renault/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "Slick foxguts. They seem somehow more regal than perhaps other foxes!"

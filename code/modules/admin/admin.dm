@@ -407,7 +407,7 @@ proc/admin_notice(var/message, var/rights)
 			dat+="<B><FONT COLOR='maroon'>ERROR: Could not submit Feed story to Network.</B></FONT><HR><BR>"
 			if(src.admincaster_feed_channel.channel_name=="")
 				dat+="<FONT COLOR='maroon'>Invalid receiving channel name.</FONT><BR>"
-			if(src.admincaster_feed_message.body == "" || src.admincaster_feed_message.body == "\[REDACTED\]")
+			if(src.admincaster_feed_message.body == "" || src.admincaster_feed_message.body == "\[REDACTED\]" || admincaster_feed_message.title == "")
 				dat+="<FONT COLOR='maroon'>Invalid message body.</FONT><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[3]'>Return</A><BR>"
 		if(7)
@@ -436,11 +436,14 @@ proc/admin_notice(var/message, var/rights)
 					var/i = 0
 					for(var/datum/feed_message/MESSAGE in src.admincaster_feed_channel.messages)
 						i++
-						dat+="-[MESSAGE.body] <BR>"
+						//dat+="-[MESSAGE.body] <BR>"
+						var/pic_data
 						if(MESSAGE.img)
 							usr << browse_rsc(MESSAGE.img, "tmp_photo[i].png")
-							dat+="<img src='tmp_photo[i].png' width = '180'><BR><BR>"
-						dat+="<FONT SIZE=1>\[Story by <FONT COLOR='maroon'>[MESSAGE.author]</FONT>\]</FONT><BR>"
+							pic_data+="<img src='tmp_photo[i].png' width = '180'><BR>"
+						dat+= get_newspaper_content(MESSAGE.title, MESSAGE.body, MESSAGE.author,"#d4cec1", pic_data)
+						dat+="<BR>"
+						dat+="<FONT SIZE=1>\[Story by <FONT COLOR='maroon'>[MESSAGE.author] - [MESSAGE.time_stamp]</FONT>\]</FONT><BR>"
 			dat+={"
 				<BR><HR><A href='?src=\ref[src];ac_refresh=1'>Refresh</A>
 				<BR><A href='?src=\ref[src];ac_setScreen=[1]'>Back</A>
@@ -937,17 +940,31 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Server"
 	set desc="Whether persistent data will be saved from now on."
 	set name="Toggle Persistent Data"
-	config.persistence_enabled = !(config.persistence_enabled)
-/* CHOMP the entire world doesn't need to know.
-	if(config.persistence_enabled)
+	config.persistence_disabled = !(config.persistence_disabled)
+/* CHOMP Edit: the entire world doesn't need to know.
+	if(!config.persistence_disabled)
 		to_world("<B>Persistence is now enabled..</B>")
 	else
 		to_world("<B>Persistence is no longer enabled.</B>")
 */
-	message_admins("<font color='blue'>[key_name_admin(usr)] toggled persistence to [config.persistence_enabled ? "On" : "Off"].</font>", 1)
-	log_admin("[key_name(usr)] toggled persistence to [config.persistence_enabled ? "On" : "Off"].")
+	message_admins("<font color='blue'>[key_name_admin(usr)] toggled persistence to [config.persistence_disabled ? "Off" : "On"].</font>", 1)
+	log_admin("[key_name(usr)] toggled persistence to [config.persistence_disabled ? "Off" : "On"].")
 	world.update_status()
 	feedback_add_details("admin_verb","TPD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/togglemaploadpersistence()
+	set category = "Server"
+	set desc="Whether mapload persistent data will be saved from now on."
+	set name="Toggle Mapload Persistent Data"
+	config.persistence_ignore_mapload = !(config.persistence_ignore_mapload)
+	if(!config.persistence_ignore_mapload)
+		to_world("<B>Persistence is now enabled..</B>")
+	else
+		to_world("<B>Persistence is no longer enabled.</B>")
+	message_admins("<font color='blue'>[key_name_admin(usr)] toggled persistence to [config.persistence_ignore_mapload ? "Off" : "On"].</font>", 1)
+	log_admin("[key_name(usr)] toggled persistence to [config.persistence_ignore_mapload ? "Off" : "On"].")
+	world.update_status()
+	feedback_add_details("admin_verb","TMPD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggle_aliens()
 	set category = "Server"
@@ -1070,18 +1087,18 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	return 0
 
-/datum/admins/proc/spawn_fruit(seedtype in plant_controller.seeds)
+/datum/admins/proc/spawn_fruit(seedtype in SSplants.seeds)
 	set category = "Debug"
 	set desc = "Spawn the product of a seed."
 	set name = "Spawn Fruit"
 
 	if(!check_rights(R_SPAWN))	return
 
-	if(!seedtype || !plant_controller.seeds[seedtype])
+	if(!seedtype || !SSplants.seeds[seedtype])
 		return
 	var/amount = input("Amount of fruit to spawn", "Fruit Amount", 1) as null|num
 	if(!isnull(amount))
-		var/datum/seed/S = plant_controller.seeds[seedtype]
+		var/datum/seed/S = SSplants.seeds[seedtype]
 		S.harvest(usr,0,0,amount)
 	log_admin("[key_name(usr)] spawned [seedtype] fruit at ([usr.x],[usr.y],[usr.z])")
 
@@ -1125,16 +1142,16 @@ var/datum/announcement/minor/admin_min_announcer = new
 		for(var/datum/custom_item/item in current_items)
 			to_chat(usr, "- name: [item.name] icon: [item.item_icon] path: [item.item_path] desc: [item.item_desc]")
 
-/datum/admins/proc/spawn_plant(seedtype in plant_controller.seeds)
+/datum/admins/proc/spawn_plant(seedtype in SSplants.seeds)
 	set category = "Debug"
 	set desc = "Spawn a spreading plant effect."
 	set name = "Spawn Plant"
 
 	if(!check_rights(R_SPAWN))	return
 
-	if(!seedtype || !plant_controller.seeds[seedtype])
+	if(!seedtype || !SSplants.seeds[seedtype])
 		return
-	new /obj/effect/plant(get_turf(usr), plant_controller.seeds[seedtype])
+	new /obj/effect/plant(get_turf(usr), SSplants.seeds[seedtype])
 	log_admin("[key_name(usr)] spawned [seedtype] vines at ([usr.x],[usr.y],[usr.z])")
 
 /datum/admins/proc/spawn_atom(var/object as text)
@@ -1412,6 +1429,11 @@ var/datum/announcement/minor/admin_min_announcer = new
 		return 1
 	if(tomob.client) //No need to ghostize if there is no client
 		tomob.ghostize(0)
+	if(frommob.mind && frommob.mind.current) //Preserve teleop for original body when adminghosting.
+		var/mob/body = frommob.mind.current
+		if(body)
+			if(body.teleop)
+				body.teleop = tomob
 	message_admins("<span class='adminnotice'>[key_name_admin(usr)] has put [frommob.ckey] in control of [tomob.name].</span>")
 	log_admin("[key_name(usr)] stuffed [frommob.ckey] into [tomob.name].")
 	feedback_add_details("admin_verb","CGD")

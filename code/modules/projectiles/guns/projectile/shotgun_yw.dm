@@ -4,7 +4,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "revolvshot"
 	item_state = null
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	force = 10
 	caliber = "12g"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_ILLEGAL = 2)
@@ -51,6 +51,7 @@
 /obj/item/ammo_magazine/m12gdrumjack/empty
 	name = "drum magazine (12 gauge)"
 	initial_ammo = 0
+	matter = list(DEFAULT_WALL_MATERIAL = 1625) //Why these cost so much ? the normal ones have 13000 matter so i just multiplied by 1.25(default) don't know why it costs so much
 
 //scattering shots, old buckshot
 /obj/item/ammo_casing/a12g/scatter
@@ -59,6 +60,7 @@
 	icon = 'icons/obj/ammo_yw.dmi'
 	icon_state = "scattershell"
 	projectile_type = /obj/item/projectile/scatter/shotgun
+	matter = list(DEFAULT_WALL_MATERIAL = 450)
 
 /obj/item/projectile/scatter/shotgun
 	name = "shotgun scatter projectile"

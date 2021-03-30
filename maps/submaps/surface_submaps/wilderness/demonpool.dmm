@@ -9,7 +9,7 @@
 "de" = (/obj/fire,/turf/simulated/floor,/area/submap/DemonPool)
 "dG" = (/obj/structure/simple_door,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/DemonPool)
 "es" = (/obj/effect/decal/cleanable/blood/gibs/body,/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/cult,/area/submap/DemonPool)
-"eM" = (/obj/structure/table/woodentable,/obj/item/weapon/book,/obj/item/weapon/spellbook/oneuse/forcewall,/turf/simulated/floor,/area/submap/DemonPool)
+"eM" = (/obj/structure/table/woodentable,/obj/item/weapon/book,/turf/simulated/floor,/area/submap/DemonPool)
 "eR" = (/turf/simulated/wall/cult,/area/submap/DemonPool)
 "eV" = (/obj/structure/bonfire/permanent,/obj/structure/grille/cult,/turf/simulated/floor/cult,/area/submap/DemonPool)
 "eW" = (/turf/template_noop,/area/template_noop)
@@ -39,6 +39,7 @@
 "oi" = (/turf/simulated/floor/cult,/area/submap/DemonPool)
 "on" = (/obj/effect/decal/cleanable/blood/gibs/body,/turf/simulated/floor/cult,/area/submap/DemonPool)
 "pb" = (/obj/fire,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor,/area/submap/DemonPool)
+"pi" = (/obj/effect/decal/cleanable/blood/gibs/body,/obj/item/weapon/spellbook/oneuse/forcewall,/turf/simulated/floor/cult,/area/submap/DemonPool)
 "pH" = (/obj/structure/grille/cult,/turf/simulated/floor/cult,/area/submap/DemonPool)
 "pX" = (/obj/random/junk,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/DemonPool)
 "qa" = (/mob/living/simple_mob/animal/space/bats/cult/strong{faction = "demon"},/obj/effect/decal/cleanable/dirt,/turf/simulated/floor,/area/submap/DemonPool)
@@ -96,7 +97,7 @@
 "OK" = (/obj/structure/simple_door/cult,/obj/fire,/obj/fire,/obj/fire,/obj/fire,/turf/simulated/floor,/area/submap/DemonPool)
 "Pu" = (/obj/structure/grille/cult,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/DemonPool)
 "Qq" = (/obj/item/weapon/beartrap/hunting{anchored = 1; deployed = 1},/obj/effect/decal/cleanable/blood/gibs/limb,/obj/effect/decal/cleanable/blood/gibs/limb,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/DemonPool)
-"Qr" = (/obj/structure/closet/crate/secure/loot,/obj/item/weapon/spellbook/oneuse/fireball,/turf/simulated/floor/cult,/area/submap/DemonPool)
+"Qr" = (/obj/structure/closet/crate/secure/loot,/turf/simulated/floor/cult,/area/submap/DemonPool)
 "Qv" = (/obj/effect/landmark/loot_spawn,/obj/effect/rune,/turf/simulated/floor/cult,/area/submap/DemonPool)
 "Qz" = (/obj/effect/spawner/lootdrop,/turf/simulated/floor/cult,/area/submap/DemonPool)
 "Ro" = (/obj/structure/simple_door,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/DemonPool)
@@ -142,7 +143,7 @@ eWeWJoJoJVJoJoJoeReRXPsbmOqQXBXBpHBbeRJoJVVfVKVKVK
 eWjvJoHbRZHbJoJoeRyWjGyWsisisizjpHCYeRJoJovJeWVKVK
 eWeWHbvJJMJVJoJoeReVsMQvonayjtonpHeReRJoVKeWjveWeW
 eWjvvJVfJMHbJoJoeRyWjGyWziKRhQloLxeRJoJoeWeWjveWeW
-eWVKVKWdJMvJHbJoeReRbbQronWVYkeReReRJoJoeWeWeWeWeW
+eWVKVKWdJMvJHbJoeReRbbQrpiWVYkeReReRJoJoeWeWeWeWeW
 eWVKVKVKlrJMHbJoJoeReReReReReReRJoJoJoeWeWeWeWbweW
 eWVKVKeWJNeWjveWJoJoJoJoJoJoJoJoJoeWeWeWeWeWeWeWeW
 eWeWeWeWeWeWeWeWeWeWVKVKVKVKeWeWeWeWeWeWeWeWeWeWeW

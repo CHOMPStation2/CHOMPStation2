@@ -2,7 +2,7 @@
 #define SYNX_UPPER_DAMAGE 6
 
 
-/mob/living/simple_mob/retaliate/synx //Player controlled variant
+/mob/living/simple_mob/animal/synx //Player controlled variant
 	//on inteligence https://synx.fandom.com/wiki/Behavior/Intelligence //keeping this here for player controlled synxes.
 	name = "Synx"
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. Plain, white, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration."
@@ -13,6 +13,8 @@
 	icon_state = "synx_living"
 	icon_living = "synx_living"
 	icon_dead = "synx_dead"
+	mob_bump_flag = SIMPLE_ANIMAL //This not existing was breaking vore bump for some reason.
+	parasitic = TRUE //Digestion immunity var
 
 	var/list/speak = list()
 	var/speak_chance = 1 //MAy have forgotten to readd that.
@@ -100,13 +102,15 @@
 	max_n2 = 0 //Maybe add a max
 	// TODO: Set a max temperature of about 20-30 above room temperatures. Synx don't like the heat.
 
-/mob/living/simple_mob/retaliate/synx/ai //AI controlled variant
+/mob/living/simple_mob/animal/synx/ai //AI controlled variant
 
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
 
-/mob/living/simple_mob/retaliate/synx/init_vore()
-	..()
+/mob/living/simple_mob/animal/synx/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	//B.human_prey_swallow_time = 6 SECONDS //doesnt work
 	//B.nonhuman_prey_swallow_time = 3 SECONDS //doesnt work
@@ -134,8 +138,10 @@
 	)
 	B.mode_flags = DM_FLAG_NUMBING	//Prey are more docile when it doesn't hurt.
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/asteri/init_vore()
-	..()
+/mob/living/simple_mob/animal/synx/ai/pet/asteri/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.desc    = "The synx eagerly swallows you, taking you from its gullet into its long, serpentine stomach. The internals around you greedily press into your from all sides, keeping you coated in a slick coat of numbing fluids..."
 	B.digest_burn = 2
@@ -158,16 +164,16 @@
 	"The synx's body gleefully takes what's left of your life, Asteri's usually-repressed sadism overwhelmed with a sinister satisfaction in snuffing you out as your liquefied remains gush into a bit more heft on the parasite's emaciated frame.",
 	)
 
-/mob/living/simple_mob/retaliate/synx/New() //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
+/mob/living/simple_mob/animal/synx/New() //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
 //some things should be here that arent tho.
 	..()
 	verbs |= /mob/living/proc/ventcrawl
-	verbs |= /mob/living/simple_mob/retaliate/synx/proc/distend_stomach //to do later: sprites of stomach outside the body.
+	verbs |= /mob/living/simple_mob/animal/synx/proc/distend_stomach //to do later: sprites of stomach outside the body.
 	verbs |= /mob/living/simple_mob/proc/contort
-	verbs |= /mob/living/simple_mob/retaliate/synx/proc/sonar_ping
+	verbs |= /mob/living/simple_mob/animal/synx/proc/sonar_ping
 	verbs |= /mob/living/proc/shred_limb
-	verbs |= /mob/living/simple_mob/retaliate/synx/proc/disguise
-	verbs |= /mob/living/simple_mob/retaliate/synx/proc/randomspeech
+	verbs |= /mob/living/simple_mob/animal/synx/proc/disguise
+	verbs |= /mob/living/simple_mob/animal/synx/proc/randomspeech
 	realname = name
 	voices += "Garbled voice"
 	voices += "Unidentifiable Voice"
@@ -177,6 +183,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SPECIAL ITEMS/REAGENTS !!!! ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////// //keeping most of these the same except the stuff that apply to the standard synx. -lo
+/*
 /datum/seed/hardlightseed/
 	name = "Type NULL Hardlight Generator"
 	seed_name = "Biomechanical Hardlight generator seed"
@@ -204,14 +211,15 @@
 	name = "hardlightseedsx"
 	seed_name = "hardlightseedsx"
 	display_name = "Biomechanical Hardlight Generator SX"//PLant that is part mechanical part biological
-	has_mob_product = /mob/living/simple_mob/retaliate/synx/ai/pet/holo
+	has_mob_product = /mob/living/simple_mob/animal/synx/ai/pet/holo
+*/ //This is defined in seed_datums_ch
 
 /obj/item/seeds/hardlightseed/typesx
 	seed_type = "hardlightseedsx"
 
 /datum/reagent/inaprovaline/synxchem
 	name = "Alien nerveinhibitor"
-	description = "A toxin that slowly metabolizes damaging the person, but makes them unable to feel pain"
+	description = "A toxin that slowly metabolizes damaging the person, but makes them unable to feel pain."
 	id = "synxchem"
 	metabolism = REM * 0.1 //Slow metabolization to try and mimic permanent nerve damage without actually being too cruel to people
 	color = "#FFFFFF"
@@ -310,7 +318,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 // nevermind. I added any roleplay flavor weird fur mechanics to happen when you touch or attack the synx.
 
-/mob/living/simple_mob/retaliate/synx/apply_melee_effects(var/atom/A) //Re-adding this for AI synx
+/mob/living/simple_mob/animal/synx/apply_melee_effects(var/atom/A) //Re-adding this for AI synx
 	if(stomach_distended) //Hacky burn damage code
 		if(isliving(A)) //Only affect living mobs, should include silicons. This could be expanded to deal special effects to acid-vulnerable objects.
 			var/mob/living/L = A
@@ -345,9 +353,9 @@
 
 
 
-/mob/living/simple_mob/retaliate/synx/hear_say(message,verb,language,fakename,isItalics,var/mob/living/speaker)
+/mob/living/simple_mob/animal/synx/hear_say(message,verb,language,fakename,isItalics,var/mob/living/speaker)
 	. = ..()
-	if(!message)    return
+	if(!message || !speaker)    return
 	if (speaker == src) return
 	speaker = speaker.GetVoice()
 	speak += message
@@ -361,7 +369,7 @@
 	if(message=="Honk!")
 		bikehorn()
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/clown/Life()
+/mob/living/simple_mob/animal/synx/ai/pet/clown/Life()
 	..()
 	if(vore_fullness)
 		size_multiplier = 1+(0.5*vore_fullness)
@@ -369,13 +377,13 @@
 	if(!vore_fullness && size_multiplier != 1)
 		size_multiplier = 1
 		update_icons()
-/mob/living/simple_mob/retaliate/synx/Life()
+/mob/living/simple_mob/animal/synx/Life()
 	..()
-//mob/living/simple_mob/retaliate/synx/ai/handle_idle_speaking() //Only ai-controlled synx will randomly speak
+//mob/living/simple_mob/animal/synx/ai/handle_idle_speaking() //Only ai-controlled synx will randomly speak
 	if(voices && prob(speak_chance/2))
 		randomspeech()
 
-/mob/living/simple_mob/retaliate/synx/perform_the_nom() //Synx can only eat people if their organs are on the inside.
+/mob/living/simple_mob/animal/synx/perform_the_nom() //Synx can only eat people if their organs are on the inside.
 	if(stomach_distended)
 		to_chat(src,"<span class='notice'>You can't eat people without your stomach inside of you!</span>")
 		return
@@ -406,7 +414,7 @@
 		to_chat(src,"<span class='notice'>You are now hiding.</span>")
 		movement_cooldown = 6
 
-/mob/living/simple_mob/retaliate/synx/proc/disguise()
+/mob/living/simple_mob/animal/synx/proc/disguise()
 	set name = "Toggle Form"
 	set desc = "Switch between amorphous and humanoid forms."
 	set category = "Abilities"
@@ -419,26 +427,26 @@
 		to_chat(src,"<span class='warning'>You can't disguise with your stomach outside of your body!</span>")
 		return
 	if(!transformed)
-		to_chat(src,"<span class='warning'>you changed back into your disguise.</span>")
+		to_chat(src,"<span class='warning'>You changed back into your disguise.</span>")
 		icon_living = transformed_state //Switch state to transformed state
 	else // If transformed is true.
-		to_chat(src,"<span class='warning'>now they see your true form.</span>")
+		to_chat(src,"<span class='warning'>Now they see your true form.</span>")
 		icon_living = initial(icon_living) //Switch state to what it was originally defined.
 
 
 	transformed = !transformed
 	update_icons()
 
-/mob/living/simple_mob/retaliate/synx/proc/randomspeech()
+/mob/living/simple_mob/animal/synx/proc/randomspeech()
 	set name = "speak"
-	set desc = "Takes a sentence you heard and says it"
+	set desc = "Take a sentence you heard and speak it."
 	set category = "Abilities"
 	if(speak && voices)
 		handle_mimic()
 	else
-		usr << "<span class='warning'>YOU NEED TO HEAR THINGS FIRST, try using Ventcrawl to eevesdrop on nerds</span>"
+		usr << "<span class='warning'>YOU NEED TO HEAR THINGS FIRST, try using Ventcrawl to eevesdrop on nerds.</span>"
 
-/mob/living/simple_mob/retaliate/synx/proc/handle_mimic()
+/mob/living/simple_mob/animal/synx/proc/handle_mimic()
 	name = pick(voices)
 	spawn(2)
 		src.say(pick(speak))
@@ -447,10 +455,10 @@
 
 //lo- procs adjusted to mobs.
 
-/mob/living/simple_mob/retaliate/synx
+/mob/living/simple_mob/animal/synx
 	var/next_sonar_ping = 0
 
-/mob/living/simple_mob/retaliate/synx/proc/sonar_ping()
+/mob/living/simple_mob/animal/synx/proc/sonar_ping()
 	set name = "Listen In"
 	set desc = "Allows you to listen in to movement and noises around you."
 	set category = "Abilities"
@@ -499,7 +507,7 @@
 
 
 
-/mob/living/simple_mob/retaliate/synx/proc/distend_stomach()
+/mob/living/simple_mob/animal/synx/proc/distend_stomach()
 	set name = "Distend Stomach"
 	set desc = "Allows you to throw up your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
 	set category = "Abilities"
@@ -537,7 +545,7 @@
 ////////////////////////////////////////
 ////////////////PET VERSION/////////////
 ////////////////////////////////////////
-/mob/living/simple_mob/retaliate/synx/ai/pet
+/mob/living/simple_mob/animal/synx/ai/pet
 	faction = "Cargonia" //Should not share a faction with those pesky non station synxes.//This is so newspaper has a failchance
 	name = "Bob"
 	desc = "A very regular pet."
@@ -546,25 +554,29 @@
 	glow_toggle = 1
 	player_msg = "You aren't supposed to be in this. Wrong mob."
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/init_vore()
-    ..()
-    var/obj/belly/B = vore_selected
-    B.vore_verb = "swallow"
-    B.digest_burn = 1
-    B.digest_brute = 0
+/mob/living/simple_mob/animal/synx/ai/pet/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
+	var/obj/belly/B = vore_selected
+	B.vore_verb = "swallow"
+	B.digest_burn = 1
+	B.digest_brute = 0
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/holo/init_vore()
-	..()
+/mob/living/simple_mob/animal/synx/ai/pet/holo/init_vore()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.vore_verb = "swallow"
 	B.digest_burn = 5
 	B.digest_brute = 5
 
-/mob/living/simple_mob/retaliate/synx/ai/pet
+/mob/living/simple_mob/animal/synx/ai/pet
 	speak_chance = 2.0666
 
 //HONKMOTHER Code.
-/*/mob/living/simple_mob/retaliate/synx/proc/honk()
+/*/mob/living/simple_mob/animal/synx/proc/honk()
 	set name = "HONK"
 	set desc = "TAAA RAINBOW"
 	set category = "Abilities"
@@ -572,18 +584,18 @@
 	icon_living = "synx_pet_rainbow"
 	playsound(src.loc, 'sound/items/bikehorn.ogg', 50, 1)
 */
-/mob/living/simple_mob/retaliate/synx/proc/bikehorn()
+/mob/living/simple_mob/animal/synx/proc/bikehorn()
 	playsound(src.loc, 'sound/items/bikehorn.ogg', 50, 1)
 
 //HOLOSEEDSPAWNCODE
-/mob/living/simple_mob/retaliate/synx/ai/pet/holo/death()
+/mob/living/simple_mob/animal/synx/ai/pet/holo/death()
 	..()
 	visible_message("<span class='notice'>\The [src] fades away!</span>")
 	var/location = get_turf(src)
 	new /obj/item/seeds/hardlightseed/typesx(location)
 	qdel(src)
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/holo/gib()
+/mob/living/simple_mob/animal/synx/ai/pet/holo/gib()
 	visible_message("<span class='notice'>\The [src] fades away!</span>")
 	var/location = get_turf(src)
 	new /obj/item/seeds/hardlightseed/typesx(location)
@@ -592,7 +604,7 @@
 ////////////////////////////////////////
 ////////////////SYNX VARIATIONS/////////
 ////////////////////////////////////////
-/mob/living/simple_mob/retaliate/synx/ai/pet/holo
+/mob/living/simple_mob/animal/synx/ai/pet/holo
 	poison_chance = 100
 	poison_type = "fakesynxchem" //unlike synxchem this one heals!
 	name = "Hardlight synx"
@@ -617,7 +629,7 @@
 	vore_escape_chance = 30 //Much higher escape chance.. it's a hologram.
 	swallowTime = 10 SECONDS //Much more time to run
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/greed
+/mob/living/simple_mob/animal/synx/ai/pet/greed
 	name = "Greed"
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. black, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration.. This one has the name Greed burnt into its back, the burnt in name seems to be luminescent making it harder for it to blend into the dark."
 	//icon= //icon= would just set what DMI we are using, we already have our special one set.
@@ -635,7 +647,7 @@
 	vore_bump_chance = 2 //lowered bump chance
 	vore_escape_chance = 5 //Multivore allows for people to shove eachother out so lower normal escape chance.
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/greed/synth
+/mob/living/simple_mob/animal/synx/ai/pet/greed/synth
 /*
 ▓███▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓███▓
  ▓▓   ▓▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓   ▓▓▓█
@@ -691,11 +703,11 @@
 		..()
 		name = "SYN-KinC-([rand(100,999)])"
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/greed/synth/goodboy
+/mob/living/simple_mob/animal/synx/ai/pet/greed/synth/goodboy
 	//hostile = 0
 	faction = "neutral"
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/diablo
+/mob/living/simple_mob/animal/synx/ai/pet/diablo
 	//var/diablo_LIVING = "synx_diablo_living"
 	//var/diablo_DEAD = "synx_diablo_dead"
 	name = "diablo"
@@ -707,7 +719,7 @@
 	//Vore Section
 	vore_capacity = 2
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/asteri
+/mob/living/simple_mob/animal/synx/ai/pet/asteri
 	name = "Asteri"
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. Bleak white, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration.. This one has distinctive markings over its face forming the shape of a star, and its back holds a sizeable scar leading up to a small implanted device just above its waist, the name 'Asteri' scribed across the metal."
 	//icon= //icon= would just set what DMI we are using, we already have our special one set.
@@ -726,7 +738,7 @@
 	vore_bump_chance = 2
 	vore_escape_chance = 5
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/clown
+/mob/living/simple_mob/animal/synx/ai/pet/clown
 	//hostile = 1
 	poison_chance = 100
 	poison_type = "clownsynxchem" //unlike synxchem this one HONKS
@@ -752,32 +764,32 @@
 ////////////////////////////////////////
 ////////////////SYNX DEBUG//////////////
 ////////////////////////////////////////
-/mob/living/simple_mob/retaliate/synx/ai/pet/debug
+/mob/living/simple_mob/animal/synx/ai/pet/debug
 	name = "Syntox"
 	desc = "ERROR Connection to translation server could not be established!"
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/debug/proc/rename()
+/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename()
 	set name = "rename"
 	set desc = "Renames the synx"
 	set category = "DEBUG"
 	name = input(usr, "What would you like to change name to?", "Renaming", null)
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/debug/proc/redesc()
+/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc()
 	set name = "redesc"
 	set desc = "Redescribes the synx"
 	set category = "DEBUG"
 	desc = input(usr, "What would you like to change desc to?", "Redescribing", null)
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/debug/proc/resprite()
+/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite()
 	set name = "resprite"
 	set desc = "Resprite the synx"
 	set category = "DEBUG"
 	icon_state = input(usr, "What would you like to change icon_state to?", "Respriting", null)
 
-/mob/living/simple_mob/retaliate/synx/ai/pet/debug/New()
-	verbs |= /mob/living/simple_mob/retaliate/synx/ai/pet/debug/proc/rename
-	verbs |= /mob/living/simple_mob/retaliate/synx/ai/pet/debug/proc/resprite
-	verbs |= /mob/living/simple_mob/retaliate/synx/ai/pet/debug/proc/redesc
+/mob/living/simple_mob/animal/synx/ai/pet/debug/New()
+	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename
+	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite
+	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc
 
 ////////////////////////////////////////
 ////////////////SYNX SPAWNER////////////
@@ -786,18 +798,18 @@
 	name = "This is synxes"
 
 /obj/random/mob/synx/item_to_spawn()
-	return pick(prob(66);/mob/living/simple_mob/retaliate/synx/ai/pet/greed,
-		//prob(50);/mob/living/simple_mob/retaliate/synx/pet/asteri,//He's crew so let's remove this
-		prob(33);/mob/living/simple_mob/retaliate/synx/ai/pet/holo,
-		prob(50);/mob/living/simple_mob/retaliate/synx/ai,) //normal eel boyo.
+	return pick(prob(66);/mob/living/simple_mob/animal/synx/ai/pet/greed,
+		//prob(50);/mob/living/simple_mob/animal/synx/pet/asteri,//He's crew so let's remove this
+		prob(33);/mob/living/simple_mob/animal/synx/ai/pet/holo,
+		prob(50);/mob/living/simple_mob/animal/synx/ai,) //normal eel boyo.
 
 ////////////////////////////////////////////////////////////////////////////
-//////////////////////////NOT A SYNX///////but looks kinda like one/////////
+//////////////////////////NOT A SYNX///////but acts kinda like one/////////
 ////////////////////////////////////////////////////////////////////////////
 /*
 Content relating to the SCP Foundation, including the SCP Foundation logo, is licensed under
 Creative Commons Sharealike 3.0 and all concepts originate from http://www.scp-wiki.net and its authors.
-This includes the sprites of the below Mob which are based upon SCP 939 and sprited by Riviera (not added yet)
+This includes the sprites of the below Mob which are based upon SCP 939.
 */
 //SCP-939
 //sprites to be made.
@@ -820,16 +832,20 @@ This includes the sprites of the below Mob which are based upon SCP 939 and spri
 	use_astar = TRUE //Clever boy!
 	threaten = TRUE
 
-/mob/living/simple_mob/retaliate/synx/scp
+/mob/living/simple_mob/animal/synx/scp
 	name = "Unknown"
 	desc = "It's a red canine looking creature."
 	tt_desc = "Unknown Alien Lifeform"
+
+	poison_chance = 0 //no poison,
 	ai_holder_type = /datum/ai_holder/simple_mob/scp
 	say_list_type = /datum/say_list/malf_drone
 
-	//icon_state = "scp_living"
-	//icon_living = "scp_living"
-	//icon_dead = "scp_dead"
+	icon = 'icons/mob/synxmanyvoices.dmi'
+	icon_state = "939_living"
+	icon_living = "939_living"
+	icon_dead = "939_dead"
+	pixel_x = -15
 
 #undef SYNX_LOWER_DAMAGE
 #undef SYNX_UPPER_DAMAGE

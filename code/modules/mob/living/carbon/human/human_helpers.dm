@@ -102,7 +102,9 @@
 	var/obj/item/organ/external/T = organs_by_name[BP_TORSO]
 	if(T && T.robotic >= ORGAN_ROBOT)
 		src.verbs += /mob/living/carbon/human/proc/self_diagnostics
+		src.verbs += /mob/living/carbon/human/proc/setmonitor_state//YWadd, early port, remove comment when it comes from upstream
 		src.verbs += /mob/living/carbon/human/proc/reagent_purge //VOREStation Add
+		src.verbs += /mob/living/carbon/human/proc/setmonitor_state
 		var/datum/robolimb/R = all_robolimbs[T.model]
 		synthetic = R
 		return synthetic
@@ -206,6 +208,20 @@
 	for(var/vis in to_disable)
 		plane_holder.set_vis(vis,FALSE)
 		vis_enabled -= vis
+
+/mob/living/carbon/human/get_restraining_bolt()
+	var/obj/item/weapon/implant/restrainingbolt/RB
+
+	for(var/obj/item/organ/external/EX in organs)
+		RB = locate() in EX
+		if(istype(RB) && !(RB.malfunction))
+			break
+
+	if(RB)
+		if(!RB.malfunction)
+			return TRUE
+
+	return FALSE
 
 #undef HUMAN_EATING_NO_ISSUE
 #undef HUMAN_EATING_NO_MOUTH

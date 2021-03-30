@@ -23,11 +23,14 @@ datum/preferences
 	var/UI_style_alpha = 255
 	var/tooltipstyle = "Midnight"		//Style for popup tooltips
 	var/client_fps = 0
+	var/ambience_freq = 5				// How often we're playing repeating ambience to a client.
+	var/ambience_chance = 35			// What's the % chance we'll play ambience (in conjunction with the above frequency)
 
 	var/tgui_fancy = TRUE
 	var/tgui_lock = FALSE
 
 	//character preferences
+	var/num_languages = 0				//CHOMPEdit
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
@@ -48,7 +51,7 @@ datum/preferences
 	var/r_facial = 0					//Face hair color
 	var/g_facial = 0					//Face hair color
 	var/b_facial = 0					//Face hair color
-	var/s_tone = 0						//Skin tone
+	var/s_tone = -75						//Skin tone
 	var/r_skin = 238					//Skin color // Vorestation edit, so color multi sprites can aren't BLACK AS THE VOID by default.
 	var/g_skin = 206					//Skin color // Vorestation edit, so color multi sprites can aren't BLACK AS THE VOID by default.
 	var/b_skin = 179					//Skin color // Vorestation edit, so color multi sprites can aren't BLACK AS THE VOID by default.
@@ -80,11 +83,11 @@ datum/preferences
 		//Mob preview
 	var/list/char_render_holders		//Should only be a key-value list of north/south/east/west = obj/screen.
 	var/static/list/preview_screen_locs = list(
-		"1" = "character_preview_map:1,5:-12",
-		"2" = "character_preview_map:1,3:15",
-		"4"  = "character_preview_map:1:7,2:10",
-		"8"  = "character_preview_map:1:-7,1:5",
-		"BG" = "character_preview_map:1,1 to 1,5"
+		"1" = "character_preview_map:2,7",
+		"2" = "character_preview_map:2,5",
+		"4"  = "character_preview_map:2,3",
+		"8"  = "character_preview_map:2,1",
+		"BG" = "character_preview_map:1,1 to 3,8"
 	)
 
 		//Jobs, uses bitflags
@@ -151,7 +154,12 @@ datum/preferences
 	var/examine_text_mode = 0 // Just examine text, include usage (description_info), switch to examine panel.
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
 
-
+	var/list/volume_channels = list()
+//CHOMPEdit Begin
+/datum/preferences/proc/numlanguage()
+	var/datum/species/S = GLOB.all_species[species]
+	return num_languages ? num_languages : S.num_alternate_languages
+//CHOMPEdit End
 /datum/preferences/New(client/C)
 	player_setup = new(src)
 	set_biological_gender(pick(MALE, FEMALE))
@@ -234,7 +242,7 @@ datum/preferences
 		to_chat(user, "<span class='danger'>No mob exists for the given client!</span>")
 		close_load_dialog(user)
 		return
-	
+
 	if(!char_render_holders)
 		update_preview_icon()
 	show_character_previews()
@@ -273,13 +281,13 @@ datum/preferences
 	if(!BG)
 		BG = new
 		BG.plane = TURF_PLANE
-		BG.icon = 'icons/effects/128x48.dmi'
+		BG.icon = 'icons/effects/setup_backgrounds_vr.dmi'
 		BG.pref = src
 		LAZYSET(char_render_holders, "BG", BG)
 		client.screen |= BG
 	BG.icon_state = bgstate
 	BG.screen_loc = preview_screen_locs["BG"]
-	
+
 	for(var/D in global.cardinal)
 		var/obj/screen/setup_preview/O = LAZYACCESS(char_render_holders, "[D]")
 		if(!O)
@@ -342,6 +350,8 @@ datum/preferences
 	else if(href_list["resetslot"])
 		if("No" == alert("This will reset the current slot. Continue?", "Reset current slot?", "No", "Yes"))
 			return 0
+		if("No" == alert("Are you completely sure that you want to reset this character slot?", "Reset current slot?", "No", "Yes"))
+			return 0
 		load_character(SAVE_RESET)
 		sanitize_preferences()
 	else if(href_list["copy"])
@@ -397,13 +407,15 @@ datum/preferences
 	if(S)
 		dat += "<b>Select a character slot to load</b><hr>"
 		var/name
+		var/nickname //vorestation edit - This set appends nicknames to the save slot
 		for(var/i=1, i<= config.character_slots, i++)
 			S.cd = "/character[i]"
 			S["real_name"] >> name
+			S["nickname"] >> nickname //vorestation edit
 			if(!name)	name = "Character[i]"
 			if(i==default_slot)
 				name = "<b>[name]</b>"
-			dat += "<a href='?src=\ref[src];changeslot=[i]'>[name]</a><br>"
+			dat += "<a href='?src=\ref[src];changeslot=[i]'>[name][nickname ? " ([nickname])" : ""]</a><br>" //vorestation edit
 
 	dat += "<hr>"
 	dat += "</center></tt>"

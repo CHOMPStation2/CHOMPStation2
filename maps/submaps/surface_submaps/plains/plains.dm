@@ -1,12 +1,12 @@
 // This causes PoI maps to get 'checked' and compiled, when undergoing a unit test.
-// This is so Travis can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
+// This is so CI can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 // When adding a new PoI, please add it to this list.
 #if MAP_TEST
 #include "farm1.dmm"
 #include "construction1.dmm"
 #include "camp1.dmm"
 #include "house1.dmm"
-#include "beacons.dmm"
+// #include "beacons.dmm" // CHOMP Removal
 #include "Epod.dmm"
 #include "Epod2.dmm"
 #include "PascalB.dmm"
@@ -32,12 +32,12 @@
 #include "BuriedTreasure.dmm"
 #include "BuriedTreasure2.dmm"
 #include "BuriedTreasure3.dmm"
-	//CHOMPS KSC 8/11/20 "5 additional POI's"
 #include "methlab.dmm"
 #include "hotspring.dmm"
 #include "lonehome.dmm"
 #include "priderock.dmm"
 #include "oldhotel.dmm"
+#include "VRDen.dmm"
 #endif
 
 
@@ -74,12 +74,14 @@
 	mappath = 'maps/submaps/surface_submaps/plains/house1_vr.dmm' //VOREStation Edit
 	cost = 10
 
+/* Chomp Removal
 /datum/map_template/surface/plains/beacons
 	name = "Collection of Marker Beacons"
 	desc = "A bunch of marker beacons, scattered in a strange pattern."
 	mappath = 'maps/submaps/surface_submaps/plains/beacons.dmm'
 	cost = 5
 	fixed_orientation = TRUE
+*/
 
 /datum/map_template/surface/plains/Epod
 	name = "Emergency Pod"
@@ -253,8 +255,6 @@
 	cost = 10
 	template_group = "Shallow Grave"
 
-	// CHOMPS KSC 7/31/20 Added 5 more POI's for the plains.
-
 /datum/map_template/surface/plains/oldhotel
 	name = "Old Hotel"
 	desc = "A abandoned hotel of sort, wonder why it was left behind."
@@ -284,3 +284,9 @@
 	desc = "A broken down greenhouse lab?, this does not look safe."
 	mappath = 'maps/submaps/surface_submaps/plains/methlab.dmm'
 	cost = 15
+
+/datum/map_template/surface/plains/VRDen
+	name = "VR Den"
+	desc = "A temporarily abandoned VR den, still functional."
+	mappath = 'maps/submaps/surface_submaps/plains/VRDen.dmm'
+	cost = 10

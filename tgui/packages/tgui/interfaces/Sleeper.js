@@ -41,7 +41,7 @@ export const Sleeper = (props, context) => {
   return (
     <Window
       width={550}
-      height={820}
+      height={760}
       resizable>
       <Window.Content className="Layout__content--flexColumn">
         {body}
@@ -319,6 +319,10 @@ const SleeperChemicals = (props, context) => {
 };
 
 const SleeperEmpty = (props, context) => {
+  const { act, data } = useBackend(context);
+  const {
+    isBeakerLoaded,
+  } = data;
   return (
     <Section textAlign="center" flexGrow="1">
       <Flex height="100%">
@@ -329,6 +333,15 @@ const SleeperEmpty = (props, context) => {
             size="5"
           /><br />
           No occupant detected.
+          {isBeakerLoaded && (
+            <Box>
+              <Button
+                icon="eject"
+                content="Remove Beaker"
+                onClick={() => act('removebeaker')}
+              />
+            </Box>
+          ) || null}
         </Flex.Item>
       </Flex>
     </Section>

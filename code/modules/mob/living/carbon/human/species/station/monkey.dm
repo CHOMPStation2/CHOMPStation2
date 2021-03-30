@@ -22,6 +22,9 @@
 	tail = "chimptail"
 	fire_icon_state = "monkey"
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	unarmed_types = list(/datum/unarmed_attack/bite, /datum/unarmed_attack/claws)
 	inherent_verbs = list(/mob/living/proc/ventcrawl)
 	hud_type = /datum/hud_data/monkey

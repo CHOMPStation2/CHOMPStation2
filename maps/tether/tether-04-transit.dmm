@@ -86,7 +86,6 @@
 	icon_state = "32-2"
 	},
 /obj/structure/disposalpipe/down,
-/obj/effect/ceiling,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/open,
 /area/maintenance/tether_midpoint)
@@ -280,10 +279,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 "A" = (
-/obj/effect/ceiling,
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
+/obj/effect/ceiling,
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
 "B" = (
@@ -298,12 +297,13 @@
 /obj/structure/disposalpipe/down{
 	dir = 1
 	},
-/obj/effect/ceiling,
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
 	},
-/turf/simulated/floor/plating,
+/obj/structure/lattice,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/open,
 /area/maintenance/tether_midpoint)
 "E" = (
 /obj/structure/cable{

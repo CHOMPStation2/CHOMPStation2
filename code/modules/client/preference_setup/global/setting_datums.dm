@@ -152,6 +152,25 @@ var/list/_client_preferences_by_type
 	key = "SOUND_AIRPUMP"
 	enabled_description = "Audible"
 	disabled_description = "Silent"
+	
+/datum/client_preference/old_door_sounds
+	description ="Old Door Sounds"
+	key = "SOUND_OLDDOORS"
+	enabled_description = "Old"
+	disabled_description = "New"
+	enabled_by_default = FALSE
+
+/datum/client_preference/department_door_sounds
+	description ="Department-Specific Door Sounds"
+	key = "SOUND_DEPARTMENTDOORS"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
+
+/datum/client_preference/pickup_sounds
+	description = "Picked Up Item Sounds"
+	key = "SOUND_PICKED"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
 
 /datum/client_preference/drop_sounds
 	description = "Dropped Item Sounds"
@@ -188,7 +207,7 @@ var/list/_client_preferences_by_type
 	key = "HUD_HOTKEYS"
 	enabled_description = "Enabled"
 	disabled_description = "Disabled"
-	enabled_by_default = FALSE // Backwards compatibility
+	enabled_by_default = TRUE // Backwards compatibility //CHOMP Edit: It's 2020, use your WASD keys by default. Flipped to True.
 
 /datum/client_preference/show_typing_indicator
 	description ="Typing indicator"

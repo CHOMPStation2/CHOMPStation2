@@ -11,7 +11,7 @@ var/list/holder_mob_icon_cache = list()
 	show_messages = 1
 
 	sprite_sheets = list(
-		SPECIES_TESHARI = 'icons/mob/species/seromi/head.dmi',
+		SPECIES_TESHARI = 'icons/mob/species/teshari/head.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/head.dmi'
 		)
 
@@ -26,6 +26,19 @@ var/list/holder_mob_icon_cache = list()
 /obj/item/weapon/holder/New()
 	..()
 	START_PROCESSING(SSobj, src)
+
+/obj/item/weapon/holder/throw_at(atom/target, range, speed, thrower)
+	if(held_mob)
+		held_mob.forceMove(loc)
+		var/thrower_mob_size = 1
+		if(ismob(thrower))
+			var/mob/M = thrower
+			thrower_mob_size = M.mob_size
+		var/mob_range = round(range * min(thrower_mob_size / held_mob.mob_size, 1))
+		held_mob.throw_at(target, mob_range, speed, thrower)
+		held_mob = null
+	drop_items()
+	qdel(src)
 
 /obj/item/weapon/holder/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -121,6 +134,18 @@ var/list/holder_mob_icon_cache = list()
 
 /obj/item/weapon/holder/mouse
 	w_class = ITEMSIZE_TINY
+
+/obj/item/weapon/holder/possum
+	origin_tech = list(TECH_BIO = 2)
+
+/obj/item/weapon/holder/possum/poppy
+	origin_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 4)
+
+/obj/item/weapon/holder/cat
+	origin_tech = list(TECH_BIO = 2)
+
+/obj/item/weapon/holder/cat/runtime
+	origin_tech = list(TECH_BIO = 2, TECH_DATA = 4)
 
 /obj/item/weapon/holder/borer
 	origin_tech = list(TECH_BIO = 6)

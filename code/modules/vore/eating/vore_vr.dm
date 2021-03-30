@@ -53,13 +53,17 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/vore_taste = "nothing in particular"
 	var/vore_smell = "nothing in particular"
 	var/permit_healbelly = TRUE
+	var/show_vore_fx = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
+	var/step_mechanics_pref = FALSE
+	var/pickup_pref = TRUE
 
 
-	//CHOMP reagent belly
+	//CHOMP stuff
 	var/receive_reagents = FALSE
 	var/give_reagents = FALSE
+	var/latejoin_vore = FALSE
 
 
 	//Mechanically required
@@ -132,12 +136,16 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	vore_taste = json_from_file["vore_taste"]
 	vore_smell = json_from_file["vore_smell"]
 	permit_healbelly = json_from_file["permit_healbelly"]
+	show_vore_fx = json_from_file["show_vore_fx"]
 	can_be_drop_prey = json_from_file["can_be_drop_prey"]
 	can_be_drop_pred = json_from_file["can_be_drop_pred"]
+	step_mechanics_pref = json_from_file["step_mechanics_pref"]
+	pickup_pref = json_from_file["pickup_pref"]
 	belly_prefs = json_from_file["belly_prefs"]
 
 
-	//CHOMP reagent belly
+	//CHOMP stuff
+	latejoin_vore = json_from_file["latejoin_vore"]
 	receive_reagents = json_from_file["receive_reagents"]
 	give_reagents = json_from_file["give_reagents"]
 
@@ -157,14 +165,22 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		allowmobvore = TRUE
 	if(isnull(permit_healbelly))
 		permit_healbelly = TRUE
+	if(isnull(show_vore_fx))
+		show_vore_fx = TRUE
 	if(isnull(can_be_drop_prey))
 		can_be_drop_prey = FALSE
 	if(isnull(can_be_drop_pred))
 		can_be_drop_pred = FALSE
+	if(isnull(step_mechanics_pref))
+		step_mechanics_pref = TRUE
+	if(isnull(pickup_pref))
+		pickup_pref = TRUE
 	if(isnull(belly_prefs))
 		belly_prefs = list()
 
-	//CHOMP reagent belly
+	//CHOMP stuff
+	if(isnull(latejoin_vore))
+		latejoin_vore = FALSE
 	if(isnull(receive_reagents))
 		receive_reagents = FALSE
 	if(isnull(give_reagents))
@@ -188,8 +204,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"vore_taste"			= vore_taste,
 			"vore_smell"			= vore_smell,
 			"permit_healbelly"		= permit_healbelly,
+			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
+			"latejoin_vore"			= latejoin_vore, //CHOMPedit
+			"step_mechanics_pref"	= step_mechanics_pref,
+			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
@@ -202,9 +222,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		return FALSE
 
 	//Write it out
-	if(fexists(path))
-		fdel(path) //Byond only supports APPENDING to files, not replacing.
-	text2file(json_to_file, path)
+	rustg_file_write(json_to_file, path)
+
 	if(!fexists(path))
 		log_debug("Saving: [path] failed file write")
 		return FALSE

@@ -10,7 +10,8 @@
 #define Z_LEVEL_CENTCOM					7
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
-#define Z_LEVEL_GATEWAY					10
+#define Z_LEVEL_GATEWAY					11  //CHOMPedit - KSC = changed 10-11 so weather works on casino.
+#define Z_LEVEL_SURFACE_CASINO			10	//CHOMPedit - KSC = So there is weather on the casino.
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -84,9 +85,9 @@
 							NETWORK_SUPPLY
 							)
 	usable_email_tlds = list("freemail.nt")
-	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage")
+	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway")
 	default_skybox = /datum/skybox_settings/southern_cross
-	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
+	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
 	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
@@ -170,7 +171,7 @@
 #define SOUTHERN_CROSS_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*SOUTHERN_CROSS_MAP_SIZE)) / 2) // 60
 
 /datum/map_z_level/southern_cross/station
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 
@@ -208,7 +209,7 @@
 /datum/map_z_level/southern_cross/surface
 	z = Z_LEVEL_SURFACE
 	name = "Plains"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/southern_cross/surface_mine
@@ -223,10 +224,17 @@
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
+//CHOMPedit - KSC = So Christmas Casino has weather.
+/datum/map_z_level/southern_cross/surface_casino
+	z = Z_LEVEL_SURFACE_CASINO
+	name = "Casino"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
 /datum/map_z_level/southern_cross/misc
 	z = Z_LEVEL_MISC
 	name = "Misc"
-	flags = MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 6
 
 /datum/map_z_level/southern_cross/centcom
@@ -239,6 +247,8 @@
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
 
+/*
+ KSC 9/29/20 = No longer relevant code as we have nonencludian portals to jump between outpost,caves and wilderness
 //Teleport to Mine
 
 /obj/effect/step_trigger/teleporter/mine/to_mining/New()
@@ -266,12 +276,14 @@
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
 	teleport_z = Z_LEVEL_SURFACE_MINE
+*/
 
 /datum/planet/sif
 	expected_z_levels = list(
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
-		Z_LEVEL_SURFACE_WILD
+		Z_LEVEL_SURFACE_WILD,
+		Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino.
 	)
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
@@ -309,7 +321,9 @@
 	teleport_y = src.y + 4
 	teleport_z = src.z
 	return ..()
-/*CHOMP edit Polaris is adding this stuff soon.
+
+ /* KSC 9/29/20 = Adding these as we now have nonencludian portals */
+
 /obj/effect/map_effect/portal/master/side_a/plains_to_caves
 	portal_id = "plains_caves-normal"
 
@@ -334,7 +348,7 @@
 
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_caves/river
 	portal_id = "caves_wilderness-river"
-*/
+
 /*
 //CHOMPEdit this is very much necessary for us otherwise weather sounds play on other levels
 /datum/planet/sif
@@ -356,3 +370,10 @@
 	model_text = "Pilot"
 	req_access = null
 	req_one_access = list(access_pilot,access_explorer)
+
+/datum/map/southern_cross/get_map_info()
+	. = list()
+	. +=  "The NLS [full_name] is a small waystation in orbit of the frozen garden world of Sif, jewel of the Vir system.<br>"
+	. +=  "Though Vir is typically peaceful, the system has seen its fair share of conflict in the face of technological extremists, rogue drone intelligence, and worse.<br>"
+	. +=  "As an employee of NanoTrasen, operators of the Southern Cross and one of the galaxy's largest research corporations, you're probably just here to do a job."
+	return jointext(., "<br>") 

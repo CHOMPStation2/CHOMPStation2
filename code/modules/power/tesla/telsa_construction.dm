@@ -23,11 +23,8 @@
 	name = T_BOARD("grounding rod")
 	build_path = /obj/machinery/power/grounding_rod
 	board_type = new /datum/frame/frame_types/machine
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50)
 	req_components = list()
 
-/datum/design/item/autolathe/engineering/grounding_rod //yw add turned into a design for new autolathe
-	name = "grouding rod electronics"
-	id = "grounding_rods"
-	build_path = /obj/item/weapon/circuitboard/grounding_rod
-	materials = list(DEFAULT_WALL_MATERIAL = 62, "glass" = 62)// yw add end turned into a design for new autolathe
+/datum/category_item/autolathe/engineering/grounding_rod
+	name = "grounding rod electronics"
+	path = /obj/item/weapon/circuitboard/grounding_rod

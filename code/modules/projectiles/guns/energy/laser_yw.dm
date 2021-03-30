@@ -21,11 +21,12 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "gaussrifle"
 	item_state = "gaussrifle"
+	item_icons = list(slot_r_hand_str = 'icons/mob/items/righthand_guns_yw.dmi', slot_l_hand_str = 'icons/mob/items/lefthand_guns_yw.dmi', slot_back_str = 'icons/mob/back_yw.dmi')
 	desc = "An older model of the experimental Gauss weapon series produced by Hephaestus industries. As it is unable to pass through glass, it was phased out during the mars-sol conflict due to the invention of laser carbines.Nevertheless, it still packs a punch and is easy to maintain, making it a favorite amongst sol privateers."
-	force = 5
+	force = 8
 	fire_sound = 'sound/weapons/Gauss_shoot.ogg'
 	slot_flags = SLOT_BELT|SLOT_BACK
-	w_class = 4
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 	projectile_type = /obj/item/projectile/energy/gaussrifle
 	origin_tech = null
 	charge_cost =400

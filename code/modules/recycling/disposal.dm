@@ -261,23 +261,23 @@
 /obj/machinery/disposal/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return
-	
+
 	if(usr.loc == src)
 		to_chat(usr, "<span class='warning'>You cannot reach the controls from inside.</span>")
-		return
+		return TRUE
 
 	if(mode==-1 && action != "eject") // If the mode is -1, only allow ejection
 		to_chat(usr, "<span class='warning'>The disposal units power is disabled.</span>")
 		return
-	
+
 	if(stat & BROKEN)
 		return
-	
+
 	add_fingerprint(usr)
 
 	if(flushing)
 		return
-	
+
 	if(isturf(loc))
 		if(action == "pumpOn")
 			mode = 1
@@ -286,19 +286,18 @@
 			mode = 0
 			update()
 
-		if(!issilicon(usr))
-			if(action == "engageHandle")
-				flush = 1
-				update()
-			if(action == "disengageHandle")
-				flush = 0
-				update()
+		if(action == "engageHandle")
+			flush = 1
+			update()
+		if(action == "disengageHandle")
+			flush = 0
+			update()
 
-			if(action == "eject")
-				eject()
-	
+		if(action == "eject")
+			eject()
+
 	return TRUE
-	
+
 
 	// src.add_fingerprint(user)
 	// if(stat & BROKEN)
@@ -395,7 +394,7 @@
 
 	// flush handle
 	if(flush)
-		overlays += image('icons/obj/pipes/disposal.dmi', "dispover-handle")
+		overlays += image(src.icon, "[initial(icon_state)]-handle")
 
 	// only handle is shown if no power
 	if(stat & NOPOWER || mode == -1)
@@ -403,13 +402,13 @@
 
 	// 	check for items in disposal - occupied light
 	if(contents.len > 0)
-		overlays += image('icons/obj/pipes/disposal.dmi', "dispover-full")
+		overlays += image(src.icon, "[initial(icon_state)]-full")
 
 	// charging and ready light
 	if(mode == 1)
-		overlays += image('icons/obj/pipes/disposal.dmi', "dispover-charge")
+		overlays += image(src.icon, "[initial(icon_state)]-charge")
 	else if(mode == 2)
-		overlays += image('icons/obj/pipes/disposal.dmi', "dispover-ready")
+		overlays += image(src.icon, "[initial(icon_state)]-ready")
 
 // timed process
 // charge the gas reservoir and perform flush if ready
@@ -541,6 +540,35 @@
 		return 0
 	else
 		return ..(mover, target)
+
+/obj/machinery/disposal/wall
+	name = "inset disposal unit"
+	icon_state = "wall"
+
+	density = FALSE
+
+/obj/machinery/disposal/wall/Initialize()
+	. = ..()
+
+	spawn(1 SECOND)	// Fixfix for weird interaction with buildmode or other late-spawning.
+		update()
+
+/obj/machinery/disposal/wall/update()
+	..()
+
+	switch(dir)
+		if(1)
+			pixel_x = 0
+			pixel_y = -32
+		if(2)
+			pixel_x = 0
+			pixel_y = 32
+		if(4)
+			pixel_x = -32
+			pixel_y = 0
+		if(8)
+			pixel_x = 32
+			pixel_y = 0
 
 // virtual disposal object
 // travels through pipes in lieu of actual items
@@ -1211,7 +1239,7 @@
 	New()
 		. = ..()
 		dpdir = dir | turn(dir, 180)
-		if(sort_tag) tagger_locations |= sort_tag
+		if(sort_tag) GLOB.tagger_locations |= sort_tag
 		updatename()
 		updatedesc()
 		update()
@@ -1277,7 +1305,7 @@
 
 	New()
 		. = ..()
-		if(sortType) tagger_locations |= sortType
+		if(sortType) GLOB.tagger_locations |= sortType
 
 		updatedir()
 		updatename()
@@ -1366,7 +1394,7 @@
 	var/obj/linked 	// the linked obj/machinery/disposal or obj/disposaloutlet
 
 /obj/structure/disposalpipe/trunk/Initialize()
-	..() //Lateload below
+	..()
 	dpdir = dir
 	return INITIALIZE_HINT_LATELOAD
 

@@ -1,16 +1,20 @@
 //Stand-in until this is made more lore-friendly.
 /datum/species/xenos
-	name = SPECIES_XENO
-	name_plural = "Xenomorphs"
+	name = SPECIES_GENA //CHOMPedit
+	name_plural = "Genaprawns" //CHOMPedit
 
-	default_language = "Xenomorph"
+	default_language = "Xenolingua" //CHOMPedit
 	language = "Hivemind"
 	assisted_langs = list()
 	unarmed_types = list(/datum/unarmed_attack/claws/strong/xeno, /datum/unarmed_attack/bite/strong/xeno)
 	hud_type = /datum/hud_data/alien
 	rarity_value = 3
 
+	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
+	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
+
 	darksight = 10 //CHOMPedit. Added darksight
+	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
 
 	pixel_offset_x = -16 //CHOMPedit. I literally had to make a different form of pixel_x just for this species, fuck my life
 
@@ -55,8 +59,6 @@
 	breath_type = null
 	poison_type = null
 
-	vision_flags = SEE_SELF|SEE_MOBS
-
 	has_organ = list(
 		O_HEART =    /obj/item/organ/internal/heart,
 		O_BRAIN =    /obj/item/organ/internal/brain/xeno,
@@ -91,10 +93,10 @@
 		)
 
 /datum/species/xenos/get_bodytype()
-	return SPECIES_XENO
+	return SPECIES_GENA //CHOMPedit
 
 /datum/species/xenos/get_random_name()
-	return "alien [caste_name] ([alien_number])"
+	return "Genaprawn [caste_name] ([alien_number])" //CHOMPedit
 
 /datum/species/xenos/can_understand(var/mob/other)
 	if(istype(other, /mob/living/carbon/alien/larva))
@@ -112,7 +114,7 @@
 		H.mind.special_role = "Alien"
 
 	alien_number++ //Keep track of how many aliens we've had so far.
-	H.real_name = "alien [caste_name] ([alien_number])"
+	H.real_name = "Genaprawn [caste_name] ([alien_number])" //CHOMPedit
 	H.name = H.real_name
 
 	..()
@@ -165,18 +167,10 @@
 			return 1
 
 	return 0
-/*
-/datum/species/xenos/handle_login_special(var/mob/living/carbon/human/H)
-	H.AddInfectionImages()
-	..()
-
-/datum/species/xenos/handle_logout_special(var/mob/living/carbon/human/H)
-	H.RemoveInfectionImages()
-	..()
-*/
+//CHOMPedit removed infection images, since they do not exist anymore.
 
 /datum/species/xenos/drone
-	name = SPECIES_XENO_DRONE
+	name = SPECIES_GENA_DRONE //CHOMPedit
 	caste_name = "drone"
 	weeds_plasma_rate = 15
 	slowdown = 1
@@ -216,7 +210,7 @@
 	..()
 
 /datum/species/xenos/hunter
-	name = SPECIES_XENO_HUNTER
+	name = SPECIES_GENA_HUNTER //CHOMPedit
 	weeds_plasma_rate = 5
 	caste_name = "hunter"
 	slowdown = -2
@@ -246,7 +240,7 @@
 		)
 
 /datum/species/xenos/sentinel
-	name = SPECIES_XENO_SENTINEL
+	name = SPECIES_GENA_SENTINEL //CHOMPedit
 	weeds_plasma_rate = 10
 	caste_name = "sentinel"
 	slowdown = 0
@@ -279,7 +273,7 @@
 
 /datum/species/xenos/queen
 
-	name = SPECIES_XENO_QUEEN
+	name = SPECIES_GENA_QUEEN //CHOMPedit
 	total_health = 300 //CHOMPedit. Queen is chonk
 	weeds_heal_rate = 5
 	weeds_plasma_rate = 20
@@ -323,10 +317,10 @@
 	..()
 	// Make sure only one official queen exists at any point.
 	if(!alien_queen_exists(1,H))
-		H.real_name = "alien queen ([alien_number])"
+		H.real_name = "Genaprawn queen ([alien_number])" //CHOMPedit
 		H.name = H.real_name
 	else
-		H.real_name = "alien princess ([alien_number])"
+		H.real_name = "Genaprawn princess ([alien_number])" //CHOMPedit
 		H.name = H.real_name
 
 /datum/hud_data/alien
@@ -345,8 +339,6 @@
 	has_internals = 0
 
 	gear = list(
-		"o_clothing" =   list("loc" = ui_belt,      "name" = "Suit",         "slot" = slot_wear_suit, "state" = "equip",  "dir" = SOUTH),
-		"head" =         list("loc" = ui_id,        "name" = "Hat",          "slot" = slot_head,      "state" = "hair"),
 		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
 		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
-		)
+		) //CHOMPedit removed head and outer layer item slots, since they caused a slew of problems with xenomorphs

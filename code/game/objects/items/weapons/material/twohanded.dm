@@ -17,7 +17,7 @@
  * Twohanded
  */
 /obj/item/weapon/material/twohanded
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit
 	var/wielded = 0
 	var/force_wielded = 0
 	var/force_unwielded
@@ -26,6 +26,9 @@
 	var/base_icon
 	var/base_name
 	var/unwielded_force_divisor = 0.25
+	hitsound = "swing_hit"
+	drop_sound = 'sound/items/drop/sword.ogg'
+	pickup_sound = 'sound/items/pickup/sword.ogg'
 
 /obj/item/weapon/material/twohanded/update_held_icon()
 	var/mob/living/M = loc
@@ -89,13 +92,14 @@
 	dulled_divisor = 0.75	//Still metal on a stick
 	sharp = 1
 	edge = 1
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit
 	slot_flags = SLOT_BACK
 	force_wielded = 30
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
 	applies_material_colour = 0
 	can_cleave = TRUE
 	drop_sound = 'sound/items/drop/axe.ogg'
+	pickup_sound = 'sound/items/pickup/axe.ogg'
 
 /obj/item/weapon/material/twohanded/fireaxe/update_held_icon()
 	var/mob/living/M = loc
@@ -143,7 +147,7 @@
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
 	description_info = "This weapon can strike from two tiles away, and over certain objects such as tables, or other people."
 	force = 10
-	w_class = ITEMSIZE_LARGE
+	w_class = ITEMSIZE_HUGE //CHOMP Edit
 	slot_flags = SLOT_BACK
 	force_divisor = 0.5 			// 15 when wielded with hardness 30 (glass)
 	unwielded_force_divisor = 0.375
@@ -152,6 +156,7 @@
 	edge = 0
 	sharp = 1
 	hitsound = 'sound/weapons/bladeslice.ogg'
+	mob_throw_hit_sound =  'sound/weapons/pierce.ogg'
 	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
 	default_material = "glass"
 	applies_material_colour = 0
@@ -173,3 +178,14 @@
 	fragile = 0
 	sharp = 1
 	edge = 0
+
+/obj/item/weapon/material/twohanded/riding_crop
+	name = "riding crop"
+	desc = "A rod, a little over a foot long with a widened grip and a thick, leather patch at the end. Used since the dawn of the West to control animals."
+	force_divisor = 0.05 //Required in order for the X attacks Y message to pop up.
+	unwielded_force_divisor = 1 // One here, too.
+	applies_material_colour = 1
+	unbreakable = 1
+	base_icon = "riding_crop"
+	icon_state = "riding_crop0"
+	attack_verb = list("cropped","spanked","swatted","smacked","peppered")

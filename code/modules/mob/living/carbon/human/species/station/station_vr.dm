@@ -19,6 +19,9 @@
 	min_age = 18
 	max_age = 110
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	blurb = "There are two subspecies of Sergal; Southern and Northern. Northern sergals are a highly aggressive race \
 	that lives in the plains and tundra of their homeworld. They are characterized by long, fluffy fur bodies with cold colors; \
 	usually with white abdomens, somewhat short ears, and thick faces. Southern sergals are much more docile and live in the \
@@ -37,10 +40,11 @@
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	inherent_verbs = list(/mob/living/proc/shred_limb)
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -51,7 +55,7 @@
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/sergal),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/sergal),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
@@ -79,11 +83,13 @@
 	secondary_langs = list(LANGUAGE_SKRELLIAN)
 	name_language = LANGUAGE_SKRELLIAN
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/shred_limb)
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
 	min_age = 18
 	max_age = 110
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed \
@@ -99,6 +105,8 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
 	primitive_form = "Sobaka"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -127,10 +135,13 @@
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = LANGUAGE_BIRDSONG
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/shred_limb,/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
+	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
 	max_age = 110
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
 	in the Vilous system. Unlike sergals whom they share a star system with, their species is a very peaceful one. They possess remarkable \
@@ -144,6 +155,8 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
 	primitive_form = "Sparra"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -174,6 +187,9 @@
 	min_age = 18
 	max_age = 110
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that \
 	is where most of their settlements are located. The Flatland Zorren are somewhat tribal and shamanistic as they have only recently started to be \
@@ -181,8 +197,8 @@
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
 	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
-//CHOMPEdit: Removed wiki link	
-	//wikilink="https://yawn.izac.live/Zorren"
+//CHOMPEdit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 
@@ -194,6 +210,8 @@
 	base_color = "#333333"
 	blood_color = "#240bc4"
 	color_mult = 1
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -219,13 +237,16 @@
 //	gluttonous = 1
 	num_alternate_languages = 3
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	blurb = "Vulpkanin are a species of sharp-witted canine-pideds residing on the planet Altam just barely within the \
 	dual-star Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and \
 	culture both feared and respected for their scientific breakthroughs. Discovery, loyalty, and utilitarianism dominates their lifestyles \
 	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
-    which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
+	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
 //CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
 //	wikilink="https://www.yawn.ocry.com/Vulpkanin"
@@ -236,6 +257,8 @@
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	flesh_color = "#966464"
 	base_color = "#B43214"
@@ -253,10 +276,11 @@
 	min_age = 18
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Unathi"
+//CHOMPSedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Unathi"
 
 /datum/species/tajaran
 	spawn_flags = SPECIES_CAN_JOIN
@@ -265,12 +289,14 @@
 	tail_animation = 'icons/mob/species/tajaran/tail_vr.dmi'
 	color_mult = 1
 	min_age = 18
+	allergens = null
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
-	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Tajaran"
+//CHOMPSedit: links to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran"
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	agility = 90
 
 /datum/species/skrell
@@ -280,19 +306,22 @@
 	color_mult = 1
 	min_age = 18
 	reagent_tag = null
+	allergens = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Skrell"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell"
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 /datum/species/zaddat
-	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN CHOMPstation edit: disabled pending staff discussion
+	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
 	gluttonous = 0
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Zaddat"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Zaddat"
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
@@ -305,50 +334,53 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
-
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Diona"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
 	spawn_flags = SPECIES_CAN_JOIN
-	icobase = 'icons/mob/human_races/r_seromi_vr.dmi'
-	deform = 'icons/mob/human_races/r_seromi_vr.dmi'
+	icobase = 'icons/mob/human_races/r_teshari_vr.dmi'
+	deform = 'icons/mob/human_races/r_teshari_vr.dmi'
 	icobase_tail = 1
 	color_mult = 1
 	min_age = 18
 	push_flags = ~HEAVY //Allows them to use micro step code.
 	swap_flags = ~HEAVY
 	gluttonous = 0
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Teshari"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Teshari"
 	agility = 90
+
+	male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
+	female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/proc/hide,
-		/mob/living/proc/shred_limb,
 		/mob/living/proc/toggle_pass_table
 		)
 
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Promethean"
-
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Promethean"
+	
 /datum/species/human
 	color_mult = 1
 	icobase = 'icons/mob/human_races/r_human_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_human_vr.dmi'
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 	min_age = 18
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	base_color = "#EECEB3"
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Human"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Humans"
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -359,13 +391,12 @@
 	min_age = 18
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
-	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/proc/eat_trash)
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
-//	wikilink="https://www.yawn.ocry.com/Vox"
+//CHOMPedit: link to our wiki
+	wikilink="https://wiki.chompstation13.net/index.php?title=Vox"
 
 datum/species/harpy
 	name = SPECIES_RAPALA
@@ -379,12 +410,16 @@ datum/species/harpy
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = null
 	color_mult = 1
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
 	max_age = 80
 
 	base_color = "#EECEB3"
+
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	blurb = "An Avian species, coming from a distant planet, the Rapalas are the very proud race.\
 	Sol researchers have commented on them having a very close resemblance to the mythical race called 'Harpies',\
@@ -413,6 +448,8 @@ datum/species/harpy
 	deform = 'icons/mob/human_races/r_shadekin_vr.dmi'
 	tail = "tail"
 	icobase_tail = 1
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 	blurb = "Very little is known about these creatures. They appear to be largely mammalian in appearance. \
 	Seemingly very rare to encounter, there have been widespread myths of these creatures the galaxy over, \
 	but next to no verifiable evidence to their existence. However, they have recently been more verifiably \
@@ -467,9 +504,7 @@ datum/species/harpy
 	base_color = "#f0f0f0"
 	color_mult = 1
 
-	inherent_verbs = list(/mob/living/proc/shred_limb)
-
-	has_glowing_eyes = TRUE
+	//has_glowing_eyes = TRUE			// Applicable through traits.
 
 	male_cough_sounds = null
 	female_cough_sounds = null
@@ -478,8 +513,7 @@ datum/species/harpy
 
 	speech_bubble_appearance = "ghost"
 
-	genders = list(PLURAL, NEUTER)		//no sexual dymorphism
-	ambiguous_genders = TRUE	//but just in case
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	breath_type = null
 	poison_type = null
@@ -502,7 +536,7 @@ datum/species/harpy
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest/crewkin),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin/crewkin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/crewkin),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/crewkin),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm/crewkin),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right/crewkin),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg/crewkin),
@@ -537,9 +571,13 @@ datum/species/harpy
 	min_age = 18
 	max_age = 80
 
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
+
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	flesh_color = "#AFA59E"
 	base_color = "#333333"
@@ -568,6 +606,9 @@ datum/species/harpy
 	min_age = 18
 	max_age = 80
 
+	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit Scree
+	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit
+
 	blurb = "Xenomorphs hybrids are a mixture of xenomorph DNA and some other humanoid species. \
 	Xenomorph hyrids mostly have had had their natural aggression removed due to the gene modification process \
 	although there are some exceptions, such as when they are harmed. Most xenomorph hybrids are female, due to their natural xenomorph genes, \
@@ -579,6 +620,7 @@ datum/species/harpy
 
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	blood_color = "#12ff12"
 	flesh_color = "#201730"
@@ -589,4 +631,3 @@ datum/species/harpy
 		"You feel uncomfortably warm.",
 		"Your chitin feels hot."
 		)
-	inherent_verbs = list(/mob/living/proc/shred_limb)

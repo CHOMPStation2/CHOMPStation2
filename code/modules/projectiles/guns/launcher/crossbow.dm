@@ -6,6 +6,8 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "bolt"
 	item_state = "bolt"
+	drop_sound = 'sound/items/drop/sword.ogg'
+	pickup_sound = 'sound/items/pickup/sword.ogg'
 	throwforce = 8
 	w_class = ITEMSIZE_NORMAL
 	sharp = 1
@@ -24,6 +26,8 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "metal-rod"
 	item_state = "bolt"
+	drop_sound = 'sound/items/drop/sword.ogg'
+	pickup_sound = 'sound/items/pickup/sword.ogg'
 
 /obj/item/weapon/arrow/quill
 	name = "alien quill"
@@ -62,6 +66,7 @@
 	var/release_speed = 5                   // Speed per unit of tension.
 	var/obj/item/weapon/cell/cell = null    // Used for firing superheated rods.
 	var/current_user                        // Used to check if the crossbow has changed hands since being drawn.
+	w_class = ITEMSIZE_HUGE //CHOMP Edit.
 
 /obj/item/weapon/gun/launcher/crossbow/update_release_force()
 	release_force = tension*release_speed

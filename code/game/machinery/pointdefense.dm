@@ -1,21 +1,24 @@
+// CHOMPStation Edits over this entire file.
 //
 // Control computer for point defense batteries.
 // Handles control UI, but also coordinates their fire to avoid overkill.
 //
 
 GLOBAL_LIST_BOILERPLATE(pointdefense_controllers, /obj/machinery/pointdefense_control)
-GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
+GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 /obj/machinery/pointdefense_control
 	name = "fire assist mainframe"
 	desc = "A specialized computer designed to synchronize a variety of weapon systems and a vessel's astronav data."
 	icon = 'icons/obj/pointdefense.dmi'
 	icon_state = "control"
+	power_channel = EQUIP // CHOMPStation Edit Starts
+	use_power = USE_POWER_ACTIVE 
+	active_power_usage = 5 KILOWATTS // CHOMPStation Edit Ends
 	density = TRUE
 	anchored = TRUE
 	circuit = /obj/item/weapon/circuitboard/pointdefense_control
 	var/list/targets = list()  // Targets being engaged by associated batteries
-	var/ui_template = "pointdefense_control.tmpl"
 	var/id_tag = null
 
 /obj/machinery/pointdefense_control/Initialize(mapload)
@@ -37,53 +40,47 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 	if(!id_tag)
 		. += "[desc_panel_image("multitool")]to set ident tag"
 
-/obj/machinery/pointdefense_control/ui_interact(var/mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
-	if(ui_template)
-		var/list/data = build_ui_data()
-		ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
-		if (!ui)
-			ui = new(user, src, ui_key, ui_template, name, 400, 600)
-			ui.set_initial_data(data)
-			ui.open()
-			ui.set_auto_update(1)
+/obj/machinery/pointdefense_control/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "PointDefenseControl") // 400, 600
+		ui.open()
 
 /obj/machinery/pointdefense_control/attack_hand(mob/user)
-	if((. = ..()))
-		return
-	if(CanUseTopic(user, global.default_state) > STATUS_CLOSE)
-		ui_interact(user)
+	if(..())
+		return TRUE
+	tgui_interact(user)
+	return TRUE
+
+/obj/machinery/pointdefense_control/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
+	if(..())
 		return TRUE
 
-/obj/machinery/pointdefense_control/Topic(var/mob/user, var/href_list)
-	if((. = ..()))
-		return
-
-	if(href_list["toggle_active"])
-		var/obj/machinery/power/pointdefense/PD = locate(href_list["toggle_active"])
+	if(action == "toggle_active")
+		var/obj/machinery/pointdefense/PD = locate(params["target"])
 		if(!istype(PD))
-			return TOPIC_NOACTION
+			return FALSE
 
 		//if(!lan || !lan.is_connected(PD))
 		if(PD.id_tag != id_tag)
-			return TOPIC_NOACTION
+			return FALSE
 
 		if(!(get_z(PD) in GetConnectedZlevels(get_z(src))))
-			to_chat(user, "<span class='warning'>[PD] is not within control range.</span>")
-			return TOPIC_NOACTION
+			to_chat(usr, "<span class='warning'>[PD] is not within control range.</span>")
+			return FALSE
 
 		if(!PD.Activate()) //Activate() whilst the device is active will return false.
 			PD.Deactivate()
-		return TOPIC_REFRESH
+		return TRUE
 
-/obj/machinery/pointdefense_control/proc/build_ui_data()
+/obj/machinery/pointdefense_control/tgui_data(mob/user)
 	var/list/data = list()
 	data["id"] = id_tag
-	data["name"] = name
 	var/list/turrets = list()
 	if(id_tag)
 		var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
 		for(var/i = 1 to LAZYLEN(GLOB.pointdefense_turrets))
-			var/obj/machinery/power/pointdefense/PD = GLOB.pointdefense_turrets[i]
+			var/obj/machinery/pointdefense/PD = GLOB.pointdefense_turrets[i]
 			if(!(PD.id_tag == id_tag && get_z(PD) in connected_z_levels))
 				continue
 			var/list/turret = list()
@@ -102,7 +99,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 /obj/machinery/pointdefense_control/attackby(var/obj/item/W, var/mob/user)
 	if(W?.is_multitool())
 		var/new_ident = input(user, "Enter a new ident tag.", "[src]", id_tag) as null|text
-		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, physical_state))
+		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
 			// Check for duplicate controllers with this ID
 			for(var/thing in GLOB.pointdefense_controllers)
 				var/obj/machinery/pointdefense_control/PC = thing
@@ -124,7 +121,8 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 // The acutal point defense battery
 //
 
-/obj/machinery/power/pointdefense
+// CHOMPStation Edits Begin: PD Turrets won't use power now, only the PD Control Mainframe. These edits go to the end of the file.
+/obj/machinery/pointdefense
 	name = "\improper point defense battery"
 	icon = 'icons/obj/pointdefense.dmi'
 	icon_state = "pointdefense2"
@@ -133,62 +131,62 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 	density = TRUE
 	anchored = TRUE
 	circuit = /obj/item/weapon/circuitboard/pointdefense
-	idle_power_usage = 0.1 KILOWATTS
-	active_power_usage = 1 KILOWATTS
+	//idle_power_usage = 0.1 KILOWATTS // CHOMPStation Edit
+	//active_power_usage = 1 KILOWATTS // CHOMPStation Edit
 	appearance_flags = PIXEL_SCALE
 	var/active = TRUE
 	var/charge_cooldown = 1 SECOND  //time between it can fire at different targets
 	var/last_shot = 0
 	var/kill_range = 18
-	var/rotation_speed = 0.25 SECONDS  //How quickly we turn to face threats
+	var/rotation_speed = 4.5 SECONDS  //How quickly we turn to face threats
 	var/engaging = FALSE
 	var/id_tag = null
 
-/obj/machinery/power/pointdefense/Initialize()
+/obj/machinery/pointdefense/Initialize()
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	default_apply_parts()
-	if(anchored)
-		connect_to_network()
+	// if(anchored)
+	// 	connect_to_network()
 	update_icon()
 	var/image/I = image(icon, icon_state = "[icon_state]_under")
 	I.appearance_flags |= RESET_TRANSFORM
 	underlays += I
 
-/obj/machinery/power/pointdefense/examine(mob/user)
-	. = ..()
-	if(powernet)
-		. += "It is connected to a power cable below."
+// /obj/machinery/pointdefense/examine(mob/user)
+// 	. = ..()
+// 	if(powernet)
+// 		. += "It is connected to a power cable below."
 
-/obj/machinery/power/pointdefense/get_description_interaction()
+/obj/machinery/pointdefense/get_description_interaction()
 	. = ..()
 	if(!id_tag)
 		. += "[desc_panel_image("multitool")]to set ident tag and connect to a mainframe."
 
-/obj/machinery/power/pointdefense/update_icon()
+/obj/machinery/pointdefense/update_icon()
 	if(!active || !id_tag || inoperable())
 		icon_state = "[initial(icon_state)]_off"
 	else
 		icon_state = initial(icon_state)
 
-/obj/machinery/power/pointdefense/default_unfasten_wrench(var/mob/user, var/obj/item/weapon/W, var/time)
+/obj/machinery/pointdefense/default_unfasten_wrench(var/mob/user, var/obj/item/weapon/W, var/time)
 	if((. = ..()))
 		src.transform = null // Reset rotation if we're anchored/unanchored
 
 ////////// This machine is willing to take power from cables OR APCs.  Handle NOPOWER stat specially here! ////////
-
-/obj/machinery/power/pointdefense/connect_to_network()
+/*
+/obj/machinery/pointdefense/connect_to_network()
 	if((. = ..()))
 		stat &= ~NOPOWER // We now ignore APC power
 		update_icon()
 
-/obj/machinery/power/pointdefense/disconnect_from_network()
+/obj/machinery/pointdefense/disconnect_from_network()
 	if((. = ..()))
 		power_change() // We're back on APC power.
 
-/obj/machinery/power/pointdefense/power_change()
+/obj/machinery/pointdefense/power_change()
 	if(powernet)
 		return // We don't care, we are cable powered anyway
 	var/old_stat = stat
@@ -197,16 +195,16 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 		update_icon()
 
 // Decide where to get the power to fire from
-/obj/machinery/power/pointdefense/use_power_oneoff(var/amount, var/chan = -1)
+/obj/machinery/pointdefense/use_power_oneoff(var/amount, var/chan = -1)
 	if(powernet)
 		return draw_power(amount)
 	else if(powered(chan))
 		use_power(amount, chan)
 		return amount
-	return 0
+	return 0	*/
 
 // Find controller with the same tag on connected z levels (if any)
-/obj/machinery/power/pointdefense/proc/get_controller()
+/obj/machinery/pointdefense/proc/get_controller()
 	if(!id_tag)
 		return null
 	var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
@@ -215,10 +213,10 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 		if(PDC.id_tag == id_tag && (get_z(PDC) in connected_z_levels))
 			return PDC
 
-/obj/machinery/power/pointdefense/attackby(var/obj/item/W, var/mob/user)
+/obj/machinery/pointdefense/attackby(var/obj/item/W, var/mob/user)
 	if(W?.is_multitool())
 		var/new_ident = input(user, "Enter a new ident tag.", "[src]", id_tag) as null|text
-		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, physical_state))
+		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
 			to_chat(user, "<span class='notice'>You register [src] with the [new_ident] network.</span>")
 			id_tag = new_ident
 		return
@@ -233,13 +231,13 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 	return ..()
 
 //Guns cannot shoot through hull or generally dense turfs.
-/obj/machinery/power/pointdefense/proc/space_los(meteor)
+/obj/machinery/pointdefense/proc/space_los(meteor)
 	for(var/turf/T in getline(src,meteor))
 		if(T.density)
 			return FALSE
 	return TRUE
 
-/obj/machinery/power/pointdefense/proc/Shoot(var/weakref/target)
+/obj/machinery/pointdefense/proc/Shoot(var/weakref/target)
 	var/obj/effect/meteor/M = target.resolve()
 	if(!istype(M))
 		return
@@ -252,7 +250,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 
 	set_dir(ATAN2(transform.b, transform.a) > 0 ? NORTH : SOUTH)
 
-/obj/machinery/power/pointdefense/proc/finish_shot(var/weakref/target)
+/obj/machinery/pointdefense/proc/finish_shot(var/weakref/target)
 	//Cleanup from list
 	var/obj/machinery/pointdefense_control/PC = get_controller()
 	if(istype(PC))
@@ -263,13 +261,13 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 	var/obj/effect/meteor/M = target.resolve()
 	if(!istype(M))
 		return
-	if(use_power_oneoff(active_power_usage) < active_power_usage)
+	/*if(use_power_oneoff(active_power_usage) < active_power_usage)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
 		visible_message("[src] sputters as browns out while attempting to fire.")
 		flick(src, "[initial(icon_state)]_off")
-		return
+		return	*/
 	//We throw a laser but it doesnt have to hit for meteor to explode
 	var/obj/item/projectile/beam/pointdefense/beam = new(get_turf(src))
 	playsound(src, 'sound/weapons/mandalorian.ogg', 75, 1)
@@ -277,9 +275,9 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 	M.make_debris()
 	qdel(M)
 
-/obj/machinery/power/pointdefense/process()
+/obj/machinery/pointdefense/process()
 	..()
-	if(!anchored || stat & (NOPOWER|BROKEN))
+	if(!anchored || stat & (BROKEN))
 		return
 	if(!active)
 		return
@@ -291,14 +289,14 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 	if(LAZYLEN(GLOB.meteor_list) > 0)
 		find_and_shoot()
 
-/obj/machinery/power/pointdefense/proc/find_and_shoot()
+/obj/machinery/pointdefense/proc/find_and_shoot()
 	if(LAZYLEN(GLOB.meteor_list) == 0)
 		return
 	if(engaging || ((world.time - last_shot) < charge_cooldown))
 		return
 
 	var/obj/machinery/pointdefense_control/PC = get_controller()
-	if(!istype(PC))
+	if(!istype(PC) || !PC.powered(EQUIP))
 		return
 
 	var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
@@ -325,7 +323,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 			Shoot(target)
 			return
 
-/obj/machinery/power/pointdefense/RefreshParts()
+/obj/machinery/pointdefense/RefreshParts()
 	. = ..()
 	// Calculates an average rating of components that affect shooting rate
 	var/shootrate_divisor = total_component_rating_of_type(/obj/item/weapon/stock_parts/capacitor)
@@ -339,23 +337,23 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 	kill_range = 10 + 4 * killrange_multiplier
 
 	var/rotation_divisor = total_component_rating_of_type(/obj/item/weapon/stock_parts/manipulator)
-	rotation_speed = 0.5 SECONDS / (rotation_divisor ? rotation_divisor : 1)
+	rotation_speed = 4.5 SECONDS / (rotation_divisor ? rotation_divisor : 1)
 
-/obj/machinery/power/pointdefense/proc/Activate()
+/obj/machinery/pointdefense/proc/Activate()
 	if(active)
 		return FALSE
 
 	playsound(src, 'sound/weapons/flash.ogg', 100, 0)
-	update_use_power(USE_POWER_IDLE)
+	//update_use_power(USE_POWER_IDLE)
 	active = TRUE
 	update_icon()
 	return TRUE
 
-/obj/machinery/power/pointdefense/proc/Deactivate()
+/obj/machinery/pointdefense/proc/Deactivate()
 	if(!active)
 		return FALSE
 	playsound(src, 'sound/machines/apc_nopower.ogg', 50, 0)
-	update_use_power(USE_POWER_OFF)
+	//update_use_power(USE_POWER_OFF)
 	active = FALSE
 	update_icon()
 	return TRUE
@@ -378,10 +376,13 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/power/pointdefense)
 
 
 /obj/effect/projectile/tracer/pointdefense
+	icon = 'icons/obj/projectiles_vr.dmi'
 	icon_state = "beam_pointdef"
 
 /obj/effect/projectile/muzzle/pointdefense
+	icon = 'icons/obj/projectiles_vr.dmi'
 	icon_state = "muzzle_pointdef"
 
 /obj/effect/projectile/impact/pointdefense
+	icon = 'icons/obj/projectiles_vr.dmi'
 	icon_state = "impact_pointdef"

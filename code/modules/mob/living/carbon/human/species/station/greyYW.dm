@@ -27,7 +27,8 @@
 	darksight = 5
 	reagent_tag = IS_GREY
 
-
+	male_scream_sound = null //CHOMPedit
+	female_scream_sound = null //CHOMPedit
 
 	min_age = 18
 	max_age = 130
@@ -35,7 +36,7 @@
 
 	health_hud_intensity = 1.5
 
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_IS_RESTRICTED //CHOMPedit: this should disable the species
 	appearance_flags = HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 
 	has_organ = list(

@@ -11,15 +11,15 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Colony Director"
+	supervisors = "the Site Manager"
 	selection_color = "#026865"
 	req_admin_notify = 1
 	economic_modifier = 10
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
 
 	minimum_character_age = 25

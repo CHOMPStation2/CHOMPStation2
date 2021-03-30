@@ -81,7 +81,7 @@
 			mode = 4
 			scancount = 0
 			scanned = list()
-			scannables = list(/obj/machinery/pros_fabricator,/obj/machinery/mecha_part_fabricator,/obj/machinery/autolathe,/obj/machinery/computer/rdconsole/robotics,
+			scannables = list(/obj/machinery/mecha_part_fabricator/pros,/obj/machinery/mecha_part_fabricator,/obj/machinery/autolathe,/obj/machinery/computer/rdconsole/robotics,
 			/obj/machinery/r_n_d/circuit_imprinter,/obj/machinery/r_n_d/destructive_analyzer,/obj/machinery/computer/rdconsole/core,/obj/machinery/r_n_d/protolathe,
 			/mob/living/simple_mob/slime/xenobio/rainbow/kendrick,/obj/machinery/computer/rdservercontrol,/obj/machinery/r_n_d/server/core,/obj/machinery/r_n_d/server/robotics,
 			/obj/item/weapon/storage/box/monkeycubes,/obj/item/weapon/gun/energy/taser/xeno,/obj/item/weapon/melee/baton/slime/loaded,/obj/item/device/slime_scanner,

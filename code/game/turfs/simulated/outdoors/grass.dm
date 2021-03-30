@@ -6,7 +6,7 @@ var/list/grass_types = list(
 	name = "grass"
 	icon_state = "grass0"
 	edge_blending_priority = 4
-	initial_flooring = /decl/flooring/grass
+	initial_flooring = /decl/flooring/grass/outdoors // VOREStation Edit
 	turf_layers = list(
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
@@ -84,11 +84,34 @@ var/list/grass_types = list(
 	grass_chance = 50
 	//tree_chance = 20
 	edge_blending_priority = 5
+	initial_flooring = /decl/flooring/grass/outdoors/forest // VOREStation Edit
 
 /turf/simulated/floor/outdoors/grass/sif/forest
 	name = "thick growth"
 	icon_state = "grass_sif_dark0"
+	initial_flooring = /decl/flooring/grass/sif/forest
 	edge_blending_priority = 5
 	tree_chance = 4
-	grass_chance = 0
+	grass_chance = 1
 
+	grass_types = list(
+		/obj/structure/flora/sif/frostbelle = 1,
+		/obj/structure/flora/sif/eyes = 5,
+		/obj/structure/flora/sif/tendrils = 30
+		)
+
+//CHOMPedit: animal spawning for sif rocks. This probably doesn't belong in grass.dm but it's where there other Sif spawns are, sue me.
+/turf/simulated/floor/outdoors/rocks/sif
+	var/animal_chance = 0.3 //Should spawn around... 0-7 per round? Tweak as needed.
+
+	var/animal_types = list(
+		/mob/living/simple_mob/vore/slug = 1
+		)
+
+/turf/simulated/floor/outdoors/rocks/sif/Initialize()
+	if(animal_chance && prob(animal_chance) && !check_density())
+		var/animal_type = pickweight(animal_types)
+		new animal_type(src)
+
+	. = ..()
+//CHOMPedit end

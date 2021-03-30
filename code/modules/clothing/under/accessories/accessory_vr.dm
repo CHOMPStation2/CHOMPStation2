@@ -12,6 +12,37 @@
 	item_state = "choker_cst"
 	overlay_state = "choker_cst"
 	var/customized = 0
+	var/icon_previous_override
+	sprite_sheets = list(
+		SPECIES_TESHARI = 'icons/mob/species/teshari/ties_vr.dmi'
+		)
+
+//Forces different sprite sheet on equip
+/obj/item/clothing/accessory/choker/New()
+	..()
+	icon_previous_override = icon_override
+
+/obj/item/clothing/accessory/choker/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
+	..()
+	setUniqueSpeciesSprite()
+
+/obj/item/clothing/accessory/choker/proc/setUniqueSpeciesSprite()
+	var/mob/living/carbon/human/H = loc
+	if(!istype(H) && istype(has_suit) && ishuman(has_suit.loc))
+		H = has_suit.loc
+	if(sprite_sheets && istype(H) && H.species.get_bodytype(H) && (H.species.get_bodytype(H) in sprite_sheets))
+		icon_override = sprite_sheets[H.species.get_bodytype(H)]
+		update_clothing_icon()
+
+/obj/item/clothing/accessory/choker/on_attached(var/obj/item/clothing/S, var/mob/user)
+	if(!istype(S))
+		return
+	has_suit = S
+	setUniqueSpeciesSprite()
+	..(S, user)
+
+/obj/item/clothing/accessory/choker/dropped()
+	icon_override = icon_previous_override
 
 /obj/item/clothing/accessory/choker/attack_self(mob/user as mob)
 	if(!customized)
@@ -29,10 +60,14 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	icon = 'icons/obj/clothing/ties_vr.dmi'
 	icon_override = 'icons/mob/ties_vr.dmi'
-	var/icon_previous_override //yw addition
+	icon_state = "collar_blk"
 	var/writtenon = 0
+	var/icon_previous_override
+	sprite_sheets = list(
+		SPECIES_TESHARI = 'icons/mob/species/teshari/ties_vr.dmi'
+		)
 
-//ywedit start. forces different sprite sheet on equip
+//Forces different sprite sheet on equip
 /obj/item/clothing/accessory/collar/New()
 	..()
 	icon_previous_override = icon_override
@@ -43,13 +78,30 @@
 
 /obj/item/clothing/accessory/collar/proc/setUniqueSpeciesSprite()
 	var/mob/living/carbon/human/H = loc
-	if(!istype(H))
-		if(istype(has_suit) && ishuman(has_suit.loc))
-			H = has_suit.loc
-	if(istype(H))
-		if(H.species.name == SPECIES_TESHARI)
-			icon_override = 'icons/obj/clothing/collars_seromi_yw.dmi'
+	if(!istype(H) && istype(has_suit) && ishuman(has_suit.loc))
+		H = has_suit.loc
+	if(sprite_sheets && istype(H) && H.species.get_bodytype(H) && (H.species.get_bodytype(H) in sprite_sheets))
+		icon_override = sprite_sheets[H.species.get_bodytype(H)]
 		update_clothing_icon()
+
+/obj/item/clothing/accessory/collar/on_attached(var/obj/item/clothing/S, var/mob/user)
+	if(!istype(S))
+		return
+	has_suit = S
+	setUniqueSpeciesSprite()
+	..(S, user)
+
+/obj/item/clothing/accessory/collar/dropped()
+	icon_override = icon_previous_override
+
+//ywedit start. forces different sprite sheet on equip
+/obj/item/clothing/accessory/collar/New()
+	..()
+	icon_previous_override = icon_override
+
+/obj/item/clothing/accessory/collar/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
+	..()
+	setUniqueSpeciesSprite()
 
 /obj/item/clothing/accessory/collar/on_attached(var/obj/item/clothing/S, var/mob/user)
 	if(!istype(S))
@@ -93,6 +145,7 @@
 
 	if(!jingled)
 		usr.audible_message("[usr] jingles the [src]'s bell.")
+		playsound(src, 'sound/items/pickup/ring.ogg', 50, 1)
 		jingled = 1
 		addtimer(CALLBACK(src, .proc/jingledreset), 50)
 	return
@@ -112,7 +165,7 @@
 	var/datum/radio_frequency/radio_connection
 
 /obj/item/clothing/accessory/collar/shock/Initialize()
-	..()
+	. = ..()
 	radio_connection = radio_controller.add_object(src, frequency, RADIO_CHAT) // Makes it so you don't need to change the frequency off of default for it to work.
 
 /obj/item/clothing/accessory/collar/shock/Destroy() //Clean up your toys when you're done.

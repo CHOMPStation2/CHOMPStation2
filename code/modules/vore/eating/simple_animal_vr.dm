@@ -3,6 +3,12 @@
 	var/swallowTime = (3 SECONDS)		//How long it takes to eat its prey in 1/10 of a second. The default is 3 seconds.
 	var/list/prey_excludes = list()		//For excluding people from being eaten.
 
+/mob/living/simple_mob/insidePanel() //CHOMPedit: On-demand belly loading.
+	if(vore_active && !voremob_loaded)
+		voremob_loaded = TRUE
+		init_vore()
+	..()
+
 //
 // Simple nom proc for if you get ckey'd into a simple_mob mob! Avoids grabs.
 //
@@ -11,6 +17,9 @@
 	set category = "IC"
 	set desc = "Since you can't grab, you get a verb!"
 
+	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
+		voremob_loaded = TRUE
+		init_vore()
 	if(stat != CONSCIOUS)
 		return
 	// Verbs are horrifying. They don't call overrides. So we're stuck with this.
@@ -39,9 +48,12 @@
 	if(!vore_selected)
 		to_chat(user, "<span class='warning'>[src] isn't planning on eating anything much less digesting it.</span>")
 		return
+/*ChompStation edit: This prevented some flexibility with mob vore and the returned message was highly unprofessional.
+
 	if(ai_holder.retaliate || (ai_holder.hostile && faction != user.faction))
 		to_chat(user, "<span class='warning'>This predator isn't friendly, and doesn't give a shit about your opinions of it digesting you.</span>")
 		return
+*/
 	if(vore_selected.digest_mode == DM_HOLD)
 		var/confirm = alert(user, "Enabling digestion on [name] will cause it to digest all stomach contents. Using this to break OOC prefs is against the rules. Digestion will reset after 20 minutes.", "Enabling [name]'s Digestion", "Enable", "Cancel")
 		if(confirm == "Enable")

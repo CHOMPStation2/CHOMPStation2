@@ -44,7 +44,7 @@
 /datum/gear/uniform/job_nullsuit/cmd
 	display_name = "nullsuit, cmd"
 	path = /obj/item/clothing/under/rank/nullsuit/cmd
-	allowed_roles = list("Head of Security","Colony Director","Head of Personnel","Chief Engineer","Research Director","Chief Medical Officer","Blueshield Guard")
+	allowed_roles = list("Head of Security","Site Manager","Head of Personnel","Chief Engineer","Research Director","Chief Medical Officer","Blueshield Guard")
 
 /datum/gear/uniform/job_nullsuit/sec
 	display_name = "nullsuit, sec"

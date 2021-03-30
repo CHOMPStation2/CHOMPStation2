@@ -6,6 +6,7 @@ import { Window } from "../layouts";
 import { LoginInfo } from './common/LoginInfo';
 import { LoginScreen } from './common/LoginScreen';
 import { TemporaryNotice } from './common/TemporaryNotice';
+import { decodeHtmlEntities } from 'common/string';
 
 const severities = {
   "Minor": "good",
@@ -23,30 +24,45 @@ const doEdit = (context, field) => {
 };
 
 const virusModalBodyOverride = (modal, context) => {
+  const { act } = useBackend(context);
   const virus = modal.args;
   return (
     <Section
       level={2}
       m="-1rem"
-      pb="1rem"
-      title={virus.name || "Virus"}>
+      title={virus.name || "Virus"}
+      buttons={
+        <Button
+          icon="times"
+          color="red"
+          onClick={() => act('modal_close')} />
+      }>
       <Box mx="0.5rem">
         <LabeledList>
-          <LabeledList.Item label="Number of stages">
-            {virus.max_stages}
-          </LabeledList.Item>
           <LabeledList.Item label="Spread">
             {virus.spread_text} Transmission
           </LabeledList.Item>
           <LabeledList.Item label="Possible cure">
-            {virus.cure}
+            {virus.antigen}
           </LabeledList.Item>
-          <LabeledList.Item label="Notes">
-            {virus.desc}
+          <LabeledList.Item label="Rate of Progression">
+            {virus.rate}
           </LabeledList.Item>
-          <LabeledList.Item label="Severity"
-            color={severities[virus.severity]}>
-            {virus.severity}
+          <LabeledList.Item label="Antibiotic Resistance">
+            {virus.resistance}%
+          </LabeledList.Item>
+          <LabeledList.Item label="Species Affected">
+            {virus.species}
+          </LabeledList.Item>
+          <LabeledList.Item label="Symptoms">
+            <LabeledList>
+              {virus.symptoms.map(s => (
+                <LabeledList.Item key={s.stage} label={s.stage + ". " + s.name}>
+                  <Box inline color="label">Strength:</Box> {s.strength}&nbsp;
+                  <Box inline color="label">Aggressiveness:</Box> {s.aggressiveness}
+                </LabeledList.Item>
+              ))}
+            </LabeledList>
           </LabeledList.Item>
         </LabeledList>
       </Box>
@@ -91,7 +107,7 @@ export const MedicalRecords = (_properties, context) => {
       width={800}
       height={380}
       resizable>
-      <ComplexModal />
+      <ComplexModal maxHeight="100%" maxWidth="80%" />
       <Window.Content className="Layout__content--flexColumn">
         <LoginInfo />
         <TemporaryNotice />
@@ -215,7 +231,7 @@ const MedicalRecordsViewGeneral = (_properties, context) => {
           {general.fields.map((field, i) => (
             <LabeledList.Item key={i} label={field.field}>
               <Box height="20px" display="inline-block">
-                {field.value}
+                {field.value.split("\n").map(m => <Box key={m}>{m}</Box>)}
               </Box>
               {!!field.edit && (
                 <Button
@@ -278,7 +294,7 @@ const MedicalRecordsViewMedical = (_properties, context) => {
           <LabeledList.Item
             key={i}
             label={field.field}>
-            {field.value}
+            {field.value.split("\n").map(m => <Box key={m}>{m}</Box>)}
             <Button
               icon="pen"
               ml="0.5rem"

@@ -24,6 +24,7 @@
 	var/colour = "black"	//what colour the ink is!
 	pressure_resistance = 2
 	drop_sound = 'sound/items/drop/accessory.ogg'
+	pickup_sound = 'sound/items/pickup/accessory.ogg'
 
 /obj/item/weapon/pen/attack_self(var/mob/user)
 	if(!user.checkClickCooldown())
@@ -128,7 +129,7 @@
 	var/default_icon_state
 
 /obj/item/weapon/pen/blade/Initialize()
-	..()
+	. = ..()
 	active_icon_state = "[icon_state]-x"
 	default_icon_state = icon_state
 
@@ -287,6 +288,8 @@
 	var/uses = 30 //0 for unlimited uses
 	var/instant = 0
 	var/colourName = "red" //for updateIcon purposes
+	drop_sound = 'sound/items/drop/gloves.ogg'
+	pickup_sound = 'sound/items/pickup/gloves.ogg'
 
 /obj/item/weapon/pen/crayon/suicide_act(mob/user)
 	var/datum/gender/TU = gender_datums[user.get_visible_gender()]

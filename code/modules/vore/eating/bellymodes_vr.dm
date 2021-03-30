@@ -32,6 +32,14 @@
 	if(!length(touchable_atoms))
 		return
 
+	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
+	if(!DM)
+		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
+		return FALSE
+	if(DM.handle_atoms(src, touchable_atoms))
+		updateVRPanels()
+		return
+
 	var/list/touchable_mobs = null
 
 	var/list/hta_returns = handle_touchable_atoms(touchable_atoms)
@@ -48,17 +56,23 @@
 
 ///////////////////// Early Non-Mode Handling /////////////////////
 	var/list/EL = emote_lists[digest_mode]
-	if(LAZYLEN(EL) && touchable_mobs && next_emote <= world.time)
-		next_emote = world.time + emote_time
+	if(LAZYLEN(EL) && touchable_mobs && next_emote <= world.time && emote_active)
+		next_emote = world.time + (emote_time SECONDS)
 		for(var/mob/living/M in contents)
 			if(digest_mode == DM_DIGEST && !M.digestable)
 				continue // don't give digesty messages to indigestible people
-			to_chat(M, "<span class='notice'>[pick(EL)]</span>")
+			var/living_count = 0
+			for(var/mob/living/L in contents)
+				living_count++
 
-	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
-	if(!DM)
-		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")	
-		return FALSE
+			var/raw_message = pick(EL)
+			var/formatted_message
+			formatted_message = replacetext(raw_message, "%belly", lowertext(name))
+			formatted_message = replacetext(formatted_message, "%pred", owner)
+			formatted_message = replacetext(formatted_message, "%prey", english_list(contents))
+			formatted_message = replacetext(formatted_message, "%count", contents.len)
+			formatted_message = replacetext(formatted_message, "%countprey", living_count)
+			to_chat(M, "<span class='notice'>[formatted_message]</span>")
 
 	if(!digestion_noise_chance)
 		digestion_noise_chance = DM.noise_chance
@@ -81,16 +95,16 @@
 		play_sound = pred_digest
 
 	if(play_sound)
-		for(var/mob/M in hearers(VORE_SOUND_RANGE, owner)) //so we don't fill the whole room with the sound effect
+		for(var/mob/M in hearers(VORE_SOUND_RANGE, get_turf(owner))) //so we don't fill the whole room with the sound effect
 			if(!M.is_preference_enabled(/datum/client_preference/digestion_noises))
 				continue
 			if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
 				if(fancy_vore)
-					M.playsound_local(owner.loc, play_sound, vol = 75, vary = 1, falloff = VORE_SOUND_FALLOFF)
+					M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
 				else
-					M.playsound_local(owner.loc, play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+					M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
 				 //these are all external sound triggers now, so it's ok.
-	
+
 	if(to_update)
 		updateVRPanels()
 
@@ -122,6 +136,9 @@
 			if(L.absorbed)
 				L.Weaken(5)
 
+			// Fullscreen overlays
+			vore_fx(L)
+
 			//Handle 'human'
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
@@ -135,6 +152,16 @@
 				if((mode_flags & DM_FLAG_THICKBELLY) && !H.muffled)
 					H.muffled = TRUE
 
+				//Worn items flag
+				if(mode_flags & DM_FLAG_AFFECTWORN)
+					for(var/slot in slots)
+						var/obj/item/I = H.get_equipped_item(slot = slot)
+						if(I && I.canremove)
+							if(handle_digesting_item(I))
+								digestion_noise_chance = 25
+								to_update = TRUE
+								break
+
 				//Stripping flag
 				if(mode_flags & DM_FLAG_STRIPPING)
 					for(var/slot in slots)
@@ -144,7 +171,7 @@
 							digestion_noise_chance = 25
 							to_update = TRUE
 							break // Digest off one by one, not all at once
-							
+
 		//get rid of things like blood drops and gibs that end up in there
 		else if(istype(A, /obj/effect/decal/cleanable))
 			qdel(A)
@@ -190,14 +217,22 @@
 	var/digest_alert_prey = pick(digest_messages_prey)
 	var/compensation = M.getOxyLoss() //How much of the prey's damage was caused by passive crit oxyloss to compensate the lost nutrition.
 
+	var/living_count = 0
+	for(var/mob/living/L in contents)
+		living_count++
+
 	//Replace placeholder vars
 	digest_alert_owner = replacetext(digest_alert_owner, "%pred", owner)
 	digest_alert_owner = replacetext(digest_alert_owner, "%prey", M)
 	digest_alert_owner = replacetext(digest_alert_owner, "%belly", lowertext(name))
+	digest_alert_owner = replacetext(digest_alert_owner, "%count", contents.len)
+	digest_alert_owner = replacetext(digest_alert_owner, "%countprey", living_count)
 
 	digest_alert_prey = replacetext(digest_alert_prey, "%pred", owner)
 	digest_alert_prey = replacetext(digest_alert_prey, "%prey", M)
 	digest_alert_prey = replacetext(digest_alert_prey, "%belly", lowertext(name))
+	digest_alert_prey = replacetext(digest_alert_prey, "%count", contents.len)
+	digest_alert_prey = replacetext(digest_alert_prey, "%countprey", living_count)
 
 	//Send messages
 	to_chat(owner, "<span class='notice'>[digest_alert_owner]</span>")
@@ -213,15 +248,27 @@
 	if(compensation > 0)
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
-			R.cell.charge += 25*compensation
+			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMPedit: digestion producing reagents
+				R.cell.charge += 15*compensation
+				GenerateBellyReagents_digested()
+			else
+				R.cell.charge += 25*compensation*(nutrition_percent / 100) //CHOMPedit end
 		else
-			owner.adjust_nutrition((nutrition_percent / 100)*4.5*compensation)
+			if(reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && reagents.total_volume < reagents.maximum_volume) //CHOMP digestion producing reagents
+				owner.adjust_nutrition((nutrition_percent / 100)*3.0*compensation)
+				GenerateBellyReagents_digested()
+			else
+				owner.adjust_nutrition((nutrition_percent / 100)*4.5*compensation) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
 	if(L.nutrition >= 100)
 		var/oldnutrition = (L.nutrition * 0.05)
 		L.nutrition = (L.nutrition * 0.95)
-		owner.adjust_nutrition(oldnutrition)
+		if(reagent_mode_flags & DM_FLAG_REAGENTSDRAIN && reagents.total_volume < reagents.maximum_volume)   //CHOMPedit: draining reagent production //Added to this proc now since it's used for draining
+			owner.adjust_nutrition(oldnutrition * 0.75) //keeping the price static, due to how much nutrition can flunctuate
+			GenerateBellyReagents_absorbing() //Dont need unique proc so far
+		else
+			owner.adjust_nutrition(oldnutrition) //CHOMPedit end
 
 /obj/belly/proc/updateVRPanels()
 	for(var/mob/living/M in contents)
@@ -229,3 +276,5 @@
 			M.updateVRPanel()
 	if(owner.client)
 		owner.updateVRPanel()
+	if(isanimal(owner))
+		owner.update_icon()

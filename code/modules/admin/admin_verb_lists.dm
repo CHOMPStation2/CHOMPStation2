@@ -60,6 +60,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/check_ai_laws,			//shows AI and borg laws,
 	/client/proc/rename_silicon,		//properly renames silicons,
 	/client/proc/manage_silicon_laws,	// Allows viewing and editing silicon laws. ,
+	/client/proc/shuttle_panel,			// Allows controlling all shuttles remotely.
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,			//admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,					//talk in deadchat using our ckey/fakekey,
@@ -105,10 +106,11 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
 	/datum/admins/proc/quick_nif, //VOREStation Add,
-	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/admin_teleport,	//CHOMPEdit
+	/client/proc/setckey //YW add - readds SetCkey proc
 	)
 
 var/list/admin_verbs_ban = list(
@@ -182,7 +184,6 @@ var/list/admin_verbs_server = list(
 	/datum/admins/proc/toggle_space_ninja,
 	/client/proc/toggle_random_events,
 	/client/proc/check_customitem_activity,
-	/client/proc/nanomapgen_DumpImage,
 	/client/proc/modify_server_news,
 	/client/proc/recipe_dump,
 	/client/proc/panicbunker,
@@ -358,6 +359,8 @@ var/list/admin_verbs_mod = list(
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
+	/datum/admins/proc/quick_nif, //CHOMPEdit
+	/client/proc/admin_teleport,		//CHOMPEdit
 	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
 )
 
@@ -448,6 +451,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/check_ai_laws,                     //shows AI and borg laws,
 	/client/proc/rename_silicon,            //properly renames silicons,
 	/client/proc/manage_silicon_laws,       // Allows viewing and editing silicon laws. ,
+	/client/proc/shuttle_panel,			// Allows controlling all shuttles remotely.
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,                        //admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,                                      //talk in deadchat using our ckey/fakekey,
