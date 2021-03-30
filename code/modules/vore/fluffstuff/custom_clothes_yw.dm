@@ -713,7 +713,7 @@
 
  //Strix Hades
 
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/strix
+/obj/item/clothing/suit/storage/teshari/cloak/fluff/strix
  	name = "Colony Director Coat"
  	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -721,7 +721,7 @@
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
  	item_state = "tesh_cloak_cd"
 
-/obj/item/clothing/under/seromi/undercoat/fluff/strix
+/obj/item/clothing/under/teshari/undercoat/fluff/strix
 	name = "Colony Director Undercoat"
 	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -732,7 +732,7 @@
 					SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
 					)
 
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
+/obj/item/clothing/suit/storage/teshari/cloak/fluff/strix_cco
  	name = "Central Command Cloak"
  	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -740,7 +740,7 @@
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
  	item_state = "tesh_cloak_cco"
 
-/obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
+/obj/item/clothing/under/teshari/undercoat/fluff/strix_cco
 	name = "Central Command Undercoat"
 	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -876,7 +876,7 @@
 
 //Kita
 
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
+/obj/item/clothing/suit/storage/teshari/cloak/fluff/kita
  	name = "Magical Cloak"
  	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -1144,7 +1144,7 @@
 
 //Saroth
 
-/obj/item/clothing/suit/storage/seromi/cloak/fluff/Saroth
+/obj/item/clothing/suit/storage/teshari/cloak/fluff/Saroth
  	name = "Research Director cloak"
  	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside. This one bears the colors of the science department with additional trimming to designate it as the research director's. It has 'operty of Saroth' sewed in on the inside at the neck. The pockets seem slightly bigger on the inside than they appear on the outside."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
