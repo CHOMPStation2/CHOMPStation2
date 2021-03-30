@@ -231,7 +231,7 @@ var/list/gamemode_cache = list()
 	// 15, 45, 70 minutes respectively
 	var/static/list/event_delay_upper = list(EVENT_LEVEL_MUNDANE = 9000,	EVENT_LEVEL_MODERATE = 27000,	EVENT_LEVEL_MAJOR = 42000)
 
-	var/static/aliens_allowed = 1 //CHOMPedit to 1. This not only allows the natural spawning of xenos, but also the ability to lay eggs. Xenomorphs cannot lay eggs if this is 0
+	var/static/aliens_allowed = 1 //CHOMPedit to 1. This not only allows the natural spawning of xenos, but also the ability to lay eggs. Genaprawns cannot lay eggs if this is 0
 	var/static/ninjas_allowed = 0
 	var/static/abandon_allowed = 1
 	var/static/ooc_allowed = 1
