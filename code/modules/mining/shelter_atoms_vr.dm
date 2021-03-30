@@ -118,6 +118,11 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	template_id = "shelter_epsilon"
 	unique_id = "shelter_5"
 	is_ship = TRUE
+	
+/obj/item/device/survivalcapsule/popcabin
+	name = "pop-out cabin shelter capsule"
+	desc = "A cozy cabin; crammed into a survival capsule."
+	template_id = "shelter_cab"
 
 /obj/item/device/survivalcapsule/dropship
 	name = "dropship surfluid shelter capsule"
