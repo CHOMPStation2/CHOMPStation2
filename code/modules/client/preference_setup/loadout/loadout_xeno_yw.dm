@@ -201,7 +201,7 @@
 	..()
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/teshari/cloak/jobs/para,/obj/item/clothing/suit/storage/teshari/beltcloak/jobs/para))
-		var/obj/item/clothing/suit/storage/tesharibeltcloak/jobs/cloak_type = cloak
+		var/obj/item/clothing/suit/storage/teshari/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
