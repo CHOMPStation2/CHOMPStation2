@@ -61,30 +61,15 @@
 		SPECIES_TESHARI = 'icons/mob/species/teshari/suit.dmi'
 	)
 
-<<<<<<< HEAD
-
 //YWEdit Start, Makes ponchos use teshari sprite
 /obj/item/clothing/accessory/poncho/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
 	if(body_type == SPECIES_TESHARI)
 		if(!inhands)
-			return 'icons/mob/species/seromi/suit.dmi'
+			return 'icons/mob/species/teshari/suit.dmi'
 	else
 		return ..()
 //YWEdit end
-||||||| parent of b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
-/obj/item/clothing/accessory/poncho/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
-	..()
-	var/mob/living/carbon/human/H = loc
-	if(istype(H) && H.wear_suit == src)
-		if(H.species.name == "Teshari")
-			icon_override = 'icons/mob/species/seromi/suit.dmi'
-		else
-			icon_override = 'icons/mob/ties.dmi'
-		update_clothing_icon()
 
-/obj/item/clothing/accessory/poncho/dropped() //Resets the override to prevent the wrong .dmi from being used because equipped only triggers when wearing ponchos as suits.
-	icon_override = null
-=======
 /obj/item/clothing/accessory/poncho/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
 	..()
 	var/mob/living/carbon/human/H = loc
@@ -97,7 +82,6 @@
 
 /obj/item/clothing/accessory/poncho/dropped() //Resets the override to prevent the wrong .dmi from being used because equipped only triggers when wearing ponchos as suits.
 	icon_override = null
->>>>>>> b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
 
 /obj/item/clothing/accessory/poncho/green
 	name = "green poncho"
