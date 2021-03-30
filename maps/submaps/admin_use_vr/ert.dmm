@@ -6833,18 +6833,10 @@
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood,
 /area/ship/ert/commander)
-<<<<<<< HEAD
-"Wd" = (
-/obj/machinery/telecomms/relay/preset/centcom/tether,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/atmos)
-||||||| parent of 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
 "Wd" = (
 /obj/machinery/telecomms/relay,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/atmos)
-=======
->>>>>>> 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
 "Wj" = (
 /obj/machinery/light/no_nightshift{
 	dir = 8
