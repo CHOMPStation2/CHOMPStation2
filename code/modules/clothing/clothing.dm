@@ -847,17 +847,9 @@
 	var/rolled_down = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
 	var/rolled_sleeves = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TESHARI = 'icons/mob/species/seromi/uniform.dmi',
+		SPECIES_TESHARI = 'icons/mob/species/teshari/uniform.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi',
 		SPECIES_GREY_YW = 'icons/mob/species/grey/uniform.dmi'/*YWedit*/
-||||||| parent of b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
-		SPECIES_TESHARI = 'icons/mob/species/seromi/uniform.dmi',
-		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi'
-=======
-		SPECIES_TESHARI = 'icons/mob/species/teshari/uniform.dmi',
-		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi'
->>>>>>> b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
 		)
 
 	//convenience var for defining the icon state for the overlay used when the clothing is worn.
