@@ -203,17 +203,9 @@
 			"ci", "ri", "mi", "si", "ni", "ti", "li", "shi", "schi", "i", "i"
 		)
 
-<<<<<<< HEAD
-/datum/language/seromi/get_random_name(gender)
-	return ..(gender, 1, 4, 1.5)
-||||||| parent of b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
-/datum/language/seromi/get_random_name(gender)
-	return ..(gender, 2, 4, 1.5)
-=======
 /datum/language/teshari/get_random_name(gender)
-	return ..(gender, 2, 4, 1.5)
->>>>>>> b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
-
+	return ..(gender, 1, 4, 1.5) //CHOMPedit: Keep "1" as the second argument because tesharii here typically omit the pack name (thus only use 1 name). This is because 
+				     //CHOMPedit: there are very few packs and thus most tesharii would have the same first name.	
 
 /datum/language/zaddat
 	name = LANGUAGE_ZADDAT
