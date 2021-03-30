@@ -8,7 +8,7 @@ map_files=(
     "./maps/southern_cross/southern_cross-5.dmm"
     "./maps/southern_cross/southern_cross-6.dmm"
     "./maps/southern_cross/southern_cross-7.dmm"
-    "./maps/southern_cross/southern_cross-7.dmm"
+    "./maps/southern_cross/southern_cross-8.dmm"
     "./maps/southern_cross/southern_cross-9.dmm"
     "./maps/southern_cross/southern_cross-10.dmm"
     "./maps/southern_cross/southern_cross-11.dmm"
