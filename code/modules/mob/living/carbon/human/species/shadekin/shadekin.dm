@@ -25,7 +25,7 @@
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
 
-	siemens_coefficient = 0
+	siemens_coefficient = 1
 	darksight = 10
 
 	slowdown = -0.5
@@ -58,7 +58,7 @@
 	base_color = "#f0f0f0"
 	color_mult = 1
 
-	has_glowing_eyes = TRUE
+	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
 	death_message = "phases to somewhere far away!"
 	male_cough_sounds = null
@@ -94,7 +94,7 @@
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/shadekin),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/shadekin),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
@@ -110,6 +110,9 @@
 									   /datum/power/shadekin/regenerate_other,
 									   /datum/power/shadekin/create_shade)
 	var/list/shadekin_ability_datums = list()
+	var/kin_type
+	var/energy_light = 0.25
+	var/energy_dark = 0.75
 
 /datum/species/shadekin/New()
 	..()
@@ -166,18 +169,21 @@
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
+	var/is_dark = (darkness >= 0.5)
 
 	if(H.ability_flags & AB_PHASE_SHIFTED)
 		dark_gains = 0
 	else
 		//Heal (very) slowly in good darkness
-		if(darkness >= 0.75)
-			H.adjustFireLoss(-0.05)
-			H.adjustBruteLoss(-0.05)
-			H.adjustToxLoss(-0.05)
-			dark_gains = 0.75
+		if(is_dark)
+			H.adjustFireLoss((-0.10)*darkness)
+			H.adjustBruteLoss((-0.10)*darkness)
+			H.adjustToxLoss((-0.10)*darkness)
+			//energy_dark and energy_light are set by the shadekin eye traits.
+			//These are balanced around their playstyles and 2 planned new aggressive abilities
+			dark_gains = energy_dark
 		else
-			dark_gains = 0.25
+			dark_gains = energy_light
 
 	set_energy(H, get_energy(H) + dark_gains)
 

@@ -22,8 +22,8 @@
 		if(thing.reagents.reagent_list.len > 1)
 			to_chat(user, "<span class='warning'>The contents of \the [thing] are impure and cannot be used as fuel.</span>")
 			return 1
-		if(thing.reagents.total_volume < 50)
-			to_chat(user, "<span class='warning'>You need at least fifty units of material to form a fuel rod.</span>")
+		if(thing.reagents.total_volume < 300)
+			to_chat(user, "<span class='warning'>You need at least three hundred units of material to form a fuel rod.</span>")
 			return 1
 		var/datum/reagent/R = thing.reagents.reagent_list[1]
 		visible_message("<span class='notice'>\The [src] compresses the contents of \the [thing] into a new fuel assembly.</span>")

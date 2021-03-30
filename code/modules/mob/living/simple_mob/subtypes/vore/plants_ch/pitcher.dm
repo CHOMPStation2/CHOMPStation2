@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	health = 200
 	a_intent = I_HELP //White this is help by default I'm leaving this here as a reminder thatdisarm will prevent playersfrom swapping places with the pitcher (but interfere with vore bump).
 	faction = "plants" //Makes plantbgone deadly.
-	ai_holder_type = /datum/ai_holder/simple_mob/passive/pitcher //It's a passive carnivorous plant, it can't detect or interact with people. 
+	ai_holder_type = /datum/ai_holder/simple_mob/passive/pitcher //It's a passive carnivorous plant, it can't detect or interact with people.
 
 	min_oxy = 0 //Immune to atmos because so are space vines. This is arbitrary and can be tweaked if desired.
 	max_oxy = 0
@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	minbodytemp = 0
 
 	melee_damage_upper = 0 //This shouldn't attack people but if it does (admemes) no damage can be dealt.
-	melee_damage_lower = 0 
+	melee_damage_lower = 0
 
 	armor = list(
 				"melee" = 0,
@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 
 
 /mob/living/simple_mob/vore/pitcher_plant //Putting vore variables separately because apparently that's tradition.
-	vore_bump_chance = 100 
+	vore_bump_chance = 100
 	vore_bump_emote = "slurps up" //Not really a good way to make the grammar work with a passive vore plant.
 	vore_active = 1
 	vore_icons = 1
@@ -75,7 +75,9 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_mob/vore/pitcher_plant/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.desc	= "You leaned a little too close to the pitcher plant, stumbling over the lip and splashing into a puddle of liquid filling the bottom of the cramped pitcher. You squirm madly, righting yourself and scrabbling at the walls in vain as the slick surface offers no purchase. The dim light grows dark as the pitcher's cap lowers, silently sealing the exit. With a sinking feeling you realize you won't be able to push the exit open even if you could somehow climb that high, leaving you helplessly trapped in the slick, tingling fluid. ((You can't escape this mob without help but you may use OOC Escape if you wish.))"
 	B.digest_burn = 0.5
@@ -126,7 +128,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	adjustToxLoss((nutrition - lastnutrition) * 3)
 	if(nutrition < pitcher_metabolism)
 		adjustToxLoss(pitcher_metabolism)
-	if(world.time > last_lifechecks + 30 SECONDS) 
+	if(world.time > last_lifechecks + 30 SECONDS)
 		last_lifechecks = world.time
 		vore_checks()
 		handle_hungry()
@@ -138,7 +140,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 /mob/living/simple_mob/vore/pitcher_plant/Initialize()
 	..()
 	pitcher_plant_lure_messages = GLOB.pitcher_plant_lure_messages
-	
+
 
 /mob/living/simple_mob/vore/pitcher_plant/death()
 	..()
@@ -147,7 +149,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		new /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit(get_turf(src))
 		fruit = FALSE
 
-	
+
 
 /mob/living/simple_mob/vore/pitcher_plant/proc/grow_fruit() //This proc handles the pitcher turning nutrition into fruit (and new pitchers).
 	if(!fruit)
@@ -158,14 +160,14 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		else
 			return
 	if(fruit)
-		if(nutrition >= PITCHER_SATED + NUTRITION_PITCHER) 
-			var/turf/T = safepick(circleviewturfs(src, 2)) 
+		if(nutrition >= PITCHER_SATED + NUTRITION_PITCHER)
+			var/turf/T = safepick(circleviewturfs(src, 2))
 			if(T.density) //No spawning in walls
 				return
 			else if(src.loc ==T)
 				return
 			else
-				new /mob/living/simple_mob/vore/pitcher_plant(get_turf(T)) 
+				new /mob/living/simple_mob/vore/pitcher_plant(get_turf(T))
 				fruit = FALSE //No admeming this to spawn endless pitchers.
 				adjust_nutrition(-NUTRITION_PITCHER)
 
@@ -226,12 +228,12 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		var/N = 0
 		var/hasdigestable = 0
 		var/hasindigestable = 0
-		for(L in vore_selected.contents) 
+		for(L in vore_selected.contents)
 			if(istype(L, /mob/living/carbon/human/monkey))
 				L.nutrition = 0 //No stuffing monkeys with protein shakes for massive nutrition.
 			if(!L.digestable)
 				vore_selected.digest_mode = DM_DRAIN
-				N = 1  
+				N = 1
 				hasindigestable = 1
 				continue
 			else
@@ -250,8 +252,8 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	if(nutrition <= PITCHER_HUNGRY) //Is sanity check another way to say redundancy?
 		var/turf/T = get_turf(src)
 		var/cardinal_turfs = T.CardinalTurfs()
-		
-		for(var/mob/living/carbon/human/H in oview(2, src)) 
+
+		for(var/mob/living/carbon/human/H in oview(2, src))
 			if(!istype(H) || !isliving(H) || H.stat == DEAD) //Living mobs only
 				continue
 			if(isSynthetic(H) || !H.species.breath_type || H.internal) //Exclude species which don't breathe or have internals.
@@ -292,7 +294,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 
 /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit/Initialize()
 	. = ..()
-	reagents.add_reagent("pitcher_nectar", 5) 
+	reagents.add_reagent("pitcher_nectar", 5)
 	bitesize = 4
 	pit = new /obj/item/seeds/pitcherseed(src.contents)
 	seed = pit.seed
@@ -301,7 +303,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	if(istype(O,/obj/machinery/microwave))
 		return ..()
 	if(istype (O, /obj/machinery/seed_extractor))
-		pit.loc = O.loc //1 seed, perhaps balanced because you can get the reagents and the seed. Can be increased if desirable. 
+		pit.loc = O.loc //1 seed, perhaps balanced because you can get the reagents and the seed. Can be increased if desirable.
 		qdel(src)
 	if(!(proximity && O.is_open_container()))
 		return

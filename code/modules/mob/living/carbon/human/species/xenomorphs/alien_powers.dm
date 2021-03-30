@@ -2,7 +2,7 @@
 	for(var/mob/living/carbon/human/Q in living_mob_list)
 		if(self && ignore_self && self == Q)
 			continue
-		if(Q.species.name != SPECIES_XENO_QUEEN)
+		if(Q.species.name != SPECIES_GENA_QUEEN) //CHOMPedit
 			continue
 		if(!Q.key || !Q.client || Q.stat)
 			continue
@@ -80,7 +80,7 @@
 /mob/living/carbon/human/proc/lay_egg()
 
 	set name = "Lay Egg (200)" //CHOMPedit changed number value
-	set desc = "Lay an egg to produce huggers to impregnate prey with."
+	set desc = "Lay an egg that hatch into larva." //CHOMPedit
 	set category = "Abilities"
 
 	if(!config.aliens_allowed)
@@ -110,7 +110,7 @@
 
 	if(check_alien_ability(500))
 		visible_message("<span class='alium'><B>[src] begins to twist and contort!</B></span>", "<span class='alium'>You begin to evolve!</span>")
-		src.set_species("Xenomorph Queen")
+		src.set_species("Genaprawn Queen") //CHOMPedit
 
 	return
 

@@ -17,7 +17,7 @@
 	var/static/list/locked = list()
 
 
-/datum/datacore/proc/get_manifest(monochrome, OOC)
+/datum/datacore/proc/get_manifest(monochrome, OOC,var/snowflake = FALSE) //CHOMPStation Edit
 	var/list/heads = new()
 	var/list/sec = new()
 	var/list/eng = new()
@@ -40,8 +40,9 @@
 		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: [OOC?"#373737; color:white":"#DEF"]"]}
 	</style></head>
 	<table class="manifest" width='350px'>
+	[snowflake?"<tr><th colspan=3 style = \"background-color: #026e6a\"><b>Online players:</b> [TGS_CLIENT_COUNT]</th></tr><tr><th colspan=3 style = \"background-color: #027a76\"><b>Crew members:</b> [data_core.general.len]</th></tr><tr class='head'>":""]
 	<tr class='head'><th>Name</th><th>Rank</th><th>Activity</th></tr>
-	"}
+	"} //Also a chompstation edit with the snowflake stuff on line 43
 	var/even = 0
 	// sort mobs
 	for(var/datum/data/record/t in data_core.general)
@@ -114,7 +115,7 @@
 
 	for(var/mob/living/silicon/robot/robot in mob_list)
 		// No combat/syndicate cyborgs, no drones, and no AI shells.
-		if(!robot.scrambledcodes && !robot.shell && !(robot.module && robot.module.hide_on_manifest))
+		if(!robot.scrambledcodes && !robot.shell && !(robot.module && robot.module.hide_on_manifest()))
 			bot[robot.name] = "[robot.modtype] [robot.braintype]"
 
 
@@ -275,7 +276,7 @@ var/global/list/PDA_Manifest = list()
 
 	for(var/mob/living/silicon/robot/robot in mob_list)
 		// No combat/syndicate cyborgs, no drones, and no AI shells.
-		if(robot.scrambledcodes || robot.shell || (robot.module && robot.module.hide_on_manifest))
+		if(robot.scrambledcodes || robot.shell || (robot.module && robot.module.hide_on_manifest()))
 			continue
 
 		bot[++bot.len] = list("name" = robot.real_name, "rank" = "[robot.modtype] [robot.braintype]", "active" = "Active")
@@ -301,7 +302,7 @@ var/global/list/PDA_Manifest = list()
 			manifest_inject(H)
 		return
 
-/datum/datacore/proc/manifest_modify(var/name, var/assignment)
+/datum/datacore/proc/manifest_modify(var/name, var/assignment, var/rank)
 	ResetPDAManifest()
 	var/datum/data/record/foundrecord
 	var/real_title = assignment
@@ -315,11 +316,17 @@ var/global/list/PDA_Manifest = list()
 	var/list/all_jobs = get_job_datums()
 
 	for(var/datum/job/J in all_jobs)
-		var/list/alttitles = get_alternate_titles(J.title)
-		if(!J)	continue
-		if(assignment in alttitles)
-			real_title = J.title
+		if(J.title == rank)					//If we have a rank, just default to using that.
+			real_title = rank
 			break
+		else if(J.title == assignment)
+			real_title = assignment
+			break
+		else
+			var/list/alttitles = get_alternate_titles(J.title)
+			if(assignment in alttitles)
+				real_title = J.title
+				break
 
 	if(foundrecord)
 		foundrecord.fields["rank"] = assignment
@@ -329,10 +336,10 @@ var/global/list/PDA_Manifest = list()
 	if(H.mind && !player_is_antag(H.mind, only_offstation_roles = 1))
 		var/assignment = GetAssignment(H)
 		var/hidden
-		var/datum/job/J = SSjob.get_job(assignment)
+		var/datum/job/J = SSjob.get_job(H.mind.assigned_role)
 		hidden = J?.offmap_spawn
 
-		/* Note: Due to cached_character_icon, a number of emergent properties occur due to the initialization 
+		/* Note: Due to cached_character_icon, a number of emergent properties occur due to the initialization
 		* order of readied-up vs latejoiners. Namely, latejoiners will get a uniform in their datacore picture, but readied-up will
 		* not. This is due to the fact that SSticker calls data_core.manifest_inject() inside of ticker/proc/create_characters(),
 		* but does not equip them until ticker/proc/equip_characters(), which is called later. So, this proc is literally called before

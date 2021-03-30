@@ -20,6 +20,7 @@
 
 /obj/item/weapon/gun/projectile
 	var/manual_chamber = TRUE
+	var/only_open_load = FALSE
 	var/auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK | LOCK_SLAPPABLE
 	var/bolt_name = "bolt"
 	var/bolt_open = FALSE
@@ -69,7 +70,7 @@
 	if(chambered)
 		chambered.expend()
 		if(!manual_chamber) process_chambered()
-	if(manual_chamber)
+	if(manual_chamber && auto_loading_type)
 		bolt_toggle()
 
 /obj/item/weapon/gun/projectile/attack_self(mob/user as mob)
@@ -84,6 +85,7 @@
 /obj/item/weapon/gun/projectile/proc/bolt_handle(mob/user)
 	var/previous_chambered = chambered
 	var/result = bolt_toggle(TRUE)
+	update_icon()
 	if(!result)
 		to_chat(user,"<span class='notice'>Nothing happens.</span>")
 	else
@@ -159,10 +161,10 @@
 		else
 			bolt_open = TRUE
 			var/ejected = process_chambered()
-			var/chambering = chamber_bullet()
+			
 			var/output = BOLT_OPENED
 			if(ejected) output |= BOLT_CASING_EJECTED
-			if(chambering) output |= BOLT_CASING_CHAMBERED
+			//if(chambering) output |= BOLT_CASING_CHAMBERED
 			return output
 	else
 		if(auto_loading_type)
@@ -192,7 +194,10 @@
 				return BOLT_CLOSED
 		else
 			bolt_open = FALSE
-			return BOLT_CLOSED
+			var/output = BOLT_CLOSED
+			var/chambering = chamber_bullet()
+			if(chambering) output |= BOLT_CASING_CHAMBERED
+			return output
 
 
 /obj/item/weapon/gun/projectile/process_chambered()
@@ -250,6 +255,8 @@
 	return null
 
 /obj/item/weapon/gun/projectile/proc/chamber_bullet()
+	if(chambered)
+		return 0
 	var/obj/item/ammo_casing/to_chamber
 	if(loaded.len)
 		to_chamber = loaded[1] //load next casing.
@@ -288,6 +295,9 @@
 					bolt_toggle()
 				playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
 			if(SPEEDLOADER)
+				if(only_open_load && !bolt_open)
+					to_chat(user, "<span_class='warning'>[src] must have its bolt open to be loaded!</span>")
+					return
 				if(loaded.len >= max_shells)
 					to_chat(user, "<span class='warning'>[src] is full!</span>")
 					return
@@ -340,6 +350,9 @@
 				return
 			else
 				return
+		if(only_open_load && !bolt_open)
+			to_chat(user, "<span_class='warning'>[src] must have its bolt open to be loaded!</span>")
+			return
 		if(loaded.len >= max_shells)
 			to_chat(user, "<span class='warning'>[src] is full.</span>")
 			return
@@ -411,10 +424,28 @@
 			else if(CHECK_BITFIELD(auto_loading_type,CLOSED_BOLT) && bolt_open)
 				to_chat(user,"<span class='warning'>This is a closed bolt gun! You need to close the bolt before firing it!</span>")
 				return 0
+			else if(bolt_open)
+				to_chat(user,"<span class='warning'>This is a manual action gun, the bolt or chamber must be closed before firing it!</span>")
+				return 0
 			else
 				return 1
 		else
 			return 1
+
+/obj/item/weapon/gun/projectile/unload_ammo(mob/user, var/allow_dump=1)
+	if(manual_chamber && only_open_load && !bolt_open)
+		to_chat(user,"<span class='warning'>You must open the bolt to load or unload this gun!</span>")
+	else
+		return ..()
+
+/obj/item/weapon/gun/projectile/handle_click_empty(mob/user)
+	if (user)
+		user.visible_message("*click click*", "<span class='danger'>*click*</span>")
+	else
+		src.visible_message("*click click*")
+	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
+	if(!manual_chamber)
+		process_chambered()
 
 /obj/item/weapon/gun/projectile/New(loc, var/starts_loaded = 1)
 	..()

@@ -1017,6 +1017,12 @@
 /area/tether/surfacebase/medical/uppernorthstairwell{
 	name = "\improper North Medical Stairwell"
 	})
+"abv" = (
+/obj/structure/stairs/spawner/east,
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/uppernorthstairwell{
+	name = "\improper North Medical Stairwell"
+	})
 "abw" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -1112,6 +1118,7 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/recoveryward)
+<<<<<<< HEAD
 "abC" = (
 /obj/structure/cable/green,
 /obj/machinery/power/apc{
@@ -1122,6 +1129,16 @@
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/centralhall)
+||||||| parent of db9968a3ff... Merge pull request #9454 from VOREStation/upstream-merge-7783
+=======
+"abC" = (
+/obj/structure/railing,
+/obj/structure/stairs/spawner/east,
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/uppernorthstairwell{
+	name = "\improper North Medical Stairwell"
+	})
+>>>>>>> db9968a3ff... Merge pull request #9454 from VOREStation/upstream-merge-7783
 "abD" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -1381,11 +1398,12 @@
 	name = "\improper North Medical Stairwell"
 	})
 "abW" = (
-/obj/structure/stairs/east,
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/uppernorthstairwell{
-	name = "\improper North Medical Stairwell"
-	})
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/stairs/spawner/east,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/middlehall)
 "abX" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -1664,12 +1682,10 @@
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/medical/resleeving)
 "acw" = (
-/obj/structure/stairs/east,
 /obj/structure/railing,
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/uppernorthstairwell{
-	name = "\improper North Medical Stairwell"
-	})
+/obj/structure/stairs/spawner/east,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/middlehall)
 "acx" = (
 /obj/machinery/vending/medical{
 	dir = 8
@@ -5094,12 +5110,12 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "aib" = (
-/obj/structure/stairs/east,
-/obj/structure/railing{
-	dir = 1
+/obj/structure/window/reinforced{
+	dir = 4
 	},
+/obj/structure/stairs/spawner/south,
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/middlehall)
+/area/tether/surfacebase/public_garden_two)
 "aic" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -5892,10 +5908,9 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "aji" = (
-/obj/structure/stairs/east,
-/obj/structure/railing,
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/middlehall)
+/obj/structure/stairs/spawner/south,
+/turf/simulated/floor/virgo3b,
+/area/tether/surfacebase/outside/outside2)
 "ajj" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -6976,10 +6991,10 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akV" = (
-/obj/structure/stairs/west,
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/structure/stairs/spawner/west,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akW" = (
@@ -7494,7 +7509,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tether/surfacebase/medical/morgue)
 "alM" = (
-/obj/structure/stairs/west,
+/obj/structure/stairs/spawner/west,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "alN" = (
@@ -10859,12 +10874,9 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
 "arq" = (
-/obj/structure/stairs/south,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/stairs/spawner/north,
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/public_garden_two)
+/area/tether/surfacebase/north_staires_two)
 "arr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloor{
@@ -12546,9 +12558,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
 "auh" = (
-/obj/structure/stairs/south,
-/turf/simulated/floor/virgo3b,
-/area/tether/surfacebase/outside/outside2)
+/obj/structure/stairs/spawner/north,
+/turf/simulated/floor/tiled/dark,
+/area/bridge_hallway)
 "aui" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor{
@@ -14764,6 +14776,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
+"ayo" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/stairs/spawner/north,
+/turf/simulated/floor/tiled/dark,
+/area/bridge_hallway)
 "ayp" = (
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/open,
@@ -15746,9 +15765,9 @@
 /turf/simulated/open,
 /area/tether/surfacebase/north_staires_two)
 "aAE" = (
-/obj/structure/stairs/north,
+/obj/structure/stairs/spawner/south,
 /turf/simulated/floor/tiled,
-/area/tether/surfacebase/north_staires_two)
+/area/rnd/staircase/secondfloor)
 "aAF" = (
 /obj/structure/railing{
 	dir = 8
@@ -16335,16 +16354,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
 "aBT" = (
-/obj/structure/stairs/north,
-/turf/simulated/floor/tiled/dark,
-/area/bridge_hallway)
+/obj/structure/stairs/spawner/east,
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/east_stairs_two)
 "aBU" = (
-/obj/structure/stairs/north,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/bridge_hallway)
+/obj/structure/stairs/spawner/west,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/southhall)
 "aBV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -16919,7 +16935,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
 "aCU" = (
-/obj/structure/stairs/west,
+/obj/structure/stairs/spawner/west,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/bar)
 "aCV" = (
@@ -22975,6 +22991,19 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
+"aOv" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/stairs/spawner/north,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
 "aOw" = (
 /obj/machinery/light_switch{
 	dir = 4;
@@ -23079,6 +23108,29 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
+"aOJ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/stairs/spawner/north,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
+"aOK" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/stairs/spawner/north,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
 "aOL" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 9
@@ -24152,10 +24204,6 @@
 /obj/random/tool,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
-"aRk" = (
-/obj/structure/stairs/south,
-/turf/simulated/floor/tiled,
-/area/rnd/staircase/secondfloor)
 "aRl" = (
 /obj/machinery/requests_console{
 	department = "Science";
@@ -28238,10 +28286,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/tether/surfacebase/east_stairs_two)
-"aZv" = (
-/obj/structure/stairs/east,
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
 "aZC" = (
@@ -33497,10 +33541,6 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
-"blF" = (
-/obj/structure/stairs/west,
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/southhall)
 "blG" = (
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/southhall)
@@ -33679,42 +33719,6 @@
 "blV" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
-"blW" = (
-/obj/structure/stairs/north,
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
-"blX" = (
-/obj/structure/stairs/north,
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
-"blY" = (
-/obj/structure/stairs/north,
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/outpost/xenobiology/outpost_slimepens)
 "blZ" = (
@@ -34445,6 +34449,22 @@
 /obj/machinery/vending/snack,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
+"etU" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(746)
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+"eKn" = (
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+"frf" = (
+/obj/item/weapon/paper{
+	info = "I finally got them. The last pair of Shitty Tim's Shitty Timbs. I waited in line at the cargo shop for what seemed like hours. It probably was hours quite frankly. Well after I got my box, someone ran by and jacked my heels! Well I needed shoes so I snuck inside and stole what they had left. Just a pair of NT worshoes. But atleast I'm not walking away barefooted. If only I wasn't caught by a security. I feel like I've been in this hole for days. Good thing I managed to pilfer some provisions on the way here.";
+	name = "Pilferer's note"
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
 "fxr" = (
 /obj/machinery/light{
 	dir = 8
@@ -34456,6 +34476,23 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
+"gwn" = (
+/obj/item/trash/snack_bowl,
+/obj/item/trash/sosjerky,
+/obj/item/trash/sosjerky,
+/obj/item/trash/sosjerky,
+/obj/item/trash/unajerky,
+/obj/item/trash/waffles,
+/obj/structure/closet/crate/trashcart,
+/obj/item/trash/cheesie,
+/obj/item/trash/cheesie,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+"jCz" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/tether/surfacebase/public_garden_two)
 "kPb" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -34515,6 +34552,38 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
+<<<<<<< HEAD
+||||||| parent of 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
+"mUP" = (
+/obj/structure/bed/padded,
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/firealarm{
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lower/bar)
+"mWq" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lower/south)
+=======
+"mCl" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+"mUP" = (
+/obj/structure/bed/padded,
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/firealarm{
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lower/bar)
+"mWq" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lower/south)
+>>>>>>> 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
 "nFT" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -34529,6 +34598,7 @@
 /obj/item/weapon/deck/cah,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "oXI" = (
 /obj/structure/railing{
@@ -34577,6 +34647,16 @@
 /area/maintenance/lower/north)
 =======
 >>>>>>> 7ed3f13340... Merge pull request #9546 from Detective-Google/map-fixes
+||||||| parent of 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
+=======
+"olc" = (
+/obj/item/weapon/grenade/chem_grenade/cleaner{
+	pixel_x = -10
+	},
+/obj/item/weapon/grenade/anti_photon,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+>>>>>>> 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
 "pah" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock{
@@ -34630,6 +34710,55 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
+<<<<<<< HEAD
+||||||| parent of 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
+"sVf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/button/windowtint{
+	dir = 1;
+	id = "chaplainpet";
+	name = "interior window tint";
+	pixel_x = -4;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+=======
+"shd" = (
+/obj/item/weapon/storage/rollingpapers,
+/obj/item/clothing/mask/smokable/cigarette/joint,
+/obj/item/clothing/mask/smokable/cigarette/joint,
+/obj/item/clothing/mask/smokable/cigarette/cigar/cohiba,
+/obj/item/clothing/mask/smokable/cigarette/cigar/cohiba,
+/obj/item/weapon/flame/lighter/zippo/moff,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+"sVf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/button/windowtint{
+	dir = 1;
+	id = "chaplainpet";
+	name = "interior window tint";
+	pixel_x = -4;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+>>>>>>> 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
 "sZp" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -34692,6 +34821,23 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/mining)
+<<<<<<< HEAD
+||||||| parent of 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
+"tPB" = (
+/turf/simulated/floor/grass,
+/area/chapel/main)
+=======
+"tPB" = (
+/turf/simulated/floor/grass,
+/area/chapel/main)
+"uay" = (
+/obj/item/clothing/shoes/syndigaloshes{
+	desc = "A pair of Nanotrasen Saf-T-Stride brown, nonslip, shoes.";
+	name = "NT nonslips"
+	},
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
+>>>>>>> 7c76d267c9... Merge pull request #9645 from SweetBlueSylveon/The-Clime-Offices
 "unM" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -34699,6 +34845,13 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
+"uHy" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/plating,
+/area/tether/surfacebase/funny/hideyhole)
 "uKv" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/machinery/light{
@@ -38292,7 +38445,7 @@ aac
 arl
 asq
 arl
-auh
+aji
 aac
 aac
 adt
@@ -39153,9 +39306,9 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
+frf
+shd
+uHy
 adt
 adt
 adt
@@ -39295,9 +39448,9 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
+olc
+eKn
+eKn
 adt
 adt
 adt
@@ -39433,12 +39586,12 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
-adt
-adt
-adt
+eKn
+eKn
+etU
+etU
+eKn
+uay
 adt
 adt
 adt
@@ -39574,13 +39727,13 @@ adt
 adt
 adt
 adt
+eKn
+eKn
 adt
 adt
 adt
-adt
-adt
-adt
-adt
+gwn
+mCl
 adt
 adt
 adt
@@ -39711,12 +39864,12 @@ apn
 anf
 aro
 asr
-akX
-akX
-adt
-adt
-adt
-adt
+jCz
+jCz
+eKn
+eKn
+eKn
+eKn
 adt
 adt
 adt
@@ -40135,7 +40288,7 @@ anf
 aog
 apq
 aqw
-arq
+aib
 ast
 atG
 ass
@@ -40362,7 +40515,7 @@ bfL
 bkQ
 blo
 blM
-blW
+aOv
 bme
 bfL
 bfL
@@ -40504,7 +40657,7 @@ bkJ
 bkR
 blp
 blN
-blX
+aOJ
 bfL
 bfL
 bfL
@@ -40646,7 +40799,7 @@ bfL
 bkS
 blq
 blO
-blY
+aOK
 bmf
 bfL
 bfL
@@ -42021,7 +42174,7 @@ aOg
 aOW
 aPE
 aOY
-aRk
+aAE
 aRM
 aSv
 aHE
@@ -42163,7 +42316,7 @@ aOh
 aOX
 aOY
 aOY
-aRk
+aAE
 aRM
 aty
 aug
@@ -43392,8 +43545,8 @@ aeS
 afG
 agy
 ahn
-aib
-aji
+abW
+acw
 ahn
 all
 amo
@@ -45402,7 +45555,7 @@ aoO
 ayW
 azA
 ayW
-aAE
+arq
 aBk
 aBP
 aCC
@@ -45544,7 +45697,7 @@ ayE
 ayW
 azA
 ayW
-aAE
+arq
 aBl
 aBQ
 aCD
@@ -46966,7 +47119,7 @@ azG
 aAi
 aAH
 aAJ
-aBT
+auh
 aCI
 aDz
 aEi
@@ -47108,7 +47261,7 @@ azH
 aAj
 aAI
 aAJ
-aBU
+ayo
 aCJ
 aDA
 aBo
@@ -47646,8 +47799,8 @@ aab
 aab
 aab
 aar
-abW
-acw
+abv
+abC
 acx
 aaH
 aaO
@@ -48706,8 +48859,8 @@ aXi
 aXP
 aYz
 aUc
-aZv
-aZv
+aBT
+aBT
 aNo
 aLX
 aLX
@@ -50488,8 +50641,8 @@ adt
 adt
 adt
 blh
-blF
-blF
+aBU
+aBU
 blh
 abn
 aab

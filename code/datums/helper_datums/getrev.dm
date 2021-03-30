@@ -47,7 +47,7 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 		. += "The following pull requests are currently test merged:"
 	for(var/line in testmerge)
 		var/datum/tgs_revision_information/test_merge/tm = line
-		var/cm = tm.pull_request_commit
+		var/cm = tm.head_commit		//CHOMPStation Edit TGS4
 		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
 		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.holder))
 			continue

@@ -786,43 +786,14 @@
 	Under it is written 'Kouri, Amina, Marine Unit 14, Fifth Echelon. Service number NTN-5528928522372'"
 
 //arokha:Amaya Rahl - Custom ID (Medical dept)
-/obj/item/weapon/card/id/fluff/amaya
+/obj/item/weapon/card/id/event/fluff/amaya
 	registered_name = "CONFIGURE ME"
 	assignment = "CONFIGURE ME"
-	var/configured = 0
-	var/accessset = 0
 	icon = 'icons/vore/custom_items_vr.dmi'
+	base_icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "amayarahlwahID"
 	desc = "A primarily blue ID with a holographic 'WAH' etched onto its back. The letters do not obscure anything important on the card. It is shiny and it feels very bumpy."
-	var/title_strings = list("Amaya Rahl's Wah-identification card", "Amaya Rahl's Wah-ID card")
-
-/obj/item/weapon/card/id/fluff/amaya/attack_self(mob/user as mob)
-	if(configured == 1)
-		return ..()
-
-	var/title
-	if(user.client.prefs.player_alt_titles[user.job])
-		title = user.client.prefs.player_alt_titles[user.job]
-	else
-		title = user.job
-	assignment = title
-	user.set_id_info(src)
-	if(user.mind && user.mind.initial_account)
-		associated_account_number = user.mind.initial_account.account_number
-	var/tempname = pick(title_strings)
-	name = tempname + " ([title])"
-	configured = 1
-	to_chat(user, "<span class='notice'>Card settings set.</span>")
-
-/obj/item/weapon/card/id/fluff/amaya/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I, /obj/item/weapon/card/id) && !accessset)
-		var/obj/item/weapon/card/id/O = I
-		access |= O.access
-		to_chat(user, "<span class='notice'>You copy the access from \the [I] to \the [src].</span>")
-		user.drop_from_inventory(I)
-		qdel(I)
-		accessset = 1
-	..()
+	title_strings = list("Amaya Rahl's Wah-identification card", "Amaya Rahl's Wah-ID card")
 
 //General use, Verk felt like sharing.
 /obj/item/clothing/glasses/fluff/science_proper
@@ -951,23 +922,6 @@
 
 /obj/item/weapon/material/twohanded/fluff/New(var/newloc)
 	..(newloc," ") //See materials_vr_dmi for more information as to why this is a blank space.
-
-//General use.
-/obj/item/weapon/material/twohanded/fluff/riding_crop
-	name = "riding crop"
-	desc = "A steel rod, a little over a foot long with a widened grip and a thick, leather patch at the end. Made to smack naughty submissives."
-	//force_wielded = 0.05 //Stings, but does jack shit for damage, provided you don't hit someone 100 times. 1 damage with hardness of 60.
-	force_divisor = 0.05 //Required in order for the X attacks Y message to pop up.
-	unwielded_force_divisor = 1 // One here, too.
-	applies_material_colour = 0
-	unbreakable = 1
-	base_icon = "riding_crop"
-	icon_state = "riding_crop0"
-	attack_verb = list("cropped","spanked","swatted","smacked","peppered")
-//1R1S: Malady Blanche
-/obj/item/weapon/material/twohanded/fluff/riding_crop/malady
-	name = "Malady's riding crop"
-	desc = "An infernum made riding crop with Malady Blanche engraved in the shaft. It's a little worn from how many butts it has spanked."
 
 //jacknoir413:Areax Third
 /obj/item/weapon/melee/baton/fluff/stunstaff
@@ -1228,7 +1182,7 @@
 	desc = "A standard vacuum-flask filled with good and expensive drink."
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/viktor/Initialize()
-	..()
+	. = ..()
 	reagents.add_reagent("pwine", 60)
 
 //RadiantAurora: Tiemli Kroto

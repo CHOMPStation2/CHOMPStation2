@@ -159,6 +159,14 @@
 #define MAT_CHITIN			"chitin"
 #define MAT_CLOTH			"cloth"
 #define MAT_SYNCLOTH		"syncloth"
+#define MAT_COPPER			"copper"
+#define MAT_QUARTZ			"quartz"
+#define MAT_TIN				"tin"
+#define MAT_VOPAL			"void opal"
+#define MAT_ALUMINIUM		"aluminium"
+#define MAT_BRONZE			"bronze"
+#define MAT_PAINITE			"painite"
+#define MAT_BOROSILICATE	"borosilicate glass"
 
 #define SHARD_SHARD "shard"
 #define SHARD_SHRAPNEL "shrapnel"
@@ -494,3 +502,5 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define APPEARANCECHANGER_CHANGED_F_HAIRSTYLE "Facial Hair Style"
 #define APPEARANCECHANGER_CHANGED_F_HAIRCOLOR "Facial Hair Color"
 #define APPEARANCECHANGER_CHANGED_EYES "Eye Color"
+
+#define GET_DECL(D) (ispath(D, /decl) ? (decls_repository.fetched_decls[D] || decls_repository.get_decl(D)) : null)

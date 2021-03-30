@@ -126,6 +126,18 @@ only use the hollow_point and armor_penetration values.*/
 	hollow_point = TRUE
 	armor_penetration = -50
 
+/obj/item/projectile/bullet/a762x25
+	fire_sound = 'sound/weapons/gunshot2.ogg'
+	diam = 7.92
+	grains = 85
+	velocity = 469
+
+/obj/item/projectile/bullet/a9x18
+	fire_sound = 'sound/weapons/gunshot2.ogg'
+	diam = 9.27
+	grains = 95
+	velocity = 319
+
 /obj/item/projectile/bullet/a10mm
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	diam = 10.17
@@ -320,6 +332,30 @@ only use the hollow_point and armor_penetration values.*/
 	hitscan = 1
 
 /obj/item/projectile/bullet/rifle/a762x54/ap
+	armor_penetration = 50
+
+/obj/item/projectile/bullet/rifle/a338
+	fire_sound = 'sound/weapons/ballistics/a762x54.ogg'
+	damage = 45
+	diam = 8.61
+	grains = 250
+	velocity = 921
+	hitscan = 1
+	penetrating = 2
+
+/obj/item/projectile/bullet/rifle/a338/ap
+	armor_penetration = 50
+
+/obj/item/projectile/bullet/rifle/a50bmg
+	fire_sound = 'sound/weapons/ballistics/a145.ogg'
+	damage = 65
+	diam = 13
+	grains = 750
+	velocity = 860
+	hitscan = 1
+	penetrating = 2
+
+/obj/item/projectile/bullet/rifle/a50bmg/ap
 	armor_penetration = 50
 
 //NOTE: Ammo casings and magazines used to be in this part of the file. They have been moved to respective files in the projectiles/ammunition folder.

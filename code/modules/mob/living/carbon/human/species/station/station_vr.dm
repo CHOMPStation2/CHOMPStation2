@@ -55,7 +55,7 @@
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/sergal),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/sergal),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
@@ -246,7 +246,7 @@
 	dual-star Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and \
 	culture both feared and respected for their scientific breakthroughs. Discovery, loyalty, and utilitarianism dominates their lifestyles \
 	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
-    which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
+	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
 //CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
 //	wikilink="https://www.yawn.ocry.com/Vulpkanin"
@@ -289,6 +289,7 @@
 	tail_animation = 'icons/mob/species/tajaran/tail_vr.dmi'
 	color_mult = 1
 	min_age = 18
+	allergens = null
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
@@ -305,6 +306,7 @@
 	color_mult = 1
 	min_age = 18
 	reagent_tag = null
+	allergens = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
 //CHOMPedit: link to our wiki
@@ -339,8 +341,8 @@
 /datum/species/teshari
 	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
 	spawn_flags = SPECIES_CAN_JOIN
-	icobase = 'icons/mob/human_races/r_seromi_vr.dmi'
-	deform = 'icons/mob/human_races/r_seromi_vr.dmi'
+	icobase = 'icons/mob/human_races/r_teshari_vr.dmi'
+	deform = 'icons/mob/human_races/r_teshari_vr.dmi'
 	icobase_tail = 1
 	color_mult = 1
 	min_age = 18
@@ -353,6 +355,9 @@
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Teshari"
 	agility = 90
+
+	male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
+	female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/sonar_ping,
@@ -499,7 +504,7 @@ datum/species/harpy
 	base_color = "#f0f0f0"
 	color_mult = 1
 
-	has_glowing_eyes = TRUE
+	//has_glowing_eyes = TRUE			// Applicable through traits.
 
 	male_cough_sounds = null
 	female_cough_sounds = null
@@ -531,7 +536,7 @@ datum/species/harpy
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest/crewkin),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin/crewkin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/crewkin),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/crewkin),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm/crewkin),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right/crewkin),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg/crewkin),

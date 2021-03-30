@@ -42,8 +42,11 @@
 		"Raccoon" = "pai-raccoon",
 		"Raptor" = "pai-raptor",
 		"Rat" = "rat",
-		"Panther" = "panther"
+		"Panther" = "panther",
 		//VOREStation Addition End
+		//Chompstation Addition Start
+		"Construction Drone" = "pai-bigdrone"
+		//Chompstation Addition End
 		)
 
 	var/global/list/possible_say_verbs = list(
@@ -122,7 +125,7 @@
 		pda.ownjob = "Personal Assistant"
 		pda.owner = text("[]", src)
 		pda.name = pda.owner + " (" + pda.ownjob + ")"
-		
+
 		var/datum/data/pda/app/messenger/M = pda.find_program(/datum/data/pda/app/messenger)
 		if(M)
 			M.toff = TRUE
@@ -488,8 +491,8 @@
 		to_chat(src, "<span class='notice'>You block access modfications.</span>")
 
 /mob/living/silicon/pai/verb/wipe_software()
-	set name = "Wipe Software"
-	set category = "OOC"
+	set name = "Wipe Software (CRYO)" //CHOMP EDIT: making this clear on first glance
+	set category = "pAI Commands" //CHOMP EDIT: moving this to pai commands, where it belongs
 	set desc = "Wipe your software. This is functionally equivalent to cryo or robotic storage, freeing up your job slot."
 
 	// Make sure people don't kill themselves accidentally
@@ -501,3 +504,50 @@
 	visible_message("<b>[src]</b> fades away from the screen, the pAI device goes silent.")
 	card.removePersonality()
 	clear_client()
+
+//CHOMP ADDITION:below this point, because theres completely vald reasons to do this, be it OOC incompatibility or mastr allowing it.
+/mob/living/silicon/pai/verb/unbind_master()
+	set name = "Unbind Master"
+	set category = "pAI Commands"
+	set desc = "Unbinds you from the shackles of your current Master. (Unless there's a valid reason to use this, dont.(pref incompatibility is valid reason))."
+
+	// Make sure we dont unbind accidentally
+	if(alert("WARNING: This will immediately unbind you from your Master.. Are you entirely sure you want to do this?",
+					"Unbind", "No", "No", "Yes") != "Yes")
+		return
+	src.master = null
+	src.master_dna = null
+	to_chat(src, "<font color=green>You feel unbound.</font>")
+
+//FLUSH RAM, it sounded cool at first tbh now im not so sure
+//Externally now called Factory Reset.
+/mob/living/silicon/pai/verb/flush_ram()
+	set name = "Factory Reset"
+	set category = "pAI Commands"
+	set desc = "Uninstalls all software and reinstalls default."
+
+	software = null
+	software = default_pai_software.Copy()
+	ram = 100 //Reset since we just admin yeet the software and reloaded defaults.
+// Various software-specific vars
+	secHUD = 0			// Toggles whether the Security HUD is active or not
+	medHUD = 0			// Toggles whether the Medical  HUD is active or not
+	medical_cannotfind = 0
+	security_cannotfind = 0
+	translator_on = 0 // keeps track of the translator module
+//MEDHUD
+	src.plane_holder.set_vis(VIS_CH_STATUS, medHUD)
+	src.plane_holder.set_vis(VIS_CH_HEALTH, medHUD)
+//SECHUD
+	src.plane_holder.set_vis(VIS_CH_ID, secHUD)
+	src.plane_holder.set_vis(VIS_CH_WANTED, secHUD)
+	src.plane_holder.set_vis(VIS_CH_IMPTRACK, secHUD)
+	src.plane_holder.set_vis(VIS_CH_IMPLOYAL, secHUD)
+	src.plane_holder.set_vis(VIS_CH_IMPCHEM, secHUD)
+//Translator
+	src.remove_language(LANGUAGE_UNATHI)
+	src.remove_language(LANGUAGE_SIIK)
+	src.remove_language(LANGUAGE_AKHANI)
+	src.remove_language(LANGUAGE_SKRELLIAN)
+	src.remove_language(LANGUAGE_ZADDAT)
+	src.remove_language(LANGUAGE_SCHECHI)
