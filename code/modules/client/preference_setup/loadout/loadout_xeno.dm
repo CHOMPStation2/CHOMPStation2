@@ -213,16 +213,8 @@
 
 /datum/gear/uniform/dept/undercoat/security
 	display_name = "security undercoat (Teshari)"
-<<<<<<< HEAD
-	path = /obj/item/clothing/under/seromi/undercoat/jobs/sec
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Security Pilot")//YW ADDITIONS
-||||||| parent of b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
-	path = /obj/item/clothing/under/seromi/undercoat/jobs/sec
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer",)
-=======
 	path = /obj/item/clothing/under/teshari/undercoat/jobs/sec
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer",)
->>>>>>> b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
+	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Security Pilot")//YW ADDITIONS
 
 /datum/gear/uniform/dept/undercoat/service
 	display_name = "service undercoat (Teshari)"
@@ -378,16 +370,8 @@
 
 /datum/gear/suit/dept/cloak/security
 	display_name = "security cloak (Teshari)"
-<<<<<<< HEAD
-	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/sec
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Security Pilot")//YW ADDITIONS
-||||||| parent of b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
-	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/sec
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer")
-=======
 	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs/sec
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer")
->>>>>>> b4d376553b... Merge pull request #10025 from VOREStation/upstream-merge-7991
+	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Security Pilot")//YW ADDITIONS
 
 /datum/gear/suit/dept/cloak/security/New()
 	..()
