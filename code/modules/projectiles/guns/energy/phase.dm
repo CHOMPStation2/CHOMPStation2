@@ -20,6 +20,15 @@
 	locked = 0
 	lockable = 0
 
+/obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted
+	self_recharge = 1
+	use_external_power = 1
+	one_handed_penalty = 0
+
+/obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg
+	charge_cost = 400
+	recharge_time = 7
+
 /obj/item/weapon/gun/energy/locked/phasegun/pistol
 	name = "phase pistol"
 	desc = "The RayZar EW15 Apollo is an energy handgun, specifically designed for self-defense against aggressive wildlife. This one has a safety interlock that prevents firing while in proximity to the facility."
@@ -37,12 +46,12 @@
 	locked = 0
 	lockable = 0
 
-/obj/item/weapon/gun/energy/phasegun/pistol/mounted
+/obj/item/weapon/gun/energy/locked/phasegun/pistol/unlocked/mounted
 	name = "mounted phase pistol"
 	self_recharge = 1
 	use_external_power = 1
 
-/obj/item/weapon/gun/energy/phasegun/pistol/mounted/cyborg
+/obj/item/weapon/gun/energy/locked/phasegun/pistol/unlocked/mounted/cyborg
 	charge_cost = 400
 	recharge_time = 7
 
