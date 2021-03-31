@@ -161,6 +161,7 @@
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
+<<<<<<< HEAD
 //CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
 /*
 /datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
@@ -260,3 +261,104 @@
 		return SEE_SELF
 */
 //CHOMPStation Removal End
+||||||| parent of b36921514b... Merge pull request #10055 from VOREStation/upstream-merge-8012
+/datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
+
+	// Tesh can glide to save themselves from some falls. Basejumping bird
+	// without parachute, or falling bird without free wings goes splat.
+
+	// Are we landing from orbit, or handcuffed/unconscious/tied to something? 
+	if(planetary || !istype(H) || H.incapacitated())
+		return ..()
+
+	// Are we landing on a turf? Not sure how this could not be the case, but let's be safe.
+	var/turf/landing = get_turf(hit_atom)
+	if(!istype(landing))
+		return ..()
+
+	if(H.buckled)
+		if(!silent)
+			to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but \the [H.buckled] weighs you down!"))
+		return ..()
+
+	// Is there enough air to flap against?
+	var/datum/gas_mixture/environment = landing.return_air()
+	if(!environment || environment.return_pressure() < (ONE_ATMOSPHERE * 0.75))
+		if(!silent)
+			to_chat(H, SPAN_WARNING("You spread your wings to slow your fall, but the air is too thin!"))
+		return ..()
+
+	// Are we wearing a space suit?
+	if(H.wear_suit)
+		for(var/blacklisted_type in flight_suit_blacklisted_types)
+			if(istype(H.wear_suit, blacklisted_type))
+				if(!silent)
+					to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but \the [H.wear_suit] is in the way!"))
+				return ..()
+
+	// Do we have working wings?
+	for(var/bp in flight_bodyparts)
+		var/obj/item/organ/external/E = H.organs_by_name[bp]
+		if(!istype(E) || !E.is_usable() || E.is_broken() || E.is_stump())
+			if(!silent)
+				to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but they won't hold your weight!"))
+			return ..()
+
+	// Handled!
+	if(!silent)
+		to_chat(H, SPAN_NOTICE("You catch the air in your wings and greatly slow your fall."))
+		H.visible_message(SPAN_NOTICE("\The [H] glides down from above, landing safely."))
+		H.Stun(2)
+		playsound(H, "rustle", 25, 1)
+	return TRUE
+=======
+/datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
+
+	// Tesh can glide to save themselves from some falls. Basejumping bird
+	// without parachute, or falling bird without free wings goes splat.
+
+	// Are we landing from orbit, or handcuffed/unconscious/tied to something? 
+	if(planetary || !istype(H) || H.incapacitated(INCAPACITATION_DEFAULT|INCAPACITATION_DISABLED))
+		return ..()
+
+	// Are we landing on a turf? Not sure how this could not be the case, but let's be safe.
+	var/turf/landing = get_turf(hit_atom)
+	if(!istype(landing))
+		return ..()
+
+	if(H.buckled)
+		if(!silent)
+			to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but \the [H.buckled] weighs you down!"))
+		return ..()
+
+	// Is there enough air to flap against?
+	var/datum/gas_mixture/environment = landing.return_air()
+	if(!environment || environment.return_pressure() < (ONE_ATMOSPHERE * 0.75))
+		if(!silent)
+			to_chat(H, SPAN_WARNING("You spread your wings to slow your fall, but the air is too thin!"))
+		return ..()
+
+	// Are we wearing a space suit?
+	if(H.wear_suit)
+		for(var/blacklisted_type in flight_suit_blacklisted_types)
+			if(istype(H.wear_suit, blacklisted_type))
+				if(!silent)
+					to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but \the [H.wear_suit] is in the way!"))
+				return ..()
+
+	// Do we have working wings?
+	for(var/bp in flight_bodyparts)
+		var/obj/item/organ/external/E = H.organs_by_name[bp]
+		if(!istype(E) || !E.is_usable() || E.is_broken() || E.is_stump())
+			if(!silent)
+				to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but they won't hold your weight!"))
+			return ..()
+
+	// Handled!
+	if(!silent)
+		to_chat(H, SPAN_NOTICE("You catch the air in your wings and greatly slow your fall."))
+		landing.visible_message(SPAN_NOTICE("\The [H] glides down from above, landing safely."))
+		H.Stun(1)
+		playsound(H, "rustle", 25, 1)
+	return TRUE
+>>>>>>> b36921514b... Merge pull request #10055 from VOREStation/upstream-merge-8012
