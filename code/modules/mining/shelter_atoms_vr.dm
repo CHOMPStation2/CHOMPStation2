@@ -294,6 +294,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	var/buildstacktype = /obj/item/stack/material/steel
 	var/buildstackamount = 5
 
+/*
 /obj/structure/fans/proc/deconstruct()
 	new buildstacktype(loc,buildstackamount)
 	qdel(src)
@@ -307,7 +308,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 			return TRUE
 
 	return TRUE
-
+*/
 /obj/structure/fans/tiny
 	name = "tiny fan"
 	desc = "A tiny fan, releasing a thin gust of air."
