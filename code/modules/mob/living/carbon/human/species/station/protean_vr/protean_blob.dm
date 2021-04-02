@@ -301,7 +301,7 @@
 	if(refactory && istype(O,/obj/item/stack/material))
 		var/obj/item/stack/material/S = O
 		var/substance = S.material.name
-		var/list/edible_materials = list("steel", "plasteel", "diamond", "mhydrogen") //Can't eat all materials, just useful ones.
+		var/list/edible_materials = list("steel") //Can't eat all materials, just useful ones. CHOMP EDIT: Only steel
 		var/allowed = FALSE //CHOMP Edit
 		for(var/material in edible_materials)
 			if(material == substance) allowed = TRUE
