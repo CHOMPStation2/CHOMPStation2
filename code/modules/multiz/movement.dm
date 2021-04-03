@@ -501,9 +501,11 @@
 			adjustBruteLoss(rand(damage_min, damage_max))
 		Weaken(4)
 		updatehealth()
-		return
-	return
 
+/mob/living/carbon/human/fall_impact(atom/hit_atom, damage_min, damage_max, silent, planetary)
+	if(!species?.handle_falling(src, hit_atom, damage_min, damage_max, silent, planetary))
+		..()
+		
 //Using /atom/movable instead of /obj/item because I'm not sure what all humans can pick up or wear
 /atom/movable
 	var/parachute = FALSE	// Is this thing a parachute itself?
