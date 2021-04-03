@@ -3451,15 +3451,9 @@
 #include "code\modules\planet\planet.dm"
 #include "code\modules\planet\sif.dm"
 #include "code\modules\planet\time.dm"
-<<<<<<< HEAD
-||||||| parent of c89ae7b1ae... Merge pull request #10062 from Heroman3003/aprilfools
-#include "code\modules\planet\virgo3b_vr.dm"
-#include "code\modules\planet\virgo4_vr.dm"
-=======
 #include "code\modules\planet\virgo3b_better_vr.dm"
 #include "code\modules\planet\virgo3b_vr.dm"
 #include "code\modules\planet\virgo4_vr.dm"
->>>>>>> c89ae7b1ae... Merge pull request #10062 from Heroman3003/aprilfools
 #include "code\modules\planet\weather.dm"
 #include "code\modules\planet\weather_vr.dm"
 #include "code\modules\power\apc.dm"
@@ -4200,11 +4194,4 @@
 #include "maps\submaps\surface_submaps\plains\plains_areas.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
-<<<<<<< HEAD
-||||||| parent of c89ae7b1ae... Merge pull request #10062 from Heroman3003/aprilfools
-#include "maps\tether\tether.dm"
-=======
-#include "maps\tether_better\tether.dm"
->>>>>>> c89ae7b1ae... Merge pull request #10062 from Heroman3003/aprilfools
-#include "maps\~map_system\maps.dm"
 // END_INCLUDE
