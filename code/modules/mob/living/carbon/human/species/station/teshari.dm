@@ -1,7 +1,3 @@
-//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
-///mob/living/carbon/var/loneliness_stage = 0
-///mob/living/carbon/var/next_loneliness_time = 0
-//CHOMPStation Removal End
 /datum/species/teshari
 	name = SPECIES_TESHARI
 	name_plural = "Tesharii"
@@ -27,6 +23,7 @@
 	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
 	female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
+	
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
 	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
@@ -66,7 +63,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED	| SPECIES_NO_POSIBRAIN //CHOMPedit: This is overriden by teshari_vr.dm. Noting here for future reference.
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
