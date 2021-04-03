@@ -160,7 +160,7 @@
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
-
+/* //CHOMPedit: disabling for now
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
 	// Tesh can glide to save themselves from some falls. Basejumping bird
@@ -210,3 +210,4 @@
 		H.Stun(1)
 		playsound(H, "rustle", 25, 1)
 	return TRUE
+*/ //CHOMPedit end
