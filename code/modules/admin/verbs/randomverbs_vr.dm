@@ -71,36 +71,6 @@
 
 	feedback_add_details("admin_verb","SCAM") //heh
 
-<<<<<<< HEAD
-	return new_mob
-||||||| parent of d24af2eb43... Merge pull request #10028 from Meghan-Rossi/eventhud
-	return new_mob
-
-/client/proc/cmd_admin_z_narrate() // Allows administrators to fluff events a little easier -- TLE
-	set category = "Special Verbs"
-	set name = "Z Narrate"
-	set desc = "Narrates to your Z level."
-
-	if (!holder)
-		return
-
-	var/msg = input("Message:", text("Enter the text you wish to appear to everyone:")) as text
-	if(!(msg[1] == "<" && msg[length(msg)] == ">")) //You can use HTML but only if the whole thing is HTML. Tries to prevent admin 'accidents'.
-		msg = sanitize(msg)
-
-	if (!msg)
-		return
-
-	var/pos_z = get_z(src.mob)
-	if (!pos_z)
-		return
-	for(var/mob/M in player_list)
-		if(M.z == pos_z)
-			to_chat(M, msg)
-	log_admin("ZNarrate: [key_name(usr)] : [msg]")
-	message_admins("<font color='blue'><B> ZNarrate: [key_name_admin(usr)] : [msg]<BR></B></font>", 1)
-	feedback_add_details("admin_verb","GLNA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-=======
 	return new_mob
 
 /client/proc/cmd_admin_z_narrate() // Allows administrators to fluff events a little easier -- TLE
@@ -144,4 +114,3 @@
 		to_chat(src, "You gave the event HUD to [key_name(target)].")
 		to_chat(target, "You now have the event HUD.  Icons will appear next to characters indicating if they prefer to be killed(red crosshairs), devoured(belly), or kidnapped(blue crosshairs) by event characters.")	
 	feedback_add_details("admin_verb","GREHud") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
->>>>>>> d24af2eb43... Merge pull request #10028 from Meghan-Rossi/eventhud

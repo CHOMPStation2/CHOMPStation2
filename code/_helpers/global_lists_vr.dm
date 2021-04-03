@@ -224,7 +224,9 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/fancy/egg_box,
 				/obj/item/weapon/storage/wallet,
         			/obj/item/weapon/storage/vore_egg,
-				/obj/item/weapon/material/kitchen) //chompstation addition
+				/obj/item/weapon/material/kitchen, //chompstation addition
+				/obj/item/weapon/bikehorn/tinytether
+				)
 
 var/global/list/contamination_flavors = list(
 				"Generic" = contamination_flavors_generic,
@@ -464,11 +466,11 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_MONKEY_NEVREAN,
 				SPECIES_MONKEY_SERGAL,
 				SPECIES_MONKEY_VULPKANIN,
-				SPECIES_XENO,					//Same for xenos,
-				SPECIES_XENO_DRONE,
-				SPECIES_XENO_HUNTER,
-				SPECIES_XENO_SENTINEL,
-				SPECIES_XENO_QUEEN,
+				SPECIES_GENA,					//Same for xenos, CHOMPedit
+				SPECIES_GENA_DRONE,
+				SPECIES_GENA_HUNTER,
+				SPECIES_GENA_SENTINEL,
+				SPECIES_GENA_QUEEN, 			//CHOMPedit end
 				SPECIES_SHADOW,
 				SPECIES_GOLEM,					//Some special species that may or may not be ever used in event too,
 				SPECIES_SHADEKIN)			//Shadefluffers just poof away
