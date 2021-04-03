@@ -145,6 +145,17 @@
 		/datum/mob_descriptor/height = -3,
 		/datum/mob_descriptor/build = -3
 		)
+		
+	var/static/list/flight_bodyparts = list(
+		BP_L_ARM,
+		BP_R_ARM,
+		BP_L_HAND,
+		BP_R_HAND
+	)
+	var/static/list/flight_suit_blacklisted_types = list(
+		/obj/item/clothing/suit/space,
+		/obj/item/clothing/suit/straight_jacket
+	)
 
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
