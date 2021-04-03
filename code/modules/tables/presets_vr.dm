@@ -40,3 +40,11 @@
 /obj/structure/table/fancyblack/dismantle(obj/item/weapon/wrench/W, mob/user)
 	to_chat(user, "<span class='warning'>You cannot dismantle \the [src].</span>")
 	return
+
+/obj/structure/table/gold
+	icon_state = "plain_preview"
+	color = "#FFFF00"
+
+/obj/structure/table/gold/New()
+	material = get_material_by_name(MAT_GOLD)
+	..()

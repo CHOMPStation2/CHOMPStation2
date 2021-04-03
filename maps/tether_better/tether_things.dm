@@ -505,6 +505,3 @@ var/global/list/latejoin_tram   = list()
 
 /obj/effect/lobby_image
 	icon = 'icons/misc/loading_2.dmi' //VOREStation Add - Loading Screen
-
-/obj/structure/bonfire/permanent/comfy
-	set_temperature = T0C + 20	//K
