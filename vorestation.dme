@@ -3453,7 +3453,6 @@
 #include "code\modules\planet\time.dm"
 #include "code\modules\planet\virgo3b_better_vr.dm"
 #include "code\modules\planet\virgo3b_vr.dm"
-#include "code\modules\planet\virgo4_vr.dm"
 #include "code\modules\planet\weather.dm"
 #include "code\modules\planet\weather_vr.dm"
 #include "code\modules\power\apc.dm"
