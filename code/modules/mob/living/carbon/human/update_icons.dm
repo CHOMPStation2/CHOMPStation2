@@ -114,24 +114,15 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	//Do any species specific layering updates, such as when hiding.
 	update_icon_special()
 
-/mob/living/carbon/human/update_icons_layers()
-	crash_with("CANARY: Old human update_icons_layers was called.")
-
-/mob/living/carbon/human/update_icons_all()
-	crash_with("CANARY: Old human update_icons_all was called.")
-
-/mob/living/carbon/human/update_icons_huds()
-	crash_with("CANARY: Old human update_icons_huds was called.")
-
 /mob/living/carbon/human/update_transform()
 	/* VOREStation Edit START
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
 	var/desired_scale_y = icon_scale_y
-
+	
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-
+	
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.icon_scale_x_percent))
 			desired_scale_x *= M.icon_scale_x_percent

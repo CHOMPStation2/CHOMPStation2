@@ -1,7 +1,3 @@
-//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
-///mob/living/carbon/var/loneliness_stage = 0
-///mob/living/carbon/var/next_loneliness_time = 0
-//CHOMPStation Removal End
 /datum/species/teshari
 	name = SPECIES_TESHARI
 	name_plural = "Tesharii"
@@ -22,19 +18,12 @@
 	economic_modifier = 10
 
 	health_hud_intensity = 3
-	//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
-/*
-	//YW Edit: Readding loneliness
-	var/warning_cap = 300
-	var/hallucination_cap = 25
-	//YW Edit End
-*/
-	//CHOMPStation Removal End
 
 	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
 	female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
+	
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
 	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
@@ -74,7 +63,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED	| SPECIES_NO_POSIBRAIN //CHOMPedit: This is overriden by teshari_vr.dm. Noting here for future reference.
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
@@ -156,107 +145,69 @@
 		/datum/mob_descriptor/height = -3,
 		/datum/mob_descriptor/build = -3
 		)
+		
+	var/static/list/flight_bodyparts = list(
+		BP_L_ARM,
+		BP_R_ARM,
+		BP_L_HAND,
+		BP_R_HAND
+	)
+	var/static/list/flight_suit_blacklisted_types = list(
+		/obj/item/clothing/suit/space,
+		/obj/item/clothing/suit/straight_jacket
+	)
 
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+/* //CHOMPedit: disabling for now
+/datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
-//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
-/*
-/datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
-	spawn(0)
-		// If they're dead or unconcious they're a bit beyond this kind of thing.
-		if(H.stat)
-			return
-		// No point processing if we're already stressing the hell out.
-		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
-			return
-		// Vored? Not gonna get frightened.
-		if(isbelly(H.loc))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-			return
-		if(istype(H.loc, /obj/item/weapon/holder))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-			return
-		// Check for company.
-		for(var/mob/living/M in viewers(H))
-			if(!istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot))
-				continue
-			if(M == H || M.stat == DEAD || M.invisibility > H.see_invisible)
-				continue
-			if(M.faction == "neutral" || M.faction == H.faction)
-				if(H.loneliness_stage > 0)
-					H.loneliness_stage -= 4
-					if(H.loneliness_stage < 0)
-						H.loneliness_stage = 0
-					if(world.time >= H.next_loneliness_time)
-						to_chat(H, "The nearby company calms you down...")
-						H.next_loneliness_time = world.time+500
-				return
+	// Tesh can glide to save themselves from some falls. Basejumping bird
+	// without parachute, or falling bird without free wings goes splat.
 
+	// Are we landing from orbit, or handcuffed/unconscious/tied to something? 
+	if(planetary || !istype(H) || H.incapacitated(INCAPACITATION_DEFAULT|INCAPACITATION_DISABLED))
+		return ..()
 
-		for(var/obj/item/weapon/holder/micro/M in range(1, H))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-				if(H.loneliness_stage < 0)
-					H.loneliness_stage = 0
-				if(world.time >= H.next_loneliness_time)
-					to_chat(H, "[M] calms you down...")
-					H.next_loneliness_time = world.time+500
+	// Are we landing on a turf? Not sure how this could not be the case, but let's be safe.
+	var/turf/landing = get_turf(hit_atom)
+	if(!istype(landing))
+		return ..()
 
-		for(var/obj/effect/overlay/aiholo/A in range(5, H))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-				if(H.loneliness_stage < 0)
-					H.loneliness_stage = 0
-				if(world.time >= H.next_loneliness_time)
-					to_chat(H, "[A] calms you down...")
-					H.next_loneliness_time = world.time+500
+	if(H.buckled)
+		if(!silent)
+			to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but \the [H.buckled] weighs you down!"))
+		return ..()
 
-		//re-enabled for YawnWider
-		for(var/obj/item/toy/plushie/teshari/P in range(5, H))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-				if(H.loneliness_stage < 0)
-					H.loneliness_stage = 0
-				if(world.time >= H.next_loneliness_time)
-					to_chat(H, "The [P] calms you down, reminding you of people...")
-					H.next_loneliness_time = world.time+500
+	// Is there enough air to flap against?
+	var/datum/gas_mixture/environment = landing.return_air()
+	if(!environment || environment.return_pressure() < (ONE_ATMOSPHERE * 0.75))
+		if(!silent)
+			to_chat(H, SPAN_WARNING("You spread your wings to slow your fall, but the air is too thin!"))
+		return ..()
 
-		// No company? Suffer :(
-		if(H.loneliness_stage < warning_cap)
-			H.loneliness_stage += 1
-		handle_loneliness(H)
-		if(H.loneliness_stage >= warning_cap && H.hallucination < hallucination_cap)
-			H.hallucination += 2.5
+	// Are we wearing a space suit?
+	if(H.wear_suit)
+		for(var/blacklisted_type in flight_suit_blacklisted_types)
+			if(istype(H.wear_suit, blacklisted_type))
+				if(!silent)
+					to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but \the [H.wear_suit] is in the way!"))
+				return ..()
 
-/datum/species/teshari/proc/handle_loneliness(var/mob/living/carbon/human/H)
-	var/ms = ""
+	// Do we have working wings?
+	for(var/bp in flight_bodyparts)
+		var/obj/item/organ/external/E = H.organs_by_name[bp]
+		if(!istype(E) || !E.is_usable() || E.is_broken() || E.is_stump())
+			if(!silent)
+				to_chat(H, SPAN_WARNING("You try to spread your wings to slow your fall, but they won't hold your weight!"))
+			return ..()
 
-	if(H.loneliness_stage == 1)
-		ms = "Well.. No one is around you anymore..."
-	if(H.loneliness_stage >= 50)
-		ms = "You begin to feel alone..."
-	if(H.loneliness_stage >= 250)
-		ms = "[pick("You don't think you can last much longer without some visible company!", "You should go find someone!")]"
-		if(H.stuttering < hallucination_cap)
-			H.stuttering += 5
-	if(H.loneliness_stage >= warning_cap)
-		ms = "<span class='danger'><b>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]</b></span>"
-	if(world.time < H.next_loneliness_time)
-		return
-
-	if(ms != "")
-		to_chat(H, ms)
-	H.next_loneliness_time = world.time+500
-
-
-/datum/species/teshari/get_vision_flags(var/mob/living/carbon/human/H)
-	if(!(H.sdisabilities & DEAF) && !H.ear_deaf)
-		return SEE_SELF|SEE_MOBS
-	else
-		return SEE_SELF
-*/
-//CHOMPStation Removal End
+	// Handled!
+	if(!silent)
+		to_chat(H, SPAN_NOTICE("You catch the air in your wings and greatly slow your fall."))
+		landing.visible_message(SPAN_NOTICE("\The [H] glides down from above, landing safely."))
+		H.Stun(1)
+		playsound(H, "rustle", 25, 1)
+	return TRUE
+*/ //CHOMPedit end
