@@ -3376,13 +3376,6 @@
 #include "code\modules\planet\planet.dm"
 #include "code\modules\planet\sif.dm"
 #include "code\modules\planet\time.dm"
-<<<<<<< HEAD
-||||||| parent of 646a706f22... Merge pull request #9589 from Very-Soft/makebeachcool
-#include "code\modules\planet\virgo3b_vr.dm"
-=======
-#include "code\modules\planet\virgo3b_vr.dm"
-#include "code\modules\planet\virgo4_vr.dm"
->>>>>>> 646a706f22... Merge pull request #9589 from Very-Soft/makebeachcool
 #include "code\modules\planet\weather.dm"
 #include "code\modules\power\apc.dm"
 #include "code\modules\power\apc_vr.dm"
