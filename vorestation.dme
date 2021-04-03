@@ -1679,6 +1679,7 @@
 #include "code\game\turfs\space\space.dm"
 #include "code\game\turfs\space\transit.dm"
 #include "code\game\turfs\unsimulated\beach.dm"
+#include "code\game\turfs\unsimulated\beach_vr.dm"
 #include "code\game\turfs\unsimulated\floor.dm"
 #include "code\game\turfs\unsimulated\planetary.dm"
 #include "code\game\turfs\unsimulated\planetary_yw.dm"
