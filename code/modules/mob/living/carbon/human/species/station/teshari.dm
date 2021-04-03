@@ -1,7 +1,3 @@
-//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
-///mob/living/carbon/var/loneliness_stage = 0
-///mob/living/carbon/var/next_loneliness_time = 0
-//CHOMPStation Removal End
 /datum/species/teshari
 	name = SPECIES_TESHARI
 	name_plural = "Tesharii"
@@ -22,19 +18,12 @@
 	economic_modifier = 10
 
 	health_hud_intensity = 3
-	//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
-/*
-	//YW Edit: Readding loneliness
-	var/warning_cap = 300
-	var/hallucination_cap = 25
-	//YW Edit End
-*/
-	//CHOMPStation Removal End
 
 	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
 	female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
+	
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
 	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
@@ -74,13 +63,7 @@
 
 	ambiguous_genders = TRUE
 
-<<<<<<< HEAD
-	spawn_flags = SPECIES_CAN_JOIN
-||||||| parent of 17cfdafc76... Merge pull request #10072 from VOREStation/upstream-merge-8006
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
-=======
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED	| SPECIES_NO_POSIBRAIN
->>>>>>> 17cfdafc76... Merge pull request #10072 from VOREStation/upstream-merge-8006
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED	| SPECIES_NO_POSIBRAIN //CHOMPedit: This is overriden by teshari_vr.dm. Noting here for future reference.
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
@@ -166,103 +149,3 @@
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
-
-//CHOMPStation Removal Start - TFF 24/12/19 - Bruh. This ain't a fun thing.
-/*
-/datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
-	spawn(0)
-		// If they're dead or unconcious they're a bit beyond this kind of thing.
-		if(H.stat)
-			return
-		// No point processing if we're already stressing the hell out.
-		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
-			return
-		// Vored? Not gonna get frightened.
-		if(isbelly(H.loc))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-			return
-		if(istype(H.loc, /obj/item/weapon/holder))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-			return
-		// Check for company.
-		for(var/mob/living/M in viewers(H))
-			if(!istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot))
-				continue
-			if(M == H || M.stat == DEAD || M.invisibility > H.see_invisible)
-				continue
-			if(M.faction == "neutral" || M.faction == H.faction)
-				if(H.loneliness_stage > 0)
-					H.loneliness_stage -= 4
-					if(H.loneliness_stage < 0)
-						H.loneliness_stage = 0
-					if(world.time >= H.next_loneliness_time)
-						to_chat(H, "The nearby company calms you down...")
-						H.next_loneliness_time = world.time+500
-				return
-
-
-		for(var/obj/item/weapon/holder/micro/M in range(1, H))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-				if(H.loneliness_stage < 0)
-					H.loneliness_stage = 0
-				if(world.time >= H.next_loneliness_time)
-					to_chat(H, "[M] calms you down...")
-					H.next_loneliness_time = world.time+500
-
-		for(var/obj/effect/overlay/aiholo/A in range(5, H))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-				if(H.loneliness_stage < 0)
-					H.loneliness_stage = 0
-				if(world.time >= H.next_loneliness_time)
-					to_chat(H, "[A] calms you down...")
-					H.next_loneliness_time = world.time+500
-
-		//re-enabled for YawnWider
-		for(var/obj/item/toy/plushie/teshari/P in range(5, H))
-			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
-				if(H.loneliness_stage < 0)
-					H.loneliness_stage = 0
-				if(world.time >= H.next_loneliness_time)
-					to_chat(H, "The [P] calms you down, reminding you of people...")
-					H.next_loneliness_time = world.time+500
-
-		// No company? Suffer :(
-		if(H.loneliness_stage < warning_cap)
-			H.loneliness_stage += 1
-		handle_loneliness(H)
-		if(H.loneliness_stage >= warning_cap && H.hallucination < hallucination_cap)
-			H.hallucination += 2.5
-
-/datum/species/teshari/proc/handle_loneliness(var/mob/living/carbon/human/H)
-	var/ms = ""
-
-	if(H.loneliness_stage == 1)
-		ms = "Well.. No one is around you anymore..."
-	if(H.loneliness_stage >= 50)
-		ms = "You begin to feel alone..."
-	if(H.loneliness_stage >= 250)
-		ms = "[pick("You don't think you can last much longer without some visible company!", "You should go find someone!")]"
-		if(H.stuttering < hallucination_cap)
-			H.stuttering += 5
-	if(H.loneliness_stage >= warning_cap)
-		ms = "<span class='danger'><b>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]</b></span>"
-	if(world.time < H.next_loneliness_time)
-		return
-
-	if(ms != "")
-		to_chat(H, ms)
-	H.next_loneliness_time = world.time+500
-
-
-/datum/species/teshari/get_vision_flags(var/mob/living/carbon/human/H)
-	if(!(H.sdisabilities & DEAF) && !H.ear_deaf)
-		return SEE_SELF|SEE_MOBS
-	else
-		return SEE_SELF
-*/
-//CHOMPStation Removal End
