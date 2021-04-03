@@ -119,10 +119,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
 	var/desired_scale_y = icon_scale_y
-
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.icon_scale_x_percent))
 			desired_scale_x *= M.icon_scale_x_percent
