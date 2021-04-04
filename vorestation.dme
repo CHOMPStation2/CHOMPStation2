@@ -4192,5 +4192,11 @@
 #include "maps\submaps\surface_submaps\plains\plains_areas.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
+<<<<<<< HEAD
+||||||| parent of 8a248f4f2b... Merge pull request #10077 from Novacat/nova-ert
+#include "maps\tether_better\tether.dm"
+=======
+#include "maps\tether\tether.dm"
+>>>>>>> 8a248f4f2b... Merge pull request #10077 from Novacat/nova-ert
 #include "maps\~map_system\maps.dm"
 // END_INCLUDE
