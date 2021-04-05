@@ -21,9 +21,19 @@
 	response_disarm = "gently pushes aside the " //CHOMP Edit
 	response_harm = "hits the" //CHOMP Edit
 
+<<<<<<< HEAD
 	harm_intent_damage = 3
 	melee_damage_lower = 5 //CHOMP Edit
 	melee_damage_upper = 5 //CHOMP Edit
+||||||| parent of 208795ec75... Merge pull request #10082 from Novacat/nova-ert
+	harm_intent_damage = 2
+	melee_damage_lower = 10
+	melee_damage_upper = 10
+=======
+	harm_intent_damage = 2
+	melee_damage_lower = 5
+	melee_damage_upper = 5
+>>>>>>> 208795ec75... Merge pull request #10082 from Novacat/nova-ert
 	attacktext = list("slashed")
 
 	min_oxy = 0
@@ -36,7 +46,13 @@
 	max_n2 = 0
 	minbodytemp = 0
 	maxbodytemp = 900
+<<<<<<< HEAD
 	movement_cooldown = 2 //CHOMP Edit
+||||||| parent of 208795ec75... Merge pull request #10082 from Novacat/nova-ert
+	movement_cooldown = 3
+=======
+	movement_cooldown = 4
+>>>>>>> 208795ec75... Merge pull request #10082 from Novacat/nova-ert
 
 	var/mob/living/carbon/human/humanform
 	var/obj/item/organ/internal/nano/refactory/refactory
