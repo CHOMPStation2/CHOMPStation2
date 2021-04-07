@@ -1,3 +1,36 @@
 # Job whitelist in format ckey - jobname
 # Like arokha - clown
+<<<<<<< HEAD
 
+||||||| parent of c560a4d007... Merge pull request #10089 from AwkwardDryad/awkwarddryad-become-mime
+akram - clown
+amshaegaar - mime
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+joey4298 - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+=======
+awkwarddryad - mime
+akram - clown
+amshaegaar - mime
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+joey4298 - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+>>>>>>> c560a4d007... Merge pull request #10089 from AwkwardDryad/awkwarddryad-become-mime
