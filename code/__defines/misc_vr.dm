@@ -19,8 +19,16 @@
 #define ANNOUNCER_NAME "Facility PA"
 
 //For custom species
+<<<<<<< HEAD
 #define STARTING_SPECIES_POINTS 1
 #define MAX_SPECIES_TRAITS 8	//CHOMPEdit
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+#define STARTING_SPECIES_POINTS 1
+#define MAX_SPECIES_TRAITS 5
+=======
+#define STARTING_SPECIES_POINTS 2
+#define MAX_SPECIES_TRAITS 5
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 
 // Xenochimera thing mostly
 #define REVIVING_NOW		-1

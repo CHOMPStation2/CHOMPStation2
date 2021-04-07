@@ -1,31 +1,34 @@
 #define ORGANICS	1
 #define SYNTHETICS	2
 
-/datum/trait/speed_slow
+/datum/trait/negative
+	category = -1
+
+/datum/trait/negative/speed_slow
 	name = "Slowdown"
 	desc = "Allows you to move slower on average than baseline."
 	cost = -3
 	var_changes = list("slowdown" = 0.5)
 
-/datum/trait/speed_slow_plus
+/datum/trait/negative/speed_slow_plus
 	name = "Major Slowdown"
 	desc = "Allows you to move MUCH slower on average than baseline."
 	cost = -5
 	var_changes = list("slowdown" = 1.0)
 
-/datum/trait/weakling
+/datum/trait/negative/weakling
 	name = "Weakling"
 	desc = "Causes heavy equipment to slow you down more when carried."
 	cost = -1
 	var_changes = list("item_slowdown_mod" = 1.5)
 
-/datum/trait/weakling_plus
+/datum/trait/negative/weakling_plus
 	name = "Major Weakling"
 	desc = "Allows you to carry heavy equipment with much more slowdown."
 	cost = -2
 	var_changes = list("item_slowdown_mod" = 2.0)
 
-/datum/trait/endurance_low
+/datum/trait/negative/endurance_low
 	name = "Low Endurance"
 	desc = "Reduces your maximum total hitpoints to 75."
 	cost = -2
@@ -35,7 +38,7 @@
 		..(S,H)
 		H.setMaxHealth(S.total_health)
 
-/datum/trait/endurance_very_low
+/datum/trait/negative/endurance_very_low
 	name = "Extremely Low Endurance"
 	desc = "Reduces your maximum total hitpoints to 50."
 	cost = -3 //Teshari HP. This makes the person a lot more suseptable to getting stunned, killed, etc.
@@ -52,42 +55,48 @@
 	cost = -4
 	var_changes = list("total_health" = 25)
 
+<<<<<<< HEAD
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
 // YW Addition End
 */
 /datum/trait/minor_brute_weak
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+/datum/trait/minor_brute_weak
+=======
+/datum/trait/negative/minor_brute_weak
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Minor Brute Weakness"
 	desc = "Increases damage from brute damage sources by 10%"
 	cost = -1
 	var_changes = list("brute_mod" = 1.1)
 
-/datum/trait/brute_weak
+/datum/trait/negative/brute_weak
 	name = "Brute Weakness"
 	desc = "Increases damage from brute damage sources by 20%"
 	cost = -2
 	var_changes = list("brute_mod" = 1.2)
 
-/datum/trait/brute_weak_plus
+/datum/trait/negative/brute_weak_plus
 	name = "Major Brute Weakness"
 	desc = "Increases damage from brute damage sources by 40%"
 	cost = -3
 	var_changes = list("brute_mod" = 1.4)
 
-/datum/trait/minor_burn_weak
+/datum/trait/negative/minor_burn_weak
 	name = "Minor Burn Weakness"
 	desc = "Increases damage from burn damage sources by 10%"
 	cost = -1
 	var_changes = list("burn_mod" = 1.1)
 
-/datum/trait/burn_weak
+/datum/trait/negative/burn_weak
 	name = "Burn Weakness"
 	desc = "Increases damage from burn damage sources by 20%"
 	cost = -2
 	var_changes = list("burn_mod" = 1.2)
 
-/datum/trait/burn_weak_plus
+/datum/trait/negative/burn_weak_plus
 	name = "Major Burn Weakness"
 	desc = "Increases damage from burn damage sources by 40%"
 	cost = -3
@@ -125,13 +134,13 @@
 	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit
 //YW ADDITIONS END
 
-/datum/trait/conductive
+/datum/trait/negative/conductive
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 25%"
 	cost = -2
 	var_changes = list("siemens_coefficient" = 1.25) //This makes you a lot weaker to tasers.
 
-/datum/trait/conductive_plus
+/datum/trait/negative/conductive_plus
 	name = "Major Conductive"
 	desc = "Increases your susceptibility to electric shocks by 50%"
 	cost = -3
@@ -140,32 +149,47 @@
 /datum/trait/conductive_extreme
 	name = "Extremely Conductive"
 	desc = "Increases your susceptibility to electric shocks by 100%"
+<<<<<<< HEAD
 	cost = -4
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	cost = -2
+=======
+	cost = -1
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
+<<<<<<< HEAD
 */
 /datum/trait/haemophilia
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+
+/datum/trait/haemophilia
+=======
+
+/datum/trait/negative/haemophilia
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Haemophilia - Organics only"
 	desc = "When you bleed, you bleed a LOT."
 	cost = -2
 	var_changes = list("bloodloss_rate" = 2)
 	can_take = ORGANICS
 
-/datum/trait/hollow
+/datum/trait/negative/hollow
 	name = "Hollow Bones/Aluminum Alloy"
 	desc = "Your bones and robot limbs are much easier to break."
 	cost = -3 // increased due to medical intervention needed.
 
-/datum/trait/hollow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/hollow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	for(var/obj/item/organ/external/O in H.organs)
 		O.min_broken_damage *= 0.5
 		O.min_bruised_damage *= 0.5
 
-/datum/trait/lightweight
+/datum/trait/negative/lightweight
 	name = "Lightweight"
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping. Think of it like a bowling ball versus a pin."
 	cost = -2
 	var_changes = list("lightweight" = 1)
+<<<<<<< HEAD
 
 /* YW comment starts
 /datum/trait/colorblind/mono
@@ -219,10 +243,48 @@ YW comment finish*/
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 // YW Addition End
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+
+/datum/trait/colorblind/mono
+	name = "Colorblindness (Monochromancy)"
+	desc = "You simply can't see colors at all, period. You are 100% colorblind."
+	cost = -1
+
+/datum/trait/colorblind/mono/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.add_modifier(/datum/modifier/trait/colorblind_monochrome)
+
+/datum/trait/colorblind/para_vulp
+	name = "Colorblindness (Para Vulp)"
+	desc = "You have a severe issue with green colors and have difficulty recognizing them from red colors."
+	cost = -1
+
+/datum/trait/colorblind/para_vulp/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.add_modifier(/datum/modifier/trait/colorblind_vulp)
+
+/datum/trait/colorblind/para_taj
+	name = "Colorblindness (Para Taj)"
+	desc = "You have a minor issue with blue colors and have difficulty recognizing them from red colors."
+	cost = -1
+
+/datum/trait/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.add_modifier(/datum/modifier/trait/colorblind_taj)
+=======
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	
-/datum/trait/neural_hypersensitivity
+/datum/trait/negative/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
 	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."
 	cost = -1
+<<<<<<< HEAD
 	var_changes = list("trauma_mod" = 2)	//CHOMPEdit. Some dingus at virgo didn't test their stuff. Some other dingus let this get through.
 
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	var_changes = list("trauma_mod" = 2)
+	
+=======
+	var_changes = list("trauma_mod" = 2)
+	can_take = ORGANICS
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia

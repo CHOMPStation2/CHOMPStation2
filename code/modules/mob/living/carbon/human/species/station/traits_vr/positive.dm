@@ -1,11 +1,15 @@
 #define ORGANICS	1
 #define SYNTHETICS	2
 
-/datum/trait/speed_fast
+/datum/trait/positive
+	category = 1
+
+/datum/trait/positive/speed_fast
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
 	cost = 3
 	var_changes = list("slowdown" = -0.5)
+<<<<<<< HEAD
 //CHOMPStation Removal Start
 /*
 /datum/trait/speed_fast_plus
@@ -16,18 +20,25 @@
 */
 //CHOMPStation Removal End
 /datum/trait/hardy
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+
+/datum/trait/hardy
+=======
+
+/datum/trait/positive/hardy
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Hardy"
 	desc = "Allows you to carry heavy equipment with less slowdown."
-	cost = 1
+	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.5)
 
-/datum/trait/hardy_plus
+/datum/trait/positive/hardy_plus
 	name = "Major Hardy"
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
-	cost = 2
-	var_changes = list("item_slowdown_mod" = 0.1)
+	cost = 3
+	var_changes = list("item_slowdown_mod" = 0.25)
 
-/datum/trait/endurance_high
+/datum/trait/positive/endurance_high
 	name = "High Endurance"
 	desc = "Increases your maximum total hitpoints to 125"
 	cost = 2
@@ -44,6 +55,7 @@
 	cost = 3
 	var_changes = list("total_health" = 150)
 
+<<<<<<< HEAD
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
@@ -60,13 +72,29 @@
 */
 //CHOMPStation Removal End
 /datum/trait/nonconductive
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+/datum/trait/nonconductive
+=======
+/datum/trait/positive/nonconductive
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Non-Conductive"
+<<<<<<< HEAD
 	desc = "Decreases your susceptibility to electric shocks by 25%."
 	cost = 2 //This effects tasers!
 	var_changes = list("siemens_coefficient" = 0.75)
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	desc = "Decreases your susceptibility to electric shocks by a 25% amount."
+	cost = 2 //This effects tasers!
+	var_changes = list("siemens_coefficient" = 0.75)
+=======
+	desc = "Decreases your susceptibility to electric shocks by a 10% amount."
+	cost = 1 //This effects tasers!
+	var_changes = list("siemens_coefficient" = 0.9)
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 
-/datum/trait/nonconductive_plus
+/datum/trait/positive/nonconductive_plus
 	name = "Major Non-Conductive"
+<<<<<<< HEAD
 	desc = "Decreases your susceptibility to electric shocks by 50%."
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5)
@@ -80,42 +108,67 @@
 */
 //CHOMPStation Removal End
 /datum/trait/darksight
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	desc = "Decreases your susceptibility to electric shocks by a 50% amount."
+	cost = 3 //Let us not forget this effects tasers!
+	var_changes = list("siemens_coefficient" = 0.5)
+
+/datum/trait/darksight
+=======
+	desc = "Decreases your susceptibility to electric shocks by a 25% amount."
+	cost = 2 //Let us not forget this effects tasers!
+	var_changes = list("siemens_coefficient" = 0.75)
+
+/datum/trait/positive/darksight
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark."
 	cost = 1
+<<<<<<< HEAD
 	var_changes = list("darksight" = 3)
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	var_changes = list("darksight" = 5, "flash_mod" = 2.0)
+=======
+	var_changes = list("darksight" = 5, "flash_mod" = 1.1)
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 
-/datum/trait/darksight_plus
+/datum/trait/positive/darksight_plus
 	name = "Darksight (Major)"
 	desc = "Allows you to see in the dark for almost the whole screen."
 	cost = 2
+<<<<<<< HEAD
 	var_changes = list("darksight" = 6)
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	var_changes = list("darksight" = 8, "flash_mod" = 3.0)
+=======
+	var_changes = list("darksight" = 8, "flash_mod" = 1.2)
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 
-/datum/trait/melee_attack
+/datum/trait/positive/melee_attack
 	name = "Sharp Melee"
 	desc = "Provides sharp melee attacks that do slightly more damage."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp))
 
-/datum/trait/melee_attack_fangs
+/datum/trait/positive/melee_attack_fangs
 	name = "Sharp Melee & Numbing Fangs"
 	desc = "Provides sharp melee attacks that do slightly more damage, along with fangs that makes the person bit unable to feel their body or pain."
 	cost = 2
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing))
 
-/datum/trait/fangs
+/datum/trait/positive/fangs
 	name = "Numbing Fangs"
 	desc = "Provides fangs that makes the person bit unable to feel their body or pain."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
 
-/datum/trait/minor_brute_resist
+/datum/trait/positive/minor_brute_resist
 	name = "Minor Brute Resist"
 	desc = "Adds 10% resistance to brute damage sources."
 	cost = 1
 	var_changes = list("brute_mod" = 0.9)
 
-/datum/trait/brute_resist
+/datum/trait/positive/brute_resist
 	name = "Brute Resist"
 	desc = "Adds 20% resistance to brute damage sources."
 	cost = 2
@@ -126,16 +179,28 @@
 	name = "Major Brute Resist"
 	desc = "Adds 40% resistance to brute damage sources."
 	cost = 3
+<<<<<<< HEAD
 	var_changes = list("brute_mod" = 0.6)
 */
 //CHOMPStation Removal End
 /datum/trait/minor_burn_resist
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	var_changes = list("brute_mod" = 0.75)
+	excludes = list(/datum/trait/minor_burn_resist,/datum/trait/burn_resist)
+
+/datum/trait/minor_burn_resist
+=======
+	var_changes = list("brute_mod" = 0.75)
+	excludes = list(/datum/trait/positive/minor_burn_resist,/datum/trait/positive/burn_resist)
+
+/datum/trait/positive/minor_burn_resist
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Minor Burn Resist"
 	desc = "Adds 10% resistance to burn damage sources."
 	cost = 1
 	var_changes = list("burn_mod" = 0.9)
 
-/datum/trait/burn_resist
+/datum/trait/positive/burn_resist
 	name = "Burn Resist"
 	desc = "Adds 20% resistance to burn damage sources."
 	cost = 2
@@ -146,6 +211,7 @@
 	name = "Major Burn Resist"
 	desc = "Adds 40% resistance to burn damage sources."
 	cost = 3
+<<<<<<< HEAD
 	var_changes = list("burn_mod" = 0.6)
 */
 //CHOMPStation Removal End
@@ -182,11 +248,29 @@
 	var_changes = list("pain_mod" = 0.8)
 
 //YW ADDITIONS END
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	var_changes = list("burn_mod" = 0.75)
+	excludes = list(/datum/trait/minor_brute_resist,/datum/trait/brute_resist)
+=======
+	var_changes = list("burn_mod" = 0.75)
+	excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist)
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 
+<<<<<<< HEAD
 /datum/trait/photoresistant
 	name = "Photoresistance"
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%"
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+/datum/trait/photoresistant
+	name = "Photoresistant"
+	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 50%"
+=======
+/datum/trait/positive/photoresistant
+	name = "Photoresistant"
+	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 20%"
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	cost = 1
+<<<<<<< HEAD
 	var_changes = list("flash_mod" = 0.75)
 
 /datum/trait/photoresistant_plus
@@ -194,41 +278,55 @@
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 50%"
 	cost = 2
 	var_changes = list("flash_mod" = 0.5)
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	var_changes = list("flash_mod" = 0.5)
+=======
+	var_changes = list("flash_mod" = 0.8)
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 
-/datum/trait/winged_flight
+/datum/trait/positive/winged_flight
 	name = "Winged Flight"
 	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
-	cost = 1
+	cost = 0
 
-/datum/trait/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/flying_toggle
 	H.verbs |= /mob/living/proc/start_wings_hovering
 
-/datum/trait/hardfeet
+/datum/trait/positive/hardfeet
 	name = "Hard Feet"
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
-	cost = 1
+	cost = 0
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
+<<<<<<< HEAD
 //CHOMPStation Removal Start
 /*
 /datum/trait/antiseptic_saliva
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+
+/datum/trait/antiseptic_saliva
+=======
+
+/datum/trait/positive/antiseptic_saliva
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Antiseptic Saliva"
 	desc = "Your saliva has especially strong antiseptic properties that can be used to heal small wounds."
 	cost = 1
 
-/datum/trait/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
 */
 //CHOMPStation Removal End
 
-/datum/trait/traceur
+/datum/trait/positive/traceur
 	name = "Traceur"
 	desc = "You're capable of parkour and can *flip over low objects (most of the time)."
 	cost = 2
 	var_changes = list("agility" = 90)
 
+<<<<<<< HEAD
 // YW Addition
 /datum/trait/bloodsucker_plus
 	name = "Evolved Bloodsucker"
@@ -268,18 +366,23 @@
 // YW Addition end
 
 /datum/trait/snowwalker
+||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+/datum/trait/snowwalker
+=======
+/datum/trait/positive/snowwalker
+>>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Snow Walker"
 	desc = "You are able to move unhindered on snow."
 	cost = 2 //YW EDIT
 	var_changes = list("snow_movement" = -2)
 
-/datum/trait/weaver
+/datum/trait/positive/weaver
 	name = "Weaver"
 	desc = "You can produce silk and create various articles of clothing and objects."
 	cost = 2
 	var_changes = list("is_weaver" = 1)
 
-/datum/trait/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.verbs |= /mob/living/carbon/human/proc/check_silk_amount
 	H.verbs |= /mob/living/carbon/human/proc/toggle_silk_production
