@@ -208,12 +208,12 @@
 
 	return TRUE
 
-/mob/living/proc/apply_vore_prefs()
+/mob/living/proc/apply_vore_prefs(var/full_vorgans = FALSE) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 	if(!client || !client.prefs_vr)
 		return FALSE
 	if(!client.prefs_vr.load_vore())
 		return FALSE
-	if(!copy_from_prefs_vr())
+	if(!copy_from_prefs_vr(full_vorgans = full_vorgans)) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 		return FALSE
 
 	return TRUE
@@ -259,7 +259,7 @@
 //
 //	Proc for applying vore preferences, given bellies
 //
-/mob/living/proc/copy_from_prefs_vr(var/bellies = TRUE)
+/mob/living/proc/copy_from_prefs_vr(var/bellies = TRUE, var/full_vorgans = FALSE) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 	if(!client || !client.prefs_vr)
 		to_chat(src,"<span class='warning'>You attempted to apply your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>")
 		return FALSE
@@ -291,7 +291,8 @@
 		vore_organs.Cut()
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
-			break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
+			if(!full_vorgans) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
+				break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
 
 	return TRUE
 
