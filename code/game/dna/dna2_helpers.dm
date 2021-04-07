@@ -222,7 +222,13 @@
 		// Playerscale
 		var/size = dna.GetUIValueRange(DNA_UI_PLAYERSCALE, player_sizes_list.len)
 		if((0 < size) && (size <= player_sizes_list.len))
+<<<<<<< HEAD
 			H.resize(player_sizes_list[player_sizes_list[size]], FALSE)
+||||||| parent of 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
+			H.resize(player_sizes_list[player_sizes_list[size]], TRUE)
+=======
+			H.resize(player_sizes_list[player_sizes_list[size]], TRUE, ignore_prefs = TRUE)
+>>>>>>> 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
 
 		// Tail/Taur Color
 		H.r_tail   = dna.GetUIValueRange(DNA_UI_TAIL_R,    255)

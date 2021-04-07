@@ -60,6 +60,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 /mob/living/get_effective_size()
 	return size_multiplier
 
+<<<<<<< HEAD
 /**
  * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
  * It can be used by anything that calls it.
@@ -68,12 +69,120 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 	var/area/A = get_area(src)
 	return istype(A, /area/crew_quarters/sleep)
 
+||||||| parent of 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
+/**
+ * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
+ * It can be used by anything that calls it.
+ */
+
+=======
+>>>>>>> 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
 /atom/movable/proc/size_range_check(size_select)		//both objects and mobs needs to have that
 	if((!in_dorms() && (size_select > 200 || size_select < 25)) || (size_select > 600 || size_select <1))
 		return FALSE
 	return TRUE
 
+<<<<<<< HEAD
 /mob/living/proc/resize(var/new_size, var/animate = TRUE, var/mark_unnatural_size = TRUE)
+||||||| parent of 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
+/proc/add_to_uncapped_list(var/mob/living/L)
+	if(L.size_uncapped)
+		return
+	if(!GLOB.size_uncapped_mobs.len)
+		GLOB.size_uncapped_mobs_timer = addtimer(CALLBACK(GLOBAL_PROC, .check_uncapped_list), 2 SECONDS, TIMER_LOOP | TIMER_UNIQUE | TIMER_STOPPABLE)
+	GLOB.size_uncapped_mobs |= weakref(L)
+
+/proc/remove_from_uncapped_list(var/mob/living/L)
+	if(!GLOB.size_uncapped_mobs.len)
+		return
+
+	GLOB.size_uncapped_mobs -= weakref(L)
+
+	if(!GLOB.size_uncapped_mobs.len)
+		deltimer(GLOB.size_uncapped_mobs_timer)
+		GLOB.size_uncapped_mobs_timer = null
+
+/proc/check_uncapped_list()
+	for(var/weakref/wr in GLOB.size_uncapped_mobs)
+		var/mob/living/L = wr.resolve()
+		var/area/A = get_area(L)
+		if(!istype(L))
+			GLOB.size_uncapped_mobs -= wr
+			continue
+		
+		if((A.limit_mob_size && !L.size_uncapped) && (L.size_multiplier <= RESIZE_TINY || L.size_multiplier >= RESIZE_HUGE))
+			L.resize(L.size_multiplier)
+			GLOB.size_uncapped_mobs -= wr
+
+	if(!GLOB.size_uncapped_mobs.len)
+		deltimer(GLOB.size_uncapped_mobs_timer)
+		GLOB.size_uncapped_mobs_timer = null
+
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE)
+	if(!uncapped)
+		new_size = clamp(new_size, RESIZE_TINY, RESIZE_HUGE)
+		src.size_uncapped = FALSE
+		remove_from_uncapped_list(src)
+	else
+		add_to_uncapped_list(src)
+=======
+/atom/movable/proc/has_large_resize_bounds()
+	var/area/A = get_area(src) //Get the atom's area to check for size limit.
+	return !A.limit_mob_size
+
+/proc/is_extreme_size(size)
+	return (size < RESIZE_MINIMUM || size > RESIZE_MAXIMUM)
+
+/proc/add_to_uncapped_list(var/mob/living/L)
+	if(L.size_uncapped)
+		return
+	if(!GLOB.size_uncapped_mobs.len)
+		//Could be a subsystem but arguably a giant waste of time to make into a subsystem. A subsystem that is paused on and off all the time? Eh.
+		//If you're that worried, make metrics for how often this even runs and then decide.
+		GLOB.size_uncapped_mobs_timer = addtimer(CALLBACK(GLOBAL_PROC, .check_uncapped_list), 2 SECONDS, TIMER_LOOP | TIMER_UNIQUE | TIMER_STOPPABLE)
+	GLOB.size_uncapped_mobs |= weakref(L)
+
+/proc/remove_from_uncapped_list(var/mob/living/L)
+	if(!GLOB.size_uncapped_mobs.len)
+		return
+
+	GLOB.size_uncapped_mobs -= weakref(L)
+
+	if(!GLOB.size_uncapped_mobs.len)
+		deltimer(GLOB.size_uncapped_mobs_timer)
+		GLOB.size_uncapped_mobs_timer = null
+
+/proc/check_uncapped_list()
+	for(var/weakref/wr in GLOB.size_uncapped_mobs)
+		var/mob/living/L = wr.resolve()
+		if(!istype(L) || L.size_uncapped)
+			GLOB.size_uncapped_mobs -= wr
+			continue
+		
+		// If we get here, you're a mob, and you don't have admin exclusion (size_uncapped) to being big, and you're very likely big.
+		// If you're not abnormally big, the below will do nothing, so it's fine to run anyway.
+		if(!L.has_large_resize_bounds())
+			L.resize(L.size_multiplier, ignore_prefs = TRUE) //Calling this will have resize() clamp it
+			GLOB.size_uncapped_mobs -= wr
+
+	if(!GLOB.size_uncapped_mobs.len)
+		deltimer(GLOB.size_uncapped_mobs_timer)
+		GLOB.size_uncapped_mobs_timer = null
+
+/**
+ * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
+ * It can be used by anything that calls it.
+ */
+
+
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
+	if(!uncapped)
+		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
+		remove_from_uncapped_list(src)
+	else if(is_extreme_size(new_size))
+		add_to_uncapped_list(src)
+	
+>>>>>>> 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
 	if(size_multiplier == new_size)
 		return 1
 
@@ -111,8 +220,8 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 	else
 		update_transform() //Lame way
 
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE)
-	if(!resizable)
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
+	if(!resizable && !ignore_prefs)
 		return 1
 	if(species)
 		vis_height = species.icon_height
@@ -125,7 +234,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 			apply_hud(index, HI)
 
 // Optimize mannequins - never a point to animating or doing HUDs on these.
-/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE)
+/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
 	size_multiplier = new_size
 
 /**
