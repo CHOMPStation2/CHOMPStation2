@@ -45,20 +45,25 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	//Actual preferences
 	var/digestable = TRUE
 	var/devourable = TRUE
+<<<<<<< HEAD
+||||||| parent of 867ad3c601... Merge pull request #10101 from VOREStation/Arokha/prefbits
+	var/resizable = TRUE
+=======
+	var/absorbable = TRUE
+>>>>>>> 867ad3c601... Merge pull request #10101 from VOREStation/Arokha/prefbits
 	var/feeding = TRUE
-	var/absorbable = TRUE	//TFF 14/12/19 - choose whether allowing absorbing
-	var/digest_leave_remains = FALSE
-	var/allowmobvore = TRUE
-	var/list/belly_prefs = list()
-	var/vore_taste = "nothing in particular"
-	var/vore_smell = "nothing in particular"
-	var/permit_healbelly = TRUE
-	var/show_vore_fx = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
+	var/digest_leave_remains = FALSE
+	var/allowmobvore = TRUE
+	var/permit_healbelly = TRUE
+
+	var/resizable = TRUE
+	var/show_vore_fx = TRUE
 	var/step_mechanics_pref = FALSE
 	var/pickup_pref = TRUE
 
+<<<<<<< HEAD
 
 	//CHOMP stuff
 	var/receive_reagents = FALSE
@@ -66,6 +71,13 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/latejoin_vore = FALSE
 
 
+||||||| parent of 867ad3c601... Merge pull request #10101 from VOREStation/Arokha/prefbits
+=======
+	var/list/belly_prefs = list()
+	var/vore_taste = "nothing in particular"
+	var/vore_smell = "nothing in particular"
+
+>>>>>>> 867ad3c601... Merge pull request #10101 from VOREStation/Arokha/prefbits
 	//Mechanically required
 	var/path
 	var/slot
@@ -130,7 +142,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	digestable = json_from_file["digestable"]
 	devourable = json_from_file["devourable"]
 	feeding = json_from_file["feeding"]
-	absorbable = json_from_file["absorbable"]	//TFF 14/12/19 - choose whether allowing absorbing
+	absorbable = json_from_file["absorbable"]
 	digest_leave_remains = json_from_file["digest_leave_remains"]
 	allowmobvore = json_from_file["allowmobvore"]
 	vore_taste = json_from_file["vore_taste"]
