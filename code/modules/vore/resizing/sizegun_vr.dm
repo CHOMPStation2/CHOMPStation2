@@ -98,10 +98,40 @@
 /obj/item/projectile/beam/sizelaser/admin/on_hit(var/atom/target)
 	var/mob/living/M = target
 	if(istype(M))
+<<<<<<< HEAD
 		M.resize(set_size, TRUE, TRUE)
 		if(set_size >= RESIZE_TINY && set_size <= RESIZE_HUGE)
 			M.size_uncapped = FALSE
 		M.size_uncapped = TRUE
+||||||| parent of 4c52a2cdd4... Merge pull request #10095 from ShadowLarkens/better_resize_guard
+
+		var/can_be_big = M.has_large_resize_bounds()
+		var/very_big = is_extreme_size(set_size)
+
+		if(very_big && can_be_big) // made an extreme size in an area that allows it, don't assume adminbuse
+			to_chat(firer, "<span class='warning'>[M] will lose this size upon moving into an area where this size is not allowed.</span>")
+		else if(very_big) // made an extreme size in an area that doesn't allow it, assume adminbuse
+			to_chat(firer, "<span class='warning'>[M] will retain this normally unallowed size outside this area.</span>")
+			M.size_uncapped = TRUE
+		else if(M.size_uncapped) // made a normal size after having been an extreme adminbuse size
+			to_chat(firer, "<span class='warning'>[M] now returned to normal area-based size limitations.</span>")
+			M.size_uncapped = FALSE
+		
+		M.resize(set_size, uncapped = TRUE, ignoring_prefs = TRUE) // Always ignores prefs, caution is advisable
+
+=======
+
+		var/can_be_big = M.has_large_resize_bounds()
+		var/very_big = is_extreme_size(set_size)
+
+		if(very_big && can_be_big) // made an extreme size in an area that allows it, don't assume adminbuse
+			to_chat(firer, "<span class='warning'>[M] will lose this size upon moving into an area where this size is not allowed.</span>")
+		else if(very_big) // made an extreme size in an area that doesn't allow it, assume adminbuse
+			to_chat(firer, "<span class='warning'>[M] will retain this normally unallowed size outside this area.</span>")
+		
+		M.resize(set_size, uncapped = TRUE, ignore_prefs = TRUE) // Always ignores prefs, caution is advisable
+
+>>>>>>> 4c52a2cdd4... Merge pull request #10095 from ShadowLarkens/better_resize_guard
 		to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
 		M.updateicon()
 		return

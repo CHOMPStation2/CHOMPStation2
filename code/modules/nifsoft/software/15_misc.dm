@@ -134,7 +134,13 @@
 				to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program prevent you from choosing this size.</span>")
 			return
 		else
+<<<<<<< HEAD
 			if(nif.human.resize(new_size/100))
+||||||| parent of 4c52a2cdd4... Merge pull request #10095 from ShadowLarkens/better_resize_guard
+			if(nif.human.resize(new_size/100, ignore_prefs = TRUE))
+=======
+			if(nif.human.resize(new_size/100, uncapped=nif.human.has_large_resize_bounds(), ignore_prefs = TRUE))
+>>>>>>> 4c52a2cdd4... Merge pull request #10095 from ShadowLarkens/better_resize_guard
 				to_chat(nif.human,"<span class='notice'>You set the size to [new_size]%</span>")
 				nif.human.visible_message("<span class='warning'>Swirling grey mist envelops [nif.human] as they change size!</span>","<span class='notice'>Swirling streams of nanites wrap around you as you change size!</span>")
 		spawn(0)
