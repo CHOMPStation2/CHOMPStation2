@@ -9,7 +9,6 @@
 	can_burn_food = TRUE
 	var/datum/looping_sound/oven/oven_loop
 	circuit = /obj/item/weapon/circuitboard/oven
-	cooked_sound = 'sound/machines/ding.ogg'
 	active_power_usage = 6 KILOWATTS
 	heating_power = 6 KILOWATTS
 	//Based on a double deck electric convection oven
@@ -39,12 +38,12 @@
 		"Cookie" = /obj/item/weapon/reagent_containers/food/snacks/variable/cookie,
 		"Donut" = /obj/item/weapon/reagent_containers/food/snacks/variable/donut,
 		)
-		
+
 /obj/machinery/appliance/cooker/oven/Initialize()
 	. = ..()
-	
+
 	oven_loop = new(list(src), FALSE)
-	
+
 /obj/machinery/appliance/cooker/oven/Destroy()
 	QDEL_NULL(oven_loop)
 	return ..()
@@ -100,14 +99,14 @@
 		cooking = TRUE
 	else
 		open = TRUE
-		loss = (heating_power / resistance) * 2 // Halve oven heat loss.
+		loss = (heating_power / resistance) * 4
 		//When the oven door is opened, heat is lost MUCH faster and you stop cooking (because the door is open)
 		cooking = FALSE
 
 	playsound(src, 'sound/machines/hatch_open.ogg', 20, 1)
-	to_chat(user, "<span class='notice'>You [open ? "open" : "close"] the oven door.</span>")
+	to_chat(user, "<span class='notice'>You [open? "open":"close"] the oven door</span>")
 	update_icon()
-	
+
 /obj/machinery/appliance/cooker/oven/proc/manip(var/obj/item/I)
 	// check if someone's trying to manipulate the machine
 

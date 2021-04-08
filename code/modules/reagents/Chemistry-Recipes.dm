@@ -268,9 +268,9 @@
 	name = "Peridaxon"
 	id = "peridaxon"
 	result = "peridaxon"
-	required_reagents = list("cordradaxon" = 1, "gastirodaxon" = 1, "hepanephrodaxon" = 1, "respirodaxon" = 1)	//CHOMPEdit
-	//catalysts = list("phoron" = 12) CHOMPEdit
-	result_amount = 12 //CHOMPEdit
+	required_reagents = list("bicaridine" = 2, "clonexadone" = 2)
+	catalysts = list("phoron" = 5)
+	result_amount = 2
 
 /datum/chemical_reaction/osteodaxon
 	name = "Osteodaxon"
@@ -1290,6 +1290,13 @@
 	id = "ketchup"
 	result = "ketchup"
 	required_reagents = list("tomatojuice" = 2, "water" = 1, "sugar" = 1)
+	result_amount = 4
+
+/datum/chemical_reaction/food/barbecue
+	name = "Barbeque Sauce"
+	id = "barbecue"
+	result = "barbecue"
+	required_reagents = list("tomatojuice" = 2, "applejuice" = 1, "sugar" = 1, "spacespice" = 1)
 	result_amount = 4
 
 /datum/chemical_reaction/food/peanutbutter

@@ -64,7 +64,7 @@
 		SPECIES_ZORREN_HIGH 	= 'icons/mob/species/fox/helmet_ch.dmi',
 		SPECIES_FENNEC 			= 'icons/mob/species/vulpkanin/helmet_ch.dmi',
 		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/helmet_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/mob/species/seromi/head_ch.dmi'
+		SPECIES_TESHARI 		= 'icons/mob/species/teshari/head_ch.dmi'
 		)
 
 
@@ -82,7 +82,7 @@
 		SPECIES_ZORREN_HIGH 	= 'icons/mob/species/fox/suit_ch.dmi',
 		SPECIES_FENNEC			= 'icons/mob/species/vulpkanin/suit_ch.dmi',
 		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/suit_ch.dmi',
-		SPECIES_TESHARI 		= 'icons/mob/species/seromi/suit_ch.dmi'
+		SPECIES_TESHARI 		= 'icons/mob/species/teshari/suit_ch.dmi'
 		)
 
 /*

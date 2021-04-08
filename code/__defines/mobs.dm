@@ -160,12 +160,6 @@
 #define FLASH_PROTECTION_MODERATE 1
 #define FLASH_PROTECTION_MAJOR 2
 
-#define ANIMAL_SPAWN_DELAY round(config.respawn_delay / 6)
-#define DRONE_SPAWN_DELAY  round(config.respawn_delay / 3)
-
-#define ANIMAL_SPAWN_DELAY round(config.respawn_delay / 6)
-#define DRONE_SPAWN_DELAY  round(config.respawn_delay / 3)
-
 // Incapacitation flags, used by the mob/proc/incapacitated() proc
 #define INCAPACITATION_RESTRAINED 1
 #define INCAPACITATION_BUCKLED_PARTIALLY 2
@@ -289,6 +283,7 @@
 #define BORG_BRAINTYPE_CYBORG	"Cyborg"
 #define BORG_BRAINTYPE_POSI		"Robot"
 #define BORG_BRAINTYPE_DRONE	"Drone"
+#define BORG_BRAINTYPE_PLATFORM	"Platform"
 #define BORG_BRAINTYPE_AI_SHELL	"AI Shell"
 
 // 'Regular' species.
@@ -321,13 +316,13 @@
 #define SPECIES_VR_SKELETON		"Virtual Reality Skeleton"
 #define SPECIES_VR_VOX			"Virtual Reality Vox"
 
-// Ayyy IDs.
-#define SPECIES_XENO			"Xenomorph"
-#define SPECIES_XENO_DRONE		"Xenomorph Drone"
-#define SPECIES_XENO_HUNTER		"Xenomorph Hunter"
-#define SPECIES_XENO_SENTINEL	"Xenomorph Sentinel"
-#define SPECIES_XENO_QUEEN		"Xenomorph Queen"
-
+// Ayyy IDs. CHOMPedit
+#define SPECIES_GENA			"Genaprawn"
+#define SPECIES_GENA_DRONE		"Genaprawn Drone"
+#define SPECIES_GENA_HUNTER		"Genaprawn Hunter"
+#define SPECIES_GENA_SENTINEL	"Genaprawn Sentinel"
+#define SPECIES_GENA_QUEEN		"Genaprawn Queen"
+//CHOMPedit end
 // Misc species. Mostly unused but might as well be complete.
 #define SPECIES_SHADOW			"Shadow"
 #define SPECIES_SKELETON		"Skeleton"

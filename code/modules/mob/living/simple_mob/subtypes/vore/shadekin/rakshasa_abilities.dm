@@ -90,7 +90,7 @@
 		return
 	new /obj/effect/decal/cleanable/blood/oil(loc, src)
 	playsound(src, 'sound/rakshasa/Corrosion1.ogg', 100, 1)
-	my_kin.phase_shift()
+	my_kin.rakshasa_shift()
 	if(my_kin.ability_flags & AB_PHASE_SHIFTED)
 		cost = 0 //Shifting back is free (but harmful in light)
 		new /obj/effect/decal/cleanable/blood/oil(my_kin.loc)
@@ -118,7 +118,7 @@
 		return
 	new /obj/effect/decal/cleanable/blood/oil(loc, src)
 	playsound(src, 'sound/rakshasa/Corrosion1.ogg', 100, 1)
-	my_kin.phase_shift()
+	my_kin.rakshasa_shift()
 	if(my_kin.ability_flags & AB_PHASE_SHIFTED)
 		cost = 0 //Shifting back is free (but harmful in light)
 		new /obj/effect/decal/cleanable/blood/oil(my_kin.loc)
@@ -268,8 +268,106 @@
 	playsound(my_kin.loc, sound, 100, 1)
 	new /obj/structure/gootrap (my_kin.loc)
 
+/////////////////////////////////////////////////////////////////
+/obj/effect/rakshasa_ability/flicker
+	ability_name = "Flicker Lights"
+	desc = "Flicker the lights."
+	icon_state = ""
+	cost = 0
+	shift_mode = SHIFTED_OR_NOT
+	ab_sound = 'sound/effects/stealthoff.ogg'
+obj/effect/rakshasa_ability/flicker/do_ability()
+	if(!..())
+		return
+	my_kin.rakshasa_flicker()
+
+
 ////////////////////////////////////////////////////////////////
-//Extra phaseshift with no lights flickering. For flavor. Basically just deleted the part that flickers the lights.
+//PROCS
+//PHASE SHIFTING
+////////////////////////////////////////////////////////////////
+//Rakshasa's phase shifts are now more stealthy. No announcement on them phasing in or out. Also, an extra phaseshift with no lights flickering. For flavor. There's probably a better way of doing this, butt fuck it.
+/mob/living/simple_mob/shadekin/proc/rakshasa_shift()
+	var/turf/T = get_turf(src)
+	if(!T.CanPass(src,T) || loc != T)
+		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		return FALSE
+
+	forceMove(T)
+	var/original_canmove = canmove
+	SetStunned(0)
+	SetWeakened(0)
+	if(buckled)
+		buckled.unbuckle_mob()
+	if(pulledby)
+		pulledby.stop_pulling()
+	stop_pulling()
+	canmove = FALSE
+
+	//Shifting in
+	if(ability_flags & AB_PHASE_SHIFTED)
+		ability_flags &= ~AB_PHASE_SHIFTED
+		name = real_name
+		for(var/belly in vore_organs)
+			var/obj/belly/B = belly
+			B.escapable = initial(B.escapable)
+
+		overlays.Cut()
+		alpha = initial(alpha)
+		invisibility = initial(invisibility)
+		see_invisible = initial(see_invisible)
+		incorporeal_move = initial(incorporeal_move)
+		density = initial(density)
+		force_max_speed = initial(force_max_speed)
+
+		//Cosmetics mostly
+		flick("tp_in",src)
+		sleep(5) //The duration of the TP animation
+		canmove = original_canmove
+
+		//Potential phase-in vore
+		if(can_be_drop_pred) //Toggleable in vore panel
+			var/list/potentials = living_mobs(0)
+			if(potentials.len)
+				var/mob/living/target = pick(potentials)
+				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+					target.forceMove(vore_selected)
+					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+
+		// Do this after the potential vore, so we get the belly
+		update_icon()
+	
+		//Affect nearby lights
+		for(var/obj/machinery/light/L in machines)
+			if(L.z != z || get_dist(src,L) > 10)
+				continue
+			L.flicker(10)
+
+//Shifting out
+	else
+		ability_flags |= AB_PHASE_SHIFTED
+		real_name = name
+		name = "Something"
+
+		for(var/belly in vore_organs)
+			var/obj/belly/B = belly
+			B.escapable = FALSE
+
+		overlays.Cut()
+		flick("tp_out",src)
+		sleep(5)
+		invisibility = INVISIBILITY_LEVEL_TWO
+		see_invisible = INVISIBILITY_LEVEL_TWO
+		update_icon()
+		alpha = 127
+
+		canmove = original_canmove
+		incorporeal_move = TRUE
+		density = FALSE
+		force_max_speed = TRUE
+		
+		
+////////////////////////////////////////////////////////////////
 /mob/living/simple_mob/shadekin/proc/stealth_shift()
 	var/turf/T = get_turf(src)
 	if(!T.CanPass(src,T) || loc != T)
@@ -342,3 +440,13 @@
 		incorporeal_move = TRUE
 		density = FALSE
 		force_max_speed = TRUE
+
+
+//LIGHT FLICKERING
+////////////////////////////////////////////////////////////////
+//A flicker proc. Because apparently putting this straight into the ability button doesn't work.
+/mob/living/simple_mob/shadekin/proc/rakshasa_flicker()
+	for(var/obj/machinery/light/L in machines)
+		if(L.z != z || get_dist(src,L) > 10)
+			continue
+		L.flicker(10)

@@ -187,7 +187,7 @@
 	else
 		return pick(ai_names)
 
-/datum/language/seromi
+/datum/language/teshari
 	name = LANGUAGE_SCHECHI
 	desc = "A trilling language spoken by the diminutive Teshari."
 	speech_verb = "chirps"
@@ -203,9 +203,9 @@
 			"ci", "ri", "mi", "si", "ni", "ti", "li", "shi", "schi", "i", "i"
 		)
 
-/datum/language/seromi/get_random_name(gender)
-	return ..(gender, 1, 4, 1.5)
-
+/datum/language/teshari/get_random_name(gender)
+	return ..(gender, 1, 4, 1.5) //CHOMPedit: Keep "1" as the second argument because tesharii here typically omit the pack name (thus only use 1 name). This is because 
+				     //CHOMPedit: there are very few packs and thus most tesharii would have the same first name.	
 
 /datum/language/zaddat
 	name = LANGUAGE_ZADDAT

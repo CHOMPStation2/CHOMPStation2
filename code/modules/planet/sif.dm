@@ -278,8 +278,8 @@ var/datum/planet/sif/planet_sif = null
 	transition_messages = list(
 		"The sky is dark, and rain falls down upon you."
 	)
-//	outdoor_sounds_type = /datum/looping_sound/weather/rain
-//	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
+	outdoor_sounds_type = /datum/looping_sound/weather/rain
+	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
 /datum/weather/sif/rain/process_effects()
 	..()
@@ -327,8 +327,8 @@ var/datum/planet/sif/planet_sif = null
 		"Loud thunder is heard in the distance.",
 		"A bright flash heralds the approach of a storm."
 	)
-//	outdoor_sounds_type = /datum/looping_sound/weather/rain
-//	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
+	outdoor_sounds_type = /datum/looping_sound/weather/rain
+	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
 
 	transition_chances = list(

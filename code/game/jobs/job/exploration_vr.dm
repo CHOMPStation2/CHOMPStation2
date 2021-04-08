@@ -1,8 +1,3 @@
-var/const/PATHFINDER 		=(1<<11)
-var/const/EXPLORER 			=(1<<12)
-var/const/PILOT 			=(1<<13)
-var/const/SAR 				=(1<<14)
-
 /obj/item/weapon/card/id/medical/sar
 	assignment = "Field Medic"
 	rank = "Field Medic"
@@ -41,7 +36,7 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Head of Personnel"
+	supervisors = "the Research Director" //CHOMPedit
 	selection_color = "#d6d05c"
 	economic_modifier = 8
 	minimal_player_age = 7
@@ -64,20 +59,20 @@ var/const/SAR 				=(1<<14)
 /datum/job/pilot
 	title = "Pilot"
 	flag = PILOT
-	departments = list(DEPARTMENT_PLANET)
-	department_flag = MEDSCI
+	departments = list(DEPARTMENT_PLANET) //CHOMPedit: keep them part of exploration
+	department_flag = MEDSCI //CHOMPedit
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "the Pathfinder and the Head of Personnel"
-	selection_color = "#999440"
+	total_positions = 5
+	spawn_positions = 5
+	supervisors = "the Pathfinder" //CHOMPedit
+	selection_color = "#515151"
 	economic_modifier = 5
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
 	access = list(access_pilot)
 	minimal_access = list(access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
-	job_description = "A Pilot flies the various shuttles in the Virgo-Erigone System."
+	job_description = "A Pilot flies the various shuttles in the Vir System." //CHOMPedit: Replaces Virgo reference with Vir.
 	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator)
 
 /datum/alt_title/co_pilot
@@ -96,7 +91,7 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the Pathfinder and the Head of Personnel"
+	supervisors = "the Pathfinder" //CHOMPedit
 	selection_color = "#999440"
 	economic_modifier = 6
 	pto_type = PTO_EXPLORATION
@@ -121,7 +116,7 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Pathfinder and the Chief Medical Officer"
+	supervisors = "the Pathfinder" //CHOMPedit
 	selection_color = "#999440"
 	economic_modifier = 6
 	minimal_player_age = 3

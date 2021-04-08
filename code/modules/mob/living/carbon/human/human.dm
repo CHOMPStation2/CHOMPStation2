@@ -1076,7 +1076,7 @@
 
 	if(species)
 
-		if(species.name && species.name == new_species)
+		if(species.name && species.name == new_species && species.name != "Custom Species") //VOREStation Edit
 			return
 		if(species.language)
 			remove_language(species.language)
@@ -1653,7 +1653,5 @@
 
 	..()
 
-/mob/living/carbon/human/reduce_cuff_time()
-	if(istype(gloves, /obj/item/clothing/gloves/gauntlets/rig))
-		return 2
-	return ..()
+/mob/living/carbon/human/get_mob_riding_slots()
+	return list(back, head, wear_suit)

@@ -1,22 +1,14 @@
-
-//these aren't defines so they can stay in this file
-var/const/RESIZE_HUGE = 2
-var/const/RESIZE_BIG = 1.5
-var/const/RESIZE_NORMAL = 1
-var/const/RESIZE_SMALL = 0.5
-var/const/RESIZE_TINY = 0.25
-
-//average
-var/const/RESIZE_A_HUGEBIG = (RESIZE_HUGE + RESIZE_BIG) / 2
-var/const/RESIZE_A_BIGNORMAL = (RESIZE_BIG + RESIZE_NORMAL) / 2
-var/const/RESIZE_A_NORMALSMALL = (RESIZE_NORMAL + RESIZE_SMALL) / 2
-var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
+GLOBAL_LIST_EMPTY(size_uncapped_mobs)
+GLOBAL_VAR(size_uncapped_mobs_timer)
 
 // Adding needed defines to /mob/living
 // Note: Polaris had this on /mob/living/carbon/human We need it higher up for animals and stuff.
 /mob/living
 	var/size_multiplier = 1 //multiplier for the mob's icon size
 	var/holder_default
+	var/step_mechanics_pref = TRUE		// Allow participation in macro-micro step mechanics
+	var/pickup_pref = TRUE				// Allow participation in macro-micro pickup mechanics
+	var/pickup_active = TRUE			// Toggle whether your help intent picks up micros or pets them
 
 // Define holder_type on types we want to be scoop-able
 /mob/living/carbon/human
@@ -61,16 +53,70 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
  * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
  * It can be used by anything that calls it.
  */
-/mob/living/proc/resize(var/new_size, var/animate = TRUE)
+
+/atom/movable/proc/size_range_check(size_select)		//both objects and mobs needs to have that
+	var/area/A = get_area(src) //Get the atom's area to check for size limit.
+	if((A.limit_mob_size && (size_select > 200 || size_select < 25)) || (size_select > 600 || size_select <1))
+		return FALSE
+	return TRUE
+
+/proc/add_to_uncapped_list(var/mob/living/L)
+	if(L.size_uncapped)
+		return
+	if(!GLOB.size_uncapped_mobs.len)
+		GLOB.size_uncapped_mobs_timer = addtimer(CALLBACK(GLOBAL_PROC, .check_uncapped_list), 2 SECONDS, TIMER_LOOP | TIMER_UNIQUE | TIMER_STOPPABLE)
+	GLOB.size_uncapped_mobs |= weakref(L)
+
+/proc/remove_from_uncapped_list(var/mob/living/L)
+	if(!GLOB.size_uncapped_mobs.len)
+		return
+
+	GLOB.size_uncapped_mobs -= weakref(L)
+
+	if(!GLOB.size_uncapped_mobs.len)
+		deltimer(GLOB.size_uncapped_mobs_timer)
+		GLOB.size_uncapped_mobs_timer = null
+
+/proc/check_uncapped_list()
+	for(var/weakref/wr in GLOB.size_uncapped_mobs)
+		var/mob/living/L = wr.resolve()
+		var/area/A = get_area(L)
+		if(!istype(L))
+			GLOB.size_uncapped_mobs -= wr
+			continue
+		
+		if((A.limit_mob_size && !L.size_uncapped) && (L.size_multiplier <= RESIZE_TINY || L.size_multiplier >= RESIZE_HUGE))
+			L.resize(L.size_multiplier)
+			GLOB.size_uncapped_mobs -= wr
+
+	if(!GLOB.size_uncapped_mobs.len)
+		deltimer(GLOB.size_uncapped_mobs_timer)
+		GLOB.size_uncapped_mobs_timer = null
+
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE)
+	if(!uncapped)
+		new_size = clamp(new_size, RESIZE_TINY, RESIZE_HUGE)
+		src.size_uncapped = FALSE
+		remove_from_uncapped_list(src)
+	else
+		add_to_uncapped_list(src)
 	if(size_multiplier == new_size)
 		return 1
 
 	size_multiplier = new_size //Change size_multiplier so that other items can interact with them
+
 	if(animate)
 		var/change = new_size - size_multiplier
 		var/duration = (abs(change)+0.25) SECONDS
 		var/matrix/resize = matrix() // Defines the matrix to change the player's size
-		resize.Scale(new_size * icon_scale_x, new_size * icon_scale_y) //Change the size of the matrix
+		var/special_x = 1
+		var/special_y = 1
+		if(ishuman(src))
+			var/mob/living/carbon/human/H = src
+			var/datum/species/S = H.species
+			special_x = S.icon_scale_x
+			special_y = S.icon_scale_y
+		resize.Scale(new_size * icon_scale_x * special_x, new_size * icon_scale_y * special_y) //Change the size of the matrix
 		resize.Translate(0, (vis_height/2) * (new_size - 1)) //Move the player up in the tile so their feet align with the bottom
 		animate(src, transform = resize, time = duration) //Animate the player resizing
 
@@ -85,6 +131,8 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 		update_transform() //Lame way
 
 /mob/living/carbon/human/resize(var/new_size, var/animate = TRUE)
+	if(!resizable)
+		return 1
 	if(species)
 		vis_height = species.icon_height
 	. = ..()
@@ -109,9 +157,13 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 	set name = "Adjust Mass"
 	set category = "Abilities" //Seeing as prometheans have an IC reason to be changing mass.
 
-	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (DO NOT ABUSE)"
+	if(!resizable)
+		to_chat(src, "<span class='warning'>You are immune to resizing!</span>")
+		return
+
+	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
 	var/new_size = input(nagmessage, "Pick a Size") as num|null
-	if(new_size && ISINRANGE(new_size, 25, 200))
+	if(size_range_check(new_size))
 		resize(new_size/100)
 		// I'm not entirely convinced that `src ? ADMIN_JMP(src) : "null"` here does anything
 		// but just in case it does, I'm leaving the null-src checking
@@ -129,6 +181,10 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
  * @return false if normal code should continue, 1 to prevent normal code.
  */
 /mob/living/proc/attempt_to_scoop(mob/living/M, mob/living/G) //second one is for the Grabber, only exists for animals to self-grab
+	if(!(pickup_pref && M.pickup_pref && pickup_active))
+		return 0
+	if(!(M.a_intent == I_HELP))
+		return 0
 	var/size_diff = M.get_effective_size() - get_effective_size()
 	if(!holder_default && holder_type)
 		holder_default = holder_type
@@ -138,10 +194,10 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 		var/mob/living/simple_mob/SA = M
 		if(!SA.has_hands)
 			return 0
-	if(buckled)
-		to_chat(usr,"<span class='notice'>You have to unbuckle \the [M] before you pick them up.</span>")
-		return 0
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL)
+		if(buckled)
+			to_chat(usr,"<span class='notice'>You have to unbuckle \the [src] before you pick them up.</span>")
+			return 0
 		holder_type = /obj/item/weapon/holder/micro
 		var/obj/item/weapon/holder/m_holder = get_scooped(M, G)
 		holder_type = holder_default
@@ -273,8 +329,8 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 		tail = pred.tail_style
 
 	if(a_intent == I_GRAB)
-		// You can only grab prey if you have no shoes on.
-		if(pred.shoes)
+		// You can only grab prey if you have no shoes on. And both of you are cool with it.
+		if(pred.shoes || !(pred.pickup_pref && prey.pickup_pref))
 			message_pred = "You step down onto [prey], squishing them and forcing them down to the ground!"
 			message_prey = "[pred] steps down and squishes you with their foot, forcing you down to the ground!"
 			if(tail)
@@ -336,6 +392,14 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 	to_chat(pred, "<span class='danger'>[message_pred]</span>")
 	to_chat(prey, "<span class='danger'>[message_prey]</span>")
 	return TRUE
+
+/mob/living/verb/toggle_pickups()
+	set name = "Toggle Micro Pick-up"
+	set desc = "Toggles whether your help-intent action attempts to pick up the micro or pet/hug/help them. Does not disable participation in pick-up mechanics entirely, refer to Vore Panel preferences for that."
+	set category = "IC"
+
+	pickup_active = !pickup_active
+	to_chat(src, "You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent.")
 
 #undef STEP_TEXT_OWNER
 #undef STEP_TEXT_PREY

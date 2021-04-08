@@ -17,10 +17,10 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/Initialize(var/mapload, var/planttype)
 	. = ..()
-	
+
 	if(!dried_type)
 		dried_type = type
-	
+
 	pixel_x = rand(-5.0, 5)
 	pixel_y = rand(-5.0, 5)
 
@@ -217,6 +217,11 @@
 				else if(!isnull(seed.chems["carrotjuice"]))
 					to_chat(user, "You slice \the [src] into sticks.")
 					new /obj/item/weapon/reagent_containers/food/snacks/carrotfries(get_turf(src))
+					qdel(src)
+					return
+				else if(!isnull(seed.chems["pineapplejuice"]))
+					to_chat(user, "You slice \the [src] into rings.")
+					new /obj/item/weapon/reagent_containers/food/snacks/pineapple_ring(get_turf(src))
 					qdel(src)
 					return
 				else if(!isnull(seed.chems["soymilk"]))

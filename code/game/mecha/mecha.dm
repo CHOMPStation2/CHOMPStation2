@@ -198,7 +198,7 @@
 	var/weapons_only_cycle = FALSE	//So combat mechs don't switch to their equipment at times.
 
 /obj/mecha/Initialize()
-	..()
+	. = ..()
 
 	for(var/path in starting_components)
 		var/obj/item/mecha_parts/component/C = new path(src)
@@ -319,9 +319,10 @@
 	cell = null
 	internal_tank = null
 
-	GLOB.mech_destroyed_roundstat++ //CHOMP Edit This is for the roundtrivia system
 	if(smoke_possible)	//Just making sure nothing is running.
 		qdel(smoke_system)
+
+	GLOB.mech_destroyed_roundstat++
 
 	QDEL_NULL(pr_int_temp_processor)
 	QDEL_NULL(pr_inertial_movement)
@@ -352,10 +353,10 @@
 		C.forceMove(src)
 		cell = C
 		return
-	cell = new(src)
-	cell.name = "mecha power cell"
-	cell.charge = 15000
-	cell.maxcharge = 15000
+	cell = new /obj/item/weapon/cell/mech(src)
+
+/obj/mecha/get_cell()
+	return cell
 
 /obj/mecha/proc/add_cabin()
 	cabin_air = new

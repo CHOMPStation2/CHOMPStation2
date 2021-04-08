@@ -39,4 +39,4 @@
 	description = "A lightweight uniform intended for vehicle and powersuit operators, designed to allow free movement and maximum comfort in hot, cramped cockpits. Comes prefitted with a harness and webbing for gear."
 	path = /obj/item/clothing/under/rank/khi/sec/pilot
 	cost = 2 //base cost 1 + accessory 1
-	allowed_roles = list("Security Pilot")
+	allowed_roles = list("Pilot","Security Pilot") //CHOMPEDIT: Adding this to pilots as well

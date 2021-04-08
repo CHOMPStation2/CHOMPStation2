@@ -64,7 +64,7 @@
 	vore_capacity = 1
 	vore_pounce_chance = 0 //grubs only eat incapacitated targets
 	vore_default_mode = DM_DIGEST
-	
+
 	min_oxy = 0
 	max_oxy = 0
 	min_tox = 0
@@ -110,10 +110,10 @@
 				"bio"		= 100,
 				"rad"		= 100
 				)
-	
+
 	var/lava_min_ore = 6
 	var/lava_max_ore = 10
-	
+
 	poison_per_bite = 5
 	poison_chance = 66
 
@@ -160,7 +160,9 @@
 //I'm no good at writing this stuff, so I've just left it as placeholders and disabled the chances of them eating you.
 /*
 /mob/living/simple_mob/vore/oregrub/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "PLACEHOLDER!"

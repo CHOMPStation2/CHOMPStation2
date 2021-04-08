@@ -34,7 +34,7 @@
 	desc = "Your body is able to produce nutrition from being in light."
 	cost = 3
 	var_changes = list("photosynthesizing" = TRUE)
-	not_for_synths = 0 //Synths actually use nutrition, just with a fancy covering.
+	can_take = ORGANICS|SYNTHETICS //Synths actually use nutrition, just with a fancy covering.
 
 /datum/trait/rad_resistance
 	name = "Radiation Resistance"
@@ -54,7 +54,7 @@
 	cost = 3
 	var_changes = list("blood_volume" = 840)
 	excludes = list(/datum/trait/more_blood_extreme,/datum/trait/less_blood,/datum/trait/less_blood_extreme)
-	not_for_synths = TRUE
+	can_take = ORGANICS
 
 /datum/trait/more_blood_extreme
 	name = "Very high blood volume"
@@ -62,7 +62,7 @@
 	cost = 6
 	var_changes = list("blood_volume" = 1400)
 	excludes = list(/datum/trait/more_blood,/datum/trait/less_blood,/datum/trait/less_blood_extreme)
-	not_for_synths = TRUE
+	can_take = ORGANICS
 
 /datum/trait/heavyweight
 	name = "Heavyweight"
@@ -164,7 +164,7 @@
 	desc = "When you get critically damaged, you'll have an adrenaline rush before going down, giving you another chance to finish the fight, or get to safety."
 	cost = 6
 	special_env = TRUE
-	not_for_synths = TRUE
+	can_take = ORGANICS
 	var/last_adrenaline_rush
 
 /datum/trait/adrenaline_rush/handle_environment_special(var/mob/living/carbon/human/H)
@@ -239,3 +239,13 @@
 	accuracy_dispersion = 25
 	incoming_hal_damage_percent = 1.75
 	incoming_oxy_damage_percent = 1.25
+	
+/datum/trait/insect_sting
+	name = "Insect Sting"
+	desc = "Allows you to sting your victim with a smalll amount of poison"
+	cost = 1
+
+/datum/trait/insect_sting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/insect_sting
+	
