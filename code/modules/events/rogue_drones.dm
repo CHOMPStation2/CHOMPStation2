@@ -22,7 +22,13 @@
 /datum/event/rogue_drone/announce()
 	var/msg
 	var/rng = rand(1,5)
+<<<<<<< HEAD
 	//CHOMPStation Edit Start TFF 14/1/20 - Virgo 3b -> Sif
+||||||| parent of f524999b8b... Merge pull request #10103 from VOREStation/Arokha/removesigs
+	//VOREStation Edit Start TFF 16/12/19 - Sif -> Virgo 3b
+=======
+	//VOREStation Edit Start
+>>>>>>> f524999b8b... Merge pull request #10103 from VOREStation/Arokha/removesigs
 	switch(rng)
 		if(1)
 			msg = "A combat drone wing operating in close orbit above Sif has failed to return from a anti-piracy sweep.  If any are sighted, \
