@@ -57,7 +57,6 @@
 	suit_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
 	icon_sprite_tag = "wolf"
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/fatwolf
 	name = "Fat Wolf (Taur)"
 	icon_state = "fatwolf_s"
@@ -69,18 +68,6 @@
 	extra_overlay = "wolf_markings"
 	extra_overlay2 = "wolf_markings_2"
 	//icon_sprite_tag = "wolf2c"
-
-//MTosh 08/01/2020 - CHOMPstation Moved Synth Wolf up under wolf dual-color, and Fat Wolf below Synth Wolf, to better group original vorestation wolf taurs/differentiate from Chompstation Fat Taurs
-/datum/sprite_accessory/tail/taur/wolf/synthwolf
-	name = "SynthWolf dual-color (Taur)"
-	icon_state = "synthwolf_s"
-	extra_overlay = "synthwolf_markings"
-
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
-//Mtosh 08/01/2020 - CHOMPStation changed datum tree from "tail/taur/fatwolf" to "tail/taur/wolf/fatwolf" in order to fix bug involving taur duty vest.
-/datum/sprite_accessory/tail/taur/wolf/fatwolf
-	name = "Fat Wolf (Taur)"
-	icon_state = "fatwolf_s"
 
 /datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
 	name = "Fat Wolf 3-color (Taur)"
@@ -287,7 +274,6 @@
 	suit_sprites = 'icons/mob/taursuits_feline_vr.dmi'
 	icon_sprite_tag = "feline"
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/fatfeline
 	name = "Fat Feline (Taur)"
 	icon_state = "fatfeline_s"
@@ -305,7 +291,6 @@
 	extra_overlay2 = "feline_markings_2"
 	//icon_sprite_tag = "feline2c"
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/feline/fatfeline_2c
 	name = "Fat Feline 3-color (Taur)"
 	icon_state = "fatfeline_s"
