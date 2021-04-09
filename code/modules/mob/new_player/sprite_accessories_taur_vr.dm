@@ -69,23 +69,6 @@
 	extra_overlay2 = "wolf_markings_2"
 	//icon_sprite_tag = "wolf2c"
 
-<<<<<<< HEAD
-//MTosh 08/01/2020 - CHOMPstation Moved Synth Wolf up under wolf dual-color, and Fat Wolf below Synth Wolf, to better group original vorestation wolf taurs/differentiate from Chompstation Fat Taurs
-/datum/sprite_accessory/tail/taur/wolf/synthwolf
-	name = "SynthWolf dual-color (Taur)"
-	icon_state = "synthwolf_s"
-	extra_overlay = "synthwolf_markings"
-
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
-//Mtosh 08/01/2020 - CHOMPStation changed datum tree from "tail/taur/fatwolf" to "tail/taur/wolf/fatwolf" in order to fix bug involving taur duty vest.
-/datum/sprite_accessory/tail/taur/wolf/fatwolf
-	name = "Fat Wolf (Taur)"
-	icon_state = "fatwolf_s"
-
-||||||| parent of f524999b8b... Merge pull request #10103 from VOREStation/Arokha/removesigs
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
-=======
->>>>>>> f524999b8b... Merge pull request #10103 from VOREStation/Arokha/removesigs
 /datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
 	name = "Fat Wolf 3-color (Taur)"
 	icon_state = "fatwolf_s"
