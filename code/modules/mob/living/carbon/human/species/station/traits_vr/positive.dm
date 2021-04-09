@@ -24,8 +24,16 @@
 /datum/trait/hardy_plus
 	name = "Major Hardy"
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
+<<<<<<< HEAD
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.1)
+||||||| parent of 6c7827ade5... Merge pull request #10105 from Novacat/nova-ert
+	cost = 3
+	var_changes = list("item_slowdown_mod" = 0.25)
+=======
+	cost = 2
+	var_changes = list("item_slowdown_mod" = 0.25)
+>>>>>>> 6c7827ade5... Merge pull request #10105 from Novacat/nova-ert
 
 /datum/trait/endurance_high
 	name = "High Endurance"

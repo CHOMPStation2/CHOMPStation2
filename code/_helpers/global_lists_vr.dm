@@ -492,8 +492,17 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		var/datum/trait/instance = new path()
 		if(!instance.name)
 			continue //A prototype or something
+<<<<<<< HEAD
 		var/cost = instance.cost
 		traits_costs[path] = cost
+||||||| parent of 6c7827ade5... Merge pull request #10105 from Novacat/nova-ert
+		var/category = instance.category
+		traits_costs[path] = category
+=======
+		var/category = instance.category
+		var/cost = instance.cost
+		traits_costs[path] = cost
+>>>>>>> 6c7827ade5... Merge pull request #10105 from Novacat/nova-ert
 		all_traits[path] = instance
 		switch(cost)
 			if(-INFINITY to -0.1)
