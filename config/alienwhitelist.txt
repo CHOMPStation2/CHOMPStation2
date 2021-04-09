@@ -18,6 +18,15 @@ hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
+<<<<<<< HEAD
+||||||| parent of a8b775c8d9... Merge pull request #10112 from JoltDerg/master
+khanivore - Protean
+killjaden - Protean
+=======
+joltze - Black-Eyed Shadekin
+khanivore - Protean
+killjaden - Protean
+>>>>>>> a8b775c8d9... Merge pull request #10112 from JoltDerg/master
 ktccd - Diona
 khanivore - Protean
 mewchild - Diona
