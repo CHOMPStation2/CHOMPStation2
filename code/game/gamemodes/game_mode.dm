@@ -316,28 +316,35 @@ var/global/list/additional_antag_types = list()
 	for(var/mob/M in player_list)
 		if(M.client)
 			clients++
+			var/M_area_type = (get_turf(M))?.loc?.type
 			if(ishuman(M))
 				if(M.stat != DEAD)
 					surviving_humans++
-					if(M.loc && M.loc.loc && M.loc.loc.type in escape_locations)
+					if(M_area_type in escape_locations)
 						escaped_humans++
 			if(M.stat != DEAD)
 				surviving_total++
-				if(M.loc && M.loc.loc && M.loc.loc.type in escape_locations)
+				if(M_area_type in escape_locations)
 					escaped_total++
 
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape/centcom)
+				if(M_area_type == /area/shuttle/escape/centcom)
 					escaped_on_shuttle++
 
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod1/centcom)
+				if(M_area_type == /area/shuttle/escape_pod1/centcom)
 					escaped_on_pod_1++
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod2/centcom)
+				if(M_area_type == /area/shuttle/escape_pod2/centcom)
 					escaped_on_pod_2++
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod3/centcom)
+				if(M_area_type == /area/shuttle/escape_pod3/centcom)
 					escaped_on_pod_3++
+<<<<<<< HEAD
 				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod4/centcom) //CHOMP Add
 					escaped_on_pod_4++
 				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod5/centcom)
+||||||| parent of 96804f69c8... Merge pull request #10121 from VOREStation/upstream-merge-8025
+				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod5/centcom)
+=======
+				if(M_area_type == /area/shuttle/escape_pod5/centcom)
+>>>>>>> 96804f69c8... Merge pull request #10121 from VOREStation/upstream-merge-8025
 					escaped_on_pod_5++
 				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod6/centcom) //CHOMP Add
 					escaped_on_pod_6++
