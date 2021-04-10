@@ -377,10 +377,22 @@
 			lethal_shot_sound = 'sound/weapons/eluger.ogg'
 			shot_sound = 'sound/weapons/Taser.ogg'
 
+<<<<<<< HEAD
 /obj/machinery/porta_turret/proc/HasController()
 	var/area/A = get_area(src)
 	return A && A.turret_controls.len > 0
 
+||||||| parent of ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
+		if(/obj/item/weapon/gun/energy/mininglaser)
+			lethal_icon_color = "green"
+			lethal_projectile = /obj/item/projectile/beam/mininglaser
+			lethal_shot_sound = 'sound/weapons/eluger.ogg'
+			icon_color = "red"
+			projectile = /obj/item/projectile/beam/weaklaser
+			shot_sound = 'sound/weapons/Laser.ogg'
+
+=======
+>>>>>>> ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
 /obj/machinery/porta_turret/proc/isLocked(mob/user)
 	if(HasController())
 		return TRUE
@@ -902,7 +914,14 @@
 	var/check_weapons
 	var/check_anomalies
 	var/check_all
+<<<<<<< HEAD
 	var/check_down
+||||||| parent of ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
+	var/check_down
+	var/fire_at_movement
+	var/stay_up
+=======
+>>>>>>> ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
 	var/ailock
 
 /obj/machinery/porta_turret/proc/setState(var/datum/turret_checks/TC)
@@ -918,7 +937,14 @@
 	check_weapons = TC.check_weapons
 	check_anomalies = TC.check_anomalies
 	check_all = TC.check_all
+<<<<<<< HEAD
 	check_down = TC.check_down
+||||||| parent of ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
+	check_down = TC.check_down
+	fire_at_movement = TC.fire_at_movement
+	stay_up = TC.stay_up
+=======
+>>>>>>> ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
 	ailock = TC.ailock
 
 	power_change()
