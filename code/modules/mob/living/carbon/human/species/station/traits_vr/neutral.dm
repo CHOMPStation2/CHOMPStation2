@@ -27,24 +27,15 @@
 	desc = "You are able to withstand much colder temperatures than other species, and can even be comfortable in extremely cold environments. You are also more vulnerable to hot environments, and have a lower body temperature as a consequence of these adaptations."
 	cost = 0
 	var_changes = list("cold_level_1" = 200,  "cold_level_2" = 150, "cold_level_3" = 90, "breath_cold_level_1" = 180, "breath_cold_level_2" = 100, "breath_cold_level_3" = 60, "cold_discomfort_level" = 210, "heat_level_1" = 330, "heat_level_2" = 380, "heat_level_3" = 700, "breath_heat_level_1" = 360, "breath_heat_level_2" = 400, "breath_heat_level_3" = 850, "heat_discomfort_level" = 295, "body_temperature" = 290)
-	excludes = list(/datum/trait/neutral/hotadapt, /datum/trait/neutral/extreme_cold_blood) //CHOMPedit: exclude YW trait
+	excludes = list(/datum/trait/neutral/hotadapt)
 	can_take = ORGANICS // CHOMP edit
-	
-// YW Addition
-/datum/trait/neutral/extreme_cold_blood
-	name = "Extremely Cold-Blooded"
-	desc = "You are too cold at the standard 20C. 24C is more suitable. Wearing clothing that covers your legs and torso helps."
-	cost = 0
-	var_changes = list("cold_discomfort_level" = T0C+24)
-	excludes = list(/datum/trait/neutral/hotadapt, /datum/trait/neutral/coldadapt)
-// YW Addition End
 	
 /datum/trait/neutral/hotadapt
 	name = "Heat-Adapted"
 	desc = "You are able to withstand much hotter temperatures than other species, and can even be comfortable in extremely hot environments. You are also more vulnerable to cold environments, and have a higher body temperature as a consequence of these adaptations."
 	cost = 0
 	var_changes = list("heat_level_1" = 420, "heat_level_2" = 460, "heat_level_3" = 1100, "breath_heat_level_1" = 440, "breath_heat_level_2" = 510, "breath_heat_level_3" = 1500, "heat_discomfort_level" = 390, "cold_level_1" = 280, "cold_level_2" = 220, "cold_level_3" = 140, "breath_cold_level_1" = 260, "breath_cold_level_2" = 240, "breath_cold_level_3" = 120, "cold_discomfort_level" = 280, "body_temperature" = 330)
-	excludes = list(/datum/trait/neutral/coldadapt, /datum/trait/neutral/extreme_cold_blood) //CHOMPedit: exclude YW trait
+	excludes = list(/datum/trait/neutral/coldadapt)
 	can_take = ORGANICS // CHOMP edit
 
 /datum/trait/neutral/autohiss_unathi
