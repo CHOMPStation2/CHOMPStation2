@@ -7,7 +7,7 @@
 
 /datum/event/spider_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + 60)
-	spawncount = rand(12 * severity, 18 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: Tripled amount spawned
+	spawncount = rand(6 * severity, 12 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: Tripled amount spawned
 	sent_spiders_to_station = 0
 
 /datum/event/spider_infestation/announce()
