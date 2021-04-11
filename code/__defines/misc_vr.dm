@@ -65,21 +65,6 @@
 #define MAT_PLASTITANIUM		"plastitanium"
 #define MAT_PLASTITANIUMHULL		"plastitanium hull"
 #define MAT_PLASTITANIUMGLASS	"plastitanium glass"
-<<<<<<< HEAD
-#define MAT_GOLDHULL	"gold hull"
-||||||| parent of 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
-#define MAT_GOLDHULL	"gold hull"
-
-#define RESIZE_HUGE 2
-#define RESIZE_BIG 1.5
-#define RESIZE_NORMAL 1
-#define RESIZE_SMALL 0.5
-#define RESIZE_TINY 0.25
-#define RESIZE_A_HUGEBIG (RESIZE_HUGE + RESIZE_BIG) / 2
-#define RESIZE_A_BIGNORMAL (RESIZE_BIG + RESIZE_NORMAL) / 2
-#define RESIZE_A_NORMALSMALL (RESIZE_NORMAL + RESIZE_SMALL) / 2
-#define RESIZE_A_SMALLTINY (RESIZE_SMALL + RESIZE_TINY) / 2
-=======
 #define MAT_GOLDHULL	"gold hull"
 
 #define RESIZE_MINIMUM 0.25
@@ -96,4 +81,3 @@
 #define RESIZE_A_BIGNORMAL (RESIZE_BIG + RESIZE_NORMAL) / 2
 #define RESIZE_A_NORMALSMALL (RESIZE_NORMAL + RESIZE_SMALL) / 2
 #define RESIZE_A_SMALLTINY (RESIZE_SMALL + RESIZE_TINY) / 2
->>>>>>> 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
