@@ -722,6 +722,22 @@
 	ckeywhitelist = list("pimientopyro")
 	character_name = list("Scylla Casmus")
 
+<<<<<<< HEAD
+||||||| parent of 9512f948fb... Merge pull request #10134 from dwinters99/sorry
+/datum/gear/fluff/kiyoshi_cloak
+	path = /obj/item/clothing/accessory/poncho/fluff/cloakglowing
+	display_name = "glowing cloak"
+	ckeywhitelist = list("pastelprincedan")
+	character_name = list("Kiyoshi Maki", "Masumi Maki")
+
+=======
+/datum/gear/fluff/kiyoshi_cloak
+	path = /obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing
+	display_name = "glowing cloak"
+	ckeywhitelist = list("pastelprincedan")
+	character_name = list("Kiyoshi Maki", "Masumi Maki")
+
+>>>>>>> 9512f948fb... Merge pull request #10134 from dwinters99/sorry
 //  Q CKEYS
 
 //  R CKEYS
