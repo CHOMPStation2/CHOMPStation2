@@ -10,10 +10,10 @@
 
 /datum/topic_state/proc/href_list(var/mob/user)
 	return list()
-
+/* //CHOMPedit: I guess we have nanoUI again? Upstream doesnt.
 /datum/topic_state/proc/can_use_topic(var/src_object, var/mob/user)
 	return STATUS_CLOSE
-
+*/
 /mob/proc/shared_nano_interaction()
 	if (src.stat || !client)
 		return STATUS_CLOSE						// no updates, close the interface
