@@ -47,26 +47,8 @@
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
-/*
-// YW Addition
-/datum/trait/endurance_glass
-	name = "Glass Endurance"
-	desc = "Your body is very fragile. Reduces your maximum hitpoints to 25. Beware sneezes."
-	cost = -4
-	var_changes = list("total_health" = 25)
 
-<<<<<<< HEAD
-	apply(var/datum/species/S,var/mob/living/carbon/human/H)
-		..(S,H)
-		H.setMaxHealth(S.total_health)
-// YW Addition End
-*/
-/datum/trait/minor_brute_weak
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-/datum/trait/minor_brute_weak
-=======
 /datum/trait/negative/minor_brute_weak
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Minor Brute Weakness"
 	desc = "Increases damage from brute damage sources by 10%"
 	cost = -1
@@ -103,31 +85,31 @@
 	var_changes = list("burn_mod" = 1.4)
 
 //YW ADDITIONS START
-/datum/trait/reduced_biocompat
+/datum/trait/negative/reduced_biocompat
 	name = "Reduced Biocompatibility"
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records!"
 	cost = -1
 	var_changes = list("chem_strength_heal" = 0.8)
 
-/datum/trait/sensitive_biochem
+/datum/trait/negative/sensitive_biochem
 	name = "Sensitive Biochemistry"
 	desc = "Your biochemistry is a little delicate, rendering you more susceptible to both deadly toxins and the more subtle ones. You'll probably want to list this in your medical records, and perhaps in your exploitable info as well."
 	cost = -1
 	var_changes = list("chem_strength_tox" = 1.25)
 
-/datum/trait/alcohol_intolerance_advanced
+/datum/trait/negative/alcohol_intolerance_advanced
 	name = "Liver of Air"
 	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = -1
 	var_changes = list("alcohol_mod" = 3)
 	
-/datum/trait/pain_intolerance_basic
+/datum/trait/negative/pain_intolerance_basic
 	name = "Pain Intolerant"
 	desc = "You are frail and sensitive to pain. You experience 25% more pain from all sources." 
 	cost = -1
 	var_changes = list("pain_mod" = 1.25)
 
-/datum/trait/pain_intolerance_advanced
+/datum/trait/negative/pain_intolerance_advanced
 	name = "High Pain Intolerance"
 	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
 	cost = -2
@@ -145,28 +127,8 @@
 	desc = "Increases your susceptibility to electric shocks by 50%"
 	cost = -3
 	var_changes = list("siemens_coefficient" = 1.5) //This makes you significantly weaker to tasers.
-/*
-/datum/trait/conductive_extreme
-	name = "Extremely Conductive"
-	desc = "Increases your susceptibility to electric shocks by 100%"
-<<<<<<< HEAD
-	cost = -4
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-	cost = -2
-=======
-	cost = -1
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
-<<<<<<< HEAD
-*/
-/datum/trait/haemophilia
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-
-/datum/trait/haemophilia
-=======
 
 /datum/trait/negative/haemophilia
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Haemophilia - Organics only"
 	desc = "When you bleed, you bleed a LOT."
 	cost = -2
@@ -189,36 +151,6 @@
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping. Think of it like a bowling ball versus a pin."
 	cost = -2
 	var_changes = list("lightweight" = 1)
-<<<<<<< HEAD
-
-/* YW comment starts
-/datum/trait/colorblind/mono
-	name = "Colorblindness (Monochromancy)"
-	desc = "You simply can't see colors at all, period. You are 100% colorblind."
-	cost = -3
-
-/datum/trait/colorblind/mono/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.add_modifier(/datum/modifier/trait/colorblind_monochrome)
-
-/datum/trait/colorblind/para_vulp
-	name = "Colorblindness (Para Vulp)"
-	desc = "You have a severe issue with green colors and have difficulty recognizing them from red colors."
-	cost = -2
-
-/datum/trait/colorblind/para_vulp/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.add_modifier(/datum/modifier/trait/colorblind_vulp)
-
-/datum/trait/colorblind/para_taj
-	name = "Colorblindness (Para Taj)"
-	desc = "You have a minor issue with blue colors and have difficulty recognizing them from red colors."
-	cost = -2
-
-/datum/trait/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.add_modifier(/datum/modifier/trait/colorblind_taj)
-YW comment finish*/
 
 // YW Addition
 /datum/trait/light_sensitivity
@@ -243,48 +175,10 @@ YW comment finish*/
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 // YW Addition End
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-
-/datum/trait/colorblind/mono
-	name = "Colorblindness (Monochromancy)"
-	desc = "You simply can't see colors at all, period. You are 100% colorblind."
-	cost = -1
-
-/datum/trait/colorblind/mono/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.add_modifier(/datum/modifier/trait/colorblind_monochrome)
-
-/datum/trait/colorblind/para_vulp
-	name = "Colorblindness (Para Vulp)"
-	desc = "You have a severe issue with green colors and have difficulty recognizing them from red colors."
-	cost = -1
-
-/datum/trait/colorblind/para_vulp/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.add_modifier(/datum/modifier/trait/colorblind_vulp)
-
-/datum/trait/colorblind/para_taj
-	name = "Colorblindness (Para Taj)"
-	desc = "You have a minor issue with blue colors and have difficulty recognizing them from red colors."
-	cost = -1
-
-/datum/trait/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
-	H.add_modifier(/datum/modifier/trait/colorblind_taj)
-=======
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	
 /datum/trait/negative/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
 	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."
 	cost = -1
-<<<<<<< HEAD
-	var_changes = list("trauma_mod" = 2)	//CHOMPEdit. Some dingus at virgo didn't test their stuff. Some other dingus let this get through.
-
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-	var_changes = list("trauma_mod" = 2)
-	
-=======
 	var_changes = list("trauma_mod" = 2)
 	can_take = ORGANICS
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
