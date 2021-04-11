@@ -96,20 +96,8 @@
 	var/ignoring_prefs = (target == firer ? TRUE : FALSE) // Resizing yourself
 	
 	if(istype(M))
-<<<<<<< HEAD
-		if(!M.in_dorms() || !istype(M, /mob/living/carbon/human))
-			if(!M.resize(clamp(set_size,0.25,2)))
-				to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
-		else
-			if(!M.resize(clamp(set_size,0.01,6)))
-				to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
-||||||| parent of 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
-		if(!M.resize(set_size))
-			to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
-=======
 		if(!M.resize(set_size, uncapped = M.has_large_resize_bounds(), ignore_prefs = ignoring_prefs))
 			to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
->>>>>>> 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
 		M.updateicon()
 		return
 	return 1
@@ -118,15 +106,7 @@
 	var/mob/living/M = target
 	
 	if(istype(M))
-<<<<<<< HEAD
-		M.resize(set_size, TRUE, FALSE)
-||||||| parent of 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
-		M.resize(set_size, TRUE, TRUE)
-		if(set_size >= RESIZE_TINY && set_size <= RESIZE_HUGE)
-			M.size_uncapped = FALSE
-		M.size_uncapped = TRUE
-=======
-
+  
 		var/can_be_big = M.has_large_resize_bounds()
 		var/very_big = is_extreme_size(set_size)
 
@@ -141,7 +121,6 @@
 		
 		M.resize(set_size, uncapped = TRUE, ignoring_prefs = TRUE) // Always ignores prefs, caution is advisable
 
->>>>>>> 44088ebce8... Merge pull request #10092 from VOREStation/Arokha/resizepref
 		to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
 		M.updateicon()
 		return
