@@ -50,7 +50,7 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list("Sinta'unathi"))
-	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_vassilian) //YW edit: exclude vassillian hiss
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -61,7 +61,7 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/autohiss_unathi, /datum/trait/autohiss_vassilian) //YW edit: exclude vassillian hiss
+	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
 
 // YW addition
 /datum/trait/neutral/autohiss_vassilian
@@ -78,7 +78,7 @@
         "r" = list("rk")
 	),
 	autohiss_exempt = list("Vespinae"))
-	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_unathi)
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
 // YW Addition end
 
 /datum/trait/neutral/bloodsucker
@@ -87,7 +87,7 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("organic_food_coeff" = 0) //The verb is given in human.dm
-	excludes = list(/datum/trait/bloodsucker_plus) //YW edit
+	excludes = list(/datum/trait/positive/bloodsucker_plus) //YW edit
 
 /datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
