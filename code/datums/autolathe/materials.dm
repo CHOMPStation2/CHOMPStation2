@@ -1,6 +1,6 @@
 /datum/category_item/autolathe/materials
 	is_stack = TRUE
-	no_scale = TRUE // Prevents material duplaction exploits
+	no_scale = TRUE //Prevents material duplication exploits
 
 /datum/category_item/autolathe/materials/New(var/loc, var/mat)
 	if(istype(mat, /obj/item/stack/material))
@@ -18,6 +18,6 @@
 		path = S
 	. = ..()
 
-/datum/category_item/autolathe/materials/rods // Not strictly a material, so they need their own define
+/datum/category_item/autolathe/materials/rods //Not strictly a material, so they need their own define
 	name = "metal rods"
 	path =/obj/item/stack/rods
