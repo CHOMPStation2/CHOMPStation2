@@ -6,8 +6,16 @@
 	name = T_BOARD("point defense battery")
 	board_type = new /datum/frame/frame_types/machine
 	desc = "Control systems for a Kuiper pattern point defense battery. Aim away from vessel."
+<<<<<<< HEAD
 	build_path = /obj/machinery/pointdefense
 	origin_tech = list(TECH_ENGINEERING = 3, TECH_COMBAT = 2, TECH_POWER  = 2)
+||||||| parent of 09ec1f8f90... Merge pull request #10131 from Novacat/nova-ert
+	build_path = /obj/machinery/pointdefense
+	origin_tech = list(TECH_ENGINEERING = 3, TECH_COMBAT = 2)
+=======
+	build_path = /obj/machinery/power/pointdefense
+	origin_tech = list(TECH_ENGINEERING = 3, TECH_COMBAT = 2)
+>>>>>>> 09ec1f8f90... Merge pull request #10131 from Novacat/nova-ert
 	req_components = list(
 		/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser = 1,
 		/obj/item/weapon/stock_parts/manipulator = 2,
