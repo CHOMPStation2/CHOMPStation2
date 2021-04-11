@@ -172,7 +172,7 @@
 	desc = "Makes you able to gain nutrition by draining blood as well as eating food. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 1
 	var_changes = list("organic_food_coeff" = 0.5) // Hopefully this works???
-	excludes = list(/datum/trait/positive/bloodsucker)
+	excludes = list(/datum/trait/neutral/bloodsucker)
 
 /datum/trait/positive/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
