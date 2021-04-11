@@ -89,8 +89,8 @@
 			vermstring = "lizards"
 		if(VERM_SPIDERS)
 			spawn_types = list(/obj/effect/spider/spiderling)
-			min_number = 6 //CHOMP Add
-			max_number = 12 //CHOMP edit
+			min_number = 4 //CHOMP Add
+			max_number = 8 //CHOMP edit
 			vermstring = "spiders"
 
 	spawn(0)
