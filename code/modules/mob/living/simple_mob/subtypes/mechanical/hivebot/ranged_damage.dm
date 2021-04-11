@@ -88,9 +88,9 @@
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
 
 
-/* Close to mid-ranged shooter that arcs over other things, ideal if allies are in front of it.
- Difference from siege hivebots is that siege hivebots have limited charges for their attacks, are very long range, and
- the projectiles have an AoE component, where as backline hivebots do not. */
+// Close to mid-ranged shooter that arcs over other things, ideal if allies are in front of it.
+// Difference from siege hivebots is that siege hivebots have limited charges for their attacks, are very long range, and
+// the projectiles have an AoE component, where as backline hivebots do not.
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline
 	name = "backline hivebot"
 	desc = "A robot that can fire short-ranged projectiles over their allies."

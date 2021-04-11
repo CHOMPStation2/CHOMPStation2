@@ -1,6 +1,3 @@
-GLOBAL_LIST_EMPTY(size_uncapped_mobs)
-GLOBAL_VAR(size_uncapped_mobs_timer)
-
 // Adding needed defines to /mob/living
 // Note: Polaris had this on /mob/living/carbon/human We need it higher up for animals and stuff.
 /mob/living
@@ -49,57 +46,40 @@ GLOBAL_VAR(size_uncapped_mobs_timer)
 /mob/living/get_effective_size()
 	return size_multiplier
 
-/**
- * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
- * It can be used by anything that calls it.
- */
-
 /atom/movable/proc/size_range_check(size_select)		//both objects and mobs needs to have that
 	var/area/A = get_area(src) //Get the atom's area to check for size limit.
 	if((A.limit_mob_size && (size_select > 200 || size_select < 25)) || (size_select > 600 || size_select <1))
 		return FALSE
 	return TRUE
 
-/proc/add_to_uncapped_list(var/mob/living/L)
-	if(L.size_uncapped)
-		return
-	if(!GLOB.size_uncapped_mobs.len)
-		GLOB.size_uncapped_mobs_timer = addtimer(CALLBACK(GLOBAL_PROC, .check_uncapped_list), 2 SECONDS, TIMER_LOOP | TIMER_UNIQUE | TIMER_STOPPABLE)
-	GLOB.size_uncapped_mobs |= weakref(L)
+/atom/movable/proc/has_large_resize_bounds()
+	var/area/A = get_area(src) //Get the atom's area to check for size limit.
+	return !A.limit_mob_size
 
-/proc/remove_from_uncapped_list(var/mob/living/L)
-	if(!GLOB.size_uncapped_mobs.len)
-		return
+/proc/is_extreme_size(size)
+	return (size < RESIZE_MINIMUM || size > RESIZE_MAXIMUM)
 
-	GLOB.size_uncapped_mobs -= weakref(L)
 
-	if(!GLOB.size_uncapped_mobs.len)
-		deltimer(GLOB.size_uncapped_mobs_timer)
-		GLOB.size_uncapped_mobs_timer = null
+/**
+ * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
+ * It can be used by anything that calls it.
+ */
 
-/proc/check_uncapped_list()
-	for(var/weakref/wr in GLOB.size_uncapped_mobs)
-		var/mob/living/L = wr.resolve()
-		var/area/A = get_area(L)
-		if(!istype(L))
-			GLOB.size_uncapped_mobs -= wr
-			continue
-		
-		if((A.limit_mob_size && !L.size_uncapped) && (L.size_multiplier <= RESIZE_TINY || L.size_multiplier >= RESIZE_HUGE))
-			L.resize(L.size_multiplier)
-			GLOB.size_uncapped_mobs -= wr
 
-	if(!GLOB.size_uncapped_mobs.len)
-		deltimer(GLOB.size_uncapped_mobs_timer)
-		GLOB.size_uncapped_mobs_timer = null
-
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE)
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
 	if(!uncapped)
-		new_size = clamp(new_size, RESIZE_TINY, RESIZE_HUGE)
-		src.size_uncapped = FALSE
-		remove_from_uncapped_list(src)
-	else
-		add_to_uncapped_list(src)
+		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
+		var/datum/component/resize_guard/guard = GetComponent(/datum/component/resize_guard)
+		if(guard)
+			qdel(guard)
+	else if(has_large_resize_bounds())
+		if(is_extreme_size(new_size))
+			AddComponent(/datum/component/resize_guard)
+		else
+			var/datum/component/resize_guard/guard = GetComponent(/datum/component/resize_guard)
+			if(guard)
+				qdel(guard)
+	
 	if(size_multiplier == new_size)
 		return 1
 
@@ -130,8 +110,8 @@ GLOBAL_VAR(size_uncapped_mobs_timer)
 	else
 		update_transform() //Lame way
 
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE)
-	if(!resizable)
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
+	if(!resizable && !ignore_prefs)
 		return 1
 	if(species)
 		vis_height = species.icon_height
@@ -144,7 +124,7 @@ GLOBAL_VAR(size_uncapped_mobs_timer)
 			apply_hud(index, HI)
 
 // Optimize mannequins - never a point to animating or doing HUDs on these.
-/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE)
+/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
 	size_multiplier = new_size
 
 /**

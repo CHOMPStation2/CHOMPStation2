@@ -65,3 +65,20 @@
 	icon_state = "sergwheat"
 	extra_overlay = "sergwheat_markings"
 
+/datum/sprite_accessory/tail/taur/wolf/fatsynthwolf
+	name = "Fat SynthWolf dual-color (Taur)"
+	icon_state = "fatsynthwolf_s"
+	extra_overlay = "fatsynthwolf_markings"
+	extra_overlay2 = "fatsynthwolf_glow"
+
+/datum/sprite_accessory/tail/taur/lizard/fatsynthlizard
+	name = "Fat SynthLizard dual-color (Taur)"
+	icon_state = "fatsynthlizard_s"
+	extra_overlay = "fatsynthlizard_markings"
+	extra_overlay2 = "fatsynthlizard_glow"
+
+/datum/sprite_accessory/tail/taur/feline/fatsynthfeline
+	name = "Fat SynthFeline dual-color (Taur)"
+	icon_state = "fatsynthfeline_s"
+	extra_overlay = "fatsynthfeline_markings"
+	extra_overlay2 = "fatsynthfeline_glow"
