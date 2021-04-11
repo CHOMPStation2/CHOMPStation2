@@ -3,7 +3,8 @@
 	var/digestable = TRUE				// Can the mob be digested inside a belly?
 	var/devourable = TRUE				// Can the mob be devoured at all?
 	var/feeding = TRUE					// Can the mob be vorishly force fed or fed to others?
-	var/absorbable = TRUE				// Are you allowed to absorb this person? TFF addition 14/12/19
+	var/absorbable = TRUE				// Are you allowed to absorb this person?
+	var/resizable = TRUE				// Can other people resize you? (Usually ignored for self-resizes)
 	var/digest_leave_remains = FALSE	// Will this mob leave bones/skull/etc after the melty demise?
 	var/allowmobvore = TRUE				// Will simplemobs attempt to eat the mob?
 	var/showvoreprefs = TRUE			// Determines if the mechanical vore preferences button will be displayed on the mob or not.
@@ -208,12 +209,12 @@
 
 	return TRUE
 
-/mob/living/proc/apply_vore_prefs()
+/mob/living/proc/apply_vore_prefs(var/full_vorgans = FALSE) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 	if(!client || !client.prefs_vr)
 		return FALSE
 	if(!client.prefs_vr.load_vore())
 		return FALSE
-	if(!copy_from_prefs_vr())
+	if(!copy_from_prefs_vr(full_vorgans = full_vorgans)) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 		return FALSE
 
 	return TRUE
@@ -228,7 +229,8 @@
 	P.digestable = src.digestable
 	P.devourable = src.devourable
 	P.feeding = src.feeding
-	P.absorbable = src.absorbable	//TFF 14/12/19 - choose whether allowing absorbing
+	P.absorbable = src.absorbable
+	P.resizable = src.resizable
 	P.digest_leave_remains = src.digest_leave_remains
 	P.allowmobvore = src.allowmobvore
 	P.vore_taste = src.vore_taste
@@ -259,7 +261,7 @@
 //
 //	Proc for applying vore preferences, given bellies
 //
-/mob/living/proc/copy_from_prefs_vr(var/bellies = TRUE)
+/mob/living/proc/copy_from_prefs_vr(var/bellies = TRUE, var/full_vorgans = FALSE) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 	if(!client || !client.prefs_vr)
 		to_chat(src,"<span class='warning'>You attempted to apply your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>")
 		return FALSE
@@ -269,7 +271,8 @@
 	digestable = P.digestable
 	devourable = P.devourable
 	feeding = P.feeding
-	absorbable = P.absorbable	//TFF 14/12/19 - choose whether allowing absorbing
+	absorbable = P.absorbable
+	resizable = P.resizable
 	digest_leave_remains = P.digest_leave_remains
 	allowmobvore = P.allowmobvore
 	vore_taste = P.vore_taste
@@ -291,7 +294,8 @@
 		vore_organs.Cut()
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
-			break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
+			if(!full_vorgans) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
+				break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
 
 	return TRUE
 
@@ -706,7 +710,6 @@
 				to_chat(src, "<span class='notice'>You can taste the flavor of garbage and leftovers. Delicious?</span>")
 			else
 				to_chat(src, "<span class='notice'>You can taste the flavor of gluttonous waste of food.</span>")
-		//TFF 10/7/19 - Add custom flavour for collars for trash can trait.
 		else if (istype(I,/obj/item/clothing/accessory/collar))
 			visible_message("<span class='warning'>[src] demonstrates their voracious capabilities by swallowing [I] whole!</span>")
 			to_chat(src, "<span class='notice'>You can taste the submissiveness in the wearer of [I]!</span>")
