@@ -296,12 +296,6 @@
 
 	var/obj/item/stack/material/matstack = held
 	var/substance = matstack.material.name
-<<<<<<< HEAD
-	var/list/edible_materials = list(MAT_STEEL) //Can't eat all materials, just useful ones. CHOMP EDIT: Only steel
-||||||| parent of 516416c027... Merge pull request #10097 from Meghan-Rossi/proteanfix
-	var/list/edible_materials = list(MAT_STEEL, MAT_SILVER, MAT_GOLD, MAT_URANIUM, MAT_METALHYDROGEN) //Can't eat all materials, just useful ones.
-=======
->>>>>>> 516416c027... Merge pull request #10097 from Meghan-Rossi/proteanfix
 	var allowed = FALSE
 	for(var/material in PROTEAN_EDIBLE_MATERIALS)
 		if(material == substance) allowed = TRUE
