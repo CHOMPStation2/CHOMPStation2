@@ -30,16 +30,8 @@
 		"wizard's cloak"	= "wizard_cloak"
 		)
 
-<<<<<<< HEAD
-	/* Some spell-specific variables go here, since spells themselves are temporary.  Cores are more long term and more accessable than
-	 mind datums.  It may also allow creative players to try to pull off a 'soul jar' scenario. */
-||||||| parent of a923324c11... Merge pull request #10083 from VOREStation/Arokha/langserver
-	// Some spell-specific variables go here, since spells themselves are temporary.  Cores are more long term and more accessable than \
-	// mind datums.  It may also allow creative players to try to pull off a 'soul jar' scenario.
-=======
 	// Some spell-specific variables go here, since spells themselves are temporary.  Cores are more long term and more accessable than
 	// mind datums.  It may also allow creative players to try to pull off a 'soul jar' scenario.
->>>>>>> a923324c11... Merge pull request #10083 from VOREStation/Arokha/langserver
 	var/list/summoned_mobs = list()	// Maintained horribly with maintain_summon_list().
 	var/list/wards_in_use = list()	// Wards don't count against the cap for other summons.
 	var/max_summons = 10			// Maximum allowed summoned entities.  Some cores will have different caps.
