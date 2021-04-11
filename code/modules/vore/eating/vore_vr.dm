@@ -46,7 +46,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/digestable = TRUE
 	var/devourable = TRUE
 	var/absorbable = TRUE
-	var/resizable = TRUE
+	var/feeding = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
 	var/digest_leave_remains = FALSE
