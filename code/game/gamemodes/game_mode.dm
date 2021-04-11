@@ -336,23 +336,17 @@ var/global/list/additional_antag_types = list()
 					escaped_on_pod_2++
 				if(M_area_type == /area/shuttle/escape_pod3/centcom)
 					escaped_on_pod_3++
-<<<<<<< HEAD
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod4/centcom) //CHOMP Add
+				if(M_area_type == /area/shuttle/escape_pod4/centcom) //CHOMP Add
 					escaped_on_pod_4++
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod5/centcom)
-||||||| parent of 96804f69c8... Merge pull request #10121 from VOREStation/upstream-merge-8025
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod5/centcom)
-=======
 				if(M_area_type == /area/shuttle/escape_pod5/centcom)
->>>>>>> 96804f69c8... Merge pull request #10121 from VOREStation/upstream-merge-8025
 					escaped_on_pod_5++
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/escape_pod6/centcom) //CHOMP Add
+				if(M_area_type == /area/shuttle/escape_pod6/centcom) //CHOMP Add
 					escaped_on_pod_6++
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/large_escape_pod1/centcom) //CHOMP Add
+				if(M_area_type == /area/shuttle/large_escape_pod1/centcom) //CHOMP Add
 					escaped_on_pod_large_1++
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/large_escape_pod2/centcom) //CHOMP Add
+				if(M_area_type == /area/shuttle/large_escape_pod2/centcom) //CHOMP Add
 					escaped_on_pod_large_2++
-				if(M.loc && M.loc.loc && M.loc.loc.type == /area/shuttle/cryo/centcom) //CHOMP Add
+				if(M_area_type == /area/shuttle/cryo/centcom) //CHOMP Add
 					escaped_on_cryopod++
 				
 
