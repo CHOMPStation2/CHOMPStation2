@@ -3,21 +3,21 @@
 #endif
 
 /datum/trait/negative/hollow
-	excludes = list(/datum/trait/densebones)
+	excludes = list(/datum/trait/positive/densebones)
 
 /datum/trait/negative/slipperydirt
 	name = "Dirt Vulnerability"
 	desc = "Even the tiniest particles of dirt give you uneasy footing, even through several layers of footwear."
 	cost = -5
 	var_changes = list("dirtslip" = TRUE)
-	excludes = list(/datum/trait/absorbent)
+	excludes = list(/datum/trait/positive/absorbent)
 
 /datum/trait/negative/less_blood
 	name = "Low blood volume"
 	desc = "You have 33.3% less blood volume compared to most species, making you more prone to blood loss issues."
 	cost = -3
 	var_changes = list("blood_volume" = 375)
-	excludes = list(/datum/trait/less_blood_extreme,/datum/trait/more_blood,/datum/trait/more_blood_extreme)
+	excludes = list(/datum/trait/negative/less_blood_extreme,/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme)
 	can_take = ORGANICS
 
 /datum/trait/negative/less_blood_extreme
@@ -25,7 +25,7 @@
 	desc = "You have 60% less blood volume compared to most species, making you much more prone to blood loss issues."
 	cost = -5
 	var_changes = list("blood_volume" = 224)
-	excludes = list(/datum/trait/less_blood,/datum/trait/more_blood,/datum/trait/more_blood_extreme)
+	excludes = list(/datum/trait/negative/less_blood,/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme)
 	can_take = ORGANICS
 
 /datum/trait/negative/scrawny
@@ -151,7 +151,7 @@
 	var/hallucination_cap = 25
 	var/escalation_speed = 0.8
 	special_env = TRUE
-	excludes = list(/datum/trait/lonely,/datum/trait/lonely/major)
+	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/lonely/major)
 
 /datum/trait/negative/agoraphobia/handle_environment_special(var/mob/living/carbon/human/H)
 	spawn(0)
@@ -266,7 +266,7 @@
 	var/hallucination_cap = 25
 	var/escalation_speed = 0.8
 	special_env = TRUE
-	excludes = list(/datum/trait/lonely/major,/datum/trait/agoraphobia)
+	excludes = list(/datum/trait/negative/lonely/major,/datum/trait/negative/agoraphobia)
 
 /datum/trait/negative/lonely/major
 	name = "Major loneliness vulnerability"
@@ -277,7 +277,7 @@
 	escalation_speed = 1.3
 	only_people = TRUE
 	special_env = TRUE
-	excludes = list(/datum/trait/lonely,/datum/trait/agoraphobia)
+	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/agoraphobia)
 
 /datum/trait/negative/lonely/proc/sub_loneliness(var/mob/living/carbon/human/H,var/amount = 4)
 	H.loneliness_stage = max(H.loneliness_stage - 4, 0)
