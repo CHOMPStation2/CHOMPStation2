@@ -22,79 +22,28 @@
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
 	excludes = list(/datum/trait/neutral/metabolism_up, /datum/trait/neutral/metabolism_down)
 
-<<<<<<< HEAD
-/datum/trait/hot_blood
-	name = "Hot-Blooded"
-	desc = "You are too hot at the standard 20C. 18C is more suitable. Rolling down your jumpsuit or being unclothed helps."
-	cost = 0
-	var_changes = list("heat_discomfort_level" = T0C+19)
-	excludes = list(/datum/trait/cold_blood, /datum/trait/extreme_cold_blood)
-
-// YW Addition
-/datum/trait/alcohol_intolerance_basic
-	name = "Liver of Lilies"
-	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
-	cost = 0
-	var_changes = list("alcohol_mod" = 2)
-
-/datum/trait/alcohol_tolerance_basic
-	name = "Liver of Iron"
-	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr! You may wish to note this down in your medical records."
-	cost = 0
-	var_changes = list("alcohol_mod" = 0.75)
-
-/*
-/datum/trait/cryogenic
-	name = "Cryogenic Metabolism"
-	desc = "Your body requires near cryogenic temperatures to operate. Extremely intricate arrangements are needed for you to remain indoors. The outdoors is comfortable for you, however. WARNING: You will spawn in an atmosphere that is VERY hostile to you with no protective equipment!"
-	cost = 0
-	var_changes = list("heat_discomfort_level" = T0C)
-	excludes = list(/datum/trait/hot_blood,/datum/trait/cold_blood,/datum/trait/extreme_cold_blood)
-*/
-// YW Addition End
-
-/datum/trait/cold_blood
-	name = "Cold-Blooded"
-	desc = "You are too cold at the standard 20C. 22C is more suitable. Wearing clothing that covers your legs and torso helps."
-	cost = 0
-	var_changes = list("cold_discomfort_level" = T0C+21)
-	excludes = list(/datum/trait/hot_blood, /datum/trait/extreme_cold_blood)
-
-// YW Addition
-/datum/trait/extreme_cold_blood
-	name = "Extremely Cold-Blooded"
-	desc = "You are too cold at the standard 20C. 24C is more suitable. Wearing clothing that covers your legs and torso helps."
-	cost = 0
-	var_changes = list("cold_discomfort_level" = T0C+24)
-	excludes = list(/datum/trait/hot_blood, /datum/trait/cold_blood)
-// YW Addition End
-
-/* YW Commented out will be moved to Positive/Negative for map balance
-/datum/trait/coldadapt
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-/datum/trait/coldadapt
-=======
 /datum/trait/neutral/coldadapt
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	name = "Cold-Adapted"
 	desc = "You are able to withstand much colder temperatures than other species, and can even be comfortable in extremely cold environments. You are also more vulnerable to hot environments, and have a lower body temperature as a consequence of these adaptations."
 	cost = 0
 	var_changes = list("cold_level_1" = 200,  "cold_level_2" = 150, "cold_level_3" = 90, "breath_cold_level_1" = 180, "breath_cold_level_2" = 100, "breath_cold_level_3" = 60, "cold_discomfort_level" = 210, "heat_level_1" = 330, "heat_level_2" = 380, "heat_level_3" = 700, "breath_heat_level_1" = 360, "breath_heat_level_2" = 400, "breath_heat_level_3" = 850, "heat_discomfort_level" = 295, "body_temperature" = 290)
-	excludes = list(/datum/trait/neutral/hotadapt)
-
+	excludes = list(/datum/trait/neutral/hotadapt, /datum/trait/neutral/extreme_cold_blood) //CHOMPedit: exclude YW trait
+	
+// YW Addition
+/datum/trait/neutral/extreme_cold_blood
+	name = "Extremely Cold-Blooded"
+	desc = "You are too cold at the standard 20C. 24C is more suitable. Wearing clothing that covers your legs and torso helps."
+	cost = 0
+	var_changes = list("cold_discomfort_level" = T0C+24)
+	excludes = list(/datum/trait/neutral/hotadapt, /datum/trait/neutral/coldadapt)
+// YW Addition End
+	
 /datum/trait/neutral/hotadapt
 	name = "Heat-Adapted"
 	desc = "You are able to withstand much hotter temperatures than other species, and can even be comfortable in extremely hot environments. You are also more vulnerable to cold environments, and have a higher body temperature as a consequence of these adaptations."
 	cost = 0
 	var_changes = list("heat_level_1" = 420, "heat_level_2" = 460, "heat_level_3" = 1100, "breath_heat_level_1" = 440, "breath_heat_level_2" = 510, "breath_heat_level_3" = 1500, "heat_discomfort_level" = 390, "cold_level_1" = 280, "cold_level_2" = 220, "cold_level_3" = 140, "breath_cold_level_1" = 260, "breath_cold_level_2" = 240, "breath_cold_level_3" = 120, "cold_discomfort_level" = 280, "body_temperature" = 330)
-<<<<<<< HEAD
-	excludes = list(/datum/trait/coldadapt)
-YW change end */
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-	excludes = list(/datum/trait/coldadapt)
-=======
-	excludes = list(/datum/trait/neutral/coldadapt)
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	excludes = list(/datum/trait/neutral/coldadapt, /datum/trait/neutral/extreme_cold_blood) //CHOMPedit: exclude YW trait
 
 /datum/trait/neutral/autohiss_unathi
 	name = "Autohiss (Unathi)"
@@ -108,15 +57,7 @@ YW change end */
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list("Sinta'unathi"))
-<<<<<<< HEAD
-	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_vassilian)
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-
-	excludes = list(/datum/trait/autohiss_tajaran)
-=======
-
-	excludes = list(/datum/trait/neutral/autohiss_tajaran)
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_vassilian) //YW edit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -127,11 +68,10 @@ YW change end */
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
-<<<<<<< HEAD
-	excludes = list(/datum/trait/autohiss_unathi, /datum/trait/autohiss_vassilian)
+	excludes = list(/datum/trait/autohiss_unathi, /datum/trait/autohiss_vassilian) //YW edit: exclude vassillian hiss
 
 // YW addition
-/datum/trait/autohiss_vassilian
+/datum/trait/neutral/autohiss_vassilian
 	name = "Autohiss (Vassilian)"
 	desc = "You buzz your S's, F's, Th's, and R's."
 	cost = 0
@@ -147,25 +87,10 @@ YW change end */
 	autohiss_exempt = list("Vespinae"))
 	excludes = list(/datum/trait/autohiss_tajaran, /datum/trait/autohiss_unathi)
 // YW Addition end
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-	excludes = list(/datum/trait/autohiss_unathi)
-=======
-	excludes = list(/datum/trait/neutral/autohiss_unathi)
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 
-<<<<<<< HEAD
-/datum/trait/bloodsucker
-	name = "Minor Bloodsucker"
-	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-/datum/trait/bloodsucker
-	name = "Bloodsucker"
-	desc = "Makes you unable to gain nutrition from anything but blood. To compenstate, you get fangs that can be used to drain blood from prey."
-=======
 /datum/trait/neutral/bloodsucker
-	name = "Bloodsucker"
+	name = "Minor Bloodsucker" //YW edit
 	desc = "Makes you unable to gain nutrition from anything but blood. To compenstate, you get fangs that can be used to drain blood from prey."
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("organic_food_coeff" = 0) //The verb is given in human.dm
@@ -197,16 +122,8 @@ YW change end */
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/slime_feed
 
-<<<<<<< HEAD
-/datum/trait/hard_vore
-	name = "Hard Vore" //CHOMPedit Renamed Brutal Predation to Hard Vore, because some people don't know what this actually does
-||||||| parent of 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
-/datum/trait/hard_vore
-	name = "Brutal Predation"
-=======
 /datum/trait/neutral/hard_vore
-	name = "Brutal Predation"
->>>>>>> 3a2afe6c44... Merge pull request #10033 from Novacat/nova-heterochromia
+	name = "Hard Vore" //CHOMPedit Renamed Brutal Predation to Hard Vore, because some people don't know what this actually does
 	desc = "Allows you to tear off limbs & tear out internal organs."
 	cost = 0
 	custom_only = FALSE
@@ -388,8 +305,7 @@ YW change end */
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("spice_mod" = 0.25) // 25% as effective if spice_mod is set to 1. If it's not 1 in species.dm, update this!
-
-/*YW CHANGE START: Commented out because we got our own variants	
+	
 // Alcohol Traits Start Here, from negative to positive.
 /datum/trait/neutral/alcohol_intolerance_advanced
 	name = "Liver of Air"
@@ -433,7 +349,6 @@ YW change end */
 	custom_only = FALSE
 	var_changes = list("alcohol_mod" = 0.25) // 25% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
 // Alcohol Traits End Here.
-YW CHANGE STOP*/
 
 /datum/trait/neutral/colorblind/mono
 	name = "Colorblindness (Monochromancy)"
