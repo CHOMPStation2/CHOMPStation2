@@ -45,13 +45,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	//Actual preferences
 	var/digestable = TRUE
 	var/devourable = TRUE
-<<<<<<< HEAD
-||||||| parent of 867ad3c601... Merge pull request #10101 from VOREStation/Arokha/prefbits
-	var/resizable = TRUE
-=======
 	var/absorbable = TRUE
->>>>>>> 867ad3c601... Merge pull request #10101 from VOREStation/Arokha/prefbits
-	var/feeding = TRUE
+	var/resizable = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
 	var/digest_leave_remains = FALSE
@@ -63,21 +58,16 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/step_mechanics_pref = FALSE
 	var/pickup_pref = TRUE
 
-<<<<<<< HEAD
-
 	//CHOMP stuff
 	var/receive_reagents = FALSE
 	var/give_reagents = FALSE
 	var/latejoin_vore = FALSE
+  //CHOMP stuff end
 
-
-||||||| parent of 867ad3c601... Merge pull request #10101 from VOREStation/Arokha/prefbits
-=======
 	var/list/belly_prefs = list()
 	var/vore_taste = "nothing in particular"
 	var/vore_smell = "nothing in particular"
 
->>>>>>> 867ad3c601... Merge pull request #10101 from VOREStation/Arokha/prefbits
 	//Mechanically required
 	var/path
 	var/slot
@@ -141,6 +131,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 
 	digestable = json_from_file["digestable"]
 	devourable = json_from_file["devourable"]
+	resizable = json_from_file["resizable"]
 	feeding = json_from_file["feeding"]
 	absorbable = json_from_file["absorbable"]
 	digest_leave_remains = json_from_file["digest_leave_remains"]
@@ -167,6 +158,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		digestable = TRUE
 	if(isnull(devourable))
 		devourable = TRUE
+	if(isnull(resizable))
+		resizable = TRUE
 	if(isnull(feeding))
 		feeding = TRUE
 	if(isnull(absorbable))
@@ -209,6 +202,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"version"				= version,
 			"digestable"			= digestable,
 			"devourable"			= devourable,
+			"resizable"				= resizable,
 			"absorbable"			= absorbable,
 			"feeding"				= feeding,
 			"digest_leave_remains"	= digest_leave_remains,
