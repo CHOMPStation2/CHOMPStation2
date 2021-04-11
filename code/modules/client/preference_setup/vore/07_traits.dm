@@ -227,7 +227,7 @@
 		var/datum/trait/trait = text2path(href_list["clicked_pos_trait"])
 		var/choice = alert("Remove [initial(trait.name)] and regain [initial(trait.cost)] points?","Remove Trait","Remove","Cancel")
 		if(choice == "Remove")
-			if(traitpath == /datum/trait/linguist)					//CHOMPEdit
+			if(traitpath == /datum/trait/positive/linguist)					//CHOMPEdit
 				pref.num_languages = 0								//CHOMPEdit
 			pref.pos_traits -= trait
 		return TOPIC_REFRESH
@@ -367,7 +367,7 @@
 				alert("You cannot take this trait and [conflict] at the same time. \
 				Please remove that trait, or pick another trait to add.","Error")
 				return TOPIC_REFRESH
-			if(path==/datum/trait/linguist)	//CHOMPEdit
+			if(path==/datum/trait/positive/linguist)	//CHOMPEdit
 				pref.num_languages = 12		//CHOMPEdit
 			mylist += path
 			return TOPIC_REFRESH
