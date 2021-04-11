@@ -4,7 +4,7 @@
     set category = "Fun"
     if(!check_rights(R_ADMIN, R_FUN))
         return
-    
+
     var/size_multiplier = input(usr, "Input size multiplier.", "Resize", 1) as num|null
     if(!size_multiplier)
         return //cancelled
