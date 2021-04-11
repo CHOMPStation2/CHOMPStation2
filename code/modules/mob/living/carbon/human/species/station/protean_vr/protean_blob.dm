@@ -269,22 +269,9 @@
 	if(refactory && istype(A,/obj/item/stack/material))
 		var/obj/item/stack/material/S = A
 		var/substance = S.material.name
-<<<<<<< HEAD
-		var/list/edible_materials = list(MAT_STEEL) //Can't eat all materials, just useful ones.
-		var/allowed = FALSE //CHOMP Edit
-		for(var/material in edible_materials)
-			if(material == substance) 
-				allowed = TRUE
-||||||| parent of 516416c027... Merge pull request #10097 from Meghan-Rossi/proteanfix
-		var/list/edible_materials = list("steel", "plasteel", "diamond", "mhydrogen") //Can't eat all materials, just useful ones.
-		var allowed = FALSE
-		for(var/material in edible_materials)
-			if(material == substance) allowed = TRUE
-=======
 		var allowed = FALSE
 		for(var/material in PROTEAN_EDIBLE_MATERIALS)
 			if(material == substance) allowed = TRUE
->>>>>>> 516416c027... Merge pull request #10097 from Meghan-Rossi/proteanfix
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
@@ -312,18 +299,8 @@
 	if(refactory && istype(O,/obj/item/stack/material))
 		var/obj/item/stack/material/S = O
 		var/substance = S.material.name
-<<<<<<< HEAD
-		var/list/edible_materials = list("steel") //Can't eat all materials, just useful ones. CHOMP EDIT: Only steel
-		var/allowed = FALSE //CHOMP Edit
-		for(var/material in edible_materials)
-||||||| parent of 516416c027... Merge pull request #10097 from Meghan-Rossi/proteanfix
-		var/list/edible_materials = list("steel", "plasteel", "diamond", "mhydrogen") //Can't eat all materials, just useful ones.
-		var allowed = FALSE
-		for(var/material in edible_materials)
-=======
 		var allowed = FALSE
 		for(var/material in PROTEAN_EDIBLE_MATERIALS)
->>>>>>> 516416c027... Merge pull request #10097 from Meghan-Rossi/proteanfix
 			if(material == substance) allowed = TRUE
 		if(!allowed)
 			return
