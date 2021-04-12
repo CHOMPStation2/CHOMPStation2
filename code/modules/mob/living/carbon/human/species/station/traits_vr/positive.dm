@@ -48,13 +48,13 @@
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark and 10% more susceptible to flashes." //CHOMP Edit
 	cost = 1
-	var_changes = list("darksight" = 5, "flash_mod" = 1.1)
+	var_changes = list("darksight" = 3)  //CHOMP Edit
 
 /datum/trait/positive/darksight_plus
 	name = "Darksight (Major)"
 	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
-	var_changes = list("darksight" = 8, "flash_mod" = 1.2)
+	var_changes = list("darksight" = 6)  //CHOMP Edit
 
 /datum/trait/positive/melee_attack
 	name = "Sharp Melee"
