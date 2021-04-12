@@ -48,9 +48,19 @@
 /datum/species/custom/get_race_key()
 	var/datum/species/real = GLOB.all_species[base_species]
 	return real.race_key
+<<<<<<< HEAD
   
 /datum/species/custom/produceCopy(var/list/traits,var/mob/living/carbon/human/H,var/custom_base)
 	. = ..(traits, H)
+||||||| parent of 0ff4f543b8... Merge pull request #10145 from Verkister/traitfixies
+
+/datum/species/custom/produceCopy(var/list/traits,var/mob/living/carbon/human/H,var/custom_base)
+	. = ..(traits, H)
+=======
+
+/datum/species/custom/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base)
+	. = ..(traits, H, custom_base)
+>>>>>>> 0ff4f543b8... Merge pull request #10145 from Verkister/traitfixies
 	if(selects_bodytype && custom_base)
 		var/datum/species/S = GLOB.all_species[custom_base]
 		S.copy_variables(., copy_vars)
