@@ -34,25 +34,25 @@
 
 /datum/trait/positive/nonconductive
 	name = "Non-Conductive"
-	desc = "Decreases your susceptibility to electric shocks by a 10% amount."
-	cost = 1 //This effects tasers!
-	var_changes = list("siemens_coefficient" = 0.9)
+	desc = "Decreases your susceptibility to electric shocks by a 25% amount." //CHOMP Edit
+	cost = 2 //This effects tasers!
+	var_changes = list("siemens_coefficient" = 0.75) //CHOMP Edit
 
 /datum/trait/positive/nonconductive_plus
 	name = "Major Non-Conductive"
-	desc = "Decreases your susceptibility to electric shocks by a 25% amount."
-	cost = 2 //Let us not forget this effects tasers!
-	var_changes = list("siemens_coefficient" = 0.75)
+	desc = "Decreases your susceptibility to electric shocks by a 50% amount." //CHOMP Edit
+	cost = 3 //Let us not forget this effects tasers!
+	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
 
 /datum/trait/positive/darksight
 	name = "Darksight"
-	desc = "Allows you to see a short distance in the dark."
+	desc = "Allows you to see a short distance in the dark and 10% more susceptible to flashes." //CHOMP Edit
 	cost = 1
 	var_changes = list("darksight" = 5, "flash_mod" = 1.1)
 
 /datum/trait/positive/darksight_plus
 	name = "Darksight (Major)"
-	desc = "Allows you to see in the dark for almost the whole screen."
+	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
 	var_changes = list("darksight" = 8, "flash_mod" = 1.2)
 
@@ -76,29 +76,29 @@
 
 /datum/trait/positive/minor_brute_resist
 	name = "Minor Brute Resist"
-	desc = "Adds 15% resistance to brute damage sources."
-	cost = 2
-	var_changes = list("brute_mod" = 0.85)
+	desc = "Adds 10% resistance to brute damage sources." //CHOMP Edit
+	cost = 1 //CHOMP Edit
+	var_changes = list("brute_mod" = 0.9) //CHOMP Edit
 
 /datum/trait/positive/brute_resist
 	name = "Brute Resist"
-	desc = "Adds 25% resistance to brute damage sources."
-	cost = 3
-	var_changes = list("brute_mod" = 0.75)
-	excludes = list(/datum/trait/positive/minor_burn_resist,/datum/trait/positive/burn_resist)
+	desc = "Adds 20% resistance to brute damage sources." //CHOMP Edit
+	cost = 2 //CHOMP Edit
+	var_changes = list("brute_mod" = 0.8) //CHOMP Edit
+	//excludes = list(/datum/trait/positive/minor_burn_resist,/datum/trait/positive/burn_resist) //CHOMP disable, this is already handled in positive_ch.dm
 
 /datum/trait/positive/minor_burn_resist
 	name = "Minor Burn Resist"
-	desc = "Adds 15% resistance to burn damage sources."
-	cost = 2
-	var_changes = list("burn_mod" = 0.85)
+	desc = "Adds 10% resistance to burn damage sources." //CHOMP Edit
+	cost = 1 //CHOMP Edit
+	var_changes = list("burn_mod" = 0.9) //CHOMP Edit
 
 /datum/trait/positive/burn_resist
 	name = "Burn Resist"
-	desc = "Adds 25% resistance to burn damage sources."
-	cost = 3
-	var_changes = list("burn_mod" = 0.75)
-	excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist)
+	desc = "Adds 20% resistance to burn damage sources." //CHOMP Edit
+	cost = 2 //CHOMP Edit
+	var_changes = list("burn_mod" = 0.8) //CHOMP Edit
+	//excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist) //CHOMP disable, this is already handled in positive_ch.dm
 	
 //YW ADDITIONS START
 /datum/trait/positive/improved_biocompat
@@ -118,9 +118,9 @@
 
 /datum/trait/positive/photoresistant
 	name = "Photoresistant"
-	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 20%"
+	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%" //CHOMP Edit
 	cost = 1
-	var_changes = list("flash_mod" = 0.8)
+	var_changes = list("flash_mod" = 0.75) //CHOMP Edit
 
 //YW add
 /datum/trait/positive/photoresistant_plus
@@ -143,7 +143,7 @@
 /datum/trait/positive/hardfeet
 	name = "Hard Feet"
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
-	cost = 0
+	cost = 1 //CHOMP Edit
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
 
 //CHOMPStation Removal Start
