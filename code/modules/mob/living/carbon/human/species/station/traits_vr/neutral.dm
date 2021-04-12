@@ -83,7 +83,7 @@
 
 /datum/trait/neutral/bloodsucker
 	name = "Minor Bloodsucker" //YW edit
-	desc = "Makes you unable to gain nutrition from anything but blood. To compenstate, you get fangs that can be used to drain blood from prey."
+	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("organic_food_coeff" = 0) //The verb is given in human.dm
