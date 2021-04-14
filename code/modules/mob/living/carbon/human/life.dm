@@ -1754,6 +1754,7 @@
 			holder2.icon_state = "huddead"
 		else if(foundVirus)
 			holder.icon_state = "hudill"
+/* Start Chomp edit
 		else if(has_brain_worms())
 			var/mob/living/simple_mob/animal/borer/B = has_brain_worms()
 			if(B.controlling)
@@ -1761,13 +1762,13 @@
 			else
 				holder.icon_state = "hudhealthy"
 			holder2.icon_state = "hudbrainworm"
+End Chomp edit */
 		else
 			holder.icon_state = "hudhealthy"
 			if(virus2.len)
 				holder2.icon_state = "hudill"
 			else
 				holder2.icon_state = "hudhealthy"
-
 		apply_hud(STATUS_HUD, holder)
 		apply_hud(STATUS_HUD_OOC, holder2)
 
