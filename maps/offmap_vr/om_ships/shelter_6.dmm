@@ -347,12 +347,18 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "ah" = (
-/obj/structure/fans/hardlight,
+/obj/structure/fans/hardlight{
+	explosion_resistance = 100
+	},
 /obj/machinery/door/blast/regular{
 	destroy_hits = 1000;
+	explosion_resistance = 200;
 	id = "tabi-hangar1"
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/simulated/floor/reinforced{
+	explosion_resistance = 200
+	},
 /area/shuttle/tabiranth)
 "ai" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -502,189 +508,28 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "ay" = (
-/obj/machinery/smartfridge/survival_pod,
-/obj/item/clothing/under/ert,
-/obj/item/clothing/under/ert,
-/obj/item/clothing/under/ert,
-/obj/item/clothing/under/ert,
-/obj/item/clothing/under/ert,
-/obj/item/clothing/under/ert,
-/obj/item/weapon/storage/box/survival/comp{
-	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
+/obj/structure/fans/hardlight{
+	explosion_resistance = 100
 	},
-/obj/item/weapon/storage/box/survival/comp{
-	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
+/obj/machinery/door/blast/regular{
+	destroy_hits = 1000;
+	explosion_resistance = 200;
+	id = "tabi-hangar2"
 	},
-/obj/item/weapon/storage/box/survival/comp{
-	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/simulated/floor/reinforced{
+	explosion_resistance = 200
 	},
-/obj/item/weapon/storage/box/survival/comp{
-	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
-	},
-/obj/item/weapon/storage/box/survival/comp{
-	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
-	},
-/obj/item/weapon/storage/box/survival/comp{
-	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
-	},
-/obj/item/device/perfect_tele,
-/obj/item/weapon/storage/belt/utility/chief/full,
-/obj/item/weapon/storage/belt/utility/chief/full,
-/obj/item/weapon/storage/belt/utility/chief/full,
-/obj/item/weapon/storage/belt/utility/chief/full,
-/obj/item/weapon/storage/belt/security/tactical,
-/obj/item/weapon/storage/belt/security/tactical,
-/obj/item/weapon/storage/belt/security/tactical,
-/obj/item/weapon/storage/belt/security/tactical,
-/obj/item/weapon/storage/belt/medical/emt,
-/obj/item/weapon/storage/belt/medical/emt,
-/obj/item/weapon/storage/belt/medical/emt,
-/obj/item/weapon/storage/belt/medical/emt,
-/obj/item/weapon/storage/backpack/ert/commander,
-/obj/item/weapon/storage/backpack/ert/engineer,
-/obj/item/weapon/storage/backpack/ert/engineer,
-/obj/item/weapon/storage/backpack/ert/medical,
-/obj/item/weapon/storage/backpack/ert/medical,
-/obj/item/weapon/storage/backpack/ert/security,
-/obj/item/weapon/storage/backpack/ert/security,
-/obj/item/weapon/storage/backpack/ert/security,
-/obj/item/weapon/storage/backpack/ert/security,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/weapon/gun/projectile/pistol,
-/obj/item/weapon/gun/projectile/pistol,
-/obj/item/weapon/gun/projectile/pistol,
-/obj/item/ammo_magazine/m9mm/compact,
-/obj/item/ammo_magazine/m9mm/compact,
-/obj/item/ammo_magazine/m9mm/compact,
-/obj/item/ammo_magazine/m9mm/compact,
-/obj/item/ammo_magazine/m9mm/compact,
-/obj/item/ammo_magazine/m9mm/compact,
-/obj/item/ammo_magazine/m9mm/compact/flash,
-/obj/item/ammo_magazine/m9mm/compact/flash,
-/obj/item/ammo_magazine/m9mm/compact/flash,
-/obj/item/ammo_magazine/m9mm/compact/rubber,
-/obj/item/ammo_magazine/m9mm/compact/rubber,
-/obj/item/ammo_magazine/m9mm/compact/rubber,
-/obj/item/ammo_magazine/m9mm/compact/practice,
-/obj/item/ammo_magazine/m9mm/compact/practice,
-/obj/item/ammo_magazine/m9mm/compact/practice,
-/obj/item/clothing/glasses/thermal,
-/obj/item/clothing/glasses/thermal,
-/obj/item/clothing/glasses/graviton,
-/obj/item/clothing/glasses/graviton,
-/obj/item/clothing/glasses/graviton,
-/obj/item/clothing/glasses/graviton,
-/obj/item/clothing/glasses/graviton,
-/obj/item/clothing/glasses/graviton,
-/obj/item/clothing/glasses/night,
-/obj/item/clothing/glasses/night,
-/obj/item/clothing/glasses/night,
-/obj/item/clothing/glasses/night,
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/clothing/mask/gas/half,
-/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
-/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
-/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
-/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
-/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
-/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
-/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
-/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
-/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
-/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
-/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
-/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxurybar,
-/obj/item/device/survivalcapsule/luxurybar,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/clothing/suit/space/void/refurb/officer,
-/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
-/obj/item/weapon/gun/magnetic/railgun/automatic,
-/obj/item/weapon/gun/magnetic/railgun/automatic,
-/turf/simulated/floor/tiled/white,
-/area/shuttle/tabiranth)
-"aA" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/air{
-	start_pressure = 8559.63
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
-/turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aB" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/air{
-	start_pressure = 8559.63
+/obj/machinery/portable_atmospherics/canister/oxygen{
+	start_pressure = 15000
 	},
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/techfloor{
+	dir = 1
 	},
+/obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aC" = (
@@ -702,46 +547,25 @@
 /turf/simulated/floor/bluegrid,
 /area/shuttle/tabiranth)
 "aD" = (
-/obj/structure/fans/hardlight,
-/obj/machinery/door/airlock/alien/blue/locked{
-	req_one_access = list(101)
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air{
+	start_pressure = 15000
 	},
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "tabiranth_airlock";
-	name = "exterior access button";
-	pixel_x = -5;
-	pixel_y = -26
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
 	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aE" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1380
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air{
+	start_pressure = 15000
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "tabiranth_airlock";
-	pixel_y = -32;
-	req_one_access = list(101)
+/obj/machinery/light{
+	dir = 4
 	},
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	pixel_y = 25
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/obj/machinery/light/small{
-	icon_state = "bulb1";
-	dir = 1
-	},
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
@@ -782,12 +606,23 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aH" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/machinery/mech_recharger,
-/obj/effect/floor_decal/techfloor{
-	dir = 1
+/obj/structure/fans/hardlight{
+	explosion_resistance = 100
 	},
-/obj/effect/floor_decal/techfloor,
+/obj/machinery/door/airlock/alien/blue/locked{
+	explosion_resistance = 200;
+	req_one_access = list(101)
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1380;
+	master_tag = "tabiranth_airlock";
+	name = "exterior access button";
+	pixel_x = -5;
+	pixel_y = -26
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/floor_decal/industrial/danger/full,
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aI" = (
@@ -840,11 +675,40 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aK" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "tabiranth_airlock";
+	pixel_y = -32;
+	req_one_access = list(101)
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	pixel_y = 25
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/light/small{
+	icon_state = "bulb1";
+	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/shuttle/tabiranth)
+"aL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/structure/fans/hardlight,
+/obj/structure/fans/hardlight{
+	explosion_resistance = 100
+	},
 /obj/machinery/door/airlock/alien/blue/locked{
+	explosion_resistance = 200;
 	req_one_access = list(101)
 	},
 /obj/machinery/access_button{
@@ -855,14 +719,18 @@
 	pixel_y = 26
 	},
 /obj/effect/map_helper/airlock/door/int_door,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
-"aL" = (
+"aM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/structure/fans/hardlight,
+/obj/structure/fans/hardlight{
+	explosion_resistance = 100
+	},
 /obj/machinery/door/airlock/alien/blue/locked{
+	explosion_resistance = 200;
 	req_one_access = list(101)
 	},
 /obj/machinery/access_button{
@@ -873,16 +741,40 @@
 	pixel_y = 26
 	},
 /obj/effect/map_helper/airlock/door/int_door,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/tabiranth)
-"aM" = (
-/turf/simulated/floor/reinforced/airless{
-	name = "outer hull"
-	},
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aN" = (
 /obj/machinery/sleeper/survival_pod,
 /turf/simulated/floor/tiled/white,
+/area/shuttle/tabiranth)
+"aO" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8;
+	frequency = 1380
+	},
+/obj/machinery/light/small{
+	icon_state = "bulb1";
+	dir = 1
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	pixel_y = 25
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "tabiranth_docker";
+	pixel_y = -32;
+	req_one_access = list(101)
+	},
+/obj/effect/shuttle_landmark/shuttle_initializer/tabiranth,
+/obj/effect/overmap/visitable/ship/landable/tabiranth,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aP" = (
 /obj/machinery/telecomms/allinone,
@@ -1037,16 +929,24 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/tabiranth)
 "aT" = (
-/obj/machinery/shipsensors{
-	dir = 1;
-	health = 1000;
-	heat_reduction = 4.5;
-	max_health = 1000;
-	name = "military sensors suite"
+/obj/structure/fans/hardlight{
+	explosion_resistance = 100
 	},
-/turf/simulated/floor/reinforced/airless{
-	name = "outer hull"
+/obj/machinery/door/airlock/alien/blue/locked{
+	explosion_resistance = 200;
+	req_one_access = list(101)
 	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1380;
+	master_tag = "tabiranth_docker";
+	name = "exterior access button";
+	pixel_x = 5;
+	pixel_y = -26
+	},
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "aU" = (
 /obj/machinery/chemical_dispenser/ert/specialops,
@@ -1167,126 +1067,74 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/tabiranth)
 "bj" = (
-/obj/machinery/smartfridge/survival_pod,
-/obj/item/clothing/suit/space/void/merc/fire,
-/obj/item/clothing/head/helmet/space/void/merc/fire,
-/obj/item/clothing/suit/space/void/merc,
-/obj/item/clothing/suit/space/void/merc,
-/obj/item/clothing/head/helmet/space/void/merc,
-/obj/item/clothing/head/helmet/space/void/merc,
-/obj/item/clothing/suit/space/void/merc/odst,
-/obj/item/clothing/suit/space/void/merc/odst,
-/obj/item/clothing/head/helmet/space/void/merc/odst,
-/obj/item/clothing/head/helmet/space/void/merc/odst,
-/obj/item/clothing/suit/space/void/security/fluff/hos,
-/obj/item/clothing/head/helmet/space/void/security/fluff/hos,
-/obj/item/clothing/head/helmet/space/void/captain,
-/obj/item/clothing/suit/space/void/captain,
-/obj/item/weapon/tank/oxygen/yellow,
-/obj/item/weapon/tank/oxygen/yellow,
-/obj/item/weapon/tank/oxygen/yellow,
-/obj/item/weapon/tank/oxygen/yellow,
-/obj/item/weapon/tank/vox,
-/obj/item/weapon/tank/vox,
-/obj/item/rig_module/chem_dispenser/injector/advanced,
-/obj/item/rig_module/vision/multi,
-/obj/item/weapon/rig/military/equipped,
-/obj/item/weapon/rig/pmc/commander,
-/obj/item/weapon/rig/pmc/medical,
-/obj/item/weapon/rig/pmc/engineer,
-/obj/item/weapon/rig/pmc/security,
-/obj/item/weapon/rig/pmc/security,
-/obj/item/weapon/rig/light/ninja,
-/obj/item/weapon/gun/energy/modular/cannon,
-/obj/item/weapon/gun/energy/modular/carbine,
-/obj/item/weapon/gun/energy/modular/pistol,
-/obj/item/weapon/gun/energy/medigun,
-/obj/item/weapon/gun/energy/captain,
-/obj/item/weapon/material/knife/machete/deluxe{
-	default_material = "durasteel"
+/obj/structure/handrail{
+	dir = 8
 	},
-/obj/item/clothing/accessory/holster/machete,
-/obj/item/weapon/storage/firstaid/combat,
-/obj/item/weapon/storage/firstaid/combat,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
-/obj/item/weapon/storage/box/syndie_kit/demolitions_super_heavy{
-	name = "Super Heavy Demolitions kit"
+/turf/simulated/shuttle/wall/voidcraft/blue{
+	name = "small craft wall";
+	stripe_color = "#45b3d8"
 	},
-/obj/item/weapon/storage/box/syndie_kit/demolitions_heavy{
-	name = "Heavy Demolitions kit"
+/area/shuttle/tabiranth)
+"bk" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
 	},
-/obj/item/weapon/storage/box/syndie_kit/demolitions_heavy{
-	name = "Heavy Demolitions kit"
+/obj/structure/closet/secure_closet/wall{
+	anchored = 1;
+	density = 0;
+	pixel_x = 32;
+	req_access = list(101)
 	},
-/obj/item/weapon/storage/box/syndie_kit/demolitions_heavy{
-	name = "Heavy Demolitions kit"
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/tabiranth)
+"bl" = (
+/obj/machinery/power/smes/buildable/hybrid{
+	input_level = 200000;
+	output_level = 200000
 	},
-/obj/item/weapon/plastique,
-/obj/item/weapon/plastique,
-/obj/item/weapon/plastique,
-/obj/item/weapon/plastique,
-/obj/item/weapon/plastique,
-/obj/item/weapon/plastique,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hybrid_combat,
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hybrid,
-/obj/item/ammo_casing/microbattery/medical/corpse_mend,
-/obj/item/ammo_casing/microbattery/medical/corpse_mend,
-/obj/item/weapon/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
+/obj/structure/cable/cyan{
+	icon_state = "0-4"
 	},
-/obj/item/weapon/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/tabiranth)
+"bm" = (
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/obj/item/weapon/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
+/obj/machinery/power/terminal{
+	dir = 8
 	},
-/obj/item/weapon/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/tabiranth)
+"bn" = (
+/obj/machinery/pointdefense_control{
+	id_tag = "tabiranth_pd"
 	},
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/slime_extract/pink,
-/obj/item/weapon/deadringer,
-/obj/item/weapon/deadringer,
-/obj/item/stack/telecrystal{
-	amount = 240
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/tabiranth)
+"bo" = (
+/obj/structure/closet/medical_wall{
+	pixel_x = -32
 	},
-/obj/item/stack/telecrystal{
-	amount = 240
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/storage/box/gloves,
+/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner";
+	pixel_x = 2;
+	pixel_y = 2
 	},
+<<<<<<< HEAD
 /obj/item/stack/telecrystal{
 	amount = 240
 	},
@@ -1508,6 +1356,234 @@
 	name = "Surgery Cleaner";
 	pixel_x = 2;
 	pixel_y = 2
+||||||| parent of 7001747cc3... Merge pull request #10157 from Novacat/nova-ert
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/device/survivalcapsule/military,
+/obj/item/device/survivalcapsule/military,
+/obj/item/device/survivalcapsule/escapepod,
+/obj/item/weapon/technomancer_catalog/universal,
+/obj/item/weapon/technomancer_core/universal,
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/device/radio/uplink,
+/obj/item/device/radio/uplink,
+/obj/item/device/spaceflare,
+/obj/item/device/spaceflare,
+/obj/item/device/healthanalyzer/phasic,
+/obj/item/device/bluespaceradio/tether_prelinked,
+/obj/item/weapon/cat_box,
+/obj/item/weapon/cat_box,
+/obj/item/weapon/cat_box/black,
+/obj/item/weapon/cat_box/black,
+/obj/item/weapon/disposable_teleporter,
+/obj/item/weapon/hand_tele,
+/obj/item/weapon/storage/belt,
+/obj/item/weapon/storage/belt/medical/alien,
+/obj/item/weapon/storage/belt/utility/alien,
+/obj/item/weapon/storage/belt/holding,
+/obj/item/weapon/rig/ert/assetprotection,
+/obj/item/weapon/rig/ert/assetprotection,
+/obj/item/weapon/gun/energy/pulse_rifle,
+/obj/item/weapon/gun/energy/pulse_rifle,
+/obj/item/weapon/gun/energy/pulse_rifle,
+/obj/item/weapon/gun/energy/pulse_rifle,
+/obj/item/weapon/gun/projectile/automatic/l6_saw,
+/obj/item/weapon/gun/projectile/automatic/l6_saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/weapon/gun/projectile/automatic/z8,
+/obj/item/weapon/gun/projectile/automatic/z8,
+/obj/item/weapon/gun/projectile/heavysniper,
+/obj/item/weapon/storage/box/sniperammo,
+/obj/item/weapon/storage/box/sniperammo,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/weapon/storage/box/sniperammo,
+/obj/item/weapon/storage/box/sniperammo,
+/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
+/obj/item/modular_computer/tablet/preset/custom_loadout/hybrid,
+/obj/item/device/perfect_tele/alien,
+/obj/item/device/perfect_tele/frontier/staff,
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/item/weapon/inducer/hybrid,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/weapon/circuitboard/machine/abductor/core/hybrid,
+/obj/item/weapon/circuitboard/machine/abductor/core/hybrid,
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/tabiranth)
+"bk" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/structure/closet/secure_closet/wall{
+	anchored = 1;
+	density = 0;
+	pixel_x = 32;
+	req_access = list(101)
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/tabiranth)
+"bl" = (
+/obj/machinery/power/smes/buildable/hybrid{
+	input_level = 200000;
+	output_level = 200000
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/tabiranth)
+"bm" = (
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/tabiranth)
+"bn" = (
+/obj/machinery/pointdefense_control{
+	id_tag = "tabiranth_pd"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/tabiranth)
+"bo" = (
+/obj/structure/closet/medical_wall{
+	pixel_x = -32
+	},
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/weapon/storage/box/gloves,
+/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner";
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner";
+	pixel_x = 2;
+	pixel_y = 2
+=======
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner";
+	pixel_x = 2;
+	pixel_y = 2
+>>>>>>> 7001747cc3... Merge pull request #10157 from Novacat/nova-ert
 	},
 /obj/item/device/mmi/digital/posibrain,
 /obj/item/device/mmi,
@@ -1568,32 +1644,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/tabiranth)
 "bt" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1380
-	},
-/obj/machinery/light/small{
-	icon_state = "bulb1";
-	dir = 1
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1380;
-	pixel_y = 25
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "tabiranth_docker";
-	pixel_y = -32;
-	req_one_access = list(101)
-	},
-/obj/effect/shuttle_landmark/shuttle_initializer/tabiranth,
-/obj/effect/overmap/visitable/ship/landable/tabiranth,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/handrail{
-	dir = 1
+	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/reinforced/airless{
+	name = "outer hull"
+	},
 /area/shuttle/tabiranth)
 "bu" = (
 /obj/machinery/computer/ship/engines{
@@ -1702,7 +1758,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/tabiranth)
 "bG" = (
-/obj/machinery/ion_engine,
+/obj/machinery/ion_engine{
+	generated_thrust = 5
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/tabiranth)
 "bH" = (
@@ -1735,20 +1793,165 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/tabiranth)
 "bJ" = (
-/obj/structure/fans/hardlight,
-/obj/machinery/door/airlock/alien/blue/locked{
-	req_one_access = list(101)
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/weapon/storage/box/survival/comp{
+	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
 	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "tabiranth_docker";
-	name = "exterior access button";
-	pixel_x = 5;
-	pixel_y = -26
+/obj/item/weapon/storage/box/survival/comp{
+	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/item/weapon/storage/box/survival/comp{
+	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
+	},
+/obj/item/weapon/storage/box/survival/comp{
+	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
+	},
+/obj/item/weapon/storage/box/survival/comp{
+	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
+	},
+/obj/item/weapon/storage/box/survival/comp{
+	starts_with = list(/obj/item/weapon/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/weapon/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/weapon/tank/emergency/oxygen/engi)
+	},
+/obj/item/device/perfect_tele,
+/obj/item/weapon/storage/belt/utility/chief/full,
+/obj/item/weapon/storage/belt/utility/chief/full,
+/obj/item/weapon/storage/belt/utility/chief/full,
+/obj/item/weapon/storage/belt/utility/chief/full,
+/obj/item/weapon/storage/belt/security/tactical,
+/obj/item/weapon/storage/belt/security/tactical,
+/obj/item/weapon/storage/belt/security/tactical,
+/obj/item/weapon/storage/belt/security/tactical,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/backpack/ert/commander,
+/obj/item/weapon/storage/backpack/ert/engineer,
+/obj/item/weapon/storage/backpack/ert/engineer,
+/obj/item/weapon/storage/backpack/ert/medical,
+/obj/item/weapon/storage/backpack/ert/medical,
+/obj/item/weapon/storage/backpack/ert/security,
+/obj/item/weapon/storage/backpack/ert/security,
+/obj/item/weapon/storage/backpack/ert/security,
+/obj/item/weapon/storage/backpack/ert/security,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/cell/hyper,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/weapon/gun/projectile/pistol,
+/obj/item/weapon/gun/projectile/pistol,
+/obj/item/weapon/gun/projectile/pistol,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/ammo_magazine/m9mm/compact/flash,
+/obj/item/ammo_magazine/m9mm/compact/flash,
+/obj/item/ammo_magazine/m9mm/compact/flash,
+/obj/item/ammo_magazine/m9mm/compact/rubber,
+/obj/item/ammo_magazine/m9mm/compact/rubber,
+/obj/item/ammo_magazine/m9mm/compact/rubber,
+/obj/item/ammo_magazine/m9mm/compact/practice,
+/obj/item/ammo_magazine/m9mm/compact/practice,
+/obj/item/ammo_magazine/m9mm/compact/practice,
+/obj/item/clothing/glasses/thermal,
+/obj/item/clothing/glasses/thermal,
+/obj/item/clothing/glasses/graviton,
+/obj/item/clothing/glasses/graviton,
+/obj/item/clothing/glasses/graviton,
+/obj/item/clothing/glasses/graviton,
+/obj/item/clothing/glasses/graviton,
+/obj/item/clothing/glasses/graviton,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/obj/item/device/binoculars,
+/obj/item/device/binoculars,
+/obj/item/device/binoculars,
+/obj/item/device/binoculars,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite,
+/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
+/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
+/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
+/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
+/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
+/obj/item/modular_computer/tablet/preset/custom_loadout/elite,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule,
+/obj/item/device/survivalcapsule/luxury,
+/obj/item/device/survivalcapsule/luxury,
+/obj/item/device/survivalcapsule/luxury,
+/obj/item/device/survivalcapsule/luxury,
+/obj/item/device/survivalcapsule/luxury,
+/obj/item/device/survivalcapsule/luxury,
+/obj/item/device/survivalcapsule/luxury,
+/obj/item/device/survivalcapsule/luxury,
+/obj/item/device/survivalcapsule/luxurybar,
+/obj/item/device/survivalcapsule/luxurybar,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/clothing/suit/space/void/refurb/officer,
+/turf/simulated/floor/tiled/white,
 /area/shuttle/tabiranth)
 "bK" = (
 /obj/structure/handrail{
@@ -1761,6 +1964,19 @@
 	},
 /obj/effect/catwalk_plated/white,
 /turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/tabiranth)
+"bL" = (
+/obj/machinery/shipsensors{
+	dir = 1;
+	health = 1000;
+	heat_reduction = 4.5;
+	max_health = 1000;
+	name = "military sensors suite"
+	},
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/simulated/floor/reinforced/airless{
+	name = "outer hull"
+	},
 /area/shuttle/tabiranth)
 "bM" = (
 /obj/machinery/door/airlock/alien/blue{
@@ -1799,13 +2015,292 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
-"wz" = (
-/obj/structure/fans/hardlight,
-/obj/machinery/door/blast/regular{
-	destroy_hits = 1000;
-	id = "tabi-hangar2"
+"bP" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/clothing/suit/space/void/merc/fire,
+/obj/item/clothing/head/helmet/space/void/merc/fire,
+/obj/item/clothing/suit/space/void/merc,
+/obj/item/clothing/suit/space/void/merc,
+/obj/item/clothing/head/helmet/space/void/merc,
+/obj/item/clothing/head/helmet/space/void/merc,
+/obj/item/clothing/suit/space/void/merc/odst,
+/obj/item/clothing/suit/space/void/merc/odst,
+/obj/item/clothing/head/helmet/space/void/merc/odst,
+/obj/item/clothing/head/helmet/space/void/merc/odst,
+/obj/item/clothing/suit/space/void/security/fluff/hos,
+/obj/item/clothing/head/helmet/space/void/security/fluff/hos,
+/obj/item/clothing/head/helmet/space/void/captain,
+/obj/item/clothing/suit/space/void/captain,
+/obj/item/weapon/tank/oxygen/yellow,
+/obj/item/weapon/tank/oxygen/yellow,
+/obj/item/weapon/tank/oxygen/yellow,
+/obj/item/weapon/tank/oxygen/yellow,
+/obj/item/weapon/tank/vox,
+/obj/item/weapon/tank/vox,
+/obj/item/rig_module/chem_dispenser/injector/advanced,
+/obj/item/rig_module/vision/multi,
+/obj/item/weapon/rig/military/equipped,
+/obj/item/weapon/rig/pmc/commander,
+/obj/item/weapon/rig/pmc/medical,
+/obj/item/weapon/rig/pmc/engineer,
+/obj/item/weapon/rig/pmc/security,
+/obj/item/weapon/rig/pmc/security,
+/obj/item/weapon/rig/light/ninja,
+/obj/item/weapon/gun/energy/modular/cannon,
+/obj/item/weapon/gun/energy/modular/carbine,
+/obj/item/weapon/gun/energy/modular/pistol,
+/obj/item/weapon/gun/energy/medigun,
+/obj/item/weapon/gun/energy/captain,
+/obj/item/weapon/material/knife/machete/deluxe{
+	default_material = "durasteel"
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/item/clothing/accessory/holster/machete,
+/obj/item/weapon/storage/firstaid/combat,
+/obj/item/weapon/storage/firstaid/combat,
+/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/weapon/storage/box/syndie_kit/demolitions_super_heavy{
+	name = "Super Heavy Demolitions kit"
+	},
+/obj/item/weapon/storage/box/syndie_kit/demolitions_heavy{
+	name = "Heavy Demolitions kit"
+	},
+/obj/item/weapon/storage/box/syndie_kit/demolitions_heavy{
+	name = "Heavy Demolitions kit"
+	},
+/obj/item/weapon/storage/box/syndie_kit/demolitions_heavy{
+	name = "Heavy Demolitions kit"
+	},
+/obj/item/weapon/plastique,
+/obj/item/weapon/plastique,
+/obj/item/weapon/plastique,
+/obj/item/weapon/plastique,
+/obj/item/weapon/plastique,
+/obj/item/weapon/plastique,
+/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hybrid_combat,
+/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hybrid,
+/obj/item/ammo_casing/microbattery/medical/corpse_mend,
+/obj/item/ammo_casing/microbattery/medical/corpse_mend,
+/obj/item/weapon/cell/slime{
+	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
+	icon = 'icons/obj/power.dmi';
+	icon_state = "icell";
+	maxcharge = 20000;
+	name = "slime core cell"
+	},
+/obj/item/weapon/cell/slime{
+	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
+	icon = 'icons/obj/power.dmi';
+	icon_state = "icell";
+	maxcharge = 20000;
+	name = "slime core cell"
+	},
+/obj/item/weapon/cell/slime{
+	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
+	icon = 'icons/obj/power.dmi';
+	icon_state = "icell";
+	maxcharge = 20000;
+	name = "slime core cell"
+	},
+/obj/item/weapon/cell/slime{
+	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
+	icon = 'icons/obj/power.dmi';
+	icon_state = "icell";
+	maxcharge = 20000;
+	name = "slime core cell"
+	},
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/slime_extract/pink,
+/obj/item/weapon/deadringer,
+/obj/item/weapon/deadringer,
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/stack/telecrystal{
+	amount = 240
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card{
+	mine_points = 50000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/weapon/card/mining_point_card/survey{
+	name = "survey point card";
+	survey_points = 5000
+	},
+/obj/item/device/survivalcapsule/military,
+/obj/item/device/survivalcapsule/military,
+/obj/item/device/survivalcapsule/escapepod,
+/obj/item/weapon/technomancer_catalog/universal,
+/obj/item/weapon/technomancer_core/universal,
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/weapon/storage/secure/briefcase/money{
+	desc = "An sleek tidy briefcase.";
+	name = "secure briefcase"
+	},
+/obj/item/device/radio/uplink,
+/obj/item/device/radio/uplink,
+/obj/item/device/spaceflare,
+/obj/item/device/spaceflare,
+/obj/item/device/healthanalyzer/phasic,
+/obj/item/device/bluespaceradio/tether_prelinked,
+/obj/item/weapon/cat_box,
+/obj/item/weapon/cat_box,
+/obj/item/weapon/cat_box/black,
+/obj/item/weapon/cat_box/black,
+/obj/item/weapon/disposable_teleporter,
+/obj/item/weapon/hand_tele,
+/obj/item/weapon/storage/belt,
+/obj/item/weapon/storage/belt/medical/alien,
+/obj/item/weapon/storage/belt/utility/alien,
+/obj/item/weapon/storage/belt/holding,
+/obj/item/weapon/rig/ert/assetprotection,
+/obj/item/weapon/rig/ert/assetprotection,
+/obj/item/weapon/gun/energy/pulse_rifle,
+/obj/item/weapon/gun/energy/pulse_rifle,
+/obj/item/weapon/gun/energy/pulse_rifle,
+/obj/item/weapon/gun/energy/pulse_rifle,
+/obj/item/weapon/gun/projectile/automatic/l6_saw,
+/obj/item/weapon/gun/projectile/automatic/l6_saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/weapon/gun/projectile/automatic/z8,
+/obj/item/weapon/gun/projectile/automatic/z8,
+/obj/item/weapon/gun/projectile/heavysniper,
+/obj/item/weapon/storage/box/sniperammo,
+/obj/item/weapon/storage/box/sniperammo,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/weapon/storage/box/sniperammo,
+/obj/item/weapon/storage/box/sniperammo,
+/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
+/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
+/obj/item/modular_computer/tablet/preset/custom_loadout/hybrid,
+/obj/item/device/perfect_tele/alien,
+/obj/item/device/perfect_tele/frontier/staff,
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/item/weapon/inducer/hybrid,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/weapon/circuitboard/machine/abductor/core/hybrid,
+/obj/item/weapon/circuitboard/machine/abductor/core/hybrid,
+/obj/item/weapon/gun/magnetic/railgun/automatic,
+/obj/item/weapon/gun/magnetic/railgun/automatic,
+/obj/effect/floor_decal/industrial/loading,
+/turf/simulated/floor/tiled/techmaint,
 /area/shuttle/tabiranth)
 
 (1,1,1) = {"
@@ -1815,9 +2310,9 @@ ba
 ba
 aa
 ac
-aD
+aH
 ac
-aM
+bt
 ab
 aa
 ac
@@ -1834,13 +2329,13 @@ ah
 ah
 ad
 ad
-aE
+aK
 ad
 ad
 ad
 ad
 ac
-bj
+bP
 bq
 bx
 ad
@@ -1853,7 +2348,7 @@ ai
 bO
 au
 ac
-aK
+aL
 ad
 aN
 aX
@@ -1871,10 +2366,10 @@ ac
 aj
 aq
 av
-aA
+aD
 aF
 ad
-ay
+bJ
 aC
 bb
 ac
@@ -1930,7 +2425,7 @@ at
 ax
 ax
 aI
-ad
+bj
 aV
 bg
 be
@@ -1946,8 +2441,8 @@ ac
 ac
 an
 bO
-aH
 aB
+aE
 aJ
 ad
 aS
@@ -1967,7 +2462,7 @@ ao
 aq
 aP
 ac
-aL
+aM
 ad
 aN
 bH
@@ -1982,11 +2477,11 @@ ab
 (10,1,1) = {"
 aa
 ac
-wz
-wz
+ay
+ay
 ad
 ad
-bt
+aO
 ad
 ad
 ad
@@ -2005,9 +2500,9 @@ ba
 ba
 aa
 ac
-bJ
-ac
 aT
+ac
+bL
 ab
 aa
 ac
