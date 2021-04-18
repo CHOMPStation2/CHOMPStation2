@@ -118,6 +118,11 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	template_id = "shelter_epsilon"
 	unique_id = "shelter_5"
 	is_ship = TRUE
+	
+/obj/item/device/survivalcapsule/popcabin
+	name = "pop-out cabin shelter capsule"
+	desc = "A cozy cabin; crammed into a survival capsule."
+	template_id = "shelter_cab"
 
 /obj/item/device/survivalcapsule/dropship
 	name = "dropship surfluid shelter capsule"
@@ -289,6 +294,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	var/buildstacktype = /obj/item/stack/material/steel
 	var/buildstackamount = 5
 
+/*
 /obj/structure/fans/proc/deconstruct()
 	new buildstacktype(loc,buildstackamount)
 	qdel(src)
@@ -302,7 +308,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 			return TRUE
 
 	return TRUE
-
+*/
 /obj/structure/fans/tiny
 	name = "tiny fan"
 	desc = "A tiny fan, releasing a thin gust of air."

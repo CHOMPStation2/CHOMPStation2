@@ -254,6 +254,7 @@
 	data["prefs"] = list(
 		"digestable" = host.digestable,
 		"devourable" = host.devourable,
+		"resizable" = host.resizable,
 		"feeding" = host.feeding,
 		"absorbable" = host.absorbable,
 		"digest_leave_remains" = host.digest_leave_remains,
@@ -355,7 +356,7 @@
 			var/alert = alert("Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation","Reload","Cancel")
 			if(alert != "Reload")
 				return FALSE
-			if(!host.apply_vore_prefs())
+			if(!host.apply_vore_prefs(TRUE)) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 				alert("ERROR: Chomp-specific preferences failed to apply!","Error")
 			else
 				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
@@ -413,6 +414,12 @@
 			host.devourable = !host.devourable
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.devourable = host.devourable
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_resize")
+			host.resizable = !host.resizable
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.resizable = host.resizable
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_feed")

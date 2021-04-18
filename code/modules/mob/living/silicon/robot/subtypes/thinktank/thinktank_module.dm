@@ -64,7 +64,7 @@
 	modules += bandaid
 	synths += medicine
 
-	var/obj/item/weapon/gun/energy/phasegun/mounted/cyborg/phasegun = new(src) 
+	var/obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg/phasegun = new(src) 
 	modules += phasegun
 
 	emag = new /obj/item/weapon/chainsaw(src)

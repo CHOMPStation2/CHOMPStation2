@@ -269,11 +269,9 @@
 	if(refactory && istype(A,/obj/item/stack/material))
 		var/obj/item/stack/material/S = A
 		var/substance = S.material.name
-		var/list/edible_materials = list(MAT_STEEL) //Can't eat all materials, just useful ones.
-		var/allowed = FALSE //CHOMP Edit
-		for(var/material in edible_materials)
-			if(material == substance) 
-				allowed = TRUE
+		var allowed = FALSE
+		for(var/material in PROTEAN_EDIBLE_MATERIALS)
+			if(material == substance) allowed = TRUE
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
@@ -301,9 +299,8 @@
 	if(refactory && istype(O,/obj/item/stack/material))
 		var/obj/item/stack/material/S = O
 		var/substance = S.material.name
-		var/list/edible_materials = list("steel", "plasteel", "diamond", "mhydrogen") //Can't eat all materials, just useful ones.
-		var/allowed = FALSE //CHOMP Edit
-		for(var/material in edible_materials)
+		var allowed = FALSE
+		for(var/material in PROTEAN_EDIBLE_MATERIALS)
 			if(material == substance) allowed = TRUE
 		if(!allowed)
 			return
@@ -502,7 +499,7 @@ var/global/list/disallowed_protean_accessories = list(
 	var/atom/reform_spot = blob.drop_location()
 
 	//Size update
-	resize(blob.size_multiplier, FALSE)
+	resize(blob.size_multiplier, FALSE, ignore_prefs = TRUE)
 
 	//Move them back where the blob was
 	forceMove(reform_spot)

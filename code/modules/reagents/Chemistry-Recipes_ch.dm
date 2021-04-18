@@ -37,6 +37,13 @@
 	required_reagents = list("anti_toxin" = 1, "ethanol" = 1, "lithium" = 1)
 	result_amount = 3
 
+/datum/chemical_reaction/peridaxon_ch
+	name = "Peridaxon"
+	id = "peridaxon_ch"
+	result = "peridaxon"
+	required_reagents = list("cordradaxon" = 1, "gastirodaxon" = 1, "hepanephrodaxon" = 1, "respirodaxon" = 1)	
+	result_amount = 12 //More phoron-efficient alternative recipe. 
+
 ///SAP RECIPES//////
 
 /datum/chemical_reaction/myelamine_sap //This is the clotting agent used by clotting packs.

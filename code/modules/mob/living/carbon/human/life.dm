@@ -62,8 +62,6 @@
 
 	//No need to update all of these procs if the guy is dead.
 	fall() //VORESTATION EDIT. Prevents people from floating
-	if(unnaturally_resized)	//VORESTATION EDIT.
-		handle_unnatural_size()
 	if(stat != DEAD && !stasis)
 		//Updates the number of stored chemicals for powers
 		handle_changeling()
@@ -1283,7 +1281,7 @@
 		//VOREStation Add - Vampire hunger alert
 		else if(get_species() == SPECIES_CUSTOM)
 			var/datum/species/custom/C = species
-			if(/datum/trait/bloodsucker in C.traits)
+			if(/datum/trait/neutral/bloodsucker in C.traits)
 				fat_alert = /obj/screen/alert/fat/vampire
 				hungry_alert = /obj/screen/alert/hungry/vampire
 				starving_alert = /obj/screen/alert/starving/vampire
@@ -1756,6 +1754,7 @@
 			holder2.icon_state = "huddead"
 		else if(foundVirus)
 			holder.icon_state = "hudill"
+/* Start Chomp edit
 		else if(has_brain_worms())
 			var/mob/living/simple_mob/animal/borer/B = has_brain_worms()
 			if(B.controlling)
@@ -1763,13 +1762,13 @@
 			else
 				holder.icon_state = "hudhealthy"
 			holder2.icon_state = "hudbrainworm"
+End Chomp edit */
 		else
 			holder.icon_state = "hudhealthy"
 			if(virus2.len)
 				holder2.icon_state = "hudill"
 			else
 				holder2.icon_state = "hudhealthy"
-
 		apply_hud(STATUS_HUD, holder)
 		apply_hud(STATUS_HUD_OOC, holder2)
 

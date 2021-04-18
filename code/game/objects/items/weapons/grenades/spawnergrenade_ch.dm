@@ -119,6 +119,42 @@
 	name = "Mysterious Grenade"
 	spawner_type = /obj/mecha/combat/gygax/dark
 
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/mining
+	name = "Casino Mech Container (Mining Ripley)"
+	spawner_type = /obj/mecha/working/ripley/mining
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/firefighter
+	name = "Casino Mech Container (Firefighter Ripley)"
+	spawner_type = /obj/mecha/working/ripley/firefighter
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/serenity
+	name = "Casino Mech Container (Serenity)"
+	spawner_type = /obj/mecha/combat/gygax/serenity
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/Odysseus
+	name = "Casino Mech Container (Odysseus)"
+	spawner_type = /obj/mecha/medical/odysseus/loaded
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/scree
+	name = "Casino Mech Container (Phazon Scuttlebug)"
+	spawner_type = /obj/mecha/combat/phazon/scree
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/janus
+	name = "Casino Mech Container (Phazon Janus)"
+	spawner_type = /obj/mecha/combat/phazon/janus
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/scarab
+	name = "Casino Mech Container (Scarab)"
+	spawner_type = /obj/mecha/combat/scarab
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlepod
+	name = "Casino Mech Container (Shuttlepod)"
+	spawner_type = /obj/mecha/working/hoverpod/shuttlepod
+
+/obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlecraft
+	name = "Casino Mech Container (Shuttlecraft)"
+	spawner_type = /obj/mecha/working/hoverpod/shuttlecraft
+
 /obj/item/weapon/grenade/spawnergrenade/casino/infinitycake
 	desc = "Some say a gouda in his hubris made a cake to rival the gods. Sometimes it appears where it is least expected, only to vanish a few hours later.."
 	name = "Mysterious Grenade"

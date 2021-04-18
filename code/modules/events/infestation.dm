@@ -73,24 +73,28 @@
 			//VOREStation Edit - Fixes event
 
 	var/list/spawn_types = list()
+	var/min_number //CHOMP Add
 	var/max_number
 	vermin = rand(0,2)
 	switch(vermin)
 		if(VERM_MICE)
 			spawn_types = list(/mob/living/simple_mob/animal/passive/mouse/gray, /mob/living/simple_mob/animal/passive/mouse/brown, /mob/living/simple_mob/animal/passive/mouse/white)
+			min_number = 2 //CHOMP Add
 			max_number = 12
 			vermstring = "mice"
 		if(VERM_LIZARDS)
 			spawn_types = list(/mob/living/simple_mob/animal/passive/lizard)
+			min_number = 2 //CHOMP Add
 			max_number = 6
 			vermstring = "lizards"
 		if(VERM_SPIDERS)
 			spawn_types = list(/obj/effect/spider/spiderling)
-			max_number = 3
+			min_number = 4 //CHOMP Add
+			max_number = 8 //CHOMP edit
 			vermstring = "spiders"
 
 	spawn(0)
-		var/num = rand(2,max_number)
+		var/num = rand(min_number,max_number)
 		while(turfs.len > 0 && num > 0)
 			var/turf/simulated/floor/T = pick(turfs)
 			turfs.Remove(T)

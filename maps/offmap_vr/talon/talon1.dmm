@@ -18,7 +18,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /turf/simulated/floor/hull/airless,
@@ -2625,7 +2625,7 @@
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/talon/deckone/secure_storage)
 "qo" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -2983,7 +2983,7 @@
 /turf/simulated/floor/tiled/eris/dark/cyancorner,
 /area/talon/deckone/starboard_solar)
 "uo" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -3600,7 +3600,7 @@
 /turf/space,
 /area/space)
 "AN" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -5669,7 +5669,7 @@
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/talon/deckone/brig)
 "UU" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
