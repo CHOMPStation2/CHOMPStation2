@@ -77,7 +77,13 @@
 #define DO_AUTOPILOT 5
 
 // Setting this much higher than 1024 could allow spammers to DOS the server easily.
+<<<<<<< HEAD
 #define MAX_MESSAGE_LEN       4096 //CHOMPStation Edit - This is what it means to go even further byond
+||||||| parent of 42a888ba31... Merge pull request #10061 from R3dtail/patch-1
+#define MAX_MESSAGE_LEN       2048 //VOREStation Edit - I'm not sure about "easily". It can be a little longer.
+=======
+#define MAX_MESSAGE_LEN       4096 //VOREStation Edit - I'm not sure about "easily". It can be a little longer.
+>>>>>>> 42a888ba31... Merge pull request #10061 from R3dtail/patch-1
 #define MAX_PAPER_MESSAGE_LEN 6144
 #define MAX_BOOK_MESSAGE_LEN  24576
 #define MAX_RECORD_LENGTH	  24576
