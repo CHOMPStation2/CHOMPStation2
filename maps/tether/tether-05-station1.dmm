@@ -7848,6 +7848,26 @@
 /obj/fiftyspawner/copper,
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
+"aoQ" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/landmark{
+	name = "xeno_spawn";
+	pixel_x = -1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "bathroomlock19";
+	name = "Engineering Washroom Toilet 1 Lock";
+	pixel_x = 10;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/engi_wash)
 "aoR" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -7856,6 +7876,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/abandonedlibrary)
+"aoS" = (
+/obj/machinery/door/airlock{
+	id_tag = "bathroomlock19";
+	name = "Engineering Washroom Toilet 1"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/engi_wash)
 "aoT" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper,
@@ -7890,6 +7918,66 @@
 /obj/fiftyspawner/glass,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/backup)
+"aoY" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/button/remote/airlock{
+	id = "bathroomlock20";
+	name = "Engineering Washroom Toilet 2 Lock";
+	pixel_x = 10;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/engi_wash)
+"aoZ" = (
+/obj/machinery/door/airlock{
+	id_tag = "bathroomlock20";
+	name = "Engineering Washroom Toilet 2"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/engi_wash)
+"apa" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/landmark{
+	name = "xeno_spawn";
+	pixel_x = -1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "bathroomlock21";
+	name = "Engineering Washroom Toilet 3 Lock";
+	pixel_x = 10;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/engi_wash)
+"apb" = (
+/obj/machinery/door/airlock{
+	id_tag = "bathroomlock21";
+	name = "Engineering Washroom Toilet 3"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/engi_wash)
+"apc" = (
+/obj/machinery/door/airlock{
+	id_tag = "bathroomlock7";
+	name = "Restroom"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/engi_wash)
 "apd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -7899,12 +7987,58 @@
 	},
 /turf/simulated/floor/carpet,
 /area/maintenance/abandonedlibrary)
+"ape" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "bathroomlock22";
+	name = "Unit 1 Lock";
+	pixel_x = 10;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/toilet)
+"apf" = (
+/obj/machinery/door/airlock{
+	id_tag = "bathroomlock22";
+	name = "Unit 1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/toilet)
 "apg" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 /area/engineering/break_room)
+"aph" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "bathroomlock23";
+	name = "Unit 2 Lock";
+	pixel_x = 10;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/toilet)
+"api" = (
+/obj/machinery/door/airlock{
+	id_tag = "bathroomlock23";
+	name = "Unit 2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/toilet)
 "apm" = (
 /turf/simulated/floor/carpet,
 /area/maintenance/abandonedlibrary)
@@ -14239,21 +14373,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/station/visitorhallway/laundry)
-"aAO" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/toilet)
-"aAP" = (
-/obj/machinery/door/airlock{
-	name = "Unit 1"
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/toilet)
 "aAQ" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
@@ -14602,19 +14721,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
-"aBC" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/sleep/engi_wash)
 "aBD" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -14817,12 +14923,6 @@
 	},
 /turf/simulated/floor,
 /area/bridge/secondary/teleporter)
-"aBU" = (
-/obj/machinery/door/airlock{
-	name = "Unit 2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/toilet)
 "aBV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
@@ -14830,13 +14930,6 @@
 "aBW" = (
 /turf/simulated/floor/carpet/purcarpet,
 /area/bridge/meeting_room)
-"aBX" = (
-/obj/machinery/door/airlock{
-	name = "Restroom"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/sleep/engi_wash)
 "aCa" = (
 /obj/machinery/recharge_station,
 /obj/machinery/camera/network/engineering{
@@ -16013,15 +16106,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
-"aEE" = (
-/obj/structure/toilet{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/sleep/engi_wash)
 "aEF" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -31493,11 +31577,11 @@ avB
 atd
 atY
 auz
-aBC
+aoQ
 aAW
-aEE
+aoY
 aAW
-aBC
+apa
 aAW
 aMl
 aoJ
@@ -31635,13 +31719,13 @@ ajF
 apQ
 atZ
 auz
-aBX
+aoS
 aAW
-aBX
+aoZ
 aAW
-aBX
+apb
 aAW
-aBX
+apc
 aoJ
 aCa
 aRc
@@ -37481,9 +37565,9 @@ att
 acm
 bpi
 aAk
-aAO
+ape
 aAk
-aAO
+aph
 aAk
 byy
 amU
@@ -37623,9 +37707,9 @@ abV
 acm
 bpm
 aAk
-aAP
+apf
 aAk
-aBU
+api
 aAk
 aDh
 amU

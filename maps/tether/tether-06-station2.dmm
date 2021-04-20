@@ -7798,6 +7798,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/starboard)
+"lU" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_l"
+	},
+/turf/space,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/large_escape_pod1)
+"lV" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/turf/space,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/large_escape_pod1)
 "lW" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9565,6 +9580,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/station/starboard)
+"oB" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_r"
+	},
+/turf/space,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/large_escape_pod1)
 "oC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -9587,25 +9610,33 @@
 /turf/simulated/floor/tiled,
 /area/hallway/station/starboard)
 "oD" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_l"
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/large_escape_pod1)
+/obj/structure/stairs/spawner/west,
+/turf/simulated/sky/virgo3b/west,
+/turf/simulated/floor/tiled/white,
+/area/medical/biostorage)
 "oE" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8
+/obj/structure/toilet{
+	pixel_y = 6
 	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/large_escape_pod1)
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "bathroomlock24";
+	name = "Bathroom Lock";
+	pixel_x = -20;
+	pixel_y = -10;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/recoveryrestroom)
 "oF" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	icon_state = "propulsion_r"
+/obj/machinery/door/airlock/medical{
+	id_tag = "bathroomlock24";
+	name = "Rest Room";
+	req_one_access = list()
 	},
+<<<<<<< HEAD
 /turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod1)
@@ -9620,9 +9651,24 @@
 "oG" = (
 /obj/structure/stairs/spawner/west,
 /turf/simulated/sky/virgo3b/west,
+||||||| parent of c08458f03e... Merge pull request #10161 from TheFurryFeline/TFF-Bathroom_Privacy
+/turf/space,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/large_escape_pod1)
+"oG" = (
+/obj/structure/stairs/spawner/west,
+/turf/simulated/sky/virgo3b/west,
+=======
+>>>>>>> c08458f03e... Merge pull request #10161 from TheFurryFeline/TFF-Bathroom_Privacy
 /turf/simulated/floor/tiled/white,
+<<<<<<< HEAD
 /area/medical/biostorage)
 >>>>>>> 1030f26c08... Merge pull request #9904 from Heroman3003/la-coppera
+||||||| parent of c08458f03e... Merge pull request #10161 from TheFurryFeline/TFF-Bathroom_Privacy
+/area/medical/biostorage)
+=======
+/area/medical/recoveryrestroom)
+>>>>>>> c08458f03e... Merge pull request #10161 from TheFurryFeline/TFF-Bathroom_Privacy
 "oM" = (
 /turf/simulated/open,
 /area/engineering/foyer_mezzenine)
@@ -15973,15 +16019,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "Ce" = (
-/turf/simulated/floor/tiled/white,
-/area/medical/recoveryrestroom)
-"Cf" = (
-/obj/structure/toilet{
-	pixel_y = 6
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/recoveryrestroom)
 "Cg" = (
@@ -28523,7 +28560,7 @@ vE
 wm
 ws
 xj
-oG
+oD
 vT
 aP
 aP
@@ -31942,8 +31979,8 @@ yp
 pp
 Ay
 BM
-Cf
-Cz
+oE
+oF
 CM
 xJ
 EG
@@ -35462,11 +35499,11 @@ hl
 DI
 RX
 DL
-oD
-oE
-oE
-oE
-oF
+lU
+lV
+lV
+lV
+oB
 oY
 sW
 ef
