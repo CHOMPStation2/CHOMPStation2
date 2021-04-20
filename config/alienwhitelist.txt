@@ -25,6 +25,13 @@ mewchild - Vox
 mrsebbi - Xenochimera
 natje - Xenochimera
 nerdass - Protean
+<<<<<<< HEAD
+||||||| parent of 954dbc71d4... Merge pull request #10163 from Novacat/nova-ert
+newyorks - Protean
+=======
+newyorks - Protean
+oneofmanynames385 - Protean
+>>>>>>> 954dbc71d4... Merge pull request #10163 from Novacat/nova-ert
 ontejbjoav - Diona
 oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
@@ -41,6 +48,13 @@ radiantaurora - Protean
 ryumi - Protean
 seiga - Vox
 sepulchre - Vox
+<<<<<<< HEAD
+||||||| parent of 954dbc71d4... Merge pull request #10163 from Novacat/nova-ert
+sharplight - Protean
+=======
+stobarico - Protean
+sharplight - Protean
+>>>>>>> 954dbc71d4... Merge pull request #10163 from Novacat/nova-ert
 silvertalismen - Diona
 silvertalismen - Vox
 silvertalismen - Xenochimera
