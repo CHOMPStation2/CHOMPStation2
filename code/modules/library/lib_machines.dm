@@ -294,13 +294,27 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 				var/DBQuery/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
 				query.Execute()
 
+				var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
+
 				while(query.NextRow())
 					var/id = query.item[1]
 					var/author = query.item[2]
 					var/title = query.item[3]
 					var/category = query.item[4]
+<<<<<<< HEAD
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
 				qdel(query) //CHOMPEdit TGSQL
+||||||| parent of 30e6d10ab3... Merge pull request #10189 from VOREStation/Arokha/lib2
+					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A>"
+					if(check_rights(R_ADMIN)) // This isn't the only check, since you can just href-spoof press this button. Just to tidy things up.
+						dat += "<A href='?src=\ref[src];delid=[id]'>\[Del\]</A>"
+					dat += "</td></tr>"
+=======
+					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A>"
+					if(show_admin_options) // This isn't the only check, since you can just href-spoof press this button. Just to tidy things up.
+						dat += "<A href='?src=\ref[src];delid=[id]'>\[Del\]</A>"
+					dat += "</td></tr>"
+>>>>>>> 30e6d10ab3... Merge pull request #10189 from VOREStation/Arokha/lib2
 				dat += "</table>"
 			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
