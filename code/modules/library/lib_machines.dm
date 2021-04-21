@@ -303,6 +303,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 					if(check_rights(R_ADMIN)) // This isn't the only check, since you can just href-spoof press this button. Just to tidy things up.
 						dat += "<A href='?src=\ref[src];delid=[id]'>\[Del\]</A>"
 					dat += "</td></tr>"
+				qdel(query) //CHOMPEdit TGSQL
 				dat += "</table>"
 			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
