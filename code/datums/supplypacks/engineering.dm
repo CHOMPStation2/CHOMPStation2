@@ -77,17 +77,6 @@
 	containertype = /obj/structure/closet/crate/focalpoint
 	containername = "advanced hull shield generator crate"
 
-<<<<<<< HEAD
-||||||| parent of ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
-/datum/supply_pack/eng/pointdefense
-	name = "Point Defense Turret"
-	contains = list(/obj/machinery/porta_turret/pointdefense/orderable)
-	cost = 70
-	containertype = /obj/structure/closet/crate/large/secure/heph
-	containername = "point defense crate"
-	access = access_security
-
-=======
 /datum/supply_pack/eng/point_defense_cannon_circuit
 	name = "Point Defense Turret Circuit"
 	contains = list(/obj/item/weapon/circuitboard/pointdefense = 2)
@@ -102,7 +91,6 @@
 	containertype = /obj/structure/closet/crate/heph
 	containername = "point defense mainframe circuit crate"
 
->>>>>>> ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
 /datum/supply_pack/eng/electrical
 	name = "Electrical maintenance crate"
 	contains = list(
