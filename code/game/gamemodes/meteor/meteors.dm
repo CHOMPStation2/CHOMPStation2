@@ -206,24 +206,6 @@
 		return
 	..()
 
-<<<<<<< HEAD
-||||||| parent of ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
-/obj/effect/meteor/bullet_act(var/obj/item/projectile/Proj)
-	if(Proj.excavation_amount)
-		get_hit()
-		if(!QDELETED(src))
-			wall_power -= Proj.excavation_amount + Proj.damage + (Proj.hitscan * 25)	// Instant-impact projectiles are inherently better at dealing with meteors.
-			wall_power = max(1, wall_power)
-
-			if(wall_power < Proj.excavation_amount)
-				if(prob(min(90, 100 - Proj.damage)))
-					die(TRUE)
-				else
-					die(FALSE)
-				return
-	return
-
-=======
 /obj/effect/meteor/bullet_act(var/obj/item/projectile/Proj)
 	if(Proj.excavation_amount)
 		get_hit()
@@ -236,7 +218,6 @@
 			return
 	return
 
->>>>>>> ba6a46808d... Merge pull request #9800 from VOREStation/upstream-merge-7919
 /obj/effect/meteor/proc/make_debris()
 	for(var/throws = dropamt, throws > 0, throws--)
 		var/obj/item/O = new meteordrop(get_turf(src))
