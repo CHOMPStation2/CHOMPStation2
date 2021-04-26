@@ -130,10 +130,11 @@
 		var/new_size = input("Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200) as num|null
 
 		if (!nif.human.size_range_check(new_size))
-			to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program prevent you from choosing this size.</span>")
+			if(new_size)
+				to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program prevent you from choosing this size.</span>")
 			return
 		else
-			if(nif.human.resize(new_size/100))
+			if(nif.human.resize(new_size/100, uncapped=nif.human.has_large_resize_bounds(), ignore_prefs = TRUE))
 				to_chat(nif.human,"<span class='notice'>You set the size to [new_size]%</span>")
 				nif.human.visible_message("<span class='warning'>Swirling grey mist envelops [nif.human] as they change size!</span>","<span class='notice'>Swirling streams of nanites wrap around you as you change size!</span>")
 		spawn(0)

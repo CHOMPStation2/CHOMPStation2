@@ -172,7 +172,7 @@
 	desc = "This variant appears to be much more rugged."
 	req_one_access = list(access_heads)
 	icon_state = "turret_cover_industrial"
-	installation = /obj/item/weapon/gun/energy/phasegun
+	installation = /obj/item/weapon/gun/energy/locked/phasegun/unlocked
 	health = 200
 	maxhealth = 200
 	turret_type = "industrial"
@@ -354,7 +354,7 @@
 			lethal_shot_sound = 'sound/weapons/Laser.ogg'
 			shot_delay = 1 SECOND
 
-		if(/obj/item/weapon/gun/energy/phasegun)
+		if(/obj/item/weapon/gun/energy/locked/phasegun/unlocked)
 			icon_color = "orange"
 			lethal_icon_color = "orange"
 			lethal_projectile = /obj/item/projectile/energy/phase/heavy

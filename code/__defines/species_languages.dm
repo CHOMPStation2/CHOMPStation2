@@ -36,13 +36,26 @@
 #define FUNGI		0x100	// Delicious shrooms.
 #define COFFEE		0x200	// Mostly here for tajara.
 #define GENERIC		0x400	// Catchall for stuff that doesn't fall into the groups above. You shouldn't be allergic to this type, ever.
+#define SUGARS		0x800	// For unathi-like reactions
+#define EGGS      0x1000 // For Skrell eggs allergy
+
+// Allergen reactions
+#define AG_TOX_DMG	0x1	// the classic 
+#define AG_OXY_DMG	0x2	// intense airway reactions
+#define AG_EMOTE	0x4	// general emote reactions based on affect type
+#define AG_PAIN		0x8	// short-lived hurt
+#define AG_WEAKEN	0x10	// too weak to move, oof
+#define AG_BLURRY	0x20	// blurred vision!
+#define AG_SLEEPY	0x40	// fatigue/exhaustion
 
 // Species spawn flags
-#define SPECIES_IS_WHITELISTED    0x1    // Must be whitelisted to play.
-#define SPECIES_IS_RESTRICTED     0x2    // Is not a core/normally playable species. (castes, mutantraces)
-#define SPECIES_CAN_JOIN                  0x4    // Species is selectable in chargen.
-#define SPECIES_NO_FBP_CONSTRUCTION 0x8    // FBP of this species can't be made in-game.
-#define SPECIES_NO_FBP_CHARGEN      0x10    // FBP of this species can't be selected at chargen.
+#define SPECIES_IS_WHITELISTED      0x1  // Must be whitelisted to play.
+#define SPECIES_IS_RESTRICTED       0x2  // Is not a core/normally playable species. (castes, mutantraces)
+#define SPECIES_CAN_JOIN            0x4  // Species is selectable in chargen.
+#define SPECIES_NO_FBP_CONSTRUCTION 0x8  // FBP of this species can't be made in-game.
+#define SPECIES_NO_FBP_CHARGEN      0x10 // FBP of this species can't be selected at chargen.
+#define SPECIES_NO_POSIBRAIN        0x20 // FBP of this species cannot have a positronic brain.
+#define SPECIES_NO_DRONEBRAIN       0x40 // FBP of this species cannot have a drone intelligence.
 
 // Species appearance flags
 #define HAS_SKIN_TONE     0x1    // Skin tone selectable in chargen. (0-255)

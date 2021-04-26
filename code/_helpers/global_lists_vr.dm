@@ -2,10 +2,7 @@
  * VOREStation global lists
 */
 
-var/global/list/ear_styles_list = list()	// Stores /datum/sprite_accessory/ears indexed by type
 var/global/list/hair_accesories_list= list()// Stores /datum/sprite_accessory/hair_accessory indexed by type
-var/global/list/tail_styles_list = list()	// Stores /datum/sprite_accessory/tail indexed by type
-var/global/list/wing_styles_list = list()	// Stores /datum/sprite_accessory/wing indexed by type
 var/global/list/negative_traits = list()	// Negative custom species traits, indexed by path
 var/global/list/neutral_traits = list()		// Neutral custom species traits, indexed by path
 var/global/list/everyone_traits = list()	// Neutral traits available to all species, indexed by path
@@ -14,9 +11,7 @@ var/global/list/traits_costs = list()		// Just path = cost list, saves time in c
 var/global/list/all_traits = list()			// All of 'em at once (same instances)
 var/global/list/active_ghost_pods = list()
 
-var/global/list/sensorpreflist = list("Off", "Binary", "Vitals", "Tracking", "No Preference")	//TFF 5/8/19 - Suit Sensors global list
-
-var/global/list/custom_species_bases = list() // Species that can be used for a Custom Species icon base
+var/global/list/sensorpreflist = list("Off", "Binary", "Vitals", "Tracking", "No Preference")
 
 //stores numeric player size options indexed by name
 var/global/list/player_sizes_list = list(
@@ -178,8 +173,8 @@ var/global/list/tf_vore_egg_types = list(
 	"Spotted pink"	= /obj/item/weapon/storage/vore_egg/pinkspots)
 
 var/global/list/edible_trash = list(/obj/item/broken_device,
-				/obj/item/clothing/accessory/collar,	//TFF 10/7/19 - add option to nom collars,
-				/obj/item/device/communicator,		//TFF 19/9/19 - add option to nom communicators and commwatches,
+				/obj/item/clothing/accessory/collar,
+				/obj/item/device/communicator,
 				/obj/item/clothing/mask,
 				/obj/item/clothing/glasses,
 				/obj/item/clothing/gloves,
@@ -228,8 +223,10 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/fancy/crayons,
 				/obj/item/weapon/storage/fancy/egg_box,
 				/obj/item/weapon/storage/wallet,
-        /obj/item/weapon/storage/vore_egg,
-				/obj/item/weapon/material/kitchen) //chompstation addition
+        			/obj/item/weapon/storage/vore_egg,
+				/obj/item/weapon/material/kitchen, //chompstation addition
+				/obj/item/weapon/bikehorn/tinytether
+				)
 
 var/global/list/contamination_flavors = list(
 				"Generic" = contamination_flavors_generic,
@@ -469,11 +466,11 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_MONKEY_NEVREAN,
 				SPECIES_MONKEY_SERGAL,
 				SPECIES_MONKEY_VULPKANIN,
-				SPECIES_XENO,					//Same for xenos,
-				SPECIES_XENO_DRONE,
-				SPECIES_XENO_HUNTER,
-				SPECIES_XENO_SENTINEL,
-				SPECIES_XENO_QUEEN,
+				SPECIES_GENA,					//Same for xenos, CHOMPedit
+				SPECIES_GENA_DRONE,
+				SPECIES_GENA_HUNTER,
+				SPECIES_GENA_SENTINEL,
+				SPECIES_GENA_QUEEN, 			//CHOMPedit end
 				SPECIES_SHADOW,
 				SPECIES_GOLEM,					//Some special species that may or may not be ever used in event too,
 				SPECIES_SHADEKIN)			//Shadefluffers just poof away
@@ -483,24 +480,6 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 /hook/startup/proc/init_vore_datum_ref_lists()
 	var/paths
 
-	// Custom Ears
-	paths = typesof(/datum/sprite_accessory/ears) - /datum/sprite_accessory/ears
-	for(var/path in paths)
-		var/obj/item/clothing/head/instance = new path()
-		ear_styles_list[path] = instance
-
-	// Custom Tails
-	paths = typesof(/datum/sprite_accessory/tail) - /datum/sprite_accessory/tail - /datum/sprite_accessory/tail/taur
-	for(var/path in paths)
-		var/datum/sprite_accessory/tail/instance = new path()
-		tail_styles_list[path] = instance
-
-	// Custom Wings
-	paths = typesof(/datum/sprite_accessory/wing) - /datum/sprite_accessory/wing
-	for(var/path in paths)
-		var/datum/sprite_accessory/wing/instance = new path()
-		wing_styles_list[path] = instance
-
 	// Custom Hair Accessories
 	paths = typesof(/datum/sprite_accessory/hair_accessory) - /datum/sprite_accessory/hair_accessory
 	for(var/path in paths)
@@ -508,15 +487,16 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		hair_accesories_list[path] = instance
 
 	// Custom species traits
-	paths = typesof(/datum/trait) - /datum/trait
+	paths = typesof(/datum/trait) - /datum/trait - /datum/trait/negative - /datum/trait/neutral - /datum/trait/positive
 	for(var/path in paths)
 		var/datum/trait/instance = new path()
 		if(!instance.name)
 			continue //A prototype or something
+		var/category = instance.category
 		var/cost = instance.cost
 		traits_costs[path] = cost
 		all_traits[path] = instance
-		switch(cost)
+		switch(category)
 			if(-INFINITY to -0.1)
 				negative_traits[path] = instance
 			if(0)
@@ -525,19 +505,6 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 					everyone_traits[path] = instance
 			if(0.1 to INFINITY)
 				positive_traits[path] = instance
-
-	// Custom species icon bases
-	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN) //Just ones that won't work well.
-	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID) //Include these anyway
-	for(var/species_name in GLOB.playable_species)
-		if(species_name in blacklisted_icons)
-			continue
-		var/datum/species/S = GLOB.all_species[species_name]
-		if(S.spawn_flags & SPECIES_IS_WHITELISTED)
-			continue
-		custom_species_bases += species_name
-	for(var/species_name in whitelisted_icons)
-		custom_species_bases += species_name
 
 	// Weaver recipe stuff
 	paths = typesof(/datum/weaver_recipe/structure) - /datum/weaver_recipe/structure

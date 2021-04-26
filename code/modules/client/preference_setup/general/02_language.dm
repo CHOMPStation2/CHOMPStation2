@@ -10,7 +10,7 @@
 	S["pos_traits"]		>> pref.pos_traits
 	var/morelang = 0
 	for(var/trait in pref.pos_traits)
-		if(trait==/datum/trait/linguist)
+		if(trait==/datum/trait/positive/linguist)
 			morelang = 1
 	pref.num_languages = morelang * 12
 	//CHOMPEdit End

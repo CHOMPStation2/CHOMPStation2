@@ -26,6 +26,7 @@ export const CharacterDirectory = (props, context) => {
     personalVisibility,
     personalTag,
     personalErpTag,
+    personalEventTag,
   } = data;
 
   const [overlay, setOverlay] = useLocalState(context, "overlay", null);
@@ -56,6 +57,12 @@ export const CharacterDirectory = (props, context) => {
                     fluid
                     content={personalErpTag}
                     onClick={() => act("setErpTag")} />
+                </LabeledList.Item>
+                <LabeledList.Item label="Event Pref">
+                  <Button
+                    fluid
+                    content={personalEventTag}
+                    onClick={() => act("setEventTag")} />
                 </LabeledList.Item>
                 <LabeledList.Item label="Advertisement">
                   <Button
@@ -91,6 +98,11 @@ const ViewCharacter = (props, context) => {
       <Section level={2} title="ERP Tag">
         <Box>
           {overlay.erptag}
+        </Box>
+      </Section>
+      <Section level={2} title="Event Pref">
+        <Box>
+          {overlay.eventtag}
         </Box>
       </Section>
       <Section level={2} title="Character Ad">
@@ -135,6 +147,7 @@ const CharacterDirectoryList = (props, context) => {
           <SortButton id="name">Name</SortButton>
           <SortButton id="tag">Vore Tag</SortButton>
           <SortButton id="erptag">ERP Tag</SortButton>
+          <SortButton id="eventtag">Event Pref</SortButton>
           <Table.Cell collapsing textAlign="right">View</Table.Cell>
         </Table.Row>
         {directory
@@ -147,6 +160,7 @@ const CharacterDirectoryList = (props, context) => {
               <Table.Cell p={1}>{character.name}</Table.Cell>
               <Table.Cell>{character.tag}</Table.Cell>
               <Table.Cell>{character.erptag}</Table.Cell>
+              <Table.Cell>{character.eventtag}</Table.Cell>
               <Table.Cell collapsing textAlign="right">
                 <Button
                   onClick={() => setOverlay(character)}

@@ -627,7 +627,7 @@
 			speech_bubble_hearers += M.client
 
 	if(length(speech_bubble_hearers))
-		var/image/I = image('icons/mob/talk.dmi', src, "[bubble_icon][say_test(message)]", FLY_LAYER)
+		var/image/I = generate_speech_bubble(src, "[bubble_icon][say_test(message)]", FLY_LAYER)
 		I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 		INVOKE_ASYNC(GLOBAL_PROC, /.proc/flick_overlay, I, speech_bubble_hearers, 30)
 
@@ -638,6 +638,7 @@
 	. = ..()
 	GLOB.moved_event.raise_event(AM, old_loc, AM.loc)
 	SEND_SIGNAL(src, COMSIG_ATOM_ENTERED, AM, old_loc)
+	SEND_SIGNAL(AM, COMSIG_ATOM_ENTERING, src, old_loc)
 
 /atom/Exit(atom/movable/AM, atom/new_loc)
 	. = ..()

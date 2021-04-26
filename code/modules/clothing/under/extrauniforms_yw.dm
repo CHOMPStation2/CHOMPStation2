@@ -24,7 +24,7 @@
 	desc = "Sturdy mess of black synthcotton belts and buckles."
 	icon_state = "pilot_webbing2"
 	sprite_sheets = list(
-			"Teshari" = 'icons/mob/species/seromi/ties.dmi'
+			"Teshari" = 'icons/mob/species/teshari/ties.dmi'
 			)
 
 /obj/item/clothing/under/rank/khi/sec/pilot //yes, we're inheriting from the khi version; that one has full rolldown sprites

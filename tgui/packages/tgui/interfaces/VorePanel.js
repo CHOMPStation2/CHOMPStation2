@@ -289,6 +289,8 @@ const VoreSelectedBelly = (props, context) => {
     digest_burn,
     bulge_size,
     shrink_grow_size,
+    emote_time,
+    emote_active,
     addons,
     contaminates,
     contaminate_flavor,
@@ -421,6 +423,21 @@ const VoreSelectedBelly = (props, context) => {
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "em" })}
               content="Examine Message (when full)" />
             <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_digest" })}
+              content="Idle Messages (Digest)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_hold" })}
+              content="Idle Messages (Hold)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_absorb" })}
+              content="Idle Messages (Absorb)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_heal" })}
+              content="Idle Messages (Heal)" />
+            <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_drain" })}
+              content="Idle Messages (Drain)" />
+            <Button
               color="red"
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "reset" })}
               content="Reset Messages" />
@@ -538,6 +555,18 @@ const VoreSelectedBelly = (props, context) => {
                   icon={vorespawn_blacklist ? "toggle-on" : "toggle-off"}
                   selected={vorespawn_blacklist}
                   content={vorespawn_blacklist ? "Yes" : "No"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Idle Emotes">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_emoteactive" })}
+                  icon={emote_active ? "toggle-on" : "toggle-off"}
+                  selected={emote_active}
+                  content={emote_active ? "Active" : "Inactive"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Idle Emote Delay">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_emotetime" })}
+                  content={emote_time + " seconds"} />
               </LabeledList.Item>
             </LabeledList>
           </Flex.Item>
@@ -879,6 +908,7 @@ const VoreUserPreferences = (props, context) => {
   const {
     digestable,
     devourable,
+    resizable,
     feeding,
     absorbable,
     digest_leave_remains,
@@ -888,6 +918,8 @@ const VoreUserPreferences = (props, context) => {
     can_be_drop_prey,
     can_be_drop_pred,
     latejoin_vore,
+    step_mechanics_active,
+    pickup_mechanics_active,
     noisy,
     liq_rec,
     liq_giv,
@@ -1024,6 +1056,44 @@ const VoreUserPreferences = (props, context) => {
               : "Click here to turn on hunger noises.")}
             content={noisy ? "Hunger Noises Enabled" : "Hunger Noises Disabled"} />
         </Flex.Item>
+        <Flex.Item basis="32%">
+          <Button
+            onClick={() => act("toggle_resize")}
+            icon={resizable ? "toggle-on" : "toggle-off"}
+            selected={resizable}
+            fluid
+            tooltip={"This button is to toggle your ability to be resized by others. "
+            + (resizable ? "Click here to prevent being resized." : "Click here to allow being resized.")}
+            content={resizable ? "Resizing Allowed" : "No Resizing"} />
+        </Flex.Item>
+        <Flex.Item basis="32%" grow={1}>
+          <Button
+            onClick={() => act("toggle_steppref")}
+            icon={step_mechanics_active ? "toggle-on" : "toggle-off"}
+            selected={step_mechanics_active}
+            fluid
+            tooltipPosition="top"
+            tooltip={step_mechanics_active 
+              ? "This setting controls whether or not you participate in size-based step mechanics."
+              + "Includes both stepping on others, as well as getting stepped on. Click to disable step mechanics."
+              : ("You will not participate in step mechanics."
+                + " Click to enable step mechanics.")}
+            content={step_mechanics_active ? "Step Mechanics Enabled" : "Step Mechanics Disabled"} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <Button
+            onClick={() => act("toggle_fx")}
+            icon={show_vore_fx ? "toggle-on" : "toggle-off"}
+            selected={show_vore_fx}
+            fluid
+            tooltipPosition="top"
+            tooltip={show_vore_fx 
+              ? "This setting controls whether or not a pred is allowed to mess with your HUD and fullscreen overlays."
+              + "Click to disable all FX."
+              : ("Regardless of Predator Setting, you will not see their FX settings."
+                + " Click this to enable showing FX.")}
+            content={show_vore_fx ? "Show Vore FX" : "Do Not Show Vore FX"} />
+        </Flex.Item>
         <Flex.Item basis="49%">
           <Button
             onClick={() => act("toggle_leaveremains")}
@@ -1040,17 +1110,17 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="49%">
           <Button
-            onClick={() => act("toggle_fx")}
-            icon={show_vore_fx ? "toggle-on" : "toggle-off"}
-            selected={show_vore_fx}
+            onClick={() => act("toggle_pickuppref")}
+            icon={pickup_mechanics_active ? "toggle-on" : "toggle-off"}
+            selected={pickup_mechanics_active}
             fluid
             tooltipPosition="top"
-            tooltip={show_vore_fx 
-              ? "This setting controls whether or not a pred is allowed to mess with your HUD and fullscreen overlays."
-              + "Click to disable all FX."
-              : ("Regardless of Predator Setting, you will not see their FX settings."
-                + " Click this to enable showing FX.")}
-            content={show_vore_fx ? "Show Vore FX" : "Do Not Show Vore FX"} />
+            tooltip={pickup_mechanics_active 
+              ? "Allows macros to pick you up into their hands, and you to pick up micros."
+              + "Click to disable pick-up mechanics"
+              : ("You will not participate in pick-up mechanics."
+                + " Click this to allow picking up/being picked up.")}
+            content={pickup_mechanics_active ? "Pick-up Mechanics Enabled" : "Pick-up Mechanics Disabled"} />
         </Flex.Item>
         <Flex.Item basis="49%">
           <Button

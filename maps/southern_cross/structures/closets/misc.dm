@@ -28,8 +28,8 @@
 	req_one_access = list(access_explorer,access_brig)
 
 	starts_with = list(
-		/obj/item/weapon/gun/energy/phasegun = 2,
-		/obj/item/weapon/gun/energy/phasegun/pistol,
+		/obj/item/weapon/gun/energy/locked/phasegun = 2,
+		/obj/item/weapon/gun/energy/locked/phasegun/pistol,
 		/obj/item/weapon/cell/device/weapon = 2,
 		/obj/item/clothing/accessory/permit/gun/planetside)
 
@@ -41,6 +41,8 @@
 
 	starts_with = list(
 		/obj/item/clothing/under/explorer,
+		/obj/item/clothing/suit/armor/pcarrier/explorer/light,
+		/obj/item/clothing/head/helmet/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer,
 		/obj/item/clothing/mask/gas/explorer,
 		/obj/item/clothing/shoes/boots/winter/explorer,

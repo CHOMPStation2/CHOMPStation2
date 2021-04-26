@@ -109,6 +109,7 @@
 	data["check_arrest"] = null
 	data["arrest_type"] = null
 	data["declare_arrests"] = null
+	data["bot_patrolling"] = null
 	data["will_patrol"] = null
 
 	if(!locked || issilicon(user))
@@ -117,8 +118,8 @@
 		data["check_arrest"] = check_arrest
 		data["arrest_type"] = arrest_type
 		data["declare_arrests"] = declare_arrests
-		if(using_map.bot_patrolling)
-			data["will_patrol"] = will_patrol
+		data["bot_patrolling"] = using_map.bot_patrolling
+		data["patrol"] = will_patrol
 
 	return data
 
@@ -128,7 +129,7 @@
 /mob/living/bot/secbot/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return
-
+	
 	add_fingerprint(usr)
 
 	switch(action)

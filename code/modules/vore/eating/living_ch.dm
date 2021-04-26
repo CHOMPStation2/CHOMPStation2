@@ -7,7 +7,7 @@
 	var/vore_footstep_chance = 0
 	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
 
-	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable 
+	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
 
 
 mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
@@ -66,6 +66,16 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 
 	return message
 
+/mob/living/proc/vore_check_reagents()
+	set name = "Check Belly Liquid (Vore)"
+	set category = "Abilities"
+	set desc = "Check the amount of liquid in your belly."
+
+	var/obj/belly/RTB = input("Choose which vore belly to check") as null|anything in src.vore_organs
+	if(!RTB)
+		return FALSE
+
+	to_chat(src, "<span class='notice'>[RTB] has [RTB.reagents.total_volume] units of liquid.</span>")
 
 /mob/living/proc/vore_transfer_reagents()
 	set name = "Transfer Liquid (Vore)"
@@ -111,9 +121,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 					return FALSE
 
 				if(TG == user)
-					user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from their [RTB] into their [TB].</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into their [TB].</span>")
 				else
-					user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from [TG]'s [RTB] into their [TB].</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [RTB] into their [TB].</span>")
 					add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_VORE, 1, 0, TB)
 
@@ -132,9 +142,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 					return FALSE
 
 				if(TG == user)
-					user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from their [RTB] into [TR]'s [TB].</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into [TR]'s [TB].</span>")
 				else
-					user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from [TG]s [RTB] into [TR]'s [TB].</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]s [RTB] into [TR]'s [TB].</span>")
 
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_VORE, 1, 0, TB)
 				add_attack_logs(user,TR,"Transfered reagents from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -148,9 +158,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 
 			if(TR == user) //Proceed, we dont need to have prefs enabled for transfer within user
 				if(TG == user)
-					user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from their [RTB] into their stomach.</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into their stomach.</span>")
 				else
-					user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from [TG]'s [RTB] into their stomach.</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [RTB] into their stomach.</span>")
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_INGEST, 1, 0, null)
 				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")
 
@@ -160,9 +170,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 
 			else
 				if(TG == user)
-					user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from their [RTB] into [TR]'s stomach.</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into [TR]'s stomach.</span>")
 				else
-					user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from [TG]'s [RTB] into [TR]'s stomach.</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [RTB] into [TR]'s stomach.</span>")
 
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_INGEST, 1, 0, null)
 				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -178,9 +188,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 				return //No long distance transfer
 
 			if(TG == user)
-				user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from their [RTB] into [T].</span>")
+				user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into [T].</span>")
 			else
-				user.visible_message("<span class='notice'>[user] [RTB.reagent_transfer_verb]'s [RTB.reagent_name] from [TG]'s [RTB] into [T].</span>")
+				user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [RTB] into [T].</span>")
 
 			RTB.reagents.vore_trans_to_con(T, transfer_amount, 1, 0)
 			add_attack_logs(user, T,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to a [T]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -195,9 +205,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 				return
 
 			if(TG == user)
-				user.visible_message("<span class='notice'>[user] spills [RTB.reagent_name] from their [RTB] onto the floor!</span>")
+				user.custom_emote_vr(1, "<span class='notice'>spills [RTB.reagent_name] from their [RTB] onto the floor!</span>")
 			else
-				user.visible_message("<span class='notice'>[user] spills [RTB.reagent_name] from [TG]'s [RTB] onto the floor!</span>")
+				user.custom_emote_vr(1, "<span class='notice'>spills [RTB.reagent_name] from [TG]'s [RTB] onto the floor!</span>")
 
 			var/obj/effect/decal/cleanable/blood/reagent/puddle = new /obj/effect/decal/cleanable/blood/reagent(RTB.reagent_name, RTB.reagentcolor, RTB.reagentid, puddle_amount, user.ckey, TG.ckey)
 			puddle.loc = TG.loc

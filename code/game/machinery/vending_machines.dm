@@ -71,6 +71,7 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/wine = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/jager = 5,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer = 15,
@@ -302,6 +303,7 @@
 					/obj/item/weapon/storage/fancy/cigarettes/jerichos = 10,
 					/obj/item/weapon/storage/fancy/cigarettes/menthols = 10,
 					/obj/item/weapon/storage/rollingpapers = 10,
+					/obj/item/weapon/storage/rollingpapers/blunt = 10,
 					/obj/item/weapon/storage/chewables/tobacco = 5,
 					/obj/item/weapon/storage/chewables/tobacco/fine = 5,
 					/obj/item/weapon/storage/box/matches = 10,
@@ -330,6 +332,7 @@
 					/obj/item/weapon/storage/fancy/cigarettes/jerichos = 22,
 					/obj/item/weapon/storage/fancy/cigarettes/menthols = 18,
 					/obj/item/weapon/storage/rollingpapers = 10,
+					/obj/item/weapon/storage/rollingpapers/blunt = 20,
 					/obj/item/weapon/storage/chewables/tobacco = 10,
 					/obj/item/weapon/storage/chewables/tobacco/fine = 20,
 					/obj/item/weapon/storage/box/matches = 1,
@@ -587,8 +590,9 @@
 	desc = "An old sweet water vending machine,how did this end up here?"
 	icon_state = "sovietsoda"
 	product_ads = "For Tsar and Country.;Have you fulfilled your nutrition quota today?;Very nice!;We are simple people, for this is all we eat.;If there is a person, there is a problem. If there is no person, then there is no problem."
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/space_up = 30) // TODO Russian soda can
-	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/cola = 20) // TODO Russian cola can
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/boda = 30,		//ADDITION 04/03/2021
+					/obj/item/weapon/reagent_containers/food/drinks/cans/kompot = 20)	//ADDITION 04/03/2021
+	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/cans/kvass = 20) 	//ADDITION 04/03/2021
 	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
 	vending_sound = "machines/vending/vending_cans.ogg"
 

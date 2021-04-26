@@ -370,3 +370,10 @@
 	model_text = "Pilot"
 	req_access = null
 	req_one_access = list(access_pilot,access_explorer)
+
+/datum/map/southern_cross/get_map_info()
+	. = list()
+	. +=  "The NLS [full_name] is a small waystation in orbit of the frozen garden world of Sif, jewel of the Vir system.<br>"
+	. +=  "Though Vir is typically peaceful, the system has seen its fair share of conflict in the face of technological extremists, rogue drone intelligence, and worse.<br>"
+	. +=  "As an employee of NanoTrasen, operators of the Southern Cross and one of the galaxy's largest research corporations, you're probably just here to do a job."
+	return jointext(., "<br>") 

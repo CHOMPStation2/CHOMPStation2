@@ -55,7 +55,7 @@
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/sergal),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/sergal),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg),
@@ -334,42 +334,15 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
 	min_age = 18
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Diona"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Diona" //CHOMPedit
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-
-/datum/species/teshari
-	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
-	spawn_flags = SPECIES_CAN_JOIN
-	icobase = 'icons/mob/human_races/r_seromi_vr.dmi'
-	deform = 'icons/mob/human_races/r_seromi_vr.dmi'
-	icobase_tail = 1
-	color_mult = 1
-	min_age = 18
-	push_flags = ~HEAVY //Allows them to use micro step code.
-	swap_flags = ~HEAVY
-	gluttonous = 0
-	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	descriptors = list()
-
-//CHOMPedit: link to our wiki
-	wikilink="https://wiki.chompstation13.net/index.php?title=Teshari"
-	agility = 90
-
-	male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
-	female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
-
-	inherent_verbs = list(
-		/mob/living/carbon/human/proc/sonar_ping,
-		/mob/living/proc/hide,
-		/mob/living/proc/toggle_pass_table
-		)
-
+	
+//CHOMPedit start
 /datum/species/shapeshifter/promethean
 	spawn_flags = SPECIES_CAN_JOIN
-//CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Promethean"
-	
+//CHOMPedit end
+
 /datum/species/human
 	color_mult = 1
 	icobase = 'icons/mob/human_races/r_human_vr.dmi'
@@ -504,7 +477,7 @@ datum/species/harpy
 	base_color = "#f0f0f0"
 	color_mult = 1
 
-	has_glowing_eyes = TRUE
+	//has_glowing_eyes = TRUE			// Applicable through traits.
 
 	male_cough_sounds = null
 	female_cough_sounds = null
@@ -536,7 +509,7 @@ datum/species/harpy
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest/crewkin),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin/crewkin),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/vr/crewkin),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/crewkin),
 		BP_L_ARM =  list("path" = /obj/item/organ/external/arm/crewkin),
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right/crewkin),
 		BP_L_LEG =  list("path" = /obj/item/organ/external/leg/crewkin),
