@@ -42,6 +42,23 @@
 	tracer_type = /obj/effect/projectile/tracer/laser_blue
 	impact_type = /obj/effect/projectile/impact/laser_blue
 
+<<<<<<< HEAD
+||||||| parent of 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
+/obj/item/projectile/beam/weaklaser/blue
+	muzzle_type = /obj/effect/projectile/muzzle/laser_blue
+	tracer_type = /obj/effect/projectile/tracer/laser_blue
+	impact_type = /obj/effect/projectile/impact/laser_blue
+
+=======
+/obj/item/projectile/beam/weaklaser/blue
+	icon_state = "bluelaser"
+	light_color = "#0066FF"
+
+	muzzle_type = /obj/effect/projectile/muzzle/laser_blue
+	tracer_type = /obj/effect/projectile/tracer/laser_blue
+	impact_type = /obj/effect/projectile/impact/laser_blue
+
+>>>>>>> 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
 /obj/item/projectile/beam/medigun
 	name = "healing beam"
 	icon_state = "healbeam"
