@@ -732,6 +732,20 @@
 	sheet_to_give = /obj/item/stack/material/mhydrogen
 
 
+// Chompstation addition
+/datum/chemical_reaction/solidification/aluminium
+	name = "Solid Aluminium"
+	id = "solidaluminium"
+	required_reagents = list("frostoil" = 5, "aluminum" = REAGENTS_PER_SHEET)
+	sheet_to_give = /obj/item/stack/material/aluminium
+
+/datum/chemical_reaction/solidification/copper
+	name = "Solid Copper"
+	id = "solidcopper"
+	required_reagents = list("frostoil" = 5, "copper" = REAGENTS_PER_SHEET)
+	sheet_to_give = /obj/item/stack/material/copper
+// Chompstation addition end
+
 // These are from Xenobio.
 /datum/chemical_reaction/solidification/steel
 	name = "Solid Steel"
