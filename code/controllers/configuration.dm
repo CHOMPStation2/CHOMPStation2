@@ -284,8 +284,19 @@ var/list/gamemode_cache = list()
 	var/static/disable_cid_warn_popup = FALSE
 
 	// whether or not to use the nightshift subsystem to perform lighting changes
+<<<<<<< HEAD
 	var/static/enable_night_shifts = FALSE
 
+||||||| parent of 7ee3781614... Merge pull request #10219 from VOREStation/upstream-merge-8055
+	var/static/enable_night_shifts = FALSE
+	
+=======
+	var/static/enable_night_shifts = FALSE
+
+	// How strictly the loadout enforces object species whitelists
+	var/loadout_whitelist = LOADOUT_WHITELIST_LAX
+	
+>>>>>>> 7ee3781614... Merge pull request #10219 from VOREStation/upstream-merge-8055
 	var/static/vgs_access_identifier = null	// VOREStation Edit - VGS
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
 
