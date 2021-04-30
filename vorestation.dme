@@ -2191,12 +2191,8 @@
 #include "code\modules\economy\ATM.dm"
 #include "code\modules\economy\cash.dm"
 #include "code\modules\economy\cash_register.dm"
-<<<<<<< HEAD
 #include "code\modules\economy\casinocash_ch.dm"
-||||||| parent of d9937399de... Merge pull request #10192 from VOREStation/upstream-merge-8022
-=======
 #include "code\modules\economy\coins.dm"
->>>>>>> d9937399de... Merge pull request #10192 from VOREStation/upstream-merge-8022
 #include "code\modules\economy\economy_misc.dm"
 #include "code\modules\economy\EFTPOS.dm"
 #include "code\modules\economy\Events.dm"
@@ -2572,20 +2568,7 @@
 #include "code\modules\maps\tg\reader.dm"
 #include "code\modules\materials\fifty_spawner.dm"
 #include "code\modules\materials\fifty_spawner_mats.dm"
-<<<<<<< HEAD
-#include "code\modules\materials\material_recipes.dm"
-#include "code\modules\materials\material_recipes_ch.dm"
-#include "code\modules\materials\material_recipes_vr.dm"
-#include "code\modules\materials\material_sheets.dm"
-#include "code\modules\materials\material_sheets_vr.dm"
-||||||| parent of d9937399de... Merge pull request #10192 from VOREStation/upstream-merge-8022
-#include "code\modules\materials\material_recipes.dm"
-#include "code\modules\materials\material_recipes_vr.dm"
-#include "code\modules\materials\material_sheets.dm"
-#include "code\modules\materials\material_sheets_vr.dm"
-=======
 #include "code\modules\materials\fifty_spawner_mats_vr.dm"
->>>>>>> d9937399de... Merge pull request #10192 from VOREStation/upstream-merge-8022
 #include "code\modules\materials\material_synth.dm"
 <<<<<<< HEAD
 #include "code\modules\materials\materials.dm"
