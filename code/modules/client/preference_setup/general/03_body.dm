@@ -244,11 +244,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.r_wing3	= sanitize_integer(pref.r_wing3, 0, 255, initial(pref.r_wing3))
 	pref.g_wing3	= sanitize_integer(pref.g_wing3, 0, 255, initial(pref.g_wing3))
 	pref.b_wing3	= sanitize_integer(pref.b_wing3, 0, 255, initial(pref.b_wing3))
-	if(!(pref.ear_style in get_ear_styles()))
+	if(get_ear_styles()[pref.ear_style])
 		pref.ear_style = initial(pref.ear_style)
-	if(!(pref.wing_style in get_wing_styles()))
+	if(get_wing_styles()[pref.wing_style])
 		pref.wing_style = initial(pref.wing_style)
-	if(!(pref.tail_style in get_tail_styles()))
+	if(get_tail_styles()[pref.tail_style])
 		pref.tail_style = initial(pref.tail_style)
 
 // Moved from /datum/preferences/proc/copy_to()
@@ -698,11 +698,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.body_markings.Cut() // Basically same as above.
 			
 			// Sanitize ear/wing/tail styles
-			if(!(pref.ear_style in get_ear_styles()))
+			if(get_ear_styles()[pref.ear_style])
 				pref.ear_style = initial(pref.ear_style)
-			if(!(pref.wing_style in get_wing_styles()))
+			if(get_wing_styles()[pref.wing_style])
 				pref.wing_style = initial(pref.wing_style)
-			if(!(pref.tail_style in get_tail_styles()))
+			if(get_tail_styles()[pref.tail_style])
 				pref.tail_style = initial(pref.tail_style)
 			
 			var/min_age = get_min_age()
