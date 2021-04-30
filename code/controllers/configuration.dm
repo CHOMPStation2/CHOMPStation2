@@ -241,6 +241,7 @@ var/list/gamemode_cache = list()
 
 	var/persistence_disabled = FALSE
 	var/persistence_ignore_mapload = FALSE
+	
 	var/allow_byond_links = 1	//CHOMP Edit turned this on
 	var/allow_discord_links = 1	//CHOMP Edit turned this on
 	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit: pussy.
