@@ -23,18 +23,11 @@
 	if(!islist(pref.alternate_languages))	pref.alternate_languages = list()
 	if(pref.species)
 		var/datum/species/S = GLOB.all_species[pref.species]
-<<<<<<< HEAD
-		if(S && pref.alternate_languages.len > pref.numlanguage()) //CHOMPEdit
-			pref.alternate_languages.len = pref.numlanguage() // Truncate to allowed length CHOMPEdit
-||||||| parent of 0c51187d69... Merge pull request #10223 from VOREStation/upstream-merge-8030
-		if(S && pref.alternate_languages.len > S.num_alternate_languages)
-			pref.alternate_languages.len = S.num_alternate_languages // Truncate to allowed length
-=======
 		if(!istype(S))
 			return
 			
-		if(pref.alternate_languages.len > S.num_alternate_languages)
-			pref.alternate_languages.len = S.num_alternate_languages // Truncate to allowed length
+		if(pref.alternate_languages.len > pref.numlanguage()) //CHOMPEdit
+			pref.alternate_languages.len = pref.numlanguage() // Truncate to allowed length CHOMPEdit
 
 		// Sanitize illegal languages
 		for(var/language in pref.alternate_languages)
@@ -42,7 +35,6 @@
 			if((L.flags & RESTRICTED) || (!(language in S.secondary_langs) && !is_lang_whitelisted(pref.client, L)))
 				pref.alternate_languages -= language
 
->>>>>>> 0c51187d69... Merge pull request #10223 from VOREStation/upstream-merge-8030
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
 		pref.language_prefixes = config.language_prefixes.Copy()
 	for(var/prefix in pref.language_prefixes)
