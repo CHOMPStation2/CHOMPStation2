@@ -66,21 +66,12 @@ var/list/gear_datums = list()
 	for(var/gear_name in gear_datums)
 		var/datum/gear/G = gear_datums[gear_name]
 
-<<<<<<< HEAD
-		if(G.whitelisted && !is_alien_whitelisted(preference_mob, GLOB.all_species[G.whitelisted]))
-			continue
-||||||| parent of 7ee3781614... Merge pull request #10219 from VOREStation/upstream-merge-8055
-		//VOREStation Removal Start - No need for species-based whitelists for species clothes
-		//if(G.whitelisted && G.whitelisted != pref.species)
-		//	continue
-		//VOREStation Removal End
-=======
 		if(G.whitelisted && config.loadout_whitelist != LOADOUT_WHITELIST_OFF)
 			if(config.loadout_whitelist == LOADOUT_WHITELIST_STRICT && G.whitelisted != pref.species)
 				continue
 			if(config.loadout_whitelist == LOADOUT_WHITELIST_LAX && !is_alien_whitelisted(preference_mob(), GLOB.all_species[G.whitelisted]))	
 				continue
->>>>>>> 7ee3781614... Merge pull request #10219 from VOREStation/upstream-merge-8055
+
 		if(max_cost && G.cost > max_cost)
 			continue
 		//VOREStation Edit Start
