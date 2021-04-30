@@ -1376,10 +1376,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	dat += "</center></body>"
 
 	user << browse(dat, "window=species;size=700x400")
-<<<<<<< HEAD
-
-||||||| parent of 0c51187d69... Merge pull request #10223 from VOREStation/upstream-merge-8030
-=======
 
 /datum/category_item/player_setup_item/general/body/proc/get_tail_styles()
 	var/list/pretty_tail_styles = list("Normal" = null)
@@ -1404,4 +1400,3 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		if(((!instance.ckeys_allowed) || (pref.client.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)) || check_rights(R_ADMIN | R_EVENT | R_FUN, 0, pref.client))	//VOREStation Edit
 			pretty_wing_styles[instance.name] = path
 	return pretty_wing_styles
->>>>>>> 0c51187d69... Merge pull request #10223 from VOREStation/upstream-merge-8030
