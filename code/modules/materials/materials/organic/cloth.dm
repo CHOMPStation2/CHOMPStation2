@@ -97,7 +97,9 @@
 
 
 
-/datum/material/carpet
+//CHOMPstation Removal Start: Moved to materials_ch and changed to allow for material var
+/*
+/material/carpet
 	name = "carpet"
 	display_name = "comfy"
 	use_name = "red upholstery"
@@ -109,6 +111,8 @@
 	sheet_plural_name = "tiles"
 	protectiveness = 1 // 4%
 	conductive = 0
+*/
+//CHOMPstation Removal End
 
 /datum/material/cotton
 	name = "cotton"
