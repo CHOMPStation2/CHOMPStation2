@@ -209,27 +209,11 @@
 	var/recharging = 0
 	var/phase_power = 75
 
-<<<<<<< HEAD
 	projectile_type = /obj/item/projectile/beam/phaser
 	//CHOMP Edit: Changed beam type to new phaser beam type.
-||||||| parent of 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
-	projectile_type = /obj/item/projectile/beam/blue
-=======
-	projectile_type = /obj/item/projectile/beam/blue
-
-	modifystate = "phaserkill"
->>>>>>> 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
 	firemodes = list(
-<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, charge_cost = 300),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 60),
-||||||| parent of 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, charge_cost = 300),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, charge_cost = 80),
-=======
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="phaserkill", charge_cost = 300),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phaserstun", charge_cost = 80),
->>>>>>> 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 80),
 	)
 	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
@@ -280,25 +264,11 @@
 	item_state = "energykill"
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi')
 
-<<<<<<< HEAD
 	modifystate = "carbinekill"
 	//CHOMP Edit: Changed beam type to new phaser beam type.
-||||||| parent of 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
-	modifystate = "carbinekill"
-=======
-	modifystate = "carbkill"
->>>>>>> 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
 	firemodes = list(
-<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="carbinekill", charge_cost = 300),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="carbinestun", charge_cost = 60),
-||||||| parent of 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="carbinekill", charge_cost = 300),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="carbinestun", charge_cost = 80),
-=======
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="carbkill", charge_cost = 300),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="carbstun", charge_cost = 80),
->>>>>>> 7e0f0ef92c... Merge pull request #10207 from klaasjared/The-Model-E2
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="carbinestun", charge_cost = 80),
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/carbine/update_icon()
