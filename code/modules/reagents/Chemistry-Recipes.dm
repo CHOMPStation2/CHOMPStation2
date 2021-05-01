@@ -731,7 +731,6 @@
 	required_reagents = list("frostoil" = 100, "hydrogen" = REAGENTS_PER_SHEET)
 	sheet_to_give = /obj/item/stack/material/mhydrogen
 
-
 // These are from Xenobio.
 /datum/chemical_reaction/solidification/steel
 	name = "Solid Steel"

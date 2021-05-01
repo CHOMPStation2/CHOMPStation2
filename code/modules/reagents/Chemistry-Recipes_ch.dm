@@ -300,3 +300,16 @@
 	result = "hachi"
 	required_reagents = list("burbon" = 2, "sake" = 1, "lemonjuice" = 1, "mushroom" = 1)
 	result_amount = 5
+
+// Frost oil reactions for material sheets
+/datum/chemical_reaction/solidification/aluminium
+	name = "Solid Aluminium"
+	id = "solidaluminium"
+	required_reagents = list("frostoil" = 5, "aluminum" = REAGENTS_PER_SHEET)
+	sheet_to_give = /obj/item/stack/material/aluminium
+
+/datum/chemical_reaction/solidification/copper
+	name = "Solid Copper"
+	id = "solidcopper"
+	required_reagents = list("frostoil" = 5, "copper" = REAGENTS_PER_SHEET)
+	sheet_to_give = /obj/item/stack/material/copper
