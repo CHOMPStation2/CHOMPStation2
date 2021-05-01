@@ -323,7 +323,7 @@
 	one_handed_penalty = 50 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
 	phase_power = 150 //efficient crank charger
 
-	projectile_type = /obj/item/projectile/beam/phaser/heavy
+	projectile_type = /obj/item/projectile/beam/phaser/heavy //CHOMPEdit
 	modifystate = "riflekill"
 	firemodes = list(
 		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/sniper, modifystate="riflekill", charge_cost = 600),
