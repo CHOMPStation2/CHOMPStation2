@@ -1,6 +1,27 @@
 //Hardsuits
+/obj/item/weapon/rig/ch //Some blank bs
+	desc = "This is a dev item and should not be spawned."
+	chest_type = /obj/item/clothing/suit/space/rig/ch
+	helm_type = /obj/item/clothing/head/helmet/space/rig/ch
+	glove_type = /obj/item/clothing/gloves/gauntlets/rig/ch
+	boot_type = /obj/item/clothing/shoes/magboots/rig/ch
+
+/obj/item/clothing/suit/space/rig/ch
+	icon = 'icons/obj/clothing/spacesuits_ch.dmi'
+
+/obj/item/clothing/head/helmet/space/rig/ch
+	icon = 'icons/obj/clothing/hats_ch.dmi'
+
+/obj/item/clothing/gloves/gauntlets/rig/ch
+	icon = 'icons/obj/clothing/gloves_ch.dmi'
+
+/obj/item/clothing/shoes/magboots/rig/ch
+	icon = 'icons/obj/clothing/shoes_ch.dmi'
+
+
+
 //A second security suit. Comes with a grenade launcher that only accepts flashbangs and adds a new sprinter and flash modules.
-/obj/item/weapon/rig/pursuit
+/obj/item/weapon/rig/ch/pursuit
 	name = "pursuit hardsuit control module"
 	suit_type = "pursuit hardsuit"
 	desc = "A Security hardsuit designed for chasing down the grey tide."
@@ -10,7 +31,6 @@
 	offline_slowdown = 3
 	offline_vision_restriction = 1
 	siemens_coefficient= 0.7
-	chest_type = /obj/item/clothing/suit/space/rig/ch
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ch/pursuit
 
 	allowed = list(
@@ -25,7 +45,6 @@
 	req_access = list(access_hos)
 	req_one_access = list()
 
-
 /obj/item/weapon/rig/pursuit/equipped
 
 	initial_modules = list(
@@ -35,6 +54,7 @@
 		/obj/item/rig_module/grenade_launcher/nerfed,
 		/obj/item/rig_module/mounted/taser
 		)
+
 
 //Camera networks and light_overlay which is for your HUD icon when you turn your suit light on. This is important, ties into the helm_type var that your suit will probably need.
 /obj/item/clothing/head/helmet/space/rig/ch/pursuit
@@ -49,8 +69,11 @@
 
 
 
+
+
 ////////////////////////////////////////////////////////////////////////////////////////
 //Backend stuff to make the sprites work. Copied and pasted from rig_pieces_vr.dm, but added ch to everything. Only reason for this to be touched is to add or remove species. This might just need to go in a new file named rig_pieces_ch.dm, but whatever, it's fine here. This is for our rigs, I'll just leave it here..
+
 /obj/item/clothing/head/helmet/space/rig/ch
 	sprite_sheets = list(
 		SPECIES_HUMAN			= 'icons/mob/head_ch.dmi',
