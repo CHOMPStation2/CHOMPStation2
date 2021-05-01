@@ -241,6 +241,7 @@ var/list/gamemode_cache = list()
 
 	var/persistence_disabled = FALSE
 	var/persistence_ignore_mapload = FALSE
+	
 	var/allow_byond_links = 1	//CHOMP Edit turned this on
 	var/allow_discord_links = 1	//CHOMP Edit turned this on
 	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit: pussy.
@@ -286,6 +287,9 @@ var/list/gamemode_cache = list()
 	// whether or not to use the nightshift subsystem to perform lighting changes
 	var/static/enable_night_shifts = FALSE
 
+	// How strictly the loadout enforces object species whitelists
+	var/loadout_whitelist = LOADOUT_WHITELIST_LAX
+	
 	var/static/vgs_access_identifier = null	// VOREStation Edit - VGS
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
 
