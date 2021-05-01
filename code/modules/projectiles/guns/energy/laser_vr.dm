@@ -304,3 +304,102 @@
 	req_access = newlist() //for toggling safety
 	locked = 0
 	lockable = 0
+<<<<<<< HEAD
+||||||| parent of 501e41b2e8... Merge pull request #10238 from Novacat/nova-ert
+
+////////////////Phaser Rifle////////////////
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle
+	name = "frontier marksman rifle"
+	desc = "A much larger, heavier weapon than the typical frontier-type weapons, this DMR can be fired both from the hip, and in scope. Includes a built-in crank charger for recharging away from civilization. This one has a safety interlock that prevents firing while in proximity to the facility."
+	icon = 'icons/obj/gun_vr.dmi'
+	icon_state = "riflekill"
+	item_state = "sniper"
+	item_state_slots = list(slot_r_hand_str = "lsniper", slot_l_hand_str = "lsniper")
+	wielded_item_state = "lsniper-wielded"
+	action_button_name = "Use Scope"
+	w_class = ITEMSIZE_LARGE
+	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi')
+	accuracy = -15 //better than most snipers but still has penalty
+	scoped_accuracy = 40
+	one_handed_penalty = 50 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
+	phase_power = 150 //efficient crank charger
+
+	modifystate = "riflekill"
+	firemodes = list(
+		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/sniper, modifystate="riflekill", charge_cost = 600),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam, modifystate="riflestun", charge_cost = 200),
+	)
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle/ui_action_click()
+	scope()
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle/verb/scope()
+	set category = "Object"
+	set name = "Use Scope"
+	set popup_menu = 1
+
+	toggle_scope(2.0)
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle/update_icon()
+	if(recharging)
+		icon_state = "[modifystate]_pump"
+		update_held_icon()
+		return
+	..()
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle/unlocked
+	desc = "A much larger, heavier weapon than the typical frontier-type weapons, this DMR can be fired both from the hip, and in scope. Includes a built-in crank charger for recharging away from civilization."
+	req_access = newlist() //for toggling safety
+	locked = 0
+	lockable = 0
+=======
+
+////////////////Phaser Rifle////////////////
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle
+	name = "frontier marksman rifle"
+	desc = "A much larger, heavier weapon than the typical frontier-type weapons, this DMR can be fired both from the hip, and in scope. Includes a built-in crank charger for recharging away from civilization. This one has a safety interlock that prevents firing while in proximity to the facility."
+	icon = 'icons/obj/gun_vr.dmi'
+	icon_state = "riflekill"
+	item_state = "sniper"
+	item_state_slots = list(slot_r_hand_str = "lsniper", slot_l_hand_str = "lsniper")
+	wielded_item_state = "lsniper-wielded"
+	action_button_name = "Use Scope"
+	w_class = ITEMSIZE_LARGE
+	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi')
+	accuracy = -15 //better than most snipers but still has penalty
+	scoped_accuracy = 40
+	one_handed_penalty = 50 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
+	phase_power = 150 //efficient crank charger
+
+	projectile_type = /obj/item/projectile/beam/sniper
+	modifystate = "riflekill"
+	firemodes = list(
+		list(mode_name="sniper", fire_delay=35, projectile_type=/obj/item/projectile/beam/sniper, modifystate="riflekill", charge_cost = 600),
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam, modifystate="riflestun", charge_cost = 200),
+	)
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle/ui_action_click()
+	scope()
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle/verb/scope()
+	set category = "Object"
+	set name = "Use Scope"
+	set popup_menu = 1
+
+	toggle_scope(2.0)
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle/update_icon()
+	if(recharging)
+		icon_state = "[modifystate]_pump"
+		update_held_icon()
+		return
+	..()
+
+/obj/item/weapon/gun/energy/locked/frontier/rifle/unlocked
+	desc = "A much larger, heavier weapon than the typical frontier-type weapons, this DMR can be fired both from the hip, and in scope. Includes a built-in crank charger for recharging away from civilization."
+	req_access = newlist() //for toggling safety
+	locked = 0
+	lockable = 0
+>>>>>>> 501e41b2e8... Merge pull request #10238 from Novacat/nova-ert
