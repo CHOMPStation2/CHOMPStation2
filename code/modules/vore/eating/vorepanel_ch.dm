@@ -6,7 +6,7 @@
 */ 
 
 /obj/screen/belly_fullscreen_preview
-	icon = 'icons/mob/screen_full_vore.dmi'
+	icon = 'icons/mob/screen_full_vore_ch.dmi'
 	icon_state = ""
 	appearance_flags = 0
 
