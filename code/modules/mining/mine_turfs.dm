@@ -8,13 +8,13 @@ var/list/mining_overlay_cache = list()
 	density = 1
 	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
 
+//YW add start
 /turf/unsimulated/mineral/ice
 	name = "Ice wall"
 	desc = "Frigid Ice that seems to be stronger than most manmade structures."
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "Icerock"
-
-
+//YW add end
 
 /turf/simulated/mineral //wall piece
 	name = "rock"
