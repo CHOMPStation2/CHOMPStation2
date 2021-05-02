@@ -250,7 +250,7 @@ turf/simulated/mineral/floor/light_corner
 			for(var/ore in resources)
 				var/amount_to_give = rand(CEILING(resources[ore]/2, 1), resources[ore])  // Should result in at least one piece of ore.
 				for(var/i=1, i <= amount_to_give, i++)
-					var/oretype = GLOB.ore_types[ore]
+					var/oretype = ore_types[ore]
 					new oretype(src)
 				resources[ore] = 0
 
