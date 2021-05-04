@@ -8,13 +8,13 @@ var/list/mining_overlay_cache = list()
 	density = 1
 	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
 
+//YW add start
 /turf/unsimulated/mineral/ice
 	name = "Ice wall"
 	desc = "Frigid Ice that seems to be stronger than most manmade structures."
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "Icerock"
-
-
+//YW add end
 
 /turf/simulated/mineral //wall piece
 	name = "rock"
@@ -250,7 +250,7 @@ turf/simulated/mineral/floor/light_corner
 			for(var/ore in resources)
 				var/amount_to_give = rand(CEILING(resources[ore]/2, 1), resources[ore])  // Should result in at least one piece of ore.
 				for(var/i=1, i <= amount_to_give, i++)
-					var/oretype = GLOB.ore_types[ore]
+					var/oretype = ore_types[ore]
 					new oretype(src)
 				resources[ore] = 0
 
