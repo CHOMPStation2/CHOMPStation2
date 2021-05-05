@@ -144,8 +144,16 @@
 	descriptors = list(
 		/datum/mob_descriptor/height = -3,
 		/datum/mob_descriptor/build = -3
+<<<<<<< HEAD
 		)
 		
+||||||| parent of caff594797... Merge pull request #10050 from VOREStation/upstream-merge-7987
+		)
+
+=======
+	)
+
+>>>>>>> caff594797... Merge pull request #10050 from VOREStation/upstream-merge-7987
 	var/static/list/flight_bodyparts = list(
 		BP_L_ARM,
 		BP_R_ARM,
@@ -157,6 +165,12 @@
 		/obj/item/clothing/suit/straight_jacket
 	)
 
+	default_emotes = list(
+		/decl/emote/audible/teshsqueak,
+		/decl/emote/audible/teshchirp,
+		/decl/emote/audible/teshtrill
+	)
+
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
@@ -164,7 +178,7 @@
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
 	// Tesh can glide to save themselves from some falls. Basejumping bird
-	// without parachute, or falling bird without free wings goes splat.
+	// without parachute, or falling bird without free wings, goes splat.
 
 	// Are we landing from orbit, or handcuffed/unconscious/tied to something? 
 	if(planetary || !istype(H) || H.incapacitated(INCAPACITATION_DEFAULT|INCAPACITATION_DISABLED))
