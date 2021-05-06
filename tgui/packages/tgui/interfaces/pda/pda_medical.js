@@ -84,8 +84,16 @@ export const pda_medical = (props, context) => {
               <LabeledList.Item label="Details">
                 {medical.cdi_d}
               </LabeledList.Item>
+<<<<<<< HEAD
+              <LabeledList.Item label="Important Notes">
+                {medical.notes}
+||||||| parent of 53427cc0ed... Merge pull request #10260 from ShadowLarkens/tgui_less_jank
               <LabeledList.Item label="Important Notes">
                 {medical.notes.split("\n").map(m => <Box key={m}>{m}</Box>) || "No data found."}
+=======
+              <LabeledList.Item label="Important Notes" prewrap>
+                {medical.notes}
+>>>>>>> 53427cc0ed... Merge pull request #10260 from ShadowLarkens/tgui_less_jank
               </LabeledList.Item>
             </LabeledList>
           ) || (
