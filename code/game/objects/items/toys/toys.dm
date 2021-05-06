@@ -1291,7 +1291,7 @@
 	/obj/item/toy/character/voidone,
 	/obj/item/toy/character/lich
 	)
-
+/* VOREStation edit. Moved to toys_vr.dm
 /obj/item/toy/AI
 	name = "toy AI"
 	desc = "A little toy model AI core!"// with real law announcing action!" //Alas, requires a rewrite of how ion laws work.
@@ -1299,7 +1299,7 @@
 	icon_state = "AI"
 	w_class = ITEMSIZE_SMALL
 	var/cooldown = 0
-/*
+
 /obj/item/toy/AI/attack_self(mob/user)
 	if(!cooldown) //for the sanity of everyone
 		var/message = generate_ion_law()
