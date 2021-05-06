@@ -52,6 +52,15 @@
 		dna.real_name = real_name
 		sync_organ_dna()
 
+<<<<<<< HEAD
+||||||| parent of b383e17875... Merge pull request #10243 from ShadowLarkens/personal_crafting
+	//verbs |= /mob/living/proc/toggle_selfsurgery //VOREStation Removal
+
+=======
+	//verbs |= /mob/living/proc/toggle_selfsurgery //VOREStation Removal
+	AddComponent(/datum/component/personal_crafting)
+
+>>>>>>> b383e17875... Merge pull request #10243 from ShadowLarkens/personal_crafting
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
 	for(var/organ in organs)
