@@ -336,16 +336,8 @@ var/datum/planet/sif/planet_sif = null
 		"Loud thunder is heard in the distance.",
 		"A bright flash heralds the approach of a storm."
 	)
-<<<<<<< HEAD
-	outdoor_sounds_type = /datum/looping_sound/weather/rain
-	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
-||||||| parent of cdbee2a178... Merge pull request #10246 from VOREStation/upstream-merge-8056
-//	outdoor_sounds_type = /datum/looping_sound/weather/rain
-//	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
-=======
 	outdoor_sounds_type = /datum/looping_sound/weather/rain/heavy
 	indoor_sounds_type = /datum/looping_sound/weather/rain/heavy/indoors
->>>>>>> cdbee2a178... Merge pull request #10246 from VOREStation/upstream-merge-8056
 
 
 	transition_chances = list(
