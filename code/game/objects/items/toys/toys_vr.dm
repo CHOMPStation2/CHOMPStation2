@@ -20,6 +20,7 @@
 	drop_sound = 'sound/voice/weh.ogg'
 	attack_verb = list("raided", "kobolded", "weh'd")
 
+/* //CHOMPedit: Disable, this is an upstream player reference.
 /obj/item/toy/plushie/lizardplushie/resh
 	name = "security unathi plushie"
 	desc = "An adorable stuffed toy that resembles an unathi wearing a head of security uniform. Perfect example of a monitor lizard."
@@ -27,6 +28,7 @@
 	icon_state = "marketable_resh"
 	pokephrase = "Halt! Sssecurity!"		//"Butts!" would be too obvious
 	attack_verb = list("valided", "justiced", "batoned")
+*/ //CHOMPedit end
 
 /obj/item/toy/plushie/slimeplushie
 	name = "slime plushie"
@@ -212,6 +214,7 @@
 	icon_state = "generic"
 	attack_verb = list("existed near")
 
+/* //CHOMPedit: Disable, upstream player reference.
 /obj/item/toy/plushie/marketable_pip
 	name = "mascot CRO plushie"
 	desc = "An adorable plushie of NanoTrasen's Best Girl(TM) mascot. It smells faintly of paperwork."
@@ -240,6 +243,7 @@
 
 /obj/item/toy/plushie/marketable_pip/proc/cooldownreset()
 	cooldown = 0
+*/ //CHOMPedit end
 
 /obj/item/toy/plushie/moth
 	name = "moth plushie"
