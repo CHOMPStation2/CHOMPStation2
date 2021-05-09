@@ -1,5 +1,14 @@
 //Vore/kink reagents go here.
 
+/datum/reagent/aphrodisiac
+	name = "Aphrodisiac"
+	id = "aphrodisiac"
+	description = "You so horny."
+	taste_description = "sweetness"
+	reagent_state = LIQUID
+	color = "#FF9999"
+	scannable = 1
+	
 ///GENDER CHANGE REAGENTS////
 
 /datum/reagent/change_drug //base chemical
