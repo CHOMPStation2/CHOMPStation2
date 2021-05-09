@@ -173,7 +173,7 @@
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
 			"mapRef" = map_name,	//CHOMPEdit
-			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
+			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore_ch.dmi'), //CHOMPedit
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
 
