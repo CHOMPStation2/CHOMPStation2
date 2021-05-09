@@ -163,6 +163,16 @@
 		/datum/mob_descriptor/build = 2
 		)
 
+	default_emotes = list(
+		/decl/emote/human/swish,
+		/decl/emote/human/wag,
+		/decl/emote/human/sway,
+		/decl/emote/human/qwag,
+		/decl/emote/human/fastsway,
+		/decl/emote/human/swag,
+		/decl/emote/human/stopsway
+	)
+
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
@@ -255,6 +265,16 @@
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
+
+	default_emotes = list(
+		/decl/emote/human/swish,
+		/decl/emote/human/wag,
+		/decl/emote/human/sway,
+		/decl/emote/human/qwag,
+		/decl/emote/human/fastsway,
+		/decl/emote/human/swag,
+		/decl/emote/human/stopsway
+	)
 
 /datum/species/tajaran/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
@@ -547,6 +567,11 @@
 	reagent_tag = IS_DIONA
 
 	genders = list(PLURAL)
+
+	default_emotes = list(
+		/decl/emote/audible/chirp,
+		/decl/emote/audible/multichirp
+	)
 
 /datum/species/diona/can_understand(var/mob/other)
 	if(istype(other, /mob/living/carbon/alien/diona))
