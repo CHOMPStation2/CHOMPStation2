@@ -144,16 +144,8 @@
 	descriptors = list(
 		/datum/mob_descriptor/height = -3,
 		/datum/mob_descriptor/build = -3
-<<<<<<< HEAD
-		)
-		
-||||||| parent of caff594797... Merge pull request #10050 from VOREStation/upstream-merge-7987
-		)
-
-=======
 	)
-
->>>>>>> caff594797... Merge pull request #10050 from VOREStation/upstream-merge-7987
+		
 	var/static/list/flight_bodyparts = list(
 		BP_L_ARM,
 		BP_R_ARM,
@@ -174,6 +166,7 @@
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+	
 /* //CHOMPedit: disabling for now
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
