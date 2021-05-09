@@ -51,6 +51,32 @@
 		if(L.faction == "plants") //This would be better with a variable but I'm not adding that because upstream conflicts. If you send this upstream please do this.
 			L.adjustToxLoss(15 * amount)
 			L.visible_message("<span class='warning'>[L] withers rapidly!</span>", "<span class='danger'>The chemical burns you!</span>")
+			
+//////SAP IN UNREFINED FORM////
+
+/datum/reagent/toxin/bluesap //This is the first sap. Blue one.
+	name = "Blue Sap"
+	id = "bluesap"
+	description = "Glowing blue liquid."
+	reagent_state = LIQUID
+	color = "#91f9ff" // rgb(145, 249, 255)
+	metabolism = 0.01
+	strength = 10//Don't drink it
+	mrate_static = TRUE
+
+/datum/reagent/purplesap
+	name = "Purple sap"
+	id = "purplesap"
+	description = "Purple liquid. It is very sticky and smells of ammonia."
+	color = "#7a48a0"
+	taste_description = "Ammonia"
+
+/datum/reagent/orangesap
+	name = "Orange sap"
+	id = "orangesap"
+	description = "Orange liquid. It wobbles around a bit like jelly."
+	color = "#e0962f"
+	taste_description = "Ammonia"
       
 //YW stuff
 
