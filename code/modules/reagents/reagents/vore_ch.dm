@@ -9,6 +9,12 @@
 	color = "#FF9999"
 	scannable = 1
 	
+/datum/reagent/aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(!M)	return
+
+	if(prob(3))
+		M.emote(pick("blush", "moan", "moan", "giggle"))
+	
 ///GENDER CHANGE REAGENTS////
 
 /datum/reagent/change_drug //base chemical
