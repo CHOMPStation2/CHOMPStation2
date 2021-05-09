@@ -1,4 +1,45 @@
-/datum/chemical_reaction/claridyl
+/// Recipes
+
+/datum/chemical_reaction/aphrodisiac
+	name = "Aphrodisiac"
+	id = "aphrodisiac"
+	result = "aphrodisiac"
+	required_reagents = list("carbon" = 2, "hydrogen" = 2, "oxygen" = 2, "water" = 1)
+	result_amount = 6
+
+/datum/reagent/aphrodisiac
+	name = "Aphrodisiac"
+	id = "aphrodisiac"
+	description = "You so horny."
+	taste_description = "sweetness"
+	reagent_state = LIQUID
+	color = "#FF9999"
+	scannable = 1
+
+/datum/reagent/aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(!M)	return
+
+	if(prob(3))
+		M.emote(pick("blush", "moan", "moan", "giggle"))
+
+//////////////////////////////////////////////
+////////////////C U B E S////////////////////
+////////////////////////////////////////////
+/datum/chemical_reaction/cube/sagaru
+	name = "Saguwu"
+	id = "cubedsagaru"
+	result = null
+	required_reagents = list("cheese" = 1, "blood" = 1, "clonexadone" = 10,)
+	result_amount = 1
+
+/datum/chemical_reaction/cube/sagaru/on_reaction(var/datum/reagents/holder, var/created_volume)
+	var/location = get_turf(holder.my_atom)
+	for(var/i = 1, i <= created_volume, i++)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/sarucube(location)
+	return
+
+
+datum/chemical_reaction/claridyl
 	name = "claridyl"
 	id = "claridyl"
 	result = "claridyl"
