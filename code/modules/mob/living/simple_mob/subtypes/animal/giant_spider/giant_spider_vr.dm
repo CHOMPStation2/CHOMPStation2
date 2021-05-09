@@ -50,9 +50,19 @@
 	pixel_y = -16
 	old_x = -16
 	old_y = -16
+<<<<<<< HEAD
 
 /mob/living/simple_mob/animal/giant_spider/webslinger/event // YW CHANGE
 	ai_holder_type = /datum/ai_holder/simple_mob/event
 
 /mob/living/simple_mob/animal/giant_spider/nurse/queen/event // YW CHANGE
 	ai_holder_type = /datum/ai_holder/simple_mob/event
+||||||| parent of c1a095e564... Merge pull request #10268 from Heroman3003/expand-mob
+=======
+
+/mob/living/simple_mob/animal/giant_spider/nurse/eggless/lay_eggs(turf/T)
+	return FALSE
+
+/mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless/lay_eggs(turf/T)
+	return FALSE
+>>>>>>> c1a095e564... Merge pull request #10268 from Heroman3003/expand-mob
