@@ -72,16 +72,8 @@ export const pda_security = (props, context) => {
               <LabeledList.Item label="Details">
                 {security.ma_crim_d}
               </LabeledList.Item>
-<<<<<<< HEAD
-              <LabeledList.Item label="Important Notes:">
-                {security.notes}
-||||||| parent of 53427cc0ed... Merge pull request #10260 from ShadowLarkens/tgui_less_jank
-              <LabeledList.Item label="Important Notes:">
-                {security.notes.split("\n").map(m => <Box key={m}>{m}</Box>) || "No data found."}
-=======
               <LabeledList.Item label="Important Notes:" prewrap>
                 {security.notes || "No data found."}
->>>>>>> 53427cc0ed... Merge pull request #10260 from ShadowLarkens/tgui_less_jank
               </LabeledList.Item>
             </LabeledList>
           ) || (
