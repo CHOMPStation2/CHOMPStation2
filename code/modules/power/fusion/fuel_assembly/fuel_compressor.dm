@@ -52,12 +52,11 @@
 	if(istype(thing, /obj/item/stack/material))
 		var/obj/item/stack/material/M = thing
 		var/datum/material/mat = M.get_material()
-<<<<<<< HEAD
 		if(!blitzprogress)
 			if(!mat.is_fusion_fuel)
 				to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
 				return
-			if(M.get_amount() < 25)
+			if(M.get_amount() < FUSION_ROD_SHEET_AMT)
 				if(mat.name=="supermatter")
 					visible_message("<span class='notice'>\The [user] places the [mat.use_name] into the compressor.</span>")
 					M.use(1)
@@ -68,7 +67,7 @@
 				return
 			var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), mat.name)
 			visible_message("<span class='notice'>\The [src] compresses the [mat.use_name] into a new fuel assembly.</span>")
-			M.use(25)
+			M.use(FUSION_ROD_SHEET_AMT)
 			user.put_in_hands(F)
 		else
 			if(mat.name=="phoron")
@@ -84,34 +83,10 @@
 			else
 				to_chat(user, "<span class='warning'>A blitz rod is currently in progress! Either add 25 phoron sheets to complete it, or eject the supermatter sheet!</span>")
 				return
-||||||| parent of 828f6a31bb... Merge pull request #10179 from VOREStation/upstream-merge-8013
-		if(!mat.is_fusion_fuel)
-			to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
-			return
-		if(M.get_amount() < 15)
-			to_chat(user, "<span class='warning'>You need at least 25 [mat.sheet_plural_name] to make a fuel rod.</span>")
-			return
-		var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), mat.name)
-		visible_message("<span class='notice'>\The [src] compresses the [mat.use_name] into a new fuel assembly.</span>")
-		M.use(15)
-		user.put_in_hands(F)
-=======
-		if(!mat.is_fusion_fuel)
-			to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
-			return
-		if(M.get_amount() < FUSION_ROD_SHEET_AMT)
-			to_chat(user, "<span class='warning'>You need at least 25 [mat.sheet_plural_name] to make a fuel rod.</span>")
-			return
-		var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), mat.name)
-		visible_message("<span class='notice'>\The [src] compresses the [mat.use_name] into a new fuel assembly.</span>")
-		M.use(FUSION_ROD_SHEET_AMT)
-		user.put_in_hands(F)
->>>>>>> 828f6a31bb... Merge pull request #10179 from VOREStation/upstream-merge-8013
 
 	else if(do_special_fuel_compression(thing, user))
 		return
 
-<<<<<<< HEAD
 	return ..()
 
 /obj/machinery/fusion_fuel_compressor/verb/eject_sheet()
@@ -124,10 +99,5 @@
 	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
 	blitzprogress = 0
 //CHOMPEdit End
-||||||| parent of 828f6a31bb... Merge pull request #10179 from VOREStation/upstream-merge-8013
-	return ..()
-=======
-	return ..()
 
 #undef FUSION_ROD_SHEET_AMT
->>>>>>> 828f6a31bb... Merge pull request #10179 from VOREStation/upstream-merge-8013
