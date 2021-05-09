@@ -409,19 +409,5 @@
 	result_amount = 30
 	required = /obj/item/slime_extract/sapphire
 
-<<<<<<< HEAD:code/modules/reagents/Chemistry-Recipes_vr.dm
-/datum/chemical_reaction/food/syntiflesh
-	required_reagents = list("blood" = 5, "clonexadone" = 1)
-
-/datum/chemical_reaction/biomass
-	result_amount = 6	// Roughly 120u per phoron sheet
-||||||| parent of 828f6a31bb... Merge pull request #10179 from VOREStation/upstream-merge-8013:code/modules/reagents/Chemistry-Recipes_vr.dm
-/datum/chemical_reaction/food/syntiflesh
-	required_reagents = list("blood" = 5, "clonexadone" = 1)
-
-/datum/chemical_reaction/biomass
-	result_amount = 6	// Roughly 120u per phoron sheet
-=======
 /decl/chemical_reaction/instant/biomass
 	result_amount = 6	// Roughly 120u per phoron sheet
->>>>>>> 828f6a31bb... Merge pull request #10179 from VOREStation/upstream-merge-8013:code/modules/reagents/reactions/instant/instant_vr.dm
