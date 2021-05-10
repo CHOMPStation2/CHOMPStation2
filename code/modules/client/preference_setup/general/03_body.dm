@@ -354,7 +354,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	character.set_gender(pref.biological_gender)
   
-  if(pref.species == "Grey")//YWadd START
+	if(pref.species == "Grey")//YWadd START
 		character.wingdings = pref.wingdings
 
 	if(pref.colorblind_mono == 1)
