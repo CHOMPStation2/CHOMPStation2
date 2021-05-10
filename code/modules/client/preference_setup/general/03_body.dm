@@ -281,33 +281,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.r_wing3	= sanitize_integer(pref.r_wing3, 0, 255, initial(pref.r_wing3))
 	pref.g_wing3	= sanitize_integer(pref.g_wing3, 0, 255, initial(pref.g_wing3))
 	pref.b_wing3	= sanitize_integer(pref.b_wing3, 0, 255, initial(pref.b_wing3))
-<<<<<<< HEAD
-	if(pref.ear_style)
-		pref.ear_style	= sanitize_inlist(pref.ear_style, ear_styles_list, initial(pref.ear_style))
-		var/datum/sprite_accessory/temp_ear_style = ear_styles_list[pref.ear_style]
-		if(temp_ear_style.apply_restrictions && (!(pref.species in temp_ear_style.species_allowed)))
-			pref.ear_style = initial(pref.ear_style)
-	if(pref.tail_style)
-		pref.tail_style	= sanitize_inlist(pref.tail_style, tail_styles_list, initial(pref.tail_style))
-		var/datum/sprite_accessory/temp_tail_style = tail_styles_list[pref.tail_style]
-		if(temp_tail_style.apply_restrictions && (!(pref.species in temp_tail_style.species_allowed)))
-			pref.tail_style = initial(pref.tail_style)
-	if(pref.wing_style)
-		pref.wing_style	= sanitize_inlist(pref.wing_style, wing_styles_list, initial(pref.wing_style))
-		var/datum/sprite_accessory/temp_wing_style = wing_styles_list[pref.wing_style]
-		if(temp_wing_style.apply_restrictions && (!(pref.species in temp_wing_style.species_allowed)))
-			pref.wing_style = initial(pref.wing_style)
-||||||| parent of a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
-	if(!(pref.ear_style in get_ear_styles()))
-		pref.ear_style = initial(pref.ear_style)
-	if(!(pref.wing_style in get_wing_styles()))
-		pref.wing_style = initial(pref.wing_style)
-	if(!(pref.tail_style in get_tail_styles()))
-		pref.tail_style = initial(pref.tail_style)
-=======
 
 	pref.sanitize_body_styles()
->>>>>>> a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
 
 // Moved from /datum/preferences/proc/copy_to()
 /datum/category_item/player_setup_item/general/body/copy_to_mob(var/mob/living/carbon/human/character)
@@ -340,87 +315,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.g_synth	= pref.g_synth
 	character.b_synth	= pref.b_synth
 	character.synth_markings = pref.synth_markings
-<<<<<<< HEAD
-	character.ear_style			= ear_styles_list[pref.ear_style]
-	character.r_ears	= pref.r_ears
-	character.b_ears	= pref.b_ears
-	character.g_ears			= pref.g_ears
-	character.r_ears2	= pref.r_ears2
-	character.b_ears2	= pref.b_ears2
-	character.g_ears2	= pref.g_ears2
-	character.r_ears3			= pref.r_ears3
-	character.b_ears3			= pref.b_ears3
-	character.g_ears3			= pref.g_ears3
-	character.tail_style = tail_styles_list[pref.tail_style]
-	character.r_tail	= pref.r_tail
-	character.b_tail	= pref.b_tail
-	character.g_tail	= pref.g_tail
-	character.r_tail2	= pref.r_tail2
-	character.b_tail2	= pref.b_tail2
-	character.g_tail2	= pref.g_tail2
-	character.r_tail3			= pref.r_tail3
-	character.b_tail3			= pref.b_tail3
-	character.g_tail3			= pref.g_tail3
-	character.wing_style = wing_styles_list[pref.wing_style]
-	character.r_wing	= pref.r_wing
-	character.b_wing	= pref.b_wing
-	character.g_wing	= pref.g_wing
-	character.r_wing2	= pref.r_wing2
-	character.b_wing2	= pref.b_wing2
-	character.g_wing2	= pref.g_wing2
-	character.r_wing3			= pref.r_wing3
-	character.b_wing3			= pref.b_wing3
-	character.g_wing3			= pref.g_wing3
-	character.set_gender( pref.biological_gender)
-	
-	if(pref.species == "Grey")//YWadd START
-		character.wingdings = pref.wingdings
-
-	if(pref.colorblind_mono == 1)
-		character.add_modifier(/datum/modifier/trait/colorblind_monochrome)
-
-	else if(pref.colorblind_vulp == 1)
-		character.add_modifier(/datum/modifier/trait/colorblind_vulp)
-
-	else if(pref.colorblind_taj == 1)
-		character.add_modifier(/datum/modifier/trait/colorblind_taj)
-
-	if(pref.haemophilia == 1)
-		character.add_modifier(/datum/modifier/trait/haemophilia)
-	//YWadd END	
-||||||| parent of a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
-	character.ear_style			= ear_styles_list[pref.ear_style]
-	character.r_ears	= pref.r_ears
-	character.b_ears	= pref.b_ears
-	character.g_ears			= pref.g_ears
-	character.r_ears2	= pref.r_ears2
-	character.b_ears2	= pref.b_ears2
-	character.g_ears2	= pref.g_ears2
-	character.r_ears3			= pref.r_ears3
-	character.b_ears3			= pref.b_ears3
-	character.g_ears3			= pref.g_ears3
-	character.tail_style = tail_styles_list[pref.tail_style]
-	character.r_tail	= pref.r_tail
-	character.b_tail	= pref.b_tail
-	character.g_tail	= pref.g_tail
-	character.r_tail2	= pref.r_tail2
-	character.b_tail2	= pref.b_tail2
-	character.g_tail2	= pref.g_tail2
-	character.r_tail3			= pref.r_tail3
-	character.b_tail3			= pref.b_tail3
-	character.g_tail3			= pref.g_tail3
-	character.wing_style = wing_styles_list[pref.wing_style]
-	character.r_wing	= pref.r_wing
-	character.b_wing	= pref.b_wing
-	character.g_wing	= pref.g_wing
-	character.r_wing2	= pref.r_wing2
-	character.b_wing2	= pref.b_wing2
-	character.g_wing2	= pref.g_wing2
-	character.r_wing3			= pref.r_wing3
-	character.b_wing3			= pref.b_wing3
-	character.g_wing3			= pref.g_wing3
-	character.set_gender( pref.biological_gender)
-=======
 
 	var/list/ear_styles = pref.get_available_styles(global.ear_styles_list)
 	character.ear_style =  ear_styles[pref.ear_style]
@@ -459,8 +353,23 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.g_wing3 =    pref.g_wing3
 
 	character.set_gender(pref.biological_gender)
->>>>>>> a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
+  
+  if(pref.species == "Grey")//YWadd START
+		character.wingdings = pref.wingdings
 
+	if(pref.colorblind_mono == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_monochrome)
+
+	else if(pref.colorblind_vulp == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_vulp)
+
+	else if(pref.colorblind_taj == 1)
+		character.add_modifier(/datum/modifier/trait/colorblind_taj)
+
+	if(pref.haemophilia == 1)
+		character.add_modifier(/datum/modifier/trait/haemophilia)
+	//YWadd END	
+  
 	// Destroy/cyborgize organs and limbs.
 	for(var/name in list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO))
 		var/status = pref.organ_data[name]
@@ -815,23 +724,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 			reset_limbs() // Safety for species with incompatible manufacturers; easier than trying to do it case by case.
 			pref.body_markings.Cut() // Basically same as above.
-<<<<<<< HEAD
 
-||||||| parent of a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
-			
-			// Sanitize ear/wing/tail styles
-			if(!(pref.ear_style in get_ear_styles()))
-				pref.ear_style = initial(pref.ear_style)
-			if(!(pref.wing_style in get_wing_styles()))
-				pref.wing_style = initial(pref.wing_style)
-			if(!(pref.tail_style in get_tail_styles()))
-				pref.tail_style = initial(pref.tail_style)
-			
-=======
-			
-			pref.sanitize_body_styles()
-			
->>>>>>> a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
 			var/min_age = get_min_age()
 			var/max_age = get_max_age()
 			pref.age = max(min(pref.age, max_age), min_age)
@@ -1297,25 +1190,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	//YW Add End
 
 	else if(href_list["ear_style"])
-<<<<<<< HEAD
-		// Construct the list of names allowed for this user.
-		var/list/pretty_ear_styles = list("Normal" = null)
-		for(var/path in ear_styles_list)
-			var/datum/sprite_accessory/ears/instance = ear_styles_list[path]
-			if(((!instance.ckeys_allowed) || (usr.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)) || check_rights(R_ADMIN | R_EVENT | R_FUN, 0, user))	//VOREStation Edit
-				pretty_ear_styles[instance.name] = path
-
-		// Present choice to user
-		var/new_ear_style = input(user, "Pick ears", "Character Preference", pref.ear_style) as null|anything in pretty_ear_styles
-||||||| parent of a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
-		// Construct the list of names allowed for this user.
-		var/list/pretty_ear_styles = get_ear_styles()
-
-		// Present choice to user
-		var/new_ear_style = input(user, "Pick ears", "Character Preference", pref.ear_style) as null|anything in pretty_ear_styles
-=======
 		var/new_ear_style = input(user, "Select an ear style for this character:", "Character Preference", pref.ear_style) as null|anything in pref.get_available_styles(global.ear_styles_list)
->>>>>>> a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
 		if(new_ear_style)
 			pref.ear_style = new_ear_style
 
@@ -1349,25 +1224,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["tail_style"])
-<<<<<<< HEAD
-		// Construct the list of names allowed for this user.
-		var/list/pretty_tail_styles = list("Normal" = null)
-		for(var/path in tail_styles_list)
-			var/datum/sprite_accessory/tail/instance = tail_styles_list[path]
-			if(((!instance.ckeys_allowed) || (usr.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)) || check_rights(R_ADMIN | R_EVENT | R_FUN, 0, user))	//VOREStation Edit
-				pretty_tail_styles[instance.name] = path
-
-		// Present choice to user
-		var/new_tail_style = input(user, "Pick tails", "Character Preference", pref.tail_style) as null|anything in pretty_tail_styles
-||||||| parent of a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
-		// Construct the list of names allowed for this user.
-		var/list/pretty_tail_styles = get_tail_styles()
-
-		// Present choice to user
-		var/new_tail_style = input(user, "Pick tails", "Character Preference", pref.tail_style) as null|anything in pretty_tail_styles
-=======
 		var/new_tail_style = input(user, "Select a tail style for this character:", "Character Preference", pref.tail_style) as null|anything in pref.get_available_styles(global.tail_styles_list)
->>>>>>> a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
 		if(new_tail_style)
 			pref.tail_style = new_tail_style
 		return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -1400,25 +1257,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["wing_style"])
-<<<<<<< HEAD
-		// Construct the list of names allowed for this user.
-		var/list/pretty_wing_styles = list("Normal" = null)
-		for(var/path in wing_styles_list)
-			var/datum/sprite_accessory/wing/instance = wing_styles_list[path]
-			if(((!instance.ckeys_allowed) || (usr.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)) || check_rights(R_ADMIN | R_EVENT | R_FUN, 0, user))	//VOREStation Edit
-				pretty_wing_styles[instance.name] = path
-
-		// Present choice to user
-		var/new_wing_style = input(user, "Pick wings", "Character Preference", pref.wing_style) as null|anything in pretty_wing_styles
-||||||| parent of a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
-		// Construct the list of names allowed for this user.
-		var/list/pretty_wing_styles = get_wing_styles()
-
-		// Present choice to user
-		var/new_wing_style = input(user, "Pick wings", "Character Preference", pref.wing_style) as null|anything in pretty_wing_styles
-=======
 		var/new_wing_style = input(user, "Select a wing style for this character:", "Character Preference", pref.wing_style) as null|anything in pref.get_available_styles(global.wing_styles_list)
->>>>>>> a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
 		if(new_wing_style)
 			pref.wing_style = new_wing_style
 
@@ -1544,32 +1383,3 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	dat += "</center></body>"
 
 	user << browse(dat, "window=species;size=700x400")
-<<<<<<< HEAD
-
-||||||| parent of a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057
-
-/datum/category_item/player_setup_item/general/body/proc/get_tail_styles()
-	var/list/pretty_tail_styles = list("Normal" = null)
-	for(var/path in tail_styles_list)
-		var/datum/sprite_accessory/tail/instance = tail_styles_list[path]
-		if(((!instance.ckeys_allowed) || (pref.client.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)) || check_rights(R_ADMIN | R_EVENT | R_FUN, 0, pref.client))	//VOREStation Edit
-			pretty_tail_styles[instance.name] = path
-	return pretty_tail_styles
-
-/datum/category_item/player_setup_item/general/body/proc/get_ear_styles()
-	var/list/pretty_ear_styles = list("Normal" = null)
-	for(var/path in ear_styles_list)
-		var/datum/sprite_accessory/ears/instance = ear_styles_list[path]
-		if(((!instance.ckeys_allowed) || (pref.client.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)) || check_rights(R_ADMIN | R_EVENT | R_FUN, 0, pref.client))	//VOREStation Edit
-			pretty_ear_styles[instance.name] = path
-	return pretty_ear_styles
-
-/datum/category_item/player_setup_item/general/body/proc/get_wing_styles()
-	var/list/pretty_wing_styles = list("Normal" = null)
-	for(var/path in wing_styles_list)
-		var/datum/sprite_accessory/wing/instance = wing_styles_list[path]
-		if(((!instance.ckeys_allowed) || (pref.client.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)) || check_rights(R_ADMIN | R_EVENT | R_FUN, 0, pref.client))	//VOREStation Edit
-			pretty_wing_styles[instance.name] = path
-	return pretty_wing_styles
-=======
->>>>>>> a9e9dd241d... Merge pull request #10247 from VOREStation/upstream-merge-8057

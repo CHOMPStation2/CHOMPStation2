@@ -290,7 +290,7 @@
 	name = "vore"
 
 /datum/asset/spritesheet/vore/register()
-	var/icon/downscaled = icon('icons/mob/screen_full_vore.dmi')
+	var/icon/downscaled = icon('icons/mob/screen_full_vore_ch.dmi') //CHOMPedit
 	downscaled.Scale(240, 240)
 	InsertAll("", downscaled)
 	..()
