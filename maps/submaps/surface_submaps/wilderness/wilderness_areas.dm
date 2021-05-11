@@ -179,3 +179,11 @@
 /area/submap/DeathDen
 	name = "POI - Death Den"
 	ambience = AMBIENCE_FOREBODING
+
+/area/submap/LeopardmanderDen
+	name = "POI - Leopardmander Den"
+	ambience = AMBIENCE_OTHERWORLDLY
+
+/area/submap/GreatWolfDen
+	name = "POI - Great Wolf Den"
+	ambience = AMBIENCE_SIF

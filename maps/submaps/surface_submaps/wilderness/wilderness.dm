@@ -42,7 +42,8 @@
 #include "borglab.dmm"
 #include "chasm.dmm"
 #include "deathden.dmm"
-
+#include "leopardmanderden.dmm"
+#include "greatwolfden.dmm"
 #endif
 
 // The 'wilderness' is the endgame for Explorers. Extremely dangerous and far away from help, but with vast shinies.
@@ -341,4 +342,16 @@
 	name = "Death Den"
 	desc = "Gathering of acolytes gone wrong."
 	mappath = 'maps/submaps/surface_submaps/wilderness/deathden.dmm'
+	cost = 15
+
+/datum/map_template/surface/wilderness/deep/leopardmanderden
+	name = "Leopardmander Den"
+	desc = "Den of a voracious but very rare beast."
+	mappath = 'maps/submaps/surface_submaps/wilderness/leopardmanderden.dmm'
+	cost = 10
+
+/datum/map_template/surface/wilderness/deep/greatwolfden
+	name = "Great Wolf Den"
+	desc = "Den hosted by the biggest alpha wolf of the wilderness"
+	mappath = 'maps/submaps/surface_submaps/wilderness/greatwolfden.dmm'
 	cost = 15
