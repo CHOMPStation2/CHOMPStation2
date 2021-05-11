@@ -108,16 +108,10 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/quick_nif, //VOREStation Add,
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
-<<<<<<< HEAD
 	/datum/admins/proc/view_feedback,
 	/client/proc/admin_teleport,	//CHOMPEdit
 	/client/proc/setckey //YW add - readds SetCkey proc
-||||||| parent of 5c2c83cd81... Merge pull request #10273 from VOREStation/upstream-merge-8046
-	/datum/admins/proc/view_feedback
-=======
-	/datum/admins/proc/view_feedback,
 	/client/proc/debug_global_variables
->>>>>>> 5c2c83cd81... Merge pull request #10273 from VOREStation/upstream-merge-8046
 	)
 
 var/list/admin_verbs_ban = list(
