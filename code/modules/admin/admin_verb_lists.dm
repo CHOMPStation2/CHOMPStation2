@@ -110,7 +110,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/despawn_player,
 	/datum/admins/proc/view_feedback,
 	/client/proc/admin_teleport,	//CHOMPEdit
-	/client/proc/setckey //YW add - readds SetCkey proc
+	/client/proc/setckey, //YW add - readds SetCkey proc
 	/client/proc/debug_global_variables
 	)
 
