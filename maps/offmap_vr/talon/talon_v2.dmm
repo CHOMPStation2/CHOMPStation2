@@ -11113,9 +11113,18 @@
 	pixel_y = 24
 	},
 /obj/structure/table/rack/shelf/steel,
+<<<<<<< HEAD
 /obj/item/device/radio/off{
 	channels = list("Talon" = 1)
 	},
+||||||| parent of 270364da74... Merge pull request #10304 from Very-Soft/talontweak
+/obj/item/device/radio/off/talon,
+=======
+/obj/item/device/radio/off{
+	channels = list("Talon" = 1);
+	pixel_y = 6
+	},
+>>>>>>> 270364da74... Merge pull request #10304 from Very-Soft/talontweak
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/armory)
 "Nw" = (
