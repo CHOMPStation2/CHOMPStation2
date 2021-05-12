@@ -187,3 +187,23 @@
 /area/submap/GreatWolfDen
 	name = "POI - Great Wolf Den"
 	ambience = AMBIENCE_SIF
+
+/area/submap/DogBase
+	name = "POI - Dog Base"
+	ambience = AMBIENCE_HIGHSEC
+
+/area/submap/EmptyCabin
+	name = "POI - Empty Cabin"
+	ambience = AMBIENCE_GHOSTLY
+
+/area/submap/lonewolf
+	name = "POI - Lone Wolf"
+	ambience = AMBIENCE_OTHERWORLDLY
+
+/area/submap/OtieShelter
+	name = "POI - Otie Shelter"
+	ambience = AMBIENCE_HIGHSEC
+
+/area/submap/SyndiSniper
+	name = "POI - Syndi Sniper"
+	ambience = AMBIENCE_SIF
