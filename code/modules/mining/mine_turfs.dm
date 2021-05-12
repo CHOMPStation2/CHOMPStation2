@@ -8,13 +8,13 @@ var/list/mining_overlay_cache = list()
 	density = 1
 	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
 
+//YW add start
 /turf/unsimulated/mineral/ice
 	name = "Ice wall"
 	desc = "Frigid Ice that seems to be stronger than most manmade structures."
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "Icerock"
-
-
+//YW add end
 
 /turf/simulated/mineral //wall piece
 	name = "rock"
@@ -49,7 +49,7 @@ var/list/mining_overlay_cache = list()
 	var/datum/artifact_find/artifact_find
 	var/ignore_mapgen
 
-	var/ore_types = list(
+	var/static/list/ore_types = list(
 		"hematite" = /obj/item/weapon/ore/iron,
 		"uranium" = /obj/item/weapon/ore/uranium,
 		"gold" = /obj/item/weapon/ore/gold,
@@ -250,7 +250,7 @@ turf/simulated/mineral/floor/light_corner
 			for(var/ore in resources)
 				var/amount_to_give = rand(CEILING(resources[ore]/2, 1), resources[ore])  // Should result in at least one piece of ore.
 				for(var/i=1, i <= amount_to_give, i++)
-					var/oretype = GLOB.ore_types[ore]
+					var/oretype = ore_types[ore]
 					new oretype(src)
 				resources[ore] = 0
 
@@ -664,7 +664,7 @@ turf/simulated/mineral/floor/light_corner
 	else
 		mineral_name = pickweight(list("marble" = 3,/* "quartz" = 10,*/ "copper" = 20, "tin" = 15, "bauxite" = 15, "uranium" = 10, "platinum" = 10, "hematite" = 70, "rutile" = 15, "carbon" = 70, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 3,/* "void opal" = 1,*/ "verdantium" = 1/*, "painite" = 1*/))
 
-	if(mineral_name && (mineral_name in ore_data))
-		mineral = ore_data[mineral_name]
+	if(mineral_name && (mineral_name in GLOB.ore_data))
+		mineral = GLOB.ore_data[mineral_name]
 		UpdateMineral()
 	update_icon()
