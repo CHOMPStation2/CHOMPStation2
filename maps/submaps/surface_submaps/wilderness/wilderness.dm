@@ -44,6 +44,11 @@
 #include "deathden.dmm"
 #include "leopardmanderden.dmm"
 #include "greatwolfden.dmm"
+#include "syndisniper.dmm"
+#include "otieshelter.dmm"
+#include "lonewolf.dmm"
+#include "emptycabin.dmm"
+#include "dogbase.dmm"
 #endif
 
 // The 'wilderness' is the endgame for Explorers. Extremely dangerous and far away from help, but with vast shinies.
