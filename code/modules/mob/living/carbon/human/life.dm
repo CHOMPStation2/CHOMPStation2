@@ -1059,7 +1059,7 @@
 					if(client || sleeping > 3)
 						AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
 						throw_alert("asleep", /obj/screen/alert/asleep)
-				if( prob(2) && health && !hal_crit )
+				if( prob(2) && health && !hal_crit && client )
 					spawn(0)
 						emote("snore")
 		//CONSCIOUS
