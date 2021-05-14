@@ -2369,15 +2369,9 @@
 #include "code\modules\food\kitchen\gibber.dm"
 #include "code\modules\food\kitchen\icecream.dm"
 #include "code\modules\food\kitchen\microwave.dm"
-<<<<<<< HEAD
 #include "code\modules\food\kitchen\microwave_ch.dm"
 #include "code\modules\food\kitchen\smartfridge.dm"
 #include "code\modules\food\kitchen\smartfridge_vr.dm"
-||||||| parent of f0ddc3b8b8... Merge pull request #10315 from VOREStation/upstream-merge-8042
-#include "code\modules\food\kitchen\smartfridge.dm"
-#include "code\modules\food\kitchen\smartfridge_vr.dm"
-=======
->>>>>>> f0ddc3b8b8... Merge pull request #10315 from VOREStation/upstream-merge-8042
 #include "code\modules\food\kitchen\cooking_machines\_appliance.dm"
 #include "code\modules\food\kitchen\cooking_machines\_cooker.dm"
 #include "code\modules\food\kitchen\cooking_machines\_cooker_output.dm"
