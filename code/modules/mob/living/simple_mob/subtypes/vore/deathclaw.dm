@@ -2,20 +2,20 @@
 	name = "Creature - Deathclaw"
 	desc = "Classification: Trioceros dominus\
 	<br><br>\
-	Originally the Deathclaw was a top secret genetics project that was run by ancestral Zorren which was \
-	lost to time. While it is not immediately evident in their body structure, these creatures bare a \
+	Originally the deathclaw was a top secret genetics project that was run by ancestral zorren. \
+	While it is not immediately evident in their body structure, these creatures bare a \
 	subtle genetic connection to Zorren, however, this connection is marred by the other genes that \
 	have been grafted onto the DNA strucutre of the Deathclaw. The creatures are known to attack humans \
 	and other animals regularly to protect their territory or to hunt for food. It is speculated that \
-	they escaped roughly around the time as whatever calamity befell the Zorren many centuries ago \
-	as sighting of these beasts in the wild began around that time according to recovered Zorren texts. \
+	they escaped roughly around the time as whatever calamity befell the zorren many centuries ago \
+	as sighting of these beasts in the wild began around that time according to recovered zorren texts. \
 	<br>\
 	Deathclaws are a large, carnivorous, bipedal reptile species, designed for maximum lethality. \
 	Deathclaws are made even more dangerous by their reproductive instincts. deathclaws are an oviparous species, \
 	female deathclaws will lay eggs in clusters, sired by the strongest male deathclaws in the pack, typically the alpha male.\
 	<br>\
 	These creatures are considered an invasive species, and thus hunters are encouraged to hunt them \
-	although they are cautioned when doing so due to the danger that the creature poses."
+	although they are cautioned when doing so due to the danger that the creature poses." //CHOMPedit
 	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/vore/aggressive/deathclaw
