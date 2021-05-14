@@ -2,17 +2,17 @@
 	name = "Aberration - Mimic"
 	desc = "Classification: Mimus vorare\
 	<br><br>\
-	Mimics are morph creatures that share properties with the likes of Prometheans. They could assume any shape, \
-	provided that they retained the same volume. In order to most effectively lure prey, they most commonly \
+	Mimics are morph creatures that share properties with the likes of prometheans. They can assume any shape, \
+	provided that they retain the same volume. In order to most effectively lure prey, they most commonly \
 	take the shape of chests and other objects likely to be touched by someone - though the latter is rarer \
 	than the former. \
 	<br>\
 	Mimics prefer consuming large prey such as humans or humanoid species, however, for means of survival they \
 	might resort to eating smaller prey. A meal of one or two humanoids could sustain a mimic for several \
-	months at a time - the main reason that they prey on humanoids to begin with. They reproduced asexually \
+	months at a time - the main reason that they prey on humanoids to begin with. They reproduce asexually \
 	by splitting their mass, the young growing to adulthood within a few years time.\
 	<br>\
-	Mimics have no concerns beyond surviving and acquiring food."
+	Mimics have no concerns beyond surviving and acquiring food." //CHOMPedit
 	value = CATALOGUER_REWARD_HARD
 
 /obj/structure/closet/crate/mimic
