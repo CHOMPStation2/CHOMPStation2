@@ -7,7 +7,12 @@
 #define MAP_LEVEL_EMPTY			0x020 // Empty Z-levels that may be used for various things (currently used by bluespace jump)
 #define MAP_LEVEL_CONSOLES		0x040 // Z-levels available to various consoles, such as the crew monitor (when that gets coded in). Defaults to station_levels if unset.
 #define MAP_LEVEL_XENOARCH_EXEMPT 0x080	// Z-levels exempt from xenoarch digsite generation.
+<<<<<<< HEAD
 #define MAP_LEVEL_VORESPAWN		0x100	// Z-levels players are allowed to late join to via vorish means. Usually non-dangerous locations.
+||||||| parent of ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
+=======
+#define MAP_LEVEL_PERSIST       0x100   // Z-levels where SSpersistence should persist between rounds
+>>>>>>> ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
 
 // Misc map defines.
 #define SUBMAP_MAP_EDGE_PAD 8 // Automatically created submaps are forbidden from being this close to the main map's edge.	//VOREStation Edit
