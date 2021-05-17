@@ -285,7 +285,7 @@
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(2000)
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)  //CHOMPedit
 	synths += medicine
 
 	var/obj/item/stack/medical/advanced/clotting/C = new (src)
