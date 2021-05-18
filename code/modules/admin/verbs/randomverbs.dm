@@ -515,6 +515,12 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(new_character.mind)
 		new_character.mind.loaded_from_ckey = picked_ckey
 		new_character.mind.loaded_from_slot = picked_slot
+
+	for(var/lang in picked_client.prefs.alternate_languages)
+		var/datum/language/chosen_language = GLOB.all_languages[lang]
+		if(chosen_language)
+			if(is_lang_whitelisted(src,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
+				new_character.add_language(lang)
 	//VOREStation Add End
 
 	for(var/lang in picked_client.prefs.alternate_languages)
@@ -527,6 +533,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(equipment)
 		if(charjob)
 			job_master.EquipRank(new_character, charjob, 1)
+			new_character.mind.assigned_role = charjob
+			new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
 		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
 
 	//If desired, add records.
@@ -534,7 +542,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		data_core.manifest_inject(new_character)
 
 	//A redraw for good measure
-	new_character.update_icons_all()
+	new_character.regenerate_icons()
 
 	//If we're announcing their arrival
 	if(announce)

@@ -44,7 +44,6 @@
 	display_name = "collar, holo"
 	path = /obj/item/clothing/accessory/collar/holo
 
-//TFF 17/6/19 - public loadout addition: Indigestible Holocollar
 /datum/gear/collar/holo/indigestible
 	display_name = "collar, holo (indigestible)"
 	path = /obj/item/clothing/accessory/collar/holo/indigestible
@@ -76,6 +75,12 @@
 /datum/gear/accessory/white_drop_pouches
 	display_name = "drop pouches, white (Medical)"
 	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic")
+
+/datum/gear/accessory/bluespace
+	display_name = "bluespace badge (Eng, Sec, Med, Exploration, Miner)"
+	path = /obj/item/clothing/accessory/storage/bluespace
+	allowed_roles = list("Station Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner")
+	cost = 2
 
 /datum/gear/accessory/webbing
 	cost = 1

@@ -52,6 +52,9 @@
 		dna.real_name = real_name
 		sync_organ_dna()
 
+	//verbs |= /mob/living/proc/toggle_selfsurgery //VOREStation Removal
+	AddComponent(/datum/component/personal_crafting)
+
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
 	for(var/organ in organs)
@@ -1165,6 +1168,9 @@
 	//A slew of bits that may be affected by our species change
 	regenerate_icons()
 
+	// Update our available emote list.
+	update_emotes()
+
 	if(species)
 		//if(mind) //VOREStation Removal
 			//apply_traits() //VOREStation Removal
@@ -1653,7 +1659,5 @@
 
 	..()
 
-/mob/living/carbon/human/reduce_cuff_time()
-	if(istype(gloves, /obj/item/clothing/gloves/gauntlets/rig))
-		return 2
-	return ..()
+/mob/living/carbon/human/get_mob_riding_slots()
+	return list(back, head, wear_suit)

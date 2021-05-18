@@ -98,7 +98,7 @@
 		/mob/living/silicon/robot/proc/robot_checklaws
 	)
 
-/mob/living/silicon/robot/New(loc,var/unfinished = 0)
+/mob/living/silicon/robot/New(loc, var/unfinished = 0)
 	spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
@@ -114,7 +114,7 @@
 	ident = rand(1, 999)
 	module_sprites["Basic"] = "robot"
 	icontype = "Basic"
-	updatename("Default")
+	updatename(modtype)
 	updateicon()
 
 	radio = new /obj/item/device/radio/borg(src)
@@ -142,6 +142,8 @@
 		cell = new /obj/item/weapon/cell(src)
 		cell.maxcharge = 7500
 		cell.charge = 7500
+	else if(ispath(cell))
+		cell = new cell(src)
 
 	..()
 
@@ -207,12 +209,12 @@
 /mob/living/silicon/robot/proc/setup_PDA()
 	if (!rbPDA)
 		rbPDA = new/obj/item/device/pda/ai(src)
-	rbPDA.set_name_and_job(custom_name,"[modtype] [braintype]")
+	rbPDA.set_name_and_job(name,"[modtype] [braintype]")
 
 /mob/living/silicon/robot/proc/setup_communicator()
 	if (!communicator)
 		communicator = new/obj/item/device/communicator/integrated(src)
-	communicator.register_device(src.name, "[modtype] [braintype]")
+	communicator.register_device(name, "[modtype] [braintype]")
 
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 //Improved /N
@@ -287,10 +289,7 @@
 	updatename()
 	notify_ai(ROBOT_NOTIFICATION_NEW_MODULE, module.name)
 
-/mob/living/silicon/robot/proc/updatename(var/prefix as text)
-	if(prefix)
-		modtype = prefix
-
+/mob/living/silicon/robot/proc/update_braintype()
 	if(istype(mmi, /obj/item/device/mmi/digital/posibrain))
 		braintype = BORG_BRAINTYPE_POSI
 	else if(istype(mmi, /obj/item/device/mmi/digital/robot))
@@ -300,6 +299,11 @@
 	else
 		braintype = BORG_BRAINTYPE_CYBORG
 
+/mob/living/silicon/robot/proc/updatename(var/prefix as text)
+	if(prefix)
+		modtype = prefix
+
+	update_braintype()
 
 	var/changed_name = ""
 	if(custom_name)
@@ -1215,3 +1219,6 @@
 
 		if(current_selection_index) // Select what the player had before if possible.
 			select_module(current_selection_index)
+
+/mob/living/silicon/robot/get_cell()
+	return cell

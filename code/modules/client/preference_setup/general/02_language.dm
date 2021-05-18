@@ -10,7 +10,7 @@
 	S["pos_traits"]		>> pref.pos_traits
 	var/morelang = 0
 	for(var/trait in pref.pos_traits)
-		if(trait==/datum/trait/linguist)
+		if(trait==/datum/trait/positive/linguist)
 			morelang = 1
 	pref.num_languages = morelang * 12
 	//CHOMPEdit End
@@ -23,8 +23,18 @@
 	if(!islist(pref.alternate_languages))	pref.alternate_languages = list()
 	if(pref.species)
 		var/datum/species/S = GLOB.all_species[pref.species]
-		if(S && pref.alternate_languages.len > pref.numlanguage()) //CHOMPEdit
+		if(!istype(S))
+			return
+			
+		if(pref.alternate_languages.len > pref.numlanguage()) //CHOMPEdit
 			pref.alternate_languages.len = pref.numlanguage() // Truncate to allowed length CHOMPEdit
+
+		// Sanitize illegal languages
+		for(var/language in pref.alternate_languages)
+			var/datum/language/L = GLOB.all_languages[language]
+			if(!istype(L) || (L.flags & RESTRICTED) || (!(language in S.secondary_langs) && !is_lang_whitelisted(pref.client, L)))
+				pref.alternate_languages -= language
+
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
 		pref.language_prefixes = config.language_prefixes.Copy()
 	for(var/prefix in pref.language_prefixes)

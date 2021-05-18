@@ -1,8 +1,8 @@
 /client/proc/cmd_admin_say(msg as text)
 	set category = "Special Verbs"
-	set name = "Asay" //Gave this shit a shorter name so you only have to time out "asay" rather than "admin say" to use it --NeoFite
+	set name = "Asay" //Gave this shit a shorter name so you only have to time out "asay" rather than "admin say" to use it --NeoFite 
 	set hidden = 1
-	if(!check_rights(R_ADMIN|R_STEALTH)) //VOREStation Edit
+	if(!check_rights(R_ADMIN)) //VOREStation Edit //CHOMPEdit meh, our stuff was conflicting so just removed the stealth thingamabobber
 		return
 
 	msg = sanitize(msg)
@@ -11,9 +11,9 @@
 
 	log_adminsay(msg,src)
 
-	//VOREStation Edit Start - Adds R_EVENT
+	//VOREStation Edit Start - Adds R_STEALTH //CHOMPEdit meh, our stuff was conflicting so just removed the stealth thingamabobber
 	for(var/client/C in GLOB.admins)
-		if(check_rights(R_ADMIN|R_EVENT))
+		if(check_rights(R_ADMIN))
 			to_chat(C, "<span class='admin_channel'>" + create_text_tag("admin", "ADMIN:", C) + " <span class='name'>[key_name(usr, 1)]</span>([admin_jump_link(mob, src)]): <span class='message'>[msg]</span></span>")
 	//VOREStation Edit End
 

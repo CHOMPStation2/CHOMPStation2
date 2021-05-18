@@ -17,10 +17,10 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/Initialize(var/mapload, var/planttype)
 	. = ..()
-	
+
 	if(!dried_type)
 		dried_type = type
-	
+
 	pixel_x = rand(-5.0, 5)
 	pixel_y = rand(-5.0, 5)
 

@@ -98,18 +98,7 @@
 // This is the 'mechanical' check for synthetic-ness, not appearance
 // Returns the company that made the synthetic
 /mob/living/carbon/human/isSynthetic()
-	if(synthetic) return synthetic //Your synthetic-ness is not going away
-	var/obj/item/organ/external/T = organs_by_name[BP_TORSO]
-	if(T && T.robotic >= ORGAN_ROBOT)
-		src.verbs += /mob/living/carbon/human/proc/self_diagnostics
-		src.verbs += /mob/living/carbon/human/proc/setmonitor_state//YWadd, early port, remove comment when it comes from upstream
-		src.verbs += /mob/living/carbon/human/proc/reagent_purge //VOREStation Add
-		src.verbs += /mob/living/carbon/human/proc/setmonitor_state
-		var/datum/robolimb/R = all_robolimbs[T.model]
-		synthetic = R
-		return synthetic
-
-	return 0
+	return synthetic
 
 // Would an onlooker know this person is synthetic?
 // Based on sort of logical reasoning, 'Look at head, look at torso'
@@ -190,6 +179,9 @@
 	//VOREStation Add - NIF Support
 	if(nif)
 		compiled_vis |= nif.planes_visible()
+	//event hud
+	if(vantag_hud)
+		compiled_vis |= VIS_CH_VANTAG
 	//VOREStation Add End
 
 	if(!compiled_vis.len && !vis_enabled.len)

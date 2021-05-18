@@ -78,7 +78,8 @@
 	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX) //VOREStation Edit
 
 	//Soundy emotey things.
-	var/scream_verb = "screams"
+	var/scream_verb_1p = "scream"
+	var/scream_verb_3p = "screams"
 	var/male_scream_sound = list('sound/effects/mob_effects/m_scream_1.ogg','sound/effects/mob_effects/m_scream_2.ogg','sound/effects/mob_effects/m_scream_3.ogg','sound/effects/mob_effects/m_scream_4.ogg') //CHOMpedit start : Added tgstation screams
 	var/female_scream_sound = list('sound/effects/mob_effects/f_scream_1.ogg','sound/effects/mob_effects/f_scream_2.ogg','sound/effects/mob_effects/f_scream_3.ogg','sound/effects/mob_effects/f_scream_4.ogg') //CHOMPedit end
 	var/male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
@@ -416,7 +417,6 @@
 		H.visible_message( \
 			"<span class='notice'>[H] shakes [target]'s hand.</span>", \
 			"<span class='notice'>You shake [target]'s hand.</span>", )
-	//TFF 15/12/19 - Port nose booping from CHOMPStation
 	else if(H.zone_sel.selecting == "mouth")
 		H.visible_message( \
 			"<span class='notice'>[H] boops [target]'s nose.</span>", \
@@ -531,3 +531,6 @@
 	amount *= water_damage_mod
 	if(amount > 0)
 		H.adjustToxLoss(amount)
+
+/datum/species/proc/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
+	return FALSE

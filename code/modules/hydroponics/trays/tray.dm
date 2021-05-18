@@ -213,6 +213,8 @@
 
 	qdel(S)
 
+	GLOB.seed_planted_shift_roundstat++
+
 	check_health()
 	update_icon()
 

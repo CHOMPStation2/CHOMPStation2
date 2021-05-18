@@ -166,6 +166,7 @@
 			"nutrition_percent" = selected.nutrition_percent,
 			"digest_brute" = selected.digest_brute,
 			"digest_burn" = selected.digest_burn,
+			"digest_oxy" = selected.digest_oxy,
 			"bulge_size" = selected.bulge_size,
 			"shrink_grow_size" = selected.shrink_grow_size,
 			"emote_time" = selected.emote_time,
@@ -173,7 +174,7 @@
 			"belly_fullscreen" = selected.belly_fullscreen,
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
 			"mapRef" = map_name,	//CHOMPEdit
-			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
+			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore_ch.dmi'), //CHOMPedit
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
 
@@ -254,6 +255,7 @@
 	data["prefs"] = list(
 		"digestable" = host.digestable,
 		"devourable" = host.devourable,
+		"resizable" = host.resizable,
 		"feeding" = host.feeding,
 		"absorbable" = host.absorbable,
 		"digest_leave_remains" = host.digest_leave_remains,
@@ -355,7 +357,7 @@
 			var/alert = alert("Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation","Reload","Cancel")
 			if(alert != "Reload")
 				return FALSE
-			if(!host.apply_vore_prefs())
+			if(!host.apply_vore_prefs(TRUE)) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 				alert("ERROR: Chomp-specific preferences failed to apply!","Error")
 			else
 				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
@@ -413,6 +415,12 @@
 			host.devourable = !host.devourable
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.devourable = host.devourable
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_resize")
+			host.resizable = !host.resizable
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.resizable = host.resizable
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_feed")
@@ -914,6 +922,12 @@
 			var/new_new_damage = CLAMP(new_damage, 0, 6)
 			host.vore_selected.digest_brute = new_new_damage
 			. = TRUE
+		if("b_oxy_dmg")
+			var/new_damage = input(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy) as num|null
+			if(new_damage == null)
+				return FALSE
+			var/new_new_damage = CLAMP(new_damage, 0, 12)
+			host.vore_selected.digest_oxy = new_new_damage
 		if("b_emoteactive")
 			host.vore_selected.emote_active = !host.vore_selected.emote_active
 			. = TRUE

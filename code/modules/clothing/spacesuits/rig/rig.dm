@@ -44,6 +44,8 @@
 	var/glove_type = /obj/item/clothing/gloves/gauntlets/rig
 	var/cell_type =  /obj/item/weapon/cell/high
 	var/air_type =   /obj/item/weapon/tank/oxygen
+	var/unremovable_cell = FALSE //CHOMP Edit - an addition for protean living hardsuit.
+
 
 	//Component/device holders.
 	var/obj/item/weapon/tank/air_supply                       // Air tank, if any.
@@ -899,14 +901,19 @@
 	wearer.lay_down()
 	to_chat(user, "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>")
 
-/obj/item/weapon/rig/proc/forced_move(var/direction, var/mob/user)
+/obj/item/weapon/rig/proc/forced_move(var/direction, var/mob/user, var/ai_moving = TRUE)
 
 	// Why is all this shit in client/Move()? Who knows?
 	if(world.time < wearer_move_delay)
 		return
 
-	if(!wearer || !wearer.loc || !ai_can_move_suit(user, check_user_module = 1))
+	if(!wearer || !wearer.loc) //CHOMP Edit - Removed some stuff for protean living hardsuit
 		return
+		
+//CHOMP Addition - Added this for protean living hardsuit
+	if(ai_moving)
+		if(!ai_can_move_suit(user, check_user_module = 1))
+			return
 
 	//This is sota the goto stop mobs from moving var
 	if(wearer.transforming || !wearer.canmove)
@@ -965,7 +972,10 @@
 			wearer_move_delay += 2
 			return wearer.buckled.relaymove(wearer,direction)
 
-	cell.use(200) //Arbitrary, TODO
+	var/power_cost = 200
+	if(!ai_moving)
+		power_cost = 20
+	cell.use(power_cost) //Arbitrary, TODO
 	wearer.Move(get_step(get_turf(wearer),direction),direction)
 
 // This returns the rig if you are contained inside one, but not if you are wearing it

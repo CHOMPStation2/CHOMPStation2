@@ -506,7 +506,7 @@
 	character_name = list("Ketrai")
 
 /datum/gear/fluff/amaya_id
-	path = /obj/item/weapon/card/id/fluff/amaya
+	path = /obj/item/weapon/card/id/event/fluff/amaya
 	display_name = "Amaya's ID"
 	ckeywhitelist = list("kiraalitruss")
 	character_name = list("Amaya Rahl")
@@ -570,6 +570,12 @@
 	slot = slot_back
 	ckeywhitelist = list("luminescentring")
 	character_name = list("Briana Moore")
+
+/datum/gear/fluff/entchtut_medal
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "Entchtut's Conduct Medal"
+	ckeywhitelist = list("littlebigkid2000")
+	character_name = list("Entchtut Cenein")
 
 //  M CKEYS
 /datum/gear/fluff/phi_box
@@ -738,6 +744,18 @@
 	ckeywhitelist = list("rboys2")
 	character_name = list("Clara Mali")
 	cost = 1
+
+/datum/gear/fluff/luna_sci_medal
+	path = /obj/item/clothing/accessory/medal/nobel_science
+	display_name = "LUNA's Nobel Science Award"
+	ckeywhitelist = list("residentcody")
+	character_name = list("LUNA")
+	
+/datum/gear/fluff/luna_conduct_medal
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "LUNA's Distinguished Conduct Medal"
+	ckeywhitelist = list("residentcody")
+	character_name = list("LUNA")
 
 /datum/gear/fluff/nikki_dorky_outfit
 	path = /obj/item/weapon/storage/box/fluff
@@ -1045,6 +1063,12 @@
 	display_name = "Roanna's Unity Medal"
 	ckeywhitelist = list("vitoras")
 	character_name = list("Roanna Ti'Rox")
+
+/datum/gear/fluff/harmony_id
+	path = /obj/item/weapon/card/id/event/polymorphic/itg
+	display_name = "Harmony's ITG-ID card"
+	ckeywhitelist = list("verysoft")
+	character_name = list("Harmony")
 
 //  W CKEYS
 /datum/gear/fluff/sthasha_bracer
