@@ -20,33 +20,8 @@
 	if(!isnull(entries_decay_at) && !isnull(entries_expire_at))
 		entries_decay_at = round(entries_expire_at * entries_decay_at)
 
-<<<<<<< HEAD
-/datum/persistent/proc/LabelTokens(var/list/tokens)
-	var/list/labelled_tokens = list()
-	labelled_tokens["x"] = text2num(tokens[1])
-	labelled_tokens["y"] = text2num(tokens[2])
-	labelled_tokens["z"] = text2num(tokens[3])
-	labelled_tokens["age"] = text2num(tokens[4])
-	return labelled_tokens
-
-/datum/persistent/proc/GetValidTurf(var/turf/T, var/list/tokens)
-	if(T && CheckTurfContents(T, tokens))
-||||||| parent of ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
-// Reads in list of text tokens taken from file, generates labelled list of actual token values
-/datum/persistent/proc/LabelTokens(var/list/tokens)
-	var/list/labelled_tokens = list()
-	labelled_tokens["x"] = text2num(tokens[1])
-	labelled_tokens["y"] = text2num(tokens[2])
-	labelled_tokens["z"] = text2num(tokens[3])
-	labelled_tokens["age"] = text2num(tokens[4])
-	return labelled_tokens
-
-/datum/persistent/proc/GetValidTurf(var/turf/T, var/list/tokens)
-	if(T && CheckTurfContents(T, tokens))
-=======
 /datum/persistent/proc/GetValidTurf(var/turf/T, var/list/token)
 	if(T && CheckTurfContents(T, token))
->>>>>>> ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
 		return T
 
 /datum/persistent/proc/CheckTurfContents(var/turf/T, var/list/token)
@@ -61,15 +36,8 @@
 		token["age"] <= entries_expire_at \
 	)
 
-<<<<<<< HEAD
-/datum/persistent/proc/CreateEntryInstance(var/turf/creating, var/list/tokens)
-||||||| parent of ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
-// Restores saved data to world
-/datum/persistent/proc/CreateEntryInstance(var/turf/creating, var/list/tokens)
-=======
 // Restores saved data to world
 /datum/persistent/proc/CreateEntryInstance(var/turf/creating, var/list/token)
->>>>>>> ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
 	return
 
 /datum/persistent/proc/ProcessAndApplyTokens(var/list/tokens)
@@ -118,25 +86,11 @@
 
 /datum/persistent/proc/CompileEntry(var/atom/entry)
 	var/turf/T = get_turf(entry)
-<<<<<<< HEAD
-	. = list(
-		T.x,
-		T.y,
-		T.z,
-		GetEntryAge(entry)
-||||||| parent of ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
-	return list(
-		T.x,
-		T.y,
-		T.z,
-		GetEntryAge(entry)
-=======
 	return list(
 		"x" = T.x,
 		"y" = T.y,
 		"z" = T.z,
 		"age" = GetEntryAge(entry)
->>>>>>> ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
 	)
 
 /datum/persistent/proc/Initialize()
@@ -153,32 +107,12 @@
 	
 	var/list/to_store = list()
 	for(var/thing in SSpersistence.tracking_values[type])
-<<<<<<< HEAD
-		if(IsValidEntry(thing))
-			var/list/entry = CompileEntry(thing)
-			if(tokens_per_line == PERSISTENCE_VARIABLE_TOKEN_LENGTH || \
-					LAZYLEN(entry) == tokens_per_line)
-				for(var/i = 1 to LAZYLEN(entry))
-					if(istext(entry[i]))
-						entry[i] = replacetext(entry[i], file_entry_split_character, file_entry_substitute_character)
-				to_file(write_file, jointext(entry, file_entry_split_character))
-||||||| parent of ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
-		if(IsValidEntry(thing))
-			var/list/entry = CompileEntry(thing)
-			if(tokens_per_line == PERSISTENCE_VARIABLE_TOKEN_LENGTH || \
-					LAZYLEN(entry) == tokens_per_line)
-				for(var/i = 1 to LAZYLEN(entry))
-					if(istext(entry[i]))
-						entry[i] = replacetext(entry[i], file_entry_split_character, file_entry_substitute_character)
-				to_file(write_file, jointext(entry, file_entry_split_character))
-=======
 		if(!IsValidEntry(thing))
 			continue
 		to_store[++to_store.len] = CompileEntry(thing)
 
 	if(to_store.len)
 		to_file(file(filename), json_encode(to_store))
->>>>>>> ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets
 
 /datum/persistent/proc/RemoveValue(var/atom/value)
 	qdel(value)
