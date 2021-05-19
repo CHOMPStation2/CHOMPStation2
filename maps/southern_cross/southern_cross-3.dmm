@@ -2155,7 +2155,7 @@
 "vJf" = (/obj/structure/bed/chair,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled,/area/bridge)
 "vJX" = (/obj/machinery/power/terminal,/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/plating,/area/maintenance/substation/dorms)
 "vKr" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/turf/simulated/floor/wood,/area/crew_quarters/cafeteria)
-"vLA" = (/obj/machinery/smartfridge,/turf/simulated/wall,/area/crew_quarters/coffee_shop)
+"vLA" = (/obj/machinery/smartfridge/produce,/turf/simulated/wall,/area/crew_quarters/coffee_shop)
 "vMd" = (/obj/item/stack/material/glass{amount = 15},/obj/item/stack/rods{amount = 50},/turf/simulated/floor/wood,/area/maintenance/thirddeck/dormsaft)
 "vMA" = (/turf/simulated/wall,/area/maintenance/thirddeck/aftport)
 "vMB" = (/obj/structure/catwalk,/obj/structure/cable{d2 = 2; icon_state = "0-2"},/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_y = 24},/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsport)
