@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-/datum/gear/suit/wintercoat/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
-
-/datum/gear/suit/wintercoat/science
-	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist", "Xenobotanist", "Explorer", "Pathfinder")
-
-||||||| parent of 31fed2ac1a... Merge pull request #10327 from PastelPrinceDan/wintercoats
-/datum/gear/suit/wintercoat/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
-
-=======
->>>>>>> 31fed2ac1a... Merge pull request #10327 from PastelPrinceDan/wintercoats
 /datum/gear/suit/snowsuit/medical
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
 
