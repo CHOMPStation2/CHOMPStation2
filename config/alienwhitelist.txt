@@ -19,7 +19,22 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+||||||| parent of b8d4bf3852... Merge pull request #10355 from H0lySquirr3l/master
+liache - Black-Eyed Shadekin
+lizehrd - Xenochimera
+lordlag - Black-Eyed Shadekin
+magpiemayhem - Vox
+marco_barko - Protean
+=======
+liache - Black-Eyed Shadekin
+lizehrd - Xenochimera
+lordlag - Black-Eyed Shadekin
+losstinspess - Xenochimera
+magpiemayhem - Vox
+marco_barko - Protean
+>>>>>>> b8d4bf3852... Merge pull request #10355 from H0lySquirr3l/master
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
