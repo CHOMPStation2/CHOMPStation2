@@ -11,6 +11,19 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+||||||| parent of 1b1d82cc0d... Merge pull request #10361 from Chemlight/chemlight-xenochimera-whitelist2
+camanis - Protean
+cgr - Protean
+chargae - Protean
+chillyfang - Black-Eyed Shadekin
+=======
+camanis - Protean
+cgr - Protean
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+>>>>>>> 1b1d82cc0d... Merge pull request #10361 from Chemlight/chemlight-xenochimera-whitelist2
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
