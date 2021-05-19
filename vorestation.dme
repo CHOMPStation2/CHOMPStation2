@@ -4265,17 +4265,13 @@
 #include "maps\southern_cross\items\clothing\sc_under.dm"
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
-<<<<<<< HEAD
 #include "maps\southern_cross\overmap\shuttles.dm"
 #include "maps\southern_cross\structures\closets\engineering.dm"
 #include "maps\southern_cross\structures\closets\medical.dm"
 #include "maps\southern_cross\structures\closets\misc.dm"
 #include "maps\southern_cross\structures\closets\research.dm"
 #include "maps\southern_cross\structures\closets\security.dm"
-||||||| parent of d4024d297b... Merge pull request #10339 from klaasjared/Baystation-Pilot-Helmet-Port
-=======
 #include "maps\southern_cross\loadout\loadout_vr.dm"
->>>>>>> d4024d297b... Merge pull request #10339 from klaasjared/Baystation-Pilot-Helmet-Port
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\engine_submaps\engine.dm"
 #include "maps\submaps\engine_submaps\engine_areas.dm"
