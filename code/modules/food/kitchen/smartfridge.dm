@@ -31,8 +31,20 @@
 	icon_base = "fridge_sci"
 	icon_contents = "chem"
 
+<<<<<<< HEAD:code/modules/food/kitchen/smartfridge.dm
 /obj/machinery/smartfridge/New()
 	..()
+||||||| parent of ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets:code/modules/food/kitchen/smartfridge/smartfridge.dm
+/obj/machinery/smartfridge/New()
+	..()
+	if(persistent)
+		SSpersistence.track_value(src, persistent)
+=======
+/obj/machinery/smartfridge/Initialize()
+	. = ..()
+	if(persistent)
+		SSpersistence.track_value(src, persistent)
+>>>>>>> ba346f5f63... Merge pull request #10325 from VOREStation/Arokha/persistsheets:code/modules/food/kitchen/smartfridge/smartfridge.dm
 	if(is_secure)
 		wires = new/datum/wires/smartfridge/secure(src)
 	else
