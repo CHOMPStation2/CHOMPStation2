@@ -32,6 +32,13 @@
 	feed_grabbed_to_self(src,T)
 	update_icon()
 
+//CHOMPedit: On-demand belly loading.
+/mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
+	if(vore_active && !voremob_loaded)
+		voremob_loaded = TRUE
+		init_vore()
+	..()
+
 //
 // Simple proc for animals to have their digestion toggled on/off externally
 // Added as a verb in /mob/living/simple_mob/init_vore() if vore is enabled for this mob.
