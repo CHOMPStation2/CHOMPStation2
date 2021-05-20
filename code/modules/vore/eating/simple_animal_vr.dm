@@ -37,6 +37,7 @@
 	if(vore_active && !voremob_loaded)
 		voremob_loaded = TRUE
 		init_vore()
+		belly = vore_selected
 	..()
 
 //
