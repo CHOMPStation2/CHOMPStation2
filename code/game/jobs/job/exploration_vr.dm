@@ -72,16 +72,8 @@
 	access = list(access_pilot)
 	minimal_access = list(access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
-<<<<<<< HEAD
 	job_description = "A Pilot flies the various shuttles in the Vir System." //CHOMPedit: Replaces Virgo reference with Vir.
-	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator)
-||||||| parent of 6d8b8ea590... Merge pull request #10030 from Heroman3003/alt-titles-3
-	job_description = "A Pilot flies the various shuttles in the Virgo-Erigone System."
-	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator)
-=======
-	job_description = "A Pilot flies the various shuttles in the Virgo-Erigone System."
 	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator, "Helmsman" = /datum/alt_title/helmsman)
->>>>>>> 6d8b8ea590... Merge pull request #10030 from Heroman3003/alt-titles-3
 
 /datum/alt_title/co_pilot
 	title = "Co-Pilot"
