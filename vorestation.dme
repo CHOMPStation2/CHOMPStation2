@@ -2332,12 +2332,8 @@
 #include "code\modules\food\recipes_microwave_ch.dm"
 #include "code\modules\food\recipes_microwave_vr.dm"
 #include "code\modules\food\recipes_oven.dm"
-<<<<<<< HEAD
 #include "code\modules\food\recipes_oven_ch.dm"
-||||||| parent of 20e0fcd2d9... Merge pull request #10342 from Ketrai/fennetreatstwo
-=======
 #include "code\modules\food\recipes_oven_vr.dm"
->>>>>>> 20e0fcd2d9... Merge pull request #10342 from Ketrai/fennetreatstwo
 #include "code\modules\food\drinkingglass\drinkingglass.dm"
 #include "code\modules\food\drinkingglass\extras.dm"
 #include "code\modules\food\drinkingglass\glass_boxes.dm"
