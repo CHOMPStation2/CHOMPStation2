@@ -39,13 +39,7 @@
 /datum/job/atmos
 	spawn_positions = 3
 	pto_type = PTO_ENGINEERING
-<<<<<<< HEAD
-	alt_titles = list("Atmospherics Maintainer" = /datum/alt_title/atmos_maint, /*CHOMPEdit "Disposals Technician" = /datum/alt_title/disposals_tech*/)
-||||||| parent of 6d8b8ea590... Merge pull request #10030 from Heroman3003/alt-titles-3
-	alt_titles = list("Atmospherics Maintainer" = /datum/alt_title/atmos_maint, "Disposals Technician" = /datum/alt_title/disposals_tech)
-=======
-	alt_titles = list("Atmospheric Engineer" = /datum/alt_title/atmos_engi, "Atmospheric Maintainer" = /datum/alt_title/atmos_maint, "Disposals Technician" = /datum/alt_title/disposals_tech)
->>>>>>> 6d8b8ea590... Merge pull request #10030 from Heroman3003/alt-titles-3
+	alt_titles = list("Atmospheric Engineer" = /datum/alt_title/atmos_engi, "Atmospheric Maintainer" = /datum/alt_title/atmos_maint, /*CHOMPEdit "Disposals Technician" = /datum/alt_title/disposals_tech*/)
 
 /datum/alt_title/atmos_maint
 	title = "Atmospheric Maintainer"
