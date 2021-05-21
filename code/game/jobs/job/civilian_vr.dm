@@ -86,15 +86,9 @@
 	total_positions = 4
 	spawn_positions = 4
 	pto_type = PTO_CARGO
-<<<<<<< HEAD
-	alt_titles = list(/*CHOMPEdit Removal "Deep Space Miner" = /datum/alt_title/deep_space_miner*/, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector)
-||||||| parent of 6d8b8ea590... Merge pull request #10030 from Heroman3003/alt-titles-3
-	alt_titles = list("Deep Space Miner" = /datum/alt_title/deep_space_miner, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector)
-=======
-	alt_titles = list("Deep Space Miner" = /datum/alt_title/deep_space_miner, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector,
+	alt_titles = list(/*CHOMPEdit Removal "Deep Space Miner" = /datum/alt_title/deep_space_miner*/, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector,
 						"Excavator" = /datum/alt_title/excavator)
->>>>>>> 6d8b8ea590... Merge pull request #10030 from Heroman3003/alt-titles-3
-
+						
 /datum/alt_title/deep_space_miner
 	title = "Deep Space Miner"
 	title_blurb = "A Deep Space Miner specializes primarily in mining operations in zero-g environments, mostly in asteroid and debris fields."
