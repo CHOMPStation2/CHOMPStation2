@@ -57,11 +57,6 @@
 	title = "Command Assistant"
 
 /datum/alt_title/command_intern
-<<<<<<< HEAD
-	title = "Command Intern"
-||||||| parent of 6d8b8ea590... Merge pull request #10030 from Heroman3003/alt-titles-3
-	title = "Command Intern"
-=======
 	title = "Command Intern"
 
 /datum/alt_title/bridge_secretary
@@ -69,4 +64,3 @@
 
 /datum/alt_title/bridge_assistant
 	title = "Bridge Assistant"
->>>>>>> 6d8b8ea590... Merge pull request #10030 from Heroman3003/alt-titles-3
