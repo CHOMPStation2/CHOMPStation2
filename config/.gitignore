@@ -2,7 +2,20 @@
 *
 !*/
 #Also don't ignore these things because editing them manually on the server is a pain in the fucking ass.
+<<<<<<< HEAD
 #!custom_items.txt
 #!custom_sprites.txt
 #!alienwhitelist.txt
 #!jobwhitelist.txt
+||||||| parent of fb56cd4573... Merge pull request #10375 from VOREStation/Arokha/juke
+!custom_items.txt
+!custom_sprites.txt
+!alienwhitelist.txt
+!jobwhitelist.txt
+=======
+!custom_items.txt
+!custom_sprites.txt
+!alienwhitelist.txt
+!jobwhitelist.txt
+!jukebox.json
+>>>>>>> fb56cd4573... Merge pull request #10375 from VOREStation/Arokha/juke
