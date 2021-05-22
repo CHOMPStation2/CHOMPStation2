@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-/decl/emote/human
-	key = "vomit"
-	
-/decl/emote/human/check_user(var/mob/living/carbon/human/user)
-	return (istype(user))//VOREStation Edit - What does a mouth have to do with wagging?? && user.check_has_mouth() && !user.isSynthetic())
-
-/decl/emote/human/do_emote(var/mob/living/carbon/human/user)
-	user.vomit()
-||||||| parent of fcce7729ef... Merge pull request #10378 from Novacat/nova-basicfixes
-/decl/emote/human
-	key = "vomit"
-
-/decl/emote/human/check_user(var/mob/living/carbon/human/user)
-	return (istype(user))//VOREStation Edit - What does a mouth have to do with wagging?? && user.check_has_mouth() && !user.isSynthetic())
-
-/decl/emote/human/do_emote(var/mob/living/carbon/human/user)
-	user.vomit()
-=======
 /decl/emote/human/mob_can_use(var/mob/living/carbon/human/user)
 	return ..() && (istype(user))//VOREStation Edit - What does a mouth have to do with wagging?? && user.check_has_mouth() && !user.isSynthetic())
->>>>>>> fcce7729ef... Merge pull request #10378 from Novacat/nova-basicfixes
 
 /decl/emote/human/deathgasp
 	key = "deathgasp"
