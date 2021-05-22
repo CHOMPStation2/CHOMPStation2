@@ -80,3 +80,9 @@
 	var/flying = 0				// Allows flight
 	var/inventory_panel_type = /datum/inventory_panel
 	var/datum/inventory_panel/inventory_panel
+<<<<<<< HEAD
+||||||| parent of fcce7729ef... Merge pull request #10378 from Novacat/nova-basicfixes
+
+=======
+	var/last_resist_time = 0 // world.time of the most recent resist that wasn't on cooldown. 
+>>>>>>> fcce7729ef... Merge pull request #10378 from Novacat/nova-basicfixes
