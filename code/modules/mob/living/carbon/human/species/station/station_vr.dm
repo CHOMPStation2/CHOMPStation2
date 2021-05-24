@@ -344,11 +344,11 @@
 //CHOMPedit end
 
 /datum/species/human
-	blurb = "Humanity originated in the Sol system, and over the last three centuries has spread \
+	blurb = "Humanity originated in the Sol system, and over the last five centuries has spread \
 	colonies across a wide swathe of space. They hold a wide range of forms and creeds.<br/><br/> \
 	While the central Sol government maintains control of its far-flung people, powerful corporate \
 	interests, rampant cyber and bio-augmentation and secretive factions make life on most human \
-	worlds tumultous at best."
+	worlds tumultous at best." //CHOMPedit: blurb variable
 	color_mult = 1
 	icobase = 'icons/mob/human_races/r_human_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_human_vr.dmi'
