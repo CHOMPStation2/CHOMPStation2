@@ -214,16 +214,6 @@
 	x_offset = 24
 	y_offset = 24
 
-<<<<<<< HEAD
-/datum/frame/frame_types/geiger //yw edit start
-	name = "Geiger Counter"
-	frame_class = FRAME_CLASS_ALARM
-	frame_size = 2
-	frame_style = FRAME_STYLE_WALL
-	x_offset = 28
-	y_offset = 28 //yw edit ends
-||||||| parent of 445effcaf5... Merge pull request #10398 from VOREStation/upstream-merge-8095
-=======
 /datum/frame/frame_types/geiger
 	name = "Geiger Counter"
 	frame_class = FRAME_CLASS_ALARM
@@ -232,7 +222,6 @@
 	x_offset = 28
 	y_offset = 28
 
->>>>>>> 445effcaf5... Merge pull request #10398 from VOREStation/upstream-merge-8095
 //////////////////////////////
 // Frame Object (Structure)
 //////////////////////////////
