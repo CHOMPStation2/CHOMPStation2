@@ -124,15 +124,7 @@
 				to_chat(user, "<span class='warning'>\The [src] cannot hold more [ammo_material].</span>")
 				return
 			loading = TRUE
-<<<<<<< HEAD
 			while(can_hold_val < M.amount && mat_storage + SHEET_MATERIAL_AMOUNT <= max_mat_storage && do_after(user,1.5 SECONDS))  //CHOMPEdit
-				can_hold_val ++
-||||||| parent of fb4cee4e88... Merge pull request #10399 from VOREStation/upstream-merge-8094
-			while(mat_storage + SHEET_MATERIAL_AMOUNT <= max_mat_storage && do_after(user,1.5 SECONDS))
-				can_hold_val ++
-=======
-			while(mat_storage + SHEET_MATERIAL_AMOUNT <= max_mat_storage && do_after(user,1.5 SECONDS))
->>>>>>> fb4cee4e88... Merge pull request #10399 from VOREStation/upstream-merge-8094
 				mat_storage += SHEET_MATERIAL_AMOUNT
 				playsound(src, 'sound/effects/phasein.ogg', 15, 1)
 				M.use(1)
