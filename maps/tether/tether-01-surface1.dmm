@@ -29294,6 +29294,49 @@
 "aXJ" = (
 /turf/simulated/floor/tiled/steel_dirty,
 /area/maintenance/lower/atmos)
+<<<<<<< HEAD
+||||||| parent of 9335967b9b... Merge pull request #10403 from Novacat/nova-basicfixes
+"aXK" = (
+/obj/machinery/door/airlock/security{
+	name = "The Hole";
+	req_access = list(2)
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/button/remote/airlock{
+	id = "thehole";
+	name = "The Hole Bolt Toggle";
+	pixel_x = 0;
+	pixel_y = 26;
+	req_access = list(63);
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/surfacebase/security/lowerhall)
+=======
+"aXK" = (
+/obj/machinery/door/airlock/security{
+	name = "The Hole";
+	req_access = list(2)
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/button/remote/airlock{
+	id = "thehole";
+	name = "The Hole Bolt Toggle";
+	pixel_x = 0;
+	pixel_y = 26;
+	req_access = list(63);
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/surfacebase/security/lowerhall)
+"aXL" = (
+/obj/structure/closet/crate,
+/obj/random/unidentified_medicine,
+/obj/random/drinkbottle,
+/obj/random/tetheraid,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/xenoflora)
+>>>>>>> 9335967b9b... Merge pull request #10403 from Novacat/nova-basicfixes
 "aXM" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -30895,6 +30938,7 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/xenoflora)
+<<<<<<< HEAD
 "bcC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate,
@@ -30906,6 +30950,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/xenoflora)
+||||||| parent of 9335967b9b... Merge pull request #10403 from Novacat/nova-basicfixes
+"bcC" = (
+/obj/structure/closet/crate,
+/obj/random/unidentified_medicine,
+/obj/random/firstaid,
+/obj/random/drinkbottle,
+/turf/simulated/floor/plating,
+/area/maintenance/lower/xenoflora)
+=======
+>>>>>>> 9335967b9b... Merge pull request #10403 from Novacat/nova-basicfixes
 "bcD" = (
 /obj/structure/closet/wardrobe/black,
 /obj/random/maintenance/clean,
@@ -48482,8 +48536,16 @@ asL
 apu
 axS
 apu
+<<<<<<< HEAD
 bcC
 bco
+||||||| parent of 9335967b9b... Merge pull request #10403 from Novacat/nova-basicfixes
+bcC
+axS
+=======
+aXL
+axS
+>>>>>>> 9335967b9b... Merge pull request #10403 from Novacat/nova-basicfixes
 apu
 bcd
 agM
