@@ -34,14 +34,8 @@ var/list/all_maps = list()
 	var/static/list/sealed_levels = list()  // Z-levels that don't allow random transit at edge
 	var/static/list/xenoarch_exempt_levels = list()	//Z-levels exempt from xenoarch finds and digsites spawning.
 	var/static/list/persist_levels = list() // Z-levels where SSpersistence should persist between rounds. Defaults to station_levels if unset.
-<<<<<<< HEAD
-	var/static/list/empty_levels = null     // Empty Z-levels that may be used for various things (currently used by bluespace jump)
-	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
-||||||| parent of 21836a3485... Merge pull request #10408 from VOREStation/Arokha/spaceoddity
-	var/static/list/empty_levels = null     // Empty Z-levels that may be used for various things (currently used by bluespace jump)
-=======
 	var/static/list/empty_levels = list()   // Empty Z-levels that may be used for various things
->>>>>>> 21836a3485... Merge pull request #10408 from VOREStation/Arokha/spaceoddity
+	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
 	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
 	// End Static Lists
 
