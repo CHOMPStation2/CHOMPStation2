@@ -85,6 +85,11 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //
 /proc/is_vore_predator(mob/living/O)
 	if(istype(O,/mob/living))
+		if(istype(O,/mob/living/simple_mob)) //CHOMPEdit: On-demand belly loading.
+			var/mob/living/simple_mob/SM = O
+			if(SM.vore_active && !SM.voremob_loaded)
+				SM.voremob_loaded = TRUE
+				SM.init_vore()
 		if(O.vore_organs.len > 0)
 			return TRUE
 
