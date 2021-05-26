@@ -378,16 +378,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		input = input(usr, "Select a mob:", "Ghost Follow") as null|anything in jumpable_mobs()
 	if(!input)
 		return
-<<<<<<< HEAD
-
-	var/target = getmobs()[input]
-||||||| parent of 1a55f68a66... Merge pull request #10430 from VOREStation/Arokha/sneaky_z
-	
-	var/target = getmobs()[input]
-=======
-	
+		
 	var/target = jumpable_mobs()[input]
->>>>>>> 1a55f68a66... Merge pull request #10430 from VOREStation/Arokha/sneaky_z
 	if(!target) return
 	ManualFollow(target)
 
