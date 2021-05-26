@@ -37,6 +37,7 @@ var/list/all_maps = list()
 	var/static/list/empty_levels = list()   // Empty Z-levels that may be used for various things
 	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
 	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
+	var/static/list/secret_levels = list() // Z-levels that (non-admin) ghosts can't get to
 	// End Static Lists
 
 	// Z-levels available to various consoles, such as the crew monitor. Defaults to station_levels if unset.
