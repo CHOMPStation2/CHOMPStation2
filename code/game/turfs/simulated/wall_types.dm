@@ -307,12 +307,6 @@
 		var/image/I = image(icon = src.icon, icon_state = "o_[icon_state]")
 		I.color = stripe_color
 		add_overlay(I)
-<<<<<<< HEAD
-
-
-
-||||||| parent of eb9de2cb7c... Merge pull request #10411 from VOREStation/Arokha/aro3
-=======
 
 // Fake corners for making hulls look pretty
 /obj/structure/hull_corner
@@ -360,4 +354,3 @@
 /obj/structure/hull_corner/long_horiz
 	icon = 'icons/turf/wall_masks64x32.dmi'
 	bound_width = 64
->>>>>>> eb9de2cb7c... Merge pull request #10411 from VOREStation/Arokha/aro3
