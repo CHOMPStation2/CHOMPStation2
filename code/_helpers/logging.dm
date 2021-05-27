@@ -189,7 +189,6 @@
 /proc/log_ghostsay(text, mob/speaker)
 	if (config.log_say)
 		WRITE_LOG(diary, "DEADCHAT: [speaker.simple_info_line()]: [html_decode(text)]")
-<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(speaker.client)
 		if(!SSdbcore.IsConnected())
@@ -203,20 +202,11 @@
 			qdel(query_insert)
 			return
 		qdel(query_insert)
+
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - <span style=\"color:green\">[text]</span>"
-	//GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[src]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
+	//GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
 	//CHOMPEdit End
-||||||| parent of da4837903c... Merge pull request #10433 from VOREStation/upstream-merge-8085
 
-	speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - <span style=\"color:green\">[text]</span>"
-	GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[src]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
-
-=======
-
-	speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - <span style=\"color:green\">[text]</span>"
-	GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
-
->>>>>>> da4837903c... Merge pull request #10433 from VOREStation/upstream-merge-8085
 
 /proc/log_ghostemote(text, mob/speaker)
 	if (config.log_emote)
