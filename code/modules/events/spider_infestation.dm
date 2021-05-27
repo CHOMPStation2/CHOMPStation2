@@ -17,12 +17,20 @@
 /datum/event/spider_infestation/start()
 	var/list/vents = list()
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
+<<<<<<< HEAD
 		//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
 		var/in_area = get_area(temp_vent)
 		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
 			continue
 		if(!temp_vent.welded && temp_vent.network && temp_vent.loc.z in using_map.station_levels)
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
+||||||| parent of da4837903c... Merge pull request #10433 from VOREStation/upstream-merge-8085
+		if(!temp_vent.welded && temp_vent.network && temp_vent.loc.z in using_map.station_levels)
+			if(temp_vent.network.normal_members.len > 50)
+=======
+		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
+			if(temp_vent.network.normal_members.len > 50)
+>>>>>>> da4837903c... Merge pull request #10433 from VOREStation/upstream-merge-8085
 				vents += temp_vent
 
 	while((spawncount >= 1) && vents.len)
