@@ -122,8 +122,6 @@
 /obj/machinery/telecomms/relay/preset/tether,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/atmos)
-<<<<<<< HEAD
-||||||| parent of d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 "ar" = (
 /obj/structure/table/rack/steel,
 /obj/item/toy/plushie/squid/blue{
@@ -153,7 +151,6 @@
 /obj/item/device/mapping_unit/ert,
 /turf/simulated/floor/wood,
 /area/ship/ert/commander)
-=======
 "ar" = (
 /obj/structure/table/rack/steel,
 /obj/item/toy/plushie/squid/blue{
@@ -187,7 +184,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/ship/ert/commander)
->>>>>>> d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 "av" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
@@ -590,15 +586,6 @@
 "dq" = (
 /turf/simulated/wall/shull,
 /area/ship/ert/med_surg)
-"dr" = (
-/obj/structure/table/rack/steel,
-/obj/item/toy/plushie/squid/blue{
-	desc = "A small, cute and loveable squid friend. This one is blue. Despite the name, it seems no more or less deadly than your regular plush squid.";
-	name = "NT 'Deathsquid' Plushie"
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
 "ds" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/backpack/ert/commander,
@@ -740,22 +727,18 @@
 /obj/structure/hull_corner{
 	dir = 8
 	},
-<<<<<<< HEAD
 /obj/machinery/pointdefense{
 	id_tag = "vonbraun_pd"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/gunnery)
-||||||| parent of d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 /obj/machinery/power/pointdefense{
 	id_tag = "vonbraun_pd"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/gunnery)
-=======
 /turf/space,
 /area/space)
->>>>>>> d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 "dX" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -1371,7 +1354,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hangar)
-<<<<<<< HEAD
 "hW" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -1384,7 +1366,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/hangar)
-||||||| parent of d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 "hW" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -1397,8 +1378,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/hangar)
-=======
->>>>>>> d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 "hY" = (
 /obj/structure/hull_corner{
 	dir = 4
@@ -1432,7 +1411,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
 "ib" = (
-<<<<<<< HEAD
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
@@ -1442,7 +1420,6 @@
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
-||||||| parent of d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
@@ -1452,8 +1429,6 @@
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
-=======
->>>>>>> d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/hangar)
 "ij" = (
@@ -3281,17 +3256,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/bridge)
 "sB" = (
-<<<<<<< HEAD
 /obj/machinery/pointdefense{
 	id_tag = "vonbraun_pd"
 	},
-||||||| parent of d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 /obj/machinery/power/pointdefense{
 	id_tag = "vonbraun_pd"
 	},
-=======
 /obj/structure/hull_corner,
->>>>>>> d71d84c517... Merge pull request #10444 from KillianKirilenko/kk-ships
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/barracks)
 "sC" = (
@@ -5109,17 +5080,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/ert_ship_boat)
-"Ez" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
 "EA" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/box/trackimp,
@@ -6416,15 +6376,12 @@
 	battery_lock = 0
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-<<<<<<< HEAD
-||||||| parent of d41e3bb7a8... Merge pull request #10091 from KillianKirilenko/kk-adminships
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-=======
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked{
 	pixel_y = 6
 	},
@@ -6441,7 +6398,6 @@
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked{
 	pixel_y = -4
 	},
->>>>>>> d41e3bb7a8... Merge pull request #10091 from KillianKirilenko/kk-adminships
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/armoury_st)
 "LA" = (
@@ -6838,14 +6794,10 @@
 "NI" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/secure/briefcase/nsfw_pack_hybrid,
-<<<<<<< HEAD
-||||||| parent of a7910d7968... Merge pull request #9712 from KillianKirilenko/kk-shuttle
 /obj/item/weapon/storage/belt/explorer/pathfinder,
-=======
 /obj/item/weapon/storage/belt/explorer/pathfinder{
 	name = "ERT Commander's belt"
 	},
->>>>>>> a7910d7968... Merge pull request #9712 from KillianKirilenko/kk-shuttle
 /turf/simulated/floor/wood,
 /area/ship/ert/commander)
 "NJ" = (
@@ -7644,14 +7596,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/teleporter)
-"RV" = (
-/obj/machinery/light_switch{
-	pixel_y = 23
-	},
-/obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
 "Sc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -16314,7 +16258,7 @@ iB
 cS
 lu
 DS
-RV
+as
 Iv
 zP
 Eh
@@ -16459,7 +16403,7 @@ JB
 Wa
 eL
 zT
-Ez
+at
 IK
 Ks
 Oy
@@ -20427,7 +20371,7 @@ yz
 yz
 Ye
 Dd
-dr
+ar
 fj
 jz
 nc
