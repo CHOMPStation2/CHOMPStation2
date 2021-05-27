@@ -519,13 +519,8 @@
 #include "../../offmap_vr/om_ships/screebarge.dm"
 #include "../../offmap_vr/om_ships/aro.dm"
 #include "../../offmap_vr/om_ships/aro2.dm"
-<<<<<<< HEAD
-||||||| parent of eb9de2cb7c... Merge pull request #10411 from VOREStation/Arokha/aro3
-#include "../../offmap_vr/om_ships/bearcat.dm"
-=======
 #include "../../offmap_vr/om_ships/aro3.dm"
 #include "../../offmap_vr/om_ships/bearcat.dm"
->>>>>>> eb9de2cb7c... Merge pull request #10411 from VOREStation/Arokha/aro3
 #include "../../offmap_vr/om_ships/cruiser.dm"
 #include "../../offmap_vr/om_ships/vespa.dm"
 #include "../../offmap_vr/om_ships/generic_shuttle.dm"
