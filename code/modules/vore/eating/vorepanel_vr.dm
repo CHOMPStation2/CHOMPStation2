@@ -227,7 +227,6 @@
 			selected_contents.Add(list(info))
 		selected_list["contents"] = selected_contents
 
-<<<<<<< HEAD
 		data["selected"]["show_liq"] = selected.show_liquids //CHOMPedit start: liquid belly options
 		data["selected"]["liq_interacts"] = list()
 		if(selected.show_liquids)
@@ -258,11 +257,7 @@
 			data["selected"]["liq_messages"]["liq_msg4"] = selected.liquid_fullness4_messages
 			data["selected"]["liq_messages"]["liq_msg5"] = selected.liquid_fullness5_messages //CHOMPedit end
 
-
-||||||| parent of 6114e194f8... Merge pull request #10459 from ShadowLarkens/bluescreen_fix
-=======
 	data["selected"] = selected_list
->>>>>>> 6114e194f8... Merge pull request #10459 from ShadowLarkens/bluescreen_fix
 	data["prefs"] = list(
 		"digestable" = host.digestable,
 		"devourable" = host.devourable,
