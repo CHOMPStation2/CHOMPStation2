@@ -148,16 +148,9 @@
 			"digest_mode" = B.digest_mode,
 			"contents" = LAZYLEN(B.contents),
 		)))
-<<<<<<< HEAD
-	data["selected"] = null
-||||||| parent of da4837903c... Merge pull request #10433 from VOREStation/upstream-merge-8085
-
-	data["selected"] = null
-=======
 	data["our_bellies"] = our_bellies
 
 	var/list/selected_list = null
->>>>>>> da4837903c... Merge pull request #10433 from VOREStation/upstream-merge-8085
 	if(host.vore_selected)
 		var/obj/belly/selected = host.vore_selected
 		selected_list = list(
