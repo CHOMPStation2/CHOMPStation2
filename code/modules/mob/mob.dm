@@ -416,7 +416,7 @@
 
 
 	targets += observe_list_format(nuke_disks)
-	targets += observe_list_format(all_singularities)
+	targets += observe_list_format(GLOB.all_singularities)
 	targets += getmobs()
 	targets += observe_list_format(sortAtom(mechas_list))
 	targets += observe_list_format(SSshuttles.ships)
