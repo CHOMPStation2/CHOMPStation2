@@ -52,12 +52,8 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
-<<<<<<< HEAD
-#define INIT_ORDER_DBCORE		41	//CHOMPEdit
-||||||| parent of b9ad56b022... Merge pull request #10316 from VOREStation/upstream-merge-8071
-=======
 #define INIT_ORDER_WEBHOOKS		50
->>>>>>> b9ad56b022... Merge pull request #10316 from VOREStation/upstream-merge-8071
+#define INIT_ORDER_DBCORE		41	//CHOMPEdit
 #define INIT_ORDER_SQLITE		40
 #define INIT_ORDER_CHEMISTRY	35
 #define INIT_ORDER_SKYBOX		30
