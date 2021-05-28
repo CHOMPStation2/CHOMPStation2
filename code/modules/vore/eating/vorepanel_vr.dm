@@ -136,7 +136,7 @@
 					info["absorbed"] = TRUE
 			inside_contents.Add(list(info))
 		inside["contents"] = inside_contents
-	data["inside"] = list()
+	data["inside"] = inside
 
 	var/list/our_bellies = list()
 	for(var/belly in host.vore_organs)
@@ -176,41 +176,48 @@
 			"emote_time" = selected.emote_time,
 			"emote_active" = selected.emote_active,
 			"belly_fullscreen" = selected.belly_fullscreen,
+<<<<<<< HEAD
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
 			"mapRef" = map_name,	//CHOMPEdit
 			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore_ch.dmi'), //CHOMPedit
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
 		data["selected"] = selected_list
+||||||| parent of 6114e194f8... Merge pull request #10459 from ShadowLarkens/bluescreen_fix
+			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
+		)
+		data["selected"] = selected_list
+=======
+			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
+		)
+>>>>>>> 6114e194f8... Merge pull request #10459 from ShadowLarkens/bluescreen_fix
 
-		
 		var/list/addons = list()
 		for(var/flag_name in selected.mode_flag_list)
 			if(selected.mode_flags & selected.mode_flag_list[flag_name])
 				addons.Add(flag_name)
-		selected["addons"] = addons
+		selected_list["addons"] = addons
 
-		selected["egg_type"] = selected.egg_type
-		selected["contaminates"] = selected.contaminates
-		selected["contaminate_flavor"] = null
-		selected["contaminate_color"] = null
+		selected_list["egg_type"] = selected.egg_type
+		selected_list["contaminates"] = selected.contaminates
+		selected_list["contaminate_flavor"] = null
+		selected_list["contaminate_color"] = null
 		if(selected.contaminates)
-			selected["contaminate_flavor"] = selected.contamination_flavor
-			selected["contaminate_color"] = selected.contamination_color
+			selected_list["contaminate_flavor"] = selected.contamination_flavor
+			selected_list["contaminate_color"] = selected.contamination_color
 
-		selected["escapable"] = selected.escapable
-		selected["interacts"] = list()
+		selected_list["escapable"] = selected.escapable
+		selected_list["interacts"] = list()
 		if(selected.escapable)
-			selected["interacts"]["escapechance"] = selected.escapechance
-			selected["interacts"]["escapetime"] = selected.escapetime
-			selected["interacts"]["transferchance"] = selected.transferchance
-			selected["interacts"]["transferlocation"] = selected.transferlocation
-			selected["interacts"]["absorbchance"] = selected.absorbchance
-			selected["interacts"]["digestchance"] = selected.digestchance
+			selected_list["interacts"]["escapechance"] = selected.escapechance
+			selected_list["interacts"]["escapetime"] = selected.escapetime
+			selected_list["interacts"]["transferchance"] = selected.transferchance
+			selected_list["interacts"]["transferlocation"] = selected.transferlocation
+			selected_list["interacts"]["absorbchance"] = selected.absorbchance
+			selected_list["interacts"]["digestchance"] = selected.digestchance
 
-		selected["disable_hud"] = selected.disable_hud
+		selected_list["disable_hud"] = selected.disable_hud
 
-		
 		var/list/selected_contents = list()
 		for(var/O in selected)
 			var/list/info = list(
@@ -228,8 +235,9 @@
 				if(M.absorbed)
 					info["absorbed"] = TRUE
 			selected_contents.Add(list(info))
-		selected["contents"] = selected_contents
+		selected_list["contents"] = selected_contents
 
+<<<<<<< HEAD
 		data["selected"]["show_liq"] = selected.show_liquids //CHOMPedit start: liquid belly options
 		data["selected"]["liq_interacts"] = list()
 		if(selected.show_liquids)
@@ -261,6 +269,10 @@
 			data["selected"]["liq_messages"]["liq_msg5"] = selected.liquid_fullness5_messages //CHOMPedit end
 
 
+||||||| parent of 6114e194f8... Merge pull request #10459 from ShadowLarkens/bluescreen_fix
+=======
+	data["selected"] = selected_list
+>>>>>>> 6114e194f8... Merge pull request #10459 from ShadowLarkens/bluescreen_fix
 	data["prefs"] = list(
 		"digestable" = host.digestable,
 		"devourable" = host.devourable,
