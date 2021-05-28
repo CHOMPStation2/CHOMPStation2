@@ -225,6 +225,7 @@
 				if(M.absorbed)
 					info["absorbed"] = TRUE
 			selected_contents.Add(list(info))
+		selected_list["contents"] = selected_contents
 
 		selected_list["show_liq"] = selected.show_liquids //CHOMPedit start: liquid belly options
 		selected_list["liq_interacts"] = list()
@@ -255,7 +256,6 @@
 			selected_list["liq_messages"]["liq_msg3"] = selected.liquid_fullness3_messages
 			selected_list["liq_messages"]["liq_msg4"] = selected.liquid_fullness4_messages
 			selected_list["liq_messages"]["liq_msg5"] = selected.liquid_fullness5_messages //CHOMPedit end
-		selected_list["contents"] = selected_contents
 
 	data["selected"] = selected_list
 	data["prefs"] = list(
