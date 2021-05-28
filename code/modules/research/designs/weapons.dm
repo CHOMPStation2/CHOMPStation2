@@ -66,7 +66,7 @@
 /datum/design/item/weapon/energy/flora_gun
 	id = "flora_gun"
 	req_tech = list(TECH_MATERIAL = 2, TECH_BIO = 3, TECH_POWER = 3)
-	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 500, "uranium" = 500
+	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 500, "uranium" = 500)
 	build_path = /obj/item/weapon/gun/energy/floragun
 	sort_string = "MAAAG"
 
