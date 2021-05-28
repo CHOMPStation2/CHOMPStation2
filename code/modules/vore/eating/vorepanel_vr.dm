@@ -176,21 +176,11 @@
 			"emote_time" = selected.emote_time,
 			"emote_active" = selected.emote_active,
 			"belly_fullscreen" = selected.belly_fullscreen,
-<<<<<<< HEAD
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
 			"mapRef" = map_name,	//CHOMPEdit
 			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore_ch.dmi'), //CHOMPedit
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
-		data["selected"] = selected_list
-||||||| parent of 6114e194f8... Merge pull request #10459 from ShadowLarkens/bluescreen_fix
-			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
-		)
-		data["selected"] = selected_list
-=======
-			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
-		)
->>>>>>> 6114e194f8... Merge pull request #10459 from ShadowLarkens/bluescreen_fix
 
 		var/list/addons = list()
 		for(var/flag_name in selected.mode_flag_list)
