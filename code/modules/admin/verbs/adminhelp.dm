@@ -203,7 +203,6 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		log_admin("Ticket #[id]: [key_name(initiator)]: [name] - heard by [admin_number_present] non-AFK admins who have +BAN.")
 		if(admin_number_present <= 0)
 			to_chat(C, "<span class='notice'>No active admins are online, your adminhelp was sent to the admin discord.</span>")		//VOREStation Edit
-<<<<<<< HEAD
 	send2adminchat() //VOREStation Add
 	//YW EDIT START
 	var/list/adm = get_admin_counts()
@@ -214,8 +213,6 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	else
 		ahelp_discord_message("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.") //CHOMPEdit
 	//YW EDIT END
-||||||| parent of b9ad56b022... Merge pull request #10316 from VOREStation/upstream-merge-8071
-=======
 
 		// Also send it to discord since that's the hip cool thing now.
 		SSwebhooks.send(
@@ -227,7 +224,6 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 			)
 		)
 		
->>>>>>> b9ad56b022... Merge pull request #10316 from VOREStation/upstream-merge-8071
 	GLOB.ahelp_tickets.active_tickets += src
 
 /datum/admin_help/Destroy()
