@@ -157,12 +157,8 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 5000, "uranium" = 2000, "phoron" = 2000, "diamond" = 500)
 	build_path = /obj/item/ammo_casing/microbattery/combat/stripper
 	sort_string = "MAVCG"
-
-<<<<<<< HEAD
 None of these for now, too. -DHA */
 
-||||||| parent of 21658b8d85... Merge pull request #10401 from VOREStation/upstream-merge-8075
-=======
 /datum/design/item/weapon/ballistic/ammo/ptrshell
 	name = "14.5mm shell"
 	desc = "A dense-core projectile fired from a small cannon."
@@ -172,7 +168,6 @@ None of these for now, too. -DHA */
 	build_path = /obj/item/ammo_casing/a145
 	sort_string = "MABBD"
 
->>>>>>> 21658b8d85... Merge pull request #10401 from VOREStation/upstream-merge-8075
 /*
 /datum/design/item/nsfw_cell/final
 	name = "FINAL OPTION"
