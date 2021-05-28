@@ -176,20 +176,12 @@
 			"emote_time" = selected.emote_time,
 			"emote_active" = selected.emote_active,
 			"belly_fullscreen" = selected.belly_fullscreen,
-<<<<<<< HEAD
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
 			"mapRef" = map_name,	//CHOMPEdit
 			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore_ch.dmi'), //CHOMPedit
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
-||||||| parent of da4837903c... Merge pull request #10433 from VOREStation/upstream-merge-8085
-			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
-		)
-=======
-			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
-		)
 		data["selected"] = selected_list
->>>>>>> da4837903c... Merge pull request #10433 from VOREStation/upstream-merge-8085
 
 		
 		var/list/addons = list()
