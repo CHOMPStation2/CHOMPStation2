@@ -270,7 +270,12 @@
 		"show_vore_fx" = host.show_vore_fx,
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
+<<<<<<< HEAD
 		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
+||||||| parent of a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
+=======
+		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
+>>>>>>> a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
 		"noisy" = host.noisy,
@@ -405,12 +410,22 @@
 				host.client.prefs_vr.can_be_drop_prey = host.can_be_drop_prey
 			unsaved_changes = TRUE
 			return TRUE
+<<<<<<< HEAD
 		if("toggle_latejoin_vore")
 			host.latejoin_vore = !host.latejoin_vore
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.latejoin_vore = host.latejoin_vore
 			unsaved_changes = TRUE
 			return TRUE
+||||||| parent of a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
+=======
+		if("toggle_allow_spontaneous_tf")
+			host.allow_spontaneous_tf = !host.allow_spontaneous_tf
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.allow_spontaneous_tf = host.allow_spontaneous_tf
+			unsaved_changes = TRUE
+			return TRUE
+>>>>>>> a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
 		if("toggle_digest")
 			host.digestable = !host.digestable
 			if(host.client.prefs_vr)
