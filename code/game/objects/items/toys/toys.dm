@@ -419,12 +419,7 @@
 	desc = "A \"Space Life\" brand... wait, what the hell is this thing?"
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "nuketoy"
-<<<<<<< HEAD
-	w_class = ITEMSIZE_SMALL //chompstation add because WHY ARE THEY SO BIG
-||||||| parent of 32a632bb92... Merge pull request #10488 from VOREStation/upstream-merge-8108
-=======
 	w_class = ITEMSIZE_TINY
->>>>>>> 32a632bb92... Merge pull request #10488 from VOREStation/upstream-merge-8108
 	var/cooldown = 0
 	var/toysay = "What the fuck did you do?"
 	drop_sound = 'sound/items/drop/accessory.ogg'
