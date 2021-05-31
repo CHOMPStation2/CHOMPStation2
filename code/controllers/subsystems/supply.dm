@@ -205,11 +205,18 @@ SUBSYSTEM_DEF(supply)
 			else if(islist(SP.access) && SP.one_access)
 				var/list/L = SP.access // access var is a plain var, we need a list
 				A.req_one_access = L.Copy()
+<<<<<<< HEAD
 				if(A.req_access) //Chompstation Edit (TODO: Figure out why the fuck this works for others but not us)
 					A.req_access.Cut()	//Chompstation Edit
+||||||| parent of efc60df69d... Merge pull request #10510 from VOREStation/Arokha/memopt
+				A.req_access.Cut()
+=======
+				A.req_access = null
+>>>>>>> efc60df69d... Merge pull request #10510 from VOREStation/Arokha/memopt
 			else if(islist(SP.access) && !SP.one_access)
 				var/list/L = SP.access
 				A.req_access = L.Copy()
+				A.req_one_access = null
 			else
 				log_debug("<span class='danger'>Supply pack with invalid access restriction [SP.access] encountered!</span>")
 
