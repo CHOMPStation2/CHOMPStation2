@@ -923,12 +923,8 @@ const VoreUserPreferences = (props, context) => {
     show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
-<<<<<<< HEAD
     latejoin_vore,
-||||||| parent of a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
-=======
     allow_spontaneous_tf,
->>>>>>> a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
     step_mechanics_active,
     pickup_mechanics_active,
     noisy,
