@@ -271,6 +271,7 @@
 	if(loaded) //Safety.
 		if(istype(loaded, /obj/item/weapon/fuel_assembly))
 			var/obj/item/weapon/fuel_assembly/rod = loaded
+<<<<<<< HEAD
 			//CHOMPEdit Begin
 			switch(rod.fuel_type)
 				if("composite") //Safety check for rods spawned in without a fueltype.
@@ -287,6 +288,47 @@
 					spawn(5)
 						visible_message("<span class='danger'>\The [src] begins to rattle, its acceleration chamber collapsing in on itself!</span>")
 						removable_components = FALSE
+||||||| parent of defb874fe3... Merge pull request #10511 from VOREStation/Arokha/runestars
+			if(rod.fuel_type == "composite" || rod.fuel_type == "deuterium") //Safety check for rods spawned in without a fueltype.
+				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
+			else if(rod.fuel_type == "tritium")
+				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
+			else if(rod.fuel_type == "phoron")
+				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
+			else if(rod.fuel_type == "supermatter")
+				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
+				visible_message("<span class='danger'>The barrel of \the [src] glows a blinding white!</span>")
+				spawn(5)
+					visible_message("<span class='danger'>\The [src] begins to rattle, its acceleration chamber collapsing in on itself!</span>")
+					removable_components = FALSE
+					spawn(15)
+						audible_message("<span class='critical'>\The [src]'s power supply begins to overload as the device crumples!</span>", runemessage = "* VWRRRRRRRR *") //Why are you still holding this?
+						playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
+						var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+						var/turf/T = get_turf(src)
+						sparks.set_up(2, 1, T)
+						sparks.start()
+=======
+			if(rod.fuel_type == "composite" || rod.fuel_type == "deuterium") //Safety check for rods spawned in without a fueltype.
+				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
+			else if(rod.fuel_type == "tritium")
+				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
+			else if(rod.fuel_type == "phoron")
+				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
+			else if(rod.fuel_type == "supermatter")
+				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
+				visible_message("<span class='danger'>The barrel of \the [src] glows a blinding white!</span>")
+				spawn(5)
+					visible_message("<span class='danger'>\The [src] begins to rattle, its acceleration chamber collapsing in on itself!</span>")
+					removable_components = FALSE
+					spawn(15)
+						audible_message("<span class='critical'>\The [src]'s power supply begins to overload as the device crumples!</span>", runemessage = "VWRRRRRRRR") //Why are you still holding this?
+						playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
+						var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+						var/turf/T = get_turf(src)
+						sparks.set_up(2, 1, T)
+						sparks.start()
+>>>>>>> defb874fe3... Merge pull request #10511 from VOREStation/Arokha/runestars
 						spawn(15)
 							audible_message("<span class='critical'>\The [src]'s power supply begins to overload as the device crumples!</span>", runemessage = "* VWRRRRRRRR *") //Why are you still holding this?
 							playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
