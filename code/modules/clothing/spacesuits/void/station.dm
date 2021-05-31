@@ -368,14 +368,8 @@
 	icon_state = "helm_explorer"
 	item_state = "helm_explorer"
 	item_state_slots = list(slot_r_hand_str = "syndicate-helm-black", slot_l_hand_str = "syndicate-helm-black")
-<<<<<<< HEAD
-	armor = list(melee = 40, bullet = 15, laser = 25,energy = 35, bomb = 30, bio = 100, rad = 70)
-	camera_networks = list(NETWORK_EXPLORATION)
-||||||| parent of 3ba6436350... Merge pull request #10487 from VOREStation/upstream-merge-8106
-	armor = list(melee = 40, bullet = 15, laser = 25,energy = 35, bomb = 30, bio = 100, rad = 70)
-=======
 	armor = list(melee = 50, bullet = 15, laser = 35, energy = 25, bomb = 30, bio = 100, rad = 70)
->>>>>>> 3ba6436350... Merge pull request #10487 from VOREStation/upstream-merge-8106
+	camera_networks = list(NETWORK_EXPLORATION)
 	light_overlay = "helmet_light_dual" //explorer_light
 
 /obj/item/clothing/suit/space/void/exploration
@@ -390,16 +384,8 @@
 	resilience = 0.15 //Armored
 
 //SAR
-<<<<<<< HEAD
-/obj/item/clothing/head/helmet/space/void/exploration_medical
-	name = "exploration medic\'s voidsuit helmet"
-||||||| parent of 3ba6436350... Merge pull request #10487 from VOREStation/upstream-merge-8106
-/obj/item/clothing/head/helmet/space/void/expedition_medical
-	name = "exploration medic\'s voidsuit helmet"
-=======
 /obj/item/clothing/head/helmet/space/void/expedition_medical
 	name = "field medic voidsuit helmet"
->>>>>>> 3ba6436350... Merge pull request #10487 from VOREStation/upstream-merge-8106
 	desc = "A radiation-resistant helmet made especially for exploring unknown planetary environments. Has a reinforced high-vis bubble style visor."
 	icon_state = "helm_exp_medic"
 	item_state = "helm_exp_medic"
@@ -408,16 +394,8 @@
 	light_overlay = "helmet_light_dual" //explorer_light
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE+5000
 
-<<<<<<< HEAD
-/obj/item/clothing/suit/space/void/exploration_medical
-	name = "exploration medic\'s voidsuit"
-||||||| parent of 3ba6436350... Merge pull request #10487 from VOREStation/upstream-merge-8106
-/obj/item/clothing/suit/space/void/expedition_medical
-	name = "exploration medic\'s voidsuit"
-=======
 /obj/item/clothing/suit/space/void/expedition_medical
 	name = "field medic voidsuit"
->>>>>>> 3ba6436350... Merge pull request #10487 from VOREStation/upstream-merge-8106
 	desc = "A hazard and radiation resistant voidsuit, featuring the Explorer emblem and a green cross on its chest plate. Seems to be a little lighter and more flexible than the regular explorer issue."
 	icon_state = "void_exp_medic"
 	item_state_slots = list(slot_r_hand_str = "skrell_suit_black", slot_l_hand_str = "skrell_suit_black")
