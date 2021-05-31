@@ -1104,19 +1104,9 @@
 		if("Exploration")
 			parent_helmet = /obj/item/clothing/head/helmet/space/void/exploration
 			parent_suit = /obj/item/clothing/suit/space/void/exploration
-<<<<<<< HEAD
-		if("Expedition Medic")
-			parent_helmet = /obj/item/clothing/head/helmet/space/void/exploration_medical
-			parent_suit = /obj/item/clothing/suit/space/void/exploration_medical
-||||||| parent of 3ba6436350... Merge pull request #10487 from VOREStation/upstream-merge-8106
-		if("Expedition Medic")
-			parent_helmet = /obj/item/clothing/head/helmet/space/void/expedition_medical
-			parent_suit = /obj/item/clothing/suit/space/void/expedition_medical
-=======
 		if("Field Medic")
 			parent_helmet = /obj/item/clothing/head/helmet/space/void/expedition_medical
 			parent_suit = /obj/item/clothing/suit/space/void/expedition_medical
->>>>>>> 3ba6436350... Merge pull request #10487 from VOREStation/upstream-merge-8106
 		if("Old Exploration")
 			parent_helmet = /obj/item/clothing/head/helmet/space/void/exploration/alt
 			parent_suit = /obj/item/clothing/suit/space/void/exploration/alt
