@@ -222,12 +222,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
-<<<<<<< HEAD
 			"latejoin_vore"			= latejoin_vore, //CHOMPedit
-||||||| parent of a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
-=======
 			"allow_spontaneous_tf"	= allow_spontaneous_tf,
->>>>>>> a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
 			"step_mechanics_pref"	= step_mechanics_pref,
 			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
