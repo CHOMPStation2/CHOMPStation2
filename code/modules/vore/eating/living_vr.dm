@@ -893,14 +893,10 @@
 	dispvoreprefs += "<b>Healbelly permission:</b> [permit_healbelly ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
-<<<<<<< HEAD
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
-||||||| parent of a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
-=======
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
->>>>>>> a7e7b0f2a8... Merge pull request #10412 from Heroman3003/grand-theft-gender
 	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=200x300;can_resize=0;can_minimize=0")
