@@ -559,3 +559,20 @@ ENGINE_MAP Supermatter Engine,Edison's Bane
 # Controls how strictly the species whitelists on loadout entries are enforced
 # Possible values: 0 (Off), 1 (Lax, user must be whitelisted for the species), 2 (Strict, user must be the species)
 LOADOUT_WHITELIST 1
+<<<<<<< HEAD
+||||||| parent of f4ee5be455... Merge pull request #10521 from VOREStation/Arokha/mediatracks
+
+# Allowed time from death to defib in minutes
+DEFIB_TIMER 60
+=======
+
+# Allowed time from death to defib in minutes
+DEFIB_TIMER 60
+
+# Jukebox track files to load, JSON format. Keys include: 
+# REQUIRED: url (str), title (str), duration (num, in DS)
+# SUGGESTED: artist (str), genre (str)
+# OPTIONAL: secret (bool), lobby (bool)
+#JUKEBOX_TRACK_FILES config/jukebox.json;config/jukebox_private.json
+JUKEBOX_TRACK_FILES config/jukebox.json
+>>>>>>> f4ee5be455... Merge pull request #10521 from VOREStation/Arokha/mediatracks
