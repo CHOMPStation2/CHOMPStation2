@@ -63,8 +63,18 @@
 "Fe" = (/obj/random/outcrop,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
 "HE" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "HF" = (/obj/structure/cliff/automatic{dir = 5},/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
+<<<<<<< HEAD
 "Ji" = (/obj/item/stolenpackage,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "JJ" = (/obj/structure/loot_pile/surface/bones,/obj/effect/floor_decal/rust,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
+||||||| parent of db274375dc... Merge pull request #10518 from VOREStation/Arokha/instrumental
+"Ie" = (/obj/random/tool/power,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
+"Ji" = (/obj/item/device/instrument/violin,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
+"JJ" = (/obj/structure/loot_pile/surface/bones,/obj/effect/floor_decal/rust,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/spider/stickyweb,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
+=======
+"Ie" = (/obj/random/tool/power,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
+"Ji" = (/obj/item/instrument/violin,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
+"JJ" = (/obj/structure/loot_pile/surface/bones,/obj/effect/floor_decal/rust,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/spider/stickyweb,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
+>>>>>>> db274375dc... Merge pull request #10518 from VOREStation/Arokha/instrumental
 "Kv" = (/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/Chasm)
 "Kz" = (/obj/random/trash,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/Chasm)
 "KX" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
