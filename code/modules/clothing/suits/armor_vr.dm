@@ -118,4 +118,20 @@
 	name = "bedevere's costume armor"
 	desc = "ye olde knight, risen again."
 	icon_state = "bedevere"
+<<<<<<< HEAD
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+||||||| parent of 4a1d9b7d47... Merge pull request #10522 from VOREStation/Arokha/typo
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+//deluixe explorer suit
+	/obj/item/clothing/suit/armor/pcarrier/explorer/deluxe
+	name = "modular explorer suit"
+	desc = "A modification of the explorer suit with a modular armor system. Requires you to insert armor plates."
+=======
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+//Deluxe explorer suit
+/obj/item/clothing/suit/armor/pcarrier/explorer/deluxe
+	name = "modular explorer suit"
+	desc = "A modification of the explorer suit with a modular armor system. Requires you to insert armor plates."
+>>>>>>> 4a1d9b7d47... Merge pull request #10522 from VOREStation/Arokha/typo
