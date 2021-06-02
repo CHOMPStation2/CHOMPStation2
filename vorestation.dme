@@ -316,6 +316,7 @@
 #include "code\controllers\subsystems\processing\bellies_vr.dm"
 #include "code\controllers\subsystems\processing\fastprocess.dm"
 #include "code\controllers\subsystems\processing\instruments.dm"
+#include "code\controllers\subsystems\processing\instruments_ch.dm"
 #include "code\controllers\subsystems\processing\obj.dm"
 #include "code\controllers\subsystems\processing\processing.dm"
 #include "code\controllers\subsystems\processing\projectiles.dm"
