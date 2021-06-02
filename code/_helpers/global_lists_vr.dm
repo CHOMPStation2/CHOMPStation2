@@ -245,7 +245,9 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/inflatable/door/torn,
 				/obj/item/weapon/towel,
 				/obj/item/weapon/folder,
-				/obj/item/weapon/clipboard //chompstation addition end
+				/obj/item/weapon/clipboard,
+				/obj/item/weapon/coin,
+				/obj/item/clothing/ears //chompstation addition end
 				)
 
 var/global/list/contamination_flavors = list(
