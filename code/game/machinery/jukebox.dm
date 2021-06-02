@@ -47,41 +47,8 @@
 	wires = null
 	return ..()
 
-<<<<<<< HEAD
-// On initialization, copy our tracks from the global list
-/obj/machinery/media/jukebox/Initialize()
-	. = ..()
-	if(LAZYLEN(all_jukebox_tracks)) //Global list has tracks
-		tracks.Cut()
-		secret_tracks.Cut()
-		for(var/datum/track/T in all_jukebox_tracks) //Load them
-			if(T.secret)
-				secret_tracks |= T
-			else
-				tracks |= T
-			if(T.casino) //CHOMPEDIT: preventing casion tracks from being added to other jukeboxes
-				tracks -= T
-
-	else if(!LAZYLEN(tracks)) //We don't even have default tracks
-		stat |= BROKEN // No tracks configured this round!
-||||||| parent of f4ee5be455... Merge pull request #10521 from VOREStation/Arokha/mediatracks
-// On initialization, copy our tracks from the global list
-/obj/machinery/media/jukebox/Initialize()
-	. = ..()
-	if(LAZYLEN(all_jukebox_tracks)) //Global list has tracks
-		tracks.Cut()
-		secret_tracks.Cut()
-		for(var/datum/track/T in all_jukebox_tracks) //Load them
-			if(T.secret)
-				secret_tracks |= T
-			else
-				tracks |= T
-	else if(!LAZYLEN(tracks)) //We don't even have default tracks
-		stat |= BROKEN // No tracks configured this round!
-=======
 /obj/machinery/media/jukebox/proc/getTracksList()
 	return hacked ? SSmedia_tracks.all_tracks : SSmedia_tracks.jukebox_tracks
->>>>>>> f4ee5be455... Merge pull request #10521 from VOREStation/Arokha/mediatracks
 
 /obj/machinery/media/jukebox/process()
 	if(!playing)
