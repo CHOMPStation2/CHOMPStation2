@@ -5,6 +5,7 @@
 	icon_state = "casinojukebox-nopower"
 	state_base = "casinojukebox"
 
+/* Commenting out for now due to conflicts with upstream jukebox changes.
 // On initialization, copy our tracks from the global list
 /obj/machinery/media/jukebox/casinojukebox/Initialize()
 	. = ..()
@@ -19,3 +20,4 @@
 				tracks |= T
 	else if(!LAZYLEN(tracks)) //We don't even have default tracks
 		stat |= BROKEN // No tracks configured this round!
+*/
