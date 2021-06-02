@@ -336,9 +336,19 @@ var/global/list/disallowed_protean_accessories = list(
 	)
 
 // Helpers - Unsafe, WILL perform change.
+<<<<<<< HEAD
 /mob/living/carbon/human/proc/nano_intoblob()
 	if(loc == /obj/item/weapon/rig/protean)
 		return
+||||||| parent of 4aac8a06b6... Merge pull request #10534 from VOREStation/Fixes/14063
+/mob/living/carbon/human/proc/nano_intoblob()
+=======
+/mob/living/carbon/human/proc/nano_intoblob(force)
+	if(!force && !isturf(loc))
+		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+		return
+		
+>>>>>>> 4aac8a06b6... Merge pull request #10534 from VOREStation/Fixes/14063
 	var/panel_was_up = FALSE
 	if(client?.statpanel == "Protean")
 		panel_was_up = TRUE
@@ -465,7 +475,11 @@ var/global/list/disallowed_protean_accessories = list(
 		to_chat(src, "You are not in RIG form.")
 //CHOMP Add end
 
-/mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob)
+/mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
+	if(!force && !isturf(loc))
+		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+		return
+	
 	if(!istype(blob))
 		return
 	if(blob.loc == /obj/item/weapon/rig/protean)

@@ -13,12 +13,23 @@
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
 
+	if(!isturf(loc))
+		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
+		return
+
 	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 	//Missing the organ that does this
 	if(!istype(refactory))
 		to_chat(src,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
+<<<<<<< HEAD
 
+||||||| parent of 4aac8a06b6... Merge pull request #10534 from VOREStation/Fixes/14063
+
+
+=======
+		
+>>>>>>> 4aac8a06b6... Merge pull request #10534 from VOREStation/Fixes/14063
 	var/choice = input(src,"Pick the bodypart to change:", "Refactor - One Bodypart") as null|anything in species.has_limbs
 	if(!choice)
 		return
@@ -187,6 +198,10 @@
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
 
+	if(!isturf(loc))
+		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
+		return
+
 	var/obj/item/organ/internal/nano/refactory/refactory = nano_get_refactory()
 	//Missing the organ that does this
 	if(!istype(refactory))
@@ -327,6 +342,10 @@
 	set category = "Abilities"
 	set hidden = TRUE
 
+	if(!isturf(loc))
+		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
+		return
+	
 	//Blob form
 	if(temporary_form)
 		if(health < maxHealth*0.5)
