@@ -1432,22 +1432,10 @@ About the new airlock wires panel:
 		//update the door's access to match the electronics'
 		secured_wires = electronics.secure
 		if(electronics.one_access)
-<<<<<<< HEAD
-			if(req_access) req_access.Cut()	//YWEdit
-||||||| parent of efc60df69d... Merge pull request #10510 from VOREStation/Arokha/memopt
-			req_access.Cut()
-=======
 			LAZYCLEARLIST(req_access)
->>>>>>> efc60df69d... Merge pull request #10510 from VOREStation/Arokha/memopt
 			req_one_access = src.electronics.conf_access
 		else
-<<<<<<< HEAD
-			if(req_one_access) req_one_access.Cut()	//YWEdit
-||||||| parent of efc60df69d... Merge pull request #10510 from VOREStation/Arokha/memopt
-			req_one_access.Cut()
-=======
 			LAZYCLEARLIST(req_one_access)
->>>>>>> efc60df69d... Merge pull request #10510 from VOREStation/Arokha/memopt
 			req_access = src.electronics.conf_access
 
 		//get the name from the assembly
