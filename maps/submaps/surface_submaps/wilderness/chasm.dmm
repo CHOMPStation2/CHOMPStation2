@@ -63,18 +63,8 @@
 "Fe" = (/obj/random/outcrop,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
 "HE" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "HF" = (/obj/structure/cliff/automatic{dir = 5},/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
-<<<<<<< HEAD
 "Ji" = (/obj/item/stolenpackage,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "JJ" = (/obj/structure/loot_pile/surface/bones,/obj/effect/floor_decal/rust,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
-||||||| parent of db274375dc... Merge pull request #10518 from VOREStation/Arokha/instrumental
-"Ie" = (/obj/random/tool/power,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
-"Ji" = (/obj/item/device/instrument/violin,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
-"JJ" = (/obj/structure/loot_pile/surface/bones,/obj/effect/floor_decal/rust,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/spider/stickyweb,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
-=======
-"Ie" = (/obj/random/tool/power,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
-"Ji" = (/obj/item/instrument/violin,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
-"JJ" = (/obj/structure/loot_pile/surface/bones,/obj/effect/floor_decal/rust,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/spider/stickyweb,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
->>>>>>> db274375dc... Merge pull request #10518 from VOREStation/Arokha/instrumental
 "Kv" = (/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/Chasm)
 "Kz" = (/obj/random/trash,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/Chasm)
 "KX" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
@@ -106,7 +96,7 @@
 "YR" = (/obj/structure/cliff/automatic/corner{dir = 10},/obj/structure/loot_pile/maint/technical,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "YU" = (/obj/effect/floor_decal/rust,/obj/effect/floor_decal/rust/color_rustedcee,/obj/effect/decal/cleanable/dirt,/obj/random/humanoidremains,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
 "Za" = (/obj/structure/cliff/automatic{dir = 10},/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
-"Zd" = (/obj/item/device/instrument/trombone,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
+"Zd" = (/obj/item/instrument/trombone,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "Zn" = (/mob/living/simple_mob/animal/space/jelly{health = 150; maxHealth = 150; name = "Cavern jelly blob"},/obj/item/weapon/bone/skull,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "ZS" = (/mob/living/simple_mob/animal/space/jelly{health = 150; maxHealth = 150; name = "Cavern jelly blob"},/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 
