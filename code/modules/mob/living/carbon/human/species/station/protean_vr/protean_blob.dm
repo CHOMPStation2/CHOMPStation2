@@ -432,6 +432,7 @@ var/global/list/disallowed_protean_accessories = list(
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
 		if(istype(I, /obj/item/weapon/holder))
 			root.remove_from_mob(I)
+<<<<<<< HEAD
 			
 //CHOMP Add start
 /mob/living/simple_mob/protean_blob/proc/rig_transform() //CHOMP Add this whole block.
@@ -466,13 +467,34 @@ var/global/list/disallowed_protean_accessories = list(
 //CHOMP Add end
 
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob)
+||||||| parent of 2a740a4172... Merge pull request #10543 from VOREStation/Fixes/10542
+
+/mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
+	if(!force && !isturf(loc))
+		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+		return
+	
+=======
+
+/mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
+>>>>>>> 2a740a4172... Merge pull request #10543 from VOREStation/Fixes/10542
 	if(!istype(blob))
 		return
+<<<<<<< HEAD
 	if(blob.loc == /obj/item/weapon/rig/protean)
 		return
 
 	if(istype(blob.loc, /obj/machinery/atmospherics))
 		to_chat(src, "You cannot reform in these confines!")
+||||||| parent of 2a740a4172... Merge pull request #10543 from VOREStation/Fixes/10542
+
+	if(istype(blob.loc, /obj/machinery/atmospherics))
+		to_chat(src, "You cannot reform in these confines!")
+=======
+	
+	if(!force && !isturf(blob.loc))
+		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
+>>>>>>> 2a740a4172... Merge pull request #10543 from VOREStation/Fixes/10542
 		return
 
 	var/panel_was_up = FALSE
