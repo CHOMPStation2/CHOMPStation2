@@ -294,6 +294,9 @@ var/list/gamemode_cache = list()
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
 	
 	var/disable_webhook_embeds = FALSE
+	
+	
+	var/static/list/jukebox_track_files
 
 /datum/configuration/New()
 	var/list/L = typesof(/datum/game_mode) - /datum/game_mode
@@ -946,6 +949,9 @@ var/list/gamemode_cache = list()
 
 				if("enable_night_shifts")
 					config.enable_night_shifts = TRUE
+						
+				if("jukebox_track_files")
+					config.jukebox_track_files = splittext(value, ";")
 
 				// VOREStation Edit Start - Can't be in _vr file because it is loaded too late.
 				if("vgs_access_identifier")
