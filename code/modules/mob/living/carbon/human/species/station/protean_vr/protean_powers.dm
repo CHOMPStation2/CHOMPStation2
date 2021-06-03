@@ -327,19 +327,11 @@
 	set category = "Abilities"
 	set hidden = TRUE
 
-<<<<<<< HEAD
-||||||| parent of a9ad167f46... Merge pull request #10548 from VOREStation/Arokha/blobfix2
-	if(!isturf(loc))
-		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
-		return
-	
-=======
 	var/atom/movable/to_locate = temporary_form || src
 	if(!isturf(to_locate.loc))
 		to_chat(to_locate,"<span class='warning'>You need more space to perform this action!</span>")
 		return
 	
->>>>>>> a9ad167f46... Merge pull request #10548 from VOREStation/Arokha/blobfix2
 	//Blob form
 	if(temporary_form)
 		if(health < maxHealth*0.5)
