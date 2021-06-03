@@ -337,8 +337,8 @@ var/global/list/disallowed_protean_accessories = list(
 
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
-	if(loc == /obj/item/weapon/rig/protean)
-		return
+	if(loc == /obj/item/weapon/rig/protean) //CHOMP Add
+		return //CHOMP Add
 	if(!force && !isturf(loc))
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
