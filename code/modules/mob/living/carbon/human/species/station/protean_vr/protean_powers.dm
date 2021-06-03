@@ -22,14 +22,6 @@
 	if(!istype(refactory))
 		to_chat(src,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
-<<<<<<< HEAD
-
-||||||| parent of 4aac8a06b6... Merge pull request #10534 from VOREStation/Fixes/14063
-
-
-=======
-		
->>>>>>> 4aac8a06b6... Merge pull request #10534 from VOREStation/Fixes/14063
 	var/choice = input(src,"Pick the bodypart to change:", "Refactor - One Bodypart") as null|anything in species.has_limbs
 	if(!choice)
 		return
