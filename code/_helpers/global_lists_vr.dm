@@ -223,9 +223,31 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/fancy/crayons,
 				/obj/item/weapon/storage/fancy/egg_box,
 				/obj/item/weapon/storage/wallet,
-        			/obj/item/weapon/storage/vore_egg,
-				/obj/item/weapon/material/kitchen, //chompstation addition
-				/obj/item/weapon/bikehorn/tinytether
+				/obj/item/weapon/storage/vore_egg,
+				/obj/item/weapon/bikehorn/tinytether,
+				/obj/item/weapon/material/kitchen, //chompstation addition start
+				/obj/item/weapon/storage/mre,
+				/obj/item/weapon/storage/mrebag,
+				/obj/item/weapon/storage/fancy/crackers,
+				/obj/item/weapon/storage/fancy/heartbox,
+				/obj/item/pizzavoucher,
+				/obj/item/pizzabox,
+				/obj/item/weapon/toy,
+				/obj/item/seeds,
+				/obj/item/clothing/accessory/choker,
+				/obj/item/clothing/accessory/medal,
+				/obj/item/clothing/accessory/tie,
+				/obj/item/clothing/accessory/scarf,
+				/obj/item/clothing/accessory/bracelet,
+				/obj/item/clothing/accessory/locket,
+				/obj/item/weapon/storage/bible,
+				/obj/item/weapon/bikehorn,
+				/obj/item/inflatable/door/torn,
+				/obj/item/weapon/towel,
+				/obj/item/weapon/folder,
+				/obj/item/weapon/clipboard,
+				/obj/item/weapon/coin,
+				/obj/item/clothing/ears //chompstation addition end
 				)
 
 var/global/list/contamination_flavors = list(
