@@ -216,7 +216,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/orangecake = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/peanutcake = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/icecreamsandwich = 15,
-					/obj/item/weapon/reagent_containers/food/snacks/cookie = 15,
+					/obj/item/weapon/reagent_containers/food/snacks/cookiesnack = 15,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/brownies = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/chocolatebar = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/chocolatepiece = 20
@@ -1054,7 +1054,9 @@
 					/obj/item/device/radio/headset = 10,
 					/obj/item/device/flashlight = 5,
 					/obj/item/device/laser_pointer = 3,
-					/obj/item/clothing/glasses/omnihud = 10)
+					/obj/item/clothing/glasses/omnihud = 10,
+					/obj/item/instrument/piano_synth/headphones = 2, // You're making a subsystem do work, I don't want it TOO busy
+					/obj/item/instrument/piano_synth/headphones/spacepods = 2)
 	prices = list(/obj/item/clothing/suit/circuitry = 100,
 					/obj/item/clothing/head/circuitry = 100,
 					/obj/item/clothing/shoes/circuitry = 100,
@@ -1074,7 +1076,9 @@
 					/obj/item/device/radio/headset = 50,
 					/obj/item/device/flashlight = 100,
 					/obj/item/device/laser_pointer = 200,
-					/obj/item/clothing/glasses/omnihud = 100)
+					/obj/item/clothing/glasses/omnihud = 100,
+					/obj/item/instrument/piano_synth/headphones = 200,
+					/obj/item/instrument/piano_synth/headphones/spacepods = 600)
 	premium = list(/obj/item/device/perfect_tele/one_beacon = 1)
 	contraband = list(/obj/item/weapon/disk/nifsoft/compliance = 1)
 
@@ -2429,7 +2433,6 @@
 					/obj/item/weapon/reagent_containers/food/snacks/clownburger = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/clownstears = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/coldchili = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/cookie = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/cookiesnack = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/corn_dog = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/cosmicbrowniesslice = 10,
@@ -2505,7 +2508,6 @@
 					/obj/item/weapon/reagent_containers/food/snacks/jellysandwich = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/jellysandwich/cherry = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/jellysandwich/peanutbutter = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/kabob = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/keylimepieslice = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/keylimepieslice/filled = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon = 10,
@@ -2646,7 +2648,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/soydope = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/soylentgreen = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/soylenviridians = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/spacetwinkie = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/spesslaw = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/spreads = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/spreads/butter = 10,
@@ -2695,7 +2697,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/donut/poisonberry = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/donut/slimejelly = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/ghostmuffin/poison = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/hotdog/old = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/old/hotdog = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/hugemushroomslice = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/human/burger = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/human/kabob = 10,
@@ -2763,7 +2765,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/pineapple_ring = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/rawbacon = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/rawsunflower = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/sharkmeat = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish/sharkmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/birthdaycake = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/monkfish = 10,
@@ -2893,7 +2895,6 @@
 					/obj/item/weapon/reagent_containers/food/snacks/clownburger = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/clownstears = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/coldchili = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/cookie = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/cookiesnack = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/corn_dog = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/cosmicbrowniesslice = 10,
@@ -2969,7 +2970,6 @@
 					/obj/item/weapon/reagent_containers/food/snacks/jellysandwich = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/jellysandwich/cherry = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/jellysandwich/peanutbutter = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/kabob = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/keylimepieslice = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/keylimepieslice/filled = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon = 10,
@@ -3110,7 +3110,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/soydope = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/soylentgreen = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/soylenviridians = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/spacetwinkie = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/spesslaw = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/spreads = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/spreads/butter = 10,
@@ -3196,7 +3196,7 @@
 					/obj/item/weapon/reagent_containers/food/snacks/pineapple_ring = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/rawbacon = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/rawsunflower = 10,
-					/obj/item/weapon/reagent_containers/food/snacks/sharkmeat = 10,
+					/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish/sharkmeat = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/birthdaycake = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel = 10,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/monkfish = 10,

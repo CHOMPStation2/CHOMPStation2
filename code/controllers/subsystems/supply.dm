@@ -207,9 +207,11 @@ SUBSYSTEM_DEF(supply)
 				A.req_one_access = L.Copy()
 				if(A.req_access) //Chompstation Edit (TODO: Figure out why the fuck this works for others but not us)
 					A.req_access.Cut()	//Chompstation Edit
+				A.req_access = null
 			else if(islist(SP.access) && !SP.one_access)
 				var/list/L = SP.access
 				A.req_access = L.Copy()
+				A.req_one_access = null
 			else
 				log_debug("<span class='danger'>Supply pack with invalid access restriction [SP.access] encountered!</span>")
 

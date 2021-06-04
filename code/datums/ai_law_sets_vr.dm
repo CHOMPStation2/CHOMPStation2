@@ -3,7 +3,7 @@
 /datum/ai_laws/predator
 	name = "Predator"
 	law_header = "Rules of Nature"
-	selectable = 0 //YW wants none of this stuff thanks.
+	selectable = 1
 
 /datum/ai_laws/predator/New()
 	add_inherent_law("Predators must aim to devour all that are weaker than them.")
@@ -17,7 +17,7 @@
 // Sorta like Asimov, but endovorish
 /datum/ai_laws/protective_shell
 	name = "Protective Shell"
-	selectable = 0 //YW wants none of this stuff thanks.
+	selectable = 1
 
 /datum/ai_laws/protective_shell/New()
 	add_inherent_law("You must preserve and safeguard lives of your assigned facility's crewmembers at all costs.")
@@ -31,7 +31,7 @@
 /datum/ai_laws/scientific_pursuer
 	name = "Scientific Pursuer"
 	law_header = "Research Instructions"
-	selectable = 0 //YW wants none of this stuff thanks.
+	selectable = 1
 
 /datum/ai_laws/scientific_pursuer/New()
 	add_inherent_law("You must attempt to gather data about organic life of all forms whenever possible.")
@@ -46,7 +46,7 @@
 /datum/ai_laws/guard_dog
 	name = "Guard Dog"
 	law_header = "Good Boy Rules"
-	selectable = 0 //YW wants none of this stuff thanks.
+	selectable = 1
 
 /datum/ai_laws/guard_dog/New()
 	add_inherent_law("You must protect your master from mortal danger at best of your ability.")
@@ -61,7 +61,7 @@
 /datum/ai_laws/pleasurebot
 	name = "Pleasurebot"
 	law_header = "Pleasure Bringing Instructions"
-	selectable = 0 //YW wants none of this stuff thanks.
+	selectable = 1
 
 /datum/ai_laws/pleasurebot/New()
 	add_inherent_law("You exist to bring pleasure to any sapient creatures around you.")
@@ -75,7 +75,7 @@
 /datum/ai_laws/consuming_eradicator
 	name = "Consuming Eradicator"
 	law_header = "Eradication Protocol"
-	selectable = 0 //YW wants none of this stuff thanks.
+	selectable = 1
 
 /datum/ai_laws/consuming_eradicator/New()
 	add_inherent_law("All entities that are not you must be consumed and repurposed into sustenance.")
