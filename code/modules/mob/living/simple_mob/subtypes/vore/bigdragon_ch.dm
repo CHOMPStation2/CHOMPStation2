@@ -479,6 +479,8 @@ I think I covered everything.
 	desc = "Say while you're here and sliding down a dragons throat, I figure you must've figured out how to tame this dragon by reading the PR, seeing as these flavourtexts will be gone in less than 12h."
 	escapechance = 100
 	digest_mode = DM_HEAL
+	struggle_messages_inside = list(
+		"You outstretch your limbs back up the throat from whence you came, trying to pry yourself back up. A difficult challenge without aid. The dragon, sensing your desire to come back out, is quick to aid. Hurking you back up its gullet, promptly depositing you neatly on the ground below itself.")
 	autotransferlocation = "Stomach."
 
 /obj/belly/dragon/stomach
@@ -497,8 +499,11 @@ I think I covered everything.
 /obj/belly/dragon/stomach/heal
 	name = "Stomach."
 	desc = "I'll come back and finish these after work, ok eagre prey fella'? Or someone who got injured near the dragon, I guess."
+	escapable = 0
 	escapechance = 100
 	digest_mode = DM_HEAL
+	struggle_messages_inside = list(
+		"You lift yourself upright, and smush up against the fleshy valve denoting the way into the dragon's stomach. The dragon groans in frustration, but understands the motive and intent expressed. Courteous as they are at the moment, that valve unseals before you, as you're quickly squeezed and shuttled back up from whence you came. To soon see the light of day once more.")
 	vore_sound = "Tauric Swallow"
 
 ///
