@@ -16,7 +16,7 @@ ADMIN_LEGACY_SYSTEM
 BAN_LEGACY_SYSTEM
 
 ## Add a # here if you wish to use the setup where jobs have more access. This is intended for servers with low populations - where there are not enough players to fill all roles, so players need to do more than just one job. Also for servers where they don't want people to hide in their own departments.
-JOBS_HAVE_MINIMAL_ACCESS
+# JOBS_HAVE_MINIMAL_ACCESS
 
 ## Unhash this entry to have certain jobs require your account to be at least a certain number of days old to select. You can configure the exact age requirement for different jobs by editing
 ## the minimal_player_age variable in the files in folder /code/game/jobs/job/.. for the job you want to edit. Set minimal_player_age to 0 to disable age requirement for that job.
@@ -559,3 +559,13 @@ ENGINE_MAP Supermatter Engine,Edison's Bane
 # Controls how strictly the species whitelists on loadout entries are enforced
 # Possible values: 0 (Off), 1 (Lax, user must be whitelisted for the species), 2 (Strict, user must be the species)
 LOADOUT_WHITELIST 1
+
+# Allowed time from death to defib in minutes
+DEFIB_TIMER 60
+
+# Jukebox track files to load, JSON format. Keys include: 
+# REQUIRED: url (str), title (str), duration (num, in DS)
+# SUGGESTED: artist (str), genre (str)
+# OPTIONAL: secret (bool), lobby (bool)
+#JUKEBOX_TRACK_FILES config/jukebox.json;config/jukebox_private.json
+JUKEBOX_TRACK_FILES config/jukebox.json

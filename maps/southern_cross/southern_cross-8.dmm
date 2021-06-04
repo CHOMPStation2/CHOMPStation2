@@ -1317,7 +1317,7 @@
 "mQJ" = (/obj/item/toy/chess/bishop_white{color = "teal"},/turf/simulated/floor/holofloor/wmarble,/area/holodeck/source_chess)
 "mRE" = (/obj/structure/urinal{pixel_y = 32},/obj/structure/window/reinforced/tinted{dir = 8},/turf/unsimulated/floor{icon_state = "freezerfloor"},/area/centcom/specops)
 "mRN" = (/obj/machinery/chemical_dispenser/full,/obj/item/weapon/reagent_containers/glass/beaker/large,/obj/structure/table/reinforced,/turf/unsimulated/floor{dir = 5; icon_state = "vault"},/area/centcom/specops)
-"mSB" = (/obj/structure/device/piano{dir = 4},/obj/effect/floor_decal/corner/yellow/diagonal,/obj/effect/floor_decal/corner/blue/diagonal{dir = 4},/turf/unsimulated/floor{icon_state = "steel"},/area/centcom/living)
+"mSB" = (/obj/structure/musician/piano{dir = 4},/obj/effect/floor_decal/corner/yellow/diagonal,/obj/effect/floor_decal/corner/blue/diagonal{dir = 4},/turf/unsimulated/floor{icon_state = "steel"},/area/centcom/living)
 "mSP" = (/turf/simulated/shuttle/wall/dark{join_group = "shuttle_ert"},/area/shuttle/response_ship)
 "mSQ" = (/obj/machinery/door/window/holowindoor{base_state = "right"; dir = 2; icon_state = "right"; name = "Green Team"},/turf/simulated/floor/holofloor/tiled/dark,/area/holodeck/source_basketball)
 "mTk" = (/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,/obj/machinery/atmospherics/portables_connector,/obj/effect/floor_decal/corner/paleblue{dir = 5},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)

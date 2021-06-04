@@ -66,6 +66,8 @@
 	var/mob/living/simple_mob/newPred = new mobtype(get_turf(src))
 	qdel(newPred.ai_holder)
 	newPred.ai_holder = null
+	newPred.voremob_loaded = TRUE //CHOMPedit: On-demand belly loading.
+	newPred.init_vore() //CHOMPedit: On-demand belly loading.
 	//newPred.movement_cooldown = 0			// The "needless artificial speed cap" exists for a reason
 	if(M.mind)
 		M.mind.transfer_to(newPred)
@@ -100,6 +102,8 @@
 /obj/structure/ghost_pod/ghost_activated/morphspawn/create_occupant(var/mob/M)
 	..()
 	var/mob/living/simple_mob/vore/hostile/morph/newMorph = new /mob/living/simple_mob/vore/hostile/morph(get_turf(src))
+	newMorph.voremob_loaded = TRUE //CHOMPedit: On-demand belly loading.
+	newMorph.init_vore() //CHOMPedit: On-demand belly loading.
 	if(M.mind)
 		M.mind.transfer_to(newMorph)
 	to_chat(M, "<span class='notice'>You are a <b>Morph</b>, somehow having gotten aboard the station in your wandering. \
