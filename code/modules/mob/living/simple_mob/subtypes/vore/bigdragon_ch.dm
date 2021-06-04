@@ -79,8 +79,8 @@ I think I covered everything.
 	heat_resist = 1
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/dragon
 	max_buckled_mobs = 1
-	mount_offset_y = 32
-	mount_offset_x = -16
+	mount_offset_y = 40
+	mount_offset_x = -8
 	can_buckle = 1
 	buckle_movable = 1
 	buckle_lying = 0
@@ -97,6 +97,7 @@ I think I covered everything.
 	glow_intensity = 3
 	glow_color = "#ED9200"
 	say_list_type = /datum/say_list/bigdragon
+	devourable = 0	//No
 
 	special_attack_min_range = 1
 	special_attack_max_range = 10
@@ -187,6 +188,7 @@ I think I covered everything.
 	maxHealth = 200
 	melee_damage_lower = 20
 	melee_damage_upper = 15
+	universal_understand = 1 //So they can hear synth speach
 
 ///
 ///		Misc define stuff
@@ -485,9 +487,12 @@ I think I covered everything.
 
 /obj/belly/dragon/stomach
 	name = "Stomach"
+	transferchance = 10
+	transferlocation = "Throat"
 	desc = "The final part of your journey arrives, in the form of a tightly squelched, muscular sphincter. Throat pressure crams against you, until abruptly, you find yourself spat into a hot, caustic cauldron of churning doom, the dragon's stomach. After slithering in, the way you entered squelches shut, dissapearing among the folds - impossible for you to find any more. You are trapped, no way out, lounging in a shallow pool of thick sticky juices. endless undulations from thick, pendulous folds of stomach-wall all around continually churn it up into a foamy, bubbling mess, soaking their folds in it to drip in ropes and even shivering sheets of the stuff around you. Clenches gush the digestive slimes all over you from time to time, cradling you in it's noxious embrace. Your ears are filled with such sloppy squelches now, those distant muffled glrrns you heard earlier now sharp, crisp, and thunderous as you nestle in their very source. Settle down for what little time you have left, for your fate rests adding to the powerful beast all around you."
 	vore_sound = "Tauric Swallow"
 	escapable = 0
+	digest_mode = DM_DIGEST
 	//desc = "The dragon's cavernous stomach hungrily pries your figure in through its sphincter, sealing taught behind you. Its meal is hastily subject to the slick, squelching confines of its digestive organ, that hanging gut eagre to churn and ripple over your proportions the moment you've arrived. Caustic waves of slop and chyme wash over you, that acidic tingle setting in upon your flesh. The entire chamber groans and echoes with each of the dragon's prideful steps. Satiated with its most recent meal, slowly being reduced into a nutritious paste to further power its hunt. Your fate definitively sealed within this tomb of swelteringly hot flesh."
 	struggle_messages_inside = list(
 		"Eager to try and escape before you lack the strength to do so anymore, you pound firmly against those walls. They clench in twice as hard, the beast letting out a pleased rumble. Seems it wants you to do that again!",
@@ -499,7 +504,6 @@ I think I covered everything.
 /obj/belly/dragon/stomach/heal
 	name = "Stomach."
 	desc = "I'll come back and finish these after work, ok eagre prey fella'? Or someone who got injured near the dragon, I guess."
-	escapable = 0
 	escapechance = 100
 	digest_mode = DM_HEAL
 	struggle_messages_inside = list(
@@ -806,7 +810,7 @@ I think I covered everything.
 					//Alternatively bully a coder (me) to make a unique digest_mode for mob healbellies that prevents death, or something.
 					if(istype(A, /mob/living/carbon/human))
 						var/mob/living/carbon/human/P = A
-						var/list/to_inject = list("myelamine","osteodaxon","spaceacillin","peridaxon")
+						var/list/to_inject = list("myelamine","osteodaxon","spaceacillin","peridaxon", "iron")
 						//Lets not OD them...
 						for(var/RG in to_inject)
 							if(!P.reagents.has_reagent(RG))
@@ -852,7 +856,7 @@ I think I covered everything.
 	H.norange = 0
 	H.faction = "dragon"
 	H.say("HAVE IT YOUR WAY THEN")
-	var/datum/ai_holder/simple_mob/intentional/dragon/D = new /datum/ai_holder/simple_mob/intentional/dragon(holder)
+	var/datum/ai_holder/simple_mob/intentional/dragon/D = new /datum/ai_holder/simple_mob/intentional/dragon(H)
 	D.give_target(attacker)
 	qdel(src)
 
