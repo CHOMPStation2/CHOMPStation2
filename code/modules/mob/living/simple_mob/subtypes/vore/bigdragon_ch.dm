@@ -35,7 +35,7 @@ The mob will only get increased "fullness" for prey who have made it to its stom
 
 This mob can be made friendly by supplying it with a gold coin or a gold ingot. I'd make it every gold item, but then you could just raid its hoard for an easy tame. And that's lame.
 
-While friendly, it will actively search for players with >95% health and attempt to vore them into its heal bellies.
+While friendly, it will actively search for players with <95% health and attempt to vore them into its heal bellies.
 On success, the targets are also injected with some helpful chemicals. Just to make sure they don't.. y'know, die while being swallowed.
 
 The mobs icons are modular and interchangeable, there's even a neat verb in the abilities tab when player controlled to pick and choose what you want.
