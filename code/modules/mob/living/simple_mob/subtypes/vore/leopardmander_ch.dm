@@ -7,7 +7,7 @@
 	icon_dead = "leopardmander-dead"
 	icon_living = "leopardmander"
 	icon_state = "leopardmander"
-	faction = "sif"
+	faction = "neutral"
 	meat_amount = 40 //I mean...
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
@@ -29,7 +29,7 @@
 	attacktext = list("chomped")
 	see_in_dark = 8
 	minbodytemp = 0
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	ai_holder_type = /datum/ai_holder/simple_mob/healbelly
 	max_buckled_mobs = 1
 	mount_offset_y = 32
 	mount_offset_x = -16

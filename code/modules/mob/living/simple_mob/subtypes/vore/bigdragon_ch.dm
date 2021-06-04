@@ -4,6 +4,44 @@ What lays before you is a lot of spaghetti in order to make a fairly unique boss
 Scour its code if you dare.
 
 Here's a summary, however.
+
+This is a 128x64px mob with sprites drawn by Przyjaciel (thanks mate) and some codersprites.
+
+The bigdragon is an 800 health hostile boss mob with three special attacks.
+The first (disarm intent) is a charge attack that activates when the target is >5 tiles away and requires line of sight.
+While charging, the dragon can run up/down cliffs harmlessly, but will thunk into objects for a brief stun.
+Charging requires direct line of sight to start the attack.
+Charging directly onto someone deals 50 brute and stuns them, likely with vore to follow.
+Charging next to someone will deal 20 brute and send them flying.
+
+The second (grab intent) is a tail sweep attack that activates when 2 or more hostiles are within 2 tiles of it.
+The tail sweep deals 20 brute to all targets and throws them back a great distance with a brief stun.
+Tail sweeping while ontop of a target will deal 50 brute like the charge above.
+
+The third (harm intent) is a telegraphed flame swathe attack. The inidividual flame pellets deal 30 burn each and set mobs and carbons on fire alike.
+This attack is the mobs default attack.
+
+When the big dragon is below 1/2 health, or was previously friendly and was pissed off, it will enrage.
+While enraged, the dragon will NOT stop and stand still while telegraphing its attacks.
+This is exceptionally dangerous, as it will actively breathe fire whilest pursuing a target.
+
+DO NOT challenge this beast in open fields. You need cover to survive.
+Unless you're a tesh or something I guess. Speed.
+
+As a flex, this mob has six vore organs.
+It will swap between two variants (heal and digest) depending on if it's friendly or not.
+It will eat prey with its maw, which has code in place to automatically push prey deeper over time.
+The mob will only get increased "fullness" for prey who have made it to its stomach. Y'know. So the fat sprites make sense.
+
+This mob can be made friendly by supplying it with a gold coin or a gold ingot. I'd make it every gold item, but then you could just raid its hoard for an easy tame. And that's lame.
+
+While friendly, it will actively search for players with >95% health and attempt to vore them into its heal bellies.
+On success, the targets are also injected with some helpful chemicals. Just to make sure they don't.. y'know, die while being swallowed.
+
+The mobs icons are modular and interchangeable, there's even a neat verb in the abilities tab when player controlled to pick and choose what you want.
+Otherwise, when naturally spawned, their icons are picked from a curated list.
+
+I think I covered everything.
 */
 
 ///
@@ -341,6 +379,8 @@ Here's a summary, however.
 ///
 ///		Vore stuff
 ///
+//My thanks to Raeschen for the hostile vore organ flavourtexts
+//My thanks to [whoever does the heal flavourtexts later]
 
 /mob/living/simple_mob/vore/bigdragon/init_vore()
 	//Ow my sanity
