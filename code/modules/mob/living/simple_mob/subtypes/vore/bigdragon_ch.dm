@@ -54,7 +54,7 @@ I think I covered everything.
 	catalogue_data = list(/datum/category_item/catalogue/fauna/bigdragon)
 	tt_desc = "S Draco Ignis"
 	icon = 'icons/mob/vore128x64_ch.dmi'
-	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. Check your abilities tab for other functions!"
+	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
 	meat_amount = 40
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
@@ -182,7 +182,7 @@ I think I covered everything.
 	ai_holder_type = /datum/ai_holder/simple_mob/healbelly/retaliate/dragon
 	desc = "A large, intimidating creature reminiscent of the traditional idea of medieval fire breathing lizards. This one seems particularly relaxed and jovial."
 	faction = "neutral"
-	player_msg = "You're a variant of the large dragon stripped of its firebreath attack (harm intent). This can be re-enabled by switching your norange var to 0."
+	player_msg = "You're a variant of the large dragon stripped of its firebreath attack (harm intent). You can still charge (disarm) and tail sweep (grab). Rest to heal slowly. Check your abilities tab for functions."
 	norange = 1
 	noenrage = 1
 
@@ -190,7 +190,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/friendly/maintpred
 	name = "lesser dragon"
 	desc = "A large, intimidating creature reminiscent of the traditional idea of medieval fire breathing lizards. This one seems weaker than the rest."
-	player_msg = "You're a nerfed variant of the large dragon with reduced health, reduced melee damage and your special attacks disabled. Intended for maint pred spawning."
+	player_msg = "You're a nerfed variant of the large dragon with reduced health, reduced melee damage and your special attacks disabled. Resting will heal you slowly over time. Check abilities tab for functions."
 	nospecial = 1
 	maxHealth = 200
 	melee_damage_lower = 20
