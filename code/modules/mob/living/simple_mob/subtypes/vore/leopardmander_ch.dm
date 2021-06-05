@@ -12,8 +12,8 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
-	melee_damage_lower = 20
-	melee_damage_upper = 15
+	melee_damage_lower = 10
+	melee_damage_upper = 25
 	friendly = list("nudges", "sniffs on", "rumbles softly at", "slobberlicks")
 	default_pixel_x = -48
 	pixel_x = -48
@@ -22,9 +22,6 @@
 	response_disarm = "shoves"
 	response_harm = "bops"
 	movement_cooldown = 2
-	harm_intent_damage = 10
-	melee_damage_lower = 10
-	melee_damage_upper = 25 //He's a lot bigger than you! Probably! Just don't be mean to him~
 	maxHealth = 1500
 	attacktext = list("chomped")
 	see_in_dark = 8
@@ -37,11 +34,18 @@
 	buckle_movable = TRUE
 	buckle_lying = FALSE
 	vore_icons = SA_ICON_LIVING
-
-	var/last_inject = 0 //Variable which tracks venom injection frequency
-	var/inject_interval = 5 MINUTES //Variable which determines time between venom injections
-	var/venom_chance = 50 //Chance per hit of injecting venom
-	var/venom_dose = 5 //Amount of each reagent injection
+	vore_bump_chance = 50
+	vore_digest_chance = 0
+	vore_escape_chance = 50
+	vore_pounce_chance = 100
+	vore_active = 1
+	vore_icons = 4
+	vore_capacity = 4
+	swallowTime = 100
+	vore_ignores_undigestable = TRUE
+	vore_default_mode = DM_HEAL
+	vore_pounce_maxhealth = 125
+	vore_bump_emote = "tries to snap up"
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"
@@ -63,45 +67,9 @@
 	verbs |= /mob/living/proc/toggle_rider_reins
 	movement_cooldown = 2
 
-/mob/living/simple_mob/vore/leopardmander/New() //Set to max nutrition on spawn since heal belly drains nutrition to work.
-	..()
-	src.adjust_nutrition(src.max_nutrition)
-
 /mob/living/simple_mob/vore/leopardmander/Initialize()
 	..()
 	src.adjust_nutrition(src.max_nutrition)
-
-/mob/living/simple_mob/vore/leopardmander/apply_melee_effects(atom/A)
-	if(isliving(A) && (world.time >= (last_inject + inject_interval)))
-		var/mob/living/L = A
-		if(L.reagents && prob(venom_chance))
-			var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
-			if(L.can_inject(src, null, target_zone))
-				last_inject = world.time
-				if(!L.allowmobvore) //If we can't eat them, stop mauling them.
-					ai_holder.lose_target() //Call this first so the attacks stop if the reagent proc runtimes.
-					L.reagents.add_reagent("bicaridine", venom_dose) //If we can't eat them, give them some bicar to compensate for no heal belly.
-				to_chat(L, "<span class='warning'>You feel a sudden warmth spreading through your wound!</span>")
-				L.reagents.add_reagent("zombiepowder", venom_dose) //Paralyze and heal. Noms should follow because mob mechanics.
-				L.reagents.add_reagent("myelamine", venom_dose)
-				L.reagents.add_reagent("osteodaxon", venom_dose)
-
-
-
-/mob/living/simple_mob/vore/leopardmander
-
-	vore_bump_chance = 50
-	vore_digest_chance = 0
-	vore_escape_chance = 50
-	vore_pounce_chance = 15
-	vore_active = 1
-	vore_icons = 4
-	vore_capacity = 4
-	swallowTime = 100
-	vore_ignores_undigestable = TRUE
-	vore_default_mode = DM_HEAL
-	vore_pounce_maxhealth = 125
-	vore_bump_emote = "tries to snap up"
 
 /mob/living/simple_mob/vore/leopardmander/init_vore()
 	if(!voremob_loaded)
@@ -144,8 +112,6 @@
 	name = "blue leopardmander"
 	desc = "A huge, pale blue, salamander-like drake. They are best known for their rarity, their voracity, their very potent paralyzing, yet somehow very beneficial venom, and their healing stomach. This one seems to have had a rare genetic mutation, making its skin appear blue."
 	tt_desc = "Draconis Va'aen"
-	faction = "sif"
-	icon = 'icons/mob/vore128x64_ch.dmi'
 	icon_dead = "leopardmander_blue-dead"
 	icon_living = "leopardmander_blue"
 	icon_state = "leopardmander_blue"
@@ -154,8 +120,6 @@
 	name = "glass-belly leopardmander"
 	desc = "A huge salamander-like drake. They are best known for their rarity, their voracity, their very potent paralyzing venom, and their healing stomach. This one seems to have had a rare genetic mutation, making its entire underside somewhat translucent! A dazzling pink glow comes from within its soft, squishy underside."
 	tt_desc = "Draconis Va'essa Lucent"
-	faction = "sif"
-	icon = 'icons/mob/vore128x64_ch.dmi'
 	icon_dead = "leopardmander_exotic-dead"
 	icon_living = "leopardmander_exotic"
 	icon_state = "leopardmander_exotic"
