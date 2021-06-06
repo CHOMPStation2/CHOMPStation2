@@ -41,6 +41,13 @@ radiantaurora - Protean
 ryumi - Protean
 seiga - Vox
 sepulchre - Vox
+<<<<<<< HEAD
+||||||| parent of a8a61abaa1... Merge pull request #10579 from Very-Soft/Revokewhitelist
+stobarico - Protean
+sharplight - Protean
+=======
+stobarico - Protean
+>>>>>>> a8a61abaa1... Merge pull request #10579 from Very-Soft/Revokewhitelist
 silvertalismen - Diona
 silvertalismen - Vox
 silvertalismen - Xenochimera
