@@ -50,6 +50,15 @@ tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
 tastypred - Protean
 timidvi - Diona
+<<<<<<< HEAD
+||||||| parent of fbb2af9a82... Merge pull request #10580 from Very-Soft/addwhitelist
+thedavestdave - Protean
+trikonei - Protean
+=======
+thedavestdave - Protean
+trikonei - Protean
+umbrenos - Black-Eyed Shadekin
+>>>>>>> fbb2af9a82... Merge pull request #10580 from Very-Soft/addwhitelist
 varonis - Xenochimera
 verkister - Xenochimera
 vitoras - Protean
