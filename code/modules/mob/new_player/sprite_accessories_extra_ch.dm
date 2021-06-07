@@ -130,6 +130,18 @@
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD,BP_TORSO,BP_GROIN)
 
+	voxbeak2
+		name = "Vox Beak (Normal)"
+		icon_state = "vox_beak"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+
+	voxtalons
+		name = "Vox Talons"
+		icon_state = "vox_talons"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
+
 /datum/sprite_accessory/tail/special/orca_tail
 	name = "Orca Tail"
 	desc = ""
