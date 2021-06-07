@@ -1055,6 +1055,8 @@
 					/obj/item/device/flashlight = 5,
 					/obj/item/device/laser_pointer = 3,
 					/obj/item/clothing/glasses/omnihud = 10,
+					/obj/item/device/walkpod = 5,
+					/obj/item/device/juke_remote = 1,
 					/obj/item/instrument/piano_synth/headphones = 2, // You're making a subsystem do work, I don't want it TOO busy
 					/obj/item/instrument/piano_synth/headphones/spacepods = 2)
 	prices = list(/obj/item/clothing/suit/circuitry = 100,
@@ -1077,6 +1079,8 @@
 					/obj/item/device/flashlight = 100,
 					/obj/item/device/laser_pointer = 200,
 					/obj/item/clothing/glasses/omnihud = 100,
+					/obj/item/device/walkpod = 300, 
+					/obj/item/device/juke_remote = 1000,
 					/obj/item/instrument/piano_synth/headphones = 200,
 					/obj/item/instrument/piano_synth/headphones/spacepods = 600)
 	premium = list(/obj/item/device/perfect_tele/one_beacon = 1)
