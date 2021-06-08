@@ -982,6 +982,16 @@
 		var/growlmultiplier = 100 - (nutrition / 250 * 100)
 		playsound(src, growlsound, vol = growlmultiplier, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 	// VOREStation Edit End
+	//CHOMPEdit Begin
+	if(noisy_full == TRUE && nutrition > 450)
+		var/belch_prob = 20
+		if(nutrition < 4075)
+			belch_prob = ((nutrition-500)/3575)*20
+		if(prob(belch_prob))
+			var/sound/belchsound = sound(get_sfx("belches"))
+			playsound(src, belchsound, vol = 50, vary = 1, falloff = 0.1, ignore_walls = TRUE)//, preference = /datum/client_preference/belch_noises) sort this out when belching works
+			custom_emote(AUDIBLE_MESSAGE, "belches.") //Don't know if this should stay, I'll leave in in for now.
+	//CHOMPEdit End
 
 	// TODO: stomach and bloodstream organ.
 	if(!isSynthetic())
