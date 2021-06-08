@@ -25,6 +25,9 @@
 	meat_amount = 1
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
+	vore_active = TRUE
+	vore_capacity = 1
+	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
 /datum/say_list/raccoon_ch
 	speak = list("HSSSSS")
