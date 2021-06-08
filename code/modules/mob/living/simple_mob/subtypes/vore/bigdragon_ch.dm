@@ -54,6 +54,9 @@ I think I covered everything.
 	catalogue_data = list(/datum/category_item/catalogue/fauna/bigdragon)
 	tt_desc = "S Draco Ignis"
 	icon = 'icons/mob/vore128x64_ch.dmi'
+	icon_state = "dragon_maneNone"	//Invisible, necessary for examine stuff
+	icon_rest = "dragon_maneNone"
+	icon_living = "dragon_maneNone"
 	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
 	meat_amount = 40
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
@@ -64,9 +67,6 @@ I think I covered everything.
 	melee_miss_chance = 0
 	melee_attack_delay = 0
 	friendly = list("nudges", "sniffs on", "rumbles softly at", "slobberlicks")
-	default_pixel_x = -48
-	pixel_x = -48
-	pixel_y = 0
 	response_help = "pats"
 	response_disarm = "shoves"
 	response_harm = "smacks"
@@ -99,6 +99,7 @@ I think I covered everything.
 	glow_color = "#ED9200"
 	say_list_type = /datum/say_list/bigdragon
 	devourable = 0	//No
+	universal_understand = 1 //So they can hear synth speach
 
 	special_attack_min_range = 1
 	special_attack_max_range = 10
@@ -113,11 +114,14 @@ I think I covered everything.
 	var/noenrage
 	var/enraged
 	var/flametoggle = 1
+	var/specialtoggle = 1
 	var/gut1
 	var/gut2
 	var/small = 0
 	var/small_icon = 'icons/mob/bigdragon_small_ch.dmi'
 	var/small_icon_state = "dragon_small"
+	var/nameset
+	var/flames
 
 	tame_items = list(
 	/obj/item/weapon/coin/gold = 100,
@@ -195,7 +199,6 @@ I think I covered everything.
 	maxHealth = 200
 	melee_damage_lower = 20
 	melee_damage_upper = 15
-	universal_understand = 1 //So they can hear synth speach
 
 ///
 ///		Misc define stuff
@@ -209,13 +212,23 @@ I think I covered everything.
 	say_got_target = list("FOOL.", "+INSOLENT+.", "YOU'VE MADE A MISTAKE TODAY.")
 
 /datum/category_item/catalogue/fauna/bigdragon
-	name = "Sivian Fauna - Oh fuck dragon"
-	desc = "Classification: Big boye\
+	name = "Invasive Fauna - Large Dragon"
+	desc = "Classification: S Draco Ignis\
 	<br><br>\
-	He do a rer.\
-	<br><br>\
-	This is a placeholder. You can assume it'll be pretty standard.\
-	Something something has a fondness of gold coins and could be tamed if given one."
+	Dragons have long since been a familiar species across the frontier,\
+	with origins tracing them all the way back to originating somewhere within the Sol system.\
+	While they are in no way an uncommon species in modern times, their innate nomadic and often times hermited tendancies make discovery of \
+	all their evolutionary forks troubling.\
+	<br>\
+	Some have long since evolved to intergrate well within our definitions of society as a whole, while others, such as this one, have maintained a \
+	far more \"traditonal\" way of life, in line with ancient history dictating them to be long lifed hermits with great hoardes of wealth. \
+	This is not to say that all variants prefer this lifestyle, of course. \
+	<br>\
+	These dragons, unlike their cousins, have evolved to remain quadrupedal in likeness of their origins. Though some have evolved the necessary opposable grip \
+	necessary for tool manipulation.\
+	<br>\
+	If uptaking a threatening, imposing stance, it is rumoured that these Dragons can be woo'd or otherwise distracted by offering them an item that could be added to their hoard.\
+	The most common example of this being gold coins and ingots."
 	value = CATALOGUER_REWARD_SUPERHARD //Scan range is the same as flame breath range. Good luck.
 
 /mob/living/simple_mob/vore/bigdragon/Login()
@@ -228,6 +241,9 @@ I think I covered everything.
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle
+	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
+	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name
+	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc
 
 /mob/living/simple_mob/vore/bigdragon/Initialize()
 	..()
@@ -236,9 +252,13 @@ I think I covered everything.
 	voremob_loaded = 1
 	add_language(LANGUAGE_DRUDAKAR)
 	add_language(LANGUAGE_UNATHI)
+	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
 
 /mob/living/simple_mob/vore/bigdragon/MouseDrop_T(mob/living/M, mob/living/user)
 	return
+
+/mob/living/simple_mob/vore/bigdragon/runechat_y_offset(width, height)
+	return (..()*size_multiplier) + 40
 
 ///
 ///		Verbs
@@ -259,8 +279,6 @@ I think I covered everything.
 	if(!small)
 		var/image/I = image(icon = small_icon, icon_state = small_icon_state, loc = src)
 		I.override = TRUE
-		I.pixel_x -= src.pixel_x
-		I.pixel_y -= src.pixel_y
 		var/list/L = list(src)
 		src.add_alt_appearance("smallsprite", I, displayTo = L)
 		small = TRUE
@@ -273,8 +291,48 @@ I think I covered everything.
 	set desc = "Toggles whether you will breath attack on harm intent (If you have one)."
 	set category = "Abilities"
 
+	if(norange)
+		to_chat(src, "<span class='userdanger'>You don't have a breath attack!</span>")
+		return
+
 	flametoggle = !flametoggle
 	to_chat(src, "<span class='notice'>You will [flametoggle?"now breath":"no longer breath"] attack on harm intent.</span>")
+
+/mob/living/simple_mob/vore/bigdragon/proc/special_toggle()
+	set name = "Toggle special attacks"
+	set desc = "Toggles whether you will tail spin and charge (If you have them)."
+	set category = "Abilities"
+
+	if(nospecial)
+		to_chat(src, "<span class='userdanger'>You don't have special attacks!</span>")
+		return
+
+	specialtoggle = !specialtoggle
+	to_chat(src, "<span class='notice'>You will [specialtoggle?"now special":"no longer special"] attack on grab/disarm intent.</span>")
+
+/mob/living/simple_mob/vore/bigdragon/proc/set_name()
+	set name = "Set Name"
+	set desc = "Sets your mobs name. You only get to do this once."
+	set category = "Abilities"
+	if(nameset)
+		to_chat(src, "<span class='userdanger'>You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must.")
+		return
+	var/newname
+	newname = sanitizeSafe(input(src,"Set your name. You only get to do this once. Max 52 chars.", "Name set","") as text, MAX_NAME_LEN)
+	if (newname)
+		name = newname
+		voice_name = newname
+		nameset = 1
+
+/mob/living/simple_mob/vore/bigdragon/proc/set_desc()
+	set name = "Set Description"
+	set desc = "Set your description."
+	set category = "Abilities"
+	var/newdesc
+	newdesc = sanitizeSafe(input(src,"Set your description. Max 4096 chars.", "Description set","") as text, MAX_MESSAGE_LEN)
+	if(newdesc)
+		desc = newdesc
+
 
 ///
 ///		Icon generation stuff
@@ -288,7 +346,7 @@ I think I covered everything.
 	var/new_fullness = 0
 	// Only count stomachs to fullness
 	for(var/obj/belly/B in vore_organs)
-		if(B.name == "Stomach" || B.name == "Stomach.")
+		if(B.name == "Stomach" || B.name == "Second Stomach")
 			for(var/mob/living/M in B)
 				new_fullness += M.size_multiplier
 	new_fullness /= size_multiplier
@@ -317,52 +375,57 @@ I think I covered everything.
 		eyes = pick(eye_styles)
 		overlay_colors["Eyes"] = "#[get_random_colour(1)]"
 
-	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]")
+	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -48)
 	I.color = overlay_colors["Underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_body[body][resting? "-rest" : null]")
+	I = image(icon, "dragon_body[body][resting? "-rest" : null]", pixel_x = -48)
 	I.color = overlay_colors["Body"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_ears[ears][resting? "-rest" : null]")
+	I = image(icon, "dragon_ears[ears][resting? "-rest" : null]", pixel_x = -48)
 	I.color = overlay_colors["Ears"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_mane[mane][resting? "-rest" : null]")
+	I = image(icon, "dragon_mane[mane][resting? "-rest" : null]", pixel_x = -48)
 	I.color = overlay_colors["Mane"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_horns[horns][resting? "-rest" : null]")
+	I = image(icon, "dragon_horns[horns][resting? "-rest" : null]", pixel_x = -48)
 	I.color = overlay_colors["Horns"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_eyes[eyes][resting? "-rest" : null]")
+	I = image(icon, "dragon_eyes[eyes][resting? "-rest" : null]", pixel_x = -48)
 	I.color = overlay_colors["Eyes"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = PLANE_LIGHTING_ABOVE
 	add_overlay(I)
 
 	if(enraged)
-		I = image(icon, "dragon_rage")
+		I = image(icon, "dragon_rage", pixel_x = -48)
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = MOB_PLANE
 		I.layer = MOB_LAYER
+		add_overlay(I)
+	if(flames)
+		I = image(icon, "dragon_flame[resting? "-rest" : null]", pixel_x = -48)
+		I.appearance_flags |= PIXEL_SCALE
+		I.plane = PLANE_LIGHTING_ABOVE
 		add_overlay(I)
 
 /mob/living/simple_mob/vore/bigdragon/proc/set_style()
@@ -462,8 +525,7 @@ I think I covered everything.
 ///
 ///		Vore stuff
 ///
-//My thanks to Raeschen for the hostile vore organ flavourtexts
-//My thanks to [whoever does the heal flavourtexts later]
+///	My thanks to Raeschen for these descriptions
 
 /mob/living/simple_mob/vore/bigdragon/init_vore()
 	//Ow my sanity
@@ -495,19 +557,27 @@ I think I covered everything.
 		"The drake happily wanders around while digesting its meal, almost like it is trying to show off the hanging gut you've given it.")
 	B = new /obj/belly/dragon/maw/heal(src)
 	B.emote_lists[DM_HEAL] = list(
-		"Placeholder.")
+		"Gently, the dragon's hot, bumpy tongue cradles you, feeling like a slime-soaked memory-foam bed, twitching with life. The delicacy that the dragon holds you with is quite soothing.",
+		"The wide, slick throat infront of you constantly quivers and undulates. Every hot muggy exhale of the beast makes that throat spread, ropes of slime within it's hold shivering in the flow, inhales causing it to clench up somewhat.",
+		"That mighty tongue of the dragon's curls itself into a halfpipe shape, cradling you snugly in it. The sides of the muscle hug your own flanks, forming a bed moulded to your contours. It keeps you well clear of those teeth, carrying you gently up against the ridges of it's palate, right before it's throat.",
+		"Rhythmically, the tongue nudges you closer and closer to it's slack slimy gullet. It leaves little gaps in the motions, seemingly chances for you to understand it's intentions and escape if you so wish. Remaining calm would result in slithering yet closer...",
+		"Saliva soaks the area all around you thickly, lubricating absolutely everything with the hot liquid. From time to time, the beast carefully shifts the rear of it's tongue to piston a cache of the goop down the hatch. The throat seen clenching tightly shut, the tongue's rear bobbing upwards, before down again - showing off a freshly slime-soaked entrance.")
 	gut2 = B
 	B = new /obj/belly/dragon/throat/heal(src)
 	B.emote_lists[DM_HEAL] = list(
-		"Placeholder.")
+		"The tunnel of the gullet closely wraps around you, mummifying you in a hot writhing embrace of silky flesh. The walls are slick, soaked in a lubricating slime, and so very warm.",
+		"The walls around you pulse in time with the dragon's heartbeat, which itself pounds in your ears. Rushing wind of calm breaths fill the gaps, and distant squelches of slimy payloads shifted around by soft flesh echo down below.",
+		"A tight squeeze of muscle surrounds you as another glllrk rings out, squelching the slimy mass that is yourself a little deeper into it's bulk. The soothing warmth increases the deeper you slide.",
+		"Soothing thrumms from the beast sound out, to try help calm you on your way down. The dragon seems to not want you to panic, using surprisingly gentle intent.",
+		"Clenchy embraces rhythmically squelch over you. Spreading outwards, the walls would relent, letting you spread a hot, gooey pocket of space around yourself. You linger, before another undulation of a swallow nudges you further down.")
 	B = new /obj/belly/dragon/stomach/heal(src)
 	B.emote_lists[DM_HEAL] = list(
-		"The drake's idle movement helps its stomach gently churn around you, slimily squelching against your figure.",
-		"The draconic predator takes a moment to intentionally clench its gut around you, encapsulating you in a strange, fleshy hug.",
-		"Some hot, viscous slime oozes down over your form, helping slicken you up, and heal your injuries during your stay.",
-		"During a moment of relative silence, you can hear the beast's soft, relaxed breathing as it casually goes about its day.",
-		"The thick, humid atmosphere within the drake's thick hanging belly works in tandem with its steady, metronome-like heartbeat to soothe you.",
-		"Your surroundings sway from side to side as the drake wanders about, your form sinking bodily into the doughy, soft gutflesh.")
+		"In tune with the beast's heartbeat, the walls heave and spread all around you. In, tight and close, and then outwards, spreading cobwebs of slime all around.",
+		"The thick folds of flesh around you blrrrble and sqllrrch, as the flesh itself secretes more of this strange, pure, goopy liquid, clenching it among it's crevices to squeeze it all over you in a mess.",
+		"Smooth, happy rumbles echo all around, the dragon seemingly deriving pleasure from the weight and motions you make within it's depths. The walls roll and churn endlessly, happy to hold on to you as long as you wish to stay.",
+		"A soft swaying, like the waves of an ocean, squish you to one side, and then to the other. The dragon's gentle movements seem to sway you side to side, as if in a tight possessive hammock on it's underside.",
+		"Nearby, a louder cacophany of gushing glrrrbles, deep dull squelches, and even deeper glrrns call out. This safe pocket of flesh seems to be up close and intimate with the dragon's normal, larger stomach, thus you rest safely spectating the sounds it makes.",
+		"The rushing breathing of the beast continues at a slow pace, indicating the calm it has. Holding you like this seems quite enjoyable to them, the chamber's folds just as calm and lazy in their motions of squelching the slimy contents all over your form.")
 	.=..()
 
 //Making unique belly subtypes for cleanliness and my sanity
@@ -521,11 +591,12 @@ I think I covered everything.
 	contamination_color = "grey"
 	contamination_flavor = "Wet"
 	vore_verb = "slurp"
+	belly_fullscreen_color = "#711e1e"
 
 /obj/belly/dragon/maw
 	name = "Maw"
 	desc = "Seizing it's opportunity, the dragon's jaws swoop in to scoop you up off of your feet, giving you a view down your body of the glistening, red interior. Vicious looking jaws hover above you like a guillotine, threatening to sink down into you, though such a thing never arrives. Seems it has a slower fate in store for you, as it guides your body along the bumpy mattress of it's tongue until the lowermost parts of your body press around the entrance of it's wide, quivering throat. The jaws snap shut, trapping you within, though thankfully clear of snagging your body between them. It's vast tongue coming to life, lifting to cram you against the insides of it's teeth and against the cathedral-roof ridges of it's palate - lathering you in hot, oily drool. It's panting, growled breaths gust from that wide, eye-catching hatch at the back, blasting you with murky breath and airborne spittle, presenting itself as a place to get up close and intimate with very, very soon...."
-	escapechance = 15
+	escapechance = 100
 	struggle_messages_inside = list(
 		"You wriggle and wrestle for purchase against the tongue. It lifts, cocooning and squeezing you hard between itself and the palate.",
 		"Reaching out, you try to pry at the beast's interlocked, mighty teeth. A zig-zag crack of light bleeds in to the maw for a moment, presenting you with your current, slimy state, before clicking shut once more.",
@@ -533,16 +604,18 @@ I think I covered everything.
 		"You brace your back against the spongey mattress of the tongue, and plant your limbs up against the roof. Straining hard, you try to force the jaws agape. A dull growl increases, blasting you in humid murk and drool the more you strain, your efforts ultimately useless.",
 		"Struggling for escape, you find yourself able to slip an arm between the beast's teeth and lips, reaching into the colder outside air. It doesn't take long for the beast's tongue to slither out with it, wrap over the limb, tugging it back inside with a noisy slllrrrp of it's lips.")
 	autotransferlocation = "Throat"
+	belly_fullscreen = "a_tumby"
+	vore_sound = "Insertion1"
 
 /obj/belly/dragon/maw/heal
 	name = "Maw."
-	desc = "I havn't written the heal flavourtexts yet. Check back when the PR's full merged. Just imagine there's a description about a dragon being gentle here, ok?"
-	escapechance = 100
+	desc = "With a surprisingly gentle touch, the dragon's jaws descend over your form, gingerly carrying you up high after seeking a hold on your body. The tongue blankets you intimately to keep you safe from it's toothy, vicious jaws, slithering down your torso, hooking up between legs to take your weight. It's head lifts high on up, tilting level, leaving you sprawled flat on your front atop the thick bumpy mattress of it's tongue - that muscle looming outwards, slathering over the beast's scaly lips, snagging your exterior parts to bring you entirely inside. It's hot, humid, and pretty murky - the maw of such a dangerous beast providing quite a hostile environment - though it's delicacy leads you to wonder how much danger you are really in. Urgent pat-pats of it's tongue against your rear usher you closer to it's throat, as the beast makes a soft, concerned rumble at you, trying to get you to slide down. It's gentle touch leaves you aware of just how easy it would be to wriggle free and escape."
 	digest_mode = DM_HEAL
 	mode_flags = DM_FLAG_NUMBING
 	struggle_messages_inside = list(
-		"You gently tap at the roof of the dragon's palate. Indicating to them your wishes of release. The dragon, in a good mood, creeks open their jawline, permitting you easy access to the outside world, to which you clamber out.")
+		"Wriggling around and resisting the beast's efforts to gently devour you, makes them call out to you with a deeply concerned rhhhrrrl. It sounds like it's trying to reassure you, though it seems to relent and let you pry the jaws agape to attempt to slide yourself free.")
 	autotransferlocation = "Throat."
+	human_prey_swallow_time = 40	//Probably should eat people quick if they're dying
 
 /obj/belly/dragon/throat
 	name = "Throat"
@@ -557,16 +630,21 @@ I think I covered everything.
 		"More squirming and struggling outwards, trying to hold the throat's muscular walls at bay. Every time you press outwards, the walls press back with twice the strength. Much more of this and it might threaten to crush. Perhaps you should just give in...",
 		"You frantically writhe upwards a couple of inches, before the beast swallows with a sloppy-sounding glllggk, sending you back down a foot or so. Each struggle you make only seems to hasten your journey down the hatch. ")
 	autotransferlocation = "Stomach"
+	belly_fullscreen = "another_tumby"
+	vore_sound = "Tauric Swallow"
+
 
 /obj/belly/dragon/throat/heal
 	name = "Throat."
-	desc = "Havn't written these yet. Check back when the PR's done I guess."
-	escapechance = 100
+	desc = "Giving in to the beast's gentle ministrations, you let yourself get slowly urged forward by the fat tongue, squelched cheek-first against the hot, wet back of it's throat, the gullet guiding you down and inside. Schllorp! You descend into  the jelly-like folds of the dragon's quivering gullet, rhythmic periastaltic motions helping to suckle and drag you inside. the last of your body slides off of it's tongue, the rear of that muscle lifting up against the last of you to help squelch you down. Each swallow leaves a little time inbetween, and the pace down the hatch is slow and gentle - you feel like resistance and squirms would defeat this pace and have you slithering back up the way you came."
+	escapechance = 0
+	transferchance = 100
+	transferlocation = "Maw."
 	digest_mode = DM_HEAL
 	mode_flags = DM_FLAG_NUMBING
 	struggle_messages_inside = list(
-		"You outstretch your limbs back up the throat from whence you came, trying to pry yourself back up. A difficult challenge without aid. The dragon, sensing your desire to come back out, is quick to aid. Hurking you back up its gullet, promptly depositing you neatly on the ground below itself.")
-	autotransferlocation = "Stomach."
+		"Writhing firmly inside the tunnel, you try to 'swim' back up the way you came. The swallows relent, and the beast croons softly at you - the walls of the throat tensing to allow for better grip. Slowly but surely, you start wriggling back up towards the dragon's jaws, the beast seeming to permit the action.")
+	autotransferlocation = "Second Stomach"
 
 /obj/belly/dragon/stomach
 	name = "Stomach"
@@ -574,25 +652,27 @@ I think I covered everything.
 	transferchance = 10
 	transferlocation = "Throat"
 	desc = "The final part of your journey arrives, in the form of a tightly squelched, muscular sphincter. Throat pressure crams against you, until abruptly, you find yourself spat into a hot, caustic cauldron of churning doom, the dragon's stomach. After slithering in, the way you entered squelches shut, dissapearing among the folds - impossible for you to find any more. You are trapped, no way out, lounging in a shallow pool of thick sticky juices. endless undulations from thick, pendulous folds of stomach-wall all around continually churn it up into a foamy, bubbling mess, soaking their folds in it to drip in ropes and even shivering sheets of the stuff around you. Clenches gush the digestive slimes all over you from time to time, cradling you in it's noxious embrace. Your ears are filled with such sloppy squelches now, those distant muffled glrrns you heard earlier now sharp, crisp, and thunderous as you nestle in their very source. Settle down for what little time you have left, for your fate rests adding to the powerful beast all around you."
-	vore_sound = "Tauric Swallow"
 	digest_mode = DM_DIGEST
-	//desc = "The dragon's cavernous stomach hungrily pries your figure in through its sphincter, sealing taught behind you. Its meal is hastily subject to the slick, squelching confines of its digestive organ, that hanging gut eagre to churn and ripple over your proportions the moment you've arrived. Caustic waves of slop and chyme wash over you, that acidic tingle setting in upon your flesh. The entire chamber groans and echoes with each of the dragon's prideful steps. Satiated with its most recent meal, slowly being reduced into a nutritious paste to further power its hunt. Your fate definitively sealed within this tomb of swelteringly hot flesh."
 	struggle_messages_inside = list(
 		"Eager to try and escape before you lack the strength to do so anymore, you pound firmly against those walls. They clench in twice as hard, the beast letting out a pleased rumble. Seems it wants you to do that again!",
 		"You try to stand inside the clinging gut, to force your arms and head upwards towards the way you came in. Searching through each and every fold for the muscled entryway leaves you discovering nothing but caches of goop, soaking over you all the more.",
 		"You press all your limbs out firmly into the walls to try and struggle. The softness of the flesh simply envelops over each of them, giving them a close kneading snuggle in hot oily goop.",
 		"Each squirm and struggle you try to make just makes the beast rumble deeply in pleasure. It wriggles itself, sloshing and shaking you about, to try goad you into struggling all the more.",
 		"Yet more frantic wriggling and squirming from you, pressing and thumping out into walls which themselves greedily devour all the effort you make into them. this deep inside, it doesn't appear to be helping.")
+	belly_fullscreen = "da_tumby"
+	vore_sound = "Stomach Move"
 
 /obj/belly/dragon/stomach/heal
-	name = "Stomach."
-	desc = "Havn't written these yet. Check back when the PR's done I guess."
-	escapechance = 100
+	name = "Second Stomach"
+	desc = "You've kept yourself surrendered and let the beast get you this far, and now you find yourself squelching into the puffy, pillowy clutches of a rather tight chamber, spat slowly inside from the last portion of the gullet. It's pretty cramped in here, though the sheer squishiness of the walls allows you to stretch yourself out into them. Nothing but doughy texture for inches, even feet, deep into the walls. The chamber secretes a thick, clear slime all over you, the walls churning and lathering every single part of you lovingly in it's embrace. Its incessant, kneading affections seems reminiscent of the digestive processes, yet you feel no tingle from the liquid. To the contrary, any injuries or cuts you have, seem to buzz and heat up on touch with the liquids, closing up and healing over at a visibly rapid pace. This hidden space inside the beast seems to be dedicated to holding and healing things within it! The air, although humid and murky, is very breathable in here, though nearby - very close to you, is the constant squelch and churn of the standard processes of the dragon's digestive system. Seems you are right next door to a place you could of gone to! The path you entered remains visible among the undulating squelch of padded walls, and you feel that it wouldn't be too hard to writhe yourself back up into it's snug embrace."
+	escapechance = 0
+	transferchance = 100
+	transferlocation = "Throat."
 	digest_mode = DM_HEAL
 	mode_flags = DM_FLAG_NUMBING
 	struggle_messages_inside = list(
-		"You lift yourself upright, and smush up against the fleshy valve denoting the way into the dragon's stomach. The dragon groans in frustration, but understands the motive and intent expressed. Courteous as they are at the moment, that valve unseals before you, as you're quickly squeezed and shuttled back up from whence you came. To soon see the light of day once more.")
-	vore_sound = "Tauric Swallow"
+		"Deciding that you've stayed long enough, you wriggle and writhe, stretching yourself out in the chamber, trying to thrust your hands and face up the way you entered. The beast stirs, and this churny pocket of flesh providing you safety clenches hard, aiding your entry back up into the lowermost depths of it's gullet. rhythmic clenches continue to invite you back down, however, should you reconsider.")
+	belly_fullscreen = "anim_belly"
 
 ///
 ///		AI handling stuff
@@ -650,14 +730,16 @@ I think I covered everything.
 	switch(a_intent)
 		if(I_DISARM)
 			if(!nospecial)
-				chargestart(A)
+				if(specialtoggle)
+					chargestart(A)
 		if(I_HURT)
 			if(!norange)
 				if(flametoggle)
 					firebreathstart(A)
 		if(I_GRAB)
 			if(!nospecial)
-				repulse()
+				if(specialtoggle)
+					repulse()
 
 ///
 ///		AI handling stuff
@@ -741,9 +823,10 @@ I think I covered everything.
 	set_light(glow_range, glow_intensity, glow_color) //Setting it here so the light starts immediately
 	if(!enraged)
 		set_AI_busy(TRUE)
+	flames = 1
+	build_icons()
 	addtimer(CALLBACK(src, .proc/firebreathend, A), charge_warmup)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
-	flick("dragon_flame", src)
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
@@ -752,6 +835,8 @@ I think I covered everything.
 	P.launch_projectile(A, BP_TORSO, src)
 	set_AI_busy(FALSE)
 	glow_toggle = 0
+	flames = 0
+	build_icons()
 
 /obj/item/projectile/bullet/dragon
 	use_submunitions = 1
@@ -809,6 +894,7 @@ I think I covered everything.
 	qdel(ai_holder)	//Dragon goes to therapy
 	faction = "neutral"
 	norange = 1		//Don't start fires while friendly
+	vore_selected = gut2 //Just incase it eats someone right after being tamed
 	ai_holder = new /datum/ai_holder/simple_mob/healbelly/retaliate/dragon(src)
 
 /datum/ai_holder/simple_mob/healbelly
@@ -900,7 +986,7 @@ I think I covered everything.
 				//Alternatively bully a coder (me) to make a unique digest_mode for mob healbellies that prevents death, or something.
 				if(istype(A, /mob/living/carbon/human))
 					var/mob/living/carbon/human/P = L
-					var/list/to_inject = list("myelamine","osteodaxon","spaceacillin","peridaxon", "iron")
+					var/list/to_inject = list("myelamine","osteodaxon","spaceacillin","peridaxon", "iron", "hyronalin")
 					//Lets not OD them...
 					for(var/RG in to_inject)
 						if(!P.reagents.has_reagent(RG))
