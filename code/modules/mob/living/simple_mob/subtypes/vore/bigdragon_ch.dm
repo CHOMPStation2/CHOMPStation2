@@ -653,6 +653,8 @@ I think I covered everything.
 	transferlocation = "Throat"
 	desc = "The final part of your journey arrives, in the form of a tightly squelched, muscular sphincter. Throat pressure crams against you, until abruptly, you find yourself spat into a hot, caustic cauldron of churning doom, the dragon's stomach. After slithering in, the way you entered squelches shut, dissapearing among the folds - impossible for you to find any more. You are trapped, no way out, lounging in a shallow pool of thick sticky juices. endless undulations from thick, pendulous folds of stomach-wall all around continually churn it up into a foamy, bubbling mess, soaking their folds in it to drip in ropes and even shivering sheets of the stuff around you. Clenches gush the digestive slimes all over you from time to time, cradling you in it's noxious embrace. Your ears are filled with such sloppy squelches now, those distant muffled glrrns you heard earlier now sharp, crisp, and thunderous as you nestle in their very source. Settle down for what little time you have left, for your fate rests adding to the powerful beast all around you."
 	digest_mode = DM_DIGEST
+	digest_brute = 0
+	digest_burn = 2
 	struggle_messages_inside = list(
 		"Eager to try and escape before you lack the strength to do so anymore, you pound firmly against those walls. They clench in twice as hard, the beast letting out a pleased rumble. Seems it wants you to do that again!",
 		"You try to stand inside the clinging gut, to force your arms and head upwards towards the way you came in. Searching through each and every fold for the muscled entryway leaves you discovering nothing but caches of goop, soaking over you all the more.",
@@ -842,6 +844,7 @@ I think I covered everything.
 	use_submunitions = 1
 	only_submunitions = 1 	//lmao this var doesn't even do anything
 	range = 0				//so instead we circumvent it with this :^)
+	embed_chance = 0
 	submunition_spread_max = 300
 	submunition_spread_min = 150
 	submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame = 5)
@@ -853,12 +856,26 @@ I think I covered everything.
 	name = "dragon flame"
 	icon_state = null
 	damage = 30
+	embed_chance = 0
 	accuracy = 100	//This is a bullet facading as a swathe of fire, how's a wall of fire gonna miss huh?
 	speed = 2
 	incendiary = 2
 	flammability = 2
 	range = 12
+	penetrating = 5
 	var/fire_stacks = 1
+
+//Making it so fire passes through mobs but not walls
+/obj/item/projectile/bullet/incendiary/dragonflame/check_penetrate(var/atom/A)
+	if(!A || !A.density) return 1
+
+	if(istype(A, /obj/mecha))
+		return 1
+
+	if(ismob(A))
+		if(!mob_passthrough_check)
+			return 0
+		return 1
 
 /obj/item/projectile/bullet/incendiary/dragonflame/on_range()
 	qdel(src)
