@@ -41,7 +41,7 @@
 								  "Frost Giant Spider" = /mob/living/simple_mob/animal/giant_spider/frost,
 								  "Nurse Giant Spider" = /mob/living/simple_mob/animal/giant_spider/nurse/eggless,
 								  "Giant Spider Queen" = /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless,
-								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon
+								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred	//CHOMPStation add.
 								  )
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)
