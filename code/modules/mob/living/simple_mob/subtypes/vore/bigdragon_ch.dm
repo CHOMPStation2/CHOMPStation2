@@ -244,6 +244,7 @@ I think I covered everything.
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc
+	faction = "neutral"
 
 /mob/living/simple_mob/vore/bigdragon/Initialize()
 	..()
