@@ -983,13 +983,13 @@
 		playsound(src, growlsound, vol = growlmultiplier, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 	// VOREStation Edit End
 	//CHOMPEdit Begin
-	if(noisy_full == TRUE && nutrition > 450)
-		var/belch_prob = 20
+	if(nutrition > 500 && noisy_full == TRUE)
+		var/belch_prob = 10 //Maximum belch prob.
 		if(nutrition < 4075)
-			belch_prob = ((nutrition-500)/3575)*20
+			belch_prob = ((nutrition-500)/3575)*20 //Scale belch prob with fullness if not already at max. If editing make sure the multiplier matches the max prob above.
 		if(prob(belch_prob))
 			var/sound/belchsound = sound(get_sfx("belches"))
-			playsound(src, belchsound, vol = 50, vary = 1, falloff = 0.1, ignore_walls = TRUE)//, preference = /datum/client_preference/belch_noises) sort this out when belching works
+			playsound(src, belchsound, vol = (30+(belch_prob*2)), vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/belch_noises)
 			custom_emote(AUDIBLE_MESSAGE, "belches.") //Don't know if this should stay, I'll leave in in for now.
 	//CHOMPEdit End
 
