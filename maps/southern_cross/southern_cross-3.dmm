@@ -1,5 +1,5 @@
 "aaa" = (/obj/structure/lattice,/obj/machinery/shield_diffuser,/turf/space,/area/space)
-"aab" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/hologram/holopad,/obj/effect/floor_decal/industrial/outline/grey,/mob/living/simple_mob/animal/passive/armadillo{desc = "It's a small armored mammal. It seems to be territorial and protective of the dorms.”"; name = "Torta"},/turf/simulated/floor/tiled/dark,/area/hallway/primary/thirddeck/aftdoorm)
+"aab" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/hologram/holopad,/obj/effect/floor_decal/industrial/outline/grey,/mob/living/simple_mob/animal/passive/armadillo/torta,/turf/simulated/floor/tiled/dark,/area/hallway/primary/thirddeck/aftdoorm)
 "aac" = (/obj/effect/landmark{name = "maint_pred"},/turf/simulated/floor/plating,/area/maintenance/thirddeck/foreport)
 "aad" = (/obj/effect/landmark{name = "maint_pred"},/turf/simulated/floor/plating,/area/maintenance/thirddeck/forestarboard)
 "aae" = (/obj/effect/landmark{name = "maint_pred"},/turf/simulated/floor/plating,/area/maintenance/thirddeck/dormsaft)

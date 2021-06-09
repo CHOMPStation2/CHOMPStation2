@@ -11,15 +11,3 @@
 	if(holder.Adjacent(A))
 		holder.IMove(get_step(holder, pick(alldirs)))
 		holder.face_atom(A)
-
-/datum/ai_holder/simple_mob/melee/pack_mob/nyria
-	hostile = FALSE
-	retaliate = TRUE
-
-/datum/ai_holder/simple_mob/armadillo
-	hostile = FALSE
-	retaliate = TRUE
-	can_flee = TRUE
-	flee_when_dying = TRUE
-	dying_threshold = 0.9
-	speak_chance = 1
