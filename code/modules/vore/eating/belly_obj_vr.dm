@@ -270,6 +270,11 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
+	//CHOMPStation edit start
+	if(!owner.client)	//Intended for simple mobs
+		if(autotransferlocation != null && autotransferchance > 0)
+			addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
+	//CHOMPStation edit end
 
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
