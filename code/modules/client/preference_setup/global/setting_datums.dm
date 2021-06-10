@@ -98,14 +98,14 @@ var/list/_client_preferences_by_type
 	key = "DIGEST_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
-
+//CHOMPEdit; belching
 /datum/client_preference/belch_noises
 	description = "Burping"
 	key = "BELCH_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
 	enabled_by_default = FALSE
-
+//CHOMPEdit end
 /datum/client_preference/emote_noises
 	description = "Emote Noises" //MERP
 	key = "EMOTE_NOISES"
