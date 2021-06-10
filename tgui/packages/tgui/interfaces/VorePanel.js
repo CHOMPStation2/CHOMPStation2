@@ -163,7 +163,8 @@ const digestModeToPreyMode = {
  *
  * return tabIndex===4 ? null : (
  *
- * New preference added, noisy_full, that enables belching when nutrition exceeds 500, very similar to the noisy preference.
+ * New preference added, noisy_full
+ * noisy_full enables belching when nutrition exceeds 500, very similar to the noisy preference.
  *
  * That's everything so far.
  *
