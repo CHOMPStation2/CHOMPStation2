@@ -13,7 +13,7 @@
 
 /datum/artifact_effect/dnaswitch/DoEffectTouch(var/mob/toucher)
 	var/weakness = GetAnomalySusceptibility(toucher)
-	if(ishuman(toucher) && prob(weakness * 100))
+	if(ishuman(toucher) && is_preference_enabled(/datum/client_preference/allow_spontaneous_tf) && prob(weakness * 100))
 		to_chat(toucher,pick("<font color='green'>You feel a little different.</font>",
 		"<font color='green'>You feel very strange.</font>",
 		"<font color='green'>Your stomach churns.</font>",
@@ -32,7 +32,7 @@
 		var/turf/T = get_turf(holder)
 		for(var/mob/living/carbon/human/H in range(src.effectrange,T))
 			var/weakness = GetAnomalySusceptibility(H)
-			if(prob(weakness * 100))
+			if(is_preference_enabled(/datum/client_preference/allow_spontaneous_tf) && prob(weakness * 100))
 				if(prob(30))
 					to_chat(H, pick("<font color='green'>You feel a little different.</font>",
 					"<font color='green'>You feel very strange.</font>",
@@ -51,7 +51,7 @@
 		var/turf/T = get_turf(holder)
 		for(var/mob/living/carbon/human/H in range(200, T))
 			var/weakness = GetAnomalySusceptibility(H)
-			if(prob(weakness * 100))
+			if(is_preference_enabled(/datum/client_preference/allow_spontaneous_tf) && prob(weakness * 100))
 				if(prob(75))
 					to_chat(H, pick("<font color='green'> You feel a little different.</font>",
 					"<font color='green'> You feel very strange.</font>",
