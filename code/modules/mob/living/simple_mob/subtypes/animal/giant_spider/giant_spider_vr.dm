@@ -52,33 +52,17 @@
 	old_x = -16
 	old_y = 0
 
-<<<<<<< HEAD
 /mob/living/simple_mob/animal/giant_spider/webslinger/event // YW CHANGE
 	ai_holder_type = /datum/ai_holder/simple_mob/event
 
 /mob/living/simple_mob/animal/giant_spider/nurse/queen/event // YW CHANGE
 	ai_holder_type = /datum/ai_holder/simple_mob/event
 
-/mob/living/simple_mob/animal/giant_spider/nurse/eggless/lay_eggs(turf/T)
-	return FALSE
-||||||| parent of 0873291e8a... Merge pull request #10619 from Heroman3003/unegg
-/mob/living/simple_mob/animal/giant_spider/nurse/eggless/lay_eggs(turf/T)
-	return FALSE
-=======
 /mob/living/simple_mob/animal/giant_spider/nurse
 	var/can_lay_eggs = TRUE
->>>>>>> 0873291e8a... Merge pull request #10619 from Heroman3003/unegg
 
-<<<<<<< HEAD
-/mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless/lay_eggs(turf/T)
-	return FALSE
-||||||| parent of 0873291e8a... Merge pull request #10619 from Heroman3003/unegg
-/mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless/lay_eggs(turf/T)
-	return FALSE
-=======
 /mob/living/simple_mob/animal/giant_spider/nurse/eggless
 	can_lay_eggs = FALSE
 
 /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless
 	can_lay_eggs = FALSE
->>>>>>> 0873291e8a... Merge pull request #10619 from Heroman3003/unegg
