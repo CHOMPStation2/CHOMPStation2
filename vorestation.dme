@@ -857,6 +857,7 @@
 #include "code\game\machinery\floor_light.dm"
 #include "code\game\machinery\floorlayer.dm"
 #include "code\game\machinery\frame.dm"
+#include "code\game\machinery\gear_dispenser.dm"
 #include "code\game\machinery\hologram.dm"
 #include "code\game\machinery\holoposter.dm"
 #include "code\game\machinery\holosign.dm"
