@@ -195,13 +195,34 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 		update_icon()
 
 // Decide where to get the power to fire from
+<<<<<<< HEAD
 /obj/machinery/pointdefense/use_power_oneoff(var/amount, var/chan = -1)
+||||||| parent of 51499d5b66... Merge pull request #10630 from VOREStation/vplk-pointdefense-use-power
+/obj/machinery/power/pointdefense/use_power_oneoff(var/amount, var/chan = -1)
+=======
+/obj/machinery/power/pointdefense/use_power_oneoff(var/amount, var/chan = CURRENT_CHANNEL)
+>>>>>>> 51499d5b66... Merge pull request #10630 from VOREStation/vplk-pointdefense-use-power
 	if(powernet)
 		return draw_power(amount)
+<<<<<<< HEAD
 	else if(powered(chan))
 		use_power(amount, chan)
 		return amount
 	return 0	*/
+||||||| parent of 51499d5b66... Merge pull request #10630 from VOREStation/vplk-pointdefense-use-power
+	else if(powered(chan))
+		use_power(amount, chan)
+		return amount
+	return 0
+=======
+	// We are not connected to a powernet, so we want APC power.  Reproduce that code here since this is weird.
+	if(chan == CURRENT_CHANNEL)
+		chan = power_channel
+	var/area/A = get_area(src)	// make sure it's in an area
+	if(!A || !A.powered(chan))	// and that the area is powered
+		return 0				// if not, then not powered
+	return A.use_power_oneoff(amount, chan)
+>>>>>>> 51499d5b66... Merge pull request #10630 from VOREStation/vplk-pointdefense-use-power
 
 // Find controller with the same tag on connected z levels (if any)
 /obj/machinery/pointdefense/proc/get_controller()
