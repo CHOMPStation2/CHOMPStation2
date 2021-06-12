@@ -84,10 +84,10 @@ LOG_RUNTIME
 LOG_ADMINWARN
 
 ## Enable/disable SQL connection (comment out to disable)
-SQL_ENABLED
+#SQL_ENABLED
 
 ## disconnect players who did nothing during the set amount of minutes
-KICK_INACTIVE 30
+#KICK_INACTIVE 30
 
 ##Show developers on staffwho
 SHOW_DEVS
@@ -174,7 +174,7 @@ VOTE_DELAY 6000
 VOTE_PERIOD 600
 
 ## autovote initial delay (deciseconds) before first automatic transfer vote call (default 180 minutes)
-VOTE_AUTOTRANSFER_INITIAL 216000
+VOTE_AUTOTRANSFER_INITIAL 108000
 
 ##autovote delay (deciseconds) before sequential automatic transfer votes are called (default 60 minutes)
 VOTE_AUTOTRANSFER_INTERVAL 36000 
@@ -278,7 +278,7 @@ TICKLAG 0.5
 TICKCOMP 1
 
 ## Whether the server will talk to other processes through socket_talk
-SOCKET_TALK 0
+SOCKET_TALK 1
 
 ## Uncomment this to ban use of ToR
 #TOR_BAN
@@ -303,7 +303,7 @@ USEALIENWHITELIST
 #ALIEN_PLAYER_RATIO 0.2
 
 ##Remove the # to let ghosts spin chairs
-#GHOST_INTERACTION
+GHOST_INTERACTION
 
 ## Password used for authorizing ircbot and other external tools.
 # COMMS_PASSWORD some_password_here
@@ -343,7 +343,7 @@ CHARACTER_SLOTS 35
 #LOADOUT_SLOTS 3
 
 ## Uncomment to use overmap system for zlevel travel
-#USE_OVERMAP
+USE_OVERMAP
 
 ## Expected round length in minutes
 EXPECTED_ROUND_LENGTH 360
@@ -484,15 +484,15 @@ RADIATION_DECAY_RATE 1
 RADIATION_LOWER_LIMIT 0.35
 
 ## Multiplier for radiation resistances when tracing a ray from source to destination to compute radiation on a turf
-RADIATION_RESISTANCE_MULTIPLIER 8.5
+RADIATION_RESISTANCE_MULTIPLIER 2.1
 
 ## Divisor for material weights when computing radiation resistance of a material object (walls)
-RADIATION_MATERIAL_RESISTANCE_DIVISOR 1
+RADIATION_MATERIAL_RESISTANCE_DIVISOR 16
 
 ## Mode of computing radiation resistance into effective radiation on a turf
 ## One and only one of the following options must be uncommented
-# RADIATION_RESISTANCE_CALC_DIVIDE
-RADIATION_RESISTANCE_CALC_SUBTRACT
+RADIATION_RESISTANCE_CALC_DIVIDE
+#RADIATION_RESISTANCE_CALC_SUBTRACT
 
 ## IP Reputation Checking
 # Enable/disable IP reputation checking (present/nonpresent)
@@ -562,7 +562,7 @@ SQLITE_FEEDBACK_MIN_AGE 7
 IPQUALITYSCORE_APIKEY some_password_here
 
 ## Comment this out if you don't want to use the 'nightshift lighting' subsystem to adjust lights based on ingame time
-ENABLE_NIGHT_SHIFTS
+#ENABLE_NIGHT_SHIFTS
 
 ## Comment this out to enable playtime restrictions for jobs in their respective departments (mostly for heads)
 #USE_PLAYTIME_RESTRICTION_FOR_JOBS
