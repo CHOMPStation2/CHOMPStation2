@@ -939,7 +939,6 @@
 	for(var/I in examine_messages)
 		dupe.examine_messages += I
 
-<<<<<<< HEAD
 
 	// CHOMP reagent belly
 	//generated_reagents - strings
@@ -978,14 +977,11 @@
 		dupe.fullness5_messages += I
 
 
-||||||| parent of 537deaf72f... Merge pull request #10603 from Heroman3003/absorbexamine
-=======
 	//examine_messages - strings
 	dupe.examine_messages_absorbed.Cut()
 	for(var/I in examine_messages_absorbed)
 		dupe.examine_messages_absorbed += I
 
->>>>>>> 537deaf72f... Merge pull request #10603 from Heroman3003/absorbexamine
 	//emote_lists - index: digest mode, key: list of strings
 	dupe.emote_lists.Cut()
 	for(var/K in emote_lists)
