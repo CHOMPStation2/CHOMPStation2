@@ -29561,10 +29561,8 @@ Ua
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/aro3/repair_bay)
 "DM" = (
-/obj/structure/closet/walllocker_double/north,
-/obj/item/weapon/tank/oxygen,
-/obj/item/device/suit_cooling_unit,
-/turf/simulated/floor/tiled/eris/dark/danger,
+/obj/machinery/gear_dispenser/suit/autolok,
+/turf/simulated/floor/tiled/eris/steel/panels,
 /area/aro3/eva_hall)
 "DQ" = (
 /obj/structure/bed/chair/sofa/black/left{
@@ -29916,11 +29914,9 @@ Ua
 /turf/simulated/floor/tiled/techmaint,
 /area/aro3/medical)
 "Hc" = (
-/obj/structure/closet/autolok_wall{
-	pixel_y = 32
-	},
+/obj/machinery/gear_dispenser/suit/autolok,
 /turf/simulated/floor/tiled/eris/dark/danger,
-/area/aro3/eva_hall)
+/area/aro3/flight_deck)
 "Hd" = (
 /turf/simulated/wall/rpshull,
 /area/aro3/hallway_starboard)
@@ -41255,7 +41251,7 @@ NC
 Ty
 To
 Ur
-Ov
+Hc
 Ov
 HE
 HE
@@ -41352,7 +41348,7 @@ Xv
 Xj
 Xj
 lu
-Hc
+XF
 XF
 kc
 Nu
@@ -42346,7 +42342,7 @@ KB
 Xj
 Xj
 lu
-Hc
+XF
 XF
 kc
 Nu
