@@ -34,7 +34,8 @@ var/list/all_maps = list()
 	var/static/list/sealed_levels = list()  // Z-levels that don't allow random transit at edge
 	var/static/list/xenoarch_exempt_levels = list()	//Z-levels exempt from xenoarch finds and digsites spawning.
 	var/static/list/persist_levels = list() // Z-levels where SSpersistence should persist between rounds. Defaults to station_levels if unset.
-	var/static/list/empty_levels = null     // Empty Z-levels that may be used for various things (currently used by bluespace jump)
+	var/static/list/secret_levels = list() // Z-levels that (non-admin) ghosts can't get to
+	var/static/list/empty_levels = list()   // Empty Z-levels that may be used for various things
 	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
 	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
 	// End Static Lists
@@ -204,10 +205,13 @@ var/list/all_maps = list()
 	return text2num(pickweight(candidates))
 
 /datum/map/proc/get_empty_zlevel()
-	if(empty_levels == null)
+	if(!empty_levels.len)
 		world.increment_max_z()
-		empty_levels = list(world.maxz)
-	return pick(empty_levels)
+		empty_levels += world.maxz
+	return pick_n_take(empty_levels)
+
+/datum/map/proc/cache_empty_zlevel(var/z)
+	empty_levels |= z
 
 // Get a list of 'nearby' or 'connected' zlevels.
 // You should at least return a list with the given z if nothing else.

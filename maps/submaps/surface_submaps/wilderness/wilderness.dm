@@ -49,6 +49,7 @@
 #include "lonewolf.dmm"
 #include "emptycabin.dmm"
 #include "dogbase.dmm"
+#include "drgnplateu.dmm"
 #endif
 
 // The 'wilderness' is the endgame for Explorers. Extremely dangerous and far away from help, but with vast shinies.
@@ -390,3 +391,9 @@
 	desc = "Syndicate watch tower, deadly but secluded"
 	mappath = 'maps/submaps/surface_submaps/wilderness/syndisniper.dmm'
 	cost = 5
+
+/datum/map_template/surface/wilderness/deep/drgnplateu
+	name = "Dragon Plateu"
+	desc = "A dangerous plateu of cliffs home to a rampant gold hoarding dragon"
+	mappath = 'maps/submaps/surface_submaps/wilderness/drgnplateu.dmm'
+	cost = 15

@@ -28,9 +28,9 @@
 	return attack_hand(user)
 
 /obj/machinery/button/remote/emag_act(var/remaining_charges, var/mob/user)
-	if(LAZYLEN(req_access) || LAZYLEN(req_one_access.len))
-		req_access = req_access ? list() : null
-		req_one_access = req_one_access ? list() : null // if it's not set keep it not set
+	if(LAZYLEN(req_access) || LAZYLEN(req_one_access))
+		LAZYCLEARLIST(req_access)
+		LAZYCLEARLIST(req_one_access)
 		playsound(src, "sparks", 100, 1)
 		return 1
 

@@ -100,13 +100,13 @@
 	data["unsaved_changes"] = unsaved_changes
 	data["show_pictures"] = show_pictures
 
-	data["inside"] = list()
 	var/atom/hostloc = host.loc
+	var/list/inside = list()
 	if(isbelly(hostloc))
 		var/obj/belly/inside_belly = hostloc
 		var/mob/living/pred = inside_belly.owner
 
-		data["inside"] = list(
+		inside = list(
 			"absorbed" = host.absorbed,
 			"belly_name" = inside_belly.name,
 			"belly_mode" = inside_belly.digest_mode,
@@ -115,7 +115,7 @@
 			"ref" = "\ref[inside_belly]",
 		)
 
-		data["inside"]["contents"] = list()
+		var/list/inside_contents = list()
 		for(var/atom/movable/O in inside_belly)
 			if(O == host)
 				continue
@@ -134,22 +134,26 @@
 				info["stat"] = M.stat
 				if(M.absorbed)
 					info["absorbed"] = TRUE
-			data["inside"]["contents"].Add(list(info))
+			inside_contents.Add(list(info))
+		inside["contents"] = inside_contents
+	data["inside"] = inside
 
-	data["our_bellies"] = list()
+	var/list/our_bellies = list()
 	for(var/belly in host.vore_organs)
 		var/obj/belly/B = belly
-		data["our_bellies"].Add(list(list(
+		our_bellies.Add(list(list(
 			"selected" = (B == host.vore_selected),
 			"name" = B.name,
 			"ref" = "\ref[B]",
 			"digest_mode" = B.digest_mode,
 			"contents" = LAZYLEN(B.contents),
 		)))
-	data["selected"] = null
+	data["our_bellies"] = our_bellies
+
+	var/list/selected_list = null
 	if(host.vore_selected)
 		var/obj/belly/selected = host.vore_selected
-		data["selected"] = list(
+		selected_list = list(
 			"belly_name" = selected.name,
 			"is_wet" = selected.is_wet,
 			"wet_loop" = selected.wet_loop,
@@ -168,6 +172,7 @@
 			"digest_burn" = selected.digest_burn,
 			"digest_oxy" = selected.digest_oxy,
 			"bulge_size" = selected.bulge_size,
+			"display_absorbed_examine" = selected.display_absorbed_examine,
 			"shrink_grow_size" = selected.shrink_grow_size,
 			"emote_time" = selected.emote_time,
 			"emote_active" = selected.emote_active,
@@ -178,32 +183,33 @@
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
 
-		data["selected"]["addons"] = list()
+		var/list/addons = list()
 		for(var/flag_name in selected.mode_flag_list)
 			if(selected.mode_flags & selected.mode_flag_list[flag_name])
-				data["selected"]["addons"].Add(flag_name)
+				addons.Add(flag_name)
+		selected_list["addons"] = addons
 
-		data["selected"]["egg_type"] = selected.egg_type
-		data["selected"]["contaminates"] = selected.contaminates
-		data["selected"]["contaminate_flavor"] = null
-		data["selected"]["contaminate_color"] = null
+		selected_list["egg_type"] = selected.egg_type
+		selected_list["contaminates"] = selected.contaminates
+		selected_list["contaminate_flavor"] = null
+		selected_list["contaminate_color"] = null
 		if(selected.contaminates)
-			data["selected"]["contaminate_flavor"] = selected.contamination_flavor
-			data["selected"]["contaminate_color"] = selected.contamination_color
+			selected_list["contaminate_flavor"] = selected.contamination_flavor
+			selected_list["contaminate_color"] = selected.contamination_color
 
-		data["selected"]["escapable"] = selected.escapable
-		data["selected"]["interacts"] = list()
+		selected_list["escapable"] = selected.escapable
+		selected_list["interacts"] = list()
 		if(selected.escapable)
-			data["selected"]["interacts"]["escapechance"] = selected.escapechance
-			data["selected"]["interacts"]["escapetime"] = selected.escapetime
-			data["selected"]["interacts"]["transferchance"] = selected.transferchance
-			data["selected"]["interacts"]["transferlocation"] = selected.transferlocation
-			data["selected"]["interacts"]["absorbchance"] = selected.absorbchance
-			data["selected"]["interacts"]["digestchance"] = selected.digestchance
+			selected_list["interacts"]["escapechance"] = selected.escapechance
+			selected_list["interacts"]["escapetime"] = selected.escapetime
+			selected_list["interacts"]["transferchance"] = selected.transferchance
+			selected_list["interacts"]["transferlocation"] = selected.transferlocation
+			selected_list["interacts"]["absorbchance"] = selected.absorbchance
+			selected_list["interacts"]["digestchance"] = selected.digestchance
 
-		data["selected"]["disable_hud"] = selected.disable_hud
+		selected_list["disable_hud"] = selected.disable_hud
 
-		data["selected"]["contents"] = list()
+		var/list/selected_contents = list()
 		for(var/O in selected)
 			var/list/info = list(
 				"name" = "[O]",
@@ -219,39 +225,40 @@
 				info["stat"] = M.stat
 				if(M.absorbed)
 					info["absorbed"] = TRUE
-			data["selected"]["contents"].Add(list(info))
+			selected_contents.Add(list(info))
+		selected_list["contents"] = selected_contents
 
-		data["selected"]["show_liq"] = selected.show_liquids //CHOMPedit start: liquid belly options
-		data["selected"]["liq_interacts"] = list()
+		selected_list["show_liq"] = selected.show_liquids //CHOMPedit start: liquid belly options
+		selected_list["liq_interacts"] = list()
 		if(selected.show_liquids)
-			data["selected"]["liq_interacts"]["liq_reagent_gen"] = selected.reagentbellymode
-			data["selected"]["liq_interacts"]["liq_reagent_type"] = selected.reagent_chosen
-			data["selected"]["liq_interacts"]["liq_reagent_name"] = selected.reagent_name
-			data["selected"]["liq_interacts"]["liq_reagent_transfer_verb"] = selected.reagent_transfer_verb
-			data["selected"]["liq_interacts"]["liq_reagent_nutri_rate"] = selected.gen_time
-			data["selected"]["liq_interacts"]["liq_reagent_capacity"] = selected.custom_max_volume
-			data["selected"]["liq_interacts"]["liq_sloshing"] = selected.vorefootsteps_sounds
-			data["selected"]["liq_interacts"]["liq_reagent_addons"] = list()
+			selected_list["liq_interacts"]["liq_reagent_gen"] = selected.reagentbellymode
+			selected_list["liq_interacts"]["liq_reagent_type"] = selected.reagent_chosen
+			selected_list["liq_interacts"]["liq_reagent_name"] = selected.reagent_name
+			selected_list["liq_interacts"]["liq_reagent_transfer_verb"] = selected.reagent_transfer_verb
+			selected_list["liq_interacts"]["liq_reagent_nutri_rate"] = selected.gen_time
+			selected_list["liq_interacts"]["liq_reagent_capacity"] = selected.custom_max_volume
+			selected_list["liq_interacts"]["liq_sloshing"] = selected.vorefootsteps_sounds
+			selected_list["liq_interacts"]["liq_reagent_addons"] = list()
 			for(var/flag_name in selected.reagent_mode_flag_list)
 				if(selected.reagent_mode_flags & selected.reagent_mode_flag_list[flag_name])
-					data["selected"]["liq_interacts"]["liq_reagent_addons"].Add(flag_name)
+					selected_list["liq_interacts"]["liq_reagent_addons"].Add(flag_name)
 
-		data["selected"]["show_liq_fullness"] = selected.show_fullness_messages
-		data["selected"]["liq_messages"] = list()
+		selected_list["show_liq_fullness"] = selected.show_fullness_messages
+		selected_list["liq_messages"] = list()
 		if(selected.show_fullness_messages)
-			data["selected"]["liq_messages"]["liq_msg_toggle1"] = selected.liquid_fullness1_messages
-			data["selected"]["liq_messages"]["liq_msg_toggle2"] = selected.liquid_fullness2_messages
-			data["selected"]["liq_messages"]["liq_msg_toggle3"] = selected.liquid_fullness3_messages
-			data["selected"]["liq_messages"]["liq_msg_toggle4"] = selected.liquid_fullness4_messages
-			data["selected"]["liq_messages"]["liq_msg_toggle5"] = selected.liquid_fullness5_messages
+			selected_list["liq_messages"]["liq_msg_toggle1"] = selected.liquid_fullness1_messages
+			selected_list["liq_messages"]["liq_msg_toggle2"] = selected.liquid_fullness2_messages
+			selected_list["liq_messages"]["liq_msg_toggle3"] = selected.liquid_fullness3_messages
+			selected_list["liq_messages"]["liq_msg_toggle4"] = selected.liquid_fullness4_messages
+			selected_list["liq_messages"]["liq_msg_toggle5"] = selected.liquid_fullness5_messages
 
-			data["selected"]["liq_messages"]["liq_msg1"] = selected.liquid_fullness1_messages
-			data["selected"]["liq_messages"]["liq_msg2"] = selected.liquid_fullness2_messages
-			data["selected"]["liq_messages"]["liq_msg3"] = selected.liquid_fullness3_messages
-			data["selected"]["liq_messages"]["liq_msg4"] = selected.liquid_fullness4_messages
-			data["selected"]["liq_messages"]["liq_msg5"] = selected.liquid_fullness5_messages //CHOMPedit end
+			selected_list["liq_messages"]["liq_msg1"] = selected.liquid_fullness1_messages
+			selected_list["liq_messages"]["liq_msg2"] = selected.liquid_fullness2_messages
+			selected_list["liq_messages"]["liq_msg3"] = selected.liquid_fullness3_messages
+			selected_list["liq_messages"]["liq_msg4"] = selected.liquid_fullness4_messages
+			selected_list["liq_messages"]["liq_msg5"] = selected.liquid_fullness5_messages //CHOMPedit end
 
-
+	data["selected"] = selected_list
 	data["prefs"] = list(
 		"digestable" = host.digestable,
 		"devourable" = host.devourable,
@@ -265,6 +272,7 @@
 		"can_be_drop_prey" = host.can_be_drop_prey,
 		"can_be_drop_pred" = host.can_be_drop_pred,
 		"latejoin_vore" = host.latejoin_vore, //CHOMPedit
+		"allow_spontaneous_tf" = host.allow_spontaneous_tf,
 		"step_mechanics_active" = host.step_mechanics_pref,
 		"pickup_mechanics_active" = host.pickup_pref,
 		"noisy" = host.noisy,
@@ -403,6 +411,12 @@
 			host.latejoin_vore = !host.latejoin_vore
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.latejoin_vore = host.latejoin_vore
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_allow_spontaneous_tf")
+			host.allow_spontaneous_tf = !host.allow_spontaneous_tf
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.allow_spontaneous_tf = host.allow_spontaneous_tf
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_digest")
@@ -755,7 +769,7 @@
 				. = TRUE
 		if("b_msgs")
 			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message (500 for idle messages), max 10 messages per topic.","Really, don't.")
-			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly. '%countprey' will be replaced with the number of living prey in your belly."
+			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. '%count' will be replaced with the number of anything in your belly (will not work for absorbed examine). '%countprey' will be replaced with the number of living prey in your belly (or absorbed prey for absorbed examine)."
 			switch(params["msgtype"])
 				if("dmp")
 					var/new_message = input(user,"These are sent to prey when they expire. Write them in 2nd person ('you feel X'). Avoid using %prey in this type."+help,"Digest Message (to prey)",host.vore_selected.get_messages("dmp")) as message
@@ -781,6 +795,11 @@
 					var/new_message = input(user,"These are sent to people who examine you when this belly has contents. Write them in 3rd person ('Their %belly is bulging')."+help,"Examine Message (when full)",host.vore_selected.get_messages("em")) as message
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"em")
+
+				if("ema")
+					var/new_message = input(user,"These are sent to people who examine you when this belly has absorbed victims. Write them in 3rd person ('Their %belly is larger')."+help,"Examine Message (with absorbed victims)",host.vore_selected.get_messages("ema")) as message
+					if(new_message)
+						host.vore_selected.set_messages(new_message,"ema")
 
 				if("im_digest")
 					var/new_message = input(user,"These are sent to prey every minute when you are on Digest mode. Write them in 2nd person ('%pred's %belly squishes down on you.')."+help,"Idle Message (Digest)",host.vore_selected.get_messages("im_digest")) as message
@@ -815,6 +834,7 @@
 						host.vore_selected.struggle_messages_outside = initial(host.vore_selected.struggle_messages_outside)
 						host.vore_selected.struggle_messages_inside = initial(host.vore_selected.struggle_messages_inside)
 						host.vore_selected.examine_messages = initial(host.vore_selected.examine_messages)
+						host.vore_selected.examine_messages_absorbed = initial(host.vore_selected.examine_messages_absorbed)
 						host.vore_selected.emote_lists = initial(host.vore_selected.emote_lists)
 			. = TRUE
 		if("b_verb")
@@ -890,6 +910,9 @@
 				to_chat(user,"<span class='notice'>Invalid size.</span>")
 			else if(new_bulge)
 				host.vore_selected.bulge_size = (new_bulge/100)
+			. = TRUE
+		if("b_display_absorbed_examine")
+			host.vore_selected.display_absorbed_examine = !host.vore_selected.display_absorbed_examine
 			. = TRUE
 		if("b_grow_shrink")
 			var/new_grow = input(user, "Choose the size that prey will be grown/shrunk to, ranging from 25% to 200%", "Set Growth Shrink Size.", host.vore_selected.shrink_grow_size) as num|null

@@ -84,7 +84,7 @@
 // YW Addition end
 
 /datum/trait/neutral/bloodsucker
-	name = "Minor Bloodsucker" //YW edit
+	name = "Minor Bloodsucker (Obligate)" //YW edit
 	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
@@ -92,6 +92,17 @@
 	excludes = list(/datum/trait/positive/bloodsucker_plus) //YW edit
 
 /datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
+
+/datum/trait/neutral/bloodsucker_freeform
+	name = "Bloodsucker"
+	desc = "You get fangs that can be used to drain blood from prey."
+	cost = 0
+	custom_only = FALSE
+	excludes = list(/datum/trait/neutral/bloodsucker, /datum/trait/positive/bloodsucker_plus) //YW edit
+
+/datum/trait/neutral/bloodsucker_freeform/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
 
