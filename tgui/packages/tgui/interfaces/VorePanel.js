@@ -289,6 +289,7 @@ const VoreSelectedBelly = (props, context) => {
     digest_burn,
     digest_oxy,
     bulge_size,
+    display_absorbed_examine,
     shrink_grow_size,
     emote_time,
     emote_active,
@@ -424,6 +425,9 @@ const VoreSelectedBelly = (props, context) => {
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "em" })}
               content="Examine Message (when full)" />
             <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "ema" })}
+              content="Examine Message (with absorbed victims)" />
+            <Button
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_digest" })}
               content="Idle Messages (Digest)" />
             <Button
@@ -549,6 +553,13 @@ const VoreSelectedBelly = (props, context) => {
                 <Button
                   onClick={() => act("set_attribute", { attribute: "b_bulge_size" })}
                   content={bulge_size * 100 + "%"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Display Absorbed Examines">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_display_absorbed_examine" })}
+                  icon={display_absorbed_examine ? "toggle-on" : "toggle-off"}
+                  selected={display_absorbed_examine}
+                  content={display_absorbed_examine ? "True" : "False"} />
               </LabeledList.Item>
               <LabeledList.Item label="Shrink/Grow Size">
                 <Button
