@@ -205,13 +205,19 @@ SUBSYSTEM_DEF(supply)
 			else if(islist(SP.access) && SP.one_access)
 				var/list/L = SP.access // access var is a plain var, we need a list
 				A.req_one_access = L.Copy()
+<<<<<<< HEAD
 				if(A.req_access) //Chompstation Edit (TODO: Figure out why the fuck this works for others but not us)
 					A.req_access.Cut()	//Chompstation Edit
 				A.req_access = null
+||||||| parent of 8973063282... Merge pull request #10640 from VOREStation/upstream-merge-8122
+				A.req_access = null
+=======
+				LAZYCLEARLIST(A.req_access)
+>>>>>>> 8973063282... Merge pull request #10640 from VOREStation/upstream-merge-8122
 			else if(islist(SP.access) && !SP.one_access)
 				var/list/L = SP.access
 				A.req_access = L.Copy()
-				A.req_one_access = null
+				LAZYCLEARLIST(A.req_one_access)
 			else
 				log_debug("<span class='danger'>Supply pack with invalid access restriction [SP.access] encountered!</span>")
 
