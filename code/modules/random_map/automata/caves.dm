@@ -45,7 +45,6 @@
 /datum/random_map/automata/cave_system/apply_to_turf(var/x,var/y)
 	var/current_cell = get_map_cell(x,y)
 	if(!current_cell)
-		to_world("Not current cell returned.")
 		return 0
 	var/turf/simulated/mineral/T = locate((origin_x-1)+x,(origin_y-1)+y,origin_z)
 	//VOREStation Edit Start
