@@ -45,6 +45,7 @@
 /datum/random_map/automata/cave_system/apply_to_turf(var/x,var/y)
 	var/current_cell = get_map_cell(x,y)
 	if(!current_cell)
+		to_world("Not current cell returned.")
 		return 0
 	var/turf/simulated/mineral/T = locate((origin_x-1)+x,(origin_y-1)+y,origin_z)
 	//VOREStation Edit Start
@@ -52,6 +53,8 @@
 		if(!T.ignore_cavegen)
 			if(map[current_cell] == FLOOR_CHAR)
 				T.make_floor()
+				if(prob(1)) // 1 in 100 chance //CHOMP Add
+					new /obj/structure/mob_spawner/scanner/mining_animals(T) //CHOMP Add
 			else
 				T.make_wall()
 
