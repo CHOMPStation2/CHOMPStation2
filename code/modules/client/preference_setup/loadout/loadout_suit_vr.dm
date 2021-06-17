@@ -72,4 +72,17 @@
 
 /datum/gear/suit/oversize/New()
 	..()
+<<<<<<< HEAD
 	gear_tweaks += gear_tweak_free_color_choice
+||||||| parent of 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
+	gear_tweaks += gear_tweak_free_color_choice
+=======
+	gear_tweaks += gear_tweak_free_color_choice
+
+/*
+Talon winter coat
+*/
+/datum/gear/suit/wintercoat/talon
+	display_name = "winter coat, ITV"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/talon
+>>>>>>> 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch

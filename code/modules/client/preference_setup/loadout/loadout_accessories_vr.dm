@@ -102,7 +102,13 @@
 	display_name = "pilot qualification pin"
 	description = "An iron pin denoting the qualification to fly USG spacecraft."
 	path = /obj/item/clothing/accessory/solgov/specialty/pilot
+<<<<<<< HEAD
 	allowed_roles = list("Pathfinder", "Pilot", "Field Medic","Security Pilot") //YW ADDITIONS
+||||||| parent of 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
+	allowed_roles = list("Pathfinder","Pilot","Field Medic","Talon Pilot")	
+=======
+	allowed_roles = list("Pathfinder","Pilot","Field Medic","Talon Pilot")
+>>>>>>> 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
 
 /datum/gear/accessory/flops
 	display_name = "drop straps"
@@ -112,3 +118,11 @@
 /datum/gear/accessory/flops/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
+
+/*
+Talon pin
+*/
+/datum/gear/accessory/talonpin
+	display_name = "ITV pin"
+	description = "A small enamel pin of the ITV logo."
+	path = /obj/item/clothing/accessory/talon

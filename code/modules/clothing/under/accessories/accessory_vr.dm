@@ -385,4 +385,19 @@
 	icon_state = "silverthree"
 	item_state = "silverthree"
 	overlay_state = "silverthree"
+<<<<<<< HEAD
 	desc = "A silver medal awarded to a group which has demonstrated exceptional teamwork to achieve a notable feat. This one has two bronze service stars, denoting that it has been awarded three times."
+||||||| parent of 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
+	desc = "A silver medal awarded to a group which has demonstrated exceptional teamwork to achieve a notable feat. This one has three bronze service stars, denoting that it has been awarded four times."
+=======
+	desc = "A silver medal awarded to a group which has demonstrated exceptional teamwork to achieve a notable feat. This one has three bronze service stars, denoting that it has been awarded four times."
+
+/obj/item/clothing/accessory/talon
+	name = "ITV pin"
+	desc = "A collectable enamel pin that resembles ITV's company logo."
+	icon = 'icons/obj/clothing/ties_vr.dmi'
+	icon_override = 'icons/mob/ties_vr.dmi'
+	icon_state = "talon_pin"
+	item_state = "talonpin"
+	overlay_state = "talonpin"
+>>>>>>> 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
