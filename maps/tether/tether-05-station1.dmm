@@ -1946,6 +1946,7 @@
 "afk" = (
 /obj/machinery/power/apc{
 	name = "south bump";
+	nightshift_setting = 2;
 	pixel_y = -32
 	},
 /obj/structure/cable/green,
@@ -3445,6 +3446,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
+	nightshift_setting = 2;
 	pixel_x = 28
 	},
 /obj/structure/cable/green,
@@ -4188,6 +4190,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
+	nightshift_setting = 2;
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
@@ -4377,6 +4380,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
+	nightshift_setting = 2;
 	pixel_x = -28
 	},
 /obj/structure/cable/green{
@@ -6652,6 +6656,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
+	nightshift_setting = 2;
 	pixel_y = -32
 	},
 /obj/structure/cable/green,
@@ -8166,6 +8171,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
+	nightshift_setting = 2;
 	pixel_x = -28
 	},
 /obj/structure/cable/green{
@@ -10008,6 +10014,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
+	nightshift_setting = 2;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -14363,6 +14370,7 @@
 /obj/structure/cable/green,
 /obj/machinery/power/apc{
 	name = "south bump";
+	nightshift_setting = 2;
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloor,
@@ -14670,6 +14678,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
+	nightshift_setting = 2;
 	pixel_x = -28
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -14736,8 +14745,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/computer)
@@ -14937,6 +14945,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
+	nightshift_setting = 2;
 	pixel_x = -28
 	},
 /obj/structure/cable/green{
@@ -15193,8 +15202,7 @@
 /area/tcommsat/chamber)
 "bYk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -16499,6 +16507,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
+	nightshift_setting = 2;
 	pixel_x = -28
 	},
 /obj/structure/cable/green{
@@ -19049,8 +19058,7 @@
 	dir = 5
 	},
 /obj/machinery/shower{
-	dir = 1;
-	icon_state = "shower"
+	dir = 1
 	},
 /obj/structure/curtain/open/shower,
 /obj/item/weapon/soap/nanotrasen,
@@ -19741,8 +19749,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tcommsat/entrance{
@@ -19812,6 +19819,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
+	nightshift_setting = 2;
 	pixel_y = -32
 	},
 /obj/structure/cable/green,
@@ -23073,7 +23081,6 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	dir = 2;
 	frequency = 1380;
 	id_tag = "securiship_bay";
 	pixel_x = -22;
@@ -24381,8 +24388,7 @@
 /area/tether/exploration/crew)
 "kKj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 6;
-	icon_state = "intact-aux"
+	dir = 6
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/securiship/general)
@@ -26077,8 +26083,7 @@
 /area/tether/exploration/equipment)
 "mbN" = (
 /obj/machinery/computer/ship/engines{
-	dir = 4;
-	icon_state = "computer"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/shuttle/securiship/cockpit)
@@ -26148,11 +26153,9 @@
 /area/tether/exploration/equipment)
 "mgU" = (
 /obj/structure/bed/chair/bay/chair/padded/beige{
-	dir = 1;
-	icon_state = "bay_chair_preview"
+	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 2;
 	id = "securiship blast";
 	name = "Shuttle Blast Doors";
 	pixel_x = -28;
@@ -26163,8 +26166,7 @@
 /area/shuttle/securiship/cockpit)
 "mim" = (
 /obj/machinery/computer/ship/sensors{
-	dir = 8;
-	icon_state = "computer"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/shuttle/securiship/cockpit)
@@ -26470,9 +26472,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 2
-	},
+/obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner2,
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
@@ -26794,8 +26794,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/aux,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/techmaint_cargo,
 /area/shuttle/securiship/general)
@@ -26889,7 +26888,6 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 4;
-	pixel_x = 0;
 	pixel_y = -28
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
@@ -27307,8 +27305,7 @@
 	dir = 8
 	},
 /obj/structure/bed/chair/bay/chair/padded/beige{
-	dir = 4;
-	icon_state = "bay_chair_preview"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel/gray_perforated,
 /area/shuttle/securiship/general)
@@ -27617,9 +27614,7 @@
 /area/tether/exploration/hallway)
 "nym" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -27633,6 +27628,7 @@
 /obj/structure/cable/green,
 /obj/machinery/power/apc{
 	name = "south bump";
+	nightshift_setting = 2;
 	pixel_y = -32
 	},
 /obj/structure/table/rack,
@@ -27646,9 +27642,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /obj/item/device/suit_cooling_unit,
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 2
-	},
+/obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/corner/brown/bordercorner2,
 /turf/simulated/floor/tiled,
 /area/quartermaster/belterdock/gear)
@@ -27947,8 +27941,7 @@
 /area/quartermaster/belterdock)
 "nOT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 10;
-	icon_state = "intact-fuel"
+	dir = 10
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/securiship/engines)
@@ -28031,8 +28024,7 @@
 /area/shuttle/securiship/general)
 "nUp" = (
 /obj/structure/bed/chair/bay/chair/padded/beige{
-	dir = 4;
-	icon_state = "bay_chair_preview"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel/gray_perforated,
 /area/shuttle/securiship/general)
@@ -28056,8 +28048,7 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 5;
-	icon_state = "intact-aux"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/eris/steel/gray_perforated,
 /area/shuttle/securiship/general)
@@ -28089,8 +28080,7 @@
 	})
 "nXm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 8;
-	icon_state = "intact-aux"
+	dir = 8
 	},
 /obj/machinery/airlock_sensor{
 	pixel_y = 28
@@ -28122,8 +28112,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 9;
-	icon_state = "intact-aux"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/steel/gray_perforated,
 /area/shuttle/securiship/general)
@@ -28440,7 +28429,6 @@
 /obj/machinery/alarm{
 	breach_detection = 0;
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 25;
 	rcon_setting = 3;
 	report_danger_level = 0
@@ -28449,8 +28437,7 @@
 /area/shuttle/securiship/general)
 "orK" = (
 /obj/structure/bed/chair/bay/chair{
-	dir = 1;
-	icon_state = "bay_chair_preview"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/violetcorener,
 /area/shuttle/securiship/general)
@@ -28542,8 +28529,7 @@
 	dir = 4
 	},
 /obj/structure/bed/chair/bay/chair{
-	dir = 1;
-	icon_state = "bay_chair_preview"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/violetcorener,
 /area/shuttle/securiship/general)
@@ -28561,8 +28547,7 @@
 /area/storage/tech)
 "owZ" = (
 /obj/structure/bed/chair/bay/chair/padded/beige{
-	dir = 4;
-	icon_state = "bay_chair_preview"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor,
 /area/shuttle/securiship/general)
@@ -29592,7 +29577,6 @@
 	alarms_hidden = 1;
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
@@ -29669,8 +29653,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 6;
-	icon_state = "intact-fuel"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/shuttle/securiship/engines)
@@ -29689,8 +29672,7 @@
 /area/tether/station/dock_two)
 "qhy" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
-	dir = 1;
-	icon_state = "map-fuel"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/shuttle/securiship/engines)
@@ -29701,8 +29683,7 @@
 /area/maintenance/cargo)
 "qiQ" = (
 /obj/machinery/atmospherics/portables_connector/fuel{
-	dir = 8;
-	icon_state = "map_connector-fuel"
+	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -29793,6 +29774,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
+	nightshift_setting = 2;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -30038,8 +30020,7 @@
 /area/shuttle/large_escape_pod1)
 "qvS" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -30199,12 +30180,10 @@
 /area/hallway/station/docks)
 "qFq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 5;
-	icon_state = "intact-fuel"
+	dir = 5
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
@@ -30743,8 +30722,7 @@
 /area/quartermaster/office)
 "rlP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 6;
-	icon_state = "intact-fuel"
+	dir = 6
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/securiship/engines)
@@ -30792,8 +30770,7 @@
 /area/tether/station/dock_one)
 "rqZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
-	dir = 1;
-	icon_state = "map-fuel"
+	dir = 1
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/securiship/engines)
@@ -31470,8 +31447,7 @@
 /area/quartermaster/qm)
 "sdi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 8;
-	icon_state = "intact-fuel"
+	dir = 8
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/securiship/engines)
@@ -34459,6 +34435,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
+	nightshift_setting = 2;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -35431,6 +35408,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
+	nightshift_setting = 2;
 	pixel_y = 28
 	},
 /obj/random/tech_supply,
