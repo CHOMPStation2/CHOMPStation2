@@ -116,7 +116,10 @@
 	if(do_after(user, revive_time, exclusive = 1, target = target))
 		target.faction = user.faction
 		target.revivedby = user.name
+<<<<<<< HEAD
 		target.ai_holder.returns_home = FALSE
+=======
+>>>>>>> 11e76bde920 (Merge pull request #10476 from Very-Soft/Gatewaytime)
 		target.revive()
 		target.sight = initial(target.sight)
 		target.see_in_dark = initial(target.see_in_dark)

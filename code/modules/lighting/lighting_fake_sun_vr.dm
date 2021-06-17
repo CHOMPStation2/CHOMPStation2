@@ -107,11 +107,26 @@
 		if(T.outdoors)
 			turfs_to_use += T
 	
+<<<<<<< HEAD
 	if(!turfs_to_use.len)
 		warning("Fake sun placed on a level where it can't find any outdoor turfs to color at [x],[y],[z].")
 		return
 
 	fake_sun.update_corners(turfs_to_use)
+=======
+	for(var/turf/simulated/T as anything in turfs)
+		if(!T.lighting_overlay)
+			T.lighting_build_overlay()
+		if(!T.outdoors)
+			continue
+		for(var/C in T.get_corners())
+			var/datum/lighting_corner/LC = C
+			if(LC.update_gen != update_gen && LC.active)
+				LC.update_gen = update_gen
+				LC.update_lumcount(lum_r, lum_g, lum_b)
+	update_gen--
+	qdel(src)
+>>>>>>> 11e76bde920 (Merge pull request #10476 from Very-Soft/Gatewaytime)
 
 /obj/effect/fake_sun/warm
 	name = "warm fake sun"
@@ -177,4 +192,8 @@
 			"brightness" = 0.1,
 			"color" = "#27024B"
 		)
+<<<<<<< HEAD
 	)
+=======
+	)
+>>>>>>> 11e76bde920 (Merge pull request #10476 from Very-Soft/Gatewaytime)
