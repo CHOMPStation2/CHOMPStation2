@@ -42,7 +42,6 @@
 	vore_icons = 4
 	vore_capacity = 4
 	swallowTime = 100
-	vore_ignores_undigestable = TRUE
 	vore_default_mode = DM_HEAL
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
@@ -173,4 +172,4 @@
 /obj/random/mob/leopardmander/item_to_spawn() //Random map spawner
 	return pick(prob(89);/mob/living/simple_mob/vore/leopardmander,
 		prob(10);/mob/living/simple_mob/vore/leopardmander/blue,
-		prob(1);/mob/living/simple_mob/vore/leopardmander/exotic,)
+		prob(1);/mob/living/simple_mob/vore/leopardmander/exotic)
