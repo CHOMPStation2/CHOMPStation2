@@ -8,11 +8,13 @@
 	item_state = "raccoon"
 	icon_living = "raccoon"
 	icon_dead = "raccoon_dead"
+	icon_rest = "raccoon_rest"
 
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/raccoon_ch
 	say_list_type = /datum/say_list/raccoon_ch
 
 	see_in_dark = 6
+	movement_cooldown = 3
 
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
