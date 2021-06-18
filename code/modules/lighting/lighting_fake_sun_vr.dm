@@ -19,6 +19,22 @@
 			"color" = "#EE9AC6"
 		),
 		list(
+			"brightness" = 1.5,
+			"color" = "#F07AD8"
+		),
+		list(
+			"brightness" = 1.5,
+			"color" = "#61AEF3"
+		),
+		list(
+			"brightness" = 1,
+			"color" = "#f3932d"
+		),
+		list(
+			"brightness" = 1,
+			"color" = "#631E8A"
+		),
+		list(
 			"brightness" = 1.0,
 			"color" = "#A3A291"
 		),
@@ -90,99 +106,6 @@
 		if(T.outdoors)
 			turfs_to_use += T
 	
-<<<<<<< HEAD
-	for(var/turf/simulated/T as anything in turfs)
-		if(!T.lighting_overlay)
-			T.lighting_build_overlay()
-		if(!T.outdoors)
-			continue
-		for(var/C in T.get_corners())
-			var/datum/lighting_corner/LC = C
-			if(LC.update_gen != update_gen && LC.active)
-				LC.update_gen = update_gen
-				LC.update_lumcount(lum_r, lum_g, lum_b)
-	update_gen--
-	qdel(src)
-||||||| parent of 8b447d8b1d... Merge pull request #10662 from VOREStation/Arokha/lights2
-	for(var/turf/simulated/T as anything in turfs)
-		if(!T.lighting_overlay)
-			T.lighting_build_overlay()
-		if(!T.outdoors)
-			continue
-		for(var/C in T.get_corners())
-			var/datum/lighting_corner/LC = C
-			if(LC.update_gen != update_gen && LC.active)
-				LC.update_gen = update_gen
-				LC.update_lumcount(lum_r, lum_g, lum_b)
-	update_gen--
-	qdel(src)
-
-/obj/effect/fake_sun/warm
-	name = "warm fake sun"
-	desc = "Deletes itself, but first updates all the lighting on outdoor turfs to warm colors."
-
-	possible_light_setups = list(
-
-		list(
-			"brightness" = 6.0,
-			"color" = "#E9FFB8"
-		),
-
-		list(
-			"brightness" = 4.0,
-			"color" = "#F4EA55"
-		),
-		list(
-			"brightness" = 1.0,
-			"color" = "#F07AD8"
-		),
-		list(
-			"brightness" = 1.0,
-			"color" = "#b4361f"
-		),
-
-		list(
-			"brightness" = 0.7,
-			"color" = "#f3932d"
-		),
-
-		list(
-			"brightness" = 0.1,
-			"color" = "#B92B00"
-		)
-	)
-
-/obj/effect/fake_sun/cool
-	name = "fake sun"
-	desc = "Deletes itself, but first updates all the lighting on outdoor turfs to cool colors."
-	possible_light_setups = list(
-
-		list(
-			"brightness" = 6.0,
-			"color" = "#abfff7"
-		),
-		list(
-			"brightness" = 4.0,
-			"color" = "#2e30c9"
-		),
-		list(
-			"brightness" = 1.0,
-			"color" = "#61AEF3"
-		),
-		list(
-			"brightness" = 1.0,
-			"color" = "#61ddf3"
-		),
-		list(
-			"brightness" = 0.3,
-			"color" = "#253682"
-		),
-		list(
-			"brightness" = 0.1,
-			"color" = "#27024B"
-		)
-	)
-=======
 	if(!turfs_to_use.len)
 		warning("Fake sun placed on a level where it can't find any outdoor turfs to color at [x],[y],[z].")
 		return
@@ -254,4 +177,3 @@
 			"color" = "#27024B"
 		)
 	)
->>>>>>> 8b447d8b1d... Merge pull request #10662 from VOREStation/Arokha/lights2
