@@ -3,6 +3,13 @@
 	desc = "Deletes itself, but first updates all the lighting on outdoor turfs."
 	icon = 'icons/effects/effects_vr.dmi'
 	icon_state = "fakesun"
+<<<<<<< HEAD
+||||||| parent of 1b4c6bcca1... Merge pull request #10679 from VOREStation/Arokha/fakesuninvis
+	var/datum/light_source/sun/fake_sun
+=======
+	invisibility = INVISIBILITY_ABSTRACT
+	var/datum/light_source/sun/fake_sun
+>>>>>>> 1b4c6bcca1... Merge pull request #10679 from VOREStation/Arokha/fakesuninvis
 
 	var/list/possible_light_setups = list(
 		list(
