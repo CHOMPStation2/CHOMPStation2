@@ -1,6 +1,6 @@
 /mob/living/simple_mob/shadekin/Initialize()
 	var/list/ability_types = subtypesof(/obj/effect/shadekin_ability)
-	if(name == "Rakshasa")
+	if(typesof(/mob/living/simple_mob/shadekin/red/rakshasa))
 		ability_types += subtypesof(/obj/effect/rakshasa_ability)
 	shadekin_abilities = list()
 	for(var/type in ability_types)

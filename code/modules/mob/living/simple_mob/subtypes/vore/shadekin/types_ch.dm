@@ -63,6 +63,17 @@
 	eye_state = "BLUE EYES"
 	eye_icon_state = "e_rakshasa"
 
+//Nerfed version.
+/mob/living/simple_mob/shadekin/red/rakshasa/nerfed
+	name ="Gooey Shadekin"
+	desc = "A scary, black shadekin? Their body oozes like goop."
+	player_msg = "You are a goopy shadekin. You are not to directly harm crew, only consume."
+	energy_adminbuse = FALSE
+	maxHealth = 200
+	health = 200
+	eye_desc = null
+	eye_state = BLUE_EYES
+
 /mob/living/simple_mob/shadekin/blue/luna
 	name = "Luna"
 	desc = "She appears to be a fuzzy critter of some sort. Her eyes shimmer a dark blue, glancing around curiously."
