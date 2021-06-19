@@ -4,8 +4,8 @@
 
 #define BELLIES_MAX 40
 #define BELLIES_NAME_MIN 2
-#define BELLIES_NAME_MAX 20
-#define BELLIES_DESC_MAX 2048
+#define BELLIES_NAME_MAX 40
+#define BELLIES_DESC_MAX 4096
 #define FLAVOR_MAX 40
 
 /mob/living
@@ -279,6 +279,7 @@
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
+		"noisy_full" = host.noisy_full //Belching while full
 		//CHOMPedit end
 	)
 
@@ -508,6 +509,11 @@
 			host.give_reagents = !host.give_reagents
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.give_reagents = host.give_reagents
+			unsaved_changes = TRUE
+			return TRUE
+		//Belch code
+		if("toggle_noisy_full")
+			host.noisy_full = !host.noisy_full
 			unsaved_changes = TRUE
 			return TRUE
 		//CHOMPedit end

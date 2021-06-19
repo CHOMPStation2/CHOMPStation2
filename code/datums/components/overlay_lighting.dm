@@ -156,7 +156,6 @@
 	set_parent_attached_to(null)
 	set_holder(null)
 	clean_old_turfs()
-	
 	qdel(visible_mask, TRUE)
 	visible_mask = null
 	
