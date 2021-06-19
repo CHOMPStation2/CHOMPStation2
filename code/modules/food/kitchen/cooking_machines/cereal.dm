@@ -36,10 +36,10 @@
 
 	var/image/food_image = image(CI.object.icon, CI.object.icon_state)
 	food_image.color = CI.object.color
-	food_image.overlays += CI.object.overlays
+	food_image.add_overlay(CI.object.overlays)
 	food_image.transform *= 0.7
 
-	product.overlays += food_image
+	product.add_overlay(food_image)
 */
 
 /obj/machinery/appliance/mixer/cereal/update_icon()
