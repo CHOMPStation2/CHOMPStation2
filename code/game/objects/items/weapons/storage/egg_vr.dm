@@ -17,6 +17,14 @@
 	use_sound = 'sound/items/drop/flesh.ogg'
 
 /obj/item/weapon/storage/vore_egg/open(mob/user as mob)
+<<<<<<< HEAD
+||||||| parent of 7f8d5449b9... Merge pull request #10704 from Novacat/nova-basicfixes
+	if(isobserver(usr))
+		return
+=======
+	if(isobserver(user))
+		return
+>>>>>>> 7f8d5449b9... Merge pull request #10704 from Novacat/nova-basicfixes
 	icon = open_egg_icon
 	..()
 
