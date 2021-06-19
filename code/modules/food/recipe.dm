@@ -316,7 +316,16 @@
 // When exact is true, extraneous ingredients will fail the recipe
 // In both cases, the full complement of required inredients is still needed
 /proc/select_recipe(var/list/datum/recipe/available_recipes, var/obj/obj as obj, var/exact)
+<<<<<<< HEAD
 	var/list/datum/recipe/possible_recipes = list()
+||||||| parent of 6b562b4953... Merge pull request #10707 from ShadowLarkens/patch-1
+	var/list/datum/recipe/possible_recipes = list()
+	var/highest_count = 0
+	var/count = 0
+=======
+	var/highest_count = 0
+	var/count = 0
+>>>>>>> 6b562b4953... Merge pull request #10707 from ShadowLarkens/patch-1
 	for (var/datum/recipe/recipe in available_recipes)
 		if(!recipe.check_reagents(obj.reagents, exact) || !recipe.check_items(obj, exact)  || !recipe.check_fruit(obj, exact))
 			continue
