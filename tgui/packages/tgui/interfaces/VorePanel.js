@@ -163,6 +163,9 @@ const digestModeToPreyMode = {
  *
  * return tabIndex===4 ? null : (
  *
+ * New preference added, noisy_full
+ * noisy_full enables belching when nutrition exceeds 500, very similar to the noisy preference.
+ *
  * That's everything so far.
  *
  */
@@ -939,6 +942,7 @@ const VoreUserPreferences = (props, context) => {
     step_mechanics_active,
     pickup_mechanics_active,
     noisy,
+    noisy_full,
     liq_rec,
     liq_giv,
   } = data.prefs;
@@ -1073,6 +1077,18 @@ const VoreUserPreferences = (props, context) => {
               ? "Click here to turn off hunger noises."
               : "Click here to turn on hunger noises.")}
             content={noisy ? "Hunger Noises Enabled" : "Hunger Noises Disabled"} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <Button
+            onClick={() => act("toggle_noisy_full")}
+            icon={noisy_full ? "toggle-on" : "toggle-off"}
+            selected={noisy_full}
+            fluid
+            tooltip={"Toggle belching while full. "
+            + (noisy_full
+              ? "Click here to turn off belching when full."
+              : "Click here to turn on belching when full.")}
+            content={noisy_full ? "Belching Enabled" : "Belching Disabled"} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button
