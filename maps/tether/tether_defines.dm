@@ -160,9 +160,30 @@
 		)
 
 	lateload_single_pick = list(
+<<<<<<< HEAD
 		//list("Carp Farm"),
 		//list("Snow Field"),
 		//list("Listening Post")
+||||||| parent of 893654347a... Merge pull request #10710 from Very-Soft/wildwest
+		list("Carp Farm"),
+		list("Snow Field"),
+		list("Listening Post"),
+		list("Honleth Highlands A"),
+		list("Honleth Highlands B"),
+		list("Arynthi Lake Underground A","Arynthi Lake A"),
+		list("Arynthi Lake Underground B","Arynthi Lake B"),
+		list("Eggnog Town Underground","Eggnog Town")
+=======
+		list("Carp Farm"),
+		list("Snow Field"),
+		list("Listening Post"),
+		list("Honleth Highlands A"),
+		list("Honleth Highlands B"),
+		list("Arynthi Lake Underground A","Arynthi Lake A"),
+		list("Arynthi Lake Underground B","Arynthi Lake B"),
+		list("Eggnog Town Underground","Eggnog Town"),
+		list("Wild West")
+>>>>>>> 893654347a... Merge pull request #10710 from Very-Soft/wildwest
 		)
 
 	ai_shell_restricted = TRUE
