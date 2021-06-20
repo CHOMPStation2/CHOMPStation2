@@ -212,8 +212,16 @@
 	projectile_type = /obj/item/projectile/beam/phaser
 	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
+<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, charge_cost = 300),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 80),
+||||||| parent of 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="phaserkill", charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phaserstun", charge_cost = 80),
+=======
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="phaserkill", charge_cost = 300),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="phaserstun", charge_cost = 100),
+>>>>>>> 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
 	)
 	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
@@ -268,8 +276,16 @@
 	modifystate = "carbinekill"
 	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
+<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="carbinekill", charge_cost = 300),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="carbinestun", charge_cost = 80),
+||||||| parent of 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
+		list(mode_name="lethal", fire_delay=8, projectile_type=/obj/item/projectile/beam/blue, modifystate="carbinekill", charge_cost = 300),
+		list(mode_name="low-power", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="carbinestun", charge_cost = 80),
+=======
+		list(mode_name="lethal", fire_delay=8, projectile_type=/obj/item/projectile/beam/blue, modifystate="carbinekill", charge_cost = 300),
+		list(mode_name="low-power", fire_delay=5, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="carbinestun", charge_cost = 100),
+>>>>>>> 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/carbine/update_icon()
@@ -300,8 +316,16 @@
 	modifystate = "holdoutkill"
 	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
+<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, modifystate="holdoutkill", charge_cost = 600),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, modifystate="holdoutstun", charge_cost = 120),
+||||||| parent of 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="holdoutkill", charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="holdoutstun", charge_cost = 160),
+=======
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/blue, modifystate="holdoutkill", charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser/blue, modifystate="holdoutstun", charge_cost = 200),
+>>>>>>> 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
 		list(mode_name="stun", fire_delay=12, projectile_type=/obj/item/projectile/beam/stun/med, modifystate="holdoutshock", charge_cost = 300),
 	)
 
@@ -363,7 +387,7 @@
 
 /obj/item/weapon/gun/energy/locked/frontier/handbow
 	name = "phaser handbow"
-	desc = "An minaturized weapon that fires a bolt of engery. Includes a built-in crank charger for recharging away from civilization. This one has a safety interlock that prevents firing while in proximity to the facility."
+	desc = "An minaturized weapon that fires a bolt of energy. Includes a built-in crank charger for recharging away from civilization. This one has a safety interlock that prevents firing while in proximity to the facility."
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "handbowkill"
 	item_state = null
@@ -373,12 +397,28 @@
 	charge_cost = 600
 	modifystate = "handbowkill"
 	firemodes = list(
+<<<<<<< HEAD
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/phase/bolt/heavy, modifystate="handbowkill", charge_cost = 600), //CHOMP Edit
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/phase/bolt, modifystate="handbowstun", charge_cost = 160), //CHOMP Edit
+||||||| parent of 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/bolt/heavy, modifystate="handbowkill", charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/bolt, modifystate="handbowstun", charge_cost = 160),
+=======
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/bolt/heavy, modifystate="handbowkill", charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/bolt, modifystate="handbowstun", charge_cost = 200),
+>>>>>>> 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
 	)
 
+<<<<<<< HEAD
 /obj/item/weapon/gun/energy/locked/frontier/handbow/unlocked
 	desc = "An minaturized weapon that fires a bolt of engery. Includes a built-in crank charger for recharging away from civilization."
+||||||| parent of 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
+/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked
+	desc = "An minaturized weapon that fires a bolt of engery. Includes a built-in crank charger for recharging away from civilization."
+=======
+/obj/item/weapon/gun/energy/locked/frontier/handbow/unlocked
+	desc = "An minaturized weapon that fires a bolt of energy. Includes a built-in crank charger for recharging away from civilization."
+>>>>>>> 21443e37f3... Merge pull request #10709 from Novacat/nova-basicfixes
 	req_access = newlist() //for toggling safety
 	locked = 0
 	lockable = 0
