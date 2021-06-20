@@ -986,7 +986,7 @@
 	if(nutrition > 500 && noisy_full == TRUE)
 		var/belch_prob = 10 //Maximum belch prob.
 		if(nutrition < 4075)
-			belch_prob = ((nutrition-500)/3575)*20 //Scale belch prob with fullness if not already at max. If editing make sure the multiplier matches the max prob above.
+			belch_prob = ((nutrition-500)/3575)*10 //Scale belch prob with fullness if not already at max. If editing make sure the multiplier matches the max prob above.
 		if(prob(belch_prob))
 			var/sound/belchsound = sound(get_sfx("belches"))
 			playsound(src, belchsound, vol = (30+(belch_prob*2)), vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/belch_noises)
