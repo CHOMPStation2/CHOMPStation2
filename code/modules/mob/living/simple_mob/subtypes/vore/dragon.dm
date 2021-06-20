@@ -63,7 +63,7 @@
 	vore_icons = SA_ICON_LIVING
 
 /datum/category_item/catalogue/fauna/phoron_dragon //CHOMP Edit: the lore.
-	name = NaN Dragon"
+	name = "NaN Dragon"
 	desc = "Classification: Phoron Draconinae\
 	<br><br>\
 	ERR; 403 - refer this code to NT Auth immediately! \
