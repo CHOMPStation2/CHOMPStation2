@@ -102,13 +102,7 @@
 	display_name = "pilot qualification pin"
 	description = "An iron pin denoting the qualification to fly USG spacecraft."
 	path = /obj/item/clothing/accessory/solgov/specialty/pilot
-<<<<<<< HEAD
-	allowed_roles = list("Pathfinder", "Pilot", "Field Medic","Security Pilot") //YW ADDITIONS
-||||||| parent of 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
-	allowed_roles = list("Pathfinder","Pilot","Field Medic","Talon Pilot")	
-=======
 	allowed_roles = list("Pathfinder","Pilot","Field Medic","Talon Pilot")
->>>>>>> 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
 
 /datum/gear/accessory/flops
 	display_name = "drop straps"
