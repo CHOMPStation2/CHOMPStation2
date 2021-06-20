@@ -308,8 +308,7 @@
 		for (var/i in values)
 			output += {"<li>
 						<label class="switch">
-							<input type="[inputtype]" value="1" name="[i["name"]]"[i["checked"] ? " checked" : ""][i["allowed_edit"] ? "" : " onclick='return false' onkeydown='return false'"]>
-								<div class="slider [div_slider ? "[div_slider]" : ""]"></div>
+							<input type="[inputtype]" value="1" name="[i["name"]]"[i["checked"] ? " checked" : ""][i["allowed_edit"] ? "" : " disabled onclick='return false' onkeydown='return false'"]>
 									<span>[i["name"]]</span>
 						</label>
 						</li>"}
