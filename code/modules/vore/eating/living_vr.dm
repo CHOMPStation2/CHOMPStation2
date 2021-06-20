@@ -35,6 +35,7 @@
 	var/vis_height = 32					// Sprite height used for resize features.
 	var/show_vore_fx = TRUE				// Show belly fullscreens
 	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
+	var/noisy_full = FALSE				//CHOMPEdit: Enables belching when a mob has overeaten
 
 //
 // Hook for generic creation of stuff on new creatures
