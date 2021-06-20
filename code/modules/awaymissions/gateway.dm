@@ -148,8 +148,6 @@ obj/machinery/gateway/centerstation/process()
 		if(dest)
 			M.forceMove(dest.loc)
 			M.set_dir(SOUTH)
-<<<<<<< HEAD
-=======
 			//VOREStation Addition Start: Mcguffin time!			
 			if(istype(M, /mob/living/carbon/human))
 				var/mob/living/carbon/human/H = M
@@ -202,7 +200,6 @@ obj/machinery/gateway/centerstation/process()
 				L << 'sound/effects/bamf.ogg'
 				to_chat(L,"<span class='warning'>You're starting to come to. You feel like you've been out for a few minutes, at least...</span>")
 			//VOREStation Addition End
->>>>>>> 11e76bde920 (Merge pull request #10476 from Very-Soft/Gatewaytime)
 		return
 
 /obj/machinery/gateway/centerstation/attackby(obj/item/device/W as obj, mob/user as mob)
