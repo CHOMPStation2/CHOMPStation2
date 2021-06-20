@@ -235,61 +235,6 @@
 
 /obj/item/mecha_parts/mecha_equipment/proc/detach(atom/moveto=null)
 	moveto = moveto || get_turf(chassis)
-<<<<<<< HEAD
-	if(src.Move(moveto))
-		chassis.equipment -= src
-		chassis.universal_equipment -= src
-		if(equip_type)
-			switch(equip_type)
-				if(EQUIP_HULL)
-					chassis.hull_equipment -= src
-				if(EQUIP_WEAPON)
-					chassis.weapon_equipment -= src
-				if(EQUIP_UTILITY)
-					chassis.utility_equipment -= src
-				if(EQUIP_SPECIAL)
-					chassis.special_equipment -= src
-				//VOREStation Addition begin: MICROMECHS
-				//CHOMPedit commented micromech stuff, because fuck this trash
-				/*
-				if(EQUIP_MICRO_UTILITY)//CHOMPstation edit - This was improperly named bugging detaching on my equipment fix.
-					chassis.micro_utility_equipment -= src
-				if(EQUIP_MICRO_WEAPON)
-					chassis.micro_weapon_equipment -= src */
-				//VOREStation Addition end: MICROMECHS
-		if(chassis.selected == src)
-			chassis.selected = null
-		update_chassis_page()
-		chassis.log_message("[src] removed from equipment.")
-		chassis = null
-		set_ready_state(1)
-||||||| parent of 65ba367501... Merge pull request #10686 from VOREStation/upstream-merge-8146
-	if(src.Move(moveto))
-		chassis.equipment -= src
-		chassis.universal_equipment -= src
-		if(equip_type)
-			switch(equip_type)
-				if(EQUIP_HULL)
-					chassis.hull_equipment -= src
-				if(EQUIP_WEAPON)
-					chassis.weapon_equipment -= src
-				if(EQUIP_UTILITY)
-					chassis.utility_equipment -= src
-				if(EQUIP_SPECIAL)
-					chassis.special_equipment -= src
-				//VOREStation Addition begin: MICROMECHS
-				if(EQUIP_MICRO_UTILITY)
-					chassis.micro_utility_equipment -= src
-				if(EQUIP_MICRO_WEAPON)
-					chassis.micro_weapon_equipment -= src
-				//VOREStation Addition end: MICROMECHS
-		if(chassis.selected == src)
-			chassis.selected = null
-		update_chassis_page()
-		chassis.log_message("[src] removed from equipment.")
-		chassis = null
-		set_ready_state(1)
-=======
 	forceMove(moveto)
 	chassis.equipment -= src
 	chassis.universal_equipment -= src
@@ -304,10 +249,12 @@
 			if(EQUIP_SPECIAL)
 				chassis.special_equipment -= src
 			//VOREStation Addition begin: MICROMECHS
-			if(EQUIP_MICRO_UTILITY)
+			//CHOMPedit commented micromech stuff, because fuck this trash
+			/*
+			if(EQUIP_MICRO_UTILITY)//CHOMPstation edit - This was improperly named bugging detaching on my equipment fix.
 				chassis.micro_utility_equipment -= src
 			if(EQUIP_MICRO_WEAPON)
-				chassis.micro_weapon_equipment -= src
+				chassis.micro_weapon_equipment -= src */
 			//VOREStation Addition end: MICROMECHS
 	if(chassis.selected == src)
 		chassis.selected = null
@@ -315,7 +262,6 @@
 	chassis.log_message("[src] removed from equipment.")
 	chassis = null
 	set_ready_state(TRUE)
->>>>>>> 65ba367501... Merge pull request #10686 from VOREStation/upstream-merge-8146
 	enable_special = FALSE
 	return
 
