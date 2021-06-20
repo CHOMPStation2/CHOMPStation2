@@ -93,11 +93,6 @@
 	desc = "A fancy visor showing alignment to pizza delivery service. Extremely risky career choice."
 	icon_state = "pizzadelivery"
 	icon = 'icons/obj/clothing/hats_vr.dmi'
-<<<<<<< HEAD
-	icon_override = 'icons/mob/head_vr.dmi'
-||||||| parent of 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
-	icon_override = 'icons/mob/head_vr.dmi'
-=======
 	icon_override = 'icons/mob/head_vr.dmi'
 
 //////////TALON HATS//////////
@@ -134,4 +129,3 @@ obj/item/clothing/head/beret/talon/command
 	icon_override = 'icons/mob/head_vr.dmi'
 	icon_state = "beret_talon_officer"
 	item_state = "baret_talon_command"
->>>>>>> 8d33fa238a... Merge pull request #10660 from klaasjared/Talon_Merch
