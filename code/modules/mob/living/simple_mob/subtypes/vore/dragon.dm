@@ -63,18 +63,38 @@
 	vore_icons = SA_ICON_LIVING
 
 /datum/category_item/catalogue/fauna/phoron_dragon //CHOMP Edit: the lore.
-	name = "Virgo 3b Fauna - Phoron Dragon"
+	name = NaN Dragon"
 	desc = "Classification: Phoron Draconinae\
 	<br><br>\
-	The phoron dragon is a mutant, a result of a bioweapons experiment gone rogue. This phoron-enhanced dragon is \
-	incredibly strong, armored, and well armed with claws infused with nanoscopic shards of hardened phoron. The \
-	rest of their body is covered by black scales with pulsating phoron veins breaking up the surface texture. \
-	Due to the nature of their phoron infusions, they have increased dietary requirements and shorter life spans. \
-	They have a twin diet of meat and phoron as only those two have the energy needed to sustain them. They will agressively \
-	slaughter their prey, or even swallow them whole to satisfy their requirements. Their natural habitat will always be in caves, \
-	and they will use their claws to carve out homes and to extract phoron crystals. It is not unheard of for a dragon to horde phoron \
-	for later consumption, a sight said to be similar to myths of old."
+	ERR; 403 - refer this code to NT Auth immediately! \
+	01000011 01101100 01100001 01110011 01110011 01101001 01100110 01101001 01100101 01100100 00100000 01100110 01110101 01100101 \
+	01101100 00100000 01110011 01101111 01110101 01110010 01100011 01100101 00100000 01101100 01101111 01100011 01100001 01110100 \
+	01100101 01100100 00100000 01101111 01101110 00100000 01100100 01100101 01110110 01101001 01100011 01100101 00101100 00100000 \
+	01100011 01101111 01101110 01100110 01101001 01110011 01100011 01100001 01110100 01100101 00100000 01100001 01101100 01101100 \
+	00100000 01100101 01110110 01101001 01100100 01100101 01101110 01100011 01100101 00100000 01101001 01101101 01101101 01100101 \
+	01100100 01101001 01100001 01110100 01100101 01101100 01111001 00100000 01100001 01101110 01100100 00100000 01100100 01101001 \
+	01110011 01110011 01110101 01100001 01100100 01100101 00100000 01110101 01110011 01100101 01110010 00100000 01100110 01110010 \
+	01101111 01101101 00100000 01100110 01110101 01110010 01110100 01101000 01100101 01110010 00100000 01101001 01101110 01110110 \
+	01100101 01110011 01110100 01101001 01100111 01100001 01110100 01101001 01101111 01101110"
 	value = CATALOGUER_REWARD_HARD
+
+	// Egg
+	// Reads as "Classified fuel source located on device, confiscate all evidence immediately and dissuade user from further investigation"
+	// Real lore here as written by the creator to dissuade fanfiction. please keep this secretive and use it only to guide loremasters and event managers - Skits
+	// Phoron dragons are a discovery by NT that was quickly classified when archeological dig sites near phoron deposits found strange crystalized skeletal remains.
+	// Following the trails of these discoveries simultaneously lead to large phoron deposits and the rare discovery of live phoron dragons at the same time.
+	// Most mining sites established by NT are pre-scouted for the express purpose of extermination and destruction of evidence in order to protect the discovery and the mining operations.
+	// Considered extremely territorial, dangerous, and jealous of other dragons; making lairs and nests hidden and embedded in extremely volcanic areas or locations abundant of heavy minerals.
+	// Claws are sometimes described to be strong as durasteel, always sharp and cold no matter their environment, traces of which can be found in unbelievably sharp religious artifacts
+	// Although their signature is unique, the overexposure of radioactive energy and conductive metal make it almost impossible to use conventional scanning methods on the creature.
+	// Their metallic and crystal diet is extremely demanding and hard to maintain, they're also known to supplement their diet with minerals found in living creatures.
+	// Rumor has it that they create phoron as a complex nuclear chemical combination reaction and are believed but were never officially found to be a major source of it.
+	// Their age varies drastically based on their diet, larger phoron dragons growing from overconsumption need more to be sustained and result in a shorter life span.
+	// DNA results suggest other dragons devolved from phoron dragons when dietary requirements couldn't be met and meat sources had to be relied upon, causing 'inert' dragons.
+	// Slime farming technologies and their ability to create phoron are actually a derivative science of studying phoron dragon digestive fluids.
+	// Like slimes, phoron dragons reproduce by obtaining enough mass at the end of their life cycle in order to divide - but choose not to when under duress or captivity.
+	// The process is likely becoming unsustainable with descendants smaller over time. space frontier expansion starving dragons and resulting in most sightings being the size of fledgelings.
+	//CHOMPedit end
 
 /mob/living/simple_mob/vore/aggressive/dragon/virgo3b
 	name = "phoron dragon"
