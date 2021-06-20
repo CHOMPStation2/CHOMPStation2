@@ -28,9 +28,7 @@
 
 	//Hooks need to return true otherwise they're considered having failed
 	return TRUE
-<<<<<<< HEAD
 */
-=======
 
 //For making sure that if a mob is able to be joined by ghosts, that ghosts can't join it if it dies
 /mob/living/simple_mob/death()
@@ -38,4 +36,3 @@
 	ghostjoin = 0
 	active_ghost_pods -= src
 	ghostjoin_icon()
->>>>>>> 11e76bde920 (Merge pull request #10476 from Very-Soft/Gatewaytime)
