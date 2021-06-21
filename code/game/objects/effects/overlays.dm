@@ -76,15 +76,13 @@
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	mouse_opacity = 0 //Don't block underlying tile interactions
-/*
+
 /obj/effect/overlay/snow/floor/edges
 	icon_state = "snow_edges"
-/obj/effect/overlay/snow/floor/edges2
-	icon_state = "snow_edges2"
-/obj/effect/overlay/snow/floor/edges3
-	icon_state = "gravsnow_edges"
+
 /obj/effect/overlay/snow/floor/surround
-	icon_state = "snow_surround" */
+	icon_state = "snow_surround"
+
 /obj/effect/overlay/snow/airlock
 	icon_state = "snowairlock"
 	layer = DOOR_CLOSED_LAYER+0.01
@@ -130,7 +128,6 @@
 	appearance_flags = RESET_TRANSFORM | TILE_BOUND
 	invisibility = INVISIBILITY_ABSTRACT
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-
 	plane = ATMOS_GROUP_PLANE
 */
 
@@ -145,6 +142,12 @@
 	vis_flags = NONE
 	blocks_emissive = FALSE
 
+/obj/effect/overlay/light_visible/Destroy(force)
+	if(!force)
+		stack_trace("Movable light visible mask deleted, but not by our component")
+		return QDEL_HINT_LETMELIVE
+	return ..()
+
 /obj/effect/overlay/light_cone
 	name = ""
 	icon = 'icons/effects/light_overlays/light_cone.dmi'
@@ -155,4 +158,9 @@
 	vis_flags = NONE
 	alpha = 110
 	blocks_emissive = FALSE
-	
+
+/obj/effect/overlay/light_cone/Destroy(force)
+	if(!force)
+		stack_trace("Directional light cone deleted, but not by our component")
+		return QDEL_HINT_LETMELIVE
+	return ..()
