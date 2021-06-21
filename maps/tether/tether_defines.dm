@@ -36,7 +36,11 @@
 		"tether_night" = 50,
 		"tether2_night" = 50,
 		"tether2_dog" = 1,
-		"tether2_love" = 1
+		"tether2_love" = 1,
+		"tether_future" = 10,
+		"logo1" = 20,
+		"logo2" = 20,
+		"gateway" = 5
 	))
 	if(choice)
 		lobby_screens = list(choice)
