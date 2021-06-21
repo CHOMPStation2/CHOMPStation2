@@ -55,19 +55,11 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //Antag/Event/ERT Areas
-<<<<<<< HEAD
-||||||| parent of 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
-
-#include "../../submaps/admin_use_vr/ert.dm"
-#include "../../submaps/admin_use_vr/mercship.dm"
-
-=======
 
 #include "../../submaps/admin_use_vr/ert.dm"
 #include "../../submaps/admin_use_vr/mercship.dm"
 #include "../../submaps/admin_use_vr/guttersite.dm"
 
->>>>>>> 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
 /datum/map_template/admin_use/ert
 	name = "Special Area - ERT"
 	desc = "It's the ERT ship! Lorge."
@@ -84,27 +76,10 @@
 	mappath = 'maps/offmap_vr/om_ships/salamander.dmm'
 
 /datum/map_template/admin_use/mercenary
-<<<<<<< HEAD
-	name = "Special Area - Merc Base"
-	desc = "So much red!"
-	mappath = 'maps/submaps/admin_use_vr/mercbase.dmm'
-
-||||||| parent of 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
 	name = "Special Area - Merc Ship"
 	desc = "Prepare tae be boarded, arr!"
 	mappath = 'maps/submaps/admin_use_vr/kk_mercship.dmm'
 
-/datum/map_template/admin_use/old_mercenary
-	name = "Special Area - Old Merc Base"
-	desc = "So much red!"
-	mappath = 'maps/submaps/admin_use_vr/mercbase.dmm'
-
-=======
-	name = "Special Area - Merc Ship"
-	desc = "Prepare tae be boarded, arr!"
-	mappath = 'maps/submaps/admin_use_vr/kk_mercship.dmm'
-
->>>>>>> 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
 /datum/map_template/admin_use/skipjack
 	name = "Special Area - Skipjack Base"
 	desc = "Stinky!"
@@ -379,6 +354,13 @@
 	name = "Eggnog Town Underground"
 	desc = "A comfortable snowy town."
 	mappath = 'maps/gateway_vr/eggnogtownunderground.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+#include "../../gateway_vr/wildwest.dm"
+/datum/map_template/tether_lateload/gateway/wildwest
+	name = "Wild West"
+	desc = "A classic."
+	mappath = 'maps/gateway_vr/wildwest.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
 
 //////////////////////////////////////////////////////////////////////////////////////
