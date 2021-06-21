@@ -242,7 +242,7 @@
 	range = 6
 	damage = 5
 	SA_bonus_damage = 45	// 50 total on animals
-	SA_vulnerability = SA_ANIMAL
+	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION, MOB_CLASS_HUMANOID) //CHOMP Edit expand this list
 
 /obj/item/projectile/energy/phase/light
 	range = 4
