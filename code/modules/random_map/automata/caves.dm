@@ -52,7 +52,7 @@
 		if(!T.ignore_cavegen)
 			if(map[current_cell] == FLOOR_CHAR)
 				T.make_floor()
-				if(prob(1)) // 1 in 100 chance //CHOMP Add
+				if(prob(0.5)) // 1 in 200 chance //CHOMP Add
 					new /obj/structure/mob_spawner/scanner/mining_animals(T) //CHOMP Add
 			else
 				T.make_wall()
