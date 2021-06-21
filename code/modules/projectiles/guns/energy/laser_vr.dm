@@ -373,16 +373,8 @@
 	charge_cost = 600
 	modifystate = "handbowkill"
 	firemodes = list(
-<<<<<<< HEAD
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/phase/bolt/heavy, modifystate="handbowkill", charge_cost = 600), //CHOMP Edit
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/phase/bolt, modifystate="handbowstun", charge_cost = 160), //CHOMP Edit
-||||||| parent of 79eefa9f83... Merge pull request #10714 from TheDavestDave/master
-		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/bolt/heavy, modifystate="handbowkill", charge_cost = 600),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/bolt, modifystate="handbowstun", charge_cost = 200),
-=======
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/bow/heavy, modifystate="handbowkill", charge_cost = 600),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/bow, modifystate="handbowstun", charge_cost = 200),
->>>>>>> 79eefa9f83... Merge pull request #10714 from TheDavestDave/master
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/bow, modifystate="handbowstun", charge_cost = 160), //CHOMP Edit
 	)
 
 /obj/item/weapon/gun/energy/locked/frontier/handbow/unlocked
