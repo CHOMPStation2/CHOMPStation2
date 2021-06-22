@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 /* //CHOMPedit: commenting out most of these posters as half are virgo staff and many others are not suitable for here.
-/datum/poster/vore_1
-||||||| parent of 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
-/datum/poster/vore_1
-=======
 /decl/poster/vore_1
->>>>>>> 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
 	icon_state = "sbsposter1"
 	name = "Best Girl Pip"
 	desc = "A poster of the official NT Best Girl Mascot, Pip"
@@ -53,14 +47,8 @@
 	icon_state = "dwposter1"
 	name = "WANTED: WAR CRIMINAL"
 	desc = "A poster bringing awareness to the distinguishing costume of a known war criminal operating in Virgo-Erigonne space."
-<<<<<<< HEAD
 */ //CHOMPedit end
-/datum/poster/vore_15
-||||||| parent of 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
-/datum/poster/vore_15
-=======
 /decl/poster/vore_15
->>>>>>> 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
 	icon_state = "dwposter2"
 	name = "Implanter"
 	desc = "A poster explaining the benefits and function of back-up implanters."
@@ -72,47 +60,22 @@
 	icon_state = "dwposter4"
 	name = "We know"
 	desc = "A poster purporting the infallibility of NanoTrasen's forensics department."
-<<<<<<< HEAD
-/* //CHOMPedit
-/datum/poster/vore_18
-||||||| parent of 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
-/datum/poster/vore_18
-=======
 /decl/poster/vore_18
->>>>>>> 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
 	icon_state = "dwposter5"
 	name = "KAT"
 	desc = "A promotional poster for popular exotube show 'Kat-Kat Korner'"
-<<<<<<< HEAD
 */ //CHOMPedit end
-/datum/poster/vore_19
-||||||| parent of 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
-/datum/poster/vore_19
-=======
 /decl/poster/vore_19
->>>>>>> 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
 	icon_state = "dwposter6"
 	name = "install.css"
 	desc = "A nostalgia trip."
-<<<<<<< HEAD
 /* //CHOMPedit
-/datum/poster/vore_20
-||||||| parent of 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
-/datum/poster/vore_20
-=======
 /decl/poster/vore_20
->>>>>>> 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
 	icon_state = "dwposter7"
 	name = "TALON"
 	desc = "The logo and banner of a notable group of contractors known to trade with NanoTrasen."
-<<<<<<< HEAD
 */ //CHOMPedit end
-/datum/poster/vore_21
-||||||| parent of 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
-/datum/poster/vore_21
-=======
 /decl/poster/vore_21
->>>>>>> 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
 	icon_state = "dwposter8"
 	name = "GPA"
 	desc = "A pretentious advertisement for the drink 'Galactic Panic Attack'"
@@ -144,14 +107,8 @@
 	icon_state = "sbsposter17"
 	name = "DiveIn"
 	desc = "A limited edition holographic poster that seems to feature subliminal suggestions and conditioning."
-<<<<<<< HEAD
 /*CHOMP Edit: Remove loss poster
-/datum/poster/vore_29
-||||||| parent of 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
-/datum/poster/vore_29
-=======
 /decl/poster/vore_29
->>>>>>> 07f5043a5b... Merge pull request #10698 from VOREStation/upstream-merge-8128
 	icon_state = "sbsposter18"
 	name = "Perdition"
 	desc = "You get the feeling that whomever made this intended for you to feel very differently than you do when you look at it."
