@@ -2007,7 +2007,7 @@
 /area/space)
 "hm" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/contraband/poster,
+/obj/item/poster,
 /turf/simulated/floor/carpet,
 /area/space)
 "hn" = (
