@@ -60,6 +60,7 @@
 	icon_state = "dwposter4"
 	name = "We know"
 	desc = "A poster purporting the infallibility of NanoTrasen's forensics department."
+/* //CHOMPedit
 /decl/poster/vore_18
 	icon_state = "dwposter5"
 	name = "KAT"
