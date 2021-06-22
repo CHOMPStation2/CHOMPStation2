@@ -21,8 +21,8 @@
 
 	pto_type = PTO_CIVILIAN
 
-	get_access()
-		return get_all_accesses().Copy()
+/datum/job/centcom_officer/get_access()
+	return get_all_accesses().Copy()
 
 //YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
 /datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
@@ -69,9 +69,17 @@
 
 		return 1
 
+<<<<<<< HEAD
 	get_access()
 		var/access = get_all_accesses()
 		return access*/
+||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
+	get_access()
+		return get_all_accesses().Copy()
+=======
+/datum/job/emergency_responder/get_access()
+	return get_all_accesses().Copy()
+>>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
 
 /datum/job/clown
 	title = "Clown"

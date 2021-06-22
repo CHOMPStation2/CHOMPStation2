@@ -10,9 +10,17 @@
 
     temperature = TN60C
     var/list/crossed_dirs = list()
+<<<<<<< HEAD
 /* Disabled by RF. Currently broke for the new map, and I'd rather it not be used for new map launch. Something to fix later.
 #define FOOTSTEP_SPRITE_AMT 2
 
+||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
+
+#define FOOTSTEP_SPRITE_AMT 2
+
+=======
+
+>>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
 /turf/snow/Entered(atom/A)
     if(ismob(A))
         var/mdir = "[A.dir]"
