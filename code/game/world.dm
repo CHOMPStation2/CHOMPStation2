@@ -603,13 +603,7 @@ var/failed_old_db_connections = 0
 	//CHOMPEdit End
 	return 1
 
-<<<<<<< HEAD
-/*proc/setup_database_connection() CHOMPEdit TGSQL
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-proc/setup_database_connection()
-=======
-/proc/setup_database_connection()
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
+/*/proc/setup_database_connection() CHOMPEdit TGSQL
 
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -644,27 +638,8 @@ proc/setup_database_connection()
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
 <<<<<<< HEAD
-proc/establish_db_connection() //CHOMPEdit TGSQL
+/proc/establish_db_connection() //CHOMPEdit TGSQL
 	return SSdbcore.Connect()
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-proc/establish_db_connection()
-	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
-		return 0
-
-	if(!dbcon || !dbcon.IsConnected())
-		return setup_database_connection()
-	else
-		return 1
-=======
-/proc/establish_db_connection()
-	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
-		return 0
-
-	if(!dbcon || !dbcon.IsConnected())
-		return setup_database_connection()
-	else
-		return 1
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
 
 
 /hook/startup/proc/connectOldDB()
@@ -678,13 +653,7 @@ proc/establish_db_connection()
 	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
-<<<<<<< HEAD
-/*proc/setup_old_database_connection() //CHOMPStation TGSQL
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-proc/setup_old_database_connection()
-=======
-/proc/setup_old_database_connection()
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
+/*/proc/setup_old_database_connection() //CHOMPStation TGSQL
 
 	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -709,19 +678,6 @@ proc/setup_old_database_connection()
 	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-<<<<<<< HEAD
-proc/establish_old_db_connection()
-	return SSdbcore.Connect()
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-proc/establish_old_db_connection()
-	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)
-		return 0
-
-	if(!dbcon_old || !dbcon_old.IsConnected())
-		return setup_old_database_connection()
-	else
-		return 1
-=======
 /proc/establish_old_db_connection()
 	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)
 		return 0
@@ -730,7 +686,6 @@ proc/establish_old_db_connection()
 		return setup_old_database_connection()
 	else
 		return 1
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()
