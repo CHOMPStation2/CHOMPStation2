@@ -637,7 +637,6 @@ var/failed_old_db_connections = 0
 	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-<<<<<<< HEAD
 /proc/establish_db_connection() //CHOMPEdit TGSQL
 	return SSdbcore.Connect()
 
