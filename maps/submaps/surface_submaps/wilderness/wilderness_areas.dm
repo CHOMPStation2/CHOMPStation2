@@ -207,3 +207,7 @@
 /area/submap/SyndiSniper
 	name = "POI - Syndi Sniper"
 	ambience = AMBIENCE_SIF
+
+/area/submap/drgnplateu
+	name = "POI - Dragon Plateu"
+	ambience = AMBIENCE_SIF

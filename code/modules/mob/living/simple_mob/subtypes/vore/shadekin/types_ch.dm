@@ -45,7 +45,7 @@
 
 
 
-//"Hunger." - Rakshasa
+//Special event mob. "Hunger." - Rakshasa
 /mob/living/simple_mob/shadekin/red/rakshasa
 	name ="Rakshasa"
 	desc = "A scary, black shadekin? Their body oozes like goop."

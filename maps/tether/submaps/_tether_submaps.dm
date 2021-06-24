@@ -55,19 +55,11 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //Antag/Event/ERT Areas
-<<<<<<< HEAD
-||||||| parent of 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
-
-#include "../../submaps/admin_use_vr/ert.dm"
-#include "../../submaps/admin_use_vr/mercship.dm"
-
-=======
 
 #include "../../submaps/admin_use_vr/ert.dm"
 #include "../../submaps/admin_use_vr/mercship.dm"
 #include "../../submaps/admin_use_vr/guttersite.dm"
 
->>>>>>> 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
 /datum/map_template/admin_use/ert
 	name = "Special Area - ERT"
 	desc = "It's the ERT ship! Lorge."
@@ -84,27 +76,10 @@
 	mappath = 'maps/offmap_vr/om_ships/salamander.dmm'
 
 /datum/map_template/admin_use/mercenary
-<<<<<<< HEAD
-	name = "Special Area - Merc Base"
-	desc = "So much red!"
-	mappath = 'maps/submaps/admin_use_vr/mercbase.dmm'
-
-||||||| parent of 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
 	name = "Special Area - Merc Ship"
 	desc = "Prepare tae be boarded, arr!"
 	mappath = 'maps/submaps/admin_use_vr/kk_mercship.dmm'
 
-/datum/map_template/admin_use/old_mercenary
-	name = "Special Area - Old Merc Base"
-	desc = "So much red!"
-	mappath = 'maps/submaps/admin_use_vr/mercbase.dmm'
-
-=======
-	name = "Special Area - Merc Ship"
-	desc = "Prepare tae be boarded, arr!"
-	mappath = 'maps/submaps/admin_use_vr/kk_mercship.dmm'
-
->>>>>>> 8844a0cb02... Merge pull request #10032 from Novacat/nova-ert
 /datum/map_template/admin_use/skipjack
 	name = "Special Area - Skipjack Base"
 	desc = "Stinky!"
@@ -329,6 +304,65 @@
 	mappath = 'maps/gateway_vr/listeningpost.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
 
+#include "../../gateway_vr/variable/honlethhighlands.dm"
+/datum/map_template/tether_lateload/gateway/honlethhighlands_a
+	name = "Honleth Highlands A"
+	desc = "The cold surface of some planet."
+	mappath = 'maps/gateway_vr/variable/honlethhighlands_a.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+/datum/map_template/tether_lateload/gateway/honlethhighlands_b
+	name = "Honleth Highlands B"
+	desc = "The cold surface of some planet."
+	mappath = 'maps/gateway_vr/variable/honlethhighlands_b.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+
+#include "../../gateway_vr/variable/arynthilake.dm"
+/datum/map_template/tether_lateload/gateway/arynthilake
+	name = "Arynthi Lake A"
+	desc = "A grassy surface with some abandoned structures."
+	mappath = 'maps/gateway_vr/variable/arynthilake_a.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+/datum/map_template/tether_lateload/gateway/arynthilakeunderground
+	name = "Arynthi Lake Underground A"
+	desc = "A grassy surface with some abandoned structures."
+	mappath = 'maps/gateway_vr/variable/arynthilakeunderground_a.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+/datum/map_template/tether_lateload/gateway/arynthilake_b
+	name = "Arynthi Lake B"
+	desc = "A grassy surface with some abandoned structures."
+	mappath = 'maps/gateway_vr/variable/arynthilake_b.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+/datum/map_template/tether_lateload/gateway/arynthilakeunderground_b
+	name = "Arynthi Lake Underground B"
+	desc = "A grassy surface with some abandoned structures."
+	mappath = 'maps/gateway_vr/variable/arynthilakeunderground_b.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+#include "../../gateway_vr/eggnogtown.dm"
+/datum/map_template/tether_lateload/gateway/eggnogtown
+	name = "Eggnog Town"
+	desc = "A comfortable snowy town."
+	mappath = 'maps/gateway_vr/eggnogtown.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+/datum/map_template/tether_lateload/gateway/eggnogtownunderground
+	name = "Eggnog Town Underground"
+	desc = "A comfortable snowy town."
+	mappath = 'maps/gateway_vr/eggnogtownunderground.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
+#include "../../gateway_vr/wildwest.dm"
+/datum/map_template/tether_lateload/gateway/wildwest
+	name = "Wild West"
+	desc = "A classic."
+	mappath = 'maps/gateway_vr/wildwest.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/gateway_destination
+
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
 #if AWAY_MISSION_TEST
@@ -519,6 +553,8 @@
 #include "../../offmap_vr/om_ships/screebarge.dm"
 #include "../../offmap_vr/om_ships/aro.dm"
 #include "../../offmap_vr/om_ships/aro2.dm"
+#include "../../offmap_vr/om_ships/aro3.dm"
+#include "../../offmap_vr/om_ships/bearcat.dm"
 #include "../../offmap_vr/om_ships/cruiser.dm"
 #include "../../offmap_vr/om_ships/vespa.dm"
 #include "../../offmap_vr/om_ships/generic_shuttle.dm"
@@ -553,6 +589,6 @@
 
 /datum/map_z_level/tether_lateload/talon_v2
 	name = "Talon"
-	flags = MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE
 	base_turf = /turf/space
 	z = Z_LEVEL_OFFMAP1

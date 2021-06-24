@@ -28,12 +28,14 @@
 	var/permit_healbelly = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = TRUE			// Mobs are pred by default.
+	var/allow_spontaneous_tf = FALSE	// Obviously.
 	var/next_preyloop					// For Fancy sound internal loop
 	var/adminbus_trash = FALSE			// For abusing trash eater for event shenanigans.
 	var/adminbus_eat_minerals = FALSE	// This creature subsists on a diet of pure adminium.
 	var/vis_height = 32					// Sprite height used for resize features.
 	var/show_vore_fx = TRUE				// Show belly fullscreens
 	var/latejoin_vore = FALSE			//CHOMPedit: If enabled, latejoiners can spawn into this, assuming they have a client
+	var/noisy_full = FALSE				//CHOMPEdit: Enables belching when a mob has overeaten
 
 //
 // Hook for generic creation of stuff on new creatures
@@ -239,6 +241,7 @@
 	P.show_vore_fx = src.show_vore_fx
 	P.can_be_drop_prey = src.can_be_drop_prey
 	P.can_be_drop_pred = src.can_be_drop_pred
+	P.allow_spontaneous_tf = src.allow_spontaneous_tf
 	P.step_mechanics_pref = src.step_mechanics_pref
 	P.pickup_pref = src.pickup_pref
 
@@ -281,6 +284,7 @@
 	show_vore_fx = P.show_vore_fx
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
+	allow_spontaneous_tf = P.allow_spontaneous_tf
 	step_mechanics_pref = P.step_mechanics_pref
 	pickup_pref = P.pickup_pref
 
@@ -312,14 +316,15 @@
 //
 /mob/living/proc/examine_bellies()
 	if(!show_pudge()) //Some clothing or equipment can hide this.
-		return ""
+		return list()
 
-	var/message = ""
+	var/list/message_list = list()
 	for (var/belly in vore_organs)
 		var/obj/belly/B = belly
-		message += B.get_examine_msg()
+		message_list += B.get_examine_msg()
+		message_list += B.get_examine_msg_absorbed()
 
-	return message
+	return message_list
 
 //
 // Whether or not people can see our belly messages
@@ -893,6 +898,7 @@
 	dispvoreprefs += "<b>Late join spawn point belly:</b> [latejoin_vore ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Receiving liquids:</b> [receive_reagents ? "Enabled" : "Disabled"]<br>" //CHOMPstation edit
 	dispvoreprefs += "<b>Giving liquids:</b> [give_reagents ? "Enabled" : "Disabled"]<br>"	//CHOMPstation edit
+	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=200x300;can_resize=0;can_minimize=0")
@@ -905,7 +911,7 @@
 	icon_state = ""
 
 /mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
-	set name = "Print Vorebelly Settings"
+	set name = "X-Print Vorebelly Settings"
 	set category = "Preferences"
 	set desc = "Print out your vorebelly messages into chat for copypasting."
 
@@ -929,6 +935,8 @@
 				to_chat(src, "<span class='notice'>[msg]</span>")
 			to_chat(src, "<span class='notice'><b>Examine messages:</b></span>")
 			for(var/msg in B.examine_messages)
+				to_chat(src, "<span class='notice'>[msg]</span>")
+			for(var/msg in B.examine_messages_absorbed)
 				to_chat(src, "<span class='notice'>[msg]</span>")
 			to_chat(src, "<span class='notice'><b>Emote lists:</b></span>")
 			for(var/EL in B.emote_lists)

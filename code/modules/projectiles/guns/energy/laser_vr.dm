@@ -358,3 +358,27 @@
 	req_access = newlist() //for toggling safety
 	locked = 0
 	lockable = 0
+
+///phaser bow///
+
+/obj/item/weapon/gun/energy/locked/frontier/handbow
+	name = "phaser handbow"
+	desc = "An minaturized weapon that fires a bolt of energy. Includes a built-in crank charger for recharging away from civilization. This one has a safety interlock that prevents firing while in proximity to the facility."
+	icon = 'icons/obj/gun_vr.dmi'
+	icon_state = "handbowkill"
+	item_state = null
+	phase_power = 100
+
+	w_class = ITEMSIZE_SMALL
+	charge_cost = 600
+	modifystate = "handbowkill"
+	firemodes = list(
+		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/energy/phase/bolt/heavy, modifystate="handbowkill", charge_cost = 600), //CHOMP Edit
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/energy/phase/bolt, modifystate="handbowstun", charge_cost = 200), //CHOMP Edit
+	)
+
+/obj/item/weapon/gun/energy/locked/frontier/handbow/unlocked
+	desc = "An minaturized weapon that fires a bolt of engery. Includes a built-in crank charger for recharging away from civilization."
+	req_access = newlist() //for toggling safety
+	locked = 0
+	lockable = 0

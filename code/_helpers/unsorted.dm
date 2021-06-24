@@ -19,11 +19,9 @@
 
 	if (!( istext(HTMLstring) ))
 		CRASH("Given non-text argument!")
-		return
 	else
 		if (length(HTMLstring) != 7)
 			CRASH("Given non-HTML argument!")
-			return
 	var/textr = copytext(HTMLstring, 2, 4)
 	var/textg = copytext(HTMLstring, 4, 6)
 	var/textb = copytext(HTMLstring, 6, 8)
@@ -40,7 +38,6 @@
 	if (length(textb) < 2)
 		textr = text("0[]", textb)
 	return text("#[][][]", textr, textg, textb)
-	return
 
 //Returns the middle-most value
 /proc/dd_range(var/low, var/high, var/num)
@@ -1130,8 +1127,6 @@ proc/is_hot(obj/item/W as obj)
 		else
 			return 0
 
-	return 0
-
 //Whether or not the given item counts as sharp in terms of dealing damage
 /proc/is_sharp(obj/O as obj)
 	if(!O)
@@ -1619,6 +1614,9 @@ GLOBAL_REAL_VAR(list/stack_trace_storage)
 	// 'Utility' planes
 	. += new /obj/screen/plane_master/fullbright						//Lighting system (lighting_overlay objects)
 	. += new /obj/screen/plane_master/lighting							//Lighting system (but different!)
+	. += new /obj/screen/plane_master/o_light_visual					//Object lighting (using masks)
+	. += new /obj/screen/plane_master/emissive							//Emissive overlays
+	
 	. += new /obj/screen/plane_master/ghosts							//Ghosts!
 	. += new /obj/screen/plane_master{plane = PLANE_AI_EYE}			//AI Eye!
 

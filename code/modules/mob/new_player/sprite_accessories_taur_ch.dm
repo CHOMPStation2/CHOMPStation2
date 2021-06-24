@@ -14,6 +14,7 @@
 	name = "Drake (Fat Taur dual-color)"
 	icon_state = "fatdrake_s"
 	extra_overlay = "fatdrake_markings"
+	icon_sprite_tag = "drake"
 
 /datum/sprite_accessory/tail/taur/ch/redpanda
 	name = "Red Panda (Taur)"
@@ -29,6 +30,7 @@
 	icon_state = "fatwolfalt_s"
 	extra_overlay = "fatwolfalt_markings1"
 	extra_overlay2 = "fatwolfalt_markings2"
+	icon_sprite_tag = "wolf"
 
 /datum/sprite_accessory/tail/taur/ch/naga/alt
 	name = "Naga alt (Taur)"
@@ -50,8 +52,10 @@
 /datum/sprite_accessory/tail/taur/ch/sergal/wheaties
 	name = "Sergal (Taur)"
 	icon_state = "sergwheat"
+	icon_sprite_tag = "wolf"
 
 /datum/sprite_accessory/tail/taur/ch/sergal/wheaties_2c
 	name = "Sergal (Taur, dual-color)"
 	icon_state = "sergwheat"
 	extra_overlay = "sergwheat_markings"
+	icon_sprite_tag = "wolf"
