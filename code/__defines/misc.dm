@@ -462,6 +462,17 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 
 #ifndef HTTP_POST_DLL_LOCATION
 #define HTTP_POST_DLL_LOCATION (world.system_type == MS_WINDOWS ? WINDOWS_HTTP_POST_DLL_LOCATION : UNIX_HTTP_POST_DLL_LOCATION)
+<<<<<<< HEAD
+#endif
+||||||| parent of da19f6f9b3... Merge pull request #10740 from ShadowLarkens/ux_fixes
 #endif
 
 #define DOCK_ATTEMPT_TIMEOUT 200	//how long in ticks we wait before assuming the docking controller is broken or blown up.
+=======
+#endif
+
+#define DOCK_ATTEMPT_TIMEOUT 200	//how long in ticks we wait before assuming the docking controller is broken or blown up.
+
+#define SMES_TGUI_INPUT 1
+#define SMES_TGUI_OUTPUT 2
+>>>>>>> da19f6f9b3... Merge pull request #10740 from ShadowLarkens/ux_fixes
