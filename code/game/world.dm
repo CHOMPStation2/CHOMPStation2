@@ -603,7 +603,7 @@ var/failed_old_db_connections = 0
 	//CHOMPEdit End
 	return 1
 
-/*proc/setup_database_connection() CHOMPEdit TGSQL
+/*/proc/setup_database_connection() CHOMPEdit TGSQL
 
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -637,7 +637,7 @@ var/failed_old_db_connections = 0
 	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-proc/establish_db_connection() //CHOMPEdit TGSQL
+/proc/establish_db_connection() //CHOMPEdit TGSQL
 	return SSdbcore.Connect()
 
 
@@ -652,7 +652,7 @@ proc/establish_db_connection() //CHOMPEdit TGSQL
 	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
-/*proc/setup_old_database_connection() //CHOMPStation TGSQL
+/*/proc/setup_old_database_connection() //CHOMPStation TGSQL
 
 	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0

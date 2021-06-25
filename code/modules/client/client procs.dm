@@ -412,7 +412,6 @@
 	query_accesslog.Execute()
 	qdel(query_accesslog) //CHOMPEdit TGSQL
 
-#undef TOPIC_SPAM_DELAY
 #undef UPLOAD_LIMIT
 #undef MIN_CLIENT_VERSION
 
@@ -442,17 +441,17 @@
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
 		addtimer(CALLBACK(GLOBAL_PROC, /proc/getFilesSlow, src, SSassets.preload, FALSE), 5 SECONDS)
 
-mob/proc/MayRespawn()
+/mob/proc/MayRespawn()
 	return 0
 
-client/proc/MayRespawn()
+/client/proc/MayRespawn()
 	if(mob)
 		return mob.MayRespawn()
 
 	// Something went wrong, client is usually kicked or transfered to a new mob at this point
 	return 0
 
-client/verb/character_setup()
+/client/verb/character_setup()
 	set name = "Character Setup"
 	set category = "Preferences"
 	if(prefs)
