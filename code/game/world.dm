@@ -677,14 +677,8 @@ var/failed_old_db_connections = 0
 	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-/proc/establish_old_db_connection()
-	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)
-		return 0
-
-	if(!dbcon_old || !dbcon_old.IsConnected())
-		return setup_old_database_connection()
-	else
-		return 1
+proc/establish_old_db_connection()
+	return SSdbcore.Connect()
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()
