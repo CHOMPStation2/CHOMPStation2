@@ -454,71 +454,6 @@
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
 // figure this one out for better coloring
-<<<<<<< HEAD
-	xeno_head_sentinel_color
-		name = "Sentinal dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "cxeno_sentinel"
-		species_allowed = list(SPECIES_XENOHYBRID)
-		gender = NEUTER
-
-	xeno_head_queen_color
-		name = "Queen dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "cxeno_queen"
-		species_allowed = list(SPECIES_XENOHYBRID)
-		gender = NEUTER
-
-	xeno_head_hunter_color //ChompstationEdit editing code instead of the sprite because its easier to track
-		name = "Hunter dome"
-		icon = 'icons/mob/human_face_ch.dmi'
-		icon_add = 'icons/mob/human_face_ch_add.dmi'
-		icon_state = "cxeno_hunter"
-		species_allowed = list(SPECIES_XENOHYBRID)
-		gender = NEUTER
-
-	xeno_head_praetorian_color
-		name = "Praetorian dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "cxeno_praetorian"
-		species_allowed = list(SPECIES_XENOHYBRID)
-		gender = NEUTER
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-	xeno_head_sentinel_color
-		name = "Sentinal dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "cxeno_sentinel"
-		species_allowed = list(SPECIES_XENOHYBRID)
-		gender = NEUTER
-
-	xeno_head_queen_color
-		name = "Queen dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "cxeno_queen"
-		species_allowed = list(SPECIES_XENOHYBRID)
-		gender = NEUTER
-
-	xeno_head_hunter_color
-		name = "Hunter dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "cxeno_hunter"
-		species_allowed = list(SPECIES_XENOHYBRID)
-		gender = NEUTER
-
-	xeno_head_praetorian_color
-		name = "Praetorian dome"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "cxeno_praetorian"
-		species_allowed = list(SPECIES_XENOHYBRID)
-		gender = NEUTER
-=======
 /datum/sprite_accessory/hair/xeno_head_sentinel_color
 	name = "Sentinal dome"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -550,77 +485,8 @@
 	icon_state = "cxeno_praetorian"
 	species_allowed = list(SPECIES_XENOHYBRID)
 	gender = NEUTER
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
 
 // Shadekin stuffs
-
-<<<<<<< HEAD
-	shadekin_hair_short
-		name = "Shadekin Short Hair"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "shadekin_short"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW Edits
-		gender = NEUTER
-
-	shadekin_hair_poofy
-		name = "Shadekin Poofy Hair"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "shadekin_poofy"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW Edits
-		gender = NEUTER
-
-	shadekin_hair_long
-		name = "Shadekin Long Hair"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "shadekin_long"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW Edits
-		gender = NEUTER
-
-	shadekin_hair_rivyr
-		name = "Rivyr Hair"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "shadekin_rivyr"
-		ckeys_allowed = list("verysoft")
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW) //YW Edits
-		gender = NEUTER
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-	shadekin_hair_short
-		name = "Shadekin Short Hair"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "shadekin_short"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
-		gender = NEUTER
-
-	shadekin_hair_poofy
-		name = "Shadekin Poofy Hair"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "shadekin_poofy"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
-		gender = NEUTER
-
-	shadekin_hair_long
-		name = "Shadekin Long Hair"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "shadekin_long"
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
-		gender = NEUTER
-
-	shadekin_hair_rivyr
-		name = "Rivyr Hair"
-		icon = 'icons/mob/human_face_vr.dmi'
-		icon_add = 'icons/mob/human_face_vr_add.dmi'
-		icon_state = "shadekin_rivyr"
-		ckeys_allowed = list("verysoft")
-		species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
-		gender = NEUTER
-=======
 /datum/sprite_accessory/hair/shadekin_hair_short
 	name = "Shadekin Short Hair"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -653,7 +519,6 @@
 	ckeys_allowed = list("verysoft")
 	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 	gender = NEUTER
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
 
 /datum/sprite_accessory/facial_hair
 	icon = 'icons/mob/human_face_or_vr.dmi'
