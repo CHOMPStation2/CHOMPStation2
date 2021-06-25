@@ -765,20 +765,8 @@
 				holder.icon_state = "weasel18"
 	return 1
 
-<<<<<<< HEAD
-	spawn_result()
-		..()
-		feedback_inc("mecha_weasel_created",1)
-		return
-*/
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-	spawn_result()
-		..()
-		feedback_inc("mecha_weasel_created",1)
-		return
-=======
 /datum/construction/reversible/mecha/weasel/spawn_result()
 	..()
 	feedback_inc("mecha_weasel_created",1)
 	return
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
+	*/
