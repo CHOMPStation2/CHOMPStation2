@@ -464,6 +464,7 @@
 	options["Whiskey Soda"] = "Liqour Licker"
 	options["Grape Soda"] = "The Grapist"
 	options["Demon's Blood"] = "Vampire's Aid"
+	options["Slav Vodka"] = "Vodka Komrade"
 	var/choice = input(M,"Choose your drink!") in options
 	if(src && choice && !M.stat && in_range(M,src))
 		icontype = options[choice]
