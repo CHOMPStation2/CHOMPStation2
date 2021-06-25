@@ -394,13 +394,10 @@
 /turf/simulated/floor/tiled/external
 
 //**** Here lives snow ****
-
 /turf/simulated/floor/snow
 	name = "snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
-				
-				  
 	initial_flooring = /decl/flooring/snow
 	var/list/crossed_dirs = list()
 
@@ -411,28 +408,19 @@
 	initial_flooring = /decl/flooring/snow
 
 /turf/simulated/floor/snow/gravsnow
-			  
-					   
-				  
-													  
-
-											
 	name = "snow"
 	icon_state = "gravsnow"
 	initial_flooring = /decl/flooring/snow/gravsnow
-				  
 
 /turf/simulated/floor/snow/plating
 	name = "snowy playing"
 	icon_state = "snowyplating"
 	initial_flooring = /decl/flooring/snow/plating
-				  
 
 /turf/simulated/floor/snow/plating/drift
 	name = "snowy plating"
 	icon_state = "snowyplayingdrift"
-	initial_flooring = /decl/flooring/snow/plating/drift
-				  
+	initial_flooring = /decl/flooring/snow/plating/drift			  
 
 // TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
 /turf/simulated/floor/snow/Entered(atom/A)
@@ -444,18 +432,10 @@
 		crossed_dirs[mdir] = 1
 		update_icon()
 	. = ..()
-								  
-
-					 
-
-			
 
 /turf/simulated/floor/snow/update_icon()
 	..()
 	for(var/d in crossed_dirs)
 		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
-
-							  
-																 
 
 //**** Here ends snow ****
