@@ -365,7 +365,6 @@ var/obj/machinery/blackbox_recorder/blackbox
 		query_insert.Execute()
 		qdel(query_insert) //CHOMPEdit TGSQL
 
-<<<<<<< HEAD
 // Sanitize inputs to avoid SQL injection attacks //CHOMPEdit NOTE: This is not secure. Basic filters like this are pretty easy to bypass. Use the format for arguments used in the above.
 /proc/sql_sanitize_text(var/text)
 	text = replacetext(text, "'", "''")
