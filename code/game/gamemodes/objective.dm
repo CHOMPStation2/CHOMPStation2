@@ -662,7 +662,7 @@ var/global/list/all_objectives = list()
 		//if (!target.current.restrained())
 		//	return 0 // They're loose. Close but no cigar.
 
-		var/area/skipjack_station/start/A = locate()
+		var/area/shuttle/skipjack/A = locate() // CHOMPEdit: Shuttle consensing
 		for(var/mob/living/carbon/human/M in A)
 			if(target.current == M)
 				return 1 //They're restrained on the shuttle. Success.
@@ -711,7 +711,7 @@ var/global/list/all_objectives = list()
 /datum/objective/heist/loot/check_completion()
 	var/total_amount = 0
 
-	for(var/obj/O in locate(/area/skipjack_station/start))
+	for(var/obj/O in locate(/area/shuttle/skipjack)) // CHOMPEdit: Shuttle area pathname
 		if(istype(O,target)) total_amount++
 		for(var/obj/I in O.contents)
 			if(istype(I,target)) total_amount++
@@ -758,7 +758,7 @@ var/global/list/all_objectives = list()
 
 	var/total_amount = 0
 
-	for(var/obj/item/O in locate(/area/skipjack_station/start))
+	for(var/obj/item/O in locate(/area/shuttle/skipjack)) //CHOMP Edit: Skipjack area pathname
 
 		var/obj/item/stack/material/S
 		if(istype(O,/obj/item/stack/material))
