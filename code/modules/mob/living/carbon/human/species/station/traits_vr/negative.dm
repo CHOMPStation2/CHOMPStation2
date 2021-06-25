@@ -151,7 +151,6 @@
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping. Think of it like a bowling ball versus a pin. (STOP TAKING THIS AS SECURITY! We're MRP, so expect to lose your junk immediately, especially in events. - Love, Admins)" //CHOMP Edit btw
 	cost = -2
 	var_changes = list("lightweight" = 1)
-<<<<<<< HEAD
 
 // YW Addition
 /datum/trait/negative/light_sensitivity
@@ -176,12 +175,7 @@
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 // YW Addition End
-	
-||||||| parent of d9d6ef92c3... Merge pull request #10270 from Little-119/breather-traits
-	
-=======
 
->>>>>>> d9d6ef92c3... Merge pull request #10270 from Little-119/breather-traits
 /datum/trait/negative/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
 	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."
