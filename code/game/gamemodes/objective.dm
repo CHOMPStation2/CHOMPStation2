@@ -648,63 +648,7 @@ var/global/list/all_objectives = list()
 		target = pick(priority_targets)
 	else if(possible_targets.len > 0)
 		target = pick(possible_targets)
-		
-<<<<<<< HEAD
-datum/objective/heist/loot
 
-	choose_target()
-		var/loot = "an object"
-		switch(rand(1,8))
-			if(1)
-				target = /obj/structure/particle_accelerator
-				target_amount = 6
-				loot = "a complete particle accelerator"
-			if(2)
-				target = /obj/machinery/the_singularitygen
-				target_amount = 1
-				loot = "a gravitational generator"
-			if(3)
-				target = /obj/machinery/power/emitter
-				target_amount = 4
-				loot = "four emitters"
-			if(4)
-				target = /obj/machinery/nuclearbomb
-				target_amount = 1
-				loot = "a nuclear bomb"
-			if(5)
-				target = /obj/item/weapon/gun
-				target_amount = 6
-				loot = "six guns"
-			if(6)
-				target = /obj/item/weapon/gun/energy
-				target_amount = 4
-				loot = "four energy guns"
-			if(7)
-				target = /obj/item/weapon/gun/energy/laser
-				target_amount = 2
-				loot = "two laser guns"
-			if(8)
-				target = /obj/item/weapon/gun/energy/ionrifle
-				target_amount = 1
-				loot = "an ion gun"
-
-		explanation_text = "It's a buyer's market out here. Steal [loot] for resale."
-
-	check_completion()
-
-		var/total_amount = 0
-
-		for(var/obj/O in locate(/area/shuttle/skipjack)) // CHOMPEdit: Shuttle consensing
-			if(istype(O,target)) total_amount++
-			for(var/obj/I in O.contents)
-				if(istype(I,target)) total_amount++
-			if(total_amount >= target_amount) return 1
-
-		for(var/datum/mind/raider in raiders.current_antagonists)
-			if(raider.current)
-				for(var/obj/O in raider.current.get_contents())
-					if(istype(O,target)) total_amount++
-					if(total_amount >= target_amount) return 1
 	if(target && target.current)
 		explanation_text = "We can get a good price for [target.current.real_name], the [target.assigned_role]. Take them alive."
 	else
@@ -953,4 +897,3 @@ datum/objective/heist/loot
 			rval = 2
 		return 0
 	return rval
-
