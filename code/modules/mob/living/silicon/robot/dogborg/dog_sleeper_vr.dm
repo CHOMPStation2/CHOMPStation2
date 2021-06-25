@@ -717,6 +717,7 @@
 /obj/item/device/dogborg/sleeper/command //Command borg belly //CHOMP addition
 	name = "Bluespace Filing Belly"
 	desc = "A mounted bluespace storage unit for carrying paperwork"
+	icon = 'icons/mob/dogborg_ch.dmi'
 	icon_state = "sleeperd"
 	injection_chems = null
 	compactor = TRUE
