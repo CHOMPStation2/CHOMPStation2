@@ -12,14 +12,7 @@
 	var/active_force = 55
 	var/inactive_force = 10
 
-<<<<<<< HEAD
-obj/item/weapon/chainsaw/Initialize() //YW edit - replaced New with Initialize so chainsaws can be mapped in
-	. = ..()
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-obj/item/weapon/chainsaw/New()
-=======
 /obj/item/weapon/chainsaw/New()
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
 	var/datum/reagents/R = new/datum/reagents(max_fuel)
 	reagents = R
 	R.my_atom = src
