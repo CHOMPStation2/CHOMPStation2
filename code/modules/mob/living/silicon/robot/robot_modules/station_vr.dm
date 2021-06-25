@@ -69,7 +69,6 @@
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //CH Addition booze found in /code/modules/mob/living/silicon/robot/subtypes/boozeborg_ch.dm
 	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CH Addition Unity
 	return 1
 
@@ -880,8 +879,9 @@
 				"Gamer Juice Maker" = "boozeborg(green)",
 				"Liqour Licker" = "boozeborg(orange)",
 				"The Grapist" = "boozeborg(purple)",
-				"Vampire's Aid" = "boozeborg(red)"
-				)
+				"Vampire's Aid" = "boozeborg(red)",
+				"Vodka Komrade" = "boozeborg(vodka)"
+				) //CHOMP Edit Added Vodka Komrade
 
 /obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
 	..()
@@ -939,7 +939,17 @@
 		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
 		B.reagents.add_reagent("beer2", 2 * amount)
 
-//CHOMPstation boozeborg stuff found in /code/modules/mob/living/silicon/robot/subtypes/boozeborg_ch.dm
+//CHOMP addition start BORGHYPO
+/obj/item/weapon/reagent_containers/borghypo/service/booze
+	name = "cyborg drink synthesizer"
+	desc = "A portable drink dispencer."
+	icon = 'icons/obj/drinks.dmi'
+	icon_state = "shaker"
+	charge_cost = 20
+	recharge_time = 3
+	volume = 120
+	possible_transfer_amounts = list(1 ,5, 10, 20, 30)
+//Chomp addition end
 
 // CH Changes - Unity Hound begin
 /obj/item/weapon/robot_module/robot/chound
