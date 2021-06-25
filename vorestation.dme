@@ -1693,7 +1693,6 @@
 #include "code\game\turfs\simulated\outdoors\outdoors_vr.dm"
 #include "code\game\turfs\simulated\outdoors\sky.dm"
 #include "code\game\turfs\simulated\outdoors\snow.dm"
-#include "code\game\turfs\simulated\outdoors\snow_yw.dm"
 #include "code\game\turfs\snow\snow.dm"
 #include "code\game\turfs\space\cracked_asteroid.dm"
 #include "code\game\turfs\space\space.dm"
