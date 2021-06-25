@@ -177,11 +177,18 @@
 			"emote_time" = selected.emote_time,
 			"emote_active" = selected.emote_active,
 			"belly_fullscreen" = selected.belly_fullscreen,
+<<<<<<< HEAD
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,	//CHOMPEdit
 			"mapRef" = map_name,	//CHOMPEdit
 			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore_ch.dmi'), //CHOMPedit
 			"vorespawn_blacklist" = selected.vorespawn_blacklist
 		) //CHOMP Addition: vorespawn blacklist
+||||||| parent of fd50ee3e0c... Merge pull request #10755 from Verkister/patch-60
+			"possible_fullscreens" = icon_states('icons/mob/screen_full_vore.dmi'),
+		)
+=======
+		)
+>>>>>>> fd50ee3e0c... Merge pull request #10755 from Verkister/patch-60
 
 		var/list/addons = list()
 		for(var/flag_name in selected.mode_flag_list)
@@ -208,7 +215,12 @@
 			selected_list["interacts"]["digestchance"] = selected.digestchance
 
 		selected_list["disable_hud"] = selected.disable_hud
+<<<<<<< HEAD
 		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_full_vore_ch.dmi') //CHOMPedit
+||||||| parent of fd50ee3e0c... Merge pull request #10755 from Verkister/patch-60
+=======
+		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_full_vore.dmi')
+>>>>>>> fd50ee3e0c... Merge pull request #10755 from Verkister/patch-60
 
 		var/list/selected_contents = list()
 		for(var/O in selected)
