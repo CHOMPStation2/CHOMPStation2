@@ -747,13 +747,7 @@
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
 	scannable = 1
-<<<<<<< HEAD
 	var/repair_strength = 6	//CHOMPEdit
-||||||| parent of 7fad3f6620... Merge pull request #10727 from Novacat/nova-basicfixes
-	var/repair_strength = 3
-=======
-	var/repair_strength = 5
->>>>>>> 7fad3f6620... Merge pull request #10727 from Novacat/nova-basicfixes
 
 /datum/reagent/myelamine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
