@@ -172,10 +172,24 @@
 	..(S,H)
 	H.add_modifier(/datum/modifier/trait/haemophilia)
 // YW Addition End
-	
+
 /datum/trait/negative/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
 	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."
 	cost = -1
 	var_changes = list("trauma_mod" = 2)
 	can_take = ORGANICS
+
+/datum/trait/negative/breathes
+	cost = -2
+	can_take = ORGANICS
+
+/datum/trait/negative/breathes/phoron
+	name = "Phoron Breather"
+	desc = "You breathe phoron instead of oxygen (which is poisonous to you), much like a Vox."
+	var_changes = list("breath_type" = "phoron", "poison_type" = "oxygen")
+
+/datum/trait/negative/breathes/nitrogen
+	name = "Nitrogen Breather"
+	desc = "You breathe nitrogen instead of oxygen (which is poisonous to you). Incidentally, phoron isn't poisonous to breathe to you."
+	var_changes = list("breath_type" = "nitrogen", "poison_type" = "oxygen")
