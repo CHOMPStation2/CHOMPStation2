@@ -3016,7 +3016,6 @@
 #include "code\modules\mob\living\silicon\robot\robot_modules\station_vr.dm"
 #include "code\modules\mob\living\silicon\robot\robot_modules\swarm.dm"
 #include "code\modules\mob\living\silicon\robot\robot_modules\syndicate.dm"
-#include "code\modules\mob\living\silicon\robot\subtypes\boozeborg_ch.dm"
 #include "code\modules\mob\living\silicon\robot\subtypes\gravekeeper.dm"
 #include "code\modules\mob\living\silicon\robot\subtypes\lost_drone.dm"
 #include "code\modules\mob\living\silicon\robot\subtypes\lost_drone_vr.dm"
