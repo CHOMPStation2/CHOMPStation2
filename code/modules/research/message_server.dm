@@ -367,14 +367,7 @@ var/obj/machinery/blackbox_recorder/blackbox
 
 <<<<<<< HEAD
 // Sanitize inputs to avoid SQL injection attacks //CHOMPEdit NOTE: This is not secure. Basic filters like this are pretty easy to bypass. Use the format for arguments used in the above.
-proc/sql_sanitize_text(var/text)
-||||||| parent of 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
-// Sanitize inputs to avoid SQL injection attacks
-proc/sql_sanitize_text(var/text)
-=======
-// Sanitize inputs to avoid SQL injection attacks
 /proc/sql_sanitize_text(var/text)
->>>>>>> 18962f7a77... Merge pull request #10719 from VOREStation/upstream-merge-8150
 	text = replacetext(text, "'", "''")
 	text = replacetext(text, ";", "")
 	text = replacetext(text, "&", "")
