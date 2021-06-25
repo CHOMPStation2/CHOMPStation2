@@ -394,7 +394,6 @@
 /turf/simulated/floor/tiled/external
 
 //**** Here lives snow ****
-
 /turf/simulated/floor/outdoors/snow
 	name = "snow"
 	icon = 'icons/turf/snow_new.dmi'
@@ -442,8 +441,10 @@
 		crossed_dirs[mdir] = 1
 		update_icon()
 	. = ..()
+
 /turf/simulated/floor/snow/update_icon()
 	..()
 	for(var/d in crossed_dirs)
 		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
+		
 //**** Here ends snow ****
