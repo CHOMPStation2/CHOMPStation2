@@ -20,7 +20,7 @@
 	icon_state = "shadekin"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+	species_allowed = list()//SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) Chompstation removal, cute fluffy ears for all
 
 // Ears avaliable to anyone
 
