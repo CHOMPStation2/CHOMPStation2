@@ -752,7 +752,7 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /obj/structure/sign/poster{
-	pixel_y = 32
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/recoveryward)
@@ -1974,6 +1974,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/obj/structure/sign/poster{
+	pixel_y = 32
+	},
+=======
+/obj/structure/sign/poster{
+	dir = 1
+	},
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/evidence)
 "acW" = (
@@ -5669,9 +5679,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/structure/sign/poster{
-	pixel_y = -32
-	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/centralhall)
 "aiO" = (
@@ -6761,9 +6769,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 9
 	},
-/obj/structure/sign/poster{
-	pixel_y = -32
-	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/centralhall)
 "akF" = (
@@ -6941,8 +6947,34 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akR" = (
+<<<<<<< HEAD
 /turf/simulated/wall/r_wall,
 /area/tether/surfacebase/medical/uppersouthstairwell)
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/structure/sign/poster{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/middlehall)
+=======
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/structure/sign/poster{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/middlehall)
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 "akS" = (
 /obj/structure/window/reinforced,
 /obj/machinery/vending/fitness{
@@ -7634,9 +7666,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/structure/sign/poster{
-	pixel_y = -32
-	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "alW" = (
@@ -10316,10 +10346,6 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
-"aqt" = (
-/obj/structure/sign/poster,
-/turf/simulated/wall,
-/area/tether/surfacebase/public_garden_two)
 "aqu" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -10329,6 +10355,9 @@
 	},
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 9
+	},
+/obj/structure/sign/poster{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
@@ -11327,14 +11356,10 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/obj/machinery/vending/cigarette{
-	name = "Cigarette machine";
-	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
-	},
 /obj/effect/floor_decal/techfloor/hole{
 	dir = 1
 	},
+/obj/machinery/vending/sovietvend,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/bar)
 "ash" = (
@@ -12579,6 +12604,9 @@
 	},
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 6
+	},
+/obj/structure/sign/poster{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
@@ -14373,11 +14401,11 @@
 /area/tether/surfacebase/surface_two_hall)
 "axu" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/structure/sign/poster{
-	pixel_x = -32
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/structure/sign/poster{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
@@ -25649,7 +25677,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
 	},
-/obj/machinery/vending/snack{
+/obj/machinery/vending/weeb{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -35402,14 +35430,14 @@
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 "xbt" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/structure/sign/poster{
-	pixel_x = -32
-	},
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /obj/effect/landmark/start{
 	name = "Medical Doctor"
+	},
+/obj/structure/sign/poster{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
@@ -40100,7 +40128,7 @@ adt
 adt
 adt
 akX
-aqt
+akX
 akX
 akX
 adt
@@ -41240,7 +41268,7 @@ aqz
 aog
 ars
 atI
-aqt
+akX
 akX
 adt
 adt
