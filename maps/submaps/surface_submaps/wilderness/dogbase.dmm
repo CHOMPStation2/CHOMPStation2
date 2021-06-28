@@ -60,7 +60,6 @@
 "yl" = (/obj/structure/dogbed,/obj/effect/decal/remains/deer,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/random/contraband/nofail,/turf/simulated/floor/outdoors/dirt,/area/submap/DogBase)
 "yx" = (/obj/machinery/door/airlock/external,/turf/simulated/floor/tiled/dark,/area/submap/DogBase)
 "yX" = (/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,/obj/structure/table/woodentable,/obj/effect/floor_decal/corner/red/border{dir = 1; icon_state = "bordercolor"},/turf/simulated/floor/tiled/dark,/area/submap/DogBase)
-"zJ" = (/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{desc = "The biggest and baddest guard dog around."; faction = "syndicate"; name = "syndicate guard dog"},/turf/simulated/floor,/area/submap/DogBase)
 "Am" = (/obj/machinery/door/blast/gate/thin,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt,/area/submap/DogBase)
 "AJ" = (/obj/machinery/door/airlock/engineering,/turf/simulated/floor/tiled,/area/submap/DogBase)
 "AY" = (/obj/structure/closet/secure_closet/guncabinet,/obj/random/projectile,/obj/random/projectile,/obj/effect/floor_decal/corner/red/border{dir = 1; icon_state = "bordercolor"},/turf/simulated/floor/tiled/dark,/area/submap/DogBase)
@@ -139,12 +138,12 @@ hphphphphphpwShphpBkWuBxBAIzBABBBAIzseBkhpEzwShphphphphphphp
 hphphplNHlhphphphpBkvqlXlXlXlXlXlXlXUWBkhphphphpHllNhphphphp
 kmhphpHlBkBkBkBkBkBkBkBkBkBkLPBkBkBkBkBkBkBkBkBkBkHlhphphpkm
 hphphphpBkfgYilgeIBkNgGJAYxeCzWmyXWUabBkZKPJlhhZBkhphphphphp
-hphpwShpBkngQuQuQuFmwQlbWqWqWqWqwIlbtzAJLexccSKtBkhpwShphphp
+hphphphpBkngQuQuQuFmwQlbWqWqWqWqwIlbtzAJLexccSKtBkhphphphphp
 hphphphpBkVmVmbwCeBkFOOSOSOSOSOSOSOSqgBkKivXlhttBkhphphpkmhp
 hphphpHlBkBkBkBkBkBkBkBkBkBkLPBkBkBkBkBkBkBkBkBkBkHlhphphphp
 hphphplNFDivUYaXJmBkDtYrYrrHYrrHYrYrLmBkhphphphpHllNhphphphp
 hphphphpFDylGflkxpBktNVGHFVGVGVGVGVGseBkhphphphphphphphphphp
-hphphphpFDYXOlaeayBktNHMRzHMOknpHMHMseBkhpwShpkmhphphpkmhphp
+hphphphpFDYXOlaeayBktNHMRzHMOknpHMHMseBkhphphpkmhphphpkmhphp
 hphphphpFDqIVyklCQBkDvwIwIwIwIwIwIwIseBkhphphphphphphphphphp
 hphphphpFDjOfIlkYXBkRWWqWqWqreWqlbWqjDBkhphphphpEzhphphphphp
 hphphphpToGBAmAmGBBkvqlXNihllXNihllXYaBkhphphpkmhphphphphphp
@@ -154,7 +153,7 @@ hphphphphphpoWQBhpBktNWqhlBYlXBYNiWqseBkhpwShphphphphphphphp
 hphphphphphpoWoWQpBkqkWqseBkyxBktNWqbxBkhphphpkmhphphphphphp
 hphphphphpXzoWhpQpBkvqlXjzBkWqBkeAlXUWBkhphphphphphphphphphp
 hphphphpXzXzhphptpBkBkBkBkaFyxaFBkBkBkBkHlhphphphphpkmhphphp
-hphphphphpEzSWhplNHlzJlrORbllrblORlrzJHllNhpEzhphphphphphphp
+hphphphphpEzSWhplNHlHllrORbllrblORlrHlHllNhpEzhphphphphphphp
 hphphphphphphphphphpHlHlHlHlYJHlHlHlHlhphphphphphphphphphphp
 hphphphpkmSWhpSWhpkmhphpSWSWSWSWSWhphphphphphphphphpkmhphphp
 kmhphphphphphphphphphphpSWhpSWSWSWSWhphphphphpkmhphphphphphp
