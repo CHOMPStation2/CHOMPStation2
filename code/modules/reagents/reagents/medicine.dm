@@ -729,7 +729,7 @@
 				if(istype(R,/datum/reagent/osteodaxon))
 					totalvol += R.volume
 		totalvol += volume
-		if(totalvol >= 5)
+		if(totalvol >= 1)
 			for(var/obj/item/organ/external/O in H.bad_external_organs)
 				if(O.status & ORGAN_BROKEN)
 					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
