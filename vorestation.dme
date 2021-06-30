@@ -289,7 +289,6 @@
 #include "code\controllers\subsystems\mobs.dm"
 #include "code\controllers\subsystems\nanoui.dm"
 #include "code\controllers\subsystems\nightshift.dm"
-#include "code\controllers\subsystems\open_space.dm"
 #include "code\controllers\subsystems\orbits.dm"
 #include "code\controllers\subsystems\overlays.dm"
 #include "code\controllers\subsystems\persist_vr.dm"
@@ -373,6 +372,7 @@
 #include "code\datums\components\crafting\tool_quality.dm"
 #include "code\datums\elements\_element.dm"
 #include "code\datums\elements\light_blocking.dm"
+#include "code\datums\elements\turf_transparency.dm"
 #include "code\datums\game_masters\_common.dm"
 #include "code\datums\helper_datums\construction_datum.dm"
 #include "code\datums\helper_datums\events.dm"
@@ -3416,6 +3416,7 @@
 #include "code\modules\multiz\pipes.dm"
 #include "code\modules\multiz\stairs.dm"
 #include "code\modules\multiz\turf.dm"
+<<<<<<< HEAD
 #include "code\modules\multiz\turf_yw.dm"
 #include "code\modules\multiz\zshadow.dm"
 #include "code\modules\nano\nanoexternal.dm"
@@ -3437,6 +3438,10 @@
 #include "code\modules\nano\interaction\remote.dm"
 #include "code\modules\nano\interaction\self.dm"
 #include "code\modules\nano\interaction\zlevel.dm"
+||||||| parent of b9e47f102b... Merge pull request #10764 from VOREStation/Arokha/multiviz
+#include "code\modules\multiz\zshadow.dm"
+=======
+>>>>>>> b9e47f102b... Merge pull request #10764 from VOREStation/Arokha/multiviz
 #include "code\modules\news\news_init.dm"
 #include "code\modules\news\newspaper.dm"
 #include "code\modules\news\newspaper_layout.dm"
