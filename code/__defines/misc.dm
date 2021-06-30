@@ -467,4 +467,19 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define DOCK_ATTEMPT_TIMEOUT 200	//how long in ticks we wait before assuming the docking controller is broken or blown up.
 
 #define SMES_TGUI_INPUT 1
+<<<<<<< HEAD
 #define SMES_TGUI_OUTPUT 2
+||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+#define SMES_TGUI_OUTPUT 2
+=======
+#define SMES_TGUI_OUTPUT 2
+
+#define TRAIT_SORT_NORMAL 1
+#define TRAIT_SORT_BODYTYPE 2
+#define TRAIT_SORT_SPECIES 3
+
+#define SPECIES_SORT_NORMAL 1
+#define SPECIES_SORT_WHITELISTED 2
+#define SPECIES_SORT_RESTRICTED 3
+#define SPECIES_SORT_CUSTOM 4
+>>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2

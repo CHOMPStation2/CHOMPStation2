@@ -63,12 +63,12 @@
 		return
 */
 	if(vore_selected.digest_mode == DM_HOLD)
-		var/confirm = alert(user, "Enabling digestion on [name] will cause it to digest all stomach contents. Using this to break OOC prefs is against the rules. Digestion will reset after 20 minutes.", "Enabling [name]'s Digestion", "Enable", "Cancel")
+		var/confirm = tgui_alert(user, "Enabling digestion on [name] will cause it to digest all stomach contents. Using this to break OOC prefs is against the rules. Digestion will reset after 20 minutes.", "Enabling [name]'s Digestion", list("Enable", "Cancel"))
 		if(confirm == "Enable")
 			vore_selected.digest_mode = DM_DIGEST
 			addtimer(VARSET_CALLBACK(vore_selected, digest_mode, vore_default_mode), 20 MINUTES)
 	else
-		var/confirm = alert(user, "This mob is currently set to process all stomach contents. Do you want to disable this?", "Disabling [name]'s Digestion", "Disable", "Cancel")
+		var/confirm = tgui_alert(user, "This mob is currently set to process all stomach contents. Do you want to disable this?", "Disabling [name]'s Digestion", list("Disable", "Cancel"))
 		if(confirm == "Disable")
 			vore_selected.digest_mode = DM_HOLD
 

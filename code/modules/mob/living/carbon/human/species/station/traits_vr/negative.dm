@@ -8,7 +8,7 @@
 	var_changes = list("slowdown" = 0.5)
 
 /datum/trait/negative/speed_slow_plus
-	name = "Major Slowdown"
+	name = "Slowdown, Major"
 	desc = "Allows you to move MUCH slower on average than baseline."
 	cost = -5
 	var_changes = list("slowdown" = 1.0)
@@ -20,7 +20,7 @@
 	var_changes = list("item_slowdown_mod" = 1.5)
 
 /datum/trait/negative/weakling_plus
-	name = "Major Weakling"
+	name = "Weakling, Major"
 	desc = "Allows you to carry heavy equipment with much more slowdown."
 	cost = -2
 	var_changes = list("item_slowdown_mod" = 2.0)
@@ -36,7 +36,7 @@
 	H.setMaxHealth(S.total_health)
 
 /datum/trait/negative/endurance_very_low
-	name = "Extremely Low Endurance"
+	name = "Low Endurance, Major"
 	desc = "Reduces your maximum total hitpoints to 50."
 	cost = -3 //Teshari HP. This makes the person a lot more suseptable to getting stunned, killed, etc.
 	var_changes = list("total_health" = 50)
@@ -46,8 +46,16 @@
 	H.setMaxHealth(S.total_health)
 
 /datum/trait/negative/minor_brute_weak
+<<<<<<< HEAD
 	name = "Minor Brute Weakness"
 	desc = "Increases damage from brute damage sources by 10%"
+||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+	name = "Minor Brute Weakness"
+	desc = "Increases damage from brute damage sources by 15%"
+=======
+	name = "Brute Weakness, Minor"
+	desc = "Increases damage from brute damage sources by 15%"
+>>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = -1
 	var_changes = list("brute_mod" = 1.1)
 
@@ -58,14 +66,30 @@
 	var_changes = list("brute_mod" = 1.2)
 
 /datum/trait/negative/brute_weak_plus
+<<<<<<< HEAD
 	name = "Major Brute Weakness"
 	desc = "Increases damage from brute damage sources by 40%"
+||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+	name = "Major Brute Weakness"
+	desc = "Increases damage from brute damage sources by 50%"
+=======
+	name = "Brute Weakness, Major"
+	desc = "Increases damage from brute damage sources by 50%"
+>>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = -3
 	var_changes = list("brute_mod" = 1.4)
 
 /datum/trait/negative/minor_burn_weak
+<<<<<<< HEAD
 	name = "Minor Burn Weakness"
 	desc = "Increases damage from burn damage sources by 10%"
+||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+	name = "Minor Burn Weakness"
+	desc = "Increases damage from burn damage sources by 15%"
+=======
+	name = "Burn Weakness, Minor"
+	desc = "Increases damage from burn damage sources by 15%"
+>>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = -1
 	var_changes = list("burn_mod" = 1.1)
 
@@ -76,8 +100,16 @@
 	var_changes = list("burn_mod" = 1.2)
 
 /datum/trait/negative/burn_weak_plus
+<<<<<<< HEAD
 	name = "Major Burn Weakness"
 	desc = "Increases damage from burn damage sources by 40%"
+||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+	name = "Major Burn Weakness"
+	desc = "Increases damage from burn damage sources by 50%"
+=======
+	name = "Burn Weakness, Major"
+	desc = "Increases damage from burn damage sources by 50%"
+>>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = -3
 	var_changes = list("burn_mod" = 1.4)
 
@@ -120,10 +152,22 @@
 	var_changes = list("siemens_coefficient" = 1.25) //This makes you a lot weaker to tasers.
 
 /datum/trait/negative/conductive_plus
+<<<<<<< HEAD
 	name = "Major Conductive"
 	desc = "Increases your susceptibility to electric shocks by 50%"
 	cost = -3
 	var_changes = list("siemens_coefficient" = 1.5) //This makes you significantly weaker to tasers.
+||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+	name = "Major Conductive"
+	desc = "Increases your susceptibility to electric shocks by 100%"
+	cost = -1
+	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
+=======
+	name = "Conductive, Major"
+	desc = "Increases your susceptibility to electric shocks by 100%"
+	cost = -1
+	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
+>>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 
 /datum/trait/negative/haemophilia
 	name = "Haemophilia - Organics only"

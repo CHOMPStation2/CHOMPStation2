@@ -63,13 +63,19 @@
 	var/finalized = "No"
 
 	while(finalized == "No" && M.client)
-		choice = input(M,"What type of predator do you want to play as?") as null|anything in possible_mobs
+		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", possible_mobs)
 		if(!choice)
 			randomize = TRUE
 			break
 
 		if(choice)
+<<<<<<< HEAD
 			finalized = alert(M, "Are you sure you want to play as [choice]? By clicking yes you should expect to be treated as vore predator and possibly killed. Do not attack other players. You will have minimal OOC pref protections.","Confirmation","No","Yes")
+||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+			finalized = alert(M, "Are you sure you want to play as [choice]?","Confirmation","No","Yes")
+=======
+			finalized = tgui_alert(M, "Are you sure you want to play as [choice]?","Confirmation",list("No","Yes"))
+>>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 
 	if(randomize)
 		choice = pick(possible_mobs)
