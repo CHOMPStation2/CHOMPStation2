@@ -411,16 +411,8 @@
 						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
 					else
 						establish_old_db_connection()
-<<<<<<< HEAD
 						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-							alert("Connection to Archive has been severed. Aborting.")
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-						if(!dbcon_old.IsConnected())
-							alert("Connection to Archive has been severed. Aborting.")
-=======
-						if(!dbcon_old.IsConnected())
 							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 						else
 							/*
 							var/sqltitle = dbcon.Quote(scanner.cache.name)
@@ -438,29 +430,15 @@
 								to_chat(usr,query.ErrorMsg())
 							else
 								log_game("[usr.name]/[usr.key] has uploaded the book titled [scanner.cache.name], [length(scanner.cache.dat)] signs")
-<<<<<<< HEAD
-								alert("Upload Complete.")
-							qdel(query) //CHOMPEdit TGSQL
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-								alert("Upload Complete.")
-=======
 								tgui_alert_async(usr, "Upload Complete.")
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+							qdel(query) //CHOMPEdit TGSQL
 	//VOREStation Edit End
 
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
 		establish_old_db_connection()
-<<<<<<< HEAD
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-			alert("Connection to Archive has been severed. Aborting.")
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-		if(!dbcon_old.IsConnected())
-			alert("Connection to Archive has been severed. Aborting.")
-=======
-		if(!dbcon_old.IsConnected())
 			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 		if(bibledelay)
 			for (var/mob/V in hearers(src))
 				V.show_message("<b>[src]</b>'s monitor flashes, \"Printer unavailable. Please allow a short time before attempting to print.\"")
@@ -484,35 +462,8 @@
 				B.item_state = B.icon_state
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
-<<<<<<< HEAD
 			qdel(query) //CHOMPEdit TGSQL
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 
-	if(href_list["delid"])
-		if(!check_rights(R_ADMIN))
-			return
-		var/sqlid = sanitizeSQL(href_list["delid"])
-		establish_old_db_connection()
-		if(!dbcon_old.IsConnected())
-			alert("Connection to Archive has been severed. Aborting.")
-		else
-			var/DBQuery/query = dbcon_old.NewQuery("DELETE FROM library WHERE id=[sqlid]")
-			query.Execute()
-
-=======
-
-	if(href_list["delid"])
-		if(!check_rights(R_ADMIN))
-			return
-		var/sqlid = sanitizeSQL(href_list["delid"])
-		establish_old_db_connection()
-		if(!dbcon_old.IsConnected())
-			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
-		else
-			var/DBQuery/query = dbcon_old.NewQuery("DELETE FROM library WHERE id=[sqlid]")
-			query.Execute()
-
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	if(href_list["orderbyid"])
 		var/orderid = input(usr, "Enter your order:") as num|null
 		if(orderid)
