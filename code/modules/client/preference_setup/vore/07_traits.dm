@@ -334,16 +334,8 @@
 			var/conflict = FALSE
 
 			if(pref.dirty_synth && !(instance.can_take & SYNTHETICS))
-<<<<<<< HEAD
-				alert("The trait you've selected can only be taken by organic characters!","Error")
-				//pref.dirty_synth = 0	//Just to be sure //CHOMPEdit this shit broke, stop.
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-				alert("The trait you've selected can only be taken by organic characters!","Error")
-				pref.dirty_synth = 0	//Just to be sure
-=======
 				tgui_alert_async(usr, "The trait you've selected can only be taken by organic characters!", "Error")
-				pref.dirty_synth = 0	//Just to be sure
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+				//pref.dirty_synth = 0	//Just to be sure //CHOMPEdit this shit broke, stop.
 				return TOPIC_REFRESH
 
 			if(pref.gross_meatbag && !(instance.can_take & ORGANICS))
