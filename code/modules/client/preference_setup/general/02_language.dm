@@ -69,16 +69,8 @@
 		return TOPIC_REFRESH
 	else if(href_list["add_language"])
 		var/datum/species/S = GLOB.all_species[pref.species]
-<<<<<<< HEAD
 		if(pref.alternate_languages.len >= pref.numlanguage()) //CHOMPEdit
-			alert(user, "You have already selected the maximum number of alternate languages for this species!")
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-		if(pref.alternate_languages.len >= S.num_alternate_languages)
-			alert(user, "You have already selected the maximum number of alternate languages for this species!")
-=======
-		if(pref.alternate_languages.len >= S.num_alternate_languages)
 			tgui_alert_async(user, "You have already selected the maximum number of alternate languages for this species!")
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 		else
 			var/list/available_languages = S.secondary_langs.Copy()
 			for(var/L in GLOB.all_languages)
@@ -94,16 +86,8 @@
 			if(!available_languages.len)
 				tgui_alert_async(user, "There are no additional languages available to select.")
 			else
-<<<<<<< HEAD
-				var/new_lang = input(user, "Select an additional language", "Character Generation", null) as null|anything in available_languages
-				if(new_lang && pref.alternate_languages.len < pref.numlanguage()) //CHOMPEdit
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-				var/new_lang = input(user, "Select an additional language", "Character Generation", null) as null|anything in available_languages
-				if(new_lang && pref.alternate_languages.len < S.num_alternate_languages)
-=======
 				var/new_lang = tgui_input_list(user, "Select an additional language", "Character Generation", available_languages)
-				if(new_lang && pref.alternate_languages.len < S.num_alternate_languages)
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+				if(new_lang && pref.alternate_languages.len < pref.numlanguage()) //CHOMPEdit
 					pref.alternate_languages |= new_lang
 					return TOPIC_REFRESH
 
