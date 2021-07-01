@@ -22,15 +22,7 @@
 	if(!istype(refactory))
 		to_chat(src,"<span class='warning'>You don't have a working refactory module!</span>")
 		return
-<<<<<<< HEAD
-	var/choice = input(src,"Pick the bodypart to change:", "Refactor - One Bodypart") as null|anything in species.has_limbs
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-		
-	var/choice = input(src,"Pick the bodypart to change:", "Refactor - One Bodypart") as null|anything in species.has_limbs
-=======
-		
 	var/choice = tgui_input_list(src,"Pick the bodypart to change:", "Refactor - One Bodypart", species.has_limbs)
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	if(!choice)
 		return
 
