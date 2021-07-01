@@ -207,7 +207,7 @@
 			selected_list["interacts"]["digestchance"] = selected.digestchance
 
 		selected_list["disable_hud"] = selected.disable_hud
-		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_full_vore_ch.dmi') //CHOMPedit
+		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_preview_vore_ch.dmi') //CHOMPedit
 
 		var/list/selected_contents = list()
 		for(var/O in selected)
