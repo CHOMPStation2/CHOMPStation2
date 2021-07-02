@@ -81,16 +81,8 @@
 // YW Addition end
 
 /datum/trait/neutral/bloodsucker
-<<<<<<< HEAD
-	name = "Minor Bloodsucker (Obligate)" //YW edit
+	name = "Bloodsucker, Obligate" //YW edit
 	desc = "Makes you unable to gain nutrition from anything but blood. To compensate, you get fangs that can be used to drain blood from prey."
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Bloodsucker (Obligate)"
-	desc = "Makes you unable to gain nutrition from anything but blood. To compenstate, you get fangs that can be used to drain blood from prey."
-=======
-	name = "Bloodsucker, Obligate"
-	desc = "Makes you unable to gain nutrition from anything but blood. To compenstate, you get fangs that can be used to drain blood from prey."
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("organic_food_coeff" = 0) //The verb is given in human.dm
