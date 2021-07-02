@@ -46,18 +46,10 @@
 	H.setMaxHealth(S.total_health)
 
 /datum/trait/negative/minor_brute_weak
-<<<<<<< HEAD
-	name = "Minor Brute Weakness"
-	desc = "Increases damage from brute damage sources by 10%"
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Minor Brute Weakness"
-	desc = "Increases damage from brute damage sources by 15%"
-=======
 	name = "Brute Weakness, Minor"
 	desc = "Increases damage from brute damage sources by 15%"
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = -1
-	var_changes = list("brute_mod" = 1.1)
+	var_changes = list("brute_mod" = 1.15)
 
 /datum/trait/negative/brute_weak
 	name = "Brute Weakness"
@@ -66,32 +58,16 @@
 	var_changes = list("brute_mod" = 1.2)
 
 /datum/trait/negative/brute_weak_plus
-<<<<<<< HEAD
-	name = "Major Brute Weakness"
-	desc = "Increases damage from brute damage sources by 40%"
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Major Brute Weakness"
-	desc = "Increases damage from brute damage sources by 50%"
-=======
 	name = "Brute Weakness, Major"
 	desc = "Increases damage from brute damage sources by 50%"
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = -3
-	var_changes = list("brute_mod" = 1.4)
+	var_changes = list("brute_mod" = 1.5)
 
 /datum/trait/negative/minor_burn_weak
-<<<<<<< HEAD
-	name = "Minor Burn Weakness"
-	desc = "Increases damage from burn damage sources by 10%"
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Minor Burn Weakness"
-	desc = "Increases damage from burn damage sources by 15%"
-=======
 	name = "Burn Weakness, Minor"
 	desc = "Increases damage from burn damage sources by 15%"
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = -1
-	var_changes = list("burn_mod" = 1.1)
+	var_changes = list("burn_mod" = 1.15)
 
 /datum/trait/negative/burn_weak
 	name = "Burn Weakness"
@@ -100,18 +76,10 @@
 	var_changes = list("burn_mod" = 1.2)
 
 /datum/trait/negative/burn_weak_plus
-<<<<<<< HEAD
-	name = "Major Burn Weakness"
-	desc = "Increases damage from burn damage sources by 40%"
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Major Burn Weakness"
-	desc = "Increases damage from burn damage sources by 50%"
-=======
 	name = "Burn Weakness, Major"
 	desc = "Increases damage from burn damage sources by 50%"
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	cost = -3
-	var_changes = list("burn_mod" = 1.4)
+	var_changes = list("burn_mod" = 1.5)
 
 //YW ADDITIONS START
 /datum/trait/negative/reduced_biocompat
@@ -152,22 +120,10 @@
 	var_changes = list("siemens_coefficient" = 1.25) //This makes you a lot weaker to tasers.
 
 /datum/trait/negative/conductive_plus
-<<<<<<< HEAD
-	name = "Major Conductive"
-	desc = "Increases your susceptibility to electric shocks by 50%"
-	cost = -3
-	var_changes = list("siemens_coefficient" = 1.5) //This makes you significantly weaker to tasers.
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Major Conductive"
-	desc = "Increases your susceptibility to electric shocks by 100%"
-	cost = -1
-	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
-=======
 	name = "Conductive, Major"
 	desc = "Increases your susceptibility to electric shocks by 100%"
 	cost = -1
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 
 /datum/trait/negative/haemophilia
 	name = "Haemophilia - Organics only"
