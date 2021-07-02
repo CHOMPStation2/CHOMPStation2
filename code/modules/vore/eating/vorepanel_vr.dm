@@ -357,13 +357,7 @@
 
 		if("saveprefs")
 			if(!host.save_vore_prefs())
-<<<<<<< HEAD
-				alert("ERROR: Chomp-specific preferences failed to save!","Error")
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-				alert("ERROR: Virgo-specific preferences failed to save!","Error")
-=======
-				tgui_alert_async(usr, "ERROR: Virgo-specific preferences failed to save!","Error")
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to save!","Error")
 			else
 				to_chat(usr, "<span class='notice'>Chomp-specific preferences saved!</span>")
 				unsaved_changes = FALSE
@@ -372,16 +366,8 @@
 			var/alert = tgui_alert(usr, "Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation",list("Reload","Cancel"))
 			if(alert != "Reload")
 				return FALSE
-<<<<<<< HEAD
 			if(!host.apply_vore_prefs(TRUE)) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
-				alert("ERROR: Chomp-specific preferences failed to apply!","Error")
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-			if(!host.apply_vore_prefs())
-				alert("ERROR: Virgo-specific preferences failed to apply!","Error")
-=======
-			if(!host.apply_vore_prefs())
-				tgui_alert_async(usr, "ERROR: Virgo-specific preferences failed to apply!","Error")
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to apply!","Error")
 			else
 				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
 				unsaved_changes = FALSE
