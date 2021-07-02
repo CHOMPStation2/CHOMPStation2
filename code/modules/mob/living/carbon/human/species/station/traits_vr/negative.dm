@@ -116,13 +116,13 @@
 /datum/trait/negative/conductive
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 25%"
-	cost = -2
+	cost = -2 //CHOMPEdit
 	var_changes = list("siemens_coefficient" = 1.25) //This makes you a lot weaker to tasers.
 
 /datum/trait/negative/conductive_plus
 	name = "Conductive, Major"
 	desc = "Increases your susceptibility to electric shocks by 100%"
-	cost = -1
+	cost = -3 //CHOMPEdit
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
 
 /datum/trait/negative/haemophilia
