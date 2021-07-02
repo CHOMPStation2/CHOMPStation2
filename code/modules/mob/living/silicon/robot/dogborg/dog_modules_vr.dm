@@ -464,14 +464,8 @@
 	options["Whiskey Soda"] = "Liqour Licker"
 	options["Grape Soda"] = "The Grapist"
 	options["Demon's Blood"] = "Vampire's Aid"
-<<<<<<< HEAD
 	options["Slav Vodka"] = "Vodka Komrade"
-	var/choice = input(M,"Choose your drink!") in options
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	var/choice = input(M,"Choose your drink!") in options
-=======
 	var/choice = tgui_input_list(M, "Choose your drink!", "Drink Choice", options)
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 	if(src && choice && !M.stat && in_range(M,src))
 		icontype = options[choice]
 		var/active_sound = 'sound/effects/bubbles.ogg'
