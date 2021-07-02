@@ -98,14 +98,21 @@ var/list/_client_preferences_by_type
 	key = "DIGEST_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
-
+//CHOMPEdit; belching
+/datum/client_preference/belch_noises
+	description = "Burping"
+	key = "BELCH_NOISES"
+	enabled_description = "Noisy"
+	disabled_description = "Silent"
+	enabled_by_default = FALSE
+//CHOMPEdit end
 /datum/client_preference/emote_noises
 	description = "Emote Noises" //MERP
 	key = "EMOTE_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
 /datum/client_preference/whisubtle_vis
-	description = "Whi/Subtles Ghost Visible" 
+	description = "Whi/Subtles Ghost Visible"
 	key = "WHISUBTLE_VIS"
 	enabled_description = "Visible"
 	disabled_description = "Hidden"
@@ -152,7 +159,7 @@ var/list/_client_preferences_by_type
 	key = "SOUND_AIRPUMP"
 	enabled_description = "Audible"
 	disabled_description = "Silent"
-	
+
 /datum/client_preference/old_door_sounds
 	description ="Old Door Sounds"
 	key = "SOUND_OLDDOORS"
@@ -290,6 +297,32 @@ var/list/_client_preferences_by_type
 	key = "SHOW_STATUS"
 	enabled_description = "Show"
 	disabled_description = "Hide"
+
+/datum/client_preference/runechat_mob
+	description = "Runechat (Mobs)"
+	key = "RUNECHAT_MOB"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/runechat_obj
+	description = "Runechat (Objs)"
+	key = "RUNECHAT_OBJ"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/runechat_border
+	description = "Runechat Message Border"
+	key = "RUNECHAT_BORDER"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+	enabled_by_default = FALSE
+
+/datum/client_preference/runechat_long_messages
+	description = "Runechat Message Length"
+	key = "RUNECHAT_LONG"
+	enabled_description = "ERP KING"
+	disabled_description = "Normie"
+	enabled_by_default = FALSE
 
 /datum/client_preference/status_indicators/toggled(mob/preference_mob, enabled)
 	. = ..()

@@ -38,7 +38,6 @@
 		set src in usr
 
 		adjust_fibers(usr)
-		..()
 
 /obj/item/clothing/under/hyperfiber/proc/adjust_fibers(mob/user)
 	if(hides_bulges == FALSE)
@@ -63,7 +62,6 @@
 	set category = "Object"
 	set src in usr
 	bluespace_size(usr)
-	..()
 
 /obj/item/clothing/under/hyperfiber/bluespace/proc/bluespace_size(mob/usr as mob)
 	if (!ishuman(usr))
@@ -78,7 +76,9 @@
 		to_chat(H,"<span class='warning'>You must be WEARING the uniform to change your size.</span>")
 		return
 
-	var/new_size = input("Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200) as num|null
+	var/new_size = input(usr, "Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200) as num|null
+	if(!new_size)
+		return //cancelled
 
 	//Check AGAIN because we accepted user input which is blocking.
 	if (src != H.w_uniform)
@@ -88,9 +88,9 @@
 	if (H.stat || H.restrained())
 		return
 
-	if (isnull(H.size_multiplier))
+	if (isnull(H.size_multiplier)) // Why would this ever be the case?
 		to_chat(H,"<span class='warning'>The uniform panics and corrects your apparently microscopic size.</span>")
-		H.resize(RESIZE_NORMAL)
+		H.resize(RESIZE_NORMAL, ignore_prefs = TRUE)
 		H.update_icons() //Just want the matrix transform
 		return
 
@@ -102,7 +102,7 @@
 		if(new_size != H.size_multiplier)
 			if(!original_size)
 				original_size = H.size_multiplier
-			H.resize(new_size/100)
+			H.resize(new_size/100, ignore_prefs = TRUE) // Ignores prefs because you can only resize yourself
 			H.visible_message("<span class='warning'>The space around [H] distorts as they change size!</span>","<span class='notice'>The space around you distorts as you change size!</span>")
 		else //They chose their current size.
 			return
@@ -111,7 +111,7 @@
 	. = ..()
 	if(. && ishuman(M) && original_size)
 		var/mob/living/carbon/human/H = M
-		H.resize(original_size)
+		H.resize(original_size, ignore_prefs = TRUE)
 		original_size = null
 		H.visible_message("<span class='warning'>The space around [H] distorts as they return to their original size!</span>","<span class='notice'>The space around you distorts as you return to your original size!</span>")
 
@@ -136,3 +136,70 @@
 	name = "red qipao"
 	icon_state = "qipao_red"
 	item_state = "qipao_red"
+
+/obj/item/clothing/under/pizzaguy
+	name = "pizza delivery uniform"
+	desc = "A dedicated outfit for pizza delivery people, one of most dangerous occupations around these parts. Can be rolled up for extra show of skin."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_state = "pizzadelivery"
+	item_state = "pizzadelivery"
+	rolled_down = 0
+
+//////////////////////TALON JUMPSUITS//////////////////////
+
+/obj/item/clothing/under/rank/talon/basic
+	name = "ITV jumpsuit"
+	desc = "A basic jumpsuit that bares the ITV logo on the breast."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_basic"
+	item_state = "talon_basic"
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/talon/proper
+	name = "ITV proper jumpsuit"
+	desc = "A neat and proper uniform for a proper company."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_jumpsuit"
+	item_state = "talon_jumpsuit"
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/talon/security
+	name = "ITV security jumpsuit"
+	desc = "A sleek, streamlined version of ITV's standard jumpsuit that bares security markings."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_security"
+	item_state = "talon_security"
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/talon/pilot
+	name = "ITV pilot jumpsuit"
+	desc = "A sleek, streamlined version of ITV's standard jumpsuit. Made from cushioned fabric to handle intense flight."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_pilot"
+	item_state = "talon_pilot"
+	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/talon/command
+	name = "ITV command jumpsuit"
+	desc = "A commanding jumpsuit fit for a commanding officer."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	index = "vr"
+	rolled_down_icon = 'icons/mob/uniform_rolled_down_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+	icon_state = "talon_captain"
+	item_state = "talon_captain"
+	rolled_sleeves = 0

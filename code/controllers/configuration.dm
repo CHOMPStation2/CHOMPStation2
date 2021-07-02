@@ -231,7 +231,7 @@ var/list/gamemode_cache = list()
 	// 15, 45, 70 minutes respectively
 	var/static/list/event_delay_upper = list(EVENT_LEVEL_MUNDANE = 9000,	EVENT_LEVEL_MODERATE = 27000,	EVENT_LEVEL_MAJOR = 42000)
 
-	var/static/aliens_allowed = 1 //CHOMPedit to 1. This not only allows the natural spawning of xenos, but also the ability to lay eggs. Xenomorphs cannot lay eggs if this is 0
+	var/static/aliens_allowed = 1 //CHOMPedit to 1. This not only allows the natural spawning of xenos, but also the ability to lay eggs. Genaprawns cannot lay eggs if this is 0
 	var/static/ninjas_allowed = 0
 	var/static/abandon_allowed = 1
 	var/static/ooc_allowed = 1
@@ -241,6 +241,7 @@ var/list/gamemode_cache = list()
 
 	var/persistence_disabled = FALSE
 	var/persistence_ignore_mapload = FALSE
+	
 	var/allow_byond_links = 1	//CHOMP Edit turned this on
 	var/allow_discord_links = 1	//CHOMP Edit turned this on
 	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit: pussy.
@@ -286,8 +287,16 @@ var/list/gamemode_cache = list()
 	// whether or not to use the nightshift subsystem to perform lighting changes
 	var/static/enable_night_shifts = FALSE
 
+	// How strictly the loadout enforces object species whitelists
+	var/loadout_whitelist = LOADOUT_WHITELIST_LAX
+	
 	var/static/vgs_access_identifier = null	// VOREStation Edit - VGS
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
+	
+	var/disable_webhook_embeds = FALSE
+	
+	
+	var/static/list/jukebox_track_files
 
 /datum/configuration/New()
 	var/list/L = typesof(/datum/game_mode) - /datum/game_mode
@@ -940,6 +949,9 @@ var/list/gamemode_cache = list()
 
 				if("enable_night_shifts")
 					config.enable_night_shifts = TRUE
+						
+				if("jukebox_track_files")
+					config.jukebox_track_files = splittext(value, ";")
 
 				// VOREStation Edit Start - Can't be in _vr file because it is loaded too late.
 				if("vgs_access_identifier")
@@ -1013,6 +1025,9 @@ var/list/gamemode_cache = list()
 
 				if("use_loyalty_implants")
 					config.use_loyalty_implants = 1
+					
+				if("loadout_whitelist")
+					config.loadout_whitelist = text2num(value)
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")

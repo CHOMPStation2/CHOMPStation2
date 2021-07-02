@@ -249,6 +249,7 @@
 				prob(8);/obj/item/weapon/storage/firstaid/o2,
 				prob(6);/obj/item/weapon/storage/firstaid/adv,
 				prob(8);/obj/item/weapon/storage/firstaid/fire,
+				prob(1);/obj/item/device/denecrotizer/medical, //VOREStation Add,
 				prob(1);/obj/item/weapon/storage/firstaid/combat)
 
 /obj/random/contraband
@@ -259,14 +260,11 @@
 	spawn_nothing_percentage = 50
 /obj/random/contraband/item_to_spawn()
 	return pick(prob(6);/obj/item/weapon/storage/pill_bottle/paracetamol, //VOREStation Edit,
-				prob(8);/obj/item/weapon/haircomb,
 				prob(4);/obj/item/weapon/storage/pill_bottle/happy,
 				prob(4);/obj/item/weapon/storage/pill_bottle/zoom,
-				prob(10);/obj/item/weapon/contraband/poster/custom,
 				prob(4);/obj/item/weapon/material/butterfly,
 				prob(6);/obj/item/weapon/material/butterflyblade,
 				prob(6);/obj/item/weapon/material/butterflyhandle,
-				prob(6);/obj/item/weapon/material/wirerod,
 				prob(2);/obj/item/weapon/material/butterfly/switchblade,
 				prob(2);/obj/item/clothing/gloves/knuckledusters,
 				prob(1);/obj/item/weapon/material/knife/tacknife,
@@ -407,7 +405,6 @@
 				/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
 				/obj/item/weapon/reagent_containers/food/snacks/chips,
 				/obj/item/weapon/reagent_containers/food/snacks/chips/bbq,
-				/obj/item/weapon/reagent_containers/food/snacks/cookie,
 				/obj/item/weapon/reagent_containers/food/snacks/cookiesnack,
 				/obj/item/weapon/reagent_containers/food/snacks/fruitbar,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
@@ -440,7 +437,7 @@
 				/obj/item/weapon/reagent_containers/food/snacks/popcorn,
 				/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
 				/obj/item/weapon/reagent_containers/food/snacks/no_raisin,
-				/obj/item/weapon/reagent_containers/food/snacks/spacetwinkie,
+				/obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie,
 				/obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers,
 				/obj/item/weapon/reagent_containers/food/snacks/poppypretzel,
 				/obj/item/weapon/reagent_containers/food/snacks/baguette,
@@ -499,8 +496,11 @@
 				/obj/item/stack/material/glass/reinforced{amount = 10},
 				/obj/item/stack/material/plastic{amount = 10},
 				/obj/item/stack/material/wood{amount = 10},
+				/obj/item/stack/material/wood/sif{amount = 10},
 				/obj/item/stack/material/cardboard{amount = 10},
 				/obj/item/stack/rods{amount = 10},
+				/obj/item/stack/material/sandstone{amount = 10},
+				/obj/item/stack/material/marble{amount = 10},
 				/obj/item/stack/material/plasteel{amount = 10})
 
 /obj/random/material/refined //Random materials for building stuff
@@ -519,6 +519,8 @@
 				/obj/item/stack/material/durasteel{amount = 5},
 				/obj/item/stack/material/gold{amount = 5},
 				/obj/item/stack/material/iron{amount = 10},
+				/obj/item/stack/material/copper{amount = 10},
+				/obj/item/stack/material/aluminium{amount = 10},
 				/obj/item/stack/material/lead{amount = 10},
 				/obj/item/stack/material/diamond{amount = 3},
 				/obj/item/stack/material/deuterium{amount = 5},
@@ -531,6 +533,19 @@
 				/obj/item/stack/material/titanium{amount = 5},
 				/obj/item/stack/material/tritium{amount = 3},
 				/obj/item/stack/material/verdantium{amount = 2})
+
+/obj/random/material/precious //Precious metals, go figure
+	name = "random precious metal"
+	desc = "This is a small stack of a random precious metal."
+	icon = 'icons/obj/stacks.dmi'
+	icon_state = "sheet-gold_2"
+
+/obj/random/material/precious/item_to_spawn()
+	return pick(/obj/item/stack/material/gold{amount = 5},
+				/obj/item/stack/material/copper{amount = 5},
+				/obj/item/stack/material/silver{amount = 5},
+				/obj/item/stack/material/platinum{amount = 5},
+				/obj/item/stack/material/osmium{amount = 5})
 
 /obj/random/tank
 	name = "random tank"
@@ -671,7 +686,7 @@
 				//VOREStation Add Start
 				/obj/item/toy/plushie/lizardplushie,
 				/obj/item/toy/plushie/lizardplushie/kobold,
-				/obj/item/toy/plushie/lizardplushie/resh,
+//				/obj/item/toy/plushie/lizardplushie/resh, //CHOMPedit
 				/obj/item/toy/plushie/slimeplushie,
 				/obj/item/toy/plushie/box,
 				/obj/item/toy/plushie/borgplushie,
@@ -837,7 +852,7 @@
 				/obj/item/weapon/reagent_containers/food/snacks/donut/normal,
 				/obj/item/weapon/reagent_containers/food/snacks/donut/cherryjelly,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-				/obj/item/weapon/reagent_containers/food/snacks/cookie)
+				/obj/item/weapon/reagent_containers/food/snacks/cookiesnack)
 
 /obj/random/mre/dessert/vegan
 	name = "random vegan MRE dessert"

@@ -8,6 +8,7 @@ var/global/list/silicon_mob_list = list()			//List of all silicon mobs, includin
 var/global/list/ai_list = list()					//List of all AIs, including clientless
 var/global/list/living_mob_list = list()			//List of all alive mobs, including clientless. Excludes /mob/new_player
 var/global/list/dead_mob_list = list()				//List of all dead mobs, including clientless. Excludes /mob/new_player
+var/global/list/observer_mob_list = list()			//List of all /mob/observer/dead, including clientless.
 var/global/list/listening_objects = list()			//List of all objects which care about receiving messages (communicators, radios, etc)
 var/global/list/cleanbot_reserved_turfs = list()	//List of all turfs currently targeted by some cleanbot
 
@@ -26,12 +27,10 @@ var/list/mannequins_
 // Times that players are allowed to respawn ("ckey" = world.time)
 GLOBAL_LIST_EMPTY(respawn_timers)
 
-// Closets have magic appearances
-GLOBAL_LIST_EMPTY(closet_appearances)
-
-// Posters
-var/global/list/poster_designs = list()
-var/global/list/NT_poster_designs = list()
+// Holomaps
+var/global/list/holomap_markers = list()
+var/global/list/mapping_units = list()
+var/global/list/mapping_beacons = list()
 
 //Preferences stuff
 	//Hairstyles
@@ -68,6 +67,10 @@ var/global/list/endgame_exits = list()
 var/global/list/endgame_safespawns = list()
 
 var/global/list/syndicate_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
+
+// Ores (for mining)
+GLOBAL_LIST_EMPTY(ore_data)
+GLOBAL_LIST_EMPTY(alloy_data)
 
 // Strings which corraspond to bodypart covering flags, useful for outputting what something covers.
 var/global/list/string_part_flags = list(
@@ -106,6 +109,9 @@ GLOBAL_LIST_EMPTY(mannequins)
 		GLOB.mannequins[ckey] = new /mob/living/carbon/human/dummy/mannequin(null)
 		M = GLOB.mannequins[ckey]
 	return M
+
+/proc/del_mannequin(var/ckey = "NULL")
+	GLOB.mannequins-= ckey
 
 //////////////////////////
 /////Initial Building/////
@@ -196,28 +202,29 @@ GLOBAL_LIST_EMPTY(mannequins)
 		S.race_key = rkey //Used in mob icon caching.
 		GLOB.all_species[S.name] = S
 
+	//Shakey shakey shake
+	sortTim(GLOB.all_species, /proc/cmp_species, associative = TRUE)
+
+	//Split up the rest
+	for(var/speciesname in GLOB.all_species)
+		var/datum/species/S = GLOB.all_species[speciesname]
 		if(!(S.spawn_flags & SPECIES_IS_RESTRICTED))
 			GLOB.playable_species += S.name
 		if(S.spawn_flags & SPECIES_IS_WHITELISTED)
 			GLOB.whitelisted_species += S.name
 
-	//Posters
-	paths = typesof(/datum/poster) - /datum/poster
-	paths -= typesof(/datum/poster/nanotrasen)
-	for(var/T in paths)
-		var/datum/poster/P = new T
-		poster_designs += P
-
-	paths = typesof(/datum/poster/nanotrasen)
-	for(var/T in paths)
-		var/datum/poster/P = new T
-		NT_poster_designs += P
+	//Ores
+	paths = typesof(/ore)-/ore
+	for(var/oretype in paths)
+		var/ore/OD = new oretype()
+		GLOB.ore_data[OD.name] = OD
+	
+	paths = typesof(/datum/alloy)-/datum/alloy
+	for(var/alloytype in paths)
+		GLOB.alloy_data += new alloytype()
 
 	//Closet appearances
-	paths = typesof(/decl/closet_appearance)
-	for(var/T in paths)
-		var/decl/closet_appearance/app = new T()
-		GLOB.closet_appearances[T] = app
+	GLOB.closet_appearances = decls_repository.get_decls_of_type(/decl/closet_appearance)
 
 	paths = typesof(/datum/sprite_accessory/ears) - /datum/sprite_accessory/ears
 	for(var/path in paths)
@@ -242,6 +249,7 @@ GLOBAL_LIST_EMPTY(mannequins)
 		var/datum/digest_mode/DM = new T
 		GLOB.digest_modes[DM.id] = DM
 	// VOREStation Add End
+	init_crafting_recipes(GLOB.crafting_recipes)
 
 /*
 	// Custom species traits
@@ -278,8 +286,13 @@ GLOBAL_LIST_EMPTY(mannequins)
 	return 1 // Hooks must return 1
 
 
-	return 1
-
+/// Inits the crafting recipe list, sorting crafting recipe requirements in the process.
+/proc/init_crafting_recipes(list/crafting_recipes)
+	for(var/path in subtypesof(/datum/crafting_recipe))
+		var/datum/crafting_recipe/recipe = new path()
+		recipe.reqs = sortList(recipe.reqs, /proc/cmp_crafting_req_priority)
+		crafting_recipes += recipe
+	return crafting_recipes
 /* // Uncomment to debug chemical reaction list.
 /client/verb/debug_chemical_list()
 

@@ -48,7 +48,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "dauntless_pd"
 	},
 /turf/simulated/floor/airless,
@@ -56,7 +56,7 @@
 "af" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/paper/dockingcodes,
-/obj/item/weapon/card/id/itg/event/captain,
+/obj/item/weapon/card/id/event/accessset/itg/crew/captain,
 /obj/machinery/computer/ship/navigation/telescreen{
 	pixel_y = -32
 	},
@@ -88,7 +88,7 @@
 /obj/item/clothing/suit/chef/classic,
 /obj/item/clothing/head/chefhat,
 /obj/item/clothing/suit/storage/solgov/service/army/service,
-/obj/item/weapon/card/id/itg/event/service,
+/obj/item/weapon/card/id/event/accessset/itg/crew/service,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/itglight/metingroom)
 "ah" = (
@@ -115,7 +115,7 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/engineering,
 /obj/item/taperoll/engineering,
 /obj/item/clothing/suit/storage/solgov/service/army/engineering,
-/obj/item/weapon/card/id/itg/event/engineer,
+/obj/item/weapon/card/id/event/accessset/itg/crew/engineer,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/itglight/metingroom)
 "ai" = (
@@ -141,7 +141,7 @@
 	},
 /obj/item/clothing/suit/storage/hooded/wintercoat/medical,
 /obj/item/clothing/suit/storage/solgov/service/army/medical,
-/obj/item/weapon/card/id/itg/event/medical,
+/obj/item/weapon/card/id/event/accessset/itg/crew/medical,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/itglight/metingroom)
 "aj" = (
@@ -168,7 +168,7 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/security,
 /obj/item/clothing/suit/storage/trench,
 /obj/item/clothing/suit/storage/solgov/service/army/security,
-/obj/item/weapon/card/id/itg/event/security,
+/obj/item/weapon/card/id/event/accessset/itg/crew/security,
 /obj/item/clothing/accessory/holster/hip,
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/itglight/metingroom)
@@ -286,6 +286,9 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+/obj/structure/panic_button{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/eris/dark/monofloor,
 /area/itglight/cockpit)
 "bi" = (
@@ -328,7 +331,7 @@
 /turf/simulated/floor/airless,
 /area/itglight/captain)
 "bq" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "dauntless_pd"
 	},
 /obj/structure/cable/pink{
@@ -2093,7 +2096,7 @@
 /turf/simulated/floor/tiled/eris/steel/gray_platform,
 /area/itglight/starboardhighsec)
 "mo" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "dauntless_pd"
 	},
 /obj/structure/cable/pink{
@@ -3648,21 +3651,21 @@
 	},
 /obj/item/clothing/suit/space/void/captain,
 /obj/item/clothing/head/helmet/space/void/captain,
-/obj/item/weapon/card/id/itg/event,
-/obj/item/weapon/card/id/itg/event,
-/obj/item/weapon/card/id/itg/event,
-/obj/item/weapon/card/id/itg/event,
-/obj/item/weapon/card/id/itg/event,
-/obj/item/weapon/card/id/itg/event/passengerliason,
-/obj/item/weapon/card/id/itg/event/pilot,
-/obj/item/weapon/card/id/itg/event/research,
-/obj/item/weapon/card/id/itg/event/research,
-/obj/item/weapon/card/id/itg/event/security,
-/obj/item/weapon/card/id/itg/event/service,
-/obj/item/weapon/card/id/itg/event/engineer,
-/obj/item/weapon/card/id/itg/event/engineer,
-/obj/item/weapon/card/id/itg/event/medical,
-/obj/item/weapon/card/id/itg/event/medical,
+/obj/item/weapon/card/id/event/accessset/itg/crew,
+/obj/item/weapon/card/id/event/accessset/itg/crew,
+/obj/item/weapon/card/id/event/accessset/itg/crew,
+/obj/item/weapon/card/id/event/accessset/itg/crew,
+/obj/item/weapon/card/id/event/accessset/itg/crew,
+/obj/item/weapon/card/id/event/accessset/itg/crew/passengerliason,
+/obj/item/weapon/card/id/event/accessset/itg/crew/pilot,
+/obj/item/weapon/card/id/event/accessset/itg/crew/research,
+/obj/item/weapon/card/id/event/accessset/itg/crew/research,
+/obj/item/weapon/card/id/event/accessset/itg/crew/security,
+/obj/item/weapon/card/id/event/accessset/itg/crew/service,
+/obj/item/weapon/card/id/event/accessset/itg/crew/engineer,
+/obj/item/weapon/card/id/event/accessset/itg/crew/engineer,
+/obj/item/weapon/card/id/event/accessset/itg/crew/medical,
+/obj/item/weapon/card/id/event/accessset/itg/crew/medical,
 /obj/item/clothing/suit/storage/hooded/wintercoat/cargo{
 	name = "dauntless winter coat"
 	},
@@ -6003,7 +6006,7 @@
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/itglight/shuttlebay)
 "Kv" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "dauntless_pd"
 	},
 /obj/structure/cable/pink{
@@ -7811,7 +7814,7 @@
 /turf/space,
 /area/itglight/starboardengi)
 "We" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "dauntless_pd"
 	},
 /obj/structure/cable/pink{
@@ -8102,7 +8105,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/itglight/crew1)
 "XO" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "dauntless_pd"
 	},
 /obj/structure/cable/pink{

@@ -12,5 +12,5 @@
 
 /mob/living/carbon/alien/larva/Initialize()
 	. = ..()
-	add_language("Xenomorph") //Bonus language.
+	add_language("Xenolingua") //Bonus language. CHOMPedit
 	internal_organs |= new /obj/item/organ/internal/xenos/hivenode(src)

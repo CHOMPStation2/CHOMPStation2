@@ -22,7 +22,7 @@
 	var/decompiler = FALSE
 	var/delivery = FALSE
 	var/delivery_tag = "Fuel"
-	var/list/deliverylists = list()
+	var/list/list/deliverylists = list()
 	var/list/deliveryslot_1 = list()
 	var/list/deliveryslot_2 = list()
 	var/list/deliveryslot_3 = list()
@@ -321,7 +321,7 @@
 		return
 	if(href_list["clean"])
 		if(!cleaning)
-			var/confirm = alert(usr, "You are about to engage self-cleaning mode. This will fill your [src] with caustic enzymes to remove any objects or biomatter, and convert them into energy. Are you sure?", "Confirmation", "Self-Clean", "Cancel")
+			var/confirm = tgui_alert(usr, "You are about to engage self-cleaning mode. This will fill your [src] with caustic enzymes to remove any objects or biomatter, and convert them into energy. Are you sure?", "Confirmation", list("Self-Clean", "Cancel"))
 			if(confirm == "Self-Clean")
 				if(cleaning)
 					return
@@ -345,7 +345,7 @@
 		sleeperUI(usr)
 		return
 	if(href_list["deliveryslot"])
-		var/tag = input("Select active delivery slot.") as null|anything in deliverylists
+		var/tag = tgui_input_list(usr, "Select active delivery slot:", "Slot Choice", deliverylists)
 		if(!tag)
 			return 0
 		delivery_tag = tag
@@ -707,13 +707,6 @@
 	delivery = TRUE
 	recycles = FALSE
 
-/obj/item/device/dogborg/sleeper/compactor/brewer //Boozehound gut. //YW Changes
-	name = "Brew Belly"
-	desc = "A mounted drunk tank unit with fuel processor."
-	icon_state = "brewer"
-	injection_chems = null
-	max_item_count = 1
-
 /obj/item/device/dogborg/sleeper/compactor/supply //Miner borg belly
 	name = "Supply Satchel"
 	desc = "A mounted survival unit with fuel processor."
@@ -724,6 +717,7 @@
 /obj/item/device/dogborg/sleeper/command //Command borg belly //CHOMP addition
 	name = "Bluespace Filing Belly"
 	desc = "A mounted bluespace storage unit for carrying paperwork"
+	icon = 'icons/mob/dogborg_ch.dmi'
 	icon_state = "sleeperd"
 	injection_chems = null
 	compactor = TRUE
@@ -731,4 +725,24 @@
 	max_item_count = 25
 	//CHOMP addition end
 
-#undef SLEEPER_INJECT_COST
+/obj/item/device/dogborg/sleeper/compactor/brewer
+	name = "Brew Belly"
+	desc = "A mounted drunk tank unit with fuel processor."
+	icon_state = "brewer"
+	injection_chems = null
+	
+/obj/item/device/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem) //CHOMP Addition Start
+	if(patient && patient.reagents)
+		if(chem in injection_chems + "inaprovaline")
+			if(hound.cell.charge < 200) //This is so borgs don't kill themselves with it.
+				to_chat(hound, "<span class='notice'>You don't have enough power to synthesize fluids.</span>")
+				return
+			else if(patient.reagents.get_reagent_amount(chem) + 10 >= 50) //Preventing people from accidentally killing themselves by trying to inject too many chemicals!
+				to_chat(hound, "<span class='notice'>Your stomach is currently too full of fluids to secrete more fluids of this kind.</span>")
+			else if(patient.reagents.get_reagent_amount(chem) + 10 <= 50) //No overdoses for you
+				patient.reagents.add_reagent(chem, inject_amount)
+				drain(100) //-100 charge per injection
+			var/units = round(patient.reagents.get_reagent_amount(chem))
+			to_chat(hound, "<span class='notice'>Injecting [units] unit\s into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
+//CHOMP Addition end
+#undef SLEEPER_INJECT_COST //CHOMP Edit I think this should go at the bottom of the file?

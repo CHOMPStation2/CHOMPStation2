@@ -83,14 +83,14 @@
 
 //Strix Hades
 /datum/gear/fluff/strix_coat
-	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix
+	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix
 	display_name = "Colony Director Coat"
 	description = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
 /datum/gear/fluff/strix_under
-	path = /obj/item/clothing/under/seromi/undercoat/fluff/strix
+	path = /obj/item/clothing/under/teshari/undercoat/fluff/strix
 	display_name = "Colony Director Undercoat"
 	description = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	ckeywhitelist = list("blackangelsace")
@@ -111,14 +111,14 @@
 	character_name = list("Strix Hades")
 
 /datum/gear/fluff/strix_coat_cco
-	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/strix_cco
+	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix_cco
 	display_name = "Central Command Coat"
 	description = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
 /datum/gear/fluff/strix_under_cco
-	path = /obj/item/clothing/under/seromi/undercoat/fluff/strix_cco
+	path = /obj/item/clothing/under/teshari/undercoat/fluff/strix_cco
 	display_name = "Central Command Undercoat"
 	description = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	ckeywhitelist = list("blackangelsace")
@@ -235,7 +235,7 @@
 
 //Kita
 /datum/gear/fluff/kita_under
-	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/kita
+	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/kita
 	display_name = "Magical Cloak"
 	description = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
 	ckeywhitelist = list("championfire")
@@ -325,7 +325,7 @@
 //dushka
 //Saroth
 /datum/gear/fluff/Saroth_cloak
-	path = /obj/item/clothing/suit/storage/seromi/cloak/fluff/Saroth
+	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/Saroth
 	display_name = "Research Director cloak"
 	description = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside. This one bears the colors of the science department with additional trimming to designate it as the research director's. It has 'operty of Saroth' sewed in on the inside at the neck. The pockets seem slightly bigger on the inside than they appear on the outside."
 	ckeywhitelist = list("dushka")

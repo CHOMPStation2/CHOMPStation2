@@ -118,6 +118,11 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	template_id = "shelter_epsilon"
 	unique_id = "shelter_5"
 	is_ship = TRUE
+	
+/obj/item/device/survivalcapsule/popcabin
+	name = "pop-out cabin shelter capsule"
+	desc = "A cozy cabin; crammed into a survival capsule."
+	template_id = "shelter_cab"
 
 /obj/item/device/survivalcapsule/dropship
 	name = "dropship surfluid shelter capsule"
@@ -202,7 +207,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	verbs -= /obj/structure/table/proc/do_put
 	..()
 
-/obj/structure/table/survival_pod/dismantle(obj/item/weapon/wrench/W, mob/user)
+/obj/structure/table/survival_pod/dismantle(obj/item/weapon/tool/wrench/W, mob/user)
 	to_chat(user, "<span class='warning'>You cannot dismantle \the [src].</span>")
 	return
 
@@ -261,6 +266,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	light_range = 5
 	light_power = 1.2
 	light_color = "#DDFFD3"
+	light_on = TRUE
 	pixel_y = -4
 	max_n_of_items = 100
 
@@ -289,6 +295,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	var/buildstacktype = /obj/item/stack/material/steel
 	var/buildstackamount = 5
 
+/*
 /obj/structure/fans/proc/deconstruct()
 	new buildstacktype(loc,buildstackamount)
 	qdel(src)
@@ -302,7 +309,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 			return TRUE
 
 	return TRUE
-
+*/
 /obj/structure/fans/tiny
 	name = "tiny fan"
 	desc = "A tiny fan, releasing a thin gust of air."
@@ -325,6 +332,10 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	light_range = 3
 	light_power = 1
 	light_color = "#FFFFFF"
+	light_on = TRUE
+
+/obj/structure/fans/hardlight/ex_act()
+	return
 
 /obj/structure/fans/hardlight/colorable
 	name = "hardlight shield"

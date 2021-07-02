@@ -871,6 +871,30 @@
 					<li>Chonker Otie 500</li>
 					<li>Zorgoia 500</li>
 				</ul>
+				Mechs
+				<ul>
+					<li>Mining Ripley 1000</li>
+					<li>Firefighter Ripley 750</li>
+					<li>Serenity 1500</li>
+					<li>Odysseus 1250</li>
+					<li>Phazon Scuttlebug 2000</li>
+					<li>Phazon Janus 3500</li>
+					<li>Scarab 500</li>
+					<li>Shuttlepod 250</li>
+					<li>´Shuttlecraft 500</li>
+				</ul>
+				Implants
+				<ul>
+					<li>Implanter 100 (A basic empty implanter, you are going to need this to implant yourself with cyberntic augments)</li>
+					<li>Implant: Tazer 1000 (A cybernetic implant that allows one to spawn a personal defense taser)</li>
+					<li>Implant: Medkit 500 (A cybernetic implant that allows you to spawn all the tools needed for surgery)</li>
+					<li>Implant: Shades 750 (A cybernetic implant that will spawn protective thermoshades upon your eyes, AR included!)</li>
+					<li>Implant: Sprinter 1500 (A cybernetic implant that will give you that extra kick of energy to run faster!)</li>
+					<li>Implant: Toolkit 500 (A cybernetic implant that allows you to spawn all the tools needed for engineering)</li>
+					<li>Implant: Language 1000 (A cybernetic implant that allows you to understand almost all languages)</li>
+					<li>Implant: Analyzer 500 (A cybernetic implant that allows one to spawn a Portable Resonant Analyzer for any science needs)</li>
+					<li>Implant: Size Control 500 (A cybernetic implant that allows one to change the size of others via specific voice commands)</li>
+				</ul>
 
 				Thats it for prizes! <br><br>
 

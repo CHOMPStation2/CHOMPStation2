@@ -47,7 +47,7 @@
 /mob/living/carbon/human/buckle_mob(mob/living/M, forced = FALSE, check_loc = TRUE)
 	if(forced)
 		return ..() // Skip our checks
-	if(!isTaurTail(tail_style))
+	if(!istaurtail(tail_style))
 		return FALSE
 	else
 		var/datum/sprite_accessory/tail/taur/taurtype = tail_style
@@ -68,7 +68,7 @@
 
 	var/mob/living/carbon/human/H = M
 
-	if(isTaurTail(H.tail_style))
+	if(istaurtail(H.tail_style))
 		to_chat(src,"<span class='warning'>Too many legs. TOO MANY LEGS!!</span>")
 		return FALSE
 
@@ -123,6 +123,7 @@
 	icon = 'icons/mob/human_races/sprite_accessories/taurs.dmi'
 	do_colouration = 1 // Yes color, using tail color
 	color_blend_mode = ICON_MULTIPLY  // The sprites for taurs are designed for ICON_MULTIPLY
+	em_block = TRUE
 
 	var/icon/suit_sprites = null //File for suit sprites, if any.
 	var/icon/under_sprites = null
@@ -146,7 +147,6 @@
 	suit_sprites = 'icons/mob/taursuits_wolf.dmi'
 	icon_sprite_tag = "wolf"
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/fatwolf
 	name = "Fat Wolf (Taur)"
 	icon_state = "fatwolf_s"
@@ -158,7 +158,6 @@
 	extra_overlay = "wolf_markings"
 	//icon_sprite_tag = "wolf2c"
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
 	name = "Fat Wolf dual-color (Taur)"
 	icon_state = "fatwolf_s"
@@ -245,7 +244,6 @@
 	suit_sprites = 'icons/mob/taursuits_feline.dmi'
 	icon_sprite_tag = "feline"
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/fatfeline
 	name = "Fat Feline (Taur)"
 	icon_state = "fatfeline_s"
@@ -262,7 +260,6 @@
 	extra_overlay = "feline_markings"
 	//icon_sprite_tag = "feline2c"
 
-//TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/feline/fatfeline_2c
 	name = "Fat Feline dual-color (Taur)"
 	icon_state = "fatfeline_s"
@@ -337,7 +334,6 @@
 	hide_body_parts = null
 	clip_mask_icon = null
 	clip_mask_state = null
-	//apply_restrictions = TRUE
 	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 /datum/sprite_accessory/tail/taur/shadekin_tail/shadekin_tail_2c

@@ -74,7 +74,7 @@
 	set desc = "Select your resting pose."
 	sitting = FALSE
 	bellyup = FALSE
-	var/choice = alert(src, "Select resting pose", "", "Resting", "Sitting", "Belly up")
+	var/choice = tgui_alert(src, "Select resting pose", "Resting Pose", list("Resting", "Sitting", "Belly up"))
 	switch(choice)
 		if("Resting")
 			return 0
@@ -147,8 +147,8 @@
 	if(wideborg == TRUE)
 		if(icontype == "Drake") // Why, Why can't we have normal nice things
 			icon = 'icons/mob/drakeborg/drakeborg_vr.dmi'
-		else if(icontype == "SecVale" || icontype == "vale2") //CH edit 
-			icon = 'icons/mob/widerobot_vr.dmi'
+		else if(icontype == "Secborg model V-3" || icontype == "Mediborg model V-3") //CH edit 
+			icon = 'icons/mob/widerobot_ch.dmi'
 		else
 			icon = wideborg_dept
 		return
@@ -237,7 +237,7 @@
 
 	var/mob/living/carbon/human/H = M
 
-	if(isTaurTail(H.tail_style))
+	if(istaurtail(H.tail_style))
 		to_chat(src, "<span class='warning'>Too many legs. TOO MANY LEGS!!</span>")
 		return FALSE
 	if(M.loc != src.loc)

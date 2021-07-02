@@ -55,8 +55,6 @@
 /////////////
 /obj/item/weapon/hand_tele/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
-/obj/item/weapon/card/id/gold/captain/spare/digest_act(var/atom/movable/item_storage = null)
-	return FALSE
 /obj/item/device/aicard/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
 /obj/item/device/paicard/digest_act(var/atom/movable/item_storage = null)
@@ -78,16 +76,14 @@
 // Some special treatment
 /////////////
 
-/obj/item/weapon/card/id
-	var/lost_access = list()
-
 /obj/item/weapon/card/id/digest_act(atom/movable/item_storage = null)
-	desc = "A partially digested card that has seen better days. The damage appears to be only cosmetic, but the access codes need to be reprogrammed at the HoP office."
-	icon = 'icons/obj/card_vr.dmi'
-	icon_state = "[initial(icon_state)]_digested"
-	if(!(LAZYLEN(lost_access)) && LAZYLEN(access))
-		lost_access = access	//Do not forget what access we lose
-	access = list()			// Then lose it
+	desc = "A partially digested card that has seen better days. The damage appears to be only cosmetic."
+	if(!sprite_stack || !istype(sprite_stack) || !(sprite_stack.len))
+		icon = 'icons/obj/card_vr.dmi'
+		icon_state = "[initial(icon_state)]_digested"
+	else
+		sprite_stack += "digested"
+	update_icon()
 	return FALSE
 
 /obj/item/weapon/reagent_containers/food/digest_act(atom/movable/item_storage = null)
@@ -95,7 +91,7 @@
 		var/obj/belly/B = item_storage
 		if(ishuman(B.owner))
 			var/mob/living/carbon/human/H = B.owner
-			reagents.trans_to_holder(H.ingested, (reagents.total_volume * 0.3), 1, 0)
+			reagents.trans_to_holder(H.ingested, (reagents.total_volume * 0.5), 1, 0)
 		else if(isrobot(B.owner))
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 150
@@ -115,7 +111,7 @@
 	if((. = ..()))
 		if(isbelly(item_storage))
 			var/obj/belly/B = item_storage
-			. += 2 * (B.digest_brute + B.digest_burn)
+			. += 2 * (B.digest_brute + B.digest_burn + (B.digest_oxy)/2)
 		else
 			. += 30 //Organs give a little more
 

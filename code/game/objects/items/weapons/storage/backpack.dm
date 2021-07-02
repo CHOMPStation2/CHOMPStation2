@@ -8,7 +8,7 @@
 	icon = 'icons/obj/clothing/backpack.dmi'
 	icon_state = "backpack"
 	sprite_sheets = list(
-		SPECIES_TESHARI = 'icons/mob/species/seromi/back.dmi'
+		SPECIES_TESHARI = 'icons/mob/species/teshari/back.dmi'
 		)
 	w_class = ITEMSIZE_LARGE
 	slot_flags = SLOT_BACK
@@ -135,7 +135,7 @@
 	name = "dufflebag"
 	desc = "A large dufflebag for holding extra things."
 	icon_state = "duffle"
-	slowdown = 1
+	slowdown = 0.5
 	max_storage_space = INVENTORY_DUFFLEBAG_SPACE
 
 /obj/item/weapon/storage/backpack/dufflebag/syndie

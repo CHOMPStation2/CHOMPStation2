@@ -50,6 +50,8 @@
 	var/category_misc		 = 1
 	var/category_drinks		 = 1
 	var/category_pets		 = 1
+	var/category_mechs		 = 1
+	var/category_implants	 = 1
 	var/category_event		 = 1	//For special events, holidays, etc
 
 /obj/machinery/casino_prize_dispenser/Initialize()
@@ -151,7 +153,30 @@
 		CASINO_PRIZE("Absolute unit of an Otie", /obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby, 1, 500, "pets"),
 		CASINO_PRIZE("Zorgoia", /obj/item/weapon/grenade/spawnergrenade/casino/zorgoia, 1, 500, "pets"),
 	)
-	item_list["Christmas"] = list(
+	item_list["Mechs"] = list(
+		CASINO_PRIZE("Mech:Mining Ripley", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/mining, 1, 1000, "mechs"),
+		CASINO_PRIZE("Mech:Firefighter Ripley", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/firefighter, 1, 750, "mechs"),
+		CASINO_PRIZE("Mech:Serenity", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/serenity, 1, 1500, "mechs"),
+		CASINO_PRIZE("Mech:Odysseus", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/Odysseus, 1, 1250, "mechs"),
+		CASINO_PRIZE("Mech:Phazon Scuttlebug", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/scree, 1, 2000, "mechs"),
+		CASINO_PRIZE("Mech:Phazon Janus", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/janus, 1, 3500, "mechs"),
+		CASINO_PRIZE("Mech:Scarab", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/scarab, 1, 500, "mechs"),
+		CASINO_PRIZE("Mech:Shuttlepod", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlepod, 1, 250, "mechs"),
+		CASINO_PRIZE("Mech:Shuttlecraft", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlecraft, 1, 500, "mechs"),
+	)
+	item_list["Implants"] = list(
+		CASINO_PRIZE("Implanter (Remember to get one unless you want to borrow from station!)", /obj/item/weapon/implanter, 1, 100, "implants"),
+		CASINO_PRIZE("Implant: Tazer", /obj/item/weapon/implantcase/taser, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Medkit", /obj/item/weapon/implantcase/medkit, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Shades", /obj/item/weapon/implantcase/shades, 1, 750, "implants"),
+		CASINO_PRIZE("Implant: Sprinter", /obj/item/weapon/implantcase/sprinter, 1, 1500, "implants"),
+		CASINO_PRIZE("Implant: Toolkit", /obj/item/weapon/implantcase/toolkit, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Language", /obj/item/weapon/implantcase/vrlanguage, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Analyzer", /obj/item/weapon/implantcase/analyzer, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Size control", /obj/item/weapon/implant/sizecontrol , 1, 500, "implants"),
+	)
+
+	item_list["Event"] = list(
 	)
 
 /obj/machinery/casino_prize_dispenser/power_change()
@@ -255,6 +280,10 @@
 					restriction_check = category_drinks
 				if("pets")
 					restriction_check = category_pets
+				if("mechs")
+					restriction_check = category_mechs
+				if("implants")
+					restriction_check = category_implants
 				if("event")
 					restriction_check = category_event
 				else
@@ -308,7 +337,7 @@
 
 
 /obj/machinery/casino_prize_dispenser/proc/do_logging(item, mob/user, datum/data/casino_prize/bi)
-	var/prize_log = "[user.ckey] playing as [user.name] bought a [item] / [bi.equipment_path]"
+	var/prize_log = "{ckey:[user.ckey]character_name:[user.name]item_path: [bi.equipment_path]}"
 	log[++log.len] = prize_log
 	//Currently doesnt have an ingame way to show. Can only be viewed through View-Variables, to ensure theres no chance of players ckeys exposed - Jack
 

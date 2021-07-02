@@ -17,6 +17,14 @@ var/const/cyberbeast_monitor_styles = "blank=cyber_blank;\
 	idle=cyber_idle;\
 	nwn=cyber_nwn"
 
+// Placeholder for protean limbs during character spawning, before they have a properly set model
+/datum/robolimb/protean
+	company = "protean"
+	desc = "Nano-y!"
+	lifelike = 1
+	unavailable_to_build = 1
+	unavailable_at_chargen = 1
+
 //////////////// For-specific-character fluff ones /////////////////
 // arokha : Aronai Sieyes
 /datum/robolimb/kitsuhana
@@ -63,7 +71,7 @@ var/const/cyberbeast_monitor_styles = "blank=cyber_blank;\
 
 //Ported from CitRP
 /datum/robolimb/cyber_beast
-	company = "Cyber Tech(Protogen analogue)"	//CHOMPEdit
+	company = "Cyber Tech"
 	desc = "Adjusted for deep space, the material is durable and heavy."
 	icon = 'icons/mob/human_races/cyberlimbs/c-tech/c_beast.dmi'
 	unavailable_to_build = 1

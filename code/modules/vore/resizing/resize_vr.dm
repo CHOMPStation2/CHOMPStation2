@@ -1,21 +1,6 @@
-
-//these aren't defines so they can stay in this file
-var/const/RESIZE_HUGE = 2
-var/const/RESIZE_BIG = 1.5
-var/const/RESIZE_NORMAL = 1
-var/const/RESIZE_SMALL = 0.5
-var/const/RESIZE_TINY = 0.25
-
-//average
-var/const/RESIZE_A_HUGEBIG = (RESIZE_HUGE + RESIZE_BIG) / 2
-var/const/RESIZE_A_BIGNORMAL = (RESIZE_BIG + RESIZE_NORMAL) / 2
-var/const/RESIZE_A_NORMALSMALL = (RESIZE_NORMAL + RESIZE_SMALL) / 2
-var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
-
 // Adding needed defines to /mob/living
 // Note: Polaris had this on /mob/living/carbon/human We need it higher up for animals and stuff.
 /mob/living
-	var/size_multiplier = 1 //multiplier for the mob's icon size
 	var/holder_default
 	var/step_mechanics_pref = TRUE		// Allow participation in macro-micro step mechanics
 	var/pickup_pref = TRUE				// Allow participation in macro-micro pickup mechanics
@@ -60,32 +45,45 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 /mob/living/get_effective_size()
 	return size_multiplier
 
+/atom/movable/proc/size_range_check(size_select)		//both objects and mobs needs to have that
+	var/area/A = get_area(src) //Get the atom's area to check for size limit.
+	if((A.limit_mob_size && (size_select > 200 || size_select < 25)) || (size_select > 600 || size_select <1))
+		return FALSE
+	return TRUE
+
+/atom/movable/proc/has_large_resize_bounds()
+	var/area/A = get_area(src) //Get the atom's area to check for size limit.
+	return !A.limit_mob_size
+
+/proc/is_extreme_size(size)
+	return (size < RESIZE_MINIMUM || size > RESIZE_MAXIMUM)
+
+
 /**
  * Resizes the mob immediately to the desired mod, animating it growing/shrinking.
  * It can be used by anything that calls it.
  */
-/atom/movable/proc/in_dorms()
-	var/area/A = get_area(src)
-	return istype(A, /area/crew_quarters/sleep)
 
-/atom/movable/proc/size_range_check(size_select)		//both objects and mobs needs to have that
-	if((!in_dorms() && (size_select > 200 || size_select < 25)) || (size_select > 600 || size_select <1))
-		return FALSE
-	return TRUE
 
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/mark_unnatural_size = TRUE)
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
+	if(!uncapped)
+		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
+		var/datum/component/resize_guard/guard = GetComponent(/datum/component/resize_guard)
+		if(guard)
+			qdel(guard)
+	else if(has_large_resize_bounds())
+		if(is_extreme_size(new_size))
+			AddComponent(/datum/component/resize_guard)
+		else
+			var/datum/component/resize_guard/guard = GetComponent(/datum/component/resize_guard)
+			if(guard)
+				qdel(guard)
+	
 	if(size_multiplier == new_size)
 		return 1
 
 	size_multiplier = new_size //Change size_multiplier so that other items can interact with them
 
-	if(ishuman(src))
-		var/mob/living/carbon/human/H = src
-		if(new_size > 2 || new_size < 0.25)
-			if(mark_unnatural_size)		//Will target size be reverted to ordinary bounds when out of dorms or not?
-				H.unnaturally_resized = TRUE
-		else
-			H.unnaturally_resized = FALSE
 	if(animate)
 		var/change = new_size - size_multiplier
 		var/duration = (abs(change)+0.25) SECONDS
@@ -111,8 +109,8 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 	else
 		update_transform() //Lame way
 
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE)
-	if(!resizable)
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
+	if(!resizable && !ignore_prefs)
 		return 1
 	if(species)
 		vis_height = species.icon_height
@@ -125,7 +123,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 			apply_hud(index, HI)
 
 // Optimize mannequins - never a point to animating or doing HUDs on these.
-/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE)
+/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE)
 	size_multiplier = new_size
 
 /**
@@ -175,10 +173,10 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 		var/mob/living/simple_mob/SA = M
 		if(!SA.has_hands)
 			return 0
-	if(buckled)
-		to_chat(usr,"<span class='notice'>You have to unbuckle \the [M] before you pick them up.</span>")
-		return 0
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL)
+		if(buckled)
+			to_chat(usr,"<span class='notice'>You have to unbuckle \the [src] before you pick them up.</span>")
+			return 0
 		holder_type = /obj/item/weapon/holder/micro
 		var/obj/item/weapon/holder/m_holder = get_scooped(M, G)
 		holder_type = holder_default
@@ -215,7 +213,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 			var/mob/living/carbon/human/H = src
 			if(H.flying)
 				return TRUE //Silently pass without a message.
-			if(isTaurTail(H.tail_style))
+			if(istaurtail(H.tail_style))
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 				src_message = tail.msg_owner_help_run
 				tmob_message = tail.msg_prey_help_run
@@ -225,7 +223,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 			src_message = "You run between [tmob]'s legs."
 			tmob_message = "[src] runs between your legs."
 			var/mob/living/carbon/human/H = tmob
-			if(isTaurTail(H.tail_style))
+			if(istaurtail(H.tail_style))
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 				src_message = tail.msg_prey_stepunder
 				tmob_message = tail.msg_owner_stepunder
@@ -306,7 +304,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 	var/message_pred = null
 	var/message_prey = null
 	var/datum/sprite_accessory/tail/taur/tail = null
-	if(isTaurTail(pred.tail_style))
+	if(istaurtail(pred.tail_style))
 		tail = pred.tail_style
 
 	if(a_intent == I_GRAB)

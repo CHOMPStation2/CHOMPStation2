@@ -1171,7 +1171,7 @@ z
 	sound_env = MEDIUM_SOFTFLOOR
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
-area/crew_quarters/heads/sc/hop/quarters
+/area/crew_quarters/heads/sc/hop/quarters
 	name = "\improper Command - HoP's Quarters"
 	icon_state = "head_quarters"
 

@@ -394,63 +394,48 @@
 /turf/simulated/floor/tiled/external
 
 //**** Here lives snow ****
-
-/turf/simulated/floor/outdoors/snow
+/turf/simulated/floor/snow
 	name = "snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
-	outdoors = TRUE
-	movement_cost = 8
 	initial_flooring = /decl/flooring/snow
 	var/list/crossed_dirs = list()
 
-/turf/simulated/floor/outdoors/snow/snow
+/turf/simulated/floor/snow/snow2
 	name = "snow"
+	icon = 'icons/turf/snow.dmi'
 	icon_state = "snow"
+	initial_flooring = /decl/flooring/snow
 
-/turf/simulated/floor/outdoors/snow/snow/snow2
-	name = "snow"
-	icon_state = "snownew"
-	movement_cost = 4
-	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
-
-/turf/simulated/floor/outdoors/snow/gravsnow
+/turf/simulated/floor/snow/gravsnow
 	name = "snow"
 	icon_state = "gravsnow"
 	initial_flooring = /decl/flooring/snow/gravsnow
-	movement_cost = 0
 
-/turf/simulated/floor/outdoors/snow/plating
-	name = "snowy plating"
+/turf/simulated/floor/snow/plating
+	name = "snowy playing"
 	icon_state = "snowyplating"
 	initial_flooring = /decl/flooring/snow/plating
-	movement_cost = 0
 
-/turf/simulated/floor/outdoors/snow/plating/drift
+/turf/simulated/floor/snow/plating/drift
 	name = "snowy plating"
 	icon_state = "snowyplayingdrift"
-	initial_flooring = /decl/flooring/snow/plating/drift
-	movement_cost = 0
+	initial_flooring = /decl/flooring/snow/plating/drift			  
 
-#define FOOTSTEP_SPRITE_AMT 2
-/turf/snow/Entered(atom/A)
-    if(isliving(A) && !istype(A, /mob/living/simple_mob))
-        var/mdir = "[A.dir]"
-        if(crossed_dirs[mdir])
-            crossed_dirs[mdir] = min(crossed_dirs[mdir] + 1, FOOTSTEP_SPRITE_AMT)
-        else
-            crossed_dirs[mdir] = 1
+// TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
+/turf/simulated/floor/snow/Entered(atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		if(L.hovering) // Flying things shouldn't make footprints.
+			return ..()
+		var/mdir = "[A.dir]"
+		crossed_dirs[mdir] = 1
+		update_icon()
+	. = ..()
 
-        update_icon()
-
-    . = ..()
-
-/turf/snow/update_icon()
-    cut_overlays()
-    for(var/d in crossed_dirs)
-        var/amt = crossed_dirs[d]
-
-        for(var/i in 1 to amt)
-            add_overlay(image(icon, "footprint[i]", text2num(d)))
+/turf/simulated/floor/snow/update_icon()
+	..()
+	for(var/d in crossed_dirs)
+		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
 
 //**** Here ends snow ****

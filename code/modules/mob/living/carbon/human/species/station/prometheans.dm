@@ -55,8 +55,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 	gluttonous =	1
 	virus_immune =	1
 	blood_volume =	560
-	brute_mod =		0.75
-	burn_mod =		2
+	brute_mod =		0.7  //chompedit Old values of .75 brute and 2 burn were imbalanced.
+	burn_mod =		1.6  //chompedit
 	oxy_mod =		0
 	flash_mod =		0.5 //No centralized, lensed eyes.
 	item_slowdown_mod = 1.33
@@ -121,6 +121,15 @@ var/datum/species/shapeshifter/promethean/prometheans
 	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY)
 
 	var/heal_rate = 0.5 // Temp. Regen per tick.
+
+	default_emotes = list(
+		/decl/emote/audible/squish,
+		/decl/emote/audible/chirp,
+		/decl/emote/visible/bounce,
+		/decl/emote/visible/jiggle,
+		/decl/emote/visible/lightup,
+		/decl/emote/visible/vibrate
+	)
 
 /datum/species/shapeshifter/promethean/New()
 	..()

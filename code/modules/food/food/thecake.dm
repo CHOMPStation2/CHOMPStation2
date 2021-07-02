@@ -1,8 +1,8 @@
 // Chaos cake
 
 /datum/recipe/chaoscake_layerone
-	reagents = list("flour" = 300,"milk" = 200, "sugar" = 100, "egg" = 30)
-	fruit = list("poisonberries" = 15, "cherries" =  15)
+	reagents = list("flour" = 300,"milk" = 200, "sugar" = 100, "egg" = 30) //CHOMP Edit
+	fruit = list("poisonberries" = 15, "cherries" =  15) //CHOMP Edit
 	items = list(
 			/obj/item/weapon/reagent_containers/food/snacks/meat/,
 			/obj/item/weapon/reagent_containers/food/snacks/meat/,
@@ -12,8 +12,8 @@
 	result = /obj/structure/chaoscake
 
 /datum/recipe/chaoscake_layertwo
-	reagents = list("flour" = 300, "milk" = 200, "sugar" = 100, "egg" = 30, )
-	fruit = list("vanilla" =  15, "banana" = 15)
+	reagents = list("flour" = 300, "milk" = 200, "sugar" = 100, "egg" = 30, ) //CHOMP Edit
+	fruit = list("vanilla" =  15, "banana" = 15) //CHOMP Edit
 	items = list(
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
@@ -23,8 +23,8 @@
 	result = /obj/item/weapon/chaoscake_layer
 
 /datum/recipe/chaoscake_layerthree
-	reagents = list("flour" = 240, "milk" = 150, "sugar" = 80, "egg" = 24, "deathbell" = 100)
-	fruit = list("grapes" = 30)
+	reagents = list("flour" = 240, "milk" = 150, "sugar" = 80, "egg" = 24, "deathbell" = 100) //CHOMP Edit
+	fruit = list("grapes" = 30) //CHOMP Edit
 	items = list(
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
@@ -33,8 +33,8 @@
 	result = /obj/item/weapon/chaoscake_layer/three
 
 /datum/recipe/chaoscake_layerfour
-	reagents = list("flour" = 240, "milk" = 150, "sugar" = 80, "egg" = 24, "milkshake" = 300)
-	fruit = list("rice" = 30)
+	reagents = list("flour" = 240, "milk" = 150, "sugar" = 80, "egg" = 24, "milkshake" = 300) //CHOMP Edit
+	fruit = list("rice" = 30) //CHOMP Edit
 	items = list(
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
@@ -43,14 +43,14 @@
 	result = /obj/item/weapon/chaoscake_layer/four
 
 /datum/recipe/chaoscake_layerfive
-	reagents = list("flour" = 180, "milk" = 100, "sugar" = 60, "egg" = 18, "blood" = 300)
-	fruit = list("tomato" = 20)
+	reagents = list("flour" = 180, "milk" = 100, "sugar" = 60, "egg" = 18, "blood" = 300) //CHOMP Edit
+	fruit = list("tomato" = 20) //CHOMP Edit
 	items = list() //supposed to be made with lobster, still has to be ported.
 	result = /obj/item/weapon/chaoscake_layer/five
 
 /datum/recipe/chaoscake_layersix
-	reagents = list("flour" = 180, "milk" = 100, "sugar" = 60, "egg" = 18, "sprinkles" = 10)
-	fruit = list("apple" = 30)
+	reagents = list("flour" = 180, "milk" = 100, "sugar" = 60, "egg" = 18, "sprinkles" = 10) //CHOMP Edit
+	fruit = list("apple" = 30) //CHOMP Edit
 	items = list(
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
@@ -62,8 +62,8 @@
 	result = /obj/item/weapon/chaoscake_layer/six
 
 /datum/recipe/chaoscake_layerseven
-	reagents = list("flour" = 120, "milk" = 50, "sugar" = 40, "egg" = 12, "devilskiss" = 200)
-	fruit = list("potato" = 10)
+	reagents = list("flour" = 120, "milk" = 50, "sugar" = 40, "egg" = 12, "devilskiss" = 200) //CHOMP Edit
+	fruit = list("potato" = 10) //CHOMP Edit
 	items = list(
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
@@ -72,8 +72,8 @@
 	result = /obj/item/weapon/chaoscake_layer/seven
 
 /datum/recipe/chaoscake_layereight
-	reagents = list("flour" = 120, "milk" = 50, "sugar" = 40, "egg" = 12, "cream" = 200)
-	fruit = list("lemon" = 10)
+	reagents = list("flour" = 120, "milk" = 50, "sugar" = 40, "egg" = 12, "cream" = 200) //CHOMP Edit
+	fruit = list("lemon" = 10) //CHOMP Edit
 	items = list(
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
 			/obj/item/weapon/reagent_containers/food/snacks/dough,
@@ -82,8 +82,8 @@
 	result = /obj/item/weapon/chaoscake_layer/eight
 
 /datum/recipe/chaoscake_layernine
-	reagents = list("water" = 100, "blood" = 100)
-	fruit = list("goldapple" = 50)
+	reagents = list("water" = 100, "blood" = 100) //CHOMP Edit
+	fruit = list("goldapple" = 50) //CHOMP Edit
 	items = list()
 	result = /obj/item/weapon/chaoscake_layer/nine
 
@@ -160,7 +160,6 @@
 	layer_stage = 8
 
 /obj/structure/chaoscake/proc/HasSliceMissing()
-	..()
 	if(slices < maxslices)
 		if(interval >= regentime)
 			interval = 0

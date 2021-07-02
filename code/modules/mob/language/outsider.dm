@@ -86,9 +86,9 @@
 	flags = RESTRICTED | HIVEMIND
 
 /datum/language/xenocommon
-	name = "Xenomorph"
+	name = "Xenolingua" //CHOMPedit
 	colour = "alien"
-	desc = "The common tongue of the xenomorphs."
+	desc = "The common tongue of both the xenomorphs and the Genaprawns." //CHOMPedit
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"
@@ -98,7 +98,7 @@
 
 /datum/language/xenos
 	name = "Hivemind"
-	desc = "Xenomorphs have the strange ability to commune over a psychic hivemind."
+	desc = "Some aliens have the strange ability to commune over a psychic hivemind." //CHOMPedit
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"

@@ -19,7 +19,14 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 	var/ooc_notes = null //For holding prefs
 
+	// Resleeving database this machine interacts with. Blank for default database
+	// Needs a matching /datum/transcore_db with key defined in code
+	var/db_key
+	var/datum/transcore_db/our_db // These persist all round and are never destroyed, just keep a hard ref
 
+/obj/item/device/sleevemate/Initialize()
+	. = ..()
+	our_db = SStranscore.db_by_key(db_key)
 
 //These don't perform any checks and need to be wrapped by checks
 /obj/item/device/sleevemate/proc/clear_mind()
@@ -53,7 +60,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 				choices += H
 	// Subtargets
 	if(choices.len > 1)
-		var/mob/living/new_M = input(user, "Ambiguous target. Please validate target:", "Target Validation", M) as null|anything in choices
+		var/mob/living/new_M = tgui_input_list(user, "Ambiguous target. Please validate target:", "Target Validation", choices, M)
 		if(!new_M || !M.Adjacent(user))
 			return
 		M = new_M
@@ -68,7 +75,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		to_chat(user,"<span class='warning'>No stored mind in \the [src].</span>")
 		return
 
-	var/choice = alert(user,"What would you like to do?","Stored: [stored_mind.name]","Delete","Backup","Cancel")
+	var/choice = tgui_alert(user,"What would you like to do?","Stored: [stored_mind.name]",list("Delete","Backup","Cancel"))
 	if(!stored_mind || user.get_active_hand() != src)
 		return
 	switch(choice)
@@ -77,7 +84,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 			clear_mind()
 		if("Backup")
 			to_chat(user,"<span class='notice'>Internal copy of [stored_mind.name] backed up to database.</span>")
-			SStranscore.m_backup(stored_mind,null,one_time = TRUE)
+			our_db.m_backup(stored_mind,null,one_time = TRUE)
 		if("Cancel")
 			return
 
@@ -171,7 +178,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 	//The actual options
 	if(href_list["mindscan"])
-		if(!target.mind || target.mind.name in prevent_respawns)
+		if(!target.mind || (target.mind.name in prevent_respawns))
 			to_chat(usr,"<span class='warning'>Target seems totally braindead.</span>")
 			return
 
@@ -183,7 +190,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 		usr.visible_message("[usr] begins scanning [target]'s mind.","<span class='notice'>You begin scanning [target]'s mind.</span>")
 		if(do_after(usr,8 SECONDS,target))
-			SStranscore.m_backup(target.mind,nif,one_time = TRUE)
+			our_db.m_backup(target.mind,nif,one_time = TRUE)
 			to_chat(usr,"<span class='notice'>Mind backed up!</span>")
 		else
 			to_chat(usr,"<span class='warning'>You must remain close to your target!</span>")
@@ -200,7 +207,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		usr.visible_message("[usr] begins scanning [target]'s body.","<span class='notice'>You begin scanning [target]'s body.</span>")
 		if(do_after(usr,8 SECONDS,target))
 			var/datum/transhuman/body_record/BR = new()
-			BR.init_from_mob(H, TRUE, TRUE)
+			BR.init_from_mob(H, TRUE, TRUE, database_key = db_key)
 			to_chat(usr,"<span class='notice'>Body scanned!</span>")
 		else
 			to_chat(usr,"<span class='warning'>You must remain close to your target!</span>")
@@ -208,7 +215,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		return
 
 	if(href_list["mindsteal"])
-		if(!target.mind || target.mind.name in prevent_respawns)
+		if(!target.mind || (target.mind.name in prevent_respawns))
 			to_chat(usr,"<span class='warning'>Target seems totally braindead.</span>")
 			return
 
@@ -216,7 +223,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 			to_chat(usr,"<span class='warning'>There is already someone's mind stored inside</span>")
 			return
 
-		var/choice = alert(usr,"This will remove the target's mind from their body (and from the game as long as they're in the sleevemate). You can put them into a (mindless) body, a NIF, or back them up for normal resleeving, but you should probably have a plan in advance so you don't leave them unable to interact for too long. Continue?","Confirmation","Continue","Cancel")
+		var/choice = tgui_alert(usr,"This will remove the target's mind from their body (and from the game as long as they're in the sleevemate). You can put them into a (mindless) body, a NIF, or back them up for normal resleeving, but you should probably have a plan in advance so you don't leave them unable to interact for too long. Continue?","Confirmation",list("Continue","Cancel"))
 		if(choice == "Continue" && usr.get_active_hand() == src && usr.Adjacent(target))
 
 			usr.visible_message("<span class='warning'>[usr] begins downloading [target]'s mind!</span>","<span class='notice'>You begin downloading [target]'s mind!</span>")

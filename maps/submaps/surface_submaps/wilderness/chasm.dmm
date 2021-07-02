@@ -96,7 +96,7 @@
 "YR" = (/obj/structure/cliff/automatic/corner{dir = 10},/obj/structure/loot_pile/maint/technical,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "YU" = (/obj/effect/floor_decal/rust,/obj/effect/floor_decal/rust/color_rustedcee,/obj/effect/decal/cleanable/dirt,/obj/random/humanoidremains,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/Chasm)
 "Za" = (/obj/structure/cliff/automatic{dir = 10},/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
-"Zd" = (/obj/item/device/instrument/trombone,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
+"Zd" = (/obj/item/instrument/trombone,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "Zn" = (/mob/living/simple_mob/animal/space/jelly{health = 150; maxHealth = 150; name = "Cavern jelly blob"},/obj/item/weapon/bone/skull,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 "ZS" = (/mob/living/simple_mob/animal/space/jelly{health = 150; maxHealth = 150; name = "Cavern jelly blob"},/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/Chasm)
 

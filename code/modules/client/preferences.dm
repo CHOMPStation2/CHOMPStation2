@@ -2,7 +2,7 @@
 
 var/list/preferences_datums = list()
 
-datum/preferences
+/datum/preferences
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
@@ -87,7 +87,8 @@ datum/preferences
 		"2" = "character_preview_map:2,5",
 		"4"  = "character_preview_map:2,3",
 		"8"  = "character_preview_map:2,1",
-		"BG" = "character_preview_map:1,1 to 3,8"
+		"BG" = "character_preview_map:1,1 to 3,8",
+		"PMH" = "character_preview_map:2,7"
 	)
 
 		//Jobs, uses bitflags
@@ -176,8 +177,8 @@ datum/preferences
 		if(!IsGuestKey(C.key))
 			load_path(C.ckey)
 			if(load_preferences())
-				if(load_character())
-					return
+				load_character()
+
 
 /datum/preferences/Destroy()
 	. = ..()
@@ -277,6 +278,13 @@ datum/preferences
 	if(!client)
 		return
 
+	var/obj/screen/setup_preview/pm_helper/PMH = LAZYACCESS(char_render_holders, "PMH")
+	if(!PMH)
+		PMH = new
+		LAZYSET(char_render_holders, "PMH", PMH)
+		client.screen |= PMH
+	PMH.screen_loc = preview_screen_locs["PMH"]
+
 	var/obj/screen/setup_preview/bg/BG = LAZYACCESS(char_render_holders, "BG")
 	if(!BG)
 		BG = new
@@ -348,9 +356,9 @@ datum/preferences
 		sanitize_preferences()
 		close_load_dialog(usr)
 	else if(href_list["resetslot"])
-		if("No" == alert("This will reset the current slot. Continue?", "Reset current slot?", "No", "Yes"))
+		if("No" == tgui_alert(usr, "This will reset the current slot. Continue?", "Reset current slot?", list("No", "Yes")))
 			return 0
-		if("No" == alert("Are you completely sure that you want to reset this character slot?", "Reset current slot?", "No", "Yes"))
+		if("No" == tgui_alert(usr, "Are you completely sure that you want to reset this character slot?", "Reset current slot?", list("No", "Yes")))
 			return 0
 		load_character(SAVE_RESET)
 		sanitize_preferences()

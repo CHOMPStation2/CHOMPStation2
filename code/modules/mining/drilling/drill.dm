@@ -29,7 +29,7 @@
 		"silicates" = /obj/item/weapon/ore/glass,
 		"carbon" = /obj/item/weapon/ore/coal,
 		"copper" = /obj/item/weapon/ore/copper,
-		"tin" = /obj/item/weapon/ore/tin,
+	//	"tin" = /obj/item/weapon/ore/tin,
 		"bauxite" = /obj/item/weapon/ore/bauxite,
 		"rutile" = /obj/item/weapon/ore/rutile
 		)
@@ -117,7 +117,7 @@
 		var/total_harvest = harvest_speed //Ore harvest-per-tick.
 		var/found_resource = 0 //If this doesn't get set, the area is depleted and the drill errors out.
 
-		for(var/metal in GLOB.ore_types)
+		for(var/metal in ore_types)
 
 			if(contents.len >= capacity)
 				system_error("Insufficient storage space.")
@@ -145,7 +145,7 @@
 					harvesting.resources[metal] = 0
 
 				for(var/i=1, i <= create_ore, i++)
-					var/oretype = GLOB.ore_types[metal]
+					var/oretype = ore_types[metal]
 					new oretype(src)
 
 		if(!found_resource)	// If a drill can't see an advanced material, it will destroy it while going through.

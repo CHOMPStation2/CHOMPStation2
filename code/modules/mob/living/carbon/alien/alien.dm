@@ -7,6 +7,7 @@
 	health = 100
 	maxHealth = 100
 	mob_size = 4
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
 	inventory_panel_type = null // Disable inventory
 
@@ -55,7 +56,7 @@
 /mob/living/carbon/alien/get_default_language()
 	if(default_language)
 		return default_language
-	return GLOB.all_languages["Xenomorph"]
+	return GLOB.all_languages["Xenolingua"] //CHOMPedit
 
 /mob/living/carbon/alien/say_quote(var/message, var/datum/language/speaking = null)
 	var/verb = "hisses"

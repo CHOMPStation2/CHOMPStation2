@@ -3,8 +3,8 @@
 	name = "Synth Face"
 	desc = "A round dark muzzle made of LEDs."
 	body_parts_covered = FACE|EYES
-	icon = 'icons/mob/species/seromi/synth_facemask.dmi'
-	icon_override = 'icons/mob/species/seromi/synth_facemask.dmi'
+	icon = 'icons/mob/species/teshari/synth_facemask.dmi'
+	icon_override = 'icons/mob/species/teshari/synth_facemask.dmi'
 	icon_state = "synth_facemask"
 	origin_tech = list(TECH_ILLEGAL = 1)
 	var/lstat

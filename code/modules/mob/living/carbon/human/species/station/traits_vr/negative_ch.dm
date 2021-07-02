@@ -2,57 +2,57 @@
 #define GAUSSIAN_RANDOM(vars...)	((-2*log(rand()))**0.5 * cos(6.28318530718*rand()))
 #endif
 
-/datum/trait/hollow
-	excludes = list(/datum/trait/densebones)
+/datum/trait/negative/hollow
+	excludes = list(/datum/trait/positive/densebones)
 
-/datum/trait/slipperydirt
+/datum/trait/negative/slipperydirt
 	name = "Dirt Vulnerability"
 	desc = "Even the tiniest particles of dirt give you uneasy footing, even through several layers of footwear."
 	cost = -5
 	var_changes = list("dirtslip" = TRUE)
-	excludes = list(/datum/trait/absorbent)
+	excludes = list(/datum/trait/positive/absorbent)
 
-/datum/trait/less_blood
+/datum/trait/negative/less_blood
 	name = "Low blood volume"
 	desc = "You have 33.3% less blood volume compared to most species, making you more prone to blood loss issues."
 	cost = -3
 	var_changes = list("blood_volume" = 375)
-	excludes = list(/datum/trait/less_blood_extreme,/datum/trait/more_blood,/datum/trait/more_blood_extreme)
+	excludes = list(/datum/trait/negative/less_blood_extreme,/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme)
 	can_take = ORGANICS
 
-/datum/trait/less_blood_extreme
+/datum/trait/negative/less_blood_extreme
 	name = "Extremely low blood volume"
 	desc = "You have 60% less blood volume compared to most species, making you much more prone to blood loss issues."
 	cost = -5
 	var_changes = list("blood_volume" = 224)
-	excludes = list(/datum/trait/less_blood,/datum/trait/more_blood,/datum/trait/more_blood_extreme)
+	excludes = list(/datum/trait/negative/less_blood,/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme)
 	can_take = ORGANICS
 
-/datum/trait/scrawny
+/datum/trait/negative/scrawny
 	name = "Scrawny"
 	desc = "You have a much harder time breaking free of grabs as well as creating and holding onto grabs on other people."
 	cost = -2
 	var_changes = list("grab_resist_divisor_victims" = 0.5, "grab_resist_divisor_self" = 3, "grab_power_victims" = 1, "grab_power_self" = -1)
 
-/datum/trait/extreme_slowdown
+/datum/trait/negative/extreme_slowdown
 	name = "Extreme slowdown"
 	desc = "You move EXTREMELY slower than baseline"
 	cost = -8
 	var_changes = list("slowdown" = 4.0)
 
-/datum/trait/deep_sleeper
+/datum/trait/negative/deep_sleeper
 	name = "Deep Sleeper"
 	desc = "When you fall asleep, it takes you four times as long to wake up."
 	cost = -1
 	var_changes = list("waking_speed" = 0.25)
 
-/datum/trait/low_blood_sugar
+/datum/trait/negative/low_blood_sugar
 	name = "Low blood sugar"
 	desc = "If you let your nutrition get too low, you will start to experience adverse affects including hallucinations, unconsciousness, and weakness"
 	cost = -1
 	special_env = TRUE
 
-/datum/trait/low_blood_sugar/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/low_blood_sugar/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.nutrition > 200)	//Sanity check because stupid bugs >:v
 		return
 	if((H.nutrition < 200) && prob(5))
@@ -71,16 +71,16 @@
 	if((H.nutrition < 25) && prob(5))
 		H.drowsyness = max(100,H.drowsyness+30)
 
-/datum/trait/blindness
+/datum/trait/negative/blindness
 	name = "Permanently blind"
 	desc = "You are blind. For whatever reason, nothing is able to change this fact, not even surgery. WARNING: YOU WILL NOT BE ABLE TO SEE ANY POSTS USING THE ME VERB, ONLY SUBTLE AND DIALOGUE ARE VIEWABLE TO YOU, YOU HAVE BEEN WARNED."
 	cost = -8
 	special_env = TRUE
 
-/datum/trait/blindness/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/blindness/handle_environment_special(var/mob/living/carbon/human/H)
 	H.sdisabilities |= BLIND 		//no matter what you do, the blindess still comes for you
 
-/datum/trait/schizophrenia
+/datum/trait/negative/schizophrenia
 	name = "Episodic hallucinations."
 	desc = "You have a condition which causes you to spontaneously have hallucinations! Luckily for you, in the modern space age, our doctors have solutions for you, just make sure you don't forget to take your pills."
 	cost = -3
@@ -98,12 +98,12 @@
 	var/break_length_meds_dev = 7000
 	var/list/episode = list("in_episode" = FALSE)
 
-/datum/trait/schizophrenia/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/schizophrenia/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	episode["next_episode_begin"] = world.time + 6000
 	episode["next_episode_end"] = world.time + 9000
 
-/datum/trait/schizophrenia/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/schizophrenia/handle_environment_special(var/mob/living/carbon/human/H)
 	var/med_vol = get_med_volume(H)
 	if(!episode["in_episode"])
 		if(world.time > episode["next_episode_begin"])
@@ -134,7 +134,7 @@
 				episode["next_episode_end"] = world.time + (episode["next_episode_end"] - world.time)/8
 			H.hallucination = min(hallucination_max,H.hallucination + hallucination_increase)
 
-/datum/trait/schizophrenia/proc/get_med_volume(var/mob/living/carbon/human/H)
+/datum/trait/negative/schizophrenia/proc/get_med_volume(var/mob/living/carbon/human/H)
 	var/total_vol = 0
 	for(var/datum/reagent/reagent in H.bloodstr.reagent_list)
 		if(istype(reagent,/datum/reagent/tercozolam))
@@ -143,7 +143,7 @@
 		if(istype(reagent,/datum/reagent/tercozolam))
 			total_vol += reagent.volume
 	return total_vol
-/datum/trait/agoraphobia
+/datum/trait/negative/agoraphobia
 	name = "Agoraphobia"
 	desc = "You very much dislike being in crowded places. When in the company of more than two other people, you start to panic and experience adverse effects."
 	cost = -3
@@ -151,9 +151,9 @@
 	var/hallucination_cap = 25
 	var/escalation_speed = 0.8
 	special_env = TRUE
-	excludes = list(/datum/trait/lonely,/datum/trait/lonely/major)
+	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/lonely/major)
 
-/datum/trait/agoraphobia/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/agoraphobia/handle_environment_special(var/mob/living/carbon/human/H)
 	spawn(0)
 		var/list/in_range = list()
 		// If they're dead or unconcious they're a bit beyond this kind of thing.
@@ -183,7 +183,7 @@
 			H.loneliness_stage = max(H.loneliness_stage-4,0)
 
 
-/datum/trait/agoraphobia/proc/handle_loneliness(var/mob/living/carbon/human/H)
+/datum/trait/negative/agoraphobia/proc/handle_loneliness(var/mob/living/carbon/human/H)
 	var/ms = ""
 	if(H.loneliness_stage == escalation_speed)
 		ms = "You notice there's more people than you feel comfortable with around you..."
@@ -201,7 +201,7 @@
 		to_chat(H, ms)
 	H.next_loneliness_time = world.time+500
 
-/datum/trait/agoraphobia/proc/find_held_by(var/atom/item)
+/datum/trait/negative/agoraphobia/proc/find_held_by(var/atom/item)
 	if(!item || !istype(item))
 		return null
 	else if(istype(item,/mob/living))
@@ -209,7 +209,7 @@
 	else
 		return find_held_by(item.loc)
 
-/datum/trait/agoraphobia/proc/holder_check(var/mob/living/carbon/human/H,var/obj/item/weapon/holder/H_holder)
+/datum/trait/negative/agoraphobia/proc/holder_check(var/mob/living/carbon/human/H,var/obj/item/weapon/holder/H_holder)
 	var/list/in_range = list()
 	if(istype(H_holder))
 		var/mob/living/held_by = find_held_by(H_holder)
@@ -218,7 +218,7 @@
 		in_range |= holder_check(H,held_by)
 	return in_range
 
-/datum/trait/agoraphobia/proc/belly_check(var/mob/living/carbon/human/H,var/obj/belly/B)
+/datum/trait/negative/agoraphobia/proc/belly_check(var/mob/living/carbon/human/H,var/obj/belly/B)
 	var/list/in_range = list()
 	if(istype(B))
 		in_range |= check_mob_company(H,B.owner,FALSE)
@@ -226,7 +226,7 @@
 			in_range |= belly_check(H,B.owner.loc)
 	return in_range
 
-/datum/trait/agoraphobia/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M,var/invis_matters = TRUE)
+/datum/trait/negative/agoraphobia/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M,var/invis_matters = TRUE)
 	var/list/in_range = list()
 	if(!istype(M))
 		return in_range
@@ -245,7 +245,7 @@
 	in_range |= check_contents(M,H)
 	return in_range
 
-/datum/trait/agoraphobia/proc/check_contents(var/atom/item,var/mob/living/carbon/human/H,var/max_layer = 3,var/current_layer = 1)
+/datum/trait/negative/agoraphobia/proc/check_contents(var/atom/item,var/mob/living/carbon/human/H,var/max_layer = 3,var/current_layer = 1)
 	var/list/in_range = list()
 	if(!item || !istype(item) || current_layer > max_layer)
 		return in_range
@@ -257,7 +257,7 @@
 			in_range |= check_contents(content,H,max_layer,current_layer+1)
 	return in_range
 
-/datum/trait/lonely
+/datum/trait/negative/lonely
 	name = "Minor loneliness vulnerability"
 	desc = "You're very prone to loneliness! Being alone for extended periods of time causes adverse effects. Most mobs will cure this loneliness as long as they aren't hostile."
 	cost = -2
@@ -266,9 +266,9 @@
 	var/hallucination_cap = 25
 	var/escalation_speed = 0.8
 	special_env = TRUE
-	excludes = list(/datum/trait/lonely/major,/datum/trait/agoraphobia)
+	excludes = list(/datum/trait/negative/lonely/major,/datum/trait/negative/agoraphobia)
 
-/datum/trait/lonely/major
+/datum/trait/negative/lonely/major
 	name = "Major loneliness vulnerability"
 	desc = "You're extremely prone to loneliness! Being alone for extended periods of time causes adverse effects. Most mobs won't be enough to cure this loneliness, you need other social beings."
 	cost = -5
@@ -277,15 +277,15 @@
 	escalation_speed = 1.3
 	only_people = TRUE
 	special_env = TRUE
-	excludes = list(/datum/trait/lonely,/datum/trait/agoraphobia)
+	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/agoraphobia)
 
-/datum/trait/lonely/proc/sub_loneliness(var/mob/living/carbon/human/H,var/amount = 4)
+/datum/trait/negative/lonely/proc/sub_loneliness(var/mob/living/carbon/human/H,var/amount = 4)
 	H.loneliness_stage = max(H.loneliness_stage - 4, 0)
 	if(world.time >= H.next_loneliness_time && H.loneliness_stage > 0)
 		to_chat(H, "The nearby company calms you down...")
 		H.next_loneliness_time = world.time+500
 
-/datum/trait/lonely/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M)
+/datum/trait/negative/lonely/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M)
 	if(!istype(M))
 		return 0
 	var/social_check = only_people && !istype(M, /mob/living/carbon) && !istype(M, /mob/living/silicon/robot)
@@ -305,7 +305,7 @@
 						check_mob_company(H,content)
 	return 0
 
-/datum/trait/lonely/proc/check_contents(var/atom/item,var/mob/living/carbon/human/H,var/max_layer = 3,var/current_layer = 1)
+/datum/trait/negative/lonely/proc/check_contents(var/atom/item,var/mob/living/carbon/human/H,var/max_layer = 3,var/current_layer = 1)
 	if(!item || !istype(item) || current_layer > max_layer)
 		return 0
 	for(var/datum/content in item.contents)
@@ -318,7 +318,7 @@
 				return 1
 	return 0
 
-/datum/trait/lonely/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/lonely/handle_environment_special(var/mob/living/carbon/human/H)
 	spawn(0)
 		// If they're dead or unconcious they're a bit beyond this kind of thing.
 		if(H.stat)
@@ -359,7 +359,7 @@
 		if(H.loneliness_stage >= warning_cap && H.hallucination < hallucination_cap)
 			H.hallucination = min(hallucination_cap,H.hallucination+2.5*escalation_speed)
 
-/datum/trait/lonely/proc/handle_loneliness(var/mob/living/carbon/human/H)
+/datum/trait/negative/lonely/proc/handle_loneliness(var/mob/living/carbon/human/H)
 	var/ms = ""
 	if(H.loneliness_stage == escalation_speed)
 		ms = "Well.. No one is around you anymore..."

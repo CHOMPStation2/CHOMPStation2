@@ -34,7 +34,6 @@
 
 	// Vore vars
 	vore_active = 1
-	vore_bump_chance = 10
 	vore_bump_emote	= "playfully lunges at"
 	vore_pounce_chance = 40
 	vore_pounce_maxhealth = 100 // They won't pounce by default, as they're passive. This is just so the nom check succeeds. :u
@@ -92,7 +91,7 @@
 /datum/say_list/rabbit
 	speak = list("chrrrs.")
 	emote_hear = list("screms.")
-	emote_see = list("earflicks","wiggles it's tail", "wiggles its nose")
+	emote_see = list("earflicks","wiggles its tail", "wiggles its nose")
 
 /mob/living/simple_mob/vore/rabbit/black
 	icon_state = "rabbit_black"
@@ -140,6 +139,7 @@
 
 	movement_cooldown = 0.5 // very fast bunbun.
 
+	vore_bump_chance = 10
 	vore_pounce_chance = 100
 	vore_pounce_falloff = 0.2
 

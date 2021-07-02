@@ -167,7 +167,7 @@
 		if("modify")
 			if(computer && computer.card_slot)
 				if(id_card)
-					data_core.manifest_modify(id_card.registered_name, id_card.assignment)
+					data_core.manifest_modify(id_card.registered_name, id_card.assignment, id_card.rank)
 				computer.proc_eject_id(usr)
 			. = TRUE
 		if("terminate")
@@ -193,7 +193,7 @@
 			if(computer && program.can_run(usr, 1) && id_card)
 				var/t1 = params["assign_target"]
 				if(t1 == "Custom")
-					var/temp_t = sanitize(input("Enter a custom job assignment.","Assignment", id_card.assignment), 45)
+					var/temp_t = sanitize(input(usr, "Enter a custom job assignment.","Assignment", id_card.assignment), 45)
 					//let custom jobs function as an impromptu alt title, mainly for sechuds
 					if(temp_t)
 						id_card.assignment = temp_t

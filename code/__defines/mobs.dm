@@ -272,6 +272,10 @@
 #define TASTE_DULL 0.5 //anything below 30%
 #define TASTE_NUMB 0.1 //anything below 150%
 
+//Used by emotes
+#define VISIBLE_MESSAGE 1
+#define AUDIBLE_MESSAGE 2
+
 // If they're in an FBP, what braintype.
 #define FBP_NONE	""
 #define FBP_CYBORG	"Cyborg"
@@ -316,13 +320,13 @@
 #define SPECIES_VR_SKELETON		"Virtual Reality Skeleton"
 #define SPECIES_VR_VOX			"Virtual Reality Vox"
 
-// Ayyy IDs.
-#define SPECIES_XENO			"Xenomorph"
-#define SPECIES_XENO_DRONE		"Xenomorph Drone"
-#define SPECIES_XENO_HUNTER		"Xenomorph Hunter"
-#define SPECIES_XENO_SENTINEL	"Xenomorph Sentinel"
-#define SPECIES_XENO_QUEEN		"Xenomorph Queen"
-
+// Ayyy IDs. CHOMPedit
+#define SPECIES_GENA			"Genaprawn"
+#define SPECIES_GENA_DRONE		"Genaprawn Drone"
+#define SPECIES_GENA_HUNTER		"Genaprawn Hunter"
+#define SPECIES_GENA_SENTINEL	"Genaprawn Sentinel"
+#define SPECIES_GENA_QUEEN		"Genaprawn Queen"
+//CHOMPedit end
 // Misc species. Mostly unused but might as well be complete.
 #define SPECIES_SHADOW			"Shadow"
 #define SPECIES_SKELETON		"Skeleton"
@@ -373,37 +377,40 @@
 //Vision flags, for dealing with plane visibility
 #define VIS_FULLBRIGHT		1
 #define VIS_LIGHTING		2
-#define VIS_GHOSTS			3
-#define VIS_AI_EYE			4
+#define VIS_O_LIGHT         3
+#define VIS_EMISSIVE        4
 
-#define VIS_CH_STATUS		5
-#define VIS_CH_HEALTH		6
-#define VIS_CH_LIFE			7
-#define VIS_CH_ID			8
-#define VIS_CH_WANTED		9
-#define VIS_CH_IMPLOYAL		10
-#define VIS_CH_IMPTRACK		11
-#define VIS_CH_IMPCHEM		12
-#define VIS_CH_SPECIAL		13
-#define VIS_CH_STATUS_OOC	14
+#define VIS_GHOSTS			5
+#define VIS_AI_EYE			6
 
-#define VIS_ADMIN1			15
-#define VIS_ADMIN2			16
-#define VIS_ADMIN3			17
+#define VIS_CH_STATUS		7
+#define VIS_CH_HEALTH		8
+#define VIS_CH_LIFE			9
+#define VIS_CH_ID			10
+#define VIS_CH_WANTED		11
+#define VIS_CH_IMPLOYAL		12
+#define VIS_CH_IMPTRACK		13
+#define VIS_CH_IMPCHEM		14
+#define VIS_CH_SPECIAL		15
+#define VIS_CH_STATUS_OOC	16
 
-#define VIS_MESONS			18
+#define VIS_ADMIN1			17
+#define VIS_ADMIN2			18
+#define VIS_ADMIN3			19
 
-#define VIS_TURFS			19
-#define VIS_OBJS			20
-#define VIS_MOBS			21
+#define VIS_MESONS			20
 
-#define VIS_BUILDMODE		22
+#define VIS_TURFS			21
+#define VIS_OBJS			22
+#define VIS_MOBS		    23
 
-#define VIS_CLOAKED			23
+#define VIS_BUILDMODE		24
 
-#define VIS_STATUS			24
+#define VIS_CLOAKED			25
 
-#define VIS_COUNT			24 //Must be highest number from above.
+#define VIS_STATUS			26
+
+#define VIS_COUNT			26 //Must be highest number from above.
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100
@@ -433,6 +440,10 @@
 #define EXAMINE_SKIPLEGS			0x0080
 #define EXAMINE_SKIPFEET			0x0100
 
-#define MAX_NUTRITION	5000 //VOREStation Edit
+#define MAX_NUTRITION	6000 //VOREStation Edit
 
 #define FAKE_INVIS_ALPHA_THRESHOLD 127 // If something's alpha var is at or below this number, certain things will pretend it is invisible.
+
+#define DEATHGASP_NO_MESSAGE "no message"
+
+#define RESIST_COOLDOWN		2 SECONDS

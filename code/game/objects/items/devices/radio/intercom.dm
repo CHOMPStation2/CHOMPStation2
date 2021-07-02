@@ -1,4 +1,5 @@
 /obj/item/device/radio/intercom
+	listening = 0 //CHOMP Edit: Temporary bandaid fix for comms lag.
 	name = "station intercom (General)"
 	desc = "Talk through this."
 	icon = 'icons/obj/radio_vr.dmi' //VOREStation Edit - New Icon
@@ -16,12 +17,12 @@
 	. = ..()
 	var/area/A = get_area(src)
 	if(A)
-		GLOB.apc_event.register(A, src, /obj/update_icon)
+		GLOB.apc_event.register(A, src, /atom/proc/update_icon)
 
 /obj/item/device/radio/intercom/Destroy()
 	var/area/A = get_area(src)
 	if(A)
-		GLOB.apc_event.unregister(A, src, /obj/update_icon)
+		GLOB.apc_event.unregister(A, src, /atom/proc/update_icon)
 	return ..()
 
 /obj/item/device/radio/intercom/custom

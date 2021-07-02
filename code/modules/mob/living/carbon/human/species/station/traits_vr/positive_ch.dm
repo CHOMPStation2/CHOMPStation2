@@ -1,130 +1,130 @@
-/datum/trait/linguist
+/datum/trait/positive/linguist
 	name = "Master Linguist"
 	desc = "You are a master of languages! For whatever reason you might have, you are able to learn many more languages than others."
 	cost = 2
 	var_changes = list("num_alternate_languages" = 12)
 
-/datum/trait/densebones
+/datum/trait/positive/densebones
 	name = "Dense bones"
 	desc = "Your bones (or robotic limbs) are more dense or stronger then what is considered normal. It is much harder to fracture your bones, yet pain from fractures is much more intense."
 	cost = 3
-	excludes = list(/datum/trait/hollow)
+	excludes = list(/datum/trait/negative/hollow)
 
-/datum/trait/densebones/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/densebones/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	for(var/obj/item/organ/external/organ in H.organs)
 		if(istype(organ))
 			organ.min_broken_damage *= 1.5
 			organ.brokenpain *= 2
 
-/datum/trait/lowpressureres
+/datum/trait/positive/lowpressureres
 	name = "Low Pressure Resistance"
 	desc = "Your body is more resistant to low pressures. Pretty simple."
 	cost = 3
 	var_changes = list("hazard_low_pressure" = HAZARD_LOW_PRESSURE*0.66, "warning_low_pressure" = WARNING_LOW_PRESSURE*0.66, "minimum_breath_pressure" = 16*0.66)
 
-/datum/trait/highpressureres
+/datum/trait/positive/highpressureres
 	name = "High Pressure Resistance"
 	desc = "Your body is more resistant to high pressures. Pretty simple."
 	cost = 3
 	var_changes = list("hazard_high_pressure" = HAZARD_HIGH_PRESSURE*1.5, "warning_high_pressure" = WARNING_HIGH_PRESSURE*1.5)
 
-/datum/trait/photosynth
+/datum/trait/positive/photosynth
 	name = "Photosynthesis"
 	desc = "Your body is able to produce nutrition from being in light."
 	cost = 3
 	var_changes = list("photosynthesizing" = TRUE)
 	can_take = ORGANICS|SYNTHETICS //Synths actually use nutrition, just with a fancy covering.
 
-/datum/trait/rad_resistance
+/datum/trait/positive/rad_resistance
 	name = "Radiation Resistance"
 	desc = "You are generally more resistant to radiation, and it dissipates faster from your body."
 	cost = 2
 	var_changes = list("radiation_mod" = 0.65, "rad_removal_mod" = 3.5, "rad_levels" = list("safe" = 20, "danger_1" = 75, "danger_2" = 100, "danger_3" = 200))
 
-/datum/trait/rad_resistance_extreme
+/datum/trait/positive/rad_resistance_extreme
 	name = "Extreme Radiation Resistance"
 	desc = "You are much more resistant to radiation, and it dissipates much faster from your body."
 	cost = 4
 	var_changes = list("radiation_mod" = 0.5, "rad_removal_mod" = 5, "rad_levels" = list("safe" = 40, "danger_1" = 100, "danger_2" = 150, "danger_3" = 250))
 
-/datum/trait/more_blood
+/datum/trait/positive/more_blood
 	name = "High blood volume"
 	desc = "You have much 50% more blood than most other people"
 	cost = 3
 	var_changes = list("blood_volume" = 840)
-	excludes = list(/datum/trait/more_blood_extreme,/datum/trait/less_blood,/datum/trait/less_blood_extreme)
+	excludes = list(/datum/trait/positive/more_blood_extreme,/datum/trait/negative/less_blood,/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
 
-/datum/trait/more_blood_extreme
+/datum/trait/positive/more_blood_extreme
 	name = "Very high blood volume"
 	desc = "You have much 150% more blood than most other people"
 	cost = 6
 	var_changes = list("blood_volume" = 1400)
-	excludes = list(/datum/trait/more_blood,/datum/trait/less_blood,/datum/trait/less_blood_extreme)
+	excludes = list(/datum/trait/positive/more_blood,/datum/trait/negative/less_blood,/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
 
-/datum/trait/heavyweight
+/datum/trait/positive/heavyweight
 	name = "Heavyweight"
 	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, it's much more difficult to move you."
 	cost = 2
 
-/datum/trait/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.mob_bump_flag = HEAVY
 
-/datum/trait/table_passer
+/datum/trait/positive/table_passer
 	name = "Table passer"
 	desc = "You move over or under tables with ease of a Teshari."
 	cost = 2
 
-/datum/trait/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.pass_flags = PASSTABLE
 
 
-/datum/trait/big_mouth
+/datum/trait/positive/big_mouth
 	name = "Big mouth"
 	desc = "It takes half as many bites to finish food as it does for most people."
 	cost = 1
 	var_changes = list("bite_mod" = 2)
 
-/datum/trait/grappling_expert
+/datum/trait/positive/grappling_expert
 	name = "Grappling expert"
 	desc = "Your grabs are much harder to escape from, and you are better at escaping from other's grabs!"
 	cost = 3
 	var_changes = list("grab_resist_divisor_victims" = 3, "grab_resist_divisor_self" = 0.5, "grab_power_victims" = -1, "grab_power_self" = 1)
 
-/datum/trait/big_mouth_extreme
+/datum/trait/positive/big_mouth_extreme
 	name = "Giant mouth"
 	desc = "It takes a quarter as many bites to finish food as it does for most people."
 	cost = 3
 	var_changes = list("bite_mod" = 4)
 
-/datum/trait/absorbent
+/datum/trait/positive/absorbent
 	name = "Absorbent"
 	desc = "You are able to clean messes just by walking over them, and gain nutrition from doing so!"
 	cost = 2
 	special_env = TRUE
-	excludes = list(/datum/trait/slipperydirt)
+	excludes = list(/datum/trait/negative/slipperydirt)
 
-/datum/trait/endurance_high
+/datum/trait/positive/endurance_high
 	cost = 3
-	excludes = list(/datum/trait/brute_resist, /datum/trait/minor_brute_resist, /datum/trait/minor_burn_resist, /datum/trait/burn_resist)
+	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist, /datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist)
 
-/datum/trait/brute_resist
-	excludes = list(/datum/trait/minor_brute_resist, /datum/trait/burn_resist, /datum/trait/endurance_high)
+/datum/trait/positive/brute_resist
+	excludes = list(/datum/trait/positive/minor_brute_resist, /datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
 
-/datum/trait/minor_brute_resist
-	excludes = list(/datum/trait/brute_resist, /datum/trait/endurance_high)
+/datum/trait/positive/minor_brute_resist
+	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
 
-/datum/trait/burn_resist
-	excludes = list(/datum/trait/minor_burn_resist, /datum/trait/brute_resist, /datum/trait/endurance_high)
+/datum/trait/positive/burn_resist
+	excludes = list(/datum/trait/positive/minor_burn_resist, /datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
 
-/datum/trait/minor_burn_resist
-	excludes = list(/datum/trait/burn_resist, /datum/trait/endurance_high)
+/datum/trait/positive/minor_burn_resist
+	excludes = list(/datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
 
-/datum/trait/absorbent/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/positive/absorbent/handle_environment_special(var/mob/living/carbon/human/H)
 	var/turf/T = get_turf(H)
 	if(istype(T))
 		if(!(H.shoes || (H.wear_suit && (H.wear_suit.body_parts_covered & FEET))))
@@ -159,7 +159,7 @@
 				H.update_inv_w_uniform(0)
 				H.adjust_nutrition(rand(5, 15))
 
-/datum/trait/adrenaline_rush
+/datum/trait/positive/adrenaline_rush
 	name = "Adrenaline Rush"
 	desc = "When you get critically damaged, you'll have an adrenaline rush before going down, giving you another chance to finish the fight, or get to safety."
 	cost = 6
@@ -167,7 +167,7 @@
 	can_take = ORGANICS
 	var/last_adrenaline_rush
 
-/datum/trait/adrenaline_rush/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/positive/adrenaline_rush/handle_environment_special(var/mob/living/carbon/human/H)
 	if(!(H.health<0))
 		return
 	if(last_adrenaline_rush && last_adrenaline_rush + 18000 > world.time)
@@ -240,12 +240,12 @@
 	incoming_hal_damage_percent = 1.75
 	incoming_oxy_damage_percent = 1.25
 	
-/datum/trait/insect_sting
+/datum/trait/positive/insect_sting
 	name = "Insect Sting"
 	desc = "Allows you to sting your victim with a smalll amount of poison"
 	cost = 1
 
-/datum/trait/insect_sting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/insect_sting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/insect_sting
 	

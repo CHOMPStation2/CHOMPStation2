@@ -16,6 +16,18 @@
 	item_cost = 2
 	path = /obj/item/device/suit_cooling_unit/emergency
 
+/datum/uplink_item/item/tools/beacon_op
+	name = "Holomap Beacon-M"
+	item_cost = 2
+	path = /obj/item/device/holomap_beacon/operative
+	antag_roles = list("mercenary")
+
+/datum/uplink_item/item/tools/beacon_ert
+	name = "Holomap Beacon-E"
+	item_cost = 2
+	path = /obj/item/device/holomap_beacon/ert
+	antag_roles = list("ert")
+
 /datum/uplink_item/item/tools/basiclaptop
 	name = "Laptop (Basic)"
 	item_cost = 5
@@ -25,6 +37,11 @@
 	name = "Survival Capsule"
 	item_cost = 5
 	path = /obj/item/device/survivalcapsule
+
+/datum/uplink_item/item/tools/popcabin
+	name = "Cabin Capsule"
+	item_cost = 5
+	path = /obj/item/device/survivalcapsule/popcabin
 
 /datum/uplink_item/item/tools/nanopaste
 	name = "Nanopaste (Advanced)"
@@ -46,6 +63,16 @@
 	item_cost = 15
 	path = /obj/item/modular_computer/tablet/preset/custom_loadout/advanced
 
+/datum/uplink_item/item/tools/metal
+	name = "Metal (50 sheets)"
+	item_cost = 15
+	path = /obj/fiftyspawner/steel
+
+/datum/uplink_item/item/tools/glass
+	name = "Glass (50 sheets)"
+	item_cost = 15
+	path = /obj/fiftyspawner/glass
+
 /datum/uplink_item/item/tools/elitelaptop
 	name = "Laptop (Advanced)"
 	item_cost = 20
@@ -55,6 +82,18 @@
 	name = "Inducer"
 	item_cost = 20
 	path = /obj/item/weapon/inducer/syndicate
+
+/datum/uplink_item/item/tools/mappingunit_op
+	name = "Mapping Unit-M"
+	item_cost = 20
+	path = /obj/item/device/mapping_unit/operative
+	antag_roles = list("mercenary")
+
+/datum/uplink_item/item/tools/mappingunit_ert
+	name = "Mapping Unit-E"
+	item_cost = 20
+	path = /obj/item/device/mapping_unit/ert
+	antag_roles = list("ert")
 
 /datum/uplink_item/item/tools/luxurycapsule
 	name = "Survival Capsule (Luxury)"

@@ -41,15 +41,16 @@
 
 /obj/item/weapon/card/id/guest/attack_self(mob/living/user as mob)
 	if(user.a_intent == I_HURT)
-		if(icon_state == "guest_invalid")
+		if(icon_state == "guest-invalid")
 			to_chat(user, "<span class='warning'>This guest pass is already deactivated!</span>")
 			return
 
-		var/confirm = alert("Do you really want to deactivate this guest pass? (you can't reactivate it)", "Confirm Deactivation", "Yes", "No")
+		var/confirm = tgui_alert(usr, "Do you really want to deactivate this guest pass? (you can't reactivate it)", "Confirm Deactivation", list("Yes", "No"))
 		if(confirm == "Yes")
 			//rip guest pass </3
 			user.visible_message("<span class='notice'>\The [user] deactivates \the [src].</span>")
-			icon_state = "guest_invalid"
+			icon_state = "guest-invalid"
+			update_icon()
 			expiration_time = world.time
 			expired = 1
 	return ..()
@@ -66,7 +67,8 @@
 /obj/item/weapon/card/id/guest/process()
 	if(expired == 0 && world.time >= expiration_time)
 		visible_message("<span class='warning'>\The [src] flashes a few times before turning red.</span>")
-		icon_state = "guest_invalid"
+		icon_state = "guest-invalid"
+		update_icon()
 		expired = 1
 		world.time = expiration_time
 		return
@@ -160,15 +162,15 @@
 			mode = params["mode"]
 
 		if("giv_name")
-			var/nam = sanitizeName(input("Person pass is issued to", "Name", giv_name) as text|null)
+			var/nam = sanitizeName(input(usr, "Person pass is issued to", "Name", giv_name) as text|null)
 			if(nam)
 				giv_name = nam
 		if("reason")
-			var/reas = sanitize(input("Reason why pass is issued", "Reason", reason) as text|null)
+			var/reas = sanitize(input(usr, "Reason why pass is issued", "Reason", reason) as text|null)
 			if(reas)
 				reason = reas
 		if("duration")
-			var/dur = input("Duration (in minutes) during which pass is valid (up to 360 minutes).", "Duration") as num|null //VOREStation Edit
+			var/dur = input(usr, "Duration (in minutes) during which pass is valid (up to 360 minutes).", "Duration") as num|null //VOREStation Edit
 			if(dur)
 				if(dur > 0 && dur <= 360) //VOREStation Edit
 					duration = dur

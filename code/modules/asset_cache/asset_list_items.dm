@@ -1,10 +1,17 @@
 //DEFINITIONS FOR ASSET DATUMS START HERE.
+/datum/asset/simple/tgui_common
+	// keep_local_name = TRUE
+	assets = list(
+		"tgui-common.bundle.js" = file("tgui/public/tgui-common.bundle.js"),
+	)
 
 /datum/asset/simple/tgui
+	// keep_local_name = TRUE
 	assets = list(
-		"tgui.bundle.js" = 'tgui/packages/tgui/public/tgui.bundle.js',
-		"tgui.bundle.css" = 'tgui/packages/tgui/public/tgui.bundle.css',
+		"tgui.bundle.js" = file("tgui/public/tgui.bundle.js"),
+		"tgui.bundle.css" = file("tgui/public/tgui.bundle.css"),
 	)
+
 
 /datum/asset/simple/headers
 	assets = list(
@@ -175,6 +182,14 @@
 		"v4shim.css"          = 'html/font-awesome/css/v4-shims.min.css'
 	)
 
+/datum/asset/simple/tgfont
+	assets = list(
+		"tgfont.eot" = file("tgui/packages/tgfont/dist/tgfont.eot"),
+		"tgfont.woff2" = file("tgui/packages/tgfont/dist/tgfont.woff2"),
+		"tgfont.css" = file("tgui/packages/tgfont/dist/tgfont.css"),
+	)
+
+
 // /datum/asset/spritesheet/goonchat
 // 	name = "chat"
 
@@ -290,7 +305,7 @@
 	name = "vore"
 
 /datum/asset/spritesheet/vore/register()
-	var/icon/downscaled = icon('icons/mob/screen_full_vore.dmi')
+	var/icon/downscaled = icon('icons/mob/screen_full_vore_ch.dmi') //CHOMPedit
 	downscaled.Scale(240, 240)
 	InsertAll("", downscaled)
 	..()
@@ -359,6 +374,7 @@
 	name = "vending"
 
 /datum/asset/spritesheet/vending/register()
+	populate_vending_products()
 	for(var/k in GLOB.vending_products)
 		var/atom/item = k
 		if(!ispath(item, /atom))
@@ -405,6 +421,22 @@
 
 		Insert(imgid, I)
 	return ..()
+
+// this is cursed but necessary or else vending product icons can be missing
+// basically, if there's any vending machines that aren't already mapped in, our register() will not know
+// that they exist, and therefore can't generate the entries in the spritesheet for them
+// and since assets are unique and can't be reloaded later, we have to make sure that GLOB.vending_products
+// is populated with every single type of vending machine
+// As this is only done at runtime, we have to create all the vending machines in existence and force them
+// to register their products when this asset initializes.
+/datum/asset/spritesheet/vending/proc/populate_vending_products()
+	SSatoms.map_loader_begin()
+	for(var/path in subtypesof(/obj/machinery/vending))
+		var/obj/machinery/vending/x = new path(null)
+		// force an inventory build; with map_loader_begin active, init isn't called
+		x.build_inventory()
+		qdel(x)
+	SSatoms.map_loader_stop()
 
 // /datum/asset/simple/genetics
 // 	assets = list(
@@ -490,24 +522,29 @@
 	// It REALLY doesnt matter too much if these arent up to date
 	// They are relatively big
 	assets = list(
-		// VOREStation Edit: We don't need Southern Cross
-		// "southern_cross_nanomap_z1.png"		= 'icons/_nanomaps/southern_cross_nanomap_z1.png',
-		// "southern_cross_nanomap_z10.png"	= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
-		// "southern_cross_nanomap_z2.png"		= 'icons/_nanomaps/southern_cross_nanomap_z2.png',
-		// "southern_cross_nanomap_z3.png"		= 'icons/_nanomaps/southern_cross_nanomap_z3.png',
-		// "southern_cross_nanomap_z5.png"		= 'icons/_nanomaps/southern_cross_nanomap_z5.png',
-		// "southern_cross_nanomap_z6.png"		= 'icons/_nanomaps/southern_cross_nanomap_z6.png',
-		"tether_nanomap_z1.png"				= 'icons/_nanomaps/tether_nanomap_z1.png',
-		"tether_nanomap_z2.png"				= 'icons/_nanomaps/tether_nanomap_z2.png',
-		"tether_nanomap_z3.png"				= 'icons/_nanomaps/tether_nanomap_z3.png',
-		"tether_nanomap_z4.png"				= 'icons/_nanomaps/tether_nanomap_z4.png',
-		"tether_nanomap_z5.png"				= 'icons/_nanomaps/tether_nanomap_z5.png',
-		"tether_nanomap_z6.png"				= 'icons/_nanomaps/tether_nanomap_z6.png',
-		"tether_nanomap_z7.png"				= 'icons/_nanomaps/tether_nanomap_z7.png',
-		"tether_nanomap_z8.png"				= 'icons/_nanomaps/tether_nanomap_z8.png',
-		"tether_nanomap_z9.png"				= 'icons/_nanomaps/tether_nanomap_z9.png',
-		"tether_nanomap_z10.png"			= 'icons/_nanomaps/tether_nanomap_z10.png',
-		"tether_nanomap_z13.png"			= 'icons/_nanomaps/tether_nanomap_z13.png',
-		"tether_nanomap_z14.png"			= 'icons/_nanomaps/tether_nanomap_z14.png',
-		// VOREStation Edit End
+		// CHOMP Edit: Restored for chomp station. Removed Tether.
+		"southern_cross_nanomap_z1.png"		= 'icons/_nanomaps/southern_cross_nanomap_z1.png',
+		"southern_cross_nanomap_z10.png"	= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
+		"southern_cross_nanomap_z2.png"		= 'icons/_nanomaps/southern_cross_nanomap_z2.png',
+		"southern_cross_nanomap_z3.png"		= 'icons/_nanomaps/southern_cross_nanomap_z3.png',
+		"southern_cross_nanomap_z5.png"		= 'icons/_nanomaps/southern_cross_nanomap_z5.png',
+		"southern_cross_nanomap_z6.png"		= 'icons/_nanomaps/southern_cross_nanomap_z6.png',
+		"southern_cross_nanomap_z7.png"		= 'icons/_nanomaps/southern_cross_nanomap_z7.png',
+		"southern_cross_nanomap_z8.png"		= 'icons/_nanomaps/southern_cross_nanomap_z8.png',
+		"southern_cross_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z9.png',
+		"southern_cross_nanomap_z10.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
+		"southern_cross_nanomap_z11.png"		= 'icons/_nanomaps/southern_cross_nanomap_z11.png',
+		//"tether_nanomap_z1.png"				= 'icons/_nanomaps/tether_nanomap_z1.png',
+		//"tether_nanomap_z2.png"				= 'icons/_nanomaps/tether_nanomap_z2.png',
+		//"tether_nanomap_z3.png"				= 'icons/_nanomaps/tether_nanomap_z3.png',
+		//"tether_nanomap_z4.png"				= 'icons/_nanomaps/tether_nanomap_z4.png',
+		//"tether_nanomap_z5.png"				= 'icons/_nanomaps/tether_nanomap_z5.png',
+		//"tether_nanomap_z6.png"				= 'icons/_nanomaps/tether_nanomap_z6.png',
+		//"tether_nanomap_z7.png"				= 'icons/_nanomaps/tether_nanomap_z7.png',
+		//"tether_nanomap_z8.png"				= 'icons/_nanomaps/tether_nanomap_z8.png',
+		//"tether_nanomap_z9.png"				= 'icons/_nanomaps/tether_nanomap_z9.png',
+		//"tether_nanomap_z10.png"			= 'icons/_nanomaps/tether_nanomap_z10.png',
+		//"tether_nanomap_z13.png"			= 'icons/_nanomaps/tether_nanomap_z13.png',
+		//"tether_nanomap_z14.png"			= 'icons/_nanomaps/tether_nanomap_z14.png',
+		// CHOMP Edit End
 	)

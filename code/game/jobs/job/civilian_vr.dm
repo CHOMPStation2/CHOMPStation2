@@ -49,10 +49,13 @@
 /datum/job/qm
 	pto_type = PTO_CARGO
 	dept_time_required = 20
-	alt_titles = list("Supply Chief" = /datum/alt_title/supply_chief, "Logistics Manager" = /datum/alt_title/logistics_manager)
+	alt_titles = list("Supply Chief" = /datum/alt_title/supply_chief, "Logistics Manager" = /datum/alt_title/logistics_manager, "Cargo Supervisor" = /datum/alt_title/cargo_supervisor)
 
 /datum/alt_title/logistics_manager
 	title = "Logistics Manager"
+
+/datum/alt_title/cargo_supervisor
+	title = "Cargo Supervisor"
 
 
 /datum/job/cargo_tech
@@ -83,14 +86,18 @@
 	total_positions = 4
 	spawn_positions = 4
 	pto_type = PTO_CARGO
-	alt_titles = list(/*CHOMPEdit Removal "Deep Space Miner" = /datum/alt_title/deep_space_miner*/, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector)
-
+	alt_titles = list(/*CHOMPEdit Removal "Deep Space Miner" = /datum/alt_title/deep_space_miner*/, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector,
+						"Excavator" = /datum/alt_title/excavator)
+						
 /datum/alt_title/deep_space_miner
 	title = "Deep Space Miner"
 	title_blurb = "A Deep Space Miner specializes primarily in mining operations in zero-g environments, mostly in asteroid and debris fields."
 
 /datum/alt_title/prospector
 	title = "Prospector"
+
+/datum/alt_title/excavator
+	title = "Excavator"
 
 
 /datum/job/janitor //Lots of janitor substations on station.
@@ -162,7 +169,9 @@
 
 /datum/job/chaplain
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Missionary" = /datum/alt_title/missionary, "Preacher" = /datum/alt_title/preacher, "Counselor" = /datum/alt_title/counselor, "Guru" = /datum/alt_title/guru)
+	alt_titles = list("Missionary" = /datum/alt_title/missionary, "Preacher" = /datum/alt_title/preacher, "Priest" = /datum/alt_title/priest,
+						"Nun" = /datum/alt_title/nun, "Monk" = /datum/alt_title/monk, "Counselor" = /datum/alt_title/counselor,
+						"Guru" = /datum/alt_title/guru)
 
 /datum/alt_title/guru
 	title = "Guru"
@@ -173,6 +182,15 @@
 
 /datum/alt_title/preacher
 	title = "Preacher"
+
+/datum/alt_title/priest
+	title = "Priest"
+
+/datum/alt_title/nun
+	title = "Nun"
+
+/datum/alt_title/monk
+	title = "Monk"
 
 
 
@@ -194,7 +212,7 @@
 	minimal_access = list(access_entertainment)
 	pto_type = PTO_CIVILIAN
 
-	outfit_type = /decl/hierarchy/outfit/job/assistant
+	outfit_type = /decl/hierarchy/outfit/job/assistant/entertainer
 	job_description = "An entertainer does just that, entertains! Put on plays, play music, sing songs, tell stories, or read your favorite fanfic."
 	alt_titles = list("Performer" = /datum/alt_title/performer, "Musician" = /datum/alt_title/musician, "Stagehand" = /datum/alt_title/stagehand,
 						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,

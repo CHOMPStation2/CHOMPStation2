@@ -45,6 +45,7 @@
 	active_power_usage = 300	//when active, this turret takes up constant 300 Equipment power
 	power_channel = EQUIP	//drains power from the EQUIPMENT channel
 	req_one_access = list(access_security, access_heads)
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
 	var/raised = FALSE			//if the turret cover is "open" and the turret is raised
 	var/raising= FALSE			//if the turret is currently opening or closing its cover
@@ -172,7 +173,7 @@
 	desc = "This variant appears to be much more rugged."
 	req_one_access = list(access_heads)
 	icon_state = "turret_cover_industrial"
-	installation = /obj/item/weapon/gun/energy/phasegun
+	installation = /obj/item/weapon/gun/energy/locked/phasegun/unlocked
 	health = 200
 	maxhealth = 200
 	turret_type = "industrial"
@@ -354,7 +355,7 @@
 			lethal_shot_sound = 'sound/weapons/Laser.ogg'
 			shot_delay = 1 SECOND
 
-		if(/obj/item/weapon/gun/energy/phasegun)
+		if(/obj/item/weapon/gun/energy/locked/phasegun/unlocked)
 			icon_color = "orange"
 			lethal_icon_color = "orange"
 			lethal_projectile = /obj/item/projectile/energy/phase/heavy

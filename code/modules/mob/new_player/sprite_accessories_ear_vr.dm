@@ -20,10 +20,15 @@
 	icon_state = "shadekin"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	apply_restrictions = TRUE
-	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //Chompstation Edit, cute fluffy ears for all
 
 // Ears avaliable to anyone
+
+/datum/sprite_accessory/ears/taj_ears
+	name = "tajaran, colorable (old)"
+
+/datum/sprite_accessory/ears/taj_ears_tall
+	name = "tajaran tall, colorable (old)"
 
 /datum/sprite_accessory/ears/alt_ram_horns
 	name = "Solid ram horns"
@@ -246,6 +251,13 @@
 	name = "squirrel, colorable"
 	desc = ""
 	icon_state = "squirrel"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/tajaran_standard
+	name = "tajaran, colorable"
+	desc = ""
+	icon_state = "ears_tajaran_standard"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 

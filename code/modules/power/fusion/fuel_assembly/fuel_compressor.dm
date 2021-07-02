@@ -1,3 +1,4 @@
+#define FUSION_ROD_SHEET_AMT 15
 /obj/machinery/fusion_fuel_compressor
 	var/blitzprogress = 0	//CHOMPEdit
 	name = "fuel compressor"
@@ -55,7 +56,7 @@
 			if(!mat.is_fusion_fuel)
 				to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
 				return
-			if(M.get_amount() < 25)
+			if(M.get_amount() < FUSION_ROD_SHEET_AMT)
 				if(mat.name=="supermatter")
 					visible_message("<span class='notice'>\The [user] places the [mat.use_name] into the compressor.</span>")
 					M.use(1)
@@ -66,7 +67,7 @@
 				return
 			var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), mat.name)
 			visible_message("<span class='notice'>\The [src] compresses the [mat.use_name] into a new fuel assembly.</span>")
-			M.use(25)
+			M.use(FUSION_ROD_SHEET_AMT)
 			user.put_in_hands(F)
 		else
 			if(mat.name=="phoron")
@@ -98,3 +99,5 @@
 	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
 	blitzprogress = 0
 //CHOMPEdit End
+
+#undef FUSION_ROD_SHEET_AMT

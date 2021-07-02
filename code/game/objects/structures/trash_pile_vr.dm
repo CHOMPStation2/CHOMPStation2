@@ -69,13 +69,13 @@
 		var/mob/living/L = user
 		//They're in it, and want to get out.
 		if(L.loc == src)
-			var/choice = alert("Do you want to exit \the [src]?","Un-Hide?","Exit","Stay")
+			var/choice = tgui_alert(usr, "Do you want to exit \the [src]?","Un-Hide?",list("Exit","Stay"))
 			if(choice == "Exit")
 				if(L == hider)
 					hider = null
 				L.forceMove(get_turf(src))
 		else if(!hider)
-			var/choice = alert("Do you want to hide in \the [src]?","Un-Hide?","Hide","Stay")
+			var/choice = tgui_alert(usr, "Do you want to hide in \the [src]?","Un-Hide?",list("Hide","Stay"))
 			if(choice == "Hide" && !hider) //Check again because PROMPT
 				L.forceMove(src)
 				hider = L
@@ -120,6 +120,12 @@
 					searchedby += user.ckey
 					I.forceMove(get_turf(src))
 					to_chat(H,"<span class='notice'>You found \a [I]!</span>")
+					//CHOMPedit begin
+					var/disturbed_sleep = rand(1,100) //spawning of mobs, for now only the trash panda.
+					if(disturbed_sleep <= 5)
+						new /mob/living/simple_mob/animal/passive/raccoon_ch(get_turf(user), name)
+						visible_message("A raccoon jumps out of the trash!.")
+					//CHOMPedit end
 
 	else
 		return ..()
@@ -188,7 +194,7 @@
 					prob(2);/obj/item/device/flashlight/glowstick/blue,
 					prob(2);/obj/item/weapon/card/emag_broken,
 					prob(2);/obj/item/weapon/cell/super,
-					prob(2);/obj/item/weapon/contraband/poster,
+					prob(2);/obj/item/poster,
 					prob(2);/obj/item/weapon/reagent_containers/glass/rag,
 					prob(2);/obj/item/weapon/storage/box/sinpockets,
 					prob(2);/obj/item/weapon/storage/secure/briefcase,
@@ -244,6 +250,7 @@
 					prob(2);/obj/item/weapon/storage/box/syndie_kit/spy,
 					prob(2);/obj/item/weapon/grenade/anti_photon,
 					prob(2);/obj/item/clothing/under/hyperfiber/bluespace,
+					prob(2);/obj/item/weapon/reagent_containers/glass/beaker/vial/amorphorovir,
 					prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 					prob(1);/obj/item/device/nif/bad,
 					prob(1);/obj/item/device/radio_jammer,
@@ -255,6 +262,7 @@
 					prob(1);/obj/item/weapon/material/knife/tacknife,
 					prob(1);/obj/item/weapon/storage/box/survival/space,
 					prob(1);/obj/item/weapon/storage/secure/briefcase/trashmoney,
+					prob(1);/obj/item/device/survivalcapsule/popcabin,
 					prob(1);/obj/item/weapon/reagent_containers/syringe/steroid)
 
 	var/obj/item/I = new path()
