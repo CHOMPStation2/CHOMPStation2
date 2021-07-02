@@ -14,7 +14,7 @@
 	var_changes = list("item_slowdown_mod" = 0.5)
 
 /datum/trait/positive/hardy_plus
-	name = "Major Hardy"
+	name = "Hardy, Major"
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
@@ -36,7 +36,7 @@
 	var_changes = list("siemens_coefficient" = 0.75) //CHOMP Edit
 
 /datum/trait/positive/nonconductive_plus
-	name = "Major Non-Conductive"
+	name = "Non-Conductive, Major"
 	desc = "Decreases your susceptibility to electric shocks by a 50% amount." //CHOMP Edit
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
@@ -48,7 +48,7 @@
 	var_changes = list("darksight" = 3)  //CHOMP Edit
 
 /datum/trait/positive/darksight_plus
-	name = "Darksight (Major)"
+	name = "Darksight, Major"
 	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
 	var_changes = list("darksight" = 6)  //CHOMP Edit
@@ -72,7 +72,7 @@
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/positive/minor_brute_resist
-	name = "Minor Brute Resist"
+	name = "Brute Resist, Minor"
 	desc = "Adds 10% resistance to brute damage sources." //CHOMP Edit
 	cost = 1 //CHOMP Edit
 	var_changes = list("brute_mod" = 0.9) //CHOMP Edit
@@ -85,7 +85,7 @@
 	//excludes = list(/datum/trait/positive/minor_burn_resist,/datum/trait/positive/burn_resist) //CHOMP disable, this is already handled in positive_ch.dm
 
 /datum/trait/positive/minor_burn_resist
-	name = "Minor Burn Resist"
+	name = "Burn Resist, Minor"
 	desc = "Adds 10% resistance to burn damage sources." //CHOMP Edit
 	cost = 1 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.9) //CHOMP Edit

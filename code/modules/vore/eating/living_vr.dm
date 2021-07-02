@@ -165,12 +165,9 @@
 
 	//Handle case: /obj/item/device/radio/beacon
 	else if(istype(I,/obj/item/device/radio/beacon))
-		var/confirm = alert(user,
-			"[src == user ? "Eat the beacon?" : "Feed the beacon to [src]?"]",
-			"Confirmation",
-			"Yes!", "Cancel")
+		var/confirm = tgui_alert(user, "[src == user ? "Eat the beacon?" : "Feed the beacon to [src]?"]", "Confirmation", list("Yes!", "Cancel"))
 		if(confirm == "Yes!")
-			var/obj/belly/B = input("Which belly?", "Select A Belly") as null|anything in vore_organs
+			var/obj/belly/B = tgui_input_list(usr, "Which belly?", "Select A Belly", vore_organs)
 			if(!istype(B))
 				return TRUE
 			visible_message("<span class='warning'>[user] is trying to stuff a beacon into [src]'s [lowertext(B.name)]!</span>",
@@ -434,7 +431,7 @@
 	//You're in a belly!
 	if(isbelly(loc))
 		var/obj/belly/B = loc
-		var/confirm = alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", "Okay", "Cancel")
+		var/confirm = tgui_alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel")) //CHOMPedit
 		if(confirm != "Okay" || loc != B)
 			return
 		//Actual escaping
@@ -453,7 +450,7 @@
 		var/mob/living/silicon/pred = loc.loc //Thing holding the belly!
 		var/obj/item/device/dogborg/sleeper/belly = loc //The belly!
 
-		var/confirm = alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", "Okay", "Cancel")
+		var/confirm = tgui_alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel")) //CHOMPedit
 		if(confirm != "Okay" || loc != belly)
 			return
 		//Actual escaping
@@ -480,17 +477,17 @@
 /mob/living/proc/eat_held_mob(mob/living/user, mob/living/prey, mob/living/pred)
 	var/belly
 	if(user != pred)
-		belly = input("Choose Belly") in pred.vore_organs
+		belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.vore_organs)
 	else
 		belly = pred.vore_selected
 	return perform_the_nom(user, prey, pred, belly)
 
 /mob/living/proc/feed_self_to_grabbed(mob/living/user, mob/living/pred)
-	var/belly = input("Choose Belly") in pred.vore_organs
+	var/belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.vore_organs)
 	return perform_the_nom(user, user, pred, belly)
 
 /mob/living/proc/feed_grabbed_to_other(mob/living/user, mob/living/prey, mob/living/pred)
-	var/belly = input("Choose Belly") in pred.vore_organs
+	var/belly = tgui_input_list(usr, "Choose Belly", "Belly Choice", pred.vore_organs)
 	return perform_the_nom(user, prey, pred, belly)
 
 //
@@ -648,7 +645,7 @@
 				else
 					visible_message("<span class='warning'>[src] is threatening to make [P] disappear!</span>")
 					if(P.id)
-						var/confirm = alert(src, "The PDA you're holding contains a vulnerable ID card. Will you risk it?", "Confirmation", "Definitely", "Cancel")
+						var/confirm = tgui_alert(src, "The PDA you're holding contains a vulnerable ID card. Will you risk it?", "Confirmation", list("Definitely", "Cancel"))
 						if(confirm != "Definitely")
 							return
 					if(!do_after(src, 100, P))
