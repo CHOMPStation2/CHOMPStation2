@@ -36,22 +36,10 @@
 	var_changes = list("siemens_coefficient" = 0.75) //CHOMP Edit
 
 /datum/trait/positive/nonconductive_plus
-<<<<<<< HEAD
-	name = "Major Non-Conductive"
+	name = "Non-Conductive, Major"
 	desc = "Decreases your susceptibility to electric shocks by a 50% amount." //CHOMP Edit
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Major Non-Conductive"
-	desc = "Decreases your susceptibility to electric shocks by a 25% amount."
-	cost = 2 //Let us not forget this effects tasers!
-	var_changes = list("siemens_coefficient" = 0.75)
-=======
-	name = "Non-Conductive, Major"
-	desc = "Decreases your susceptibility to electric shocks by a 25% amount."
-	cost = 2 //Let us not forget this effects tasers!
-	var_changes = list("siemens_coefficient" = 0.75)
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 
 /datum/trait/positive/darksight
 	name = "Darksight"
@@ -60,16 +48,8 @@
 	var_changes = list("darksight" = 3)  //CHOMP Edit
 
 /datum/trait/positive/darksight_plus
-<<<<<<< HEAD
-	name = "Darksight (Major)"
-	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Darksight (Major)"
-	desc = "Allows you to see in the dark for the whole screen."
-=======
 	name = "Darksight, Major"
-	desc = "Allows you to see in the dark for the whole screen."
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
+	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
 	var_changes = list("darksight" = 6)  //CHOMP Edit
 
@@ -92,22 +72,10 @@
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/positive/minor_brute_resist
-<<<<<<< HEAD
-	name = "Minor Brute Resist"
+	name = "Brute Resist, Minor"
 	desc = "Adds 10% resistance to brute damage sources." //CHOMP Edit
 	cost = 1 //CHOMP Edit
 	var_changes = list("brute_mod" = 0.9) //CHOMP Edit
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Minor Brute Resist"
-	desc = "Adds 15% resistance to brute damage sources."
-	cost = 2
-	var_changes = list("brute_mod" = 0.85)
-=======
-	name = "Brute Resist, Minor"
-	desc = "Adds 15% resistance to brute damage sources."
-	cost = 2
-	var_changes = list("brute_mod" = 0.85)
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 
 /datum/trait/positive/brute_resist
 	name = "Brute Resist"
@@ -117,22 +85,10 @@
 	//excludes = list(/datum/trait/positive/minor_burn_resist,/datum/trait/positive/burn_resist) //CHOMP disable, this is already handled in positive_ch.dm
 
 /datum/trait/positive/minor_burn_resist
-<<<<<<< HEAD
-	name = "Minor Burn Resist"
+	name = "Burn Resist, Minor"
 	desc = "Adds 10% resistance to burn damage sources." //CHOMP Edit
 	cost = 1 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.9) //CHOMP Edit
-||||||| parent of f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
-	name = "Minor Burn Resist"
-	desc = "Adds 15% resistance to burn damage sources."
-	cost = 2
-	var_changes = list("burn_mod" = 0.85)
-=======
-	name = "Burn Resist, Minor"
-	desc = "Adds 15% resistance to burn damage sources."
-	cost = 2
-	var_changes = list("burn_mod" = 0.85)
->>>>>>> f9e9aafd1d... Merge pull request #10756 from VOREStation/Arokha/fixes2
 
 /datum/trait/positive/burn_resist
 	name = "Burn Resist"
