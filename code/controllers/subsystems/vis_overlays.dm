@@ -75,3 +75,29 @@ SUBSYSTEM_DEF(vis_overlays)
 	thing.managed_vis_overlays -= overlays
 	if(!length(thing.managed_vis_overlays))
 		thing.managed_vis_overlays = null
+<<<<<<< HEAD
+||||||| parent of 03d77634b2... Merge pull request #10835 from VOREStation/Icons/deco_structures
+
+/atom/proc/add_vis_overlay(icon, iconstate, layer, plane, dir, alpha, add_appearance_flags, add_vis_flags, unique)
+	// The extremely minimal version where you just pass a string and nothing else
+	if(istext(icon))
+		iconstate = icon
+		icon = src.icon
+		
+	return SSvis_overlays.add_vis_overlay(src, icon, iconstate, layer, plane, dir, alpha, add_appearance_flags, add_vis_flags, unique)
+
+/atom/proc/remove_vis_overlay(list/overlays)
+	return SSvis_overlays.remove_vis_overlay(src, overlays)
+=======
+
+/atom/proc/add_vis_overlay(icon, iconstate, layer, plane, dir, alpha, add_appearance_flags, add_vis_flags = VIS_INHERIT_ID, unique)
+	// The extremely minimal version where you just pass a string and nothing else
+	if(istext(icon))
+		iconstate = icon
+		icon = src.icon
+		
+	return SSvis_overlays.add_vis_overlay(src, icon, iconstate, layer, plane, dir, alpha, add_appearance_flags, add_vis_flags, unique)
+
+/atom/proc/remove_vis_overlay(list/overlays)
+	return SSvis_overlays.remove_vis_overlay(src, overlays)
+>>>>>>> 03d77634b2... Merge pull request #10835 from VOREStation/Icons/deco_structures
