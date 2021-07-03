@@ -123,7 +123,7 @@ var/list/security_positions = list(
 
 var/list/planet_positions = list(
 	"Pathfinder", // VOREStation Edit - Added Pathfinder
-	"Explorer"
+	"Explorer",
 	"Pilot",
 	"Field Medic" // VOREStation Edit - Field Medic
 )
