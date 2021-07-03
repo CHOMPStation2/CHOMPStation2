@@ -502,7 +502,7 @@
 					"name" = P.name,
 					"cost" = P.cost,
 					"contraband" = P.contraband,
-					"manifest" = uniquelist(P.manifest),
+					"manifest" = uniqueList(P.manifest),
 					"random" = P.num_contained,
 					"expand" = 0,
 					"ref" = "\ref[P]"

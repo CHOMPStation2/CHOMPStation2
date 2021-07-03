@@ -42,7 +42,7 @@
 		Entered(AM)
 
 	//Lighting related
-	luminosity = !(dynamic_lighting)
+	set_luminosity(!(dynamic_lighting))
 	
 	if(opacity)
 		directional_opacity = ALL_CARDINALS
@@ -327,7 +327,7 @@
 		to_chat(vandal, "<span class='warning'>There's too much graffiti here to add more.</span>")
 		return FALSE
 
-	var/message = sanitize(input("Enter a message to engrave.", "Graffiti") as null|text, trim = TRUE)
+	var/message = sanitize(input(usr, "Enter a message to engrave.", "Graffiti") as null|text, trim = TRUE)
 	if(!message)
 		return FALSE
 

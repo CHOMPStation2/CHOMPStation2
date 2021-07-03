@@ -63,7 +63,6 @@
 
 	moveToNullspace()
 
-
 	if(pulledby)
 		pulledby.stop_pulling()
 
