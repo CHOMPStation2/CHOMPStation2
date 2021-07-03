@@ -6,7 +6,7 @@
 	var/list/spawned_carp = list()
 
 /datum/event/carp_migration/setup()
-	if(prob(50)
+	if(prob(50))
 		kill()
 		return
 	announceWhen = rand(30, 60) // 1 to 2 minutes
