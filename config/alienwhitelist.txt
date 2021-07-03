@@ -12,6 +12,21 @@ alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
 crossexonar - Protean
+<<<<<<< HEAD
+||||||| parent of dac636d7dd... Merge pull request #10834 from DigitalSquirrel95/patch-6
+detectivegoogle - Protean
+digitalsquirrel95 - Protean
+draycu - Vox
+flaktual - Vox
+flurriee - Protean
+=======
+detectivegoogle - Protean
+digitalsquirrel95 - Black-Eyed Shadekin
+digitalsquirrel95 - Protean
+draycu - Vox
+flaktual - Vox
+flurriee - Protean
+>>>>>>> dac636d7dd... Merge pull request #10834 from DigitalSquirrel95/patch-6
 funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
