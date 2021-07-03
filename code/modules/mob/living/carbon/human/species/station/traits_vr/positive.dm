@@ -46,15 +46,15 @@
 
 /datum/trait/positive/darksight
 	name = "Darksight"
-	desc = "Allows you to see a short distance in the dark and 10% more susceptible to flashes." //CHOMP Edit
+	desc = "Allows you to see a short distance in the dark." //CHOMP Edit: we've already got the flash vulnerability in a negative trait, it's not needed here also.
 	cost = 1
-	var_changes = list("darksight" = 3)  //CHOMP Edit
+	var_changes = list("darksight" = 4)  //CHOMP Edit
 
 /datum/trait/positive/darksight_plus
 	name = "Darksight (Major)"
-	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
+	desc = "Allows you to see in the dark for the whole screen." //CHOMP Edit: we've already got the flash vulnerability in a negative trait, it's not needed here also.
 	cost = 2
-	var_changes = list("darksight" = 6)  //CHOMP Edit
+	var_changes = list("darksight" = 8)  //CHOMP Edit
 
 /datum/trait/positive/melee_attack
 	name = "Sharp Melee"
