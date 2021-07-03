@@ -124,8 +124,8 @@ var/list/security_positions = list(
 var/list/planet_positions = list(
 	"Pathfinder", // VOREStation Edit - Added Pathfinder
 	"Explorer",
-	"Pilot", //CHOMPedit fixes YW nonsense
-	"Field Medic" //CHOMPedit fixes YW nonsense
+	"Pilot",
+	"Field Medic" // VOREStation Edit - Field Medic
 )
 
 
