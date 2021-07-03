@@ -156,22 +156,16 @@ var/list/preferences_datums = list()
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
 
 	var/list/volume_channels = list()
-<<<<<<< HEAD
+	
+	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
+	var/selecting_slots = FALSE
+
 //CHOMPEdit Begin
 /datum/preferences/proc/numlanguage()
 	var/datum/species/S = GLOB.all_species[species]
 	return num_languages ? num_languages : S.num_alternate_languages
 //CHOMPEdit End
-||||||| parent of 3850865d59... Merge pull request #10829 from VOREStation/Arokha/UGH_SOFT_REALLY
 
-
-=======
-
-	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
-	var/selecting_slots = FALSE
-
-
->>>>>>> 3850865d59... Merge pull request #10829 from VOREStation/Arokha/UGH_SOFT_REALLY
 /datum/preferences/New(client/C)
 	player_setup = new(src)
 	set_biological_gender(pick(MALE, FEMALE))
