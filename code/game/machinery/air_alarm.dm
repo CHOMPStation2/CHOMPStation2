@@ -27,16 +27,8 @@
 /obj/machinery/alarm
 	name = "alarm"
 	desc = "Used to control various station atmospheric systems. The light indicates the current air status of the area."
-<<<<<<< HEAD
-	icon = 'icons/obj/monitors_vr.dmi' //CHOMPEdit: Continues using new air alarm sprite, contrary to YW
-	icon_state = "alarm0"
-||||||| parent of 6b49911ada... Merge pull request #10842 from VOREStation/Arokha/moreglow
-	icon = 'icons/obj/monitors_vr.dmi' //VOREStation Edit - Other icons
-	icon_state = "alarm0"
-=======
 	icon = 'icons/obj/monitors_vr.dmi' //VOREStation Edit - Other icons
 	icon_state = "alarm_0"
->>>>>>> 6b49911ada... Merge pull request #10842 from VOREStation/Arokha/moreglow
 	layer = ABOVE_WINDOW_LAYER
 	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 	anchored = 1
