@@ -11,6 +11,21 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+||||||| parent of 780a07fb0d... Merge pull request #10830 from ComradeNitro/patch-1
+camanis - Protean
+cgr - Protean
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+=======
+camanis - Protean
+cgr - Protean
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+comradenitro - Protean
+>>>>>>> 780a07fb0d... Merge pull request #10830 from ComradeNitro/patch-1
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
