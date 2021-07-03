@@ -51,7 +51,13 @@
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,										2500),
 		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							1200),
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											750),
+<<<<<<< HEAD
 		EQUIPMENT("Large Mining Satchel",						/obj/item/weapon/storage/bag/ore/large,								1000), //CHOMPstation addition
+||||||| parent of 1d2eddce4b... Merge pull request #10791 from VOREStation/Arokha/orehold
+
+=======
+		EQUIPMENT("Mining Satchel of Holding",					/obj/item/weapon/storage/bag/ore/holding,							1500),
+>>>>>>> 1d2eddce4b... Merge pull request #10791 from VOREStation/Arokha/orehold
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
