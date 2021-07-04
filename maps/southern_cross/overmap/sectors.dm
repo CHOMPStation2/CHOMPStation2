@@ -11,11 +11,7 @@
 	mountain_color = "#735555"
 	ice_color = "FFFFFF"
 	icecaps = "icecaps"
-
-	initial_generic_waypoints = list(
-		"outpost_nw",
-		"outpost_s"
-	)
+	icon_state = "frozen" //CHOMP comment: Not sure what this does at the moment, but we're doing it live.
 
 /obj/effect/overmap/visitable/planet/Sif/Initialize()
 	atmosphere = new(CELL_VOLUME)
@@ -74,3 +70,7 @@
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
 			Z_LEVEL_MISC)
+
+/obj/effect/overmap/visitable/planet/Sif/Initialize()
+	. = ..()
+	docking_codes = null
