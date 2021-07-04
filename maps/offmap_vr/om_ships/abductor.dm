@@ -26,20 +26,18 @@
 
 // The 'Abductor Ship'
 /obj/effect/overmap/visitable/ship/abductor
-	name = "spacecraft"
+	name = "strange spacecraft"
 	desc = "Spacefaring vessel."
-	icon_state = "shuttle"
-	moving_state = "shuttle"
-	scanner_name = "unknown vessel"
+	icon_state = "unkn_r"
 	scanner_desc = @{"[i]Registration[/i]: Unknown
 [i]Class[/i]: Corvette
 [i]Transponder[/i]: No transponder detected."
 [b]Notice[/b]: Deep scans detect unknown power signatures, and onboard transporter technology."}
-	color = "#11414c" //STEALTH
 	vessel_mass = 8000
 	vessel_size = SHIP_SIZE_SMALL
 	initial_generic_waypoints = list("abductor_port", "abductor_starboard")
 	fore_dir = NORTH
+	known = FALSE
 
 /obj/item/weapon/paper/alien/abductor
 	name = "Read Me"
@@ -81,19 +79,6 @@ You will find a dispenser within the room you started in which contains some bas
 	name = "anti-personnel turret"
 	installation = /obj/item/weapon/gun/energy/ionrifle/weak
 	lethal = TRUE
-
-/obj/item/device/perfect_tele/frontier/unknown/abductor/one
-	loc_network = "abd1"
-/obj/item/device/perfect_tele/frontier/unknown/abductor/two
-	loc_network = "abd2"
-/obj/item/device/perfect_tele/frontier/unknown/abductor/three
-	loc_network = "abd3"
-/obj/item/device/perfect_tele/frontier/unknown/abductor/four
-	loc_network = "abd4"
-/obj/item/device/perfect_tele/frontier/unknown/abductor/five
-	loc_network = "abd5"
-/obj/item/device/perfect_tele/frontier/unknown/abductor/six
-	loc_network = "abd6"
 
 /obj/machinery/power/rtg/abductor/built/abductor
 	name = "Void Core"

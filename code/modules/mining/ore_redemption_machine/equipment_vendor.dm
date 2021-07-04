@@ -51,7 +51,8 @@
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,										2500),
 		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							1200),
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											750),
-		EQUIPMENT("Large Mining Satchel",						/obj/item/weapon/storage/bag/ore/large,								1000), //CHOMPstation addition
+		EQUIPMENT("Large Mining Satchel",						/obj/item/weapon/storage/bag/ore/large,								1000), //CHOMP Add //CHOMPstation addition
+		EQUIPMENT("Mining Satchel of Holding",					/obj/item/weapon/storage/bag/ore/holding,							1500),
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
