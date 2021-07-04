@@ -177,7 +177,6 @@ var/list/holder_mob_icon_cache = list()
 	else
 		if(grabber.incapacitated()) return
 
-<<<<<<< HEAD
 	//YW edit - size diff check
 	var/sizediff = grabber.size_multiplier - size_multiplier
 	if(sizediff < -0.5)
@@ -188,16 +187,7 @@ var/list/holder_mob_icon_cache = list()
 		return
 	//end YW edit
 
-	var/obj/item/weapon/holder/H = new holder_type(get_turf(src))
-	H.held_mob = src
-	src.forceMove(H)
-||||||| parent of 4b52bf232f... Merge pull request #10846 from VOREStation/Arokha/smols
-	var/obj/item/weapon/holder/H = new holder_type(get_turf(src))
-	H.held_mob = src
-	src.forceMove(H)
-=======
 	var/obj/item/weapon/holder/H = new holder_type(get_turf(src), src)
->>>>>>> 4b52bf232f... Merge pull request #10846 from VOREStation/Arokha/smols
 	grabber.put_in_hands(H)
 
 	if(self_grab)
