@@ -13,23 +13,11 @@
 	matter = list("metal" = 350, "glass" = 50)
 	preserve_item = 1
 
-<<<<<<< HEAD
 //Yawn changes
 /obj/item/weapon/cell/device/weapon //Aka adv
 	name = "advanced device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "wcell"
-||||||| parent of 26525b8677... Merge pull request #10824 from VOREStation/Icons/cells
-/obj/item/weapon/cell/device/weapon
-	name = "weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry."
-	icon_state = "wcell"
-=======
-/obj/item/weapon/cell/device/weapon
-	name = "weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry."
 	icon_state = "m_sup"
->>>>>>> 26525b8677... Merge pull request #10824 from VOREStation/Icons/cells
 	maxcharge = 2400
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 2)
@@ -75,13 +63,7 @@
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
-<<<<<<< HEAD
-//	icon_state = "wcell" //doesn't matter, not seen anywhere (all weapons that have it are batterylocked)
-||||||| parent of 26525b8677... Merge pull request #10824 from VOREStation/Icons/cells
-//	icon_state = "wcell" //TODO: Different sprite
-=======
 	icon_state = "meb_m_nu"
->>>>>>> 26525b8677... Merge pull request #10824 from VOREStation/Icons/cells
 	self_recharge = TRUE
 	charge_amount = 120
 	charge_delay = 75
