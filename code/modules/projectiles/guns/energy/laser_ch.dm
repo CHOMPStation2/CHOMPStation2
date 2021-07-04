@@ -79,6 +79,4 @@
 	charge_amount = 20
 	matter = list("metal" = 350, "glass" = 50)
 	preserve_item = 1
-	overlay_half_state = "veprcell_o1"
-	overlay_full_state = "veprcell_o2"
 	origin_tech = list(TECH_POWER = 6)
