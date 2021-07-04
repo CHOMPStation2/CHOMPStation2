@@ -2651,6 +2651,9 @@
 	dir = 8
 	},
 /obj/machinery/organ_printer/flesh,
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "adZ" = (
@@ -2838,6 +2841,9 @@
 "aeo" = (
 /obj/structure/bed/psych{
 	name = "couch"
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/medical/cmo)
@@ -7098,6 +7104,9 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
+	},
 /turf/simulated/floor/lino,
 /area/tether/surfacebase/security/detective/officea)
 "alc" = (
@@ -7133,6 +7142,9 @@
 "alh" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
 	},
 /turf/simulated/floor/lino,
 /area/tether/surfacebase/security/detective/officeb)
@@ -8981,6 +8993,9 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 9
 	},
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
 "aof" = (
@@ -9438,17 +9453,18 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 "aoK" = (
-/obj/structure/mirror{
-	dir = 4;
-	pixel_x = -25
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
 	},
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -12;
-	pixel_y = 2
+	pixel_y = -3
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -26;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/bathroom)
@@ -10202,9 +10218,7 @@
 /obj/structure/reagent_dispensers/water_cooler/full{
 	dir = 4
 	},
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 "apY" = (
@@ -10223,6 +10237,9 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/table/standard,
 /obj/machinery/recharger,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 "aqa" = (
@@ -10264,17 +10281,18 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 "aqd" = (
-/obj/structure/mirror{
-	dir = 4;
-	pixel_x = -25
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -12;
-	pixel_y = 2
+	pixel_y = -3
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -26;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/bathroom)
@@ -11129,6 +11147,9 @@
 	dir = 8;
 	frequency = 1442;
 	name = "Riot Control Console"
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/warden)
@@ -12693,10 +12714,13 @@
 	},
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -4
 	},
 /obj/structure/mirror{
-	pixel_x = 25
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/security/brig/bathroom)
@@ -15608,6 +15632,9 @@
 /obj/structure/closet/hydrant{
 	pixel_y = 32
 	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/fish_farm)
 "aAe" = (
@@ -16283,6 +16310,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_two_hall)
 "aBI" = (
@@ -16956,6 +16986,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge_hallway)
@@ -19606,24 +19639,30 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aHX" = (
-/obj/structure/table/bench/padded,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/structure/bed/chair/sofa/pew/left{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aHY" = (
-/obj/structure/table/bench/padded,
 /obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/obj/structure/bed/chair/sofa/pew{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aHZ" = (
-/obj/structure/table/bench/padded,
 /obj/effect/floor_decal/chapel{
 	dir = 4
+	},
+/obj/structure/bed/chair/sofa/pew/right{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
@@ -19636,11 +19675,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aIc" = (
-/obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/bed/chair/sofa/pew/right{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
@@ -20059,6 +20100,9 @@
 /obj/structure/flora/pottedplant/small{
 	pixel_y = 12
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
+	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "aIU" = (
@@ -20122,17 +20166,23 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aJb" = (
-/obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/bed/chair/sofa/pew/left{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aJc" = (
-/obj/structure/table/bench/padded,
+/obj/structure/bed/chair/sofa/pew{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aJd" = (
-/obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/bed/chair/sofa/pew/right{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aJe" = (
@@ -20523,21 +20573,28 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = 30
+	},
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "aJU" = (
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "aJV" = (
-/obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/structure/bed/chair/sofa/pew/left{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "aJW" = (
-/obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/bed/chair/sofa/pew/right{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -20884,9 +20941,17 @@
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "aKG" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/dark,
-/area/chapel/main)
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/pink/border{
+	dir = 4
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/examroom)
 "aKH" = (
 /obj/effect/floor_decal/chapel{
 	dir = 8
@@ -20965,6 +21030,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/rdoffice)
@@ -24213,6 +24281,9 @@
 /obj/effect/landmark/start{
 	name = "Roboticist"
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "aRq" = (
@@ -26055,16 +26126,19 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/breakroom/bathroom)
 "aVh" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
 /obj/machinery/firealarm{
 	layer = 3.3;
 	pixel_y = 26
 	},
 /obj/structure/mirror{
-	pixel_x = 29
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = 5
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/breakroom/bathroom)
@@ -26301,12 +26375,15 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/breakroom/bathroom)
 "aVM" = (
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = 5
+	},
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
-	},
-/obj/structure/mirror{
-	pixel_x = 29
+	pixel_x = 11;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/breakroom/bathroom)
@@ -32550,6 +32627,9 @@
 /obj/structure/undies_wardrobe,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/recoveryward)
 "boH" = (
@@ -32966,6 +33046,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/south)
+"bOU" = (
+/obj/machinery/light/floortube{
+	dir = 8;
+	pixel_x = -3
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "bOW" = (
 /obj/structure/railing{
 	dir = 1
@@ -33106,6 +33193,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
+"dzE" = (
+/obj/effect/floor_decal/chapel{
+	dir = 8
+	},
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "dAB" = (
 /obj/structure/cable/orange{
 	d1 = 4;
@@ -33283,9 +33379,20 @@
 /obj/structure/railing,
 /turf/simulated/floor/plating,
 /area/maintenance/readingrooms)
+<<<<<<< HEAD
 "eTp" = (
 /turf/simulated/wall/durasteel,
 /area/ai_upload_foyer)
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+=======
+"eTp" = (
+/obj/effect/floor_decal/chapel,
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 "eZG" = (
 /obj/machinery/camera/network/command,
 /obj/effect/floor_decal/techfloor{
@@ -33293,6 +33400,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai)
+"fhR" = (
+/obj/machinery/light/floortube{
+	dir = 4;
+	pixel_x = 2
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "flk" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/techfloor{
@@ -33538,6 +33652,15 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload_foyer)
+"huD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/chapel_morgue)
 "hxk" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/light{
@@ -33598,6 +33721,21 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
+"jcd" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/east_stairs_two)
+"jiy" = (
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood,
+/area/bridge/meeting_room)
 "jtj" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/readingrooms)
@@ -33961,12 +34099,33 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ||||||| parent of 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 "lOO" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/grass,
 /area/chapel/main)
 =======
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+=======
+"lJc" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/tether/surfacebase/surface_two_hall)
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 "lMw" = (
 /obj/item/device/radio/intercom/locked/ai_private{
 	dir = 4;
@@ -34027,7 +34186,17 @@
 "mwQ" = (
 /turf/simulated/floor/bluegrid,
 /area/ai)
+<<<<<<< HEAD
 >>>>>>> 926c35deb7... Merge pull request #10416 from Enzo-Leon/mapfix-02
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+=======
+"mBP" = (
+/obj/structure/bed/chair/sofa/pew/right{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 "mCl" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -34517,6 +34686,13 @@
 "qSJ" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/ai)
+"rbq" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/painting/chapel_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "rii" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 9
@@ -34646,6 +34822,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai)
+"rUS" = (
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/obj/structure/bed/chair/sofa/pew/left{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "rXR" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -35256,7 +35441,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
+<<<<<<< HEAD
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+=======
+"vmx" = (
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/obj/structure/bed/chair/sofa/pew{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 "voE" = (
 /obj/effect/floor_decal/corner_techfloor_grid,
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -35510,6 +35708,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
+"xJR" = (
+/obj/structure/bed/chair/sofa/pew/left{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "xKF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -47102,7 +47306,7 @@ laD
 aac
 adt
 avD
-axp
+lJc
 ayd
 ayH
 azb
@@ -48114,7 +48318,7 @@ aGg
 aGK
 aHe
 aHv
-aGF
+jiy
 aIu
 aFp
 aFp
@@ -49120,7 +49324,7 @@ aMs
 aNn
 aNV
 aNV
-aNV
+jcd
 aNV
 aQY
 aRA
@@ -51007,8 +51211,14 @@ aGs
 aDO
 =======
 aDO
+<<<<<<< HEAD
 aDO
 >>>>>>> c9bc676ff0... Merge pull request #9472 from Very-Soft/littlefix
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+aDO
+=======
+rbq
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 aFF
 aGr
 aGR
@@ -51019,7 +51229,7 @@ aIC
 aJb
 aIb
 aJV
-aKG
+aGR
 aDP
 aLX
 aLX
@@ -51161,7 +51371,7 @@ aID
 aJc
 aGR
 aHY
-aKH
+dzE
 aDP
 aLY
 aLY
@@ -51300,7 +51510,7 @@ aGT
 aGT
 aHZ
 aIE
-aJc
+mBP
 aGR
 aHZ
 aKI
@@ -51462,7 +51672,7 @@ aHj
 aHA
 aIa
 aIF
-aGR
+bOU
 aGR
 aGR
 aGR
@@ -51706,7 +51916,7 @@ aab
 ado
 aak
 aaA
-aaA
+aKG
 aaD
 ahK
 ait
@@ -51746,7 +51956,7 @@ aHl
 aHB
 aIb
 aIH
-aGR
+fhR
 aGR
 aGR
 aGR
@@ -51886,11 +52096,11 @@ aDP
 aGS
 aGT
 aGT
-aHY
+rUS
 aID
-aJc
+xJR
 aGR
-aHY
+rUS
 aKH
 aDP
 adt
@@ -52028,12 +52238,12 @@ aBz
 aGR
 aGR
 aGR
-aHZ
+vmx
 aIE
 aJc
 aGR
-aHZ
-aKI
+vmx
+eTp
 aDP
 aMc
 aMc
@@ -52591,7 +52801,7 @@ aDh
 aDT
 aEw
 aFd
-aFM
+huD
 aBz
 abn
 aeG

@@ -5528,11 +5528,10 @@
 /area/maintenance/station/eng_lower)
 "amE" = (
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
 	},
 /obj/structure/sink{
-	pixel_y = 22
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/station/restroom)
@@ -7402,6 +7401,9 @@
 /area/engineering/break_room)
 "aqH" = (
 /obj/effect/floor_decal/corner/white/diagonal,
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/break_room)
 "aqI" = (
@@ -8147,25 +8149,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/workshop)
 "asW" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/airless,
-/area/tether/outpost/solars_outside{
-	name = "\improper Telecomms Solar Field"
-	})
+/obj/item/stack/cable_coil/yellow,
+/turf/space,
+/area/space)
 "asX" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
@@ -11263,14 +11249,13 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "aDP" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
 	},
 /obj/structure/sink{
-	pixel_y = 22
+	pixel_y = 20
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/tether/station/restroom)
 "aDR" = (
@@ -11614,18 +11599,20 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/obj/structure/mirror{
-	dir = 4;
-	pixel_x = 28
-	},
 /obj/effect/landmark{
 	name = "morphspawn"
 	},
 /obj/machinery/light,
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11;
+	pixel_y = -4
+	},
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/engi_wash)
 "aES" = (
@@ -12301,11 +12288,13 @@
 "aLj" = (
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -4
 	},
 /obj/structure/mirror{
-	dir = 4;
-	pixel_x = 28
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/engi_wash)
@@ -13076,6 +13065,9 @@
 	},
 /obj/item/clothing/mask/breath,
 /obj/item/weapon/rig/ce/equipped,
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/chief)
 "aQh" = (
@@ -24989,6 +24981,27 @@
 /obj/machinery/mineral/stacking_machine,
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
+"kCE" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/station/docks)
 "kCH" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -26645,6 +26658,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/crew)
+"lSs" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 9
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/station/atrium)
 "lSR" = (
 /obj/effect/landmark/start{
 	name = "Pilot"
@@ -29350,6 +29382,9 @@
 /obj/structure/table/standard,
 /obj/item/weapon/storage/pill_bottle/dice_nerd,
 /obj/random/maintenance/cargo,
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
 /turf/simulated/floor,
 /area/maintenance/station/cargo)
 "ovQ" = (
@@ -29625,6 +29660,9 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 9
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/pathfinder_office)
@@ -30060,6 +30098,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/belterdock)
+"pxB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled,
+/area/tether/exploration/crew)
 "pyy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -30509,6 +30559,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
+"qcg" = (
+/obj/machinery/camera/network/telecom,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/airless,
+/area/tether/outpost/solars_outside{
+	name = "\improper Telecomms Solar Field"
+	})
 "qcz" = (
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/floor/tiled/eris/white/gray_perforated,
@@ -33127,6 +33188,9 @@
 /area/hallway/station/atrium)
 "sYe" = (
 /obj/machinery/computer/security/mining,
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
 /turf/simulated/floor/wood,
 /area/quartermaster/qm)
 "sYw" = (
@@ -42190,7 +42254,7 @@ aSe
 aRX
 aVz
 aRb
-oYN
+kCE
 bVP
 pfh
 bgG
@@ -48132,7 +48196,7 @@ vYJ
 vYJ
 wRJ
 tRn
-vYJ
+lSs
 vYJ
 dPx
 rjV
@@ -49727,7 +49791,7 @@ ajj
 ajj
 vmt
 hqU
-ajq
+pxB
 scu
 hlX
 xNg
@@ -53773,6 +53837,7 @@ dLP
 gDA
 dTU
 gfX
+<<<<<<< HEAD
 fpk
 aaa
 aaa
@@ -53796,6 +53861,55 @@ aaa
 aaa
 aaa
 aaa
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+fpk
+ahW
+ahW
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+=======
+gjd
+ahW
+ahW
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 aaa
 aaa
 aaa
@@ -53915,7 +54029,7 @@ dTU
 dTU
 dTU
 gfX
-fpk
+gjd
 aaa
 aaa
 aaa
@@ -54057,7 +54171,7 @@ gfX
 gfX
 gfX
 gfX
-rhn
+qcg
 aaa
 aaa
 aaa
@@ -54753,7 +54867,7 @@ aaa
 asH
 ape
 ape
-asW
+fpk
 auH
 auH
 avC
@@ -55036,7 +55150,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+asW
 gjd
 aaa
 aaa
@@ -55321,7 +55435,7 @@ ape
 ape
 ape
 ape
-asW
+fpk
 auH
 auH
 auH
@@ -55463,7 +55577,7 @@ agC
 agC
 agC
 agC
-gjd
+fpk
 agC
 agC
 agC
@@ -55605,8 +55719,8 @@ aaa
 aaa
 aaa
 aaa
-gjd
-aaa
+fpk
+asW
 aaa
 aaa
 aaa
@@ -55747,7 +55861,7 @@ aEI
 aEI
 aEI
 aEI
-gjd
+fpk
 aEI
 aEI
 aEI
@@ -55889,7 +56003,7 @@ ape
 ape
 ape
 ape
-asW
+fpk
 auH
 auH
 auH

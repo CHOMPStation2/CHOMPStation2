@@ -774,6 +774,9 @@
 /obj/structure/table/woodentable,
 /obj/random/plushie,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
+	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/medical/mentalhealth)
 "abk" = (
@@ -4503,6 +4506,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 9
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/first_west)
@@ -9990,6 +9996,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 5
 	},
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled,
 /area/storage/art)
 "aqC" = (
@@ -10225,15 +10234,11 @@
 /turf/simulated/floor/plating,
 /area/vacant/vacant_site)
 "ara" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
+/obj/structure/sign/painting/public{
+	pixel_y = -30
 	},
-/obj/machinery/camera/network/civilian{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/storage/art)
+/turf/simulated/floor/carpet/gaycarpet,
+/area/tether/surfacebase/funny/clownoffice)
 "arb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -10260,6 +10265,9 @@
 /obj/item/device/taperecorder,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled,
 /area/storage/art)
@@ -22950,12 +22958,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_8)
 "aLW" = (
-/obj/structure/sink{
-	pixel_y = 22
-	},
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
+	},
+/obj/structure/sink{
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_8)
@@ -24236,12 +24243,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_6)
 "aOu" = (
-/obj/structure/sink{
-	pixel_y = 22
-	},
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
+	},
+/obj/structure/sink{
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_6)
@@ -25376,12 +25382,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_4)
 "aQm" = (
-/obj/structure/sink{
-	pixel_y = 22
-	},
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
+	},
+/obj/structure/sink{
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_4)
@@ -26532,12 +26537,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_2)
 "aSu" = (
-/obj/structure/sink{
-	pixel_y = 22
-	},
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
+	},
+/obj/structure/sink{
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_2)
@@ -27654,6 +27658,9 @@
 /obj/item/clothing/mask/smokable/cigarette/joint{
 	desc = "Ever been to orbit?"
 	},
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/sleep/maintDorm3)
 "aUF" = (
@@ -28596,7 +28603,7 @@
 /area/vacant/vacant_bar)
 "aWa" = (
 /obj/structure/sink/kitchen{
-	pixel_y = 28
+	pixel_y = 20
 	},
 /turf/simulated/floor/wood,
 /area/vacant/vacant_bar)
@@ -29689,11 +29696,10 @@
 /area/vacant/vacant_bar)
 "aYr" = (
 /obj/structure/sink{
-	pixel_y = 22
+	pixel_y = 20
 	},
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
 	},
 /turf/simulated/floor/tiled/white,
 /area/vacant/vacant_bar)
@@ -29731,11 +29737,10 @@
 /area/crew_quarters/sleep/maintDorm3)
 "aYv" = (
 /obj/structure/sink{
-	pixel_y = 22
+	pixel_y = 20
 	},
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/maintDorm3)
@@ -29748,11 +29753,10 @@
 /area/crew_quarters/sleep/maintDorm2)
 "aYz" = (
 /obj/structure/sink{
-	pixel_y = 22
+	pixel_y = 20
 	},
 /obj/structure/mirror{
-	dir = 4;
-	pixel_y = 32
+	pixel_y = 38
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/sleep/maintDorm2)
@@ -30013,6 +30017,9 @@
 /area/crew_quarters/sleep/maintDorm1)
 "aZw" = (
 /obj/effect/decal/cleanable/blood,
+/obj/structure/sign/painting/library_private{
+	pixel_x = -30
+	},
 /turf/simulated/floor/plating,
 /area/vacant/vacant_bar)
 "aZz" = (
@@ -31457,6 +31464,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/holodeck_control)
 "bdn" = (
@@ -31760,6 +31770,18 @@
 /obj/structure/barricade/cutout/mime,
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
+"bmK" = (
+/obj/structure/closet/walllocker_double{
+	dir = 1;
+	pixel_y = -28
+	},
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/obj/item/weapon/storage/fancy/crayons,
+/turf/simulated/floor/tiled,
+/area/storage/art)
 "bqI" = (
 /turf/simulated/wall,
 /area/tether/surfacebase/security/brig/storage)
@@ -32563,6 +32585,12 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
+"eoh" = (
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/maintDorm1)
 "eow" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -32983,6 +33011,42 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/weaponsrange)
+"ggX" = (
+/obj/structure/closet/walllocker_double{
+	dir = 8;
+	pixel_x = -28
+	},
+/obj/machinery/camera/network/civilian{
+	dir = 1
+	},
+/obj/item/canvas,
+/obj/item/canvas,
+/obj/item/canvas,
+/obj/item/canvas,
+/obj/item/canvas,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/nineteen_nineteen,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentyfour_twentyfour,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_nineteen,
+/obj/item/canvas/twentythree_twentythree,
+/obj/item/canvas/twentythree_twentythree,
+/obj/item/canvas/twentythree_twentythree,
+/obj/item/canvas/twentythree_twentythree,
+/obj/item/canvas/twentythree_twentythree,
+/obj/structure/easel,
+/turf/simulated/floor/tiled,
+/area/storage/art)
 "ghg" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 5
@@ -33347,6 +33411,30 @@
 	dir = 9
 	},
 /area/looking_glass/lg_1)
+"haf" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/surface_one_hall)
 "haw" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -33497,6 +33585,60 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/weaponsrange)
+<<<<<<< HEAD
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+"hDQ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/first_west)
+=======
+"hDQ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/first_west)
+"hFn" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals7{
+	dir = 8
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/surface_one_hall)
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 "hFq" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -33995,6 +34137,9 @@
 	name = "plastic table frame"
 	},
 /obj/item/device/flashlight/lamp/green,
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "jva" = (
@@ -34677,6 +34822,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/visitor_laundry)
+"lgZ" = (
+/obj/structure/sign/painting/public,
+/turf/simulated/wall,
+/area/tether/surfacebase/surface_one_hall)
 "lhM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular{
@@ -35866,6 +36015,9 @@
 	},
 /obj/item/clothing/mask/smokable/pipe/cobpipe,
 /obj/item/weapon/flame/lighter/zippo/ironic,
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/clownoffice)
 "okO" = (
@@ -36075,8 +36227,8 @@
 	name = "obscure table"
 	},
 /obj/random/action_figure,
-/obj/machinery/light/small{
-	dir = 1
+/obj/structure/sign/painting/public{
+	pixel_y = 30
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
@@ -36281,6 +36433,15 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/trash_pit)
+"pUw" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/tram)
 "pUI" = (
 /obj/structure/railing{
 	dir = 1
@@ -36582,6 +36743,12 @@
 	},
 /turf/simulated/floor,
 /area/tether/surfacebase/security/gasstorage)
+"qQo" = (
+/obj/structure/sign/painting/public{
+	pixel_y = -30
+	},
+/turf/simulated/floor/lino,
+/area/crew_quarters/visitor_dining)
 "qRI" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -36604,6 +36771,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
@@ -36723,7 +36893,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/visitor_laundry)
+<<<<<<< HEAD
 >>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+=======
+"rnA" = (
+/obj/structure/table/woodentable,
+/obj/structure/sign/painting/public{
+	pixel_y = 30
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/maintDorm2)
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 "rse" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/mimedouble,
@@ -36763,6 +36944,9 @@
 "rxD" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/clowndouble,
+/obj/structure/sign/painting/public{
+	pixel_y = -30
+	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
 "rxG" = (
@@ -38160,6 +38344,9 @@
 	name = "obscure table"
 	},
 /obj/random/mre,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/tether/surfacebase/funny/mimeoffice)
 "wUW" = (
@@ -38362,6 +38549,78 @@
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/tether/surfacebase/funny/clownoffice)
+<<<<<<< HEAD
+||||||| parent of 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
+"xuM" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Civ West Subgrid";
+	name_tag = "Civ West Subgrid"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/camera/network/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/civ_west)
+"xyI" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/grey/border,
+/obj/structure/table/bench/standard,
+/obj/structure/cable/orange{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/visitor_laundry)
+=======
+"xuM" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Civ West Subgrid";
+	name_tag = "Civ West Subgrid"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/camera/network/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/civ_west)
+"xvK" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/easel,
+/turf/simulated/floor/tiled,
+/area/storage/art)
+"xyI" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/grey/border,
+/obj/structure/table/bench/standard,
+/obj/structure/cable/orange{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/visitor_laundry)
+>>>>>>> 72d91a1867... Merge pull request #10861 from Very-Soft/yetmoatmapchanges
 "xzn" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 9
@@ -38458,6 +38717,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/funny/hideyhole)
+"xZB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/grey/border{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/visitor_laundry)
 "yaA" = (
 /obj/effect/floor_decal/corner/lightgrey{
 	dir = 9
@@ -47592,9 +47863,9 @@ aoI
 apq
 apY
 aqB
-aoH
-aoH
-bcd
+xvK
+ggX
+apu
 bcd
 apu
 aqb
@@ -47734,8 +48005,8 @@ aoI
 apr
 apr
 apr
-ara
-aoH
+apr
+bmK
 aoH
 bcd
 apu
@@ -50715,7 +50986,7 @@ aJl
 aHK
 aOS
 aGa
-bbm
+haf
 anW
 aoj
 aoS
@@ -50735,7 +51006,7 @@ arg
 aoS
 aoj
 awH
-axm
+hFn
 ayh
 ayh
 ayh
@@ -52498,7 +52769,7 @@ aYz
 aIF
 aZp
 aYg
-aZQ
+rnA
 bah
 bah
 aXn
@@ -52774,7 +53045,7 @@ agM
 agM
 aIp
 aJi
-agM
+lgZ
 agM
 aLg
 aLO
@@ -53240,7 +53511,7 @@ oKn
 fFb
 meS
 meS
-meS
+ara
 aaU
 aaU
 qJl
@@ -53500,7 +53771,7 @@ aHX
 aZc
 aJD
 aYi
-aZD
+eoh
 aZD
 baD
 aZD
@@ -54573,7 +54844,7 @@ aeL
 aIw
 aDu
 aCQ
-aDu
+qQo
 aLj
 aLW
 aMH
@@ -54745,7 +55016,7 @@ bHR
 aVD
 aVS
 aga
-bcJ
+xZB
 aXc
 aUm
 aUm
@@ -55129,13 +55400,13 @@ auV
 avC
 auB
 aCT
-aCT
+pUw
 ayp
 azp
 mRF
 rYL
 ayp
-aCT
+pUw
 avA
 aIo
 aEO
