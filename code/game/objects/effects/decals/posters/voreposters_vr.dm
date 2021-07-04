@@ -113,6 +113,7 @@
 	icon_state = "sbsposter18"
 	name = "Perdition"
 	desc = "You get the feeling that whomever made this intended for you to feel very differently than you do when you look at it."
+*/
 /decl/poster/vore_30
 	icon_state = "tgposter0"
 	name = "RIP Badger"
