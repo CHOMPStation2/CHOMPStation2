@@ -113,10 +113,6 @@
 	icon_state = "sbsposter18"
 	name = "Perdition"
 	desc = "You get the feeling that whomever made this intended for you to feel very differently than you do when you look at it."
-<<<<<<< HEAD
-*/
-||||||| parent of 3461aef4ed... Merge pull request #10814 from Very-Soft/moarposters
-=======
 /decl/poster/vore_30
 	icon_state = "tgposter0"
 	name = "RIP Badger"
@@ -369,6 +365,7 @@
 	icon_state = "tgposter62"
 	name = "Pin the Tail on the Corgi"
 	desc = "A concerned corgi looks at you as it stands and waits, a target overlays its rear end, seemingly waiting for someone to attatch a tail to it, which, it seems to be missing."
+/* //CHOMPedit start
 /decl/poster/vore_94
 	icon_state = "virgologoposter"
 	name = "Virgo Orbital Research Establishment"
@@ -401,4 +398,4 @@
 	icon_state = "cafejoanposter"
 	name = "Cafe Risu"
 	desc = "A poster depicting a familiar face readying to slurp a big mug of coffee. The face of addiction is not always unpleasant. Sometimes it takes the form of a pretty squirrel partaking of her morning treat..."
->>>>>>> 3461aef4ed... Merge pull request #10814 from Very-Soft/moarposters
+*/ //CHOMPedit end
