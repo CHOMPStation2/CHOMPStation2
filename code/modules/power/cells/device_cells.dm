@@ -35,8 +35,6 @@
 	maxcharge = 3600
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 3)
-	overlay_half_state = "swcell-partial"
-	overlay_full_state = "swcell-full"
 
 /obj/item/weapon/cell/device/super/empty/Initialize()
 	. = ..()
@@ -51,8 +49,6 @@
 	maxcharge = 4800
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
-	overlay_half_state = "hwcell-partial"
-	overlay_full_state = "hwcell-full"
 
 /obj/item/weapon/cell/device/hyper/empty/Initialize()
 	. = ..()
