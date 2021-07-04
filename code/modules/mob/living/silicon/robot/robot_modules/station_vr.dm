@@ -210,7 +210,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 	synths += water
 
@@ -296,7 +296,8 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
+	water.max_energy = 1000  //CHOMPedit increased water storage from 500 to 1000
 	R.water_res = water
 	synths += water
 
@@ -373,7 +374,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 	synths += water
 
@@ -520,7 +521,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 	synths += water
 
@@ -600,38 +601,39 @@
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/rms(src)
+	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)  //CHOMPedit: add RCD
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
 
 	//Painfully slow charger regen but high capacity. Also starts with low amount.
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
 	metal.name = "Steel reserves"
-	metal.recharge_rate = 100
+	metal.recharge_rate = 1000  //CHOMPedit Make less slow
 	metal.max_energy = 50000
-	metal.energy = 10000
+	metal.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass()
 	glass.name = "Glass reserves"
-	glass.recharge_rate = 100
+	glass.recharge_rate = 1000  //CHOMPedit Make less slow
 	glass.max_energy = 50000
-	glass.energy = 10000
+	glass.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/wood = new /datum/matter_synth/wood()
 	wood.name = "Wood reserves"
-	wood.recharge_rate = 100
+	wood.recharge_rate = 1000  //CHOMPedit Make less slow
 	wood.max_energy = 50000
-	wood.energy = 10000
+	wood.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/plastic = new /datum/matter_synth/plastic()
 	plastic.name = "Plastic reserves"
-	plastic.recharge_rate = 100
+	plastic.recharge_rate = 1000  //CHOMPedit Make less slow
 	plastic.max_energy = 50000
-	plastic.energy = 10000
+	plastic.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel()
 	plasteel.name = "Plasteel reserves"// Adding plasteel synthesizer to move in-line with Engiborg.
-	plasteel.recharge_rate = 100
+	plasteel.recharge_rate = 1000  //CHOMPedit Make less slow
 	plasteel.max_energy = 20000
-	plasteel.energy = 10000
+	plasteel.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 
 	var/datum/matter_synth/wire = new /datum/matter_synth/wire()
@@ -750,7 +752,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) // buffy fix, was 0
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	water.max_energy = 1000
 	R.water_res = water
 	synths += water
@@ -822,7 +824,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 	synths += water
 
