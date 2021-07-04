@@ -951,6 +951,10 @@
 	name = "\improper Dock Three"
 	icon_state = "dk_yellow"
 
+/area/tether/station/restroom
+	name = "\improper Unisex Restroom"
+	icon_state = "dk_yellow"
+
 /area/maintenance/station/abandonedholodeck
 	name = "\improper Old Holodeck"
 	icon_state = "dk_yellow"
@@ -1490,7 +1494,7 @@
 	name = "\improper Mining Outpost Shuttle - Station"
 	ambience = AMBIENCE_HANGAR
 	sound_env = LARGE_ENCLOSED
-area/shuttle/mining_outpost/shuttle
+/area/shuttle/mining_outpost/shuttle
 	name = "\improper Mining Outpost Shuttle"
 	icon_state = "shuttle2"
 // Elevator area //

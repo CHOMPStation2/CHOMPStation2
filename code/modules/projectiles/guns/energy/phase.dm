@@ -55,7 +55,8 @@
 	charge_cost = 400
 	recharge_time = 7
 
-obj/item/weapon/gun/energy/locked/phasegun/rifle
+
+/obj/item/weapon/gun/energy/locked/phasegun/rifle
 	name = "phase rifle"
 	desc = "The RayZar EW31 Orion is a specialist energy weapon, intended for use against hostile wildlife. This one has a safety interlock that prevents firing while in proximity to the facility."
 	icon_state = "phaserifle"

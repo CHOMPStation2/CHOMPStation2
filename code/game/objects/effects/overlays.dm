@@ -8,9 +8,10 @@
 	icon='icons/effects/beam.dmi'
 	icon_state="b_beam"
 	var/tmp/atom/BeamSource
-	New()
-		..()
-		spawn(10) qdel(src)
+
+/obj/effect/overlay/beam/New()
+	..()
+	spawn(10) qdel(src)
 
 /obj/effect/overlay/palmtree_r
 	name = "Palm tree"
@@ -128,6 +129,7 @@
 	appearance_flags = RESET_TRANSFORM | TILE_BOUND
 	invisibility = INVISIBILITY_ABSTRACT
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
 	plane = ATMOS_GROUP_PLANE
 */
 
@@ -158,6 +160,20 @@
 	vis_flags = NONE
 	alpha = 110
 	blocks_emissive = FALSE
+
+	var/static/matrix/normal_transform
+
+/obj/effect/overlay/light_cone/Initialize()
+	. = ..()
+	apply_standard_transform()
+
+/obj/effect/overlay/light_cone/proc/reset_transform(apply_standard)
+	transform = initial(transform)
+	if(apply_standard)
+		apply_standard_transform()
+
+/obj/effect/overlay/light_cone/proc/apply_standard_transform()
+	transform = transform.Translate(-32, -32)
 
 /obj/effect/overlay/light_cone/Destroy(force)
 	if(!force)

@@ -103,14 +103,12 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
@@ -178,6 +176,7 @@
 /obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "s" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/structure/cable{
@@ -240,6 +239,33 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+"iK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"jt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+=======
+"iK" = (
+/obj/structure/closet,
+/obj/random/plushie,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"jt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 /area/tether/midpoint)
 "x" = (
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
@@ -297,19 +323,316 @@
 /obj/structure/disposalpipe/down{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
+	dir = 4;
+	icon_state = "map-scrubbers"
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 1;
+	name = "Tether Midpoint";
+	sortType = "Tether Midpoint"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"nD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+=======
+/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 1;
+	name = "Tether Midpoint";
+	sortType = "Tether Midpoint"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"nD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 	},
 /obj/structure/lattice,
 /obj/machinery/door/firedoor/glass,
+<<<<<<< HEAD
 /turf/simulated/open,
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/tether/midpoint)
+"oz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5;
+	icon_state = "intact-scrubbers"
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"oN" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
+"oP" = (
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"pK" = (
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"pM" = (
+/turf/simulated/floor/plating,
+=======
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/tether/midpoint)
+"oz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"oN" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"oP" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"pK" = (
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"pM" = (
+/turf/simulated/floor/plating,
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/area/maintenance/tether_midpoint)
+<<<<<<< HEAD
 "E" = (
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+"pO" = (
+/obj/machinery/media/jukebox,
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/tether/midpoint)
+"sw" = (
+/obj/machinery/vending/bepis{
+	dir = 8
+	},
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/tether/midpoint)
+"sR" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
 /obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/tether/midpoint)
+"tn" = (
+=======
+"pO" = (
+/obj/effect/floor_decal/corner/lightgrey{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/lightgrey{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/obj/machinery/media/jukebox,
+/turf/simulated/floor/tiled/monotile,
+/area/tether/midpoint)
+"sw" = (
+/obj/effect/floor_decal/corner/lightgrey{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/lightgrey{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/obj/machinery/vending/snlvend,
+/turf/simulated/floor/tiled/monotile,
+/area/tether/midpoint)
+"sR" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 6
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"tn" = (
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/obj/structure/cable{
+<<<<<<< HEAD
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"tA" = (
+/obj/structure/table/bench/padded,
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"tB" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"uA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"uC" = (
+/obj/structure/table/woodentable,
+/obj/machinery/holoposter{
+	pixel_y = 30
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"vh" = (
+/obj/structure/table/woodentable,
+/obj/structure/flora/pottedplant/small{
+	pixel_y = 8
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"vt" = (
+/obj/structure/table/woodentable,
+/obj/machinery/camera/network/civilian{
+	dir = 1
+=======
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"tA" = (
+/obj/structure/table/bench/padded,
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"tB" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"uA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"uC" = (
+/obj/structure/table/woodentable,
+/obj/machinery/holoposter{
+	pixel_y = 30
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"vh" = (
+/obj/structure/table/woodentable,
+/obj/structure/flora/pottedplant/small{
+	pixel_y = 8
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"vt" = (
+/obj/structure/table/woodentable,
+/obj/machinery/camera/network/civilian{
+	dir = 1
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 	},
 /turf/simulated/floor/wood,
 /area/tether/midpoint)
@@ -317,11 +640,71 @@
 /obj/structure/table/bench/padded,
 /turf/simulated/floor/wood,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "G" = (
 /obj/structure/grille,
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+"xl" = (
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down,
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
+/obj/machinery/atmospherics/pipe/zpipe/down/supply,
+/obj/structure/lattice,
+/obj/structure/cable{
+	icon_state = "32-2"
+	},
+/obj/structure/disposalpipe/down,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/open,
+/area/maintenance/tether_midpoint)
+"yi" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/engineering,
+=======
+"xl" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down,
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
+/obj/machinery/atmospherics/pipe/zpipe/down/supply,
+/obj/structure/lattice,
+/obj/structure/cable{
+	icon_state = "32-2"
+	},
+/obj/structure/disposalpipe/down,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/open,
+/area/maintenance/tether_midpoint)
+"yi" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/engineering,
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 /turf/simulated/floor/plating,
 /area/maintenance/tether_midpoint)
+<<<<<<< HEAD
 "H" = (
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+"zi" = (
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"zG" = (
+=======
+"zi" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"zG" = (
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -386,17 +769,53 @@
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"Iq" = (
+/obj/machinery/light{
+	dir = 2
+	},
+/turf/simulated/floor/wood,
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"Iq" = (
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 /area/tether/midpoint)
 "P" = (
 /obj/structure/cable{
+<<<<<<< HEAD
 	icon_state = "1-4"
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+=======
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 	},
 /obj/machinery/vending/snack{
 	dir = 1
@@ -420,16 +839,59 @@
 	dir = 5
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "T" = (
 /obj/structure/table/woodentable,
 /obj/structure/flora/pottedplant/smallcactus{
 	pixel_x = 0;
 	pixel_y = 8
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+"Kh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 2;
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"KH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+=======
+"Kh" = (
+/obj/effect/floor_decal/corner/lightgrey{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/lightgrey{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/obj/machinery/vending/bepis,
+/turf/simulated/floor/tiled/monotile,
+/area/tether/midpoint)
+"KH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 	},
 /turf/simulated/floor/wood,
 /area/tether/midpoint)
@@ -439,11 +901,111 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "V" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5;
 	icon_state = "intact-scrubbers"
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+"Ls" = (
+/obj/structure/disposalpipe/down{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
+	},
+/obj/structure/lattice,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/open,
+/area/maintenance/tether_midpoint)
+"ML" = (
+/obj/structure/closet,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"Nt" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"NJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/tether/midpoint)
+"Oq" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/structure/lattice,
+/obj/structure/disposalpipe/down,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/open,
+/area/maintenance/tether_midpoint)
+"Or" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+=======
+"Ls" = (
+/obj/structure/disposalpipe/down{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/lattice,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/open,
+/area/maintenance/tether_midpoint)
+"ML" = (
+/obj/structure/closet,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"Nt" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"NJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/tether/midpoint)
+"Oq" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/lattice,
+/obj/structure/disposalpipe/down,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/open,
+/area/maintenance/tether_midpoint)
+"Or" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 	},
 /obj/machinery/light{
 	dir = 8;
@@ -480,15 +1042,66 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/midpoint)
+<<<<<<< HEAD
 "Z" = (
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+"WY" = (
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/tether_midpoint)
+"Xo" = (
+/obj/machinery/vending/snlvend{
+	dir = 8
+=======
+"WY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/wood,
+/area/tether/midpoint)
+"Xo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+	},
+<<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/turf/simulated/floor/holofloor/tiled/dark,
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+/turf/simulated/floor/holofloor/tiled/dark,
+=======
+/obj/machinery/firealarm{
+	layer = 3.3;
+	pixel_y = 26
+	},
+/turf/simulated/floor/wood,
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+/area/tether/midpoint)
+"YB" = (
+/obj/structure/table/woodentable,
+/obj/structure/flora/pottedplant/smallcactus{
+	pixel_x = 0;
+	pixel_y = 8
+=======
+/turf/simulated/floor/tiled/dark,
+/area/tether/midpoint)
+"YB" = (
+/obj/structure/table/woodentable,
+/obj/structure/flora/pottedplant/smallcactus{
+	pixel_y = 8
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/midpoint)
@@ -8730,6 +9343,7 @@ a
 a
 "}
 (59,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -8870,8 +9484,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+NJ
+gq
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+pK
+Pz
+pK
+pK
+Or
+pK
+pK
+pK
+nD
+zP
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+NJ
+gq
+pK
+pK
+pK
+pK
+pK
+pK
+Pz
+pK
+pK
+pK
+pK
+Pz
+pK
+pK
+Or
+pK
+pK
+pK
+nD
+zP
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (60,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -9012,8 +9910,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+pK
+pK
+pK
+pK
+pK
+PF
+PF
+pO
+Xo
+sw
+PF
+PF
+PF
+PF
+PF
+Or
+pK
+pK
+pK
+pK
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+pK
+pK
+pK
+pK
+pK
+PF
+PF
+PF
+PF
+PF
+PF
+PF
+PF
+PF
+PF
+Or
+pK
+pK
+pK
+pK
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (61,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -9154,8 +10336,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+tA
+tA
+tA
+pK
+pK
+Dz
+Dz
+Dz
+Dz
+Dz
+Dz
+oN
+yi
+ML
+Dz
+uA
+pK
+tA
+tA
+tA
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+tA
+tA
+tA
+pK
+pK
+Dz
+iK
+pM
+pM
+pM
+Dz
+oN
+yi
+ML
+PF
+uA
+pK
+tA
+tA
+tA
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (62,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -9296,8 +10762,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+PF
+uC
+vh
+dc
+pK
+Iq
+Dz
+Ui
+HK
+cB
+Oq
+mz
+pM
+pM
+pM
+Dz
+wM
+pK
+dc
+YB
+vt
+PF
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+PF
+uC
+vh
+dc
+pK
+Iq
+Dz
+Ui
+HK
+cB
+Oq
+mz
+pM
+oP
+pM
+PF
+wM
+pK
+dc
+YB
+vt
+PF
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (63,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -9438,8 +11188,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+tA
+tA
+tA
+pK
+pK
+Dz
+Qv
+xl
+no
+jE
+Ha
+gV
+Ls
+pM
+Dz
+Or
+pK
+tA
+tA
+tA
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+tA
+tA
+tA
+pK
+pK
+Dz
+Qv
+xl
+no
+jE
+Ha
+gV
+Ls
+PF
+PF
+WY
+pK
+tA
+tA
+tA
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (64,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -9580,8 +11614,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+pK
+pK
+pK
+pK
+pK
+Dz
+Qv
+Hs
+Hs
+Hs
+Hs
+Hs
+Hs
+WY
+Dz
+iK
+pK
+pK
+pK
+pK
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+pK
+pK
+pK
+pK
+pK
+Dz
+Qv
+Hs
+Hs
+Hs
+Hs
+Hs
+Hs
+PF
+pO
+Or
+pK
+pK
+pK
+pK
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (65,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -9722,8 +12040,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+pK
+pK
+pK
+pK
+pK
+Dz
+Qv
+Hs
+Gl
+Gl
+Gl
+Gl
+Hs
+oP
+Dz
+Kh
+pK
+pK
+pK
+pK
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+pK
+pK
+pK
+pK
+pK
+Dz
+Qv
+Hs
+Gl
+Gl
+Gl
+Gl
+Hs
+PF
+sw
+Or
+pK
+pK
+pK
+pK
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (66,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -9864,8 +12466,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+tA
+tA
+tA
+pK
+pK
+Dz
+Qv
+Hs
+Gl
+Gl
+Gl
+Gl
+Hs
+pM
+Dz
+hi
+pK
+tA
+tA
+tA
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+tA
+tA
+tA
+pK
+pK
+Dz
+Qv
+Hs
+Gl
+Gl
+Gl
+Gl
+Hs
+PF
+Kh
+hi
+pK
+tA
+tA
+tA
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (67,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -10006,8 +12892,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+PF
+hp
+YB
+dc
+pK
+Iq
+Dz
+Qv
+Hs
+Gl
+Gl
+Gl
+Gl
+Hs
+pM
+Dz
+wM
+pK
+dc
+vh
+zZ
+PF
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+PF
+hp
+YB
+dc
+pK
+Iq
+Dz
+Qv
+Hs
+Gl
+Gl
+Gl
+Gl
+Hs
+PF
+PF
+wM
+pK
+dc
+vh
+zZ
+PF
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (68,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -10148,8 +13318,292 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+tA
+tA
+tA
+pK
+VB
+Dz
+Qv
+Hs
+Gl
+Gl
+Gl
+Gl
+Hs
+Zd
+Dz
+Or
+pK
+tA
+tA
+tA
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+tA
+tA
+tA
+pK
+VB
+Dz
+Qv
+Hs
+Gl
+Gl
+Gl
+Gl
+Hs
+pM
+PF
+Xo
+pK
+tA
+tA
+tA
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (69,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -10290,6 +13744,289 @@ a
 a
 a
 a
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+pK
+pK
+pK
+pK
+pK
+Dz
+zG
+Hs
+Hs
+Gl
+Gl
+Hs
+Hs
+Dz
+Dz
+Or
+pK
+pK
+pK
+pK
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+=======
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+Et
+pK
+pK
+pK
+pK
+pK
+Dz
+zG
+Hs
+Hs
+Gl
+Gl
+Hs
+Hs
+Dz
+PF
+Or
+pK
+pK
+pK
+pK
+Et
+kz
+kz
+kz
+kz
+kz
+kz
+lL
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+kz
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "}
 (70,1,1) = {"
 a

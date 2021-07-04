@@ -366,13 +366,13 @@ var/obj/machinery/blackbox_recorder/blackbox
 		qdel(query_insert) //CHOMPEdit TGSQL
 
 // Sanitize inputs to avoid SQL injection attacks //CHOMPEdit NOTE: This is not secure. Basic filters like this are pretty easy to bypass. Use the format for arguments used in the above.
-proc/sql_sanitize_text(var/text)
+/proc/sql_sanitize_text(var/text)
 	text = replacetext(text, "'", "''")
 	text = replacetext(text, ";", "")
 	text = replacetext(text, "&", "")
 	return text
 
-proc/feedback_set(var/variable,var/value)
+/proc/feedback_set(var/variable,var/value)
 	if(!blackbox) return
 
 	variable = sql_sanitize_text(variable)
@@ -383,7 +383,7 @@ proc/feedback_set(var/variable,var/value)
 
 	FV.set_value(value)
 
-proc/feedback_inc(var/variable,var/value)
+/proc/feedback_inc(var/variable,var/value)
 	if(!blackbox) return
 
 	variable = sql_sanitize_text(variable)
@@ -394,7 +394,7 @@ proc/feedback_inc(var/variable,var/value)
 
 	FV.inc(value)
 
-proc/feedback_dec(var/variable,var/value)
+/proc/feedback_dec(var/variable,var/value)
 	if(!blackbox) return
 
 	variable = sql_sanitize_text(variable)
@@ -405,7 +405,7 @@ proc/feedback_dec(var/variable,var/value)
 
 	FV.dec(value)
 
-proc/feedback_set_details(var/variable,var/details)
+/proc/feedback_set_details(var/variable,var/details)
 	if(!blackbox) return
 
 	variable = sql_sanitize_text(variable)
@@ -417,7 +417,7 @@ proc/feedback_set_details(var/variable,var/details)
 
 	FV.set_details(details)
 
-proc/feedback_add_details(var/variable,var/details)
+/proc/feedback_add_details(var/variable,var/details)
 	if(!blackbox) return
 
 	variable = sql_sanitize_text(variable)

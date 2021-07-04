@@ -230,14 +230,14 @@
 /mob/living/silicon/GetIdCard()
 	return idcard
 
-proc/FindNameFromID(var/mob/living/carbon/human/H)
+/proc/FindNameFromID(var/mob/living/carbon/human/H)
 	ASSERT(istype(H))
 	var/obj/item/weapon/card/id/C = H.GetIdCard()
 	if(C)
 		return C.registered_name
 
-proc/get_all_job_icons() //For all existing HUD icons
-	return joblist + list("Prisoner")
+/proc/get_all_job_icons() //For all existing HUD icons
+	return joblist + alt_titles_with_icons + list("Prisoner")
 
 /obj/proc/GetJobName() //Used in secHUD icon generation
 	var/obj/item/weapon/card/id/I = GetID()

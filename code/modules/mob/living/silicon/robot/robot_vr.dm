@@ -74,7 +74,7 @@
 	set desc = "Select your resting pose."
 	sitting = FALSE
 	bellyup = FALSE
-	var/choice = alert(src, "Select resting pose", "", "Resting", "Sitting", "Belly up")
+	var/choice = tgui_alert(src, "Select resting pose", "Resting Pose", list("Resting", "Sitting", "Belly up"))
 	switch(choice)
 		if("Resting")
 			return 0
@@ -237,7 +237,7 @@
 
 	var/mob/living/carbon/human/H = M
 
-	if(isTaurTail(H.tail_style))
+	if(istaurtail(H.tail_style))
 		to_chat(src, "<span class='warning'>Too many legs. TOO MANY LEGS!!</span>")
 		return FALSE
 	if(M.loc != src.loc)

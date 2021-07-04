@@ -246,7 +246,7 @@
 
 	return data
 
-obj/machinery/lapvend/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/lapvend/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	var/obj/item/weapon/card/id/I = W.GetID()
 	// Awaiting payment state
 	if(state == 2)
@@ -285,7 +285,7 @@ obj/machinery/lapvend/attackby(obj/item/weapon/W as obj, mob/user as mob)
 		return 0
 
 	if(customer_account.security_level != 0) //If card requires pin authentication (ie seclevel 1 or 2)
-		var/attempt_pin = input("Enter pin code", "Vendor transaction") as num
+		var/attempt_pin = input(usr, "Enter pin code", "Vendor transaction") as num
 		customer_account = attempt_account_access(I.associated_account_number, attempt_pin, 2)
 
 		if(!customer_account)

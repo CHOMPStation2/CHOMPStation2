@@ -376,7 +376,7 @@
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Vox"
 
-datum/species/harpy
+/datum/species/harpy
 	name = SPECIES_RAPALA
 	name_plural = "Rapalans"
 	icobase = 'icons/mob/human_races/r_harpy_vr.dmi'

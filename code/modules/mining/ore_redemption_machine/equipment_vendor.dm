@@ -51,7 +51,8 @@
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,										2500),
 		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							1200),
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											750),
-		EQUIPMENT("Large Mining Satchel",						/obj/item/weapon/storage/bag/ore/large,								1000), //CHOMPstation addition
+		EQUIPMENT("Large Mining Satchel",						/obj/item/weapon/storage/bag/ore/large,								1000), //CHOMP Add //CHOMPstation addition
+		EQUIPMENT("Mining Satchel of Holding",					/obj/item/weapon/storage/bag/ore/holding,							1500),
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
@@ -279,7 +280,7 @@
   * * redeemer - The person holding it
   */
 /obj/machinery/mineral/equipment_vendor/proc/redeem_voucher(obj/item/mining_voucher/voucher, mob/redeemer)
-	var/selection = input(redeemer, "Pick your equipment", "Mining Voucher Redemption") as null|anything in list("Kinetic Accelerator", "Resonator", "Mining Drone", "Advanced Scanner", "Crusher")
+	var/selection = tgui_input_list(redeemer, "Pick your equipment", "Mining Voucher Redemption", list("Kinetic Accelerator", "Resonator", "Mining Drone", "Advanced Scanner", "Crusher"))
 	if(!selection || !Adjacent(redeemer) || voucher.loc != redeemer)
 		return
 	//VOREStation Edit Start - Uncommented these

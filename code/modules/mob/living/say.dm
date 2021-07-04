@@ -62,7 +62,7 @@ var/list/department_radio_keys = list(
 
 
 var/list/channel_to_radio_key = new
-proc/get_radio_key_from_channel(var/channel)
+/proc/get_radio_key_from_channel(var/channel)
 	var/key = channel_to_radio_key[channel]
 	if(!key)
 		for(var/radio_key in department_radio_keys)
@@ -346,20 +346,6 @@ proc/get_radio_key_from_channel(var/channel)
 	speech_bubble.loc = loc_before_turf
 	speech_bubble.alpha = CLAMP(sb_alpha, 0, 255)
 	images_to_clients[speech_bubble] = list()
-
-	// Attempt Multi-Z Talking
-	var/mob/above = src.shadow
-	while(!QDELETED(above))
-		var/turf/ST = get_turf(above)
-		if(ST)
-			var/list/results = get_mobs_and_objs_in_view_fast(ST, world.view)
-			var/image/z_speech_bubble = generate_speech_bubble(above, "h[speech_bubble_test]")
-			images_to_clients[z_speech_bubble] = list()
-			for(var/item in results["mobs"])
-				if(item != above && !(item in listening))
-					listening[item] = z_speech_bubble
-			listening_obj |= results["objs"]
-		above = above.shadow
 
 	//Main 'say' and 'whisper' message delivery
 	for(var/mob/M in listening)

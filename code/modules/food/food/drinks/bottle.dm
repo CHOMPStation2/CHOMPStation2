@@ -12,7 +12,8 @@
 
 	var/obj/item/weapon/reagent_containers/glass/rag/rag = null
 	var/rag_underlay = "rag"
-	on_reagent_change() return // To suppress price updating. Bottles have their own price tags.
+
+/obj/item/weapon/reagent_containers/food/drinks/bottle/on_reagent_change() return // To suppress price updating. Bottles have their own price tags.
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/Initialize()
 	. = ..()
@@ -86,7 +87,7 @@
 		if(A.density && usr.Adjacent(A) && !istype(A, /mob))
 			things_to_smash_on += A
 
-	var/atom/choice = input("Select what you want to smash the bottle on.") as null|anything in things_to_smash_on
+	var/atom/choice = tgui_input_list(usr, "Select what you want to smash the bottle on.", "SMASH!", things_to_smash_on)
 	if(!choice)
 		return
 	if(!(choice.density && usr.Adjacent(choice)))

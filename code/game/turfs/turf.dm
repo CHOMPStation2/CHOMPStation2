@@ -2,6 +2,7 @@
 	icon = 'icons/turf/floors.dmi'
 	layer = TURF_LAYER
 	plane = TURF_PLANE
+	vis_flags = VIS_INHERIT_ID | VIS_INHERIT_PLANE// Important for interaction with and visualization of openspace.
 	level = 1
 	var/holy = 0
 
@@ -41,7 +42,7 @@
 		Entered(AM)
 
 	//Lighting related
-	luminosity = !(dynamic_lighting)
+	set_luminosity(!(dynamic_lighting))
 	
 	if(opacity)
 		directional_opacity = ALL_CARDINALS
@@ -49,6 +50,13 @@
 	//Pathfinding related
 	if(movement_cost && pathweight == 1) // This updates pathweight automatically.
 		pathweight = movement_cost
+
+	var/turf/Ab = GetAbove(src)
+	if(Ab)
+		Ab.multiz_turf_new(src, DOWN)
+	var/turf/Be = GetBelow(src)
+	if(Be)
+		Be.multiz_turf_new(src, UP)
 
 /turf/Destroy()
 	. = QDEL_HINT_IWILLGC
@@ -96,7 +104,7 @@
 		step(user.pulling, get_dir(user.pulling.loc, src))
 	return 1
 
-turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/storage))
 		var/obj/item/weapon/storage/S = W
 		if(S.use_to_pickup && S.collection_mode)
@@ -319,7 +327,7 @@ turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
 		to_chat(vandal, "<span class='warning'>There's too much graffiti here to add more.</span>")
 		return FALSE
 
-	var/message = sanitize(input("Enter a message to engrave.", "Graffiti") as null|text, trim = TRUE)
+	var/message = sanitize(input(usr, "Enter a message to engrave.", "Graffiti") as null|text, trim = TRUE)
 	if(!message)
 		return FALSE
 
