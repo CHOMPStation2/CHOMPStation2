@@ -9,6 +9,9 @@ SUBSYSTEM_DEF(media_tracks)
 	var/list/jukebox_tracks = list()
 	/// Lobby music tracks
 	var/list/lobby_tracks = list()
+	/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
+	var/list/casino_tracks = list()
+	/// CHOMPstation edit end
 
 /datum/controller/subsystem/media_tracks/Initialize(timeofday)
 	load_tracks()
@@ -53,6 +56,10 @@ SUBSYSTEM_DEF(media_tracks)
 			T.secret = entry["secret"] ? 1 : 0
 			T.lobby = entry["lobby"] ? 1 : 0
 			
+			/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
+			T.casino = entry["casino"] ? 1 : 0
+			/// CHOMPstation edit end
+			
 			all_tracks += T
 
 /datum/controller/subsystem/media_tracks/proc/sort_tracks()
@@ -61,12 +68,19 @@ SUBSYSTEM_DEF(media_tracks)
 	
 	jukebox_tracks.Cut()
 	lobby_tracks.Cut()
+	/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
+	casino_tracks.Cut()
+	/// CHOMPstation edit end
 	
 	for(var/datum/track/T in all_tracks)
 		if(!T.secret)
 			jukebox_tracks += T
 		if(T.lobby)
 			lobby_tracks += T
+		/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
+		if(T.casino)
+			casino_tracks += T
+		/// CHOMPstation edit end
 
 /datum/controller/subsystem/media_tracks/proc/manual_track_add()
 	var/client/C = usr.client
@@ -94,6 +108,7 @@ SUBSYSTEM_DEF(media_tracks)
 	 * "genre": artist of the song, REALLY try to match an existing one (text)
 	 * "secret": only on hacked jukeboxes (true/false)
 	 * "lobby": plays in the lobby (true/false)
+	 * "casino": plays in the casino (true/false) CHOMPstation casino
 	 */
 	
 	if(islist(json))
@@ -105,7 +120,7 @@ SUBSYSTEM_DEF(media_tracks)
 			if(!songdata["url"] || !songdata["title"] || !songdata["duration"])
 				to_chat(C, "<span class='warning'>URL, Title, or Duration was missing from a song. Skipping.</span>")
 				continue				
-			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"])
+			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"], songdata["casino"])
 			all_tracks += T
 			
 			report_progress("New media track added by [C]: [T.title]")
@@ -145,10 +160,23 @@ SUBSYSTEM_DEF(media_tracks)
 	else
 		secret = FALSE
 
+	/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
+	var/casino = tgui_alert(C, "Optional: Mark track as casino music?", "Track Casino", list("Yes", "Cancel", "No"))
+	if(casino == "Cancel")
+		return
+	else if(secret == "Yes")
+		secret = TRUE
+	else
+		secret = FALSE
+	/// CHOMPstation edit end
+
 	var/datum/track/T = new(url, title, duration, artist, genre)
 			
 	T.secret = secret
 	T.lobby = lobby
+	/// CHOMPstation edit start: Jack - Injecting casino track into new jukebox subsystem
+	T.casino = casino
+	/// CHOMPstation edit end
 	
 	all_tracks += T
 	
