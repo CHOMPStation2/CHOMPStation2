@@ -40,7 +40,7 @@
 	desc = "Decreases your susceptibility to electric shocks by a 50% amount." //CHOMP Edit
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
-
+/*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
 /datum/trait/positive/darksight
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark and 10% more susceptible to flashes." //CHOMP Edit
@@ -52,7 +52,7 @@
 	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
 	var_changes = list("darksight" = 6)  //CHOMP Edit
-
+*/ 
 /datum/trait/positive/melee_attack
 	name = "Sharp Melee"
 	desc = "Provides sharp melee attacks that do slightly more damage."
