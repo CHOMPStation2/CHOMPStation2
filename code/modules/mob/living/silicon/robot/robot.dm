@@ -268,6 +268,12 @@
 	if(shell)
 		modules.Add(robot_module_types)
 		modules.Remove(shell_module_blacklist)
+		//CHOMPedit Add
+		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
+			to_chat(src, "<font color='red'>Crisis mode active. Combat module available.</font>")
+			modules+="Combat"
+			modules+="ERT"
+			//CHOMPedit end
 	else
 		modules.Add(robot_module_types)
 		if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
