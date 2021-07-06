@@ -278,12 +278,12 @@
 	var/entry = ""
 	if(!user_or_client)
 		entry += "no user"
-	else if(istype(user_or_client, /mob))
-		var/mob/user = user_or_client
-		entry += "[user.ckey] (as [user])"
-	else if(istype(user_or_client, /client))
-		var/client/client = user_or_client
-		entry += "[client.ckey]"
+//	else if(istype(user_or_client, /mob)) //CHOMP Edit commenting out these blocks because it just seems to do nothing except spam the logs with... nothing.
+//		var/mob/user = user_or_client
+//		entry += "[user.ckey] (as [user])"
+//	else if(istype(user_or_client, /client))
+//		var/client/client = user_or_client
+//		entry += "[client.ckey]"
 	entry += ":\n[text]"
 	WRITE_LOG(diary, entry)
 
