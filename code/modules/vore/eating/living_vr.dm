@@ -542,6 +542,9 @@
 	else
 		swallow_time = istype(prey, /mob/living/carbon/human) ? belly.human_prey_swallow_time : belly.nonhuman_prey_swallow_time
 
+	// Their AI should get notified so they can stab us
+	prey.ai_holder?.react_to_attack(user)
+	
 	//Timer and progress bar
 	if(!do_after(user, swallow_time, prey))
 		return FALSE // Prey escpaed (or user disabled) before timer expired.
