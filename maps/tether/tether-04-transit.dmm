@@ -141,6 +141,15 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+<<<<<<< HEAD
+||||||| parent of 3564292714... Merge pull request #10933 from Very-Soft/oncemoremaptweaks
+/obj/structure/disposalpipe/segment,
+=======
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
+>>>>>>> 3564292714... Merge pull request #10933 from Very-Soft/oncemoremaptweaks
 /turf/simulated/floor/tiled/dark,
 /area/tether/midpoint)
 "n" = (
