@@ -111,7 +111,27 @@
 		warning("Fake sun placed on a level where it can't find any outdoor turfs to color at [x],[y],[z].")
 		return
 
+<<<<<<< HEAD
 	fake_sun.update_corners(turfs_to_use)
+||||||| parent of 3ebbba6e34... Merge pull request #10961 from VOREStation/Arokha/fakesunfix
+	sun = new(null)
+
+	sun.color = choice["color"]
+	sun.alpha = round(CLAMP01(choice["brightness"])*255,1)
+
+	for(var/turf/T as anything in turfs_to_use)
+		T.vis_contents += sun
+		T.dynamic_lumcount = 0.5 // Cheap hack
+		T.set_luminosity(1, TRUE)
+=======
+	sun = new(null)
+
+	sun.set_color(choice["color"])
+	sun.set_alpha(round(CLAMP01(choice["brightness"])*255,1))
+
+	for(var/turf/T as anything in turfs_to_use)
+		sun.apply_to_turf(T)
+>>>>>>> 3ebbba6e34... Merge pull request #10961 from VOREStation/Arokha/fakesunfix
 
 /obj/effect/fake_sun/warm
 	name = "warm fake sun"
