@@ -52,15 +52,9 @@
 								  "Webslinger Giant Spider" = /mob/living/simple_mob/animal/giant_spider/webslinger,
 								  "Frost Giant Spider" = /mob/living/simple_mob/animal/giant_spider/frost,
 								  "Nurse Giant Spider" = /mob/living/simple_mob/animal/giant_spider/nurse/eggless,
-<<<<<<< HEAD
 								  "Giant Spider Queen" = /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless,
+								  "Weretiger" = /mob/living/simple_mob/vore/weretiger,
 								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred	//CHOMPStation add.
-||||||| parent of 37a522e7bf... Merge pull request #10948 from Ketrai/bigtig
-								  "Giant Spider Queen" = /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless
-=======
-								  "Giant Spider Queen" = /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless,
-								  "Weretiger" = /mob/living/simple_mob/vore/weretiger
->>>>>>> 37a522e7bf... Merge pull request #10948 from Ketrai/bigtig
 								  )
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)
