@@ -172,13 +172,7 @@ const digestModeToPreyMode = {
 export const VorePanel = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-<<<<<<< HEAD
-    <Window width={700} height={800} resizable>
-||||||| parent of f3c583b740... Merge pull request #10930 from VOREStation/Arokha/ntvore
-    <Window width={700} height={660} resizable>
-=======
     <Window width={700} height={660} theme="abstract" resizable>
->>>>>>> f3c583b740... Merge pull request #10930 from VOREStation/Arokha/ntvore
       <Window.Content scrollable>
         {data.unsaved_changes && (
           <NoticeBox danger>
