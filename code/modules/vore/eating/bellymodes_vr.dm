@@ -9,15 +9,11 @@
 			qdel(src)
 			return
 
-<<<<<<< HEAD
 	HandleBellyReagents()	//CHOMP reagent belly stuff, here to jam it into subsystems and avoid too much cpu usage
-||||||| parent of f3c583b740... Merge pull request #10930 from VOREStation/Arokha/ntvore
-=======
 	// VERY early exit
 	if(!contents.len)
 		return
 
->>>>>>> f3c583b740... Merge pull request #10930 from VOREStation/Arokha/ntvore
 	var/play_sound //Potential sound to play at the end to avoid code duplication.
 	var/to_update = FALSE //Did anything update worthy happen?
 
