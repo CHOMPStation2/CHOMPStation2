@@ -4,7 +4,7 @@
 	icon = 'icons/effects/effects_vr.dmi'
 	icon_state = "fakesun"
 	invisibility = INVISIBILITY_ABSTRACT
-	var/datum/light_source/sun/fake_sun
+	var/atom/movable/sun_visuals/sun
 
 	var/list/possible_light_setups = list(
 		list(
@@ -88,10 +88,6 @@
 	if(choice["brightness"] <= LIGHTING_SOFT_THRESHOLD) // dark!
 		return
 
-	fake_sun = new
-	fake_sun.light_color = choice["color"]
-	fake_sun.light_power = choice["brightness"]
-
 	var/list/zees = GetConnectedZlevels()
 	var/min = z
 	var/max = z
@@ -111,19 +107,6 @@
 		warning("Fake sun placed on a level where it can't find any outdoor turfs to color at [x],[y],[z].")
 		return
 
-<<<<<<< HEAD
-	fake_sun.update_corners(turfs_to_use)
-||||||| parent of 3ebbba6e34... Merge pull request #10961 from VOREStation/Arokha/fakesunfix
-	sun = new(null)
-
-	sun.color = choice["color"]
-	sun.alpha = round(CLAMP01(choice["brightness"])*255,1)
-
-	for(var/turf/T as anything in turfs_to_use)
-		T.vis_contents += sun
-		T.dynamic_lumcount = 0.5 // Cheap hack
-		T.set_luminosity(1, TRUE)
-=======
 	sun = new(null)
 
 	sun.set_color(choice["color"])
@@ -131,7 +114,6 @@
 
 	for(var/turf/T as anything in turfs_to_use)
 		sun.apply_to_turf(T)
->>>>>>> 3ebbba6e34... Merge pull request #10961 from VOREStation/Arokha/fakesunfix
 
 /obj/effect/fake_sun/warm
 	name = "warm fake sun"
