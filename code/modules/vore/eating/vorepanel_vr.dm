@@ -61,7 +61,7 @@
 	if(!ui)
 		update_preview_icon()	//CHOMPEdit
 		give_client_previews(user.client) //CHOMPEdit
-		ui = new(user, src, "VorePanel", "Inside!")
+		ui = new(user, src, "VorePanel", "Vore Panel")
 		ui.open()
 
 // This looks weird, but all tgui_host is used for is state checking
