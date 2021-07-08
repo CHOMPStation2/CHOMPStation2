@@ -59,15 +59,9 @@
 /datum/vore_look/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		update_preview_icon()	//CHOMPEdit
 		give_client_previews(user.client) //CHOMPEdit
-		ui = new(user, src, "VorePanel", "Inside!")
-||||||| parent of f3c583b740... Merge pull request #10930 from VOREStation/Arokha/ntvore
-		ui = new(user, src, "VorePanel", "Inside!")
-=======
 		ui = new(user, src, "VorePanel", "Vore Panel")
->>>>>>> f3c583b740... Merge pull request #10930 from VOREStation/Arokha/ntvore
 		ui.open()
 
 // This looks weird, but all tgui_host is used for is state checking
