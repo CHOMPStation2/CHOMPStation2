@@ -12775,6 +12775,7 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/station/eng_lower)
+<<<<<<< HEAD
 "aMy" = (
 /obj/machinery/conveyor{
 	dir = 10;
@@ -12782,6 +12783,16 @@
 	},
 /turf/simulated/floor,
 /area/quartermaster/storage)
+||||||| parent of 1410026d96... Merge pull request #10964 from Very-Soft/demovehallwaydoor
+"aMy" = (
+/obj/machinery/conveyor{
+	dir = 5;
+	id = "QMLoad"
+	},
+/turf/simulated/floor,
+/area/quartermaster/storage)
+=======
+>>>>>>> 1410026d96... Merge pull request #10964 from Very-Soft/demovehallwaydoor
 "aMB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -19946,7 +19957,7 @@
 /area/tether/station/dock_one)
 "fWn" = (
 /obj/machinery/conveyor{
-	dir = 1;
+	dir = 5;
 	id = "QMLoad"
 	},
 /obj/machinery/light,
@@ -30502,6 +30513,7 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/shuttle/securiship/engines)
+<<<<<<< HEAD
 "qby" = (
 /obj/machinery/conveyor{
 	dir = 9;
@@ -30509,6 +30521,38 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
+||||||| parent of 1410026d96... Merge pull request #10964 from Very-Soft/demovehallwaydoor
+"qby" = (
+/obj/machinery/conveyor{
+	dir = 6;
+	id = "miningops"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/belterdock/refinery)
+"qcg" = (
+/obj/machinery/camera/network/telecom,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/airless,
+/area/tether/outpost/solars_outside{
+	name = "\improper Telecomms Solar Field"
+	})
+=======
+"qcg" = (
+/obj/machinery/camera/network/telecom,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/airless,
+/area/tether/outpost/solars_outside{
+	name = "\improper Telecomms Solar Field"
+	})
+>>>>>>> 1410026d96... Merge pull request #10964 from Very-Soft/demovehallwaydoor
 "qcz" = (
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/floor/tiled/eris/white/gray_perforated,
@@ -32927,11 +32971,20 @@
 /turf/simulated/floor/tiled,
 /area/hallway/station/atrium)
 "sKB" = (
+/obj/machinery/mineral/input,
 /obj/machinery/conveyor{
+<<<<<<< HEAD
 	dir = 5;
 	id = "miningops"
+||||||| parent of 1410026d96... Merge pull request #10964 from Very-Soft/demovehallwaydoor
+	dir = 10;
+	id = "miningops"
+=======
+	dir = 8;
+	id = "miningops";
+	movedir = null
+>>>>>>> 1410026d96... Merge pull request #10964 from Very-Soft/demovehallwaydoor
 	},
-/obj/machinery/mineral/input,
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
 "sLp" = (
@@ -49491,7 +49544,7 @@ sBQ
 aAr
 aAz
 aBF
-aMy
+aDq
 gVb
 dQD
 fWn
@@ -50208,7 +50261,7 @@ asG
 asG
 sLH
 xur
-qby
+cWq
 cWq
 dgF
 nEy
