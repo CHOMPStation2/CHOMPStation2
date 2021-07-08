@@ -474,14 +474,8 @@ var/global/list/disallowed_protean_accessories = list(
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
 	if(!istype(blob))
 		return
-<<<<<<< HEAD
 	if(blob.loc == /obj/item/weapon/rig/protean) //CHOMP Add
 		return //CHOMP Add
-||||||| parent of c7ec78b7a1... Merge pull request #10937 from Verkister/planecrap
-	
-=======
-
->>>>>>> c7ec78b7a1... Merge pull request #10937 from Verkister/planecrap
 	if(!force && !isturf(blob.loc))
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
