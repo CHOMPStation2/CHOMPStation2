@@ -243,6 +243,16 @@ Proc for attack log creation, because really why not
 
 	if(exclusive)
 		user.status_flags |= DOING_TASK
+<<<<<<< HEAD
+||||||| parent of 21251d755c... Merge pull request #10996 from VOREStation/Arokha/fixbit
+	
+	if(target && exclusive & TASK_TARGET_EXCLUSIVE)
+		target.flags |= IS_BUSY
+=======
+	
+	if(target && (exclusive & TASK_TARGET_EXCLUSIVE))
+		target.flags |= IS_BUSY
+>>>>>>> 21251d755c... Merge pull request #10996 from VOREStation/Arokha/fixbit
 
 	. = 1
 	while (world.time < endtime)
@@ -282,6 +292,14 @@ Proc for attack log creation, because really why not
 
 	if(exclusive)
 		user.status_flags &= ~DOING_TASK
+<<<<<<< HEAD
+||||||| parent of 21251d755c... Merge pull request #10996 from VOREStation/Arokha/fixbit
+	if(target & exclusive & TASK_TARGET_EXCLUSIVE)
+		target.flags &= ~IS_BUSY
+=======
+	if(target && (exclusive & TASK_TARGET_EXCLUSIVE))
+		target.flags &= ~IS_BUSY
+>>>>>>> 21251d755c... Merge pull request #10996 from VOREStation/Arokha/fixbit
 
 	if(progbar)
 		qdel(progbar)
