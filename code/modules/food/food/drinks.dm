@@ -408,7 +408,3 @@
 	icon_state = "britcup"
 	volume = 30
 	center_of_mass = list("x"=15, "y"=13)
-
-/obj/item/weapon/reagent_containers/food/drinks/britcup/on_reagent_change()
-	..()
-
