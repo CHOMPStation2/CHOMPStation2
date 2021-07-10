@@ -56,17 +56,37 @@
 
 /obj/item/clothing/under/solgov/utility/army/olive
 	name = "olive fatigues"
+<<<<<<< HEAD
 	desc = "An olive version of the USDF marine utility uniform, made from durable material." //YW EDIT: TCG to USDF
 	icon = 'icons/obj/clothing/uniforms_vr.dmi'
 	icon_override = 'icons/mob/uniform_vr.dmi'
+||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
+	desc = "An olive version of the TCG marine utility uniform, made from durable material."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+=======
+	desc = "An olive version of the TCG marine utility uniform, made from durable material."
+	icon = 'icons/inventory/uniform/item_vr.dmi'
+	icon_override = 'icons/inventory/uniform/mob_vr.dmi'
+>>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 	icon_state = "bdu_olive"
 	item_state = "bdu_olive"
 
 /obj/item/clothing/under/solgov/utility/army/desert
 	name = "desert fatigues"
+<<<<<<< HEAD
 	desc = "A desert version of the USDF marine utility uniform, made from durable material." //YW EDIT: TCG to USDF
 	icon = 'icons/obj/clothing/uniforms_vr.dmi'
 	icon_override = 'icons/mob/uniform_vr.dmi'
+||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
+	desc = "A desert version of the TCG marine utility uniform, made from durable material."
+	icon = 'icons/obj/clothing/uniforms_vr.dmi'
+	icon_override = 'icons/mob/uniform_vr.dmi'
+=======
+	desc = "A desert version of the TCG marine utility uniform, made from durable material."
+	icon = 'icons/inventory/uniform/item_vr.dmi'
+	icon_override = 'icons/inventory/uniform/mob_vr.dmi'
+>>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 	icon_state = "bdu_olive"
 	item_state = "bdu_olive"
 

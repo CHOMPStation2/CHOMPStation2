@@ -13,7 +13,7 @@ BLIND     // can't see anything
 
 /obj/item/clothing/glasses
 	name = "glasses"
-	icon = 'icons/obj/clothing/glasses.dmi'
+	icon = 'icons/inventory/eyes/item.dmi'
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_EYES
 	plane_slots = list(slot_glasses)
@@ -31,10 +31,18 @@ BLIND     // can't see anything
 	pickup_sound = 'sound/items/pickup/accessory.ogg'
 
 	sprite_sheets = list(
+<<<<<<< HEAD
 		SPECIES_TESHARI = 'icons/mob/species/teshari/eyes.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/eyes.dmi',
 		"Sergal" = 'icons/mob/species/sergal/eyes_yw.dmi', //YWedit
 		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
+||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
+		SPECIES_TESHARI = 'icons/mob/species/teshari/eyes.dmi',
+		SPECIES_VOX = 'icons/mob/species/vox/eyes.dmi'
+=======
+		SPECIES_TESHARI = 'icons/inventory/eyes/mob_teshari.dmi',
+		SPECIES_VOX = 'icons/inventory/eyes/mob_vox.dmi'
+>>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 		)
 
 /obj/item/clothing/glasses/update_clothing_icon()
