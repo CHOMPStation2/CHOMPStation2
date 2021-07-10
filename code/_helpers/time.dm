@@ -56,17 +56,7 @@ var/next_station_date_change = 1 DAY
 		next_station_date_change += 1 DAY
 		update_time = TRUE
 	if(!station_date || update_time)
-<<<<<<< HEAD
-		var/extra_days = round(station_time_in_ds / (1 DAY)) DAYS
-		var/timeofday = world.timeofday + extra_days
-		station_date = num2text((text2num(time2text(timeofday, "YYYY"))+544)) + "-" + time2text(timeofday, "MM-DD") //YW EDIT
-||||||| parent of 590ccf3e0c... Merge pull request #10946 from MarinaGryphon/timedilation-tram
-		var/extra_days = round(station_time_in_ds / (1 DAY)) DAYS
-		var/timeofday = world.timeofday + extra_days
-		station_date = num2text((text2num(time2text(timeofday, "YYYY"))+300)) + "-" + time2text(timeofday, "MM-DD") //VOREStation Edit
-=======
-		station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+300)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //VOREStation Edit
->>>>>>> 590ccf3e0c... Merge pull request #10946 from MarinaGryphon/timedilation-tram
+		station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(timeofday, "MM-DD") //CHOMP EDIT
 	return station_date
 
 //ISO 8601
