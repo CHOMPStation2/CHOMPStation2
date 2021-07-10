@@ -23,7 +23,7 @@
 	var/force_divisor = 0.5
 	var/thrown_force_divisor = 0.5
 	var/dulled_divisor = 0.5	//Just drops the damage by half
-	var/default_material = DEFAULT_WALL_MATERIAL
+	var/default_material = MAT_STEEL
 	var/datum/material/material
 	var/drops_debris = 1
 	var/named_from_material = 1 //YW EDIT, Does it prepend the material's name to it's name?
