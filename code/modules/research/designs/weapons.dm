@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /datum/design/item/weapon/AssembleDesignName()
 	..()
 	name = "Weapon prototype ([item_name])"
