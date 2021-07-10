@@ -231,7 +231,6 @@
 /proc/log_pda(text, mob/speaker)
 	if (config.log_pda)
 		WRITE_LOG(diary, "PDA: [speaker.simple_info_line()]: [html_decode(text)]")
-<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(speaker.client)
 		if(!SSdbcore.IsConnected())
@@ -250,18 +249,6 @@
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
 	//CHOMPEdit End
 
-||||||| parent of f69e6ff65b... Merge pull request #10979 from VOREStation/Arokha/tggarbo
-
-	speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
-	GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
-
-
-=======
-
-	speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
-	GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
-
->>>>>>> f69e6ff65b... Merge pull request #10979 from VOREStation/Arokha/tggarbo
 /proc/log_to_dd(text)
 	to_world_log(text) //this comes before the config check because it can't possibly runtime
 	if(config.log_world_output)
