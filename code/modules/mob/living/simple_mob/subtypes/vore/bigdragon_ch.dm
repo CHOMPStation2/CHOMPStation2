@@ -242,8 +242,8 @@ I think I covered everything.
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc
+	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
+	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = "neutral"
 
 /mob/living/simple_mob/vore/bigdragon/Initialize()
