@@ -173,13 +173,7 @@
 	name = "Weasel Right Leg"
 	id = "weasel_right_leg"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_right_leg
-<<<<<<< HEAD
-	materials = list(DEFAULT_WALL_MATERIAL = 12500)
-||||||| parent of 8ab34365f1... Merge pull request #10852 from VOREStation/Arokha/matdefs
-	materials = list(DEFAULT_WALL_MATERIAL = 12500)*/
-=======
-	materials = list(MAT_STEEL = 12500)*/
->>>>>>> 8ab34365f1... Merge pull request #10852 from VOREStation/Arokha/matdefs
+	materials = list(MAT_STEEL = 12500)
 
 /datum/design/item/mechfab/weasel/tri_leg
 	name = "Weasel Tri Leg"
@@ -191,13 +185,7 @@
 	name = "Weasel Head"
 	id = "weasel_head"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_head
-<<<<<<< HEAD
-	materials = list(DEFAULT_WALL_MATERIAL = 7000, "glass" = 2500) */
-||||||| parent of 8ab34365f1... Merge pull request #10852 from VOREStation/Arokha/matdefs
-	materials = list(DEFAULT_WALL_MATERIAL = 7000, "glass" = 2500)
-=======
-	materials = list(MAT_STEEL = 7000, MAT_GLASS = 2500)
->>>>>>> 8ab34365f1... Merge pull request #10852 from VOREStation/Arokha/matdefs
+	materials = list(MAT_STEEL = 7000, MAT_GLASS = 2500) */
 
 /datum/design/item/mecha/medigun //Who the fuck thought it was a good idea to put this here?
 	name = "BL-3/P directed restoration system"
