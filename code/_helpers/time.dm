@@ -56,7 +56,7 @@ var/next_station_date_change = 1 DAY
 		next_station_date_change += 1 DAY
 		update_time = TRUE
 	if(!station_date || update_time)
-		station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(timeofday, "MM-DD") //CHOMP EDIT
+		station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
 	return station_date
 
 //ISO 8601
