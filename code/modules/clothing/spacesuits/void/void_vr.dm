@@ -142,7 +142,14 @@
 /obj/item/clothing/suit/space/void/autolok
 	name = "AutoLok pressure suit"
 	desc = "A high-tech snug-fitting pressure suit. Fits any species. It offers very little physical protection, but is equipped with sensors that will automatically deploy the integral helmet to protect the wearer."
+<<<<<<< HEAD
 	icon = 'icons/obj/clothing/suits_vr.dmi'
+||||||| parent of 2dc1cdeefd... Merge pull request #11015 from VOREStation/Arokha/lorgblast
+	icon = 'icons/inventory/suit/item_vr.dmi'
+	icon_override = 'icons/inventory/suit/mob_vr.dmi'
+=======
+	icon = 'icons/inventory/suit/item_vr.dmi'
+>>>>>>> 2dc1cdeefd... Merge pull request #11015 from VOREStation/Arokha/lorgblast
 	icon_state = "autoloksuit"
 	item_state = "autoloksuit"
 	item_state_slots = list(slot_r_hand_str = "space_suit_syndicate", slot_l_hand_str = "space_suit_syndicate")
@@ -152,6 +159,7 @@
 	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX)	//this thing can autoadapt
 	breach_threshold = 6 //this thing is basically tissue paper
 	w_class = ITEMSIZE_NORMAL //if it's snug, high-tech, and made of relatively soft materials, it should be much easier to store!
+	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
 
 /obj/item/clothing/suit/space/void/autolok
 	sprite_sheets = list(
@@ -226,11 +234,18 @@
 /obj/item/clothing/head/helmet/space/void/autolok
 	name = "AutoLok pressure helmet"
 	desc = "A rather close-fitting helmet designed to protect the wearer from hazardous conditions. Automatically deploys when the suit's sensors detect an environment that is hazardous to the wearer."
+	icon = 'icons/inventory/head/item_vr.dmi'
 	icon_state = "autolokhelmet"
 	item_state = "autolokhelmet"
 	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX)	//this thing can autoadapt too
+<<<<<<< HEAD
 	icon = 'icons/obj/clothing/hats_vr.dmi'
+||||||| parent of 2dc1cdeefd... Merge pull request #11015 from VOREStation/Arokha/lorgblast
+	icon = 'icons/inventory/head/item_vr.dmi'
+=======
+>>>>>>> 2dc1cdeefd... Merge pull request #11015 from VOREStation/Arokha/lorgblast
 	flags_inv = HIDEEARS|BLOCKHAIR //removed HIDEFACE/MASK/EYES flags so sunglasses or facemasks don't disappear. still gotta have BLOCKHAIR or it'll clip out tho.
+	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
 
 /obj/item/clothing/head/helmet/space/void/autolok
 	sprite_sheets = list(

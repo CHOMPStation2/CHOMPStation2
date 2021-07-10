@@ -7,7 +7,14 @@
 	slowdown = 0.5
 	siemens_coefficient = 0.5
 	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX,SPECIES_TESHARI)	//this thing can autoadapt
+<<<<<<< HEAD
 	icon = 'icons/obj/clothing/suits_vr.dmi'
+||||||| parent of 2dc1cdeefd... Merge pull request #11015 from VOREStation/Arokha/lorgblast
+	icon = 'icons/inventory/suit/item_vr.dmi'
+=======
+	icon = 'icons/inventory/suit/item_vr.dmi'
+	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
+>>>>>>> 2dc1cdeefd... Merge pull request #11015 from VOREStation/Arokha/lorgblast
 	w_class = ITEMSIZE_NORMAL //the mark vii packs itself down when not in use, thanks future-materials
 	breach_threshold = 16 //Extra Thicc
 	resilience = 0.05 //Military Armor
@@ -109,7 +116,14 @@
 	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX,SPECIES_TESHARI)	//this thing can autoadapt too
 	armor = list(melee = 60, bullet = 50, laser = 30,energy = 15, bomb = 30, bio = 100, rad = 100)
 	siemens_coefficient = 0.5
+<<<<<<< HEAD
 	icon = 'icons/obj/clothing/hats_vr.dmi'
+||||||| parent of 2dc1cdeefd... Merge pull request #11015 from VOREStation/Arokha/lorgblast
+	icon = 'icons/inventory/head/item_vr.dmi'
+=======
+	icon = 'icons/inventory/head/item_vr.dmi'
+	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
+>>>>>>> 2dc1cdeefd... Merge pull request #11015 from VOREStation/Arokha/lorgblast
 	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_AUGMENTED)
 	var/away_planes = null
 	plane_slots = list(slot_head)
