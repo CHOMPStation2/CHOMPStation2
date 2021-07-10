@@ -149,7 +149,6 @@
 			return
 		qdel(query_insert)
 
-
 /proc/log_emote(text, mob/speaker)
 	if (config.log_emote)
 		WRITE_LOG(diary, "EMOTE: [speaker.simple_info_line()]: [html_decode(text)]")
@@ -206,7 +205,6 @@
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - <span style=\"color:green\">[text]</span>"
 	//GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
 	//CHOMPEdit End
-
 
 /proc/log_ghostemote(text, mob/speaker)
 	if (config.log_emote)
@@ -273,6 +271,12 @@
 
 /proc/log_unit_test(text)
 	to_world_log("## UNIT_TEST: [text]")
+
+#ifdef REFERENCE_TRACKING_LOG
+#define log_reftracker(msg) log_world("## REF SEARCH [msg]")
+#else
+#define log_reftracker(msg)
+#endif
 
 /proc/log_tgui(user_or_client, text)
 	var/entry = ""

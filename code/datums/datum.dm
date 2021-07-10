@@ -14,9 +14,13 @@
 	var/datum_flags = NONE
 	var/trigger_uid //CHOMPEdit
 
-#ifdef TESTING
+#ifdef REFERENCE_TRACKING
 	var/tmp/running_find_references
 	var/tmp/last_find_references = 0
+	#ifdef REFERENCE_TRACKING_DEBUG
+	///Stores info about where refs are found, used for sanity checks and testing
+	var/list/found_refs
+	#endif
 #endif
 
 // Default implementation of clean-up code.
