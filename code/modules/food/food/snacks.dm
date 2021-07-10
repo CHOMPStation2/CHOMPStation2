@@ -1020,7 +1020,9 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket/proc/cooltime()
 	if (src.warm)
-		spawn(4200)
+		spawn(420 SECONDS)
+			if(!src?.reagents)
+				return
 			src.warm = 0
 			for(var/reagent in heated_reagents)
 				src.reagents.del_reagent(reagent)
