@@ -127,4 +127,23 @@
 	ignition_point = T0C+232
 	melting_point = T0C+300
 	protectiveness = 1 // 4%
+<<<<<<< HEAD
 	conductive = 0
+||||||| parent of f9d340f23b... Merge pull request #11025 from VOREStation/Arokha/crafty
+	conductive = 0
+=======
+	conductive = 0
+
+/datum/material/fibers
+	name = MAT_FIBERS
+	display_name = "plant"
+	sheet_singular_name = "fiber"
+	sheet_singular_name = "fibers"
+	icon_colour = "#006b0e"
+	flags = MATERIAL_PADDING
+	ignition_point = T0C+232
+	melting_point = T0C+300
+	protectiveness = 1 // 4%
+	conductive = 0
+	pass_stack_colors = TRUE
+>>>>>>> f9d340f23b... Merge pull request #11025 from VOREStation/Arokha/crafty
