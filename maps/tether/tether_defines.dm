@@ -238,7 +238,22 @@
 [i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
 [b]Notice[/b]: NanoTrasen Base, authorized personnel only"}
 	base = 1
+<<<<<<< HEAD
 	icon_state = "reddwarf"
+||||||| parent of e0f9772322... Merge pull request #11020 from VOREStation/Arokha/v3bmoreicons
+	icon = 'icons/obj/overmap_vr.dmi'
+	icon_state = "virgo3b"
+=======
+	
+	icon = 'icons/obj/overmap_vr.dmi'
+	icon_state = "virgo3b"
+
+	skybox_icon = 'icons/skybox/virgo3b.dmi'
+	skybox_icon_state = "small"
+	skybox_pixel_x = 0
+	skybox_pixel_y = 0
+
+>>>>>>> e0f9772322... Merge pull request #11020 from VOREStation/Arokha/v3bmoreicons
 	initial_generic_waypoints = list(
 		"tether_dockarm_d1a1", //Bottom left,
 		"tether_dockarm_d1a2", //Top left,
