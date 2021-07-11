@@ -25,6 +25,19 @@
 	say_list_type = /datum/say_list/weretiger
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
+<<<<<<< HEAD
+||||||| parent of 62b9361659... Merge pull request #11024 from Verkister/patch-69
+	pixel_x = -16
+
+	has_hands = 1
+
+=======
+	pixel_x = -16
+	default_pixel_x = -16
+
+	has_hands = 1
+
+>>>>>>> 62b9361659... Merge pull request #11024 from Verkister/patch-69
 // Nomnomn
 /mob/living/simple_mob/vore/weretiger
 	vore_active = 1
