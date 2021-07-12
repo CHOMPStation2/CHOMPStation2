@@ -3161,6 +3161,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 4
 	},
+/obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "aeS" = (
@@ -3173,9 +3174,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
-/obj/machinery/vending/coffee{
-	dir = 8
-	},
+/obj/machinery/vending/coffee,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "aeT" = (
@@ -3695,9 +3694,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
-/obj/machinery/vending/fitness{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "afH" = (
@@ -3798,7 +3794,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "afL" = (
-/obj/structure/closet/wardrobe/red,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -3810,6 +3805,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/vending/wardrobe/detdrobe,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "afM" = (
@@ -3819,7 +3815,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
-/obj/structure/closet/wardrobe/red,
 /obj/machinery/camera/network/security,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/borderfloorblack/corner2{
@@ -3828,6 +3823,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 5
 	},
+/obj/machinery/vending/wardrobe/secdrobe,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting)
 "afN" = (
@@ -4221,6 +4217,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
+/obj/structure/table/bench/steel,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "agy" = (
@@ -4233,9 +4230,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
 	},
-/obj/machinery/vending/snack{
-	dir = 8
-	},
+/obj/structure/table/bench/steel,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
 "agz" = (
@@ -6737,7 +6732,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/sol,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akB" = (
@@ -6753,7 +6748,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/machinery/vending/sol,
+/obj/machinery/vending/wardrobe/virodrobe,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akC" = (
@@ -6762,6 +6757,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/vending/wardrobe/medidrobe,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
@@ -6775,6 +6777,13 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
 	pixel_y = 32
+	},
+/obj/machinery/vending/wardrobe/chemdrobe,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
@@ -12631,6 +12640,10 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 10
 	},
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -11
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
 "auj" = (
@@ -13176,6 +13189,7 @@
 /obj/machinery/recharger,
 /obj/item/weapon/storage/toolbox/mechanical,
 /obj/random/drinkbottle,
+/obj/item/device/paicard,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/bar)
 "avg" = (
@@ -22103,10 +22117,10 @@
 /area/rnd/lockers)
 "aMZ" = (
 /obj/effect/floor_decal/industrial/outline,
-/obj/structure/closet/wardrobe/science_white,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/vending/wardrobe/robodrobe,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lockers)
 "aNa" = (
@@ -24531,8 +24545,8 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 9
 	},
-/obj/structure/closet/secure_closet/atmos_personal,
 /obj/machinery/camera/network/engineering,
+/obj/machinery/vending/wardrobe/atmosdrobe,
 /turf/simulated/floor/tiled,
 /area/engineering/lower/atmos_lockers)
 "aRV" = (
@@ -25886,9 +25900,6 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/structure/mopbucket,
-/obj/item/weapon/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
 /obj/effect/floor_decal/borderfloor/shifted{
 	dir = 1
 	},
@@ -25896,6 +25907,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/civilian,
+/obj/structure/closet/jcloset,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUM" = (
@@ -25911,9 +25923,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/structure/mopbucket,
-/obj/item/weapon/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/machinery/vending/wardrobe/janidrobe,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUN" = (
@@ -25935,9 +25945,6 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/structure/mopbucket,
-/obj/item/weapon/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUO" = (
@@ -27615,6 +27622,9 @@
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aXT" = (
@@ -27927,23 +27937,26 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 8
 	},
-/obj/structure/closet/jcloset,
-/obj/item/weapon/soap/nanotrasen,
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aYA" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
-/obj/structure/closet/jcloset,
-/obj/item/weapon/soap/nanotrasen,
 /obj/machinery/light,
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aYB" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
-/obj/structure/closet/jcloset,
-/obj/item/weapon/soap/nanotrasen,
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aYC" = (
@@ -29788,8 +29801,7 @@
 /area/rnd/outpost/xenobiology/outpost_slimepens)
 "bem" = (
 /obj/structure/sink/kitchen{
-	name = "sink";
-	pixel_y = 32
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/xenobiology/outpost_slimepens)
@@ -30895,6 +30907,17 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+<<<<<<< HEAD
+||||||| parent of 980076afd0... Merge pull request #11031 from Very-Soft/moarmappy
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
+=======
+/obj/structure/sign/painting/public{
+	pixel_x = -30
+	},
+/obj/item/device/paicard,
+>>>>>>> 980076afd0... Merge pull request #11031 from Very-Soft/moarmappy
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
 "biK" = (
@@ -31748,6 +31771,7 @@
 	pixel_x = -23
 	},
 /obj/random/junk,
+/obj/item/device/paicard,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
 "bkE" = (
@@ -34515,6 +34539,29 @@
 "qSJ" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/ai)
+<<<<<<< HEAD
+||||||| parent of 980076afd0... Merge pull request #11031 from Very-Soft/moarmappy
+"rbq" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/painting/chapel_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+=======
+"qUf" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/vending/wardrobe/scidrobe,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/lockers)
+"rbq" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/painting/chapel_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+>>>>>>> 980076afd0... Merge pull request #11031 from Very-Soft/moarmappy
 "rii" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 9
@@ -34563,7 +34610,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_cyborg_station)
+<<<<<<< HEAD
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
+||||||| parent of 980076afd0... Merge pull request #11031 from Very-Soft/moarmappy
+=======
+"rAv" = (
+/obj/machinery/vending/wardrobe/chapdrobe,
+/turf/simulated/floor/lino,
+/area/chapel/office)
+>>>>>>> 980076afd0... Merge pull request #11031 from Very-Soft/moarmappy
 "rJc" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/landmark/start{
@@ -37467,7 +37522,7 @@ aab
 aab
 aab
 aab
-aab
+adt
 aab
 aab
 aab
@@ -37603,14 +37658,14 @@ aab
 aab
 aab
 aab
+adt
 aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
 aab
 aab
 aab
@@ -37743,6 +37798,16 @@ aab
 aab
 aab
 aab
+adt
+adt
+adt
+adt
+adt
+aab
+adt
+adt
+adt
+adt
 aab
 aab
 aab
@@ -37764,17 +37829,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abn
 aab
 aab
 aab
@@ -37884,6 +37939,18 @@ aab
 aab
 aab
 aab
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
 aab
 aab
 aab
@@ -37902,23 +37969,11 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abn
+abn
+abn
+abn
+abn
 aab
 aab
 aab
@@ -38025,6 +38080,19 @@ aab
 aab
 aab
 aab
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
 aab
 aab
 aab
@@ -38042,26 +38110,13 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abn
+abn
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -38154,6 +38209,33 @@ aab
 aab
 aab
 aab
+adt
+adt
+adt
+adt
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
 aab
 aab
 aab
@@ -38169,41 +38251,14 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abn
+abn
+adt
+adt
+adt
+adt
+abn
+abn
 aab
 aab
 aab
@@ -38295,20 +38350,12 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+adt
+adt
+adt
 aab
 aab
 aab
@@ -38318,14 +38365,19 @@ aab
 aab
 adt
 adt
-aab
 adt
 adt
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
 adt
 adt
 aab
@@ -38340,12 +38392,15 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
+abn
+abn
+adt
+adt
+adt
+adt
+adt
+adt
+abn
 aab
 aab
 aab
@@ -38437,21 +38492,12 @@ arj
 arj
 arj
 aab
-aab
-aab
-aab
-aab
-aab
 adt
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+adt
+adt
 aab
 aab
 aab
@@ -38472,6 +38518,11 @@ adt
 adt
 adt
 adt
+adt
+adt
+adt
+adt
+adt
 aab
 aab
 aab
@@ -38483,12 +38534,16 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
+abn
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+abn
+abn
 aab
 aab
 aab
@@ -38590,11 +38645,6 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
 adt
 adt
 adt
@@ -38616,22 +38666,27 @@ adt
 adt
 adt
 adt
+adt
+adt
+adt
+adt
+adt
 aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abn
+abn
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -38732,7 +38787,6 @@ adt
 adt
 adt
 adt
-aab
 adt
 adt
 adt
@@ -38752,14 +38806,6 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
-adt
-adt
-adt
-aab
-aab
 adt
 adt
 adt
@@ -38770,11 +38816,20 @@ adt
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
+abn
+abn
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -38910,14 +38965,14 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -39055,12 +39110,12 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -39197,13 +39252,13 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+abn
+abn
+abn
+abn
 aab
 aab
 aab
@@ -39339,13 +39394,13 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -39481,13 +39536,13 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -39624,12 +39679,12 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -39766,12 +39821,12 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -39908,12 +39963,12 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+adt
+abn
+abn
+abn
+abn
 aab
 aab
 aab
@@ -40050,12 +40105,12 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
-aab
+adt
+abn
+abn
+abn
+abn
+abn
 aab
 aab
 aab
@@ -40192,11 +40247,11 @@ adt
 adt
 adt
 adt
-aab
-aab
-aab
-aab
-aab
+abn
+abn
+abn
+abn
+abn
 aab
 aab
 aab
@@ -40333,11 +40388,11 @@ adt
 adt
 adt
 adt
-adt
-aab
-aab
-aab
-aab
+abn
+abn
+abn
+abn
+abn
 aab
 aab
 aab
@@ -40474,8 +40529,8 @@ adt
 adt
 adt
 adt
-adt
-adt
+abn
+abn
 aab
 aab
 aab
@@ -40615,9 +40670,9 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -40757,9 +40812,9 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -40898,10 +40953,10 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
-adt
+abn
+abn
+abn
+abn
 aab
 aab
 aab
@@ -41040,9 +41095,9 @@ adt
 adt
 adt
 adt
-adt
-adt
-adt
+abn
+abn
+abn
 aab
 aab
 aab
@@ -41182,8 +41237,8 @@ aHE
 aHE
 adt
 adt
-adt
-adt
+abn
+abn
 aab
 aab
 aab
@@ -41324,8 +41379,8 @@ ayA
 aHE
 adt
 adt
-adt
-adt
+abn
+abn
 aab
 aab
 aab
@@ -41466,8 +41521,8 @@ ayC
 aHE
 adt
 adt
-adt
-adt
+abn
+abn
 aab
 aab
 aab
@@ -41609,7 +41664,7 @@ aHE
 adt
 adt
 adt
-adt
+abn
 aab
 aab
 aab
@@ -41751,7 +41806,7 @@ aHE
 adt
 adt
 adt
-adt
+abn
 aab
 aab
 aab
@@ -41893,7 +41948,7 @@ aHE
 adt
 adt
 adt
-adt
+abn
 aab
 aab
 aab
@@ -43719,7 +43774,7 @@ aKi
 aKV
 aLC
 aMo
-aMY
+qUf
 aNx
 aOn
 aMo
@@ -49487,10 +49542,10 @@ aab
 aab
 aab
 aab
+aab
+aab
 aeG
 aeG
-aeG
-abn
 adf
 adN
 aev
@@ -49630,9 +49685,9 @@ aab
 aab
 aab
 aab
+aab
 aeG
-abn
-abn
+aeG
 adf
 adO
 aew
@@ -49772,9 +49827,9 @@ aab
 aab
 aab
 aab
+aab
 aeG
-abn
-abn
+aeG
 adf
 adP
 aex
@@ -49914,9 +49969,9 @@ aab
 aab
 aab
 aab
+aab
 aeG
 aeG
-abn
 aeZ
 aeZ
 aeZ
@@ -50062,9 +50117,9 @@ aab
 aab
 aab
 aab
+aab
 aeG
 aeG
-abn
 adg
 adQ
 aey
@@ -50218,9 +50273,9 @@ aab
 aab
 aab
 aab
+aab
 aeG
-abn
-abn
+aeG
 adg
 adR
 aez
@@ -50360,9 +50415,9 @@ aab
 aab
 aab
 aab
+aab
+aab
 aeG
-aeG
-abn
 adg
 adS
 aeA
@@ -50502,9 +50557,9 @@ aab
 aab
 aab
 aab
+aab
+aab
 aeG
-abn
-abn
 acC
 acC
 acC
@@ -50562,7 +50617,7 @@ sVf
 aIA
 aGR
 aJw
-aJU
+rAv
 aJU
 aLo
 aLV
@@ -50656,9 +50711,9 @@ aab
 aab
 aab
 aab
+aab
+aab
 aeG
-aeG
-abn
 adm
 adp
 aec
@@ -50799,7 +50854,7 @@ aab
 aab
 aab
 aab
-aeG
+aab
 aeG
 adm
 adq
