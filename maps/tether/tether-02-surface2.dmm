@@ -1038,10 +1038,6 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -2020,9 +2016,6 @@
 /area/tether/surfacebase/medical/resleeving)
 "acY" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -4320,9 +4313,6 @@
 	name = "Equipment Storage";
 	req_access = newlist()
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5679,9 +5669,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
@@ -5691,6 +5678,9 @@
 	dir = 8
 	},
 /obj/structure/sign/poster,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/centralhall)
 "aiO" = (
@@ -7408,11 +7398,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/armory)
 "alv" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
 	name = "scrubber isolation valve"
@@ -10046,9 +10031,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -10057,6 +10039,9 @@
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
@@ -20661,11 +20646,6 @@
 /turf/simulated/floor,
 /area/maintenance/substation/research)
 "aKk" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/door/airlock/engineering{
 	name = "Science Substation";
 	req_one_access = list(11,24,47)
@@ -21348,11 +21328,6 @@
 /turf/simulated/floor,
 /area/maintenance/substation/research)
 "aLE" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/door/airlock/engineering{
 	name = "Science Substation";
 	req_one_access = list(11,24,47)
@@ -21534,10 +21509,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -29232,11 +29203,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/atmos)
 "bda" = (
-/obj/structure/catwalk,
 /obj/structure/cable{
-	icon_state = "2-4"
+	icon_state = "0-4"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/south)
 "bdb" = (
 /obj/structure/cable{
@@ -29463,11 +29433,6 @@
 	dir = 4
 	},
 /obj/random/junk,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/south)
 "bdw" = (
@@ -29484,11 +29449,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/south)
 "bdx" = (
@@ -29501,11 +29461,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/south)
@@ -29532,11 +29487,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/south)
@@ -34351,10 +34301,6 @@
 	dir = 1;
 	name = "north bump";
 	pixel_y = 28
-	},
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -49004,7 +48950,7 @@ aLY
 adt
 adt
 aLY
-bdy
+awg
 aLY
 aLY
 adt
@@ -49146,7 +49092,7 @@ aLY
 aLY
 aLY
 aLY
-bdy
+awg
 aLY
 adt
 adt
@@ -49287,7 +49233,7 @@ aLY
 aLY
 bcy
 bcK
-bda
+aLX
 bdz
 aLY
 adt
@@ -49429,7 +49375,7 @@ aLX
 baZ
 aLX
 aIl
-bdb
+bda
 bdA
 aLY
 adt

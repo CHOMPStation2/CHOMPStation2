@@ -10869,11 +10869,6 @@
 	name = "Locker Room Maintenance"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/locker)
 "asj" = (
@@ -32809,9 +32804,6 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/security/brig)
 "eQz" = (
@@ -33079,8 +33071,15 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
+||||||| parent of 73fd526926... Merge pull request #11037 from VOREStation/Arokha/mapfixes
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/orange{
+=======
+/obj/structure/cable/orange{
+>>>>>>> 73fd526926... Merge pull request #11037 from VOREStation/Arokha/mapfixes
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
@@ -33089,6 +33088,9 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_one_hall)
@@ -33729,10 +33731,6 @@
 /area/tether/surfacebase/surface_one_hall)
 "hTQ" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
