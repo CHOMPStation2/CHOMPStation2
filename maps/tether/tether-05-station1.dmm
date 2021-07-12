@@ -22760,6 +22760,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
+<<<<<<< HEAD
 "isi" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -22773,6 +22774,12 @@
 "isj" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/locker_room)
+||||||| parent of c738f34cf4... Merge pull request #11041 from VOREStation/Arokha/evenmoremap
+"isj" = (
+/turf/simulated/wall/r_wall,
+/area/engineering/locker_room)
+=======
+>>>>>>> c738f34cf4... Merge pull request #11041 from VOREStation/Arokha/evenmoremap
 "isr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -43699,9 +43706,9 @@ abq
 aiM
 aiM
 aac
-isj
-isj
-isj
+acz
+acz
+acz
 aoy
 alM
 amf
