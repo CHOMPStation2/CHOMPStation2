@@ -8,32 +8,6 @@
 /obj/item/clothing/head/helmet/space/void
 	species_restricted = list(SPECIES_HUMAN, SPECIES_RAPALA, SPECIES_VASILISSAN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_XENOCHIMERA)
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TAJ 				= 'icons/mob/species/tajaran/helmet.dmi',
-		SPECIES_SKRELL 				= 'icons/mob/species/skrell/helmet.dmi',
-		SPECIES_UNATHI 				= 'icons/mob/species/unathi/helmet.dmi',
-		SPECIES_TESHARI				= 'icons/mob/species/teshari/head.dmi',
-		SPECIES_XENOHYBRID 			= 'icons/mob/species/unathi/helmet.dmi',
-		SPECIES_AKULA				= 'icons/mob/species/akula/helmet_vr.dmi',
-		SPECIES_SERGAL				= 'icons/mob/species/sergal/helmet_vr.dmi',
-		SPECIES_NEVREAN				= 'icons/mob/species/sergal/helmet_vr.dmi',
-		SPECIES_VULPKANIN			= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_ZORREN_HIGH			= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_FENNEC				= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_GREY_YW				= 'icons/mob/species/grey/helmet.dmi' /*ywedit*/
-||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
-		SPECIES_TAJ 				= 'icons/mob/species/tajaran/helmet.dmi',
-		SPECIES_SKRELL 				= 'icons/mob/species/skrell/helmet.dmi',
-		SPECIES_UNATHI 				= 'icons/mob/species/unathi/helmet.dmi',
-		SPECIES_TESHARI				= 'icons/mob/species/teshari/head.dmi',
-		SPECIES_XENOHYBRID 			= 'icons/mob/species/unathi/helmet.dmi',
-		SPECIES_AKULA				= 'icons/mob/species/akula/helmet_vr.dmi',
-		SPECIES_SERGAL				= 'icons/mob/species/sergal/helmet_vr.dmi',
-		SPECIES_NEVREAN				= 'icons/mob/species/sergal/helmet_vr.dmi',
-		SPECIES_VULPKANIN			= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_ZORREN_HIGH			= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_FENNEC				= 'icons/mob/species/vulpkanin/helmet.dmi'
-=======
 		SPECIES_TAJ 				= 'icons/inventory/head/mob_tajaran.dmi',
 		SPECIES_SKRELL 				= 'icons/inventory/head/mob_skrell.dmi',
 		SPECIES_UNATHI 				= 'icons/inventory/head/mob_unathi.dmi',
@@ -45,7 +19,6 @@
 		SPECIES_VULPKANIN			= 'icons/inventory/head/mob_vulpkanin.dmi',
 		SPECIES_ZORREN_HIGH			= 'icons/inventory/head/mob_vulpkanin.dmi',
 		SPECIES_FENNEC				= 'icons/inventory/head/mob_vulpkanin.dmi'
->>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 		)
 	sprite_sheets_obj = list(
 		SPECIES_TAJ 			= 'icons/inventory/head/item_tajaran.dmi',
