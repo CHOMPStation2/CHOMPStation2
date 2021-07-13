@@ -131,34 +131,6 @@
 		slot_wear_mask_str = 'icons/inventory/face/mob_vr.dmi'
 		)
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TESHARI		= 'icons/mob/species/teshari/masks_vr.dmi',
-		SPECIES_VOX 		= 'icons/mob/species/vox/masks.dmi',
-		SPECIES_TAJ 		= 'icons/mob/species/tajaran/mask_vr.dmi',
-		SPECIES_UNATHI 		= 'icons/mob/species/unathi/mask_vr.dmi',
-		SPECIES_SERGAL 		= 'icons/mob/species/sergal/mask_vr.dmi',
-		SPECIES_NEVREAN 	= 'icons/mob/species/nevrean/mask_vr.dmi',
-		SPECIES_ZORREN_HIGH	= 'icons/mob/species/fox/mask_vr.dmi',
-		SPECIES_ZORREN_FLAT = 'icons/mob/species/fennec/mask_vr.dmi',
-		SPECIES_AKULA 		= 'icons/mob/species/akula/mask_vr.dmi',
-		SPECIES_VULPKANIN 	= 'icons/mob/species/vulpkanin/mask.dmi',
-		SPECIES_XENOCHIMERA	= 'icons/mob/species/tajaran/mask_vr.dmi',
-		SPECIES_WEREBEAST	= 'icons/mob/species/werebeast/masks.dmi',
-		SPECIES_GREY_YW     = 'icons/mob/species/grey/mask.dmi'/*ywedit*/
-||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
-		SPECIES_TESHARI		= 'icons/mob/species/teshari/masks_vr.dmi',
-		SPECIES_VOX 		= 'icons/mob/species/vox/masks.dmi',
-		SPECIES_TAJ 		= 'icons/mob/species/tajaran/mask_vr.dmi',
-		SPECIES_UNATHI 		= 'icons/mob/species/unathi/mask_vr.dmi',
-		SPECIES_SERGAL 		= 'icons/mob/species/sergal/mask_vr.dmi',
-		SPECIES_NEVREAN 	= 'icons/mob/species/nevrean/mask_vr.dmi',
-		SPECIES_ZORREN_HIGH	= 'icons/mob/species/fox/mask_vr.dmi',
-		SPECIES_ZORREN_FLAT = 'icons/mob/species/fennec/mask_vr.dmi',
-		SPECIES_AKULA 		= 'icons/mob/species/akula/mask_vr.dmi',
-		SPECIES_VULPKANIN 	= 'icons/mob/species/vulpkanin/mask.dmi',
-		SPECIES_XENOCHIMERA	= 'icons/mob/species/tajaran/mask_vr.dmi',
-		SPECIES_WEREBEAST	= 'icons/mob/species/werebeast/masks.dmi'
-=======
 		SPECIES_TESHARI		= 'icons/inventory/face/mob_teshari.dmi',
 		SPECIES_VOX 		= 'icons/inventory/face/mob_vox.dmi',
 		SPECIES_TAJ 		= 'icons/inventory/face/mob_tajaran.dmi',
@@ -171,7 +143,6 @@
 		SPECIES_VULPKANIN 	= 'icons/inventory/face/mob_vulpkanin.dmi',
 		SPECIES_XENOCHIMERA	= 'icons/inventory/face/mob_tajaran.dmi',
 		SPECIES_WEREBEAST	= 'icons/inventory/face/mob_werebeast.dmi'
->>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 		)
 //"Spider" 		= 'icons/inventory/mask/mob_spider.dmi' Add this later when they have custom mask sprites and everything.
 
@@ -186,21 +157,9 @@
 	sensor_mode = 3
 	var/sensorpref = 5
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TESHARI = 'icons/mob/species/teshari/uniform.dmi',
-		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/uniform.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/uniform.dmi'/*ywedit*/
-		)
-||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
-		SPECIES_TESHARI = 'icons/mob/species/teshari/uniform.dmi',
-		SPECIES_VOX = 'icons/mob/species/vox/uniform.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/uniform.dmi')
-=======
 		SPECIES_TESHARI = 'icons/inventory/uniform/mob_teshari.dmi',
 		SPECIES_VOX = 'icons/inventory/uniform/mob_vox.dmi',
 		SPECIES_WEREBEAST = 'icons/inventory/uniform/mob_werebeast.dmi')
->>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 
 /obj/item/clothing/under/New(var/mob/living/carbon/human/H)
 	..()
