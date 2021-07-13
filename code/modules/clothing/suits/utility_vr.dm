@@ -18,34 +18,14 @@
 
 /obj/item/clothing/head/radiation
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TESHARI = 'icons/mob/species/teshari/head_ch.dmi', //CHOMPstation edit, using our overwrite icons
-		SPECIES_VOX = 'icons/mob/species/vox/head.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/head.dmi'
-||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
-		SPECIES_TESHARI = 'icons/mob/species/teshari/helmet_vr.dmi',
-		SPECIES_VOX = 'icons/mob/species/vox/head.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/head.dmi'
-=======
-		SPECIES_TESHARI = 'icons/inventory/head/mob_vr_teshari.dmi',
+		SPECIES_TESHARI = 'icons/inventory/head/mob_ch_teshari.dmi', //CHOMPstation edit, using our overwrite icons
 		SPECIES_VOX = 'icons/inventory/head/mob_vox.dmi',
 		SPECIES_WEREBEAST = 'icons/inventory/head/mob_werebeast.dmi'
->>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 		)
 
 /obj/item/clothing/suit/radiation
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TESHARI = 'icons/mob/species/teshari/suit_ch.dmi', //CHOMPstation edit, using our overwrite icons
-		SPECIES_VOX = 'icons/mob/species/vox/suit.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/suit.dmi'
-||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
-		SPECIES_TESHARI = 'icons/mob/species/teshari/suit_vr.dmi',
-		SPECIES_VOX = 'icons/mob/species/vox/suit.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/suit.dmi'
-=======
-		SPECIES_TESHARI = 'icons/inventory/suit/mob_vr_teshari.dmi',
+		SPECIES_TESHARI = 'icons/inventory/suit/mob_ch_teshari.dmi', //CHOMPstation edit, using our overwrite icons
 		SPECIES_VOX = 'icons/inventory/suit/mob_vox.dmi',
 		SPECIES_WEREBEAST = 'icons/inventory/suit/mob_werebeast.dmi'
->>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 		)
