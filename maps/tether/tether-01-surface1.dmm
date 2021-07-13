@@ -16408,13 +16408,46 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/research)
 "aAu" = (
+<<<<<<< HEAD
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+/obj/effect/floor_decal/rust,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+=======
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/lower/solars)
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/virgo3b_indoors,
+/area/tether/surfacebase/outside/outside1)
+=======
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/virgo3b_indoors,
+/area/maintenance/lower/solars)
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 "aAv" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -16450,17 +16483,45 @@
 /turf/simulated/floor/plating,
 /area/maintenance/lower/research)
 "aAx" = (
+<<<<<<< HEAD
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+/obj/effect/floor_decal/rust,
+/obj/structure/cable/heavyduty{
+=======
+/obj/structure/cable/heavyduty{
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/rnd{
 	name = "Science Maintenance"
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+/obj/structure/railing{
+	dir = 4
+=======
+/obj/structure/railing{
+	dir = 1
 	},
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/lower/solars)
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+/obj/structure/catwalk,
+/turf/simulated/floor/virgo3b_indoors,
+/area/tether/surfacebase/outside/outside1)
+=======
+/turf/simulated/floor/virgo3b_indoors,
+/area/tether/surfacebase/outside/outside1)
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 "aAy" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -17001,12 +17062,23 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
+<<<<<<< HEAD
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/solars)
 "aBv" = (
 /turf/simulated/wall,
 /area/rnd/miscellaneous_lab)
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+/turf/simulated/floor/virgo3b_indoors,
+/area/tether/surfacebase/outside/outside1)
+=======
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/virgo3b_indoors,
+/area/tether/surfacebase/outside/outside1)
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 "aBw" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -39900,6 +39972,64 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+baV
+baV
+aah
+baU
+ano
+aah
+baU
+aah
+ano
+baU
+baU
+baU
+ano
+baU
+baU
+baU
+ano
+baU
+baU
+aah
+ano
+aah
+aah
+yiS
+aah
+baV
+baV
+=======
+baU
+baU
+aah
+baU
+ano
+aah
+baU
+aah
+ano
+baU
+baU
+baU
+ano
+baU
+baU
+baU
+ano
+baU
+baU
+aah
+ano
+aah
+aah
+aAx
+aah
+baU
+baU
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aad
 aad
 aad
@@ -40005,6 +40135,62 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+baV
+baV
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+aAu
+baU
+baV
+baV
+=======
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+aGG
+baU
+baU
+baU
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aad
 aad
 aad
@@ -40109,6 +40295,62 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+baV
+baV
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+aGG
+baU
+baV
+baV
+=======
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+aGG
+baU
+baU
+baU
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aad
 aad
 aad
@@ -40218,10 +40460,66 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+baV
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+=======
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aGG
+<<<<<<< HEAD
 aad
 aad
 aad
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+baU
+baV
+baV
+=======
+baU
+baU
+baU
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aad
 aad
 aad
@@ -40324,6 +40622,62 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+baV
+baV
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+aGG
+baU
+baV
+baV
+=======
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+aGG
+baU
+baU
+baU
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aad
 aad
 aad
@@ -40418,6 +40772,64 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+baV
+baV
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+aAx
+baU
+baV
+baV
+baV
+=======
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+baU
+kGQ
+baU
+baU
+aGG
+baU
+baU
+baU
+baU
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aad
 aad
 aad
@@ -40505,6 +40917,72 @@ aad
 aGH
 aad
 aad
+<<<<<<< HEAD
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+azs
+aib
+aib
+aib
+aib
+iwg
+iwg
+iwg
+iwg
+iwg
+iwg
+aAs
+iwg
+iwg
+iwg
+iwg
+iwg
+iwg
+iwg
+aAs
+iwg
+iwg
+iwg
+iwg
+iwg
+iwg
+aBu
+baU
+baV
+baV
+baV
+=======
+azs
+aib
+aib
+aib
+aib
+iwg
+iwg
+aAu
+iwg
+iwg
+iwg
+aAs
+iwg
+iwg
+iwg
+aAs
+iwg
+iwg
+iwg
+aAs
+iwg
+iwg
+iwg
+aAs
+iwg
+iwg
+aBu
+baU
+baU
+baU
+baU
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aad
 aad
 aad
@@ -40591,6 +41069,66 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+||||||| parent of d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
+baV
+baV
+aah
+aah
+ano
+aah
+baU
+baU
+ano
+baU
+baU
+baU
+ano
+baU
+baU
+baU
+ano
+baU
+aah
+aah
+ano
+baU
+baU
+baU
+aah
+aah
+aah
+aah
+=======
+baU
+baU
+aah
+aah
+ano
+aah
+baU
+baU
+ano
+baU
+baU
+baU
+ano
+baU
+baU
+baU
+ano
+baU
+aah
+aah
+ano
+baU
+baU
+baU
+aah
+aah
+aah
+aah
+>>>>>>> d27ff73972... Merge pull request #11055 from Very-Soft/smoletweak
 aad
 aad
 aad
