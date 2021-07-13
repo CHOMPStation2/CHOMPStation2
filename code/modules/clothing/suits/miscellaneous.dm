@@ -105,13 +105,6 @@
 
 /obj/item/clothing/suit/syndicatefake
 	name = "red space suit replica"
-<<<<<<< HEAD
-	icon = 'icons/obj/clothing/spacesuits.dmi'
-	icon_override = "icons/mob/spacesuit.dmi" //Chomp edit to fix its missing icon
-||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
-	icon = 'icons/obj/clothing/spacesuits.dmi'
-=======
->>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 	icon_state = "syndicate"
 	desc = "A plastic replica of the syndicate space suit, you'll look just like a real murderous syndicate agent in this! This is a toy, it is not made for use in space!"
 	w_class = ITEMSIZE_NORMAL
