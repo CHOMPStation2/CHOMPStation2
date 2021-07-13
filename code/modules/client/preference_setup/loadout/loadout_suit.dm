@@ -211,6 +211,7 @@
 	display_name = "poncho, security"
 	path = /obj/item/clothing/accessory/poncho/roles/security
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/medical
 	display_name = "poncho, medical"
 	path = /obj/item/clothing/accessory/poncho/roles/medical
@@ -224,40 +225,110 @@
 	path = /obj/item/clothing/accessory/poncho/roles/science
 
 /datum/gear/suit/roles/poncho/cloak/hos
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/datum/gear/suit/roles/cloak/New()
+	..()
+	var/list/cloaks = list(
+		"Cargo cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/cargo,
+		"Mining cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/mining,
+		"Security cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/security,
+		"Service cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/service,
+		"Engineer cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/engineer,
+		"Atmos cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/atmos,
+		"Research cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/research,
+		"Medical cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/medical
+	)
+	gear_tweaks += new/datum/gear_tweak/path(cloaks)
+
+/datum/gear/suit/roles/poncho/cloak_hos
+=======
+/datum/gear/suit/roles/cloak/New()
+	..()
+	var/list/cloaks = list(
+		"Cargo cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/cargo,
+		"Mining cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/mining,
+		"Security cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/security,
+		"Service cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/service,
+		"Engineer cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/engineer,
+		"Atmos cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/atmos,
+		"Research cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/research,
+		"Medical cloak" = /obj/item/clothing/accessory/poncho/roles/cloak/medical
+	)
+	gear_tweaks += new/datum/gear_tweak/path(cloaks)
+
+/datum/gear/suit/roles/cloak_hos
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 	display_name = "cloak, head of security"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/hos
 	allowed_roles = list("Head of Security")
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/cloak/cmo
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/datum/gear/suit/roles/poncho/cloak_cmo
+=======
+/datum/gear/suit/roles/cloak_cmo
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 	display_name = "cloak, chief medical officer"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/cmo
 	allowed_roles = list("Chief Medical Officer")
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/cloak/ce
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/datum/gear/suit/roles/poncho/cloak_ce
+=======
+/datum/gear/suit/roles/cloak_ce
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 	display_name = "cloak, chief engineer"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/ce
 	allowed_roles = list("Chief Engineer")
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/cloak/rd
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/datum/gear/suit/roles/poncho/cloak_rd
+=======
+/datum/gear/suit/roles/cloak_rd
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 	display_name = "cloak, research director"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/rd
 	allowed_roles = list("Research Director")
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/cloak/qm
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/datum/gear/suit/roles/poncho/cloak_qm
+=======
+/datum/gear/suit/roles/cloak_qm
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 	display_name = "cloak, quartermaster"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/qm
 	allowed_roles = list("Quartermaster")
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/cloak/captain
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/datum/gear/suit/roles/poncho/cloak_captain
+=======
+/datum/gear/suit/roles/cloak_captain
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 	display_name = "cloak, site manager"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/captain
 	allowed_roles = list("Site Manager")
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/cloak/hop
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/datum/gear/suit/roles/poncho/cloak_hop
+=======
+/datum/gear/suit/roles/cloak_hop
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 	display_name = "cloak, head of personnel"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/hop
 	allowed_roles = list("Head of Personnel")
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/cloak/cargo
 	display_name = "cloak, cargo"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo
@@ -293,9 +364,16 @@
 
 /datum/gear/suit/roles/poncho/cloak/custom //A colorable cloak
 	display_name = "cloak (colorable)"
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/datum/gear/suit/roles/poncho/cloak_custom //A colorable cloak
+	display_name = "cloak, colorable"
+=======
+/datum/gear/suit/cloak_custom //A colorable cloak
+	display_name = "cloak, colorable"
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/custom
 
-/datum/gear/suit/roles/poncho/cloak/custom/New()
+/datum/gear/suit/cloak_custom/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
 
@@ -335,11 +413,17 @@
 	path = /obj/item/clothing/suit/storage/forensics/blue
 	allowed_roles = list("Detective")
 
+<<<<<<< HEAD
 /datum/gear/suit/forensics/red/short
 	display_name = "forensics, red"
 	path = /obj/item/clothing/suit/storage/forensics/red
 	allowed_roles = list("Detective")
 
+||||||| parent of 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
+/obj/item/clothing/suit/storage/cargo
+
+=======
+>>>>>>> 7ec7f1cdda... Merge pull request #11054 from VOREStation/Fixes/11052
 // winter coats go here
 
 /datum/gear/suit/wintercoat
