@@ -1,35 +1,5 @@
 /obj/item/clothing/head/helmet/space/rig
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TAJ 			= 'icons/mob/species/tajaran/helmet.dmi',
-		SPECIES_SKRELL 			= 'icons/mob/species/skrell/helmet.dmi',
-		SPECIES_UNATHI 			= 'icons/mob/species/unathi/helmet.dmi',
-		SPECIES_XENOHYBRID 		= 'icons/mob/species/unathi/helmet.dmi',
-		SPECIES_AKULA 			= 'icons/mob/species/akula/helmet_vr.dmi',
-		SPECIES_SERGAL			= 'icons/mob/species/sergal/helmet_vr.dmi',
-		SPECIES_NEVREAN			= 'icons/mob/species/sergal/helmet_vr.dmi',
-		SPECIES_VULPKANIN 		= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_ZORREN_HIGH 	= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_FENNEC 			= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/helmet.dmi',
-		SPECIES_VOX 			= 'icons/mob/species/vox/head.dmi',
-		SPECIES_TESHARI         = 'icons/mob/species/teshari/head.dmi',
-		SPECIES_GREY_YW         = 'icons/mob/species/grey/helmet.dmi' /*ywedit*/
-||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
-		SPECIES_TAJ 			= 'icons/mob/species/tajaran/helmet.dmi',
-		SPECIES_SKRELL 			= 'icons/mob/species/skrell/helmet.dmi',
-		SPECIES_UNATHI 			= 'icons/mob/species/unathi/helmet.dmi',
-		SPECIES_XENOHYBRID 		= 'icons/mob/species/unathi/helmet.dmi',
-		SPECIES_AKULA 			= 'icons/mob/species/akula/helmet_vr.dmi',
-		SPECIES_SERGAL			= 'icons/mob/species/sergal/helmet_vr.dmi',
-		SPECIES_NEVREAN			= 'icons/mob/species/sergal/helmet_vr.dmi',
-		SPECIES_VULPKANIN 		= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_ZORREN_HIGH 	= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_FENNEC 			= 'icons/mob/species/vulpkanin/helmet.dmi',
-		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/helmet.dmi',
-		SPECIES_VOX 			= 'icons/mob/species/vox/head.dmi',
-		SPECIES_TESHARI 		= 'icons/mob/species/teshari/head.dmi'
-=======
 		SPECIES_TAJ 			= 'icons/inventory/head/mob_tajaran.dmi',
 		SPECIES_SKRELL 			= 'icons/inventory/head/mob_skrell.dmi',
 		SPECIES_UNATHI 			= 'icons/inventory/head/mob_unathi.dmi',
@@ -43,7 +13,6 @@
 		SPECIES_PROMETHEAN		= 'icons/inventory/head/mob_skrell.dmi',
 		SPECIES_VOX 			= 'icons/inventory/head/mob_vox.dmi',
 		SPECIES_TESHARI 		= 'icons/inventory/head/mob_teshari.dmi'
->>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 		)
 
 /obj/item/clothing/suit/space/rig
