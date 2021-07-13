@@ -125,18 +125,7 @@
 
 /obj/item/clothing/glasses
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TESHARI = 'icons/mob/species/teshari/eyes.dmi',
-		SPECIES_VOX = 'icons/mob/species/vox/eyes.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/eyes.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
-||||||| parent of edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
-		SPECIES_TESHARI = 'icons/mob/species/teshari/eyes.dmi',
-		SPECIES_VOX = 'icons/mob/species/vox/eyes.dmi',
-		SPECIES_WEREBEAST = 'icons/mob/species/werebeast/eyes.dmi'
-=======
 		SPECIES_TESHARI = 'icons/inventory/eyes/mob_teshari.dmi',
 		SPECIES_VOX = 'icons/inventory/eyes/mob_vox.dmi',
 		SPECIES_WEREBEAST = 'icons/inventory/eyes/mob_werebeast.dmi'
->>>>>>> edc62e88fa... Merge pull request #11002 from VOREStation/Arokha/rearrange
 		)
