@@ -229,57 +229,6 @@
 
 		busy = FALSE
 
-
-/obj/structure/wheel_of_fortune
-	name = "wheel of fortune"
-	desc = "May fortune favour the lucky one!"
-	icon = 'icons/obj/casino_ch.dmi'
-	icon_state = "wheel_of_fortune"
-	density = 1
-	anchored = 1
-	var/interval = 1
-	var/busy = 0
-
-	var/datum/effect/effect/system/confetti_spread
-	var/confetti_strength = 8
-
-/obj/structure/wheel_of_fortune/verb/setinterval()
-	set name = "Change interval"
-	set category = "Object"
-	set src in view(1)
-
-	if(usr.incapacitated())
-		return
-	if(ishuman(usr) || istype(usr, /mob/living/silicon/robot))
-		interval = input("Put the desired interval (1-100)", "Set Interval") as num
-		if(interval>100 || interval<1)
-			usr << "<span class='notice'>Invalid interval.</span>"
-			return
-		usr << "<span class='notice'>You set the interval to [interval]</span>"
-	return
-
-
-/obj/structure/wheel_of_fortune/attack_hand(mob/user as mob)
-	if (busy)
-		to_chat(user,"<span class='notice'>The wheel of fortune is already spinning!</span> ")
-		return
-	visible_message("<span class='notice'>\ [user]  spins the wheel of fortune!</span>")
-	busy = 1
-	icon_state = "wheel_of_fortune_spinning"
-	var/result = rand(1,interval)
-	add_fingerprint(user)
-	spawn(5 SECONDS)
-		visible_message("<span class='notice'>The wheel of fortune stops spinning, the number is [result]!</span>")
-
-		src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
-		src.confetti_spread.attach(src) //If somehow people start dragging slot machine
-		spawn(0)
-			for(var/i = 1 to confetti_strength)
-				src.confetti_spread.start()
-				sleep(10)
-		busy=0
-		icon_state = "wheel_of_fortune"
-
 /obj/structure/stripper_pole
 	name = "stripper pole"
 	icon = 'icons/obj/casino_ch.dmi'
@@ -1009,3 +958,186 @@
 		spawn_money(round(I:worth/2.5), src.loc)
 		src.attack_hand(user)
 		qdel(I)
+
+/obj/machinery/wheel_of_fortune
+	name = "wheel of fortune"
+	desc = "The Wheel of Fortune! Insert chips and may fortune favour the lucky one at the next lottery!"
+	icon = 'icons/obj/64x64_ch.dmi'
+	icon_state = "wheel_of_fortune"
+	density = 1
+	anchored = 1
+	pixel_x = -16
+
+	req_access = list(300)
+	var/interval = 1
+	var/busy = 0
+	var/public_spin = 0
+	var/lottery_sale = "disabled"
+	var/lottery_price = 100
+	var/lottery_entries = 0
+	var/lottery_tickets = list()
+	var/lottery_tickets_ckeys = list()
+
+	var/datum/effect/effect/system/confetti_spread
+	var/confetti_strength = 15
+
+
+/obj/machinery/wheel_of_fortune/attack_hand(mob/user as mob)
+	if (busy)
+		to_chat(user,"<span class='notice'>The wheel of fortune is already spinning!</span> ")
+		return
+
+	if(usr.incapacitated())
+		return
+	if(ishuman(usr) || istype(usr, /mob/living/silicon/robot))
+		switch(input(user,"Choose what to do","Wheel Of Fortune") in list("Spin the Wheel! (Not Lottery)", "Set the interval", "Cancel"))
+			if("Cancel")
+				return
+			if("Spin the Wheel! (Not Lottery)")
+				if(public_spin == 0)
+					to_chat(user,"<span class='notice'>The Wheel makes a sad beep, public spins are not enabled right now..</span> ")
+					return
+				else
+					to_chat(user,"<span class='notice'>You spin the wheel!</span> ")
+					spin_the_wheel("not_lottery")
+			if("Set the interval")
+				setinterval()
+
+
+/obj/machinery/wheel_of_fortune/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if (busy)
+		to_chat(user,"<span class='notice'>The wheel of fortune is already spinning!</span> ")
+		return
+
+	if(usr.incapacitated())
+		return
+
+	if(istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))
+		if(!check_access(W))
+			to_chat(user, "<span class='warning'>Access Denied.</span>")
+			return
+		else
+			to_chat(user, "<span class='warning'>Proper access, allowed staff controls.</span>")
+			if(ishuman(usr) || istype(usr, /mob/living/silicon/robot))
+				switch(input(user,"Choose what to do (Management)","Wheel Of Fortune (Management)") in list("Spin the Lottery Wheel!", "Toggle Lottery Sales", "Toggle Public Spins", "Reset Lottery", "Cancel"))
+					if("Cancel")
+						return
+					if("Spin the Lottery Wheel!")
+						to_chat(user,"<span class='notice'>You spin the wheel for the lottery!</span> ")
+						spin_the_wheel("lottery")
+
+					if("Toggle Lottery Sales")
+						if(lottery_sale == "disabled")
+							lottery_sale = "enabled"
+							to_chat(user,"<span class='notice'>Public Lottery sale has been enabled.</span> ")
+						else
+							lottery_sale = "disabled"
+							to_chat(user,"<span class='notice'>Public Lottery sale has been disabled.</span> ")
+
+					if("Toggle Public Spins")
+						if(public_spin == 0)
+							public_spin = 1
+							to_chat(user,"<span class='notice'>Public spins has been enabled.</span> ")
+						else
+							public_spin = 0
+							to_chat(user,"<span class='notice'>Public spins has been disabled.</span> ")
+
+					if("Reset Lottery")
+						var/confirm = tgui_alert(usr, "Are you sure you want to reset Lottery?", "Confirm Lottery Reset", list("Yes", "No"))
+						if(confirm == "Yes")
+							to_chat(user, "<span class='warning'>Lottery has been Reset!</span>")
+							lottery_entries = 0
+							lottery_tickets = list()
+							lottery_tickets_ckeys = list()
+
+	if(istype(W, /obj/item/weapon/spacecasinocash))
+		if(lottery_sale == "disabled")
+			to_chat(user, "<span class='warning'>Lottery sales are currently disabled.</span>")
+			return
+		else
+			if(user.client.ckey in lottery_tickets_ckeys)
+				to_chat(user, "<span class='warning'>The scanner beeps in an upset manner, you already have a ticket!</span>")
+				return
+
+			var/obj/item/weapon/spacecasinocash/C = W
+			insert_chip(C, user)
+
+/obj/machinery/wheel_of_fortune/proc/insert_chip(var/obj/item/weapon/spacecasinocash/cashmoney, mob/user)
+	if (busy)
+		to_chat(user,"<span class='notice'>The Wheel of Fortune is busy, wait for it to be done to buy a lottery ticket.</span> ")
+		return
+	if(cashmoney.worth < lottery_price)
+		to_chat(user,"<span class='notice'>You dont have enough chips to buy a lottery ticket!</span> ")
+		return
+
+	to_chat(user,"<span class='notice'>You put [lottery_price] credits worth of chips into the Wheel of Fortune and it pings to notify of your lottery ticket registered!</span>")
+	cashmoney.worth -= lottery_price
+	cashmoney.update_icon()
+
+	if(cashmoney.worth <= 0)
+		usr.drop_from_inventory(cashmoney)
+		qdel(cashmoney)
+		cashmoney.update_icon()
+
+	lottery_entries++
+	lottery_tickets += "Number.[lottery_entries] [user.name]"
+	lottery_tickets_ckeys += user.client.ckey
+
+/obj/machinery/wheel_of_fortune/proc/spin_the_wheel(var/mode)
+	var/result = 0
+
+	if(mode == "not_lottery")
+		busy = 1
+		icon_state = "wheel_of_fortune_spinning"
+		result = rand(1,interval)
+
+		spawn(5 SECONDS)
+			visible_message("<span class='notice'>The wheel of fortune stops spinning, the number is [result]!</span>")
+			src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
+			src.confetti_spread.attach(src) //If somehow people start dragging slot machine
+			spawn(0)
+				for(var/i = 1 to confetti_strength)
+					src.confetti_spread.start()
+					sleep(10)
+
+			flick("[icon_state]-winning",src)
+			busy = 0
+			icon_state = "wheel_of_fortune"
+
+	if(mode == "lottery")
+		if(lottery_entries == 0)
+			visible_message("<span class='notice'>There are no tickets in the system!</span>")
+			return
+
+		busy = 1
+		icon_state = "wheel_of_fortune_spinning"
+		result = pick(lottery_tickets)
+
+		spawn(5 SECONDS)
+			visible_message("<span class='notice'>The wheel of fortune stops spinning, and the winner is [result]!</span>")
+			src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
+			src.confetti_spread.attach(src) //If somehow people start dragging slot machine
+			spawn(0)
+				for(var/i = 1 to confetti_strength)
+					src.confetti_spread.start()
+					sleep(10)
+
+			flick("[icon_state]-winning",src)
+			busy = 0
+			icon_state = "wheel_of_fortune"
+
+
+/obj/machinery/wheel_of_fortune/verb/setinterval()
+	set name = "Change interval"
+	set category = "Object"
+	set src in view(1)
+
+	if(usr.incapacitated())
+		return
+	if(ishuman(usr) || istype(usr, /mob/living/silicon/robot))
+		interval = input("Put the desired interval (1-1000)", "Set Interval") as num
+		if(interval>1000 || interval<1)
+			usr << "<span class='notice'>Invalid interval.</span>"
+			return
+		usr << "<span class='notice'>You set the interval to [interval]</span>"
+	return
