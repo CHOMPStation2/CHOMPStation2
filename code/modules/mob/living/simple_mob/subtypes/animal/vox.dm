@@ -154,7 +154,7 @@
 
 	name = "strange armour"
 	desc = "Hulking reinforced armour for something huge."
-	icon = 'icons/obj/clothing/suits.dmi'
+	icon = 'icons/inventory/suit/item.dmi'
 	icon_state = "armalis_armour"
 	item_state = "armalis_armour"
 
@@ -162,6 +162,6 @@
 
 	name = "strange lenses"
 	desc = "A series of metallic lenses and chains."
-	icon = 'icons/obj/clothing/hats.dmi'
+	icon = 'icons/inventory/head/item.dmi'
 	icon_state = "amp"
 	item_state = "amp"
