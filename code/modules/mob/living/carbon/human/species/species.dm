@@ -16,7 +16,7 @@
 
 	var/speech_bubble_appearance = "normal"					// Part of icon_state to use for speech bubbles when talking.	See talk.dmi for available icons.
 	var/fire_icon_state = "humanoid"						// The icon_state used inside OnFire.dmi for when on fire.
-	var/suit_storage_icon = 'icons/mob/belt_mirror.dmi'		// Icons used for worn items in suit storage slot.
+	var/suit_storage_icon = 'icons/inventory/suit_store/mob.dmi' // Icons used for worn items in suit storage slot.
 
 	var/pixel_offset_x = 0                    // CHOMPedit. Used for offsetting 64x64 and up icons.
 	var/pixel_offset_y = 0                    // CHOMPedit. Used for offsetting 64x64 and up icons.
