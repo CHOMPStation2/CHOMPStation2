@@ -1596,7 +1596,7 @@
 /obj/item/weapon/storage/backpack/fluff/kaith
 	name = "Light duffle bag"
 	desc = "A compact duffle bag, meant for long hikes."
-	icon = 'icons/obj/clothing/backpack.dmi'
+	icon = 'icons/inventory/back/item.dmi'
 	icon_state = "duffle"
 
 
