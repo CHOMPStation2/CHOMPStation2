@@ -142,7 +142,6 @@
 	name = "AutoLok pressure suit"
 	desc = "A high-tech snug-fitting pressure suit. Fits any species. It offers very little physical protection, but is equipped with sensors that will automatically deploy the integral helmet to protect the wearer."
 	icon = 'icons/inventory/suit/item_vr.dmi'
-	icon_override = 'icons/inventory/suit/mob_vr.dmi'
 	icon_state = "autoloksuit"
 	item_state = "autoloksuit"
 	item_state_slots = list(slot_r_hand_str = "space_suit_syndicate", slot_l_hand_str = "space_suit_syndicate")
@@ -231,7 +230,6 @@
 	icon_state = "autolokhelmet"
 	item_state = "autolokhelmet"
 	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX)	//this thing can autoadapt too
-	icon = 'icons/inventory/head/item_vr.dmi'
 	flags_inv = HIDEEARS|BLOCKHAIR //removed HIDEFACE/MASK/EYES flags so sunglasses or facemasks don't disappear. still gotta have BLOCKHAIR or it'll clip out tho.
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
 
