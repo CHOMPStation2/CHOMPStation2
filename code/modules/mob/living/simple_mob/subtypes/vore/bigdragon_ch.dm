@@ -120,7 +120,7 @@ I think I covered everything.
 	var/small = 0
 	var/small_icon = 'icons/mob/bigdragon_small_ch.dmi'
 	var/small_icon_state = "dragon_small"
-	var/nameset
+	//var/nameset //Implemented upstream
 	var/flames
 
 	tame_items = list(
@@ -242,8 +242,8 @@ I think I covered everything.
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle
 	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc
+	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
+	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = "neutral"
 
 /mob/living/simple_mob/vore/bigdragon/Initialize()
@@ -311,6 +311,7 @@ I think I covered everything.
 	specialtoggle = !specialtoggle
 	to_chat(src, "<span class='notice'>You will [specialtoggle?"now special":"no longer special"] attack on grab/disarm intent.</span>")
 
+/* //Implemented upstream
 /mob/living/simple_mob/vore/bigdragon/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."
@@ -333,7 +334,7 @@ I think I covered everything.
 	newdesc = sanitizeSafe(input(src,"Set your description. Max 4096 chars.", "Description set","") as text, MAX_MESSAGE_LEN)
 	if(newdesc)
 		desc = newdesc
-
+*/ 
 
 ///
 ///		Icon generation stuff
