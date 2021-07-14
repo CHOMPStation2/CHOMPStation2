@@ -34,12 +34,6 @@
 /obj/item/clothing/suit/storage/vest/hos
 	armor = list(melee = 50, bullet = 40, laser = 40, energy = 25, bomb = 25, bio = 0, rad = 0)
 
-/obj/item/clothing/suit/storage/vest/hoscoat/jensen
-	name = "armored trenchcoat"
-	desc = "A trenchcoat augmented with a special alloy for some protection and style."
-	icon_state = "hostrench"
-	flags_inv = HIDEHOLSTER
-
 // Override Polaris's "confederate" naming convention. I hate it.
 /obj/item/clothing/suit/storage/vest/solgov
 	name = "\improper Solar Central Government" //YW EDIT: SolGov
