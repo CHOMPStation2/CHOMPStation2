@@ -183,16 +183,10 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
-<<<<<<< HEAD
-	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
-||||||| parent of 3b5223f1f1... Merge pull request #11069 from Mewchild/MC-HairTie
-	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
-=======
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/proc/shred_limb,
 		/mob/living/carbon/human/proc/tie_hair)
->>>>>>> 3b5223f1f1... Merge pull request #11069 from Mewchild/MC-HairTie
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
 
 	min_age = 18
 	max_age = 110
@@ -379,17 +373,9 @@
 
 /datum/species/vox
 	gluttonous = 0
-<<<<<<< HEAD
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
-	min_age = 18
-||||||| parent of 3b5223f1f1... Merge pull request #11069 from Mewchild/MC-HairTie
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
-	min_age = 18
-=======
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit
 	min_age = 18	
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //Get ya quills done did
->>>>>>> 3b5223f1f1... Merge pull request #11069 from Mewchild/MC-HairTie
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
 	descriptors = list(
