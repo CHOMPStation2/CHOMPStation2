@@ -88,33 +88,17 @@
 /obj/item/clothing/suit/storage/det_trench/alt
 	name = "sleek modern coat"
 	desc = "A sleek overcoat made of neo-laminated fabric. Has a reasonably sized pocket on the inside."
-<<<<<<< HEAD
-	icon = 'icons/obj/clothing/suits_vr.dmi'
-	icon_override = 'icons/mob/suit_vr.dmi'
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	icon = 'icons/inventory/suit/item_vr.dmi'
-	icon_override = 'icons/inventory/suit/mob_vr.dmi'
-=======
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	icon_state = "cyberpunksleek"
 
 /obj/item/clothing/suit/storage/det_trench/alt2
 	name = "sleek modern coat (long)"
 	desc = "A sleek long overcoat made of neo-laminated fabric. Has a reasonably sized pocket on the inside."
-<<<<<<< HEAD
-	icon = 'icons/obj/clothing/suits_vr.dmi'
-	icon_override = 'icons/mob/suit_vr.dmi'
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	icon = 'icons/inventory/suit/item_vr.dmi'
-	icon_override = 'icons/inventory/suit/mob_vr.dmi'
-=======
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	icon_state = "cyberpunksleek_long"
 
 /obj/item/clothing/suit/storage/det_trench/alt/black
