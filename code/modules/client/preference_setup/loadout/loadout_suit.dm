@@ -273,81 +273,8 @@
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/hop
 	allowed_roles = list("Head of Personnel")
 
-<<<<<<< HEAD
-/datum/gear/suit/roles/poncho/cloak/cargo
-	display_name = "cloak, cargo"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo
-
-/datum/gear/suit/roles/poncho/cloak/mining
-	display_name = "cloak, mining"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/mining
-
-/datum/gear/suit/roles/poncho/cloak/security
-	display_name = "cloak, security"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/security
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Blueshield Guard","Security Pilot") //YW ADDITIONS
-
-/datum/gear/suit/roles/poncho/cloak/service
-	display_name = "cloak, service"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/service
-
-/datum/gear/suit/roles/poncho/cloak/engineer
-	display_name = "cloak, engineer"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/engineer
-
-/datum/gear/suit/roles/poncho/cloak/atmos
-	display_name = "cloak, atmos"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/atmos
-
-/datum/gear/suit/roles/poncho/cloak/research
-	display_name = "cloak, science"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/research
-
-/datum/gear/suit/roles/poncho/cloak/medical
-	display_name = "cloak, medical"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/medical
-
-/datum/gear/suit/roles/poncho/cloak/custom //A colorable cloak
-	display_name = "cloak (colorable)"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-/datum/gear/suit/roles/poncho/cloak/cargo
-	display_name = "cloak, cargo"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo
-
-/datum/gear/suit/roles/poncho/cloak/mining
-	display_name = "cloak, mining"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/mining
-
-/datum/gear/suit/roles/poncho/cloak/security
-	display_name = "cloak, security"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/security
-
-/datum/gear/suit/roles/poncho/cloak/service
-	display_name = "cloak, service"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/service
-
-/datum/gear/suit/roles/poncho/cloak/engineer
-	display_name = "cloak, engineer"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/engineer
-
-/datum/gear/suit/roles/poncho/cloak/atmos
-	display_name = "cloak, atmos"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/atmos
-
-/datum/gear/suit/roles/poncho/cloak/research
-	display_name = "cloak, science"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/research
-
-/datum/gear/suit/roles/poncho/cloak/medical
-	display_name = "cloak, medical"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/medical
-
-/datum/gear/suit/roles/poncho/cloak/custom //A colorable cloak
-	display_name = "cloak (colorable)"
-=======
 /datum/gear/suit/roles/poncho/cloak_custom //A colorable cloak
 	display_name = "cloak, colorable"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/custom
 
 /datum/gear/suit/roles/poncho/cloak/custom/New()
