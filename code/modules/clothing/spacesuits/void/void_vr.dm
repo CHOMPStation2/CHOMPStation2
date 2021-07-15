@@ -160,67 +160,6 @@
 	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX)	//this thing can autoadapt too
 	flags_inv = HIDEEARS|BLOCKHAIR //removed HIDEFACE/MASK/EYES flags so sunglasses or facemasks don't disappear. still gotta have BLOCKHAIR or it'll clip out tho.
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
-<<<<<<< HEAD
-
-/obj/item/clothing/head/helmet/space/void/autolok
-	sprite_sheets = list(
-		SPECIES_HUMAN			= 'icons/inventory/head/mob_vr.dmi',
-		SPECIES_TAJ 			= 'icons/inventory/head/mob_vr_tajaran.dmi',
-		SPECIES_SKRELL 			= 'icons/inventory/head/mob_vr_skrell.dmi',
-		SPECIES_UNATHI 			= 'icons/inventory/head/mob_vr_unathi.dmi',
-		SPECIES_XENOHYBRID 		= 'icons/inventory/head/mob_vr_unathi.dmi',
-		SPECIES_AKULA			= 'icons/inventory/head/mob_vr_unathi.dmi',
-		SPECIES_SERGAL			= 'icons/inventory/head/mob_vr_unathi.dmi',
-		SPECIES_VULPKANIN		= 'icons/inventory/head/mob_vr_vulpkanin.dmi',
-		SPECIES_ZORREN_HIGH		= 'icons/inventory/head/mob_vr_vulpkanin.dmi',
-		SPECIES_FENNEC			= 'icons/inventory/head/mob_vr_vulpkanin.dmi',
-		SPECIES_TESHARI			= 'icons/inventory/head/mob_vr_teshari.dmi'
-		)
-	sprite_sheets_obj = list(
-		SPECIES_TAJ 			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_SKRELL			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_UNATHI			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_XENOHYBRID		= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_AKULA			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_SERGAL			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_VULPKANIN		= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_ZORREN_HIGH		= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_FENNEC			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_TESHARI			= 'icons/inventory/head/item_vr.dmi'
-		)
-	sprite_sheets_refit = list()	//have to nullify this as well just to be thorough
-||||||| parent of 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
-
-/obj/item/clothing/head/helmet/space/void/autolok
-	sprite_sheets = list(
-		SPECIES_HUMAN			= 'icons/inventory/head/mob_vr.dmi',
-		SPECIES_TAJ 			= 'icons/inventory/head/mob_vr_tajaran.dmi',
-		SPECIES_SKRELL 			= 'icons/inventory/head/mob_vr_skrell.dmi',
-		SPECIES_UNATHI 			= 'icons/inventory/head/mob_vr_unathi.dmi',
-		SPECIES_XENOHYBRID 		= 'icons/inventory/head/mob_vr_unathi.dmi',
-		SPECIES_AKULA			= 'icons/inventory/head/mob_vr_unathi.dmi',
-		SPECIES_SERGAL			= 'icons/inventory/head/mob_vr_unathi.dmi',
-		SPECIES_VULPKANIN		= 'icons/inventory/head/mob_vr_vulpkanin.dmi',
-		SPECIES_ZORREN_HIGH		= 'icons/inventory/head/mob_vr_vulpkanin.dmi',
-		SPECIES_FENNEC			= 'icons/inventory/head/mob_vr_vulpkanin.dmi',
-		SPECIES_TESHARI			= 'icons/inventory/head/mob_vr_teshari.dmi'
-		)
-	sprite_sheets_obj = list(
-		SPECIES_TAJ 			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_SKRELL			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_UNATHI			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_XENOHYBRID		= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_AKULA			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_SERGAL			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_VULPKANIN		= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_ZORREN_HIGH		= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_FENNEC			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_TESHARI			= 'icons/inventory/head/item_vr.dmi'
-		)
-	sprite_sheets_refit = list()	//have to nullify this as well just to be thorough
-=======
 	sprite_sheets = ALL_VR_SPRITE_SHEETS_HEAD_MOB
 	sprite_sheets_obj = null
 	sprite_sheets_refit = null
-	
->>>>>>> 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
