@@ -219,3 +219,21 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 				soundfile = fancy_release_sounds[RTB.release_sound]
 			if(soundfile)
 				playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+
+/mob/living/proc/vore_bellyrub(var/mob/living/T)
+	set name = "Give Bellyrubs"
+	set category = "Abilities"
+	set desc = "Provide bellyrubs to either yourself or another mob with a belly."
+
+	if(!T)
+		T = input("Choose whose belly to rub") as null| mob in view(src.loc,1)
+		if(!T)
+			return FALSE
+	if(T.vore_selected)
+		var/obj/belly/B = T.vore_selected
+		if(istype(B))
+			custom_emote_vr(1, "gives some rubs over [T]'s [B].")
+			B.quick_cycle()
+			return TRUE
+	to_chat(src, "<span class='warning'>There is no suitable belly for rubs.</span>")
+	return FALSE
