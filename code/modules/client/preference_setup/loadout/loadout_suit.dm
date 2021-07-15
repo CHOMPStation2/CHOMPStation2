@@ -207,9 +207,44 @@
 	path = /obj/item/clothing/accessory/poncho/roles/cargo
 	cost = 1
 
+<<<<<<< HEAD
 /datum/gear/suit/roles/poncho/security
 	display_name = "poncho, security"
 	path = /obj/item/clothing/accessory/poncho/roles/security
+||||||| parent of cbed72f7ee... Merge pull request #11090 from VOREStation/Arokha/cloaks1pt
+/datum/gear/suit/roles/poncho/New()
+	..()
+	var/list/ponchos = list(
+		"Cargo poncho" = /obj/item/clothing/accessory/poncho/roles/cargo,
+		"Security poncho" = /obj/item/clothing/accessory/poncho/roles/security,
+		"Medical poncho" = /obj/item/clothing/accessory/poncho/roles/medical,
+		"Engineering poncho" = /obj/item/clothing/accessory/poncho/roles/engineering,
+		"Science poncho" = /obj/item/clothing/accessory/poncho/roles/science
+	)
+	gear_tweaks += new/datum/gear_tweak/path(ponchos)
+
+
+/datum/gear/suit/roles/cloak
+	display_name = "cloak selection, departments"
+	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo
+=======
+/datum/gear/suit/roles/poncho/New()
+	..()
+	var/list/ponchos = list(
+		"Cargo poncho" = /obj/item/clothing/accessory/poncho/roles/cargo,
+		"Security poncho" = /obj/item/clothing/accessory/poncho/roles/security,
+		"Medical poncho" = /obj/item/clothing/accessory/poncho/roles/medical,
+		"Engineering poncho" = /obj/item/clothing/accessory/poncho/roles/engineering,
+		"Science poncho" = /obj/item/clothing/accessory/poncho/roles/science
+	)
+	gear_tweaks += new/datum/gear_tweak/path(ponchos)
+
+
+/datum/gear/suit/roles/cloak
+	display_name = "cloak selection, departments"
+	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo
+	cost = 1
+>>>>>>> cbed72f7ee... Merge pull request #11090 from VOREStation/Arokha/cloaks1pt
 
 /datum/gear/suit/roles/poncho/medical
 	display_name = "poncho, medical"
