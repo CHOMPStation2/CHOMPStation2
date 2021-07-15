@@ -505,23 +505,6 @@ GLOBAL_LIST_EMPTY(suit_cycler_typecache)
 	var/can_repair          // If set, the cycler can repair voidsuits.
 	var/electrified = 0
 
-<<<<<<< HEAD
-	//Departments that the cycler can paint suits to look like.
-	var/list/departments = list("Engineering","Mining","Medical","Security","Atmospherics","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control","Security EVA")
-	//Species that the suits can be configured to fit.
-	var/list/species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ, SPECIES_TESHARI, /*yawngreyedit*/SPECIES_GREY_YW) //VORESTATION EDIT)
-
-	var/target_department
-	var/target_species
-||||||| parent of 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
-	//Departments that the cycler can paint suits to look like.
-	var/list/departments = list("Engineering","Mining","Medical","Security","Atmospherics","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control","Security EVA")
-	//Species that the suits can be configured to fit.
-	var/list/species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ, SPECIES_TESHARI)
-
-	var/target_department
-	var/target_species
-=======
 	/// Departments that the cycler can paint suits to look like. Null assumes all except specially excluded ones.
 	/// No idea why these particular suits are the default cycler's options.
 	var/list/limit_departments = list(
@@ -547,7 +530,6 @@ GLOBAL_LIST_EMPTY(suit_cycler_typecache)
 
 	var/datum/suit_cycler_choice/department/target_department
 	var/datum/suit_cycler_choice/species/target_species
->>>>>>> 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
 
 	var/mob/living/carbon/human/occupant = null
 	var/obj/item/clothing/suit/space/void/suit = null
@@ -1146,4 +1128,3 @@ GLOBAL_LIST_EMPTY(suit_cycler_typecache)
 	else
 		visible_message("[bicon(src)]<span class='warning'>Unable to apply specified cosmetics with specified species. Please try again with a different species or cosmetic option selected.</span>")
 		return
-	
