@@ -52,6 +52,7 @@
 	M.verbs += /mob/living/proc/insidePanel
 	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	M.verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
 
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
@@ -544,7 +545,7 @@
 
 	// Their AI should get notified so they can stab us
 	prey.ai_holder?.react_to_attack(user)
-	
+
 	//Timer and progress bar
 	if(!do_after(user, swallow_time, prey, exclusive = TASK_USER_EXCLUSIVE))
 		return FALSE // Prey escpaed (or user disabled) before timer expired.

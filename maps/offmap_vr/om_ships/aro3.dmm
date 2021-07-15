@@ -2589,6 +2589,10 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/aro3/kitchen)
+"vP" = (
+/obj/machinery/gear_dispenser/suit_fancy/aether,
+/turf/simulated/floor/tiled/eris/steel/panels,
+/area/aro3/eva_hall)
 "vQ" = (
 /obj/structure/table/steel,
 /obj/item/device/flashlight/lamp,
@@ -3953,6 +3957,22 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+<<<<<<< HEAD
+||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/item/device/uav/loaded,
+=======
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/item/device/uav/loaded{
+	nickname = "FoxBot Beta"
+	},
+>>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/aro3/repair_bay)
 "Gy" = (
@@ -42234,7 +42254,7 @@ el
 el
 vZ
 lu
-DM
+vP
 XF
 XF
 Nu
