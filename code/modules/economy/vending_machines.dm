@@ -1156,6 +1156,7 @@
 		/obj/item/clothing/head/surgery/black = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/modern = 5,
 		/obj/item/clothing/mask/surgical = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical = 5,
 		/obj/item/clothing/shoes/boots/winter/medical = 5
@@ -1227,6 +1228,7 @@
 		/obj/item/clothing/under/rank/scientist/skirt = 5,
 		/obj/item/clothing/under/rank/scientist/turtleneck = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
+		/obj/item/clothing/suit/storage/toggle/labcoat/modern = 5,
 		/obj/item/clothing/shoes/white = 5,
 		/obj/item/clothing/shoes/slippers = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/science = 5,
@@ -1348,6 +1350,7 @@
 		/obj/item/clothing/under/rank/cargotech/jeans = 5,
 		/obj/item/clothing/under/rank/cargotech/jeans/female = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/cargo = 5,
+		/obj/item/clothing/suit/storage/cargo = 5,
 		/obj/item/clothing/shoes/boots/winter/supply = 5,
 		/obj/item/clothing/shoes/black = 5,
 		/obj/item/clothing/gloves/black = 5,
