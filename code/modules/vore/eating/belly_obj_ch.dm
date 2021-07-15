@@ -251,7 +251,7 @@
 		if("full5")
 			raw_messages = fullness5_messages
 
-	var/messages = list2text(raw_messages,delim)
+	var/messages = raw_messages.Join(delim)
 	return messages
 
 // The next function sets the messages on the belly, from human-readable var
@@ -260,7 +260,7 @@
 /obj/belly/proc/set_reagent_messages(var/raw_text, var/type, var/delim = "\n\n")
 	ASSERT(type == "full1" || type == "full2" || type == "full3" || type == "full4" || type == "full5")
 
-	var/list/raw_list = text2list(html_encode(raw_text),delim)
+	var/list/raw_list = splittext(html_encode(raw_text),delim)
 	if(raw_list.len > 10)
 		raw_list.Cut(11)
 		log_debug("[owner] tried to set [lowertext(name)] with 11+ messages")
