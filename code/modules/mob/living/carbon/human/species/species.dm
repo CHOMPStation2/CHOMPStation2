@@ -431,7 +431,7 @@
 		H.visible_message( \
 			"<span class='notice'>[H] boops [target]'s nose.</span>", \
 			"<span class='notice'>You boop [target] on the nose.</span>", )
-	else if(H.zone_sel.selecting == "groin") //CHOMPEdit
+	else if(H.zone_sel.selecting == BP_GROIN) //CHOMPEdit
 		H.vore_bellyrub(target)
 	//VOREStation Edit End
 	else
