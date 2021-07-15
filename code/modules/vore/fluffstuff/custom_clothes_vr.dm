@@ -894,161 +894,51 @@ No. With a teleporter? Just *no*. - Hawk, YW
 	icon_state = "khi_uniform"
 
 /obj/item/clothing/under/rank/khi/cmd //Command version
-<<<<<<< HEAD
 	name = "GE command suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. An extra-comfortable command one, at that." //CHOMPedit
-	icon_state = "khi_uniform_cmd_i"
-	item_state = "khi_uniform_cmd"
-	worn_state = "khi_uniform_cmd"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	name = "KHI command suit"
-	desc = "Kitsuhana Heavy Industries uniform. An extra-comfortable command one, at that. I guess if you DON'T want anarchy for some reason."
-	icon_state = "khi_uniform_cmd_i"
-	item_state = "khi_uniform_cmd"
-	worn_state = "khi_uniform_cmd"
-=======
-	name = "KHI command suit"
-	desc = "Kitsuhana Heavy Industries uniform. An extra-comfortable command one, at that. I guess if you DON'T want anarchy for some reason."
 	icon_state = "khi_uniform_cmd"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/sec //Security version
-<<<<<<< HEAD
 	name = "GE security suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. This one has angry red security stripes. Keepin' the peace in style." //CHOMPedit
-	icon_state = "khi_uniform_sec_i"
-	item_state = "khi_uniform_sec"
-	worn_state = "khi_uniform_sec"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	name = "KHI security suit"
-	desc = "Kitsuhana Heavy Industries uniform. This one has angry red security stripes. Keepin' the peace in style."
-	icon_state = "khi_uniform_sec_i"
-	item_state = "khi_uniform_sec"
-	worn_state = "khi_uniform_sec"
-=======
-	name = "KHI security suit"
-	desc = "Kitsuhana Heavy Industries uniform. This one has angry red security stripes. Keepin' the peace in style."
 	icon_state = "khi_uniform_sec"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/med //Medical version
-<<<<<<< HEAD
 	name = "GE medical suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. The medical version. Why not just get a new body, anyway?"//CHOMPedit
-	icon_state = "khi_uniform_med_i"
-	item_state = "khi_uniform_med"
-	worn_state = "khi_uniform_med"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	name = "KHI medical suit"
-	desc = "Kitsuhana Heavy Industries uniform. The medical version. Why not just get a new body, anyway?"
-	icon_state = "khi_uniform_med_i"
-	item_state = "khi_uniform_med"
-	worn_state = "khi_uniform_med"
-=======
-	name = "KHI medical suit"
-	desc = "Kitsuhana Heavy Industries uniform. The medical version. Why not just get a new body, anyway?"
 	icon_state = "khi_uniform_med"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
 
 /obj/item/clothing/under/rank/khi/eng //Engineering version
-<<<<<<< HEAD
 	name = "GE engineering suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time." //CHOMPedit
-	icon_state = "khi_uniform_eng_i"
-	item_state = "khi_uniform_eng"
-	worn_state = "khi_uniform_eng"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	name = "KHI engineering suit"
-	desc = "Kitsuhana Heavy Industries uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time."
-	icon_state = "khi_uniform_eng_i"
-	item_state = "khi_uniform_eng"
-	worn_state = "khi_uniform_eng"
-=======
-	name = "KHI engineering suit"
-	desc = "Kitsuhana Heavy Industries uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time."
 	icon_state = "khi_uniform_eng"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
 
 /obj/item/clothing/under/rank/khi/sci //Science version
-<<<<<<< HEAD
 	name = "GE science suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. For performing science in, based on the color! Only SCIENCE can save us now." //CHOMPedit
-	icon_state = "khi_uniform_sci_i"
-	item_state = "khi_uniform_sci"
-	worn_state = "khi_uniform_sci"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	name = "KHI science suit"
-	desc = "Kitsuhana Heavy Industries uniform. For performing science in, based on the color! Only SCIENCE can save us now."
-	icon_state = "khi_uniform_sci_i"
-	item_state = "khi_uniform_sci"
-	worn_state = "khi_uniform_sci"
-=======
-	name = "KHI science suit"
-	desc = "Kitsuhana Heavy Industries uniform. For performing science in, based on the color! Only SCIENCE can save us now."
 	icon_state = "khi_uniform_sci"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/crg //Cargo version
-<<<<<<< HEAD
 	name = "GE cargo suit" //CHOMPedit: Change to GE
 	desc = "A sleek cargo uniform from Gilthari Exports." //CHOMPedit
-	icon_state = "khi_uniform_crg_i"
-	item_state = "khi_uniform_crg"
-	worn_state = "khi_uniform_crg"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	name = "KHI cargo suit"
-	desc = "Kitsuhana Heavy Industries uniform. Looks like it's in supply and cargo division colors. Even post-scarcity societies need things moved and mined sometimes."
-	icon_state = "khi_uniform_crg_i"
-	item_state = "khi_uniform_crg"
-	worn_state = "khi_uniform_crg"
-=======
-	name = "KHI cargo suit"
-	desc = "Kitsuhana Heavy Industries uniform. Looks like it's in supply and cargo division colors. Even post-scarcity societies need things moved and mined sometimes."
 	icon_state = "khi_uniform_crg"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/civ //Science version
-<<<<<<< HEAD
 	name = "GE civilian suit" //CHOMPedit: Change to GE
 	desc = "A sleek civilian uniform from Gilthari Exports." //CHOMPedit
-	icon_state = "khi_uniform_civ_i"
-	item_state = "khi_uniform_civ"
-	worn_state = "khi_uniform_civ"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	name = "KHI civilian suit"
-	desc = "Kitsuhana Heavy Industries uniform. Snazzy silver trim marks this is as the general civilian branch. Smells like paperwork and bureaucracy."
-	icon_state = "khi_uniform_civ_i"
-	item_state = "khi_uniform_civ"
-	worn_state = "khi_uniform_civ"
-=======
-	name = "KHI civilian suit"
-	desc = "Kitsuhana Heavy Industries uniform. Snazzy silver trim marks this is as the general civilian branch. Smells like paperwork and bureaucracy."
 	icon_state = "khi_uniform_civ"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/fluff/aronai //Aro fluff version
 	name = "KHI meditech suit"
-<<<<<<< HEAD
-	desc = "An outdated uniform of some sort. You get the sense that whoever wore this must've been very full of themselves"
-	icon_state = "khi_uniform_aro_i"
-	item_state = "khi_uniform_aro"
-	worn_state = "khi_uniform_aro"
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	desc = "Kitsuhana Heavy Industries uniform. This one has the colors of a resleeving or mnemonics engineer. It has 'Aronai' written inside the top."
-	icon_state = "khi_uniform_aro_i"
-	item_state = "khi_uniform_aro"
-	worn_state = "khi_uniform_aro"
-=======
-	desc = "Kitsuhana Heavy Industries uniform. This one has the colors of a resleeving or mnemonics engineer. It has 'Aronai' written inside the top."
+	desc = "An outdated uniform of some sort. You get the sense that whoever wore this must've been very full of themselves" //YW edit
 	icon_state = "khi_uniform_aro"
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
 
 //jacobdragon:Earthen Breath
@@ -1295,15 +1185,7 @@ Departamental Swimsuits, for general use
 	name = "Operations Uniform"
 	desc = "The uniform worn by operations officers of the mid 2260s. You feel strangely vulnerable just seeing this..."
 	icon_state = "trek_engsec"
-<<<<<<< HEAD
-	item_state = "trek_engsec"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot. //CHOMPEdit: I'll tell you what, the armor values are NOT shared. Removed melee bonus.
-||||||| parent of df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
-	item_state = "trek_engsec"
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot.
-=======
-	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot.
->>>>>>> df7a88506f... Merge pull request #11032 from VOREStation/Arokha/megaport
 
 /obj/item/clothing/under/rank/trek/medsci
 	name = "MedSci Uniform"
