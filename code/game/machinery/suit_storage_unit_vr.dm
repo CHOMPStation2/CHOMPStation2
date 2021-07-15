@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-/obj/machinery/suit_cycler
-	departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control","Exploration","Pilot Blue","Pilot","Manager","Prototype")
-	species = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_VULPKANIN, /*yawngreyedit*/SPECIES_GREY_YW)
-
-||||||| parent of 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
-/obj/machinery/suit_cycler
-	departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control","Exploration","Pilot Blue","Pilot","Manager","Prototype","No Change")
-	species = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_VULPKANIN)
-
-=======
->>>>>>> 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
 // Old Exploration is too WIP to use right now
 /obj/machinery/suit_cycler/exploration
 	req_access = null
@@ -64,10 +52,4 @@
 	name = "Talon captain suit cycler"
 	model_text = "Talon captain"
 	req_access = list(access_talon)
-<<<<<<< HEAD
-	departments = list("Talon Officer","No Change")
-||||||| parent of 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
-	departments = list("Talon Officer","No Change")
-=======
 	departments = list(/datum/suit_cycler_choice/department/talon/officer)
->>>>>>> 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
