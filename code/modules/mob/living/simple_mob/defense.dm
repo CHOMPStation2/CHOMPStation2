@@ -16,6 +16,9 @@
 	switch(L.a_intent)
 		if(I_HELP)
 			if(health > 0)
+				if(L.zone_sel.selecting == BP_GROIN) //CHOMPEdit
+					if(L.vore_bellyrub(src))
+						return
 				L.visible_message("<span class='notice'>\The [L] [response_help] \the [src].</span>")
 
 		if(I_DISARM)
