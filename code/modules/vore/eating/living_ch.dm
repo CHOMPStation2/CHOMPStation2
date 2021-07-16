@@ -121,9 +121,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 					return FALSE
 
 				if(TG == user)
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into their [TB].</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into their [lowertext(TB.name)].</span>")
 				else
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [RTB] into their [TB].</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into their [lowertext(TB.name)].</span>")
 					add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_VORE, 1, 0, TB)
 
@@ -138,13 +138,13 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 				if(!Adjacent(TR) || !Adjacent(TG))
 					return //No long distance transfer
 				if(!TR.reagents.get_free_space())
-					to_chat(user, "<span class='notice'>[TR]'s [TB] is full!</span>")
+					to_chat(user, "<span class='notice'>[TR]'s [lowertext(TB.name)] is full!</span>")
 					return FALSE
 
 				if(TG == user)
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into [TR]'s [TB].</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [TR]'s [lowertext(TB.name)].</span>")
 				else
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]s [RTB] into [TR]'s [TB].</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]s [lowertext(RTB.name)] into [TR]'s [lowertext(TB.name)].</span>")
 
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_VORE, 1, 0, TB)
 				add_attack_logs(user,TR,"Transfered reagents from [TG]'s [RTB] to [TR]'s [TB]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -158,9 +158,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 
 			if(TR == user) //Proceed, we dont need to have prefs enabled for transfer within user
 				if(TG == user)
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into their stomach.</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into their stomach.</span>")
 				else
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [RTB] into their stomach.</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into their stomach.</span>")
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_INGEST, 1, 0, null)
 				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")
 
@@ -170,9 +170,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 
 			else
 				if(TG == user)
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into [TR]'s stomach.</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [TR]'s stomach.</span>")
 				else
-					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [RTB] into [TR]'s stomach.</span>")
+					user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into [TR]'s stomach.</span>")
 
 				RTB.reagents.vore_trans_to_mob(TR, transfer_amount, CHEM_INGEST, 1, 0, null)
 				add_attack_logs(user,TR,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to [TR]'s Stomach")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -188,9 +188,9 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 				return //No long distance transfer
 
 			if(TG == user)
-				user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [RTB] into [T].</span>")
+				user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from their [lowertext(RTB.name)] into [T].</span>")
 			else
-				user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [RTB] into [T].</span>")
+				user.custom_emote_vr(1, "<span class='notice'>[RTB.reagent_transfer_verb] [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] into [T].</span>")
 
 			RTB.reagents.vore_trans_to_con(T, transfer_amount, 1, 0)
 			add_attack_logs(user, T,"Transfered [RTB.reagent_name] from [TG]'s [RTB] to a [T]")	//Bonus for staff so they can see if people have abused transfer and done pref breaks
@@ -201,13 +201,13 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 			var/puddle_amount = round(amount_removed/5)
 
 			if(puddle_amount == 0)
-				to_chat(user,"<span class='notice'>[RTB.reagent_name] dripples from the [RTB], not enough to form a puddle.</span> ")
+				to_chat(user,"<span class='notice'>[RTB.reagent_name] dripples from the [lowertext(RTB.name)], not enough to form a puddle.</span> ")
 				return
 
 			if(TG == user)
-				user.custom_emote_vr(1, "<span class='notice'>spills [RTB.reagent_name] from their [RTB] onto the floor!</span>")
+				user.custom_emote_vr(1, "<span class='notice'>spills [RTB.reagent_name] from their [lowertext(RTB.name)] onto the floor!</span>")
 			else
-				user.custom_emote_vr(1, "<span class='notice'>spills [RTB.reagent_name] from [TG]'s [RTB] onto the floor!</span>")
+				user.custom_emote_vr(1, "<span class='notice'>spills [RTB.reagent_name] from [TG]'s [lowertext(RTB.name)] onto the floor!</span>")
 
 			var/obj/effect/decal/cleanable/blood/reagent/puddle = new /obj/effect/decal/cleanable/blood/reagent(RTB.reagent_name, RTB.reagentcolor, RTB.reagentid, puddle_amount, user.ckey, TG.ckey)
 			puddle.loc = TG.loc
@@ -234,7 +234,10 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	if(T.vore_selected)
 		var/obj/belly/B = T.vore_selected
 		if(istype(B))
-			custom_emote_vr(1, "gives some rubs over [T]'s [B].")
+			if(T == src)
+				custom_emote_vr(1, "rubs their [lowertext(B.name)].")
+			else
+				custom_emote_vr(1, "gives some rubs over [T]'s [lowertext(B.name)].")
 			B.quick_cycle()
 			return TRUE
 	to_chat(src, "<span class='warning'>There is no suitable belly for rubs.</span>")
