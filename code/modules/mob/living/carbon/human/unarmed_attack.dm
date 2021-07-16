@@ -281,13 +281,5 @@ var/global/list/sparring_attack_cache = list()
 	damage_type = AGONY
 	shredding = 0
 	damage = 0
-<<<<<<< HEAD
-	sharp = 0
-	edge = 0
-||||||| parent of 577b986ba6... Convert some bools to TRUE/FALSE instead of 1/0. (#11100)
-	sharp = 0
-	edge = 0
-=======
 	sharp = FALSE
 	edge = FALSE
->>>>>>> 577b986ba6... Convert some bools to TRUE/FALSE instead of 1/0. (#11100)
