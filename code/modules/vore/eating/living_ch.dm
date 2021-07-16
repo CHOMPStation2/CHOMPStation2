@@ -234,7 +234,10 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	if(T.vore_selected)
 		var/obj/belly/B = T.vore_selected
 		if(istype(B))
-			custom_emote_vr(1, "gives some rubs over [T]'s [lowertext(B.name)].")
+			if(T == src)
+				custom_emote_vr(1, "rubs their [lowertext(B.name)].")
+			else
+				custom_emote_vr(1, "gives some rubs over [T]'s [lowertext(B.name)].")
 			B.quick_cycle()
 			return TRUE
 	to_chat(src, "<span class='warning'>There is no suitable belly for rubs.</span>")
