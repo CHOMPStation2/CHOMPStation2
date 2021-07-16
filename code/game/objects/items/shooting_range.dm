@@ -4,7 +4,7 @@
 	desc = "A shooting target."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "target_h"
-	density = 0
+	density = FALSE
 	var/hp = 1800
 	var/icon/virtualIcon
 	var/list/bulletholes = list()
@@ -51,16 +51,8 @@
 
 	if(stake)
 		if(stake.pinned_target)
-<<<<<<< HEAD
-			stake.density = 1
-			density = 0
-||||||| parent of 035a67b3d1... Merge pull request #11110 from MarinaGryphon/codequality/bool-fixes-2
-			stake.density = 1
-			density = FALSE
-=======
 			stake.density = TRUE
 			density = FALSE
->>>>>>> 035a67b3d1... Merge pull request #11110 from MarinaGryphon/codequality/bool-fixes-2
 			layer = OBJ_LAYER
 
 			loc = user.loc
