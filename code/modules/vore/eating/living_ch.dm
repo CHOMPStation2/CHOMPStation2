@@ -88,7 +88,7 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 
 	var/mob/living/user = usr
 
-	var/mob/living/TG = input("Choose who to transfer from") as null| mob in view(user.loc,1)
+	var/mob/living/TG = input("Choose who to transfer from") as null| mob in view(1,user.loc)
 	if(!TG)
 		return FALSE
 	if(TG.give_reagents == FALSE && user != TG) //User isnt forced to allow giving in prefs if they are the one doing it
@@ -107,7 +107,7 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 		if("Cancel")
 			return FALSE
 		if("Vore belly")
-			var/mob/living/TR = input(user,"Choose who to transfer to","Select Target") as null|mob in view(user.loc,1)
+			var/mob/living/TR = input(user,"Choose who to transfer to","Select Target") as null|mob in view(1,user.loc)
 			if(!TR)  return FALSE
 
 			if(TR == user) //Proceed, we dont need to have prefs enabled for transfer within user
@@ -151,7 +151,7 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 
 
 		if("Stomach")
-			var/mob/living/TR = input(user,"Choose who to transfer to","Select Target") as null|mob in view(user.loc,1)
+			var/mob/living/TR = input(user,"Choose who to transfer to","Select Target") as null|mob in view(1,user.loc)
 			if(!TR)  return
 			if(!Adjacent(TR) || !Adjacent(TG))
 				return //No long distance transfer
@@ -179,7 +179,7 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 
 		if("Container")
 			var/list/choices = list()
-			for(var/obj/item/weapon/reagent_containers/rc in view(user.loc,1))
+			for(var/obj/item/weapon/reagent_containers/rc in view(1,user.loc))
 				choices += rc
 			var/obj/item/weapon/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
 			if(!T)
@@ -220,15 +220,17 @@ mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 			if(soundfile)
 				playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
 
-/mob/living/proc/vore_bellyrub(var/mob/living/T)
+/mob/living/proc/vore_bellyrub(var/mob/living/T in view(1,src))
 	set name = "Give Bellyrubs"
 	set category = "Abilities"
 	set desc = "Provide bellyrubs to either yourself or another mob with a belly."
 
 	if(!T)
-		T = input("Choose whose belly to rub") as null| mob in view(src.loc,1)
+		T = input("Choose whose belly to rub") as null| mob in view(1,src)
 		if(!T)
 			return FALSE
+	if(!T in view(1,src))
+		return FALSE
 	if(T.vore_selected)
 		var/obj/belly/B = T.vore_selected
 		if(istype(B))
