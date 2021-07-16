@@ -90,12 +90,8 @@
 #include "code\__defines\spaceman_dmm.dm"
 #include "code\__defines\species_languages.dm"
 #include "code\__defines\species_languages_vr.dm"
-<<<<<<< HEAD
 #include "code\__defines\species_languages_YW.dm"
-||||||| parent of 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
-=======
 #include "code\__defines\sprite_sheets.dm"
->>>>>>> 43822f5c50... Merge pull request #11080 from VOREStation/Arokha/bayport
 #include "code\__defines\sqlite_defines.dm"
 #include "code\__defines\stat_tracking.dm"
 #include "code\__defines\subsystems.dm"
