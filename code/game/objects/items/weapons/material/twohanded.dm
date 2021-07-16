@@ -90,9 +90,19 @@
 	unwielded_force_divisor = 0.25
 	force_divisor = 0.7 // 10/42 with hardness 60 (steel) and 0.25 unwielded divisor
 	dulled_divisor = 0.75	//Still metal on a stick
+<<<<<<< HEAD
 	sharp = 1
 	edge = 1
 	w_class = ITEMSIZE_HUGE //CHOMP Edit
+||||||| parent of 577b986ba6... Convert some bools to TRUE/FALSE instead of 1/0. (#11100)
+	sharp = 1
+	edge = 1
+	w_class = ITEMSIZE_LARGE
+=======
+	sharp = TRUE
+	edge = TRUE
+	w_class = ITEMSIZE_LARGE
+>>>>>>> 577b986ba6... Convert some bools to TRUE/FALSE instead of 1/0. (#11100)
 	slot_flags = SLOT_BACK
 	force_wielded = 30
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
@@ -153,8 +163,8 @@
 	unwielded_force_divisor = 0.375
 	thrown_force_divisor = 1.5 		// 22.5 when thrown with weight 15 (glass)
 	throw_speed = 3
-	edge = 0
-	sharp = 1
+	edge = FALSE
+	sharp = TRUE
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	mob_throw_hit_sound =  'sound/weapons/pierce.ogg'
 	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
@@ -176,8 +186,8 @@
 	thrown_force_divisor = 1
 	default_material = "MAT_STEEL"
 	fragile = 0
-	sharp = 1
-	edge = 0
+	sharp = TRUE
+	edge = FALSE
 
 /obj/item/weapon/material/twohanded/riding_crop
 	name = "riding crop"
