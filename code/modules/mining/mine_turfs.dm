@@ -5,8 +5,7 @@ var/list/mining_overlay_cache = list()
 	name = "impassable rock"
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "rock-dark"
-<<<<<<< HEAD
-	density = 1
+	density = TRUE
 	opacity = 1 // YW edit. Stops all my unsimulated tiles from being seethrough.
 
 //YW add start
@@ -16,11 +15,6 @@ var/list/mining_overlay_cache = list()
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "Icerock"
 //YW add end
-||||||| parent of 577b986ba6... Convert some bools to TRUE/FALSE instead of 1/0. (#11100)
-	density = 1
-=======
-	density = TRUE
->>>>>>> 577b986ba6... Convert some bools to TRUE/FALSE instead of 1/0. (#11100)
 
 /turf/simulated/mineral //wall piece
 	name = "rock"
