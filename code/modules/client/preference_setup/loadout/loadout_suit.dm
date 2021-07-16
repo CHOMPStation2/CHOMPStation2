@@ -222,7 +222,8 @@
 
 /datum/gear/suit/roles/cloak
 	display_name = "cloak selection, departments"
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo
+	path = /obj/item/clothing/accessory/poncho/roles/cloak/cargo 
+	cost = 1
 
 /datum/gear/suit/roles/cloak/New()
 	..()
