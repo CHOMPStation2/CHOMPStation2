@@ -90,19 +90,9 @@
 	unwielded_force_divisor = 0.25
 	force_divisor = 0.7 // 10/42 with hardness 60 (steel) and 0.25 unwielded divisor
 	dulled_divisor = 0.75	//Still metal on a stick
-<<<<<<< HEAD
-	sharp = 1
-	edge = 1
-	w_class = ITEMSIZE_HUGE //CHOMP Edit
-||||||| parent of 577b986ba6... Convert some bools to TRUE/FALSE instead of 1/0. (#11100)
-	sharp = 1
-	edge = 1
-	w_class = ITEMSIZE_LARGE
-=======
 	sharp = TRUE
 	edge = TRUE
 	w_class = ITEMSIZE_LARGE
->>>>>>> 577b986ba6... Convert some bools to TRUE/FALSE instead of 1/0. (#11100)
 	slot_flags = SLOT_BACK
 	force_wielded = 30
 	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
