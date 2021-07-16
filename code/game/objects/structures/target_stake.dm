@@ -24,8 +24,16 @@
 		return // get rid of that pinned target first!
 
 	if(istype(W, /obj/item/target))
+<<<<<<< HEAD
 		density = 0
 		W.density = 1
+||||||| parent of 035a67b3d1... Merge pull request #11110 from MarinaGryphon/codequality/bool-fixes-2
+		density = FALSE
+		W.density = 1
+=======
+		density = FALSE
+		W.density = TRUE
+>>>>>>> 035a67b3d1... Merge pull request #11110 from MarinaGryphon/codequality/bool-fixes-2
 		user.remove_from_mob(W)
 		W.loc = loc
 		W.layer = ABOVE_JUNK_LAYER
@@ -36,8 +44,16 @@
 /obj/structure/target_stake/attack_hand(mob/user as mob)
 	// taking pinned targets off!
 	if(pinned_target)
+<<<<<<< HEAD
 		density = 1
 		pinned_target.density = 0
+||||||| parent of 035a67b3d1... Merge pull request #11110 from MarinaGryphon/codequality/bool-fixes-2
+		density = TRUE
+		pinned_target.density = 0
+=======
+		density = TRUE
+		pinned_target.density = FALSE
+>>>>>>> 035a67b3d1... Merge pull request #11110 from MarinaGryphon/codequality/bool-fixes-2
 		pinned_target.layer = OBJ_LAYER
 
 		pinned_target.loc = user.loc
