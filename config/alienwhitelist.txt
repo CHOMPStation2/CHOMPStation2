@@ -16,6 +16,15 @@ funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
 hollifex - Diona
+<<<<<<< HEAD
+||||||| parent of c952f9ab12... Merge pull request #11117 from Huenererschrecker/patch-1
+h0lysquirr3l - Protean
+idcaboutaname - Protean
+=======
+huenererschrecker - Xenochimera
+h0lysquirr3l - Protean
+idcaboutaname - Protean
+>>>>>>> c952f9ab12... Merge pull request #11117 from Huenererschrecker/patch-1
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
