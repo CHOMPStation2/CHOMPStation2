@@ -33,6 +33,32 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/backup)
+<<<<<<< HEAD
+||||||| parent of 46de251fa3... Merge pull request #11140 from Very-Soft/cargopen
+"aaf" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/dogbed,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/mob/living/simple_mob/animal/sif/fluffy,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/quartermaster/qm)
+=======
+"aaf" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/dogbed,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/mob/living/simple_mob/animal/sif/fluffy,
+/turf/simulated/floor/grass,
+/area/quartermaster/qm)
+>>>>>>> 46de251fa3... Merge pull request #11140 from Very-Soft/cargopen
 "aag" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
@@ -8649,7 +8675,7 @@
 	pixel_x = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/outdoors/grass/forest,
+/turf/simulated/floor/grass,
 /area/quartermaster/qm)
 "auU" = (
 /obj/item/weapon/stool,
@@ -9058,7 +9084,7 @@
 /obj/machinery/light,
 /obj/structure/dogbed,
 /mob/living/simple_mob/animal/sif/fluffy/silky,
-/turf/simulated/floor/outdoors/grass/forest,
+/turf/simulated/floor/grass,
 /area/quartermaster/qm)
 "awh" = (
 /obj/machinery/power/apc{
@@ -9073,7 +9099,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/outdoors/grass/forest,
+/turf/simulated/floor/grass,
 /area/quartermaster/qm)
 "awj" = (
 /obj/machinery/requests_console{
@@ -18317,7 +18343,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/forest,
+/turf/simulated/floor/grass,
 /area/quartermaster/qm)
 "ekj" = (
 /obj/structure/table/reinforced,
@@ -24993,7 +25019,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/outdoors/grass/forest,
+/turf/simulated/floor/grass,
 /area/quartermaster/qm)
 "kCD" = (
 /obj/machinery/mineral/stacking_machine,
@@ -26778,7 +26804,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outdoors/grass/forest,
+/turf/simulated/floor/grass,
 /area/quartermaster/qm)
 "mau" = (
 /obj/item/weapon/storage/backpack/parachute{
@@ -28979,7 +29005,7 @@
 /turf/simulated/floor/tiled,
 /area/ai_monitored/storage/eva)
 "nZQ" = (
-/turf/simulated/floor/outdoors/grass/forest,
+/turf/simulated/floor/grass,
 /area/quartermaster/qm)
 "oaR" = (
 /obj/structure/cable/green{
@@ -30312,7 +30338,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/forest,
+/turf/simulated/floor/grass,
 /area/quartermaster/qm)
 "pOQ" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
