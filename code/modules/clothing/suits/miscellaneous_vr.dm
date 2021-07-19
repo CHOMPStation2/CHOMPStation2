@@ -134,9 +134,3 @@
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
 	icon_state = "cyberpunk"
 	armor = list("melee" = 10, "bullet" = 20, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0)
-<<<<<<< HEAD
-	
-||||||| parent of 982d88145d... Merge pull request #11142 from Heroman3003/Talonflufffix
-	
-=======
->>>>>>> 982d88145d... Merge pull request #11142 from Heroman3003/Talonflufffix
