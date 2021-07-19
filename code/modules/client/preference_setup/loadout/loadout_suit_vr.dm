@@ -82,5 +82,13 @@
 Talon winter coat
 */
 /datum/gear/suit/wintercoat/talon
+<<<<<<< HEAD
 	display_name = "winter coat, ITV"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/talon
+||||||| parent of 982d88145d... Merge pull request #11142 from Heroman3003/Talonflufffix
+	display_name = "winter coat, ITV"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/talon
+=======
+	display_name = "winter coat, Talon"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/talon
+>>>>>>> 982d88145d... Merge pull request #11142 from Heroman3003/Talonflufffix

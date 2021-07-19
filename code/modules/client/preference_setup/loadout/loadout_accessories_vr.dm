@@ -117,6 +117,16 @@
 Talon pin
 */
 /datum/gear/accessory/talonpin
+<<<<<<< HEAD
 	display_name = "ITV pin"
 	description = "A small enamel pin of the ITV logo."
 	path = /obj/item/clothing/accessory/talon
+||||||| parent of 982d88145d... Merge pull request #11142 from Heroman3003/Talonflufffix
+	display_name = "ITV pin"
+	description = "A small enamel pin of the ITV logo."
+	path = /obj/item/clothing/accessory/talon
+=======
+	display_name = "Talon pin"
+	description = "A small enamel pin of the Talon logo."
+	path = /obj/item/clothing/accessory/talon
+>>>>>>> 982d88145d... Merge pull request #11142 from Heroman3003/Talonflufffix
