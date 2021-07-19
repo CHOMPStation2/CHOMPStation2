@@ -317,15 +317,9 @@
 	name = "security undercoat"
 	desc = "A traditional Teshari garb made for the Security department. Made with slightly sturdier materials." //CHOMPedit
 	icon_state = "tesh_uniform_sec"
-<<<<<<< HEAD
-	item_state = "tesh_uniform_sec"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) //CHOMPedit start
 	siemens_coefficient = 0.9
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS //CHOMPedit end
-||||||| parent of bb25cb43d6... Merge pull request #11144 from VOREStation/Fixes/11143
-	item_state = "tesh_uniform_sec"
-=======
->>>>>>> bb25cb43d6... Merge pull request #11144 from VOREStation/Fixes/11143
 
 /obj/item/clothing/under/teshari/undercoat/jobs/service
 	name = "service undercoat"
