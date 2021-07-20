@@ -43,10 +43,18 @@
 /mob/living/carbon/alien/u_equip(obj/item/W as obj)
 	return
 
+<<<<<<< HEAD
 /*/mob/living/carbon/alien/Stat() //CHOMPedit. Commented out because this doesn't work properly for larva, when it should. Will probably give Diona their own kind of they don't have one
 	..()
 	stat(null, "Progress: [amount_grown]/[max_grown]") */
 
+||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
+/mob/living/carbon/alien/Stat()
+	..()
+	stat(null, "Progress: [amount_grown]/[max_grown]")
+
+=======
+>>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 /mob/living/carbon/alien/restrained()
 	return 0
 
