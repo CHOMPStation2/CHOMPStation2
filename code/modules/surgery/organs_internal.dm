@@ -14,12 +14,7 @@
 		return 0
 	return affected && affected.open == (affected.encased ? 3 : 2)
 
-<<<<<<< HEAD
-//CHOMPedit. Removed unused embryo surgery
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-=======
 //Removed unused Embryo Surgery, derelict and broken.
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 
 //////////////////////////////////////////////////////////////////
 //				CHEST INTERNAL ORGAN SURGERY					//
