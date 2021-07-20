@@ -79,16 +79,8 @@
 // Queen verbs.
 /mob/living/carbon/human/proc/lay_egg()
 
-<<<<<<< HEAD
-	set name = "Lay Egg (200)" //CHOMPedit changed number value
-	set desc = "Lay an egg that hatch into larva." //CHOMPedit
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	set name = "Lay Egg (75)"
-	set desc = "Lay an egg to produce huggers to impregnate prey with."
-=======
 	set name = "Lay Egg (200)"
 	set desc = "Lay an egg to produce huggers to impregnate prey with."
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 	set category = "Abilities"
 
 	if(!config.aliens_allowed)
@@ -96,31 +88,13 @@
 		verbs -= /mob/living/carbon/human/proc/lay_egg
 		return
 
-<<<<<<< HEAD
-	if(locate(/obj/structure/alien/egg) in get_turf(src)) //CHOMPedit. Changed from obj/effect to obj/structure
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	if(locate(/obj/effect/alien/egg) in get_turf(src))
-=======
 	if(locate(/obj/structure/alien/egg) in get_turf(src))
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 		to_chat(src, "There's already an egg here.")
 		return
 
-<<<<<<< HEAD
-	if(check_alien_ability(200,1,O_EGG)) //CHOMPedit changed plasma cost from 75 to  200
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	if(check_alien_ability(75,1,O_EGG))
-=======
 	if(check_alien_ability(200,1,O_EGG))
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
-<<<<<<< HEAD
-		new /obj/structure/alien/egg(loc) //CHOMPedit. Changed from obj/effect to obj/structure
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-		new /obj/effect/alien/egg(loc)
-=======
 		new /obj/structure/alien/egg(loc)
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 
 	return
 
