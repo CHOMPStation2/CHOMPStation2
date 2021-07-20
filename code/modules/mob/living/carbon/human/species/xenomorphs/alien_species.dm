@@ -25,16 +25,8 @@
 	siemens_coefficient = 0
 	gluttonous = 2
 
-<<<<<<< HEAD
-	brute_mod = 0.65 //CHOMPedit. Edited brute vulnerability
-	burn_mod = 1.50  //CHOMPedit. Edited burn vulnerability
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	brute_mod = 0.5 // Hardened carapace.
-	burn_mod = 2    // Weak to fire.
-=======
 	brute_mod = 0.6 // Hardened carapace.
 	burn_mod = 1.75    // Weak to fire.
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 
 	warning_low_pressure = 50
 	hazard_low_pressure = -1
@@ -52,13 +44,7 @@
 	flesh_color = "#282846"
 	gibbed_anim = "gibbed-a"
 	dusted_anim = "dust-a"
-<<<<<<< HEAD
-	death_message = "lets out a piercing multi-toned screech, green blood bubbling from its maw as it ceases." //CHOMPedit. Changed message.
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	death_message = "lets out a waning guttural screech, green blood bubbling from its maw."
-=======
 	death_message = "lets out a guttural screech, green blood bubbling from its maw."
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 	death_sound = 'sound/voice/hiss6.ogg'
 
 	damage_overlays = null //CHOMPedit. They don't have overlays yet, if someone wants to add some then be my guest
@@ -73,15 +59,9 @@
 	breath_type = null
 	poison_type = null
 
-<<<<<<< HEAD
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	vision_flags = SEE_SELF|SEE_MOBS
-
-=======
 	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS
 	darksight = 10
 
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 	has_organ = list(
 		O_HEART =    /obj/item/organ/internal/heart,
 		O_BRAIN =    /obj/item/organ/internal/brain/xeno,
@@ -119,13 +99,7 @@
 	return SPECIES_GENA //CHOMPedit
 
 /datum/species/xenos/get_random_name()
-<<<<<<< HEAD
-	return "Genaprawn [caste_name] ([alien_number])" //CHOMPedit
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	return "alien [caste_name] ([alien_number])"
-=======
 	return "xenomorph [caste_name] ([alien_number])"
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 
 /datum/species/xenos/can_understand(var/mob/other)
 	if(istype(other, /mob/living/carbon/alien/larva))
@@ -143,13 +117,7 @@
 		H.mind.special_role = "Alien"
 
 	alien_number++ //Keep track of how many aliens we've had so far.
-<<<<<<< HEAD
-	H.real_name = "Genaprawn [caste_name] ([alien_number])" //CHOMPedit
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	H.real_name = "alien [caste_name] ([alien_number])"
-=======
 	H.real_name = "xenomorph [caste_name] ([alien_number])"
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 	H.name = H.real_name
 
 	..()
@@ -202,20 +170,6 @@
 			return 1
 
 	return 0
-<<<<<<< HEAD
-//CHOMPedit removed infection images, since they do not exist anymore.
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-/*
-/datum/species/xenos/handle_login_special(var/mob/living/carbon/human/H)
-	H.AddInfectionImages()
-	..()
-
-/datum/species/xenos/handle_logout_special(var/mob/living/carbon/human/H)
-	H.RemoveInfectionImages()
-	..()
-*/
-=======
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 
 /datum/species/xenos/drone
 	name = SPECIES_GENA_DRONE //CHOMPedit
@@ -321,29 +275,13 @@
 
 /datum/species/xenos/queen
 
-<<<<<<< HEAD
-	name = SPECIES_GENA_QUEEN //CHOMPedit
-	total_health = 300 //CHOMPedit. Queen is chonk
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	name = SPECIES_XENO_QUEEN
-	total_health = 250
-=======
 	name = SPECIES_XENO_QUEEN
 	total_health = 300
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 	weeds_heal_rate = 5
 	weeds_plasma_rate = 20
 	caste_name = "queen"
-<<<<<<< HEAD
-	slowdown = 4
-	tail = null //CHOMPedit. Set to null
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	slowdown = 4
-	tail = "xenos_queen_tail"
-=======
 	slowdown = 3
 	tail = "xenos_queen_tail"
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 	rarity_value = 10
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_queen.dmi'
@@ -381,22 +319,10 @@
 	..()
 	// Make sure only one official queen exists at any point.
 	if(!alien_queen_exists(1,H))
-<<<<<<< HEAD
-		H.real_name = "Genaprawn queen ([alien_number])" //CHOMPedit
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-		H.real_name = "alien queen ([alien_number])"
-=======
 		H.real_name = "xenomorph queen ([alien_number])"
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 		H.name = H.real_name
 	else
-<<<<<<< HEAD
-		H.real_name = "Genaprawn princess ([alien_number])" //CHOMPedit
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-		H.real_name = "alien princess ([alien_number])"
-=======
 		H.real_name = "xenomorph princess ([alien_number])"
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 		H.name = H.real_name
 
 /datum/hud_data/alien
@@ -417,10 +343,4 @@
 	gear = list(
 		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
 		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
-<<<<<<< HEAD
-		) //CHOMPedit removed head and outer layer item slots, since they caused a slew of problems with xenomorphs
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-		)
-=======
 		) //Removed hat and outer slots, it caused too many problems that required admin intervention.
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
