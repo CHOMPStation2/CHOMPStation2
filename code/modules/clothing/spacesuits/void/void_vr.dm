@@ -151,11 +151,3 @@
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
 	sprite_sheets = ALL_VR_SPRITE_SHEETS_HEAD_MOB
 	sprite_sheets_obj = null
-<<<<<<< HEAD
-	sprite_sheets_refit = null
-||||||| parent of 9b03341473... Merge pull request #11162 from VOREStation/Arokha/cycletweaks
-	sprite_sheets_refit = null
-	
-=======
-	
->>>>>>> 9b03341473... Merge pull request #11162 from VOREStation/Arokha/cycletweaks
