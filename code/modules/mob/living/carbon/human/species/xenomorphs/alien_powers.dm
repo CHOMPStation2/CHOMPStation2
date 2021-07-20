@@ -329,13 +329,7 @@
 
 /mob/living/carbon/human/proc/gut()
 	set category = "Abilities"
-<<<<<<< HEAD
-	set name = "Slaughter" //CHOMPedit renamed Gut to Slaughter so its more obvious what it does
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-	set name = "Gut"
-=======
 	set name = "Slaughter"
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 	set desc = "While grabbing someone aggressively, rip their guts out or tear them apart."
 
 	if(last_special > world.time)
@@ -351,13 +345,7 @@
 		return
 
 	if(G.state < GRAB_AGGRESSIVE)
-<<<<<<< HEAD
-		to_chat(src, "<span class='danger'>You must have an aggressive grab to slaughter your prey!</span>") //CHOMPedit
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-		to_chat(src, "<span class='danger'>You must have an aggressive grab to gut your prey!</span>")
-=======
 		to_chat(src, "<span class='danger'>You must have an aggressive grab to slaughter your prey!</span>")
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 		return
 
 	last_special = world.time + 50
