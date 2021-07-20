@@ -4826,7 +4826,7 @@ aa
 /area/shuttle/curabitur/curashuttle/med)
 "bM" = (
 /obj/structure/fans/hardlight,
-/obj/machinery/door/airlock/external/glass/bolted{
+/obj/machinery/door/airlock/external/bolted{
 	frequency = 1480;
 	id_tag = "curadocking"
 	},
