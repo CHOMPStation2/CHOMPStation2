@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-/mob/living/carbon/alien/larva/Stat() //CHOMPedit. Oh thank god we can see how close we are to full grown now
-	. = ..()
-	if(. && statpanel("Status"))
-		stat("Growth", "[round(amount_grown)]/[max_grown]")
-
-||||||| parent of eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
-=======
 /mob/living/carbon/alien/larva/Stat() //Specified where progression stats come from, because for some reason it doesn't work right in carbon/alien
 	. = ..()
 	if(. && statpanel("Status"))
 		stat("Growth", "[round(amount_grown)]/[max_grown]")
 
->>>>>>> eb76662be1... Merge pull request #11112 from MisterGrimm/XenomorphOverhaul
 /mob/living/carbon/alien/larva/confirm_evolution()
 
 	to_chat(src, "<span class='notice'><b>You are growing into a beautiful alien! It is time to choose a caste.</b></span>")
