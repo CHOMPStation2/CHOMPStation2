@@ -239,9 +239,3 @@
 		SPECIES_ALRAUNE			= 'icons/inventory/head/item_vr.dmi',
 		SPECIES_ZADDAT			= 'icons/inventory/head/item_vr.dmi'
 		)
-<<<<<<< HEAD
-	sprite_sheets_refit = list()	//have to nullify this as well just to be thorough
-||||||| parent of 9b03341473... Merge pull request #11162 from VOREStation/Arokha/cycletweaks
-	sprite_sheets_refit = list()	//have to nullify this as well just to be thorough
-=======
->>>>>>> 9b03341473... Merge pull request #11162 from VOREStation/Arokha/cycletweaks
