@@ -251,8 +251,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	var/list/tickersubsystems = list()
 	var/list/runlevel_sorted_subsystems = list(list())	//ensure we always have at least one runlevel
 	var/timer = world.time
-	for (var/thing in subsystems)
-		var/datum/controller/subsystem/SS = thing
+	for (var/datum/controller/subsystem/SS as anything in subsystems)
 		if (SS.flags & SS_NO_FIRE)
 			continue
 		SS.queued_time = 0
@@ -339,8 +338,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 				cached_runlevel = checking_runlevel
 				current_runlevel_subsystems = runlevel_sorted_subsystems[cached_runlevel]
 				var/stagger = world.time
-				for(var/I in current_runlevel_subsystems)
-					var/datum/controller/subsystem/SS = I
+				for(var/datum/controller/subsystem/SS as anything in current_runlevel_subsystems)
 					if(SS.next_fire <= world.time)
 						stagger += world.tick_lag * rand(1, 5)
 						SS.next_fire = stagger
@@ -553,8 +551,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	for(var/I in runlevel_SS)
 		subsystemstocheck |= I
 
-	for (var/thing in subsystemstocheck)
-		var/datum/controller/subsystem/SS = thing
+	for (var/datum/controller/subsystem/SS as anything in subsystemstocheck)
 		if (!SS || !istype(SS))
 			//list(SS) is so if a list makes it in the subsystem list, we remove the list, not the contents
 			subsystems -= list(SS)
@@ -601,8 +598,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	//disallow more than one map to load at once, multithreading it will just cause race conditions
 	while(map_loading)
 		stoplag()
-	for(var/S in subsystems)
-		var/datum/controller/subsystem/SS = S
+	for(var/datum/controller/subsystem/SS as anything in subsystems)
 		SS.StartLoadingMap()
 
 	map_loading = TRUE
@@ -611,6 +607,5 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	if(!quiet)
 		admin_notice("<span class='danger'>Map is finished.  Unlocking.</span>", R_DEBUG)
 	map_loading = FALSE
-	for(var/S in subsystems)
-		var/datum/controller/subsystem/SS = S
+	for(var/datum/controller/subsystem/SS as anything in subsystems)
 		SS.StopLoadingMap()

@@ -507,11 +507,11 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_MONKEY_NEVREAN,
 				SPECIES_MONKEY_SERGAL,
 				SPECIES_MONKEY_VULPKANIN,
-				SPECIES_GENA,					//Same for xenos, CHOMPedit
-				SPECIES_GENA_DRONE,
-				SPECIES_GENA_HUNTER,
-				SPECIES_GENA_SENTINEL,
-				SPECIES_GENA_QUEEN, 			//CHOMPedit end
+				SPECIES_XENO,					//Same for xenos,
+				SPECIES_XENO_DRONE,
+				SPECIES_XENO_HUNTER,
+				SPECIES_XENO_SENTINEL,
+				SPECIES_XENO_QUEEN,
 				SPECIES_SHADOW,
 				SPECIES_GOLEM,					//Some special species that may or may not be ever used in event too,
 				SPECIES_SHADEKIN)			//Shadefluffers just poof away
@@ -534,7 +534,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 	var/paths
 
 	// Custom Hair Accessories
-	paths = typesof(/datum/sprite_accessory/hair_accessory) - /datum/sprite_accessory/hair_accessory
+	paths = subtypesof(/datum/sprite_accessory/hair_accessory)
 	for(var/path in paths)
 		var/datum/sprite_accessory/hair_accessory/instance = new path()
 		hair_accesories_list[path] = instance
@@ -568,14 +568,14 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 
 
 	// Weaver recipe stuff
-	paths = typesof(/datum/weaver_recipe/structure) - /datum/weaver_recipe/structure
+	paths = subtypesof(/datum/weaver_recipe/structure)
 	for(var/path in paths)
 		var/datum/weaver_recipe/instance = new path()
 		if(!instance.title)
 			continue //A prototype or something
 		weavable_structures[instance.title] = instance
 
-	paths = typesof(/datum/weaver_recipe/item) - /datum/weaver_recipe/item
+	paths = subtypesof(/datum/weaver_recipe/item)
 	for(var/path in paths)
 		var/datum/weaver_recipe/instance = new path()
 		if(!instance.title)

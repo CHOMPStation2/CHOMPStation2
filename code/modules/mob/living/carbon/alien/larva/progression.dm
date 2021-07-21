@@ -1,4 +1,4 @@
-/mob/living/carbon/alien/larva/Stat() //CHOMPedit. Oh thank god we can see how close we are to full grown now
+/mob/living/carbon/alien/larva/Stat() //Specified where progression stats come from, because for some reason it doesn't work right in carbon/alien
 	. = ..()
 	if(. && statpanel("Status"))
 		stat("Growth", "[round(amount_grown)]/[max_grown]")
