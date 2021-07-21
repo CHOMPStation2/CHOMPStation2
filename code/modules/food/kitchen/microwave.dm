@@ -43,10 +43,20 @@
 
 	if(!available_recipes)
 		available_recipes = new
+<<<<<<< HEAD
 		for(var/T in (typesof(/datum/recipe)-/datum/recipe))
 			var/datum/recipe/type = T
 			if((initial(type.appliance) & appliancetype))
 				available_recipes += new type
+||||||| parent of 70cccc775a... Merge pull request #11192 from VOREStation/Arokha/hmm
+		for(var/datum/recipe/type as anything in subtypesof(/datum/recipe))
+			if((initial(type.appliance) & appliancetype))
+				available_recipes += new type
+=======
+		for(var/datum/recipe/typepath as anything in subtypesof(/datum/recipe))
+			if((initial(typepath.appliance) & appliancetype))
+				available_recipes += new typepath
+>>>>>>> 70cccc775a... Merge pull request #11192 from VOREStation/Arokha/hmm
 		
 		acceptable_items = new
 		acceptable_reagents = new
