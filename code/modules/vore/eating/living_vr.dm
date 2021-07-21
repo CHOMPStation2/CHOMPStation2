@@ -315,27 +315,12 @@
 		return list()
 
 	var/list/message_list = list()
-<<<<<<< HEAD
-	for (var/belly in vore_organs)
-		var/obj/belly/B = belly
-		message_list += B.get_examine_msg()
-		message_list += B.get_examine_msg_absorbed()
-||||||| parent of 0dcdc6d7d5... Merge pull request #11179 from VOREStation/Arokha/opt
-	for (var/belly in vore_organs)
-		var/obj/belly/B = belly
-		var/bellymessage = B.get_examine_msg()
-		if(bellymessage) message_list += bellymessage
-
-		bellymessage = B.get_examine_msg_absorbed()
-		if(bellymessage) message_list += bellymessage
-=======
 	for(var/obj/belly/B as anything in vore_organs)
 		var/bellymessage = B.get_examine_msg()
 		if(bellymessage) message_list += bellymessage
 
 		bellymessage = B.get_examine_msg_absorbed()
 		if(bellymessage) message_list += bellymessage
->>>>>>> 0dcdc6d7d5... Merge pull request #11179 from VOREStation/Arokha/opt
 
 	return message_list
 
