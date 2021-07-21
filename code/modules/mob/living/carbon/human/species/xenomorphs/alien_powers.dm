@@ -2,7 +2,7 @@
 	for(var/mob/living/carbon/human/Q in living_mob_list)
 		if(self && ignore_self && self == Q)
 			continue
-		if(Q.species.name != SPECIES_GENA_QUEEN) //CHOMPedit
+		if(Q.species.name != SPECIES_XENO_QUEEN)
 			continue
 		if(!Q.key || !Q.client || Q.stat)
 			continue
@@ -79,8 +79,8 @@
 // Queen verbs.
 /mob/living/carbon/human/proc/lay_egg()
 
-	set name = "Lay Egg (200)" //CHOMPedit changed number value
-	set desc = "Lay an egg that hatch into larva." //CHOMPedit
+	set name = "Lay Egg (200)"
+	set desc = "Lay an egg to produce huggers to impregnate prey with."
 	set category = "Abilities"
 
 	if(!config.aliens_allowed)
@@ -88,13 +88,13 @@
 		verbs -= /mob/living/carbon/human/proc/lay_egg
 		return
 
-	if(locate(/obj/structure/alien/egg) in get_turf(src)) //CHOMPedit. Changed from obj/effect to obj/structure
+	if(locate(/obj/structure/alien/egg) in get_turf(src))
 		to_chat(src, "There's already an egg here.")
 		return
 
-	if(check_alien_ability(200,1,O_EGG)) //CHOMPedit changed plasma cost from 75 to  200
+	if(check_alien_ability(200,1,O_EGG))
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
-		new /obj/structure/alien/egg(loc) //CHOMPedit. Changed from obj/effect to obj/structure
+		new /obj/structure/alien/egg(loc)
 
 	return
 
@@ -110,7 +110,7 @@
 
 	if(check_alien_ability(500))
 		visible_message("<span class='alium'><B>[src] begins to twist and contort!</B></span>", "<span class='alium'>You begin to evolve!</span>")
-		src.set_species("Genaprawn Queen") //CHOMPedit
+		src.set_species("Xenomorph Queen")
 
 	return
 
@@ -144,7 +144,7 @@
 		P.firer = src
 		P.old_style_target(A)
 		P.fire()
-		playsound(src, 'sound/weapons/pierce.ogg', 25, 0)
+		playsound(src, 'sound/weapons/alien_spitacid.ogg', 25, 0)
 
 /mob/living/carbon/human/proc/corrosive_acid(O as obj|turf in oview(1)) //If they right click to corrode, an error will flash if its an invalid target./N
 	set name = "Corrosive Acid (200)"
@@ -329,7 +329,7 @@
 
 /mob/living/carbon/human/proc/gut()
 	set category = "Abilities"
-	set name = "Slaughter" //CHOMPedit renamed Gut to Slaughter so its more obvious what it does
+	set name = "Slaughter"
 	set desc = "While grabbing someone aggressively, rip their guts out or tear them apart."
 
 	if(last_special > world.time)
@@ -345,7 +345,7 @@
 		return
 
 	if(G.state < GRAB_AGGRESSIVE)
-		to_chat(src, "<span class='danger'>You must have an aggressive grab to slaughter your prey!</span>") //CHOMPedit
+		to_chat(src, "<span class='danger'>You must have an aggressive grab to slaughter your prey!</span>")
 		return
 
 	last_special = world.time + 50

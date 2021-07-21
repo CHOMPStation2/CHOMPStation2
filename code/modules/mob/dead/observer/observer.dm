@@ -341,6 +341,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/area/A = areas[key]
 		if(A.z in using_map?.secret_levels)
 			areas -= key
+		if(A.z in using_map?.hidden_levels)
+			areas -= key
 
 	return areas
 
@@ -352,6 +354,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	for(var/key in mobs)
 		var/mobz = get_z(mobs[key])
 		if(mobz in using_map?.secret_levels)
+			mobs -= key
+		if(mobz in using_map?.hidden_levels)
 			mobs -= key
 	
 	return mobs
