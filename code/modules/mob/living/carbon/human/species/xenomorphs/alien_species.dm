@@ -1,25 +1,14 @@
 //Stand-in until this is made more lore-friendly.
 /datum/species/xenos
-	name = SPECIES_GENA //CHOMPedit
-	name_plural = "Genaprawns" //CHOMPedit
+	name = SPECIES_XENO
+	name_plural = "Xenomorphs"
 
-	default_language = "Xenolingua" //CHOMPedit
+	default_language = "Xenomorph"
 	language = "Hivemind"
 	assisted_langs = list()
 	unarmed_types = list(/datum/unarmed_attack/claws/strong/xeno, /datum/unarmed_attack/bite/strong/xeno)
 	hud_type = /datum/hud_data/alien
 	rarity_value = 3
-
-	male_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
-	female_scream_sound = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg') //CHOMPedit SCREE
-
-	darksight = 10 //CHOMPedit. Added darksight
-	vision_flags = SEE_SELF|SEE_MOBS|SEE_TURFS //CHOMPedit trying to make xenos see properly
-
-	pixel_offset_x = -16 //CHOMPedit. I literally had to make a different form of pixel_x just for this species, fuck my life
-
-
-	icon_template = 'icons/mob/human_races/xenos/template.dmi' //CHOMPedit. Add icon template for 64x64 sprites
 
 	has_fine_manipulation = 0
 	siemens_coefficient = 0
@@ -46,10 +35,6 @@
 	dusted_anim = "dust-a"
 	death_message = "lets out a guttural screech, green blood bubbling from its maw."
 	death_sound = 'sound/voice/hiss6.ogg'
-
-	damage_overlays = null //CHOMPedit. They don't have overlays yet, if someone wants to add some then be my guest
-	damage_mask = null //CHOMPedit.
-	blood_mask = null //CHOMPedit.
 
 	speech_sounds = list('sound/voice/hiss1.ogg','sound/voice/hiss2.ogg','sound/voice/hiss3.ogg','sound/voice/hiss4.ogg')
 	speech_chance = 75
@@ -96,7 +81,7 @@
 		)
 
 /datum/species/xenos/get_bodytype()
-	return SPECIES_GENA //CHOMPedit
+	return SPECIES_XENO
 
 /datum/species/xenos/get_random_name()
 	return "xenomorph [caste_name] ([alien_number])"
@@ -107,8 +92,8 @@
 	return FALSE
 
 /datum/species/xenos/hug(var/mob/living/carbon/human/H,var/mob/living/target)
-	H.visible_message("<span class='notice'>[H] caresses [target] with its eldritch arm.</span>", \
-					"<span class='notice'>You caress [target] with your eldritch arm.</span>") //CHOMPedit. Changed messages
+	H.visible_message("<span class='notice'>[H] caresses [target] with its scythe-like arm.</span>", \
+					"<span class='notice'>You caress [target] with your scythe-like arm.</span>")
 
 /datum/species/xenos/handle_post_spawn(var/mob/living/carbon/human/H)
 
@@ -172,11 +157,11 @@
 	return 0
 
 /datum/species/xenos/drone
-	name = SPECIES_GENA_DRONE //CHOMPedit
+	name = SPECIES_XENO_DRONE
 	caste_name = "drone"
 	weeds_plasma_rate = 15
 	slowdown = 1
-	tail = null //CHOMPedit. Set to null
+	tail = "xenos_drone_tail"
 	rarity_value = 5
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_drone.dmi'
@@ -212,12 +197,12 @@
 	..()
 
 /datum/species/xenos/hunter
-	name = SPECIES_GENA_HUNTER //CHOMPedit
+	name = SPECIES_XENO_HUNTER
 	weeds_plasma_rate = 5
 	caste_name = "hunter"
 	slowdown = -1
 	total_health = 150
-	tail = null //CHOMPedit. Set to null
+	tail = "xenos_hunter_tail"
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_hunter.dmi'
 	deform =  'icons/mob/human_races/xenos/r_xenos_hunter.dmi'
@@ -242,12 +227,12 @@
 		)
 
 /datum/species/xenos/sentinel
-	name = SPECIES_GENA_SENTINEL //CHOMPedit
+	name = SPECIES_XENO_SENTINEL
 	weeds_plasma_rate = 10
 	caste_name = "sentinel"
 	slowdown = 0
 	total_health = 200
-	tail = null //CHOMPedit. Set to null
+	tail = "xenos_sentinel_tail"
 
 	icobase = 'icons/mob/human_races/xenos/r_xenos_sentinel.dmi'
 	deform =  'icons/mob/human_races/xenos/r_xenos_sentinel.dmi'
