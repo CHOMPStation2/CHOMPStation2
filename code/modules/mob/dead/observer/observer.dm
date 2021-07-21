@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /mob/observer
 	name = "observer"
 	desc = "This shouldn't appear"
