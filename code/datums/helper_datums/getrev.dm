@@ -45,18 +45,8 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 		return
 	if(header)
 		. += "The following pull requests are currently test merged:"
-<<<<<<< HEAD
-	for(var/line in testmerge)
-		var/datum/tgs_revision_information/test_merge/tm = line
-		var/cm = tm.head_commit		//CHOMPStation Edit TGS4
-||||||| parent of 0dcdc6d7d5... Merge pull request #11179 from VOREStation/Arokha/opt
-	for(var/line in testmerge)
-		var/datum/tgs_revision_information/test_merge/tm = line
-		var/cm = tm.pull_request_commit
-=======
 	for(var/datum/tgs_revision_information/test_merge/tm as anything in testmerge)
-		var/cm = tm.pull_request_commit
->>>>>>> 0dcdc6d7d5... Merge pull request #11179 from VOREStation/Arokha/opt
+		var/cm = tm.head_commit		//CHOMPStation Edit TGS4
 		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
 		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.holder))
 			continue
