@@ -64,33 +64,13 @@
 		return
 	
 	// Check for bans properly.
-<<<<<<< HEAD:code/game/objects/effects/alien/alien egg.dm
-	if(jobban_isbanned(user, MODE_XENOMORPH))
-		to_chat(user, "<span class='danger'>You are banned from playing a Genaprawn.</span>") //CHOMPedit
-||||||| parent of b004256516... Merge pull request #11163 from VOREStation/Arokha/alientweaks:code/game/objects/structures/alien/alien egg.dm
-	if(jobban_isbanned(user, "Xenomorph"))
-		to_chat(user, "<span class='danger'>You are banned from playing a Xenomorph.</span>")
-=======
 	if(jobban_isbanned(user, "Xenomorph"))
 		tgui_alert_async(user, "You are banned from playing a Xenomorph, so you can't join as this Xenomorph larva.")
->>>>>>> b004256516... Merge pull request #11163 from VOREStation/Arokha/alientweaks:code/game/objects/structures/alien/alien egg.dm
 		return
-<<<<<<< HEAD:code/game/objects/effects/alien/alien egg.dm
-
-	var/confirm = alert(user, "Are you sure you want to join as a Genaprawn larva?", "Become Larva", "No", "Yes") //CHOMPedit
-
-	if(!src || confirm != "Yes")
-||||||| parent of b004256516... Merge pull request #11163 from VOREStation/Arokha/alientweaks:code/game/objects/structures/alien/alien egg.dm
-
-	var/confirm = alert(user, "Are you sure you want to join as a Xenomorph larva?", "Become Larva", "No", "Yes")
-
-	if(!src || confirm != "Yes")
-=======
 		
 	// Check for respawn
 	if(!user.MayRespawn(1))
 		tgui_alert_async(user, "You aren't allowed to respawn, so you can't join as this Xenomorph larva.")
->>>>>>> b004256516... Merge pull request #11163 from VOREStation/Arokha/alientweaks:code/game/objects/structures/alien/alien egg.dm
 		return
 	
 	if(progress == -1)
