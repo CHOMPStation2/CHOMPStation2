@@ -115,23 +115,9 @@
 //Needs fixing			W << 'sound/voice/nifmedsynth_injured.ogg' //CHOMP Add
 			activate()
 
-<<<<<<< HEAD
-		for(var/eo in nif.human.bad_external_organs)
-			var/obj/item/organ/external/EO = eo
-			for(var/w in EO.wounds)
-				var/datum/wound/W = w
-				if(W.damage <= 30) // Chomp Edit // The current limb break threshold.
-||||||| parent of 0dcdc6d7d5... Merge pull request #11179 from VOREStation/Arokha/opt
-		for(var/eo in nif.human.bad_external_organs)
-			var/obj/item/organ/external/EO = eo
-			for(var/w in EO.wounds)
-				var/datum/wound/W = w
-				if(W.damage <= 5)
-=======
 		for(var/obj/item/organ/external/EO as anything in nif.human.bad_external_organs)
 			for(var/datum/wound/W as anything in EO.wounds)
-				if(W.damage <= 5)
->>>>>>> 0dcdc6d7d5... Merge pull request #11179 from VOREStation/Arokha/opt
+				if(W.damage <= 30) // Chomp Edit // The current limb break threshold.
 					W.heal_damage(0.1)
 					EO.update_damages()
 					if(EO.update_icon())
