@@ -14,7 +14,7 @@
 		return 0
 	return affected && affected.open == (affected.encased ? 3 : 2)
 
-//CHOMPedit. Removed unused embryo surgery
+//Removed unused Embryo Surgery, derelict and broken.
 
 //////////////////////////////////////////////////////////////////
 //				CHEST INTERNAL ORGAN SURGERY					//
