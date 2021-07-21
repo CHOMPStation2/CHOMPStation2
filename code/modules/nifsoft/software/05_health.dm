@@ -115,10 +115,8 @@
 //Needs fixing			W << 'sound/voice/nifmedsynth_injured.ogg' //CHOMP Add
 			activate()
 
-		for(var/eo in nif.human.bad_external_organs)
-			var/obj/item/organ/external/EO = eo
-			for(var/w in EO.wounds)
-				var/datum/wound/W = w
+		for(var/obj/item/organ/external/EO as anything in nif.human.bad_external_organs)
+			for(var/datum/wound/W as anything in EO.wounds)
 				if(W.damage <= 30) // Chomp Edit // The current limb break threshold.
 					W.heal_damage(0.1)
 					EO.update_damages()
