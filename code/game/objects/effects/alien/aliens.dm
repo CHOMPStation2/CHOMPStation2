@@ -203,6 +203,7 @@
 	layer = ABOVE_TURF_LAYER+0.01
 	light_range = NODERANGE
 	light_on = TRUE
+	light_color = "#673972"
 
 	var/node_range = NODERANGE
 	var/set_color = "#321D37"
@@ -420,5 +421,3 @@
 		if(0 to 1)
 			visible_message("<span class='alium'>[src.target] begins to crumble under the acid!</span>")
 	spawn(rand(150, 200)) tick()
-
-//CHOMPedit old eggs removed

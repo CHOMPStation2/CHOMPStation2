@@ -86,17 +86,17 @@
 		var/mob/living/carbon/human/X = user
 		if(istype(X.species, /datum/species/xenos))
 			if(src.locked || src.welded)
-				visible_message("<span class='alium'>\The [user] begins tearing into \the [src] internals!</span>") //CHOMPedit . edited message to make it more violent
+				visible_message("<span class='alium'>\The [user] begins tearing into \the [src] internals!</span>")
 				src.do_animate("deny")
-				if(do_after(user,30 SECONDS,src)) //CHOMPedit . Increased time to force open welded door for alien
-					visible_message("<span class='danger'>\The [user] tears \the [src] open, sparks flying from its electronics!</span>") //CHOMPedit
+				if(do_after(user,15 SECONDS,src))
+					visible_message("<span class='danger'>\The [user] tears \the [src] open, sparks flying from its electronics!</span>")
 					src.do_animate("spark")
-					playsound(src, 'sound/machines/door/airlock_creaking_xeno.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS) //CHOMPedit gave xeno airlock breaking its own sound effect
+					playsound(src, 'sound/machines/door/airlock_tear_apart.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS)
 					src.locked = 0
 					src.welded = 0
 					update_icon()
 					open(1)
-					src.set_broken() //CHOMPedit . Changed action to make ripping open the airlock more realistic
+					src.set_broken() //These aren't emags, these be CLAWS
 			else if(src.density)
 				visible_message("<span class='alium'>\The [user] begins forcing \the [src] open!</span>")
 				if(do_after(user, 5 SECONDS,src))
