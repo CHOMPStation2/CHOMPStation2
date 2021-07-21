@@ -32,7 +32,7 @@
 	lifespan, but due to their lust for violence, only a handful have ever survived beyond the age of 80, such as the infamous and \
 	legendary General Rain Silves who is claimed to have lived to 5000."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal 
 //	wikilink="https://www.yawn.ocry.com/Sergal"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
@@ -100,7 +100,7 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal 
 //	wikilink="https://www.yawn.ocry.com/Akula"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
@@ -150,7 +150,7 @@
 	over and over again. Consequently, they struggle to make copies of same things. Both genders have a voice that echoes a lot. Their natural \
 	tone oscillates between tenor and soprano. They are excessively noisy when they quarrel in their native language."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Nevrean"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
@@ -251,7 +251,7 @@
 	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
 	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
@@ -339,7 +339,7 @@
 		H.equip_to_slot_or_del(L, slot_in_backpack)
 
 /datum/species/diona
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit: restore whitelist requirement
 	min_age = 18
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona" //CHOMPedit
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -372,16 +372,8 @@
 
 /datum/species/vox
 	gluttonous = 0
-<<<<<<< HEAD
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit
-	min_age = 18	
-||||||| parent of e5c49f772b... Merge pull request #11173 from Heroman3003/waterbreath
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
-	min_age = 18	
-=======
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	min_age = 18
->>>>>>> e5c49f772b... Merge pull request #11173 from Heroman3003/waterbreath
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //Get ya quills done did
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
@@ -420,7 +412,7 @@
 	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal 
 //	wikilink="https://www.yawn.ocry.com/Rapala"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/rapala)
@@ -450,7 +442,7 @@
 	documented in the Virgo system, following a mining bombardment of Virgo 3. The crew of NSB Adephagia have \
 	taken to calling these creatures 'Shadekin', and the name has generally stuck and spread. "		//TODO: Something more fitting for black-eyes
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal 
 //	wikilink = "https://wiki.vore-station.net/Shadekin"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/shadekin)
 
