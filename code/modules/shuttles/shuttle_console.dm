@@ -151,15 +151,7 @@
 
 GLOBAL_LIST_BOILERPLATE(papers_dockingcode, /obj/item/weapon/paper/dockingcodes)
 /hook/roundstart/proc/populate_dockingcodes()
-<<<<<<< HEAD
-	for(var/paper in GLOB.papers_dockingcode)
-		var/obj/item/weapon/paper/dockingcodes/dcp = paper
-||||||| parent of 0dcdc6d7d5... Merge pull request #11179 from VOREStation/Arokha/opt
-	for(var/paper in global.papers_dockingcode)
-		var/obj/item/weapon/paper/dockingcodes/dcp = paper
-=======
 	for(var/obj/item/weapon/paper/dockingcodes/dcp as anything in global.papers_dockingcode)
->>>>>>> 0dcdc6d7d5... Merge pull request #11179 from VOREStation/Arokha/opt
 		dcp.populate_info()
 	return TRUE
 
