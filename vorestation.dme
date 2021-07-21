@@ -1143,8 +1143,6 @@
 #include "code\game\objects\effects\zone_divider.dm"
 #include "code\game\objects\effects\zz_portals_ch.dm"
 #include "code\game\objects\effects\zz_triggers_ch.dm"
-#include "code\game\objects\effects\alien\alien egg.dm"
-#include "code\game\objects\effects\alien\alien.dm"
 #include "code\game\objects\effects\alien\aliens.dm"
 #include "code\game\objects\effects\chem\chemsmoke.dm"
 #include "code\game\objects\effects\chem\coating.dm"
