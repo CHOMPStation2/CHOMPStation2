@@ -1565,6 +1565,7 @@
 #include "code\game\objects\structures\trash_pile_vr.dm"
 #include "code\game\objects\structures\trash_pile_vr_ch.dm"
 #include "code\game\objects\structures\under_wardrobe.dm"
+#include "code\game\objects\structures\wall_frame.dm"
 #include "code\game\objects\structures\watercloset.dm"
 #include "code\game\objects\structures\watercloset_vr.dm"
 #include "code\game\objects\structures\windoor_assembly.dm"
