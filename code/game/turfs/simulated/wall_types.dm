@@ -88,7 +88,10 @@
 
 /turf/simulated/wall/durasteel/Initialize(mapload)
 	. = ..(mapload, "durasteel", "durasteel")
-
+/turf/simulated/wall/durasteel/blueserg/New(var/newloc)
+	..(newloc,"durasteel", "durasteel")
+/turf/simulated/wall/durasteel/blueserg/attackby(obj/item/I, mob/user)
+	return
 /turf/simulated/wall/wood/Initialize(mapload)
 	. = ..(mapload,  MAT_WOOD)
 
@@ -100,6 +103,19 @@
 
 /turf/simulated/wall/log_sif/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFLOG)
+
+/turf/unsimulated/wall/ice
+	name = "Ice wall"
+	desc = "Frigid Ice that seems to be stronger then most manmade structures"
+	icon = 'icons/turf/snow_new.dmi'
+	icon_state = "Icerock"
+
+/turf/unsimulated/wall/bronze
+	name = "Bronze wall"
+	desc = "A huge chunk of warm metal. The clanging of machinery emanates from within."
+	icon = 'icons/obj/clockwork_objects.dmi'
+	icon_state = "clockwork_wall"
+
 
 // Shuttle Walls
 /turf/simulated/shuttle/wall
@@ -243,6 +259,29 @@
 	icon_state = "void-hc"
 	hard_corner = 1
 
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/blue
+	name = "hardcorner wall"
+	icon_state = "void-hc"
+	hard_corner = 1
+	stripe_color = "#0000FF"
+
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/lightblue
+	name = "hardcorner wall"
+	icon_state = "void-hc"
+	hard_corner = 1
+	stripe_color = "#33ccff"
+
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/green
+	name = "hardcorner wall"
+	icon_state = "void-hc"
+	hard_corner = 1
+	stripe_color = "#00FF00"
+
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/red
+	name = "hardcorner wall"
+	icon_state = "void-hc"
+	stripe_color = "#FF0000"
+	hard_corner = 1
 /turf/simulated/shuttle/wall/voidcraft/no_join
 	name = "nojoin wall"
 	icon_state = "void-nj"
@@ -253,6 +292,12 @@
 
 /turf/simulated/shuttle/wall/voidcraft/blue
 	stripe_color = "#0000FF"
+
+/turf/simulated/shuttle/wall/voidcraft/lightblue
+	stripe_color = "#33ccff"
+
+/turf/simulated/shuttle/wall/voidcraft/orange
+	stripe_color = "#cc3300"
 
 /turf/simulated/shuttle/wall/voidcraft/green
 	stripe_color = "#00FF00"
@@ -291,20 +336,18 @@
 	return list(dir, turn(dir,90))
 
 /obj/structure/hull_corner/proc/update_look()
-	cut_overlays()
-	
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
 		if(!istype(T))
 			continue
-		
+
 		name = T.name
 		desc = T.desc
-		
+
 		var/datum/material/B = T.material
 		var/datum/material/R = T.reinf_material
-		
+
 		if(B?.icon_colour)
 			color = B.icon_colour
 		if(R?.icon_colour)
@@ -362,7 +405,7 @@
 					if(decided_to_blend)
 						dirs += direction
 						break blend_obj_loop // breaks outer loop
-
+						
 /turf/simulated/wall/eris/r_wall
 	icon_state = "rgeneric"
 /turf/simulated/wall/eris/r_wall/Initialize(mapload)
@@ -375,7 +418,7 @@
 	wall_masks = 'icons/turf/wall_masks_bay.dmi'
 	var/list/blend_objects = list(/obj/machinery/door)
 	var/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor)
-
+	
 	var/stripe_color // Adds a colored stripe to the walls
 
 /turf/simulated/wall/bay/can_join_with_low_wall(var/obj/structure/low_wall/WF)
@@ -389,7 +432,7 @@
 			I = image(wall_masks, "stripe[wall_connections[i]]", dir = 1<<(i-1))
 			I.color = stripe_color
 			add_overlay(I)
-
+			
 /turf/simulated/wall/bay/special_wall_connections(list/dirs, list/inrange)
 	..()
 	for(var/direction in cardinal)
