@@ -52,12 +52,18 @@
 	old_x = -16
 	old_y = 0
 
+<<<<<<< HEAD
 /mob/living/simple_mob/animal/giant_spider/webslinger/event // YW CHANGE
 	ai_holder_type = /datum/ai_holder/simple_mob/event
 
 /mob/living/simple_mob/animal/giant_spider/nurse/queen/event // YW CHANGE
 	ai_holder_type = /datum/ai_holder/simple_mob/event
 
+||||||| parent of 4f04b774db... Merge pull request #11197 from Heroman3003/giantenemyspider
+=======
+	egg_type = /obj/effect/spider/eggcluster/royal
+
+>>>>>>> 4f04b774db... Merge pull request #11197 from Heroman3003/giantenemyspider
 /mob/living/simple_mob/animal/giant_spider/nurse
 	var/can_lay_eggs = TRUE
 
