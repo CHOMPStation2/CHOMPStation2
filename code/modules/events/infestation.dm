@@ -24,8 +24,16 @@
 	var/vermstring
 
 /datum/event/infestation/start()
+<<<<<<< HEAD
 //CHOMP Edit changed for Southern Cross areas
 	location = rand(0,9)
+||||||| parent of b9e8de8f2c... Merge pull request #11201 from Enzo-Leon/migrations-2
+
+	location = rand(0,10)
+=======
+
+	location = rand(0,9)
+>>>>>>> b9e8de8f2c... Merge pull request #11201 from Enzo-Leon/migrations-2
 	var/list/turf/simulated/floor/turfs = list()
 	var/spawn_area_type
 	switch(location)
