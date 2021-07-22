@@ -88,10 +88,7 @@
 
 /turf/simulated/wall/durasteel/Initialize(mapload)
 	. = ..(mapload, "durasteel", "durasteel")
-/turf/simulated/wall/durasteel/blueserg/New(var/newloc)
-	..(newloc,"durasteel", "durasteel")
-/turf/simulated/wall/durasteel/blueserg/attackby(obj/item/I, mob/user)
-	return
+
 /turf/simulated/wall/wood/Initialize(mapload)
 	. = ..(mapload,  MAT_WOOD)
 
@@ -103,19 +100,6 @@
 
 /turf/simulated/wall/log_sif/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFLOG)
-
-/turf/unsimulated/wall/ice
-	name = "Ice wall"
-	desc = "Frigid Ice that seems to be stronger then most manmade structures"
-	icon = 'icons/turf/snow_new.dmi'
-	icon_state = "Icerock"
-
-/turf/unsimulated/wall/bronze
-	name = "Bronze wall"
-	desc = "A huge chunk of warm metal. The clanging of machinery emanates from within."
-	icon = 'icons/obj/clockwork_objects.dmi'
-	icon_state = "clockwork_wall"
-
 
 // Shuttle Walls
 /turf/simulated/shuttle/wall
@@ -259,29 +243,6 @@
 	icon_state = "void-hc"
 	hard_corner = 1
 
-/turf/simulated/shuttle/wall/voidcraft/hard_corner/blue
-	name = "hardcorner wall"
-	icon_state = "void-hc"
-	hard_corner = 1
-	stripe_color = "#0000FF"
-
-/turf/simulated/shuttle/wall/voidcraft/hard_corner/lightblue
-	name = "hardcorner wall"
-	icon_state = "void-hc"
-	hard_corner = 1
-	stripe_color = "#33ccff"
-
-/turf/simulated/shuttle/wall/voidcraft/hard_corner/green
-	name = "hardcorner wall"
-	icon_state = "void-hc"
-	hard_corner = 1
-	stripe_color = "#00FF00"
-
-/turf/simulated/shuttle/wall/voidcraft/hard_corner/red
-	name = "hardcorner wall"
-	icon_state = "void-hc"
-	stripe_color = "#FF0000"
-	hard_corner = 1
 /turf/simulated/shuttle/wall/voidcraft/no_join
 	name = "nojoin wall"
 	icon_state = "void-nj"
@@ -292,12 +253,6 @@
 
 /turf/simulated/shuttle/wall/voidcraft/blue
 	stripe_color = "#0000FF"
-
-/turf/simulated/shuttle/wall/voidcraft/lightblue
-	stripe_color = "#33ccff"
-
-/turf/simulated/shuttle/wall/voidcraft/orange
-	stripe_color = "#cc3300"
 
 /turf/simulated/shuttle/wall/voidcraft/green
 	stripe_color = "#00FF00"
@@ -316,6 +271,7 @@
 // Fake corners for making hulls look pretty
 /obj/structure/hull_corner
 	name = "hull corner"
+	plane = OBJ_PLANE - 1
 	
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "hull_corner"
@@ -335,18 +291,20 @@
 	return list(dir, turn(dir,90))
 
 /obj/structure/hull_corner/proc/update_look()
+	cut_overlays()
+	
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
 		if(!istype(T))
 			continue
-
+		
 		name = T.name
 		desc = T.desc
-
+		
 		var/datum/material/B = T.material
 		var/datum/material/R = T.reinf_material
-
+		
 		if(B?.icon_colour)
 			color = B.icon_colour
 		if(R?.icon_colour)
@@ -371,50 +329,6 @@
 
 /obj/structure/hull_corner/long_horiz/get_dirs_to_test()
 	return list(dir, turn(dir,90), turn(dir,-90))
-<<<<<<< HEAD
-||||||| parent of 7857275f5a... Merge pull request #11213 from VOREStation/Arokha/aro3
-
-
-
-// Eris walls
-/turf/simulated/wall/eris
-	icon = 'icons/turf/wall_masks_eris.dmi'
-	icon_state = "generic"
-	wall_masks = 'icons/turf/wall_masks_eris.dmi'
-
-/turf/simulated/wall/eris/can_join_with_low_wall(var/obj/structure/low_wall/WF)
-	return istype(WF, /obj/structure/low_wall/eris)
-
-/turf/simulated/wall/eris/r_wall
-	icon_state = "rgeneric"
-/turf/simulated/wall/eris/r_wall/Initialize(mapload)
-	. = ..(mapload, "plasteel","plasteel")
-
-// Bay walls
-/turf/simulated/wall/bay
-	icon = 'icons/turf/wall_masks_bay.dmi'
-	icon_state = "generic"
-	wall_masks = 'icons/turf/wall_masks_bay.dmi'
-
-	var/stripe_color // Adds a colored stripe to the walls
-
-/turf/simulated/wall/bay/can_join_with_low_wall(var/obj/structure/low_wall/WF)
-	return istype(WF, /obj/structure/low_wall/bay)
-
-/turf/simulated/wall/bay/update_icon()
-	. = ..()
-	if(stripe_color)
-		var/image/I
-		for(var/i = 1 to 4)
-			I = image(wall_masks, "stripe[wall_connections[i]]", dir = 1<<(i-1))
-			I.color = stripe_color
-			add_overlay(I)
-
-/turf/simulated/wall/bay/r_wall
-	icon_state = "rgeneric"
-/turf/simulated/wall/bay/r_wall/Initialize(mapload)
-	. = ..(mapload, "plasteel","plasteel")
-=======
 
 
 
@@ -501,4 +415,3 @@
 	icon_state = "rgeneric"
 /turf/simulated/wall/bay/r_wall/Initialize(mapload)
 	. = ..(mapload, "plasteel","plasteel")
->>>>>>> 7857275f5a... Merge pull request #11213 from VOREStation/Arokha/aro3
