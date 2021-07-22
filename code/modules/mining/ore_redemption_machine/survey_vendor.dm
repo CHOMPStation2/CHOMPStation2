@@ -13,6 +13,7 @@
 	. = ..()
 	prize_list = list()
 	prize_list["Gear"] = list(
+<<<<<<< HEAD
 		EQUIPMENT("Brown Webbing",									/obj/item/clothing/accessory/storage/brown_vest,							500),
 		EQUIPMENT("Defense Equipment - Smoke Bomb",					/obj/item/grenade/smokebomb,												10),
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",		/obj/item/grenade/spawnergrenade/manhacks/station/locked,					100),
@@ -58,6 +59,27 @@
 		EQUIPMENT("Survival Equipment - Large Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/large/green,					25), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Pathfinder Belt",			/obj/item/storage/belt/explorer/pathfinder,									200), //CHOMPADD
 		EQUIPMENT("Exotic Sample Container",						/obj/item/storage/sample_container,											100),
+=======
+		EQUIPMENT("Defense Equipment - Smoke Bomb",				/obj/item/weapon/grenade/smokebomb,									10),
+		EQUIPMENT("Defense Equipment - Plasteel Machete",		/obj/item/weapon/material/knife/machete,							50),
+		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/manhacks/station/locked,	100),
+		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/ward,						150),
+		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				750),
+		EQUIPMENT("Fishing Net",								/obj/item/weapon/material/fishing_net,								50),
+		EQUIPMENT("Titanium Fishing Rod",						/obj/item/weapon/material/fishing_rod/modern,						100),
+		EQUIPMENT("Durasteel Fishing Rod",						/obj/item/weapon/material/fishing_rod/modern/strong,				750),
+		EQUIPMENT("Fulton Beacon",								/obj/item/fulton_core,												300),
+		EQUIPMENT("Geiger Counter",								/obj/item/device/geiger,											75),
+		EQUIPMENT("GPS Device",									/obj/item/device/gps/mining,										10),
+		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,										250),
+		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							120),
+		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											75),
+		EQUIPMENT("Survival Equipment - Glowstick", 			/obj/item/device/flashlight/glowstick,								5),
+		EQUIPMENT("Survival Equipment - Flare", 				/obj/item/device/flashlight/flare,									5),
+		EQUIPMENT("Survival Equipment - Radioisotope Glowstick",		/obj/item/device/flashlight/glowstick/radioisotope,			40),
+		EQUIPMENT("Survival Equipment - Modular Explorer Suit",		/obj/item/clothing/suit/armor/pcarrier/explorer,				200),
+		EQUIPMENT("Survival Equipment - Armored Jumpsuit",		/obj/item/clothing/under/explorer/armored,							200),
+>>>>>>> 5e78c8e1e0 (Merge pull request #11198 from Very-Soft/vendorinducers)
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",								/obj/item/stack/marker_beacon,												1),
@@ -85,6 +107,7 @@
 
 	)
 	prize_list["Miscellaneous"] = list(
+<<<<<<< HEAD
 		EQUIPMENT(REAGENT_ABSINTHE,									/obj/item/reagent_containers/food/drinks/bottle/absinthe,					10),
 		EQUIPMENT(REAGENT_WHISKEY,									/obj/item/reagent_containers/food/drinks/bottle/whiskey,					10),
 		EQUIPMENT("Cigar",											/obj/item/clothing/mask/smokable/cigarette/cigar/havana,					15),
@@ -104,6 +127,24 @@
 		EQUIPMENT("Mining-Grade PSG",								/obj/item/personal_shield_generator/belt/mining/loaded,						100), //CHOMPADD
 		EQUIPMENT("Security-Grade PSG",								/obj/item/personal_shield_generator/belt/security/loaded,					200), //CHOMPADD
 		EQUIPMENT("PSG Variant-P",			   						/obj/item/personal_shield_generator/belt/parry,	            				250), //CHOMPADD
+=======
+		EQUIPMENT("Absinthe",					/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe,	10),
+		EQUIPMENT("Whiskey",					/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,		10),
+		EQUIPMENT("Cigar",						/obj/item/clothing/mask/smokable/cigarette/cigar/havana,			15),
+		EQUIPMENT("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,	50),
+		EQUIPMENT("Digital Tablet - Advanced",	/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,	100),
+		EQUIPMENT("Industrial Equipment - Phoron Bore",	/obj/item/weapon/gun/magnetic/matfed/phoronbore/loaded,		300),
+		EQUIPMENT("Industrial Equipment - Inducer",			/obj/item/weapon/inducer,								750),
+		EQUIPMENT("Laser Pointer",				/obj/item/device/laser_pointer,										90),
+		EQUIPMENT("Luxury Shelter Capsule",		/obj/item/device/survivalcapsule/luxury,							310),
+		EQUIPMENT("Bar Shelter Capsule",		/obj/item/device/survivalcapsule/luxurybar,							1000),
+		EQUIPMENT("Plush Toy",					/obj/random/plushie,												30),
+		EQUIPMENT("Soap",						/obj/item/weapon/soap/nanotrasen,									20),
+		EQUIPMENT("Thalers - 100",				/obj/item/weapon/spacecash/c100,									100),
+		EQUIPMENT("Umbrella",					/obj/item/weapon/melee/umbrella/random,								20),
+		EQUIPMENT("UAV - Recon Skimmer",		/obj/item/device/uav,												40),
+
+>>>>>>> 5e78c8e1e0 (Merge pull request #11198 from Very-Soft/vendorinducers)
 	)
 
 /obj/machinery/mineral/equipment_vendor/survey/get_points(obj/item/card/id/target)

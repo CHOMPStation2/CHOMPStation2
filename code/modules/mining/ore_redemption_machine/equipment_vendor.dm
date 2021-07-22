@@ -105,6 +105,7 @@
 		EQUIPMENT("Premium Kinetic Accelerator",/obj/item/gun/energy/kinetic_accelerator/premiumka,							12000),
 	)
 	prize_list["Digging Tools"] = list(
+<<<<<<< HEAD
 		EQUIPMENT("Resonator",									/obj/item/resonator,										900),
 		EQUIPMENT("Silver Pickaxe",								/obj/item/pickaxe/silver,									1200),
 		EQUIPMENT("Diamond Pickaxe",							/obj/item/pickaxe/diamond,									2000),
@@ -115,6 +116,20 @@
 		EQUIPMENT("Explosive Excavation Kit - Plastic Charge",	/obj/item/plastique/seismic/locked,							1500),
 		EQUIPMENT("Industrial Equipment - Phoron Bore",			/obj/item/gun/magnetic/matfed/phoronbore/loaded,			3000),
 		EQUIPMENT("Industrial Equipment - Inducer",				/obj/item/inducer,											3500),
+=======
+		// EQUIPMENT("Diamond Pickaxe",	/obj/item/weapon/pickaxe/diamond,				2000),
+		// EQUIPMENT("Kinetic Crusher",	/obj/item/twohanded/required/kinetic_crusher,	750),
+		EQUIPMENT("Resonator",			/obj/item/resonator,							900),
+		EQUIPMENT("Silver Pickaxe",		/obj/item/weapon/pickaxe/silver,				1200),
+		EQUIPMENT("Super Resonator",	/obj/item/resonator/upgraded,					2500),
+		EQUIPMENT("Fine Excavation Kit - Chisels",			/obj/item/weapon/storage/excavation,			500),
+		EQUIPMENT("Fine Excavation Kit - Measuring Tape",	/obj/item/device/measuring_tape,				125),
+		EQUIPMENT("Fine Excavation Kit - Hand Pick",		/obj/item/weapon/pickaxe/hand,					375),
+		EQUIPMENT("Explosive Excavation Kit - Plastic Charge",/obj/item/weapon/plastique/seismic/locked,	1500),
+		EQUIPMENT("Industrial Equipment - Phoron Bore",		/obj/item/weapon/gun/magnetic/matfed/phoronbore/loaded,			3000),
+		EQUIPMENT("Industrial Equipment - Inducer",			/obj/item/weapon/inducer,						3500),
+		EQUIPMENT("Industrial Equipment - Sheet-Snatcher",	/obj/item/weapon/storage/bag/sheetsnatcher,		500),
+>>>>>>> 5e78c8e1e0 (Merge pull request #11198 from Very-Soft/vendorinducers)
 	)
 	prize_list["Hardsuit"] = list(
 		EQUIPMENT("Hardsuit - Cheap Control Module",		/obj/item/rig/industrial/vendor,								2000),
