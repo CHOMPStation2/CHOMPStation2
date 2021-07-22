@@ -113,6 +113,10 @@
 		if(can_join_with(W))
 			dirs += get_dir(src, W)
 
+	special_wall_connections(dirs, inrange)
+	wall_connections = dirs_to_corner_states(dirs)
+
+/turf/simulated/wall/proc/special_wall_connections(list/dirs, list/inrange)
 	if(material.icon_base == "hull") // Could be improved...
 		var/additional_dirs = 0
 		for(var/direction in alldirs)
@@ -125,10 +129,18 @@
 				if ((additional_dirs & diag_dir) == diag_dir)
 					dirs += diag_dir
 
+<<<<<<< HEAD
 	wall_connections = dirs_to_corner_states(dirs)
 
 /turf/simulated/wall/proc/can_join_with(var/turf/simulated/wall/W)
 	//VOREStation Edit Start
+||||||| parent of 7857275f5a... Merge pull request #11213 from VOREStation/Arokha/aro3
+	wall_connections = dirs_to_corner_states(dirs)
+
+/turf/simulated/wall/proc/can_join_with_wall(var/turf/simulated/wall/W)
+=======
+/turf/simulated/wall/proc/can_join_with_wall(var/turf/simulated/wall/W)
+>>>>>>> 7857275f5a... Merge pull request #11213 from VOREStation/Arokha/aro3
 	//No blending if no material
 	if(!material || !W.material)
 		return 0
