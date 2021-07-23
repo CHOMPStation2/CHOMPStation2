@@ -33038,6 +33038,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
+/obj/machinery/holoplant,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "cRq" = (
@@ -33282,8 +33283,28 @@
 /turf/simulated/floor/plating,
 /area/maintenance/readingrooms)
 "eTp" = (
+<<<<<<< HEAD
 /turf/simulated/wall/durasteel,
 /area/ai_upload_foyer)
+||||||| parent of 3b034d830d... Merge pull request #11215 from Mewchild/MC-AIQoL
+/obj/effect/floor_decal/chapel,
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+=======
+/obj/effect/floor_decal/chapel,
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+"eZx" = (
+/obj/machinery/holoplant,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
+>>>>>>> 3b034d830d... Merge pull request #11215 from Mewchild/MC-AIQoL
 "eZG" = (
 /obj/machinery/camera/network/command,
 /obj/effect/floor_decal/techfloor{
@@ -33671,6 +33692,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
+"jUQ" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/holoplant,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
 "jWK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -34513,6 +34541,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
 "qSJ" = (
+/obj/machinery/media/jukebox/hacked,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai)
 "rii" = (
@@ -49726,11 +49755,11 @@ adt
 xGf
 rlN
 srN
-rlN
+eZx
 kiL
 pAF
 fyj
-rXR
+jUQ
 kEC
 rlN
 xGf
