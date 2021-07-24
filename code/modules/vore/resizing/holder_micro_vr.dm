@@ -3,7 +3,7 @@
 /obj/item/weapon/holder/micro
 	name = "micro"
 	desc = "Another crewmember, small enough to fit in your hand."
-	icon_state = "micro"
+	icon_state = "blank"
 	icon_override = 'icons/inventory/head/mob_vr.dmi'
 	slot_flags = SLOT_FEET | SLOT_HEAD | SLOT_ID
 	w_class = ITEMSIZE_SMALL
