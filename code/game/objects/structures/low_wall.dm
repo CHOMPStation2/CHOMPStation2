@@ -619,11 +619,6 @@
 
 /obj/effect/low_wall_spawner/eris/rphoron
 	icon_state = "sp_rphoron"
-<<<<<<< HEAD:code/game/objects/structures/wall_frame.dm
-	window_type = /obj/structure/window/eris/phoronreinforced
-||||||| parent of b4b6da0fc1... Merge pull request #11222 from VOREStation/Arokha/angled_wall_stuff:code/game/objects/structures/wall_frame.dm
-	window_type = /obj/structure/window/eris/phoronreinforced
-=======
 	window_type = /obj/structure/window/eris/phoronreinforced
 
 /obj/effect/low_wall_spawner/eris/reinforced
@@ -642,4 +637,3 @@
 /obj/effect/low_wall_spawner/eris/reinforced/rphoron
 	icon_state = "spr_rphoron"
 	window_type = /obj/structure/window/eris/phoronreinforced
->>>>>>> b4b6da0fc1... Merge pull request #11222 from VOREStation/Arokha/angled_wall_stuff:code/game/objects/structures/low_wall.dm
