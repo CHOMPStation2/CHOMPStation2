@@ -326,6 +326,12 @@
 		start_stop_song()
 	updateDialog()
 
+//Pre-hacked Jukebox, has the full sond list unlocked
+/obj/machinery/media/jukebox/hacked
+	name = "DRM free space jukebox"
+	desc = "Filled with songs both past and present! Unlocked for your convenience!"
+	hacked = 1
+
 // Ghostly jukebox for adminbuse
 /obj/machinery/media/jukebox/ghost
 	name = "ghost jukebox"
