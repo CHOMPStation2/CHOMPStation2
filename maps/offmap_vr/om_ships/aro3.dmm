@@ -186,7 +186,7 @@
 	dir = 4;
 	id_tag = "aro3_private1";
 	name = "private quarters 1";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/suite_port)
@@ -209,7 +209,7 @@
 "bv" = (
 /obj/machinery/door/airlock/angled/standard{
 	name = "bunkroom 3";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/bunkrooms)
@@ -606,7 +606,7 @@
 /obj/machinery/door/airlock/angled/standard{
 	id_tag = "aro3_private1";
 	name = "private quarters 1";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/suite_port)
@@ -800,7 +800,7 @@
 /obj/machinery/door/airlock/angled/standard{
 	id_tag = "aro3_private2";
 	name = "private quarters 2";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/suite_starboard)
@@ -1071,7 +1071,7 @@
 /obj/machinery/door/airlock/angled/standard{
 	dir = 4;
 	name = "public restroom";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/wc_starboard)
@@ -1314,7 +1314,7 @@
 	dir = 4;
 	id_tag = "aro3_private2";
 	name = "private quarters 2";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/suite_starboard)
@@ -1443,7 +1443,7 @@
 "km" = (
 /obj/machinery/door/airlock/angled/standard{
 	name = "toilet";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
 /area/aro3/suite_starboard_wc)
@@ -2218,7 +2218,7 @@
 "qu" = (
 /obj/machinery/door/airlock/angled/standard{
 	name = "bunkroom 2";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/bunkrooms)
@@ -2526,7 +2526,7 @@
 	},
 /obj/machinery/door/airlock/angled/standard{
 	name = "restroom";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/suite_port)
@@ -2647,7 +2647,7 @@
 	dir = 4;
 	id_tag = "aro3_private2_bed";
 	name = "bedroom";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 >>>>>>> b4b6da0fc1... Merge pull request #11222 from VOREStation/Arokha/angled_wall_stuff
@@ -29966,7 +29966,7 @@ Ua
 "EM" = (
 /obj/machinery/door/airlock/angled/standard{
 	name = "toilet";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/suite_port_wc)
@@ -30051,7 +30051,7 @@ Ua
 	},
 /obj/machinery/door/airlock/angled/standard{
 	name = "restroom";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/suite_starboard)
@@ -30440,7 +30440,7 @@ Ua
 /obj/machinery/door/airlock/angled/standard{
 	dir = 4;
 	name = "public restroom";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
 /area/aro3/wc_port)
@@ -31376,7 +31376,7 @@ Ua
 	dir = 4;
 	id_tag = "aro3_private1_bed";
 	name = "bedroom";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/suite_port)
@@ -31798,7 +31798,7 @@ Ua
 "Vv" = (
 /obj/machinery/door/airlock/angled/standard{
 	name = "bunkroom 1";
-	stripe_color = "#00AA00
+	stripe_color = "#00AA00"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
 /area/aro3/bunkrooms)
