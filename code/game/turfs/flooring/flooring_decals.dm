@@ -1223,7 +1223,6 @@ var/list/floor_decals = list()
 /obj/effect/floor_decal/grass_edge/corner
 	name = "grass edge"
 	icon_state = "grass_edge_corner"
-<<<<<<< HEAD
 
 /obj/effect/floor_decal/plaque/yw
 	name = "Commerative Plaque"
@@ -1245,8 +1244,6 @@ var/list/floor_decals = list()
 	icon_state = "gravsnow_edges"
 /obj/effect/floor_decal/snow/floor/surround
 	icon_state = "snow_surround"
-||||||| parent of 83534ded9c... Merge pull request #11229 from VOREStation/upstream-merge-8172
-=======
 
 //Multi-part Floor Signs
 
@@ -1271,5 +1268,3 @@ var/list/floor_decals = list()
 /obj/effect/floor_decal/arrows
 	name = "floor arrows"
 	icon_state = "arrows"
-
->>>>>>> 83534ded9c... Merge pull request #11229 from VOREStation/upstream-merge-8172
