@@ -33886,6 +33886,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/effect/floor_decal/emblem/nt1,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "kPR" = (
@@ -33900,6 +33901,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/effect/floor_decal/emblem/nt2,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "kRb" = (
@@ -35006,6 +35008,16 @@
 "tPB" = (
 /turf/simulated/floor/grass,
 /area/chapel/main)
+"tVj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/floor_decal/emblem/nt3,
+/turf/simulated/floor/tiled/techfloor,
+/area/ai_upload)
 "tWV" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -48898,7 +48910,7 @@ adt
 adt
 fBS
 hIk
-kTB
+tVj
 rii
 bDr
 qPo
