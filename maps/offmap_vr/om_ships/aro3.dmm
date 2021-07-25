@@ -182,7 +182,7 @@
 /turf/simulated/floor/plating/eris/under,
 /area/aro3/atmos)
 "bk" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	id_tag = "aro3_private1";
 	name = "private quarters 1";
@@ -207,7 +207,7 @@
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/shuttle/aroboat3)
 "bv" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "bunkroom 3";
 	stripe_color = "#00AA00
 	},
@@ -536,7 +536,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	name = "storage room";
 	stripe_color = "#9e6243"
@@ -603,7 +603,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	id_tag = "aro3_private1";
 	name = "private quarters 1";
 	stripe_color = "#00AA00
@@ -797,7 +797,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	id_tag = "aro3_private2";
 	name = "private quarters 2";
 	stripe_color = "#00AA00
@@ -1068,7 +1068,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	name = "public restroom";
 	stripe_color = "#00AA00
@@ -1102,7 +1102,7 @@
 /turf/simulated/floor/tiled/eris/white/golden,
 /area/aro3/medical)
 "hU" = (
-/obj/machinery/door/airlock/angled/standard/glass{
+/obj/machinery/door/airlock/angled_bay/standard/glass{
 	name = "spare supplies"
 	},
 /turf/simulated/floor/tiled/eris/dark/panels,
@@ -1114,7 +1114,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "bar";
 	stripe_color = "#00AA00"
 	},
@@ -1138,7 +1138,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	dir = 8;
 	name = "medical";
 	stripe_color = "#6084e0"
@@ -1184,7 +1184,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	name = "storage room";
 	stripe_color = "#9e6243"
@@ -1241,7 +1241,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "atmos room";
 	stripe_color = "#32d3bb"
 	},
@@ -1310,7 +1310,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/aro3/medical)
 "jy" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	id_tag = "aro3_private2";
 	name = "private quarters 2";
@@ -1441,7 +1441,7 @@
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/aro3/hallway_starboard)
 "km" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "toilet";
 	stripe_color = "#00AA00
 	},
@@ -1551,11 +1551,17 @@
 	dir = 8
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 ||||||| parent of b4b6da0fc1... Merge pull request #11222 from VOREStation/Arokha/angled_wall_stuff
 /turf/simulated/floor/tiled/eris/steel/panels,
 =======
 /obj/machinery/door/airlock/angled/double/glass{
+||||||| parent of b4e2815324... Merge pull request #11230 from VOREStation/Arokha/tgmcangled
+/obj/machinery/door/airlock/angled/double/glass{
+=======
+/obj/machinery/door/airlock/angled_bay/double/glass{
+>>>>>>> b4e2815324... Merge pull request #11230 from VOREStation/Arokha/tgmcangled
 	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -1691,7 +1697,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	dir = 8;
 	name = "workshop";
 	stripe_color = "#AA00AA"
@@ -2216,7 +2222,7 @@
 /area/aro3/bar)
 =======
 "qu" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "bunkroom 2";
 	stripe_color = "#00AA00
 	},
@@ -2435,7 +2441,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -2449,7 +2455,7 @@
 /turf/simulated/floor/tiled/eris/white/cargo,
 /area/aro3/medical)
 "so" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	name = "storage room";
 	stripe_color = "#9e6243"
@@ -2524,7 +2530,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "restroom";
 	stripe_color = "#00AA00
 	},
@@ -2561,7 +2567,7 @@
 "ti" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/angled/double/glass,
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor/tiled/eris/steel/panels,
 /area/aro3/hallway_starboard)
 "tk" = (
@@ -2628,10 +2634,11 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/double/glass,
+/obj/machinery/door/airlock/angled_bay/double/glass,
 /turf/simulated/floor/tiled/eris/steel/panels,
 /area/aro3/hallway_port)
 "tY" = (
+<<<<<<< HEAD
 <<<<<<< HEAD
 /obj/structure/table/steel,
 /obj/item/device/flashlight/lamp/green,
@@ -2644,6 +2651,11 @@
 /turf/simulated/floor/tiled/eris/dark/panels,
 =======
 /obj/machinery/door/airlock/angled/standard{
+||||||| parent of b4e2815324... Merge pull request #11230 from VOREStation/Arokha/tgmcangled
+/obj/machinery/door/airlock/angled/standard{
+=======
+/obj/machinery/door/airlock/angled_bay/standard{
+>>>>>>> b4e2815324... Merge pull request #11230 from VOREStation/Arokha/tgmcangled
 	dir = 4;
 	id_tag = "aro3_private2_bed";
 	name = "bedroom";
@@ -2755,7 +2767,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/aro3/bar)
 "vx" = (
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "ship systems"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -3046,11 +3058,17 @@
 	dir = 8
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 ||||||| parent of b4b6da0fc1... Merge pull request #11222 from VOREStation/Arokha/angled_wall_stuff
 /turf/simulated/floor/tiled/eris/steel/panels,
 =======
 /obj/machinery/door/airlock/angled/double/glass{
+||||||| parent of b4e2815324... Merge pull request #11230 from VOREStation/Arokha/tgmcangled
+/obj/machinery/door/airlock/angled/double/glass{
+=======
+/obj/machinery/door/airlock/angled_bay/double/glass{
+>>>>>>> b4e2815324... Merge pull request #11230 from VOREStation/Arokha/tgmcangled
 	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -3283,7 +3301,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "engine room";
 	stripe_color = "#e6ef40"
 	},
@@ -3336,7 +3354,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "public hall"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -3477,7 +3495,7 @@
 /area/aro3/bar)
 "Aa" = (
 /obj/structure/fans/hardlight,
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	dir = 8;
 	door_color = "#AA0000";
 	name = "port airlock";
@@ -3556,7 +3574,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	dir = 8;
 	name = "kitchen"
 	},
@@ -29964,7 +29982,7 @@ Ua
 /turf/simulated/floor/tiled/eris/white/cargo,
 /area/aro3/medical)
 "EM" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "toilet";
 	stripe_color = "#00AA00
 	},
@@ -30049,7 +30067,7 @@ Ua
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "restroom";
 	stripe_color = "#00AA00
 	},
@@ -30437,7 +30455,7 @@ Ua
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	name = "public restroom";
 	stripe_color = "#00AA00
@@ -30553,7 +30571,7 @@ Ua
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "KK" = (
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "repair bay"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -30901,7 +30919,7 @@ Ua
 /turf/simulated/floor/tiled/eris/white/golden,
 /area/aro3/medical)
 "Nj" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	name = "storage room";
 	stripe_color = "#9e6243"
@@ -31136,7 +31154,7 @@ Ua
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "ship systems"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -31297,7 +31315,7 @@ Ua
 "QD" = (
 /obj/structure/fans/hardlight,
 /obj/machinery/door/firedoor/glass/hidden,
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "hangar";
 	stripe_color = "#AA0000"
 	},
@@ -31319,7 +31337,7 @@ Ua
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "park"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -31372,7 +31390,7 @@ Ua
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/aro3/hallway_bunkrooms)
 "Rm" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	dir = 4;
 	id_tag = "aro3_private1_bed";
 	name = "bedroom";
@@ -31553,7 +31571,7 @@ Ua
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -31633,7 +31651,7 @@ Ua
 /turf/simulated/floor/tiled/eris/cafe,
 /area/aro3/kitchen)
 "TO" = (
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "kitchen"
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -31673,7 +31691,7 @@ Ua
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "bridge";
 	req_one_access = list(777);
 	stripe_color = "#0000AA"
@@ -31683,7 +31701,7 @@ Ua
 "Uj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	name = "bunkrooms";
 	stripe_color = "#00AA00"
 	},
@@ -31718,7 +31736,7 @@ Ua
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel/panels,
@@ -31796,7 +31814,7 @@ Ua
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/aro3/engines)
 "Vv" = (
-/obj/machinery/door/airlock/angled/standard{
+/obj/machinery/door/airlock/angled_bay/standard{
 	name = "bunkroom 1";
 	stripe_color = "#00AA00
 	},
@@ -31813,7 +31831,7 @@ Ua
 /area/aro3/suite_starboard_wc)
 "VO" = (
 /obj/structure/fans/hardlight,
-/obj/machinery/door/airlock/angled/double/glass{
+/obj/machinery/door/airlock/angled_bay/double/glass{
 	dir = 8;
 	door_color = "#AA0000";
 	name = "starboard airlock";
@@ -32059,7 +32077,7 @@ Ua
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/angled/standard/glass{
+/obj/machinery/door/airlock/angled_bay/standard/glass{
 	name = "qpad room";
 	stripe_color = "#AA00AA"
 	},
