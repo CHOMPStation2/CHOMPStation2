@@ -36538,7 +36538,9 @@ aa
 	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port_store)
 "dn" = (
@@ -38341,9 +38343,6 @@ aa
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
 	dir = 4
@@ -38355,6 +38354,9 @@ aa
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/engineering)
@@ -38811,6 +38813,7 @@ aa
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/starboard)
 "kT" = (
@@ -40800,7 +40803,6 @@ aa
 	layer = 3.3;
 	pixel_y = 26
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -43495,9 +43497,6 @@ aa
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/structure/catwalk,
 /obj/structure/closet/emergsuit_wall{
 	dir = 1;
@@ -43727,6 +43726,7 @@ aa
 /area/talon_v2/engineering/atmospherics)
 "BT" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/atmospherics)
 "BU" = (
@@ -45355,9 +45355,6 @@ aa
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/computer/ship/engines{
 	dir = 1
 	},
@@ -45642,9 +45639,6 @@ aa
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/talonboat)
 "Ii" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -47105,6 +47099,7 @@ aa
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port)
 "Nl" = (
@@ -47920,9 +47915,6 @@ aa
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/railing/grey,
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/table/steel,
@@ -48041,9 +48033,11 @@ aa
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/aft_port)
 "Qv" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port_store)
@@ -48567,6 +48561,7 @@ aa
 	dir = 5
 	},
 /obj/item/weapon/paper/talon_shields,
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/talon_v2/engineering)
 "Ss" = (
@@ -48655,6 +48650,9 @@ aa
 	dir = 1;
 	pixel_x = 2;
 	pixel_y = -28
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port_store)
