@@ -22,6 +22,9 @@
 	desc = "Spin the roulette to try your luck."
 	icon_state = "roulette_wheel"
 
+	var/datum/effect/effect/system/confetti_spread
+	var/confetti_strength = 5
+
 /obj/structure/casino_table/roulette_table/attack_hand(mob/user as mob)
 	if (busy)
 		to_chat(user,"<span class='notice'>You cannot spin now! The roulette is already spinning.</span> ")
@@ -33,20 +36,28 @@
 	var/result = rand(0,36)
 	var/color = "green"
 	add_fingerprint(user)
-	if ((result>0 && result<11) || (result>18 && result<29))
-		if (result%2)
+	if (result == 0)
+		color="gold"
+	else
+		if(result%2)
 			color="red"
-	else
-		color="black"
-	if ( (result>10 && result<19) || (result>28) )
-		if (result%2)
+		else
 			color="black"
-	else
-		color="red"
+
 	spawn(5 SECONDS)
-		visible_message("<span class='notice'>The roulette stops spinning, the ball landing on [result], [color].</span>")
 		busy=0
 		icon_state = "roulette_wheel"
+
+		if(color=="gold") // Happy celebrations!
+			visible_message("<span class='notice'>The roulette stops spinning, the ball lands on the golden zero! Fortune favors all bets!</span>")
+			src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
+			src.confetti_spread.attach(src) //If somehow people start dragging roulette
+			spawn(0)
+				for(var/i = 1 to confetti_strength)
+					src.confetti_spread.start()
+					sleep(10)
+		else
+			visible_message("<span class='notice'>The roulette stops spinning, the ball landing on [result], [color].</span>")
 
 /obj/structure/casino_table/roulette_chart
 	name = "roulette chart"
@@ -1097,18 +1108,19 @@
 	name = "Foreword"
 	data = "It's not about winning, it's about having fun!\
 	<br><br>\
-	In this book I'll teach you all about how to gamble your money away or at least get lucky and win some at the golden space goose!\
+	In this book I'll teach you all about how to gamble your money away or at least get lucky and win some at The Golden Space Goose!\
 	This book also has a handy little overview of the prizes one can earn and the limitations of what can do with the living and breathing ones.\
 	(This book will also contain out of character information to help people be aware of how touchy subjects like sentient prizes are to be handled."
 
 	children = list(
-		/datum/lore/codex/page/casinomanual_history,
 		/datum/lore/codex/category/casinomanual_games,
 		/datum/lore/codex/category/casinomanual_casinoactivites,
 		/datum/lore/codex/category/casinomanual_prizes,
-		/datum/lore/codex/page/casinomanual_sentientprizes,
-		/datum/lore/codex/page/casinomanual_managementguide
+		/datum/lore/codex/page/casinomanual_sentientprizes
 		)
+
+		//datum/lore/codex/page/casinomanual_history
+		//datum/lore/codex/page/casinomanual_managementguide
 
 /datum/lore/codex/page/casinomanual_history/add_content()
 	name = "Golden Space Goose History"
@@ -1180,7 +1192,18 @@
 /datum/lore/codex/page/casinomanual_roulette/add_content()
 	name = "Roulette"
 	keywords += list("Gambling", "Roulette", "Games")
-	data = "WIP"
+	data = "So this game of roulette is all about chance! what happens is that people bet on different odds and hope for the best as the dealer rolls the ball and makes that roulette thingy make than fun addicting spin!<br>\
+			Once it lands on a number between 0 and 36 its either bust or payout! Pretty simple, right?<br>\
+			Everyone starts by putting their bets down, people can bet more than once before the ball goes rolling, the odds and their payoffs are these:<br><br>\
+			Single number - 35/1 payoff - The most unlikely one to get, but if the ball lands on your number, then youre loaded!<br>\
+			Split Number - 17/1 - Choose an interval of 2, not very likely and therefore big reward!<br>\
+			Row - 11/1 - Choose an interval of 3, more likely so not the biggest outcome!<br>\
+			Split - 8/1 - Choose an interval of 4, not gonna win big time.<br>\
+			Split row - 5/1 - Choose an interval of 6, getting to the safer bets.<br>\
+			Column - 2/1 - Choose an interval of 12, boring, but likely.<br>\
+			Red/Black - 1/1 - Red are odd numbers while black are even, simple stuff. These are the safest bets there are!<br><br>\
+			Theres not much more to it! Bets made, ball rolls, number announced, people win, people lose! Bets allowed here are from 5 to 50 per bet.<br>\
+			Oh, im also being told this casino has the fancy rule that if ball lands on 0, one wins at least one bet no matter what it is! So lets hope you got that big bet on a single number!"
 
 /datum/lore/codex/category/casinomanual_casinoactivites
 	name = "Social Casino Games"
@@ -1202,10 +1225,10 @@
 	 The Czar reads them and chooses the combination of the black and white cards that they like best, and the player who put those cards down wins the round and the black card as a point.<br><br>\
 	 It's a simple and fun game, far more focused on crew having fun and a good laugh together. Best part is that if a casino staffmember verifies you all played a round, everyone gets 25 chips with the winner of the round getting an additional 25!"
 
-/datum/lore/codex/page/casinomanual_mechbattle/add_content()
+/datum/lore/codex/page/casinomanual_mechbattle/add_content()	//WIP, in future events set up proper mech toy fighting if feature isnt broken
 	name = "Mech Battle Showdown"
 	keywords += list("Gambling", "Mech toys", "Games")
-	data = "WIP"
+	data = "At the current date The Golden Space Goose isn't officially hosting toy mech showdowns where crew fights each other with their toy mechs, with winner gaining more chips than loser if a casino crewmember is around to verify a proper fight. Please visit both to see if there is informational documents about mech showdowns being hosted or not."
 
 /datum/lore/codex/category/casinomanual_prizes
 	name = "Prizes"
@@ -1294,36 +1317,19 @@
 	data = "Goodness me this is quite the casino huh? Who would have thought one could win other people as a prize? <br>\
 	Well you can do just about anything you want with them! Be it just company, some less children friendly company, heck you can even eat them or make them eat you! <br>\
 	The options and possibilities are quite frankly limitless! Now you might ask, how does one get these fancy prizes? <br>\
-	Well they can be obtained by checking in at the exchange both and see the list of prizes, there might be none, there might be many, it depends on volunteers and losers! <br>\
-	This brings us first to volunteers and then to losers! Volunteering is simple! Anyone can walk up to the booth and ask to be a sentient prize, what this means is that you get a nice sum of 150 chips for you to do whatever you want,<br>\
-	but someone might come at any point and claim you! Losers are obtained differently, if youre completly busted and have nothing left, you become a prize that the one you lost to can do whatever they want with, <br>\
-	this means both gamblers and dealers can end up as a prize, though if for whatever reason you dont become their prize, you get added to the list for someone else to enjoy. Becoming a prize means you also get 100 chips in compensation!<br><br>\
+	Well they can be obtained by checking in at and see the list the Sentient Prize Automatic Sales Machinery (SPASM). There might be none, there might be many, it depends on volunteers and losers! <br><br>\
+	This brings us first to volunteers and then to losers! Volunteering is simple! Anyone can walk up to the SPASM and select to be a prize (examine yourself first, else flavor text might not have been generated for system to copy.)<br>\
+	The SPASM will dispense a collar and 100 chips for you to spend as you please!<br>\
+	Whether it's staff or crewmember that loses a bet with themselves on the line, the winner has the rights to keep the loser as a prize, or donate them to the SPASM. It goes like volunteering, except the winner gets the 100 chips dispensed and use to buy the prize instantly if deciding to keep.<br><br>\
+	The collar made for volunteers or losers will be added to a list, and remotely show the prize's status, with everyone at the terminal able to see if you're owned or available, neat huh?<br>\
+	When a collar has been selected it can be examined at the SPASM, allowing crew to see information about the prize to see in advance if they might be to their liking.<br><br>\
+	For crew wishing to buy a prize, you first select the prize, and then insert chips into the system, if the person in question is the prize, they buy themselves out of the system and collar is deactivated.<br>\
+	If an owner thinks they had enough fun and wants to cut their prize slack, simply take the collar from the prize, and swipe through system, the system will then ask if the ownership and collar should be nullified. If you need help just ask staff!<br><br>\
 
-	Now hear this! The casino has decided that to spice things up, folks can bet themselves at any time and arent already a prize on the list! Doesnt matter if youre rich or broke, playing blackjack or roulette, <br>\
-	you can bet yourself in any game and youre worth 250 chips! But be careful, cause if you lose, youre the winners prize! They can keep you, give you to someone else. or to the prize booth and get the chips you would have gotten as volunteer! <br>\
-	But if given to the booth, the winner cant buy their prize back for the lower cost!<br><br>\
-
-	(Sour part again, but very important. These sentient prizes can be fun, but one thing always dictates how these things goes down, preferences and ooc wants. If preferences dont line up and people dont agree to do winner/loser scene it becomes sentient prize on list. <br>\
+	(Sour part, but very important. These sentient prizes can be fun, but one thing always dictates how these things goes down, preferences and ooc wants. If preferences dont line up and people dont agree to do winner/loser scene it becomes sentient prize on list. <br>\
 	And someone cant win a prize if the prize ooc doesnt want to do what the winner wants to do. We still wish people to try and reach out and try things with new people and/or new things they are comfortable doing, but never shall anyone be forced into a situation they dont want!)"
 
 /datum/lore/codex/page/casinomanual_managementguide/add_content()
 	name = "Golden Space Goose Management Guide"
 	keywords += list("Staff", "Guide")
 	data = "WIP"
-
-/*
-				<h1><a name="Roulette">Roulette</a></h1>
-				So this game of roulette is all about chance! what happens is that people bet on different odds and hope for the best as the dealer rolls the ball and makes that roulette thingy make than fun addicting spin! Once it lands on a number between 0 and 36 its either bust or payout! Pretty simple, right? <br>
-				Everyone starts by putting their bets down, people can bet more than once before the ball goes rolling, the odds and their payoffs are these:
-				<ul>
-					<li>Single number - 35/1 payoff - The most unlikely one to get, but if the ball lands on your number, then youre loaded!</li>
-					<li>Split Number - 17/1 - Choose an interval of 2, not very likely and therefore big reward!</li>
-					<li>Row - 11/1 - Choose an interval of 3, more likely so not the biggest outcome!</li>
-					<li>Split - 8/1 - Choose an interval of 4, not gonna win big time.</li>
-					<li>Split row - 5/1 - Choose an interval of 6, getting to the safer bets.</li>
-					<li>Column - 2/1 - Choose an interval of 12, boring, but likely.</li>
-					<li>Red/Black or even/odd numbers - 1/1 - Odd or even numbers explains themselves. Red numbers are from 0 to 11 and 18 to 29 while the rest is black. These are the safest bets there are!</li>
-				</ul>
-				Theres not much more to it! Bets made, ball rolls, number announced, people win, people lose! Bets allowed here are from 1 to 25 per bet. Oh, im also being told this casino has the fancy rule that if ball lands on 0, one wins at least one bet no matter what it is! So lets hope you got that big bet on a single number!
-*/
-
