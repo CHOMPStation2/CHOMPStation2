@@ -105,7 +105,18 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/datum/pipe_network/PN = current_run[current_run.len]
 		current_run.len--
+<<<<<<< HEAD
 		if(istype(PN) && !QDELETED(PN))
+||||||| parent of 471935bb8b... Merge pull request #11288 from VOREStation/Arokha/ssmachines2
+		if(QDELETED(PN))
+			global.pipe_networks.Remove(PN)
+		else
+=======
+		if(QDELETED(PN))
+			global.pipe_networks.Remove(PN)
+			DISABLE_BITFIELD(PN?.datum_flags, DF_ISPROCESSING)
+		else
+>>>>>>> 471935bb8b... Merge pull request #11288 from VOREStation/Arokha/ssmachines2
 			PN.process(wait)
 		else
 			global.pipe_networks.Remove(PN)
@@ -125,8 +136,13 @@ SUBSYSTEM_DEF(machines)
 		current_run.len--
 		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL))
 			global.processing_machines.Remove(M)
+<<<<<<< HEAD
 			if(!QDELETED(M))
 				DISABLE_BITFIELD(M.datum_flags, DF_ISPROCESSING)
+||||||| parent of 471935bb8b... Merge pull request #11288 from VOREStation/Arokha/ssmachines2
+=======
+			DISABLE_BITFIELD(M?.datum_flags, DF_ISPROCESSING)
+>>>>>>> 471935bb8b... Merge pull request #11288 from VOREStation/Arokha/ssmachines2
 		if(MC_TICK_CHECK)
 			return
 
@@ -139,7 +155,18 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/datum/powernet/PN = current_run[current_run.len]
 		current_run.len--
+<<<<<<< HEAD
 		if(istype(PN) && !QDELETED(PN))
+||||||| parent of 471935bb8b... Merge pull request #11288 from VOREStation/Arokha/ssmachines2
+		if(QDELETED(PN))
+			global.powernets.Remove(PN)
+		else
+=======
+		if(QDELETED(PN))
+			global.powernets.Remove(PN)
+			DISABLE_BITFIELD(PN?.datum_flags, DF_ISPROCESSING)
+		else
+>>>>>>> 471935bb8b... Merge pull request #11288 from VOREStation/Arokha/ssmachines2
 			PN.reset(wait)
 		else
 			global.powernets.Remove(PN)
@@ -159,9 +186,9 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/obj/item/I = current_run[current_run.len]
 		current_run.len--
-		if(!I.pwr_drain(wait)) // 0 = Process Kill, remove from processing list.
+		if(QDELETED(I) || (I.pwr_drain(wait) == PROCESS_KILL))
 			global.processing_power_items.Remove(I)
-			DISABLE_BITFIELD(I.datum_flags, DF_ISPROCESSING)
+			DISABLE_BITFIELD(I?.datum_flags, DF_ISPROCESSING)
 		if(MC_TICK_CHECK)
 			return
 
