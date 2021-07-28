@@ -4,8 +4,7 @@
 	if (flipped)
 		if(get_dir(mover, target) == reverse_dir[dir]) // From elsewhere to here, can't move against our dir
 			return !density
-		else
-			return TRUE
+		return TRUE
 	if(istype(mover) && mover.checkpass(PASSTABLE))
 		return TRUE
 	if(locate(/obj/structure/table/bench) in get_turf(mover))
