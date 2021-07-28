@@ -15,12 +15,12 @@
 	else
 		return TRUE
 
-/obj/structure/boxingrope/CheckExit(atom/movable/O as mob|obj, target as turf)
-	if(istype(O) && O.checkpass(PASSGLASS))
-		return 1
-	if(get_dir(O.loc, target) == dir)
-		return 0
-	return 1
+/obj/structure/fitness/boxing_ropes/Uncross(atom/movable/mover, turf/target)
+	if(istype(mover) && mover.checkpass(PASSTABLE))
+		return TRUE
+	if(get_dir(mover, target) == dir) // From here to elsewhere, can't move in our dir
+		return !density
+	return TRUE
 
 /obj/structure/boxingropeenter
 	name = "Ring entrance"
