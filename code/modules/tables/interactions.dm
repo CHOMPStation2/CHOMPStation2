@@ -1,8 +1,21 @@
 /obj/structure/table/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover,/obj/item/projectile))
 		return (check_cover(mover,target))
+<<<<<<< HEAD
 	if (flipped == 1)
 		if (get_dir(loc, target) == dir)
+||||||| parent of 068e743690... Merge pull request #11290 from VOREStation/Arokha/crossfox
+	if (flipped)
+		var/move_dir = get_dir(mover, target)
+		// Moving from back to front, gotta climb
+		if(move_dir == dir && target != loc)
+			return !density
+		// Moving from front to back, gotta climb
+		if(move_dir == reverse_dir[dir])
+=======
+	if (flipped)
+		if(get_dir(mover, target) == reverse_dir[dir]) // From elsewhere to here, can't move against our dir
+>>>>>>> 068e743690... Merge pull request #11290 from VOREStation/Arokha/crossfox
 			return !density
 		else
 			return TRUE
@@ -15,6 +28,31 @@
 		return TRUE
 	return FALSE
 
+<<<<<<< HEAD
+||||||| parent of 068e743690... Merge pull request #11290 from VOREStation/Arokha/crossfox
+/obj/structure/table/climb_to(mob/living/mover)
+	if(flipped && mover.loc == loc)
+		var/turf/T = get_step(src, dir)
+		if(T.Enter(mover))
+			return T
+
+	return ..()
+
+=======
+/obj/structure/table/climb_to(mob/living/mover)
+	if(flipped && mover.loc == loc)
+		var/turf/T = get_step(src, dir)
+		if(T.Enter(mover))
+			return T
+
+	return ..()
+
+/obj/structure/table/Uncross(atom/movable/mover, turf/target)
+	if(flipped && (get_dir(mover, target) == dir)) // From here to elsewhere, can't move in our dir
+		return !density
+	return TRUE
+
+>>>>>>> 068e743690... Merge pull request #11290 from VOREStation/Arokha/crossfox
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
 /obj/structure/table/proc/check_cover(obj/item/projectile/P, turf/from)
 	var/turf/cover
@@ -47,17 +85,6 @@
 				break_to_parts()
 				return 1
 	return 1
-
-/obj/structure/table/CheckExit(atom/movable/O as mob|obj, target as turf)
-	if(istype(O) && O.checkpass(PASSTABLE))
-		return 1
-	if (flipped==1)
-		if (get_dir(loc, target) == dir)
-			return !density
-		else
-			return 1
-	return 1
-
 
 /obj/structure/table/MouseDrop_T(obj/O as obj, mob/user as mob)
 
