@@ -132,15 +132,11 @@
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/oracarpet
 	icon_state = "tile-carpet"
-<<<<<<< HEAD
 	*/
-||||||| parent of 78723da872... Merge pull request #11298 from VOREStation/Arokha/arcadecarpets
-=======
 /obj/item/stack/tile/carpet/deco
 	icon_state = "tile-carpet-deco"
 /obj/item/stack/tile/carpet/retro
 	icon_state = "tile-carpet-retro"
->>>>>>> 78723da872... Merge pull request #11298 from VOREStation/Arokha/arcadecarpets
 
 /obj/item/stack/tile/floor
 	name = "floor tile"
