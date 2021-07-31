@@ -964,9 +964,6 @@ I think I covered everything.
 	if(!can_see_target(the_target) && vision_required)
 		return
 
-	if(istype(the_target, /mob/zshadow))
-		return // no
-
 	if(isliving(the_target))
 		var/mob/living/L = the_target
 		if(ishuman(L) || issilicon(L))
