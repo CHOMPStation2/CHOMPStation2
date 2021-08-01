@@ -41,33 +41,10 @@
 // Hook for generic creation of stuff on new creatures
 //
 /hook/living_new/proc/vore_setup(mob/living/M)
-<<<<<<< HEAD
-	M.verbs += /mob/living/proc/escapeOOC
-	M.verbs += /mob/living/proc/lick
-	M.verbs += /mob/living/proc/smell
-	M.verbs += /mob/living/proc/switch_scaling
-	M.verbs += /mob/living/proc/vorebelly_printout
-	if(M.no_vore) //If the mob isn't supposed to have a stomach, let's not give it an insidepanel so it can make one for itself, or a stomach.
-		return TRUE
-	M.vorePanel = new(M)
-	M.verbs += /mob/living/proc/insidePanel
 	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
 	M.verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
 
-||||||| parent of 89f0f3e55e... Merge pull request #11311 from VOREStation/Arokha/vorepanelbutton
-	M.verbs += /mob/living/proc/escapeOOC
-	M.verbs += /mob/living/proc/lick
-	M.verbs += /mob/living/proc/smell
-	M.verbs += /mob/living/proc/switch_scaling
-	M.verbs += /mob/living/proc/vorebelly_printout
-	if(M.no_vore) //If the mob isn't supposed to have a stomach, let's not give it an insidepanel so it can make one for itself, or a stomach.
-		return TRUE
-	M.vorePanel = new(M)
-	M.verbs += /mob/living/proc/insidePanel
-
-=======
->>>>>>> 89f0f3e55e... Merge pull request #11311 from VOREStation/Arokha/vorepanelbutton
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
 		if(M)
