@@ -24,5 +24,9 @@
 		verbs |= /mob/living/proc/vorebelly_printout
 		if(!vorePanel)
 			AddComponent(/datum/component/vore_panel)
+			
+	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	M.verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
 
 	return .
