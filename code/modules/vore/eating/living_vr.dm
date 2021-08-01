@@ -953,7 +953,8 @@
 	if(owner.client)
 		create_mob_button(parent)
 	owner.verbs |= /mob/living/proc/insidePanel
-	owner.vorePanel = new(owner)
+	if(!owner.vorePanel) //CHOMPEdit
+		owner.vorePanel = new(owner)
 
 /datum/component/vore_panel/UnregisterFromParent()
 	. = ..()
