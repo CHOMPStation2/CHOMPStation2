@@ -41,9 +41,6 @@
 // Hook for generic creation of stuff on new creatures
 //
 /hook/living_new/proc/vore_setup(mob/living/M)
-	M.verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
-	M.verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
-	M.verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
 
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
