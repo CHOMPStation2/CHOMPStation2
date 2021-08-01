@@ -221,97 +221,9 @@
 		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
 	return ..()
 
-<<<<<<< HEAD
-/obj/structure/closet/secure_closet/pathfinder //CHOMPedit: Changes bluespaceradio/tether_prelinked to bluespaceradio because we don't have Tether here
-	name = "pathfinder locker"
-	req_access = list(access_gateway)
-	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
-
-	starts_with = list(
-		/obj/item/clothing/under/explorer,
-		/obj/item/clothing/suit/storage/hooded/explorer,
-		/obj/item/clothing/mask/gas/explorer,
-		/obj/item/weapon/storage/belt/explorer/pathfinder,
-		/obj/item/clothing/shoes/boots/winter/explorer,
-		/obj/item/clothing/gloves/black,
-		/obj/item/device/radio/headset/pathfinder,
-		/obj/item/device/radio/headset/pathfinder/alt,
-		/obj/item/weapon/cartridge/explorer,
-		/obj/item/device/flashlight,
-		/obj/item/device/gps/explorer,
-		/obj/item/weapon/storage/box/flare,
-		/obj/item/weapon/storage/box/explorerkeys,
-		/obj/item/device/geiger,
-		/obj/item/weapon/cell/device,
-		/obj/item/device/radio,
-		/obj/item/device/bluespaceradio,
-		/obj/item/stack/marker_beacon/thirty,
-		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/material/knife/machete/deluxe,
-		/obj/item/clothing/accessory/holster/machete,
-		/obj/random/explorer_shield,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-		/obj/item/device/cataloguer/compact/pathfinder,
-		/obj/item/device/mapping_unit)
-
-/obj/structure/closet/secure_closet/pathfinder/Initialize()
-	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack
-	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
-	return ..()
-
-//Exotic Seeds Crate
-
-||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
-/obj/structure/closet/secure_closet/pathfinder
-	name = "pathfinder locker"
-	req_access = list(access_gateway)
-	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
-
-	starts_with = list(
-		/obj/item/clothing/under/explorer,
-		/obj/item/clothing/suit/storage/hooded/explorer,
-		/obj/item/clothing/mask/gas/explorer,
-		/obj/item/weapon/storage/belt/explorer/pathfinder,
-		/obj/item/clothing/shoes/boots/winter/explorer,
-		/obj/item/clothing/gloves/black,
-		/obj/item/device/radio/headset/pathfinder,
-		/obj/item/device/radio/headset/pathfinder/alt,
-		/obj/item/weapon/cartridge/explorer,
-		/obj/item/device/flashlight,
-		/obj/item/device/gps/explorer,
-		/obj/item/weapon/storage/box/flare,
-		/obj/item/weapon/storage/box/explorerkeys,
-		/obj/item/device/geiger,
-		/obj/item/weapon/cell/device,
-		/obj/item/device/radio,
-		/obj/item/device/bluespaceradio/tether_prelinked,
-		/obj/item/stack/marker_beacon/thirty,
-		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/material/knife/machete/deluxe,
-		/obj/item/clothing/accessory/holster/machete,
-		/obj/random/explorer_shield,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-		/obj/item/device/cataloguer/compact/pathfinder,
-		/obj/item/device/mapping_unit)
-
-/obj/structure/closet/secure_closet/pathfinder/Initialize()
-	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack
-	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
-	return ..()
-
-//Exotic Seeds Crate
-
-=======
 /*
  * Exotic Seeds
  */
->>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 /obj/structure/closet/crate/hydroponics/exotic
 	name = "exotic seeds crate"
 	desc = "All you need to destroy that pesky planet."
