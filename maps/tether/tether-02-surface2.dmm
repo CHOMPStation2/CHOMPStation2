@@ -25885,6 +25885,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
 "aUL" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
@@ -25893,49 +25894,65 @@
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/effect/floor_decal/borderfloor/shifted{
 	dir = 1
+||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
 	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
+/obj/effect/floor_decal/borderfloor/shifted{
 	dir = 1
+=======
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+>>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 9
+	},
+<<<<<<< HEAD
 /obj/machinery/camera/network/civilian,
+||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
+/obj/machinery/camera/network/civilian,
+/obj/structure/closet/jcloset,
+=======
+/obj/machinery/vending/wardrobe/janidrobe,
+>>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUM" = (
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
-/obj/effect/floor_decal/borderfloor/shifted{
+/obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
+/obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
 /obj/item/weapon/reagent_containers/glass/bucket,
+||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/machinery/vending/wardrobe/janidrobe,
+=======
+>>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUN" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/effect/floor_decal/borderfloor/shifted{
+/obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
+/obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
+/obj/structure/sink/kitchen{
+	pixel_y = 22
 	},
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
@@ -25943,49 +25960,37 @@
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUO" = (
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
-	},
 /obj/structure/janitorialcart,
-/obj/structure/sink/kitchen{
-	pixel_y = 28
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUP" = (
 /obj/structure/janitorialcart,
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUQ" = (
 /obj/structure/janitorialcart,
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
 	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple{
+/obj/effect/floor_decal/corner/purple/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
@@ -26163,34 +26168,26 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
 "aVu" = (
-/obj/machinery/button/remote/blast_door{
-	id = "janitor_blast";
-	name = "Desk Shutters";
-	pixel_x = -22
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
 	},
+/obj/machinery/power/apc{
+	cell_type = /obj/item/weapon/cell/super;
+	dir = 8;
+	name = "west bump";
+	nightshift_setting = 2;
+	pixel_x = -30
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aVv" = (
-/turf/simulated/floor/tiled,
-/area/janitor)
-"aVw" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled,
-/area/janitor)
-"aVx" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aVy" = (
@@ -26879,6 +26876,7 @@
 "aWr" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
+/obj/structure/closet/jequipcloset,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aWs" = (
@@ -27311,7 +27309,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/light_switch{
 	dir = 4;
-	pixel_x = -28
+	pixel_x = -31
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -27324,6 +27322,11 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 10
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "janitor_blast";
+	name = "Desk Shutters";
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
 /area/janitor)
@@ -27597,9 +27600,6 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 25
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -27611,12 +27611,23 @@
 /obj/item/weapon/grenade/chem_grenade/cleaner,
 /obj/item/weapon/grenade/chem_grenade/cleaner,
 /obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/storage/box/mousetraps,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
+<<<<<<< HEAD
+||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+=======
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+>>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aXT" = (
@@ -49612,7 +49623,7 @@ aLY
 aTe
 aUc
 aUM
-aVv
+aVy
 aWq
 aVv
 aXQ
@@ -49754,7 +49765,7 @@ aLY
 aTf
 aUc
 aUN
-aVw
+aVy
 aVv
 aXj
 aXR
@@ -49896,7 +49907,7 @@ aLY
 aTg
 aUc
 aUO
-aVx
+aVy
 aWr
 aXk
 aXS
@@ -50044,7 +50055,7 @@ aLY
 aTh
 aUc
 aUP
-aVx
+aVy
 aWs
 aUc
 aUc
