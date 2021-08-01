@@ -1114,7 +1114,25 @@
 /obj/structure/closet/alien,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm6)
+<<<<<<< HEAD
 >>>>>>> 44766f85bb... Merge pull request #10079 from KillianKirilenko/kk-mapping
+||||||| parent of e345afc7bf... Merge pull request #11295 from VOREStation/Arokha/miscsani
+=======
+"dD" = (
+/obj/effect/step_trigger/teleporter/random{
+	affect_ghosts = 1;
+	name = "escapeshuttle_leave";
+	teleport_x = 25;
+	teleport_x_offset = 245;
+	teleport_y = 25;
+	teleport_y_offset = 245;
+	teleport_z = 4;
+	teleport_z_offset = 4
+	},
+/turf/space,
+/turf/space/transit/north,
+/area/space)
+>>>>>>> e345afc7bf... Merge pull request #11295 from VOREStation/Arokha/miscsani
 "dE" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -122041,10 +122059,10 @@ Jz
 Jz
 Jz
 Jz
-fg
-fg
-fg
-fg
+dD
+dD
+dD
+dD
 iO
 El
 El
@@ -122186,7 +122204,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -122328,7 +122346,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -122470,7 +122488,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -122612,7 +122630,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -122754,7 +122772,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -122896,7 +122914,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -123038,7 +123056,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -123180,7 +123198,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -123322,7 +123340,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -123464,7 +123482,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -123606,7 +123624,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -123748,7 +123766,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -123890,7 +123908,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -124032,7 +124050,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -124174,7 +124192,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -124316,7 +124334,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -124458,7 +124476,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -124600,7 +124618,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -124742,7 +124760,7 @@ jf
 Gs
 Gs
 Gs
-fg
+dD
 iO
 El
 El
@@ -124861,30 +124879,30 @@ ae
 ap
 ap
 ap
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
-fg
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
+dD
 iO
 El
 El

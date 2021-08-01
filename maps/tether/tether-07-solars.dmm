@@ -1762,8 +1762,15 @@
 /area/rnd/outpost/testing)
 "dV" = (
 /obj/machinery/vending/cola{
+<<<<<<< HEAD
 	icon_state = "Soda_Machine";
 	dir = 8
+||||||| parent of e345afc7bf... Merge pull request #11295 from VOREStation/Arokha/miscsani
+	dir = 8;
+	icon_state = "Soda_Machine"
+=======
+	dir = 8
+>>>>>>> e345afc7bf... Merge pull request #11295 from VOREStation/Arokha/miscsani
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/breakroom)
