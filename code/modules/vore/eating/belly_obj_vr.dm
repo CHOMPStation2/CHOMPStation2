@@ -654,7 +654,7 @@
 //the item should be worth
 /obj/belly/proc/digest_item(obj/item/item, /var/touchable_amount) //CHOMPEdit
 	var/digested = item.digest_act(src, touchable_amount) //CHOMPEdit
-	if(!digested > 0) //CHOMPEdit
+	if(digested == FALSE) //CHOMPEdit
 		items_preserved |= item
 	else
 		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)

@@ -27,6 +27,8 @@
 	if(isbelly(item_storage))
 		var/obj/belly/B = item_storage
 		g_damage = 0.25 * (B.digest_brute + B.digest_burn) / touchable_amount //CHOMPEdit
+	if(g_damage <= 0) //CHOMPEdit
+		return FALSE //CHOMPEdit
 
 	if(digest_stage > 0)
 		if(g_damage > digest_stage)
