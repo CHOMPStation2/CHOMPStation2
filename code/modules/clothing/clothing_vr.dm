@@ -41,9 +41,11 @@
 		else
 			var/obj/item/weapon/holder/micro/holder = I
 			if(holder.held_mob && (holder.held_mob in holder))
-				to_chat(holder.held_mob, "<span class='warning'>[user] stuffs you into \the [src]!</span>")
-				holder.held_mob.forceMove(src)
-				to_chat(user, "<span class='notice'>You stuff \the [holder.held_mob] into \the [src]!</span>")
+				var/mob/localref = holder.held_mob
+				to_chat(localref, "<span class='warning'>[user] stuffs you into \the [src]!</span>")
+				holder.dump_mob()
+				localref.forceMove(src)
+				to_chat(user, "<span class='notice'>You stuff \the [localref] into \the [src]!</span>")
 	else
 		..()
 
