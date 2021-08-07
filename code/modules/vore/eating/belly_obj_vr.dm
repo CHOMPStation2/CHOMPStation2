@@ -46,6 +46,7 @@
 	var/emote_time = 60						// How long between stomach emotes at prey (in seconds)
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
+	var/item_mode_serial = TRUE				// Serial/parallel item digestion mode. Affect one item at a time or all of them with damage divided between contents. CHOMPEdit
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -651,15 +652,16 @@
 //Digest a single item
 //Receives a return value from digest_act that's how much nutrition
 //the item should be worth
-/obj/belly/proc/digest_item(obj/item/item)
-	var/digested = item.digest_act(src, owner)
-	if(!digested)
+/obj/belly/proc/digest_item(obj/item/item, /var/touchable_amount) //CHOMPEdit
+	var/digested = item.digest_act(src, touchable_amount) //CHOMPEdit
+	if(digested == FALSE) //CHOMPEdit
 		items_preserved |= item
 	else
 		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
 			R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
+		digested = TRUE //CHOMPEdit
 	return digested
 
 //Determine where items should fall out of us into.

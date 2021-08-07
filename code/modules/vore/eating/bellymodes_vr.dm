@@ -135,10 +135,14 @@
 
 	for(var/A in touchable_atoms)
 		//Handle stray items
-		if(isitem(A) && !did_an_item)
-			did_an_item = handle_digesting_item(A)
+		if(isitem(A)) //CHOMPEdit start
+			if(!item_mode_serial)
+				var/touchable_amount = touchable_atoms.len
+				did_an_item = handle_digesting_item(A, touchable_amount)
+			else if(!did_an_item)
+				did_an_item = handle_digesting_item(A, 1)
 			if(did_an_item)
-				to_update = TRUE
+				to_update = TRUE //CHOMPEdit end
 
 			//Less often than with normal digestion
 			if((item_digest_mode == IM_DIGEST_FOOD || item_digest_mode == IM_DIGEST) && prob(25))
@@ -213,7 +217,7 @@
 			M.playsound_local(get_turf(src), preyloop, 80, 0, channel = CHANNEL_PREYLOOP)
 			M.next_preyloop = (world.time + (52 SECONDS))
 
-/obj/belly/proc/handle_digesting_item(obj/item/I)
+/obj/belly/proc/handle_digesting_item(obj/item/I, var/touchable_amount = 1) //CHOMPEdit
 	var/did_an_item = FALSE
 	// We always contaminate IDs.
 	if(contaminates || istype(I, /obj/item/weapon/card/id))
@@ -224,11 +228,11 @@
 			items_preserved |= I
 		if(IM_DIGEST_FOOD)
 			if(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I, /obj/item/organ))
-				did_an_item = digest_item(I)
+				did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 			else
 				items_preserved |= I
 		if(IM_DIGEST)
-			did_an_item = digest_item(I)
+			did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 	return did_an_item
 
 /obj/belly/proc/handle_digestion_death(mob/living/M)
