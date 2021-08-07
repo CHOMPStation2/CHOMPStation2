@@ -1722,7 +1722,7 @@
 #include "code\modules\admin\admin_ranks.dm"
 #include "code\modules\admin\admin_secrets.dm"
 #include "code\modules\admin\admin_tools.dm"
-#include "code\modules\admin\admin_verb_lists.dm"
+#include "code\modules\admin\admin_verb_lists_vr.dm"
 #include "code\modules\admin\admin_verbs.dm"
 #include "code\modules\admin\admin_vr.dm"
 #include "code\modules\admin\banjob.dm"
