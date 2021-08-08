@@ -651,7 +651,7 @@ var/global/datum/controller/occupations/job_master
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
-	var/announcement	//CHOMP Edit 
+	var/announcement = TRUE	//CHOMP Edit 
 
 	var/datum/job/J = SSjob.get_job(rank)
 	fail_deadly = J?.offmap_spawn
