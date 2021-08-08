@@ -651,6 +651,7 @@ var/global/datum/controller/occupations/job_master
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
+	var/announcement
 
 	var/datum/job/J = SSjob.get_job(rank)
 	fail_deadly = J?.offmap_spawn
@@ -687,9 +688,9 @@ var/global/datum/controller/occupations/job_master
 				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
 				if(backup == "Yes")
 					backup = 1
-				var/announcement = alert(C, "Do you want your arrival to be announced?", "Confirm", "Yes", "No")
+				announcement = alert(C, "Do you want your arrival to be announced?", "Confirm", "Yes", "No")
 				if(announcement == "Yes")
-					announcement = 1
+					announcement = TRUE
 				vore_spawn_gut = input(C, "Choose a Belly.", "Belly Spawnpoint") as null|anything in available_bellies
 				if(!vore_spawn_gut)
 					return
