@@ -651,6 +651,7 @@ var/global/datum/controller/occupations/job_master
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
+	///This var is used to check if we announce someone spawning or not
 	var/announcement
 
 	var/datum/job/J = SSjob.get_job(rank)
