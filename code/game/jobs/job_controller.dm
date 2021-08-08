@@ -651,7 +651,6 @@ var/global/datum/controller/occupations/job_master
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
-	var/announcement = TRUE	//CHOMP Edit 
 
 	var/datum/job/J = SSjob.get_job(rank)
 	fail_deadly = J?.offmap_spawn
@@ -688,9 +687,6 @@ var/global/datum/controller/occupations/job_master
 				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
 				if(backup == "Yes")
 					backup = 1
-				announcement = alert(C, "Do you want your arrival to be announced?", "Confirm", "Yes", "No")	//CHOMP Edit 
-				if(announcement == "Yes")
-					announcement = TRUE
 				vore_spawn_gut = input(C, "Choose a Belly.", "Belly Spawnpoint") as null|anything in available_bellies
 				if(!vore_spawn_gut)
 					return
@@ -741,8 +737,7 @@ var/global/datum/controller/occupations/job_master
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
-			if(announcement)	//CHOMP Edit 
-				.["msg"] = spawnpos.msg
+			.["msg"] = spawnpos.msg
 			.["channel"] = spawnpos.announce_channel
 		else
 			if(fail_deadly)
@@ -751,13 +746,11 @@ var/global/datum/controller/occupations/job_master
 			to_chat(C, "Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead.")
 			var/spawning = pick(latejoin)
 			.["turf"] = get_turf(spawning)
-			if(announcement)	//CHOMP Edit 
-				.["msg"] = "will arrive at the station shortly"	
+			.["msg"] = "will arrive at the station shortly"	
 	else if(!fail_deadly)
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)
-		if(announcement)	//CHOMP Edit 
-			.["msg"] = "has arrived on the station"
+		.["msg"] = "has arrived on the station"
 
 /datum/controller/occupations/proc/m_backup_client(var/client/C)	//Same as m_backup, but takes a client entry. Used for vore late joining.
 	if(!ishuman(C.mob))
