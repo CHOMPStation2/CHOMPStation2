@@ -132,17 +132,17 @@
 	var/to_update = FALSE
 	var/digestion_noise_chance = 0
 	var/list/touchable_mobs = list()
+	var/touchable_amount = touchable_atoms.len  //CHOMPEdit start
 
 	for(var/A in touchable_atoms)
 		//Handle stray items
-		if(isitem(A)) //CHOMPEdit start
+		if(isitem(A))
 			if(!item_mode_serial)
-				var/touchable_amount = touchable_atoms.len
 				did_an_item = handle_digesting_item(A, touchable_amount)
 			else if(!did_an_item)
 				did_an_item = handle_digesting_item(A, 1)
 			if(did_an_item)
-				to_update = TRUE //CHOMPEdit end
+				to_update = TRUE
 
 			//Less often than with normal digestion
 			if((item_digest_mode == IM_DIGEST_FOOD || item_digest_mode == IM_DIGEST) && prob(25))
@@ -150,6 +150,7 @@
 				// but we also want the prob(25) chance to run for -every- item we look at, not just once
 				// More gurgles the better~
 				digestion_noise_chance = 25
+			continue  //CHOMPEdit end
 
 		//Handle eaten mobs
 		else if(isliving(A))
@@ -217,7 +218,7 @@
 			M.playsound_local(get_turf(src), preyloop, 80, 0, channel = CHANNEL_PREYLOOP)
 			M.next_preyloop = (world.time + (52 SECONDS))
 
-/obj/belly/proc/handle_digesting_item(obj/item/I, var/touchable_amount = 1) //CHOMPEdit
+/obj/belly/proc/handle_digesting_item(obj/item/I, touchable_amount) //CHOMPEdit
 	var/did_an_item = FALSE
 	// We always contaminate IDs.
 	if(contaminates || istype(I, /obj/item/weapon/card/id))

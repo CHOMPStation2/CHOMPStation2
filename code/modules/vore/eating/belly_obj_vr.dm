@@ -652,7 +652,7 @@
 //Digest a single item
 //Receives a return value from digest_act that's how much nutrition
 //the item should be worth
-/obj/belly/proc/digest_item(obj/item/item, /var/touchable_amount) //CHOMPEdit
+/obj/belly/proc/digest_item(obj/item/item, touchable_amount) //CHOMPEdit
 	var/digested = item.digest_act(src, touchable_amount) //CHOMPEdit
 	if(digested == FALSE) //CHOMPEdit
 		items_preserved |= item
