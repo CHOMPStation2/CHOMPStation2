@@ -65,7 +65,7 @@
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the Pathfinder" //CHOMPedit
-	selection_color = "#515151"
+	selection_color = "#999440"
 	economic_modifier = 5
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
