@@ -24,7 +24,7 @@
 	volume = 10
 	can_be_placed_into = null
 	flags = OPENCONTAINER | NOBLUDGEON
-	unacidable = 0
+	unacidable = FALSE
 	drop_sound = 'sound/items/drop/cloth.ogg'
 	pickup_sound = 'sound/items/pickup/cloth.ogg'
 
@@ -152,7 +152,7 @@
 			return
 
 		if(A.reagents && A.reagents.trans_to_obj(src, reagents.maximum_volume))
-			user.visible_message("<span class='notice'>\The [user] soaks [src] using [A].</span>", "<span class='notice'>You soak [src] using [A].</span>")
+			user.visible_message("<b>\The [user]</b> soaks [src] using [A].", "<span class='notice'>You soak [src] using [A].</span>")
 			update_name()
 		return
 

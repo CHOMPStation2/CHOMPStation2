@@ -464,6 +464,18 @@
 
 /obj/random/multiple/ore_pile/item_to_spawn()
 	return pick(
+			/*prob(10);list(
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite,
+				/obj/item/weapon/ore/bauxite
+			),*/
 			prob(10);list(
 				/obj/item/weapon/ore/coal,
 				/obj/item/weapon/ore/coal,
@@ -476,6 +488,18 @@
 				/obj/item/weapon/ore/coal,
 				/obj/item/weapon/ore/coal
 			),
+			/*prob(10);list(
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper,
+				/obj/item/weapon/ore/copper
+			),*/
 			prob(3);list(
 				/obj/item/weapon/ore/diamond,
 				/obj/item/weapon/ore/diamond,
@@ -553,6 +577,13 @@
 				/obj/item/weapon/ore/phoron
 			),
 			prob(5);list(
+				/obj/item/weapon/ore/rutile,
+				/obj/item/weapon/ore/rutile,
+				/obj/item/weapon/ore/rutile,
+				/obj/item/weapon/ore/rutile,
+				/obj/item/weapon/ore/rutile
+			),
+			prob(5);list(
 				/obj/item/weapon/ore/silver,
 				/obj/item/weapon/ore/silver,
 				/obj/item/weapon/ore/silver,
@@ -567,7 +598,11 @@
 			prob(2);list(
 				/obj/item/weapon/ore/verdantium,
 				/obj/item/weapon/ore/verdantium
-			),
+			),/*
+			prob(2);list(
+				/obj/item/weapon/ore/void_opal,
+				/obj/item/weapon/ore/void_opal
+			),*/
 		)
 
 /obj/random/multiple/corp_crate
@@ -850,6 +885,13 @@
 				/obj/structure/closet/crate/secure/saare //SAARE GRENADES
 			),
 			prob(1);list(
+				/obj/random/material/precious,
+				/obj/random/material/precious,
+				/obj/random/material/precious,
+				/obj/random/material/precious,
+				/obj/structure/closet/crate/secure/saare //SAARE BULLION CRATE
+			),
+			prob(1);list(
 				/obj/random/cash/big,
 				/obj/random/cash/big,
 				/obj/random/cash/big,
@@ -1094,6 +1136,13 @@
 				/obj/structure/closet/crate/secure/phoron //HQ FUEL TANKS
 			),
 			prob(1);list(
+				/obj/random/material/precious,
+				/obj/random/material/precious,
+				/obj/random/material/precious,
+				/obj/random/material/precious,
+				/obj/structure/closet/crate/secure/saare //SAARE BULLION CRATE
+			),
+			prob(1);list(
 				/obj/random/cash/big,
 				/obj/random/cash/big,
 				/obj/random/cash/big,
@@ -1296,6 +1345,28 @@
 				/obj/random/multiple/large_corp_crate
 			)
 		)
+//VOREStation Add - Random good, no guns gooder
+/obj/random/multiple/random_size_crate/no_weapons
+	name = "random size corporate crate (no weapons)"
+	desc = "A random size corporate crate with thematic contents: prefers small crates."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "largermetal"
+	spawn_nothing_percentage = 50
+
+/obj/random/multiple/random_size_crate/no_weapons/item_to_spawn()
+	return pick(
+			prob(85);list(
+				/obj/random/multiple/corp_crate/no_weapons
+			),
+			prob(15);list(
+				/obj/random/multiple/large_corp_crate/no_weapons
+			)
+		)
+
+/obj/random/multiple/random_size_crate/no_weapons/nofail
+	spawn_nothing_percentage = 0
+
+//VOREStation Add End
 /*
  * Turf swappers.
  */
@@ -1307,7 +1378,7 @@
 	spawn_nothing_percentage = 20
 
 	var/override_outdoors = FALSE	// Do we override our chosen turf's outdoors?
-	var/turf_outdoors = TRUE	// Will our turf be outdoors?
+	var/turf_outdoors = OUTDOORS_AREA	// Will our turf be outdoors?
 
 /obj/random/turf/spawn_item()
 	var/build_path = item_to_spawn()
@@ -1329,7 +1400,7 @@
 	desc = "This is a random lava spawn."
 
 	override_outdoors = TRUE
-	turf_outdoors = FALSE
+	turf_outdoors = OUTDOORS_NO
 
 /obj/random/turf/lava/item_to_spawn()
 	return pick(prob(5);/turf/simulated/floor/lava,

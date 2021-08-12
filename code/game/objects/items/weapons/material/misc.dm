@@ -1,7 +1,7 @@
 /obj/item/weapon/material/harpoon
 	name = "harpoon"
-	sharp = 1
-	edge = 0
+	sharp = TRUE
+	edge = FALSE
 	desc = "Tharr she blows!"
 	icon_state = "harpoon"
 	item_state = "harpoon"
@@ -16,8 +16,8 @@
 	force_divisor = 0.2 // 12 with hardness 60 (steel)
 	thrown_force_divisor = 0.75 // 15 with weight 20 (steel)
 	w_class = ITEMSIZE_SMALL
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	origin_tech = list(TECH_MATERIAL = 2, TECH_COMBAT = 1)
 	attack_verb = list("chopped", "torn", "cut")
 	applies_material_colour = 0
@@ -74,14 +74,12 @@
 
 /obj/item/weapon/material/snow/snowball/attack_self(mob/user as mob)
 	if(user.a_intent == I_HURT)
-		//visible_message("[user] has smashed the snowball in their hand!", "You smash the snowball in your hand.")
-		to_chat(user, "<span class='notice'>You smash the snowball in your hand.</span>")
+		to_chat(user, SPAN_NOTICE("You smash the snowball in your hand."))
 		var/atom/S = new /obj/item/stack/material/snow(user.loc)
 		qdel(src)
 		user.put_in_hands(S)
 	else
-		//visible_message("[user] starts compacting the snowball.", "You start compacting the snowball.")
-		to_chat(user, "<span class='notice'>You start compacting the snowball.</span>")
+		to_chat(user, SPAN_NOTICE("You start compacting the snowball."))
 		if(do_after(user, 2 SECONDS))
 			var/atom/S = new /obj/item/weapon/material/snow/snowball/reinforced(user.loc)
 			qdel(src)
@@ -144,11 +142,11 @@
 	if(user.a_intent)
 		switch(user.a_intent)
 			if(I_HURT)
-				if(prob(10) && istype(target, /mob/living/carbon/human) && user.zone_sel in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND))
+				if(prob(10) && istype(target, /mob/living/carbon/human) && (user.zone_sel in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND)))
 					to_chat(target, "<span class='warning'>\The [src] rips at your hands!</span>")
 					ranged_disarm(target)
 			if(I_DISARM)
-				if(prob(min(90, force * 3)) && istype(target, /mob/living/carbon/human) && user.zone_sel in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND))
+				if(prob(min(90, force * 3)) && istype(target, /mob/living/carbon/human) && (user.zone_sel in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND)))
 					ranged_disarm(target)
 				else
 					target.visible_message("<span class='danger'>\The [src] sends \the [target] stumbling away.</span>")
@@ -177,7 +175,7 @@
 						visible_message("<span class='danger'>[H]'s [W] goes off due to \the [src]!</span>")
 						return W.afterattack(target,H)
 
-		if(!(H.species.flags & NO_SLIP) && prob(10) && user.zone_sel in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
+		if(!(H.species.flags & NO_SLIP) && prob(10) && (user.zone_sel in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)))
 			var/armor_check = H.run_armor_check(user.zone_sel, "melee")
 			H.apply_effect(3, WEAKEN, armor_check)
 			playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)

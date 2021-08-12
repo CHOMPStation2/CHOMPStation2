@@ -17,10 +17,11 @@
 	usesound = 'sound/items/screwdriver.ogg'
 	drop_sound = 'sound/items/drop/screwdriver.ogg'
 	pickup_sound = 'sound/items/pickup/screwdriver.ogg'
-	matter = list(DEFAULT_WALL_MATERIAL = 75)
+	matter = list(MAT_STEEL = 75)
 	attack_verb = list("stabbed")
-	sharp  = 1
+	sharp  = TRUE
 	toolspeed = 1
+	tool_qualities = list(TOOL_SCREWDRIVER)
 	var/random_color = TRUE
 
 /obj/item/weapon/tool/screwdriver/suicide_act(mob/user)
@@ -67,10 +68,6 @@
 		M = user
 	return eyestab(M,user)
 
-/obj/item/weapon/tool/screwdriver/is_screwdriver()
-	return TRUE
-
-
 /datum/category_item/catalogue/anomalous/precursor_a/alien_screwdriver
 	name = "Precursor Alpha Object - Hard Light Torgue Tool"
 	desc = "This appears to be a tool, with a solid handle, and a thin hard light \
@@ -101,7 +98,6 @@
 	icon_state = "hybscrewdriver"
 	item_state = "screwdriver_black"
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
-	slowdown = 0.1
 	w_class = ITEMSIZE_NORMAL
 	usesound = 'sound/effects/uncloak.ogg'
 	toolspeed = 0.4
@@ -119,7 +115,7 @@
 	desc = "A simple powered hand drill. It's fitted with a screw bit."
 	icon_state = "drill_screw"
 	item_state = "drill"
-	matter = list(DEFAULT_WALL_MATERIAL = 150, MAT_SILVER = 50)
+	matter = list(MAT_STEEL = 150, MAT_SILVER = 50)
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
 	slot_flags = SLOT_BELT
 	force = 8

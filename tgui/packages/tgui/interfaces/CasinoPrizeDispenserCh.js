@@ -19,10 +19,56 @@ export const CasinoPrizeDispenserCh = (props, context) => {
       <Window.Content className="Layout__content--flexColumn" scrollable>
         <Fragment>
           <CasinoPrizeDispenserChSearch />
-          <CasinoPrizeDispenserChItems />
+          <CasinoPrizeDispenserChItems />	
         </Fragment>
       </Window.Content>
     </Window>
+  );
+};
+
+const CasinoPrizeDispenserChSearch = (props, context) => {
+  const [
+    _searchText,
+    setSearchText,
+  ] = useLocalState(context, 'search', '');
+  const [
+    _sortOrder,
+    setSortOrder,
+  ] = useLocalState(context, 'sort', '');
+  const [
+    descending,
+    setDescending,
+  ] = useLocalState(context, 'descending', false);
+  return (
+    <Box mb="0.5rem">
+      <Flex width="100%">
+        <Flex.Item grow="1" mr="0.5rem">
+          <Input
+            placeholder="Search by item name.."
+            width="100%"
+            onInput={(_e, value) => setSearchText(value)}
+          />
+        </Flex.Item>
+        <Flex.Item basis="30%">
+          <Dropdown
+            selected="Alphabetical"
+            options={Object.keys(sortTypes)}
+            width="100%"
+            lineHeight="19px"
+            onSelected={v => setSortOrder(v)} />
+        </Flex.Item>
+        <Flex.Item>
+          <Button
+            icon={descending ? "arrow-down" : "arrow-up"}
+            height="19px"
+            tooltip={descending ? "Descending order" : "Ascending order"}
+            tooltipPosition="bottom-end"
+            ml="0.5rem"
+            onClick={() => setDescending(!descending)}
+          />
+        </Flex.Item>
+      </Flex>
+    </Box>
   );
 };
 
@@ -85,52 +131,6 @@ const CasinoPrizeDispenserChItems = (props, context) => {
           )}
       </Section>
     </Flex.Item>
-  );
-};
-
-const CasinoPrizeDispenserChSearch = (props, context) => {
-  const [
-    _searchText,
-    setSearchText,
-  ] = useLocalState(context, 'search', '');
-  const [
-    _sortOrder,
-    setSortOrder,
-  ] = useLocalState(context, 'sort', '');
-  const [
-    descending,
-    setDescending,
-  ] = useLocalState(context, 'descending', false);
-  return (
-    <Box mb="0.5rem">
-      <Flex width="100%">
-        <Flex.Item grow="1" mr="0.5rem">
-          <Input
-            placeholder="Search by item name.."
-            width="100%"
-            onInput={(_e, value) => setSearchText(value)}
-          />
-        </Flex.Item>
-        <Flex.Item basis="30%">
-          <Dropdown
-            selected="Alphabetical"
-            options={Object.keys(sortTypes)}
-            width="100%"
-            lineHeight="19px"
-            onSelected={v => setSortOrder(v)} />
-        </Flex.Item>
-        <Flex.Item>
-          <Button
-            icon={descending ? "arrow-down" : "arrow-up"}
-            height="19px"
-            tooltip={descending ? "Descending order" : "Ascending order"}
-            tooltipPosition="bottom-left"
-            ml="0.5rem"
-            onClick={() => setDescending(!descending)}
-          />
-        </Flex.Item>
-      </Flex>
-    </Box>
   );
 };
 

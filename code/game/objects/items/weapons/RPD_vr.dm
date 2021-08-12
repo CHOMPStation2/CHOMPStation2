@@ -54,7 +54,6 @@
 /obj/item/weapon/pipe_dispenser/proc/SetupPipes()
 	if(!first_atmos)
 		first_atmos = GLOB.atmos_pipe_recipes[GLOB.atmos_pipe_recipes[1]][1]
-		recipe = first_atmos
 	if(!first_disposal)
 		first_disposal = GLOB.disposal_pipe_recipes[GLOB.disposal_pipe_recipes[1]][1]
 	if(!recipe)
@@ -121,7 +120,6 @@
 	return data
 
 /obj/item/weapon/pipe_dispenser/tgui_act(action, params)
-	SetupPipes()
 	if(..())
 		return TRUE
 	if(!usr.canmove || usr.stat || usr.restrained() || !in_range(loc, usr))

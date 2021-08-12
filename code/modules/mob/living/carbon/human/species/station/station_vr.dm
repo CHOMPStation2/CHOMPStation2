@@ -15,6 +15,7 @@
 	secondary_langs = list(LANGUAGE_SAGARU)
 	name_language = LANGUAGE_SAGARU
 	color_mult = 1
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
 	min_age = 18
 	max_age = 110
@@ -31,7 +32,7 @@
 	lifespan, but due to their lust for violence, only a handful have ever survived beyond the age of 80, such as the infamous and \
 	legendary General Rain Silves who is claimed to have lived to 5000."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal 
 //	wikilink="https://www.yawn.ocry.com/Sergal"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
@@ -84,7 +85,7 @@
 	name_language = LANGUAGE_SKRELLIAN
 	color_mult = 1
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
-
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	min_age = 18
 	max_age = 110
 
@@ -99,7 +100,7 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal 
 //	wikilink="https://www.yawn.ocry.com/Akula"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
@@ -111,12 +112,11 @@
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
+	water_breather = TRUE
+
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
 	blood_color = "#1D2CBF"
-
-/datum/species/akula/can_breathe_water()
-	return TRUE // Surprise, SHERKS.
 
 /datum/species/nevrean
 	name = SPECIES_NEVREAN
@@ -135,8 +135,9 @@
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = LANGUAGE_BIRDSONG
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
-
+	inherent_verbs = list(/mob/living/proc/flying_toggle,
+		/mob/living/proc/start_wings_hovering,
+		/mob/living/carbon/human/proc/tie_hair)
 	min_age = 18
 	max_age = 110
 
@@ -149,7 +150,7 @@
 	over and over again. Consequently, they struggle to make copies of same things. Both genders have a voice that echoes a lot. Their natural \
 	tone oscillates between tenor and soprano. They are excessively noisy when they quarrel in their native language."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Nevrean"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
@@ -181,7 +182,9 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
-	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
+		/mob/living/proc/shred_limb,
+		/mob/living/carbon/human/proc/tie_hair)
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
 
 	min_age = 18
@@ -218,7 +221,6 @@
 		"You feel uncomfortably warm.",
 		"Your overheated skin itches."
 		)
-	inherent_verbs = list(/mob/living/proc/shred_limb)
 
 /datum/species/vulpkanin
 	name = SPECIES_VULPKANIN
@@ -237,7 +239,8 @@
 //	gluttonous = 1
 	num_alternate_languages = 3
 	color_mult = 1
-	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
+		/mob/living/carbon/human/proc/tie_hair)
 
 	male_scream_sound = null //CHOMPedit
 	female_scream_sound = null //CHOMPedit
@@ -248,7 +251,7 @@
 	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
 	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal
 //	wikilink="https://www.yawn.ocry.com/Vulpkanin"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
@@ -274,6 +277,7 @@
 	tail_animation = 'icons/mob/species/unathi/tail_vr.dmi'
 	color_mult = 1
 	min_age = 18
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -289,6 +293,7 @@
 	tail_animation = 'icons/mob/species/tajaran/tail_vr.dmi'
 	color_mult = 1
 	min_age = 18
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	allergens = null
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
@@ -305,6 +310,7 @@
 	deform = 'icons/mob/human_races/r_def_skrell_vr.dmi'
 	color_mult = 1
 	min_age = 18
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	reagent_tag = null
 	allergens = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
@@ -316,6 +322,7 @@
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //I don't even know if Zaddat can HAVE hair, but here we are, I suppose
 	gluttonous = 0
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
@@ -332,7 +339,7 @@
 		H.equip_to_slot_or_del(L, slot_in_backpack)
 
 /datum/species/diona
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit: restore whitelist requirement
 	min_age = 18
 	wikilink="https://wiki.chompstation13.net/index.php?title=Diona" //CHOMPedit
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -344,6 +351,11 @@
 //CHOMPedit end
 
 /datum/species/human
+	blurb = "Humanity originated in the Sol system, and over the last five centuries has spread \
+	colonies across a wide swathe of space. They hold a wide range of forms and creeds.<br/><br/> \
+	While the central Sol government maintains control of its far-flung people, powerful corporate \
+	interests, rampant cyber and bio-augmentation and secretive factions make life on most human \
+	worlds tumultous at best." //CHOMPedit: blurb variable
 	color_mult = 1
 	icobase = 'icons/mob/human_races/r_human_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_human_vr.dmi'
@@ -360,8 +372,9 @@
 
 /datum/species/vox
 	gluttonous = 0
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit TFF 20/1/20 - restore whitelist requirement
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	min_age = 18
+	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //Get ya quills done did
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
 	descriptors = list(
@@ -371,7 +384,7 @@
 //CHOMPedit: link to our wiki
 	wikilink="https://wiki.chompstation13.net/index.php?title=Vox"
 
-datum/species/harpy
+/datum/species/harpy
 	name = SPECIES_RAPALA
 	name_plural = "Rapalans"
 	icobase = 'icons/mob/human_races/r_harpy_vr.dmi'
@@ -384,7 +397,7 @@ datum/species/harpy
 	name_language = null
 	color_mult = 1
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
+	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering,/mob/living/carbon/human/proc/tie_hair)
 
 	min_age = 18
 	max_age = 80
@@ -399,7 +412,7 @@ datum/species/harpy
 	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal 
 //	wikilink="https://www.yawn.ocry.com/Rapala"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/rapala)
@@ -429,7 +442,7 @@ datum/species/harpy
 	documented in the Virgo system, following a mining bombardment of Virgo 3. The crew of NSB Adephagia have \
 	taken to calling these creatures 'Shadekin', and the name has generally stuck and spread. "		//TODO: Something more fitting for black-eyes
 
-//CHOMPStation Removal TFF 12/24/19 - Wikilinks removed
+//CHOMPStation Removal 
 //	wikilink = "https://wiki.vore-station.net/Shadekin"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/shadekin)
 
@@ -490,6 +503,7 @@ datum/species/harpy
 
 	breath_type = null
 	poison_type = null
+	water_breather = TRUE //They do not quite breathe...
 
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_UNDERWEAR
 
@@ -520,11 +534,8 @@ datum/species/harpy
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/crewkin)
 		)
 
-/datum/species/shadekin/get_bodytype()
+/datum/species/crew_shadekin/get_bodytype()
 	return SPECIES_SHADEKIN
-
-/datum/species/shadekin/can_breathe_water()
-	return TRUE	//they dont quite breathe
 
 //These species are not really species but are just there for custom species selection
 
@@ -539,7 +550,7 @@ datum/species/harpy
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
-	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,/mob/living/proc/shred_limb,/mob/living/carbon/human/proc/tie_hair)
 
 	min_age = 18
 	max_age = 80
@@ -556,7 +567,6 @@ datum/species/harpy
 	base_color = "#333333"
 	blood_color = "#240bc4"
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/shred_limb)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",

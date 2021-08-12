@@ -18,6 +18,7 @@
 
 /atom/Click(var/location, var/control, var/params) // This is their reaction to being clicked on (standard proc)
 	if(src)
+		SEND_SIGNAL(src, COMSIG_CLICK, location, control, params, usr)
 		usr.ClickOn(src, params)
 
 /atom/DblClick(var/location, var/control, var/params)
@@ -354,7 +355,7 @@
 		facedir(direction)
 
 /obj/screen/click_catcher
-	name = "Darkness"
+	name = "" // Empty string names don't show up in context menu clicks
 	icon = 'icons/mob/screen_gen.dmi'
 	icon_state = "click_catcher"
 	plane = CLICKCATCHER_PLANE

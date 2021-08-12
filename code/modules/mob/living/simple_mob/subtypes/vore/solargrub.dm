@@ -77,12 +77,12 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		if(attached)
 			set_AI_busy(TRUE)
 			if(prob(2))
-				src.visible_message("<span class='notice'>\The [src] begins to sink power from the net.</span>")
+				src.visible_message("<b>\The [src]</b> begins to sink power from the net.")
 			if(prob(5))
 				var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 				sparks.set_up(5, 0, get_turf(src))
 				sparks.start()
-			anchored = 1
+			anchored = TRUE
 			PN = attached.powernet
 			PN.draw_power(powerdraw) // previous value 150000 // CHOMPEDIT Start, Rykka waz here. *pawstamp*
 			charge = charge + (powerdraw/1000) //This adds raw powerdraw to charge(Charge is in Ks as in 1 = 1000) // CHOMPEDIT End, Rykka waz here. *pawstamp*
@@ -95,7 +95,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 						var/drain_val = min(apc_drain_rate, cur_charge)
 						A.cell.use(drain_val * CELLRATE)
 		else if(!attached && anchored)
-			anchored = 0
+			anchored = FALSE
 			PN = null
 
 		// CHOMPEDIT Start, Rykka waz here. *pawstamp*
@@ -153,7 +153,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/vore/solargrub/death()
-	src.anchored = 0
+	src.anchored = FALSE
 	set_light(0)
 	..()
 
@@ -192,6 +192,6 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		"The deceptively severe heat trapped within the solargrub works in tandem with its inner muscles and your tingling, prickling stomach juice bath to weaken you!")
 
 /datum/ai_holder/simple_mob/retaliate/solargrub/react_to_attack(atom/movable/attacker)
-	holder.anchored = 0
+	holder.anchored = FALSE
 	holder.set_AI_busy(FALSE)
 	..()

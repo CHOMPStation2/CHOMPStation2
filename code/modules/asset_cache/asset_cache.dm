@@ -56,7 +56,7 @@ Note: If your code uses output() with assets you will need to call asset_flush o
 		for(var/asset in unreceived)
 			var/datum/asset_cache_item/ACI
 			if ((ACI = SSassets.cache[asset]))
-				log_asset("Sending asset [asset] to client [client]")
+//				log_asset("Sending asset [asset] to client [client]") CHOMP Edit Commenting this out to STOP THE FUCKING SPAM. THE LOGS ARE BLOATING
 				client << browse_rsc(ACI.resource, asset)
 
 		client.sent_assets |= unreceived

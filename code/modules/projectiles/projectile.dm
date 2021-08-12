@@ -11,6 +11,9 @@
 	pass_flags = PASSTABLE
 	mouse_opacity = 0
 	hitsound = 'sound/weapons/pierce.ogg'
+
+	blocks_emissive = EMISSIVE_BLOCK_GENERIC
+
 	var/hitsound_wall = null // Played when something hits a wall, or anything else that isn't a mob.
 
 	////TG PROJECTILE SYTSEM
@@ -49,6 +52,7 @@
 	var/datum/beam_components_cache/beam_components
 
 	//Fancy hitscan lighting effects!
+	light_on = TRUE
 	var/hitscan_light_intensity = 1.5
 	var/hitscan_light_range = 0.75
 	var/hitscan_light_color_override
@@ -319,7 +323,7 @@
 	var/turf/starting = get_turf(src)
 	if(isnull(Angle))	//Try to resolve through offsets if there's no angle set.
 		if(isnull(xo) || isnull(yo))
-			crash_with("WARNING: Projectile [type] deleted due to being unable to resolve a target after angle was null!")
+			stack_trace("WARNING: Projectile [type] deleted due to being unable to resolve a target after angle was null!")
 			qdel(src)
 			return
 		var/turf/target = locate(CLAMP(starting + xo, 1, world.maxx), CLAMP(starting + yo, 1, world.maxy), starting.z)
@@ -396,7 +400,7 @@
 		xo = targloc.x - curloc.x
 		setAngle(Get_Angle(src, targloc) + spread)
 	else
-		crash_with("WARNING: Projectile [type] fired without either mouse parameters, or a target atom to aim at!")
+		stack_trace("WARNING: Projectile [type] fired without either mouse parameters, or a target atom to aim at!")
 		qdel(src)
 
 /proc/calculate_projectile_angle_and_pixel_offsets(mob/user, params)
@@ -581,13 +585,14 @@
 		if(check_penetrate(A))
 			passthrough = TRUE
 		penetrating--
-	//CHOMPEdit Begin
+	/* //CHOMPEdit Begin
 	var/obj/item/projectile/bullet/this = src
 	if(istype(this))
 		if(!this.velocity)
 			passthrough = FALSE
 			penetrating = 0
-	//CHOMPEdit End
+	//CHOMPEdit End 
+	*/
 
 	if(passthrough)
 		trajectory_ignore_forcemove = TRUE
@@ -670,7 +675,7 @@
 
 	if(result == PROJECTILE_FORCE_MISS)
 		if(!silenced)
-			target_mob.visible_message("<span class='notice'>\The [src] misses \the [target_mob] narrowly!</span>")
+			target_mob.visible_message("<b>\The [src]</b> misses \the [target_mob] narrowly!")
 			playsound(target_mob, "bullet_miss", 75, 1)
 		return FALSE
 

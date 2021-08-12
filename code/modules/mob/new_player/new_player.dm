@@ -11,11 +11,13 @@
 
 	invisibility = 101
 
-	density = 0
+	density = FALSE
 	stat = 2
 	canmove = 0
 
-	anchored = 1	//  don't get pushed around
+	anchored = TRUE	//  don't get pushed around
+
+	var/created_for
 
 /mob/new_player/New()
 	mob_list += src
@@ -28,8 +30,10 @@
 
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = "<div align='center'>"
+	/* VOREStation Removal
 	output += "[using_map.get_map_info()]"
 	output +="<hr>"
+	VOREStation Removal End */
 	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
@@ -79,7 +83,7 @@
 	if(GLOB.news_data.station_newspaper && !client.seen_news)
 		show_latest_news(GLOB.news_data.station_newspaper)
 
-	panel = new(src, "Welcome","Welcome", 500, 480, src)
+	panel = new(src, "Welcome","Welcome", 210, 300, src) // VOREStation Edit
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -128,9 +132,7 @@
 		new_player_panel_proc()
 
 	if(href_list["observe"])
-		var/alert_time = ticker?.current_state <= GAME_STATE_SETTING_UP ? 1 : round(config.respawn_time/10/60)
-
-		if(alert(src,"Are you sure you wish to observe? You will have to wait up to [alert_time] minute\s before being able to spawn into the game!","Player Setup","Yes","No") == "Yes")
+		if(tgui_alert(src,"Are you sure you wish to observe? If you do, make sure to not use any knowledge gained from observing if you decide to join later.","Player Setup",list("Yes","No")) == "Yes")
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
@@ -183,7 +185,7 @@
 		if(client.prefs.species != "Human" && !check_rights(R_ADMIN, 0)) //VORESTATION EDITS: THE COMMENTED OUT AREAS FROM LINE 154 TO 178
 			if (config.usealienwhitelist)
 				if(!is_alien_whitelisted(src, client.prefs.species))
-					alert(src, "You are currently not whitelisted to Play [client.prefs.species].")
+					tgui_alert(src, "You are currently not whitelisted to Play [client.prefs.species].")
 					return 0
 */
 		LateChoices()
@@ -210,13 +212,13 @@
 			return
 
 		if(!is_alien_whitelisted(src, GLOB.all_species[client.prefs.species]))
-			alert(src, "You are currently not whitelisted to play [client.prefs.species].")
+			tgui_alert(src, "You are currently not whitelisted to play [client.prefs.species].")
 			return 0
 
 		var/datum/species/S = GLOB.all_species[client.prefs.species]
 
 		if(!(S.spawn_flags & SPECIES_CAN_JOIN))
-			alert(src,"Your current species, [client.prefs.species], is not available for play on the station.")
+			tgui_alert_async(src,"Your current species, [client.prefs.species], is not available for play on the station.")
 			return 0
 
 		AttemptLateSpawn(href_list["SelectedJob"],client.prefs.spawnpoint)
@@ -401,7 +403,7 @@
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 		return 0
 	if(!IsJobAvailable(rank))
-		alert(src,"[rank] is not available. Please try another.")
+		tgui_alert_async(src,"[rank] is not available. Please try another.")
 		return 0
 	if(!spawn_checks_vr(rank)) return 0 // VOREStation Insert
 	if(!client)

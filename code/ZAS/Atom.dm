@@ -30,12 +30,6 @@
 		else
 			CRASH("Invalid can_atmos_pass = [can_atmos_pass] on [src] ([type])")
 
-/turf/CanPass(atom/movable/mover, turf/target)
-	if(!target) return FALSE
-
-	if(istype(mover)) // turf/Enter(...) will perform more advanced checks
-		return !density
-
 /turf/CanZASPass(turf/T, is_zone)
 	if(T.blocks_air || src.blocks_air)
 		return FALSE
@@ -64,13 +58,13 @@
 // AIR_BLOCKED - Blocked
 // ZONE_BLOCKED - Not blocked, but zone boundaries will not cross.
 // BLOCKED - Blocked, zone boundaries will not cross even if opened.
-atom/proc/c_airblock(turf/other)
+/atom/proc/c_airblock(turf/other)
 	#ifdef ZASDBG
 	ASSERT(isturf(other))
 	#endif
 	return (AIR_BLOCKED*!CanZASPass(other, FALSE))|(ZONE_BLOCKED*!CanZASPass(other, TRUE))
 
-turf/c_airblock(turf/other)
+/turf/c_airblock(turf/other)
 	#ifdef ZASDBG
 	ASSERT(isturf(other))
 	#endif
@@ -93,8 +87,7 @@ turf/c_airblock(turf/other)
 			return AIR_BLOCKED
 
 	var/result = 0
-	for(var/mm in contents)
-		var/atom/movable/M = mm
+	for(var/atom/movable/M as anything in contents)
 		switch(M.can_atmos_pass)
 			if(ATMOS_PASS_YES)
 				continue

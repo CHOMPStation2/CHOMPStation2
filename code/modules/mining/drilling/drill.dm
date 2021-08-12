@@ -1,8 +1,8 @@
 /obj/machinery/mining
 	icon = 'icons/obj/mining_drill.dmi'
-	anchored = 0
+	anchored = FALSE
 	use_power = USE_POWER_OFF //The drill takes power directly from a cell.
-	density = 1
+	density = TRUE
 	layer = MOB_LAYER+0.1 //So it draws over mobs in the tile north of it.
 
 /obj/machinery/mining/drill
@@ -15,7 +15,7 @@
 	var/supported = 0
 	var/active = 0
 	var/list/resource_field = list()
-	var/obj/item/device/radio/intercom/faultreporter = new /obj/item/device/radio/intercom{channels=list("Supply")}(null)
+	var/obj/item/device/radio/intercom/faultreporter
 
 	var/list/ore_types = list(
 		"hematite" = /obj/item/weapon/ore/iron,
@@ -28,9 +28,9 @@
 		"hydrogen" = /obj/item/weapon/ore/hydrogen,
 		"silicates" = /obj/item/weapon/ore/glass,
 		"carbon" = /obj/item/weapon/ore/coal,
-		"copper" = /obj/item/weapon/ore/copper,
-		"tin" = /obj/item/weapon/ore/tin,
-		"bauxite" = /obj/item/weapon/ore/bauxite,
+	//	"copper" = /obj/item/weapon/ore/copper,
+	//	"tin" = /obj/item/weapon/ore/tin,
+	//	"bauxite" = /obj/item/weapon/ore/bauxite,
 		"rutile" = /obj/item/weapon/ore/rutile
 		)
 
@@ -44,14 +44,14 @@
 	// Found with an advanced laser. exotic_drilling >= 1
 	var/list/ore_types_uncommon = list(
 		MAT_MARBLE = /obj/item/weapon/ore/marble,
-		"painite" = /obj/item/weapon/ore/painite,
-		"quartz" = /obj/item/weapon/ore/quartz,
+		//"painite" = /obj/item/weapon/ore/painite,
+		//"quartz" = /obj/item/weapon/ore/quartz,
 		MAT_LEAD = /obj/item/weapon/ore/lead
 		)
 
 	// Found with an ultra laser. exotic_drilling >= 2
 	var/list/ore_types_rare = list(
-		"void opal" = /obj/item/weapon/ore/void_opal,
+		//"void opal" = /obj/item/weapon/ore/void_opal,
 		MAT_VERDANTIUM = /obj/item/weapon/ore/verdantium
 		)
 
@@ -65,6 +65,12 @@
 		cell = new cell(src)
 	default_apply_parts()
 	cell = default_use_hicell()
+	faultreporter = new /obj/item/device/radio/intercom{channels=list("Supply")}(null)
+
+/obj/machinery/mining/drill/Destroy()
+	qdel_null(faultreporter)
+	qdel_null(cell)
+	return ..()
 
 /obj/machinery/mining/drill/get_cell()
 	return cell
@@ -117,7 +123,7 @@
 		var/total_harvest = harvest_speed //Ore harvest-per-tick.
 		var/found_resource = 0 //If this doesn't get set, the area is depleted and the drill errors out.
 
-		for(var/metal in GLOB.ore_types)
+		for(var/metal in ore_types)
 
 			if(contents.len >= capacity)
 				system_error("Insufficient storage space.")
@@ -145,7 +151,7 @@
 					harvesting.resources[metal] = 0
 
 				for(var/i=1, i <= create_ore, i++)
-					var/oretype = GLOB.ore_types[metal]
+					var/oretype = ore_types[metal]
 					new oretype(src)
 
 		if(!found_resource)	// If a drill can't see an advanced material, it will destroy it while going through.
@@ -209,10 +215,10 @@
 		if(use_cell_power())
 			active = !active
 			if(active)
-				visible_message("<span class='notice'>\The [src] lurches downwards, grinding noisily.</span>")
+				visible_message("<b>\The [src]</b> lurches downwards, grinding noisily.")
 				need_update_field = 1
 			else
-				visible_message("<span class='notice'>\The [src] shudders to a grinding halt.</span>")
+				visible_message("<b>\The [src]</b> shudders to a grinding halt.")
 		else
 			to_chat(user, "<span class='notice'>The drill is unpowered.</span>")
 	else
@@ -260,10 +266,10 @@
 
 	if((!supports || !supports.len) && initial(anchored) == 0)
 		icon_state = "mining_drill"
-		anchored = 0
+		anchored = FALSE
 		active = 0
 	else
-		anchored = 1
+		anchored = TRUE
 
 	if(supports && supports.len >= braces_needed)
 		supported = 1
@@ -273,8 +279,8 @@
 /obj/machinery/mining/drill/proc/system_error(var/error)
 
 	if(error)
-		src.visible_message("<span class='notice'>\The [src] flashes a '[error]' warning.</span>")
-		faultreporter.autosay(error, src.name, "Supply")
+		src.visible_message("<b>\The [src]</b> flashes a '[error]' warning.")
+		faultreporter.autosay(error, src.name, "Supply", using_map.get_map_levels(z))
 	need_player_check = 1
 	active = 0
 	update_icon()

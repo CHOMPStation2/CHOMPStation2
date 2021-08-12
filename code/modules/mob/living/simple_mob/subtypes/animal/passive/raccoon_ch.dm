@@ -8,11 +8,13 @@
 	item_state = "raccoon"
 	icon_living = "raccoon"
 	icon_dead = "raccoon_dead"
+	icon_rest = "raccoon_rest"
 
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/raccoon_ch
 	say_list_type = /datum/say_list/raccoon_ch
 
 	see_in_dark = 6
+	movement_cooldown = 3
 
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
@@ -25,6 +27,9 @@
 	meat_amount = 1
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
+	vore_active = TRUE
+	vore_capacity = 1
+	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
 /datum/say_list/raccoon_ch
 	speak = list("HSSSSS")

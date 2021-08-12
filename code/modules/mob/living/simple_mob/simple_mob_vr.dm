@@ -42,6 +42,7 @@
 
 	var/vore_fullness = 0				// How "full" the belly is (controls icons)
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
+	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
 	var/life_disabled = 0				// For performance reasons
 
 	var/mount_offset_x = 5				// Horizontal riding offset.
@@ -66,8 +67,7 @@
 // Update fullness based on size & quantity of belly contents
 /mob/living/simple_mob/proc/update_fullness()
 	var/new_fullness = 0
-	for(var/belly in vore_organs)
-		var/obj/belly/B = belly
+	for(var/obj/belly/B as anything in vore_organs)
 		for(var/mob/living/M in B)
 			new_fullness += M.size_multiplier
 	new_fullness = new_fullness / size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
@@ -77,6 +77,9 @@
 /mob/living/simple_mob/update_icon()
 	. = ..()
 	if(vore_active)
+		var/voremob_awake = FALSE
+		if(icon_state == icon_living)
+			voremob_awake = TRUE
 		update_fullness()
 		if(!vore_fullness)
 			return 0
@@ -86,6 +89,10 @@
 			icon_state = "[icon_dead]-[vore_fullness]"
 		else if(((stat == UNCONSCIOUS) || resting || incapacitated(INCAPACITATION_DISABLED) ) && icon_rest && (vore_icons & SA_ICON_REST))
 			icon_state = "[icon_rest]-[vore_fullness]"
+		if(vore_eyes && voremob_awake) //Update eye layer if applicable.
+			remove_eyes()
+			add_eyes()
+	update_transform()
 
 /mob/living/simple_mob/proc/will_eat(var/mob/living/M)
 	if(client) //You do this yourself, dick!
@@ -97,10 +104,14 @@
 	if(src == M) //Don't eat YOURSELF dork
 		//ai_log("vr/won't eat [M] because it's me!", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
+	//CHOMPSTATION add
+	if(!M.devourable)	//Why was there never a check for edibility to begin with
+		return 0
+	//CHOMPSTATION add end
 	if(vore_ignores_undigestable && !M.digestable) //Don't eat people with nogurgle prefs
 		//ai_log("vr/wont eat [M] because I am picky", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
-	if(!M.allowmobvore) // Don't eat people who don't want to be ate by mobs
+	if(!M.allowmobvore || !M.devourable) // Don't eat people who don't want to be ate by mobs
 		//ai_log("vr/wont eat [M] because they don't allow mob vore", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
 	if(M in prey_excludes) // They're excluded
@@ -155,9 +166,9 @@
 	vore_pounce_cooldown = world.time + 20 SECONDS // don't attempt another pounce for a while
 	if(prob(successrate)) // pounce success!
 		M.Weaken(5)
-		M.visible_message("<span class='danger'>\the [src] pounces on \the [M]!</span>!")
+		M.visible_message("<span class='danger'>\The [src] pounces on \the [M]!</span>!")
 	else // pounce misses!
-		M.visible_message("<span class='danger'>\the [src] attempts to pounce \the [M] but misses!</span>!")
+		M.visible_message("<span class='danger'>\The [src] attempts to pounce \the [M] but misses!</span>!")
 		playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 
 	if(will_eat(M) && (!M.canmove || vore_standing_too)) //if they're edible then eat them too
@@ -253,7 +264,7 @@
 	if(istype(tmob) && will_eat(tmob) && !istype(tmob, type) && prob(vore_bump_chance) && !ckey) //check if they decide to eat. Includes sanity check to prevent cannibalism.
 		if(tmob.canmove && prob(vore_pounce_chance)) //if they'd pounce for other noms, pounce for these too, otherwise still try and eat them if they hold still
 			tmob.Weaken(5)
-		tmob.visible_message("<span class='danger'>\the [src] [vore_bump_emote] \the [tmob]!</span>!")
+		tmob.visible_message("<span class='danger'>\The [src] [vore_bump_emote] \the [tmob]!</span>!")
 		set_AI_busy(TRUE)
 		spawn()
 			animal_nom(tmob)
@@ -263,7 +274,7 @@
 	return FALSE
 
 // Checks to see if mob doesn't like this kind of turf
-/mob/living/simple_mob/IMove(newloc)
+/mob/living/simple_mob/IMove(turf/newloc, safety = TRUE)
 	if(istype(newloc,/turf/unsimulated/floor/sky))
 		return MOVEMENT_FAILED //Mobs aren't that stupid, probably
 	return ..() // Procede as normal.
@@ -398,7 +409,7 @@
 		choices += M
 	choices -= src
 
-	var/mob/living/T = input(src,"Who do you wish to leap at?") as null|anything in choices
+	var/mob/living/T = tgui_input_list(src, "Who do you wish to leap at?", "Target Choice", choices)
 
 	if(!T || !src || src.stat) return
 

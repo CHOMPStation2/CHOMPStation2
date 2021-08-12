@@ -5,10 +5,10 @@
 	speak_emote = list("hisses")
 	icon_state = "larva"
 	language = "Hivemind"
-	maxHealth = 50 //CHOMPedit. Larva can gain a little more health on weeds/phoron to make them just a little harder to kill
-	health = 25
+	maxHealth = 50
+	health = 50
 	faction = "xeno"
-	max_grown = 325 //CHOMPedit. Since xenos can reproduce without people now I decided to drastically increase the growth time
+	max_grown = 325 //Increase larva growth time due to not needing hosts.
 
 /mob/living/carbon/alien/larva/Initialize()
 	. = ..()

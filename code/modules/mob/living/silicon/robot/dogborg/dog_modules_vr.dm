@@ -278,7 +278,7 @@
 			playsound(src, 'sound/weapons/Egloves.ogg', 50, 1, -1)
 			R.cell.charge -= 666
 		else
-			user.visible_message("<span class='notice'>\the [user] affectionately licks all over \the [target]'s face!</span>", "<span class='notice'>You affectionately lick all over \the [target]'s face!</span>")
+			user.visible_message("<span class='notice'>\The [user] affectionately licks all over \the [target]'s face!</span>", "<span class='notice'>You affectionately lick all over \the [target]'s face!</span>")
 			playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
 			water.use_charge(5)
 			var/mob/living/carbon/human/H = target
@@ -336,8 +336,8 @@
 	icon_state = "swordtail"
 	desc = "A glowing pink dagger normally attached to the end of a cyborg's tail. It appears to be extremely sharp."
 	force = 20 //Takes 5 hits to 100-0
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	throwforce = 0 //This shouldn't be thrown in the first place.
 	hitsound = 'sound/weapons/blade1.ogg'
 	attack_verb = list("slashed", "stabbed", "jabbed", "mauled", "sliced")
@@ -407,7 +407,7 @@
 			choices += M
 	choices -= src
 
-	var/mob/living/T = input(src,"Who do you wish to leap at?") as null|anything in choices
+	var/mob/living/T = tgui_input_list(src,"Who do you wish to leap at?","Target Choice", choices)
 
 	if(!T || !src || src.stat) return
 
@@ -448,3 +448,28 @@
 	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
 	if(prob(75)) //75% chance to stun for 5 seconds, really only going to be 4 bcus click cooldown+animation.
 		T.apply_effect(5, WEAKEN, armor_block)
+
+
+/mob/living/silicon/robot/proc/reskin_booze()
+	set name = "Change Drink Color"
+	set category = "Robot Commands"
+	set desc = "Choose the color of drink displayed inside you."
+
+	var/mob/M = usr
+	var/list/options = list()
+	options["Beer"] = "Beer Buddy"
+	options["Curacao"] = "Brilliant Blue"
+	options["Coffee"] = "Caffine Dispenser"
+	options["Space Mountain Wind"] = "Gamer Juice Maker"
+	options["Whiskey Soda"] = "Liqour Licker"
+	options["Grape Soda"] = "The Grapist"
+	options["Demon's Blood"] = "Vampire's Aid"
+	options["Slav Vodka"] = "Vodka Komrade"
+	var/choice = tgui_input_list(M, "Choose your drink!", "Drink Choice", options)
+	if(src && choice && !M.stat && in_range(M,src))
+		icontype = options[choice]
+		var/active_sound = 'sound/effects/bubbles.ogg'
+		playsound(src.loc, "[active_sound]", 100, 0, 4)
+		M << "Your Tank now displays [choice]. Drink up and enjoy!"
+		updateicon()
+		return 1

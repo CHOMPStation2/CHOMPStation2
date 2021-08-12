@@ -18,7 +18,6 @@
 	#include "shuttles/ert.dm"
 
 	#include "loadout/loadout_accessories.dm"
-	#include "loadout/loadout_head.dm"
 	#include "loadout/loadout_suit.dm"
 	#include "loadout/loadout_uniform.dm"
 
@@ -50,7 +49,7 @@
 	#include "southern_cross-9.dmm"
 	#include "southern_cross-10.dmm"
 	//CHOMPStation Edit End
-	//#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
+	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
 	#include "submaps/_southern_cross_submaps.dm"
 

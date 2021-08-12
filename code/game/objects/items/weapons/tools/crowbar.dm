@@ -14,15 +14,13 @@
 	item_state = "crowbar"
 	w_class = ITEMSIZE_SMALL
 	origin_tech = list(TECH_ENGINEERING = 1)
-	matter = list(DEFAULT_WALL_MATERIAL = 50)
+	matter = list(MAT_STEEL = 50)
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked")
 	usesound = 'sound/items/crowbar.ogg'
 	drop_sound = 'sound/items/drop/crowbar.ogg'
 	pickup_sound = 'sound/items/pickup/crowbar.ogg'
 	toolspeed = 1
-
-/obj/item/weapon/tool/crowbar/is_crowbar()
-	return TRUE
+	tool_qualities = list(TOOL_CROWBAR)
 
 /obj/item/weapon/tool/crowbar/red
 	icon = 'icons/obj/tools.dmi'

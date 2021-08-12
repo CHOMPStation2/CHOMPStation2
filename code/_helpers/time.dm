@@ -1,3 +1,6 @@
+#define MILISECOND * 0.01
+#define MILLISECONDS * 0.01
+
 #define SECOND *10
 #define SECONDS *10
 
@@ -19,6 +22,12 @@
 #define DS2TICKS(DS) ((DS)/world.tick_lag)	// Convert deciseconds to ticks
 #define TICKS2DS(T) ((T) TICKS) 				// Convert ticks to deciseconds
 #define DS2NEARESTTICK(DS) TICKS2DS(-round(-(DS2TICKS(DS))))
+
+#define MS2DS(T) ((T) MILLISECONDS)
+
+#define DS2MS(T) ((T) * 100)
+
+var/world_startup_time
 
 /proc/get_game_time()
 	var/global/time_offset = 0
@@ -42,7 +51,7 @@ var/next_station_date_change = 1 DAY
 
 #define duration2stationtime(time) time2text(station_time_in_ds + time, "hh:mm")
 #define worldtime2stationtime(time) time2text(GLOB.roundstart_hour HOURS + time, "hh:mm")
-#define round_duration_in_ds (GLOB.round_start_time ? world.time - GLOB.round_start_time : 0)
+#define round_duration_in_ds (GLOB.round_start_time ? REALTIMEOFDAY - GLOB.round_start_time : 0)
 #define station_time_in_ds (GLOB.roundstart_hour HOURS + round_duration_in_ds)
 
 /proc/stationtime2text()
@@ -54,9 +63,7 @@ var/next_station_date_change = 1 DAY
 		next_station_date_change += 1 DAY
 		update_time = TRUE
 	if(!station_date || update_time)
-		var/extra_days = round(station_time_in_ds / (1 DAY)) DAYS
-		var/timeofday = world.timeofday + extra_days
-		station_date = num2text((text2num(time2text(timeofday, "YYYY"))+544)) + "-" + time2text(timeofday, "MM-DD") //YW EDIT
+		station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
 	return station_date
 
 //ISO 8601
@@ -78,7 +85,7 @@ var/next_station_date_change = 1 DAY
 	return time2text(wtime - GLOB.timezoneOffset, format)
 
 /* Returns 1 if it is the selected month and day */
-proc/isDay(var/month, var/day)
+/proc/isDay(var/month, var/day)
 	if(isnum(month) && isnum(day))
 		var/MM = text2num(time2text(world.timeofday, "MM")) // get the current month
 		var/DD = text2num(time2text(world.timeofday, "DD")) // get the current day
@@ -94,7 +101,7 @@ var/last_round_duration = 0
 GLOBAL_VAR_INIT(round_start_time, 0)
 
 /hook/roundstart/proc/start_timer()
-	GLOB.round_start_time = world.time
+	GLOB.round_start_time = REALTIMEOFDAY
 	return 1
 
 /proc/roundduration2text()
@@ -119,7 +126,8 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 /var/rollovercheck_last_timeofday = 0
 /proc/update_midnight_rollover()
 	if (world.timeofday < rollovercheck_last_timeofday) //TIME IS GOING BACKWARDS!
-		return midnight_rollovers++
+		midnight_rollovers += 1
+	rollovercheck_last_timeofday = world.timeofday
 	return midnight_rollovers
 
 //Increases delay as the server gets more overloaded,

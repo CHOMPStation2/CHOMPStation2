@@ -571,6 +571,12 @@
 	ckeywhitelist = list("luminescentring")
 	character_name = list("Briana Moore")
 
+/datum/gear/fluff/entchtut_medal
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "Entchtut's Conduct Medal"
+	ckeywhitelist = list("littlebigkid2000")
+	character_name = list("Entchtut Cenein")
+
 //  M CKEYS
 /datum/gear/fluff/phi_box
 	path = /obj/item/weapon/storage/box/fluff/phi
@@ -685,6 +691,12 @@
 	ckeywhitelist = list("pimientopyro")
 	character_name = list("Zaku Fyodorovna")
 
+/datum/gear/fluff/evelyn_coat
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security/fluff/evelyn/
+	display_name = "warden's navy winter coat"
+	ckeywhitelist = list("pandora029")
+	character_name = list("Evelyn Tareen")
+
 /datum/gear/fluff/lily_medal
 	path = /obj/item/clothing/accessory/medal/silver/unity
 	display_name = "Lily's Unity Medal"
@@ -738,6 +750,24 @@
 	ckeywhitelist = list("rboys2")
 	character_name = list("Clara Mali")
 	cost = 1
+
+/datum/gear/fluff/luna_sci_medal
+	path = /obj/item/clothing/accessory/medal/nobel_science
+	display_name = "LUNA's Nobel Science Award"
+	ckeywhitelist = list("residentcody")
+	character_name = list("LUNA")
+	
+/datum/gear/fluff/luna_conduct_medal
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "LUNA's Distinguished Conduct Medal"
+	ckeywhitelist = list("residentcody")
+	character_name = list("LUNA")
+	
+/datum/gear/fluff/pathfinder_id
+	path = /obj/item/weapon/card/id/event/polymorphic/itg
+	display_name = "Pathfinder's ITG ID"
+	ckeywhitelist = list("residentcody")
+	character_name = list("Pathfinder")
 
 /datum/gear/fluff/nikki_dorky_outfit
 	path = /obj/item/weapon/storage/box/fluff
@@ -1051,6 +1081,12 @@
 	display_name = "Harmony's ITG-ID card"
 	ckeywhitelist = list("verysoft")
 	character_name = list("Harmony")
+
+/datum/gear/fluff/shinerunner_id
+	path = /obj/item/weapon/card/id/event/polymorphic/itg
+	display_name = "Shine-Runner's ITG-ID card"
+	ckeywhitelist = list("verysoft")
+	character_name = list("Shine-Runner")
 
 //  W CKEYS
 /datum/gear/fluff/sthasha_bracer

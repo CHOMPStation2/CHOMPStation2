@@ -1,4 +1,4 @@
-//CHOMP vore additions, currently only consists of reagent stuff - Jack
+//CHOMP vore additions.
 
 /obj/belly
 	//CHOMP - liquid bellies
@@ -39,6 +39,9 @@
 	var/liquid_fullness4_messages = FALSE
 	var/liquid_fullness5_messages = FALSE
 	var/vorespawn_blacklist = FALSE
+	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
+	var/autotransferwait = 10 				// Time between trying to transfer.
+	var/autotransferlocation				// Place to send them
 
 	var/list/fullness1_messages = list(
 		"%pred's %belly looks empty"
@@ -248,7 +251,7 @@
 		if("full5")
 			raw_messages = fullness5_messages
 
-	var/messages = list2text(raw_messages,delim)
+	var/messages = raw_messages.Join(delim)
 	return messages
 
 // The next function sets the messages on the belly, from human-readable var
@@ -257,7 +260,7 @@
 /obj/belly/proc/set_reagent_messages(var/raw_text, var/type, var/delim = "\n\n")
 	ASSERT(type == "full1" || type == "full2" || type == "full3" || type == "full4" || type == "full5")
 
-	var/list/raw_list = text2list(html_encode(raw_text),delim)
+	var/list/raw_list = splittext(html_encode(raw_text),delim)
 	if(raw_list.len > 10)
 		raw_list.Cut(11)
 		log_debug("[owner] tried to set [lowertext(name)] with 11+ messages")
@@ -286,3 +289,64 @@
 			fullness5_messages = raw_list
 
 	return
+
+/obj/belly/proc/check_autotransfer(var/prey, var/autotransferlocation)
+	if(autotransferlocation && (autotransferchance > 0) && (prey in contents))
+		if(prob(autotransferchance))
+			var/obj/belly/dest_belly
+			for(var/obj/belly/B in owner.vore_organs)
+				if(B.name == autotransferlocation)
+					dest_belly = B
+					break
+			if(dest_belly)
+				transfer_contents(prey, dest_belly)
+		else
+			// Didn't transfer, so wait before retrying
+			addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, prey, autotransferlocation), autotransferwait)
+
+/////////////////////////// Process Cycle Lite /////////////////////////// CHOMP PCL
+/obj/belly/proc/quick_cycle() //For manual belly cycling without straining the bellies subsystem.
+	HandleBellyReagents()	//CHOMP reagent belly stuff.
+	// VERY early exit
+	if(!contents.len)
+		return
+
+	var/to_update = FALSE //Did anything update worthy happen?
+
+/////////////////////////// Exit Early //////////////////////////// CHOMP PCL
+	var/list/touchable_atoms = contents - items_preserved
+	if(!length(touchable_atoms))
+		return
+
+	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
+	if(!DM)
+		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
+		return FALSE
+	if(DM.handle_atoms(src, touchable_atoms))
+		updateVRPanels()
+		return
+
+	var/list/touchable_mobs = null
+
+	var/list/hta_returns = handle_touchable_atoms(touchable_atoms)
+	if(islist(hta_returns))
+		if(hta_returns["touchable_mobs"])
+			touchable_mobs = hta_returns["touchable_mobs"]
+		if(hta_returns["to_update"])
+			to_update = hta_returns["to_update"]
+
+	if(!LAZYLEN(touchable_mobs))
+		return
+
+///////////////////// Time to actually process mobs ///////////////////// CHOMP PCL
+	for(var/target in touchable_mobs)
+		var/mob/living/L = target
+		if(!istype(L))
+			continue
+		var/list/returns = DM.process_mob(src, target)
+		if(istype(returns) && returns["to_update"])
+			to_update = TRUE
+
+	if(to_update)
+		updateVRPanels()
+/////////////////////////// CHOMP PCL END ///////////////////////////

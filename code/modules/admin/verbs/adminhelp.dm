@@ -82,8 +82,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		return
 	var/list/dat = list("<html><head><title>[title]</title></head>")
 	dat += "<A HREF='?_src_=holder;ahelp_tickets=[state]'>Refresh</A><br><br>"
-	for(var/I in l2b)
-		var/datum/admin_help/AH = I
+	for(var/datum/admin_help/AH as anything in l2b)
 		dat += "<span class='adminnotice'><span class='adminhelp'>Ticket #[AH.id]</span>: <A HREF='?_src_=holder;ahelp=\ref[AH];ahelp_action=ticket'>[AH.initiator_key_name]: [AH.name]</A></span><br>"
 
 	usr << browse(dat.Join(), "window=ahelp_list[state];size=600x480")
@@ -92,8 +91,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 /datum/admin_help_tickets/proc/stat_entry()
 	var/num_disconnected = 0
 	stat("Active Tickets:", astatclick.update("[active_tickets.len]"))
-	for(var/I in active_tickets)
-		var/datum/admin_help/AH = I
+	for(var/datum/admin_help/AH as anything in active_tickets)
 		if(AH.initiator)
 			stat("#[AH.id]. [AH.initiator_key_name]:", AH.statclick.update())
 		else
@@ -119,8 +117,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 //Get a ticket given a ckey
 /datum/admin_help_tickets/proc/CKey2ActiveTicket(ckey)
-	for(var/I in active_tickets)
-		var/datum/admin_help/AH = I
+	for(var/datum/admin_help/AH as anything in active_tickets)
 		if(AH.initiator_ckey == ckey)
 			return AH
 
@@ -213,6 +210,17 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	else
 		ahelp_discord_message("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.") //CHOMPEdit
 	//YW EDIT END
+
+		// Also send it to discord since that's the hip cool thing now.
+		SSwebhooks.send(
+			WEBHOOK_AHELP_SENT,
+			list(
+				"name" = "Ticket ([id]) (Game ID: [game_id]) ticket opened.",
+				"body" = "[key_name(initiator)] has opened a ticket. \n[msg]",
+				"color" = COLOR_WEBHOOK_POOR
+			)
+		)
+		
 	GLOB.ahelp_tickets.active_tickets += src
 
 /datum/admin_help/Destroy()
@@ -305,6 +313,14 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	feedback_inc("ahelp_reopen")
 	TicketPanel()	//can only be done from here, so refresh it
 
+	SSwebhooks.send(
+		WEBHOOK_AHELP_SENT,
+		list(
+			"name" = "Ticket ([id]) (Game ID: [game_id]) reopened.",
+			"body" = "Reopened by [key_name(usr)]."
+		)
+	)
+
 //private
 /datum/admin_help/proc/RemoveActive()
 	if(state != AHELP_ACTIVE)
@@ -330,6 +346,14 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		var/msg = "Ticket [TicketHref("#[id]")] closed by [key_name_admin(usr)]."
 		message_admins(msg)
 		log_admin(msg)
+		SSwebhooks.send(
+			WEBHOOK_AHELP_SENT,
+			list(
+				"name" = "Ticket ([id]) (Game ID: [game_id]) closed.",
+				"body" = "Closed by [key_name(usr)].",
+				"color" = COLOR_WEBHOOK_BAD
+			)
+		)
 
 //Mark open ticket as resolved/legitimate, returns ahelp verb
 /datum/admin_help/proc/Resolve(silent = FALSE)
@@ -347,6 +371,14 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		var/msg = "Ticket [TicketHref("#[id]")] resolved by [key_name_admin(usr)]"
 		message_admins(msg)
 		log_admin(msg)
+		SSwebhooks.send(
+			WEBHOOK_AHELP_SENT,
+			list(
+				"name" = "Ticket ([id]) (Game ID: [game_id]) resolved.",
+				"body" = "Marked as Resolved by [key_name(usr)].",
+				"color" = COLOR_WEBHOOK_GOOD
+			)
+		)
 
 //Close and return ahelp verb, use if ticket is incoherent
 /datum/admin_help/proc/Reject(key_name = key_name_admin(usr))
@@ -367,6 +399,14 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	log_admin(msg)
 	AddInteraction("Rejected by [key_name_admin(usr)].")
 	Close(silent = TRUE)
+	SSwebhooks.send(
+		WEBHOOK_AHELP_SENT,
+		list(
+			"name" = "Ticket ([id]) (Game ID: [game_id]) rejected.",
+			"body" = "Rejected by [key_name(usr)].",
+			"color" = COLOR_WEBHOOK_BAD
+		)
+	)
 
 //Resolve ticket with IC Issue message
 /datum/admin_help/proc/ICIssue(key_name = key_name_admin(usr))
@@ -386,6 +426,14 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	log_admin(msg)
 	AddInteraction("Marked as IC issue by [key_name_admin(usr)]")
 	Resolve(silent = TRUE)
+	SSwebhooks.send(
+		WEBHOOK_AHELP_SENT,
+		list(
+			"name" = "Ticket ([id]) (Game ID: [game_id]) marked as IC issue.",
+			"body" = "Marked as IC Issue by [key_name(usr)].",
+			"color" = COLOR_WEBHOOK_BAD
+		)
+	)
 
 //Resolve ticket with IC Issue message
 /datum/admin_help/proc/HandleIssue()
@@ -397,11 +445,18 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	if(initiator)
 		to_chat(initiator, msg)
 
-	feedback_inc("ahelp_icissue")
+	feedback_inc("ahelp_handling")
 	msg = "Ticket [TicketHref("#[id]")] being handled by [key_name(usr,FALSE,FALSE)]"
 	message_admins(msg)
 	log_admin(msg)
 	AddInteraction("[key_name_admin(usr)] is now handling this ticket.")
+	SSwebhooks.send(
+		WEBHOOK_AHELP_SENT,
+		list(
+			"name" = "Ticket ([id]) (Game ID: [game_id]) being handled.",
+			"body" = "[key_name(usr)] is now handling the ticket."
+		)
+	)
 
 //Show the ticket panel
 /datum/admin_help/proc/TicketPanel()
@@ -518,7 +573,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 	feedback_add_details("admin_verb","Adminhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)
-		if(alert(usr, "You already have a ticket open. Is this for the same issue?",,"Yes","No") != "No")
+		if(tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No")) != "No")
 			if(current_ticket)
 				current_ticket.MessageNoRecipient(msg)
 				to_chat(usr, "<span class='adminnotice'>PM to-<b>Admins</b>: [msg]</span>")
@@ -541,7 +596,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 	var/browse_to
 
-	switch(input("Display which ticket list?") as null|anything in list("Active Tickets", "Closed Tickets", "Resolved Tickets"))
+	switch(tgui_input_list(usr, "Display which ticket list?", "List Choice", list("Active Tickets", "Closed Tickets", "Resolved Tickets")))
 		if("Active Tickets")
 			browse_to = AHELP_ACTIVE
 		if("Closed Tickets")
@@ -611,8 +666,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 /proc/ircadminwho()
 	var/list/message = list("Admins: ")
 	var/list/admin_keys = list()
-	for(var/adm in GLOB.admins)
-		var/client/C = adm
+	for(var/client/C as anything in GLOB.admins)
 		admin_keys += "[C][C.holder.fakekey ? "(Stealth)" : ""][C.is_afk() ? "(AFK)" : ""]"
 
 	for(var/admin in admin_keys)

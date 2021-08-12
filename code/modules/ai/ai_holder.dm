@@ -175,23 +175,21 @@
 		var/list/choices = list()
 		for(var/typechoice in types)
 			var/list/found = list()
-			for(var/mob in searching) // Isnt't there a helper for this, maybe? I forget.
-				var/atom/M = mob
+			for(var/atom/M as anything in searching) // Isnt't there a helper for this, maybe? I forget.
 				if(!(M.z in levels_working))
 					continue
-				if(!istype(mob,typechoice))
+				if(!istype(M,typechoice))
 					continue
 				found += M
 			choices["[typechoice] ([found.len])"] = found // Prettified name for the user input below)
 			searching = found // Now we only search the list we just made, because of the order of our types list, each subsequent list will be a subset of the one we just finished
 		
-		var/choice = input(usr,"Based on your AI holder's mob location, we'll edit mobs on Z [levels_working.Join(",")]. What types do you want to alter?") as null|anything in choices
+		var/choice = tgui_input_list(usr,"Based on your AI holder's mob location, we'll edit mobs on Z [levels_working.Join(",")]. What types do you want to alter?", "Types", choices)
 		if(!choice)
 			href_list["datumrefresh"] = "\ref[src]"
 			return
 		var/list/selected = choices[choice]
-		for(var/mob in selected)
-			var/mob/living/L = mob
+		for(var/mob/living/L as anything in selected)
 			if(!istype(L))
 				to_chat(usr,"<span class='warning'>Skipping incompatible mob: [L] [ADMIN_COORDJMP(L)]</span>")
 				continue

@@ -173,8 +173,8 @@
 	item_state = "joanariamob"
 	origin_tech = "materials=7"
 	force = 15
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 
@@ -554,7 +554,7 @@
 	//He's dead, jim
 	if((state == 1) && owner && (owner.stat == DEAD))
 		update_state(2)
-		audible_message("<span class='warning'>The [name] begins flashing red.</span>")
+		visible_message("<span class='warning'>The [name] begins flashing red.</span>")
 		sleep(30)
 		visible_message("<span class='warning'>The [name] shatters into dust!</span>")
 		if(owner_c)
@@ -626,7 +626,7 @@
 	force = 5.0
 	throwforce = 7.0
 	w_class = ITEMSIZE_SMALL
-	matter = list(DEFAULT_WALL_MATERIAL = 50)
+	matter = list(MAT_STEEL = 50)
 	attack_verb = list("bludgeoned", "whacked", "disciplined", "thrashed")
 
 /obj/item/weapon/cane/fluff/tasald
@@ -645,7 +645,7 @@
     force = 1.0
     throwforce = 2.0
     w_class = ITEMSIZE_SMALL
-    matter = list(DEFAULT_WALL_MATERIAL = 50)
+    matter = list(MAT_STEEL = 50)
     attack_verb = list("sparkled", "whacked", "twinkled", "radiated", "dazzled", "zapped")
     hitsound = 'sound/weapons/sparkle.ogg'
     var/last_use = 0
@@ -769,11 +769,12 @@
 	icon_state = "dragor_dot"
 	w_class = ITEMSIZE_SMALL
 
-	attack_self(mob/user as mob)
-		if(user.ckey == "pontifexminimus")
-			user.verbs |= /mob/living/carbon/human/proc/shapeshifter_select_gender
-		else
-			return
+/obj/item/weapon/fluff/dragor_dot/attack_self(mob/user as mob)
+	if(user.ckey == "pontifexminimus")
+		user.verbs |= /mob/living/carbon/human/proc/shapeshifter_select_gender
+	else
+		return
+
 //LuminescentRing: Briana Moore
 /obj/item/weapon/storage/backpack/messenger/black/fluff/briana
 	name = "2561 graduation bag"
@@ -932,8 +933,8 @@
 	icon_state = "stunstaff00"
 	var/base_icon = "stunstaff"
 	force = 5
-	sharp = 0
-	edge = 0
+	sharp = FALSE
+	edge = FALSE
 	throwforce = 7
 	w_class = ITEMSIZE_HUGE
 	origin_tech = list(TECH_COMBAT = 2)
@@ -1028,8 +1029,8 @@
 	var/active_throwforce
 	var/active_w_class
 	var/active_embed_chance = 0
-	sharp = 0
-	edge = 0
+	sharp = FALSE
+	edge = FALSE
 
 /obj/item/weapon/melee/fluffstuff/proc/activate(mob/living/user)
 	if(active)
@@ -1038,8 +1039,8 @@
 	embed_chance = active_embed_chance
 	force = active_force
 	throwforce = active_throwforce
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	w_class = active_w_class
 	playsound(src, 'sound/weapons/sparkle.ogg', 50, 1)
 
@@ -1111,8 +1112,8 @@
 
 	..()
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	icon_state = "[active_state]_sharp"
 	damtype = BRUTE
 

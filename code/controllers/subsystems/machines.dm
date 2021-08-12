@@ -100,16 +100,16 @@ SUBSYSTEM_DEF(machines)
 	if (!resumed)
 		src.current_run = global.pipe_networks.Copy()
 	//cache for sanic speed (lists are references anyways)
+	var/wait = src.wait
 	var/list/current_run = src.current_run
 	while(current_run.len)
 		var/datum/pipe_network/PN = current_run[current_run.len]
 		current_run.len--
-		if(istype(PN) && !QDELETED(PN))
-			PN.process(wait)
-		else
+		if(QDELETED(PN))
 			global.pipe_networks.Remove(PN)
-			if(!QDELETED(PN))
-				DISABLE_BITFIELD(PN.datum_flags, DF_ISPROCESSING)
+			DISABLE_BITFIELD(PN?.datum_flags, DF_ISPROCESSING)
+		else
+			PN.process(wait)
 		if(MC_TICK_CHECK)
 			return
 
@@ -117,14 +117,14 @@ SUBSYSTEM_DEF(machines)
 	if (!resumed)
 		src.current_run = global.processing_machines.Copy()
 
+	var/wait = src.wait
 	var/list/current_run = src.current_run
 	while(current_run.len)
 		var/obj/machinery/M = current_run[current_run.len]
 		current_run.len--
-		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL))
+		if(QDELETED(M) || (M.process(wait) == PROCESS_KILL))
 			global.processing_machines.Remove(M)
-			if(!QDELETED(M))
-				DISABLE_BITFIELD(M.datum_flags, DF_ISPROCESSING)
+			DISABLE_BITFIELD(M?.datum_flags, DF_ISPROCESSING)
 		if(MC_TICK_CHECK)
 			return
 
@@ -132,16 +132,16 @@ SUBSYSTEM_DEF(machines)
 	if (!resumed)
 		src.current_run = global.powernets.Copy()
 
+	var/wait = src.wait
 	var/list/current_run = src.current_run
 	while(current_run.len)
 		var/datum/powernet/PN = current_run[current_run.len]
 		current_run.len--
-		if(istype(PN) && !QDELETED(PN))
-			PN.reset(wait)
-		else
+		if(QDELETED(PN))
 			global.powernets.Remove(PN)
-			if(!QDELETED(PN))
-				DISABLE_BITFIELD(PN.datum_flags, DF_ISPROCESSING)
+			DISABLE_BITFIELD(PN?.datum_flags, DF_ISPROCESSING)
+		else
+			PN.reset(wait)
 		if(MC_TICK_CHECK)
 			return
 
@@ -151,13 +151,14 @@ SUBSYSTEM_DEF(machines)
 	if (!resumed)
 		src.current_run = global.processing_power_items.Copy()
 
+	var/wait = src.wait
 	var/list/current_run = src.current_run
 	while(current_run.len)
 		var/obj/item/I = current_run[current_run.len]
 		current_run.len--
-		if(!I.pwr_drain(wait)) // 0 = Process Kill, remove from processing list.
+		if(QDELETED(I) || (I.pwr_drain(wait) == PROCESS_KILL))
 			global.processing_power_items.Remove(I)
-			DISABLE_BITFIELD(I.datum_flags, DF_ISPROCESSING)
+			DISABLE_BITFIELD(I?.datum_flags, DF_ISPROCESSING)
 		if(MC_TICK_CHECK)
 			return
 
@@ -174,5 +175,4 @@ SUBSYSTEM_DEF(machines)
 
 #undef SSMACHINES_PIPENETS
 #undef SSMACHINES_MACHINERY
-#undef SSMACHINES_POWER
 #undef SSMACHINES_POWER_OBJECTS

@@ -3,8 +3,8 @@
 	icon_state = "mechfab-idle"
 	name = "Exosuit Fabricator"
 	desc = "A machine used for construction of mechas."
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 20
 	active_power_usage = 5000
@@ -35,19 +35,19 @@
 	var/loading_icon_state = "mechfab-idle"
 
 	var/list/materials = list(
-		DEFAULT_WALL_MATERIAL = 0,
-		"glass" = 0,
-		"plastic" = 0,
+		MAT_STEEL = 0,
+		MAT_GLASS = 0,
+		MAT_PLASTIC = 0,
 		MAT_GRAPHITE = 0,
 		MAT_PLASTEEL = 0,
-		"gold" = 0,
-		"silver" = 0,
+		MAT_GOLD = 0,
+		MAT_SILVER = 0,
 		MAT_LEAD = 0,
-		"osmium" = 0,
-		"diamond" = 0,
+		MAT_OSMIUM = 0,
+		MAT_DIAMOND = 0,
 		MAT_DURASTEEL = 0,
-		"phoron" = 0,
-		"uranium" = 0,
+		MAT_PHORON = 0,
+		MAT_URANIUM = 0,
 		MAT_VERDANTIUM = 0,
 		MAT_MORPHIUM = 0,
 		MAT_METALHYDROGEN = 0,
@@ -630,9 +630,9 @@
 				flick("[loading_icon_state]", src)
 				// yess hacky but whatever
 				if(loading_icon_state == "mechfab-idle")
-					overlays += "mechfab-load-metal"
+					add_overlay("mechfab-load-metal")
 					spawn(10)
-						overlays -= "mechfab-load-metal"
+						cut_overlays("mechfab-load-metal")
 				while(materials[S.material.name] + amnt <= res_max_amount && S.get_amount() >= 1)
 					materials[S.material.name] += amnt
 					S.use(1)

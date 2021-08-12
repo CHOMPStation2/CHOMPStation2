@@ -64,7 +64,8 @@
 	icon = 'icons/obj/closets/poireactor.dmi'
 	closet_appearance = null
 	catalogue_data = list(/datum/category_item/catalogue/information/objects/oldreactor)
-	climbable = 0
+	climbable = FALSE
+	door_anim_time = 0 //Unsupported
 
 	starts_with = list(
 		/obj/item/weapon/fuel_assembly/deuterium = 6)
@@ -110,5 +111,5 @@
 	icon = 'icons/obj/atmos.dmi'
 	icon_state = "yellow-1"
 	catalogue_data = list(/datum/category_item/catalogue/information/objects/growthcanister)
-	anchored = 0
-	density = 1
+	anchored = FALSE
+	density = TRUE

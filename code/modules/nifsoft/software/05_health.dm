@@ -17,7 +17,7 @@
 	if((. = ..()))
 		mode = 1
 
-/datum/nifsoft/medichines_org/deactivate()
+/datum/nifsoft/medichines_org/deactivate(var/force = FALSE)
 	if((. = ..()))
 		a_drain = initial(a_drain)
 		mode = initial(mode)
@@ -32,20 +32,20 @@
 		if(HP_percent >= 0.9)
 			if(mode)
 				nif.notify("User Status: NORMAL. Medichines deactivating.")
-				H << 'sound/voice/nifmed_normal.ogg' //CHOMP Add
+				playsound(H,'sound/voice/nifmed_normal.ogg',30,1)
 				deactivate()
 			return TRUE
 		else if(!mode && HP_percent < 0.8)
 			nif.notify("User Status: INJURED. Commencing medichine routines.",TRUE)
-			H << 'sound/voice/nifmed_injured.ogg' //CHOMP Add
+			playsound(H,'sound/voice/nifmed_injured.ogg',30,1)
 			activate()
 		else if(mode == 1 && HP_percent < 0.2)
 			nif.notify("User Status: DANGER. Seek medical attention!",TRUE)
-			H << 'sound/voice/nifmed_danger.ogg' //CHOMP Add
+			playsound(H,'sound/voice/nifmed_danger.ogg',30,1)
 			mode = 2
 		else if(mode == 2 && HP_percent < -0.4)
 			nif.notify("User Status: CRITICAL. Notifying medical, and starting emergency stasis!",TRUE)
-			H << 'sound/voice/nifmed_critical.ogg' //CHOMP Add
+			playsound(H,'sound/voice/nifmed_critical.ogg',30,1)
 			mode = 3
 			if(!isbelly(H.loc)) //Not notified in case of vore, for gameplay purposes.
 				var/turf/T = get_turf(H)
@@ -94,7 +94,7 @@
 	if((. = ..()))
 		mode = 1
 
-/datum/nifsoft/medichines_syn/deactivate()
+/datum/nifsoft/medichines_syn/deactivate(var/force = FALSE)
 	if((. = ..()))
 		mode = 0
 
@@ -115,10 +115,8 @@
 //Needs fixing			W << 'sound/voice/nifmedsynth_injured.ogg' //CHOMP Add
 			activate()
 
-		for(var/eo in nif.human.bad_external_organs)
-			var/obj/item/organ/external/EO = eo
-			for(var/w in EO.wounds)
-				var/datum/wound/W = w
+		for(var/obj/item/organ/external/EO as anything in nif.human.bad_external_organs)
+			for(var/datum/wound/W as anything in EO.wounds)
 				if(W.damage <= 30) // Chomp Edit // The current limb break threshold.
 					W.heal_damage(0.1)
 					EO.update_damages()
@@ -163,7 +161,7 @@
 	if((. = ..()))
 		nif.notify("Now taking air from reserves.")
 
-/datum/nifsoft/spare_breath/deactivate()
+/datum/nifsoft/spare_breath/deactivate(var/force = FALSE)
 	if((. = ..()))
 		nif.notify("Now taking air from environment and refilling reserves.")
 
@@ -214,7 +212,7 @@
 		deactivate()
 		return TRUE
 
-/datum/nifsoft/mindbackup/deactivate()
+/datum/nifsoft/mindbackup/deactivate(var/force = FALSE)
 	if((. = ..()))
 		return TRUE
 

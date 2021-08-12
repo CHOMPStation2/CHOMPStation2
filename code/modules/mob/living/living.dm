@@ -625,8 +625,8 @@
 	set name = "Resist"
 	set category = "IC"
 
-	if(!incapacitated(INCAPACITATION_KNOCKOUT) && checkClickCooldown())
-		setClickCooldown(20)
+	if(!incapacitated(INCAPACITATION_KNOCKOUT) && (last_resist_time + RESIST_COOLDOWN < world.time))
+		last_resist_time = world.time
 		resist_grab()
 		if(!weakened)
 			process_resist()
@@ -719,8 +719,8 @@
 
 /mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/Target = null)
 	if(W in internal_organs)
-		return
-	..()
+		return 0
+	return ..()
 
 /mob/living/touch_map_edge()
 
@@ -833,24 +833,24 @@
 				if(!V.riding_datum) // If it has a riding datum, the datum handles moving the pixel_ vars.
 					pixel_y = V.mob_offset_y
 		else if(buckled)
-			anchored = 1
+			anchored = TRUE
 			canmove = 1 //The line above already makes the chair not swooce away if the sitter presses a button. No need to incapacitate them as a criminally large amount of mechanics read this var as a type of stun.
 			if(istype(buckled))
 				if(buckled.buckle_lying != -1)
 					lying = buckled.buckle_lying
 					canmove = buckled.buckle_movable
 				if(buckled.buckle_movable)
-					anchored = 0
+					anchored = FALSE
 					canmove = 1
 		else
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
 	if(lying)
-		density = 0
-		if(l_hand) 
+		density = FALSE
+		if(l_hand)
 			unEquip(l_hand)
-		if(r_hand) 
+		if(r_hand)
 			unEquip(r_hand)
 		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
@@ -868,9 +868,8 @@
 		update_transform()
 		//VOREStation Add
 		if(lying && LAZYLEN(buckled_mobs))
-			for(var/rider in buckled_mobs)
-				var/mob/living/L = rider
-				if(buckled_mobs[rider] != "riding")
+			for(var/mob/living/L as anything in buckled_mobs)
+				if(buckled_mobs[L] != "riding")
 					continue // Only boot off riders
 				if(riding_datum)
 					riding_datum.force_dismount(L)
@@ -1059,15 +1058,15 @@
 
 /mob/living/get_sound_env(var/pressure_factor)
 	if (hallucination)
-		return PSYCHOTIC
+		return SOUND_ENVIRONMENT_PSYCHOTIC
 	else if (druggy)
-		return DRUGGED
+		return SOUND_ENVIRONMENT_DRUGGED
 	else if (drowsyness)
-		return DIZZY
+		return SOUND_ENVIRONMENT_DIZZY
 	else if (confused)
-		return DIZZY
+		return SOUND_ENVIRONMENT_DIZZY
 	else if (sleeping)
-		return UNDERWATER
+		return SOUND_ENVIRONMENT_UNDERWATER
 	else
 		return ..()
 
@@ -1131,3 +1130,55 @@
 // Each mob does vision a bit differently so this is just for inheritence and also so overrided procs can make the vision apply instantly if they call `..()`.
 /mob/living/proc/disable_spoiler_vision()
 	handle_vision()
+
+/**
+ * Small helper component to manage the character setup HUD icon
+ */
+/datum/component/character_setup
+	var/obj/screen/character_setup/screen_icon
+
+/datum/component/character_setup/Initialize()
+	if(!ismob(parent))
+		return COMPONENT_INCOMPATIBLE
+	. = ..()
+
+/datum/component/character_setup/RegisterWithParent()
+	. = ..()
+	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, .proc/create_mob_button)
+	var/mob/owner = parent
+	if(owner.client)
+		create_mob_button(parent)
+
+/datum/component/character_setup/UnregisterFromParent()
+	. = ..()
+	UnregisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN)
+	var/mob/owner = parent
+	if(screen_icon)
+		owner?.client?.screen -= screen_icon
+		UnregisterSignal(screen_icon, COMSIG_CLICK)
+		qdel_null(screen_icon)
+
+/datum/component/character_setup/proc/create_mob_button(mob/user)
+	var/datum/hud/HUD = user.hud_used
+	if(!screen_icon)
+		screen_icon = new()
+		RegisterSignal(screen_icon, COMSIG_CLICK, .proc/character_setup_click)
+	screen_icon.icon = HUD.ui_style
+	screen_icon.color = HUD.ui_color
+	screen_icon.alpha = HUD.ui_alpha
+	LAZYADD(HUD.other_important, screen_icon)
+	user.client?.screen += screen_icon
+
+/datum/component/character_setup/proc/character_setup_click(source, location, control, params, user)
+	var/mob/owner = user
+	if(owner.client?.prefs)
+		INVOKE_ASYNC(owner.client.prefs, /datum/preferences/proc/ShowChoices, owner)
+
+/**
+ * Screen object for vore panel
+ */
+/obj/screen/character_setup
+	name = "character setup"
+	icon = 'icons/mob/screen/midnight.dmi'
+	icon_state = "character"
+	screen_loc = ui_smallquad

@@ -43,8 +43,8 @@
 	pto_type = PTO_EXPLORATION
 	dept_time_required = 20
 
-	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway)
-	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway)
+	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway, access_pathfinder)
+	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway, access_pathfinder)
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
 	job_description = "The Pathfinder's job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
 	alt_titles = list("Expedition Lead" = /datum/alt_title/expedition_lead, "Exploration Manager" = /datum/alt_title/exploration_manager)
@@ -69,11 +69,11 @@
 	economic_modifier = 5
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
-	access = list(access_pilot)
-	minimal_access = list(access_pilot)
+	access = list(access_pilot, access_external_airlocks, access_eva) //CHOMPedit gave pilot a little more access
+	minimal_access = list(access_pilot, access_external_airlocks, access_eva) //CHOMPedit gave pilot a little more access
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 	job_description = "A Pilot flies the various shuttles in the Vir System." //CHOMPedit: Replaces Virgo reference with Vir.
-	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator)
+	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator, "Helmsman" = /datum/alt_title/helmsman)
 
 /datum/alt_title/co_pilot
 	title = "Co-Pilot"
@@ -81,6 +81,9 @@
 
 /datum/alt_title/navigator
 	title = "Navigator"
+
+/datum/alt_title/helmsman
+	title = "Helmsman"
 
 
 /datum/job/explorer
@@ -125,7 +128,10 @@
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
 	job_description = "A Field medic works as the field doctor of expedition teams."
-	alt_titles = list("Expedition Medic" = /datum/alt_title/expedition_medic)
+	alt_titles = list("Expedition Medic" = /datum/alt_title/expedition_medic, "Offsite Medic" = /datum/alt_title/offsite_medic)
 
 /datum/alt_title/expedition_medic
 	title = "Expedition Medic"
+
+/datum/alt_title/offsite_medic
+	title = "Offsite Medic"

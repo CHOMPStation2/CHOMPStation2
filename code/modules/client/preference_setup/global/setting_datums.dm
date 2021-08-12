@@ -5,8 +5,7 @@ var/list/_client_preferences_by_type
 /proc/get_client_preferences()
 	if(!_client_preferences)
 		_client_preferences = list()
-		for(var/ct in subtypesof(/datum/client_preference))
-			var/datum/client_preference/client_type = ct
+		for(var/datum/client_preference/client_type as anything in subtypesof(/datum/client_preference))
 			if(initial(client_type.description))
 				_client_preferences += new client_type()
 	return _client_preferences
@@ -21,16 +20,14 @@ var/list/_client_preferences_by_type
 /proc/get_client_preference_by_key(var/preference)
 	if(!_client_preferences_by_key)
 		_client_preferences_by_key = list()
-		for(var/ct in get_client_preferences())
-			var/datum/client_preference/client_pref = ct
+		for(var/datum/client_preference/client_pref as anything in get_client_preferences())
 			_client_preferences_by_key[client_pref.key] = client_pref
 	return _client_preferences_by_key[preference]
 
 /proc/get_client_preference_by_type(var/preference)
 	if(!_client_preferences_by_type)
 		_client_preferences_by_type = list()
-		for(var/ct in get_client_preferences())
-			var/datum/client_preference/client_pref = ct
+		for(var/datum/client_preference/client_pref as anything in get_client_preferences())
 			_client_preferences_by_type[client_pref.type] = client_pref
 	return _client_preferences_by_type[preference]
 
@@ -98,14 +95,21 @@ var/list/_client_preferences_by_type
 	key = "DIGEST_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
-
+//CHOMPEdit; belching
+/datum/client_preference/belch_noises
+	description = "Burping"
+	key = "BELCH_NOISES"
+	enabled_description = "Noisy"
+	disabled_description = "Silent"
+	enabled_by_default = FALSE
+//CHOMPEdit end
 /datum/client_preference/emote_noises
 	description = "Emote Noises" //MERP
 	key = "EMOTE_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
 /datum/client_preference/whisubtle_vis
-	description = "Whi/Subtles Ghost Visible" 
+	description = "Whi/Subtles Ghost Visible"
 	key = "WHISUBTLE_VIS"
 	enabled_description = "Visible"
 	disabled_description = "Hidden"
@@ -152,7 +156,7 @@ var/list/_client_preferences_by_type
 	key = "SOUND_AIRPUMP"
 	enabled_description = "Audible"
 	disabled_description = "Silent"
-	
+
 /datum/client_preference/old_door_sounds
 	description ="Old Door Sounds"
 	key = "SOUND_OLDDOORS"
@@ -290,6 +294,32 @@ var/list/_client_preferences_by_type
 	key = "SHOW_STATUS"
 	enabled_description = "Show"
 	disabled_description = "Hide"
+
+/datum/client_preference/runechat_mob
+	description = "Runechat (Mobs)"
+	key = "RUNECHAT_MOB"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/runechat_obj
+	description = "Runechat (Objs)"
+	key = "RUNECHAT_OBJ"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/runechat_border
+	description = "Runechat Message Border"
+	key = "RUNECHAT_BORDER"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+	enabled_by_default = FALSE
+
+/datum/client_preference/runechat_long_messages
+	description = "Runechat Message Length"
+	key = "RUNECHAT_LONG"
+	enabled_description = "ERP KING"
+	disabled_description = "Normie"
+	enabled_by_default = FALSE
 
 /datum/client_preference/status_indicators/toggled(mob/preference_mob, enabled)
 	. = ..()

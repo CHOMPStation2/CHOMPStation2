@@ -19037,7 +19037,6 @@
 /turf/simulated/floor,
 /area/maintenance/station/ai)
 "aSj" = (
-/obj/structure/closet/emcloset,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -19510,6 +19509,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
 /area/quartermaster/belterdock)
 "aTA" = (
@@ -23196,6 +23196,10 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor,
 /area/shuttle/medivac/engines)
+"kPM" = (
+/obj/machinery/smartfridge/sheets/persistent_lossy,
+/turf/simulated/wall,
+/area/quartermaster/belterdock)
 "kPW" = (
 /obj/machinery/door/blast/regular{
 	dir = 4;
@@ -38495,7 +38499,7 @@ aHB
 aMz
 aBU
 aBU
-aQG
+kPM
 aSj
 aOu
 aOL

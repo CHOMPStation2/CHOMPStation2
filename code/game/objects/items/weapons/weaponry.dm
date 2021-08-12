@@ -12,10 +12,10 @@
 	drop_sound = 'sound/items/drop/sword.ogg'
 	pickup_sound = 'sound/items/pickup/sword.ogg'
 
-	suicide_act(mob/user)
-		var/datum/gender/T = gender_datums[user.get_visible_gender()]
-		to_chat(viewers(user),"<span class='danger'>[user] is impaling [T.himself] with the [src.name]! It looks like [T.he] [T.is] trying to commit suicide.</span>")
-		return (BRUTELOSS|FIRELOSS)
+/obj/item/weapon/nullrod/suicide_act(mob/user)
+	var/datum/gender/T = gender_datums[user.get_visible_gender()]
+	to_chat(viewers(user),"<span class='danger'>[user] is impaling [T.himself] with the [src.name]! It looks like [T.he] [T.is] trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
 
 /obj/item/weapon/nullrod/attack(mob/M as mob, mob/living/user as mob) //Paste from old-code to decult with a null rod.
 
@@ -94,12 +94,12 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "energynet"
 
-	density = 1
+	density = TRUE
 	opacity = 0
 	mouse_opacity = 1
-	anchored = 0
+	anchored = FALSE
 
-	can_buckle = 1
+	can_buckle = TRUE
 	buckle_lying = 0
 	buckle_dir = SOUTH
 

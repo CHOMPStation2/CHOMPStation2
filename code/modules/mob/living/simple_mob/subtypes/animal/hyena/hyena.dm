@@ -138,7 +138,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
 				var/obj/item/clothing/head/newhat = H.get_active_hand()
 				H.drop_from_inventory(newhat, get_turf(src))
 				if(!stat)
-					intent = I_HELP
+					a_intent = I_HELP
 					newhat.attack_hand(src)
 			else if(src.get_active_hand())
 				to_chat(user, "<span class='notice'>\The [src] seems busy with \the [get_active_hand()] already!</span>")
@@ -161,22 +161,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	..()
 	if(hat)
 		var/hat_state = hat.item_state ? hat.item_state : hat.icon_state
-		var/image/I = image('icons/mob/head.dmi', src, hat_state)
+		var/image/I = image('icons/inventory/head/mob.dmi', src, hat_state)
 		I.pixel_y = -15 // Hyenas are smol! - TODO: Test this.
 		I.appearance_flags = RESET_COLOR
 		add_overlay(I)
-
-// Start Defining the mob here
-/mob/living/simple_mob/animal/hyena/Nyria 
-	name = "Nyria"
-	desc = "Yeen! This one seems familiar. Its fur is a dark, dusty reddish-brown color with black spots, and it has rounded ears... and SHARP TEETH! You inexplicably want to pet it, though."
-	tt_desc = "Crocuta crocuta"
-
-	icon_state = "nyria_yeen"
-	icon_living = "nyria_yeen"
-	icon_dead = "nyria_yeen_dead"
-
-	maxHealth = 225 // tuff yeen. <3
-	health = 225 // tuff yeen. <3
-
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/pack_mob/nyria // Define here what type of enemy hyena is. Nyria is non-hostile.

@@ -23,12 +23,12 @@
 	var/icon_state		// the icon_state of the accessory
 	var/preview_state	// a custom preview state for whatever reason
 
-	var/name			// the preview name of the accessory
+	var/name = "ERROR - FIXME" // the preview name of the accessory
 
 	// Determines if the accessory will be skipped or included in random hair generations
 	var/gender = NEUTER
 
-	// Restrict some styles to specific species
+	// Restrict some styles to specific species. Set to null to perform no checking.
 	var/list/species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN)
 
 	// Whether or not the accessory can be affected by colouration
@@ -38,7 +38,9 @@
 
 	// Ckey of person allowed to use this, if defined.
 	var/list/ckeys_allowed = null
-	var/apply_restrictions = FALSE		//whether to apply restrictions for specific tails/ears/wings
+
+	/// Should this sprite block emissives?
+	var/em_block = FALSE
 
 /*
 ////////////////////////////
@@ -1520,6 +1522,7 @@ shaved
 /datum/sprite_accessory/facial_hair
 	icon = 'icons/mob/Human_face.dmi'
 	color_blend_mode = ICON_ADD
+	em_block = TRUE
 
 /datum/sprite_accessory/facial_hair/shaved
 	name = "Shaved"
@@ -1816,6 +1819,7 @@ shaved
 //Teshari things
 /datum/sprite_accessory/hair/teshari
 	name = "Teshari Default"
+	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "teshari_default"
 	species_allowed = list(SPECIES_TESHARI)
 
@@ -1852,8 +1856,8 @@ shaved
 	icon_state = "teshari_mohawk"
 
 /datum/sprite_accessory/hair/teshari/pointy
-		name = "Teshari Pointy"
-		icon_state = "teshari_pointy"
+	name = "Teshari Pointy"
+	icon_state = "teshari_pointy"
 
 /datum/sprite_accessory/hair/teshari/upright
 	name = "Teshari Upright"
@@ -1872,7 +1876,6 @@ shaved
 	icon_state = "teshari_mushroom"
 
 //Tesh things ported from Ark Station
-
 /datum/sprite_accessory/hair/teshari/twies
 	name = "Teshari Twies"
 	icon_state = "teshari_twies"

@@ -93,12 +93,6 @@ var/list/global_huds = list(
 	science = setup_overlay("science_hud")
 	material = setup_overlay("material_hud")
 
-	// The holomap screen object is actually totally invisible.
-	// Station maps work by setting it as an images location before sending to client, not
-	// actually changing the icon or icon state of the screen object itself!
-	// Why do they work this way? I don't know really, that is how /vg designed them, but since they DO
-	// work this way, we can take advantage of their immutability by making them part of
-	// the global_hud (something we have and /vg doesn't) instead of an instance per mob.
 	holomap = new /obj/screen()
 	holomap.name = "holomap"
 	holomap.icon = null
@@ -183,7 +177,10 @@ var/list/global_huds = list(
 	var/obj/screen/move_intent
 
 	var/list/adding
+	/// Misc hud elements that are hidden when the hud is minimized
 	var/list/other
+	/// Same, but always shown even when the hud is minimized
+	var/list/other_important
 	var/list/miniobjs
 	var/list/obj/screen/hotkeybuttons
 
@@ -194,16 +191,17 @@ var/list/global_huds = list(
 	var/icon/ui_style
 	var/ui_color
 	var/ui_alpha
-	
+
 	var/list/minihuds = list()
 
-datum/hud/New(mob/owner)
+/datum/hud/New(mob/owner)
 	mymob = owner
 	instantiate()
 	..()
 
 /datum/hud/Destroy()
 	. = ..()
+	qdel_null(minihuds)
 	grab_intent = null
 	hurt_intent = null
 	disarm_intent = null
@@ -219,10 +217,10 @@ datum/hud/New(mob/owner)
 	move_intent = null
 	adding = null
 	other = null
+	other_important = null
 	hotkeybuttons = null
 //	item_action_list = null // ?
 	mymob = null
-	qdel_null(minihuds)
 
 /datum/hud/proc/hidden_inventory_update()
 	if(!mymob) return
@@ -313,7 +311,7 @@ datum/hud/New(mob/owner)
 /datum/hud/proc/instantiate()
 	if(!ismob(mymob))
 		return 0
-	
+
 	mymob.create_mob_hud(src)
 
 	persistant_inventory_update()
@@ -373,12 +371,16 @@ datum/hud/New(mob/owner)
 			client.screen -= hud_used.other
 		if(hud_used.hotkeybuttons)
 			client.screen -= hud_used.hotkeybuttons
+		if(hud_used.other_important)
+			client.screen -= hud_used.other_important
 	else
 		hud_used.hud_shown = 1
 		if(hud_used.adding)
 			client.screen += hud_used.adding
 		if(hud_used.other && hud_used.inventory_shown)
 			client.screen += hud_used.other
+		if(hud_used.other_important)
+			client.screen += hud_used.other_important
 		if(hud_used.hotkeybuttons && !hud_used.hotkey_ui_hidden)
 			client.screen += hud_used.hotkeybuttons
 		if(healths)

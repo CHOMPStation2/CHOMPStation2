@@ -35,7 +35,7 @@
 	tgarscreen = null
 	spawn(20 SECONDS)
 		tgarscreen = disconnect_tgar
-	
+
 	//extra fun for non-sci variants; a small chance flip the state to the dumb 3d glasses when EMP'd
 	if(icon_state == "glasses" || icon_state == "sun")
 		if(prob(10))
@@ -113,6 +113,14 @@
 /obj/item/clothing/glasses/omnihud/proc/ar_interact(var/mob/living/carbon/human/user)
 	return 0 //The base models do nothing.
 
+/obj/item/clothing/glasses/omnihud/visor
+	name = "AR visor"
+	desc = "The VZR-AR are a product based upon the classic AR Glasses, just more fashionable."
+	icon_override = 'icons/inventory/eyes/mob_vr.dmi'
+	icon = 'icons/inventory/eyes/mob_vr.dmi'
+	icon_state = "visor_CIV"
+	item_state = "visor_CIV"
+
 /obj/item/clothing/glasses/omnihud/prescription
 	name = "AR glasses (pr)"
 	prescription = 1
@@ -127,10 +135,10 @@
 	tgarscreen_path = /datum/tgui_module/crew_monitor/glasses
 	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_STATUS_R,VIS_CH_BACKUP,VIS_AUGMENTED)
 
-	ar_interact(var/mob/living/carbon/human/user)
-		if(tgarscreen)
-			tgarscreen.tgui_interact(user)
-		return 1
+/obj/item/clothing/glasses/omnihud/med/ar_interact(var/mob/living/carbon/human/user)
+	if(tgarscreen)
+		tgarscreen.tgui_interact(user)
+	return 1
 
 /obj/item/clothing/glasses/omnihud/sec
 	name = "\improper AR-S glasses"
@@ -143,10 +151,10 @@
 	tgarscreen_path = /datum/tgui_module/alarm_monitor/security/glasses
 	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_WANTED,VIS_AUGMENTED)
 
-	ar_interact(var/mob/living/carbon/human/user)
-		if(tgarscreen)
-			tgarscreen.tgui_interact(user)
-		return 1
+/obj/item/clothing/glasses/omnihud/sec/ar_interact(var/mob/living/carbon/human/user)
+	if(tgarscreen)
+		tgarscreen.tgui_interact(user)
+	return 1
 
 /obj/item/clothing/glasses/omnihud/eng
 	name = "\improper AR-E glasses"
@@ -158,10 +166,10 @@
 	action_button_name = "AR Console (Station Alerts)"
 	tgarscreen_path = /datum/tgui_module/alarm_monitor/engineering/glasses
 
-	ar_interact(var/mob/living/carbon/human/user)
-		if(tgarscreen)
-			tgarscreen.tgui_interact(user)
-		return 1
+/obj/item/clothing/glasses/omnihud/eng/ar_interact(var/mob/living/carbon/human/user)
+	if(tgarscreen)
+		tgarscreen.tgui_interact(user)
+	return 1
 
 /obj/item/clothing/glasses/omnihud/rnd
 	name = "\improper AR-R glasses"
@@ -218,10 +226,10 @@
 	action_button_name = "AR Console (All Alerts)"
 	tgarscreen_path = /datum/tgui_module/alarm_monitor/all/glasses
 
-	ar_interact(var/mob/living/carbon/human/user)
-		if(tgarscreen)
-			tgarscreen.tgui_interact(user)
-		return 1
+/obj/item/clothing/glasses/omnihud/all/ar_interact(var/mob/living/carbon/human/user)
+	if(tgarscreen)
+		tgarscreen.tgui_interact(user)
+	return 1
 
 /obj/item/clothing/glasses/hud/security/eyepatch
     name = "Security Hudpatch"

@@ -163,6 +163,16 @@
 		/datum/mob_descriptor/build = 2
 		)
 
+	default_emotes = list(
+		/decl/emote/human/swish,
+		/decl/emote/human/wag,
+		/decl/emote/human/sway,
+		/decl/emote/human/qwag,
+		/decl/emote/human/fastsway,
+		/decl/emote/human/swag,
+		/decl/emote/human/stopsway
+	)
+
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
@@ -231,7 +241,7 @@
 	base_color = "#333333"
 
 	reagent_tag = IS_TAJARA
-	allergens = COFFEE
+	allergens = ALLERGEN_COFFEE
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
@@ -255,6 +265,21 @@
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
+
+	default_emotes = list(
+		//VOREStation Add
+		/decl/emote/audible/gnarl,
+		/decl/emote/audible/purr,
+		/decl/emote/audible/purrlong,
+		//VOREStation Add End
+		/decl/emote/human/swish,
+		/decl/emote/human/wag,
+		/decl/emote/human/sway,
+		/decl/emote/human/qwag,
+		/decl/emote/human/fastsway,
+		/decl/emote/human/swag,
+		/decl/emote/human/stopsway
+	)
 
 /datum/species/tajaran/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
@@ -322,7 +347,9 @@
 	breath_heat_level_3 = 1350	//Default 1250
 
 	reagent_tag = IS_SKRELL
-	allergens = MEAT|FISH|DAIRY|EGGS
+	allergens = ALLERGEN_MEAT|ALLERGEN_FISH|ALLERGEN_DAIRY|ALLERGEN_EGGS
+
+	water_breather = TRUE
 
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
@@ -337,9 +364,6 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
-
-/datum/species/skrell/can_breathe_water()
-	return TRUE
 
 /datum/species/zaddat
 	name = SPECIES_ZADDAT
@@ -548,6 +572,11 @@
 
 	genders = list(PLURAL)
 
+	default_emotes = list(
+		/decl/emote/audible/chirp,
+		/decl/emote/audible/multichirp
+	)
+
 /datum/species/diona/can_understand(var/mob/other)
 	if(istype(other, /mob/living/carbon/alien/diona))
 		return TRUE
@@ -603,7 +632,9 @@
 		if(isturf(H.loc)) //else, there's considered to be no light
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
-		H.adjust_nutrition(light_amount)
+		// Don't overfeed, just make them full without going over.
+		if((H.nutrition + light_amount) < initial(H.nutrition))
+			H.adjust_nutrition(light_amount)
 		H.shock_stage -= light_amount
 
 		if(light_amount >= 3) //if there's enough light, heal

@@ -5,7 +5,7 @@
 	icon = 'icons/obj/aibots.dmi'
 	layer = MOB_LAYER
 	universal_speak = 1
-	density = 0
+	density = FALSE
 
 	makes_dirt = FALSE	// No more dirt from Beepsky
 
@@ -455,7 +455,6 @@
 			//if((dir & EAST ) && (D.dir & (NORTH|SOUTH)))	return !D.check_access(ID)
 		else return !D.check_access(ID)	// it's a real, air blocking door
 	return 0
-
 
 /mob/living/bot/isSynthetic() //Robots are synthetic, no?
 	return 1

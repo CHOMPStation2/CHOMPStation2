@@ -63,7 +63,7 @@
 				//credits
 				var/amount = rand(2,6)
 				var/list/possible_spawns = list()
-				for(var/cash_type in typesof(/obj/item/weapon/spacecash) - /obj/item/weapon/spacecash)
+				for(var/cash_type in subtypesof(/obj/item/weapon/spacecash))
 					possible_spawns += cash_type
 
 				var/cash_type = pick(possible_spawns)
@@ -268,7 +268,7 @@
 			/obj/item/weapon/reagent_containers/food/drinks/dry_ramen, \
 			/obj/item/weapon/reagent_containers/food/snacks/candiedapple, \
 			/obj/item/weapon/reagent_containers/food/snacks/chocolatebar, \
-			/obj/item/weapon/reagent_containers/food/snacks/cookie, \
+			/obj/item/weapon/reagent_containers/food/snacks/cookiesnack, \
 			/obj/item/weapon/reagent_containers/food/snacks/meatball, \
 			/obj/item/weapon/reagent_containers/food/snacks/plump_pie, \
 			/obj/item/weapon/reagent_containers/food/snacks/liquidfood)
@@ -352,7 +352,7 @@
 /**********************************/
 
 /obj/structure/symbol
-	anchored = 1
+	anchored = TRUE
 	layer = 3.5
 	name = "strange symbol"
 	icon = 'icons/obj/decals_vr.dmi'

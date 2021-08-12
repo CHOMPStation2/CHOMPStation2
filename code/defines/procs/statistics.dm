@@ -1,4 +1,4 @@
-proc/sql_poll_population()
+/proc/sql_poll_population()
 	if(!sqllogging)
 		return
 	var/admincount = GLOB.admins.len
@@ -17,16 +17,16 @@ proc/sql_poll_population()
 			log_game("SQL ERROR during population polling. Error : \[[err]\]\n")
 		qdel(query) //CHOMPEdit TGSQL
 
-proc/sql_report_round_start()
+/proc/sql_report_round_start()
 	// TODO
 	if(!sqllogging)
 		return
-proc/sql_report_round_end()
+/proc/sql_report_round_end()
 	// TODO
 	if(!sqllogging)
 		return
 
-proc/sql_report_death(var/mob/living/carbon/human/H)
+/proc/sql_report_death(var/mob/living/carbon/human/H)
 	if(!sqllogging)
 		return
 	if(!H)
@@ -61,7 +61,7 @@ proc/sql_report_death(var/mob/living/carbon/human/H)
 		qdel(query) //CHOMPEdit TGSQL
 
 
-proc/sql_report_cyborg_death(var/mob/living/silicon/robot/H)
+/proc/sql_report_cyborg_death(var/mob/living/silicon/robot/H)
 	if(!sqllogging)
 		return
 	if(!H)
@@ -96,7 +96,7 @@ proc/sql_report_cyborg_death(var/mob/living/silicon/robot/H)
 		qdel(query) //CHOMPEdit TGSQL
 
 
-proc/statistic_cycle()
+/proc/statistic_cycle()
 	set waitfor = 0
 	if(!sqllogging)
 		return
@@ -105,7 +105,7 @@ proc/statistic_cycle()
 		sleep(6000)
 
 //This proc is used for feedback. It is executed at round end.
-proc/sql_commit_feedback()
+/proc/sql_commit_feedback()
 	if(!blackbox)
 		log_game("Round ended without a blackbox recorder. No feedback was sent to the database.")
 		return

@@ -25,11 +25,9 @@
 
 	var/mob/M = loc
 	var/was_in_hands = istype(M) && (src == M.get_active_hand() || src == M.get_inactive_hand())
-
-	critter_holder = new(loc)
+	
 	critter = new critter(critter_holder)
-	critter_holder.held_mob = critter
-	critter_holder.sync(critter)
+	critter_holder = new(loc, critter)
 
 	if(istype(M))
 		M.drop_from_inventory(src)
@@ -113,6 +111,7 @@
 	real_name = "opossum"
 	tt_desc = "Didelphis astrum"
 	desc = "It's an opossum, a small scavenging marsupial."
+	icon = 'icons/mob/pets.dmi'
 	icon_state = "possum"
 	item_state = "possum"
 	icon_living = "possum"
@@ -127,7 +126,7 @@
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "stamps on"
-	density = 0
+	density = FALSE
 	minbodytemp = 223
 	maxbodytemp = 323
 	universal_speak = FALSE
@@ -139,14 +138,14 @@
 	say_list_type = /datum/say_list/possum
 	catalogue_data = list(/datum/category_item/catalogue/fauna/opossum)
 
-/mob/living/simple_mob/animal/passive/opossum/adjustBruteLoss(damage)
+/mob/living/simple_mob/animal/passive/opossum/adjustBruteLoss(var/amount,var/include_robo)
 	. = ..()
-	if(damage >= 3)
+	if(amount >= 3)
 		respond_to_damage()
 
-/mob/living/simple_mob/animal/passive/opossum/adjustFireLoss(damage)
+/mob/living/simple_mob/animal/passive/opossum/adjustFireLoss(var/amount,var/include_robo)
 	. = ..()
-	if(damage >= 3)
+	if(amount >= 3)
 		respond_to_damage()
 
 /mob/living/simple_mob/animal/passive/opossum/lay_down()

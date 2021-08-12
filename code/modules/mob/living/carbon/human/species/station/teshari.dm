@@ -43,7 +43,7 @@
 	damage_overlays = 'icons/mob/human_races/masks/dam_teshari.dmi'
 	damage_mask = 'icons/mob/human_races/masks/dam_mask_teshari.dmi'
 	blood_mask = 'icons/mob/human_races/masks/blood_teshari.dmi'
-	suit_storage_icon = 'icons/mob/species/teshari/belt_mirror.dmi'
+	suit_storage_icon = 'icons/inventory/suit_store/mob_teshari.dmi'
 
 	fire_icon_state = "generic" // Humanoid is too big for them and spriting a new one is really annoying.
 
@@ -144,7 +144,7 @@
 	descriptors = list(
 		/datum/mob_descriptor/height = -3,
 		/datum/mob_descriptor/build = -3
-		)
+	)
 		
 	var/static/list/flight_bodyparts = list(
 		BP_L_ARM,
@@ -157,14 +157,21 @@
 		/obj/item/clothing/suit/straight_jacket
 	)
 
+	default_emotes = list(
+		/decl/emote/audible/teshsqueak,
+		/decl/emote/audible/teshchirp,
+		/decl/emote/audible/teshtrill
+	)
+
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+	
 /* //CHOMPedit: disabling for now
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
 	// Tesh can glide to save themselves from some falls. Basejumping bird
-	// without parachute, or falling bird without free wings goes splat.
+	// without parachute, or falling bird without free wings, goes splat.
 
 	// Are we landing from orbit, or handcuffed/unconscious/tied to something? 
 	if(planetary || !istype(H) || H.incapacitated(INCAPACITATION_DEFAULT|INCAPACITATION_DISABLED))
@@ -206,7 +213,7 @@
 	// Handled!
 	if(!silent)
 		to_chat(H, SPAN_NOTICE("You catch the air in your wings and greatly slow your fall."))
-		landing.visible_message(SPAN_NOTICE("\The [H] glides down from above, landing safely."))
+		landing.visible_message("<b>\The [H]</b> glides down from above, landing safely.")
 		H.Stun(1)
 		playsound(H, "rustle", 25, 1)
 	return TRUE

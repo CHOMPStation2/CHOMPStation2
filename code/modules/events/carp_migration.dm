@@ -6,6 +6,9 @@
 	var/list/spawned_carp = list()
 
 /datum/event/carp_migration/setup()
+	if(prob(50))
+		kill()
+		return
 	announceWhen = rand(30, 60) // 1 to 2 minutes
 	endWhen += severity * 25
 	carp_cap = 2 + 3 ** severity // No more than this many at once regardless of waves. (5, 11, 29)
@@ -76,8 +79,7 @@
 // Counts living carp spawned by this event.
 /datum/event/carp_migration/proc/count_spawned_carps()
 	. = 0
-	for(var/I in spawned_carp)
-		var/mob/living/simple_mob/animal/M = I
+	for(var/mob/living/simple_mob/animal/M as anything in spawned_carp)
 		if(!QDELETED(M) && M.stat != DEAD)
 			. += 1
 

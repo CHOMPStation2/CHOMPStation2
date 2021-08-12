@@ -17,18 +17,18 @@
 
 	//VOREStation Edit - Broke this into lines
 	materials = list(
-		DEFAULT_WALL_MATERIAL = 0,
-		"glass" = 0,
+		MAT_STEEL = 0,
+		MAT_GLASS = 0,
 		MAT_PLASTEEL = 0,
-		"plastic" = 0,
+		MAT_PLASTIC = 0,
 		MAT_GRAPHITE = 0,
-		"gold" = 0,
-		"silver" = 0,
-		"osmium" = 0,
+		MAT_GOLD = 0,
+		MAT_SILVER = 0,
+		MAT_OSMIUM = 0,
 		MAT_LEAD = 0,
-		"phoron" = 0,
-		"uranium" = 0,
-		"diamond" = 0,
+		MAT_PHORON = 0,
+		MAT_URANIUM = 0,
+		MAT_DIAMOND = 0,
 		MAT_DURASTEEL = 0,
 		MAT_VERDANTIUM = 0,
 		MAT_MORPHIUM = 0,
@@ -106,7 +106,7 @@
 
 
 /obj/machinery/r_n_d/protolathe/update_icon()
-	overlays.Cut()
+	cut_overlays()
 
 	icon_state = initial(icon_state)
 
@@ -175,9 +175,9 @@
 
 	var/stacktype = S.type
 	var/t = getMaterialName(stacktype)
-	overlays += "protolathe_[t]"
+	add_overlay("protolathe_[t]")
 	spawn(10)
-		overlays -= "protolathe_[t]"
+		cut_overlay("protolathe_[t]")
 
 	updateUsrDialog()
 	return

@@ -139,6 +139,7 @@
 	H.synth_color = TRUE
 
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
+	var/boxtype = /obj/item/weapon/storage/box/survival //CHOMP Addition
 	var/obj/item/stack/material/steel/metal_stack = new()
 	metal_stack.amount = 5 //CHOMP Edit
 	
@@ -187,14 +188,13 @@
 	for(var/obj/item/organ/I in H.internal_organs)
 		I.removed()
 
-	for(var/obj/item/I in src)
+	for(var/obj/item/I in H.contents)
 		H.drop_from_inventory(I)
 
 	qdel(H)
 
 /datum/species/protean/handle_environment_special(var/mob/living/carbon/human/H)
 	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace) or in someone (or a locker, really, but whatever)
-		H.nano_intoblob()
 		return ..() //Any instakill shot runtimes since there are no organs after this. No point to not skip these checks, going to nullspace anyway.
 
 /*CHOMP Station removal start		
@@ -237,15 +237,14 @@ CHOMP Station removal end*/
 			stat(null, "- -- --- REFACTORY ERROR! --- -- -")
 
 		stat(null, "- -- --- Abilities (Shift+LMB Examines) --- -- -")
-		for(var/ability in abilities)
-			var/obj/effect/protean_ability/A = ability
+		for(var/obj/effect/protean_ability/A as anything in abilities)
 			stat("[A.ability_name]",A.atom_button_text())
 			
 // Various modifiers
 /datum/modifier/protean
 	stacks = MODIFIER_STACK_FORBID
 	var/material_use = METAL_PER_TICK
-	var/material_name = DEFAULT_WALL_MATERIAL
+	var/material_name = MAT_STEEL
 
 /datum/modifier/protean/on_applied()
 	. = ..()
@@ -328,11 +327,10 @@ CHOMP Removal end*/
 	material_name = MAT_STEEL
 
 /datum/modifier/protean/steel/tick()
-	holder.adjustBruteLoss(-2,include_robo = TRUE) //Looks high, but these ARE modified by species resistances, so this is really 20% of this
-	holder.adjustFireLoss(-1,include_robo = TRUE) //And this is really double this
+	holder.adjustBruteLoss(-1,include_robo = TRUE) //Modified by species resistances
+	holder.adjustFireLoss(-0.5,include_robo = TRUE) //Modified by species resistances
 	var/mob/living/carbon/human/H = holder
-	for(var/organ in H.internal_organs)
-		var/obj/item/organ/O = organ
+	for(var/obj/item/organ/O as anything in H.internal_organs)
 		// Fix internal damage
 		if(O.damage > 0)
 			O.damage = max(0,O.damage-0.1)

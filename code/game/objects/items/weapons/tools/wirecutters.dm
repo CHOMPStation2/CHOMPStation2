@@ -13,15 +13,16 @@
 	throw_range = 9
 	w_class = ITEMSIZE_SMALL
 	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 1)
-	matter = list(DEFAULT_WALL_MATERIAL = 80)
+	matter = list(MAT_STEEL = 80)
 	attack_verb = list("pinched", "nipped")
 	hitsound = 'sound/items/wirecutter.ogg'
 	usesound = 'sound/items/wirecutter.ogg'
 	drop_sound = 'sound/items/drop/wirecutter.ogg'
 	pickup_sound = 'sound/items/pickup/wirecutter.ogg'
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	toolspeed = 1
+	tool_qualities = list(TOOL_WIRECUTTER)
 	var/random_color = TRUE
 
 /obj/item/weapon/tool/wirecutters/New()
@@ -42,10 +43,6 @@
 		return
 	else
 		..()
-
-/obj/item/weapon/tool/wirecutters/is_wirecutter()
-	return TRUE
-
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_wirecutters
 	name = "Precursor Alpha Object - Wire Seperator"
@@ -81,7 +78,6 @@
 	desc = "This cuts wires.  With <span class='alien'>Science!</span>"
 	icon_state = "hybcutters"
 	w_class = ITEMSIZE_NORMAL
-	slowdown = 0.1
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_PHORON = 2)
 	attack_verb = list("pinched", "nipped", "warped", "blasted")
 	usesound = 'sound/effects/stealthoff.ogg'

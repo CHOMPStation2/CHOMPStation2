@@ -144,17 +144,21 @@
 	agony = 10
 	check_armour = "bio"
 	armor_penetration = 25	// It's acid
+	hitsound_wall = 'sound/weapons/effects/alien_spit_wall.ogg'
+	hitsound = 'sound/weapons/effects/alien_spit_wall.ogg'
 
 	combustion = FALSE
 
 /obj/item/projectile/energy/neurotoxin
 	name = "neurotoxic spit"
 	icon_state = "neurotoxin"
-	damage = 5
+	damage = 0
 	damage_type = BIOACID
 	agony = 60 //CHOMPedit lowered agony damage
 	check_armour = "bio"
 	armor_penetration = 25	// It's acid-based
+	hitsound_wall = 'sound/weapons/effects/alien_spit_wall.ogg'
+	hitsound = 'sound/weapons/effects/alien_spit_wall.ogg'
 
 	combustion = FALSE
 
@@ -242,7 +246,7 @@
 	range = 6
 	damage = 5
 	SA_bonus_damage = 45	// 50 total on animals
-	SA_vulnerability = SA_ANIMAL
+	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION, MOB_CLASS_HUMANOID) //CHOMP Edit expand this list
 
 /obj/item/projectile/energy/phase/light
 	range = 4

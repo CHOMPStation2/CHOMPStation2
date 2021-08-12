@@ -53,11 +53,14 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	// Deal digestion damage (and feed the pred)
 	var/old_brute = L.getBruteLoss()
 	var/old_burn = L.getFireLoss()
+	var/old_oxy = L.getOxyLoss()
 	L.adjustBruteLoss(B.digest_brute)
 	L.adjustFireLoss(B.digest_burn)
+	L.adjustOxyLoss(B.digest_oxy)
 	var/actual_brute = L.getBruteLoss() - old_brute
 	var/actual_burn = L.getFireLoss() - old_burn
-	var/damage_gain = (actual_brute + actual_burn)*(B.nutrition_percent / 100)
+	var/actual_oxy = L.getOxyLoss() - old_oxy
+	var/damage_gain = (actual_brute + actual_burn + actual_oxy/2)*(B.nutrition_percent / 100)
 
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
@@ -196,11 +199,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 				return
 			if(isliving(C))
 				var/mob/living/M = C
+				var/mob_holder_type = M.holder_type || /obj/item/weapon/holder
 				B.ownegg.w_class = M.size_multiplier * 4 //Egg size and weight scaled to match occupant.
-				var/obj/item/weapon/holder/H = new M.holder_type(B.ownegg)
-				H.held_mob = M
-				M.forceMove(H)
-				H.sync(M)
+				var/obj/item/weapon/holder/H = new mob_holder_type(B.ownegg, M)
 				B.ownegg.max_storage_space = H.w_class
 				B.ownegg.icon_scale_x = 0.25 * B.ownegg.w_class
 				B.ownegg.icon_scale_y = 0.25 * B.ownegg.w_class

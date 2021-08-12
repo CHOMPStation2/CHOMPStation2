@@ -7,7 +7,7 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	desc = "How are you reading this?"
 	screen_loc = "1,1"
 	icon = 'icons/misc/loading.dmi' //VOREStation Add - Loading Screen
-	icon_state = "loading" //VOREStation Add - Loading Screen
+	icon_state = "loading(old)" //VOREStation Add - Loading Screen //CHOMPedit: let's keep the old one since the new one references vorestation
 
 /obj/effect/lobby_image/Initialize()
 	icon = using_map.lobby_icon
@@ -41,6 +41,8 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	my_client = client
 	sight |= SEE_TURFS
 	player_list |= src
+
+	created_for = ckey
 
 	new_player_panel()
 	spawn(40)

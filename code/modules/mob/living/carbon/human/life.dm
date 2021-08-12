@@ -653,7 +653,8 @@
 			var/obj/mecha/M = loc
 			loc_temp =  M.return_temperature()
 		else if(istype(loc, /obj/machinery/atmospherics/unary/cryo_cell))
-			loc_temp = loc:air_contents.temperature
+			var/obj/machinery/atmospherics/unary/cryo_cell/cc = loc
+			loc_temp = cc.air_contents.temperature
 		else
 			loc_temp = environment.temperature
 
@@ -845,8 +846,7 @@
 	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
 
 	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		if(!isnull(M.heat_protection))
 			. *= 1 - M.heat_protection
 
@@ -865,8 +865,7 @@
 	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
 
 	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		if(!isnull(M.cold_protection))
 			// Invert the modifier values so they align with the current working value.
 			. *= 1 - M.cold_protection
@@ -981,6 +980,16 @@
 		var/growlmultiplier = 100 - (nutrition / 250 * 100)
 		playsound(src, growlsound, vol = growlmultiplier, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 	// VOREStation Edit End
+	//CHOMPEdit Begin
+	if(nutrition > 500 && noisy_full == TRUE)
+		var/belch_prob = 10 //Maximum belch prob.
+		if(nutrition < 4075)
+			belch_prob = ((nutrition-500)/3575)*10 //Scale belch prob with fullness if not already at max. If editing make sure the multiplier matches the max prob above.
+		if(prob(belch_prob))
+			var/sound/belchsound = sound(get_sfx("belches"))
+			playsound(src, belchsound, vol = (30+(belch_prob*2)), vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/belch_noises)
+			custom_emote(AUDIBLE_MESSAGE, "belches.") //Don't know if this should stay, I'll leave in in for now.
+	//CHOMPEdit End
 
 	// TODO: stomach and bloodstream organ.
 	if(!isSynthetic())
@@ -1059,7 +1068,7 @@
 					if(client || sleeping > 3)
 						AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
 						throw_alert("asleep", /obj/screen/alert/asleep)
-				if( prob(2) && health && !hal_crit )
+				if( prob(2) && health && !hal_crit && client )
 					spawn(0)
 						emote("snore")
 		//CONSCIOUS
@@ -1266,7 +1275,7 @@
 				else if(no_damage)
 					health_images += image('icons/mob/screen1_health.dmi',"fullhealth")
 
-				healths_ma.overlays += health_images
+				healths_ma.add_overlay(health_images)
 				healths.appearance = healths_ma
 
 
@@ -1402,7 +1411,7 @@
 			see_in_dark = species.darksight
 			see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : see_invisible_default
 
-		var/tmp/glasses_processed = 0
+		var/glasses_processed = 0
 		var/obj/item/weapon/rig/rig = get_rig()
 		if(istype(rig) && rig.visor && !looking_elsewhere)
 			if(!rig.helmet || (head && rig.helmet == head))
@@ -1571,7 +1580,7 @@
 
 	if(shock_stage >= 30)
 		if(shock_stage == 30 && !isbelly(loc)) //VOREStation Edit
-			emote("me",1,"is having trouble keeping their eyes open.")
+			custom_emote(VISIBLE_MESSAGE, "is having trouble keeping their eyes open.")
 		eye_blurry = max(2, eye_blurry)
 		stuttering = max(stuttering, 5)
 
@@ -1580,7 +1589,7 @@
 
 	if (shock_stage >= 60)
 		if(shock_stage == 60 && !isbelly(loc)) //VOREStation Edit
-			emote("me",1,"'s body becomes limp.")
+			custom_emote(VISIBLE_MESSAGE, "'s body becomes limp.")
 		if (prob(2))
 			to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
 			Weaken(20)
@@ -1597,7 +1606,7 @@
 
 	if(shock_stage == 150)
 		if(!isbelly(loc)) //VOREStation Edit
-			emote("me",1,"can no longer stand, collapsing!")
+			custom_emote(VISIBLE_MESSAGE, "can no longer stand, collapsing!")
 		Weaken(20)
 
 	if(shock_stage >= 150)

@@ -202,6 +202,9 @@
 /mob/living/simple_mob/Login()
 	. = ..()
 	to_chat(src,"<b>You are \the [src].</b> [player_msg]")
+	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
+		voremob_loaded = TRUE
+		init_vore()
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)

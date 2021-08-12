@@ -16,7 +16,7 @@
 
 	var/speech_bubble_appearance = "normal"					// Part of icon_state to use for speech bubbles when talking.	See talk.dmi for available icons.
 	var/fire_icon_state = "humanoid"						// The icon_state used inside OnFire.dmi for when on fire.
-	var/suit_storage_icon = 'icons/mob/belt_mirror.dmi'		// Icons used for worn items in suit storage slot.
+	var/suit_storage_icon = 'icons/inventory/suit_store/mob.dmi' // Icons used for worn items in suit storage slot.
 
 	var/pixel_offset_x = 0                    // CHOMPedit. Used for offsetting 64x64 and up icons.
 	var/pixel_offset_y = 0                    // CHOMPedit. Used for offsetting 64x64 and up icons.
@@ -78,7 +78,8 @@
 	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX) //VOREStation Edit
 
 	//Soundy emotey things.
-	var/scream_verb = "screams"
+	var/scream_verb_1p = "scream"
+	var/scream_verb_3p = "screams"
 	var/male_scream_sound = list('sound/effects/mob_effects/m_scream_1.ogg','sound/effects/mob_effects/m_scream_2.ogg','sound/effects/mob_effects/m_scream_3.ogg','sound/effects/mob_effects/m_scream_4.ogg') //CHOMpedit start : Added tgstation screams
 	var/female_scream_sound = list('sound/effects/mob_effects/f_scream_1.ogg','sound/effects/mob_effects/f_scream_2.ogg','sound/effects/mob_effects/f_scream_3.ogg','sound/effects/mob_effects/f_scream_4.ogg') //CHOMPedit end
 	var/male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
@@ -109,7 +110,7 @@
 	var/alcohol_mod =		1						// Multiplier to alcohol strength; 0.5 = half, 0 = no effect at all, 2 = double, etc.
 	var/pain_mod =			1						// Multiplier to pain effects; 0.5 = half, 0 = no effect (equal to NO_PAIN, really), 2 = double, etc.
 	var/spice_mod =			1						// Multiplier to spice/capsaicin/frostoil effects; 0.5 = half, 0 = no effect (immunity), 2 = double, etc.
-	var/trauma_mod = 		1						// Affects traumatic shock (how fast pain crit happens). 0 = no effect (immunity to pain crit), 2 = double etc.Overriden by "can_feel_pain" var	
+	var/trauma_mod = 		1						// Affects traumatic shock (how fast pain crit happens). 0 = no effect (immunity to pain crit), 2 = double etc.Overriden by "can_feel_pain" var
 	// set below is EMP interactivity for nonsynth carbons
 	var/emp_sensitivity =		0			// bitflag. valid flags are: EMP_PAIN, EMP_BLIND, EMP_DEAFEN, EMP_CONFUSE, EMP_STUN, and EMP_(BRUTE/BURN/TOX/OXY)_DMG
 	var/emp_dmg_mod =		1			// Multiplier to all EMP damage sustained by the mob, if it's EMP-sensitive
@@ -131,6 +132,7 @@
 	var/breath_type = "oxygen"								// Non-oxygen gas breathed, if any.
 	var/poison_type = "phoron"								// Poisonous air.
 	var/exhale_type = "carbon_dioxide"						// Exhaled gas type.
+	var/water_breather = FALSE
 
 	var/body_temperature = 310.15							// Species will try to stabilize at this temperature. (also affects temperature processing)
 
@@ -274,6 +276,8 @@
 	var/icon_height = 32
 	var/agility = 20 //prob() to do agile things
 
+	var/sort_hint = SPECIES_SORT_NORMAL
+
 /datum/species/proc/update_attack_types()
 	unarmed_attacks = list()
 	for(var/u_type in unarmed_types)
@@ -306,6 +310,14 @@
 		if(!inherent_verbs)
 			inherent_verbs = list()
 		inherent_verbs |= /mob/living/carbon/human/proc/regurgitate
+
+	update_sort_hint()
+
+/datum/species/proc/update_sort_hint()
+	if(spawn_flags & SPECIES_IS_RESTRICTED)
+		sort_hint = SPECIES_SORT_RESTRICTED
+	else if(spawn_flags & SPECIES_IS_WHITELISTED)
+		sort_hint = SPECIES_SORT_WHITELISTED
 
 /datum/species/proc/sanitize_name(var/name, var/robot = 0)
 	return sanitizeName(name, MAX_NAME_LEN, robot)
@@ -420,6 +432,8 @@
 		H.visible_message( \
 			"<span class='notice'>[H] boops [target]'s nose.</span>", \
 			"<span class='notice'>You boop [target] on the nose.</span>", )
+	else if(H.zone_sel.selecting == BP_GROIN) //CHOMPEdit
+		H.vore_bellyrub(target)
 	//VOREStation Edit End
 	else
 		H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
@@ -491,7 +505,7 @@
 
 // Called when lying down on a water tile.
 /datum/species/proc/can_breathe_water()
-	return FALSE
+	return water_breather
 
 // Impliments different trails for species depending on if they're wearing shoes.
 /datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)
@@ -533,3 +547,7 @@
 
 /datum/species/proc/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 	return FALSE
+
+/datum/species/proc/post_spawn_special(mob/living/carbon/human/H)
+	return
+

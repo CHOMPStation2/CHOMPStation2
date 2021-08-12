@@ -149,7 +149,6 @@
 			return
 		qdel(query_insert)
 
-
 /proc/log_emote(text, mob/speaker)
 	if (config.log_emote)
 		WRITE_LOG(diary, "EMOTE: [speaker.simple_info_line()]: [html_decode(text)]")
@@ -202,8 +201,9 @@
 			qdel(query_insert)
 			return
 		qdel(query_insert)
+
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - <span style=\"color:green\">[text]</span>"
-	//GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[src]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
+	//GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
 	//CHOMPEdit End
 
 /proc/log_ghostemote(text, mob/speaker)
@@ -272,16 +272,25 @@
 /proc/log_unit_test(text)
 	to_world_log("## UNIT_TEST: [text]")
 
+#ifdef REFERENCE_TRACKING_LOG
+#define log_reftracker(msg) log_world("## REF SEARCH [msg]")
+#else
+#define log_reftracker(msg)
+#endif
+
 /proc/log_tgui(user_or_client, text)
+	if(!text)
+		stack_trace("Pointless log_tgui message")
+		return
 	var/entry = ""
 	if(!user_or_client)
 		entry += "no user"
-	else if(istype(user_or_client, /mob))
-		var/mob/user = user_or_client
-		entry += "[user.ckey] (as [user])"
-	else if(istype(user_or_client, /client))
-		var/client/client = user_or_client
-		entry += "[client.ckey]"
+//	else if(istype(user_or_client, /mob)) //CHOMP Edit commenting out these blocks because it just seems to do nothing except spam the logs with... nothing.
+//		var/mob/user = user_or_client
+//		entry += "[user.ckey] (as [user])"
+//	else if(istype(user_or_client, /client))
+//		var/client/client = user_or_client
+//		entry += "[client.ckey]"
 	entry += ":\n[text]"
 	WRITE_LOG(diary, entry)
 

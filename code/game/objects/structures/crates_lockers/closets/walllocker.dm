@@ -6,9 +6,11 @@
 	name = "Wall Locker"
 	icon = 'icons/obj/closets/bases/wall.dmi'
 	closet_appearance = /decl/closet_appearance/wall
-	density = 0
-	anchored = 1
+	density = FALSE
+	anchored = TRUE
 	store_mobs = 0
+	wall_mounted = 1
+	door_anim_time = 0 // Unsupported
 
 //spawns 2 sets of breathmask, emergency oxy tank and crowbar
 
@@ -84,8 +86,10 @@
 	name = "Wall Cabinet"
 	icon = 'icons/obj/closets/bases/wall_double.dmi'
 	closet_appearance = /decl/closet_appearance/wall_double
-	density = 0
-	anchored = 1
+	density = FALSE
+	anchored = TRUE
+	store_mobs = 0
+	wall_mounted = 1
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 
@@ -110,8 +114,8 @@
 	name = "Kitchen Cabinet"
 	icon = 'icons/obj/closets/bases/wall_double.dmi'
 	closet_appearance = /decl/closet_appearance/wall_double/kitchen
-	density = 0
-	anchored = 1
+	density = FALSE
+	anchored = TRUE
 
 /obj/structure/closet/walllocker_double/kitchen/north
 	pixel_y = 32
@@ -154,9 +158,8 @@
 	name = "fire-safety closet"
 	desc = "It's a storage cabinet packed with fire-fighting supplies."
 	closet_appearance = /decl/closet_appearance/wall_double/fire_safety
-	anchored = 1
-	density = 0
-	wall_mounted = 1
+	anchored = TRUE
+	density = FALSE
 
 	starts_with = list(
 		/obj/item/clothing/suit/fire/firefighter,

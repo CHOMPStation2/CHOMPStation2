@@ -1,5 +1,6 @@
 #define RECOMMENDED_VERSION 501
 /world/New()
+	world_startup_time = world.timeofday
 	to_world_log("Map Loading Complete")
 	//logs
 	//VOREStation Edit Start
@@ -58,7 +59,7 @@
 	populate_robolimb_list()
 
 	master_controller = new /datum/controller/game_controller()
-	Master.Initialize(10, FALSE)
+	Master.Initialize(10, FALSE, TRUE) // VOREStation Edit
 
 	spawn(1)
 		master_controller.setup()
@@ -111,8 +112,10 @@ var/world_topic_spam_protect_time = world.timeofday
 		s["players"] = 0
 		s["stationtime"] = stationtime2text()
 		s["roundduration"] = roundduration2text()
+		s["map"] = strip_improper(using_map.full_name) //Done to remove the non-UTF-8 text macros 
 
-		if(input["status"] == "2")
+		if(input["status"] == "2") // Shiny new hip status.
+			var/active = 0
 			var/list/players = list()
 			var/list/admins = list()
 
@@ -122,15 +125,18 @@ var/world_topic_spam_protect_time = world.timeofday
 						continue
 					admins[C.key] = C.holder.rank
 				players += C.key
+				if(istype(C.mob, /mob/living))
+					active++
 
 			s["players"] = players.len
 			s["playerlist"] = list2params(players)
+			s["active_players"] = active
 			var/list/adm = get_admin_counts()
 			var/list/presentmins = adm["present"]
 			var/list/afkmins = adm["afk"]
 			s["admins"] = presentmins.len + afkmins.len //equivalent to the info gotten from adminwho
 			s["adminlist"] = list2params(admins)
-		else
+		else // Legacy.
 			var/n = 0
 			var/admins = 0
 
@@ -237,7 +243,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 				spawn(50)
 					world_topic_spam_protect_time = world.time
-					return "Bad Key (Throttled)"
+					return
 
 			world_topic_spam_protect_time = world.time
 			world_topic_spam_protect_ip = addr
@@ -324,7 +330,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 				spawn(50)
 					world_topic_spam_protect_time = world.time
-					return "Bad Key (Throttled)"
+					return
 
 			world_topic_spam_protect_time = world.time
 			world_topic_spam_protect_ip = addr
@@ -374,7 +380,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 				spawn(50)
 					world_topic_spam_protect_time = world.time
-					return "Bad Key (Throttled)"
+					return
 
 			world_topic_spam_protect_time = world.time
 			world_topic_spam_protect_ip = addr
@@ -388,7 +394,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 				spawn(50)
 					world_topic_spam_protect_time = world.time
-					return "Bad Key (Throttled)"
+					return
 
 			world_topic_spam_protect_time = world.time
 			world_topic_spam_protect_ip = addr
@@ -597,7 +603,7 @@ var/failed_old_db_connections = 0
 	//CHOMPEdit End
 	return 1
 
-/*proc/setup_database_connection() CHOMPEdit TGSQL
+/*/proc/setup_database_connection() CHOMPEdit TGSQL
 
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -631,7 +637,7 @@ var/failed_old_db_connections = 0
 	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-proc/establish_db_connection() //CHOMPEdit TGSQL
+/proc/establish_db_connection() //CHOMPEdit TGSQL
 	return SSdbcore.Connect()
 
 
@@ -646,7 +652,7 @@ proc/establish_db_connection() //CHOMPEdit TGSQL
 	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
-/*proc/setup_old_database_connection() //CHOMPStation TGSQL
+/*/proc/setup_old_database_connection() //CHOMPStation TGSQL
 
 	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -707,3 +713,39 @@ proc/establish_old_db_connection()
 	SStimer?.reset_buckets()
 
 #undef FAILED_DB_CONNECTION_CUTOFF
+
+/proc/get_world_url()
+	. = "byond://"
+	if(config.serverurl)
+		. += config.serverurl
+	else if(config.server)
+		. += config.server
+	else
+		. += "[world.address]:[world.port]"
+
+var/global/game_id = null
+
+/hook/startup/proc/generate_gameid()
+	if(game_id != null)
+		return
+	game_id = ""
+
+	var/list/c = list(
+		"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
+		"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
+		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 
+		"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+		)
+	var/l = c.len
+
+	var/t = world.timeofday
+	for(var/_ = 1 to 4)
+		game_id = "[c[(t % l) + 1]][game_id]"
+		t = round(t / l)
+	game_id = "-[game_id]"
+	t = round(world.realtime / (10 * 60 * 60 * 24))
+	for(var/_ = 1 to 3)
+		game_id = "[c[(t % l) + 1]][game_id]"
+		t = round(t / l)
+	return 1

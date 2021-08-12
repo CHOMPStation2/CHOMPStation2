@@ -11,10 +11,11 @@
 /area/ship/ert/barracks)
 "ac" = (
 /obj/machinery/light/no_nightshift,
+/obj/machinery/porta_turret/stationary/CIWS,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/dock_port)
 "ad" = (
-/obj/machinery/porta_turret/stationary/CIWS,
+/obj/structure/hull_corner,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/dock_port)
 "ae" = (
@@ -121,15 +122,77 @@
 /obj/machinery/telecomms/relay/preset/tether,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/atmos)
+"ar" = (
+/obj/structure/table/rack/steel,
+/obj/item/toy/plushie/squid/blue{
+	desc = "A small, cute and loveable squid friend. This one is blue. Despite the name, it seems no more or less deadly than your regular plush squid.";
+	name = "NT 'Deathsquid' Plushie"
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/device/mapping_unit/deathsquad,
+/obj/item/device/holomap_beacon/deathsquad,
+/obj/item/device/holomap_beacon/deathsquad,
+/obj/item/device/holomap_beacon/deathsquad,
+/obj/item/device/holomap_beacon/deathsquad,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/ert/barracks)
+"as" = (
+/obj/machinery/light_switch{
+	pixel_y = 23
+	},
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/obj/item/device/holomap_beacon/ert,
+/obj/item/device/holomap_beacon/ert,
+/obj/item/device/mapping_unit/ert,
+/turf/simulated/floor/wood,
+/area/ship/ert/commander)
+"at" = (
+/obj/item/device/mapping_unit/ert,
+/turf/simulated/floor/wood,
+/area/ship/ert/commander)
+"ar" = (
+/obj/structure/table/rack/steel,
+/obj/item/toy/plushie/squid/blue{
+	desc = "A small, cute and loveable squid friend. This one is blue. Despite the name, it seems no more or less deadly than your regular plush squid.";
+	name = "NT 'Deathsquid' Plushie"
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/device/mapping_unit/deathsquad,
+/obj/item/device/holomap_beacon/deathsquad,
+/obj/item/device/holomap_beacon/deathsquad,
+/obj/item/device/holomap_beacon/deathsquad,
+/obj/item/device/holomap_beacon/deathsquad,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/ert/barracks)
+"as" = (
+/obj/machinery/light_switch{
+	pixel_y = 23
+	},
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/obj/item/device/holomap_beacon/ert,
+/obj/item/device/holomap_beacon/ert,
+/obj/item/device/mapping_unit/ert,
+/turf/simulated/floor/wood,
+/area/ship/ert/commander)
+"at" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/ship/ert/commander)
 "av" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/gunnery)
 "ax" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 4
+/obj/structure/hull_corner{
+	dir = 8
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/ert_ship_boat)
 "aC" = (
 /obj/machinery/pointdefense{
@@ -147,6 +210,10 @@
 /obj/fiftyspawner/tritium,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/eng_storage)
+"aF" = (
+/obj/machinery/porta_turret/stationary/CIWS,
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/atmos)
 "aI" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -252,48 +319,11 @@
 /turf/simulated/floor/airless,
 /area/ship/ert/gunnery)
 "bI" = (
-/obj/structure/table/rack/steel,
 /obj/machinery/light/no_nightshift{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/device/suit_cooling_unit{
-	pixel_x = -10;
-	pixel_y = -10
-	},
-/obj/item/device/suit_cooling_unit{
-	pixel_x = -8;
-	pixel_y = -8
-	},
-/obj/item/device/suit_cooling_unit{
-	pixel_x = -6;
-	pixel_y = -6
-	},
-/obj/item/device/suit_cooling_unit{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/device/suit_cooling_unit{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/device/suit_cooling_unit{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/device/suit_cooling_unit{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/item/device/suit_cooling_unit{
-	pixel_x = 8;
-	pixel_y = 8
-	},
+/obj/structure/table/rack/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
 "bJ" = (
@@ -316,8 +346,16 @@
 /obj/machinery/light/no_nightshift,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/atmos)
+"bU" = (
+/obj/structure/hull_corner/long_horiz{
+	dir = 5
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/hallways_aft)
 "bW" = (
-/obj/machinery/porta_turret/stationary/CIWS,
+/obj/structure/hull_corner/long_horiz{
+	dir = 6
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/atmos)
 "ch" = (
@@ -343,9 +381,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/dock_port)
 "cu" = (
-/obj/machinery/shipsensors,
+/obj/machinery/light/no_nightshift,
+/obj/machinery/porta_turret/stationary/CIWS,
 /turf/simulated/floor/reinforced/airless,
-/area/ship/ert/engineering)
+/area/ship/ert/barracks)
 "cv" = (
 /obj/machinery/shield_gen,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -510,15 +549,6 @@
 "dq" = (
 /turf/simulated/wall/shull,
 /area/ship/ert/med_surg)
-"dr" = (
-/obj/structure/table/rack/steel,
-/obj/item/toy/plushie/squid/blue{
-	desc = "A small, cute and loveable squid friend. This one is blue. Despite the name, it seems no more or less deadly than your regular plush squid.";
-	name = "NT 'Deathsquid' Plushie"
-	},
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/barracks)
 "ds" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/backpack/ert/commander,
@@ -657,7 +687,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
 "dW" = (
-/obj/machinery/light/no_nightshift{
+/obj/structure/hull_corner{
 	dir = 8
 	},
 /obj/machinery/pointdefense{
@@ -665,6 +695,13 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/gunnery)
+/obj/machinery/power/pointdefense{
+	id_tag = "vonbraun_pd"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/gunnery)
+/turf/space,
+/area/space)
 "dX" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -785,7 +822,9 @@
 /turf/simulated/floor/plating,
 /area/ship/ert/engine)
 "eD" = (
-/obj/machinery/porta_turret/stationary/CIWS,
+/obj/structure/hull_corner{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/med)
 "eF" = (
@@ -934,6 +973,43 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/mech_bay)
+"fJ" = (
+/obj/item/weapon/storage/belt/medical/emt{
+	pixel_y = -4
+	},
+/obj/item/weapon/storage/belt/medical/emt{
+	pixel_y = -2
+	},
+/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/weapon/storage/belt/medical/emt{
+	pixel_y = 2
+	},
+/obj/item/weapon/storage/belt/medical/emt{
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/belt/medical/emt{
+	pixel_y = 6
+	},
+/obj/item/clothing/accessory/storage/white_vest{
+	pixel_y = -4
+	},
+/obj/item/clothing/accessory/storage/white_vest{
+	pixel_y = -2
+	},
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest{
+	pixel_y = 2
+	},
+/obj/item/clothing/accessory/storage/white_vest{
+	pixel_y = 4
+	},
+/obj/item/clothing/accessory/storage/white_vest{
+	pixel_y = 6
+	},
+/obj/structure/table/rack/steel,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/ert/barracks)
 "fP" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/rig_module/chem_dispenser/combat,
@@ -1290,8 +1366,22 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/hangar)
+"hW" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/machinery/power/pointdefense{
+	id_tag = "vonbraun_pd"
+	},
+/obj/machinery/light/no_nightshift{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/hangar)
 "hY" = (
-/obj/machinery/porta_turret/stationary/CIWS,
+/obj/structure/hull_corner{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/dock_star)
 "ia" = (
@@ -1325,6 +1415,15 @@
 	dir = 8
 	},
 /obj/machinery/pointdefense{
+	id_tag = "vonbraun_pd"
+	},
+/obj/machinery/light/no_nightshift{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/power/pointdefense{
 	id_tag = "vonbraun_pd"
 	},
 /obj/machinery/light/no_nightshift{
@@ -1602,7 +1701,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/barracks)
 "kO" = (
-/obj/machinery/porta_turret/stationary/CIWS,
+/obj/structure/hull_corner{
+	dir = 8
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/barracks)
 "kP" = (
@@ -2339,62 +2440,43 @@
 /obj/item/weapon/storage/backpack/ert/engineer{
 	pixel_y = 3
 	},
-/obj/item/clothing/suit/space/void/responseteam/engineer{
-	pixel_y = -3
+/obj/item/clothing/gloves/yellow{
+	pixel_y = 6
 	},
-/obj/item/clothing/suit/space/void/responseteam/engineer,
-/obj/item/clothing/suit/space/void/responseteam/engineer{
-	pixel_y = 3
+/obj/item/clothing/gloves/yellow{
+	pixel_y = 9
 	},
-/obj/item/clothing/head/helmet/ert/engineer{
-	pixel_y = -3
+/obj/item/clothing/gloves/yellow{
+	pixel_y = 12
 	},
-/obj/item/clothing/head/helmet/ert/engineer,
-/obj/item/clothing/head/helmet/ert/engineer{
-	pixel_y = 3
+/obj/item/weapon/storage/backpack/ert/engineer{
+	pixel_y = 6
 	},
-/obj/item/clothing/suit/armor/vest/ert/engineer{
-	pixel_y = -3
+/obj/item/weapon/storage/backpack/ert/engineer{
+	pixel_y = 9
 	},
-/obj/item/clothing/suit/armor/vest/ert/engineer,
-/obj/item/clothing/suit/armor/vest/ert/engineer{
-	pixel_y = 3
+/obj/item/weapon/storage/backpack/ert/engineer{
+	pixel_y = 12
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
 "pa" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/belt/medical/emt{
-	pixel_y = -4
+/obj/item/device/mapping_unit/ert{
+	pixel_x = -6;
+	pixel_y = -6
 	},
-/obj/item/weapon/storage/belt/medical/emt{
-	pixel_y = -2
-	},
-/obj/item/weapon/storage/belt/medical/emt,
-/obj/item/weapon/storage/belt/medical/emt{
-	pixel_y = 2
-	},
-/obj/item/weapon/storage/belt/medical/emt{
-	pixel_y = 4
-	},
-/obj/item/weapon/storage/belt/medical/emt{
+/obj/item/device/mapping_unit/ert{
+	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/item/clothing/accessory/storage/white_vest{
-	pixel_y = -4
-	},
-/obj/item/clothing/accessory/storage/white_vest{
-	pixel_y = -2
-	},
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest{
-	pixel_y = 2
-	},
-/obj/item/clothing/accessory/storage/white_vest{
-	pixel_y = 4
-	},
-/obj/item/clothing/accessory/storage/white_vest{
+/obj/item/device/mapping_unit/ert{
+	pixel_x = -6;
 	pixel_y = 6
+	},
+/obj/item/device/mapping_unit/ert{
+	pixel_x = 6;
+	pixel_y = -6
 	},
 /obj/machinery/alarm/alarms_hidden{
 	dir = 1;
@@ -2420,29 +2502,17 @@
 /obj/item/weapon/storage/backpack/ert/medical{
 	pixel_y = 3
 	},
-/obj/item/clothing/suit/space/void/responseteam/medical{
-	pixel_y = -3
-	},
-/obj/item/clothing/suit/space/void/responseteam/medical,
-/obj/item/clothing/suit/space/void/responseteam/medical{
-	pixel_y = 3
-	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/clothing/head/helmet/ert/medical{
-	pixel_y = -3
-	},
-/obj/item/clothing/head/helmet/ert/medical,
-/obj/item/clothing/head/helmet/ert/medical{
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/armor/vest/ert/medical{
-	pixel_y = -3
-	},
-/obj/item/clothing/suit/armor/vest/ert/medical,
-/obj/item/clothing/suit/armor/vest/ert/medical{
-	pixel_y = 3
-	},
 /obj/machinery/light/no_nightshift,
+/obj/item/weapon/storage/backpack/ert/medical{
+	pixel_y = 6
+	},
+/obj/item/weapon/storage/backpack/ert/medical{
+	pixel_y = 9
+	},
+/obj/item/weapon/storage/backpack/ert/medical{
+	pixel_y = 12
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
 "pf" = (
@@ -2462,35 +2532,21 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/med)
 "pn" = (
-/obj/structure/table/rack/steel,
-/obj/item/weapon/storage/backpack/ert/medical{
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/backpack/ert/medical,
-/obj/item/weapon/storage/backpack/ert/medical{
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/space/void/responseteam/medical{
-	pixel_y = -3
-	},
-/obj/item/clothing/suit/space/void/responseteam/medical,
-/obj/item/clothing/suit/space/void/responseteam/medical{
-	pixel_y = 3
-	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/clothing/head/helmet/ert/medical{
-	pixel_y = -3
+/obj/structure/table/rack/steel,
+/obj/structure/table/rack/steel,
+/obj/item/weapon/storage/belt/utility/chief/full{
+	pixel_y = -2
 	},
-/obj/item/clothing/head/helmet/ert/medical,
-/obj/item/clothing/head/helmet/ert/medical{
-	pixel_y = 3
+/obj/item/weapon/storage/belt/utility/chief/full,
+/obj/item/weapon/storage/belt/utility/chief/full{
+	pixel_y = 2
 	},
-/obj/item/clothing/suit/armor/vest/ert/medical{
-	pixel_y = -3
+/obj/item/weapon/storage/belt/utility/chief/full{
+	pixel_y = 4
 	},
-/obj/item/clothing/suit/armor/vest/ert/medical,
-/obj/item/clothing/suit/armor/vest/ert/medical{
-	pixel_y = 3
+/obj/item/weapon/storage/belt/utility/chief/full{
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
@@ -2784,40 +2840,6 @@
 /obj/item/weapon/tool/crowbar,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/mech_bay)
-"qa" = (
-/obj/structure/table/rack/steel,
-/obj/item/weapon/rig/ert/security{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/weapon/rig/ert/security,
-/obj/item/weapon/rig/ert/security{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/weapon/rig/ert/security{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/mech_bay)
-"qd" = (
-/obj/structure/table/rack/steel,
-/obj/item/weapon/rig/ert/engineer{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/weapon/rig/ert/engineer,
-/obj/item/weapon/rig/ert/engineer{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/weapon/rig/ert/engineer{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ship/ert/mech_bay)
 "ql" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -2830,20 +2852,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/med)
 "qo" = (
-/obj/structure/table/rack/steel,
-/obj/item/weapon/rig/ert/medical{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/weapon/rig/ert/medical,
-/obj/item/weapon/rig/ert/medical{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/weapon/rig/ert/medical{
-	pixel_x = 4;
-	pixel_y = 4
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/mech_bay)
 "qt" = (
@@ -2911,6 +2919,7 @@
 /obj/machinery/light/no_nightshift{
 	dir = 1
 	},
+/obj/machinery/porta_turret/stationary/CIWS,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/eng_storage)
 "qJ" = (
@@ -3073,36 +3082,24 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/med)
 "so" = (
-/obj/structure/table/rack/steel,
-/obj/item/weapon/storage/backpack/ert/security{
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/backpack/ert/security,
-/obj/item/weapon/storage/backpack/ert/security{
-	pixel_y = 3
-	},
-/obj/item/clothing/suit/space/void/responseteam/security{
-	pixel_y = -3
-	},
-/obj/item/clothing/suit/space/void/responseteam/security,
-/obj/item/clothing/suit/space/void/responseteam/security{
-	pixel_y = 3
-	},
 /obj/machinery/light/no_nightshift,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/clothing/head/helmet/ert/security{
-	pixel_y = -3
+/obj/structure/table/rack/steel,
+/obj/item/clothing/accessory/storage/brown_vest{
+	pixel_y = -4
 	},
-/obj/item/clothing/head/helmet/ert/security,
-/obj/item/clothing/head/helmet/ert/security{
-	pixel_y = 3
+/obj/item/clothing/accessory/storage/brown_vest{
+	pixel_y = -2
 	},
-/obj/item/clothing/suit/armor/vest/ert/security{
-	pixel_y = -3
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest{
+	pixel_y = 2
 	},
-/obj/item/clothing/suit/armor/vest/ert/security,
-/obj/item/clothing/suit/armor/vest/ert/security{
-	pixel_y = 3
+/obj/item/clothing/accessory/storage/brown_vest{
+	pixel_y = 4
+	},
+/obj/item/clothing/accessory/storage/brown_vest{
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
@@ -3157,8 +3154,12 @@
 /obj/machinery/pointdefense{
 	id_tag = "vonbraun_pd"
 	},
+/obj/machinery/power/pointdefense{
+	id_tag = "vonbraun_pd"
+	},
+/obj/structure/hull_corner,
 /turf/simulated/floor/reinforced/airless,
-/area/ship/ert/hallways_aft)
+/area/ship/ert/barracks)
 "sC" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -3643,11 +3644,11 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/ert/med_surg)
 "wr" = (
-/obj/machinery/shipsensors{
-	dir = 1
+/obj/machinery/power/pointdefense{
+	id_tag = "vonbraun_pd"
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/ship/ert/atmos)
+/area/ship/ert/hallways_aft)
 "wt" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/firstaid/bonemed{
@@ -3668,6 +3669,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/med)
+"wG" = (
+/obj/structure/hull_corner/long_horiz{
+	dir = 5
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/engine)
 "wO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3901,29 +3908,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/med)
 "xA" = (
-/obj/structure/table/rack/steel,
-/obj/item/clothing/shoes/magboots/adv{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/clothing/shoes/magboots/adv{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/clothing/shoes/magboots/adv,
-/obj/item/clothing/shoes/magboots/adv{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/clothing/shoes/magboots/adv{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/clothing/shoes/magboots/adv{
-	pixel_x = 6;
-	pixel_y = 6
-	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/gear_dispenser/suit/ert,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
 "xC" = (
@@ -4197,6 +4183,9 @@
 "zg" = (
 /obj/item/modular_computer/console/preset/engineering{
 	dir = 4
+	},
+/obj/structure/panic_button{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/bridge)
@@ -4573,7 +4562,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/armoury_st)
 "BI" = (
-/obj/machinery/porta_turret/stationary/CIWS,
+/obj/structure/hull_corner/long_horiz{
+	dir = 5
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/engineering)
+"BK" = (
+/obj/machinery/shipsensors,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/engineering)
 "BM" = (
@@ -4877,27 +4872,15 @@
 /obj/item/weapon/storage/backpack/ert/security{
 	pixel_y = 3
 	},
-/obj/item/clothing/suit/space/void/responseteam/security{
-	pixel_y = -3
-	},
-/obj/item/clothing/suit/space/void/responseteam/security,
-/obj/item/clothing/suit/space/void/responseteam/security{
-	pixel_y = 3
-	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/clothing/head/helmet/ert/security{
-	pixel_y = -3
+/obj/item/weapon/storage/backpack/ert/security{
+	pixel_y = 6
 	},
-/obj/item/clothing/head/helmet/ert/security,
-/obj/item/clothing/head/helmet/ert/security{
-	pixel_y = 3
+/obj/item/weapon/storage/backpack/ert/security{
+	pixel_y = 9
 	},
-/obj/item/clothing/suit/armor/vest/ert/security{
-	pixel_y = -3
-	},
-/obj/item/clothing/suit/armor/vest/ert/security,
-/obj/item/clothing/suit/armor/vest/ert/security{
-	pixel_y = 3
+/obj/item/weapon/storage/backpack/ert/security{
+	pixel_y = 12
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
@@ -4962,17 +4945,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/ert_ship_boat)
-"Ez" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
 "EA" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/box/trackimp,
@@ -5151,6 +5123,7 @@
 /obj/machinery/light/no_nightshift{
 	dir = 1
 	},
+/obj/machinery/porta_turret/stationary/CIWS,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/dock_star)
 "FP" = (
@@ -5404,7 +5377,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/engine)
 "GJ" = (
-/obj/machinery/porta_turret/stationary/CIWS,
+/obj/structure/hull_corner{
+	dir = 1
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/eng_storage)
 "GK" = (
@@ -6266,15 +6241,12 @@
 	battery_lock = 0
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-<<<<<<< HEAD
-||||||| parent of d41e3bb7a8... Merge pull request #10091 from KillianKirilenko/kk-adminships
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-=======
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked{
 	pixel_y = 6
 	},
@@ -6291,7 +6263,6 @@
 /obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked{
 	pixel_y = -4
 	},
->>>>>>> d41e3bb7a8... Merge pull request #10091 from KillianKirilenko/kk-adminships
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/armoury_st)
 "LA" = (
@@ -6389,6 +6360,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/armoury_dl)
+"LX" = (
+/obj/structure/hull_corner/long_horiz{
+	dir = 6
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/hallways_aft)
 "LZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6548,37 +6525,21 @@
 /area/shuttle/ert_ship_boat)
 "MX" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/clothing/accessory/storage/brown_vest{
-	pixel_y = -4
+/obj/item/device/mapping_unit/ert{
+	pixel_x = -6;
+	pixel_y = -6
 	},
-/obj/item/clothing/accessory/storage/brown_vest{
-	pixel_y = -2
-	},
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest{
-	pixel_y = 2
-	},
-/obj/item/clothing/accessory/storage/brown_vest{
-	pixel_y = 4
-	},
-/obj/item/clothing/accessory/storage/brown_vest{
+/obj/item/device/mapping_unit/ert{
+	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/belt/utility/chief/full{
-	pixel_y = -4
-	},
-/obj/item/weapon/storage/belt/utility/chief/full{
-	pixel_y = -2
-	},
-/obj/item/weapon/storage/belt/utility/chief/full,
-/obj/item/weapon/storage/belt/utility/chief/full{
-	pixel_y = 2
-	},
-/obj/item/weapon/storage/belt/utility/chief/full{
-	pixel_y = 4
-	},
-/obj/item/weapon/storage/belt/utility/chief/full{
+/obj/item/device/mapping_unit/ert{
+	pixel_x = -6;
 	pixel_y = 6
+	},
+/obj/item/device/mapping_unit/ert{
+	pixel_x = 6;
+	pixel_y = -6
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/barracks)
@@ -6652,6 +6613,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/gunnery)
+"Nu" = (
+/obj/structure/hull_corner/long_horiz{
+	dir = 6
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/engine)
 "Nz" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -6676,14 +6643,10 @@
 "NI" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/secure/briefcase/nsfw_pack_hybrid,
-<<<<<<< HEAD
-||||||| parent of a7910d7968... Merge pull request #9712 from KillianKirilenko/kk-shuttle
 /obj/item/weapon/storage/belt/explorer/pathfinder,
-=======
 /obj/item/weapon/storage/belt/explorer/pathfinder{
 	name = "ERT Commander's belt"
 	},
->>>>>>> a7910d7968... Merge pull request #9712 from KillianKirilenko/kk-shuttle
 /turf/simulated/floor/wood,
 /area/ship/ert/commander)
 "NJ" = (
@@ -6942,6 +6905,7 @@
 /obj/machinery/light/no_nightshift{
 	dir = 8
 	},
+/obj/machinery/porta_turret/stationary/CIWS,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/gunnery)
 "ON" = (
@@ -7143,6 +7107,19 @@
 "Pq" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/ert/med)
+"Pw" = (
+/obj/machinery/shipsensors{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/atmos)
+"Py" = (
+/obj/machinery/light/no_nightshift{
+	dir = 1
+	},
+/obj/machinery/porta_turret/stationary/CIWS,
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/med)
 "PA" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techfloor,
@@ -7192,6 +7169,10 @@
 "PO" = (
 /turf/simulated/floor/reinforced/airless,
 /area/ship/ert/gunnery)
+"PP" = (
+/obj/machinery/porta_turret/stationary/CIWS,
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/engineering)
 "PS" = (
 /obj/machinery/shield_capacitor,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -7325,6 +7306,12 @@
 "QT" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/med)
+"QV" = (
+/obj/structure/hull_corner{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/ert_ship_boat)
 "QX" = (
 /obj/structure/window/reinforced,
 /obj/machinery/computer/shuttle_control/explore/ert_ship_boat{
@@ -7458,14 +7445,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/teleporter)
-"RV" = (
-/obj/machinery/light_switch{
-	pixel_y = 23
-	},
-/obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
-/turf/simulated/floor/wood,
-/area/ship/ert/commander)
 "Sc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -7758,12 +7737,6 @@
 "Tl" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/hangar)
-"Tr" = (
-/obj/machinery/shipsensors{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/med_surg)
 "Tx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
@@ -7884,6 +7857,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ship/ert/armoury_dl)
+"UI" = (
+/obj/structure/hull_corner{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/ert/med)
 "UJ" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -8375,11 +8354,11 @@
 /turf/simulated/wall/shull,
 /area/ship/ert/engineering)
 "YO" = (
-/obj/machinery/light/no_nightshift{
-	dir = 8
+/obj/structure/hull_corner{
+	dir = 1
 	},
-/turf/simulated/floor/reinforced/airless,
-/area/ship/ert/med_surg)
+/turf/space,
+/area/space)
 "YP" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 8
@@ -13586,7 +13565,7 @@ Hf
 yz
 yz
 yz
-kL
+lZ
 ZL
 lZ
 yz
@@ -14136,7 +14115,7 @@ yz
 yz
 yz
 yz
-lZ
+ZL
 Hf
 Hf
 ok
@@ -14156,7 +14135,7 @@ RO
 XH
 Hf
 Hf
-lZ
+ZL
 yz
 yz
 yz
@@ -14278,7 +14257,7 @@ yz
 yz
 yz
 yz
-lZ
+Nu
 Hf
 Hf
 op
@@ -14298,7 +14277,7 @@ SE
 cY
 Hf
 Hf
-lZ
+wG
 yz
 yz
 yz
@@ -14420,7 +14399,7 @@ yz
 yz
 yz
 yz
-ZL
+lZ
 Hf
 Hf
 vd
@@ -14440,7 +14419,7 @@ Hf
 Hf
 Hf
 Hf
-ZL
+lZ
 yz
 yz
 yz
@@ -14703,7 +14682,7 @@ yz
 yz
 yz
 yz
-bO
+Pw
 kJ
 pV
 kP
@@ -14725,7 +14704,7 @@ JG
 VC
 XW
 XW
-YR
+BK
 yz
 yz
 yz
@@ -14987,7 +14966,7 @@ yz
 yz
 yz
 yz
-bO
+aF
 kJ
 pV
 kT
@@ -15009,7 +14988,7 @@ XW
 XW
 XW
 XW
-YR
+PP
 yz
 yz
 yz
@@ -15271,7 +15250,7 @@ yz
 yz
 yz
 yz
-wr
+bO
 kJ
 pV
 ls
@@ -15293,7 +15272,7 @@ XW
 XW
 XW
 XW
-cu
+YR
 yz
 yz
 yz
@@ -15554,7 +15533,7 @@ yz
 yz
 yz
 yz
-Ib
+wr
 DS
 yl
 tK
@@ -15578,7 +15557,7 @@ kh
 Gv
 nY
 DS
-Ib
+wr
 yz
 yz
 yz
@@ -15696,7 +15675,7 @@ yz
 yz
 yz
 yz
-Ib
+LX
 DS
 pA
 HR
@@ -15720,7 +15699,7 @@ Ai
 Xh
 yG
 DS
-Ib
+bU
 yz
 yz
 yz
@@ -15838,7 +15817,7 @@ yz
 yz
 yz
 yz
-sB
+Ib
 DS
 cS
 cS
@@ -15862,7 +15841,7 @@ lu
 cS
 cS
 DS
-sB
+Ib
 yz
 yz
 yz
@@ -16128,7 +16107,7 @@ iB
 cS
 lu
 DS
-RV
+as
 Iv
 zP
 Eh
@@ -16273,7 +16252,7 @@ JB
 Wa
 eL
 zT
-Ez
+at
 IK
 Ks
 Oy
@@ -17257,7 +17236,7 @@ yz
 yz
 yz
 yz
-Sr
+cu
 Zo
 Bo
 ia
@@ -18535,7 +18514,7 @@ yz
 yz
 yz
 yz
-Sr
+cu
 Zo
 Bo
 sr
@@ -18677,7 +18656,7 @@ yz
 yz
 yz
 yz
-kO
+sB
 Zo
 Bo
 Bo
@@ -19393,7 +19372,7 @@ WH
 eX
 iX
 mT
-oX
+pn
 tH
 xi
 BF
@@ -19812,14 +19791,14 @@ yz
 yz
 yz
 yz
-Sr
+cu
 Zo
 Zo
 do
 do
 ip
 mV
-pn
+fJ
 tH
 xv
 Ce
@@ -19840,7 +19819,7 @@ xz
 HC
 ZT
 ZT
-Fd
+Py
 yz
 yz
 yz
@@ -19981,7 +19960,7 @@ VJ
 KI
 KI
 ZT
-eD
+UI
 yz
 yz
 yz
@@ -20241,7 +20220,7 @@ yz
 yz
 Ye
 Dd
-dr
+ar
 fj
 jz
 nc
@@ -21097,7 +21076,7 @@ Cx
 fP
 jU
 nt
-qa
+qo
 tX
 yx
 WC
@@ -21239,7 +21218,7 @@ Cx
 fU
 jY
 nv
-qd
+qo
 tX
 xO
 WC
@@ -21953,13 +21932,13 @@ FP
 vK
 xO
 WC
-ax
+HO
 HO
 yg
 HK
 yg
 HO
-ax
+HO
 WC
 Zx
 nl
@@ -22095,13 +22074,13 @@ Vq
 vK
 xO
 WC
-WC
+HO
 HO
 WC
 WC
 WC
 HO
-WC
+HO
 WC
 Mx
 dq
@@ -22237,13 +22216,13 @@ Vq
 vK
 xO
 WC
-WC
+ax
 HO
 WC
 WC
 WC
 HO
-WC
+QV
 WC
 aK
 Sh
@@ -22813,7 +22792,7 @@ za
 za
 za
 za
-hW
+ib
 MZ
 dq
 jv
@@ -22821,7 +22800,7 @@ ij
 dq
 MZ
 MZ
-Jg
+yz
 yz
 yz
 yz
@@ -22938,7 +22917,7 @@ yz
 yz
 yz
 yz
-nr
+dW
 vK
 vK
 wh
@@ -22962,7 +22941,7 @@ GY
 GY
 MZ
 MZ
-Cr
+YO
 yz
 yz
 yz
@@ -23224,7 +23203,7 @@ yz
 yz
 yz
 yz
-PO
+dW
 vK
 vK
 ej
@@ -23244,7 +23223,7 @@ Cr
 MZ
 MZ
 MZ
-aC
+YO
 yz
 yz
 yz
@@ -23367,8 +23346,8 @@ yz
 yz
 yz
 yz
-nr
-pE
+dW
+vK
 pE
 OM
 yz
@@ -23385,7 +23364,7 @@ yz
 CR
 MZ
 MZ
-Cr
+YO
 yz
 yz
 yz
@@ -23510,7 +23489,7 @@ yz
 yz
 yz
 yz
-PO
+dW
 PO
 PO
 yz
@@ -23526,7 +23505,7 @@ yz
 yz
 ci
 MZ
-Tr
+YO
 yz
 yz
 yz

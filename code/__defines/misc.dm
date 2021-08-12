@@ -20,6 +20,7 @@
 
 #define SEE_INVISIBLE_MINIMUM 5
 #define INVISIBILITY_MAXIMUM 100
+#define INVISIBILITY_ABSTRACT 101 //only used for abstract objects, things that are not really there.
 
 // Pseudo-Invis, like Ninja, Ling, Etc.
 #define EFFECTIVE_INVIS					  50		// Below this, can't be examined, may as well be invisible to the game
@@ -121,65 +122,6 @@
 #define WALL_CAN_OPEN 1
 #define WALL_OPENING 2
 
-#define DEFAULT_TABLE_MATERIAL "plastic"
-#define DEFAULT_WALL_MATERIAL "steel"
-
-#define MAT_IRON			"iron"
-#define MAT_MARBLE			"marble"
-#define MAT_STEEL			"steel"
-#define MAT_PLASTIC			"plastic"
-#define MAT_GLASS			"glass"
-#define MAT_SILVER			"silver"
-#define MAT_GOLD			"gold"
-#define MAT_URANIUM			"uranium" //Did it
-#define MAT_TITANIUM		"titanium"
-#define MAT_PHORON			"phoron"
-#define MAT_DIAMOND			"diamond"
-#define MAT_SNOW			"snow"
-#define MAT_WOOD			"wood"
-#define MAT_LOG				"log"
-#define MAT_SIFWOOD			"alien wood"
-#define MAT_SIFLOG			"alien log"
-#define MAT_STEELHULL		"steel hull"
-#define MAT_PLASTEEL		"plasteel"
-#define MAT_PLASTEELHULL	"plasteel hull"
-#define MAT_DURASTEEL		"durasteel"
-#define MAT_DURASTEELHULL	"durasteel hull"
-#define MAT_TITANIUMHULL	"titanium hull"
-#define MAT_VERDANTIUM		"verdantium"
-#define MAT_MORPHIUM		"morphium"
-#define MAT_MORPHIUMHULL	"morphium hull"
-#define MAT_VALHOLLIDE		"valhollide"
-#define MAT_LEAD			"lead"
-#define MAT_SUPERMATTER		"supermatter"
-#define MAT_METALHYDROGEN	"mhydrogen"
-#define MAT_OSMIUM			"osmium"
-#define MAT_GRAPHITE		"graphite"
-#define MAT_LEATHER			"leather"
-#define MAT_CHITIN			"chitin"
-#define MAT_CLOTH			"cloth"
-#define MAT_SYNCLOTH		"syncloth"
-#define MAT_COPPER			"copper"
-#define MAT_QUARTZ			"quartz"
-#define MAT_TIN				"tin"
-#define MAT_VOPAL			"void opal"
-#define MAT_ALUMINIUM		"aluminium"
-#define MAT_BRONZE			"bronze"
-#define MAT_PAINITE			"painite"
-#define MAT_BOROSILICATE	"borosilicate glass"
-
-#define SHARD_SHARD "shard"
-#define SHARD_SHRAPNEL "shrapnel"
-#define SHARD_STONE_PIECE "piece"
-#define SHARD_SPLINTER "splinters"
-#define SHARD_NONE ""
-
-#define MATERIAL_UNMELTABLE 0x1
-#define MATERIAL_BRITTLE    0x2
-#define MATERIAL_PADDING    0x4
-
-#define TABLE_BRITTLE_MATERIAL_MULTIPLIER 4 // Amount table damage is multiplied by if it is made of a brittle material (e.g. glass)
-
 #define BOMBCAP_DVSTN_RADIUS (max_explosion_range/4)
 #define BOMBCAP_HEAVY_RADIUS (max_explosion_range/2)
 #define BOMBCAP_LIGHT_RADIUS max_explosion_range
@@ -255,8 +197,6 @@
 
 #define MIDNIGHT_ROLLOVER		864000	//number of deciseconds in a day
 
-#define WORLD_ICON_SIZE 32 //Needed for the R-UST port
-#define PIXEL_MULTIPLIER WORLD_ICON_SIZE/32 //Needed for the R-UST port
 #define MAX_CLIENT_VIEW	34  // Maximum effective value of client.view (According to DM references)
 
 // Maploader bounds indices
@@ -482,6 +422,7 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 #define VOLUME_CHANNEL_ALARMS "Alarms"
 #define VOLUME_CHANNEL_VORE "Vore"
 #define VOLUME_CHANNEL_DOORS "Doors"
+#define VOLUME_CHANNEL_INSTRUMENTS "Instruments"
 
 // Make sure you update this or clients won't be able to adjust the channel
 GLOBAL_LIST_INIT(all_volume_channels, list(
@@ -490,6 +431,7 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 	VOLUME_CHANNEL_ALARMS,
 	VOLUME_CHANNEL_VORE,
 	VOLUME_CHANNEL_DOORS,
+	VOLUME_CHANNEL_INSTRUMENTS
 ))
 
 #define APPEARANCECHANGER_CHANGED_RACE "Race"
@@ -504,3 +446,34 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define APPEARANCECHANGER_CHANGED_EYES "Eye Color"
 
 #define GET_DECL(D) (ispath(D, /decl) ? (decls_repository.fetched_decls[D] || decls_repository.get_decl(D)) : null)
+
+#define LOADOUT_WHITELIST_OFF    0
+#define LOADOUT_WHITELIST_LAX    1
+#define LOADOUT_WHITELIST_STRICT 2
+
+
+#ifndef WINDOWS_HTTP_POST_DLL_LOCATION
+#define WINDOWS_HTTP_POST_DLL_LOCATION "lib/byhttp.dll"
+#endif
+
+#ifndef UNIX_HTTP_POST_DLL_LOCATION
+#define UNIX_HTTP_POST_DLL_LOCATION "lib/libbyhttp.so"
+#endif
+
+#ifndef HTTP_POST_DLL_LOCATION
+#define HTTP_POST_DLL_LOCATION (world.system_type == MS_WINDOWS ? WINDOWS_HTTP_POST_DLL_LOCATION : UNIX_HTTP_POST_DLL_LOCATION)
+#endif
+
+#define DOCK_ATTEMPT_TIMEOUT 200	//how long in ticks we wait before assuming the docking controller is broken or blown up.
+
+#define SMES_TGUI_INPUT 1
+#define SMES_TGUI_OUTPUT 2
+
+#define TRAIT_SORT_NORMAL 1
+#define TRAIT_SORT_BODYTYPE 2
+#define TRAIT_SORT_SPECIES 3
+
+#define SPECIES_SORT_NORMAL 1
+#define SPECIES_SORT_WHITELISTED 2
+#define SPECIES_SORT_RESTRICTED 3
+#define SPECIES_SORT_CUSTOM 4

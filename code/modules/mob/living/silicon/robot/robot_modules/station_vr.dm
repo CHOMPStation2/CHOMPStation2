@@ -67,8 +67,8 @@
 	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
 	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
+	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //CH Addition booze found in /code/modules/mob/living/silicon/robot/subtypes/boozeborg_ch.dm
 	robot_modules["UnityHound"] = /obj/item/weapon/robot_module/robot/chound //CH Addition Unity
 	return 1
 
@@ -210,7 +210,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) //Starts full and has a max of 500
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 	synths += water
 
@@ -285,7 +285,7 @@
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src) //Pounce
 	src.modules += new /obj/item/weapon/gripper/medical(src)//Now you can set up cyro or make peri. //CHOMPEdit
 
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(2000)
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)  //CHOMPedit
 	synths += medicine
 
 	var/obj/item/stack/medical/advanced/clotting/C = new (src)
@@ -296,7 +296,8 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
+	water.max_energy = 1000  //CHOMPedit increased water storage from 500 to 1000
 	R.water_res = water
 	synths += water
 
@@ -373,7 +374,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 	synths += water
 
@@ -520,7 +521,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 	synths += water
 
@@ -600,38 +601,39 @@
 	src.modules += new /obj/item/device/pipe_painter(src)
 	src.modules += new /obj/item/device/floor_painter(src)
 	src.modules += new /obj/item/weapon/rms(src)
+	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)  //CHOMPedit: add RCD
 	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
 	src.modules += new /obj/item/weapon/pipe_dispenser(src) //YW change
 
 	//Painfully slow charger regen but high capacity. Also starts with low amount.
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal()
 	metal.name = "Steel reserves"
-	metal.recharge_rate = 100
+	metal.recharge_rate = 1000  //CHOMPedit Make less slow
 	metal.max_energy = 50000
-	metal.energy = 10000
+	metal.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass()
 	glass.name = "Glass reserves"
-	glass.recharge_rate = 100
+	glass.recharge_rate = 1000  //CHOMPedit Make less slow
 	glass.max_energy = 50000
-	glass.energy = 10000
+	glass.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/wood = new /datum/matter_synth/wood()
 	wood.name = "Wood reserves"
-	wood.recharge_rate = 100
+	wood.recharge_rate = 1000  //CHOMPedit Make less slow
 	wood.max_energy = 50000
-	wood.energy = 10000
+	wood.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/plastic = new /datum/matter_synth/plastic()
 	plastic.name = "Plastic reserves"
-	plastic.recharge_rate = 100
+	plastic.recharge_rate = 1000  //CHOMPedit Make less slow
 	plastic.max_energy = 50000
-	plastic.energy = 10000
+	plastic.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/plasteel = new /datum/matter_synth/plasteel()
 	plasteel.name = "Plasteel reserves"// Adding plasteel synthesizer to move in-line with Engiborg.
-	plasteel.recharge_rate = 100
+	plasteel.recharge_rate = 1000  //CHOMPedit Make less slow
 	plasteel.max_energy = 20000
-	plasteel.energy = 10000
+	plasteel.energy = 40000  //CHOMPedit Make less awful
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 
 	var/datum/matter_synth/wire = new /datum/matter_synth/wire()
@@ -750,7 +752,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500) // buffy fix, was 0
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	water.max_energy = 1000
 	R.water_res = water
 	synths += water
@@ -822,7 +824,7 @@
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
-	water.recharge_rate = 0
+	water.recharge_rate = 10  //CHOMPedit water shouldn't be a giant pain to get, rechargers should provide it.
 	R.water_res = water
 	synths += water
 
@@ -867,7 +869,89 @@
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-//Boozeborg stuff found in /code/modules/mob/living/silicon/robot/subtypes/boozeborg_ch.dm
+/obj/item/weapon/robot_module/robot/booze
+	name = "BoozeHound robot module"
+	channels = list("Service" = 1)
+	pto_type = PTO_CIVILIAN
+	can_be_pushed = 0
+	sprites = list(
+				"Beer Buddy" = "boozeborg",
+				"Brilliant Blue" = "boozeborg(blue)",
+				"Caffine Dispenser" = "boozeborg(coffee)",
+				"Gamer Juice Maker" = "boozeborg(green)",
+				"Liqour Licker" = "boozeborg(orange)",
+				"The Grapist" = "boozeborg(purple)",
+				"Vampire's Aid" = "boozeborg(red)",
+				"Vodka Komrade" = "boozeborg(vodka)"
+				) //CHOMP Edit Added Vodka Komrade
+
+/obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
+	..()
+	src.modules += new /obj/item/weapon/gripper/service(src)
+	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
+	//src.modules += new /obj/item/weapon/material/minihoe(src)
+	//src.modules += new /obj/item/device/analyzer/plant_analyzer(src)
+	//src.modules += new /obj/item/weapon/storage/bag/plants(src)
+	//src.modules += new /obj/item/weapon/robot_harvester(src)
+	src.modules += new /obj/item/weapon/material/knife(src)
+	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
+	src.modules += new /obj/item/device/multitool(src) //to freeze trays
+	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
+	src.modules += new /obj/item/weapon/tray/robotray
+	src.modules += new /obj/item/device/dogborg/boop_module(src)
+	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src)
+	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
+	R.verbs += /mob/living/silicon/robot/proc/reskin_booze
+
+	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
+	M.stored_matter = 30
+	src.modules += M
+
+	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
+
+	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
+	L.lit = 1
+	src.modules += L
+
+	src.modules += new /obj/item/weapon/tray/robotray(src)
+	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service(src)
+	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
+
+	var/datum/reagents/N = new/datum/reagents(50)
+	src.emag.reagents = N
+	N.my_atom = src.emag
+	N.add_reagent("beer2", 50)
+	src.emag.name = "Mickey Finn's Special Brew"
+	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
+	R.wideborg_dept = 'icons/mob/widerobot_colors_vr.dmi'
+	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
+	R.ui_style_vr = TRUE
+	R.pixel_x 	 = -16
+	R.old_x 	 = -16
+	R.default_pixel_x = -16
+	R.dogborg = TRUE
+	R.wideborg = TRUE
+	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
+	..()
+
+/obj/item/weapon/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
+	E.reagents.add_reagent("enzyme", 2 * amount)
+	if(src.emag)
+		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
+		B.reagents.add_reagent("beer2", 2 * amount)
+
+//CHOMP addition start BORGHYPO
+/obj/item/weapon/reagent_containers/borghypo/service/booze
+	name = "cyborg drink synthesizer"
+	desc = "A portable drink dispencer."
+	icon = 'icons/obj/drinks.dmi'
+	icon_state = "shaker"
+	charge_cost = 20
+	recharge_time = 3
+	volume = 120
+	possible_transfer_amounts = list(1 ,5, 10, 20, 30)
+//Chomp addition end
 
 // CH Changes - Unity Hound begin
 /obj/item/weapon/robot_module/robot/chound
@@ -946,4 +1030,3 @@
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
 // CH changes - Unity Hound end
-

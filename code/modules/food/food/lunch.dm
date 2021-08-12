@@ -12,14 +12,14 @@ var/list/lunchables_lunches_ = list(/obj/item/weapon/reagent_containers/food/sna
                                   /obj/item/weapon/reagent_containers/food/snacks/tossedsalad,
                                   /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose)
 
-var/list/lunchables_snacks_ = list(/obj/item/weapon/reagent_containers/food/snacks/donut/jelly,
-                                   /obj/item/weapon/reagent_containers/food/snacks/donut/cherryjelly,
+var/list/lunchables_snacks_ = list(/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly,
+                                   /obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly/cherryjelly,
                                    /obj/item/weapon/reagent_containers/food/snacks/muffin,
                                    /obj/item/weapon/reagent_containers/food/snacks/popcorn,
                                    /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
                                    /obj/item/weapon/reagent_containers/food/snacks/unajerky,
                                    /obj/item/weapon/reagent_containers/food/snacks/no_raisin,
-                                   /obj/item/weapon/reagent_containers/food/snacks/spacetwinkie,
+                                   /obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie,
                                    /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers,
                                    /obj/item/weapon/reagent_containers/food/snacks/poppypretzel,
                                    /obj/item/weapon/reagent_containers/food/snacks/carrotfries,
@@ -106,9 +106,8 @@ var/list/lunchables_ethanol_reagents_ = list(/datum/reagent/ethanol/acid_spit,
 
 /proc/init_lunchable_list(var/list/lunches)
 	. = list()
-	for(var/lunch in lunches)
-		var/obj/O = lunch
-		.[initial(O.name)] = lunch
+	for(var/obj/O as anything in lunches)
+		.[initial(O.name)] = O
 	return sortAssoc(.)
 
 /proc/init_lunchable_reagent_list(var/list/banned_reagents, var/reagent_types)

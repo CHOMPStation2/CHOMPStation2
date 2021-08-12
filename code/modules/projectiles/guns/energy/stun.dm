@@ -35,6 +35,7 @@
 	desc = "A LAEP20 Aktzin. Designed and produced by Lawson Arms under the wing of Hephaestus, several TSCs have been trying to get a hold of the blueprints for half a decade."
 	description_fluff = "Lawson Arms is Hephaestus Industries’ main personal-energy-weapon branding, often sold alongside MarsTech projectile weapons to security and law enforcement agencies. \
 	The Aktzin's capsule-based stun ammunition is a closely guarded Hephaestus Industries patent, and the company has been particularly litigious towards any attempted imitators."
+	icon = 'icons/obj/guns/energy/stunrevolver.dmi'
 	icon_state = "stunrevolver"
 	item_state = "stunrevolver"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
@@ -48,7 +49,7 @@
 	w_class = ITEMSIZE_SMALL
 	item_state = "crossbow"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 2, TECH_ILLEGAL = 5)
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MAT_STEEL = 2000)
 	slot_flags = SLOT_BELT | SLOT_HOLSTER
 	silenced = 1
 	projectile_type = /obj/item/projectile/energy/bolt
@@ -66,7 +67,7 @@
 	desc = "A weapon favored by mercenary infiltration teams."
 	w_class = ITEMSIZE_LARGE
 	force = 10
-	matter = list(DEFAULT_WALL_MATERIAL = 200000)
+	matter = list(MAT_STEEL = 200000)
 	slot_flags = SLOT_BELT
 	projectile_type = /obj/item/projectile/energy/bolt/large
 

@@ -2,8 +2,8 @@
 	name = "\improper IV drip"
 	desc = "Helpful for giving someone blood! Or taking it away. It giveth, it taketh."
 	icon = 'icons/obj/iv_drip.dmi'
-	anchored = 0
-	density = 0
+	anchored = FALSE
+	density = FALSE
 
 
 /obj/machinery/iv_drip/var/mob/living/carbon/human/attached = null
@@ -16,7 +16,7 @@
 	else
 		icon_state = ""
 
-	overlays = null
+	cut_overlays()
 
 	if(beaker)
 		var/datum/reagents/reagents = beaker.reagents
@@ -34,7 +34,7 @@
 				if(91 to INFINITY)	filling.icon_state = "reagent100"
 
 			filling.icon += reagents.get_color()
-			overlays += filling
+			add_overlay(filling)
 
 /obj/machinery/iv_drip/MouseDrop(over_object, src_location, over_location)
 	..()

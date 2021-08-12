@@ -243,7 +243,7 @@ var/list/flooring_types
 /decl/flooring/snow
 	name = "snow"
 	desc = "A layer of many tiny bits of frozen water. It's hard to tell how deep it is."
-	icon = 'icons/turf/snow_new.dmi'
+	icon = 'icons/turf/outdoors.dmi'
 	icon_base = "snow"
 	footstep_sounds = list("human" = list(
 		'sound/effects/footstep/snow1.ogg',
@@ -331,6 +331,18 @@ var/list/flooring_types
 	name = "teal carpet"
 	icon_base = "tealcarpet"
 	build_type = /obj/item/stack/tile/carpet/teal
+
+/decl/flooring/carpet/deco
+	name = "deco carpet"
+	icon_base = "decocarpet"
+	build_type = /obj/item/stack/tile/carpet/deco
+	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
+
+/decl/flooring/carpet/retro
+	name = "retro carpet"
+	icon_base = "retrocarpet"
+	build_type = /obj/item/stack/tile/carpet/retro
+	flags = TURF_REMOVE_CROWBAR | TURF_CAN_BURN
 
 /decl/flooring/tiling
 	name = "floor"

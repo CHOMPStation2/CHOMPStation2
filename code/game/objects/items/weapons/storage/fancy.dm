@@ -125,9 +125,9 @@
 
 /obj/item/weapon/storage/fancy/crayons/update_icon()
 	var/mutable_appearance/ma = new(src)
-	ma.overlays = list()
+	ma.cut_overlays()
 	for(var/obj/item/weapon/pen/crayon/crayon in contents)
-		ma.overlays += image('icons/obj/crayons.dmi',crayon.colourName)
+		add_overlay(image('icons/obj/crayons.dmi',crayon.colourName))
 	appearance = ma
 
 /obj/item/weapon/storage/fancy/crayons/attackby(obj/item/W as obj, mob/user as mob)
@@ -167,9 +167,9 @@
 
 /obj/item/weapon/storage/fancy/markers/update_icon()
 	var/mutable_appearance/ma = new(src)
-	ma.overlays = list()
+	ma.cut_overlays()
 	for(var/obj/item/weapon/pen/crayon/marker/marker in contents)
-		ma.overlays += image('icons/obj/crayons.dmi',"m"+marker.colourName)
+		ma.add_overlay(image('icons/obj/crayons.dmi',"m"+marker.colourName))
 	appearance = ma
 
 /obj/item/weapon/storage/fancy/markers/attackby(obj/item/W as obj, mob/user as mob)
@@ -236,7 +236,7 @@
 	if(istype(W, /obj/item/clothing/mask/smokable/cigarette))
 		var/obj/item/clothing/mask/smokable/cigarette/C = W
 		reagents.trans_to_obj(C, (reagents.total_volume/contents.len))
-	..()
+	return ..()
 
 /obj/item/weapon/storage/fancy/cigarettes/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 	if(!istype(M, /mob))
@@ -343,7 +343,7 @@
 	var/obj/item/clothing/mask/smokable/cigarette/cigar/C = W
 	if(!istype(C)) return
 	reagents.trans_to_obj(C, (reagents.total_volume/contents.len))
-	..()
+	return ..()
 
 /obj/item/weapon/storage/rollingpapers
 	name = "rolling paper pack"
@@ -398,14 +398,13 @@
 /obj/item/weapon/storage/lockbox/vials/update_icon(var/itemremoved = 0)
 	var/total_contents = contents.len - itemremoved
 	icon_state = "vialbox[total_contents]"
-	overlays.Cut()
+	cut_overlays()
 	if (!broken)
-		overlays += image(icon, src, "led[locked]")
+		add_overlay("led[locked]")
 		if(locked)
-			overlays += image(icon, src, "cover")
+			add_overlay("cover")
 	else
-		overlays += image(icon, src, "ledb")
-	return
+		add_overlay("ledb")
 
 /obj/item/weapon/storage/lockbox/vials/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	..()

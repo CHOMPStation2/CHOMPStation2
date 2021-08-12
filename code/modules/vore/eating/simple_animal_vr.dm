@@ -32,6 +32,14 @@
 	feed_grabbed_to_self(src,T)
 	update_icon()
 
+//CHOMPedit: On-demand belly loading.
+/mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
+	if(vore_active && !voremob_loaded)
+		voremob_loaded = TRUE
+		init_vore()
+		belly = vore_selected
+	..()
+
 //
 // Simple proc for animals to have their digestion toggled on/off externally
 // Added as a verb in /mob/living/simple_mob/init_vore() if vore is enabled for this mob.
@@ -55,12 +63,12 @@
 		return
 */
 	if(vore_selected.digest_mode == DM_HOLD)
-		var/confirm = alert(user, "Enabling digestion on [name] will cause it to digest all stomach contents. Using this to break OOC prefs is against the rules. Digestion will reset after 20 minutes.", "Enabling [name]'s Digestion", "Enable", "Cancel")
+		var/confirm = tgui_alert(user, "Enabling digestion on [name] will cause it to digest all stomach contents. Using this to break OOC prefs is against the rules. Digestion will reset after 20 minutes.", "Enabling [name]'s Digestion", list("Enable", "Cancel"))
 		if(confirm == "Enable")
 			vore_selected.digest_mode = DM_DIGEST
 			addtimer(VARSET_CALLBACK(vore_selected, digest_mode, vore_default_mode), 20 MINUTES)
 	else
-		var/confirm = alert(user, "This mob is currently set to process all stomach contents. Do you want to disable this?", "Disabling [name]'s Digestion", "Disable", "Cancel")
+		var/confirm = tgui_alert(user, "This mob is currently set to process all stomach contents. Do you want to disable this?", "Disabling [name]'s Digestion", list("Disable", "Cancel"))
 		if(confirm == "Disable")
 			vore_selected.digest_mode = DM_HOLD
 
@@ -101,6 +109,9 @@
 				if(!(L in prey_excludes)) // Unless they're already on it, just to avoid fuckery.
 					prey_excludes += L
 					addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(L)), 5 MINUTES)
+	else if(istype(O, /obj/item/device/healthanalyzer))
+		var/healthpercent = health/maxHealth*100
+		to_chat(user, "<span class='notice'>[src] seems to be [healthpercent]% healthy.</span>")		
 	else
 		..()
 

@@ -163,13 +163,16 @@ const digestModeToPreyMode = {
  *
  * return tabIndex===4 ? null : (
  *
+ * New preference added, noisy_full
+ * noisy_full enables belching when nutrition exceeds 500, very similar to the noisy preference.
+ *
  * That's everything so far.
  *
  */
 export const VorePanel = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-    <Window width={700} height={800} resizable>
+    <Window width={700} height={660} theme="abstract" resizable>
       <Window.Content scrollable>
         {data.unsaved_changes && (
           <NoticeBox danger>
@@ -248,9 +251,10 @@ const VoreBellySelectionAndCustomization = (props, context) => {
         {our_bellies.map(belly => (
           <Tabs.Tab
             key={belly.name}
-            color={belly.selected ? "green" : digestModeToColor[belly.digest_mode]}
+            selected={belly.selected}
+            textColor={digestModeToColor[belly.digest_mode]}
             onClick={() => act("bellypick", { bellypick: belly.ref })}>
-            <Box inline color={belly.selected && digestModeToColor[belly.digest_mode] || null}>
+            <Box inline textColor={belly.selected && digestModeToColor[belly.digest_mode] || null}>
               {belly.name} ({belly.contents})
             </Box>
           </Tabs.Tab>
@@ -287,7 +291,9 @@ const VoreSelectedBelly = (props, context) => {
     nutrition_percent,
     digest_brute,
     digest_burn,
+    digest_oxy,
     bulge_size,
+    display_absorbed_examine,
     shrink_grow_size,
     emote_time,
     emote_active,
@@ -423,6 +429,9 @@ const VoreSelectedBelly = (props, context) => {
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "em" })}
               content="Examine Message (when full)" />
             <Button
+              onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "ema" })}
+              content="Examine Message (with absorbed victims)" />
+            <Button
               onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "im_digest" })}
               content="Idle Messages (Digest)" />
             <Button
@@ -456,6 +465,11 @@ const VoreSelectedBelly = (props, context) => {
                 <Button
                   onClick={() => act("set_attribute", { attribute: "b_burn_dmg" })}
                   content={digest_burn} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Digest Suffocation Damage">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_oxy_dmg" })}
+                  content={digest_oxy} />
               </LabeledList.Item>
               <LabeledList.Item label="Nutritional Gain">
                 <Button
@@ -543,6 +557,13 @@ const VoreSelectedBelly = (props, context) => {
                 <Button
                   onClick={() => act("set_attribute", { attribute: "b_bulge_size" })}
                   content={bulge_size * 100 + "%"} />
+              </LabeledList.Item>
+              <LabeledList.Item label="Display Absorbed Examines">
+                <Button
+                  onClick={() => act("set_attribute", { attribute: "b_display_absorbed_examine" })}
+                  icon={display_absorbed_examine ? "toggle-on" : "toggle-off"}
+                  selected={display_absorbed_examine}
+                  content={display_absorbed_examine ? "True" : "False"} />
               </LabeledList.Item>
               <LabeledList.Item label="Shrink/Grow Size">
                 <Button
@@ -918,9 +939,11 @@ const VoreUserPreferences = (props, context) => {
     can_be_drop_prey,
     can_be_drop_pred,
     latejoin_vore,
+    allow_spontaneous_tf,
     step_mechanics_active,
     pickup_mechanics_active,
     noisy,
+    noisy_full,
     liq_rec,
     liq_giv,
   } = data.prefs;
@@ -1058,6 +1081,18 @@ const VoreUserPreferences = (props, context) => {
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button
+            onClick={() => act("toggle_noisy_full")}
+            icon={noisy_full ? "toggle-on" : "toggle-off"}
+            selected={noisy_full}
+            fluid
+            tooltip={"Toggle belching while full. "
+            + (noisy_full
+              ? "Click here to turn off belching when full."
+              : "Click here to turn on belching when full.")}
+            content={noisy_full ? "Belching Enabled" : "Belching Disabled"} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <Button
             onClick={() => act("toggle_resize")}
             icon={resizable ? "toggle-on" : "toggle-off"}
             selected={resizable}
@@ -1073,7 +1108,7 @@ const VoreUserPreferences = (props, context) => {
             selected={step_mechanics_active}
             fluid
             tooltipPosition="top"
-            tooltip={step_mechanics_active 
+            tooltip={step_mechanics_active
               ? "This setting controls whether or not you participate in size-based step mechanics."
               + "Includes both stepping on others, as well as getting stepped on. Click to disable step mechanics."
               : ("You will not participate in step mechanics."
@@ -1087,40 +1122,53 @@ const VoreUserPreferences = (props, context) => {
             selected={show_vore_fx}
             fluid
             tooltipPosition="top"
-            tooltip={show_vore_fx 
+            tooltip={show_vore_fx
               ? "This setting controls whether or not a pred is allowed to mess with your HUD and fullscreen overlays."
               + "Click to disable all FX."
               : ("Regardless of Predator Setting, you will not see their FX settings."
                 + " Click this to enable showing FX.")}
             content={show_vore_fx ? "Show Vore FX" : "Do Not Show Vore FX"} />
         </Flex.Item>
-        <Flex.Item basis="49%">
+        <Flex.Item basis="32%">
           <Button
             onClick={() => act("toggle_leaveremains")}
             icon={digest_leave_remains ? "toggle-on" : "toggle-off"}
             selected={digest_leave_remains}
             fluid
             tooltipPosition="top"
-            tooltip={digest_leave_remains 
+            tooltip={digest_leave_remains
               ? "Your Predator must have this setting enabled in their belly modes to allow remains to show up,"
               + "if they do not, they will not leave your remains behind, even with this on. Click to disable remains"
               : ("Regardless of Predator Setting, you will not leave remains behind."
                 + " Click this to allow leaving remains.")}
-            content={digest_leave_remains ? "Allow Leaving Remains Behind" : "Do Not Allow Leaving Remains Behind"} />
+            content={digest_leave_remains ? "Allow Leaving Remains" : "Do Not Allow Leaving Remains"} />
         </Flex.Item>
-        <Flex.Item basis="49%">
+        <Flex.Item basis="32%" grow={1}>
           <Button
             onClick={() => act("toggle_pickuppref")}
             icon={pickup_mechanics_active ? "toggle-on" : "toggle-off"}
             selected={pickup_mechanics_active}
             fluid
             tooltipPosition="top"
-            tooltip={pickup_mechanics_active 
+            tooltip={pickup_mechanics_active
               ? "Allows macros to pick you up into their hands, and you to pick up micros."
               + "Click to disable pick-up mechanics"
               : ("You will not participate in pick-up mechanics."
                 + " Click this to allow picking up/being picked up.")}
             content={pickup_mechanics_active ? "Pick-up Mechanics Enabled" : "Pick-up Mechanics Disabled"} />
+        </Flex.Item>
+        <Flex.Item basis="32%">
+          <Button
+            onClick={() => act("toggle_allow_spontaneous_tf")}
+            icon={allow_spontaneous_tf ? "toggle-on" : "toggle-off"}
+            selected={allow_spontaneous_tf}
+            fluid
+            tooltip={"This toggle is for spontaneous or environment related transformation"
+            + " as a victim, such as via chemicals. "
+            + (allow_spontaneous_tf
+              ? "Click here to allow being spontaneously transformed."
+              : "Click here to disable being spontaneously transformed.")}
+            content={allow_spontaneous_tf ? "Spontaneous TF Enabled" : "Spontaneous TF Disabled"} />
         </Flex.Item>
         <Flex.Item basis="49%">
           <Button
