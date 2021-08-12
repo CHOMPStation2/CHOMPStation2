@@ -38,16 +38,16 @@
 	#include "events/wildlife_encounter.dm"
 
 	//CHOMPStation Edit Start TFF 25/3/20 - Station level map z-levels separated into 3 distinct files to work with MapDiffBot. All other files renamed accordingly.
-	#include "southern_cross-1.dmm"
-	#include "southern_cross-2.dmm"
-	#include "southern_cross-3.dmm"
-//	#include "southern_cross-4.dmm" CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.7
-	#include "southern_cross-5.dmm"
-	#include "southern_cross-6.dmm"
-	#include "southern_cross-7.dmm"
-	#include "southern_cross-8.dmm"
-	#include "southern_cross-9.dmm"
-	#include "southern_cross-10.dmm"
+	#include "southern_cross-1.dmm" //Deck 1
+	#include "southern_cross-2.dmm" //Deck 2
+	#include "southern_cross-3.dmm" //Deck 3
+//	#include "southern_cross-4.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.7
+	#include "southern_cross-5.dmm" //Sif outpost
+	#include "southern_cross-6.dmm" //Sif mine
+	#include "southern_cross-7.dmm" //Carrier
+	#include "southern_cross-8.dmm" //Centcom
+	#include "southern_cross-9.dmm" //Transit
+	#include "southern_cross-10.dmm" //Sif wilds
 	//CHOMPStation Edit End
 	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
