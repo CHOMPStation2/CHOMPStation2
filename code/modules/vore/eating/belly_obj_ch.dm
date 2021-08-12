@@ -23,12 +23,12 @@
 	var/reagentid = "water"							//Selected reagent's id, for use in puddle system currently
 	var/reagentcolor = "#0064C877"					//Selected reagent's color, for use in puddle system currently
 	var/gen_cost = 1 								//amount of nutrient taken from the host everytime nutrition is used to make reagents
-	var/gen_amount = 1							//Does not actually influence amount produced, but is used as a way to tell the system how much total reagent it has to take into account when filling a belly
+	var/gen_amount = 1								//Does not actually influence amount produced, but is used as a way to tell the system how much total reagent it has to take into account when filling a belly
 
 	var/gen_interval = 0							//Interval in seconds for generating fluids, once it reaches the value of gen_time one cycle of reagents generation will occur
 	var/gen_time = 5								//Time it takes in seconds to produce one cycle of reagents, technically add 1 second to it for the tick where the fluid is produced
 	var/gen_time_display = "1 hour"					//The displayed time it takes from a belly to go from 0 to 100
-	var/custom_max_volume = 100						//Variable for people to limit amount of liquid they can receive/produce in a belly
+	var/custom_max_volume = 200						//Variable for people to limit amount of liquid they can receive/produce in a belly
 	var/digest_nutri_gain = 0						//variable to store temporary nutrition gain from digestion and allow a seperate proc to ease up on the wall of code
 	var/reagent_transfer_verb = "injects"			//verb for transfer of reagent from a vore belly
 
@@ -151,28 +151,28 @@
 			generated_reagents = list("milk" = 1)
 			reagent_name = "milk"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "milk"
 			reagentcolor = "#DFDFDF"
 		if("Cream")
 			generated_reagents = list("cream" = 1)
 			reagent_name = "cream"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "cream"
 			reagentcolor = "#DFD7AF"
 		if("Honey")
 			generated_reagents = list("honey" = 1)
 			reagent_name = "honey"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "honey"
 			reagentcolor = "#FFFF00"
 		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
 			generated_reagents = list("cherryjelly" = 1)
 			reagent_name = "cherry jelly"
 			gen_amount = 1
-			gen_cost = 10
+			gen_cost = 5
 			reagentid = "cherryjelly"
 			reagentcolor = "#801E28"
 
