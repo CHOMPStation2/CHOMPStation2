@@ -42,14 +42,14 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 66
 	energy_add = 893
 	velocity = 595
-	armor_penetration = 25
+	armor_penetration = 15
 
 /obj/item/projectile/bullet/pistol/hp
 	grains = 131
 	velocity = 350
 	energy_add = -96.18
 	hollow_point = TRUE
-	armor_penetration = -50
+	armor_penetration = -15
 
 /obj/item/projectile/bullet/pistol/medium 	//.45
 	fire_sound = 'sound/weapons/ballistics/a45.ogg'
@@ -61,12 +61,12 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 173
 	energy_add = 374
 	velocity = 347
-	armor_penetration = 25
+	armor_penetration = 15
 
 /obj/item/projectile/bullet/pistol/medium/hp
 	grains = 230
 	velocity = 286
-	armor_penetration = -50
+	armor_penetration = -15
 
 /obj/item/projectile/bullet/pistol/strong	//.357 and .44 are grouped because ftw //Time to fix that ffs, this is just .44 now.
 	diam = 10.9
@@ -79,17 +79,17 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 31
 	velocity = 716
 	damage = 15
-	armor_penetration = 100	//Unfortunately my penetration code doesn't recognize the glory of 5.7x28 FN, so we must show it the wae.
+	armor_penetration = 15	//Unfortunately my penetration code doesn't recognize the glory of 5.7x28 FN, so we must show it the wae.
 
 /obj/item/projectile/bullet/a57/ap
 	grains = 23
 	energy_add = 312.75
 	velocity = 850
-	armor_penetration = 150		//Also, no, this isn't as high as it looks because of the formulas I was using. This would have around a 35% chance of piercing combat armor(50 bullet armor)
+	armor_penetration = 25		//Also, no, this isn't as high as it looks because of the formulas I was using. This would have around a 35% chance of piercing combat armor(50 bullet armor)
 
 /obj/item/projectile/bullet/a57/hp
 	hollow_point = TRUE
-	armor_penetration = -50
+	armor_penetration = -15
 
 /obj/item/projectile/bullet/a357
 	fire_sound = 'sound/weapons/gunshot4.ogg'
@@ -101,11 +101,11 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/a357/ap
 	energy_add = 298.07
 	velocity = 480
-	armor_penetration = 25
+	armor_penetration = 15
 
 /obj/item/projectile/bullet/a357/hp
 	hollow_point = TRUE
-	armor_penetration = -50
+	armor_penetration = -15
 
 /obj/item/projectile/bullet/a38
 	fire_sound = 'sound/weapons/gunshot2.ogg'
@@ -117,14 +117,14 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 125
 	energy_add = 138
 	velocity = 300
-	armor_penetration = 25
+	armor_penetration = 15
 
 /obj/item/projectile/bullet/a38/hp
 	grains = 158
 	energy_add = 175.07
 	velocity = 297
 	hollow_point = TRUE
-	armor_penetration = -50
+	armor_penetration = -15
 
 /obj/item/projectile/bullet/a762x25
 	fire_sound = 'sound/weapons/gunshot2.ogg'
@@ -148,13 +148,13 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 200
 	energy_add = 435
 	velocity = 440
-	armor_penetration = 50
+	armor_penetration = 15
 
 /obj/item/projectile/bullet/a10mm/hp
 	grains = 135
 	energy_add = 700.7
 	velocity = 490
-	armor_penetration = -50
+	armor_penetration = -15
 	hollow_point = TRUE
 
 /obj/item/projectile/bullet/a380
@@ -167,13 +167,13 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 45
 	energy_add = 648.74
 	velocity = 559
-	armor_penetration = 25
+	armor_penetration = 15
 
 /obj/item/projectile/bullet/a380/hp
 	grains = 95
 	energy_add = 170
 	velocity = 343
-	armor_penetration = -50
+	armor_penetration = -15
 	hollow_point = TRUE
 
 /obj/item/projectile/bullet/a22lr
@@ -191,6 +191,7 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 38
 	velocity = 380
 	hollow_point = TRUE
+	armor_penetration = -15
 
 //Shotgun projectiles
 
@@ -198,7 +199,7 @@ only use the hollow_point and armor_penetration values.*/
 	fire_sound = 'sound/weapons/ballistics/a12g.ogg'
 	grains = 657
 	velocity = 489
-	armor_penetration = -50		//Slugs needed a nerf. Will probably fix the stats for shotguns in general in future updates.
+	armor_penetration = -15		//Slugs needed a nerf. Will probably fix the stats for shotguns in general in future updates.
 
 /obj/item/projectile/bullet/shotgun/buckshot	//#00 Buckshot
 	damage = 5
@@ -206,7 +207,7 @@ only use the hollow_point and armor_penetration values.*/
 	diam = 8.38
 	grains = 53.8
 	velocity = 489
-	armor_penetration = -30
+	armor_penetration = -15
 
 /obj/item/projectile/bullet/shotgun/buckshot/shell
 	use_submunitions = TRUE
@@ -226,13 +227,13 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/rifle/a762/ap
 	grains = 150.5
 	velocity = 854.6
-	armor_penetration = 50
+	armor_penetration = 25
 
 /obj/item/projectile/bullet/rifle/a762/hp
 	grains = 175
 	energy_add = -539.978
 	velocity = 792
-	armor_penetration = -50
+	armor_penetration = -15
 	hollow_point = TRUE
 
 /obj/item/projectile/bullet/rifle/a762x39 //7.62x39 Soviet
@@ -245,11 +246,11 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 123
 	velocity = 740
 	energy_add = 117.16
-	armor_penetration = 50
+	armor_penetration = 25
 
 /obj/item/projectile/bullet/rifle/a762x39/hp
 	hollow_point = TRUE
-	armor_penetration = -50
+	armor_penetration = -25
 
 /obj/item/projectile/bullet/rifle/a545
 	fire_sound = 'sound/weapons/ballistics/a545.ogg'
@@ -260,11 +261,11 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/rifle/a545/ap
 	grains = 57
 	velocity = 890
-	armor_penetration = 50
+	armor_penetration = 15
 
 /obj/item/projectile/bullet/rifle/a545/hp
 	hollow_point = TRUE
-	armor_penetration = -50
+	armor_penetration = -15
 
 /obj/item/projectile/bullet/rifle/a556 //5.56x45mm NATO
 	diam = 5.7
@@ -275,11 +276,11 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 52
 	velocity = 1030
 	energy_add = 462.92
-	armor_penetration = 50
+	armor_penetration = 25
 
 /obj/item/projectile/bullet/rifle/a556/hp
 	hollow_point = TRUE
-	armor_penetration = -50
+	armor_penetration = -15
 
 /obj/item/projectile/bullet/rifle/a145 // 14.5×114mm
 	fire_sound = 'sound/weapons/ballistics/a145.ogg'
@@ -332,7 +333,7 @@ only use the hollow_point and armor_penetration values.*/
 	hitscan = 1
 
 /obj/item/projectile/bullet/rifle/a762x54/ap
-	armor_penetration = 50
+	armor_penetration = 35
 
 /obj/item/projectile/bullet/rifle/a338
 	fire_sound = 'sound/weapons/ballistics/a762x54.ogg'
