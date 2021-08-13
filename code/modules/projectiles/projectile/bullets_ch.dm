@@ -49,7 +49,7 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 350
 	energy_add = -96.18
 	hollow_point = TRUE
-	armor_penetration = -15
+	armor_penetration = -10
 
 /obj/item/projectile/bullet/pistol/medium 	//.45
 	fire_sound = 'sound/weapons/ballistics/a45.ogg'
@@ -66,7 +66,7 @@ only use the hollow_point and armor_penetration values.*/
 /obj/item/projectile/bullet/pistol/medium/hp
 	grains = 230
 	velocity = 286
-	armor_penetration = -15
+	armor_penetration = -10
 
 /obj/item/projectile/bullet/pistol/strong	//.357 and .44 are grouped because ftw //Time to fix that ffs, this is just .44 now.
 	diam = 10.9
@@ -89,7 +89,7 @@ only use the hollow_point and armor_penetration values.*/
 
 /obj/item/projectile/bullet/a57/hp
 	hollow_point = TRUE
-	armor_penetration = -15
+	armor_penetration = -10
 
 /obj/item/projectile/bullet/a357
 	fire_sound = 'sound/weapons/gunshot4.ogg'
@@ -105,7 +105,7 @@ only use the hollow_point and armor_penetration values.*/
 
 /obj/item/projectile/bullet/a357/hp
 	hollow_point = TRUE
-	armor_penetration = -15
+	armor_penetration = -10
 
 /obj/item/projectile/bullet/a38
 	fire_sound = 'sound/weapons/gunshot2.ogg'
@@ -124,7 +124,7 @@ only use the hollow_point and armor_penetration values.*/
 	energy_add = 175.07
 	velocity = 297
 	hollow_point = TRUE
-	armor_penetration = -15
+	armor_penetration = -10
 
 /obj/item/projectile/bullet/a762x25
 	fire_sound = 'sound/weapons/gunshot2.ogg'
@@ -154,7 +154,7 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 135
 	energy_add = 700.7
 	velocity = 490
-	armor_penetration = -15
+	armor_penetration = -10
 	hollow_point = TRUE
 
 /obj/item/projectile/bullet/a380
@@ -173,7 +173,7 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 95
 	energy_add = 170
 	velocity = 343
-	armor_penetration = -15
+	armor_penetration = -10
 	hollow_point = TRUE
 
 /obj/item/projectile/bullet/a22lr
@@ -191,7 +191,7 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 38
 	velocity = 380
 	hollow_point = TRUE
-	armor_penetration = -15
+	armor_penetration = -5
 
 //Shotgun projectiles
 
@@ -202,12 +202,12 @@ only use the hollow_point and armor_penetration values.*/
 	armor_penetration = -15		//Slugs needed a nerf. Will probably fix the stats for shotguns in general in future updates.
 
 /obj/item/projectile/bullet/shotgun/buckshot	//#00 Buckshot
-	damage = 5
+	damage = 13
 	name = "buckshot pellet"
 	diam = 8.38
 	grains = 53.8
 	velocity = 489
-	armor_penetration = -15
+	armor_penetration = 0
 
 /obj/item/projectile/bullet/shotgun/buckshot/shell
 	use_submunitions = TRUE
@@ -233,7 +233,7 @@ only use the hollow_point and armor_penetration values.*/
 	grains = 175
 	energy_add = -539.978
 	velocity = 792
-	armor_penetration = -15
+	armor_penetration = -10
 	hollow_point = TRUE
 
 /obj/item/projectile/bullet/rifle/a762x39 //7.62x39 Soviet
@@ -250,7 +250,7 @@ only use the hollow_point and armor_penetration values.*/
 
 /obj/item/projectile/bullet/rifle/a762x39/hp
 	hollow_point = TRUE
-	armor_penetration = -25
+	armor_penetration = -10
 
 /obj/item/projectile/bullet/rifle/a545
 	fire_sound = 'sound/weapons/ballistics/a545.ogg'
@@ -265,7 +265,7 @@ only use the hollow_point and armor_penetration values.*/
 
 /obj/item/projectile/bullet/rifle/a545/hp
 	hollow_point = TRUE
-	armor_penetration = -15
+	armor_penetration = -10
 
 /obj/item/projectile/bullet/rifle/a556 //5.56x45mm NATO
 	diam = 5.7
@@ -280,7 +280,7 @@ only use the hollow_point and armor_penetration values.*/
 
 /obj/item/projectile/bullet/rifle/a556/hp
 	hollow_point = TRUE
-	armor_penetration = -15
+	armor_penetration = -10
 
 /obj/item/projectile/bullet/rifle/a145 // 14.5×114mm
 	fire_sound = 'sound/weapons/ballistics/a145.ogg'
