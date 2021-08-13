@@ -1,9 +1,11 @@
 /mob
-	density = 1
+	density = TRUE
 	layer = MOB_LAYER
 	plane = MOB_PLANE
 	animate_movement = 2
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC
+	///when this be added to vis_contents of something it inherit something.plane, important for visualisation of mob in openspace.
+	vis_flags = VIS_INHERIT_PLANE
 	var/datum/mind/mind
 
 	var/stat = 0 //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
@@ -88,7 +90,7 @@
 	var/canmove = 1
 	//Allows mobs to move through dense areas without restriction. For instance, in space or out of holder objects.
 	var/incorporeal_move = 0 //0 is off, 1 is normal, 2 is for ninjas.
-	var/unacidable = 0
+	var/unacidable = FALSE
 	var/list/pinned = list()            // List of things pinning this creature to walls (see living_defense.dm)
 	var/list/embedded = list()          // Embedded items, since simple mobs don't have organs.
 	var/list/languages = list()         // For speaking/listening.
@@ -229,3 +231,5 @@
 	var/in_enclosed_vehicle = 0	//For mechs and fighters ambiance. Can be used in other cases.
 
 	var/list/progressbars = null //VOREStation Edit
+
+	var/datum/focus //What receives our keyboard inputs. src by default // VOREStation Add - Key Handling

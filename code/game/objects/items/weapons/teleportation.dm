@@ -21,7 +21,7 @@
 	throw_speed = 4
 	throw_range = 20
 	origin_tech = list(TECH_MAGNET = 1)
-	matter = list(DEFAULT_WALL_MATERIAL = 400)
+	matter = list(MAT_STEEL = 400)
 
 /obj/item/weapon/locator/attack_self(mob/user as mob)
 	user.set_machine(src)
@@ -127,7 +127,7 @@ Frequency:
 	throw_speed = 3
 	throw_range = 5
 	origin_tech = list(TECH_MAGNET = 1, TECH_BLUESPACE = 3)
-	matter = list(DEFAULT_WALL_MATERIAL = 10000)
+	matter = list(MAT_STEEL = 10000)
 	preserve_item = 1
 
 /obj/item/weapon/hand_tele/attack_self(mob/user as mob)
@@ -160,7 +160,9 @@ Frequency:
 		turfs += T
 	if(turfs.len)
 		L["None (Dangerous)"] = pick(turfs)
-	var/t1 = input(user, "Please select a teleporter to lock in on.", "Hand Teleporter") in L
+	var/t1 = tgui_input_list(user, "Please select a teleporter to lock in on.", "Hand Teleporter", L)
+	if(!t1)
+		return
 	if ((user.get_active_hand() != src || user.stat || user.restrained()))
 		return
 	var/count = 0	//num of portals from this teleport in world

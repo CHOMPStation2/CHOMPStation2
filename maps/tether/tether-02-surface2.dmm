@@ -752,7 +752,7 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /obj/structure/sign/poster{
-	pixel_y = 32
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/recoveryward)
@@ -1450,14 +1450,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/medical/resleeving)
 "acb" = (
-/obj/structure/table/glass,
-/obj/item/weapon/book/manual/resleeving,
 /obj/structure/sign/nosmoking_1{
 	pixel_x = -32
-	},
-/obj/item/device/sleevemate,
-/obj/machinery/alarm{
-	pixel_y = 28
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -1468,6 +1462,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 9
 	},
+/obj/machinery/vending/loadout/uniform,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "acc" = (
@@ -1480,6 +1475,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/machinery/clonepod/transhuman,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "acd" = (
@@ -1495,6 +1491,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/machinery/transhuman/resleever,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "ace" = (
@@ -1507,11 +1504,12 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
-/obj/machinery/transhuman/resleever,
+/obj/structure/table/glass,
+/obj/item/weapon/book/manual/resleeving,
+/obj/item/device/sleevemate,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "acf" = (
-/obj/machinery/clonepod/transhuman,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -1521,6 +1519,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 5
 	},
+/obj/machinery/computer/transhuman/resleeving,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "acg" = (
@@ -1633,9 +1632,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/medical/resleeving)
 "acr" = (
-/obj/machinery/computer/transhuman/resleeving{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -1648,11 +1644,15 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "acs" = (
-/obj/structure/bed/chair/office/light{
-	dir = 8
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/resleeving)
+/area/tether/surfacebase/medical/uppersouthstairwell)
 "act" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1670,6 +1670,9 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 5
+	},
+/obj/structure/bed/chair/office/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
@@ -1791,6 +1794,10 @@
 	dir = 10
 	},
 /obj/structure/flora/pottedplant/decorative,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "acI" = (
@@ -1974,6 +1981,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/obj/structure/sign/poster{
+	pixel_y = 32
+	},
+=======
+/obj/structure/sign/poster{
+	dir = 1
+	},
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/evidence)
 "acW" = (
@@ -2633,7 +2650,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 8
 	},
-/obj/machinery/vending/loadout/uniform,
+/obj/machinery/organ_printer/flesh,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "adZ" = (
@@ -2649,15 +2666,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 9
 	},
-/obj/machinery/organ_printer/flesh,
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/resleeving)
-"aea" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass{
-	pixel_x = 4;
-	pixel_y = 6
-	},
 /obj/item/weapon/reagent_containers/glass/bottle/biomass{
 	pixel_x = -4;
 	pixel_y = 8
@@ -2670,10 +2679,17 @@
 	pixel_x = 6;
 	pixel_y = 8
 	},
+/obj/item/weapon/reagent_containers/glass/bottle/biomass{
+	pixel_x = 4;
+	pixel_y = 6
+	},
 /obj/item/device/flashlight/pen{
 	pixel_x = -3;
 	pixel_y = -3
 	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/resleeving)
+"aea" = (
 /obj/item/device/radio/intercom{
 	pixel_y = -28
 	},
@@ -2684,6 +2700,9 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/effect/floor_decal/borderfloorwhite/corner2,
 /obj/effect/floor_decal/corner/paleblue/bordercorner2,
+/obj/structure/bed/chair{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "aeb" = (
@@ -2797,7 +2816,6 @@
 /turf/simulated/wall,
 /area/tether/surfacebase/medical/patient_a)
 "aen" = (
-/obj/machinery/vending/loadout/uniform,
 /obj/machinery/camera/network/medbay{
 	dir = 10
 	},
@@ -2812,6 +2830,9 @@
 	pixel_y = -28
 	},
 /obj/structure/cable/green,
+/obj/structure/bed/chair{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/resleeving)
 "aeo" = (
@@ -3843,17 +3864,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting/storage)
 "afP" = (
-/obj/structure/table/rack/shelf/steel,
-/obj/item/clothing/mask/gas{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/vending/security,
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting/storage)
 "afQ" = (
@@ -4770,10 +4782,19 @@
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting/storage)
 "ahw" = (
-/obj/machinery/vending/security,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/mask/gas{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas{
+	pixel_x = -3;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/outfitting/storage)
@@ -5669,9 +5690,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/structure/sign/poster{
-	pixel_y = -32
-	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/centralhall)
 "aiO" = (
@@ -6249,39 +6268,47 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tether/surfacebase/medical/morgue)
 "ajK" = (
-/obj/structure/window/reinforced{
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 1
 	},
-/obj/machinery/vending/snack,
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 6
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/uppersouthstairwell)
+/obj/machinery/vending/cigarette,
+/turf/simulated/floor/tiled/monotile,
+/area/rnd/research)
 "ajL" = (
-/obj/machinery/vending/cola/soft,
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 6
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 9
-	},
-/obj/structure/window/reinforced{
+/obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/uppersouthstairwell)
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/tiled/monotile,
+/area/rnd/research)
 "ajM" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/tether/surfacebase/medical/uppersouthstairwell)
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/obj/machinery/vending/weeb,
+/turf/simulated/floor/tiled/monotile,
+/area/rnd/research)
 "ajN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -6682,7 +6709,7 @@
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/machinery/vending/cola,
+/obj/machinery/vending/cola/soft,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 "akx" = (
@@ -6701,18 +6728,32 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
 "akA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/vending/coffee,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/vending/sol,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akC" = (
@@ -6761,9 +6802,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 9
 	},
-/obj/structure/sign/poster{
-	pixel_y = -32
-	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/centralhall)
 "akF" = (
@@ -6820,11 +6859,11 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akI" = (
-/obj/effect/floor_decal/steeldecal/steel_decals4{
+/obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 1
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
@@ -6941,19 +6980,47 @@
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akR" = (
+<<<<<<< HEAD
 /turf/simulated/wall/r_wall,
 /area/tether/surfacebase/medical/uppersouthstairwell)
+||||||| parent of bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/structure/sign/poster{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/middlehall)
+=======
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/structure/sign/poster{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/middlehall)
+>>>>>>> bb3cfe95f0... Merge pull request #10765 from Very-Soft/messeswithstuff
 "akS" = (
 /obj/structure/window/reinforced,
-/obj/machinery/vending/fitness{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/table/standard,
+/obj/random/medical,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akT" = (
@@ -6964,9 +7031,11 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/machinery/vending/coffee{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
 	},
+/obj/structure/table/standard,
+/obj/random/tetheraid,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "akU" = (
@@ -7634,9 +7703,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/structure/sign/poster{
-	pixel_y = -32
-	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "alW" = (
@@ -7734,7 +7801,6 @@
 "ama" = (
 /obj/structure/table/glass,
 /obj/random/mre,
-/obj/random/coin,
 /obj/random/maintenance/medical,
 /obj/random/medical,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -10316,10 +10382,6 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
-"aqt" = (
-/obj/structure/sign/poster,
-/turf/simulated/wall,
-/area/tether/surfacebase/public_garden_two)
 "aqu" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -10329,6 +10391,9 @@
 	},
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 9
+	},
+/obj/structure/sign/poster{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
@@ -11327,14 +11392,10 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/obj/machinery/vending/cigarette{
-	name = "Cigarette machine";
-	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
-	},
 /obj/effect/floor_decal/techfloor/hole{
 	dir = 1
 	},
+/obj/machinery/vending/sovietvend,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/bar)
 "ash" = (
@@ -12222,12 +12283,14 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
 "atI" = (
-/obj/machinery/smartfridge,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 6
+	},
+/obj/machinery/smartfridge{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
@@ -12579,6 +12642,9 @@
 	},
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 6
+	},
+/obj/structure/sign/poster{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/public_garden_two)
@@ -14373,11 +14439,11 @@
 /area/tether/surfacebase/surface_two_hall)
 "axu" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/structure/sign/poster{
-	pixel_x = -32
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/structure/sign/poster{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
@@ -15234,8 +15300,8 @@
 /turf/simulated/wall,
 /area/tether/surfacebase/fish_farm)
 "azt" = (
-/obj/structure/closet/hydrant,
-/turf/simulated/wall,
+/obj/machinery/vending/fishing,
+/turf/simulated/floor/tiled,
 /area/tether/surfacebase/fish_farm)
 "azu" = (
 /obj/item/clothing/gloves/boxing/blue,
@@ -15541,7 +15607,9 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/fish_farm)
 "aAd" = (
-/obj/machinery/vending/fishing,
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/fish_farm)
 "aAe" = (
@@ -16344,9 +16412,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central1{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/monofloor{
-	dir = 1
-	},
+/turf/simulated/floor/tiled/monotile,
 /area/tether/surfacebase/surface_two_hall)
 "aBS" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
@@ -16774,7 +16840,7 @@
 	name = "Atrium Second Floor"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central1,
-/turf/simulated/floor/tiled/monofloor,
+/turf/simulated/floor/tiled/monotile,
 /area/tether/surfacebase/surface_two_hall)
 "aCF" = (
 /obj/structure/cable{
@@ -22917,8 +22983,19 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lockers)
 "aOs" = (
-/turf/simulated/mineral,
-/area/tether/surfacebase/emergency_storage/atmos)
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Scientist"
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	desc = "Looks like it's set to Free-Anur-Entertanment, I wonder what else is on?";
+	icon_state = "frame";
+	pixel_x = 32
+	},
+/turf/simulated/floor/wood,
+/area/rnd/breakroom)
 "aOt" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
@@ -23557,32 +23634,8 @@
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "aPP" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/machinery/light{
 	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
-"aPQ" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
-"aPR" = (
-/obj/machinery/computer/security/telescreen/entertainment{
-	desc = "Looks like it's set to Free-Anur-Entertanment, I wonder what else is on?";
-	icon_state = "frame";
-	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
@@ -23854,38 +23907,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
-"aQC" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
-"aQD" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
 "aQE" = (
 /obj/structure/bed/chair{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
 	},
 /obj/effect/landmark/start{
 	name = "Roboticist"
@@ -24742,6 +24766,46 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor,
 /area/maintenance/lower/south)
+<<<<<<< HEAD
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+"aSr" = (
+/obj/machinery/door/airlock{
+	id_tag = "bathroomlock7";
+	name = "Restroom"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/uppersouthstairwell)
+"aSs" = (
+/obj/structure/toilet,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	id = "bathroomlock9";
+	name = "Surface Security Toilet Lock";
+	pixel_x = -20;
+	pixel_y = -10;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/security/brig/bathroom)
+=======
+"aSs" = (
+/obj/structure/toilet,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	id = "bathroomlock9";
+	name = "Surface Security Toilet Lock";
+	pixel_x = -20;
+	pixel_y = -10;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/security/brig/bathroom)
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 "aSt" = (
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -25216,6 +25280,15 @@
 /obj/machinery/camera/network/research{
 	dir = 1
 	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -28
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "aTx" = (
@@ -25226,6 +25299,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "aTy" = (
@@ -25606,53 +25684,11 @@
 /obj/structure/bookcase/manuals/research_and_development,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
-"aUp" = (
-/obj/effect/floor_decal/steeldecal/steel_decals9,
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 8
-	},
-/obj/machinery/vending/cigarette{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/rnd/breakroom)
 "aUq" = (
-/obj/effect/floor_decal/steeldecal/steel_decals9,
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
+/obj/machinery/camera/network/research{
 	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 8
-	},
-/obj/machinery/vending/coffee{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/rnd/breakroom)
-"aUr" = (
-/obj/effect/floor_decal/steeldecal/steel_decals9,
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals9{
-	dir = 8
-	},
-/obj/machinery/vending/snack{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "aUs" = (
 /obj/effect/floor_decal/borderfloor{
@@ -25849,6 +25885,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
 "aUL" = (
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
@@ -25857,49 +25894,65 @@
 /obj/item/weapon/reagent_containers/glass/bucket,
 /obj/effect/floor_decal/borderfloor/shifted{
 	dir = 1
+||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
 	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
+/obj/effect/floor_decal/borderfloor/shifted{
 	dir = 1
+=======
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+>>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 9
+	},
+<<<<<<< HEAD
 /obj/machinery/camera/network/civilian,
+||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
+/obj/machinery/camera/network/civilian,
+/obj/structure/closet/jcloset,
+=======
+/obj/machinery/vending/wardrobe/janidrobe,
+>>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUM" = (
 /obj/machinery/newscaster{
 	pixel_y = 32
 	},
-/obj/effect/floor_decal/borderfloor/shifted{
+/obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
+/obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
 /obj/item/weapon/reagent_containers/glass/bucket,
+||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/machinery/vending/wardrobe/janidrobe,
+=======
+>>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUN" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/effect/floor_decal/borderfloor/shifted{
+/obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
+/obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
+/obj/structure/sink/kitchen{
+	pixel_y = 22
 	},
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
@@ -25907,49 +25960,37 @@
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUO" = (
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
-	},
 /obj/structure/janitorialcart,
-/obj/structure/sink/kitchen{
-	pixel_y = 28
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUP" = (
 /obj/structure/janitorialcart,
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aUQ" = (
 /obj/structure/janitorialcart,
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
 	},
-/obj/effect/floor_decal/corner/purple/border/shifted{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple{
+/obj/effect/floor_decal/corner/purple/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
@@ -26127,34 +26168,26 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/east_stairs_two)
 "aVu" = (
-/obj/machinery/button/remote/blast_door{
-	id = "janitor_blast";
-	name = "Desk Shutters";
-	pixel_x = -22
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
 	},
+/obj/machinery/power/apc{
+	cell_type = /obj/item/weapon/cell/super;
+	dir = 8;
+	name = "west bump";
+	nightshift_setting = 2;
+	pixel_x = -30
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aVv" = (
-/turf/simulated/floor/tiled,
-/area/janitor)
-"aVw" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled,
-/area/janitor)
-"aVx" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aVy" = (
@@ -26843,6 +26876,7 @@
 "aWr" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
+/obj/structure/closet/jequipcloset,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aWs" = (
@@ -27275,7 +27309,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/light_switch{
 	dir = 4;
-	pixel_x = -28
+	pixel_x = -31
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -27288,6 +27322,11 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 10
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "janitor_blast";
+	name = "Desk Shutters";
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
 /area/janitor)
@@ -27561,9 +27600,6 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 25
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -27575,12 +27611,23 @@
 /obj/item/weapon/grenade/chem_grenade/cleaner,
 /obj/item/weapon/grenade/chem_grenade/cleaner,
 /obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/storage/box/mousetraps,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /obj/item/weapon/reagent_containers/spray/cleaner,
+<<<<<<< HEAD
+||||||| parent of 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+=======
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+/obj/item/weapon/soap/nanotrasen,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+>>>>>>> 5943bf4f2e... Merge pull request #11305 from GhostActual/Janitorial-oversite
 /turf/simulated/floor/tiled,
 /area/janitor)
 "aXT" = (
@@ -33004,6 +33051,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
+/obj/machinery/holoplant,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "cRq" = (
@@ -33248,8 +33296,28 @@
 /turf/simulated/floor/plating,
 /area/maintenance/readingrooms)
 "eTp" = (
+<<<<<<< HEAD
 /turf/simulated/wall/durasteel,
 /area/ai_upload_foyer)
+||||||| parent of 3b034d830d... Merge pull request #11215 from Mewchild/MC-AIQoL
+/obj/effect/floor_decal/chapel,
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+=======
+/obj/effect/floor_decal/chapel,
+/obj/structure/sign/painting/chapel_secure{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
+"eZx" = (
+/obj/machinery/holoplant,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
+>>>>>>> 3b034d830d... Merge pull request #11215 from Mewchild/MC-AIQoL
 "eZG" = (
 /obj/machinery/camera/network/command,
 /obj/effect/floor_decal/techfloor{
@@ -33565,6 +33633,16 @@
 "jtj" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/readingrooms)
+"jvy" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/lower/atmos)
 "jxi" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -33637,6 +33715,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
+"jUQ" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/holoplant,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
 "jWK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -33824,6 +33909,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/effect/floor_decal/emblem/nt1,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "kPR" = (
@@ -33838,6 +33924,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/effect/floor_decal/emblem/nt2,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "kRb" = (
@@ -34097,6 +34184,13 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
+"nhf" = (
+/obj/structure/railing,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/lower/atmos)
 "nAh" = (
 /obj/structure/table/standard,
 /obj/item/weapon/aiModule/asimov,
@@ -34479,6 +34573,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
 "qSJ" = (
+/obj/machinery/media/jukebox/hacked,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai)
 "rii" = (
@@ -34943,6 +35038,16 @@
 "tPB" = (
 /turf/simulated/floor/grass,
 /area/chapel/main)
+"tVj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/floor_decal/emblem/nt3,
+/turf/simulated/floor/tiled/techfloor,
+/area/ai_upload)
 "tWV" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -35402,14 +35507,14 @@
 >>>>>>> 45e710fa51... Merge pull request #10235 from Enzo-Leon/asteroid
 "xbt" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/structure/sign/poster{
-	pixel_x = -32
-	},
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /obj/effect/landmark/start{
 	name = "Medical Doctor"
+	},
+/obj/structure/sign/poster{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/breakroom)
@@ -40100,7 +40205,7 @@ adt
 adt
 adt
 akX
-aqt
+akX
 akX
 akX
 adt
@@ -41240,7 +41345,7 @@ aqz
 aog
 ars
 atI
-aqt
+akX
 akX
 adt
 adt
@@ -43941,9 +44046,9 @@ ann
 aux
 ahn
 ajE
-awD
-awD
-awD
+aAA
+aAA
+aAA
 awD
 awY
 awY
@@ -43974,7 +44079,7 @@ aNz
 aOp
 aPb
 aPM
-aQC
+aRn
 aRn
 aRO
 aSC
@@ -44084,9 +44189,9 @@ auy
 auA
 ajE
 aAA
-awD
 aAA
-awD
+aAA
+aAA
 awD
 awY
 aAa
@@ -44116,7 +44221,7 @@ aNA
 aOq
 aMo
 aPN
-aQD
+aRm
 aRm
 aPN
 aSD
@@ -44229,7 +44334,7 @@ aAA
 axe
 aAA
 aAA
-awD
+ajE
 azs
 aAb
 aAx
@@ -44258,7 +44363,7 @@ aNB
 aOr
 aMo
 aPO
-aQD
+aRm
 aRm
 aPN
 aSE
@@ -44371,7 +44476,7 @@ aAA
 aAA
 aAA
 aod
-aAA
+ajE
 azt
 aAc
 aAy
@@ -44513,7 +44618,7 @@ anV
 aAA
 aAA
 aAA
-awD
+ajE
 azs
 aAd
 aAz
@@ -44539,15 +44644,15 @@ aJO
 aJO
 aJO
 aNC
-aOs
-aPc
-aPQ
+aND
+ajK
+aRm
 aQF
 aQF
 aQF
 aQF
 aRm
-aUp
+aRm
 aPJ
 aYd
 aWH
@@ -44681,9 +44786,9 @@ aKo
 aKo
 aJO
 aNC
-aOs
-aPc
-aPR
+aND
+ajL
+aRm
 aQF
 aQF
 aQF
@@ -44823,15 +44928,15 @@ aKo
 aKo
 aJO
 aNC
-aOs
-aPc
+aND
+ajM
 aPS
 aQG
 aRp
-aQG
+aOs
 aQG
 aTC
-aUr
+aRm
 aQH
 aVQ
 aWJ
@@ -45106,7 +45211,7 @@ aKo
 aKo
 aKo
 aJO
-aND
+aNC
 aOt
 asQ
 aPT
@@ -45248,7 +45353,7 @@ aKo
 aKo
 aMr
 aJO
-aND
+aNC
 aso
 asR
 atc
@@ -46269,7 +46374,7 @@ aXB
 bbA
 bbJ
 aVP
-bcr
+nhf
 baW
 baW
 baW
@@ -47042,7 +47147,7 @@ aab
 aab
 abN
 acc
-acs
+aiV
 aiV
 adr
 adZ
@@ -47689,8 +47794,8 @@ bbA
 bbJ
 bbJ
 aVP
-baz
-baz
+jvy
+aIh
 baz
 bdq
 aLX
@@ -47830,10 +47935,10 @@ aXB
 bbB
 bbJ
 bbJ
-aVP
-adt
-adt
-aLY
+bbI
+baU
+baW
+baz
 bdr
 aLX
 aLY
@@ -47973,9 +48078,9 @@ aVP
 aVP
 aVP
 aVP
-adt
-adt
-aLY
+baz
+baz
+baz
 bdr
 aLX
 aLY
@@ -48835,7 +48940,7 @@ adt
 adt
 fBS
 hIk
-kTB
+tVj
 rii
 bDr
 qPo
@@ -49518,7 +49623,7 @@ aLY
 aTe
 aUc
 aUM
-aVv
+aVy
 aWq
 aVv
 aXQ
@@ -49660,7 +49765,7 @@ aLY
 aTf
 aUc
 aUN
-aVw
+aVy
 aVv
 aXj
 aXR
@@ -49692,11 +49797,11 @@ adt
 xGf
 rlN
 srN
-rlN
+eZx
 kiL
 pAF
 fyj
-rXR
+jUQ
 kEC
 rlN
 xGf
@@ -49802,7 +49907,7 @@ aLY
 aTg
 aUc
 aUO
-aVx
+aVy
 aWr
 aXk
 aXS
@@ -49950,7 +50055,7 @@ aLY
 aTh
 aUc
 aUP
-aVx
+aVy
 aWs
 aUc
 aUc
@@ -50044,11 +50149,25 @@ aar
 aar
 aiK
 aiK
+<<<<<<< HEAD
 akH
 akR
 akR
 akR
 akR
+||||||| parent of 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
+aSr
+aiK
+aiK
+aiK
+aiK
+=======
+aiK
+aiK
+aiK
+aiK
+aiK
+>>>>>>> 660b7d0a0e... Merge pull request #10831 from Very-Soft/MESSESWITHTHEMAPMOAR
 aiK
 auX
 asV
@@ -50184,7 +50303,7 @@ ajR
 aar
 abF
 aer
-ajK
+aiK
 akA
 akI
 akS
@@ -50326,9 +50445,9 @@ ajS
 aar
 abF
 aer
-ajL
+aiK
 akB
-akJ
+acs
 akT
 akW
 akJ
@@ -50468,7 +50587,7 @@ akE
 aar
 abH
 agP
-ajM
+aiK
 akC
 akK
 akJ
@@ -51880,7 +51999,7 @@ abn
 adt
 adt
 abn
-aab
+abn
 abn
 abn
 bgU
@@ -52017,12 +52136,12 @@ adt
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
+abn
+abn
+abn
+abn
+abn
+abn
 abn
 abn
 bgU
@@ -52160,12 +52279,12 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
+aeG
+aeG
+aeG
+abn
+abn
+abn
 abn
 bgU
 bhI

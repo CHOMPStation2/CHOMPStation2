@@ -35,17 +35,16 @@
 /obj/item/weapon/gun/energy/imperial
 	name = "imperial energy pistol"
 	desc = "An elegant weapon developed by the Imperium Auream. Their weaponsmiths have cleverly found a way to make a gun that is only about the size of an average energy pistol, yet with the fire power of a laser carbine."
+	icon = 'icons/obj/gun_vr.dmi'
+	icon_override = 'icons/obj/gun_vr.dmi'
 	icon_state = "ge_pistol"
 	item_state = "ge_pistol"
-	fire_sound = 'sound/weapons/mandalorian.ogg'
-	icon = 'icons/obj/gun_vr.dmi'
-	item_icons = list(slot_r_hand_str = 'icons/obj/gun_vr.dmi', slot_l_hand_str = 'icons/obj/gun_vr.dmi') // WORK YOU FUCKING CUNT PIECE OF SHIT BASTARD STUPID BITCH ITEM ICON AAAAHHHH
-	item_state_slots = list(slot_r_hand_str = "ge_pistol_r", slot_l_hand_str = "ge_pistol_l")
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
 	force = 10
 	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MAT_STEEL = 2000)
+	fire_sound = 'sound/weapons/mandalorian.ogg'
 	projectile_type = /obj/item/projectile/beam/imperial
 
 // Removed because gun64_vr.dmi guns don't work.
@@ -198,13 +197,13 @@
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "phaserkill"
 	item_state = "phaser"
-	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns_vr.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns_vr.dmi', "slot_belt" = 'icons/mob/belt_vr.dmi')
+	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns_vr.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns_vr.dmi', "slot_belt" = 'icons/inventory/belt/mob_vr.dmi')
 	fire_sound = 'sound/weapons/laser2.ogg'
 	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_POWER = 4)
 	charge_cost = 300
 
 	battery_lock = 1
-	unacidable = 1
+	unacidable = TRUE
 
 	var/recharging = 0
 	var/phase_power = 75

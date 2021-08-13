@@ -5,7 +5,7 @@
 	icon_state = "orebox0"
 	name = "ore box"
 	desc = "A heavy box used for storing ore."
-	density = 1
+	density = TRUE
 	var/last_update = 0
 	var/list/stored_ore = list()
 
@@ -21,7 +21,7 @@
 		var/obj/item/weapon/storage/S = W
 		if(!S.contents.len)
 			return
-		S.hide_from(usr)
+		S.hide_from(user)
 		for(var/obj/item/weapon/ore/O in S.contents)
 			if (O.name != "strange rock")
 				S.remove_from_storage(O, src) //This will move the item to this item's contents

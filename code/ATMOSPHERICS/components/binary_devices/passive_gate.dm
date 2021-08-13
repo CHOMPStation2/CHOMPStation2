@@ -185,11 +185,7 @@
 		unlocked = !unlocked
 
 	if("set_target_pressure" in signal.data)
-		target_pressure = between(
-			0,
-			text2num(signal.data["set_target_pressure"]),
-			max_pressure_setting
-		)
+		target_pressure = between(0, text2num(signal.data["set_target_pressure"]), max_pressure_setting)
 
 	if("set_regulate_mode" in signal.data)
 		regulate_mode = text2num(signal.data["set_regulate_mode"])
@@ -296,7 +292,7 @@
 	to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
 	if (do_after(user, 40 * W.toolspeed))
 		user.visible_message( \
-			"<span class='notice'>\The [user] unfastens \the [src].</span>", \
+			"<b>\The [user]</b> unfastens \the [src].", \
 			"<span class='notice'>You have unfastened \the [src].</span>", \
 			"You hear ratchet.")
 		deconstruct()

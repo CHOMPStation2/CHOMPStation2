@@ -38,19 +38,7 @@
 	emote_hear = list("chirps","caws")
 	emote_see = list("shakes their head", "ruffles their feathers")
 
-/obj/item/weapon/holder/bird
-	name = "bird"
-	desc = "It's a bird!"
-	icon_state = null
-	item_icons = null
-	w_class = ITEMSIZE_SMALL
-
-/obj/item/weapon/holder/bird/sync(var/mob/living/simple_mob/SM)
-	..()
-	icon_state = SM.icon_rest // Looks better if the bird isn't flapping constantly in the UI.
-
 // Subtypes for birbs.
-
 /mob/living/simple_mob/animal/passive/bird/black_bird
 	name = "common blackbird"
 	desc = "A species of bird, both the males and females are known to be territorial on their breeding grounds."

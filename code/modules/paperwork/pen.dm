@@ -20,7 +20,7 @@
 	w_class = ITEMSIZE_TINY
 	throw_speed = 7
 	throw_range = 15
-	matter = list(DEFAULT_WALL_MATERIAL = 10)
+	matter = list(MAT_STEEL = 10)
 	var/colour = "black"	//what colour the ink is!
 	pressure_resistance = 2
 	drop_sound = 'sound/items/drop/accessory.ogg'
@@ -150,8 +150,8 @@
 	embed_chance = active_embed_chance
 	force = active_force
 	throwforce = active_throwforce
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	w_class = active_w_class
 	playsound(src, 'sound/weapons/saberon.ogg', 15, 1)
 	damtype = SEARING
@@ -230,11 +230,11 @@
 		personnel_list.Add(t.fields["name"])
 	personnel_list.Add("Anonymous")
 
-	var/new_signature = input("Enter new signature pattern.", "New Signature") as null|anything in personnel_list
+	var/new_signature = tgui_input_list(usr, "Enter new signature pattern.", "New Signature", personnel_list)
 	if(new_signature)
 		signature = new_signature
 	*/
-	signature = sanitize(input("Enter new signature. Leave blank for 'Anonymous'", "New Signature", signature))
+	signature = sanitize(input(usr, "Enter new signature. Leave blank for 'Anonymous'", "New Signature", signature))
 
 /obj/item/weapon/pen/proc/get_signature(var/mob/user)
 	return (user && user.real_name) ? user.real_name : "Anonymous"
@@ -247,7 +247,7 @@
 	set category = "Object"
 
 	var/list/possible_colours = list ("Yellow", "Green", "Pink", "Blue", "Orange", "Cyan", "Red", "Invisible", "Black")
-	var/selected_type = input("Pick new colour.", "Pen Colour", null, null) as null|anything in possible_colours
+	var/selected_type = tgui_input_list(usr, "Pick new colour.", "Pen Colour", possible_colours)
 
 	if(selected_type)
 		switch(selected_type)

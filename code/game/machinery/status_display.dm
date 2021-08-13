@@ -15,8 +15,8 @@
 	plane = TURF_PLANE
 	layer = ABOVE_WINDOW_LAYER
 	name = "status display"
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = FALSE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	circuit =  /obj/item/weapon/circuitboard/status_display
@@ -262,8 +262,7 @@
 			set_light(0)
 	update()
 
-#undef CHARS_PER_LINE
-#undef FOND_SIZE
+#undef FONT_SIZE
 #undef FONT_COLOR
 #undef FONT_STYLE
 #undef SCROLL_SPEED

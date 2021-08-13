@@ -7,11 +7,12 @@
 	icon = 'icons/obj/power_vr.dmi' // VOREStation Edit
 	icon_state = "light1"
 	layer = ABOVE_WINDOW_LAYER
-	anchored = 1.0
+	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	power_channel = LIGHT
 	blocks_emissive = FALSE
+	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 	var/on = 1
 	var/area/area = null
 	var/otherarea = null

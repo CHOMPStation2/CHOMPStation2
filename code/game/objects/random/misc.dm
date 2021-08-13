@@ -71,8 +71,8 @@
 /obj/random/powercell
 	name = "random powercell"
 	desc = "This is a random powercell."
-	icon = 'icons/obj/power.dmi'
-	icon_state = "cell"
+	icon = 'icons/obj/power_cells.dmi'
+	icon_state = "random"
 
 /obj/random/powercell/item_to_spawn()
 	return pick(prob(40);/obj/item/weapon/cell,
@@ -133,8 +133,8 @@
 /obj/random/tech_supply
 	name = "random tech supply"
 	desc = "This is a random piece of technology supplies."
-	icon = 'icons/obj/power.dmi'
-	icon_state = "cell"
+	icon = 'icons/obj/power_cells.dmi'
+	icon_state = "random"
 	spawn_nothing_percentage = 25
 
 /obj/random/tech_supply/item_to_spawn()
@@ -412,10 +412,28 @@
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatepiece/white,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatepiece/truffle,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolateegg,
-				/obj/item/weapon/reagent_containers/food/snacks/donut,
-				/obj/item/weapon/reagent_containers/food/snacks/donut/normal,
-				/obj/item/weapon/reagent_containers/food/snacks/donut/jelly,
-				/obj/item/weapon/reagent_containers/food/snacks/donut/cherryjelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/plain,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/pink,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/pink/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/purple,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/purple/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/green,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/green/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/beige,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/beige/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/choc,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/choc/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/blue,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/blue/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/yellow,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/yellow/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/olive,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/olive/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/homer,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/homer/jelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/choc_sprinkles,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/choc_sprinkles/jelly,
 				/obj/item/weapon/reagent_containers/food/snacks/tuna,
 				/obj/item/weapon/reagent_containers/food/snacks/pistachios,
 				/obj/item/weapon/reagent_containers/food/snacks/semki,
@@ -849,8 +867,8 @@
 /obj/random/mre/dessert/item_to_spawn()
 	return pick(/obj/item/weapon/reagent_containers/food/snacks/candy,
 				/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,
-				/obj/item/weapon/reagent_containers/food/snacks/donut/normal,
-				/obj/item/weapon/reagent_containers/food/snacks/donut/cherryjelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/plain,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
 				/obj/item/weapon/reagent_containers/food/snacks/cookiesnack)
 
@@ -861,7 +879,7 @@
 /obj/random/mre/dessert/vegan/item_to_spawn()
 	return pick(/obj/item/weapon/reagent_containers/food/snacks/candy,
 				/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-				/obj/item/weapon/reagent_containers/food/snacks/donut/cherryjelly,
+				/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly,
 				/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit)
 
 /obj/random/mre/drink
@@ -939,7 +957,7 @@
 /obj/random/thermalponcho
 	name = "random thermal poncho"
 	desc = "This is a thermal poncho spawn."
-	icon = 'icons/obj/clothing/ties.dmi'
+	icon = 'icons/inventory/accessory/item.dmi'
 	icon_state = "classicponcho"
 
 /obj/random/thermalponcho/item_to_spawn()
@@ -948,3 +966,26 @@
 				prob(3);/obj/item/clothing/accessory/poncho/thermal/green,
 				prob(3);/obj/item/clothing/accessory/poncho/thermal/purple,
 				prob(3);/obj/item/clothing/accessory/poncho/thermal/blue)
+
+/obj/random/pouch
+	name = "Random Storage Pouch"
+	desc = "This is a random storage pouch."
+	icon = 'icons/inventory/pockets/item.dmi'
+	icon_state = "random"
+
+/obj/random/pouch/item_to_spawn()
+	return pick(
+		prob(10);/obj/item/weapon/storage/pouch, // medium
+		prob(3);/obj/item/weapon/storage/pouch/large,
+		prob(8);/obj/item/weapon/storage/pouch/small,
+		prob(5);/obj/item/weapon/storage/pouch/ammo,
+		prob(5);/obj/item/weapon/storage/pouch/eng_tool,
+		prob(5);/obj/item/weapon/storage/pouch/eng_supply,
+		prob(5);/obj/item/weapon/storage/pouch/eng_parts,
+		prob(5);/obj/item/weapon/storage/pouch/medical,
+		prob(5);/obj/item/weapon/storage/pouch/flares/full_flare,
+		prob(5);/obj/item/weapon/storage/pouch/flares/full_glow,
+		prob(5);/obj/item/weapon/storage/pouch/holster,
+		prob(5);/obj/item/weapon/storage/pouch/baton/full,
+		prob(1);/obj/item/weapon/storage/pouch/holding
+	)

@@ -33,6 +33,7 @@
 		/obj/item/clothing/under/rank/nurse,
 		/obj/item/clothing/under/rank/orderly,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
+		/obj/item/clothing/suit/storage/toggle/labcoat/modern,
 		/obj/item/clothing/suit/storage/toggle/fr_jacket,
 		/obj/item/clothing/shoes/white,
 		/obj/item/weapon/cartridge/medical,
@@ -127,6 +128,7 @@
 		/obj/item/clothing/under/rank/chief_medical_officer/skirt,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
+		/obj/item/clothing/suit/storage/toggle/labcoat/modern/cmo,
 		/obj/item/weapon/cartridge/cmo,
 		/obj/item/clothing/gloves/sterile/latex,
 		/obj/item/clothing/shoes/brown,
@@ -223,8 +225,8 @@
 	desc = "It's a secure wall-mounted storage unit for first aid supplies."
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = FALSE
 	wall_mounted = 1
 	store_mobs = 0
 	req_access = list(access_medical_equip)

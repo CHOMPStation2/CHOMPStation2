@@ -56,14 +56,17 @@
 			icon_state = "[initial(icon_state)]_3"
 		item_state = initial(icon_state)
 
+/obj/item/stack/proc/get_examine_string()
+	if(!uses_charge)
+		return "There [src.amount == 1 ? "is" : "are"] [src.amount] [src.singular_name]\s in the stack."
+	else
+		return "There is enough charge for [get_amount()]."
+
 /obj/item/stack/examine(mob/user)
 	. = ..()
 
 	if(Adjacent(user))
-		if(!uses_charge)
-			. += "There are [src.amount] [src.singular_name]\s in the stack."
-		else
-			. += "There is enough charge for [get_amount()]."
+		. += get_examine_string()
 
 /obj/item/stack/attack_self(mob/user)
 	tgui_interact(user)
@@ -76,7 +79,7 @@
 
 /obj/item/stack/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-	
+
 	data["amount"] = get_amount()
 
 	return data
@@ -120,7 +123,7 @@
 			if(get_amount() < 1)
 				qdel(src)
 				return
-			
+
 			var/datum/stack_recipe/R = locate(params["ref"])
 			if(!is_valid_recipe(R, recipes)) //href exploit protection
 				return FALSE
@@ -299,6 +302,7 @@
 	if(uses_charge)
 		return null
 
+	tamount = round(tamount)
 	var/transfer = max(min(tamount, src.amount, initial(max_amount)), 0)
 
 	var/orig_amount = src.amount
@@ -350,7 +354,7 @@
 
 /obj/item/stack/attack_hand(mob/user as mob)
 	if (user.get_inactive_hand() == src)
-		var/N = input("How many stacks of [src] would you like to split off?  There are currently [amount].", "Split stacks", 1) as num|null
+		var/N = input(usr, "How many stacks of [src] would you like to split off?  There are currently [amount].", "Split stacks", 1) as num|null
 		if(N)
 			var/obj/item/stack/F = src.split(N)
 			if (F)
@@ -430,6 +434,6 @@
 /datum/stack_recipe_list
 	var/title = "ERROR"
 	var/list/recipes = null
-	New(title, recipes)
-		src.title = title
-		src.recipes = recipes
+/datum/stack_recipe_list/New(title, recipes)
+	src.title = title
+	src.recipes = recipes

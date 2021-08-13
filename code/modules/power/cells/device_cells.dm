@@ -2,7 +2,7 @@
 /obj/item/weapon/cell/device
 	name = "device power cell"
 	desc = "A small power cell designed to power handheld devices."
-	icon_state = "dcell"
+	icon_state = "m_st"
 	item_state = "egg6"
 	w_class = ITEMSIZE_SMALL
 	force = 0
@@ -10,14 +10,14 @@
 	throw_range = 7
 	maxcharge = 480
 	charge_amount = 5
-	matter = list("metal" = 350, "glass" = 50)
+	matter = list(MAT_STEEL = 350, MAT_GLASS = 50)
 	preserve_item = 1
 
 //Yawn changes
 /obj/item/weapon/cell/device/weapon //Aka adv
 	name = "advanced device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "wcell"
+	icon_state = "m_sup"
 	maxcharge = 2400
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 2)
@@ -35,8 +35,6 @@
 	maxcharge = 3600
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 3)
-	overlay_half_state = "swcell-partial"
-	overlay_full_state = "swcell-full"
 
 /obj/item/weapon/cell/device/super/empty/Initialize()
 	. = ..()
@@ -51,8 +49,6 @@
 	maxcharge = 4800
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
-	overlay_half_state = "hwcell-partial"
-	overlay_full_state = "hwcell-full"
 
 /obj/item/weapon/cell/device/hyper/empty/Initialize()
 	. = ..()
@@ -63,7 +59,7 @@
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
-//	icon_state = "wcell" //doesn't matter, not seen anywhere (all weapons that have it are batterylocked)
+	icon_state = "meb_m_nu"
 	self_recharge = TRUE
 	charge_amount = 120
 	charge_delay = 75

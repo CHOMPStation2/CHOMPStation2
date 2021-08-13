@@ -7,26 +7,17 @@
 	icon_state = "bodybag_folded"
 	w_class = ITEMSIZE_SMALL
 
-	attack_self(mob/user)
-		var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
-		R.add_fingerprint(user)
-		qdel(src)
+/obj/item/bodybag/attack_self(mob/user)
+	var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
+	R.add_fingerprint(user)
+	qdel(src)
 
 
 /obj/item/weapon/storage/box/bodybags
 	name = "body bags"
 	desc = "This box contains body bags."
 	icon_state = "bodybags"
-	New()
-		..()
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-
+	starts_with = list(/obj/item/bodybag = 7)
 
 /obj/structure/closet/body_bag
 	name = "body bag"
@@ -35,8 +26,9 @@
 	closet_appearance = null
 	open_sound = 'sound/items/zip.ogg'
 	close_sound = 'sound/items/zip.ogg'
+	door_anim_time = 0 //Unsupported
 	var/item_path = /obj/item/bodybag
-	density = 0
+	density = FALSE
 	storage_capacity = (MOB_MEDIUM * 2) - 1
 	var/contains_body = 0
 
@@ -88,7 +80,7 @@
 
 /obj/structure/closet/body_bag/close()
 	if(..())
-		density = 0
+		density = FALSE
 		return 1
 	return 0
 
@@ -177,8 +169,7 @@
 
 /obj/structure/closet/body_bag/cryobag/attack_hand(mob/living/user)
 	if(used)
-		var/confirm = alert(user, "Are you sure you want to open \the [src]? \
-		\The [src] will expire upon opening it.", "Confirm Opening", "No", "Yes")
+		var/confirm = tgui_alert(user, "Are you sure you want to open \the [src]? \The [src] will expire upon opening it.", "Confirm Opening", list("No", "Yes"))
 		if(confirm == "Yes")
 			..() // Will call `toggle()` and open the bag.
 	else

@@ -41,8 +41,14 @@
 	var/old_directional_opacity = directional_opacity
 	var/old_outdoors = outdoors
 	var/old_dangerous_objects = dangerous_objects
+	var/old_dynamic_lumcount = dynamic_lumcount
 
-	//to_world("Replacing [src.type] with [N]")
+	var/turf/Ab = GetAbove(src)
+	if(Ab)
+		Ab.multiz_turf_del(src, DOWN)
+	var/turf/Be = GetBelow(src)
+	if(Be)
+		Be.multiz_turf_del(src, UP)
 
 	if(connections) connections.erase_all()
 
@@ -52,6 +58,9 @@
 		//the zone will only really do heavy lifting once.
 		var/turf/simulated/S = src
 		if(S.zone) S.zone.rebuild()
+
+	cut_overlays(TRUE)
+	RemoveElement(/datum/element/turf_z_transparency)
 
 	if(ispath(N, /turf/simulated/floor))
 		var/turf/simulated/W = new N( locate(src.x, src.y, src.z) )
@@ -102,6 +111,8 @@
 	lighting_corner_SE = old_lighting_corner_SE
 	lighting_corner_SW = old_lighting_corner_SW
 	lighting_corner_NW = old_lighting_corner_NW
+
+	dynamic_lumcount = old_dynamic_lumcount
 
 	if(SSlighting.subsystem_initialized)
 		lighting_object = old_lighting_object

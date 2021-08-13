@@ -53,7 +53,7 @@
 	var/obj/item/slime_extract/T = holder.my_atom
 	T.uses--
 	if(T.uses <= 0)
-		T.visible_message("[bicon(T)]<span class='notice'>\The [T] goes inert.</span>")
+		T.visible_message("[bicon(T)]<b>\The [T]</b> goes inert.")
 		T.name = "inert [initial(T.name)]"
 
 
@@ -89,7 +89,7 @@
 	required = /obj/item/slime_extract/grey
 
 /decl/chemical_reaction/instant/slime/grey_monkey/on_reaction(var/datum/reagents/holder)
-	for(var/i = 1 to 4)
+	for(var/i = 1 to 5) //CHOMPedit  Increased number of monkey cubes from 4 to 5
 		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
 	..()
 

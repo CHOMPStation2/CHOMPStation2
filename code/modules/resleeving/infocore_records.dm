@@ -15,6 +15,7 @@
 	var/dead_state = 0
 	var/last_update = 0
 	var/last_notification
+	var/do_notify = TRUE
 
 	//Backend
 	var/ckey = ""
@@ -84,6 +85,7 @@
 	var/sizemult
 	var/weight
 	var/aflags
+	var/breath_type = "oxygen"
 
 /datum/transhuman/body_record/New(var/copyfrom, var/add_to_db = 0, var/ckeylock = 0)
 	..()
@@ -120,6 +122,7 @@
 	sizemult = M.size_multiplier
 	weight = M.weight
 	aflags = M.appearance_flags
+	breath_type = M.species.breath_type
 
 	//Probably should
 	M.dna.check_integrity()
@@ -179,8 +182,7 @@
 		organ_data[org] = I.robotic
 
 	//Genetic modifiers
-	for(var/modifier in M.modifiers)
-		var/datum/modifier/mod = modifier
+	for(var/datum/modifier/mod as anything in M.modifiers)
 		if(mod.flags & MODIFIER_GENETIC)
 			genetic_modifiers.Add(mod.type)
 

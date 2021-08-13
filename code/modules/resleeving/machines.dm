@@ -69,6 +69,21 @@
 		else if(status == 3) //Digital organ
 			I.digitize()
 
+	//Give breathing equipment if needed
+	if(current_project.breath_type != "oxygen")
+		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
+		var/obj/item/weapon/tank/tankpath
+		if(current_project.breath_type == "phoron")
+			tankpath = /obj/item/weapon/tank/vox
+		else
+			tankpath = text2path("/obj/item/weapon/tank/" + current_project.breath_type)
+
+		if(tankpath)
+			H.equip_to_slot_or_del(new tankpath(H), slot_back)
+			H.internal = H.back
+			if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
+				H.internals.icon_state = "internal1"
+
 	occupant = H
 
 	//Set the name or generate one
@@ -182,10 +197,10 @@
 	icon = 'icons/obj/machines/synthpod.dmi'
 	icon_state = "pod_0"
 	circuit = /obj/item/weapon/circuitboard/transhuman_synthprinter
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 
-	var/list/stored_material =  list(DEFAULT_WALL_MATERIAL = 30000, "glass" = 30000)
+	var/list/stored_material =  list(MAT_STEEL = 30000, MAT_GLASS = 30000)
 	var/connected      //What console it's done up with
 	var/busy = 0       //Busy cloning
 	var/body_cost = 15000  //Cost of a cloned body (metal and glass ea.)
@@ -246,7 +261,7 @@
 	if(!istype(BR) || busy)
 		return 0
 
-	if(stored_material[DEFAULT_WALL_MATERIAL] < body_cost || stored_material["glass"] < body_cost)
+	if(stored_material[MAT_STEEL] < body_cost || stored_material["glass"] < body_cost)
 		return 0
 
 	current_project = BR
@@ -341,7 +356,7 @@
 	H.loc = get_turf(src)
 
 	//Machine specific stuff at the end
-	stored_material[DEFAULT_WALL_MATERIAL] -= body_cost
+	stored_material[MAT_STEEL] -= body_cost
 	stored_material["glass"] -= body_cost
 	busy = 0
 	update_icon()
@@ -374,7 +389,7 @@
 
 	var/obj/item/stack/material/S = W
 	if(!(S.material.name in stored_material))
-		to_chat(user, "<span class='warning'>\the [src] doesn't accept [S.material]!</span>")
+		to_chat(user, "<span class='warning'>\The [src] doesn't accept [S.material]!</span>")
 		return
 
 	var/amnt = S.perunit
@@ -409,9 +424,9 @@
 	icon = 'icons/obj/machines/implantchair.dmi'
 	icon_state = "implantchair"
 	circuit = /obj/item/weapon/circuitboard/transhuman_resleever
-	density = 1
+	density = TRUE
 	opacity = 0
-	anchored = 1
+	anchored = TRUE
 	var/blur_amount
 	var/confuse_amount
 

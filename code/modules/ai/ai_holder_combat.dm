@@ -132,8 +132,7 @@
 	ai_log("test_projectile_safety() : Test projectile did[!would_hit_primary_target ? " NOT " : " "]hit \the [AM]", AI_LOG_DEBUG)
 
 	// Make sure we don't have a chance to shoot our friends.
-	for(var/a in hit_things)
-		var/atom/A = a
+	for(var/atom/A as anything in hit_things)
 		ai_log("test_projectile_safety() : Evaluating \the [A] ([A.type]).", AI_LOG_TRACE)
 		if(isliving(A)) // Don't shoot at our friends, even if they're behind the target, as RNG can make them get hit.
 			var/mob/living/L = A
@@ -301,6 +300,11 @@
 			if(D.density)
 				ai_log("destroy_surroundings() : Attacking closed door.", AI_LOG_INFO)
 				return melee_attack(D)
+		
+		// Should always be last thing attempted
+		if(!problem_turf.opacity)
+			ai_log("destroy_surroundings() : Attacking a transparent (window?) turf.", AI_LOG_INFO)
+			return melee_attack(problem_turf)
 
 	ai_log("destroy_surroundings() : Exiting due to nothing to attack.", AI_LOG_INFO)
 	return ATTACK_FAILED // Nothing to attack.

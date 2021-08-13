@@ -26,10 +26,10 @@
 	desc = "Exosuit"
 	description_info = "Alt click to strafe."
 	icon = 'icons/mecha/mecha.dmi'
-	density = 1							//Dense. To raise the heat.
+	density = TRUE							//Dense. To raise the heat.
 	opacity = 1							//Opaque. Menacing.
-	anchored = 1						//No pulling around.
-	unacidable = 1						//And no deleting hoomans inside
+	anchored = TRUE						//No pulling around.
+	unacidable = TRUE						//And no deleting hoomans inside
 	layer = MOB_LAYER					//Icon draw layer
 	infra_luminosity = 15				//Byond implementation is bugged.
 	var/initial_icon = null				//Mech type for resetting icon. Only used for reskinning kits (see custom items)
@@ -933,10 +933,10 @@
 			. = ..(obstacle)
 			return
 		if(istype(O, /obj/effect/portal))	//derpfix
-			src.anchored = 0				//I have no idea what this really fix.
+			src.anchored = FALSE				//I have no idea what this really fix.
 			O.Crossed(src)
 			spawn(0)//countering portal teleport spawn(0), hurr
-				src.anchored = 1
+				src.anchored = TRUE
 		else if(O.anchored)
 			obstacle.Bumped(src)
 		else
@@ -1483,7 +1483,7 @@
 				else
 					to_chat(user, "<span class='notice'>\The [src] appears to be missing \the [slot].</span>")
 
-			var/remove = input(user, "Which component do you want to pry out?", "Remove Component") as null|anything in removable_components
+			var/remove = tgui_input_list(user, "Which component do you want to pry out?", "Remove Component", removable_components)
 			if(!remove)
 				return
 
@@ -1964,7 +1964,7 @@
 		if(ishuman(occupant))
 			GrantActions(occupant, 1)
 	else
-		visible_message("<span class='notice'>\The [usr] starts to climb into [src.name]</span>")
+		visible_message("<b>\The [usr]</b> starts to climb into [src.name]")
 		if(enter_after(40,usr))
 			if(!src.occupant)
 				moved_inside(usr)
@@ -2546,7 +2546,7 @@
 		if(newname)
 			name = newname
 		else
-			alert(occupant, "nope.avi")
+			tgui_alert_async(occupant, "nope.avi")
 		return
 	if (href_list["toggle_id_upload"])
 		if(usr != src.occupant)	return
@@ -2596,7 +2596,7 @@
 			to_chat(user, "<span class='warning'>There are no passengers to remove.</span>")
 			return
 
-		var/pname = input(user, "Choose a passenger to forcibly remove.", "Forcibly Remove Passenger") as null|anything in passengers
+		var/pname = tgui_input_list(user, "Choose a passenger to forcibly remove.", "Forcibly Remove Passenger", passengers)
 
 		if (!pname)
 			return
@@ -2604,11 +2604,11 @@
 		var/obj/item/mecha_parts/mecha_equipment/tool/passenger/P = passengers[pname]
 		var/mob/occupant = P.occupant
 
-		user.visible_message("<span class='notice'>\The [user] begins opening the hatch on \the [P]...</span>", "<span class='notice'>You begin opening the hatch on \the [P]...</span>")
+		user.visible_message("<b>\The [user]</b> begins opening the hatch on \the [P]...", "<span class='notice'>You begin opening the hatch on \the [P]...</span>")
 		if (!do_after(user, 40))
 			return
 
-		user.visible_message("<span class='notice'>\The [user] opens the hatch on \the [P] and removes [occupant]!</span>", "<span class='notice'>You open the hatch on \the [P] and remove [occupant]!</span>")
+		user.visible_message("<b>\The [user]</b> opens the hatch on \the [P] and removes [occupant]!", "<span class='notice'>You open the hatch on \the [P] and remove [occupant]!</span>")
 		P.go_out()
 		P.log_message("[occupant] was removed.")
 		return
@@ -2688,7 +2688,7 @@
 		O.canmove = 1
 		O.name = AI.name
 		O.real_name = AI.real_name
-		O.anchored = 1
+		O.anchored = TRUE
 		O.aiRestorePowerRoutine = 0
 		O.control_disabled = 1 // Can't control things remotely if you're stuck in a card!
 		O.laws = AI.laws
@@ -2795,7 +2795,7 @@
 	if(prob(temp_deflect_chance))//Deflected
 		src.log_append_to_last("Armor saved.")
 		src.occupant_message("<span class='notice'>\The [user]'s attack is stopped by the armor.</span>")
-		visible_message("<span class='notice'>\The [user] rebounds off [src.name]'s armor!</span>")
+		visible_message("<b>\The [user]</b> rebounds off [src.name]'s armor!")
 		user.attack_log += text("\[[time_stamp()]\] <font color='red'>attacked [src.name]</font>")
 		playsound(src, 'sound/weapons/slash.ogg', 50, 1, -1)
 
@@ -2825,16 +2825,8 @@
 /obj/mecha/proc/start_process(process)
 	current_processes |= process
 
-/////////////////////////////////////////////////
-////////  Mecha process() subcomponents  ////////
-/////////////////////////////////////////////////
-
-// Handles the internal alarms for a mech.
-// Called every 16 iterations (80 deciseconds).
-
 
 /////////////
-
 /obj/mecha/cloak()
 	. = ..()
 	if(occupant && occupant.client && cloaked_selfimage)

@@ -46,6 +46,7 @@
 	var/emote_time = 60						// How long between stomach emotes at prey (in seconds)
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
+	var/item_mode_serial = TRUE				// Serial/parallel item digestion mode. Affect one item at a time or all of them with damage divided between contents. CHOMPEdit
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -326,8 +327,7 @@
 	var/count = 0
 
 	//Iterate over contents and move them all
-	for(var/thing in contents)
-		var/atom/movable/AM = thing
+	for(var/atom/movable/AM as anything in contents)
 		if(isliving(AM))
 			var/mob/living/L = AM
 			if(L.absorbed && !include_absorbed)
@@ -448,8 +448,8 @@
 	formatted_message = replacetext(raw_message, "%belly", lowertext(name))
 	formatted_message = replacetext(formatted_message, "%pred", owner)
 	formatted_message = replacetext(formatted_message, "%prey", english_list(contents))
-	formatted_message = replacetext(formatted_message, "%count", contents.len)
 	formatted_message = replacetext(formatted_message, "%countprey", living_count)
+	formatted_message = replacetext(formatted_message, "%count", contents.len)
 
 	return("<span class='warning'>[formatted_message]</span>")
 
@@ -510,7 +510,7 @@
 
 	var/messages = null
 	if(raw_messages)
-		messages = list2text(raw_messages, delim)
+		messages = raw_messages.Join(delim)
 	return messages
 
 // The next function sets the messages on the belly, from human-readable var
@@ -519,7 +519,7 @@
 /obj/belly/proc/set_messages(raw_text, type, delim = "\n\n")
 	ASSERT(type == "smo" || type == "smi" || type == "dmo" || type == "dmp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_absorb" || type == "im_heal" || type == "im_drain")
 
-	var/list/raw_list = text2list(html_encode(raw_text),delim)
+	var/list/raw_list = splittext(html_encode(raw_text),delim)
 	if(raw_list.len > 10)
 		raw_list.Cut(11)
 		log_debug("[owner] tried to set [lowertext(name)] with 11+ messages")
@@ -580,11 +580,9 @@
 		for(var/obj/item/W in M)
 			if(istype(W, /obj/item/organ/internal/mmi_holder/posibrain))
 				var/obj/item/organ/internal/mmi_holder/MMI = W
-				var/atom/movable/brain = MMI.removed()
-				if(brain)
-					M.remove_from_mob(brain,owner)
-					brain.forceMove(src)
-					items_preserved += brain
+				var/obj/item/device/mmi/brainbox = MMI.removed()
+				if(brainbox)
+					items_preserved += brainbox
 			for(var/slot in slots)
 				var/obj/item/I = M.get_equipped_item(slot = slot)
 				if(I)
@@ -641,8 +639,7 @@
 	//This in particular will recurse oddly because if there is absorbed prey of prey of prey...
 	//it will just move them up one belly. This should never happen though since... when they were
 	//absobred, they should have been absorbed as well!
-	for(var/belly in M.vore_organs)
-		var/obj/belly/B = belly
+	for(var/obj/belly/B as anything in M.vore_organs)
 		for(var/mob/living/Mm in B)
 			if(Mm.absorbed)
 				absorb_living(Mm)
@@ -655,15 +652,16 @@
 //Digest a single item
 //Receives a return value from digest_act that's how much nutrition
 //the item should be worth
-/obj/belly/proc/digest_item(obj/item/item)
-	var/digested = item.digest_act(src, owner)
-	if(!digested)
+/obj/belly/proc/digest_item(obj/item/item, touchable_amount) //CHOMPEdit
+	var/digested = item.digest_act(src, touchable_amount) //CHOMPEdit
+	if(digested == FALSE) //CHOMPEdit
 		items_preserved |= item
 	else
 		owner.adjust_nutrition((nutrition_percent / 100) * 5 * digested)
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
 			R.cell.charge += ((nutrition_percent / 100) * 50 * digested)
+		digested = TRUE //CHOMPEdit
 	return digested
 
 //Determine where items should fall out of us into.
@@ -723,14 +721,14 @@
 	struggle_outer_message = replacetext(struggle_outer_message, "%pred", owner)
 	struggle_outer_message = replacetext(struggle_outer_message, "%prey", R)
 	struggle_outer_message = replacetext(struggle_outer_message, "%belly", lowertext(name))
-	struggle_outer_message = replacetext(struggle_outer_message, "%count", contents.len)
 	struggle_outer_message = replacetext(struggle_outer_message, "%countprey", living_count)
+	struggle_outer_message = replacetext(struggle_outer_message, "%count", contents.len)
 
 	struggle_user_message = replacetext(struggle_user_message, "%pred", owner)
 	struggle_user_message = replacetext(struggle_user_message, "%prey", R)
 	struggle_user_message = replacetext(struggle_user_message, "%belly", lowertext(name))
-	struggle_user_message = replacetext(struggle_user_message, "%count", contents.len)
 	struggle_user_message = replacetext(struggle_user_message, "%countprey", living_count)
+	struggle_user_message = replacetext(struggle_user_message, "%count", contents.len)
 
 	struggle_outer_message = "<span class='alert'>[struggle_outer_message]</span>"
 	struggle_user_message = "<span class='alert'>[struggle_user_message]</span>"
@@ -779,8 +777,7 @@
 
 		else if(prob(transferchance) && transferlocation) //Next, let's have it see if they end up getting into an even bigger mess then when they started.
 			var/obj/belly/dest_belly
-			for(var/belly in owner.vore_organs)
-				var/obj/belly/B = belly
+			for(var/obj/belly/B as anything in owner.vore_organs)
 				if(B.name == transferlocation)
 					dest_belly = B
 					break

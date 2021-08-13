@@ -3,7 +3,7 @@
 //return non-negative integer: Amount of nutrition/charge gained (scaled to nutrition, other end can multiply for charge scale).
 
 // Ye default implementation.
-/obj/item/proc/digest_act(atom/movable/item_storage = null)
+/obj/item/proc/digest_act(atom/movable/item_storage = null, touchable_amount) //CHOMPEdit
 	if(istype(item_storage, /obj/item/device/dogborg/sleeper))
 		if(istype(src, /obj/item/device/pda))
 			var/obj/item/device/pda/P = src
@@ -26,7 +26,11 @@
 
 	if(isbelly(item_storage))
 		var/obj/belly/B = item_storage
-		g_damage = 0.25 * (B.digest_brute + B.digest_burn)
+		if(!touchable_amount) //CHOMPEdit Start
+			touchable_amount = 1
+		g_damage = 0.25 * (B.digest_brute + B.digest_burn) / touchable_amount
+	if(g_damage <= 0)
+		return FALSE //CHOMPEdit End
 
 	if(digest_stage > 0)
 		if(g_damage > digest_stage)

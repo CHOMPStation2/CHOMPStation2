@@ -3,8 +3,8 @@
 	name = "web"
 	desc = "it's stringy and sticky"
 	icon = 'icons/effects/effects.dmi'
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = FALSE
 	var/health = 15
 
 //similar to weeds, but only barfed out by nurses manually
@@ -23,7 +23,7 @@
 /obj/effect/spider/attackby(var/obj/item/weapon/W, var/mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
 
-	if(W.attack_verb.len)
+	if(LAZYLEN(W.attack_verb))
 		visible_message("<span class='warning'>\The [src] has been [pick(W.attack_verb)] with \the [W][(user ? " by [user]." : ".")]</span>")
 	else
 		visible_message("<span class='warning'>\The [src] has been attacked with \the [W][(user ? " by [user]." : ".")]</span>")
@@ -93,6 +93,7 @@
 	var/spiders_min = 6
 	var/spiders_max = 24
 	var/spider_type = /obj/effect/spider/spiderling
+	var/faction = "spiders"
 
 /obj/effect/spider/eggcluster/Initialize()
 	pixel_x = rand(3,-3)
@@ -121,9 +122,10 @@
 			O = loc
 
 		for(var/i=0, i<num, i++)
-			var/spiderling = new spider_type(src.loc, src)
+			var/obj/effect/spider/spiderling/spiderling = new spider_type(src.loc, src)
 			if(O)
 				O.implants += spiderling
+			spiderling.faction = faction
 		qdel(src)
 
 /obj/effect/spider/eggcluster/small
@@ -133,11 +135,16 @@
 /obj/effect/spider/eggcluster/small/frost
 	spider_type = /obj/effect/spider/spiderling/frost
 
+/obj/effect/spider/eggcluster/royal
+	spiders_min = 2
+	spiders_max = 5
+	spider_type = /obj/effect/spider/spiderling/varied
+
 /obj/effect/spider/spiderling
 	name = "spiderling"
 	desc = "It never stays still for long."
 	icon_state = "spiderling"
-	anchored = 0
+	anchored = FALSE
 	layer = HIDING_LAYER
 	health = 3
 	var/last_itch = 0
@@ -145,11 +152,19 @@
 	var/obj/machinery/atmospherics/unary/vent_pump/entry_vent
 	var/travelling_in_vent = 0
 	var/list/grow_as = list(/mob/living/simple_mob/animal/giant_spider, /mob/living/simple_mob/animal/giant_spider/nurse, /mob/living/simple_mob/animal/giant_spider/hunter)
+	var/faction = "spiders"
 
 	var/stunted = FALSE
 
 /obj/effect/spider/spiderling/frost
 	grow_as = list(/mob/living/simple_mob/animal/giant_spider/frost)
+
+/obj/effect/spider/spiderling/varied
+	grow_as = list(/mob/living/simple_mob/animal/giant_spider, /mob/living/simple_mob/animal/giant_spider/nurse, /mob/living/simple_mob/animal/giant_spider/hunter,
+			/mob/living/simple_mob/animal/giant_spider/frost, /mob/living/simple_mob/animal/giant_spider/electric, /mob/living/simple_mob/animal/giant_spider/lurker,
+			/mob/living/simple_mob/animal/giant_spider/pepper, /mob/living/simple_mob/animal/giant_spider/thermic, /mob/living/simple_mob/animal/giant_spider/tunneler,
+			/mob/living/simple_mob/animal/giant_spider/webslinger, /mob/living/simple_mob/animal/giant_spider/phorogenic, /mob/living/simple_mob/animal/giant_spider/carrier,
+			/mob/living/simple_mob/animal/giant_spider/ion)
 
 /obj/effect/spider/spiderling/New(var/location, var/atom/parent)
 	pixel_x = rand(6,-6)
@@ -236,7 +251,7 @@
 				last_itch = world.time
 				to_chat(O.owner, "<span class='notice'>Your [O.name] itches...</span>")
 	else if(prob(1))
-		src.visible_message("<span class='notice'>\The [src] skitters.</span>")
+		src.visible_message("<b>\The [src]</b> skitters.")
 
 	if(amount_grown >= 0)
 		amount_grown += rand(0,2)
@@ -260,6 +275,7 @@
 		if(amount_grown >= 100)
 			var/spawn_type = pick(grow_as)
 			var/mob/living/simple_mob/animal/giant_spider/GS = new spawn_type(src.loc, src)
+			GS.faction = faction
 			if(stunted)
 				spawn(2)
 					GS.make_spiderling()
@@ -272,6 +288,15 @@
 
 /obj/effect/spider/spiderling/non_growing
 	amount_grown = -1
+
+/obj/effect/spider/spiderling/princess
+	name = "royal spiderling"
+	desc = "There's a special aura about this one."
+	grow_as = list(/mob/living/simple_mob/animal/giant_spider/nurse/queen)
+
+/obj/effect/spider/spiderling/princess/New(var/location, var/atom/parent)
+	..()
+	amount_grown = 50
 
 /obj/effect/decal/cleanable/spiderling_remains
 	name = "spiderling remains"

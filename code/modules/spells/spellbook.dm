@@ -125,7 +125,7 @@
 							break
 						else
 							if(aspell.can_improve("speed") && aspell.can_improve("power"))
-								switch(alert(src, "Do you want to upgrade this spell's speed or power?", "Select Upgrade", "Speed", "Power", "Cancel"))
+								switch(tgui_alert(src, "Do you want to upgrade this spell's speed or power?", "Select Upgrade", list("Speed", "Power", "Cancel")))
 									if("Speed")
 										temp = aspell.quicken_spell()
 									if("Power")
@@ -407,7 +407,7 @@
 	if(istype(user, /mob/living/carbon/human))
 		to_chat(user, "<font size='15' color='red'><b>HOR-SIE HAS RISEN</b></font>")
 		var/obj/item/clothing/mask/horsehead/magichead = new /obj/item/clothing/mask/horsehead
-		magichead.canremove = 0		//curses!
+		magichead.canremove = FALSE		//curses!
 		magichead.flags_inv = null	//so you can still see their face
 		magichead.voicechange = 1	//NEEEEIIGHH
 		user.drop_from_inventory(user.wear_mask)

@@ -1,13 +1,13 @@
 /////////////////////////////////////////
 //Material Rings
 /obj/item/clothing/gloves/ring/material
-	icon = 'icons/obj/clothing/rings.dmi'
+	icon = 'icons/inventory/hands/item.dmi'
 	icon_state = "material"
 
 /obj/item/clothing/gloves/ring/material/New(var/newloc, var/new_material)
 	..(newloc)
 	if(!new_material)
-		new_material = DEFAULT_WALL_MATERIAL
+		new_material = MAT_STEEL
 	material = get_material_by_name(new_material)
 	if(!istype(material))
 		qdel(src)

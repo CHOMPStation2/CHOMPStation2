@@ -1,8 +1,7 @@
 /proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff, is_global, frequency = null, channel = 0, pressure_affected = TRUE, ignore_walls = TRUE, preference = null, volume_channel = null)
-	if(isarea(source))
-		throw EXCEPTION("playsound(): source is an area")
+	if(Master.current_runlevel < RUNLEVEL_LOBBY)
 		return
-
+		
 	var/turf/turf_source = get_turf(source)
 	if(!turf_source)
 		return
@@ -17,8 +16,7 @@
 	var/list/listeners = player_list
 	if(!ignore_walls) //these sounds don't carry through walls
 		listeners = listeners & hearers(maxdistance,turf_source)
-	for(var/P in listeners)
-		var/mob/M = P
+	for(var/mob/M as anything in listeners)
 		if(!M || !M.client)
 			continue
 		var/turf/T = get_turf(M)

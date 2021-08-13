@@ -28,7 +28,7 @@
 	else
 		src.poster_decl = get_poster_decl(/decl/poster, FALSE)
 	
-	name += " - No. [src.poster_decl.name]"
+	name += " - [src.poster_decl.name]"
 	return ..()
 
 //Places the poster on a wall
@@ -99,13 +99,14 @@
 
 	var/mob/M = usr
 	var/list/options = list()
-	for(var/decl/poster/posteroption in decls_repository.get_decls_of_type(/decl/poster))
-		options[posteroption.listing_name] = posteroption
+	var/list/decl/poster/posters = decls_repository.get_decls_of_type(/decl/poster)
+	for(var/option in posters)
+		options[posters[option].listing_name] = posters[option]
 
-	var/choice = input(M,"Choose a poster!","Customize Poster") in options
+	var/choice = tgui_input_list(M, "Choose a poster!", "Customize Poster", options)
 	if(src && choice && !M.stat && in_range(M,src))
 		poster_decl = options[choice]
-		name = "rolled-up poly-poster - No.[poster_decl.icon_state]"
+		name = "rolled-up poly-poster - [src.poster_decl.name]"
 		to_chat(M, "The poster is now: [choice].")
 
 
@@ -115,8 +116,9 @@
 /obj/structure/sign/poster
 	name = "poster"
 	desc = "A large piece of space-resistant printed paper. "
-	icon = 'icons/obj/contraband.dmi'
-	anchored = 1
+	icon = 'icons/obj/contraband_vr.dmi' //VOREStation Edit
+	icon_state = "poster" //VOREStation Edit
+	anchored = TRUE
 	var/decl/poster/poster_decl = null
 	var/target_poster_decl_path = /decl/poster
 	var/roll_type = /obj/item/poster
@@ -178,7 +180,7 @@
 	if(ruined)
 		return
 
-	if(alert("Do I want to rip the poster from the wall?","You think...","Yes","No") == "Yes")
+	if(tgui_alert(usr, "Do I want to rip the poster from the wall?","You think...",list("Yes","No")) == "Yes")
 
 		if(ruined || !user.Adjacent(src))
 			return

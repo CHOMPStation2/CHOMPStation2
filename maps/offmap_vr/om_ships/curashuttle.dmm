@@ -3870,8 +3870,7 @@ aa
 "ae" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/plastitanium{
-	dir = 1;
-	icon_state = "window"
+	dir = 1
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
@@ -3888,8 +3887,7 @@ aa
 "af" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/plastitanium{
-	dir = 1;
-	icon_state = "window"
+	dir = 1
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
@@ -3944,8 +3942,7 @@ aa
 /area/shuttle/curabitur/curashuttle/cockpit)
 "an" = (
 /obj/machinery/computer/shuttle_control/explore/curashuttle{
-	dir = 4;
-	icon_state = "computer"
+	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/shuttle/curabitur/curashuttle/cockpit)
@@ -3965,8 +3962,7 @@ aa
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 24;
-	pixel_y = 0
+	pixel_x = 24
 	},
 /obj/structure/table/darkglass,
 /obj/item/weapon/paper_bin{
@@ -4036,19 +4032,16 @@ aa
 	icon_state = "1-2"
 	},
 /obj/structure/bed/chair/bay/comfy{
-	dir = 1;
-	icon_state = "bay_comfychair_preview"
+	dir = 1
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/shuttle/curabitur/curashuttle/cockpit)
 "ax" = (
 /obj/machinery/computer/ship/engines{
-	dir = 8;
-	icon_state = "computer"
+	dir = 8
 	},
 /obj/structure/window/plastitanium{
-	dir = 4;
-	icon_state = "window"
+	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/shuttle/curabitur/curashuttle/cockpit)
@@ -4108,18 +4101,14 @@ aa
 /area/shuttle/curabitur/curashuttle/med)
 "aE" = (
 /obj/machinery/computer/ship/sensors{
-	dir = 4;
-	icon_state = "computer"
+	dir = 4
 	},
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -29;
-	pixel_y = 0
+	pixel_x = -29
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 8
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/shuttle/curabitur/curashuttle/cockpit)
@@ -4146,8 +4135,7 @@ aa
 	},
 /obj/machinery/atmospherics/pipe/vent,
 /obj/structure/window/plastitanium{
-	dir = 4;
-	icon_state = "window"
+	dir = 4
 	},
 /obj/machinery/button/remote/airlock/survival_pod{
 	id = "curadocking";
@@ -4195,13 +4183,10 @@ aa
 "aJ" = (
 /obj/machinery/sleep_console{
 	dir = 2;
-	icon_state = "sleeperconsole";
 	pixel_x = -1
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/curabitur/curashuttle/med)
@@ -4222,8 +4207,7 @@ aa
 	dir = 8;
 	frequency = 1480;
 	id_tag = "curadocking";
-	pixel_x = 28;
-	pixel_y = 0
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/curabitur/curashuttle/med)
@@ -4236,8 +4220,7 @@ aa
 	req_access = newlist()
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/curabitur/curashuttle/med)
@@ -4321,8 +4304,7 @@ aa
 /area/shuttle/curabitur/curashuttle/med)
 "aU" = (
 /obj/structure/window/plastitanium{
-	dir = 8;
-	icon_state = "window"
+	dir = 8
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -4363,8 +4345,7 @@ aa
 /area/shuttle/curabitur/curashuttle/cockpit)
 "aY" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 6;
-	icon_state = "intact"
+	dir = 6
 	},
 /obj/structure/table/standard,
 /obj/fiftyspawner/steel,
@@ -4394,9 +4375,7 @@ aa
 "ba" = (
 /obj/structure/sink{
 	dir = 4;
-	icon_state = "sink";
-	pixel_x = 12;
-	pixel_y = 0
+	pixel_x = 12
 	},
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 31;
@@ -4407,8 +4386,7 @@ aa
 "bb" = (
 /obj/structure/window/plastitanium,
 /obj/structure/window/plastitanium{
-	dir = 1;
-	icon_state = "window"
+	dir = 1
 	},
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/tiled,
@@ -4502,8 +4480,7 @@ aa
 "bj" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/plastitanium{
-	dir = 8;
-	icon_state = "window"
+	dir = 8
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
@@ -4534,8 +4511,7 @@ aa
 "bn" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/plastitanium{
-	dir = 4;
-	icon_state = "window"
+	dir = 4
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
@@ -4565,8 +4541,7 @@ aa
 /area/shuttle/curabitur/curashuttle/med)
 "bs" = (
 /obj/structure/bed/chair/bay/comfy{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/curabitur/curashuttle/med)
@@ -4638,18 +4613,15 @@ aa
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -28;
-	pixel_y = 0
+	pixel_x = -28
 	},
 /obj/machinery/power/terminal{
-	dir = 8;
-	icon_state = "term"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/curabitur/curashuttle/med)
 "bC" = (
 /obj/structure/sign/department/eng{
-	pixel_x = 0;
 	pixel_y = -31
 	},
 /obj/structure/table/standard,
@@ -4689,14 +4661,12 @@ aa
 /area/shuttle/curabitur/curashuttle/med)
 "bE" = (
 /obj/structure/bed/chair/sofa/teal/left{
-	dir = 1;
-	icon_state = "sofaend_left"
+	dir = 1
 	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4716,18 +4686,15 @@ aa
 "bF" = (
 /obj/machinery/vending/wallmed1/public{
 	dir = 1;
-	icon_state = "wallmed";
 	pixel_y = -28
 	},
 /obj/structure/bed/chair/sofa/teal{
-	dir = 1;
-	icon_state = "sofamiddle"
+	dir = 1
 	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4745,14 +4712,12 @@ aa
 	pixel_y = -32
 	},
 /obj/structure/bed/chair/sofa/teal{
-	dir = 1;
-	icon_state = "sofamiddle"
+	dir = 1
 	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4768,18 +4733,15 @@ aa
 "bH" = (
 /obj/machinery/vending/wallmed1/public{
 	dir = 1;
-	icon_state = "wallmed";
 	pixel_y = -29
 	},
 /obj/structure/bed/chair/sofa/teal/right{
-	dir = 1;
-	icon_state = "sofaend_right"
+	dir = 1
 	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4803,8 +4765,7 @@ aa
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4;
-	icon_state = "map-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
@@ -4825,8 +4786,7 @@ aa
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -4841,12 +4801,10 @@ aa
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/binary/pump/fuel{
-	dir = 8;
-	icon_state = "map_off-fuel"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/curabitur/curashuttle/med)
@@ -4859,30 +4817,26 @@ aa
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 8;
-	icon_state = "intact-fuel"
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/curabitur/curashuttle/med)
 "bM" = (
 /obj/structure/fans/hardlight,
-/obj/machinery/door/airlock/external/glass/bolted{
+/obj/machinery/door/airlock/external/bolted{
 	frequency = 1480;
 	id_tag = "curadocking"
 	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_y = 0
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 8;
-	icon_state = "intact-fuel"
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/curabitur/curashuttle/med)
@@ -4926,7 +4880,6 @@ aa
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /obj/structure/cable{
@@ -4955,8 +4908,7 @@ aa
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 9;
-	icon_state = "intact-supply"
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
@@ -4970,18 +4922,17 @@ aa
 /obj/machinery/portable_atmospherics/canister/phoron{
 	start_pressure = 8000.25
 	},
-/turf/simulated/floor/tiled/monofloor{
-	dir = 8
+/obj/effect/floor_decal/steeldecal/monofloor{
+	dir = 1
 	},
+/turf/simulated/floor/tiled/monotile,
 /area/shuttle/curabitur/curashuttle/eng)
 "bY" = (
 /obj/structure/window/plastitanium{
-	dir = 8;
-	icon_state = "window"
+	dir = 8
 	},
 /obj/structure/window/plastitanium{
-	dir = 4;
-	icon_state = "window"
+	dir = 4
 	},
 /obj/structure/curtain/black,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -5058,8 +5009,7 @@ aa
 /area/shuttle/curabitur/curashuttle/eng)
 "cf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
-	dir = 4;
-	icon_state = "map-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/curabitur/curashuttle/eng)
@@ -5079,12 +5029,10 @@ aa
 "cj" = (
 /obj/machinery/mech_recharger,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5;
-	icon_state = "intact-supply"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/curabitur/curashuttle/hangar)
@@ -5126,15 +5074,11 @@ aa
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/floor/tiled/monofloor{
-	dir = 1
-	},
+/turf/simulated/floor/tiled/monotile,
 /area/shuttle/curabitur/curashuttle/eng)
 "co" = (
 /obj/structure/fuel_port,
-/turf/simulated/floor/tiled/monofloor{
-	dir = 1
-	},
+/turf/simulated/floor/tiled/monotile,
 /area/shuttle/curabitur/curashuttle/eng)
 "cp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
@@ -5171,10 +5115,9 @@ aa
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/monofloor,
+/turf/simulated/floor/tiled/monotile,
 /area/shuttle/curabitur/curashuttle/eng)
 "cv" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -5184,8 +5127,7 @@ aa
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/curabitur/curashuttle/eng)
@@ -5198,8 +5140,7 @@ aa
 /area/shuttle/curabitur/curashuttle/eng)
 "cx" = (
 /obj/machinery/computer/ship/engines{
-	dir = 1;
-	icon_state = "computer"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/curabitur/curashuttle/eng)
@@ -5218,9 +5159,7 @@ aa
 "cA" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
-	dir = 2;
 	name = "south bump";
-	pixel_x = 0;
 	pixel_y = -28
 	},
 /obj/structure/handrail{
@@ -5305,7 +5244,6 @@ aa
 	health = 200;
 	max_equip = 1;
 	max_hull_equip = 2;
-	max_special_equip = 1;
 	max_universal_equip = 2;
 	max_utility_equip = 3;
 	maxhealth = 200;
@@ -5390,9 +5328,8 @@ aa
 /obj/machinery/portable_atmospherics/canister/phoron{
 	start_pressure = 8000.25
 	},
-/turf/simulated/floor/tiled/monofloor{
-	dir = 8
-	},
+/obj/effect/floor_decal/steeldecal/monofloor,
+/turf/simulated/floor/tiled/monotile,
 /area/shuttle/curabitur/curashuttle/eng)
 
 (1,1,1) = {"

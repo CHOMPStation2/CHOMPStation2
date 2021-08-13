@@ -75,8 +75,7 @@
 	options["MC"] = Master
 	options["Failsafe"] = Failsafe
 	options["Configuration"] = config
-	for(var/i in Master.subsystems)
-		var/datum/controller/subsystem/S = i
+	for(var/datum/controller/subsystem/S as anything in Master.subsystems)
 		if(!istype(S))		//Eh, we're a debug verb, let's have typechecking.
 			continue
 		var/strtype = "SS[get_end_section_of_type(S.type)]"
@@ -99,7 +98,7 @@
 	options["LEGACY: transfer_controller"] = transfer_controller
 	options["LEGACY: gas_data"] = gas_data
 
-	var/pick = input(mob, "Choose a controller to debug/view variables of.", "VV controller:") as null|anything in options
+	var/pick = input(mob, "Choose a controller to debug/view variables of.", "VV controller:") as null|anything in options // Leaving as input() due to debug tool
 	if(!pick)
 		return
 	var/datum/D = options[pick]

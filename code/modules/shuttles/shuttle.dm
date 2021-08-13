@@ -352,6 +352,11 @@
 			radios |= I
 		//CHOMPEdit End
 
+	// Update our base turfs before we move, so that transparent turfs look good.
+	var/new_base = destination.base_turf || /turf/space
+	for(var/area/A as anything in shuttle_area)
+		A.base_turf = new_base
+
 	// Actually do the movement of everything - This replaces origin.move_contents_to(destination)
 	translate_turfs(turf_translation, current_location.base_area, current_location.base_turf)
 	current_location = destination

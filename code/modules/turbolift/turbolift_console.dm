@@ -2,8 +2,8 @@
 /obj/structure/lift
 	name = "turbolift control component"
 	icon = 'icons/obj/turbolift.dmi'
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = FALSE
 	plane = MOB_PLANE
 
 	var/datum/turbolift/lift
@@ -26,7 +26,7 @@
 		if(user.a_intent == I_HURT)
 			user.visible_message("<span class='danger'>\The [user] hammers on the lift button!</span>")
 		else
-			user.visible_message("<span class='notice'>\The [user] presses the lift button.</span>")
+			user.visible_message("<b>\The [user]</b> presses the lift button.")
 
 
 /obj/structure/lift/New(var/newloc, var/datum/turbolift/_lift)

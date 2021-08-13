@@ -376,7 +376,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/trash/cigbutt
 	name = "cigarette butt"
 	desc = "A manky old cigarette butt."
-	icon = 'icons/obj/clothing/masks.dmi'
+	icon = 'icons/inventory/face/item.dmi'
 	icon_state = "cigbutt"
 	randpixel = 10
 	w_class = ITEMSIZE_TINY
@@ -578,10 +578,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	deactivation_sound = 'sound/items/zippo_off.ogg'
 
 /obj/item/weapon/flame/lighter/random
-	New()
-		icon_state = "lighter-[pick("r","c","y","g")]"
-		item_state = icon_state
-		base_state = icon_state
+/obj/item/weapon/flame/lighter/random/New()
+	icon_state = "lighter-[pick("r","c","y","g")]"
+	item_state = icon_state
+	base_state = icon_state
 
 /obj/item/weapon/flame/lighter/attack_self(mob/living/user)
 	if(!base_state)

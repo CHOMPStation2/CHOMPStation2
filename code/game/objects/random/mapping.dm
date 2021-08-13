@@ -464,7 +464,7 @@
 
 /obj/random/multiple/ore_pile/item_to_spawn()
 	return pick(
-			prob(10);list(
+			/*prob(10);list(
 				/obj/item/weapon/ore/bauxite,
 				/obj/item/weapon/ore/bauxite,
 				/obj/item/weapon/ore/bauxite,
@@ -475,7 +475,7 @@
 				/obj/item/weapon/ore/bauxite,
 				/obj/item/weapon/ore/bauxite,
 				/obj/item/weapon/ore/bauxite
-			),
+			),*/
 			prob(10);list(
 				/obj/item/weapon/ore/coal,
 				/obj/item/weapon/ore/coal,
@@ -488,7 +488,7 @@
 				/obj/item/weapon/ore/coal,
 				/obj/item/weapon/ore/coal
 			),
-			prob(10);list(
+			/*prob(10);list(
 				/obj/item/weapon/ore/copper,
 				/obj/item/weapon/ore/copper,
 				/obj/item/weapon/ore/copper,
@@ -499,7 +499,7 @@
 				/obj/item/weapon/ore/copper,
 				/obj/item/weapon/ore/copper,
 				/obj/item/weapon/ore/copper
-			),
+			),*/
 			prob(3);list(
 				/obj/item/weapon/ore/diamond,
 				/obj/item/weapon/ore/diamond,
@@ -598,11 +598,11 @@
 			prob(2);list(
 				/obj/item/weapon/ore/verdantium,
 				/obj/item/weapon/ore/verdantium
-			),
+			),/*
 			prob(2);list(
 				/obj/item/weapon/ore/void_opal,
 				/obj/item/weapon/ore/void_opal
-			),
+			),*/
 		)
 
 /obj/random/multiple/corp_crate
@@ -1378,7 +1378,7 @@
 	spawn_nothing_percentage = 20
 
 	var/override_outdoors = FALSE	// Do we override our chosen turf's outdoors?
-	var/turf_outdoors = TRUE	// Will our turf be outdoors?
+	var/turf_outdoors = OUTDOORS_AREA	// Will our turf be outdoors?
 
 /obj/random/turf/spawn_item()
 	var/build_path = item_to_spawn()
@@ -1400,7 +1400,7 @@
 	desc = "This is a random lava spawn."
 
 	override_outdoors = TRUE
-	turf_outdoors = FALSE
+	turf_outdoors = OUTDOORS_NO
 
 /obj/random/turf/lava/item_to_spawn()
 	return pick(prob(5);/turf/simulated/floor/lava,

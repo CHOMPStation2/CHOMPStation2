@@ -1,34 +1,36 @@
 /obj/effect/overlay
 	name = "overlay"
-	unacidable = 1
+	unacidable = TRUE
 	var/i_attached//Added for possible image attachments to objects. For hallucinations and the like.
 
 /obj/effect/overlay/beam//Not actually a projectile, just an effect.
 	name="beam"
 	icon='icons/effects/beam.dmi'
 	icon_state="b_beam"
+	plane = ABOVE_OBJ_PLANE
 	var/tmp/atom/BeamSource
-	New()
-		..()
-		spawn(10) qdel(src)
+
+/obj/effect/overlay/beam/New()
+	..()
+	spawn(10) qdel(src)
 
 /obj/effect/overlay/palmtree_r
 	name = "Palm tree"
 	icon = 'icons/misc/beach2.dmi'
 	icon_state = "palm1"
-	density = 1
+	density = TRUE
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
-	anchored = 1
+	anchored = TRUE
 
 /obj/effect/overlay/palmtree_l
 	name = "Palm tree"
 	icon = 'icons/misc/beach2.dmi'
 	icon_state = "palm2"
-	density = 1
+	density = TRUE
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
-	anchored = 1
+	anchored = TRUE
 
 /obj/effect/overlay/coconut
 	name = "Coconuts"
@@ -45,8 +47,8 @@
 	name = "wallrot"
 	desc = "Ick..."
 	icon = 'icons/effects/wallrot.dmi'
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
 	mouse_opacity = 0
@@ -60,7 +62,8 @@
 	name = "snow"
 	icon = 'icons/turf/overlays.dmi'
 	icon_state = "snow"
-	anchored = 1
+	anchored = TRUE
+	plane = TURF_PLANE
 
 // Todo: Add a version that gradually reaccumulates over time by means of alpha transparency. -Spades
 /obj/effect/overlay/snow/attackby(obj/item/W as obj, mob/user as mob)
@@ -128,6 +131,7 @@
 	appearance_flags = RESET_TRANSFORM | TILE_BOUND
 	invisibility = INVISIBILITY_ABSTRACT
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
 	plane = ATMOS_GROUP_PLANE
 */
 
@@ -159,8 +163,29 @@
 	alpha = 110
 	blocks_emissive = FALSE
 
+	var/static/matrix/normal_transform
+
+/obj/effect/overlay/light_cone/Initialize()
+	. = ..()
+	apply_standard_transform()
+
+/obj/effect/overlay/light_cone/proc/reset_transform(apply_standard)
+	transform = initial(transform)
+	if(apply_standard)
+		apply_standard_transform()
+
+/obj/effect/overlay/light_cone/proc/apply_standard_transform()
+	transform = transform.Translate(-32, -32)
+
 /obj/effect/overlay/light_cone/Destroy(force)
 	if(!force)
 		stack_trace("Directional light cone deleted, but not by our component")
 		return QDEL_HINT_LETMELIVE
 	return ..()
+
+/obj/effect/overlay/closet_door
+	anchored = TRUE
+	plane = FLOAT_PLANE
+	layer = FLOAT_LAYER
+	vis_flags = VIS_INHERIT_ID
+	appearance_flags = KEEP_TOGETHER | LONG_GLIDE | PIXEL_SCALE

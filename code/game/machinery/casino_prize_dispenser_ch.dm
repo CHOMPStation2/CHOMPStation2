@@ -120,6 +120,7 @@
 		CASINO_PRIZE("Quality cigars", /obj/item/weapon/storage/fancy/cigar/havana, 1, 50, "misc"),
 		CASINO_PRIZE("Casino wallet (kept after event)", /obj/item/weapon/storage/wallet/casino, 1, 50, "misc"),
 		CASINO_PRIZE("Casino cards", /obj/item/weapon/deck/cards/casino, 1, 50, "misc"),
+		CASINO_PRIZE("Casino Sentient Prize Collar", /obj/item/clothing/accessory/collar/casinoslave_fake, 1, 50, "misc"),
 	)
 	item_list["Drinks"] = list(
 		CASINO_PRIZE("Redeemer's brew", /obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew, 1, 50, "drinks"),

@@ -12,7 +12,7 @@
 	appearance_flags = TILE_BOUND|PIXEL_SCALE|NO_CLIENT_COLOR
 	layer = LAYER_HUD_BASE
 	plane = PLANE_PLAYER_HUD
-	unacidable = 1
+	unacidable = TRUE
 	var/obj/master = null	//A reference to the object in the slot. Grabs or items, generally.
 	var/datum/hud/hud = null // A reference to the owner HUD, if any.
 
@@ -494,13 +494,13 @@
 		if("Show Camera List")
 			if(isAI(usr))
 				var/mob/living/silicon/ai/AI = usr
-				var/camera = input(AI) in AI.get_camera_list()
+				var/camera = tgui_input_list(AI, "Pick Camera:", "Camera Choice", AI.get_camera_list())
 				AI.ai_camera_list(camera)
 
 		if("Track With Camera")
 			if(isAI(usr))
 				var/mob/living/silicon/ai/AI = usr
-				var/target_name = input(AI) in AI.trackable_mobs()
+				var/target_name = tgui_input_list(AI, "Pick Mob:", "Mob Choice", AI.trackable_mobs())
 				AI.ai_camera_track(target_name)
 
 		if("Toggle Camera Light")

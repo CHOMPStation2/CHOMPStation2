@@ -121,8 +121,6 @@
 ///from obj/machinery/bsa/full/proc/fire(): ()
 #define COMSIG_ATOM_BSA_BEAM "atom_bsa_beam_pass"
 	#define COMSIG_ATOM_BLOCKS_BSA_BEAM (1<<0)
-///from base of atom/set_light(): (l_range, l_power, l_color)
-#define COMSIG_ATOM_SET_LIGHT "atom_set_light"
 ///from base of atom/setDir(): (old_dir, new_dir)
 #define COMSIG_ATOM_DIR_CHANGE "atom_dir_change"
 ///from base of atom/handle_atom_del(): (atom/deleted)
@@ -220,7 +218,9 @@
 #define COMSIG_TURF_CHANGE "turf_change"
 ///from base of atom/has_gravity(): (atom/asker, list/forced_gravities)
 #define COMSIG_TURF_HAS_GRAVITY "turf_has_gravity"
-///from base of turf/New(): (turf/source, direction)
+///from base of turf/multiz_turf_del(): (turf/source, direction)
+#define COMSIG_TURF_MULTIZ_DEL "turf_multiz_del"
+///from base of turf/multiz_turf_new: (turf/source, direction)
 #define COMSIG_TURF_MULTIZ_NEW "turf_multiz_new"
 
 // /atom/movable signals
@@ -232,15 +232,8 @@
 #define COMSIG_MOVABLE_MOVED "movable_moved"
 ///from base of atom/movable/Cross(): (/atom/movable)
 #define COMSIG_MOVABLE_CROSS "movable_cross"
-///from base of atom/movable/Crossed(): (/atom/movable)
-#define COMSIG_MOVABLE_CROSSED "movable_crossed"
 ///when we cross over something (calling Crossed() on that atom)
 #define COMSIG_CROSSED_MOVABLE "crossed_movable"
-///from base of atom/movable/Uncross(): (/atom/movable)
-#define COMSIG_MOVABLE_UNCROSS "movable_uncross"
-	#define COMPONENT_MOVABLE_BLOCK_UNCROSS (1<<0)
-///from base of atom/movable/Uncrossed(): (/atom/movable)
-#define COMSIG_MOVABLE_UNCROSSED "movable_uncrossed"
 ///from base of atom/movable/Bump(): (/atom)
 #define COMSIG_MOVABLE_BUMP "movable_bump"
 ///from base of atom/movable/throw_impact(): (/atom/hit_atom, /datum/thrownthing/throwingdatum)

@@ -1,5 +1,3 @@
-#define TANK_MAX_RELEASE_PRESSURE (3*ONE_ATMOSPHERE)
-#define TANK_DEFAULT_RELEASE_PRESSURE 21
 #define TANK_IDEAL_PRESSURE 1015 //Arbitrary.
 
 var/list/global/tank_gauge_cache = list()
@@ -8,7 +6,7 @@ var/list/global/tank_gauge_cache = list()
 	name = "tank"
 	icon = 'icons/obj/tank.dmi'
 	sprite_sheets = list(
-		SPECIES_TESHARI = 'icons/mob/species/teshari/back.dmi'
+		SPECIES_TESHARI = 'icons/inventory/back/mob_teshari.dmi'
 		)
 	drop_sound = 'sound/items/drop/gascan.ogg'
 	pickup_sound = 'sound/items/pickup/gascan.ogg'

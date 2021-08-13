@@ -5,7 +5,7 @@
 	icon_state = "flashlight"
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_BELT
-	matter = list(DEFAULT_WALL_MATERIAL = 50,"glass" = 20)
+	matter = list(MAT_STEEL = 50,MAT_GLASS = 20)
 	action_button_name = "Toggle Flashlight"
 	
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
@@ -115,7 +115,7 @@
 			if(!vision)
 				to_chat(user, "<span class='warning'>You can't find any [H.species.vision_organ ? H.species.vision_organ : "eyes"] on [H]!</span>")
 
-			user.visible_message("<span class='notice'>\The [user] directs [src] to [M]'s eyes.</span>", \
+			user.visible_message("<b>\The [user]</b> directs [src] to [M]'s eyes.", \
 							 	 "<span class='notice'>You direct [src] to [M]'s eyes.</span>")
 			if(H != user)	//can't look into your own eyes buster
 				if(M.stat == DEAD || M.blinded)	//mob is dead or fully blind
@@ -210,6 +210,16 @@
 	else
 		..()
 
+/obj/item/device/flashlight/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	. = ..()
+	if(!on)
+		return
+	var/datum/component/overlay_lighting/OL = GetComponent(/datum/component/overlay_lighting)
+	if(!OL)
+		return
+	var/turf/T = get_turf(target)
+	OL.place_directional_light(T)
+
 /obj/item/device/flashlight/pen
 	name = "penlight"
 	desc = "A pen-sized light, used by medical staff."
@@ -251,7 +261,7 @@
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_SMALL
 	attack_verb = list ("smacked", "thwacked", "thunked")
-	matter = list(DEFAULT_WALL_MATERIAL = 200,"glass" = 50)
+	matter = list(MAT_STEEL = 200,MAT_GLASS = 50)
 	hitsound = "swing_hit"
 
 /obj/item/device/flashlight/drone

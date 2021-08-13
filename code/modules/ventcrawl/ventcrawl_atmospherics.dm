@@ -24,7 +24,7 @@
 	. = ..()
 
 /obj/machinery/atmospherics/relaymove(mob/living/user, direction)
-	if(user.loc != src || !(direction & initialize_directions)) //can't go in a way we aren't connecting to
+	if(user.loc != src || !(direction & initialize_directions) || !IS_CARDINAL(direction)) //can't go in a way we aren't connecting to
 		return
 	ventcrawl_to(user,findConnecting(direction, user.ventcrawl_layer),direction)
 
@@ -82,7 +82,7 @@
 /obj/machinery/atmospherics/pipe/manifold/isConnectable(var/obj/machinery/atmospherics/target)
 	return (target == node3 || ..())
 
-obj/machinery/atmospherics/trinary/isConnectable(var/obj/machinery/atmospherics/target)
+/obj/machinery/atmospherics/trinary/isConnectable(var/obj/machinery/atmospherics/target)
 	return (target == node3 || ..())
 
 /obj/machinery/atmospherics/pipe/manifold4w/isConnectable(var/obj/machinery/atmospherics/target)

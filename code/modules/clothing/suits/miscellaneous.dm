@@ -43,7 +43,7 @@
 /obj/item/clothing/suit/poncho
 	name = "poncho"
 	desc = "A simple, comfortable poncho."
-	icon = 'icons/mob/suit.dmi'
+	icon = 'icons/inventory/suit/mob.dmi'
 	icon_state = "poncho"
 	item_state = "poncho"
 	item_icons = list(
@@ -105,10 +105,7 @@
 
 /obj/item/clothing/suit/syndicatefake
 	name = "red space suit replica"
-	icon = 'icons/obj/clothing/spacesuits.dmi'
-	icon_override = "icons/mob/spacesuit.dmi" //Chomp edit to fix its missing icon
 	icon_state = "syndicate"
-	default_worn_icon = 'icons/mob/spacesuit.dmi'
 	desc = "A plastic replica of the syndicate space suit, you'll look just like a real murderous syndicate agent in this! This is a toy, it is not made for use in space!"
 	w_class = ITEMSIZE_NORMAL
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen,/obj/item/toy)
@@ -269,13 +266,13 @@
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDETIE|HIDEHOLSTER
 
-obj/item/clothing/suit/kimono
+/obj/item/clothing/suit/kimono
 	name = "kimono"
 	desc = "A traditional Japanese kimono."
 	icon_state = "kimono"
 	addblends = "kimono_a"
 
-obj/item/clothing/suit/kamishimo
+/obj/item/clothing/suit/kamishimo
 	name = "kamishimo"
 	desc = "Traditional Japanese menswear."
 	icon_state = "kamishimo"
@@ -437,7 +434,6 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_tan"
 	item_state_slots = list(slot_r_hand_str = "suit_orange", slot_l_hand_str = "suit_orange")
 	flags_inv = HIDEHOLSTER
-	index = 1
 
 /obj/item/clothing/suit/storage/miljacket/grey
 	name = "grey military jacket"
@@ -445,7 +441,6 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_grey"
 	item_state_slots = list(slot_r_hand_str = "suit_grey", slot_l_hand_str = "suit_grey")
 	flags_inv = HIDEHOLSTER
-	index = 1
 
 /obj/item/clothing/suit/storage/miljacket/navy
 	name = "navy military jacket"
@@ -453,7 +448,6 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_navy"
 	item_state_slots = list(slot_r_hand_str = "suit_navy", slot_l_hand_str = "suit_navy")
 	flags_inv = HIDEHOLSTER
-	index = 1
 
 /obj/item/clothing/suit/storage/miljacket/black
 	name = "black military jacket"
@@ -461,7 +455,6 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_black"
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
 	flags_inv = HIDEHOLSTER
-	index = 1
 
 /obj/item/clothing/suit/storage/miljacket/white
 	name = "white military jacket"
@@ -469,7 +462,6 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "militaryjacket_white"
 	item_state_slots = list(slot_r_hand_str = "med_dep_jacket", slot_l_hand_str = "med_dep_jacket")
 	flags_inv = HIDEHOLSTER
-	index = 1
 
 /obj/item/clothing/suit/storage/toggle/bomber
 	name = "bomber jacket"
@@ -733,6 +725,19 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "med_dep_jacket"
 	item_state_slots = list(slot_r_hand_str = "med_dep_jacket", slot_l_hand_str = "med_dep_jacket")
 	flags_inv = HIDEHOLSTER
+
+/obj/item/clothing/suit/storage/toggle/light_jacket
+	name = "grey light jacket"
+	desc = "A light, cozy jacket. Now in grey."
+	icon_state = "grey_dep_jacket"
+	item_state_slots = list(slot_r_hand_str = "grey_dep_jacket", slot_l_hand_str = "grey_dep_jacket")
+	flags_inv = HIDEHOLSTER
+
+/obj/item/clothing/suit/storage/toggle/light_jacket/blue
+	name = "dark blue light jacket"
+	desc = "A light, cozy jacket. Now in dark blue."
+	icon_state = "blue_dep_jacket"
+	item_state_slots = list(slot_r_hand_str = "blue_dep_jacket", slot_l_hand_str = "blue_dep_jacket")
 
 /*
  * Track Jackets

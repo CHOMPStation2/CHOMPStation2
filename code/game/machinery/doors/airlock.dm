@@ -13,6 +13,10 @@
 	power_channel = ENVIRON
 
 	explosion_resistance = 10
+	
+	// Doors do their own stuff
+	bullet_vulnerability = 0
+	
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC // Not quite as nice as /tg/'s custom masks. We should make those sometime
 
 	var/aiControlDisabled = 0 //If 1, AI control is disabled until the AI hacks back in and disables the lock. If 2, the AI has bypassed the lock. If -1, the control is enabled but the AI had bypassed it earlier, so if it is disabled again the AI would have no trouble getting back in.
@@ -82,17 +86,17 @@
 		var/mob/living/carbon/human/X = user
 		if(istype(X.species, /datum/species/xenos))
 			if(src.locked || src.welded)
-				visible_message("<span class='alium'>\The [user] begins tearing into \the [src] internals!</span>") //CHOMPedit . edited message to make it more violent
+				visible_message("<span class='alium'>\The [user] begins tearing into \the [src] internals!</span>")
 				src.do_animate("deny")
-				if(do_after(user,30 SECONDS,src)) //CHOMPedit . Increased time to force open welded door for alien
-					visible_message("<span class='danger'>\The [user] tears \the [src] open, sparks flying from its electronics!</span>") //CHOMPedit
+				if(do_after(user,15 SECONDS,src))
+					visible_message("<span class='danger'>\The [user] tears \the [src] open, sparks flying from its electronics!</span>")
 					src.do_animate("spark")
-					playsound(src, 'sound/machines/door/airlock_creaking_xeno.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS) //CHOMPedit gave xeno airlock breaking its own sound effect
+					playsound(src, 'sound/machines/door/airlock_tear_apart.ogg', 100, 1, volume_channel = VOLUME_CHANNEL_DOORS)
 					src.locked = 0
 					src.welded = 0
 					update_icon()
 					open(1)
-					src.set_broken() //CHOMPedit . Changed action to make ripping open the airlock more realistic
+					src.set_broken() //These aren't emags, these be CLAWS
 			else if(src.density)
 				visible_message("<span class='alium'>\The [user] begins forcing \the [src] open!</span>")
 				if(do_after(user, 5 SECONDS,src))
@@ -111,7 +115,7 @@
 /obj/machinery/door/airlock/get_material()
 	if(mineral)
 		return get_material_by_name(mineral)
-	return get_material_by_name(DEFAULT_WALL_MATERIAL)
+	return get_material_by_name(MAT_STEEL)
 
 /obj/machinery/door/airlock/command
 	name = "Command Airlock"
@@ -214,12 +218,12 @@
 	open_sound_powered = 'sound/machines/door/space1o.ogg'
 	close_sound_powered = 'sound/machines/door/space1c.ogg'
 
-/obj/machinery/door/airlock/external/glass/bolted
+/obj/machinery/door/airlock/external/bolted
 	icon_state = "door_locked" // So it looks visibly bolted in map editor
 	locked = 1
 
 // For convenience in making docking ports: one that is pre-bolted with frequency set!
-/obj/machinery/door/airlock/external/glass/bolted/cycling
+/obj/machinery/door/airlock/external/bolted/cycling
 	frequency = 1379
 
 /obj/machinery/door/airlock/glass_external
@@ -824,18 +828,16 @@ About the new airlock wires panel:
 		if("opening")
 			cut_overlay()
 			if(p_open)
-				spawn(2) // The only work around that works. Downside is that the door will be gone for a millisecond.
-					flick("o_door_opening", src)  //can not use flick due to BYOND bug updating overlays right before flicking
-					update_icon()
+				flick("o_door_opening", src)  //can not use flick due to BYOND bug updating overlays right before flicking
+				update_icon()
 			else
 				flick("door_opening", src)//[stat ? "_stat":]
 				update_icon()
 		if("closing")
 			cut_overlay()
 			if(p_open)
-				spawn(2)
-					flick("o_door_closing", src)
-					update_icon()
+				flick("o_door_closing", src)
+				update_icon()
 			else
 				flick("door_closing", src)
 				update_icon()
@@ -950,7 +952,7 @@ About the new airlock wires panel:
 	if (src.isElectrified())
 		if (istype(mover, /obj/item))
 			var/obj/item/i = mover
-			if (i.matter && (DEFAULT_WALL_MATERIAL in i.matter) && i.matter[DEFAULT_WALL_MATERIAL] > 0)
+			if (i.matter && (MAT_STEEL in i.matter) && i.matter[MAT_STEEL] > 0)
 				var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 				s.set_up(5, 1, src)
 				s.start()
@@ -1135,7 +1137,7 @@ About the new airlock wires panel:
 				if (istype(da, /obj/structure/door_assembly/multi_tile))
 					da.set_dir(src.dir)
 
-				da.anchored = 1
+				da.anchored = TRUE
 				if(mineral)
 					da.glass = mineral
 				//else if(glass)
@@ -1218,8 +1220,7 @@ About the new airlock wires panel:
 	use_power(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
 
 	//if the door is unpowered then it doesn't make sense to hear the woosh of a pneumatic actuator
-	for(var/P in player_list)
-		var/mob/M = P
+	for(var/mob/M as anything in player_list)
 		if(!M || !M.client)
 			continue
 		var/old_sounds = M.client.is_preference_enabled(/datum/client_preference/old_door_sounds)
@@ -1347,8 +1348,7 @@ About the new airlock wires panel:
 
 	use_power(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
 	has_beeped = 0
-	for(var/P in player_list)
-		var/mob/M = P
+	for(var/mob/M as anything in player_list)
 		if(!M || !M.client)
 			continue
 		var/old_sounds = M.client.is_preference_enabled(/datum/client_preference/old_door_sounds)

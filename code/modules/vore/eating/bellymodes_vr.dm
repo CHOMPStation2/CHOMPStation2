@@ -10,11 +10,17 @@
 			return
 
 	HandleBellyReagents()	//CHOMP reagent belly stuff, here to jam it into subsystems and avoid too much cpu usage
+	// VERY early exit
+	if(!contents.len)
+		return
+
 	var/play_sound //Potential sound to play at the end to avoid code duplication.
 	var/to_update = FALSE //Did anything update worthy happen?
 
-///////////////////// Prey Loop Refresh/hack //////////////////////
-	prey_loop()
+/////////////////////////// Exit Early ////////////////////////////
+	var/list/touchable_atoms = contents - items_preserved
+	if(!length(touchable_atoms))
+		return
 
 /////////////////////////// Sound Selections ///////////////////////////
 	var/digestion_noise_chance = 0
@@ -27,10 +33,7 @@
 		prey_digest = sound(get_sfx("fancy_digest_prey"))
 		pred_digest = sound(get_sfx("fancy_digest_pred"))
 
-/////////////////////////// Exit Early ////////////////////////////
-	var/list/touchable_atoms = contents - items_preserved
-	if(!length(touchable_atoms))
-		return
+///////////////////// Early Non-Mode Handling /////////////////////
 
 	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
 	if(!DM)
@@ -51,43 +54,8 @@
 		if(hta_returns["to_update"])
 			to_update = hta_returns["to_update"]
 
-	if(!islist(touchable_mobs))
-		return
-
-///////////////////// Early Non-Mode Handling /////////////////////
-	var/list/EL = emote_lists[digest_mode]
-	if(LAZYLEN(EL) && touchable_mobs && next_emote <= world.time && emote_active)
-		next_emote = world.time + (emote_time SECONDS)
-		for(var/mob/living/M in contents)
-			if(digest_mode == DM_DIGEST && !M.digestable)
-				continue // don't give digesty messages to indigestible people
-			var/living_count = 0
-			for(var/mob/living/L in contents)
-				living_count++
-
-			var/raw_message = pick(EL)
-			var/formatted_message
-			formatted_message = replacetext(raw_message, "%belly", lowertext(name))
-			formatted_message = replacetext(formatted_message, "%pred", owner)
-			formatted_message = replacetext(formatted_message, "%prey", english_list(contents))
-			formatted_message = replacetext(formatted_message, "%count", contents.len)
-			formatted_message = replacetext(formatted_message, "%countprey", living_count)
-			to_chat(M, "<span class='notice'>[formatted_message]</span>")
-
 	if(!digestion_noise_chance)
 		digestion_noise_chance = DM.noise_chance
-
-
-///////////////////// Time to actually process mobs /////////////////////
-	for(var/target in touchable_mobs)
-		var/mob/living/L = target
-		if(!istype(L))
-			continue
-		var/list/returns = DM.process_mob(src, target)
-		if(istype(returns) && returns["to_update"])
-			to_update = TRUE
-		if(istype(returns) && returns["soundToPlay"] && !play_sound)
-			play_sound = returns["soundToPlay"]
 
 /////////////////////////// Make any noise ///////////////////////////
 	if(digestion_noise_chance && prob(digestion_noise_chance))
@@ -95,6 +63,37 @@
 			if(M && M.is_preference_enabled(/datum/client_preference/digestion_noises))
 				SEND_SOUND(M, prey_digest)
 		play_sound = pred_digest
+
+	if(to_update)
+		updateVRPanels()
+
+	if(!LAZYLEN(touchable_mobs))
+		if(play_sound)
+			for(var/mob/M in hearers(VORE_SOUND_RANGE, get_turf(owner))) //so we don't fill the whole room with the sound effect
+				if(!M.is_preference_enabled(/datum/client_preference/digestion_noises))
+					continue
+				if(isturf(M.loc) || (M.loc != src)) //to avoid people on the inside getting the outside sounds and their direct sounds + built in sound pref check
+					if(fancy_vore)
+						M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+					else
+						M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
+					 //these are all external sound triggers now, so it's ok.
+		return
+
+///////////////////// Prey Loop Refresh/hack //////////////////////
+	prey_loop()
+
+///////////////////// Time to actually process mobs /////////////////////
+
+	for(var/mob/living/L as anything in touchable_mobs)
+		if(!istype(L))
+			stack_trace("Touchable mobs had a nonmob: [L]")
+			continue
+		var/list/returns = DM.process_mob(src, L)
+		if(istype(returns) && returns["to_update"])
+			to_update = TRUE
+		if(istype(returns) && returns["soundToPlay"] && !play_sound)
+			play_sound = returns["soundToPlay"]
 
 	if(play_sound)
 		for(var/mob/M in hearers(VORE_SOUND_RANGE, get_turf(owner))) //so we don't fill the whole room with the sound effect
@@ -107,19 +106,41 @@
 					M.playsound_local(get_turf(owner), play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF)
 				 //these are all external sound triggers now, so it's ok.
 
-	if(to_update)
-		updateVRPanels()
+	if(emote_active)
+		var/list/EL = emote_lists[digest_mode]
+		if(LAZYLEN(EL) && next_emote <= world.time)
+			var/living_count = 0
+			for(var/mob/living/L in contents)
+				living_count++
+			next_emote = world.time + (emote_time SECONDS)
+			for(var/mob/living/M in contents)
+				if(digest_mode == DM_DIGEST && !M.digestable)
+					continue // don't give digesty messages to indigestible people
+
+				var/raw_message = pick(EL)
+				var/formatted_message
+				formatted_message = replacetext(raw_message, "%belly", lowertext(name))
+				formatted_message = replacetext(formatted_message, "%pred", owner)
+				formatted_message = replacetext(formatted_message, "%prey", english_list(contents))
+				formatted_message = replacetext(formatted_message, "%countprey", living_count)
+				formatted_message = replacetext(formatted_message, "%count", contents.len)
+				to_chat(M, "<span class='notice'>[formatted_message]</span>")
+
 
 /obj/belly/proc/handle_touchable_atoms(list/touchable_atoms)
 	var/did_an_item = FALSE // Only do one item per cycle.
 	var/to_update = FALSE
 	var/digestion_noise_chance = 0
 	var/list/touchable_mobs = list()
+	var/touchable_amount = touchable_atoms.len  //CHOMPEdit start
 
 	for(var/A in touchable_atoms)
 		//Handle stray items
-		if(isitem(A) && !did_an_item)
-			did_an_item = handle_digesting_item(A)
+		if(isitem(A))
+			if(!item_mode_serial)
+				did_an_item = handle_digesting_item(A, touchable_amount)
+			else if(!did_an_item)
+				did_an_item = handle_digesting_item(A, 1)
 			if(did_an_item)
 				to_update = TRUE
 
@@ -129,6 +150,7 @@
 				// but we also want the prob(25) chance to run for -every- item we look at, not just once
 				// More gurgles the better~
 				digestion_noise_chance = 25
+			continue  //CHOMPEdit end
 
 		//Handle eaten mobs
 		else if(isliving(A))
@@ -196,7 +218,7 @@
 			M.playsound_local(get_turf(src), preyloop, 80, 0, channel = CHANNEL_PREYLOOP)
 			M.next_preyloop = (world.time + (52 SECONDS))
 
-/obj/belly/proc/handle_digesting_item(obj/item/I)
+/obj/belly/proc/handle_digesting_item(obj/item/I, touchable_amount) //CHOMPEdit
 	var/did_an_item = FALSE
 	// We always contaminate IDs.
 	if(contaminates || istype(I, /obj/item/weapon/card/id))
@@ -207,11 +229,11 @@
 			items_preserved |= I
 		if(IM_DIGEST_FOOD)
 			if(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I, /obj/item/organ))
-				did_an_item = digest_item(I)
+				did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 			else
 				items_preserved |= I
 		if(IM_DIGEST)
-			did_an_item = digest_item(I)
+			did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 	return did_an_item
 
 /obj/belly/proc/handle_digestion_death(mob/living/M)
@@ -227,14 +249,14 @@
 	digest_alert_owner = replacetext(digest_alert_owner, "%pred", owner)
 	digest_alert_owner = replacetext(digest_alert_owner, "%prey", M)
 	digest_alert_owner = replacetext(digest_alert_owner, "%belly", lowertext(name))
-	digest_alert_owner = replacetext(digest_alert_owner, "%count", contents.len)
 	digest_alert_owner = replacetext(digest_alert_owner, "%countprey", living_count)
+	digest_alert_owner = replacetext(digest_alert_owner, "%count", contents.len)
 
 	digest_alert_prey = replacetext(digest_alert_prey, "%pred", owner)
 	digest_alert_prey = replacetext(digest_alert_prey, "%prey", M)
 	digest_alert_prey = replacetext(digest_alert_prey, "%belly", lowertext(name))
-	digest_alert_prey = replacetext(digest_alert_prey, "%count", contents.len)
 	digest_alert_prey = replacetext(digest_alert_prey, "%countprey", living_count)
+	digest_alert_prey = replacetext(digest_alert_prey, "%count", contents.len)
 
 	//Send messages
 	to_chat(owner, "<span class='notice'>[digest_alert_owner]</span>")

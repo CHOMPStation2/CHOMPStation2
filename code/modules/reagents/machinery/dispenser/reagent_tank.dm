@@ -1,11 +1,11 @@
 /obj/structure/reagent_dispensers
 	name = "Dispenser"
 	desc = "..."
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "watertank"
+	icon = 'icons/obj/chemical_tanks.dmi'
+	icon_state = "tank"
 	layer = TABLE_LAYER
-	density = 1
-	anchored = 0
+	density = TRUE
+	anchored = FALSE
 	pressure_resistance = 2*ONE_ATMOSPHERE
 
 	var/obj/item/hose_connector/input/active/InputSocket
@@ -51,7 +51,7 @@
 	set name = "Set transfer amount"
 	set category = "Object"
 	set src in view(1)
-	var/N = input("Amount per transfer from this:","[src]") as null|anything in possible_transfer_amounts
+	var/N = tgui_input_list(usr, "Amount per transfer from this:","[src]", possible_transfer_amounts)
 	if (N)
 		amount_per_transfer_from_this = N
 
@@ -76,14 +76,15 @@
 /obj/structure/reagent_dispensers/blob_act()
 	qdel(src)
 
+/*
+ * Tanks
+ */
 
-
-//Dispensers
+//Water
 /obj/structure/reagent_dispensers/watertank
-	name = "watertank"
-	desc = "A watertank."
-	icon = 'icons/obj/objects_vr.dmi' //VOREStation Edit
-	icon_state = "watertank"
+	name = "water tank"
+	desc = "A water tank."
+	icon_state = "water"
 	amount_per_transfer_from_this = 10
 
 /obj/structure/reagent_dispensers/watertank/Initialize()
@@ -93,17 +94,17 @@
 /obj/structure/reagent_dispensers/watertank/high
 	name = "high-capacity water tank"
 	desc = "A highly-pressurized water tank made to hold vast amounts of water.."
-	icon_state = "watertank_high"
+	icon_state = "water_high"
 
 /obj/structure/reagent_dispensers/watertank/high/Initialize()
 	. = ..()
 	reagents.add_reagent("water", 4000)
 
+//Fuel
 /obj/structure/reagent_dispensers/fueltank
-	name = "fueltank"
-	desc = "A fueltank."
-	icon = 'icons/obj/objects_vr.dmi' //VOREStation Edit
-	icon_state = "weldtank"
+	name = "fuel tank"
+	desc = "A fuel tank."
+	icon_state = "fuel"
 	amount_per_transfer_from_this = 10
 	var/modded = 0
 	var/obj/item/device/assembly_holder/rig = null
@@ -112,30 +113,45 @@
 	. = ..()
 	reagents.add_reagent("fuel",1000)
 
-//VOREStation Add
 /obj/structure/reagent_dispensers/fueltank/high
 	name = "high-capacity fuel tank"
 	desc = "A highly-pressurized fuel tank made to hold vast amounts of fuel."
-	icon_state = "weldtank_high"
+	icon_state = "fuel_high"
 
 /obj/structure/reagent_dispensers/fueltank/high/Initialize()
 	. = ..()
 	reagents.add_reagent("fuel",4000)
 
+//Foam
 /obj/structure/reagent_dispensers/foam
-	name = "foamtank"
+	name = "foam tank"
 	desc = "A foam tank."
-	icon = 'icons/obj/objects_vr.dmi'
-	icon_state = "foamtank"
+	icon_state = "foam"
 	amount_per_transfer_from_this = 10
 
 /obj/structure/reagent_dispensers/foam/Initialize()
 	. = ..()
 	reagents.add_reagent("firefoam",1000)
 
+//Helium3
+/obj/structure/reagent_dispensers/he3
+	name = "/improper He3 tank"
+	desc = "A Helium3 tank."
+	icon_state = "he3"
+	amount_per_transfer_from_this = 10
+
+/obj/structure/reagent_dispenser/he3/Initialize()
+	..()
+	reagents.add_reagent("helium3",1000)
+
+/*
+ * Misc
+ */
+
 /obj/structure/reagent_dispensers/fueltank/barrel
 	name = "hazardous barrel"
 	desc = "An open-topped barrel full of nasty-looking liquid."
+	icon = 'icons/obj/objects_vr.dmi'
 	icon_state = "barrel"
 	modded = TRUE
 
@@ -247,8 +263,8 @@
 	desc = "Refills pepper spray canisters."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "peppertank"
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = FALSE
 	amount_per_transfer_from_this = 45
 
 /obj/structure/reagent_dispensers/peppertank/Initialize()
@@ -263,7 +279,7 @@
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "water_cooler"
 	possible_transfer_amounts = null
-	anchored = 1
+	anchored = TRUE
 	var/bottle = 0
 	var/cups = 0
 	var/cupholder = 0
@@ -416,7 +432,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "virusfoodtank"
 	amount_per_transfer_from_this = 10
-	anchored = 1
+	anchored = TRUE
 
 /obj/structure/reagent_dispensers/virusfood/Initialize()
 	. = ..()
@@ -428,12 +444,12 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "acidtank"
 	amount_per_transfer_from_this = 10
-	anchored = 1
+	anchored = TRUE
 
 /obj/structure/reagent_dispensers/acid/Initialize()
 	. = ..()
 	reagents.add_reagent("sacid", 1000)
-	
+
 //Cooking oil refill tank
 /obj/structure/reagent_dispensers/cookingoil
 	name = "cooking oil tank"
@@ -457,14 +473,3 @@
 	reagents.splash_area(get_turf(src), 3)
 	visible_message(span("danger", "The [src] bursts open, spreading oil all over the area."))
 	qdel(src)
-
-/obj/structure/reagent_dispensers/he3
-	name = "fueltank"
-	desc = "A fueltank."
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "weldtank"
-	amount_per_transfer_from_this = 10
-
-/obj/structure/reagent_dispenser/he3/Initialize()
-	..()
-	reagents.add_reagent("helium3",1000)

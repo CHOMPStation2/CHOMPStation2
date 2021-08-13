@@ -8,18 +8,19 @@ FIRE ALARM
 	icon_state = "fire"
 	layer = ABOVE_WINDOW_LAYER
 	blocks_emissive = FALSE
+	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 	var/detecting = 1.0
 	var/working = 1.0
 	var/time = 10.0
 	var/timing = 0.0
 	var/lockdownbyai = 0
-	anchored = 1.0
+	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 6
 	power_channel = ENVIRON
 	var/last_process = 0
-	panel_open = 0
+	panel_open = FALSE
 	var/seclevel
 	circuit = /obj/item/weapon/circuitboard/firealarm
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
@@ -27,14 +28,31 @@ FIRE ALARM
 /obj/machinery/firealarm/alarms_hidden
 	alarms_hidden = TRUE
 
+/obj/machinery/firealarm/angled
+	icon = 'icons/obj/wall_machines_angled.dmi'
+
+/obj/machinery/firealarm/angled/hidden
+	alarms_hidden = TRUE
+
+/obj/machinery/firealarm/angled/offset_alarm()
+	pixel_x = (dir & 3) ? 0 : (dir == 4 ? 20 : -20)
+	pixel_y = (dir & 3) ? (dir == 1 ? -18 : 21) : 0
+
 /obj/machinery/firealarm/examine()
 	. = ..()
 	. += "Current security level: [seclevel]"
 
 /obj/machinery/firealarm/Initialize()
 	. = ..()
+	if(!pixel_x && !pixel_y)
+		offset_alarm()
+
 	if(z in using_map.contact_levels)
 		set_security_level(security_level ? get_security_level() : "green")
+
+/obj/machinery/firealarm/proc/offset_alarm()
+	pixel_x = (dir & 3) ? 0 : (dir == 4 ? 26 : -26)
+	pixel_y = (dir & 3) ? (dir == 1 ? -26 : 26) : 0
 
 /obj/machinery/firealarm/update_icon()
 	cut_overlays()
@@ -72,8 +90,10 @@ FIRE ALARM
 	
 	. += mutable_appearance(icon, fire_state)
 	. += emissive_appearance(icon, fire_state)
-	. += mutable_appearance(icon, "overlay_[seclevel]")
-	. += emissive_appearance(icon, "overlay_[seclevel]")
+	
+	if(seclevel)
+		. += mutable_appearance(icon, "overlay_[seclevel]")
+		. += emissive_appearance(icon, "overlay_[seclevel]")
 	
 	add_overlay(.)
 
@@ -186,7 +206,7 @@ Just a object used in constructing fire alarms
 	icon_state = "door_electronics"
 	desc = "A circuit. It has a label on it, it says \"Can handle heat levels up to 40 degrees celsius!\""
 	w_class = ITEMSIZE_SMALL
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50)
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 */
 /obj/machinery/partyalarm
 	name = "\improper PARTY BUTTON"
@@ -198,7 +218,7 @@ Just a object used in constructing fire alarms
 	var/time = 10.0
 	var/timing = 0.0
 	var/lockdownbyai = 0
-	anchored = 1.0
+	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 6

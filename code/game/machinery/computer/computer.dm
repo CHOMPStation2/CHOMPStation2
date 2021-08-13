@@ -2,8 +2,8 @@
 	name = "computer"
 	icon = 'icons/obj/computer.dmi'
 	icon_state = "computer"
-	density = 1
-	anchored = 1.0
+	density = TRUE
+	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 300
 	active_power_usage = 300
@@ -35,11 +35,11 @@
 /obj/machinery/computer/ex_act(severity)
 	switch(severity)
 		if(1.0)
-			qdel(src)
+			fall_apart(severity)
 			return
 		if(2.0)
 			if (prob(25))
-				qdel(src)
+				fall_apart(severity)
 				return
 			if (prob(50))
 				for(var/x in verbs)
@@ -66,6 +66,21 @@
 	
 	. = list()
 
+	// Connecty
+	if(initial(icon_state) == "computer")
+		var/append_string = ""
+		var/left = turn(dir, 90)
+		var/right = turn(dir, -90)
+		var/turf/L = get_step(src, left)
+		var/turf/R = get_step(src, right)
+		var/obj/machinery/computer/LC = locate() in L
+		var/obj/machinery/computer/RC = locate() in R
+		if(LC && LC.dir == dir && initial(LC.icon_state) == "computer")
+			append_string += "_L"
+		if(RC && RC.dir == dir && initial(RC.icon_state) == "computer")
+			append_string += "_R"
+		icon_state = "computer[append_string]"
+
 	if(icon_keyboard)
 		if(stat & NOPOWER)
 			playsound(src, 'sound/machines/terminal_off.ogg', 50, 1)
@@ -76,6 +91,7 @@
 	var/overlay_state = icon_screen
 	if(stat & BROKEN)
 		overlay_state = "[icon_state]_broken"
+
 	. += mutable_appearance(icon, overlay_state)
 	. += emissive_appearance(icon, overlay_state)
 	playsound(src, 'sound/machines/terminal_on.ogg', 50, 1)

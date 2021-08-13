@@ -241,7 +241,7 @@
 	base_color = "#333333"
 
 	reagent_tag = IS_TAJARA
-	allergens = COFFEE
+	allergens = ALLERGEN_COFFEE
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
@@ -347,7 +347,9 @@
 	breath_heat_level_3 = 1350	//Default 1250
 
 	reagent_tag = IS_SKRELL
-	allergens = MEAT|FISH|DAIRY|EGGS
+	allergens = ALLERGEN_MEAT|ALLERGEN_FISH|ALLERGEN_DAIRY|ALLERGEN_EGGS
+
+	water_breather = TRUE
 
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
@@ -362,9 +364,6 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
-
-/datum/species/skrell/can_breathe_water()
-	return TRUE
 
 /datum/species/zaddat
 	name = SPECIES_ZADDAT
@@ -633,7 +632,9 @@
 		if(isturf(H.loc)) //else, there's considered to be no light
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
-		H.adjust_nutrition(light_amount)
+		// Don't overfeed, just make them full without going over.
+		if((H.nutrition + light_amount) < initial(H.nutrition))
+			H.adjust_nutrition(light_amount)
 		H.shock_stage -= light_amount
 
 		if(light_amount >= 3) //if there's enough light, heal

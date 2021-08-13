@@ -50,14 +50,14 @@
 	if(operating == -1)
 		ae.icon_state = "door_electronics_smoked"
 		operating = 0
-	src.density = 0
+	src.density = FALSE
 	playsound(src, "shatter", 70, 1)
 	if(display_message)
 		visible_message("[src] shatters!")
 	qdel(src)
 
 /obj/machinery/door/window/Destroy()
-	density = 0
+	density = FALSE
 	update_nearby_tiles()
 	return ..()
 
@@ -86,7 +86,14 @@
 /obj/machinery/door/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && mover.checkpass(PASSGLASS))
 		return TRUE
-	if(get_dir(mover, loc) == turn(dir, 180)) //Make sure looking at appropriate border
+	if(get_dir(mover, target) == reverse_dir[dir]) // From elsewhere to here, can't move against our dir
+		return !density
+	return TRUE
+
+/obj/machinery/door/window/Uncross(atom/movable/mover, turf/target)
+	if(istype(mover) && mover.checkpass(PASSGLASS))
+		return TRUE
+	if(get_dir(mover, target) == dir) // From here to elsewhere, can't move in our dir
 		return !density
 	return TRUE
 
@@ -96,14 +103,6 @@
 			return FALSE
 		return !density  // Air can flow if open (density == FALSE).
 	return TRUE // Windoors don't block if not facing the right way.
-
-/obj/machinery/door/window/CheckExit(atom/movable/mover as mob|obj, turf/target as turf)
-	if(istype(mover) && mover.checkpass(PASSGLASS))
-		return 1
-	if(get_dir(loc, target) == dir)
-		return !density
-	else
-		return 1
 
 /obj/machinery/door/window/open()
 	if (operating == 1 || !density) //doors can still open when emag-disabled
@@ -117,7 +116,7 @@
 	sleep(10)
 
 	explosion_resistance = 0
-	density = 0
+	density = FALSE
 	update_icon()
 	update_nearby_tiles()
 
@@ -228,7 +227,7 @@
 				if (src.base_state == "right" || src.base_state == "rightsecure")
 					wa.facing = "r"
 				wa.set_dir(src.dir)
-				wa.anchored = 1
+				wa.anchored = TRUE
 				wa.created_name = name
 				wa.state = "02"
 				wa.step = 2

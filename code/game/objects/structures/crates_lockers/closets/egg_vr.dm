@@ -3,7 +3,7 @@
 	desc = "It's an egg; it's smooth to the touch." //This is the default egg.
 	icon = 'icons/obj/egg_vr.dmi'
 	icon_state = "egg"
-	density = 0 //Just in case there's a lot of eggs, so it doesn't block hallways/areas.
+	density = FALSE //Just in case there's a lot of eggs, so it doesn't block hallways/areas.
 	var/icon_closed = "egg"
 	var/icon_opened = "egg_open"
 	var/icon_locked = "egg"
@@ -13,6 +13,7 @@
 	opened = 0
 	sealed = 0 //Don't touch this.
 	health = 100
+	door_anim_time = 0 //Unsupported
 
 /obj/structure/closet/secure_closet/egg/update_icon()
 	if(opened)

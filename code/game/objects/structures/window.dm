@@ -2,13 +2,13 @@
 	name = "window"
 	desc = "A window."
 	icon = 'icons/obj/structures_vr.dmi' // VOREStation Edit - New icons
-	density = 1
+	density = TRUE
 	can_atmos_pass = ATMOS_PASS_PROC
 	w_class = ITEMSIZE_NORMAL
 
 	layer = WINDOW_LAYER
 	pressure_resistance = 4*ONE_ATMOSPHERE
-	anchored = 1.0
+	anchored = TRUE
 	flags = ON_BORDER
 	var/maxhealth = 14.0
 	var/maximal_heat = T0C + 100 		// Maximal heat before this window begins taking damage from fire
@@ -138,23 +138,23 @@
 		return TRUE
 	if(is_fulltile())
 		return FALSE	//full tile window, you can't move into it!
-	if((get_dir(loc, target) & dir) || (get_dir(mover, target) == turn(dir, 180)))
+	if(get_dir(mover, target) == reverse_dir[dir]) // From elsewhere to here, can't move against our dir
 		return !density
 	else
 		return TRUE
 
+/obj/structure/window/Uncross(atom/movable/mover, turf/target)
+	if(istype(mover) && mover.checkpass(PASSGLASS))
+		return TRUE
+	if(get_dir(mover, target) == dir) // From here to elsewhere, can't move in our dir
+		return !density
+	else
+		return TRUE
 
 /obj/structure/window/CanZASPass(turf/T, is_zone)
 	if(is_fulltile() || get_dir(T, loc) == turn(dir, 180)) // Make sure we're handling the border correctly.
 		return !anchored // If it's anchored, it'll block air.
 	return TRUE // Don't stop airflow from the other sides.
-
-/obj/structure/window/CheckExit(atom/movable/O as mob|obj, target as turf)
-	if(istype(O) && O.checkpass(PASSGLASS))
-		return 1
-	if(get_dir(O.loc, target) == dir)
-		return 0
-	return 1
 
 /obj/structure/window/hitby(AM as mob|obj)
 	..()
@@ -167,7 +167,7 @@
 		tforce = I.throwforce
 	if(reinf) tforce *= 0.25
 	if(health - tforce <= 7 && !reinf)
-		anchored = 0
+		anchored = FALSE
 		update_verbs()
 		update_nearby_icons()
 		step(src, get_dir(AM, src))
@@ -215,7 +215,7 @@
 			damage = damage / 2
 		take_damage(damage)
 	else
-		visible_message("<span class='notice'>\The [user] bonks \the [src] harmlessly.</span>")
+		visible_message("<b>\The [user]</b> bonks \the [src] harmlessly.")
 	user.do_attack_animation(src)
 	return 1
 
@@ -273,12 +273,14 @@
 			to_chat(user, "<span class='notice'>You have [state == 1 ? "un" : ""]fastened the window [state ? "from" : "to"] the frame.</span>")
 		else if(reinf && state == 0)
 			anchored = !anchored
+			update_nearby_tiles(need_rebuild=1)
 			update_nearby_icons()
 			update_verbs()
 			playsound(src, W.usesound, 75, 1)
 			to_chat(user, "<span class='notice'>You have [anchored ? "" : "un"]fastened the frame [anchored ? "to" : "from"] the floor.</span>")
 		else if(!reinf)
 			anchored = !anchored
+			update_nearby_tiles(need_rebuild=1)
 			update_nearby_icons()
 			update_verbs()
 			playsound(src, W.usesound, 75, 1)
@@ -302,7 +304,7 @@
 		if (C.use(1))
 			playsound(src, 'sound/effects/sparks1.ogg', 75, 1)
 			user.visible_message( \
-				"<span class='notice'>\The [user] begins to wire \the [src] for electrochromic tinting.</span>", \
+				"<b>\The [user]</b> begins to wire \the [src] for electrochromic tinting.", \
 				"<span class='notice'>You begin to wire \the [src] for electrochromic tinting.</span>", \
 				"You hear sparks.")
 			if(do_after(user, 20 * C.toolspeed, src) && state == 0)
@@ -325,7 +327,7 @@
 			user.do_attack_animation(src)
 			hit(W.force)
 			if(health <= 7)
-				anchored = 0
+				anchored = FALSE
 				update_nearby_icons()
 				step(src, get_dir(user, src))
 		else
@@ -392,7 +394,7 @@
 
 	//player-constructed windows
 	if (constructed)
-		anchored = 0
+		anchored = FALSE
 		state = 0
 		update_verbs()
 
@@ -405,7 +407,7 @@
 
 
 /obj/structure/window/Destroy()
-	density = 0
+	density = FALSE
 	update_nearby_tiles()
 	var/turf/location = loc
 	. = ..()

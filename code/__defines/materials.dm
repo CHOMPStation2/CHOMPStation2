@@ -1,11 +1,11 @@
-#define DEFAULT_TABLE_MATERIAL "plastic"
-#define DEFAULT_WALL_MATERIAL "steel"
-
 #define MAT_IRON			"iron"
 #define MAT_MARBLE			"marble"
 #define MAT_STEEL			"steel"
 #define MAT_PLASTIC			"plastic"
 #define MAT_GLASS			"glass"
+#define MAT_RGLASS			"rglass"
+#define MAT_PGLASS			"borosilicate glass"
+#define MAT_RPGLASS         "reinforced borosilicate glass"
 #define MAT_SILVER			"silver"
 #define MAT_GOLD			"gold"
 #define MAT_URANIUM			"uranium"
@@ -37,6 +37,7 @@
 #define MAT_CHITIN			"chitin"
 #define MAT_CLOTH			"cloth"
 #define MAT_SYNCLOTH		"syncloth"
+#define MAT_FIBERS			"fibers"
 #define MAT_COPPER			"copper"
 #define MAT_QUARTZ			"quartz"
 #define MAT_TIN				"tin"
@@ -47,6 +48,9 @@
 #define MAT_BOROSILICATE	"borosilicate glass"
 #define MAT_SANDSTONE		"sandstone"
 
+#define DEFAULT_TABLE_MATERIAL MAT_PLASTIC
+#define DEFAULT_WALL_MATERIAL MAT_STEEL
+
 #define SHARD_SHARD "shard"
 #define SHARD_SHRAPNEL "shrapnel"
 #define SHARD_STONE_PIECE "piece"
@@ -56,9 +60,6 @@
 #define MATERIAL_UNMELTABLE 0x1
 #define MATERIAL_BRITTLE    0x2
 #define MATERIAL_PADDING    0x4
-
-#define DEFAULT_TABLE_MATERIAL "plastic"
-#define DEFAULT_WALL_MATERIAL "steel"
 
 #define TABLE_BRITTLE_MATERIAL_MULTIPLIER 4 // Amount table damage is multiplied by if it is made of a brittle material (e.g. glass)
 

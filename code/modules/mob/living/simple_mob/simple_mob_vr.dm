@@ -67,8 +67,7 @@
 // Update fullness based on size & quantity of belly contents
 /mob/living/simple_mob/proc/update_fullness()
 	var/new_fullness = 0
-	for(var/belly in vore_organs)
-		var/obj/belly/B = belly
+	for(var/obj/belly/B as anything in vore_organs)
 		for(var/mob/living/M in B)
 			new_fullness += M.size_multiplier
 	new_fullness = new_fullness / size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
@@ -167,9 +166,9 @@
 	vore_pounce_cooldown = world.time + 20 SECONDS // don't attempt another pounce for a while
 	if(prob(successrate)) // pounce success!
 		M.Weaken(5)
-		M.visible_message("<span class='danger'>\the [src] pounces on \the [M]!</span>!")
+		M.visible_message("<span class='danger'>\The [src] pounces on \the [M]!</span>!")
 	else // pounce misses!
-		M.visible_message("<span class='danger'>\the [src] attempts to pounce \the [M] but misses!</span>!")
+		M.visible_message("<span class='danger'>\The [src] attempts to pounce \the [M] but misses!</span>!")
 		playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 
 	if(will_eat(M) && (!M.canmove || vore_standing_too)) //if they're edible then eat them too
@@ -265,7 +264,7 @@
 	if(istype(tmob) && will_eat(tmob) && !istype(tmob, type) && prob(vore_bump_chance) && !ckey) //check if they decide to eat. Includes sanity check to prevent cannibalism.
 		if(tmob.canmove && prob(vore_pounce_chance)) //if they'd pounce for other noms, pounce for these too, otherwise still try and eat them if they hold still
 			tmob.Weaken(5)
-		tmob.visible_message("<span class='danger'>\the [src] [vore_bump_emote] \the [tmob]!</span>!")
+		tmob.visible_message("<span class='danger'>\The [src] [vore_bump_emote] \the [tmob]!</span>!")
 		set_AI_busy(TRUE)
 		spawn()
 			animal_nom(tmob)
@@ -410,7 +409,7 @@
 		choices += M
 	choices -= src
 
-	var/mob/living/T = input(src,"Who do you wish to leap at?") as null|anything in choices
+	var/mob/living/T = tgui_input_list(src, "Who do you wish to leap at?", "Target Choice", choices)
 
 	if(!T || !src || src.stat) return
 

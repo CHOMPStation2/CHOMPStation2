@@ -12,14 +12,14 @@
 	item_state = "syringe_0"
 	icon_state = "0"
 	center_of_mass = list("x" = 16,"y" = 14)
-	matter = list("glass" = 150)
+	matter = list(MAT_GLASS = 150)
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = null
 	volume = 15
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
-	sharp = 1
-	unacidable = 1 //glass
+	sharp = TRUE
+	unacidable = TRUE //glass
 	var/mode = SYRINGE_DRAW
 	var/image/filling //holds a reference to the current filling overlay
 	var/visible_name = "a syringe"

@@ -2,8 +2,8 @@
 	name = "robotic fabricator"
 	icon = 'icons/obj/robotics.dmi'
 	icon_state = "fab-idle"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	var/metal_amount = 0
 	var/operating = 0
 	var/obj/item/robot_parts/being_built = null
@@ -12,7 +12,7 @@
 	active_power_usage = 10000
 
 /obj/machinery/robotic_fabricator/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/stack/material) && O.get_material_name() == DEFAULT_WALL_MATERIAL)
+	if(istype(O, /obj/item/stack/material) && O.get_material_name() == MAT_STEEL)
 		var/obj/item/stack/M = O
 		if(metal_amount < 150000.0)
 			var/count = 0
@@ -22,7 +22,7 @@
 					if(!M.get_amount())
 						return
 					while(metal_amount < 150000 && M.amount)
-						metal_amount += O.matter[DEFAULT_WALL_MATERIAL] /*O:height * O:width * O:length * 100000.0*/
+						metal_amount += O.matter[MAT_STEEL] /*O:height * O:width * O:length * 100000.0*/
 						M.use(1)
 						count++
 

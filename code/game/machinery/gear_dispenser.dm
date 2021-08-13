@@ -80,15 +80,16 @@ var/list/dispenser_presets = list()
 	var/spawned = list()
 
 	voidsuit = new voidsuit_type(T)
-	spawned += voidsuit
+	spawned += voidsuit // We only add the voidsuit so the game doesn't try to put the tank/helmet/boots etc into their hands
+	
 	// If we're supposed to make a helmet
 	if(voidhelmet_type)
 		// The coder may not have realized this type spawns its own helmet
 		if(voidsuit.helmet)
 			error("[src] created a voidsuit [voidsuit] and wants to add a helmet but it already has one")
 		else
-			voidsuit.attach_helmet(new voidhelmet_type())
-			spawned += voidhelmet
+			voidhelmet = new voidhelmet_type()
+			voidsuit.attach_helmet(voidhelmet)
 	// If we're supposed to make boots
 	if(magboots_type)
 		// The coder may not have realized thist ype spawns its own boots
@@ -97,7 +98,6 @@ var/list/dispenser_presets = list()
 		else
 			magboots = new magboots_type(voidsuit)
 			voidsuit.boots = magboots
-			spawned += magboots
 	
 	if(refit)
 		voidsuit.refit_for_species(user.species?.get_bodytype()) // does helmet and boots if they're attached
@@ -109,7 +109,6 @@ var/list/dispenser_presets = list()
 			else
 				var/obj/item/life_support = new /obj/item/device/suit_cooling_unit(voidsuit)
 				voidsuit.cooler = life_support
-				spawned += life_support
 		else if(user.species?.breath_type)
 			if(voidsuit.tank)
 				error("[src] created a voidsuit [voidsuit] and wants to add a tank but it already has one")
@@ -121,7 +120,6 @@ var/list/dispenser_presets = list()
 				if(tankpath)
 					var/obj/item/life_support = new tankpath(voidsuit)
 					voidsuit.tank = life_support
-					spawned += life_support
 				else
 					voidsuit.audible_message("Dispenser warning: Unable to locate suitable airtank for user.")
 
@@ -149,8 +147,8 @@ var/list/dispenser_presets = list()
 	desc = "An industrial U-Tak-It Dispenser unit designed to fetch all kinds of equipment."
 	icon = 'icons/obj/suitdispenser.dmi'
 	icon_state = "geardispenser"
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	var/list/dispenses = list(/datum/gear_disp/trash) // put your gear datums here!
 	var/datum/gear_disp/one_setting
 	var/global/list/gear_distributed_to = list()
@@ -188,7 +186,7 @@ var/list/dispenser_presets = list()
 			dispenser_flags &= ~GD_BUSY
 			return
 		
-		var/choice = input("Select equipment to dispense.", "Equipment Dispenser") as null|anything in gear_list
+		var/choice = tgui_input_list(usr, "Select equipment to dispense.", "Equipment Dispenser", gear_list)
 		
 		if(!choice)
 			dispenser_flags &= ~GD_BUSY
@@ -258,13 +256,7 @@ var/list/dispenser_presets = list()
 	if((dispenser_flags & GD_UNIQUE) && !emagged)
 		unique_dispense_list |= user.ckey
 
-	flick("[icon_state]-scan",src)
-	visible_message("\The [src] scans its user.", runemessage = "hums")
-	sleep(30)
-	flick("[icon_state]-dispense",src)
-	dispenser_flags |= GD_BUSY
-	sleep(15)
-	dispenser_flags &= ~GD_BUSY
+	animate_dispensing() // Blocks here until animation is done
 
 	var/turf/T = get_turf(src)
 	if(!(S && T)) // in case we got destroyed while we slept
@@ -276,6 +268,15 @@ var/list/dispenser_presets = list()
 		emagged = FALSE
 	if(greet && user && !user.stat) // in case we got destroyed while we slept
 		to_chat(user,"<span class='notice'>[S.name] dispensing processed. Have a good day.</span>")
+
+/obj/machinery/gear_dispenser/proc/animate_dispensing()
+	flick("[icon_state]-scan",src)
+	visible_message("\The [src] scans its user.", runemessage = "hums")
+	sleep(30)
+	flick("[icon_state]-dispense",src)
+	dispenser_flags |= GD_BUSY
+	sleep(15)
+	dispenser_flags &= ~GD_BUSY
 
 /obj/machinery/gear_dispenser/emag_act(remaining_charges, mob/user, emag_source)
 	. = ..()
@@ -292,9 +293,99 @@ var/list/dispenser_presets = list()
 	icon_state = "suitdispenser2"
 
 /obj/machinery/gear_dispenser/suit_old
-	name = "duit dispenser"
+	name = "suit dispenser"
 	desc = "An industrial U-Tak-It Dispenser unit designed to fetch all kinds of space suits. An older model."
 	icon_state = "suitdispenser"
+
+/obj/machinery/gear_dispenser/suit_fancy
+	name = "suit dispenser"
+	desc = "An industrial U-Tak-It Dispenser unit designed to fetch all kinds of space suits. A newer model."
+	icon_state = "suit_storage_map"
+	var/obj/effect/overlay/vis/door
+	var/datum/gear_disp/held_gear_disp
+	var/special_frame
+
+/obj/machinery/gear_dispenser/suit_fancy/Initialize(mapload)
+	. = ..()
+	door = add_vis_overlay("closed", layer = 4, unique = TRUE)
+	icon_state = "suit_storage"
+	if(special_frame)
+		add_overlay(special_frame)
+
+/obj/machinery/gear_dispenser/suit_fancy/Destroy()
+	qdel_null(door)
+	held_gear_disp = null
+	return ..()
+
+/obj/machinery/gear_dispenser/suit_fancy/power_change()
+	. = ..()
+	update_icon()
+
+/obj/machinery/gear_dispenser/suit_fancy/update_icon()
+	cut_overlays()
+	
+	if(special_frame)
+		add_overlay(special_frame)
+	
+	if(needs_power && inoperable())
+		add_overlay("nopower")
+	else
+		add_overlay("light1")
+	
+	if(held_gear_disp)
+		add_overlay("fullsuit")
+		if(operable())
+			add_overlay("light2")
+
+/obj/machinery/gear_dispenser/suit_fancy/attack_hand(var/mob/living/carbon/human/user)
+	if(held_gear_disp)
+		var/turf/T = get_turf(user)
+		var/list/spawned = held_gear_disp.spawn_gear(T, user)
+		for(var/obj/item/I in spawned)
+			user.put_in_hands(I)
+		to_chat(user, "<span class='notice'>You remove the equipment from [src].</span>")
+		held_gear_disp = null
+		animate_close()
+		return
+	return ..()
+
+/obj/machinery/gear_dispenser/suit_fancy/dispense(var/datum/gear_disp/S,var/mob/living/carbon/human/user,var/greet=TRUE)
+	if(!S.amount && !(dispenser_flags & GD_UNLIMITED))
+		to_chat(user,"<span class='warning'>There are no more [S.name]s left!</span>")
+		dispenser_flags &= ~GD_BUSY
+		return 1
+	else if(!(dispenser_flags & GD_UNLIMITED))
+		S.amount--
+	if((dispenser_flags & GD_NOGREED) && !emagged)
+		gear_distributed_to["[type]"] |= user.ckey
+	if((dispenser_flags & GD_UNIQUE) && !emagged)
+		unique_dispense_list |= user.ckey
+
+	held_gear_disp = S
+
+	animate_dispensing()
+	dispenser_flags &= ~GD_BUSY
+
+	if(emagged)
+		emagged = FALSE
+	if(greet && user && !user.stat) // in case we got destroyed while we slept
+		to_chat(user,"<span class='notice'>[S.name] dispensing processed. Have a good day.</span>")
+
+/obj/machinery/gear_dispenser/suit_fancy/animate_dispensing()
+	add_overlay("working")
+	sleep(5 SECONDS)
+	add_overlay("fullsuit")
+	door.icon_state = "open"
+	flick("anim_open", door)
+	sleep(10.5)
+	add_overlay("light2")
+	cut_overlay("working")
+
+/obj/machinery/gear_dispenser/suit_fancy/proc/animate_close()
+	cut_overlay("fullsuit")
+	cut_overlay("light2")
+	door.icon_state = "closed"
+	flick("anim_close", door)
 
 // For fluff/custom items
 /obj/machinery/gear_dispenser/custom
@@ -466,6 +557,107 @@ var/list/dispenser_presets = list()
 	icon_state = "suitdispenserAL"
 	dispenser_flags = GD_ONEITEM|GD_NOGREED|GD_UNLIMITED
 	one_setting = /datum/gear_disp/voidsuit/autolok
+
+/obj/machinery/gear_dispenser/suit_fancy/autolok
+	name = "AutoLok Suit Dispenser"
+	desc = "An industrial U-Tak-It Dispenser unit designed to fetch a specific AutoLok mass produced suit."
+	dispenser_flags = GD_ONEITEM|GD_NOGREED|GD_UNLIMITED
+	one_setting = /datum/gear_disp/voidsuit/autolok
+	special_frame = "frame_grey"
+
+////////////////////////////// MOEBIUS SUIT DISPENSERS ///////////////////////////
+/datum/gear_disp/voidsuit/aether
+	name = "Aether Voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/aether
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/aether
+
+/obj/machinery/gear_dispenser/suit/aether
+	name = "\improper Aether Voidsuit Dispenser"
+	desc = "An industrial U-Tak-It Dispenser unit designed to fetch a specific Aether-produced high-end suit."
+	icon_state = "suitdispenserMB"
+	dispenser_flags = GD_ONEITEM|GD_NOGREED|GD_UNLIMITED
+	one_setting = /datum/gear_disp/voidsuit/aether
+
+/obj/machinery/gear_dispenser/suit_fancy/aether
+	name = "\improper Aether Voidsuit Dispenser"
+	desc = "A commercial U-Tak-It Dispenser unit designed to fetch a specific Aether-produced high-end suit."
+	dispenser_flags = GD_ONEITEM|GD_NOGREED|GD_UNLIMITED
+	one_setting = /datum/gear_disp/voidsuit/aether
+	special_frame = "frame_purple"
+
+////////////////////////////// COMMONWEALTH SUIT DISPENSERS ///////////////////////////
+/datum/gear_disp/voidsuit/com_mining
+	name = "Commonwealth mining voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/mining/alt2
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/mining/alt2
+
+/datum/gear_disp/voidsuit/com_riot
+	name = "Commonwealth crowd control voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/security/riot/alt
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/security/riot/alt
+
+/datum/gear_disp/voidsuit/com_pilot
+	name = "Commonwealth pilot voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/pilot/alt2
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/pilot/alt2
+
+/datum/gear_disp/voidsuit/com_medical
+	name = "Commonwealth medical voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/medical/alt2
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/medical/alt2
+
+/datum/gear_disp/voidsuit/com_explorer
+	name = "Commonwealth explorer voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/exploration/alt2
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/exploration/alt2
+
+/datum/gear_disp/voidsuit/com_engineering
+	name = "Commonwealth engineering voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/engineering/alt2
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/engineering/alt2
+
+/datum/gear_disp/voidsuit/com_atmos
+	name = "Commonwealth atmos voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/atmos/alt2
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/atmos/alt2
+
+/datum/gear_disp/voidsuit/com_command
+	name = "Commonwealth command voidsuit"
+	voidsuit_type = /obj/item/clothing/suit/space/void/captain/alt
+	voidhelmet_type = /obj/item/clothing/head/helmet/space/void/captain/alt
+
+/obj/machinery/gear_dispenser/suit/commonwealth
+	name = "\improper Commonwealth Voidsuit Dispenser"
+	desc = "An industrial U-Tak-It Dispenser unit designed to fetch surplus Commonwealth voidsuits."
+	icon_state = "suitdispenserMB"
+	dispenser_flags = GD_NOGREED|GD_UNLIMITED
+	dispenses = list(
+		/datum/gear_disp/voidsuit/com_mining,
+		/datum/gear_disp/voidsuit/com_riot,
+		/datum/gear_disp/voidsuit/com_pilot,
+		/datum/gear_disp/voidsuit/com_medical,
+		/datum/gear_disp/voidsuit/com_explorer,
+		/datum/gear_disp/voidsuit/com_engineering,
+		/datum/gear_disp/voidsuit/com_atmos,
+		/datum/gear_disp/voidsuit/com_command
+	)
+
+/obj/machinery/gear_dispenser/suit_fancy/commonwealth
+	name = "\improper Commonwealth Voidsuit Dispenser"
+	desc = "A commercial U-Tak-It Dispenser unit designed to fetch surplus Commonwealth voidsuits."
+	dispenser_flags = GD_NOGREED|GD_UNLIMITED
+	one_setting = /datum/gear_disp/voidsuit/aether
+	special_frame = "frame_red"
+	dispenses = list(
+		/datum/gear_disp/voidsuit/com_mining,
+		/datum/gear_disp/voidsuit/com_riot,
+		/datum/gear_disp/voidsuit/com_pilot,
+		/datum/gear_disp/voidsuit/com_medical,
+		/datum/gear_disp/voidsuit/com_explorer,
+		/datum/gear_disp/voidsuit/com_engineering,
+		/datum/gear_disp/voidsuit/com_atmos,
+		/datum/gear_disp/voidsuit/com_command
+	)
 
 // Adminbuse
 /obj/machinery/gear_dispenser/vv_get_dropdown()

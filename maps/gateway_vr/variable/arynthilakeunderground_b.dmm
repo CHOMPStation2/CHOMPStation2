@@ -103,6 +103,10 @@
 /obj/random/awayloot,
 /turf/simulated/floor/tiled/eris/techmaint,
 /area/gateway/arynthilake/engine)
+"jX" = (
+/obj/effect/landmark/hidden_level,
+/turf/simulated/mineral/ignore_cavegen,
+/area/gateway/arynthilake/underground)
 "kb" = (
 /turf/simulated/wall/r_wall,
 /area/gateway/arynthilake/engine)
@@ -139,10 +143,6 @@
 /area/gateway/arynthilake/underground/intocave{
 	enter_message = "There is some light filtering from the center of this patch of sand. You could probably climb up from there."
 	})
-"ni" = (
-/obj/random/mob/semirandom_mob_spawner/robot,
-/turf/simulated/floor/tiled/eris/steel/danger,
-/area/gateway/arynthilake/engine)
 "oL" = (
 /turf/simulated/floor/tiled/eris/steel/techfloor,
 /area/gateway/arynthilake/engine)
@@ -197,10 +197,6 @@
 "wi" = (
 /turf/simulated/wall/r_wall,
 /area/gateway/arynthilake/underground/maintenance)
-"wG" = (
-/obj/random/mob/semirandom_mob_spawner/robot,
-/turf/simulated/floor/tiled/eris/steel/techfloor,
-/area/gateway/arynthilake/engine)
 "xl" = (
 /obj/random/awayloot,
 /obj/structure/table/rack/shelf/steel,
@@ -442,7 +438,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/random/mob/semirandom_mob_spawner/robot,
 /turf/simulated/floor/tiled/eris/steel/techfloor,
 /area/gateway/arynthilake/engine)
 "ZX" = (
@@ -732,7 +727,7 @@ bL
 bL
 bL
 bL
-bL
+jX
 bX
 "}
 (3,1,1) = {"
@@ -915,7 +910,7 @@ oZ
 oZ
 oZ
 oZ
-cE
+oZ
 oZ
 wi
 oZ
@@ -2026,9 +2021,9 @@ bL
 bL
 bL
 kb
-ni
+fM
 Zl
-ni
+fM
 kb
 bL
 bL
@@ -3480,7 +3475,7 @@ oZ
 oZ
 oZ
 oZ
-cE
+oZ
 cH
 Oe
 wi
@@ -4162,7 +4157,7 @@ hy
 kb
 gk
 oL
-wG
+oL
 va
 kb
 bL
@@ -4882,17 +4877,17 @@ oZ
 oZ
 wi
 oZ
-oZ
-oZ
-oZ
-oZ
-oZ
-oZ
-oZ
-oZ
-oZ
-oZ
 cE
+oZ
+oZ
+oZ
+oZ
+oZ
+oZ
+oZ
+oZ
+oZ
+oZ
 oZ
 oZ
 oZ
@@ -5040,7 +5035,7 @@ oZ
 oZ
 oZ
 oZ
-oZ
+cE
 oZ
 Oe
 wi
@@ -5174,7 +5169,7 @@ wi
 wi
 wi
 wi
-cE
+oZ
 oZ
 oZ
 oZ
@@ -6057,7 +6052,7 @@ oZ
 wi
 oZ
 oZ
-ID
+oZ
 oZ
 oZ
 wi
@@ -6471,7 +6466,7 @@ oZ
 oZ
 oZ
 oZ
-ID
+oZ
 Vj
 oZ
 oZ
@@ -7431,7 +7426,7 @@ wi
 Mg
 oZ
 oZ
-cE
+oZ
 oZ
 oZ
 oZ
@@ -12571,7 +12566,7 @@ oZ
 oZ
 oZ
 oZ
-LQ
+oZ
 oZ
 oZ
 oZ
@@ -12865,7 +12860,7 @@ oZ
 oZ
 Vj
 oZ
-LQ
+oZ
 oZ
 oZ
 oZ
@@ -14277,7 +14272,7 @@ oZ
 oZ
 wi
 wi
-LQ
+oZ
 oZ
 oZ
 wi
@@ -15390,7 +15385,7 @@ oZ
 oZ
 oZ
 oZ
-LQ
+oZ
 oZ
 oZ
 wi
@@ -19999,7 +19994,7 @@ oZ
 oZ
 Vj
 oZ
-LQ
+oZ
 oZ
 oZ
 oZ

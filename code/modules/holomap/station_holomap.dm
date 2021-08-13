@@ -7,12 +7,13 @@
 	icon = 'icons/obj/machines/stationmap.dmi'
 	icon_state = "station_map"
 	layer = ABOVE_WINDOW_LAYER
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = FALSE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 500
 	circuit = /obj/item/weapon/circuitboard/station_map
+	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 
 	// TODO - Port use_auto_lights from /vg - for now declare here
 	var/use_auto_lights = 1
@@ -81,16 +82,10 @@
 	if(!watching_mob && isliving(AM) && AM.loc == loc)
 		startWatching(AM)
 
-// In order to actually get Bumped() we need to block movement.  We're (visually) on a wall, so people
-// couldn't really walk into us anyway.  But in reality we are on the turf in front of the wall, so bumping
-// against where we seem is actually trying to *exit* our real loc
-/obj/machinery/station_map/CheckExit(atom/movable/mover as mob|obj, turf/target as turf)
-	// log_debug("[src] (dir=[dir]) CheckExit([mover], [target])  get_dir() = [get_dir(target, loc)]")
-	if(get_dir(target, loc) == dir) // Opposite of "normal" since we are visually in the next turf over
+/obj/machinery/station_map/Uncross(atom/movable/mover, turf/target)
+	if(get_dir(mover, target) == reverse_dir[dir])
 		return FALSE
-	else
-		return TRUE
-
+	return TRUE
 /obj/machinery/station_map/proc/startWatching(var/mob/user)
 	// Okay, does this belong on a screen thing or what?
 	// One argument is that this is an "in game" object becuase its in the world.

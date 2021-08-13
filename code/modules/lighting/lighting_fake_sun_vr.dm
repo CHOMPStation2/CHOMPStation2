@@ -4,7 +4,7 @@
 	icon = 'icons/effects/effects_vr.dmi'
 	icon_state = "fakesun"
 	invisibility = INVISIBILITY_ABSTRACT
-	var/datum/light_source/sun/fake_sun
+	var/atom/movable/sun_visuals/sun
 
 	var/list/possible_light_setups = list(
 		list(
@@ -88,10 +88,6 @@
 	if(choice["brightness"] <= LIGHTING_SOFT_THRESHOLD) // dark!
 		return
 
-	fake_sun = new
-	fake_sun.light_color = choice["color"]
-	fake_sun.light_power = choice["brightness"]
-
 	var/list/zees = GetConnectedZlevels()
 	var/min = z
 	var/max = z
@@ -104,14 +100,20 @@
 	var/list/all_turfs = block(locate(1, 1, min), locate(world.maxx, world.maxy, max))
 	var/list/turfs_to_use = list()
 	for(var/turf/T as anything in all_turfs)
-		if(T.outdoors)
+		if(T.is_outdoors())
 			turfs_to_use += T
 	
 	if(!turfs_to_use.len)
 		warning("Fake sun placed on a level where it can't find any outdoor turfs to color at [x],[y],[z].")
 		return
 
-	fake_sun.update_corners(turfs_to_use)
+	sun = new(null)
+
+	sun.set_color(choice["color"])
+	sun.set_alpha(round(CLAMP01(choice["brightness"])*255,1))
+
+	for(var/turf/T as anything in turfs_to_use)
+		sun.apply_to_turf(T)
 
 /obj/effect/fake_sun/warm
 	name = "warm fake sun"

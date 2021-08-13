@@ -14,6 +14,9 @@
 	switch(a_intent)
 		if(I_HELP)
 			if(isliving(A))
+				if(src.zone_sel.selecting == BP_GROIN) //CHOMPEdit
+					if(src.vore_bellyrub(A))
+						return
 				custom_emote(1,"[pick(friendly)] \the [A]!")
 
 		if(I_HURT)

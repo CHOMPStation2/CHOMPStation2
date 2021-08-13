@@ -80,8 +80,7 @@ var/list/medical_positions = list(
 	"Geneticist",
 	"Psychiatrist",
 	"Chemist",
-	"Paramedic",
-	"Field Medic" //ywedit
+	"Paramedic"
 )
 
 
@@ -110,8 +109,7 @@ var/list/civilian_positions = list(
 	"Lawyer",
 	"Chaplain",
 	USELESS_JOB, //VOREStation Edit - Visitor not Assistant
-	"Intern", //VOREStation Edit - Intern
-	"Pilot" //YWedit
+	"Intern" //VOREStation Edit - Intern
 )
 
 
@@ -125,9 +123,9 @@ var/list/security_positions = list(
 
 var/list/planet_positions = list(
 	"Pathfinder", // VOREStation Edit - Added Pathfinder
-	"Explorer"
-	//YWmoved to civilian"Pilot",
-	//YWmoved to medical"Field Medic"  // VOREStation Edit - Field Medic
+	"Explorer",
+	"Pilot",
+	"Field Medic" // VOREStation Edit - Field Medic
 )
 
 

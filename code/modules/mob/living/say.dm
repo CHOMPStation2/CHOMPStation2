@@ -62,7 +62,7 @@ var/list/department_radio_keys = list(
 
 
 var/list/channel_to_radio_key = new
-proc/get_radio_key_from_channel(var/channel)
+/proc/get_radio_key_from_channel(var/channel)
 	var/key = channel_to_radio_key[channel]
 	if(!key)
 		for(var/radio_key in department_radio_keys)
@@ -347,20 +347,6 @@ proc/get_radio_key_from_channel(var/channel)
 	speech_bubble.alpha = CLAMP(sb_alpha, 0, 255)
 	images_to_clients[speech_bubble] = list()
 
-	// Attempt Multi-Z Talking
-	var/mob/above = src.shadow
-	while(!QDELETED(above))
-		var/turf/ST = get_turf(above)
-		if(ST)
-			var/list/results = get_mobs_and_objs_in_view_fast(ST, world.view)
-			var/image/z_speech_bubble = generate_speech_bubble(above, "h[speech_bubble_test]")
-			images_to_clients[z_speech_bubble] = list()
-			for(var/item in results["mobs"])
-				if(item != above && !(item in listening))
-					listening[item] = z_speech_bubble
-			listening_obj |= results["objs"]
-		above = above.shadow
-
 	//Main 'say' and 'whisper' message delivery
 	for(var/mob/M in listening)
 		spawn(0) //Using spawns to queue all the messages for AFTER this proc is done, and stop runtimes
@@ -401,11 +387,9 @@ proc/get_radio_key_from_channel(var/channel)
 
 	//Remove all those images. At least it's just ONE spawn this time.
 	spawn(30)
-		for(var/img in images_to_clients)
-			var/image/I = img
+		for(var/image/I as anything in images_to_clients)
 			var/list/clients_from_image = images_to_clients[I]
-			for(var/client in clients_from_image)
-				var/client/C = client
+			for(var/client/C as anything in clients_from_image)
 				if(C) //Could have disconnected after message sent, before removing bubble.
 					C.images -= I
 			qdel(I)
@@ -430,12 +414,10 @@ proc/get_radio_key_from_channel(var/channel)
 	else
 		var/list/potentials = get_mobs_and_objs_in_view_fast(T, world.view)
 		var/list/mobs = potentials["mobs"]
-		for(var/hearer in mobs)
-			var/mob/M = hearer
+		for(var/mob/M as anything in mobs)
 			M.hear_signlang(message, verb, language, src)
 		var/list/objs = potentials["objs"]
-		for(var/hearer in objs)
-			var/obj/O = hearer
+		for(var/obj/O as anything in objs)
 			O.hear_signlang(message, verb, language, src)
 	return 1
 

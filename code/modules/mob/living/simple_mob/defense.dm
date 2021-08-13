@@ -16,6 +16,9 @@
 	switch(L.a_intent)
 		if(I_HELP)
 			if(health > 0)
+				if(L.zone_sel.selecting == BP_GROIN) //CHOMPEdit
+					if(L.vore_bellyrub(src))
+						return
 				L.visible_message("<span class='notice'>\The [L] [response_help] \the [src].</span>")
 
 		if(I_DISARM)
@@ -64,7 +67,7 @@
 					MED.amount -= 1
 					if(MED.amount <= 0)
 						qdel(MED)
-					visible_message("<span class='notice'>\The [user] applies the [MED] on [src].</span>")
+					visible_message("<b>\The [user]</b> applies the [MED] on [src].")
 		else
 			var/datum/gender/T = gender_datums[src.get_visible_gender()]
 			to_chat(user, "<span class='notice'>\The [src] is dead, medical items won't bring [T.him] back to life.</span>") // the gender lookup is somewhat overkill, but it functions identically to the obsolete gender macros and future-proofs this code
@@ -144,8 +147,7 @@
 	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
 
 	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		if(!isnull(M.cold_protection))
 			. *= 1 - M.cold_protection
 
@@ -169,8 +171,7 @@
 	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
 
 	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		if(!isnull(M.heat_protection))
 			. *= 1 - M.heat_protection
 
@@ -196,8 +197,7 @@
 	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
 
 	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		if(!isnull(M.siemens_coefficient))
 			. *= M.siemens_coefficient
 
@@ -254,8 +254,7 @@
 	if(isnull(armorval))
 		armorval = 0
 
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		var/modifier_armor = LAZYACCESS(M.armor_percent, attack_flag)
 		if(modifier_armor)
 			armorval += modifier_armor
@@ -267,8 +266,7 @@
 	if(isnull(armorval))
 		armorval = 0
 
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		var/modifier_armor = LAZYACCESS(M.armor_flat, attack_flag)
 		if(modifier_armor)
 			armorval += modifier_armor
