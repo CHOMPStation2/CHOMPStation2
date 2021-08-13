@@ -132,7 +132,7 @@
 	icon_state = "m41mag"
 	max_ammo = 40
 	mag_type = MAGAZINE
-	caliber = "5.56x45mm"
+	caliber = "10x24mm"
 	matter = list(DEFAULT_WALL_MATERIAL = 10000)
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a10x24
