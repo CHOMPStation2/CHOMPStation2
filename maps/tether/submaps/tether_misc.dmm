@@ -1441,16 +1441,11 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
 "fi" = (
-/obj/structure/bed/chair/sofa/bench/right{
-	padding_color = "#99AAFF"
+/obj/effect/floor_decal/transit/orange{
+	dir = 8
 	},
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
-	},
-/turf/simulated/floor/tiled,
-/area/shuttle/escape{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/turf/simulated/floor/tiled/techfloor/grid/transit,
+/area/space)
 "fn" = (
 /obj/structure/holostool,
 /obj/effect/floor_decal/carpet{
@@ -1738,12 +1733,8 @@
 /turf/simulated/floor/holofloor/snow,
 /area/holodeck/holodorm/source_snow)
 "gv" = (
-/obj/effect/shuttle_landmark{
-	base_area = null;
-	base_turf = null;
-	docking_controller = null;
-	landmark_tag = "escape_transit";
-	name = "Escape Transit"
+/obj/effect/floor_decal/transit/orange{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -1769,23 +1760,20 @@
 "gS" = (
 /turf/simulated/floor/holofloor/reinforced,
 /area/holodeck/holodorm/source_off)
+"gT" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/centcom/simulated/terminal)
 "gU" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/steel,
 /area/centcom/simulated/main_hall)
-"he" = (
-/obj/structure/bed/chair/sofa/bench/left{
-	dir = 4;
-	padding_color = "#99AAFF"
-	},
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
-	},
-/turf/simulated/floor/tiled,
-/area/shuttle/escape{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
 "hg" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/landmark{
@@ -1854,6 +1842,9 @@
 /obj/effect/floor_decal/transit/orange{
 	dir = 8
 	},
+/obj/effect/transit/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
 "hJ" = (
@@ -1917,14 +1908,21 @@
 /obj/effect/floor_decal/transit/orange{
 	dir = 4
 	},
+/obj/effect/transit/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
 "in" = (
 /obj/effect/floor_decal/transit/orange{
 	dir = 8
 	},
-/obj/effect/transit/light{
-	dir = 8
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -1941,8 +1939,12 @@
 /obj/effect/floor_decal/transit/orange{
 	dir = 4
 	},
-/obj/effect/transit/light{
-	dir = 4
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -1962,6 +1964,7 @@
 "jf" = (
 /turf/space/transit/north,
 /area/space)
+<<<<<<< HEAD
 "jA" = (
 /obj/machinery/light{
 	dir = 1
@@ -1985,6 +1988,31 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/simulated/terminal)
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+"jA" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/table/standard,
+/obj/random/forgotten_tram,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"jL" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/centcom/simulated/terminal)
+=======
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 "jQ" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -2012,6 +2040,15 @@
 /obj/effect/floor_decal/sign/small_5,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+"kK" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "kU" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/box/donkpockets,
@@ -2039,6 +2076,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
+"lo" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench{
+	dir = 4;
+	padding_color = "#99AAFF"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "lu" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -2056,32 +2105,6 @@
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
 "lW" = (
-/obj/random/forgotten_tram,
-/obj/structure/bed/chair/sofa/bench/left{
-	dir = 4;
-	padding_color = "#99AAFF"
-	},
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
-	},
-/turf/simulated/floor/tiled,
-/area/shuttle/escape{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
-"mb" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 8
-	},
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	name = "thrower_throwdownside";
-	nostop = 1;
-	stopper = 0;
-	tiles = 0
-	},
-/turf/simulated/floor/tiled/techfloor/grid/transit,
-/area/space)
-"mF" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
 	name = "thrower_throwdownside";
@@ -2091,6 +2114,29 @@
 	},
 /obj/effect/floor_decal/transit/orange{
 	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid/transit,
+/area/space)
+"mb" = (
+/obj/effect/shuttle_landmark{
+	landmark_tag = "escape_transit";
+	name = "Escape Transit"
+	},
+/turf/simulated/floor/tiled/techfloor/grid/transit,
+/area/space)
+"mF" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 8
+	},
+/obj/effect/transit/light{
+	dir = 8
+	},
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -2109,6 +2155,7 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
+<<<<<<< HEAD
 "nz" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
@@ -2141,6 +2188,34 @@
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
 >>>>>>> 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+"nz" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/closet/walllocker/medical/west{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"nB" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/machinery/vending/snack,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+=======
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 "nV" = (
 /obj/item/toy/chess/rook_black,
 /turf/simulated/floor/holofloor/wmarble,
@@ -2148,6 +2223,7 @@
 "nW" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+<<<<<<< HEAD
 "nZ" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
@@ -2164,15 +2240,31 @@
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+"nZ" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/closet/walllocker/emerglocker/east{
+	dir = 2;
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+=======
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 "oI" = (
 /obj/effect/step_trigger/teleporter/planetary_fall/virgo3b,
 /turf/space/transit/east,
 /area/space)
 "oL" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 8
-	},
-/obj/effect/transit/light{
+/obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
 /obj/effect/step_trigger/thrower{
@@ -2198,7 +2290,7 @@
 /area/holodeck/source_chess)
 "pv" = (
 /obj/effect/floor_decal/techfloor/orange{
-	dir = 8
+	dir = 4
 	},
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -2206,6 +2298,9 @@
 	nostop = 1;
 	stopper = 0;
 	tiles = 0
+	},
+/obj/effect/floor_decal/transit/orange{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -2223,18 +2318,11 @@
 /turf/space/transit/east,
 /area/space)
 "pQ" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 4
-	},
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	name = "thrower_throwdownside";
-	nostop = 1;
-	stopper = 0;
-	tiles = 0
+/obj/effect/transit/light{
+	dir = 8
 	},
 /obj/effect/floor_decal/transit/orange{
-	dir = 4
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -2251,9 +2339,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/simulated/terminal)
 "qa" = (
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/structure/table/standard,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
@@ -2263,10 +2349,10 @@
 	})
 "qc" = (
 /obj/effect/transit/light{
-	dir = 8
+	dir = 4
 	},
 /obj/effect/floor_decal/transit/orange{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -2285,22 +2371,43 @@
 /turf/space,
 /turf/space/internal_edge/bottomright,
 /area/space)
+"qQ" = (
+/obj/structure/sign/warning/docking_area,
+/turf/unsimulated/wall,
+/area/centcom/simulated/terminal)
 "qV" = (
 /obj/effect/floor_decal/sign/small_6,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
-"ra" = (
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
+"qY" = (
+/obj/effect/fancy_shuttle/orangeline{
+	dir = 1;
+	fancy_shuttle_tag = "tram";
+	plane = -45
 	},
-/obj/structure/closet/walllocker/emerglocker/east{
-	dir = 2;
-	pixel_x = 0;
-	pixel_y = 32
+/obj/effect/fancy_shuttle_floor_preview/orangeline{
+	dir = 1;
+	plane = -45
 	},
+<<<<<<< HEAD
 /obj/structure/bed/chair/sofa/bench/left{
 	padding_color = "#99AAFF"
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 8
+=======
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
 	},
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"ri" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
+	},
+/obj/structure/closet/walllocker_double/hydrant/west,
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -2309,10 +2416,46 @@
 /obj/item/toy/chess/pawn_black,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"rD" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench{
+	dir = 8;
+	padding_color = "#99AAFF"
+	},
+/obj/random/forgotten_tram,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "rE" = (
 /obj/machinery/telecomms/bus/preset_cent,
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
+"rJ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel_grid,
+/area/centcom/simulated/terminal)
+"rW" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench/right{
+	dir = 8;
+	padding_color = "#99AAFF"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/random/forgotten_tram,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "sb" = (
 /obj/item/toy/chess/knight_white,
 /turf/simulated/floor/holofloor/wmarble,
@@ -2321,32 +2464,28 @@
 /turf/space/internal_edge/top,
 /area/space)
 "sp" = (
-/obj/effect/transit/light{
-	dir = 4
-	},
-/obj/effect/floor_decal/transit/orange{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/grid/transit,
-/area/space)
-"st" = (
-/obj/structure/sign/warning/docking_area,
-/turf/unsimulated/wall,
-/area/centcom/simulated/terminal)
-"sw" = (
 /obj/effect/step_trigger/lost_in_space/tram,
 /obj/effect/floor_decal/transit/orange{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
-"sx" = (
+"st" = (
 /obj/effect/step_trigger/lost_in_space/tram,
 /obj/effect/floor_decal/transit/orange{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
+"sw" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/centcom/simulated/terminal)
+"sx" = (
+/turf/simulated/floor/maglev,
+/area/centcom/simulated/terminal)
 "sB" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/pill_bottle/spaceacillin,
@@ -2356,22 +2495,19 @@
 /obj/effect/overmap/bluespace_rift,
 /turf/unsimulated/map,
 /area/overmap)
-"sH" = (
-/obj/structure/closet/walllocker_double/hydrant/south,
-/obj/structure/bed/chair/sofa/bench/right{
-	dir = 4;
-	padding_color = "#99AAFF"
-	},
+"sN" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
-"sN" = (
-/turf/simulated/floor/maglev,
-/area/centcom/simulated/terminal)
 "sQ" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/melee/baton/loaded,
@@ -2388,11 +2524,25 @@
 /turf/unsimulated/wall,
 /area/centcom/simulated/terminal)
 "tu" = (
-/obj/structure/sign/warning{
-	name = "\improper STAND AWAY FROM TRACK EDGE"
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
 	},
-/turf/unsimulated/wall,
-/area/space)
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/centcom/simulated/terminal)
+"tz" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/shuttle{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "tC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -2408,6 +2558,7 @@
 	},
 /turf/space/transit/east,
 /area/space)
+<<<<<<< HEAD
 "tH" = (
 /obj/machinery/light{
 	dir = 1
@@ -2434,6 +2585,35 @@
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+"tH" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/random/forgotten_tram,
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/table/standard,
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/o2,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"tL" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+=======
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 "tV" = (
 /obj/structure/table/standard,
 /obj/random/forgotten_tram,
@@ -2444,14 +2624,6 @@
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
-"tW" = (
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'HIGH VOLTAGE'";
-	icon_state = "shock";
-	name = "HIGH VOLTAGE"
-	},
-/turf/unsimulated/wall,
-/area/centcom/simulated/terminal)
 "uc" = (
 /turf/unsimulated/wall,
 /area/centcom/suppy)
@@ -2481,22 +2653,23 @@
 	},
 /area/centcom/suppy)
 "uj" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/centcom/simulated/terminal)
-"uE" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_shuttle_hatch_station";
-	locked = 1;
-	name = "Shuttle Hatch"
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
+/obj/structure/bed/chair/sofa/bench/left{
+	dir = 4;
+	padding_color = "#99AAFF"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"uE" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/table/standard,
+/obj/random/forgotten_tram,
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -2587,6 +2760,7 @@
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
 "xm" = (
+<<<<<<< HEAD
 /obj/machinery/light,
 /obj/random/forgotten_tram,
 /obj/structure/bed/chair/sofa/bench/right{
@@ -2608,9 +2782,26 @@
 /turf/simulated/floor/tiled/steel,
 /area/centcom/simulated/main_hall)
 =======
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+/obj/machinery/light,
+/obj/random/forgotten_tram,
+=======
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
+<<<<<<< HEAD
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+/obj/random/forgotten_tram,
+/obj/structure/table/standard,
+=======
+/obj/machinery/light,
+/obj/structure/bed/chair/sofa/bench/left{
+	dir = 8;
+	padding_color = "#99AAFF"
+	},
+/obj/random/forgotten_tram,
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -2651,6 +2842,17 @@
 /obj/machinery/chemical_dispenser/bar_soft/full,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
+"xZ" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/shuttle{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "ya" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -2660,6 +2862,21 @@
 	},
 /turf/simulated/sky/virgo3b/south,
 /area/space)
+"yb" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench/left{
+	dir = 4;
+	padding_color = "#99AAFF"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "yk" = (
 /obj/effect/step_trigger/lost_in_space/tram,
 /turf/simulated/floor/maglev{
@@ -2724,13 +2941,18 @@
 /area/centcom/simulated/security{
 	name = "\improper CentCom Security Arrivals"
 	})
-"zK" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/centcom/simulated/terminal;
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid;
-	docking_controller = null;
-	landmark_tag = "escape_cc";
-	name = "Escape Centcom"
+"zN" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/closet/walllocker/medical/east,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"As" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
 	},
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
@@ -2738,24 +2960,6 @@
 	id_tag = "escape_shuttle_hatch_station";
 	locked = 1;
 	name = "Shuttle Hatch"
-	},
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
-	},
-/turf/simulated/floor/tiled,
-/area/shuttle/escape{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
-"As" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_shuttle_hatch_offsite";
-	locked = 1;
-	name = "Shuttle Hatch"
-	},
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
@@ -2921,6 +3125,7 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
+<<<<<<< HEAD
 "Ey" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
@@ -2950,6 +3155,41 @@
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
 >>>>>>> 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+"Ey" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/closet/walllocker/medical/west{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"EC" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/machinery/status_display{
+	pixel_x = 34
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+=======
+"EO" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/centcom/simulated/terminal)
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 "ET" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/simulated/terminal)
@@ -2970,18 +3210,6 @@
 	icon_state = "rock"
 	},
 /area/space)
-"Fz" = (
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
-	},
-/obj/structure/bed/chair/sofa/bench/right{
-	dir = 8;
-	padding_color = "#99AAFF"
-	},
-/turf/simulated/floor/tiled,
-/area/shuttle/escape{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
 "FC" = (
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
@@ -3051,6 +3279,19 @@
 /obj/item/toy/chess/king_white,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"GX" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench{
+	dir = 4;
+	padding_color = "#99AAFF"
+	},
+/obj/random/forgotten_tram,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "Hf" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -3162,14 +3403,6 @@
 /obj/machinery/telecomms/hub/preset_cent,
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
-"IN" = (
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
-	},
-/turf/simulated/floor/tiled,
-/area/shuttle/escape{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
 "IR" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -3179,6 +3412,18 @@
 	},
 /turf/simulated/sky/virgo3b/south,
 /area/space)
+"IV" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench/left{
+	dir = 8;
+	padding_color = "#99AAFF"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "IX" = (
 /obj/structure/table/glass,
 /obj/item/device/defib_kit/loaded,
@@ -3188,6 +3433,17 @@
 /obj/item/toy/chess/bishop_white,
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
+"Jw" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "Jz" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -3205,6 +3461,18 @@
 /obj/machinery/smartfridge/drinks,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
+"JC" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench{
+	dir = 8;
+	padding_color = "#99AAFF"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "JI" = (
 /obj/item/toy/chess/rook_white,
 /turf/simulated/floor/holofloor/bmarble,
@@ -3274,7 +3542,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/space)
 "Lm" = (
-/obj/structure/bed/chair/sofa/bench{
+/obj/structure/bed/chair/sofa/bench/right{
 	padding_color = "#99AAFF"
 	},
 /obj/effect/floor_decal/fancy_shuttle{
@@ -3285,14 +3553,21 @@
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
 "Lu" = (
-/obj/structure/closet/walllocker_double/hydrant/north,
-/obj/structure/bed/chair/sofa/bench/right{
-	dir = 8;
-	padding_color = "#99AAFF"
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
+/obj/structure/closet/walllocker/medical/west,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"Lx" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/light,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -3302,12 +3577,12 @@
 /turf/simulated/sky/virgo3b/south,
 /area/space)
 "LD" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 4
-	},
 /obj/structure/railing,
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/simulated/terminal)
@@ -3318,13 +3593,10 @@
 /turf/simulated/floor/tiled/white,
 /area/centcom/simulated/medical)
 "Mb" = (
-/obj/structure/bed/chair/sofa/bench/right{
-	dir = 4;
-	padding_color = "#99AAFF"
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
+<<<<<<< HEAD
 <<<<<<< HEAD
 /area/space)
 <<<<<<< HEAD
@@ -3350,6 +3622,10 @@
 ||||||| parent of 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
 /area/space)
 =======
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+=======
+/obj/structure/table/standard,
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -3441,14 +3717,44 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
-/obj/structure/bed/chair/sofa/bench/left{
-	dir = 8;
+/obj/machinery/light,
+/obj/structure/bed/chair/sofa/bench/right{
+	dir = 4;
 	padding_color = "#99AAFF"
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
+<<<<<<< HEAD
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+"ND" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/machinery/vending/cola/soft{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+=======
+"ND" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/centcom/simulated/terminal;
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid;
+	docking_controller = null;
+	landmark_tag = "escape_cc";
+	name = "Escape Centcom"
+	},
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 "NJ" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
@@ -3456,6 +3762,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
+<<<<<<< HEAD
 "NW" = (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3504,6 +3811,21 @@
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
 >>>>>>> 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+"NW" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/random/forgotten_tram,
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+=======
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 "Oj" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -3525,6 +3847,19 @@
 /turf/simulated/floor/tiled,
 /area/centcom/simulated/security{
 	name = "\improper CentCom Security Arrivals"
+	})
+"OT" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench/left{
+	dir = 8;
+	padding_color = "#99AAFF"
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
 "OY" = (
 /turf/unsimulated/map,
@@ -3549,23 +3884,16 @@
 /turf/space/transit/west,
 /area/space)
 "Pk" = (
-/obj/effect/fancy_shuttle/orangeline{
-	dir = 1;
-	fancy_shuttle_tag = "tram";
-	plane = -50
-	},
-/obj/effect/fancy_shuttle_floor_preview/orangeline{
-	dir = 1;
-	plane = -45
-	},
-/turf/simulated/wall/fancy_shuttle{
+/obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
+/obj/structure/closet/walllocker_double/hydrant/east,
+/turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
 "Pn" = (
-/obj/structure/bed/chair/sofa/bench{
+/obj/structure/bed/chair/sofa/bench/left{
 	dir = 1;
 	padding_color = "#99AAFF"
 	},
@@ -3583,12 +3911,10 @@
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "Pr" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
+<<<<<<< HEAD
 <<<<<<< HEAD
 /area/space)
 ||||||| parent of 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
@@ -3598,17 +3924,36 @@
 /area/holodeck/source_smoleworld)
 =======
 /obj/structure/table/standard,
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+/obj/structure/table/standard,
+=======
+/obj/structure/bed/chair/sofa/bench/right{
+	dir = 8;
+	padding_color = "#99AAFF"
+	},
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
 "Py" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'HIGH VOLTAGE'";
+	icon_state = "shock";
+	name = "HIGH VOLTAGE"
+	},
+/turf/unsimulated/wall,
+/area/centcom/simulated/terminal)
+"PF" = (
 /obj/structure/bed/chair/sofa/bench/left{
-	dir = 1;
+	dir = 4;
 	padding_color = "#99AAFF"
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
@@ -3701,14 +4046,42 @@
 /turf/simulated/floor/tiled/white,
 /area/centcom/simulated/medical)
 "RA" = (
+<<<<<<< HEAD
 /obj/machinery/light,
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 1;
 	padding_color = "#99AAFF"
 	},
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+/obj/machinery/light,
+=======
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
+<<<<<<< HEAD
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+/obj/structure/table/standard,
+/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/weapon/storage/firstaid/o2,
+=======
+/obj/machinery/status_display{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"RM" = (
+/obj/structure/bed/chair/sofa/bench/right{
+	dir = 4;
+	padding_color = "#99AAFF"
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/random/forgotten_tram,
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -3803,6 +4176,18 @@
 /obj/machinery/door/airlock/alien/blue/public,
 /turf/simulated/shuttle/floor/alienplating,
 /area/unknown/dorm4)
+"St" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/structure/bed/chair/sofa/bench/right{
+	dir = 4;
+	padding_color = "#99AAFF"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "Su" = (
 /obj/structure/closet/alien,
 /turf/simulated/shuttle/floor/alien,
@@ -4180,13 +4565,11 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/unknown/dorm2)
 "TO" = (
-/obj/structure/bed/chair/sofa/bench/left{
-	dir = 8;
-	padding_color = "#99AAFF"
-	},
-/obj/random/forgotten_tram,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
@@ -4353,17 +4736,6 @@
 "Ux" = (
 /turf/simulated/shuttle/wall/alien,
 /area/unknown/dorm1)
-"Uy" = (
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "tram"
-	},
-/obj/machinery/status_display{
-	pixel_x = -34
-	},
-/turf/simulated/floor/tiled,
-/area/shuttle/escape{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
 "Uz" = (
 /obj/machinery/recharge_station,
 /turf/simulated/shuttle/floor/alienplating,
@@ -4731,6 +5103,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/centcom/simulated/terminal)
+"VZ" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
 "Wc" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/multi_tile/glass,
@@ -5430,14 +5810,14 @@
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "YZ" = (
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 4
-	},
 /obj/structure/railing{
 	dir = 4
 	},
 /obj/structure/railing{
 	dir = 1
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/simulated/terminal)
@@ -116682,48 +117062,48 @@ Xl
 (32,1,1) = {"
 Hy
 Hy
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
 Hy
 ap
 ap
@@ -116824,47 +117204,47 @@ Xl
 (33,1,1) = {"
 Hy
 Hy
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
-dg
+fi
+fi
+hI
+in
+in
+in
+lf
+in
+in
+in
+lf
+in
+in
+in
+lf
+in
+in
+in
+mF
+oL
+in
+in
+mF
+in
+in
+in
+mF
+in
+in
+in
+mF
+in
+in
+in
+pQ
+fi
+fi
+fi
+hI
+sp
+fi
 dg
 Av
 ap
@@ -116966,47 +117346,47 @@ Xl
 (34,1,1) = {"
 Hy
 Hy
-hI
-hI
-in
-hI
-hI
-hI
-lf
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
+FT
+FT
+FT
+FT
+FT
 mb
-mb
-mb
-lf
-mb
-mb
-mb
-lf
-mb
-mb
-mb
-oL
-pv
-mb
-mb
-oL
-mb
-mb
-mb
-oL
-mb
-mb
-mb
-oL
-hI
-hI
-hI
-qc
-hI
-hI
-hI
-in
-sw
-hI
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
+FT
+FT
+FT
+FT
+FT
+uG
+FT
 dg
 Hy
 ap
@@ -117111,30 +117491,6 @@ Hy
 FT
 FT
 FT
-FT
-FT
-FT
-Sh
-Sh
-Sh
-Sh
-Sh
-FT
-FT
-gv
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
 Sh
 Sh
 Sh
@@ -117142,6 +117498,30 @@ Sh
 FT
 FT
 FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
 FT
 FT
 FT
@@ -117253,30 +117633,6 @@ Hy
 cq
 cq
 cq
-cq
-cq
-cq
-vu
-vu
-vu
-vu
-vu
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
 vu
 vu
 vu
@@ -117284,6 +117640,30 @@ vu
 cq
 cq
 cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+vu
+vu
+vu
+vu
 cq
 cq
 cq
@@ -117395,30 +117775,6 @@ Hy
 FT
 FT
 FT
-FT
-FT
-FT
-Sh
-Sh
-Sh
-Sh
-Sh
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
 Sh
 Sh
 Sh
@@ -117426,6 +117782,30 @@ Sh
 FT
 FT
 FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
 FT
 FT
 FT
@@ -117537,30 +117917,6 @@ Hy
 FT
 FT
 FT
-FT
-FT
-FT
-Sh
-Sh
-Sh
-Sh
-Sh
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
 Sh
 Sh
 Sh
@@ -117568,6 +117924,30 @@ Sh
 FT
 FT
 FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
 FT
 FT
 FT
@@ -117679,30 +118059,6 @@ Hy
 FT
 FT
 FT
-FT
-FT
-FT
-Sh
-Sh
-Sh
-Sh
-Sh
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
 Sh
 Sh
 Sh
@@ -117710,6 +118066,30 @@ Sh
 FT
 FT
 FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
 FT
 FT
 FT
@@ -117821,30 +118201,6 @@ Hy
 FT
 FT
 FT
-FT
-FT
-FT
-Sh
-Sh
-Sh
-Sh
-Sh
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
 Sh
 Sh
 Sh
@@ -117852,6 +118208,30 @@ Sh
 FT
 FT
 FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
 FT
 FT
 FT
@@ -117963,30 +118343,6 @@ Hy
 FT
 FT
 FT
-FT
-FT
-FT
-Sh
-Sh
-Sh
-Sh
-Sh
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
 Sh
 Sh
 Sh
@@ -117994,6 +118350,30 @@ Sh
 FT
 FT
 FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
 FT
 FT
 FT
@@ -118105,30 +118485,6 @@ Hy
 cq
 cq
 cq
-cq
-cq
-cq
-vu
-vu
-vu
-vu
-vu
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
-cq
 vu
 vu
 vu
@@ -118136,6 +118492,30 @@ vu
 cq
 cq
 cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+cq
+vu
+vu
+vu
+vu
 cq
 cq
 cq
@@ -118405,30 +118785,6 @@ OY
 FT
 FT
 FT
-FT
-FT
-FT
-Sh
-Sh
-Sh
-Sh
-Sh
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
-FT
 Sh
 Sh
 Sh
@@ -118436,6 +118792,30 @@ Sh
 FT
 FT
 FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
 FT
 FT
 FT
@@ -118602,47 +118982,47 @@ Xl
 (44,1,1) = {"
 Hy
 Hy
-ig
-ig
-is
-ig
-ig
-ig
-lu
-mF
-mF
-mF
-lu
-mF
-mF
-mF
-lu
-mF
-mF
-mF
-lu
-pQ
-mF
-mF
-lu
-mF
-mF
-mF
-lu
-mF
-mF
-mF
-lu
-ig
-ig
-ig
-sp
-ig
-ig
-ig
-is
-sx
-ig
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
+FT
+FT
+FT
+FT
+FT
+uG
+FT
 dg
 Hy
 ap
@@ -118881,6 +119261,7 @@ Xl
 (45,1,1) = {"
 Hy
 Hy
+<<<<<<< HEAD
 dg
 dg
 dg
@@ -118923,6 +119304,91 @@ dg
 dg
 dg
 >>>>>>> 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+=======
+gv
+gv
+ig
+is
+is
+is
+lu
+lW
+lW
+lW
+lu
+lW
+lW
+lW
+lu
+lW
+lW
+lW
+lu
+pv
+lW
+lW
+lu
+lW
+lW
+lW
+lu
+lW
+lW
+lW
+lu
+is
+is
+is
+qc
+gv
+gv
+gv
+ig
+st
+gv
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 dg
 Fp
 ap
@@ -119024,48 +119490,48 @@ Xl
 (46,1,1) = {"
 Hy
 Hy
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
-ap
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
+dg
 Hy
 ap
 ap
@@ -123764,35 +124230,35 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+qQ
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+Py
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+Py
+dZ
+dZ
+dZ
+dZ
+dZ
+dZ
+CC
 ae
 ae
 ae
@@ -123906,35 +124372,35 @@ ae
 ae
 ae
 ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
-ae
+sT
+sw
+sw
+sw
+tu
+sw
+sw
+sw
+sw
+tu
+sw
+sw
+sw
+sw
+tu
+sw
+sw
+sw
+sw
+tu
+sw
+sw
+sw
+sw
+tu
+sw
+sw
+sw
+sT
 ae
 ae
 ae
@@ -124048,35 +124514,35 @@ ae
 ae
 ae
 ae
-st
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-tW
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-tW
-dZ
-dZ
-dZ
-dZ
-dZ
-dZ
-CC
+sT
+ET
+ET
+ZE
+ZE
+RN
+RN
+ZE
+ND
+As
+As
+ZE
+ZE
+RN
+RN
+RN
+ZE
+ZE
+As
+As
+ZE
+ZE
+RN
+RN
+ZE
+qY
+ET
+ET
+sT
 ae
 ae
 ae
@@ -124191,33 +124657,33 @@ ae
 ae
 ae
 sT
+ET
+ET
+ZE
+sN
 uj
-uj
-uj
-jL
-uj
-uj
-uj
-uj
-jL
-uj
-uj
-uj
-uj
-jL
-uj
-uj
-uj
-uj
-jL
-uj
-uj
-uj
-uj
-jL
-uj
-uj
-uj
+GX
+NC
+ZE
+TO
+VZ
+ZE
+PF
+lo
+lo
+RM
+kK
+ZE
+TO
+kK
+ZE
+yb
+GX
+St
+Lx
+ZE
+ET
+ET
 sT
 ae
 ae
@@ -124333,33 +124799,33 @@ ae
 ae
 ae
 sT
-ET
-ET
-ET
-ET
-ET
-ET
+sx
+sx
 ZE
+VZ
+VZ
+VZ
+VZ
+Lu
+VZ
+VZ
+RA
+VZ
+VZ
+VZ
+VZ
+VZ
+RA
+VZ
+VZ
+ri
+VZ
+VZ
+VZ
+VZ
 ZE
-zK
-ZE
-RN
-RN
-ZE
-RN
-RN
-ZE
-RN
-RN
-ZE
-uE
-ZE
-Pk
-ET
-ET
-ET
-ET
-ET
+sx
+sx
 sT
 ae
 ae
@@ -124475,33 +124941,33 @@ ae
 ae
 ae
 sT
-sN
-sN
-sN
-sN
-sN
-sN
+ET
+ET
 ZE
-tL
-IN
-ZE
-lW
-Mb
-NW
-he
-Mb
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+Lm
+tV
+Pn
+VZ
+Lm
 qa
-he
-sH
+Pn
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
 ZE
-IN
-tL
-ZE
-sN
-sN
-sN
-sN
-sN
+ET
+ET
 sT
 ae
 ae
@@ -124619,29 +125085,29 @@ ae
 sT
 ET
 ET
-ET
-ET
-ET
-ET
+RN
+tz
+tz
+VZ
+tz
+tz
+VZ
+VZ
+MP
+qa
+PU
+VZ
+MP
+tV
+PU
+VZ
+VZ
+tz
+tz
+VZ
+tz
+tz
 ZE
-tH
-IN
-ZE
-IN
-IN
-IN
-IN
-IN
-IN
-IN
-IN
-ZE
-IN
-RA
-ZE
-ET
-ET
-ET
 ET
 ET
 sT
@@ -124761,29 +125227,29 @@ ae
 sT
 ET
 ET
-ET
-ET
-ET
-ET
+RN
+uE
+Mb
+VZ
+uE
+Mb
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+Mb
+Mb
+VZ
+Mb
+uE
 ZE
-ra
-IN
-Uy
-IN
-fi
-tV
-Py
-fi
-tV
-Py
-IN
-Uy
-IN
-nz
-ZE
-ET
-ET
-ET
 ET
 ET
 sT
@@ -124903,6 +125369,7 @@ ae
 sT
 ET
 ET
+<<<<<<< HEAD
 ET
 ET
 ET
@@ -124912,20 +125379,53 @@ IN
 IN
 IN
 IN
-Lm
-tV
-Pn
-Lm
-tV
-Pn
-IN
-IN
-IN
-IN
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+ET
+ET
+ET
+ET
 ZE
-ET
-ET
-ET
+nB
+IN
+IN
+IN
+=======
+RN
+xZ
+xZ
+VZ
+xZ
+xZ
+VZ
+VZ
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
+Lm
+qa
+Pn
+VZ
+Lm
+qa
+Pn
+<<<<<<< HEAD
+IN
+IN
+IN
+IN
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+IN
+IN
+IN
+ND
+=======
+VZ
+VZ
+xZ
+xZ
+VZ
+xZ
+xZ
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
+ZE
 ET
 ET
 sT
@@ -125045,29 +125545,29 @@ ae
 sT
 ET
 ET
-ET
-ET
-ET
-ET
 ZE
-nZ
-IN
-EC
-IN
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
 MP
 tV
 PU
+VZ
 MP
-tV
+qa
 PU
-IN
-EC
-IN
-Ey
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
+VZ
 ZE
-ET
-ET
-ET
 ET
 ET
 sT
@@ -125185,33 +125685,33 @@ ae
 ae
 ae
 sT
-ET
-ET
-ET
-ET
-ET
-ET
+sx
+sx
 ZE
-jA
-IN
+VZ
+VZ
+VZ
+VZ
+Pk
+VZ
+VZ
+Jw
+VZ
+VZ
+VZ
+VZ
+VZ
+Jw
+VZ
+VZ
+zN
+VZ
+VZ
+VZ
+VZ
 ZE
-IN
-IN
-IN
-IN
-IN
-IN
-IN
-IN
-ZE
-IN
-xm
-ZE
-ET
-ET
-ET
-ET
-ET
+sx
+sx
 sT
 ae
 ae
@@ -125327,33 +125827,49 @@ ae
 ae
 ae
 sT
-sN
-sN
-sN
-sN
-sN
-sN
+ET
+ET
 ZE
+sN
+Pr
+JC
+xm
+ZE
+<<<<<<< HEAD
 tV
 IN
-ZE
-Lu
-NC
-Pr
-Fz
-NC
-Pr
-Fz
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+Mm
+IN
+=======
 TO
+VZ
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 ZE
+TO
+Pr
+JC
+rD
+OT
+ZE
+TO
+kK
+ZE
+<<<<<<< HEAD
 IN
 tV
+||||||| parent of d963833121... Orange Line Upgrade (#11391)
+IN
+Mm
+=======
+rW
+JC
+IV
+Lx
+>>>>>>> d963833121... Orange Line Upgrade (#11391)
 ZE
-sN
-sN
-sN
-sN
-sN
+ET
+ET
 sT
 ae
 ae
@@ -125471,29 +125987,29 @@ ae
 sT
 ET
 ET
-ET
-ET
-ET
-ET
+ZE
+ZE
+RN
+RN
 ZE
 ZE
 As
-ZE
-RN
-RN
-ZE
-RN
-RN
-ZE
-RN
-RN
-ZE
 As
 ZE
 ZE
-ET
-ET
-ET
+RN
+RN
+RN
+ZE
+ZE
+As
+As
+ZE
+ZE
+RN
+RN
+ZE
+ZE
 ET
 ET
 sT
@@ -125617,17 +126133,17 @@ Rc
 zv
 pX
 pX
-pX
 LD
 NA
 NA
 NA
-NA
-NA
-NA
-NA
-NA
-NA
+rJ
+EO
+EO
+EO
+EO
+EO
+gT
 NA
 NA
 NA
@@ -125752,7 +126268,7 @@ ae
 ae
 ae
 ae
-tu
+Vl
 Vg
 Vg
 Vg
