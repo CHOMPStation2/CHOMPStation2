@@ -1965,6 +1965,7 @@
 /turf/space/transit/north,
 /area/space)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "jA" = (
 /obj/machinery/light{
 	dir = 1
@@ -2013,6 +2014,8 @@
 /area/centcom/simulated/terminal)
 =======
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "jQ" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -2156,6 +2159,7 @@
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "nz" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
@@ -2216,6 +2220,8 @@
 	})
 =======
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "nV" = (
 /obj/item/toy/chess/rook_black,
 /turf/simulated/floor/holofloor/wmarble,
@@ -2223,6 +2229,7 @@
 "nW" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "nZ" = (
 /obj/effect/floor_decal/fancy_shuttle{
@@ -2259,6 +2266,8 @@
 	})
 =======
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "oI" = (
 /obj/effect/step_trigger/teleporter/planetary_fall/virgo3b,
 /turf/space/transit/east,
@@ -2390,6 +2399,7 @@
 	plane = -45
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/structure/bed/chair/sofa/bench/left{
 	padding_color = "#99AAFF"
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
@@ -2407,6 +2417,18 @@
 	fancy_shuttle_tag = "tram"
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
 	},
+=======
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/area/shuttle/escape{
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+	})
+"ri" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 /obj/structure/closet/walllocker_double/hydrant/west,
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
@@ -2559,6 +2581,7 @@
 /turf/space/transit/east,
 /area/space)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "tH" = (
 /obj/machinery/light{
 	dir = 1
@@ -2614,6 +2637,8 @@
 	})
 =======
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "tV" = (
 /obj/structure/table/standard,
 /obj/random/forgotten_tram,
@@ -2761,6 +2786,7 @@
 /area/centcom/control)
 "xm" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/light,
 /obj/random/forgotten_tram,
 /obj/structure/bed/chair/sofa/bench/right{
@@ -2802,6 +2828,17 @@
 	},
 /obj/random/forgotten_tram,
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+/obj/machinery/light,
+/obj/structure/bed/chair/sofa/bench/left{
+	dir = 8;
+	padding_color = "#99AAFF"
+	},
+/obj/random/forgotten_tram,
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -3126,6 +3163,7 @@
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "Ey" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
@@ -3184,12 +3222,17 @@
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
 =======
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "EO" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/centcom/simulated/terminal)
+<<<<<<< HEAD
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "ET" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/simulated/terminal)
@@ -3598,6 +3641,7 @@
 	},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /area/space)
 <<<<<<< HEAD
 "Mf" = (
@@ -3626,6 +3670,9 @@
 =======
 /obj/structure/table/standard,
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+/obj/structure/table/standard,
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -3729,13 +3776,16 @@
 <<<<<<< HEAD
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 "ND" = (
-/obj/effect/floor_decal/fancy_shuttle{
+/obj/effect/shuttle_landmark{
+	base_area = /area/centcom/simulated/terminal;
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid;
+	docking_controller = null;
+	landmark_tag = "escape_cc";
+	name = "Escape Centcom"
+	},
+/turf/simulated/wall/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
 	},
-/obj/machinery/vending/cola/soft{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 	})
@@ -3762,6 +3812,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
+<<<<<<< HEAD
 <<<<<<< HEAD
 "NW" = (
 <<<<<<< HEAD
@@ -3826,6 +3877,8 @@
 	})
 =======
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "Oj" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -3916,6 +3969,7 @@
 	},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /area/space)
 ||||||| parent of 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
 /area/space)
@@ -3927,11 +3981,16 @@
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 /obj/structure/table/standard,
 =======
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 /obj/structure/bed/chair/sofa/bench/right{
 	dir = 8;
 	padding_color = "#99AAFF"
 	},
+<<<<<<< HEAD
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -4047,6 +4106,7 @@
 /area/centcom/simulated/medical)
 "RA" = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 /obj/machinery/light,
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 1;
@@ -4065,6 +4125,11 @@
 /obj/item/weapon/storage/firstaid/toxin,
 /obj/item/weapon/storage/firstaid/o2,
 =======
+=======
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tram"
+	},
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 /obj/machinery/status_display{
 	pixel_x = -32
 	},
@@ -4081,7 +4146,10 @@
 	fancy_shuttle_tag = "tram"
 	},
 /obj/random/forgotten_tram,
+<<<<<<< HEAD
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 /turf/simulated/floor/tiled,
 /area/shuttle/escape{
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
@@ -11868,6 +11936,7 @@ dg
 dg
 dg
 dg
+<<<<<<< HEAD
 Hy
 ap
 ap
@@ -11921,6 +11990,10 @@ ap
 ap
 ap
 ap
+=======
+dg
+Hy
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 ap
 ap
 ap
@@ -11976,6 +12049,7 @@ ae
 ae
 Xl
 Xl
+<<<<<<< HEAD
 Xl
 Xl
 Xl
@@ -11991,6 +12065,59 @@ Xl
 Xl
 Xl
 =======
+=======
+"}
+(33,1,1) = {"
+Hy
+Hy
+fi
+fi
+hI
+in
+in
+in
+lf
+in
+in
+in
+lf
+in
+in
+in
+lf
+in
+in
+in
+mF
+oL
+in
+in
+mF
+in
+in
+in
+mF
+in
+in
+in
+mF
+in
+in
+in
+pQ
+fi
+fi
+fi
+hI
+sp
+fi
+dg
+Av
+ap
+ap
+ap
+ap
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 ae
 ae
 ae
@@ -12087,6 +12214,7 @@ Xl
 (33,1,1) = {"
 Hy
 Hy
+<<<<<<< HEAD
 Mb
 Mb
 zv
@@ -12127,6 +12255,49 @@ sN
 Mb
 mb
 sN
+=======
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
+FT
+FT
+FT
+FT
+FT
+mb
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+Sh
+Sh
+Sh
+Sh
+FT
+FT
+FT
+FT
+FT
+uG
+FT
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 dg
 Hy
 ap
@@ -12350,16 +12521,25 @@ Hy
 FT
 FT
 FT
-FT
-FT
-FT
-Sh
 Sh
 Sh
 Sh
 Sh
 FT
 FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+<<<<<<< HEAD
+=======
+FT
+FT
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 FT
 FT
 FT
@@ -117524,9 +117704,6 @@ Sh
 Sh
 FT
 FT
-FT
-FT
-FT
 uG
 FT
 dg
@@ -118201,10 +118378,20 @@ Hy
 FT
 FT
 FT
+<<<<<<< HEAD
+Sh
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 Sh
 Sh
 Sh
-Sh
+FT
+FT
+FT
+FT
+FT
+FT
+FT
 FT
 FT
 FT
@@ -118761,6 +118948,7 @@ OY
 OY
 OY
 Xl
+<<<<<<< HEAD
 ap
 ap
 Xl
@@ -118786,9 +118974,25 @@ FT
 FT
 FT
 Sh
+=======
+"}
+(43,1,1) = {"
+Hy
+Hy
+FT
+FT
+FT
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 Sh
 Sh
 Sh
+FT
+FT
+FT
+FT
+FT
+FT
+FT
 FT
 FT
 FT
@@ -119262,6 +119466,7 @@ Xl
 Hy
 Hy
 <<<<<<< HEAD
+<<<<<<< HEAD
 dg
 dg
 dg
@@ -119327,6 +119532,49 @@ dg
 dg
 dg
 dg
+=======
+gv
+gv
+ig
+is
+is
+is
+lu
+lW
+lW
+lW
+lu
+lW
+lW
+lW
+lu
+lW
+lW
+lW
+lu
+pv
+lW
+lW
+lu
+lW
+lW
+lW
+lu
+lW
+lW
+lW
+lu
+is
+is
+is
+qc
+gv
+gv
+gv
+ig
+st
+gv
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 dg
 dg
 dg
@@ -119540,9 +119788,12 @@ ap
 ap
 ap
 <<<<<<< HEAD
+<<<<<<< HEAD
 ap
 ||||||| parent of 44766f85bb... Merge pull request #10079 from KillianKirilenko/kk-mapping
 ap
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 Xl
 OY
 OY
@@ -125370,6 +125621,7 @@ sT
 ET
 ET
 <<<<<<< HEAD
+<<<<<<< HEAD
 ET
 ET
 ET
@@ -125390,6 +125642,8 @@ IN
 IN
 IN
 =======
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 RN
 xZ
 xZ
@@ -125398,7 +125652,10 @@ xZ
 xZ
 VZ
 VZ
+<<<<<<< HEAD
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 Lm
 qa
 Pn
@@ -125406,6 +125663,7 @@ VZ
 Lm
 qa
 Pn
+<<<<<<< HEAD
 <<<<<<< HEAD
 IN
 IN
@@ -125417,6 +125675,8 @@ IN
 IN
 ND
 =======
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 VZ
 VZ
 xZ
@@ -125424,7 +125684,10 @@ xZ
 VZ
 xZ
 xZ
+<<<<<<< HEAD
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 ZE
 ET
 ET
@@ -125836,6 +126099,7 @@ JC
 xm
 ZE
 <<<<<<< HEAD
+<<<<<<< HEAD
 tV
 IN
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
@@ -125845,6 +126109,10 @@ IN
 TO
 VZ
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+TO
+VZ
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 ZE
 TO
 Pr
@@ -125856,17 +126124,23 @@ TO
 kK
 ZE
 <<<<<<< HEAD
+<<<<<<< HEAD
 IN
 tV
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 IN
 Mm
 =======
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 rW
 JC
 IV
 Lx
+<<<<<<< HEAD
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 ZE
 ET
 ET
@@ -125992,6 +126266,13 @@ ZE
 RN
 RN
 ZE
+<<<<<<< HEAD
+ZE
+As
+As
+ZE
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 ZE
 As
 As
@@ -126000,8 +126281,11 @@ ZE
 RN
 RN
 RN
+RN
 ZE
 ZE
+ZE
+As
 As
 As
 ZE
@@ -126010,6 +126294,13 @@ RN
 RN
 ZE
 ZE
+<<<<<<< HEAD
+=======
+RN
+RN
+ZE
+ZE
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 ET
 ET
 sT

@@ -604,7 +604,11 @@ var/failed_old_db_connections = 0
 	//CHOMPEdit End
 	return 1
 
+<<<<<<< HEAD
 /*/proc/setup_database_connection() CHOMPEdit TGSQL
+=======
+/proc/setup_database_connection()
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
@@ -707,6 +711,32 @@ proc/establish_old_db_connection()
 	results += "-- DB Reset End --"
 	to_world_log(results.Join("\n"))
 */
+
+// Cleans up DB connections and recreates them
+/proc/reset_database_connections()
+	var/list/results = list("-- Resetting DB connections --")
+	failed_db_connections = 0
+
+	if(dbcon?.IsConnected())
+		dbcon.Disconnect()
+		results += "dbcon was connected and asked to disconnect"
+	else
+		results += "dbcon was not connected"
+
+	if(dbcon_old?.IsConnected())
+		results += "WARNING: dbcon_old is connected, not touching it, but is this intentional?"
+	
+	if(!config.sql_enabled)
+		results += "stopping because config.sql_enabled = false"
+	else
+		. = setup_database_connection()
+		if(.)
+			results += "SUCCESS: set up a connection successfully with setup_database_connection()"
+		else
+			results += "FAIL: failed to connect to the database with setup_database_connection()"
+		
+	results += "-- DB Reset End --"
+	to_world_log(results.Join("\n"))
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()

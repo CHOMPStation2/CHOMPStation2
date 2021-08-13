@@ -721,14 +721,18 @@
 	injection_chems = null
 	compactor = TRUE
 	recycles = FALSE
+<<<<<<< HEAD
 	max_item_count = 25
 	//CHOMP addition end
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 
 /obj/item/device/dogborg/sleeper/compactor/brewer
 	name = "Brew Belly"
 	desc = "A mounted drunk tank unit with fuel processor."
 	icon_state = "brewer"
 	injection_chems = null
+<<<<<<< HEAD
 	
 /obj/item/device/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem) //CHOMP Addition Start
 	if(patient && patient.reagents)
@@ -744,6 +748,8 @@
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, "<span class='notice'>Injecting [units] unit\s into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
 //CHOMP Addition end
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 
 /obj/item/device/dogborg/sleeper/K9/ert
 	name = "ERT Belly"
@@ -751,4 +757,8 @@
 	icon_state = "sleeperert"
 	injection_chems = list("inaprovaline", "paracetamol") // short list
 
+<<<<<<< HEAD
 #undef SLEEPER_INJECT_COST
+=======
+#undef SLEEPER_INJECT_COST
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)

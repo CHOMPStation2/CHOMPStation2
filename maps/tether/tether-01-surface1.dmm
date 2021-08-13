@@ -35812,6 +35812,7 @@
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/brig)
 <<<<<<< HEAD
+<<<<<<< HEAD
 "nKz" = (
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary{
 	scrub_id = "atrium"
@@ -35820,6 +35821,8 @@
 /area/maintenance/lower/vacant_site)
 ||||||| parent of 257f18b7ed... Virology Revamp (#11384)
 =======
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "nLm" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -35837,7 +35840,10 @@
 /obj/item/weapon/virusdish/random,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+<<<<<<< HEAD
 >>>>>>> 257f18b7ed... Virology Revamp (#11384)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 "nMH" = (
 /obj/structure/closet{
 	desc = "Dents and old flaky paint blanket this old storage unit.";
@@ -39820,7 +39826,7 @@ aaa
 aaa
 aad
 aad
-aad
+bcV
 aad
 aad
 aad
@@ -39921,6 +39927,10 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
+=======
+aad
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aad
 aad
 aad
@@ -57435,8 +57445,8 @@ aah
 aah
 aah
 aah
-aah
-aah
+aeE
+aeE
 aeE
 afn
 avk
@@ -57546,8 +57556,6 @@ aah
 aah
 aah
 =======
-aah
-aah
 aah
 aah
 aah
@@ -57804,6 +57812,7 @@ aad
 aah
 aah
 <<<<<<< HEAD
+<<<<<<< HEAD
 auD
 aud
 aud
@@ -57851,9 +57860,13 @@ aad
 ||||||| parent of 257f18b7ed... Virology Revamp (#11384)
 aah
 aah
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aeE
+sLf
+jhN
 afx
-avl
+mjL
 axd
 ayj
 ayF
@@ -58221,8 +58234,6 @@ aah
 aah
 aah
 aah
-aah
-aah
 aeE
 vwM
 avl
@@ -58364,11 +58375,11 @@ aah
 aah
 aah
 aah
-aah
-aah
 aeE
-afD
+nLm
 avl
+afD
+vXS
 axF
 ayl
 avl
@@ -58651,9 +58662,9 @@ aah
 aah
 aah
 aah
-aah
-aah
 aeE
+bHA
+hCT
 afL
 avR
 axG
@@ -59272,7 +59283,7 @@ apF
 aah
 aah
 aah
-adK
+atx
 atx
 atZ
 auC
@@ -59694,7 +59705,7 @@ aah
 aah
 aah
 aah
-adK
+atx
 aDq
 aEc
 aEc
@@ -59872,7 +59883,7 @@ aah
 aah
 aah
 aah
-adK
+atx
 aDw
 aFF
 aFF
@@ -60100,8 +60111,8 @@ auD
 >>>>>>> 44766f85bb... Merge pull request #10079 from KillianKirilenko/kk-mapping
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 aah
+aah
 aty
-atx
 atx
 atx
 atx
@@ -60263,6 +60274,11 @@ baU
 baU
 aah
 aah
+<<<<<<< HEAD
+=======
+aah
+aah
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 auD
 aud
 aud
@@ -60297,7 +60313,6 @@ atz
 atz
 atz
 atz
-atz
 auc
 auc
 aFU
@@ -60309,12 +60324,12 @@ aub
 aub
 aub
 aub
+aub
 wXW
 atA
 atA
 atA
-mtl
-auc
+gIa
 auc
 auc
 auc
@@ -60426,6 +60441,7 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
 aad
 aad
 aad
@@ -60448,6 +60464,11 @@ auD
 baU
 baU
 baU
+=======
+baU
+baU
+baU
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aah
 aah
 aah
@@ -60475,6 +60496,7 @@ aud
 aud
 aud
 aud
+<<<<<<< HEAD
 aud
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 aud
@@ -60496,6 +60518,10 @@ aud
 =======
 mtl
 aua
+=======
+mtl
+aua
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 atz
 atz
 atz
@@ -60509,7 +60535,10 @@ atz
 atz
 atz
 eDV
+<<<<<<< HEAD
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aud
 aud
 <<<<<<< HEAD
@@ -60595,41 +60624,45 @@ aad
 aad
 <<<<<<< HEAD
 aad
+<<<<<<< HEAD
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 aad
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 baU
 baU
+baU
+aah
 aah
 aah
 auD
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
 auD
 =======
 baU
@@ -60769,7 +60802,9 @@ baU
 baU
 aah
 aah
+aah
 auD
+<<<<<<< HEAD
 aud
 aud
 aud
@@ -60805,6 +60840,8 @@ aah
 aah
 aah
 auD
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 afH
 afH
 afH
@@ -60832,7 +60869,10 @@ afH
 afH
 afH
 afH
+<<<<<<< HEAD
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 auD
 >>>>>>> 44766f85bb... Merge pull request #10079 from KillianKirilenko/kk-mapping
 aad
@@ -60896,8 +60936,8 @@ baU
 baU
 aah
 aah
+aah
 auD
-aud
 aud
 aud
 aud
@@ -61045,6 +61085,7 @@ atz
 baU
 aah
 aah
+aah
 auD
 =======
 baU
@@ -61087,7 +61128,6 @@ aad
 aad
 aad
 =======
-aud
 aud
 aud
 auD
@@ -61208,12 +61248,17 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
 aad
 aad
 atz
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 aad
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 baU
+baU
+aah
 aah
 auD
 =======
@@ -61254,7 +61299,6 @@ auD
 =======
 aud
 aud
-aud
 auD
 >>>>>>> 44766f85bb... Merge pull request #10079 from KillianKirilenko/kk-mapping
 aad
@@ -61359,6 +61403,7 @@ aad
 aad
 <<<<<<< HEAD
 aad
+<<<<<<< HEAD
 aad
 aad
 aad
@@ -61451,6 +61496,10 @@ aad
 baU
 aah
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+baU
+aah
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aah
 auD
 aud
@@ -61480,6 +61529,7 @@ aud
 aud
 aud
 aud
+<<<<<<< HEAD
 <<<<<<< HEAD
 aud
 =======
@@ -61518,6 +61568,8 @@ aJq
 aud
 =======
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 auD
 aad
 aad
@@ -61717,6 +61769,7 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
 aad
 aad
 aad
@@ -61757,36 +61810,39 @@ aah
 aah
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 aad
+=======
+baU
+aah
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aah
 auD
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
-aJq
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
 auD
 aad
 aad
@@ -61885,7 +61941,9 @@ baU
 >>>>>>> d963833121... Orange Line Upgrade (#11391)
 aah
 aah
+aah
 auD
+<<<<<<< HEAD
 aud
 aud
 aud
@@ -61913,6 +61971,35 @@ aud
 aud
 aud
 aud
+=======
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+afH
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 auD
 aad
 aad
@@ -62209,35 +62296,35 @@ aad
 aad
 aad
 aah
+aah
 auD
-afH
-afH
-afH
-afH
-atC
-afH
-afH
-afH
-afH
-aue
-atC
-afH
-afH
-afH
-atC
-afH
-afH
-afH
-atC
-aue
-afH
-afH
-afH
-atC
-afH
-afH
-afH
-afH
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
 auD
 aad
 aad
@@ -62577,6 +62664,7 @@ aty
 >>>>>>> 6133dc6fdd... Merge pull request #11341 from VOREStation/Arokha/fancy_shuttle_done
 aad
 aad
+<<<<<<< HEAD
 ||||||| parent of d963833121... Orange Line Upgrade (#11391)
 aty
 atx
@@ -62608,6 +62696,38 @@ atx
 atx
 atx
 aty
+=======
+aah
+auD
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+aud
+auD
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aad
 aad
 =======
@@ -62914,6 +63034,7 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
 aad
 aad
 aad
@@ -62958,6 +63079,38 @@ aad
 aad
 aad
 aad
+=======
+aah
+auD
+atC
+atC
+atC
+aue
+atC
+atC
+atC
+atC
+aJq
+aue
+atC
+atC
+atC
+aue
+atC
+atC
+atC
+aue
+aJq
+atC
+atC
+atC
+aue
+atC
+atC
+atC
+atC
+auD
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aad
 aad
 aad
@@ -63124,6 +63277,7 @@ aad
 aad
 aad
 aad
+<<<<<<< HEAD
 aad
 aad
 aad
@@ -63137,6 +63291,8 @@ aad
 aad
 aad
 aad
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aty
 atx
 atx
@@ -63166,6 +63322,7 @@ atx
 atx
 atx
 aty
+<<<<<<< HEAD
 aad
 aad
 aad
@@ -63182,6 +63339,8 @@ aad
 aad
 aad
 aad
+=======
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 aad
 aad
 aad

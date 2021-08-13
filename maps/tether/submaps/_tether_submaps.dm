@@ -59,11 +59,15 @@
 #include "../../submaps/admin_use_vr/ert.dm"
 #include "../../submaps/admin_use_vr/mercship.dm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "../../submaps/admin_use_vr/guttersite.dm"
 ||||||| parent of d14cd7fd46... Merge pull request #11396 from KillianKirilenko/kk-adminships
 =======
 #include "../../submaps/admin_use_vr/salamander_trader.dm"
 >>>>>>> d14cd7fd46... Merge pull request #11396 from KillianKirilenko/kk-adminships
+=======
+#include "../../submaps/admin_use_vr/salamander_trader.dm"
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 
 /datum/map_template/admin_use/ert
 	name = "Special Area - ERT"

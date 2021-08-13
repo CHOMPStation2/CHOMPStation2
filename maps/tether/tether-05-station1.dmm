@@ -30575,10 +30575,17 @@
 	id_tag = "large_escape_pod_1";
 	pixel_x = -28;
 	pixel_y = -24
+<<<<<<< HEAD
 	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "lifeboat2"
 	},
+=======
+	},
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "lifeboat2"
+	},
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 /turf/simulated/floor/tiled,
 /area/shuttle/large_escape_pod1)
 "qbm" = (

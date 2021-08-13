@@ -564,7 +564,11 @@ I think I covered everything.
 	contamination_color = "grey"
 	contamination_flavor = "Wet"
 	vore_verb = "slurp"
+<<<<<<< HEAD
 	belly_fullscreen_color = "#711e1e" //CHOMPedit
+=======
+	//belly_fullscreen_color = "#711e1e"
+>>>>>>> 7ee7e8d0b0 (Merge pull request #11401 from VOREStation/master)
 
 /obj/belly/dragon/maw
 	name = "Maw"
