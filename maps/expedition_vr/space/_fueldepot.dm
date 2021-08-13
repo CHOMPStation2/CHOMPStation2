@@ -1,16 +1,20 @@
+//CHOMP Edit: Appropriating this file for our needs and lore.
 /obj/effect/overmap/visitable/sector/fueldepot
 	name = "Fuel Depot"
 	desc = "Self-service refueling depot."
-	scanner_desc = @{"[i]Registration[/i]: Virgo-Erigonne System Authority
+	scanner_desc = @{"[i]Registration[/i]: Vir System Authority
 [i]Class[/i]: Installation (Space)
-[i]Transponder[/i]: Transmitting (CIV), V-E.S.A.
+[i]Transponder[/i]: Transmitting (CIV), V.S.A.
 [b]Notice[/b]: This facility classified for public use for the purpose of refueling and recharging starships"}
-	icon = 'icons/obj/overmap_vr.dmi'
 	icon_state = "fueldepot"
-	color = "#33FF33"
 	initial_generic_waypoints = list("fueldepot_east","fueldepot_west","fueldepot_north","fueldepot_south")
+	unknown_state = "station"
+	known = TRUE
+	icon_state = "fueldepot_g"
+	start_x  = 10
+	start_y  = 11
 
-/area/tether_away/fueldepot
+/area/sc_away/fueldepot
 	name = "Away Mission - Fuel Depot"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "dark"
