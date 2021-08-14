@@ -1,3 +1,23 @@
+/* Diffrent misc types of tiles.
+ *
+ * Contains:
+ *		Jungle Grass
+ *		Carpeting
+ *
+ * Put your stuff in fifty_spawner_tiles_ch.dm as well.
+ */
+
+///////////NSB Forbearance///////////
+///////////Jungle Flooring///////////
+
+/obj/item/stack/tile/grass/jungle
+	name = "jungle grass tile"
+	singular_name = "jungle grass floor tile"
+	desc = "A patch of thick jungle grass that's commonly found on Torris"
+	
+///////////End NSB Forbearance Section///////////
+	
+///////////Procs///////////
 // Procs to allow tiles to have material variables, consider unifying this on stack parent?
 // Uncertain if any of these procs can result in unforseen issues with tile objects, if there are bugs with tiles check if any of these procs are the cause
 
