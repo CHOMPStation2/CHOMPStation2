@@ -35,6 +35,9 @@
 		qdel(O)
 
 /obj/machinery/smartfridge/tcrystal/tgui_act(action, params)
+	if(..())
+		return TRUE
+	
 	add_fingerprint(usr)
 	switch(action)
 		if("Release")
