@@ -28,32 +28,32 @@
 	var/gammaunique = 1
 	
 
-	Initialize()
-		..()
-		if(prob(destroychance))
-			qdel(src)
+/obj/structure/trash_pile/sharkpile/Initialize()
+	..()
+	if(prob(destroychance))
+		qdel(src)
 
 //^X% chance to use our own list, otherwise default pool.
 //Here we could also add a % chance to spawn a mob for trash pandas or such,
-	produce_alpha_item()
-		if(prob(overridechancealpha))
-			var/path = pick(alphapicks)
-			var/obj/item/I = new path()
-			return I
-		return ..()
+/obj/structure/trash_pile/sharkpile/produce_alpha_item()
+	if(prob(overridechancealpha))
+		var/path = pick(alphapicks)
+		var/obj/item/I = new path()
+		return I
+	return ..()
 
-	produce_beta_item()
-		if(prob(overridechancebeta))
-			var/path = pick(betapicks)
-			var/obj/item/I = new path()
-			return I
-		return ..()
+/obj/structure/trash_pile/sharkpile/produce_beta_item()
+	if(prob(overridechancebeta))
+		var/path = pick(betapicks)
+		var/obj/item/I = new path()
+		return I
+	return ..()
 
-	produce_gamma_item()
-		if(prob(overridechancegamma)&& gammaunique!=2)
-			var/path = pick(gammapicks)
-			var/obj/item/I = new path()
-			if(gammaunique!=0)
-				gammaunique++
-			return I
-		return ..()
+/obj/structure/trash_pile/sharkpile/produce_gamma_item()
+	if(prob(overridechancegamma)&& gammaunique!=2)
+		var/path = pick(gammapicks)
+		var/obj/item/I = new path()
+		if(gammaunique!=0)
+			gammaunique++
+		return I
+	return ..()

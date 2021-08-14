@@ -147,7 +147,7 @@
 //Fire heals demons instead.
 //This should include all fire sources assuming they dont weirdly make their own damage handling.
 //Yes this also means that negative fire is bad for them...
-/mob/living/simple_mob/vore/demon/adjustFireLoss(amount)
+/mob/living/simple_mob/vore/demon/adjustFireLoss(amount,include_robo = TRUE)
 	amount = 0 - amount
 	src.adjustBruteLoss(amount)
 	..()

@@ -38,10 +38,10 @@
 	icon = 'icons/obj/closets/bodybag_large.dmi'
 	w_class = ITEMSIZE_LARGE
 
-	attack_self(mob/user)
-		var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
-		R.add_fingerprint(user)
-		qdel(src)
+/obj/item/bodybag/large/attack_self(mob/user)
+	var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
+	R.add_fingerprint(user)
+	qdel(src)
 
 /obj/structure/closet/body_bag/large
 	name = "mass grave body bag"

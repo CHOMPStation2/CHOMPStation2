@@ -3,9 +3,9 @@
 	icon = 'icons/mecha/mech_construct_ch.dmi'
 	icon_state = "scarab_chassis"
 
-	New()
-		..()
-		construct = new /datum/construction/mecha/scarab_chassis(src)
+/obj/item/mecha_parts/chassis/scarab/New()
+	..()
+	construct = new /datum/construction/mecha/scarab_chassis(src)
 
 /obj/item/mecha_parts/part/scarab_torso
 	name="Scarab Torso"

@@ -385,7 +385,7 @@
 	if(voices && prob(speak_chance/2))
 		randomspeech()
 
-/mob/living/simple_mob/animal/synx/perform_the_nom() //Synx can only eat people if their organs are on the inside.
+/mob/living/simple_mob/animal/synx/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay) //Synx can only eat people if their organs are on the inside.
 	if(stomach_distended)
 		to_chat(src,"<span class='notice'>You can't eat people without your stomach inside of you!</span>")
 		return
@@ -701,9 +701,9 @@
 	faction = "SYN"
 
 
-	New()
-		..()
-		name = "SYN-KinC-([rand(100,999)])"
+/mob/living/simple_mob/animal/synx/ai/pet/greed/synth/New()
+	..()
+	name = "SYN-KinC-([rand(100,999)])"
 
 /mob/living/simple_mob/animal/synx/ai/pet/greed/synth/goodboy
 	//hostile = 0
