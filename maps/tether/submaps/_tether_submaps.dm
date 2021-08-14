@@ -58,7 +58,12 @@
 
 #include "../../submaps/admin_use_vr/ert.dm"
 #include "../../submaps/admin_use_vr/mercship.dm"
+<<<<<<< HEAD
 #include "../../submaps/admin_use_vr/guttersite.dm"
+||||||| parent of d14cd7fd46... Merge pull request #11396 from KillianKirilenko/kk-adminships
+=======
+#include "../../submaps/admin_use_vr/salamander_trader.dm"
+>>>>>>> d14cd7fd46... Merge pull request #11396 from KillianKirilenko/kk-adminships
 
 /datum/map_template/admin_use/ert
 	name = "Special Area - ERT"
@@ -73,7 +78,7 @@
 /datum/map_template/admin_use/salamander_trader
 	name = "Special Area - Salamander Trader"
 	desc = "Modest trader ship."
-	mappath = 'maps/offmap_vr/om_ships/salamander.dmm'
+	mappath = 'maps/submaps/admin_use_vr/salamander_trader.dmm'
 
 /datum/map_template/admin_use/mercenary
 	name = "Special Area - Merc Ship"
