@@ -1,6 +1,12 @@
 // Overmap object for Sif, hanging in the void of space
 /obj/effect/overmap/visitable/planet/Sif
 	name = "Sif"
+	desc = "Location of Vir civilian colonies."
+	scanner_desc = @{"[i]Registration[/i]: Vir System Authority
+[i]Class[/i]: Colony
+[i]Transponder[/i]: Transmitting (CIV), Vir IFF
+[b]Notice[/b]: The Vir government welcomes you to this world."}
+
 	map_z = list(Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD)
 	in_space = 0
 	start_x  = 10
@@ -34,6 +40,10 @@
 	name = "Southern Cross"
 	icon_state = "object"
 	desc = "Southern Cross station, orbiting Sif."
+	scanner_desc = @{"[i]Registration[/i]: NLS Southern Cross
+[i]Class[/i]: Installation
+[i]Transponder[/i]: Transmitting (NT), NanoTrasen IFF
+[b]Notice[/b]: NanoTrasen communications station, authorized personnel only"}
 	base = 1
 	in_space = 1
 	start_x =  10

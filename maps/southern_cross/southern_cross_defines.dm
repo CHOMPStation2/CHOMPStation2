@@ -3,15 +3,16 @@
 #define Z_LEVEL_STATION_ONE				1
 #define Z_LEVEL_STATION_TWO				2
 #define Z_LEVEL_STATION_THREE			3
-//#define Z_LEVEL_EMPTY_SPACE				4 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
 #define Z_LEVEL_SURFACE					4
 #define Z_LEVEL_SURFACE_MINE			5
-#define Z_LEVEL_MISC					6
+#define Z_LEVEL_MISC					6 //Carrier, actually
 #define Z_LEVEL_CENTCOM					7
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
-#define Z_LEVEL_GATEWAY					11  //CHOMPedit - KSC = changed 10-11 so weather works on casino.
 #define Z_LEVEL_SURFACE_CASINO			10	//CHOMPedit - KSC = So there is weather on the casino.
+#define Z_LEVEL_GATEWAY					11  //CHOMPedit - KSC = changed 10-11 so weather works on casino.
+//#define Z_LEVEL_EMPTY_SPACE				12 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
+#define Z_LEVEL_FUELDEPOT				13
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -39,7 +40,7 @@
 	starsys_name  = "Vir"
 	use_overmap = TRUE
 	overmap_size = 50
-	overmap_event_areas = 85
+	overmap_event_areas = 44
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
@@ -100,13 +101,12 @@
 			Z_LEVEL_SURFACE_MINE
 		)
 
-	//CHOMPStation Addition Start - Prior addition for Belt Miner system. TFF - Commenting out 15/2/20
-	/*
+
 	// Framework for porting Tether's lateload Z-Level system
 	lateload_z_levels = list(
-			list("Mining Asteroid Belt"), //Stock lateload maps
+			list("Fuel Depot - Z1 Space") //Stock lateload maps
 			)
-	*/
+
 	//CHOMPStation Addition End
 	lateload_single_pick = list(
 		list("Carp Farm"),
@@ -179,7 +179,7 @@
 	z = Z_LEVEL_STATION_ONE
 	name = "Deck 1"
 	base_turf = /turf/space
-	transit_chance = 6
+	transit_chance = 10
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*0
 
@@ -187,7 +187,7 @@
 	z = Z_LEVEL_STATION_TWO
 	name = "Deck 2"
 	base_turf = /turf/simulated/open
-	transit_chance = 6
+	transit_chance = 10
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
@@ -195,7 +195,7 @@
 	z = Z_LEVEL_STATION_THREE
 	name = "Deck 3"
 	base_turf = /turf/simulated/open
-	transit_chance = 6
+	transit_chance = 10
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
@@ -204,7 +204,7 @@
 	z = Z_LEVEL_EMPTY_SPACE
 	name = "Empty"
 	flags = MAP_LEVEL_PLAYER
-	transit_chance = 76
+	transit_chance = 60
 */
 /datum/map_z_level/southern_cross/surface
 	z = Z_LEVEL_SURFACE
@@ -235,7 +235,7 @@
 	z = Z_LEVEL_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
-	transit_chance = 6
+	transit_chance = 10
 
 /datum/map_z_level/southern_cross/centcom
 	z = Z_LEVEL_CENTCOM
@@ -376,4 +376,4 @@
 	. +=  "The NLS [full_name] is a small waystation in orbit of the frozen garden world of Sif, jewel of the Vir system.<br>"
 	. +=  "Though Vir is typically peaceful, the system has seen its fair share of conflict in the face of technological extremists, rogue drone intelligence, and worse.<br>"
 	. +=  "As an employee of NanoTrasen, operators of the Southern Cross and one of the galaxy's largest research corporations, you're probably just here to do a job."
-	return jointext(., "<br>") 
+	return jointext(., "<br>")
