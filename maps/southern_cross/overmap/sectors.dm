@@ -40,7 +40,7 @@
 	name = "Southern Cross"
 	icon_state = "object"
 	desc = "Southern Cross station, orbiting Sif."
-	scanner_desc = @{"[i]Registration[/i]: NT Southern Cross
+	scanner_desc = @{"[i]Registration[/i]: NLS Southern Cross
 [i]Class[/i]: Installation
 [i]Transponder[/i]: Transmitting (NT), NanoTrasen IFF
 [b]Notice[/b]: NanoTrasen communications station, authorized personnel only"}
