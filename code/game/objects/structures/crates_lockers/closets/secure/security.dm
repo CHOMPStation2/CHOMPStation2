@@ -238,8 +238,14 @@
 
 	starts_with = list(
 		/obj/item/clothing/accessory/badge/holo/detective,
+<<<<<<< HEAD
 		/obj/item/clothing/gloves/forensic, //CHOMP Edit replaces black gloves
 		/obj/item/gunbox, //CHOMP Edit undoes vorestation removal and adds back gunbox
+=======
+		/obj/item/clothing/gloves/black,
+		///obj/item/gunbox, // VOREStation Removal
+		///obj/item/weapon/gun/energy/stunrevolver/vintage, // VOREStation Removal
+>>>>>>> fbec4bb5e8 (Merge pull request #11423 from VOREStation/master)
 		/obj/item/weapon/storage/belt/detective,
 		/obj/item/weapon/storage/box/evidence,
 		/obj/item/device/radio/headset/headset_sec,
@@ -312,4 +318,3 @@ GLOBAL_LIST_BOILERPLATE(all_brig_closets, /obj/structure/closet/secure_closet/br
 
 	//too small to put a man in
 	large = 0
-	door_anim_time = 0 // Unsupported

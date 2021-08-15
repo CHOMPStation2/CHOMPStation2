@@ -396,4 +396,8 @@
 	name = "Dragon Plateu"
 	desc = "A dangerous plateu of cliffs home to a rampant gold hoarding dragon"
 	mappath = 'maps/submaps/surface_submaps/wilderness/drgnplateu.dmm'
+<<<<<<< HEAD
 	cost = 15
+=======
+	cost = 15
+>>>>>>> fbec4bb5e8 (Merge pull request #11423 from VOREStation/master)

@@ -60,3 +60,8 @@ xioen - Xenochimera
 xonkon - Protean
 zalvine - Shadekin Empathy
 zammyman215 - Vox
+<<<<<<< HEAD
+=======
+zeracyfr - Xenochimera
+spirit1299 - Black-Eyed Shadekin
+>>>>>>> fbec4bb5e8 (Merge pull request #11423 from VOREStation/master)
