@@ -34,7 +34,7 @@
 
 //CHOMPedit: On-demand belly loading.
 /mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
-	if(vore_active && !voremob_loaded)
+	if(vore_active && !voremob_loaded && pred == src) //Only init your own bellies.
 		voremob_loaded = TRUE
 		init_vore()
 		belly = vore_selected
