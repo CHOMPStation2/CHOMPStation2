@@ -1,199 +1,49 @@
-/**
- * Decorative items for PoIs etc.
- * These are generally sprites ported from other servers, which don't have any unique code.
- * They can be used by mappers for decorating their maps. They're mostly here so people who aren't
- * rummaging around in the sprites can be aware of some neat sprites they can use.
- *
- * Obviously you can swipe the sprites for real structures and add code, but please don't add any code
- * (beyond decorative things like maybe light) directly to these types or this file!
- * Take the icon and state and make your own type under /obj/structure.
- *
- * Some of these do have a SMIDGE of code to allow a mapper to twirl them through states/animations without
- * much effort, but beyond 'visuals logic', I'd rather keep all the logic out of here.
- */
+/obj/structure/prop/machine
+	name = "doodad"
+	desc = "Some kind of machine."
+	icon = 'icons/obj/props/decor.dmi'
 
-/obj/structure/prop
-	name = "mysterious structure"
-	desc = "You're not sure what this is."
-	icon = 'icons/obj/structures.dmi'
-	icon_state = "safe"
-	density = TRUE
-	anchored = TRUE
-	var/interaction_message = null
-	var/state
+//Eris Bluespace Beacon
 
-/// Used to tell the player that this isn't useful for anything.
-/obj/structure/prop/attack_hand(mob/living/user)
-	if(!istype(user))
-		return FALSE
-	if(!interaction_message)
-		return ..()
-	else
-		to_chat(user, interaction_message)
+/obj/structure/prop/machine/bsb_off
+	name = "beacon"
+	icon_state = "bsb_off"
 
-/obj/structure/prop/proc/change_state(state)
-	SHOULD_CALL_PARENT(TRUE)
-	src.state = state
+/obj/structure/prop/machine/bsb_on
+	name = "beacon"
+	icon_state = "bsb_on"
 
-/// Helper so admins can varedit the state easily.
-/obj/structure/prop/vv_edit_var(var_name, var_value)
-	if(var_name == "state")
-		change_state(var_value)
-
-
-<<<<<<< HEAD
-// bluespace crystal from Eris
-/obj/structure/prop/bsc
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "bsc"
-/obj/structure/prop/bsc_dust
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "bsc_dust"
-
-// same as state names, from faction items on Eris
-/obj/structure/prop/biosyphon
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/biosyphon
 	icon_state = "biosyphon"
-/obj/structure/prop/von_krabin
-	icon = 'icons/obj/structures/decor.dmi'
+
+/obj/structure/prop/machine/von_krabin
 	icon_state = "von_krabin"
-/obj/structure/prop/last_shelter
-	icon = 'icons/obj/structures/decor.dmi'
+
+/obj/structure/prop/machine/last_shelter
 	icon_state = "last_shelter"
-/obj/structure/prop/complicator
-	icon = 'icons/obj/structures/decor.dmi'
+
+/obj/structure/prop/machine/complicator
 	icon_state = "complicator"
-/obj/structure/prop/random_radio
-	icon = 'icons/obj/structures/decor.dmi'
+
+/obj/structure/prop/machine/random_radio
+	name = "radio"
 	icon_state = "random_radio"
-/obj/structure/prop/nt_pedestal0_old
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "nt_pedestal0_old"
-/obj/structure/prop/nt_pedestal1_old
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "nt_pedestal1_old"
-
-// statues from Eris
-/obj/structure/prop/statue1
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_1"
-/obj/structure/prop/statue2
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_2"
-/obj/structure/prop/statue3
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_3"
-/obj/structure/prop/statue4
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_4"
-/obj/structure/prop/statue5
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_5"
-/obj/structure/prop/statue6
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_6"
-
-// ship mast from TGMC
-/obj/structure/prop/stump_plaque
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "stump"
 
 // vatgrowing thing from /tg/
-/obj/structure/prop/green_egg
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/green_egg
 	icon_state = "gel_cocoon"
 
-// eye of the protector from Eris
-/obj/structure/prop/eotp
-	icon = 'icons/obj/structures/decor32x64.dmi'
-	icon_state = "eotp"
-
 // gravity generator from Eris
-/obj/structure/prop/gravygen
-	icon = 'icons/obj/structures/decor64x64.dmi'
+/obj/structure/prop/machine/gravygen
+	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "bigdice"
 	bound_width = 64
 	bound_height = 64
 
 // dna vault from /tg/
 /obj/structure/prop/dna_vault
-	icon = 'icons/obj/structures/decor96x96.dmi'
+	icon = 'icons/obj/props/decor96x96.dmi'
 	icon_state = "vault"
-
-// fences from TGMC
-// You'll need to 'create instances from icon_states' in an editor to use these well
-/obj/structure/prop/fence
-	name = "fence"
-	desc = "It's a fence! Not much else to say about it."
-	icon = 'icons/obj/structures/decor_fences.dmi'
-=======
-//Misc stuff that fits no category
-
-// ship memorial from TGMC
-/obj/structure/prop/memorial
-	name = "engraved wall"
-	desc = "A finely engraved list on dark stone."
-	icon = 'icons/obj/props/decor64x64.dmi'
-	icon_state = "ship_memorial"
-	bound_width = 64
->>>>>>> cbc246afb9 (Merge pull request #11412 from VOREStation/upstream-merge-8198)
-
-/**
- *
- Notes on change_state
- *
- * tl;dr "You can varedit 'state' on these to the things in the comments below to get cool animations"
- *
- * These items have some logic to handle some fun animations on them. Mappers can call the 'change_state(state)' proc
- * while referring to the comments here for what states they can use. You'll notice some crazy overlay handling,
- * and that's because I don't want to add any vars to these mappers think they can fiddle with, which requires
- * more logic than I'm willing to do at the moment. So we get crazy cut/add operations instead.
- *
- * There's also a VV helper so if you varedit 'state' to these during the game, you can get that to work.
- *
- * Like, I don't want to add a state machine to decorative objects. You can if you want.
-<<<<<<< HEAD
- * 
- */
-
-/**
- * Possible 'state' options for change_state(state) are:
- * off: Looks boring and off
- * on: candles lit and stuff
- * no_cruciform: No cruciform (the little triangle thing) inserted
- * red_cruciform: Red light cruciform inserted
- * green_cruciform: Green light cruciform inserted
- * panel_open: The panel is open (wiring)
- * panel_closed: The panel is closed
- */
-// neotheology cruciform reader from Eris
-/obj/structure/prop/nt_reader
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "nt_reader_off"
-
-/obj/structure/prop/nt_reader/change_state(state)
-	. = ..()
-	switch(state)
-		if("off")
-			icon_state = "nt_reader_off"
-		if("on")
-			icon_state = "nt_reader_on"
-		if("no_cruciform")
-			cut_overlay("nt_reader_c_green")
-			cut_overlay("nt_reader_c_red")
-		if("red_cruciform")
-			cut_overlay("nt_reader_c_green")
-			cut_overlay("nt_reader_c_red")
-			add_overlay("nt_reader_c_red")
-		if("green_cruciform")
-			cut_overlay("nt_reader_c_red")
-			cut_overlay("nt_reader_c_green")
-			add_overlay("nt_reader_c_green")
-		if("panel_open")
-			cut_overlay("nt_reader_panel")
-			add_overlay("nt_reader_panel")
-		if("panel_closed")
-			cut_overlay("nt_reader_panel")
 
 /**
  * Possible 'state' options for change_state(state) are:
@@ -201,8 +51,8 @@
  * panel_closed: The panel is closed
  */
 // neotheology cloning biocan from Eris
-/obj/structure/prop/nt_biocan
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/nt_biocan
+	icon = 'icons/obj/props/decor.dmi'
 	icon_state = "nt_biocan"
 
 /obj/structure/prop/nt_biocan/change_state(state)
@@ -224,7 +74,7 @@
  */
 // dominator console from /tg/
 /obj/structure/prop/dominator
-	icon = 'icons/obj/structures/decor.dmi'
+	icon = 'icons/obj/props/decor.dmi'
 	icon_state = "dominator"
 
 /obj/structure/prop/dominator/change_state(state)
@@ -270,11 +120,10 @@
  * on: Pumping or something
  */
 // some neotheology thing from Eris
-/obj/structure/prop/nt_solifier
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/solifier
 	icon_state = "nt_solidifier"
 
-/obj/structure/prop/nt_solifier/change_state(state)
+/obj/structure/prop/machine/solifier/change_state(state)
 	. = ..()
 	switch(state)
 		if("off")
@@ -282,7 +131,7 @@
 		if("on")
 			icon_state = "nt_solidifier_on"
 
-/obj/structure/prop/nt_solifier/starts_on
+/obj/structure/prop/machine/solifier/starts_on
 	icon_state = "nt_solidifier_on"
 
 /**
@@ -291,11 +140,10 @@
  * on: Spinny glowy
  */
 // conduit of soul from Eris
-/obj/structure/prop/conduit
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/conduit
 	icon_state = "conduit_off"
 
-/obj/structure/prop/conduit/change_state(state)
+/obj/structure/prop/machine/conduit/change_state(state)
 	. = ..()
 	switch(state)
 		if("on")
@@ -305,7 +153,7 @@
 			icon_state = "conduit_off"
 			flick("conduit_stopping", src)
 
-/obj/structure/prop/conduit/starts_on
+/obj/structure/prop/machine/conduit/starts_on
 	icon_state = "conduit_spin"
 
 /**
@@ -316,11 +164,10 @@
  * loaded: off but without the animation
  */
 // some kinda NT thing from Eris
-/obj/structure/prop/core
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/core
 	icon_state = "core_inactive"
 
-/obj/structure/prop/core/change_state(state)
+/obj/structure/prop/machine/core/change_state(state)
 	. = ..()
 	switch(state)
 		if("on")
@@ -334,7 +181,7 @@
 		if("loaded")
 			icon_state = "core_inactive"
 
-/obj/structure/prop/core/starts_on
+/obj/structure/prop/machine/core/starts_on
 	icon_state = "core_active"
 
 /**
@@ -343,11 +190,11 @@
  * up: Out of the ground, open
  */
 // experimental science destructor from /tg/
-/obj/structure/prop/tube
-	icon = 'icons/obj/structures/decor32x64.dmi'
+/obj/structure/prop/machine/tube
+	icon = 'icons/obj/props/decor32x64.dmi'
 	icon_state = "tube_open"
 
-/obj/structure/prop/tube/change_state(state)
+/obj/structure/prop/machine/tube/change_state(state)
 	. = ..()
 	switch(state)
 		if("down")
@@ -357,7 +204,7 @@
 			icon_state = "tube_open"
 			flick("tube_up", src)
 
-/obj/structure/prop/tube/starts_down
+/obj/structure/prop/machine/tube/starts_down
 	icon_state = "tube_on"
 
 /**
@@ -366,12 +213,12 @@
  * on: Turny and blinky
  */
 // experimental science destructor from /tg/
-/obj/structure/prop/comm_tower
-	icon = 'icons/obj/structures/decor.dmi'
-	icon = 'icons/obj/structures/decor96x96.dmi'
+/obj/structure/prop/machine/comm_tower
+	icon = 'icons/obj/props/decor.dmi'
+	icon = 'icons/obj/props/decor96x96.dmi'
 	icon_state = "comm_tower"
 
-/obj/structure/prop/comm_tower/change_state(state)
+/obj/structure/prop/machine/comm_tower/change_state(state)
 	. = ..()
 	switch(state)
 		if("on")
@@ -379,7 +226,7 @@
 		if("off")
 			icon_state = "comm_tower"
 
-/obj/structure/prop/comm_tower/starts_on
+/obj/structure/prop/machine/comm_tower/starts_on
 	icon_state = "comm_tower_on"
 
 /**
@@ -388,11 +235,11 @@
  * on: Stamping mysterious substances
  */
 // sheetizer from /tg/
-/obj/structure/prop/stamper
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/stamper
+	icon = 'icons/obj/props/decor.dmi'
 	icon_state = "stamper"
 
-/obj/structure/prop/stamper/change_state(state)
+/obj/structure/prop/machine/stamper/change_state(state)
 	. = ..()
 	switch(state)
 		if("off")
@@ -401,10 +248,10 @@
 			add_overlay("stamper_proc")
 			add_overlay("stamper_but")
 
-/obj/structure/prop/stamper/starts_on
+/obj/structure/prop/machine/stamper/starts_on
 	icon_state = "stamper_on"
 
-/obj/structure/prop/stamper/starts_on/Initialize()
+/obj/structure/prop/machine/stamper/starts_on/Initialize()
 	add_overlay("stamper_proc")
 	add_overlay("stamper_but")
 
@@ -415,11 +262,10 @@
  * broken: Stamping mysterious substances
  */
 // alien autopsy thing from TGMC
-/obj/structure/prop/alien_tank
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/alien_tank
 	icon_state = "tank_larva"
 
-/obj/structure/prop/alien_tank/change_state(state)
+/obj/structure/prop/machine/alien_tank/change_state(state)
 	. = ..()
 	switch(state)
 		if("whole")
@@ -427,7 +273,7 @@
 		if("broken")
 			icon_state = "tank_broken"
 
-/obj/structure/prop/alien_tank/starts_broken
+/obj/structure/prop/machine/alien_tank/starts_broken
 	icon_state = "tank_broken"
 
 /**
@@ -438,11 +284,10 @@
  * panel_closed: Closed panel
  */
 // neotheology optable from Eris
-/obj/structure/prop/nt_optable
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/nt_optable
 	icon_state = "nt_optable-idle"
 
-/obj/structure/prop/nt_optable/change_state(state)
+/obj/structure/prop/machine/nt_optable/change_state(state)
 	. = ..()
 	switch(state)
 		if("idle")
@@ -466,11 +311,10 @@
  * panel_closed: Closed panel
  */
 // trade beacon from Eris
-/obj/structure/prop/tradebeacon
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/tradebeacon
 	icon_state = "tradebeacon"
 
-/obj/structure/prop/tradebeacon/change_state(state)
+/obj/structure/prop/machine/tradebeacon/change_state(state)
 	. = ..()
 	switch(state)
 		if("idle")
@@ -483,7 +327,7 @@
 		if("panel_closed")
 			cut_overlay("tradebeacon_panel")
 
-/obj/structure/prop/tradebeacon/starts_active
+/obj/structure/prop/machine/tradebeacon/starts_active
 	icon_state = "tradebeacon_active"
 
 /**
@@ -494,11 +338,10 @@
  * panel_closed: Closed panel
  */
 // another trade beacon from Eris
-/obj/structure/prop/tradebeacon2
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/tradebeacon2
 	icon_state = "tradebeacon"
 
-/obj/structure/prop/tradebeacon2/change_state(state)
+/obj/structure/prop/machine/tradebeacon2/change_state(state)
 	. = ..()
 	switch(state)
 		if("idle")
@@ -511,7 +354,7 @@
 		if("panel_closed")
 			cut_overlay("tradebeacon_sending_panel")
 
-/obj/structure/prop/tradebeacon2/starts_active
+/obj/structure/prop/machine/tradebeacon2/starts_active
 	icon_state = "tradebeacon_sending_active"
 
 /**
@@ -520,11 +363,11 @@
  * on: Spinny and floaty
  */
 // neotheology decorative(?) obelisk from Eris
-/obj/structure/prop/nt_obelisk
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/nt_obelisk
+	icon = 'icons/obj/props/decor.dmi'
 	icon_state = "nt_obelisk"
 
-/obj/structure/prop/nt_obelisk/change_state(state)
+/obj/structure/prop/machine/nt_obelisk/change_state(state)
 	. = ..()
 	switch(state)
 		if("off")
@@ -532,7 +375,7 @@
 		if("on")
 			icon_state = "nt_obelisk_on"
 
-/obj/structure/prop/nt_obelisk/starts_on
+/obj/structure/prop/machine/nt_obelisk/starts_on
 	icon_state = "nt_obelisk_on"
 
 /**
@@ -541,11 +384,11 @@
  * on: Hand destroying machinery
  */
 // 'sorter' from Eris
-/obj/structure/prop/sorter
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/sorter
+	icon = 'icons/obj/props/decor.dmi'
 	icon_state = "sorter"
 
-/obj/structure/prop/sorter/change_state(state)
+/obj/structure/prop/machine/sorter/change_state(state)
 	. = ..()
 	switch(state)
 		if("off")
@@ -553,7 +396,7 @@
 		if("on")
 			icon_state = "sorter-process"
 
-/obj/structure/prop/sorter/starts_on
+/obj/structure/prop/machine/sorter/starts_on
 	icon_state = "sorter-process"
 
 /**
@@ -562,11 +405,11 @@
  * on: Hand destroying machinery
  */
 // 'smelter' from Eris
-/obj/structure/prop/smelter
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/smelter
+	icon = 'icons/obj/props/decor.dmi'
 	icon_state = "smelter"
 
-/obj/structure/prop/smelter/change_state(state)
+/obj/structure/prop/machine/smelter/change_state(state)
 	. = ..()
 	switch(state)
 		if("off")
@@ -574,7 +417,7 @@
 		if("on")
 			icon_state = "smelter-process"
 
-/obj/structure/prop/smelter/starts_on
+/obj/structure/prop/machine/smelter/starts_on
 	icon_state = "smelter-process"
 
 /**
@@ -584,11 +427,11 @@
  * pause: paused work
  */
 // cruciform forge from Eris
-/obj/structure/prop/nt_cruciforge
-	icon = 'icons/obj/structures/decor.dmi'
+/obj/structure/prop/machine/nt_cruciforge
+	icon = 'icons/obj/props/decor.dmi'
 	icon_state = "nt_cruciforge"
 
-/obj/structure/prop/nt_cruciforge/change_state(state)
+/obj/structure/prop/machine/nt_cruciforge/change_state(state)
 	. = ..()
 	switch(state)
 		if("idle")
@@ -599,9 +442,115 @@
 			flick("nt_cruciforge_start", src) // 8ds
 		if("pause")
 			icon_state = "nt_cruciforge_pause"
-			
-/obj/structure/prop/nt_cruciforge/starts_working
+
+/obj/structure/prop/machine/nt_cruciforge/starts_working
 	icon_state = "nt_cruciforge_work"
+
+/**
+ * Possible 'state' options for change_state(state) are:
+ * off: Default, boring
+ * on: Showing a display/powered up
+ */
+// A console from TGMC
+/obj/structure/prop/machine/tgmc_console1
+	name = "console"
+	icon = 'icons/obj/props/decor.dmi'
+	icon_state = "tgmc_console1"
+
+/obj/structure/prop/machine/tgmc_console1/change_state(state)
+	. = ..()
+	switch(state)
+		if("off")
+			icon_state = "tgmc_console1"
+		if("on")
+			icon_state = "tgmc_console1_on"
+
+/obj/structure/prop/machine/tgmc_console1/starts_on
+	icon_state = "tgmc_console1_on"
+
+/**
+ * Possible 'state' options for change_state(state) are:
+ * off: Default, boring
+ * on: Showing a display/powered up
+ */
+// A console from TGMC
+/obj/structure/prop/machine/tgmc_console2
+	name = "console"
+	icon_state = "tgmc_console2"
+
+/obj/structure/prop/machine/tgmc_console2/change_state(state)
+	. = ..()
+	switch(state)
+		if("off")
+			icon_state = "tgmc_console2"
+		if("on")
+			icon_state = "tgmc_console2_on"
+
+/obj/structure/prop/machine/tgmc_console2/starts_on
+	icon_state = "tgmc_console2_on"
+
+/**
+ * Possible 'state' options for change_state(state) are:
+ * off: Default, boring
+ * on: Showing a display/powered up
+ */
+// A console from TGMC
+/obj/structure/prop/machine/tgmc_console3
+	name = "console"
+	icon_state = "tgmc_console3"
+
+/obj/structure/prop/machine/tgmc_console3/change_state(state)
+	. = ..()
+	switch(state)
+		if("off")
+			icon_state = "tgmc_console3"
+		if("on")
+			icon_state = "tgmc_console3_on"
+
+/obj/structure/prop/machine/tgmc_console3/starts_on
+	icon_state = "tgmc_console3_on"
+
+/**
+ * Possible 'state' options for change_state(state) are:
+ * off: Default, boring
+ * on: Showing a display/powered up
+ */
+// A console from TGMC
+/obj/structure/prop/machine/tgmc_console4
+	name = "console"
+	icon_state = "tgmc_console4"
+
+/obj/structure/prop/machine/tgmc_console4/change_state(state)
+	. = ..()
+	switch(state)
+		if("off")
+			icon_state = "tgmc_console4"
+		if("on")
+			icon_state = "tgmc_console4_on"
+
+/obj/structure/prop/machine/tgmc_console4/starts_on
+	icon_state = "tgmc_console4_on"
+
+/**
+ * Possible 'state' options for change_state(state) are:
+ * off: Default, boring
+ * on: Showing a display/powered up
+ */
+// A console from TGMC
+/obj/structure/prop/machine/tgmc_console5
+	name = "console"
+	icon_state = "tgmc_console5"
+
+/obj/structure/prop/machine/tgmc_console5/change_state(state)
+	. = ..()
+	switch(state)
+		if("off")
+			icon_state = "tgmc_console5"
+		if("on")
+			icon_state = "tgmc_console5_on"
+
+/obj/structure/prop/machine/tgmc_console5/starts_on
+	icon_state = "tgmc_console5_on"
 
 /**
  * This one is a bit more fancy than others. Anything in the contents (PLEASE LIMIT TO ONE THING)
@@ -617,9 +566,9 @@
  * panel_closed: Unshows panel
  */
 // neotheology cloning pod from Eris
-/obj/structure/prop/nt_pod
-	icon = 'icons/obj/structures/decor.dmi'
-	icon = 'icons/obj/structures/decor32x64.dmi'
+/obj/structure/prop/machine/nt_pod
+	icon = 'icons/obj/props/decor.dmi'
+	icon = 'icons/obj/props/decor32x64.dmi'
 	icon_state = "nt_pod_mappreview"
 	bound_height = 64
 
@@ -630,7 +579,7 @@
 	var/contents_vis_flags = NONE
 	var/contents_original_pixel_y = 0
 
-/obj/structure/prop/nt_pod/Initialize(mapload)
+/obj/structure/prop/machine/nt_pod/Initialize(mapload)
 	// Our non-map-preview state
 	icon_state = "nt_pod"
 	
@@ -651,10 +600,10 @@
 		var/atom/movable/AM = locate() in loc
 		AM?.forceMove(src)
 
-/obj/structure/prop/nt_pod/Entered(atom/movable/mover)
+/obj/structure/prop/machine/nt_pod/Entered(atom/movable/mover)
 	abduct(mover)
 
-/obj/structure/prop/nt_pod/proc/abduct(var/atom/movable/AM)
+/obj/structure/prop/machine/nt_pod/proc/abduct(var/atom/movable/AM)
 	// Save old settings
 	contents_vis_flags = AM.vis_flags
 	contents_original_pixel_y = AM.pixel_y
@@ -671,7 +620,7 @@
 	// TRAP THEM
 	change_state("closed")
 
-/obj/structure/prop/nt_pod/proc/unduct(var/atom/movable/AM)
+/obj/structure/prop/machine/nt_pod/proc/unduct(var/atom/movable/AM)
 	// Geddout
 	vis_contents -= AM
 	if(ismob(AM))
@@ -683,7 +632,7 @@
 	AM.vis_flags = contents_vis_flags
 	AM.pixel_y = contents_original_pixel_y
 
-/obj/structure/prop/nt_pod/MouseDrop_T(var/atom/movable/AM, var/mob/user)
+/obj/structure/prop/machine/nt_pod/MouseDrop_T(var/atom/movable/AM, var/mob/user)
 	if(contents.len)
 		return
 	if(!ismovable(AM))
@@ -693,7 +642,7 @@
 	
 	AM.forceMove(src)
 
-/obj/structure/prop/nt_pod/change_state(state)
+/obj/structure/prop/machine/nt_pod/change_state(state)
 	. = ..()
 	switch(state)
 		if("open")
@@ -735,12 +684,3 @@
 			add_overlay("nt_pod_panel")
 		if("panel_closed")
 			cut_overlay("nt_pod_panel")
-
-/**
- * Possible 'state' options for change_state(state) are:
- */
-=======
- *
- */
-
->>>>>>> cbc246afb9 (Merge pull request #11412 from VOREStation/upstream-merge-8198)
