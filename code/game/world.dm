@@ -679,6 +679,7 @@ var/failed_old_db_connections = 0
 proc/establish_old_db_connection()
 	return SSdbcore.Connect()
 
+/* CHOMPedit
 // Cleans up DB connections and recreates them
 /proc/reset_database_connections()
 	var/list/results = list("-- Resetting DB connections --")
@@ -704,6 +705,7 @@ proc/establish_old_db_connection()
 		
 	results += "-- DB Reset End --"
 	to_world_log(results.Join("\n"))
+*/
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()
