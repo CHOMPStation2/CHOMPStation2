@@ -22,6 +22,7 @@
 	var/manual_chamber = TRUE
 	var/only_open_load = FALSE
 	var/auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK | LOCK_SLAPPABLE
+	var/bolt_action = FALSE
 	var/bolt_name = "bolt"
 	var/bolt_open = FALSE
 	var/bolt_locked = FALSE
@@ -424,7 +425,7 @@
 			else if(CHECK_BITFIELD(auto_loading_type,CLOSED_BOLT) && bolt_open)
 				to_chat(user,"<span class='warning'>This is a closed bolt gun! You need to close the bolt before firing it!</span>")
 				return 0
-			else if(bolt_open)
+			else if(bolt_open && bolt_action)
 				to_chat(user,"<span class='warning'>This is a manual action gun, the bolt or chamber must be closed before firing it!</span>")
 				return 0
 			else
