@@ -1119,25 +1119,25 @@
 				if("10 minutes")
 					host.vore_selected.gen_time = 0
 				if("30 minutes")
-					host.vore_selected.gen_time = 2
+					host.vore_selected.gen_time = 4
 				if("1 hour")
-					host.vore_selected.gen_time = 5
+					host.vore_selected.gen_time = 10
 				if("3 hours")
-					host.vore_selected.gen_time = 17
+					host.vore_selected.gen_time = 34
 				if("6 hours")
-					host.vore_selected.gen_time = 35
+					host.vore_selected.gen_time = 70
 				if("12 hours")
-					host.vore_selected.gen_time = 71
+					host.vore_selected.gen_time = 142
 				if("24 hours")
-					host.vore_selected.gen_time = 143
+					host.vore_selected.gen_time = 286
 				if(null)
 					return FALSE
 			. = TRUE
 		if("b_liq_reagent_capacity")
-			var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 0 to 100.", "Set Custom Belly Capacity.", host.vore_selected.custom_max_volume) as num|null
+			var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 0 to [host.vore_selected.custom_max_volume].", "Set Custom Belly Capacity.", host.vore_selected.custom_max_volume) as num|null
 			if(new_custom_vol == null)
 				return FALSE
-			var/new_new_custom_vol = CLAMP(new_custom_vol, 10, 100)
+			var/new_new_custom_vol = CLAMP(new_custom_vol, 10, host.vore_selected.custom_max_volume)
 			host.vore_selected.custom_max_volume = new_new_custom_vol
 			. = TRUE
 		if("b_liq_sloshing")
