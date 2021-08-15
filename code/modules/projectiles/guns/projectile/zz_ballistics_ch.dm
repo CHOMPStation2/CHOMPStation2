@@ -287,6 +287,7 @@
 	desc = "A reproduction of some old russian bolt-action rifle from some backwater rimworld. Smells strongly of cosmoline. The inscriptions on it are in pan-slavic. Chambered in 7.62x54mmR."
 	caliber = "7.62x54mmR"
 	auto_loading_type = NO_AUTO_LOAD
+	bolt_action = TRUE
 	load_method = SINGLE_CASING|SPEEDLOADER
 	only_open_load = TRUE
 	icon_state = "mosin"
