@@ -424,7 +424,7 @@
 			else if(CHECK_BITFIELD(auto_loading_type,CLOSED_BOLT) && bolt_open)
 				to_chat(user,"<span class='warning'>This is a closed bolt gun! You need to close the bolt before firing it!</span>")
 				return 0
-			else if(bolt_open)
+			else if((!auto_loading_type) && bolt_open)
 				to_chat(user,"<span class='warning'>This is a manual action gun, the bolt or chamber must be closed before firing it!</span>")
 				return 0
 			else
