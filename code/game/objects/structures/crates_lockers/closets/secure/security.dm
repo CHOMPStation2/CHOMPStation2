@@ -238,8 +238,14 @@
 
 	starts_with = list(
 		/obj/item/clothing/accessory/badge/holo/detective,
+<<<<<<< HEAD
 		/obj/item/clothing/gloves/forensic, //CHOMP Edit replaces black gloves
 		/obj/item/gunbox, //CHOMP Edit undoes vorestation removal and adds back gunbox
+=======
+		/obj/item/clothing/gloves/black,
+		///obj/item/gunbox, // VOREStation Removal
+		///obj/item/weapon/gun/energy/stunrevolver/vintage, // VOREStation Removal
+>>>>>>> fd8da95ec7 (Merge pull request #11408 from VOREStation/upstream-merge-8178)
 		/obj/item/weapon/storage/belt/detective,
 		/obj/item/weapon/storage/box/evidence,
 		/obj/item/device/radio/headset/headset_sec,
