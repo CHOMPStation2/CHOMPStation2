@@ -603,15 +603,7 @@ var/failed_old_db_connections = 0
 	//CHOMPEdit End
 	return 1
 
-<<<<<<< HEAD
 /*/proc/setup_database_connection() CHOMPEdit TGSQL
-
-||||||| parent of 8662f320d9... Merge pull request #11399 from VOREStation/Arokha/dbreset
-/proc/setup_database_connection()
-
-=======
-/proc/setup_database_connection()
->>>>>>> 8662f320d9... Merge pull request #11399 from VOREStation/Arokha/dbreset
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
