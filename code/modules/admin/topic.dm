@@ -143,7 +143,7 @@
 			if(admin_ranks.len)
 				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", (admin_ranks|"*New Rank*"))
 			else
-				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", list("Game Master","Game Admin", "Trial Admin", "Admin Observer","*New Rank*"))
+				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", list("Game Master","Head Admin","Game Admin", "Trial Admin", "Admin Observer","Moderator","Mentor","Badmin","Retired Admin","Event Manager","Developer","DevMod","*New Rank*")) //CHOMP Edit bandaid fix to assigning titles because we're having some funky database issues, I think. Other option is to manually edit database entry for someone's title. 
 
 			var/rights = 0
 			if(D)
