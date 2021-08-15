@@ -721,23 +721,13 @@
 	injection_chems = null
 	compactor = TRUE
 	recycles = FALSE
-<<<<<<< HEAD
 	max_item_count = 25
 	//CHOMP addition end
 
-||||||| parent of 44748560b6... Merge pull request #11398 from VOREStation/Arokha/przy
-
-#undef SLEEPER_INJECT_COST
-
-
-=======
-
->>>>>>> 44748560b6... Merge pull request #11398 from VOREStation/Arokha/przy
 /obj/item/device/dogborg/sleeper/compactor/brewer
 	name = "Brew Belly"
 	desc = "A mounted drunk tank unit with fuel processor."
 	icon_state = "brewer"
-<<<<<<< HEAD
 	injection_chems = null
 	
 /obj/item/device/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem) //CHOMP Addition Start
@@ -754,11 +744,6 @@
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, "<span class='notice'>Injecting [units] unit\s into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
 //CHOMP Addition end
-#undef SLEEPER_INJECT_COST //CHOMP Edit I think this should go at the bottom of the file?
-||||||| parent of 44748560b6... Merge pull request #11398 from VOREStation/Arokha/przy
-	injection_chems = null
-=======
-	injection_chems = null
 
 /obj/item/device/dogborg/sleeper/K9/ert
 	name = "ERT Belly"
@@ -767,4 +752,3 @@
 	injection_chems = list("inaprovaline", "paracetamol") // short list
 
 #undef SLEEPER_INJECT_COST
->>>>>>> 44748560b6... Merge pull request #11398 from VOREStation/Arokha/przy
