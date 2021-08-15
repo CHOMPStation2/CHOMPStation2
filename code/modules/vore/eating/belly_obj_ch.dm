@@ -39,9 +39,6 @@
 	var/liquid_fullness4_messages = FALSE
 	var/liquid_fullness5_messages = FALSE
 	var/vorespawn_blacklist = FALSE
-	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
-	var/autotransferwait = 10 				// Time between trying to transfer.
-	var/autotransferlocation				// Place to send them
 
 	var/list/fullness1_messages = list(
 		"%pred's %belly looks empty"
