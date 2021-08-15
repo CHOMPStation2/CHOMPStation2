@@ -744,4 +744,11 @@
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, "<span class='notice'>Injecting [units] unit\s into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
 //CHOMP Addition end
-#undef SLEEPER_INJECT_COST //CHOMP Edit I think this should go at the bottom of the file?
+
+/obj/item/device/dogborg/sleeper/K9/ert
+	name = "ERT Belly"
+	desc = "A mounted 'emergency containment cell'."
+	icon_state = "sleeperert"
+	injection_chems = list("inaprovaline", "paracetamol") // short list
+
+#undef SLEEPER_INJECT_COST

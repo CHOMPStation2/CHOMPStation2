@@ -47,6 +47,11 @@
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
 	var/item_mode_serial = TRUE				// Serial/parallel item digestion mode. Affect one item at a time or all of them with damage divided between contents. CHOMPEdit
+	
+	// Generally just used by AI
+	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
+	var/autotransferwait = 10 				// Time between trying to transfer.
+	var/autotransferlocation				// Place to send them
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -283,6 +288,10 @@
 		if(autotransferlocation != null && autotransferchance > 0)
 			addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
 	//CHOMPStation edit end
+
+	// Intended for simple mobs
+	if(!owner.client && autotransferlocation && autotransferchance > 0)
+		addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
 
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
@@ -844,6 +853,22 @@
 		owner.update_icon()
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
+
+//Autotransfer callback
+/obj/belly/proc/check_autotransfer(var/prey, var/autotransferlocation)
+	if(autotransferlocation && (autotransferchance > 0) && (prey in contents))
+		if(prob(autotransferchance))
+			var/obj/belly/dest_belly
+			for(var/obj/belly/B in owner.vore_organs)
+				if(B.name == autotransferlocation)
+					dest_belly = B
+					break
+			if(dest_belly)
+				transfer_contents(prey, dest_belly)
+		else
+			// Didn't transfer, so wait before retrying
+			// I feel like there's a way to make this timer looping using the normal looping thing, but pass in the ID and cancel it if we aren't looping again
+			addtimer(CALLBACK(src, .proc/check_autotransfer, prey, autotransferlocation), autotransferwait)
 
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes
