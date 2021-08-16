@@ -82,25 +82,28 @@
 	containername = "advanced hardsuit crate"
 	access = access_ce
 
-/datum/supply_pack/misc/com_medical_rig
-	name = "commonwealth medical hardsuit (loaded)"
+// CHOMPStation EDIT Start: Change Commonwealth to Solgov
+/datum/supply_pack/misc/solgov_medical_rig
+	name = "solgov medical hardsuit (loaded)"
 	contains = list(
 			/obj/item/weapon/rig/baymed = 1
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Commonwealth medical hardsuit crate"
+	containername = "Solgov medical hardsuit crate"
 	access = access_medical
 
-/datum/supply_pack/misc/com_engineering_rig
-	name = "commonwealth engineering hardsuit (loaded)"
+/datum/supply_pack/misc/solgov_engineering_rig
+	name = "solgov engineering hardsuit (loaded)"
 	contains = list(
 			/obj/item/weapon/rig/bayeng = 1
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Commonwealth medical hardsuit crate"
+	containername = "Solgov medical hardsuit crate"
 	access = access_medical
+
+// CHOMPStation EDIT End
 
 /datum/supply_pack/misc/zero_rig
 	name = "null hardsuit (jets)"
