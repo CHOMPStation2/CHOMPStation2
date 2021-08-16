@@ -43,11 +43,22 @@
 			perform_the_nom(src,target,src,src.vore_selected,1)
 			target.slip_vore_in_progress = FALSE
 			target.is_slipping = FALSE
+			return
 		else if(can_be_slip_vored_by(target) && !src.slip_vore_in_progress && !target.slip_vore_in_progress) //Otherwise, if they can vore us, make it happen.
 			target.slip_vore_in_progress = TRUE //Make them stop slipping
 			perform_the_nom(target,src,target,target.vore_selected,1)
 			target.slip_vore_in_progress = FALSE
 			target.is_slipping = FALSE
+			return
+
+	if(src.step_mechanics_pref && istype(target) && src.lying && target.step_mechanics_pref && target.loc && target.buckled != src)
+		// src.lying being true means that in theory this code shouldn't run at the same time as the existing code for this in Bump. Probably.
+		// And optionally, this could be gated behind another preference, to prevent stunlock being abused.
+		if((mob_always_swap || (a_intent == I_HELP || src.restrained()) && (target.a_intent == I_HELP || target.restrained())) && target.canmove && target.handle_micro_bump_helping(src))
+			return
+		else if(!(target.a_intent == I_HELP || target.restrained()) && target.handle_micro_bump_other(src))
+			return
+
 
 /mob/living/carbon/slip(var/slipped_on,stun_duration=8)
 	. = ..()
