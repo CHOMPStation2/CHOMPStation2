@@ -472,12 +472,13 @@
 			M.Turn(-90)
 		else
 			M.Turn(90)
+		M.Scale(desired_scale_x, desired_scale_y)
+		M.Translate(1,-6)
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
+		M.Scale(desired_scale_x, desired_scale_y)
+		M.Translate(0, (vis_height/2)*(desired_scale_y-1)) //VOREStation edit
 		layer = MOB_LAYER
-	// Do no transforming offset on lay here due to the diversity of simplemobs.
-	M.Scale(desired_scale_x, desired_scale_y)
-	M.Translate(0, (vis_height/2)*(desired_scale_y-1)) //VOREStation edit
 
 	// Animate instead of set. Original set left commented out
 	// src.transform = M //VOREStation edit
