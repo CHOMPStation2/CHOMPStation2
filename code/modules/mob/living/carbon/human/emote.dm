@@ -128,6 +128,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/spiderchitter,
 	/decl/emote/audible/spiderpurr,
 	
+	/decl/emote/audible/prbt,
 	/decl/emote/visible/mlem,
 	/decl/emote/visible/blep,
 	
@@ -258,6 +259,7 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/spiderpurr,
 	/decl/emote/visible/mlem,
 	/decl/emote/visible/blep
+	/decl/emote/audible/prbt
 	)
 	//VOREStation Add End
 
