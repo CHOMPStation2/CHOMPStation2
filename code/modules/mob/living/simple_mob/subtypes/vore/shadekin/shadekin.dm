@@ -448,3 +448,40 @@
 	say_maybe_target = list("...mar?")
 	say_got_target = list("MAR!!!")
 	//reactions = list("Mar?" = "Marrr!", "Mar!" = "Marrr???", "Mar." = "Marrr.")
+
+
+// CHOMP EDIT
+// Override update_transforms function to allow for going vertical if no icon_rest sprite is defined
+// This should be portable and able to be copied to the definitions of other simplemobs.
+/mob/living/simple_mob/shadekin/update_transform()
+	// First, get the correct size.
+	var/desired_scale_x = size_multiplier * icon_scale_x //VOREStation edit
+	var/desired_scale_y = size_multiplier * icon_scale_y //VOREStation edit
+
+	// Here we differ and cut away the src.transform = M line to perform our edits.
+
+	// Taking some data from the /carbon/human/update_transform() entry
+	var/matrix/M = matrix()
+	var/anim_time = 3
+
+	// If we're wanting to lay and there is no icon_rest sprite...
+	if( ( (stat == UNCONSCIOUS) || resting || incapacitated(INCAPACITATION_DISABLED) ) && !icon_rest )
+
+		var/randn = rand(1, 2)
+		if(randn <= 1) // randomly choose a rotation
+			M.Turn(-90)
+		else
+			M.Turn(90)
+		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
+	else
+		layer = MOB_LAYER
+	// Do no transforming offset on lay here due to the diversity of simplemobs.
+	M.Scale(desired_scale_x, desired_scale_y)
+	M.Translate(0, (vis_height/2)*(desired_scale_y-1)) //VOREStation edit
+
+	// Animate instead of set. Original set left commented out
+	// src.transform = M //VOREStation edit
+	animate(src, transform = M, time = anim_time)
+
+	// This from original living.dm too
+	handle_status_indicators()
