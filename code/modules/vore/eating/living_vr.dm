@@ -281,11 +281,13 @@
 
 	if(bellies)
 		release_vore_contents(silent = TRUE)
-		vore_organs.Cut()
+		QDEL_LIST(vore_organs)
+		bellies_loaded = FALSE //CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
 			if(!full_vorgans) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
 				break //CHOMPedit: Belly load optimization. Only load first belly, save the rest for vorepanel.
+			bellies_loaded = TRUE //CHOMPedit
 
 	return TRUE
 
