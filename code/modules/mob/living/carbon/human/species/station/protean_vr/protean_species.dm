@@ -17,7 +17,7 @@
 
 	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT | NO_PAIN
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_LIPS
-	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE 
+	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	health_hud_intensity = 2
 	num_alternate_languages = 3
 	assisted_langs = list(LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
@@ -91,7 +91,7 @@
 		/mob/living/carbon/human/proc/nano_regenerate, //These verbs are hidden so you can macro them,
 		/mob/living/carbon/human/proc/nano_partswap,
 		/mob/living/carbon/human/proc/nano_metalnom,
-		/mob/living/carbon/human/proc/nano_blobform, 
+		/mob/living/carbon/human/proc/nano_blobform,
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/nano_change_fitting, //These verbs are displayed normally,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,
@@ -108,7 +108,7 @@
 		/mob/living/carbon/human/proc/succubus_drain_lethal,
 		/mob/living/proc/eat_trash
 		) //CHOMP Edit - Added succ stuff that promies have too. Also changed nano_set_size to standard set_size so there is no metal cost.
-		
+
 	var/global/list/abilities = list()
 
 	var/monochromatic = FALSE //IGNORE ME
@@ -139,9 +139,10 @@
 	H.synth_color = TRUE
 
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
-	var/boxtype = /obj/item/weapon/storage/box/survival //CHOMP Addition
-	var/obj/item/stack/material/steel/metal_stack = new(null, 5) //CHOMP Edit
-	
+	..() //CHOMP Edit this calls the parent function which should spawn the survival box.
+	var/obj/item/stack/material/steel/metal_stack = new()
+	metal_stack.amount = 5 //CHOMP Edit
+
 	var/obj/item/clothing/accessory/permit/nanotech/permit = new()
 	permit.set_name(H.real_name)
 
@@ -160,7 +161,7 @@
 			new_nif.quick_implant(H)
 		else
 			H.nif.durability = rand(21,25)
-			
+
 		var/obj/item/weapon/rig/protean/prig = new /obj/item/weapon/rig/protean(H)
 		prig.myprotean = H
 
@@ -196,7 +197,7 @@
 	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace) or in someone (or a locker, really, but whatever)
 		return ..() //Any instakill shot runtimes since there are no organs after this. No point to not skip these checks, going to nullspace anyway.
 
-/*CHOMP Station removal start		
+/*CHOMP Station removal start
 	var/obj/item/organ/internal/nano/refactory/refactory = locate() in H.internal_organs
 	if(refactory && !(refactory.status & ORGAN_DEAD))
 
@@ -238,7 +239,7 @@ CHOMP Station removal end*/
 		stat(null, "- -- --- Abilities (Shift+LMB Examines) --- -- -")
 		for(var/obj/effect/protean_ability/A as anything in abilities)
 			stat("[A.ability_name]",A.atom_button_text())
-			
+
 // Various modifiers
 /datum/modifier/protean
 	stacks = MODIFIER_STACK_FORBID
@@ -359,7 +360,7 @@ CHOMP Removal end*/
 	. = ..()
 	. += validstring
 	. += registring
-	
+
 //CHOMP Add start
 /mob/living/carbon/human/proc/rig_transform()
 	set name = "Modify Form - Hardsuit"
