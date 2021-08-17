@@ -151,7 +151,7 @@
 /mob/living/simple_mob/humanoid/merc/ranged
 	icon_state = "syndicateranged"
 	icon_living = "syndicateranged"
-	projectiletype = /obj/item/projectile/bullet/pistol/medium
+	projectiletype = /obj/item/projectile/bullet/pistol/medium/merc //CHOMPEdit
 //	casingtype = /obj/item/ammo_casing/spent	//Makes infinite stacks of bullets when put in PoIs.
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
 	loot_list = list(/obj/item/weapon/gun/projectile/colt = 100)
@@ -190,7 +190,7 @@
 	loot_list = list(/obj/item/weapon/gun/projectile/automatic/z8 = 100)
 
 	projectilesound = 'sound/weapons/Gunshot_heavy.ogg'
-	projectiletype = /obj/item/projectile/bullet/rifle/a762
+	projectiletype = /obj/item/projectile/bullet/rifle/a762/merc //CHOMPEDIT
 	projectile_dispersion = 8
 	projectile_accuracy = -15
 	base_attack_cooldown = 5
@@ -274,7 +274,7 @@
 /mob/living/simple_mob/humanoid/merc/ranged/sniper
 	icon_state = "syndicateranged_sniper"
 	icon_living = "syndicateranged_sniper"
-	projectiletype = /obj/item/projectile/bullet/rifle/a145/highvel // Really scary bullet.
+	projectiletype = /obj/item/projectile/bullet/rifle/a145/highvel/merc // Really scary bullet. //CHOMPEDIT
 	projectilesound = 'sound/weapons/Gunshot_cannon.ogg'
 
 	projectile_accuracy = 75
