@@ -137,7 +137,7 @@
 	for(var/A in touchable_atoms)
 		//Handle stray items
 		if(isitem(A))
-			if(!item_mode_serial)
+			if(item_digest_mode == IM_DIGEST_PARALLEL)
 				did_an_item = handle_digesting_item(A, touchable_amount)
 			else if(!did_an_item)
 				did_an_item = handle_digesting_item(A, 1)
@@ -145,7 +145,7 @@
 				to_update = TRUE
 
 			//Less often than with normal digestion
-			if((item_digest_mode == IM_DIGEST_FOOD || item_digest_mode == IM_DIGEST) && prob(25))
+			if((item_digest_mode == IM_DIGEST_FOOD || item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL) && prob(25))
 				// This is a little weird, but the point of it is that we don't want to repeat code
 				// but we also want the prob(25) chance to run for -every- item we look at, not just once
 				// More gurgles the better~
@@ -232,7 +232,7 @@
 				did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 			else
 				items_preserved |= I
-		if(IM_DIGEST)
+		if(IM_DIGEST,IM_DIGEST_PARALLEL)
 			did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 	return did_an_item
 
