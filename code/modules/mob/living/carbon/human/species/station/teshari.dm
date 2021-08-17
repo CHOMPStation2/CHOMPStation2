@@ -23,7 +23,7 @@
 	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
 	female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
-	
+
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
 	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
@@ -55,7 +55,7 @@
 	burn_mod =  1.35
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
-	holder_type = /obj/item/weapon/holder/human
+	holder_type = /obj/item/weapon/holder/micro //CHOMPEdit from holder/human to holder/micro
 //	short_sighted = 1 CHOMPEdit: We're fine without near-sightedness for now.
 	gluttonous = 1
 	blood_volume = 400
@@ -145,7 +145,7 @@
 		/datum/mob_descriptor/height = -3,
 		/datum/mob_descriptor/build = -3
 	)
-		
+
 	var/static/list/flight_bodyparts = list(
 		BP_L_ARM,
 		BP_R_ARM,
@@ -166,14 +166,14 @@
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
-	
+
 /* //CHOMPedit: disabling for now
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
 	// Tesh can glide to save themselves from some falls. Basejumping bird
 	// without parachute, or falling bird without free wings, goes splat.
 
-	// Are we landing from orbit, or handcuffed/unconscious/tied to something? 
+	// Are we landing from orbit, or handcuffed/unconscious/tied to something?
 	if(planetary || !istype(H) || H.incapacitated(INCAPACITATION_DEFAULT|INCAPACITATION_DISABLED))
 		return ..()
 
