@@ -34,4 +34,5 @@
 	charge_meter = 1
 	recoil = 1
 	fire_delay = 27 //old technology
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 ///END OF GAUSS WEAPONRY///

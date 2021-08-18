@@ -13,6 +13,7 @@
 	icon_state = "fiveseven"
 	load_method = MAGAZINE
 	muzzle_velocity = 650
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/fiveseven/update_icon()
 	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
@@ -558,6 +559,7 @@
 	load_method = MAGAZINE
 	muzzle_velocity = 400
 	is_long = FALSE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/automatic/serdy/vityaz
 	name = "WKHM 'Vityaz'"
@@ -577,6 +579,7 @@
 	muzzle_velocity = 430
 	is_long = FALSE
 	fire_sound = "sound/weapons/serdy/vityaz.ogg"
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 //LMGs
 
@@ -617,6 +620,7 @@
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 405
 	is_long = FALSE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/automatic/serdy/ssp4/silenced
 	name = "WKHM SSP4-S"
@@ -630,6 +634,7 @@
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	load_method = MAGAZINE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/serdy_pistols/makarov
 	name = "Makarov PM"
@@ -677,6 +682,7 @@
 	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "nagant"
 	max_shells = 7
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/revolver/nagant/skinned
 	name = "nagant revolver"
@@ -824,48 +830,57 @@
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 253	//M1911
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/silenced
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 240	//Guestimation, minus velocity for suppressor
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/deagle
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 430	//Guestimation, everyone uses .50AE lol
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/gyropistol
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/pistol
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 300	//P365
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/pirate
 	manual_chamber = FALSE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/derringer
 	manual_chamber = FALSE
 	muzzle_velocity = 350	//Guestimation
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/luger
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 350	//Luger
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/p92x
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 370
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 //pistol_vr.dm
 /obj/item/weapon/gun/projectile/lamia
@@ -873,6 +888,7 @@
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 400	//Guestimation
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 
 /obj/item/weapon/gun/projectile/giskard	//To be updated to .380
@@ -880,6 +896,7 @@
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 300	//Guestimation
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 //pistol_yw.dm
 /obj/item/weapon/gun/projectile/automatic/glock
@@ -887,12 +904,14 @@
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 375	//Actual gun.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/ppk
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
 	muzzle_velocity = 310	//Guestimation since PPK doesn't fire 9mm
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/m2024
 	bolt_name="slide"
@@ -910,6 +929,7 @@
 /obj/item/weapon/gun/projectile/revolver 	//To be updated to use .375
 	manual_chamber = FALSE
 	muzzle_velocity = 330	//Guestimation
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/revolver/detective 		//To be updated to use .38
 	muzzle_velocity = 350	//Guestimation

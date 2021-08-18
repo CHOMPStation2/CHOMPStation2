@@ -1,6 +1,7 @@
 /obj/item/weapon/gun/magnetic/railgun/flechette/pistol/khi
 	name = "kitsuhana flechette pistol"
 	desc = "This rail pistol appears to have been 'tampered with', improving it's power storage and efficiency."
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 	cell = /obj/item/weapon/cell/hyper
 	capacitor = /obj/item/weapon/stock_parts/capacitor/hyper
