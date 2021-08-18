@@ -42,6 +42,7 @@
 	var/mob/living/host // Note, we do this in case we ever want to allow people to view others vore panels
 	var/unsaved_changes = FALSE
 	var/show_pictures = TRUE
+	var/max_icon_content = 21 //CHOMPedit: Contents above this disable icon mode. 21 for nice 3 rows to fill the default panel window.
 
 /datum/vore_look/New(mob/living/new_host)
 	if(istype(new_host))
@@ -83,7 +84,11 @@
 		key = "[target.type]"
 	else if(ismob(target))
 		var/mob/M = target
-		key = "\ref[target][M.real_name]"
+		if(istype(M,/mob/living/simple_mob)) //CHOMPedit: not generating unique icons for every simplemob(number)
+			var/mob/living/simple_mob/S = M
+			key = "[S.icon_living]"
+		else
+			key = "\ref[target][M.real_name]"
 	if(nom_icons[key])
 		. = nom_icons[key]
 	else
@@ -127,8 +132,11 @@
 				"ref" = "\ref[O]",
 				"outside" = FALSE,
 			)
-			if(show_pictures)
-				info["icon"] = cached_nom_icon(O)
+			if(show_pictures) //CHOMPedit: disables icon mode
+				if(inside_belly.contents.len <= max_icon_content)
+					info["icon"] = cached_nom_icon(O)
+				else
+					show_pictures = !show_pictures
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
@@ -224,8 +232,11 @@
 				"ref" = "\ref[O]",
 				"outside" = TRUE,
 			)
-			if(show_pictures)
-				info["icon"] = cached_nom_icon(O)
+			if(show_pictures) //CHOMPedit: disables icon mode
+				if(selected.contents.len <= max_icon_content)
+					info["icon"] = cached_nom_icon(O)
+				else
+					show_pictures = !show_pictures
 			if(isliving(O))
 				var/mob/living/M = O
 				info["stat"] = M.stat
