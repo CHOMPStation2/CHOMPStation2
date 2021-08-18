@@ -122,6 +122,7 @@
 	muzzle_velocity = 295
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/krinkov
 	name = "Krinkov"
@@ -139,6 +140,7 @@
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
 	muzzle_velocity = 680
 	is_long = FALSE
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/akm
 	name = "AKM"
@@ -157,6 +159,7 @@
 	muzzle_velocity = 715
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 60
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/scrapak
 	name = "AKM"
@@ -175,6 +178,7 @@
 	muzzle_velocity = 700
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 70
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 // AR Variants
 
@@ -281,6 +285,7 @@
 	ammo_type = /obj/item/ammo_casing/a762x39
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 60
+	fire_sound = "sound/weapons/serdy/sks.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mosin
 	name = "Mosin Nagant"
@@ -336,6 +341,7 @@
 	muzzle_velocity = 910
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 60
+	fire_sound = "sound/weapons/serdy/type901.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/type901/carbine
 	name = "Type 901-C Carbine"
@@ -457,6 +463,7 @@
 	load_method = MAGAZINE
 	auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK
 	muzzle_velocity = 685
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/plamya
 	name = "WKHM 'Plamya' Mk. 1"
@@ -476,6 +483,7 @@
 	muzzle_velocity = 285
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/plamya.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/plamya/mk2
 	name = "WKHM 'Plamya' Mk. 2"
@@ -568,6 +576,7 @@
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	muzzle_velocity = 430
 	is_long = FALSE
+	fire_sound = "sound/weapons/serdy/vityaz.ogg"
 
 //LMGs
 
@@ -589,6 +598,7 @@
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 860
 	one_handed_penalty = 90
+	fire_sound = "sound/weapons/serdy/molniyab.ogg"
 
 //Pistols
 
@@ -644,6 +654,7 @@
 	)
 	projectile_type = /obj/item/projectile/bullet/pistol
 	muzzle_velocity = 365
+	fire_sound = "sound/weapons/serdy/40pistol.ogg"
 
 /obj/item/weapon/gun/projectile/serdy_pistols/glock71
 	name = "Glock 71"
@@ -658,6 +669,7 @@
 	)
 	projectile_type = /obj/item/projectile/bullet/pistol
 	muzzle_velocity = 375
+	fire_sound = "sound/weapons/serdy/9mmpistol.ogg"
 
 /obj/item/weapon/gun/projectile/revolver/nagant
 	name = "nagant revolver"
