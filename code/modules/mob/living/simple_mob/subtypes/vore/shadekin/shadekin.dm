@@ -448,11 +448,3 @@
 	say_maybe_target = list("...mar?")
 	say_got_target = list("MAR!!!")
 	//reactions = list("Mar?" = "Marrr!", "Mar!" = "Marrr???", "Mar." = "Marrr.")
-
-
-// CHOMPEdit START
-// Allow horizontal
-/mob/living/simple_mob/shadekin/update_transform()
-	update_transform_horizontal()
-
-// CHOMPEdit END
