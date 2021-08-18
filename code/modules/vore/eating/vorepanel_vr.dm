@@ -205,6 +205,13 @@
 			selected_list["interacts"]["absorbchance"] = selected.absorbchance
 			selected_list["interacts"]["digestchance"] = selected.digestchance
 
+		selected_list["autotransfer_enabled"] = selected.autotransfer_enabled
+		selected_list["autotransfer"] = list()
+		if(selected.autotransfer_enabled)
+			selected_list["autotransfer"]["autotransferchance"] = selected.autotransferchance
+			selected_list["autotransfer"]["autotransferwait"] = selected.autotransferwait
+			selected_list["autotransfer"]["autotransferlocation"] = selected.autotransferlocation
+
 		selected_list["disable_hud"] = selected.disable_hud
 		selected_list["possible_fullscreens"] = icon_states('icons/mob/screen_preview_vore_ch.dmi') //CHOMPedit
 
@@ -996,7 +1003,6 @@
 			. = TRUE
 		if("b_transferlocation")
 			var/obj/belly/choice = tgui_input_list(usr, "Where do you want your [lowertext(host.vore_selected.name)] to lead if prey resists?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
-
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice == "None - Remove")
@@ -1014,6 +1020,28 @@
 			if(!isnull(digest_chance_input))
 				host.vore_selected.digestchance = sanitize_integer(digest_chance_input, 0, 100, initial(host.vore_selected.digestchance))
 			. = TRUE
+		if("b_autotransferchance") //CHOMPedit Start
+			var/autotransferchance_input = input(user, "Set belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Auto-Transfer Chance") as num|null
+			if(!isnull(autotransferchance_input))
+				host.vore_selected.autotransferchance = sanitize_integer(autotransferchance_input, 0, 100, initial(host.vore_selected.autotransferchance))
+			. = TRUE
+		if("b_autotransferwait")
+			var/autotransferwait_input = input(user, "Set number of seconds for auto-transfer wait delay.", "Auto-Transfer Time") as num|null
+			if(!isnull(autotransferwait_input))
+				host.vore_selected.autotransferwait = sanitize_integer(autotransferwait_input*10, 10, 18000, initial(host.vore_selected.autotransferwait))
+			. = TRUE
+		if("b_autotransferlocation")
+			var/obj/belly/choice = tgui_input_list(usr, "Where do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
+			if(!choice) //They cancelled, no changes
+				return FALSE
+			else if(choice == "None - Remove")
+				host.vore_selected.autotransferlocation = null
+			else
+				host.vore_selected.autotransferlocation = choice.name
+			. = TRUE
+		if("b_autotransfer_enabled")
+			host.vore_selected.autotransfer_enabled = !host.vore_selected.autotransfer_enabled
+			. = TRUE //CHOMPedit End
 		if("b_fullscreen")
 			host.vore_selected.belly_fullscreen = params["val"]
 			update_preview_icon()	//CHOMPEdit Begin
