@@ -131,6 +131,7 @@
 	caliber = ".38"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	ammo_type = /obj/item/ammo_casing/a38
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/revolver/deckard/emp
 	ammo_type = /obj/item/ammo_casing/a38/emp

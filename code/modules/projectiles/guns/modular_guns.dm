@@ -155,6 +155,7 @@
 	desc = "A bulky modular pistol frame. This only only accepts six parts."
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 3)
 	burst_delay = 2
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/energy/modular/carbine
 	name = "modular carbine"
