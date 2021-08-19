@@ -404,8 +404,16 @@
 
 		if(istype(target, /turf/simulated/wall)) // I hate turf code.
 			var/turf/simulated/wall/W = target
+<<<<<<< HEAD
 			W.dismantle_wall(1)
 		else
+=======
+			W.dismantle_wall()
+		else if(isfloor(target))
+			var/turf/simulated/floor/T = target
+			T.ex_act(1)
+		else if(isobj(target))
+>>>>>>> 0b2bb057f7 (Merge pull request #11452 from VOREStation/master)
 			qdel(target)
 		qdel(src)
 		return

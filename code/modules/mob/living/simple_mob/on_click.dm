@@ -13,12 +13,17 @@
 
 	switch(a_intent)
 		if(I_HELP)
+<<<<<<< HEAD
 
 			var/mob/living/L = A
 			if(istype(L) && (!has_hands || !L.attempt_to_scoop(src)))
 				if(src.zone_sel.selecting == BP_GROIN) //CHOMPEdit
 					if(src.vore_bellyrub(A))
 						return
+=======
+			var/mob/living/L = A
+			if(istype(L) && (!has_hands || !L.attempt_to_scoop(src)))
+>>>>>>> 0b2bb057f7 (Merge pull request #11452 from VOREStation/master)
 				custom_emote(1,"[pick(friendly)] \the [A]!")
 
 		if(I_HURT)
