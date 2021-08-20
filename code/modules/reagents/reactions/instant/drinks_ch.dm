@@ -188,7 +188,24 @@
 	result = "hachi"
 	required_reagents = list("burbon" = 2, "sake" = 1, "lemonjuice" = 1, "mushroom" = 1) //Whoever coded this never made a mushroom reagent so this can't be created.
 	result_amount = 5
-  
+
+/decl/chemical_reaction/instant/drinks/narsour
+	name = "Nar'sour"
+	id = "narsour"
+	result = "narsour"
+	required_reagents = list("blood" = 1, "lemonjuice" = 1, "demonsblood" = 1)
+	mix_message = "The mixture develops a sinister glow."
+	reaction_sound = 'sound/effects/singlebeat.ogg'
+
+/decl/chemical_reaction/instant/drinks/cogchamp
+	name = "CogChamp"
+	id = "cogchamp"
+	result = "cogchamp"
+	required_reagents = list("cognac" = 1, "fuel" = 1, "screwdrivercocktail" = 1)
+	mix_message = "You hear faint sounds of gears turning as the mixture gives off virulent plumes of steam."
+	reaction_sound = 'sound/machines/clockcult/steam_whoosh.ogg'
+	result_amount = 3
+
 //YW drinks
 /decl/chemical_reaction/instant/drinks/lovepotion_yw
 	name = "Strawberry Love Potion"

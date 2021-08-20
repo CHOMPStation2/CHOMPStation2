@@ -468,11 +468,40 @@
 
 	glass_name = "akvavit"
 	glass_desc = "Burns the nose and throat, and soothes it with a herby aftertaste...Barely."
-  
+
+/datum/reagent/ethanol/narsour
+	name = "Nar'Sour"
+	id = "narsour"
+	description = "Side effects include self-mutilation and hoarding plasteel."
+	taste_description = "blood and runes"
+	color = "#7D1717"
+	strength = 10
+
+	glass_icon_state = "narsour"
+	glass_name = "Nar'Sour"
+	glass_desc = "A new hit cocktail inspired by THE ARM Breweries will have you shouting Fuu ma'jin in no time!"
+	glass_icon_state = "narsour"
+	glass_icon_file = 'icons/obj/drinks_ch.dmi'
+
+
+/datum/reagent/ethanol/cogchamp
+	name = "CogChamp"
+	id = "cohchamp"
+	description = "Now you can fill yourself with the power of Ratvar!"
+	taste_description = "brass taste with a hint of oil"
+	color = rgb(255, 201, 49)
+	strength = 10
+
+	glass_icon_state = "cogchamp"
+	glass_name = "CogChamp"
+	glass_desc = "Not even Ratvar's Four Generals could withstand this!  Qevax Jryy!"
+	glass_icon_state = "cogchamp"
+	glass_icon_file = 'icons/obj/drinks_ch.dmi'
+
 ////////////////////////////////////////////////
 /////////FOODSTUFF/////////////////////////////
 //////////////////////////////////////////////
-  
+
 /datum/reagent/cinnamonpowder
 	name = "ground cinnamon"
 	id = "cinnamonpowder"
