@@ -486,7 +486,7 @@
 
 /datum/reagent/ethanol/cogchamp
 	name = "CogChamp"
-	id = "cohchamp"
+	id = "cogchamp"
 	description = "Now you can fill yourself with the power of Ratvar!"
 	taste_description = "brass taste with a hint of oil"
 	color = rgb(255, 201, 49)
