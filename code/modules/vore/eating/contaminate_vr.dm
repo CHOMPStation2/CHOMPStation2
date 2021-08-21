@@ -32,7 +32,7 @@ var/list/gurgled_overlays = list(
 	if(!gurgled)
 		gurgled = TRUE
 		gurgled_color = contamination_color
-		if(ishuman(src.loc)) //CHOMPEdit: Moved non-worn overlay stuff to belly_obj_vr.dm Exited proc. No need to add overlays to things that won't make it out.
+		if(!isbelly(src.loc)) //CHOMPEdit: Moved non-worn overlay stuff to belly_obj_vr.dm Exited proc. No need to add overlays to things that won't make it out.
 			add_overlay(gurgled_overlays[gurgled_color])
 		var/list/pickfrom = contamination_flavors[contamination_flavor]
 		var/gurgleflavor = pick(pickfrom)
