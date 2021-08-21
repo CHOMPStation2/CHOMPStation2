@@ -279,6 +279,7 @@
 	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
 		var/obj/item/I = thing
 		if(I.gurgled)
+			cut_overlay(gurgled_overlays[gurgled_color]) //No double-overlay for worn items.
 			I.add_overlay(gurgled_overlays[I.gurgled_color])
 		if(I.d_mult < 1)
 			var/image/temp = new /image(gurgled_overlays[I.gurgled_color ? I.gurgled_color : "green"])
