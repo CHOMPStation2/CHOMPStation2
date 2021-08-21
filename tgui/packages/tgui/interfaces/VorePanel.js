@@ -276,70 +276,87 @@ const VoreSelectedBelly = (props, context) => {
   const { act } = useBackend(context);
 
   const { belly } = props;
-  const {
-    belly_name,
-    is_wet,
-    wet_loop,
-    mode,
-    item_mode,
-    verb,
-    desc,
-    fancy,
-    sound,
-    release_sound,
-    can_taste,
-    nutrition_percent,
-    digest_brute,
-    digest_burn,
-    digest_oxy,
-    bulge_size,
-    display_absorbed_examine,
-    shrink_grow_size,
-    emote_time,
-    emote_active,
-    addons,
-    contaminates,
-    contaminate_flavor,
-    contaminate_color,
-    egg_type,
-    escapable,
-    interacts,
-    contents,
-    belly_fullscreen,
-    belly_fullscreen_color,
-    mapRef,
-    possible_fullscreens,
-    disable_hud,
-    show_liq,
-    liq_interacts,
-    liq_reagent_gen,
-    liq_reagent_type,
-    liq_reagent_name,
-    liq_reagent_transfer_verb,
-    liq_reagent_nutri_rate,
-    liq_reagent_capacity,
-    liq_sloshing,
-    liq_reagent_addons,
-    show_liq_fullness,
-    liq_messages,
-    liq_msg_toggle1,
-    liq_msg_toggle2,
-    liq_msg_toggle3,
-    liq_msg_toggle4,
-    liq_msg_toggle5,
-    liq_msg1,
-    liq_msg2,
-    liq_msg3,
-    liq_msg4,
-    liq_msg5,
-    vorespawn_blacklist,
-  } = belly;
+  const { contents } = belly;
 
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
 
   const tabs = [];
 
   tabs[0] = (
+    <VoreSelectedBellyControls belly={belly} />
+  );
+
+  tabs[1] = (
+    <VoreSelectedBellyOptions belly={belly} />
+  );
+
+  tabs[2] = (
+    <VoreContentsPanel outside contents={contents} />
+  );
+
+  tabs[3] = (
+    <VoreSelectedBellyInteractions belly={belly} />
+  );
+
+  tabs[4] = (
+    <VoreSelectedBellyStyles belly={belly} />
+  );
+
+  tabs[5] = (
+    <VoreSelectedBellyLiquidOptions belly={belly} />
+  );
+
+  tabs[6] = (
+    <VoreSelectedBellyLiquidMessages belly={belly} />
+  );
+
+  return (
+    <Fragment>
+      <Tabs>
+        <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
+          Controls
+        </Tabs.Tab>
+        <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
+          Options
+        </Tabs.Tab>
+        <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
+          Contents ({contents.length})
+        </Tabs.Tab>
+        <Tabs.Tab selected={tabIndex === 3} onClick={() => setTabIndex(3)}>
+          Interactions
+        </Tabs.Tab>
+        <Tabs.Tab selected={tabIndex === 4} onClick={() => setTabIndex(4)}>
+          Belly Styles
+        </Tabs.Tab>
+        <Tabs.Tab selected={tabIndex === 5} onClick={() => setTabIndex(5)}>
+          Liquid Options
+        </Tabs.Tab>
+        <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
+          Liquid Messages
+        </Tabs.Tab>
+      </Tabs>
+      {tabs[tabIndex] || "Error"}
+    </Fragment>
+  );
+};
+
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyControls = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    belly_name,
+    mode,
+    item_mode,
+    verb,
+    desc,
+    addons,
+  } = belly;
+
+  return (
     <LabeledList>
       <LabeledList.Item label="Name" buttons={
         <Fragment>
@@ -430,8 +447,39 @@ const VoreSelectedBelly = (props, context) => {
       </LabeledList.Item>
     </LabeledList>
   );
+};
 
-  tabs[1] = (
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyOptions = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    is_wet,
+    wet_loop,
+    fancy,
+    sound,
+    release_sound,
+    can_taste,
+    nutrition_percent,
+    digest_brute,
+    digest_burn,
+    digest_oxy,
+    bulge_size,
+    display_absorbed_examine,
+    shrink_grow_size,
+    emote_time,
+    emote_active,
+    contaminates,
+    contaminate_flavor,
+    contaminate_color,
+    egg_type,
+    vorespawn_blacklist,
+  } = belly;
+
+  return (
     <Flex wrap="wrap">
       <Flex.Item basis="49%" grow={1}>
         <LabeledList>
@@ -582,12 +630,21 @@ const VoreSelectedBelly = (props, context) => {
       </Flex.Item>
     </Flex>
   );
+};
 
-  tabs[2] = (
-    <VoreContentsPanel outside contents={contents} />
-  );
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyInteractions = (props, context) => {
+  const { act } = useBackend(context);
 
-  tabs[3] = (
+  const { belly } = props;
+  const {
+    escapable,
+    interacts,
+  } = belly;
+
+  return (
     <Section title="Belly Interactions" buttons={
       <Button
         onClick={() => act("set_attribute", { attribute: "b_escapable" })}
@@ -633,8 +690,24 @@ const VoreSelectedBelly = (props, context) => {
       ) : "These options only display while interactions are turned on."}
     </Section>
   );
+};
 
-  tabs[4] = (
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyStyles = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    belly_fullscreen,
+    belly_fullscreen_color,
+    mapRef,
+    possible_fullscreens,
+    disable_hud,
+  } = belly;
+
+  return (
     <Fragment>
       <Section title="Belly Fullscreens Preview and Coloring">
         <Flex direction="row">
@@ -696,8 +769,41 @@ const VoreSelectedBelly = (props, context) => {
       </Section>
     </Fragment>
   );
+};
 
-  tabs[5] = (
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyLiquidOptions = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    show_liq,
+    liq_interacts,
+    liq_reagent_gen,
+    liq_reagent_type,
+    liq_reagent_name,
+    liq_reagent_transfer_verb,
+    liq_reagent_nutri_rate,
+    liq_reagent_capacity,
+    liq_sloshing,
+    liq_reagent_addons,
+    show_liq_fullness,
+    liq_messages,
+    liq_msg_toggle1,
+    liq_msg_toggle2,
+    liq_msg_toggle3,
+    liq_msg_toggle4,
+    liq_msg_toggle5,
+    liq_msg1,
+    liq_msg2,
+    liq_msg3,
+    liq_msg4,
+    liq_msg5,
+  } = belly;
+
+  return (
     <Section title="Liquid Options" buttons={
       <Button
         onClick={() => act("liq_set_attribute", { liq_attribute: "b_show_liq" })}
@@ -767,8 +873,40 @@ const VoreSelectedBelly = (props, context) => {
       ) : "These options only display while liquid settings are turned on."}
     </Section>
   );
+};
 
-  tabs[6] = (
+/**
+ * Subtemplate of VoreSelectedBelly
+ */
+const VoreSelectedBellyLiquidMessages = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { belly } = props;
+  const {
+    liq_interacts,
+    liq_reagent_gen,
+    liq_reagent_type,
+    liq_reagent_name,
+    liq_reagent_transfer_verb,
+    liq_reagent_nutri_rate,
+    liq_reagent_capacity,
+    liq_sloshing,
+    liq_reagent_addons,
+    show_liq_fullness,
+    liq_messages,
+    liq_msg_toggle1,
+    liq_msg_toggle2,
+    liq_msg_toggle3,
+    liq_msg_toggle4,
+    liq_msg_toggle5,
+    liq_msg1,
+    liq_msg2,
+    liq_msg3,
+    liq_msg4,
+    liq_msg5,
+  } = belly;
+
+  return (
     <Section title="Liquid Messages" buttons={
       <Button
         onClick={() => act("liq_set_messages", { liq_messages: "b_show_liq_fullness" })}
@@ -833,35 +971,6 @@ const VoreSelectedBelly = (props, context) => {
         </LabeledList>
       ) : "These options only display while liquid examination settings are turned on."}
     </Section>
-  );
-
-  return (
-    <Fragment>
-      <Tabs>
-        <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
-          Controls
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
-          Options
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
-          Contents ({contents.length})
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 3} onClick={() => setTabIndex(3)}>
-          Interactions
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 4} onClick={() => setTabIndex(4)}>
-          Belly Styles
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 5} onClick={() => setTabIndex(5)}>
-          Liquid Options
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
-          Liquid Messages
-        </Tabs.Tab>
-      </Tabs>
-      {tabs[tabIndex] || "Error"}
-    </Fragment>
   );
 };
 
@@ -970,6 +1079,74 @@ const VoreUserPreferences = (props, context) => {
 
   const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
 
+  const preferences = {
+    digestion: {
+      action: "toggle_digest",
+      test: digestable,
+      tooltip: {
+        main: "This button is for those who don't like being digested. It can make you undigestable.",
+        enable: "Click here to allow digestion.",
+        disable: "Click here to prevent digestion.",
+      },
+      content: {
+        enabled: "Digestion Allowed",
+        disabled: "No Digestion",
+      },
+    },
+    absorbable: {
+      action: "toggle_absorbable",
+      test: absorbable,
+      tooltip: {
+        main: "This button allows preds to know whether you prefer or don't prefer to be absorbed.",
+        enable: "Click here to allow being absorbed.",
+        disable: "Click here to disallow being absorbed.",
+      },
+      content: {
+        enabled: "Absorption Allowed",
+        disabled: "No Absorption",
+      },
+    },
+    devour: {
+      action: "toggle_devour",
+      test: devourable,
+      tooltip: {
+        main: "This button is to toggle your ability to be devoured by others.",
+        enable: "Click here to allow being devoured.",
+        disable: "Click here to prevent being devoured.",
+      },
+      content: {
+        enabled: "Devouring Allowed",
+        disabled: "No Devouring",
+      },
+    },
+    mobvore: {
+      action: "toggle_mobvore",
+      test: allowmobvore,
+      tooltip: {
+        main: "This button is for those who don't like being eaten by mobs.",
+        enable: "Click here to allow being eaten by mobs.",
+        disable: "Click here to prevent being eaten by mobs.",
+      },
+      content: {
+        enabled: "Mobs eating you allowed",
+        disabled: "No Mobs eating you",
+      },
+    },
+    feed: {
+      action: "toggle_feed",
+      test: feeding,
+      tooltip: {
+        main: "This button is to toggle your ability to be fed to or by others vorishly.",
+        enable: "Click here to allow being fed to/by other people.",
+        disable: "Click here to prevent being fed to/by other people.",
+      },
+      content: {
+        enabled: "Feeding Allowed",
+        disabled: "No Feeding",
+      },
+    },
+  };
+
   return tabIndex===4 ? null : (
     <Section title="Preferences" buttons={
       <Button icon="eye" selected={show_pictures} onClick={() => act("show_pictures")}>
@@ -978,58 +1155,19 @@ const VoreUserPreferences = (props, context) => {
     }>
       <Flex spacing={1} wrap="wrap" justify="center">
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_digest")}
-            icon={digestable ? "toggle-on" : "toggle-off"}
-            selected={digestable}
-            fluid
-            tooltip={"This button is for those who don't like being digested. It can make you undigestable."
-            + (digestable ? " Click here to prevent digestion." : " Click here to allow digestion.")}
-            content={digestable ? "Digestion Allowed" : "No Digestion"} />
+          <VoreUserPreferenceItem spec={preferences.digestion} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
-          <Button
-            onClick={() => act("toggle_absorbable")}
-            icon={absorbable ? "toggle-on" : "toggle-off"}
-            selected={absorbable}
-            fluid
-            tooltip={"This button allows preds to know whether you prefer or don't prefer to be absorbed. "
-            + (absorbable ? "Click here to disallow being absorbed." : "Click here to allow being absorbed.")}
-            content={absorbable ? "Absorption Allowed" : "No Absorption"} />
+          <VoreUserPreferenceItem spec={preferences.absorbable} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_devour")}
-            icon={devourable ? "toggle-on" : "toggle-off"}
-            selected={devourable}
-            fluid
-            tooltip={"This button is to toggle your ability to be devoured by others. "
-            + (devourable ? "Click here to prevent being devoured." : "Click here to allow being devoured.")}
-            content={devourable ? "Devouring Allowed" : "No Devouring"} />
+          <VoreUserPreferenceItem spec={preferences.devour} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_mobvore")}
-            icon={allowmobvore ? "toggle-on" : "toggle-off"}
-            selected={allowmobvore}
-            fluid
-            tooltip={"This button is for those who don't like being eaten by mobs. "
-            + (allowmobvore
-              ? "Click here to prevent being eaten by mobs."
-              : "Click here to allow being eaten by mobs.")}
-            content={allowmobvore ? "Mobs eating you allowed" : "No Mobs eating you"} />
+          <VoreUserPreferenceItem spec={preferences.mobvore} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
-          <Button
-            onClick={() => act("toggle_feed")}
-            icon={feeding ? "toggle-on" : "toggle-off"}
-            selected={feeding}
-            fluid
-            tooltip={"This button is to toggle your ability to be fed to or by others vorishly. "
-            + (feeding
-              ? "Click here to prevent being fed to/by other people."
-              : "Click here to allow being fed to/by other people.")}
-            content={feeding ? "Feeding Allowed" : "No Feeding"} />
+          <VoreUserPreferenceItem spec={preferences.feed} />
         </Flex.Item>
         <Flex.Item basis="32%">
           <Button
@@ -1242,5 +1380,29 @@ const VoreUserPreferences = (props, context) => {
         </Flex>
       </Section>
     </Section>
+  );
+};
+
+const VoreUserPreferenceItem = (props, context) => {
+  const { act } = useBackend(context);
+
+  const { spec, ...rest } = props;
+  const {
+    action,
+    test,
+    tooltip,
+    content,
+  } = spec;
+
+  return (
+    <Button
+      onClick={() => act(action)}
+      icon={test ? "toggle-on" : "toggle-off"}
+      selected={test}
+      fluid
+      tooltip={tooltip.main + " " + (test ? tooltip.disable : tooltip.enable)}
+      content={(test ? content.enabled : content.disabled)}
+      {...rest}
+    />
   );
 };
