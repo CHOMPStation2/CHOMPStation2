@@ -276,6 +276,16 @@
 				L.toggle_hud_vis()
 		if((L.stat != DEAD) && L.ai_holder)
 			L.ai_holder.go_wake()
+	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
+		var/obj/item/I = thing
+		if(I.gurgled)
+			I.add_overlay(gurgled_overlays[I.gurgled_color])
+		if(I.d_mult < 1)
+			var/image/temp = new /image(gurgled_overlays[I.gurgled_color ? I.gurgled_color : "green"])
+			temp.filters += filter(type = "alpha", icon = icon(I.icon, I.icon_state))
+			I.d_stage_overlay = temp
+			for(var/count in I.d_mult to 1 step 0.25)
+				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
 
 /obj/belly/proc/vore_fx(mob/living/L)
 	if(!istype(L))
