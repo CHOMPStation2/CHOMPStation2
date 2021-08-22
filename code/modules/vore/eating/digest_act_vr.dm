@@ -29,13 +29,32 @@
 		if(!touchable_amount) //CHOMPEdit Start
 			touchable_amount = 1
 		g_damage = 0.25 * (B.digest_brute + B.digest_burn) / touchable_amount
-	if(g_damage <= 0)
-		return FALSE //CHOMPEdit End
-
-	if(digest_stage > 0)
+		if(g_damage <= 0)
+			return FALSE
 		if(g_damage > digest_stage)
 			g_damage = digest_stage
-		digest_stage -= g_damage
+			digest_stage = 0 //Don't bother with further math for 1 hit kills.
+		if(digest_stage > 0)
+			if(g_damage > digest_stage)
+				g_damage = digest_stage
+			digest_stage -= g_damage
+			d_mult = round(1 / w_class * digest_stage, 0.25)
+			if(d_mult < d_mult_old)
+				d_mult_old = d_mult
+				var/d_stage_name
+				switch(d_mult)
+					if(0.75)
+						d_stage_name = "blemished"
+					if(0.5)
+						d_stage_name = "disfigured"
+					if(0.25)
+						d_stage_name = "deteriorating"
+					if(0)
+						d_stage_name = "ruined"
+				if(d_stage_name)
+					cleanname = "[d_stage_name] [initial(name)]"
+					decontaminate()
+					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color) //CHOMPEdit End
 	if(digest_stage <= 0)
 		if(istype(src, /obj/item/device/pda))
 			var/obj/item/device/pda/P = src
@@ -50,8 +69,6 @@
 			else if(item_storage)
 				O.forceMove(item_storage)
 		qdel(src)
-	if(g_damage > w_class)
-		return w_class
 	return g_damage
 
 /////////////
@@ -135,3 +152,6 @@
 // Gradual damage measurement
 /obj/item
 	var/digest_stage = null
+	var/d_mult_old = 1 //CHOMPEdit: digest stage descriptions
+	var/d_mult = 1 //CHOMPEdit: digest stage descriptions
+	var/d_stage_overlay //CHOMPEdit: digest stage effects
