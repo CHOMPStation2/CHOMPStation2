@@ -4216,6 +4216,7 @@
 #include "code\modules\vore\fluffstuff\MadokaSpear.dm"
 #include "code\modules\vore\persist\persist_vr.dm"
 #include "code\modules\vore\resizing\grav_pull_vr.dm"
+#include "code\modules\vore\resizing\holder_micro_ch.dm"
 #include "code\modules\vore\resizing\holder_micro_vr.dm"
 #include "code\modules\vore\resizing\resize_vr.dm"
 #include "code\modules\vore\resizing\sizegun_vr.dm"
