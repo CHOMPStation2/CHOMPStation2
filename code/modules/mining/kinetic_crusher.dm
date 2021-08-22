@@ -163,8 +163,12 @@
 		D.fire()
 		charged = FALSE
 		update_icon()
+<<<<<<< HEAD
 		addtimer(CALLBACK(src, .proc/Recharge), charge_time)
 		// * (user?.ConflictElementCount(CONFLICT_ELEMENT_CRUSHER) || 1 - tentatively commented out
+=======
+		addtimer(CALLBACK(src, .proc/Recharge), charge_time * (user?.ConflictElementCount(CONFLICT_ELEMENT_CRUSHER) || 1))
+>>>>>>> d7d38e5b85 (Merge pull request #11470 from VOREStation/master)
 		return
 	if(proximity_flag && isliving(target))
 		detonate(target, user)

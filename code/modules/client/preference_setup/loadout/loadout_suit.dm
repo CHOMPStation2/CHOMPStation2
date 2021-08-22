@@ -625,4 +625,8 @@
 /datum/gear/suit/cmddressjacket
 	display_name = "command dress jacket"
 	path = /obj/item/clothing/suit/storage/cmddressjacket
+<<<<<<< HEAD
 	allowed_roles = list("Site Manager", "Head of Personnel", "Command Secretary")
+=======
+	allowed_roles = list("Facility Director", "Head of Personnel", "Command Secretary")
+>>>>>>> d7d38e5b85 (Merge pull request #11470 from VOREStation/master)
