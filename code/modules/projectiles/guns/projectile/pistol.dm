@@ -9,6 +9,7 @@
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/colt/update_icon()
 	if(ammo_magazine)
@@ -87,6 +88,7 @@
 	caliber = ".45"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	load_method = MAGAZINE
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/sec/update_icon()
 	..()
@@ -98,6 +100,7 @@
 /obj/item/weapon/gun/projectile/sec/flash
 	name = ".45 signal pistol"
 	magazine_type = /obj/item/ammo_magazine/m45/flash
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/sec/wood
 	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. This one has a sweet wooden grip. Uses .45 rounds."
@@ -119,6 +122,7 @@
 	caliber = ".45"
 	silenced = 1
 	fire_delay = 1
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 	recoil = 0
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	load_method = MAGAZINE
@@ -175,6 +179,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/m75)
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/gyropistol/update_icon()
 	..()
@@ -196,6 +201,7 @@
 	magazine_type = /obj/item/ammo_magazine/m9mm/compact
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm/compact)
 	projectile_type = /obj/item/projectile/bullet/pistol
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/pistol/flash
 	name = "compact signal pistol"
@@ -327,6 +333,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm) // Can accept illegal large capacity magazines, or compact magazines.
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/weapon/gun/projectile/p92x/update_icon()
 	..()

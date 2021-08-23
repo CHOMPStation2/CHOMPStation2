@@ -210,7 +210,8 @@
 /datum/sprite_accessory/tail/taur/lizard
 	name = "Lizard (Taur)"
 	icon_state = "lizard_s"
-	suit_sprites = 'icons/mob/taursuits_lizard_vr.dmi'
+//	suit_sprites = 'icons/mob/taursuits_lizard_vr.dmi'	///Chomp edit
+	suit_sprites = 'icons/mob/taursuits_lizard_ch.dmi'
 	icon_sprite_tag = "lizard"
 
 /datum/sprite_accessory/tail/taur/lizard/lizard_2c
@@ -401,7 +402,8 @@
 	name = "Drake (Taur)"
 	icon_state = "drake_s"
 	extra_overlay = "drake_markings"
-	suit_sprites = 'icons/mob/taursuits_drake_vr.dmi'
+///	suit_sprites = 'icons/mob/taursuits_drake_vr.dmi'	///Chomp edit
+	suit_sprites = 'icons/mob/taursuits_drake_ch.dmi'
 	icon_sprite_tag = "drake"
 
 /datum/sprite_accessory/tail/taur/otie

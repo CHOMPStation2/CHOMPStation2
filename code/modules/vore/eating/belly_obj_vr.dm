@@ -46,12 +46,12 @@
 	var/emote_time = 60						// How long between stomach emotes at prey (in seconds)
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
 	var/next_emote = 0						// When we're supposed to print our next emote, as a world.time
-	var/item_mode_serial = TRUE				// Serial/parallel item digestion mode. Affect one item at a time or all of them with damage divided between contents. CHOMPEdit
-	
+
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
 	var/autotransferwait = 10 				// Time between trying to transfer.
 	var/autotransferlocation				// Place to send them
+	var/autotransfer_enabled = FALSE		// Player toggle
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -59,7 +59,7 @@
 	//Digest mode addon flags
 	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS)
 	//Item related modes
-	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST)
+	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL)
 
 	//List of slots that stripping handles strips
 	var/tmp/static/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
@@ -202,36 +202,13 @@
 		"fullness3_messages",
 		"fullness4_messages",
 		"fullness5_messages",
-		"vorespawn_blacklist",     //CHOMP end of variables from CHOMP
+		"vorespawn_blacklist",
+		"autotransferchance",
+		"autotransferwait",
+		"autotransferlocation",
+		"autotransfer_enabled", //CHOMP end of variables from CHOMP
 		"egg_type"
 		)
-
-/*These have been pulled from the above list as these were chomp edits for liquid belly stuff. This needs to be ported back in for TGUI port
-		"reagent_mode_flags",	//CHOMP start of variables from CHOMP
-		"reagentbellymode",
-		"liquid_fullness1_messages",
-		"liquid_fullness2_messages",
-		"liquid_fullness3_messages",
-		"liquid_fullness4_messages",
-		"liquid_fullness5_messages",
-		"reagent_name",
-		"reagent_chosen",
-		"reagentid",
-		"reagentcolor",
-		"gen_cost",
-		"gen_amount",
-		"gen_time",
-		"gen_time_display",
-		"reagent_transfer_verb",
-		"custom_max_volume",
-		"generated_reagents",
-		"vorefootsteps_sounds",
-		"fullness1_messages",
-		"fullness2_messages",
-		"fullness3_messages",
-		"fullness4_messages",
-		"fullness5_messages"	//CHOMP end of variables from CHOMP
-*/
 
 /obj/belly/Initialize()
 	. = ..()
@@ -283,14 +260,9 @@
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
-	//CHOMPStation edit start
-	if(!owner.client)	//Intended for simple mobs
-		if(autotransferlocation != null && autotransferchance > 0)
-			addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
-	//CHOMPStation edit end
 
 	// Intended for simple mobs
-	if(!owner.client && autotransferlocation && autotransferchance > 0)
+	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
 		addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
 
 // Called whenever an atom leaves this belly
@@ -304,6 +276,17 @@
 				L.toggle_hud_vis()
 		if((L.stat != DEAD) && L.ai_holder)
 			L.ai_holder.go_wake()
+	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
+		var/obj/item/I = thing
+		if(I.gurgled)
+			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
+			I.add_overlay(gurgled_overlays[I.gurgled_color])
+		if(I.d_mult < 1)
+			var/image/temp = new /image(gurgled_overlays[I.gurgled_color ? I.gurgled_color : "green"])
+			temp.filters += filter(type = "alpha", icon = icon(I.icon, I.icon_state))
+			I.d_stage_overlay = temp
+			for(var/count in I.d_mult to 1 step 0.25)
+				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
 
 /obj/belly/proc/vore_fx(mob/living/L)
 	if(!istype(L))
@@ -927,7 +910,11 @@
 	dupe.gen_time_display = gen_time_display
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume
-	dupe.vorespawn_blacklist = vorespawn_blacklist	//CHOMP end of variables from CHOMP
+	dupe.vorespawn_blacklist = vorespawn_blacklist
+	dupe.autotransferchance = autotransferchance
+	dupe.autotransferwait = autotransferwait
+	dupe.autotransferlocation = autotransferlocation
+	dupe.autotransfer_enabled = autotransfer_enabled //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud

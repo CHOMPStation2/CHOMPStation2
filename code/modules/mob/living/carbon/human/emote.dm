@@ -132,8 +132,11 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/blep,
 
 	/decl/emote/helper/vwag,
-	/decl/emote/helper/vflap
+	/decl/emote/helper/vflap,
 	//VOREStation Add End
+	//CHOMPedit Add Start
+	/decl/emote/audible/prbt
+	//CHOMPedit Add End
 )
 
 	//VOREStation Add Start
@@ -258,7 +261,10 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/spiderpurr,
 	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
-	/decl/emote/visible/blep
+	/decl/emote/visible/blep,
+	//CHOMPEdit Add Start
+	/decl/emote/audible/prbt
+	//CHOMPEdit Add End
 	)
 	//VOREStation Add End
 

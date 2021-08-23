@@ -111,7 +111,7 @@
 					addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(L)), 5 MINUTES)
 	else if(istype(O, /obj/item/device/healthanalyzer))
 		var/healthpercent = health/maxHealth*100
-		to_chat(user, "<span class='notice'>[src] seems to be [healthpercent]% healthy.</span>")		
+		to_chat(user, "<span class='notice'>[src] seems to be [healthpercent]% healthy.</span>")
 	else
 		..()
 
@@ -120,3 +120,43 @@
 		var/mob/living/L = target.resolve()
 		if(L)
 			LAZYREMOVE(prey_excludes, L)
+
+/mob/living/simple_mob/proc/nutrition_heal()
+	set name = "Nutrition Heal"
+	set category = "Abilities"
+	set desc = "Slowly regenerate health using nutrition."
+
+	if(nutrition < 10)
+		to_chat(src, "<span class='warning'>You are too hungry to regenerate health.</span>")
+		return
+	var/heal_amount = input(src, "Input the amount of health to regenerate at the rate of 10 nutrition per second per hitpoint. Current health: [health] / [maxHealth]", "Regenerate health.") as num|null
+	if(!heal_amount)
+		return
+	heal_amount = CLAMP(heal_amount, 1, maxHealth - health)
+	heal_amount = CLAMP(heal_amount, 1, nutrition / 10)
+	if(do_after (src, 10 * heal_amount))
+		nutrition -= 10 * heal_amount
+		if(heal_amount < getBruteLoss())
+			adjustBruteLoss(-heal_amount)
+			return
+		heal_amount = heal_amount - getBruteLoss()
+		adjustBruteLoss(-getBruteLoss())
+		if(heal_amount < getFireLoss())
+			adjustFireLoss(-heal_amount)
+			return
+		heal_amount = heal_amount - getFireLoss()
+		adjustFireLoss(-getFireLoss())
+		if(heal_amount < getOxyLoss())
+			adjustOxyLoss(-heal_amount)
+			return
+		heal_amount = heal_amount - getOxyLoss()
+		adjustOxyLoss(-getOxyLoss())
+		if(heal_amount < getToxLoss())
+			adjustToxLoss(-heal_amount)
+			return
+		heal_amount = heal_amount - getToxLoss()
+		adjustToxLoss(-getToxLoss())
+		if(heal_amount < getCloneLoss())
+			adjustCloneLoss(-heal_amount)
+			return
+		adjustCloneLoss(-getCloneLoss())
