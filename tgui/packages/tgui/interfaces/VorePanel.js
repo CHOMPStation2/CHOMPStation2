@@ -1145,6 +1145,200 @@ const VoreUserPreferences = (props, context) => {
         disabled: "No Feeding",
       },
     },
+    healbelly: {
+      action: "toggle_healbelly",
+      test: permit_healbelly,
+      tooltip: {
+        main: "This button is for those who don't like healbelly used on them as a mechanic."
+          + " It does not affect anything, but is displayed under mechanical prefs for ease of quick checks.",
+        enable: "Click here to allow being heal-bellied.",
+        disable: "Click here to prevent being heal-bellied.",
+      },
+      content: {
+        enabled: "Heal-bellies Allowed",
+        disabled: "No Heal-bellies",
+      },
+    },
+    dropnom_prey: {
+      action: "toggle_dropnom_prey",
+      test: can_be_drop_prey,
+      tooltip: {
+        main: "This toggle is for spontaneous, environment related vore"
+          + " as prey, including drop-noms, teleporters, etc.",
+        enable: "Click here to allow being spontaneous prey.",
+        disable: "Click here to prevent being spontaneous prey.",
+      },
+      content: {
+        enabled: "Spontaneous Prey Enabled",
+        disabled: "Spontaneous Prey Disabled",
+      },
+    },
+    dropnom_pred: {
+      action: "toggle_dropnom_pred",
+      test: can_be_drop_pred,
+      tooltip: {
+        main: "This toggle is for spontaneous, environment related vore"
+          + " as a predator, including drop-noms, teleporters, etc.",
+        enable: "Click here to allow being spontaneous pred.",
+        disable: "Click here to prevent being spontaneous pred.",
+      },
+      content: {
+        enabled: "Spontaneous Pred Enabled",
+        disabled: "Spontaneous Pred Disabled",
+      },
+    },
+    spawnbelly: {
+      action: "toggle_latejoin_vore",
+      test: latejoin_vore,
+      tooltip: {
+        main: "Toggle late join vore spawnpoint.",
+        enable: "Click here to turn on vorish spawnpoint.",
+        disable: "Click here to turn off vorish spawnpoint.",
+      },
+      content: {
+        enabled: "Vore Spawn Enabled",
+        disabled: "Vore Spawn Disabled",
+      },
+    },
+    noisy: {
+      action: "toggle_noisy",
+      test: noisy,
+      tooltip: {
+        main: "Toggle audible hunger noises.",
+        enable: "Click here to turn on hunger noises.",
+        disable: "Click here to turn off hunger noises.",
+      },
+      content: {
+        enabled: "Hunger Noises Enabled",
+        disabled: "Hunger Noises Disabled",
+      },
+    },
+    noisy_full: {
+      action: "toggle_noisy_full",
+      test: noisy_full,
+      tooltip: {
+        main: "Toggle belching while full.",
+        enable: "Click here to turn on belching while full.",
+        disable: "Click here to turn off belching while full.",
+      },
+      content: {
+        enabled: "Belching Enabled",
+        disabled: "Belching Disabled",
+      },
+    },
+    resize: {
+      action: "toggle_resize",
+      test: resizable,
+      tooltip: {
+        main: "This button is to toggle your ability to be resized by others.",
+        enable: "Click here to allow being resized.",
+        disable: "Click here to prevent being resized.",
+      },
+      content: {
+        enabled: "Resizing Allowed",
+        disabled: "No Resizing",
+      },
+    },
+    steppref: {
+      action: "toggle_steppref",
+      test: step_mechanics_active,
+      tooltip: {
+        main: "",
+        enable: "You will not participate in step mechanics."
+          + " Click to enable step mechanics.",
+        disable: "This setting controls whether or not you participate in size-based step mechanics."
+          + " Includes both stepping on others, as well as getting stepped on. Click to disable step mechanics.",
+      },
+      content: {
+        enabled: "Step Mechanics Enabled",
+        disabled: "Step Mechanics Disabled",
+      },
+    },
+    vore_fx: {
+      action: "toggle_fx",
+      test: show_vore_fx,
+      tooltip: {
+        main: "",
+        enable: "Regardless of Predator Setting, you will not see their FX settings."
+          + " Click this to enable showing FX.",
+        disable: "This setting controls whether or not a pred is allowed to mess with your HUD and fullscreen overlays."
+          + " Click to disable all FX.",
+      },
+      content: {
+        enabled: "Show Vore FX",
+        disabled: "Do Not Show Vore FX",
+      },
+    },
+    remains: {
+      action: "toggle_leaveremains",
+      test: digest_leave_remains,
+      tooltip: {
+        main: "",
+        enable: "Regardless of Predator Setting, you will not leave remains behind."
+          + " Click this to allow leaving remains.",
+        disable: "Your Predator must have this setting enabled in their belly modes to allow remains to show up,"
+          + " if they do not, they will not leave your remains behind, even with this on. Click to disable remains.",
+      },
+      content: {
+        enabled: "Allow Leaving Remains",
+        disabled: "Do Not Allow Leaving Remains",
+      },
+    },
+    pickuppref: {
+      action: "toggle_pickuppref",
+      test: pickup_mechanics_active,
+      tooltip: {
+        main: "",
+        enable: "You will not participate in pick-up mechanics."
+          + " Click this to allow picking up/being picked up.",
+        disable: "Allows macros to pick you up into their hands, and you to pick up micros."
+          + " Click to disable pick-up mechanics.",
+      },
+      content: {
+        enabled: "Pick-up Mechanics Enabled",
+        disabled: "Pick-up Mechanics Disabled",
+      },
+    },
+    spontaneous_tf: {
+      action: "toggle_allow_spontaneous_tf",
+      test: allow_spontaneous_tf,
+      tooltip: {
+        main: "This toggle is for spontaneous or environment related transformation"
+          + " as a victim, such as via chemicals.",
+        enable: "Click here to allow being spontaneously transformed.",
+        disable: "Click here to disable being spontaneously transformed.",
+      },
+      content: {
+        enabled: "Spontaneous TF Enabled",
+        disabled: "Spontaneous TF Disabled",
+      },
+    },
+    liquid_receive: {
+      action: "toggle_liq_rec",
+      test: liq_rec,
+      tooltip: {
+        main: "This button is for allowing or preventing others from giving you liquids from their vore organs.",
+        enable: "Click here to allow receiving liquids.",
+        disable: "Click here to prevent receiving liquids.",
+      },
+      content: {
+        enabled: "Receiving Liquids Allowed",
+        disabled: "Do Not Allow Receiving Liquids",
+      },
+    },
+    liquid_give: {
+      action: "toggle_liq_giv",
+      test: liq_giv,
+      tooltip: {
+        main: "This button is for allowing or preventing others from taking liquids from your vore organs.",
+        enable: "Click here to allow taking liquids.",
+        disable: "Click here to prevent taking liquids.",
+      },
+      content: {
+        enabled: "Taking Liquids Allowed",
+        disabled: "Do Not Allow Taking Liquids",
+      },
+    },
   };
 
   return tabIndex===4 ? null : (
@@ -1170,159 +1364,40 @@ const VoreUserPreferences = (props, context) => {
           <VoreUserPreferenceItem spec={preferences.feed} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_healbelly")}
-            icon={permit_healbelly ? "toggle-on" : "toggle-off"}
-            selected={permit_healbelly}
-            fluid
-            tooltipPosition="top"
-            tooltip={"This button is for those who don't like healbelly used on them as a mechanic."
-              + " It does not affect anything, but is displayed under mechanical prefs for ease of quick checks. "
-              + (permit_healbelly
-                ? "Click here to prevent being heal-bellied."
-                : "Click here to allow being heal-bellied.")}
-            content={permit_healbelly ? "Heal-bellies Allowed" : "No Heal-bellies"} />
+          <VoreUserPreferenceItem spec={preferences.healbelly} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_dropnom_prey")}
-            icon={can_be_drop_prey ? "toggle-on" : "toggle-off"}
-            selected={can_be_drop_prey}
-            fluid
-            tooltip={"This toggle is for spontaneous, environment related vore"
-            + " as prey, including drop-noms, teleporters, etc. "
-            + (can_be_drop_prey
-              ? "Click here to allow being spontaneous prey."
-              : "Click here to disable being spontaneous prey.")}
-            content={can_be_drop_prey ? "Spontaneous Prey Enabled" : "Spontaneous Prey Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.dropnom_prey} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
-          <Button
-            onClick={() => act("toggle_dropnom_pred")}
-            icon={can_be_drop_pred ? "toggle-on" : "toggle-off"}
-            selected={can_be_drop_pred}
-            fluid
-            tooltip={"This toggle is for spontaneous, environment related vore"
-            + " as a predator, including drop-noms, teleporters, etc. "
-            + (can_be_drop_pred
-              ? "Click here to allow being spontaneous pred."
-              : "Click here to disable being spontaneous pred.")}
-            content={can_be_drop_pred ? "Spontaneous Pred Enabled" : "Spontaneous Pred Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.dropnom_pred} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_latejoin_vore")}
-            icon={latejoin_vore ? "toggle-on" : "toggle-off"}
-            selected={latejoin_vore}
-            fluid
-            tooltip={"Toggle late join vore spawnpoint. "
-            + (latejoin_vore
-              ? "Click here to turn off vorish spawnpoint."
-              : "Click here to turn on vorish spawnpoint.")}
-            content={latejoin_vore ? "Vore Spawn Enabled" : "Vore Spawn Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.spawnbelly} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_noisy")}
-            icon={noisy ? "toggle-on" : "toggle-off"}
-            selected={noisy}
-            fluid
-            tooltip={"Toggle audible hunger noises. "
-            + (noisy
-              ? "Click here to turn off hunger noises."
-              : "Click here to turn on hunger noises.")}
-            content={noisy ? "Hunger Noises Enabled" : "Hunger Noises Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.noisy} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_noisy_full")}
-            icon={noisy_full ? "toggle-on" : "toggle-off"}
-            selected={noisy_full}
-            fluid
-            tooltip={"Toggle belching while full. "
-            + (noisy_full
-              ? "Click here to turn off belching when full."
-              : "Click here to turn on belching when full.")}
-            content={noisy_full ? "Belching Enabled" : "Belching Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.noisy_full} />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_resize")}
-            icon={resizable ? "toggle-on" : "toggle-off"}
-            selected={resizable}
-            fluid
-            tooltip={"This button is to toggle your ability to be resized by others. "
-            + (resizable ? "Click here to prevent being resized." : "Click here to allow being resized.")}
-            content={resizable ? "Resizing Allowed" : "No Resizing"} />
+          <VoreUserPreferenceItem spec={preferences.resize} />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
-          <Button
-            onClick={() => act("toggle_steppref")}
-            icon={step_mechanics_active ? "toggle-on" : "toggle-off"}
-            selected={step_mechanics_active}
-            fluid
-            tooltipPosition="top"
-            tooltip={step_mechanics_active
-              ? "This setting controls whether or not you participate in size-based step mechanics."
-              + "Includes both stepping on others, as well as getting stepped on. Click to disable step mechanics."
-              : ("You will not participate in step mechanics."
-                + " Click to enable step mechanics.")}
-            content={step_mechanics_active ? "Step Mechanics Enabled" : "Step Mechanics Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.steppref} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_fx")}
-            icon={show_vore_fx ? "toggle-on" : "toggle-off"}
-            selected={show_vore_fx}
-            fluid
-            tooltipPosition="top"
-            tooltip={show_vore_fx
-              ? "This setting controls whether or not a pred is allowed to mess with your HUD and fullscreen overlays."
-              + "Click to disable all FX."
-              : ("Regardless of Predator Setting, you will not see their FX settings."
-                + " Click this to enable showing FX.")}
-            content={show_vore_fx ? "Show Vore FX" : "Do Not Show Vore FX"} />
+          <VoreUserPreferenceItem spec={preferences.vore_fx} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_leaveremains")}
-            icon={digest_leave_remains ? "toggle-on" : "toggle-off"}
-            selected={digest_leave_remains}
-            fluid
-            tooltipPosition="top"
-            tooltip={digest_leave_remains
-              ? "Your Predator must have this setting enabled in their belly modes to allow remains to show up,"
-              + "if they do not, they will not leave your remains behind, even with this on. Click to disable remains"
-              : ("Regardless of Predator Setting, you will not leave remains behind."
-                + " Click this to allow leaving remains.")}
-            content={digest_leave_remains ? "Allow Leaving Remains" : "Do Not Allow Leaving Remains"} />
+          <VoreUserPreferenceItem spec={preferences.remains} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%" grow={1}>
-          <Button
-            onClick={() => act("toggle_pickuppref")}
-            icon={pickup_mechanics_active ? "toggle-on" : "toggle-off"}
-            selected={pickup_mechanics_active}
-            fluid
-            tooltipPosition="top"
-            tooltip={pickup_mechanics_active
-              ? "Allows macros to pick you up into their hands, and you to pick up micros."
-              + "Click to disable pick-up mechanics"
-              : ("You will not participate in pick-up mechanics."
-                + " Click this to allow picking up/being picked up.")}
-            content={pickup_mechanics_active ? "Pick-up Mechanics Enabled" : "Pick-up Mechanics Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.pickuppref} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="32%">
-          <Button
-            onClick={() => act("toggle_allow_spontaneous_tf")}
-            icon={allow_spontaneous_tf ? "toggle-on" : "toggle-off"}
-            selected={allow_spontaneous_tf}
-            fluid
-            tooltip={"This toggle is for spontaneous or environment related transformation"
-            + " as a victim, such as via chemicals. "
-            + (allow_spontaneous_tf
-              ? "Click here to allow being spontaneously transformed."
-              : "Click here to disable being spontaneously transformed.")}
-            content={allow_spontaneous_tf ? "Spontaneous TF Enabled" : "Spontaneous TF Disabled"} />
+          <VoreUserPreferenceItem spec={preferences.spontaneous_tf} />
         </Flex.Item>
         <Flex.Item basis="49%">
           <Button
@@ -1339,26 +1414,10 @@ const VoreUserPreferences = (props, context) => {
             onClick={() => act("setsmell")} />
         </Flex.Item>
         <Flex.Item basis="49%">
-          <Button
-            onClick={() => act("toggle_liq_rec")}
-            icon={liq_rec ? "toggle-on" : "toggle-off"}
-            selected={liq_rec}
-            fluid
-            tooltipPosition="top"
-            tooltip={"This button is for allowing or preventing others from giving you liquids from their vore organs."
-            + (liq_rec ? " Click here to prevent receiving liquids." : " Click here to allow receiving liquids.")}
-            content={liq_rec ? "Receiving Liquids Allowed" : "Do Not Allow Receiving Liquids"} />
+          <VoreUserPreferenceItem spec={preferences.liquid_receive} tooltipPosition="top" />
         </Flex.Item>
         <Flex.Item basis="49%">
-          <Button
-            onClick={() => act("toggle_liq_giv")}
-            icon={liq_giv ? "toggle-on" : "toggle-off"}
-            selected={liq_giv}
-            fluid
-            tooltipPosition="top"
-            tooltip={"This button is for allowing or preventing others from taking liquids from your vore organs."
-            + (liq_giv ? " Click here to prevent taking liquids." : " Click here to allow taking liquids.")}
-            content={liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"} />
+          <VoreUserPreferenceItem spec={preferences.liquid_give} tooltipPosition="top" />
         </Flex.Item>
       </Flex>
       <Section>
