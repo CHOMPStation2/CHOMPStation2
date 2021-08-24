@@ -985,7 +985,7 @@
 /datum/component/vore_panel/proc/vore_panel_click(source, location, control, params, user)
 	var/mob/living/owner = user
 	if(istype(owner) && owner.vorePanel)
-		INVOKE_ASYNC(owner, .proc/insidePanel, user) //CHOMPEdit
+		INVOKE_ASYNC(owner, /mob/living/proc/insidePanel, owner) //CHOMPEdit
 
 /**
  * Screen object for vore panel
