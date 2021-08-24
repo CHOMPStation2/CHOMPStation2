@@ -616,3 +616,17 @@
 /datum/gear/suit/miscellaneous/cardigan/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
+<<<<<<< HEAD
+||||||| parent of 8848775cef... Merge pull request #11479 from PastelPrinceDan/aueugh
+
+/datum/gear/suit/cmddressjacket
+	display_name = "command dress jacket"
+	path = /obj/item/clothing/suit/storage/cmddressjacket
+	allowed_roles = list("Facility Director", "Head of Personnel", "Command Secretary")
+=======
+
+/datum/gear/suit/cmddressjacket
+	display_name = "command dress jacket"
+	path = /obj/item/clothing/suit/storage/cmddressjacket
+	allowed_roles = list("Site Manager", "Head of Personnel", "Command Secretary")
+>>>>>>> 8848775cef... Merge pull request #11479 from PastelPrinceDan/aueugh
