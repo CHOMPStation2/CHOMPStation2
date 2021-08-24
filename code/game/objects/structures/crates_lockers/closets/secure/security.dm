@@ -238,8 +238,18 @@
 
 	starts_with = list(
 		/obj/item/clothing/accessory/badge/holo/detective,
+<<<<<<< HEAD
 		/obj/item/clothing/gloves/forensic, //CHOMP Edit replaces black gloves
 		/obj/item/gunbox, //CHOMP Edit undoes vorestation removal and adds back gunbox
+||||||| parent of 9c2f8d371d... Merge pull request #11464 from GhostActual/stunrevolver_fix
+		/obj/item/clothing/gloves/black,
+		///obj/item/gunbox, // VOREStation Removal
+		///obj/item/weapon/gun/energy/stunrevolver/vintage, // VOREStation Removal
+=======
+		/obj/item/clothing/gloves/black,
+		///obj/item/gunbox, // VOREStation Removal
+		/obj/item/weapon/gun/energy/stunrevolver/vintage,
+>>>>>>> 9c2f8d371d... Merge pull request #11464 from GhostActual/stunrevolver_fix
 		/obj/item/weapon/storage/belt/detective,
 		/obj/item/weapon/storage/box/evidence,
 		/obj/item/device/radio/headset/headset_sec,
