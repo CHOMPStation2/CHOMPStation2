@@ -124,12 +124,19 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 
 /var/midnight_rollovers = 0
 /var/rollovercheck_last_timeofday = 0
+/var/rollover_safety_date = 0 // set in world/New to the server startup day-of-month
 /proc/update_midnight_rollover()
-	if (world.timeofday < rollovercheck_last_timeofday) //TIME IS GOING BACKWARDS!
-		midnight_rollovers += 1
+	// Day has wrapped (world.timeofday drops to 0 at the start of each real day)
+	if (world.timeofday < rollovercheck_last_timeofday)
+		// If the day started/last wrap was < 12 hours ago, this is spurious
+		if(rollover_safety_date < world.realtime - (12 HOURS))
+			midnight_rollovers++
+			rollover_safety_date = world.realtime
+		else
+			warning("Time rollover error: world.timeofday decreased from previous check, but the day or last rollover is less than 12 hours old. System clock?")
 	rollovercheck_last_timeofday = world.timeofday
 	return midnight_rollovers
-
+  
 //Increases delay as the server gets more overloaded,
 //as sleeps aren't cheap and sleeping only to wake up and sleep again is wasteful
 #define DELTA_CALC max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)

@@ -1324,6 +1324,9 @@
 		/obj/item/weapon/storage/backpack/toxins = 5,
 		/obj/item/weapon/storage/backpack/satchel/tox = 5
 	)
+	contraband = list(
+		/obj/item/clothing/suit/storage/hooded/techpriest = 2
+	)
 	req_log_access = access_hop
 	has_logs = 1
 

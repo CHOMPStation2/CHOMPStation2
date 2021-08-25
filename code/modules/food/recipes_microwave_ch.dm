@@ -41,7 +41,7 @@
 	result = /obj/item/weapon/reagent_containers/food/snacks/pandenata
 
 /datum/recipe/tocino
-	reagents = list("sodiumchloride" = 5, "wine" = 5)
+	reagents = list("sodiumchloride" = 5, "redwine" = 5)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/rawcutlet
 	)
