@@ -1,12 +1,8 @@
 #define RECOMMENDED_VERSION 501
 /world/New()
 	world_startup_time = world.timeofday
-<<<<<<< HEAD
-||||||| parent of 6c511626fc... Merge pull request #11456 from VOREStation/Arokha/timey
 	rollover_safety_date = text2num(time2text(world_startup_time, "DD"))
-=======
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
->>>>>>> 6c511626fc... Merge pull request #11456 from VOREStation/Arokha/timey
 	to_world_log("Map Loading Complete")
 	//logs
 	//VOREStation Edit Start

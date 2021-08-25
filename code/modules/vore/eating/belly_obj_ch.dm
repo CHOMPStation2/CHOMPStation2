@@ -148,21 +148,21 @@
 			generated_reagents = list("milk" = 1)
 			reagent_name = "milk"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "milk"
 			reagentcolor = "#DFDFDF"
 		if("Cream")
 			generated_reagents = list("cream" = 1)
 			reagent_name = "cream"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 5
 			reagentid = "cream"
 			reagentcolor = "#DFD7AF"
 		if("Honey")
 			generated_reagents = list("honey" = 1)
 			reagent_name = "honey"
 			gen_amount = 1
-			gen_cost = 15
+			gen_cost = 10
 			reagentid = "honey"
 			reagentcolor = "#FFFF00"
 		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future

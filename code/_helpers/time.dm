@@ -124,23 +124,8 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 
 /var/midnight_rollovers = 0
 /var/rollovercheck_last_timeofday = 0
+/var/rollover_safety_date = 0 // set in world/New to the server startup day-of-month
 /proc/update_midnight_rollover()
-<<<<<<< HEAD
-	if (world.timeofday < rollovercheck_last_timeofday) //TIME IS GOING BACKWARDS!
-		midnight_rollovers += 1
-||||||| parent of 6c511626fc... Merge pull request #11456 from VOREStation/Arokha/timey
-	// Day has wrapped (world.timeofday drops to 0 at the start of each real day)
-	if (world.timeofday < rollovercheck_last_timeofday)
-		// Compare the last wrap date (or server startup date) to our current date
-		var/curday = text2num(time2text(world.timeofday, "DD"))
-		// If the date is the same as the startup or last wrap, we should avoid wrapping, may be clock adjustment
-		// note that this won't protect against going from 00:01 to 23:59 and crossing the boundary again
-		if(rollover_safety_date != curday)
-			midnight_rollovers++
-			rollover_safety_date = curday
-		else
-			warning("Time rollover error: world.timeofday decreased from previous check, but date remained the same. System clock?")
-=======
 	// Day has wrapped (world.timeofday drops to 0 at the start of each real day)
 	if (world.timeofday < rollovercheck_last_timeofday)
 		// If the day started/last wrap was < 12 hours ago, this is spurious
@@ -149,10 +134,9 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 			rollover_safety_date = world.realtime
 		else
 			warning("Time rollover error: world.timeofday decreased from previous check, but the day or last rollover is less than 12 hours old. System clock?")
->>>>>>> 6c511626fc... Merge pull request #11456 from VOREStation/Arokha/timey
 	rollovercheck_last_timeofday = world.timeofday
 	return midnight_rollovers
-
+  
 //Increases delay as the server gets more overloaded,
 //as sleeps aren't cheap and sleeping only to wake up and sleep again is wasteful
 #define DELTA_CALC max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)
