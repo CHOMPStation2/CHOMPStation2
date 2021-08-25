@@ -163,3 +163,102 @@
 	unshavenreversemohawk
 		name = "Mohawk Reverse Unshaven"
 		icon_state = "hair_unshaven_reversemohawk"
+
+// Extra colorable options for Vox
+/datum/sprite_accessory/hair/vox_afro_color
+	name = "Vox Afro, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_afro"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_crestedquills_color
+	name = "Vox Crested Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_crestedquills"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_empquills_color
+	name = "Vox Emperor Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_emperorquills"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_hairhorns_color
+	name = "Vox Hair Horns, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_horns"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_keelquills_color
+	name = "Vox Keel Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_keelquills"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_keetquills_color
+	name = "Vox Keet Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_keetquills"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_kingly_color
+	name = "Vox Kingly Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_kingly"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_mohawk_color
+	name = "Vox Mohawk, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_mohawk"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_nights_color
+	name = "Vox Night Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_nights"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_razorclipped_color
+	name = "Vox Razor Clipped, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_razorclipped"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_razor_color
+	name = "Vox Razor, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_razor"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_shortquills_color
+	name = "Vox Short Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_shortquills"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_tielquills_color
+	name = "Vox Tiel Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_tielquills"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/vox_yasuquills_color
+	name = "Vox Yasu Quills, Colorable"
+	icon = 'icons/mob/human_face_ch.dmi'
+	icon_add = 'icons/mob/human_face_ch_add.dmi'
+	icon_state = "hair_vox_yasu"
+	species_allowed = list(SPECIES_VOX)
