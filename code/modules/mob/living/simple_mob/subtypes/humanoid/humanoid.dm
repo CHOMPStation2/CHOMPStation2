@@ -21,6 +21,9 @@
 /mob/living/simple_mob/humanoid/death()
 	..()
 	if(corpse)
-		new corpse (src.loc)
+		//CHOMPEdit Begin, cleanup subsystem
+		var/dead_body = new corpse (src.loc)
+		SScleanup.add_to_queue(dead_body)
+		//CHOMPEdit End.
 	qdel(src)
 	return

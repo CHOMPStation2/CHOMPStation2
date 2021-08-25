@@ -29,6 +29,7 @@
 	BB = null
 	set_dir(pick(cardinal)) //spin spent casings
 	update_icon()
+	SScleanup.add_to_queue(src) //CHOMPEdit cleanup subsystem
 
 /obj/item/ammo_casing/attackby(obj/item/I as obj, mob/user as mob)
 	if(I.is_screwdriver())
