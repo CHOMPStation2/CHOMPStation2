@@ -13,17 +13,12 @@
 
 	switch(a_intent)
 		if(I_HELP)
-<<<<<<< HEAD
-			if(isliving(A))
+
+			var/mob/living/L = A
+			if(istype(L) && (!has_hands || !L.attempt_to_scoop(src)))
 				if(src.zone_sel.selecting == BP_GROIN) //CHOMPEdit
 					if(src.vore_bellyrub(A))
 						return
-||||||| parent of 9d28e09548... Merge pull request #11450 from Very-Soft/slugcat
-			if(isliving(A))
-=======
-			var/mob/living/L = A
-			if(istype(L) && (!has_hands || !L.attempt_to_scoop(src)))
->>>>>>> 9d28e09548... Merge pull request #11450 from Very-Soft/slugcat
 				custom_emote(1,"[pick(friendly)] \the [A]!")
 
 		if(I_HURT)
