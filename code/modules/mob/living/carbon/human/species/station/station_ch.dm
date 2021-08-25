@@ -39,3 +39,31 @@
 /datum/species/vox
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 */
+
+//Can use digitigrade flags
+/datum/species/custom
+	digi_allowed = TRUE
+
+/datum/species/unathi
+	digi_allowed = TRUE
+
+/datum/species/tajaran
+	digi_allowed = TRUE
+
+/datum/species/hi_zoxxen
+	digi_allowed = TRUE
+
+/datum/species/sergal
+	digi_allowed = TRUE
+
+/datum/species/akula
+	digi_allowed = TRUE
+
+/datum/species/nevrean
+	digi_allowed = TRUE
+
+/datum/species/vulpkanin
+	digi_allowed = TRUE
+
+/datum/species/xenohybrid
+	digi_allowed = TRUE
