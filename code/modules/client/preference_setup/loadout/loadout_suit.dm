@@ -620,4 +620,4 @@
 /datum/gear/suit/cmddressjacket
 	display_name = "command dress jacket"
 	path = /obj/item/clothing/suit/storage/cmddressjacket
-	allowed_roles = list("Facility Director", "Head of Personnel", "Command Secretary")
+	allowed_roles = list("Site Manager", "Head of Personnel", "Command Secretary")
