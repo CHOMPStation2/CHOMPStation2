@@ -1317,14 +1317,8 @@
 	req_access = list(access_robotics)
 	products = list(
 		/obj/item/clothing/under/rank/roboticist = 5,
-<<<<<<< HEAD
-		/obj/item/clothing/suit/storage/toggle/labcoat = 5,
-||||||| parent of dffcee3518... Merge pull request #11459 from PastelPrinceDan/lockercoatswoo
-		/obj/item/clothing/suit/storage/toggle/labcoat/roboticist = 5,
-=======
 		/obj/item/clothing/suit/storage/toggle/labcoat/roboticist = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/science/robotics = 5,
->>>>>>> dffcee3518... Merge pull request #11459 from PastelPrinceDan/lockercoatswoo
 		/obj/item/clothing/shoes/black = 5,
 		/obj/item/clothing/gloves/black = 5,
 		/obj/item/weapon/storage/backpack/toxins = 5,
