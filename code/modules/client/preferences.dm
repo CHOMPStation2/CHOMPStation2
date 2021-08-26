@@ -30,7 +30,7 @@ var/list/preferences_datums = list()
 	var/tgui_lock = FALSE
 
 	//character preferences
-	var/num_languages = 0				//CHOMPEdit
+	var/num_languages				//CHOMPEdit
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
