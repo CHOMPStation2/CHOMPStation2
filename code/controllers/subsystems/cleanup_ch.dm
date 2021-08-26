@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(cleanup)
 	name = "Cleanup"
 	priority = FIRE_PRIORITY_CLEANUP
 	flags = SS_BACKGROUND|SS_NO_INIT
-	wait = 300 //Fires every 5 minutes.
+	wait = 1200 //Fires every 2 minutes.
 
 	var/stat_tag = "Cl" //Used for logging
 	var/urgency //How desperate are we to delete stuff?
