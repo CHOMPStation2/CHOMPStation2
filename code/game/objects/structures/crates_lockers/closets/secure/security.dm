@@ -60,7 +60,8 @@
 		/obj/item/clothing/head/caphat/hop,
 		/obj/item/clothing/under/gimmick/rank/head_of_personnel/suit,
 		/obj/item/clothing/under/gimmick/rank/head_of_personnel/suit/skirt,
-		/obj/item/clothing/glasses/sunglasses)
+		/obj/item/clothing/glasses/sunglasses,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/hop)
 
 
 /obj/structure/closet/secure_closet/hos
@@ -100,6 +101,7 @@
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/security/hos,
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/clothing/mask/gas/half,
@@ -240,6 +242,7 @@
 		/obj/item/clothing/accessory/badge/holo/detective,
 		/obj/item/clothing/gloves/forensic, //CHOMP Edit replaces black gloves
 		/obj/item/gunbox, //CHOMP Edit undoes vorestation removal and adds back gunbox
+		///obj/item/weapon/gun/energy/stunrevolver/vintage, // VOREStation Removal
 		/obj/item/weapon/storage/belt/detective,
 		/obj/item/weapon/storage/box/evidence,
 		/obj/item/device/radio/headset/headset_sec,
@@ -312,4 +315,3 @@ GLOBAL_LIST_BOILERPLATE(all_brig_closets, /obj/structure/closet/secure_closet/br
 
 	//too small to put a man in
 	large = 0
-	door_anim_time = 0 // Unsupported
