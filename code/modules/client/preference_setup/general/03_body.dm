@@ -1301,15 +1301,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	//CHOMPEdit START
 	else if(href_list["digitigrade"])
 		pref.digitigrade = !pref.digitigrade
-
-		//I don't know how else to force a sprite update that doing the stupid thing below
-		pref.r_skin = 0
-		pref.b_skin = 0
-		if(pref.g_skin != 128)
-			pref.g_skin = 128
-		else
-			pref.g_skin = 135
-
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 	//CHOMPEdit END
 	return ..()

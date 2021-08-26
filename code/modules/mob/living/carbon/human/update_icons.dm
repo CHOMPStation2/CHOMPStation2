@@ -119,10 +119,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	// First, get the correct size.
 	var/desired_scale_x = icon_scale_x
 	var/desired_scale_y = icon_scale_y
-	
+
 	desired_scale_x *= species.icon_scale_x
 	desired_scale_y *= species.icon_scale_y
-	
+
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.icon_scale_x_percent))
 			desired_scale_x *= M.icon_scale_x_percent
@@ -271,7 +271,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 			for(var/M in part.markings)
 				icon_key += "[M][part.markings[M]["color"]]"
-			
+
 			// VOREStation Edit Start
 			if(part.nail_polish)
 				icon_key += "_[part.nail_polish.icon]_[part.nail_polish.icon_state]_[part.nail_polish.color]"
@@ -292,6 +292,12 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			if(istype(tail_style, /datum/sprite_accessory/tail/taur))
 				if(tail_style.clip_mask) //VOREStation Edit.
 					icon_key += tail_style.clip_mask_state
+
+			//ChompEDIT START
+			//icon_key addition for digitigrade switch
+			if(part.species.digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))
+				icon_key += "_digi"
+			//ChompEDIT END
 
 	icon_key = "[icon_key][husk ? 1 : 0][fat ? 1 : 0][hulk ? 1 : 0][skeleton ? 1 : 0]"
 	var/icon/base_icon
@@ -486,7 +492,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		face_standing.Blend(ears_s, ICON_OVERLAY)
 		if(ear_style?.em_block)
 			em_block_ears = em_block_image_generic(image(ears_s))
-	
+
 	var/image/semifinal = image(face_standing, layer = BODY_LAYER+HAIR_LAYER, "pixel_y" = head_organ.head_offset)
 	if(em_block_ears)
 		semifinal.overlays += em_block_ears // Leaving this as overlays +=
@@ -1174,7 +1180,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		var/icon/ears_s = new/icon("icon" = synthetic.icon, "icon_state" = "ears")
 		ears_s.Blend(rgb(src.r_ears, src.g_ears, src.b_ears), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
 		return ears_s
-	
+
 	if(ear_style && !(head && (head.flags_inv & BLOCKHEADHAIR)))
 		var/icon/ears_s = new/icon("icon" = ear_style.icon, "icon_state" = ear_style.icon_state)
 		if(ear_style.do_colouration)

@@ -6,6 +6,7 @@
 		var/IB = species.icobase
 		species.icobase = species.icodigi
 		. = ..()
+		icon_cache_key += "_digi"
 		species.icobase = IB
 	else
 		. = ..()
