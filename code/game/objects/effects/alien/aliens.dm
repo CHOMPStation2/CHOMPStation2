@@ -396,13 +396,12 @@
 		qdel(src)
 
 	ticks += 1
-
 	if(ticks >= target_strength)
 
 		for(var/mob/O in hearers(src, null))
 			O.show_message("<span class='alium'>[src.target] collapses under its own weight into a puddle of goop and undigested debris!</span>", 1)
 
-		if(istype(target, /turf/simulated/wall)) // I hate turf code.
+		if(iswall(target)) //Gurgs : Spruced up corrosive acid
 			var/turf/simulated/wall/W = target
 			W.dismantle_wall()
 		else if(isfloor(target))
