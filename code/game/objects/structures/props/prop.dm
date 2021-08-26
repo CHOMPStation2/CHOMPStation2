@@ -40,93 +40,6 @@
 	if(var_name == "state")
 		change_state(var_value)
 
-
-<<<<<<< HEAD
-// bluespace crystal from Eris
-/obj/structure/prop/bsc
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "bsc"
-/obj/structure/prop/bsc_dust
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "bsc_dust"
-
-// same as state names, from faction items on Eris
-/obj/structure/prop/biosyphon
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "biosyphon"
-/obj/structure/prop/von_krabin
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "von_krabin"
-/obj/structure/prop/last_shelter
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "last_shelter"
-/obj/structure/prop/complicator
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "complicator"
-/obj/structure/prop/random_radio
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "random_radio"
-/obj/structure/prop/nt_pedestal0_old
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "nt_pedestal0_old"
-/obj/structure/prop/nt_pedestal1_old
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "nt_pedestal1_old"
-
-// statues from Eris
-/obj/structure/prop/statue1
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_1"
-/obj/structure/prop/statue2
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_2"
-/obj/structure/prop/statue3
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_3"
-/obj/structure/prop/statue4
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_4"
-/obj/structure/prop/statue5
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_5"
-/obj/structure/prop/statue6
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "artwork_statue_6"
-
-// ship mast from TGMC
-/obj/structure/prop/stump_plaque
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "stump"
-
-// vatgrowing thing from /tg/
-/obj/structure/prop/green_egg
-	icon = 'icons/obj/structures/decor.dmi'
-	icon_state = "gel_cocoon"
-
-// eye of the protector from Eris
-/obj/structure/prop/eotp
-	icon = 'icons/obj/structures/decor32x64.dmi'
-	icon_state = "eotp"
-
-// gravity generator from Eris
-/obj/structure/prop/gravygen
-	icon = 'icons/obj/structures/decor64x64.dmi'
-	icon_state = "bigdice"
-	bound_width = 64
-	bound_height = 64
-
-// dna vault from /tg/
-/obj/structure/prop/dna_vault
-	icon = 'icons/obj/structures/decor96x96.dmi'
-	icon_state = "vault"
-
-// fences from TGMC
-// You'll need to 'create instances from icon_states' in an editor to use these well
-/obj/structure/prop/fence
-	name = "fence"
-	desc = "It's a fence! Not much else to say about it."
-	icon = 'icons/obj/structures/decor_fences.dmi'
-=======
 //Misc stuff that fits no category
 
 // ship memorial from TGMC
@@ -136,7 +49,6 @@
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "ship_memorial"
 	bound_width = 64
->>>>>>> cbc246afb9 (Merge pull request #11412 from VOREStation/upstream-merge-8198)
 
 /**
  *
