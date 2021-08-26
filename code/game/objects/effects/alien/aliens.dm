@@ -401,7 +401,7 @@
 		for(var/mob/O in hearers(src, null))
 			O.show_message("<span class='alium'>[src.target] collapses under its own weight into a puddle of goop and undigested debris!</span>", 1)
 
-		if(iswall(target)) //Gurgs : Spruced up corrosive acid
+		if(iswall(target))
 			var/turf/simulated/wall/W = target
 			W.dismantle_wall()
 		else if(isfloor(target))
