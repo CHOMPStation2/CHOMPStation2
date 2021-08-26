@@ -314,4 +314,3 @@ GLOBAL_LIST_BOILERPLATE(all_brig_closets, /obj/structure/closet/secure_closet/br
 
 	//too small to put a man in
 	large = 0
-	door_anim_time = 0 // Unsupported
