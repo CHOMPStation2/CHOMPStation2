@@ -115,7 +115,7 @@ SUBSYSTEM_DEF(cleanup)
 		entry.time_entered = world.time - entry.data["turf_time"]
 		return FALSE
 	
-	if(time < (10 MINUTES * urgency))
+	if(time < (10 MINUTES * (1 - 0.5*urgency)))
 		entry.data["turf_time"] = time
 		return FALSE
 	
@@ -148,7 +148,7 @@ SUBSYSTEM_DEF(cleanup)
 		return FALSE
 
 	//If Urgency is greater than panic threshold use time_entered, otherwise use lastmoved to check for how long it's been.
-	if(((urgency <= URGENCY_PANIC_MODE) && ((world.time - entry.data["lastmoved"]) < (length * urgency))) || ((urgency > URGENCY_PANIC_MODE) && (time < (length * urgency))))
+	if(((urgency <= URGENCY_PANIC_MODE) && ((world.time - entry.data["lastmoved"]) < (length * (1 - 0.5*urgency)))) || ((urgency > URGENCY_PANIC_MODE) && (time < (length * urgency))))
 		return FALSE
 	
 	return TRUE
