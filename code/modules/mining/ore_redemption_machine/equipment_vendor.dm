@@ -17,6 +17,7 @@
 	var/icon_vend = "minevend-vend"
 	circuit = /obj/item/weapon/circuitboard/mining_equipment_vendor
 	var/obj/item/weapon/card/id/inserted_id
+	var/list/prize_list // Initialized just below! (if you're wondering why - check CONTRIBUTING.md, look for: "hidden" init proc)
 	var/dirty_items = FALSE // Used to refresh the static/redundant data in case the machine gets VV'd
 
 /datum/data/mining_equipment
