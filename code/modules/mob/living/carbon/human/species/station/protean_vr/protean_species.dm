@@ -139,10 +139,19 @@
 	H.synth_color = TRUE
 
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
+<<<<<<< HEAD
 	var/boxtype = /obj/item/weapon/storage/box/survival //CHOMP Addition
 	var/obj/item/stack/material/steel/metal_stack = new()
 	metal_stack.amount = 5 //CHOMP Edit
 	
+||||||| parent of e5c108269d... Merge pull request #11454 from VOREStation/Arokha/stacks
+	var/obj/item/stack/material/steel/metal_stack = new()
+	metal_stack.amount = 3
+
+=======
+	var/obj/item/stack/material/steel/metal_stack = new(null, 3)
+
+>>>>>>> e5c108269d... Merge pull request #11454 from VOREStation/Arokha/stacks
 	var/obj/item/clothing/accessory/permit/nanotech/permit = new()
 	permit.set_name(H.real_name)
 
