@@ -164,6 +164,7 @@
 	icon_state = "weeds"
 	anchored = TRUE
 	density = FALSE
+	unacidable = TRUE
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 
