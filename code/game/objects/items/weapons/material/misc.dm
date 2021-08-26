@@ -206,8 +206,6 @@
 /obj/item/weapon/material/whip/attack_self(mob/user)
 	user.visible_message("<span class='warning'>\The [user] cracks \the [src]!</span>")
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
-<<<<<<< HEAD
-=======
 
 /obj/item/weapon/material/knife/machete/hatchet/stone
 	name = "hatchet"
@@ -220,4 +218,3 @@
 
 /obj/item/weapon/material/knife/machete/hatchet/stone/bone
 	icon_state = "stone_bone_axe"
->>>>>>> f47e889c2e (Merge pull request #11432 from Very-Soft/fixy)
