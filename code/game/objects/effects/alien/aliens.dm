@@ -397,16 +397,15 @@
 		qdel(src)
 
 	ticks += 1
-
 	if(ticks >= target_strength)
 
 		for(var/mob/O in hearers(src, null))
 			O.show_message("<span class='alium'>[src.target] collapses under its own weight into a puddle of goop and undigested debris!</span>", 1)
 
-		if(iswall(target)) 
+		if(iswall(target))
 			var/turf/simulated/wall/W = target
-			W.dismantle_wall(1)
-		if(isfloor(target))
+			W.dismantle_wall()
+		else if(isfloor(target))
 			var/turf/simulated/floor/T = target
 			T.ex_act(1)
 		else if(isobj(target))
