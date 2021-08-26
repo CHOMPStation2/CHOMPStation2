@@ -300,7 +300,7 @@
 
 	// If we ended up moving diagonally, increase delay.
 	if((direct & (direct - 1)) && mob.loc == n)
-		my_mob.setMoveCooldown(total_delay * 2)
+		my_mob.setMoveCooldown(total_delay * SQRT_2) //CHOMPEDIT
 
 	// If we have a grab
 	var/list/grablist = my_mob.ret_grab()
