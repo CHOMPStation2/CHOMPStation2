@@ -30,7 +30,7 @@ var/list/preferences_datums = list()
 	var/tgui_lock = FALSE
 
 	//character preferences
-	var/num_languages = 0				//CHOMPEdit
+	var/num_languages				//CHOMPEdit
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
@@ -151,6 +151,7 @@ var/list/preferences_datums = list()
 	var/datum/browser/panel
 
 	var/lastnews // Hash of last seen lobby news content.
+	var/lastlorenews //ID of last seen lore news article.
 
 	var/examine_text_mode = 0 // Just examine text, include usage (description_info), switch to examine panel.
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off

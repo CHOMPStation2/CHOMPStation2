@@ -666,7 +666,7 @@
 			visible_message("[bicon(src)] <b>[src]</b> beeps: \"No records in User DB\"")
 
 /obj/machinery/mecha_part_fabricator/proc/eject_materials(var/material, var/amount) // 0 amount = 0 means ejecting a full stack; -1 means eject everything
-	var/recursive = amount == -1 ? 1 : 0
+	var/recursive = amount == -1 ? TRUE : FALSE
 	var/matstring = lowertext(material)
 
 	// 0 or null, nothing to eject
@@ -691,17 +691,6 @@
 
 	// If we were passed -1, then it's recursive ejection and we should eject all we can
 	if(amount <= 0)
-<<<<<<< HEAD
-		amount = S.max_amount
-	var/ejected = min(round(materials[matstring] / S.perunit), amount)
-	S.amount = min(ejected, amount)
-	if(S.amount <= 0)
-		qdel(S)
-||||||| parent of dbb9fb762a... Merge pull request #11508 from VOREStation/Arokha/exoruntime
-		amount = S.max_amount
-	var/ejected = min(round(materials[matstring] / S.perunit), amount)
-	if(!S.set_amount(ejected, amount))
-=======
 		amount = initial(S.max_amount)
 	// Smaller of what we have left, or the desired amount (note the amount is in sheets, but the array stores perunit values)
 	var/ejected = min(round(materials[matstring] / initial(S.perunit)), amount)
@@ -710,7 +699,6 @@
 	S = M.place_sheet(get_turf(src), ejected)
 	if(!istype(S))
 		warning("[src] tried to eject material '[material]', which didn't generate a proper stack when asked!")
->>>>>>> dbb9fb762a... Merge pull request #11508 from VOREStation/Arokha/exoruntime
 		return
 
 	// Reduce our amount stored
