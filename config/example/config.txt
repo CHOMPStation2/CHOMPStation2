@@ -587,12 +587,6 @@ DEFIB_TIMER 60
 # REQUIRED: url (str), title (str), duration (num, in DS)
 # SUGGESTED: artist (str), genre (str)
 # OPTIONAL: secret (bool), lobby (bool)
-<<<<<<< HEAD
-#JUKEBOX_TRACK_FILES config/jukebox.json;config/jukebox_private.json
-||||||| parent of ceb722ae02... Merge pull request #11511 from VOREStation/Arokha/versionhell
-#JUKEBOX_TRACK_FILES config/jukebox.json;config/jukebox_private.json
-JUKEBOX_TRACK_FILES config/jukebox.json
-=======
 #JUKEBOX_TRACK_FILES config/jukebox.json;config/jukebox_private.json
 JUKEBOX_TRACK_FILES config/jukebox.json
 
@@ -600,4 +594,3 @@ JUKEBOX_TRACK_FILES config/jukebox.json
 #SUGGESTED_BYOND_VERSION 514
 # Suggested BYOND client build (minor component, e.g. 1560)
 #SUGGESTED_BYOND_BUILD 1561
->>>>>>> ceb722ae02... Merge pull request #11511 from VOREStation/Arokha/versionhell
