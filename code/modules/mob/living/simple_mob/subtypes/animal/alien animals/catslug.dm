@@ -2,7 +2,7 @@
 
 /datum/category_item/catalogue/fauna/catslug
 	name = "Alien Wildlife - Catslug"
-	desc = "The Catslug is an omnivorous terrestrial creature.\
+	desc = "The catslug is an omnivorous terrestrial creature.\
 	Exhibiting properties of both a cat and a slug (hence its name)\
 	it moves somewhat awkwardly. However, the unique qualities of\
 	its body make it exceedingly flexible and smooth, allowing it to\
