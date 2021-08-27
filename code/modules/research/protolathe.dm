@@ -234,7 +234,7 @@
 
 /obj/machinery/r_n_d/protolathe/proc/eject_materials(var/material, var/amount) // 0 amount = 0 means ejecting a full stack; -1 means eject everything
 	var/recursive = amount == -1 ? TRUE : FALSE
-  var/matstring = lowertext(material)
+	var/matstring = lowertext(material)
 
 	// 0 or null, nothing to eject
 	if(!materials[matstring])
