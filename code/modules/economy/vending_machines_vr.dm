@@ -1905,7 +1905,7 @@
 					/obj/item/clothing/under/dress/sari/green = 5,
 					/obj/item/clothing/under/qipao = 5,
 					/obj/item/clothing/under/qipao/red = 5,
-					/obj/item/clothing/under/qipao/white = 5
+					/obj/item/clothing/under/qipao/white = 5,
 					/obj/item/clothing/under/shorts/red = 5,
 					/obj/item/clothing/under/shorts/green = 5,
 					/obj/item/clothing/under/shorts/blue = 5,
