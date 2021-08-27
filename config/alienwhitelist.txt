@@ -60,11 +60,3 @@ xioen - Xenochimera
 xonkon - Protean
 zalvine - Shadekin Empathy
 zammyman215 - Vox
-<<<<<<< HEAD
-||||||| parent of ceb722ae02... Merge pull request #11511 from VOREStation/Arokha/versionhell
-zeracyfr - Xenochimera
-spirit1299 - Black-Eyed Shadekin
-=======
-zeracyfr - Xenochimera
-spirit1299 - Black-Eyed Shadekin
->>>>>>> ceb722ae02... Merge pull request #11511 from VOREStation/Arokha/versionhell
