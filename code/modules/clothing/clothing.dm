@@ -1046,3 +1046,10 @@
 /obj/item/clothing/under/rank/New()
 	sensor_mode = pick(0,1,2,3)
 	..()
+	
+//Vorestation edit - eject mobs from clothing before deletion
+/obj/item/clothing/Destroy()
+	for(var/mob/living/M in contents)
+		M.forceMove(get_turf(src))
+	return ..()
+//Vorestation edit end 
