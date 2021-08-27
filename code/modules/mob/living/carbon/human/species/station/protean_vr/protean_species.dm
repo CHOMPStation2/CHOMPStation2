@@ -140,8 +140,7 @@
 
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
 	var/boxtype = /obj/item/weapon/storage/box/survival //CHOMP Addition
-	var/obj/item/stack/material/steel/metal_stack = new()
-	metal_stack.amount = 5 //CHOMP Edit
+	var/obj/item/stack/material/steel/metal_stack = new(null, 5) //CHOMP Edit
 	
 	var/obj/item/clothing/accessory/permit/nanotech/permit = new()
 	permit.set_name(H.real_name)
