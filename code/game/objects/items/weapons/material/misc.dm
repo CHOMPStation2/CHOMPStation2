@@ -206,6 +206,7 @@
 /obj/item/weapon/material/whip/attack_self(mob/user)
 	user.visible_message("<span class='warning'>\The [user] cracks \the [src]!</span>")
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
+	
 
 /obj/item/weapon/material/knife/machete/hatchet/stone
 	name = "hatchet"
