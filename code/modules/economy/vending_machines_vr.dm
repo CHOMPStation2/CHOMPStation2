@@ -477,8 +477,11 @@
 					/obj/item/weapon/storage/belt/fannypack/white = 5,
 					/obj/item/clothing/accessory/fullcape = 5,
 					/obj/item/clothing/accessory/halfcape = 5,
-					/obj/item/clothing/accessory/hawaii = 5,
-					/obj/item/clothing/accessory/hawaii/random = 5,
+					/obj/item/clothing/accessory/hawaiian = 5,
+					/obj/item/clothing/accessory/hawaiian/blue = 5,
+					/obj/item/clothing/accessory/hawaiian/pink = 5,
+					/obj/item/clothing/accessory/hawaiian/red = 5,
+					/obj/item/clothing/accessory/hawaiian/yellow = 5,
 					/obj/item/clothing/accessory/locket = 5,
 					/obj/item/weapon/storage/backpack/purse = 1,
 					/obj/item/clothing/accessory/sash = 5,
@@ -587,8 +590,11 @@
 					/obj/item/weapon/storage/belt/fannypack/white = 50,
 					/obj/item/clothing/accessory/fullcape = 50,
 					/obj/item/clothing/accessory/halfcape = 50,
-					/obj/item/clothing/accessory/hawaii = 50,
-					/obj/item/clothing/accessory/hawaii/random = 50,
+					/obj/item/clothing/accessory/hawaiian = 50,
+					/obj/item/clothing/accessory/hawaiian/blue = 50,
+					/obj/item/clothing/accessory/hawaiian/pink = 50,
+					/obj/item/clothing/accessory/hawaiian/red = 50,
+					/obj/item/clothing/accessory/hawaiian/yellow = 50,
 					/obj/item/clothing/accessory/locket = 50,
 					/obj/item/weapon/storage/backpack/purse = 50,
 					/obj/item/clothing/accessory/sash = 50,
@@ -784,9 +790,9 @@
 					/obj/item/clothing/under/dress/sailordress = 5,
 					/obj/item/clothing/under/dress/sari = 5,
 					/obj/item/clothing/under/dress/sari/green = 5,
-					/obj/item/clothing/under/dress/qipao = 5,
-					/obj/item/clothing/under/dress/qipao/red = 5,
-					/obj/item/clothing/under/dress/qipao/white = 5,
+					/obj/item/clothing/under/qipao = 5,
+					/obj/item/clothing/under/qipao/red = 5,
+					/obj/item/clothing/under/qipao/white = 5,
 					/obj/item/clothing/under/shorts/red = 5,
 					/obj/item/clothing/under/shorts/green = 5,
 					/obj/item/clothing/under/shorts/blue = 5,
@@ -955,9 +961,9 @@
 					/obj/item/clothing/under/dress/sailordress = 50,
 					/obj/item/clothing/under/dress/sari = 50,
 					/obj/item/clothing/under/dress/sari/green = 50,
-					/obj/item/clothing/under/dress/qipao = 50,
-					/obj/item/clothing/under/dress/qipao/red = 50,
-					/obj/item/clothing/under/dress/qipao/white = 50,
+					/obj/item/clothing/under/qipao = 50,
+					/obj/item/clothing/under/qipao/red = 50,
+					/obj/item/clothing/under/qipao/white = 50,
 					/obj/item/clothing/under/shorts/red = 50,
 					/obj/item/clothing/under/shorts/green = 50,
 					/obj/item/clothing/under/shorts/blue = 50,
@@ -1243,6 +1249,7 @@
 					/obj/item/clothing/suit/varsity/blue = 5,
 					/obj/item/clothing/suit/varsity/brown = 5,
 					/obj/item/clothing/suit/storage/hooded/wintercoat = 5,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/aformal = 5,
 					/obj/item/clothing/suit/storage/teshari/cloak/standard/white_grey = 5)
 	prices = list(/obj/item/clothing/suit/storage/apron = 100,
 					/obj/item/clothing/suit/storage/flannel/aqua = 100,
@@ -1329,8 +1336,10 @@
 					/obj/item/clothing/suit/varsity/blue = 100,
 					/obj/item/clothing/suit/varsity/brown = 100,
 					/obj/item/clothing/suit/storage/hooded/wintercoat = 100,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/aformal = 100,
 					/obj/item/clothing/suit/storage/teshari/cloak/standard/white_grey = 100)
-	premium = list(/obj/item/clothing/suit/imperium_monk = 3)
+	premium = list(/obj/item/clothing/suit/imperium_monk = 3,
+					/obj/item/clothing/suit/storage/hooded/wintercoat/cosmic = 1)
 	contraband = list(/obj/item/toy/katana = 1)
 
 /obj/machinery/vending/loadout/costume
@@ -1694,8 +1703,11 @@
 					/obj/item/weapon/storage/belt/fannypack/white = 5,
 					/obj/item/clothing/accessory/fullcape = 5,
 					/obj/item/clothing/accessory/halfcape = 5,
-					/obj/item/clothing/accessory/hawaii = 5,
-					/obj/item/clothing/accessory/hawaii/random = 5,
+					/obj/item/clothing/accessory/hawaiian = 5,
+					/obj/item/clothing/accessory/hawaiian/blue = 5,
+					/obj/item/clothing/accessory/hawaiian/pink = 5,
+					/obj/item/clothing/accessory/hawaiian/red = 5,
+					/obj/item/clothing/accessory/hawaiian/yellow = 5,
 					/obj/item/clothing/accessory/locket = 5,
 					/obj/item/weapon/storage/backpack/purse = 1,
 					/obj/item/clothing/accessory/sash = 5,
@@ -1891,9 +1903,9 @@
 					/obj/item/clothing/under/dress/sailordress = 5,
 					/obj/item/clothing/under/dress/sari = 5,
 					/obj/item/clothing/under/dress/sari/green = 5,
-					/obj/item/clothing/under/dress/qipao = 5,
-					/obj/item/clothing/under/dress/qipao/red = 5,
-					/obj/item/clothing/under/dress/qipao/white = 5,
+					/obj/item/clothing/under/qipao = 5,
+					/obj/item/clothing/under/qipao/red = 5,
+					/obj/item/clothing/under/qipao/white = 5,
 					/obj/item/clothing/under/shorts/red = 5,
 					/obj/item/clothing/under/shorts/green = 5,
 					/obj/item/clothing/under/shorts/blue = 5,
@@ -3262,61 +3274,6 @@
 					/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat = 10)
 	vend_delay = 15
 
-/obj/machinery/seed_storage/brig
-	name = "Prisoners' food seed storage"
-	starting_seeds = list(
-		/obj/item/seeds/appleseed = 3,
-		/obj/item/seeds/bananaseed = 3,
-		/obj/item/seeds/berryseed = 3,
-		/obj/item/seeds/cabbageseed = 3,
-		/obj/item/seeds/carrotseed = 3,
-		/obj/item/seeds/celery = 3,
-		/obj/item/seeds/chantermycelium = 3,
-		/obj/item/seeds/cherryseed = 3,
-		/obj/item/seeds/chiliseed = 3,
-		/obj/item/seeds/cocoapodseed = 3,
-		/obj/item/seeds/cornseed = 3,
-		/obj/item/seeds/durian = 3,
-		/obj/item/seeds/eggplantseed = 3,
-		/obj/item/seeds/grapeseed = 3,
-		/obj/item/seeds/grassseed = 3,
-		/obj/item/seeds/replicapod = 3,
-		/obj/item/seeds/lavenderseed = 3,
-		/obj/item/seeds/lemonseed = 3,
-		/obj/item/seeds/lettuce = 3,
-		/obj/item/seeds/limeseed = 3,
-		/obj/item/seeds/mtearseed = 2,
-		/obj/item/seeds/orangeseed = 3,
-		/obj/item/seeds/onionseed = 3,
-		/obj/item/seeds/peanutseed = 3,
-		/obj/item/seeds/plumpmycelium = 3,
-		/obj/item/seeds/poppyseed = 3,
-		/obj/item/seeds/potatoseed = 3,
-		/obj/item/seeds/pumpkinseed = 3,
-		/obj/item/seeds/rhubarb = 3,
-		/obj/item/seeds/riceseed = 3,
-		/obj/item/seeds/rose = 3,
-		/obj/item/seeds/soyaseed = 3,
-		/obj/item/seeds/pineapple = 3,
-		/obj/item/seeds/sugarcaneseed = 3,
-		/obj/item/seeds/sunflowerseed = 3,
-		/obj/item/seeds/shandseed = 2,
-		/obj/item/seeds/tobaccoseed = 3,
-		/obj/item/seeds/tomatoseed = 3,
-		/obj/item/seeds/towermycelium = 3,
-		/obj/item/seeds/vanilla = 3,
-		/obj/item/seeds/watermelonseed = 3,
-		/obj/item/seeds/wheatseed = 3,
-		/obj/item/seeds/whitebeetseed = 3,
-		/obj/item/seeds/wabback = 2)
-
-/obj/machinery/vending/hydronutrients/brig
-	name = "Brig NutriMax"
-	desc = "A plant nutrients vendor. Seems some items aren't included."
-	products = list(/obj/item/weapon/reagent_containers/glass/bottle/eznutrient = 6,/obj/item/weapon/reagent_containers/glass/bottle/left4zed = 4,/obj/item/weapon/reagent_containers/glass/bottle/robustharvest = 3,/obj/item/weapon/plantspray/pests = 20,
-					/obj/item/weapon/reagent_containers/glass/beaker = 4,/obj/item/weapon/storage/bag/plants = 5)
-	premium = list(/obj/item/weapon/reagent_containers/glass/bottle/ammonia = 10,/obj/item/weapon/reagent_containers/glass/bottle/diethylamine = 5)
-
 /obj/machinery/vending/emergencyfood
 	name = "Food Cube Dispenser"
 	desc = "An ominous machine dispensing food cubes. It will keep you fed, but at what cost?"
@@ -3330,9 +3287,6 @@
 /obj/machinery/vending/emergencyfood/filled
 	products = list(/obj/item/weapon/storage/box/wings/tray = 40)
 	contraband = list(/obj/item/weapon/storage/box/wings/tray = 20)
-
-/obj/machinery/vending/cola
-	icon_state = "Soda_Machine"
 
 /obj/machinery/vending/cola/soft
 	icon = 'icons/obj/vending_vr.dmi'

@@ -10,11 +10,11 @@
 	name = "mining equipment vendor"
 	desc = "An equipment vendor for miners, points collected at an ore redemption machine can be spent here."
 	icon = 'icons/obj/vending.dmi'
-	icon_state = "adh-tool"
+	icon_state = "minevend"
 	density = TRUE
 	anchored = TRUE
-	var/icon_deny = "adh-tool-deny"
-	var/icon_vend = "adh-tool-vend"
+	var/icon_deny = "minevend-deny"
+	var/icon_vend = "minevend-vend"
 	circuit = /obj/item/weapon/circuitboard/mining_equipment_vendor
 	var/obj/item/weapon/card/id/inserted_id
 	var/list/prize_list // Initialized just below! (if you're wondering why - check CONTRIBUTING.md, look for: "hidden" init proc)

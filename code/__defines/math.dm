@@ -4,6 +4,7 @@
 
 #define NUM_E 2.71828183
 
+#define SQRT_2 (1.41421356237) //CHOMPEDIT
 #define M_PI						(3.14159265)
 #define INFINITY				(1.#INF)	//closer then enough
 

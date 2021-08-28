@@ -235,7 +235,7 @@
 		var/choice = tgui_alert(usr, "Remove [initial(trait.name)] and regain [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
 			if(traitpath == /datum/trait/positive/linguist)					//CHOMPEdit
-				pref.num_languages = 0								//CHOMPEdit
+				pref.num_languages = null								//CHOMPEdit
 			pref.pos_traits -= trait
 		return TOPIC_REFRESH
 
