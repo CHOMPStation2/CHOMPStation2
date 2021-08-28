@@ -45,11 +45,12 @@ SUBSYSTEM_DEF(cleanup)
 
 /datum/controller/subsystem/cleanup/proc/get_urgency() //Let's try to decide how badly we need to delete stuff. Urgency is always betweeen 0 and 1, 0 meaning no rush, and 1 meaning delete stuff twice as quick.
 	SScleanup.points = SScleanup.get_points()
-	var/adjusted_points = cleanup_adjusted_points(SScleanup.points) //Use the following points to get an idea for this equation: (12.182,0), (100,0.702), (244.692,1)
-	var/adjusted_tidi = cleanup_adjusted_points(2*SStime_track.time_dilation_avg) //We use average time dilation to avoid unwanted behavior during small lag spikes. Same equation as before, but x is multiplied by 2.
+	var/adjusted_points = max(0,cleanup_adjusted_points(SScleanup.points)) //Use the following points to get an idea for this equation: (12.182,0), (100,0.702), (244.692,1)
+	var/adjusted_tidi = max(0,cleanup_adjusted_points(2*SStime_track.time_dilation_avg)) //We use average time dilation to avoid unwanted behavior during small lag spikes. Same equation as before, but x is multiplied by 2.
+	//These have to be at least 0 otherwise what happens is that when the server is doing good, they'll both be negative, and well negative * negative equals positive.
 	var/combined_score = adjusted_points * adjusted_tidi //We multiply them together, because we should only act urgently when both of these are above standard values.
 	var/out = SMOOTHSTEP(combined_score) //Finally we add smoothstep as a way of smoothly clamping between 0 and 1.
-	if(out >= URGENCY_PANIC_MODE)
+	if((SScleanup.urgency < URGENCY_PANIC_MODE) && (out >= URGENCY_PANIC_MODE)) //Announce when entering panic mode
 		log_and_message_admins("WARNING: Cleanup subsystem has reached panic mode threshold, atoms and mobs in the queue will be deleted faster and regardless of location or last movement")
 	return out
 	// To further document what the math here is actually doing, the following are points in the form of (SScleanup.points, SStime_track.time_dilation_avg, urgency):
@@ -189,6 +190,7 @@ SUBSYSTEM_DEF(cleanup)
 //The verb to toggle do not delete.
 /atom/verb/do_not_delete()
 	set name = "Toggle do not delete"
+	set src in view()
 
 	//Basic checks. User either has to be living or have admin priveleges.
 	if(!isliving(usr) && !check_rights(R_ADMIN|R_VAREDIT|R_EVENT))
@@ -197,6 +199,7 @@ SUBSYSTEM_DEF(cleanup)
 	if(CHECK_BITFIELD(flags,DISABLE_CLEANUP))
 		if(alert(usr,"This atom is currently set to do not delete, which means that the cleanup system will not automatically delete it. Clicking yes will result in the item being added back into the cleanup subsystem which will later delete it. Are you sure you want to enable cleanup?", "Cleanup toggle warning", "Yes", "No") == "Yes")
 			DISABLE_BITFIELD(flags,DISABLE_CLEANUP)
+			SScleanup.add_to_queue(src)
 	else
 		var/alertmsg = "This atom is currently in the cleanup subsystem awaiting deletion. Other options for delaying deletion include placing the item inside of a locker, or any other container(including backpacks), which will pause the timer for as long as they are inside of it. Atoms by default take 10 minutes to delete, not accounting for timer pauses. Please do not abuse this verb or use it too often, and if you must use it, please toggle cleanup back on once you are done with the item."
 		if(istype(src,/mob/living/))
