@@ -173,6 +173,10 @@
 /obj/item/weapon/gun/projectile/proc/unload_ammo(mob/user, var/allow_dump=1)
 	if(ammo_magazine)
 		user.put_in_hands(ammo_magazine)
+		//CHOMPStation Edit Begin
+		if(!ammo_magazine.stored_ammo.len)
+			SScleanup.add_to_queue(ammo_magazine)
+		//CHOMPStation Edit end
 		user.visible_message("[user] removes [ammo_magazine] from [src].", "<span class='notice'>You remove [ammo_magazine] from [src].</span>")
 		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 		ammo_magazine.update_icon()
