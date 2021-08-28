@@ -47,6 +47,7 @@
 	protectiveness = 15 // 4%
 	pass_stack_colors = TRUE
 	supply_conversion_value = 3
+	hardness = 5
 
 /datum/material/cloth/teal
 	name = "teal"
