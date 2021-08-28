@@ -28,6 +28,7 @@
 	minbodytemp = 200
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+	catalogue_data = list(/datum/category_item/catalogue/fauna/wolf)
 
 // Activate Noms!
 /mob/living/simple_mob/animal/wolf
