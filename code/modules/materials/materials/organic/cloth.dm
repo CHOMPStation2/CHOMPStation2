@@ -104,9 +104,8 @@
 
 
 
-//CHOMPstation Removal Start: Moved to materials_ch and changed to allow for material var
-/*
-/material/carpet
+//CHOMPedit: added stacktype var inside cloth_ch.dm
+/datum/material/carpet
 	name = "carpet"
 	display_name = "comfy"
 	use_name = "red upholstery"
@@ -120,8 +119,6 @@
 	conductive = 0
 	hardness = 5
 	integrity = 40
-*/
-//CHOMPstation Removal End
 
 /datum/material/cotton
 	name = "cotton"
