@@ -14,6 +14,17 @@
 	if(!contents.len)
 		return
 
+	//CHOMPEdit: Autotransfer count moved here.
+	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
+		for(var/atom/movable/M in contents)
+			if(isliving(M))
+				var/mob/living/L = M
+				if(L.absorbed)
+					continue
+			M.belly_cycles++
+			if(M.belly_cycles >= autotransferwait / 60)
+				check_autotransfer(M, autotransferlocation)
+
 	var/play_sound //Potential sound to play at the end to avoid code duplication.
 	var/to_update = FALSE //Did anything update worthy happen?
 

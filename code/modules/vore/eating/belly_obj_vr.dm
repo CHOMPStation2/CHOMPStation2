@@ -231,6 +231,7 @@
 
 // Called whenever an atom enters this belly
 /obj/belly/Entered(atom/movable/thing, atom/OldLoc)
+	thing.belly_cycles = 0 //CHOMPEdit: reset cycle count
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
 
@@ -261,9 +262,10 @@
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
 
-	// Intended for simple mobs
+	/*/ Intended for simple mobs //CHMOPEdit: Counting belly cycles now.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
 		addtimer(CALLBACK(src, /obj/belly/.proc/check_autotransfer, thing, autotransferlocation), autotransferwait)
+	*/
 
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
@@ -857,7 +859,7 @@
 		M.updateVRPanel()
 
 //Autotransfer callback
-/obj/belly/proc/check_autotransfer(var/prey, var/autotransferlocation)
+/obj/belly/proc/check_autotransfer(var/atom/movable/prey, var/autotransferlocation)
 	if(autotransferlocation && (autotransferchance > 0) && (prey in contents))
 		if(prob(autotransferchance))
 			var/obj/belly/dest_belly
@@ -870,7 +872,7 @@
 		else
 			// Didn't transfer, so wait before retrying
 			// I feel like there's a way to make this timer looping using the normal looping thing, but pass in the ID and cancel it if we aren't looping again
-			addtimer(CALLBACK(src, .proc/check_autotransfer, prey, autotransferlocation), autotransferwait)
+			prey.belly_cycles = 0 //CHOMPEdit: reset cycle count
 
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes

@@ -1062,7 +1062,7 @@
 				host.vore_selected.autotransferchance = sanitize_integer(autotransferchance_input, 0, 100, initial(host.vore_selected.autotransferchance))
 			. = TRUE
 		if("b_autotransferwait")
-			var/autotransferwait_input = input(user, "Set number of seconds for auto-transfer wait delay.", "Auto-Transfer Time") as num|null
+			var/autotransferwait_input = input(user, "Set minimum number of seconds for auto-transfer wait delay.", "Auto-Transfer Time") as num|null //CHOMPEdit: Wiggle room for rougher time resolution in process cycles.
 			if(!isnull(autotransferwait_input))
 				host.vore_selected.autotransferwait = sanitize_integer(autotransferwait_input*10, 10, 18000, initial(host.vore_selected.autotransferwait))
 			. = TRUE

@@ -29,6 +29,7 @@
 
 	var/cloaked = FALSE //If we're cloaked or not
 	var/image/cloaked_selfimage //The image we use for our client to let them see where we are
+	var/belly_cycles = 0 //CHOMPEdit: Counting current belly process cycles for autotransfer.
 
 /atom/movable/Initialize(mapload)
 	. = ..()
