@@ -35,7 +35,8 @@
 					LANGUAGE_CANILUNZT	= 1,
 					LANGUAGE_ECUREUILIAN= 1,
 					LANGUAGE_DAEMON		= 1,
-					LANGUAGE_ENOCHIAN	= 1
+					LANGUAGE_ENOCHIAN	= 1,
+					LANGUAGE_SQUEAKISH	= 1
 					)
 
 /obj/item/weapon/robot_module/robot/chound
@@ -56,7 +57,8 @@
 					LANGUAGE_ECUREUILIAN= 1,
 					LANGUAGE_DAEMON		= 1,
 					LANGUAGE_ENOCHIAN	= 1,
-					LANGUAGE_DRUDAKAR	= 1
+					LANGUAGE_DRUDAKAR	= 1,
+					LANGUAGE_SQUEAKISH	= 1
 					)
 
 /hook/startup/proc/robot_modules_vr()

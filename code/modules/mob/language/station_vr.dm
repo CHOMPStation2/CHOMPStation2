@@ -158,6 +158,17 @@
 	colour = "spacer"
 	machine_understands = TRUE
 
+/datum/language/squeakish
+	name = LANGUAGE_SQUEAKISH
+	desc = "A language native to the Altevians, it has been adopted by other rodent faring species over time."
+	key = "E"
+	speech_verb = "squeaks"
+	whisper_verb = "squiks"
+	exclaim_verb = "squeaks loudly"
+	syllables = list ("sque", "uik", "squeak", "squee", "eak", "eek", "uek", "squik",
+			"squeek", "sq", "eek", "squeee", "ee", "ek", "ak", "ueak", "squea")
+	colour = "squeakish"
+
 /datum/language/unathi
 	flags = 0
 /datum/language/tajaran
