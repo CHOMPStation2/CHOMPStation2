@@ -8,7 +8,7 @@
 		R.add_language(LANGUAGE_ENOCHIAN,		1)
 		R.add_language(LANGUAGE_SLAVIC,			1)
 		R.add_language(LANGUAGE_DRUDAKAR, 		1)
-		R.add_language(LANGUAGE_SQUEAKISH,		1)
+		R.add_language(LANGUAGE_SQUEAKISH,		1) //CHOMPedit
 		return 1
 	else
 		return 0

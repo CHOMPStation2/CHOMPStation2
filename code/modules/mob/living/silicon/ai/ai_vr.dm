@@ -7,7 +7,7 @@
 	add_language(LANGUAGE_DAEMON,		1)
 	add_language(LANGUAGE_ENOCHIAN,		1)
 	add_language(LANGUAGE_DRUDAKAR,		1)
-	add_language(LANGUAGE_SQUEAKISH,	1)
+	add_language(LANGUAGE_SQUEAKISH,	1) //CHOMPedit
 
 /mob/AIize(var/move = TRUE)
 	. = ..()
@@ -18,4 +18,4 @@
 	add_language(LANGUAGE_DAEMON,		1)
 	add_language(LANGUAGE_ENOCHIAN,		1)
 	add_language(LANGUAGE_DRUDAKAR,		1)
-	add_language(LANGUAGE_SQUEAKISH,	1)
+	add_language(LANGUAGE_SQUEAKISH,	1) //CHOMPedit

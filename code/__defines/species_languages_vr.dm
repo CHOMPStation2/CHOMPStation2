@@ -11,7 +11,6 @@
 #define LANGUAGE_VESPINAE "Vespinae"
 #define LANGUAGE_SPACER "Spacer"
 #define LANGUAGE_CLOWNISH "Coulrian"
-#define LANGUAGE_SQUEAKISH "Squeakish"
 
 #define LANGUAGE_CHIMPANZEE "Chimpanzee"
 #define LANGUAGE_NEAERA "Neaera"
