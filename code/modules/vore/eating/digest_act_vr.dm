@@ -56,6 +56,7 @@
 				if(d_stage_name)
 					cleanname = "[d_stage_name] [initial(name)]"
 					decontaminate()
+					gurgled_color = B.contamination_color //Apply the correct color setting so uncontaminable things can still have the right overlay.
 					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color) //CHOMPEdit End
 	if(digest_stage <= 0)
 		if(istype(src, /obj/item/device/pda))
