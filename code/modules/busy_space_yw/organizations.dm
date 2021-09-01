@@ -2713,7 +2713,7 @@
 
 /datum/lore/organization/tsc/altevian_hegemony
 	name = "The Altevian Hegemony" 
-	short_name = "Altevian Hegemony"
+	short_name = "Altevian Hegemony "
 	acronym = "AH"
 	desc = "The Altevians are a space-faring race of rodents that resemble Earth-like rats. They do not have a place they call home in terms of a planet, and instead have massive multiple-kilometer-long colony-ships that are constantly on the move and typically keep operations outside of known populated systems to not eat the resources from others. Their primary focus is trade and slavage operations and can be expected to be seen around both densely populated and empty systems for their work."
 	history = ""
