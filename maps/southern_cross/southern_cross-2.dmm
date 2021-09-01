@@ -5254,7 +5254,7 @@
 "cCF" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/light,/obj/effect/floor_decal/borderfloorwhite,/obj/effect/floor_decal/corner/paleblue/border,/turf/simulated/floor/tiled/white,/area/medical/medbay2)
 "cCG" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/floor_decal/borderfloorwhite/corner{dir = 8},/obj/effect/floor_decal/corner/paleblue/bordercorner{dir = 8},/turf/simulated/floor/tiled/white,/area/medical/medbay2)
 "cCH" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10},/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/borderfloorwhite/corner,/obj/effect/floor_decal/corner/paleblue/bordercorner,/obj/machinery/ai_status_display{pixel_x = 32},/turf/simulated/floor/tiled/white,/area/medical/medbay2)
-"cCI" = (/obj/machinery/conveyor{id = "garbage"},/obj/machinery/recycling/stamper,/obj/machinery/alarm{dir = 4; pixel_x = -22},/turf/simulated/floor/airless,/area/maintenance/disposal)
+"cCI" = (/obj/machinery/conveyor{id = "garbage"},/obj/machinery/recycling/stamper,/obj/machinery/alarm{dir = 4; pixel_x = -22},/obj/structure/plasticflaps/mining,/turf/simulated/floor/airless,/area/maintenance/disposal)
 "cCJ" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor/airless,/area/maintenance/disposal)
 "cCK" = (/obj/structure/sign/warning/vent_port,/turf/simulated/wall/r_wall,/area/maintenance/disposal)
 "cCL" = (/obj/structure/catwalk,/turf/simulated/floor,/area/maintenance/disposal)
