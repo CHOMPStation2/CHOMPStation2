@@ -1251,6 +1251,10 @@ z
 	name = "Third Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
+/area/maintenance/thirddeck/dormsatmos
+	name = "Third Deck Dorm's Atmospherics"
+	icon_state = "asmaint"
+
 //CHOMPStation Edit Start TFF 6/2/20 KC - Added new First Aid station.
 
 /area/medical/first_aid_station/thirddeck
