@@ -7,7 +7,7 @@
 		var/mob/living/carbon/human/H = user
 
 		// if digitigrade-use flag is set
-		if(H.species.digitigrade)
+		if(H.digitigrade)
 
 			// figure out what slot we care about
 			var/update_icon_define_digi = null
