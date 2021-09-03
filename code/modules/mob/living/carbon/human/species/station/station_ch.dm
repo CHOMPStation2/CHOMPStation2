@@ -67,3 +67,6 @@
 
 /datum/species/xenohybrid
 	digi_allowed = TRUE
+
+/datum/species/xenochimera
+	digi_allowed = TRUE
