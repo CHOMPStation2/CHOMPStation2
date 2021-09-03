@@ -3,4 +3,4 @@
 	var/loneliness_stage = 0
 	var/next_loneliness_time = 0
 	var/digitigrade = 0
-
+	
