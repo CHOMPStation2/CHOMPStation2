@@ -164,7 +164,7 @@ var/list/preferences_datums = list()
 //CHOMPEdit Begin
 /datum/preferences/proc/numlanguage()
 	var/datum/species/S = GLOB.all_species[species]
-	return num_languages ? num_languages : S.num_alternate_languages
+	return max(num_languages, S.num_alternate_languages)
 //CHOMPEdit End
 
 /datum/preferences/New(client/C)
