@@ -25,12 +25,12 @@
 	var/hasRecord = FALSE	//Check to see if this passes or not.
 	for(var/datum/stored_item/I in item_records)
 		if((O.type == I.item_path) && (O.name == I.item_name))
-			mod_amount(I,O.amount)
+			mod_amount(I,O.get_amount())
 			hasRecord = TRUE
 			qdel(O)
 			break
 	if(!hasRecord)
-		var/datum/stored_item/item = new/datum/stored_item(src,O.type,O.name,O.amount)
+		var/datum/stored_item/item = new/datum/stored_item(src,O.type,O.name,O.get_amount())
 		item_records.Add(item)
 		qdel(O)
 

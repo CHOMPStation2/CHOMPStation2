@@ -31,7 +31,7 @@
 	..()
 	var/obj/item/stack/material/lead/M = I
 	if(istype(M))
-		if(M.amount>5)
+		if(M.get_amount() > 5)
 			to_chat(user,"<span class='notice'>You add a lead shell to the blitz rod.</span>")
 			qdel(src)
 			var/obj/item/weapon/fuel_assembly/blitz/shielded/rod = new(get_turf(user))
