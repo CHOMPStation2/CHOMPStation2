@@ -141,7 +141,7 @@
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
 	..() //CHOMP Edit this calls the parent function which should spawn the survival box.
 	var/obj/item/stack/material/steel/metal_stack = new()
-	metal_stack.amount = 5 //CHOMP Edit
+	metal_stack.set_amount(5) //CHOMP Edit
 
 	var/obj/item/clothing/accessory/permit/nanotech/permit = new()
 	permit.set_name(H.real_name)
