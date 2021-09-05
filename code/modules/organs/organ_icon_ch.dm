@@ -10,6 +10,8 @@
 	var/digitigrade = 0
 
 	// preferentially take digitigrade value from owner if available, THEN DNA.
+	// this allows limbs to be set properly when being printed in the bioprinter without an owner
+	// this also allows the preview mannequin to update properly because customisation topic calls don't call a DNA check
 	if(owner)
 		digitigrade = owner.digitigrade
 	else

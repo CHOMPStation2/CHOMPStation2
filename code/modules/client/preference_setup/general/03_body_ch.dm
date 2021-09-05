@@ -1,5 +1,6 @@
 // Chomp additions to character load/save logic
-// /datum/category_item/player_setup_item/general/body/content cannot be overridden here due to requiring being a cleaned list
+// /datum/category_item/player_setup_item/general/body/content cannot be overridden here easily as the proc creates a list of html data
+// perhaps one could get that list here, and sort through sections to rewrite it's content...? that seems inefficent having to loop through the list.
 
 
 /datum/category_item/player_setup_item/general/body/copy_to_mob(var/mob/living/carbon/human/character)
