@@ -26,15 +26,13 @@
 			if(!fit_for_digi)
 				fit_for_digi = TRUE // set flag even if no icon_state exists, so we don't repeat checks
 				
+				//if update_icon_define is already set to something, place it in a var to hold it temporarily
+				if(update_icon_define)
+					update_icon_define_orig = update_icon_define
+				
 				// only override icon if a corresponding digitigrade replacement icon_state exists
-				// otherwise, keep the old non-digi icon
+				// otherwise, keep the old non-digi icon_define (or nothing)
 				if(icon_state && icon_states(update_icon_define_digi).Find(icon_state))
-
-					//if update_icon_define is already set to something, place it in a var to hold it temporarily
-					if(update_icon_define)
-						update_icon_define_orig = update_icon_define
-
-					//set digi-leg sprite
 					update_icon_define = update_icon_define_digi
 
 
