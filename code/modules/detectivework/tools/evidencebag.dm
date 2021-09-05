@@ -2,7 +2,7 @@
 
 /obj/item/weapon/evidencebag
 	name = "evidence bag"
-	desc = "An empty evidence bag."
+	desc = "An empty evidence bag.  Use by clicking on the bag and dragging it to the item you want to bag."	//CHOMPstation edit-"Actually clarifies how to use the item in game"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "evidenceobj"
 	item_state = null
