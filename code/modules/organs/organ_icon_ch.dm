@@ -7,7 +7,15 @@
 // - once done, reset icobase & markings to default values from temp storage vars
 
 /obj/item/organ/external/get_icon(var/skeletal)
-	if( owner.digitigrade && ( istype(src,/obj/item/organ/external/leg) || istype(src,/obj/item/organ/external/foot) ) )
+	var/digitigrade = 0
+
+	// preferentially take digitigrade value from owner if available, THEN DNA.
+	if(owner)
+		digitigrade = owner.digitigrade
+	else
+		digitigrade = dna.digitigrade
+
+	if( digitigrade && ( istype(src,/obj/item/organ/external/leg) || istype(src,/obj/item/organ/external/foot) ) )
 		var/IB = species.icobase
 		var/list/markingsTmp = markings
 
