@@ -3,10 +3,9 @@
 
 /datum/dna/Clone()
 	. = ..()
+	var/datum/dna/D = .
 	//Data for inclusion of digitigrade leg settings in DNA
-	var/datum/dna/new_dna = .
-	new_dna.digitigrade = digitigrade
-	return new_dna
+	D.digitigrade = src.digitigrade
 
 /datum/dna/ResetUIFrom(var/mob/living/carbon/human/character)
 	//inclusion of digitigrade
