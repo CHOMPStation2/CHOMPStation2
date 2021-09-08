@@ -86,3 +86,34 @@
 /obj/effect/effect/snow/heavy
 	name = "heavy snowfall"
 	icon_state = "snowfall_heavy"
+
+////////////////////////////////////////////
+// A fancier teleport, used in hyper pads
+////////////////////////////////////////////
+
+/obj/effect/effect/teleport_greyscale
+	name = "teleportation"
+	icon = 'icons/effects/effects_ch.dmi'
+	icon_state = "teleport_greyscale"
+	anchored = 1
+	mouse_opacity = 0
+	plane = MOB_PLANE
+	layer = ABOVE_MOB_LAYER
+
+/obj/effect/effect/teleport_greyscale/Initialize()
+	. = ..()
+	QDEL_IN(src, 2 SECONDS)
+
+/datum/effect/effect/system/teleport_greyscale
+	var/color = "#FFFFFF"
+
+	set_up(cl, loca)
+		if(istype(loca, /turf/))
+			location = loca
+		else
+			location = get_turf(loca)
+		color = cl
+
+	start()
+		var/obj/effect/effect/teleport_greyscale/tele = new /obj/effect/effect/teleport_greyscale(src.location)
+		tele.color = color
