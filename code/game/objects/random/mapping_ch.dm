@@ -38,9 +38,13 @@
 	desc = "I disable the use of all hand tele's/translocators/bluespace harpoons/telescience in my z-level!"
 
 /obj/effect/map_helper/no_tele/LateInitialize()
+	/* Wait this doesn't work. Why did I write this.
+	Until I can figure out a way to get all areas in a z-level I'm just gonna let block_tele handle it instead.
+	
 	for(var/area/A in world)
-		if(A.z)
+		if(A.z) //find some way to filter by z-level here, which is stupid since areas can exist in multiple z-levels at once
 			A.flags += BLUE_SHIELDED
+	*/
 	for(var/turf/T in Z_TURFS(z))
 		T.block_tele = 1
 	qdel(src)
