@@ -1,5 +1,5 @@
 /datum/dna
-	var/digitigrade = 0
+	var/digitigrade = 0 //0, Not FALSE, for future use as indicator for digitigrade types (0 = None, 1 = default, 2 = digitigrade birdfeet, ...ect)
 
 /datum/dna/Clone()
 	. = ..()

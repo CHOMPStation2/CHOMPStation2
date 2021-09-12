@@ -8,7 +8,12 @@
 	if(character.species.digi_allowed)
 		character.digitigrade = pref.digitigrade
 	else
-		character.digitigrade = FALSE
+		character.digitigrade = 0
+
+	//sanity check
+	if(character.digitigrade == null)
+		character.digitigrade = 0
+		pref.digitigrade = 0
 
 /datum/category_item/player_setup_item/general/body/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["digitigrade"])
@@ -26,3 +31,7 @@
 /datum/category_item/player_setup_item/general/body/save_character(var/savefile/S)
 	. = ..()
 	S["digitigrade"]	<< pref.digitigrade //CHOMPEdit
+
+/datum/category_item/player_setup_item/general/body/sanitize_character(var/savefile/S)
+	. = ..()
+	pref.digitigrade	= sanitize_integer(pref.digitigrade, 0, 1, initial(pref.digitigrade))
