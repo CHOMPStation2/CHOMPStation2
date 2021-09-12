@@ -1,10 +1,4 @@
-// override the organ icon getting proc
-// if digitigrade is set:
-// - Save original iconbase and markings vars to temp places
-// - set iconbase to digitigrade sprite file
-// - nullify markings list
-// - run original get_icon proc with changed vars
-// - once done, reset icobase & markings to default values from temp storage vars
+// override the organ icon getting proc if digitigrade and not a synth
 
 /obj/item/organ/external/get_icon(var/skeletal)
 	var/digitigrade = 0
@@ -17,17 +11,55 @@
 	else
 		digitigrade = dna.digitigrade
 
-	if( digitigrade && ( istype(src,/obj/item/organ/external/leg) || istype(src,/obj/item/organ/external/foot) ) )
-		var/IB = species.icobase
-		var/list/markingsTmp = markings
+	if( !model && digitigrade && ( istype(src,/obj/item/organ/external/leg) || istype(src,/obj/item/organ/external/foot) ) )
 
-		markings = null
-		species.icobase = species.icodigi
+		var/gender = "m"
+		if(owner && owner.gender == FEMALE)
+			gender = "f"
 
-		. = ..()
-		icon_cache_key += "_digi"
+		if(!force_icon_key)
+			icon_cache_key = "[icon_name]_[species ? species.get_bodytype() : SPECIES_HUMAN]" //VOREStation Edit
+		else
+			icon_cache_key = "[icon_name]_[force_icon_key]"
 
-		species.icobase = IB
-		markings = markingsTmp
+		if(force_icon)
+			mob_icon = new /icon(force_icon, "[icon_name][gendered_icon ? "_[gender]" : ""]")
+		else
+			if(!dna)
+				mob_icon = new /icon('icons/mob/human_races/r_human.dmi', "[icon_name][gendered_icon ? "_[gender]" : ""]")
+			else
+
+				if(!gendered_icon)
+					gender = null
+				else
+					if(dna.GetUIState(DNA_UI_GENDER))
+						gender = "f"
+					else
+						gender = "m"
+
+				if(skeletal)
+					mob_icon = new /icon('icons/mob/human_races/r_skeleton.dmi', "[icon_name][gender ? "_[gender]" : ""]")
+				else if (robotic >= ORGAN_ROBOT)
+					mob_icon = new /icon('icons/mob/human_races/robotic.dmi', "[icon_name][gender ? "_[gender]" : ""]")
+					apply_colouration(mob_icon)
+				else
+					mob_icon = new /icon(species.icodigi, "[icon_name][gender ? "_[gender]" : ""]")
+					apply_colouration(mob_icon)
+
+				/*
+				//Body markings, actually does not include head this time. Done separately above.
+				if(!istype(src,/obj/item/organ/external/head))
+					for(var/M in markings)
+						var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
+						var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
+						mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) // VOREStation edit
+						add_overlay(mark_s) //So when it's not on your body, it has icons
+						mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
+						icon_cache_key += "[M][markings[M]["color"]]"
+				*/
+		dir = EAST
+		icon = mob_icon
+		return mob_icon
+
 	else
 		. = ..()
