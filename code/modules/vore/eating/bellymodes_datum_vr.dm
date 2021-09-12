@@ -147,8 +147,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	if(L.stat == DEAD)
 		return null // Can't heal the dead with healbelly
 	if(B.owner.nutrition > 90 && (L.health < L.maxHealth))
-		L.adjustBruteLoss(-2.5)
-		L.adjustFireLoss(-2.5)
+		L.adjustBruteLoss(-2.5,1)	//CHOMPEdit. Makes heal bellies work on synths
+		L.adjustFireLoss(-2.5,1)	//Ditto
 		L.adjustToxLoss(-5)
 		L.adjustOxyLoss(-5)
 		L.adjustCloneLoss(-1.25)

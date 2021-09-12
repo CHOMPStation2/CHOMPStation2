@@ -907,10 +907,7 @@ I think I covered everything.
 		if(H.will_eat(P))
 			if(issilicon(P))
 				return
-			if(iscarbon(P))
-				if(P.isSynthetic()) //Sorry robits
-					return
-			else
+			if(!iscarbon(P))	//CHOMPEdit. Makes healbelly mobs target synths now. Man.. feels weird writing chompedit on my own code from chomp.
 				if(!P.client)	//Don't target simple mobs that aren't player controlled
 					return
 			if(P.stat == DEAD)
