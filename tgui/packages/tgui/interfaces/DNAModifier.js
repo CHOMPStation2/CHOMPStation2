@@ -327,7 +327,7 @@ const DNAModifierMainRadiationEmitter = (props, context) => {
         icon="radiation"
         content="Pulse Radiation"
         tooltip="Mutates a random block of either the occupant's UI or SE."
-        tooltipPosition="top-end"
+        tooltipPosition="top-right"
         mt="0.5rem"
         onClick={() => act('pulseRadiation')}
       />
@@ -447,7 +447,7 @@ const DNAModifierMainBuffersElement = (props, context) => {
               })}
             />
           </LabeledList.Item>
-          {buffer.data ? (
+          {!!buffer.data && (
             <Fragment>
               <LabeledList.Item label="Subject">
                 {buffer.owner || (
@@ -497,7 +497,7 @@ const DNAModifierMainBuffersElement = (props, context) => {
                 />
               </LabeledList.Item>
             </Fragment>
-          ) : null}
+          )}
         </LabeledList>
         {!buffer.data && (
           <Box color="label" mt="0.5rem">
