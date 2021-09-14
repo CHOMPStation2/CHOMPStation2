@@ -906,6 +906,16 @@ z
 	name = "\improper Mining Locker Room"
 	icon_state = "mining"
 
+//ChompStation Edit Start - New Teleporter Bay for station to SIF travel
+
+/area/teleporter/firstdeck
+	icon_state = "red"
+	name = "Teleporter Bay Core"
+
+/area/teleporter/firstdeck/prep
+	name = "Teleporter Bay Prep"
+
+
 //Deck Two (Z-2)
 
 /area/maintenance/substation/atmospherics
@@ -1337,6 +1347,7 @@ z
 	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
+/* Chompstation Edit - Removing Shuttle 1 & 2
 //Shuttle One
 
 /area/shuttle/shuttle1
@@ -1438,6 +1449,8 @@ z
 	name = "in flight over sif"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving
+
+End Chompstation Edit*/
 
 // Centcom Transport Shuttle
 /area/shuttle/transport1
