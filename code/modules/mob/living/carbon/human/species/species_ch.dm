@@ -13,7 +13,9 @@
 	var/grab_power_self = 0
 	var/waking_speed = 1
 	var/mudking = FALSE
-
+	var/icodigi = 'icons/mob/human_races/r_digi_ch.dmi'
+	var/digi_allowed = FALSE
+	
 /datum/species/handle_environment_special(var/mob/living/carbon/human/H)
 	for(var/datum/trait/env_trait in env_traits)
 		env_trait.handle_environment_special(H)

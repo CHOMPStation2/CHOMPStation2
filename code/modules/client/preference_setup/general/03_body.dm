@@ -579,7 +579,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	if(has_flag(mob_species, HAS_SKIN_COLOR))
 		. += "<br><b>Body Color</b><br>"
 		. += "<a href='?src=\ref[src];skin_color=1'>Change Color</a> [color_square(pref.r_skin, pref.g_skin, pref.b_skin)]<br>"
-
+	
+	//CHOMPEdit START
+	if(mob_species.digi_allowed)
+		. += "<br><b>Digitigrade?:</b> <a href='?src=\ref[src];digitigrade=1'><b>[pref.digitigrade ? "Yes" : "No"]</b></a><br>"
+	//CHOMPEdit END
+	
 	. += "<h2>Genetics Settings</h2>"
 
 	var/list/ear_styles = pref.get_available_styles(global.ear_styles_list)

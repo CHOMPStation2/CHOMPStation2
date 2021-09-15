@@ -293,6 +293,12 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				if(tail_style.clip_mask) //VOREStation Edit.
 					icon_key += tail_style.clip_mask_state
 
+			//ChompEDIT START
+			//icon_key addition for digitigrade switch
+			if(digitigrade && (part.organ_tag == BP_R_LEG  || part.organ_tag == BP_L_LEG || part.organ_tag == BP_R_FOOT || part.organ_tag == BP_L_FOOT))
+				icon_key += "_digi"
+			//ChompEDIT END
+			
 	icon_key = "[icon_key][husk ? 1 : 0][fat ? 1 : 0][hulk ? 1 : 0][skeleton ? 1 : 0]"
 	var/icon/base_icon
 	if(human_icon_cache[icon_key])
