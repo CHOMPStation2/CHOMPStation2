@@ -108,7 +108,7 @@ SUBSYSTEM_DEF(cleanup)
 
 /datum/controller/subsystem/cleanup/proc/add_to_queue(atom/entry)
 	SScleanup.processing += new /datum/cleanupentry(entry)
-	entry.verbs |= /atom/verb/do_not_delete
+	entry.verbs |= /atom/proc/do_not_delete
 
 /datum/controller/subsystem/cleanup/proc/cleanup_query(var/entry)
 	SScleanup.stinkyqueries += entry
@@ -207,7 +207,7 @@ SUBSYSTEM_DEF(cleanup)
 	. = ..()
 
 //The verb to toggle do not delete.
-/atom/verb/do_not_delete()
+/atom/proc/do_not_delete()
 	set name = "Toggle do not delete"
 	set src in view()
 
