@@ -8,7 +8,7 @@
 	// this also allows the preview mannequin to update properly because customisation topic calls don't call a DNA check
 	if(owner)
 		digitigrade = owner.digitigrade
-	else
+	else if(dna)
 		digitigrade = dna.digitigrade
 
 	if( !model && digitigrade && ( istype(src,/obj/item/organ/external/leg) || istype(src,/obj/item/organ/external/foot) ) )
