@@ -17,9 +17,12 @@ SUBSYSTEM_DEF(cleanup)
 
 	var/list/processing = list()
 	var/list/currentrun = list()
+	
 	var/list/stinkyqueries = list() //I hate this, but for the attack logs SQL queries, we need to check them otherwise the threads won't close.
+	var/list/currentqueries = list()
 
 	var/datum/cleanupentry/current_thing
+	var/current_query
 
 /datum/controller/subsystem/cleanup/Recover()
 	log_debug("[name] subsystem Recover().")
@@ -62,8 +65,10 @@ SUBSYSTEM_DEF(cleanup)
 /datum/controller/subsystem/cleanup/fire(resumed = 0)
 	if (!resumed)
 		currentrun = processing.Copy()
+		currentqueries = stinkyqueries.Copy()
 		SScleanup.urgency = get_urgency()
 	var/list/current_run = currentrun
+	var/list/current_queries = currentqueries
 	var/current_check = 0
 	var/i = 0
 	while(current_run.len)
@@ -89,11 +94,16 @@ SUBSYSTEM_DEF(cleanup)
 			qdel(current_thing)
 			current_thing = null
 
-	for(var/query in SScleanup.stinkyqueries) //This is low priority, wait until everything is done.
+	while(current_queries.len) //This is low priority, wait until everything is done.
 		if(MC_TICK_CHECK)
+			current_query = null
 			return
-		rustg_sql_check_query(query)
+		current_query = current_queries[current_queries.len]
+		current_queries.len--
+		if(rustg_sql_check_query(current_query) != RUSTG_JOB_NO_RESULTS_YET) //Query is finished running, and thread is joined, so remove this from our list.
+			SScleanup.stinkyqueries -= current_query
 
+	current_query = null
 	current_thing = null
 
 /datum/controller/subsystem/cleanup/proc/add_to_queue(atom/entry)
