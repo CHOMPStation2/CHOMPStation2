@@ -9,17 +9,26 @@
 	desc = "Allows you to see a short distance in the dark." 
 	cost = 1
 	var_changes = list("darksight" = 4)  //CHOMP Edit
+	//These species have same or higher darksight by default
+	banned_species = list( /*station.dm*/SPECIES_SKRELL, SPECIES_TAJ, \
+	/*station_vr.dm*/ SPECIES_SERGAL, SPECIES_VULPKANIN, SPECIES_SHADEKIN_CREW, SPECIES_XENOHYBRID, \
+	/*station_special_vr.dm*/ SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST)
 
 /datum/trait/positive/darksight_plus
 	name = "Darksight, Major"
 	desc = "Allows you to see in the dark for the whole screen." 
 	cost = 2
 	var_changes = list("darksight" = 8)
+	//These species have same or higher darksight by default
+	banned_species = list( /*station.dm*/ SPECIES_TAJ, \
+	/*station_vr.dm*/ SPECIES_SERGAL, SPECIES_SHADEKIN_CREW, \
+	/*station_special_vr.dm*/ SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST)
 	
 /datum/trait/positive/densebones
 	name = "Dense bones"
 	desc = "Your bones (or robotic limbs) are more dense or stronger then what is considered normal. It is much harder to fracture your bones, yet pain from fractures is much more intense."
 	cost = 3
+	trait_flags = TRAITS_HEALTH
 	excludes = list(/datum/trait/negative/hollow)
 
 /datum/trait/positive/densebones/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -45,6 +54,7 @@
 	name = "Photosynthesis"
 	desc = "Your body is able to produce nutrition from being in light."
 	cost = 3
+	custom_only = TRUE
 	var_changes = list("photosynthesizing" = TRUE)
 	can_take = ORGANICS|SYNTHETICS //Synths actually use nutrition, just with a fancy covering.
 
@@ -65,6 +75,7 @@
 	desc = "You have much 50% more blood than most other people"
 	cost = 3
 	var_changes = list("blood_volume" = 840)
+	trait_flags = TRAITS_BLOOD
 	excludes = list(/datum/trait/positive/more_blood_extreme,/datum/trait/negative/less_blood,/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
 
@@ -73,6 +84,7 @@
 	desc = "You have much 150% more blood than most other people"
 	cost = 6
 	var_changes = list("blood_volume" = 1400)
+	trait_flags = TRAITS_BLOOD
 	excludes = list(/datum/trait/positive/more_blood,/datum/trait/negative/less_blood,/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
 
@@ -117,24 +129,9 @@
 	name = "Absorbent"
 	desc = "You are able to clean messes just by walking over them, and gain nutrition from doing so!"
 	cost = 2
+	banned_species = list(SPECIES_PROMETHEAN)
 	special_env = TRUE
 	excludes = list(/datum/trait/negative/slipperydirt)
-
-/datum/trait/positive/endurance_high
-	cost = 3
-	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist, /datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist)
-
-/datum/trait/positive/brute_resist
-	excludes = list(/datum/trait/positive/minor_brute_resist, /datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
-
-/datum/trait/positive/minor_brute_resist
-	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
-
-/datum/trait/positive/burn_resist
-	excludes = list(/datum/trait/positive/minor_burn_resist, /datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
-
-/datum/trait/positive/minor_burn_resist
-	excludes = list(/datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
 
 /datum/trait/positive/absorbent/handle_environment_special(var/mob/living/carbon/human/H)
 	var/turf/T = get_turf(H)
@@ -260,4 +257,69 @@
 /datum/trait/positive/insect_sting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/insect_sting
-	
+
+//Traits defined in positive.dm, just adding variables here
+/datum/trait/positive/hardfeet
+	species_flags = NO_MINOR_CUT
+	var_changes = list()
+
+/datum/trait/positive/speed_fast
+	trait_flags = TRAITS_SPEED
+
+/datum/trait/positive/endurance_high
+	cost = 3
+	trait_flags = TRAITS_HEALTH
+	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist, /datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist)
+
+/datum/trait/positive/brute_resist
+	trait_flags = TRAITS_HEALTH
+	excludes = list(/datum/trait/positive/minor_brute_resist, /datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
+	banned_species = list(SPECIES_TAJ)
+
+/datum/trait/positive/minor_brute_resist
+	trait_flags = TRAITS_HEALTH
+	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
+	banned_species = list(SPECIES_TAJ)
+
+/datum/trait/positive/burn_resist
+	trait_flags = TRAITS_HEALTH
+	excludes = list(/datum/trait/positive/minor_burn_resist, /datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
+	banned_species = list(/*station.dm*/ SPECIES_TAJ, \
+	/*alraune.dm*/ SPECIES_ALRAUNE)
+
+/datum/trait/positive/minor_burn_resist
+	trait_flags = TRAITS_HEALTH
+	excludes = list(/datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
+	banned_species = list(/*station.dm*/ SPECIES_TAJ, \
+	/*alraune.dm*/ SPECIES_ALRAUNE)
+
+/datum/trait/positive/hardy
+	trait_flags = TRAITS_HARDY
+
+/datum/trait/positive/hardy_plus
+	trait_flags = TRAITS_HARDY
+
+/datum/trait/positive/melee_attack
+	trait_flags = TRAITS_ATTACK
+
+/datum/trait/positive/melee_attack_fangs
+	trait_flags = TRAITS_ATTACK
+
+/datum/trait/positive/fangs
+	trait_flags = TRAITS_ATTACK
+
+/datum/trait/positive/snowwalker
+	banned_species = list(/*station.dm*/ SPECIES_DIONA, \
+	/*teshari.dm*/ SPECIES_TESHARI)
+
+/datum/trait/positive/winged_flight
+	banned_species = list(SPECIES_NEVREAN, SPECIES_RAPALA)
+
+/datum/trait/positive/weaver
+	banned_species = list(SPECIES_VASILISSAN)
+
+/datum/trait/positive/photoresistant
+	trait_flags = TRAITS_FLASHMOD
+
+/datum/trait/positive/photoresistant_plus
+	trait_flags = TRAITS_FLASHMOD

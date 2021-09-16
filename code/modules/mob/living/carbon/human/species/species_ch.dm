@@ -15,6 +15,7 @@
 	var/mudking = FALSE
 	var/icodigi = 'icons/mob/human_races/r_digi_ch.dmi'
 	var/digi_allowed = FALSE
+	var/disallowed_traits = NO_DISALLOWED_TRAITS
 	
 /datum/species/handle_environment_special(var/mob/living/carbon/human/H)
 	for(var/datum/trait/env_trait in env_traits)

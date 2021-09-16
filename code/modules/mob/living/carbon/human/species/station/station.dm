@@ -462,7 +462,7 @@
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/space/void/zaddat/(H), slot_wear_suit)
 
 /datum/species/zaddat/handle_environment_special(var/mob/living/carbon/human/H)
-
+	. = ..() //CHOMPEdit compat with env traits
 	if(H.inStasisNow())
 		return
 
@@ -622,6 +622,7 @@
 	H.visible_message("<span class='danger'>\The [H] splits apart with a wet slithering noise!</span>")
 
 /datum/species/diona/handle_environment_special(var/mob/living/carbon/human/H)
+	. = ..() //CHOMPEdit compat with env traits
 	if(H.inStasisNow())
 		return
 

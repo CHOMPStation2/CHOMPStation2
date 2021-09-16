@@ -77,6 +77,7 @@
 	reagent_tag = IS_CHIMERA
 
 /datum/species/xenochimera/handle_environment_special(var/mob/living/carbon/human/H)
+	. = ..() //CHOMPEdit compat with env traits
 	//If they're KO'd/dead, they're probably not thinking a lot about much of anything.
 	if(!H.stat)
 		handle_feralness(H)
@@ -380,6 +381,7 @@
 	silk_max_reserve = 1000
 
 /datum/species/spider/handle_environment_special(var/mob/living/carbon/human/H)
+	. = ..() //CHOMPEdit compat with env traits
 	if(H.stat == DEAD) // If they're dead they won't need anything.
 		return
 

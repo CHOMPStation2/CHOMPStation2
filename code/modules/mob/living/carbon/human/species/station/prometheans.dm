@@ -183,6 +183,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 			H.gib()
 
 /datum/species/shapeshifter/promethean/handle_environment_special(var/mob/living/carbon/human/H)
+	. = ..() //CHOMPEdit compat with env traits
 	var/healing = TRUE	// Switches to FALSE if healing is not possible at all.
 	var/regen_brute = TRUE
 	var/regen_burn = TRUE

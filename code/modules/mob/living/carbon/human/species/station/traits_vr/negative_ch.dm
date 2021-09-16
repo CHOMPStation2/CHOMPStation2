@@ -3,12 +3,14 @@
 #endif
 
 /datum/trait/negative/hollow
+	trait_flags = TRAITS_HEALTH
 	excludes = list(/datum/trait/positive/densebones)
 
 /datum/trait/negative/slipperydirt
 	name = "Dirt Vulnerability"
 	desc = "Even the tiniest particles of dirt give you uneasy footing, even through several layers of footwear."
 	cost = -5
+	banned_species = list(SPECIES_PROMETHEAN)
 	var_changes = list("dirtslip" = TRUE)
 	excludes = list(/datum/trait/positive/absorbent)
 
@@ -16,6 +18,7 @@
 	name = "Low blood volume"
 	desc = "You have 33.3% less blood volume compared to most species, making you more prone to blood loss issues."
 	cost = -3
+	trait_flags = TRAITS_BLOOD
 	var_changes = list("blood_volume" = 375)
 	excludes = list(/datum/trait/negative/less_blood_extreme,/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme)
 	can_take = ORGANICS
@@ -24,6 +27,7 @@
 	name = "Extremely low blood volume"
 	desc = "You have 60% less blood volume compared to most species, making you much more prone to blood loss issues."
 	cost = -5
+	trait_flags = TRAITS_BLOOD
 	var_changes = list("blood_volume" = 224)
 	excludes = list(/datum/trait/negative/less_blood,/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme)
 	can_take = ORGANICS
@@ -38,6 +42,7 @@
 	name = "Extreme slowdown"
 	desc = "You move EXTREMELY slower than baseline"
 	cost = -8
+	trait_flags = TRAITS_SPEED
 	var_changes = list("slowdown" = 4.0)
 
 /datum/trait/negative/deep_sleeper
@@ -376,3 +381,56 @@
 	if(ms != "")
 		to_chat(H, ms)
 	H.next_loneliness_time = world.time+500
+
+//Traits defined in negative.dm, just adding variables here
+/datum/trait/negative/speed_slow
+	trait_flags = TRAITS_SPEED
+
+/datum/trait/negative/speed_slow_plus
+	trait_flags = TRAITS_SPEED
+
+/datum/trait/negative/weakling
+	trait_flags = TRAITS_HARDY
+
+/datum/trait/negative/weakling_plus
+	trait_flags = TRAITS_HARDY
+
+/datum/trait/negative/endurance_low
+	trait_flags = TRAITS_HEALTH
+
+/datum/trait/negative/endurance_very_low
+	trait_flags = TRAITS_HEALTH
+
+/datum/trait/negative/minor_brute_weak
+	trait_flags = TRAITS_HEALTH
+
+/datum/trait/negative/brute_weak
+	trait_flags = TRAITS_HEALTH
+
+/datum/trait/negative/brute_weak_plus
+	trait_flags = TRAITS_HEALTH
+
+/datum/trait/negative/minor_burn_weak
+	trait_flags = TRAITS_HEALTH
+
+/datum/trait/negative/burn_weak
+	trait_flags = TRAITS_HEALTH
+
+/datum/trait/negative/burn_weak_plus
+	trait_flags = TRAITS_HEALTH
+
+/datum/trait/negative/haemophilia
+	excludes = list(/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme) //These kinda cancel each other out, so not allowed.
+	custom_only = TRUE
+
+/datum/trait/negative/breathes/phoron
+	trait_flags = TRAITS_BREATH
+
+/datum/trait/negative/breathes/nitrogen
+	trait_flags = TRAITS_BREATH
+
+/datum/trait/negative/light_sensitivity
+	trait_flags = TRAITS_FLASHMOD
+
+/datum/trait/negative/light_sensitivity_plus
+	trait_flags = TRAITS_FLASHMOD

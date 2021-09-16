@@ -72,17 +72,22 @@
 	pref.blood_color = sanitize_hexcolor(pref.blood_color, default="#A10808")
 
 	if(!pref.traits_cheating)
-		pref.starting_trait_points = STARTING_SPECIES_POINTS
+		pref.starting_trait_points = (pref.species == SPECIES_CUSTOM) ? STARTING_SPECIES_POINTS : 0 //CHOMPEdit Non-custom species get 0 points to start with.
 		pref.max_traits = MAX_SPECIES_TRAITS
 
-	if(pref.species != SPECIES_CUSTOM)
+	/*if(pref.species != SPECIES_CUSTOM) //CHOMP Removal
 		pref.pos_traits.Cut()
-		pref.neg_traits.Cut()
+		pref.neg_traits.Cut()*/
 	// Clean up positive traits
 	for(var/datum/trait/path as anything in pref.pos_traits)
 		if(!(path in positive_traits))
 			pref.pos_traits -= path
 			continue
+		//CHOMPEdit Begin
+		if(!all_traits[path].can_take_trait(pref.species))
+			pref.pos_traits -= path
+			continue
+		//CHOMPEdit End
 		var/take_flags = initial(path.can_take)
 		if((pref.dirty_synth && !(take_flags & SYNTHETICS)) || (pref.gross_meatbag && !(take_flags & ORGANICS)))
 			pref.pos_traits -= path
@@ -91,7 +96,7 @@
 		if(!(path in neutral_traits))
 			pref.neu_traits -= path
 			continue
-		if(!(pref.species == SPECIES_CUSTOM) && !(path in everyone_traits))
+		if(!all_traits[path].can_take_trait(pref.species)) //CHOMPEdit
 			pref.neu_traits -= path
 			continue
 		var/take_flags = initial(path.can_take)
@@ -102,6 +107,11 @@
 		if(!(path in negative_traits))
 			pref.neg_traits -= path
 			continue
+		//CHOMPEdit Begin
+		if(!all_traits[path].can_take_trait(pref.species))
+			pref.neu_traits -= path
+			continue
+		//CHOMPEdit End
 		var/take_flags = initial(path.can_take)
 		if((pref.dirty_synth && !(take_flags & SYNTHETICS)) || (pref.gross_meatbag && !(take_flags & ORGANICS)))
 			pref.neg_traits -= path
@@ -153,7 +163,7 @@
 
 	var/traits_left = pref.max_traits
 	
-	if(pref.species == SPECIES_CUSTOM)
+	if(/*pref.species == SPECIES_CUSTOM*/TRUE) //CHOMPEdit
 		var/points_left = pref.starting_trait_points
 
 		for(var/T in pref.pos_traits + pref.neg_traits)
@@ -161,7 +171,7 @@
 			traits_left--
 		. += "<b>Traits Left:</b> [traits_left]<br>"
 		. += "<b>Points Left:</b> [points_left]<br>"
-		if(points_left < 0 || traits_left < 0 || !pref.custom_species)
+		if(points_left < 0 || traits_left < 0 || (pref.species == SPECIES_CUSTOM && !pref.custom_species))
 			. += "<span style='color:red;'><b>^ Fix things! ^</b></span><br>"
 
 		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait +</a><br>"
@@ -363,6 +373,11 @@
 			if( LAZYLEN(instance.allowed_species) && !(pref.species in instance.allowed_species))
 				tgui_alert_async(usr, "The trait you've selected cannot be taken by the species you've chosen!", "Error")
 				return TOPIC_REFRESH
+			//CHOMPEdit Begin
+			if(!instance.can_take_trait(pref.species))
+				tgui_alert_async(usr, "The trait you've selected cannot be taken by the species you've chosen!", "Error")
+				return TOPIC_REFRESH
+			//CHOMPEdit End
 
 			if(trait_choice in pref.pos_traits + pref.neu_traits + pref.neg_traits)
 				conflict = instance.name

@@ -101,6 +101,7 @@
 #include "code\__defines\tgs.dm"
 #include "code\__defines\tgui.dm"
 #include "code\__defines\tools.dm"
+#include "code\__defines\trait_defines_ch.dm"
 #include "code\__defines\turfs.dm"
 #include "code\__defines\typeids.dm"
 #include "code\__defines\unit_tests.dm"
