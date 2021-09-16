@@ -42,7 +42,7 @@
 
 //alraune.dm
 /datum/species/alraune
-	disallowed_traits = TRAITS_BREATH
+	disallowed_traits = TRAITS_BREATH | TRAITS_SPEED | TRAITS_HARDY | TRAITS_BLOOD
 
 //prometheans.dm
 /datum/species/shapeshifter/promethean
@@ -60,7 +60,10 @@
 	disallowed_traits = TRAITS_HEALTH | TRAITS_BLOOD | TRAITS_HARDY | TRAITS_SPEED
 
 /datum/species/tajaran
-	disallowed_traits = TRAITS_ATTACK
+	disallowed_traits = TRAITS_ATTACK | TRAITS_HEALTH | TRAITS_FLASHMOD
+
+/datum/species/skrell
+	disallowed_traits = TRAITS_FLASHMOD
 
 /datum/species/zaddat
 	disallowed_traits = TRAITS_HEALTH | TRAITS_FLASHMOD
