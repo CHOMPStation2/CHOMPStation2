@@ -64,7 +64,7 @@
 	var/colorindex = 1
 
 	var/list/winitems = list(
-				/obj/item/weapon/reagent_containers/food/snacks/cookie,
+				/obj/item/weapon/reagent_containers/food/snacks/sugarcookie,
 				/obj/item/weapon/spacecasinocash,
 				/obj/item/weapon/reagent_containers/syringe/drugs,
 	)
