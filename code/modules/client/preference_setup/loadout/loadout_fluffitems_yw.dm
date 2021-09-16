@@ -251,7 +251,7 @@
 	character_name = list("Coda Vanistok")
 
 //  D CKEYS
-
+/*CHOMP Remove this WILL cause issues if downstreams or whatever somehow have this and custom_items_yw.dm enabled, because on chomp main this file is not enabled but I commented it out in custom_items_yw.dm.
 //dameonowen
 //Dameon Owen
 /datum/gear/fluff/dameon_1
@@ -260,6 +260,7 @@
 	description = "DAS A BIG COOKIE!!!"
 	ckeywhitelist = list("dameonowen")
 	character_name = list("Dameon Owen", "Amber Owen")
+//CHOMP Remove end */
 
 //dawidoe
 //Melissa Krutz
