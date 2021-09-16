@@ -1,4 +1,4 @@
-datum/preferences
+/datum/preferences
 	var/wingdings = 1
 	var/colorblind_mono = 0
 	var/colorblind_vulp = 0
