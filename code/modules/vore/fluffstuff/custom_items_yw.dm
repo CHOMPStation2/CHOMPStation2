@@ -548,7 +548,8 @@
 		M.resize(3)
 		M.drop_from_inventory(src)
 		qdel(src)
-//CHOMP Remove end */
+//CHOMP Remove end
+*/
 
 // **************
 // NESgamer190
