@@ -17,6 +17,7 @@ SUBSYSTEM_DEF(cleanup)
 
 	var/list/processing = list()
 	var/list/currentrun = list()
+	var/list/stinkyqueries = list() //I hate this, but for the attack logs SQL queries, we need to check them otherwise the threads won't close.
 
 	var/datum/cleanupentry/current_thing
 
@@ -88,11 +89,19 @@ SUBSYSTEM_DEF(cleanup)
 			qdel(current_thing)
 			current_thing = null
 
+	for(var/query in SScleanup.stinkyqueries) //This is low priority, wait until everything is done.
+		if(MC_TICK_CHECK)
+			return
+		rustg_sql_check_query(query)
+
 	current_thing = null
 
 /datum/controller/subsystem/cleanup/proc/add_to_queue(atom/entry)
 	SScleanup.processing += new /datum/cleanupentry(entry)
 	entry.verbs |= /atom/verb/do_not_delete
+
+/datum/controller/subsystem/cleanup/proc/cleanup_query(var/entry)
+	SScleanup.stinkyqueries += entry
 
 /datum/controller/subsystem/cleanup/proc/remove_atom(atom/entry)
 	//Before someone tries to say this is inefficient(which it is), the other alternative I considered was having a second list which is keyed by the atom to the datum, but this presents problems with atoms being qdeled early.
