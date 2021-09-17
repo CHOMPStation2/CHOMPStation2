@@ -300,6 +300,10 @@
 	trait_flags = TRAITS_HARDY
 
 /datum/trait/positive/melee_attack
+	//All of the banned species here already have these exact attacks.
+	banned_species = list(/*station.dm*/SPECIES_TAJ, \
+	/*station_vr.dm*/SPECIES_SERGAL, SPECIES_AKULA, SPECIES_NEVREAN, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_SHADEKIN_CREW, SPECIES_FENNEC, SPECIES_XENOHYBRID, \
+	/*station_special_vr.dm*/SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST)
 	trait_flags = TRAITS_ATTACK
 
 /datum/trait/positive/melee_attack_fangs

@@ -27,6 +27,8 @@
 		return FALSE
 	if(species in banned_species)
 		return FALSE
+	if(LAZYLEN(allowed_species) && !(species in allowed_species))
+		return FALSE
 	var/datum/species/S = GLOB.all_species[species]
 	if(S.disallowed_traits & trait_flags)
 		return FALSE

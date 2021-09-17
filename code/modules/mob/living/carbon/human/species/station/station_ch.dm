@@ -60,7 +60,7 @@
 	disallowed_traits = TRAITS_HEALTH | TRAITS_BLOOD | TRAITS_HARDY | TRAITS_SPEED
 
 /datum/species/tajaran
-	disallowed_traits = TRAITS_ATTACK | TRAITS_HEALTH | TRAITS_FLASHMOD
+	disallowed_traits = TRAITS_HEALTH | TRAITS_FLASHMOD
 
 /datum/species/skrell
 	disallowed_traits = TRAITS_FLASHMOD
@@ -69,39 +69,19 @@
 	disallowed_traits = TRAITS_HEALTH | TRAITS_FLASHMOD
 
 //station_vr.dm
-/datum/species/sergal
-	disallowed_traits = TRAITS_ATTACK
-
-/datum/species/akula
-	disallowed_traits = TRAITS_ATTACK
-
-/datum/species/nevrean
-	disallowed_traits = TRAITS_ATTACK
-
-/datum/species/hi_zoxxen
-	disallowed_traits = TRAITS_ATTACK
-
-/datum/species/vulpkanin
-	disallowed_traits = TRAITS_ATTACK
 
 /datum/species/crew_shadekin
-	disallowed_traits = TRAITS_ATTACK | TRAITS_BLOOD | TRAITS_HEALTH
-
-/datum/species/fl_zorren
-	disallowed_traits = TRAITS_ATTACK
-
-/datum/species/xenohybrid
-	disallowed_traits = TRAITS_ATTACK
+	disallowed_traits = TRAITS_BLOOD | TRAITS_HEALTH
 
 //station_special_vr.dm
 /datum/species/xenochimera
-	disallowed_traits = TRAITS_ATTACK | TRAITS_HEALTH
+	disallowed_traits = TRAITS_HEALTH
 
 /datum/species/spider
-	disallowed_traits = TRAITS_ATTACK | TRAITS_HEALTH
+	disallowed_traits = TRAITS_HEALTH
 
 /datum/species/werebeast
-	disallowed_traits = TRAITS_ATTACK | TRAITS_HEALTH | TRAITS_HARDY
+	disallowed_traits = TRAITS_HEALTH | TRAITS_HARDY
 
 //teshari.dm
 /datum/species/teshari

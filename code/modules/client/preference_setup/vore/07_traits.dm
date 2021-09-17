@@ -84,7 +84,8 @@
 			pref.pos_traits -= path
 			continue
 		//CHOMPEdit Begin
-		if(!all_traits[path].can_take_trait(pref.species))
+		var/datum/trait/instance = all_traits[path]
+		if(!instance.can_take_trait(pref.species))
 			pref.pos_traits -= path
 			continue
 		//CHOMPEdit End
@@ -96,7 +97,8 @@
 		if(!(path in neutral_traits))
 			pref.neu_traits -= path
 			continue
-		if(!all_traits[path].can_take_trait(pref.species)) //CHOMPEdit
+		var/datum/trait/instance = all_traits[path] //CHOMPEdit
+		if(!instance.can_take_trait(pref.species)) //CHOMPEdit
 			pref.neu_traits -= path
 			continue
 		var/take_flags = initial(path.can_take)
@@ -108,8 +110,9 @@
 			pref.neg_traits -= path
 			continue
 		//CHOMPEdit Begin
-		if(!all_traits[path].can_take_trait(pref.species))
-			pref.neu_traits -= path
+		var/datum/trait/instance = all_traits[path]
+		if(!instance.can_take_trait(pref.species))
+			pref.neg_traits -= path
 			continue
 		//CHOMPEdit End
 		var/take_flags = initial(path.can_take)
@@ -306,7 +309,12 @@
 				picklist = negative_traits.Copy() - pref.neg_traits
 				mylist = pref.neg_traits
 			else
-
+		//CHOMP Addition, only show traits that are able to be taken:
+		for(var/datum/trait/path as anything in picklist)
+			var/datum/trait/instance = all_traits[path]
+			if(!instance.can_take_trait(pref.species))
+				picklist -= path
+		//CHOMP Addition End
 		if(isnull(picklist))
 			return TOPIC_REFRESH
 
