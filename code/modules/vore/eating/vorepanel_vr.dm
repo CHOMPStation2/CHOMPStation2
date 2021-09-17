@@ -258,7 +258,9 @@
 			selected_list["liq_interacts"]["liq_reagent_addons"] = list()
 			for(var/flag_name in selected.reagent_mode_flag_list)
 				if(selected.reagent_mode_flags & selected.reagent_mode_flag_list[flag_name])
-					selected_list["liq_interacts"]["liq_reagent_addons"].Add(flag_name)
+					var/list/selected_list_member = selected_list["liq_interacts"]["liq_reagent_addons"]
+					ASSERT(islist(selected_list_member))
+					selected_list_member.Add(flag_name)
 
 		selected_list["show_liq_fullness"] = selected.show_fullness_messages
 		selected_list["liq_messages"] = list()

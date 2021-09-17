@@ -104,7 +104,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 			PN = attached.powernet
 			release_vore_contents()
 			prey_excludes.Cut()
-			moth_amount++
+			moth_amount = moth_amount + 1
 			death_star()
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
