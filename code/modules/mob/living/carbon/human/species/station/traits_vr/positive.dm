@@ -4,7 +4,7 @@
 /datum/trait/positive/speed_fast
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
-	cost = 3
+	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
 
 /datum/trait/positive/hardy
