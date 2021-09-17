@@ -32,7 +32,7 @@
 	var/shiftready = TRUE	// Are we ready to assume a new form?
 	var/morphed = FALSE		// Are we morphed currently? IE not our base form.
 	var/energy = 200		// How much energy we have to move in object + mimic form.
-	var/max_energy = 2000	// Our maximum energy stores, regenerated over time.
+	var/max_energy = 200	// Our maximum energy stores, regenerated over time. Ticks away at a rate of 2 (mimic), 4 (object) per move, allowing 100 tiles of movement in mimic form, 50 tiles as object.
 	
 /mob/living/simple_mob/nightmare/mimic/Initialize()
 	verbs += /mob/living/proc/ventcrawl
@@ -51,5 +51,16 @@
 	else
 		. = ..()
 		
+// Mimic Abilities Start Here //
+// Morphing into an object //
+
+// Morph Ability - Transforms us into an object. Pass through the object we've selected as an arg, such as: morph(sodacan)
 /mob/living/simple_mob/nightmare/mimic/proc/morph(var/object)
+	set name = "Morph into Object"
+	set desc = "Allows you to transform into an object, taking on it's properties, able to observe and move. A word of warning - observers WILL see you jitter if they examine you, or periodically at random intervals."
+	set category = "Abilities"
+	
 	object = new obj
+	
+// De-Morphing (Resuming our Mimic Form)
+/mob/living/simple_mob/nightmare/mimic/proc/restore
