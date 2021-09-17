@@ -11,26 +11,26 @@
 
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/labcoat/fluff/eioni_1/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 
 /obj/item/clothing/under/fluff/eioni_2
@@ -51,26 +51,26 @@
 	/////////////////////////////TODO//////////////////////
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/hoodie/fluff/redax_1/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 /obj/item/clothing/under/fluff/redax_2
 	name = "Alarming outfit"
@@ -172,26 +172,26 @@
 
 	var/unbuttoned = 0
 
-	verb/toggle()
-		set name = "Toggle coat buttons"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/labcoat/fluff/zeke_vincir_3/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(unbuttoned)
-			if(0)
-				icon_state = "[initial(icon_state)]_open"
-				item_state = "[initial(item_state)]_open"
-				unbuttoned = 1
-				usr << "You unbutton the coat."
-			if(1)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				unbuttoned = 0
-				usr << "You button up the coat."
-		usr.update_inv_wear_suit()
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			item_state = "[initial(item_state)]_open"
+			unbuttoned = 1
+			usr << "You unbutton the coat."
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			unbuttoned = 0
+			usr << "You button up the coat."
+	usr.update_inv_wear_suit()
 
 /obj/item/clothing/mask/fluff/lucerna_1 //Doesn't work for some reason
 	name =	"Mysterious mask"
@@ -853,26 +853,26 @@
 	body_parts_covered = UPPER_TORSO
 	var/hoodup = 1
 
-	verb/toggle()
-		set name = "Toggle Hood"
-		set category = "Object"
-		set src in usr
+/obj/item/clothing/suit/storage/fluff/ivy/verb/toggle()
+	set name = "Toggle Hood"
+	set category = "Object"
+	set src in usr
 
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
 
-		switch(hoodup)
-			if(0)
-				icon_state = "[initial(icon_state)]"
-				item_state = "[initial(item_state)]"
-				hoodup = 1
-				usr << "You take off the hood."
-			if(1)
-				icon_state = "[initial(icon_state)]_up"
-				item_state = "[initial(item_state)]_up"
-				hoodup= 0
-				usr << "You put on the hood."
-		usr.update_inv_wear_suit()
+	switch(hoodup)
+		if(0)
+			icon_state = "[initial(icon_state)]"
+			item_state = "[initial(item_state)]"
+			hoodup = 1
+			usr << "You take off the hood."
+		if(1)
+			icon_state = "[initial(icon_state)]_up"
+			item_state = "[initial(item_state)]_up"
+			hoodup= 0
+			usr << "You put on the hood."
+	usr.update_inv_wear_suit()
 
 //Kita
 
@@ -1310,21 +1310,19 @@
 	icon_state = "kentauri_uniform"
 	item_state = "kentauri_uniform"
 
-/obj/item/clothing/suit/armor/vest/harpsong
-	mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
-		if(..())
-			if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/horse/big))
-				return ..()
-			else
-				to_chat(H,"<span class='warning'>You need to have a kentauri half to wear this.</span>")
-				return 0
+/obj/item/clothing/suit/armor/vest/harpsong/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+	if(..())
+		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/horse/big))
+			return ..()
+		else
+			to_chat(H,"<span class='warning'>You need to have a kentauri half to wear this.</span>")
+			return 0
 
-/obj/item/clothing/suit/armor/vest/harpsong
-    make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0)
-        var/image/result = ..()
-        result.pixel_x = -16
-        result.layer = BODY_LAYER + 15
-        return result
+/obj/item/clothing/suit/armor/vest/harpsong/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0, var/icon/clip_mask = null)
+	var/image/result = ..()
+	result.pixel_x = -16
+	result.layer = BODY_LAYER + 15
+	return result
 
 // *****
 // SASOperative

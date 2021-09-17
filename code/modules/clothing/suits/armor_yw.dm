@@ -23,29 +23,29 @@
 	flags_inv = HIDEHOLSTER
 	open = 1
 	
-	toggle()
-		set name = "Toggle Coat Buttons"
-		set category = "Object"
-		set src in usr
-		if(!usr.canmove || usr.stat || usr.restrained())
-			return 0
-	
-		if(open == 1) //Will check whether icon state is currently set to the "open" or "closed" state and switch it around with a message to the user
-			open = 0
-			icon_state = "secjacket"
-			item_state = "secjacket_s"
-			flags_inv = HIDETIE|HIDEHOLSTER
-			to_chat(usr, "You button up the coat.")
-		else if(open == 0)
-			open = 1
-			icon_state = "secjacket_open"
-			item_state = "secjacket_open_s"
-			flags_inv = HIDEHOLSTER
-			to_chat(usr, "You unbutton the coat.")
-		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "You attempt to button-up the velcro on your [src], before promptly realising how silly you are.")
-			return
-		update_clothing_icon()	//so our overlays update
+/obj/item/clothing/suit/storage/toggle/yw/secjacket/toggle()
+	set name = "Toggle Coat Buttons"
+	set category = "Object"
+	set src in usr
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
+
+	if(open == 1) //Will check whether icon state is currently set to the "open" or "closed" state and switch it around with a message to the user
+		open = 0
+		icon_state = "secjacket"
+		item_state = "secjacket_s"
+		flags_inv = HIDETIE|HIDEHOLSTER
+		to_chat(usr, "You button up the coat.")
+	else if(open == 0)
+		open = 1
+		icon_state = "secjacket_open"
+		item_state = "secjacket_open_s"
+		flags_inv = HIDEHOLSTER
+		to_chat(usr, "You unbutton the coat.")
+	else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
+		to_chat(usr, "You attempt to button-up the velcro on your [src], before promptly realising how silly you are.")
+		return
+	update_clothing_icon()	//so our overlays update
 
 /obj/item/clothing/suit/armor/yw/blueshieldcoat
 	name = "Blue Shield Security Coat"

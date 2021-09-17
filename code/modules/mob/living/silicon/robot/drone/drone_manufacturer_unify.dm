@@ -7,9 +7,9 @@
 									"Maintenance Module" = /mob/living/silicon/robot/drone,
 									) //List of drone types to choose from.//Changeable in mapping.
 
-	create_drone(var/client/player)
-		choose_dronetype(possible_drones) //Call Drone choice before executing create_drone
-		..()
+/obj/machinery/drone_fabricator/unify/create_drone(var/client/player)
+	choose_dronetype(possible_drones) //Call Drone choice before executing create_drone
+	..()
 
 /obj/machinery/drone_fabricator/proc/choose_dronetype(possible_drones)
 	var/choice

@@ -477,7 +477,7 @@ var/global/list/disallowed_protean_accessories = list(
 	if(istype(loc, /obj/item/weapon/rig/protean))
 		var/obj/item/weapon/rig/protean/prig = loc
 		to_chat(src, "You attempt to interface with the [prig].")
-		prig.ui_interact(src, nano_state = interactive_state)
+		prig.ui_interact(src, interactive_state)
 	else
 		to_chat(src, "You are not in RIG form.")
 //CHOMP Add end

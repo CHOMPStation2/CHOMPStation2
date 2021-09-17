@@ -172,7 +172,8 @@
 	icon = icon_types[index] ? icon_types[index] : icon_types["def"]
 	icon_state = icon_state_types[index] ? icon_state_types[index] : icon_state_types["def"]
 	trig_proc = trig_proc_types[index] ? trig_proc_types[index] : trig_proc_types["def"]
-	trig_args = trig_args_types[index].len ? trig_args_types[index] : trig_args_types["def"]
+	var/list/trig_arg_type = trig_args_types[index]
+	trig_args = (istype(trig_arg_type) && trig_arg_type.len) ? trig_args_types[index] : trig_args_types["def"]
 
 /obj/kbutton/toggle/button_trigger()
 	toggled = !toggled

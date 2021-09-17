@@ -70,7 +70,7 @@
 	accuracy = 15
 	one_handed_penalty = 30
 
-obj/item/weapon/gun/energy/locked/phasegun/rifle/unlocked
+/obj/item/weapon/gun/energy/locked/phasegun/rifle/unlocked
 	desc = "The RayZar EW31 Orion is a specialist energy weapon, intended for use against hostile wildlife."
 	req_access = newlist() //for toggling safety
 	locked = 0
