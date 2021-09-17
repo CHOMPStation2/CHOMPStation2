@@ -194,7 +194,8 @@
 /datum/trait/positive/weaver
 	name = "Weaver"
 	desc = "You can produce silk and create various articles of clothing and objects."
-	cost = 1 //Also not worth 2 points, wtf, this is literally just fluff
+	category = 0 //CHOMPEdit making weaver a neutral trait instead
+	cost = 0 //Also not worth 2 points, wtf, this is literally just fluff
 	var_changes = list("is_weaver" = 1)
 
 /datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
