@@ -16,12 +16,27 @@
 
 	//CHOMPEdit: Autotransfer count moved here.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
-		for(var/atom/movable/M in contents)
+		var/list/autotransferables = contents - autotransfer_queue
+		if(LAZYLEN(autotransfer_queue) >= autotransfer_min_amount)
+			var/obj/belly/dest_belly
+			for(var/obj/belly/B in owner.vore_organs)
+				if(B.name == autotransferlocation)
+					dest_belly = B
+					break
+			if(dest_belly)
+				for(var/atom/movable/M in autotransfer_queue)
+					transfer_contents(M, dest_belly)
+				autotransfer_queue.Cut()
+		var/tally = 0
+		for(var/atom/movable/M in autotransferables)
 			if(isliving(M))
 				var/mob/living/L = M
 				if(L.absorbed)
 					continue
+			tally++
 			M.belly_cycles++
+			if(autotransfer_max_amount > 0 && tally >= autotransfer_max_amount)
+				continue
 			if(M.belly_cycles >= autotransferwait / 60)
 				check_autotransfer(M, autotransferlocation)
 
