@@ -873,7 +873,7 @@
 					dest_belly = B
 					break
 			if(dest_belly)
-				if(autotransfer_min_amount > 0) //CHOMPEdit start
+				if(autotransfer_min_amount > 1) //CHOMPEdit start
 					autotransfer_queue += prey
 				else
 					transfer_contents(prey, dest_belly)
