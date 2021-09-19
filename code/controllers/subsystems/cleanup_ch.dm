@@ -45,7 +45,7 @@ SUBSYSTEM_DEF(cleanup)
 	return temp_points
 
 /proc/cleanup_adjusted_points(points)
-	return (log(points)-2.5)/3
+	return (log(points+0.01)-2.5)/3 //Have to add 0.01 here to prevent it from dying on 0 points
 
 /datum/controller/subsystem/cleanup/proc/get_urgency() //Let's try to decide how badly we need to delete stuff. Urgency is always betweeen 0 and 1, 0 meaning no rush, and 1 meaning delete stuff twice as quick.
 	SScleanup.points = SScleanup.get_points()
