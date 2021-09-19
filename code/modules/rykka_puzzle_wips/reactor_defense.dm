@@ -64,9 +64,10 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	
 	/* 	== Powergen Variables. == */
 	// Be careful what you change and read the comments so you understand what each item is doing.
+	var/current_power_gen = 0						// The amount of power we are currently generating. This is done via math to prevent instantly jumping to 1.0/2.5 MW on reactor steps.
 	var/warmup_power_gen = 1.0 MEGAWATTS 			// The amount of power we output during warmup steps. Could probably be done via math, but this allows user configuration better.
 	var/full_power_gen = 2.5 MEGAWATTS 				// [lore-name] reactors were built for ships or stations. They should output power roughly equivalent.
-	var/max_temperature = 1500						// Max safe temperature (in Kelvin) before overheating starts and we start to take damage! 
+	var/max_safe_temperature = 1500					// Max safe temperature (in Kelvin) before overheating starts and we start to take damage! 
 													// For parlance, 20C is 293.15k, our reactor can go up to 1500k. Based on a nuclear reactor's max safe temp of 2,200F, roughly 1204.444C, or 1500k
 	var/temperature = 0								// The current temperature of the reactor!
 	var/heat_gen_factor = 2							// How fast do we generate heat while producing power? This shouldn't cause damage to the reactor normally, but should cause serious damage if there's not enough clearance.
@@ -106,6 +107,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 		circuit = new circuit(src)
 	if(!mapload)
 		power_change()
+	
+	connect_to_network() // We're going to hook ourselves up to the local powernet.
 		
 	if(!LAZYLEN(wave_mobs)) // We create a runtime so that debugging is aware there is a problem. An empty list means nothing will happen when time comes for waves.
 		log_runtime(EXCEPTION("Reactor ["[reactor_id]"] at [x],[y],[z] ([get_area(src)]) had no wave_mobs set on it!"))
@@ -207,6 +210,27 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 
 /obj/machinery/power/damaged_reactor/examine(mob/user) // Are they inspecting the reactor?
 	. = ..()
+	
+	switch(current_power_gen) // We're going to display EITHER an idle message OR an active message. Using a switch for neatness, and so that future messages/stages can be added with ease.
+		if(-INFINITY to 0)
+			. += "It appears to be shut down and not actively generating power."
+		if(0 to INFINITY)
+			. += "It appears to be producing [current_power_gen] W."
+			
+	switch(state) // Display one of the following messages based on what state we're in currently.
+		if(IDLE)
+			. += "<span class='notice'>It appears to be waiting for input.</span>"
+		if(WARMUP)
+			. += "<span class='warning'>It appears to be onlining!</span>"
+		if(ENGAGED)
+			. += "<spanc class='danger'><big>It is humming actively!</big></span>"
+		if(VERIFYING)
+			. += "<spanc class='danger'><big>It appears to be waiting for input, with a timer counting down!</big></span>"
+		if(FINISHED)
+			. += "<span class='notice'>It is operating normally.</span>"
+			
+	if(overheating)
+		. += "<span class='danger'><big>It is overheating!</big></span>"
 	
 	var/perc = round(health / maxhealth, 0.01) // Use round in case someone varedits health higher than the "max".
 	switch(perc) // Switch chooses one of the following IF statements based on parameters fed to it. Only one.
