@@ -108,7 +108,7 @@
 		return 0
 	return 1
 
-/obj/machinery/door/Bumped(atom/AM)
+/obj/machinery/door/Bumped(atom/movable/AM) //CHOMPEdit
 	. = ..()
 	if(p_open || operating)
 		return
@@ -123,6 +123,20 @@
 			return																		//VOREStation Edit: unable to open doors
 		else
 			bumpopen(M)
+	//CHOMPEdit Begin
+	var/datum/riding/morph/morph_riding = AM.riding_datum
+	if(istype(morph_riding))
+		var/mob/M = morph_riding.in_control
+		if(world.time - M.last_bumped <= 10)
+			return	//Can bump-open one airlock per second. This is to prevent shock spam.
+		M.last_bumped = world.time
+		if(M.restrained() && !check_access(null))
+			return
+		else if(istype(M, /mob/living/simple_mob/animal/passive/mouse) && !(M.ckey))	//VOREStation Edit: Make wild mice
+			return																		//VOREStation Edit: unable to open doors
+		else
+			bumpopen(M)
+	//CHOMPEdit End
 	if(istype(AM, /obj/item/device/uav))
 		if(check_access(null))
 			open()

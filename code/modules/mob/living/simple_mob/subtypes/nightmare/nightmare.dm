@@ -14,7 +14,7 @@
 	response_help  = "pets"
 	response_disarm = "shoves"
 	response_harm   = "hits"
-	attacktext - "swipes at"
+	attacktext = "swipes at"
 	
 	vore_active = FALSE // These critters should not be capable of nomph. They are beings from another dimension.
 	showvoreprefs = FALSE
