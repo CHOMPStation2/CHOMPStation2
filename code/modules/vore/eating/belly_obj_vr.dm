@@ -52,6 +52,9 @@
 	var/autotransferwait = 10 				// Time between trying to transfer.
 	var/autotransferlocation				// Place to send them
 	var/autotransfer_enabled = FALSE		// Player toggle
+	var/autotransfer_min_amount = 0			// Minimum amount of things to pass at once. //CHOMPAdd
+	var/autotransfer_max_amount = 0			// Maximum amount of things to pass at once. //CHOMPAdd
+	var/tmp/list/autotransfer_queue = list()// Reserve for above things. //CHOMPAdd
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
@@ -206,7 +209,9 @@
 		"autotransferchance",
 		"autotransferwait",
 		"autotransferlocation",
-		"autotransfer_enabled", //CHOMP end of variables from CHOMP
+		"autotransfer_enabled",
+		"autotransfer_min_amount",
+		"autotransfer_max_amount", //CHOMP end of variables from CHOMP
 		"egg_type"
 		)
 
@@ -868,11 +873,13 @@
 					dest_belly = B
 					break
 			if(dest_belly)
-				transfer_contents(prey, dest_belly)
+				if(autotransfer_min_amount > 1) //CHOMPEdit start
+					autotransfer_queue += prey
+				else
+					transfer_contents(prey, dest_belly)
 		else
 			// Didn't transfer, so wait before retrying
-			// I feel like there's a way to make this timer looping using the normal looping thing, but pass in the ID and cancel it if we aren't looping again
-			prey.belly_cycles = 0 //CHOMPEdit: reset cycle count
+			prey.belly_cycles = 0 //CHOMPEdit end
 
 // Belly copies and then returns the copy
 // Needs to be updated for any var changes
@@ -935,7 +942,9 @@
 	dupe.autotransferchance = autotransferchance
 	dupe.autotransferwait = autotransferwait
 	dupe.autotransferlocation = autotransferlocation
-	dupe.autotransfer_enabled = autotransfer_enabled //CHOMP end of variables from CHOMP
+	dupe.autotransfer_enabled = autotransfer_enabled
+	dupe.autotransfer_min_amount = autotransfer_min_amount
+	dupe.autotransfer_max_amount = autotransfer_max_amount //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
