@@ -47,6 +47,7 @@
 					mob_icon = new /icon(digitigrade ? species.icodigi : species.get_icobase(owner, (status & ORGAN_MUTATED)), "[icon_name][gender ? "_[gender]" : ""]")
 					apply_colouration(mob_icon)
 
+				//Code here is copied from organ_icon.dm line 118 at time of writing (9/20/21), VOREStation edits are left in intentionally, because I think it's worth keeping track of the fact that the code is from Virgo's edits.
 				//Body markings, actually does not include head this time. Done separately above.
 				if(!istype(src,/obj/item/organ/external/head))
 					for(var/M in markings)
