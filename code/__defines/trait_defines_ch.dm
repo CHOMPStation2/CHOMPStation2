@@ -9,4 +9,4 @@
 #define TRAITS_FLASHMOD (1<<6)
 #define TRAITS_PAIN (1<<7)
 #define TRAITS_BURN (1<<8)
-#define TRAITS_BRUTE(1<<9)
+#define TRAITS_BRUTE (1<<9)
