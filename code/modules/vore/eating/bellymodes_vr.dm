@@ -35,7 +35,7 @@
 					continue
 			tally++
 			M.belly_cycles++
-			if(autotransfer_max_amount > 0 && tally >= autotransfer_max_amount)
+			if(autotransfer_max_amount > 1 && tally >= autotransfer_max_amount)
 				continue
 			if(M.belly_cycles >= autotransferwait / 60)
 				check_autotransfer(M, autotransferlocation)
