@@ -275,26 +275,20 @@
 	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist, /datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist)
 
 /datum/trait/positive/brute_resist
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BRUTE
 	excludes = list(/datum/trait/positive/minor_brute_resist, /datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
-	banned_species = list(SPECIES_TAJ)
 
 /datum/trait/positive/minor_brute_resist
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BRUTE
 	excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
-	banned_species = list(SPECIES_TAJ)
 
 /datum/trait/positive/burn_resist
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BURN
 	excludes = list(/datum/trait/positive/minor_burn_resist, /datum/trait/positive/brute_resist, /datum/trait/positive/endurance_high)
-	banned_species = list(/*station.dm*/ SPECIES_TAJ, \
-	/*alraune.dm*/ SPECIES_ALRAUNE)
 
 /datum/trait/positive/minor_burn_resist
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BURN
 	excludes = list(/datum/trait/positive/burn_resist, /datum/trait/positive/endurance_high)
-	banned_species = list(/*station.dm*/ SPECIES_TAJ, \
-	/*alraune.dm*/ SPECIES_ALRAUNE)
 
 /datum/trait/positive/hardy
 	trait_flags = TRAITS_HARDY

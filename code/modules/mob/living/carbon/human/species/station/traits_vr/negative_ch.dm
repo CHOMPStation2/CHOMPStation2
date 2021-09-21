@@ -402,22 +402,22 @@
 	trait_flags = TRAITS_HEALTH
 
 /datum/trait/negative/minor_brute_weak
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BRUTE
 
 /datum/trait/negative/brute_weak
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BRUTE
 
 /datum/trait/negative/brute_weak_plus
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BRUTE
 
 /datum/trait/negative/minor_burn_weak
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BURN
 
 /datum/trait/negative/burn_weak
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BURN
 
 /datum/trait/negative/burn_weak_plus
-	trait_flags = TRAITS_HEALTH
+	trait_flags = TRAITS_HEALTH | TRAITS_BURN
 
 /datum/trait/negative/haemophilia
 	excludes = list(/datum/trait/positive/more_blood,/datum/trait/positive/more_blood_extreme) //These kinda cancel each other out, so not allowed.

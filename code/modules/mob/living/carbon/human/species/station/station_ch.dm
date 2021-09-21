@@ -42,7 +42,7 @@
 
 //alraune.dm
 /datum/species/alraune
-	disallowed_traits = TRAITS_BREATH | TRAITS_SPEED | TRAITS_HARDY | TRAITS_BLOOD
+	disallowed_traits = TRAITS_BREATH | TRAITS_SPEED | TRAITS_HARDY | TRAITS_BLOOD | TRAITS_BURN
 
 //prometheans.dm
 /datum/species/shapeshifter/promethean
