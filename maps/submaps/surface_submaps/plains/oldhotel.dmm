@@ -1,3 +1,5 @@
+"aa" = (/obj/structure/table/woodentable,/obj/item/weapon/cell/hyper,/obj/random/single,/obj/random/single,/turf/simulated/floor/wood,/area/submap/oldhotel)
+"ab" = (/obj/structure/closet/crate,/obj/random/cash,/obj/random/single,/turf/simulated/floor/wood,/area/submap/oldhotel)
 "ai" = (/obj/random/trash,/turf/simulated/floor/carpet/purcarpet,/area/submap/oldhotel)
 "aJ" = (/obj/item/weapon/towel/random,/obj/item/weapon/towel/random,/obj/structure/table/standard,/obj/item/weapon/storage/firstaid,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/oldhotel)
 "bb" = (/obj/machinery/light/small{dir = 4},/obj/item/device/multitool,/turf/simulated/floor/wood,/area/submap/oldhotel)
@@ -29,7 +31,6 @@
 "lj" = (/obj/structure/table/wooden_reinforced,/obj/item/weapon/material/kitchen/rollingpin,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/oldhotel)
 "ly" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/piratedouble,/turf/simulated/floor/wood,/area/submap/oldhotel)
 "lZ" = (/obj/structure/table/woodentable,/obj/item/trash/tray,/turf/simulated/floor/carpet/blue,/area/submap/oldhotel)
-"mr" = (/obj/structure/table/woodentable,/obj/random,/obj/random,/obj/item/weapon/cell/hyper,/turf/simulated/floor/wood,/area/submap/oldhotel)
 "mR" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/outdoors/dirt,/area/submap/oldhotel)
 "nD" = (/turf/simulated/floor,/area/submap/oldhotel)
 "nG" = (/obj/item/weapon/material/shard,/turf/simulated/floor/outdoors/dirt,/area/submap/oldhotel)
@@ -92,7 +93,6 @@
 "MD" = (/obj/effect/decal/cleanable/dirt,/obj/structure/simple_door/wood,/turf/simulated/floor/wood,/area/submap/oldhotel)
 "MU" = (/turf/template_noop,/area/submap/oldhotel)
 "Nu" = (/obj/random/soap,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/oldhotel)
-"OQ" = (/obj/structure/closet/crate,/obj/random,/obj/random/cash,/turf/simulated/floor/wood,/area/submap/oldhotel)
 "Pd" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/carpet/sblucarpet,/area/submap/oldhotel)
 "PO" = (/obj/machinery/space_heater,/turf/simulated/floor/wood/broken,/area/submap/oldhotel)
 "Qv" = (/obj/structure/table/woodentable,/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/obj/item/weapon/pen,/obj/item/weapon/pen,/turf/simulated/floor/wood,/area/submap/oldhotel)
@@ -124,7 +124,7 @@ gAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgAgA
 gAMUMUMUmRMUMUMUMUMUMUMUMUMUMUMUMUMUMUMUMUMUMUMUgA
 gAMUkwhQmRhQnGMUbWZGnDMUnGMUhQZGhQMUMUMUMUGNMUMUgA
 gAMUhQhQgoztvMdLwKhQhQdLYQdLhQhQhQhQZGMUMUMUMUMUgA
-gAMUhQBtTUSZqgqYJTzPqgqgJTqgmrZGaJsdhQMUMUMUMUMUgA
+gAMUhQBtTUSZqgqYJTzPqgqgJTqgaaZGaJsdhQMUMUMUMUMUgA
 gAMUZGYITUQvrKUUAUTUqgdajOvhTUhQdzSyZGMUMUMUMUMUgA
 gAMUZGGVWHSZQwGrqgqgSZopvRQGhcMDSyNuSLbWMUMUMUMUgA
 gAMUhQhQhQhQhQZGnDhQqglZtEQGSZhQVfGzhQwXMUMUMUMUgA
@@ -136,7 +136,7 @@ gAMUMUnDZGnDhQhQhQhQhcDNhQrbCxmREsCxJqCxMUCxMUMUgA
 gAMUwXhQhQDNRMTUrKhQSZdnnDljJqEsCxCxCxMUMUCxMUGNgA
 gAMUMUCxIkiUaiSGSfZGqgkWZGAcCxmRyjMUMUCxMUMUMUMUgA
 gAMUbWpnYQGkjayMzEhQSZGkhQUwJqCxCxJVMUMUMUMUMUMUgA
-gAMUMUnDZGOQqgWySZtnRQbbhQWDSywmCxeKCxCxMUCxMUMUgA
+gAMUMUnDZGabqgWySZtnRQbbhQWDSywmCxeKCxCxMUCxMUMUgA
 gAMUMUhQZGhQhQZGhQhQSZDNhQwVJqCxCxJVMUMUMUMUMUMUgA
 gAMUMUhQhQMkPOTUqgtnSZkWhQDxmRmREsMUMUMUMUMUMUMUgA
 gAMUMUCxdLDNPdkISehQSZdnhQDiSyzsCxCxMUMUMUMUMUMUgA
