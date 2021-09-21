@@ -36,16 +36,22 @@
 	if(panel_open)
 		add_overlay("sheater-open")
 	switch(state)
+		//CHOMPEdit start, fixing runtimes
 		if(SHEATER_OFF)
+			set_light(0)
 			set_light_on(FALSE)
 		if(SHEATER_STANDBY)
+			set_light(0)
 			set_light_on(FALSE)
 		if(SHEATER_HEAT)
 			set_light_color("#FFCC00")
+			set_light(1)
 			set_light_on(TRUE)
 		if(SHEATER_COOL)
 			set_light_color("#00ccff")
+			set_light(1)
 			set_light_on(TRUE)
+		//CHOMPEdit end
 
 /obj/machinery/space_heater/examine(mob/user)
 	. = ..()
