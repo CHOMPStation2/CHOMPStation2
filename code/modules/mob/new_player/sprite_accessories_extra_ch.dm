@@ -262,3 +262,103 @@
 	icon_add = 'icons/mob/human_face_ch_add.dmi'
 	icon_state = "hair_vox_yasu"
 	species_allowed = list(SPECIES_VOX)
+
+//Digitigrade markings
+/datum/sprite_accessory/marking/digi
+	icon = 'icons/mob/human_races/markings_digi_ch.dmi'
+
+/datum/sprite_accessory/marking/digi/fullleft
+	name = "Digitigrade Full Left Leg(Only works with digitigrade legs)"
+	icon_state = "full"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/fullright
+	name = "Digitigrade Full Right Leg(Only works with digitigrade legs)"
+	icon_state = "full"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/longsockleft
+	name = "Digitigrade Long Socks Left(Only works with digitigrade legs)"
+	icon_state = "longsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/longsockright
+	name = "Digitigrade Long Socks Right(Only works with digitigrade legs)"
+	icon_state = "longsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/medsockleft
+	name = "Digitigrade Medium Socks Left(Only works with digitigrade legs)"
+	icon_state = "medsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/medsockright
+	name = "Digitigrade Medium Socks Right(Only works with digitigrade legs)"
+	icon_state = "medsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/shortsockleft
+	name = "Digitigrade Short Socks Left(Only works with digitigrade legs)"
+	icon_state = "shortsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/shortsockright
+	name = "Digitigrade Short Socks Right(Only works with digitigrade legs)"
+	icon_state = "shortsock"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/toesleft
+	name = "Digitigrade Toes Left(Only works with digitigrade legs)"
+	icon_state = "toes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/toesright
+	name = "Digitigrade Toes Right(Only works with digitigrade legs)"
+	icon_state = "toes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/stripesleft
+	name = "Digitigrade Stripes Left(Only works with digitigrade legs)"
+	icon_state = "stripes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/stripesright
+	name = "Digitigrade Stripes Right(Only works with digitigrade legs)"
+	icon_state = "stripes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/smallspotsleft
+	name = "Digitigrade Small Spots Left(Only works with digitigrade legs)"
+	icon_state = "smallspots"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/smallspotsright
+	name = "Digitigrade Small Spots Right(Only works with digitigrade legs)"
+	icon_state = "smallspots"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/bigspotsleft
+	name = "Digitigrade Big Spots Left(Only works with digitigrade legs)"
+	icon_state = "bigspots"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/digi/bigspotsright
+	name = "Digitigrade Big Spots Right(Only works with digitigrade legs)"
+	icon_state = "bigspots"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_LEG,BP_R_FOOT)
