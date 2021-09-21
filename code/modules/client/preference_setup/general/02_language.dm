@@ -12,7 +12,7 @@
 	for(var/trait in pref.pos_traits)
 		if(trait==/datum/trait/positive/linguist)
 			morelang = 1
-			pref.num_languages = morelang * 12
+	pref.num_languages = morelang * 12
 	//CHOMPEdit End
 
 /datum/category_item/player_setup_item/general/language/save_character(var/savefile/S)
