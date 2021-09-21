@@ -50,11 +50,11 @@
 
 //protean_species.dm
 /datum/species/protean
-	disallowed_traits = TRAITS_BREATH | TRAITS_HEALTH | TRAITS_BLOOD
+	disallowed_traits = TRAITS_BREATH | TRAITS_HEALTH | TRAITS_BLOOD | TRAITS_PAIN
 
 //station.dm
 /datum/species/diona
-	disallowed_traits = TRAITS_SPEED | TRAITS_HARDY | TRAITS_ATTACK
+	disallowed_traits = TRAITS_SPEED | TRAITS_HARDY | TRAITS_ATTACK | TRAITS_PAIN
 
 /datum/species/unathi
 	disallowed_traits = TRAITS_HEALTH | TRAITS_BLOOD | TRAITS_HARDY | TRAITS_SPEED

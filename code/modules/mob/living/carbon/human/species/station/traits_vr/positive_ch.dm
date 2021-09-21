@@ -63,12 +63,14 @@
 	desc = "You are generally more resistant to radiation, and it dissipates faster from your body."
 	cost = 2
 	var_changes = list("radiation_mod" = 0.65, "rad_removal_mod" = 3.5, "rad_levels" = list("safe" = 20, "danger_1" = 75, "danger_2" = 100, "danger_3" = 200))
+	banned_species = list(SPECIES_PROMETHEAN)
 
 /datum/trait/positive/rad_resistance_extreme
 	name = "Extreme Radiation Resistance"
 	desc = "You are much more resistant to radiation, and it dissipates much faster from your body."
 	cost = 4
 	var_changes = list("radiation_mod" = 0.5, "rad_removal_mod" = 5, "rad_levels" = list("safe" = 40, "danger_1" = 100, "danger_2" = 150, "danger_3" = 250))
+	banned_species = list(SPECIES_PROMETHEAN)
 
 /datum/trait/positive/more_blood
 	name = "High blood volume"
@@ -101,6 +103,7 @@
 	name = "Table passer"
 	desc = "You move over or under tables with ease of a Teshari."
 	cost = 2
+	banned_species = list(SPECIES_TESHARI)
 
 /datum/trait/positive/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -327,3 +330,6 @@
 
 /datum/trait/positive/photoresistant_plus
 	trait_flags = TRAITS_FLASHMOD
+
+/datum/trait/positive/pain_tolerance_advanced
+	trait_flags = TRAITS_PAIN

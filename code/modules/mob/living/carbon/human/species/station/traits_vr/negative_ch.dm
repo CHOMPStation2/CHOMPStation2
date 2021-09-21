@@ -434,3 +434,9 @@
 
 /datum/trait/negative/light_sensitivity_plus
 	trait_flags = TRAITS_FLASHMOD
+
+/datum/trait/negative/pain_intolerance_basic
+	trait_flags = TRAITS_PAIN
+
+/datum/trait/negative/pain_intolerance_advanced
+	trait_flags = TRAITS_PAIN

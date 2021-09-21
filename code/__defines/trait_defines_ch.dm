@@ -7,3 +7,4 @@
 #define TRAITS_BLOOD (1<<4)
 #define TRAITS_BREATH (1<<5)
 #define TRAITS_FLASHMOD (1<<6)
+#define TRAITS_PAIN (1<<7)
