@@ -1,5 +1,5 @@
-"aa" = (/obj/structure/table/woodentable,/obj/item/weapon/cell/hyper,/obj/random/single,/obj/random/single,/turf/simulated/floor/wood,/area/submap/oldhotel)
-"ab" = (/obj/structure/closet/crate,/obj/random/cash,/obj/random/single,/turf/simulated/floor/wood,/area/submap/oldhotel)
+"aa" = (/obj/structure/table/woodentable,/obj/item/weapon/cell/hyper,/obj/random/coin,/obj/random/cash/huge,/turf/simulated/floor/wood,/area/submap/oldhotel)
+"ab" = (/obj/structure/closet/crate,/obj/random/cash,/obj/random/cigarettes,/turf/simulated/floor/wood,/area/submap/oldhotel)
 "ai" = (/obj/random/trash,/turf/simulated/floor/carpet/purcarpet,/area/submap/oldhotel)
 "aJ" = (/obj/item/weapon/towel/random,/obj/item/weapon/towel/random,/obj/structure/table/standard,/obj/item/weapon/storage/firstaid,/turf/simulated/floor/tiled/asteroid_steel,/area/submap/oldhotel)
 "bb" = (/obj/machinery/light/small{dir = 4},/obj/item/device/multitool,/turf/simulated/floor/wood,/area/submap/oldhotel)
