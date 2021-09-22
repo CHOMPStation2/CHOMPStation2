@@ -100,6 +100,8 @@
 		incorporeal_move = initial(incorporeal_move)
 		density = initial(density)
 		force_max_speed = initial(force_max_speed)
+		can_pull_size = initial(can_pull_size)
+		can_pull_mobs = initial(can_pull_mobs)
 		update_icon()
 
 		//Cosmetics mostly
@@ -138,6 +140,16 @@
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")
 		name = "Something"
+
+		if(l_hand)
+			unEquip(l_hand)
+		if(r_hand)
+			unEquip(r_hand)
+		if(back)
+			unEquip(back)
+
+		can_pull_size = 0
+		can_pull_mobs = MOB_PULL_NONE
 
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = FALSE
