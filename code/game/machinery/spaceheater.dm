@@ -45,11 +45,11 @@
 			set_light_on(FALSE)
 		if(SHEATER_HEAT)
 			set_light_color("#FFCC00")
-			set_light(1)
+			set_light(3)
 			set_light_on(TRUE)
 		if(SHEATER_COOL)
 			set_light_color("#00ccff")
-			set_light(1)
+			set_light(3)
 			set_light_on(TRUE)
 		//CHOMPEdit end
 
