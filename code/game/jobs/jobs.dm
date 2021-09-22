@@ -32,6 +32,7 @@ var/const/PATHFINDER 		=(1<<11) //VOREStation Add
 var/const/EXPLORER 			=(1<<12) //VOREStation Add
 var/const/SAR 				=(1<<13) //VOREStation Add
 var/const/XENOBOTANIST		=(1<<14) //VOREStation Add
+var/const/PILOT 			=(1<<15) //CHOMPStation EDIT
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -48,8 +49,7 @@ var/const/LAWYER			=(1<<9)
 var/const/CHAPLAIN			=(1<<10)
 var/const/ASSISTANT			=(1<<11)
 var/const/BRIDGE			=(1<<12)
-var/const/PILOT 			=(1<<13) //VOREStation Add
-var/const/ENTERTAINER		=(1<<14) //VOREStation Add
+var/const/ENTERTAINER		=(1<<13) //VOREStation Add
 
 var/list/assistant_occupations = list(
 )
