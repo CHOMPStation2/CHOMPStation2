@@ -21,6 +21,12 @@
 		if(NETWORK_TALON_HELMETS)
 			return access_talon
 		//VOREStation Add End
+		//CHOMPStation Add Start
+		if(NETWORK_SLEEPING_SLUG_SHIP)
+			return access_sleeping_slug
+		if(NETWORK_SLEEPING_SLUG_HELMETS)
+			return access_sleeping_slug
+		//CHOMPStation Add End
 
 	if(network in using_map.station_networks)
 		return access_security // Default for all other station networks
