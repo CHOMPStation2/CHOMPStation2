@@ -100,6 +100,10 @@
 		incorporeal_move = initial(incorporeal_move)
 		density = initial(density)
 		force_max_speed = initial(force_max_speed)
+		//CHOMPEdit begin - resetting pull ability after phasing back in
+		can_pull_size = initial(can_pull_size)
+		can_pull_mobs = initial(can_pull_mobs)
+		//CHOMPEdit end
 		update_icon()
 
 		//Cosmetics mostly
@@ -138,6 +142,18 @@
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")
 		name = "Something"
+
+		//CHOMPEdit begin - Unequipping slots when phasing in, and preventing pulling stuff while phased.
+		if(l_hand)
+			unEquip(l_hand)
+		if(r_hand)
+			unEquip(r_hand)
+		if(back)
+			unEquip(back)
+
+		can_pull_size = 0
+		can_pull_mobs = MOB_PULL_NONE
+		//CHOMPEdit end
 
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = FALSE
