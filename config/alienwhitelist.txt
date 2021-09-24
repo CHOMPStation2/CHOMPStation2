@@ -19,7 +19,24 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+||||||| parent of 367ccca45d... Merge pull request #11607 from ResidentCody/species-whitelist-update
+liache - Black-Eyed Shadekin
+lizehrd - Xenochimera
+lordlag - Black-Eyed Shadekin
+losstinspess - Xenochimera
+magpiemayhem - Vox
+marcobarko - Protean
+=======
+liache - Black-Eyed Shadekin
+lillianfyre - Xenochimera
+lizehrd - Xenochimera
+lordlag - Black-Eyed Shadekin
+losstinspess - Xenochimera
+magpiemayhem - Vox
+marcobarko - Protean
+>>>>>>> 367ccca45d... Merge pull request #11607 from ResidentCody/species-whitelist-update
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
