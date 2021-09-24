@@ -377,20 +377,6 @@
 					pref.job_engsec_med |= job.flag
 				if(3)
 					pref.job_engsec_low |= job.flag
-		/*/VOREStation Add //YW COMMENT OUT
-		if(TALON)
-			pref.job_talon_low &= ~job.flag
-			pref.job_talon_med &= ~job.flag
-			pref.job_talon_high &= ~job.flag
-			switch(level)
-				if(1)
-					reset_jobhigh()
-					pref.job_talon_high = job.flag
-				if(2)
-					pref.job_talon_med |= job.flag
-				if(3)
-					pref.job_talon_low |= job.flag
-		VOREStation Add End*/
 		// CHOMPStation Add
 		if(SLEEPING_SLUG)
 			pref.job_sleepingslug_low &= ~job.flag
@@ -405,6 +391,20 @@
 				if(3)
 					pref.job_sleepingslug_low |= job.flag
 		// CHOMPStation Add End
+		/*/VOREStation Add //YW COMMENT OUT
+		if(TALON)
+			pref.job_talon_low &= ~job.flag
+			pref.job_talon_med &= ~job.flag
+			pref.job_talon_high &= ~job.flag
+			switch(level)
+				if(1)
+					reset_jobhigh()
+					pref.job_talon_high = job.flag
+				if(2)
+					pref.job_talon_med |= job.flag
+				if(3)
+					pref.job_talon_low |= job.flag
+		VOREStation Add End*/
 
 	return 1
 

@@ -39,9 +39,9 @@ var/global/list/latejoin_sleeping_slug = list()
 //// The Sleeping Slug
 /obj/effect/overmap/visitable/ship/sleeping_slug
 	name = "ITV Sleeping Slug"
-	icon_state = "sleeping_slug_v2"
+	icon_state = "oberth_destroyer"
 	scanner_desc = @{"[i]Registration[/i]: ITV Sleeping Slug
-[i]Class[/i]: Frigate
+[i]Class[/i]: Trade Ship
 [i]Transponder[/i]: Transmitting (CIV)
 [b]Notice[/b]: Independent trader vessel"}
 	vessel_mass = 10000
@@ -66,7 +66,7 @@ var/global/list/latejoin_sleeping_slug = list()
 /obj/effect/overmap/visitable/ship/landable/sleeping_slug_boat
 	name = "ITV Sleeping Slug Shuttle"
 	desc = "A small shuttle from the ITV Sleeping Slug."
-	vessel_mass = 1000
+	vessel_mass = 100
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Sleeping Slug's Shuttle"
 
@@ -74,7 +74,7 @@ var/global/list/latejoin_sleeping_slug = list()
 /obj/effect/shuttle_landmark/shuttle_initializer/sleeping_slugboat
 	name = "Sleeping Slug's shuttle bay"
 	base_area = /area/sleeping_slug/hangar
-	base_turf = /turf/simulated/floor/reinforced
+	base_turf = /turf/simulated/floor/tiled/eris/dark/techfloor
 	landmark_tag = "offmap_spawn_sleeping_slugboat"
 	docking_controller = "sleeping_slug_boatbay"
 	shuttle_type = /datum/shuttle/autodock/overmap/sleeping_slugboat

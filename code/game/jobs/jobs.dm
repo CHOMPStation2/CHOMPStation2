@@ -51,18 +51,6 @@ var/const/ASSISTANT			=(1<<11)
 var/const/BRIDGE			=(1<<12)
 var/const/ENTERTAINER		=(1<<13) //VOREStation Add
 
-//CHOMPStation Add
-var/const/SLEEPING_SLUG		=(1<<3)
-
-var/const/SLEEP_SLUG_CAP	=(1<<0)
-var/const/SLEEP_SLUG_DOC	=(1<<1)
-var/const/SLEEP_SLUG_GUA	=(1<<2)
-var/const/SLEEP_SLUG_PIL	=(1<<3)
-var/const/SLEEP_SLUG_ENG	=(1<<4)
-//CHOMPStation Add End
-
-
-
 var/list/assistant_occupations = list(
 )
 
@@ -140,16 +128,6 @@ var/list/planet_positions = list(
 	"Field Medic" // VOREStation Edit - Field Medic
 )
 
-
-//CHOMPStation Add
-var/list/sleeping_slug_positions = list(
-	"Sleeping Slug Captain",
-	"Sleeping Slug Doctor",
-	"Sleeping Slug Guard",
-	"Sleeping Slug Pilot",
-	"Sleeping Slug Engineer"
-)
-//CHOMPStation Add End
 
 var/list/nonhuman_positions = list(
 	"AI",
