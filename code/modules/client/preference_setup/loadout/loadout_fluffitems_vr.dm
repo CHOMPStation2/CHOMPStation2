@@ -734,22 +734,6 @@
 	ckeywhitelist = list("pimientopyro")
 	character_name = list("Scylla Casmus")
 
-<<<<<<< HEAD
-||||||| parent of c5f5e58323... Merge pull request #11593 from PastelPrinceDan/fwuff
-/datum/gear/fluff/zaku_sweatervest
-	path = /obj/item/clothing/suit/varsity/green/sweater_vest
-	display_name = "Zaku's Sweater Vest"
-	slot = slot_wear_suit
-	ckeywhitelist = list("pimientopyro")
-	character_name = list("Zaku Fyodorovna")
-
-/datum/gear/fluff/kiyoshi_cloak
-	path = /obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing
-	display_name = "glowing cloak"
-	ckeywhitelist = list("pastelprincedan")
-	character_name = list("Kiyoshi Maki", "Masumi Maki")
-
-=======
 /datum/gear/fluff/zaku_sweatervest
 	path = /obj/item/clothing/suit/varsity/green/sweater_vest
 	display_name = "Zaku's Sweater Vest"
@@ -769,7 +753,6 @@
 	ckeywhitelist = list("pastelprincedan")
 	character_name = list("Masumi Maki")
 
->>>>>>> c5f5e58323... Merge pull request #11593 from PastelPrinceDan/fwuff
 //  Q CKEYS
 
 //  R CKEYS
