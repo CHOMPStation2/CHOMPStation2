@@ -46,7 +46,6 @@
 	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
 	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
 	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
-	B.disable_hud = TRUE						// CHOMPedit - Disable HUD when inside belly
 
 // Space edition, stronger and bitier
 /mob/living/simple_mob/animal/wolf/space

@@ -179,7 +179,6 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
 	B.belly_fullscreen_color = "#baca24" 		// CHOMPedit - Belly Fullscreen
 	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
-	B.disable_hud = TRUE						// CHOMPedit - Disable HUD when inside belly
 
 	B.emote_lists[DM_HOLD] = list(
 		"The air trapped within the solargrub is hot, humid, and tinged with ozone, but otherwise mercifully harmless to you aside from being heavy on the lungs.",
