@@ -9,3 +9,5 @@
 #define MAT_CARPET_PINK			"pink carpet"
 #define MAT_CARPET_PURPLE		"purple carpet"
 #define MAT_CARPET_ORANGE		"orange carpet"
+
+#define DEPARTMENT_SLEEP_SLUG	"ITV Sleeping Slug"

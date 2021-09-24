@@ -18,6 +18,11 @@
 	S["job_talon_med"]		>> pref.job_talon_med
 	S["job_talon_high"]		>> pref.job_talon_high
 	//VOREStation Add End
+	//CHOMPStation Add
+	S["job_sleepingslug_low"]		>> pref.job_sleepingslug_low
+	S["job_sleepingslug_med"]		>> pref.job_sleepingslug_med
+	S["job_sleepingslug_high"]		>> pref.job_sleepingslug_high
+	//CHOMPStation Add End
 	S["player_alt_titles"]	>> pref.player_alt_titles
 
 /datum/category_item/player_setup_item/occupation/save_character(var/savefile/S)
@@ -36,6 +41,11 @@
 	S["job_talon_med"]		<< pref.job_talon_med
 	S["job_talon_high"]		<< pref.job_talon_high
 	//VOREStation Add End
+	//CHOMPStation Add
+	S["job_sleepingslug_low"]		<< pref.job_sleepingslug_low
+	S["job_sleepingslug_med"]		<< pref.job_sleepingslug_med
+	S["job_sleepingslug_high"]		<< pref.job_sleepingslug_high
+	//CHOMPStation Add End
 	S["player_alt_titles"]	<< pref.player_alt_titles
 
 /datum/category_item/player_setup_item/occupation/sanitize_character()
@@ -54,6 +64,11 @@
 	pref.job_talon_med 		= sanitize_integer(pref.job_talon_med, 0, 65535, initial(pref.job_talon_med))
 	pref.job_talon_low 		= sanitize_integer(pref.job_talon_low, 0, 65535, initial(pref.job_talon_low))
 	//VOREStation Add End
+	//CHOMPStation Add
+	pref.job_sleepingslug_high		= sanitize_integer(pref.job_sleepingslug_high, 0, 65535, initial(pref.job_sleepingslug_high))
+	pref.job_sleepingslug_med 		= sanitize_integer(pref.job_sleepingslug_med, 0, 65535, initial(pref.job_sleepingslug_med))
+	pref.job_sleepingslug_low 		= sanitize_integer(pref.job_sleepingslug_low, 0, 65535, initial(pref.job_sleepingslug_low))
+	//CHOMPStation Add End
 	if(!(pref.player_alt_titles)) pref.player_alt_titles = new()
 
 	if(!job_master)
@@ -313,10 +328,12 @@
 	pref.job_medsci_med |= pref.job_medsci_high
 	pref.job_engsec_med |= pref.job_engsec_high
 	pref.job_talon_med |= pref.job_talon_high //VOREStation Add
+	pref.job_sleepingslug_med |= pref.job_sleepingslug_high //CHOMPStation Add
 	pref.job_civilian_high = 0
 	pref.job_medsci_high = 0
 	pref.job_engsec_high = 0
 	pref.job_talon_high = 0 //VOREStation Add
+	pref.job_sleepingslug_high = 0 //CHOMPStation Add
 
 // Level is equal to the desired new level of the job. So for a value of 4, we want to disable the job.
 /datum/category_item/player_setup_item/occupation/proc/SetJobDepartment(var/datum/job/job, var/level)
@@ -374,6 +391,20 @@
 				if(3)
 					pref.job_talon_low |= job.flag
 		VOREStation Add End*/
+		// CHOMPStation Add
+		if(SLEEPING_SLUG)
+			pref.job_sleepingslug_low &= ~job.flag
+			pref.job_sleepingslug_med &= ~job.flag
+			pref.job_sleepingslug_high &= ~job.flag
+			switch(level)
+				if(1)
+					reset_jobhigh()
+					pref.job_sleepingslug_high = job.flag
+				if(2)
+					pref.job_sleepingslug_med |= job.flag
+				if(3)
+					pref.job_sleepingslug_low |= job.flag
+		// CHOMPStation Add End
 
 	return 1
 
@@ -395,6 +426,12 @@
 	pref.job_talon_med = 0
 	pref.job_talon_low = 0
 	//VOREStation Add End
+
+	//CHOMPStation Add
+	pref.job_sleepingslug_high = 0
+	pref.job_sleepingslug_med = 0
+	pref.job_sleepingslug_low = 0
+	//CHOMPstation Add End
 
 	pref.player_alt_titles.Cut()
 

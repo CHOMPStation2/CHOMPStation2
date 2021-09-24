@@ -1,7 +1,7 @@
 // You probably don't want to tick this file yet.
 
 #if !defined(USING_MAP_DATUM)
-	
+
 	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that changes.
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
@@ -17,13 +17,14 @@
 	#include "shuttles/merc.dm"
 	#include "shuttles/ninja.dm"
 	#include "shuttles/ert.dm"
+	#include "southern_cross_jobs.dm"
 
 	#include "loadout/loadout_accessories.dm"
 	// #include "loadout/loadout_suit.dm"
 	// #include "loadout/loadout_uniform.dm"
 
 	#include "datums/supplypacks/munitions.dm"
-	
+
 	// #include "items/encryptionkey_sc.dm"
 	// #include "items/headset_sc.dm"
 	// #include "items/clothing/sc_suit.dm"
@@ -38,7 +39,7 @@
 	#include "turfs/outdoors.dm"
 	#include "overmap/sectors.dm"
 	#include "events/wildlife_encounter.dm"
-	
+
 	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
 
 	//CHOMPStation Edit Start TFF 25/3/20 - Station level map z-levels separated into 3 distinct files to work with MapDiffBot. All other files renamed accordingly.

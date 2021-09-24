@@ -14,6 +14,7 @@
 //#define Z_LEVEL_EMPTY_SPACE				12 //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand. Z_LEVEL_SURFACE and below have been decreased by 1 because byond fucks things if you don't do that.
 //Skip 13 and 14 for overmap stuff, I think???
 #define Z_LEVEL_FUELDEPOT				15
+#define Z_LEVEL_OFFMAP1					16
 
 /datum/map/southern_cross
 	name = "Southern Cross"
@@ -84,10 +85,12 @@
 							NETWORK_ALARM_ATMOS,
 							NETWORK_ALARM_POWER,
 							NETWORK_ALARM_FIRE,
-							NETWORK_SUPPLY
+							NETWORK_SUPPLY,
+							NETWORK_SLEEPING_SLUG_HELMETS,
+							NETWORK_SLEEPING_SLUG_SHIP
 							)
 	usable_email_tlds = list("freemail.nt")
-	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway")
+	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway","ITV Sleeping Slug Cryo")
 	default_skybox = /datum/skybox_settings/southern_cross
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
@@ -105,7 +108,8 @@
 
 	// Framework for porting Tether's lateload Z-Level system
 	lateload_z_levels = list(
-			list("Fuel Depot - Z1 Space") //Stock lateload maps
+			list("Fuel Depot - Z1 Space"), //Stock lateload maps
+			list("Offmap Ship - Sleeing Slug")
 			)
 
 	//CHOMPStation Addition End

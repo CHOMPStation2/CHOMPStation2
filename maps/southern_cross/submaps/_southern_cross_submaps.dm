@@ -29,6 +29,20 @@
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_BELT, 64, 64)         // Create the mining ore distribution map.
 
 */
+
+/datum/map_template/sc_lateload/offmap/sleeping_slug
+	name = "Offmap Ship - Sleeing Slug"
+	desc = "Offmap spawn ship, the Sleeing Slug."
+	mappath = 'maps/offmap_ch/sleepingslug/sleepingslug.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/sleeping_slug
+
+/datum/map_z_level/sc_lateload/sleeping_slug
+	name = "Sleeping Slug"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE
+	base_turf = /turf/space
+	z = Z_LEVEL_OFFMAP1
+
+
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 /// If you're reading this and want to add a new away mission, reference /tether/submaps/_tether_submaps.dm or existing away missions for how to set it up.

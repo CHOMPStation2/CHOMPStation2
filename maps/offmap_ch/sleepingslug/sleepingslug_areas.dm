@@ -36,6 +36,9 @@
 /area/sleeping_slug/central_hallway/star
 	name = "\improper Sleeping Slug - Central Starboard Hallway"
 	icon_state = "gray-s"
+/area/sleeping_slug/central_hallway/docking_arms
+	name = "\improper Sleeping Slug - Docking Arms Hallway"
+	icon_state = "gray-s"
 /area/sleeping_slug/bridge_hallway
 	name = "\improper Sleeping Slug - Bridge Hallway"
 	icon_state = "gray"
@@ -49,6 +52,12 @@
 	icon_state = "red"
 /area/sleeping_slug/hangar
 	name = "\improper Sleeping Slug - Hangar"
+	icon_state = "red"
+/area/sleeping_slug/cargo/bay_1
+	name = "\improper Sleeping Slug - Cargo Bay 1"
+	icon_state = "green"
+/area/sleeping_slug/cargo/bay_3
+	name = "\improper Sleeping Slug - Cargo Bay 3"
 	icon_state = "red"
 
 /area/sleeping_slug/engineering
@@ -71,6 +80,9 @@
 	icon_state = "dark-a"
 /area/sleeping_slug/engineering/generators
 	name = "\improper Sleeping Slug - Generator Core"
+	icon_state = "yellow"
+/area/sleeping_slug/engineering/shields
+	name = "\improper Sleeping Slug - Sheild Room"
 	icon_state = "yellow"
 
 /area/sleeping_slug/refining
@@ -117,4 +129,7 @@
 	icon_state = "gray"
 /area/sleeping_slug/crew_quarters/meditation
 	name = "\improper Sleeping Slug - Observation Room"
+	icon_state = "blue"
+/area/sleeping_slug/crew_quarters/cryo
+	name = "\improper Sleeping Slug - Cryo Storage"
 	icon_state = "blue"
