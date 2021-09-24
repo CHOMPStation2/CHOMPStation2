@@ -6,7 +6,7 @@
 /turf/template_noop,
 /area/submap/Diner)
 "ac" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/Diner)
 "ad" = (
 /turf/simulated/wall,
@@ -289,7 +289,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/Diner)
 "ba" = (
 /obj/effect/floor_decal/corner/red/diagonal,
