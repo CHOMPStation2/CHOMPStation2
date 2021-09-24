@@ -60,3 +60,12 @@ xioen - Xenochimera
 xonkon - Protean
 zalvine - Shadekin Empathy
 zammyman215 - Vox
+<<<<<<< HEAD
+||||||| parent of aa6241fe21... Merge pull request #11622 from Kittygorluwu/patch-1
+zeracyfr - Xenochimera
+spirit1299 - Black-Eyed Shadekin
+=======
+zeracyfr - Xenochimera
+spirit1299 - Black-Eyed Shadekin
+revolver_eloise - Protean
+>>>>>>> aa6241fe21... Merge pull request #11622 from Kittygorluwu/patch-1
