@@ -197,8 +197,16 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Default",
 					"Usagi-II" = "tall2standard",
 					"Pyralis" = "Glitterfly-Standard",
+<<<<<<< HEAD
 					"Miss M" = "miss-standard", // YW change, Added Miss M
 					"Decapod" = "decapod-Standard"
+||||||| parent of 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
+					"Decapod" = "decapod-Standard"
+=======
+					"Decapod" = "decapod-Standard",
+					"Pneuma" = "pneuma-Standard",
+					"Tower" = "drider-Standard"
+>>>>>>> 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
 					)
 
 
@@ -235,8 +243,16 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Surgeon",
+<<<<<<< HEAD
 					"Miss M" = "miss-medical", // YW change, Added Miss M
 					"Decapod" = "decapod-Surgeon"
+||||||| parent of 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
+					"Decapod" = "decapod-Surgeon"
+=======
+					"Decapod" = "decapod-Surgeon",
+					"Pneuma" = "pneuma-Surgeon",
+					"Tower" = "drider-Surgeon"
+>>>>>>> 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
 					)
 
 /obj/item/weapon/robot_module/robot/medical/surgeon/New()
@@ -313,8 +329,16 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Crisis",
+<<<<<<< HEAD
 					"Miss M" = "miss-medical", // YW change, Added Miss M
 					"Decapod" = "decapod-Crisis"
+||||||| parent of 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
+					"Decapod" = "decapod-Crisis"
+=======
+					"Decapod" = "decapod-Crisis",
+					"Pneuma" = "pneuma-Crisis",
+					"Tower" = "drider-Crisis"
+>>>>>>> 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
 					)
 
 /obj/item/weapon/robot_module/robot/medical/crisis/New()
@@ -392,7 +416,9 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-engineer",
 					"Usagi-II" = "tall2engineer",
 					"Pyralis" = "Glitterfly-Engineering",
-					"Decapod" = "decapod-Engineering"
+					"Decapod" = "decapod-Engineering",
+					"Pneuma" = "pneuma-Engineering",
+					"Tower" = "drider-Engineering"
 					)
 
 /obj/item/weapon/robot_module/robot/engineering/general/New()
@@ -507,8 +533,16 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Sec",
 					"Usagi-II" = "tall2security",
 					"Pyralis" = "Glitterfly-Security",
+<<<<<<< HEAD
 					"Miss M" = "miss-security", // YW change, Added Miss M
 					"Decapod" = "decapod-Security"
+||||||| parent of 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
+					"Decapod" = "decapod-Security"
+=======
+					"Decapod" = "decapod-Security",
+					"Pneuma" = "pneuma-Security",
+					"Tower" = "drider-Security"
+>>>>>>> 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
 					)
 
 /obj/item/weapon/robot_module/robot/security/general/New()
@@ -554,8 +588,16 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-janitor",
 					"Usagi-II" = "tall2janitor",
 					"Pyralis" = "Glitterfly-Janitor",
+<<<<<<< HEAD
 					"Miss M" = "miss-janitor", // YW change, Added Miss M
 					"Decapod" = "decapod-Janitor"
+||||||| parent of 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
+					"Decapod" = "decapod-Janitor"
+=======
+					"Decapod" = "decapod-Janitor",
+					"Pneuma" = "pneuma-Janitor",
+					"Tower" = "drider-Janitor"
+>>>>>>> 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
 					)
 
 /obj/item/weapon/robot_module/robot/janitor/New()
@@ -618,8 +660,16 @@ var/global/list/robot_modules = list(
 					"Drone - Hydro" = "drone-hydro",
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Service",
+<<<<<<< HEAD
 					"Miss M" = "miss-service", // YW change, Added Miss M
 					"Decapod" = "decapod-Service"
+||||||| parent of 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
+					"Decapod" = "decapod-Service"
+=======
+					"Decapod" = "decapod-Service",
+					"Pneuma" = "pneuma-Service",
+					"Tower" = "drider-Service"
+>>>>>>> 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
 				  	)
 
 /obj/item/weapon/robot_module/robot/clerical/butler/New()
@@ -674,7 +724,9 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-blu",
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Clerical",
-					"Decapod" = "decapod-Clerical"
+					"Decapod" = "decapod-Clerical",
+					"Pneuma" = "pneuma-Clerical",
+					"Tower" = "drider-Clerical"
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
@@ -713,8 +765,16 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-miner",
 					"Usagi-II" = "tall2miner",
 					"Pyralis" = "Glitterfly-Miner",
+<<<<<<< HEAD
 					"Miss M" = "miss-miner", // YW change, Added Miss M
 					"Decapod" = "decapod-Miner"
+||||||| parent of 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
+					"Decapod" = "decapod-Miner"
+=======
+					"Decapod" = "decapod-Miner",
+					"Pneuma" = "pneuma-Miner",
+					"Tower" = "drider-Miner"
+>>>>>>> 25cca4323c... Merge pull request #11567 from VOREStation/upstream-merge-8263
 				)
 
 /obj/item/weapon/robot_module/robot/miner/New()
@@ -745,7 +805,9 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Sci",
 					"Usagi-II" = "tall2peace",
 					"Pyralis" = "Glitterfly-Research",
-					"Decapod" = "decapod-Research"
+					"Decapod" = "decapod-Research",
+					"Pneuma" = "pneuma-Research",
+					"Tower" = "drider-Research"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()
