@@ -10,16 +10,8 @@
 "fw" = (/turf/template_noop,/area/submap/XenoHive)
 "fG" = (/obj/effect/alien/weeds,/turf/simulated/floor/tiled/steel_dirty,/area/submap/XenoHive)
 "fW" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/dirt,/obj/effect/map_effect/interval/sound_emitter/ballistic_gunfight,/turf/simulated/floor/outdoors/dirt,/area/submap/XenoHive)
-<<<<<<< HEAD
 "gO" = (/obj/structure/closet/secure_closet/egg/xenomorph,/obj/effect/alien/weeds,/obj/item/stolenpackage,/obj/item/organ/internal/heart,/obj/item/organ/internal/kidneys/vox,/obj/structure/reagent_dispensers/space_cleaner{pixel_y = 31},/turf/simulated/floor,/area/submap/XenoHive)
-"gS" = (/obj/effect/alien/resin/wall,/turf/simulated/mineral/ignore_mapgen,/area/template_noop)
-||||||| parent of a038bece89... Merge pull request #11522 from MisterGrimm/XenomorphOverhaul
-"gO" = (/obj/effect/alien/weeds,/obj/item/organ/internal/heart,/obj/item/organ/internal/kidneys/vox,/obj/structure/safe,/obj/random/multiple/gun/projectile/shotgun,/obj/random/contraband,/turf/simulated/floor,/area/submap/XenoHive)
-"gS" = (/obj/effect/alien/resin/wall,/turf/simulated/mineral/ignore_mapgen,/area/template_noop)
-=======
-"gO" = (/obj/effect/alien/weeds,/obj/item/organ/internal/heart,/obj/item/organ/internal/kidneys/vox,/obj/structure/safe,/obj/random/multiple/gun/projectile/shotgun,/obj/random/contraband,/turf/simulated/floor,/area/submap/XenoHive)
 "gS" = (/obj/structure/alien/wall,/turf/simulated/mineral/ignore_mapgen,/area/template_noop)
->>>>>>> a038bece89... Merge pull request #11522 from MisterGrimm/XenomorphOverhaul
 "hx" = (/obj/effect/alien/weeds,/obj/machinery/telecomms/broadcaster,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor,/area/submap/XenoHive)
 "im" = (/obj/item/stack/animalhide/xeno,/obj/effect/alien/weeds,/turf/simulated/floor/outdoors/rocks{outdoors = 0},/area/submap/XenoHive)
 "iF" = (/obj/structure/bed/chair{dir = 8},/obj/effect/alien/weeds,/obj/effect/gibspawner/human,/turf/simulated/floor/tiled/steel_dirty,/area/submap/XenoHive)
@@ -54,16 +46,8 @@
 "AB" = (/obj/structure/alien/wall,/turf/simulated/mineral/ignore_mapgen,/area/submap/XenoHive)
 "BD" = (/obj/structure/alien/membrane,/obj/effect/alien/weeds,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/XenoHive)
 "Cb" = (/obj/structure/bed/chair,/obj/effect/alien/weeds,/obj/effect/gibspawner/human,/turf/simulated/floor/tiled/steel_dirty,/area/submap/XenoHive)
-<<<<<<< HEAD
 "Ce" = (/obj/structure/closet/secure_closet/egg/xenomorph,/obj/effect/alien/weeds,/obj/random/maintenance/security,/obj/random/maintenance/security,/obj/random/maintenance/security,/obj/item/organ/internal/brain/alraune,/obj/item/organ/internal/eyes/replicant,/obj/item/weapon/gun/energy/gun/fluff/dominator,/turf/simulated/floor,/area/submap/XenoHive)
-"CR" = (/obj/effect/alien/resin/wall,/turf/simulated/floor/outdoors/dirt,/area/template_noop)
-||||||| parent of a038bece89... Merge pull request #11522 from MisterGrimm/XenomorphOverhaul
-"Ce" = (/obj/effect/alien/weeds,/obj/random/maintenance/security,/obj/random/maintenance/security,/obj/random/maintenance/security,/obj/item/organ/internal/eyes/replicant,/obj/structure/safe,/obj/random/multiple/gun/projectile/rifle,/obj/random/contraband,/turf/simulated/floor,/area/submap/XenoHive)
-"CR" = (/obj/effect/alien/resin/wall,/turf/simulated/floor/outdoors/dirt,/area/template_noop)
-=======
-"Ce" = (/obj/effect/alien/weeds,/obj/random/maintenance/security,/obj/random/maintenance/security,/obj/random/maintenance/security,/obj/item/organ/internal/eyes/replicant,/obj/structure/safe,/obj/random/multiple/gun/projectile/rifle,/obj/random/contraband,/turf/simulated/floor,/area/submap/XenoHive)
 "CR" = (/obj/structure/alien/wall,/turf/simulated/floor/outdoors/dirt,/area/template_noop)
->>>>>>> a038bece89... Merge pull request #11522 from MisterGrimm/XenomorphOverhaul
 "De" = (/obj/effect/alien/weeds,/obj/effect/gibspawner/human,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/XenoHive)
 "Dh" = (/mob/living/simple_mob/animal/space/alien/sentinel,/obj/effect/alien/weeds,/turf/simulated/floor/outdoors/dirt{outdoors = 0},/area/submap/XenoHive)
 "Et" = (/turf/simulated/mineral/ignore_mapgen,/area/submap/XenoHive)
