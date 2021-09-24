@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "a" = (/turf/template_noop,/area/template_noop)
 "b" = (/obj/effect/alien/resin/wall,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
 "c" = (/obj/structure/simple_door/resin,/obj/effect/alien/weeds,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
@@ -20,3 +21,50 @@ abbfedbba
 aabbcbbaa
 aaaaaaaaa
 "}
+||||||| parent of a038bece89... Merge pull request #11522 from MisterGrimm/XenomorphOverhaul
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/effect/alien/resin/wall,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"c" = (/obj/structure/simple_door/resin,/obj/effect/alien/weeds,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"d" = (/obj/effect/alien/weeds,/obj/structure/bed/nest,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"e" = (/obj/effect/alien/weeds,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"f" = (/obj/effect/alien/weeds,/mob/living/simple_mob/animal/space/alien/drone,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"g" = (/obj/effect/alien/weeds/node,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"h" = (/obj/effect/alien/weeds,/obj/random/multiple/minevault,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"i" = (/obj/effect/alien/weeds,/mob/living/simple_mob/animal/space/alien,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"j" = (/obj/effect/alien/weeds,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+
+(1,1,1) = {"
+aaaaaaaaa
+aabbcbbaa
+abbdefbba
+abdeeghba
+aciejeica
+abhgeedba
+abbfedbba
+aabbcbbaa
+aaaaaaaaa
+"}
+=======
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/structure/alien/wall,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"c" = (/obj/structure/simple_door/resin,/obj/effect/alien/weeds,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"d" = (/obj/effect/alien/weeds,/obj/structure/bed/nest,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"e" = (/obj/effect/alien/weeds,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"f" = (/obj/effect/alien/weeds,/mob/living/simple_mob/animal/space/alien/drone,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"g" = (/obj/effect/alien/weeds/node,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"h" = (/obj/effect/alien/weeds,/obj/random/multiple/minevault,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"i" = (/obj/effect/alien/weeds,/mob/living/simple_mob/animal/space/alien,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+"j" = (/obj/effect/alien/weeds,/turf/simulated/mineral/floor/ignore_mapgen,/area/submap/cave/vault4)
+
+(1,1,1) = {"
+aaaaaaaaa
+aabbcbbaa
+abbdefbba
+abdeeghba
+aciejeica
+abhgeedba
+abbfedbba
+aabbcbbaa
+aaaaaaaaa
+"}
+>>>>>>> a038bece89... Merge pull request #11522 from MisterGrimm/XenomorphOverhaul
