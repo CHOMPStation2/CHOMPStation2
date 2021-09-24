@@ -1,3 +1,38 @@
 # Job whitelist in format ckey - jobname
 # Like arokha - clown
+<<<<<<< HEAD
 
+||||||| parent of 8e9545452f... Merge pull request #11550 from Very-Soft/whitelistupdates
+awkwarddryad - mime
+akram - clown
+amshaegaar - mime
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+joey4298 - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+=======
+awkwarddryad - mime
+akram - clown
+amshaegaar - mime
+seiga - mime
+silvertalismen - clown
+suicidalpickles - mime
+joey4298 - mime
+whiskyrose - clown
+tinybear16 - clown
+chargae - mime
+verkister - clown
+H0lySquirr3l - clown
+sgtryder - mime
+tygertac - clown
+radishfriend - clown
+siennaathens - clown
+>>>>>>> 8e9545452f... Merge pull request #11550 from Very-Soft/whitelistupdates

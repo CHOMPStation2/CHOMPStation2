@@ -11,6 +11,23 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+||||||| parent of 8e9545452f... Merge pull request #11550 from Very-Soft/whitelistupdates
+camanis - Protean
+cgr - Protean
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+comradenitro - Protean
+=======
+camanis - Protean
+cgr - Protean
+chaosdoomsday - Black-Eyed Shadekin
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+comradenitro - Protean
+>>>>>>> 8e9545452f... Merge pull request #11550 from Very-Soft/whitelistupdates
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
