@@ -128,6 +128,9 @@
 	B.vore_verb = "slurp"
 	B.contamination_color = "grey"
 	B.contamination_flavor = "Wet"
+	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
+	B.disable_hud = TRUE						// CHOMPedit - Disable HUD when inside belly
 
 	B.emote_lists[DM_HOLD] = list(
 		"The wolf's idle wandering helps its stomach gently churn around you, slimily squelching against your figure.",

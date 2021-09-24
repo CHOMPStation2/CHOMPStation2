@@ -55,6 +55,21 @@
 	vore_pounce_chance = 40
 	vore_default_mode = DM_HOLD
 	vore_icons = SA_ICON_LIVING
+	
+/mob/living/simple_mob/vore/fennec/init_vore() // CHOMPEdit - Allow for customizing bellies on vorecritters
+	if(!voremob_loaded)
+		return
+	. = ..()
+	
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.desc = "Warm, slick, and wet. You're somewhere hot, tight, and very cramped, unless you happen to somehow be smaller than the fennec you're in! It's hard to see, as rippling pink walls clench and smother over your form. If you don't want to be here, a newspaper from a friend ought to get you out. ...right?"
+	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
+	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
+	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
+	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
+	B.disable_hud = TRUE						// CHOMPedit - Disable HUD when inside belly
 
 /datum/say_list/fennec
 	speak = list("SKREEEE!","Chrp?","Ararrrararr.")

@@ -74,6 +74,12 @@
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "In a cruel game of cat-and-mouse gone horribly wrong, you struggle to breathe clearly as the giant rat holds your head in its jaws, the rest of its bulk pinning you to the ground. Slimy slurps and its own muffled squeaking fill your senses as it simultaneously tosses its head while backing up. Quickly, ravenously consuming you, bit by bit, packing you down its gullet no matter how you struggle. Passing by its excited heartbeat, your thoroughly slickened head pushes out into its awaiting stomach, a dark and humid hammock eager to accept the rest of you. Soon, those too-warm, plush walls clench and squeeze around you with undeniable need! A need for mere filling, or, perhaps, a proper meal?"
+	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
+	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
+	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
+	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
+	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
+	B.disable_hud = TRUE						// CHOMPedit - Disable HUD when inside belly
 
 	B.emote_lists[DM_HOLD] = list(
 		"As time passes, the massive rat’s stomach slowly churns and squeezes down around you, packing you into an easier to carry bundle amidst that oddly soothing massage.",
