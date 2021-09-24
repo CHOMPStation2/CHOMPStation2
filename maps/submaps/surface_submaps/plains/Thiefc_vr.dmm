@@ -75,14 +75,8 @@
 /obj/random/firstaid,
 /obj/random/firstaid,
 /obj/random/firstaid,
-<<<<<<< HEAD
 /obj/random/firstaid,
 /turf/simulated/floor/outdoors/dirt{
-||||||| parent of efffd2d5c1... Merge pull request #11606 from KillianKirilenko/kk-pois2
-/turf/simulated/floor/outdoors/dirt{
-=======
-/turf/simulated/floor/outdoors/dirt/virgo3b{
->>>>>>> efffd2d5c1... Merge pull request #11606 from KillianKirilenko/kk-pois2
 	outdoors = 0
 	},
 /area/submap/Thiefc)
@@ -109,14 +103,8 @@
 /obj/vehicle/train/trolley,
 /obj/random/multiple/voidsuit,
 /obj/random/multiple/voidsuit,
-<<<<<<< HEAD
 /obj/random/multiple/voidsuit,
 /turf/simulated/floor/outdoors/dirt{
-||||||| parent of efffd2d5c1... Merge pull request #11606 from KillianKirilenko/kk-pois2
-/turf/simulated/floor/outdoors/dirt{
-=======
-/turf/simulated/floor/outdoors/dirt/virgo3b{
->>>>>>> efffd2d5c1... Merge pull request #11606 from KillianKirilenko/kk-pois2
 	outdoors = 0
 	},
 /area/submap/Thiefc)
@@ -135,30 +123,14 @@
 /obj/structure/closet/crate,
 /obj/item/weapon/storage/box/shotgunammo,
 /obj/item/weapon/storage/box/practiceshells,
-<<<<<<< HEAD
 /obj/item/weapon/grenade/spawnergrenade/manhacks/station,
 /turf/simulated/floor/outdoors/dirt{
-||||||| parent of efffd2d5c1... Merge pull request #11606 from KillianKirilenko/kk-pois2
-/turf/simulated/floor/outdoors/dirt{
-=======
-/turf/simulated/floor/outdoors/dirt/virgo3b{
->>>>>>> efffd2d5c1... Merge pull request #11606 from KillianKirilenko/kk-pois2
 	outdoors = 0
 	},
 /area/submap/Thiefc)
-<<<<<<< HEAD
 "u" = (
 /mob/living/simple_mob/humanoid/merc/ranged/virgo,
 /turf/simulated/floor/outdoors/dirt{
-||||||| parent of efffd2d5c1... Merge pull request #11606 from KillianKirilenko/kk-pois2
-"B" = (
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
-/turf/simulated/floor/outdoors/dirt{
-=======
-"B" = (
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
-/turf/simulated/floor/outdoors/dirt/virgo3b{
->>>>>>> efffd2d5c1... Merge pull request #11606 from KillianKirilenko/kk-pois2
 	outdoors = 0
 	},
 /area/submap/Thiefc)
