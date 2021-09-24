@@ -565,7 +565,7 @@ I think I covered everything.
 	contamination_flavor = "Wet"
 	vore_verb = "slurp"
 	belly_fullscreen_color = "#711e1e" //CHOMPedit
-	B.disable_hud = TRUE						// CHOMPedit - Disable HUD when inside belly
+	disable_hud = TRUE						// CHOMPedit - Disable HUD when inside belly
 
 /obj/belly/dragon/maw
 	name = "Maw"
