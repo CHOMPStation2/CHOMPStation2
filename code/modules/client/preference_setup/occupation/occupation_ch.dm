@@ -43,3 +43,15 @@
 	pref.job_sleepingslug_high = 0
 	pref.job_sleepingslug_med = 0
 	pref.job_sleepingslug_low = 0
+
+/datum/preferences/proc/GetJobDepartment(var/datum/job/job, var/level)
+	..()
+	switch(job.department_flag)
+		if(SLEEPING_SLUG)
+			switch(level)
+				if(1)
+					return job_sleepingslug_high
+				if(2)
+					return job_sleepingslug_med
+				if(3)
+					return job_sleepingslug_low

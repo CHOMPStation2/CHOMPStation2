@@ -465,4 +465,12 @@
 					return job_engsec_med
 				if(3)
 					return job_engsec_low
+		if(SLEEPING_SLUG)
+			switch(level)
+				if(1)
+					return job_sleepingslug_high
+				if(2)
+					return job_sleepingslug_med
+				if(3)
+					return job_sleepingslug_low
 	return 0
