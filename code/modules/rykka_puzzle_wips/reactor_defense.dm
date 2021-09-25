@@ -41,6 +41,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	var/list/waves = list(1)						// Total amount of waves we'll have, and what mob lists we'll use PER wave. Add more entries to the list to increase the # of waves.
 													// The # (for instance, 1) NEEDS to match with the # of lists in wave_mobs. For instance, if list(1,2,3), we need to have wave_mobs with 3 list(/mob/blah) in it. Ask for help if you're not sure. 
 	var/current_wave = 0							// The wave we're on currently. (Needed if # of waves is > 1). We start at 0 to allow ticking up and counting correctly.
+	var/mobs_per_wave_spawner = 6					// How many mobs we want EACH individual wave spawner to be able to spawn at maximum during ACTIVE waves. Default is 6.
+	var/mobs_per_warmup_spawner = 4					// How many mobs we want EACH individual wave spawner to be able to spawn at maximum during WARMUP sequences. Default is 4.
 	var/warmup = TRUE								// Does the reactor require a "warmup"/prep time before the waves start?
 	var/warmup_time = 30 SECONDS					// How long is our warmup period?
 	var/warmup_complete = null						// When is warmup complete? This is set in start_warmup()
@@ -49,6 +51,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	// var/area_defense = FALSE						// Are we using area defense as well as object defense? (IE, you must stay inside /area/ during the waves.) Currently nonfunctional, will re-evaluate after core functions complete.
 	var/verification_required = TRUE				// Are users required to verify by hitting a button or typing in a phrase? (This is an AFK/cheese anti-measure, DO NOT DISABLE without a counter in place.)
 	var/verification_time = 90 SECONDS				// How long are we allowing users to have during the verification step?
+	var/verification_dangerous = FALSE				// Do spawners continue to run during verification?
 	var/verification_timeout = null					// When does verification timeout/fail? This is set in start_verification()
 	var/key_difficulty = 2							// How hard of a word/phrase do we require users to type in. Ranges from 1 (very easy) to 5 (very hard).
 	var/chosen_phrase = null						// What phrase did we pick to use for verification? This is set in choose_phrase() and uses key_difficulty as an argument to set the difficulty!
@@ -56,17 +59,22 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	var/threshold_enabled = FALSE					// Is the requirement to keep the reactor above x hp enabled?
 	var/damage_threshold = 0						// This is configurable, allowing you to choose if you want players to keep the reactor above x amount of HP. Formula checks health < damage_threshold, so 1500 threshold means once reactor hits 1499 HP you fail.
 	var/continuous_defense = FALSE					// Are we immediately going to start the next warmup/wave without giving explorers a break? If FALSE, this will kick the reactor back to IDLE and require explorers to hit the button to start the next wave.
+	var/level_1_keys = list("wolf, left, right")	// Level 1 difficulty typed keys. Keep these SHORT. "Wolf, Left, Up, Down."
+	var/level_2_keys = list("wolf, left, right")	// Level 2 difficulty typed keys. Keep these semi-short. "Wolfpaw, Leftface, Downwind"
+	var/level_3_keys = list("wolf, left, right")	// Level 3 difficulty typed keys. Keep these medium-length. "Wolf's Paw, Eager Snout, Wild Dog"
+	var/level_4_keys = list("wolf, left, right")	// Level 4 difficulty typed keys. Keep these longer-med-length. "Wolf's Paw Strike, Eager-footed wolf, Wild Dog's Hunting Call."
+	var/level_5_keys = list("wolf, left, right")	// Level 5 difficulty typed keys. Keep these full-length phrases. "Midsummers Hammer strikes hard on the eve, The wolf's scent permeates the air, Howls pierce the full-moonlit night", etc
 	
 	
 	/* 	== TGUI Variables. == */
 	// This is the current tab we're on, used for the UI/Menu.
-	var/current_tab = IDLE
+	var/current_screen = IDLE
 	
 	/* 	== Powergen Variables. == */
 	// Be careful what you change and read the comments so you understand what each item is doing.
 	var/current_power_gen = 0						// The amount of power we are currently generating. This is done via math to prevent instantly jumping to 1.0/2.5 MW on reactor steps.
-	var/warmup_power_gen = 1.0 MEGAWATTS 			// The amount of power we output during warmup steps. Could probably be done via math, but this allows user configuration better.
-	var/full_power_gen = 2.5 MEGAWATTS 				// [lore-name] reactors were built for ships or stations. They should output power roughly equivalent.
+	var/warmup_power_gen = 1.0 MEGAWATTS 			// The MAX amount of power we output during warmup steps. Could probably be done via math, but this allows user configuration better.
+	var/full_power_gen = 2.5 MEGAWATTS 				// The MAX amount of power we output during full-power/"active" states. [lore-name] reactors were built for ships or stations. They should output power roughly equivalent.
 	var/max_safe_temperature = 1500					// Max safe temperature (in Kelvin) before overheating starts and we start to take damage! 
 													// For parlance, 20C is 293.15k, our reactor can go up to 1500k. Based on a nuclear reactor's max safe temp of 2,200F, roughly 1204.444C, or 1500k
 	var/temperature = 0								// The current temperature of the reactor!
@@ -100,7 +108,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	var/delayed_spawns = FALSE		// Are we delaying our spawns?
 	var/spawn_delay = 0.5 SECONDS 	// How long is our delay?
 	
-/obj/machinery/power/damaged_reactor/Initialize()
+/obj/machinery/power/damaged_reactor/Initialize(mapload)
 	// Copying code from parent because we want to avoid adding ourselves to processing until LateInit.
 	global.machines += src
 	if(ispath(circuit))
@@ -281,7 +289,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	data["maxhealth"] = maxhealth
 	data["wave"] = current_wave
 	data["warmup_enabled"] = warmup
-	data["currentTab"] = current_tab
+	data["currentTab"] = current_screen
 	data["warmup_time_left"] = (warmup_complete - world.time) / 10 // We want to take the TOTAL time and subtract the CURRENT time, then divide it, to get our fancy UI percentage/time.
 	data["wave_time_left"] = (wave_complete - world.time) / 10 // Same as above method, but for wave time.
 	data["verification_time_left"] = (verification_timeout - world.time) / 10 // Same as above 2, for our verification timeout parameter.
@@ -302,18 +310,19 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 		
 	if(action == "Engage Reactor")
 		if(!warmup) // If we do not have warmup set to TRUE, then we go right to starting the waves.
-			current_tab = ENGAGED
+			current_screen = ENGAGED
 			state = ENGAGED
 			to_world("<span class='danger'><big>DEBUG: DEFENSE MODE ENGAGED.</big></span>")
 		else
-			current_tab = WARMUP
+			current_screen = WARMUP
 			state = WARMUP
 			to_world("<span class='danger'><big>DEBUG: WARMUP STARTED.</big></span>")
 	if(action == "submit_verification" && state == VERIFYING)
-		if(string_verification_wants == params["string"])
+		/* if(chosen_phrase == entered["string"]) // Commenting out this, I'm not sure how to feed data IN from TGUI to match the player-input string against the chosen_phrase
 			verification_successful = TRUE
+			chosen_phrase = null // Reset our chosen_phrase - we'll re-decide it next time we call choose_phrase()
 		else
-			
+			*/
 
 //////////////////////////////////////////////////////////////////
 /*		=====		TGUI Menu Stuff Ends Here		=====		*/
@@ -333,7 +342,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	
 	health = max(0, health - damage) // This formula is our health AFTER taking damage.
 	
-	if(health <= 0)
+	if(health <= 0 || health < damage_threshold)
 		failure_state() // You let it take too much damage!
 	else
 		if(sound_effect)
@@ -493,8 +502,8 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 		
 	active_defense = TRUE // We set this here just in case to allow the reactor to start taking damage.
 	
-	setup_spawner(current_wave, 6) 	// We're starting a new wave, so we need to setup the spawners. We feed current_wave in as the argument because it's converted to a #, and setup_spawner will read it as setup_spawner(1) and use the list from 1, then 2, etc. 
-									// We use 6 for simultaneous spawns to counter if warmup_dangerous is enabled, because our spawners will have 4 set by the call from that proc.
+	setup_spawner(current_wave, mobs_per_wave_spawner) 	// We're starting a new wave, so we need to setup the spawners. We feed current_wave in as the argument because it's converted to a #, and setup_spawner will read it as setup_spawner(1) and use the list from 1, then 2, etc. 
+														// We fetch the current mobs-per-spawner count for simultaneous spawns to counter if warmup_dangerous is enabled, because our spawners will have (potentially) a different number set by the call from that proc.
 	
 	to_world("Wave started!")
 	
@@ -504,7 +513,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	
 /obj/machinery/power/damaged_reactor/proc/end_wave()
 	if(verification_required && state == ENGAGED) // If we're required to verify, and we just concluded a wave (to prevent failure_state sending us here somehow), progress to verification and let that handle ending the gamemode if it's over x amount.
-		current_tab = VERIFYING
+		current_screen = VERIFYING
 		state = VERIFYING
 		active_defense = FALSE
 	else if(state == ENGAGED) // Else, if we don't require verifying, and just concluded a wave, then we can end the mode if we're over our waves list, or reset the reactor back to idle before the next wave if continous_defense is false.
@@ -551,7 +560,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	set_lights("#916508") // Set our mood lighting!
 	
 	if(warmup_dangerous) // Are our warmups intended to be dangerous? Setup on the reactor itself.
-		setup_spawner(current_wave, 4) // We use current_wave for the list of mobs, and the total number of spawns allowed PER spawner to 4 - down from 6. Warmups are not scot-free!
+		setup_spawner(current_wave, mobs_per_warmup_spawner) // We use current_wave for the list of mobs, and the total number of spawns allowed PER spawner to whatever mobs_per_warmup_spawner has. Warmups are not scot-free!
 		start_spawning()
 
 /obj/machinery/power/damaged_reactor/proc/complete_warmup()
@@ -564,6 +573,9 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	
 /obj/machinery/power/damaged_reactor/proc/start_verification()
 	verification_timeout = world.time + verification_time // When is verification complete?
+	
+	if(!verification_dangerous) // Are we NOT dangerous?
+		stop_spawning()
 	
 	to_world("Verification Phase Started!")
 	
@@ -588,6 +600,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	else // Otherwise, return the reactor to it's initial menu.
 		state = IDLE
 		active_defense = FALSE
+	// Note that in the above if/else, we do not directly call start/end wave or warmup. The STATE var and obj processing SS handles that for us.
 	
 	to_world("Verification Phase Timed Out!")
 	
@@ -616,23 +629,23 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	
 // Start Utility Procs Here:
 	
-/obj/machinery/power/damaged_reactor/proc/choose_phrase(var/difficulty)
+/obj/machinery/power/damaged_reactor/proc/choose_phrase(var/difficulty) // We allow for passing difficulty through manually if a GM/Admin decides to call it for w/e reason.
 	if(key_difficulty > 5 || key_difficulty < 1)
-		log_runtime(EXCEPTION("Reactor Key Difficulty: [key_difficulty] was out of range (1-5 range). Check what your key is set to, and keep it within the valid range! We are manually setting the key to 2 to keep the mode going!"))
+		log_runtime(EXCEPTION("Reactor Key Difficulty: [key_difficulty] from Reactor [reactor_id] was out of range (1-5 range). Check what your key is set to, and keep it within the valid range! We are manually setting the key to 2 to keep the mode going!"))
 		visible_message("Bug report on Github that Key Difficulty: [key_difficulty] on Reactor [reactor_id] was out of range! It should be a 1-5 range!")
 		key_difficulty = 2
 	
 	switch(key_difficulty)
 		if(1)
-			chosen_phrase = 
+			chosen_phrase = pick(level_1_keys)
 		if(2)
-			chosen_phrase = 
+			chosen_phrase = pick(level_2_keys)
 		if(3)
-			chosen_phrase = 
+			chosen_phrase = pick(level_3_keys)
 		if(4)
-			chosen_phrase = 
+			chosen_phrase = pick(level_4_keys)
 		if(5)
-			chosen_phrase = 
+			chosen_phrase = pick(level_5_keys)
 	
 /obj/machinery/power/damaged_reactor/proc/set_lights(var/color) // Call this with color as the argument (the item inside parenthesis) to set your lights at the start of wave/warmup.
 	var/area/area = get_area(src)
@@ -663,33 +676,38 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 		light.brightness_power = initial(light.brightness_power) // Reset lights to what they were before.
 		light.update()
 		
-/obj/machinery/power/damaged_reactor/proc/reset_reactor(var/waves, var/warmup = TRUE) // Called to reset our reactor to initial state, and re-add us to object processing. Primarily intended for the training reactor, or for admins/GM's to be able to reset the reactor easily for events.
+/obj/machinery/power/damaged_reactor/proc/reset_reactor(var/wave_amount, var/warmup_enabled = TRUE) // Called to reset our reactor to initial state, and re-add us to object processing. Primarily intended for the training reactor, or for admins/GM's to be able to reset the reactor easily for events.
 	state = IDLE // Do this first, so SSobj doesn't immediately force us right back out of processing.
 	current_wave = 0 // Reset our current wave to 0.
 	
-	waves.len = waves
+	if(wave_amount > wave_mobs.len)
+		to_chat(usr, "<span class='danger'><big>You set the wave amount out of max range of the length of the mob waves list! Fix the moblist or the wave length list! We'll safety-reset waves to match the moblist for now!")
+		wave_amount = waves.len
 	
-	warmup = warmup
+	wave_amount = waves.len 
+	
+	warmup_enabled = warmup
 	
 	reset_lights() // Reset the lights in our area to default.
 	
 	stop_spawning() // Just in case we're somehow still active, turn our spawners off.
 	
 	setup_spawner(1, 6) // We're going to call this to set our wave mob list back to where it should be, as well as setting the spawner back to it's default "6" mobs. We hardcode 1 because if you tell a list to return to 0, you've effectively said "look at 0 for our wave" and it won't find anything. 1 is the first entry in a list.
+						// We also hardcode the number of spawned mobs to 6, because it'll be overriden by start_warmup() or start_wave() calls, and if for some reason, it isn't, this prevents a null exception here.
 	
 	START_PROCESSING(SSobj, src) // We're immediately going to flip over to processing. This comes LAST so all variables can safely be reset first.
 	
 /obj/machinery/power/damaged_reactor/proc/check_clearance(var/tiles) // This proc is called by the defense_mode() and warmup() procs - what this does is check if we've got space around us, in x amount of tiles. This is to prevent explorers from walling us in and getting a 'free' win.
 	
 
-/obj/machinery/power/damaged_reactor/proc/setup_spawner(var/wavenumber, var/simultaneous_spawns = 6) // This proc is called when we're swapping over from one wave to the next - this 'preps' the mobs in the spawners.
+/obj/machinery/power/damaged_reactor/proc/setup_spawner(var/wavenumber, var/simultaneous_spawns = 6) // This proc is called when we're swapping over from one wave to the next - this 'preps' the mobs in the spawners. Default is 6 to prevent null from being passed.
 	for(var/obj/effect/spawner/wave_spawner/spawner in spawners)
-		spawner.spawn_types = wave_mobs[wavenumber] // Switch our mobs to the entry in this list!
-		spawner.delayed_spawns = delayed_spawns
-		spawner.spawn_delay = spawn_delay
-		spawner.simultaneous_spawns = simultaneous_spawns
-		spawner.faction = faction 			// May as well update this here at the same time, just in case it was changed between waves.
-		spawner.atmos_comp = atmos_comp 	// May as well update this here at the same time, just in case it was changed between waves.
+		spawner.spawn_types = wave_mobs[wavenumber] 			// Switch our mobs to the entry in this list!
+		spawner.delayed_spawns = delayed_spawns 				// Are we delaying spawns? Tell the spawner that.
+		spawner.spawn_delay = spawn_delay						// What is our spawn delay? If we want to modify that for some reason, it's fed to the spawners here.
+		spawner.simultaneous_spawns = simultaneous_spawns		// How many spawns can we handle simultaneously?
+		spawner.faction = faction 								// May as well update this here at the same time, just in case it was changed between waves.
+		spawner.atmos_comp = atmos_comp 						// May as well update this here at the same time, just in case it was changed between waves.
 		
 /obj/machinery/power/damaged_reactor/proc/start_spawning()
 	for(var/obj/effect/spawner/wave_spawner/spawner in spawners)
