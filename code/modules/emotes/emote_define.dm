@@ -42,8 +42,14 @@ var/global/list/emotes_by_key
 	var/check_range                                     // falsy, or a range outside which the emote will not work
 	var/conscious = TRUE                                // Do we need to be awake to emote this?
 	var/emote_range = 0                                 // If >0, restricts emote visibility to viewers within range.
+<<<<<<< HEAD
 	
 	var/sound_preferences = list(/datum/client_preference/emote_noises)
+||||||| parent of 0f04ef8b32... Merge pull request #11624 from Rykka-Stormheart/shep-dev-belch-pref
+=======
+	
+	var/sound_preferences = list(/datum/client_preference/emote_noises) // Default emote sound_preferences is just emote_noises. Belch emote overrides this list for pref-checks.
+>>>>>>> 0f04ef8b32... Merge pull request #11624 from Rykka-Stormheart/shep-dev-belch-pref
 
 /decl/emote/Initialize()
 	. = ..()

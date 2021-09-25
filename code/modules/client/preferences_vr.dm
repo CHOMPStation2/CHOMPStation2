@@ -39,7 +39,21 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TDigestNoise") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	
+/client/verb/toggle_belch_noises()
+	set name = "Audible belching"
+	set category = "Preferences"
+	set desc = "Toggles audible belches."
 
+	var/pref_path = /datum/client_preference/belch_noises
+
+	toggle_preference(pref_path)
+
+	to_chat(src, "You will [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] hear belching.")
+
+	SScharacter_setup.queue_preferences_save(prefs)
+
+<<<<<<< HEAD
 //CHOMPEdit: belching
 /client/verb/toggle_belch_noises()
 	set name = "Audible belching"
@@ -57,6 +71,10 @@
 	feedback_add_details("admin_verb","TBelchNoise")
 //CHOMPEdit End
 
+||||||| parent of 0f04ef8b32... Merge pull request #11624 from Rykka-Stormheart/shep-dev-belch-pref
+=======
+	feedback_add_details("admin_verb","TBelchNoise")
+>>>>>>> 0f04ef8b32... Merge pull request #11624 from Rykka-Stormheart/shep-dev-belch-pref
 
 /client/verb/toggle_emote_noises()
 	set name = "Emote Noises"
