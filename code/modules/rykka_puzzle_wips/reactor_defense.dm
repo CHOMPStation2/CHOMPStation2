@@ -681,7 +681,7 @@ GLOBAL_LIST_EMPTY(reactor_mob_spawners) // Define our global list here. This is 
 	current_wave = 0 // Reset our current wave to 0.
 	
 	if(wave_amount > wave_mobs.len)
-		to_chat(usr, "<span class='danger'><big>You set the wave amount out of max range of the length of the mob waves list! Fix the moblist or the wave length list! We'll safety-reset waves to match the moblist for now!")
+		to_chat(usr, "<span class='danger'><big>You set the wave amount out of max range of the length of the mob waves list! Fix the moblist or the wave length list! We'll safety-reset waves to match the moblist for now!</span></big>")
 		wave_amount = waves.len
 	
 	wave_amount = waves.len 
