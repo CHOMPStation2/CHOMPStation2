@@ -13,9 +13,27 @@ bothnevarbackwards - Diona
 bricker98 - Protean
 crossexonar - Protean
 funnyman2003 - Xenochimera
+<<<<<<< HEAD
 flurriee - Protean
+||||||| parent of af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
+greennyy - Protean
+=======
+greennyy - Protean
+h0lysquirr3l - Protean
+>>>>>>> af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
 hawkerthegreat - Vox
 hollifex - Diona
+<<<<<<< HEAD
+||||||| parent of af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
+huenererschrecker - Xenochimera
+hunterbirk - Xenochimera
+h0lysquirr3l - Protean
+idcaboutaname - Protean
+=======
+huenererschrecker - Xenochimera
+hunterbirk - Xenochimera
+idcaboutaname - Protean
+>>>>>>> af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
@@ -30,9 +48,22 @@ oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
+<<<<<<< HEAD
 rapidvalj - Vox
 rapidvalj - Common Skrellian
 rapidvalj - High Skrellian
+||||||| parent of af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+residentcody - Black-Eyed Shadekin
+residentcody - Protean
+=======
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+residentcody - Black-Eyed Shadekin
+residentcody - Protean
+revolvereloise - Protean
+>>>>>>> af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
 rykkastormheart - Xenochimera
@@ -44,19 +75,65 @@ sepulchre - Vox
 silvertalismen - Diona
 silvertalismen - Vox
 silvertalismen - Xenochimera
+<<<<<<< HEAD
+||||||| parent of af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
+skylarks - Black-Eyed Shadekin
+stackerrobot - Protean
+=======
+skylarks - Black-Eyed Shadekin
+spirit1299 - Black-Eyed Shadekin
+stackerrobot - Protean
+stobarico - Protean
+>>>>>>> af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
 storesund97 - Protean
 sharplight - Protean
 tastypred - Black-Eyed Shadekin
-tastypred - Xenochimera
 tastypred - Protean
+<<<<<<< HEAD
 timidvi - Diona
+||||||| parent of af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
+terrestris - Vox
+terrestris - Common Skrellian
+terrestris - High Skrellian
+timidvi - Diona
+thedavestdave - Protean
+trifireblade - Protean
+trikonei - Protean
+umbrenos - Black-Eyed Shadekin
+=======
+tastypred - Xenochimera
+terrestris - Common Skrellian
+terrestris - High Skrellian
+terrestris - Vox
+thedavestdave - Protean
+timidvi - Diona
+trifireblade - Protean
+trikonei - Protean
+umbrenos - Black-Eyed Shadekin
+>>>>>>> af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
 varonis - Xenochimera
 verkister - Xenochimera
 vitoras - Protean
 voidalynx - Protean
 wickedtemp - Shadekin Empathy
 xioen - Diona
+<<<<<<< HEAD
 xioen - Xenochimera
+||||||| parent of af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
+xioen - Xenochimera
+xioen - Protean
+=======
+xioen - Protean
+xioen - Xenochimera
+>>>>>>> af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
 xonkon - Protean
 zalvine - Shadekin Empathy
 zammyman215 - Vox
+<<<<<<< HEAD
+||||||| parent of af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
+zeracyfr - Xenochimera
+spirit1299 - Black-Eyed Shadekin
+revolver_eloise - Protean
+=======
+zeracyfr - Xenochimera
+>>>>>>> af2d945b0f... Merge pull request #11627 from VOREStation/joan-fixingwhitelist
