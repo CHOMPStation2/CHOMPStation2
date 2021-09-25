@@ -11,6 +11,7 @@ var/const/ENGINEER			=(1<<6)
 var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
+var/const/BLUESHIELD		=(1<<10)
 var/const/CLOWN				=(1<<13) //VOREStation Add
 var/const/MIME				=(1<<14) //VOREStation Add
 var/const/INTERN			=(1<<15) //VOREStation Add
@@ -54,7 +55,7 @@ var/const/ENTERTAINER		=(1<<13) //VOREStation Add
 var/list/assistant_occupations = list(
 )
 
-
+// CHOMPEdit - Blueshield revival
 var/list/command_positions = list(
 	"Site Manager",
 	"Head of Personnel",
@@ -63,7 +64,7 @@ var/list/command_positions = list(
 	"Research Director",
 	"Chief Medical Officer",
 	"Command Secretary",
-	"Blueshield Guard" // YW Edit
+	"Blueshield Guard"
 )
 
 
@@ -144,7 +145,8 @@ var/list/whitelisted_positions = list(
 	"Chief Medical Officer",
 	"Command Secretary",
 	"Warden",
-	"AI"
+	"AI",
+	"Blueshield Guard"
 )
 
 

@@ -13,6 +13,9 @@
 	ideal_character_age = 32 		//Experienced, but physically in their prime
 	minimal_player_age = 3
 	economic_modifier = 8
+	// whitelist_only = 1
+	disallow_jobhop = TRUE
+	// latejoin_only = 1 // Allows this to be visible in occupation screen, but still whitelist-required.
 	access = list(access_security, access_sec_doors, access_brig,
 			            access_medical, access_eva, access_heads, access_teleporter,
 			            access_maint_tunnels, access_morgue,

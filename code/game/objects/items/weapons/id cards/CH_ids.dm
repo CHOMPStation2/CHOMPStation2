@@ -34,3 +34,13 @@
 	desc = "An ID card for the manager of the golden goose casino, fancy!"
 	icon_state = "ch_casino_manager"
 	access = list(160, 200, 201, 202, 203, 300)
+
+/obj/item/weapon/card/id/blueshield
+	assignment = "Blueshield Guard"
+	rank= "Blueshield Guard"
+	// icon_state = "blueshield"
+	preserve_item = 0
+
+/obj/item/weapon/card/id/blueshield
+	name = "Blueshield's ID"
+	initial_sprite_stack = list("base-stamp-gold", "top-blue", "stamp-n")

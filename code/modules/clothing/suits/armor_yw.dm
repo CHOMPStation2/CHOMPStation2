@@ -1,14 +1,3 @@
-/obj/item/clothing/suit/armor/yw/blueshield
-	name = "Blue Shield Security Armor"
-	desc = "An armored vest with the badge of a Blueshield Lieutenant."
-	icon = 'icons/mob/suit_yw.dmi'
-	icon_state = "blueshield"
-	icon_override = 'icons/mob/suit_yw.dmi'
-	item_state = "blueshield_s"
-	blood_overlay_type = "armor"
-	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
-
-
 /obj/item/clothing/suit/storage/toggle/yw/secjacket
 	name = "security jacket"
 	desc = "A sturdy black jacket with reinforced fabric. Bears insignia of NT corporate security."
