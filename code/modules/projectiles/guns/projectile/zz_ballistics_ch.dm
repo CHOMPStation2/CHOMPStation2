@@ -930,7 +930,7 @@
 	else //They're not gonna have a fun time, but they'll be fine. For between 50% and 125% size
 		var/damage_factor = (1 - unhappy_factor) //Unhappy factor is 0 at max unhappiness. Damage_factor is 1 at max unhappiness.
 		var/prob_to_drop = (33 + damage_factor*66) //100% if just above 50%, 33% if just below 125%
-		var/damage_taken = 5 + 10 * factor //15 damage if just above 50%, 5 if just below 125%
+		var/damage_taken = 5 + 10 * damage_factor //15 damage if just above 50%, 5 if just below 125%
 		var/message_on_fire = "<span class='notice'>As you pull the trigger, you feel the gun painfully slam into your shoulder, leaving a painful bruise!</span>"
 		var/in_left_hand = TRUE
 		if(user.r_hand == src)
