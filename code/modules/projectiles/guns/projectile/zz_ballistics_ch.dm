@@ -688,7 +688,7 @@
 	desc = "A complex pump shotgun, modelled after the classic Spas-12. Upgraded with durable parts to fix the flaws of the classic. Also sometimes called the T-35, if you're with the SGC or the USDF. The absolute king of CQC encounters. 8 round capacity, chambered in 12 gauge." 
 	caliber = "12g"
 	icon_state = "spas12"
-	ammo__type = /obj/item/ammo_casing/a12g/pellet
+	ammo_type = /obj/item/ammo_casing/a12g/pellet
 	projectile_type = /obj/item/projectile/bullet/shotgun
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -898,7 +898,7 @@
 		var/deafening = FALSE
 		if(user.get_ear_protection() < 2 && is_human)
 			deafening = TRUE
-		if(user.eyecheck() < 1)
+		if(is_human && H.eyecheck() < 1)
 			user.flash_eyes() //Flashbang effect
 
 		user.visible_message(/*What other people experience*/"<span class='notice'>[user] manages to pull the trigger on the [src], causing a large bang and a big flash before [src] recoils backwards, crashing violently into [user] and causing them to go flying!</span>", \
@@ -910,7 +910,7 @@
 			user.apply_damage(8, BRUTE, BP_R_HAND)
 			user.apply_damage(25, BRUTE, BP_TORSO)
 			//70 damage total
-			for(var/def_zone in list(BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_CHEST))
+			for(var/def_zone in list(BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_TORSO))
 				var/obj/item/organ/external/hit_organ = user.get_organ(def_zone)
 				if(hit_organ)
 					hit_organ.fracture() //Bone crunching noises intensifies
@@ -929,7 +929,7 @@
 		user.throw_at(target_turf,3,3) //Yeet
 	else //They're not gonna have a fun time, but they'll be fine. For between 50% and 125% size
 		var/damage_factor = (1 - unhappy_factor) //Unhappy factor is 0 at max unhappiness. Damage_factor is 1 at max unhappiness.
-		var/prob_to_drop = (33 + damage_facotor*66) //100% if just above 50%, 33% if just below 125%
+		var/prob_to_drop = (33 + damage_factor*66) //100% if just above 50%, 33% if just below 125%
 		var/damage_taken = 5 + 10 * factor //15 damage if just above 50%, 5 if just below 125%
 		var/message_on_fire = "<span class='notice'>As you pull the trigger, you feel the gun painfully slam into your shoulder, leaving a painful bruise!"
 		var/in_left_hand = TRUE
